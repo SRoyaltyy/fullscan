@@ -6,7 +6,7 @@ Buys the flatten **wish-list** even on io/HOLD mornings — live `flatten_robust
 
 Side **long** · universe `flatten` · top 8 · rank `list` · size `half` · sell `list` · S-boost `none` · deploy half leftover
 
-Cash book **-3.22%** ($9,678) · signal-only (no cash/fees) was +4.47%. Starts YES **1/30**. Fills 296 · skips 395 · realized $-47.54.
+Cash book **-2.75%** ($9,726) · signal-only (no cash/fees) was +4.47%. Starts YES **1/30**. Fills 301 · skips 395 · realized $-47.54.
 
 ## How this sleeve decides (like you are 10)
 
@@ -470,6 +470,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-27 09:30 ET | **BUY** | `PRGO` | 148 | $15.56 | $2.43 | — | $6,946.16 | — | deploy half leftover; list flatten; wish-list (live io HOLD — not a ticket); ret5=-1.7; leftover $2312.87 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-27 09:30 ET | **BUY** | `SGRY` | 99 | $23.20 | $2.29 | — | $4,647.08 | — | deploy half leftover; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ret5=+58.1; leftover $2312.87 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟢 |
 | 2026-10-27 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $4,647.08 | ▲ close $9,678.17 vs 09:30 $9,615.59 (session +83.92) | 16:00 close · cash $4,647.08 · equity $9,678.17 vs 09:30 $9,615.59 (+62.58; session marks +83.92) · 3 name(s) marked open→close (per-name table). BLFS×9 09:30 $38.61 → close $38.61 +0.00; PRGO×148 09:30 $15.56 → close $16.02 +68.08; SGRY×99 09:30 $23.20 → close $23.36 +15.84 | — |
+| 2026-10-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $4,647.08 | ▼ 09:30 equity $9,659.39 vs yday $9,678.17 (-18.78) | 09:30 open · cash $4,647.08 (unchanged overnight, no fees) · equity $9,659.39 vs prior close $9,678.17 (-18.78) · 3 name(s) re-marked at the open (per-name table). BLFS×9 yday $38.61 → 09:30 $38.61 +0.00; PRGO×148 yday $16.02 → 09:30 $15.96 -8.88; SGRY×99 yday $23.36 → 09:30 $23.26 -9.90 | — |
+| 2026-10-28 09:30 ET | **BUY** | `SRRK` | 10 | $43.82 | $2.02 | — | $4,206.86 | — | deploy half leftover; list flatten; wish-list (live io HOLD — not a ticket); ret5=+2.7; leftover $464.71 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 ab🔴 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `BRKR` | 7 | $60.66 | $2.01 | — | $3,780.23 | — | deploy half leftover; list flatten; wish-list (live io HOLD — not a ticket); ret5=+8.6; leftover $464.71 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🟡 heat🟢 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `NEO` | 26 | $17.30 | $2.07 | — | $3,328.36 | — | deploy half leftover; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ret5=+3.9; leftover $464.71 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `AUTL` | 299 | $1.55 | $3.86 | — | $2,861.05 | — | deploy half leftover; list flatten; wish-list (live io HOLD — not a ticket); ret5=-6.6; leftover $464.71 | join🟡 sector🟡 gen🟢 news🟢 digest🟢 ab🔴 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `FDMT` | 39 | $11.89 | $2.11 | — | $2,395.24 | — | deploy half leftover; list flatten; wish-list (live io HOLD — not a ticket); ret5=-8.7; leftover $464.71 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2,395.24 | ▲ close $9,725.53 vs 09:30 $9,659.39 (session +78.20) | 16:00 close · cash $2,395.24 · equity $9,725.53 vs 09:30 $9,659.39 (+66.14; session marks +78.20) · 8 name(s) marked open→close (per-name table). BLFS×9 09:30 $38.61 → close $38.61 +0.00; PRGO×148 09:30 $15.96 → close $15.92 -5.92; SGRY×99 09:30 $23.26 → close $23.24 -1.98; SRRK×10 09:30 $43.82 → close $43.25 -5.70; BRKR×7 09:30 $60.66 → close $62.00 +9.38; NEO×26 09:30 $17.30 → close $17.99 +17.94; AUTL×299 09:30 $1.55 → close $1.63 +23.92; FDMT×39 09:30 $11.89 → close $12.93 +40.56 | — |
 
 ## Not taken
 

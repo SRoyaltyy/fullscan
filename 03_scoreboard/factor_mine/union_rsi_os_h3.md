@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ rsi_os, no 🚨
 
-Cash book **-22.36%** ($7,764) · signal-only (no cash/fees) was -42.97%. Starts YES **6/30**. Fills 144 · skips 88 · realized $-2389.72.
+Cash book **-22.40%** ($7,760) · signal-only (no cash/fees) was -42.97%. Starts YES **6/30**. Fills 144 · skips 88 · realized $-2389.72.
 
 ## How this sleeve decides (like you are 10)
 
@@ -322,6 +322,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-27 09:30 ET | **BUY** | `ARI` | 395 | $6.61 | $5.10 | — | $5,232.77 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list ohlc_hot; 🔵; ret5=+4.4; leftover $2616.27 | join🔴 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-27 09:30 ET | **BUY** | `BX` | 21 | $120.00 | $2.05 | — | $2,710.72 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list ohlc_hot; 🔵; ret5=+11.2; leftover $2616.27 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
 | 2026-10-27 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2,710.72 | ▼ close $7,764.47 vs 09:30 $7,856.91 (session -77.20) | 16:00 close · cash $2,710.72 · equity $7,764.47 vs 09:30 $7,856.91 (-92.44; session marks -77.20) · 2 name(s) marked open→close (per-name table). ARI×395 09:30 $6.61 → close $6.59 -7.90; BX×21 09:30 $120.00 → close $116.70 -69.30 | — |
+| 2026-10-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $2,710.72 | ▼ 09:30 equity $7,746.53 vs yday $7,764.47 (-17.94) | 09:30 open · cash $2,710.72 (unchanged overnight, no fees) · equity $7,746.53 vs prior close $7,764.47 (-17.94) · 2 name(s) re-marked at the open (per-name table). ARI×395 yday $6.59 → 09:30 $6.56 -11.85; BX×21 yday $116.70 → 09:30 $116.41 -6.09 | — |
+| 2026-10-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2,710.72 | ▲ close $7,760.18 vs 09:30 $7,746.53 (session +13.65) | 16:00 close · cash $2,710.72 · equity $7,760.18 vs 09:30 $7,746.53 (+13.65; session marks +13.65) · 2 name(s) marked open→close (per-name table). ARI×395 09:30 $6.56 → close $6.56 +0.00; BX×21 09:30 $116.41 → close $117.06 +13.65 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `hot_score` · size `leftover` · sell `list` · S-boost `none` · rank by hot_score
 
-Cash book **+16.76%** ($11,676) · signal-only (no cash/fees) was +50.67%. Starts YES **29/30**. Fills 442 · skips 90 · realized $+477.92.
+Cash book **+18.95%** ($11,895) · signal-only (no cash/fees) was +50.67%. Starts YES **29/30**. Fills 458 · skips 90 · realized $+477.92.
 
 ## How this sleeve decides (like you are 10)
 
@@ -619,6 +619,24 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-27 09:30 ET | **BUY** | `GMAB` | 32 | $44.41 | $2.09 | — | $1,722.22 | — | rank by hot_score; rank hot_score; list ohlc_hot; 🔵; ret5=+16.1; leftover $1457.51 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-10-27 09:30 ET | **BUY** | `RIG` | 224 | $6.48 | $2.89 | — | $267.81 | — | rank by hot_score; rank hot_score; list ohlc_hot; ret5=+10.9; leftover $1457.51 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-27 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $267.81 | ▲ close $11,675.73 vs 09:30 $11,660.05 (session +35.46) | 16:00 close · cash $267.81 · equity $11,675.73 vs 09:30 $11,660.05 (+15.68; session marks +35.46) · 8 name(s) marked open→close (per-name table). SGRY×62 09:30 $23.20 → close $23.36 +9.92; SLN×73 09:30 $19.78 → close $19.78 +0.00; ENGS×332 09:30 $4.38 → close $4.36 -6.64; LMT×2 09:30 $626.91 → close $622.99 -7.84; DOW×43 09:30 $33.77 → close $33.78 +0.43; RBRK×11 09:30 $132.49 → close $135.74 +35.75; GMAB×32 09:30 $44.41 → close $44.67 +8.32; RIG×224 09:30 $6.48 → close $6.46 -4.48 | — |
+| 2026-10-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $267.81 | ▼ 09:30 equity $11,651.26 vs yday $11,675.73 (-24.47) | 09:30 open · cash $267.81 (unchanged overnight, no fees) · equity $11,651.26 vs prior close $11,675.73 (-24.47) · 8 name(s) re-marked at the open (per-name table). DOW×43 yday $33.78 → 09:30 $33.73 -1.94; ENGS×332 yday $4.36 → 09:30 $4.36 +0.00; GMAB×32 yday $44.67 → 09:30 $44.63 -1.28; LMT×2 yday $622.99 → 09:30 $616.56 -12.86; RBRK×11 yday $135.74 → 09:30 $135.47 -2.97; RIG×224 yday $6.46 → 09:30 $6.47 +2.24; SGRY×62 yday $23.36 → 09:30 $23.26 -6.20; SLN×73 yday $19.78 → 09:30 $19.76 -1.46 | — |
+| 2026-10-28 09:30 ET | **SELL** | `DOW` | 43 | $33.73 | $2.14 | $-5.76 | $1,716.27 | ▼ -5.76 after sell → book $11,649.12; vs 09:30 mark -2.14 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-28 09:30 ET | **SELL** | `ENGS` | 332 | $4.36 | $4.35 | $-15.27 | $3,159.44 | ▼ -15.27 after sell → book $11,644.77; vs 09:30 mark -4.35 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-28 09:30 ET | **SELL** | `GMAB` | 32 | $44.63 | $2.11 | $+2.85 | $4,585.50 | ▲ +2.85 after sell → book $11,642.67; vs 09:30 mark -2.10 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-28 09:30 ET | **SELL** | `LMT` | 2 | $616.56 | $2.02 | $-24.71 | $5,816.60 | ▼ -24.71 after sell → book $11,640.65; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-28 09:30 ET | **SELL** | `RBRK` | 11 | $135.47 | $2.04 | $+28.71 | $7,304.73 | ▲ +28.71 after sell → book $11,638.61; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-28 09:30 ET | **SELL** | `RIG` | 224 | $6.47 | $2.94 | $-8.07 | $8,751.07 | ▼ -8.07 after sell → book $11,635.67; vs 09:30 mark -2.94 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-28 09:30 ET | **SELL** | `SGRY` | 62 | $23.26 | $2.20 | $-0.65 | $10,190.99 | ▼ -0.65 after sell → book $11,633.47; vs 09:30 mark -2.20 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-28 09:30 ET | **SELL** | `SLN` | 73 | $19.76 | $2.23 | $-5.90 | $11,631.24 | ▼ -5.90 after sell → book $11,631.24; vs 09:30 mark -2.23 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `RH` | 10 | $140.69 | $2.02 | — | $10,222.32 | — | rank by hot_score; rank hot_score; list ohlc_hot; ret5=+17.6; leftover $1453.90 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `VCYT` | 29 | $50.00 | $2.08 | — | $8,770.24 | — | rank by hot_score; rank hot_score; list ohlc_hot; ret5=+12.3; leftover $1453.90 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `IMSR` | 492 | $2.95 | $6.35 | — | $7,312.49 | — | rank by hot_score; rank hot_score; list ohlc_hot; 🔵; ret5=+17.5; leftover $1453.90 | join🟡 sector🟡 gen🟢 news🟡 digest🟡 ab🟡 heat🔴 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `BETA` | 69 | $20.88 | $2.20 | — | $5,869.58 | — | rank by hot_score; rank hot_score; list ohlc_hot; 🔵; ret5=+14.3; leftover $1453.90 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟡 heat🔴 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `EQPT` | 81 | $17.81 | $2.23 | — | $4,424.73 | — | rank by hot_score; rank hot_score; list ohlc_hot; 🔵; ret5=+13.5; leftover $1453.90 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `FIP` | 548 | $2.65 | $7.07 | — | $2,965.46 | — | rank by hot_score; rank hot_score; list ohlc_hot; 🔵; ret5=+15.6; leftover $1453.90 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `UPS` | 13 | $105.39 | $2.03 | — | $1,593.37 | — | rank by hot_score; rank hot_score; list ohlc_hot; 🔵; ret5=+7.7; leftover $1453.90 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟡 heat🟢 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `S` | 56 | $25.56 | $2.16 | — | $159.85 | — | rank by hot_score; rank hot_score; list ohlc_hot; ret5=+16.6; leftover $1453.90 | join🟡 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $159.85 | ▲ close $11,894.57 vs 09:30 $11,651.26 (session +289.46) | 16:00 close · cash $159.85 · equity $11,894.57 vs 09:30 $11,651.26 (+243.31; session marks +289.46) · 8 name(s) marked open→close (per-name table). RH×10 09:30 $140.69 → close $145.06 +43.70; VCYT×29 09:30 $50.00 → close $50.31 +8.99; IMSR×492 09:30 $2.95 → close $3.35 +196.80; BETA×69 09:30 $20.88 → close $19.98 -62.10; EQPT×81 09:30 $17.81 → close $17.93 +9.72; FIP×548 09:30 $2.65 → close $2.81 +87.68; UPS×13 09:30 $105.39 → close $105.62 +2.99; S×56 09:30 $25.56 → close $25.59 +1.68 | — |
 
 ## Not taken
 

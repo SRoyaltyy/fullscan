@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ last_green, no 🚨
 
-Cash book **-20.41%** ($7,959) · signal-only (no cash/fees) was +37.42%. Starts YES **3/30**. Fills 309 · skips 312 · realized $-335.16.
+Cash book **-19.08%** ($8,092) · signal-only (no cash/fees) was +37.42%. Starts YES **3/30**. Fills 313 · skips 312 · realized $-335.16.
 
 ## How this sleeve decides (like you are 10)
 
@@ -487,6 +487,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-27 09:30 ET | **BUY** | `PDFS` | 26 | $41.74 | $2.07 | — | $1,256.29 | — | union ∩ last_green, no 🚨; gate last_green=True; list probable,yday_gainer,yday_mover; 🔵; ret5=-1.0; leftover $1119.74 | join🟡 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-27 09:30 ET | **BUY** | `ACRS` | 281 | $3.98 | $3.62 | — | $134.29 | — | union ∩ last_green, no 🚨; gate last_green=True; list probable,yday_gainer,yday_mover; 🔵; ret5=+8.9; leftover $1119.74 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟡 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-27 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $134.29 | ▲ close $7,959.31 vs 09:30 $7,847.44 (session +137.44) | 16:00 close · cash $134.29 · equity $7,959.31 vs 09:30 $7,847.44 (+111.87; session marks +137.44) · 7 name(s) marked open→close (per-name table). ILMN×4 09:30 $269.42 → close $279.47 +40.20; PACS×23 09:30 $48.23 → close $47.85 -8.74; SGRY×48 09:30 $23.20 → close $23.36 +7.68; NVTS×129 09:30 $8.62 → close $9.35 +94.17; EPR×19 09:30 $56.39 → close $56.01 -7.22; PDFS×26 09:30 $41.74 → close $44.23 +64.74; ACRS×281 09:30 $3.98 → close $3.79 -53.39 | — |
+| 2026-10-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $134.29 | ▲ 09:30 equity $7,984.34 vs yday $7,959.31 (+25.03) | 09:30 open · cash $134.29 (unchanged overnight, no fees) · equity $7,984.34 vs prior close $7,959.31 (+25.03) · 7 name(s) re-marked at the open (per-name table). ACRS×281 yday $3.79 → 09:30 $3.70 -25.29; EPR×19 yday $56.01 → 09:30 $55.85 -3.04; ILMN×4 yday $279.47 → 09:30 $278.04 -5.72; NVTS×129 yday $9.35 → 09:30 $9.36 +1.29; PACS×23 yday $47.85 → 09:30 $49.00 +26.45; PDFS×26 yday $44.23 → 09:30 $45.62 +36.14; SGRY×48 yday $23.36 → 09:30 $23.26 -4.80 | — |
+| 2026-10-28 09:30 ET | **BUY** | `NEO` | 1 | $17.30 | $0.18 | — | $116.81 | — | union ∩ last_green, no 🚨; gate last_green=True; list flatten; 🔵; ret5=+3.9; leftover $19.18 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `FDMT` | 1 | $11.89 | $0.12 | — | $104.80 | — | union ∩ last_green, no 🚨; gate last_green=True; list flatten; ret5=-8.7; leftover $19.18 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `EGG` | 3 | $5.14 | $0.16 | — | $89.22 | — | union ∩ last_green, no 🚨; gate last_green=True; list yday_gainer,yday_mover; 🔵; ret5=+6.4; leftover $19.18 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `QTTB` | 2 | $8.65 | $0.18 | — | $71.74 | — | union ∩ last_green, no 🚨; gate last_green=True; list yday_gainer; ret5=+1.0; leftover $19.18 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $71.74 | ▲ close $8,091.99 vs 09:30 $7,984.34 (session +108.29) | 16:00 close · cash $71.74 · equity $8,091.99 vs 09:30 $7,984.34 (+107.65; session marks +108.29) · 11 name(s) marked open→close (per-name table). ACRS×281 09:30 $3.70 → close $3.96 +73.06; EPR×19 09:30 $55.85 → close $55.51 -6.46; ILMN×4 09:30 $278.04 → close $288.79 +43.00; NVTS×129 09:30 $9.36 → close $9.36 +0.00; PACS×23 09:30 $49.00 → close $49.06 +1.38; PDFS×26 09:30 $45.62 → close $45.49 -3.38; SGRY×48 09:30 $23.26 → close $23.24 -0.96; NEO×1 09:30 $17.30 → close $17.99 +0.69; FDMT×1 09:30 $11.89 → close $12.93 +1.04; EGG×3 09:30 $5.14 → close $4.84 -0.90; QTTB×2 09:30 $8.65 → close $9.06 +0.82 | — |
 
 ## Not taken
 

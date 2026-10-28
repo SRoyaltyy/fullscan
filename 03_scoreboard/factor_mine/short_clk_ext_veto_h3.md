@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · Clock-B #5 extreme ext + fade/fail-break as a short
 
-Cash book **-6.13%** ($9,387) · signal-only (no cash/fees) was -97.41%. Starts YES **0/30**. Fills 275 · skips 219 · realized $-964.15.
+Cash book **-16.05%** ($8,395) · signal-only (no cash/fees) was -97.41%. Starts YES **0/30**. Fills 276 · skips 219 · realized $-964.15.
 
 ## How this sleeve decides (like you are 10)
 
@@ -451,6 +451,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-27 09:30 ET | **SHORT** | `EGG` | 305 | $5.17 | $4.04 | — | $12,572.43 | — | Clock-B #5 extreme ext + fade/fail-break as a short; gate clk_ext_veto=True; list yday_gainer,yday_mover; ret5=+3.2; leftover $1580.26 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-27 09:30 ET | **SHORT** | `GMAB` | 35 | $44.41 | $2.16 | — | $14,124.62 | — | Clock-B #5 extreme ext + fade/fail-break as a short; gate clk_ext_veto=True; list ohlc_hot; 🔵; ret5=+16.1; leftover $1580.26 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-10-27 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,124.62 | ▼ close $9,386.91 vs 09:30 $9,481.54 (session -86.31) | 16:00 close · cash $14,124.62 · equity $9,386.91 vs 09:30 $9,481.54 (-94.63; session marks -86.31) · 3 name(s) marked open→close (per-name table). CDNA×22 09:30 $69.10 → close $70.53 -31.46; EGG×305 09:30 $5.17 → close $5.32 -45.75; GMAB×35 09:30 $44.41 → close $44.67 -9.10 | — |
+| 2026-10-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $14,124.62 | ▲ 09:30 equity $9,456.85 vs yday $9,386.91 (+69.94) | 09:30 open · cash $14,124.62 (unchanged overnight, no fees) · equity $9,456.85 vs prior close $9,386.91 (+69.94) · 3 name(s) re-marked at the open (per-name table). CDNA×22 yday $70.53 → 09:30 $69.91 +13.64; EGG×305 yday $5.32 → 09:30 $5.14 +54.90; GMAB×35 yday $44.67 → 09:30 $44.63 +1.40 | — |
+| 2026-10-28 09:30 ET | **SHORT** | `IMSR` | 1602 | $2.95 | $21.10 | — | $18,829.42 | — | Clock-B #5 extreme ext + fade/fail-break as a short; gate clk_ext_veto=True; list ohlc_hot; 🔵; ret5=+17.5; leftover $4728.43 | join🟡 sector🟡 gen🟢 news🟡 digest🟡 ab🟡 heat🔴 vol🔴 buy🟡 |
+| 2026-10-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $18,829.42 | ▼ close $8,394.51 vs 09:30 $9,456.85 (session -1,041.24) | 16:00 close · cash $18,829.42 · equity $8,394.51 vs 09:30 $9,456.85 (-1062.34; session marks -1041.24) · 4 name(s) marked open→close (per-name table). CDNA×22 09:30 $69.91 → close $72.13 -48.84; EGG×305 09:30 $5.14 → close $4.84 +91.50; GMAB×35 09:30 $44.63 → close $57.29 -443.10; IMSR×1602 09:30 $2.95 → close $3.35 -640.80 | — |
 
 ## Not taken
 

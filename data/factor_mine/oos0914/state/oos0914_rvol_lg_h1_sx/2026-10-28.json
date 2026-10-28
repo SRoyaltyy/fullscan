@@ -1,0 +1,212 @@
+{
+  "buys": [
+    {
+      "fill_rule": "open",
+      "price": 50.0,
+      "shares": 54,
+      "side": "BUY",
+      "ticker": "VCYT"
+    },
+    {
+      "fill_rule": "open",
+      "price": 105.39,
+      "shares": 25,
+      "side": "BUY",
+      "ticker": "UPS"
+    },
+    {
+      "fill_rule": "open",
+      "price": 1.74,
+      "shares": 1570,
+      "side": "BUY",
+      "ticker": "NFGC"
+    },
+    {
+      "fill_rule": "open",
+      "price": 2.68,
+      "shares": 1019,
+      "side": "BUY",
+      "ticker": "SPCE"
+    }
+  ],
+  "cash": 92.35,
+  "date": "2026-10-28",
+  "equity": 10860.53,
+  "fees": 52.528,
+  "fills": [
+    {
+      "fees": 2.2683,
+      "fill_rule": "open",
+      "pnl": -7.34,
+      "price": 33.735,
+      "shares": 81,
+      "side": "SELL",
+      "ticker": "DOW"
+    },
+    {
+      "fees": 8.2274,
+      "fill_rule": "open",
+      "pnl": -28.89,
+      "price": 4.36,
+      "shares": 628,
+      "side": "SELL",
+      "ticker": "ENGS"
+    },
+    {
+      "fees": 2.0317,
+      "fill_rule": "open",
+      "pnl": -45.43,
+      "price": 616.56,
+      "shares": 4,
+      "side": "SELL",
+      "ticker": "LMT"
+    },
+    {
+      "fees": 2.3855,
+      "fill_rule": "open",
+      "pnl": 2.35,
+      "price": 23.26,
+      "shares": 118,
+      "side": "SELL",
+      "ticker": "SGRY"
+    },
+    {
+      "fees": 2.152,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 50.0,
+      "shares": 54,
+      "side": "BUY",
+      "ticker": "VCYT"
+    },
+    {
+      "fees": 2.065,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 105.39,
+      "shares": 25,
+      "side": "BUY",
+      "ticker": "UPS"
+    },
+    {
+      "fees": 20.253,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 1.74,
+      "shares": 1570,
+      "side": "BUY",
+      "ticker": "NFGC"
+    },
+    {
+      "fees": 13.1451,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 2.68,
+      "shares": 1019,
+      "side": "BUY",
+      "ticker": "SPCE"
+    }
+  ],
+  "holdings": [
+    "NFGC",
+    "SPCE",
+    "UPS",
+    "VCYT"
+  ],
+  "mean": -1.1197,
+  "n_trades_today": 8,
+  "recipe": "oos0914_rvol_lg_h1_sx",
+  "sells": [
+    {
+      "fill_rule": "open",
+      "price": 33.735,
+      "shares": 81,
+      "side": "SELL",
+      "ticker": "DOW"
+    },
+    {
+      "fill_rule": "open",
+      "price": 4.36,
+      "shares": 628,
+      "side": "SELL",
+      "ticker": "ENGS"
+    },
+    {
+      "fill_rule": "open",
+      "price": 616.56,
+      "shares": 4,
+      "side": "SELL",
+      "ticker": "LMT"
+    },
+    {
+      "fill_rule": "open",
+      "price": 23.26,
+      "shares": 118,
+      "side": "SELL",
+      "ticker": "SGRY"
+    }
+  ],
+  "state": {
+    "after": "2026-10-28",
+    "cash": 92.35,
+    "pos": {
+      "NFGC": {
+        "close_px": 1.72,
+        "cost": 2752.0530000000003,
+        "entry_date": "2026-10-28",
+        "entry_px": 1.74,
+        "fee_in": 20.253,
+        "last_px": 1.74,
+        "min_hold": 1,
+        "notional": 2731.8,
+        "peak_px": 1.74,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate last_green=True,rvol_min=1.5; rank hot_score; list ohlc_hot; ret5=+6.1; leftover $2731.86",
+        "shares": 1570,
+        "ticker": "NFGC"
+      },
+      "SPCE": {
+        "close_px": 2.66,
+        "cost": 2744.0651000000003,
+        "entry_date": "2026-10-28",
+        "entry_px": 2.68,
+        "fee_in": 13.1451,
+        "last_px": 2.68,
+        "min_hold": 1,
+        "notional": 2730.92,
+        "peak_px": 2.68,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate last_green=True,rvol_min=1.5; rank hot_score; list ohlc_hot; \ud83d\udd35; ret5=+13.5; leftover $2731.86",
+        "shares": 1019,
+        "ticker": "SPCE"
+      },
+      "UPS": {
+        "close_px": 105.62,
+        "cost": 2636.815,
+        "entry_date": "2026-10-28",
+        "entry_px": 105.39,
+        "fee_in": 2.065,
+        "last_px": 105.39,
+        "min_hold": 1,
+        "notional": 2634.75,
+        "peak_px": 105.39,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate last_green=True,rvol_min=1.5; rank hot_score; list ohlc_hot; \ud83d\udd35; ret5=+7.7; leftover $2731.86",
+        "shares": 25,
+        "ticker": "UPS"
+      },
+      "VCYT": {
+        "close_px": 50.31,
+        "cost": 2702.152,
+        "entry_date": "2026-10-28",
+        "entry_px": 50.0,
+        "fee_in": 2.152,
+        "last_px": 50.0,
+        "min_hold": 1,
+        "notional": 2700.0,
+        "peak_px": 50.0,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate last_green=True,rvol_min=1.5; rank hot_score; list ohlc_hot; ret5=+12.3; leftover $2731.86",
+        "shares": 54,
+        "ticker": "VCYT"
+      }
+    },
+    "yday_equity": 10860.53
+  }
+}

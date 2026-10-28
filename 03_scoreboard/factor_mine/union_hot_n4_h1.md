@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 4 · rank `hot_score` · size `leftover` · sell `list` · S-boost `none` · top 4 by hot
 
-Cash book **+21.54%** ($12,154) · signal-only (no cash/fees) was +89.81%. Starts YES **29/30**. Fills 141 · skips 47 · realized $+2978.17.
+Cash book **+25.25%** ($12,525) · signal-only (no cash/fees) was +89.81%. Starts YES **29/30**. Fills 145 · skips 47 · realized $+2978.17.
 
 ## How this sleeve decides (like you are 10)
 
@@ -318,6 +318,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-26 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $12,153.64 | ▲ close $12,153.64 vs 09:30 $12,153.64 (session +0.00) | 16:00 close · cash $12,153.64 · no lots left · equity $12,153.64. | — |
 | 2026-10-27 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $12,153.64 | ▲ 09:30 equity $12,153.64 vs yday $12,153.64 (+0.00) | 09:30 open · cash $12,153.64 · no holdings · equity $12,153.64 vs prior close $12,153.64 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-10-27 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $12,153.64 | ▲ close $12,153.64 vs 09:30 $12,153.64 (session +0.00) | 16:00 close · cash $12,153.64 · no lots left · equity $12,153.64. | — |
+| 2026-10-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $12,153.64 | ▲ 09:30 equity $12,153.64 vs yday $12,153.64 (+0.00) | 09:30 open · cash $12,153.64 · no holdings · equity $12,153.64 vs prior close $12,153.64 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-28 09:30 ET | **BUY** | `RH` | 21 | $140.69 | $2.05 | — | $9,197.10 | — | top 4 by hot; rank hot_score; list ohlc_hot; ret5=+17.6; leftover $3038.41 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `VCYT` | 60 | $50.00 | $2.17 | — | $6,194.93 | — | top 4 by hot; rank hot_score; list ohlc_hot; ret5=+12.3; leftover $3038.41 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `IMSR` | 1029 | $2.95 | $13.27 | — | $3,146.10 | — | top 4 by hot; rank hot_score; list ohlc_hot; 🔵; ret5=+17.5; leftover $3038.41 | join🟡 sector🟡 gen🟢 news🟡 digest🟡 ab🟡 heat🔴 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `BETA` | 145 | $20.88 | $2.42 | — | $116.08 | — | top 4 by hot; rank hot_score; list ohlc_hot; 🔵; ret5=+14.3; leftover $3038.41 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟡 heat🔴 vol🔴 buy🟡 |
+| 2026-10-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $116.08 | ▲ close $12,525.19 vs 09:30 $12,153.64 (session +391.47) | 16:00 close · cash $116.08 · equity $12,525.19 vs 09:30 $12,153.64 (+371.55; session marks +391.47) · 4 name(s) marked open→close (per-name table). RH×21 09:30 $140.69 → close $145.06 +91.77; VCYT×60 09:30 $50.00 → close $50.31 +18.60; IMSR×1029 09:30 $2.95 → close $3.35 +411.60; BETA×145 09:30 $20.88 → close $19.98 -130.50 | — |
 
 ## Not taken
 

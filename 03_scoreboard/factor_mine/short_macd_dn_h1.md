@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · MACD histogram < 0
 
-Cash book **+0.43%** ($10,043) · signal-only (no cash/fees) was +6.85%. Starts YES **5/30**. Fills 413 · skips 108 · realized $-743.47.
+Cash book **-1.02%** ($9,898) · signal-only (no cash/fees) was +6.85%. Starts YES **5/30**. Fills 422 · skips 108 · realized $-743.47.
 
 ## How this sleeve decides (like you are 10)
 
@@ -589,6 +589,17 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-27 09:30 ET | **SHORT** | `CDNA` | 18 | $69.10 | $2.10 | — | $12,470.76 | — | MACD histogram < 0; gate macd_down=True; list flatten; 🔵; ret5=+3.0; leftover $1269.18 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟢 |
 | 2026-10-27 09:30 ET | **SHORT** | `CXW` | 42 | $29.89 | $2.17 | — | $13,723.97 | — | MACD histogram < 0; gate macd_down=True; list probable,yday_gainer,yday_mover; 🔵; ret5=-0.1; leftover $1269.18 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-27 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $13,723.97 | ▼ close $10,042.95 vs 09:30 $10,161.83 (session -104.16) | 16:00 close · cash $13,723.97 · equity $10,042.95 vs 09:30 $10,161.83 (-118.88; session marks -104.16) · 3 name(s) marked open→close (per-name table). ILMN×4 09:30 $269.42 → close $279.47 -40.20; CDNA×18 09:30 $69.10 → close $70.53 -25.74; CXW×42 09:30 $29.89 → close $30.80 -38.22 | — |
+| 2026-10-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $13,723.97 | ▲ 09:30 equity $10,055.63 vs yday $10,042.95 (+12.68) | 09:30 open · cash $13,723.97 (unchanged overnight, no fees) · equity $10,055.63 vs prior close $10,042.95 (+12.68) · 3 name(s) re-marked at the open (per-name table). CDNA×18 yday $70.53 → 09:30 $69.91 +11.16; CXW×42 yday $30.80 → 09:30 $30.90 -4.20; ILMN×4 yday $279.47 → 09:30 $278.04 +5.72 | — |
+| 2026-10-28 09:30 ET | **COVER** | `CDNA` | 18 | $69.91 | $2.04 | $-18.72 | $12,463.55 | ▼ -18.72 after sell → book $10,053.59; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-28 09:30 ET | **COVER** | `ILMN` | 4 | $278.04 | $2.00 | $-38.53 | $11,349.38 | ▼ -38.53 after sell → book $10,051.58; vs 09:30 mark -2.01 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-28 09:30 ET | **SHORT** | `AUTL` | 463 | $1.55 | $6.08 | — | $12,060.95 | — | MACD histogram < 0; gate macd_down=True; list flatten; ret5=-6.6; leftover $717.97 | join🟡 sector🟡 gen🟢 news🟢 digest🟢 ab🔴 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **SHORT** | `FDMT` | 60 | $11.89 | $2.21 | — | $12,772.15 | — | MACD histogram < 0; gate macd_down=True; list flatten; ret5=-8.7; leftover $717.97 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **SHORT** | `SMMT` | 47 | $15.19 | $2.17 | — | $13,483.90 | — | MACD histogram < 0; gate macd_down=True; list probable,yday_gainer,yday_mover; ret5=-4.7; leftover $717.97 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-28 09:30 ET | **SHORT** | `NVTS` | 76 | $9.36 | $2.26 | — | $14,193.00 | — | MACD histogram < 0; gate macd_down=True; list probable,yday_gainer,yday_mover; ret5=+7.0; leftover $717.97 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **SHORT** | `PDFS` | 15 | $45.62 | $2.07 | — | $14,875.23 | — | MACD histogram < 0; gate macd_down=True; list probable,yday_gainer,yday_mover; ret5=+7.4; leftover $717.97 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **SHORT** | `AIP` | 33 | $21.27 | $2.13 | — | $15,575.01 | — | MACD histogram < 0; gate macd_down=True; list probable,yday_gainer,yday_mover; ret5=+6.0; leftover $717.97 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **SHORT** | `MX` | 278 | $2.58 | $3.66 | — | $16,288.59 | — | MACD histogram < 0; gate macd_down=True; list yday_gainer,yday_mover; ret5=-2.3; leftover $717.97 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $16,288.59 | ▼ close $9,898.41 vs 09:30 $10,055.63 (session -132.59) | 16:00 close · cash $16,288.59 · equity $9,898.41 vs 09:30 $10,055.63 (-157.22; session marks -132.59) · 8 name(s) marked open→close (per-name table). CXW×42 09:30 $30.90 → close $30.63 +11.34; AUTL×463 09:30 $1.55 → close $1.63 -37.04; FDMT×60 09:30 $11.89 → close $12.93 -62.40; SMMT×47 09:30 $15.19 → close $15.77 -27.26; NVTS×76 09:30 $9.36 → close $9.36 -0.00; PDFS×15 09:30 $45.62 → close $45.49 +1.95; AIP×33 09:30 $21.27 → close $21.43 -5.28; MX×278 09:30 $2.58 → close $2.63 -13.90 | — |
 
 ## Not taken
 

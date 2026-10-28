@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared union_news_g_h1/union_join_vol_green_h1 w=0.5,0.5 net=priority
 
-Cash book **-28.30%** ($7,170) · signal-only (no cash/fees) was —. Starts YES **9/30**. Fills 592 · skips 133 · realized $+83.38.
+Cash book **-28.74%** ($7,126) · signal-only (no cash/fees) was —. Starts YES **9/30**. Fills 597 · skips 133 · realized $+83.38.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $83.00.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $4,411.61.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -771,6 +771,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-27 09:30 ET | **BUY** | `GLND` | 272 | $3.16 | $3.51 | — | $941.93 | — | union ∩ news_g, no 🚨; gate news=good; list yday_mover; ret5=+3.6; combo leftover $859.19; owner union_news_g_h1 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 ab🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-27 09:30 ET | **BUY** | `AMTM` | 39 | $21.97 | $2.11 | — | $83.00 | — | union ∩ news_g, no 🚨; gate news=good; list ohlc_hot; ret5=+13.3; combo leftover $859.19; owner union_news_g_h1 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 judge🔴 ab🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-27 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $83.00 | ▲ close $7,169.88 vs 09:30 $7,033.66 (session +152.37) | 16:00 close · cash $83.00 · equity $7,169.88 vs 09:30 $7,033.66 (+136.22; session marks +152.37) · 8 name(s) marked open→close (per-name table). AMX×42 09:30 $24.27 → close $24.06 -8.82; SGRY×37 09:30 $23.20 → close $23.36 +5.92; NVTS×99 09:30 $8.62 → close $9.35 +72.27; AIP×43 09:30 $19.89 → close $20.95 +45.58; ITW×3 09:30 $272.30 → close $275.93 +10.89; TBBB×14 09:30 $58.24 → close $57.41 -11.62; GLND×272 09:30 $3.16 → close $3.33 +46.73; AMTM×39 09:30 $21.97 → close $21.75 -8.58 | — |
+| 2026-10-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $83.00 | ▲ 09:30 equity $7,180.19 vs yday $7,169.88 (+10.31) | 09:30 open · cash $83.00 (unchanged overnight, no fees) · equity $7,180.19 vs prior close $7,169.88 (+10.31) | — |
+| 2026-10-28 09:30 ET | **SELL** | `AIP` | 43 | $21.27 | $2.14 | $+55.08 | $995.47 | ▲ +55.08 after sell → book $7,178.05; vs 09:30 mark -2.14 | union_news_g_h1: dropped from list after 1 sess (min 1) | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **SELL** | `AMTM` | 39 | $21.59 | $2.13 | $-19.05 | $1,835.35 | ▼ -19.05 after sell → book $7,175.92; vs 09:30 mark -2.13 | union_news_g_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-28 09:30 ET | **SELL** | `NVTS` | 99 | $9.36 | $2.31 | $+68.66 | $2,759.68 | ▲ +68.66 after sell → book $7,173.61; vs 09:30 mark -2.31 | union_news_g_h1: dropped from list after 1 sess (min 1) | join🔴 sector🔴 gen🟢 news🟢 digest🟢 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **SELL** | `SGRY` | 37 | $23.26 | $2.12 | $-2.00 | $3,618.18 | ▼ -2.00 after sell → book $7,171.49; vs 09:30 mark -2.12 | union_news_g_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-28 09:30 ET | **SELL** | `TBBB` | 14 | $56.82 | $2.05 | $-23.96 | $4,411.61 | ▼ -23.96 after sell → book $7,169.44; vs 09:30 mark -2.05 | union_news_g_h1: dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🟢 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $4,411.61 | ▼ close $7,126.16 vs 09:30 $7,180.19 (session -43.28) | 16:00 close · cash $4,411.61 · equity $7,126.16 vs 09:30 $7,180.19 (-54.03; session marks -43.28) · 3 name(s) marked open→close (per-name table). AMX×42 09:30 $24.07 → close $23.93 -5.88; GLND×272 09:30 $3.37 → close $3.24 -35.36; ITW×3 09:30 $276.75 → close $276.07 -2.04 | — |
 
 ## Not taken
 

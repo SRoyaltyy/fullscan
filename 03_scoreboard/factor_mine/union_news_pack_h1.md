@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · morning packet news🟢 only (not the merged box)
 
-Cash book **+7.07%** ($10,707) · signal-only (no cash/fees) was +6.91%. Starts YES **21/30**. Fills 120 · skips 29 · realized $+1396.12.
+Cash book **+7.19%** ($10,719) · signal-only (no cash/fees) was +6.91%. Starts YES **21/30**. Fills 123 · skips 29 · realized $+1396.12.
 
 ## How this sleeve decides (like you are 10)
 
@@ -299,6 +299,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-27 09:30 ET | **BUY** | `RY` | 25 | $203.19 | $2.06 | — | $5,357.26 | — | morning packet news🟢 only (not the merged box); gate news_box=good; rank cond; list ohlc_hot; 🔵; ret5=+3.8; leftover $5219.54 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-27 09:30 ET | **BUY** | `AIP` | 262 | $19.89 | $3.38 | — | $142.70 | — | morning packet news🟢 only (not the merged box); gate news_box=good; rank cond; list probable,yday_gainer,yday_mover; 🔵; ret5=+1.9; leftover $5219.54 | join🔴 sector🟢 gen🟢 news🟢 digest🟢 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-27 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $142.70 | ▲ close $10,707.10 vs 09:30 $10,441.99 (session +273.47) | 16:00 close · cash $142.70 · equity $10,707.10 vs 09:30 $10,441.99 (+265.11; session marks +273.47) · 2 name(s) marked open→close (per-name table). RY×25 09:30 $203.19 → close $203.02 -4.25; AIP×262 09:30 $19.89 → close $20.95 +277.72 | — |
+| 2026-10-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $142.70 | ▲ 09:30 equity $10,793.19 vs yday $10,707.10 (+86.09) | 09:30 open · cash $142.70 (unchanged overnight, no fees) · equity $10,793.19 vs prior close $10,707.10 (+86.09) · 2 name(s) re-marked at the open (per-name table). AIP×262 yday $20.95 → 09:30 $21.27 +83.84; RY×25 yday $203.02 → 09:30 $203.11 +2.25 | — |
+| 2026-10-28 09:30 ET | **SELL** | `AIP` | 262 | $21.27 | $3.47 | $+354.71 | $5,711.97 | ▲ +354.71 after sell → book $10,789.72; vs 09:30 mark -3.47 | dropped from list after 1 sess (min 1) | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **SELL** | `RY` | 25 | $203.11 | $2.12 | $-6.18 | $10,787.61 | ▼ -6.18 after sell → book $10,787.61; vs 09:30 mark -2.11 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-28 09:30 ET | **BUY** | `AMX` | 447 | $24.07 | $5.77 | — | $22.55 | — | morning packet news🟢 only (not the merged box); gate news_box=good; rank cond; list yday_gainer; ret5=+5.1; leftover $10787.61 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $22.55 | ▼ close $10,719.26 vs 09:30 $10,793.19 (session -62.58) | 16:00 close · cash $22.55 · equity $10,719.26 vs 09:30 $10,793.19 (-73.93; session marks -62.58) · 1 name(s) marked open→close (per-name table). AMX×447 09:30 $24.07 → close $23.93 -62.58 | — |
 
 ## Not taken
 

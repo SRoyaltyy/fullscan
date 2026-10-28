@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **+16.48%** ($11,649) · signal-only (no cash/fees) was -3.93%. Starts YES **1/30**. Fills 46 · skips 0 · realized $-826.45.
+Cash book **+16.11%** ($11,612) · signal-only (no cash/fees) was -3.93%. Starts YES **1/30**. Fills 48 · skips 0 · realized $-826.45.
 
 ## How this sleeve decides (like you are 10)
 
@@ -226,3 +226,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-27 09:30 ET | **BUY** | `ARI` | 593 | $6.61 | $7.65 | — | $7,848.33 | — | combo gate; gate macd_up=True,rsi_os=True; list ohlc_hot; 🔵; ret5=+4.4; leftover $3925.24 | join🔴 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-27 09:30 ET | **BUY** | `BX` | 32 | $120.00 | $2.09 | — | $4,006.24 | — | combo gate; gate macd_up=True,rsi_os=True; list ohlc_hot; 🔵; ret5=+11.2; leftover $3925.24 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
 | 2026-10-27 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $4,006.24 | ▼ close $11,648.51 vs 09:30 $11,777.75 (session -117.46) | 16:00 close · cash $4,006.24 · equity $11,648.51 vs 09:30 $11,777.75 (-129.24; session marks -117.46) · 2 name(s) marked open→close (per-name table). ARI×593 09:30 $6.61 → close $6.59 -11.86; BX×32 09:30 $120.00 → close $116.70 -105.60 | — |
+| 2026-10-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $4,006.24 | ▼ 09:30 equity $11,621.44 vs yday $11,648.51 (-27.07) | 09:30 open · cash $4,006.24 (unchanged overnight, no fees) · equity $11,621.44 vs prior close $11,648.51 (-27.07) · 2 name(s) re-marked at the open (per-name table). ARI×593 yday $6.59 → 09:30 $6.56 -17.79; BX×32 yday $116.70 → 09:30 $116.41 -9.28 | — |
+| 2026-10-28 09:30 ET | **SELL** | `ARI` | 593 | $6.56 | $7.78 | $-45.08 | $7,888.54 | ▼ -45.08 after sell → book $11,613.66; vs 09:30 mark -7.78 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-28 09:30 ET | **SELL** | `BX` | 32 | $116.41 | $2.13 | $-119.09 | $11,611.53 | ▼ -119.09 after sell → book $11,611.53; vs 09:30 mark -2.13 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $11,611.53 | ▲ close $11,611.53 vs 09:30 $11,621.44 (session +0.00) | 16:00 close · cash $11,611.53 · no lots left · equity $11,611.53. | — |

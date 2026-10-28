@@ -276,6 +276,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-27 09:30 ET | **SELL** | `ISRG` | 5 | $451.63 | $2.03 | $+241.64 | $7,014.25 | ▲ +241.64 after sell → book $9,155.62; vs 09:30 mark -2.03 | exit unpriced hold on first bar after 4 sess | — |
 | 2026-10-27 09:30 ET | **SELL** | `T` | 103 | $20.79 | $2.33 | $-117.62 | $9,153.28 | ▼ -117.62 after sell → book $9,153.28; vs 09:30 mark -2.34 | exit unpriced hold on first bar after 4 sess | — |
 | 2026-10-27 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,153.28 | ▲ close $9,153.28 vs 09:30 $9,161.87 (session +0.00) | 16:00 close · cash $9,153.28 · no lots left · equity $9,153.28. | — |
+| 2026-10-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,153.28 | ▲ 09:30 equity $9,153.28 vs yday $9,153.28 (+0.00) | 09:30 open · cash $9,153.28 · no holdings · equity $9,153.28 vs prior close $9,153.28 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,153.28 | ▲ close $9,153.28 vs 09:30 $9,153.28 (session +0.00) | 16:00 close · cash $9,153.28 · no lots left · equity $9,153.28. | — |
 
 ## Not taken
 

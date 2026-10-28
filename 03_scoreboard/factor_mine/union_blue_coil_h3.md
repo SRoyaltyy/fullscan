@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-25.31%** ($7,469) · signal-only (no cash/fees) was -38.70%. Starts YES **1/30**. Fills 326 · skips 286 · realized $-1292.46.
+Cash book **-24.20%** ($7,580) · signal-only (no cash/fees) was -38.70%. Starts YES **1/30**. Fills 330 · skips 286 · realized $-1292.46.
 
 ## How this sleeve decides (like you are 10)
 
@@ -506,6 +506,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-27 09:30 ET | **BUY** | `NVTS` | 121 | $8.62 | $2.35 | — | $1,416.24 | — | combo gate; gate blue=True,ret_5_max=10.0; list probable,yday_gainer,yday_mover; 🔵; ret5=-2.7; leftover $1043.64 | join🔴 sector🟢 gen🟢 news🟢 digest🟢 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-27 09:30 ET | **BUY** | `EPR` | 18 | $56.39 | $2.04 | — | $399.18 | — | combo gate; gate blue=True,ret_5_max=10.0; list probable,yday_gainer,yday_mover; 🔵; ret5=+3.9; leftover $1043.64 | join🔴 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-27 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $399.18 | ▲ close $7,468.73 vs 09:30 $7,318.06 (session +177.92) | 16:00 close · cash $399.18 · equity $7,468.73 vs 09:30 $7,318.06 (+150.67; session marks +177.92) · 7 name(s) marked open→close (per-name table). VEEV×3 09:30 $315.50 → close $313.46 -6.12; ILMN×3 09:30 $269.42 → close $279.47 +30.15; CDNA×15 09:30 $69.10 → close $70.53 +21.45; PACS×21 09:30 $48.23 → close $47.85 -7.98; SMMT×71 09:30 $14.50 → close $15.33 +58.93; NVTS×121 09:30 $8.62 → close $9.35 +88.33; EPR×18 09:30 $56.39 → close $56.01 -6.84 | — |
+| 2026-10-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $399.18 | ▼ 09:30 equity $7,457.30 vs yday $7,468.73 (-11.43) | 09:30 open · cash $399.18 (unchanged overnight, no fees) · equity $7,457.30 vs prior close $7,468.73 (-11.43) · 7 name(s) re-marked at the open (per-name table). CDNA×15 yday $70.53 → 09:30 $69.91 -9.30; EPR×18 yday $56.01 → 09:30 $55.85 -2.88; ILMN×3 yday $279.47 → 09:30 $278.04 -4.29; NVTS×121 yday $9.35 → 09:30 $9.36 +1.21; PACS×21 yday $47.85 → 09:30 $49.00 +24.15; SMMT×71 yday $15.33 → 09:30 $15.19 -9.94; VEEV×3 yday $313.46 → 09:30 $310.00 -10.38 | — |
+| 2026-10-28 09:30 ET | **BUY** | `NEO` | 3 | $17.30 | $0.53 | — | $346.75 | — | combo gate; gate blue=True,ret_5_max=10.0; list flatten; 🔵; ret5=+3.9; leftover $57.03 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `PRMB` | 3 | $19.00 | $0.58 | — | $289.17 | — | combo gate; gate blue=True,ret_5_max=10.0; list probable,yday_gainer,yday_mover; 🔵; ret5=-4.0; leftover $57.03 | join🟢 sector🟡 gen🟢 news🟡 digest🔴 ab🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `CXW` | 1 | $30.90 | $0.31 | — | $257.96 | — | combo gate; gate blue=True,ret_5_max=10.0; list probable,yday_gainer,yday_mover; 🔵; ret5=+1.5; leftover $57.03 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `EGG` | 11 | $5.14 | $0.60 | — | $200.82 | — | combo gate; gate blue=True,ret_5_max=10.0; list yday_gainer,yday_mover; 🔵; ret5=+6.4; leftover $57.03 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $200.82 | ▲ close $7,580.07 vs 09:30 $7,457.30 (session +124.79) | 16:00 close · cash $200.82 · equity $7,580.07 vs 09:30 $7,457.30 (+122.77; session marks +124.79) · 11 name(s) marked open→close (per-name table). CDNA×15 09:30 $69.91 → close $72.13 +33.30; EPR×18 09:30 $55.85 → close $55.51 -6.12; ILMN×3 09:30 $278.04 → close $288.79 +32.25; NVTS×121 09:30 $9.36 → close $9.36 +0.00; PACS×21 09:30 $49.00 → close $49.06 +1.26; SMMT×71 09:30 $15.19 → close $15.77 +41.18; VEEV×3 09:30 $310.00 → close $317.82 +23.46; NEO×3 09:30 $17.30 → close $17.99 +2.07; PRMB×3 09:30 $19.00 → close $19.32 +0.96; CXW×1 09:30 $30.90 → close $30.63 -0.27; EGG×11 09:30 $5.14 → close $4.84 -3.30 | — |
 
 ## Not taken
 

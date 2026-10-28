@@ -693,6 +693,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-27 09:30 ET | **SELL** | `NOC` | 2 | $562.80 | $2.02 | $+47.19 | $8,581.59 | ▲ +47.19 after sell → book $9,791.13; vs 09:30 mark -2.02 | union_e_fresh_h3: dropped from list after 4 sess (min 3) | join🔴 sector🟡 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-27 09:30 ET | **SELL** | `PM` | 6 | $201.59 | $2.03 | $+82.66 | $9,789.10 | ▲ +82.66 after sell → book $9,789.10; vs 09:30 mark -2.03 | union_e_fresh_h3: dropped from list after 4 sess (min 3) | — |
 | 2026-10-27 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,789.10 | ▲ close $9,789.10 vs 09:30 $9,805.39 (session +0.00) | 16:00 close · cash $9,789.10 · no lots left · equity $9,789.10. | — |
+| 2026-10-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,789.10 | ▲ 09:30 equity $9,789.10 vs yday $9,789.10 (+0.00) | 09:30 open · cash $9,789.10 (unchanged overnight, no fees) · equity $9,789.10 vs prior close $9,789.10 (+0.00) | — |
+| 2026-10-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,789.10 | ▲ close $9,789.10 vs 09:30 $9,789.10 (session +0.00) | 16:00 close · cash $9,789.10 · no lots left · equity $9,789.10. | — |
 
 ## Not taken
 

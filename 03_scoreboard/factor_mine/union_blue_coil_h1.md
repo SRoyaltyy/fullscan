@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-18.85%** ($8,115) · signal-only (no cash/fees) was -23.64%. Starts YES **0/30**. Fills 414 · skips 79 · realized $-1931.95.
+Cash book **-19.12%** ($8,088) · signal-only (no cash/fees) was -23.64%. Starts YES **0/30**. Fills 428 · skips 79 · realized $-1931.95.
 
 ## How this sleeve decides (like you are 10)
 
@@ -594,6 +594,22 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-27 09:30 ET | **BUY** | `EPR` | 17 | $56.39 | $2.04 | — | $1,276.07 | — | combo gate; gate blue=True,ret_5_max=10.0; list probable,yday_gainer,yday_mover; 🔵; ret5=+3.9; leftover $988.10 | join🔴 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-27 09:30 ET | **BUY** | `PDFS` | 23 | $41.74 | $2.06 | — | $313.99 | — | combo gate; gate blue=True,ret_5_max=10.0; list probable,yday_gainer,yday_mover; 🔵; ret5=-1.0; leftover $988.10 | join🟡 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-27 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $313.99 | ▲ close $8,115.00 vs 09:30 $7,904.79 (session +226.92) | 16:00 close · cash $313.99 · equity $8,115.00 vs 09:30 $7,904.79 (+210.21; session marks +226.92) · 8 name(s) marked open→close (per-name table). VEEV×3 09:30 $315.50 → close $313.46 -6.12; ILMN×3 09:30 $269.42 → close $279.47 +30.15; CDNA×14 09:30 $69.10 → close $70.53 +20.02; PACS×20 09:30 $48.23 → close $47.85 -7.60; SMMT×68 09:30 $14.50 → close $15.33 +56.44; NVTS×114 09:30 $8.62 → close $9.35 +83.22; EPR×17 09:30 $56.39 → close $56.01 -6.46; PDFS×23 09:30 $41.74 → close $44.23 +57.27 | — |
+| 2026-10-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $313.99 | ▲ 09:30 equity $8,135.52 vs yday $8,115.00 (+20.52) | 09:30 open · cash $313.99 (unchanged overnight, no fees) · equity $8,135.52 vs prior close $8,115.00 (+20.52) · 8 name(s) re-marked at the open (per-name table). CDNA×14 yday $70.53 → 09:30 $69.91 -8.68; EPR×17 yday $56.01 → 09:30 $55.85 -2.72; ILMN×3 yday $279.47 → 09:30 $278.04 -4.29; NVTS×114 yday $9.35 → 09:30 $9.36 +1.14; PACS×20 yday $47.85 → 09:30 $49.00 +23.00; PDFS×23 yday $44.23 → 09:30 $45.62 +31.97; SMMT×68 yday $15.33 → 09:30 $15.19 -9.52; VEEV×3 yday $313.46 → 09:30 $310.00 -10.38 | — |
+| 2026-10-28 09:30 ET | **SELL** | `CDNA` | 14 | $69.91 | $2.05 | $+7.26 | $1,290.68 | ▲ +7.26 after sell → book $8,133.47; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-28 09:30 ET | **SELL** | `ILMN` | 3 | $278.04 | $2.02 | $+21.84 | $2,122.78 | ▲ +21.84 after sell → book $8,131.45; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-28 09:30 ET | **SELL** | `NVTS` | 114 | $9.36 | $2.36 | $+79.67 | $3,187.46 | ▲ +79.67 after sell → book $8,129.09; vs 09:30 mark -2.36 | dropped from list after 1 sess (min 1) | join🔴 sector🔴 gen🟢 news🟢 digest🟢 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **SELL** | `PACS` | 20 | $49.00 | $2.07 | $+11.28 | $4,165.39 | ▲ +11.28 after sell → book $8,127.02; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-28 09:30 ET | **SELL** | `PDFS` | 23 | $45.62 | $2.08 | $+85.10 | $5,212.57 | ▲ +85.10 after sell → book $8,124.94; vs 09:30 mark -2.08 | dropped from list after 1 sess (min 1) | join🟢 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **SELL** | `SMMT` | 68 | $15.19 | $2.22 | $+42.51 | $6,243.27 | ▲ +42.51 after sell → book $8,122.72; vs 09:30 mark -2.22 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-28 09:30 ET | **SELL** | `VEEV` | 3 | $310.00 | $2.02 | $-20.52 | $7,171.25 | ▼ -20.52 after sell → book $8,120.70; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-28 09:30 ET | **BUY** | `NEO` | 59 | $17.30 | $2.17 | — | $6,148.39 | — | combo gate; gate blue=True,ret_5_max=10.0; list flatten; 🔵; ret5=+3.9; leftover $1024.46 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `PRMB` | 53 | $19.00 | $2.15 | — | $5,139.24 | — | combo gate; gate blue=True,ret_5_max=10.0; list probable,yday_gainer,yday_mover; 🔵; ret5=-4.0; leftover $1024.46 | join🟢 sector🟡 gen🟢 news🟡 digest🔴 ab🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `CXW` | 33 | $30.90 | $2.09 | — | $4,117.45 | — | combo gate; gate blue=True,ret_5_max=10.0; list probable,yday_gainer,yday_mover; 🔵; ret5=+1.5; leftover $1024.46 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `EGG` | 199 | $5.14 | $2.59 | — | $3,092.00 | — | combo gate; gate blue=True,ret_5_max=10.0; list yday_gainer,yday_mover; 🔵; ret5=+6.4; leftover $1024.46 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `PRIM` | 14 | $71.14 | $2.03 | — | $2,094.01 | — | combo gate; gate blue=True,ret_5_max=10.0; list yday_gainer,yday_mover; 🔵; ret5=-4.2; leftover $1024.46 | join🟡 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `CRS` | 3 | $291.76 | $2.00 | — | $1,216.73 | — | combo gate; gate blue=True,ret_5_max=10.0; list yday_gainer; 🔵; ret5=-22.6; leftover $1024.46 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `ITW` | 3 | $276.75 | $2.00 | — | $384.48 | — | combo gate; gate blue=True,ret_5_max=10.0; list yday_gainer; 🔵; ret5=+0.3; leftover $1024.46 | join🔴 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $384.48 | ▼ close $8,088.32 vs 09:30 $8,135.52 (session -17.36) | 16:00 close · cash $384.48 · equity $8,088.32 vs 09:30 $8,135.52 (-47.20; session marks -17.36) · 8 name(s) marked open→close (per-name table). EPR×17 09:30 $55.85 → close $55.51 -5.78; NEO×59 09:30 $17.30 → close $17.99 +40.71; PRMB×53 09:30 $19.00 → close $19.32 +16.96; CXW×33 09:30 $30.90 → close $30.63 -8.91; EGG×199 09:30 $5.14 → close $4.84 -59.70; PRIM×14 09:30 $71.14 → close $73.76 +36.68; CRS×3 09:30 $291.76 → close $280.00 -35.28; ITW×3 09:30 $276.75 → close $276.07 -2.04 | — |
 
 ## Not taken
 

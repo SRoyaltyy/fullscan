@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared union_news_pack_h1/short_news_r_h3 w=0.5,0.5 net=priority
 
-Cash book **-4.87%** ($9,513) · signal-only (no cash/fees) was —. Starts YES **2/30**. Fills 279 · skips 146 · realized $+903.47.
+Cash book **-4.70%** ($9,531) · signal-only (no cash/fees) was —. Starts YES **2/30**. Fills 284 · skips 146 · realized $+903.47.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $6,645.91.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $14,036.59.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -458,6 +458,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-27 09:30 ET | **SHORT** | `BAH` | 20 | $82.53 | $2.12 | — | $5,030.61 | — | news🔴; gate news=bad; list ohlc_hot; ret5=+12.6; combo leftover $1691.11; owner short_news_r_h3 | join🔴 sector🟡 gen🟢 news🔴 digest🟢 judge🔴 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-10-27 09:30 ET | **SHORT** | `VVX` | 21 | $77.02 | $2.12 | — | $6,645.91 | — | news🔴; gate news=bad; list ohlc_hot; ret5=+10.4; combo leftover $1691.11; owner short_news_r_h3 | join🔴 sector🟡 gen🟢 news🔴 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-27 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,645.91 | ▲ close $9,513.46 vs 09:30 $9,506.99 (session +27.03) | 16:00 close · cash $6,645.91 · equity $9,513.46 vs 09:30 $9,506.99 (+6.47; session marks +27.03) · 6 name(s) marked open→close (per-name table). AMX×147 09:30 $24.27 → close $24.06 -30.87; LUV×11 09:30 $42.98 → close $43.44 -5.06; RY×7 09:30 $203.19 → close $203.02 -1.19; AIP×80 09:30 $19.89 → close $20.95 +84.80; BAH×20 09:30 $82.53 → close $83.40 -17.50; VVX×21 09:30 $77.02 → close $77.17 -3.15 | — |
+| 2026-10-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6,645.91 | ▲ 09:30 equity $9,557.03 vs yday $9,513.46 (+43.57) | 09:30 open · cash $6,645.91 (unchanged overnight, no fees) · equity $9,557.03 vs prior close $9,513.46 (+43.57) | — |
+| 2026-10-28 09:30 ET | **SELL** | `AIP` | 80 | $21.27 | $2.26 | $+105.91 | $8,345.25 | ▲ +105.91 after sell → book $9,554.77; vs 09:30 mark -2.26 | union_news_pack_h1: dropped from list after 1 sess (min 1) | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **COVER** | `LUV` | 11 | $43.36 | $2.02 | $-42.47 | $7,866.27 | ▼ -42.47 after sell → book $9,552.75; vs 09:30 mark -2.02 | short_news_r_h3: dropped from list after 5 sess (min 3) | — |
+| 2026-10-28 09:30 ET | **SELL** | `RY` | 7 | $203.11 | $2.03 | $-4.60 | $9,286.01 | ▼ -4.60 after sell → book $9,550.72; vs 09:30 mark -2.03 | union_news_pack_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-28 09:30 ET | **SHORT** | `SPCE` | 890 | $2.68 | $11.71 | — | $11,659.49 | — | news🔴; gate news=bad; list ohlc_hot; 🔵; ret5=+13.5; combo leftover $2387.68; owner short_news_r_h3 | join🟢 sector🟢 gen🟢 news🔴 digest🟢 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **SHORT** | `VOYG` | 87 | $27.35 | $2.35 | — | $14,036.59 | — | news🔴; gate news=bad; list ohlc_hot; 🔵; ret5=+13.8; combo leftover $2387.68; owner short_news_r_h3 | join🟢 sector🟢 gen🟢 news🔴 digest🟢 ab🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,036.59 | ▼ close $9,530.51 vs 09:30 $9,557.03 (session -6.14) | 16:00 close · cash $14,036.59 · equity $9,530.51 vs 09:30 $9,557.03 (-26.52; session marks -6.14) · 5 name(s) marked open→close (per-name table). AMX×147 09:30 $24.07 → close $23.93 -20.58; BAH×20 09:30 $82.85 → close $83.48 -12.60; VVX×21 09:30 $76.98 → close $77.41 -9.03; SPCE×890 09:30 $2.68 → close $2.66 +17.80; VOYG×87 09:30 $27.35 → close $27.14 +18.27 | — |
 
 ## Not taken
 

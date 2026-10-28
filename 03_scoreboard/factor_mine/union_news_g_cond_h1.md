@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · merged news🟢, rank +G−R
 
-Cash book **-34.30%** ($6,570) · signal-only (no cash/fees) was +8.94%. Starts YES **0/30**. Fills 329 · skips 79 · realized $-430.09.
+Cash book **-35.87%** ($6,413) · signal-only (no cash/fees) was +8.94%. Starts YES **0/30**. Fills 337 · skips 79 · realized $-430.09.
 
 ## How this sleeve decides (like you are 10)
 
@@ -508,6 +508,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-27 09:30 ET | **BUY** | `AMTM` | 42 | $21.97 | $2.12 | — | $1,128.63 | — | merged news🟢, rank +G−R; gate news=good; rank cond; list ohlc_hot; ret5=+13.3; leftover $932.16 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 judge🔴 ab🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-27 09:30 ET | **BUY** | `ITW` | 3 | $272.30 | $2.00 | — | $309.73 | — | merged news🟢, rank +G−R; gate news=good; rank cond; list yday_gainer; ret5=+2.2; leftover $932.16 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-27 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $309.73 | ▲ close $6,570.06 vs 09:30 $6,527.21 (session +59.38) | 16:00 close · cash $309.73 · equity $6,570.06 vs 09:30 $6,527.21 (+42.85; session marks +59.38) · 7 name(s) marked open→close (per-name table). SGRY×40 09:30 $23.20 → close $23.36 +6.40; GH×5 09:30 $174.75 → close $178.06 +16.53; RY×4 09:30 $203.19 → close $203.02 -0.68; TBBB×16 09:30 $58.24 → close $57.41 -13.28; AIP×46 09:30 $19.89 → close $20.95 +48.76; AMTM×42 09:30 $21.97 → close $21.75 -9.24; ITW×3 09:30 $272.30 → close $275.93 +10.89 | — |
+| 2026-10-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $309.73 | ▼ 09:30 equity $6,567.44 vs yday $6,570.06 (-2.62) | 09:30 open · cash $309.73 (unchanged overnight, no fees) · equity $6,567.44 vs prior close $6,570.06 (-2.62) · 7 name(s) re-marked at the open (per-name table). AIP×46 yday $20.95 → 09:30 $21.27 +14.72; AMTM×42 yday $21.75 → 09:30 $21.59 -6.72; GH×5 yday $178.06 → 09:30 $178.06 +0.00; ITW×3 yday $275.93 → 09:30 $276.75 +2.46; RY×4 yday $203.02 → 09:30 $203.11 +0.36; SGRY×40 yday $23.36 → 09:30 $23.26 -4.00; TBBB×16 yday $57.41 → 09:30 $56.82 -9.44 | — |
+| 2026-10-28 09:30 ET | **SELL** | `AIP` | 46 | $21.27 | $2.15 | $+59.20 | $1,286.00 | ▲ +59.20 after sell → book $6,565.29; vs 09:30 mark -2.15 | dropped from list after 1 sess (min 1) | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **SELL** | `AMTM` | 42 | $21.59 | $2.14 | $-20.21 | $2,190.65 | ▼ -20.21 after sell → book $6,563.16; vs 09:30 mark -2.13 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-28 09:30 ET | **SELL** | `GH` | 5 | $178.06 | $2.02 | $+12.50 | $3,078.92 | ▲ +12.50 after sell → book $6,561.13; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-28 09:30 ET | **SELL** | `RY` | 4 | $203.11 | $2.02 | $-4.34 | $3,889.34 | ▼ -4.34 after sell → book $6,559.11; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-28 09:30 ET | **SELL** | `SGRY` | 40 | $23.26 | $2.13 | $-1.84 | $4,817.61 | ▼ -1.84 after sell → book $6,556.98; vs 09:30 mark -2.13 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-28 09:30 ET | **SELL** | `TBBB` | 16 | $56.82 | $2.06 | $-26.82 | $5,724.67 | ▼ -26.82 after sell → book $6,554.92; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🟢 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `AMX` | 118 | $24.07 | $2.34 | — | $2,882.07 | — | merged news🟢, rank +G−R; gate news=good; rank cond; list yday_gainer; ret5=+5.1; leftover $2862.34 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `GLND` | 849 | $3.37 | $10.95 | — | $9.98 | — | merged news🟢, rank +G−R; gate news=good; rank cond; list yday_mover; ret5=+7.4; leftover $2862.34 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 ab🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9.98 | ▼ close $6,412.69 vs 09:30 $6,567.44 (session -128.93) | 16:00 close · cash $9.98 · equity $6,412.69 vs 09:30 $6,567.44 (-154.75; session marks -128.93) · 3 name(s) marked open→close (per-name table). ITW×3 09:30 $276.75 → close $276.07 -2.04; AMX×118 09:30 $24.07 → close $23.93 -16.52; GLND×849 09:30 $3.37 → close $3.24 -110.37 | — |
 
 ## Not taken
 

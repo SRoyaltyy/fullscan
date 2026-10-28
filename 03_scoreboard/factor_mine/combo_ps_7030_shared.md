@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared union_news_pack_h1/short_news_r_h3 w=0.7,0.3 net=priority
 
-Cash book **-0.09%** ($9,991) · signal-only (no cash/fees) was —. Starts YES **2/30**. Fills 279 · skips 146 · realized $+1121.47.
+Cash book **+0.10%** ($10,010) · signal-only (no cash/fees) was —. Starts YES **2/30**. Fills 284 · skips 146 · realized $+1121.47.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $3,372.49.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $11,891.23.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -458,6 +458,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-27 09:30 ET | **SHORT** | `BAH` | 10 | $82.53 | $2.06 | — | $2,527.34 | — | news🔴; gate news=bad; list ohlc_hot; ret5=+12.6; combo leftover $852.07; owner short_news_r_h3 | join🔴 sector🟡 gen🟢 news🔴 digest🟢 judge🔴 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-10-27 09:30 ET | **SHORT** | `VVX` | 11 | $77.02 | $2.07 | — | $3,372.49 | — | news🔴; gate news=bad; list ohlc_hot; ret5=+10.4; combo leftover $852.07; owner short_news_r_h3 | join🔴 sector🟡 gen🟢 news🔴 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-27 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $3,372.49 | ▲ close $9,990.91 vs 09:30 $9,967.61 (session +43.76) | 16:00 close · cash $3,372.49 · equity $9,990.91 vs 09:30 $9,967.61 (+23.30; session marks +43.76) · 6 name(s) marked open→close (per-name table). AMX×199 09:30 $24.27 → close $24.06 -41.79; LUV×7 09:30 $42.98 → close $43.44 -3.22; RY×9 09:30 $203.19 → close $203.02 -1.53; AIP×95 09:30 $19.89 → close $20.95 +100.70; BAH×10 09:30 $82.53 → close $83.40 -8.75; VVX×11 09:30 $77.02 → close $77.17 -1.65 | — |
+| 2026-10-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $3,372.49 | ▲ 09:30 equity $10,032.26 vs yday $9,990.91 (+41.35) | 09:30 open · cash $3,372.49 (unchanged overnight, no fees) · equity $10,032.26 vs prior close $9,990.91 (+41.35) | — |
+| 2026-10-28 09:30 ET | **SELL** | `AIP` | 95 | $21.27 | $2.31 | $+126.52 | $5,390.83 | ▲ +126.52 after sell → book $10,029.95; vs 09:30 mark -2.31 | union_news_pack_h1: dropped from list after 1 sess (min 1) | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **COVER** | `LUV` | 7 | $43.36 | $2.01 | $-28.48 | $5,085.30 | ▼ -28.48 after sell → book $10,027.94; vs 09:30 mark -2.01 | short_news_r_h3: dropped from list after 5 sess (min 3) | — |
+| 2026-10-28 09:30 ET | **SELL** | `RY` | 9 | $203.11 | $2.04 | $-4.78 | $6,911.25 | ▼ -4.78 after sell → book $10,025.90; vs 09:30 mark -2.04 | union_news_pack_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-28 09:30 ET | **SHORT** | `SPCE` | 935 | $2.68 | $12.31 | — | $9,404.75 | — | news🔴; gate news=bad; list ohlc_hot; 🔵; ret5=+13.5; combo leftover $2506.48; owner short_news_r_h3 | join🟢 sector🟢 gen🟢 news🔴 digest🟢 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **SHORT** | `VOYG` | 91 | $27.35 | $2.37 | — | $11,891.23 | — | news🔴; gate news=bad; list ohlc_hot; 🔵; ret5=+13.8; combo leftover $2506.48; owner short_news_r_h3 | join🟢 sector🟢 gen🟢 news🔴 digest🟢 ab🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $11,891.23 | ▼ close $10,010.15 vs 09:30 $10,032.26 (session -1.08) | 16:00 close · cash $11,891.23 · equity $10,010.15 vs 09:30 $10,032.26 (-22.11; session marks -1.08) · 5 name(s) marked open→close (per-name table). AMX×199 09:30 $24.07 → close $23.93 -27.86; BAH×10 09:30 $82.85 → close $83.48 -6.30; VVX×11 09:30 $76.98 → close $77.41 -4.73; SPCE×935 09:30 $2.68 → close $2.66 +18.70; VOYG×91 09:30 $27.35 → close $27.14 +19.11 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · alarm
 
-Cash book **+0.32%** ($10,032) · signal-only (no cash/fees) was +3.57%. Starts YES **5/30**. Fills 242 · skips 96 · realized $+54.59.
+Cash book **-1.12%** ($9,888) · signal-only (no cash/fees) was +3.57%. Starts YES **5/30**. Fills 250 · skips 96 · realized $+54.59.
 
 ## How this sleeve decides (like you are 10)
 
@@ -418,6 +418,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-26 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,031.81 | ▲ close $10,031.81 vs 09:30 $10,031.81 (session +0.00) | 16:00 close · cash $10,031.81 · no lots left · equity $10,031.81. | — |
 | 2026-10-27 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,031.81 | ▲ 09:30 equity $10,031.81 vs yday $10,031.81 (+0.00) | 09:30 open · cash $10,031.81 · no holdings · equity $10,031.81 vs prior close $10,031.81 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-10-27 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,031.81 | ▲ close $10,031.81 vs 09:30 $10,031.81 (session +0.00) | 16:00 close · cash $10,031.81 · no lots left · equity $10,031.81. | — |
+| 2026-10-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,031.81 | ▲ 09:30 equity $10,031.81 vs yday $10,031.81 (+0.00) | 09:30 open · cash $10,031.81 · no holdings · equity $10,031.81 vs prior close $10,031.81 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-28 09:30 ET | **SHORT** | `SRRK` | 14 | $43.82 | $2.07 | — | $10,643.22 | — | alarm; gate alarm=True; list flatten; ret5=+2.7; leftover $626.99 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 ab🔴 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **SHORT** | `BRKR` | 10 | $60.66 | $2.06 | — | $11,247.76 | — | alarm; gate alarm=True; list flatten; ret5=+8.6; leftover $626.99 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🟡 heat🟢 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **SHORT** | `AUTL` | 404 | $1.55 | $5.31 | — | $11,868.66 | — | alarm; gate alarm=True; list flatten; ret5=-6.6; leftover $626.99 | join🟡 sector🟡 gen🟢 news🟢 digest🟢 ab🔴 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **SHORT** | `SMMT` | 41 | $15.19 | $2.15 | — | $12,489.30 | — | alarm; gate alarm=True; list probable,yday_gainer,yday_mover; ret5=-4.7; leftover $626.99 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-28 09:30 ET | **SHORT** | `NVTS` | 66 | $9.36 | $2.23 | — | $13,104.83 | — | alarm; gate alarm=True; list probable,yday_gainer,yday_mover; ret5=+7.0; leftover $626.99 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **SHORT** | `AIP` | 29 | $21.27 | $2.11 | — | $13,719.55 | — | alarm; gate alarm=True; list probable,yday_gainer,yday_mover; ret5=+6.0; leftover $626.99 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **SHORT** | `ACRS` | 169 | $3.70 | $2.55 | — | $14,342.30 | — | alarm; gate alarm=True; list probable,yday_gainer,yday_mover; ret5=+0.5; leftover $626.99 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟡 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **SHORT** | `MX` | 243 | $2.58 | $3.20 | — | $14,966.03 | — | alarm; gate alarm=True; list yday_gainer,yday_mover; ret5=-2.3; leftover $626.99 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,966.03 | ▼ close $9,887.88 vs 09:30 $10,031.81 (session -122.25) | 16:00 close · cash $14,966.03 · equity $9,887.88 vs 09:30 $10,031.81 (-143.93; session marks -122.25) · 8 name(s) marked open→close (per-name table). SRRK×14 09:30 $43.82 → close $43.25 +7.98; BRKR×10 09:30 $60.66 → close $62.00 -13.40; AUTL×404 09:30 $1.55 → close $1.63 -32.32; SMMT×41 09:30 $15.19 → close $15.77 -23.78; NVTS×66 09:30 $9.36 → close $9.36 -0.00; AIP×29 09:30 $21.27 → close $21.43 -4.64; ACRS×169 09:30 $3.70 → close $3.96 -43.94; MX×243 09:30 $2.58 → close $2.63 -12.15 | — |
 
 ## Not taken
 

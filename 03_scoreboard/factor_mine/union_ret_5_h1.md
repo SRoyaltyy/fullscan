@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `ret_5` · size `leftover` · sell `list` · S-boost `none` · rank by ret_5
 
-Cash book **+13.12%** ($11,312) · signal-only (no cash/fees) was +36.33%. Starts YES **29/30**. Fills 441 · skips 100 · realized $+370.60.
+Cash book **+15.00%** ($11,500) · signal-only (no cash/fees) was +36.33%. Starts YES **29/30**. Fills 457 · skips 100 · realized $+370.60.
 
 ## How this sleeve decides (like you are 10)
 
@@ -618,6 +618,24 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-27 09:30 ET | **BUY** | `AMTM` | 64 | $21.97 | $2.18 | — | $1,763.72 | — | rank by ret_5; rank ret_5; list ohlc_hot; ret5=+13.3; leftover $1413.85 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 judge🔴 ab🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-27 09:30 ET | **BUY** | `DOW` | 41 | $33.77 | $2.11 | — | $377.04 | — | rank by ret_5; rank ret_5; list ohlc_hot; ret5=+13.0; leftover $1413.85 | join🔴 sector🟡 gen🟢 news🟡 digest🔴 ab🟢 peer🟡 heat🔴 vol🔴 buy🟡 |
 | 2026-10-27 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $377.04 | ▲ close $11,311.99 vs 09:30 $11,310.82 (session +19.90) | 16:00 close · cash $377.04 · equity $11,311.99 vs 09:30 $11,310.82 (+1.17; session marks +19.90) · 8 name(s) marked open→close (per-name table). SGRY×60 09:30 $23.20 → close $23.36 +9.60; RBRK×10 09:30 $132.49 → close $135.74 +32.50; POOL×7 09:30 $195.23 → close $194.90 -2.31; GMAB×31 09:30 $44.41 → close $44.67 +8.06; ENGS×322 09:30 $4.38 → close $4.36 -6.44; LMT×2 09:30 $626.91 → close $622.99 -7.84; AMTM×64 09:30 $21.97 → close $21.75 -14.08; DOW×41 09:30 $33.77 → close $33.78 +0.41 | — |
+| 2026-10-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $377.04 | ▼ 09:30 equity $11,260.17 vs yday $11,311.99 (-51.82) | 09:30 open · cash $377.04 (unchanged overnight, no fees) · equity $11,260.17 vs prior close $11,311.99 (-51.82) · 8 name(s) re-marked at the open (per-name table). AMTM×64 yday $21.75 → 09:30 $21.59 -10.24; DOW×41 yday $33.78 → 09:30 $33.73 -1.85; ENGS×322 yday $4.36 → 09:30 $4.36 +0.00; GMAB×31 yday $44.67 → 09:30 $44.63 -1.24; LMT×2 yday $622.99 → 09:30 $616.56 -12.86; POOL×7 yday $194.90 → 09:30 $192.48 -16.94; RBRK×10 yday $135.74 → 09:30 $135.47 -2.70; SGRY×60 yday $23.36 → 09:30 $23.26 -6.00 | — |
+| 2026-10-28 09:30 ET | **SELL** | `AMTM` | 64 | $21.59 | $2.20 | $-28.71 | $1,756.60 | ▼ -28.71 after sell → book $11,257.96; vs 09:30 mark -2.21 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-28 09:30 ET | **SELL** | `DOW` | 41 | $33.73 | $2.13 | $-5.68 | $3,137.60 | ▼ -5.68 after sell → book $11,255.83; vs 09:30 mark -2.13 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-28 09:30 ET | **SELL** | `ENGS` | 322 | $4.36 | $4.22 | $-14.81 | $4,537.30 | ▼ -14.81 after sell → book $11,251.61; vs 09:30 mark -4.22 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-28 09:30 ET | **SELL** | `GMAB` | 31 | $44.63 | $2.10 | $+2.63 | $5,918.72 | ▲ +2.63 after sell → book $11,249.50; vs 09:30 mark -2.11 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-28 09:30 ET | **SELL** | `LMT` | 2 | $616.56 | $2.02 | $-24.71 | $7,149.83 | ▼ -24.71 after sell → book $11,247.49; vs 09:30 mark -2.01 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-28 09:30 ET | **SELL** | `POOL` | 7 | $192.48 | $2.03 | $-23.29 | $8,495.16 | ▼ -23.29 after sell → book $11,245.46; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **SELL** | `RBRK` | 10 | $135.47 | $2.04 | $+25.74 | $9,847.82 | ▲ +25.74 after sell → book $11,243.42; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-28 09:30 ET | **SELL** | `SGRY` | 60 | $23.26 | $2.19 | $-0.76 | $11,241.22 | ▼ -0.76 after sell → book $11,241.22; vs 09:30 mark -2.20 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-28 09:30 ET | **BUY** | `RH` | 9 | $140.69 | $2.02 | — | $9,973.00 | — | rank by ret_5; rank ret_5; list ohlc_hot; ret5=+17.6; leftover $1405.15 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `IMSR` | 476 | $2.95 | $6.14 | — | $8,562.66 | — | rank by ret_5; rank ret_5; list ohlc_hot; 🔵; ret5=+17.5; leftover $1405.15 | join🟡 sector🟡 gen🟢 news🟡 digest🟡 ab🟡 heat🔴 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `AMPX` | 156 | $8.98 | $2.46 | — | $7,159.32 | — | rank by ret_5; rank ret_5; list ohlc_hot; 🔵; ret5=+17.2; leftover $1405.15 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `S` | 54 | $25.56 | $2.15 | — | $5,776.93 | — | rank by ret_5; rank ret_5; list ohlc_hot; ret5=+16.6; leftover $1405.15 | join🟡 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `JLHL` | 250 | $5.60 | $3.23 | — | $4,373.70 | — | rank by ret_5; rank ret_5; list yday_mover; 🔵; ret5=+16.4; leftover $1405.15 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `FIP` | 530 | $2.65 | $6.84 | — | $2,962.37 | — | rank by ret_5; rank ret_5; list ohlc_hot; 🔵; ret5=+15.6; leftover $1405.15 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `BETA` | 67 | $20.88 | $2.19 | — | $1,561.21 | — | rank by ret_5; rank ret_5; list ohlc_hot; 🔵; ret5=+14.3; leftover $1405.15 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟡 heat🔴 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `VOYG` | 51 | $27.35 | $2.14 | — | $164.22 | — | rank by ret_5; rank ret_5; list ohlc_hot; 🔵; ret5=+13.8; leftover $1405.15 | join🟢 sector🟢 gen🟢 news🔴 digest🟢 ab🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $164.22 | ▲ close $11,499.78 vs 09:30 $11,260.17 (session +285.72) | 16:00 close · cash $164.22 · equity $11,499.78 vs 09:30 $11,260.17 (+239.61; session marks +285.72) · 8 name(s) marked open→close (per-name table). RH×9 09:30 $140.69 → close $145.06 +39.33; IMSR×476 09:30 $2.95 → close $3.35 +190.40; AMPX×156 09:30 $8.98 → close $9.16 +28.08; S×54 09:30 $25.56 → close $25.59 +1.62; JLHL×250 09:30 $5.60 → close $5.65 +12.50; FIP×530 09:30 $2.65 → close $2.81 +84.80; BETA×67 09:30 $20.88 → close $19.98 -60.30; VOYG×51 09:30 $27.35 → close $27.14 -10.71 | — |
 
 ## Not taken
 

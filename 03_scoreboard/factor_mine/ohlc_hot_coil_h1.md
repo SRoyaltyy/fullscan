@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `ohlc_hot` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · hot list ∩ not exploded
 
-Cash book **-23.31%** ($7,669) · signal-only (no cash/fees) was -11.86%. Starts YES **9/30**. Fills 305 · skips 74 · realized $-1849.08.
+Cash book **-22.98%** ($7,702) · signal-only (no cash/fees) was -11.86%. Starts YES **9/30**. Fills 317 · skips 74 · realized $-1849.08.
 
 ## How this sleeve decides (like you are 10)
 
@@ -485,6 +485,20 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-27 09:30 ET | **BUY** | `MICC` | 49 | $19.21 | $2.14 | — | $1,157.65 | — | hot list ∩ not exploded; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list ohlc_hot; ret5=+3.3; leftover $953.81 | join🔴 sector🟡 gen🟢 news🟡 digest🔴 ab🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-27 09:30 ET | **BUY** | `AMRX` | 45 | $20.93 | $2.12 | — | $213.68 | — | hot list ∩ not exploded; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list ohlc_hot; 🔵; ret5=+8.6; leftover $953.81 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-27 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $213.68 | ▲ close $7,669.34 vs 09:30 $7,630.46 (session +55.73) | 16:00 close · cash $213.68 · equity $7,669.34 vs 09:30 $7,630.46 (+38.88; session marks +55.73) · 8 name(s) marked open→close (per-name table). SLN×48 09:30 $19.78 → close $19.78 +0.00; PHM×7 09:30 $121.54 → close $121.63 +0.63; LYB×14 09:30 $66.86 → close $67.43 +7.98; FNB×52 09:30 $18.34 → close $18.24 -5.20; GH×5 09:30 $174.75 → close $178.06 +16.53; ERIC×87 09:30 $10.96 → close $11.08 +10.88; MICC×49 09:30 $19.21 → close $19.25 +1.96; AMRX×45 09:30 $20.93 → close $21.44 +22.95 | — |
+| 2026-10-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $213.68 | ▼ 09:30 equity $7,651.51 vs yday $7,669.34 (-17.83) | 09:30 open · cash $213.68 (unchanged overnight, no fees) · equity $7,651.51 vs prior close $7,669.34 (-17.83) · 8 name(s) re-marked at the open (per-name table). AMRX×45 yday $21.44 → 09:30 $21.32 -5.18; ERIC×87 yday $11.08 → 09:30 $11.05 -2.61; FNB×52 yday $18.24 → 09:30 $18.27 +1.56; GH×5 yday $178.06 → 09:30 $178.06 +0.00; LYB×14 yday $67.43 → 09:30 $67.29 -1.96; MICC×49 yday $19.25 → 09:30 $19.09 -7.84; PHM×7 yday $121.63 → 09:30 $121.51 -0.84; SLN×48 yday $19.78 → 09:30 $19.76 -0.96 | — |
+| 2026-10-28 09:30 ET | **SELL** | `AMRX` | 45 | $21.32 | $2.15 | $+13.50 | $1,171.16 | ▲ +13.50 after sell → book $7,649.37; vs 09:30 mark -2.14 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-28 09:30 ET | **SELL** | `ERIC` | 87 | $11.05 | $2.28 | $+3.74 | $2,130.23 | ▲ +3.74 after sell → book $7,647.09; vs 09:30 mark -2.28 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-28 09:30 ET | **SELL** | `FNB` | 52 | $18.27 | $2.17 | $-7.95 | $3,078.11 | ▼ -7.95 after sell → book $7,644.93; vs 09:30 mark -2.16 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-28 09:30 ET | **SELL** | `GH` | 5 | $178.06 | $2.02 | $+12.50 | $3,966.38 | ▲ +12.50 after sell → book $7,642.90; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-28 09:30 ET | **SELL** | `LYB` | 14 | $67.29 | $2.05 | $+1.94 | $4,906.39 | ▲ +1.94 after sell → book $7,640.85; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-28 09:30 ET | **SELL** | `MICC` | 49 | $19.09 | $2.16 | $-10.17 | $5,839.64 | ▼ -10.17 after sell → book $7,638.69; vs 09:30 mark -2.16 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-28 09:30 ET | **SELL** | `PHM` | 7 | $121.51 | $2.03 | $-4.25 | $6,688.18 | ▼ -4.25 after sell → book $7,636.66; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-28 09:30 ET | **SELL** | `SLN` | 48 | $19.76 | $2.15 | $-5.25 | $7,634.51 | ▼ -5.25 after sell → book $7,634.51; vs 09:30 mark -2.15 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `NFGC` | 1096 | $1.74 | $14.14 | — | $5,713.33 | — | hot list ∩ not exploded; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list ohlc_hot; ret5=+6.1; leftover $1908.63 | join🔴 sector🟡 gen🟢 news🟡 digest🔴 ab🔴 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `BBWI` | 87 | $21.70 | $2.25 | — | $3,823.18 | — | hot list ∩ not exploded; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list ohlc_hot; ret5=+6.8; leftover $1908.63 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `AEO` | 98 | $19.39 | $2.28 | — | $1,920.68 | — | hot list ∩ not exploded; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list ohlc_hot; ret5=+9.0; leftover $1908.63 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `NXPI` | 8 | $238.14 | $2.01 | — | $13.54 | — | hot list ∩ not exploded; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list ohlc_hot; ret5=+6.7; leftover $1908.63 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🟡 heat🔴 vol🔴 buy🟡 |
+| 2026-10-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $13.54 | ▲ close $7,701.94 vs 09:30 $7,651.51 (session +88.12) | 16:00 close · cash $13.54 · equity $7,701.94 vs 09:30 $7,651.51 (+50.43; session marks +88.12) · 4 name(s) marked open→close (per-name table). NFGC×1096 09:30 $1.74 → close $1.72 -21.92; BBWI×87 09:30 $21.70 → close $21.64 -5.22; AEO×98 09:30 $19.39 → close $19.46 +6.86; NXPI×8 09:30 $238.14 → close $251.69 +108.40 | — |
 
 ## Not taken
 

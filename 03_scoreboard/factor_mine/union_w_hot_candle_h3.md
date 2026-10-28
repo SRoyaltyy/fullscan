@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `w_hot_candle` · size `leftover` · sell `list` · S-boost `none` · rank by w_hot_candle
 
-Cash book **-1.53%** ($9,847) · signal-only (no cash/fees) was +319.57%. Starts YES **29/30**. Fills 340 · skips 289 · realized $+901.34.
+Cash book **-1.01%** ($9,899) · signal-only (no cash/fees) was +319.57%. Starts YES **29/30**. Fills 345 · skips 289 · realized $+901.34.
 
 ## How this sleeve decides (like you are 10)
 
@@ -517,6 +517,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-27 09:30 ET | **BUY** | `RBRK` | 9 | $132.49 | $2.02 | — | $1,885.00 | — | rank by w_hot_candle; rank w_hot_candle; list ohlc_hot; 🔵; ret5=+17.6; leftover $1231.66 | join🟡 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-27 09:30 ET | **BUY** | `RIG` | 190 | $6.48 | $2.56 | — | $651.24 | — | rank by w_hot_candle; rank w_hot_candle; list ohlc_hot; ret5=+10.9; leftover $1231.66 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-27 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $651.24 | ▲ close $9,846.97 vs 09:30 $9,856.19 (session +12.43) | 16:00 close · cash $651.24 · equity $9,846.97 vs 09:30 $9,856.19 (-9.22; session marks +12.43) · 8 name(s) marked open→close (per-name table). SGRY×53 09:30 $23.20 → close $23.36 +8.48; ENGS×281 09:30 $4.38 → close $4.36 -5.62; LMT×1 09:30 $626.91 → close $622.99 -3.92; DOW×36 09:30 $33.77 → close $33.78 +0.36; SLN×62 09:30 $19.78 → close $19.78 +0.00; AMTM×56 09:30 $21.97 → close $21.75 -12.32; RBRK×9 09:30 $132.49 → close $135.74 +29.25; RIG×190 09:30 $6.48 → close $6.46 -3.80 | — |
+| 2026-10-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $651.24 | ▼ 09:30 equity $9,822.89 vs yday $9,846.97 (-24.08) | 09:30 open · cash $651.24 (unchanged overnight, no fees) · equity $9,822.89 vs prior close $9,846.97 (-24.08) · 8 name(s) re-marked at the open (per-name table). AMTM×56 yday $21.75 → 09:30 $21.59 -8.96; DOW×36 yday $33.78 → 09:30 $33.73 -1.62; ENGS×281 yday $4.36 → 09:30 $4.36 +0.00; LMT×1 yday $622.99 → 09:30 $616.56 -6.43; RBRK×9 yday $135.74 → 09:30 $135.47 -2.43; RIG×190 yday $6.46 → 09:30 $6.47 +1.90; SGRY×53 yday $23.36 → 09:30 $23.26 -5.30; SLN×62 yday $19.78 → 09:30 $19.76 -1.24 | — |
+| 2026-10-28 09:30 ET | **BUY** | `VCYT` | 1 | $50.00 | $0.50 | — | $600.74 | — | rank by w_hot_candle; rank w_hot_candle; list ohlc_hot; ret5=+12.3; leftover $81.41 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `JLHL` | 14 | $5.60 | $0.83 | — | $521.51 | — | rank by w_hot_candle; rank w_hot_candle; list yday_mover; 🔵; ret5=+16.4; leftover $81.41 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `BBWI` | 3 | $21.70 | $0.66 | — | $455.75 | — | rank by w_hot_candle; rank w_hot_candle; list ohlc_hot; ret5=+6.8; leftover $81.41 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `NFGC` | 46 | $1.74 | $0.94 | — | $374.77 | — | rank by w_hot_candle; rank w_hot_candle; list ohlc_hot; ret5=+6.1; leftover $81.41 | join🔴 sector🟡 gen🟢 news🟡 digest🔴 ab🔴 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `AEO` | 4 | $19.39 | $0.79 | — | $296.42 | — | rank by w_hot_candle; rank w_hot_candle; list ohlc_hot; ret5=+9.0; leftover $81.41 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $296.42 | ▲ close $9,898.59 vs 09:30 $9,822.89 (session +79.41) | 16:00 close · cash $296.42 · equity $9,898.59 vs 09:30 $9,822.89 (+75.70; session marks +79.41) · 13 name(s) marked open→close (per-name table). AMTM×56 09:30 $21.59 → close $21.69 +5.60; DOW×36 09:30 $33.73 → close $34.13 +14.22; ENGS×281 09:30 $4.36 → close $4.36 +0.00; LMT×1 09:30 $616.56 → close $629.75 +13.19; RBRK×9 09:30 $135.47 → close $136.00 +4.77; RIG×190 09:30 $6.47 → close $6.71 +45.60; SGRY×53 09:30 $23.26 → close $23.24 -1.06; SLN×62 09:30 $19.76 → close $19.71 -3.10; VCYT×1 09:30 $50.00 → close $50.31 +0.31; JLHL×14 09:30 $5.60 → close $5.65 +0.70; BBWI×3 09:30 $21.70 → close $21.64 -0.18; NFGC×46 09:30 $1.74 → close $1.72 -0.92; AEO×4 09:30 $19.39 → close $19.46 +0.28 | — |
 
 ## Not taken
 

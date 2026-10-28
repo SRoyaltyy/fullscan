@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · packet🟢 and camera net ≥ 2
 
-Cash book **-6.49%** ($9,351) · signal-only (no cash/fees) was -9.47%. Starts YES **16/30**. Fills 62 · skips 82 · realized $-1172.71.
+Cash book **-5.68%** ($9,432) · signal-only (no cash/fees) was -9.47%. Starts YES **16/30**. Fills 62 · skips 82 · realized $-1172.71.
 
 ## How this sleeve decides (like you are 10)
 
@@ -242,6 +242,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-27 09:30 ET | **SELL** | `CSX` | 1 | $51.36 | $0.54 | $+2.31 | $9,361.11 | ▲ +2.31 after sell → book $9,361.11; vs 09:30 mark -0.54 | exit unpriced hold on first bar after 4 sess | — |
 | 2026-10-27 09:30 ET | **BUY** | `RY` | 46 | $203.19 | $2.13 | — | $12.24 | — | packet🟢 and camera net ≥ 2; gate cam_net_min=2,news_box=good; rank cond; list ohlc_hot; 🔵; ret5=+3.8; leftover $9361.11 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-27 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $12.24 | ▼ close $9,351.16 vs 09:30 $9,364.31 (session -7.82) | 16:00 close · cash $12.24 · equity $9,351.16 vs 09:30 $9,364.31 (-13.15; session marks -7.82) · 1 name(s) marked open→close (per-name table). RY×46 09:30 $203.19 → close $203.02 -7.82 | — |
+| 2026-10-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $12.24 | ▲ 09:30 equity $9,355.30 vs yday $9,351.16 (+4.14) | 09:30 open · cash $12.24 (unchanged overnight, no fees) · equity $9,355.30 vs prior close $9,351.16 (+4.14) · 1 name(s) re-marked at the open (per-name table). RY×46 yday $203.02 → 09:30 $203.11 +4.14 | — |
+| 2026-10-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $12.24 | ▲ close $9,431.66 vs 09:30 $9,355.30 (session +76.36) | 16:00 close · cash $12.24 · equity $9,431.66 vs 09:30 $9,355.30 (+76.36; session marks +76.36) · 1 name(s) marked open→close (per-name table). RY×46 09:30 $203.11 → close $204.77 +76.36 | — |
 
 ## Not taken
 

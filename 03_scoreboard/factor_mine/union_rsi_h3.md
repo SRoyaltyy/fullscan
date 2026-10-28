@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `rsi` · size `leftover` · sell `list` · S-boost `none` · rank by rsi
 
-Cash book **-24.77%** ($7,522) · signal-only (no cash/fees) was -34.58%. Starts YES **0/30**. Fills 307 · skips 269 · realized $-1699.80.
+Cash book **-24.28%** ($7,572) · signal-only (no cash/fees) was -34.58%. Starts YES **0/30**. Fills 314 · skips 269 · realized $-1699.80.
 
 ## How this sleeve decides (like you are 10)
 
@@ -484,6 +484,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-27 09:30 ET | **BUY** | `PATH` | 76 | $14.19 | $2.22 | — | $2,186.90 | — | rank by rsi; rank rsi; list ohlc_hot; 🔵; ret5=+9.0; leftover $1084.07 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-10-27 09:30 ET | **BUY** | `ERIC` | 98 | $10.96 | $2.28 | — | $1,111.02 | — | rank by rsi; rank rsi; list ohlc_hot; 🔵; ret5=+5.3; leftover $1084.07 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
 | 2026-10-27 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,111.02 | ▼ close $7,522.50 vs 09:30 $7,598.62 (session -52.62) | 16:00 close · cash $1,111.02 · equity $7,522.50 vs 09:30 $7,598.62 (-76.12; session marks -52.62) · 6 name(s) marked open→close (per-name table). ARI×164 09:30 $6.61 → close $6.59 -3.28; BX×9 09:30 $120.00 → close $116.70 -29.70; FRSH×71 09:30 $15.21 → close $14.90 -22.01; SLN×54 09:30 $19.78 → close $19.78 +0.00; PATH×76 09:30 $14.19 → close $14.06 -9.88; ERIC×98 09:30 $10.96 → close $11.08 +12.25 | — |
+| 2026-10-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $1,111.02 | ▼ 09:30 equity $7,483.88 vs yday $7,522.50 (-38.62) | 09:30 open · cash $1,111.02 (unchanged overnight, no fees) · equity $7,483.88 vs prior close $7,522.50 (-38.62) · 6 name(s) re-marked at the open (per-name table). ARI×164 yday $6.59 → 09:30 $6.56 -4.92; BX×9 yday $116.70 → 09:30 $116.41 -2.61; ERIC×98 yday $11.08 → 09:30 $11.05 -2.94; FRSH×71 yday $14.90 → 09:30 $14.69 -14.91; PATH×76 yday $14.06 → 09:30 $13.90 -12.16; SLN×54 yday $19.78 → 09:30 $19.76 -1.08 | — |
+| 2026-10-28 09:30 ET | **BUY** | `HAWK` | 10 | $13.55 | $1.39 | — | $974.13 | — | rank by rsi; rank rsi; list ohlc_hot; 🔵; ret5=+13.6; leftover $138.88 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `QTTB` | 16 | $8.65 | $1.43 | — | $834.30 | — | rank by rsi; rank rsi; list yday_gainer; ret5=+1.0; leftover $138.88 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `JLHL` | 24 | $5.60 | $1.42 | — | $698.49 | — | rank by rsi; rank rsi; list yday_mover; 🔵; ret5=+16.4; leftover $138.88 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `UPS` | 1 | $105.39 | $1.06 | — | $592.04 | — | rank by rsi; rank rsi; list ohlc_hot; 🔵; ret5=+7.7; leftover $138.88 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟡 heat🟢 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `ENHA` | 127 | $1.09 | $1.77 | — | $451.84 | — | rank by rsi; rank rsi; list yday_mover; ret5=-5.3; leftover $138.88 | join🔴 sector🟡 gen🟢 news🟡 digest🔴 ab🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `BBWI` | 6 | $21.70 | $1.32 | — | $320.32 | — | rank by rsi; rank rsi; list ohlc_hot; ret5=+6.8; leftover $138.88 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `FIP` | 52 | $2.65 | $1.53 | — | $180.99 | — | rank by rsi; rank rsi; list ohlc_hot; 🔵; ret5=+15.6; leftover $138.88 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $180.99 | ▲ close $7,571.66 vs 09:30 $7,483.88 (session +97.69) | 16:00 close · cash $180.99 · equity $7,571.66 vs 09:30 $7,483.88 (+87.78; session marks +97.69) · 13 name(s) marked open→close (per-name table). ARI×164 09:30 $6.56 → close $6.56 +0.00; BX×9 09:30 $116.41 → close $117.06 +5.85; ERIC×98 09:30 $11.05 → close $11.06 +1.47; FRSH×71 09:30 $14.69 → close $15.38 +48.99; PATH×76 09:30 $13.90 → close $14.19 +22.04; SLN×54 09:30 $19.76 → close $19.71 -2.70; HAWK×10 09:30 $13.55 → close $13.27 -2.80; QTTB×16 09:30 $8.65 → close $9.06 +6.56; JLHL×24 09:30 $5.60 → close $5.65 +1.20; UPS×1 09:30 $105.39 → close $105.62 +0.23; ENHA×127 09:30 $1.09 → close $1.16 +8.89; BBWI×6 09:30 $21.70 → close $21.64 -0.36; FIP×52 09:30 $2.65 → close $2.81 +8.32 | — |
 
 ## Not taken
 

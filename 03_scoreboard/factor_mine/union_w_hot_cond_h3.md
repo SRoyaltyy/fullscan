@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `w_hot_cond` · size `leftover` · sell `list` · S-boost `none` · rank by w_hot_cond
 
-Cash book **+25.32%** ($12,532) · signal-only (no cash/fees) was +337.30%. Starts YES **29/30**. Fills 346 · skips 286 · realized $+834.44.
+Cash book **+29.98%** ($12,998) · signal-only (no cash/fees) was +337.30%. Starts YES **29/30**. Fills 351 · skips 286 · realized $+834.44.
 
 ## How this sleeve decides (like you are 10)
 
@@ -523,6 +523,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-27 09:30 ET | **BUY** | `PACS` | 32 | $48.23 | $2.09 | — | $1,805.49 | — | rank by w_hot_cond; rank w_hot_cond; list flatten; 🔵; ret5=+6.3; leftover $1550.98 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟢 |
 | 2026-10-27 09:30 ET | **BUY** | `CDNA` | 22 | $69.10 | $2.06 | — | $283.24 | — | rank by w_hot_cond; rank w_hot_cond; list flatten; 🔵; ret5=+3.0; leftover $1550.98 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟢 |
 | 2026-10-27 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $283.24 | ▲ close $12,532.09 vs 09:30 $12,420.18 (session +141.18) | 16:00 close · cash $283.24 · equity $12,532.09 vs 09:30 $12,420.18 (+111.91; session marks +141.18) · 8 name(s) marked open→close (per-name table). SGRY×66 09:30 $23.20 → close $23.36 +10.56; SLN×78 09:30 $19.78 → close $19.78 +0.00; RBRK×11 09:30 $132.49 → close $135.74 +35.75; AMRX×74 09:30 $20.93 → close $21.44 +37.74; BLLN×13 09:30 $111.84 → close $114.07 +28.99; GMAB×34 09:30 $44.41 → close $44.67 +8.84; PACS×32 09:30 $48.23 → close $47.85 -12.16; CDNA×22 09:30 $69.10 → close $70.53 +31.46 | — |
+| 2026-10-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $283.24 | ▲ 09:30 equity $12,532.82 vs yday $12,532.09 (+0.73) | 09:30 open · cash $283.24 (unchanged overnight, no fees) · equity $12,532.82 vs prior close $12,532.09 (+0.73) · 8 name(s) re-marked at the open (per-name table). AMRX×74 yday $21.44 → 09:30 $21.32 -8.51; BLLN×13 yday $114.07 → 09:30 $113.96 -1.43; CDNA×22 yday $70.53 → 09:30 $69.91 -13.64; GMAB×34 yday $44.67 → 09:30 $44.63 -1.36; PACS×32 yday $47.85 → 09:30 $49.00 +36.80; RBRK×11 yday $135.74 → 09:30 $135.47 -2.97; SGRY×66 yday $23.36 → 09:30 $23.26 -6.60; SLN×78 yday $19.78 → 09:30 $19.76 -1.56 | — |
+| 2026-10-28 09:30 ET | **BUY** | `EGG` | 6 | $5.14 | $0.33 | — | $252.07 | — | rank by w_hot_cond; rank w_hot_cond; list yday_gainer,yday_mover; 🔵; ret5=+6.4; leftover $35.41 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `VOYG` | 1 | $27.35 | $0.28 | — | $224.45 | — | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; 🔵; ret5=+13.8; leftover $35.41 | join🟢 sector🟢 gen🟢 news🔴 digest🟢 ab🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `BBWI` | 1 | $21.70 | $0.22 | — | $202.53 | — | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; ret5=+6.8; leftover $35.41 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `SPCE` | 13 | $2.68 | $0.39 | — | $167.30 | — | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; 🔵; ret5=+13.5; leftover $35.41 | join🟢 sector🟢 gen🟢 news🔴 digest🟢 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `AEO` | 1 | $19.39 | $0.20 | — | $147.71 | — | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; ret5=+9.0; leftover $35.41 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $147.71 | ▲ close $12,997.79 vs 09:30 $12,532.82 (session +466.38) | 16:00 close · cash $147.71 · equity $12,997.79 vs 09:30 $12,532.82 (+464.97; session marks +466.38) · 13 name(s) marked open→close (per-name table). AMRX×74 09:30 $21.32 → close $21.14 -13.69; BLLN×13 09:30 $113.96 → close $114.00 +0.52; CDNA×22 09:30 $69.91 → close $72.13 +48.84; GMAB×34 09:30 $44.63 → close $57.29 +430.44; PACS×32 09:30 $49.00 → close $49.06 +1.92; RBRK×11 09:30 $135.47 → close $136.00 +5.83; SGRY×66 09:30 $23.26 → close $23.24 -1.32; SLN×78 09:30 $19.76 → close $19.71 -3.90; EGG×6 09:30 $5.14 → close $4.84 -1.80; VOYG×1 09:30 $27.35 → close $27.14 -0.21; BBWI×1 09:30 $21.70 → close $21.64 -0.06; SPCE×13 09:30 $2.68 → close $2.66 -0.26; AEO×1 09:30 $19.39 → close $19.46 +0.07 | — |
 
 ## Not taken
 

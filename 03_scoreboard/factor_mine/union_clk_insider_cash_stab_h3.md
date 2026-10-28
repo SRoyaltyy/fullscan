@@ -192,6 +192,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-27 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $15.71 | ▼ 09:30 equity $10,558.13 vs yday $10,766.03 (-207.90) | 09:30 open · cash $15.71 (unchanged overnight, no fees) · equity $10,558.13 vs prior close $10,766.03 (-207.90) · 1 name(s) re-marked at the open (per-name table). POOL×54 yday $199.08 → 09:30 $195.23 -207.90 | — |
 | 2026-10-27 09:30 ET | **SELL** | `POOL` | 54 | $195.23 | $2.25 | $+1282.96 | $10,555.88 | ▲ +1,282.96 after sell → book $10,555.88; vs 09:30 mark -2.25 | exit unpriced hold on first bar after 4 sess | join🔴 sector🟡 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-27 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,555.88 | ▲ close $10,555.88 vs 09:30 $10,558.13 (session +0.00) | 16:00 close · cash $10,555.88 · no lots left · equity $10,555.88. | — |
+| 2026-10-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,555.88 | ▲ 09:30 equity $10,555.88 vs yday $10,555.88 (+0.00) | 09:30 open · cash $10,555.88 · no holdings · equity $10,555.88 vs prior close $10,555.88 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,555.88 | ▲ close $10,555.88 vs 09:30 $10,555.88 (session +0.00) | 16:00 close · cash $10,555.88 · no lots left · equity $10,555.88. | — |
 
 ## Not taken
 

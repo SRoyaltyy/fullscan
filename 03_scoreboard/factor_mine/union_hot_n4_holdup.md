@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 4 · rank `hot_score` · size `leftover` · sell `list` · S-boost `holdup` · hot4; S>0 lots stay through the next 09:30 so the overnight gap is in the book
 
-Cash book **+47.40%** ($14,740) · signal-only (no cash/fees) was +89.81%. Starts YES **29/30**. Fills 120 · skips 79 · realized $+4974.44.
+Cash book **+51.95%** ($15,195) · signal-only (no cash/fees) was +89.81%. Starts YES **29/30**. Fills 124 · skips 79 · realized $+4974.44.
 
 ## How this sleeve decides (like you are 10)
 
@@ -298,6 +298,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-26 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,740.00 | ▲ close $14,740.00 vs 09:30 $14,740.00 (session +0.00) | 16:00 close · cash $14,740.00 · no lots left · equity $14,740.00. | — |
 | 2026-10-27 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $14,740.00 | ▲ 09:30 equity $14,740.00 vs yday $14,740.00 (+0.00) | 09:30 open · cash $14,740.00 · no holdings · equity $14,740.00 vs prior close $14,740.00 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-10-27 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,740.00 | ▲ close $14,740.00 vs 09:30 $14,740.00 (session +0.00) | 16:00 close · cash $14,740.00 · no lots left · equity $14,740.00. | — |
+| 2026-10-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $14,740.00 | ▲ 09:30 equity $14,740.00 vs yday $14,740.00 (+0.00) | 09:30 open · cash $14,740.00 · no holdings · equity $14,740.00 vs prior close $14,740.00 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-28 09:30 ET | **BUY** | `RH` | 26 | $140.69 | $2.07 | — | $11,079.99 | — | hot4; S>0 lots stay through the next 09:30 so the overnight gap is in the book; rank hot_score; list ohlc_hot; ret5=+17.6; leftover $3685.00 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `VCYT` | 73 | $50.00 | $2.21 | — | $7,427.78 | — | hot4; S>0 lots stay through the next 09:30 so the overnight gap is in the book; rank hot_score; list ohlc_hot; ret5=+12.3; leftover $3685.00 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `IMSR` | 1249 | $2.95 | $16.11 | — | $3,727.12 | — | hot4; S>0 lots stay through the next 09:30 so the overnight gap is in the book; rank hot_score; list ohlc_hot; 🔵; ret5=+17.5; leftover $3685.00 | join🟡 sector🟡 gen🟢 news🟡 digest🟡 ab🟡 heat🔴 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `BETA` | 176 | $20.88 | $2.52 | — | $49.72 | — | hot4; S>0 lots stay through the next 09:30 so the overnight gap is in the book; rank hot_score; list ohlc_hot; 🔵; ret5=+14.3; leftover $3685.00 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟡 heat🔴 vol🔴 buy🟡 |
+| 2026-10-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $49.72 | ▲ close $15,194.54 vs 09:30 $14,740.00 (session +477.45) | 16:00 close · cash $49.72 · equity $15,194.54 vs 09:30 $14,740.00 (+454.54; session marks +477.45) · 4 name(s) marked open→close (per-name table). RH×26 09:30 $140.69 → close $145.06 +113.62; VCYT×73 09:30 $50.00 → close $50.31 +22.63; IMSR×1249 09:30 $2.95 → close $3.35 +499.60; BETA×176 09:30 $20.88 → close $19.98 -158.40 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `w_hot_cond` · size `leftover` · sell `list` · S-boost `none` · rank by w_hot_cond
 
-Cash book **+21.54%** ($12,154) · signal-only (no cash/fees) was +31.34%. Starts YES **29/30**. Fills 450 · skips 96 · realized $-9.27.
+Cash book **+20.60%** ($12,060) · signal-only (no cash/fees) was +31.34%. Starts YES **29/30**. Fills 466 · skips 96 · realized $-9.27.
 
 ## How this sleeve decides (like you are 10)
 
@@ -627,6 +627,24 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-27 09:30 ET | **BUY** | `PACS` | 31 | $48.23 | $2.08 | — | $1,672.03 | — | rank by w_hot_cond; rank w_hot_cond; list flatten; 🔵; ret5=+6.3; leftover $1504.12 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟢 |
 | 2026-10-27 09:30 ET | **BUY** | `CDNA` | 21 | $69.10 | $2.05 | — | $218.88 | — | rank by w_hot_cond; rank w_hot_cond; list flatten; 🔵; ret5=+3.0; leftover $1504.12 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟢 |
 | 2026-10-27 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $218.88 | ▲ close $12,154.08 vs 09:30 $12,032.94 (session +138.02) | 16:00 close · cash $218.88 · equity $12,154.08 vs 09:30 $12,032.94 (+121.14; session marks +138.02) · 8 name(s) marked open→close (per-name table). SGRY×64 09:30 $23.20 → close $23.36 +10.24; SLN×76 09:30 $19.78 → close $19.78 +0.00; RBRK×11 09:30 $132.49 → close $135.74 +35.75; AMRX×71 09:30 $20.93 → close $21.44 +36.21; BLLN×13 09:30 $111.84 → close $114.07 +28.99; GMAB×33 09:30 $44.41 → close $44.67 +8.58; PACS×31 09:30 $48.23 → close $47.85 -11.78; CDNA×21 09:30 $69.10 → close $70.53 +30.03 | — |
+| 2026-10-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $218.88 | ▲ 09:30 equity $12,154.90 vs yday $12,154.08 (+0.82) | 09:30 open · cash $218.88 (unchanged overnight, no fees) · equity $12,154.90 vs prior close $12,154.08 (+0.82) · 8 name(s) re-marked at the open (per-name table). AMRX×71 yday $21.44 → 09:30 $21.32 -8.17; BLLN×13 yday $114.07 → 09:30 $113.96 -1.43; CDNA×21 yday $70.53 → 09:30 $69.91 -13.02; GMAB×33 yday $44.67 → 09:30 $44.63 -1.32; PACS×31 yday $47.85 → 09:30 $49.00 +35.65; RBRK×11 yday $135.74 → 09:30 $135.47 -2.97; SGRY×64 yday $23.36 → 09:30 $23.26 -6.40; SLN×76 yday $19.78 → 09:30 $19.76 -1.52 | — |
+| 2026-10-28 09:30 ET | **SELL** | `AMRX` | 71 | $21.32 | $2.23 | $+23.62 | $1,730.73 | ▲ +23.62 after sell → book $12,152.68; vs 09:30 mark -2.22 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-28 09:30 ET | **SELL** | `BLLN` | 13 | $113.96 | $2.05 | $+23.48 | $3,210.16 | ▲ +23.48 after sell → book $12,150.63; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | join🟡 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **SELL** | `CDNA` | 21 | $69.91 | $2.07 | $+12.88 | $4,676.19 | ▲ +12.88 after sell → book $12,148.55; vs 09:30 mark -2.08 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-28 09:30 ET | **SELL** | `GMAB` | 33 | $44.63 | $2.11 | $+3.06 | $6,146.87 | ▲ +3.06 after sell → book $12,146.44; vs 09:30 mark -2.11 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-28 09:30 ET | **SELL** | `PACS` | 31 | $49.00 | $2.11 | $+19.68 | $7,663.77 | ▲ +19.68 after sell → book $12,144.34; vs 09:30 mark -2.10 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-28 09:30 ET | **SELL** | `RBRK` | 11 | $135.47 | $2.04 | $+28.71 | $9,151.89 | ▲ +28.71 after sell → book $12,142.29; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-28 09:30 ET | **SELL** | `SGRY` | 64 | $23.26 | $2.20 | $-0.55 | $10,638.33 | ▼ -0.55 after sell → book $12,140.09; vs 09:30 mark -2.20 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-28 09:30 ET | **SELL** | `SLN` | 76 | $19.76 | $2.24 | $-5.98 | $12,137.84 | ▼ -5.98 after sell → book $12,137.84; vs 09:30 mark -2.25 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `VCYT` | 30 | $50.00 | $2.08 | — | $10,635.76 | — | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; ret5=+12.3; leftover $1517.23 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `EGG` | 295 | $5.14 | $3.81 | — | $9,115.66 | — | rank by w_hot_cond; rank w_hot_cond; list yday_gainer,yday_mover; 🔵; ret5=+6.4; leftover $1517.23 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `UPS` | 14 | $105.39 | $2.03 | — | $7,638.17 | — | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; 🔵; ret5=+7.7; leftover $1517.23 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟡 heat🟢 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `RH` | 10 | $140.69 | $2.02 | — | $6,229.25 | — | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; ret5=+17.6; leftover $1517.23 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `VOYG` | 55 | $27.35 | $2.15 | — | $4,722.84 | — | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; 🔵; ret5=+13.8; leftover $1517.23 | join🟢 sector🟢 gen🟢 news🔴 digest🟢 ab🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `BBWI` | 69 | $21.70 | $2.20 | — | $3,223.35 | — | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; ret5=+6.8; leftover $1517.23 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `SPCE` | 566 | $2.68 | $7.30 | — | $1,699.16 | — | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; 🔵; ret5=+13.5; leftover $1517.23 | join🟢 sector🟢 gen🟢 news🔴 digest🟢 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `AEO` | 78 | $19.39 | $2.22 | — | $184.52 | — | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; ret5=+9.0; leftover $1517.23 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $184.52 | ▼ close $12,060.20 vs 09:30 $12,154.90 (session -53.83) | 16:00 close · cash $184.52 · equity $12,060.20 vs 09:30 $12,154.90 (-94.70; session marks -53.83) · 8 name(s) marked open→close (per-name table). VCYT×30 09:30 $50.00 → close $50.31 +9.30; EGG×295 09:30 $5.14 → close $4.84 -88.50; UPS×14 09:30 $105.39 → close $105.62 +3.22; RH×10 09:30 $140.69 → close $145.06 +43.70; VOYG×55 09:30 $27.35 → close $27.14 -11.55; BBWI×69 09:30 $21.70 → close $21.64 -4.14; SPCE×566 09:30 $2.68 → close $2.66 -11.32; AEO×78 09:30 $19.39 → close $19.46 +5.46 | — |
 
 ## Not taken
 

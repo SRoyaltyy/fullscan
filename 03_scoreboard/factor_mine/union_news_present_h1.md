@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ news_present, no 🚨
 
-Cash book **-17.56%** ($8,244) · signal-only (no cash/fees) was -2.20%. Starts YES **0/30**. Fills 418 · skips 106 · realized $-251.67.
+Cash book **-16.87%** ($8,313) · signal-only (no cash/fees) was -2.20%. Starts YES **0/30**. Fills 432 · skips 106 · realized $-251.67.
 
 ## How this sleeve decides (like you are 10)
 
@@ -596,6 +596,22 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-27 09:30 ET | **BUY** | `PRGO` | 74 | $15.56 | $2.21 | — | $2,717.45 | — | union ∩ news_present, no 🚨; gate news_present=True; list flatten; ret5=-1.7; leftover $1166.64 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-27 09:30 ET | **BUY** | `SGRY` | 50 | $23.20 | $2.14 | — | $1,555.31 | — | union ∩ news_present, no 🚨; gate news_present=True; list flatten; 🔵; ret5=+58.1; leftover $1166.64 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟢 |
 | 2026-10-27 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,555.31 | ▲ close $8,243.93 vs 09:30 $8,168.70 (session +89.88) | 16:00 close · cash $1,555.31 · equity $8,243.93 vs 09:30 $8,168.70 (+75.23; session marks +89.88) · 6 name(s) marked open→close (per-name table). VEEV×3 09:30 $315.50 → close $313.46 -6.12; ILMN×4 09:30 $269.42 → close $279.47 +40.20; CDNA×16 09:30 $69.10 → close $70.53 +22.88; PACS×24 09:30 $48.23 → close $47.85 -9.12; PRGO×74 09:30 $15.56 → close $16.02 +34.04; SGRY×50 09:30 $23.20 → close $23.36 +8.00 | — |
+| 2026-10-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $1,555.31 | ▼ 09:30 equity $8,236.07 vs yday $8,243.93 (-7.86) | 09:30 open · cash $1,555.31 (unchanged overnight, no fees) · equity $8,236.07 vs prior close $8,243.93 (-7.86) · 6 name(s) re-marked at the open (per-name table). CDNA×16 yday $70.53 → 09:30 $69.91 -9.92; ILMN×4 yday $279.47 → 09:30 $278.04 -5.72; PACS×24 yday $47.85 → 09:30 $49.00 +27.60; PRGO×74 yday $16.02 → 09:30 $15.96 -4.44; SGRY×50 yday $23.36 → 09:30 $23.26 -5.00; VEEV×3 yday $313.46 → 09:30 $310.00 -10.38 | — |
+| 2026-10-28 09:30 ET | **SELL** | `CDNA` | 16 | $69.91 | $2.06 | $+8.86 | $2,671.81 | ▲ +8.86 after sell → book $8,234.01; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-28 09:30 ET | **SELL** | `ILMN` | 4 | $278.04 | $2.02 | $+30.46 | $3,781.95 | ▲ +30.46 after sell → book $8,231.99; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-28 09:30 ET | **SELL** | `PACS` | 24 | $49.00 | $2.08 | $+14.34 | $4,955.87 | ▲ +14.34 after sell → book $8,229.91; vs 09:30 mark -2.08 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-28 09:30 ET | **SELL** | `PRGO` | 74 | $15.96 | $2.23 | $+25.15 | $6,134.67 | ▲ +25.15 after sell → book $8,227.67; vs 09:30 mark -2.24 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-28 09:30 ET | **SELL** | `SGRY` | 50 | $23.26 | $2.16 | $-1.30 | $7,295.51 | ▼ -1.30 after sell → book $8,225.51; vs 09:30 mark -2.16 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-28 09:30 ET | **SELL** | `VEEV` | 3 | $310.00 | $2.02 | $-20.52 | $8,223.49 | ▼ -20.52 after sell → book $8,223.49; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-28 09:30 ET | **BUY** | `NEO` | 59 | $17.30 | $2.17 | — | $7,200.63 | — | union ∩ news_present, no 🚨; gate news_present=True; list flatten; 🔵; ret5=+3.9; leftover $1027.94 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `FDMT` | 86 | $11.89 | $2.25 | — | $6,175.84 | — | union ∩ news_present, no 🚨; gate news_present=True; list flatten; ret5=-8.7; leftover $1027.94 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `PRMB` | 54 | $19.00 | $2.15 | — | $5,147.69 | — | union ∩ news_present, no 🚨; gate news_present=True; list probable,yday_gainer,yday_mover; 🔵; ret5=-4.0; leftover $1027.94 | join🟢 sector🟡 gen🟢 news🟡 digest🔴 ab🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `EPR` | 18 | $55.85 | $2.04 | — | $4,140.34 | — | union ∩ news_present, no 🚨; gate news_present=True; list probable,yday_gainer,yday_mover; 🔵; ret5=+1.2; leftover $1027.94 | join🟡 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `PDFS` | 22 | $45.62 | $2.06 | — | $3,134.65 | — | union ∩ news_present, no 🚨; gate news_present=True; list probable,yday_gainer,yday_mover; ret5=+7.4; leftover $1027.94 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `CXW` | 33 | $30.90 | $2.09 | — | $2,112.86 | — | union ∩ news_present, no 🚨; gate news_present=True; list probable,yday_gainer,yday_mover; 🔵; ret5=+1.5; leftover $1027.94 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `EGG` | 199 | $5.14 | $2.59 | — | $1,087.41 | — | union ∩ news_present, no 🚨; gate news_present=True; list yday_gainer,yday_mover; 🔵; ret5=+6.4; leftover $1027.94 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `PRIM` | 14 | $71.14 | $2.03 | — | $89.42 | — | union ∩ news_present, no 🚨; gate news_present=True; list yday_gainer,yday_mover; 🔵; ret5=-4.2; leftover $1027.94 | join🟡 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $89.42 | ▲ close $8,312.64 vs 09:30 $8,236.07 (session +106.52) | 16:00 close · cash $89.42 · equity $8,312.64 vs 09:30 $8,236.07 (+76.57; session marks +106.52) · 8 name(s) marked open→close (per-name table). NEO×59 09:30 $17.30 → close $17.99 +40.71; FDMT×86 09:30 $11.89 → close $12.93 +89.44; PRMB×54 09:30 $19.00 → close $19.32 +17.28; EPR×18 09:30 $55.85 → close $55.51 -6.12; PDFS×22 09:30 $45.62 → close $45.49 -2.86; CXW×33 09:30 $30.90 → close $30.63 -8.91; EGG×199 09:30 $5.14 → close $4.84 -59.70; PRIM×14 09:30 $71.14 → close $73.76 +36.68 | — |
 
 ## Not taken
 

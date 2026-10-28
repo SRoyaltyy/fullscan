@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `trail` · S-boost `none` · after min-hold, trail 5% off peak
 
-Cash book **-21.08%** ($7,892) · signal-only (no cash/fees) was -4.92%. Starts YES **0/30**. Fills 315 · skips 293 · realized $-339.55.
+Cash book **-19.80%** ($8,020) · signal-only (no cash/fees) was -4.92%. Starts YES **0/30**. Fills 322 · skips 293 · realized $-339.55.
 
 ## How this sleeve decides (like you are 10)
 
@@ -489,6 +489,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-27 09:30 ET | **BUY** | `SGRY` | 41 | $23.20 | $2.11 | — | $2,164.57 | — | after min-hold, trail 5% off peak; list flatten; 🔵; ret5=+58.1; leftover $972.45 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟢 |
 | 2026-10-27 09:30 ET | **BUY** | `SMMT` | 67 | $14.50 | $2.19 | — | $1,190.88 | — | after min-hold, trail 5% off peak; list probable,yday_gainer,yday_mover; 🔵; ⚪; ret5=-6.9; leftover $972.45 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-10-27 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,190.88 | ▲ close $7,892.20 vs 09:30 $7,786.09 (session +127.14) | 16:00 close · cash $1,190.88 · equity $7,892.20 vs 09:30 $7,786.09 (+106.11; session marks +127.14) · 7 name(s) marked open→close (per-name table). VEEV×3 09:30 $315.50 → close $313.46 -6.12; ILMN×3 09:30 $269.42 → close $279.47 +30.15; CDNA×14 09:30 $69.10 → close $70.53 +20.02; PACS×20 09:30 $48.23 → close $47.85 -7.60; PRGO×62 09:30 $15.56 → close $16.02 +28.52; SGRY×41 09:30 $23.20 → close $23.36 +6.56; SMMT×67 09:30 $14.50 → close $15.33 +55.61 | — |
+| 2026-10-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $1,190.88 | ▼ 09:30 equity $7,874.65 vs yday $7,892.20 (-17.55) | 09:30 open · cash $1,190.88 (unchanged overnight, no fees) · equity $7,874.65 vs prior close $7,892.20 (-17.55) · 7 name(s) re-marked at the open (per-name table). CDNA×14 yday $70.53 → 09:30 $69.91 -8.68; ILMN×3 yday $279.47 → 09:30 $278.04 -4.29; PACS×20 yday $47.85 → 09:30 $49.00 +23.00; PRGO×62 yday $16.02 → 09:30 $15.96 -3.72; SGRY×41 yday $23.36 → 09:30 $23.26 -4.10; SMMT×67 yday $15.33 → 09:30 $15.19 -9.38; VEEV×3 yday $313.46 → 09:30 $310.00 -10.38 | — |
+| 2026-10-28 09:30 ET | **BUY** | `SRRK` | 3 | $43.82 | $1.32 | — | $1,058.10 | — | after min-hold, trail 5% off peak; list flatten; ret5=+2.7; leftover $170.13 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 ab🔴 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `BRKR` | 2 | $60.66 | $1.22 | — | $935.56 | — | after min-hold, trail 5% off peak; list flatten; ret5=+8.6; leftover $170.13 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🟡 heat🟢 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `NEO` | 9 | $17.30 | $1.58 | — | $778.27 | — | after min-hold, trail 5% off peak; list flatten; 🔵; ret5=+3.9; leftover $170.13 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `AUTL` | 109 | $1.55 | $2.02 | — | $607.31 | — | after min-hold, trail 5% off peak; list flatten; ret5=-6.6; leftover $170.13 | join🟡 sector🟡 gen🟢 news🟢 digest🟢 ab🔴 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `FDMT` | 14 | $11.89 | $1.71 | — | $439.14 | — | after min-hold, trail 5% off peak; list flatten; ret5=-8.7; leftover $170.13 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `PRMB` | 8 | $19.00 | $1.54 | — | $285.60 | — | after min-hold, trail 5% off peak; list probable,yday_gainer,yday_mover; 🔵; ret5=-4.0; leftover $170.13 | join🟢 sector🟡 gen🟢 news🟡 digest🔴 ab🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `NVTS` | 18 | $9.36 | $1.74 | — | $115.38 | — | after min-hold, trail 5% off peak; list probable,yday_gainer,yday_mover; ret5=+7.0; leftover $170.13 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $115.38 | ▲ close $8,020.09 vs 09:30 $7,874.65 (session +156.57) | 16:00 close · cash $115.38 · equity $8,020.09 vs 09:30 $7,874.65 (+145.44; session marks +156.57) · 14 name(s) marked open→close (per-name table). CDNA×14 09:30 $69.91 → close $72.13 +31.08; ILMN×3 09:30 $278.04 → close $288.79 +32.25; PACS×20 09:30 $49.00 → close $49.06 +1.20; PRGO×62 09:30 $15.96 → close $15.92 -2.48; SGRY×41 09:30 $23.26 → close $23.24 -0.82; SMMT×67 09:30 $15.19 → close $15.77 +38.86; VEEV×3 09:30 $310.00 → close $317.82 +23.46; SRRK×3 09:30 $43.82 → close $43.25 -1.71; BRKR×2 09:30 $60.66 → close $62.00 +2.68; NEO×9 09:30 $17.30 → close $17.99 +6.21; AUTL×109 09:30 $1.55 → close $1.63 +8.72; FDMT×14 09:30 $11.89 → close $12.93 +14.56; PRMB×8 09:30 $19.00 → close $19.32 +2.56; NVTS×18 09:30 $9.36 → close $9.36 +0.00 | — |
 
 ## Not taken
 

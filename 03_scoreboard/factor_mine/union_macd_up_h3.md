@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ macd_up, no 🚨
 
-Cash book **-6.63%** ($9,337) · signal-only (no cash/fees) was +63.53%. Starts YES **26/30**. Fills 335 · skips 288 · realized $-45.00.
+Cash book **-5.72%** ($9,428) · signal-only (no cash/fees) was +63.53%. Starts YES **26/30**. Fills 340 · skips 288 · realized $-45.00.
 
 ## How this sleeve decides (like you are 10)
 
@@ -513,6 +513,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-27 09:30 ET | **BUY** | `EPR` | 27 | $56.39 | $2.07 | — | $1,952.27 | — | union ∩ macd_up, no 🚨; gate macd_up=True; list probable,yday_gainer,yday_mover; 🔵; ret5=+3.9; leftover $1566.87 | join🔴 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-27 09:30 ET | **BUY** | `ACRS` | 393 | $3.98 | $5.07 | — | $383.06 | — | union ∩ macd_up, no 🚨; gate macd_up=True; list probable,yday_gainer,yday_mover; 🔵; ret5=+8.9; leftover $1566.87 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟡 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-27 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $383.06 | ▼ close $9,336.96 vs 09:30 $9,409.73 (session -48.53) | 16:00 close · cash $383.06 · equity $9,336.96 vs 09:30 $9,409.73 (-72.77; session marks -48.53) · 6 name(s) marked open→close (per-name table). VEEV×4 09:30 $315.50 → close $313.46 -8.16; PACS×32 09:30 $48.23 → close $47.85 -12.16; PRGO×100 09:30 $15.56 → close $16.02 +46.00; SGRY×67 09:30 $23.20 → close $23.36 +10.72; EPR×27 09:30 $56.39 → close $56.01 -10.26; ACRS×393 09:30 $3.98 → close $3.79 -74.67 | — |
+| 2026-10-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $383.06 | ▼ 09:30 equity $9,307.53 vs yday $9,336.96 (-29.43) | 09:30 open · cash $383.06 (unchanged overnight, no fees) · equity $9,307.53 vs prior close $9,336.96 (-29.43) · 6 name(s) re-marked at the open (per-name table). ACRS×393 yday $3.79 → 09:30 $3.70 -35.37; EPR×27 yday $56.01 → 09:30 $55.85 -4.32; PACS×32 yday $47.85 → 09:30 $49.00 +36.80; PRGO×100 yday $16.02 → 09:30 $15.96 -6.00; SGRY×67 yday $23.36 → 09:30 $23.26 -6.70; VEEV×4 yday $313.46 → 09:30 $310.00 -13.84 | — |
+| 2026-10-28 09:30 ET | **BUY** | `NEO` | 3 | $17.30 | $0.53 | — | $330.63 | — | union ∩ macd_up, no 🚨; gate macd_up=True; list flatten; 🔵; ret5=+3.9; leftover $54.72 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `PRMB` | 2 | $19.00 | $0.39 | — | $292.25 | — | union ∩ macd_up, no 🚨; gate macd_up=True; list probable,yday_gainer,yday_mover; 🔵; ret5=-4.0; leftover $54.72 | join🟢 sector🟡 gen🟢 news🟡 digest🔴 ab🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `EGG` | 10 | $5.14 | $0.54 | — | $240.30 | — | union ∩ macd_up, no 🚨; gate macd_up=True; list yday_gainer,yday_mover; 🔵; ret5=+6.4; leftover $54.72 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `QTTB` | 6 | $8.65 | $0.54 | — | $187.86 | — | union ∩ macd_up, no 🚨; gate macd_up=True; list yday_gainer; ret5=+1.0; leftover $54.72 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `AMX` | 2 | $24.07 | $0.49 | — | $139.24 | — | union ∩ macd_up, no 🚨; gate macd_up=True; list yday_gainer; ret5=+5.1; leftover $54.72 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $139.24 | ▲ close $9,427.80 vs 09:30 $9,307.53 (session +122.75) | 16:00 close · cash $139.24 · equity $9,427.80 vs 09:30 $9,307.53 (+120.27; session marks +122.75) · 11 name(s) marked open→close (per-name table). ACRS×393 09:30 $3.70 → close $3.96 +102.18; EPR×27 09:30 $55.85 → close $55.51 -9.18; PACS×32 09:30 $49.00 → close $49.06 +1.92; PRGO×100 09:30 $15.96 → close $15.92 -4.00; SGRY×67 09:30 $23.26 → close $23.24 -1.34; VEEV×4 09:30 $310.00 → close $317.82 +31.28; NEO×3 09:30 $17.30 → close $17.99 +2.07; PRMB×2 09:30 $19.00 → close $19.32 +0.64; EGG×10 09:30 $5.14 → close $4.84 -3.00; QTTB×6 09:30 $8.65 → close $9.06 +2.46; AMX×2 09:30 $24.07 → close $23.93 -0.28 | — |
 
 ## Not taken
 

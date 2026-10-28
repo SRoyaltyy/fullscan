@@ -413,6 +413,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-27 09:30 ET | **COVER** | `LUV` | 66 | $42.98 | $2.19 | $-209.74 | $13,013.41 | ▼ -209.74 after sell → book $10,414.01; vs 09:30 mark -2.19 | exit unpriced hold on first bar after 4 sess | join🔴 sector🟡 gen🟢 news🔴 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-27 09:30 ET | **COVER** | `NFLX` | 41 | $63.40 | $2.11 | $+26.42 | $10,411.90 | ▲ +26.42 after sell → book $10,411.90; vs 09:30 mark -2.11 | exit unpriced hold on first bar after 4 sess | — |
 | 2026-10-27 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,411.90 | ▲ close $10,411.90 vs 09:30 $10,416.20 (session +0.00) | 16:00 close · cash $10,411.90 · no lots left · equity $10,411.90. | — |
+| 2026-10-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,411.90 | ▲ 09:30 equity $10,411.90 vs yday $10,411.90 (+0.00) | 09:30 open · cash $10,411.90 · no holdings · equity $10,411.90 vs prior close $10,411.90 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,411.90 | ▲ close $10,411.90 vs 09:30 $10,411.90 (session +0.00) | 16:00 close · cash $10,411.90 · no lots left · equity $10,411.90. | — |
 
 ## Not taken
 

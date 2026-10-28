@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `macd_hist` · size `leftover` · sell `list` · S-boost `none` · rank by macd_hist
 
-Cash book **-16.08%** ($8,392) · signal-only (no cash/fees) was -17.17%. Starts YES **5/30**. Fills 302 · skips 257 · realized $-743.63.
+Cash book **-15.54%** ($8,446) · signal-only (no cash/fees) was -17.17%. Starts YES **5/30**. Fills 308 · skips 257 · realized $-743.63.
 
 ## How this sleeve decides (like you are 10)
 
@@ -479,6 +479,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-27 09:30 ET | **BUY** | `ITW` | 3 | $272.30 | $2.00 | — | $2,597.83 | — | rank by macd_hist; rank macd_hist; list yday_gainer; ret5=+2.2; leftover $1065.17 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-27 09:30 ET | **BUY** | `RY` | 5 | $203.19 | $2.00 | — | $1,579.87 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; 🔵; ret5=+3.8; leftover $1065.17 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-27 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,579.87 | ▼ close $8,392.22 vs 09:30 $8,531.44 (session -113.10) | 16:00 close · cash $1,579.87 · equity $8,392.22 vs 09:30 $8,531.44 (-139.22; session marks -113.10) · 8 name(s) marked open→close (per-name table). LMT×1 09:30 $626.91 → close $622.99 -3.92; NOC×1 09:30 $562.80 → close $551.23 -11.57; POOL×5 09:30 $195.23 → close $194.90 -1.65; TRU×12 09:30 $82.17 → close $75.42 -81.00; BX×8 09:30 $120.00 → close $116.70 -26.40; VAL×10 09:30 $98.07 → close $98.21 +1.40; ITW×3 09:30 $272.30 → close $275.93 +10.89; RY×5 09:30 $203.19 → close $203.02 -0.85 | — |
+| 2026-10-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $1,579.87 | ▼ 09:30 equity $8,358.62 vs yday $8,392.22 (-33.60) | 09:30 open · cash $1,579.87 (unchanged overnight, no fees) · equity $8,358.62 vs prior close $8,392.22 (-33.60) · 8 name(s) re-marked at the open (per-name table). BX×8 yday $116.70 → 09:30 $116.41 -2.32; ITW×3 yday $275.93 → 09:30 $276.75 +2.46; LMT×1 yday $622.99 → 09:30 $616.56 -6.43; NOC×1 yday $551.23 → 09:30 $547.69 -3.54; POOL×5 yday $194.90 → 09:30 $192.48 -12.10; RY×5 yday $203.02 → 09:30 $203.11 +0.45; TRU×12 yday $75.42 → 09:30 $74.41 -12.12; VAL×10 yday $98.21 → 09:30 $98.21 +0.00 | — |
+| 2026-10-28 09:30 ET | **BUY** | `RH` | 1 | $140.69 | $1.41 | — | $1,437.77 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; ret5=+17.6; leftover $263.31 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `NXPI` | 1 | $238.14 | $1.99 | — | $1,197.64 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; ret5=+6.7; leftover $263.31 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🟡 heat🔴 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `UPS` | 2 | $105.39 | $2.00 | — | $984.86 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; 🔵; ret5=+7.7; leftover $263.31 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟡 heat🟢 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `VCYT` | 5 | $50.00 | $2.00 | — | $732.86 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; ret5=+12.3; leftover $263.31 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `BBWI` | 12 | $21.70 | $2.03 | — | $470.43 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; ret5=+6.8; leftover $263.31 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `EQPT` | 14 | $17.81 | $2.03 | — | $219.06 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; 🔵; ret5=+13.5; leftover $263.31 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $219.06 | ▲ close $8,446.33 vs 09:30 $8,358.62 (session +99.17) | 16:00 close · cash $219.06 · equity $8,446.33 vs 09:30 $8,358.62 (+87.71; session marks +99.17) · 14 name(s) marked open→close (per-name table). BX×8 09:30 $116.41 → close $117.06 +5.20; ITW×3 09:30 $276.75 → close $276.07 -2.04; LMT×1 09:30 $616.56 → close $629.75 +13.19; NOC×1 09:30 $547.69 → close $552.77 +5.08; POOL×5 09:30 $192.48 → close $195.59 +15.55; RY×5 09:30 $203.11 → close $204.77 +8.30; TRU×12 09:30 $74.41 → close $74.31 -1.20; VAL×10 09:30 $98.21 → close $101.63 +34.20; RH×1 09:30 $140.69 → close $145.06 +4.37; NXPI×1 09:30 $238.14 → close $251.69 +13.55; UPS×2 09:30 $105.39 → close $105.62 +0.46; VCYT×5 09:30 $50.00 → close $50.31 +1.55; BBWI×12 09:30 $21.70 → close $21.64 -0.72; EQPT×14 09:30 $17.81 → close $17.93 +1.68 | — |
 
 ## Not taken
 

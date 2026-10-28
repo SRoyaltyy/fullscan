@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `candle_score` · size `leftover` · sell `list` · S-boost `none` · rank by candle_score
 
-Cash book **-9.32%** ($9,068) · signal-only (no cash/fees) was +43.18%. Starts YES **21/30**. Fills 343 · skips 288 · realized $+91.50.
+Cash book **-9.36%** ($9,064) · signal-only (no cash/fees) was +43.18%. Starts YES **21/30**. Fills 346 · skips 288 · realized $+91.50.
 
 ## How this sleeve decides (like you are 10)
 
@@ -520,6 +520,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-27 09:30 ET | **BUY** | `BLLN` | 11 | $111.84 | $2.02 | — | $1,481.14 | — | rank by candle_score; rank candle_score; list ohlc_hot; 🔵; ret5=+10.3; leftover $1293.54 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-27 09:30 ET | **BUY** | `POOL` | 6 | $195.23 | $2.01 | — | $307.76 | — | rank by candle_score; rank candle_score; list yday_gainer,ohlc_hot; ret5=+16.2; leftover $1293.54 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-27 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $307.76 | ▲ close $9,068.17 vs 09:30 $9,065.68 (session +29.56) | 16:00 close · cash $307.76 · equity $9,068.17 vs 09:30 $9,065.68 (+2.49; session marks +29.56) · 7 name(s) marked open→close (per-name table). ENGS×295 09:30 $4.38 → close $4.36 -5.90; LMT×2 09:30 $626.91 → close $622.99 -7.84; VVX×16 09:30 $77.02 → close $77.17 +2.40; AMRX×61 09:30 $20.93 → close $21.44 +31.11; AMTM×58 09:30 $21.97 → close $21.75 -12.76; BLLN×11 09:30 $111.84 → close $114.07 +24.53; POOL×6 09:30 $195.23 → close $194.90 -1.98 | — |
+| 2026-10-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $307.76 | ▼ 09:30 equity $9,020.25 vs yday $9,068.17 (-47.92) | 09:30 open · cash $307.76 (unchanged overnight, no fees) · equity $9,020.25 vs prior close $9,068.17 (-47.92) · 7 name(s) re-marked at the open (per-name table). AMRX×61 yday $21.44 → 09:30 $21.32 -7.02; AMTM×58 yday $21.75 → 09:30 $21.59 -9.28; BLLN×11 yday $114.07 → 09:30 $113.96 -1.21; ENGS×295 yday $4.36 → 09:30 $4.36 +0.00; LMT×2 yday $622.99 → 09:30 $616.56 -12.86; POOL×6 yday $194.90 → 09:30 $192.48 -14.52; VVX×16 yday $77.17 → 09:30 $76.98 -3.04 | — |
+| 2026-10-28 09:30 ET | **BUY** | `JLHL` | 7 | $5.60 | $0.41 | — | $268.15 | — | rank by candle_score; rank candle_score; list yday_mover; 🔵; ret5=+16.4; leftover $43.97 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `EGG` | 8 | $5.14 | $0.44 | — | $226.59 | — | rank by candle_score; rank candle_score; list yday_gainer,yday_mover; 🔵; ret5=+6.4; leftover $43.97 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `BBWI` | 2 | $21.70 | $0.44 | — | $182.75 | — | rank by candle_score; rank candle_score; list ohlc_hot; ret5=+6.8; leftover $43.97 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $182.75 | ▲ close $9,063.66 vs 09:30 $9,020.25 (session +44.71) | 16:00 close · cash $182.75 · equity $9,063.66 vs 09:30 $9,020.25 (+43.41; session marks +44.71) · 10 name(s) marked open→close (per-name table). AMRX×61 09:30 $21.32 → close $21.14 -11.28; AMTM×58 09:30 $21.59 → close $21.69 +5.80; BLLN×11 09:30 $113.96 → close $114.00 +0.44; ENGS×295 09:30 $4.36 → close $4.36 +0.00; LMT×2 09:30 $616.56 → close $629.75 +26.38; POOL×6 09:30 $192.48 → close $195.59 +18.66; VVX×16 09:30 $76.98 → close $77.41 +6.88; JLHL×7 09:30 $5.60 → close $5.65 +0.35; EGG×8 09:30 $5.14 → close $4.84 -2.40; BBWI×2 09:30 $21.70 → close $21.64 -0.12 | — |
 
 ## Not taken
 

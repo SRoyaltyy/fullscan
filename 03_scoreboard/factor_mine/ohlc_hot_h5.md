@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `ohlc_hot` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · baseline list, no extra gate
 
-Cash book **-13.62%** ($8,638) · signal-only (no cash/fees) was +88.18%. Starts YES **4/30**. Fills 282 · skips 429 · realized $-1050.25.
+Cash book **-9.53%** ($9,047) · signal-only (no cash/fees) was +88.18%. Starts YES **4/30**. Fills 288 · skips 429 · realized $-1050.25.
 
 ## How this sleeve decides (like you are 10)
 
@@ -456,6 +456,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-27 09:30 ET | **BUY** | `GMAB` | 24 | $44.41 | $2.06 | — | $1,700.80 | — | baseline list, no extra gate; list ohlc_hot; 🔵; ret5=+16.1; leftover $1079.70 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-10-27 09:30 ET | **BUY** | `RIG` | 166 | $6.48 | $2.49 | — | $622.64 | — | baseline list, no extra gate; list ohlc_hot; ret5=+10.9; leftover $1079.70 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-27 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $622.64 | ▲ close $8,638.35 vs 09:30 $8,640.51 (session +18.74) | 16:00 close · cash $622.64 · equity $8,638.35 vs 09:30 $8,640.51 (-2.16; session marks +18.74) · 8 name(s) marked open→close (per-name table). POOL×5 09:30 $195.23 → close $194.90 -1.65; SLN×54 09:30 $19.78 → close $19.78 +0.00; ENGS×246 09:30 $4.38 → close $4.36 -4.92; LMT×1 09:30 $626.91 → close $622.99 -3.92; DOW×31 09:30 $33.77 → close $33.78 +0.31; RBRK×8 09:30 $132.49 → close $135.74 +26.00; GMAB×24 09:30 $44.41 → close $44.67 +6.24; RIG×166 09:30 $6.48 → close $6.46 -3.32 | — |
+| 2026-10-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $622.64 | ▼ 09:30 equity $8,615.89 vs yday $8,638.35 (-22.47) | 09:30 open · cash $622.64 (unchanged overnight, no fees) · equity $8,615.89 vs prior close $8,638.35 (-22.47) · 8 name(s) re-marked at the open (per-name table). DOW×31 yday $33.78 → 09:30 $33.73 -1.40; ENGS×246 yday $4.36 → 09:30 $4.36 +0.00; GMAB×24 yday $44.67 → 09:30 $44.63 -0.96; LMT×1 yday $622.99 → 09:30 $616.56 -6.43; POOL×5 yday $194.90 → 09:30 $192.48 -12.10; RBRK×8 yday $135.74 → 09:30 $135.47 -2.16; RIG×166 yday $6.46 → 09:30 $6.47 +1.66; SLN×54 yday $19.78 → 09:30 $19.76 -1.08 | — |
+| 2026-10-28 09:30 ET | **BUY** | `PRME` | 20 | $4.25 | $0.91 | — | $536.83 | — | baseline list, no extra gate; list ohlc_hot; ret5=+11.0; leftover $88.95 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `MRVI` | 10 | $8.23 | $0.85 | — | $453.68 | — | baseline list, no extra gate; list ohlc_hot; ret5=+14.7; leftover $88.95 | join🟡 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `ABSI` | 8 | $10.55 | $0.87 | — | $368.41 | — | baseline list, no extra gate; list ohlc_hot; ret5=+16.5; leftover $88.95 | join🟡 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `VRDN` | 3 | $23.72 | $0.72 | — | $296.53 | — | baseline list, no extra gate; list ohlc_hot; ret5=+7.4; leftover $88.95 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `VCYT` | 1 | $50.00 | $0.50 | — | $246.03 | — | baseline list, no extra gate; list ohlc_hot; ret5=+12.3; leftover $88.95 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `IMSR` | 30 | $2.95 | $0.97 | — | $156.55 | — | baseline list, no extra gate; list ohlc_hot; 🔵; ret5=+17.5; leftover $88.95 | join🟡 sector🟡 gen🟢 news🟡 digest🟡 ab🟡 heat🔴 vol🔴 buy🟡 |
+| 2026-10-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $156.55 | ▲ close $9,046.86 vs 09:30 $8,615.89 (session +435.81) | 16:00 close · cash $156.55 · equity $9,046.86 vs 09:30 $8,615.89 (+430.97; session marks +435.81) · 14 name(s) marked open→close (per-name table). DOW×31 09:30 $33.73 → close $34.13 +12.25; ENGS×246 09:30 $4.36 → close $4.36 +0.00; GMAB×24 09:30 $44.63 → close $57.29 +303.84; LMT×1 09:30 $616.56 → close $629.75 +13.19; POOL×5 09:30 $192.48 → close $195.59 +15.55; RBRK×8 09:30 $135.47 → close $136.00 +4.24; RIG×166 09:30 $6.47 → close $6.71 +39.84; SLN×54 09:30 $19.76 → close $19.71 -2.70; PRME×20 09:30 $4.25 → close $5.36 +22.30; MRVI×10 09:30 $8.23 → close $8.50 +2.70; ABSI×8 09:30 $10.55 → close $11.88 +10.64; VRDN×3 09:30 $23.72 → close $24.27 +1.65; VCYT×1 09:30 $50.00 → close $50.31 +0.31; IMSR×30 09:30 $2.95 → close $3.35 +12.00 | — |
 
 ## Not taken
 

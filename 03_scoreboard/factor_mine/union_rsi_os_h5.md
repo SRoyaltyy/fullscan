@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ rsi_os hold 5, no 🚨
 
-Cash book **-18.47%** ($8,153) · signal-only (no cash/fees) was -62.78%. Starts YES **4/30**. Fills 126 · skips 145 · realized $-2687.08.
+Cash book **-18.51%** ($8,149) · signal-only (no cash/fees) was -62.78%. Starts YES **4/30**. Fills 126 · skips 145 · realized $-2687.08.
 
 ## How this sleeve decides (like you are 10)
 
@@ -304,6 +304,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-27 09:30 ET | **BUY** | `ARI` | 415 | $6.61 | $5.35 | — | $5,493.08 | — | union ∩ rsi_os hold 5, no 🚨; gate rsi_os=True; list ohlc_hot; 🔵; ret5=+4.4; leftover $2747.20 | join🔴 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-27 09:30 ET | **BUY** | `BX` | 22 | $120.00 | $2.06 | — | $2,851.03 | — | union ∩ rsi_os hold 5, no 🚨; gate rsi_os=True; list ohlc_hot; 🔵; ret5=+11.2; leftover $2747.20 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
 | 2026-10-27 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2,851.03 | ▼ close $8,153.28 vs 09:30 $8,245.64 (session -80.90) | 16:00 close · cash $2,851.03 · equity $8,153.28 vs 09:30 $8,245.64 (-92.36; session marks -80.90) · 2 name(s) marked open→close (per-name table). ARI×415 09:30 $6.61 → close $6.59 -8.30; BX×22 09:30 $120.00 → close $116.70 -72.60 | — |
+| 2026-10-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $2,851.03 | ▼ 09:30 equity $8,134.45 vs yday $8,153.28 (-18.83) | 09:30 open · cash $2,851.03 (unchanged overnight, no fees) · equity $8,134.45 vs prior close $8,153.28 (-18.83) · 2 name(s) re-marked at the open (per-name table). ARI×415 yday $6.59 → 09:30 $6.56 -12.45; BX×22 yday $116.70 → 09:30 $116.41 -6.38 | — |
+| 2026-10-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2,851.03 | ▲ close $8,148.75 vs 09:30 $8,134.45 (session +14.30) | 16:00 close · cash $2,851.03 · equity $8,148.75 vs 09:30 $8,134.45 (+14.30; session marks +14.30) · 2 name(s) marked open→close (per-name table). ARI×415 09:30 $6.56 → close $6.56 +0.00; BX×22 09:30 $116.41 → close $117.06 +14.30 | — |
 
 ## Not taken
 

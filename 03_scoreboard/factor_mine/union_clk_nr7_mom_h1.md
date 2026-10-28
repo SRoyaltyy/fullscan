@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `hot_score` · size `leftover` · sell `list` · S-boost `none` · Clock-B #10 NR7 + moderate momentum
 
-Cash book **-0.42%** ($9,958) · signal-only (no cash/fees) was +27.44%. Starts YES **25/30**. Fills 95 · skips 16 · realized $+1589.64.
+Cash book **-2.26%** ($9,774) · signal-only (no cash/fees) was +27.44%. Starts YES **25/30**. Fills 102 · skips 16 · realized $+1589.64.
 
 ## How this sleeve decides (like you are 10)
 
@@ -275,6 +275,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-27 09:30 ET | **BUY** | `ILMN` | 6 | $269.42 | $2.01 | — | $3,391.11 | — | Clock-B #10 NR7 + moderate momentum; gate clk_nr7_mom=True; rank hot_score; list flatten; 🔵; ret5=+3.2; leftover $1644.62 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-27 09:30 ET | **BUY** | `RCKT` | 718 | $2.29 | $9.26 | — | $1,737.63 | — | Clock-B #10 NR7 + moderate momentum; gate clk_nr7_mom=True; rank hot_score; list yday_gainer; 🔵; ret5=+1.8; leftover $1644.62 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-10-27 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,737.63 | ▲ close $9,958.26 vs 09:30 $9,867.70 (session +111.51) | 16:00 close · cash $1,737.63 · equity $9,958.26 vs 09:30 $9,867.70 (+90.56; session marks +111.51) · 5 name(s) marked open→close (per-name table). GH×9 09:30 $174.75 → close $178.06 +29.75; PATH×115 09:30 $14.19 → close $14.06 -14.95; ACRS×413 09:30 $3.98 → close $3.79 -78.47; ILMN×6 09:30 $269.42 → close $279.47 +60.30; RCKT×718 09:30 $2.29 → close $2.45 +114.88 | — |
+| 2026-10-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $1,737.63 | ▼ 09:30 equity $9,872.57 vs yday $9,958.26 (-85.69) | 09:30 open · cash $1,737.63 (unchanged overnight, no fees) · equity $9,872.57 vs prior close $9,958.26 (-85.69) · 5 name(s) re-marked at the open (per-name table). ACRS×413 yday $3.79 → 09:30 $3.70 -37.17; GH×9 yday $178.06 → 09:30 $178.06 +0.00; ILMN×6 yday $279.47 → 09:30 $278.04 -8.58; PATH×115 yday $14.06 → 09:30 $13.90 -18.40; RCKT×718 yday $2.45 → 09:30 $2.42 -21.54 | — |
+| 2026-10-28 09:30 ET | **SELL** | `ACRS` | 413 | $3.70 | $5.41 | $-126.38 | $3,260.32 | ▼ -126.38 after sell → book $9,867.16; vs 09:30 mark -5.41 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟡 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **SELL** | `GH` | 9 | $178.06 | $2.04 | $+25.69 | $4,860.82 | ▲ +25.69 after sell → book $9,865.12; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-28 09:30 ET | **SELL** | `ILMN` | 6 | $278.04 | $2.03 | $+47.68 | $6,527.03 | ▲ +47.68 after sell → book $9,863.09; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-28 09:30 ET | **SELL** | `PATH` | 115 | $13.90 | $2.37 | $-38.05 | $8,123.16 | ▼ -38.05 after sell → book $9,860.72; vs 09:30 mark -2.37 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-28 09:30 ET | **SELL** | `RCKT` | 718 | $2.42 | $9.40 | $+74.68 | $9,851.33 | ▲ +74.68 after sell → book $9,851.33; vs 09:30 mark -9.39 | dropped from list after 1 sess (min 1) | join🟡 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `CXW` | 159 | $30.90 | $2.47 | — | $4,935.76 | — | Clock-B #10 NR7 + moderate momentum; gate clk_nr7_mom=True; rank hot_score; list probable,yday_gainer,yday_mover; 🔵; ret5=+1.5; leftover $4925.66 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `EPR` | 88 | $55.85 | $2.25 | — | $18.71 | — | Clock-B #10 NR7 + moderate momentum; gate clk_nr7_mom=True; rank hot_score; list probable,yday_gainer,yday_mover; 🔵; ret5=+1.2; leftover $4925.66 | join🟡 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $18.71 | ▼ close $9,773.76 vs 09:30 $9,872.57 (session -72.85) | 16:00 close · cash $18.71 · equity $9,773.76 vs 09:30 $9,872.57 (-98.81; session marks -72.85) · 2 name(s) marked open→close (per-name table). CXW×159 09:30 $30.90 → close $30.63 -42.93; EPR×88 09:30 $55.85 → close $55.51 -29.92 | — |
 
 ## Not taken
 

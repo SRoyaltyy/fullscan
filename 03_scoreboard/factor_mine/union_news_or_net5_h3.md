@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · packet🟢 OR headline🟢 and camera net ≥ 5
 
-Cash book **-21.68%** ($7,832) · signal-only (no cash/fees) was -14.84%. Starts YES **1/30**. Fills 92 · skips 100 · realized $-2151.30.
+Cash book **-22.08%** ($7,792) · signal-only (no cash/fees) was -14.84%. Starts YES **1/30**. Fills 92 · skips 100 · realized $-2151.30.
 
 ## How this sleeve decides (like you are 10)
 
@@ -272,6 +272,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-27 09:30 ET | **SELL** | `AMX` | 2 | $24.27 | $0.51 | $+1.16 | $7,782.95 | ▲ +1.16 after sell → book $7,782.95; vs 09:30 mark -0.51 | exit unpriced hold on first bar after 4 sess | join🔴 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-27 09:30 ET | **BUY** | `SGRY` | 335 | $23.20 | $4.32 | — | $6.63 | — | packet🟢 OR headline🟢 and camera net ≥ 5; gate cam_net_min=5,news_or_headline=True; rank cond; list flatten; 🔵; ret5=+58.1; leftover $7782.95 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟢 |
 | 2026-10-27 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6.63 | ▲ close $7,832.23 vs 09:30 $7,783.46 (session +53.60) | 16:00 close · cash $6.63 · equity $7,832.23 vs 09:30 $7,783.46 (+48.77; session marks +53.60) · 1 name(s) marked open→close (per-name table). SGRY×335 09:30 $23.20 → close $23.36 +53.60 | — |
+| 2026-10-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6.63 | ▼ 09:30 equity $7,798.73 vs yday $7,832.23 (-33.50) | 09:30 open · cash $6.63 (unchanged overnight, no fees) · equity $7,798.73 vs prior close $7,832.23 (-33.50) · 1 name(s) re-marked at the open (per-name table). SGRY×335 yday $23.36 → 09:30 $23.26 -33.50 | — |
+| 2026-10-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6.63 | ▼ close $7,792.03 vs 09:30 $7,798.73 (session -6.70) | 16:00 close · cash $6.63 · equity $7,792.03 vs 09:30 $7,798.73 (-6.70; session marks -6.70) · 1 name(s) marked open→close (per-name table). SGRY×335 09:30 $23.26 → close $23.24 -6.70 | — |
 
 ## Not taken
 

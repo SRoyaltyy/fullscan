@@ -1,4 +1,4 @@
-# Factor mine action — 2026-08-13 → 2026-10-27
+# Factor mine action — 2026-08-13 → 2026-10-28
 
 Sessions before `2026-08-13` are **reconstructed** (rebuilt inputs, not a frozen 09:30 snapshot). From `2026-08-13` each day's inputs and buy/sell decisions are append-only.
 
@@ -23,59 +23,61 @@ Live `flatten_robust` is not changed.
 
 | Strategy | Size | Sell | Boost | Book % | Signal-only % | Starts YES | Fills | Skips | Audit | MD |
 |---|---|---|---|---:|---:|---:|---:|---:|---|---|
-| `combo_jse_333_shared` | leftover | list | none | -2.84 | — | 7/30 | 663 | 387 | PASS | [combo_jse_333_shared.md](factor_mine/combo_jse_333_shared.md) |
+| `combo_jse_333_shared` | leftover | list | none | -2.72 | — | 7/30 | 666 | 387 | PASS | [combo_jse_333_shared.md](factor_mine/combo_jse_333_shared.md) |
 | `combo_ej_5050_shared` | leftover | list | none | -2.11 | — | 26/30 | 514 | 283 | PASS | [combo_ej_5050_shared.md](factor_mine/combo_ej_5050_shared.md) |
-| `combo_es_9010_shared` | leftover | list | none | -8.87 | — | 25/30 | 361 | 319 | PASS | [combo_es_9010_shared.md](factor_mine/combo_es_9010_shared.md) |
-| `combo_se_3070_shared` | leftover | list | none | -6.89 | — | 25/30 | 375 | 324 | PASS | [combo_se_3070_shared.md](factor_mine/combo_se_3070_shared.md) |
+| `combo_es_9010_shared` | leftover | list | none | -8.77 | — | 25/30 | 364 | 319 | PASS | [combo_es_9010_shared.md](factor_mine/combo_es_9010_shared.md) |
+| `combo_se_3070_shared` | leftover | list | none | -6.78 | — | 25/30 | 378 | 324 | PASS | [combo_se_3070_shared.md](factor_mine/combo_se_3070_shared.md) |
 | `union_e_fresh_h3` | leftover | list | none | -14.49 | +7.74 | 29/30 | 195 | 198 | PASS | [union_e_fresh_h3.md](factor_mine/union_e_fresh_h3.md) |
-| `union_news_pack_net2_h1` | leftover | list | none | +4.10 | +7.99 | 21/30 | 103 | 28 | PASS | [union_news_pack_net2_h1.md](factor_mine/union_news_pack_net2_h1.md) |
-| `union_hot_n4_holdup` | leftover | list | holdup | +47.40 | +89.81 | 29/30 | 120 | 79 | PASS | [union_hot_n4_holdup.md](factor_mine/union_hot_n4_holdup.md) |
+| `union_news_pack_net2_h1` | leftover | list | none | +3.46 | +7.99 | 21/30 | 105 | 28 | PASS | [union_news_pack_net2_h1.md](factor_mine/union_news_pack_net2_h1.md) |
+| `union_hot_n4_holdup` | leftover | list | holdup | +51.95 | +89.81 | 29/30 | 124 | 79 | PASS | [union_hot_n4_holdup.md](factor_mine/union_hot_n4_holdup.md) |
 | `overnight_mega_h1` | leftover | list | none | -6.41 | -15.28 | 0/30 | 32 | 15 | PASS | [overnight_mega_h1.md](factor_mine/overnight_mega_h1.md) |
-| `combo_sh_macd_5050_shared` | leftover | list | none | +93.55 | — | 29/30 | 330 | 122 | PASS | [combo_sh_macd_5050_shared.md](factor_mine/combo_sh_macd_5050_shared.md) |
-| `combo_sh_7030_shared` | leftover | list | none | +87.63 | — | 29/30 | 363 | 159 | PASS | [combo_sh_7030_shared.md](factor_mine/combo_sh_7030_shared.md) |
-| `combo_seh_601525_shared` | leftover | list | none | +71.50 | — | 29/30 | 574 | 365 | PASS | [combo_seh_601525_shared.md](factor_mine/combo_seh_601525_shared.md) |
-| `combo_sh_5050_shared` | leftover | list | none | +68.13 | — | 29/30 | 363 | 159 | PASS | [combo_sh_5050_shared.md](factor_mine/combo_sh_5050_shared.md) |
-| `combo_seh_333_shared` | leftover | list | none | +66.32 | — | 29/30 | 586 | 369 | PASS | [combo_seh_333_shared.md](factor_mine/combo_seh_333_shared.md) |
-| `combo_seh_333_weather` | leftover | list | none | +66.32 | — | 29/30 | 586 | 369 | PASS | [combo_seh_333_weather.md](factor_mine/combo_seh_333_weather.md) |
-| `combo_ehs_601525_shared` | leftover | list | none | +64.83 | — | 28/30 | 590 | 370 | PASS | [combo_ehs_601525_shared.md](factor_mine/combo_ehs_601525_shared.md) |
-| `combo_sh_3070_shared` | leftover | list | none | +64.54 | — | 29/30 | 363 | 159 | PASS | [combo_sh_3070_shared.md](factor_mine/combo_sh_3070_shared.md) |
-| `combo_seh_502525_shared` | leftover | list | none | +61.67 | — | 29/30 | 584 | 369 | PASS | [combo_seh_502525_shared.md](factor_mine/combo_seh_502525_shared.md) |
-| `combo_seh_451540_shared` | leftover | list | none | +60.53 | — | 29/30 | 572 | 364 | PASS | [combo_seh_451540_shared.md](factor_mine/combo_seh_451540_shared.md) |
-| `combo_seh_333_skip` | leftover | list | none | +59.62 | — | 29/30 | 572 | 373 | PASS | [combo_seh_333_skip.md](factor_mine/combo_seh_333_skip.md) |
-| `combo_seh_404020_shared` | leftover | list | none | +58.43 | — | 29/30 | 592 | 370 | PASS | [combo_seh_404020_shared.md](factor_mine/combo_seh_404020_shared.md) |
-| `combo_seh_403525_shared` | leftover | list | none | +56.08 | — | 29/30 | 588 | 369 | PASS | [combo_seh_403525_shared.md](factor_mine/combo_seh_403525_shared.md) |
-| `combo_ehs_702010_shared` | leftover | list | none | +50.56 | — | 29/30 | 572 | 365 | PASS | [combo_ehs_702010_shared.md](factor_mine/combo_ehs_702010_shared.md) |
-| `combo_oh_5050_shared` | leftover | list | none | +40.06 | — | 29/30 | 239 | 62 | PASS | [combo_oh_5050_shared.md](factor_mine/combo_oh_5050_shared.md) |
-| `union_w_hot_cond_h3` | leftover | list | none | +25.32 | +337.30 | 29/30 | 346 | 286 | PASS | [union_w_hot_cond_h3.md](factor_mine/union_w_hot_cond_h3.md) |
-| `combo_eh_3070_shared` | leftover | list | none | +23.84 | — | 29/30 | 443 | 269 | PASS | [combo_eh_3070_shared.md](factor_mine/combo_eh_3070_shared.md) |
-| `union_w_hot_cond_h1` | leftover | list | none | +21.54 | +31.34 | 29/30 | 450 | 96 | PASS | [union_w_hot_cond_h1.md](factor_mine/union_w_hot_cond_h1.md) |
-| `union_hot_n4_h1` | leftover | list | none | +21.54 | +89.81 | 29/30 | 141 | 47 | PASS | [union_hot_n4_h1.md](factor_mine/union_hot_n4_h1.md) |
+| `combo_sh_macd_5050_shared` | leftover | list | none | +97.86 | — | 29/30 | 340 | 122 | PASS | [combo_sh_macd_5050_shared.md](factor_mine/combo_sh_macd_5050_shared.md) |
+| `combo_sh_7030_shared` | leftover | list | none | +90.16 | — | 29/30 | 374 | 159 | PASS | [combo_sh_7030_shared.md](factor_mine/combo_sh_7030_shared.md) |
+| `combo_seh_601525_shared` | leftover | list | none | +73.72 | — | 29/30 | 585 | 365 | PASS | [combo_seh_601525_shared.md](factor_mine/combo_seh_601525_shared.md) |
+| `combo_sh_5050_shared` | leftover | list | none | +71.79 | — | 29/30 | 374 | 159 | PASS | [combo_sh_5050_shared.md](factor_mine/combo_sh_5050_shared.md) |
+| `combo_seh_333_shared` | leftover | list | none | +69.94 | — | 29/30 | 597 | 369 | PASS | [combo_seh_333_shared.md](factor_mine/combo_seh_333_shared.md) |
+| `combo_seh_333_weather` | leftover | list | none | +69.94 | — | 29/30 | 597 | 369 | PASS | [combo_seh_333_weather.md](factor_mine/combo_seh_333_weather.md) |
+| `combo_sh_3070_shared` | leftover | list | none | +68.90 | — | 29/30 | 374 | 159 | PASS | [combo_sh_3070_shared.md](factor_mine/combo_sh_3070_shared.md) |
+| `combo_ehs_601525_shared` | leftover | list | none | +67.54 | — | 28/30 | 601 | 370 | PASS | [combo_ehs_601525_shared.md](factor_mine/combo_ehs_601525_shared.md) |
+| `combo_seh_502525_shared` | leftover | list | none | +64.04 | — | 29/30 | 595 | 369 | PASS | [combo_seh_502525_shared.md](factor_mine/combo_seh_502525_shared.md) |
+| `combo_seh_451540_shared` | leftover | list | none | +63.80 | — | 29/30 | 583 | 364 | PASS | [combo_seh_451540_shared.md](factor_mine/combo_seh_451540_shared.md) |
+| `combo_seh_333_skip` | leftover | list | none | +63.08 | — | 29/30 | 583 | 373 | PASS | [combo_seh_333_skip.md](factor_mine/combo_seh_333_skip.md) |
+| `combo_seh_404020_shared` | leftover | list | none | +60.76 | — | 29/30 | 603 | 370 | PASS | [combo_seh_404020_shared.md](factor_mine/combo_seh_404020_shared.md) |
+| `combo_seh_403525_shared` | leftover | list | none | +58.67 | — | 29/30 | 599 | 369 | PASS | [combo_seh_403525_shared.md](factor_mine/combo_seh_403525_shared.md) |
+| `combo_ehs_702010_shared` | leftover | list | none | +54.34 | — | 29/30 | 583 | 365 | PASS | [combo_ehs_702010_shared.md](factor_mine/combo_ehs_702010_shared.md) |
+| `combo_oh_5050_shared` | leftover | list | none | +43.65 | — | 29/30 | 247 | 62 | PASS | [combo_oh_5050_shared.md](factor_mine/combo_oh_5050_shared.md) |
+| `union_w_hot_cond_h3` | leftover | list | none | +29.98 | +337.30 | 29/30 | 351 | 286 | PASS | [union_w_hot_cond_h3.md](factor_mine/union_w_hot_cond_h3.md) |
+| `combo_eh_3070_shared` | leftover | list | none | +27.01 | — | 29/30 | 451 | 269 | PASS | [combo_eh_3070_shared.md](factor_mine/combo_eh_3070_shared.md) |
+| `union_hot_n4_h1` | leftover | list | none | +25.25 | +89.81 | 29/30 | 145 | 47 | PASS | [union_hot_n4_h1.md](factor_mine/union_hot_n4_h1.md) |
+| `combo_hj_5050_shared` | leftover | list | none | +21.87 | — | 29/30 | 491 | 100 | PASS | [combo_hj_5050_shared.md](factor_mine/combo_hj_5050_shared.md) |
+| `combo_eh_5050_shared` | leftover | list | none | +21.19 | — | 29/30 | 453 | 270 | PASS | [combo_eh_5050_shared.md](factor_mine/combo_eh_5050_shared.md) |
+| `union_w_hot_cond_h1` | leftover | list | none | +20.60 | +31.34 | 29/30 | 466 | 96 | PASS | [union_w_hot_cond_h1.md](factor_mine/union_w_hot_cond_h1.md) |
 | `combo_jer_5050_shared` | leftover | list | none | -8.75 | — | 22/30 | 512 | 286 | PASS | [combo_jer_5050_shared.md](factor_mine/combo_jer_5050_shared.md) |
 | `combo_je1_5050_shared` | leftover | list | none | -9.52 | — | 25/30 | 578 | 110 | PASS | [combo_je1_5050_shared.md](factor_mine/combo_je1_5050_shared.md) |
-| `combo_sf_7030_shared` | leftover | list | none | +5.54 | — | 8/30 | 341 | 449 | PASS | [combo_sf_7030_shared.md](factor_mine/combo_sf_7030_shared.md) |
-| `combo_sf_5050_shared` | leftover | list | none | +6.09 | — | 8/30 | 338 | 449 | PASS | [combo_sf_5050_shared.md](factor_mine/combo_sf_5050_shared.md) |
+| `combo_sf_7030_shared` | leftover | list | none | +6.61 | — | 8/30 | 352 | 449 | PASS | [combo_sf_7030_shared.md](factor_mine/combo_sf_7030_shared.md) |
+| `combo_sf_5050_shared` | leftover | list | none | +7.82 | — | 8/30 | 349 | 449 | PASS | [combo_sf_5050_shared.md](factor_mine/combo_sf_5050_shared.md) |
 | `flatten_live_h1` | leftover | list | none | -1.72 | +4.45 | 7/30 | 48 | 0 | PASS | [flatten_live_h1.md](factor_mine/flatten_live_h1.md) |
 | `flatten_live_h3` | leftover | list | none | -9.53 | +6.87 | 0/30 | 42 | 45 | PASS | [flatten_live_h3.md](factor_mine/flatten_live_h3.md) |
 | `flatten_live_h5` | leftover | list | none | -9.67 | +5.13 | 0/30 | 42 | 87 | PASS | [flatten_live_h5.md](factor_mine/flatten_live_h5.md) |
-| `union_news_g_h5` | leftover | list | none | -25.27 | +99.58 | 1/30 | 206 | 344 | PASS | [union_news_g_h5.md](factor_mine/union_news_g_h5.md) |
-| `union_white_coil_h1` | leftover | list | none | -13.61 | -4.35 | 0/30 | 203 | 0 | PASS | [union_white_coil_h1.md](factor_mine/union_white_coil_h1.md) |
+| `union_news_g_h5` | leftover | list | none | -25.96 | +99.58 | 1/30 | 207 | 344 | PASS | [union_news_g_h5.md](factor_mine/union_news_g_h5.md) |
+| `union_white_coil_h1` | leftover | list | none | -14.48 | -4.35 | 0/30 | 204 | 0 | PASS | [union_white_coil_h1.md](factor_mine/union_white_coil_h1.md) |
 | `overnight_mega_h2` | leftover | list | none | -0.60 | -8.07 | 1/30 | 18 | 27 | PASS | [overnight_mega_h2.md](factor_mine/overnight_mega_h2.md) |
 | `overnight_h1` | leftover | list | none | -24.35 | -22.61 | 0/30 | 162 | 80 | PASS | [overnight_h1.md](factor_mine/overnight_h1.md) |
 | `overnight_mega_green_h1` | leftover | list | none | +1.98 | -9.06 | 0/30 | 26 | 7 | PASS | [overnight_mega_green_h1.md](factor_mine/overnight_mega_green_h1.md) |
-| `union_news_pack_h1` | leftover | list | none | +7.07 | +6.91 | 21/30 | 120 | 29 | PASS | [union_news_pack_h1.md](factor_mine/union_news_pack_h1.md) |
-| `union_news_or_h1` | leftover | list | none | -34.30 | +9.53 | 0/30 | 329 | 79 | PASS | [union_news_or_h1.md](factor_mine/union_news_or_h1.md) |
-| `union_news_or_net3_h1` | leftover | list | none | -38.69 | -9.17 | 0/30 | 197 | 40 | PASS | [union_news_or_net3_h1.md](factor_mine/union_news_or_net3_h1.md) |
-| `union_news_or_net4_h1` | leftover | list | none | -40.16 | -6.67 | 0/30 | 180 | 35 | PASS | [union_news_or_net4_h1.md](factor_mine/union_news_or_net4_h1.md) |
-| `union_news_or_net4_rw_h1` | rank_w | list | none | -33.70 | -7.44 | 5/30 | 134 | 30 | PASS | [union_news_or_net4_rw_h1.md](factor_mine/union_news_or_net4_rw_h1.md) |
-| `union_news_or_net4_conv_h1` | conviction | list | none | -33.18 | -7.44 | 12/30 | 132 | 31 | PASS | [union_news_or_net4_conv_h1.md](factor_mine/union_news_or_net4_conv_h1.md) |
-| `short_news_head_h3` | leftover | list | none | -15.94 | +2.90 | 2/30 | 123 | 94 | PASS | [short_news_head_h3.md](factor_mine/short_news_head_h3.md) |
-| `combo_ps_5050_shared` | leftover | list | none | -4.87 | — | 2/30 | 279 | 146 | PASS | [combo_ps_5050_shared.md](factor_mine/combo_ps_5050_shared.md) |
-| `combo_ps_7030_shared` | leftover | list | none | -0.09 | — | 2/30 | 279 | 146 | PASS | [combo_ps_7030_shared.md](factor_mine/combo_ps_7030_shared.md) |
-| `combo_p2s_5050_shared` | leftover | list | none | -5.58 | — | 2/30 | 262 | 145 | PASS | [combo_p2s_5050_shared.md](factor_mine/combo_p2s_5050_shared.md) |
+| `union_news_pack_h1` | leftover | list | none | +7.19 | +6.91 | 21/30 | 123 | 29 | PASS | [union_news_pack_h1.md](factor_mine/union_news_pack_h1.md) |
+| `union_news_or_h1` | leftover | list | none | -35.87 | +9.53 | 0/30 | 337 | 79 | PASS | [union_news_or_h1.md](factor_mine/union_news_or_h1.md) |
+| `union_news_or_net3_h1` | leftover | list | none | -39.22 | -9.17 | 0/30 | 201 | 40 | PASS | [union_news_or_net3_h1.md](factor_mine/union_news_or_net3_h1.md) |
+| `union_news_or_net4_h1` | leftover | list | none | -40.36 | -6.67 | 0/30 | 183 | 35 | PASS | [union_news_or_net4_h1.md](factor_mine/union_news_or_net4_h1.md) |
+| `union_news_or_net4_rw_h1` | rank_w | list | none | -33.98 | -7.44 | 5/30 | 137 | 30 | PASS | [union_news_or_net4_rw_h1.md](factor_mine/union_news_or_net4_rw_h1.md) |
+| `union_news_or_net4_conv_h1` | conviction | list | none | -33.48 | -7.44 | 12/30 | 135 | 31 | PASS | [union_news_or_net4_conv_h1.md](factor_mine/union_news_or_net4_conv_h1.md) |
+| `short_news_head_h3` | leftover | list | none | -15.83 | +2.90 | 2/30 | 125 | 94 | PASS | [short_news_head_h3.md](factor_mine/short_news_head_h3.md) |
+| `combo_ps_5050_shared` | leftover | list | none | -4.70 | — | 2/30 | 284 | 146 | PASS | [combo_ps_5050_shared.md](factor_mine/combo_ps_5050_shared.md) |
+| `combo_ps_7030_shared` | leftover | list | none | +0.10 | — | 2/30 | 284 | 146 | PASS | [combo_ps_7030_shared.md](factor_mine/combo_ps_7030_shared.md) |
+| `combo_p2s_5050_shared` | leftover | list | none | -5.63 | — | 2/30 | 266 | 145 | PASS | [combo_p2s_5050_shared.md](factor_mine/combo_p2s_5050_shared.md) |
 | `union_news_g_cam91_n1_h1` | leftover | list | none | -22.39 | -2.85 | 27/30 | 8 | 1 | PASS | [union_news_g_cam91_n1_h1.md](factor_mine/union_news_g_cam91_n1_h1.md) |
 | `union_news_both_h1` | leftover | list | none | -3.46 | +4.21 | 21/30 | 8 | 2 | PASS | [union_news_both_h1.md](factor_mine/union_news_both_h1.md) |
-| `union_news_g_cam71_h1` | leftover | list | none | -22.61 | -11.63 | 4/30 | 85 | 12 | PASS | [union_news_g_cam71_h1.md](factor_mine/union_news_g_cam71_h1.md) |
-| `union_news_g_conv_h1` | conviction | list | none | -32.26 | +13.54 | 26/30 | 191 | 51 | PASS | [union_news_g_conv_h1.md](factor_mine/union_news_g_conv_h1.md) |
+| `union_news_g_cam71_h1` | leftover | list | none | -22.98 | -11.63 | 4/30 | 86 | 12 | PASS | [union_news_g_cam71_h1.md](factor_mine/union_news_g_cam71_h1.md) |
+| `union_news_g_conv_h1` | conviction | list | none | -33.29 | +13.54 | 26/30 | 197 | 51 | PASS | [union_news_g_conv_h1.md](factor_mine/union_news_g_conv_h1.md) |
 | `union_e_green_h3` | leftover | list | none | -8.47 | -18.73 | 20/30 | 96 | 104 | PASS | [union_e_green_h3.md](factor_mine/union_e_green_h3.md) |
 | `union_white_any_h1` | leftover | list | none | -14.85 | -10.91 | 0/30 | 248 | 0 | PASS | [union_white_any_h1.md](factor_mine/union_white_any_h1.md) |
 | `union_white_any_h2` | leftover | list | none | -9.73 | +6.04 | 5/30 | 221 | 94 | PASS | [union_white_any_h2.md](factor_mine/union_white_any_h2.md) |
@@ -85,15 +87,15 @@ Live `flatten_robust` is not changed.
 | `union_white_both_n4_h2` | leftover | list | none | -2.88 | +20.82 | 13/30 | 82 | 47 | PASS | [union_white_both_n4_h2.md](factor_mine/union_white_both_n4_h2.md) |
 | `union_white_both_n4_h5` | leftover | list | none | +0.89 | +22.84 | 9/30 | 78 | 141 | PASS | [union_white_both_n4_h5.md](factor_mine/union_white_both_n4_h5.md) |
 | `union_white_both_n4_h5_s12` | leftover | list | none | +1.98 | +22.84 | 12/30 | 77 | 137 | PASS | [union_white_both_n4_h5_s12.md](factor_mine/union_white_both_n4_h5_s12.md) |
-| `flatten_h5_s8` | leftover | list | none | -1.75 | +4.47 | 3/30 | 227 | 322 | PASS | [flatten_h5_s8.md](factor_mine/flatten_h5_s8.md) |
-| `flatten_h5` | leftover | list | none | -3.10 | +4.47 | 4/30 | 204 | 349 | PASS | [flatten_h5.md](factor_mine/flatten_h5.md) |
-| `flatten_h5_rankw` | rank_w | list | none | -11.69 | +4.47 | 4/30 | 201 | 337 | PASS | [flatten_h5_rankw.md](factor_mine/flatten_h5_rankw.md) |
-| `flatten_h5_time` | leftover | time | none | -3.10 | +4.47 | 4/30 | 204 | 349 | PASS | [flatten_h5_time.md](factor_mine/flatten_h5_time.md) |
-| `flatten_h5_sboost` | leftover | list | both | -3.10 | +4.47 | 3/30 | 208 | 355 | PASS | [flatten_h5_sboost.md](factor_mine/flatten_h5_sboost.md) |
-| `union_h5_sboost` | leftover | list | both | -9.46 | +16.74 | 11/30 | 320 | 518 | PASS | [union_h5_sboost.md](factor_mine/union_h5_sboost.md) |
+| `flatten_h5_s8` | leftover | list | none | -2.30 | +4.47 | 3/30 | 228 | 322 | PASS | [flatten_h5_s8.md](factor_mine/flatten_h5_s8.md) |
+| `flatten_h5` | leftover | list | none | -1.96 | +4.47 | 4/30 | 209 | 349 | PASS | [flatten_h5.md](factor_mine/flatten_h5.md) |
+| `flatten_h5_rankw` | rank_w | list | none | -10.20 | +4.47 | 4/30 | 206 | 337 | PASS | [flatten_h5_rankw.md](factor_mine/flatten_h5_rankw.md) |
+| `flatten_h5_time` | leftover | time | none | -1.96 | +4.47 | 4/30 | 209 | 349 | PASS | [flatten_h5_time.md](factor_mine/flatten_h5_time.md) |
+| `flatten_h5_sboost` | leftover | list | both | -1.96 | +4.47 | 3/30 | 213 | 355 | PASS | [flatten_h5_sboost.md](factor_mine/flatten_h5_sboost.md) |
+| `union_h5_sboost` | leftover | list | both | -8.74 | +16.74 | 11/30 | 325 | 518 | PASS | [union_h5_sboost.md](factor_mine/union_h5_sboost.md) |
 | `flatten_live_h1_sizeup` | leftover | list | sizeup | -1.72 | +4.45 | 7/30 | 48 | 0 | PASS | [flatten_live_h1_sizeup.md](factor_mine/flatten_live_h1_sizeup.md) |
-| `union_h3_cut` | leftover | cut_loser | none | -21.94 | -4.92 | 0/30 | 314 | 293 | PASS | [union_h3_cut.md](factor_mine/union_h3_cut.md) |
-| `union_h1_topheavy` | topheavy | list | none | -17.13 | -0.80 | 9/30 | 422 | 107 | PASS | [union_h1_topheavy.md](factor_mine/union_h1_topheavy.md) |
+| `union_h3_cut` | leftover | cut_loser | none | -20.79 | -4.92 | 0/30 | 322 | 293 | PASS | [union_h3_cut.md](factor_mine/union_h3_cut.md) |
+| `union_h1_topheavy` | topheavy | list | none | -16.43 | -0.80 | 9/30 | 436 | 107 | PASS | [union_h1_topheavy.md](factor_mine/union_h1_topheavy.md) |
 
 ## All other blotters
 
@@ -107,7 +109,6 @@ Live `flatten_robust` is not changed.
 - [`combo_ef_3070_shared`](factor_mine/combo_ef_3070_shared.md)
 - [`combo_ef_5050_shared`](factor_mine/combo_ef_5050_shared.md)
 - [`combo_ef_7030_shared`](factor_mine/combo_ef_7030_shared.md)
-- [`combo_eh_5050_shared`](factor_mine/combo_eh_5050_shared.md)
 - [`combo_eh_7030_shared`](factor_mine/combo_eh_7030_shared.md)
 - [`combo_en_3070_shared`](factor_mine/combo_en_3070_shared.md)
 - [`combo_en_5050_shared`](factor_mine/combo_en_5050_shared.md)
@@ -123,7 +124,6 @@ Live `flatten_robust` is not changed.
 - [`combo_he1_5050_shared`](factor_mine/combo_he1_5050_shared.md)
 - [`combo_her_5050_shared`](factor_mine/combo_her_5050_shared.md)
 - [`combo_hf_5050_shared`](factor_mine/combo_hf_5050_shared.md)
-- [`combo_hj_5050_shared`](factor_mine/combo_hj_5050_shared.md)
 - [`combo_hn_3070_shared`](factor_mine/combo_hn_3070_shared.md)
 - [`combo_hn_5050_shared`](factor_mine/combo_hn_5050_shared.md)
 - [`combo_hn_7030_shared`](factor_mine/combo_hn_7030_shared.md)

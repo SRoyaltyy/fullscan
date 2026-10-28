@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 4 · rank `cond` · size `conviction` · sell `list` · S-boost `none` · merged news🟢 rank cameras; 70% leftover if #1 net ≥ 5
 
-Cash book **-21.62%** ($7,838) · signal-only (no cash/fees) was +282.84%. Starts YES **10/30**. Fills 147 · skips 137 · realized $-233.27.
+Cash book **-21.59%** ($7,841) · signal-only (no cash/fees) was +282.84%. Starts YES **10/30**. Fills 149 · skips 137 · realized $-233.27.
 
 ## How this sleeve decides (like you are 10)
 
@@ -326,6 +326,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-27 09:30 ET | **BUY** | `GH` | 6 | $174.75 | $2.01 | — | $1,305.82 | — | merged news🟢 rank cameras; 70% leftover if #1 net ≥ 5; gate news=good; rank cond; list ohlc_hot; 🔵; ret5=+9.7; leftover $1168.23 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-10-27 09:30 ET | **BUY** | `RY` | 5 | $203.19 | $2.00 | — | $287.87 | — | merged news🟢 rank cameras; 70% leftover if #1 net ≥ 5; gate news=good; rank cond; list ohlc_hot; 🔵; ret5=+3.8; leftover $1168.23 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-27 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $287.87 | ▲ close $7,837.57 vs 09:30 $7,794.21 (session +56.42) | 16:00 close · cash $287.87 · equity $7,837.57 vs 09:30 $7,794.21 (+43.36; session marks +56.42) · 3 name(s) marked open→close (per-name table). SGRY×234 09:30 $23.20 → close $23.36 +37.44; GH×6 09:30 $174.75 → close $178.06 +19.83; RY×5 09:30 $203.19 → close $203.02 -0.85 | — |
+| 2026-10-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $287.87 | ▼ 09:30 equity $7,814.62 vs yday $7,837.57 (-22.95) | 09:30 open · cash $287.87 (unchanged overnight, no fees) · equity $7,814.62 vs prior close $7,837.57 (-22.95) · 3 name(s) re-marked at the open (per-name table). GH×6 yday $178.06 → 09:30 $178.06 +0.00; RY×5 yday $203.02 → 09:30 $203.11 +0.45; SGRY×234 yday $23.36 → 09:30 $23.26 -23.40 | — |
+| 2026-10-28 09:30 ET | **BUY** | `AMX` | 5 | $24.07 | $1.22 | — | $166.30 | — | merged news🟢 rank cameras; 70% leftover if #1 net ≥ 5; gate news=good; rank cond; list yday_gainer; ret5=+5.1; leftover $143.94 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `GLND` | 14 | $3.37 | $0.51 | — | $118.61 | — | merged news🟢 rank cameras; 70% leftover if #1 net ≥ 5; gate news=good; rank cond; list yday_mover; ret5=+7.4; leftover $47.98 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 ab🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $118.61 | ▲ close $7,841.17 vs 09:30 $7,814.62 (session +28.28) | 16:00 close · cash $118.61 · equity $7,841.17 vs 09:30 $7,814.62 (+26.55; session marks +28.28) · 5 name(s) marked open→close (per-name table). GH×6 09:30 $178.06 → close $182.59 +27.18; RY×5 09:30 $203.11 → close $204.77 +8.30; SGRY×234 09:30 $23.26 → close $23.24 -4.68; AMX×5 09:30 $24.07 → close $23.93 -0.70; GLND×14 09:30 $3.37 → close $3.24 -1.82 | — |
 
 ## Not taken
 

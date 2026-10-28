@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ last_red, no 🚨
 
-Cash book **-30.93%** ($6,906) · signal-only (no cash/fees) was +1.25%. Starts YES **0/30**. Fills 446 · skips 105 · realized $-1315.32.
+Cash book **-31.36%** ($6,864) · signal-only (no cash/fees) was +1.25%. Starts YES **0/30**. Fills 460 · skips 105 · realized $-1315.32.
 
 ## How this sleeve decides (like you are 10)
 
@@ -624,6 +624,22 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-27 09:30 ET | **BUY** | `EGG` | 162 | $5.17 | $2.48 | — | $1,057.69 | — | union ∩ last_red, no 🚨; gate last_red=True; list yday_gainer,yday_mover; ret5=+3.2; leftover $842.10 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-27 09:30 ET | **BUY** | `MX` | 350 | $2.40 | $4.51 | — | $213.18 | — | union ∩ last_red, no 🚨; gate last_red=True; list yday_gainer,yday_mover; 🔵; ret5=-7.4; leftover $842.10 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-27 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $213.18 | ▲ close $6,906.49 vs 09:30 $6,736.81 (session +189.29) | 16:00 close · cash $213.18 · equity $6,906.49 vs 09:30 $6,736.81 (+169.68; session marks +189.29) · 8 name(s) marked open→close (per-name table). VEEV×2 09:30 $315.50 → close $313.46 -4.08; PRGO×54 09:30 $15.56 → close $16.02 +24.84; SMMT×58 09:30 $14.50 → close $15.33 +48.14; PRMB×43 09:30 $19.58 → close $19.21 -15.91; AIP×42 09:30 $19.89 → close $20.95 +44.52; CXW×28 09:30 $29.89 → close $30.80 +25.48; EGG×162 09:30 $5.17 → close $5.32 +24.30; MX×350 09:30 $2.40 → close $2.52 +42.00 | — |
+| 2026-10-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $213.18 | ▼ 09:30 equity $6,887.26 vs yday $6,906.49 (-19.23) | 09:30 open · cash $213.18 (unchanged overnight, no fees) · equity $6,887.26 vs prior close $6,906.49 (-19.23) · 8 name(s) re-marked at the open (per-name table). AIP×42 yday $20.95 → 09:30 $21.27 +13.44; CXW×28 yday $30.80 → 09:30 $30.90 +2.80; EGG×162 yday $5.32 → 09:30 $5.14 -29.16; MX×350 yday $2.52 → 09:30 $2.58 +21.00; PRGO×54 yday $16.02 → 09:30 $15.96 -3.24; PRMB×43 yday $19.21 → 09:30 $19.00 -9.03; SMMT×58 yday $15.33 → 09:30 $15.19 -8.12; VEEV×2 yday $313.46 → 09:30 $310.00 -6.92 | — |
+| 2026-10-28 09:30 ET | **SELL** | `AIP` | 42 | $21.27 | $2.14 | $+53.71 | $1,104.38 | ▲ +53.71 after sell → book $6,885.12; vs 09:30 mark -2.14 | dropped from list after 1 sess (min 1) | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **SELL** | `CXW` | 28 | $30.90 | $2.09 | $+24.11 | $1,967.49 | ▲ +24.11 after sell → book $6,883.03; vs 09:30 mark -2.09 | dropped from list after 1 sess (min 1) | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **SELL** | `EGG` | 162 | $5.14 | $2.51 | $-9.85 | $2,797.66 | ▼ -9.85 after sell → book $6,880.52; vs 09:30 mark -2.51 | dropped from list after 1 sess (min 1) | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-28 09:30 ET | **SELL** | `MX` | 350 | $2.58 | $4.58 | $+53.90 | $3,696.07 | ▲ +53.90 after sell → book $6,875.93; vs 09:30 mark -4.59 | dropped from list after 1 sess (min 1) | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **SELL** | `PRGO` | 54 | $15.96 | $2.17 | $+17.28 | $4,555.74 | ▲ +17.28 after sell → book $6,873.76; vs 09:30 mark -2.17 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-28 09:30 ET | **SELL** | `SMMT` | 58 | $15.19 | $2.18 | $+35.67 | $5,434.58 | ▲ +35.67 after sell → book $6,871.58; vs 09:30 mark -2.18 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-28 09:30 ET | **SELL** | `VEEV` | 2 | $310.00 | $2.02 | $-15.01 | $6,052.56 | ▼ -15.01 after sell → book $6,869.56; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-28 09:30 ET | **BUY** | `EPR` | 15 | $55.85 | $2.04 | — | $5,212.78 | — | union ∩ last_red, no 🚨; gate last_red=True; list probable,yday_gainer,yday_mover; 🔵; ret5=+1.2; leftover $864.65 | join🟡 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `CRS` | 2 | $291.76 | $2.00 | — | $4,627.26 | — | union ∩ last_red, no 🚨; gate last_red=True; list yday_gainer; 🔵; ret5=-22.6; leftover $864.65 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `DY` | 3 | $235.00 | $2.00 | — | $3,920.25 | — | union ∩ last_red, no 🚨; gate last_red=True; list yday_gainer; 🔵; ret5=-8.8; leftover $864.65 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `POOL` | 4 | $192.48 | $2.00 | — | $3,148.33 | — | union ∩ last_red, no 🚨; gate last_red=True; list yday_gainer; 🔵; ret5=+13.5; leftover $864.65 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `AMX` | 35 | $24.07 | $2.10 | — | $2,303.78 | — | union ∩ last_red, no 🚨; gate last_red=True; list yday_gainer; ret5=+5.1; leftover $864.65 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `ENHA` | 793 | $1.09 | $10.23 | — | $1,429.18 | — | union ∩ last_red, no 🚨; gate last_red=True; list yday_mover; ret5=-5.3; leftover $864.65 | join🔴 sector🟡 gen🟢 news🟡 digest🔴 ab🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `ANGI` | 140 | $6.16 | $2.41 | — | $564.37 | — | union ∩ last_red, no 🚨; gate last_red=True; list yday_mover; ret5=-4.5; leftover $864.65 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $564.37 | ▲ close $6,863.97 vs 09:30 $6,887.26 (session +17.18) | 16:00 close · cash $564.37 · equity $6,863.97 vs 09:30 $6,887.26 (-23.29; session marks +17.18) · 8 name(s) marked open→close (per-name table). PRMB×43 09:30 $19.00 → close $19.32 +13.76; EPR×15 09:30 $55.85 → close $55.51 -5.10; CRS×2 09:30 $291.76 → close $280.00 -23.52; DY×3 09:30 $235.00 → close $234.00 -3.01; POOL×4 09:30 $192.48 → close $195.59 +12.44; AMX×35 09:30 $24.07 → close $23.93 -4.90; ENHA×793 09:30 $1.09 → close $1.16 +55.51; ANGI×140 09:30 $6.16 → close $5.96 -28.00 | — |
 
 ## Not taken
 

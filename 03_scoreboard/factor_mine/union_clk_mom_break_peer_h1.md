@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `hot_score` · size `leftover` · sell `list` · S-boost `none` · Clock-B #1 mom+breakout+peer/sector (research; not KEEP)
 
-Cash book **-12.51%** ($8,749) · signal-only (no cash/fees) was +1.42%. Starts YES **4/30**. Fills 415 · skips 96 · realized $-120.43.
+Cash book **-13.74%** ($8,625) · signal-only (no cash/fees) was +1.42%. Starts YES **4/30**. Fills 427 · skips 96 · realized $-120.43.
 
 ## How this sleeve decides (like you are 10)
 
@@ -595,6 +595,20 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-27 09:30 ET | **BUY** | `PATH` | 77 | $14.19 | $2.22 | — | $1,315.48 | — | Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list ohlc_hot; 🔵; ret5=+9.0; leftover $1101.53 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-10-27 09:30 ET | **BUY** | `TRU` | 13 | $82.17 | $2.03 | — | $245.24 | — | Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list yday_gainer; 🔵; ret5=+8.9; leftover $1101.53 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-27 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $245.24 | ▼ close $8,748.64 vs 09:30 $8,812.22 (session -46.23) | 16:00 close · cash $245.24 · equity $8,748.64 vs 09:30 $8,812.22 (-63.58; session marks -46.23) · 8 name(s) marked open→close (per-name table). RY×5 09:30 $203.19 → close $203.02 -0.85; ARI×166 09:30 $6.61 → close $6.59 -3.32; FNB×60 09:30 $18.34 → close $18.24 -6.00; ERIC×100 09:30 $10.96 → close $11.08 +12.50; AMRX×52 09:30 $20.93 → close $21.44 +26.52; NXPI×4 09:30 $247.83 → close $253.50 +22.68; PATH×77 09:30 $14.19 → close $14.06 -10.01; TRU×13 09:30 $82.17 → close $75.42 -87.75 | — |
+| 2026-10-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $245.24 | ▼ 09:30 equity $8,650.04 vs yday $8,748.64 (-98.60) | 09:30 open · cash $245.24 (unchanged overnight, no fees) · equity $8,650.04 vs prior close $8,748.64 (-98.60) · 8 name(s) re-marked at the open (per-name table). AMRX×52 yday $21.44 → 09:30 $21.32 -5.98; ARI×166 yday $6.59 → 09:30 $6.56 -4.98; ERIC×100 yday $11.08 → 09:30 $11.05 -3.00; FNB×60 yday $18.24 → 09:30 $18.27 +1.80; NXPI×4 yday $253.50 → 09:30 $238.14 -61.44; PATH×77 yday $14.06 → 09:30 $13.90 -12.32; RY×5 yday $203.02 → 09:30 $203.11 +0.45; TRU×13 yday $75.42 → 09:30 $74.41 -13.13 | — |
+| 2026-10-28 09:30 ET | **SELL** | `AMRX` | 52 | $21.32 | $2.17 | $+16.23 | $1,351.97 | ▲ +16.23 after sell → book $8,647.87; vs 09:30 mark -2.17 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-28 09:30 ET | **SELL** | `ARI` | 166 | $6.56 | $2.53 | $-13.31 | $2,438.41 | ▼ -13.31 after sell → book $8,645.35; vs 09:30 mark -2.52 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-28 09:30 ET | **SELL** | `ERIC` | 100 | $11.05 | $2.32 | $+4.89 | $3,541.09 | ▲ +4.89 after sell → book $8,643.03; vs 09:30 mark -2.32 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-28 09:30 ET | **SELL** | `FNB` | 60 | $18.27 | $2.19 | $-8.56 | $4,635.10 | ▼ -8.56 after sell → book $8,640.84; vs 09:30 mark -2.19 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-28 09:30 ET | **SELL** | `NXPI` | 4 | $238.14 | $2.02 | $-42.78 | $5,585.64 | ▼ -42.78 after sell → book $8,638.82; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | join🟢 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🟡 heat🔴 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **SELL** | `PATH` | 77 | $13.90 | $2.24 | $-26.79 | $6,653.70 | ▼ -26.79 after sell → book $8,636.58; vs 09:30 mark -2.24 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-28 09:30 ET | **SELL** | `RY` | 5 | $203.11 | $2.02 | $-4.43 | $7,667.22 | ▼ -4.43 after sell → book $8,634.55; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-28 09:30 ET | **SELL** | `TRU` | 13 | $74.41 | $2.05 | $-104.96 | $8,632.50 | ▼ -104.96 after sell → book $8,632.50; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | join🟢 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `UPS` | 20 | $105.39 | $2.05 | — | $6,522.65 | — | Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list ohlc_hot; 🔵; ret5=+7.7; leftover $2158.13 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟡 heat🟢 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `AEO` | 111 | $19.39 | $2.32 | — | $4,368.04 | — | Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list ohlc_hot; ret5=+9.0; leftover $2158.13 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `PDFS` | 47 | $45.62 | $2.13 | — | $2,221.77 | — | Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list probable,yday_gainer,yday_mover; ret5=+7.4; leftover $2158.13 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `ITW` | 7 | $276.75 | $2.01 | — | $282.51 | — | Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list yday_gainer; 🔵; ret5=+0.3; leftover $2158.13 | join🔴 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $282.51 | ▲ close $8,625.49 vs 09:30 $8,650.04 (session +1.50) | 16:00 close · cash $282.51 · equity $8,625.49 vs 09:30 $8,650.04 (-24.55; session marks +1.50) · 4 name(s) marked open→close (per-name table). UPS×20 09:30 $105.39 → close $105.62 +4.60; AEO×111 09:30 $19.39 → close $19.46 +7.77; PDFS×47 09:30 $45.62 → close $45.49 -6.11; ITW×7 09:30 $276.75 → close $276.07 -4.76 | — |
 
 ## Not taken
 

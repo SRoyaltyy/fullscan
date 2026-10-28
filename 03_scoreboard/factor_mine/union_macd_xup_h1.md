@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ macd_xup, no 🚨
 
-Cash book **-14.51%** ($8,549) · signal-only (no cash/fees) was -19.02%. Starts YES **0/30**. Fills 280 · skips 71 · realized $-1788.82.
+Cash book **-14.03%** ($8,597) · signal-only (no cash/fees) was -19.02%. Starts YES **0/30**. Fills 287 · skips 71 · realized $-1788.82.
 
 ## How this sleeve decides (like you are 10)
 
@@ -458,6 +458,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-27 09:30 ET | **BUY** | `RBRK` | 31 | $132.49 | $2.08 | — | $4,267.26 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list ohlc_hot; 🔵; ret5=+17.6; leftover $4188.27 | join🟡 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-27 09:30 ET | **BUY** | `GH` | 23 | $174.75 | $2.06 | — | $245.83 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list ohlc_hot; 🔵; ret5=+9.7; leftover $4188.27 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-10-27 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $245.83 | ▲ close $8,549.15 vs 09:30 $8,376.53 (session +176.77) | 16:00 close · cash $245.83 · equity $8,549.15 vs 09:30 $8,376.53 (+172.62; session marks +176.77) · 2 name(s) marked open→close (per-name table). RBRK×31 09:30 $132.49 → close $135.74 +100.75; GH×23 09:30 $174.75 → close $178.06 +76.02 | — |
+| 2026-10-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $245.83 | ▼ 09:30 equity $8,540.78 vs yday $8,549.15 (-8.37) | 09:30 open · cash $245.83 (unchanged overnight, no fees) · equity $8,540.78 vs prior close $8,549.15 (-8.37) · 2 name(s) re-marked at the open (per-name table). GH×23 yday $178.06 → 09:30 $178.06 +0.00; RBRK×31 yday $135.74 → 09:30 $135.47 -8.37 | — |
+| 2026-10-28 09:30 ET | **SELL** | `GH` | 23 | $178.06 | $2.10 | $+71.85 | $4,339.11 | ▲ +71.85 after sell → book $8,538.68; vs 09:30 mark -2.10 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-28 09:30 ET | **SELL** | `RBRK` | 31 | $135.47 | $2.13 | $+88.17 | $8,536.55 | ▲ +88.17 after sell → book $8,536.55; vs 09:30 mark -2.13 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-28 09:30 ET | **BUY** | `NEO` | 98 | $17.30 | $2.28 | — | $6,838.87 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list flatten; 🔵; ret5=+3.9; leftover $1707.31 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `S` | 66 | $25.56 | $2.19 | — | $5,149.72 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list ohlc_hot; ret5=+16.6; leftover $1707.31 | join🟡 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `AMPX` | 190 | $8.98 | $2.56 | — | $3,440.96 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list ohlc_hot; 🔵; ret5=+17.2; leftover $1707.31 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `SPCE` | 637 | $2.68 | $8.22 | — | $1,725.58 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list ohlc_hot; 🔵; ret5=+13.5; leftover $1707.31 | join🟢 sector🟢 gen🟢 news🔴 digest🟢 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-28 09:30 ET | **BUY** | `VOYG` | 62 | $27.35 | $2.18 | — | $27.71 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list ohlc_hot; 🔵; ret5=+13.8; leftover $1707.31 | join🟢 sector🟢 gen🟢 news🔴 digest🟢 ab🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $27.71 | ▲ close $8,597.17 vs 09:30 $8,540.78 (session +78.04) | 16:00 close · cash $27.71 · equity $8,597.17 vs 09:30 $8,540.78 (+56.39; session marks +78.04) · 5 name(s) marked open→close (per-name table). NEO×98 09:30 $17.30 → close $17.99 +67.62; S×66 09:30 $25.56 → close $25.59 +1.98; AMPX×190 09:30 $8.98 → close $9.16 +34.20; SPCE×637 09:30 $2.68 → close $2.66 -12.74; VOYG×62 09:30 $27.35 → close $27.14 -13.02 | — |
 
 ## Not taken
 

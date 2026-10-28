@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `yday_gainer` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · baseline list, no extra gate
 
-Cash book **-38.55%** ($6,145) · signal-only (no cash/fees) was -1.36%. Starts YES **6/30**. Fills 397 · skips 103 · realized $+133.85.
+Cash book **-35.80%** ($6,420) · signal-only (no cash/fees) was -1.36%. Starts YES **6/30**. Fills 397 · skips 103 · realized $+133.85.
 
 ## How this sleeve decides (like you are 10)
 
@@ -571,6 +571,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-27 09:30 ET | **SELL** | `SMMT` | 54 | $14.50 | $2.17 | $-46.98 | $6,473.65 | ▼ -46.98 after sell → book $6,473.65; vs 09:30 mark -2.17 | exit unpriced hold on first bar after 9 sess | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-10-27 09:30 ET | **BUY** | `ACRS` | 1621 | $3.98 | $20.91 | — | $1.16 | — | baseline list, no extra gate; list probable,yday_gainer,yday_mover; 🔵; ret5=+8.9; leftover $6473.65 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟡 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-27 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1.16 | ▼ close $6,144.75 vs 09:30 $6,488.56 (session -307.99) | 16:00 close · cash $1.16 · equity $6,144.75 vs 09:30 $6,488.56 (-343.81; session marks -307.99) · 1 name(s) marked open→close (per-name table). ACRS×1621 09:30 $3.98 → close $3.79 -307.99 | — |
+| 2026-10-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $1.16 | ▼ 09:30 equity $5,998.86 vs yday $6,144.75 (-145.89) | 09:30 open · cash $1.16 (unchanged overnight, no fees) · equity $5,998.86 vs prior close $6,144.75 (-145.89) · 1 name(s) re-marked at the open (per-name table). ACRS×1621 yday $3.79 → 09:30 $3.70 -145.89 | — |
+| 2026-10-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1.16 | ▲ close $6,420.32 vs 09:30 $5,998.86 (session +421.46) | 16:00 close · cash $1.16 · equity $6,420.32 vs 09:30 $5,998.86 (+421.46; session marks +421.46) · 1 name(s) marked open→close (per-name table). ACRS×1621 09:30 $3.70 → close $3.96 +421.46 | — |
 
 ## Not taken
 
