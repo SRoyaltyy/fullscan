@@ -1,0 +1,340 @@
+{
+  "date": "2026-10-28",
+  "generated_at": "2026-10-28T06:38:01.665509-04:00",
+  "overall": "PARTIAL",
+  "ranker_ready": false,
+  "counts": {
+    "ok": 6,
+    "partial": 1,
+    "fail": 1,
+    "n": 8
+  },
+  "buy_1d": [
+    {
+      "ticker": "IONS",
+      "score": 0.41861297165525313
+    },
+    {
+      "ticker": "FDMT",
+      "score": 0.4266539321532036
+    }
+  ],
+  "sell_1d": [
+    {
+      "ticker": "NEOV",
+      "score": -0.4135560613260153
+    },
+    {
+      "ticker": "OKLO",
+      "score": -0.17869412806952367
+    },
+    {
+      "ticker": "FCEL",
+      "score": -0.25786611065330006
+    },
+    {
+      "ticker": "NNDM",
+      "score": -0.1294435046814046
+    },
+    {
+      "ticker": "POWL",
+      "score": -0.13396424504583043
+    },
+    {
+      "ticker": "EOSE",
+      "score": -0.3178180217653031
+    },
+    {
+      "ticker": "TE",
+      "score": -0.24263310642628938
+    },
+    {
+      "ticker": "SKYX",
+      "score": -0.3260948174565743
+    }
+  ],
+  "flatten": {},
+  "general": {},
+  "sectors": {},
+  "lands": [
+    {
+      "key": "finviz_digest",
+      "title": "Finviz digest",
+      "date": "2026-10-28",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-28T04:32:51.461620-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-28_finviz_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 96980,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        },
+        {
+          "path": "01_daily/news/2026-10-28_finviz_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 11816,
+          "preview": "# Finviz Daily Digest \u2014 2026-10-28\n_Generated 2026-10-28T04:32:51.284696-04:00 \u00b7 export=data/exports/finviz_2026-10-28.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_"
+        },
+        {
+          "path": "data/exports/finviz_2026-10-28.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11030866,
+          "preview": "11686 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC"
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11562445,
+          "preview": "11775 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAB\""
+        },
+        {
+          "path": "01_daily/news/2026-10-28_finviz_digest_preopen.json",
+          "ok": true,
+          "reason": "",
+          "size": 96980,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        }
+      ],
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-10-28\n_Generated 2026-10-28T04:32:51.284696-04:00 \u00b7 export=data/exports/finviz_2026-10-28.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_ \u00b7 11686 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11775 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAB\" \u00b7 keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+    },
+    {
+      "key": "finviz_market_digest",
+      "title": "Finviz homepage market digest",
+      "date": "2026-10-28",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-28T04:32:57.512715-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-28_finviz_market_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 6445,
+          "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for"
+        },
+        {
+          "path": "01_daily/news/2026-10-28_finviz_market_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 2841,
+          "preview": "# Finviz homepage market digest \u2014 2026-10-28\n**Generated:** 2026-10-28T04:32:57.498762-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US futures trade mixed as markets await FOMC rate decision and big-tech earnings\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** GEV, APH, ADP, BSX, BIIB, MSFT, GOOGL\n**Next session:** housing no \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** GEV, APH, ADP, BSX, BIIB\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-10-28\n**Clock use:** `same_morning`"
+        }
+      ],
+      "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest \u2014 2026-10-28\n**Generated:** 2026-10-28T04:32:57.498762-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US futures trade mixed as markets await FOMC rate decision and big-tech earnings\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** GEV, APH, ADP, BSX, BIIB, MSFT, GOOGL\n**Next session:** housing no \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** GEV, APH, ADP, BSX, BIIB\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-10-28\n**Clock use:** `same_morning`"
+    },
+    {
+      "key": "map_heat",
+      "title": "Map heat morning overlay",
+      "date": "2026-10-28",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-28T04:38:34.846364-04:00",
+      "files": [
+        {
+          "path": "01_daily/map_heat/2026-10-28_map_heat.json",
+          "ok": true,
+          "reason": "",
+          "size": 277519,
+          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
+        },
+        {
+          "path": "01_daily/map_heat/2026-10-28_map_heat.md",
+          "ok": true,
+          "reason": "",
+          "size": 18510,
+          "preview": "# MAP HEAT \u2014 2026-10-28\nExport `finviz_2026-10-28.csv` \u00b7 11616 names \u00b7 generated 2026-10-28T04:38:34.802468-04:00"
+        }
+      ],
+      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-10-28\nExport `finviz_2026-10-28.csv` \u00b7 11616 names \u00b7 generated 2026-10-28T04:38:34.802468-04:00"
+    },
+    {
+      "key": "finviz_market_digest",
+      "title": "Finviz homepage market digest",
+      "date": "2026-10-28",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-28T04:45:22.895097-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-28_finviz_market_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 6153,
+          "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for"
+        },
+        {
+          "path": "01_daily/news/2026-10-28_finviz_market_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 2783,
+          "preview": "# Finviz homepage market digest \u2014 2026-10-28\n**Generated:** 2026-10-28T04:45:22.865011-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US equity futures trade mixed as traders await FOMC rate decision and Microsoft/Alphabet earnings amid softer European trade\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** MSFT, GOOGL, BSX, BIIB, GEV, APH, ADP\n**Next session:** housing no \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** MSFT, GOOGL\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-10-28\n**Clock use:** `same_morning`"
+        }
+      ],
+      "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest \u2014 2026-10-28\n**Generated:** 2026-10-28T04:45:22.865011-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US equity futures trade mixed as traders await FOMC rate decision and Microsoft/Alphabet earnings amid softer European trade\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** MSFT, GOOGL, BSX, BIIB, GEV, APH, ADP\n**Next session:** housing no \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** MSFT, GOOGL\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-10-28\n**Clock use:** `same_morning`"
+    },
+    {
+      "key": "finviz_digest",
+      "title": "Finviz digest",
+      "date": "2026-10-28",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-28T05:51:23.409900-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-28_finviz_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 96980,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        },
+        {
+          "path": "01_daily/news/2026-10-28_finviz_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 11816,
+          "preview": "# Finviz Daily Digest \u2014 2026-10-28\n_Generated 2026-10-28T05:51:23.265582-04:00 \u00b7 export=data/exports/finviz_2026-10-28.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_"
+        },
+        {
+          "path": "data/exports/finviz_2026-10-28.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11030866,
+          "preview": "11686 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC"
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11562445,
+          "preview": "11775 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAB\""
+        },
+        {
+          "path": "01_daily/news/2026-10-28_finviz_digest_preopen.json",
+          "ok": true,
+          "reason": "",
+          "size": 96980,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        }
+      ],
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-10-28\n_Generated 2026-10-28T05:51:23.265582-04:00 \u00b7 export=data/exports/finviz_2026-10-28.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_ \u00b7 11686 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11775 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAB\" \u00b7 keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+    },
+    {
+      "key": "finviz_market_digest",
+      "title": "Finviz homepage market digest",
+      "date": "2026-10-28",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-28T05:51:30.131176-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-28_finviz_market_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 7637,
+          "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for"
+        },
+        {
+          "path": "01_daily/news/2026-10-28_finviz_market_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 3237,
+          "preview": "# Finviz homepage market digest \u2014 2026-10-28\n**Generated:** 2026-10-28T05:51:30.114091-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US futures trade mixed as Fed decision looms with AI optimism lifting tech and Brent crude tops $115 on Middle East risks\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** Brent crude $115.0\n**CPI/Fed:** \u2014\n**Leaders:** HOOD, SKHY, AVGO, GEV, APH, ADP, BSX, PSX, BIIB, FLEX, MSFT, GOOGL\n**Next session:** housing no \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** GEV, APH, ADP, BSX, PSX, BIIB, FLEX, MSFT, GOOGL\n**Geo/grain:** geo\n**Clock legal for:** 2026-10-28\n**Clock use:** `same_morning`"
+        }
+      ],
+      "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest \u2014 2026-10-28\n**Generated:** 2026-10-28T05:51:30.114091-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US futures trade mixed as Fed decision looms with AI optimism lifting tech and Brent crude tops $115 on Middle East risks\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** Brent crude $115.0\n**CPI/Fed:** \u2014\n**Leaders:** HOOD, SKHY, AVGO, GEV, APH, ADP, BSX, PSX, BIIB, FLEX, MSFT, GOOGL\n**Next session:** housing no \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** GEV, APH, ADP, BSX, PSX, BIIB, FLEX, MSFT, GOOGL\n**Geo/grain:** geo\n**Clock legal for:** 2026-10-28\n**Clock use:** `same_morning`"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-10-28",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-28T06:36:56.480696-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-10-28_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 9381,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-10-28_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5010,
+          "preview": "# Weather report \u2014 2026-10-28\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-10-28\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-10-28",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-28T06:37:04.023055-04:00",
+      "files": [
+        {
+          "path": "data/join/2026-10-28_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2216976,
+          "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 HALO, ONC, LLY, HRMY, ETON"
+        }
+      ],
+      "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 HALO, ONC, LLY, HRMY, ETON"
+    },
+    {
+      "key": "peer_rs",
+      "title": "Peer RS",
+      "date": "2026-10-28",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-28T06:37:17.131420-04:00",
+      "files": [
+        {
+          "path": "data/peers/2026-10-28_peer_rs.csv",
+          "ok": true,
+          "reason": "",
+          "size": 821534,
+          "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+        }
+      ],
+      "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "ab",
+      "title": "AB checklist",
+      "date": "2026-10-28",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-28T06:37:45.230720-04:00",
+      "files": [
+        {
+          "path": "data/ab_checklist/2026-10-28_ab_checklist.csv",
+          "ok": true,
+          "reason": "",
+          "size": 7555468,
+          "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 MTDR, PBR, ELV, AUPH, SONO"
+        },
+        {
+          "path": "data/ab_checklist/2026-10-28_ab_checklist_enriched.csv",
+          "ok": true,
+          "reason": "",
+          "size": 8364504,
+          "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 WAT, A, PANW, PBR, TMO"
+        }
+      ],
+      "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 MTDR, PBR, ELV, AUPH, SONO \u00b7 2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 WAT, A, PANW, PBR, TMO"
+    }
+  ],
+  "source": "publish_live_boards"
+}
