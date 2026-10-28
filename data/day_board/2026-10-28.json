@@ -1,12 +1,11 @@
 {
   "date": "2026-10-28",
-  "generated_at": "2026-10-28T06:45:35.533772-04:00",
+  "generated_at": "2026-10-28T08:19:32.906076-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
     "MISSING General predict MD `01_daily/general/2026-10-28_predict.md` \u2014 missing",
-    "MISSING News actions JSON `01_daily/news/2026-10-28_actions.json` \u2014 missing",
-    "MISSING News judge MD `01_daily/news/2026-10-28_judge.md` \u2014 missing"
+    "MISSING News actions JSON `01_daily/news/2026-10-28_actions.json` \u2014 missing"
   ],
   "counts": {
     "ok": 6,
@@ -181,7 +180,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 2,
+      "n_req_ok": 5,
       "n_req": 9,
       "n_opt_ok": 1,
       "n_opt": 14,
@@ -239,10 +238,10 @@
           "name": "News parse JSON",
           "path": "01_daily/news/2026-10-28_parsed.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "",
+          "size": 7438839,
+          "said": "7438839B on disk",
           "bullets": []
         },
         {
@@ -250,22 +249,31 @@
           "name": "Events JSON",
           "path": "01_daily/events/2026-10-28_events.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 31134,
+          "said": "40 events \u00b7 elevated uncertainty \u00b7 Markets enter the final days of October with a Fed hold fully priced, sticky inflation, Brent above $111 on Hormuz risk, and a pivotal mega-",
+          "bullets": [
+            "US September CPI \u2014 +0.6% m/m, 3.7% y/y",
+            "US September retail sales \u2014 +0.8% m/m",
+            "China Q3 GDP \u2014 4.5% y/y, beats 4.3% prior",
+            "China September industrial production +5.5%, retail sales +1.1%"
+          ]
         },
         {
           "key": "judge",
           "name": "News judge MD",
           "path": "01_daily/news/2026-10-28_judge.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 7808,
+          "said": "1. **FOMC/Fed decision pending \u2014 hawkish-hold vs skip signals dominate** \u2014 top rates/risk binary for SPX beta; one-line why: it sets the discount-rate path for",
+          "bullets": [
+            "2. **Treasury 5% yields / $2T deficit pressure equity multiples** \u2014 one-line why: high long-end yields are a direct valuation headwind into Fed. Channel: rates.",
+            "3. **Houthi missile hits Saudi Ras Tanura refinery; OPEC+ seen holding output** \u2014 one-line why: fresh oil-supply/geopolitical risk can bid XLE while hurting broad risk appetite. Channel: risk.",
+            "4. **Boeing 737 MAX 10 certification halted by FAA over software glitch** \u2014 one-line why: Dow/industrials-specific negative with order-book exposure, not just BA color. Channel: sector_fundamental."
+          ]
         },
         {
           "key": "research_json",
@@ -519,18 +527,18 @@
           "path": "01_daily/weather/2026-10-28_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=9381 vix=falling yields=flat",
-          "size": 9381,
-          "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
+          "reason": "sectors=11 bytes=9379 vix=falling yields=flat",
+          "size": 9379,
+          "said": "hostile 9 \u00b7 neutral 2",
           "bullets": [
-            "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Industrials, Real Estate, Technology, Utilities",
+            "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Technology, Utilities",
             "events bull 3 / bear 4"
           ]
         }
       ],
-      "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
+      "said": "hostile 9 \u00b7 neutral 2",
       "bullets": [
-        "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Industrials, Real Estate, Technology, Utilities",
+        "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Technology, Utilities",
         "events bull 3 / bear 4"
       ]
     },
@@ -552,10 +560,10 @@
           "role": "optional",
           "status": "OK",
           "reason": "rows=2629",
-          "size": 7555468,
-          "said": "27 rows",
+          "size": 7554130,
+          "said": "28 rows",
           "bullets": [
-            "MTDR, PBR, ELV, AUPH, SONO, SWKS, PANW, YPF"
+            "PBR, MTDR, SONO, SWKS, PANW, ATRC, CP, ASC"
           ]
         },
         {
@@ -565,16 +573,16 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=2629",
-          "size": 8364504,
+          "size": 8363020,
           "said": "25 rows",
           "bullets": [
-            "WAT, A, PANW, PBR, TMO, FIGS, CDNA, ABBV"
+            "WAT, TEL, RGEN, A, ABBV, PBR, DRH, FIGS"
           ]
         }
       ],
       "said": "25 rows",
       "bullets": [
-        "WAT, A, PANW, PBR, TMO"
+        "WAT, TEL, RGEN, A, ABBV"
       ]
     },
     {
@@ -619,11 +627,16 @@
           "name": "Catalyst dossiers JSON",
           "path": "01_daily/catalyst/2026-10-28_dossiers.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "FAIL",
+          "reason": "zero usable dossiers (n=8)",
+          "size": 2458,
+          "said": "zero usable dossiers (n=8) \u00b7 0/8 usable \u00b7 Grok \u2192 DeepSeek \u00b7 AAPL, MSFT, GOOGL, GOOG, AMZN, AMD, UEC, UUUU",
+          "bullets": [
+            "AAPL: OpenClaw and DeepSeek both returned empty for CATALYST STEP1 AAPL",
+            "MSFT: OpenClaw and DeepSeek both returned empty for CATALYST STEP1 MSFT",
+            "GOOGL: OpenClaw and DeepSeek both returned empty for CATALYST STEP1 GOOGL",
+            "GOOG: OpenClaw and DeepSeek both returned empty for CATALYST STEP1 GOOG"
+          ]
         }
       ],
       "said": "",
@@ -693,11 +706,15 @@
           "name": "News judge MD",
           "path": "01_daily/news/2026-10-28_judge.md",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 7808,
+          "said": "1. **FOMC/Fed decision pending \u2014 hawkish-hold vs skip signals dominate** \u2014 top rates/risk binary for SPX beta; one-line why: it sets the discount-rate path for",
+          "bullets": [
+            "2. **Treasury 5% yields / $2T deficit pressure equity multiples** \u2014 one-line why: high long-end yields are a direct valuation headwind into Fed. Channel: rates.",
+            "3. **Houthi missile hits Saudi Ras Tanura refinery; OPEC+ seen holding output** \u2014 one-line why: fresh oil-supply/geopolitical risk can bid XLE while hurting broad risk appetite. Channel: risk.",
+            "4. **Boeing 737 MAX 10 certification halted by FAA over software glitch** \u2014 one-line why: Dow/industrials-specific negative with order-book exposure, not just BA color. Channel: sector_fundamental."
+          ]
         },
         {
           "key": "in_weather",
@@ -705,11 +722,11 @@
           "path": "01_daily/weather/2026-10-28_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=9381 vix=falling yields=flat",
-          "size": 9381,
-          "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
+          "reason": "sectors=11 bytes=9379 vix=falling yields=flat",
+          "size": 9379,
+          "said": "hostile 9 \u00b7 neutral 2",
           "bullets": [
-            "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Industrials, Real Estate, Technology, Utilities",
+            "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Technology, Utilities",
             "events bull 3 / bear 4"
           ]
         },
@@ -720,10 +737,10 @@
           "role": "input",
           "status": "OK",
           "reason": "rows=2629",
-          "size": 8364504,
+          "size": 8363020,
           "said": "25 rows",
           "bullets": [
-            "WAT, A, PANW, PBR, TMO, FIGS, CDNA, ABBV"
+            "WAT, TEL, RGEN, A, ABBV, PBR, DRH, FIGS"
           ]
         },
         {
@@ -941,9 +958,9 @@
     "sectors": {},
     "news": {},
     "weather": {
-      "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
+      "said": "hostile 9 \u00b7 neutral 2",
       "bullets": [
-        "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Industrials, Real Estate, Technology, Utilities",
+        "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Technology, Utilities",
         "events bull 3 / bear 4"
       ]
     }
@@ -1473,6 +1490,31 @@
         }
       ],
       "preview": "# flatten_robust card \u2014 2026-10-28\n_Generated 2026-10-28T10:45:33 \u2014 live `flatten_robust`._\n**morning S missing; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**\n- Score **\u2014** (\u2014) \u00b7 route **io**\n- Cash leftover **$13.73** (after 09:30 $13.73 \u00b7 after 16:00 $115,278.15)\n- Prior close **$115,325.53** \u00b7 09:30 **$115,325.53** \u00b7 overnight **$+0.00** \u00b7 session **$-47.38** \u00b7 16:00 **$115,278.15**\n- Overnight lots **11** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$0.00** \u2264 leftover after sells **$115,278.15** \u00b7 2026-10-27 BUY \u2014 \u00b7 SELL \u2014 \u00b7 keys: date, policy, generated, score, predict, hard_red, flatten_ok, n_priced_buys, prior_book, route, cash_open, cash_after_0930 \u00b7 [{\"date\": \"2026-08-13\", \"route\": \"io\", \"score\": 8.525, \"predict\": \"UP\", \"yday_equity\": 100000.0, \"open_cash\": 100000.0, \"open_held\": 0, \"open_equity\": 100000.0, \"overnight_delta\": 0.0, \"session_delta\": -169.94, \"equity\": 99830.06, \"cash\": 9917.52, \"overnight_names\": \"\", \"overnight\": [], \"marks\": [{\"ticker\": \"BTSG\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 166, \"shares\": 166, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 59.8, \""
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-10-28",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-28T08:19:32.036893-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-10-28_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 9379,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-10-28_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5009,
+          "preview": "# Weather report \u2014 2026-10-28\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-10-28\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
     }
   ],
   "href": {
