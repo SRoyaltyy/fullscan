@@ -1,6 +1,6 @@
 {
   "stage": "outcome",
-  "fetched_at": "2026-10-27T20:02:12.692637-04:00",
+  "fetched_at": "2026-10-27T20:06:14.817863-04:00",
   "fred": {
     "DGS30": {
       "available": true,
@@ -88,8 +88,8 @@
     "CL=F": {
       "available": true,
       "date": "2026-10-27",
-      "last": 100.04,
-      "pct_1d": -1.69
+      "last": 100.05,
+      "pct_1d": -1.68
     },
     "BZ=F": {
       "available": true,
@@ -100,8 +100,8 @@
     "GC=F": {
       "available": true,
       "date": "2026-10-27",
-      "last": 4075.1,
-      "pct_1d": 0.91
+      "last": 4075.4,
+      "pct_1d": 0.92
     },
     "DXY": {
       "available": true,
@@ -115,13 +115,13 @@
     "ES=F": {
       "available": true,
       "date": "2026-10-27",
-      "last": 7762.75,
-      "pct_1d": 0.63
+      "last": 7762.5,
+      "pct_1d": 0.62
     },
     "NQ=F": {
       "available": true,
       "date": "2026-10-27",
-      "last": 29856.25,
+      "last": 29856.5,
       "pct_1d": 1.42
     }
   },
@@ -515,11 +515,11 @@
         "ASX200": {
           "available": true,
           "date": "2026-10-28",
-          "last": 8918.6,
-          "pct_1d": 1.23
+          "last": 8920.0,
+          "pct_1d": 1.25
         }
       },
-      "composite_avg": -0.07
+      "composite_avg": -0.06
     },
     "europe": {
       "per_index": {
@@ -558,8 +558,10 @@
     "window": "2026-10-20..2026-10-27"
   },
   "fear_greed": {
-    "available": false,
-    "note": "fetch failed: 418 Client Error: Unknown Error for url: https://production.dataviz.cnn.io/index/fearandgreed/graphdata; no Supabase fallback data"
+    "available": true,
+    "value": 58.2,
+    "label": "Greed",
+    "note": "from Supabase macro_indicators as of 2026-08-27 (CNN direct blocked: 418 Client Error: Unknown Error for url: https://production.dataviz.cnn.io/index/fearandgreed/graphdata)"
   },
   "fedwatch": {
     "available": false,
@@ -568,7 +570,8 @@
   "news_24h": {
     "available": false,
     "count": 0,
-    "items": []
+    "items": [],
+    "error": "db_timeout"
   },
   "actual_close": {
     "SPX": {
