@@ -18,7 +18,7 @@
     "primary_source_id": "ca-boc-30d6d14378",
     "n": 6917,
     "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "ca-boc-30d6d14378"
     ]
@@ -42,9 +42,657 @@
     "primary_source_id": "ca-boc-30d6d14378",
     "n": 6918,
     "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "ca-boc-30d6d14378"
+    ]
+  },
+  {
+    "title": "Money Market Operations as on October 27, 2026",
+    "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63874",
+    "native_id": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63874",
+    "published_at": "2026-10-28T09:00:00+00:00",
+    "published_raw": "Wed, 28 Oct 2026 09:00:00",
+    "summary": "(Amount in ₹ crore, Rate in Per cent) MONEY MARKETS @ --> Money Markets @ Volume (One Leg) Weighted Average Rate Range A. Overnight Segment (I+II+III+IV) 7,17,097.85 5.64 4.30-6.00 I. Call Money 14,574.09 5.75 4.30-5.90 II. Triparty Repo 5,16,395.80 5.62 5.20-5.76 III. Market Repo 1,79,788.01 5.69 5.00-5.90 IV. Repo in Corporate Bond 6,339.95 5.84 5.80-6.00 B. Term Segment I. Notice Money ** 217.20 5.37 5.10-5.76 II. Term Money @@ 269.00 - 5.50-6.25 III. Triparty Repo 7,518.50 5.64 5.40-5.75 IV. Market Repo 150.00 5.94 5.92-5.95 V. Repo in Corporate Bond 0.00 - - RBI OPERATIONS @ --> RBI OPERATIONS @ --> RBI Operations @ Auction Date Tenor (Days) Maturity Date Amount Current Rate / Cut off Rate C. Liquidity Adjustment Facility (LAF), Marginal Standing Facility (MSF) & Standing Deposit Facility (SDF) I. Today's Operations 1. Fixed Rate 2. Variable Rate & (a) Repo Operation (b) Reverse Repo Operation 3. MSF # Tue, 27/10/2026 1 Wed, 28/10/2026 7,022.00 5.75 4. SDF Δ# Tue, 27/10/2026 1 Wed, 28/10/2026 1,72,235.00 5.25 5. Net liquidity injected from today's operations [injection (+)/absorption (-)]* -1,65,213.00 II. Outstanding Operations 1. Fixed Rate 2. Variable Rate & (a) Repo Operat",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Reserve Bank of India",
+      "jurisdiction": "IN",
+      "family": "monetary_and_supervisory"
+    },
+    "primary_source_id": "in-rbi-cc71120b98",
+    "n": 6999,
+    "first_seen": "2026-10-28T07:15:21.187665+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
+    "source_ids": [
+      "in-rbi-cc71120b98"
+    ]
+  },
+  {
+    "title": "H.R. 10910 (IH) - Dunkin’s Law",
+    "url": "https://www.govinfo.gov/app/details/BILLS-119hr10910ih",
+    "native_id": "BILLS-119hr10910ih",
+    "published_at": "2026-10-28T03:18:05+00:00",
+    "published_raw": "Wed, 28 Oct 2026 03:18:05 +0000",
+    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "bill",
+      "document_stage": "legislative_document_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Congressional Bills",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-bills",
+    "n": 6956,
+    "first_seen": "2026-10-28T07:15:21.187665+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
+    "source_ids": [
+      "us-govinfo-bills"
+    ]
+  },
+  {
+    "title": "H.R. 10855 (IH) - Quantifying Uncertainty and Action to Help Optimize Growth of Shellfish Act of 2026",
+    "url": "https://www.govinfo.gov/app/details/BILLS-119hr10855ih",
+    "native_id": "BILLS-119hr10855ih",
+    "published_at": "2026-10-28T03:18:05+00:00",
+    "published_raw": "Wed, 28 Oct 2026 03:18:05 +0000",
+    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "bill",
+      "document_stage": "legislative_document_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Congressional Bills",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-bills",
+    "n": 6955,
+    "first_seen": "2026-10-28T07:15:21.187665+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
+    "source_ids": [
+      "us-govinfo-bills"
+    ]
+  },
+  {
+    "title": "H.R. 10915 (IH) - Common-Sense Cloud Security Act",
+    "url": "https://www.govinfo.gov/app/details/BILLS-119hr10915ih",
+    "native_id": "BILLS-119hr10915ih",
+    "published_at": "2026-10-28T03:18:05+00:00",
+    "published_raw": "Wed, 28 Oct 2026 03:18:05 +0000",
+    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "bill",
+      "document_stage": "legislative_document_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Congressional Bills",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-bills",
+    "n": 6954,
+    "first_seen": "2026-10-28T07:15:21.187665+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
+    "source_ids": [
+      "us-govinfo-bills"
+    ]
+  },
+  {
+    "title": "H.R. 10911 (IH) - U.S. Swine Health Improvement Plan Act of 2026",
+    "url": "https://www.govinfo.gov/app/details/BILLS-119hr10911ih",
+    "native_id": "BILLS-119hr10911ih",
+    "published_at": "2026-10-28T03:18:05+00:00",
+    "published_raw": "Wed, 28 Oct 2026 03:18:05 +0000",
+    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "bill",
+      "document_stage": "legislative_document_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Congressional Bills",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-bills",
+    "n": 6953,
+    "first_seen": "2026-10-28T07:15:21.187665+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
+    "source_ids": [
+      "us-govinfo-bills"
+    ]
+  },
+  {
+    "title": "H.R. 10914 (IH) - Farming Opportunities Training and Outreach Grant Program Reauthorization Act of 2026",
+    "url": "https://www.govinfo.gov/app/details/BILLS-119hr10914ih",
+    "native_id": "BILLS-119hr10914ih",
+    "published_at": "2026-10-28T03:18:05+00:00",
+    "published_raw": "Wed, 28 Oct 2026 03:18:05 +0000",
+    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "bill",
+      "document_stage": "legislative_document_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Congressional Bills",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-bills",
+    "n": 6952,
+    "first_seen": "2026-10-28T07:15:21.187665+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
+    "source_ids": [
+      "us-govinfo-bills"
+    ]
+  },
+  {
+    "title": "H.R. 10912 (IH) - Fast Tracking European Investment in Ukraine’s Defense Act",
+    "url": "https://www.govinfo.gov/app/details/BILLS-119hr10912ih",
+    "native_id": "BILLS-119hr10912ih",
+    "published_at": "2026-10-28T03:18:05+00:00",
+    "published_raw": "Wed, 28 Oct 2026 03:18:05 +0000",
+    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "bill",
+      "document_stage": "legislative_document_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Congressional Bills",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-bills",
+    "n": 6951,
+    "first_seen": "2026-10-28T07:15:21.187665+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
+    "source_ids": [
+      "us-govinfo-bills"
+    ]
+  },
+  {
+    "title": "H.R. 10908 (IH) - Ending Patient Runaround Act",
+    "url": "https://www.govinfo.gov/app/details/BILLS-119hr10908ih",
+    "native_id": "BILLS-119hr10908ih",
+    "published_at": "2026-10-28T03:18:05+00:00",
+    "published_raw": "Wed, 28 Oct 2026 03:18:05 +0000",
+    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "bill",
+      "document_stage": "legislative_document_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Congressional Bills",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-bills",
+    "n": 6950,
+    "first_seen": "2026-10-28T07:15:21.187665+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
+    "source_ids": [
+      "us-govinfo-bills"
+    ]
+  },
+  {
+    "title": "H.R. 10880 (IH) - Tell the Government Once Act",
+    "url": "https://www.govinfo.gov/app/details/BILLS-119hr10880ih",
+    "native_id": "BILLS-119hr10880ih",
+    "published_at": "2026-10-28T03:18:05+00:00",
+    "published_raw": "Wed, 28 Oct 2026 03:18:05 +0000",
+    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "bill",
+      "document_stage": "legislative_document_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Congressional Bills",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-bills",
+    "n": 6949,
+    "first_seen": "2026-10-28T07:15:21.187665+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
+    "source_ids": [
+      "us-govinfo-bills"
+    ]
+  },
+  {
+    "title": "H.R. 10913 (IH) - Eliminating Dangerous Preservatives Act",
+    "url": "https://www.govinfo.gov/app/details/BILLS-119hr10913ih",
+    "native_id": "BILLS-119hr10913ih",
+    "published_at": "2026-10-28T03:18:05+00:00",
+    "published_raw": "Wed, 28 Oct 2026 03:18:05 +0000",
+    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "bill",
+      "document_stage": "legislative_document_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Congressional Bills",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-bills",
+    "n": 6948,
+    "first_seen": "2026-10-28T07:15:21.187665+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
+    "source_ids": [
+      "us-govinfo-bills"
+    ]
+  },
+  {
+    "title": "H.R. 10733 (IH) - Improving Justice Programs through Science Act of 2026",
+    "url": "https://www.govinfo.gov/app/details/BILLS-119hr10733ih",
+    "native_id": "BILLS-119hr10733ih",
+    "published_at": "2026-10-28T03:18:05+00:00",
+    "published_raw": "Wed, 28 Oct 2026 03:18:05 +0000",
+    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "bill",
+      "document_stage": "legislative_document_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Congressional Bills",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-bills",
+    "n": 6947,
+    "first_seen": "2026-10-28T07:15:21.187665+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
+    "source_ids": [
+      "us-govinfo-bills"
+    ]
+  },
+  {
+    "title": "H.R. 10683 (IH) - Modern Skies Act",
+    "url": "https://www.govinfo.gov/app/details/BILLS-119hr10683ih",
+    "native_id": "BILLS-119hr10683ih",
+    "published_at": "2026-10-28T03:18:04+00:00",
+    "published_raw": "Wed, 28 Oct 2026 03:18:04 +0000",
+    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "bill",
+      "document_stage": "legislative_document_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Congressional Bills",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-bills",
+    "n": 6946,
+    "first_seen": "2026-10-28T07:15:21.187665+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
+    "source_ids": [
+      "us-govinfo-bills"
+    ]
+  },
+  {
+    "title": "H.R. 10916 (IH) - Aquatic Restoration and Conservation Act",
+    "url": "https://www.govinfo.gov/app/details/BILLS-119hr10916ih",
+    "native_id": "BILLS-119hr10916ih",
+    "published_at": "2026-10-28T03:18:04+00:00",
+    "published_raw": "Wed, 28 Oct 2026 03:18:04 +0000",
+    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "bill",
+      "document_stage": "legislative_document_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Congressional Bills",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-bills",
+    "n": 6945,
+    "first_seen": "2026-10-28T07:15:21.187665+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
+    "source_ids": [
+      "us-govinfo-bills"
+    ]
+  },
+  {
+    "title": "H.R. 10544 (IH) - Ovarian Cancer Improving and Modernizing Prevention, Access, Care, and Testing Act",
+    "url": "https://www.govinfo.gov/app/details/BILLS-119hr10544ih",
+    "native_id": "BILLS-119hr10544ih",
+    "published_at": "2026-10-28T03:18:03+00:00",
+    "published_raw": "Wed, 28 Oct 2026 03:18:03 +0000",
+    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "bill",
+      "document_stage": "legislative_document_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Congressional Bills",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-bills",
+    "n": 6944,
+    "first_seen": "2026-10-28T07:15:21.187665+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
+    "source_ids": [
+      "us-govinfo-bills"
+    ]
+  },
+  {
+    "title": "OCR held at 2.75% - Reserve Bank of New Zealand",
+    "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQOU9JLWZTNzVoOHdyaS1iUkEtcWdqWnhsS1ZkSU9pYm12R3RYLW9udmhnbTNsb0dKTW5nSGoxOWxUOTZ5TG5QYkdmenVyb2pyU1Y5VURuLTExX2hpN1NpZUlDTFE3QW9UaHJ5cE5YczdyVXZEbmxWeEwyQXZfTWxZUDdyTXc",
+    "native_id": "CBMihAFBVV95cUxQOU9JLWZTNzVoOHdyaS1iUkEtcWdqWnhsS1ZkSU9pYm12R3RYLW9udmhnbTNsb0dKTW5nSGoxOWxUOTZ5TG5QYkdmenVyb2pyU1Y5VURuLTExX2hpN1NpZUlDTFE3QW9UaHJ5cE5YczdyVXZEbmxWeEwyQXZfTWxZUDdyTXc",
+    "published_at": "2026-10-28T01:01:11+00:00",
+    "published_raw": "Wed, 28 Oct 2026 01:01:11 GMT",
+    "summary": "OCR held at 2.75% Reserve Bank of New Zealand",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Reserve Bank of New Zealand (official-site news mirror)",
+      "jurisdiction": "NZ",
+      "family": "monetary_operations"
+    },
+    "primary_source_id": "nz-rbnz-gnews",
+    "n": 6998,
+    "first_seen": "2026-10-28T07:15:21.187665+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
+    "source_ids": [
+      "nz-rbnz-gnews"
+    ]
+  },
+  {
+    "title": "Peripheral and Central Nervous System Drugs Advisory Committee Charter",
+    "url": "http://www.fda.gov/advisory-committees/peripheral-and-central-nervous-system-drugs-advisory-committee/peripheral-and-central-nervous-system-drugs-advisory-committee-charter",
+    "native_id": "http://www.fda.gov/advisory-committees/peripheral-and-central-nervous-system-drugs-advisory-committee/peripheral-and-central-nervous-system-drugs-advisory-committee-charter",
+    "published_at": "2026-10-27T21:52:50+00:00",
+    "published_raw": "Tue, 27 Oct 2026 17:52:50 EDT",
+    "summary": "The Peripheral and Central Nervous System Drugs Advisory Committee advises the Commissioner or designee in discharging responsibilities as they relate to helping to ensure safe and effective drugs for human use and, as required, any other product for which the Food and Drug Administration has regula",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Food and Drug Administration — What's New: Drugs",
+      "jurisdiction": "US",
+      "family": "product_permissions_and_safety"
+    },
+    "primary_source_id": "us-fda-5696b24295",
+    "n": 6992,
+    "first_seen": "2026-10-28T07:15:21.187665+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
+    "source_ids": [
+      "us-fda-5696b24295"
+    ]
+  },
+  {
+    "title": "DCPD-202600647 - Remarks at the Presidents Cup Golf Tournament in Medinah, Illinois",
+    "url": "https://www.govinfo.gov/app/details/DCPD-202600647",
+    "native_id": "DCPD-202600647",
+    "published_at": "2026-10-27T21:08:00+00:00",
+    "published_raw": "Tue, 27 Oct 2026 21:08:00 +0000",
+    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "presidential_document",
+      "document_stage": "presidential_document_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Compilation of Presidential Documents",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-dcpd",
+    "n": 6961,
+    "first_seen": "2026-10-28T07:15:21.187665+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
+    "source_ids": [
+      "us-govinfo-dcpd"
+    ]
+  },
+  {
+    "title": "DCPD-202600648 - Remarks and an Exchange With Reporters Upon Arrival at Joint Base Andrews, Maryland",
+    "url": "https://www.govinfo.gov/app/details/DCPD-202600648",
+    "native_id": "DCPD-202600648",
+    "published_at": "2026-10-27T21:08:00+00:00",
+    "published_raw": "Tue, 27 Oct 2026 21:08:00 +0000",
+    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "presidential_document",
+      "document_stage": "presidential_document_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Compilation of Presidential Documents",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-dcpd",
+    "n": 6960,
+    "first_seen": "2026-10-28T07:15:21.187665+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
+    "source_ids": [
+      "us-govinfo-dcpd"
+    ]
+  },
+  {
+    "title": "DCPD-202600646 - Remarks and an Exchange With Reporters Upon Arrival in Chicago, Illinois",
+    "url": "https://www.govinfo.gov/app/details/DCPD-202600646",
+    "native_id": "DCPD-202600646",
+    "published_at": "2026-10-27T21:08:00+00:00",
+    "published_raw": "Tue, 27 Oct 2026 21:08:00 +0000",
+    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "presidential_document",
+      "document_stage": "presidential_document_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Compilation of Presidential Documents",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-dcpd",
+    "n": 6959,
+    "first_seen": "2026-10-28T07:15:21.187665+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
+    "source_ids": [
+      "us-govinfo-dcpd"
+    ]
+  },
+  {
+    "title": "DCPD-202600649 - Remarks to Reporters Upon Arrival From Chicago, Illinois",
+    "url": "https://www.govinfo.gov/app/details/DCPD-202600649",
+    "native_id": "DCPD-202600649",
+    "published_at": "2026-10-27T21:08:00+00:00",
+    "published_raw": "Tue, 27 Oct 2026 21:08:00 +0000",
+    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "presidential_document",
+      "document_stage": "presidential_document_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Compilation of Presidential Documents",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-dcpd",
+    "n": 6958,
+    "first_seen": "2026-10-28T07:15:21.187665+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
+    "source_ids": [
+      "us-govinfo-dcpd"
+    ]
+  },
+  {
+    "title": "DCPD-202600650 - Remarks Announcing the Siting of a Mesabi Metallics Steel Manufacturing Facility in Southeastern Iowa and an Exchange With Reporters",
+    "url": "https://www.govinfo.gov/app/details/DCPD-202600650",
+    "native_id": "DCPD-202600650",
+    "published_at": "2026-10-27T21:08:00+00:00",
+    "published_raw": "Tue, 27 Oct 2026 21:08:00 +0000",
+    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "presidential_document",
+      "document_stage": "presidential_document_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Compilation of Presidential Documents",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-dcpd",
+    "n": 6957,
+    "first_seen": "2026-10-28T07:15:21.187665+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
+    "source_ids": [
+      "us-govinfo-dcpd"
+    ]
+  },
+  {
+    "title": "FDA and CMS Announce New Steps to Advance Gene Therapies and Expand Access for Patients with Rare Diseases",
+    "url": "https://www.hhs.gov/press-room/fda-cms-advance-gene-therapies-rare-diseases-patient-access.html",
+    "native_id": "https://www.hhs.gov/press-room/fda-cms-advance-gene-therapies-rare-diseases-patient-access.html",
+    "published_at": "2026-10-27T21:00:09+00:00",
+    "published_raw": "Tue, 27 Oct 2026 17:00:09 -0400",
+    "summary": "HHS, through the Food and Drug Administration, issued a draft guidance for industry to help sponsors develop and seek approval for personalized gene therapies",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Health and Human Services",
+      "jurisdiction": "US",
+      "family": "health_administration"
+    },
+    "primary_source_id": "us-hhs-6f995a5754",
+    "n": 6993,
+    "first_seen": "2026-10-28T07:15:21.187665+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
+    "source_ids": [
+      "us-hhs-6f995a5754"
+    ]
+  },
+  {
+    "title": "Amgen Inc. - 739641 - 08/12/2026",
+    "url": "http://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/amgen-inc-739641-08122026",
+    "native_id": "http://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/amgen-inc-739641-08122026",
+    "published_at": "2026-10-27T19:32:15+00:00",
+    "published_raw": "Tue, 27 Oct 2026 15:32:15 EDT",
+    "summary": "Drug Product/Misbranded, False & Misleading Claims",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Food and Drug Administration — What's New: Drugs",
+      "jurisdiction": "US",
+      "family": "product_permissions_and_safety"
+    },
+    "primary_source_id": "us-fda-5696b24295",
+    "n": 6872,
+    "first_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
+    "source_ids": [
+      "us-fda-5696b24295"
+    ]
+  },
+  {
+    "title": "ICYMI: Agricultural Leaders and Market Participants Join CFTC Chairman Selig in Overland Park, Kansas for AgCon 2026",
+    "url": "https://www.cftc.gov/PressRoom/PressReleases/9317-26",
+    "native_id": "https://www.cftc.gov/PressRoom/PressReleases/9317-26",
+    "published_at": "2026-10-27T19:22:28+00:00",
+    "published_raw": "Tue, 27 Oct 2026 19:22:28 +0000",
+    "summary": "",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Commodity Futures Trading Commission",
+      "jurisdiction": "US",
+      "family": "financial_enforcement"
+    },
+    "primary_source_id": "us-cftc-fda5c3631d",
+    "n": 6991,
+    "first_seen": "2026-10-28T07:15:21.187665+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
+    "source_ids": [
+      "us-cftc-fda5c3631d"
+    ]
+  },
+  {
+    "title": "H.R. 10897 (IH) - Sami’s Law",
+    "url": "https://www.govinfo.gov/app/details/BILLS-119hr10897ih",
+    "native_id": "BILLS-119hr10897ih",
+    "published_at": "2026-10-27T19:13:00+00:00",
+    "published_raw": "Tue, 27 Oct 2026 19:13:00 +0000",
+    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "bill",
+      "document_stage": "legislative_document_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Congressional Bills",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-bills",
+    "n": 6795,
+    "first_seen": "2026-10-27T06:19:07.638287+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
+    "source_ids": [
+      "us-govinfo-bills"
+    ]
+  },
+  {
+    "title": "Trump Administration Drives Opioid Deaths to Lowest in Nearly a Decade",
+    "url": "https://www.hhs.gov/press-room/hhs-reports-opioid-deaths-lowest-nearly-decade.html",
+    "native_id": "https://www.hhs.gov/press-room/hhs-reports-opioid-deaths-lowest-nearly-decade.html",
+    "published_at": "2026-10-27T19:00:00+00:00",
+    "published_raw": "Tue, 27 Oct 2026 15:00:00 -0400",
+    "summary": "HHS released new analysis from the Office of the Assistant Secretary for Planning and Evaluation examining America’s record-low overall age-adjusted death rate",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Health and Human Services",
+      "jurisdiction": "US",
+      "family": "health_administration"
+    },
+    "primary_source_id": "us-hhs-6f995a5754",
+    "n": 6994,
+    "first_seen": "2026-10-28T07:15:21.187665+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
+    "source_ids": [
+      "us-hhs-6f995a5754"
+    ]
+  },
+  {
+    "title": "Commissioner Roswall's speech at the event, ‘From Principles to International Cooperation: Mobilising Biodiversity Finance through High-Integrity Nature Credits'",
+    "url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2276",
+    "native_id": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2276",
+    "published_at": "2026-10-27T18:54:09+00:00",
+    "published_raw": "Tue, 27 Oct 2026 18:54:09 GMT",
+    "summary": "European Commission Speech Yerevan, 27 Oct 2026 Excellencies, Ministers, Executive Secretary Schomaker, distinguished guests, Ladies and gentlemen, I am delighted to welcome you to today's high-level event, t...",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "European Commission press and decisions",
+      "jurisdiction": "EU",
+      "family": "executive_and_regulatory"
+    },
+    "primary_source_id": "eu-commission-07d4f58ccf",
+    "n": 6997,
+    "first_seen": "2026-10-28T07:15:21.187665+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
+    "source_ids": [
+      "eu-commission-07d4f58ccf"
     ]
   },
   {
@@ -90,7 +738,7 @@
     "primary_source_id": "in-rbi-cc71120b98",
     "n": 6920,
     "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "in-rbi-cc71120b98"
     ]
@@ -120,6 +768,30 @@
     ]
   },
   {
+    "title": "Nikola Corporation",
+    "url": "https://www.sec.gov/files/litigation/admin/2026/34-106740.pdf",
+    "native_id": "e7a0e9f8-4bab-4ce3-ab50-53a1188f5bdf",
+    "published_at": "2026-10-27T18:06:24+00:00",
+    "published_raw": "Tue, 27 Oct 2026 14:06:24 -0400",
+    "summary": "Nikola Corporation",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Securities and Exchange Commission",
+      "jurisdiction": "US",
+      "family": "enforcement_and_market_rules"
+    },
+    "primary_source_id": "us-sec-18c0a4ef1b",
+    "n": 6962,
+    "first_seen": "2026-10-28T07:15:21.187665+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
+    "source_ids": [
+      "us-sec-18c0a4ef1b"
+    ]
+  },
+  {
     "title": "Manual of Compliance Policy Guides",
     "url": "http://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/compliance-manuals/manual-compliance-policy-guides",
     "native_id": "http://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/compliance-manuals/manual-compliance-policy-guides",
@@ -138,7 +810,7 @@
     "primary_source_id": "us-fda-5696b24295",
     "n": 6871,
     "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-fda-03f7703006",
       "us-fda-5696b24295"
@@ -163,7 +835,7 @@
     "primary_source_id": "us-occ-6f63126133",
     "n": 6866,
     "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-occ-6f63126133"
     ]
@@ -187,7 +859,7 @@
     "primary_source_id": "in-rbi-cc71120b98",
     "n": 6921,
     "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "in-rbi-cc71120b98"
     ]
@@ -211,7 +883,7 @@
     "primary_source_id": "us-cftc-fda5c3631d",
     "n": 6867,
     "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-cftc-fda5c3631d"
     ]
@@ -235,33 +907,9 @@
     "primary_source_id": "in-rbi-738b09bded",
     "n": 6924,
     "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "in-rbi-738b09bded"
-    ]
-  },
-  {
-    "title": "Amgen Inc. - 739641 - 08/12/2026",
-    "url": "http://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/amgen-inc-739641-08122026",
-    "native_id": "http://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/amgen-inc-739641-08122026",
-    "published_at": "2026-10-27T17:27:28+00:00",
-    "published_raw": "Tue, 27 Oct 2026 13:27:28 EDT",
-    "summary": "Drug Product/Misbranded, False & Misleading Claims",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Food and Drug Administration — What's New: Drugs",
-      "jurisdiction": "US",
-      "family": "product_permissions_and_safety"
-    },
-    "primary_source_id": "us-fda-5696b24295",
-    "n": 6872,
-    "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
-    "source_ids": [
-      "us-fda-5696b24295"
     ]
   },
   {
@@ -283,7 +931,7 @@
     "primary_source_id": "in-rbi-738b09bded",
     "n": 6925,
     "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "in-rbi-738b09bded"
     ]
@@ -307,7 +955,7 @@
     "primary_source_id": "eu-commission-07d4f58ccf",
     "n": 6900,
     "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "eu-commission-07d4f58ccf"
     ]
@@ -379,7 +1027,7 @@
     "primary_source_id": "in-rbi-cc71120b98",
     "n": 6922,
     "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "in-rbi-cc71120b98"
     ]
@@ -403,7 +1051,7 @@
     "primary_source_id": "us-fda-03f7703006",
     "n": 1413,
     "first_seen": "2026-10-15T10:17:11.133023+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-fda-03f7703006"
     ]
@@ -427,7 +1075,7 @@
     "primary_source_id": "us-fda-03f7703006",
     "n": 6882,
     "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-fda-03f7703006"
     ]
@@ -456,7 +1104,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 6831,
     "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -485,7 +1133,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 6832,
     "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -533,7 +1181,7 @@
     "primary_source_id": "us-fda-5696b24295",
     "n": 6873,
     "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-fda-5696b24295"
     ]
@@ -557,7 +1205,7 @@
     "primary_source_id": "us-fda-5696b24295",
     "n": 1394,
     "first_seen": "2026-10-15T10:17:11.133023+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-fda-5696b24295"
     ]
@@ -581,7 +1229,7 @@
     "primary_source_id": "us-fda-5696b24295",
     "n": 6874,
     "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-fda-5696b24295"
     ]
@@ -605,7 +1253,7 @@
     "primary_source_id": "us-fda-5696b24295",
     "n": 6875,
     "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-fda-5696b24295"
     ]
@@ -629,7 +1277,7 @@
     "primary_source_id": "in-rbi-cc71120b98",
     "n": 6923,
     "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "in-rbi-cc71120b98"
     ]
@@ -658,7 +1306,7 @@
     "primary_source_id": "uk-govuk-medical_safety_alert",
     "n": 6836,
     "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "uk-govuk-medical_safety_alert"
     ]
@@ -711,7 +1359,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 6833,
     "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -735,7 +1383,7 @@
     "primary_source_id": "us-fda-03f7703006",
     "n": 5514,
     "first_seen": "2026-10-20T06:03:48.509691+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-fda-03f7703006"
     ]
@@ -759,7 +1407,7 @@
     "primary_source_id": "us-hhs-6f995a5754",
     "n": 6889,
     "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-hhs-6f995a5754"
     ]
@@ -783,7 +1431,7 @@
     "primary_source_id": "eu-commission-07d4f58ccf",
     "n": 6901,
     "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "eu-commission-07d4f58ccf"
     ]
@@ -932,7 +1580,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 6834,
     "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -956,7 +1604,7 @@
     "primary_source_id": "us-fda-5696b24295",
     "n": 6877,
     "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-fda-5696b24295"
     ]
@@ -980,7 +1628,7 @@
     "primary_source_id": "us-fda-5696b24295",
     "n": 6876,
     "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-fda-5696b24295"
     ]
@@ -1004,7 +1652,7 @@
     "primary_source_id": "us-fda-03f7703006",
     "n": 6883,
     "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-fda-03f7703006"
     ]
@@ -1028,7 +1676,7 @@
     "primary_source_id": "us-fda-5696b24295",
     "n": 6879,
     "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-fda-5696b24295"
     ]
@@ -1052,7 +1700,7 @@
     "primary_source_id": "us-fda-5696b24295",
     "n": 6878,
     "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-fda-5696b24295"
     ]
@@ -1076,7 +1724,7 @@
     "primary_source_id": "us-fda-03f7703006",
     "n": 6884,
     "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-fda-03f7703006"
     ]
@@ -1100,7 +1748,7 @@
     "primary_source_id": "us-fda-5696b24295",
     "n": 6880,
     "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-fda-5696b24295"
     ]
@@ -1124,7 +1772,7 @@
     "primary_source_id": "us-fda-5696b24295",
     "n": 6881,
     "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-fda-5696b24295"
     ]
@@ -1148,7 +1796,7 @@
     "primary_source_id": "us-fda-5696b24295",
     "n": 6382,
     "first_seen": "2026-10-23T17:53:51.765604+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-fda-03f7703006",
       "us-fda-5696b24295"
@@ -1173,7 +1821,7 @@
     "primary_source_id": "us-fda-03f7703006",
     "n": 6885,
     "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-fda-03f7703006"
     ]
@@ -1197,7 +1845,7 @@
     "primary_source_id": "us-govinfo-bills",
     "n": 6837,
     "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-govinfo-bills"
     ]
@@ -1221,7 +1869,7 @@
     "primary_source_id": "us-cftc-fda5c3631d",
     "n": 6868,
     "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-cftc-fda5c3631d"
     ]
@@ -1245,7 +1893,7 @@
     "primary_source_id": "us-fda-03f7703006",
     "n": 6886,
     "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-fda-03f7703006"
     ]
@@ -1269,7 +1917,7 @@
     "primary_source_id": "us-fda-5696b24295",
     "n": 6652,
     "first_seen": "2026-10-26T19:21:36.282284+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-fda-5696b24295"
     ]
@@ -1293,9 +1941,707 @@
     "primary_source_id": "eu-commission-07d4f58ccf",
     "n": 6902,
     "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "eu-commission-07d4f58ccf"
+    ]
+  },
+  {
+    "title": "US Department of Labor finds none of nation’s 12,000 mining operations met criteria for pattern of violations in fiscal year 2026",
+    "url": "http://www.dol.gov/newsroom/releases/msha/msha20261027",
+    "native_id": "http://www.dol.gov/newsroom/releases/msha/msha20261027",
+    "published_at": "2026-10-27T12:00:00+00:00",
+    "published_raw": "Tue, 27 Oct 26 12:00:00 +0000",
+    "summary": "WASHINGTON – The U.S. Department of Labor’s Mine Safety and Health Administration announced today that none of the nation’s 12,000 mining operations met the criteria for a pattern of violations notice, one of the agency’s toughest enforcement tools.In MSHA’s annual screening of operations from Oct. 1, 2025, to Sept. 30, 2026, the agency found no pattern of violation notices. The Federal Mine Safety and Health Act of 1977 includes the pattern of violations provision for mines with a recurring pattern of significant and substantial violations – those that are reasonably likely to result in a serious injury or illness – and other safety and health compliance problems. If a mine receives subsequent S&S violations after being placed on POV, MSHA is authorized to withdraw miners from the affected area of the mine.“Under this administration MSHA remains committed to objectively calling balls and strikes in enforcement, including issuing POV notices when warranted,” said Assistant Secretary for Mine Safety and Health Wayne D. Palmer. “For the third year in a row, no mine received a POV notice which, combined with the lowest-ever all-injury rate in 2025, signals continued progress toward pr",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Department of Labor",
+      "jurisdiction": "US",
+      "family": "labour_enforcement"
+    },
+    "primary_source_id": "us-dol-99f477805a",
+    "n": 6996,
+    "first_seen": "2026-10-28T07:15:21.187665+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
+    "source_ids": [
+      "us-dol-99f477805a"
+    ]
+  },
+  {
+    "title": "Guatemalan National Pleads Guilty to Conspiracy to Commit Narcotics Trafficking",
+    "url": "https://www.justice.gov/opa/pr/guatemalan-national-pleads-guilty-conspiracy-commit-narcotics-trafficking",
+    "native_id": "https://www.justice.gov/opa/pr/guatemalan-national-pleads-guilty-conspiracy-commit-narcotics-trafficking",
+    "published_at": "2026-10-27T12:00:00+00:00",
+    "published_raw": "Tue, 27 Oct 2026 12:00:00 +0000",
+    "summary": "Donelfert Monterroso Vasquez, 51, a Guatemalan national, pleaded guilty today to conspiring to import more than 450 kilograms of cocaine into the United States.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Department of Justice — RSS Feed",
+      "jurisdiction": "US",
+      "family": "judicial_and_enforcement"
+    },
+    "primary_source_id": "us-doj-e05071794d",
+    "n": 6990,
+    "first_seen": "2026-10-28T07:15:21.187665+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
+    "source_ids": [
+      "us-doj-e05071794d"
+    ]
+  },
+  {
+    "title": "Contractor Pleads Guilty to Paying Kickbacks Related to U.S. Postal Service Facilities Repair Contracts",
+    "url": "https://www.justice.gov/opa/pr/contractor-pleads-guilty-paying-kickbacks-related-us-postal-service-facilities-repair",
+    "native_id": "https://www.justice.gov/opa/pr/contractor-pleads-guilty-paying-kickbacks-related-us-postal-service-facilities-repair",
+    "published_at": "2026-10-27T12:00:00+00:00",
+    "published_raw": "Tue, 27 Oct 2026 12:00:00 +0000",
+    "summary": "A contractor pleaded guilty to conspiring to commit an offense against the United States by paying over $465,000 in kickbacks.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Department of Justice — RSS Feed",
+      "jurisdiction": "US",
+      "family": "judicial_and_enforcement"
+    },
+    "primary_source_id": "us-doj-e05071794d",
+    "n": 6989,
+    "first_seen": "2026-10-28T07:15:21.187665+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
+    "source_ids": [
+      "us-doj-e05071794d"
+    ]
+  },
+  {
+    "title": "Gainesville Woman Convicted in $8.6M Medicare Fraud Scheme",
+    "url": "https://www.justice.gov/opa/pr/gainesville-woman-convicted-86m-medicare-fraud-scheme",
+    "native_id": "https://www.justice.gov/opa/pr/gainesville-woman-convicted-86m-medicare-fraud-scheme",
+    "published_at": "2026-10-27T12:00:00+00:00",
+    "published_raw": "Tue, 27 Oct 2026 12:00:00 +0000",
+    "summary": "A federal jury in the Middle District of Florida convicted a Florida woman who owned a durable medical equipment (DME) company and managed several other DME companies for her role in a fraud scheme that took advantage of the elderly and disabled and caused the submission of over $8.6 million in fraudulent claims to Medicare.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Department of Justice — RSS Feed",
+      "jurisdiction": "US",
+      "family": "judicial_and_enforcement"
+    },
+    "primary_source_id": "us-doj-e05071794d",
+    "n": 6988,
+    "first_seen": "2026-10-28T07:15:21.187665+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
+    "source_ids": [
+      "us-doj-e05071794d"
+    ]
+  },
+  {
+    "title": "American Woman Convicted of Receiving Military Training From ISIS in Syria",
+    "url": "https://www.justice.gov/opa/pr/american-woman-convicted-receiving-military-training-isis-syria",
+    "native_id": "https://www.justice.gov/opa/pr/american-woman-convicted-receiving-military-training-isis-syria",
+    "published_at": "2026-10-27T12:00:00+00:00",
+    "published_raw": "Tue, 27 Oct 2026 12:00:00 +0000",
+    "summary": "Today, a federal jury in Brooklyn convicted Halima Salman, 27, a U.S. citizen and former resident of Brooklyn, also known as “Umm Khattab al-Muhajir,” of receiving military-type training from the Islamic State of Iraq and al-Sham (ISIS), a designated foreign terrorist organization, in Syria. Salman was convicted after a two-week trial before U.S. District Judge Natasha C. Merle.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Department of Justice",
+      "jurisdiction": "US",
+      "family": "judicial_and_enforcement"
+    },
+    "primary_source_id": "us-doj-b3d27e1dc3",
+    "n": 6987,
+    "first_seen": "2026-10-28T07:15:21.187665+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
+    "source_ids": [
+      "us-doj-b3d27e1dc3",
+      "us-doj-e05071794d"
+    ]
+  },
+  {
+    "title": "Contractor Pleads Guilty to Paying Kickbacks Related to U.S. Postal Service Facilities Repair Contracts",
+    "url": "https://www.justice.gov/usao-edca/pr/contractor-pleads-guilty-paying-kickbacks-related-us-postal-service-facilities-repair",
+    "native_id": "https://www.justice.gov/usao-edca/pr/contractor-pleads-guilty-paying-kickbacks-related-us-postal-service-facilities-repair",
+    "published_at": "2026-10-27T12:00:00+00:00",
+    "published_raw": "Tue, 27 Oct 2026 12:00:00 +0000",
+    "summary": "A contractor pleaded guilty today to conspiring to commit an offense against the United States by paying more than $465,000 in kickbacks.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Department of Justice",
+      "jurisdiction": "US",
+      "family": "judicial_and_enforcement"
+    },
+    "primary_source_id": "us-doj-b3d27e1dc3",
+    "n": 6986,
+    "first_seen": "2026-10-28T07:15:21.187665+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
+    "source_ids": [
+      "us-doj-b3d27e1dc3"
+    ]
+  },
+  {
+    "title": "Gainesville Woman Convicted in $8.6M Medicare Fraud Scheme",
+    "url": "https://www.justice.gov/usao-mdfl/pr/gainesville-woman-convicted-86m-medicare-fraud-scheme",
+    "native_id": "https://www.justice.gov/usao-mdfl/pr/gainesville-woman-convicted-86m-medicare-fraud-scheme",
+    "published_at": "2026-10-27T12:00:00+00:00",
+    "published_raw": "Tue, 27 Oct 2026 12:00:00 +0000",
+    "summary": "Ocala, FL — A federal jury in the Middle District of Florida convicted a Florida woman who owned a durable medical equipment (DME) company and managed several other DME companies for her role in a fraud scheme that took advantage of the elderly and disabled and caused the submission of over $8.6 million in fraudulent claims to Medicare.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Department of Justice",
+      "jurisdiction": "US",
+      "family": "judicial_and_enforcement"
+    },
+    "primary_source_id": "us-doj-b3d27e1dc3",
+    "n": 6985,
+    "first_seen": "2026-10-28T07:15:21.187665+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
+    "source_ids": [
+      "us-doj-b3d27e1dc3"
+    ]
+  },
+  {
+    "title": "American Woman Convicted of Receiving Military Training from ISIS in Syria",
+    "url": "https://www.justice.gov/usao-edny/pr/american-woman-convicted-receiving-military-training-isis-syria",
+    "native_id": "https://www.justice.gov/usao-edny/pr/american-woman-convicted-receiving-military-training-isis-syria",
+    "published_at": "2026-10-27T12:00:00+00:00",
+    "published_raw": "Tue, 27 Oct 2026 12:00:00 +0000",
+    "summary": "BROOKLYN, NY – Today, a federal jury in Brooklyn convicted Halima Salman, also known as “Umm Khattab al-Muhajir,” of receiving military-type training from the Islamic State of Iraq and al-Sham (ISIS) in Syria. Salman, a U.S. citizen and former resident of Brooklyn, was convicted after a seven-day trial before United States District Judge Natasha C. Merle.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Department of Justice",
+      "jurisdiction": "US",
+      "family": "judicial_and_enforcement"
+    },
+    "primary_source_id": "us-doj-b3d27e1dc3",
+    "n": 6984,
+    "first_seen": "2026-10-28T07:15:21.187665+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
+    "source_ids": [
+      "us-doj-b3d27e1dc3"
+    ]
+  },
+  {
+    "title": "Davenport Man Sentenced to 340 Months in Federal Prison for Drug and Firearm Charges",
+    "url": "https://www.justice.gov/usao-sdia/pr/davenport-man-sentenced-340-months-federal-prison-drug-and-firearm-charges",
+    "native_id": "https://www.justice.gov/usao-sdia/pr/davenport-man-sentenced-340-months-federal-prison-drug-and-firearm-charges",
+    "published_at": "2026-10-27T12:00:00+00:00",
+    "published_raw": "Tue, 27 Oct 2026 12:00:00 +0000",
+    "summary": "DAVENPORT, Iowa – A Davenport man was sentenced on October 27, 2026, to more than 28 years in federal prison for conspiracy to distribute methamphetamine, carrying a firearm during and in relation to a drug trafficking offense, and possessing a firearm as a felon.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Department of Justice",
+      "jurisdiction": "US",
+      "family": "judicial_and_enforcement"
+    },
+    "primary_source_id": "us-doj-b3d27e1dc3",
+    "n": 6983,
+    "first_seen": "2026-10-28T07:15:21.187665+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
+    "source_ids": [
+      "us-doj-b3d27e1dc3"
+    ]
+  },
+  {
+    "title": "Personal Assistant Sentenced to 48 Months in Prison for Massive Fraud Scheme Targeting Her Elderly Employers",
+    "url": "https://www.justice.gov/usao-edny/pr/personal-assistant-sentenced-48-months-prison-massive-fraud-scheme-targeting-her",
+    "native_id": "https://www.justice.gov/usao-edny/pr/personal-assistant-sentenced-48-months-prison-massive-fraud-scheme-targeting-her",
+    "published_at": "2026-10-27T12:00:00+00:00",
+    "published_raw": "Tue, 27 Oct 2026 12:00:00 +0000",
+    "summary": "Earlier today, at the federal courthouse in Brooklyn, Catalina Corona was sentenced by United States District Judge Nicholas G. Garaufis to 48 months’ imprisonment for wire fraud in connection with a long running scheme to defraud her elderly employers. As part of her sentence, Corona was also ordered to pay $9.6 million in forfeiture. Corona pleaded guilty to the charge in April 2026.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Department of Justice",
+      "jurisdiction": "US",
+      "family": "judicial_and_enforcement"
+    },
+    "primary_source_id": "us-doj-b3d27e1dc3",
+    "n": 6982,
+    "first_seen": "2026-10-28T07:15:21.187665+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
+    "source_ids": [
+      "us-doj-b3d27e1dc3"
+    ]
+  },
+  {
+    "title": "West Virginia Man Admits to Role in Supporting Overseas Violence",
+    "url": "https://www.justice.gov/usao-ndwv/pr/west-virginia-man-admits-role-supporting-overseas-violence",
+    "native_id": "https://www.justice.gov/usao-ndwv/pr/west-virginia-man-admits-role-supporting-overseas-violence",
+    "published_at": "2026-10-27T12:00:00+00:00",
+    "published_raw": "Tue, 27 Oct 2026 12:00:00 +0000",
+    "summary": "",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Department of Justice",
+      "jurisdiction": "US",
+      "family": "judicial_and_enforcement"
+    },
+    "primary_source_id": "us-doj-b3d27e1dc3",
+    "n": 6981,
+    "first_seen": "2026-10-28T07:15:21.187665+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
+    "source_ids": [
+      "us-doj-b3d27e1dc3"
+    ]
+  },
+  {
+    "title": "Justice Department Sues to Stop Secret Gender Transitions at Anne Arundel County Public Schools",
+    "url": "https://www.justice.gov/opa/pr/justice-department-sues-stop-secret-gender-transitions-anne-arundel-county-public-schools",
+    "native_id": "https://www.justice.gov/opa/pr/justice-department-sues-stop-secret-gender-transitions-anne-arundel-county-public-schools",
+    "published_at": "2026-10-27T12:00:00+00:00",
+    "published_raw": "Tue, 27 Oct 2026 12:00:00 +0000",
+    "summary": "The Justice Department’s Civil Rights Division announced today its lawsuit to stop Anne Arundel County Public Schools (AACPS) from secretly “gender transitioning” children without their parents’ knowledge or consent and blocking parents’ access to information about their children, which they are entitled to receive under federal law. The Department’s lawsuit enforces the Family Educational Rights and Privacy Act (FERPA) and the Protection of Pupil Rights Amendment (PPRA).",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Department of Justice",
+      "jurisdiction": "US",
+      "family": "judicial_and_enforcement"
+    },
+    "primary_source_id": "us-doj-b3d27e1dc3",
+    "n": 6980,
+    "first_seen": "2026-10-28T07:15:21.187665+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
+    "source_ids": [
+      "us-doj-b3d27e1dc3",
+      "us-doj-e05071794d"
+    ]
+  },
+  {
+    "title": "U.S. Attorney’s Office announces Election Integrity Plan for 2026 General Election in the Western District of Tennessee",
+    "url": "https://www.justice.gov/usao-wdtn/pr/us-attorneys-office-announces-election-integrity-plan-2026-general-election-western",
+    "native_id": "https://www.justice.gov/usao-wdtn/pr/us-attorneys-office-announces-election-integrity-plan-2026-general-election-western",
+    "published_at": "2026-10-27T12:00:00+00:00",
+    "published_raw": "Tue, 27 Oct 2026 12:00:00 +0000",
+    "summary": "Memphis, TN – The U.S. Attorney’s Office for the Western District of Tennessee, in coordination with the Department of Justice’s Civil Rights Division , announces its comprehensive strategy to oversee federal voting protections and investigate potential election fraud for the 2026 midterm elections.The initiative is part of a nationwide effort to ensure a secure, transparent, and accessible voting process. The U.S. Attorney’s Office, alongside federal law enforcement partners...",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Department of Justice",
+      "jurisdiction": "US",
+      "family": "judicial_and_enforcement"
+    },
+    "primary_source_id": "us-doj-b3d27e1dc3",
+    "n": 6979,
+    "first_seen": "2026-10-28T07:15:21.187665+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
+    "source_ids": [
+      "us-doj-b3d27e1dc3"
+    ]
+  },
+  {
+    "title": "Missouri man sentenced for distribution of child pornography",
+    "url": "https://www.justice.gov/usao-ks/pr/missouri-man-sentenced-distribution-child-pornography",
+    "native_id": "https://www.justice.gov/usao-ks/pr/missouri-man-sentenced-distribution-child-pornography",
+    "published_at": "2026-10-27T12:00:00+00:00",
+    "published_raw": "Tue, 27 Oct 2026 12:00:00 +0000",
+    "summary": "A Missouri man was sentenced to 20 years in prison for distributing child sexual abuse material (CSAM).",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Department of Justice",
+      "jurisdiction": "US",
+      "family": "judicial_and_enforcement"
+    },
+    "primary_source_id": "us-doj-b3d27e1dc3",
+    "n": 6978,
+    "first_seen": "2026-10-28T07:15:21.187665+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
+    "source_ids": [
+      "us-doj-b3d27e1dc3"
+    ]
+  },
+  {
+    "title": "Dialysis Centers Agree to Pay $2 Million to Resolve Allegations of Provider Relief Fund Fraud",
+    "url": "https://www.justice.gov/usao-ma/pr/dialysis-centers-agree-pay-2-million-resolve-allegations-provider-relief-fund-fraud",
+    "native_id": "https://www.justice.gov/usao-ma/pr/dialysis-centers-agree-pay-2-million-resolve-allegations-provider-relief-fund-fraud",
+    "published_at": "2026-10-27T12:00:00+00:00",
+    "published_raw": "Tue, 27 Oct 2026 12:00:00 +0000",
+    "summary": "BOSTON – SNG Bellaire Dialysis Center, LP; SNG Hillcroft Dialysis Center, LP; SNG Northwest Dialysis Center, LP; SNG Pasadena Dialysis Center, LP; SNG Sandcastle Dialysis Center, LP; and SNG Texas City Dialysis, LP (Collectively SNG Dialysis Centers) have agreed to pay approximately $2 million to resolve False Claims Act allegations that the companies submitted false claims to the U.S. Department for Health and Human Services (HHS) to receive payments from the Provider Relief Fund (PRF). Sankar Nephrology Group (SNG), which is the majority owner of the Defendant SNG Dialysis Centers, will provide a guaranty backing the settlement amount.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Department of Justice",
+      "jurisdiction": "US",
+      "family": "judicial_and_enforcement"
+    },
+    "primary_source_id": "us-doj-b3d27e1dc3",
+    "n": 6977,
+    "first_seen": "2026-10-28T07:15:21.187665+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
+    "source_ids": [
+      "us-doj-b3d27e1dc3"
+    ]
+  },
+  {
+    "title": "Lehigh County Woman Pleads Guilty to Scheme to Defraud the Government Through Bogus Pandemic Loan Applications, False Tax Returns",
+    "url": "https://www.justice.gov/usao-edpa/pr/lehigh-county-woman-pleads-guilty-scheme-defraud-government-through-bogus-pandemic",
+    "native_id": "https://www.justice.gov/usao-edpa/pr/lehigh-county-woman-pleads-guilty-scheme-defraud-government-through-bogus-pandemic",
+    "published_at": "2026-10-27T12:00:00+00:00",
+    "published_raw": "Tue, 27 Oct 2026 12:00:00 +0000",
+    "summary": "",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Department of Justice",
+      "jurisdiction": "US",
+      "family": "judicial_and_enforcement"
+    },
+    "primary_source_id": "us-doj-b3d27e1dc3",
+    "n": 6976,
+    "first_seen": "2026-10-28T07:15:21.187665+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
+    "source_ids": [
+      "us-doj-b3d27e1dc3"
+    ]
+  },
+  {
+    "title": "2 Box Elder men sentenced to prison for trafficking fentanyl on Rocky Boy as part of large drug ring",
+    "url": "https://www.justice.gov/usao-mt/pr/2-box-elder-men-sentenced-prison-trafficking-fentanyl-rocky-boy-part-large-drug-ring",
+    "native_id": "https://www.justice.gov/usao-mt/pr/2-box-elder-men-sentenced-prison-trafficking-fentanyl-rocky-boy-part-large-drug-ring",
+    "published_at": "2026-10-27T12:00:00+00:00",
+    "published_raw": "Tue, 27 Oct 2026 12:00:00 +0000",
+    "summary": "A pair of Box Elder men who trafficked large amounts of fentanyl on the Rock Boy’s Indian Reservation were sentenced this month to prison.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Department of Justice",
+      "jurisdiction": "US",
+      "family": "judicial_and_enforcement"
+    },
+    "primary_source_id": "us-doj-b3d27e1dc3",
+    "n": 6975,
+    "first_seen": "2026-10-28T07:15:21.187665+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
+    "source_ids": [
+      "us-doj-b3d27e1dc3"
+    ]
+  },
+  {
+    "title": "Canadian man pleads guilty to conspiracy to commit bank fraud for his role in fraud scheme",
+    "url": "https://www.justice.gov/usao-wdny/pr/canadian-man-pleads-guilty-conspiracy-commit-bank-fraud-his-role-fraud-scheme",
+    "native_id": "https://www.justice.gov/usao-wdny/pr/canadian-man-pleads-guilty-conspiracy-commit-bank-fraud-his-role-fraud-scheme",
+    "published_at": "2026-10-27T12:00:00+00:00",
+    "published_raw": "Tue, 27 Oct 2026 12:00:00 +0000",
+    "summary": "U.S. Attorney Michael DiGiacomo announced today that John Shestowsky, 51, of Greenfield Park, Quebec, Canada, pleaded guilty before U.S. District Judge John L. Sinatra, Jr. to conspiracy to commit bank fraud, which carries a maximum penalty of 30 years in prison.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Department of Justice",
+      "jurisdiction": "US",
+      "family": "judicial_and_enforcement"
+    },
+    "primary_source_id": "us-doj-b3d27e1dc3",
+    "n": 6974,
+    "first_seen": "2026-10-28T07:15:21.187665+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
+    "source_ids": [
+      "us-doj-b3d27e1dc3"
+    ]
+  },
+  {
+    "title": "Seattle man arrested on indictment for illegally shipping restricted items to Russia by going through straw buyers in Turkey, Korea, and Kazakhstan",
+    "url": "https://www.justice.gov/usao-wdwa/pr/seattle-man-arrested-indictment-illegally-shipping-restricted-items-russia-going",
+    "native_id": "https://www.justice.gov/usao-wdwa/pr/seattle-man-arrested-indictment-illegally-shipping-restricted-items-russia-going",
+    "published_at": "2026-10-27T12:00:00+00:00",
+    "published_raw": "Tue, 27 Oct 2026 12:00:00 +0000",
+    "summary": "Seattle – A 53-year-old Seattle man was arrested this morning on a twelve-count indictment charging he illegally conspired to ship restricted goods to Russia, violating sanctions put in place after Russia invaded Ukraine, announced Acting U.S. Attorney Charles Neil Floyd.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Department of Justice",
+      "jurisdiction": "US",
+      "family": "judicial_and_enforcement"
+    },
+    "primary_source_id": "us-doj-b3d27e1dc3",
+    "n": 6973,
+    "first_seen": "2026-10-28T07:15:21.187665+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
+    "source_ids": [
+      "us-doj-b3d27e1dc3"
+    ]
+  },
+  {
+    "title": "Buffalo man sentenced for burning down the Old Pink",
+    "url": "https://www.justice.gov/usao-wdny/pr/buffalo-man-sentenced-burning-down-old-pink",
+    "native_id": "https://www.justice.gov/usao-wdny/pr/buffalo-man-sentenced-burning-down-old-pink",
+    "published_at": "2026-10-27T12:00:00+00:00",
+    "published_raw": "Tue, 27 Oct 2026 12:00:00 +0000",
+    "summary": "U.S. Attorney Michael DiGiacomo announced today that John W. Burns, 42, of Buffalo, NY, who was convicted of arson of a building used in interstate commerce, was sentenced to serve 60 months in prison by U.S. District Judge Richard J. Arcara.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Department of Justice",
+      "jurisdiction": "US",
+      "family": "judicial_and_enforcement"
+    },
+    "primary_source_id": "us-doj-b3d27e1dc3",
+    "n": 6972,
+    "first_seen": "2026-10-28T07:15:21.187665+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
+    "source_ids": [
+      "us-doj-b3d27e1dc3"
+    ]
+  },
+  {
+    "title": "ADA Agreement Ensures Effective Communication at DaVita, Inc. Dialysis Treatment Centers",
+    "url": "https://www.justice.gov/usao-edky/pr/ada-agreement-ensures-effective-communication-davita-inc-dialysis-treatment-centers",
+    "native_id": "https://www.justice.gov/usao-edky/pr/ada-agreement-ensures-effective-communication-davita-inc-dialysis-treatment-centers",
+    "published_at": "2026-10-27T12:00:00+00:00",
+    "published_raw": "Tue, 27 Oct 2026 12:00:00 +0000",
+    "summary": "",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Department of Justice",
+      "jurisdiction": "US",
+      "family": "judicial_and_enforcement"
+    },
+    "primary_source_id": "us-doj-b3d27e1dc3",
+    "n": 6971,
+    "first_seen": "2026-10-28T07:15:21.187665+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
+    "source_ids": [
+      "us-doj-b3d27e1dc3"
+    ]
+  },
+  {
+    "title": "Jury Finds Man Guilty of Bias-Related Hate Crime for Murdering a Homeless Man",
+    "url": "https://www.justice.gov/usao-dc/pr/jury-finds-man-guilty-bias-related-hate-crime-murdering-homeless-man",
+    "native_id": "https://www.justice.gov/usao-dc/pr/jury-finds-man-guilty-bias-related-hate-crime-murdering-homeless-man",
+    "published_at": "2026-10-27T12:00:00+00:00",
+    "published_raw": "Tue, 27 Oct 2026 12:00:00 +0000",
+    "summary": "Gerald Brevard, III, 35, of Washington, D.C., was found guilty today of bias-related hate crimes in the Superior Court for the District of Columbia, on charges stemming from the murder of 54-year-old Morgan Holmes, a homeless man and attacks on two other homeless men, in March 2022, announced U.S. Attorney Jeanine Ferris Pirro.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Department of Justice",
+      "jurisdiction": "US",
+      "family": "judicial_and_enforcement"
+    },
+    "primary_source_id": "us-doj-b3d27e1dc3",
+    "n": 6970,
+    "first_seen": "2026-10-28T07:15:21.187665+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
+    "source_ids": [
+      "us-doj-b3d27e1dc3"
+    ]
+  },
+  {
+    "title": "Renton, Washington resident sentenced to 4+ years in prison for drug trafficking",
+    "url": "https://www.justice.gov/usao-wdwa/pr/renton-washington-resident-sentenced-4-years-prison-drug-trafficking",
+    "native_id": "https://www.justice.gov/usao-wdwa/pr/renton-washington-resident-sentenced-4-years-prison-drug-trafficking",
+    "published_at": "2026-10-27T12:00:00+00:00",
+    "published_raw": "Tue, 27 Oct 2026 12:00:00 +0000",
+    "summary": "Seattle – A 40-year-old Renton, Washington man was sentenced Monday in U.S. District Court in Seattle to 50 months in prison for drug trafficking, announced Acting U.S. Attorney Charles Neil Floyd.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Department of Justice",
+      "jurisdiction": "US",
+      "family": "judicial_and_enforcement"
+    },
+    "primary_source_id": "us-doj-b3d27e1dc3",
+    "n": 6969,
+    "first_seen": "2026-10-28T07:15:21.187665+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
+    "source_ids": [
+      "us-doj-b3d27e1dc3"
+    ]
+  },
+  {
+    "title": "Non-citizen pleads guilty to unlawful voting in federal election",
+    "url": "https://www.justice.gov/usao-wy/pr/non-citizen-pleads-guilty-unlawful-voting-federal-election",
+    "native_id": "https://www.justice.gov/usao-wy/pr/non-citizen-pleads-guilty-unlawful-voting-federal-election",
+    "published_at": "2026-10-27T12:00:00+00:00",
+    "published_raw": "Tue, 27 Oct 2026 12:00:00 +0000",
+    "summary": "CHEYENNE, Wyo. — Maksim Sergeevich Shakirov , 29, a citizen of Uzbekistan residing in Rawlins, Wyoming, pleaded guilty in federal court to one count of voting by an alien, in violation of 18 U.S.C. § 611. Shakirov appeared before Chief U.S. District Judge Kelly H. Rankin for his initial appearance and entry of his guilty plea.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Department of Justice",
+      "jurisdiction": "US",
+      "family": "judicial_and_enforcement"
+    },
+    "primary_source_id": "us-doj-b3d27e1dc3",
+    "n": 6968,
+    "first_seen": "2026-10-28T07:15:21.187665+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
+    "source_ids": [
+      "us-doj-b3d27e1dc3"
+    ]
+  },
+  {
+    "title": "Texas Woman Sentenced to Prison for Conspiracy to Distribute Fentanyl Pills",
+    "url": "https://www.justice.gov/usao-nv/pr/texas-woman-sentenced-prison-conspiracy-distribute-fentanyl-pills",
+    "native_id": "https://www.justice.gov/usao-nv/pr/texas-woman-sentenced-prison-conspiracy-distribute-fentanyl-pills",
+    "published_at": "2026-10-27T12:00:00+00:00",
+    "published_raw": "Tue, 27 Oct 2026 12:00:00 +0000",
+    "summary": "LAS VEGAS – A Dallas, Texas, woman was sentenced today by United States District Judge Gloria M. Navarro to 36 months in prison for bringing more than 12,000 fentanyl pills into the Harry Reid International Airport in Las Vegas and attempting to transport the drugs on an airplane to Texas. The government recommended a sentence of 57 months in prison.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Department of Justice",
+      "jurisdiction": "US",
+      "family": "judicial_and_enforcement"
+    },
+    "primary_source_id": "us-doj-b3d27e1dc3",
+    "n": 6967,
+    "first_seen": "2026-10-28T07:15:21.187665+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
+    "source_ids": [
+      "us-doj-b3d27e1dc3"
+    ]
+  },
+  {
+    "title": "Recidivist Domestic Violence Offender Sentenced To 15 Years In Federal Prison",
+    "url": "https://www.justice.gov/usao-edwa/pr/recidivist-domestic-violence-offender-sentenced-15-years-federal-prison",
+    "native_id": "https://www.justice.gov/usao-edwa/pr/recidivist-domestic-violence-offender-sentenced-15-years-federal-prison",
+    "published_at": "2026-10-27T12:00:00+00:00",
+    "published_raw": "Tue, 27 Oct 2026 12:00:00 +0000",
+    "summary": "",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Department of Justice",
+      "jurisdiction": "US",
+      "family": "judicial_and_enforcement"
+    },
+    "primary_source_id": "us-doj-b3d27e1dc3",
+    "n": 6966,
+    "first_seen": "2026-10-28T07:15:21.187665+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
+    "source_ids": [
+      "us-doj-b3d27e1dc3"
+    ]
+  },
+  {
+    "title": "No luck in Wyoming: Las Vegas woman sentenced to federal prison for forged treasury check scheme",
+    "url": "https://www.justice.gov/usao-wy/pr/no-luck-wyoming-las-vegas-woman-sentenced-federal-prison-forged-treasury-check-scheme",
+    "native_id": "https://www.justice.gov/usao-wy/pr/no-luck-wyoming-las-vegas-woman-sentenced-federal-prison-forged-treasury-check-scheme",
+    "published_at": "2026-10-27T12:00:00+00:00",
+    "published_raw": "Tue, 27 Oct 2026 12:00:00 +0000",
+    "summary": "CASPER, Wyo. — Katrina Marie Amaya-Lopez , 47, of Las Vegas, Nevada, was sentenced to 24 months’ imprisonment followed by three years of supervised release for passing a stolen U.S. Treasury check that she falsely endorsed and passed at a Wyoming bank. U.S. District Court Judge Scott W. Skavdahl imposed the sentence on Oct. 20, 2026, in Casper. Amaya-Lopez was also ordered to pay $150,590 in restitution.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Department of Justice",
+      "jurisdiction": "US",
+      "family": "judicial_and_enforcement"
+    },
+    "primary_source_id": "us-doj-b3d27e1dc3",
+    "n": 6965,
+    "first_seen": "2026-10-28T07:15:21.187665+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
+    "source_ids": [
+      "us-doj-b3d27e1dc3"
+    ]
+  },
+  {
+    "title": "Seattle restaurant owner sentenced to prison for failing to pay employment taxes for dozens of employees over ten years",
+    "url": "https://www.justice.gov/usao-wdwa/pr/seattle-restaurant-owner-sentenced-prison-failing-pay-employment-taxes-dozens",
+    "native_id": "https://www.justice.gov/usao-wdwa/pr/seattle-restaurant-owner-sentenced-prison-failing-pay-employment-taxes-dozens",
+    "published_at": "2026-10-27T12:00:00+00:00",
+    "published_raw": "Tue, 27 Oct 2026 12:00:00 +0000",
+    "summary": "Seattle – The owner of a restaurant in Seattle’s Capitol Hill neighborhood was sentenced Monday in U.S. District Court in Seattle to 13 months in prison and three years of supervised release for willfully failing to pay over more than $1.4 million in unemployment, Social Security, and Medicare taxes – some of which were withheld from employee paychecks, announced Acting U.S. Attorney Charles Neil Floyd.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Department of Justice",
+      "jurisdiction": "US",
+      "family": "judicial_and_enforcement"
+    },
+    "primary_source_id": "us-doj-b3d27e1dc3",
+    "n": 6964,
+    "first_seen": "2026-10-28T07:15:21.187665+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
+    "source_ids": [
+      "us-doj-b3d27e1dc3"
+    ]
+  },
+  {
+    "title": "Second Defendant in Largest Methamphetamine Seizure in New Jersey History Admits to Drug Distribution Conspiracy",
+    "url": "https://www.justice.gov/usao-nj/pr/second-defendant-largest-methamphetamine-seizure-new-jersey-history-admits-drug",
+    "native_id": "https://www.justice.gov/usao-nj/pr/second-defendant-largest-methamphetamine-seizure-new-jersey-history-admits-drug",
+    "published_at": "2026-10-27T12:00:00+00:00",
+    "published_raw": "Tue, 27 Oct 2026 12:00:00 +0000",
+    "summary": "A Mexican national admitted yesterday to conspiring to distribute over 260 pounds of methamphetamine into New Jersey.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Department of Justice",
+      "jurisdiction": "US",
+      "family": "judicial_and_enforcement"
+    },
+    "primary_source_id": "us-doj-b3d27e1dc3",
+    "n": 6963,
+    "first_seen": "2026-10-28T07:15:21.187665+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
+    "source_ids": [
+      "us-doj-b3d27e1dc3"
     ]
   },
   {
@@ -1317,7 +2663,7 @@
     "primary_source_id": "us-fhfa-index",
     "n": 6899,
     "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-fhfa-index"
     ]
@@ -1341,7 +2687,7 @@
     "primary_source_id": "us-doj-b3d27e1dc3",
     "n": 6864,
     "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-doj-b3d27e1dc3",
       "us-doj-e05071794d"
@@ -1606,7 +2952,7 @@
     "primary_source_id": "us-doj-b3d27e1dc3",
     "n": 6853,
     "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-doj-b3d27e1dc3",
       "us-doj-e05071794d"
@@ -1679,7 +3025,7 @@
     "primary_source_id": "us-ftc-58b0383166",
     "n": 6850,
     "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-ftc-58b0383166",
       "us-ftc-ebb4359fb7"
@@ -1728,7 +3074,7 @@
     "primary_source_id": "eu-council-9d9e9444da",
     "n": 6910,
     "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "eu-council-9d9e9444da"
     ]
@@ -1752,7 +3098,7 @@
     "primary_source_id": "eu-commission-07d4f58ccf",
     "n": 6903,
     "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "eu-commission-07d4f58ccf"
     ]
@@ -1800,7 +3146,7 @@
     "primary_source_id": "de-bundesbank-e5b1c4a067",
     "n": 6932,
     "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "de-bundesbank-e5b1c4a067"
     ]
@@ -1824,7 +3170,7 @@
     "primary_source_id": "de-bundesbank-027ac4024f",
     "n": 6927,
     "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "de-bundesbank-027ac4024f"
     ]
@@ -1848,7 +3194,7 @@
     "primary_source_id": "de-bundesbank-e5b1c4a067",
     "n": 6931,
     "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "de-bundesbank-e5b1c4a067"
     ]
@@ -1872,7 +3218,7 @@
     "primary_source_id": "in-rbi-738b09bded",
     "n": 6825,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "in-rbi-738b09bded"
     ]
@@ -1901,7 +3247,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 6835,
     "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -1925,7 +3271,7 @@
     "primary_source_id": "eu-council-9d9e9444da",
     "n": 6911,
     "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "eu-council-9d9e9444da"
     ]
@@ -1949,7 +3295,7 @@
     "primary_source_id": "eu-council-9d9e9444da",
     "n": 6912,
     "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "eu-council-9d9e9444da"
     ]
@@ -1973,7 +3319,7 @@
     "primary_source_id": "de-bundesbank-027ac4024f",
     "n": 6929,
     "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "de-bundesbank-027ac4024f"
     ]
@@ -1997,7 +3343,7 @@
     "primary_source_id": "de-bundesbank-027ac4024f",
     "n": 6928,
     "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "de-bundesbank-027ac4024f"
     ]
@@ -2021,7 +3367,7 @@
     "primary_source_id": "eu-ecb-fb5fd59aed",
     "n": 6915,
     "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "eu-ecb-fb5fd59aed"
     ]
@@ -2045,7 +3391,7 @@
     "primary_source_id": "in-rbi-cc71120b98",
     "n": 6824,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "in-rbi-cc71120b98"
     ]
@@ -2069,7 +3415,7 @@
     "primary_source_id": "de-bundesbank-027ac4024f",
     "n": 6930,
     "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "de-bundesbank-027ac4024f"
     ]
@@ -2093,7 +3439,7 @@
     "primary_source_id": "nz-rbnz-gnews",
     "n": 6919,
     "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "nz-rbnz-gnews"
     ]
@@ -2122,7 +3468,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 6309,
     "first_seen": "2026-10-23T17:53:51.765604+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -2146,33 +3492,9 @@
     "primary_source_id": "jp-boj-d488538690",
     "n": 6826,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "jp-boj-d488538690"
-    ]
-  },
-  {
-    "title": "H.R. 10897 (IH) - Sami’s Law",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr10897ih",
-    "native_id": "BILLS-119hr10897ih",
-    "published_at": "2026-10-27T04:59:00+00:00",
-    "published_raw": "Tue, 27 Oct 2026 04:59:00 +0000",
-    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "bill",
-      "document_stage": "legislative_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Bills",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-bills",
-    "n": 6795,
-    "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
-    "source_ids": [
-      "us-govinfo-bills"
     ]
   },
   {
@@ -2194,7 +3516,7 @@
     "primary_source_id": "us-govinfo-bills",
     "n": 6794,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-govinfo-bills"
     ]
@@ -2218,7 +3540,7 @@
     "primary_source_id": "us-govinfo-bills",
     "n": 6793,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-govinfo-bills"
     ]
@@ -2242,7 +3564,7 @@
     "primary_source_id": "us-govinfo-bills",
     "n": 6792,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-govinfo-bills"
     ]
@@ -2266,7 +3588,7 @@
     "primary_source_id": "us-govinfo-bills",
     "n": 6791,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-govinfo-bills"
     ]
@@ -2290,7 +3612,7 @@
     "primary_source_id": "us-govinfo-bills",
     "n": 6790,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-govinfo-bills"
     ]
@@ -2314,7 +3636,7 @@
     "primary_source_id": "us-govinfo-bills",
     "n": 6789,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-govinfo-bills"
     ]
@@ -2338,7 +3660,7 @@
     "primary_source_id": "us-govinfo-bills",
     "n": 6788,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-govinfo-bills"
     ]
@@ -2362,7 +3684,7 @@
     "primary_source_id": "us-govinfo-bills",
     "n": 6787,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-govinfo-bills"
     ]
@@ -2386,7 +3708,7 @@
     "primary_source_id": "us-govinfo-bills",
     "n": 6786,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-govinfo-bills"
     ]
@@ -2410,7 +3732,7 @@
     "primary_source_id": "us-govinfo-bills",
     "n": 6785,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-govinfo-bills"
     ]
@@ -2434,7 +3756,7 @@
     "primary_source_id": "us-govinfo-bills",
     "n": 6784,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-govinfo-bills"
     ]
@@ -2458,7 +3780,7 @@
     "primary_source_id": "us-govinfo-bills",
     "n": 6783,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-govinfo-bills"
     ]
@@ -2482,7 +3804,7 @@
     "primary_source_id": "us-govinfo-bills",
     "n": 6782,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-govinfo-bills"
     ]
@@ -2506,7 +3828,7 @@
     "primary_source_id": "us-govinfo-bills",
     "n": 6781,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-govinfo-bills"
     ]
@@ -2530,7 +3852,7 @@
     "primary_source_id": "us-govinfo-bills",
     "n": 6780,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-govinfo-bills"
     ]
@@ -2554,7 +3876,7 @@
     "primary_source_id": "us-govinfo-bills",
     "n": 6779,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-govinfo-bills"
     ]
@@ -2583,7 +3905,7 @@
     "primary_source_id": "uk-govuk-consultation_outcome",
     "n": 6778,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "uk-govuk-consultation_outcome"
     ]
@@ -2607,7 +3929,7 @@
     "primary_source_id": "io-bis-140216a5b6",
     "n": 6943,
     "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "io-bis-140216a5b6"
     ]
@@ -2631,7 +3953,7 @@
     "primary_source_id": "io-bis-140216a5b6",
     "n": 6942,
     "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "io-bis-140216a5b6"
     ]
@@ -2655,7 +3977,7 @@
     "primary_source_id": "io-bis-140216a5b6",
     "n": 6941,
     "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "io-bis-140216a5b6"
     ]
@@ -2679,7 +4001,7 @@
     "primary_source_id": "io-bis-140216a5b6",
     "n": 6940,
     "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "io-bis-140216a5b6"
     ]
@@ -2703,7 +4025,7 @@
     "primary_source_id": "io-bis-140216a5b6",
     "n": 6939,
     "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "io-bis-140216a5b6"
     ]
@@ -2727,7 +4049,7 @@
     "primary_source_id": "io-bis-140216a5b6",
     "n": 6938,
     "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "io-bis-140216a5b6"
     ]
@@ -2751,7 +4073,7 @@
     "primary_source_id": "io-bis-140216a5b6",
     "n": 6937,
     "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "io-bis-140216a5b6"
     ]
@@ -2775,7 +4097,7 @@
     "primary_source_id": "io-bis-140216a5b6",
     "n": 6936,
     "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "io-bis-140216a5b6"
     ]
@@ -2799,7 +4121,7 @@
     "primary_source_id": "io-bis-140216a5b6",
     "n": 6935,
     "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "io-bis-140216a5b6"
     ]
@@ -2823,7 +4145,7 @@
     "primary_source_id": "io-bis-140216a5b6",
     "n": 6934,
     "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "io-bis-140216a5b6"
     ]
@@ -2847,7 +4169,7 @@
     "primary_source_id": "io-bis-140216a5b6",
     "n": 6933,
     "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "io-bis-140216a5b6"
     ]
@@ -2871,7 +4193,7 @@
     "primary_source_id": "eu-ecb-991c113079",
     "n": 6914,
     "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "eu-ecb-991c113079"
     ]
@@ -2895,7 +4217,7 @@
     "primary_source_id": "us-ofac-index",
     "n": 6865,
     "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-ofac-index"
     ]
@@ -2920,7 +4242,7 @@
     "primary_source_id": "hk-hkma-public-press",
     "n": 6830,
     "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "hk-hkma-public-press"
     ]
@@ -2950,7 +4272,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6777,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -2980,7 +4302,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6776,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -3011,7 +4333,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6775,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -3042,7 +4364,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6774,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -3073,7 +4395,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6773,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -3104,7 +4426,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6772,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -3134,7 +4456,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6771,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -3164,7 +4486,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6770,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -3194,7 +4516,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6769,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -3224,7 +4546,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6768,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -3255,7 +4577,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6767,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -3285,7 +4607,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6766,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -3316,7 +4638,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6765,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -3349,7 +4671,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6764,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -3379,7 +4701,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6763,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -3409,7 +4731,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6762,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -3439,7 +4761,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6761,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -3469,7 +4791,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6760,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -3500,7 +4822,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6759,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -3530,7 +4852,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6758,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -3560,7 +4882,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6757,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -3592,7 +4914,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6756,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -3622,7 +4944,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6755,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -3652,7 +4974,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6754,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -3683,7 +5005,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6753,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -3714,7 +5036,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6752,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -3745,7 +5067,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6751,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -3776,7 +5098,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6750,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -3807,7 +5129,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6749,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -3838,7 +5160,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6748,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -3869,7 +5191,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6747,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -3899,7 +5221,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6746,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -3929,7 +5251,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6745,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -3960,7 +5282,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6744,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -3991,7 +5313,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6743,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -4022,7 +5344,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6742,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -4053,7 +5375,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6741,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -4084,7 +5406,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6740,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -4115,7 +5437,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6739,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -4146,7 +5468,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6738,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -4177,7 +5499,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6737,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -4208,7 +5530,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6736,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -4239,7 +5561,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6735,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -4269,7 +5591,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6734,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -4300,7 +5622,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6733,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -4331,7 +5653,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6732,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -4362,7 +5684,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6731,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -4393,7 +5715,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6730,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -4424,7 +5746,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6729,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -4455,7 +5777,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6728,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -4485,7 +5807,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6727,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -4515,7 +5837,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6726,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -4545,7 +5867,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6725,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -4575,7 +5897,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6724,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -4605,7 +5927,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6723,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -4635,7 +5957,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6722,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -4665,7 +5987,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6721,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -4695,7 +6017,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6720,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -4725,7 +6047,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6719,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -4756,7 +6078,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6718,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -4787,7 +6109,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6717,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -4818,7 +6140,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6716,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -4848,7 +6170,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6715,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -4879,7 +6201,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6714,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -4910,7 +6232,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6713,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -4940,7 +6262,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6712,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -4970,7 +6292,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6711,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -5000,7 +6322,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6710,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -5031,7 +6353,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6709,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -5061,7 +6383,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6708,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -5091,7 +6413,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6707,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -5122,7 +6444,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6706,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -5153,7 +6475,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6705,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -5184,7 +6506,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6704,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -5215,7 +6537,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6703,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -5246,7 +6568,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6702,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -5277,7 +6599,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6701,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -5308,7 +6630,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6700,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -5338,7 +6660,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6699,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -5369,7 +6691,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6698,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -5399,7 +6721,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6697,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -5423,7 +6745,7 @@
     "primary_source_id": "jp-boj-d488538690",
     "n": 6827,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "jp-boj-d488538690"
     ]
@@ -5471,7 +6793,7 @@
     "primary_source_id": "eu-commission-07d4f58ccf",
     "n": 6908,
     "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "eu-commission-07d4f58ccf"
     ]
@@ -5495,7 +6817,7 @@
     "primary_source_id": "eu-commission-07d4f58ccf",
     "n": 6907,
     "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "eu-commission-07d4f58ccf"
     ]
@@ -5519,7 +6841,7 @@
     "primary_source_id": "eu-commission-07d4f58ccf",
     "n": 6906,
     "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "eu-commission-07d4f58ccf"
     ]
@@ -5543,7 +6865,7 @@
     "primary_source_id": "eu-commission-07d4f58ccf",
     "n": 6905,
     "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "eu-commission-07d4f58ccf"
     ]
@@ -5567,7 +6889,7 @@
     "primary_source_id": "eu-commission-07d4f58ccf",
     "n": 6904,
     "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "eu-commission-07d4f58ccf"
     ]
@@ -5591,7 +6913,7 @@
     "primary_source_id": "eu-council-9d9e9444da",
     "n": 6913,
     "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "eu-council-9d9e9444da"
     ]
@@ -5615,7 +6937,7 @@
     "primary_source_id": "us-fda-5696b24295",
     "n": 6128,
     "first_seen": "2026-10-22T17:59:58.860252+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-fda-5696b24295"
     ]
@@ -5639,7 +6961,7 @@
     "primary_source_id": "us-fda-5696b24295",
     "n": 6816,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-fda-5696b24295"
     ]
@@ -5663,7 +6985,7 @@
     "primary_source_id": "us-hhs-6f995a5754",
     "n": 6820,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-hhs-6f995a5754"
     ]
@@ -5687,7 +7009,7 @@
     "primary_source_id": "us-fda-5696b24295",
     "n": 6817,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-fda-5696b24295"
     ]
@@ -5711,7 +7033,7 @@
     "primary_source_id": "us-fda-5696b24295",
     "n": 6818,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-fda-5696b24295"
     ]
@@ -5735,7 +7057,7 @@
     "primary_source_id": "us-govinfo-dcpd",
     "n": 6800,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T06:19:07.638287+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-govinfo-dcpd"
     ]
@@ -5759,7 +7081,7 @@
     "primary_source_id": "us-govinfo-dcpd",
     "n": 6799,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T06:19:07.638287+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-govinfo-dcpd"
     ]
@@ -5783,7 +7105,7 @@
     "primary_source_id": "us-govinfo-dcpd",
     "n": 6798,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T06:19:07.638287+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-govinfo-dcpd"
     ]
@@ -5807,7 +7129,7 @@
     "primary_source_id": "us-govinfo-dcpd",
     "n": 6797,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T06:19:07.638287+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-govinfo-dcpd"
     ]
@@ -5831,7 +7153,7 @@
     "primary_source_id": "us-govinfo-dcpd",
     "n": 6796,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T06:19:07.638287+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-govinfo-dcpd"
     ]
@@ -5855,7 +7177,7 @@
     "primary_source_id": "us-hhs-6f995a5754",
     "n": 6661,
     "first_seen": "2026-10-26T19:21:36.282284+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-hhs-6f995a5754"
     ]
@@ -5879,7 +7201,7 @@
     "primary_source_id": "us-fda-5696b24295",
     "n": 6819,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-fda-5696b24295"
     ]
@@ -5927,7 +7249,7 @@
     "primary_source_id": "in-rbi-cc71120b98",
     "n": 6680,
     "first_seen": "2026-10-26T19:21:36.282284+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "in-rbi-cc71120b98"
     ]
@@ -5951,7 +7273,7 @@
     "primary_source_id": "us-sec-18c0a4ef1b",
     "n": 6619,
     "first_seen": "2026-10-26T19:21:36.282284+00:00",
-    "last_seen": "2026-10-27T06:19:07.638287+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-sec-18c0a4ef1b"
     ]
@@ -5975,7 +7297,7 @@
     "primary_source_id": "in-rbi-cc71120b98",
     "n": 6681,
     "first_seen": "2026-10-26T19:21:36.282284+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "in-rbi-cc71120b98"
     ]
@@ -5999,7 +7321,7 @@
     "primary_source_id": "de-bundesbank-027ac4024f",
     "n": 6684,
     "first_seen": "2026-10-26T19:21:36.282284+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "de-bundesbank-027ac4024f"
     ]
@@ -6023,7 +7345,7 @@
     "primary_source_id": "eu-council-9d9e9444da",
     "n": 6673,
     "first_seen": "2026-10-26T19:21:36.282284+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "eu-council-9d9e9444da"
     ]
@@ -6047,7 +7369,7 @@
     "primary_source_id": "eu-council-9d9e9444da",
     "n": 6674,
     "first_seen": "2026-10-26T19:21:36.282284+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "eu-council-9d9e9444da"
     ]
@@ -6124,7 +7446,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 6594,
     "first_seen": "2026-10-26T19:21:36.282284+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -6172,7 +7494,7 @@
     "primary_source_id": "us-fda-5696b24295",
     "n": 6123,
     "first_seen": "2026-10-22T17:59:58.860252+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-fda-03f7703006",
       "us-fda-5696b24295"
@@ -6250,7 +7572,7 @@
     "primary_source_id": "uk-govuk-product_safety_alert_report_recall",
     "n": 6610,
     "first_seen": "2026-10-26T19:21:36.282284+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "uk-govuk-product_safety_alert_report_recall"
     ]
@@ -6279,7 +7601,7 @@
     "primary_source_id": "uk-govuk-product_safety_alert_report_recall",
     "n": 6611,
     "first_seen": "2026-10-26T19:21:36.282284+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "uk-govuk-product_safety_alert_report_recall"
     ]
@@ -6303,7 +7625,7 @@
     "primary_source_id": "us-hhs-6f995a5754",
     "n": 6662,
     "first_seen": "2026-10-26T19:21:36.282284+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-hhs-6f995a5754"
     ]
@@ -6332,7 +7654,7 @@
     "primary_source_id": "uk-govuk-product_safety_alert_report_recall",
     "n": 6612,
     "first_seen": "2026-10-26T19:21:36.282284+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "uk-govuk-product_safety_alert_report_recall"
     ]
@@ -6361,7 +7683,7 @@
     "primary_source_id": "uk-govuk-product_safety_alert_report_recall",
     "n": 6613,
     "first_seen": "2026-10-26T19:21:36.282284+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "uk-govuk-product_safety_alert_report_recall"
     ]
@@ -6390,7 +7712,7 @@
     "primary_source_id": "uk-govuk-product_safety_alert_report_recall",
     "n": 6614,
     "first_seen": "2026-10-26T19:21:36.282284+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "uk-govuk-product_safety_alert_report_recall"
     ]
@@ -6419,7 +7741,7 @@
     "primary_source_id": "uk-govuk-product_safety_alert_report_recall",
     "n": 6615,
     "first_seen": "2026-10-26T19:21:36.282284+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "uk-govuk-product_safety_alert_report_recall"
     ]
@@ -6448,7 +7770,7 @@
     "primary_source_id": "uk-govuk-product_safety_alert_report_recall",
     "n": 6616,
     "first_seen": "2026-10-26T19:21:36.282284+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "uk-govuk-product_safety_alert_report_recall"
     ]
@@ -6477,7 +7799,7 @@
     "primary_source_id": "uk-govuk-product_safety_alert_report_recall",
     "n": 6617,
     "first_seen": "2026-10-26T19:21:36.282284+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "uk-govuk-product_safety_alert_report_recall"
     ]
@@ -6506,7 +7828,7 @@
     "primary_source_id": "uk-govuk-product_safety_alert_report_recall",
     "n": 6618,
     "first_seen": "2026-10-26T19:21:36.282284+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "uk-govuk-product_safety_alert_report_recall"
     ]
@@ -6578,7 +7900,7 @@
     "primary_source_id": "de-bundesbank-fe89ad3ac9",
     "n": 6688,
     "first_seen": "2026-10-26T19:21:36.282284+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "de-bundesbank-fe89ad3ac9"
     ]
@@ -6631,7 +7953,7 @@
     "primary_source_id": "uk-govuk-drug_safety_update",
     "n": 6609,
     "first_seen": "2026-10-26T19:21:36.282284+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "uk-govuk-drug_safety_update"
     ]
@@ -6660,7 +7982,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 6595,
     "first_seen": "2026-10-26T19:21:36.282284+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -6689,7 +8011,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 6596,
     "first_seen": "2026-10-26T19:21:36.282284+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -6713,7 +8035,7 @@
     "primary_source_id": "us-cftc-fda5c3631d",
     "n": 6650,
     "first_seen": "2026-10-26T19:21:36.282284+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-cftc-fda5c3631d"
     ]
@@ -6737,7 +8059,7 @@
     "primary_source_id": "us-fda-5696b24295",
     "n": 1398,
     "first_seen": "2026-10-15T10:17:11.133023+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-fda-03f7703006",
       "us-fda-5696b24295"
@@ -6767,7 +8089,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 2103,
     "first_seen": "2026-10-15T12:16:32.997656+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -6796,7 +8118,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 6597,
     "first_seen": "2026-10-26T19:21:36.282284+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -6825,7 +8147,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 6598,
     "first_seen": "2026-10-26T19:21:36.282284+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -6854,7 +8176,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 6599,
     "first_seen": "2026-10-26T19:21:36.282284+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -6883,7 +8205,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 6600,
     "first_seen": "2026-10-26T19:21:36.282284+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -6936,7 +8258,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 5623,
     "first_seen": "2026-10-20T18:00:04.951908+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -6960,7 +8282,7 @@
     "primary_source_id": "us-fda-03f7703006",
     "n": 5872,
     "first_seen": "2026-10-21T18:05:07.789957+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-fda-03f7703006"
     ]
@@ -6984,7 +8306,7 @@
     "primary_source_id": "eu-council-9d9e9444da",
     "n": 6676,
     "first_seen": "2026-10-26T19:21:36.282284+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "eu-council-9d9e9444da"
     ]
@@ -7008,7 +8330,7 @@
     "primary_source_id": "eu-council-9d9e9444da",
     "n": 6675,
     "first_seen": "2026-10-26T19:21:36.282284+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "eu-council-9d9e9444da"
     ]
@@ -7032,7 +8354,7 @@
     "primary_source_id": "us-fda-03f7703006",
     "n": 6656,
     "first_seen": "2026-10-26T19:21:36.282284+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-fda-03f7703006"
     ]
@@ -7056,7 +8378,7 @@
     "primary_source_id": "us-fda-03f7703006",
     "n": 6657,
     "first_seen": "2026-10-26T19:21:36.282284+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-fda-03f7703006"
     ]
@@ -7080,7 +8402,7 @@
     "primary_source_id": "us-fda-03f7703006",
     "n": 6658,
     "first_seen": "2026-10-26T19:21:36.282284+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-fda-03f7703006"
     ]
@@ -7104,7 +8426,7 @@
     "primary_source_id": "us-fda-03f7703006",
     "n": 6659,
     "first_seen": "2026-10-26T19:21:36.282284+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-fda-03f7703006"
     ]
@@ -7128,7 +8450,7 @@
     "primary_source_id": "us-fda-03f7703006",
     "n": 6660,
     "first_seen": "2026-10-26T19:21:36.282284+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-fda-03f7703006"
     ]
@@ -7224,7 +8546,7 @@
     "primary_source_id": "us-dol-99f477805a",
     "n": 6823,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-dol-99f477805a"
     ]
@@ -7248,7 +8570,7 @@
     "primary_source_id": "us-dol-99f477805a",
     "n": 6822,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-dol-99f477805a"
     ]
@@ -7344,7 +8666,7 @@
     "primary_source_id": "us-doj-b3d27e1dc3",
     "n": 6811,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-doj-b3d27e1dc3",
       "us-doj-e05071794d"
@@ -7465,7 +8787,7 @@
     "primary_source_id": "us-doj-b3d27e1dc3",
     "n": 6806,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-doj-b3d27e1dc3",
       "us-doj-e05071794d"
@@ -7562,7 +8884,7 @@
     "primary_source_id": "us-doj-b3d27e1dc3",
     "n": 6802,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-doj-b3d27e1dc3",
       "us-doj-e05071794d"
@@ -7587,7 +8909,7 @@
     "primary_source_id": "us-doj-e05071794d",
     "n": 6647,
     "first_seen": "2026-10-26T19:21:36.282284+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-doj-e05071794d"
     ]
@@ -7611,7 +8933,7 @@
     "primary_source_id": "us-doj-e05071794d",
     "n": 6646,
     "first_seen": "2026-10-26T19:21:36.282284+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-doj-e05071794d"
     ]
@@ -7851,7 +9173,7 @@
     "primary_source_id": "us-doj-b3d27e1dc3",
     "n": 6636,
     "first_seen": "2026-10-26T19:21:36.282284+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-doj-b3d27e1dc3",
       "us-doj-e05071794d"
@@ -8236,7 +9558,7 @@
     "primary_source_id": "us-ftc-58b0383166",
     "n": 6620,
     "first_seen": "2026-10-26T19:21:36.282284+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-ftc-58b0383166",
       "us-ftc-62f72b4a5d"
@@ -8314,7 +9636,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 6601,
     "first_seen": "2026-10-26T19:21:36.282284+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -8344,7 +9666,7 @@
     "primary_source_id": "uk-govuk-regulation",
     "n": 22,
     "first_seen": "2026-10-15T10:17:11.133023+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "uk-govuk-regulation"
     ]
@@ -8398,7 +9720,7 @@
     "primary_source_id": "uk-govuk-regulation",
     "n": 23,
     "first_seen": "2026-10-15T10:17:11.133023+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "uk-govuk-regulation"
     ]
@@ -8427,7 +9749,7 @@
     "primary_source_id": "uk-govuk-medical_safety_alert",
     "n": 6608,
     "first_seen": "2026-10-26T19:21:36.282284+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "uk-govuk-medical_safety_alert"
     ]
@@ -8451,7 +9773,7 @@
     "primary_source_id": "in-rbi-cc71120b98",
     "n": 6589,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "in-rbi-cc71120b98"
     ]
@@ -8475,7 +9797,7 @@
     "primary_source_id": "in-rbi-cc71120b98",
     "n": 6590,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "in-rbi-cc71120b98"
     ]
@@ -8547,7 +9869,7 @@
     "primary_source_id": "eu-council-9d9e9444da",
     "n": 6409,
     "first_seen": "2026-10-23T17:53:51.765604+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "eu-council-9d9e9444da",
       "eu-council-9d9e9444da"
@@ -8596,7 +9918,7 @@
     "primary_source_id": "ch-snb-b0f42db828",
     "n": 6683,
     "first_seen": "2026-10-26T19:21:36.282284+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "ch-snb-b0f42db828"
     ]
@@ -8620,7 +9942,7 @@
     "primary_source_id": "eu-ecb-991c113079",
     "n": 6677,
     "first_seen": "2026-10-26T19:21:36.282284+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "eu-ecb-991c113079"
     ]
@@ -8673,7 +9995,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 6602,
     "first_seen": "2026-10-26T19:21:36.282284+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -8697,7 +10019,7 @@
     "primary_source_id": "de-bundesbank-027ac4024f",
     "n": 6685,
     "first_seen": "2026-10-26T19:21:36.282284+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "de-bundesbank-027ac4024f"
     ]
@@ -8726,7 +10048,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 6603,
     "first_seen": "2026-10-26T19:21:36.282284+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -8755,7 +10077,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 6604,
     "first_seen": "2026-10-26T19:21:36.282284+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -8784,7 +10106,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 6605,
     "first_seen": "2026-10-26T19:21:36.282284+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -8813,7 +10135,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 6606,
     "first_seen": "2026-10-26T19:21:36.282284+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -8842,7 +10164,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 6607,
     "first_seen": "2026-10-26T19:21:36.282284+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -8866,7 +10188,7 @@
     "primary_source_id": "eu-ecb-991c113079",
     "n": 6588,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "eu-ecb-991c113079"
     ]
@@ -8890,7 +10212,7 @@
     "primary_source_id": "us-ustr-index",
     "n": 6815,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-ustr-index"
     ]
@@ -8914,7 +10236,7 @@
     "primary_source_id": "io-bis-140216a5b6",
     "n": 6696,
     "first_seen": "2026-10-26T19:21:36.282284+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "io-bis-140216a5b6"
     ]
@@ -8938,7 +10260,7 @@
     "primary_source_id": "io-bis-140216a5b6",
     "n": 6695,
     "first_seen": "2026-10-26T19:21:36.282284+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "io-bis-140216a5b6"
     ]
@@ -8962,7 +10284,7 @@
     "primary_source_id": "io-bis-140216a5b6",
     "n": 6694,
     "first_seen": "2026-10-26T19:21:36.282284+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "io-bis-140216a5b6"
     ]
@@ -8986,7 +10308,7 @@
     "primary_source_id": "io-bis-140216a5b6",
     "n": 6693,
     "first_seen": "2026-10-26T19:21:36.282284+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "io-bis-140216a5b6"
     ]
@@ -9010,7 +10332,7 @@
     "primary_source_id": "io-bis-140216a5b6",
     "n": 6692,
     "first_seen": "2026-10-26T19:21:36.282284+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "io-bis-140216a5b6"
     ]
@@ -9034,7 +10356,7 @@
     "primary_source_id": "io-bis-140216a5b6",
     "n": 6691,
     "first_seen": "2026-10-26T19:21:36.282284+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "io-bis-140216a5b6"
     ]
@@ -9058,7 +10380,7 @@
     "primary_source_id": "io-bis-140216a5b6",
     "n": 6690,
     "first_seen": "2026-10-26T19:21:36.282284+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "io-bis-140216a5b6"
     ]
@@ -9082,7 +10404,7 @@
     "primary_source_id": "io-bis-140216a5b6",
     "n": 6689,
     "first_seen": "2026-10-26T19:21:36.282284+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "io-bis-140216a5b6"
     ]
@@ -9106,7 +10428,7 @@
     "primary_source_id": "us-fdic-index",
     "n": 6649,
     "first_seen": "2026-10-26T19:21:36.282284+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-fdic-index"
     ]
@@ -9130,7 +10452,7 @@
     "primary_source_id": "us-ofac-index",
     "n": 6648,
     "first_seen": "2026-10-26T19:21:36.282284+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-ofac-index"
     ]
@@ -9155,7 +10477,7 @@
     "primary_source_id": "hk-hkma-public-press",
     "n": 6593,
     "first_seen": "2026-10-26T19:21:36.282284+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "hk-hkma-public-press"
     ]
@@ -9186,7 +10508,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6586,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -9217,7 +10539,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6585,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -9248,7 +10570,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6584,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -9279,7 +10601,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6583,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -9310,7 +10632,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6582,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -9341,7 +10663,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6581,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -9372,7 +10694,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6580,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -9403,7 +10725,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6579,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -9434,7 +10756,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6578,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -9465,7 +10787,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6577,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -9495,7 +10817,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6576,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -9525,7 +10847,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6575,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -9555,7 +10877,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6574,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -9586,7 +10908,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6573,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -9616,7 +10938,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6572,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -9646,7 +10968,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6571,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -9676,7 +10998,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6570,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -9706,7 +11028,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6569,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -9736,7 +11058,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6568,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -9766,7 +11088,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6567,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -9796,7 +11118,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6566,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -9826,7 +11148,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6565,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -9856,7 +11178,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6564,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -9886,7 +11208,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6563,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -9916,7 +11238,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6562,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -9947,7 +11269,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6561,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -9977,7 +11299,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6560,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -10007,7 +11329,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6559,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -10037,7 +11359,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6558,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -10067,7 +11389,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6557,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -10097,7 +11419,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6556,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -10127,7 +11449,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6555,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -10157,7 +11479,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6554,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -10187,7 +11509,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6553,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -10217,7 +11539,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6552,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -10247,7 +11569,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6551,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -10277,7 +11599,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6550,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -10307,7 +11629,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6549,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -10338,7 +11660,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6548,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -10369,7 +11691,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6547,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -10400,7 +11722,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6546,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -10431,7 +11753,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6545,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -10461,7 +11783,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6544,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -10492,7 +11814,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6543,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -10523,7 +11845,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6542,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -10554,7 +11876,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6541,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -10585,7 +11907,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6540,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -10615,7 +11937,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6539,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -10646,7 +11968,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6538,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -10676,7 +11998,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6537,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -10707,7 +12029,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6536,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -10738,7 +12060,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6535,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -10768,7 +12090,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6534,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -10798,7 +12120,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6533,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -10828,7 +12150,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6532,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -10859,7 +12181,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6531,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -10890,7 +12212,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6530,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -10921,7 +12243,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6529,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -10952,7 +12274,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6528,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -10982,7 +12304,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6527,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -11012,7 +12334,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6526,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -11043,7 +12365,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6525,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -11074,7 +12396,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6524,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -11105,7 +12427,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6523,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -11136,7 +12458,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6522,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -11167,7 +12489,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6521,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -11198,7 +12520,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6520,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -11229,7 +12551,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6519,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -11260,7 +12582,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6518,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -11290,7 +12612,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6517,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -11320,7 +12642,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6516,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -11350,7 +12672,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6515,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -11380,7 +12702,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6514,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -11411,7 +12733,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6513,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -11441,7 +12763,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6512,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -11471,7 +12793,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6511,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -11501,7 +12823,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6510,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -11531,7 +12853,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6509,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -11562,7 +12884,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6508,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -11593,7 +12915,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6507,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -11623,7 +12945,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6506,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -11653,7 +12975,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6505,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -11683,7 +13005,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6504,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -11713,7 +13035,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6503,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -11744,7 +13066,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6502,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -11774,7 +13096,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6501,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -11805,7 +13127,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6500,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -11836,7 +13158,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6499,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -11867,7 +13189,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6498,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -11898,7 +13220,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6497,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -11928,7 +13250,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6496,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -11959,7 +13281,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6495,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -11989,7 +13311,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6494,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -12019,7 +13341,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6493,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -12049,7 +13371,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6492,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -12080,7 +13402,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6491,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -12110,7 +13432,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6490,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -12141,7 +13463,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6489,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -12171,7 +13493,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6488,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -12243,7 +13565,7 @@
     "primary_source_id": "us-nlrb-7c63020d7d",
     "n": 6587,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T07:15:21.187665+00:00",
     "source_ids": [
       "us-nlrb-7c63020d7d"
     ]
