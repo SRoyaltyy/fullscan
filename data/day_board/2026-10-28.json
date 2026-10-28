@@ -1,6 +1,6 @@
 {
   "date": "2026-10-28",
-  "generated_at": "2026-10-28T06:37:45.987710-04:00",
+  "generated_at": "2026-10-28T06:41:59.348811-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -9,8 +9,8 @@
     "MISSING News judge MD `01_daily/news/2026-10-28_judge.md` \u2014 missing"
   ],
   "counts": {
-    "ok": 4,
-    "partial": 3,
+    "ok": 6,
+    "partial": 1,
     "fail": 1,
     "n": 8
   },
@@ -633,11 +633,11 @@
       "key": "stock_book",
       "name": "Stock Book ALL",
       "yaml": "stock_book_all.yml",
-      "status": "PARTIAL",
+      "status": "OK",
       "inputs_ready": false,
-      "n_req_ok": 2,
+      "n_req_ok": 4,
       "n_req": 4,
-      "n_opt_ok": 1,
+      "n_opt_ok": 3,
       "n_opt": 4,
       "files": [
         {
@@ -757,10 +757,10 @@
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-10-28_stock_book.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "horizons=5 names=130",
+          "size": 1039550,
+          "said": "1d BUY IONS, FDMT \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE",
           "bullets": []
         },
         {
@@ -768,21 +768,24 @@
           "name": "Stock book MD",
           "path": "01_daily/2026-10-28_stock_book.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 37423,
+          "said": "Stock book \u2014 2026-10-28",
+          "bullets": [
+            "_Generated 2026-10-28T06:37:58.525500-04:00_",
+            "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
+          ]
         },
         {
           "key": "green",
           "name": "Green-pile JSON",
           "path": "data/stock_book/2026-10-28_green.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "",
+          "size": 585,
+          "said": "0 green \u00b7",
           "bullets": []
         },
         {
@@ -804,10 +807,10 @@
           "name": "Dashboard HTML",
           "path": "dashboard/index.html",
           "role": "optional",
-          "status": "FAIL",
-          "reason": "session 2026-10-28 not in dashboard dates (last=2026-10-07)",
+          "status": "OK",
+          "reason": "live-book poller + today.json (2026-10-28)",
           "size": 10510589,
-          "said": "session 2026-10-28 not in dashboard dates (last=2026-10-07)",
+          "said": "live-book poller + today.json (2026-10-28)",
           "bullets": []
         }
       ],
@@ -820,9 +823,9 @@
       "key": "publish",
       "name": "Dashboard / .io",
       "yaml": "deploy-dashboard.yml",
-      "status": "PARTIAL",
-      "inputs_ready": false,
-      "n_req_ok": 1,
+      "status": "OK",
+      "inputs_ready": true,
+      "n_req_ok": 2,
       "n_req": 2,
       "n_opt_ok": 0,
       "n_opt": 1,
@@ -832,10 +835,10 @@
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-10-28_stock_book.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "horizons=5 names=130",
+          "size": 1039550,
+          "said": "1d BUY IONS, FDMT \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE",
           "bullets": []
         },
         {
@@ -843,10 +846,10 @@
           "name": "Dashboard HTML (repo)",
           "path": "dashboard/index.html",
           "role": "required",
-          "status": "FAIL",
-          "reason": "session 2026-10-28 not in dashboard dates (last=2026-10-07)",
+          "status": "OK",
+          "reason": "live-book poller + today.json (2026-10-28)",
           "size": 10510589,
-          "said": "session 2026-10-28 not in dashboard dates (last=2026-10-07)",
+          "said": "live-book poller + today.json (2026-10-28)",
           "bullets": []
         },
         {
@@ -882,8 +885,50 @@
   "news_mode": "on",
   "news_mode_reason": "",
   "selections": {
-    "buy_1d": [],
-    "sell_1d": [],
+    "buy_1d": [
+      {
+        "ticker": "IONS",
+        "score": 0.41861297165525313
+      },
+      {
+        "ticker": "FDMT",
+        "score": 0.4266539321532036
+      }
+    ],
+    "sell_1d": [
+      {
+        "ticker": "NEOV",
+        "score": -0.4135560613260153
+      },
+      {
+        "ticker": "OKLO",
+        "score": -0.17869412806952367
+      },
+      {
+        "ticker": "FCEL",
+        "score": -0.25786611065330006
+      },
+      {
+        "ticker": "NNDM",
+        "score": -0.1294435046814046
+      },
+      {
+        "ticker": "POWL",
+        "score": -0.13396424504583043
+      },
+      {
+        "ticker": "EOSE",
+        "score": -0.3178180217653031
+      },
+      {
+        "ticker": "TE",
+        "score": -0.24263310642628938
+      },
+      {
+        "ticker": "SKYX",
+        "score": -0.3260948174565743
+      }
+    ],
     "flatten": {},
     "general": {},
     "sectors": {},
@@ -1174,6 +1219,59 @@
         }
       ],
       "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 MTDR, PBR, ELV, AUPH, SONO \u00b7 2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 WAT, A, PANW, PBR, TMO"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-10-28",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-28T06:41:58.333464-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-10-28_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1039550,
+          "preview": "1d BUY IONS, FDMT \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, TE, SKYX"
+        },
+        {
+          "path": "data/stock_book/2026-10-28_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-10-28_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2594,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-10-28_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 8405,
+          "preview": "2026-10-28 BUY IONS, FDMT \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, TE, SKYX"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 8405,
+          "preview": "2026-10-28 BUY IONS, FDMT \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, TE, SKYX"
+        },
+        {
+          "path": "01_daily/2026-10-28_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 38328,
+          "preview": "# Stock book \u2014 2026-10-28\n_Generated 2026-10-28T06:37:58.525500-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY IONS, FDMT \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, TE, SKYX \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-10-28 BUY IONS, FDMT \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, TE, SKYX \u00b7 2026-10-28 BUY IONS, FDMT \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, TE, SKYX \u00b7 # Stock book \u2014 2026-10-28\n_Generated 2026-10-28T06:37:58.525500-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "href": {
