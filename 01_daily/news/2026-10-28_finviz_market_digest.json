@@ -1,6 +1,6 @@
 {
   "date": "2026-10-28",
-  "generated_at": "2026-10-28T04:32:57.498762-04:00",
+  "generated_at": "2026-10-28T04:45:22.865011-04:00",
   "timezone": "America/New_York",
   "source": "live",
   "source_url": "https://elite.finviz.com/",
@@ -15,35 +15,34 @@
   "kind": "finviz_homepage_market_digest",
   "represents": "Finviz homepage market-day prose. Same-morning Pre-Open when Generated is before 09:30 ET; afternoon Wayback is a prior-day close recap legal for the next session only. Not quote-page ticker blurbs.",
   "error": null,
-  "headline": "US futures trade mixed as markets await FOMC rate decision and big-tech earnings",
-  "raw_text": "- Authoritative pre-market reporting as of just after 4:00 AM ET flags no major individual stock moves with clear catalysts\n- S&P 500 futures (@ES) are down about 0.02%, Dow Jones futures (@YM) fall about 0.32%, Nasdaq 100 futures (@NQ) rise about 0.39%, and Russell 2000 futures (@ER2) decline about 0.19% in early trading\n- The Federal Reserve FOMC announces its rate decision at 2:00 PM ET, followed by the Chair’s press conference at 2:30 PM ET, with expectations for rates to be held steady after the September hike\n- GE Vernova (GEV), Amphenol (APH), ADP (ADP), Boston Scientific (BSX), and Biogen (BIIB) report earnings before the bell today\n- Microsoft (MSFT) and Alphabet (GOOGL) are scheduled to post quarterly results after the close alongside other large-cap tech peers\n- Asian equity markets trade higher overnight on AI-related optimism, with South Korea’s Kospi notably stronger\n- Oil (@CL) prices rise about 2.3% in overnight trading\n- In the previous session, major US equity averages traded higher amid earnings releases and ongoing AI themes\n- Intraday volatility may increase around the 2:00 PM ET FOMC release and in response to early earnings reports, a focus for active swing traders",
-  "raw_summary_md": "- Authoritative pre-market reporting as of **just after 4:00 AM ET** flags **no major individual stock moves** with clear catalysts\n- **S&P 500 futures** ([@ES](https://finviz.com/futures_charts?t=ES)) are **down about 0.02%**, **Dow Jones futures** ([@YM](https://finviz.com/futures_charts?t=YM)) fall **about 0.32%**, **Nasdaq 100 futures** ([@NQ](https://finviz.com/futures_charts?t=NQ)) rise **about 0.39%**, and **Russell 2000 futures** ([@ER2](https://finviz.com/futures_charts?t=ER2)) decline **about 0.19%** in early trading\n- The **Federal Reserve FOMC** announces its rate decision at **2:00 PM ET**, followed by the Chair’s press conference at **2:30 PM ET**, with expectations for **rates to be held steady** after the September hike\n- **GE Vernova** ([GEV](https://finviz.com/quote?t=GEV)), **Amphenol** ([APH](https://finviz.com/quote?t=APH)), **ADP** ([ADP](https://finviz.com/quote?t=ADP)), **Boston Scientific** ([BSX](https://finviz.com/quote?t=BSX)), and **Biogen** ([BIIB](https://finviz.com/quote?t=BIIB)) report **earnings before the bell today**\n- **Microsoft** ([MSFT](https://finviz.com/quote?t=MSFT)) and **Alphabet** ([GOOGL](https://finviz.com/quote?t=GOOGL)) are scheduled to post **quarterly results after the close** alongside other large-cap tech peers\n- **Asian equity markets trade higher overnight** on AI-related optimism, with **South Korea’s Kospi notably stronger**\n- **Oil** ([@CL](https://finviz.com/futures_charts?t=CL)) prices **rise about 2.3%** in overnight trading\n- In the **previous session**, **major US equity averages traded higher** amid earnings releases and ongoing AI themes\n- **Intraday volatility may increase** around the **2:00 PM ET FOMC release** and in response to early earnings reports, a focus for **active swing traders**",
+  "headline": "US equity futures trade mixed as traders await FOMC rate decision and Microsoft/Alphabet earnings amid softer European trade",
+  "raw_text": "- S&P 500 futures (@ES) are up about 0.07% ahead of the 2 PM ET FOMC rate decision, with traders braced for rates to be held steady following the September hike\n- Nasdaq 100 futures (@NQ) are higher by 0.45% while Dow futures (@YM) slip 0.24% and Russell 2000 futures (@ER2) edge down 0.07%, signaling a mixed US equity setup\n- Microsoft (MSFT) and Alphabet (GOOGL) are scheduled to report earnings after the bell, positioning mega-cap tech as a key driver of post-Fed trading\n- Boston Scientific (BSX), Biogen (BIIB), GE Vernova (GEV), Amphenol (APH) and ADP (ADP) headline a busy slate of early reporters, with focus on beats versus estimates and forward guidance\n- Asian equity markets traded mixed overnight, helped earlier by AI optimism, with Japan’s Nikkei (@NKD) up over 1% while Hong Kong lagged\n- Oil (@CL) prices that climbed modestly in prior Asian trade are now contributing to pressure in Europe, where the STOXX 600 is slightly lower amid earnings-related moves\n- Yesterday the major US averages traded mostly higher on continued AI and semiconductor momentum intertwined with ongoing earnings themes\n- Today’s quiet pre-market tone comes ahead of potential sharp intraday volatility around the 2 PM ET Fed announcement and 2:30 PM ET Chair press conference",
+  "raw_summary_md": "- **S&P 500 futures** ([@ES](https://finviz.com/futures_charts?t=ES)) are up about **0.07%** ahead of the **2 PM ET FOMC rate decision**, with traders braced for **rates to be held steady** following the September hike\n- **Nasdaq 100 futures** ([@NQ](https://finviz.com/futures_charts?t=NQ)) are higher by **0.45%** while **Dow futures** ([@YM](https://finviz.com/futures_charts?t=YM)) slip **0.24%** and **Russell 2000 futures** ([@ER2](https://finviz.com/futures_charts?t=ER2)) edge down **0.07%**, signaling a **mixed US equity setup**\n- **Microsoft** ([MSFT](https://finviz.com/quote?t=MSFT)) and **Alphabet** ([GOOGL](https://finviz.com/quote?t=GOOGL)) are scheduled to report **earnings after the bell**, positioning **mega-cap tech** as a **key driver** of post-Fed trading\n- **Boston Scientific** ([BSX](https://finviz.com/quote?t=BSX)), **Biogen** ([BIIB](https://finviz.com/quote?t=BIIB)), **GE Vernova** ([GEV](https://finviz.com/quote?t=GEV)), **Amphenol** ([APH](https://finviz.com/quote?t=APH)) and **ADP** ([ADP](https://finviz.com/quote?t=ADP)) headline a **busy slate of early reporters**, with focus on **beats versus estimates** and **forward guidance**\n- **Asian equity markets traded mixed** overnight, helped earlier by **AI optimism**, with **Japan’s Nikkei** ([@NKD](https://finviz.com/futures_charts?t=NKD)) up over **1%** while **Hong Kong lagged**\n- **Oil** ([@CL](https://finviz.com/futures_charts?t=CL)) prices that climbed modestly in prior Asian trade are now **contributing to pressure in Europe**, where the **STOXX 600** is **slightly lower** amid **earnings-related moves**\n- Yesterday **the major US averages traded mostly higher** on continued **AI and semiconductor momentum** intertwined with ongoing **earnings themes**\n- Today’s **quiet pre-market tone** comes ahead of **potential sharp intraday volatility** around the **2 PM ET Fed announcement** and **2:30 PM ET Chair press conference**",
   "index_moves": [],
   "oil": null,
   "cpi": null,
   "fed_odds": null,
   "named_tickers": [
-    "GEV",
-    "APH",
-    "ADP",
+    "MSFT",
+    "GOOGL",
     "BSX",
     "BIIB",
-    "MSFT",
-    "GOOGL"
+    "GEV",
+    "APH",
+    "ADP"
   ],
   "named_leaders": [
-    "GEV",
-    "APH",
-    "ADP",
+    "MSFT",
+    "GOOGL",
     "BSX",
     "BIIB",
-    "MSFT",
-    "GOOGL"
+    "GEV",
+    "APH",
+    "ADP"
   ],
   "calendar": [
-    "The Federal Reserve FOMC announces its rate decision at 2:00 PM ET, followed by the Chair’s press conference at 2:30 PM ET, with expectations for rates to be held steady after the September hike",
-    "GE Vernova (GEV), Amphenol (APH), ADP (ADP), Boston Scientific (BSX), and Biogen (BIIB) report earnings before the bell today",
-    "Intraday volatility may increase around the 2:00 PM ET FOMC release and in response to early earnings reports, a focus for active swing traders"
+    "S&P 500 futures (@ES) are up about 0.07% ahead of the 2 PM ET FOMC rate decision, with traders braced for rates to be held steady following the September hike",
+    "Today’s quiet pre-market tone comes ahead of potential sharp intraday volatility around the 2 PM ET Fed announcement and 2:30 PM ET Chair press conference"
   ],
   "prior_close": {
     "spx": null,
@@ -59,20 +58,16 @@
     "retail": false,
     "fed": true,
     "bullets": [
-      "The Federal Reserve FOMC announces its rate decision at 2:00 PM ET, followed by the Chair’s press conference at 2:30 PM ET, with expectations for rates to be held steady after the September hike",
-      "Intraday volatility may increase around the 2:00 PM ET FOMC release and in response to early earnings reports, a focus for active swing traders"
+      "S&P 500 futures (@ES) are up about 0.07% ahead of the 2 PM ET FOMC rate decision, with traders braced for rates to be held steady following the September hike"
     ],
-    "text": "The Federal Reserve FOMC announces its rate decision at 2:00 PM ET, followed by the Chair’s press conference at 2:30 PM ET, with expectations for rates to be held steady after the September hike Intraday volatility may increase around the 2:00 PM ET FOMC release and in response to early earnings reports, a focus for active swing traders"
+    "text": "S&P 500 futures (@ES) are up about 0.07% ahead of the 2 PM ET FOMC rate decision, with traders braced for rates to be held steady following the September hike"
   },
   "earnings_slate": {
     "tickers": [
-      "GEV",
-      "APH",
-      "ADP",
-      "BSX",
-      "BIIB"
+      "MSFT",
+      "GOOGL"
     ],
-    "text": "GE Vernova (GEV), Amphenol (APH), ADP (ADP), Boston Scientific (BSX), and Biogen (BIIB) report earnings before the bell today"
+    "text": "Microsoft (MSFT) and Alphabet (GOOGL) are scheduled to report earnings after the bell, positioning mega-cap tech as a key driver of post-Fed trading"
   },
   "geo_grain": {
     "geo": false,
@@ -80,9 +75,9 @@
     "flags": [],
     "text": ""
   },
-  "finviz_id": 320195,
+  "finviz_id": 320239,
   "finviz_ticker": "$MARKET",
-  "finviz_published_at": "2026-10-28T04:07:04.723",
+  "finviz_published_at": "2026-10-28T04:37:02.363",
   "finviz_source": "market_summary",
   "finviz_sentiment": "neutral"
 }

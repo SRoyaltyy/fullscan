@@ -1,15 +1,15 @@
 # Finviz homepage market digest — 2026-10-28
 
-**Generated:** 2026-10-28T04:32:57.498762-04:00 (America/New_York)
+**Generated:** 2026-10-28T04:45:22.865011-04:00 (America/New_York)
 **Source:** `live`
-**Banner:** US futures trade mixed as markets await FOMC rate decision and big-tech earnings
+**Banner:** US equity futures trade mixed as traders await FOMC rate decision and Microsoft/Alphabet earnings amid softer European trade
 **Prior close:** SPX —  Nasdaq —  Dow —
 **SPX:** —  **Nasdaq:** —  **Dow:** —
 **Oil:** —
 **CPI/Fed:** —
-**Leaders:** GEV, APH, ADP, BSX, BIIB, MSFT, GOOGL
+**Leaders:** MSFT, GOOGL, BSX, BIIB, GEV, APH, ADP
 **Next session:** housing no · retail no · Fed yes
-**Earnings slate:** GEV, APH, ADP, BSX, BIIB
+**Earnings slate:** MSFT, GOOGL
 **Geo/grain:** —
 **Clock legal for:** 2026-10-28
 **Clock use:** `same_morning`
@@ -25,23 +25,21 @@ Homepage `$MARKET` prose — **not** `YYYY-MM-DD_finviz_digest.md` (quote-page h
 - **Prior close:** SPX — · Nasdaq — · Dow —
 - **Oil:** —
 - **CPI / Fed-odds:** —
-- **Named leaders:** GEV, APH, ADP, BSX, BIIB, MSFT, GOOGL
+- **Named leaders:** MSFT, GOOGL, BSX, BIIB, GEV, APH, ADP
 - **Next-session calendar:** housing no · retail no · Fed yes
-  - The Federal Reserve FOMC announces its rate decision at 2:00 PM ET, followed by the Chair’s press conference at 2:30 PM ET, with expectations for rates to be held steady after the September hike
-  - Intraday volatility may increase around the 2:00 PM ET FOMC release and in response to early earnings reports, a focus for active swing traders
-- **Earnings slate:** GEV, APH, ADP, BSX, BIIB
+  - S&P 500 futures (@ES) are up about 0.07% ahead of the 2 PM ET FOMC rate decision, with traders braced for rates to be held steady following the September hike
+- **Earnings slate:** MSFT, GOOGL
 - **Geo / grain:** —
 
 ## Narrative
 
-**US futures trade mixed as markets await FOMC rate decision and big-tech earnings**
+**US equity futures trade mixed as traders await FOMC rate decision and Microsoft/Alphabet earnings amid softer European trade**
 
-- Authoritative pre-market reporting as of just after 4:00 AM ET flags no major individual stock moves with clear catalysts
-- S&P 500 futures (@ES) are down about 0.02%, Dow Jones futures (@YM) fall about 0.32%, Nasdaq 100 futures (@NQ) rise about 0.39%, and Russell 2000 futures (@ER2) decline about 0.19% in early trading
-- The Federal Reserve FOMC announces its rate decision at 2:00 PM ET, followed by the Chair’s press conference at 2:30 PM ET, with expectations for rates to be held steady after the September hike
-- GE Vernova (GEV), Amphenol (APH), ADP (ADP), Boston Scientific (BSX), and Biogen (BIIB) report earnings before the bell today
-- Microsoft (MSFT) and Alphabet (GOOGL) are scheduled to post quarterly results after the close alongside other large-cap tech peers
-- Asian equity markets trade higher overnight on AI-related optimism, with South Korea’s Kospi notably stronger
-- Oil (@CL) prices rise about 2.3% in overnight trading
-- In the previous session, major US equity averages traded higher amid earnings releases and ongoing AI themes
-- Intraday volatility may increase around the 2:00 PM ET FOMC release and in response to early earnings reports, a focus for active swing traders
+- S&P 500 futures (@ES) are up about 0.07% ahead of the 2 PM ET FOMC rate decision, with traders braced for rates to be held steady following the September hike
+- Nasdaq 100 futures (@NQ) are higher by 0.45% while Dow futures (@YM) slip 0.24% and Russell 2000 futures (@ER2) edge down 0.07%, signaling a mixed US equity setup
+- Microsoft (MSFT) and Alphabet (GOOGL) are scheduled to report earnings after the bell, positioning mega-cap tech as a key driver of post-Fed trading
+- Boston Scientific (BSX), Biogen (BIIB), GE Vernova (GEV), Amphenol (APH) and ADP (ADP) headline a busy slate of early reporters, with focus on beats versus estimates and forward guidance
+- Asian equity markets traded mixed overnight, helped earlier by AI optimism, with Japan’s Nikkei (@NKD) up over 1% while Hong Kong lagged
+- Oil (@CL) prices that climbed modestly in prior Asian trade are now contributing to pressure in Europe, where the STOXX 600 is slightly lower amid earnings-related moves
+- Yesterday the major US averages traded mostly higher on continued AI and semiconductor momentum intertwined with ongoing earnings themes
+- Today’s quiet pre-market tone comes ahead of potential sharp intraday volatility around the 2 PM ET Fed announcement and 2:30 PM ET Chair press conference
