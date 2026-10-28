@@ -1,6 +1,6 @@
 {
  "date": "2026-10-28",
- "generated_at": "2026-10-28T07:16:00.340939+00:00",
+ "generated_at": "2026-10-28T19:21:31.508500+00:00",
  "catalog": {
   "generated_at": "2026-10-24T16:39:29.833670+00:00",
   "channels": 365,
@@ -34,54 +34,71 @@
   }
  },
  "collect": {
-  "generated_at": "2026-10-28T07:15:21.187665+00:00",
+  "generated_at": "2026-10-28T19:21:07.640451+00:00",
   "enabled_sources": 121,
-  "sources_ok": 121,
-  "sources_failed": 0,
+  "sources_ok": 117,
+  "sources_failed": 4,
   "coverage_status": "degraded",
   "counts": {
-   "observed": 1878,
-   "old": 1190,
-   "future": 2,
-   "undated": 254,
-   "new": 56,
-   "duplicates": 630
+   "observed": 2150,
+   "old": 1247,
+   "future": 11,
+   "undated": 302,
+   "new": 215,
+   "duplicates": 677
   },
-  "current_dated_documents": 508
+  "current_dated_documents": 725
  },
  "new_today": {
-  "count": 56,
+  "count": 215,
   "by_source": {
-   "us-doj-b3d27e1dc3": 25,
-   "us-govinfo-bills": 13,
-   "us-govinfo-dcpd": 5,
-   "us-doj-e05071794d": 3,
-   "us-hhs-6f995a5754": 2,
-   "us-sec-18c0a4ef1b": 1,
+   "us-federal-register": 104,
+   "uk-govuk-decision": 19,
+   "us-ftc-df73e297e1": 17,
+   "uk-govuk-consultation_outcome": 16,
+   "us-doj-b3d27e1dc3": 14,
+   "ca-boc-30d6d14378": 7,
+   "eu-commission-07d4f58ccf": 6,
+   "us-fda-5696b24295": 5,
+   "in-rbi-cc71120b98": 4,
+   "us-govinfo-plaw": 3,
+   "de-bundesbank-027ac4024f": 2,
+   "io-wto-497f28e20d": 2,
+   "uk-govuk-medical_safety_alert": 1,
+   "us-ftc-58b0383166": 1,
+   "us-doj-e05071794d": 1,
+   "us-ofac-index": 1,
+   "us-ustr-index": 1,
+   "us-itc-index": 1,
+   "us-fed-a12cd46677": 1,
    "us-cftc-fda5c3631d": 1,
-   "us-fda-5696b24295": 1,
-   "us-fcc-685c5e7dd2": 1,
-   "us-dol-99f477805a": 1,
-   "eu-commission-07d4f58ccf": 1,
+   "us-fda-03f7703006": 1,
+   "eu-council-9d9e9444da": 1,
+   "eu-ecb-fb5fd59aed": 1,
+   "uk-boe-4feb372611": 1,
+   "ca-boc-cffefa81f7": 1,
    "nz-rbnz-gnews": 1,
-   "in-rbi-cc71120b98": 1
+   "de-bundesbank-e5b1c4a067": 1,
+   "us-supreme-court-orders-index": 1
   },
   "by_class": {
-   "routine": 19,
-   "high": 14,
-   "watch": 16,
-   "docket": 7
+   "routine": 144,
+   "high": 20,
+   "watch": 46,
+   "docket": 4,
+   "noise": 1
   }
  },
  "parsed_today": {
-  "count": 17,
+  "count": 140,
   "by_class": {
-   "high": 3,
-   "routine": 12,
-   "watch": 2
+   "high": 27,
+   "routine": 66,
+   "watch": 54,
+   "noise": 1
   }
  },
- "n_failures": 0,
+ "n_failures": 4,
  "dates": [
   "2026-10-28"
  ],

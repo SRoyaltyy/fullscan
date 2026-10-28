@@ -1,35 +1,100 @@
 [
   {
-    "title": "H.R. 10897 (IH) - Sami’s Law",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr10897ih",
-    "native_id": "BILLS-119hr10897ih",
-    "published_at": "2026-10-27T19:13:00+00:00",
-    "published_raw": "Tue, 27 Oct 2026 19:13:00 +0000",
-    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "title": "Regulatory judgements and enforcement notices - 28 October 2026",
+    "url": "https://www.gov.uk/government/publications/regulatory-judgements-and-enforcement-notices",
+    "native_id": "/government/publications/regulatory-judgements-and-enforcement-notices",
+    "published_at": "2026-10-28T09:30:10+00:00",
+    "published_raw": "2026-10-28T09:30:10Z",
+    "document_type": "decision",
+    "issuer": "Regulator of Social Housing",
+    "issuer_ids": [
+      "uk-gov:regulator-of-social-housing"
+    ],
+    "summary": "The judgements we publish on how well registered landlords are meeting our standards.",
     "source_metadata": {
-      "document_type": "bill",
-      "document_stage": "legislative_document_published",
+      "document_type": "decision",
+      "document_stage": "decision_published",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Bills",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
+      "issuer": "Regulator of Social Housing",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
     },
-    "primary_source_id": "us-govinfo-bills",
-    "n": 6795,
-    "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-28T07:15:21.187665+00:00",
+    "primary_source_id": "uk-govuk-decision",
+    "n": 5,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-10-28T19:21:07.640451+00:00",
     "source_ids": [
-      "us-govinfo-bills"
+      "uk-govuk-decision"
     ]
   },
   {
-    "title": "Amgen Inc. - 739641 - 08/12/2026",
-    "url": "http://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/amgen-inc-739641-08122026",
-    "native_id": "http://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/amgen-inc-739641-08122026",
-    "published_at": "2026-10-27T19:32:15+00:00",
-    "published_raw": "Tue, 27 Oct 2026 15:32:15 EDT",
-    "summary": "Drug Product/Misbranded, False & Misleading Claims",
+    "title": "Notice of proposed amendments (NPA) reference table",
+    "url": "https://www.gov.uk/government/publications/notice-of-proposed-amendments-npa-reference-table",
+    "native_id": "/government/publications/notice-of-proposed-amendments-npa-reference-table",
+    "published_at": "2026-10-28T11:46:04+00:00",
+    "published_raw": "2026-10-28T11:46:04Z",
+    "document_type": "regulation",
+    "issuer": "Ministry of Defence; Military Aviation Authority",
+    "issuer_ids": [
+      "uk-gov:ministry-of-defence",
+      "uk-gov:military-aviation-authority"
+    ],
+    "summary": "The Military Aviation Authority (MAA) NPA table provides information of proposed changes in regulations and release date.",
+    "source_metadata": {
+      "document_type": "regulation",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Ministry of Defence; Military Aviation Authority",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-regulation",
+    "n": 22,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "source_ids": [
+      "uk-govuk-regulation"
+    ]
+  },
+  {
+    "title": "Notice of proposed amendments (NPA) documents",
+    "url": "https://www.gov.uk/government/publications/notice-of-proposed-amendments-npa-2014-documents",
+    "native_id": "/government/publications/notice-of-proposed-amendments-npa-2014-documents",
+    "published_at": "2026-10-28T11:45:42+00:00",
+    "published_raw": "2026-10-28T11:45:42Z",
+    "document_type": "regulation",
+    "issuer": "Ministry of Defence; Military Aviation Authority",
+    "issuer_ids": [
+      "uk-gov:ministry-of-defence",
+      "uk-gov:military-aviation-authority"
+    ],
+    "summary": "MAA issuing of an NPA allows a consultation period to be undertaken on a proposed amendment or the implementation of new regulation.",
+    "source_metadata": {
+      "document_type": "regulation",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Ministry of Defence; Military Aviation Authority",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-regulation",
+    "n": 23,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "source_ids": [
+      "uk-govuk-regulation"
+    ]
+  },
+  {
+    "title": "GDUFA Paid Facilities List",
+    "url": "http://www.fda.gov/industry/generic-drug-user-fee-amendments/gdufa-paid-facilities-list",
+    "native_id": "http://www.fda.gov/industry/generic-drug-user-fee-amendments/gdufa-paid-facilities-list",
+    "published_at": "2026-10-28T17:32:33+00:00",
+    "published_raw": "Wed, 28 Oct 2026 13:32:33 EDT",
+    "summary": "This list contains GDUFA facility payments received by the Agency. Data are extract from the User Fee System and GDUFA Facility User Fee Coversheets. The following table explains the terms used in the list:",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
@@ -40,11 +105,421 @@
       "family": "product_permissions_and_safety"
     },
     "primary_source_id": "us-fda-5696b24295",
-    "n": 6872,
-    "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-10-28T07:15:21.187665+00:00",
+    "n": 1388,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-10-28T19:21:07.640451+00:00",
     "source_ids": [
       "us-fda-5696b24295"
+    ]
+  },
+  {
+    "title": "Rare Disease Framework",
+    "url": "http://www.fda.gov/industry/fda-rare-disease-innovation-hub/rare-disease-framework",
+    "native_id": "http://www.fda.gov/industry/fda-rare-disease-innovation-hub/rare-disease-framework",
+    "published_at": "2026-10-28T16:05:28+00:00",
+    "published_raw": "Wed, 28 Oct 2026 12:05:28 EDT",
+    "summary": "Rare Disease Regulatory Framework",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Food and Drug Administration — What's New: Drugs",
+      "jurisdiction": "US",
+      "family": "product_permissions_and_safety"
+    },
+    "primary_source_id": "us-fda-5696b24295",
+    "n": 1391,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "source_ids": [
+      "us-fda-03f7703006",
+      "us-fda-5696b24295"
+    ]
+  },
+  {
+    "title": "Drugs@FDA Data Files",
+    "url": "http://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+    "native_id": "http://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+    "published_at": "2026-10-28T13:15:03+00:00",
+    "published_raw": "Wed, 28 Oct 2026 09:15:03 EDT",
+    "summary": "Drugs@FDA Downloadable Data File in ZIP format, Data Definitions, and Entity Relationship Diagram (ERD)",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Food and Drug Administration — What's New: Drugs",
+      "jurisdiction": "US",
+      "family": "product_permissions_and_safety"
+    },
+    "primary_source_id": "us-fda-5696b24295",
+    "n": 1398,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "source_ids": [
+      "us-fda-03f7703006",
+      "us-fda-5696b24295"
+    ]
+  },
+  {
+    "title": "Que no lo dejen colgado esta temporada festiva con regalos inseguros: Compre de fuentes confiables",
+    "url": "https://www.cpsc.gov/es/Newsroom/News-Releases/2026/Dont-Be-Left-Out-in-the-Cold-This-Holiday-Season-with-Unsafe-Presents-Buy-from-Trusted-Sources",
+    "native_id": "https://www.cpsc.gov/_6d039050-7fba-4cdf-8361-f7db2f5e3963",
+    "published_at": null,
+    "published_raw": "Tue, 12/09/2025 - 12:00",
+    "summary": "La CPSC les recuerda a los consumidores comprar de manera segura esta temporada festiva",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Consumer Product Safety Commission",
+      "jurisdiction": "US",
+      "family": "product_safety"
+    },
+    "primary_source_id": "us-cpsc-08fe06e2e6",
+    "n": 3537,
+    "first_seen": "2026-10-16T10:36:18.842579+00:00",
+    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "source_ids": [
+      "us-cpsc-08fe06e2e6"
+    ]
+  },
+  {
+    "title": "Ponga la seguridad en el menú para unas felices fiestas: la Comisión de Seguridad de Productos del Consumidor ofrece consejos para cocinar con seguridad",
+    "url": "https://www.cpsc.gov/es/Newsroom/News-Releases/2026/Put-Safety-on-the-Menu-Consumer-Product-Safety-Commission-Offers-Safe-Cooking-Tips-for-a-Joyful-Holiday-Season",
+    "native_id": "https://www.cpsc.gov/_59de4207-4ace-44ca-ace0-3cde0cfb8ddb",
+    "published_at": null,
+    "published_raw": "Wed, 11/19/2025 - 12:00",
+    "summary": "WASHINGTON, D.C. – A medida que las familias de todo Estados Unidos se preparan para reunirse en Acción de Gracias, la Comisión de Seguridad de Productos del Consumidor de Estados Unidos (CPSC, por sus siglas en inglés) emite un recordatorio urgente: la",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Consumer Product Safety Commission",
+      "jurisdiction": "US",
+      "family": "product_safety"
+    },
+    "primary_source_id": "us-cpsc-08fe06e2e6",
+    "n": 3538,
+    "first_seen": "2026-10-16T10:36:18.842579+00:00",
+    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "source_ids": [
+      "us-cpsc-08fe06e2e6"
+    ]
+  },
+  {
+    "title": "La CPSC aprueba nueva norma federal de seguridad para las bolas de gel con el fin de reducir el riesgo de lesiones y muerte niños pequeños",
+    "url": "https://www.cpsc.gov/es/Newsroom/News-Releases/2025/CPSC-Approves-New-Federal-Safety-Standard-for-Water-Beads-to-Reduce-the-Risk-of-Injury-and-Death-to-Young-Children",
+    "native_id": "https://www.cpsc.gov/_51cc46a0-5dc1-4f70-8cc1-c6b5b0f0a782",
+    "published_at": null,
+    "published_raw": "Thu, 08/21/2025 - 12:00",
+    "summary": "WASHINGTON D. C. – La Comisión de Seguridad de Productos del Consumidor (CPSC, por sus iniciales en inglés) aprobó una norma de seguridad de productos de consumo para juguetes tipo bolas de gel, lo que refleja el compromiso constante de la entidad con la",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Consumer Product Safety Commission",
+      "jurisdiction": "US",
+      "family": "product_safety"
+    },
+    "primary_source_id": "us-cpsc-08fe06e2e6",
+    "n": 3539,
+    "first_seen": "2026-10-16T10:36:18.842579+00:00",
+    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "source_ids": [
+      "us-cpsc-08fe06e2e6"
+    ]
+  },
+  {
+    "title": "CPSC Approves New Federal Safety Standard for Neck Floats to Prevent Infant Deaths and Serious Injuries",
+    "url": "https://www.cpsc.gov/Newsroom/News-Releases/2025/CPSC-Approves-New-Federal-Safety-Standard-for-Neck-Floats-to-Prevent-Infant-Deaths-and-Serious-Injuries",
+    "native_id": "https://www.cpsc.gov/_4014aab3-f30e-41aa-ad48-dd7587119b4c",
+    "published_at": null,
+    "published_raw": "Thu, 08/21/2025 - 12:00",
+    "summary": "The U.S. Consumer Product Safety Commission (CPSC) has approved a consumer product safety standard to improve the safety of neck floats, an aquatic toy intended for use by children up to and including four years of age.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Consumer Product Safety Commission",
+      "jurisdiction": "US",
+      "family": "product_safety"
+    },
+    "primary_source_id": "us-cpsc-08fe06e2e6",
+    "n": 3540,
+    "first_seen": "2026-10-16T10:36:18.842579+00:00",
+    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "source_ids": [
+      "us-cpsc-08fe06e2e6"
+    ]
+  },
+  {
+    "title": "Public Meeting on the Reauthorization of the Biosimilar User Fee Act (BsUFA) - 10/26/2026",
+    "url": "http://www.fda.gov/drugs/news-events-human-drugs/public-meeting-reauthorization-biosimilar-user-fee-act-bsufa-10262026",
+    "native_id": "http://www.fda.gov/drugs/news-events-human-drugs/public-meeting-reauthorization-biosimilar-user-fee-act-bsufa-10262026",
+    "published_at": "2026-10-28T18:41:10+00:00",
+    "published_raw": "Wed, 28 Oct 2026 14:41:10 EDT",
+    "summary": "Public Meeting on the Reauthorization of the Biosimilar User Fee Act (BsUFA)",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Food and Drug Administration — What's New: Vaccines, Blood and Biologics",
+      "jurisdiction": "US",
+      "family": "product_permissions_and_safety"
+    },
+    "primary_source_id": "us-fda-03f7703006",
+    "n": 5514,
+    "first_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "source_ids": [
+      "us-fda-03f7703006"
+    ]
+  },
+  {
+    "title": "Fraudulent Products",
+    "url": "http://www.fda.gov/drugs/medication-health-fraud/fraudulent-products",
+    "native_id": "http://www.fda.gov/drugs/medication-health-fraud/fraudulent-products",
+    "published_at": "2026-10-28T17:12:12+00:00",
+    "published_raw": "Wed, 28 Oct 2026 13:12:12 EDT",
+    "summary": "Consumers should avoid products marketed as supplements or other types of products that claim to have effects similar to prescription drugs.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Food and Drug Administration — What's New: Drugs",
+      "jurisdiction": "US",
+      "family": "product_permissions_and_safety"
+    },
+    "primary_source_id": "us-fda-5696b24295",
+    "n": 5661,
+    "first_seen": "2026-10-20T18:00:04.951908+00:00",
+    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "source_ids": [
+      "us-fda-5696b24295"
+    ]
+  },
+  {
+    "title": "Over-The-Counter Monograph Drug User Fee Program (OMUFA)",
+    "url": "http://www.fda.gov/industry/fda-user-fee-programs/over-counter-monograph-drug-user-fee-program-omufa",
+    "native_id": "http://www.fda.gov/industry/fda-user-fee-programs/over-counter-monograph-drug-user-fee-program-omufa",
+    "published_at": "2026-10-28T17:47:46+00:00",
+    "published_raw": "Wed, 28 Oct 2026 13:47:46 EDT",
+    "summary": "A user fee program for nonprescription (over-the-counter or OTC) monograph drugs would be a potential funding mechanism to supplement congressional non user-fee appropriations.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Food and Drug Administration — What's New: Drugs",
+      "jurisdiction": "US",
+      "family": "product_permissions_and_safety"
+    },
+    "primary_source_id": "us-fda-5696b24295",
+    "n": 5867,
+    "first_seen": "2026-10-21T18:05:07.789957+00:00",
+    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "source_ids": [
+      "us-fda-5696b24295"
+    ]
+  },
+  {
+    "title": "October 30, 2026: Dermatologic and Ophthalmic Drugs Advisory Committee Meeting Announcement - 10/30/2026",
+    "url": "http://www.fda.gov/advisory-committees/advisory-committee-calendar/october-30-2026-dermatologic-and-ophthalmic-drugs-advisory-committee-meeting-announcement-10302026",
+    "native_id": "http://www.fda.gov/advisory-committees/advisory-committee-calendar/october-30-2026-dermatologic-and-ophthalmic-drugs-advisory-committee-meeting-announcement-10302026",
+    "published_at": "2026-10-28T14:36:34+00:00",
+    "published_raw": "Wed, 28 Oct 2026 10:36:34 EDT",
+    "summary": "October 30, 2026: Dermatologic and Ophthalmic Drugs Advisory Committee Meeting Announcement",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Food and Drug Administration — What's New: Drugs",
+      "jurisdiction": "US",
+      "family": "product_permissions_and_safety"
+    },
+    "primary_source_id": "us-fda-5696b24295",
+    "n": 6381,
+    "first_seen": "2026-10-23T17:53:51.765604+00:00",
+    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "source_ids": [
+      "us-fda-5696b24295"
+    ]
+  },
+  {
+    "title": "Generic Drug Facilities, Sites and Organization Lists",
+    "url": "http://www.fda.gov/industry/generic-drug-user-fee-amendments/generic-drug-facilities-sites-and-organization-lists",
+    "native_id": "http://www.fda.gov/industry/generic-drug-user-fee-amendments/generic-drug-facilities-sites-and-organization-lists",
+    "published_at": "2026-10-28T12:38:51+00:00",
+    "published_raw": "Wed, 28 Oct 2026 08:38:51 EDT",
+    "summary": "Generic Drug Facilities, Sites and Organization Lists",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Food and Drug Administration — What's New: Drugs",
+      "jurisdiction": "US",
+      "family": "product_permissions_and_safety"
+    },
+    "primary_source_id": "us-fda-5696b24295",
+    "n": 6652,
+    "first_seen": "2026-10-26T19:21:36.282284+00:00",
+    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "source_ids": [
+      "us-fda-5696b24295"
+    ]
+  },
+  {
+    "title": "Joint statement by High Representative/Vice-President Kallas and Commissioner Kos on the early parliamentary elections in Serbia",
+    "url": "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2275",
+    "native_id": "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2275",
+    "published_at": "2026-10-27T17:09:52+00:00",
+    "published_raw": "Tue, 27 Oct 2026 17:09:52 GMT",
+    "summary": "European Commission Statement Brussels, 28 Oct 2026 On Sunday 25 October, the people of Serbia turned out in historic numbers to make their voices heard. Voters have given the next government a strong mandate for change. We look forward to seeing this being realised in practice.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "European Commission press and decisions",
+      "jurisdiction": "EU",
+      "family": "executive_and_regulatory"
+    },
+    "primary_source_id": "eu-commission-07d4f58ccf",
+    "n": 6900,
+    "first_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "source_ids": [
+      "eu-commission-07d4f58ccf"
+    ]
+  },
+  {
+    "title": "DCPD-202600650 - Remarks Announcing the Siting of a Mesabi Metallics Steel Manufacturing Facility in Southeastern Iowa and an Exchange With Reporters",
+    "url": "https://www.govinfo.gov/app/details/DCPD-202600650",
+    "native_id": "DCPD-202600650",
+    "published_at": "2026-10-28T12:22:00+00:00",
+    "published_raw": "Wed, 28 Oct 2026 12:22:00 +0000",
+    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "presidential_document",
+      "document_stage": "presidential_document_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Compilation of Presidential Documents",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-dcpd",
+    "n": 6957,
+    "first_seen": "2026-10-28T07:15:21.187665+00:00",
+    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "source_ids": [
+      "us-govinfo-dcpd"
+    ]
+  },
+  {
+    "title": "DCPD-202600649 - Remarks to Reporters Upon Arrival From Chicago, Illinois",
+    "url": "https://www.govinfo.gov/app/details/DCPD-202600649",
+    "native_id": "DCPD-202600649",
+    "published_at": "2026-10-28T12:22:00+00:00",
+    "published_raw": "Wed, 28 Oct 2026 12:22:00 +0000",
+    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "presidential_document",
+      "document_stage": "presidential_document_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Compilation of Presidential Documents",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-dcpd",
+    "n": 6958,
+    "first_seen": "2026-10-28T07:15:21.187665+00:00",
+    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "source_ids": [
+      "us-govinfo-dcpd"
+    ]
+  },
+  {
+    "title": "DCPD-202600646 - Remarks and an Exchange With Reporters Upon Arrival in Chicago, Illinois",
+    "url": "https://www.govinfo.gov/app/details/DCPD-202600646",
+    "native_id": "DCPD-202600646",
+    "published_at": "2026-10-28T12:22:00+00:00",
+    "published_raw": "Wed, 28 Oct 2026 12:22:00 +0000",
+    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "presidential_document",
+      "document_stage": "presidential_document_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Compilation of Presidential Documents",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-dcpd",
+    "n": 6959,
+    "first_seen": "2026-10-28T07:15:21.187665+00:00",
+    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "source_ids": [
+      "us-govinfo-dcpd"
+    ]
+  },
+  {
+    "title": "DCPD-202600648 - Remarks and an Exchange With Reporters Upon Arrival at Joint Base Andrews, Maryland",
+    "url": "https://www.govinfo.gov/app/details/DCPD-202600648",
+    "native_id": "DCPD-202600648",
+    "published_at": "2026-10-28T12:21:00+00:00",
+    "published_raw": "Wed, 28 Oct 2026 12:21:00 +0000",
+    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "presidential_document",
+      "document_stage": "presidential_document_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Compilation of Presidential Documents",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-dcpd",
+    "n": 6960,
+    "first_seen": "2026-10-28T07:15:21.187665+00:00",
+    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "source_ids": [
+      "us-govinfo-dcpd"
+    ]
+  },
+  {
+    "title": "DCPD-202600647 - Remarks at the Presidents Cup Golf Tournament in Medinah, Illinois",
+    "url": "https://www.govinfo.gov/app/details/DCPD-202600647",
+    "native_id": "DCPD-202600647",
+    "published_at": "2026-10-28T12:21:00+00:00",
+    "published_raw": "Wed, 28 Oct 2026 12:21:00 +0000",
+    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "presidential_document",
+      "document_stage": "presidential_document_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Compilation of Presidential Documents",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-dcpd",
+    "n": 6961,
+    "first_seen": "2026-10-28T07:15:21.187665+00:00",
+    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "source_ids": [
+      "us-govinfo-dcpd"
     ]
   }
 ]

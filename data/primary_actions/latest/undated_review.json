@@ -1,26 +1,50 @@
 [
   {
-    "title": "What They Are Saying: Stakeholders Support 800 MHz Cellular Spectrum for Drone Operations",
-    "url": "https://www.fcc.gov/edoc/426222",
-    "native_id": "426222",
+    "title": "USITC Makes Determinations In Five-Year (Sunset) Reviews Concerning Prestressed Concrete Steel Wire Strand From China",
+    "url": "https://www.usitc.gov/press_room/news_release/2026/er1028_69416.htm",
+    "native_id": "https://www.usitc.gov/press_room/news_release/2026/er1028_69416.htm",
     "published_at": null,
-    "published_raw": "",
-    "summary": ".",
+    "published_raw": null,
+    "summary": "",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — News Releases",
+      "issuer": "United States International Trade Commission",
       "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
+      "family": "trade_and_judicial"
     },
-    "primary_source_id": "us-fcc-685c5e7dd2",
-    "n": 6995,
-    "first_seen": "2026-10-28T07:15:21.187665+00:00",
-    "last_seen": "2026-10-28T07:15:21.187665+00:00",
+    "primary_source_id": "us-itc-index",
+    "n": 7178,
+    "first_seen": "2026-10-28T19:21:07.640451+00:00",
+    "last_seen": "2026-10-28T19:21:07.640451+00:00",
     "source_ids": [
-      "us-fcc-685c5e7dd2"
+      "us-itc-index"
+    ]
+  },
+  {
+    "title": "Miscellaneous Order",
+    "url": "https://www.supremecourt.gov/orders/courtorders/102726zr_o759.pdf",
+    "native_id": "https://www.supremecourt.gov/orders/courtorders/102726zr_o759.pdf",
+    "published_at": null,
+    "published_raw": null,
+    "summary": "",
+    "source_metadata": {
+      "document_type": "court_order",
+      "document_stage": "judicial_order_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Supreme Court orders of the Court",
+      "jurisdiction": "US",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "us-supreme-court-orders-index",
+    "n": 7214,
+    "first_seen": "2026-10-28T19:21:07.640451+00:00",
+    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "source_ids": [
+      "us-supreme-court-orders-index"
     ]
   }
 ]
