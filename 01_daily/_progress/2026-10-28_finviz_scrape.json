@@ -5,8 +5,8 @@
   "run_id": "40655995572",
   "model": "",
   "started_at": "2026-10-28T04:32:31-04:00",
-  "updated_at": "2026-10-28T04:33:02-04:00",
-  "heartbeat_at": "2026-10-28T04:33:02-04:00",
+  "updated_at": "2026-10-28T04:33:06-04:00",
+  "heartbeat_at": "2026-10-28T04:33:06-04:00",
   "stages": [
     {
       "name": "elite",
@@ -32,11 +32,11 @@
     },
     {
       "name": "homepage",
-      "state": "pending",
+      "state": "ok",
       "started_at": "",
-      "ended_at": "",
+      "ended_at": "2026-10-28T04:33:06-04:00",
       "heartbeat_at": "",
-      "done": 0,
+      "done": 1,
       "total": 1,
       "model": "",
       "error": ""
