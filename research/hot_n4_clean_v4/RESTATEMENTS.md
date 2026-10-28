@@ -46,13 +46,17 @@ The 09:41 ET open fill sealed `yahoo_split_adjusted_daily_open` from bars that w
 - study: `hot_n4_clean_v4`, recipes `union_hot_n4_h1__w0` and `union_hot_n4_holdup__w0`
 - rule: every buy and sell leg's Yahoo bar must be dated the session in America/New_York. A missing bar or any other date does not seal. The run exits non-zero and writes nothing. A fill that equals the prior session's open or close while that session bar is absent is the same refusal.
 - code: `open_fill_main` in `research/hot_n4_clean_v4/forward/forward.py`. Holdup and h1 share that entry point.
-- sealed lines: unchanged. No 2026-09-28 correction was written.
+- sealed lines: unchanged. The 2026-09-28 correction that was later appended is recorded in the next section, "2026-09-28 — Open fill correction for the stale bar".
 
 ## 2026-09-28 — Open fill correction for the stale bar
 
-The sealed 2026-09-28 open fills stay as written. A later `open_fill_correction` is the open fill the close, the next plan, and the pages use. Keeping the sealed share counts at the true opens would spend cash the book does not have. The correction reruns the open-fill sizing code on the sealed plan at the stored 2026-09-28 opens, so the share counts are the code's. This entry does not append that line.
+The sealed 2026-09-28 open fills were not edited. An `open_fill_correction` was appended to both logs and both ledgers. That line is the open fill the close, the next plan, and the pages use. The correction reruns the open-fill sizing code on the sealed plan at the stored 2026-09-28 opens, so the share counts are the code's. h1 cash after the correction is $1.40. Holdup cash is $5.77. Both are positive. P&L is still pending because the close has not run.
+
+Price changes are only SRFM and SECZ. h1 SRFM went from 3,511 shares at 0.9439 to 2,941 at 1.125, and SECZ from 169 shares at 16.209999 to 169 at 16.00. Holdup SRFM went from 1,313 at 0.9439 to 1,100 at 1.125, and SECZ from 58 at 16.209999 to 58 at 16.00.
+
+FEAM and SHMD prices did not change (2.75 and 4.68). Their share counts were cut by the sizing rerun: h1 FEAM 1,215 to 1,211 and SHMD 715 to 713; holdup FEAM 454 to 453 and SHMD 267 to 266. The reason is that SRFM's open was higher, 0.9439 versus 1.125, so keeping the sealed share counts at the true opens would spend cash the book does not have. The rerun cut those two. GLND and TJGC were unchanged. USDE was not part of this line and was not rewritten. Its 09-28 open, 16.85 against 16.56, stays logged outside this correction.
 
 - study: `hot_n4_clean_v4`, recipes `union_hot_n4_h1__w0` and `union_hot_n4_holdup__w0`
 - rule: an `open_fill_correction` references the sealed open fill's sha256 and the plan's sha256. It records reason `stale_bar: previous-session bar used for SRFM, SECZ`, approved_by `Cyrus 2026-09-28 21:02 ET`, the corrected open fill, and the sealed-versus-corrected values for each leg that moved. Cash after the correction must be at least zero. A second identical run appends nothing. The close fill and the book's cash and positions read the latest correction. Sealed lines are not edited.
 - code: `HOLDUP_MODE=correct_open` with `CORRECT_OPEN_DATE` in `research/hot_n4_clean_v4/forward/forward.py`. Holdup and h1 share that entry point. The manual workflow is `.github/workflows/correct_open.yml`. It has no schedule.
-- sealed lines: unchanged. The 2026-09-28 correction was not written to either log or ledger.
+- sealed lines: unchanged. An `open_fill_correction` was appended to both logs and both ledgers. The sealed 2026-09-28 open fills were not edited.
