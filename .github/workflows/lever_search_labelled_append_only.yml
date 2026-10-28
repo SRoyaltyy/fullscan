@@ -1,0 +1,29 @@
+name: Lever search labelled append-only
+on:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  append-only:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Fetch the PR base
+        run: git fetch --no-tags origin "${{ github.event.pull_request.base.sha }}"
+      - name: Append-only unit tests
+        run: PYTHONHASHSEED=0 python3 -m src.test_lever_search_labelled_append
+      - name: Install labelled score test dependencies
+        run: pip install pandas numpy
+      - name: Prereg fingerprint and pin tests
+        env:
+          LEVER_LABELLED_DIFF_BASE: ${{ github.event.pull_request.base.sha }}
+        run: PYTHONHASHSEED=0 python3 -m src.test_lever_search_labelled
+      - name: Same-day bar guard from the initial study
+        run: PYTHONHASHSEED=0 python3 -m src.test_lever_search_bars
+      - name: Fail if an earlier labelled session changed
+        run: python3 -m src.lever_search_labelled_append --check-against "${{ github.event.pull_request.base.sha }}"
