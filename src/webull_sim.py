@@ -2094,9 +2094,37 @@ def collect_books(today: str | None = None) -> dict[str, list[dict]]:
                 gap["sizing"] = modes.pop()
             plans.append(gap)
         plans.sort(key=lambda plan: plan["date"])
+    # Self-heal guard: a book never silently skips a session. From its first
+    # plan day, any session in the calendar with no plan file gets an explicit
+    # sit-out row that says so (add-only; existing rows are untouched).
+    for name, plans in list(books.items()):
+        fill_session_gaps(plans, days)
     for name, plans in static_gap_plans(days).items():
         books.setdefault(name, plans)
     return books
+
+
+MISSING_PLAN_FILE = "no plan file for this session (source did not write one)"
+
+
+def fill_session_gaps(plans: list[dict], days: list[str]) -> None:
+    """Add an empty plan for every calendar day after a book's first plan day that it lacks."""
+    if not plans:
+        return
+    have = {plan["date"] for plan in plans}
+    first = min(have)
+    modes = {plan.get("sizing") for plan in plans if plan.get("sizing")}
+    added = False
+    for day in days:
+        if day <= first or day in have:
+            continue
+        gap = empty_plan(day, MISSING_PLAN_FILE)
+        if len(modes) == 1:
+            gap["sizing"] = next(iter(modes))
+        plans.append(gap)
+        added = True
+    if added:
+        plans.sort(key=lambda plan: plan["date"])
 
 
 def session_calendar(books: dict[str, list[dict]]) -> list[str]:
