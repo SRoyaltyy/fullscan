@@ -1,87 +1,87 @@
 {
   "job": "postclose",
   "date": "2026-10-28",
-  "source_date": "2026-10-27",
+  "source_date": "2026-10-28",
   "target_date": "2026-10-28",
-  "book_date": "2026-10-27",
-  "generated_at": "2026-10-28T04:45:17.480597-04:00",
+  "book_date": "2026-10-28",
+  "generated_at": "2026-10-28T18:43:34.435159-04:00",
   "ok": false,
-  "n_fail": 1,
-  "n_warn": 4,
+  "n_fail": 2,
+  "n_warn": 7,
   "round": 1,
   "fix_actions": null,
   "checks": [
     {
       "step": "clock.map_heat_postclose.yml",
-      "name": "Map heat captain research (post-close) ran on 2026-10-27",
+      "name": "Map heat captain research (post-close) ran on 2026-10-28",
       "group": "clock",
       "status": "WARN",
       "required": false,
-      "detail": "n=0 on 2026-10-27 \u2014 file checks below decide",
+      "detail": "n=0 on 2026-10-28 \u2014 file checks below decide",
       "path": ""
     },
     {
       "step": "clock.postclose_all.yml",
-      "name": "Post-Close ALL ran on 2026-10-27",
+      "name": "Post-Close ALL ran on 2026-10-28",
       "group": "clock",
       "status": "OK",
       "required": false,
-      "detail": "n=3 latest=success event=schedule",
-      "path": "https://github.com/SRoyaltyy/fullscan/actions/runs/40604064770"
+      "detail": "n=1 latest=success event=schedule",
+      "path": "https://github.com/SRoyaltyy/fullscan/actions/runs/40668360681"
     },
     {
       "step": "clock.label_weather.yml",
-      "name": "Label + Weather ran on 2026-10-27",
+      "name": "Label + Weather ran on 2026-10-28",
       "group": "clock",
       "status": "OK",
       "required": false,
       "detail": "n=2 latest=success event=workflow_dispatch",
-      "path": "https://github.com/SRoyaltyy/fullscan/actions/runs/40493981711"
+      "path": "https://github.com/SRoyaltyy/fullscan/actions/runs/40677489084"
     },
     {
       "step": "clock.ab_checklist.yml",
-      "name": "A+B1 Checklist ran on 2026-10-27",
+      "name": "A+B1 Checklist ran on 2026-10-28",
       "group": "clock",
       "status": "OK",
       "required": false,
       "detail": "n=1 latest=success event=workflow_dispatch",
-      "path": "https://github.com/SRoyaltyy/fullscan/actions/runs/40482239012"
+      "path": "https://github.com/SRoyaltyy/fullscan/actions/runs/40665739124"
     },
     {
       "step": "clock.daily_pipeline.yml",
-      "name": "Daily pipeline outcome+reflect ran on 2026-10-27",
+      "name": "Daily pipeline outcome+reflect ran on 2026-10-28",
       "group": "clock",
-      "status": "OK",
+      "status": "WARN",
       "required": false,
-      "detail": "n=1 latest=success event=workflow_dispatch",
-      "path": "https://github.com/SRoyaltyy/fullscan/actions/runs/40457022861"
+      "detail": "n=0 on 2026-10-28 \u2014 file checks below decide",
+      "path": ""
     },
     {
       "step": "clock.sector_daily.yml",
-      "name": "Sector Daily outcome+reflect ran on 2026-10-27",
+      "name": "Sector Daily outcome+reflect ran on 2026-10-28",
       "group": "clock",
-      "status": "OK",
+      "status": "WARN",
       "required": false,
-      "detail": "n=1 latest=success event=workflow_dispatch",
-      "path": "https://github.com/SRoyaltyy/fullscan/actions/runs/40457026053"
+      "detail": "n=0 on 2026-10-28 \u2014 file checks below decide",
+      "path": ""
     },
     {
       "step": "clock.learn_cycle.yml",
-      "name": "Learn Cycle ran on 2026-10-27",
+      "name": "Learn Cycle ran on 2026-10-28",
       "group": "clock",
-      "status": "OK",
+      "status": "WARN",
       "required": false,
-      "detail": "n=1 latest=success event=workflow_dispatch",
-      "path": "https://github.com/SRoyaltyy/fullscan/actions/runs/40467980636"
+      "detail": "n=0 on 2026-10-28 \u2014 file checks below decide",
+      "path": ""
     },
     {
       "step": "clock.stock_book_all.yml",
-      "name": "Stock Book ALL ran on 2026-10-27",
+      "name": "Stock Book ALL ran on 2026-10-28",
       "group": "clock",
       "status": "OK",
       "required": false,
-      "detail": "n=8 latest=success event=schedule",
-      "path": "https://github.com/SRoyaltyy/fullscan/actions/runs/40562501151"
+      "detail": "n=4 latest=success event=workflow_run",
+      "path": "https://github.com/SRoyaltyy/fullscan/actions/runs/40750269812"
     },
     {
       "step": "postclose.map_heat_json",
@@ -89,7 +89,7 @@
       "group": "postclose",
       "status": "OK",
       "required": true,
-      "detail": "phase=morning_overlay 276739 bytes",
+      "detail": "phase=morning_overlay 277519 bytes",
       "path": "/home/runner/work/fullscan/fullscan/01_daily/map_heat/2026-10-28_map_heat.json"
     },
     {
@@ -98,16 +98,16 @@
       "group": "postclose",
       "status": "OK",
       "required": false,
-      "detail": "18512 bytes",
+      "detail": "18510 bytes",
       "path": "/home/runner/work/fullscan/fullscan/01_daily/map_heat/2026-10-28_map_heat.md"
     },
     {
       "step": "postclose.baseline_json",
       "name": "2026-10-28_research_baseline.json (captain cards)",
       "group": "postclose",
-      "status": "OK",
+      "status": "FAIL",
       "required": true,
-      "detail": "phase=postclose_baseline 187519 bytes",
+      "detail": "PASS-OVER from source_heat_date=2026-10-27 (want 2026-10-28)",
       "path": "/home/runner/work/fullscan/fullscan/01_daily/map_heat/2026-10-28_research_baseline.json"
     },
     {
@@ -144,7 +144,7 @@
       "status": "OK",
       "required": true,
       "detail": "11030866 bytes",
-      "path": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-10-27.csv"
+      "path": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-10-28.csv"
     },
     {
       "step": "book.membership",
@@ -153,7 +153,7 @@
       "status": "OK",
       "required": true,
       "detail": "1122695 bytes",
-      "path": "/home/runner/work/fullscan/fullscan/data/universe/2026-10-27_membership.csv"
+      "path": "/home/runner/work/fullscan/fullscan/data/universe/2026-10-28_membership.csv"
     },
     {
       "step": "book.weather",
@@ -161,8 +161,8 @@
       "group": "book",
       "status": "OK",
       "required": true,
-      "detail": "9869 bytes",
-      "path": "/home/runner/work/fullscan/fullscan/01_daily/weather/2026-10-27_weather.json"
+      "detail": "9722 bytes",
+      "path": "/home/runner/work/fullscan/fullscan/01_daily/weather/2026-10-28_weather.json"
     },
     {
       "step": "book.weather_sectors",
@@ -179,8 +179,8 @@
       "group": "book",
       "status": "OK",
       "required": true,
-      "detail": "2287474 bytes",
-      "path": "/home/runner/work/fullscan/fullscan/data/join/2026-10-27_ranked.csv"
+      "detail": "2262270 bytes",
+      "path": "/home/runner/work/fullscan/fullscan/data/join/2026-10-28_ranked.csv"
     },
     {
       "step": "book.ab_raw",
@@ -188,8 +188,8 @@
       "group": "book",
       "status": "OK",
       "required": false,
-      "detail": "7561499 bytes",
-      "path": "/home/runner/work/fullscan/fullscan/data/ab_checklist/2026-10-27_ab_checklist.csv"
+      "detail": "7554130 bytes",
+      "path": "/home/runner/work/fullscan/fullscan/data/ab_checklist/2026-10-28_ab_checklist.csv"
     },
     {
       "step": "book.ab",
@@ -197,8 +197,8 @@
       "group": "book",
       "status": "OK",
       "required": true,
-      "detail": "8352418 bytes",
-      "path": "/home/runner/work/fullscan/fullscan/data/ab_checklist/2026-10-27_ab_checklist_enriched.csv"
+      "detail": "8363020 bytes",
+      "path": "/home/runner/work/fullscan/fullscan/data/ab_checklist/2026-10-28_ab_checklist_enriched.csv"
     },
     {
       "step": "book.peers",
@@ -207,7 +207,7 @@
       "status": "OK",
       "required": true,
       "detail": "821534 bytes",
-      "path": "/home/runner/work/fullscan/fullscan/data/peers/2026-10-27_peer_rs.csv"
+      "path": "/home/runner/work/fullscan/fullscan/data/peers/2026-10-28_peer_rs.csv"
     },
     {
       "step": "book.book_json",
@@ -215,8 +215,8 @@
       "group": "book",
       "status": "OK",
       "required": true,
-      "detail": "1418050 bytes",
-      "path": "/home/runner/work/fullscan/fullscan/data/stock_book/2026-10-27_stock_book.json"
+      "detail": "1152552 bytes",
+      "path": "/home/runner/work/fullscan/fullscan/data/stock_book/2026-10-28_stock_book.json"
     },
     {
       "step": "book.green_json",
@@ -224,8 +224,8 @@
       "group": "book",
       "status": "OK",
       "required": true,
-      "detail": "2424 bytes",
-      "path": "/home/runner/work/fullscan/fullscan/data/stock_book/2026-10-27_green.json"
+      "detail": "585 bytes",
+      "path": "/home/runner/work/fullscan/fullscan/data/stock_book/2026-10-28_green.json"
     },
     {
       "step": "book.book_md",
@@ -233,8 +233,8 @@
       "group": "book",
       "status": "OK",
       "required": true,
-      "detail": "71599 bytes",
-      "path": "/home/runner/work/fullscan/fullscan/01_daily/2026-10-27_stock_book.md"
+      "detail": "47817 bytes",
+      "path": "/home/runner/work/fullscan/fullscan/01_daily/2026-10-28_stock_book.md"
     },
     {
       "step": "book.backtest",
@@ -279,7 +279,7 @@
       "status": "FAIL",
       "required": true,
       "detail": "DID NOT RUN \u2014 file missing",
-      "path": "/home/runner/work/fullscan/fullscan/01_daily/general/2026-10-27_outcome.md"
+      "path": "/home/runner/work/fullscan/fullscan/01_daily/general/2026-10-28_outcome.md"
     },
     {
       "step": "outcome.reflect",
@@ -288,7 +288,7 @@
       "status": "WARN",
       "required": false,
       "detail": "DID NOT RUN \u2014 file missing",
-      "path": "/home/runner/work/fullscan/fullscan/01_daily/general/2026-10-27_reflect.md"
+      "path": "/home/runner/work/fullscan/fullscan/01_daily/general/2026-10-28_reflect.md"
     },
     {
       "step": "outcome.candidate",
@@ -310,12 +310,12 @@
     },
     {
       "step": "learn.dated",
-      "name": "2026-10-27_learnings.md (session copy)",
+      "name": "2026-10-28_learnings.md (session copy)",
       "group": "learn",
       "status": "OK",
       "required": true,
-      "detail": "47585 bytes",
-      "path": "/home/runner/work/fullscan/fullscan/01_daily/2026-10-27_learnings.md"
+      "detail": "47567 bytes",
+      "path": "/home/runner/work/fullscan/fullscan/01_daily/2026-10-28_learnings.md"
     },
     {
       "step": "learn.learnings",
@@ -323,7 +323,7 @@
       "group": "learn",
       "status": "OK",
       "required": true,
-      "detail": "47585 bytes",
+      "detail": "47567 bytes",
       "path": "/home/runner/work/fullscan/fullscan/03_scoreboard/LEARNINGS.md"
     },
     {
@@ -332,7 +332,7 @@
       "group": "learn",
       "status": "OK",
       "required": true,
-      "detail": "20190 bytes",
+      "detail": "20169 bytes",
       "path": "/home/runner/work/fullscan/fullscan/00_grounding/mutable_policy.md"
     },
     {
@@ -341,7 +341,7 @@
       "group": "learn",
       "status": "FAIL",
       "required": false,
-      "detail": "PASS-OVER from asof=2026-10-26 (want 2026-10-27)",
+      "detail": "PASS-OVER from asof=2026-10-26 (want 2026-10-28)",
       "path": "/home/runner/work/fullscan/fullscan/00_grounding/book_policy.json"
     },
     {
