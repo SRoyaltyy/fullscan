@@ -1,6 +1,6 @@
 {
   "date": "2026-10-28",
-  "generated_at": "2026-10-28T08:19:32.906076-04:00",
+  "generated_at": "2026-10-28T08:19:40.361042-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -750,10 +750,10 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=5901",
-          "size": 2216976,
-          "said": "209 rows",
+          "size": 2218150,
+          "said": "220 rows",
           "bullets": [
-            "HALO, ONC, LLY, HRMY, ETON, ARQT, AVAH, CORT"
+            "GLBE, SHOO, HLNE, VCTR, WT, HOOD, AAMI, ANF"
           ]
         },
         {
@@ -831,9 +831,9 @@
           "bullets": []
         }
       ],
-      "said": "209 rows",
+      "said": "220 rows",
       "bullets": [
-        "HALO, ONC, LLY, HRMY, ETON"
+        "GLBE, SHOO, HLNE, VCTR, WT"
       ]
     },
     {
@@ -1515,6 +1515,24 @@
         }
       ],
       "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-10-28\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-10-28",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-28T08:19:39.567892-04:00",
+      "files": [
+        {
+          "path": "data/join/2026-10-28_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2218150,
+          "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 GLBE, SHOO, HLNE, VCTR, WT"
+        }
+      ],
+      "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 GLBE, SHOO, HLNE, VCTR, WT"
     }
   ],
   "href": {
