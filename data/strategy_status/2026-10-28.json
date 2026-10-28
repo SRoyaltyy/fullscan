@@ -11,8 +11,8 @@
    "SIT": 90
   },
   "factor_mine_preopen": {
-   "MISSING": 2,
-   "OK": 0,
+   "MISSING": 0,
+   "OK": 2,
    "SIT": 0
   },
   "flatten_robust": {
@@ -26,8 +26,8 @@
    "SIT": 0
   },
   "holdup": {
-   "MISSING": 1,
-   "OK": 0,
+   "MISSING": 0,
+   "OK": 1,
    "SIT": 0
   },
   "paper": {
@@ -52,7 +52,7 @@
   }
  },
  "date": "2026-10-28",
- "generated_at": "2026-10-28T08:21:51-04:00",
+ "generated_at": "2026-10-28T09:26:31-04:00",
  "strategies": [
   {
    "buys": [
@@ -5252,22 +5252,32 @@
    "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "SLN",
+    "PRME",
+    "MRVI",
+    "RH"
+   ],
    "family": "factor_mine_preopen",
    "name": "union_hot_n4_h1_preopen",
-   "note": "no pre-open seal",
+   "note": "",
    "sells": [],
    "source": "data/factor_mine/preopen/seals/2026-10-28.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "SLN",
+    "PRME",
+    "MRVI",
+    "RH"
+   ],
    "family": "factor_mine_preopen",
    "name": "union_hot_n4_holdup_preopen",
-   "note": "no pre-open seal",
+   "note": "",
    "sells": [],
    "source": "data/factor_mine/preopen/seals/2026-10-28.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [],
@@ -5279,13 +5289,21 @@
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "ENVX",
+    "QSI",
+    "CRML",
+    "HRI"
+   ],
    "family": "holdup",
    "name": "holdup",
-   "note": "no sealed plan row",
-   "sells": [],
+   "note": "sealed 2026-10-28T13:18:41Z",
+   "sells": [
+    "LQDA 47",
+    "UWMC 1428"
+   ],
    "source": "research/hot_n4_clean_v4/forward/holdup_log.jsonl",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [],
