@@ -373,8 +373,8 @@
       }
     }
   },
-  "version": 125,
-  "updated": "2026-10-27T16:33:31-04:00",
+  "version": 126,
+  "updated": "2026-10-27T20:02:09-04:00",
   "rules": {
     "min_n": 8,
     "mute_below": 0.45,
@@ -383,13 +383,6 @@
     "bonus_mult": 1.25
   },
   "history": [
-    {
-      "at": "2026-10-08T16:54:11-04:00",
-      "changes": [
-        "Communication Services.S2_BREADTH: 0.5 -> 0.0 (n=14, hit=0.429)",
-        "Consumer Cyclical.S1_SECTOR_FACTORS: 1.0 -> 0.5 (n=22, hit=0.545)"
-      ]
-    },
     {
       "at": "2026-10-08T20:23:41-04:00",
       "changes": [
@@ -747,6 +740,12 @@
     },
     {
       "at": "2026-10-27T16:33:31-04:00",
+      "changes": [
+        "hold"
+      ]
+    },
+    {
+      "at": "2026-10-27T20:02:09-04:00",
       "changes": [
         "hold"
       ]
