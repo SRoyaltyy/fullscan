@@ -4716,6 +4716,14 @@
       "workflow": "Finviz ALL (GH-hosted Elite)",
       "run_id": "40646087256",
       "manifest": "research/input_freeze/2026-10-27/manifest.json"
+    },
+    {
+      "path": "data/exports/finviz_2026-10-27.csv",
+      "at": "2026-10-28T03:36:48-04:00",
+      "commit_msg": "auto: finviz ALL (export+digest+groups+tape+colors) [2026-10-27]",
+      "workflow": "Finviz ALL (GH-hosted Elite)",
+      "run_id": "40646087256",
+      "manifest": "research/input_freeze/2026-10-27/manifest.json"
     }
   ]
 }
