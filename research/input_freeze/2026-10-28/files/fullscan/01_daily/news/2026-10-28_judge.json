@@ -1,0 +1,8 @@
+{
+ "risk_tilt": null,
+ "macros": [],
+ "sector_tilts": {},
+ "tickers": {},
+ "b1_inject": "NEWS_JUDGE: n=7 rescued=2\nMACRO FOMC: [rates] hawkish-hold/skip-vs-hike pending caps beta (regime/1d-1w)\nMACRO Treasury: [rates] $2T deficit + 5% yields pressure multiples (session/1w-1m)\nSECTOR Energy: [risk] Houthi Ras Tanura missile + OPEC+ steady supports XLE but risk-off (XLE)\nSECTOR Industrials: [sector_fundamental] Boeing 737 MAX 10 FAA halt pressures BA/XLI (XLI)\nSECTOR Semis/AI: [sector_fundamental] OpenAI Google-chip plan/SK Hynix beat vs NXP/Fabrinet weakness (SMH)\nSECTOR Healthcare: [sector_fundamental] ABBV approval/AMGN Phase 3 positive offset BSX/CI downgrades (XLV)\nSECTOR Gold miners: [rates] AEM/gold drop on hawkish Fed hike odds (basket)\nINTERACTION: FOMC+gold=yield cluster; semis mixed; healthcare mixed; energy risk-off\nWATCH: no futures snapshot; FOMC binary caps conviction",
+ "date": "2026-10-28"
+}

@@ -1,0 +1,472 @@
+{
+  "date": "2026-10-28",
+  "horizons": {
+    "1d": {
+      "buy": [
+        {
+          "ticker": "HITI",
+          "score": 0.49165679287531155
+        },
+        {
+          "ticker": "ADCT",
+          "score": 0.6135328149294949
+        },
+        {
+          "ticker": "AUTL",
+          "score": 0.38286776364943287
+        },
+        {
+          "ticker": "SIRI",
+          "score": -0.10637014703421044
+        },
+        {
+          "ticker": "FDMT",
+          "score": 0.2797668972065114
+        }
+      ],
+      "sell": [
+        {
+          "ticker": "OKLO",
+          "score": -0.18037042822466753
+        },
+        {
+          "ticker": "NEOV",
+          "score": -0.3817004690030632
+        },
+        {
+          "ticker": "FCEL",
+          "score": -0.26002413861545004
+        },
+        {
+          "ticker": "POWL",
+          "score": -0.12990880554552992
+        },
+        {
+          "ticker": "NNDM",
+          "score": -0.09482459726552112
+        },
+        {
+          "ticker": "EOSE",
+          "score": -0.32039427549971217
+        },
+        {
+          "ticker": "TE",
+          "score": -0.2452531135286115
+        },
+        {
+          "ticker": "LUNR",
+          "score": -0.2570752581225146
+        }
+      ]
+    },
+    "3d": {
+      "buy": [
+        {
+          "ticker": "ETD",
+          "score": 0.5824984297890765
+        },
+        {
+          "ticker": "AUTL",
+          "score": 0.40400826110541155
+        },
+        {
+          "ticker": "SRRK",
+          "score": 0.3687487506585574
+        },
+        {
+          "ticker": "BRKR",
+          "score": 0.3627333033295912
+        },
+        {
+          "ticker": "NEO",
+          "score": 0.33938559602960994
+        },
+        {
+          "ticker": "VET",
+          "score": 0.23294764790202385
+        },
+        {
+          "ticker": "SMWB",
+          "score": 0.13165968064395567
+        },
+        {
+          "ticker": "SIRI",
+          "score": -0.16339923529320394
+        }
+      ],
+      "sell": [
+        {
+          "ticker": "ROIV",
+          "score": -0.7452554011745496
+        },
+        {
+          "ticker": "SOC",
+          "score": -0.5399521329838184
+        },
+        {
+          "ticker": "BNTX",
+          "score": -0.5376701489264997
+        },
+        {
+          "ticker": "EYPT",
+          "score": -0.5294674831294673
+        },
+        {
+          "ticker": "WVE",
+          "score": -0.5205855504767087
+        },
+        {
+          "ticker": "ALMS",
+          "score": -0.5062238728667698
+        },
+        {
+          "ticker": "VNET",
+          "score": -0.5046089175979609
+        },
+        {
+          "ticker": "AXSM",
+          "score": -0.5039671231438941
+        },
+        {
+          "ticker": "ASPI",
+          "score": -0.48619835159129315
+        },
+        {
+          "ticker": "CNXC",
+          "score": -0.47760974095400505
+        },
+        {
+          "ticker": "SSTK",
+          "score": -0.47754270117890063
+        },
+        {
+          "ticker": "BIDU",
+          "score": -0.47620138972277215
+        },
+        {
+          "ticker": "LFMD",
+          "score": -0.4758849891275484
+        },
+        {
+          "ticker": "CRVS",
+          "score": -0.47498219384313817
+        },
+        {
+          "ticker": "ANGI",
+          "score": -0.4665120522940003
+        }
+      ]
+    },
+    "1w": {
+      "buy": [
+        {
+          "ticker": "ETD",
+          "score": 0.6300967215625757
+        },
+        {
+          "ticker": "AUTL",
+          "score": 0.41789528820883504
+        },
+        {
+          "ticker": "BRKR",
+          "score": 0.3776741664854574
+        },
+        {
+          "ticker": "SRRK",
+          "score": 0.36928506697867514
+        },
+        {
+          "ticker": "NEO",
+          "score": 0.357993272739071
+        },
+        {
+          "ticker": "VET",
+          "score": 0.23631406889824236
+        },
+        {
+          "ticker": "SMWB",
+          "score": 0.13523572296655867
+        },
+        {
+          "ticker": "SIRI",
+          "score": -0.19902196304591496
+        }
+      ],
+      "sell": [
+        {
+          "ticker": "ROIV",
+          "score": -0.807550660572411
+        },
+        {
+          "ticker": "SOC",
+          "score": -0.6060039121949075
+        },
+        {
+          "ticker": "BNTX",
+          "score": -0.5996334765655893
+        },
+        {
+          "ticker": "EYPT",
+          "score": -0.5918831014772884
+        },
+        {
+          "ticker": "WVE",
+          "score": -0.5875962597314
+        },
+        {
+          "ticker": "ALMS",
+          "score": -0.5714706149223319
+        },
+        {
+          "ticker": "VNET",
+          "score": -0.571199568657832
+        },
+        {
+          "ticker": "AXSM",
+          "score": -0.5675486184747619
+        },
+        {
+          "ticker": "ASPI",
+          "score": -0.551331491744484
+        },
+        {
+          "ticker": "CNXC",
+          "score": -0.5395146967141322
+        },
+        {
+          "ticker": "SSTK",
+          "score": -0.5383111594919218
+        },
+        {
+          "ticker": "CRVS",
+          "score": -0.5380535521421388
+        },
+        {
+          "ticker": "BIDU",
+          "score": -0.5376569537372395
+        },
+        {
+          "ticker": "LFMD",
+          "score": -0.5347052351881353
+        },
+        {
+          "ticker": "ANGI",
+          "score": -0.5276853009532142
+        }
+      ]
+    },
+    "2w": {
+      "buy": [
+        {
+          "ticker": "ETD",
+          "score": 0.6653656120865226
+        },
+        {
+          "ticker": "AUTL",
+          "score": 0.4291608183547101
+        },
+        {
+          "ticker": "BRKR",
+          "score": 0.3784346977677689
+        },
+        {
+          "ticker": "SRRK",
+          "score": 0.3697848237246804
+        },
+        {
+          "ticker": "NEO",
+          "score": 0.367956268226318
+        },
+        {
+          "ticker": "VET",
+          "score": 0.23324206570103279
+        },
+        {
+          "ticker": "SMWB",
+          "score": 0.13570843515009162
+        },
+        {
+          "ticker": "SIRI",
+          "score": -0.22998849011050776
+        }
+      ],
+      "sell": [
+        {
+          "ticker": "ROIV",
+          "score": -0.8495140576290421
+        },
+        {
+          "ticker": "SOC",
+          "score": -0.6527407485482466
+        },
+        {
+          "ticker": "BNTX",
+          "score": -0.6431560169918626
+        },
+        {
+          "ticker": "EYPT",
+          "score": -0.6371258900935793
+        },
+        {
+          "ticker": "WVE",
+          "score": -0.633811358258946
+        },
+        {
+          "ticker": "VNET",
+          "score": -0.6185143207512378
+        },
+        {
+          "ticker": "ALMS",
+          "score": -0.6184154459704607
+        },
+        {
+          "ticker": "AXSM",
+          "score": -0.6096600984334044
+        },
+        {
+          "ticker": "ASPI",
+          "score": -0.5962563734399897
+        },
+        {
+          "ticker": "CNXC",
+          "score": -0.5842212942730101
+        },
+        {
+          "ticker": "CRVS",
+          "score": -0.5839969084680039
+        },
+        {
+          "ticker": "BIDU",
+          "score": -0.5819245249925228
+        },
+        {
+          "ticker": "SSTK",
+          "score": -0.576966904181517
+        },
+        {
+          "ticker": "LFMD",
+          "score": -0.5729626010616105
+        },
+        {
+          "ticker": "ANGI",
+          "score": -0.5677543032865265
+        }
+      ]
+    },
+    "1m": {
+      "buy": [
+        {
+          "ticker": "ETD",
+          "score": 0.717928088192372
+        },
+        {
+          "ticker": "AUTL",
+          "score": 0.44449283029071357
+        },
+        {
+          "ticker": "BRKR",
+          "score": 0.394633896069121
+        },
+        {
+          "ticker": "NEO",
+          "score": 0.3884018917848084
+        },
+        {
+          "ticker": "SRRK",
+          "score": 0.3703258343718691
+        },
+        {
+          "ticker": "VET",
+          "score": 0.23680330629372165
+        },
+        {
+          "ticker": "SMWB",
+          "score": 0.1396454420685596
+        },
+        {
+          "ticker": "SIRI",
+          "score": -0.26942780560742835
+        }
+      ],
+      "sell": [
+        {
+          "ticker": "ROIV",
+          "score": -0.9181654202354208
+        },
+        {
+          "ticker": "SOC",
+          "score": -0.7255572699924067
+        },
+        {
+          "ticker": "BNTX",
+          "score": -0.7114924957150414
+        },
+        {
+          "ticker": "WVE",
+          "score": -0.7076556367624462
+        },
+        {
+          "ticker": "EYPT",
+          "score": -0.7059613752460473
+        },
+        {
+          "ticker": "VNET",
+          "score": -0.6919379951591331
+        },
+        {
+          "ticker": "ALMS",
+          "score": -0.6903683211999625
+        },
+        {
+          "ticker": "AXSM",
+          "score": -0.6797265010223885
+        },
+        {
+          "ticker": "ASPI",
+          "score": -0.6680364121970377
+        },
+        {
+          "ticker": "CRVS",
+          "score": -0.6535689719445221
+        },
+        {
+          "ticker": "CNXC",
+          "score": -0.6524910327859739
+        },
+        {
+          "ticker": "BIDU",
+          "score": -0.6497239363562046
+        },
+        {
+          "ticker": "SSTK",
+          "score": -0.643847369427897
+        },
+        {
+          "ticker": "LFMD",
+          "score": -0.6377160443718218
+        },
+        {
+          "ticker": "LBTYK",
+          "score": -0.6363525201738158
+        }
+      ]
+    }
+  },
+  "buy_1d": [
+    "HITI",
+    "ADCT",
+    "AUTL",
+    "SIRI",
+    "FDMT"
+  ],
+  "sell_1d": [
+    "OKLO",
+    "NEOV",
+    "FCEL",
+    "POWL",
+    "NNDM",
+    "EOSE",
+    "TE",
+    "LUNR"
+  ]
+}

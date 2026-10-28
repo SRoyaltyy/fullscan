@@ -1,0 +1,108 @@
+{
+  "date": "2026-10-28",
+  "generated_at": "2026-10-28T05:51:30.114091-04:00",
+  "timezone": "America/New_York",
+  "source": "live",
+  "source_url": "https://elite.finviz.com/",
+  "archive_snapshot_ts": null,
+  "archive_snapshot_at": null,
+  "archive_url": null,
+  "clock_legal": true,
+  "clock_same_morning": true,
+  "clock_use": "same_morning",
+  "clock_legal_for": "2026-10-28",
+  "clock_rule": "Live: Generated must be before 09:30 ET on this date or leave missing. Wayback: capture before 09:30 ET that day is legal for that morning's Pre-Open. Afternoon Wayback is legal for the NEXT session open only (prior-day close recap), marked by clock_legal_for. Gaps stay gaps. Capture only — not tape_anchor / predict / #210.",
+  "kind": "finviz_homepage_market_digest",
+  "represents": "Finviz homepage market-day prose. Same-morning Pre-Open when Generated is before 09:30 ET; afternoon Wayback is a prior-day close recap legal for the next session only. Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "US futures trade mixed as Fed decision looms with AI optimism lifting tech and Brent crude tops $115 on Middle East risks",
+  "raw_text": "- S&P 500 Futures (@ES) rise 0.09%, Dow Jones Futures (@YM) slip 0.19%, Nasdaq 100 Futures (@NQ) gain 0.37%, and Russell 2000 Futures (@ER2) edge down 0.11% ahead of the 2:00 PM ET FOMC rate announcement and 2:30 PM ET press conference\n- Robinhood (HOOD) trades roughly 8% lower pre-market after missing profit estimates despite record Q3 revenue and EBITDA\n- SK Hynix (SKHY) rallies in Asia after blowout quarterly results, reinforcing AI and semiconductor strength and helping support Nasdaq-linked ($NDX) tech sentiment\n- New AI infrastructure financing announcements tied to Broadcom (AVGO) and Anthropic add to renewed AI optimism and focus on AI-exposed names\n- Brent crude (@QA) trades above $115 per barrel on Middle East supply risks, pressuring some cyclical stocks despite broader equity support\n- Asian equities advance overnight, with South Korea’s Kospi jumping on semiconductor and AI strength and Japan’s Nikkei (@NKD) adding over 1%\n- European markets trade little changed to slightly softer in early action ahead of the FOMC decision\n- GE Vernova (GEV), Amphenol (APH), ADP (ADP), Boston Scientific (BSX), Phillips 66 (PSX), Biogen (BIIB), and Flex (FLEX) are scheduled to report earnings before the bell\n- Microsoft (MSFT) and Alphabet (GOOGL) are set to report earnings after the close, keeping additional attention on large-cap AI and cloud exposure into the Fed outcome",
+  "raw_summary_md": "- **S&P 500 Futures** ([@ES](https://finviz.com/futures_charts?t=ES)) rise **0.09%**, **Dow Jones Futures** ([@YM](https://finviz.com/futures_charts?t=YM)) slip **0.19%**, **Nasdaq 100 Futures** ([@NQ](https://finviz.com/futures_charts?t=NQ)) gain **0.37%**, and **Russell 2000 Futures** ([@ER2](https://finviz.com/futures_charts?t=ER2)) edge down **0.11%** ahead of the **2:00 PM ET FOMC rate announcement** and **2:30 PM ET press conference**\n- **Robinhood** ([HOOD](https://finviz.com/quote?t=HOOD)) trades roughly **8% lower pre-market** after missing profit estimates despite **record Q3 revenue and EBITDA**\n- **SK Hynix** ([SKHY](https://finviz.com/quote?t=SKHY)) rallies in Asia after **blowout quarterly results**, reinforcing **AI and semiconductor strength** and helping support **Nasdaq-linked ([$NDX](https://finviz.com/index/NDX?p=d)) tech sentiment**\n- New **AI infrastructure financing announcements** tied to **Broadcom** ([AVGO](https://finviz.com/quote?t=AVGO)) and **Anthropic** add to renewed **AI optimism** and focus on **AI-exposed names**\n- **Brent crude** ([@QA](https://finviz.com/futures_charts?t=QA)) trades above **$115 per barrel** on **Middle East supply risks**, pressuring some **cyclical stocks** despite broader equity support\n- **Asian equities advance overnight**, with **South Korea’s Kospi jumping** on semiconductor and AI strength and **Japan’s Nikkei** ([@NKD](https://finviz.com/futures_charts?t=NKD)) adding **over 1%**\n- **European markets** trade **little changed to slightly softer** in early action ahead of the **FOMC decision**\n- **GE Vernova** ([GEV](https://finviz.com/quote?t=GEV)), **Amphenol** ([APH](https://finviz.com/quote?t=APH)), **ADP** ([ADP](https://finviz.com/quote?t=ADP)), **Boston Scientific** ([BSX](https://finviz.com/quote?t=BSX)), **Phillips 66** ([PSX](https://finviz.com/quote?t=PSX)), **Biogen** ([BIIB](https://finviz.com/quote?t=BIIB)), and **Flex** ([FLEX](https://finviz.com/quote?t=FLEX)) are scheduled to report **earnings before the bell**\n- **Microsoft** ([MSFT](https://finviz.com/quote?t=MSFT)) and **Alphabet** ([GOOGL](https://finviz.com/quote?t=GOOGL)) are set to report **earnings after the close**, keeping additional attention on **large-cap AI and cloud exposure** into the **Fed outcome**",
+  "index_moves": [],
+  "oil": {
+    "name": "Brent crude",
+    "price": 115.0,
+    "verb": null,
+    "direction": null
+  },
+  "cpi": null,
+  "fed_odds": null,
+  "named_tickers": [
+    "HOOD",
+    "SKHY",
+    "AVGO",
+    "GEV",
+    "APH",
+    "ADP",
+    "BSX",
+    "PSX",
+    "BIIB",
+    "FLEX",
+    "MSFT",
+    "GOOGL"
+  ],
+  "named_leaders": [
+    "HOOD",
+    "SKHY",
+    "AVGO",
+    "GEV",
+    "APH",
+    "ADP",
+    "BSX",
+    "PSX",
+    "BIIB",
+    "FLEX",
+    "MSFT",
+    "GOOGL"
+  ],
+  "calendar": [
+    "S&P 500 Futures (@ES) rise 0.09%, Dow Jones Futures (@YM) slip 0.19%, Nasdaq 100 Futures (@NQ) gain 0.37%, and Russell 2000 Futures (@ER2) edge down 0.11% ahead of the 2:00 PM ET FOMC rate announcement and 2:30 PM ET press conference",
+    "European markets trade little changed to slightly softer in early action ahead of the FOMC decision"
+  ],
+  "prior_close": {
+    "spx": null,
+    "nasdaq": null,
+    "dow": null
+  },
+  "cpi_fed": {
+    "cpi": null,
+    "fed_odds": null
+  },
+  "next_session_calendar": {
+    "housing": false,
+    "retail": false,
+    "fed": true,
+    "bullets": [
+      "S&P 500 Futures (@ES) rise 0.09%, Dow Jones Futures (@YM) slip 0.19%, Nasdaq 100 Futures (@NQ) gain 0.37%, and Russell 2000 Futures (@ER2) edge down 0.11% ahead of the 2:00 PM ET FOMC rate announcement and 2:30 PM ET press conference",
+      "European markets trade little changed to slightly softer in early action ahead of the FOMC decision"
+    ],
+    "text": "S&P 500 Futures (@ES) rise 0.09%, Dow Jones Futures (@YM) slip 0.19%, Nasdaq 100 Futures (@NQ) gain 0.37%, and Russell 2000 Futures (@ER2) edge down 0.11% ahead of the 2:00 PM ET FOMC rate announcement and 2:30 PM ET press conference European markets trade little changed to slightly softer in early action ahead of the FOMC decision"
+  },
+  "earnings_slate": {
+    "tickers": [
+      "GEV",
+      "APH",
+      "ADP",
+      "BSX",
+      "PSX",
+      "BIIB",
+      "FLEX",
+      "MSFT",
+      "GOOGL"
+    ],
+    "text": "GE Vernova (GEV), Amphenol (APH), ADP (ADP), Boston Scientific (BSX), Phillips 66 (PSX), Biogen (BIIB), and Flex (FLEX) are scheduled to report earnings before the bell Microsoft (MSFT) and Alphabet (GOOGL) are set to report earnings after the close, keeping additional attention on large-cap AI and cloud exposure into the Fed outcome"
+  },
+  "geo_grain": {
+    "geo": true,
+    "grain": false,
+    "flags": [
+      "geo"
+    ],
+    "text": "Brent crude (@QA) trades above $115 per barrel on Middle East supply risks, pressuring some cyclical stocks despite broader equity support"
+  },
+  "finviz_id": 320252,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-10-28T05:37:12.367",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "neutral"
+}

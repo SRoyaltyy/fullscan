@@ -1,0 +1,17 @@
+cell,signal_date,ticker,entry_date,hold_days,rules_sha256,source
+fresh_dcp_t1_ep_ge03_2d,2026-10-27,BE,2026-10-28,2,187856c9db6143c2c4c2820cde8be1e3d87363478587558e296758cbf5369845,preopen_plan_2026-10-28
+fresh_dcp_t1_ep_ge03_2d,2026-10-27,MEC,2026-10-28,2,187856c9db6143c2c4c2820cde8be1e3d87363478587558e296758cbf5369845,preopen_plan_2026-10-28
+fresh_dcp_t1_ep_ge03_2d,2026-10-27,NVTS,2026-10-28,2,187856c9db6143c2c4c2820cde8be1e3d87363478587558e296758cbf5369845,preopen_plan_2026-10-28
+fresh_dcp_t1_ep_ge03_2d,2026-10-27,PENG,2026-10-28,2,187856c9db6143c2c4c2820cde8be1e3d87363478587558e296758cbf5369845,preopen_plan_2026-10-28
+fresh_dcp_t1_ep_ge03_2d,2026-10-27,RIOT,2026-10-28,2,187856c9db6143c2c4c2820cde8be1e3d87363478587558e296758cbf5369845,preopen_plan_2026-10-28
+fresh_dcp_t1_ep_ge03_2d,2026-10-27,UNIT,2026-10-28,2,187856c9db6143c2c4c2820cde8be1e3d87363478587558e296758cbf5369845,preopen_plan_2026-10-28
+fresh_dcp_t1_ep_ge03_2d,2026-10-27,VIVO,2026-10-28,2,187856c9db6143c2c4c2820cde8be1e3d87363478587558e296758cbf5369845,preopen_plan_2026-10-28
+fresh_dcp_t1_avoid_ah_3d,2026-10-27,ALGM,2026-10-28,3,462719f77f2c36880f9c36d77c6591ca681e98c425c83697847463c4b3af7934,preopen_plan_2026-10-28
+fresh_dcp_t1_avoid_ah_3d,2026-10-27,AMT,2026-10-28,3,462719f77f2c36880f9c36d77c6591ca681e98c425c83697847463c4b3af7934,preopen_plan_2026-10-28
+fresh_dcp_t1_avoid_ah_3d,2026-10-27,GFS,2026-10-28,3,462719f77f2c36880f9c36d77c6591ca681e98c425c83697847463c4b3af7934,preopen_plan_2026-10-28
+fresh_dcp_t1_avoid_ah_3d,2026-10-27,MEC,2026-10-28,3,462719f77f2c36880f9c36d77c6591ca681e98c425c83697847463c4b3af7934,preopen_plan_2026-10-28
+fresh_dcp_t1_avoid_ah_3d,2026-10-27,PENG,2026-10-28,3,462719f77f2c36880f9c36d77c6591ca681e98c425c83697847463c4b3af7934,preopen_plan_2026-10-28
+fresh_dcp_t1_avoid_ah_3d,2026-10-27,UNIT,2026-10-28,3,462719f77f2c36880f9c36d77c6591ca681e98c425c83697847463c4b3af7934,preopen_plan_2026-10-28
+# status=fires rows=13 fpe_delta_t3_earn_today_3d=0 fresh_dcp_t1_ep_ge03_2d=7 fresh_dcp_t1_avoid_ah_3d=6
+# built_at_utc=2026-10-28T10:27:46Z signal_date=2026-10-27 entry_date=2026-10-28 builder_sha256=9e70523ee355d655b125ffd46f8ccd08a25fe762fccfa6ee08c97eb3c5d52840
+# inputs: {"dcp_candidates":["ALGM","AMT","APO","BE","FTEK","GFS","HUBB","MEC","NVTS","OWL","PENG","PNR","RIOT","SNDR","TSM","TXN","UNIT","VIVO","VRT"],"dcp_prior_snapshot":"2026-10-26","earn_gate_n":0,"fails":"[]","features_T_sha256":"47f30e975c197a14de0d24b93cacf6cff8f0a6dd818b5f3ecc0d77b21fd49bb8","fpe_prior_snapshot":"2026-10-22","fpe_signal_n":1451,"letters_log":"rows 19 skipped {'2026-10-28': 0} FAILS []","letters_rows":19,"letters_sha256":"15596183a2ce52c59974b5df7c5e4bb5a3b66d6683fb601bf23e705f73511bf2","membership":"fullscan@6a845faa9 (committed 2026-10-28T10:25:40Z) sha256=2cafec018941d7b8f688e033da0c1081345e5e75dc4fcd768caac9c2a0fbe398","skipped":"{'2026-10-28': 0}","snapshot_T_sha256":"94e3cda538ea1f49e183e41fca3a83c08bd7b84135c44dcf2bf8d360c9063d02","snapshots_after_T_ignored":[],"tr_head":"b058357bb","universe_log":"2026-10-28 cand 19 in membership 19 liquid 15 universe 19 excluded []"}
