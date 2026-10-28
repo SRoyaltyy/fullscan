@@ -1,16 +1,8 @@
 {
  "risk_tilt": null,
  "macros": [],
- "sector_tilts": {
-  "Technology/Ai": "bearish",
-  "Industrials": "bearish",
-  "Healthcare": "bullish",
-  "Autos/Tariffs": "mixed"
- },
- "tickers": {
-  "XLE": -1.5,
-  "AMGN": 1.5
- },
- "b1_inject": "NEWS_JUDGE: n=8 rescued=4\nMACRO FOMC/BigTech: [mixed] FOMC and mega-cap earnings super week drives rates/risk binary (regime/1w)\nMACRO Oil/Hormuz: [bearish] record Hormuz attacks + Brent six-month high lift inflation/energy risk (session/1d-1w)\nSECTOR Technology/AI: [bearish] AI selloff, SK Hynix delisting, APH/Fabrinet weakness weigh AI/semis basket (basket)\nSECTOR Industrials: [bearish] BA 737 MAX 10 FAA certification halt risks order book (BA/industrials)\nSECTOR Healthcare: [bullish] AMGN Phase 3 + ABBV FDA approval support pharma/biotech sympathy (XLV/basket)\nMACRO Gold/Fed: [mixed] gold $4k rebound vs hawkish hike odds/AEM drop keeps metals volatile (GLD/GDX)\nSECTOR Autos/Tariffs: [mixed] tariff defense/Audi plant and Chinese autos Europe share add policy headline risk (autos)\nINTERACTION: Fed/oil inflation cluster; biotech sympathy; AI selloff not pure single-name.\nWATCH: usable set thin; Powell/Fed keyword noise and stale BNY prime-rate item not ranked.",
+ "sector_tilts": {},
+ "tickers": {},
+ "b1_inject": "NEWS_JUDGE: n=7 rescued=2\nMACRO FOMC: [rates] hawkish-hold/skip-vs-hike pending caps beta (regime/1d-1w)\nMACRO Treasury: [rates] $2T deficit + 5% yields pressure multiples (session/1w-1m)\nSECTOR Energy: [risk] Houthi Ras Tanura missile + OPEC+ steady supports XLE but risk-off (XLE)\nSECTOR Industrials: [sector_fundamental] Boeing 737 MAX 10 FAA halt pressures BA/XLI (XLI)\nSECTOR Semis/AI: [sector_fundamental] OpenAI Google-chip plan/SK Hynix beat vs NXP/Fabrinet weakness (SMH)\nSECTOR Healthcare: [sector_fundamental] ABBV approval/AMGN Phase 3 positive offset BSX/CI downgrades (XLV)\nSECTOR Gold miners: [rates] AEM/gold drop on hawkish Fed hike odds (basket)\nINTERACTION: FOMC+gold=yield cluster; semis mixed; healthcare mixed; energy risk-off\nWATCH: no futures snapshot; FOMC binary caps conviction",
  "date": "2026-10-28"
 }
