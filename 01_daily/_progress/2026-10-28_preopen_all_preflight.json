@@ -1,0 +1,34 @@
+{
+ "workflow": "preopen_all",
+ "date": "2026-10-28",
+ "checked_at": "2026-10-28 06:11 ET",
+ "run_id": "40665738333",
+ "ok": true,
+ "failed": [],
+ "items": [
+  {
+   "id": "ecs_code_current",
+   "ok": true,
+   "plain": "code stale: this checkout's code (src, scripts, config, .github) must match GitHub main",
+   "detail": "code matches main (HEAD 4ed25a3b, main 4ed25a3b)"
+  },
+  {
+   "id": "no_unapproved_paid_fallback",
+   "ok": true,
+   "plain": "fallback model is not on the approved free list",
+   "detail": "LLM_FALLBACK_MODEL=(none)"
+  },
+  {
+   "id": "no_twin_preopen",
+   "ok": true,
+   "plain": "another Pre-Open is already running",
+   "detail": "no twin"
+  },
+  {
+   "id": "read_cap_fits",
+   "ok": true,
+   "plain": "OPENCLAW_PREDICT_READ_CAP_S (general predict + news judge) is under 300s",
+   "detail": "OPENCLAW_PREDICT_READ_CAP_S=300, need >= 300"
+  }
+ ]
+}
