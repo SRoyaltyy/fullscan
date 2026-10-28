@@ -1,6 +1,6 @@
 {
   "date": "2026-10-28",
-  "generated_at": "2026-10-28T08:19:47.871029-04:00",
+  "generated_at": "2026-10-28T08:20:15.022453-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -775,9 +775,9 @@
           "path": "data/stock_book/2026-10-28_stock_book.json",
           "role": "required",
           "status": "OK",
-          "reason": "horizons=5 names=130",
-          "size": 1039550,
-          "said": "1d BUY IONS, FDMT \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE",
+          "reason": "horizons=5 names=145",
+          "size": 1152552,
+          "said": "1d BUY HITI, ADCT, AUTL, SIRI, FDMT \u00b7 SELL OKLO, NEOV, FCEL, POWL, NNDM, EOSE",
           "bullets": []
         },
         {
@@ -787,10 +787,10 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 37423,
+          "size": 46880,
           "said": "Stock book \u2014 2026-10-28",
           "bullets": [
-            "_Generated 2026-10-28T06:37:58.525500-04:00_",
+            "_Generated 2026-10-28T08:19:55.411969-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -853,9 +853,9 @@
           "path": "data/stock_book/2026-10-28_stock_book.json",
           "role": "input",
           "status": "OK",
-          "reason": "horizons=5 names=130",
-          "size": 1039550,
-          "said": "1d BUY IONS, FDMT \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE",
+          "reason": "horizons=5 names=145",
+          "size": 1152552,
+          "said": "1d BUY HITI, ADCT, AUTL, SIRI, FDMT \u00b7 SELL OKLO, NEOV, FCEL, POWL, NNDM, EOSE",
           "bullets": []
         },
         {
@@ -904,46 +904,58 @@
   "selections": {
     "buy_1d": [
       {
-        "ticker": "IONS",
-        "score": 0.41861297165525313
+        "ticker": "HITI",
+        "score": 0.49165679287531155
+      },
+      {
+        "ticker": "ADCT",
+        "score": 0.6135328149294949
+      },
+      {
+        "ticker": "AUTL",
+        "score": 0.38286776364943287
+      },
+      {
+        "ticker": "SIRI",
+        "score": -0.10637014703421044
       },
       {
         "ticker": "FDMT",
-        "score": 0.4266539321532036
+        "score": 0.2797668972065114
       }
     ],
     "sell_1d": [
       {
-        "ticker": "NEOV",
-        "score": -0.4135560613260153
+        "ticker": "OKLO",
+        "score": -0.18037042822466753
       },
       {
-        "ticker": "OKLO",
-        "score": -0.17869412806952367
+        "ticker": "NEOV",
+        "score": -0.3817004690030632
       },
       {
         "ticker": "FCEL",
-        "score": -0.25786611065330006
-      },
-      {
-        "ticker": "NNDM",
-        "score": -0.1294435046814046
+        "score": -0.26002413861545004
       },
       {
         "ticker": "POWL",
-        "score": -0.13396424504583043
+        "score": -0.12990880554552992
+      },
+      {
+        "ticker": "NNDM",
+        "score": -0.09482459726552112
       },
       {
         "ticker": "EOSE",
-        "score": -0.3178180217653031
+        "score": -0.32039427549971217
       },
       {
         "ticker": "TE",
-        "score": -0.24263310642628938
+        "score": -0.2452531135286115
       },
       {
-        "ticker": "SKYX",
-        "score": -0.3260948174565743
+        "ticker": "LUNR",
+        "score": -0.2570752581225146
       }
     ],
     "flatten": {
@@ -1551,6 +1563,59 @@
         }
       ],
       "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-10-28",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-28T08:20:14.206473-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-10-28_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1152552,
+          "preview": "1d BUY HITI, ADCT, AUTL, SIRI, FDMT \u00b7 SELL OKLO, NEOV, FCEL, POWL, NNDM, EOSE, TE, LUNR"
+        },
+        {
+          "path": "data/stock_book/2026-10-28_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-10-28_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2566,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-10-28_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 9765,
+          "preview": "2026-10-28 BUY HITI, ADCT, AUTL, SIRI, FDMT \u00b7 SELL OKLO, NEOV, FCEL, POWL, NNDM, EOSE, TE, LUNR"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 9765,
+          "preview": "2026-10-28 BUY HITI, ADCT, AUTL, SIRI, FDMT \u00b7 SELL OKLO, NEOV, FCEL, POWL, NNDM, EOSE, TE, LUNR"
+        },
+        {
+          "path": "01_daily/2026-10-28_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 47817,
+          "preview": "# Stock book \u2014 2026-10-28\n_Generated 2026-10-28T08:19:55.411969-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY HITI, ADCT, AUTL, SIRI, FDMT \u00b7 SELL OKLO, NEOV, FCEL, POWL, NNDM, EOSE, TE, LUNR \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-10-28 BUY HITI, ADCT, AUTL, SIRI, FDMT \u00b7 SELL OKLO, NEOV, FCEL, POWL, NNDM, EOSE, TE, LUNR \u00b7 2026-10-28 BUY HITI, ADCT, AUTL, SIRI, FDMT \u00b7 SELL OKLO, NEOV, FCEL, POWL, NNDM, EOSE, TE, LUNR \u00b7 # Stock book \u2014 2026-10-28\n_Generated 2026-10-28T08:19:55.411969-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "href": {
