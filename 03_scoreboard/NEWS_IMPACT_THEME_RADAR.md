@@ -16,17 +16,17 @@ Rubric hit rates count a call only when q5=impulse, direction in {up, down}, tra
 
 | step | n |
 | --- | ---: |
-| Elite raw titles | 531585 |
-| unique (ticker + title, earliest News Time) | 56898 |
-| non-weather | 25467 |
-| reaction-in-title (killed by the router) | 917 |
-| impulse + up/down + listed | 13084 |
-| graded articles 0-1d | 1506 |
-| graded articles 2d | 1455 |
-| graded articles 3d | 1423 |
-| graded articles 4d | 1402 |
-| graded articles 5d | 1375 |
-| graded articles 1-4w | 6938 |
+| Elite raw titles | 541125 |
+| unique (ticker + title, earliest News Time) | 58019 |
+| non-weather | 26017 |
+| reaction-in-title (killed by the router) | 945 |
+| impulse + up/down + listed | 13359 |
+| graded articles 0-1d | 1558 |
+| graded articles 2d | 1495 |
+| graded articles 3d | 1472 |
+| graded articles 4d | 1439 |
+| graded articles 5d | 1416 |
+| graded articles 1-4w | 7058 |
 
 ## Hit rates
 
@@ -34,12 +34,12 @@ Rubric column skips long-horizon classes on 0-1d and 2-5d. Broad column keeps th
 
 | horizon | rubric hits | rubric n | rubric rate | broad hits | broad n | broad rate |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| 0-1d | 1341 | 2711 | 1341/2711 = 49.5% | 6760 | 13995 | 6760/13995 = 48.3% |
-| 2d | 1316 | 2609 | 1316/2609 = 50.4% | 6600 | 13417 | 6600/13417 = 49.2% |
-| 3d | 1268 | 2524 | 1268/2524 = 50.2% | 6452 | 13184 | 6452/13184 = 48.9% |
-| 4d | 1271 | 2469 | 1271/2469 = 51.5% | 6427 | 13016 | 6427/13016 = 49.4% |
-| 5d | 1242 | 2408 | 1242/2408 = 51.6% | 6248 | 12862 | 6248/12862 = 48.6% |
-| 1-4w | 4966 | 10559 | 4966/10559 = 47.0% | — | — | — |
+| 0-1d | 1398 | 2803 | 1398/2803 = 49.9% | 6948 | 14317 | 6948/14317 = 48.5% |
+| 2d | 1349 | 2700 | 1349/2700 = 50.0% | 6784 | 13847 | 6784/13847 = 49.0% |
+| 3d | 1315 | 2671 | 1315/2671 = 49.2% | 6614 | 13564 | 6614/13564 = 48.8% |
+| 4d | 1326 | 2592 | 1326/2592 = 51.2% | 6577 | 13319 | 6577/13319 = 49.4% |
+| 5d | 1301 | 2513 | 1301/2513 = 51.8% | 6399 | 13114 | 6399/13114 = 48.8% |
+| 1-4w | 5081 | 10837 | 5081/10837 = 46.9% | — | — | — |
 
 ## Convergence / clash ledger
 
@@ -47,21 +47,21 @@ One entity per session. n_bull / n_bear count impulse up/down stories after titl
 
 Direct = the article names the ticker. Indirect = substitute / stays_out / arms_dealer / peer / sector basket from the family template. Theme groups are router factor/macro keys only. They are not a second trade. The Elite Sector column is not a key.
 
-Router theme keys (not traded): **13**. Name groups: **9275**.
+Router theme keys (not traded): **13**. Name groups: **9527**.
 
 | bucket | groups |
 | --- | ---: |
-| singleton | 8515 |
-| converge | 662 (up 440, down 222) |
-| clash | 98 |
+| singleton | 8758 |
+| converge | 670 (up 446, down 224) |
+| clash | 99 |
 
 Hit rates grade the entity once per session. Converge uses that side. Clash uses the net side (net 0 is ungraded). Long-horizon classes are out of these denominators.
 
 | bucket | 0-1d | 2d | 3d | 4d | 5d |
 | --- | --- | --- | --- | --- | --- |
-| singleton | 676/1431 = 47.2% | 686/1393 = 49.2% | 675/1357 = 49.7% | 675/1335 = 50.6% | 670/1308 = 51.2% |
-| converge | 75/139 = 54.0% | 63/131 = 48.1% | 67/130 = 51.5% | 67/129 = 51.9% | 66/127 = 52.0% |
-| clash | 4/11 = 36.4% | 5/10 = 50.0% | 8/10 = 80.0% | 4/10 = 40.0% | 4/10 = 40.0% |
+| singleton | 705/1478 = 47.7% | 703/1422 = 49.4% | 695/1402 = 49.6% | 695/1377 = 50.5% | 689/1351 = 51.0% |
+| converge | 78/143 = 54.5% | 64/138 = 46.4% | 68/137 = 49.6% | 67/130 = 51.5% | 69/130 = 53.1% |
+| clash | 4/12 = 33.3% | 6/11 = 54.5% | 8/10 = 80.0% | 4/10 = 40.0% | 4/10 = 40.0% |
 
 ### Top converge names
 
@@ -99,8 +99,8 @@ Same direction as the call and |forward return| at the threshold. 5% rows are �
 
 ### 0-1d
 
-- ≥5% and <10%: **620**
-- ≥10%: **326**
+- ≥5% and <10%: **635**
+- ≥10%: **327**
 
 | threshold | ticker | date | ret | class | title |
 | --- | --- | --- | ---: | --- | --- |
@@ -129,16 +129,15 @@ Same direction as the call and |forward return| at the threshold. 5% rows are �
 | ≥10% | AEYE | 2026-08-14 | +29.08% | guidance | AudioEye, Inc. Q2 2026 Earnings Call Summary |
 | ≥10% | OPRX | 2026-08-13 | +28.74% | print_vs_priced | OptimizeRx Corp (OPRX) (Q2 2026) Earnings Call Highlights: Navigating Revenue Headwinds with ... |
 | ≥10% | OPRX | 2026-08-13 | +28.74% | print_vs_priced | OptimizeRx Corporation Q2 2026 Earnings Call Summary |
-| … | | | | | 921 more in the JSON |
+| … | | | | | 937 more in the JSON |
 
 ### 2d
 
-- ≥5% and <10%: **1169**
-- ≥10%: **638**
+- ≥5% and <10%: **1195**
+- ≥10%: **650**
 
 | threshold | ticker | date | ret | class | title |
 | --- | --- | --- | ---: | --- | --- |
-| ≥10% | MBRX | 2026-09-11 | +1669.41% | print_vs_priced | Moleculin Presentation from H.C. Wainwright Conference Now Available On-Demand |
 | ≥10% | PMI | 2026-08-24 | +116.34% | print_vs_priced | Picard Medical Shares Soar After Quarterly Revenue Beats Forecasts |
 | ≥10% | MRNA | 2026-08-18 | +111.48% | gate | Behind the Ticker: How VFLO Beats Growth at Its Own Game |
 | ≥10% | MRNA | 2026-08-18 | +111.48% | gate | Behind the Ticker: How VFLO Beats Growth at Its Own Game |
@@ -156,23 +155,23 @@ Same direction as the call and |forward return| at the threshold. 5% rows are �
 | ≥10% | ABCL | 2026-08-06 | +61.31% | guidance | AbCellera Biologics Inc (ABCL) (Q2 2026) Earnings Call Highlights: Strong Pipeline Progress and ... |
 | ≥10% | ABCL | 2026-08-06 | +61.31% | guidance | AbCellera Biologics Inc (ABCL) (Q2 2026) Earnings Call Highlights: Strong Pipeline Progress and ... |
 | ≥10% | ABCL | 2026-08-06 | +61.31% | guidance | AbCellera Biologics Inc (ABCL) (Q2 2026) Earnings Call Highlights: Strong Pipeline Progress and ... |
-| ≥10% | PARA | 2026-09-04 | -61.31% | print_vs_priced | DIS Is Priced Like The Best Of Its Group. Is It? |
-| ≥10% | PARA | 2026-09-04 | -61.31% | print_vs_priced | DIS Is Priced Like The Best Of Its Group. Is It? |
-| ≥10% | PARA | 2026-09-04 | -61.31% | print_vs_priced | DIS Is Priced Like The Best Of Its Group. Is It? |
-| ≥10% | PARA | 2026-09-04 | -61.31% | print_vs_priced | DIS Is Priced Like The Best Of Its Group. Is It? |
-| ≥10% | PARA | 2026-09-04 | -61.31% | print_vs_priced | DIS Is Priced Like The Best Of Its Group. Is It? |
-| ≥10% | PARA | 2026-09-04 | -61.31% | print_vs_priced | DIS Is Priced Like The Best Of Its Group. Is It? |
-| ≥10% | PARA | 2026-09-04 | -61.31% | print_vs_priced | DIS Is Priced Like The Best Of Its Group. Is It? |
-| … | | | | | 1782 more in the JSON |
+| ≥10% | PMI | 2026-08-20 | +60.31% | print_vs_priced | Picard Medical Reports Second Quarter 2026 Financial Results |
+| ≥10% | BWMN | 2026-08-07 | +55.03% | gate | Earnings To Watch: Bowman Consulting Group Ltd (BWMN) Q2 2026 -- GF Value Sees 64% Upside |
+| ≥10% | APH | 2026-08-19 | -51.54% | print_vs_priced | Amphenol Corp. Cl A stock underperforms Tuesday when compared to competitors |
+| ≥10% | LUNG | 2026-07-30 | +51.43% | print_vs_priced | Pulmonx Corporation Q2 2026 Earnings Call Summary |
+| ≥10% | CYCU | 2026-09-30 | +45.80% | gate | Cycurion Discusses Record Contract Win, Public Safety Expansion and Growth Strategy in New Interview |
+| ≥10% | SDGR | 2026-09-15 | +45.52% | guidance | AI Drug Discovery Market Projected to Reach $13.8 Billion by 2033 |
+| ≥10% | SDGR | 2026-09-15 | +45.52% | guidance | AI Drug Discovery Market Projected to Reach $13.8 Billion by 2033 |
+| ≥10% | OABI | 2026-08-07 | +42.62% | guidance | VERAXA Biotech (VRXA) Advances VXA-222 Cancer Program While Expanding Patent Portfolio for Next-Generation Ant |
+| … | | | | | 1820 more in the JSON |
 
 ### 3d
 
-- ≥5% and <10%: **1289**
-- ≥10%: **765**
+- ≥5% and <10%: **1311**
+- ≥10%: **782**
 
 | threshold | ticker | date | ret | class | title |
 | --- | --- | --- | ---: | --- | --- |
-| ≥10% | MBRX | 2026-09-11 | +1641.18% | print_vs_priced | Moleculin Presentation from H.C. Wainwright Conference Now Available On-Demand |
 | ≥10% | CYCU | 2026-08-17 | +667.60% | capital_return | Cycurion Board Authorizes $500,000 Share Repurchase Program, Citing Meaningful Undervaluation |
 | ≥10% | PMI | 2026-08-20 | +198.44% | print_vs_priced | Picard Medical Reports Second Quarter 2026 Financial Results |
 | ≥10% | OLB | 2026-10-07 | +143.74% | capital_return | The OLB Group Launches Share Buyback; Suspends ATM Program |
@@ -193,23 +192,22 @@ Same direction as the call and |forward return| at the threshold. 5% rows are �
 | ≥10% | ABCL | 2026-08-06 | +68.57% | guidance | AbCellera Biologics Inc (ABCL) (Q2 2026) Earnings Call Highlights: Strong Pipeline Progress and ... |
 | ≥10% | ABCL | 2026-08-06 | +68.57% | guidance | AbCellera Biologics Inc (ABCL) (Q2 2026) Earnings Call Highlights: Strong Pipeline Progress and ... |
 | ≥10% | ABCL | 2026-08-06 | +68.57% | guidance | AbCellera Biologics Inc (ABCL) (Q2 2026) Earnings Call Highlights: Strong Pipeline Progress and ... |
+| ≥10% | GCTK | 2026-09-02 | +67.91% | capacity | Lokahi Therapeutics Expands ai² Futures Lab Asset Origination Network Through Collaboration with San Diego Sta |
 | ≥10% | BWMN | 2026-08-07 | +54.48% | gate | Earnings To Watch: Bowman Consulting Group Ltd (BWMN) Q2 2026 -- GF Value Sees 64% Upside |
 | ≥10% | SECZ | 2026-09-18 | +54.08% | market_structure | Robinhood Rises as the SEC Clears Tokenized Stocks |
 | ≥10% | SECZ | 2026-09-18 | +54.08% | market_structure | Securitize Surges After SEC Clears Path for Tokenized Stock Trading |
 | ≥10% | SECZ | 2026-09-18 | +54.08% | market_structure | Polymarket Hires Coinbase's Failed Social-Coin Architect |
-| … | | | | | 2029 more in the JSON |
+| … | | | | | 2068 more in the JSON |
 
 ### 4d
 
-- ≥5% and <10%: **1384**
-- ≥10%: **940**
+- ≥5% and <10%: **1406**
+- ≥10%: **956**
 
 | threshold | ticker | date | ret | class | title |
 | --- | --- | --- | ---: | --- | --- |
-| ≥10% | SKIN | 2026-09-08 | +1943.80% | guidance | Hydrafacial Expands Treatment Personalization and Elevates Results with Two New Treatment Enhancers |
 | ≥10% | BYND | 2026-08-06 | +1838.33% | print_vs_priced | BYND Stock Heads For Second Weekly Gains: Beyond Meat Sees Early Turnaround Signs As CEO Maps Three-Part Growt |
 | ≥10% | BYND | 2026-08-06 | +1838.33% | print_vs_priced | Beyond Meat, Inc. Q2 2026 Earnings Call Summary |
-| ≥10% | MBRX | 2026-09-11 | +1735.29% | print_vs_priced | Moleculin Presentation from H.C. Wainwright Conference Now Available On-Demand |
 | ≥10% | CYCU | 2026-08-17 | +630.73% | capital_return | Cycurion Board Authorizes $500,000 Share Repurchase Program, Citing Meaningful Undervaluation |
 | ≥10% | CYCU | 2026-08-14 | +510.67% | print_vs_priced | Cycurion Beats Consensus on Revenue and EPS; Gross Margin Improves Nearly 5x as Company Positions for Stronger |
 | ≥10% | PMI | 2026-08-20 | +206.25% | print_vs_priced | Picard Medical Reports Second Quarter 2026 Financial Results |
@@ -222,8 +220,10 @@ Same direction as the call and |forward return| at the threshold. 5% rows are �
 | ≥10% | PMI | 2026-08-24 | +94.26% | print_vs_priced | Picard Medical Shares Soar After Quarterly Revenue Beats Forecasts |
 | ≥10% | QMCO | 2026-08-06 | +92.63% | print_vs_priced | IonQ CEO Niccolo de Masi: Quantum growth accelerates with record demand |
 | ≥10% | OLB | 2026-10-07 | +90.05% | capital_return | The OLB Group Launches Share Buyback; Suspends ATM Program |
+| ≥10% | DKI | 2026-10-09 | -89.84% | dilution | DarkIris Prices $6 Million Public Offering at $1.44 Per Unit With Potential for Significant Share Dilution |
 | ≥10% | JZ | 2026-10-09 | +83.75% | capital_return | Jianzhi Education Announces Share Repurchase Program |
 | ≥10% | YQ | 2026-09-03 | +81.84% | capital_return | 17 Education & Technology Group Inc. Announces New Share Repurchase Program of Up to US$10 Million |
+| ≥10% | GCTK | 2026-09-02 | +79.94% | capacity | Lokahi Therapeutics Expands ai² Futures Lab Asset Origination Network Through Collaboration with San Diego Sta |
 | ≥10% | ABCL | 2026-08-06 | +78.84% | guidance | AbCellera Biologics Inc (ABCL) (Q2 2026) Earnings Call Highlights: Strong Pipeline Progress and ... |
 | ≥10% | ABCL | 2026-08-06 | +78.84% | guidance | AbCellera Biologics Inc (ABCL) (Q2 2026) Earnings Call Highlights: Strong Pipeline Progress and ... |
 | ≥10% | ABCL | 2026-08-06 | +78.84% | guidance | AbCellera Biologics Inc (ABCL) (Q2 2026) Earnings Call Highlights: Strong Pipeline Progress and ... |
@@ -231,19 +231,17 @@ Same direction as the call and |forward return| at the threshold. 5% rows are �
 | ≥10% | SECZ | 2026-09-18 | +77.36% | market_structure | Securitize Surges After SEC Clears Path for Tokenized Stock Trading |
 | ≥10% | SECZ | 2026-09-18 | +77.36% | market_structure | Polymarket Hires Coinbase's Failed Social-Coin Architect |
 | ≥10% | SECZ | 2026-09-18 | +77.36% | market_structure | SEC Sends Strong Signal to Robinhood, Coinbase Investors |
-| … | | | | | 2299 more in the JSON |
+| … | | | | | 2337 more in the JSON |
 
 ### 5d
 
-- ≥5% and <10%: **1465**
-- ≥10%: **1041**
+- ≥5% and <10%: **1497**
+- ≥10%: **1067**
 
 | threshold | ticker | date | ret | class | title |
 | --- | --- | --- | ---: | --- | --- |
 | ≥10% | BYND | 2026-08-06 | +2023.33% | print_vs_priced | BYND Stock Heads For Second Weekly Gains: Beyond Meat Sees Early Turnaround Signs As CEO Maps Three-Part Growt |
 | ≥10% | BYND | 2026-08-06 | +2023.33% | print_vs_priced | Beyond Meat, Inc. Q2 2026 Earnings Call Summary |
-| ≥10% | SKIN | 2026-09-08 | +1870.80% | guidance | Hydrafacial Expands Treatment Personalization and Elevates Results with Two New Treatment Enhancers |
-| ≥10% | OBAI | 2026-09-29 | +1639.13% | listing_flow | Bond CEO to Host Investor Webinar on Recent Corporate Developments and Strategic Priorities |
 | ≥10% | GAME | 2026-08-13 | +796.41% | print_vs_priced | GameSquare Appoints Tom Wild as Vice President of Creative Strategy for EMEA |
 | ≥10% | CYCU | 2026-08-17 | +616.20% | capital_return | Cycurion Board Authorizes $500,000 Share Repurchase Program, Citing Meaningful Undervaluation |
 | ≥10% | CYCU | 2026-08-14 | +481.33% | print_vs_priced | Cycurion Beats Consensus on Revenue and EPS; Gross Margin Improves Nearly 5x as Company Positions for Stronger |
@@ -260,12 +258,14 @@ Same direction as the call and |forward return| at the threshold. 5% rows are �
 | ≥10% | ABCL | 2026-08-06 | +89.46% | guidance | AbCellera Biologics Inc (ABCL) (Q2 2026) Earnings Call Highlights: Strong Pipeline Progress and ... |
 | ≥10% | ABCL | 2026-08-06 | +89.46% | guidance | AbCellera Biologics Inc (ABCL) (Q2 2026) Earnings Call Highlights: Strong Pipeline Progress and ... |
 | ≥10% | PMI | 2026-08-24 | +86.75% | print_vs_priced | Picard Medical Shares Soar After Quarterly Revenue Beats Forecasts |
+| ≥10% | GCTK | 2026-09-02 | +85.10% | capacity | Lokahi Therapeutics Expands ai² Futures Lab Asset Origination Network Through Collaboration with San Diego Sta |
 | ≥10% | SECZ | 2026-09-18 | +71.24% | market_structure | Robinhood Rises as the SEC Clears Tokenized Stocks |
 | ≥10% | SECZ | 2026-09-18 | +71.24% | market_structure | Securitize Surges After SEC Clears Path for Tokenized Stock Trading |
 | ≥10% | SECZ | 2026-09-18 | +71.24% | market_structure | Polymarket Hires Coinbase's Failed Social-Coin Architect |
 | ≥10% | SECZ | 2026-09-18 | +71.24% | market_structure | SEC Sends Strong Signal to Robinhood, Coinbase Investors |
 | ≥10% | SECZ | 2026-09-18 | +71.24% | market_structure | SEC Allows Tokenized Stocks After Clarity Act Falters |
-| … | | | | | 2481 more in the JSON |
+| ≥10% | SECZ | 2026-09-18 | +71.24% | market_structure | SEC Sends Strong Signal to Robinhood, Coinbase Investors |
+| … | | | | | 2539 more in the JSON |
 
 ## AMRX
 
@@ -285,7 +285,7 @@ Same direction as the call and |forward return| at the threshold. 5% rows are �
 | 4d | +4.27% agree=True |
 | 5d | +8.12% agree=True |
 | 1-4w | +2.11% agree=True |
-| note | window open (1-6m not elapsed; through 2026-10-23) |
+| note | window open (1-6m not elapsed; through 2026-10-27) |
 
 Friday 2026-09-18 16:01 is after the cash close. Entry is Monday 2026-09-21 open→close for 0-1d, never Friday cash. Published at/after 09:30 ET (09:30+30m included) waits for the next RTH.
 
@@ -306,13 +306,13 @@ Elite is in the book. `unused_readonly` applies only when no snapshot file is on
 
 | source | raw titles | unique |
 | --- | ---: | ---: |
-| theme_radar_elite | 531585 | 56898 |
+| theme_radar_elite | 541125 | 58019 |
 
-theme_radar_elite unique n = **56898**.
+theme_radar_elite unique n = **58019**.
 
 ## Hopper watermark (lane::model::source)
 
-- `deterministic::news_impact_v2::theme_radar_elite`: 56898
+- `deterministic::news_impact_v2::theme_radar_elite`: 58019
 
 ## FOMC / macro collapse
 
