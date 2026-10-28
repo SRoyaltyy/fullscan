@@ -6465,5 +6465,85 @@
     "sha256": "70e1523c9b9f705ac1722dd10ae5a0b154763ec02a4f7f8292a6b0483dea8ef5",
     "shares": 653,
     "ticker": "NAUT"
+  },
+  {
+    "bar_cutoff": "2026-10-27",
+    "cash_before": 38.542958896511664,
+    "committed_at": "2026-10-28T13:18:41Z",
+    "date": "2026-10-28",
+    "excluded_unexplained_legs": [],
+    "finviz_source": {
+      "commit": "7936f5a883d86c89dd4258d5093ad88c9773db05",
+      "commit_time": "2026-10-27T20:46:47Z",
+      "file_sha256": "94e3cda538ea1f49e183e41fca3a83c08bd7b84135c44dcf2bf8d360c9063d02",
+      "path": "data/snapshots/2026-10-27.csv",
+      "snapshot_date": "2026-10-27",
+      "status": "BEFORE_OPEN"
+    },
+    "holdup_on": true,
+    "kind": "plan",
+    "morning_s": 6.621,
+    "picks": [
+      {
+        "fv_avg_volume": 8177.5,
+        "fv_price": 3.35,
+        "rank": 1,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "ENVX"
+      },
+      {
+        "fv_avg_volume": 5559.72,
+        "fv_price": 1.65,
+        "rank": 2,
+        "sources": [
+          "yday_gainer"
+        ],
+        "ticker": "QSI"
+      },
+      {
+        "fv_avg_volume": 7701.14,
+        "fv_price": 8.13,
+        "rank": 3,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "CRML"
+      },
+      {
+        "fv_avg_volume": 648.56,
+        "fv_price": 156.06,
+        "rank": 4,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "HRI"
+      }
+    ],
+    "planned_sells": [
+      {
+        "reason": "hold-expired",
+        "shares": 47,
+        "ticker": "LQDA"
+      },
+      {
+        "reason": "hold-expired",
+        "shares": 1428,
+        "ticker": "UWMC"
+      }
+    ],
+    "recipe": "union_hot_n4_holdup__w0",
+    "s_source": {
+      "blob_sha": "4f81fb8d2535b4087771a5423be8d062729fe812",
+      "kind": "predict",
+      "path": "01_daily/general/2026-10-28_predict.md",
+      "server_time_utc": "2026-10-28T19:07:18+08:00",
+      "status": "BEFORE_1330"
+    },
+    "sha256": "a2d020e4682cdec129d88a7d38351c6fa6e5edc1939d037e5f2733491b2d0509"
   }
 ]
