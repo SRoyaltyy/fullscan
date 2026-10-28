@@ -1,6 +1,6 @@
 {
   "date": "2026-10-28",
-  "generated_at": "2026-10-28T08:19:53.359018-04:00",
+  "generated_at": "2026-10-28T18:46:22.134996-04:00",
   "inputs": [
     {
       "name": "finviz_export",
@@ -21,7 +21,7 @@
       "family": "join",
       "status": "ok",
       "n": 5901,
-      "detail": "std=0.987"
+      "detail": "std=0.976"
     },
     {
       "name": "news_actions",
@@ -82,9 +82,9 @@
     {
       "name": "general_predict",
       "family": "general",
-      "status": "missing",
+      "status": "degraded",
       "n": null,
-      "detail": "s_general=0 \u2014 weight renormalized away"
+      "detail": "QC fail: not on scoreboard"
     },
     {
       "name": "sector_predicts",
@@ -98,7 +98,7 @@
       "family": "learn",
       "status": "ok",
       "n": null,
-      "detail": "last_date=2026-10-27"
+      "detail": "last_date=2026-10-28"
     }
   ],
   "family_status": {
@@ -107,7 +107,7 @@
     "ab": "ok",
     "peer": "ok",
     "heat": "degraded",
-    "general": "missing",
+    "general": "degraded",
     "sector": "missing"
   },
   "families_present": {
@@ -116,7 +116,7 @@
     "ab": true,
     "peer": true,
     "heat": true,
-    "general": false,
+    "general": true,
     "sector": false
   },
   "learn_grade": true,
