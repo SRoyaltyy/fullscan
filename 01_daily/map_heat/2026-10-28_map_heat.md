@@ -1,6 +1,6 @@
-# MAP HEAT — 2026-10-27
+# MAP HEAT — 2026-10-28
 
-Export `finviz_2026-10-27.csv` · 11616 names · generated 2026-10-27T04:26:30.128793-04:00
+Export `finviz_2026-10-28.csv` · 11616 names · generated 2026-10-28T04:38:34.802468-04:00
 
 ## TAPE (live futures)
 | Contract | Last | Change |
@@ -69,16 +69,6 @@ Export `finviz_2026-10-27.csv` · 11616 names · generated 2026-10-27T04:26:30.1
 **SIZE GATE on** — high-impact print and/or mega-cap earnings today.
 
 Econ (importance ≥ 2):
-- 08:00 ET  Building Permits MoM Final  actual —  cons -0.2%  surprise —  prev -2.1%
-- 08:15 ET  ADP Employment Change Weekly  actual —  cons —  surprise —  prev 18.5K
-- 08:30 ET  Durable Goods Orders MoM  actual —  cons 1.5%  surprise —  prev 0%
-- 08:30 ET  Durable Goods Orders Ex Transp MoM  actual —  cons 0.6%  surprise —  prev 0.3%
-- 09:00 ET  S&P/Case-Shiller Home Price YoY  actual —  cons 2.5%  surprise —  prev 2.5%
-- 10:00 ET  CB Consumer Confidence  actual —  cons 81  surprise —  prev 81.9
-- 10:00 ET  New Home Sales  actual —  cons 0.65M  surprise —  prev 0.684M
-- 10:00 ET  New Home Sales MoM  actual —  cons -3.5%  surprise —  prev 6.4%
-- 11:00 ET  Atlanta Fed GDPNow  actual —  cons 3.5%  surprise —  prev 3.5%
-- 16:30 ET  API Crude Oil Stock Change  actual —  cons —  surprise —  prev -4.93M
 - 07:00 ET  MBA 30-Year Mortgage Rate  actual —  cons —  surprise —  prev 7.41%
 - 08:30 ET  Goods Trade Balance Adv  actual —  cons -$130B  surprise —  prev -$132.1B
 - 08:30 ET  Retail Inventories Ex Autos MoM Adv  actual —  cons -0.1%  surprise —  prev 0%
@@ -87,6 +77,7 @@ Econ (importance ≥ 2):
 - 10:30 ET  EIA Gasoline Stocks Change  actual —  cons —  surprise —  prev -2.952M
 - 11:00 ET  Atlanta Fed GDPNow  actual —  cons —  surprise —  prev —
 - 14:00 ET  Fed Interest Rate Decision  actual —  cons 4.0%  surprise —  prev 4%
+- 14:00 ET  FOMC Statement  actual —  cons —  surprise —  prev —
 - 14:30 ET  Fed Press Conference  actual —  cons —  surprise —  prev —
 - 08:30 ET  Core PCE Price Index MoM  actual —  cons 0.3%  surprise —  prev 0.2%
 - 08:30 ET  GDP Growth Rate QoQ Adv  actual —  cons 3.2%  surprise —  prev 2.2%
@@ -109,54 +100,63 @@ Econ (importance ≥ 2):
 - 19:00 ET  Midterm Elections  actual —  cons —  surprise —  prev —
 - 10:00 ET  JOLTs Job Openings  actual —  cons 7.0M  surprise —  prev 7.079M
 - 10:00 ET  Factory Orders MoM  actual —  cons 0.3%  surprise —  prev 0.1%
+- 15:30 ET  API Crude Oil Stock Change  actual —  cons —  surprise —  prev —
+- 06:00 ET  MBA 30-Year Mortgage Rate  actual —  cons —  surprise —  prev —
+- 08:15 ET  ADP Employment Change  actual —  cons —  surprise —  prev 90K
+- 08:30 ET  Balance of Trade  actual —  cons -$98.9B  surprise —  prev -$105.6B
+- 08:30 ET  Exports  actual —  cons $ 325.0B  surprise —  prev $315.2B
+- 08:30 ET  Imports  actual —  cons $ 385.0B  surprise —  prev $420.8B
+- 09:00 ET  ISM Services PMI  actual —  cons —  surprise —  prev 54.9
+- 09:30 ET  EIA Crude Oil Stocks Change  actual —  cons —  surprise —  prev —
+- 09:30 ET  EIA Gasoline Stocks Change  actual —  cons —  surprise —  prev —
 
 Mega-cap earnings:
 - AMC **AAPL**  EPS est 1.9897  (Apple Inc)
-- AMC **MSFT**  EPS est 4.7124  (Microsoft Corp)
-- AMC **GOOG**  EPS est 3.0271  (Alphabet Inc)
-- AMC **GOOGL**  EPS est 3.0285  (Alphabet Inc)
-- AMC **AMZN**  EPS est 1.9671  (Amazon.com Inc)
+- AMC **MSFT**  EPS est 4.7197  (Microsoft Corp)
+- AMC **GOOGL**  EPS est 3.0152  (Alphabet Inc)
+- AMC **GOOG**  EPS est 3.0135  (Alphabet Inc)
+- AMC **AMZN**  EPS est 1.9708  (Amazon.com Inc)
 - BMO **LLY**  EPS est 5.6839  (Lilly(Eli) & Co)
 - BMO **BRK-A**  EPS est 7553.1645  (Berkshire Hathaway Inc)
 - BMO **BRK-B**  EPS est 5.038  (Berkshire Hathaway Inc)
-- AMC **SKHY**  EPS est 6.1998  (SK Hynix Inc ADR)
 - AMC **AMD**  EPS est 1.9444  (Advanced Micro Devices Inc)
-- AMC **V**  EPS est 3.4389  (Visa Inc)
-- BMO **XOM**  EPS est 4.1029  (ExxonMobil Holdings Corp)
+- BMO **XOM**  EPS est 4.1024  (ExxonMobil Holdings Corp)
 - BMO **MA**  EPS est 5.1682  (Mastercard Incorporated)
 - BMO **ABBV**  EPS est 3.7308  (Abbvie Inc)
-- AMC **PLTR**  EPS est 0.4075  (Palantir Technologies Inc)
 - AMC **INTC**  EPS est 0.4059  (Intel Corp)
+- AMC **PLTR**  EPS est 0.4076  (Palantir Technologies Inc)
 - BMO **CVX**  EPS est 4.8599  (Chevron Corp)
 - AMC **CSCO**  EPS est 1.3245  (Cisco Systems Inc)
-- BMO **KO**  EPS est 0.8806  (Coca-Cola Co)
-- BMO **MRK**  EPS est 2.0904  (Merck & Co Inc)
-- BMO **CAT**  EPS est 7.0417  (Caterpillar Inc)
+- BMO **MRK**  EPS est 2.0906  (Merck & Co Inc)
+- BMO **CAT**  EPS est 7.0551  (Caterpillar Inc)
 - AMC **AMAT**  EPS est 4.0608  (Applied Materials Inc)
 - BMO **SHEL**  EPS est 3.6  (Shell Plc ADR)
-- BMO **HSBC**  EPS est 2.2016  (HSBC Holdings plc ADR)
-- BMO **NVS**  EPS est 2.2711  (Novartis AG ADR)
 - BMO **AZN**  EPS est 2.59  (Astrazeneca plc)
 - AMC **AMGN**  EPS est 5.7921  (AMGEN Inc)
 - AMC **ARM**  EPS est 0.4744  (Arm Holdings Plc ADR)
-- BMO **TM**  EPS est 3.3692  (Toyota Motor Corp ADR)
-- BMO **LIN**  EPS est 4.5181  (Linde Plc)
-- BMO **GEV**  EPS est 4.0099  (GE Vernova Inc)
+- BMO **GEV**  EPS est 4.026  (GE Vernova Inc)
 - AMC **ANET**  EPS est 1.0789  (Arista Networks Inc)
-- BMO **SHOP**  EPS est 0.4659  (Shopify Inc)
+- BMO **LIN**  EPS est 4.5181  (Linde Plc)
+- BMO **TM**  EPS est 3.3692  (Toyota Motor Corp ADR)
+- BMO **SHOP**  EPS est 0.4663  (Shopify Inc)
 - BMO **TTE**  EPS est 3.8176  (TotalEnergies SE)
-- AMC **GILD**  EPS est 2.1837  (Gilead Sciences Inc)
 - AMC **KLAC**  EPS est 1.1863  (KLA Corp)
+- AMC **GILD**  EPS est 2.1938  (Gilead Sciences Inc)
 - AMC **QCOM**  EPS est 2.1705  (Qualcomm Inc)
 - BMO **APH**  EPS est 0.7292  (Amphenol Corp)
+- AMC **SNDK**  EPS est 46.6701  (Sandisk Corp)
+- BMO **SAN**  EPS est 0.2683  (Banco Santander SA ADR)
 - BMO **COP**  EPS est 3.056  (Conoco Phillips)
-- AMC **SNDK**  EPS est 46.6062  (Sandisk Corp)
+- BMO **MCD**  EPS est 3.3837  (McDonald's Corp)
+- BMO **PFE**  EPS est 0.7278  (Pfizer Inc)
+- AMC **NOW**  EPS est 1.0227  (ServiceNow Inc)
+- AMC **TMUS**  EPS est 2.8867  (T-Mobile US Inc)
 
 Options event-vol flags (NOT direction):
-- **AAPL** exp 2026-10-28 ATM IV 0.0078 implied move +0.0% put/call OI —
-- **MSFT** exp 2026-10-30 ATM IV 0.0005 implied move 0.0% put/call OI —
-- **GOOG** exp 2026-10-30 ATM IV 0.0039 implied move +0.0% put/call OI —
+- **AAPL** exp 2026-10-28 ATM IV 0.0039 implied move +0.0% put/call OI —
+- **MSFT** exp 2026-10-30 ATM IV 0.0039 implied move +0.0% put/call OI —
 - **GOOGL** exp 2026-10-30 ATM IV 0.0039 implied move +0.0% put/call OI —
+- **GOOG** exp 2026-10-30 ATM IV 0.0039 implied move +0.0% put/call OI —
 - **AMZN** exp 2026-10-28 ATM IV 0.0078 implied move +0.0% put/call OI —
 - **LLY** exp 2026-10-30 ATM IV 0.001 implied move +0.0% put/call OI —
 - **BRK-B** exp 2026-10-30 ATM IV 0.002 implied move +0.0% put/call OI —
@@ -279,31 +279,31 @@ COLD (1w):
 - **Real Estate** -0.5% 1d -1.9% 1w · VNQ, SCHH, XLRE
 
 ## TICKER-TAGGED NEWS (Finviz v=3)
-- 1 min **GOOGL,GOOG** Kaplan Fox Encourages Alphabet Inc. (GOOGL, GOOG) Investors with Significant Losses to Contact the Firm Before December 1, 2026 (Newsfile)
-- 7 min **MSFT,GOOG,UPS** Stock market today: Dow, S&P 500, Nasdaq drift lower as tech slides (Yahoo Finance)
-- 25 min **ASML,TSM** Top Japanese Chip Stocks to Watch Going Into Q3 Earnings, According to Bernstein (Investing.com)
-- 26 min **PHG** Philips identifies three beauty tech trends set to transform beauty routines into lasting relationships by 2027 (PR Newswire)
-- 26 min **SAP** SAP Empowers AI Developers to Build What Matters and Turn Intent into Autonomous Execution (PR Newswire)
-- 26 min **WTW** Specialty insurance rate softening accelerates (GlobeNewswire)
-- 26 min **SARO** Air Corsica Selects StandardAero For LEAP-1A Engines MRO Services (Business Wire)
-- 26 min **III** European Enterprises Seek Long-Term Value from Workday (Business Wire)
-- 32 min **ALL,ELVR** Atantic Lithium moves closer to takeover completion (Proactive)
-- 34 min **EQNR** Equinor and Aker BP partner on tight reservoir development in Norway (Offshore Technology)
-- 38 min **BSP** Bending Spoons announces proposed offering of senior secured notes (GlobeNewswire)
-- 41 min **CAML** Central Asia Metals completes Cygus Metals acquisition (Proactive)
-- 42 min **AVGO,META,AMD,NVDA** Nvidia Picks Up $3B Stock In Meta's Equity Offering, Will Help Improve Muse AI Platform (Stocktwits)
-- 43 min **BBNX** Beta Bionics, Inc. Sued for Securities Law Violations - Contact the DJS Law Group to Discuss Your Rights - BBNX (PR Newswire)
-- 47 min **QQQ** Bitcoin and ETH Holders Could Face a Deeper Pullback, Ansem Warns (BeInCrypto)
-- 49 min **HSBC** HSBC profit jumps 32% as bank launches $1 billion buyback (Proactive)
-- 50 min **TTE** Nigeria: TotalEnergies Completes the Divestment of its Oil Interest in Renaissance JV (formerly SPDC) (Business Wire)
-- 50 min **TTE** TotalEnergies SE UK Regulatory Announcement: Nigeria: TotalEnergies Completes the Divestment of its Oil Interest in Renaissance JV (formerly SPDC) (Business Wire)
-- 51 min **EEE** Empire Metals to start pilot scale operations at Pitfield titanium project within weeks (Proactive)
-- 1 hour **MA,V** Visa and Mastercard face £5bn lawsuit in UK over card fees- report (Electronic Payments)
-- 1 hour **CLLS** Cellectis Presents Preclinical Data Highlighting Efficient APOC3 Editing and Marked Triglyceride Reduction with .HEAL-101 at ESGCT 2026 (GlobeNewswire)
-- 1 hour **ABBV,IBRX,VTRS,PCRX** IBRX Stock Rises Overnight: Jim Cramer Backs ImmunityBio As A Very Good Spec Amid Biotech Takeover Wave (Stocktwits)
-- 1 hour **SKHY,MU,NBIS,CRWV** MU, SKHY Stocks Rise As Anthropic Filing Shows $450B In Compute Commitments; Kospi Rally Triggers Program-Trading Pause (Stocktwits)
-- 1 hour **SKHY** Asian stocks advance following a rally on Wall Street and oil prices fall (Associated Press)
-- 1 hour **IHG** InterContinental Hotels Group PLC Announces Transaction in Own Shares - October 27 (ACCESSWIRE)
+- 7 min **HLT** Hilton raises RevPAR forecast as regional hotel demand diverges (Hotel Management Network)
+- 8 min **GOOGL** Alphabet Swaps Buybacks for Data Centers. Wall Street Is Getting Nervous (Barrons.com)
+- 10 min **APH,VRT,KLAC,NOW,GEV** Stock Market Today: Dow set to ease while Nasdaq is set to rise with Fed decision on tap as Microsoft and Alphabet results loom; SK Hynix stock soars (MarketWatch)
+- 12 min **GOOGL,MSFT** Nasdaq set to advance ahead of Alphabet and Microsoft earnings (MarketWatch)
+- 13 min **SKHY** SKHY Stock Jumps Premarket: Strategist Says SK Hynix Sits At AIs Toll Booth As Tech Giants Chase Scarce Memory (Stocktwits)
+- 18 min **UL** Unilever tops Q3 sales forecasts on strong volume, emerging markets growth (Investing.com)
+- 19 min **SKHY,GOOG,GOOGL,MSFT** Tech stocks soar as SK hynix adds to rising AI confidence (AFP)
+- 23 min **PSFE** PaysafeWallet Expands into Croatia, Bulgaria and Estonia, Bringing Flexible Digital Payments to More European Consumers (Business Wire)
+- 24 min **HOOD** Robinhood stock falls 7% after earnings miss despite record trading volumes (Yahoo Finance)
+- 24 min **SKHY,NVDA** AI chip giant SK hynix posts seven-fold surge in quarterly operating profit (AFP)
+- 25 min **GSK** GSK beats Q3 profit estimates on specialty medicines strength (Investing.com)
+- 26 min **STLA** Stellantis Confirms Guidance as Turnaround Progress Continues (The Wall Street Journal)
+- 29 min **NXPI** Why Is NXPI Stock Down Over 6% Premarket Today? (Stocktwits)
+- 31 min **GOOG,GOOGL,AVGO,MSFT** Stock market today: Dow futures fall, S&P 500 and Nasdaq futures climb ahead of Fed decision, Big Tech earnings (Yahoo Finance)
+- 38 min **YMM** Full Truck Alliance Co. Ltd. to Announce Third Quarter 2026 Financial Results on Thursday, November 19, 2026 (PR Newswire)
+- 38 min **WTW** Willis urges mining sector to take advantage of favourable market conditions to improve resilience (GlobeNewswire)
+- 38 min **BKYI** BIO-key Deploys Identity Security Solution to New Customer Within a Middle East Government's National Security Ecosystem (GlobeNewswire)
+- 38 min **ELPW** Elong Power Holding Limited (NASDAQ: ELPW) Announces Subsidiary's Entry into a US$25.5 Million Annual Cooperation Agreement, Marking a Critical Step Forward in Its Global Distribution Expansion (GlobeNewswire)
+- 38 min **BLOX,IBIT,MSFT,TKNZ** How the New Actively Managed Crypto ETFs Are Valuing Their Assets (Barrons.com)
+- 38 min **III** U.K. Firms Balance AWS Innovation with Data Sovereignty (Business Wire)
+- 39 min **CL,LCO** Thailand holds rates at 1% as growth stays weak and inflation risks rise (Investing.com)
+- 40 min **BBAI** BBAI Stock Drops Overnight: Retail Shrugs Off BigBear's Profit Concerns, Focused On 'Growth' (Stocktwits)
+- 49 min **STLA** Stellantis Q3 adjusted operating income rises as revenue rises (Investing.com)
+- 53 min **ENPH,VRT,ETN,NVDA** The High-Voltage Stopgap That Could Save the AI Buildout (Barrons.com)
+- 53 min **BAC** Three Buy-rated EU Industrial stocks to watch, according to BofA (Investing.com)
 
 ## NOTES
 - Captains = top 2 by market cap. RUT needs ≥ $5m 20-day dollar volume.
