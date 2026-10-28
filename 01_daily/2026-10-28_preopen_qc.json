@@ -1,6 +1,6 @@
 {
   "date": "2026-10-28",
-  "generated_at": "2026-10-28T04:38:34.836576-04:00",
+  "generated_at": "2026-10-28T05:51:23.357949-04:00",
   "items": [
     {
       "ok": false,
@@ -73,7 +73,7 @@
       "kind": "finviz_market_digest",
       "path": "01_daily/news/2026-10-28_finviz_market_digest.json",
       "reason": "",
-      "size": 6445,
+      "size": 6153,
       "carried": false,
       "timeout": false,
       "empty": false,
