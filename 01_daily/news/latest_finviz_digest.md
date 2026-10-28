@@ -1,11 +1,11 @@
-# Finviz Daily Digest — 2026-10-27
+# Finviz Daily Digest — 2026-10-28
 
-_Generated 2026-10-27T04:20:33.549521-04:00 · export=data/exports/finviz_2026-10-27.csv · ticker digests=5887 · high-signal=2046_
+_Generated 2026-10-28T04:32:51.284696-04:00 · export=data/exports/finviz_2026-10-28.csv · ticker digests=5887 · high-signal=2046_
 
 ## Major indices (live quote page)
 
 - **S&P 500 (SPY)**: Stock Market: Will S&P 500 Open Up or Down Today?
-- **Nasdaq-100 (QQQ)**: Bitcoin and ETH Holders Could Face a Deeper Pullback, Ansem Warns
+- **Nasdaq-100 (QQQ)**: ETF League Tables: SPDR  Invesco See Hefty Outflows
 - **Dow Jones (DIA)**: Michael Burry Says Anthropics IPO Filing Changes Nothing About His AI Bear Case  Flags Financial Risks Beyond The Tech
 - **Russell 2000 (IWM)**: Investors Buy the Dip in Chip ETFs as Inflows Top $44B
 
