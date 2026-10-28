@@ -1,6 +1,6 @@
 # flatten_robust card — 2026-10-28
 
-_Generated 2026-10-28T10:45:33 — live `flatten_robust`._
+_Generated 2026-10-28T12:23:29 — live `flatten_robust`._
 
 **morning S missing; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**
 
@@ -70,10 +70,10 @@ Sized from marked equity **$115,325.53** as if the book were flat. `io 3d_size (
 
 | Clock | Ticker | Sleeve | Shares | Px | $ | Blocked live by |
 |---|---|---|---:|---:|---:|---|
-| 16:00 ET | IONS | io_core | 524 | $43.96 | $23,035.04 | cash tied |
-| 16:00 ET | AGIO | io_core | 606 | $38.03 | $23,046.18 | cash tied |
-| 16:00 ET | FDMT | io_core | 1928 | $11.96 | $23,058.88 | cash tied |
-| 16:00 ET | EOLS | io_core | 3129 | $7.37 | $23,060.73 | cash tied |
-| 16:00 ET | VET | io_core | 1691 | $13.61 | $23,014.51 | cash tied |
+| 16:00 ET | SRRK | io_core | 542 | $42.49 | $23,029.58 | cash tied |
+| 16:00 ET | BRKR | io_core | 379 | $60.74 | $23,020.46 | cash tied |
+| 16:00 ET | NEO | io_core | 1335 | $17.27 | $23,055.45 | cash tied |
+| 16:00 ET | AUTL | io_core | 14880 | $1.55 | $23,064.00 | cash tied |
+| 16:00 ET | FDMT | io_core | 1915 | $11.96 | $22,903.40 | cash tied |
 
 Dashboard: https://sroyaltyy.github.io/fullscan/dashboard/sleeve-merge/
