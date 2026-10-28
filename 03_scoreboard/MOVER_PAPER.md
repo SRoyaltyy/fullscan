@@ -1,6 +1,6 @@
 # Mover paper — empty list + skip days defer to live .io 2w_size
 
-_Generated 2026-10-27T02:05:53 — calls 2026-08-13 → 2026-10-26_
+_Generated 2026-10-28T02:07:33 — calls 2026-08-13 → 2026-10-27_
 
 **Strategy:** LONG-only · top 10/day by cond / live 2w_size · entry open+close (16:00 ET) · hold 1d / 2w_size mark (exit 16:00 ET) · 10% of equity per trade · Futubull fees · cash-accounted (unfittable trades skipped and logged). Mover 1d at 09:30 when S ≥ +1 and the BUY list is non-empty. Empty BUY list and S ≥ 0 takes live .io 2w_size (source gap). Every mover-skip morning (S < +1, including hard-red) also takes that mark.
 
@@ -73,6 +73,7 @@ _Generated 2026-10-27T02:05:53 — calls 2026-08-13 → 2026-10-26_
 | 2026-10-22 | DOWN | -14.314 | 1 | **IO** — predict -14.31 < +1.0 — mover skip; live .io 2w_size mark (already on; not a new 1d ticket) | live 2w_size +0.55% |
 | 2026-10-23 | DOWN | -7.538 | 1 | **IO** — predict -7.54 < +1.0 — mover skip; live .io 2w_size mark (already on; not a new 1d ticket) | live 2w_size -0.69% |
 | 2026-10-26 | DOWN | -2.128 | 1 | **IO** — predict -2.13 < +1.0 — mover skip; live .io 2w_size mark (already on; not a new 1d ticket) | live 2w_size +0.26% |
+| 2026-10-27 | UP | 5.515 | 1 | **MOVER** — predict +5.51 >= +1.0 — mover 1d (09:30) | — |
 
 ## Last 25 filled trades
 
