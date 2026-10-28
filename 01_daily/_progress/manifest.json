@@ -237,8 +237,8 @@
     },
     {
       "date": "2026-10-28",
-      "workflow": "homepage_digest",
-      "file": "2026-10-28_homepage_digest.json",
+      "workflow": "pipeline_health",
+      "file": "2026-10-28_pipeline_health.json",
       "updated_at": "2026-10-28T04:45:40-04:00"
     }
   ]
