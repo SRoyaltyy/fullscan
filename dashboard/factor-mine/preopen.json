@@ -237,6 +237,32 @@
           "s": 5.515,
           "sells": [],
           "sit": false
+        },
+        {
+          "buys": [
+            "SLN",
+            "PRME",
+            "MRVI",
+            "RH"
+          ],
+          "date": "2026-10-28",
+          "equity": 9900.57,
+          "mean": 6.7846,
+          "picks": [
+            "SLN",
+            "PRME",
+            "MRVI",
+            "RH"
+          ],
+          "reasons": [],
+          "s": 6.621,
+          "sells": [
+            "BMBL",
+            "CHKP",
+            "HUBS",
+            "TTAN"
+          ],
+          "sit": false
         }
       ],
       "label": "starts 10-08 open, no past days",
@@ -470,6 +496,26 @@
           ],
           "reasons": [],
           "s": 5.515,
+          "sells": [],
+          "sit": false
+        },
+        {
+          "buys": [
+            "SLN",
+            "PRME",
+            "MRVI"
+          ],
+          "date": "2026-10-28",
+          "equity": 9017.39,
+          "mean": -0.9244,
+          "picks": [
+            "SLN",
+            "PRME",
+            "MRVI",
+            "RH"
+          ],
+          "reasons": [],
+          "s": 6.621,
           "sells": [],
           "sit": false
         }

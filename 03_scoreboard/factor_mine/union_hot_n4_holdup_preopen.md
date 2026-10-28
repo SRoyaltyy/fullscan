@@ -2,7 +2,7 @@
 
 _starts 10-08 open, no past days. Parent recipe `union_hot_n4_holdup` (same selection and exits); candidates only from inputs committed before 09:30 ET._
 
-Equity: 9101.52 | days: 14
+Equity: 9017.39 | days: 15
 
 | date | S | picks | buys | sells | cash | equity | mean% | sit / reason |
 |---|---|---|---|---|---|---|---|---|
@@ -20,3 +20,4 @@ Equity: 9101.52 | days: 14
 | 2026-10-23 | -7.538 | - | - | KLRA 177@13.18, SGRY 150@15.79, SRPT 120@17.94, TNGX 89@25.54 | 9139.37 | 9139.37 | -3.0104 | S=-7.54 <= -3: no buys |
 | 2026-10-26 | None | - | - | - | 9139.37 | 9139.37 | 0.0 | seal not committed before 09:30 ET: never committed |
 | 2026-10-27 | 5.515 | BMBL, CHKP, TTAN, HUBS | BMBL 384@5.95, CHKP 14@157.73, TTAN 27@82.352, HUBS 8@256.8 | - | 357.38 | 9101.52 | -0.4141 | - |
+| 2026-10-28 | 6.621 | SLN, PRME, MRVI, RH | SLN 4@19.76, PRME 21@4.245, MRVI 10@8.23 | - | 104.29 | 9017.39 | -0.9244 | - |
