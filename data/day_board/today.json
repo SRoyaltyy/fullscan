@@ -1,6 +1,6 @@
 {
   "date": "2026-10-28",
-  "generated_at": "2026-10-28T08:20:15.022453-04:00",
+  "generated_at": "2026-10-28T08:20:21.057884-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -76,59 +76,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "stock_book",
-      "title": "Stock book + green",
-      "date": "2026-10-28",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-28T06:41:58.333464-04:00",
-      "files": [
-        {
-          "path": "data/stock_book/2026-10-28_stock_book.json",
-          "ok": true,
-          "reason": "",
-          "size": 1039550,
-          "preview": "1d BUY IONS, FDMT \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, TE, SKYX"
-        },
-        {
-          "path": "data/stock_book/2026-10-28_green.json",
-          "ok": true,
-          "reason": "",
-          "size": 585,
-          "preview": "green 0 \u00b7 "
-        },
-        {
-          "path": "data/stock_book/2026-10-28_input_health.json",
-          "ok": true,
-          "reason": "",
-          "size": 2594,
-          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
-        },
-        {
-          "path": "data/stock_book/2026-10-28_suggestions.json",
-          "ok": true,
-          "reason": "",
-          "size": 8405,
-          "preview": "2026-10-28 BUY IONS, FDMT \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, TE, SKYX"
-        },
-        {
-          "path": "data/stock_book/latest_suggestions.json",
-          "ok": true,
-          "reason": "",
-          "size": 8405,
-          "preview": "2026-10-28 BUY IONS, FDMT \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, TE, SKYX"
-        },
-        {
-          "path": "01_daily/2026-10-28_stock_book.md",
-          "ok": true,
-          "reason": "",
-          "size": 38328,
-          "preview": "# Stock book \u2014 2026-10-28\n_Generated 2026-10-28T06:37:58.525500-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
-        }
-      ],
-      "preview": "1d BUY IONS, FDMT \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, TE, SKYX \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-10-28 BUY IONS, FDMT \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, TE, SKYX \u00b7 2026-10-28 BUY IONS, FDMT \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, TE, SKYX \u00b7 # Stock book \u2014 2026-10-28\n_Generated 2026-10-28T06:37:58.525500-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
-    },
     {
       "key": "live_boards",
       "title": "Live 1d BUY/SELL strip",
@@ -436,6 +383,122 @@
         }
       ],
       "preview": "1d BUY HITI, ADCT, AUTL, SIRI, FDMT \u00b7 SELL OKLO, NEOV, FCEL, POWL, NNDM, EOSE, TE, LUNR \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-10-28 BUY HITI, ADCT, AUTL, SIRI, FDMT \u00b7 SELL OKLO, NEOV, FCEL, POWL, NNDM, EOSE, TE, LUNR \u00b7 2026-10-28 BUY HITI, ADCT, AUTL, SIRI, FDMT \u00b7 SELL OKLO, NEOV, FCEL, POWL, NNDM, EOSE, TE, LUNR \u00b7 # Stock book \u2014 2026-10-28\n_Generated 2026-10-28T08:19:55.411969-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+    },
+    {
+      "key": "live_boards",
+      "title": "Live 1d BUY/SELL strip",
+      "date": "2026-10-28",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-28T08:20:20.231782-04:00",
+      "files": [
+        {
+          "path": "data/day_board/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 24976,
+          "preview": "2026-10-28 BUY HITI, ADCT, AUTL, SIRI, FDMT \u00b7 SELL OKLO, NEOV, FCEL, POWL, NNDM, EOSE, TE, LUNR"
+        },
+        {
+          "path": "data/day_board/latest.json",
+          "ok": true,
+          "reason": "",
+          "size": 1116,
+          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
+        },
+        {
+          "path": "data/day_board/2026-10-28.json",
+          "ok": true,
+          "reason": "",
+          "size": 76916,
+          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href"
+        },
+        {
+          "path": "data/day_board/2026-10-28_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 41398,
+          "preview": "2026-10-28 BUY HITI, ADCT, AUTL, SIRI, FDMT \u00b7 SELL OKLO, NEOV, FCEL, POWL, NNDM, EOSE, TE, LUNR"
+        },
+        {
+          "path": "data/day_board/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 639082,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/2026-10-28_strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 639082,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/factor_mine/morning_look/2026-10-28.json",
+          "ok": true,
+          "reason": "",
+          "size": 157904,
+          "preview": "keys: asof_commit, asof_committed_at, cutoff_et, date, n, read_from, rows"
+        },
+        {
+          "path": "data/day_board/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 865591,
+          "preview": "2026-10-28 BUY HITI, ADCT, AUTL, SIRI, FDMT \u00b7 SELL OKLO, NEOV, FCEL, POWL, NNDM, EOSE, TE, LUNR"
+        },
+        {
+          "path": "data/factor_mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 639082,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 41398,
+          "preview": "2026-10-28 BUY HITI, ADCT, AUTL, SIRI, FDMT \u00b7 SELL OKLO, NEOV, FCEL, POWL, NNDM, EOSE, TE, LUNR"
+        },
+        {
+          "path": "dashboard/factor-mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 639082,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 639082,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 865591,
+          "preview": "2026-10-28 BUY HITI, ADCT, AUTL, SIRI, FDMT \u00b7 SELL OKLO, NEOV, FCEL, POWL, NNDM, EOSE, TE, LUNR"
+        },
+        {
+          "path": "data/day_board/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 1662,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        },
+        {
+          "path": "dashboard/factor-mine/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 1662,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        }
+      ],
+      "preview": "2026-10-28 BUY HITI, ADCT, AUTL, SIRI, FDMT \u00b7 SELL OKLO, NEOV, FCEL, POWL, NNDM, EOSE, TE, LUNR \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href \u00b7 2026-10-28 BUY HITI, ADCT, AUTL, SIRI, FDMT \u00b7 SELL OKLO, NEOV, FCEL, POWL, NNDM, EOSE, TE, LUNR \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: asof_commit, asof_committed_at, cutoff_et, date, n, read_from, rows \u00b7 2026-10-28 BUY HITI, ADCT, AUTL, SIRI, FDMT \u00b7 SELL OKLO, NEOV, FCEL, POWL, NNDM, EOSE, TE, LUNR \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-10-28 BUY HITI, ADCT, AUTL, SIRI, FDMT \u00b7 SELL OKLO, NEOV, FCEL, POWL, NNDM, EOSE, TE, LUNR \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, fa"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
