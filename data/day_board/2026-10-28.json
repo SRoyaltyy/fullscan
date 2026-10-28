@@ -1,6 +1,6 @@
 {
   "date": "2026-10-28",
-  "generated_at": "2026-10-28T05:51:23.664689-04:00",
+  "generated_at": "2026-10-28T05:51:30.348636-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -129,8 +129,8 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 6153,
-          "said": "US equity futures trade mixed as traders await FOMC rate decision and Microsoft/Alphabet earnings amid softer European trade \u00b7 leaders MSFT, GOOGL, BSX, BIIB, GEV, APH \u00b7 neutral",
+          "size": 7637,
+          "said": "US futures trade mixed as Fed decision looms with AI optimism lifting tech and Brent crude tops $115 on Middle East risks \u00b7 leaders HOOD, SKHY, AVGO, GEV, APH, ADP \u00b7 neutral",
           "bullets": []
         },
         {
@@ -140,10 +140,10 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 2783,
+          "size": 3237,
           "said": "Finviz homepage market digest \u2014 2026-10-28",
           "bullets": [
-            "Generated:** 2026-10-28T04:45:22.865011-04:00 (America/New_York)",
+            "Generated:** 2026-10-28T05:51:30.114091-04:00 (America/New_York)",
             "Source:** `live`"
           ]
         },
@@ -210,8 +210,8 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 6153,
-          "said": "US equity futures trade mixed as traders await FOMC rate decision and Microsoft/Alphabet earnings amid softer European trade \u00b7 leaders MSFT, GOOGL, BSX, BIIB, GEV, APH \u00b7 neutral",
+          "size": 7637,
+          "said": "US futures trade mixed as Fed decision looms with AI optimism lifting tech and Brent crude tops $115 on Middle East risks \u00b7 leaders HOOD, SKHY, AVGO, GEV, APH, ADP \u00b7 neutral",
           "bullets": []
         },
         {
@@ -1036,6 +1036,31 @@
         }
       ],
       "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-10-28\n_Generated 2026-10-28T05:51:23.265582-04:00 \u00b7 export=data/exports/finviz_2026-10-28.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_ \u00b7 11686 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11775 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAB\" \u00b7 keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+    },
+    {
+      "key": "finviz_market_digest",
+      "title": "Finviz homepage market digest",
+      "date": "2026-10-28",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-28T05:51:30.131176-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-28_finviz_market_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 7637,
+          "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for"
+        },
+        {
+          "path": "01_daily/news/2026-10-28_finviz_market_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 3237,
+          "preview": "# Finviz homepage market digest \u2014 2026-10-28\n**Generated:** 2026-10-28T05:51:30.114091-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US futures trade mixed as Fed decision looms with AI optimism lifting tech and Brent crude tops $115 on Middle East risks\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** Brent crude $115.0\n**CPI/Fed:** \u2014\n**Leaders:** HOOD, SKHY, AVGO, GEV, APH, ADP, BSX, PSX, BIIB, FLEX, MSFT, GOOGL\n**Next session:** housing no \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** GEV, APH, ADP, BSX, PSX, BIIB, FLEX, MSFT, GOOGL\n**Geo/grain:** geo\n**Clock legal for:** 2026-10-28\n**Clock use:** `same_morning`"
+        }
+      ],
+      "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest \u2014 2026-10-28\n**Generated:** 2026-10-28T05:51:30.114091-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US futures trade mixed as Fed decision looms with AI optimism lifting tech and Brent crude tops $115 on Middle East risks\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** Brent crude $115.0\n**CPI/Fed:** \u2014\n**Leaders:** HOOD, SKHY, AVGO, GEV, APH, ADP, BSX, PSX, BIIB, FLEX, MSFT, GOOGL\n**Next session:** housing no \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** GEV, APH, ADP, BSX, PSX, BIIB, FLEX, MSFT, GOOGL\n**Geo/grain:** geo\n**Clock legal for:** 2026-10-28\n**Clock use:** `same_morning`"
     }
   ],
   "href": {

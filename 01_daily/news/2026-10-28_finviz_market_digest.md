@@ -1,16 +1,16 @@
 # Finviz homepage market digest — 2026-10-28
 
-**Generated:** 2026-10-28T04:45:22.865011-04:00 (America/New_York)
+**Generated:** 2026-10-28T05:51:30.114091-04:00 (America/New_York)
 **Source:** `live`
-**Banner:** US equity futures trade mixed as traders await FOMC rate decision and Microsoft/Alphabet earnings amid softer European trade
+**Banner:** US futures trade mixed as Fed decision looms with AI optimism lifting tech and Brent crude tops $115 on Middle East risks
 **Prior close:** SPX —  Nasdaq —  Dow —
 **SPX:** —  **Nasdaq:** —  **Dow:** —
-**Oil:** —
+**Oil:** Brent crude $115.0
 **CPI/Fed:** —
-**Leaders:** MSFT, GOOGL, BSX, BIIB, GEV, APH, ADP
+**Leaders:** HOOD, SKHY, AVGO, GEV, APH, ADP, BSX, PSX, BIIB, FLEX, MSFT, GOOGL
 **Next session:** housing no · retail no · Fed yes
-**Earnings slate:** MSFT, GOOGL
-**Geo/grain:** —
+**Earnings slate:** GEV, APH, ADP, BSX, PSX, BIIB, FLEX, MSFT, GOOGL
+**Geo/grain:** geo
 **Clock legal for:** 2026-10-28
 **Clock use:** `same_morning`
 
@@ -23,23 +23,25 @@ Homepage `$MARKET` prose — **not** `YYYY-MM-DD_finviz_digest.md` (quote-page h
 ## Theme Radar
 
 - **Prior close:** SPX — · Nasdaq — · Dow —
-- **Oil:** —
+- **Oil:** Brent crude $115.0
 - **CPI / Fed-odds:** —
-- **Named leaders:** MSFT, GOOGL, BSX, BIIB, GEV, APH, ADP
+- **Named leaders:** HOOD, SKHY, AVGO, GEV, APH, ADP, BSX, PSX, BIIB, FLEX, MSFT, GOOGL
 - **Next-session calendar:** housing no · retail no · Fed yes
-  - S&P 500 futures (@ES) are up about 0.07% ahead of the 2 PM ET FOMC rate decision, with traders braced for rates to be held steady following the September hike
-- **Earnings slate:** MSFT, GOOGL
-- **Geo / grain:** —
+  - S&P 500 Futures (@ES) rise 0.09%, Dow Jones Futures (@YM) slip 0.19%, Nasdaq 100 Futures (@NQ) gain 0.37%, and Russell 2000 Futures (@ER2) edge down 0.11% ahead of the 2:00 PM ET FOMC rate announcement and 2:30 PM ET press conference
+  - European markets trade little changed to slightly softer in early action ahead of the FOMC decision
+- **Earnings slate:** GEV, APH, ADP, BSX, PSX, BIIB, FLEX, MSFT, GOOGL
+- **Geo / grain:** geo
 
 ## Narrative
 
-**US equity futures trade mixed as traders await FOMC rate decision and Microsoft/Alphabet earnings amid softer European trade**
+**US futures trade mixed as Fed decision looms with AI optimism lifting tech and Brent crude tops $115 on Middle East risks**
 
-- S&P 500 futures (@ES) are up about 0.07% ahead of the 2 PM ET FOMC rate decision, with traders braced for rates to be held steady following the September hike
-- Nasdaq 100 futures (@NQ) are higher by 0.45% while Dow futures (@YM) slip 0.24% and Russell 2000 futures (@ER2) edge down 0.07%, signaling a mixed US equity setup
-- Microsoft (MSFT) and Alphabet (GOOGL) are scheduled to report earnings after the bell, positioning mega-cap tech as a key driver of post-Fed trading
-- Boston Scientific (BSX), Biogen (BIIB), GE Vernova (GEV), Amphenol (APH) and ADP (ADP) headline a busy slate of early reporters, with focus on beats versus estimates and forward guidance
-- Asian equity markets traded mixed overnight, helped earlier by AI optimism, with Japan’s Nikkei (@NKD) up over 1% while Hong Kong lagged
-- Oil (@CL) prices that climbed modestly in prior Asian trade are now contributing to pressure in Europe, where the STOXX 600 is slightly lower amid earnings-related moves
-- Yesterday the major US averages traded mostly higher on continued AI and semiconductor momentum intertwined with ongoing earnings themes
-- Today’s quiet pre-market tone comes ahead of potential sharp intraday volatility around the 2 PM ET Fed announcement and 2:30 PM ET Chair press conference
+- S&P 500 Futures (@ES) rise 0.09%, Dow Jones Futures (@YM) slip 0.19%, Nasdaq 100 Futures (@NQ) gain 0.37%, and Russell 2000 Futures (@ER2) edge down 0.11% ahead of the 2:00 PM ET FOMC rate announcement and 2:30 PM ET press conference
+- Robinhood (HOOD) trades roughly 8% lower pre-market after missing profit estimates despite record Q3 revenue and EBITDA
+- SK Hynix (SKHY) rallies in Asia after blowout quarterly results, reinforcing AI and semiconductor strength and helping support Nasdaq-linked ($NDX) tech sentiment
+- New AI infrastructure financing announcements tied to Broadcom (AVGO) and Anthropic add to renewed AI optimism and focus on AI-exposed names
+- Brent crude (@QA) trades above $115 per barrel on Middle East supply risks, pressuring some cyclical stocks despite broader equity support
+- Asian equities advance overnight, with South Korea’s Kospi jumping on semiconductor and AI strength and Japan’s Nikkei (@NKD) adding over 1%
+- European markets trade little changed to slightly softer in early action ahead of the FOMC decision
+- GE Vernova (GEV), Amphenol (APH), ADP (ADP), Boston Scientific (BSX), Phillips 66 (PSX), Biogen (BIIB), and Flex (FLEX) are scheduled to report earnings before the bell
+- Microsoft (MSFT) and Alphabet (GOOGL) are set to report earnings after the close, keeping additional attention on large-cap AI and cloud exposure into the Fed outcome
