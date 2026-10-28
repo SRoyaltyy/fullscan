@@ -1,0 +1,147 @@
+{
+  "buys": [
+    {
+      "fill_rule": "open",
+      "price": 23.2,
+      "shares": 118,
+      "side": "BUY",
+      "ticker": "SGRY"
+    },
+    {
+      "fill_rule": "open",
+      "price": 4.38,
+      "shares": 628,
+      "side": "BUY",
+      "ticker": "ENGS"
+    },
+    {
+      "fill_rule": "open",
+      "price": 626.91,
+      "shares": 4,
+      "side": "BUY",
+      "ticker": "LMT"
+    },
+    {
+      "fill_rule": "open",
+      "price": 33.77,
+      "shares": 81,
+      "side": "BUY",
+      "ticker": "DOW"
+    }
+  ],
+  "cash": 260.81,
+  "date": "2026-10-27",
+  "equity": 10983.51,
+  "fees": 14.6802,
+  "fills": [
+    {
+      "fees": 2.344,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 23.2,
+      "shares": 118,
+      "side": "BUY",
+      "ticker": "SGRY"
+    },
+    {
+      "fees": 8.1012,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 4.38,
+      "shares": 628,
+      "side": "BUY",
+      "ticker": "ENGS"
+    },
+    {
+      "fees": 2.002,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 626.91,
+      "shares": 4,
+      "side": "BUY",
+      "ticker": "LMT"
+    },
+    {
+      "fees": 2.233,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 33.77,
+      "shares": 81,
+      "side": "BUY",
+      "ticker": "DOW"
+    }
+  ],
+  "holdings": [
+    "DOW",
+    "ENGS",
+    "LMT",
+    "SGRY"
+  ],
+  "mean": -0.2111,
+  "n_trades_today": 4,
+  "recipe": "oos0914_rvol_lg_h1_sx",
+  "sells": [],
+  "state": {
+    "after": "2026-10-27",
+    "cash": 260.81,
+    "pos": {
+      "DOW": {
+        "close_px": 33.78,
+        "cost": 2737.6030000000005,
+        "entry_date": "2026-10-27",
+        "entry_px": 33.77,
+        "fee_in": 2.233,
+        "last_px": 33.77,
+        "min_hold": 1,
+        "notional": 2735.3700000000003,
+        "peak_px": 33.77,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate last_green=True,rvol_min=1.5; rank hot_score; list ohlc_hot; ret5=+13.0; leftover $2751.68",
+        "shares": 81,
+        "ticker": "DOW"
+      },
+      "ENGS": {
+        "close_px": 4.36,
+        "cost": 2758.7412,
+        "entry_date": "2026-10-27",
+        "entry_px": 4.38,
+        "fee_in": 8.1012,
+        "last_px": 4.38,
+        "min_hold": 1,
+        "notional": 2750.64,
+        "peak_px": 4.38,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate last_green=True,rvol_min=1.5; rank hot_score; list ohlc_hot; ret5=+16.0; leftover $2751.68",
+        "shares": 628,
+        "ticker": "ENGS"
+      },
+      "LMT": {
+        "close_px": 622.99,
+        "cost": 2509.642,
+        "entry_date": "2026-10-27",
+        "entry_px": 626.91,
+        "fee_in": 2.002,
+        "last_px": 626.91,
+        "min_hold": 1,
+        "notional": 2507.64,
+        "peak_px": 626.91,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate last_green=True,rvol_min=1.5; rank hot_score; list ohlc_hot; ret5=+15.9; leftover $2751.68",
+        "shares": 4,
+        "ticker": "LMT"
+      },
+      "SGRY": {
+        "close_px": 23.36,
+        "cost": 2739.944,
+        "entry_date": "2026-10-27",
+        "entry_px": 23.2,
+        "fee_in": 2.344,
+        "last_px": 23.2,
+        "min_hold": 1,
+        "notional": 2737.6,
+        "peak_px": 23.2,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate last_green=True,rvol_min=1.5; rank hot_score; list flatten; \ud83d\udd35; ret5=+58.1; leftover $2751.68",
+        "shares": 118,
+        "ticker": "SGRY"
+      }
+    },
+    "yday_equity": 10983.51
+  }
+}
