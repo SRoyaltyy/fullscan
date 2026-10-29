@@ -2,7 +2,7 @@
 
 Starts from the **same 1d BUY list** the Top Gainer As-Of walk uses, then overlays the fixed FEATURE_MINE stacks. Equal-weight, close-to-close, clip ±30 on the book line. Per-name 1d/2d/3d/1w are raw.
 
-**2026-10-28 is this morning's live book.** 1d/2d are blank until later tapes. Buys/sells vs yesterday are the eval.
+**2026-10-29 is this morning's live book.** 1d/2d are blank until later tapes. Buys/sells vs yesterday are the eval.
 
 ## How a seat is won
 
@@ -93,14 +93,15 @@ Per-day files: `03_scoreboard/boring_winners/<date>.md` · today also at `01_dai
 | 2026-10-22 | `ab_and_peer` | 6 | 1 | 5 | 0 | +0.00 | +0.00 | +0.00 | +0.00 | +0.00 | 0 | 0 |
 | 2026-10-23 | `blue+ab_and_peer` | 9 | 9 | 0 | 0 | +0.00 | +0.00 | +0.00 | +0.00 | +0.00 | 0 | 0 |
 | 2026-10-26 | `ab_and_peer+blue` | 11 | 7 | 4 | 0 | +0.00 | +0.00 | +0.00 | +0.00 | +0.00 | 0 | 0 |
-| 2026-10-27 | `blue_white+blue` | 13 | 13 | 0 | 0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 |
-| 2026-10-28 | `blue_white+blue+ab_and_peer` | 10 | 5 | 5 | 0 | — | — | — | — | — | 0 | 0 |
+| 2026-10-27 | `blue_white+blue` | 13 | 13 | 0 | 0 | +0.00 | +0.00 | +0.00 | +0.00 | +0.00 | 0 | 0 |
+| 2026-10-28 | `blue_white+blue+ab_and_peer` | 16 | 15 | 1 | 0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 |
+| 2026-10-29 | `ab_and_peer+blue` | 6 | 1 | 5 | 0 | — | — | — | — | — | 0 | 0 |
 
-Overlay 1d: 57 priced days · p(loss day)=31.6% · mean=-0.08 · cum=-4.48.
-Stock-book BUY 1d (same panel): 57 priced days · p(loss day)=35.1% · mean=-0.06 · cum=-3.57.
-Mine-only 25 1d (comparison): 57 priced days · p(loss day)=42.1% · mean=-0.09 · cum=-4.83.
-Overlay names 1d: n=751 · p_win=32.0% · p_loss=36.6% · avg_win=+2.28 · avg_loss=-2.18 · mean=-0.07 · clip30=-0.07 · payoff=1.05.
-Overlay names 2d: n=738 · p_win=35.1% · p_loss=43.6% · avg_win=+3.07 · avg_loss=-2.80 · mean=-0.15 · clip30=-0.15 · payoff=1.09.
+Overlay 1d: 58 priced days · p(loss day)=31.0% · mean=-0.08 · cum=-4.48.
+Stock-book BUY 1d (same panel): 58 priced days · p(loss day)=34.5% · mean=-0.06 · cum=-3.57.
+Mine-only 25 1d (comparison): 58 priced days · p(loss day)=41.4% · mean=-0.08 · cum=-4.83.
+Overlay names 1d: n=767 · p_win=31.3% · p_loss=35.9% · avg_win=+2.28 · avg_loss=-2.18 · mean=-0.07 · clip30=-0.07 · payoff=1.05.
+Overlay names 2d: n=751 · p_win=34.5% · p_loss=42.9% · avg_win=+3.07 · avg_loss=-2.80 · mean=-0.14 · clip30=-0.14 · payoff=1.09.
 
 ## Daily short overlay (book SELL ∩ fade, −1 × clipped name return)
 
@@ -163,7 +164,8 @@ Overlay names 2d: n=738 · p_win=35.1% · p_loss=43.6% · avg_win=+3.07 · avg_l
 | 2026-10-23 | 2 | -0.00 | -0.00 | 2 | 8 |
 | 2026-10-26 | 1 | -0.00 | -0.00 | 1 | 2 |
 | 2026-10-27 | 0 | — | — | 0 | 1 |
-| 2026-10-28 | 1 | — | — | 1 | 0 |
+| 2026-10-28 | 0 | — | — | 0 | 0 |
+| 2026-10-29 | 8 | — | — | 8 | 0 |
 
 Short overlay 1d: 27 priced days · p(loss day)=25.9% · mean=+0.56 · cum=+15.21.
 
@@ -2540,16 +2542,16 @@ Market: hard_red · tone `bad`
 
 1d BUY walk × mined stacks: keep / drop fade / swap stack-less / add gated extras → scalp `ab AND peer` (high hit, modest mean)
 
-Overlay 1d +0.00 · 2d +0.00 · 3d +0.00 · 1w — · W/L 0/0 · stock-book BUY 1d +0.00 · mine-only 1d +0.00 · universe med +0.00.
+Overlay 1d +0.00 · 2d +0.00 · 3d +0.00 · 1w +0.00 · W/L 0/0 · stock-book BUY 1d +0.00 · mine-only 1d +0.00 · universe med +0.00.
 
 | # | action | Ticker | src | stack | Marks | Cond | Hall-pass | cameras | coaches | 1d | 2d | 3d | 1w |
 |---:|---|---|---|---|---|---|---|---|---|---:|---:|---:|---:|
-| 1 | buy | `NET` | book | `ab_and_peer` | — — — | 🔴 3/2/4 | probable | join🔴 sect🟡 gen🔴 news⬛ dig🟢 jdg⬛ AB🔴 peer🟢 heat🟢 vol🔴 cat⬛ buy🟡 yΔ🔴 | mkt🔴 par🔴 chd🟢 co🟡 set🟢 flw🟢 | +0.00 | +0.00 | +0.00 | — |
-| 2 | buy | `ECO` | extra | `ab_and_peer` | — 🚨 — | 🟢 5/2/2 | blocked | join🟢 sect🟡 gen🔴 news⬛ dig🟢 jdg⬛ AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟡 yΔ🔴 | mkt🔴 par🔴 chd🟡 co🟡 set🟢 flw🟢 | +0.00 | +0.00 | +0.00 | — |
-| 3 | buy | `PBF` | extra | `ab_and_peer` | — 🚨 — | 🟡 3/3/3 | blocked | join🟡 sect🟡 gen🔴 news⬛ dig🟢 jdg⬛ AB🟢 peer🟢 heat🔴 vol🔴 cat⬛ buy🟡 yΔ🟡 | mkt🔴 par🟡 chd🟡 co🟡 set🟢 flw🟢 | +0.00 | +0.00 | +0.00 | — |
-| 4 | buy | `PDFS` | extra | `ab_and_peer` | — 🚨 — | 🟢 4/2/3 | blocked | join🔴 sect🟡 gen🔴 news⬛ dig🟢 jdg⬛ AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟡 yΔ🟢 | mkt🔴 par🔴 chd🟡 co🟡 set🟢 flw🟢 | +0.00 | +0.00 | +0.00 | — |
-| 5 | buy | `MAN` | extra | `ab_and_peer` | — 🚨 — | 🟢 4/3/2 | blocked | join🟡 sect🟡 gen🔴 news⬛ dig🟢 jdg⬛ AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟡 yΔ🟡 | mkt🔴 par🔴 chd🟡 co🟡 set🟡 flw🟢 | +0.00 | +0.00 | +0.00 | — |
-| 6 | buy | `SON` | extra | `ab_and_peer` | — 🚨 — | 🟢 4/3/2 | blocked | join🟢 sect🟡 gen🔴 news⬛ dig🟡 jdg⬛ AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟡 yΔ🟡 | mkt🔴 par🟡 chd🟡 co🟡 set🔴 flw🟢 | +0.00 | +0.00 | +0.00 | — |
+| 1 | buy | `NET` | book | `ab_and_peer` | — — — | 🔴 3/2/4 | probable | join🔴 sect🟡 gen🔴 news⬛ dig🟢 jdg⬛ AB🔴 peer🟢 heat🟢 vol🔴 cat⬛ buy🟡 yΔ🔴 | mkt🔴 par🔴 chd🟢 co🟡 set🟢 flw🟢 | +0.00 | +0.00 | +0.00 | +0.00 |
+| 2 | buy | `ECO` | extra | `ab_and_peer` | — 🚨 — | 🟢 5/2/2 | blocked | join🟢 sect🟡 gen🔴 news⬛ dig🟢 jdg⬛ AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟡 yΔ🔴 | mkt🔴 par🔴 chd🟡 co🟡 set🟢 flw🟢 | +0.00 | +0.00 | +0.00 | +0.00 |
+| 3 | buy | `PBF` | extra | `ab_and_peer` | — 🚨 — | 🟡 3/3/3 | blocked | join🟡 sect🟡 gen🔴 news⬛ dig🟢 jdg⬛ AB🟢 peer🟢 heat🔴 vol🔴 cat⬛ buy🟡 yΔ🟡 | mkt🔴 par🟡 chd🟡 co🟡 set🟢 flw🟢 | +0.00 | +0.00 | +0.00 | +0.00 |
+| 4 | buy | `PDFS` | extra | `ab_and_peer` | — 🚨 — | 🟢 4/2/3 | blocked | join🔴 sect🟡 gen🔴 news⬛ dig🟢 jdg⬛ AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟡 yΔ🟢 | mkt🔴 par🔴 chd🟡 co🟡 set🟢 flw🟢 | +0.00 | +0.00 | +0.00 | +0.00 |
+| 5 | buy | `MAN` | extra | `ab_and_peer` | — 🚨 — | 🟢 4/3/2 | blocked | join🟡 sect🟡 gen🔴 news⬛ dig🟢 jdg⬛ AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟡 yΔ🟡 | mkt🔴 par🔴 chd🟡 co🟡 set🟡 flw🟢 | +0.00 | +0.00 | +0.00 | +0.00 |
+| 6 | buy | `SON` | extra | `ab_and_peer` | — 🚨 — | 🟢 4/3/2 | blocked | join🟢 sect🟡 gen🔴 news⬛ dig🟡 jdg⬛ AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟡 yΔ🟡 | mkt🔴 par🟡 chd🟡 co🟡 set🔴 flw🟢 | +0.00 | +0.00 | +0.00 | +0.00 |
 
 Sold overnight:
 
@@ -2602,12 +2604,12 @@ Sold overnight:
 
 | # | action | Ticker | src | stack | Marks | Cond | Hall-pass | cameras | coaches | 1d | 2d | 3d | 1w |
 |---:|---|---|---|---|---|---|---|---|---|---:|---:|---:|---:|
-| — | sell | `ECO` | extra | `ab_and_peer` | — 🚨 — | 🟢 5/2/2 | blocked | join🟢 sect🟡 gen🔴 news⬛ dig🟢 jdg⬛ AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟡 yΔ🔴 | mkt🔴 par🔴 chd🟡 co🟡 set🟢 flw🟢 | +0.00 | +0.00 | +0.00 | — |
-| — | sell | `MAN` | extra | `ab_and_peer` | — 🚨 — | 🟢 4/3/2 | blocked | join🟡 sect🟡 gen🔴 news⬛ dig🟢 jdg⬛ AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟡 yΔ🟡 | mkt🔴 par🔴 chd🟡 co🟡 set🟡 flw🟢 | +0.00 | +0.00 | +0.00 | — |
-| — | sell | `NET` | book | `ab_and_peer` | — — — | 🔴 3/2/4 | probable | join🔴 sect🟡 gen🔴 news⬛ dig🟢 jdg⬛ AB🔴 peer🟢 heat🟢 vol🔴 cat⬛ buy🟡 yΔ🔴 | mkt🔴 par🔴 chd🟢 co🟡 set🟢 flw🟢 | +0.00 | +0.00 | +0.00 | — |
-| — | sell | `PBF` | extra | `ab_and_peer` | — 🚨 — | 🟡 3/3/3 | blocked | join🟡 sect🟡 gen🔴 news⬛ dig🟢 jdg⬛ AB🟢 peer🟢 heat🔴 vol🔴 cat⬛ buy🟡 yΔ🟡 | mkt🔴 par🟡 chd🟡 co🟡 set🟢 flw🟢 | +0.00 | +0.00 | +0.00 | — |
-| — | sell | `PDFS` | extra | `ab_and_peer` | — 🚨 — | 🟢 4/2/3 | blocked | join🔴 sect🟡 gen🔴 news⬛ dig🟢 jdg⬛ AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟡 yΔ🟢 | mkt🔴 par🔴 chd🟡 co🟡 set🟢 flw🟢 | +0.00 | +0.00 | +0.00 | — |
-| — | sell | `SON` | extra | `ab_and_peer` | — 🚨 — | 🟢 4/3/2 | blocked | join🟢 sect🟡 gen🔴 news⬛ dig🟡 jdg⬛ AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟡 yΔ🟡 | mkt🔴 par🟡 chd🟡 co🟡 set🔴 flw🟢 | +0.00 | +0.00 | +0.00 | — |
+| — | sell | `ECO` | extra | `ab_and_peer` | — 🚨 — | 🟢 5/2/2 | blocked | join🟢 sect🟡 gen🔴 news⬛ dig🟢 jdg⬛ AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟡 yΔ🔴 | mkt🔴 par🔴 chd🟡 co🟡 set🟢 flw🟢 | +0.00 | +0.00 | +0.00 | +0.00 |
+| — | sell | `MAN` | extra | `ab_and_peer` | — 🚨 — | 🟢 4/3/2 | blocked | join🟡 sect🟡 gen🔴 news⬛ dig🟢 jdg⬛ AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟡 yΔ🟡 | mkt🔴 par🔴 chd🟡 co🟡 set🟡 flw🟢 | +0.00 | +0.00 | +0.00 | +0.00 |
+| — | sell | `NET` | book | `ab_and_peer` | — — — | 🔴 3/2/4 | probable | join🔴 sect🟡 gen🔴 news⬛ dig🟢 jdg⬛ AB🔴 peer🟢 heat🟢 vol🔴 cat⬛ buy🟡 yΔ🔴 | mkt🔴 par🔴 chd🟢 co🟡 set🟢 flw🟢 | +0.00 | +0.00 | +0.00 | +0.00 |
+| — | sell | `PBF` | extra | `ab_and_peer` | — 🚨 — | 🟡 3/3/3 | blocked | join🟡 sect🟡 gen🔴 news⬛ dig🟢 jdg⬛ AB🟢 peer🟢 heat🔴 vol🔴 cat⬛ buy🟡 yΔ🟡 | mkt🔴 par🟡 chd🟡 co🟡 set🟢 flw🟢 | +0.00 | +0.00 | +0.00 | +0.00 |
+| — | sell | `PDFS` | extra | `ab_and_peer` | — 🚨 — | 🟢 4/2/3 | blocked | join🔴 sect🟡 gen🔴 news⬛ dig🟢 jdg⬛ AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟡 yΔ🟢 | mkt🔴 par🔴 chd🟡 co🟡 set🟢 flw🟢 | +0.00 | +0.00 | +0.00 | +0.00 |
+| — | sell | `SON` | extra | `ab_and_peer` | — 🚨 — | 🟢 4/3/2 | blocked | join🟢 sect🟡 gen🔴 news⬛ dig🟡 jdg⬛ AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟡 yΔ🟡 | mkt🔴 par🟡 chd🟡 co🟡 set🔴 flw🟢 | +0.00 | +0.00 | +0.00 | +0.00 |
 
 Seats 1d n=9 · p_win=0.0% · p_loss=0.0% · avg_win=— · avg_loss=— · mean=+0.00 · clip30=+0.00.
 
@@ -2617,21 +2619,21 @@ Market: yellow · tone `neutral`
 
 1d BUY walk × mined stacks: keep / drop fade / swap stack-less / add gated extras → scalp `ab AND peer` (high hit, modest mean) → baseline `blue`
 
-Overlay 1d +0.00 · 2d +0.00 · 3d — · 1w — · W/L 0/0 · stock-book BUY 1d +0.00 · mine-only 1d +0.00 · universe med +0.00.
+Overlay 1d +0.00 · 2d +0.00 · 3d +0.00 · 1w — · W/L 0/0 · stock-book BUY 1d +0.00 · mine-only 1d +0.00 · universe med +0.00.
 
 | # | action | Ticker | src | stack | Marks | Cond | Hall-pass | cameras | coaches | 1d | 2d | 3d | 1w |
 |---:|---|---|---|---|---|---|---|---|---|---:|---:|---:|---:|
-| 1 | buy | `PACS` | book | `ab_and_peer` | 🔵 — ⚪ | 🟢 7/1/2 | probable | join🟢 sect🟡 gen🔴 news⬛ dig🟢 jdg🟢 AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟢 yΔ🔴 | mkt🔴 par🟡 chd🟢 co🟡 set🟢 flw🟡 | +0.00 | +0.00 | — | — |
-| 2 | hold | `CON` | book | `ab_and_peer` | 🔵 — ⚪ | 🟢 7/1/2 | probable | join🟢 sect🟡 gen🔴 news⬛ dig🟢 jdg🟢 AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟢 yΔ🟡 | mkt🔴 par🟡 chd🟢 co🟡 set🟢 flw🟢 | +0.00 | +0.00 | — | — |
-| 3 | hold | `SGRY` | book | `ab_and_peer` | — — — | 🟢 7/1/2 | probable | join🟢 sect🟡 gen🔴 news⬛ dig🟢 jdg🟢 AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟢 yΔ🟡 | mkt🔴 par🟡 chd🟢 co🟡 set🟢 flw🟢 | +0.00 | +0.00 | — | — |
-| 4 | hold | `ASTH` | book | `ab_and_peer` | — — — | 🟢 7/1/2 | probable | join🟢 sect🟡 gen🔴 news⬛ dig🟢 jdg🟢 AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟢 yΔ🟡 | mkt🔴 par🟡 chd🟢 co🟡 set🟢 flw🟢 | +0.00 | +0.00 | — | — |
-| 5 | hold | `AMN` | book | `ab_and_peer` | 🔵 — ⚪ | 🟢 7/1/2 | probable | join🟢 sect🟡 gen🔴 news⬛ dig🟢 jdg🟢 AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟢 yΔ🟡 | mkt🔴 par🟡 chd🟢 co🟡 set🟢 flw🟢 | +0.00 | +0.00 | — | — |
-| 6 | buy | `MQ` | book | `ab_and_peer` | 🔵 — — | 🟢 4/2/3 | probable | join🟡 sect🔴 gen🔴 news⬛ dig🟢 jdg⬛ AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟡 yΔ🟡 | mkt🔴 par🔴 chd🟢 co🟡 set🟢 flw🟢 | +0.00 | +0.00 | — | — |
-| 7 | hold | `NTAP` | book | `ab_and_peer` | 🔵 — — | 🟢 6/0/3 | group leader | join🟢 sect🔴 gen🔴 news⬛ dig🟢 jdg⬛ AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟢 yΔ🟢 | mkt🔴 par🔴 chd🟢 co🟡 set🟢 flw🟢 | +0.00 | +0.00 | — | — |
-| 8 | buy | `VVV` | extra | `blue` | 🔵 — — | 🟢 4/3/2 | blocked | join🟡 sect🟢 gen🔴 news⬛ dig🟡 jdg⬛ AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟡 yΔ🟡 | mkt🔴 par🟡 chd🟡 co🟡 set🟡 flw🟢 | +0.00 | +0.00 | — | — |
-| 9 | buy | `CXW` | extra | `blue` | 🔵 — — | 🔴 4/1/5 | blocked | join🔴 sect🟢 gen🔴 news⬛ dig🟢 jdg🔴 AB🟢 peer🟢 heat🔴 vol🔴 cat⬛ buy🟡 yΔ🟢 | mkt🔴 par🔴 chd🔴 co🟡 set🟢 flw🟢 | +0.00 | +0.00 | — | — |
-| 10 | buy | `CBRL` | extra | `blue` | 🔵 — — | 🟢 4/2/3 | probable | join🔴 sect🟢 gen🔴 news⬛ dig🟡 jdg⬛ AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟡 yΔ🟡 | mkt🔴 par🟡 chd🟡 co🟡 set🟢 flw🟢 | +0.00 | +0.00 | — | — |
-| 11 | buy | `PWP` | extra | `blue` | 🔵 — — | 🔴 3/1/5 | blocked | join🔴 sect🔴 gen🔴 news⬛ dig🟢 jdg⬛ AB🟢 peer🟢 heat🔴 vol🔴 cat⬛ buy🟡 yΔ🟡 | mkt🔴 par🟡 chd🔴 co🟡 set🟡 flw🟢 | +0.00 | +0.00 | — | — |
+| 1 | buy | `PACS` | book | `ab_and_peer` | 🔵 — ⚪ | 🟢 7/1/2 | probable | join🟢 sect🟡 gen🔴 news⬛ dig🟢 jdg🟢 AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟢 yΔ🔴 | mkt🔴 par🟡 chd🟢 co🟡 set🟢 flw🟡 | +0.00 | +0.00 | +0.00 | — |
+| 2 | hold | `CON` | book | `ab_and_peer` | 🔵 — ⚪ | 🟢 7/1/2 | probable | join🟢 sect🟡 gen🔴 news⬛ dig🟢 jdg🟢 AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟢 yΔ🟡 | mkt🔴 par🟡 chd🟢 co🟡 set🟢 flw🟢 | +0.00 | +0.00 | +0.00 | — |
+| 3 | hold | `SGRY` | book | `ab_and_peer` | — — — | 🟢 7/1/2 | probable | join🟢 sect🟡 gen🔴 news⬛ dig🟢 jdg🟢 AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟢 yΔ🟡 | mkt🔴 par🟡 chd🟢 co🟡 set🟢 flw🟢 | +0.00 | +0.00 | +0.00 | — |
+| 4 | hold | `ASTH` | book | `ab_and_peer` | — — — | 🟢 7/1/2 | probable | join🟢 sect🟡 gen🔴 news⬛ dig🟢 jdg🟢 AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟢 yΔ🟡 | mkt🔴 par🟡 chd🟢 co🟡 set🟢 flw🟢 | +0.00 | +0.00 | +0.00 | — |
+| 5 | hold | `AMN` | book | `ab_and_peer` | 🔵 — ⚪ | 🟢 7/1/2 | probable | join🟢 sect🟡 gen🔴 news⬛ dig🟢 jdg🟢 AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟢 yΔ🟡 | mkt🔴 par🟡 chd🟢 co🟡 set🟢 flw🟢 | +0.00 | +0.00 | +0.00 | — |
+| 6 | buy | `MQ` | book | `ab_and_peer` | 🔵 — — | 🟢 4/2/3 | probable | join🟡 sect🔴 gen🔴 news⬛ dig🟢 jdg⬛ AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟡 yΔ🟡 | mkt🔴 par🔴 chd🟢 co🟡 set🟢 flw🟢 | +0.00 | +0.00 | +0.00 | — |
+| 7 | hold | `NTAP` | book | `ab_and_peer` | 🔵 — — | 🟢 6/0/3 | group leader | join🟢 sect🔴 gen🔴 news⬛ dig🟢 jdg⬛ AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟢 yΔ🟢 | mkt🔴 par🔴 chd🟢 co🟡 set🟢 flw🟢 | +0.00 | +0.00 | +0.00 | — |
+| 8 | buy | `VVV` | extra | `blue` | 🔵 — — | 🟢 4/3/2 | blocked | join🟡 sect🟢 gen🔴 news⬛ dig🟡 jdg⬛ AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟡 yΔ🟡 | mkt🔴 par🟡 chd🟡 co🟡 set🟡 flw🟢 | +0.00 | +0.00 | +0.00 | — |
+| 9 | buy | `CXW` | extra | `blue` | 🔵 — — | 🔴 4/1/5 | blocked | join🔴 sect🟢 gen🔴 news⬛ dig🟢 jdg🔴 AB🟢 peer🟢 heat🔴 vol🔴 cat⬛ buy🟡 yΔ🟢 | mkt🔴 par🔴 chd🔴 co🟡 set🟢 flw🟢 | +0.00 | +0.00 | +0.00 | — |
+| 10 | buy | `CBRL` | extra | `blue` | 🔵 — — | 🟢 4/2/3 | probable | join🔴 sect🟢 gen🔴 news⬛ dig🟡 jdg⬛ AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟡 yΔ🟡 | mkt🔴 par🟡 chd🟡 co🟡 set🟢 flw🟢 | +0.00 | +0.00 | +0.00 | — |
+| 11 | buy | `PWP` | extra | `blue` | 🔵 — — | 🔴 3/1/5 | blocked | join🔴 sect🔴 gen🔴 news⬛ dig🟢 jdg⬛ AB🟢 peer🟢 heat🔴 vol🔴 cat⬛ buy🟡 yΔ🟡 | mkt🔴 par🟡 chd🔴 co🟡 set🟡 flw🟢 | +0.00 | +0.00 | +0.00 | — |
 
 Sold overnight:
 
@@ -2650,78 +2652,113 @@ Market: green · tone `good`
 
 1d BUY walk × mined stacks: keep / drop fade / swap stack-less / add gated extras → swing `blue+white` (white only with blue) → baseline `blue`
 
-Overlay 1d +0.00 · 2d — · 3d — · 1w — · W/L 0/0 · stock-book BUY 1d +0.00 · mine-only 1d +0.00 · universe med +0.00.
+Overlay 1d +0.00 · 2d +0.00 · 3d — · 1w — · W/L 0/0 · stock-book BUY 1d +0.00 · mine-only 1d +0.00 · universe med +0.00.
 
 | # | action | Ticker | src | stack | Marks | Cond | Hall-pass | cameras | coaches | 1d | 2d | 3d | 1w |
 |---:|---|---|---|---|---|---|---|---|---|---:|---:|---:|---:|
-| 1 | buy | `CDNA` | book | `blue_white` | 🔵 — ⚪ | 🟢 8/1/1 | standard | join🟢 sect🟡 gen🟢 news⬛ dig🟢 jdg🟢 AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟢 yΔ🟢 | mkt🟢 par🟡 chd🟡 co🟡 set🟢 flw🟢 | +0.00 | — | — | — |
-| 2 | hold | `PACS` | book | `blue_white` | 🔵 — ⚪ | 🟢 8/1/1 | group leader | join🟢 sect🟡 gen🟢 news⬛ dig🟢 jdg🟢 AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟢 yΔ🔴 | mkt🟢 par🟡 chd🟢 co🟡 set🟢 flw🟡 | +0.00 | — | — | — |
-| 3 | buy | `BLFS` | book | `blue_white` | 🔵 — ⚪ | 🟢 7/2/1 | standard | join🟢 sect🟡 gen🟢 news⬛ dig🟢 jdg🟢 AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟡 yΔ🟡 | mkt🟢 par🟡 chd🟡 co🟡 set🟢 flw🟢 | +0.00 | — | — | — |
-| 4 | hold | `CBRL` | book | `blue_white` | 🔵 — ⚪ | 🟢 6/2/1 | standard | join🟢 sect🟡 gen🟢 news⬛ dig🟡 jdg⬛ AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟢 yΔ🟡 | mkt🟢 par🟡 chd🟡 co🟡 set🟢 flw🟢 | +0.00 | — | — | — |
-| 5 | buy | `SHOO` | book | `blue_white` | 🔵 — ⚪ | 🟢 6/2/1 | standard | join🟢 sect🟡 gen🟢 news⬛ dig🟡 jdg⬛ AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟢 yΔ🟡 | mkt🟢 par🟡 chd🟡 co🟡 set🟢 flw🟢 | +0.00 | — | — | — |
-| 6 | buy | `FIGS` | book | `blue_white` | 🔵 — ⚪ | 🟢 6/2/1 | standard | join🟢 sect🟡 gen🟢 news⬛ dig🟡 jdg⬛ AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟢 yΔ🟡 | mkt🟢 par🟡 chd🟡 co🟡 set🟢 flw🟢 | +0.00 | — | — | — |
-| 7 | buy | `LAUR` | book | `blue_white` | 🔵 — ⚪ | 🟢 6/1/2 | standard | join🟢 sect🟡 gen🟢 news⬛ dig🔴 jdg⬛ AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟢 yΔ🟡 | mkt🟢 par🟢 chd🟡 co🟡 set🟢 flw🟢 | +0.00 | — | — | — |
-| 8 | buy | `COP` | book | `blue_white` | 🔵 — ⚪ | 🟢 5/2/3 | standard | join🟡 sect🔴 gen🟢 news🟢 dig🟢 jdg⬛ AB🟢 peer🟢 heat🔴 vol🔴 cat⬛ buy🟡 yΔ🟢 | mkt🟢 par🟡 chd🟡 co🟡 set🟢 flw🟢 | +0.00 | — | — | — |
-| 9 | buy | `CHEF` | book | `blue_white` | 🔵 — ⚪ | 🟢 5/2/2 | standard | join🟢 sect🟡 gen🟢 news⬛ dig🔴 jdg⬛ AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟡 yΔ🟡 | mkt🟢 par🟢 chd🟡 co🟡 set🟢 flw🟢 | +0.00 | — | — | — |
-| 10 | buy | `SN` | book | `blue_white` | 🔵 — ⚪ | 🟢 5/3/1 | standard | join🟢 sect🟡 gen🟢 news⬛ dig🟡 jdg⬛ AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟡 yΔ🟡 | mkt🟢 par🟡 chd🟡 co🟡 set🟢 flw🟢 | +0.00 | — | — | — |
-| 11 | buy | `VEEV` | book | `blue_white` | 🔵 — ⚪ | 🟢 7/2/1 | standard | join🟢 sect🟡 gen🟢 news⬛ dig🟢 jdg🟢 AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟡 yΔ🔴 | mkt🟢 par🟡 chd🟡 co🟡 set🟢 flw🟡 | +0.00 | — | — | — |
-| 12 | buy | `VLO` | book | `blue_white` | 🔵 — ⚪ | 🟢 5/1/3 | standard | join🟢 sect🔴 gen🟢 news⬛ dig🟢 jdg⬛ AB🟢 peer🟢 heat🔴 vol🔴 cat⬛ buy🟡 yΔ🟢 | mkt🟢 par🟡 chd🟡 co🟡 set🟢 flw🟢 | +0.00 | — | — | — |
-| 13 | buy | `PEB` | book | `blue` | 🔵 — — | 🟢 5/3/1 | probable | join🟢 sect🟡 gen🟢 news⬛ dig🟡 jdg⬛ AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟡 yΔ🟡 | mkt🟢 par🔴 chd🟡 co🟡 set🟢 flw🟢 | +0.00 | — | — | — |
+| 1 | buy | `CDNA` | book | `blue_white` | 🔵 — ⚪ | 🟢 8/1/1 | standard | join🟢 sect🟡 gen🟢 news⬛ dig🟢 jdg🟢 AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟢 yΔ🟢 | mkt🟢 par🟡 chd🟡 co🟡 set🟢 flw🟢 | +0.00 | +0.00 | — | — |
+| 2 | hold | `PACS` | book | `blue_white` | 🔵 — ⚪ | 🟢 8/1/1 | group leader | join🟢 sect🟡 gen🟢 news⬛ dig🟢 jdg🟢 AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟢 yΔ🔴 | mkt🟢 par🟡 chd🟢 co🟡 set🟢 flw🟡 | +0.00 | +0.00 | — | — |
+| 3 | buy | `BLFS` | book | `blue_white` | 🔵 — ⚪ | 🟢 7/2/1 | standard | join🟢 sect🟡 gen🟢 news⬛ dig🟢 jdg🟢 AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟡 yΔ🟡 | mkt🟢 par🟡 chd🟡 co🟡 set🟢 flw🟢 | +0.00 | +0.00 | — | — |
+| 4 | hold | `CBRL` | book | `blue_white` | 🔵 — ⚪ | 🟢 6/2/1 | standard | join🟢 sect🟡 gen🟢 news⬛ dig🟡 jdg⬛ AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟢 yΔ🟡 | mkt🟢 par🟡 chd🟡 co🟡 set🟢 flw🟢 | +0.00 | +0.00 | — | — |
+| 5 | buy | `SHOO` | book | `blue_white` | 🔵 — ⚪ | 🟢 6/2/1 | standard | join🟢 sect🟡 gen🟢 news⬛ dig🟡 jdg⬛ AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟢 yΔ🟡 | mkt🟢 par🟡 chd🟡 co🟡 set🟢 flw🟢 | +0.00 | +0.00 | — | — |
+| 6 | buy | `FIGS` | book | `blue_white` | 🔵 — ⚪ | 🟢 6/2/1 | standard | join🟢 sect🟡 gen🟢 news⬛ dig🟡 jdg⬛ AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟢 yΔ🟡 | mkt🟢 par🟡 chd🟡 co🟡 set🟢 flw🟢 | +0.00 | +0.00 | — | — |
+| 7 | buy | `LAUR` | book | `blue_white` | 🔵 — ⚪ | 🟢 6/1/2 | standard | join🟢 sect🟡 gen🟢 news⬛ dig🔴 jdg⬛ AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟢 yΔ🟡 | mkt🟢 par🟢 chd🟡 co🟡 set🟢 flw🟢 | +0.00 | +0.00 | — | — |
+| 8 | buy | `COP` | book | `blue_white` | 🔵 — ⚪ | 🟢 5/2/3 | standard | join🟡 sect🔴 gen🟢 news🟢 dig🟢 jdg⬛ AB🟢 peer🟢 heat🔴 vol🔴 cat⬛ buy🟡 yΔ🟢 | mkt🟢 par🟡 chd🟡 co🟡 set🟢 flw🟢 | +0.00 | +0.00 | — | — |
+| 9 | buy | `CHEF` | book | `blue_white` | 🔵 — ⚪ | 🟢 5/2/2 | standard | join🟢 sect🟡 gen🟢 news⬛ dig🔴 jdg⬛ AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟡 yΔ🟡 | mkt🟢 par🟢 chd🟡 co🟡 set🟢 flw🟢 | +0.00 | +0.00 | — | — |
+| 10 | buy | `SN` | book | `blue_white` | 🔵 — ⚪ | 🟢 5/3/1 | standard | join🟢 sect🟡 gen🟢 news⬛ dig🟡 jdg⬛ AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟡 yΔ🟡 | mkt🟢 par🟡 chd🟡 co🟡 set🟢 flw🟢 | +0.00 | +0.00 | — | — |
+| 11 | buy | `VEEV` | book | `blue_white` | 🔵 — ⚪ | 🟢 7/2/1 | standard | join🟢 sect🟡 gen🟢 news⬛ dig🟢 jdg🟢 AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟡 yΔ🔴 | mkt🟢 par🟡 chd🟡 co🟡 set🟢 flw🟡 | +0.00 | +0.00 | — | — |
+| 12 | buy | `VLO` | book | `blue_white` | 🔵 — ⚪ | 🟢 5/1/3 | standard | join🟢 sect🔴 gen🟢 news⬛ dig🟢 jdg⬛ AB🟢 peer🟢 heat🔴 vol🔴 cat⬛ buy🟡 yΔ🟢 | mkt🟢 par🟡 chd🟡 co🟡 set🟢 flw🟢 | +0.00 | +0.00 | — | — |
+| 13 | buy | `PEB` | book | `blue` | 🔵 — — | 🟢 5/3/1 | probable | join🟢 sect🟡 gen🟢 news⬛ dig🟡 jdg⬛ AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟡 yΔ🟡 | mkt🟢 par🔴 chd🟡 co🟡 set🟢 flw🟢 | +0.00 | +0.00 | — | — |
 
 Sold overnight:
 
 | # | action | Ticker | src | stack | Marks | Cond | Hall-pass | cameras | coaches | 1d | 2d | 3d | 1w |
 |---:|---|---|---|---|---|---|---|---|---|---:|---:|---:|---:|
-| — | sell | `AMN` | book | `ab_and_peer` | 🔵 — ⚪ | 🟢 7/1/2 | probable | join🟢 sect🟡 gen🔴 news⬛ dig🟢 jdg🟢 AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟢 yΔ🟡 | mkt🔴 par🟡 chd🟢 co🟡 set🟢 flw🟢 | +0.00 | +0.00 | — | — |
-| — | sell | `ASTH` | book | `ab_and_peer` | — — — | 🟢 7/1/2 | probable | join🟢 sect🟡 gen🔴 news⬛ dig🟢 jdg🟢 AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟢 yΔ🟡 | mkt🔴 par🟡 chd🟢 co🟡 set🟢 flw🟢 | +0.00 | +0.00 | — | — |
-| — | sell | `CON` | book | `ab_and_peer` | 🔵 — ⚪ | 🟢 7/1/2 | probable | join🟢 sect🟡 gen🔴 news⬛ dig🟢 jdg🟢 AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟢 yΔ🟡 | mkt🔴 par🟡 chd🟢 co🟡 set🟢 flw🟢 | +0.00 | +0.00 | — | — |
-| — | sell | `CXW` | extra | `blue` | 🔵 — — | 🔴 4/1/5 | blocked | join🔴 sect🟢 gen🔴 news⬛ dig🟢 jdg🔴 AB🟢 peer🟢 heat🔴 vol🔴 cat⬛ buy🟡 yΔ🟢 | mkt🔴 par🔴 chd🔴 co🟡 set🟢 flw🟢 | +0.00 | +0.00 | — | — |
-| — | sell | `MQ` | book | `ab_and_peer` | 🔵 — — | 🟢 4/2/3 | probable | join🟡 sect🔴 gen🔴 news⬛ dig🟢 jdg⬛ AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟡 yΔ🟡 | mkt🔴 par🔴 chd🟢 co🟡 set🟢 flw🟢 | +0.00 | +0.00 | — | — |
-| — | sell | `NTAP` | book | `ab_and_peer` | 🔵 — — | 🟢 6/0/3 | group leader | join🟢 sect🔴 gen🔴 news⬛ dig🟢 jdg⬛ AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟢 yΔ🟢 | mkt🔴 par🔴 chd🟢 co🟡 set🟢 flw🟢 | +0.00 | +0.00 | — | — |
-| — | sell | `PWP` | extra | `blue` | 🔵 — — | 🔴 3/1/5 | blocked | join🔴 sect🔴 gen🔴 news⬛ dig🟢 jdg⬛ AB🟢 peer🟢 heat🔴 vol🔴 cat⬛ buy🟡 yΔ🟡 | mkt🔴 par🟡 chd🔴 co🟡 set🟡 flw🟢 | +0.00 | +0.00 | — | — |
-| — | sell | `SGRY` | book | `ab_and_peer` | — — — | 🟢 7/1/2 | probable | join🟢 sect🟡 gen🔴 news⬛ dig🟢 jdg🟢 AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟢 yΔ🟡 | mkt🔴 par🟡 chd🟢 co🟡 set🟢 flw🟢 | +0.00 | +0.00 | — | — |
-| — | sell | `VVV` | extra | `blue` | 🔵 — — | 🟢 4/3/2 | blocked | join🟡 sect🟢 gen🔴 news⬛ dig🟡 jdg⬛ AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟡 yΔ🟡 | mkt🔴 par🟡 chd🟡 co🟡 set🟡 flw🟢 | +0.00 | +0.00 | — | — |
+| — | sell | `AMN` | book | `ab_and_peer` | 🔵 — ⚪ | 🟢 7/1/2 | probable | join🟢 sect🟡 gen🔴 news⬛ dig🟢 jdg🟢 AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟢 yΔ🟡 | mkt🔴 par🟡 chd🟢 co🟡 set🟢 flw🟢 | +0.00 | +0.00 | +0.00 | — |
+| — | sell | `ASTH` | book | `ab_and_peer` | — — — | 🟢 7/1/2 | probable | join🟢 sect🟡 gen🔴 news⬛ dig🟢 jdg🟢 AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟢 yΔ🟡 | mkt🔴 par🟡 chd🟢 co🟡 set🟢 flw🟢 | +0.00 | +0.00 | +0.00 | — |
+| — | sell | `CON` | book | `ab_and_peer` | 🔵 — ⚪ | 🟢 7/1/2 | probable | join🟢 sect🟡 gen🔴 news⬛ dig🟢 jdg🟢 AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟢 yΔ🟡 | mkt🔴 par🟡 chd🟢 co🟡 set🟢 flw🟢 | +0.00 | +0.00 | +0.00 | — |
+| — | sell | `CXW` | extra | `blue` | 🔵 — — | 🔴 4/1/5 | blocked | join🔴 sect🟢 gen🔴 news⬛ dig🟢 jdg🔴 AB🟢 peer🟢 heat🔴 vol🔴 cat⬛ buy🟡 yΔ🟢 | mkt🔴 par🔴 chd🔴 co🟡 set🟢 flw🟢 | +0.00 | +0.00 | +0.00 | — |
+| — | sell | `MQ` | book | `ab_and_peer` | 🔵 — — | 🟢 4/2/3 | probable | join🟡 sect🔴 gen🔴 news⬛ dig🟢 jdg⬛ AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟡 yΔ🟡 | mkt🔴 par🔴 chd🟢 co🟡 set🟢 flw🟢 | +0.00 | +0.00 | +0.00 | — |
+| — | sell | `NTAP` | book | `ab_and_peer` | 🔵 — — | 🟢 6/0/3 | group leader | join🟢 sect🔴 gen🔴 news⬛ dig🟢 jdg⬛ AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟢 yΔ🟢 | mkt🔴 par🔴 chd🟢 co🟡 set🟢 flw🟢 | +0.00 | +0.00 | +0.00 | — |
+| — | sell | `PWP` | extra | `blue` | 🔵 — — | 🔴 3/1/5 | blocked | join🔴 sect🔴 gen🔴 news⬛ dig🟢 jdg⬛ AB🟢 peer🟢 heat🔴 vol🔴 cat⬛ buy🟡 yΔ🟡 | mkt🔴 par🟡 chd🔴 co🟡 set🟡 flw🟢 | +0.00 | +0.00 | +0.00 | — |
+| — | sell | `SGRY` | book | `ab_and_peer` | — — — | 🟢 7/1/2 | probable | join🟢 sect🟡 gen🔴 news⬛ dig🟢 jdg🟢 AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟢 yΔ🟡 | mkt🔴 par🟡 chd🟢 co🟡 set🟢 flw🟢 | +0.00 | +0.00 | +0.00 | — |
+| — | sell | `VVV` | extra | `blue` | 🔵 — — | 🟢 4/3/2 | blocked | join🟡 sect🟢 gen🔴 news⬛ dig🟡 jdg⬛ AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟡 yΔ🟡 | mkt🔴 par🟡 chd🟡 co🟡 set🟡 flw🟢 | +0.00 | +0.00 | +0.00 | — |
 
 Seats 1d n=13 · p_win=0.0% · p_loss=0.0% · avg_win=— · avg_loss=— · mean=+0.00 · clip30=+0.00.
 
-### 2026-10-28 · `blue_white+blue+ab_and_peer` · n=10 (keep 5 / add 5 / drop 0)
+### 2026-10-28 · `blue_white+blue+ab_and_peer` · n=16 (keep 15 / add 1 / drop 0)
 
-Market: yellow · tone `neutral`
+Market: green · tone `good`
 
 1d BUY walk × mined stacks: keep / drop fade / swap stack-less / add gated extras → swing `blue+white` (white only with blue) → baseline `blue` → scalp `ab AND peer` (high hit, modest mean)
+
+Overlay 1d +0.00 · 2d — · 3d — · 1w — · W/L 0/0 · stock-book BUY 1d +0.00 · mine-only 1d +0.00 · universe med +0.00.
+
+| # | action | Ticker | src | stack | Marks | Cond | Hall-pass | cameras | coaches | 1d | 2d | 3d | 1w |
+|---:|---|---|---|---|---|---|---|---|---|---:|---:|---:|---:|
+| 1 | buy | `CNK` | book | `blue_white` | 🔵 — ⚪ | 🟢 6/2/1 | standard | join🟢 sect🟡 gen🟢 news⬛ dig🟢 jdg⬛ AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟡 yΔ🟡 | mkt🟢 par🟢 chd🟢 co🟡 set🟢 flw🟢 | +0.00 | — | — | — |
+| 2 | buy | `LRN` | book | `blue_white` | 🔵 — ⚪ | 🟢 5/2/2 | standard | join🟢 sect🟡 gen🟢 news⬛ dig🔴 jdg⬛ AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟡 yΔ🟡 | mkt🟢 par🟢 chd🟡 co🟡 set🟢 flw🟢 | +0.00 | — | — | — |
+| 3 | buy | `CTOS` | book | `blue` | 🔵 — — | 🟢 6/1/2 | probable | join🟢 sect🟢 gen🟢 news⬛ dig🟢 jdg⬛ AB🟢 peer🟢 heat🔴 vol🔴 cat⬛ buy🟡 yΔ🟡 | mkt🟢 par🔴 chd🟡 co🟡 set🟢 flw🟢 | +0.00 | — | — | — |
+| 4 | hold | `CDNA` | book | `ab_and_peer` | — — ⚪ | 🟢 7/1/1 | standard | join🟢 sect🟡 gen🟢 news⬛ dig🟢 jdg⬛ AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟢 yΔ🟢 | mkt🟢 par🟡 chd🟡 co🟡 set🟢 flw🟢 | +0.00 | — | — | — |
+| 5 | hold | `CBRL` | book | `ab_and_peer` | — — ⚪ | 🟢 6/2/1 | standard | join🟢 sect🟡 gen🟢 news⬛ dig🟡 jdg⬛ AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟢 yΔ🟡 | mkt🟢 par🟡 chd🟡 co🟡 set🟢 flw🟢 | +0.00 | — | — | — |
+| 6 | hold | `BLFS` | book | `ab_and_peer` | — — ⚪ | 🟢 7/1/1 | standard | join🟢 sect🟡 gen🟢 news⬛ dig🟢 jdg⬛ AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟢 yΔ🟡 | mkt🟢 par🟡 chd🟡 co🟡 set🟢 flw🟢 | +0.00 | — | — | — |
+| 7 | buy | `ARQT` | book | `ab_and_peer` | — — ⚪ | 🟢 6/2/1 | standard | join🟢 sect🟡 gen🟢 news⬛ dig🟢 jdg⬛ AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟡 yΔ🟢 | mkt🟢 par🟡 chd🟡 co🟡 set🟢 flw🟢 | +0.00 | — | — | — |
+| 8 | hold | `FIGS` | book | `ab_and_peer` | — — ⚪ | 🟢 6/2/1 | standard | join🟢 sect🟡 gen🟢 news⬛ dig🟡 jdg⬛ AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟢 yΔ🟡 | mkt🟢 par🟡 chd🟡 co🟡 set🟢 flw🟢 | +0.00 | — | — | — |
+| 9 | buy | `CAKE` | book | `ab_and_peer` | — — ⚪ | 🟢 5/3/1 | standard | join🟢 sect🟡 gen🟢 news⬛ dig🟡 jdg⬛ AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟡 yΔ🟡 | mkt🟢 par🟡 chd🟡 co🟡 set🟢 flw🟢 | +0.00 | — | — | — |
+| 10 | hold | `CHEF` | book | `ab_and_peer` | — — ⚪ | 🟢 6/1/2 | standard | join🟢 sect🟡 gen🟢 news⬛ dig🔴 jdg⬛ AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟢 yΔ🟡 | mkt🟢 par🟢 chd🟡 co🟡 set🟢 flw🟢 | +0.00 | — | — | — |
+| 11 | hold | `LAUR` | book | `ab_and_peer` | — — ⚪ | 🟢 6/1/2 | standard | join🟢 sect🟡 gen🟢 news⬛ dig🔴 jdg⬛ AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟢 yΔ🟡 | mkt🟢 par🟢 chd🟡 co🟡 set🟢 flw🟢 | +0.00 | — | — | — |
+| 12 | hold | `SN` | book | `ab_and_peer` | — — ⚪ | 🟢 6/2/1 | standard | join🟢 sect🟡 gen🟢 news⬛ dig🟡 jdg⬛ AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟢 yΔ🟡 | mkt🟢 par🟡 chd🟡 co🟡 set🟢 flw🟢 | +0.00 | — | — | — |
+| 13 | hold | `VEEV` | book | `ab_and_peer` | — — ⚪ | 🟢 7/1/1 | standard | join🟢 sect🟡 gen🟢 news⬛ dig🟢 jdg⬛ AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟢 yΔ🔴 | mkt🟢 par🟡 chd🟡 co🟡 set🟢 flw🟡 | +0.00 | — | — | — |
+| 14 | hold | `COP` | book | `ab_and_peer` | — — ⚪ | 🟢 6/0/3 | standard | join🟢 sect🔴 gen🟢 news⬛ dig🟢 jdg⬛ AB🟢 peer🟢 heat🔴 vol🔴 cat⬛ buy🟢 yΔ🟢 | mkt🟢 par🟡 chd🟡 co🟡 set🟢 flw🟢 | +0.00 | — | — | — |
+| 15 | hold | `VLO` | book | `ab_and_peer` | — — ⚪ | 🟢 6/0/3 | standard | join🟢 sect🔴 gen🟢 news⬛ dig🟢 jdg⬛ AB🟢 peer🟢 heat🔴 vol🔴 cat⬛ buy🟢 yΔ🟢 | mkt🟢 par🟡 chd🟡 co🟡 set🟢 flw🟢 | +0.00 | — | — | — |
+| 16 | buy | `OLLI` | extra | `blue_white` | 🔵 — ⚪ | 🟢 4/3/2 | standard | join🟡 sect🟡 gen🟢 news⬛ dig🔴 jdg⬛ AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟡 yΔ🟡 | mkt🟢 par🟢 chd🟢 co🟡 set🟢 flw🟢 | +0.00 | — | — | — |
+
+Sold overnight:
+
+| # | action | Ticker | src | stack | Marks | Cond | Hall-pass | cameras | coaches | 1d | 2d | 3d | 1w |
+|---:|---|---|---|---|---|---|---|---|---|---:|---:|---:|---:|
+| — | sell | `PACS` | book | `blue_white` | 🔵 — ⚪ | 🟢 8/1/1 | group leader | join🟢 sect🟡 gen🟢 news⬛ dig🟢 jdg🟢 AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟢 yΔ🔴 | mkt🟢 par🟡 chd🟢 co🟡 set🟢 flw🟡 | +0.00 | +0.00 | — | — |
+| — | sell | `PEB` | book | `blue` | 🔵 — — | 🟢 5/3/1 | probable | join🟢 sect🟡 gen🟢 news⬛ dig🟡 jdg⬛ AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟡 yΔ🟡 | mkt🟢 par🔴 chd🟡 co🟡 set🟢 flw🟢 | +0.00 | +0.00 | — | — |
+| — | sell | `SHOO` | book | `blue_white` | 🔵 — ⚪ | 🟢 6/2/1 | standard | join🟢 sect🟡 gen🟢 news⬛ dig🟡 jdg⬛ AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟢 yΔ🟡 | mkt🟢 par🟡 chd🟡 co🟡 set🟢 flw🟢 | +0.00 | +0.00 | — | — |
+
+Seats 1d n=16 · p_win=0.0% · p_loss=0.0% · avg_win=— · avg_loss=— · mean=+0.00 · clip30=+0.00.
+
+### 2026-10-29 · `ab_and_peer+blue` · n=6 (keep 1 / add 5 / drop 0)
+
+Market: red · tone `bad`
+
+1d BUY walk × mined stacks: keep / drop fade / swap stack-less / add gated extras → scalp `ab AND peer` (high hit, modest mean) → baseline `blue`
 
 Overlay 1d — · 2d — · 3d — · 1w — · W/L 0/0 · stock-book BUY 1d — · mine-only 1d — · universe med —.
 
 | # | action | Ticker | src | stack | Marks | Cond | Hall-pass | cameras | coaches | 1d | 2d | 3d | 1w |
 |---:|---|---|---|---|---|---|---|---|---|---:|---:|---:|---:|
-| 1 | buy | `AUTL` | book | `blue_white` | 🔵 — ⚪ | 🟢 4/3/2 | standard | join🟡 sect🟡 gen🟢 news⬛ dig🟢 jdg⬛ AB🔴 peer🟢 heat🟢 vol🔴 cat⬛ buy🟡 yΔ🟡 | mkt🟢 par🟡 chd🟡 co🟡 set🟢 flw🟢 | — | — | — | — |
-| 2 | buy | `FDMT` | book | `blue_white` | 🔵 — ⚪ | 🟢 5/2/2 | standard | join🟢 sect🟡 gen🟢 news⬛ dig🟢 jdg⬛ AB🔴 peer🟢 heat🟢 vol🔴 cat⬛ buy🟡 yΔ🟡 | mkt🟢 par🟡 chd🟡 co🟡 set🟢 flw🟢 | — | — | — | — |
-| 3 | buy | `SIRI` | book | `blue` | 🔵 — ⚪ | 🔴 3/2/4 | standard | join🔴 sect🟡 gen🟢 news⬛ dig🟢 jdg⬛ AB🔴 peer🔴 heat🟢 vol🔴 cat⬛ buy🟡 yΔ🟡 | mkt🟢 par🟢 chd🟢 co🟡 set🟢 flw🟡 | — | — | — | — |
-| 4 | buy | `ADCT` | book | `ab_and_peer` | 🔵 — ⚪ | 🟢 5/3/1 | standard | join🟡 sect🟡 gen🟢 news⬛ dig🟢 jdg⬛ AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟡 yΔ🟡 | mkt🟢 par🟡 chd🟡 co🟡 set🟢 flw🟢 | — | — | — | — |
-| 5 | buy | `HITI` | book | `ab_and_peer` | 🔵 — ⚪ | 🟢 4/3/2 | group leader | join🟡 sect🟡 gen🟢 news⬛ dig🟢 jdg⬛ AB🔴 peer🟢 heat🟢 vol🔴 cat⬛ buy🟡 yΔ🟡 | mkt🟢 par🟡 chd🟢 co🟡 set🟢 flw🟢 | — | — | — | — |
-| 6 | buy | `CNK` | extra | `blue_white` | 🔵 — ⚪ | 🟢 6/2/1 | standard | join🟢 sect🟡 gen🟢 news⬛ dig🟢 jdg⬛ AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟡 yΔ🟡 | mkt🟢 par🟢 chd🟢 co🟡 set🟢 flw🟢 | — | — | — | — |
-| 7 | buy | `OLLI` | extra | `blue_white` | 🔵 — ⚪ | 🟢 4/3/2 | standard | join🟡 sect🟡 gen🟢 news⬛ dig🔴 jdg⬛ AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟡 yΔ🟡 | mkt🟢 par🟢 chd🟢 co🟡 set🟢 flw🟢 | — | — | — | — |
-| 8 | buy | `ETD` | extra | `blue_white` | 🔵 — ⚪ | 🟢 5/3/1 | standard | join🟢 sect🟡 gen🟢 news⬛ dig🟡 jdg⬛ AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟡 yΔ🟡 | mkt🟢 par🟡 chd🟡 co🟡 set🟢 flw🟢 | — | — | — | — |
-| 9 | buy | `AVO` | extra | `blue_white` | 🔵 — ⚪ | 🟢 4/3/2 | standard | join🟡 sect🟡 gen🟢 news⬛ dig🔴 jdg⬛ AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟡 yΔ🟡 | mkt🟢 par🟢 chd🟡 co🟡 set🟢 flw🟢 | — | — | — | — |
-| 10 | buy | `PZZA` | extra | `blue_white` | 🔵 — ⚪ | 🟢 5/3/1 | blocked | join🟢 sect🟡 gen🟢 news⬛ dig🟡 jdg⬛ AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟡 yΔ🟡 | mkt🟢 par🟡 chd🟡 co🟡 set🔴 flw🟢 | — | — | — | — |
+| 1 | buy | `FIS` | book | `ab_and_peer` | — — — | 🔴 4/1/5 | group leader | join🔴 sect🟢 gen🔴 news⬛ dig🟢 jdg🔴 AB🔴 peer🟢 heat🟢 vol🔴 cat⬛ buy🟡 yΔ🟢 | mkt🔴 par🔴 chd🟢 co🟡 set🟢 flw🟢 | — | — | — | — |
+| 2 | buy | `DEC` | extra | `blue` | 🔵 🚨 — | 🟡 5/1/5 | blocked | join🟢 sect🔴 gen🔴 news🟢 dig🟢 jdg🟢 AB🟢 peer🔴 heat🔴 vol🔴 cat⬛ buy🟡 yΔ🟢 | mkt🔴 par🟡 chd🟡 co🟡 set🟡 flw🟡 | — | — | — | — |
+| 3 | buy | `TRN` | extra | `blue` | 🔵 — — | 🔴 2/2/7 | blocked | join🔴 sect🔴 gen🔴 news🟢 dig🟢 jdg🔴 AB🔴 peer🔴 heat🟡 vol🔴 cat⬛ buy🟡 yΔ🟡 | mkt🔴 par🔴 chd🟡 co🟡 set🟡 flw🟡 | — | — | — | — |
+| 4 | buy | `SNDR` | extra | `blue` | 🔵 🚨 — | 🟡 4/3/4 | blocked | join🟡 sect🔴 gen🔴 news🟢 dig🟢 jdg🔴 AB🟢 peer🟡 heat🟢 vol🔴 cat⬛ buy🟡 yΔ🟡 | mkt🔴 par🔴 chd🟡 co🟡 set🟢 flw🟡 | — | — | — | — |
+| 5 | hold | `CBRL` | extra | `ab_and_peer` | — 🚨 — | 🟢 4/2/3 | blocked | join🔴 sect🟡 gen🔴 news⬛ dig🟡 jdg⬛ AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟢 yΔ🟡 | mkt🔴 par🟡 chd🟡 co🟡 set🟢 flw🟢 | — | — | — | — |
+| 6 | buy | `ECO` | extra | `ab_and_peer` | — 🚨 — | 🟢 5/1/4 | blocked | join🟢 sect🔴 gen🔴 news⬛ dig🟢 jdg🔴 AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟡 yΔ🔴 | mkt🔴 par🔴 chd🟡 co🟡 set🟢 flw🟢 | — | — | — | — |
 
 Sold overnight:
 
 | # | action | Ticker | src | stack | Marks | Cond | Hall-pass | cameras | coaches | 1d | 2d | 3d | 1w |
 |---:|---|---|---|---|---|---|---|---|---|---:|---:|---:|---:|
-| — | sell | `BLFS` | book | `blue_white` | 🔵 — ⚪ | 🟢 7/2/1 | standard | join🟢 sect🟡 gen🟢 news⬛ dig🟢 jdg🟢 AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟡 yΔ🟡 | mkt🟢 par🟡 chd🟡 co🟡 set🟢 flw🟢 | +0.00 | — | — | — |
-| — | sell | `CBRL` | book | `blue_white` | 🔵 — ⚪ | 🟢 6/2/1 | standard | join🟢 sect🟡 gen🟢 news⬛ dig🟡 jdg⬛ AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟢 yΔ🟡 | mkt🟢 par🟡 chd🟡 co🟡 set🟢 flw🟢 | +0.00 | — | — | — |
-| — | sell | `CDNA` | book | `blue_white` | 🔵 — ⚪ | 🟢 8/1/1 | standard | join🟢 sect🟡 gen🟢 news⬛ dig🟢 jdg🟢 AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟢 yΔ🟢 | mkt🟢 par🟡 chd🟡 co🟡 set🟢 flw🟢 | +0.00 | — | — | — |
-| — | sell | `CHEF` | book | `blue_white` | 🔵 — ⚪ | 🟢 5/2/2 | standard | join🟢 sect🟡 gen🟢 news⬛ dig🔴 jdg⬛ AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟡 yΔ🟡 | mkt🟢 par🟢 chd🟡 co🟡 set🟢 flw🟢 | +0.00 | — | — | — |
-| — | sell | `COP` | book | `blue_white` | 🔵 — ⚪ | 🟢 5/2/3 | standard | join🟡 sect🔴 gen🟢 news🟢 dig🟢 jdg⬛ AB🟢 peer🟢 heat🔴 vol🔴 cat⬛ buy🟡 yΔ🟢 | mkt🟢 par🟡 chd🟡 co🟡 set🟢 flw🟢 | +0.00 | — | — | — |
-| — | sell | `FIGS` | book | `blue_white` | 🔵 — ⚪ | 🟢 6/2/1 | standard | join🟢 sect🟡 gen🟢 news⬛ dig🟡 jdg⬛ AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟢 yΔ🟡 | mkt🟢 par🟡 chd🟡 co🟡 set🟢 flw🟢 | +0.00 | — | — | — |
-| — | sell | `LAUR` | book | `blue_white` | 🔵 — ⚪ | 🟢 6/1/2 | standard | join🟢 sect🟡 gen🟢 news⬛ dig🔴 jdg⬛ AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟢 yΔ🟡 | mkt🟢 par🟢 chd🟡 co🟡 set🟢 flw🟢 | +0.00 | — | — | — |
-| — | sell | `PACS` | book | `blue_white` | 🔵 — ⚪ | 🟢 8/1/1 | group leader | join🟢 sect🟡 gen🟢 news⬛ dig🟢 jdg🟢 AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟢 yΔ🔴 | mkt🟢 par🟡 chd🟢 co🟡 set🟢 flw🟡 | +0.00 | — | — | — |
-| — | sell | `PEB` | book | `blue` | 🔵 — — | 🟢 5/3/1 | probable | join🟢 sect🟡 gen🟢 news⬛ dig🟡 jdg⬛ AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟡 yΔ🟡 | mkt🟢 par🔴 chd🟡 co🟡 set🟢 flw🟢 | +0.00 | — | — | — |
-| — | sell | `SHOO` | book | `blue_white` | 🔵 — ⚪ | 🟢 6/2/1 | standard | join🟢 sect🟡 gen🟢 news⬛ dig🟡 jdg⬛ AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟢 yΔ🟡 | mkt🟢 par🟡 chd🟡 co🟡 set🟢 flw🟢 | +0.00 | — | — | — |
-| — | sell | `SN` | book | `blue_white` | 🔵 — ⚪ | 🟢 5/3/1 | standard | join🟢 sect🟡 gen🟢 news⬛ dig🟡 jdg⬛ AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟡 yΔ🟡 | mkt🟢 par🟡 chd🟡 co🟡 set🟢 flw🟢 | +0.00 | — | — | — |
-| — | sell | `VEEV` | book | `blue_white` | 🔵 — ⚪ | 🟢 7/2/1 | standard | join🟢 sect🟡 gen🟢 news⬛ dig🟢 jdg🟢 AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟡 yΔ🔴 | mkt🟢 par🟡 chd🟡 co🟡 set🟢 flw🟡 | +0.00 | — | — | — |
-| — | sell | `VLO` | book | `blue_white` | 🔵 — ⚪ | 🟢 5/1/3 | standard | join🟢 sect🔴 gen🟢 news⬛ dig🟢 jdg⬛ AB🟢 peer🟢 heat🔴 vol🔴 cat⬛ buy🟡 yΔ🟢 | mkt🟢 par🟡 chd🟡 co🟡 set🟢 flw🟢 | +0.00 | — | — | — |
+| — | sell | `ARQT` | book | `ab_and_peer` | — — ⚪ | 🟢 6/2/1 | standard | join🟢 sect🟡 gen🟢 news⬛ dig🟢 jdg⬛ AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟡 yΔ🟢 | mkt🟢 par🟡 chd🟡 co🟡 set🟢 flw🟢 | +0.00 | — | — | — |
+| — | sell | `BLFS` | book | `ab_and_peer` | — — ⚪ | 🟢 7/1/1 | standard | join🟢 sect🟡 gen🟢 news⬛ dig🟢 jdg⬛ AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟢 yΔ🟡 | mkt🟢 par🟡 chd🟡 co🟡 set🟢 flw🟢 | +0.00 | — | — | — |
+| — | sell | `CAKE` | book | `ab_and_peer` | — — ⚪ | 🟢 5/3/1 | standard | join🟢 sect🟡 gen🟢 news⬛ dig🟡 jdg⬛ AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟡 yΔ🟡 | mkt🟢 par🟡 chd🟡 co🟡 set🟢 flw🟢 | +0.00 | — | — | — |
+| — | sell | `CDNA` | book | `ab_and_peer` | — — ⚪ | 🟢 7/1/1 | standard | join🟢 sect🟡 gen🟢 news⬛ dig🟢 jdg⬛ AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟢 yΔ🟢 | mkt🟢 par🟡 chd🟡 co🟡 set🟢 flw🟢 | +0.00 | — | — | — |
+| — | sell | `CHEF` | book | `ab_and_peer` | — — ⚪ | 🟢 6/1/2 | standard | join🟢 sect🟡 gen🟢 news⬛ dig🔴 jdg⬛ AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟢 yΔ🟡 | mkt🟢 par🟢 chd🟡 co🟡 set🟢 flw🟢 | +0.00 | — | — | — |
+| — | sell | `CNK` | book | `blue_white` | 🔵 — ⚪ | 🟢 6/2/1 | standard | join🟢 sect🟡 gen🟢 news⬛ dig🟢 jdg⬛ AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟡 yΔ🟡 | mkt🟢 par🟢 chd🟢 co🟡 set🟢 flw🟢 | +0.00 | — | — | — |
+| — | sell | `COP` | book | `ab_and_peer` | — — ⚪ | 🟢 6/0/3 | standard | join🟢 sect🔴 gen🟢 news⬛ dig🟢 jdg⬛ AB🟢 peer🟢 heat🔴 vol🔴 cat⬛ buy🟢 yΔ🟢 | mkt🟢 par🟡 chd🟡 co🟡 set🟢 flw🟢 | +0.00 | — | — | — |
+| — | sell | `CTOS` | book | `blue` | 🔵 — — | 🟢 6/1/2 | probable | join🟢 sect🟢 gen🟢 news⬛ dig🟢 jdg⬛ AB🟢 peer🟢 heat🔴 vol🔴 cat⬛ buy🟡 yΔ🟡 | mkt🟢 par🔴 chd🟡 co🟡 set🟢 flw🟢 | +0.00 | — | — | — |
+| — | sell | `FIGS` | book | `ab_and_peer` | — — ⚪ | 🟢 6/2/1 | standard | join🟢 sect🟡 gen🟢 news⬛ dig🟡 jdg⬛ AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟢 yΔ🟡 | mkt🟢 par🟡 chd🟡 co🟡 set🟢 flw🟢 | +0.00 | — | — | — |
+| — | sell | `LAUR` | book | `ab_and_peer` | — — ⚪ | 🟢 6/1/2 | standard | join🟢 sect🟡 gen🟢 news⬛ dig🔴 jdg⬛ AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟢 yΔ🟡 | mkt🟢 par🟢 chd🟡 co🟡 set🟢 flw🟢 | +0.00 | — | — | — |
+| — | sell | `LRN` | book | `blue_white` | 🔵 — ⚪ | 🟢 5/2/2 | standard | join🟢 sect🟡 gen🟢 news⬛ dig🔴 jdg⬛ AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟡 yΔ🟡 | mkt🟢 par🟢 chd🟡 co🟡 set🟢 flw🟢 | +0.00 | — | — | — |
+| — | sell | `OLLI` | extra | `blue_white` | 🔵 — ⚪ | 🟢 4/3/2 | standard | join🟡 sect🟡 gen🟢 news⬛ dig🔴 jdg⬛ AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟡 yΔ🟡 | mkt🟢 par🟢 chd🟢 co🟡 set🟢 flw🟢 | +0.00 | — | — | — |
+| — | sell | `SN` | book | `ab_and_peer` | — — ⚪ | 🟢 6/2/1 | standard | join🟢 sect🟡 gen🟢 news⬛ dig🟡 jdg⬛ AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟢 yΔ🟡 | mkt🟢 par🟡 chd🟡 co🟡 set🟢 flw🟢 | +0.00 | — | — | — |
+| — | sell | `VEEV` | book | `ab_and_peer` | — — ⚪ | 🟢 7/1/1 | standard | join🟢 sect🟡 gen🟢 news⬛ dig🟢 jdg⬛ AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟢 yΔ🔴 | mkt🟢 par🟡 chd🟡 co🟡 set🟢 flw🟡 | +0.00 | — | — | — |
+| — | sell | `VLO` | book | `ab_and_peer` | — — ⚪ | 🟢 6/0/3 | standard | join🟢 sect🔴 gen🟢 news⬛ dig🟢 jdg⬛ AB🟢 peer🟢 heat🔴 vol🔴 cat⬛ buy🟢 yΔ🟢 | mkt🟢 par🟡 chd🟡 co🟡 set🟢 flw🟢 | +0.00 | — | — | — |
 
 1d not settled — names only.
 
