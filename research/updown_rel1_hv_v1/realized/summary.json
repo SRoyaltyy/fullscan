@@ -1,8 +1,8 @@
 {
  "strategy": "updown_rel1_hv_v1",
  "label": "paper only \u2014 failed multiple-testing haircut (t 2.02 vs 3.37)",
- "days_locked": 16,
- "days_realized": 14,
+ "days_locked": 17,
+ "days_realized": 15,
  "days_missed": 0,
  "missed_dates": [],
  "rule": {
@@ -11,44 +11,44 @@
   "missed": "Missed days (not frozen before 09:25 ET) are recorded in MISSED.jsonl, never back-filled, and earn nothing."
  },
  "gross": {
-  "cum": 0.0752626814,
-  "mean_bp": 54.6121554763,
-  "t_nw": 1.2990442338
+  "cum": 0.0524188473,
+  "mean_bp": 37.9138975199,
+  "t_nw": 0.9657196866
  },
  "net5": {
-  "cum": 0.0556715396,
-  "mean_bp": 41.4550126192,
-  "t_nw": 0.9750403919
+  "cum": 0.0315725415,
+  "mean_bp": 24.5805641866,
+  "t_nw": 0.6195300647
  },
  "net10": {
-  "cum": 0.0364112766,
-  "mean_bp": 28.297869762,
-  "t_nw": 0.6581395449
+  "cum": 0.0111110614,
+  "mean_bp": 11.2472308532,
+  "t_nw": 0.2804967376
  },
  "net15": {
-  "cum": 0.0174767428,
-  "mean_bp": 15.1407269049,
-  "t_nw": 0.3482084372
+  "cum": -0.0089721795,
+  "mean_bp": -2.0861024801,
+  "t_nw": -0.0514784728
  },
  "hedged_net10": {
-  "cum": -0.0549243284,
-  "mean_bp": -37.983258028,
-  "t_nw": -0.7088918046
+  "cum": -0.0670386151,
+  "mean_bp": -43.1546609299,
+  "t_nw": -0.8488230232
  },
  "iwm_oo1": {
-  "cum": null,
-  "mean_bp": null,
-  "t_nw": null
+  "cum": 0.0075471917,
+  "mean_bp": 5.483109765,
+  "t_nw": 0.2810936415
  },
  "rand_med_net10": {
-  "cum": -0.0471739466,
-  "mean_bp": -34.4558878316,
-  "t_nw": -43.9317486781
+  "cum": -0.0500755147,
+  "mean_bp": -34.1889620066,
+  "t_nw": -45.8394773195
  },
  "best_stock": "TTMI",
- "best_stock_contrib": 0.0092849057,
- "net10_ex_best_cum": 0.0270451358,
- "mean_turnover": 2.6314285714,
- "status": "collecting (14 realized days; kill check from day 20/60, promotion review not before day 120)",
+ "best_stock_contrib": 0.0100916781,
+ "net10_ex_best_cum": 0.0012650374,
+ "mean_turnover": 2.6666666667,
+ "status": "collecting (15 realized days; kill check from day 20/60, promotion review not before day 120)",
  "killed": false
 }
