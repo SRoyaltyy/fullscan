@@ -1,0 +1,110 @@
+{
+  "date": "2026-10-29",
+  "files": [
+    {
+      "bytes": 10326167,
+      "path": "data/factor_mine/panel.json",
+      "sha256": "d72d8cc5a1df1d1932be354ec53fa3cfd2faaa9832613b80b041d16e38a76713"
+    },
+    {
+      "path": "01_daily/general/2026-10-29_predict.md",
+      "sha256": "17fbd278fd645f2289863e5649872d7b5193baceff3b24aa180a040b67bf2d2e"
+    },
+    {
+      "path": "01_daily/news/2026-10-29_actions.json",
+      "sha256": "69919d4c624646047b7bd4fec9e8a5dd5c04489ef4482caf4987c1790a1dcde5"
+    },
+    {
+      "path": "01_daily/news/2026-10-29_finviz_digest.json",
+      "sha256": "b0cbceededa434327bd85f32fd9cf277bb0e8c373245a96558977eb8daae8719"
+    },
+    {
+      "path": "01_daily/news/2026-10-29_judge.md",
+      "sha256": "3a748cdec065b4d050c990bf33863acdcd90fc63dfc44c0308aa7327357e4e11"
+    },
+    {
+      "path": "01_daily/weather/2026-10-29_weather.json",
+      "sha256": "4e997757cf7c1e27fac09bd0872c0a59bfd6c1fa2a559413e9c70a6b2d3f6875"
+    },
+    {
+      "path": "data/ab_checklist/2026-10-29_ab_checklist_enriched.csv",
+      "sha256": "793a5915bb48bcbe321d882da23c0a7a12fdbc0cbeaa46b947d32f339f2dbd50"
+    },
+    {
+      "path": "data/join/2026-10-29_ranked.csv",
+      "sha256": "f3862c01f658b18ee5e57fb36f5c9ca3d4d244a828c81a226077092950546cda"
+    },
+    {
+      "path": "data/peers/2026-10-29_peer_rs.csv",
+      "sha256": "ddfb7334677cd9faeca962d70765b32d2761a81b9eb437bd02384acd0fa85445"
+    },
+    {
+      "path": "data/sleeve_merge/today.json",
+      "sha256": "5d11f6ad327e5c922ab1fae5d6aa535abddcf2eea8115b60b79fe8d11848bb24"
+    },
+    {
+      "path": "excel_bot/suggestions/suggestions.csv",
+      "sha256": "c21e7178c63d8d4523d702b29dccc9d456bb6dd0296e81c93f6e5bc3a84fd30e"
+    }
+  ],
+  "picks": {
+    "union_hot_n4_h1": [
+      "SLN",
+      "EDIT",
+      "BEAM",
+      "SOFI"
+    ],
+    "union_hot_n4_holdup": [
+      "SLN",
+      "EDIT",
+      "BEAM",
+      "SOFI"
+    ]
+  },
+  "prices": [
+    {
+      "px": 11.18,
+      "px_src": "session_export",
+      "ticker": "SLN"
+    },
+    {
+      "px": 2.5,
+      "px_src": "session_export",
+      "ticker": "EDIT"
+    },
+    {
+      "px": 24.07,
+      "px_src": "session_export",
+      "ticker": "BEAM"
+    },
+    {
+      "px": 15.99,
+      "px_src": "session_export",
+      "ticker": "SOFI"
+    },
+    {
+      "px": 122.53,
+      "px_src": "session_export",
+      "ticker": "RH"
+    },
+    {
+      "px": 45.23,
+      "px_src": "session_export",
+      "ticker": "VCYT"
+    },
+    {
+      "px": 4.17,
+      "px_src": "session_export",
+      "ticker": "IMSR"
+    },
+    {
+      "px": 22.94,
+      "px_src": "session_export",
+      "ticker": "BETA"
+    }
+  ],
+  "reason": "",
+  "rows": [],
+  "sha256": "598bfbd6b9d8d514157290e7709f7c556d51678db6468ef17688a73d310284de",
+  "source": "no_same_day_panel"
+}

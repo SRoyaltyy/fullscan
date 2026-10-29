@@ -1,0 +1,18 @@
+cell,signal_date,ticker,entry_date,hold_days,rules_sha256,source
+fresh_dcp_t1_ep_ge03_2d,2026-10-28,AIB,2026-10-29,2,187856c9db6143c2c4c2820cde8be1e3d87363478587558e296758cbf5369845,preopen_plan_2026-10-29
+fresh_dcp_t1_ep_ge03_2d,2026-10-28,CIFR,2026-10-29,2,187856c9db6143c2c4c2820cde8be1e3d87363478587558e296758cbf5369845,preopen_plan_2026-10-29
+fresh_dcp_t1_ep_ge03_2d,2026-10-28,EROC,2026-10-29,2,187856c9db6143c2c4c2820cde8be1e3d87363478587558e296758cbf5369845,preopen_plan_2026-10-29
+fresh_dcp_t1_ep_ge03_2d,2026-10-28,MWYN,2026-10-29,2,187856c9db6143c2c4c2820cde8be1e3d87363478587558e296758cbf5369845,preopen_plan_2026-10-29
+fresh_dcp_t1_ep_ge03_2d,2026-10-28,WTS,2026-10-29,2,187856c9db6143c2c4c2820cde8be1e3d87363478587558e296758cbf5369845,preopen_plan_2026-10-29
+fresh_dcp_t1_avoid_ah_3d,2026-10-28,AIB,2026-10-29,3,462719f77f2c36880f9c36d77c6591ca681e98c425c83697847463c4b3af7934,preopen_plan_2026-10-29
+fresh_dcp_t1_avoid_ah_3d,2026-10-28,CEG,2026-10-29,3,462719f77f2c36880f9c36d77c6591ca681e98c425c83697847463c4b3af7934,preopen_plan_2026-10-29
+fresh_dcp_t1_avoid_ah_3d,2026-10-28,EROC,2026-10-29,3,462719f77f2c36880f9c36d77c6591ca681e98c425c83697847463c4b3af7934,preopen_plan_2026-10-29
+fresh_dcp_t1_avoid_ah_3d,2026-10-28,FCEL,2026-10-29,3,462719f77f2c36880f9c36d77c6591ca681e98c425c83697847463c4b3af7934,preopen_plan_2026-10-29
+fresh_dcp_t1_avoid_ah_3d,2026-10-28,HUT,2026-10-29,3,462719f77f2c36880f9c36d77c6591ca681e98c425c83697847463c4b3af7934,preopen_plan_2026-10-29
+fresh_dcp_t1_avoid_ah_3d,2026-10-28,MWYN,2026-10-29,3,462719f77f2c36880f9c36d77c6591ca681e98c425c83697847463c4b3af7934,preopen_plan_2026-10-29
+fresh_dcp_t1_avoid_ah_3d,2026-10-28,VIAV,2026-10-29,3,462719f77f2c36880f9c36d77c6591ca681e98c425c83697847463c4b3af7934,preopen_plan_2026-10-29
+fresh_dcp_t1_avoid_ah_3d,2026-10-28,WTS,2026-10-29,3,462719f77f2c36880f9c36d77c6591ca681e98c425c83697847463c4b3af7934,preopen_plan_2026-10-29
+fresh_dcp_t1_avoid_ah_3d,2026-10-28,WULF,2026-10-29,3,462719f77f2c36880f9c36d77c6591ca681e98c425c83697847463c4b3af7934,preopen_plan_2026-10-29
+# status=fires rows=14 fpe_delta_t3_earn_today_3d=0 fresh_dcp_t1_ep_ge03_2d=5 fresh_dcp_t1_avoid_ah_3d=9
+# built_at_utc=2026-10-29T09:28:56Z signal_date=2026-10-28 entry_date=2026-10-29 builder_sha256=9e70523ee355d655b125ffd46f8ccd08a25fe762fccfa6ee08c97eb3c5d52840
+# inputs: {"dcp_candidates":["AIB","CEG","CIFR","CMS","DUK","EROC","ETN","EVRG","FCEL","GE","GNRC","HUT","MWYN","NWE","SO","TPL","VIAV","WTS","WULF"],"dcp_prior_snapshot":"2026-10-27","earn_gate_n":0,"fails":"[]","features_T_sha256":"da9f29aed787c75c0b49e98a50e4edde5e7a63c79e909ef61741faa6efbc76e4","fpe_prior_snapshot":"2026-10-23","fpe_signal_n":1606,"letters_log":"rows 19 skipped {'2026-10-29': 0} FAILS []","letters_rows":19,"letters_sha256":"d14e15d3dbeafa9526e1113f4ce77a608cc0a94aefd3b4cf0b941036c9b8eb10","membership":"fullscan@6ae3791b4 (committed 2026-10-29T08:39:20Z) sha256=2cafec018941d7b8f688e033da0c1081345e5e75dc4fcd768caac9c2a0fbe398","skipped":"{'2026-10-29': 0}","snapshot_T_sha256":"ec13089ea68879e6d45a46c3cfbcd85a682f2d5709d0c23d02d5c9d9026e2faf","snapshots_after_T_ignored":[],"tr_head":"579d1d58a","universe_log":"2026-10-29 cand 19 in membership 19 liquid 16 universe 19 excluded []"}

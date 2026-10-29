@@ -1,0 +1,116 @@
+{
+  "date": "2026-10-28",
+  "generated_at": "2026-10-28T20:14:19.004361-04:00",
+  "timezone": "America/New_York",
+  "source": "live",
+  "source_url": "https://elite.finviz.com/",
+  "archive_snapshot_ts": null,
+  "archive_snapshot_at": null,
+  "archive_url": null,
+  "clock_legal": true,
+  "clock_same_morning": false,
+  "clock_use": "next_open",
+  "clock_legal_for": "2026-10-29",
+  "capture_slot": "close",
+  "clock_rule": "Live post-close answer-key (~16:05 ET). Always next_open for the NEXT session (2026-10-29) — never same_morning. Writes *_finviz_market_digest_close.* only. Capture only — not tape_anchor / predict / #210.",
+  "kind": "finviz_homepage_market_digest_close",
+  "represents": "Finviz homepage post-close answer-key. clock_use is always next_open; clock_legal_for is the next NYSE session. Lives at *_finviz_market_digest_close.*. Does not replace the same_morning warm-up file. Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "US stocks closed higher after Fed held rates steady with upgraded outlook as after-hours tech results pushed Nasdaq 100 futures lower",
+  "raw_text": "- The S&P 500 ($SPX) rose 0.28% to 7,743.98, the Dow Jones ($DJI) gained 0.19% to 52,475.10, the Nasdaq Composite ($COMP) climbed 0.27% to 26,549.85, and the Russell 2000 (IWM) added 0.41% to 2,830.51, with the S&P and Nasdaq posting a third straight advance.\n- The Federal Reserve left its key interest rate unchanged at 3.75%-4.0% and upgraded its economic outlook, while Governors Lisa Cook and Beth Hammack dissented in favor of a hike and Chair Kevin Warsh said incoming data would guide the December decision.\n- Eight of 11 S&P 500 ($SPX) sectors finished higher, with energy leading gains, while utilities fell 0.88%, real estate declined 0.65%, technology rose 0.48%, and semiconductors outperformed, led by Micron Technology (MU)’s roughly 5.9% rise after SK Hynix (SKHY) posted a more than sevenfold jump in quarterly profit.\n- Oracle (ORCL) jumped 11% after its investor day outlined new financial targets and a path to positive free cash flow tied to artificial intelligence growth.\n- Vertiv Holdings (VRT) rallied nearly 17% after beating estimates with a 61% jump in third-quarter revenue and sharply raising 2026 guidance on AI infrastructure demand.\n- Wingstop (WING) advanced after mixed third-quarter results that included an earnings-per-share beat but a revenue miss and a cut to its 2026 same-store sales and EBITDA outlook.\n- F5 Inc. (FFIV) sank more than 20% after beating fiscal fourth-quarter estimates and guiding to 8–9% fiscal 2027 revenue growth.\n- In after-hours trading, Microsoft (MSFT) gained about 3% after beating estimates on 48% Azure growth and 30% cloud growth.\n- Alphabet (GOOGL) fell more than 9% after-hours on a revenue miss, negative $9 billion free cash flow, and its first top- and bottom-line miss in years, while Fortinet (FTNT) dropped over 25% despite beating estimates and raising its 2026 outlook, helping push Nasdaq 100 futures (@NQ) down more than 1% after the bell.\n- Lumentum (LITE) rose about 9% after-hours on reports of a potential acquisition by Marvell (MRVL), and a Nelson Peltz-led group offered about $1.4 billion to take Wendy’s (WEN) private ahead of Thursday’s earnings reports and economic data.",
+  "raw_summary_md": "- The **S&P 500 ([$SPX](https://finviz.com/index/SPX?p=d)) rose 0.28% to 7,743.98**, the **Dow Jones ([$DJI](https://finviz.com/index/DJI?p=d)) gained 0.19% to 52,475.10**, the **Nasdaq Composite ([$COMP](https://finviz.com/index/COMP?p=d)) climbed 0.27% to 26,549.85**, and the **Russell 2000 ([IWM](https://finviz.com/quote?t=IWM)) added 0.41% to 2,830.51**, with the **S&P and Nasdaq posting a third straight advance**.\n- The **Federal Reserve left its key interest rate unchanged at 3.75%-4.0%** and **upgraded its economic outlook**, while **Governors Lisa Cook and Beth Hammack dissented in favor of a hike** and Chair Kevin Warsh said incoming data would guide the **December decision**.\n- **Eight of 11 S&P 500 ([$SPX](https://finviz.com/index/SPX?p=d)) sectors finished higher**, with **energy leading gains**, while **utilities fell 0.88%**, **real estate declined 0.65%**, **technology rose 0.48%**, and **semiconductors outperformed, led by Micron Technology ([MU](https://finviz.com/quote?t=MU))’s roughly 5.9% rise** after **SK Hynix ([SKHY](https://finviz.com/quote?t=SKHY)) posted a more than sevenfold jump in quarterly profit**.\n- **Oracle ([ORCL](https://finviz.com/quote?t=ORCL)) jumped 11%** after its investor day outlined **new financial targets** and a **path to positive free cash flow tied to artificial intelligence growth**.\n- **Vertiv Holdings ([VRT](https://finviz.com/quote?t=VRT)) rallied nearly 17%** after **beating estimates with a 61% jump in third-quarter revenue** and **sharply raising 2026 guidance on AI infrastructure demand**.\n- **Wingstop ([WING](https://finviz.com/quote?t=WING)) advanced after mixed third-quarter results** that included an **earnings-per-share beat but a revenue miss** and a **cut to its 2026 same-store sales and EBITDA outlook**.\n- **F5 Inc. ([FFIV](https://finviz.com/quote?t=FFIV)) sank more than 20%** after **beating fiscal fourth-quarter estimates** and **guiding to 8–9% fiscal 2027 revenue growth**.\n- In after-hours trading, **Microsoft ([MSFT](https://finviz.com/quote?t=MSFT)) gained about 3%** after beating estimates on **48% Azure growth and 30% cloud growth**.\n- **Alphabet ([GOOGL](https://finviz.com/quote?t=GOOGL)) fell more than 9% after-hours** on a **revenue miss, negative $9 billion free cash flow, and its first top- and bottom-line miss in years**, while **Fortinet ([FTNT](https://finviz.com/quote?t=FTNT)) dropped over 25% despite beating estimates and raising its 2026 outlook**, helping push **Nasdaq 100 futures ([@NQ](https://finviz.com/futures_charts?t=NQ)) down more than 1% after the bell**.\n- **Lumentum ([LITE](https://finviz.com/quote?t=LITE)) rose about 9% after-hours** on reports of a **potential acquisition by Marvell ([MRVL](https://finviz.com/quote?t=MRVL))**, and a **Nelson Peltz-led group offered about $1.4 billion to take Wendy’s ([WEN](https://finviz.com/quote?t=WEN)) private** ahead of Thursday’s earnings reports and economic data.",
+  "index_moves": [
+    {
+      "name": "S&P 500",
+      "code": "SPX",
+      "change_pct": 0.28,
+      "verb": "rose"
+    },
+    {
+      "name": "Dow Jones",
+      "code": "DJI",
+      "change_pct": 0.19,
+      "verb": "gained"
+    },
+    {
+      "name": "Nasdaq Composite",
+      "code": "COMP",
+      "change_pct": 0.27,
+      "verb": "climbed"
+    },
+    {
+      "name": "Russell 2000",
+      "code": "RUT",
+      "change_pct": 0.41,
+      "verb": "added"
+    }
+  ],
+  "oil": null,
+  "cpi": null,
+  "fed_odds": null,
+  "named_tickers": [
+    "MU",
+    "SKHY",
+    "ORCL",
+    "VRT",
+    "WING",
+    "FFIV",
+    "MSFT",
+    "GOOGL",
+    "FTNT",
+    "LITE",
+    "MRVL",
+    "WEN"
+  ],
+  "named_leaders": [
+    "MU",
+    "SKHY",
+    "ORCL",
+    "VRT",
+    "WING",
+    "FFIV",
+    "MSFT",
+    "GOOGL",
+    "FTNT",
+    "LITE",
+    "MRVL",
+    "WEN"
+  ],
+  "calendar": [
+    "Lumentum (LITE) rose about 9% after-hours on reports of a potential acquisition by Marvell (MRVL), and a Nelson Peltz-led group offered about $1.4 billion to take Wendy’s (WEN) private ahead of Thursday’s earnings reports and economic data."
+  ],
+  "prior_close": {
+    "spx": 0.28,
+    "nasdaq": 0.27,
+    "dow": 0.19
+  },
+  "cpi_fed": {
+    "cpi": null,
+    "fed_odds": null
+  },
+  "next_session_calendar": {
+    "housing": false,
+    "retail": false,
+    "fed": true,
+    "bullets": [
+      "The Federal Reserve left its key interest rate unchanged at 3.75%-4.0% and upgraded its economic outlook, while Governors Lisa Cook and Beth Hammack dissented in favor of a hike and Chair Kevin Warsh said incoming data would guide the December decision.",
+      "Lumentum (LITE) rose about 9% after-hours on reports of a potential acquisition by Marvell (MRVL), and a Nelson Peltz-led group offered about $1.4 billion to take Wendy’s (WEN) private ahead of Thursday’s earnings reports and economic data."
+    ],
+    "text": "The Federal Reserve left its key interest rate unchanged at 3.75%-4.0% and upgraded its economic outlook, while Governors Lisa Cook and Beth Hammack dissented in favor of a hike and Chair Kevin Warsh said incoming data would guide the December decision. Lumentum (LITE) rose about 9% after-hours on reports of a potential acquisition by Marvell (MRVL), and a Nelson Peltz-led group offered about $1.4 billion to take Wendy’s (WEN) private ahead of Thursday’s earnings reports and economic data."
+  },
+  "earnings_slate": {
+    "tickers": [],
+    "text": ""
+  },
+  "geo_grain": {
+    "geo": false,
+    "grain": false,
+    "flags": [],
+    "text": ""
+  },
+  "finviz_id": 321724,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-10-28T20:07:39.117",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "bad"
+}

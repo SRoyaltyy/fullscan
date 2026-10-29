@@ -1,0 +1,18 @@
+{
+ "risk_tilt": null,
+ "macros": [],
+ "sector_tilts": {
+  "Technology": "bearish",
+  "Industrials": "bearish",
+  "Healthcare": "bullish",
+  "Energy": "bullish"
+ },
+ "tickers": {
+  "ITA": -4.0,
+  "XLV": 4.0,
+  "XLE": 9.5,
+  "AMGN": 1.5
+ },
+ "b1_inject": "NEWS_JUDGE: n=8 rescued=1\nMACRO Fed policy: [hawkish] FOMC held but two officials favor hike; Dec odds elevated (regime/1d-1w)\nSECTOR Technology: [bearish] Alphabet earnings miss pressures NDX/SPX mega-cap tech (NDX/SPX)\nSECTOR Industrials: [bearish] Boeing MAX 10 FAA certification halt hits aerospace/defense (ITA)\nSECTOR Semis: [mixed] Chip ETF inflows $44B vs Samsung chip profit miss and Fabrinet weakness (SMH/SOXX)\nSECTOR Healthcare: [bullish] AMGN Phase 3 Sj\u00f6gren's win supports XLV sympathy (XLV)\nSECTOR Energy: [bullish] UBS raises Brent to $110 end-2026 supports XLE (XLE)\nSECTOR Healthcare: [bullish] ABBV FDA approval JUVMO Parkinson's adds XLV sentiment (XLV/ABBV)\nINTERACTION: Hawkish Fed + Alphabet miss = do not buy software/NDX on dovish hope; semis mixed; healthcare catalysts support XLV.\nWATCH: Fed hike odds vs softer DXY conflicting; if yields fall, cyclicals may offset tech drag.",
+ "date": "2026-10-29"
+}
