@@ -1,6 +1,6 @@
 {
   "date": "2026-10-29",
-  "generated_at": "2026-10-29T04:47:51.850407-04:00",
+  "generated_at": "2026-10-29T04:48:57.284164-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -15,31 +15,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "finviz_digest",
-      "title": "Finviz digest",
-      "date": "2026-10-29",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-29T04:46:00.471024-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-10-29_finviz_digest.json",
-          "ok": true,
-          "reason": "",
-          "size": 97013,
-          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
-        },
-        {
-          "path": "01_daily/news/2026-10-29_finviz_digest.md",
-          "ok": true,
-          "reason": "",
-          "size": 11849,
-          "preview": "# Finviz Daily Digest \u2014 2026-10-29\n_Generated 2026-10-29T04:24:13.014368-04:00 \u00b7 export=data/exports/finviz_2026-10-28.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_"
-        }
-      ],
-      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-10-29\n_Generated 2026-10-29T04:24:13.014368-04:00 \u00b7 export=data/exports/finviz_2026-10-28.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_"
-    },
     {
       "key": "map_heat",
       "title": "Map heat tables",
@@ -185,6 +160,31 @@
         }
       ],
       "preview": "raw=10192 usable=861 single=705 \u00b7 Kongsberg Q3 orders jump on strong missile, air defence demand - Reuters | Macklem Defends Hawkish Turn After Canada\u2019s First Rate Hike in Three Years - Blo | Watch Fed Officials Left Interest Rates Unchanged - Bloomberg | [MARKET ANALYSIS] DXY remains softer after the FOMC lacked any hawkish surprises | Iron Ore\u2019s Drop Below $90 Tests High-Cost Supply as Losses Mount - Bloomberg.com \u00b7 # News Parse v2 \u2014 2026-10-29T04:47:43.267643-04:00\nWindow\u224848h | news_mode=on | raw=10192 | usable=861 | single_name=705 | noise_dropped=8377\nusable polarity={'+': 27, '-': 198, 'mixed': 6, 'neutral': 630}"
+    },
+    {
+      "key": "finviz",
+      "title": "Finviz universe export",
+      "date": "2026-10-29",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-29T04:48:56.819804-04:00",
+      "files": [
+        {
+          "path": "data/exports/finviz_2026-10-29.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11030866,
+          "preview": "11686 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC"
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11562840,
+          "preview": "11775 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAB\""
+        }
+      ],
+      "preview": "11686 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11775 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAB\""
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
