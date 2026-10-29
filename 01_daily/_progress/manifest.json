@@ -1,6 +1,12 @@
 {
-  "updated_at": "2026-10-29T06:23:10-04:00",
+  "updated_at": "2026-10-29T06:23:57-04:00",
   "runs": [
+    {
+      "date": "2026-10-20",
+      "workflow": "postclose",
+      "file": "2026-10-20_postclose.json",
+      "updated_at": "2026-10-21T19:27:00-04:00"
+    },
     {
       "date": "2026-10-21",
       "workflow": "factor_mine",
@@ -225,21 +231,15 @@
     },
     {
       "date": "2026-10-29",
-      "workflow": "factor_mine",
-      "file": "2026-10-29_factor_mine.json",
-      "updated_at": "2026-10-29T05:20:57-04:00"
-    },
-    {
-      "date": "2026-10-29",
-      "workflow": "fm_preopen",
-      "file": "2026-10-29_fm_preopen.json",
-      "updated_at": "2026-10-29T05:28:15-04:00"
-    },
-    {
-      "date": "2026-10-29",
       "workflow": "preopen",
       "file": "2026-10-29_preopen.json",
-      "updated_at": "2026-10-29T06:23:10-04:00"
+      "updated_at": "2026-10-29T04:52:03-04:00"
+    },
+    {
+      "date": "2026-10-29",
+      "workflow": "factor_mine",
+      "file": "2026-10-29_factor_mine.json",
+      "updated_at": "2026-10-29T06:23:57-04:00"
     }
   ]
 }
