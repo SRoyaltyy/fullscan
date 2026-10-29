@@ -1,6 +1,6 @@
 # Finviz homepage market digest — 2026-10-29
 
-**Generated:** 2026-10-29T04:24:23.650221-04:00 (America/New_York)
+**Generated:** 2026-10-29T04:25:25.033929-04:00 (America/New_York)
 **Source:** `live`
 **Banner:** US futures trade mixed as tech earnings divergence and heavy 8:30 AM data slate set up volatile session
 **Prior close:** SPX —  Nasdaq —  Dow —
