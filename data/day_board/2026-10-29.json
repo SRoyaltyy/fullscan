@@ -1,6 +1,6 @@
 {
   "date": "2026-10-29",
-  "generated_at": "2026-10-29T15:06:29.635083-04:00",
+  "generated_at": "2026-10-29T15:33:12.279879-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -540,8 +540,8 @@
           "path": "01_daily/weather/2026-10-29_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=10426 vix=falling yields=flat",
-          "size": 10426,
+          "reason": "sectors=11 bytes=10428 vix=falling yields=flat",
+          "size": 10428,
           "said": "favorable 2 \u00b7 hostile 7 \u00b7 neutral 2",
           "bullets": [
             "hostile: Basic Materials, Communication Services, Consumer Defensive, Industrials, Real Estate, Technology, Utilities",
@@ -759,8 +759,8 @@
           "path": "01_daily/weather/2026-10-29_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=10426 vix=falling yields=flat",
-          "size": 10426,
+          "reason": "sectors=11 bytes=10428 vix=falling yields=flat",
+          "size": 10428,
           "said": "favorable 2 \u00b7 hostile 7 \u00b7 neutral 2",
           "bullets": [
             "hostile: Basic Materials, Communication Services, Consumer Defensive, Industrials, Real Estate, Technology, Utilities",
@@ -790,7 +790,7 @@
           "size": 2258525,
           "said": "217 rows",
           "bullets": [
-            "ARGX, ONC, DVN, REGN, PR, INCY, AZN, CNQ"
+            "ARGX, ONC, DVN, REGN, PR, INCY, AZN, PBR-A"
           ]
         },
         {
@@ -813,7 +813,7 @@
           "role": "required",
           "status": "OK",
           "reason": "horizons=5 names=113",
-          "size": 983367,
+          "size": 983366,
           "said": "1d BUY FIS \u00b7 SELL NEOV, OKLO, FCEL, NNDM, EOSE, TE \u00b7 -0.6613",
           "bullets": []
         },
@@ -827,7 +827,7 @@
           "size": 29478,
           "said": "Stock book \u2014 2026-10-29",
           "bullets": [
-            "_Generated 2026-10-29T15:05:48.001542-04:00_",
+            "_Generated 2026-10-29T15:33:09.213323-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -891,7 +891,7 @@
           "role": "input",
           "status": "OK",
           "reason": "horizons=5 names=113",
-          "size": 983367,
+          "size": 983366,
           "said": "1d BUY FIS \u00b7 SELL NEOV, OKLO, FCEL, NNDM, EOSE, TE \u00b7 -0.6613",
           "bullets": []
         },
@@ -4575,6 +4575,30 @@
       "commit_msg": "auto: stock book leftover sweep",
       "workflow": "Stock Book ALL (one-shot)",
       "run_id": "40935749493",
+      "manifest": "research/input_freeze/2026-10-29/manifest.json"
+    },
+    {
+      "path": "01_daily/2026-10-29_stock_book.md",
+      "at": "2026-10-29T15:33:42-04:00",
+      "commit_msg": "auto: strategy tickets 2026-10-29",
+      "workflow": "Publish strategy tickets",
+      "run_id": "40936885923",
+      "manifest": "research/input_freeze/2026-10-29/manifest.json"
+    },
+    {
+      "path": "data/stock_book/2026-10-29_input_health.json",
+      "at": "2026-10-29T15:33:42-04:00",
+      "commit_msg": "auto: strategy tickets 2026-10-29",
+      "workflow": "Publish strategy tickets",
+      "run_id": "40936885923",
+      "manifest": "research/input_freeze/2026-10-29/manifest.json"
+    },
+    {
+      "path": "data/stock_book/2026-10-29_stock_book.json",
+      "at": "2026-10-29T15:33:42-04:00",
+      "commit_msg": "auto: strategy tickets 2026-10-29",
+      "workflow": "Publish strategy tickets",
+      "run_id": "40936885923",
       "manifest": "research/input_freeze/2026-10-29/manifest.json"
     }
   ]
