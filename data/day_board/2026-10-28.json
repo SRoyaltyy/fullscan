@@ -2823,6 +2823,14 @@
       "workflow": "Finviz homepage market digest",
       "run_id": "40790962093",
       "manifest": "research/input_freeze/2026-10-28/manifest.json"
+    },
+    {
+      "path": "data/exports/finviz_2026-10-28.csv",
+      "at": "2026-10-29T03:03:19-04:00",
+      "commit_msg": "auto: land finviz export [2026-10-28]",
+      "workflow": "Finviz ALL (GH-hosted Elite)",
+      "run_id": "40832392548",
+      "manifest": "research/input_freeze/2026-10-28/manifest.json"
     }
   ]
 }
