@@ -1,10 +1,10 @@
 # flatten_robust card — 2026-10-29
 
-_Generated 2026-10-29T10:33:41 — live `flatten_robust`._
+_Generated 2026-10-29T11:10:20 — live `flatten_robust`._
 
-**morning S missing; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**
+**S=-6.95; hard-red: no new buys; holds and due 1d exits stay**
 
-- Score **—** (—) · route **io**
+- Score **-6.95** (DOWN) · route **hold** · HARD-RED
 - Cash leftover **$9.19** (after 09:30 $9.19 · after 16:00 $116,556.30)
 - Prior close **$116,672.88** · 09:30 **$116,672.88** · overnight **$+0.00** · session **$-116.58** · 16:00 **$116,556.30**
 - Overnight lots **11** · priced mover BUYs **0** · prior book yes
@@ -62,7 +62,7 @@ _Generated 2026-10-29T10:33:41 — live `flatten_robust`._
 
 | Clock | Ticker | Why |
 |---|---|---|
-| 16:00 ET | * | io 3d cannot settle |
+| 16:00 ET | FIS | hard-red: no new buys |
 
 ## Would have bought — holdings disregarded
 
@@ -70,12 +70,6 @@ Sized from marked equity **$116,672.88** as if the book were flat. `io 3d_size (
 
 | Clock | Ticker | Sleeve | Shares | Px | $ | Blocked live by |
 |---|---|---|---:|---:|---:|---|
-| 16:00 ET | SMMT | io_core | 1056 | $15.77 | $16,653.12 | already held |
-| 16:00 ET | BAX | io_core | 654 | $25.46 | $16,650.84 | cash tied |
-| 16:00 ET | PGEN | io_core | 2741 | $6.08 | $16,665.28 | cash tied |
-| 16:00 ET | RCUS | io_core | 906 | $18.39 | $16,661.34 | cash tied |
-| 16:00 ET | ACRS | io_core | 4208 | $3.96 | $16,663.68 | cash tied |
-| 16:00 ET | XNCR | io_core | 555 | $29.99 | $16,644.45 | cash tied |
-| 16:00 ET | IRD | io_core | 4495 | $3.68 | $16,541.60 | cash tied |
+| 16:00 ET | FIS | io_core | 3197 | $36.48 | $116,626.56 | hard-red |
 
 Dashboard: https://sroyaltyy.github.io/fullscan/dashboard/sleeve-merge/
