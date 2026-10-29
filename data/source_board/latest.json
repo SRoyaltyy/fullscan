@@ -1,6 +1,6 @@
 {
  "date": "2026-10-29",
- "generated_at": "2026-10-29T07:09:46.594583+00:00",
+ "generated_at": "2026-10-29T18:58:59.063384+00:00",
  "catalog": {
   "generated_at": "2026-10-24T16:39:29.833670+00:00",
   "channels": 365,
@@ -34,50 +34,76 @@
   }
  },
  "collect": {
-  "generated_at": "2026-10-29T07:09:24.505207+00:00",
+  "generated_at": "2026-10-29T18:58:38.270102+00:00",
   "enabled_sources": 121,
   "sources_ok": 119,
   "sources_failed": 2,
   "coverage_status": "degraded",
   "counts": {
-   "observed": 2315,
-   "old": 1358,
-   "future": 11,
-   "undated": 302,
-   "new": 153,
-   "duplicates": 793
+   "observed": 2172,
+   "old": 1251,
+   "future": 1,
+   "undated": 261,
+   "new": 140,
+   "duplicates": 780
   },
-  "current_dated_documents": 770
+  "current_dated_documents": 767
  },
  "new_today": {
-  "count": 153,
+  "count": 140,
   "by_source": {
-   "us-federal-register": 102,
-   "us-doj-b3d27e1dc3": 14,
-   "us-govinfo-bills": 8,
-   "us-govinfo-dcpd": 7,
-   "us-fda-5696b24295": 5,
-   "us-fcc-685c5e7dd2": 4,
-   "nz-rbnz-gnews": 4,
-   "jp-meti-index": 3,
-   "us-hhs-6f995a5754": 2,
-   "in-rbi-cc71120b98": 2,
-   "us-white-house-0691096d16": 1,
-   "us-dol-99f477805a": 1
+   "us-doj-b3d27e1dc3": 25,
+   "us-cpsc-99343b5112": 12,
+   "us-fda-5696b24295": 11,
+   "us-fcc-685c5e7dd2": 9,
+   "uk-govuk-decision": 6,
+   "us-govinfo-bills": 5,
+   "us-fcc-e95ecda3bb": 5,
+   "eu-commission-07d4f58ccf": 5,
+   "eu-council-9d9e9444da": 5,
+   "io-bis-140216a5b6": 5,
+   "us-fda-03f7703006": 4,
+   "eu-ecb-991c113079": 4,
+   "in-rbi-cc71120b98": 4,
+   "io-wto-497f28e20d": 4,
+   "uk-govuk-consultation_outcome": 3,
+   "us-ftc-58b0383166": 3,
+   "us-doj-e05071794d": 3,
+   "uk-fca-7b9977ec8e": 3,
+   "ch-snb-b0f42db828": 3,
+   "uk-govuk-medical_safety_alert": 2,
+   "us-govinfo-plaw": 2,
+   "uk-boe-4feb372611": 2,
+   "jp-meti-index": 2,
+   "de-bundesbank-027ac4024f": 2,
+   "us-sec-8940dd7737": 1,
+   "us-sec-2476f14c28": 1,
+   "us-ofac-index": 1,
+   "us-hhs-6f995a5754": 1,
+   "us-fcc-eeb7d739be": 1,
+   "eu-eba-60bdc59843": 1,
+   "ca-boc-30d6d14378": 1,
+   "nz-rbnz-gnews": 1,
+   "de-bundesbank-fe89ad3ac9": 1,
+   "io-bis-8d1fbea6ca": 1,
+   "io-bis-b3dfd5b7aa": 1
   },
   "by_class": {
-   "routine": 103,
-   "high": 22,
-   "watch": 24,
-   "docket": 4
+   "routine": 48,
+   "high": 19,
+   "noise": 2,
+   "watch": 61,
+   "docket": 10
   }
  },
  "parsed_today": {
-  "count": 35,
+  "count": 131,
   "by_class": {
-   "high": 16,
-   "routine": 14,
-   "watch": 5
+   "high": 41,
+   "routine": 52,
+   "watch": 50,
+   "docket": 1,
+   "noise": 1
   }
  },
  "n_failures": 2,
