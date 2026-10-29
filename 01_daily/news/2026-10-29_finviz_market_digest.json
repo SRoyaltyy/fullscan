@@ -1,0 +1,73 @@
+{
+  "date": "2026-10-29",
+  "generated_at": "2026-10-29T04:23:01.260162-04:00",
+  "timezone": "America/New_York",
+  "source": "live",
+  "source_url": "https://elite.finviz.com/",
+  "archive_snapshot_ts": null,
+  "archive_snapshot_at": null,
+  "archive_url": null,
+  "clock_legal": true,
+  "clock_same_morning": true,
+  "clock_use": "same_morning",
+  "clock_legal_for": "2026-10-29",
+  "clock_rule": "Live: Generated must be before 09:30 ET on this date or leave missing. Wayback: capture before 09:30 ET that day is legal for that morning's Pre-Open. Afternoon Wayback is legal for the NEXT session open only (prior-day close recap), marked by clock_legal_for. Gaps stay gaps. Capture only — not tape_anchor / predict / #210.",
+  "kind": "finviz_homepage_market_digest",
+  "represents": "Finviz homepage market-day prose. Same-morning Pre-Open when Generated is before 09:30 ET; afternoon Wayback is a prior-day close recap legal for the next session only. Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "US futures trade mixed as tech earnings divergence and heavy 8:30 AM data slate set up volatile session",
+  "raw_text": "- S&P 500 futures (@ES) fall roughly 0.45%, Nasdaq 100 futures (@NQ) drop about 1.33%, Dow Jones futures (@YM) rise around 0.24%, and Russell 2000 futures (@ER2) climb about 0.35% ahead of the open\n- Alphabet (GOOGL) comes under pressure after being cited for missing sales estimates and reporting negative free cash flow, weighing on Nasdaq 100 futures (@NQ)\n- Microsoft (MSFT) shows a positive after-hours reaction after reporting earnings beats, partially offsetting broader tech weakness\n- Eli Lilly (LLY), Caterpillar (CAT), Mastercard (MA), Merck (MRK) and other large caps are scheduled to report pre-market, with beats or misses expected to drive early swing moves\n- High-impact US data are due at 8:30 AM ET including the Q3 GDP advance estimate, PCE inflation, personal income and spending, and initial jobless claims\n- Asian and European trading was mixed overnight, with reported rotation away from overheated AI-related names\n- Oil (@CL) prices eased modestly in overnight trade but remain elevated, with no major new geopolitical or commodity shocks reported since 4 AM ET",
+  "raw_summary_md": "- **S&P 500 futures** ([@ES](https://finviz.com/futures_charts?t=ES)) fall roughly **0.45%**, **Nasdaq 100 futures** ([@NQ](https://finviz.com/futures_charts?t=NQ)) drop about **1.33%**, **Dow Jones futures** ([@YM](https://finviz.com/futures_charts?t=YM)) rise around **0.24%**, and **Russell 2000 futures** ([@ER2](https://finviz.com/futures_charts?t=ER2)) climb about **0.35%** ahead of the open\n- **Alphabet** ([GOOGL](https://finviz.com/quote?t=GOOGL)) comes under pressure after being cited for **missing sales estimates** and reporting **negative free cash flow**, weighing on **Nasdaq 100 futures** ([@NQ](https://finviz.com/futures_charts?t=NQ))\n- **Microsoft** ([MSFT](https://finviz.com/quote?t=MSFT)) shows a **positive after-hours reaction** after reporting **earnings beats**, partially offsetting broader tech weakness\n- **Eli Lilly** ([LLY](https://finviz.com/quote?t=LLY)), **Caterpillar** ([CAT](https://finviz.com/quote?t=CAT)), **Mastercard** ([MA](https://finviz.com/quote?t=MA)), **Merck** ([MRK](https://finviz.com/quote?t=MRK)) and other large caps are scheduled to report **pre-market**, with beats or misses expected to **drive early swing moves**\n- **High-impact US data** are due at **8:30 AM ET** including the **Q3 GDP advance estimate**, **PCE inflation**, **personal income and spending**, and **initial jobless claims**\n- **Asian and European trading was mixed** overnight, with reported **rotation away from overheated AI-related names**\n- **Oil** ([@CL](https://finviz.com/futures_charts?t=CL)) prices **eased modestly** in overnight trade but **remain elevated**, with no major new geopolitical or commodity shocks reported since **4 AM ET**",
+  "index_moves": [],
+  "oil": null,
+  "cpi": null,
+  "fed_odds": null,
+  "named_tickers": [
+    "GOOGL",
+    "MSFT",
+    "LLY",
+    "CAT",
+    "MA",
+    "MRK"
+  ],
+  "named_leaders": [
+    "GOOGL",
+    "MSFT",
+    "LLY",
+    "CAT",
+    "MA",
+    "MRK"
+  ],
+  "calendar": [],
+  "prior_close": {
+    "spx": null,
+    "nasdaq": null,
+    "dow": null
+  },
+  "cpi_fed": {
+    "cpi": null,
+    "fed_odds": null
+  },
+  "next_session_calendar": {
+    "housing": false,
+    "retail": false,
+    "fed": false,
+    "bullets": [],
+    "text": ""
+  },
+  "earnings_slate": {
+    "tickers": [],
+    "text": ""
+  },
+  "geo_grain": {
+    "geo": false,
+    "grain": false,
+    "flags": [],
+    "text": ""
+  },
+  "finviz_id": 322108,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-10-29T04:06:46.077",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "bad"
+}
