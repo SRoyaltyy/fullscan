@@ -1,6 +1,6 @@
 {
   "stage": "outcome",
-  "fetched_at": "2026-10-28T20:21:21.317989-04:00",
+  "fetched_at": "2026-10-28T20:37:43.780084-04:00",
   "fred": {
     "DGS30": {
       "available": true,
@@ -88,41 +88,41 @@
     "CL=F": {
       "available": true,
       "date": "2026-10-28",
-      "last": 101.99,
-      "pct_1d": 2.09
+      "last": 102.12,
+      "pct_1d": 2.22
     },
     "BZ=F": {
       "available": true,
       "date": "2026-10-28",
-      "last": 110.68,
-      "pct_1d": -2.81
+      "last": 110.82,
+      "pct_1d": -2.69
     },
     "GC=F": {
       "available": true,
       "date": "2026-10-28",
-      "last": 4058.0,
-      "pct_1d": -0.41
+      "last": 4058.9,
+      "pct_1d": -0.39
     },
     "DXY": {
       "available": true,
       "date": "2026-10-28",
       "source": "DX-Y.NYB",
-      "pct_1d": -0.12,
-      "pct_1m": 0.81
+      "pct_1d": -0.04,
+      "pct_1m": 0.9
     }
   },
   "futures": {
     "ES=F": {
       "available": true,
       "date": "2026-10-28",
-      "last": 7756.5,
-      "pct_1d": -0.02
+      "last": 7760.5,
+      "pct_1d": 0.03
     },
     "NQ=F": {
       "available": true,
       "date": "2026-10-28",
-      "last": 29710.75,
-      "pct_1d": -0.34
+      "last": 29738.5,
+      "pct_1d": -0.25
     }
   },
   "finviz_futures_tape": {
@@ -491,8 +491,8 @@
         "Nikkei": {
           "available": true,
           "date": "2026-10-29",
-          "last": 64174.73,
-          "pct_1d": 1.43
+          "last": 64499.32,
+          "pct_1d": 1.95
         },
         "Hang Seng": {
           "available": true,
@@ -509,17 +509,17 @@
         "Kospi": {
           "available": true,
           "date": "2026-10-29",
-          "last": 6012.18,
-          "pct_1d": 6.63
+          "last": 6047.36,
+          "pct_1d": 7.25
         },
         "ASX200": {
           "available": true,
           "date": "2026-10-29",
-          "last": 8899.9,
-          "pct_1d": 0.56
+          "last": 8876.6,
+          "pct_1d": 0.3
         }
       },
-      "composite_avg": 1.31
+      "composite_avg": 1.49
     },
     "europe": {
       "per_index": {
