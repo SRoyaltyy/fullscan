@@ -1,12 +1,11 @@
 {
   "date": "2026-10-29",
-  "generated_at": "2026-10-29T04:49:33.142818-04:00",
+  "generated_at": "2026-10-29T05:44:48.297479-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
     "MISSING General predict MD `01_daily/general/2026-10-29_predict.md` \u2014 missing",
     "MISSING News actions JSON `01_daily/news/2026-10-29_actions.json` \u2014 missing",
-    "MISSING News judge MD `01_daily/news/2026-10-29_judge.md` \u2014 missing",
     "MISSING AB checklist enriched `data/ab_checklist/2026-10-29_ab_checklist_enriched.csv` \u2014 missing"
   ],
   "counts": {
@@ -182,7 +181,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 4,
+      "n_req_ok": 5,
       "n_req": 9,
       "n_opt_ok": 1,
       "n_opt": 14,
@@ -262,11 +261,15 @@
           "name": "News judge MD",
           "path": "01_daily/news/2026-10-29_judge.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 9430,
+          "said": "1. **Fed holds at 3.75%\u20134%; two officials favor a hike, December odds elevated** \u2014 top item because it resets the Fed-path/rates cluster for all duration-sensit",
+          "bullets": [
+            "2. **Alphabet earnings miss, shares drop** \u2014 mega-cap NDX/SPX earnings shock; outranks ordinary single-name color because it can move index beta and tech sentiment; provisional channel: **sentiment**.",
+            "3. **Boeing 737 MAX 10 FAA certification halted over software glitch** \u2014 regulatory/industrial shock with order-book risk; provisional channel: **sector_policy**.",
+            "4. **Chip ETF inflows top $44B as investors buy the dip** \u2014 large semis positioning/sentiment signal; provisional channel: **sentiment**."
+          ]
         },
         {
           "key": "research_json",
@@ -520,18 +523,18 @@
           "path": "01_daily/weather/2026-10-29_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=9386 vix=falling yields=flat",
-          "size": 9386,
-          "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
+          "reason": "sectors=11 bytes=9379 vix=falling yields=flat",
+          "size": 9379,
+          "said": "favorable 2 \u00b7 hostile 7 \u00b7 neutral 2",
           "bullets": [
-            "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Industrials, Real Estate, Technology, Utilities",
+            "hostile: Basic Materials, Communication Services, Consumer Defensive, Industrials, Real Estate, Technology, Utilities",
             "events bull 3 / bear 4"
           ]
         }
       ],
-      "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
+      "said": "favorable 2 \u00b7 hostile 7 \u00b7 neutral 2",
       "bullets": [
-        "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Industrials, Real Estate, Technology, Utilities",
+        "hostile: Basic Materials, Communication Services, Consumer Defensive, Industrials, Real Estate, Technology, Utilities",
         "events bull 3 / bear 4"
       ]
     },
@@ -688,11 +691,15 @@
           "name": "News judge MD",
           "path": "01_daily/news/2026-10-29_judge.md",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 9430,
+          "said": "1. **Fed holds at 3.75%\u20134%; two officials favor a hike, December odds elevated** \u2014 top item because it resets the Fed-path/rates cluster for all duration-sensit",
+          "bullets": [
+            "2. **Alphabet earnings miss, shares drop** \u2014 mega-cap NDX/SPX earnings shock; outranks ordinary single-name color because it can move index beta and tech sentiment; provisional channel: **sentiment**.",
+            "3. **Boeing 737 MAX 10 FAA certification halted over software glitch** \u2014 regulatory/industrial shock with order-book risk; provisional channel: **sector_policy**.",
+            "4. **Chip ETF inflows top $44B as investors buy the dip** \u2014 large semis positioning/sentiment signal; provisional channel: **sentiment**."
+          ]
         },
         {
           "key": "in_weather",
@@ -700,11 +707,11 @@
           "path": "01_daily/weather/2026-10-29_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=9386 vix=falling yields=flat",
-          "size": 9386,
-          "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
+          "reason": "sectors=11 bytes=9379 vix=falling yields=flat",
+          "size": 9379,
+          "said": "favorable 2 \u00b7 hostile 7 \u00b7 neutral 2",
           "bullets": [
-            "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Industrials, Real Estate, Technology, Utilities",
+            "hostile: Basic Materials, Communication Services, Consumer Defensive, Industrials, Real Estate, Technology, Utilities",
             "events bull 3 / bear 4"
           ]
         },
@@ -880,9 +887,9 @@
     "sectors": {},
     "news": {},
     "weather": {
-      "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
+      "said": "favorable 2 \u00b7 hostile 7 \u00b7 neutral 2",
       "bullets": [
-        "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Industrials, Real Estate, Technology, Utilities",
+        "hostile: Basic Materials, Communication Services, Consumer Defensive, Industrials, Real Estate, Technology, Utilities",
         "events bull 3 / bear 4"
       ]
     }
@@ -1368,6 +1375,31 @@
         }
       ],
       "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, sectors_required, all_ok \u00b7 keys: date, generated_at, run_id, runner, all_ok, qc_all_ok, book_ok, grok_ok, grok_fails, missing_required, attempts, github_runs \u00b7 # Pre-open ALL status \u2014 2026-10-29\nall_ok=False  qc_all_ok=False  book_ok=False  grok_ok=False  news_mode=on  missing=['events', 'news_judge', 'map_heat_research', 'general_predict']\nPredictive modules + stock book (must land before 09:30 ET).\nOutcome / learn / tonight's captain research = Post-Close ALL.\n- Weather / regime: exit 0\n- News parse: exit 0"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-10-29",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-29T05:44:47.632616-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-10-29_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 9379,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-10-29_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5004,
+          "preview": "# Weather report \u2014 2026-10-29\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-10-29\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
     }
   ],
   "href": {
