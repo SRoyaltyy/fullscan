@@ -1,6 +1,6 @@
 {
   "date": "2026-10-29",
-  "generated_at": "2026-10-29T12:49:23.280212-04:00",
+  "generated_at": "2026-10-29T12:49:57.177283-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -70,31 +70,6 @@
   },
   "sectors": {},
   "lands": [
-    {
-      "key": "news_actions",
-      "title": "News actions",
-      "date": "2026-10-29",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-29T07:00:31.596503-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-10-29_actions.json",
-          "ok": true,
-          "reason": "",
-          "size": 70772,
-          "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers"
-        },
-        {
-          "path": "01_daily/news/2026-10-29_actions.md",
-          "ok": true,
-          "reason": "",
-          "size": 13572,
-          "preview": "# News \u2192 Actions v4 (full framework) \u2014 2026-10-29T07:00:31.579676-04:00\nraw=9973 unique_events=6 tickers=108"
-        }
-      ],
-      "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-10-29T07:00:31.579676-04:00\nraw=9973 unique_events=6 tickers=108"
-    },
     {
       "key": "stock_book",
       "title": "Stock book + green",
@@ -402,6 +377,59 @@
         }
       ],
       "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-10-29",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-29T12:49:56.313056-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-10-29_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 983367,
+          "preview": "1d BUY FIS \u00b7 SELL NEOV, OKLO, FCEL, NNDM, EOSE, TE, SKYX, POWL"
+        },
+        {
+          "path": "data/stock_book/2026-10-29_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-10-29_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2471,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-10-29_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 6911,
+          "preview": "2026-10-29 BUY FIS \u00b7 SELL NEOV, OKLO, FCEL, NNDM, EOSE, TE, SKYX, POWL"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 6911,
+          "preview": "2026-10-29 BUY FIS \u00b7 SELL NEOV, OKLO, FCEL, NNDM, EOSE, TE, SKYX, POWL"
+        },
+        {
+          "path": "01_daily/2026-10-29_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 30331,
+          "preview": "# Stock book \u2014 2026-10-29\n_Generated 2026-10-29T12:49:33.104949-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY FIS \u00b7 SELL NEOV, OKLO, FCEL, NNDM, EOSE, TE, SKYX, POWL \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-10-29 BUY FIS \u00b7 SELL NEOV, OKLO, FCEL, NNDM, EOSE, TE, SKYX, POWL \u00b7 2026-10-29 BUY FIS \u00b7 SELL NEOV, OKLO, FCEL, NNDM, EOSE, TE, SKYX, POWL \u00b7 # Stock book \u2014 2026-10-29\n_Generated 2026-10-29T12:49:33.104949-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
