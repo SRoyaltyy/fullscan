@@ -1,6 +1,6 @@
 {
   "date": "2026-10-29",
-  "generated_at": "2026-10-29T06:13:43.974473-04:00",
+  "generated_at": "2026-10-29T06:13:49.799591-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -10,8 +10,8 @@
     "MISSING AB checklist enriched `data/ab_checklist/2026-10-29_ab_checklist_enriched.csv` \u2014 missing"
   ],
   "counts": {
-    "ok": 4,
-    "partial": 2,
+    "ok": 3,
+    "partial": 3,
     "fail": 2,
     "n": 8
   },
@@ -632,7 +632,7 @@
       "inputs_ready": false,
       "n_req_ok": 1,
       "n_req": 4,
-      "n_opt_ok": 2,
+      "n_opt_ok": 1,
       "n_opt": 4,
       "files": [
         {
@@ -795,10 +795,10 @@
           "name": "Dashboard HTML",
           "path": "dashboard/index.html",
           "role": "optional",
-          "status": "OK",
-          "reason": "live-book poller + today.json (2026-10-29)",
+          "status": "FAIL",
+          "reason": "session 2026-10-29 not in dashboard dates (last=2026-10-07)",
           "size": 10510589,
-          "said": "live-book poller + today.json (2026-10-29)",
+          "said": "session 2026-10-29 not in dashboard dates (last=2026-10-07)",
           "bullets": []
         }
       ],
@@ -811,9 +811,9 @@
       "key": "publish",
       "name": "Dashboard / .io",
       "yaml": "deploy-dashboard.yml",
-      "status": "OK",
+      "status": "PARTIAL",
       "inputs_ready": false,
-      "n_req_ok": 2,
+      "n_req_ok": 1,
       "n_req": 2,
       "n_opt_ok": 0,
       "n_opt": 1,
@@ -834,10 +834,10 @@
           "name": "Dashboard HTML (repo)",
           "path": "dashboard/index.html",
           "role": "required",
-          "status": "OK",
-          "reason": "live-book poller + today.json (2026-10-29)",
+          "status": "FAIL",
+          "reason": "session 2026-10-29 not in dashboard dates (last=2026-10-07)",
           "size": 10510589,
-          "said": "live-book poller + today.json (2026-10-29)",
+          "said": "session 2026-10-29 not in dashboard dates (last=2026-10-07)",
           "bullets": []
         },
         {
@@ -2059,6 +2059,31 @@
         }
       ],
       "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-10-29\nExport `finviz_2026-10-28.csv` \u00b7 11616 names \u00b7 generated 2026-10-29T04:29:31.500052-04:00"
+    },
+    {
+      "key": "map_heat_baseline",
+      "title": "Map heat night baseline",
+      "date": "2026-10-29",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-29T06:13:49.335654-04:00",
+      "files": [
+        {
+          "path": "01_daily/map_heat/2026-10-29_research_baseline.json",
+          "ok": true,
+          "reason": "",
+          "size": 187518,
+          "preview": "keys: date, source_heat_date, phase, generated_at, n_targets, n_cards, coverage, validation_errors, source_calendar_results, source_market_reaction_pct, cards, size_gate"
+        },
+        {
+          "path": "01_daily/map_heat/2026-10-29_research_baseline.md",
+          "ok": true,
+          "reason": "",
+          "size": 25855,
+          "preview": "# MAP HEAT RESEARCH \u2014 2026-10-29\n142 captain cards \u00b7 size_gate=False set by pre-open refresh"
+        }
+      ],
+      "preview": "keys: date, source_heat_date, phase, generated_at, n_targets, n_cards, coverage, validation_errors, source_calendar_results, source_market_reaction_pct, cards, size_gate \u00b7 # MAP HEAT RESEARCH \u2014 2026-10-29\n142 captain cards \u00b7 size_gate=False set by pre-open refresh"
     }
   ],
   "href": {
