@@ -2,22 +2,22 @@
 
 Live sleeves still SIT on S≤−3. Search a ticker for every session since 8/13: cameras (+N −N), 09:30 open, close, same-day % and hold-1/3/5 with actual prices.
 
-Generated 2026-10-28T22:17:49.099922-04:00 · 2026-08-13 → 2026-10-28 · live sit **untouched**.
+Generated 2026-10-29T05:14:55.824427-04:00 · 2026-08-13 → 2026-10-28 · live sit **untouched**.
 
 ## Latest morning
 
-- Date **2026-10-28** S=6.621 hard-red=False · 68 investigator cards · 27 long-ok · 13 short-ok
+- Date **2026-10-28** S=6.621 hard-red=False · 160 investigator cards · 41 long-ok · 13 short-ok
 
 ### Longs weather sat on (top)
 
+- **CDNA** idio +17 · +7 −1 · E missing · H1 None% H3 None%
 - **CXW** idio +17 · +6 −2 · E good · H1 None% H3 None%
 - **DY** idio +17 · +6 −2 · E good · H1 None% H3 None%
 - **PDFS** idio +17 · +6 −2 · E good · H1 None% H3 None%
-- **VCYT** idio +15 · +5 −2 · E good · H1 None% H3 None%
-- **NEO** idio +14 · +5 −2 · E good · H1 None% H3 None%
-- **VOYG** idio +14 · +5 −2 · E good · H1 None% H3 None%
-- **AEO** idio +12 · +4 −2 · E good · H1 None% H3 None%
-- **UPS** idio +11 · +5 −2 · E good · H1 None% H3 None%
+- **BLFS** idio +16 · +7 −1 · E missing · H1 None% H3 None%
+- **VEEV** idio +16 · +7 −1 · E missing · H1 None% H3 None%
+- **AMRX** idio +15 · +6 −1 · E missing · H1 None% H3 None%
+- **ARQT** idio +15 · +6 −1 · E missing · H1 None% H3 None%
 
 ### Shorts weather sat on (top)
 
