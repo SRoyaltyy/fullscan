@@ -5,16 +5,16 @@
   "run_id": "40848975011",
   "model": "",
   "started_at": "2026-10-29T05:28:00-04:00",
-  "updated_at": "2026-10-29T09:17:50-04:00",
-  "heartbeat_at": "2026-10-29T09:17:50-04:00",
+  "updated_at": "2026-10-29T09:18:06-04:00",
+  "heartbeat_at": "2026-10-29T09:18:06-04:00",
   "stages": [
     {
       "name": "seal",
-      "state": "running",
+      "state": "ok",
       "started_at": "2026-10-29T09:17:50-04:00",
-      "ended_at": "",
+      "ended_at": "2026-10-29T09:18:06-04:00",
       "heartbeat_at": "2026-10-29T09:17:50-04:00",
-      "done": 0,
+      "done": 1,
       "total": 1,
       "model": "",
       "error": ""
