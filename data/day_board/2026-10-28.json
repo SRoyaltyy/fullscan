@@ -1,8 +1,8 @@
 {
   "date": "2026-10-28",
-  "generated_at": "2026-10-28T20:14:20.196881-04:00",
+  "generated_at": "2026-10-29T03:03:45.201189-04:00",
   "overall": "PARTIAL",
-  "ranker_ready": false,
+  "ranker_ready": true,
   "blockers": [
     "MISSING News actions JSON `01_daily/news/2026-10-28_actions.json` \u2014 missing"
   ],
@@ -96,12 +96,12 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 96980,
-          "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
+          "size": 100438,
+          "said": "5906 tickers \u00b7 1941 signals \u00b7 top ABBV, ADP, AEM, AEP, AMAT, AMT, AMX, AMZN",
           "bullets": [
-            "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
-            "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
-            "Banks have profited from idle cash for years. AI agents could change that."
+            "Genmab Stock Surges to Record High as Cancer Drug Slashes Risk of Death by 50%",
+            "ADP: Fiscal Q1 Earnings Snapshot",
+            "Agnico: Q3 Earnings Snapshot"
           ]
         },
         {
@@ -111,10 +111,10 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 11792,
+          "size": 12207,
           "said": "Finviz Daily Digest \u2014 2026-10-28",
           "bullets": [
-            "_Generated 2026-10-28T05:51:23.265582-04:00 \u00b7 export=data/exports/finviz_2026-10-28.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_",
+            "_Generated 2026-10-29T03:03:43.642566-04:00 \u00b7 export=data/exports/finviz_2026-10-28.csv \u00b7 ticker digests=5906 \u00b7 high-signal=1941_",
             "Major indices (live quote page)"
           ]
         },
@@ -169,11 +169,11 @@
           ]
         }
       ],
-      "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
+      "said": "5906 tickers \u00b7 1941 signals \u00b7 top ABBV, ADP, AEM, AEP, AMAT, AMT, AMX, AMZN",
       "bullets": [
-        "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
-        "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
-        "Banks have profited from idle cash for years. AI agents could change that."
+        "Genmab Stock Surges to Record High as Cancer Drug Slashes Risk of Death by 50%",
+        "ADP: Fiscal Q1 Earnings Snapshot",
+        "Agnico: Q3 Earnings Snapshot"
       ]
     },
     {
@@ -194,12 +194,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 96980,
-          "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
+          "size": 100438,
+          "said": "5906 tickers \u00b7 1941 signals \u00b7 top ABBV, ADP, AEM, AEP, AMAT, AMT, AMX, AMZN",
           "bullets": [
-            "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
-            "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
-            "Banks have profited from idle cash for years. AI agents could change that."
+            "Genmab Stock Surges to Record High as Cancer Drug Slashes Risk of Death by 50%",
+            "ADP: Fiscal Q1 Earnings Snapshot",
+            "Agnico: Q3 Earnings Snapshot"
           ]
         },
         {
@@ -349,13 +349,13 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7575,
-          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 18 fail",
+          "size": 7561,
+          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 13 fail",
           "bullets": [
-            "general_predict:missing",
-            "events:missing",
-            "news_judge:missing",
-            "news_parse:missing"
+            "news_actions:missing",
+            "map_heat_research:missing",
+            "sector_predict:missing",
+            "sector_predict:missing"
           ]
         },
         {
@@ -536,12 +536,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 96980,
-          "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
+          "size": 100438,
+          "said": "5906 tickers \u00b7 1941 signals \u00b7 top ABBV, ADP, AEM, AEP, AMAT, AMT, AMX, AMZN",
           "bullets": [
-            "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
-            "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
-            "Banks have profited from idle cash for years. AI agents could change that."
+            "Genmab Stock Surges to Record High as Cancer Drug Slashes Risk of Death by 50%",
+            "ADP: Fiscal Q1 Earnings Snapshot",
+            "Agnico: Q3 Earnings Snapshot"
           ]
         },
         {
@@ -637,12 +637,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 96980,
-          "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
+          "size": 100438,
+          "said": "5906 tickers \u00b7 1941 signals \u00b7 top ABBV, ADP, AEM, AEP, AMAT, AMT, AMX, AMZN",
           "bullets": [
-            "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
-            "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
-            "Banks have profited from idle cash for years. AI agents could change that."
+            "Genmab Stock Surges to Record High as Cancer Drug Slashes Risk of Death by 50%",
+            "ADP: Fiscal Q1 Earnings Snapshot",
+            "Agnico: Q3 Earnings Snapshot"
           ]
         },
         {
@@ -726,12 +726,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 96980,
-          "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
+          "size": 100438,
+          "said": "5906 tickers \u00b7 1941 signals \u00b7 top ABBV, ADP, AEM, AEP, AMAT, AMT, AMX, AMZN",
           "bullets": [
-            "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
-            "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
-            "Banks have profited from idle cash for years. AI agents could change that."
+            "Genmab Stock Surges to Record High as Cancer Drug Slashes Risk of Death by 50%",
+            "ADP: Fiscal Q1 Earnings Snapshot",
+            "Agnico: Q3 Earnings Snapshot"
           ]
         },
         {
@@ -2471,6 +2471,52 @@
         }
       ],
       "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest (close) \u2014 2026-10-28\n**Generated:** 2026-10-28T20:14:19.004361-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks closed higher after Fed held rates steady with upgraded outlook as after-hours tech results pushed Nasdaq 100 futures lower\n**Prior close:** SPX +0.28%  Nasdaq +0.27%  Dow +0.19%\n**SPX:** +0.28%  **Nasdaq:** +0.27%  **Dow:** +0.19%\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** MU, SKHY, ORCL, VRT, WING, FFIV, MSFT, GOOGL, FTNT, LITE, MRVL, WEN\n**Next session:** housing no \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** \u2014\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-10-29\n**Clock use:** `next_open`"
+    },
+    {
+      "key": "finviz_digest",
+      "title": "Finviz digest",
+      "date": "2026-10-28",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-29T03:03:44.294174-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-28_finviz_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 100438,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        },
+        {
+          "path": "01_daily/news/2026-10-28_finviz_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 12238,
+          "preview": "# Finviz Daily Digest \u2014 2026-10-28\n_Generated 2026-10-29T03:03:43.642566-04:00 \u00b7 export=data/exports/finviz_2026-10-28.csv \u00b7 ticker digests=5906 \u00b7 high-signal=1941_"
+        },
+        {
+          "path": "data/exports/finviz_2026-10-28.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11562840,
+          "preview": "11775 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAB\""
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11562840,
+          "preview": "11775 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAB\""
+        },
+        {
+          "path": "01_daily/news/2026-10-28_finviz_digest_preopen.json",
+          "ok": true,
+          "reason": "",
+          "size": 96980,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        }
+      ],
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-10-28\n_Generated 2026-10-29T03:03:43.642566-04:00 \u00b7 export=data/exports/finviz_2026-10-28.csv \u00b7 ticker digests=5906 \u00b7 high-signal=1941_ \u00b7 11775 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAB\" \u00b7 11775 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAB\" \u00b7 keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
     }
   ],
   "href": {
@@ -2828,6 +2874,54 @@
       "path": "data/exports/finviz_2026-10-28.csv",
       "at": "2026-10-29T03:03:19-04:00",
       "commit_msg": "auto: land finviz export [2026-10-28]",
+      "workflow": "Finviz ALL (GH-hosted Elite)",
+      "run_id": "40832392548",
+      "manifest": "research/input_freeze/2026-10-28/manifest.json"
+    },
+    {
+      "path": "01_daily/2026-10-28_grok_review.json",
+      "at": "2026-10-29T03:03:45-04:00",
+      "commit_msg": "auto: land finviz_digest [2026-10-28]",
+      "workflow": "Finviz ALL (GH-hosted Elite)",
+      "run_id": "40832392548",
+      "manifest": "research/input_freeze/2026-10-28/manifest.json"
+    },
+    {
+      "path": "01_daily/2026-10-28_preopen_qc.json",
+      "at": "2026-10-29T03:03:45-04:00",
+      "commit_msg": "auto: land finviz_digest [2026-10-28]",
+      "workflow": "Finviz ALL (GH-hosted Elite)",
+      "run_id": "40832392548",
+      "manifest": "research/input_freeze/2026-10-28/manifest.json"
+    },
+    {
+      "path": "01_daily/news/2026-10-28_finviz_digest.json",
+      "at": "2026-10-29T03:03:45-04:00",
+      "commit_msg": "auto: land finviz_digest [2026-10-28]",
+      "workflow": "Finviz ALL (GH-hosted Elite)",
+      "run_id": "40832392548",
+      "manifest": "research/input_freeze/2026-10-28/manifest.json"
+    },
+    {
+      "path": "01_daily/news/2026-10-28_finviz_digest.md",
+      "at": "2026-10-29T03:03:45-04:00",
+      "commit_msg": "auto: land finviz_digest [2026-10-28]",
+      "workflow": "Finviz ALL (GH-hosted Elite)",
+      "run_id": "40832392548",
+      "manifest": "research/input_freeze/2026-10-28/manifest.json"
+    },
+    {
+      "path": "data/day_board/2026-10-28.json",
+      "at": "2026-10-29T03:03:45-04:00",
+      "commit_msg": "auto: land finviz_digest [2026-10-28]",
+      "workflow": "Finviz ALL (GH-hosted Elite)",
+      "run_id": "40832392548",
+      "manifest": "research/input_freeze/2026-10-28/manifest.json"
+    },
+    {
+      "path": "data/exports/finviz_2026-10-28.csv",
+      "at": "2026-10-29T03:03:45-04:00",
+      "commit_msg": "auto: land finviz_digest [2026-10-28]",
       "workflow": "Finviz ALL (GH-hosted Elite)",
       "run_id": "40832392548",
       "manifest": "research/input_freeze/2026-10-28/manifest.json"
