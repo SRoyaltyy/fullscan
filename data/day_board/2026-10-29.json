@@ -1,6 +1,6 @@
 {
   "date": "2026-10-29",
-  "generated_at": "2026-10-29T06:30:53.134504-04:00",
+  "generated_at": "2026-10-29T06:31:32.514890-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -776,8 +776,8 @@
           "role": "required",
           "status": "OK",
           "reason": "horizons=5 names=155",
-          "size": 1249483,
-          "said": "1d BUY FIS, SMMT, ACRS, TLSA, IRD, GO, CVE \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE",
+          "size": 1246014,
+          "said": "1d BUY FIS, SMMT, ACRS, TLSA, CVE, IRD, GO \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE",
           "bullets": []
         },
         {
@@ -787,10 +787,10 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 53342,
+          "size": 53434,
           "said": "Stock book \u2014 2026-10-29",
           "bullets": [
-            "_Generated 2026-10-29T06:16:11.530617-04:00_",
+            "_Generated 2026-10-29T06:31:03.701471-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -854,8 +854,8 @@
           "role": "input",
           "status": "OK",
           "reason": "horizons=5 names=155",
-          "size": 1249483,
-          "said": "1d BUY FIS, SMMT, ACRS, TLSA, IRD, GO, CVE \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE",
+          "size": 1246014,
+          "said": "1d BUY FIS, SMMT, ACRS, TLSA, CVE, IRD, GO \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE",
           "bullets": []
         },
         {
@@ -905,65 +905,65 @@
     "buy_1d": [
       {
         "ticker": "FIS",
-        "score": 0.2645225561557927
+        "score": 0.254050266173111
       },
       {
         "ticker": "SMMT",
-        "score": 0.6003544893250544
+        "score": 0.5987100132402782
       },
       {
         "ticker": "ACRS",
-        "score": 0.5857951329760196
+        "score": 0.584193429496535
       },
       {
         "ticker": "TLSA",
-        "score": 0.7052327277063045
+        "score": 0.6957906860661207
+      },
+      {
+        "ticker": "CVE",
+        "score": 0.18813368613100678
       },
       {
         "ticker": "IRD",
-        "score": 0.39323187873801896
+        "score": 0.3913570176699817
       },
       {
         "ticker": "GO",
         "score": 0.3287426006528995
-      },
-      {
-        "ticker": "CVE",
-        "score": -0.07388309274845545
       }
     ],
     "sell_1d": [
       {
         "ticker": "NEOV",
-        "score": -0.3222455244236797
+        "score": -0.3280530719127599
       },
       {
         "ticker": "OKLO",
-        "score": -0.210330478560946
+        "score": -0.21008731838481098
       },
       {
         "ticker": "FCEL",
-        "score": -0.25786611065330006
+        "score": -0.25762794189647453
       },
       {
         "ticker": "NNDM",
-        "score": -0.16107985517282697
+        "score": -0.16729844126227944
       },
       {
         "ticker": "POWL",
-        "score": -0.15852370528438764
+        "score": -0.16010728134132396
       },
       {
         "ticker": "EOSE",
-        "score": -0.3178180217653031
+        "score": -0.3176344436699983
       },
       {
         "ticker": "TE",
-        "score": -0.2742694569177117
+        "score": -0.2741024992064137
       },
       {
         "ticker": "SKYX",
-        "score": -0.3716181807525233
+        "score": -0.3762022811353095
       }
     ],
     "flatten": {
@@ -2651,6 +2651,59 @@
         }
       ],
       "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-10-29",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-29T06:31:31.408671-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-10-29_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1246014,
+          "preview": "1d BUY FIS, SMMT, ACRS, TLSA, CVE, IRD, GO \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, TE, SKYX"
+        },
+        {
+          "path": "data/stock_book/2026-10-29_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-10-29_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2566,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-10-29_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 10614,
+          "preview": "2026-10-29 BUY FIS, SMMT, ACRS, TLSA, CVE, IRD, GO \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, TE, SKYX"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 10614,
+          "preview": "2026-10-29 BUY FIS, SMMT, ACRS, TLSA, CVE, IRD, GO \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, TE, SKYX"
+        },
+        {
+          "path": "01_daily/2026-10-29_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 54431,
+          "preview": "# Stock book \u2014 2026-10-29\n_Generated 2026-10-29T06:31:03.701471-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY FIS, SMMT, ACRS, TLSA, CVE, IRD, GO \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, TE, SKYX \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-10-29 BUY FIS, SMMT, ACRS, TLSA, CVE, IRD, GO \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, TE, SKYX \u00b7 2026-10-29 BUY FIS, SMMT, ACRS, TLSA, CVE, IRD, GO \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, TE, SKYX \u00b7 # Stock book \u2014 2026-10-29\n_Generated 2026-10-29T06:31:03.701471-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "href": {
