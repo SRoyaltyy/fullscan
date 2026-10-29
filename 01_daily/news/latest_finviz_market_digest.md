@@ -1,47 +1,43 @@
-# Finviz homepage market digest — 2026-10-28
+# Finviz homepage market digest — 2026-10-29
 
-**Generated:** 2026-10-28T05:51:30.114091-04:00 (America/New_York)
+**Generated:** 2026-10-29T04:25:25.033929-04:00 (America/New_York)
 **Source:** `live`
-**Banner:** US futures trade mixed as Fed decision looms with AI optimism lifting tech and Brent crude tops $115 on Middle East risks
+**Banner:** US futures trade mixed as tech earnings divergence and heavy 8:30 AM data slate set up volatile session
 **Prior close:** SPX —  Nasdaq —  Dow —
 **SPX:** —  **Nasdaq:** —  **Dow:** —
-**Oil:** Brent crude $115.0
+**Oil:** —
 **CPI/Fed:** —
-**Leaders:** HOOD, SKHY, AVGO, GEV, APH, ADP, BSX, PSX, BIIB, FLEX, MSFT, GOOGL
-**Next session:** housing no · retail no · Fed yes
-**Earnings slate:** GEV, APH, ADP, BSX, PSX, BIIB, FLEX, MSFT, GOOGL
-**Geo/grain:** geo
-**Clock legal for:** 2026-10-28
+**Leaders:** GOOGL, MSFT, LLY, CAT, MA, MRK
+**Next session:** housing no · retail no · Fed no
+**Earnings slate:** —
+**Geo/grain:** —
+**Clock legal for:** 2026-10-29
 **Clock use:** `same_morning`
 
 ## Clock
 
-Capture is **before 09:30 ET on this date**, so it is legal for that morning's Pre-Open (`clock_legal_for` = 2026-10-28).
+Capture is **before 09:30 ET on this date**, so it is legal for that morning's Pre-Open (`clock_legal_for` = 2026-10-29).
 
 Homepage `$MARKET` prose — **not** `YYYY-MM-DD_finviz_digest.md` (quote-page headlines + ticker blurbs). Capture only. Not wired into tape_anchor / predict / #210.
 
 ## Theme Radar
 
 - **Prior close:** SPX — · Nasdaq — · Dow —
-- **Oil:** Brent crude $115.0
+- **Oil:** —
 - **CPI / Fed-odds:** —
-- **Named leaders:** HOOD, SKHY, AVGO, GEV, APH, ADP, BSX, PSX, BIIB, FLEX, MSFT, GOOGL
-- **Next-session calendar:** housing no · retail no · Fed yes
-  - S&P 500 Futures (@ES) rise 0.09%, Dow Jones Futures (@YM) slip 0.19%, Nasdaq 100 Futures (@NQ) gain 0.37%, and Russell 2000 Futures (@ER2) edge down 0.11% ahead of the 2:00 PM ET FOMC rate announcement and 2:30 PM ET press conference
-  - European markets trade little changed to slightly softer in early action ahead of the FOMC decision
-- **Earnings slate:** GEV, APH, ADP, BSX, PSX, BIIB, FLEX, MSFT, GOOGL
-- **Geo / grain:** geo
+- **Named leaders:** GOOGL, MSFT, LLY, CAT, MA, MRK
+- **Next-session calendar:** housing no · retail no · Fed no
+- **Earnings slate:** —
+- **Geo / grain:** —
 
 ## Narrative
 
-**US futures trade mixed as Fed decision looms with AI optimism lifting tech and Brent crude tops $115 on Middle East risks**
+**US futures trade mixed as tech earnings divergence and heavy 8:30 AM data slate set up volatile session**
 
-- S&P 500 Futures (@ES) rise 0.09%, Dow Jones Futures (@YM) slip 0.19%, Nasdaq 100 Futures (@NQ) gain 0.37%, and Russell 2000 Futures (@ER2) edge down 0.11% ahead of the 2:00 PM ET FOMC rate announcement and 2:30 PM ET press conference
-- Robinhood (HOOD) trades roughly 8% lower pre-market after missing profit estimates despite record Q3 revenue and EBITDA
-- SK Hynix (SKHY) rallies in Asia after blowout quarterly results, reinforcing AI and semiconductor strength and helping support Nasdaq-linked ($NDX) tech sentiment
-- New AI infrastructure financing announcements tied to Broadcom (AVGO) and Anthropic add to renewed AI optimism and focus on AI-exposed names
-- Brent crude (@QA) trades above $115 per barrel on Middle East supply risks, pressuring some cyclical stocks despite broader equity support
-- Asian equities advance overnight, with South Korea’s Kospi jumping on semiconductor and AI strength and Japan’s Nikkei (@NKD) adding over 1%
-- European markets trade little changed to slightly softer in early action ahead of the FOMC decision
-- GE Vernova (GEV), Amphenol (APH), ADP (ADP), Boston Scientific (BSX), Phillips 66 (PSX), Biogen (BIIB), and Flex (FLEX) are scheduled to report earnings before the bell
-- Microsoft (MSFT) and Alphabet (GOOGL) are set to report earnings after the close, keeping additional attention on large-cap AI and cloud exposure into the Fed outcome
+- S&P 500 futures (@ES) fall roughly 0.45%, Nasdaq 100 futures (@NQ) drop about 1.33%, Dow Jones futures (@YM) rise around 0.24%, and Russell 2000 futures (@ER2) climb about 0.35% ahead of the open
+- Alphabet (GOOGL) comes under pressure after being cited for missing sales estimates and reporting negative free cash flow, weighing on Nasdaq 100 futures (@NQ)
+- Microsoft (MSFT) shows a positive after-hours reaction after reporting earnings beats, partially offsetting broader tech weakness
+- Eli Lilly (LLY), Caterpillar (CAT), Mastercard (MA), Merck (MRK) and other large caps are scheduled to report pre-market, with beats or misses expected to drive early swing moves
+- High-impact US data are due at 8:30 AM ET including the Q3 GDP advance estimate, PCE inflation, personal income and spending, and initial jobless claims
+- Asian and European trading was mixed overnight, with reported rotation away from overheated AI-related names
+- Oil (@CL) prices eased modestly in overnight trade but remain elevated, with no major new geopolitical or commodity shocks reported since 4 AM ET
