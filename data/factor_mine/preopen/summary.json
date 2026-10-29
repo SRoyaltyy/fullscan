@@ -263,6 +263,24 @@
             "TTAN"
           ],
           "sit": false
+        },
+        {
+          "buys": [],
+          "date": "2026-10-29",
+          "equity": 9894.42,
+          "mean": -0.0621,
+          "picks": [],
+          "reasons": [
+            "S=-6.95 <= -3: no buys"
+          ],
+          "s": -6.946,
+          "sells": [
+            "MRVI",
+            "PRME",
+            "RH",
+            "SLN"
+          ],
+          "sit": true
         }
       ],
       "label": "starts 10-08 open, no past days",
@@ -518,6 +536,24 @@
           "s": 6.621,
           "sells": [],
           "sit": false
+        },
+        {
+          "buys": [],
+          "date": "2026-10-29",
+          "equity": 8736.7,
+          "mean": -3.1128,
+          "picks": [],
+          "reasons": [
+            "S=-6.95 <= -3: no buys"
+          ],
+          "s": -6.946,
+          "sells": [
+            "BMBL",
+            "CHKP",
+            "HUBS",
+            "TTAN"
+          ],
+          "sit": true
         }
       ],
       "label": "starts 10-08 open, no past days",
