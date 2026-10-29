@@ -1,16 +1,18 @@
 {
   "date": "2026-10-29",
-  "generated_at": "2026-10-29T05:57:04.634366-04:00",
+  "generated_at": "2026-10-29T06:13:37.434794-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
     "MISSING General predict MD `01_daily/general/2026-10-29_predict.md` \u2014 missing",
-    "MISSING News actions JSON `01_daily/news/2026-10-29_actions.json` \u2014 missing"
+    "MISSING News actions JSON `01_daily/news/2026-10-29_actions.json` \u2014 missing",
+    "MISSING News judge MD `01_daily/news/2026-10-29_judge.md` \u2014 missing",
+    "MISSING AB checklist enriched `data/ab_checklist/2026-10-29_ab_checklist_enriched.csv` \u2014 missing"
   ],
   "counts": {
-    "ok": 6,
-    "partial": 1,
-    "fail": 1,
+    "ok": 3,
+    "partial": 3,
+    "fail": 2,
     "n": 8
   },
   "processes": [
@@ -180,7 +182,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 5,
+      "n_req_ok": 4,
       "n_req": 9,
       "n_opt_ok": 1,
       "n_opt": 14,
@@ -260,15 +262,11 @@
           "name": "News judge MD",
           "path": "01_daily/news/2026-10-29_judge.md",
           "role": "required",
-          "status": "OK",
-          "reason": "",
-          "size": 9430,
-          "said": "1. **Fed holds at 3.75%\u20134%; two officials favor a hike, December odds elevated** \u2014 top item because it resets the Fed-path/rates cluster for all duration-sensit",
-          "bullets": [
-            "2. **Alphabet earnings miss, shares drop** \u2014 mega-cap NDX/SPX earnings shock; outranks ordinary single-name color because it can move index beta and tech sentiment; provisional channel: **sentiment**.",
-            "3. **Boeing 737 MAX 10 FAA certification halted over software glitch** \u2014 regulatory/industrial shock with order-book risk; provisional channel: **sector_policy**.",
-            "4. **Chip ETF inflows top $44B as investors buy the dip** \u2014 large semis positioning/sentiment signal; provisional channel: **sentiment**."
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "research_json",
@@ -522,18 +520,18 @@
           "path": "01_daily/weather/2026-10-29_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=9379 vix=falling yields=flat",
-          "size": 9379,
-          "said": "favorable 2 \u00b7 hostile 7 \u00b7 neutral 2",
+          "reason": "sectors=11 bytes=9386 vix=falling yields=flat",
+          "size": 9386,
+          "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
           "bullets": [
-            "hostile: Basic Materials, Communication Services, Consumer Defensive, Industrials, Real Estate, Technology, Utilities",
+            "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Industrials, Real Estate, Technology, Utilities",
             "events bull 3 / bear 4"
           ]
         }
       ],
-      "said": "favorable 2 \u00b7 hostile 7 \u00b7 neutral 2",
+      "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
       "bullets": [
-        "hostile: Basic Materials, Communication Services, Consumer Defensive, Industrials, Real Estate, Technology, Utilities",
+        "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Industrials, Real Estate, Technology, Utilities",
         "events bull 3 / bear 4"
       ]
     },
@@ -541,11 +539,11 @@
       "key": "ab",
       "name": "AB checklist",
       "yaml": "ab_checklist.yml",
-      "status": "OK",
+      "status": "FAIL",
       "inputs_ready": true,
-      "n_req_ok": 1,
+      "n_req_ok": 0,
       "n_req": 1,
-      "n_opt_ok": 1,
+      "n_opt_ok": 0,
       "n_opt": 1,
       "files": [
         {
@@ -553,32 +551,26 @@
           "name": "AB checklist raw",
           "path": "data/ab_checklist/2026-10-29_ab_checklist.csv",
           "role": "optional",
-          "status": "OK",
-          "reason": "rows=2629",
-          "size": 7554218,
-          "said": "28 rows",
-          "bullets": [
-            "AUPH, EC, SHAK, ORCL, ELV, GCT, VEEV, YPF"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "ab_enriched",
           "name": "AB checklist enriched",
           "path": "data/ab_checklist/2026-10-29_ab_checklist_enriched.csv",
           "role": "required",
-          "status": "OK",
-          "reason": "rows=2629",
-          "size": 8363249,
-          "said": "25 rows",
-          "bullets": [
-            "A, TLYS, EC, ABBV, PFE, SHO, FIGS, PANW"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         }
       ],
-      "said": "25 rows",
-      "bullets": [
-        "A, TLYS, EC, ABBV, PFE"
-      ]
+      "said": "",
+      "bullets": []
     },
     {
       "key": "catalyst",
@@ -636,11 +628,11 @@
       "key": "stock_book",
       "name": "Stock Book ALL",
       "yaml": "stock_book_all.yml",
-      "status": "OK",
+      "status": "PARTIAL",
       "inputs_ready": false,
-      "n_req_ok": 4,
+      "n_req_ok": 1,
       "n_req": 4,
-      "n_opt_ok": 3,
+      "n_opt_ok": 1,
       "n_opt": 4,
       "files": [
         {
@@ -696,15 +688,11 @@
           "name": "News judge MD",
           "path": "01_daily/news/2026-10-29_judge.md",
           "role": "input",
-          "status": "OK",
-          "reason": "",
-          "size": 9430,
-          "said": "1. **Fed holds at 3.75%\u20134%; two officials favor a hike, December odds elevated** \u2014 top item because it resets the Fed-path/rates cluster for all duration-sensit",
-          "bullets": [
-            "2. **Alphabet earnings miss, shares drop** \u2014 mega-cap NDX/SPX earnings shock; outranks ordinary single-name color because it can move index beta and tech sentiment; provisional channel: **sentiment**.",
-            "3. **Boeing 737 MAX 10 FAA certification halted over software glitch** \u2014 regulatory/industrial shock with order-book risk; provisional channel: **sector_policy**.",
-            "4. **Chip ETF inflows top $44B as investors buy the dip** \u2014 large semis positioning/sentiment signal; provisional channel: **sentiment**."
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "in_weather",
@@ -712,11 +700,11 @@
           "path": "01_daily/weather/2026-10-29_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=9379 vix=falling yields=flat",
-          "size": 9379,
-          "said": "favorable 2 \u00b7 hostile 7 \u00b7 neutral 2",
+          "reason": "sectors=11 bytes=9386 vix=falling yields=flat",
+          "size": 9386,
+          "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
           "bullets": [
-            "hostile: Basic Materials, Communication Services, Consumer Defensive, Industrials, Real Estate, Technology, Utilities",
+            "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Industrials, Real Estate, Technology, Utilities",
             "events bull 3 / bear 4"
           ]
         },
@@ -725,13 +713,11 @@
           "name": "AB checklist enriched",
           "path": "data/ab_checklist/2026-10-29_ab_checklist_enriched.csv",
           "role": "input",
-          "status": "OK",
-          "reason": "rows=2629",
-          "size": 8363249,
-          "said": "25 rows",
-          "bullets": [
-            "A, TLYS, EC, ABBV, PFE, SHO, FIGS, PANW"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "join",
@@ -740,7 +726,7 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=5901",
-          "size": 2216576,
+          "size": 2216976,
           "said": "209 rows",
           "bullets": [
             "HALO, ONC, LLY, HRMY, ETON, ARQT, AVAH, CORT"
@@ -751,23 +737,21 @@
           "name": "Peer RS CSV",
           "path": "data/peers/2026-10-29_peer_rs.csv",
           "role": "required",
-          "status": "OK",
-          "reason": "rows=5096",
-          "size": 821534,
-          "said": "489 rows",
-          "bullets": [
-            "A, AA, AACG, AAL, AAME, AAMI, AAOI, AAON"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "book_json",
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-10-29_stock_book.json",
           "role": "required",
-          "status": "OK",
-          "reason": "horizons=5 names=155",
-          "size": 1246014,
-          "said": "1d BUY FIS, SMMT, ACRS, TLSA, CVE, IRD, GO \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
           "bullets": []
         },
         {
@@ -775,24 +759,21 @@
           "name": "Stock book MD",
           "path": "01_daily/2026-10-29_stock_book.md",
           "role": "required",
-          "status": "OK",
-          "reason": "",
-          "size": 53434,
-          "said": "Stock book \u2014 2026-10-29",
-          "bullets": [
-            "_Generated 2026-10-29T05:50:07.079201-04:00_",
-            "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "green",
           "name": "Green-pile JSON",
           "path": "data/stock_book/2026-10-29_green.json",
           "role": "optional",
-          "status": "OK",
-          "reason": "",
-          "size": 585,
-          "said": "0 green \u00b7",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
           "bullets": []
         },
         {
@@ -814,10 +795,10 @@
           "name": "Dashboard HTML",
           "path": "dashboard/index.html",
           "role": "optional",
-          "status": "OK",
-          "reason": "live-book poller + today.json (2026-10-29)",
+          "status": "FAIL",
+          "reason": "session 2026-10-29 not in dashboard dates (last=2026-10-07)",
           "size": 10510589,
-          "said": "live-book poller + today.json (2026-10-29)",
+          "said": "session 2026-10-29 not in dashboard dates (last=2026-10-07)",
           "bullets": []
         }
       ],
@@ -830,9 +811,9 @@
       "key": "publish",
       "name": "Dashboard / .io",
       "yaml": "deploy-dashboard.yml",
-      "status": "OK",
-      "inputs_ready": true,
-      "n_req_ok": 2,
+      "status": "PARTIAL",
+      "inputs_ready": false,
+      "n_req_ok": 1,
       "n_req": 2,
       "n_opt_ok": 0,
       "n_opt": 1,
@@ -842,10 +823,10 @@
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-10-29_stock_book.json",
           "role": "input",
-          "status": "OK",
-          "reason": "horizons=5 names=155",
-          "size": 1246014,
-          "said": "1d BUY FIS, SMMT, ACRS, TLSA, CVE, IRD, GO \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
           "bullets": []
         },
         {
@@ -853,10 +834,10 @@
           "name": "Dashboard HTML (repo)",
           "path": "dashboard/index.html",
           "role": "required",
-          "status": "OK",
-          "reason": "live-book poller + today.json (2026-10-29)",
+          "status": "FAIL",
+          "reason": "session 2026-10-29 not in dashboard dates (last=2026-10-07)",
           "size": 10510589,
-          "said": "live-book poller + today.json (2026-10-29)",
+          "said": "session 2026-10-29 not in dashboard dates (last=2026-10-07)",
           "bullets": []
         },
         {
@@ -2097,6 +2078,31 @@
         }
       ],
       "preview": "# flatten_robust card \u2014 2026-10-29\n_Generated 2026-10-29T09:57:02 \u2014 live `flatten_robust`._\n**morning S missing; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**\n- Score **\u2014** (\u2014) \u00b7 route **io**\n- Cash leftover **$9.19** (after 09:30 $9.19 \u00b7 after 16:00 $116,556.30)\n- Prior close **$116,672.88** \u00b7 09:30 **$116,672.88** \u00b7 overnight **$+0.00** \u00b7 session **$-116.58** \u00b7 16:00 **$116,556.30**\n- Overnight lots **11** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$0.00** \u2264 leftover after sells **$116,556.30** \u00b7 2026-10-28 BUY \u2014 \u00b7 SELL \u2014 \u00b7 keys: date, policy, generated, score, predict, hard_red, flatten_ok, n_priced_buys, prior_book, route, cash_open, cash_after_0930 \u00b7 [{\"date\": \"2026-08-13\", \"route\": \"io\", \"score\": 8.525, \"predict\": \"UP\", \"yday_equity\": 100000.0, \"open_cash\": 100000.0, \"open_held\": 0, \"open_equity\": 100000.0, \"overnight_delta\": 0.0, \"session_delta\": -169.94, \"equity\": 99830.06, \"cash\": 9917.52, \"overnight_names\": \"\", \"overnight\": [], \"marks\": [{\"ticker\": \"BTSG\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 166, \"shares\": 166, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 59.8, \"c"
+    },
+    {
+      "key": "finviz_digest",
+      "title": "Finviz digest",
+      "date": "2026-10-29",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-29T06:13:36.914026-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-29_finviz_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 97013,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        },
+        {
+          "path": "01_daily/news/2026-10-29_finviz_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 11849,
+          "preview": "# Finviz Daily Digest \u2014 2026-10-29\n_Generated 2026-10-29T04:24:13.014368-04:00 \u00b7 export=data/exports/finviz_2026-10-28.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_"
+        }
+      ],
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-10-29\n_Generated 2026-10-29T04:24:13.014368-04:00 \u00b7 export=data/exports/finviz_2026-10-28.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_"
     }
   ],
   "href": {
