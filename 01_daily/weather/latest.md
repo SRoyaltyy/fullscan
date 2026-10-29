@@ -5,8 +5,8 @@ Is today good for each *kind* of stock? Labels come from `data/universe/`; this 
 ## Snapshot
 
 - **Risk state:** OFF (general predict down score -6.9, conf 0.778)
-- **Yields:** flat (fred_dgs10) | **Dollar:** flat (dxy) | **Oil:** falling | **VIX:** falling (ratio 0.89 via vix/vix3m) spot 17.1
-- **Fear & Greed:** n/a | **Yield/SPX 5d corr:** +0.71
+- **Yields:** flat (fred_dgs10) | **Dollar:** soft (dxy) | **Oil:** falling | **VIX:** falling (ratio 0.87 via vix/vix3m) spot 16.43
+- **Fear & Greed:** n/a | **Yield/SPX 5d corr:** +0.15
 - **High-impact events:** 3 bullish vs 4 bearish
 
 ## Sectors
@@ -29,8 +29,8 @@ Is today good for each *kind* of stock? Labels come from `data/universe/`; this 
 
 | Label | Weather | Conf | Why |
 |---|---|---|---|
-| size:micro | 🌧️ hostile | medium | risk-off — small caps de-rate first; risk-off, dollar flat [general predict + factors] |
-| size:small | 🌧️ hostile | medium | risk-off — small caps de-rate first; risk-off, dollar flat [general predict + factors] |
+| size:micro | 🌧️ hostile | medium | risk-off — small caps de-rate first; risk-off, dollar soft [general predict + factors] |
+| size:small | 🌧️ hostile | medium | risk-off — small caps de-rate first; risk-off, dollar soft [general predict + factors] |
 | size:large | 🌤️ favorable | medium | risk-off — defensive/quality bid concentrates in large & mega [general predict] |
 | size:mega | 🌤️ favorable | medium | risk-off — defensive/quality bid concentrates in large & mega [general predict] |
 | size:mid | ⛅ neutral | low | no dedicated mid-cap signal in v1 |
