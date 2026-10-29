@@ -1,6 +1,6 @@
 {
   "date": "2026-10-29",
-  "generated_at": "2026-10-29T07:00:32.639060-04:00",
+  "generated_at": "2026-10-29T07:02:40.496686-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -343,14 +343,14 @@
           "path": "01_daily/2026-10-29_preopen_qc.json",
           "role": "required",
           "status": "OK",
-          "reason": "all_ok=False",
-          "size": 7574,
-          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 17 fail",
+          "reason": "all_ok=True",
+          "size": 8397,
+          "said": "all_ok=True \u00b7 sectors 0/11 \u00b7 13 fail",
           "bullets": [
-            "general_predict:missing",
-            "events:missing",
-            "news_judge:missing",
-            "news_actions:missing"
+            "finviz_market_digest:missing",
+            "map_heat_research:missing",
+            "sector_predict:missing",
+            "sector_predict:missing"
           ]
         },
         {
@@ -540,8 +540,8 @@
           "path": "01_daily/weather/2026-10-29_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=10430 vix=falling yields=flat",
-          "size": 10430,
+          "reason": "sectors=11 bytes=10428 vix=falling yields=flat",
+          "size": 10428,
           "said": "favorable 2 \u00b7 hostile 7 \u00b7 neutral 2",
           "bullets": [
             "hostile: Basic Materials, Communication Services, Consumer Defensive, Industrials, Real Estate, Technology, Utilities",
@@ -759,8 +759,8 @@
           "path": "01_daily/weather/2026-10-29_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=10430 vix=falling yields=flat",
-          "size": 10430,
+          "reason": "sectors=11 bytes=10428 vix=falling yields=flat",
+          "size": 10428,
           "said": "favorable 2 \u00b7 hostile 7 \u00b7 neutral 2",
           "bullets": [
             "hostile: Basic Materials, Communication Services, Consumer Defensive, Industrials, Real Estate, Technology, Utilities",
@@ -812,9 +812,9 @@
           "path": "data/stock_book/2026-10-29_stock_book.json",
           "role": "required",
           "status": "OK",
-          "reason": "horizons=5 names=155",
-          "size": 1246014,
-          "said": "1d BUY FIS, SMMT, ACRS, TLSA, CVE, IRD, GO \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE",
+          "reason": "horizons=5 names=113",
+          "size": 983367,
+          "said": "1d BUY FIS \u00b7 SELL NEOV, OKLO, FCEL, NNDM, EOSE, TE \u00b7 -0.6613",
           "bullets": []
         },
         {
@@ -824,10 +824,10 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 53434,
+          "size": 29478,
           "said": "Stock book \u2014 2026-10-29",
           "bullets": [
-            "_Generated 2026-10-29T06:31:03.701471-04:00_",
+            "_Generated 2026-10-29T07:02:12.031466-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -890,9 +890,9 @@
           "path": "data/stock_book/2026-10-29_stock_book.json",
           "role": "input",
           "status": "OK",
-          "reason": "horizons=5 names=155",
-          "size": 1246014,
-          "said": "1d BUY FIS, SMMT, ACRS, TLSA, CVE, IRD, GO \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE",
+          "reason": "horizons=5 names=113",
+          "size": 983367,
+          "said": "1d BUY FIS \u00b7 SELL NEOV, OKLO, FCEL, NNDM, EOSE, TE \u00b7 -0.6613",
           "bullets": []
         },
         {
@@ -942,65 +942,41 @@
     "buy_1d": [
       {
         "ticker": "FIS",
-        "score": 0.254050266173111
-      },
-      {
-        "ticker": "SMMT",
-        "score": 0.5987100132402782
-      },
-      {
-        "ticker": "ACRS",
-        "score": 0.584193429496535
-      },
-      {
-        "ticker": "TLSA",
-        "score": 0.6957906860661207
-      },
-      {
-        "ticker": "CVE",
-        "score": 0.18813368613100678
-      },
-      {
-        "ticker": "IRD",
-        "score": 0.3913570176699817
-      },
-      {
-        "ticker": "GO",
-        "score": 0.3287426006528995
+        "score": 0.18517061586446382
       }
     ],
     "sell_1d": [
       {
         "ticker": "NEOV",
-        "score": -0.3280530719127599
+        "score": -0.30027617437179066
       },
       {
         "ticker": "OKLO",
-        "score": -0.21008731838481098
+        "score": -0.20652127669785525
       },
       {
         "ticker": "FCEL",
-        "score": -0.25762794189647453
+        "score": -0.2789842893555734
       },
       {
         "ticker": "NNDM",
-        "score": -0.16729844126227944
-      },
-      {
-        "ticker": "POWL",
-        "score": -0.16010728134132396
+        "score": -0.13037916691395135
       },
       {
         "ticker": "EOSE",
-        "score": -0.3176344436699983
+        "score": -0.33619060850078913
       },
       {
         "ticker": "TE",
-        "score": -0.2741024992064137
+        "score": -0.29690679096781436
       },
       {
         "ticker": "SKYX",
-        "score": -0.3762022811353095
+        "score": -0.41092515316492595
+      },
+      {
+        "ticker": "POWL",
+        "score": -0.1042981245078825
       }
     ],
     "flatten": {
@@ -3032,6 +3008,59 @@
         }
       ],
       "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-10-29T07:00:31.579676-04:00\nraw=9973 unique_events=6 tickers=108"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-10-29",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-29T07:02:39.435707-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-10-29_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 983367,
+          "preview": "1d BUY FIS \u00b7 SELL NEOV, OKLO, FCEL, NNDM, EOSE, TE, SKYX, POWL"
+        },
+        {
+          "path": "data/stock_book/2026-10-29_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-10-29_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2471,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-10-29_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 6911,
+          "preview": "2026-10-29 BUY FIS \u00b7 SELL NEOV, OKLO, FCEL, NNDM, EOSE, TE, SKYX, POWL"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 6911,
+          "preview": "2026-10-29 BUY FIS \u00b7 SELL NEOV, OKLO, FCEL, NNDM, EOSE, TE, SKYX, POWL"
+        },
+        {
+          "path": "01_daily/2026-10-29_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 30331,
+          "preview": "# Stock book \u2014 2026-10-29\n_Generated 2026-10-29T07:02:12.031466-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY FIS \u00b7 SELL NEOV, OKLO, FCEL, NNDM, EOSE, TE, SKYX, POWL \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-10-29 BUY FIS \u00b7 SELL NEOV, OKLO, FCEL, NNDM, EOSE, TE, SKYX, POWL \u00b7 2026-10-29 BUY FIS \u00b7 SELL NEOV, OKLO, FCEL, NNDM, EOSE, TE, SKYX, POWL \u00b7 # Stock book \u2014 2026-10-29\n_Generated 2026-10-29T07:02:12.031466-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "href": {
