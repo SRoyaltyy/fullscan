@@ -1,0 +1,17 @@
+{
+ "date": "2026-10-29",
+ "missing": [],
+ "prices": {
+  "ARHS": 11.63,
+  "CHKP": 147.0,
+  "LQDA": 45.5759,
+  "UWMC": 1.51
+ },
+ "sources": {
+  "ARHS": "yahoo_prior_close",
+  "CHKP": "yahoo_premarket",
+  "LQDA": "yahoo_premarket",
+  "UWMC": "yahoo_premarket"
+ },
+ "written_at": "2026-10-29T12:56:08+00:00"
+}
