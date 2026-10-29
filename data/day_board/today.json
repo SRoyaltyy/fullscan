@@ -9,37 +9,74 @@
     "fail": 1,
     "n": 8
   },
-  "buy_1d": [],
-  "sell_1d": [],
+  "buy_1d": [
+    {
+      "ticker": "FIS",
+      "score": 0.254050266173111
+    },
+    {
+      "ticker": "SMMT",
+      "score": 0.5987100132402782
+    },
+    {
+      "ticker": "ACRS",
+      "score": 0.584193429496535
+    },
+    {
+      "ticker": "TLSA",
+      "score": 0.6957906860661207
+    },
+    {
+      "ticker": "CVE",
+      "score": 0.18813368613100678
+    },
+    {
+      "ticker": "IRD",
+      "score": 0.3913570176699817
+    },
+    {
+      "ticker": "GO",
+      "score": 0.3287426006528995
+    }
+  ],
+  "sell_1d": [
+    {
+      "ticker": "NEOV",
+      "score": -0.3280530719127599
+    },
+    {
+      "ticker": "OKLO",
+      "score": -0.21008731838481098
+    },
+    {
+      "ticker": "FCEL",
+      "score": -0.25762794189647453
+    },
+    {
+      "ticker": "NNDM",
+      "score": -0.16729844126227944
+    },
+    {
+      "ticker": "POWL",
+      "score": -0.16010728134132396
+    },
+    {
+      "ticker": "EOSE",
+      "score": -0.3176344436699983
+    },
+    {
+      "ticker": "TE",
+      "score": -0.2741024992064137
+    },
+    {
+      "ticker": "SKYX",
+      "score": -0.3762022811353095
+    }
+  ],
   "flatten": {},
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "weather",
-      "title": "Weather / regime",
-      "date": "2026-10-29",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-29T05:44:47.632616-04:00",
-      "files": [
-        {
-          "path": "01_daily/weather/2026-10-29_weather.json",
-          "ok": true,
-          "reason": "",
-          "size": 9379,
-          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
-        },
-        {
-          "path": "01_daily/weather/2026-10-29_weather.md",
-          "ok": true,
-          "reason": "",
-          "size": 5004,
-          "preview": "# Weather report \u2014 2026-10-29\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
-        }
-      ],
-      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-10-29\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
-    },
     {
       "key": "join",
       "title": "Join / match rank",
@@ -178,6 +215,122 @@
         }
       ],
       "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-10-29\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+    },
+    {
+      "key": "live_boards",
+      "title": "Live 1d BUY/SELL strip",
+      "date": "2026-10-29",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-29T05:49:42.147200-04:00",
+      "files": [
+        {
+          "path": "data/day_board/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 16022,
+          "preview": "2026-10-29 BUY FIS, SMMT, ACRS, TLSA, CVE, IRD, GO \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, TE, SKYX"
+        },
+        {
+          "path": "data/day_board/latest.json",
+          "ok": true,
+          "reason": "",
+          "size": 1116,
+          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
+        },
+        {
+          "path": "data/day_board/2026-10-29.json",
+          "ok": true,
+          "reason": "",
+          "size": 72527,
+          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href"
+        },
+        {
+          "path": "data/day_board/2026-10-29_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 37828,
+          "preview": "2026-10-29 BUY FIS, SMMT, ACRS, TLSA, CVE, IRD, GO \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, TE, SKYX"
+        },
+        {
+          "path": "data/day_board/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 629405,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/2026-10-29_strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 629405,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/factor_mine/morning_look/2026-10-29.json",
+          "ok": true,
+          "reason": "",
+          "size": 153466,
+          "preview": "keys: asof_commit, asof_committed_at, cutoff_et, date, n, read_from, rows"
+        },
+        {
+          "path": "data/day_board/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 853028,
+          "preview": "2026-10-29 BUY FIS, SMMT, ACRS, TLSA, CVE, IRD, GO \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, TE, SKYX"
+        },
+        {
+          "path": "data/factor_mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 629405,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 37828,
+          "preview": "2026-10-29 BUY FIS, SMMT, ACRS, TLSA, CVE, IRD, GO \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, TE, SKYX"
+        },
+        {
+          "path": "dashboard/factor-mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 629405,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 629405,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 853028,
+          "preview": "2026-10-29 BUY FIS, SMMT, ACRS, TLSA, CVE, IRD, GO \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, TE, SKYX"
+        },
+        {
+          "path": "data/day_board/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 1662,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        },
+        {
+          "path": "dashboard/factor-mine/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 1662,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        }
+      ],
+      "preview": "2026-10-29 BUY FIS, SMMT, ACRS, TLSA, CVE, IRD, GO \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, TE, SKYX \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href \u00b7 2026-10-29 BUY FIS, SMMT, ACRS, TLSA, CVE, IRD, GO \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, TE, SKYX \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: asof_commit, asof_committed_at, cutoff_et, date, n, read_from, rows \u00b7 2026-10-29 BUY FIS, SMMT, ACRS, TLSA, CVE, IRD, GO \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, TE, SKYX \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-10-29 BUY FIS, SMMT, ACRS, TLSA, CVE, IRD, GO \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, TE, SKYX \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: dat"
     },
     {
       "key": "join",
