@@ -11,9 +11,9 @@
    "SIT": 118
   },
   "factor_mine_preopen": {
-   "MISSING": 2,
+   "MISSING": 0,
    "OK": 0,
-   "SIT": 0
+   "SIT": 2
   },
   "flatten_robust": {
    "MISSING": 0,
@@ -26,8 +26,8 @@
    "SIT": 0
   },
   "holdup": {
-   "MISSING": 1,
-   "OK": 0,
+   "MISSING": 0,
+   "OK": 1,
    "SIT": 0
   },
   "paper": {
@@ -52,7 +52,7 @@
   }
  },
  "date": "2026-10-29",
- "generated_at": "2026-10-29T08:56:04-04:00",
+ "generated_at": "2026-10-29T09:18:33-04:00",
  "strategies": [
   {
    "buys": [
@@ -5136,19 +5136,19 @@
    "buys": [],
    "family": "factor_mine_preopen",
    "name": "union_hot_n4_h1_preopen",
-   "note": "no pre-open seal",
+   "note": "S=-6.95 <= -3: no buys",
    "sells": [],
    "source": "data/factor_mine/preopen/seals/2026-10-29.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine_preopen",
    "name": "union_hot_n4_holdup_preopen",
-   "note": "no pre-open seal",
+   "note": "S=-6.95 <= -3: no buys",
    "sells": [],
    "source": "data/factor_mine/preopen/seals/2026-10-29.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [
@@ -5170,13 +5170,21 @@
    "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "PRME",
+    "GMAB",
+    "PACB",
+    "SWRD"
+   ],
    "family": "holdup",
    "name": "holdup",
-   "note": "no sealed plan row",
-   "sells": [],
+   "note": "sealed 2026-10-29T12:57:15Z",
+   "sells": [
+    "BRZE 38",
+    "POOL 9"
+   ],
    "source": "research/hot_n4_clean_v4/forward/holdup_log.jsonl",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [],
