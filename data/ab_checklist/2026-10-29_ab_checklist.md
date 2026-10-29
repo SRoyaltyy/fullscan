@@ -18,131 +18,23 @@
 
 | Rank | Ticker | score | good | bad | pair | Industry |
 |-----:|--------|------:|-----:|----:|------|----------|
-| 1 | EPD | +17 | 17 | 0 | 2026-10-27→2026-10-28 | Oil & Gas Midstream |
-| 2 | SHAK | +16 | 17 | 1 | 2026-10-27→2026-10-28 | Restaurants |
+| 1 | VEEV | +16 | 17 | 1 | 2026-10-27→2026-10-28 | Health Information Services |
+| 2 | EC | +16 | 16 | 0 | 2026-10-27→2026-10-28 | Oil & Gas Integrated |
 | 3 | ORCL | +16 | 17 | 1 | 2026-10-27→2026-10-28 | Software - Infrastructure |
-| 4 | VEEV | +16 | 17 | 1 | 2026-10-27→2026-10-28 | Health Information Services |
-| 5 | EC | +16 | 16 | 0 | 2026-10-27→2026-10-28 | Oil & Gas Integrated |
-| 6 | GCT | +16 | 17 | 1 | 2026-10-27→2026-10-28 | Software - Infrastructure |
-| 7 | MCHP | +15 | 16 | 1 | 2026-10-27→2026-10-28 | Semiconductors |
-| 8 | BLMN | +15 | 16 | 1 | 2026-10-27→2026-10-28 | Restaurants |
-| 9 | HSIC | +15 | 16 | 1 | 2026-10-27→2026-10-28 | Medical Distribution |
-| 10 | FIGS | +15 | 17 | 2 | 2026-10-27→2026-10-28 | Apparel Manufacturing |
-| 11 | ESI | +15 | 16 | 1 | 2026-10-27→2026-10-28 | Specialty Chemicals |
-| 12 | AMD | +15 | 16 | 1 | 2026-10-27→2026-10-28 | Semiconductors |
-| 13 | AUPH | +15 | 16 | 1 | 2026-10-27→2026-10-28 | Biotechnology |
-| 14 | SMA | +15 | 16 | 1 | 2026-10-27→2026-10-28 | REIT - Industrial |
-| 15 | V | +14 | 16 | 2 | 2026-10-27→2026-10-28 | Credit Services |
+| 4 | GCT | +16 | 17 | 1 | 2026-10-27→2026-10-28 | Software - Infrastructure |
+| 5 | AUPH | +16 | 16 | 0 | 2026-10-09→2026-10-12 | Biotechnology |
+| 6 | SHAK | +16 | 17 | 1 | 2026-10-27→2026-10-28 | Restaurants |
+| 7 | ELV | +16 | 17 | 1 | 2026-10-09→2026-10-12 | Healthcare Plans |
+| 8 | MCHP | +15 | 16 | 1 | 2026-10-27→2026-10-28 | Semiconductors |
+| 9 | AMD | +15 | 16 | 1 | 2026-10-27→2026-10-28 | Semiconductors |
+| 10 | BLMN | +15 | 16 | 1 | 2026-10-27→2026-10-28 | Restaurants |
+| 11 | YPF | +15 | 16 | 1 | 2026-10-09→2026-10-12 | Oil & Gas Integrated |
+| 12 | SMA | +15 | 16 | 1 | 2026-10-27→2026-10-28 | REIT - Industrial |
+| 13 | OKTA | +14 | 16 | 2 | 2026-10-27→2026-10-28 | Software - Infrastructure |
+| 14 | V | +14 | 16 | 2 | 2026-10-27→2026-10-28 | Credit Services |
+| 15 | ABBV | +14 | 15 | 1 | 2026-10-27→2026-10-28 | Drug Manufacturers - General |
 
 ## Full checklist — top 15
-
-### EPD  ·  score **+17**  ·  Oil & Gas Midstream
-price=38.060001373291016  pair=`2026-10-27→2026-10-28`
-
-| Feature | Value (with dates) | Status |
-|---------|--------------------|:------:|
-| `A01_rsi_value` | RSI=57.07 on 2026-10-28; prev RSI=49.68 on 2026-10-27 | **NEUTRAL** |
-| `A02_rsi_cross_30` | above | RSI 49.68@2026-10-27 → 57.07@2026-10-28 vs 30 | rule: cross_up=GOOD | **NEUTRAL** |
-| `A03_rsi_cross_50` | cross_up | RSI 49.68@2026-10-27 → 57.07@2026-10-28 vs 50 | rule: cross_up=GOOD cross_down=BAD | **GOOD** |
-| `A04_rsi_cross_70` | below | RSI 49.68@2026-10-27 → 57.07@2026-10-28 vs 70 | rule: cross_down=BAD | **NEUTRAL** |
-| `A05_body_red_green_2day` | STRICT 2-day pair only: 2026-10-27 + 2026-10-28; ratio=GREEN_body_sum/RED_body_sum=99.000 (G=1.0900 R=0.0000); 2026-10-27:GREEN:O=36.9300,C=37.1700,body=+0.2400,vol=2560300.0; 2026-10-28:GREEN:O=37.2100,C=38.0600,body=+0.8500,vol=6082200.0 | **GOOD** |
-| `A06_volume_red_green_2day` | STRICT 2-day pair only: 2026-10-27 + 2026-10-28; ratio=GREEN_vol/RED_vol=99.000 (Gvol=8642500 Rvol=0); 2026-10-27:GREEN:O=36.9300,C=37.1700,body=+0.2400,vol=2560300.0; 2026-10-28:GREEN:O=37.2100,C=38.0600,body=+0.8500,vol=6082200.0 | **GOOD** |
-| `A07_rvol` | RVOL=1.838 on 2026-10-28: today_vol=6082200 / avg20=3308907 (avg window 2026-09-17→2026-10-27, excludes asof) | **GOOD** |
-| `A08_bollinger_position` | pos=0.604 on 2026-10-28 (price=38.0600, mid=36.9515, upper=38.7861, lower=35.1169; 20d BB) | **NEUTRAL** |
-| `A09_above_sma50` | above=True on 2026-10-28: price=38.0600 vs SMA50=37.9434 dist=+0.31% | **GOOD** |
-| `A10_sma20_50_80_stack` | mixed_20=36.95_50=37.94_80=37.68 on 2026-10-28: SMA20=36.9515 SMA50=37.9434 SMA80=37.6782 | **NEUTRAL** |
-| `A11_three_section_lows` | window=2026-07-20→2026-10-28 (63 bars); S1[2026-07-20→2026-08-17] low=2026-07-31@37.2200; S2[2026-08-18→2026-09-16] low=2026-08-21@37.9600; S3[2026-09-17→2026-10-28] low=2026-10-01@35.3700 | lows=[37.220001220703125, 37.959999084472656, 35.369998931884766] span=7.32% rising_lows=False flatish(≤12%)=True | **GOOD** |
-| `A12_green_body_vs_wick_2day` | pair 2026-10-27+2026-10-28: GREEN body_frac=0.6600603309827222 wick_frac=0.33993966901727773 | **GOOD** |
-| `A13_red_body_vs_wick_2day` | pair 2026-10-27+2026-10-28: RED body_frac=nan wick_frac=nan | **NEUTRAL** |
-| `A15_tape_recovery_setup` | body_rg_2d=99.0 need>1.4; red_wick_gt_green=True 5d trail=2026-10-09:RED:body=-0.5900:wick=0.3074; 2026-10-12:RED:body=-0.2400:wick=0.2600; 2026-10-26:GREEN:body=+0.0800:wick=0.2400; 2026-10-27:GREEN:body=+0.2400:wick=0.2800; 2026-10-28:GREEN:body=+0.8500:wick=0.1400 | **GOOD** |
-| `B01_eps_surprise` | EPS surprise=12.24 (current export asof; earnings_date=7/30/2026 8:30:00 AM) | **GOOD** |
-| `B02_revenue_surprise` | Revenue surprise=33.47 (current export; earnings_date=7/30/2026 8:30:00 AM) | **GOOD** |
-| `B03_sales` | 58217.0 | **NEUTRAL** |
-| `B04_income` | 6244.0 | **GOOD** |
-| `B05_profit_margin` | 10.73 | **GOOD** |
-| `B06_profitable` | True | **GOOD** |
-| `B07_target_price` | 41.65 | **NEUTRAL** |
-| `B08_target_price_delta` | delta=0.0 (now=41.65 vs prior_export=41.65 on finviz_2026-10-28) | **NEUTRAL** |
-| `B09_analyst_recom` | 2.35 | **GOOD** |
-| `B10_insider_transactions` | 0.0 | **NEUTRAL** |
-| `B11_insider_tx_delta` | delta=0.0 (now=0.0 vs prior=0.0 on finviz_2026-10-28) | **NEUTRAL** |
-| `B12_institutional_transactions` | 0.5 | **GOOD** |
-| `B13_short_float` | 1.25 | **NEUTRAL** |
-| `B14_earnings_date` | 7/30/2026 8:30:00 AM | **NEUTRAL** |
-| `B17_eps_surprise_pair` | last2 EPS surprises: current=12.24 (this export) | prior_export=12.24 (finviz_2026-10-28) | GOOD if latest beat (and better if both beat) | **GOOD** |
-| `B18_rev_surprise_pair` | last2 Revenue surprises: current=33.47 (this export) | prior_export=33.47 (finviz_2026-10-28) | GOOD if latest beat (and better if both beat) | **GOOD** |
-
-### SHAK  ·  score **+16**  ·  Restaurants
-price=67.22000122070312  pair=`2026-10-27→2026-10-28`
-
-| Feature | Value (with dates) | Status |
-|---------|--------------------|:------:|
-| `A01_rsi_value` | RSI=53.50 on 2026-10-28; prev RSI=46.67 on 2026-10-27 | **NEUTRAL** |
-| `A02_rsi_cross_30` | above | RSI 46.67@2026-10-27 → 53.50@2026-10-28 vs 30 | rule: cross_up=GOOD | **NEUTRAL** |
-| `A03_rsi_cross_50` | cross_up | RSI 46.67@2026-10-27 → 53.50@2026-10-28 vs 50 | rule: cross_up=GOOD cross_down=BAD | **GOOD** |
-| `A04_rsi_cross_70` | below | RSI 46.67@2026-10-27 → 53.50@2026-10-28 vs 70 | rule: cross_down=BAD | **NEUTRAL** |
-| `A05_body_red_green_2day` | STRICT 2-day pair only: 2026-10-27 + 2026-10-28; ratio=GREEN_body_sum/RED_body_sum=9.387 (G=2.9100 R=0.3100); 2026-10-27:RED:O=64.8500,C=64.5400,body=-0.3100,vol=1029618.0; 2026-10-28:GREEN:O=64.3100,C=67.2200,body=+2.9100,vol=1077169.0 | **GOOD** |
-| `A06_volume_red_green_2day` | STRICT 2-day pair only: 2026-10-27 + 2026-10-28; ratio=GREEN_vol/RED_vol=1.046 (Gvol=1077169 Rvol=1029618); 2026-10-27:RED:O=64.8500,C=64.5400,body=-0.3100,vol=1029618.0; 2026-10-28:GREEN:O=64.3100,C=67.2200,body=+2.9100,vol=1077169.0 | **GOOD** |
-| `A07_rvol` | RVOL=0.805 on 2026-10-28: today_vol=1077169 / avg20=1338285 (avg window 2026-09-30→2026-10-27, excludes asof) | **NEUTRAL** |
-| `A08_bollinger_position` | pos=0.067 on 2026-10-28 (price=67.2200, mid=66.7735, upper=73.4271, lower=60.1199; 20d BB) | **NEUTRAL** |
-| `A09_above_sma50` | above=True on 2026-10-28: price=67.2200 vs SMA50=65.3990 dist=+2.78% | **GOOD** |
-| `A10_sma20_50_80_stack` | bull_aligned_20>50>80 on 2026-10-28: SMA20=66.7735 SMA50=65.3990 SMA80=64.7695 | **GOOD** |
-| `A11_three_section_lows` | window=2026-07-30→2026-10-28 (63 bars); S1[2026-07-30→2026-08-28] low=2026-07-30@61.5300; S2[2026-08-31→2026-09-29] low=2026-09-18@54.7300; S3[2026-09-30→2026-10-28] low=2026-09-30@57.3000 | lows=[61.529998779296875, 54.72999954223633, 57.29999923706055] span=12.42% rising_lows=False flatish(≤12%)=False | **NEUTRAL** |
-| `A12_green_body_vs_wick_2day` | pair 2026-10-27+2026-10-28: GREEN body_frac=0.9432753729996018 wick_frac=0.05672462700039816 | **GOOD** |
-| `A13_red_body_vs_wick_2day` | pair 2026-10-27+2026-10-28: RED body_frac=0.2526260814419433 wick_frac=0.7473739185580567 | **GOOD** |
-| `A15_tape_recovery_setup` | body_rg_2d=9.387182516243355 need>1.4; red_wick_gt_green=True 5d trail=2026-10-22:GREEN:body=+0.4800:wick=1.6300; 2026-10-23:RED:body=-1.6100:wick=1.6200; 2026-10-26:RED:body=-0.4700:wick=3.1150; 2026-10-27:RED:body=-0.3100:wick=0.9171; 2026-10-28:GREEN:body=+2.9100:wick=0.1750 | **GOOD** |
-| `B01_eps_surprise` | EPS surprise=40.75 (current export asof; earnings_date=8/5/2026 8:30:00 AM) | **GOOD** |
-| `B02_revenue_surprise` | Revenue surprise=0.11 (current export; earnings_date=8/5/2026 8:30:00 AM) | **GOOD** |
-| `B03_sales` | 1552.3 | **NEUTRAL** |
-| `B04_income` | 39.72 | **GOOD** |
-| `B05_profit_margin` | 2.56 | **GOOD** |
-| `B06_profitable` | True | **GOOD** |
-| `B07_target_price` | 82.77 | **NEUTRAL** |
-| `B08_target_price_delta` | delta=0.0 (now=82.77 vs prior_export=82.77 on finviz_2026-10-28) | **NEUTRAL** |
-| `B09_analyst_recom` | 2.07 | **GOOD** |
-| `B10_insider_transactions` | 2.61 | **GOOD** |
-| `B11_insider_tx_delta` | delta=0.0 (now=2.61 vs prior=2.61 on finviz_2026-10-28) | **NEUTRAL** |
-| `B12_institutional_transactions` | -13.43 | **BAD** |
-| `B13_short_float` | 9.47 | **NEUTRAL** |
-| `B14_earnings_date` | 8/5/2026 8:30:00 AM | **NEUTRAL** |
-| `B17_eps_surprise_pair` | last2 EPS surprises: current=40.75 (this export) | prior_export=40.75 (finviz_2026-10-28) | GOOD if latest beat (and better if both beat) | **GOOD** |
-| `B18_rev_surprise_pair` | last2 Revenue surprises: current=0.11 (this export) | prior_export=0.11 (finviz_2026-10-28) | GOOD if latest beat (and better if both beat) | **GOOD** |
-
-### ORCL  ·  score **+16**  ·  Software - Infrastructure
-price=144.5399932861328  pair=`2026-10-27→2026-10-28`
-
-| Feature | Value (with dates) | Status |
-|---------|--------------------|:------:|
-| `A01_rsi_value` | RSI=57.60 on 2026-10-28; prev RSI=44.59 on 2026-10-27 | **NEUTRAL** |
-| `A02_rsi_cross_30` | above | RSI 44.59@2026-10-27 → 57.60@2026-10-28 vs 30 | rule: cross_up=GOOD | **NEUTRAL** |
-| `A03_rsi_cross_50` | cross_up | RSI 44.59@2026-10-27 → 57.60@2026-10-28 vs 50 | rule: cross_up=GOOD cross_down=BAD | **GOOD** |
-| `A04_rsi_cross_70` | below | RSI 44.59@2026-10-27 → 57.60@2026-10-28 vs 70 | rule: cross_down=BAD | **NEUTRAL** |
-| `A05_body_red_green_2day` | STRICT 2-day pair only: 2026-10-27 + 2026-10-28; ratio=GREEN_body_sum/RED_body_sum=99.000 (G=16.8700 R=0.0000); 2026-10-27:GREEN:O=126.8800,C=130.5300,body=+3.6500,vol=25904273.0; 2026-10-28:GREEN:O=131.3200,C=144.5400,body=+13.2200,vol=80484071.0 | **GOOD** |
-| `A06_volume_red_green_2day` | STRICT 2-day pair only: 2026-10-27 + 2026-10-28; ratio=GREEN_vol/RED_vol=99.000 (Gvol=106388344 Rvol=0); 2026-10-27:GREEN:O=126.8800,C=130.5300,body=+3.6500,vol=25904273.0; 2026-10-28:GREEN:O=131.3200,C=144.5400,body=+13.2200,vol=80484071.0 | **GOOD** |
-| `A07_rvol` | RVOL=2.978 on 2026-10-28: today_vol=80484071 / avg20=27027479 (avg window 2026-09-30→2026-10-27, excludes asof) | **GOOD** |
-| `A08_bollinger_position` | pos=0.674 on 2026-10-28 (price=144.5400, mid=135.2400, upper=149.0334, lower=121.4466; 20d BB) | **NEUTRAL** |
-| `A09_above_sma50` | above=True on 2026-10-28: price=144.5400 vs SMA50=142.1110 dist=+1.71% | **GOOD** |
-| `A10_sma20_50_80_stack` | mixed_20=135.24_50=142.11_80=139.57 on 2026-10-28: SMA20=135.2400 SMA50=142.1110 SMA80=139.5662 | **NEUTRAL** |
-| `A11_three_section_lows` | window=2026-07-31→2026-10-28 (63 bars); S1[2026-07-31→2026-08-28] low=2026-07-31@125.7000; S2[2026-08-31→2026-09-29] low=2026-09-28@131.5800; S3[2026-09-30→2026-10-28] low=2026-10-22@122.7700 | lows=[125.69999694824219, 131.5800018310547, 122.7699966430664] span=7.18% rising_lows=False flatish(≤12%)=True | **GOOD** |
-| `A12_green_body_vs_wick_2day` | pair 2026-10-27+2026-10-28: GREEN body_frac=0.6840449103807897 wick_frac=0.3159550896192103 | **GOOD** |
-| `A13_red_body_vs_wick_2day` | pair 2026-10-27+2026-10-28: RED body_frac=nan wick_frac=nan | **NEUTRAL** |
-| `A15_tape_recovery_setup` | body_rg_2d=99.0 need>1.4; red_wick_gt_green=True 5d trail=2026-10-22:RED:body=-0.8100:wick=4.3599; 2026-10-23:GREEN:body=+1.2900:wick=2.6400; 2026-10-26:DOJI:body=+0.0000:wick=4.2400; 2026-10-27:GREEN:body=+3.6500:wick=1.5000; 2026-10-28:GREEN:body=+13.2200:wick=6.8300 | **GOOD** |
-| `B01_eps_surprise` | EPS surprise=10.41 (current export asof; earnings_date=9/10/2026 4:30:00 PM) | **GOOD** |
-| `B02_revenue_surprise` | Revenue surprise=1.1 (current export; earnings_date=9/10/2026 4:30:00 PM) | **GOOD** |
-| `B03_sales` | 71777.0 | **NEUTRAL** |
-| `B04_income` | 18736.0 | **GOOD** |
-| `B05_profit_margin` | 26.1 | **GOOD** |
-| `B06_profitable` | True | **GOOD** |
-| `B07_target_price` | 244.47 | **NEUTRAL** |
-| `B08_target_price_delta` | delta=0.0 (now=244.47 vs prior_export=244.47 on finviz_2026-10-28) | **NEUTRAL** |
-| `B09_analyst_recom` | 1.58 | **GOOD** |
-| `B10_insider_transactions` | -0.04 | **BAD** |
-| `B11_insider_tx_delta` | delta=0.0 (now=-0.04 vs prior=-0.04 on finviz_2026-10-28) | **NEUTRAL** |
-| `B12_institutional_transactions` | 3.58 | **GOOD** |
-| `B13_short_float` | 2.82 | **NEUTRAL** |
-| `B14_earnings_date` | 9/10/2026 4:30:00 PM | **NEUTRAL** |
-| `B17_eps_surprise_pair` | last2 EPS surprises: current=10.41 (this export) | prior_export=10.41 (finviz_2026-10-28) | GOOD if latest beat (and better if both beat) | **GOOD** |
-| `B18_rev_surprise_pair` | last2 Revenue surprises: current=1.1 (this export) | prior_export=1.1 (finviz_2026-10-28) | GOOD if latest beat (and better if both beat) | **GOOD** |
 
 ### VEEV  ·  score **+16**  ·  Health Information Services
 price=317.82000732421875  pair=`2026-10-27→2026-10-28`
@@ -216,6 +108,42 @@ price=17.68000030517578  pair=`2026-10-27→2026-10-28`
 | `B17_eps_surprise_pair` | last2 EPS surprises: current=27.29 (this export) | prior_export=27.29 (finviz_2026-10-28) | GOOD if latest beat (and better if both beat) | **GOOD** |
 | `B18_rev_surprise_pair` | last2 Revenue surprises: current=7.82 (this export) | prior_export=7.82 (finviz_2026-10-28) | GOOD if latest beat (and better if both beat) | **GOOD** |
 
+### ORCL  ·  score **+16**  ·  Software - Infrastructure
+price=144.5399932861328  pair=`2026-10-27→2026-10-28`
+
+| Feature | Value (with dates) | Status |
+|---------|--------------------|:------:|
+| `A01_rsi_value` | RSI=57.60 on 2026-10-28; prev RSI=44.59 on 2026-10-27 | **NEUTRAL** |
+| `A02_rsi_cross_30` | above | RSI 44.59@2026-10-27 → 57.60@2026-10-28 vs 30 | rule: cross_up=GOOD | **NEUTRAL** |
+| `A03_rsi_cross_50` | cross_up | RSI 44.59@2026-10-27 → 57.60@2026-10-28 vs 50 | rule: cross_up=GOOD cross_down=BAD | **GOOD** |
+| `A04_rsi_cross_70` | below | RSI 44.59@2026-10-27 → 57.60@2026-10-28 vs 70 | rule: cross_down=BAD | **NEUTRAL** |
+| `A05_body_red_green_2day` | STRICT 2-day pair only: 2026-10-27 + 2026-10-28; ratio=GREEN_body_sum/RED_body_sum=99.000 (G=16.8700 R=0.0000); 2026-10-27:GREEN:O=126.8800,C=130.5300,body=+3.6500,vol=25904273.0; 2026-10-28:GREEN:O=131.3200,C=144.5400,body=+13.2200,vol=80484071.0 | **GOOD** |
+| `A06_volume_red_green_2day` | STRICT 2-day pair only: 2026-10-27 + 2026-10-28; ratio=GREEN_vol/RED_vol=99.000 (Gvol=106388344 Rvol=0); 2026-10-27:GREEN:O=126.8800,C=130.5300,body=+3.6500,vol=25904273.0; 2026-10-28:GREEN:O=131.3200,C=144.5400,body=+13.2200,vol=80484071.0 | **GOOD** |
+| `A07_rvol` | RVOL=2.978 on 2026-10-28: today_vol=80484071 / avg20=27027479 (avg window 2026-09-30→2026-10-27, excludes asof) | **GOOD** |
+| `A08_bollinger_position` | pos=0.674 on 2026-10-28 (price=144.5400, mid=135.2400, upper=149.0334, lower=121.4466; 20d BB) | **NEUTRAL** |
+| `A09_above_sma50` | above=True on 2026-10-28: price=144.5400 vs SMA50=142.1110 dist=+1.71% | **GOOD** |
+| `A10_sma20_50_80_stack` | mixed_20=135.24_50=142.11_80=139.57 on 2026-10-28: SMA20=135.2400 SMA50=142.1110 SMA80=139.5662 | **NEUTRAL** |
+| `A11_three_section_lows` | window=2026-07-31→2026-10-28 (63 bars); S1[2026-07-31→2026-08-28] low=2026-07-31@125.7000; S2[2026-08-31→2026-09-29] low=2026-09-28@131.5800; S3[2026-09-30→2026-10-28] low=2026-10-22@122.7700 | lows=[125.69999694824219, 131.5800018310547, 122.7699966430664] span=7.18% rising_lows=False flatish(≤12%)=True | **GOOD** |
+| `A12_green_body_vs_wick_2day` | pair 2026-10-27+2026-10-28: GREEN body_frac=0.6840449103807897 wick_frac=0.3159550896192103 | **GOOD** |
+| `A13_red_body_vs_wick_2day` | pair 2026-10-27+2026-10-28: RED body_frac=nan wick_frac=nan | **NEUTRAL** |
+| `A15_tape_recovery_setup` | body_rg_2d=99.0 need>1.4; red_wick_gt_green=True 5d trail=2026-10-22:RED:body=-0.8100:wick=4.3599; 2026-10-23:GREEN:body=+1.2900:wick=2.6400; 2026-10-26:DOJI:body=+0.0000:wick=4.2400; 2026-10-27:GREEN:body=+3.6500:wick=1.5000; 2026-10-28:GREEN:body=+13.2200:wick=6.8300 | **GOOD** |
+| `B01_eps_surprise` | EPS surprise=10.41 (current export asof; earnings_date=9/10/2026 4:30:00 PM) | **GOOD** |
+| `B02_revenue_surprise` | Revenue surprise=1.1 (current export; earnings_date=9/10/2026 4:30:00 PM) | **GOOD** |
+| `B03_sales` | 71777.0 | **NEUTRAL** |
+| `B04_income` | 18736.0 | **GOOD** |
+| `B05_profit_margin` | 26.1 | **GOOD** |
+| `B06_profitable` | True | **GOOD** |
+| `B07_target_price` | 244.47 | **NEUTRAL** |
+| `B08_target_price_delta` | delta=0.0 (now=244.47 vs prior_export=244.47 on finviz_2026-10-28) | **NEUTRAL** |
+| `B09_analyst_recom` | 1.58 | **GOOD** |
+| `B10_insider_transactions` | -0.04 | **BAD** |
+| `B11_insider_tx_delta` | delta=0.0 (now=-0.04 vs prior=-0.04 on finviz_2026-10-28) | **NEUTRAL** |
+| `B12_institutional_transactions` | 3.58 | **GOOD** |
+| `B13_short_float` | 2.82 | **NEUTRAL** |
+| `B14_earnings_date` | 9/10/2026 4:30:00 PM | **NEUTRAL** |
+| `B17_eps_surprise_pair` | last2 EPS surprises: current=10.41 (this export) | prior_export=10.41 (finviz_2026-10-28) | GOOD if latest beat (and better if both beat) | **GOOD** |
+| `B18_rev_surprise_pair` | last2 Revenue surprises: current=1.1 (this export) | prior_export=1.1 (finviz_2026-10-28) | GOOD if latest beat (and better if both beat) | **GOOD** |
+
 ### GCT  ·  score **+16**  ·  Software - Infrastructure
 price=60.630001068115234  pair=`2026-10-27→2026-10-28`
 
@@ -251,6 +179,114 @@ price=60.630001068115234  pair=`2026-10-27→2026-10-28`
 | `B14_earnings_date` | 8/6/2026 8:30:00 AM | **NEUTRAL** |
 | `B17_eps_surprise_pair` | last2 EPS surprises: current=28.89 (this export) | prior_export=28.89 (finviz_2026-10-28) | GOOD if latest beat (and better if both beat) | **GOOD** |
 | `B18_rev_surprise_pair` | last2 Revenue surprises: current=8.15 (this export) | prior_export=8.15 (finviz_2026-10-28) | GOOD if latest beat (and better if both beat) | **GOOD** |
+
+### AUPH  ·  score **+16**  ·  Biotechnology
+price=16.549999237060547  pair=`2026-10-09→2026-10-12`
+
+| Feature | Value (with dates) | Status |
+|---------|--------------------|:------:|
+| `A01_rsi_value` | RSI=55.72 on 2026-10-12; prev RSI=57.75 on 2026-10-09 | **NEUTRAL** |
+| `A02_rsi_cross_30` | above | RSI 57.75@2026-10-09 → 55.72@2026-10-12 vs 30 | rule: cross_up=GOOD | **NEUTRAL** |
+| `A03_rsi_cross_50` | above | RSI 57.75@2026-10-09 → 55.72@2026-10-12 vs 50 | rule: cross_up=GOOD cross_down=BAD | **NEUTRAL** |
+| `A04_rsi_cross_70` | below | RSI 57.75@2026-10-09 → 55.72@2026-10-12 vs 70 | rule: cross_down=BAD | **NEUTRAL** |
+| `A05_body_red_green_2day` | STRICT 2-day pair only: 2026-10-09 + 2026-10-12; ratio=GREEN_body_sum/RED_body_sum=8.166 (G=0.4900 R=0.0600); 2026-10-09:GREEN:O=16.1600,C=16.6500,body=+0.4900,vol=849222.0; 2026-10-12:RED:O=16.6100,C=16.5500,body=-0.0600,vol=654764.0 | **GOOD** |
+| `A06_volume_red_green_2day` | STRICT 2-day pair only: 2026-10-09 + 2026-10-12; ratio=GREEN_vol/RED_vol=1.297 (Gvol=849222 Rvol=654764); 2026-10-09:GREEN:O=16.1600,C=16.6500,body=+0.4900,vol=849222.0; 2026-10-12:RED:O=16.6100,C=16.5500,body=-0.0600,vol=654764.0 | **GOOD** |
+| `A07_rvol` | RVOL=0.785 on 2026-10-12: today_vol=654764 / avg20=834281 (avg window 2026-09-14→2026-10-09, excludes asof) | **NEUTRAL** |
+| `A08_bollinger_position` | pos=0.229 on 2026-10-12 (price=16.5500, mid=16.3710, upper=17.1537, lower=15.5883; 20d BB) | **NEUTRAL** |
+| `A09_above_sma50` | above=True on 2026-10-12: price=16.5500 vs SMA50=16.1181 dist=+2.68% | **GOOD** |
+| `A10_sma20_50_80_stack` | mixed_20=16.37_50=16.12_80=16.12 on 2026-10-12: SMA20=16.3710 SMA50=16.1181 SMA80=16.1191 | **NEUTRAL** |
+| `A11_three_section_lows` | window=2026-07-14→2026-10-12 (63 bars); S1[2026-07-14→2026-08-12] low=2026-07-31@14.3630; S2[2026-08-13→2026-09-11] low=2026-08-14@14.9010; S3[2026-09-14→2026-10-12] low=2026-10-06@15.4700 | lows=[14.36299991607666, 14.901000022888184, 15.470000267028809] span=7.71% rising_lows=True flatish(≤12%)=True | **GOOD** |
+| `A12_green_body_vs_wick_2day` | pair 2026-10-09+2026-10-12: GREEN body_frac=0.5764713538160505 wick_frac=0.42352864618394953 | **GOOD** |
+| `A13_red_body_vs_wick_2day` | pair 2026-10-09+2026-10-12: RED body_frac=0.2754882213854103 wick_frac=0.7245117786145897 | **GOOD** |
+| `A15_tape_recovery_setup` | body_rg_2d=8.16647593616886 need>1.4; red_wick_gt_green=False 5d trail=2026-10-06:RED:body=-0.0800:wick=0.2600; 2026-10-07:GREEN:body=+0.4500:wick=0.2000; 2026-10-08:GREEN:body=+0.3100:wick=0.1900; 2026-10-09:GREEN:body=+0.4900:wick=0.3600; 2026-10-12:RED:body=-0.0600:wick=0.1578 | **NEUTRAL** |
+| `B01_eps_surprise` | EPS surprise=16.67 (current export asof; earnings_date=8/6/2026 8:30:00 AM) | **GOOD** |
+| `B02_revenue_surprise` | Revenue surprise=3.45 (current export; earnings_date=8/6/2026 8:30:00 AM) | **GOOD** |
+| `B03_sales` | 311.51 | **NEUTRAL** |
+| `B04_income` | 314.11 | **GOOD** |
+| `B05_profit_margin` | 100.84 | **GOOD** |
+| `B06_profitable` | True | **GOOD** |
+| `B07_target_price` | 18.0 | **NEUTRAL** |
+| `B08_target_price_delta` | delta=0.0 (now=18.0 vs prior_export=18.0 on finviz_2026-10-28) | **NEUTRAL** |
+| `B09_analyst_recom` | 1.67 | **GOOD** |
+| `B10_insider_transactions` | 5.53 | **GOOD** |
+| `B11_insider_tx_delta` | delta=0.0 (now=5.53 vs prior=5.53 on finviz_2026-10-28) | **NEUTRAL** |
+| `B12_institutional_transactions` | 3.37 | **GOOD** |
+| `B13_short_float` | 7.26 | **NEUTRAL** |
+| `B14_earnings_date` | 8/6/2026 8:30:00 AM | **NEUTRAL** |
+| `B17_eps_surprise_pair` | last2 EPS surprises: current=16.67 (this export) | prior_export=16.67 (finviz_2026-10-28) | GOOD if latest beat (and better if both beat) | **GOOD** |
+| `B18_rev_surprise_pair` | last2 Revenue surprises: current=3.45 (this export) | prior_export=3.45 (finviz_2026-10-28) | GOOD if latest beat (and better if both beat) | **GOOD** |
+
+### SHAK  ·  score **+16**  ·  Restaurants
+price=67.22000122070312  pair=`2026-10-27→2026-10-28`
+
+| Feature | Value (with dates) | Status |
+|---------|--------------------|:------:|
+| `A01_rsi_value` | RSI=53.50 on 2026-10-28; prev RSI=46.67 on 2026-10-27 | **NEUTRAL** |
+| `A02_rsi_cross_30` | above | RSI 46.67@2026-10-27 → 53.50@2026-10-28 vs 30 | rule: cross_up=GOOD | **NEUTRAL** |
+| `A03_rsi_cross_50` | cross_up | RSI 46.67@2026-10-27 → 53.50@2026-10-28 vs 50 | rule: cross_up=GOOD cross_down=BAD | **GOOD** |
+| `A04_rsi_cross_70` | below | RSI 46.67@2026-10-27 → 53.50@2026-10-28 vs 70 | rule: cross_down=BAD | **NEUTRAL** |
+| `A05_body_red_green_2day` | STRICT 2-day pair only: 2026-10-27 + 2026-10-28; ratio=GREEN_body_sum/RED_body_sum=9.387 (G=2.9100 R=0.3100); 2026-10-27:RED:O=64.8500,C=64.5400,body=-0.3100,vol=1029618.0; 2026-10-28:GREEN:O=64.3100,C=67.2200,body=+2.9100,vol=1077169.0 | **GOOD** |
+| `A06_volume_red_green_2day` | STRICT 2-day pair only: 2026-10-27 + 2026-10-28; ratio=GREEN_vol/RED_vol=1.046 (Gvol=1077169 Rvol=1029618); 2026-10-27:RED:O=64.8500,C=64.5400,body=-0.3100,vol=1029618.0; 2026-10-28:GREEN:O=64.3100,C=67.2200,body=+2.9100,vol=1077169.0 | **GOOD** |
+| `A07_rvol` | RVOL=0.805 on 2026-10-28: today_vol=1077169 / avg20=1338285 (avg window 2026-09-30→2026-10-27, excludes asof) | **NEUTRAL** |
+| `A08_bollinger_position` | pos=0.067 on 2026-10-28 (price=67.2200, mid=66.7735, upper=73.4271, lower=60.1199; 20d BB) | **NEUTRAL** |
+| `A09_above_sma50` | above=True on 2026-10-28: price=67.2200 vs SMA50=65.3990 dist=+2.78% | **GOOD** |
+| `A10_sma20_50_80_stack` | bull_aligned_20>50>80 on 2026-10-28: SMA20=66.7735 SMA50=65.3990 SMA80=64.7695 | **GOOD** |
+| `A11_three_section_lows` | window=2026-07-30→2026-10-28 (63 bars); S1[2026-07-30→2026-08-28] low=2026-07-30@61.5300; S2[2026-08-31→2026-09-29] low=2026-09-18@54.7300; S3[2026-09-30→2026-10-28] low=2026-09-30@57.3000 | lows=[61.529998779296875, 54.72999954223633, 57.29999923706055] span=12.42% rising_lows=False flatish(≤12%)=False | **NEUTRAL** |
+| `A12_green_body_vs_wick_2day` | pair 2026-10-27+2026-10-28: GREEN body_frac=0.9432753729996018 wick_frac=0.05672462700039816 | **GOOD** |
+| `A13_red_body_vs_wick_2day` | pair 2026-10-27+2026-10-28: RED body_frac=0.2526260814419433 wick_frac=0.7473739185580567 | **GOOD** |
+| `A15_tape_recovery_setup` | body_rg_2d=9.387182516243355 need>1.4; red_wick_gt_green=True 5d trail=2026-10-22:GREEN:body=+0.4800:wick=1.6300; 2026-10-23:RED:body=-1.6100:wick=1.6200; 2026-10-26:RED:body=-0.4700:wick=3.1150; 2026-10-27:RED:body=-0.3100:wick=0.9171; 2026-10-28:GREEN:body=+2.9100:wick=0.1750 | **GOOD** |
+| `B01_eps_surprise` | EPS surprise=40.75 (current export asof; earnings_date=8/5/2026 8:30:00 AM) | **GOOD** |
+| `B02_revenue_surprise` | Revenue surprise=0.11 (current export; earnings_date=8/5/2026 8:30:00 AM) | **GOOD** |
+| `B03_sales` | 1552.3 | **NEUTRAL** |
+| `B04_income` | 39.72 | **GOOD** |
+| `B05_profit_margin` | 2.56 | **GOOD** |
+| `B06_profitable` | True | **GOOD** |
+| `B07_target_price` | 82.77 | **NEUTRAL** |
+| `B08_target_price_delta` | delta=0.0 (now=82.77 vs prior_export=82.77 on finviz_2026-10-28) | **NEUTRAL** |
+| `B09_analyst_recom` | 2.07 | **GOOD** |
+| `B10_insider_transactions` | 2.61 | **GOOD** |
+| `B11_insider_tx_delta` | delta=0.0 (now=2.61 vs prior=2.61 on finviz_2026-10-28) | **NEUTRAL** |
+| `B12_institutional_transactions` | -13.43 | **BAD** |
+| `B13_short_float` | 9.47 | **NEUTRAL** |
+| `B14_earnings_date` | 8/5/2026 8:30:00 AM | **NEUTRAL** |
+| `B17_eps_surprise_pair` | last2 EPS surprises: current=40.75 (this export) | prior_export=40.75 (finviz_2026-10-28) | GOOD if latest beat (and better if both beat) | **GOOD** |
+| `B18_rev_surprise_pair` | last2 Revenue surprises: current=0.11 (this export) | prior_export=0.11 (finviz_2026-10-28) | GOOD if latest beat (and better if both beat) | **GOOD** |
+
+### ELV  ·  score **+16**  ·  Healthcare Plans
+price=422.0899963378906  pair=`2026-10-09→2026-10-12`
+
+| Feature | Value (with dates) | Status |
+|---------|--------------------|:------:|
+| `A01_rsi_value` | RSI=64.14 on 2026-10-12; prev RSI=59.13 on 2026-10-09 | **NEUTRAL** |
+| `A02_rsi_cross_30` | above | RSI 59.13@2026-10-09 → 64.14@2026-10-12 vs 30 | rule: cross_up=GOOD | **NEUTRAL** |
+| `A03_rsi_cross_50` | above | RSI 59.13@2026-10-09 → 64.14@2026-10-12 vs 50 | rule: cross_up=GOOD cross_down=BAD | **NEUTRAL** |
+| `A04_rsi_cross_70` | below | RSI 59.13@2026-10-09 → 64.14@2026-10-12 vs 70 | rule: cross_down=BAD | **NEUTRAL** |
+| `A05_body_red_green_2day` | STRICT 2-day pair only: 2026-10-09 + 2026-10-12; ratio=GREEN_body_sum/RED_body_sum=99.000 (G=17.8700 R=0.0000); 2026-10-09:GREEN:O=401.9200,C=412.7000,body=+10.7800,vol=2059225.0; 2026-10-12:GREEN:O=415.0000,C=422.0900,body=+7.0900,vol=869447.0 | **GOOD** |
+| `A06_volume_red_green_2day` | STRICT 2-day pair only: 2026-10-09 + 2026-10-12; ratio=GREEN_vol/RED_vol=99.000 (Gvol=2928672 Rvol=0); 2026-10-09:GREEN:O=401.9200,C=412.7000,body=+10.7800,vol=2059225.0; 2026-10-12:GREEN:O=415.0000,C=422.0900,body=+7.0900,vol=869447.0 | **GOOD** |
+| `A07_rvol` | RVOL=0.737 on 2026-10-12: today_vol=869447 / avg20=1180302 (avg window 2026-09-14→2026-10-09, excludes asof) | **NEUTRAL** |
+| `A08_bollinger_position` | pos=0.925 on 2026-10-12 (price=422.0900, mid=401.9415, upper=423.7173, lower=380.1657; 20d BB) | **BAD** |
+| `A09_above_sma50` | above=True on 2026-10-12: price=422.0900 vs SMA50=400.5118 dist=+5.39% | **GOOD** |
+| `A10_sma20_50_80_stack` | bull_aligned_20>50>80 on 2026-10-12: SMA20=401.9415 SMA50=400.5118 SMA80=398.6746 | **GOOD** |
+| `A11_three_section_lows` | window=2026-07-10→2026-10-12 (63 bars); S1[2026-07-10→2026-08-12] low=2026-07-28@362.9800; S2[2026-08-13→2026-09-11] low=2026-08-17@388.1200; S3[2026-09-14→2026-10-12] low=2026-10-01@375.7400 | lows=[362.9800109863281, 388.1199951171875, 375.739990234375] span=6.93% rising_lows=False flatish(≤12%)=True | **GOOD** |
+| `A12_green_body_vs_wick_2day` | pair 2026-10-09+2026-10-12: GREEN body_frac=0.6505804361528325 wick_frac=0.34941956384716766 | **GOOD** |
+| `A13_red_body_vs_wick_2day` | pair 2026-10-09+2026-10-12: RED body_frac=nan wick_frac=nan | **NEUTRAL** |
+| `A15_tape_recovery_setup` | body_rg_2d=99.0 need>1.4; red_wick_gt_green=True 5d trail=2026-10-06:GREEN:body=+3.4100:wick=3.1374; 2026-10-07:GREEN:body=+3.3100:wick=7.0450; 2026-10-08:RED:body=-2.8900:wick=7.3600; 2026-10-09:GREEN:body=+10.7800:wick=6.8399; 2026-10-12:GREEN:body=+7.0900:wick=3.1950 | **GOOD** |
+| `B01_eps_surprise` | EPS surprise=19.94 (current export asof; earnings_date=7/15/2026 8:30:00 AM) | **GOOD** |
+| `B02_revenue_surprise` | Revenue surprise=1.94 (current export; earnings_date=7/15/2026 8:30:00 AM) | **GOOD** |
+| `B03_sales` | 201113.0 | **NEUTRAL** |
+| `B04_income` | 4963.0 | **GOOD** |
+| `B05_profit_margin` | 2.47 | **GOOD** |
+| `B06_profitable` | True | **GOOD** |
+| `B07_target_price` | 447.86 | **NEUTRAL** |
+| `B08_target_price_delta` | delta=0.0 (now=447.86 vs prior_export=447.86 on finviz_2026-10-28) | **NEUTRAL** |
+| `B09_analyst_recom` | 1.88 | **GOOD** |
+| `B10_insider_transactions` | 0.34 | **GOOD** |
+| `B11_insider_tx_delta` | delta=0.0 (now=0.34 vs prior=0.34 on finviz_2026-10-28) | **NEUTRAL** |
+| `B12_institutional_transactions` | 0.67 | **GOOD** |
+| `B13_short_float` | 2.47 | **NEUTRAL** |
+| `B14_earnings_date` | 7/15/2026 8:30:00 AM | **NEUTRAL** |
+| `B17_eps_surprise_pair` | last2 EPS surprises: current=19.94 (this export) | prior_export=19.94 (finviz_2026-10-28) | GOOD if latest beat (and better if both beat) | **GOOD** |
+| `B18_rev_surprise_pair` | last2 Revenue surprises: current=1.94 (this export) | prior_export=1.94 (finviz_2026-10-28) | GOOD if latest beat (and better if both beat) | **GOOD** |
 
 ### MCHP  ·  score **+15**  ·  Semiconductors
 price=79.62999725341797  pair=`2026-10-27→2026-10-28`
@@ -288,150 +324,6 @@ price=79.62999725341797  pair=`2026-10-27→2026-10-28`
 | `B17_eps_surprise_pair` | last2 EPS surprises: current=8.59 (this export) | prior_export=8.59 (finviz_2026-10-28) | GOOD if latest beat (and better if both beat) | **GOOD** |
 | `B18_rev_surprise_pair` | last2 Revenue surprises: current=1.8 (this export) | prior_export=1.8 (finviz_2026-10-28) | GOOD if latest beat (and better if both beat) | **GOOD** |
 
-### BLMN  ·  score **+15**  ·  Restaurants
-price=9.989999771118164  pair=`2026-10-27→2026-10-28`
-
-| Feature | Value (with dates) | Status |
-|---------|--------------------|:------:|
-| `A01_rsi_value` | RSI=59.03 on 2026-10-28; prev RSI=48.23 on 2026-10-27 | **NEUTRAL** |
-| `A02_rsi_cross_30` | above | RSI 48.23@2026-10-27 → 59.03@2026-10-28 vs 30 | rule: cross_up=GOOD | **NEUTRAL** |
-| `A03_rsi_cross_50` | cross_up | RSI 48.23@2026-10-27 → 59.03@2026-10-28 vs 50 | rule: cross_up=GOOD cross_down=BAD | **GOOD** |
-| `A04_rsi_cross_70` | below | RSI 48.23@2026-10-27 → 59.03@2026-10-28 vs 70 | rule: cross_down=BAD | **NEUTRAL** |
-| `A05_body_red_green_2day` | STRICT 2-day pair only: 2026-10-27 + 2026-10-28; ratio=GREEN_body_sum/RED_body_sum=34.499 (G=0.6900 R=0.0200); 2026-10-27:RED:O=9.1000,C=9.0800,body=-0.0200,vol=3057581.0; 2026-10-28:GREEN:O=9.3000,C=9.9900,body=+0.6900,vol=4480603.0 | **GOOD** |
-| `A06_volume_red_green_2day` | STRICT 2-day pair only: 2026-10-27 + 2026-10-28; ratio=GREEN_vol/RED_vol=1.465 (Gvol=4480603 Rvol=3057581); 2026-10-27:RED:O=9.1000,C=9.0800,body=-0.0200,vol=3057581.0; 2026-10-28:GREEN:O=9.3000,C=9.9900,body=+0.6900,vol=4480603.0 | **GOOD** |
-| `A07_rvol` | RVOL=1.591 on 2026-10-28: today_vol=4480603 / avg20=2816623 (avg window 2026-09-30→2026-10-27, excludes asof) | **GOOD** |
-| `A08_bollinger_position` | pos=0.536 on 2026-10-28 (price=9.9900, mid=9.1975, upper=10.6764, lower=7.7186; 20d BB) | **NEUTRAL** |
-| `A09_above_sma50` | above=True on 2026-10-28: price=9.9900 vs SMA50=9.2623 dist=+7.86% | **GOOD** |
-| `A10_sma20_50_80_stack` | bear_aligned_20<50<80 on 2026-10-28: SMA20=9.1975 SMA50=9.2623 SMA80=9.2643 | **BAD** |
-| `A11_three_section_lows` | window=2026-07-30→2026-10-28 (63 bars); S1[2026-07-30→2026-08-28] low=2026-07-30@8.5700; S2[2026-08-31→2026-09-29] low=2026-09-28@7.7150; S3[2026-09-30→2026-10-28] low=2026-09-30@7.6600 | lows=[8.569999694824219, 7.715000152587891, 7.659999847412109] span=11.88% rising_lows=False flatish(≤12%)=True | **GOOD** |
-| `A12_green_body_vs_wick_2day` | pair 2026-10-27+2026-10-28: GREEN body_frac=0.5476186151137673 wick_frac=0.45238138488623275 | **GOOD** |
-| `A13_red_body_vs_wick_2day` | pair 2026-10-27+2026-10-28: RED body_frac=0.053334554036458336 wick_frac=0.9466654459635416 | **GOOD** |
-| `A15_tape_recovery_setup` | body_rg_2d=34.49918939538432 need>1.4; red_wick_gt_green=True 5d trail=2026-10-22:GREEN:body=+0.4550:wick=0.0350; 2026-10-23:RED:body=-0.9400:wick=0.1899; 2026-10-26:RED:body=-0.1800:wick=0.6400; 2026-10-27:RED:body=-0.0200:wick=0.3550; 2026-10-28:GREEN:body=+0.6900:wick=0.5700 | **NEUTRAL** |
-| `B01_eps_surprise` | EPS surprise=35.18 (current export asof; earnings_date=8/5/2026 8:30:00 AM) | **GOOD** |
-| `B02_revenue_surprise` | Revenue surprise=1.37 (current export; earnings_date=8/5/2026 8:30:00 AM) | **GOOD** |
-| `B03_sales` | 3979.52 | **NEUTRAL** |
-| `B04_income` | 29.38 | **GOOD** |
-| `B05_profit_margin` | 0.74 | **GOOD** |
-| `B06_profitable` | True | **GOOD** |
-| `B07_target_price` | 11.73 | **NEUTRAL** |
-| `B08_target_price_delta` | delta=0.0 (now=11.73 vs prior_export=11.73 on finviz_2026-10-28) | **NEUTRAL** |
-| `B09_analyst_recom` | 2.7 | **NEUTRAL** |
-| `B10_insider_transactions` | 0.0 | **NEUTRAL** |
-| `B11_insider_tx_delta` | delta=0.0 (now=0.0 vs prior=0.0 on finviz_2026-10-28) | **NEUTRAL** |
-| `B12_institutional_transactions` | 6.71 | **GOOD** |
-| `B13_short_float` | 10.84 | **NEUTRAL** |
-| `B14_earnings_date` | 8/5/2026 8:30:00 AM | **NEUTRAL** |
-| `B17_eps_surprise_pair` | last2 EPS surprises: current=35.18 (this export) | prior_export=35.18 (finviz_2026-10-28) | GOOD if latest beat (and better if both beat) | **GOOD** |
-| `B18_rev_surprise_pair` | last2 Revenue surprises: current=1.37 (this export) | prior_export=1.37 (finviz_2026-10-28) | GOOD if latest beat (and better if both beat) | **GOOD** |
-
-### HSIC  ·  score **+15**  ·  Medical Distribution
-price=84.95999908447266  pair=`2026-10-27→2026-10-28`
-
-| Feature | Value (with dates) | Status |
-|---------|--------------------|:------:|
-| `A01_rsi_value` | RSI=47.13 on 2026-10-28; prev RSI=43.20 on 2026-10-27 | **NEUTRAL** |
-| `A02_rsi_cross_30` | above | RSI 43.20@2026-10-27 → 47.13@2026-10-28 vs 30 | rule: cross_up=GOOD | **NEUTRAL** |
-| `A03_rsi_cross_50` | below | RSI 43.20@2026-10-27 → 47.13@2026-10-28 vs 50 | rule: cross_up=GOOD cross_down=BAD | **NEUTRAL** |
-| `A04_rsi_cross_70` | below | RSI 43.20@2026-10-27 → 47.13@2026-10-28 vs 70 | rule: cross_down=BAD | **NEUTRAL** |
-| `A05_body_red_green_2day` | STRICT 2-day pair only: 2026-10-27 + 2026-10-28; ratio=GREEN_body_sum/RED_body_sum=2.324 (G=0.8600 R=0.3700); 2026-10-27:RED:O=84.6200,C=84.2500,body=-0.3700,vol=709800.0; 2026-10-28:GREEN:O=84.1000,C=84.9600,body=+0.8600,vol=934500.0 | **GOOD** |
-| `A06_volume_red_green_2day` | STRICT 2-day pair only: 2026-10-27 + 2026-10-28; ratio=GREEN_vol/RED_vol=1.317 (Gvol=934500 Rvol=709800); 2026-10-27:RED:O=84.6200,C=84.2500,body=-0.3700,vol=709800.0; 2026-10-28:GREEN:O=84.1000,C=84.9600,body=+0.8600,vol=934500.0 | **GOOD** |
-| `A07_rvol` | RVOL=0.716 on 2026-10-28: today_vol=934500 / avg20=1305877 (avg window 2026-09-17→2026-10-27, excludes asof) | **NEUTRAL** |
-| `A08_bollinger_position` | pos=0.020 on 2026-10-28 (price=84.9600, mid=84.9240, upper=86.7013, lower=83.1467; 20d BB) | **NEUTRAL** |
-| `A09_above_sma50` | above=False on 2026-10-28: price=84.9600 vs SMA50=87.3440 dist=-2.73% | **BAD** |
-| `A10_sma20_50_80_stack` | mixed_20=84.92_50=87.34_80=86.50 on 2026-10-28: SMA20=84.9240 SMA50=87.3440 SMA80=86.4965 | **NEUTRAL** |
-| `A11_three_section_lows` | window=2026-07-15→2026-10-28 (63 bars); S1[2026-07-15→2026-08-17] low=2026-07-23@83.1900; S2[2026-08-18→2026-09-16] low=2026-09-16@86.4400; S3[2026-09-17→2026-10-28] low=2026-10-08@79.3700 | lows=[83.19000244140625, 86.44000244140625, 79.37000274658203] span=8.91% rising_lows=False flatish(≤12%)=True | **GOOD** |
-| `A12_green_body_vs_wick_2day` | pair 2026-10-27+2026-10-28: GREEN body_frac=0.5375008940705243 wick_frac=0.46249910592947574 | **GOOD** |
-| `A13_red_body_vs_wick_2day` | pair 2026-10-27+2026-10-28: RED body_frac=0.20000164960017816 wick_frac=0.7999983503998218 | **GOOD** |
-| `A15_tape_recovery_setup` | body_rg_2d=2.3243087201270183 need>1.4; red_wick_gt_green=True 5d trail=2026-10-09:RED:body=-0.1000:wick=1.5150; 2026-10-12:GREEN:body=+0.0700:wick=0.9600; 2026-10-26:RED:body=-0.5000:wick=0.8100; 2026-10-27:RED:body=-0.3700:wick=1.4800; 2026-10-28:GREEN:body=+0.8600:wick=0.7400 | **GOOD** |
-| `B01_eps_surprise` | EPS surprise=2.45 (current export asof; earnings_date=8/4/2026 8:30:00 AM) | **GOOD** |
-| `B02_revenue_surprise` | Revenue surprise=2.49 (current export; earnings_date=8/4/2026 8:30:00 AM) | **GOOD** |
-| `B03_sales` | 13602.0 | **NEUTRAL** |
-| `B04_income` | 403.0 | **GOOD** |
-| `B05_profit_margin` | 2.96 | **GOOD** |
-| `B06_profitable` | True | **GOOD** |
-| `B07_target_price` | 99.64 | **NEUTRAL** |
-| `B08_target_price_delta` | delta=0.0 (now=99.64 vs prior_export=99.64 on finviz_2026-10-28) | **NEUTRAL** |
-| `B09_analyst_recom` | 2.17 | **GOOD** |
-| `B10_insider_transactions` | 0.06 | **GOOD** |
-| `B11_insider_tx_delta` | delta=0.0 (now=0.06 vs prior=0.06 on finviz_2026-10-28) | **NEUTRAL** |
-| `B12_institutional_transactions` | 1.49 | **GOOD** |
-| `B13_short_float` | 8.01 | **NEUTRAL** |
-| `B14_earnings_date` | 8/4/2026 8:30:00 AM | **NEUTRAL** |
-| `B17_eps_surprise_pair` | last2 EPS surprises: current=2.45 (this export) | prior_export=2.45 (finviz_2026-10-28) | GOOD if latest beat (and better if both beat) | **GOOD** |
-| `B18_rev_surprise_pair` | last2 Revenue surprises: current=2.49 (this export) | prior_export=2.49 (finviz_2026-10-28) | GOOD if latest beat (and better if both beat) | **GOOD** |
-
-### FIGS  ·  score **+15**  ·  Apparel Manufacturing
-price=20.65999984741211  pair=`2026-10-27→2026-10-28`
-
-| Feature | Value (with dates) | Status |
-|---------|--------------------|:------:|
-| `A01_rsi_value` | RSI=76.27 on 2026-10-28; prev RSI=75.58 on 2026-10-27 | **BAD** |
-| `A02_rsi_cross_30` | above | RSI 75.58@2026-10-27 → 76.27@2026-10-28 vs 30 | rule: cross_up=GOOD | **NEUTRAL** |
-| `A03_rsi_cross_50` | above | RSI 75.58@2026-10-27 → 76.27@2026-10-28 vs 50 | rule: cross_up=GOOD cross_down=BAD | **NEUTRAL** |
-| `A04_rsi_cross_70` | above | RSI 75.58@2026-10-27 → 76.27@2026-10-28 vs 70 | rule: cross_down=BAD | **NEUTRAL** |
-| `A05_body_red_green_2day` | STRICT 2-day pair only: 2026-10-27 + 2026-10-28; ratio=GREEN_body_sum/RED_body_sum=4.063 (G=0.6500 R=0.1600); 2026-10-27:RED:O=20.6400,C=20.4800,body=-0.1600,vol=2750826.0; 2026-10-28:GREEN:O=20.0100,C=20.6600,body=+0.6500,vol=3220200.0 | **GOOD** |
-| `A06_volume_red_green_2day` | STRICT 2-day pair only: 2026-10-27 + 2026-10-28; ratio=GREEN_vol/RED_vol=1.171 (Gvol=3220200 Rvol=2750826); 2026-10-27:RED:O=20.6400,C=20.4800,body=-0.1600,vol=2750826.0; 2026-10-28:GREEN:O=20.0100,C=20.6600,body=+0.6500,vol=3220200.0 | **GOOD** |
-| `A07_rvol` | RVOL=0.759 on 2026-10-28: today_vol=3220200 / avg20=4241594 (avg window 2026-09-30→2026-10-27, excludes asof) | **NEUTRAL** |
-| `A08_bollinger_position` | pos=0.528 on 2026-10-28 (price=20.6600, mid=17.7550, upper=23.2574, lower=12.2526; 20d BB) | **NEUTRAL** |
-| `A09_above_sma50` | above=True on 2026-10-28: price=20.6600 vs SMA50=15.4910 dist=+33.37% | **GOOD** |
-| `A10_sma20_50_80_stack` | bull_aligned_20>50>80 on 2026-10-28: SMA20=17.7550 SMA50=15.4910 SMA80=13.9351 | **GOOD** |
-| `A11_three_section_lows` | window=2026-07-30→2026-10-28 (63 bars); S1[2026-07-30→2026-08-28] low=2026-07-30@10.1050; S2[2026-08-31→2026-09-29] low=2026-09-24@11.8100; S3[2026-09-30→2026-10-28] low=2026-10-05@13.2050 | lows=[10.104999542236328, 11.8100004196167, 13.204999923706055] span=30.68% rising_lows=True flatish(≤12%)=False | **GOOD** |
-| `A12_green_body_vs_wick_2day` | pair 2026-10-27+2026-10-28: GREEN body_frac=0.8387095980291541 wick_frac=0.16129040197084585 | **GOOD** |
-| `A13_red_body_vs_wick_2day` | pair 2026-10-27+2026-10-28: RED body_frac=0.16161604485160247 wick_frac=0.8383839551483976 | **GOOD** |
-| `A15_tape_recovery_setup` | body_rg_2d=4.0625014901175405 need>1.4; red_wick_gt_green=True 5d trail=2026-10-22:GREEN:body=+0.2600:wick=0.5750; 2026-10-23:RED:body=-0.0300:wick=0.6050; 2026-10-26:GREEN:body=+0.6000:wick=0.0650; 2026-10-27:RED:body=-0.1600:wick=0.8300; 2026-10-28:GREEN:body=+0.6500:wick=0.1250 | **GOOD** |
-| `B01_eps_surprise` | EPS surprise=122.88 (current export asof; earnings_date=8/6/2026 4:30:00 PM) | **GOOD** |
-| `B02_revenue_surprise` | Revenue surprise=5.61 (current export; earnings_date=8/6/2026 4:30:00 PM) | **GOOD** |
-| `B03_sales` | 710.08 | **NEUTRAL** |
-| `B04_income` | 61.92 | **GOOD** |
-| `B05_profit_margin` | 8.72 | **GOOD** |
-| `B06_profitable` | True | **GOOD** |
-| `B07_target_price` | 18.62 | **NEUTRAL** |
-| `B08_target_price_delta` | delta=0.0 (now=18.62 vs prior_export=18.62 on finviz_2026-10-28) | **NEUTRAL** |
-| `B09_analyst_recom` | 2.0 | **GOOD** |
-| `B10_insider_transactions` | -0.83 | **BAD** |
-| `B11_insider_tx_delta` | delta=0.0 (now=-0.83 vs prior=-0.83 on finviz_2026-10-28) | **NEUTRAL** |
-| `B12_institutional_transactions` | 2.96 | **GOOD** |
-| `B13_short_float` | 11.08 | **NEUTRAL** |
-| `B14_earnings_date` | 8/6/2026 4:30:00 PM | **NEUTRAL** |
-| `B17_eps_surprise_pair` | last2 EPS surprises: current=122.88 (this export) | prior_export=122.88 (finviz_2026-10-28) | GOOD if latest beat (and better if both beat) | **GOOD** |
-| `B18_rev_surprise_pair` | last2 Revenue surprises: current=5.61 (this export) | prior_export=5.61 (finviz_2026-10-28) | GOOD if latest beat (and better if both beat) | **GOOD** |
-
-### ESI  ·  score **+15**  ·  Specialty Chemicals
-price=35.790000915527344  pair=`2026-10-27→2026-10-28`
-
-| Feature | Value (with dates) | Status |
-|---------|--------------------|:------:|
-| `A01_rsi_value` | RSI=50.16 on 2026-10-28; prev RSI=46.72 on 2026-10-27 | **NEUTRAL** |
-| `A02_rsi_cross_30` | above | RSI 46.72@2026-10-27 → 50.16@2026-10-28 vs 30 | rule: cross_up=GOOD | **NEUTRAL** |
-| `A03_rsi_cross_50` | cross_up | RSI 46.72@2026-10-27 → 50.16@2026-10-28 vs 50 | rule: cross_up=GOOD cross_down=BAD | **GOOD** |
-| `A04_rsi_cross_70` | below | RSI 46.72@2026-10-27 → 50.16@2026-10-28 vs 70 | rule: cross_down=BAD | **NEUTRAL** |
-| `A05_body_red_green_2day` | STRICT 2-day pair only: 2026-10-27 + 2026-10-28; ratio=GREEN_body_sum/RED_body_sum=99.000 (G=1.2500 R=0.0000); 2026-10-27:GREEN:O=34.0900,C=35.0300,body=+0.9400,vol=3733000.0; 2026-10-28:GREEN:O=35.4800,C=35.7900,body=+0.3100,vol=3106800.0 | **GOOD** |
-| `A06_volume_red_green_2day` | STRICT 2-day pair only: 2026-10-27 + 2026-10-28; ratio=GREEN_vol/RED_vol=99.000 (Gvol=6839800 Rvol=0); 2026-10-27:GREEN:O=34.0900,C=35.0300,body=+0.9400,vol=3733000.0; 2026-10-28:GREEN:O=35.4800,C=35.7900,body=+0.3100,vol=3106800.0 | **GOOD** |
-| `A07_rvol` | RVOL=0.788 on 2026-10-28: today_vol=3106800 / avg20=3942293 (avg window 2026-09-17→2026-10-27, excludes asof) | **NEUTRAL** |
-| `A08_bollinger_position` | pos=0.015 on 2026-10-28 (price=35.7900, mid=35.7470, upper=38.5992, lower=32.8948; 20d BB) | **NEUTRAL** |
-| `A09_above_sma50` | above=True on 2026-10-28: price=35.7900 vs SMA50=35.7788 dist=+0.03% | **GOOD** |
-| `A10_sma20_50_80_stack` | bear_aligned_20<50<80 on 2026-10-28: SMA20=35.7470 SMA50=35.7788 SMA80=37.7454 | **BAD** |
-| `A11_three_section_lows` | window=2026-07-15→2026-10-28 (63 bars); S1[2026-07-15→2026-08-17] low=2026-07-29@34.1000; S2[2026-08-18→2026-09-16] low=2026-09-15@31.4400; S3[2026-09-17→2026-10-28] low=2026-09-17@32.5200 | lows=[34.099998474121094, 31.440000534057617, 32.52000045776367] span=8.46% rising_lows=False flatish(≤12%)=True | **GOOD** |
-| `A12_green_body_vs_wick_2day` | pair 2026-10-27+2026-10-28: GREEN body_frac=0.6063894765290765 wick_frac=0.3936105234709235 | **GOOD** |
-| `A13_red_body_vs_wick_2day` | pair 2026-10-27+2026-10-28: RED body_frac=nan wick_frac=nan | **NEUTRAL** |
-| `A15_tape_recovery_setup` | body_rg_2d=99.0 need>1.4; red_wick_gt_green=True 5d trail=2026-10-09:RED:body=-0.6300:wick=0.8300; 2026-10-12:GREEN:body=+0.5400:wick=0.4300; 2026-10-26:GREEN:body=+0.2100:wick=1.0700; 2026-10-27:GREEN:body=+0.9400:wick=0.1800; 2026-10-28:GREEN:body=+0.3100:wick=0.5200 | **GOOD** |
-| `B01_eps_surprise` | EPS surprise=8.7 (current export asof; earnings_date=7/27/2026 4:30:00 PM) | **GOOD** |
-| `B02_revenue_surprise` | Revenue surprise=11.99 (current export; earnings_date=7/27/2026 4:30:00 PM) | **GOOD** |
-| `B03_sales` | 3150.2 | **NEUTRAL** |
-| `B04_income` | 178.6 | **GOOD** |
-| `B05_profit_margin` | 5.67 | **GOOD** |
-| `B06_profitable` | True | **GOOD** |
-| `B07_target_price` | 47.0 | **NEUTRAL** |
-| `B08_target_price_delta` | delta=0.0 (now=47.0 vs prior_export=47.0 on finviz_2026-10-28) | **NEUTRAL** |
-| `B09_analyst_recom` | 1.15 | **GOOD** |
-| `B10_insider_transactions` | 0.0 | **NEUTRAL** |
-| `B11_insider_tx_delta` | delta=0.0 (now=0.0 vs prior=0.0 on finviz_2026-10-28) | **NEUTRAL** |
-| `B12_institutional_transactions` | 0.62 | **GOOD** |
-| `B13_short_float` | 3.01 | **NEUTRAL** |
-| `B14_earnings_date` | 7/27/2026 4:30:00 PM | **NEUTRAL** |
-| `B17_eps_surprise_pair` | last2 EPS surprises: current=8.7 (this export) | prior_export=8.7 (finviz_2026-10-28) | GOOD if latest beat (and better if both beat) | **GOOD** |
-| `B18_rev_surprise_pair` | last2 Revenue surprises: current=11.99 (this export) | prior_export=11.99 (finviz_2026-10-28) | GOOD if latest beat (and better if both beat) | **GOOD** |
-
 ### AMD  ·  score **+15**  ·  Semiconductors
 price=578.4400024414062  pair=`2026-10-27→2026-10-28`
 
@@ -468,41 +360,77 @@ price=578.4400024414062  pair=`2026-10-27→2026-10-28`
 | `B17_eps_surprise_pair` | last2 EPS surprises: current=2.71 (this export) | prior_export=2.71 (finviz_2026-10-28) | GOOD if latest beat (and better if both beat) | **GOOD** |
 | `B18_rev_surprise_pair` | last2 Revenue surprises: current=2.0 (this export) | prior_export=2.0 (finviz_2026-10-28) | GOOD if latest beat (and better if both beat) | **GOOD** |
 
-### AUPH  ·  score **+15**  ·  Biotechnology
-price=17.360000610351562  pair=`2026-10-27→2026-10-28`
+### BLMN  ·  score **+15**  ·  Restaurants
+price=9.989999771118164  pair=`2026-10-27→2026-10-28`
 
 | Feature | Value (with dates) | Status |
 |---------|--------------------|:------:|
-| `A01_rsi_value` | RSI=66.43 on 2026-10-28; prev RSI=65.16 on 2026-10-27 | **NEUTRAL** |
-| `A02_rsi_cross_30` | above | RSI 65.16@2026-10-27 → 66.43@2026-10-28 vs 30 | rule: cross_up=GOOD | **NEUTRAL** |
-| `A03_rsi_cross_50` | above | RSI 65.16@2026-10-27 → 66.43@2026-10-28 vs 50 | rule: cross_up=GOOD cross_down=BAD | **NEUTRAL** |
-| `A04_rsi_cross_70` | below | RSI 65.16@2026-10-27 → 66.43@2026-10-28 vs 70 | rule: cross_down=BAD | **NEUTRAL** |
-| `A05_body_red_green_2day` | STRICT 2-day pair only: 2026-10-27 + 2026-10-28; ratio=GREEN_body_sum/RED_body_sum=99.000 (G=0.7900 R=0.0000); 2026-10-27:GREEN:O=16.9800,C=17.2500,body=+0.2700,vol=494500.0; 2026-10-28:GREEN:O=16.8400,C=17.3600,body=+0.5200,vol=625900.0 | **GOOD** |
-| `A06_volume_red_green_2day` | STRICT 2-day pair only: 2026-10-27 + 2026-10-28; ratio=GREEN_vol/RED_vol=99.000 (Gvol=1120400 Rvol=0); 2026-10-27:GREEN:O=16.9800,C=17.2500,body=+0.2700,vol=494500.0; 2026-10-28:GREEN:O=16.8400,C=17.3600,body=+0.5200,vol=625900.0 | **GOOD** |
-| `A07_rvol` | RVOL=0.794 on 2026-10-28: today_vol=625900 / avg20=788134 (avg window 2026-09-17→2026-10-27, excludes asof) | **NEUTRAL** |
-| `A08_bollinger_position` | pos=0.963 on 2026-10-28 (price=17.3600, mid=16.4510, upper=17.3945, lower=15.5075; 20d BB) | **BAD** |
-| `A09_above_sma50` | above=True on 2026-10-28: price=17.3600 vs SMA50=16.2573 dist=+6.78% | **GOOD** |
-| `A10_sma20_50_80_stack` | bull_aligned_20>50>80 on 2026-10-28: SMA20=16.4510 SMA50=16.2573 SMA80=16.1381 | **GOOD** |
-| `A11_three_section_lows` | window=2026-07-17→2026-10-28 (63 bars); S1[2026-07-17→2026-08-17] low=2026-07-31@14.3630; S2[2026-08-18→2026-09-16] low=2026-08-18@15.1500; S3[2026-09-17→2026-10-28] low=2026-10-06@15.4700 | lows=[14.36299991607666, 15.149999618530273, 15.470000267028809] span=7.71% rising_lows=True flatish(≤12%)=True | **GOOD** |
-| `A12_green_body_vs_wick_2day` | pair 2026-10-27+2026-10-28: GREEN body_frac=0.9169654697996987 wick_frac=0.08303453020030122 | **GOOD** |
-| `A13_red_body_vs_wick_2day` | pair 2026-10-27+2026-10-28: RED body_frac=nan wick_frac=nan | **NEUTRAL** |
-| `A15_tape_recovery_setup` | body_rg_2d=99.0 need>1.4; red_wick_gt_green=False 5d trail=2026-10-09:GREEN:body=+0.4900:wick=0.3600; 2026-10-12:RED:body=-0.0600:wick=0.1578; 2026-10-26:GREEN:body=+0.0600:wick=0.1850; 2026-10-27:GREEN:body=+0.2700:wick=0.0400; 2026-10-28:GREEN:body=+0.5200:wick=0.0200 | **NEUTRAL** |
-| `B01_eps_surprise` | EPS surprise=16.67 (current export asof; earnings_date=8/6/2026 8:30:00 AM) | **GOOD** |
-| `B02_revenue_surprise` | Revenue surprise=3.45 (current export; earnings_date=8/6/2026 8:30:00 AM) | **GOOD** |
-| `B03_sales` | 311.51 | **NEUTRAL** |
-| `B04_income` | 314.11 | **GOOD** |
-| `B05_profit_margin` | 100.84 | **GOOD** |
+| `A01_rsi_value` | RSI=59.03 on 2026-10-28; prev RSI=48.23 on 2026-10-27 | **NEUTRAL** |
+| `A02_rsi_cross_30` | above | RSI 48.23@2026-10-27 → 59.03@2026-10-28 vs 30 | rule: cross_up=GOOD | **NEUTRAL** |
+| `A03_rsi_cross_50` | cross_up | RSI 48.23@2026-10-27 → 59.03@2026-10-28 vs 50 | rule: cross_up=GOOD cross_down=BAD | **GOOD** |
+| `A04_rsi_cross_70` | below | RSI 48.23@2026-10-27 → 59.03@2026-10-28 vs 70 | rule: cross_down=BAD | **NEUTRAL** |
+| `A05_body_red_green_2day` | STRICT 2-day pair only: 2026-10-27 + 2026-10-28; ratio=GREEN_body_sum/RED_body_sum=34.499 (G=0.6900 R=0.0200); 2026-10-27:RED:O=9.1000,C=9.0800,body=-0.0200,vol=3057581.0; 2026-10-28:GREEN:O=9.3000,C=9.9900,body=+0.6900,vol=4480603.0 | **GOOD** |
+| `A06_volume_red_green_2day` | STRICT 2-day pair only: 2026-10-27 + 2026-10-28; ratio=GREEN_vol/RED_vol=1.465 (Gvol=4480603 Rvol=3057581); 2026-10-27:RED:O=9.1000,C=9.0800,body=-0.0200,vol=3057581.0; 2026-10-28:GREEN:O=9.3000,C=9.9900,body=+0.6900,vol=4480603.0 | **GOOD** |
+| `A07_rvol` | RVOL=1.591 on 2026-10-28: today_vol=4480603 / avg20=2816623 (avg window 2026-09-30→2026-10-27, excludes asof) | **GOOD** |
+| `A08_bollinger_position` | pos=0.536 on 2026-10-28 (price=9.9900, mid=9.1975, upper=10.6764, lower=7.7186; 20d BB) | **NEUTRAL** |
+| `A09_above_sma50` | above=True on 2026-10-28: price=9.9900 vs SMA50=9.2623 dist=+7.86% | **GOOD** |
+| `A10_sma20_50_80_stack` | bear_aligned_20<50<80 on 2026-10-28: SMA20=9.1975 SMA50=9.2623 SMA80=9.2643 | **BAD** |
+| `A11_three_section_lows` | window=2026-07-30→2026-10-28 (63 bars); S1[2026-07-30→2026-08-28] low=2026-07-30@8.5700; S2[2026-08-31→2026-09-29] low=2026-09-28@7.7150; S3[2026-09-30→2026-10-28] low=2026-09-30@7.6600 | lows=[8.569999694824219, 7.715000152587891, 7.659999847412109] span=11.88% rising_lows=False flatish(≤12%)=True | **GOOD** |
+| `A12_green_body_vs_wick_2day` | pair 2026-10-27+2026-10-28: GREEN body_frac=0.5476186151137673 wick_frac=0.45238138488623275 | **GOOD** |
+| `A13_red_body_vs_wick_2day` | pair 2026-10-27+2026-10-28: RED body_frac=0.053334554036458336 wick_frac=0.9466654459635416 | **GOOD** |
+| `A15_tape_recovery_setup` | body_rg_2d=34.49918939538432 need>1.4; red_wick_gt_green=True 5d trail=2026-10-22:GREEN:body=+0.4550:wick=0.0350; 2026-10-23:RED:body=-0.9400:wick=0.1899; 2026-10-26:RED:body=-0.1800:wick=0.6400; 2026-10-27:RED:body=-0.0200:wick=0.3550; 2026-10-28:GREEN:body=+0.6900:wick=0.5700 | **NEUTRAL** |
+| `B01_eps_surprise` | EPS surprise=35.18 (current export asof; earnings_date=8/5/2026 8:30:00 AM) | **GOOD** |
+| `B02_revenue_surprise` | Revenue surprise=1.37 (current export; earnings_date=8/5/2026 8:30:00 AM) | **GOOD** |
+| `B03_sales` | 3979.52 | **NEUTRAL** |
+| `B04_income` | 29.38 | **GOOD** |
+| `B05_profit_margin` | 0.74 | **GOOD** |
 | `B06_profitable` | True | **GOOD** |
-| `B07_target_price` | 18.0 | **NEUTRAL** |
-| `B08_target_price_delta` | delta=0.0 (now=18.0 vs prior_export=18.0 on finviz_2026-10-28) | **NEUTRAL** |
-| `B09_analyst_recom` | 1.67 | **GOOD** |
-| `B10_insider_transactions` | 5.53 | **GOOD** |
-| `B11_insider_tx_delta` | delta=0.0 (now=5.53 vs prior=5.53 on finviz_2026-10-28) | **NEUTRAL** |
-| `B12_institutional_transactions` | 3.37 | **GOOD** |
-| `B13_short_float` | 7.26 | **NEUTRAL** |
-| `B14_earnings_date` | 8/6/2026 8:30:00 AM | **NEUTRAL** |
-| `B17_eps_surprise_pair` | last2 EPS surprises: current=16.67 (this export) | prior_export=16.67 (finviz_2026-10-28) | GOOD if latest beat (and better if both beat) | **GOOD** |
-| `B18_rev_surprise_pair` | last2 Revenue surprises: current=3.45 (this export) | prior_export=3.45 (finviz_2026-10-28) | GOOD if latest beat (and better if both beat) | **GOOD** |
+| `B07_target_price` | 11.73 | **NEUTRAL** |
+| `B08_target_price_delta` | delta=0.0 (now=11.73 vs prior_export=11.73 on finviz_2026-10-28) | **NEUTRAL** |
+| `B09_analyst_recom` | 2.7 | **NEUTRAL** |
+| `B10_insider_transactions` | 0.0 | **NEUTRAL** |
+| `B11_insider_tx_delta` | delta=0.0 (now=0.0 vs prior=0.0 on finviz_2026-10-28) | **NEUTRAL** |
+| `B12_institutional_transactions` | 6.71 | **GOOD** |
+| `B13_short_float` | 10.84 | **NEUTRAL** |
+| `B14_earnings_date` | 8/5/2026 8:30:00 AM | **NEUTRAL** |
+| `B17_eps_surprise_pair` | last2 EPS surprises: current=35.18 (this export) | prior_export=35.18 (finviz_2026-10-28) | GOOD if latest beat (and better if both beat) | **GOOD** |
+| `B18_rev_surprise_pair` | last2 Revenue surprises: current=1.37 (this export) | prior_export=1.37 (finviz_2026-10-28) | GOOD if latest beat (and better if both beat) | **GOOD** |
+
+### YPF  ·  score **+15**  ·  Oil & Gas Integrated
+price=51.970001220703125  pair=`2026-10-09→2026-10-12`
+
+| Feature | Value (with dates) | Status |
+|---------|--------------------|:------:|
+| `A01_rsi_value` | RSI=51.48 on 2026-10-12; prev RSI=42.64 on 2026-10-09 | **NEUTRAL** |
+| `A02_rsi_cross_30` | above | RSI 42.64@2026-10-09 → 51.48@2026-10-12 vs 30 | rule: cross_up=GOOD | **NEUTRAL** |
+| `A03_rsi_cross_50` | cross_up | RSI 42.64@2026-10-09 → 51.48@2026-10-12 vs 50 | rule: cross_up=GOOD cross_down=BAD | **GOOD** |
+| `A04_rsi_cross_70` | below | RSI 42.64@2026-10-09 → 51.48@2026-10-12 vs 70 | rule: cross_down=BAD | **NEUTRAL** |
+| `A05_body_red_green_2day` | STRICT 2-day pair only: 2026-10-09 + 2026-10-12; ratio=GREEN_body_sum/RED_body_sum=99.000 (G=1.6400 R=0.0000); 2026-10-09:GREEN:O=49.6800,C=50.0400,body=+0.3600,vol=1196835.0; 2026-10-12:GREEN:O=50.6900,C=51.9700,body=+1.2800,vol=717503.0 | **GOOD** |
+| `A06_volume_red_green_2day` | STRICT 2-day pair only: 2026-10-09 + 2026-10-12; ratio=GREEN_vol/RED_vol=99.000 (Gvol=1914338 Rvol=0); 2026-10-09:GREEN:O=49.6800,C=50.0400,body=+0.3600,vol=1196835.0; 2026-10-12:GREEN:O=50.6900,C=51.9700,body=+1.2800,vol=717503.0 | **GOOD** |
+| `A07_rvol` | RVOL=0.622 on 2026-10-12: today_vol=717503 / avg20=1153282 (avg window 2026-09-14→2026-10-09, excludes asof) | **NEUTRAL** |
+| `A08_bollinger_position` | pos=-0.033 on 2026-10-12 (price=51.9700, mid=52.1205, upper=56.6668, lower=47.5742; 20d BB) | **NEUTRAL** |
+| `A09_above_sma50` | above=True on 2026-10-12: price=51.9700 vs SMA50=51.7088 dist=+0.51% | **GOOD** |
+| `A10_sma20_50_80_stack` | bull_aligned_20>50>80 on 2026-10-12: SMA20=52.1205 SMA50=51.7088 SMA80=50.5664 | **GOOD** |
+| `A11_three_section_lows` | window=2026-07-14→2026-10-12 (63 bars); S1[2026-07-14→2026-08-12] low=2026-08-12@47.8600; S2[2026-08-13→2026-09-11] low=2026-08-13@48.1100; S3[2026-09-14→2026-10-12] low=2026-10-02@48.3600 | lows=[47.86000061035156, 48.11000061035156, 48.36000061035156] span=1.04% rising_lows=True flatish(≤12%)=True | **GOOD** |
+| `A12_green_body_vs_wick_2day` | pair 2026-10-09+2026-10-12: GREEN body_frac=0.37251635024746754 wick_frac=0.6274836497525325 | **BAD** |
+| `A13_red_body_vs_wick_2day` | pair 2026-10-09+2026-10-12: RED body_frac=nan wick_frac=nan | **NEUTRAL** |
+| `A15_tape_recovery_setup` | body_rg_2d=99.0 need>1.4; red_wick_gt_green=False 5d trail=2026-10-06:GREEN:body=+0.1800:wick=1.0800; 2026-10-07:RED:body=-1.8300:wick=0.3050; 2026-10-08:RED:body=-0.2900:wick=0.9400; 2026-10-09:GREEN:body=+0.3600:wick=1.6550; 2026-10-12:GREEN:body=+1.2800:wick=0.9800 | **NEUTRAL** |
+| `B01_eps_surprise` | EPS surprise=27.28 (current export asof; earnings_date=8/10/2026 8:30:00 AM) | **GOOD** |
+| `B02_revenue_surprise` | Revenue surprise=6.07 (current export; earnings_date=8/10/2026 8:30:00 AM) | **GOOD** |
+| `B03_sales` | 20762.28 | **NEUTRAL** |
+| `B04_income` | 828.88 | **GOOD** |
+| `B05_profit_margin` | 3.99 | **GOOD** |
+| `B06_profitable` | True | **GOOD** |
+| `B07_target_price` | 61.06 | **NEUTRAL** |
+| `B08_target_price_delta` | delta=0.0 (now=61.06 vs prior_export=61.06 on finviz_2026-10-28) | **NEUTRAL** |
+| `B09_analyst_recom` | 1.55 | **GOOD** |
+| `B10_insider_transactions` | 3.82 | **GOOD** |
+| `B11_insider_tx_delta` | delta=0.0 (now=3.82 vs prior=3.82 on finviz_2026-10-28) | **NEUTRAL** |
+| `B12_institutional_transactions` | 56.14 | **GOOD** |
+| `B13_short_float` | 1.46 | **NEUTRAL** |
+| `B14_earnings_date` | 8/10/2026 8:30:00 AM | **NEUTRAL** |
+| `B17_eps_surprise_pair` | last2 EPS surprises: current=27.28 (this export) | prior_export=27.28 (finviz_2026-10-28) | GOOD if latest beat (and better if both beat) | **GOOD** |
+| `B18_rev_surprise_pair` | last2 Revenue surprises: current=6.07 (this export) | prior_export=6.07 (finviz_2026-10-28) | GOOD if latest beat (and better if both beat) | **GOOD** |
 
 ### SMA  ·  score **+15**  ·  REIT - Industrial
 price=35.220001220703125  pair=`2026-10-27→2026-10-28`
@@ -540,6 +468,42 @@ price=35.220001220703125  pair=`2026-10-27→2026-10-28`
 | `B17_eps_surprise_pair` | last2 EPS surprises: current=92.68 (this export) | prior_export=92.68 (finviz_2026-10-28) | GOOD if latest beat (and better if both beat) | **GOOD** |
 | `B18_rev_surprise_pair` | last2 Revenue surprises: current=0.4 (this export) | prior_export=0.4 (finviz_2026-10-28) | GOOD if latest beat (and better if both beat) | **GOOD** |
 
+### OKTA  ·  score **+14**  ·  Software - Infrastructure
+price=222.66000366210938  pair=`2026-10-27→2026-10-28`
+
+| Feature | Value (with dates) | Status |
+|---------|--------------------|:------:|
+| `A01_rsi_value` | RSI=59.59 on 2026-10-28; prev RSI=61.83 on 2026-10-27 | **NEUTRAL** |
+| `A02_rsi_cross_30` | above | RSI 61.83@2026-10-27 → 59.59@2026-10-28 vs 30 | rule: cross_up=GOOD | **NEUTRAL** |
+| `A03_rsi_cross_50` | above | RSI 61.83@2026-10-27 → 59.59@2026-10-28 vs 50 | rule: cross_up=GOOD cross_down=BAD | **NEUTRAL** |
+| `A04_rsi_cross_70` | below | RSI 61.83@2026-10-27 → 59.59@2026-10-28 vs 70 | rule: cross_down=BAD | **NEUTRAL** |
+| `A05_body_red_green_2day` | STRICT 2-day pair only: 2026-10-27 + 2026-10-28; ratio=GREEN_body_sum/RED_body_sum=2.430 (G=7.0700 R=2.9100); 2026-10-27:GREEN:O=219.0000,C=226.0700,body=+7.0700,vol=2504577.0; 2026-10-28:RED:O=225.5700,C=222.6600,body=-2.9100,vol=2280084.0 | **GOOD** |
+| `A06_volume_red_green_2day` | STRICT 2-day pair only: 2026-10-27 + 2026-10-28; ratio=GREEN_vol/RED_vol=1.098 (Gvol=2504577 Rvol=2280084); 2026-10-27:GREEN:O=219.0000,C=226.0700,body=+7.0700,vol=2504577.0; 2026-10-28:RED:O=225.5700,C=222.6600,body=-2.9100,vol=2280084.0 | **GOOD** |
+| `A07_rvol` | RVOL=0.727 on 2026-10-28: today_vol=2280084 / avg20=3136952 (avg window 2026-09-30→2026-10-27, excludes asof) | **NEUTRAL** |
+| `A08_bollinger_position` | pos=0.372 on 2026-10-28 (price=222.6600, mid=213.4218, upper=238.2495, lower=188.5940; 20d BB) | **NEUTRAL** |
+| `A09_above_sma50` | above=True on 2026-10-28: price=222.6600 vs SMA50=189.6878 dist=+17.38% | **GOOD** |
+| `A10_sma20_50_80_stack` | bull_aligned_20>50>80 on 2026-10-28: SMA20=213.4218 SMA50=189.6878 SMA80=172.7655 | **GOOD** |
+| `A11_three_section_lows` | window=2026-07-31→2026-10-28 (63 bars); S1[2026-07-31→2026-08-28] low=2026-08-26@127.6000; S2[2026-08-31→2026-09-29] low=2026-09-02@157.7300; S3[2026-09-30→2026-10-28] low=2026-10-20@183.6000 | lows=[127.5999984741211, 157.72999572753906, 183.60000610351562] span=43.89% rising_lows=True flatish(≤12%)=False | **GOOD** |
+| `A12_green_body_vs_wick_2day` | pair 2026-10-27+2026-10-28: GREEN body_frac=0.7855563693576388 wick_frac=0.2144436306423611 | **GOOD** |
+| `A13_red_body_vs_wick_2day` | pair 2026-10-27+2026-10-28: RED body_frac=0.39060467840808777 wick_frac=0.6093953215919122 | **GOOD** |
+| `A15_tape_recovery_setup` | body_rg_2d=2.4295527240312516 need>1.4; red_wick_gt_green=True 5d trail=2026-10-22:RED:body=-5.9250:wick=5.3950; 2026-10-23:GREEN:body=+11.5700:wick=4.2600; 2026-10-26:GREEN:body=+5.0100:wick=5.9580; 2026-10-27:GREEN:body=+7.0700:wick=1.9300; 2026-10-28:RED:body=-2.9100:wick=4.5400 | **GOOD** |
+| `B01_eps_surprise` | EPS surprise=8.77 (current export asof; earnings_date=8/26/2026 4:30:00 PM) | **GOOD** |
+| `B02_revenue_surprise` | Revenue surprise=1.51 (current export; earnings_date=8/26/2026 4:30:00 PM) | **GOOD** |
+| `B03_sales` | 3073.0 | **NEUTRAL** |
+| `B04_income` | 296.0 | **GOOD** |
+| `B05_profit_margin` | 9.63 | **GOOD** |
+| `B06_profitable` | True | **GOOD** |
+| `B07_target_price` | 216.45 | **NEUTRAL** |
+| `B08_target_price_delta` | delta=0.0 (now=216.45 vs prior_export=216.45 on finviz_2026-10-28) | **NEUTRAL** |
+| `B09_analyst_recom` | 1.63 | **GOOD** |
+| `B10_insider_transactions` | -3.55 | **BAD** |
+| `B11_insider_tx_delta` | delta=0.0 (now=-3.55 vs prior=-3.55 on finviz_2026-10-28) | **NEUTRAL** |
+| `B12_institutional_transactions` | -1.81 | **BAD** |
+| `B13_short_float` | 4.94 | **NEUTRAL** |
+| `B14_earnings_date` | 8/26/2026 4:30:00 PM | **NEUTRAL** |
+| `B17_eps_surprise_pair` | last2 EPS surprises: current=8.77 (this export) | prior_export=8.77 (finviz_2026-10-28) | GOOD if latest beat (and better if both beat) | **GOOD** |
+| `B18_rev_surprise_pair` | last2 Revenue surprises: current=1.51 (this export) | prior_export=1.51 (finviz_2026-10-28) | GOOD if latest beat (and better if both beat) | **GOOD** |
+
 ### V  ·  score **+14**  ·  Credit Services
 price=400.6000061035156  pair=`2026-10-27→2026-10-28`
 
@@ -575,6 +539,42 @@ price=400.6000061035156  pair=`2026-10-27→2026-10-28`
 | `B14_earnings_date` | 7/28/2026 4:30:00 PM | **NEUTRAL** |
 | `B17_eps_surprise_pair` | last2 EPS surprises: current=2.68 (this export) | prior_export=2.68 (finviz_2026-10-28) | GOOD if latest beat (and better if both beat) | **GOOD** |
 | `B18_rev_surprise_pair` | last2 Revenue surprises: current=2.04 (this export) | prior_export=2.04 (finviz_2026-10-28) | GOOD if latest beat (and better if both beat) | **GOOD** |
+
+### ABBV  ·  score **+14**  ·  Drug Manufacturers - General
+price=285.989990234375  pair=`2026-10-27→2026-10-28`
+
+| Feature | Value (with dates) | Status |
+|---------|--------------------|:------:|
+| `A01_rsi_value` | RSI=64.73 on 2026-10-28; prev RSI=65.52 on 2026-10-27 | **NEUTRAL** |
+| `A02_rsi_cross_30` | above | RSI 65.52@2026-10-27 → 64.73@2026-10-28 vs 30 | rule: cross_up=GOOD | **NEUTRAL** |
+| `A03_rsi_cross_50` | above | RSI 65.52@2026-10-27 → 64.73@2026-10-28 vs 50 | rule: cross_up=GOOD cross_down=BAD | **NEUTRAL** |
+| `A04_rsi_cross_70` | below | RSI 65.52@2026-10-27 → 64.73@2026-10-28 vs 70 | rule: cross_down=BAD | **NEUTRAL** |
+| `A05_body_red_green_2day` | STRICT 2-day pair only: 2026-10-27 + 2026-10-28; ratio=GREEN_body_sum/RED_body_sum=99.000 (G=5.5700 R=0.0000); 2026-10-27:GREEN:O=283.8800,C=286.3900,body=+2.5100,vol=3267429.0; 2026-10-28:GREEN:O=282.9300,C=285.9900,body=+3.0600,vol=3104250.0 | **GOOD** |
+| `A06_volume_red_green_2day` | STRICT 2-day pair only: 2026-10-27 + 2026-10-28; ratio=GREEN_vol/RED_vol=99.000 (Gvol=6371679 Rvol=0); 2026-10-27:GREEN:O=283.8800,C=286.3900,body=+2.5100,vol=3267429.0; 2026-10-28:GREEN:O=282.9300,C=285.9900,body=+3.0600,vol=3104250.0 | **GOOD** |
+| `A07_rvol` | RVOL=0.609 on 2026-10-28: today_vol=3104250 / avg20=5095477 (avg window 2026-09-30→2026-10-27, excludes asof) | **NEUTRAL** |
+| `A08_bollinger_position` | pos=0.415 on 2026-10-28 (price=285.9900, mid=278.4870, upper=296.5881, lower=260.3859; 20d BB) | **NEUTRAL** |
+| `A09_above_sma50` | above=True on 2026-10-28: price=285.9900 vs SMA50=268.1328 dist=+6.66% | **GOOD** |
+| `A10_sma20_50_80_stack` | bull_aligned_20>50>80 on 2026-10-28: SMA20=278.4870 SMA50=268.1328 SMA80=261.8316 | **GOOD** |
+| `A11_three_section_lows` | window=2026-07-31→2026-10-28 (63 bars); S1[2026-07-31→2026-08-28] low=2026-08-06@241.2000; S2[2026-08-31→2026-09-29] low=2026-09-09@246.7700; S3[2026-09-30→2026-10-28] low=2026-10-02@257.8700 | lows=[241.1999969482422, 246.77000427246094, 257.8699951171875] span=6.91% rising_lows=True flatish(≤12%)=True | **GOOD** |
+| `A12_green_body_vs_wick_2day` | pair 2026-10-27+2026-10-28: GREEN body_frac=0.5036641255892219 wick_frac=0.4963358744107781 | **GOOD** |
+| `A13_red_body_vs_wick_2day` | pair 2026-10-27+2026-10-28: RED body_frac=nan wick_frac=nan | **NEUTRAL** |
+| `A15_tape_recovery_setup` | body_rg_2d=99.0 need>1.4; red_wick_gt_green=False 5d trail=2026-10-22:GREEN:body=+0.6200:wick=7.1100; 2026-10-23:GREEN:body=+1.0600:wick=3.4050; 2026-10-26:RED:body=-0.3100:wick=4.1000; 2026-10-27:GREEN:body=+2.5100:wick=1.6500; 2026-10-28:GREEN:body=+3.0600:wick=4.5150 | **NEUTRAL** |
+| `B01_eps_surprise` | EPS surprise=1.24 (current export asof; earnings_date=7/31/2026 8:30:00 AM) | **GOOD** |
+| `B02_revenue_surprise` | Revenue surprise=1.11 (current export; earnings_date=7/31/2026 8:30:00 AM) | **GOOD** |
+| `B03_sales` | 64386.0 | **NEUTRAL** |
+| `B04_income` | 6268.0 | **GOOD** |
+| `B05_profit_margin` | 9.74 | **GOOD** |
+| `B06_profitable` | True | **GOOD** |
+| `B07_target_price` | 279.73 | **NEUTRAL** |
+| `B08_target_price_delta` | delta=0.0 (now=279.73 vs prior_export=279.73 on finviz_2026-10-28) | **NEUTRAL** |
+| `B09_analyst_recom` | 1.62 | **GOOD** |
+| `B10_insider_transactions` | -1.82 | **BAD** |
+| `B11_insider_tx_delta` | delta=0.0 (now=-1.82 vs prior=-1.82 on finviz_2026-10-28) | **NEUTRAL** |
+| `B12_institutional_transactions` | 0.56 | **GOOD** |
+| `B13_short_float` | 1.1 | **NEUTRAL** |
+| `B14_earnings_date` | 7/31/2026 8:30:00 AM | **NEUTRAL** |
+| `B17_eps_surprise_pair` | last2 EPS surprises: current=1.24 (this export) | prior_export=1.24 (finviz_2026-10-28) | GOOD if latest beat (and better if both beat) | **GOOD** |
+| `B18_rev_surprise_pair` | last2 Revenue surprises: current=1.11 (this export) | prior_export=1.11 (finviz_2026-10-28) | GOOD if latest beat (and better if both beat) | **GOOD** |
 
 CSV: `data/ab_checklist/2026-10-29_ab_checklist.csv`
 Columns: `val_*`, `flag_*`, `status_*`, `pair_day_a`, `pair_day_b`.
