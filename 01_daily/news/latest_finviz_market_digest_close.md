@@ -1,47 +1,48 @@
-# Finviz homepage market digest (close) — 2026-10-27
+# Finviz homepage market digest (close) — 2026-10-28
 
-**Generated:** 2026-10-27T16:30:02.368077-04:00 (America/New_York)
+**Generated:** 2026-10-28T20:14:19.004361-04:00 (America/New_York)
 **Source:** `live`
-**Banner:** US stocks closed higher as AI chip momentum and stronger economic data supported gains ahead of Big Tech earnings and the Fed decision while oil declined
-**Prior close:** SPX +0.60%  Nasdaq —  Dow +1.18%
-**SPX:** +0.60%  **Nasdaq:** —  **Dow:** +1.18%
+**Banner:** US stocks closed higher after Fed held rates steady with upgraded outlook as after-hours tech results pushed Nasdaq 100 futures lower
+**Prior close:** SPX +0.28%  Nasdaq +0.27%  Dow +0.19%
+**SPX:** +0.28%  **Nasdaq:** +0.27%  **Dow:** +0.19%
 **Oil:** —
 **CPI/Fed:** —
-**Leaders:** AVGO, META, SOFI, JBLU, CLS, RCL, BA, GM, V, HOOD, STX
+**Leaders:** MU, SKHY, ORCL, VRT, WING, FFIV, MSFT, GOOGL, FTNT, LITE, MRVL, WEN
 **Next session:** housing no · retail no · Fed yes
-**Earnings slate:** V, HOOD, STX
-**Geo/grain:** geo
-**Clock legal for:** 2026-10-28
+**Earnings slate:** —
+**Geo/grain:** —
+**Clock legal for:** 2026-10-29
 **Clock use:** `next_open`
 
 ## Clock
 
-Live post-close answer-key (~16:05 ET). **Legal for the NEXT session open only** (`clock_legal_for` = 2026-10-28) — **NOT** the same morning. `clock_use` is always `next_open`. File is `*_finviz_market_digest_close.*`; the same_morning warm-up file is left untouched.
+Live post-close answer-key (~16:05 ET). **Legal for the NEXT session open only** (`clock_legal_for` = 2026-10-29) — **NOT** the same morning. `clock_use` is always `next_open`. File is `*_finviz_market_digest_close.*`; the same_morning warm-up file is left untouched.
 
 Homepage `$MARKET` prose — **not** `YYYY-MM-DD_finviz_digest.md` (quote-page headlines + ticker blurbs). Capture only. Not wired into tape_anchor / predict / #210.
 
 ## Theme Radar
 
-- **Prior close:** SPX +0.60% · Nasdaq — · Dow +1.18%
+- **Prior close:** SPX +0.28% · Nasdaq +0.27% · Dow +0.19%
 - **Oil:** —
 - **CPI / Fed-odds:** —
-- **Named leaders:** AVGO, META, SOFI, JBLU, CLS, RCL, BA, GM, V, HOOD, STX
+- **Named leaders:** MU, SKHY, ORCL, VRT, WING, FFIV, MSFT, GOOGL, FTNT, LITE, MRVL, WEN
 - **Next-session calendar:** housing no · retail no · Fed yes
-  - US consumer confidence increased to 91.7 in October versus the 81.0 consensus, durable goods orders rose 1.8% in September, and the Federal Reserve opened its final meeting before the midterm elections with rates widely expected to remain on hold, as Visa (V), Robinhood Markets (HOOD), and Seagate Technology (STX) are scheduled to report earnings after the close
-- **Earnings slate:** V, HOOD, STX
-- **Geo / grain:** geo
+  - The Federal Reserve left its key interest rate unchanged at 3.75%-4.0% and upgraded its economic outlook, while Governors Lisa Cook and Beth Hammack dissented in favor of a hike and Chair Kevin Warsh said incoming data would guide the December decision.
+  - Lumentum (LITE) rose about 9% after-hours on reports of a potential acquisition by Marvell (MRVL), and a Nelson Peltz-led group offered about $1.4 billion to take Wendy’s (WEN) private ahead of Thursday’s earnings reports and economic data.
+- **Earnings slate:** —
+- **Geo / grain:** —
 
 ## Narrative
 
-**US stocks closed higher as AI chip momentum and stronger economic data supported gains ahead of Big Tech earnings and the Fed decision while oil declined**
+**US stocks closed higher after Fed held rates steady with upgraded outlook as after-hours tech results pushed Nasdaq 100 futures lower**
 
-- The S&P 500 ($SPX) rose 0.60% to 7,722.67, the Dow Jones Industrial Average ($DJI) edged 0.03% higher to 52,378.40, the Nasdaq Composite ($COMP) climbed 1.18% to 26,477.81, and the Russell 2000 (IWM) outperformed with a 1.24% gain
-- AI-linked chip stocks advanced on revived optimism tied to Anthropic’s IPO filing, Broadcom (AVGO)’s $63 billion Anthropic debt financing that helped lift Broadcom (AVGO) about 4%, and Meta (META)’s oversubscribed $25 billion stock sale
-- SoFi Technologies (SOFI) jumped about 13% after a Q3 earnings beat, reporting adjusted EPS of $0.18 versus $0.16 expected, revenue of $1.4 billion, record loan originations of $16.9 billion, and raising full-year revenue guidance
-- JetBlue Airways (JBLU) gained about 19% after outlining an improved Q4 margin outlook and new liquidity measures despite missing quarterly estimates
-- Celestica (CLS) rose about 12% after Q3 results beat expectations and the company raised full-year guidance, citing strong AI infrastructure demand
-- Royal Caribbean Group (RCL) climbed about 5.5% after posting stronger-than-expected Q3 earnings and raising its full-year profit forecast
-- Boeing (BA) fell 10.8% after reporting a larger-than-expected Q3 loss and cutting its aircraft delivery target
-- GM (GM) shares rose after the company announced it will move its stock listing from the New York Stock Exchange to Nasdaq after more than 100 years
-- Healthcare was the top-performing sector with a 4.1% gain, while energy fell 1.7% as oil (@CL) dropped nearly $2 per barrel on Middle East diplomacy, reduced supply concerns, and increased Saudi spot supplies to Europe
-- US consumer confidence increased to 91.7 in October versus the 81.0 consensus, durable goods orders rose 1.8% in September, and the Federal Reserve opened its final meeting before the midterm elections with rates widely expected to remain on hold, as Visa (V), Robinhood Markets (HOOD), and Seagate Technology (STX) are scheduled to report earnings after the close
+- The S&P 500 ($SPX) rose 0.28% to 7,743.98, the Dow Jones ($DJI) gained 0.19% to 52,475.10, the Nasdaq Composite ($COMP) climbed 0.27% to 26,549.85, and the Russell 2000 (IWM) added 0.41% to 2,830.51, with the S&P and Nasdaq posting a third straight advance.
+- The Federal Reserve left its key interest rate unchanged at 3.75%-4.0% and upgraded its economic outlook, while Governors Lisa Cook and Beth Hammack dissented in favor of a hike and Chair Kevin Warsh said incoming data would guide the December decision.
+- Eight of 11 S&P 500 ($SPX) sectors finished higher, with energy leading gains, while utilities fell 0.88%, real estate declined 0.65%, technology rose 0.48%, and semiconductors outperformed, led by Micron Technology (MU)’s roughly 5.9% rise after SK Hynix (SKHY) posted a more than sevenfold jump in quarterly profit.
+- Oracle (ORCL) jumped 11% after its investor day outlined new financial targets and a path to positive free cash flow tied to artificial intelligence growth.
+- Vertiv Holdings (VRT) rallied nearly 17% after beating estimates with a 61% jump in third-quarter revenue and sharply raising 2026 guidance on AI infrastructure demand.
+- Wingstop (WING) advanced after mixed third-quarter results that included an earnings-per-share beat but a revenue miss and a cut to its 2026 same-store sales and EBITDA outlook.
+- F5 Inc. (FFIV) sank more than 20% after beating fiscal fourth-quarter estimates and guiding to 8–9% fiscal 2027 revenue growth.
+- In after-hours trading, Microsoft (MSFT) gained about 3% after beating estimates on 48% Azure growth and 30% cloud growth.
+- Alphabet (GOOGL) fell more than 9% after-hours on a revenue miss, negative $9 billion free cash flow, and its first top- and bottom-line miss in years, while Fortinet (FTNT) dropped over 25% despite beating estimates and raising its 2026 outlook, helping push Nasdaq 100 futures (@NQ) down more than 1% after the bell.
+- Lumentum (LITE) rose about 9% after-hours on reports of a potential acquisition by Marvell (MRVL), and a Nelson Peltz-led group offered about $1.4 billion to take Wendy’s (WEN) private ahead of Thursday’s earnings reports and economic data.
