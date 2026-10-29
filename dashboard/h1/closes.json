@@ -1531,5 +1531,47 @@
       "open": 1.4,
       "prior_close": 1.41
     }
+  },
+  "2026-10-29": {
+    "ARHS": {
+      "close": 12.71,
+      "open": 11.74,
+      "prior_close": 11.52
+    },
+    "CHKP": {
+      "close": 153.5,
+      "open": 148.020004,
+      "prior_close": 155.220001
+    },
+    "GMAB": {
+      "close": 56.490002,
+      "open": 56.459999,
+      "prior_close": 57.290001
+    },
+    "LQDA": {
+      "close": 44.990002,
+      "open": 46.23,
+      "prior_close": 45.720001
+    },
+    "PACB": {
+      "close": 2.9,
+      "open": 2.77,
+      "prior_close": 2.83
+    },
+    "PRME": {
+      "close": 5.24,
+      "open": 5.21,
+      "prior_close": 5.36
+    },
+    "SWRD": {
+      "close": 3.08,
+      "open": 3.23,
+      "prior_close": 3.31
+    },
+    "UWMC": {
+      "close": 1.49,
+      "open": 1.51,
+      "prior_close": 1.5
+    }
   }
 }
