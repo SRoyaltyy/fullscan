@@ -6794,5 +6794,85 @@
     "sha256": "80beb5b12ad513514d518d6b5b2adc3d3fe6f1676c7b49ae8b7e783c347c027c",
     "shares": 1428,
     "ticker": "UWMC"
+  },
+  {
+    "bar_cutoff": "2026-10-28",
+    "cash_before": 97.2151014733737,
+    "committed_at": "2026-10-29T12:57:15Z",
+    "date": "2026-10-29",
+    "excluded_unexplained_legs": [],
+    "finviz_source": {
+      "commit": "ab7e0365defd4dcf2b31cbbfeea06a67d2e8e518",
+      "commit_time": "2026-10-28T20:57:23Z",
+      "file_sha256": "ec13089ea68879e6d45a46c3cfbcd85a682f2d5709d0c23d02d5c9d9026e2faf",
+      "path": "data/snapshots/2026-10-28.csv",
+      "snapshot_date": "2026-10-28",
+      "status": "BEFORE_OPEN"
+    },
+    "holdup_on": false,
+    "kind": "plan",
+    "morning_s": -6.946,
+    "picks": [
+      {
+        "fv_avg_volume": 3633.99,
+        "fv_price": 5.36,
+        "rank": 1,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "PRME"
+      },
+      {
+        "fv_avg_volume": 3320.31,
+        "fv_price": 57.29,
+        "rank": 2,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "GMAB"
+      },
+      {
+        "fv_avg_volume": 11224.83,
+        "fv_price": 2.83,
+        "rank": 3,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "PACB"
+      },
+      {
+        "fv_avg_volume": 629.1,
+        "fv_price": 3.31,
+        "rank": 4,
+        "sources": [
+          "yday_gainer"
+        ],
+        "ticker": "SWRD"
+      }
+    ],
+    "planned_sells": [
+      {
+        "reason": "holdup extension",
+        "shares": 38,
+        "ticker": "BRZE"
+      },
+      {
+        "reason": "holdup extension",
+        "shares": 9,
+        "ticker": "POOL"
+      }
+    ],
+    "recipe": "union_hot_n4_holdup__w0",
+    "s_source": {
+      "blob_sha": "a367f4e41b0ba834d44228ac4e6a6608a4f9aa62",
+      "kind": "predict",
+      "path": "01_daily/general/2026-10-29_predict.md",
+      "server_time_utc": "2026-10-29T18:36:21+08:00",
+      "status": "BEFORE_1330"
+    },
+    "sha256": "222e98df92f4a98f9d8d8a655b1be8776164bd79a6a8eadb24f6b54c69809141"
   }
 ]
