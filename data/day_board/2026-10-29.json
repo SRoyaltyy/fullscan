@@ -1,11 +1,9 @@
 {
   "date": "2026-10-29",
-  "generated_at": "2026-10-29T06:58:45.903100-04:00",
+  "generated_at": "2026-10-29T07:00:32.639060-04:00",
   "overall": "PARTIAL",
-  "ranker_ready": false,
-  "blockers": [
-    "MISSING News actions JSON `01_daily/news/2026-10-29_actions.json` \u2014 missing"
-  ],
+  "ranker_ready": true,
+  "blockers": [],
   "counts": {
     "ok": 6,
     "partial": 1,
@@ -181,7 +179,7 @@
       "inputs_ready": true,
       "n_req_ok": 7,
       "n_req": 9,
-      "n_opt_ok": 1,
+      "n_opt_ok": 2,
       "n_opt": 14,
       "files": [
         {
@@ -301,11 +299,16 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-10-29_actions.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 70772,
+          "said": "108 ticker actions \u00b7 6 events \u00b7 9973 headlines \u00b7 XLE BUY, COP BUY, EOG BUY, SM BUY, CHRD BUY, INR BUY, TXO BUY, OXY BUY",
+          "bullets": [
+            "BUY XLE",
+            "BUY COP",
+            "BUY EOG",
+            "BUY SM"
+          ]
         },
         {
           "key": "general",
@@ -600,7 +603,7 @@
       "name": "Catalyst dossiers",
       "yaml": "catalyst_daily.yml",
       "status": "FAIL",
-      "inputs_ready": false,
+      "inputs_ready": true,
       "n_req_ok": 0,
       "n_req": 0,
       "n_opt_ok": 0,
@@ -611,11 +614,16 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-10-29_actions.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 70772,
+          "said": "108 ticker actions \u00b7 6 events \u00b7 9973 headlines \u00b7 XLE BUY, COP BUY, EOG BUY, SM BUY, CHRD BUY, INR BUY, TXO BUY, OXY BUY",
+          "bullets": [
+            "BUY XLE",
+            "BUY COP",
+            "BUY EOG",
+            "BUY SM"
+          ]
         },
         {
           "key": "in_digest",
@@ -649,15 +657,24 @@
           ]
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "108 ticker actions \u00b7 6 events \u00b7 9973 headlines \u00b7 XLE BUY, COP BUY, EOG BUY, SM BUY, CHRD BUY, INR BUY, TXO BUY, OXY BUY",
+      "bullets": [
+        "BUY XLE",
+        "BUY COP",
+        "BUY EOG",
+        "BUY SM",
+        "BUY CHRD",
+        "BUY INR",
+        "BUY TXO",
+        "BUY OXY"
+      ]
     },
     {
       "key": "stock_book",
       "name": "Stock Book ALL",
       "yaml": "stock_book_all.yml",
       "status": "OK",
-      "inputs_ready": false,
+      "inputs_ready": true,
       "n_req_ok": 4,
       "n_req": 4,
       "n_opt_ok": 3,
@@ -695,11 +712,16 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-10-29_actions.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 70772,
+          "said": "108 ticker actions \u00b7 6 events \u00b7 9973 headlines \u00b7 XLE BUY, COP BUY, EOG BUY, SM BUY, CHRD BUY, INR BUY, TXO BUY, OXY BUY",
+          "bullets": [
+            "BUY XLE",
+            "BUY COP",
+            "BUY EOG",
+            "BUY SM"
+          ]
         },
         {
           "key": "in_digest",
@@ -2985,6 +3007,31 @@
         }
       ],
       "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "news_actions",
+      "title": "News actions",
+      "date": "2026-10-29",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-29T07:00:31.596503-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-29_actions.json",
+          "ok": true,
+          "reason": "",
+          "size": 70772,
+          "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers"
+        },
+        {
+          "path": "01_daily/news/2026-10-29_actions.md",
+          "ok": true,
+          "reason": "",
+          "size": 13572,
+          "preview": "# News \u2192 Actions v4 (full framework) \u2014 2026-10-29T07:00:31.579676-04:00\nraw=9973 unique_events=6 tickers=108"
+        }
+      ],
+      "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-10-29T07:00:31.579676-04:00\nraw=9973 unique_events=6 tickers=108"
     }
   ],
   "href": {

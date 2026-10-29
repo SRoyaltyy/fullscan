@@ -1,8 +1,8 @@
 {
   "date": "2026-10-29",
-  "generated_at": "2026-10-29T06:58:45.903100-04:00",
+  "generated_at": "2026-10-29T07:00:32.639060-04:00",
   "overall": "PARTIAL",
-  "ranker_ready": false,
+  "ranker_ready": true,
   "counts": {
     "ok": 6,
     "partial": 1,
@@ -95,24 +95,6 @@
   },
   "sectors": {},
   "lands": [
-    {
-      "key": "peer_rs",
-      "title": "Peer RS",
-      "date": "2026-10-29",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-29T06:30:52.050543-04:00",
-      "files": [
-        {
-          "path": "data/peers/2026-10-29_peer_rs.csv",
-          "ok": true,
-          "reason": "",
-          "size": 821534,
-          "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
-        }
-      ],
-      "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
-    },
     {
       "key": "stock_book",
       "title": "Stock book + green",
@@ -420,6 +402,31 @@
         }
       ],
       "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "news_actions",
+      "title": "News actions",
+      "date": "2026-10-29",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-29T07:00:31.596503-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-29_actions.json",
+          "ok": true,
+          "reason": "",
+          "size": 70772,
+          "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers"
+        },
+        {
+          "path": "01_daily/news/2026-10-29_actions.md",
+          "ok": true,
+          "reason": "",
+          "size": 13572,
+          "preview": "# News \u2192 Actions v4 (full framework) \u2014 2026-10-29T07:00:31.579676-04:00\nraw=9973 unique_events=6 tickers=108"
+        }
+      ],
+      "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-10-29T07:00:31.579676-04:00\nraw=9973 unique_events=6 tickers=108"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
