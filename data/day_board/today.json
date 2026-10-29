@@ -1,6 +1,6 @@
 {
   "date": "2026-10-29",
-  "generated_at": "2026-10-29T13:02:56.631164-04:00",
+  "generated_at": "2026-10-29T13:03:36.710741-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -70,24 +70,6 @@
   },
   "sectors": {},
   "lands": [
-    {
-      "key": "join",
-      "title": "Join / match rank",
-      "date": "2026-10-29",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-29T12:49:15.773390-04:00",
-      "files": [
-        {
-          "path": "data/join/2026-10-29_ranked.csv",
-          "ok": true,
-          "reason": "",
-          "size": 2258525,
-          "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 ARGX, ONC, DVN, REGN, PR"
-        }
-      ],
-      "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 ARGX, ONC, DVN, REGN, PR"
-    },
     {
       "key": "peer_rs",
       "title": "Peer RS",
@@ -360,6 +342,59 @@
         }
       ],
       "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-10-29",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-29T13:03:35.633479-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-10-29_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 983367,
+          "preview": "1d BUY FIS \u00b7 SELL NEOV, OKLO, FCEL, NNDM, EOSE, TE, SKYX, POWL"
+        },
+        {
+          "path": "data/stock_book/2026-10-29_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-10-29_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2471,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-10-29_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 6911,
+          "preview": "2026-10-29 BUY FIS \u00b7 SELL NEOV, OKLO, FCEL, NNDM, EOSE, TE, SKYX, POWL"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 6911,
+          "preview": "2026-10-29 BUY FIS \u00b7 SELL NEOV, OKLO, FCEL, NNDM, EOSE, TE, SKYX, POWL"
+        },
+        {
+          "path": "01_daily/2026-10-29_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 30331,
+          "preview": "# Stock book \u2014 2026-10-29\n_Generated 2026-10-29T13:03:07.503810-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY FIS \u00b7 SELL NEOV, OKLO, FCEL, NNDM, EOSE, TE, SKYX, POWL \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-10-29 BUY FIS \u00b7 SELL NEOV, OKLO, FCEL, NNDM, EOSE, TE, SKYX, POWL \u00b7 2026-10-29 BUY FIS \u00b7 SELL NEOV, OKLO, FCEL, NNDM, EOSE, TE, SKYX, POWL \u00b7 # Stock book \u2014 2026-10-29\n_Generated 2026-10-29T13:03:07.503810-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
