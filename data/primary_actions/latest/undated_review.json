@@ -1,8 +1,104 @@
 [
   {
-    "title": "USITC Makes Determinations In Five-Year (Sunset) Reviews Concerning Prestressed Concrete Steel Wire Strand From China",
-    "url": "https://www.usitc.gov/press_room/news_release/2026/er1028_69416.htm",
-    "native_id": "https://www.usitc.gov/press_room/news_release/2026/er1028_69416.htm",
+    "title": "FCC to Modernize Rules for American Drone Dominance, Airspace Sovereignty, and Advanced Air Mobility",
+    "url": "https://www.fcc.gov/edoc/426286",
+    "native_id": "426286",
+    "published_at": null,
+    "published_raw": "",
+    "summary": "FCC to modernize rules for American drone dominance, airspace sovereignty, and advanced air mobility. Final rules would mark latest agency win for next-gen technology",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Federal Communications Commission — News Releases",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
+    },
+    "primary_source_id": "us-fcc-685c5e7dd2",
+    "n": 7354,
+    "first_seen": "2026-10-29T07:09:24.505207+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
+    "source_ids": [
+      "us-fcc-685c5e7dd2"
+    ]
+  },
+  {
+    "title": "Carr Announces Vote to Permit Prisons to Jam Contraband Cellphones",
+    "url": "https://www.fcc.gov/edoc/426249",
+    "native_id": "426249",
+    "published_at": null,
+    "published_raw": "",
+    "summary": "Joins Federal and State Leaders and Law Enforcement Officials in Arkansas",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Federal Communications Commission — News Releases",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
+    },
+    "primary_source_id": "us-fcc-685c5e7dd2",
+    "n": 7355,
+    "first_seen": "2026-10-29T07:09:24.505207+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
+    "source_ids": [
+      "us-fcc-685c5e7dd2"
+    ]
+  },
+  {
+    "title": "Chairman Carr Announces Commissioner Trusty Will Lead Rollout and Implementation of U.S. Cyber Trust Mark Program",
+    "url": "https://www.fcc.gov/edoc/426240",
+    "native_id": "426240",
+    "published_at": null,
+    "published_raw": "",
+    "summary": "Chairman Carr announces Commissioner Trusty will lead rollout and implementation of the U.S. Cyber Trust Mark Program",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Federal Communications Commission — News Releases",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
+    },
+    "primary_source_id": "us-fcc-685c5e7dd2",
+    "n": 7356,
+    "first_seen": "2026-10-29T07:09:24.505207+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
+    "source_ids": [
+      "us-fcc-685c5e7dd2"
+    ]
+  },
+  {
+    "title": "Carr Proposes Crackdown on Bad Actors' Access to U.S. Phone Numbers",
+    "url": "https://www.fcc.gov/edoc/426264",
+    "native_id": "426264",
+    "published_at": null,
+    "published_raw": "",
+    "summary": ".",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Federal Communications Commission — News Releases",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
+    },
+    "primary_source_id": "us-fcc-685c5e7dd2",
+    "n": 7357,
+    "first_seen": "2026-10-29T07:09:24.505207+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
+    "source_ids": [
+      "us-fcc-685c5e7dd2"
+    ]
+  },
+  {
+    "title": "Outcomes of the 19th ASEAN-Japan Cybersecurity Policy Meeting",
+    "url": "https://www.meti.go.jp/english/press/2026/10/20261029002.html",
+    "native_id": "https://www.meti.go.jp/english/press/2026/10/20261029002.html",
     "published_at": null,
     "published_raw": null,
     "summary": "",
@@ -11,40 +107,64 @@
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "United States International Trade Commission",
-      "jurisdiction": "US",
-      "family": "trade_and_judicial"
+      "issuer": "Japan Ministry of Economy Trade and Industry",
+      "jurisdiction": "JP",
+      "family": "trade_and_industry_policy"
     },
-    "primary_source_id": "us-itc-index",
-    "n": 7178,
-    "first_seen": "2026-10-28T19:21:07.640451+00:00",
-    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "primary_source_id": "jp-meti-index",
+    "n": 7365,
+    "first_seen": "2026-10-29T07:09:24.505207+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
     "source_ids": [
-      "us-itc-index"
+      "jp-meti-index"
     ]
   },
   {
-    "title": "Miscellaneous Order",
-    "url": "https://www.supremecourt.gov/orders/courtorders/102726zr_o759.pdf",
-    "native_id": "https://www.supremecourt.gov/orders/courtorders/102726zr_o759.pdf",
+    "title": "METI and the German Federal Ministry for Economic Affairs and Energy Sign a Joint Declaration of Intent on Clean Hydrogen and Its Derivatives",
+    "url": "https://www.meti.go.jp/english/press/2026/10/20261029003.html",
+    "native_id": "https://www.meti.go.jp/english/press/2026/10/20261029003.html",
     "published_at": null,
     "published_raw": null,
     "summary": "",
     "source_metadata": {
-      "document_type": "court_order",
-      "document_stage": "judicial_order_published",
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Supreme Court orders of the Court",
-      "jurisdiction": "US",
-      "family": "judicial_decisions"
+      "issuer": "Japan Ministry of Economy Trade and Industry",
+      "jurisdiction": "JP",
+      "family": "trade_and_industry_policy"
     },
-    "primary_source_id": "us-supreme-court-orders-index",
-    "n": 7214,
-    "first_seen": "2026-10-28T19:21:07.640451+00:00",
-    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "primary_source_id": "jp-meti-index",
+    "n": 7366,
+    "first_seen": "2026-10-29T07:09:24.505207+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
     "source_ids": [
-      "us-supreme-court-orders-index"
+      "jp-meti-index"
+    ]
+  },
+  {
+    "title": "METI and Siemens Energy Sign Memorandum of Cooperation on Floating Offshore Wind and Wind Power Industry Development",
+    "url": "https://www.meti.go.jp/english/press/2026/10/20261029001.html",
+    "native_id": "https://www.meti.go.jp/english/press/2026/10/20261029001.html",
+    "published_at": null,
+    "published_raw": null,
+    "summary": "",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Japan Ministry of Economy Trade and Industry",
+      "jurisdiction": "JP",
+      "family": "trade_and_industry_policy"
+    },
+    "primary_source_id": "jp-meti-index",
+    "n": 7367,
+    "first_seen": "2026-10-29T07:09:24.505207+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
+    "source_ids": [
+      "jp-meti-index"
     ]
   }
 ]

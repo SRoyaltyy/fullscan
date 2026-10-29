@@ -1,5 +1,483 @@
 [
   {
+    "title": "Upper C-Band (3.98-4.2 GHz); Expanding Flexible Use of the 3.7 to 4.2 GHz Band",
+    "url": "https://www.federalregister.gov/documents/2026/10/29/2026-22037/upper-c-band-398-42-ghz-expanding-flexible-use-of-the-37-to-42-ghz-band",
+    "native_id": "2026-22037",
+    "published_at": "2026-10-29T00:00:00+00:00",
+    "published_raw": "2026-10-29",
+    "document_type": "Rule",
+    "issuer": "Federal Communications Commission",
+    "issuer_ids": [
+      "us-fr:161"
+    ],
+    "summary": "The Federal Communications Commission (FCC or Commission) announces that the Office of Management and Budget (OMB) has approved the information collection requirements under OMB Control Number 3060- 1272, as adopted in the Commission's Report and Order, Order of Proposed Modification, and Order on Reconsideration, FCC 26-46.",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-29/pdf/2026-22037.pdf",
+    "source_metadata": {
+      "document_type": "Rule",
+      "document_stage": "final_rule_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Federal Communications Commission",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 7294,
+    "first_seen": "2026-10-29T07:09:24.505207+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Single Family Housing Guaranteed Loan Program-Income Producing Accessory Dwelling Unit (ADU) Provisions",
+    "url": "https://www.federalregister.gov/documents/2026/10/29/2026-22038/single-family-housing-guaranteed-loan-program-income-producing-accessory-dwelling-unit-adu",
+    "native_id": "2026-22038",
+    "published_at": "2026-10-29T00:00:00+00:00",
+    "published_raw": "2026-10-29",
+    "document_type": "Rule",
+    "issuer": "Agriculture Department; Rural Housing Service",
+    "issuer_ids": [
+      "us-fr:12",
+      "us-fr:458"
+    ],
+    "summary": "The Rural Housing Service (RHS or the Agency), a Rural Development (RD) agency of the United States Department of Agriculture (USDA), is amending the Single Family Housing Guaranteed Loan Program (SFHGLP) regulation to permit the financing of single family homes with income producing Accessory Dwelling Units (ADUs) and clarify the eligibility of properties with features designed to accommodate home- based operations using non-commercial real estate features.",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-29/pdf/2026-22038.pdf",
+    "source_metadata": {
+      "document_type": "Rule",
+      "document_stage": "final_rule_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Agriculture Department; Rural Housing Service",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 7293,
+    "first_seen": "2026-10-29T07:09:24.505207+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Safety Zone; Firework Display; Cumberland River, Hendersonville, TN",
+    "url": "https://www.federalregister.gov/documents/2026/10/29/2026-22078/safety-zone-firework-display-cumberland-river-hendersonville-tn",
+    "native_id": "2026-22078",
+    "published_at": "2026-10-29T00:00:00+00:00",
+    "published_raw": "2026-10-29",
+    "document_type": "Rule",
+    "issuer": "Homeland Security Department; Coast Guard",
+    "issuer_ids": [
+      "us-fr:227",
+      "us-fr:53"
+    ],
+    "summary": "The Coast Guard is establishing a safety zone for certain navigable waters of the Sanders Ferry, near Hendersonville, TN. This safety zone is necessary to protect personnel, vessels, and the marine environment from potential hazards during a fireworks show at various times from October 29, 2026, through October 31, 2026. This rulemaking prohibits entry of vessels or persons into this safety zone during enforcement periods unless specifically authorized by the Captain of the Port, Ohio Valley or their designated representative.",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-29/pdf/2026-22078.pdf",
+    "source_metadata": {
+      "document_type": "Rule",
+      "document_stage": "final_rule_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Homeland Security Department; Coast Guard",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 7258,
+    "first_seen": "2026-10-29T07:09:24.505207+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Requests for Arbitration Panels",
+    "url": "https://www.federalregister.gov/documents/2026/10/29/2026-22083/requests-for-arbitration-panels",
+    "native_id": "2026-22083",
+    "published_at": "2026-10-29T00:00:00+00:00",
+    "published_raw": "2026-10-29",
+    "document_type": "Rule",
+    "issuer": "Federal Mediation and Conciliation Service",
+    "issuer_ids": [
+      "us-fr:179"
+    ],
+    "summary": "The Federal Mediation and Conciliation Service (FMCS) published an interim final rule on August 4, 2026, and republished on August 28, 2026, that amended its arbitration services regulations to clarify when the Office of Arbitration may decline to issue an arbitration panel, make a direct appointment, or provide related services. This document responds to the comments, clarifies the scope of the rule's threshold inquiry, adds procedural provisions governing notice, written disposition, request dates, and fees, and adopts the interim final rule as a final rule.",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-29/pdf/2026-22083.pdf",
+    "source_metadata": {
+      "document_type": "Rule",
+      "document_stage": "final_rule_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Federal Mediation and Conciliation Service",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 7254,
+    "first_seen": "2026-10-29T07:09:24.505207+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Pleasure Vessels of Malta Entitled To Cruising Licenses",
+    "url": "https://www.federalregister.gov/documents/2026/10/29/2026-22089/pleasure-vessels-of-malta-entitled-to-cruising-licenses",
+    "native_id": "2026-22089",
+    "published_at": "2026-10-29T00:00:00+00:00",
+    "published_raw": "2026-10-29",
+    "document_type": "Rule",
+    "issuer": "Homeland Security Department; U.S. Customs and Border Protection",
+    "issuer_ids": [
+      "us-fr:227",
+      "us-fr:501"
+    ],
+    "summary": "This document amends U.S. Customs and Border Protection (CBP) regulations by adding the Republic of Malta (Malta) to the list of countries whose pleasure vessels may be issued U.S. cruising licenses. The U.S. Department of State has notified CBP that yachts used and employed exclusively as pleasure vessels and belonging to any resident of the United States are allowed to arrive at and depart from Maltese ports, and to cruise in Maltese waters without complying with formal entry and clearance procedures. Therefore, CBP is extending reciprocal cruising privileges to Maltese-flagged pleasure vessels.",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-29/pdf/2026-22089.pdf",
+    "source_metadata": {
+      "document_type": "Rule",
+      "document_stage": "final_rule_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Homeland Security Department; U.S. Customs and Border Protection",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 7248,
+    "first_seen": "2026-10-29T07:09:24.505207+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Personnel Management in Agencies: Strategic Human Capital Management",
+    "url": "https://www.federalregister.gov/documents/2026/10/29/2026-22093/personnel-management-in-agencies-strategic-human-capital-management",
+    "native_id": "2026-22093",
+    "published_at": "2026-10-29T00:00:00+00:00",
+    "published_raw": "2026-10-29",
+    "document_type": "Rule",
+    "issuer": "Personnel Management Office",
+    "issuer_ids": [
+      "us-fr:406"
+    ],
+    "summary": "The Office of Personnel Management (OPM) is issuing a final rule to modernize the framework governing personnel management and strategic human capital management in Federal agencies. This rule amends the regulatory framework for personnel management in Federal agencies to streamline human capital planning and reporting requirements, strengthen the authority of agency Chief Human Capital Officers (CHCOs), update employee survey requirements, and align the regulatory framework with Executive branch priorities for a high- performing Federal workforce. OPM carefully considered all public comments received on the proposed rule and has made targeted revisions in response.",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-29/pdf/2026-22093.pdf",
+    "source_metadata": {
+      "document_type": "Rule",
+      "document_stage": "final_rule_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Personnel Management Office",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 7244,
+    "first_seen": "2026-10-29T07:09:24.505207+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Reducing Bureaucracy and Burden for Child Support Enforcement Programs",
+    "url": "https://www.federalregister.gov/documents/2026/10/29/2026-22116/reducing-bureaucracy-and-burden-for-child-support-enforcement-programs",
+    "native_id": "2026-22116",
+    "published_at": "2026-10-29T00:00:00+00:00",
+    "published_raw": "2026-10-29",
+    "document_type": "Rule",
+    "issuer": "Health and Human Services Department; Children and Families Administration",
+    "issuer_ids": [
+      "us-fr:221",
+      "us-fr:49"
+    ],
+    "summary": "This final rule amends the Child Support regulations that were unnecessary or obsolete in the following sections: State Plan Approval and Grant Procedures, State Plan Requirements, Standards for Program Operations, Federal Financial Participation, Program Performance Measures, Standards, Financial Incentives, and Penalties, Computerized Support Enforcement Systems, Annual State Self-Assessment Review and Report, Tribal Child Support Enforcement (IV-D) Program, and Computerized Tribal IV-D Systems and Office Automation.",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-29/pdf/2026-22116.pdf",
+    "source_metadata": {
+      "document_type": "Rule",
+      "document_stage": "final_rule_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Health and Human Services Department; Children and Families Administration",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 7222,
+    "first_seen": "2026-10-29T07:09:24.505207+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Public Law 119 - 1 - Laken Riley Act",
+    "url": "https://www.govinfo.gov/app/details/PLAW-119publ1",
+    "native_id": "PLAW-119publ1",
+    "published_at": "2026-10-28T21:05:41+00:00",
+    "published_raw": "Wed, 28 Oct 2026 21:05:41 +0000",
+    "summary": "Content Files PDF TEXT USLM Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "public_law",
+      "document_stage": "law_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Public and Private Laws",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-plaw",
+    "n": 6248,
+    "first_seen": "2026-10-23T06:03:51.082170+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
+    "source_ids": [
+      "us-govinfo-plaw"
+    ]
+  },
+  {
+    "title": "DCPD-202200822 - Remarks at the Global Fund To Fight AIDS, Tuberculosis, and Malaria Seventh Replenishment Conference in New York City",
+    "url": "https://www.govinfo.gov/app/details/DCPD-202200822",
+    "native_id": "DCPD-202200822",
+    "published_at": "2026-10-28T20:46:17+00:00",
+    "published_raw": "Wed, 28 Oct 2026 20:46:17 +0000",
+    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "presidential_document",
+      "document_stage": "presidential_document_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Compilation of Presidential Documents",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-dcpd",
+    "n": 7331,
+    "first_seen": "2026-10-29T07:09:24.505207+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
+    "source_ids": [
+      "us-govinfo-dcpd"
+    ]
+  },
+  {
+    "title": "DCPD-2026ACTSAPPROVED - Acts Approved by the President",
+    "url": "https://www.govinfo.gov/app/details/DCPD-2026ACTSAPPROVED",
+    "native_id": "DCPD-2026ACTSAPPROVED",
+    "published_at": "2026-10-28T20:46:17+00:00",
+    "published_raw": "Wed, 28 Oct 2026 20:46:17 +0000",
+    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "presidential_document",
+      "document_stage": "presidential_document_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Compilation of Presidential Documents",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-dcpd",
+    "n": 2475,
+    "first_seen": "2026-10-16T05:53:15.995133+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
+    "source_ids": [
+      "us-govinfo-dcpd"
+    ]
+  },
+  {
+    "title": "DCPD-202600076 - Remarks on the United States Strategic Critical Minerals Reserve and an Exchange With Reporters",
+    "url": "https://www.govinfo.gov/app/details/DCPD-202600076",
+    "native_id": "DCPD-202600076",
+    "published_at": "2026-10-28T20:45:00+00:00",
+    "published_raw": "Wed, 28 Oct 2026 20:45:00 +0000",
+    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "presidential_document",
+      "document_stage": "presidential_document_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Compilation of Presidential Documents",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-dcpd",
+    "n": 7330,
+    "first_seen": "2026-10-29T07:09:24.505207+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
+    "source_ids": [
+      "us-govinfo-dcpd"
+    ]
+  },
+  {
+    "title": "DCPD-202500576 - Remarks at a Bill Signing Ceremony and an Exchange With Reporters",
+    "url": "https://www.govinfo.gov/app/details/DCPD-202500576",
+    "native_id": "DCPD-202500576",
+    "published_at": "2026-10-28T20:45:00+00:00",
+    "published_raw": "Wed, 28 Oct 2026 20:45:00 +0000",
+    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "presidential_document",
+      "document_stage": "presidential_document_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Compilation of Presidential Documents",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-dcpd",
+    "n": 7329,
+    "first_seen": "2026-10-29T07:09:24.505207+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
+    "source_ids": [
+      "us-govinfo-dcpd"
+    ]
+  },
+  {
+    "title": "DCPD-202600653 - Remarks Following a Working Lunch on Artificial Intelligence and an Exchange With Reporters",
+    "url": "https://www.govinfo.gov/app/details/DCPD-202600653",
+    "native_id": "DCPD-202600653",
+    "published_at": "2026-10-28T20:45:00+00:00",
+    "published_raw": "Wed, 28 Oct 2026 20:45:00 +0000",
+    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "presidential_document",
+      "document_stage": "presidential_document_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Compilation of Presidential Documents",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-dcpd",
+    "n": 7328,
+    "first_seen": "2026-10-29T07:09:24.505207+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
+    "source_ids": [
+      "us-govinfo-dcpd"
+    ]
+  },
+  {
+    "title": "DCPD-202600652 - Executive Order 14432-Streamlining Access to Government Services Through Artificial intelligence and other emerging technologiesAmerica.gov",
+    "url": "https://www.govinfo.gov/app/details/DCPD-202600652",
+    "native_id": "DCPD-202600652",
+    "published_at": "2026-10-28T20:45:00+00:00",
+    "published_raw": "Wed, 28 Oct 2026 20:45:00 +0000",
+    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "presidential_document",
+      "document_stage": "presidential_document_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Compilation of Presidential Documents",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-dcpd",
+    "n": 7327,
+    "first_seen": "2026-10-29T07:09:24.505207+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
+    "source_ids": [
+      "us-govinfo-dcpd"
+    ]
+  },
+  {
+    "title": "DCPD-202600655 - Executive Order 14433-Eliminating Disease-Carrying Pests and Restoring Enjoyment of the Great Outdoors",
+    "url": "https://www.govinfo.gov/app/details/DCPD-202600655",
+    "native_id": "DCPD-202600655",
+    "published_at": "2026-10-28T20:45:00+00:00",
+    "published_raw": "Wed, 28 Oct 2026 20:45:00 +0000",
+    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "presidential_document",
+      "document_stage": "presidential_document_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Compilation of Presidential Documents",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-dcpd",
+    "n": 7326,
+    "first_seen": "2026-10-29T07:09:24.505207+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
+    "source_ids": [
+      "us-govinfo-dcpd"
+    ]
+  },
+  {
+    "title": "DCPD-202600656 - Executive Order 14434-Inaugurating the Era of Super Intelligence",
+    "url": "https://www.govinfo.gov/app/details/DCPD-202600656",
+    "native_id": "DCPD-202600656",
+    "published_at": "2026-10-28T20:45:00+00:00",
+    "published_raw": "Wed, 28 Oct 2026 20:45:00 +0000",
+    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "presidential_document",
+      "document_stage": "presidential_document_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Compilation of Presidential Documents",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-dcpd",
+    "n": 7325,
+    "first_seen": "2026-10-29T07:09:24.505207+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
+    "source_ids": [
+      "us-govinfo-dcpd"
+    ]
+  },
+  {
+    "title": "DCPD-2026DIGEST - Digest of Other White House Announcements",
+    "url": "https://www.govinfo.gov/app/details/DCPD-2026DIGEST",
+    "native_id": "DCPD-2026DIGEST",
+    "published_at": "2026-10-28T20:45:00+00:00",
+    "published_raw": "Wed, 28 Oct 2026 20:45:00 +0000",
+    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "presidential_document",
+      "document_stage": "presidential_document_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Compilation of Presidential Documents",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-dcpd",
+    "n": 2481,
+    "first_seen": "2026-10-16T05:53:15.995133+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
+    "source_ids": [
+      "us-govinfo-dcpd"
+    ]
+  },
+  {
+    "title": "DCPD-2026CHECKLIST - Checklist of White House Press Releases",
+    "url": "https://www.govinfo.gov/app/details/DCPD-2026CHECKLIST",
+    "native_id": "DCPD-2026CHECKLIST",
+    "published_at": "2026-10-28T20:45:00+00:00",
+    "published_raw": "Wed, 28 Oct 2026 20:45:00 +0000",
+    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "presidential_document",
+      "document_stage": "presidential_document_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Compilation of Presidential Documents",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-dcpd",
+    "n": 2477,
+    "first_seen": "2026-10-16T05:53:15.995133+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
+    "source_ids": [
+      "us-govinfo-dcpd"
+    ]
+  },
+  {
     "title": "Public Law 119 - 130 - Southcentral Foundation Land Transfer Act of 2025",
     "url": "https://www.govinfo.gov/app/details/PLAW-119publ130",
     "native_id": "PLAW-119publ130",
@@ -18,7 +496,7 @@
     "primary_source_id": "us-govinfo-plaw",
     "n": 7142,
     "first_seen": "2026-10-28T19:21:07.640451+00:00",
-    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
     "source_ids": [
       "us-govinfo-plaw"
     ]
@@ -42,7 +520,7 @@
     "primary_source_id": "us-govinfo-plaw",
     "n": 7141,
     "first_seen": "2026-10-28T19:21:07.640451+00:00",
-    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
     "source_ids": [
       "us-govinfo-plaw"
     ]
@@ -71,7 +549,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 7104,
     "first_seen": "2026-10-28T19:21:07.640451+00:00",
-    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -95,7 +573,7 @@
     "primary_source_id": "us-govinfo-plaw",
     "n": 7140,
     "first_seen": "2026-10-28T19:21:07.640451+00:00",
-    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
     "source_ids": [
       "us-govinfo-plaw"
     ]
@@ -124,7 +602,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 7105,
     "first_seen": "2026-10-28T19:21:07.640451+00:00",
-    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -153,7 +631,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 7106,
     "first_seen": "2026-10-28T19:21:07.640451+00:00",
-    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -177,7 +655,7 @@
     "primary_source_id": "us-govinfo-dcpd",
     "n": 6959,
     "first_seen": "2026-10-28T07:15:21.187665+00:00",
-    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
     "source_ids": [
       "us-govinfo-dcpd"
     ]
@@ -201,7 +679,7 @@
     "primary_source_id": "us-govinfo-dcpd",
     "n": 6958,
     "first_seen": "2026-10-28T07:15:21.187665+00:00",
-    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
     "source_ids": [
       "us-govinfo-dcpd"
     ]
@@ -225,7 +703,7 @@
     "primary_source_id": "us-govinfo-dcpd",
     "n": 6957,
     "first_seen": "2026-10-28T07:15:21.187665+00:00",
-    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
     "source_ids": [
       "us-govinfo-dcpd"
     ]
@@ -249,7 +727,7 @@
     "primary_source_id": "us-govinfo-dcpd",
     "n": 6961,
     "first_seen": "2026-10-28T07:15:21.187665+00:00",
-    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
     "source_ids": [
       "us-govinfo-dcpd"
     ]
@@ -273,7 +751,7 @@
     "primary_source_id": "us-govinfo-dcpd",
     "n": 6960,
     "first_seen": "2026-10-28T07:15:21.187665+00:00",
-    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
     "source_ids": [
       "us-govinfo-dcpd"
     ]
@@ -302,7 +780,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 5,
     "first_seen": "2026-10-15T10:17:11.133023+00:00",
-    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -331,7 +809,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 7108,
     "first_seen": "2026-10-28T19:21:07.640451+00:00",
-    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -360,7 +838,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 7107,
     "first_seen": "2026-10-28T19:21:07.640451+00:00",
-    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -389,7 +867,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 7113,
     "first_seen": "2026-10-28T19:21:07.640451+00:00",
-    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -418,7 +896,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 7112,
     "first_seen": "2026-10-28T19:21:07.640451+00:00",
-    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -447,7 +925,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 7111,
     "first_seen": "2026-10-28T19:21:07.640451+00:00",
-    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -476,7 +954,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 7110,
     "first_seen": "2026-10-28T19:21:07.640451+00:00",
-    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -505,7 +983,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 7109,
     "first_seen": "2026-10-28T19:21:07.640451+00:00",
-    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -534,7 +1012,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 7119,
     "first_seen": "2026-10-28T19:21:07.640451+00:00",
-    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -563,7 +1041,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 7118,
     "first_seen": "2026-10-28T19:21:07.640451+00:00",
-    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -592,7 +1070,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 7117,
     "first_seen": "2026-10-28T19:21:07.640451+00:00",
-    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -621,7 +1099,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 7116,
     "first_seen": "2026-10-28T19:21:07.640451+00:00",
-    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -650,7 +1128,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 7115,
     "first_seen": "2026-10-28T19:21:07.640451+00:00",
-    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -679,7 +1157,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 7114,
     "first_seen": "2026-10-28T19:21:07.640451+00:00",
-    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -708,7 +1186,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 7121,
     "first_seen": "2026-10-28T19:21:07.640451+00:00",
-    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -737,7 +1215,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 7120,
     "first_seen": "2026-10-28T19:21:07.640451+00:00",
-    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -766,7 +1244,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 7122,
     "first_seen": "2026-10-28T19:21:07.640451+00:00",
-    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -796,7 +1274,7 @@
     "primary_source_id": "us-federal-register",
     "n": 7075,
     "first_seen": "2026-10-28T19:21:07.640451+00:00",
-    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -826,7 +1304,7 @@
     "primary_source_id": "us-federal-register",
     "n": 7055,
     "first_seen": "2026-10-28T19:21:07.640451+00:00",
-    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -857,7 +1335,7 @@
     "primary_source_id": "us-federal-register",
     "n": 7053,
     "first_seen": "2026-10-28T19:21:07.640451+00:00",
-    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -888,7 +1366,7 @@
     "primary_source_id": "us-federal-register",
     "n": 7040,
     "first_seen": "2026-10-28T19:21:07.640451+00:00",
-    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -919,7 +1397,7 @@
     "primary_source_id": "us-federal-register",
     "n": 7027,
     "first_seen": "2026-10-28T19:21:07.640451+00:00",
-    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -950,7 +1428,7 @@
     "primary_source_id": "us-federal-register",
     "n": 7023,
     "first_seen": "2026-10-28T19:21:07.640451+00:00",
-    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -980,7 +1458,7 @@
     "primary_source_id": "us-federal-register",
     "n": 7021,
     "first_seen": "2026-10-28T19:21:07.640451+00:00",
-    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1011,7 +1489,7 @@
     "primary_source_id": "us-federal-register",
     "n": 7015,
     "first_seen": "2026-10-28T19:21:07.640451+00:00",
-    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1042,7 +1520,7 @@
     "primary_source_id": "us-federal-register",
     "n": 7011,
     "first_seen": "2026-10-28T19:21:07.640451+00:00",
-    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1072,7 +1550,7 @@
     "primary_source_id": "us-federal-register",
     "n": 7004,
     "first_seen": "2026-10-28T19:21:07.640451+00:00",
-    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1102,7 +1580,7 @@
     "primary_source_id": "us-federal-register",
     "n": 7003,
     "first_seen": "2026-10-28T19:21:07.640451+00:00",
-    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1132,7 +1610,7 @@
     "primary_source_id": "us-federal-register",
     "n": 7002,
     "first_seen": "2026-10-28T19:21:07.640451+00:00",
-    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1162,7 +1640,7 @@
     "primary_source_id": "us-federal-register",
     "n": 7001,
     "first_seen": "2026-10-28T19:21:07.640451+00:00",
-    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1192,7 +1670,7 @@
     "primary_source_id": "us-federal-register",
     "n": 7000,
     "first_seen": "2026-10-28T19:21:07.640451+00:00",
-    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1216,7 +1694,7 @@
     "primary_source_id": "us-govinfo-plaw",
     "n": 6846,
     "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
     "source_ids": [
       "us-govinfo-plaw"
     ]
@@ -1240,7 +1718,7 @@
     "primary_source_id": "us-govinfo-plaw",
     "n": 6845,
     "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
     "source_ids": [
       "us-govinfo-plaw"
     ]
@@ -1264,7 +1742,7 @@
     "primary_source_id": "us-govinfo-plaw",
     "n": 6844,
     "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
     "source_ids": [
       "us-govinfo-plaw"
     ]
@@ -1293,7 +1771,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 6831,
     "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -1322,7 +1800,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 6832,
     "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -1346,7 +1824,7 @@
     "primary_source_id": "us-govinfo-plaw",
     "n": 6843,
     "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
     "source_ids": [
       "us-govinfo-plaw"
     ]
@@ -1375,7 +1853,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 6833,
     "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -1399,7 +1877,7 @@
     "primary_source_id": "us-govinfo-plaw",
     "n": 6842,
     "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
     "source_ids": [
       "us-govinfo-plaw"
     ]
@@ -1423,7 +1901,7 @@
     "primary_source_id": "us-govinfo-plaw",
     "n": 6841,
     "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
     "source_ids": [
       "us-govinfo-plaw"
     ]
@@ -1447,7 +1925,7 @@
     "primary_source_id": "us-govinfo-plaw",
     "n": 6840,
     "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
     "source_ids": [
       "us-govinfo-plaw"
     ]
@@ -1471,7 +1949,7 @@
     "primary_source_id": "us-govinfo-plaw",
     "n": 6839,
     "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
     "source_ids": [
       "us-govinfo-plaw"
     ]
@@ -1495,7 +1973,7 @@
     "primary_source_id": "us-govinfo-plaw",
     "n": 6838,
     "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
     "source_ids": [
       "us-govinfo-plaw"
     ]
@@ -1524,7 +2002,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 6834,
     "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -1553,7 +2031,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 6835,
     "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -1582,7 +2060,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 6309,
     "first_seen": "2026-10-23T17:53:51.765604+00:00",
-    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -1614,7 +2092,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6756,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1644,7 +2122,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6754,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1675,7 +2153,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6751,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1706,7 +2184,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6750,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1737,7 +2215,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6749,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1768,7 +2246,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6744,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1799,7 +2277,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6743,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1830,7 +2308,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6742,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1861,7 +2339,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6741,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1892,7 +2370,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6717,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1923,7 +2401,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6706,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1953,7 +2431,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6699,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1983,7 +2461,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6697,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -2007,7 +2485,7 @@
     "primary_source_id": "us-govinfo-dcpd",
     "n": 6800,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
     "source_ids": [
       "us-govinfo-dcpd"
     ]
@@ -2031,7 +2509,7 @@
     "primary_source_id": "us-govinfo-dcpd",
     "n": 6799,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
     "source_ids": [
       "us-govinfo-dcpd"
     ]
@@ -2055,7 +2533,7 @@
     "primary_source_id": "us-govinfo-dcpd",
     "n": 6798,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
     "source_ids": [
       "us-govinfo-dcpd"
     ]
@@ -2079,7 +2557,7 @@
     "primary_source_id": "us-govinfo-dcpd",
     "n": 6797,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
     "source_ids": [
       "us-govinfo-dcpd"
     ]
@@ -2103,7 +2581,7 @@
     "primary_source_id": "us-govinfo-dcpd",
     "n": 6796,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
     "source_ids": [
       "us-govinfo-dcpd"
     ]
@@ -2132,7 +2610,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 6594,
     "first_seen": "2026-10-26T19:21:36.282284+00:00",
-    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -2161,7 +2639,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 6595,
     "first_seen": "2026-10-26T19:21:36.282284+00:00",
-    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -2190,7 +2668,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 6596,
     "first_seen": "2026-10-26T19:21:36.282284+00:00",
-    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -2219,7 +2697,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 2103,
     "first_seen": "2026-10-15T12:16:32.997656+00:00",
-    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -2248,7 +2726,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 6597,
     "first_seen": "2026-10-26T19:21:36.282284+00:00",
-    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -2277,7 +2755,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 6598,
     "first_seen": "2026-10-26T19:21:36.282284+00:00",
-    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -2306,7 +2784,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 6599,
     "first_seen": "2026-10-26T19:21:36.282284+00:00",
-    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -2335,7 +2813,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 6600,
     "first_seen": "2026-10-26T19:21:36.282284+00:00",
-    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -2364,7 +2842,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 5623,
     "first_seen": "2026-10-20T18:00:04.951908+00:00",
-    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -2393,7 +2871,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 6601,
     "first_seen": "2026-10-26T19:21:36.282284+00:00",
-    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -2422,7 +2900,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 6602,
     "first_seen": "2026-10-26T19:21:36.282284+00:00",
-    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -2451,7 +2929,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 6603,
     "first_seen": "2026-10-26T19:21:36.282284+00:00",
-    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -2480,7 +2958,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 6604,
     "first_seen": "2026-10-26T19:21:36.282284+00:00",
-    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -2509,7 +2987,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 6605,
     "first_seen": "2026-10-26T19:21:36.282284+00:00",
-    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -2538,7 +3016,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 6606,
     "first_seen": "2026-10-26T19:21:36.282284+00:00",
-    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -2567,253 +3045,9 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 6607,
     "first_seen": "2026-10-26T19:21:36.282284+00:00",
-    "last_seen": "2026-10-28T19:21:07.640451+00:00",
+    "last_seen": "2026-10-29T07:09:24.505207+00:00",
     "source_ids": [
       "uk-govuk-decision"
-    ]
-  },
-  {
-    "title": "Streamlining the Regulations Governing Testimony by Employees and the Production of Documents in Legal Proceedings; Correction",
-    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21764/streamlining-the-regulations-governing-testimony-by-employees-and-the-production-of-documents-in",
-    "native_id": "2026-21764",
-    "published_at": "2026-10-26T00:00:00+00:00",
-    "published_raw": "2026-10-26",
-    "document_type": "Rule",
-    "issuer": "Commerce Department",
-    "issuer_ids": [
-      "us-fr:54"
-    ],
-    "summary": "By this action, the Department makes a correcting amendment to its regulations governing testimony by its current and former employees and the production of its documents in legal proceedings. The Department previously amended those regulations via final rule by removing and/or replacing language that is redundant, that references other authorities, or that provides only unnecessary elaboration. One of the amendatory instructions set forth in that rule, however, indicated that certain introductory text and a certain subparagraph were being amended when, in fact, no such amendments were made to those portions. This action merely corrects that inaccurate amendatory instruction and does not make any further changes to the regulations.",
-    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-26/pdf/2026-21764.pdf",
-    "source_metadata": {
-      "document_type": "Rule",
-      "document_stage": "final_rule_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Commerce Department",
-      "jurisdiction": "US",
-      "family": "rules_notices_and_presidential_documents"
-    },
-    "primary_source_id": "us-federal-register",
-    "n": 6544,
-    "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-28T19:21:07.640451+00:00",
-    "source_ids": [
-      "us-federal-register"
-    ]
-  },
-  {
-    "title": "NRC Reviews of Reactor Designs Previously Authorized by U.S. Department of Energy or Department of War",
-    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21801/nrc-reviews-of-reactor-designs-previously-authorized-by-us-department-of-energy-or-department-of-war",
-    "native_id": "2026-21801",
-    "published_at": "2026-10-26T00:00:00+00:00",
-    "published_raw": "2026-10-26",
-    "document_type": "Rule",
-    "issuer": "Nuclear Regulatory Commission",
-    "issuer_ids": [
-      "us-fr:383"
-    ],
-    "summary": "The U.S. Nuclear Regulatory Commission (NRC) is amending its regulations to facilitate direct leveraging of prior U.S. Department of Energy or Department of War authorizations of demonstration reactors into the NRC's licensing reviews of commercial reactor facility applications that reference those designs. This rulemaking improves NRC licensing review efficiency, where applicable, by explicitly establishing by regulation an additional means for reactor applicants to demonstrate the safety functions of their reactor designs, thereby contributing to the safe and secure use and deployment of civilian nuclear energy technologies.",
-    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-26/pdf/2026-21801.pdf",
-    "source_metadata": {
-      "document_type": "Rule",
-      "document_stage": "final_rule_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Nuclear Regulatory Commission",
-      "jurisdiction": "US",
-      "family": "rules_notices_and_presidential_documents"
-    },
-    "primary_source_id": "us-federal-register",
-    "n": 6511,
-    "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-28T19:21:07.640451+00:00",
-    "source_ids": [
-      "us-federal-register"
-    ]
-  },
-  {
-    "title": "Fisheries of the Exclusive Economic Zone Off Alaska; Reallocation of Pacific Cod in the Bering Sea and Aleutian Islands Management Area",
-    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21805/fisheries-of-the-exclusive-economic-zone-off-alaska-reallocation-of-pacific-cod-in-the-bering-sea",
-    "native_id": "2026-21805",
-    "published_at": "2026-10-26T00:00:00+00:00",
-    "published_raw": "2026-10-26",
-    "document_type": "Rule",
-    "issuer": "Commerce Department; National Oceanic and Atmospheric Administration",
-    "issuer_ids": [
-      "us-fr:54",
-      "us-fr:361"
-    ],
-    "summary": "NMFS is reallocating the projected unused amounts of Pacific cod from catcher vessels using trawl gear to catcher vessels less than 60 feet (18.3 meters (m)) length overall (LOA) using hook-and-line or pot gear and American Fisheries Act (AFA) trawl catcher/processors in the Bering Sea and Aleutian Islands management area (BSAI). This action is necessary to allow the 2026 total allowable catch (TAC) of Pacific cod in the BSAI to be harvested.",
-    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-26/pdf/2026-21805.pdf",
-    "source_metadata": {
-      "document_type": "Rule",
-      "document_stage": "final_rule_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Commerce Department; National Oceanic and Atmospheric Administration",
-      "jurisdiction": "US",
-      "family": "rules_notices_and_presidential_documents"
-    },
-    "primary_source_id": "us-federal-register",
-    "n": 6508,
-    "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-28T19:21:07.640451+00:00",
-    "source_ids": [
-      "us-federal-register"
-    ]
-  },
-  {
-    "title": "Ohio Regulatory Program",
-    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21807/ohio-regulatory-program",
-    "native_id": "2026-21807",
-    "published_at": "2026-10-26T00:00:00+00:00",
-    "published_raw": "2026-10-26",
-    "document_type": "Rule",
-    "issuer": "Interior Department; Surface Mining Reclamation and Enforcement Office",
-    "issuer_ids": [
-      "us-fr:253",
-      "us-fr:480"
-    ],
-    "summary": "The Office of Surface Mining Reclamation and Enforcement (OSM) is approving an amendment to the Ohio regulatory program (Ohio program) under the Surface Mining Control and Reclamation Act of 1977 (SMCRA or the Act). OSM is approving Ohio's proposal to add, rescind, or modify 39 rules under the Ohio Administrative Code that relate to, among other things: permit applications, hydrologic map and cross-sections, general map requirements, requirements for permits for special categories of mining, underground mining permit application, small operator assistance program, and self-bonding.",
-    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-26/pdf/2026-21807.pdf",
-    "source_metadata": {
-      "document_type": "Rule",
-      "document_stage": "final_rule_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Interior Department; Surface Mining Reclamation and Enforcement Office",
-      "jurisdiction": "US",
-      "family": "rules_notices_and_presidential_documents"
-    },
-    "primary_source_id": "us-federal-register",
-    "n": 6507,
-    "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-28T19:21:07.640451+00:00",
-    "source_ids": [
-      "us-federal-register"
-    ]
-  },
-  {
-    "title": "Closed Captioning of Video Programming",
-    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21808/closed-captioning-of-video-programming",
-    "native_id": "2026-21808",
-    "published_at": "2026-10-26T00:00:00+00:00",
-    "published_raw": "2026-10-26",
-    "document_type": "Rule",
-    "issuer": "Federal Communications Commission",
-    "issuer_ids": [
-      "us-fr:161"
-    ],
-    "summary": "In this document, the Federal Communications Commission (Commission) exempts video programmers for public, educational, and governmental access (PEG) channels from the requirement to register with the Commission and to certify captioning compliance if the PEG video programmers provide video programming exclusively to PEG channels that are exempt from closed captioning requirements. Additionally, providers of PEG programming are relieved of filing obligations if the administrators of non-exempt PEG channels certify compliance for programming carried on such channels. The Commission similarly exempts providers of programming carried on nonbroadcast networks for distribution by a cable operator or other multichannel video programming distributor (MVPD) from certifying when the nonbroadcast network itself certifies that it is exempt or that all programming comprising the network's linear line-up is either exempt from or compliant with the closed captioning rules.",
-    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-26/pdf/2026-21808.pdf",
-    "source_metadata": {
-      "document_type": "Rule",
-      "document_stage": "final_rule_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission",
-      "jurisdiction": "US",
-      "family": "rules_notices_and_presidential_documents"
-    },
-    "primary_source_id": "us-federal-register",
-    "n": 6506,
-    "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-28T19:21:07.640451+00:00",
-    "source_ids": [
-      "us-federal-register"
-    ]
-  },
-  {
-    "title": "Establishment of Class E Airspace; Canton, IL",
-    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21817/establishment-of-class-e-airspace-canton-il",
-    "native_id": "2026-21817",
-    "published_at": "2026-10-26T00:00:00+00:00",
-    "published_raw": "2026-10-26",
-    "document_type": "Rule",
-    "issuer": "Transportation Department; Federal Aviation Administration",
-    "issuer_ids": [
-      "us-fr:492",
-      "us-fr:159"
-    ],
-    "summary": "This action establishes Class E airspace at Graham Hospital Heliport, Canton, IL. This action supports new instrument procedures and instrument flight rule (IFR) operations.",
-    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-26/pdf/2026-21817.pdf",
-    "source_metadata": {
-      "document_type": "Rule",
-      "document_stage": "final_rule_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Transportation Department; Federal Aviation Administration",
-      "jurisdiction": "US",
-      "family": "rules_notices_and_presidential_documents"
-    },
-    "primary_source_id": "us-federal-register",
-    "n": 6497,
-    "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-28T19:21:07.640451+00:00",
-    "source_ids": [
-      "us-federal-register"
-    ]
-  },
-  {
-    "title": "Enhancing the Ability of Consumers To Control the Robocalls",
-    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21821/enhancing-the-ability-of-consumers-to-control-the-robocalls",
-    "native_id": "2026-21821",
-    "published_at": "2026-10-26T00:00:00+00:00",
-    "published_raw": "2026-10-26",
-    "document_type": "Rule",
-    "issuer": "Federal Communications Commission",
-    "issuer_ids": [
-      "us-fr:161"
-    ],
-    "summary": "In this document, the Federal Communications Commission (Commission) modifies rules to ensure that consumers can revoke consent for robocalls they no longer wish to receive while continuing to receive those they still want. We also modernize our rules to ensure that consumers have clear, simple, and automated ways to revoke consent while streamlining callers' ability to process revocations. Specifically, we allow callers to interpret a revocation request as applying only to the specific category of informational robocalls to which the revocation was directed, allow callers to designate an exclusive means to revoke consent, and amend the exemption from the consent requirement for financial institutions to allow them to more easily alert customers to fraudulent activity on their account. In addition, we delegate authority to the Consumer and Governmental Affairs Bureau (CGB) in consultation with the Enforcement Bureau (EB) to review our robocall rules to ensure that those rules are clear and easy to read.",
-    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-26/pdf/2026-21821.pdf",
-    "source_metadata": {
-      "document_type": "Rule",
-      "document_stage": "final_rule_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission",
-      "jurisdiction": "US",
-      "family": "rules_notices_and_presidential_documents"
-    },
-    "primary_source_id": "us-federal-register",
-    "n": 6493,
-    "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-28T19:21:07.640451+00:00",
-    "source_ids": [
-      "us-federal-register"
-    ]
-  },
-  {
-    "title": "Wyoming Regulatory Program",
-    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21835/wyoming-regulatory-program",
-    "native_id": "2026-21835",
-    "published_at": "2026-10-26T00:00:00+00:00",
-    "published_raw": "2026-10-26",
-    "document_type": "Rule",
-    "issuer": "Interior Department; Surface Mining Reclamation and Enforcement Office",
-    "issuer_ids": [
-      "us-fr:253",
-      "us-fr:480"
-    ],
-    "summary": "The Office of Surface Mining Reclamation and Enforcement (OSM), are approving an amendment to the Wyoming regulatory program (Wyoming program) under the Surface Mining Control and Reclamation Act of 1977 (SMCRA or the Act). The Wyoming Land Quality Division (WLQD) submitted this proposed amendment in response to our January 19, 2024 partial approval of an amendment to WLQD's regulations for coal exploration by drilling (SATS No. WY-050-FOR; Docket ID No. OSM-2021- 0004). In the final rule, under the heading \"Revisions to Wyoming's Rules That We Are Not Approving,\" OSM listed several provisions containing typographical errors that WLQD would need to correct through future rulemaking. WLQD now proposes those corrections with this amendment (SATS No. WY-055-FOR; Docket ID No. OSM-2025-0002).",
-    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-26/pdf/2026-21835.pdf",
-    "source_metadata": {
-      "document_type": "Rule",
-      "document_stage": "final_rule_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Interior Department; Surface Mining Reclamation and Enforcement Office",
-      "jurisdiction": "US",
-      "family": "rules_notices_and_presidential_documents"
-    },
-    "primary_source_id": "us-federal-register",
-    "n": 6489,
-    "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-28T19:21:07.640451+00:00",
-    "source_ids": [
-      "us-federal-register"
     ]
   }
 ]
