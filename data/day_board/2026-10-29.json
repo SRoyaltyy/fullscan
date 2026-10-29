@@ -1,6 +1,6 @@
 {
   "date": "2026-10-29",
-  "generated_at": "2026-10-29T05:49:34.639853-04:00",
+  "generated_at": "2026-10-29T05:49:42.395869-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -8,8 +8,8 @@
     "MISSING News actions JSON `01_daily/news/2026-10-29_actions.json` \u2014 missing"
   ],
   "counts": {
-    "ok": 6,
-    "partial": 1,
+    "ok": 4,
+    "partial": 3,
     "fail": 1,
     "n": 8
   },
@@ -636,11 +636,11 @@
       "key": "stock_book",
       "name": "Stock Book ALL",
       "yaml": "stock_book_all.yml",
-      "status": "OK",
+      "status": "PARTIAL",
       "inputs_ready": false,
-      "n_req_ok": 4,
+      "n_req_ok": 2,
       "n_req": 4,
-      "n_opt_ok": 3,
+      "n_opt_ok": 1,
       "n_opt": 4,
       "files": [
         {
@@ -764,10 +764,10 @@
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-10-29_stock_book.json",
           "role": "required",
-          "status": "OK",
-          "reason": "horizons=5 names=155",
-          "size": 1246014,
-          "said": "1d BUY FIS, SMMT, ACRS, TLSA, CVE, IRD, GO \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
           "bullets": []
         },
         {
@@ -775,24 +775,21 @@
           "name": "Stock book MD",
           "path": "01_daily/2026-10-29_stock_book.md",
           "role": "required",
-          "status": "OK",
-          "reason": "",
-          "size": 53434,
-          "said": "Stock book \u2014 2026-10-29",
-          "bullets": [
-            "_Generated 2026-10-29T05:45:46.713624-04:00_",
-            "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "green",
           "name": "Green-pile JSON",
           "path": "data/stock_book/2026-10-29_green.json",
           "role": "optional",
-          "status": "OK",
-          "reason": "",
-          "size": 585,
-          "said": "0 green \u00b7",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
           "bullets": []
         },
         {
@@ -814,10 +811,10 @@
           "name": "Dashboard HTML",
           "path": "dashboard/index.html",
           "role": "optional",
-          "status": "OK",
-          "reason": "live-book poller + today.json (2026-10-29)",
+          "status": "FAIL",
+          "reason": "session 2026-10-29 not in dashboard dates (last=2026-10-07)",
           "size": 10510589,
-          "said": "live-book poller + today.json (2026-10-29)",
+          "said": "session 2026-10-29 not in dashboard dates (last=2026-10-07)",
           "bullets": []
         }
       ],
@@ -830,9 +827,9 @@
       "key": "publish",
       "name": "Dashboard / .io",
       "yaml": "deploy-dashboard.yml",
-      "status": "OK",
-      "inputs_ready": true,
-      "n_req_ok": 2,
+      "status": "PARTIAL",
+      "inputs_ready": false,
+      "n_req_ok": 1,
       "n_req": 2,
       "n_opt_ok": 0,
       "n_opt": 1,
@@ -842,10 +839,10 @@
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-10-29_stock_book.json",
           "role": "input",
-          "status": "OK",
-          "reason": "horizons=5 names=155",
-          "size": 1246014,
-          "said": "1d BUY FIS, SMMT, ACRS, TLSA, CVE, IRD, GO \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
           "bullets": []
         },
         {
@@ -853,10 +850,10 @@
           "name": "Dashboard HTML (repo)",
           "path": "dashboard/index.html",
           "role": "required",
-          "status": "OK",
-          "reason": "live-book poller + today.json (2026-10-29)",
+          "status": "FAIL",
+          "reason": "session 2026-10-29 not in dashboard dates (last=2026-10-07)",
           "size": 10510589,
-          "said": "live-book poller + today.json (2026-10-29)",
+          "said": "session 2026-10-29 not in dashboard dates (last=2026-10-07)",
           "bullets": []
         },
         {
@@ -1588,6 +1585,31 @@
         }
       ],
       "preview": "1d BUY FIS, SMMT, ACRS, TLSA, CVE, IRD, GO \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, TE, SKYX \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-10-29 BUY FIS, SMMT, ACRS, TLSA, CVE, IRD, GO \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, TE, SKYX \u00b7 2026-10-29 BUY FIS, SMMT, ACRS, TLSA, CVE, IRD, GO \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, TE, SKYX \u00b7 # Stock book \u2014 2026-10-29\n_Generated 2026-10-29T05:45:46.713624-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-10-29",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-29T05:49:41.443549-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-10-29_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 9379,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-10-29_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5007,
+          "preview": "# Weather report \u2014 2026-10-29\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-10-29\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
     }
   ],
   "href": {
