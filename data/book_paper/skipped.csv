@@ -432,10 +432,10 @@ date,ticker,side,conviction,reason
 2026-10-19,SN,BUY,0.407997786723631,"insufficient cash ($10,394 > $9,733)"
 2026-10-20,SGRY,BUY,0.3956827121173043,day gate CLOSED: predict DOWN score -8.07 < +1.00
 2026-10-21,PRCH,BUY,0.8385429209840265,no exit price (unsettleable)
-2026-10-21,CDNA,BUY,0.8298636020396053,no exit price (unsettleable)
+2026-10-21,CDNA,BUY,0.8298636020396053,"insufficient cash ($10,613 > $9,733)"
 2026-10-21,AVPT,BUY,0.782834036619781,no exit price (unsettleable)
-2026-10-21,ARQT,BUY,0.7812704038915628,no exit price (unsettleable)
-2026-10-21,SONO,BUY,0.7393501502154107,no exit price (unsettleable)
+2026-10-21,ARQT,BUY,0.7812704038915628,"insufficient cash ($10,617 > $9,733)"
+2026-10-21,SONO,BUY,0.7393501502154107,"insufficient cash ($10,630 > $9,733)"
 2026-10-21,CNK,BUY,0.6834163757139815,no exit price (unsettleable)
 2026-10-21,ABX,BUY,0.659986200076544,no exit price (unsettleable)
 2026-10-21,PAYS,BUY,0.6549498116886701,no exit price (unsettleable)
@@ -444,10 +444,10 @@ date,ticker,side,conviction,reason
 2026-10-21,CHEF,BUY,0.6016659334882688,no exit price (unsettleable)
 2026-10-21,EDU,BUY,0.5941820908100854,no session bar (price data missing)
 2026-10-21,EZPW,BUY,0.5711134990796938,no exit price (unsettleable)
-2026-10-21,TRU,BUY,0.5505929098468964,no exit price (unsettleable)
-2026-10-21,VEEV,BUY,0.41256815189198504,no exit price (unsettleable)
-2026-10-21,CORT,BUY,0.3924106332259807,no exit price (unsettleable)
-2026-10-21,NTAP,BUY,0.3672381992469095,no exit price (unsettleable)
+2026-10-21,TRU,BUY,0.5505929098468964,"insufficient cash ($10,579 > $9,733)"
+2026-10-21,VEEV,BUY,0.41256815189198504,"insufficient cash ($10,580 > $9,733)"
+2026-10-21,CORT,BUY,0.3924106332259807,"insufficient cash ($10,584 > $9,733)"
+2026-10-21,NTAP,BUY,0.3672381992469095,"insufficient cash ($10,428 > $9,733)"
 2026-10-22,NET,BUY,-0.1699682854974174,day gate CLOSED: predict DOWN score -14.31 < +1.00
 2026-10-23,SGRY,BUY,0.5926681627830884,day gate CLOSED: predict DOWN score -7.54 < +1.00
 2026-10-23,MD,BUY,0.6484129422770065,day gate CLOSED: predict DOWN score -7.54 < +1.00
@@ -478,3 +478,18 @@ date,ticker,side,conviction,reason
 2026-10-27,SN,BUY,0.4807725869143047,no exit price (unsettleable)
 2026-10-27,VEEV,BUY,0.46786125233643583,no exit price (unsettleable)
 2026-10-27,VLO,BUY,0.1814231585646559,no exit price (unsettleable)
+2026-10-28,CDNA,BUY,0.8361889797148239,no exit price (unsettleable)
+2026-10-28,CBRL,BUY,0.8285662537871061,no exit price (unsettleable)
+2026-10-28,BLFS,BUY,0.7510809320601484,no session bar (price data missing)
+2026-10-28,ARQT,BUY,0.746225212091296,no exit price (unsettleable)
+2026-10-28,FIGS,BUY,0.7094221001057945,no session bar (price data missing)
+2026-10-28,CAKE,BUY,0.6999743690728588,no session bar (price data missing)
+2026-10-28,CNK,BUY,0.6838302344474319,no session bar (price data missing)
+2026-10-28,CTOS,BUY,0.6535125412818537,no session bar (price data missing)
+2026-10-28,CHEF,BUY,0.6101706982331981,no session bar (price data missing)
+2026-10-28,LAUR,BUY,0.5735167957103717,no session bar (price data missing)
+2026-10-28,LRN,BUY,0.5217829424626285,no session bar (price data missing)
+2026-10-28,SN,BUY,0.4190876418755131,no exit price (unsettleable)
+2026-10-28,VEEV,BUY,0.3691028321645527,no exit price (unsettleable)
+2026-10-28,COP,BUY,0.25036080383102366,no exit price (unsettleable)
+2026-10-28,VLO,BUY,0.12131264496880217,no exit price (unsettleable)
