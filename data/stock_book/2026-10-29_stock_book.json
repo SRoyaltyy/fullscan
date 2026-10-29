@@ -1,7 +1,7 @@
 {
   "meta": {
     "date": "2026-10-29",
-    "generated_at": "2026-10-29T07:37:16.639199-04:00",
+    "generated_at": "2026-10-29T08:01:45.391571-04:00",
     "general_bias": -0.6613,
     "sector_bias": {},
     "accuracy_gates": {
@@ -118,7 +118,7 @@
       ]
     },
     "weights_source": "book_policy.json",
-    "policy_version": 17,
+    "policy_version": 18,
     "heat_scale": 0.25,
     "heat_source": "finviz_tape",
     "n_heat_captains": 40,

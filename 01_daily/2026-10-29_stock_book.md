@@ -1,6 +1,6 @@
 # Stock book — 2026-10-29
 
-_Generated 2026-10-29T07:37:16.639199-04:00_
+_Generated 2026-10-29T08:01:45.391571-04:00_
 
 This file is the **human read** of one run. CSV/JSON next to it are the machine files.
 
@@ -230,7 +230,7 @@ If a row says **missing**, that layer scored 0 today. If it says **found**, it m
 | sector:Technology | 36% | 31 | ×0.50 |
 | sector:Utilities | 40% | 30 | ×0.50 |
 
-## Horizon weights — book_policy.json v17 · renormalized (absent: sector)
+## Horizon weights — book_policy.json v18 · renormalized (absent: sector)
 
 | Horizon | join | sector | general | news | AB | peer | + opportunity |
 |---------|------|--------|---------|------|----|------|----------------|
