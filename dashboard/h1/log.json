@@ -8947,5 +8947,13 @@
     "sha256": "cf5c50728a4a92f0a76ecb9d12a6bc252fde6350be8dc63484d261e67374e4d6",
     "shares": 1421,
     "ticker": "TRON"
+  },
+  {
+    "committed_at": "2026-10-29T12:43:44Z",
+    "date": "2026-10-28",
+    "kind": "missing",
+    "reason": "missing: plan not sealed before open",
+    "recipe": "union_hot_n4_h1__w0",
+    "sha256": "73a9d16b1b6d6474273b8687b28d9f474c4d5fe17fa626f8f4e85fefbaec10ba"
   }
 ]
