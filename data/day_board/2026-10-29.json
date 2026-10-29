@@ -1,6 +1,6 @@
 {
   "date": "2026-10-29",
-  "generated_at": "2026-10-29T16:23:58.998892-04:00",
+  "generated_at": "2026-10-29T16:51:16.836606-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -182,7 +182,7 @@
       "inputs_ready": true,
       "n_req_ok": 7,
       "n_req": 9,
-      "n_opt_ok": 2,
+      "n_opt_ok": 3,
       "n_opt": 14,
       "files": [
         {
@@ -334,11 +334,16 @@
           "name": "Sector board JSON",
           "path": "01_daily/sectors/2026-10-29/_board.json",
           "role": "optional",
-          "status": "SKIP",
-          "reason": "optional \u2014 sector board not required",
-          "size": 0,
-          "said": "optional \u2014 sector board not required",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 6361,
+          "said": "0 up / 0 down / 0 flat",
+          "bullets": [
+            "XLB missing",
+            "XLC missing",
+            "XLY missing",
+            "XLP missing"
+          ]
         },
         {
           "key": "qc",
@@ -502,13 +507,18 @@
           "bullets": []
         }
       ],
-      "said": "general DOWN  -6.946",
+      "said": "general DOWN  -6.946 \u00b7 sectors 0 up / 0 down / 0 flat",
       "bullets": [
         "bad: Alphabet \u221210.5% on revenue miss and \u2212$9.07B FCF",
         "bad: Marvell/Fortinet/ServiceNow crashes",
         "bad: memory chips lower",
         "good: Microsoft +3.4% premarket",
-        "good: oil sharply lower (Brent \u22124%)"
+        "good: oil sharply lower (Brent \u22124%)",
+        "XLB missing",
+        "XLC missing",
+        "XLY missing",
+        "XLP missing",
+        "XLE missing"
       ]
     },
     {
@@ -681,7 +691,7 @@
       "n_req_ok": 4,
       "n_req": 4,
       "n_opt_ok": 3,
-      "n_opt": 4,
+      "n_opt": 3,
       "files": [
         {
           "key": "in_general",
@@ -703,12 +713,17 @@
           "key": "in_board",
           "name": "Sector board JSON",
           "path": "01_daily/sectors/2026-10-29/_board.json",
-          "role": "optional",
-          "status": "SKIP",
-          "reason": "optional \u2014 sector board not required",
-          "size": 0,
-          "said": "optional \u2014 sector board not required",
-          "bullets": []
+          "role": "input",
+          "status": "OK",
+          "reason": "",
+          "size": 6361,
+          "said": "0 up / 0 down / 0 flat",
+          "bullets": [
+            "XLB missing",
+            "XLC missing",
+            "XLY missing",
+            "XLP missing"
+          ]
         },
         {
           "key": "in_actions",
@@ -816,7 +831,7 @@
           "role": "required",
           "status": "OK",
           "reason": "horizons=5 names=113",
-          "size": 983366,
+          "size": 983364,
           "said": "1d BUY FIS \u00b7 SELL NEOV, OKLO, FCEL, NNDM, EOSE, TE \u00b7 -0.6613",
           "bullets": []
         },
@@ -827,10 +842,10 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 29478,
+          "size": 29442,
           "said": "Stock book \u2014 2026-10-29",
           "bullets": [
-            "_Generated 2026-10-29T08:01:45.391571-04:00_",
+            "_Generated 2026-10-29T16:51:14.003215-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -894,7 +909,7 @@
           "role": "input",
           "status": "OK",
           "reason": "horizons=5 names=113",
-          "size": 983366,
+          "size": 983364,
           "said": "1d BUY FIS \u00b7 SELL NEOV, OKLO, FCEL, NNDM, EOSE, TE \u00b7 -0.6613",
           "bullets": []
         },
@@ -1001,7 +1016,22 @@
       "score": "-6.946",
       "direction": "down"
     },
-    "sectors": {},
+    "sectors": {
+      "said": "0 up / 0 down / 0 flat",
+      "bullets": [
+        "XLB missing",
+        "XLC missing",
+        "XLY missing",
+        "XLP missing",
+        "XLE missing",
+        "XLF missing",
+        "XLV missing",
+        "XLI missing",
+        "XLRE missing",
+        "XLK missing",
+        "XLU missing"
+      ]
+    },
     "news": {},
     "weather": {
       "said": "favorable 2 \u00b7 hostile 7 \u00b7 neutral 2",
@@ -4617,6 +4647,30 @@
       "commit_msg": "auto: land finviz_market_digest_close [2026-10-29]",
       "workflow": "Finviz homepage market digest",
       "run_id": "40947657199",
+      "manifest": "research/input_freeze/2026-10-29/manifest.json"
+    },
+    {
+      "path": "01_daily/2026-10-29_stock_book.md",
+      "at": "2026-10-29T16:51:48-04:00",
+      "commit_msg": "auto: strategy tickets 2026-10-29",
+      "workflow": "Publish strategy tickets",
+      "run_id": "40948706816",
+      "manifest": "research/input_freeze/2026-10-29/manifest.json"
+    },
+    {
+      "path": "data/stock_book/2026-10-29_input_health.json",
+      "at": "2026-10-29T16:51:48-04:00",
+      "commit_msg": "auto: strategy tickets 2026-10-29",
+      "workflow": "Publish strategy tickets",
+      "run_id": "40948706816",
+      "manifest": "research/input_freeze/2026-10-29/manifest.json"
+    },
+    {
+      "path": "data/stock_book/2026-10-29_stock_book.json",
+      "at": "2026-10-29T16:51:48-04:00",
+      "commit_msg": "auto: strategy tickets 2026-10-29",
+      "workflow": "Publish strategy tickets",
+      "run_id": "40948706816",
       "manifest": "research/input_freeze/2026-10-29/manifest.json"
     }
   ]
