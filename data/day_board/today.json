@@ -1,107 +1,20 @@
 {
   "date": "2026-10-29",
-  "generated_at": "2026-10-29T06:13:37.434794-04:00",
+  "generated_at": "2026-10-29T06:13:43.974473-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
-    "ok": 3,
-    "partial": 3,
+    "ok": 4,
+    "partial": 2,
     "fail": 2,
     "n": 8
   },
-  "buy_1d": [
-    {
-      "ticker": "FIS",
-      "score": 0.254050266173111
-    },
-    {
-      "ticker": "SMMT",
-      "score": 0.5987100132402782
-    },
-    {
-      "ticker": "ACRS",
-      "score": 0.584193429496535
-    },
-    {
-      "ticker": "TLSA",
-      "score": 0.6957906860661207
-    },
-    {
-      "ticker": "CVE",
-      "score": 0.18813368613100678
-    },
-    {
-      "ticker": "IRD",
-      "score": 0.3913570176699817
-    },
-    {
-      "ticker": "GO",
-      "score": 0.3287426006528995
-    }
-  ],
-  "sell_1d": [
-    {
-      "ticker": "NEOV",
-      "score": -0.3280530719127599
-    },
-    {
-      "ticker": "OKLO",
-      "score": -0.21008731838481098
-    },
-    {
-      "ticker": "FCEL",
-      "score": -0.25762794189647453
-    },
-    {
-      "ticker": "NNDM",
-      "score": -0.16729844126227944
-    },
-    {
-      "ticker": "POWL",
-      "score": -0.16010728134132396
-    },
-    {
-      "ticker": "EOSE",
-      "score": -0.3176344436699983
-    },
-    {
-      "ticker": "TE",
-      "score": -0.2741024992064137
-    },
-    {
-      "ticker": "SKYX",
-      "score": -0.3762022811353095
-    }
-  ],
-  "flatten": {
-    "said": "0 priced buys \u00b7 cash $9.19 \u00b7 morning S missing",
-    "bullets": [
-      "0 priced buys",
-      "cash $9.19",
-      "morning S missing"
-    ]
-  },
+  "buy_1d": [],
+  "sell_1d": [],
+  "flatten": {},
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "peer_rs",
-      "title": "Peer RS",
-      "date": "2026-10-29",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-29T05:49:57.239809-04:00",
-      "files": [
-        {
-          "path": "data/peers/2026-10-29_peer_rs.csv",
-          "ok": true,
-          "reason": "",
-          "size": 821534,
-          "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
-        }
-      ],
-      "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
-    },
     {
       "key": "paper",
       "title": "Paper dashboard",
@@ -451,6 +364,31 @@
         }
       ],
       "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-10-29\n_Generated 2026-10-29T04:24:13.014368-04:00 \u00b7 export=data/exports/finviz_2026-10-28.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_"
+    },
+    {
+      "key": "map_heat",
+      "title": "Map heat tables",
+      "date": "2026-10-29",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-29T06:13:43.510775-04:00",
+      "files": [
+        {
+          "path": "01_daily/map_heat/2026-10-29_map_heat.json",
+          "ok": true,
+          "reason": "",
+          "size": 275451,
+          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
+        },
+        {
+          "path": "01_daily/map_heat/2026-10-29_map_heat.md",
+          "ok": true,
+          "reason": "",
+          "size": 18101,
+          "preview": "# MAP HEAT \u2014 2026-10-29\nExport `finviz_2026-10-28.csv` \u00b7 11616 names \u00b7 generated 2026-10-29T04:29:31.500052-04:00"
+        }
+      ],
+      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-10-29\nExport `finviz_2026-10-28.csv` \u00b7 11616 names \u00b7 generated 2026-10-29T04:29:31.500052-04:00"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
