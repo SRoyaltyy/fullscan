@@ -21,8 +21,8 @@
    "SIT": 0
   },
   "h1": {
-   "MISSING": 1,
-   "OK": 0,
+   "MISSING": 0,
+   "OK": 1,
    "SIT": 0
   },
   "holdup": {
@@ -52,7 +52,7 @@
   }
  },
  "date": "2026-10-29",
- "generated_at": "2026-10-29T08:44:20-04:00",
+ "generated_at": "2026-10-29T08:56:04-04:00",
  "strategies": [
   {
    "buys": [
@@ -5151,13 +5151,23 @@
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "PRME",
+    "GMAB",
+    "PACB",
+    "SWRD"
+   ],
    "family": "h1",
    "name": "h1",
-   "note": "no sealed plan row",
-   "sells": [],
+   "note": "sealed 2026-10-29T12:55:31Z",
+   "sells": [
+    "ARHS 169",
+    "CHKP 12",
+    "LQDA 45",
+    "UWMC 1388"
+   ],
    "source": "research/hot_n4_clean_v4/forward_h1/h1_log.jsonl",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [],
