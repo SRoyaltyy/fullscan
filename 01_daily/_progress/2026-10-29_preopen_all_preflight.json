@@ -1,8 +1,8 @@
 {
  "workflow": "preopen_all",
  "date": "2026-10-29",
- "checked_at": "2026-10-29 04:30 ET",
- "run_id": "40840879033",
+ "checked_at": "2026-10-29 05:56 ET",
+ "run_id": "40851146025",
  "ok": true,
  "failed": [],
  "items": [
@@ -10,7 +10,7 @@
    "id": "ecs_code_current",
    "ok": true,
    "plain": "code stale: this checkout's code (src, scripts, config, .github) must match GitHub main",
-   "detail": "code matches main (HEAD b84dd3c0, main 03d4436a)"
+   "detail": "code matches main (HEAD 7397fb2b, main 5d60513b)"
   },
   {
    "id": "no_unapproved_paid_fallback",
