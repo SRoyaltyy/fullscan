@@ -87,6 +87,18 @@ def collect_rows(root: Path | None = None) -> list[dict]:
     return rows
 
 
+def dedupe(rows: list[dict]) -> list[dict]:
+    seen = set()
+    out = []
+    for r in rows:
+        key = (r["parse"], r["stage"], r["title"].lower(), r["url"])
+        if key in seen:
+            continue
+        seen.add(key)
+        out.append(r)
+    return out
+
+
 def days_doc(rows: list[dict]) -> dict:
     counts = Counter(r["parse"] for r in rows if r.get("parse"))
     return {
@@ -96,16 +108,29 @@ def days_doc(rows: list[dict]) -> dict:
 
 
 def build(root: Path | None = None) -> dict:
-    rows = collect_rows(root)
+    rows = dedupe(collect_rows(root))
     return {"n": len(rows), "rows": rows, **{"days": days_doc(rows)["days"]}}
 
 
 def write(root: Path | None = None) -> dict:
+    """Write per-parse-day row shards plus a small index (GitHub caps files at 100MB)."""
     root = root or ROOT
-    rows = collect_rows(root)
+    rows = dedupe(collect_rows(root))
     directory = root / "dashboard" / "news-dir"
-    directory.mkdir(parents=True, exist_ok=True)
-    index = {"n": len(rows), "rows": rows}
+    shard_dir = directory / "rows"
+    shard_dir.mkdir(parents=True, exist_ok=True)
+    by_day: dict[str, list[dict]] = {}
+    for r in rows:
+        by_day.setdefault(r.get("parse") or "undated", []).append(r)
+    shards = []
+    for day in sorted(by_day):
+        part = by_day[day]
+        (shard_dir / f"{day}.json").write_text(
+            json.dumps({"date": day, "n": len(part), "rows": part}, ensure_ascii=False, separators=(",", ":")),
+            encoding="utf-8",
+        )
+        shards.append({"date": day, "n": len(part), "path": f"rows/{day}.json"})
+    index = {"n": len(rows), "sharded": True, "shards": shards}
     days = days_doc(rows)
     (directory / "index.json").write_text(
         json.dumps(index, ensure_ascii=False), encoding="utf-8"

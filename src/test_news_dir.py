@@ -43,6 +43,9 @@ def test_build_writes_iso_published_and_days(tmp_path: Path) -> None:
     assert days["days"] == [{"date": "2026-10-01", "n": 2}]
     idx = json.loads((tmp_path / "dashboard" / "news-dir" / "index.json").read_text())
     assert idx["n"] == 2
+    assert idx["sharded"] and idx["shards"][0]["path"] == "rows/2026-10-01.json"
+    shard = json.loads((tmp_path / "dashboard" / "news-dir" / "rows" / "2026-10-01.json").read_text())
+    assert shard["n"] == 2
 
 
 def test_walk_verdicts_reads_drops_and_keeps() -> None:
