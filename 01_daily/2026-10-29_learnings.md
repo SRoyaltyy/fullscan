@@ -1,6 +1,6 @@
 # Learnings report — 2026-10-29
 
-Generated: **2026-10-29T16:40:24.926174-04:00** by `src/learn_cycle.py`.
+Generated: **2026-10-29T17:06:42.783448-04:00** by `src/learn_cycle.py`.
 
 This is the human-readable digest of what the bot **actually learned** this cycle: graded evidence, hypotheses (wins and losses), promoted standing rules, and **how that changes every daily workflow**.
 
@@ -18,7 +18,7 @@ Machine policy file (injected into predicts): `00_grounding/mutable_policy.md`.
 | Lessons promoted to active | 0 |
 | Lessons retired (efficacy-gated) | 10 |
 | Active lesson files now | 211 |
-| Engine policy version | 132 |
+| Engine policy version | 133 |
 
 ## 2. Accuracy by topic (evidence this cycle learned from)
 
