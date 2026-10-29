@@ -16,10 +16,10 @@
 - **AAPL** ERROR OpenClaw and DeepSeek both returned empty for CATALYST STEP1 AAPL
 - **AMZN** ERROR OpenClaw and DeepSeek both returned empty for CATALYST STEP1 AMZN
 - **AMD** ERROR OpenClaw and DeepSeek both returned empty for CATALYST STEP1 AMD
-- **UEC** ERROR OpenClaw and DeepSeek both returned empty for CATALYST STEP2 UEC
+- **UEC** ERROR OpenClaw and DeepSeek both returned empty for CATALYST STEP1 UEC
 - **UUUU** ERROR OpenClaw and DeepSeek both returned empty for CATALYST STEP1 UUUU
-- **SLB** ERROR OpenClaw and DeepSeek both returned empty for CATALYST STEP1 SLB
-- **BKR** ERROR OpenClaw and DeepSeek both returned empty for CATALYST STEP2 BKR
-- **KGS** ERROR OpenClaw and DeepSeek both returned empty for CATALYST STEP2 KGS
+- **SLB** ERROR OpenClaw and DeepSeek both returned empty for CATALYST STEP2 SLB
+- **BKR** ERROR OpenClaw and DeepSeek both returned empty for CATALYST STEP1 BKR
+- **KGS** ERROR OpenClaw and DeepSeek both returned empty for CATALYST STEP1 KGS
 
 CATALYST_DAILY_FAIL 0/8

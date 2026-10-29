@@ -1,6 +1,6 @@
 {
   "date": "2026-10-29",
-  "generated_at": "2026-10-29T05:57:46.128136-04:00",
+  "generated_at": "2026-10-29T07:04:05.889347-04:00",
   "max_n": 8,
   "routing": "Grok \u2192 DeepSeek",
   "grok": true,
@@ -74,7 +74,7 @@
       "ticker": "UEC",
       "role": "override_captain",
       "why": "OVERRIDE Uranium",
-      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP2 UEC"
+      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP1 UEC"
     },
     {
       "ticker": "UUUU",
@@ -86,19 +86,19 @@
       "ticker": "SLB",
       "role": "override_captain",
       "why": "OVERRIDE Oil & Gas Equipment & Services",
-      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP1 SLB"
+      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP2 SLB"
     },
     {
       "ticker": "BKR",
       "role": "override_captain",
       "why": "OVERRIDE Oil & Gas Equipment & Services",
-      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP2 BKR"
+      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP1 BKR"
     },
     {
       "ticker": "KGS",
       "role": "override_captain",
       "why": "OVERRIDE Oil & Gas Equipment & Services",
-      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP2 KGS"
+      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP1 KGS"
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
-  "version": 17,
-  "updated": "2026-10-27T03:03:16.813374-04:00",
-  "asof": "2026-10-26",
+  "version": 18,
+  "updated": "2026-10-29T07:34:42.746296-04:00",
+  "asof": "2026-10-29",
   "weights": {
     "1d": [
       0.12,
@@ -291,6 +291,20 @@
       "sell": "core=3.215pp full=2.432pp \u2192 sell_excludes_addons=False",
       "risk": "book still makes +0.47% on risk-off days \u2192 scale back to 1.0 (cash drag not justified)",
       "heat": "hold 0.25 \u2014 best 0.00, improvement 0.032pp, wins 31%"
+    },
+    {
+      "version": 18,
+      "asof": "2026-10-29",
+      "decisions": {
+        "1d": "hold \u2014 wins only 37% of dates (< 60%)",
+        "3d": "hold \u2014 wins only 33% of dates (< 60%)",
+        "1w": "hold \u2014 wins only 26% of dates (< 60%)",
+        "2w": "hold \u2014 wins only 29% of dates (< 60%)",
+        "1m": "hold \u2014 wins only 53% of dates (< 60%)"
+      },
+      "sell": "core=2.404pp full=1.726pp \u2192 sell_excludes_addons=False",
+      "risk": "book still makes +0.47% on risk-off days \u2192 scale back to 1.0 (cash drag not justified)",
+      "heat": "hold 0.25 \u2014 best 0.00, improvement 0.030pp, wins 31%"
     }
   ]
 }

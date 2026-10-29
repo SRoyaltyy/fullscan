@@ -1,38 +1,38 @@
 {
   "date": "2026-10-29",
-  "generated_at": "2026-10-29T06:20:39.884902-04:00",
+  "generated_at": "2026-10-29T07:01:57.166833-04:00",
   "items": [
     {
-      "ok": false,
+      "ok": true,
       "kind": "general_predict",
       "path": "01_daily/general/2026-10-29_predict.md",
-      "reason": "missing",
-      "size": 0,
+      "reason": "",
+      "size": 15699,
       "carried": false,
       "timeout": false,
-      "empty": true,
+      "empty": false,
       "missing_markers": []
     },
     {
-      "ok": false,
+      "ok": true,
       "kind": "events",
       "path": "01_daily/events/2026-10-29_events.json",
-      "reason": "missing",
-      "size": 0,
+      "reason": "",
+      "size": 56262,
       "carried": false,
       "timeout": false,
-      "empty": true,
+      "empty": false,
       "missing_markers": []
     },
     {
-      "ok": false,
+      "ok": true,
       "kind": "news_judge",
       "path": "01_daily/news/2026-10-29_judge.md",
-      "reason": "missing",
-      "size": 0,
+      "reason": "",
+      "size": 9430,
       "carried": false,
       "timeout": false,
-      "empty": true,
+      "empty": false,
       "missing_markers": []
     },
     {
@@ -47,14 +47,14 @@
       "missing_markers": []
     },
     {
-      "ok": false,
+      "ok": true,
       "kind": "news_actions",
       "path": "01_daily/news/2026-10-29_actions.json",
-      "reason": "missing",
-      "size": 0,
+      "reason": "",
+      "size": 70772,
       "carried": false,
       "timeout": false,
-      "empty": true,
+      "empty": false,
       "missing_markers": []
     },
     {
@@ -251,81 +251,103 @@
       "ok": false,
       "reason": "missing",
       "size": 0,
-      "status": "FAIL"
+      "status": "DEGRADED",
+      "provider": "openclaw",
+      "fallback_reason": "openclaw_timeout"
     },
     {
       "sector": "Communication Services",
       "ok": false,
       "reason": "missing",
       "size": 0,
-      "status": "FAIL"
+      "status": "DEGRADED",
+      "provider": "openclaw",
+      "fallback_reason": "openclaw_timeout"
     },
     {
       "sector": "Consumer Cyclical",
       "ok": false,
       "reason": "missing",
       "size": 0,
-      "status": "FAIL"
+      "status": "DEGRADED",
+      "provider": "openclaw",
+      "fallback_reason": "openclaw_timeout"
     },
     {
       "sector": "Consumer Defensive",
       "ok": false,
       "reason": "missing",
       "size": 0,
-      "status": "FAIL"
+      "status": "DEGRADED",
+      "provider": "openclaw",
+      "fallback_reason": "gateway_down"
     },
     {
       "sector": "Energy",
       "ok": false,
       "reason": "missing",
       "size": 0,
-      "status": "FAIL"
+      "status": "DEGRADED",
+      "provider": "openclaw",
+      "fallback_reason": "gateway_down"
     },
     {
       "sector": "Financial",
       "ok": false,
       "reason": "missing",
       "size": 0,
-      "status": "FAIL"
+      "status": "DEGRADED",
+      "provider": "openclaw",
+      "fallback_reason": "gateway_down"
     },
     {
       "sector": "Healthcare",
       "ok": false,
       "reason": "missing",
       "size": 0,
-      "status": "FAIL"
+      "status": "DEGRADED",
+      "provider": "openclaw",
+      "fallback_reason": "gateway_down"
     },
     {
       "sector": "Industrials",
       "ok": false,
       "reason": "missing",
       "size": 0,
-      "status": "FAIL"
+      "status": "DEGRADED",
+      "provider": "openclaw",
+      "fallback_reason": "gateway_down"
     },
     {
       "sector": "Real Estate",
       "ok": false,
       "reason": "missing",
       "size": 0,
-      "status": "FAIL"
+      "status": "DEGRADED",
+      "provider": "openclaw",
+      "fallback_reason": "gateway_down"
     },
     {
       "sector": "Technology",
       "ok": false,
       "reason": "missing",
       "size": 0,
-      "status": "FAIL"
+      "status": "DEGRADED",
+      "provider": "openclaw",
+      "fallback_reason": "gateway_down"
     },
     {
       "sector": "Utilities",
       "ok": false,
       "reason": "missing",
       "size": 0,
-      "status": "FAIL"
+      "status": "DEGRADED",
+      "provider": "openclaw",
+      "fallback_reason": "gateway_down"
     }
   ],
   "sector_n_ok": 0,
   "sector_n_total": 11,
   "sectors_required": false,
-  "all_ok": false
+  "all_ok": true
 }

@@ -2595,5 +2595,7 @@
     "XLV": 4.0,
     "XLE": 9.5,
     "AMGN": 1.5
-  }
+  },
+  "catalyst_tickers": 0,
+  "catalyst_date": "2026-10-29"
 }
