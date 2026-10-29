@@ -1,6 +1,6 @@
 {
  "date": "2026-10-29",
- "generated_at": "2026-10-29T04:49:09.536831-04:00",
+ "generated_at": "2026-10-29T05:44:47.383433-04:00",
  "stance_vocabulary": [
   "favorable",
   "neutral",
@@ -20,14 +20,14 @@
   "dgs10_current": 4.99,
   "dollar": "flat",
   "dollar_source": "dxy",
-  "dxy_pct_1d": 0.06,
-  "vix_ratio": 0.892,
-  "vix_spot": 17.14,
-  "vix_delta_1d": 0.23,
+  "dxy_pct_1d": 0.09,
+  "vix_ratio": 0.889,
+  "vix_spot": 17.08,
+  "vix_delta_1d": 0.17,
   "vix_ratio_source": "vix/vix3m",
   "vix": "falling",
-  "oil_pct_1d": -1.13,
-  "oil": "falling",
+  "oil_pct_1d": -0.94,
+  "oil": "flat",
   "fear_greed": null,
   "fear_greed_label": null,
   "regime_corr": 0.712,
@@ -139,9 +139,9 @@
     "why": "finviz sector median week -1.62% [tape]"
    },
    "Energy": {
-    "stance": "hostile",
+    "stance": "favorable",
     "confidence": "medium",
-    "why": "finviz sector median week -2.50% [tape]"
+    "why": "news_judge SECTOR Energy [bullish]"
    },
    "Financial": {
     "stance": "neutral",
@@ -166,7 +166,7 @@
    "Technology": {
     "stance": "hostile",
     "confidence": "medium",
-    "why": "finviz sector median week -2.62% [tape]"
+    "why": "news_judge SECTOR Technology [bearish]"
    },
    "Utilities": {
     "stance": "hostile",
