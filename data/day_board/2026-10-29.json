@@ -1,6 +1,6 @@
 {
   "date": "2026-10-29",
-  "generated_at": "2026-10-29T15:05:21.192467-04:00",
+  "generated_at": "2026-10-29T15:05:30.858100-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -790,7 +790,7 @@
           "size": 2258525,
           "said": "217 rows",
           "bullets": [
-            "ARGX, ONC, DVN, REGN, PR, INCY, AZN, PBR-A"
+            "ARGX, ONC, DVN, REGN, PR, INCY, AZN, CNQ"
           ]
         },
         {
@@ -1009,45 +1009,6 @@
     }
   },
   "lands": [
-    {
-      "key": "finviz_digest",
-      "title": "Finviz digest",
-      "date": "2026-10-29",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-29T04:24:13.175251-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-10-29_finviz_digest.json",
-          "ok": true,
-          "reason": "",
-          "size": 97013,
-          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
-        },
-        {
-          "path": "01_daily/news/2026-10-29_finviz_digest.md",
-          "ok": true,
-          "reason": "",
-          "size": 11849,
-          "preview": "# Finviz Daily Digest \u2014 2026-10-29\n_Generated 2026-10-29T04:24:13.014368-04:00 \u00b7 export=data/exports/finviz_2026-10-28.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_"
-        },
-        {
-          "path": "data/finviz/latest.csv",
-          "ok": true,
-          "reason": "",
-          "size": 11562840,
-          "preview": "11775 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAB\""
-        },
-        {
-          "path": "01_daily/news/2026-10-29_finviz_digest_preopen.json",
-          "ok": true,
-          "reason": "",
-          "size": 97013,
-          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
-        }
-      ],
-      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-10-29\n_Generated 2026-10-29T04:24:13.014368-04:00 \u00b7 export=data/exports/finviz_2026-10-28.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_ \u00b7 11775 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAB\" \u00b7 keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
-    },
     {
       "key": "finviz_market_digest",
       "title": "Finviz homepage market digest",
@@ -3973,6 +3934,24 @@
         }
       ],
       "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-10-29\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-10-29",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-29T15:05:29.941663-04:00",
+      "files": [
+        {
+          "path": "data/join/2026-10-29_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2258525,
+          "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 ARGX, ONC, DVN, REGN, PR"
+        }
+      ],
+      "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 ARGX, ONC, DVN, REGN, PR"
     }
   ],
   "href": {
@@ -4362,6 +4341,22 @@
       "path": "data/day_board/2026-10-29.json",
       "at": "2026-10-29T15:05:21-04:00",
       "commit_msg": "auto: land weather [2026-10-29]",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "40935749493",
+      "manifest": "research/input_freeze/2026-10-29/manifest.json"
+    },
+    {
+      "path": "data/day_board/2026-10-29.json",
+      "at": "2026-10-29T15:05:32-04:00",
+      "commit_msg": "auto: land join [2026-10-29]",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "40935749493",
+      "manifest": "research/input_freeze/2026-10-29/manifest.json"
+    },
+    {
+      "path": "data/join/2026-10-29_ranked.csv",
+      "at": "2026-10-29T15:05:32-04:00",
+      "commit_msg": "auto: land join [2026-10-29]",
       "workflow": "Stock Book ALL (one-shot)",
       "run_id": "40935749493",
       "manifest": "research/input_freeze/2026-10-29/manifest.json"
