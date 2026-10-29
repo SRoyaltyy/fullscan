@@ -6691,5 +6691,108 @@
     ],
     "sha256": "21a1c9072a3ec9daaf89e5848f3fed8ce48cba1ad1e2c68fc6d5d041c7b7aecd",
     "unfilled": []
+  },
+  {
+    "added_buys": [],
+    "added_sells": [],
+    "cash_primary": 97.2151014733737,
+    "date": "2026-10-28",
+    "equity_primary": 7870.085018627686,
+    "holdings": [
+      {
+        "cost_primary": 1753.3064499999996,
+        "entry_date": "2026-10-27",
+        "entry_px": 45.855,
+        "last_px": 45.810001373291016,
+        "min_hold": 2,
+        "peak_px": 45.855,
+        "shares": 38,
+        "ticker": "BRZE"
+      },
+      {
+        "cost_primary": 1070.3250768823623,
+        "entry_date": "2026-10-28",
+        "entry_px": 7.929999828338623,
+        "last_px": 7.929999828338623,
+        "min_hold": 2,
+        "peak_px": 7.929999828338623,
+        "shares": 134,
+        "ticker": "CRML"
+      },
+      {
+        "cost_primary": 1072.7331,
+        "entry_date": "2026-10-28",
+        "entry_px": 3.365,
+        "last_px": 3.365,
+        "min_hold": 2,
+        "peak_px": 3.365,
+        "shares": 316,
+        "ticker": "ENVX"
+      },
+      {
+        "cost_primary": 985.4406779174805,
+        "entry_date": "2026-10-28",
+        "entry_px": 163.08999633789062,
+        "last_px": 163.08999633789062,
+        "min_hold": 2,
+        "peak_px": 163.08999633789062,
+        "shares": 6,
+        "ticker": "HRI"
+      },
+      {
+        "cost_primary": 1767.8723138199998,
+        "entry_date": "2026-10-27",
+        "entry_px": 195.229996,
+        "last_px": 192.47999572753906,
+        "min_hold": 2,
+        "peak_px": 195.229996,
+        "shares": 9,
+        "ticker": "POOL"
+      },
+      {
+        "cost_primary": 1074.8335468802688,
+        "entry_date": "2026-10-28",
+        "entry_px": 1.6299999952316284,
+        "last_px": 1.6299999952316284,
+        "min_hold": 2,
+        "peak_px": 1.6299999952316284,
+        "shares": 651,
+        "ticker": "QSI"
+      }
+    ],
+    "kind": "mark",
+    "open_fill_sha256": "21a1c9072a3ec9daaf89e5848f3fed8ce48cba1ad1e2c68fc6d5d041c7b7aecd",
+    "plan_sha256": "a2d020e4682cdec129d88a7d38351c6fa6e5edc1939d037e5f2733491b2d0509",
+    "pnl_status": "marked",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "f414d1f47efcd851294e6fc8263c6362b331ceb1845904ba73539344d626223a"
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-10-28",
+    "entry_date": "2026-10-26",
+    "entry_px": 42.77,
+    "fill": 45.400001525878906,
+    "kind": "close",
+    "pnl_primary": 98.60102135772718,
+    "reason": "hold-expired",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "fb0331718fa60daf9a51e5bfeee8e0ac6888fd13b491027fce53bb7a4236e0a2",
+    "shares": 47,
+    "ticker": "LQDA"
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-10-28",
+    "entry_date": "2026-10-26",
+    "entry_px": 1.41,
+    "fill": 1.5199999809265137,
+    "kind": "close",
+    "pnl_primary": 99.06297289924692,
+    "reason": "hold-expired",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "80beb5b12ad513514d518d6b5b2adc3d3fe6f1676c7b49ae8b7e783c347c027c",
+    "shares": 1428,
+    "ticker": "UWMC"
   }
 ]
