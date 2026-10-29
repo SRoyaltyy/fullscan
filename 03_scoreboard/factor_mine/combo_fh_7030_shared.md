@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared flatten_h5/union_hot_n4_h1 w=0.7,0.3 net=priority
 
-Cash book **+4.61%** ($10,461) · signal-only (no cash/fees) was —. Starts YES **17/30**. Fills 481 · skips 411 · realized $+280.04.
+Cash book **+4.05%** ($10,405) · signal-only (no cash/fees) was —. Starts YES **17/30**. Fills 485 · skips 411 · realized $+280.04.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $63.17.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $2,411.36.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -662,6 +662,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-28 09:30 ET | **BUY** | `AUTL` | 729 | $1.55 | $9.40 | — | $1,195.00 | — | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); ret5=-6.6; combo leftover $1130.51; owner flatten_h5 | join🟡 sector🟡 gen🟢 news🟢 digest🟢 ab🔴 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-28 09:30 ET | **BUY** | `FDMT` | 95 | $11.89 | $2.27 | — | $63.17 | — | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); ret5=-8.7; combo leftover $1130.51; owner flatten_h5 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $63.17 | ▲ close $10,460.90 vs 09:30 $10,228.11 (session +282.69) | 16:00 close · cash $63.17 · equity $10,460.90 vs 09:30 $10,228.11 (+232.79; session marks +282.69) · 10 name(s) marked open→close (per-name table). PRGO×141 09:30 $15.96 → close $15.92 -5.64; RH×4 09:30 $140.69 → close $145.06 +17.48; VCYT×11 09:30 $50.00 → close $50.31 +3.41; IMSR×202 09:30 $2.95 → close $3.35 +80.80; BETA×28 09:30 $20.88 → close $19.98 -25.20; SRRK×25 09:30 $43.82 → close $43.25 -14.25; BRKR×18 09:30 $60.66 → close $62.00 +24.12; NEO×65 09:30 $17.30 → close $17.99 +44.85; AUTL×729 09:30 $1.55 → close $1.63 +58.32; FDMT×95 09:30 $11.89 → close $12.93 +98.80 | — |
+| 2026-10-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $63.17 | ▼ 09:30 equity $10,420.48 vs yday $10,460.90 (-40.42) | 09:30 open · cash $63.17 (unchanged overnight, no fees) · equity $10,420.48 vs prior close $10,460.90 (-40.42) | — |
+| 2026-10-29 09:30 ET | **SELL** | `BETA` | 28 | $19.89 | $2.09 | $-31.89 | $618.00 | ▼ -31.89 after sell → book $10,418.39; vs 09:30 mark -2.09 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-29 09:30 ET | **SELL** | `IMSR` | 202 | $3.21 | $2.65 | $+47.26 | $1,263.77 | ▲ +47.26 after sell → book $10,415.74; vs 09:30 mark -2.65 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-29 09:30 ET | **SELL** | `RH` | 4 | $148.16 | $2.02 | $+25.86 | $1,854.38 | ▲ +25.86 after sell → book $10,413.71; vs 09:30 mark -2.03 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟡 digest🟡 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-29 09:30 ET | **SELL** | `VCYT` | 11 | $50.82 | $2.04 | $+4.95 | $2,411.36 | ▲ +4.95 after sell → book $10,411.67; vs 09:30 mark -2.04 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2,411.36 | ▼ close $10,405.13 vs 09:30 $10,420.48 (session -6.54) | 16:00 close · cash $2,411.36 · equity $10,405.13 vs 09:30 $10,420.48 (-15.35; session marks -6.54) · 6 name(s) marked open→close (per-name table). AUTL×729 09:30 $1.63 → close $1.58 -36.45; BRKR×18 09:30 $61.18 → close $62.00 +14.76; FDMT×95 09:30 $13.00 → close $12.78 -20.90; NEO×65 09:30 $17.25 → close $17.93 +44.20; PRGO×141 09:30 $16.05 → close $15.90 -21.15; SRRK×25 09:30 $43.66 → close $44.18 +13.00 | — |
 
 ## Not taken
 

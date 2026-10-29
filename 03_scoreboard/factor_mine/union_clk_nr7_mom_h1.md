@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `hot_score` · size `leftover` · sell `list` · S-boost `none` · Clock-B #10 NR7 + moderate momentum
 
-Cash book **-2.26%** ($9,774) · signal-only (no cash/fees) was +27.44%. Starts YES **25/30**. Fills 102 · skips 16 · realized $+1589.64.
+Cash book **-0.64%** ($9,936) · signal-only (no cash/fees) was +27.44%. Starts YES **25/30**. Fills 104 · skips 16 · realized $+1589.64.
 
 ## How this sleeve decides (like you are 10)
 
@@ -284,6 +284,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-28 09:30 ET | **BUY** | `CXW` | 159 | $30.90 | $2.47 | — | $4,935.76 | — | Clock-B #10 NR7 + moderate momentum; gate clk_nr7_mom=True; rank hot_score; list probable,yday_gainer,yday_mover; 🔵; ret5=+1.5; leftover $4925.66 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-28 09:30 ET | **BUY** | `EPR` | 88 | $55.85 | $2.25 | — | $18.71 | — | Clock-B #10 NR7 + moderate momentum; gate clk_nr7_mom=True; rank hot_score; list probable,yday_gainer,yday_mover; 🔵; ret5=+1.2; leftover $4925.66 | join🟡 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $18.71 | ▼ close $9,773.76 vs 09:30 $9,872.57 (session -72.85) | 16:00 close · cash $18.71 · equity $9,773.76 vs 09:30 $9,872.57 (-98.81; session marks -72.85) · 2 name(s) marked open→close (per-name table). CXW×159 09:30 $30.90 → close $30.63 -42.93; EPR×88 09:30 $55.85 → close $55.51 -29.92 | — |
+| 2026-10-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $18.71 | ▲ 09:30 equity $9,941.31 vs yday $9,773.76 (+167.55) | 09:30 open · cash $18.71 (unchanged overnight, no fees) · equity $9,941.31 vs prior close $9,773.76 (+167.55) · 2 name(s) re-marked at the open (per-name table). CXW×159 yday $30.63 → 09:30 $30.92 +46.11; EPR×88 yday $55.51 → 09:30 $56.89 +121.44 | — |
+| 2026-10-29 09:30 ET | **SELL** | `CXW` | 159 | $30.92 | $2.53 | $-1.82 | $4,932.46 | ▼ -1.82 after sell → book $9,938.78; vs 09:30 mark -2.53 | dropped from list after 1 sess (min 1) | join🔴 sector🔴 gen🔴 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-29 09:30 ET | **SELL** | `EPR` | 88 | $56.89 | $2.31 | $+86.96 | $9,936.47 | ▲ +86.96 after sell → book $9,936.47; vs 09:30 mark -2.31 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,936.47 | ▲ close $9,936.47 vs 09:30 $9,941.31 (session +0.00) | 16:00 close · cash $9,936.47 · no lots left · equity $9,936.47. | — |
 
 ## Not taken
 

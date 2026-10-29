@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 12 · rank `hot_score` · size `leftover` · sell `list` · S-boost `none` · top 12 by hot
 
-Cash book **+6.91%** ($10,691) · signal-only (no cash/fees) was +34.72%. Starts YES **29/30**. Fills 677 · skips 145 · realized $-34.73.
+Cash book **+5.71%** ($10,571) · signal-only (no cash/fees) was +34.72%. Starts YES **29/30**. Fills 689 · skips 145 · realized $-34.73.
 
 ## How this sleeve decides (like you are 10)
 
@@ -856,6 +856,20 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-28 09:30 ET | **BUY** | `BBWI` | 40 | $21.70 | $2.11 | — | $992.60 | — | top 12 by hot; rank hot_score; list ohlc_hot; ret5=+6.8; leftover $879.50 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-10-28 09:30 ET | **BUY** | `SPCE` | 328 | $2.68 | $4.23 | — | $109.33 | — | top 12 by hot; rank hot_score; list ohlc_hot; 🔵; ret5=+13.5; leftover $879.50 | join🟢 sector🟢 gen🟢 news🔴 digest🟢 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
 | 2026-10-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $109.33 | ▲ close $10,691.32 vs 09:30 $10,579.76 (session +172.99) | 16:00 close · cash $109.33 · equity $10,691.32 vs 09:30 $10,579.76 (+111.56; session marks +172.99) · 12 name(s) marked open→close (per-name table). RH×6 09:30 $140.69 → close $145.06 +26.22; VCYT×17 09:30 $50.00 → close $50.31 +5.27; IMSR×298 09:30 $2.95 → close $3.35 +119.20; BETA×42 09:30 $20.88 → close $19.98 -37.80; EQPT×49 09:30 $17.81 → close $17.93 +5.88; FIP×331 09:30 $2.65 → close $2.81 +52.96; UPS×8 09:30 $105.39 → close $105.62 +1.84; S×34 09:30 $25.56 → close $25.59 +1.02; AMPX×97 09:30 $8.98 → close $9.16 +17.46; NFGC×505 09:30 $1.74 → close $1.72 -10.10; BBWI×40 09:30 $21.70 → close $21.64 -2.40; SPCE×328 09:30 $2.68 → close $2.66 -6.56 | — |
+| 2026-10-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $109.33 | ▼ 09:30 equity $10,607.46 vs yday $10,691.32 (-83.86) | 09:30 open · cash $109.33 (unchanged overnight, no fees) · equity $10,607.46 vs prior close $10,691.32 (-83.86) · 12 name(s) re-marked at the open (per-name table). AMPX×97 yday $9.16 → 09:30 $9.02 -13.58; BBWI×40 yday $21.64 → 09:30 $22.26 +24.80; BETA×42 yday $19.98 → 09:30 $19.89 -3.78; EQPT×49 yday $17.93 → 09:30 $17.84 -4.41; FIP×331 yday $2.81 → 09:30 $2.83 +6.62; IMSR×298 yday $3.35 → 09:30 $3.21 -41.72; NFGC×505 yday $1.72 → 09:30 $1.66 -30.30; RH×6 yday $145.06 → 09:30 $148.16 +18.60; S×34 yday $25.59 → 09:30 $24.31 -43.52; SPCE×328 yday $2.66 → 09:30 $2.63 -9.84; UPS×8 yday $105.62 → 09:30 $106.19 +4.60; VCYT×17 yday $50.31 → 09:30 $50.82 +8.67 | — |
+| 2026-10-29 09:30 ET | **SELL** | `AMPX` | 97 | $9.02 | $2.31 | $-0.71 | $981.96 | ▼ -0.71 after sell → book $10,605.15; vs 09:30 mark -2.31 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-29 09:30 ET | **SELL** | `BBWI` | 40 | $22.26 | $2.13 | $+18.16 | $1,870.23 | ▲ +18.16 after sell → book $10,603.02; vs 09:30 mark -2.13 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-29 09:30 ET | **SELL** | `BETA` | 42 | $19.89 | $2.14 | $-45.83 | $2,703.48 | ▼ -45.83 after sell → book $10,600.89; vs 09:30 mark -2.13 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-29 09:30 ET | **SELL** | `EQPT` | 49 | $17.84 | $2.16 | $-2.82 | $3,575.48 | ▼ -2.82 after sell → book $10,598.73; vs 09:30 mark -2.16 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-29 09:30 ET | **SELL** | `FIP` | 331 | $2.83 | $4.33 | $+50.98 | $4,507.88 | ▲ +50.98 after sell → book $10,594.40; vs 09:30 mark -4.33 | dropped from list after 1 sess (min 1) | join🔴 sector🔴 gen🔴 news🟡 digest🟢 judge🔴 ab🔴 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-29 09:30 ET | **SELL** | `IMSR` | 298 | $3.21 | $3.90 | $+69.73 | $5,460.55 | ▲ +69.73 after sell → book $10,590.49; vs 09:30 mark -3.91 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-29 09:30 ET | **SELL** | `NFGC` | 505 | $1.66 | $6.61 | $-53.52 | $6,292.24 | ▼ -53.52 after sell → book $10,583.88; vs 09:30 mark -6.61 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-29 09:30 ET | **SELL** | `RH` | 6 | $148.16 | $2.03 | $+40.78 | $7,179.18 | ▲ +40.78 after sell → book $10,581.86; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟡 digest🟡 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-29 09:30 ET | **SELL** | `S` | 34 | $24.31 | $2.11 | $-46.70 | $8,003.60 | ▼ -46.70 after sell → book $10,579.74; vs 09:30 mark -2.12 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-29 09:30 ET | **SELL** | `SPCE` | 328 | $2.63 | $4.30 | $-24.93 | $8,861.95 | ▼ -24.93 after sell → book $10,575.45; vs 09:30 mark -4.29 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-29 09:30 ET | **SELL** | `UPS` | 8 | $106.19 | $2.03 | $+2.39 | $9,709.47 | ▲ +2.39 after sell → book $10,573.41; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-29 09:30 ET | **SELL** | `VCYT` | 17 | $50.82 | $2.06 | $+9.84 | $10,571.35 | ▲ +9.84 after sell → book $10,571.35; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,571.35 | ▲ close $10,571.35 vs 09:30 $10,607.46 (session +0.00) | 16:00 close · cash $10,571.35 · no lots left · equity $10,571.35. | — |
 
 ## Not taken
 

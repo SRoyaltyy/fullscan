@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `ohlc_hot` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · hot list ∩ not exploded
 
-Cash book **-22.98%** ($7,702) · signal-only (no cash/fees) was -11.86%. Starts YES **9/30**. Fills 317 · skips 74 · realized $-1849.08.
+Cash book **-23.21%** ($7,679) · signal-only (no cash/fees) was -11.86%. Starts YES **9/30**. Fills 321 · skips 74 · realized $-1849.08.
 
 ## How this sleeve decides (like you are 10)
 
@@ -499,6 +499,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-28 09:30 ET | **BUY** | `AEO` | 98 | $19.39 | $2.28 | — | $1,920.68 | — | hot list ∩ not exploded; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list ohlc_hot; ret5=+9.0; leftover $1908.63 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-28 09:30 ET | **BUY** | `NXPI` | 8 | $238.14 | $2.01 | — | $13.54 | — | hot list ∩ not exploded; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list ohlc_hot; ret5=+6.7; leftover $1908.63 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🟡 heat🔴 vol🔴 buy🟡 |
 | 2026-10-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $13.54 | ▲ close $7,701.94 vs 09:30 $7,651.51 (session +88.12) | 16:00 close · cash $13.54 · equity $7,701.94 vs 09:30 $7,651.51 (+50.43; session marks +88.12) · 4 name(s) marked open→close (per-name table). NFGC×1096 09:30 $1.74 → close $1.72 -21.92; BBWI×87 09:30 $21.70 → close $21.64 -5.22; AEO×98 09:30 $19.39 → close $19.46 +6.86; NXPI×8 09:30 $238.14 → close $251.69 +108.40 | — |
+| 2026-10-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $13.54 | ▼ 09:30 equity $7,699.96 vs yday $7,701.94 (-1.98) | 09:30 open · cash $13.54 (unchanged overnight, no fees) · equity $7,699.96 vs prior close $7,701.94 (-1.98) · 4 name(s) re-marked at the open (per-name table). AEO×98 yday $19.46 → 09:30 $19.74 +27.44; BBWI×87 yday $21.64 → 09:30 $22.26 +53.94; NFGC×1096 yday $1.72 → 09:30 $1.66 -65.76; NXPI×8 yday $251.69 → 09:30 $249.49 -17.60 | — |
+| 2026-10-29 09:30 ET | **SELL** | `AEO` | 98 | $19.74 | $2.32 | $+29.70 | $1,945.74 | ▲ +29.70 after sell → book $7,697.64; vs 09:30 mark -2.32 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-29 09:30 ET | **SELL** | `BBWI` | 87 | $22.26 | $2.28 | $+44.19 | $3,880.08 | ▲ +44.19 after sell → book $7,695.36; vs 09:30 mark -2.28 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-29 09:30 ET | **SELL** | `NFGC` | 1096 | $1.66 | $14.33 | $-116.15 | $5,685.11 | ▼ -116.15 after sell → book $7,681.03; vs 09:30 mark -14.33 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-29 09:30 ET | **SELL** | `NXPI` | 8 | $249.49 | $2.04 | $+86.75 | $7,678.99 | ▲ +86.75 after sell → book $7,678.99; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,678.99 | ▲ close $7,678.99 vs 09:30 $7,699.96 (session +0.00) | 16:00 close · cash $7,678.99 · no lots left · equity $7,678.99. | — |
 
 ## Not taken
 

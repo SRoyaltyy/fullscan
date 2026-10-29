@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `probable` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-26.92%** ($7,308) · signal-only (no cash/fees) was -9.22%. Starts YES **0/30**. Fills 326 · skips 53 · realized $-864.75.
+Cash book **-26.76%** ($7,324) · signal-only (no cash/fees) was -9.22%. Starts YES **0/30**. Fills 328 · skips 53 · realized $-864.75.
 
 ## How this sleeve decides (like you are 10)
 
@@ -508,6 +508,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-28 09:30 ET | **SELL** | `NVTS` | 209 | $9.36 | $2.75 | $+149.22 | $5,401.66 | ▲ +149.22 after sell → book $7,363.32; vs 09:30 mark -2.74 | dropped from list after 1 sess (min 1) | join🔴 sector🔴 gen🟢 news🟢 digest🟢 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-28 09:30 ET | **BUY** | `CXW` | 174 | $30.90 | $2.51 | — | $22.55 | — | combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer,yday_mover; 🔵; ret5=+1.5; leftover $5401.66 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $22.55 | ▼ close $7,308.24 vs 09:30 $7,374.09 (session -52.57) | 16:00 close · cash $22.55 · equity $7,308.24 vs 09:30 $7,374.09 (-65.85; session marks -52.57) · 2 name(s) marked open→close (per-name table). PDFS×43 09:30 $45.62 → close $45.49 -5.59; CXW×174 09:30 $30.90 → close $30.63 -46.98 | — |
+| 2026-10-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $22.55 | ▲ 09:30 equity $7,329.03 vs yday $7,308.24 (+20.79) | 09:30 open · cash $22.55 (unchanged overnight, no fees) · equity $7,329.03 vs prior close $7,308.24 (+20.79) · 2 name(s) re-marked at the open (per-name table). CXW×174 yday $30.63 → 09:30 $30.92 +50.46; PDFS×43 yday $45.49 → 09:30 $44.80 -29.67 | — |
+| 2026-10-29 09:30 ET | **SELL** | `CXW` | 174 | $30.92 | $2.58 | $-1.62 | $5,400.05 | ▼ -1.62 after sell → book $7,326.45; vs 09:30 mark -2.58 | dropped from list after 1 sess (min 1) | join🔴 sector🔴 gen🔴 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-29 09:30 ET | **SELL** | `PDFS` | 43 | $44.80 | $2.14 | $+127.32 | $7,324.30 | ▲ +127.32 after sell → book $7,324.30; vs 09:30 mark -2.15 | dropped from list after 2 sess (min 1) | join🔴 sector🟢 gen🔴 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,324.30 | ▲ close $7,324.30 vs 09:30 $7,329.03 (session +0.00) | 16:00 close · cash $7,324.30 · no lots left · equity $7,324.30. | — |
 
 ## Not taken
 

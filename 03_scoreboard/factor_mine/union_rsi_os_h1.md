@@ -364,6 +364,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-28 09:30 ET | **SELL** | `ARI` | 349 | $6.56 | $4.58 | $-26.53 | $4,630.68 | ▼ -26.53 after sell → book $6,842.47; vs 09:30 mark -4.58 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-28 09:30 ET | **SELL** | `BX` | 19 | $116.41 | $2.07 | $-72.33 | $6,840.40 | ▼ -72.33 after sell → book $6,840.40; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,840.40 | ▲ close $6,840.40 vs 09:30 $6,847.05 (session +0.00) | 16:00 close · cash $6,840.40 · no lots left · equity $6,840.40. | — |
+| 2026-10-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6,840.40 | ▲ 09:30 equity $6,840.40 vs yday $6,840.40 (+0.00) | 09:30 open · cash $6,840.40 · no holdings · equity $6,840.40 vs prior close $6,840.40 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,840.40 | ▲ close $6,840.40 vs 09:30 $6,840.40 (session +0.00) | 16:00 close · cash $6,840.40 · no lots left · equity $6,840.40. | — |
 
 ## Not taken
 

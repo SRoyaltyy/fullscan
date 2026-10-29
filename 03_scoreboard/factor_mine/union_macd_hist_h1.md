@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `macd_hist` · size `leftover` · sell `list` · S-boost `none` · rank by macd_hist
 
-Cash book **-10.26%** ($8,974) · signal-only (no cash/fees) was +3.37%. Starts YES **20/30**. Fills 431 · skips 94 · realized $-657.32.
+Cash book **-9.55%** ($9,045) · signal-only (no cash/fees) was +3.37%. Starts YES **20/30**. Fills 438 · skips 94 · realized $-657.32.
 
 ## How this sleeve decides (like you are 10)
 
@@ -610,6 +610,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-28 09:30 ET | **BUY** | `BBWI` | 52 | $21.70 | $2.15 | — | $1,430.84 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; ret5=+6.8; leftover $1133.58 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-10-28 09:30 ET | **BUY** | `EQPT` | 63 | $17.81 | $2.18 | — | $306.63 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; 🔵; ret5=+13.5; leftover $1133.58 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $306.63 | ▲ close $8,973.99 vs 09:30 $8,883.04 (session +115.55) | 16:00 close · cash $306.63 · equity $8,973.99 vs 09:30 $8,883.04 (+90.95; session marks +115.55) · 8 name(s) marked open→close (per-name table). ITW×4 09:30 $276.75 → close $276.07 -2.72; POOL×5 09:30 $192.48 → close $195.59 +15.55; RH×8 09:30 $140.69 → close $145.06 +34.96; NXPI×4 09:30 $238.14 → close $251.69 +54.20; UPS×10 09:30 $105.39 → close $105.62 +2.30; VCYT×22 09:30 $50.00 → close $50.31 +6.82; BBWI×52 09:30 $21.70 → close $21.64 -3.12; EQPT×63 09:30 $17.81 → close $17.93 +7.56 | — |
+| 2026-10-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $306.63 | ▲ 09:30 equity $9,043.62 vs yday $8,973.99 (+69.63) | 09:30 open · cash $306.63 (unchanged overnight, no fees) · equity $9,043.62 vs prior close $8,973.99 (+69.63) · 8 name(s) re-marked at the open (per-name table). BBWI×52 yday $21.64 → 09:30 $22.26 +32.24; EQPT×63 yday $17.93 → 09:30 $17.84 -5.67; ITW×4 yday $276.07 → 09:30 $277.43 +5.44; NXPI×4 yday $251.69 → 09:30 $249.49 -8.80; POOL×5 yday $195.59 → 09:30 $196.52 +4.65; RH×8 yday $145.06 → 09:30 $148.16 +24.80; UPS×10 yday $105.62 → 09:30 $106.19 +5.75; VCYT×22 yday $50.31 → 09:30 $50.82 +11.22 | — |
+| 2026-10-29 09:30 ET | **SELL** | `BBWI` | 52 | $22.26 | $2.17 | $+24.81 | $1,461.98 | ▲ +24.81 after sell → book $9,041.45; vs 09:30 mark -2.17 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-29 09:30 ET | **SELL** | `EQPT` | 63 | $17.84 | $2.20 | $-2.49 | $2,583.70 | ▼ -2.49 after sell → book $9,039.25; vs 09:30 mark -2.20 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-29 09:30 ET | **SELL** | `NXPI` | 4 | $249.49 | $2.02 | $+41.38 | $3,579.64 | ▲ +41.38 after sell → book $9,037.23; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-29 09:30 ET | **SELL** | `POOL` | 5 | $196.52 | $2.02 | $+2.42 | $4,560.22 | ▲ +2.42 after sell → book $9,035.21; vs 09:30 mark -2.02 | dropped from list after 2 sess (min 1) | join🔴 sector🔴 gen🔴 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-29 09:30 ET | **SELL** | `RH` | 8 | $148.16 | $2.03 | $+55.71 | $5,743.46 | ▲ +55.71 after sell → book $9,033.17; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟡 digest🟡 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-29 09:30 ET | **SELL** | `UPS` | 10 | $106.19 | $2.04 | $+3.99 | $6,803.37 | ▲ +3.99 after sell → book $9,031.13; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-29 09:30 ET | **SELL** | `VCYT` | 22 | $50.82 | $2.08 | $+13.91 | $7,919.34 | ▲ +13.91 after sell → book $9,029.06; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,919.34 | ▲ close $9,044.94 vs 09:30 $9,043.62 (session +15.88) | 16:00 close · cash $7,919.34 · equity $9,044.94 vs 09:30 $9,043.62 (+1.32; session marks +15.88) · 1 name(s) marked open→close (per-name table). ITW×4 09:30 $277.43 → close $281.40 +15.88 | — |
 
 ## Not taken
 

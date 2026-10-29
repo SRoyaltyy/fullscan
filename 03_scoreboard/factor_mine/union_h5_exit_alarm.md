@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · hold 5d, sell next 09:30 if 🚨
 
-Cash book **-10.56%** ($8,944) · signal-only (no cash/fees) was +17.52%. Starts YES **6/30**. Fills 346 · skips 456 · realized $+341.96.
+Cash book **-10.51%** ($8,949) · signal-only (no cash/fees) was +17.52%. Starts YES **6/30**. Fills 348 · skips 456 · realized $+341.96.
 
 ## How this sleeve decides (like you are 10)
 
@@ -524,6 +524,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-28 09:30 ET | **BUY** | `PRMB` | 1 | $19.00 | $0.19 | — | $141.43 | — | hold 5d, sell next 09:30 if 🚨; list probable,yday_gainer,yday_mover; 🔵; ret5=-4.0; leftover $23.76 | join🟢 sector🟡 gen🟢 news🟡 digest🔴 ab🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-28 09:30 ET | **BUY** | `EGG` | 4 | $5.14 | $0.22 | — | $120.65 | — | hold 5d, sell next 09:30 if 🚨; list yday_gainer,yday_mover; 🔵; ret5=+6.4; leftover $23.76 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $120.65 | ▲ close $8,943.72 vs 09:30 $8,845.96 (session +98.47) | 16:00 close · cash $120.65 · equity $8,943.72 vs 09:30 $8,845.96 (+97.76; session marks +98.47) · 8 name(s) marked open→close (per-name table). BLFS×1 09:30 $38.61 → close $38.61 +0.00; ILMN×10 09:30 $278.04 → close $288.79 +107.50; PRGO×185 09:30 $15.96 → close $15.92 -7.40; SGRY×124 09:30 $23.26 → close $23.24 -2.48; NEO×1 09:30 $17.30 → close $17.99 +0.69; FDMT×1 09:30 $11.89 → close $12.93 +1.04; PRMB×1 09:30 $19.00 → close $19.32 +0.32; EGG×4 09:30 $5.14 → close $4.84 -1.20 | — |
+| 2026-10-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $120.65 | ▼ 09:30 equity $8,941.17 vs yday $8,943.72 (-2.55) | 09:30 open · cash $120.65 (unchanged overnight, no fees) · equity $8,941.17 vs prior close $8,943.72 (-2.55) · 8 name(s) re-marked at the open (per-name table). BLFS×1 yday $38.61 → 09:30 $38.61 +0.00; EGG×4 yday $4.84 → 09:30 $4.84 +0.00; FDMT×1 yday $12.93 → 09:30 $13.00 +0.07; ILMN×10 yday $288.79 → 09:30 $286.05 -27.40; NEO×1 yday $17.99 → 09:30 $17.25 -0.74; PRGO×185 yday $15.92 → 09:30 $16.05 +24.05; PRMB×1 yday $19.32 → 09:30 $19.55 +0.23; SGRY×124 yday $23.24 → 09:30 $23.25 +1.24 | — |
+| 2026-10-29 09:30 ET | **SELL** | `EGG` | 4 | $4.84 | $0.23 | $-1.64 | $139.78 | ▼ -1.64 after sell → book $8,940.94; vs 09:30 mark -0.23 | exit 🚨 after 1 sess | join🔴 sector🔴 gen🔴 news🟡 digest🟢 judge🔴 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-29 09:30 ET | **SELL** | `PRMB` | 1 | $19.55 | $0.22 | $+0.14 | $159.12 | ▲ +0.14 after sell → book $8,940.73; vs 09:30 mark -0.21 | exit 🚨 after 1 sess | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $159.12 | ▲ close $8,948.58 vs 09:30 $8,941.17 (session +7.85) | 16:00 close · cash $159.12 · equity $8,948.58 vs 09:30 $8,941.17 (+7.41; session marks +7.85) · 6 name(s) marked open→close (per-name table). BLFS×1 09:30 $38.61 → close $38.61 +0.00; FDMT×1 09:30 $13.00 → close $12.78 -0.22; ILMN×10 09:30 $286.05 → close $290.06 +40.10; NEO×1 09:30 $17.25 → close $17.93 +0.68; PRGO×185 09:30 $16.05 → close $15.90 -27.75; SGRY×124 09:30 $23.25 → close $23.21 -4.96 | — |
 
 ## Not taken
 

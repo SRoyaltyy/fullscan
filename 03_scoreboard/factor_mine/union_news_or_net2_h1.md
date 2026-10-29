@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · packet🟢 OR headline🟢 and camera net ≥ 2
 
-Cash book **-26.16%** ($7,384) · signal-only (no cash/fees) was -3.45%. Starts YES **0/30**. Fills 254 · skips 55 · realized $-720.09.
+Cash book **-25.90%** ($7,410) · signal-only (no cash/fees) was -3.45%. Starts YES **0/30**. Fills 256 · skips 55 · realized $-720.09.
 
 ## How this sleeve decides (like you are 10)
 
@@ -436,6 +436,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-28 09:30 ET | **BUY** | `AMX` | 154 | $24.07 | $2.45 | — | $3,709.77 | — | packet🟢 OR headline🟢 and camera net ≥ 2; gate cam_net_min=2,news_or_headline=True; rank cond; list yday_gainer; ret5=+5.1; leftover $3709.50 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-28 09:30 ET | **BUY** | `ITW` | 13 | $276.75 | $2.03 | — | $109.99 | — | packet🟢 OR headline🟢 and camera net ≥ 2; gate cam_net_min=2,news_or_headline=True; rank cond; list yday_gainer; 🔵; ret5=+0.3; leftover $3709.50 | join🔴 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $109.99 | ▼ close $7,384.12 vs 09:30 $7,427.45 (session -30.40) | 16:00 close · cash $109.99 · equity $7,384.12 vs 09:30 $7,427.45 (-43.33; session marks -30.40) · 2 name(s) marked open→close (per-name table). AMX×154 09:30 $24.07 → close $23.93 -21.56; ITW×13 09:30 $276.75 → close $276.07 -8.84 | — |
+| 2026-10-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $109.99 | ▲ 09:30 equity $7,414.12 vs yday $7,384.12 (+30.00) | 09:30 open · cash $109.99 (unchanged overnight, no fees) · equity $7,414.12 vs prior close $7,384.12 (+30.00) · 2 name(s) re-marked at the open (per-name table). AMX×154 yday $23.93 → 09:30 $24.01 +12.32; ITW×13 yday $276.07 → 09:30 $277.43 +17.68 | — |
+| 2026-10-29 09:30 ET | **SELL** | `AMX` | 154 | $24.01 | $2.51 | $-14.20 | $3,805.02 | ▼ -14.20 after sell → book $7,411.61; vs 09:30 mark -2.51 | dropped from list after 1 sess (min 1) | join🔴 sector🔴 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-29 09:30 ET | **SELL** | `ITW` | 13 | $277.43 | $2.07 | $+4.74 | $7,409.55 | ▲ +4.74 after sell → book $7,409.55; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | join🟡 sector🔴 gen🔴 news🟢 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,409.55 | ▲ close $7,409.55 vs 09:30 $7,414.12 (session +0.00) | 16:00 close · cash $7,409.55 · no lots left · equity $7,409.55. | — |
 
 ## Not taken
 

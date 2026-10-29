@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ flow_in hold 5, no 🚨
 
-Cash book **-8.45%** ($9,155) · signal-only (no cash/fees) was -2.74%. Starts YES **16/30**. Fills 76 · skips 144 · realized $+404.42.
+Cash book **-4.61%** ($9,540) · signal-only (no cash/fees) was -2.74%. Starts YES **16/30**. Fills 76 · skips 144 · realized $+404.42.
 
 ## How this sleeve decides (like you are 10)
 
@@ -256,6 +256,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-28 09:30 ET | **BUY** | `CRS` | 16 | $291.76 | $2.04 | — | $4,687.64 | — | union ∩ flow_in hold 5, no 🚨; gate flow_in=True; list yday_gainer; 🔵; ret5=-22.6; leftover $4678.92 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-28 09:30 ET | **BUY** | `ITW` | 16 | $276.75 | $2.04 | — | $257.60 | — | union ∩ flow_in hold 5, no 🚨; gate flow_in=True; list yday_gainer; 🔵; ret5=+0.3; leftover $4678.92 | join🔴 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $257.60 | ▼ close $9,154.72 vs 09:30 $9,357.84 (session -199.04) | 16:00 close · cash $257.60 · equity $9,154.72 vs 09:30 $9,357.84 (-203.12; session marks -199.04) · 2 name(s) marked open→close (per-name table). CRS×16 09:30 $291.76 → close $280.00 -188.16; ITW×16 09:30 $276.75 → close $276.07 -10.88 | — |
+| 2026-10-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $257.60 | ▲ 09:30 equity $9,160.48 vs yday $9,154.72 (+5.76) | 09:30 open · cash $257.60 (unchanged overnight, no fees) · equity $9,160.48 vs prior close $9,154.72 (+5.76) · 2 name(s) re-marked at the open (per-name table). CRS×16 yday $280.00 → 09:30 $279.00 -16.00; ITW×16 yday $276.07 → 09:30 $277.43 +21.76 | — |
+| 2026-10-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $257.60 | ▲ close $9,539.52 vs 09:30 $9,160.48 (session +379.04) | 16:00 close · cash $257.60 · equity $9,539.52 vs 09:30 $9,160.48 (+379.04; session marks +379.04) · 2 name(s) marked open→close (per-name table). CRS×16 09:30 $279.00 → close $298.72 +315.52; ITW×16 09:30 $277.43 → close $281.40 +63.52 | — |
 
 ## Not taken
 

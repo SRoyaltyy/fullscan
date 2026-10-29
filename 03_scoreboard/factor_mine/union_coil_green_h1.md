@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-22.35%** ($7,765) · signal-only (no cash/fees) was -12.21%. Starts YES **0/30**. Fills 450 · skips 101 · realized $-768.45.
+Cash book **-23.10%** ($7,690) · signal-only (no cash/fees) was -12.21%. Starts YES **0/30**. Fills 458 · skips 101 · realized $-768.45.
 
 ## How this sleeve decides (like you are 10)
 
@@ -635,6 +635,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-28 09:30 ET | **BUY** | `AEO` | 50 | $19.39 | $2.14 | — | $1,128.83 | — | combo gate; gate last_green=True,ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list ohlc_hot; ret5=+9.0; leftover $970.74 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-28 09:30 ET | **BUY** | `NXPI` | 4 | $238.14 | $2.00 | — | $174.27 | — | combo gate; gate last_green=True,ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list ohlc_hot; ret5=+6.7; leftover $970.74 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🟡 heat🔴 vol🔴 buy🟡 |
 | 2026-10-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $174.27 | ▲ close $7,765.09 vs 09:30 $7,780.39 (session +21.39) | 16:00 close · cash $174.27 · equity $7,765.09 vs 09:30 $7,780.39 (-15.30; session marks +21.39) · 8 name(s) marked open→close (per-name table). NEO×56 09:30 $17.30 → close $17.99 +38.64; PDFS×21 09:30 $45.62 → close $45.49 -2.73; EGG×188 09:30 $5.14 → close $4.84 -56.40; ITW×3 09:30 $276.75 → close $276.07 -2.04; NFGC×557 09:30 $1.74 → close $1.72 -11.14; BBWI×44 09:30 $21.70 → close $21.64 -2.64; AEO×50 09:30 $19.39 → close $19.46 +3.50; NXPI×4 09:30 $238.14 → close $251.69 +54.20 | — |
+| 2026-10-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $174.27 | ▼ 09:30 equity $7,712.30 vs yday $7,765.09 (-52.79) | 09:30 open · cash $174.27 (unchanged overnight, no fees) · equity $7,712.30 vs prior close $7,765.09 (-52.79) · 8 name(s) re-marked at the open (per-name table). AEO×50 yday $19.46 → 09:30 $19.74 +14.00; BBWI×44 yday $21.64 → 09:30 $22.26 +27.28; EGG×188 yday $4.84 → 09:30 $4.84 +0.00; ITW×3 yday $276.07 → 09:30 $277.43 +4.08; NEO×56 yday $17.99 → 09:30 $17.25 -41.44; NFGC×557 yday $1.72 → 09:30 $1.66 -33.42; NXPI×4 yday $251.69 → 09:30 $249.49 -8.80; PDFS×21 yday $45.49 → 09:30 $44.80 -14.49 | — |
+| 2026-10-29 09:30 ET | **SELL** | `AEO` | 50 | $19.74 | $2.16 | $+13.20 | $1,159.11 | ▲ +13.20 after sell → book $7,710.14; vs 09:30 mark -2.16 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-29 09:30 ET | **SELL** | `BBWI` | 44 | $22.26 | $2.14 | $+20.38 | $2,136.41 | ▲ +20.38 after sell → book $7,708.00; vs 09:30 mark -2.14 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-29 09:30 ET | **SELL** | `EGG` | 188 | $4.84 | $2.60 | $-61.55 | $3,043.73 | ▼ -61.55 after sell → book $7,705.40; vs 09:30 mark -2.60 | dropped from list after 1 sess (min 1) | join🔴 sector🔴 gen🔴 news🟡 digest🟢 judge🔴 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-29 09:30 ET | **SELL** | `ITW` | 3 | $277.43 | $2.02 | $-1.98 | $3,874.00 | ▼ -1.98 after sell → book $7,703.38; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | join🟡 sector🔴 gen🔴 news🟢 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-29 09:30 ET | **SELL** | `NEO` | 56 | $17.25 | $2.18 | $-7.14 | $4,837.83 | ▼ -7.14 after sell → book $7,701.21; vs 09:30 mark -2.17 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-29 09:30 ET | **SELL** | `NFGC` | 557 | $1.66 | $7.29 | $-59.03 | $5,755.16 | ▼ -59.03 after sell → book $7,693.92; vs 09:30 mark -7.29 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-29 09:30 ET | **SELL** | `NXPI` | 4 | $249.49 | $2.02 | $+41.38 | $6,751.10 | ▲ +41.38 after sell → book $7,691.90; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-29 09:30 ET | **SELL** | `PDFS` | 21 | $44.80 | $2.07 | $-21.35 | $7,689.82 | ▼ -21.35 after sell → book $7,689.82; vs 09:30 mark -2.08 | dropped from list after 1 sess (min 1) | join🔴 sector🟢 gen🔴 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,689.82 | ▲ close $7,689.82 vs 09:30 $7,712.30 (session +0.00) | 16:00 close · cash $7,689.82 · no lots left · equity $7,689.82. | — |
 
 ## Not taken
 

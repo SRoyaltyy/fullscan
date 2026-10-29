@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `rsi` · size `leftover` · sell `list` · S-boost `none` · rank by rsi
 
-Cash book **-39.29%** ($6,071) · signal-only (no cash/fees) was -22.60%. Starts YES **0/30**. Fills 438 · skips 98 · realized $-2571.92.
+Cash book **+41.48%** ($14,148) · signal-only (no cash/fees) was -22.60%. Starts YES **0/30**. Fills 445 · skips 98 · realized $-2571.92.
 
 ## How this sleeve decides (like you are 10)
 
@@ -617,6 +617,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-28 09:30 ET | **BUY** | `BBWI` | 34 | $21.70 | $2.09 | — | $796.35 | — | rank by rsi; rank rsi; list ohlc_hot; ret5=+6.8; leftover $744.40 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-10-28 09:30 ET | **BUY** | `FIP` | 280 | $2.65 | $3.61 | — | $50.74 | — | rank by rsi; rank rsi; list ohlc_hot; 🔵; ret5=+15.6; leftover $744.40 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🔴 vol🔴 buy🟡 |
 | 2026-10-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $50.74 | ▲ close $6,070.60 vs 09:30 $5,968.40 (session +140.70) | 16:00 close · cash $50.74 · equity $6,070.60 vs 09:30 $5,968.40 (+102.20; session marks +140.70) · 8 name(s) marked open→close (per-name table). HAWK×54 09:30 $13.55 → close $13.27 -15.12; RH×5 09:30 $140.69 → close $145.06 +21.85; QTTB×86 09:30 $8.65 → close $9.06 +35.26; JLHL×132 09:30 $5.60 → close $5.65 +6.60; UPS×7 09:30 $105.39 → close $105.62 +1.61; ENHA×682 09:30 $1.09 → close $1.16 +47.74; BBWI×34 09:30 $21.70 → close $21.64 -2.04; FIP×280 09:30 $2.65 → close $2.81 +44.80 | — |
+| 2026-10-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $50.74 | ▲ 09:30 equity $14,200.07 vs yday $6,070.60 (+8,129.47) | 09:30 open · cash $50.74 (unchanged overnight, no fees) · equity $14,200.07 vs prior close $6,070.60 (+8129.47) · 8 name(s) re-marked at the open (per-name table). BBWI×34 yday $21.64 → 09:30 $22.26 +21.08; ENHA×682 yday $1.16 → 09:30 $13.00 +8074.88; FIP×280 yday $2.81 → 09:30 $2.83 +5.60; HAWK×54 yday $13.27 → 09:30 $13.30 +1.62; JLHL×132 yday $5.65 → 09:30 $5.61 -5.28; QTTB×86 yday $9.06 → 09:30 $9.20 +12.04; RH×5 yday $145.06 → 09:30 $148.16 +15.50; UPS×7 yday $105.62 → 09:30 $106.19 +4.02 | — |
+| 2026-10-29 09:30 ET | **SELL** | `BBWI` | 34 | $22.26 | $2.11 | $+14.84 | $805.47 | ▲ +14.84 after sell → book $14,197.95; vs 09:30 mark -2.11 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-29 09:30 ET | **SELL** | `ENHA` | 682 | $13.00 | $8.98 | $+8104.84 | $9,662.49 | ▲ +8,104.84 after sell → book $14,188.97; vs 09:30 mark -8.98 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟡 digest🔴 ab🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-10-29 09:30 ET | **SELL** | `FIP` | 280 | $2.83 | $3.67 | $+43.12 | $10,451.22 | ▲ +43.12 after sell → book $14,185.30; vs 09:30 mark -3.67 | dropped from list after 1 sess (min 1) | join🔴 sector🔴 gen🔴 news🟡 digest🟢 judge🔴 ab🔴 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-29 09:30 ET | **SELL** | `HAWK` | 54 | $13.30 | $2.17 | $-17.82 | $11,167.25 | ▼ -17.82 after sell → book $14,183.13; vs 09:30 mark -2.17 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-29 09:30 ET | **SELL** | `JLHL` | 132 | $5.61 | $2.42 | $-3.48 | $11,905.35 | ▼ -3.48 after sell → book $14,180.71; vs 09:30 mark -2.42 | dropped from list after 1 sess (min 1) | join🔴 sector🔴 gen🔴 news🟡 digest🟢 judge🔴 ab🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-29 09:30 ET | **SELL** | `RH` | 5 | $148.16 | $2.02 | $+33.32 | $12,644.12 | ▲ +33.32 after sell → book $14,178.69; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟡 digest🟡 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-29 09:30 ET | **SELL** | `UPS` | 7 | $106.19 | $2.03 | $+1.59 | $13,385.46 | ▲ +1.59 after sell → book $14,176.66; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $13,385.46 | ▼ close $14,148.28 vs 09:30 $14,200.07 (session -28.38) | 16:00 close · cash $13,385.46 · equity $14,148.28 vs 09:30 $14,200.07 (-51.79; session marks -28.38) · 1 name(s) marked open→close (per-name table). QTTB×86 09:30 $9.20 → close $8.87 -28.38 | — |
 
 ## Not taken
 

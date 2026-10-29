@@ -336,6 +336,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-27 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,545.71 | ▲ close $7,545.71 vs 09:30 $7,545.71 (session +0.00) | 16:00 close · cash $7,545.71 · no lots left · equity $7,545.71. | — |
 | 2026-10-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,545.71 | ▲ 09:30 equity $7,545.71 vs yday $7,545.71 (+0.00) | 09:30 open · cash $7,545.71 · no holdings · equity $7,545.71 vs prior close $7,545.71 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-10-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,545.71 | ▲ close $7,545.71 vs 09:30 $7,545.71 (session +0.00) | 16:00 close · cash $7,545.71 · no lots left · equity $7,545.71. | — |
+| 2026-10-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,545.71 | ▲ 09:30 equity $7,545.71 vs yday $7,545.71 (+0.00) | 09:30 open · cash $7,545.71 · no holdings · equity $7,545.71 vs prior close $7,545.71 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,545.71 | ▲ close $7,545.71 vs 09:30 $7,545.71 (session +0.00) | 16:00 close · cash $7,545.71 · no lots left · equity $7,545.71. | — |
 
 ## Not taken
 

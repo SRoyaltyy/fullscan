@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · MACD histogram < 0
 
-Cash book **+8.80%** ($10,880) · signal-only (no cash/fees) was -1.81%. Starts YES **18/30**. Fills 415 · skips 334 · realized $-941.09.
+Cash book **+9.16%** ($10,916) · signal-only (no cash/fees) was -1.81%. Starts YES **18/30**. Fills 415 · skips 334 · realized $-941.09.
 
 ## How this sleeve decides (like you are 10)
 
@@ -593,6 +593,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-28 09:30 ET | **SHORT** | `AIP` | 37 | $21.27 | $2.14 | — | $22,342.60 | — | MACD histogram < 0; gate macd_down=True; list probable,yday_gainer,yday_mover; ret5=+6.0; leftover $798.61 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-28 09:30 ET | **SHORT** | `MX` | 309 | $2.58 | $4.07 | — | $23,135.75 | — | MACD histogram < 0; gate macd_down=True; list yday_gainer,yday_mover; ret5=-2.3; leftover $798.61 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $23,135.75 | ▼ close $10,880.34 vs 09:30 $11,180.49 (session -278.38) | 16:00 close · cash $23,135.75 · equity $10,880.34 vs 09:30 $11,180.49 (-300.15; session marks -278.38) · 11 name(s) marked open→close (per-name table). BLFS×17 09:30 $38.61 → close $38.61 -0.00; CDNA×27 09:30 $69.91 → close $72.13 -59.94; CXW×63 09:30 $30.90 → close $30.63 +17.01; ILMN×7 09:30 $278.04 → close $288.79 -75.25; AUTL×515 09:30 $1.55 → close $1.63 -41.20; FDMT×67 09:30 $11.89 → close $12.93 -69.68; SMMT×52 09:30 $15.19 → close $15.77 -30.16; NVTS×85 09:30 $9.36 → close $9.36 -0.00; PDFS×17 09:30 $45.62 → close $45.49 +2.21; AIP×37 09:30 $21.27 → close $21.43 -5.92; MX×309 09:30 $2.58 → close $2.63 -15.45 | — |
+| 2026-10-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $23,135.75 | ▲ 09:30 equity $10,952.28 vs yday $10,880.34 (+71.94) | 09:30 open · cash $23,135.75 (unchanged overnight, no fees) · equity $10,952.28 vs prior close $10,880.34 (+71.94) · 11 name(s) re-marked at the open (per-name table). AIP×37 yday $21.43 → 09:30 $20.86 +21.09; AUTL×515 yday $1.63 → 09:30 $1.63 -0.00; BLFS×17 yday $38.61 → 09:30 $38.61 -0.00; CDNA×27 yday $72.13 → 09:30 $72.02 +2.97; CXW×63 yday $30.63 → 09:30 $30.92 -18.27; FDMT×67 yday $12.93 → 09:30 $13.00 -4.69; ILMN×7 yday $288.79 → 09:30 $286.05 +19.18; MX×309 yday $2.63 → 09:30 $2.57 +18.54; NVTS×85 yday $9.36 → 09:30 $9.09 +22.95; PDFS×17 yday $45.49 → 09:30 $44.80 +11.73; SMMT×52 yday $15.77 → 09:30 $15.80 -1.56 | — |
+| 2026-10-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $23,135.75 | ▼ close $10,916.50 vs 09:30 $10,952.28 (session -35.78) | 16:00 close · cash $23,135.75 · equity $10,916.50 vs 09:30 $10,952.28 (-35.78; session marks -35.78) · 11 name(s) marked open→close (per-name table). AIP×37 09:30 $20.86 → close $20.59 +9.99; AUTL×515 09:30 $1.63 → close $1.58 +25.75; BLFS×17 09:30 $38.61 → close $38.61 -0.00; CDNA×27 09:30 $72.02 → close $71.52 +13.50; CXW×63 09:30 $30.92 → close $31.08 -10.08; FDMT×67 09:30 $13.00 → close $12.78 +14.74; ILMN×7 09:30 $286.05 → close $290.06 -28.07; MX×309 09:30 $2.57 → close $2.63 -18.54; NVTS×85 09:30 $9.09 → close $9.20 -9.35; PDFS×17 09:30 $44.80 → close $45.56 -12.92; SMMT×52 09:30 $15.80 → close $16.20 -20.80 | — |
 
 ## Not taken
 

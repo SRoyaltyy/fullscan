@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · merged news🟢, rank +G−R
 
-Cash book **-36.80%** ($6,320) · signal-only (no cash/fees) was +177.97%. Starts YES **1/30**. Fills 263 · skips 246 · realized $-1849.04.
+Cash book **-36.17%** ($6,383) · signal-only (no cash/fees) was +177.97%. Starts YES **1/30**. Fills 263 · skips 246 · realized $-1849.04.
 
 ## How this sleeve decides (like you are 10)
 
@@ -444,6 +444,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-28 09:30 ET | **BUY** | `AMX` | 6 | $24.07 | $1.46 | — | $155.71 | — | merged news🟢, rank +G−R; gate news=good; rank cond; list yday_gainer; ret5=+5.1; leftover $150.79 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-28 09:30 ET | **BUY** | `GLND` | 44 | $3.37 | $1.61 | — | $5.81 | — | merged news🟢, rank +G−R; gate news=good; rank cond; list yday_mover; ret5=+7.4; leftover $150.79 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 ab🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5.81 | ▲ close $6,319.98 vs 09:30 $6,299.94 (session +23.12) | 16:00 close · cash $5.81 · equity $6,319.98 vs 09:30 $6,299.94 (+20.04; session marks +23.12) · 8 name(s) marked open→close (per-name table). AMTM×47 09:30 $21.59 → close $21.69 +4.70; GH×6 09:30 $178.06 → close $182.59 +27.18; ITW×3 09:30 $276.75 → close $276.07 -2.04; RY×5 09:30 $203.11 → close $204.77 +8.30; SGRY×45 09:30 $23.26 → close $23.24 -0.90; TBBB×18 09:30 $56.82 → close $56.40 -7.56; AMX×6 09:30 $24.07 → close $23.93 -0.84; GLND×44 09:30 $3.37 → close $3.24 -5.72 | — |
+| 2026-10-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $5.81 | ▲ 09:30 equity $6,350.02 vs yday $6,319.98 (+30.04) | 09:30 open · cash $5.81 (unchanged overnight, no fees) · equity $6,350.02 vs prior close $6,319.98 (+30.04) · 8 name(s) re-marked at the open (per-name table). AMTM×47 yday $21.69 → 09:30 $22.00 +14.57; AMX×6 yday $23.93 → 09:30 $24.01 +0.48; GH×6 yday $182.59 → 09:30 $185.17 +15.48; GLND×44 yday $3.24 → 09:30 $3.10 -6.16; ITW×3 yday $276.07 → 09:30 $277.43 +4.08; RY×5 yday $204.77 → 09:30 $205.07 +1.50; SGRY×45 yday $23.24 → 09:30 $23.25 +0.45; TBBB×18 yday $56.40 → 09:30 $56.38 -0.36 | — |
+| 2026-10-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5.81 | ▲ close $6,383.16 vs 09:30 $6,350.02 (session +33.14) | 16:00 close · cash $5.81 · equity $6,383.16 vs 09:30 $6,350.02 (+33.14; session marks +33.14) · 8 name(s) marked open→close (per-name table). AMTM×47 09:30 $22.00 → close $22.07 +3.29; AMX×6 09:30 $24.01 → close $24.13 +0.72; GH×6 09:30 $185.17 → close $185.31 +0.84; GLND×44 09:30 $3.10 → close $3.31 +9.24; ITW×3 09:30 $277.43 → close $281.40 +11.91; RY×5 09:30 $205.07 → close $206.03 +4.80; SGRY×45 09:30 $23.25 → close $23.21 -1.80; TBBB×18 09:30 $56.38 → close $56.61 +4.14 | — |
 
 ## Not taken
 

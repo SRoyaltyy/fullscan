@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ coil_off hold 5, no 🚨
 
-Cash book **-19.11%** ($8,089) · signal-only (no cash/fees) was -38.99%. Starts YES **0/30**. Fills 292 · skips 444 · realized $-915.44.
+Cash book **-17.89%** ($8,212) · signal-only (no cash/fees) was -38.99%. Starts YES **0/30**. Fills 292 · skips 444 · realized $-915.44.
 
 ## How this sleeve decides (like you are 10)
 
@@ -475,6 +475,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-28 09:30 ET | **BUY** | `BBWI` | 12 | $21.70 | $2.03 | — | $310.70 | — | union ∩ coil_off hold 5, no 🚨; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list ohlc_hot; ret5=+6.8; leftover $266.29 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-10-28 09:30 ET | **BUY** | `AEO` | 13 | $19.39 | $2.03 | — | $56.60 | — | union ∩ coil_off hold 5, no 🚨; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list ohlc_hot; ret5=+9.0; leftover $266.29 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $56.60 | ▲ close $8,089.47 vs 09:30 $8,100.35 (session +1.81) | 16:00 close · cash $56.60 · equity $8,089.47 vs 09:30 $8,100.35 (-10.88; session marks +1.81) · 11 name(s) marked open→close (per-name table). AMX×56 09:30 $24.07 → close $23.93 -7.84; EPR×24 09:30 $55.85 → close $55.51 -8.16; ITW×5 09:30 $276.75 → close $276.07 -3.40; TRU×16 09:30 $74.41 → close $74.31 -1.60; VEEV×4 09:30 $310.00 → close $317.82 +31.28; NEO×15 09:30 $17.30 → close $17.99 +10.35; PDFS×5 09:30 $45.62 → close $45.49 -0.65; EGG×51 09:30 $5.14 → close $4.84 -15.30; NFGC×153 09:30 $1.74 → close $1.72 -3.06; BBWI×12 09:30 $21.70 → close $21.64 -0.72; AEO×13 09:30 $19.39 → close $19.46 +0.91 | — |
+| 2026-10-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $56.60 | ▲ 09:30 equity $8,112.78 vs yday $8,089.47 (+23.31) | 09:30 open · cash $56.60 (unchanged overnight, no fees) · equity $8,112.78 vs prior close $8,089.47 (+23.31) · 11 name(s) re-marked at the open (per-name table). AEO×13 yday $19.46 → 09:30 $19.74 +3.64; AMX×56 yday $23.93 → 09:30 $24.01 +4.48; BBWI×12 yday $21.64 → 09:30 $22.26 +7.44; EGG×51 yday $4.84 → 09:30 $4.84 +0.00; EPR×24 yday $55.51 → 09:30 $56.89 +33.12; ITW×5 yday $276.07 → 09:30 $277.43 +6.80; NEO×15 yday $17.99 → 09:30 $17.25 -11.10; NFGC×153 yday $1.72 → 09:30 $1.66 -9.18; PDFS×5 yday $45.49 → 09:30 $44.80 -3.45; TRU×16 yday $74.31 → 09:30 $75.21 +14.40; VEEV×4 yday $317.82 → 09:30 $312.11 -22.84 | — |
+| 2026-10-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $56.60 | ▲ close $8,211.52 vs 09:30 $8,112.78 (session +98.74) | 16:00 close · cash $56.60 · equity $8,211.52 vs 09:30 $8,112.78 (+98.74; session marks +98.74) · 11 name(s) marked open→close (per-name table). AEO×13 09:30 $19.74 → close $20.12 +4.94; AMX×56 09:30 $24.01 → close $24.13 +6.72; BBWI×12 09:30 $22.26 → close $22.78 +6.24; EGG×51 09:30 $4.84 → close $5.04 +10.20; EPR×24 09:30 $56.89 → close $58.34 +34.80; ITW×5 09:30 $277.43 → close $281.40 +19.85; NEO×15 09:30 $17.25 → close $17.93 +10.20; NFGC×153 09:30 $1.66 → close $1.69 +4.59; PDFS×5 09:30 $44.80 → close $45.56 +3.80; TRU×16 09:30 $75.21 → close $75.49 +4.48; VEEV×4 09:30 $312.11 → close $310.34 -7.08 | — |
 
 ## Not taken
 

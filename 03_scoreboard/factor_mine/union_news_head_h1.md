@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · prior-export headline🟢 only
 
-Cash book **-44.86%** ($5,514) · signal-only (no cash/fees) was +13.09%. Starts YES **0/30**. Fills 258 · skips 65 · realized $-814.48.
+Cash book **-43.68%** ($5,632) · signal-only (no cash/fees) was +13.09%. Starts YES **0/30**. Fills 258 · skips 65 · realized $-814.48.
 
 ## How this sleeve decides (like you are 10)
 
@@ -439,6 +439,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-28 09:30 ET | **SELL** | `TBBB` | 12 | $56.82 | $2.05 | $-21.11 | $5,180.62 | ▼ -21.11 after sell → book $5,734.12; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🟢 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-28 09:30 ET | **BUY** | `GLND` | 1531 | $3.37 | $19.75 | — | $1.40 | — | prior-export headline🟢 only; gate headline=good; rank cond; list yday_mover; ret5=+7.4; leftover $5180.62 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 ab🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1.40 | ▼ close $5,513.98 vs 09:30 $5,753.93 (session -200.39) | 16:00 close · cash $1.40 · equity $5,513.98 vs 09:30 $5,753.93 (-239.95; session marks -200.39) · 2 name(s) marked open→close (per-name table). ITW×2 09:30 $276.75 → close $276.07 -1.36; GLND×1531 09:30 $3.37 → close $3.24 -199.03 | — |
+| 2026-10-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $1.40 | ▼ 09:30 equity $5,302.36 vs yday $5,513.98 (-211.62) | 09:30 open · cash $1.40 (unchanged overnight, no fees) · equity $5,302.36 vs prior close $5,513.98 (-211.62) · 2 name(s) re-marked at the open (per-name table). GLND×1531 yday $3.24 → 09:30 $3.10 -214.34; ITW×2 yday $276.07 → 09:30 $277.43 +2.72 | — |
+| 2026-10-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1.40 | ▲ close $5,631.81 vs 09:30 $5,302.36 (session +329.45) | 16:00 close · cash $1.40 · equity $5,631.81 vs 09:30 $5,302.36 (+329.45; session marks +329.45) · 2 name(s) marked open→close (per-name table). GLND×1531 09:30 $3.10 → close $3.31 +321.51; ITW×2 09:30 $277.43 → close $281.40 +7.94 | — |
 
 ## Not taken
 

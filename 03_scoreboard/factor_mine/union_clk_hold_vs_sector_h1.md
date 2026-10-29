@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · Clock-B #6 stock holds while sector camera is red
 
-Cash book **-11.56%** ($8,844) · signal-only (no cash/fees) was -2.27%. Starts YES **25/30**. Fills 347 · skips 96 · realized $+387.41.
+Cash book **-14.46%** ($8,554) · signal-only (no cash/fees) was -2.27%. Starts YES **25/30**. Fills 351 · skips 96 · realized $+387.41.
 
 ## How this sleeve decides (like you are 10)
 
@@ -529,6 +529,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-28 09:30 ET | **BUY** | `NXPI` | 8 | $238.14 | $2.01 | — | $1,945.13 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list ohlc_hot; ret5=+6.7; leftover $1923.47 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🟡 heat🔴 vol🔴 buy🟡 |
 | 2026-10-28 09:30 ET | **BUY** | `S` | 75 | $25.56 | $2.21 | — | $25.91 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list ohlc_hot; ret5=+16.6; leftover $1923.47 | join🟡 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-10-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $25.91 | ▼ close $8,843.58 vs 09:30 $8,872.05 (session -14.15) | 16:00 close · cash $25.91 · equity $8,843.58 vs 09:30 $8,872.05 (-28.47; session marks -14.15) · 4 name(s) marked open→close (per-name table). GLND×918 09:30 $3.37 → close $3.24 -119.34; PDFS×42 09:30 $45.62 → close $45.49 -5.46; NXPI×8 09:30 $238.14 → close $251.69 +108.40; S×75 09:30 $25.56 → close $25.59 +2.25 | — |
+| 2026-10-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $25.91 | ▼ 09:30 equity $8,572.48 vs yday $8,843.58 (-271.10) | 09:30 open · cash $25.91 (unchanged overnight, no fees) · equity $8,572.48 vs prior close $8,843.58 (-271.10) · 4 name(s) re-marked at the open (per-name table). GLND×918 yday $3.24 → 09:30 $3.10 -128.52; NXPI×8 yday $251.69 → 09:30 $249.49 -17.60; PDFS×42 yday $45.49 → 09:30 $44.80 -28.98; S×75 yday $25.59 → 09:30 $24.31 -96.00 | — |
+| 2026-10-29 09:30 ET | **SELL** | `GLND` | 918 | $3.10 | $12.02 | $-77.29 | $2,859.69 | ▼ -77.29 after sell → book $8,560.46; vs 09:30 mark -12.02 | dropped from list after 2 sess (min 1) | join🟢 sector🔴 gen🔴 news🟢 digest🟢 judge🟢 ab🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-29 09:30 ET | **SELL** | `NXPI` | 8 | $249.49 | $2.04 | $+86.75 | $4,853.57 | ▲ +86.75 after sell → book $8,558.42; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-29 09:30 ET | **SELL** | `PDFS` | 42 | $44.80 | $2.14 | $-38.70 | $6,733.03 | ▼ -38.70 after sell → book $8,556.28; vs 09:30 mark -2.14 | dropped from list after 1 sess (min 1) | join🔴 sector🟢 gen🔴 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-29 09:30 ET | **SELL** | `S` | 75 | $24.31 | $2.24 | $-98.21 | $8,554.04 | ▼ -98.21 after sell → book $8,554.04; vs 09:30 mark -2.24 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,554.04 | ▲ close $8,554.04 vs 09:30 $8,572.48 (session +0.00) | 16:00 close · cash $8,554.04 · no lots left · equity $8,554.04. | — |
 
 ## Not taken
 

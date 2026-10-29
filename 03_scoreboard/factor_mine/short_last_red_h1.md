@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · last bar red
 
-Cash book **-2.19%** ($9,781) · signal-only (no cash/fees) was -2.93%. Starts YES **19/30**. Fills 462 · skips 107 · realized $-717.78.
+Cash book **-3.62%** ($9,638) · signal-only (no cash/fees) was -2.93%. Starts YES **19/30**. Fills 466 · skips 107 · realized $-717.78.
 
 ## How this sleeve decides (like you are 10)
 
@@ -640,6 +640,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-28 09:30 ET | **SHORT** | `TLSA` | 793 | $0.89 | $9.60 | — | $14,420.89 | — | last bar red; gate last_red=True; list yday_gainer; ret5=-13.7; leftover $706.31 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-28 09:30 ET | **SHORT** | `TRU` | 9 | $74.41 | $2.06 | — | $15,088.52 | — | last bar red; gate last_red=True; list yday_gainer; ret5=-3.6; leftover $706.31 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $15,088.52 | ▼ close $9,780.85 vs 09:30 $9,904.41 (session -85.04) | 16:00 close · cash $15,088.52 · equity $9,780.85 vs 09:30 $9,904.41 (-123.56; session marks -85.04) · 8 name(s) marked open→close (per-name table). PRMB×32 09:30 $19.00 → close $19.32 -10.24; EPR×12 09:30 $55.85 → close $55.51 +4.08; ACRS×190 09:30 $3.70 → close $3.96 -49.40; CRS×2 09:30 $291.76 → close $280.00 +23.52; DY×3 09:30 $235.00 → close $234.00 +3.01; POOL×3 09:30 $192.48 → close $195.59 -9.33; TLSA×793 09:30 $0.89 → close $0.95 -47.58; TRU×9 09:30 $74.41 → close $74.31 +0.90 | — |
+| 2026-10-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $15,088.52 | ▼ 09:30 equity $9,727.94 vs yday $9,780.85 (-52.91) | 09:30 open · cash $15,088.52 (unchanged overnight, no fees) · equity $9,727.94 vs prior close $9,780.85 (-52.91) · 8 name(s) re-marked at the open (per-name table). ACRS×190 yday $3.96 → 09:30 $4.05 -17.10; CRS×2 yday $280.00 → 09:30 $279.00 +2.00; DY×3 yday $234.00 → 09:30 $235.00 -3.00; EPR×12 yday $55.51 → 09:30 $56.89 -16.56; POOL×3 yday $195.59 → 09:30 $196.52 -2.79; PRMB×32 yday $19.32 → 09:30 $19.55 -7.36; TLSA×793 yday $0.95 → 09:30 $0.95 -0.00; TRU×9 yday $74.31 → 09:30 $75.21 -8.10 | — |
+| 2026-10-29 09:30 ET | **COVER** | `ACRS` | 190 | $4.05 | $2.56 | $-71.68 | $14,316.46 | ▼ -71.68 after sell → book $9,725.38; vs 09:30 mark -2.56 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 judge🟢 ab🔴 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-29 09:30 ET | **COVER** | `POOL` | 3 | $196.52 | $2.00 | $-16.15 | $13,724.90 | ▼ -16.15 after sell → book $9,723.38; vs 09:30 mark -2.00 | dropped from list after 1 sess (min 1) | join🔴 sector🔴 gen🔴 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-29 09:30 ET | **COVER** | `PRMB` | 32 | $19.55 | $2.09 | $-3.25 | $13,097.22 | ▼ -3.25 after sell → book $9,721.30; vs 09:30 mark -2.08 | dropped from list after 2 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-29 09:30 ET | **COVER** | `TLSA` | 793 | $0.95 | $9.91 | $-67.09 | $12,333.95 | ▼ -67.09 after sell → book $9,711.38; vs 09:30 mark -9.92 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 judge🟢 ab🟡 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $12,333.95 | ▼ close $9,638.04 vs 09:30 $9,727.94 (session -73.34) | 16:00 close · cash $12,333.95 · equity $9,638.04 vs 09:30 $9,727.94 (-89.90; session marks -73.34) · 4 name(s) marked open→close (per-name table). CRS×2 09:30 $279.00 → close $298.72 -39.44; DY×3 09:30 $235.00 → close $239.66 -13.98; EPR×12 09:30 $56.89 → close $58.34 -17.40; TRU×9 09:30 $75.21 → close $75.49 -2.52 | — |
 
 ## Not taken
 

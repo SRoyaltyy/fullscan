@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 4 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · top 4 by cond
 
-Cash book **-5.75%** ($9,425) · signal-only (no cash/fees) was -7.67%. Starts YES **1/30**. Fills 152 · skips 159 · realized $-515.67.
+Cash book **-5.00%** ($9,500) · signal-only (no cash/fees) was -7.67%. Starts YES **1/30**. Fills 152 · skips 159 · realized $-515.67.
 
 ## How this sleeve decides (like you are 10)
 
@@ -331,6 +331,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $74.92 | ▲ 09:30 equity $9,264.16 vs yday $9,261.59 (+2.57) | 09:30 open · cash $74.92 (unchanged overnight, no fees) · equity $9,264.16 vs prior close $9,261.59 (+2.57) · 4 name(s) re-marked at the open (per-name table). CDNA×32 yday $70.53 → 09:30 $69.91 -19.84; PACS×47 yday $47.85 → 09:30 $49.00 +54.05; SGRY×98 yday $23.36 → 09:30 $23.26 -9.80; SMMT×156 yday $15.33 → 09:30 $15.19 -21.84 | — |
 | 2026-10-28 09:30 ET | **BUY** | `EGG` | 3 | $5.14 | $0.16 | — | $59.34 | — | top 4 by cond; rank cond; list yday_gainer,yday_mover; 🔵; ret5=+6.4; leftover $18.73 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $59.34 | ▲ close $9,425.48 vs 09:30 $9,264.16 (session +161.48) | 16:00 close · cash $59.34 · equity $9,425.48 vs 09:30 $9,264.16 (+161.32; session marks +161.48) · 5 name(s) marked open→close (per-name table). CDNA×32 09:30 $69.91 → close $72.13 +71.04; PACS×47 09:30 $49.00 → close $49.06 +2.82; SGRY×98 09:30 $23.26 → close $23.24 -1.96; SMMT×156 09:30 $15.19 → close $15.77 +90.48; EGG×3 09:30 $5.14 → close $4.84 -0.90 | — |
+| 2026-10-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $59.34 | ▲ 09:30 equity $9,454.88 vs yday $9,425.48 (+29.40) | 09:30 open · cash $59.34 (unchanged overnight, no fees) · equity $9,454.88 vs prior close $9,425.48 (+29.40) · 5 name(s) re-marked at the open (per-name table). CDNA×32 yday $72.13 → 09:30 $72.02 -3.52; EGG×3 yday $4.84 → 09:30 $4.84 +0.00; PACS×47 yday $49.06 → 09:30 $49.64 +27.26; SGRY×98 yday $23.24 → 09:30 $23.25 +0.98; SMMT×156 yday $15.77 → 09:30 $15.80 +4.68 | — |
+| 2026-10-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $59.34 | ▲ close $9,499.84 vs 09:30 $9,454.88 (session +44.96) | 16:00 close · cash $59.34 · equity $9,499.84 vs 09:30 $9,454.88 (+44.96; session marks +44.96) · 5 name(s) marked open→close (per-name table). CDNA×32 09:30 $72.02 → close $71.52 -16.00; EGG×3 09:30 $4.84 → close $5.04 +0.60; PACS×47 09:30 $49.64 → close $49.68 +1.88; SGRY×98 09:30 $23.25 → close $23.21 -3.92; SMMT×156 09:30 $15.80 → close $16.20 +62.40 | — |
 
 ## Not taken
 

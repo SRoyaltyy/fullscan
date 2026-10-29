@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · news🔴
 
-Cash book **-8.60%** ($9,140) · signal-only (no cash/fees) was +4.61%. Starts YES **16/30**. Fills 175 · skips 28 · realized $+7.41.
+Cash book **-8.82%** ($9,118) · signal-only (no cash/fees) was +4.61%. Starts YES **16/30**. Fills 177 · skips 28 · realized $+7.41.
 
 ## How this sleeve decides (like you are 10)
 
@@ -353,6 +353,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-28 09:30 ET | **SHORT** | `SPCE` | 850 | $2.68 | $11.19 | — | $11,386.02 | — | news🔴; gate news=bad; list ohlc_hot; 🔵; ret5=+13.5; leftover $2279.80 | join🟢 sector🟢 gen🟢 news🔴 digest🟢 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
 | 2026-10-28 09:30 ET | **SHORT** | `VOYG` | 83 | $27.35 | $2.33 | — | $13,653.73 | — | news🔴; gate news=bad; list ohlc_hot; 🔵; ret5=+13.8; leftover $2279.80 | join🟢 sector🟢 gen🟢 news🔴 digest🟢 ab🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $13,653.73 | ▲ close $9,140.11 vs 09:30 $9,125.39 (session +34.43) | 16:00 close · cash $13,653.73 · equity $9,140.11 vs 09:30 $9,125.39 (+14.72; session marks +34.43) · 2 name(s) marked open→close (per-name table). SPCE×850 09:30 $2.68 → close $2.66 +17.00; VOYG×83 09:30 $27.35 → close $27.14 +17.43 | — |
+| 2026-10-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $13,653.73 | ▼ 09:30 equity $9,131.58 vs yday $9,140.11 (-8.53) | 09:30 open · cash $13,653.73 (unchanged overnight, no fees) · equity $9,131.58 vs prior close $9,140.11 (-8.53) · 2 name(s) re-marked at the open (per-name table). SPCE×850 yday $2.66 → 09:30 $2.63 +25.50; VOYG×83 yday $27.14 → 09:30 $27.55 -34.03 | — |
+| 2026-10-29 09:30 ET | **COVER** | `SPCE` | 850 | $2.63 | $10.96 | $+20.35 | $11,407.26 | ▲ +20.35 after sell → book $9,120.61; vs 09:30 mark -10.97 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-29 09:30 ET | **COVER** | `VOYG` | 83 | $27.55 | $2.24 | $-21.17 | $9,118.38 | ▼ -21.17 after sell → book $9,118.38; vs 09:30 mark -2.24 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,118.38 | ▲ close $9,118.38 vs 09:30 $9,131.58 (session +0.00) | 16:00 close · cash $9,118.38 · no lots left · equity $9,118.38. | — |
 
 ## Not taken
 

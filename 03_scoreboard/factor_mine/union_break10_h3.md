@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ break10, no 🚨
 
-Cash book **+11.54%** ($11,154) · signal-only (no cash/fees) was +49.44%. Starts YES **25/30**. Fills 336 · skips 298 · realized $+167.97.
+Cash book **+11.49%** ($11,149) · signal-only (no cash/fees) was +49.44%. Starts YES **25/30**. Fills 336 · skips 298 · realized $+167.97.
 
 ## How this sleeve decides (like you are 10)
 
@@ -516,6 +516,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-28 09:30 ET | **BUY** | `IMSR` | 5 | $2.95 | $0.16 | — | $110.20 | — | union ∩ break10, no 🚨; gate break_10=True; list ohlc_hot; 🔵; ret5=+17.5; leftover $15.64 | join🟡 sector🟡 gen🟢 news🟡 digest🟡 ab🟡 heat🔴 vol🔴 buy🟡 |
 | 2026-10-28 09:30 ET | **BUY** | `FIP` | 5 | $2.65 | $0.15 | — | $96.80 | — | union ∩ break10, no 🚨; gate break_10=True; list ohlc_hot; 🔵; ret5=+15.6; leftover $15.64 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🔴 vol🔴 buy🟡 |
 | 2026-10-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $96.80 | ▲ close $11,154.18 vs 09:30 $10,679.86 (session +474.64) | 16:00 close · cash $96.80 · equity $11,154.18 vs 09:30 $10,679.86 (+474.32; session marks +474.64) · 10 name(s) marked open→close (per-name table). DOW×39 09:30 $33.73 → close $34.13 +15.41; ENGS×305 09:30 $4.36 → close $4.36 +0.00; GMAB×30 09:30 $44.63 → close $57.29 +379.80; LMT×2 09:30 $616.56 → close $629.75 +26.38; RBRK×10 09:30 $135.47 → close $136.00 +5.30; RIG×206 09:30 $6.47 → close $6.71 +49.44; SGRY×57 09:30 $23.26 → close $23.24 -1.14; SLN×67 09:30 $19.76 → close $19.71 -3.35; IMSR×5 09:30 $2.95 → close $3.35 +2.00; FIP×5 09:30 $2.65 → close $2.81 +0.80 | — |
+| 2026-10-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $96.80 | ▼ 09:30 equity $11,065.77 vs yday $11,154.18 (-88.41) | 09:30 open · cash $96.80 (unchanged overnight, no fees) · equity $11,065.77 vs prior close $11,154.18 (-88.41) · 10 name(s) re-marked at the open (per-name table). DOW×39 yday $34.13 → 09:30 $34.20 +2.73; ENGS×305 yday $4.36 → 09:30 $4.34 -6.10; FIP×5 yday $2.81 → 09:30 $2.83 +0.10; GMAB×30 yday $57.29 → 09:30 $56.46 -24.90; IMSR×5 yday $3.35 → 09:30 $3.21 -0.70; LMT×2 yday $629.75 → 09:30 $639.66 +19.82; RBRK×10 yday $136.00 → 09:30 $128.62 -73.75; RIG×206 yday $6.71 → 09:30 $6.68 -6.18; SGRY×57 yday $23.24 → 09:30 $23.25 +0.57; SLN×67 yday $19.71 → 09:30 $19.71 +0.00 | — |
+| 2026-10-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $96.80 | ▲ close $11,148.84 vs 09:30 $11,065.77 (session +83.08) | 16:00 close · cash $96.80 · equity $11,148.84 vs 09:30 $11,065.77 (+83.07; session marks +83.08) · 10 name(s) marked open→close (per-name table). DOW×39 09:30 $34.20 → close $33.62 -22.62; ENGS×305 09:30 $4.34 → close $4.47 +39.65; FIP×5 09:30 $2.83 → close $2.87 +0.20; GMAB×30 09:30 $56.46 → close $56.49 +0.90; IMSR×5 09:30 $3.21 → close $3.46 +1.23; LMT×2 09:30 $639.66 → close $643.59 +7.86; RBRK×10 09:30 $128.62 → close $133.63 +50.05; RIG×206 09:30 $6.68 → close $6.69 +2.06; SGRY×57 09:30 $23.25 → close $23.21 -2.28; SLN×67 09:30 $19.71 → close $19.80 +6.03 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `ret_5` · size `leftover` · sell `list` · S-boost `none` · rank by ret_5
 
-Cash book **+15.00%** ($11,500) · signal-only (no cash/fees) was +36.33%. Starts YES **29/30**. Fills 457 · skips 100 · realized $+370.60.
+Cash book **+13.11%** ($11,311) · signal-only (no cash/fees) was +36.33%. Starts YES **29/30**. Fills 464 · skips 100 · realized $+370.60.
 
 ## How this sleeve decides (like you are 10)
 
@@ -636,6 +636,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-28 09:30 ET | **BUY** | `BETA` | 67 | $20.88 | $2.19 | — | $1,561.21 | — | rank by ret_5; rank ret_5; list ohlc_hot; 🔵; ret5=+14.3; leftover $1405.15 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟡 heat🔴 vol🔴 buy🟡 |
 | 2026-10-28 09:30 ET | **BUY** | `VOYG` | 51 | $27.35 | $2.14 | — | $164.22 | — | rank by ret_5; rank ret_5; list ohlc_hot; 🔵; ret5=+13.8; leftover $1405.15 | join🟢 sector🟢 gen🟢 news🔴 digest🟢 ab🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $164.22 | ▲ close $11,499.78 vs 09:30 $11,260.17 (session +285.72) | 16:00 close · cash $164.22 · equity $11,499.78 vs 09:30 $11,260.17 (+239.61; session marks +285.72) · 8 name(s) marked open→close (per-name table). RH×9 09:30 $140.69 → close $145.06 +39.33; IMSR×476 09:30 $2.95 → close $3.35 +190.40; AMPX×156 09:30 $8.98 → close $9.16 +28.08; S×54 09:30 $25.56 → close $25.59 +1.62; JLHL×250 09:30 $5.60 → close $5.65 +12.50; FIP×530 09:30 $2.65 → close $2.81 +84.80; BETA×67 09:30 $20.88 → close $19.98 -60.30; VOYG×51 09:30 $27.35 → close $27.14 -10.71 | — |
+| 2026-10-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $164.22 | ▼ 09:30 equity $11,385.56 vs yday $11,499.78 (-114.22) | 09:30 open · cash $164.22 (unchanged overnight, no fees) · equity $11,385.56 vs prior close $11,499.78 (-114.22) · 8 name(s) re-marked at the open (per-name table). AMPX×156 yday $9.16 → 09:30 $9.02 -21.84; BETA×67 yday $19.98 → 09:30 $19.89 -6.03; FIP×530 yday $2.81 → 09:30 $2.83 +10.60; IMSR×476 yday $3.35 → 09:30 $3.21 -66.64; JLHL×250 yday $5.65 → 09:30 $5.61 -10.00; RH×9 yday $145.06 → 09:30 $148.16 +27.90; S×54 yday $25.59 → 09:30 $24.31 -69.12; VOYG×51 yday $27.14 → 09:30 $27.55 +20.91 | — |
+| 2026-10-29 09:30 ET | **SELL** | `AMPX` | 156 | $9.02 | $2.50 | $+1.29 | $1,568.84 | ▲ +1.29 after sell → book $11,383.06; vs 09:30 mark -2.50 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-29 09:30 ET | **SELL** | `BETA` | 67 | $19.89 | $2.21 | $-70.73 | $2,899.26 | ▼ -70.73 after sell → book $11,380.85; vs 09:30 mark -2.21 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-29 09:30 ET | **SELL** | `FIP` | 530 | $2.83 | $6.94 | $+81.63 | $4,392.23 | ▲ +81.63 after sell → book $11,373.92; vs 09:30 mark -6.93 | dropped from list after 1 sess (min 1) | join🔴 sector🔴 gen🔴 news🟡 digest🟢 judge🔴 ab🔴 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-29 09:30 ET | **SELL** | `IMSR` | 476 | $3.21 | $6.23 | $+111.39 | $5,913.95 | ▲ +111.39 after sell → book $11,367.68; vs 09:30 mark -6.24 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-29 09:30 ET | **SELL** | `RH` | 9 | $148.16 | $2.04 | $+63.18 | $7,245.36 | ▲ +63.18 after sell → book $11,365.65; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟡 digest🟡 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-29 09:30 ET | **SELL** | `S` | 54 | $24.31 | $2.17 | $-71.82 | $8,555.92 | ▼ -71.82 after sell → book $11,363.47; vs 09:30 mark -2.18 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-29 09:30 ET | **SELL** | `VOYG` | 51 | $27.55 | $2.16 | $+5.89 | $9,958.81 | ▲ +5.89 after sell → book $11,361.31; vs 09:30 mark -2.16 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,958.81 | ▼ close $11,311.31 vs 09:30 $11,385.56 (session -50.00) | 16:00 close · cash $9,958.81 · equity $11,311.31 vs 09:30 $11,385.56 (-74.25; session marks -50.00) · 1 name(s) marked open→close (per-name table). JLHL×250 09:30 $5.61 → close $5.41 -50.00 | — |
 
 ## Not taken
 

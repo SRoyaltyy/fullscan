@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-19.12%** ($8,088) · signal-only (no cash/fees) was -23.64%. Starts YES **0/30**. Fills 428 · skips 79 · realized $-1931.95.
+Cash book **-19.37%** ($8,063) · signal-only (no cash/fees) was -23.64%. Starts YES **0/30**. Fills 436 · skips 79 · realized $-1931.95.
 
 ## How this sleeve decides (like you are 10)
 
@@ -610,6 +610,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-28 09:30 ET | **BUY** | `CRS` | 3 | $291.76 | $2.00 | — | $1,216.73 | — | combo gate; gate blue=True,ret_5_max=10.0; list yday_gainer; 🔵; ret5=-22.6; leftover $1024.46 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-28 09:30 ET | **BUY** | `ITW` | 3 | $276.75 | $2.00 | — | $384.48 | — | combo gate; gate blue=True,ret_5_max=10.0; list yday_gainer; 🔵; ret5=+0.3; leftover $1024.46 | join🔴 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $384.48 | ▼ close $8,088.32 vs 09:30 $8,135.52 (session -17.36) | 16:00 close · cash $384.48 · equity $8,088.32 vs 09:30 $8,135.52 (-47.20; session marks -17.36) · 8 name(s) marked open→close (per-name table). EPR×17 09:30 $55.85 → close $55.51 -5.78; NEO×59 09:30 $17.30 → close $17.99 +40.71; PRMB×53 09:30 $19.00 → close $19.32 +16.96; CXW×33 09:30 $30.90 → close $30.63 -8.91; EGG×199 09:30 $5.14 → close $4.84 -59.70; PRIM×14 09:30 $71.14 → close $73.76 +36.68; CRS×3 09:30 $291.76 → close $280.00 -35.28; ITW×3 09:30 $276.75 → close $276.07 -2.04 | — |
+| 2026-10-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $384.48 | ▼ 09:30 equity $8,080.18 vs yday $8,088.32 (-8.14) | 09:30 open · cash $384.48 (unchanged overnight, no fees) · equity $8,080.18 vs prior close $8,088.32 (-8.14) · 8 name(s) re-marked at the open (per-name table). CRS×3 yday $280.00 → 09:30 $279.00 -3.00; CXW×33 yday $30.63 → 09:30 $30.92 +9.57; EGG×199 yday $4.84 → 09:30 $4.84 +0.00; EPR×17 yday $55.51 → 09:30 $56.89 +23.46; ITW×3 yday $276.07 → 09:30 $277.43 +4.08; NEO×59 yday $17.99 → 09:30 $17.25 -43.66; PRIM×14 yday $73.76 → 09:30 $72.99 -10.78; PRMB×53 yday $19.32 → 09:30 $19.55 +12.19 | — |
+| 2026-10-29 09:30 ET | **SELL** | `CRS` | 3 | $279.00 | $2.02 | $-42.30 | $1,219.46 | ▼ -42.30 after sell → book $8,078.16; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | join🔴 sector🔴 gen🔴 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-29 09:30 ET | **SELL** | `CXW` | 33 | $30.92 | $2.11 | $-3.54 | $2,237.71 | ▼ -3.54 after sell → book $8,076.05; vs 09:30 mark -2.11 | dropped from list after 1 sess (min 1) | join🔴 sector🔴 gen🔴 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-29 09:30 ET | **SELL** | `EGG` | 199 | $4.84 | $2.63 | $-64.92 | $3,198.24 | ▼ -64.92 after sell → book $8,073.42; vs 09:30 mark -2.63 | dropped from list after 1 sess (min 1) | join🔴 sector🔴 gen🔴 news🟡 digest🟢 judge🔴 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-29 09:30 ET | **SELL** | `EPR` | 17 | $56.89 | $2.06 | $+4.40 | $4,163.31 | ▲ +4.40 after sell → book $8,071.36; vs 09:30 mark -2.06 | dropped from list after 2 sess (min 1) | join🔴 sector🟡 gen🔴 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-29 09:30 ET | **SELL** | `ITW` | 3 | $277.43 | $2.02 | $-1.98 | $4,993.58 | ▼ -1.98 after sell → book $8,069.34; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | join🟡 sector🔴 gen🔴 news🟢 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-29 09:30 ET | **SELL** | `NEO` | 59 | $17.25 | $2.19 | $-7.30 | $6,009.14 | ▼ -7.30 after sell → book $8,067.15; vs 09:30 mark -2.19 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-29 09:30 ET | **SELL** | `PRIM` | 14 | $72.99 | $2.05 | $+21.82 | $7,028.95 | ▲ +21.82 after sell → book $8,065.10; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | join🔴 sector🔴 gen🔴 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-29 09:30 ET | **SELL** | `PRMB` | 53 | $19.55 | $2.17 | $+24.83 | $8,062.93 | ▲ +24.83 after sell → book $8,062.93; vs 09:30 mark -2.17 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,062.93 | ▲ close $8,062.93 vs 09:30 $8,080.18 (session +0.00) | 16:00 close · cash $8,062.93 · no lots left · equity $8,062.93. | — |
 
 ## Not taken
 

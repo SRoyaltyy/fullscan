@@ -1,0 +1,85 @@
+{
+  "buys": [],
+  "cash": 7382.51,
+  "date": "2026-10-29",
+  "equity": 7382.51,
+  "fees": 14.4478,
+  "fills": [
+    {
+      "fees": 2.276,
+      "fill_rule": "open",
+      "pnl": -89.66,
+      "price": 19.89,
+      "shares": 86,
+      "side": "SELL",
+      "ticker": "BETA"
+    },
+    {
+      "fees": 7.999,
+      "fill_rule": "open",
+      "pnl": 142.98,
+      "price": 3.21,
+      "shares": 611,
+      "side": "SELL",
+      "ticker": "IMSR"
+    },
+    {
+      "fees": 2.0502,
+      "fill_rule": "open",
+      "pnl": 85.56,
+      "price": 148.16,
+      "shares": 12,
+      "side": "SELL",
+      "ticker": "RH"
+    },
+    {
+      "fees": 2.1226,
+      "fill_rule": "open",
+      "pnl": 25.3,
+      "price": 50.82,
+      "shares": 36,
+      "side": "SELL",
+      "ticker": "VCYT"
+    }
+  ],
+  "holdings": [],
+  "mean": -0.7017,
+  "n_trades_today": 4,
+  "recipe": "oos0914_break10_h1_sx",
+  "sells": [
+    {
+      "fill_rule": "open",
+      "price": 19.89,
+      "shares": 86,
+      "side": "SELL",
+      "ticker": "BETA"
+    },
+    {
+      "fill_rule": "open",
+      "price": 3.21,
+      "shares": 611,
+      "side": "SELL",
+      "ticker": "IMSR"
+    },
+    {
+      "fill_rule": "open",
+      "price": 148.16,
+      "shares": 12,
+      "side": "SELL",
+      "ticker": "RH"
+    },
+    {
+      "fill_rule": "open",
+      "price": 50.82,
+      "shares": 36,
+      "side": "SELL",
+      "ticker": "VCYT"
+    }
+  ],
+  "state": {
+    "after": "2026-10-29",
+    "cash": 7382.51,
+    "pos": {},
+    "yday_equity": 7382.51
+  }
+}

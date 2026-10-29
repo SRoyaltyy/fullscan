@@ -1,0 +1,132 @@
+{
+  "buys": [],
+  "cash": 9310.08,
+  "date": "2026-10-29",
+  "equity": 9696.77,
+  "fees": 14.0032,
+  "fills": [
+    {
+      "fees": 7.2447,
+      "fill_rule": "open",
+      "pnl": -36.5,
+      "price": 4.34,
+      "shares": 553,
+      "side": "SELL",
+      "ticker": "ENGS"
+    },
+    {
+      "fees": 2.0244,
+      "fill_rule": "open",
+      "pnl": 34.23,
+      "price": 639.66,
+      "shares": 3,
+      "side": "SELL",
+      "ticker": "LMT"
+    },
+    {
+      "fees": 2.3386,
+      "fill_rule": "open",
+      "pnl": 0.56,
+      "price": 23.25,
+      "shares": 104,
+      "side": "SELL",
+      "ticker": "SGRY"
+    },
+    {
+      "fees": 2.3955,
+      "fill_rule": "open",
+      "pnl": -13.29,
+      "price": 19.71,
+      "shares": 122,
+      "side": "SELL",
+      "ticker": "SLN"
+    }
+  ],
+  "holdings": [
+    "BETA",
+    "IMSR",
+    "VCYT"
+  ],
+  "mean": 0.1839,
+  "n_trades_today": 4,
+  "recipe": "oos0914_break10_h2_sx",
+  "sells": [
+    {
+      "fill_rule": "open",
+      "price": 4.34,
+      "shares": 553,
+      "side": "SELL",
+      "ticker": "ENGS"
+    },
+    {
+      "fill_rule": "open",
+      "price": 639.66,
+      "shares": 3,
+      "side": "SELL",
+      "ticker": "LMT"
+    },
+    {
+      "fill_rule": "open",
+      "price": 23.25,
+      "shares": 104,
+      "side": "SELL",
+      "ticker": "SGRY"
+    },
+    {
+      "fill_rule": "open",
+      "price": 19.71,
+      "shares": 122,
+      "side": "SELL",
+      "ticker": "SLN"
+    }
+  ],
+  "state": {
+    "after": "2026-10-29",
+    "cash": 9310.08,
+    "pos": {
+      "BETA": {
+        "close_px": 20.56999969482422,
+        "cost": 126.5508,
+        "entry_date": "2026-10-28",
+        "entry_px": 20.88,
+        "fee_in": 1.2708,
+        "last_px": 19.889999389648438,
+        "min_hold": 2,
+        "notional": 125.28,
+        "peak_px": 20.88,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list ohlc_hot; \ud83d\udd35; ret5=+14.3; leftover $136.80",
+        "shares": 6,
+        "ticker": "BETA"
+      },
+      "IMSR": {
+        "close_px": 3.4549999237060547,
+        "cost": 137.19500000000002,
+        "entry_date": "2026-10-28",
+        "entry_px": 2.95,
+        "fee_in": 1.495,
+        "last_px": 3.2100000381469727,
+        "min_hold": 2,
+        "notional": 135.70000000000002,
+        "peak_px": 3.2100000381469727,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list ohlc_hot; \ud83d\udd35; ret5=+17.5; leftover $136.80",
+        "shares": 46,
+        "ticker": "IMSR"
+      },
+      "VCYT": {
+        "close_px": 52.16999816894531,
+        "cost": 101.006,
+        "entry_date": "2026-10-28",
+        "entry_px": 50.0,
+        "fee_in": 1.006,
+        "last_px": 50.81999969482422,
+        "min_hold": 2,
+        "notional": 100.0,
+        "peak_px": 50.81999969482422,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list ohlc_hot; ret5=+12.3; leftover $136.80",
+        "shares": 2,
+        "ticker": "VCYT"
+      }
+    },
+    "yday_equity": 9696.77
+  }
+}

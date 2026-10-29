@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · packet🟢 and camera net ≥ 2
 
-Cash book **+3.46%** ($10,346) · signal-only (no cash/fees) was +7.99%. Starts YES **21/30**. Fills 105 · skips 28 · realized $+1837.87.
+Cash book **+3.75%** ($10,375) · signal-only (no cash/fees) was +7.99%. Starts YES **21/30**. Fills 106 · skips 28 · realized $+1837.87.
 
 ## How this sleeve decides (like you are 10)
 
@@ -287,6 +287,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-28 09:30 ET | **SELL** | `RY` | 51 | $203.11 | $2.24 | $-8.46 | $10,412.45 | ▼ -8.46 after sell → book $10,412.45; vs 09:30 mark -2.24 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-28 09:30 ET | **BUY** | `AMX` | 432 | $24.07 | $5.57 | — | $8.64 | — | packet🟢 and camera net ≥ 2; gate cam_net_min=2,news_box=good; rank cond; list yday_gainer; ret5=+5.1; leftover $10412.45 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8.64 | ▼ close $10,346.40 vs 09:30 $10,414.69 (session -60.48) | 16:00 close · cash $8.64 · equity $10,346.40 vs 09:30 $10,414.69 (-68.29; session marks -60.48) · 1 name(s) marked open→close (per-name table). AMX×432 09:30 $24.07 → close $23.93 -60.48 | — |
+| 2026-10-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8.64 | ▲ 09:30 equity $10,380.96 vs yday $10,346.40 (+34.56) | 09:30 open · cash $8.64 (unchanged overnight, no fees) · equity $10,380.96 vs prior close $10,346.40 (+34.56) · 1 name(s) re-marked at the open (per-name table). AMX×432 yday $23.93 → 09:30 $24.01 +34.56 | — |
+| 2026-10-29 09:30 ET | **SELL** | `AMX` | 432 | $24.01 | $5.73 | $-37.22 | $10,375.23 | ▼ -37.22 after sell → book $10,375.23; vs 09:30 mark -5.73 | dropped from list after 1 sess (min 1) | join🔴 sector🔴 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,375.23 | ▲ close $10,375.23 vs 09:30 $10,380.96 (session +0.00) | 16:00 close · cash $10,375.23 · no lots left · equity $10,375.23. | — |
 
 ## Not taken
 

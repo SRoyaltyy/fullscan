@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `trail` · S-boost `none` · after min-hold, trail 5% off peak
 
-Cash book **-14.88%** ($8,512) · signal-only (no cash/fees) was -0.80%. Starts YES **0/30**. Fills 436 · skips 107 · realized $-106.46.
+Cash book **-15.27%** ($8,474) · signal-only (no cash/fees) was -0.80%. Starts YES **0/30**. Fills 441 · skips 107 · realized $-106.46.
 
 ## How this sleeve decides (like you are 10)
 
@@ -612,6 +612,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-28 09:30 ET | **BUY** | `PRMB` | 54 | $19.00 | $2.15 | — | $1,061.45 | — | after min-hold, trail 5% off peak; list probable,yday_gainer,yday_mover; 🔵; ret5=-4.0; leftover $1031.40 | join🟢 sector🟡 gen🟢 news🟡 digest🔴 ab🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-28 09:30 ET | **BUY** | `NVTS` | 110 | $9.36 | $2.32 | — | $29.53 | — | after min-hold, trail 5% off peak; list probable,yday_gainer,yday_mover; ret5=+7.0; leftover $1031.40 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $29.53 | ▲ close $8,512.40 vs 09:30 $8,295.58 (session +250.90) | 16:00 close · cash $29.53 · equity $8,512.40 vs 09:30 $8,295.58 (+216.82; session marks +250.90) · 8 name(s) marked open→close (per-name table). SMMT×70 09:30 $15.19 → close $15.77 +40.60; SRRK×23 09:30 $43.82 → close $43.25 -13.11; BRKR×17 09:30 $60.66 → close $62.00 +22.78; NEO×59 09:30 $17.30 → close $17.99 +40.71; AUTL×665 09:30 $1.55 → close $1.63 +53.20; FDMT×86 09:30 $11.89 → close $12.93 +89.44; PRMB×54 09:30 $19.00 → close $19.32 +17.28; NVTS×110 09:30 $9.36 → close $9.36 +0.00 | — |
+| 2026-10-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $29.53 | ▼ 09:30 equity $8,455.07 vs yday $8,512.40 (-57.33) | 09:30 open · cash $29.53 (unchanged overnight, no fees) · equity $8,455.07 vs prior close $8,512.40 (-57.33) · 8 name(s) re-marked at the open (per-name table). AUTL×665 yday $1.63 → 09:30 $1.63 +0.00; BRKR×17 yday $62.00 → 09:30 $61.18 -13.94; FDMT×86 yday $12.93 → 09:30 $13.00 +6.02; NEO×59 yday $17.99 → 09:30 $17.25 -43.66; NVTS×110 yday $9.36 → 09:30 $9.09 -29.70; PRMB×54 yday $19.32 → 09:30 $19.55 +12.42; SMMT×70 yday $15.77 → 09:30 $15.80 +2.10; SRRK×23 yday $43.25 → 09:30 $43.66 +9.43 | — |
+| 2026-10-29 09:30 ET | **SELL** | `AUTL` | 665 | $1.63 | $8.70 | $+35.92 | $1,104.78 | ▲ +35.92 after sell → book $8,446.37; vs 09:30 mark -8.70 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-29 09:30 ET | **SELL** | `BRKR` | 17 | $61.18 | $2.06 | $+4.74 | $2,142.78 | ▲ +4.74 after sell → book $8,444.31; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-29 09:30 ET | **SELL** | `FDMT` | 86 | $13.00 | $2.27 | $+90.94 | $3,258.51 | ▲ +90.94 after sell → book $8,442.04; vs 09:30 mark -2.27 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-29 09:30 ET | **SELL** | `NEO` | 59 | $17.25 | $2.19 | $-7.30 | $4,274.07 | ▼ -7.30 after sell → book $8,439.85; vs 09:30 mark -2.19 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-29 09:30 ET | **SELL** | `SRRK` | 23 | $43.66 | $2.08 | $-7.82 | $5,276.17 | ▼ -7.82 after sell → book $8,437.77; vs 09:30 mark -2.08 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5,276.17 | ▲ close $8,473.55 vs 09:30 $8,455.07 (session +35.78) | 16:00 close · cash $5,276.17 · equity $8,473.55 vs 09:30 $8,455.07 (+18.48; session marks +35.78) · 3 name(s) marked open→close (per-name table). NVTS×110 09:30 $9.09 → close $9.20 +12.10; PRMB×54 09:30 $19.55 → close $19.47 -4.32; SMMT×70 09:30 $15.80 → close $16.20 +28.00 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `hot_score` · size `leftover` · sell `list` · S-boost `none` · Clock-B #1 mom+breakout+peer/sector (research; not KEEP)
 
-Cash book **-13.74%** ($8,625) · signal-only (no cash/fees) was +1.42%. Starts YES **4/30**. Fills 427 · skips 96 · realized $-120.43.
+Cash book **-13.63%** ($8,637) · signal-only (no cash/fees) was +1.42%. Starts YES **4/30**. Fills 431 · skips 96 · realized $-120.43.
 
 ## How this sleeve decides (like you are 10)
 
@@ -609,6 +609,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-28 09:30 ET | **BUY** | `PDFS` | 47 | $45.62 | $2.13 | — | $2,221.77 | — | Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list probable,yday_gainer,yday_mover; ret5=+7.4; leftover $2158.13 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-28 09:30 ET | **BUY** | `ITW` | 7 | $276.75 | $2.01 | — | $282.51 | — | Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list yday_gainer; 🔵; ret5=+0.3; leftover $2158.13 | join🔴 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $282.51 | ▲ close $8,625.49 vs 09:30 $8,650.04 (session +1.50) | 16:00 close · cash $282.51 · equity $8,625.49 vs 09:30 $8,650.04 (-24.55; session marks +1.50) · 4 name(s) marked open→close (per-name table). UPS×20 09:30 $105.39 → close $105.62 +4.60; AEO×111 09:30 $19.39 → close $19.46 +7.77; PDFS×47 09:30 $45.62 → close $45.49 -6.11; ITW×7 09:30 $276.75 → close $276.07 -4.76 | — |
+| 2026-10-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $282.51 | ▲ 09:30 equity $8,645.16 vs yday $8,625.49 (+19.67) | 09:30 open · cash $282.51 (unchanged overnight, no fees) · equity $8,645.16 vs prior close $8,625.49 (+19.67) · 4 name(s) re-marked at the open (per-name table). AEO×111 yday $19.46 → 09:30 $19.74 +31.08; ITW×7 yday $276.07 → 09:30 $277.43 +9.52; PDFS×47 yday $45.49 → 09:30 $44.80 -32.43; UPS×20 yday $105.62 → 09:30 $106.19 +11.50 | — |
+| 2026-10-29 09:30 ET | **SELL** | `AEO` | 111 | $19.74 | $2.36 | $+34.17 | $2,471.29 | ▲ +34.17 after sell → book $8,642.80; vs 09:30 mark -2.36 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-29 09:30 ET | **SELL** | `ITW` | 7 | $277.43 | $2.04 | $+0.71 | $4,411.26 | ▲ +0.71 after sell → book $8,640.76; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | join🟡 sector🔴 gen🔴 news🟢 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-29 09:30 ET | **SELL** | `PDFS` | 47 | $44.80 | $2.16 | $-42.83 | $6,514.71 | ▼ -42.83 after sell → book $8,638.61; vs 09:30 mark -2.15 | dropped from list after 1 sess (min 1) | join🔴 sector🟢 gen🔴 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-29 09:30 ET | **SELL** | `UPS` | 20 | $106.19 | $2.08 | $+11.97 | $8,636.53 | ▲ +11.97 after sell → book $8,636.53; vs 09:30 mark -2.08 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,636.53 | ▲ close $8,636.53 vs 09:30 $8,645.16 (session +0.00) | 16:00 close · cash $8,636.53 · no lots left · equity $8,636.53. | — |
 
 ## Not taken
 

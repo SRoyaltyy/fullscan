@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ macd_up, no 🚨
 
-Cash book **-5.72%** ($9,428) · signal-only (no cash/fees) was +63.53%. Starts YES **26/30**. Fills 340 · skips 288 · realized $-45.00.
+Cash book **-4.97%** ($9,503) · signal-only (no cash/fees) was +63.53%. Starts YES **26/30**. Fills 340 · skips 288 · realized $-45.00.
 
 ## How this sleeve decides (like you are 10)
 
@@ -520,6 +520,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-28 09:30 ET | **BUY** | `QTTB` | 6 | $8.65 | $0.54 | — | $187.86 | — | union ∩ macd_up, no 🚨; gate macd_up=True; list yday_gainer; ret5=+1.0; leftover $54.72 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-10-28 09:30 ET | **BUY** | `AMX` | 2 | $24.07 | $0.49 | — | $139.24 | — | union ∩ macd_up, no 🚨; gate macd_up=True; list yday_gainer; ret5=+5.1; leftover $54.72 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $139.24 | ▲ close $9,427.80 vs 09:30 $9,307.53 (session +122.75) | 16:00 close · cash $139.24 · equity $9,427.80 vs 09:30 $9,307.53 (+120.27; session marks +122.75) · 11 name(s) marked open→close (per-name table). ACRS×393 09:30 $3.70 → close $3.96 +102.18; EPR×27 09:30 $55.85 → close $55.51 -9.18; PACS×32 09:30 $49.00 → close $49.06 +1.92; PRGO×100 09:30 $15.96 → close $15.92 -4.00; SGRY×67 09:30 $23.26 → close $23.24 -1.34; VEEV×4 09:30 $310.00 → close $317.82 +31.28; NEO×3 09:30 $17.30 → close $17.99 +2.07; PRMB×2 09:30 $19.00 → close $19.32 +0.64; EGG×10 09:30 $5.14 → close $4.84 -3.00; QTTB×6 09:30 $8.65 → close $9.06 +2.46; AMX×2 09:30 $24.07 → close $23.93 -0.28 | — |
+| 2026-10-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $139.24 | ▲ 09:30 equity $9,509.06 vs yday $9,427.80 (+81.26) | 09:30 open · cash $139.24 (unchanged overnight, no fees) · equity $9,509.06 vs prior close $9,427.80 (+81.26) · 11 name(s) re-marked at the open (per-name table). ACRS×393 yday $3.96 → 09:30 $4.05 +35.37; AMX×2 yday $23.93 → 09:30 $24.01 +0.16; EGG×10 yday $4.84 → 09:30 $4.84 +0.00; EPR×27 yday $55.51 → 09:30 $56.89 +37.26; NEO×3 yday $17.99 → 09:30 $17.25 -2.22; PACS×32 yday $49.06 → 09:30 $49.64 +18.56; PRGO×100 yday $15.92 → 09:30 $16.05 +13.00; PRMB×2 yday $19.32 → 09:30 $19.55 +0.46; QTTB×6 yday $9.06 → 09:30 $9.20 +0.84; SGRY×67 yday $23.24 → 09:30 $23.25 +0.67; VEEV×4 yday $317.82 → 09:30 $312.11 -22.84 | — |
+| 2026-10-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $139.24 | ▼ close $9,503.29 vs 09:30 $9,509.06 (session -5.77) | 16:00 close · cash $139.24 · equity $9,503.29 vs 09:30 $9,509.06 (-5.77; session marks -5.77) · 11 name(s) marked open→close (per-name table). ACRS×393 09:30 $4.05 → close $3.99 -23.58; AMX×2 09:30 $24.01 → close $24.13 +0.24; EGG×10 09:30 $4.84 → close $5.04 +2.00; EPR×27 09:30 $56.89 → close $58.34 +39.15; NEO×3 09:30 $17.25 → close $17.93 +2.04; PACS×32 09:30 $49.64 → close $49.68 +1.28; PRGO×100 09:30 $16.05 → close $15.90 -15.00; PRMB×2 09:30 $19.55 → close $19.47 -0.16; QTTB×6 09:30 $9.20 → close $8.87 -1.98; SGRY×67 09:30 $23.25 → close $23.21 -2.68; VEEV×4 09:30 $312.11 → close $310.34 -7.08 | — |
 
 ## Not taken
 

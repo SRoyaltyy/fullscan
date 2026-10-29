@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ macd_up, no 🚨
 
-Cash book **-20.78%** ($7,922) · signal-only (no cash/fees) was +22.07%. Starts YES **11/30**. Fills 436 · skips 104 · realized $+158.57.
+Cash book **-20.90%** ($7,910) · signal-only (no cash/fees) was +22.07%. Starts YES **11/30**. Fills 442 · skips 104 · realized $+158.57.
 
 ## How this sleeve decides (like you are 10)
 
@@ -616,6 +616,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-28 09:30 ET | **BUY** | `QTTB` | 108 | $8.65 | $2.31 | — | $1,242.73 | — | union ∩ macd_up, no 🚨; gate macd_up=True; list yday_gainer; ret5=+1.0; leftover $942.15 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-10-28 09:30 ET | **BUY** | `AMX` | 39 | $24.07 | $2.11 | — | $301.89 | — | union ∩ macd_up, no 🚨; gate macd_up=True; list yday_gainer; ret5=+5.1; leftover $942.15 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $301.89 | ▲ close $7,922.19 vs 09:30 $7,918.09 (session +29.06) | 16:00 close · cash $301.89 · equity $7,922.19 vs 09:30 $7,918.09 (+4.10; session marks +29.06) · 8 name(s) marked open→close (per-name table). EGG×221 09:30 $5.14 → close $4.84 -66.30; EPR×20 09:30 $55.85 → close $55.51 -6.80; NEO×54 09:30 $17.30 → close $17.99 +37.26; PRMB×49 09:30 $19.00 → close $19.32 +15.68; ITW×3 09:30 $276.75 → close $276.07 -2.04; POOL×4 09:30 $192.48 → close $195.59 +12.44; QTTB×108 09:30 $8.65 → close $9.06 +44.28; AMX×39 09:30 $24.07 → close $23.93 -5.46 | — |
+| 2026-10-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $301.89 | ▲ 09:30 equity $7,947.14 vs yday $7,922.19 (+24.95) | 09:30 open · cash $301.89 (unchanged overnight, no fees) · equity $7,947.14 vs prior close $7,922.19 (+24.95) · 8 name(s) re-marked at the open (per-name table). AMX×39 yday $23.93 → 09:30 $24.01 +3.12; EGG×221 yday $4.84 → 09:30 $4.84 +0.00; EPR×20 yday $55.51 → 09:30 $56.89 +27.60; ITW×3 yday $276.07 → 09:30 $277.43 +4.08; NEO×54 yday $17.99 → 09:30 $17.25 -39.96; POOL×4 yday $195.59 → 09:30 $196.52 +3.72; PRMB×49 yday $19.32 → 09:30 $19.55 +11.27; QTTB×108 yday $9.06 → 09:30 $9.20 +15.12 | — |
+| 2026-10-29 09:30 ET | **SELL** | `AMX` | 39 | $24.01 | $2.13 | $-6.57 | $1,236.15 | ▼ -6.57 after sell → book $7,945.01; vs 09:30 mark -2.13 | dropped from list after 1 sess (min 1) | join🔴 sector🔴 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-29 09:30 ET | **SELL** | `EGG` | 221 | $4.84 | $2.90 | $-78.68 | $2,302.90 | ▼ -78.68 after sell → book $7,942.12; vs 09:30 mark -2.89 | dropped from list after 2 sess (min 1) | join🔴 sector🔴 gen🔴 news🟡 digest🟢 judge🔴 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-29 09:30 ET | **SELL** | `EPR` | 20 | $56.89 | $2.07 | $+5.88 | $3,438.63 | ▲ +5.88 after sell → book $7,940.05; vs 09:30 mark -2.07 | dropped from list after 2 sess (min 1) | join🔴 sector🟡 gen🔴 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-29 09:30 ET | **SELL** | `NEO` | 54 | $17.25 | $2.17 | $-7.02 | $4,367.95 | ▼ -7.02 after sell → book $7,937.87; vs 09:30 mark -2.18 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-29 09:30 ET | **SELL** | `POOL` | 4 | $196.52 | $2.02 | $+12.14 | $5,152.01 | ▲ +12.14 after sell → book $7,935.85; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | join🔴 sector🔴 gen🔴 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-29 09:30 ET | **SELL** | `PRMB` | 49 | $19.55 | $2.16 | $+22.66 | $6,107.80 | ▲ +22.66 after sell → book $7,933.69; vs 09:30 mark -2.16 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,107.80 | ▼ close $7,909.96 vs 09:30 $7,947.14 (session -23.73) | 16:00 close · cash $6,107.80 · equity $7,909.96 vs 09:30 $7,947.14 (-37.18; session marks -23.73) · 2 name(s) marked open→close (per-name table). ITW×3 09:30 $277.43 → close $281.40 +11.91; QTTB×108 09:30 $9.20 → close $8.87 -35.64 | — |
 
 ## Not taken
 

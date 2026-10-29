@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared short_news_r_macd_h3/union_hot_n4_h1 w=0.5,0.5 net=priority
 
-Cash book **+97.86%** ($19,786) · signal-only (no cash/fees) was —. Starts YES **29/30**. Fills 340 · skips 122 · realized $+3569.64.
+Cash book **+92.71%** ($19,271) · signal-only (no cash/fees) was —. Starts YES **29/30**. Fills 344 · skips 122 · realized $+3569.64.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $24,293.86.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $39,026.35.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -521,6 +521,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-28 09:30 ET | **SHORT** | `SPCE` | 1802 | $2.68 | $23.72 | — | $19,482.98 | — | short news🔴 ∩ prior MACD histogram > 0; gate macd_up=True,news=bad; list ohlc_hot; 🔵; ret5=+13.5; combo leftover $4830.49; owner short_news_r_macd_h3 | join🟢 sector🟢 gen🟢 news🔴 digest🟢 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
 | 2026-10-28 09:30 ET | **SHORT** | `VOYG` | 176 | $27.35 | $2.72 | — | $24,293.86 | — | short news🔴 ∩ prior MACD histogram > 0; gate macd_up=True,news=bad; list ohlc_hot; 🔵; ret5=+13.8; combo leftover $4830.49; owner short_news_r_macd_h3 | join🟢 sector🟢 gen🟢 news🔴 digest🟢 ab🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $24,293.86 | ▲ close $19,785.92 vs 09:30 $19,358.65 (session +490.39) | 16:00 close · cash $24,293.86 · equity $19,785.92 vs 09:30 $19,358.65 (+427.27; session marks +490.39) · 9 name(s) marked open→close (per-name table). BAH×39 09:30 $82.85 → close $83.48 -24.57; LUV×75 09:30 $43.36 → close $43.47 -8.25; VVX×42 09:30 $76.98 → close $77.41 -18.06; RH×25 09:30 $140.69 → close $145.06 +109.25; VCYT×72 09:30 $50.00 → close $50.31 +22.32; IMSR×1231 09:30 $2.95 → close $3.35 +492.40; BETA×173 09:30 $20.88 → close $19.98 -155.70; SPCE×1802 09:30 $2.68 → close $2.66 +36.04; VOYG×176 09:30 $27.35 → close $27.14 +36.96 | — |
+| 2026-10-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $24,293.86 | ▼ 09:30 equity $19,561.95 vs yday $19,785.92 (-223.97) | 09:30 open · cash $24,293.86 (unchanged overnight, no fees) · equity $19,561.95 vs prior close $19,785.92 (-223.97) | — |
+| 2026-10-29 09:30 ET | **SELL** | `BETA` | 173 | $19.89 | $2.57 | $-176.34 | $27,732.26 | ▼ -176.34 after sell → book $19,559.38; vs 09:30 mark -2.57 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-29 09:30 ET | **SELL** | `IMSR` | 1231 | $3.21 | $16.12 | $+288.06 | $31,667.66 | ▲ +288.06 after sell → book $19,543.27; vs 09:30 mark -16.11 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-29 09:30 ET | **SELL** | `RH` | 25 | $148.16 | $2.10 | $+182.58 | $35,369.55 | ▲ +182.58 after sell → book $19,541.16; vs 09:30 mark -2.11 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟡 digest🟡 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-29 09:30 ET | **SELL** | `VCYT` | 72 | $50.82 | $2.25 | $+54.59 | $39,026.35 | ▲ +54.59 after sell → book $19,538.92; vs 09:30 mark -2.24 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $39,026.35 | ▼ close $19,271.28 vs 09:30 $19,561.95 (session -267.64) | 16:00 close · cash $39,026.35 · equity $19,271.28 vs 09:30 $19,561.95 (-290.67; session marks -267.64) · 5 name(s) marked open→close (per-name table). BAH×39 09:30 $83.80 → close $84.23 -16.77; LUV×75 09:30 $44.03 → close $43.68 +26.25; SPCE×1802 09:30 $2.63 → close $2.73 -180.20; VOYG×176 09:30 $27.55 → close $27.80 -44.00; VVX×42 09:30 $79.26 → close $80.52 -52.92 | — |
 
 ## Not taken
 

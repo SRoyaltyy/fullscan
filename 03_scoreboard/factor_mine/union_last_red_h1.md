@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ last_red, no 🚨
 
-Cash book **-31.36%** ($6,864) · signal-only (no cash/fees) was +1.25%. Starts YES **0/30**. Fills 460 · skips 105 · realized $-1315.32.
+Cash book **+62.95%** ($16,295) · signal-only (no cash/fees) was +1.25%. Starts YES **0/30**. Fills 467 · skips 105 · realized $-1315.32.
 
 ## How this sleeve decides (like you are 10)
 
@@ -640,6 +640,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-28 09:30 ET | **BUY** | `ENHA` | 793 | $1.09 | $10.23 | — | $1,429.18 | — | union ∩ last_red, no 🚨; gate last_red=True; list yday_mover; ret5=-5.3; leftover $864.65 | join🔴 sector🟡 gen🟢 news🟡 digest🔴 ab🔴 heat🟢 vol🟡 buy🟡 |
 | 2026-10-28 09:30 ET | **BUY** | `ANGI` | 140 | $6.16 | $2.41 | — | $564.37 | — | union ∩ last_red, no 🚨; gate last_red=True; list yday_mover; ret5=-4.5; leftover $864.65 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-10-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $564.37 | ▲ close $6,863.97 vs 09:30 $6,887.26 (session +17.18) | 16:00 close · cash $564.37 · equity $6,863.97 vs 09:30 $6,887.26 (-23.29; session marks +17.18) · 8 name(s) marked open→close (per-name table). PRMB×43 09:30 $19.00 → close $19.32 +13.76; EPR×15 09:30 $55.85 → close $55.51 -5.10; CRS×2 09:30 $291.76 → close $280.00 -23.52; DY×3 09:30 $235.00 → close $234.00 -3.01; POOL×4 09:30 $192.48 → close $195.59 +12.44; AMX×35 09:30 $24.07 → close $23.93 -4.90; ENHA×793 09:30 $1.09 → close $1.16 +55.51; ANGI×140 09:30 $6.16 → close $5.96 -28.00 | — |
+| 2026-10-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $564.37 | ▲ 09:30 equity $16,278.60 vs yday $6,863.97 (+9,414.63) | 09:30 open · cash $564.37 (unchanged overnight, no fees) · equity $16,278.60 vs prior close $6,863.97 (+9414.63) · 8 name(s) re-marked at the open (per-name table). AMX×35 yday $23.93 → 09:30 $24.01 +2.80; ANGI×140 yday $5.96 → 09:30 $5.87 -12.60; CRS×2 yday $280.00 → 09:30 $279.00 -2.00; DY×3 yday $234.00 → 09:30 $235.00 +3.00; ENHA×793 yday $1.16 → 09:30 $13.00 +9389.12; EPR×15 yday $55.51 → 09:30 $56.89 +20.70; POOL×4 yday $195.59 → 09:30 $196.52 +3.72; PRMB×43 yday $19.32 → 09:30 $19.55 +9.89 | — |
+| 2026-10-29 09:30 ET | **SELL** | `AMX` | 35 | $24.01 | $2.12 | $-6.31 | $1,402.61 | ▼ -6.31 after sell → book $16,276.48; vs 09:30 mark -2.12 | dropped from list after 1 sess (min 1) | join🔴 sector🔴 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-29 09:30 ET | **SELL** | `ANGI` | 140 | $5.87 | $2.44 | $-45.45 | $2,221.96 | ▼ -45.45 after sell → book $16,274.04; vs 09:30 mark -2.44 | dropped from list after 1 sess (min 1) | join🔴 sector🔴 gen🔴 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-29 09:30 ET | **SELL** | `DY` | 3 | $235.00 | $2.02 | $-4.03 | $2,924.94 | ▼ -4.03 after sell → book $16,272.02; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | join🔴 sector🔴 gen🔴 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-29 09:30 ET | **SELL** | `ENHA` | 793 | $13.00 | $10.44 | $+9423.96 | $13,223.50 | ▲ +9,423.96 after sell → book $16,261.58; vs 09:30 mark -10.44 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟡 digest🔴 ab🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-10-29 09:30 ET | **SELL** | `EPR` | 15 | $56.89 | $2.06 | $+11.51 | $14,074.79 | ▲ +11.51 after sell → book $16,259.52; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-29 09:30 ET | **SELL** | `POOL` | 4 | $196.52 | $2.02 | $+12.14 | $14,858.85 | ▲ +12.14 after sell → book $16,257.50; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | join🔴 sector🔴 gen🔴 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-29 09:30 ET | **SELL** | `PRMB` | 43 | $19.55 | $2.14 | $-5.55 | $15,697.36 | ▼ -5.55 after sell → book $16,255.36; vs 09:30 mark -2.14 | dropped from list after 2 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $15,697.36 | ▲ close $16,294.80 vs 09:30 $16,278.60 (session +39.44) | 16:00 close · cash $15,697.36 · equity $16,294.80 vs 09:30 $16,278.60 (+16.20; session marks +39.44) · 1 name(s) marked open→close (per-name table). CRS×2 09:30 $279.00 → close $298.72 +39.44 | — |
 
 ## Not taken
 

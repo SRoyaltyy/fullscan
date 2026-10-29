@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-28.11%** ($7,189) · signal-only (no cash/fees) was -21.07%. Starts YES **1/30**. Fills 344 · skips 304 · realized $-1242.34.
+Cash book **-27.49%** ($7,251) · signal-only (no cash/fees) was -21.07%. Starts YES **1/30**. Fills 344 · skips 304 · realized $-1242.34.
 
 ## How this sleeve decides (like you are 10)
 
@@ -529,6 +529,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-28 09:30 ET | **BUY** | `BBWI` | 7 | $21.70 | $1.54 | — | $493.40 | — | combo gate; gate last_green=True,ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list ohlc_hot; ret5=+6.8; leftover $157.08 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-10-28 09:30 ET | **BUY** | `AEO` | 8 | $19.39 | $1.58 | — | $336.71 | — | combo gate; gate last_green=True,ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list ohlc_hot; ret5=+9.0; leftover $157.08 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $336.71 | ▼ close $7,188.69 vs 09:30 $7,230.02 (session -31.79) | 16:00 close · cash $336.71 · equity $7,188.69 vs 09:30 $7,230.02 (-41.33; session marks -31.79) · 12 name(s) marked open→close (per-name table). LYB×15 09:30 $67.29 → close $67.13 -2.40; PACS×21 09:30 $49.00 → close $49.06 +1.26; PHM×8 09:30 $121.51 → close $119.71 -14.40; SLN×53 09:30 $19.76 → close $19.71 -2.65; TBBB×18 09:30 $56.82 → close $56.40 -7.56; TRU×12 09:30 $74.41 → close $74.31 -1.20; NEO×9 09:30 $17.30 → close $17.99 +6.21; PDFS×3 09:30 $45.62 → close $45.49 -0.39; EGG×30 09:30 $5.14 → close $4.84 -9.00; NFGC×90 09:30 $1.74 → close $1.72 -1.80; BBWI×7 09:30 $21.70 → close $21.64 -0.42; AEO×8 09:30 $19.39 → close $19.46 +0.56 | — |
+| 2026-10-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $336.71 | ▲ 09:30 equity $7,207.33 vs yday $7,188.69 (+18.64) | 09:30 open · cash $336.71 (unchanged overnight, no fees) · equity $7,207.33 vs prior close $7,188.69 (+18.64) · 12 name(s) re-marked at the open (per-name table). AEO×8 yday $19.46 → 09:30 $19.74 +2.24; BBWI×7 yday $21.64 → 09:30 $22.26 +4.34; EGG×30 yday $4.84 → 09:30 $4.84 +0.00; LYB×15 yday $67.13 → 09:30 $67.12 -0.15; NEO×9 yday $17.99 → 09:30 $17.25 -6.66; NFGC×90 yday $1.72 → 09:30 $1.66 -5.40; PACS×21 yday $49.06 → 09:30 $49.64 +12.18; PDFS×3 yday $45.49 → 09:30 $44.80 -2.07; PHM×8 yday $119.71 → 09:30 $120.17 +3.72; SLN×53 yday $19.71 → 09:30 $19.71 +0.00; TBBB×18 yday $56.40 → 09:30 $56.38 -0.36; TRU×12 yday $74.31 → 09:30 $75.21 +10.80 | — |
+| 2026-10-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $336.71 | ▲ close $7,251.45 vs 09:30 $7,207.33 (session +44.12) | 16:00 close · cash $336.71 · equity $7,251.45 vs 09:30 $7,207.33 (+44.12; session marks +44.12) · 12 name(s) marked open→close (per-name table). AEO×8 09:30 $19.74 → close $20.12 +3.04; BBWI×7 09:30 $22.26 → close $22.78 +3.64; EGG×30 09:30 $4.84 → close $5.04 +6.00; LYB×15 09:30 $67.12 → close $65.37 -26.25; NEO×9 09:30 $17.25 → close $17.93 +6.12; NFGC×90 09:30 $1.66 → close $1.69 +2.70; PACS×21 09:30 $49.64 → close $49.68 +0.84; PDFS×3 09:30 $44.80 → close $45.56 +2.28; PHM×8 09:30 $120.17 → close $124.36 +33.48; SLN×53 09:30 $19.71 → close $19.80 +4.77; TBBB×18 09:30 $56.38 → close $56.61 +4.14; TRU×12 09:30 $75.21 → close $75.49 +3.36 | — |
 
 ## Not taken
 

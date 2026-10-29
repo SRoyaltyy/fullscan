@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · alarm
 
-Cash book **+0.01%** ($10,001) · signal-only (no cash/fees) was -2.80%. Starts YES **2/30**. Fills 251 · skips 221 · realized $+639.78.
+Cash book **+0.20%** ($10,020) · signal-only (no cash/fees) was -2.80%. Starts YES **2/30**. Fills 251 · skips 221 · realized $+639.78.
 
 ## How this sleeve decides (like you are 10)
 
@@ -429,6 +429,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-28 09:30 ET | **SHORT** | `ACRS` | 171 | $3.70 | $2.56 | — | $14,480.48 | — | alarm; gate alarm=True; list probable,yday_gainer,yday_mover; ret5=+0.5; leftover $634.10 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟡 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-28 09:30 ET | **SHORT** | `MX` | 245 | $2.58 | $3.23 | — | $15,109.35 | — | alarm; gate alarm=True; list yday_gainer,yday_mover; ret5=-2.3; leftover $634.10 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $15,109.35 | ▼ close $10,000.51 vs 09:30 $10,145.56 (session -123.27) | 16:00 close · cash $15,109.35 · equity $10,000.51 vs 09:30 $10,145.56 (-145.05; session marks -123.27) · 8 name(s) marked open→close (per-name table). SRRK×14 09:30 $43.82 → close $43.25 +7.98; BRKR×10 09:30 $60.66 → close $62.00 -13.40; AUTL×409 09:30 $1.55 → close $1.63 -32.72; SMMT×41 09:30 $15.19 → close $15.77 -23.78; NVTS×67 09:30 $9.36 → close $9.36 -0.00; AIP×29 09:30 $21.27 → close $21.43 -4.64; ACRS×171 09:30 $3.70 → close $3.96 -44.46; MX×245 09:30 $2.58 → close $2.63 -12.25 | — |
+| 2026-10-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $15,109.35 | ▲ 09:30 equity $10,035.67 vs yday $10,000.51 (+35.16) | 09:30 open · cash $15,109.35 (unchanged overnight, no fees) · equity $10,035.67 vs prior close $10,000.51 (+35.16) · 8 name(s) re-marked at the open (per-name table). ACRS×171 yday $3.96 → 09:30 $4.05 -15.39; AIP×29 yday $21.43 → 09:30 $20.86 +16.53; AUTL×409 yday $1.63 → 09:30 $1.63 -0.00; BRKR×10 yday $62.00 → 09:30 $61.18 +8.20; MX×245 yday $2.63 → 09:30 $2.57 +14.70; NVTS×67 yday $9.36 → 09:30 $9.09 +18.09; SMMT×41 yday $15.77 → 09:30 $15.80 -1.23; SRRK×14 yday $43.25 → 09:30 $43.66 -5.74 | — |
+| 2026-10-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $15,109.35 | ▼ close $10,020.26 vs 09:30 $10,035.67 (session -15.41) | 16:00 close · cash $15,109.35 · equity $10,020.26 vs 09:30 $10,035.67 (-15.41; session marks -15.41) · 8 name(s) marked open→close (per-name table). ACRS×171 09:30 $4.05 → close $3.99 +10.26; AIP×29 09:30 $20.86 → close $20.59 +7.83; AUTL×409 09:30 $1.63 → close $1.58 +20.45; BRKR×10 09:30 $61.18 → close $62.00 -8.20; MX×245 09:30 $2.57 → close $2.63 -14.70; NVTS×67 09:30 $9.09 → close $9.20 -7.37; SMMT×41 09:30 $15.80 → close $16.20 -16.40; SRRK×14 09:30 $43.66 → close $44.18 -7.28 | — |
 
 ## Not taken
 

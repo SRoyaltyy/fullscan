@@ -259,6 +259,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10.14 | ▼ 09:30 equity $7,499.86 vs yday $7,532.06 (-32.20) | 09:30 open · cash $10.14 (unchanged overnight, no fees) · equity $7,499.86 vs prior close $7,532.06 (-32.20) · 1 name(s) re-marked at the open (per-name table). SGRY×322 yday $23.36 → 09:30 $23.26 -32.20 | — |
 | 2026-10-28 09:30 ET | **SELL** | `SGRY` | 322 | $23.26 | $4.27 | $+10.90 | $7,495.59 | ▲ +10.90 after sell → book $7,495.59; vs 09:30 mark -4.27 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,495.59 | ▲ close $7,495.59 vs 09:30 $7,499.86 (session +0.00) | 16:00 close · cash $7,495.59 · no lots left · equity $7,495.59. | — |
+| 2026-10-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,495.59 | ▲ 09:30 equity $7,495.59 vs yday $7,495.59 (+0.00) | 09:30 open · cash $7,495.59 · no holdings · equity $7,495.59 vs prior close $7,495.59 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,495.59 | ▲ close $7,495.59 vs 09:30 $7,495.59 (session +0.00) | 16:00 close · cash $7,495.59 · no lots left · equity $7,495.59. | — |
 
 ## Not taken
 

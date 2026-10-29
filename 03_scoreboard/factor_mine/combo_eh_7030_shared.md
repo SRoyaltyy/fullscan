@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared union_e_fresh_h3/union_hot_n4_h1 w=0.7,0.3 net=priority
 
-Cash book **+11.91%** ($11,191) · signal-only (no cash/fees) was —. Starts YES **29/30**. Fills 452 · skips 270 · realized $+3272.06.
+Cash book **+11.18%** ($11,118) · signal-only (no cash/fees) was —. Starts YES **29/30**. Fills 456 · skips 270 · realized $+3272.06.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $58.32.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $11,117.92.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -633,6 +633,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-28 09:30 ET | **BUY** | `IMSR` | 920 | $2.95 | $11.87 | — | $2,754.22 | — | top 4 by hot; rank hot_score; list ohlc_hot; 🔵; ret5=+17.5; combo leftover $2714.35; owner union_hot_n4_h1 | join🟡 sector🟡 gen🟢 news🟡 digest🟡 ab🟡 heat🔴 vol🔴 buy🟡 |
 | 2026-10-28 09:30 ET | **BUY** | `BETA` | 129 | $20.88 | $2.38 | — | $58.32 | — | top 4 by hot; rank hot_score; list ohlc_hot; 🔵; ret5=+14.3; combo leftover $2714.35; owner union_hot_n4_h1 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟡 heat🔴 vol🔴 buy🟡 |
 | 2026-10-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $58.32 | ▲ close $11,190.62 vs 09:30 $10,872.43 (session +351.67) | 16:00 close · cash $58.32 · equity $11,190.62 vs 09:30 $10,872.43 (+318.19; session marks +351.67) · 4 name(s) marked open→close (per-name table). RH×19 09:30 $140.69 → close $145.06 +83.03; VCYT×54 09:30 $50.00 → close $50.31 +16.74; IMSR×920 09:30 $2.95 → close $3.35 +368.00; BETA×129 09:30 $20.88 → close $19.98 -116.10 | — |
+| 2026-10-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $58.32 | ▼ 09:30 equity $11,136.65 vs yday $11,190.62 (-53.97) | 09:30 open · cash $58.32 (unchanged overnight, no fees) · equity $11,136.65 vs prior close $11,190.62 (-53.97) | — |
+| 2026-10-29 09:30 ET | **SELL** | `BETA` | 129 | $19.89 | $2.42 | $-132.51 | $2,621.71 | ▼ -132.51 after sell → book $11,134.23; vs 09:30 mark -2.42 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-29 09:30 ET | **SELL** | `IMSR` | 920 | $3.21 | $12.04 | $+215.29 | $5,562.87 | ▲ +215.29 after sell → book $11,122.19; vs 09:30 mark -12.04 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-29 09:30 ET | **SELL** | `RH` | 19 | $148.16 | $2.08 | $+137.80 | $8,375.83 | ▲ +137.80 after sell → book $11,120.11; vs 09:30 mark -2.08 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟡 digest🟡 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-29 09:30 ET | **SELL** | `VCYT` | 54 | $50.82 | $2.18 | $+39.94 | $11,117.92 | ▲ +39.94 after sell → book $11,117.92; vs 09:30 mark -2.19 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $11,117.92 | ▲ close $11,117.92 vs 09:30 $11,136.65 (session +0.00) | 16:00 close · cash $11,117.92 · no lots left · equity $11,117.92. | — |
 
 ## Not taken
 

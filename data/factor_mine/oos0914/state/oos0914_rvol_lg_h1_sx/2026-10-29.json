@@ -1,0 +1,85 @@
+{
+  "buys": [],
+  "cash": 10739.52,
+  "date": "2026-10-29",
+  "equity": 10739.52,
+  "fees": 38.1504,
+  "fills": [
+    {
+      "fees": 20.5345,
+      "fill_rule": "open",
+      "pnl": -166.39,
+      "price": 1.66,
+      "shares": 1570,
+      "side": "SELL",
+      "ticker": "NFGC"
+    },
+    {
+      "fees": 13.3357,
+      "fill_rule": "open",
+      "pnl": -77.43,
+      "price": 2.63,
+      "shares": 1019,
+      "side": "SELL",
+      "ticker": "SPCE"
+    },
+    {
+      "fees": 2.0962,
+      "fill_rule": "open",
+      "pnl": 15.96,
+      "price": 106.195,
+      "shares": 25,
+      "side": "SELL",
+      "ticker": "UPS"
+    },
+    {
+      "fees": 2.184,
+      "fill_rule": "open",
+      "pnl": 39.94,
+      "price": 50.82,
+      "shares": 54,
+      "side": "SELL",
+      "ticker": "VCYT"
+    }
+  ],
+  "holdings": [],
+  "mean": -1.1142,
+  "n_trades_today": 4,
+  "recipe": "oos0914_rvol_lg_h1_sx",
+  "sells": [
+    {
+      "fill_rule": "open",
+      "price": 1.66,
+      "shares": 1570,
+      "side": "SELL",
+      "ticker": "NFGC"
+    },
+    {
+      "fill_rule": "open",
+      "price": 2.63,
+      "shares": 1019,
+      "side": "SELL",
+      "ticker": "SPCE"
+    },
+    {
+      "fill_rule": "open",
+      "price": 106.195,
+      "shares": 25,
+      "side": "SELL",
+      "ticker": "UPS"
+    },
+    {
+      "fill_rule": "open",
+      "price": 50.82,
+      "shares": 54,
+      "side": "SELL",
+      "ticker": "VCYT"
+    }
+  ],
+  "state": {
+    "after": "2026-10-29",
+    "cash": 10739.52,
+    "pos": {},
+    "yday_equity": 10739.52
+  }
+}

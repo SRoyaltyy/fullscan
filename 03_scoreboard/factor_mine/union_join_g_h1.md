@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ join_g, no 🚨
 
-Cash book **-14.14%** ($8,586) · signal-only (no cash/fees) was -3.42%. Starts YES **0/30**. Fills 472 · skips 104 · realized $-96.65.
+Cash book **-14.57%** ($8,543) · signal-only (no cash/fees) was -3.42%. Starts YES **0/30**. Fills 479 · skips 104 · realized $-96.65.
 
 ## How this sleeve decides (like you are 10)
 
@@ -652,6 +652,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-28 09:30 ET | **BUY** | `QTTB` | 121 | $8.65 | $2.35 | — | $1,233.88 | — | union ∩ join_g, no 🚨; gate join=good; list yday_gainer; ret5=+1.0; leftover $1048.54 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-10-28 09:30 ET | **BUY** | `RH` | 7 | $140.69 | $2.01 | — | $247.04 | — | union ∩ join_g, no 🚨; gate join=good; list ohlc_hot; ret5=+17.6; leftover $1048.54 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-10-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $247.04 | ▲ close $8,586.13 vs 09:30 $8,403.03 (session +214.93) | 16:00 close · cash $247.04 · equity $8,586.13 vs 09:30 $8,403.03 (+183.10; session marks +214.93) · 8 name(s) marked open→close (per-name table). NEO×60 09:30 $17.30 → close $17.99 +41.40; FDMT×88 09:30 $11.89 → close $12.93 +91.52; PRMB×55 09:30 $19.00 → close $19.32 +17.60; PDFS×22 09:30 $45.62 → close $45.49 -2.86; CXW×33 09:30 $30.90 → close $30.63 -8.91; DY×4 09:30 $235.00 → close $234.00 -4.02; QTTB×121 09:30 $8.65 → close $9.06 +49.61; RH×7 09:30 $140.69 → close $145.06 +30.59 | — |
+| 2026-10-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $247.04 | ▲ 09:30 equity $8,597.57 vs yday $8,586.13 (+11.44) | 09:30 open · cash $247.04 (unchanged overnight, no fees) · equity $8,597.57 vs prior close $8,586.13 (+11.44) · 8 name(s) re-marked at the open (per-name table). CXW×33 yday $30.63 → 09:30 $30.92 +9.57; DY×4 yday $234.00 → 09:30 $235.00 +4.00; FDMT×88 yday $12.93 → 09:30 $13.00 +6.16; NEO×60 yday $17.99 → 09:30 $17.25 -44.40; PDFS×22 yday $45.49 → 09:30 $44.80 -15.18; PRMB×55 yday $19.32 → 09:30 $19.55 +12.65; QTTB×121 yday $9.06 → 09:30 $9.20 +16.94; RH×7 yday $145.06 → 09:30 $148.16 +21.70 | — |
+| 2026-10-29 09:30 ET | **SELL** | `CXW` | 33 | $30.92 | $2.11 | $-3.54 | $1,265.29 | ▼ -3.54 after sell → book $8,595.46; vs 09:30 mark -2.11 | dropped from list after 1 sess (min 1) | join🔴 sector🔴 gen🔴 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-29 09:30 ET | **SELL** | `DY` | 4 | $235.00 | $2.02 | $-4.04 | $2,203.27 | ▼ -4.04 after sell → book $8,593.44; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | join🔴 sector🔴 gen🔴 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-29 09:30 ET | **SELL** | `FDMT` | 88 | $13.00 | $2.28 | $+93.15 | $3,344.99 | ▲ +93.15 after sell → book $8,591.16; vs 09:30 mark -2.28 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-29 09:30 ET | **SELL** | `NEO` | 60 | $17.25 | $2.19 | $-7.36 | $4,377.80 | ▼ -7.36 after sell → book $8,588.97; vs 09:30 mark -2.19 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-29 09:30 ET | **SELL** | `PDFS` | 22 | $44.80 | $2.08 | $-22.17 | $5,361.32 | ▼ -22.17 after sell → book $8,586.89; vs 09:30 mark -2.08 | dropped from list after 1 sess (min 1) | join🔴 sector🟢 gen🔴 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-29 09:30 ET | **SELL** | `PRMB` | 55 | $19.55 | $2.17 | $+25.92 | $6,434.40 | ▲ +25.92 after sell → book $8,584.72; vs 09:30 mark -2.17 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-29 09:30 ET | **SELL** | `RH` | 7 | $148.16 | $2.03 | $+48.25 | $7,469.49 | ▲ +48.25 after sell → book $8,582.69; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟡 digest🟡 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,469.49 | ▼ close $8,542.76 vs 09:30 $8,597.57 (session -39.93) | 16:00 close · cash $7,469.49 · equity $8,542.76 vs 09:30 $8,597.57 (-54.81; session marks -39.93) · 1 name(s) marked open→close (per-name table). QTTB×121 09:30 $9.20 → close $8.87 -39.93 | — |
 
 ## Not taken
 

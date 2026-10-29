@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · rank by cond
 
-Cash book **-6.84%** ($9,316) · signal-only (no cash/fees) was -4.88%. Starts YES **0/30**. Fills 468 · skips 105 · realized $-723.91.
+Cash book **-7.37%** ($9,263) · signal-only (no cash/fees) was -4.88%. Starts YES **0/30**. Fills 476 · skips 105 · realized $-723.91.
 
 ## How this sleeve decides (like you are 10)
 
@@ -647,6 +647,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-28 09:30 ET | **BUY** | `NEO` | 67 | $17.30 | $2.19 | — | $1,412.00 | — | rank by cond; rank cond; list flatten; 🔵; ret5=+3.9; leftover $1159.47 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-10-28 09:30 ET | **BUY** | `UPS` | 11 | $105.39 | $2.02 | — | $250.68 | — | rank by cond; rank cond; list ohlc_hot; 🔵; ret5=+7.7; leftover $1159.47 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟡 heat🟢 vol🔴 buy🟡 |
 | 2026-10-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $250.68 | ▲ close $9,316.24 vs 09:30 $9,290.75 (session +58.16) | 16:00 close · cash $250.68 · equity $9,316.24 vs 09:30 $9,290.75 (+25.49; session marks +58.16) · 8 name(s) marked open→close (per-name table). EGG×225 09:30 $5.14 → close $4.84 -67.50; AMX×48 09:30 $24.07 → close $23.93 -6.72; CXW×37 09:30 $30.90 → close $30.63 -9.99; DY×4 09:30 $235.00 → close $234.00 -4.02; PDFS×25 09:30 $45.62 → close $45.49 -3.25; FDMT×97 09:30 $11.89 → close $12.93 +100.88; NEO×67 09:30 $17.30 → close $17.99 +46.23; UPS×11 09:30 $105.39 → close $105.62 +2.53 | — |
+| 2026-10-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $250.68 | ▼ 09:30 equity $9,281.10 vs yday $9,316.24 (-35.14) | 09:30 open · cash $250.68 (unchanged overnight, no fees) · equity $9,281.10 vs prior close $9,316.24 (-35.14) · 8 name(s) re-marked at the open (per-name table). AMX×48 yday $23.93 → 09:30 $24.01 +3.84; CXW×37 yday $30.63 → 09:30 $30.92 +10.73; DY×4 yday $234.00 → 09:30 $235.00 +4.00; EGG×225 yday $4.84 → 09:30 $4.84 +0.00; FDMT×97 yday $12.93 → 09:30 $13.00 +6.79; NEO×67 yday $17.99 → 09:30 $17.25 -49.58; PDFS×25 yday $45.49 → 09:30 $44.80 -17.25; UPS×11 yday $105.62 → 09:30 $106.19 +6.32 | — |
+| 2026-10-29 09:30 ET | **SELL** | `AMX` | 48 | $24.01 | $2.15 | $-7.17 | $1,401.01 | ▼ -7.17 after sell → book $9,278.94; vs 09:30 mark -2.16 | dropped from list after 1 sess (min 1) | join🔴 sector🔴 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-29 09:30 ET | **SELL** | `CXW` | 37 | $30.92 | $2.12 | $-3.48 | $2,542.93 | ▼ -3.48 after sell → book $9,276.82; vs 09:30 mark -2.12 | dropped from list after 1 sess (min 1) | join🔴 sector🔴 gen🔴 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-29 09:30 ET | **SELL** | `DY` | 4 | $235.00 | $2.02 | $-4.04 | $3,480.90 | ▼ -4.04 after sell → book $9,274.80; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | join🔴 sector🔴 gen🔴 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-29 09:30 ET | **SELL** | `EGG` | 225 | $4.84 | $2.95 | $-73.35 | $4,566.95 | ▼ -73.35 after sell → book $9,271.85; vs 09:30 mark -2.95 | dropped from list after 1 sess (min 1) | join🔴 sector🔴 gen🔴 news🟡 digest🟢 judge🔴 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-29 09:30 ET | **SELL** | `FDMT` | 97 | $13.00 | $2.31 | $+103.08 | $5,825.65 | ▲ +103.08 after sell → book $9,269.54; vs 09:30 mark -2.31 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-29 09:30 ET | **SELL** | `NEO` | 67 | $17.25 | $2.21 | $-7.75 | $6,979.18 | ▼ -7.75 after sell → book $9,267.33; vs 09:30 mark -2.21 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-29 09:30 ET | **SELL** | `PDFS` | 25 | $44.80 | $2.08 | $-24.65 | $8,097.10 | ▼ -24.65 after sell → book $9,265.24; vs 09:30 mark -2.09 | dropped from list after 1 sess (min 1) | join🔴 sector🟢 gen🔴 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-29 09:30 ET | **SELL** | `UPS` | 11 | $106.19 | $2.04 | $+4.79 | $9,263.20 | ▲ +4.79 after sell → book $9,263.20; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,263.20 | ▲ close $9,263.20 vs 09:30 $9,281.10 (session +0.00) | 16:00 close · cash $9,263.20 · no lots left · equity $9,263.20. | — |
 
 ## Not taken
 

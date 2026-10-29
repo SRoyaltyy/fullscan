@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · alarm
 
-Cash book **-1.12%** ($9,888) · signal-only (no cash/fees) was +3.57%. Starts YES **5/30**. Fills 250 · skips 96 · realized $+54.59.
+Cash book **-0.98%** ($9,902) · signal-only (no cash/fees) was +3.57%. Starts YES **5/30**. Fills 258 · skips 96 · realized $+54.59.
 
 ## How this sleeve decides (like you are 10)
 
@@ -428,6 +428,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-28 09:30 ET | **SHORT** | `ACRS` | 169 | $3.70 | $2.55 | — | $14,342.30 | — | alarm; gate alarm=True; list probable,yday_gainer,yday_mover; ret5=+0.5; leftover $626.99 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟡 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-28 09:30 ET | **SHORT** | `MX` | 243 | $2.58 | $3.20 | — | $14,966.03 | — | alarm; gate alarm=True; list yday_gainer,yday_mover; ret5=-2.3; leftover $626.99 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,966.03 | ▼ close $9,887.88 vs 09:30 $10,031.81 (session -122.25) | 16:00 close · cash $14,966.03 · equity $9,887.88 vs 09:30 $10,031.81 (-143.93; session marks -122.25) · 8 name(s) marked open→close (per-name table). SRRK×14 09:30 $43.82 → close $43.25 +7.98; BRKR×10 09:30 $60.66 → close $62.00 -13.40; AUTL×404 09:30 $1.55 → close $1.63 -32.32; SMMT×41 09:30 $15.19 → close $15.77 -23.78; NVTS×66 09:30 $9.36 → close $9.36 -0.00; AIP×29 09:30 $21.27 → close $21.43 -4.64; ACRS×169 09:30 $3.70 → close $3.96 -43.94; MX×243 09:30 $2.58 → close $2.63 -12.15 | — |
+| 2026-10-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $14,966.03 | ▲ 09:30 equity $9,922.83 vs yday $9,887.88 (+34.95) | 09:30 open · cash $14,966.03 (unchanged overnight, no fees) · equity $9,922.83 vs prior close $9,887.88 (+34.95) · 8 name(s) re-marked at the open (per-name table). ACRS×169 yday $3.96 → 09:30 $4.05 -15.21; AIP×29 yday $21.43 → 09:30 $20.86 +16.53; AUTL×404 yday $1.63 → 09:30 $1.63 -0.00; BRKR×10 yday $62.00 → 09:30 $61.18 +8.20; MX×243 yday $2.63 → 09:30 $2.57 +14.58; NVTS×66 yday $9.36 → 09:30 $9.09 +17.82; SMMT×41 yday $15.77 → 09:30 $15.80 -1.23; SRRK×14 yday $43.25 → 09:30 $43.66 -5.74 | — |
+| 2026-10-29 09:30 ET | **COVER** | `ACRS` | 169 | $4.05 | $2.50 | $-64.20 | $14,279.08 | ▼ -64.20 after sell → book $9,920.33; vs 09:30 mark -2.50 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 judge🟢 ab🔴 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-29 09:30 ET | **COVER** | `AIP` | 29 | $20.86 | $2.08 | $+7.70 | $13,672.07 | ▲ +7.70 after sell → book $9,918.26; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | join🔴 sector🟢 gen🔴 news🟡 digest🟢 judge🔴 ab🟡 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-29 09:30 ET | **COVER** | `AUTL` | 404 | $1.63 | $5.21 | $-42.84 | $13,008.33 | ▼ -42.84 after sell → book $9,913.04; vs 09:30 mark -5.22 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-29 09:30 ET | **COVER** | `BRKR` | 10 | $61.18 | $2.02 | $-9.28 | $12,394.51 | ▼ -9.28 after sell → book $9,911.02; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-29 09:30 ET | **COVER** | `MX` | 243 | $2.57 | $3.13 | $-3.91 | $11,766.87 | ▼ -3.91 after sell → book $9,907.89; vs 09:30 mark -3.13 | dropped from list after 1 sess (min 1) | join🔴 sector🟢 gen🔴 news🟡 digest🟢 judge🔴 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-29 09:30 ET | **COVER** | `NVTS` | 66 | $9.09 | $2.19 | $+13.41 | $11,164.74 | ▲ +13.41 after sell → book $9,905.70; vs 09:30 mark -2.19 | dropped from list after 1 sess (min 1) | join🔴 sector🟢 gen🔴 news🟢 digest🟢 judge🔴 ab🟡 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-29 09:30 ET | **COVER** | `SMMT` | 41 | $15.80 | $2.11 | $-29.27 | $10,514.83 | ▼ -29.27 after sell → book $9,903.59; vs 09:30 mark -2.11 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 judge🟢 ab🟡 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-29 09:30 ET | **COVER** | `SRRK` | 14 | $43.66 | $2.03 | $-1.86 | $9,901.56 | ▼ -1.86 after sell → book $9,901.56; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,901.56 | ▲ close $9,901.56 vs 09:30 $9,922.83 (session +0.00) | 16:00 close · cash $9,901.56 · no lots left · equity $9,901.56. | — |
 
 ## Not taken
 

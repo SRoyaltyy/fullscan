@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · merged news🟢 and cameras +7 −≤1
 
-Cash book **-30.98%** ($6,902) · signal-only (no cash/fees) was -9.70%. Starts YES **2/30**. Fills 55 · skips 63 · realized $-1714.70.
+Cash book **-31.07%** ($6,893) · signal-only (no cash/fees) was -9.70%. Starts YES **2/30**. Fills 55 · skips 63 · realized $-1714.70.
 
 ## How this sleeve decides (like you are 10)
 
@@ -238,6 +238,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-27 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $23.01 | ▲ close $6,937.57 vs 09:30 $6,894.03 (session +47.36) | 16:00 close · cash $23.01 · equity $6,937.57 vs 09:30 $6,894.03 (+43.54; session marks +47.36) · 1 name(s) marked open→close (per-name table). SGRY×296 09:30 $23.20 → close $23.36 +47.36 | — |
 | 2026-10-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $23.01 | ▼ 09:30 equity $6,907.97 vs yday $6,937.57 (-29.60) | 09:30 open · cash $23.01 (unchanged overnight, no fees) · equity $6,907.97 vs prior close $6,937.57 (-29.60) · 1 name(s) re-marked at the open (per-name table). SGRY×296 yday $23.36 → 09:30 $23.26 -29.60 | — |
 | 2026-10-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $23.01 | ▼ close $6,902.05 vs 09:30 $6,907.97 (session -5.92) | 16:00 close · cash $23.01 · equity $6,902.05 vs 09:30 $6,907.97 (-5.92; session marks -5.92) · 1 name(s) marked open→close (per-name table). SGRY×296 09:30 $23.26 → close $23.24 -5.92 | — |
+| 2026-10-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $23.01 | ▲ 09:30 equity $6,905.01 vs yday $6,902.05 (+2.96) | 09:30 open · cash $23.01 (unchanged overnight, no fees) · equity $6,905.01 vs prior close $6,902.05 (+2.96) · 1 name(s) re-marked at the open (per-name table). SGRY×296 yday $23.24 → 09:30 $23.25 +2.96 | — |
+| 2026-10-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $23.01 | ▼ close $6,893.17 vs 09:30 $6,905.01 (session -11.84) | 16:00 close · cash $23.01 · equity $6,893.17 vs 09:30 $6,905.01 (-11.84; session marks -11.84) · 1 name(s) marked open→close (per-name table). SGRY×296 09:30 $23.25 → close $23.21 -11.84 | — |
 
 ## Not taken
 

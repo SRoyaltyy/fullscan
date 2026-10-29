@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ last_green hold 5, no 🚨
 
-Cash book **-7.28%** ($9,272) · signal-only (no cash/fees) was +44.35%. Starts YES **8/30**. Fills 270 · skips 450 · realized $-144.10.
+Cash book **-6.76%** ($9,324) · signal-only (no cash/fees) was +44.35%. Starts YES **8/30**. Fills 270 · skips 450 · realized $-144.10.
 
 ## How this sleeve decides (like you are 10)
 
@@ -450,6 +450,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-28 09:30 ET | **BUY** | `EGG` | 4 | $5.14 | $0.22 | — | $100.99 | — | union ∩ last_green hold 5, no 🚨; gate last_green=True; list yday_gainer,yday_mover; 🔵; ret5=+6.4; leftover $21.61 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-28 09:30 ET | **BUY** | `QTTB` | 2 | $8.65 | $0.18 | — | $83.52 | — | union ∩ last_green hold 5, no 🚨; gate last_green=True; list yday_gainer; ret5=+1.0; leftover $21.61 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-10-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $83.52 | ▲ close $9,272.05 vs 09:30 $9,129.23 (session +143.51) | 16:00 close · cash $83.52 · equity $9,272.05 vs 09:30 $9,129.23 (+142.82; session marks +143.51) · 12 name(s) marked open→close (per-name table). ACRS×281 09:30 $3.70 → close $3.96 +73.06; CDNA×16 09:30 $69.91 → close $72.13 +35.52; EPR×19 09:30 $55.85 → close $55.51 -6.46; ILMN×4 09:30 $278.04 → close $288.79 +43.00; NVTS×130 09:30 $9.36 → close $9.36 +0.00; PACS×23 09:30 $49.00 → close $49.06 +1.38; PDFS×26 09:30 $45.62 → close $45.49 -3.38; SGRY×48 09:30 $23.26 → close $23.24 -0.96; NEO×1 09:30 $17.30 → close $17.99 +0.69; FDMT×1 09:30 $11.89 → close $12.93 +1.04; EGG×4 09:30 $5.14 → close $4.84 -1.20; QTTB×2 09:30 $8.65 → close $9.06 +0.82 | — |
+| 2026-10-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $83.52 | ▼ 09:30 equity $9,271.23 vs yday $9,272.05 (-0.82) | 09:30 open · cash $83.52 (unchanged overnight, no fees) · equity $9,271.23 vs prior close $9,272.05 (-0.82) · 12 name(s) re-marked at the open (per-name table). ACRS×281 yday $3.96 → 09:30 $4.05 +25.29; CDNA×16 yday $72.13 → 09:30 $72.02 -1.76; EGG×4 yday $4.84 → 09:30 $4.84 +0.00; EPR×19 yday $55.51 → 09:30 $56.89 +26.22; FDMT×1 yday $12.93 → 09:30 $13.00 +0.07; ILMN×4 yday $288.79 → 09:30 $286.05 -10.96; NEO×1 yday $17.99 → 09:30 $17.25 -0.74; NVTS×130 yday $9.36 → 09:30 $9.09 -35.10; PACS×23 yday $49.06 → 09:30 $49.64 +13.34; PDFS×26 yday $45.49 → 09:30 $44.80 -17.94; QTTB×2 yday $9.06 → 09:30 $9.20 +0.28; SGRY×48 yday $23.24 → 09:30 $23.25 +0.48 | — |
+| 2026-10-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $83.52 | ▲ close $9,323.62 vs 09:30 $9,271.23 (session +52.39) | 16:00 close · cash $83.52 · equity $9,323.62 vs 09:30 $9,271.23 (+52.39; session marks +52.39) · 12 name(s) marked open→close (per-name table). ACRS×281 09:30 $4.05 → close $3.99 -16.86; CDNA×16 09:30 $72.02 → close $71.52 -8.00; EGG×4 09:30 $4.84 → close $5.04 +0.80; EPR×19 09:30 $56.89 → close $58.34 +27.55; FDMT×1 09:30 $13.00 → close $12.78 -0.22; ILMN×4 09:30 $286.05 → close $290.06 +16.04; NEO×1 09:30 $17.25 → close $17.93 +0.68; NVTS×130 09:30 $9.09 → close $9.20 +14.30; PACS×23 09:30 $49.64 → close $49.68 +0.92; PDFS×26 09:30 $44.80 → close $45.56 +19.76; QTTB×2 09:30 $9.20 → close $8.87 -0.66; SGRY×48 09:30 $23.25 → close $23.21 -1.92 | — |
 
 ## Not taken
 

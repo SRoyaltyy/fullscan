@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ macd_xup, no 🚨
 
-Cash book **-14.03%** ($8,597) · signal-only (no cash/fees) was -19.02%. Starts YES **0/30**. Fills 287 · skips 71 · realized $-1788.82.
+Cash book **-15.98%** ($8,402) · signal-only (no cash/fees) was -19.02%. Starts YES **0/30**. Fills 292 · skips 71 · realized $-1788.82.
 
 ## How this sleeve decides (like you are 10)
 
@@ -467,6 +467,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-28 09:30 ET | **BUY** | `SPCE` | 637 | $2.68 | $8.22 | — | $1,725.58 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list ohlc_hot; 🔵; ret5=+13.5; leftover $1707.31 | join🟢 sector🟢 gen🟢 news🔴 digest🟢 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
 | 2026-10-28 09:30 ET | **BUY** | `VOYG` | 62 | $27.35 | $2.18 | — | $27.71 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list ohlc_hot; 🔵; ret5=+13.8; leftover $1707.31 | join🟢 sector🟢 gen🟢 news🔴 digest🟢 ab🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $27.71 | ▲ close $8,597.17 vs 09:30 $8,540.78 (session +78.04) | 16:00 close · cash $27.71 · equity $8,597.17 vs 09:30 $8,540.78 (+56.39; session marks +78.04) · 5 name(s) marked open→close (per-name table). NEO×98 09:30 $17.30 → close $17.99 +67.62; S×66 09:30 $25.56 → close $25.59 +1.98; AMPX×190 09:30 $8.98 → close $9.16 +34.20; SPCE×637 09:30 $2.68 → close $2.66 -12.74; VOYG×62 09:30 $27.35 → close $27.14 -13.02 | — |
+| 2026-10-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $27.71 | ▼ 09:30 equity $8,419.88 vs yday $8,597.17 (-177.29) | 09:30 open · cash $27.71 (unchanged overnight, no fees) · equity $8,419.88 vs prior close $8,597.17 (-177.29) · 5 name(s) re-marked at the open (per-name table). AMPX×190 yday $9.16 → 09:30 $9.02 -26.60; NEO×98 yday $17.99 → 09:30 $17.25 -72.52; S×66 yday $25.59 → 09:30 $24.31 -84.48; SPCE×637 yday $2.66 → 09:30 $2.63 -19.11; VOYG×62 yday $27.14 → 09:30 $27.55 +25.42 | — |
+| 2026-10-29 09:30 ET | **SELL** | `AMPX` | 190 | $9.02 | $2.61 | $+2.43 | $1,738.90 | ▲ +2.43 after sell → book $8,417.27; vs 09:30 mark -2.61 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-29 09:30 ET | **SELL** | `NEO` | 98 | $17.25 | $2.31 | $-9.50 | $3,427.09 | ▼ -9.50 after sell → book $8,414.96; vs 09:30 mark -2.31 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-29 09:30 ET | **SELL** | `S` | 66 | $24.31 | $2.21 | $-86.90 | $5,029.34 | ▼ -86.90 after sell → book $8,412.75; vs 09:30 mark -2.21 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-29 09:30 ET | **SELL** | `SPCE` | 637 | $2.63 | $8.34 | $-48.40 | $6,696.31 | ▼ -48.40 after sell → book $8,404.41; vs 09:30 mark -8.34 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-29 09:30 ET | **SELL** | `VOYG` | 62 | $27.55 | $2.20 | $+8.02 | $8,402.21 | ▲ +8.02 after sell → book $8,402.21; vs 09:30 mark -2.20 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,402.21 | ▲ close $8,402.21 vs 09:30 $8,419.88 (session +0.00) | 16:00 close · cash $8,402.21 · no lots left · equity $8,402.21. | — |
 
 ## Not taken
 
