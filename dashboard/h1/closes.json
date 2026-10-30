@@ -1573,5 +1573,47 @@
       "open": 1.51,
       "prior_close": 1.5
     }
+  },
+  "2026-10-30": {
+    "ADT": {
+      "close": 9.86,
+      "open": 9.87,
+      "prior_close": 9.87
+    },
+    "GKOS": {
+      "close": 237.600006,
+      "open": 242.419998,
+      "prior_close": 242.479996
+    },
+    "GMAB": {
+      "close": 57.060001,
+      "open": 57.330002,
+      "prior_close": 56.490002
+    },
+    "PACB": {
+      "close": 2.605,
+      "open": 2.75,
+      "prior_close": 2.9
+    },
+    "PRME": {
+      "close": 4.72,
+      "open": 5.03,
+      "prior_close": 5.24
+    },
+    "PURR": {
+      "close": 11.01,
+      "open": 11.525,
+      "prior_close": 12.29
+    },
+    "SWRD": {
+      "close": 2.98,
+      "open": 3.08,
+      "prior_close": 3.08
+    },
+    "TDOC": {
+      "close": 8.51,
+      "open": 8.81,
+      "prior_close": 8.73
+    }
   }
 }

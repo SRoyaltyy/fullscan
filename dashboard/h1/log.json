@@ -9528,5 +9528,116 @@
     ],
     "sha256": "6ded630f81d3887969e323a0f2d0211b4e85d844d161b55f359a78fe27c3d1a1",
     "unfilled": []
+  },
+  {
+    "added_buys": [],
+    "added_sells": [],
+    "cash_primary": 290.16882054378107,
+    "date": "2026-10-30",
+    "equity_primary": 7495.208862543781,
+    "holdings": [
+      {
+        "cost_primary": 1946.7705999999996,
+        "entry_date": "2026-10-30",
+        "entry_px": 9.87,
+        "last_px": 9.87,
+        "min_hold": 1,
+        "peak_px": 9.87,
+        "shares": 196,
+        "ticker": "ADT"
+      },
+      {
+        "cost_primary": 1707.4356859299996,
+        "entry_date": "2026-10-30",
+        "entry_px": 242.419998,
+        "last_px": 242.419998,
+        "min_hold": 1,
+        "peak_px": 242.419998,
+        "shares": 7,
+        "ticker": "GKOS"
+      },
+      {
+        "cost_primary": 1820.9331249999998,
+        "entry_date": "2026-10-30",
+        "entry_px": 11.525,
+        "last_px": 11.525,
+        "min_hold": 1,
+        "peak_px": 11.525,
+        "shares": 157,
+        "ticker": "PURR"
+      },
+      {
+        "cost_primary": 1959.59595,
+        "entry_date": "2026-10-30",
+        "entry_px": 8.81,
+        "last_px": 8.81,
+        "min_hold": 1,
+        "peak_px": 8.81,
+        "shares": 221,
+        "ticker": "TDOC"
+      }
+    ],
+    "kind": "mark",
+    "open_fill_sha256": "6ded630f81d3887969e323a0f2d0211b4e85d844d161b55f359a78fe27c3d1a1",
+    "plan_sha256": "91d8b5f16064f4aa986e8d0725f4ec31d49047f4edaaddc66ccd3833c3a7c3be",
+    "pnl_status": "marked",
+    "recipe": "union_hot_n4_h1__w0",
+    "sha256": "d5034a26545a76c0e6af77cda14a206b0271d5f9609db759e8100e47f9d0762f"
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-10-30",
+    "entry_date": "2026-10-29",
+    "entry_px": 56.459999,
+    "fill": 57.330002,
+    "kind": "close",
+    "pnl_primary": 5.731648835000215,
+    "reason": "hold-expired",
+    "recipe": "union_hot_n4_h1__w0",
+    "sha256": "7847ac814304c1ea3d54878a22ada26943b3d46c1e7158681564b577dbb0bdb0",
+    "shares": 33,
+    "ticker": "GMAB"
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-10-30",
+    "entry_date": "2026-10-29",
+    "entry_px": 2.77,
+    "fill": 2.75,
+    "kind": "close",
+    "pnl_primary": -49.52469999999994,
+    "reason": "hold-expired",
+    "recipe": "union_hot_n4_h1__w0",
+    "sha256": "22812e192e11cfc901047110e3af7db44f28428a9114beb3e57cfabe6fc7840a",
+    "shares": 673,
+    "ticker": "PACB"
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-10-30",
+    "entry_date": "2026-10-29",
+    "entry_px": 5.21,
+    "fill": 5.03,
+    "kind": "close",
+    "pnl_primary": -91.56539999999973,
+    "reason": "hold-expired",
+    "recipe": "union_hot_n4_h1__w0",
+    "sha256": "5339ec502e1418d89bda38be40fa123d15317915b194a64ad26d405b802a739b",
+    "shares": 356,
+    "ticker": "PRME"
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-10-30",
+    "entry_date": "2026-10-29",
+    "entry_px": 3.23,
+    "fill": 3.08,
+    "kind": "close",
+    "pnl_primary": -119.33584999999994,
+    "reason": "hold-expired",
+    "recipe": "union_hot_n4_h1__w0",
+    "sha256": "bbcb924d1cd86bf1e904e084bf7abca5c472d8d80acb982d91a27f970ad5c1be",
+    "shares": 575,
+    "ticker": "SWRD"
   }
 ]
