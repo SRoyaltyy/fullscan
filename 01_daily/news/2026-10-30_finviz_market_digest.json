@@ -1,0 +1,76 @@
+{
+  "date": "2026-10-30",
+  "generated_at": "2026-10-30T04:29:47.068578-04:00",
+  "timezone": "America/New_York",
+  "source": "live",
+  "source_url": "https://elite.finviz.com/",
+  "archive_snapshot_ts": null,
+  "archive_snapshot_at": null,
+  "archive_url": null,
+  "clock_legal": true,
+  "clock_same_morning": true,
+  "clock_use": "same_morning",
+  "clock_legal_for": "2026-10-30",
+  "clock_rule": "Live: Generated must be before 09:30 ET on this date or leave missing. Wayback: capture before 09:30 ET that day is legal for that morning's Pre-Open. Afternoon Wayback is legal for the NEXT session open only (prior-day close recap), marked by clock_legal_for. Gaps stay gaps. Capture only — not tape_anchor / predict / #210.",
+  "kind": "finviz_homepage_market_digest",
+  "represents": "Finviz homepage market-day prose. Same-morning Pre-Open when Generated is before 09:30 ET; afternoon Wayback is a prior-day close recap legal for the next session only. Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "US stocks set for lower open as tech-driven Nasdaq weakness and wage data focus weigh ahead of major energy and pharma earnings",
+  "raw_text": "- S&P 500 Futures (@ES) fall 0.97%, Nasdaq 100 Futures (@NQ) drop 2.13%, Dow Jones Futures (@YM) edge down 0.06%, and Russell 2000 Futures (@ER2) decline 0.44% pre-market\n- Alphabet (GOOGL) trades lower after Bank of America and UBS cut price targets following weak Q3 search results, a miss on estimates, and heavy AI capex that pressured profitability and free cash flow, adding AI-related pressure on Nasdaq ($COMP)-linked names\n- ExxonMobil (XOM), AbbVie (ABBV), Chevron (CVX), and Regeneron (REGN) are scheduled to report earnings before the bell, with revenue and EPS versus consensus in focus for opening moves\n- The Q3 Employment Cost Index is due at 8:30 AM ET and will be scrutinized for wage-inflation signals and labor-cost pressures\n- Asian equities weaken overnight with Japan’s Nikkei 225 (@NKD) down over 2%\n- European equity indices trade modestly higher in the early session\n- Oil futures (@CL) gain around 1–2% amid elevated geopolitical tensions\n- Gold (@GC) prices decline in overnight trading as investors reassess haven demand\n- No major individual US stock movers with clear fundamental catalysts have been flagged in authoritative reporting published after 4:00 AM ET",
+  "raw_summary_md": "- **S&P 500 Futures** ([@ES](https://finviz.com/futures_charts?t=ES)) **fall 0.97%**, **Nasdaq 100 Futures** ([@NQ](https://finviz.com/futures_charts?t=NQ)) **drop 2.13%**, **Dow Jones Futures** ([@YM](https://finviz.com/futures_charts?t=YM)) edge down **0.06%**, and **Russell 2000 Futures** ([@ER2](https://finviz.com/futures_charts?t=ER2)) decline **0.44%** pre-market\n- **Alphabet** ([GOOGL](https://finviz.com/quote?t=GOOGL)) trades lower after **Bank of America and UBS cut price targets** following **weak Q3 search results**, a miss on estimates, and **heavy AI capex** that pressured profitability and free cash flow, adding **AI-related pressure on Nasdaq ([$COMP](https://finviz.com/index/COMP?p=d))-linked names**\n- **ExxonMobil** ([XOM](https://finviz.com/quote?t=XOM)), **AbbVie** ([ABBV](https://finviz.com/quote?t=ABBV)), **Chevron** ([CVX](https://finviz.com/quote?t=CVX)), and **Regeneron** ([REGN](https://finviz.com/quote?t=REGN)) are scheduled to **report earnings before the bell**, with revenue and EPS versus consensus in focus for opening moves\n- The **Q3 Employment Cost Index** is due at **8:30 AM ET** and will be scrutinized for **wage-inflation signals and labor-cost pressures**\n- **Asian equities weaken overnight** with **Japan’s Nikkei 225** ([@NKD](https://finviz.com/futures_charts?t=NKD)) **down over 2%**\n- **European equity indices** trade **modestly higher** in the early session\n- **Oil futures** ([@CL](https://finviz.com/futures_charts?t=CL)) **gain around 1–2%** amid **elevated geopolitical tensions**\n- **Gold** ([@GC](https://finviz.com/futures_charts?t=GC)) prices **decline in overnight trading** as investors reassess haven demand\n- **No major individual US stock movers with clear fundamental catalysts** have been flagged in authoritative reporting published after **4:00 AM ET**",
+  "index_moves": [],
+  "oil": null,
+  "cpi": null,
+  "fed_odds": null,
+  "named_tickers": [
+    "GOOGL",
+    "XOM",
+    "ABBV",
+    "CVX",
+    "REGN"
+  ],
+  "named_leaders": [
+    "GOOGL",
+    "XOM",
+    "ABBV",
+    "CVX",
+    "REGN"
+  ],
+  "calendar": [],
+  "prior_close": {
+    "spx": null,
+    "nasdaq": null,
+    "dow": null
+  },
+  "cpi_fed": {
+    "cpi": null,
+    "fed_odds": null
+  },
+  "next_session_calendar": {
+    "housing": false,
+    "retail": false,
+    "fed": false,
+    "bullets": [],
+    "text": ""
+  },
+  "earnings_slate": {
+    "tickers": [
+      "XOM",
+      "ABBV",
+      "CVX",
+      "REGN"
+    ],
+    "text": "ExxonMobil (XOM), AbbVie (ABBV), Chevron (CVX), and Regeneron (REGN) are scheduled to report earnings before the bell, with revenue and EPS versus consensus in focus for opening moves"
+  },
+  "geo_grain": {
+    "geo": false,
+    "grain": false,
+    "flags": [],
+    "text": ""
+  },
+  "finviz_id": 324199,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-10-30T04:08:08.407",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "bad"
+}
