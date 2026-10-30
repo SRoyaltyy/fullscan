@@ -1,0 +1,82 @@
+{
+  "date": "2026-10-30",
+  "generated_at": "2026-10-30T05:56:10.459178-04:00",
+  "max_n": 8,
+  "routing": "Grok \u2192 DeepSeek",
+  "grok": true,
+  "deepseek_fallback": true,
+  "gemini": false,
+  "n_targets": 6,
+  "n_ok": 0,
+  "status": "FAIL",
+  "targets": [
+    {
+      "ticker": "AAPL",
+      "role": "earnings",
+      "why": "earnings AMC"
+    },
+    {
+      "ticker": "UEC",
+      "role": "override_captain",
+      "why": "OVERRIDE Uranium"
+    },
+    {
+      "ticker": "UUUU",
+      "role": "override_captain",
+      "why": "OVERRIDE Uranium"
+    },
+    {
+      "ticker": "SLB",
+      "role": "override_captain",
+      "why": "OVERRIDE Oil & Gas Equipment & Services"
+    },
+    {
+      "ticker": "BKR",
+      "role": "override_captain",
+      "why": "OVERRIDE Oil & Gas Equipment & Services"
+    },
+    {
+      "ticker": "KGS",
+      "role": "override_captain",
+      "why": "OVERRIDE Oil & Gas Equipment & Services"
+    }
+  ],
+  "dossiers": [
+    {
+      "ticker": "AAPL",
+      "role": "earnings",
+      "why": "earnings AMC",
+      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP1 AAPL"
+    },
+    {
+      "ticker": "UEC",
+      "role": "override_captain",
+      "why": "OVERRIDE Uranium",
+      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP1 UEC"
+    },
+    {
+      "ticker": "UUUU",
+      "role": "override_captain",
+      "why": "OVERRIDE Uranium",
+      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP1 UUUU"
+    },
+    {
+      "ticker": "SLB",
+      "role": "override_captain",
+      "why": "OVERRIDE Oil & Gas Equipment & Services",
+      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP1 SLB"
+    },
+    {
+      "ticker": "BKR",
+      "role": "override_captain",
+      "why": "OVERRIDE Oil & Gas Equipment & Services",
+      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP1 BKR"
+    },
+    {
+      "ticker": "KGS",
+      "role": "override_captain",
+      "why": "OVERRIDE Oil & Gas Equipment & Services",
+      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP1 KGS"
+    }
+  ]
+}
