@@ -18,6 +18,10 @@ on:
     # Backup ~10 min later. GitHub can drop or delay a scheduled run; the gate
     # job below makes either cron a no-op once today's open_fill is sealed.
     - cron: "45 13 * * 1-5"
+    # EST (from 2026-11-01): 09:35/09:45 ET. The gate skips any run before
+    # 09:35 New York time, so the off-season pair is a no-op.
+    - cron: "35 14 * * 1-5"
+    - cron: "45 14 * * 1-5"
   workflow_dispatch:
 
 permissions:
