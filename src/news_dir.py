@@ -77,7 +77,10 @@ def collect_rows(root: Path | None = None) -> list[dict]:
     news = root / "01_daily" / "news"
     events = root / "01_daily" / "events"
     if news.is_dir():
+        # Exact YYYY-MM-DD_parsed.json only — never *_intake_parsed.json (multi-10MB each).
         for path in sorted(news.glob("*_parsed.json")):
+            if not re.fullmatch(r"\d{4}-\d{2}-\d{2}_parsed\.json", path.name):
+                continue
             rows.extend(_rows(path, path.name[:10], "parsed"))
         for path in sorted(news.glob("*_actions.json")):
             rows.extend(_rows(path, path.name[:10], "published"))
