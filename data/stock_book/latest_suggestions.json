@@ -32,8 +32,8 @@
           "score": 0.8801240813428637
         },
         {
-          "ticker": "NTAP",
-          "score": 0.0728486353679462
+          "ticker": "BAND",
+          "score": 0.6785167804781911
         }
       ],
       "sell": [
@@ -584,7 +584,7 @@
     "SGRY",
     "MD",
     "PACS",
-    "NTAP"
+    "BAND"
   ],
   "sell_1d": [
     "NEOV",
