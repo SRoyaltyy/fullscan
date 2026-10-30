@@ -1,0 +1,122 @@
+{
+  "schema": 1,
+  "workflow": "preopen",
+  "date": "2026-10-30",
+  "run_id": "41026024183",
+  "model": "deepseek",
+  "started_at": "2026-10-30T04:53:53-04:00",
+  "updated_at": "2026-10-30T04:54:07-04:00",
+  "heartbeat_at": "2026-10-30T04:54:07-04:00",
+  "stages": [
+    {
+      "name": "prep",
+      "state": "running",
+      "started_at": "2026-10-30T04:54:07-04:00",
+      "ended_at": "",
+      "heartbeat_at": "2026-10-30T04:54:07-04:00",
+      "done": 0,
+      "total": 1,
+      "model": "deepseek",
+      "error": ""
+    },
+    {
+      "name": "news",
+      "state": "pending",
+      "started_at": "",
+      "ended_at": "",
+      "heartbeat_at": "",
+      "done": 0,
+      "total": 1,
+      "model": "deepseek",
+      "error": ""
+    },
+    {
+      "name": "judge",
+      "state": "pending",
+      "started_at": "",
+      "ended_at": "",
+      "heartbeat_at": "",
+      "done": 0,
+      "total": 1,
+      "model": "deepseek",
+      "error": ""
+    },
+    {
+      "name": "general_predict",
+      "state": "pending",
+      "started_at": "",
+      "ended_at": "",
+      "heartbeat_at": "",
+      "done": 0,
+      "total": 1,
+      "model": "deepseek",
+      "error": ""
+    },
+    {
+      "name": "sectors",
+      "state": "pending",
+      "started_at": "",
+      "ended_at": "",
+      "heartbeat_at": "",
+      "done": 0,
+      "total": 1,
+      "model": "deepseek",
+      "error": ""
+    },
+    {
+      "name": "map_heat",
+      "state": "pending",
+      "started_at": "",
+      "ended_at": "",
+      "heartbeat_at": "",
+      "done": 0,
+      "total": 1,
+      "model": "deepseek",
+      "error": ""
+    },
+    {
+      "name": "book_sleeve",
+      "state": "pending",
+      "started_at": "",
+      "ended_at": "",
+      "heartbeat_at": "",
+      "done": 0,
+      "total": 1,
+      "model": "deepseek",
+      "error": ""
+    },
+    {
+      "name": "catalyst",
+      "state": "pending",
+      "started_at": "",
+      "ended_at": "",
+      "heartbeat_at": "",
+      "done": 0,
+      "total": 1,
+      "model": "deepseek",
+      "error": ""
+    },
+    {
+      "name": "qc",
+      "state": "pending",
+      "started_at": "",
+      "ended_at": "",
+      "heartbeat_at": "",
+      "done": 0,
+      "total": 1,
+      "model": "deepseek",
+      "error": ""
+    },
+    {
+      "name": "deploy",
+      "state": "pending",
+      "started_at": "",
+      "ended_at": "",
+      "heartbeat_at": "",
+      "done": 0,
+      "total": 1,
+      "model": "deepseek",
+      "error": ""
+    }
+  ]
+}
