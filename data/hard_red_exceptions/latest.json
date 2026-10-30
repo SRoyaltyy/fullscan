@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "generated_at": "2026-10-29T20:47:26.068526-04:00",
+  "generated_at": "2026-10-30T05:21:35.275061-04:00",
   "from_date": "2026-08-13",
   "to_date": "2026-10-29",
   "n_days": 55,
@@ -266,6 +266,7 @@
     "BBT",
     "BBWI",
     "BBY",
+    "BC",
     "BCAR",
     "BCAT",
     "BCRX",
@@ -847,6 +848,7 @@
     "GS",
     "GSBD",
     "GSHD",
+    "GSIT",
     "GSK",
     "GSM",
     "GT",
@@ -1009,6 +1011,7 @@
     "JMIA",
     "JMKE",
     "JNJ",
+    "JOBY",
     "JPM",
     "JQC",
     "JXN",
@@ -1552,6 +1555,7 @@
     "RKLB",
     "RKT",
     "RL",
+    "RLAY",
     "RLMD",
     "RLX",
     "RMBS",
@@ -2086,20 +2090,20 @@
     },
     "short_h1": {
       "n": 152,
-      "win": 0.5526,
-      "mean": 0.893
+      "win": 0.5461,
+      "mean": 0.839
     },
     "short_h3": {
       "n": 152,
-      "win": 0.5526,
-      "mean": 0.704
+      "win": 0.5461,
+      "mean": 0.695
     }
   },
   "latest": {
     "date": "2026-10-29",
     "s": -6.946,
     "hard_red": true,
-    "n_cards": 63,
+    "n_cards": 146,
     "longs": [
       {
         "ticker": "GEHC",
@@ -2140,7 +2144,14 @@
           "buy": "neutral",
           "yday": "missing"
         },
-        "domains": null,
+        "domains": {
+          "market": "missing",
+          "parent": "missing",
+          "child": "missing",
+          "company": "missing",
+          "setup": "missing",
+          "flow": "missing"
+        },
         "parts": [
           {
             "k": "cameras",
@@ -2200,7 +2211,7 @@
           "Side lean: long \u00b7 idio +18"
         ],
         "h1_px": null,
-        "h1_date": null,
+        "h1_date": "2026-10-30",
         "h3_px": null,
         "h3_date": null,
         "h5_px": null,
@@ -2246,7 +2257,14 @@
           "buy": "neutral",
           "yday": "missing"
         },
-        "domains": null,
+        "domains": {
+          "market": "missing",
+          "parent": "missing",
+          "child": "missing",
+          "company": "missing",
+          "setup": "missing",
+          "flow": "missing"
+        },
         "parts": [
           {
             "k": "cameras",
@@ -2306,7 +2324,7 @@
           "Side lean: long \u00b7 idio +18"
         ],
         "h1_px": null,
-        "h1_date": null,
+        "h1_date": "2026-10-30",
         "h3_px": null,
         "h3_date": null,
         "h5_px": null,
@@ -2351,7 +2369,14 @@
           "buy": "neutral",
           "yday": "missing"
         },
-        "domains": null,
+        "domains": {
+          "market": "missing",
+          "parent": "missing",
+          "child": "missing",
+          "company": "missing",
+          "setup": "missing",
+          "flow": "missing"
+        },
         "parts": [
           {
             "k": "cameras",
@@ -2406,7 +2431,7 @@
           "Side lean: long \u00b7 idio +15"
         ],
         "h1_px": null,
-        "h1_date": null,
+        "h1_date": "2026-10-30",
         "h3_px": null,
         "h3_date": null,
         "h5_px": null,
@@ -2453,7 +2478,14 @@
           "buy": "neutral",
           "yday": "missing"
         },
-        "domains": null,
+        "domains": {
+          "market": "missing",
+          "parent": "missing",
+          "child": "missing",
+          "company": "missing",
+          "setup": "missing",
+          "flow": "missing"
+        },
         "parts": [
           {
             "k": "cameras",
@@ -2513,7 +2545,7 @@
           "Side lean: long \u00b7 idio +14"
         ],
         "h1_px": null,
-        "h1_date": null,
+        "h1_date": "2026-10-30",
         "h3_px": null,
         "h3_date": null,
         "h5_px": null,
@@ -2558,7 +2590,14 @@
           "buy": "neutral",
           "yday": "missing"
         },
-        "domains": null,
+        "domains": {
+          "market": "missing",
+          "parent": "missing",
+          "child": "missing",
+          "company": "missing",
+          "setup": "missing",
+          "flow": "missing"
+        },
         "parts": [
           {
             "k": "cameras",
@@ -2623,7 +2662,7 @@
           "Side lean: long \u00b7 idio +13"
         ],
         "h1_px": null,
-        "h1_date": null,
+        "h1_date": "2026-10-30",
         "h3_px": null,
         "h3_date": null,
         "h5_px": null,
@@ -2668,7 +2707,14 @@
           "buy": "neutral",
           "yday": "missing"
         },
-        "domains": null,
+        "domains": {
+          "market": "missing",
+          "parent": "missing",
+          "child": "missing",
+          "company": "missing",
+          "setup": "missing",
+          "flow": "missing"
+        },
         "parts": [
           {
             "k": "cameras",
@@ -2728,7 +2774,7 @@
           "Side lean: long \u00b7 idio +12"
         ],
         "h1_px": null,
-        "h1_date": null,
+        "h1_date": "2026-10-30",
         "h3_px": null,
         "h3_date": null,
         "h5_px": null,
@@ -2773,7 +2819,14 @@
           "buy": "neutral",
           "yday": "missing"
         },
-        "domains": null,
+        "domains": {
+          "market": "missing",
+          "parent": "missing",
+          "child": "missing",
+          "company": "missing",
+          "setup": "missing",
+          "flow": "missing"
+        },
         "parts": [
           {
             "k": "cameras",
@@ -2833,7 +2886,7 @@
           "Side lean: long \u00b7 idio +12"
         ],
         "h1_px": null,
-        "h1_date": null,
+        "h1_date": "2026-10-30",
         "h3_px": null,
         "h3_date": null,
         "h5_px": null,
@@ -2878,7 +2931,14 @@
           "buy": "neutral",
           "yday": "missing"
         },
-        "domains": null,
+        "domains": {
+          "market": "missing",
+          "parent": "missing",
+          "child": "missing",
+          "company": "missing",
+          "setup": "missing",
+          "flow": "missing"
+        },
         "parts": [
           {
             "k": "cameras",
@@ -2943,7 +3003,7 @@
           "Side lean: long \u00b7 idio +11"
         ],
         "h1_px": null,
-        "h1_date": null,
+        "h1_date": "2026-10-30",
         "h3_px": null,
         "h3_date": null,
         "h5_px": null,
@@ -2990,7 +3050,14 @@
           "buy": "neutral",
           "yday": "missing"
         },
-        "domains": null,
+        "domains": {
+          "market": "missing",
+          "parent": "missing",
+          "child": "missing",
+          "company": "missing",
+          "setup": "missing",
+          "flow": "missing"
+        },
         "parts": [
           {
             "k": "cameras",
@@ -3046,7 +3113,7 @@
           "Side lean: short \u00b7 idio -18"
         ],
         "h1_px": null,
-        "h1_date": null,
+        "h1_date": "2026-10-30",
         "h3_px": null,
         "h3_date": null,
         "h5_px": null,
@@ -3091,7 +3158,14 @@
           "buy": "neutral",
           "yday": "missing"
         },
-        "domains": null,
+        "domains": {
+          "market": "missing",
+          "parent": "missing",
+          "child": "missing",
+          "company": "missing",
+          "setup": "missing",
+          "flow": "missing"
+        },
         "parts": [
           {
             "k": "cameras",
@@ -3162,7 +3236,7 @@
           "Side lean: short \u00b7 idio -18"
         ],
         "h1_px": null,
-        "h1_date": null,
+        "h1_date": "2026-10-30",
         "h3_px": null,
         "h3_date": null,
         "h5_px": null,
@@ -3207,7 +3281,14 @@
           "buy": "neutral",
           "yday": "missing"
         },
-        "domains": null,
+        "domains": {
+          "market": "missing",
+          "parent": "missing",
+          "child": "missing",
+          "company": "missing",
+          "setup": "missing",
+          "flow": "missing"
+        },
         "parts": [
           {
             "k": "cameras",
@@ -3268,7 +3349,7 @@
           "Side lean: short \u00b7 idio -17"
         ],
         "h1_px": null,
-        "h1_date": null,
+        "h1_date": "2026-10-30",
         "h3_px": null,
         "h3_date": null,
         "h5_px": null,
@@ -3313,7 +3394,14 @@
           "buy": "neutral",
           "yday": "missing"
         },
-        "domains": null,
+        "domains": {
+          "market": "missing",
+          "parent": "missing",
+          "child": "missing",
+          "company": "missing",
+          "setup": "missing",
+          "flow": "missing"
+        },
         "parts": [
           {
             "k": "cameras",
@@ -3383,7 +3471,7 @@
           "Side lean: short \u00b7 idio -16"
         ],
         "h1_px": null,
-        "h1_date": null,
+        "h1_date": "2026-10-30",
         "h3_px": null,
         "h3_date": null,
         "h5_px": null,
@@ -3428,7 +3516,14 @@
           "buy": "neutral",
           "yday": "missing"
         },
-        "domains": null,
+        "domains": {
+          "market": "missing",
+          "parent": "missing",
+          "child": "missing",
+          "company": "missing",
+          "setup": "missing",
+          "flow": "missing"
+        },
         "parts": [
           {
             "k": "cameras",
@@ -3483,7 +3578,101 @@
           "Side lean: short \u00b7 idio -13"
         ],
         "h1_px": null,
-        "h1_date": null,
+        "h1_date": "2026-10-30",
+        "h3_px": null,
+        "h3_date": null,
+        "h5_px": null,
+        "h5_date": null
+      },
+      {
+        "ticker": "LDI",
+        "date": "2026-10-29",
+        "idio": -13,
+        "n_pos": 2,
+        "n_neg": 6,
+        "e_pol": "missing",
+        "e_label": "",
+        "r_pol": "missing",
+        "news_tone": "missing",
+        "headline": "War Heroes on Water Presented by loanDepot Underway as 130 Combat-wounded Veterans Fish Southern California Waters",
+        "yday_ret": null,
+        "rsi": null,
+        "macd_hist": null,
+        "flow_in": false,
+        "white": false,
+        "alarm": true,
+        "on_list": false,
+        "sources": [
+          "captured"
+        ],
+        "open": null,
+        "close": 0.5983999967575073,
+        "day_pct": -5.76,
+        "boxes": {
+          "join": "bad",
+          "sector": "bad",
+          "gen": "bad",
+          "news": "missing",
+          "digest": "good",
+          "judge": "missing",
+          "ab": "bad",
+          "peer": "bad",
+          "heat": "good",
+          "vol": "bad",
+          "catal": "missing",
+          "buy": "neutral",
+          "yday": "good"
+        },
+        "domains": {
+          "market": "bad",
+          "parent": "neutral",
+          "child": "neutral",
+          "company": "neutral",
+          "setup": "bad",
+          "flow": "neutral"
+        },
+        "parts": [
+          {
+            "k": "cameras",
+            "pts": -8,
+            "why": "+2 \u22126 cameras"
+          },
+          {
+            "k": "join",
+            "pts": -1,
+            "why": "join red"
+          },
+          {
+            "k": "peer",
+            "pts": -1,
+            "why": "peer red"
+          },
+          {
+            "k": "alarm",
+            "pts": -3,
+            "why": "alarm overnight"
+          }
+        ],
+        "weather": [
+          "gen bad",
+          "sector bad"
+        ],
+        "h1": null,
+        "h3": null,
+        "h5": null,
+        "side": "short",
+        "why": [
+          "Weather S=-6.946 \u2264 -3 \u2014 live sleeve SITS. This name is ranked anyway so idiosyncratic green is not invisible.",
+          "-8 +2 \u22126 cameras",
+          "-3 alarm overnight",
+          "-1 join red",
+          "-1 peer red",
+          "Weather cameras (not in idio score): gen bad, sector bad",
+          "News: missing \u2014 War Heroes on Water Presented by loanDepot Underway as 130 Combat-wounded Veterans Fish Southern California Waters",
+          "Side lean: short \u00b7 idio -13"
+        ],
+        "h1_px": null,
+        "h1_date": "2026-10-30",
         "h3_px": null,
         "h3_date": null,
         "h5_px": null,
@@ -3528,7 +3717,14 @@
           "buy": "neutral",
           "yday": "missing"
         },
-        "domains": null,
+        "domains": {
+          "market": "missing",
+          "parent": "missing",
+          "child": "missing",
+          "company": "missing",
+          "setup": "missing",
+          "flow": "missing"
+        },
         "parts": [
           {
             "k": "cameras",
@@ -3578,178 +3774,69 @@
           "Side lean: short \u00b7 idio -11"
         ],
         "h1_px": null,
-        "h1_date": null,
+        "h1_date": "2026-10-30",
         "h3_px": null,
         "h3_date": null,
         "h5_px": null,
         "h5_date": null
       },
       {
-        "ticker": "BBAI",
+        "ticker": "SUZ",
         "date": "2026-10-29",
-        "idio": -9,
-        "n_pos": 3,
+        "idio": -10,
+        "n_pos": 2,
         "n_neg": 6,
-        "e_pol": "bad",
-        "e_label": "miss \u00b7 EPS surprise -11.1% (morning export)",
-        "r_pol": "neutral",
-        "news_tone": "neutral",
-        "headline": "REDLattice To Become Public Via $1.25B SPAC Transaction",
-        "yday_ret": 4.68,
-        "rsi": 36.61,
-        "macd_hist": 0.0314,
-        "flow_in": false,
-        "white": false,
-        "alarm": false,
-        "on_list": true,
-        "sources": [
-          "ohlc_hot"
-        ],
-        "open": 2.45,
-        "close": 2.6700000762939453,
-        "day_pct": 8.98,
-        "boxes": {
-          "join": "bad",
-          "sector": "good",
-          "gen": "bad",
-          "news": "neutral",
-          "digest": "good",
-          "judge": "bad",
-          "ab": "bad",
-          "peer": "bad",
-          "heat": "good",
-          "vol": "bad",
-          "catal": "missing",
-          "buy": "neutral",
-          "yday": "missing"
-        },
-        "domains": null,
-        "parts": [
-          {
-            "k": "cameras",
-            "pts": -6,
-            "why": "+3 \u22126 cameras"
-          },
-          {
-            "k": "E",
-            "pts": -4,
-            "why": "miss \u00b7 EPS surprise -11.1% (morning export)"
-          },
-          {
-            "k": "join",
-            "pts": -1,
-            "why": "join red"
-          },
-          {
-            "k": "peer",
-            "pts": -1,
-            "why": "peer red"
-          },
-          {
-            "k": "yday",
-            "pts": 1,
-            "why": "yday +4.7%"
-          },
-          {
-            "k": "macd",
-            "pts": 1,
-            "why": "MACD hist + / X+"
-          },
-          {
-            "k": "burst",
-            "pts": 1,
-            "why": "parabolic prior tape"
-          }
-        ],
-        "weather": [
-          "gen bad",
-          "sector good"
-        ],
-        "h1": null,
-        "h3": null,
-        "h5": null,
-        "side": "short",
-        "why": [
-          "Weather S=-6.946 \u2264 -3 \u2014 live sleeve SITS. This name is ranked anyway so idiosyncratic green is not invisible.",
-          "-6 +3 \u22126 cameras",
-          "-4 miss \u00b7 EPS surprise -11.1% (morning export)",
-          "-1 join red",
-          "-1 peer red",
-          "+1 yday +4.7%",
-          "+1 MACD hist + / X+",
-          "Weather cameras (not in idio score): gen bad, sector good",
-          "News: neutral \u2014 REDLattice To Become Public Via $1.25B SPAC Transaction",
-          "miss \u00b7 EPS surprise -11.1% (morning export)",
-          "Tape RSI 37 \u00b7 MACD hist 0.0314",
-          "Side lean: short \u00b7 idio -9"
-        ],
-        "h1_px": null,
-        "h1_date": null,
-        "h3_px": null,
-        "h3_date": null,
-        "h5_px": null,
-        "h5_date": null
-      },
-      {
-        "ticker": "HUMA",
-        "date": "2026-10-29",
-        "idio": -8,
-        "n_pos": 3,
-        "n_neg": 5,
-        "e_pol": "bad",
-        "e_label": "miss \u00b7 EPS surprise -41.1% (morning export)",
-        "r_pol": "good",
-        "news_tone": "neutral",
-        "headline": "Humacyte Expands Board Expertise with Appointment of Scott Coward and Paul Kuznik",
-        "yday_ret": 5.33,
-        "rsi": 42.28,
-        "macd_hist": 0.0113,
+        "e_pol": "missing",
+        "e_label": "",
+        "r_pol": "missing",
+        "news_tone": "missing",
+        "headline": "Kimberly-Clark Corp (KMB) (Q2 2026) Earnings Call Highlights: Navigating China Disruption and ...",
+        "yday_ret": null,
+        "rsi": null,
+        "macd_hist": null,
         "flow_in": false,
         "white": false,
         "alarm": true,
-        "on_list": true,
+        "on_list": false,
         "sources": [
-          "ohlc_hot"
+          "captured"
         ],
-        "open": 0.47,
-        "close": 0.4697999954223633,
-        "day_pct": -0.63,
+        "open": null,
+        "close": 9.229999542236328,
+        "day_pct": 1.88,
         "boxes": {
-          "join": "bad",
-          "sector": "neutral",
+          "join": "good",
+          "sector": "bad",
           "gen": "bad",
-          "news": "neutral",
-          "digest": "good",
-          "judge": "good",
-          "ab": "bad",
+          "news": "missing",
+          "digest": "bad",
+          "judge": "missing",
+          "ab": "good",
           "peer": "bad",
-          "heat": "good",
+          "heat": "bad",
           "vol": "bad",
           "catal": "missing",
           "buy": "neutral",
-          "yday": "missing"
+          "yday": "bad"
         },
-        "domains": null,
+        "domains": {
+          "market": "bad",
+          "parent": "bad",
+          "child": "neutral",
+          "company": "neutral",
+          "setup": "good",
+          "flow": "bad"
+        },
         "parts": [
           {
             "k": "cameras",
-            "pts": -4,
-            "why": "+3 \u22125 cameras"
-          },
-          {
-            "k": "E",
-            "pts": -4,
-            "why": "miss \u00b7 EPS surprise -41.1% (morning export)"
-          },
-          {
-            "k": "R",
-            "pts": 2,
-            "why": "buy-side recom 1.4 (level, not a change \u00b7 morning export)"
+            "pts": -8,
+            "why": "+2 \u22126 cameras"
           },
           {
             "k": "join",
-            "pts": -1,
-            "why": "join red"
+            "pts": 1,
+            "why": "join green"
           },
           {
             "k": "peer",
@@ -3759,26 +3846,17 @@
           {
             "k": "yday",
             "pts": 1,
-            "why": "yday +5.3%"
+            "why": "last bar green"
           },
           {
             "k": "alarm",
             "pts": -3,
             "why": "alarm overnight"
-          },
-          {
-            "k": "macd",
-            "pts": 1,
-            "why": "MACD hist + / X+"
-          },
-          {
-            "k": "burst",
-            "pts": 1,
-            "why": "parabolic prior tape"
           }
         ],
         "weather": [
-          "gen bad"
+          "gen bad",
+          "sector bad"
         ],
         "h1": null,
         "h3": null,
@@ -3786,28 +3864,25 @@
         "side": "short",
         "why": [
           "Weather S=-6.946 \u2264 -3 \u2014 live sleeve SITS. This name is ranked anyway so idiosyncratic green is not invisible.",
-          "-4 +3 \u22125 cameras",
-          "-4 miss \u00b7 EPS surprise -41.1% (morning export)",
+          "-8 +2 \u22126 cameras",
           "-3 alarm overnight",
-          "+2 buy-side recom 1.4 (level, not a change \u00b7 morning export)",
-          "-1 join red",
+          "+1 join green",
           "-1 peer red",
-          "Weather cameras (not in idio score): gen bad",
-          "News: neutral \u2014 Humacyte Expands Board Expertise with Appointment of Scott Coward and Paul Kuznik",
-          "miss \u00b7 EPS surprise -41.1% (morning export)",
-          "Tape RSI 42 \u00b7 MACD hist 0.0113",
-          "Side lean: short \u00b7 idio -8"
+          "+1 last bar green",
+          "Weather cameras (not in idio score): gen bad, sector bad",
+          "News: missing \u2014 Kimberly-Clark Corp (KMB) (Q2 2026) Earnings Call Highlights: Navigating China Disruption and ...",
+          "Side lean: short \u00b7 idio -10"
         ],
         "h1_px": null,
-        "h1_date": null,
+        "h1_date": "2026-10-30",
         "h3_px": null,
         "h3_date": null,
         "h5_px": null,
         "h5_date": null
       }
     ],
-    "n_long_ok": 25,
-    "n_short_ok": 20,
+    "n_long_ok": 24,
+    "n_short_ok": 23,
     "all_top": [
       {
         "ticker": "GEHC",
@@ -3848,7 +3923,14 @@
           "buy": "neutral",
           "yday": "missing"
         },
-        "domains": null,
+        "domains": {
+          "market": "missing",
+          "parent": "missing",
+          "child": "missing",
+          "company": "missing",
+          "setup": "missing",
+          "flow": "missing"
+        },
         "parts": [
           {
             "k": "cameras",
@@ -3933,7 +4015,14 @@
           "buy": "neutral",
           "yday": "missing"
         },
-        "domains": null,
+        "domains": {
+          "market": "missing",
+          "parent": "missing",
+          "child": "missing",
+          "company": "missing",
+          "setup": "missing",
+          "flow": "missing"
+        },
         "parts": [
           {
             "k": "cameras",
@@ -4017,7 +4106,14 @@
           "buy": "neutral",
           "yday": "missing"
         },
-        "domains": null,
+        "domains": {
+          "market": "missing",
+          "parent": "missing",
+          "child": "missing",
+          "company": "missing",
+          "setup": "missing",
+          "flow": "missing"
+        },
         "parts": [
           {
             "k": "cameras",
@@ -4098,7 +4194,14 @@
           "buy": "neutral",
           "yday": "missing"
         },
-        "domains": null,
+        "domains": {
+          "market": "missing",
+          "parent": "missing",
+          "child": "missing",
+          "company": "missing",
+          "setup": "missing",
+          "flow": "missing"
+        },
         "parts": [
           {
             "k": "cameras",
@@ -4182,7 +4285,14 @@
           "buy": "neutral",
           "yday": "missing"
         },
-        "domains": null,
+        "domains": {
+          "market": "missing",
+          "parent": "missing",
+          "child": "missing",
+          "company": "missing",
+          "setup": "missing",
+          "flow": "missing"
+        },
         "parts": [
           {
             "k": "cameras",
@@ -4281,7 +4391,14 @@
           "buy": "neutral",
           "yday": "missing"
         },
-        "domains": null,
+        "domains": {
+          "market": "missing",
+          "parent": "missing",
+          "child": "missing",
+          "company": "missing",
+          "setup": "missing",
+          "flow": "missing"
+        },
         "parts": [
           {
             "k": "cameras",
@@ -4370,7 +4487,14 @@
           "buy": "neutral",
           "yday": "missing"
         },
-        "domains": null,
+        "domains": {
+          "market": "missing",
+          "parent": "missing",
+          "child": "missing",
+          "company": "missing",
+          "setup": "missing",
+          "flow": "missing"
+        },
         "parts": [
           {
             "k": "cameras",
@@ -4454,7 +4578,14 @@
           "buy": "neutral",
           "yday": "missing"
         },
-        "domains": null,
+        "domains": {
+          "market": "missing",
+          "parent": "missing",
+          "child": "missing",
+          "company": "missing",
+          "setup": "missing",
+          "flow": "missing"
+        },
         "parts": [
           {
             "k": "cameras",
@@ -4538,7 +4669,14 @@
           "buy": "neutral",
           "yday": "missing"
         },
-        "domains": null,
+        "domains": {
+          "market": "missing",
+          "parent": "missing",
+          "child": "missing",
+          "company": "missing",
+          "setup": "missing",
+          "flow": "missing"
+        },
         "parts": [
           {
             "k": "cameras",
@@ -4622,7 +4760,14 @@
           "buy": "neutral",
           "yday": "missing"
         },
-        "domains": null,
+        "domains": {
+          "market": "missing",
+          "parent": "missing",
+          "child": "missing",
+          "company": "missing",
+          "setup": "missing",
+          "flow": "missing"
+        },
         "parts": [
           {
             "k": "cameras",
@@ -4711,7 +4856,14 @@
           "buy": "neutral",
           "yday": "missing"
         },
-        "domains": null,
+        "domains": {
+          "market": "missing",
+          "parent": "missing",
+          "child": "missing",
+          "company": "missing",
+          "setup": "missing",
+          "flow": "missing"
+        },
         "parts": [
           {
             "k": "cameras",
@@ -4791,7 +4943,14 @@
           "buy": "neutral",
           "yday": "missing"
         },
-        "domains": null,
+        "domains": {
+          "market": "missing",
+          "parent": "missing",
+          "child": "missing",
+          "company": "missing",
+          "setup": "missing",
+          "flow": "missing"
+        },
         "parts": [
           {
             "k": "cameras",
@@ -4876,7 +5035,14 @@
           "buy": "neutral",
           "yday": "missing"
         },
-        "domains": null,
+        "domains": {
+          "market": "missing",
+          "parent": "missing",
+          "child": "missing",
+          "company": "missing",
+          "setup": "missing",
+          "flow": "missing"
+        },
         "parts": [
           {
             "k": "cameras",
@@ -4922,88 +5088,6 @@
         "h5": null
       },
       {
-        "ticker": "PDFS",
-        "date": "2026-10-29",
-        "idio": 9,
-        "n_pos": 5,
-        "n_neg": 4,
-        "e_pol": "good",
-        "e_label": "beat \u00b7 EPS surprise +0.8% (morning export)",
-        "r_pol": "good",
-        "news_tone": "neutral",
-        "headline": "Introducing Exensio Aurora: PDF Solutions Unveils Highly-Scalable Architecture for Exensio Analytics",
-        "yday_ret": 2.85,
-        "rsi": 69.83,
-        "macd_hist": -0.2477,
-        "flow_in": false,
-        "white": false,
-        "alarm": false,
-        "on_list": true,
-        "sources": [
-          "probable",
-          "yday_gainer",
-          "yday_mover"
-        ],
-        "open": 44.8,
-        "close": 45.560001373291016,
-        "day_pct": 1.7,
-        "boxes": {
-          "join": "bad",
-          "sector": "good",
-          "gen": "bad",
-          "news": "neutral",
-          "digest": "good",
-          "judge": "bad",
-          "ab": "good",
-          "peer": "good",
-          "heat": "good",
-          "vol": "bad",
-          "catal": "missing",
-          "buy": "neutral",
-          "yday": "missing"
-        },
-        "domains": null,
-        "parts": [
-          {
-            "k": "cameras",
-            "pts": 2,
-            "why": "+5 \u22124 cameras"
-          },
-          {
-            "k": "E",
-            "pts": 4,
-            "why": "beat \u00b7 EPS surprise +0.8% (morning export)"
-          },
-          {
-            "k": "R",
-            "pts": 2,
-            "why": "buy-side recom 1.4 (level, not a change \u00b7 morning export)"
-          },
-          {
-            "k": "join",
-            "pts": -1,
-            "why": "join red"
-          },
-          {
-            "k": "peer",
-            "pts": 1,
-            "why": "peer green"
-          },
-          {
-            "k": "yday",
-            "pts": 1,
-            "why": "yday +2.9%"
-          }
-        ],
-        "weather": [
-          "gen bad",
-          "sector good"
-        ],
-        "h1": null,
-        "h3": null,
-        "h5": null
-      },
-      {
         "ticker": "SMMT",
         "date": "2026-10-29",
         "idio": 9,
@@ -5042,9 +5126,16 @@
           "vol": "neutral",
           "catal": "missing",
           "buy": "neutral",
-          "yday": "missing"
+          "yday": "good"
         },
-        "domains": null,
+        "domains": {
+          "market": "bad",
+          "parent": "neutral",
+          "child": "neutral",
+          "company": "neutral",
+          "setup": "good",
+          "flow": "good"
+        },
         "parts": [
           {
             "k": "cameras",
@@ -5123,7 +5214,14 @@
           "buy": "neutral",
           "yday": "missing"
         },
-        "domains": null,
+        "domains": {
+          "market": "missing",
+          "parent": "missing",
+          "child": "missing",
+          "company": "missing",
+          "setup": "missing",
+          "flow": "missing"
+        },
         "parts": [
           {
             "k": "cameras",
@@ -5217,7 +5315,14 @@
           "buy": "neutral",
           "yday": "missing"
         },
-        "domains": null,
+        "domains": {
+          "market": "missing",
+          "parent": "missing",
+          "child": "missing",
+          "company": "missing",
+          "setup": "missing",
+          "flow": "missing"
+        },
         "parts": [
           {
             "k": "cameras",
@@ -5298,7 +5403,14 @@
           "buy": "neutral",
           "yday": "missing"
         },
-        "domains": null,
+        "domains": {
+          "market": "missing",
+          "parent": "missing",
+          "child": "missing",
+          "company": "missing",
+          "setup": "missing",
+          "flow": "missing"
+        },
         "parts": [
           {
             "k": "cameras",
@@ -5380,9 +5492,16 @@
           "vol": "bad",
           "catal": "missing",
           "buy": "neutral",
-          "yday": "missing"
+          "yday": "good"
         },
-        "domains": null,
+        "domains": {
+          "market": "bad",
+          "parent": "neutral",
+          "child": "neutral",
+          "company": "neutral",
+          "setup": "good",
+          "flow": "good"
+        },
         "parts": [
           {
             "k": "cameras",
@@ -5472,7 +5591,14 @@
           "buy": "neutral",
           "yday": "missing"
         },
-        "domains": null,
+        "domains": {
+          "market": "missing",
+          "parent": "missing",
+          "child": "missing",
+          "company": "missing",
+          "setup": "missing",
+          "flow": "missing"
+        },
         "parts": [
           {
             "k": "cameras",
@@ -5524,6 +5650,87 @@
         "h5": null
       },
       {
+        "ticker": "ARCT",
+        "date": "2026-10-29",
+        "idio": 6,
+        "n_pos": 5,
+        "n_neg": 2,
+        "e_pol": "missing",
+        "e_label": "",
+        "r_pol": "missing",
+        "news_tone": "missing",
+        "headline": "CoreWeave upgraded, Etsy downgraded: Wall Street's top analyst calls",
+        "yday_ret": null,
+        "rsi": null,
+        "macd_hist": null,
+        "flow_in": false,
+        "white": false,
+        "alarm": true,
+        "on_list": false,
+        "sources": [
+          "captured"
+        ],
+        "open": null,
+        "close": 12.149999618530273,
+        "day_pct": 0.66,
+        "boxes": {
+          "join": "good",
+          "sector": "neutral",
+          "gen": "bad",
+          "news": "missing",
+          "digest": "good",
+          "judge": "good",
+          "ab": "neutral",
+          "peer": "good",
+          "heat": "good",
+          "vol": "bad",
+          "catal": "missing",
+          "buy": "neutral",
+          "yday": "good"
+        },
+        "domains": {
+          "market": "bad",
+          "parent": "neutral",
+          "child": "neutral",
+          "company": "neutral",
+          "setup": "good",
+          "flow": "good"
+        },
+        "parts": [
+          {
+            "k": "cameras",
+            "pts": 6,
+            "why": "+5 \u22122 cameras"
+          },
+          {
+            "k": "join",
+            "pts": 1,
+            "why": "join green"
+          },
+          {
+            "k": "peer",
+            "pts": 1,
+            "why": "peer green"
+          },
+          {
+            "k": "yday",
+            "pts": 1,
+            "why": "last bar green"
+          },
+          {
+            "k": "alarm",
+            "pts": -3,
+            "why": "alarm overnight"
+          }
+        ],
+        "weather": [
+          "gen bad"
+        ],
+        "h1": null,
+        "h3": null,
+        "h5": null
+      },
+      {
         "ticker": "AURA",
         "date": "2026-10-29",
         "idio": 6,
@@ -5562,7 +5769,14 @@
           "buy": "neutral",
           "yday": "missing"
         },
-        "domains": null,
+        "domains": {
+          "market": "missing",
+          "parent": "missing",
+          "child": "missing",
+          "company": "missing",
+          "setup": "missing",
+          "flow": "missing"
+        },
         "parts": [
           {
             "k": "cameras",
@@ -5646,7 +5860,14 @@
           "buy": "neutral",
           "yday": "missing"
         },
-        "domains": null,
+        "domains": {
+          "market": "missing",
+          "parent": "missing",
+          "child": "missing",
+          "company": "missing",
+          "setup": "missing",
+          "flow": "missing"
+        },
         "parts": [
           {
             "k": "cameras",
@@ -5686,6 +5907,100 @@
         ],
         "weather": [
           "gen bad"
+        ],
+        "h1": null,
+        "h3": null,
+        "h5": null
+      },
+      {
+        "ticker": "PDFS",
+        "date": "2026-10-29",
+        "idio": 6,
+        "n_pos": 5,
+        "n_neg": 4,
+        "e_pol": "good",
+        "e_label": "beat \u00b7 EPS surprise +0.8% (morning export)",
+        "r_pol": "good",
+        "news_tone": "neutral",
+        "headline": "Introducing Exensio Aurora: PDF Solutions Unveils Highly-Scalable Architecture for Exensio Analytics",
+        "yday_ret": 2.85,
+        "rsi": 69.83,
+        "macd_hist": -0.2477,
+        "flow_in": false,
+        "white": false,
+        "alarm": true,
+        "on_list": true,
+        "sources": [
+          "probable",
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "open": 44.8,
+        "close": 45.560001373291016,
+        "day_pct": 1.7,
+        "boxes": {
+          "join": "bad",
+          "sector": "good",
+          "gen": "bad",
+          "news": "neutral",
+          "digest": "good",
+          "judge": "bad",
+          "ab": "good",
+          "peer": "good",
+          "heat": "good",
+          "vol": "bad",
+          "catal": "missing",
+          "buy": "neutral",
+          "yday": "good"
+        },
+        "domains": {
+          "market": "bad",
+          "parent": "bad",
+          "child": "neutral",
+          "company": "neutral",
+          "setup": "good",
+          "flow": "good"
+        },
+        "parts": [
+          {
+            "k": "cameras",
+            "pts": 2,
+            "why": "+5 \u22124 cameras"
+          },
+          {
+            "k": "E",
+            "pts": 4,
+            "why": "beat \u00b7 EPS surprise +0.8% (morning export)"
+          },
+          {
+            "k": "R",
+            "pts": 2,
+            "why": "buy-side recom 1.4 (level, not a change \u00b7 morning export)"
+          },
+          {
+            "k": "join",
+            "pts": -1,
+            "why": "join red"
+          },
+          {
+            "k": "peer",
+            "pts": 1,
+            "why": "peer green"
+          },
+          {
+            "k": "yday",
+            "pts": 1,
+            "why": "yday +2.9%"
+          },
+          {
+            "k": "alarm",
+            "pts": -3,
+            "why": "alarm overnight"
+          }
+        ],
+        "weather": [
+          "gen bad",
+          "sector good"
         ],
         "h1": null,
         "h3": null,
@@ -5732,7 +6047,14 @@
           "buy": "neutral",
           "yday": "missing"
         },
-        "domains": null,
+        "domains": {
+          "market": "missing",
+          "parent": "missing",
+          "child": "missing",
+          "company": "missing",
+          "setup": "missing",
+          "flow": "missing"
+        },
         "parts": [
           {
             "k": "cameras",
@@ -5816,7 +6138,14 @@
           "buy": "neutral",
           "yday": "missing"
         },
-        "domains": null,
+        "domains": {
+          "market": "missing",
+          "parent": "missing",
+          "child": "missing",
+          "company": "missing",
+          "setup": "missing",
+          "flow": "missing"
+        },
         "parts": [
           {
             "k": "cameras",
@@ -5862,6 +6191,88 @@
         "h5": null
       },
       {
+        "ticker": "SONO",
+        "date": "2026-10-29",
+        "idio": 6,
+        "n_pos": 6,
+        "n_neg": 3,
+        "e_pol": "missing",
+        "e_label": "",
+        "r_pol": "missing",
+        "news_tone": "missing",
+        "headline": "Sonos Launches New Global Brand Campaign \"Love the Sound. Feel the System\"",
+        "yday_ret": null,
+        "rsi": null,
+        "macd_hist": null,
+        "flow_in": false,
+        "white": false,
+        "alarm": true,
+        "on_list": false,
+        "sources": [
+          "losers"
+        ],
+        "open": null,
+        "close": 17.459999084472656,
+        "day_pct": -0.63,
+        "boxes": {
+          "join": "good",
+          "sector": "good",
+          "gen": "bad",
+          "news": "missing",
+          "digest": "good",
+          "judge": "bad",
+          "ab": "good",
+          "peer": "good",
+          "heat": "good",
+          "vol": "bad",
+          "catal": "missing",
+          "buy": "neutral",
+          "yday": "bad"
+        },
+        "domains": {
+          "market": "bad",
+          "parent": "bad",
+          "child": "good",
+          "company": "neutral",
+          "setup": "good",
+          "flow": "neutral"
+        },
+        "parts": [
+          {
+            "k": "cameras",
+            "pts": 6,
+            "why": "+6 \u22123 cameras"
+          },
+          {
+            "k": "join",
+            "pts": 1,
+            "why": "join green"
+          },
+          {
+            "k": "peer",
+            "pts": 1,
+            "why": "peer green"
+          },
+          {
+            "k": "yday",
+            "pts": 1,
+            "why": "last bar green"
+          },
+          {
+            "k": "alarm",
+            "pts": -3,
+            "why": "alarm overnight"
+          }
+        ],
+        "weather": [
+          "gen bad",
+          "sector good"
+        ],
+        "h1": null,
+        "h3": null,
+        "h5": null
+      },
+      {
         "ticker": "FIS",
         "date": "2026-10-29",
         "idio": 5,
@@ -5898,9 +6309,16 @@
           "vol": "bad",
           "catal": "missing",
           "buy": "neutral",
-          "yday": "missing"
+          "yday": "good"
         },
-        "domains": null,
+        "domains": {
+          "market": "bad",
+          "parent": "bad",
+          "child": "good",
+          "company": "neutral",
+          "setup": "good",
+          "flow": "good"
+        },
         "parts": [
           {
             "k": "cameras",
@@ -5985,7 +6403,14 @@
           "buy": "neutral",
           "yday": "missing"
         },
-        "domains": null,
+        "domains": {
+          "market": "missing",
+          "parent": "missing",
+          "child": "missing",
+          "company": "missing",
+          "setup": "missing",
+          "flow": "missing"
+        },
         "parts": [
           {
             "k": "cameras",
@@ -6016,6 +6441,87 @@
         "weather": [
           "gen bad",
           "sector bad"
+        ],
+        "h1": null,
+        "h3": null,
+        "h5": null
+      },
+      {
+        "ticker": "LQDA",
+        "date": "2026-10-29",
+        "idio": 4,
+        "n_pos": 5,
+        "n_neg": 3,
+        "e_pol": "missing",
+        "e_label": "",
+        "r_pol": "missing",
+        "news_tone": "missing",
+        "headline": "FDA Grants Fast Track Designation to YUTREPIA for the Treatment of Raynaud's Phenomenon Associated with Systemic Sclerosis",
+        "yday_ret": null,
+        "rsi": null,
+        "macd_hist": null,
+        "flow_in": false,
+        "white": false,
+        "alarm": true,
+        "on_list": false,
+        "sources": [
+          "captured"
+        ],
+        "open": null,
+        "close": 44.9900016784668,
+        "day_pct": -2.68,
+        "boxes": {
+          "join": "good",
+          "sector": "neutral",
+          "gen": "bad",
+          "news": "missing",
+          "digest": "good",
+          "judge": "good",
+          "ab": "bad",
+          "peer": "good",
+          "heat": "good",
+          "vol": "bad",
+          "catal": "missing",
+          "buy": "neutral",
+          "yday": "bad"
+        },
+        "domains": {
+          "market": "bad",
+          "parent": "neutral",
+          "child": "neutral",
+          "company": "neutral",
+          "setup": "neutral",
+          "flow": "neutral"
+        },
+        "parts": [
+          {
+            "k": "cameras",
+            "pts": 4,
+            "why": "+5 \u22123 cameras"
+          },
+          {
+            "k": "join",
+            "pts": 1,
+            "why": "join green"
+          },
+          {
+            "k": "peer",
+            "pts": 1,
+            "why": "peer green"
+          },
+          {
+            "k": "yday",
+            "pts": 1,
+            "why": "last bar green"
+          },
+          {
+            "k": "alarm",
+            "pts": -3,
+            "why": "alarm overnight"
+          }
+        ],
+        "weather": [
+          "gen bad"
         ],
         "h1": null,
         "h3": null,
@@ -6060,7 +6566,14 @@
           "buy": "neutral",
           "yday": "missing"
         },
-        "domains": null,
+        "domains": {
+          "market": "missing",
+          "parent": "missing",
+          "child": "missing",
+          "company": "missing",
+          "setup": "missing",
+          "flow": "missing"
+        },
         "parts": [
           {
             "k": "cameras",
@@ -6095,91 +6608,6 @@
         ],
         "weather": [
           "gen bad"
-        ],
-        "h1": null,
-        "h3": null,
-        "h5": null
-      },
-      {
-        "ticker": "ORCL",
-        "date": "2026-10-29",
-        "idio": 4,
-        "n_pos": 4,
-        "n_neg": 5,
-        "e_pol": "good",
-        "e_label": "beat \u00b7 EPS surprise +10.4% (morning export)",
-        "r_pol": "good",
-        "news_tone": "neutral",
-        "headline": "Oracle's $18 Billion AI Project Just Hit a Major Hurdle",
-        "yday_ret": 10.73,
-        "rsi": 37.89,
-        "macd_hist": 0.7615,
-        "flow_in": false,
-        "white": false,
-        "alarm": false,
-        "on_list": true,
-        "sources": [
-          "ohlc_hot"
-        ],
-        "open": 144.13,
-        "close": 139.55999755859375,
-        "day_pct": -3.17,
-        "boxes": {
-          "join": "bad",
-          "sector": "good",
-          "gen": "bad",
-          "news": "neutral",
-          "digest": "good",
-          "judge": "bad",
-          "ab": "good",
-          "peer": "bad",
-          "heat": "good",
-          "vol": "bad",
-          "catal": "missing",
-          "buy": "neutral",
-          "yday": "missing"
-        },
-        "domains": null,
-        "parts": [
-          {
-            "k": "cameras",
-            "pts": -2,
-            "why": "+4 \u22125 cameras"
-          },
-          {
-            "k": "E",
-            "pts": 4,
-            "why": "beat \u00b7 EPS surprise +10.4% (morning export)"
-          },
-          {
-            "k": "R",
-            "pts": 2,
-            "why": "buy-side recom 1.6 (level, not a change \u00b7 morning export)"
-          },
-          {
-            "k": "join",
-            "pts": -1,
-            "why": "join red"
-          },
-          {
-            "k": "peer",
-            "pts": -1,
-            "why": "peer red"
-          },
-          {
-            "k": "yday",
-            "pts": 1,
-            "why": "yday +10.7%"
-          },
-          {
-            "k": "macd",
-            "pts": 1,
-            "why": "MACD hist + / X+"
-          }
-        ],
-        "weather": [
-          "gen bad",
-          "sector good"
         ],
         "h1": null,
         "h3": null,
@@ -6224,7 +6652,14 @@
           "buy": "neutral",
           "yday": "missing"
         },
-        "domains": null,
+        "domains": {
+          "market": "missing",
+          "parent": "missing",
+          "child": "missing",
+          "company": "missing",
+          "setup": "missing",
+          "flow": "missing"
+        },
         "parts": [
           {
             "k": "cameras",
@@ -6309,7 +6744,14 @@
           "buy": "neutral",
           "yday": "missing"
         },
-        "domains": null,
+        "domains": {
+          "market": "missing",
+          "parent": "missing",
+          "child": "missing",
+          "company": "missing",
+          "setup": "missing",
+          "flow": "missing"
+        },
         "parts": [
           {
             "k": "cameras",
@@ -6399,7 +6841,14 @@
           "buy": "neutral",
           "yday": "missing"
         },
-        "domains": null,
+        "domains": {
+          "market": "missing",
+          "parent": "missing",
+          "child": "missing",
+          "company": "missing",
+          "setup": "missing",
+          "flow": "missing"
+        },
         "parts": [
           {
             "k": "cameras",
@@ -6479,7 +6928,14 @@
           "buy": "neutral",
           "yday": "missing"
         },
-        "domains": null,
+        "domains": {
+          "market": "missing",
+          "parent": "missing",
+          "child": "missing",
+          "company": "missing",
+          "setup": "missing",
+          "flow": "missing"
+        },
         "parts": [
           {
             "k": "cameras",
@@ -6563,7 +7019,14 @@
           "buy": "neutral",
           "yday": "missing"
         },
-        "domains": null,
+        "domains": {
+          "market": "missing",
+          "parent": "missing",
+          "child": "missing",
+          "company": "missing",
+          "setup": "missing",
+          "flow": "missing"
+        },
         "parts": [
           {
             "k": "cameras",
@@ -6648,7 +7111,14 @@
           "buy": "neutral",
           "yday": "missing"
         },
-        "domains": null,
+        "domains": {
+          "market": "missing",
+          "parent": "missing",
+          "child": "missing",
+          "company": "missing",
+          "setup": "missing",
+          "flow": "missing"
+        },
         "parts": [
           {
             "k": "cameras",
@@ -6729,7 +7199,14 @@
           "buy": "neutral",
           "yday": "missing"
         },
-        "domains": null,
+        "domains": {
+          "market": "missing",
+          "parent": "missing",
+          "child": "missing",
+          "company": "missing",
+          "setup": "missing",
+          "flow": "missing"
+        },
         "parts": [
           {
             "k": "cameras",
@@ -6809,7 +7286,14 @@
           "buy": "neutral",
           "yday": "missing"
         },
-        "domains": null,
+        "domains": {
+          "market": "missing",
+          "parent": "missing",
+          "child": "missing",
+          "company": "missing",
+          "setup": "missing",
+          "flow": "missing"
+        },
         "parts": [
           {
             "k": "cameras",
@@ -6855,171 +7339,77 @@
         "h5": null
       },
       {
-        "ticker": "PRIM",
+        "ticker": "OABI",
         "date": "2026-10-29",
-        "idio": 1,
-        "n_pos": 3,
-        "n_neg": 6,
-        "e_pol": "good",
-        "e_label": "beat \u00b7 EPS surprise +23.8% (morning export)",
-        "r_pol": "good",
-        "news_tone": "neutral",
-        "headline": "Primoris Services Corporation Provides Business Update",
-        "yday_ret": 6.71,
-        "rsi": 52.48,
-        "macd_hist": -0.7698,
-        "flow_in": false,
-        "white": false,
-        "alarm": false,
-        "on_list": true,
-        "sources": [
-          "yday_gainer",
-          "yday_mover"
-        ],
-        "open": 72.99,
-        "close": 75.61000061035156,
-        "day_pct": 3.59,
-        "boxes": {
-          "join": "bad",
-          "sector": "bad",
-          "gen": "bad",
-          "news": "neutral",
-          "digest": "good",
-          "judge": "bad",
-          "ab": "good",
-          "peer": "good",
-          "heat": "bad",
-          "vol": "bad",
-          "catal": "missing",
-          "buy": "neutral",
-          "yday": "missing"
-        },
-        "domains": null,
-        "parts": [
-          {
-            "k": "cameras",
-            "pts": -6,
-            "why": "+3 \u22126 cameras"
-          },
-          {
-            "k": "E",
-            "pts": 4,
-            "why": "beat \u00b7 EPS surprise +23.8% (morning export)"
-          },
-          {
-            "k": "R",
-            "pts": 2,
-            "why": "buy-side recom 1.6 (level, not a change \u00b7 morning export)"
-          },
-          {
-            "k": "join",
-            "pts": -1,
-            "why": "join red"
-          },
-          {
-            "k": "peer",
-            "pts": 1,
-            "why": "peer green"
-          },
-          {
-            "k": "yday",
-            "pts": 1,
-            "why": "yday +6.7%"
-          }
-        ],
-        "weather": [
-          "gen bad",
-          "sector bad"
-        ],
-        "h1": null,
-        "h3": null,
-        "h5": null
-      },
-      {
-        "ticker": "TBBB",
-        "date": "2026-10-29",
-        "idio": 0,
-        "n_pos": 3,
-        "n_neg": 4,
-        "e_pol": "good",
-        "e_label": "beat \u00b7 EPS surprise +2.7% (morning export)",
-        "r_pol": "good",
-        "news_tone": "good",
-        "headline": "BBB Foods Inc (TBBB) (Q2 2026) Earnings Call Highlights: Revenue Surges 39% and Same-Store ...",
-        "yday_ret": -1.76,
-        "rsi": 75.05,
-        "macd_hist": -0.1599,
+        "idio": 2,
+        "n_pos": 5,
+        "n_neg": 3,
+        "e_pol": "missing",
+        "e_label": "",
+        "r_pol": "missing",
+        "news_tone": "missing",
+        "headline": "OmniAb to Host Investor & Analyst Day on October 6, 2026",
+        "yday_ret": null,
+        "rsi": null,
+        "macd_hist": null,
         "flow_in": false,
         "white": false,
         "alarm": true,
-        "on_list": true,
+        "on_list": false,
         "sources": [
-          "yday_gainer"
+          "captured"
         ],
-        "open": 56.38,
-        "close": 56.61000061035156,
-        "day_pct": 0.41,
+        "open": null,
+        "close": 5.230000019073486,
+        "day_pct": -2.24,
         "boxes": {
-          "join": "bad",
+          "join": "good",
           "sector": "neutral",
           "gen": "bad",
-          "news": "good",
-          "digest": "bad",
-          "judge": "missing",
+          "news": "missing",
+          "digest": "good",
+          "judge": "good",
           "ab": "good",
-          "peer": "good",
+          "peer": "bad",
           "heat": "good",
           "vol": "bad",
           "catal": "missing",
           "buy": "neutral",
-          "yday": "missing"
+          "yday": "good"
         },
-        "domains": null,
+        "domains": {
+          "market": "bad",
+          "parent": "neutral",
+          "child": "neutral",
+          "company": "neutral",
+          "setup": "good",
+          "flow": "neutral"
+        },
         "parts": [
           {
             "k": "cameras",
-            "pts": -2,
-            "why": "+3 \u22124 cameras"
-          },
-          {
-            "k": "E",
             "pts": 4,
-            "why": "beat \u00b7 EPS surprise +2.7% (morning export)"
-          },
-          {
-            "k": "R",
-            "pts": 2,
-            "why": "buy-side recom 1.4 (level, not a change \u00b7 morning export)"
-          },
-          {
-            "k": "news",
-            "pts": 2,
-            "why": "news camera green"
+            "why": "+5 \u22123 cameras"
           },
           {
             "k": "join",
-            "pts": -1,
-            "why": "join red"
+            "pts": 1,
+            "why": "join green"
           },
           {
             "k": "peer",
-            "pts": 1,
-            "why": "peer green"
+            "pts": -1,
+            "why": "peer red"
           },
           {
             "k": "yday",
-            "pts": -1,
-            "why": "yday -1.8%"
+            "pts": 1,
+            "why": "last bar green"
           },
           {
             "k": "alarm",
             "pts": -3,
             "why": "alarm overnight"
-          },
-          {
-            "k": "rsi",
-            "pts": -2,
-            "why": "RSI 75 OB \u2014 pause longs"
           }
         ],
         "weather": [
@@ -7030,175 +7420,81 @@
         "h5": null
       },
       {
-        "ticker": "AMX",
+        "ticker": "VIR",
         "date": "2026-10-29",
-        "idio": -1,
+        "idio": 2,
         "n_pos": 5,
-        "n_neg": 4,
-        "e_pol": "bad",
-        "e_label": "miss \u00b7 EPS surprise -5.0% (morning export)",
-        "r_pol": "good",
-        "news_tone": "good",
-        "headline": "Norwegian Cruise downgrade, Duolingo upgraded: Wall Street's top analyst calls",
-        "yday_ret": -0.54,
-        "rsi": 49.53,
-        "macd_hist": 0.2309,
+        "n_neg": 3,
+        "e_pol": "missing",
+        "e_label": "",
+        "r_pol": "missing",
+        "news_tone": "missing",
+        "headline": "Vir Biotechnology to Participate in the Morgan Stanley 24th Annual Global Healthcare Conference",
+        "yday_ret": null,
+        "rsi": null,
+        "macd_hist": null,
         "flow_in": false,
         "white": false,
         "alarm": true,
-        "on_list": true,
+        "on_list": false,
         "sources": [
-          "yday_gainer"
+          "captured"
         ],
-        "open": 24.01,
-        "close": 24.1299991607666,
-        "day_pct": 0.5,
+        "open": null,
+        "close": 11.75,
+        "day_pct": 0.0,
         "boxes": {
-          "join": "bad",
-          "sector": "bad",
+          "join": "good",
+          "sector": "neutral",
           "gen": "bad",
-          "news": "good",
+          "news": "missing",
           "digest": "good",
-          "judge": "missing",
+          "judge": "good",
           "ab": "good",
-          "peer": "good",
+          "peer": "bad",
           "heat": "good",
           "vol": "bad",
           "catal": "missing",
           "buy": "neutral",
-          "yday": "missing"
+          "yday": "good"
         },
-        "domains": null,
+        "domains": {
+          "market": "bad",
+          "parent": "neutral",
+          "child": "neutral",
+          "company": "neutral",
+          "setup": "good",
+          "flow": "neutral"
+        },
         "parts": [
           {
             "k": "cameras",
-            "pts": 2,
-            "why": "+5 \u22124 cameras"
-          },
-          {
-            "k": "E",
-            "pts": -4,
-            "why": "miss \u00b7 EPS surprise -5.0% (morning export)"
-          },
-          {
-            "k": "R",
-            "pts": 2,
-            "why": "buy-side recom 1.7 (level, not a change \u00b7 morning export)"
-          },
-          {
-            "k": "news",
-            "pts": 2,
-            "why": "news camera green"
+            "pts": 4,
+            "why": "+5 \u22123 cameras"
           },
           {
             "k": "join",
-            "pts": -1,
-            "why": "join red"
+            "pts": 1,
+            "why": "join green"
           },
           {
             "k": "peer",
-            "pts": 1,
-            "why": "peer green"
+            "pts": -1,
+            "why": "peer red"
           },
           {
             "k": "yday",
-            "pts": -1,
-            "why": "yday -0.5%"
+            "pts": 1,
+            "why": "last bar green"
           },
           {
             "k": "alarm",
             "pts": -3,
             "why": "alarm overnight"
-          },
-          {
-            "k": "macd",
-            "pts": 1,
-            "why": "MACD hist + / X+"
           }
         ],
         "weather": [
-          "gen bad",
-          "sector bad"
-        ],
-        "h1": null,
-        "h3": null,
-        "h5": null
-      },
-      {
-        "ticker": "CRS",
-        "date": "2026-10-29",
-        "idio": -1,
-        "n_pos": 3,
-        "n_neg": 6,
-        "e_pol": "good",
-        "e_label": "beat \u00b7 EPS surprise +4.7% (morning export)",
-        "r_pol": "good",
-        "news_tone": "neutral",
-        "headline": "Should You Buy Howmet Stock After Its Turbine Blade Scare?",
-        "yday_ret": -2.94,
-        "rsi": 39.31,
-        "macd_hist": -7.7447,
-        "flow_in": false,
-        "white": false,
-        "alarm": false,
-        "on_list": true,
-        "sources": [
-          "yday_gainer"
-        ],
-        "open": 279.0,
-        "close": 298.7200012207031,
-        "day_pct": 7.07,
-        "boxes": {
-          "join": "bad",
-          "sector": "bad",
-          "gen": "bad",
-          "news": "neutral",
-          "digest": "good",
-          "judge": "bad",
-          "ab": "good",
-          "peer": "good",
-          "heat": "bad",
-          "vol": "bad",
-          "catal": "missing",
-          "buy": "neutral",
-          "yday": "missing"
-        },
-        "domains": null,
-        "parts": [
-          {
-            "k": "cameras",
-            "pts": -6,
-            "why": "+3 \u22126 cameras"
-          },
-          {
-            "k": "E",
-            "pts": 4,
-            "why": "beat \u00b7 EPS surprise +4.7% (morning export)"
-          },
-          {
-            "k": "R",
-            "pts": 2,
-            "why": "buy-side recom 1.6 (level, not a change \u00b7 morning export)"
-          },
-          {
-            "k": "join",
-            "pts": -1,
-            "why": "join red"
-          },
-          {
-            "k": "peer",
-            "pts": 1,
-            "why": "peer green"
-          },
-          {
-            "k": "yday",
-            "pts": -1,
-            "why": "yday -2.9%"
-          }
-        ],
-        "weather": [
-          "gen bad",
-          "sector bad"
+          "gen bad"
         ],
         "h1": null,
         "h3": null,
@@ -9108,7 +9404,7 @@
           "h5_date": "2026-08-21"
         }
       ],
-      "n_long_ok": 114,
+      "n_long_ok": 115,
       "n_short_ok": 1
     },
     {
@@ -10826,7 +11122,7 @@
           "h5_date": "2026-08-24"
         }
       ],
-      "n_long_ok": 84,
+      "n_long_ok": 83,
       "n_short_ok": 9
     },
     {
@@ -15780,7 +16076,7 @@
           "h5_date": "2026-08-27"
         }
       ],
-      "n_long_ok": 117,
+      "n_long_ok": 118,
       "n_short_ok": 5
     },
     {
@@ -25751,6 +26047,99 @@
           "h5_date": "2026-09-04"
         },
         {
+          "ticker": "CURI",
+          "date": "2026-08-28",
+          "idio": -13,
+          "n_pos": 1,
+          "n_neg": 5,
+          "e_pol": "missing",
+          "e_label": "",
+          "r_pol": "missing",
+          "news_tone": "missing",
+          "headline": "CuriosityStream Appoints Veteran Media Finance Executive Sean Piche as Chief Financial Officer",
+          "yday_ret": null,
+          "rsi": null,
+          "macd_hist": null,
+          "flow_in": false,
+          "white": false,
+          "alarm": true,
+          "on_list": false,
+          "sources": [
+            "losers"
+          ],
+          "open": null,
+          "close": 2.609999895095825,
+          "day_pct": 0.77,
+          "boxes": {
+            "join": "bad",
+            "sector": "bad",
+            "gen": "neutral",
+            "news": "missing",
+            "digest": "neutral",
+            "judge": "missing",
+            "ab": "good",
+            "peer": "bad",
+            "heat": "bad",
+            "vol": "bad",
+            "catal": "missing",
+            "buy": "neutral",
+            "yday": "good"
+          },
+          "domains": {
+            "market": "neutral",
+            "parent": "bad",
+            "child": "bad",
+            "company": "neutral",
+            "setup": "good",
+            "flow": "bad"
+          },
+          "parts": [
+            {
+              "k": "cameras",
+              "pts": -8,
+              "why": "+1 \u22125 cameras"
+            },
+            {
+              "k": "join",
+              "pts": -1,
+              "why": "join red"
+            },
+            {
+              "k": "peer",
+              "pts": -1,
+              "why": "peer red"
+            },
+            {
+              "k": "alarm",
+              "pts": -3,
+              "why": "alarm overnight"
+            }
+          ],
+          "weather": [
+            "sector bad"
+          ],
+          "h1": -3.47,
+          "h3": -12.74,
+          "h5": -4.63,
+          "side": "short",
+          "why": [
+            "Weather S=0.75. Not a sit morning \u2014 still ranked.",
+            "-8 +1 \u22125 cameras",
+            "-3 alarm overnight",
+            "-1 join red",
+            "-1 peer red",
+            "Weather cameras (not in idio score): sector bad",
+            "News: missing \u2014 CuriosityStream Appoints Veteran Media Finance Executive Sean Piche as Chief Financial Officer",
+            "Side lean: short \u00b7 idio -13"
+          ],
+          "h1_px": 2.68,
+          "h1_date": "2026-08-31",
+          "h3_px": 2.92,
+          "h3_date": "2026-09-02",
+          "h5_px": 2.71,
+          "h5_date": "2026-09-04"
+        },
+        {
           "ticker": "AIIO",
           "date": "2026-08-28",
           "idio": -12,
@@ -26039,118 +26428,6 @@
           "h3_px": 29.43,
           "h3_date": "2026-09-02",
           "h5_px": 28.85,
-          "h5_date": "2026-09-04"
-        },
-        {
-          "ticker": "SRPT",
-          "date": "2026-08-28",
-          "idio": -11,
-          "n_pos": 1,
-          "n_neg": 5,
-          "e_pol": "bad",
-          "e_label": "miss \u00b7 EPS surprise -123.0% (morning export)",
-          "r_pol": "neutral",
-          "news_tone": "neutral",
-          "headline": "SRPT On Track For Best Week In 5 Months Ahead Of Late-2026 Clinical Data  Retail Eyes Monumental Comeback",
-          "yday_ret": 10.95,
-          "rsi": 61.91,
-          "macd_hist": 0.2943,
-          "flow_in": false,
-          "white": false,
-          "alarm": false,
-          "on_list": true,
-          "sources": [
-            "ohlc_hot"
-          ],
-          "open": 21.49,
-          "close": 20.860000610351562,
-          "day_pct": -2.93,
-          "boxes": {
-            "join": "bad",
-            "sector": "bad",
-            "gen": "neutral",
-            "news": "neutral",
-            "digest": "good",
-            "judge": "missing",
-            "ab": "bad",
-            "peer": "bad",
-            "heat": "bad",
-            "vol": "neutral",
-            "catal": "missing",
-            "buy": "neutral",
-            "yday": "missing"
-          },
-          "domains": {
-            "market": "missing",
-            "parent": "missing",
-            "child": "missing",
-            "company": "missing",
-            "setup": "missing",
-            "flow": "missing"
-          },
-          "parts": [
-            {
-              "k": "cameras",
-              "pts": -8,
-              "why": "+1 \u22125 cameras"
-            },
-            {
-              "k": "E",
-              "pts": -4,
-              "why": "miss \u00b7 EPS surprise -123.0% (morning export)"
-            },
-            {
-              "k": "join",
-              "pts": -1,
-              "why": "join red"
-            },
-            {
-              "k": "peer",
-              "pts": -1,
-              "why": "peer red"
-            },
-            {
-              "k": "yday",
-              "pts": 1,
-              "why": "yday +10.9%"
-            },
-            {
-              "k": "macd",
-              "pts": 1,
-              "why": "MACD hist + / X+"
-            },
-            {
-              "k": "burst",
-              "pts": 1,
-              "why": "parabolic prior tape"
-            }
-          ],
-          "weather": [
-            "sector bad"
-          ],
-          "h1": 2.14,
-          "h3": -8.0,
-          "h5": -4.7,
-          "side": "short",
-          "why": [
-            "Weather S=0.75. Not a sit morning \u2014 still ranked.",
-            "-8 +1 \u22125 cameras",
-            "-4 miss \u00b7 EPS surprise -123.0% (morning export)",
-            "-1 join red",
-            "-1 peer red",
-            "+1 yday +10.9%",
-            "+1 MACD hist + / X+",
-            "Weather cameras (not in idio score): sector bad",
-            "News: neutral \u2014 SRPT On Track For Best Week In 5 Months Ahead Of Late-2026 Clinical Data  Retail Eyes Monumental Comeback",
-            "miss \u00b7 EPS surprise -123.0% (morning export)",
-            "Tape RSI 62 \u00b7 MACD hist 0.2943",
-            "Side lean: short \u00b7 idio -11"
-          ],
-          "h1_px": 21.03,
-          "h1_date": "2026-08-31",
-          "h3_px": 23.21,
-          "h3_date": "2026-09-02",
-          "h5_px": 22.5,
           "h5_date": "2026-09-04"
         }
       ],
@@ -29112,6 +29389,106 @@
           "h5_date": "2026-09-09"
         },
         {
+          "ticker": "CURI",
+          "date": "2026-09-01",
+          "idio": -14,
+          "n_pos": 1,
+          "n_neg": 6,
+          "e_pol": "missing",
+          "e_label": "",
+          "r_pol": "missing",
+          "news_tone": "missing",
+          "headline": "CuriosityStream Appoints Veteran Media Finance Executive Sean Piche as Chief Financial Officer",
+          "yday_ret": null,
+          "rsi": null,
+          "macd_hist": null,
+          "flow_in": false,
+          "white": false,
+          "alarm": true,
+          "on_list": false,
+          "sources": [
+            "captured"
+          ],
+          "open": null,
+          "close": 2.7899999618530273,
+          "day_pct": 2.95,
+          "boxes": {
+            "join": "bad",
+            "sector": "bad",
+            "gen": "bad",
+            "news": "missing",
+            "digest": "neutral",
+            "judge": "missing",
+            "ab": "good",
+            "peer": "bad",
+            "heat": "bad",
+            "vol": "bad",
+            "catal": "missing",
+            "buy": "neutral",
+            "yday": "good"
+          },
+          "domains": {
+            "market": "bad",
+            "parent": "bad",
+            "child": "neutral",
+            "company": "neutral",
+            "setup": "neutral",
+            "flow": "neutral"
+          },
+          "parts": [
+            {
+              "k": "cameras",
+              "pts": -10,
+              "why": "+1 \u22126 cameras"
+            },
+            {
+              "k": "join",
+              "pts": -1,
+              "why": "join red"
+            },
+            {
+              "k": "peer",
+              "pts": -1,
+              "why": "peer red"
+            },
+            {
+              "k": "yday",
+              "pts": 1,
+              "why": "last bar green"
+            },
+            {
+              "k": "alarm",
+              "pts": -3,
+              "why": "alarm overnight"
+            }
+          ],
+          "weather": [
+            "gen bad",
+            "sector bad"
+          ],
+          "h1": -7.75,
+          "h3": -0.0,
+          "h5": 4.06,
+          "side": "short",
+          "why": [
+            "Weather S=-6.3 \u2264 -3 \u2014 live sleeve SITS. This name is ranked anyway so idiosyncratic green is not invisible.",
+            "-10 +1 \u22126 cameras",
+            "-3 alarm overnight",
+            "-1 join red",
+            "-1 peer red",
+            "+1 last bar green",
+            "Weather cameras (not in idio score): gen bad, sector bad",
+            "News: missing \u2014 CuriosityStream Appoints Veteran Media Finance Executive Sean Piche as Chief Financial Officer",
+            "Side lean: short \u00b7 idio -14"
+          ],
+          "h1_px": 2.92,
+          "h1_date": "2026-09-02",
+          "h3_px": 2.71,
+          "h3_date": "2026-09-04",
+          "h5_px": 2.6,
+          "h5_date": "2026-09-09"
+        },
+        {
           "ticker": "HYMC",
           "date": "2026-09-01",
           "idio": -14,
@@ -29486,94 +29863,6 @@
           "h3_px": 43.31,
           "h3_date": "2026-09-04",
           "h5_px": 44.52,
-          "h5_date": "2026-09-09"
-        },
-        {
-          "ticker": "DD",
-          "date": "2026-09-01",
-          "idio": -12,
-          "n_pos": 1,
-          "n_neg": 6,
-          "e_pol": "missing",
-          "e_label": "",
-          "r_pol": "missing",
-          "news_tone": "missing",
-          "headline": "DuPont de Nemours Inc's Dividend Analysis",
-          "yday_ret": null,
-          "rsi": null,
-          "macd_hist": null,
-          "flow_in": false,
-          "white": false,
-          "alarm": false,
-          "on_list": false,
-          "sources": [
-            "losers"
-          ],
-          "open": null,
-          "close": 132.11000061035156,
-          "day_pct": -1.06,
-          "boxes": {
-            "join": "bad",
-            "sector": "bad",
-            "gen": "bad",
-            "news": "missing",
-            "digest": "good",
-            "judge": "missing",
-            "ab": "neutral",
-            "peer": "bad",
-            "heat": "bad",
-            "vol": "bad",
-            "catal": "missing",
-            "buy": "neutral",
-            "yday": "bad"
-          },
-          "domains": {
-            "market": "missing",
-            "parent": "missing",
-            "child": "missing",
-            "company": "missing",
-            "setup": "missing",
-            "flow": "missing"
-          },
-          "parts": [
-            {
-              "k": "cameras",
-              "pts": -10,
-              "why": "+1 \u22126 cameras"
-            },
-            {
-              "k": "join",
-              "pts": -1,
-              "why": "join red"
-            },
-            {
-              "k": "peer",
-              "pts": -1,
-              "why": "peer red"
-            }
-          ],
-          "weather": [
-            "gen bad",
-            "sector bad"
-          ],
-          "h1": 0.44,
-          "h3": 1.45,
-          "h5": 4.19,
-          "side": "short",
-          "why": [
-            "Weather S=-6.3 \u2264 -3 \u2014 live sleeve SITS. This name is ranked anyway so idiosyncratic green is not invisible.",
-            "-10 +1 \u22126 cameras",
-            "-1 join red",
-            "-1 peer red",
-            "Weather cameras (not in idio score): gen bad, sector bad",
-            "News: missing \u2014 DuPont de Nemours Inc's Dividend Analysis",
-            "Side lean: short \u00b7 idio -12"
-          ],
-          "h1_px": 132.93,
-          "h1_date": "2026-09-02",
-          "h3_px": 131.59,
-          "h3_date": "2026-09-04",
-          "h5_px": 127.92,
           "h5_date": "2026-09-09"
         }
       ],
@@ -56716,7 +57005,7 @@
           "h5_date": "2026-10-01"
         }
       ],
-      "n_long_ok": 109,
+      "n_long_ok": 108,
       "n_short_ok": 38
     },
     {
@@ -65228,7 +65517,7 @@
           "h5_date": "2026-10-08"
         }
       ],
-      "n_long_ok": 118,
+      "n_long_ok": 117,
       "n_short_ok": 34
     },
     {
@@ -70342,7 +70631,7 @@
           "h5_date": "2026-10-13"
         }
       ],
-      "n_long_ok": 98,
+      "n_long_ok": 99,
       "n_short_ok": 47
     },
     {
@@ -90639,7 +90928,7 @@
           "h3_px": 3.96,
           "h3_date": "2026-10-28",
           "h5_px": null,
-          "h5_date": null
+          "h5_date": "2026-10-30"
         },
         {
           "ticker": "CON",
@@ -90751,7 +91040,7 @@
           "h3_px": 40.59,
           "h3_date": "2026-10-28",
           "h5_px": null,
-          "h5_date": null
+          "h5_date": "2026-10-30"
         },
         {
           "ticker": "PACS",
@@ -90863,7 +91152,7 @@
           "h3_px": 49.06,
           "h3_date": "2026-10-28",
           "h5_px": null,
-          "h5_date": null
+          "h5_date": "2026-10-30"
         },
         {
           "ticker": "CNMD",
@@ -90970,7 +91259,7 @@
           "h3_px": 45.76,
           "h3_date": "2026-10-28",
           "h5_px": null,
-          "h5_date": null
+          "h5_date": "2026-10-30"
         },
         {
           "ticker": "PCRX",
@@ -91077,7 +91366,7 @@
           "h3_px": 36.39,
           "h3_date": "2026-10-28",
           "h5_px": null,
-          "h5_date": null
+          "h5_date": "2026-10-30"
         },
         {
           "ticker": "PRGO",
@@ -91184,7 +91473,7 @@
           "h3_px": 15.92,
           "h3_date": "2026-10-28",
           "h5_px": null,
-          "h5_date": null
+          "h5_date": "2026-10-30"
         },
         {
           "ticker": "KURA",
@@ -91292,7 +91581,7 @@
           "h3_px": 10.72,
           "h3_date": "2026-10-28",
           "h5_px": null,
-          "h5_date": null
+          "h5_date": "2026-10-30"
         },
         {
           "ticker": "AXP",
@@ -91405,7 +91694,7 @@
           "h3_px": 317.94,
           "h3_date": "2026-10-28",
           "h5_px": null,
-          "h5_date": null
+          "h5_date": "2026-10-30"
         }
       ],
       "shorts": [
@@ -91495,7 +91784,7 @@
           "h3_px": 168.01,
           "h3_date": "2026-10-28",
           "h5_px": null,
-          "h5_date": null
+          "h5_date": "2026-10-30"
         },
         {
           "ticker": "AIP",
@@ -91610,7 +91899,7 @@
           "h3_px": 21.43,
           "h3_date": "2026-10-28",
           "h5_px": null,
-          "h5_date": null
+          "h5_date": "2026-10-30"
         },
         {
           "ticker": "ATOM",
@@ -91698,7 +91987,7 @@
           "h3_px": 3.01,
           "h3_date": "2026-10-28",
           "h5_px": null,
-          "h5_date": null
+          "h5_date": "2026-10-30"
         },
         {
           "ticker": "JLHL",
@@ -91800,7 +92089,7 @@
           "h3_px": 5.65,
           "h3_date": "2026-10-28",
           "h5_px": null,
-          "h5_date": null
+          "h5_date": "2026-10-30"
         },
         {
           "ticker": "RTO",
@@ -91923,7 +92212,7 @@
           "h3_px": 22.79,
           "h3_date": "2026-10-28",
           "h5_px": null,
-          "h5_date": null
+          "h5_date": "2026-10-30"
         },
         {
           "ticker": "FMC",
@@ -92017,7 +92306,7 @@
           "h3_px": 4.47,
           "h3_date": "2026-10-28",
           "h5_px": null,
-          "h5_date": null
+          "h5_date": "2026-10-30"
         },
         {
           "ticker": "BBD",
@@ -92135,7 +92424,7 @@
           "h3_px": 2.73,
           "h3_date": "2026-10-28",
           "h5_px": null,
-          "h5_date": null
+          "h5_date": "2026-10-30"
         },
         {
           "ticker": "MEI",
@@ -92223,7 +92512,7 @@
           "h3_px": 14.9,
           "h3_date": "2026-10-28",
           "h5_px": null,
-          "h5_date": null
+          "h5_date": "2026-10-30"
         }
       ],
       "n_long_ok": 60,
@@ -92329,7 +92618,7 @@
             "sector bad"
           ],
           "h1": -0.72,
-          "h3": null,
+          "h3": 4.64,
           "h5": null,
           "side": "long",
           "why": [
@@ -92348,7 +92637,7 @@
           ],
           "h1_px": 16.46,
           "h1_date": "2026-10-27",
-          "h3_px": null,
+          "h3_px": 17.35,
           "h3_date": "2026-10-29",
           "h5_px": null,
           "h5_date": null
@@ -93975,7 +94264,7 @@
           "h1_px": 23.24,
           "h1_date": "2026-10-28",
           "h3_px": null,
-          "h3_date": null,
+          "h3_date": "2026-10-30",
           "h5_px": null,
           "h5_date": null
         },
@@ -94087,7 +94376,7 @@
           "h1_px": 49.06,
           "h1_date": "2026-10-28",
           "h3_px": null,
-          "h3_date": null,
+          "h3_date": "2026-10-30",
           "h5_px": null,
           "h5_date": null
         },
@@ -94199,7 +94488,7 @@
           "h1_px": 21.14,
           "h1_date": "2026-10-28",
           "h3_px": null,
-          "h3_date": null,
+          "h3_date": "2026-10-30",
           "h5_px": null,
           "h5_date": null
         },
@@ -94300,7 +94589,7 @@
           "h1_px": 1288.3,
           "h1_date": "2026-10-28",
           "h3_px": null,
-          "h3_date": null,
+          "h3_date": "2026-10-30",
           "h5_px": null,
           "h5_date": null
         },
@@ -94405,7 +94694,7 @@
           "h1_px": 317.82,
           "h1_date": "2026-10-28",
           "h3_px": null,
-          "h3_date": null,
+          "h3_date": "2026-10-30",
           "h5_px": null,
           "h5_date": null
         },
@@ -94519,7 +94808,7 @@
           "h1_px": 3.96,
           "h1_date": "2026-10-28",
           "h3_px": null,
-          "h3_date": null,
+          "h3_date": "2026-10-30",
           "h5_px": null,
           "h5_date": null
         },
@@ -94632,7 +94921,7 @@
           "h1_px": 136.0,
           "h1_date": "2026-10-28",
           "h3_px": null,
-          "h3_date": null,
+          "h3_date": "2026-10-30",
           "h5_px": null,
           "h5_date": null
         },
@@ -94749,7 +95038,7 @@
           "h1_px": 204.77,
           "h1_date": "2026-10-28",
           "h3_px": null,
-          "h3_date": null,
+          "h3_date": "2026-10-30",
           "h5_px": null,
           "h5_date": null
         }
@@ -94838,7 +95127,7 @@
           "h1_px": 4.47,
           "h1_date": "2026-10-28",
           "h3_px": null,
-          "h3_date": null,
+          "h3_date": "2026-10-30",
           "h5_px": null,
           "h5_date": null
         },
@@ -94925,7 +95214,7 @@
           "h1_px": 36.23,
           "h1_date": "2026-10-28",
           "h3_px": null,
-          "h3_date": null,
+          "h3_date": "2026-10-30",
           "h5_px": null,
           "h5_date": null
         },
@@ -95012,7 +95301,7 @@
           "h1_px": 1.05,
           "h1_date": "2026-10-28",
           "h3_px": null,
-          "h3_date": null,
+          "h3_date": "2026-10-30",
           "h5_px": null,
           "h5_date": null
         },
@@ -95106,7 +95395,7 @@
           "h1_px": 2.49,
           "h1_date": "2026-10-28",
           "h3_px": null,
-          "h3_date": null,
+          "h3_date": "2026-10-30",
           "h5_px": null,
           "h5_date": null
         },
@@ -95207,7 +95496,7 @@
           "h1_px": 5.96,
           "h1_date": "2026-10-28",
           "h3_px": null,
-          "h3_date": null,
+          "h3_date": "2026-10-30",
           "h5_px": null,
           "h5_date": null
         },
@@ -95300,7 +95589,7 @@
           "h1_px": 168.01,
           "h1_date": "2026-10-28",
           "h3_px": null,
-          "h3_date": null,
+          "h3_date": "2026-10-30",
           "h5_px": null,
           "h5_date": null
         },
@@ -95401,7 +95690,7 @@
           "h1_px": 1.16,
           "h1_date": "2026-10-28",
           "h3_px": null,
-          "h3_date": null,
+          "h3_date": "2026-10-30",
           "h5_px": null,
           "h5_date": null
         },
@@ -95489,7 +95778,7 @@
           "h1_px": 3.01,
           "h1_date": "2026-10-28",
           "h3_px": null,
-          "h3_date": null,
+          "h3_date": "2026-10-30",
           "h5_px": null,
           "h5_date": null
         }
@@ -95501,8 +95790,115 @@
       "date": "2026-10-28",
       "s": 6.621,
       "hard_red": false,
-      "n_cards": 160,
+      "n_cards": 176,
       "longs": [
+        {
+          "ticker": "LLY",
+          "date": "2026-10-28",
+          "idio": 19,
+          "n_pos": 7,
+          "n_neg": 1,
+          "e_pol": "missing",
+          "e_label": "",
+          "r_pol": "missing",
+          "news_tone": "good",
+          "headline": "Lilly's Foundayo (orforglipron) 17.2 mg showed greater weight loss and A1C reduction than oral semaglutide 25 mg among adults with type 2 diabetes in a new indi",
+          "yday_ret": null,
+          "rsi": null,
+          "macd_hist": null,
+          "flow_in": false,
+          "white": true,
+          "alarm": false,
+          "on_list": false,
+          "sources": [
+            "captured",
+            "flatten",
+            "movers"
+          ],
+          "open": null,
+          "close": 1288.300048828125,
+          "day_pct": 1.56,
+          "boxes": {
+            "join": "good",
+            "sector": "neutral",
+            "gen": "good",
+            "news": "good",
+            "digest": "good",
+            "judge": "missing",
+            "ab": "good",
+            "peer": "good",
+            "heat": "good",
+            "vol": "bad",
+            "catal": "missing",
+            "buy": "neutral",
+            "yday": "good"
+          },
+          "domains": {
+            "market": "good",
+            "parent": "neutral",
+            "child": "neutral",
+            "company": "neutral",
+            "setup": "good",
+            "flow": "good"
+          },
+          "parts": [
+            {
+              "k": "cameras",
+              "pts": 12,
+              "why": "+7 \u22121 cameras"
+            },
+            {
+              "k": "news",
+              "pts": 2,
+              "why": "news camera green"
+            },
+            {
+              "k": "join",
+              "pts": 1,
+              "why": "join green"
+            },
+            {
+              "k": "peer",
+              "pts": 1,
+              "why": "peer green"
+            },
+            {
+              "k": "yday",
+              "pts": 1,
+              "why": "last bar green"
+            },
+            {
+              "k": "white",
+              "pts": 2,
+              "why": "zero red cameras"
+            }
+          ],
+          "weather": [
+            "gen good"
+          ],
+          "h1": 8.29,
+          "h3": null,
+          "h5": null,
+          "side": "long",
+          "why": [
+            "Weather S=6.621. Not a sit morning \u2014 still ranked.",
+            "+12 +7 \u22121 cameras",
+            "+2 news camera green",
+            "+2 zero red cameras",
+            "+1 join green",
+            "+1 peer green",
+            "+1 last bar green",
+            "Weather cameras (not in idio score): gen good",
+            "News: good \u2014 Lilly's Foundayo (orforglipron) 17.2 mg showed greater weight loss and A1C reduction than oral semaglutide 25 mg among a",
+            "Side lean: long \u00b7 idio +19"
+          ],
+          "h1_px": 1373.7,
+          "h1_date": "2026-10-29",
+          "h3_px": null,
+          "h3_date": null,
+          "h5_px": null,
+          "h5_date": null
+        },
         {
           "ticker": "CDNA",
           "date": "2026-10-28",
@@ -95523,7 +95919,8 @@
           "on_list": false,
           "sources": [
             "captured",
-            "flatten"
+            "flatten",
+            "movers"
           ],
           "open": null,
           "close": 72.12999725341797,
@@ -95642,7 +96039,7 @@
             "vol": "bad",
             "catal": "missing",
             "buy": "neutral",
-            "yday": "missing"
+            "yday": "good"
           },
           "domains": {
             "market": "missing",
@@ -95750,7 +96147,7 @@
             "vol": "bad",
             "catal": "missing",
             "buy": "neutral",
-            "yday": "missing"
+            "yday": "good"
           },
           "domains": {
             "market": "missing",
@@ -95932,100 +96329,6 @@
           "h5_date": null
         },
         {
-          "ticker": "BLFS",
-          "date": "2026-10-28",
-          "idio": 16,
-          "n_pos": 7,
-          "n_neg": 1,
-          "e_pol": "missing",
-          "e_label": "",
-          "r_pol": "missing",
-          "news_tone": "missing",
-          "headline": "Are BLFS, FTHM, AUUD, VRME Obtaining Fair Deals for their Shareholders?",
-          "yday_ret": null,
-          "rsi": null,
-          "macd_hist": null,
-          "flow_in": false,
-          "white": true,
-          "alarm": false,
-          "on_list": false,
-          "sources": [
-            "captured",
-            "flatten"
-          ],
-          "open": null,
-          "close": null,
-          "day_pct": null,
-          "boxes": {
-            "join": "good",
-            "sector": "neutral",
-            "gen": "good",
-            "news": "missing",
-            "digest": "good",
-            "judge": "missing",
-            "ab": "good",
-            "peer": "good",
-            "heat": "good",
-            "vol": "bad",
-            "catal": "missing",
-            "buy": "good",
-            "yday": "neutral"
-          },
-          "domains": {
-            "market": "good",
-            "parent": "neutral",
-            "child": "neutral",
-            "company": "neutral",
-            "setup": "good",
-            "flow": "good"
-          },
-          "parts": [
-            {
-              "k": "cameras",
-              "pts": 12,
-              "why": "+7 \u22121 cameras"
-            },
-            {
-              "k": "join",
-              "pts": 1,
-              "why": "join green"
-            },
-            {
-              "k": "peer",
-              "pts": 1,
-              "why": "peer green"
-            },
-            {
-              "k": "white",
-              "pts": 2,
-              "why": "zero red cameras"
-            }
-          ],
-          "weather": [
-            "gen good"
-          ],
-          "h1": null,
-          "h3": null,
-          "h5": null,
-          "side": "long",
-          "why": [
-            "Weather S=6.621. Not a sit morning \u2014 still ranked.",
-            "+12 +7 \u22121 cameras",
-            "+2 zero red cameras",
-            "+1 join green",
-            "+1 peer green",
-            "Weather cameras (not in idio score): gen good",
-            "News: missing \u2014 Are BLFS, FTHM, AUUD, VRME Obtaining Fair Deals for their Shareholders?",
-            "Side lean: long \u00b7 idio +16"
-          ],
-          "h1_px": null,
-          "h1_date": null,
-          "h3_px": null,
-          "h3_date": null,
-          "h5_px": null,
-          "h5_date": null
-        },
-        {
           "ticker": "VEEV",
           "date": "2026-10-28",
           "idio": 16,
@@ -96045,7 +96348,8 @@
           "on_list": false,
           "sources": [
             "captured",
-            "flatten"
+            "flatten",
+            "movers"
           ],
           "open": null,
           "close": 317.82000732421875,
@@ -96120,7 +96424,7 @@
           "h5_date": null
         },
         {
-          "ticker": "AMRX",
+          "ticker": "ADMA",
           "date": "2026-10-28",
           "idio": 15,
           "n_pos": 6,
@@ -96129,106 +96433,7 @@
           "e_label": "",
           "r_pol": "missing",
           "news_tone": "missing",
-          "headline": "Ipsen Shares Fall After Early Launch of U.S. Generic Rival",
-          "yday_ret": null,
-          "rsi": null,
-          "macd_hist": null,
-          "flow_in": false,
-          "white": true,
-          "alarm": false,
-          "on_list": false,
-          "sources": [
-            "captured"
-          ],
-          "open": null,
-          "close": 21.139999389648438,
-          "day_pct": -0.87,
-          "boxes": {
-            "join": "good",
-            "sector": "neutral",
-            "gen": "good",
-            "news": "missing",
-            "digest": "good",
-            "judge": "missing",
-            "ab": "good",
-            "peer": "good",
-            "heat": "good",
-            "vol": "bad",
-            "catal": "missing",
-            "buy": "neutral",
-            "yday": "good"
-          },
-          "domains": {
-            "market": "good",
-            "parent": "neutral",
-            "child": "neutral",
-            "company": "neutral",
-            "setup": "good",
-            "flow": "good"
-          },
-          "parts": [
-            {
-              "k": "cameras",
-              "pts": 10,
-              "why": "+6 \u22121 cameras"
-            },
-            {
-              "k": "join",
-              "pts": 1,
-              "why": "join green"
-            },
-            {
-              "k": "peer",
-              "pts": 1,
-              "why": "peer green"
-            },
-            {
-              "k": "yday",
-              "pts": 1,
-              "why": "last bar green"
-            },
-            {
-              "k": "white",
-              "pts": 2,
-              "why": "zero red cameras"
-            }
-          ],
-          "weather": [
-            "gen good"
-          ],
-          "h1": 0.12,
-          "h3": null,
-          "h5": null,
-          "side": "long",
-          "why": [
-            "Weather S=6.621. Not a sit morning \u2014 still ranked.",
-            "+10 +6 \u22121 cameras",
-            "+2 zero red cameras",
-            "+1 join green",
-            "+1 peer green",
-            "+1 last bar green",
-            "Weather cameras (not in idio score): gen good",
-            "News: missing \u2014 Ipsen Shares Fall After Early Launch of U.S. Generic Rival",
-            "Side lean: long \u00b7 idio +15"
-          ],
-          "h1_px": 21.35,
-          "h1_date": "2026-10-29",
-          "h3_px": null,
-          "h3_date": null,
-          "h5_px": null,
-          "h5_date": null
-        },
-        {
-          "ticker": "ARQT",
-          "date": "2026-10-28",
-          "idio": 15,
-          "n_pos": 6,
-          "n_neg": 1,
-          "e_pol": "missing",
-          "e_label": "",
-          "r_pol": "missing",
-          "news_tone": "missing",
-          "headline": "Heres What Arcutis CEO Said at the Morgan Stanley Healthcare Conference That Made the Stock Jump 11%",
+          "headline": "ADMA Biologics, Inc. Sued for Securities Law Violations - Contact the DJS Law Group to Discuss Your Rights - ADMA",
           "yday_ret": null,
           "rsi": null,
           "macd_hist": null,
@@ -96238,11 +96443,12 @@
           "on_list": false,
           "sources": [
             "captured",
-            "flatten"
+            "flatten",
+            "movers"
           ],
           "open": null,
-          "close": 31.450000762939453,
-          "day_pct": -0.16,
+          "close": 11.279999732971191,
+          "day_pct": 2.17,
           "boxes": {
             "join": "good",
             "sector": "neutral",
@@ -96296,7 +96502,7 @@
           "weather": [
             "gen good"
           ],
-          "h1": 1.49,
+          "h1": 6.43,
           "h3": null,
           "h5": null,
           "side": "long",
@@ -96308,10 +96514,111 @@
             "+1 peer green",
             "+1 last bar green",
             "Weather cameras (not in idio score): gen good",
-            "News: missing \u2014 Heres What Arcutis CEO Said at the Morgan Stanley Healthcare Conference That Made the Stock Jump 11%",
+            "News: missing \u2014 ADMA Biologics, Inc. Sued for Securities Law Violations - Contact the DJS Law Group to Discuss Your Rights - ADMA",
             "Side lean: long \u00b7 idio +15"
           ],
-          "h1_px": 31.97,
+          "h1_px": 11.75,
+          "h1_date": "2026-10-29",
+          "h3_px": null,
+          "h3_date": null,
+          "h5_px": null,
+          "h5_date": null
+        },
+        {
+          "ticker": "AGEN",
+          "date": "2026-10-28",
+          "idio": 15,
+          "n_pos": 6,
+          "n_neg": 1,
+          "e_pol": "missing",
+          "e_label": "",
+          "r_pol": "missing",
+          "news_tone": "missing",
+          "headline": "Agenus to Present Three-Year Overall Survival Data for BOT+BAL in Recurrent Ovarian Cancer at IGCS 2026",
+          "yday_ret": null,
+          "rsi": null,
+          "macd_hist": null,
+          "flow_in": false,
+          "white": true,
+          "alarm": false,
+          "on_list": false,
+          "sources": [
+            "captured",
+            "flatten",
+            "movers"
+          ],
+          "open": null,
+          "close": 7.130000114440918,
+          "day_pct": 9.52,
+          "boxes": {
+            "join": "good",
+            "sector": "neutral",
+            "gen": "good",
+            "news": "missing",
+            "digest": "good",
+            "judge": "missing",
+            "ab": "good",
+            "peer": "good",
+            "heat": "good",
+            "vol": "bad",
+            "catal": "missing",
+            "buy": "neutral",
+            "yday": "bad"
+          },
+          "domains": {
+            "market": "good",
+            "parent": "neutral",
+            "child": "neutral",
+            "company": "neutral",
+            "setup": "good",
+            "flow": "neutral"
+          },
+          "parts": [
+            {
+              "k": "cameras",
+              "pts": 10,
+              "why": "+6 \u22121 cameras"
+            },
+            {
+              "k": "join",
+              "pts": 1,
+              "why": "join green"
+            },
+            {
+              "k": "peer",
+              "pts": 1,
+              "why": "peer green"
+            },
+            {
+              "k": "yday",
+              "pts": 1,
+              "why": "last bar green"
+            },
+            {
+              "k": "white",
+              "pts": 2,
+              "why": "zero red cameras"
+            }
+          ],
+          "weather": [
+            "gen good"
+          ],
+          "h1": 8.91,
+          "h3": null,
+          "h5": null,
+          "side": "long",
+          "why": [
+            "Weather S=6.621. Not a sit morning \u2014 still ranked.",
+            "+10 +6 \u22121 cameras",
+            "+2 zero red cameras",
+            "+1 join green",
+            "+1 peer green",
+            "+1 last bar green",
+            "Weather cameras (not in idio score): gen good",
+            "News: missing \u2014 Agenus to Present Three-Year Overall Survival Data for BOT+BAL in Recurrent Ovarian Cancer at IGCS 2026",
+            "Side lean: long \u00b7 idio +15"
+          ],
+          "h1_px": 7.09,
           "h1_date": "2026-10-29",
           "h3_px": null,
           "h3_date": null,
@@ -96433,6 +96740,378 @@
           "h5_date": null
         },
         {
+          "ticker": "FMC",
+          "date": "2026-10-28",
+          "idio": -11,
+          "n_pos": 1,
+          "n_neg": 6,
+          "e_pol": "missing",
+          "e_label": "",
+          "r_pol": "missing",
+          "news_tone": "missing",
+          "headline": "FMC Corporation Submits Regulatory Dossier for Rimisoxafen, the Industry's First Dual Mode of Action Herbicide, in Brazil",
+          "yday_ret": null,
+          "rsi": null,
+          "macd_hist": null,
+          "flow_in": false,
+          "white": false,
+          "alarm": false,
+          "on_list": false,
+          "sources": [
+            "captured"
+          ],
+          "open": null,
+          "close": 4.46999979019165,
+          "day_pct": -4.89,
+          "boxes": {
+            "join": "bad",
+            "sector": "neutral",
+            "gen": "good",
+            "news": "missing",
+            "digest": "bad",
+            "judge": "missing",
+            "ab": "bad",
+            "peer": "bad",
+            "heat": "bad",
+            "vol": "bad",
+            "catal": "missing",
+            "buy": "neutral",
+            "yday": "good"
+          },
+          "domains": {
+            "market": "missing",
+            "parent": "missing",
+            "child": "missing",
+            "company": "missing",
+            "setup": "missing",
+            "flow": "missing"
+          },
+          "parts": [
+            {
+              "k": "cameras",
+              "pts": -10,
+              "why": "+1 \u22126 cameras"
+            },
+            {
+              "k": "join",
+              "pts": -1,
+              "why": "join red"
+            },
+            {
+              "k": "peer",
+              "pts": -1,
+              "why": "peer red"
+            },
+            {
+              "k": "yday",
+              "pts": 1,
+              "why": "last bar green"
+            }
+          ],
+          "weather": [
+            "gen good"
+          ],
+          "h1": -1.06,
+          "h3": null,
+          "h5": null,
+          "side": "short",
+          "why": [
+            "Weather S=6.621. Not a sit morning \u2014 still ranked.",
+            "-10 +1 \u22126 cameras",
+            "-1 join red",
+            "-1 peer red",
+            "+1 last bar green",
+            "Weather cameras (not in idio score): gen good",
+            "News: missing \u2014 FMC Corporation Submits Regulatory Dossier for Rimisoxafen, the Industry's First Dual Mode of Action Herbicide, in Brazi",
+            "Side lean: short \u00b7 idio -11"
+          ],
+          "h1_px": 4.75,
+          "h1_date": "2026-10-29",
+          "h3_px": null,
+          "h3_date": null,
+          "h5_px": null,
+          "h5_date": null
+        },
+        {
+          "ticker": "GFI",
+          "date": "2026-10-28",
+          "idio": -11,
+          "n_pos": 1,
+          "n_neg": 6,
+          "e_pol": "missing",
+          "e_label": "",
+          "r_pol": "missing",
+          "news_tone": "missing",
+          "headline": "Northern Star turns down Gold Fields $27.2bn takeover proposal",
+          "yday_ret": null,
+          "rsi": null,
+          "macd_hist": null,
+          "flow_in": false,
+          "white": false,
+          "alarm": false,
+          "on_list": false,
+          "sources": [
+            "captured"
+          ],
+          "open": null,
+          "close": 36.22999954223633,
+          "day_pct": 2.52,
+          "boxes": {
+            "join": "bad",
+            "sector": "neutral",
+            "gen": "good",
+            "news": "missing",
+            "digest": "bad",
+            "judge": "missing",
+            "ab": "bad",
+            "peer": "bad",
+            "heat": "bad",
+            "vol": "bad",
+            "catal": "missing",
+            "buy": "neutral",
+            "yday": "good"
+          },
+          "domains": {
+            "market": "missing",
+            "parent": "missing",
+            "child": "missing",
+            "company": "missing",
+            "setup": "missing",
+            "flow": "missing"
+          },
+          "parts": [
+            {
+              "k": "cameras",
+              "pts": -10,
+              "why": "+1 \u22126 cameras"
+            },
+            {
+              "k": "join",
+              "pts": -1,
+              "why": "join red"
+            },
+            {
+              "k": "peer",
+              "pts": -1,
+              "why": "peer red"
+            },
+            {
+              "k": "yday",
+              "pts": 1,
+              "why": "last bar green"
+            }
+          ],
+          "weather": [
+            "gen good"
+          ],
+          "h1": 0.62,
+          "h3": null,
+          "h5": null,
+          "side": "short",
+          "why": [
+            "Weather S=6.621. Not a sit morning \u2014 still ranked.",
+            "-10 +1 \u22126 cameras",
+            "-1 join red",
+            "-1 peer red",
+            "+1 last bar green",
+            "Weather cameras (not in idio score): gen good",
+            "News: missing \u2014 Northern Star turns down Gold Fields $27.2bn takeover proposal",
+            "Side lean: short \u00b7 idio -11"
+          ],
+          "h1_px": 35.12,
+          "h1_date": "2026-10-29",
+          "h3_px": null,
+          "h3_date": null,
+          "h5_px": null,
+          "h5_date": null
+        },
+        {
+          "ticker": "LWLG",
+          "date": "2026-10-28",
+          "idio": -11,
+          "n_pos": 1,
+          "n_neg": 6,
+          "e_pol": "missing",
+          "e_label": "",
+          "r_pol": "missing",
+          "news_tone": "missing",
+          "headline": "Lightwave Logic, Inc. to Attend the 2026 European Conference on Optical Communication (ECOC) & Global Photonics Economic Forum (GPEF)",
+          "yday_ret": null,
+          "rsi": null,
+          "macd_hist": null,
+          "flow_in": false,
+          "white": false,
+          "alarm": false,
+          "on_list": false,
+          "sources": [
+            "captured"
+          ],
+          "open": null,
+          "close": 4.710000038146973,
+          "day_pct": 0.21,
+          "boxes": {
+            "join": "bad",
+            "sector": "neutral",
+            "gen": "good",
+            "news": "missing",
+            "digest": "bad",
+            "judge": "missing",
+            "ab": "bad",
+            "peer": "bad",
+            "heat": "bad",
+            "vol": "bad",
+            "catal": "missing",
+            "buy": "neutral",
+            "yday": "neutral"
+          },
+          "domains": {
+            "market": "missing",
+            "parent": "missing",
+            "child": "missing",
+            "company": "missing",
+            "setup": "missing",
+            "flow": "missing"
+          },
+          "parts": [
+            {
+              "k": "cameras",
+              "pts": -10,
+              "why": "+1 \u22126 cameras"
+            },
+            {
+              "k": "join",
+              "pts": -1,
+              "why": "join red"
+            },
+            {
+              "k": "peer",
+              "pts": -1,
+              "why": "peer red"
+            },
+            {
+              "k": "yday",
+              "pts": 1,
+              "why": "last bar green"
+            }
+          ],
+          "weather": [
+            "gen good"
+          ],
+          "h1": 2.55,
+          "h3": null,
+          "h5": null,
+          "side": "short",
+          "why": [
+            "Weather S=6.621. Not a sit morning \u2014 still ranked.",
+            "-10 +1 \u22126 cameras",
+            "-1 join red",
+            "-1 peer red",
+            "+1 last bar green",
+            "Weather cameras (not in idio score): gen good",
+            "News: missing \u2014 Lightwave Logic, Inc. to Attend the 2026 European Conference on Optical Communication (ECOC) & Global Photonics Economic",
+            "Side lean: short \u00b7 idio -11"
+          ],
+          "h1_px": 4.58,
+          "h1_date": "2026-10-29",
+          "h3_px": null,
+          "h3_date": null,
+          "h5_px": null,
+          "h5_date": null
+        },
+        {
+          "ticker": "TRX",
+          "date": "2026-10-28",
+          "idio": -11,
+          "n_pos": 1,
+          "n_neg": 6,
+          "e_pol": "missing",
+          "e_label": "",
+          "r_pol": "missing",
+          "news_tone": "missing",
+          "headline": "Gold Miners Chase Recovery Gains as Prices Hold Above $4,300",
+          "yday_ret": null,
+          "rsi": null,
+          "macd_hist": null,
+          "flow_in": false,
+          "white": false,
+          "alarm": false,
+          "on_list": false,
+          "sources": [
+            "captured"
+          ],
+          "open": null,
+          "close": 1.0499999523162842,
+          "day_pct": 0.96,
+          "boxes": {
+            "join": "bad",
+            "sector": "neutral",
+            "gen": "good",
+            "news": "missing",
+            "digest": "bad",
+            "judge": "missing",
+            "ab": "bad",
+            "peer": "bad",
+            "heat": "bad",
+            "vol": "bad",
+            "catal": "missing",
+            "buy": "neutral",
+            "yday": "good"
+          },
+          "domains": {
+            "market": "missing",
+            "parent": "missing",
+            "child": "missing",
+            "company": "missing",
+            "setup": "missing",
+            "flow": "missing"
+          },
+          "parts": [
+            {
+              "k": "cameras",
+              "pts": -10,
+              "why": "+1 \u22126 cameras"
+            },
+            {
+              "k": "join",
+              "pts": -1,
+              "why": "join red"
+            },
+            {
+              "k": "peer",
+              "pts": -1,
+              "why": "peer red"
+            },
+            {
+              "k": "yday",
+              "pts": 1,
+              "why": "last bar green"
+            }
+          ],
+          "weather": [
+            "gen good"
+          ],
+          "h1": 1.92,
+          "h3": null,
+          "h5": null,
+          "side": "short",
+          "why": [
+            "Weather S=6.621. Not a sit morning \u2014 still ranked.",
+            "-10 +1 \u22126 cameras",
+            "-1 join red",
+            "-1 peer red",
+            "+1 last bar green",
+            "Weather cameras (not in idio score): gen good",
+            "News: missing \u2014 Gold Miners Chase Recovery Gains as Prices Hold Above $4,300",
+            "Side lean: short \u00b7 idio -11"
+          ],
+          "h1_px": 1.02,
+          "h1_date": "2026-10-29",
+          "h3_px": null,
+          "h3_date": null,
+          "h5_px": null,
+          "h5_date": null
+        },
+        {
           "ticker": "ANGI",
           "date": "2026-10-28",
           "idio": -9,
@@ -96469,7 +97148,7 @@
             "vol": "bad",
             "catal": "missing",
             "buy": "neutral",
-            "yday": "missing"
+            "yday": "bad"
           },
           "domains": {
             "market": "missing",
@@ -96570,7 +97249,7 @@
             "vol": "bad",
             "catal": "missing",
             "buy": "neutral",
-            "yday": "missing"
+            "yday": "bad"
           },
           "domains": {
             "market": "missing",
@@ -96652,158 +97331,43 @@
           "h5_date": null
         },
         {
-          "ticker": "AIP",
+          "ticker": "ATOM",
           "date": "2026-10-28",
-          "idio": -8,
-          "n_pos": 3,
-          "n_neg": 5,
-          "e_pol": "bad",
-          "e_label": "miss \u00b7 EPS surprise -140.4% (morning export)",
-          "r_pol": "good",
-          "news_tone": "neutral",
-          "headline": "How Much Could You Make If Synopsys Stock Rebounds From Here?",
-          "yday_ret": 7.77,
-          "rsi": 59.58,
-          "macd_hist": -0.0159,
+          "idio": -9,
+          "n_pos": 2,
+          "n_neg": 6,
+          "e_pol": "missing",
+          "e_label": "",
+          "r_pol": "missing",
+          "news_tone": "missing",
+          "headline": "Atomera Incorporated Q2 2026 Earnings Call Summary",
+          "yday_ret": null,
+          "rsi": null,
+          "macd_hist": null,
           "flow_in": false,
           "white": false,
-          "alarm": true,
-          "on_list": true,
+          "alarm": false,
+          "on_list": false,
           "sources": [
-            "probable",
-            "yday_gainer",
-            "yday_mover"
+            "captured"
           ],
-          "open": 21.27,
-          "close": 21.43000030517578,
-          "day_pct": 0.75,
+          "open": null,
+          "close": 3.009999990463257,
+          "day_pct": 3.08,
           "boxes": {
             "join": "bad",
             "sector": "bad",
             "gen": "good",
-            "news": "neutral",
-            "digest": "good",
-            "judge": "missing",
-            "ab": "bad",
-            "peer": "good",
-            "heat": "bad",
-            "vol": "bad",
-            "catal": "missing",
-            "buy": "neutral",
-            "yday": "missing"
-          },
-          "domains": {
-            "market": "missing",
-            "parent": "missing",
-            "child": "missing",
-            "company": "missing",
-            "setup": "missing",
-            "flow": "missing"
-          },
-          "parts": [
-            {
-              "k": "cameras",
-              "pts": -4,
-              "why": "+3 \u22125 cameras"
-            },
-            {
-              "k": "E",
-              "pts": -4,
-              "why": "miss \u00b7 EPS surprise -140.4% (morning export)"
-            },
-            {
-              "k": "R",
-              "pts": 2,
-              "why": "buy-side recom 1.0 (level, not a change \u00b7 morning export)"
-            },
-            {
-              "k": "join",
-              "pts": -1,
-              "why": "join red"
-            },
-            {
-              "k": "peer",
-              "pts": 1,
-              "why": "peer green"
-            },
-            {
-              "k": "yday",
-              "pts": 1,
-              "why": "yday +7.8%"
-            },
-            {
-              "k": "alarm",
-              "pts": -3,
-              "why": "alarm overnight"
-            }
-          ],
-          "weather": [
-            "gen good",
-            "sector bad"
-          ],
-          "h1": 3.2,
-          "h3": null,
-          "h5": null,
-          "side": "short",
-          "why": [
-            "Weather S=6.621. Not a sit morning \u2014 still ranked.",
-            "-4 +3 \u22125 cameras",
-            "-4 miss \u00b7 EPS surprise -140.4% (morning export)",
-            "-3 alarm overnight",
-            "+2 buy-side recom 1.0 (level, not a change \u00b7 morning export)",
-            "-1 join red",
-            "+1 peer green",
-            "Weather cameras (not in idio score): gen good, sector bad",
-            "News: neutral \u2014 How Much Could You Make If Synopsys Stock Rebounds From Here?",
-            "miss \u00b7 EPS surprise -140.4% (morning export)",
-            "Tape RSI 60 \u00b7 MACD hist -0.0159",
-            "Side lean: short \u00b7 idio -8"
-          ],
-          "h1_px": 20.59,
-          "h1_date": "2026-10-29",
-          "h3_px": null,
-          "h3_date": null,
-          "h5_px": null,
-          "h5_date": null
-        },
-        {
-          "ticker": "VRDN",
-          "date": "2026-10-28",
-          "idio": -7,
-          "n_pos": 3,
-          "n_neg": 4,
-          "e_pol": "bad",
-          "e_label": "miss \u00b7 EPS surprise -1.5% (morning export)",
-          "r_pol": "good",
-          "news_tone": "neutral",
-          "headline": "Viridian Therapeutics to Participate in the Wells Fargo 21st Annual Healthcare Conference",
-          "yday_ret": 3.21,
-          "rsi": 37.51,
-          "macd_hist": 0.6382,
-          "flow_in": false,
-          "white": false,
-          "alarm": true,
-          "on_list": true,
-          "sources": [
-            "ohlc_hot"
-          ],
-          "open": 23.72,
-          "close": 24.270000457763672,
-          "day_pct": 2.32,
-          "boxes": {
-            "join": "bad",
-            "sector": "neutral",
-            "gen": "good",
-            "news": "neutral",
+            "news": "missing",
             "digest": "good",
             "judge": "missing",
             "ab": "bad",
             "peer": "bad",
-            "heat": "good",
+            "heat": "bad",
             "vol": "bad",
             "catal": "missing",
             "buy": "neutral",
-            "yday": "missing"
+            "yday": "good"
           },
           "domains": {
             "market": "missing",
@@ -96816,18 +97380,8 @@
           "parts": [
             {
               "k": "cameras",
-              "pts": -2,
-              "why": "+3 \u22124 cameras"
-            },
-            {
-              "k": "E",
-              "pts": -4,
-              "why": "miss \u00b7 EPS surprise -1.5% (morning export)"
-            },
-            {
-              "k": "R",
-              "pts": 2,
-              "why": "buy-side recom 1.0 (level, not a change \u00b7 morning export)"
+              "pts": -8,
+              "why": "+2 \u22126 cameras"
             },
             {
               "k": "join",
@@ -96842,379 +97396,28 @@
             {
               "k": "yday",
               "pts": 1,
-              "why": "yday +3.2%"
-            },
-            {
-              "k": "alarm",
-              "pts": -3,
-              "why": "alarm overnight"
-            },
-            {
-              "k": "macd",
-              "pts": 1,
-              "why": "MACD hist + / X+"
+              "why": "last bar green"
             }
           ],
           "weather": [
-            "gen good"
+            "gen good",
+            "sector bad"
           ],
-          "h1": -4.55,
+          "h1": -13.36,
           "h3": null,
           "h5": null,
           "side": "short",
           "why": [
             "Weather S=6.621. Not a sit morning \u2014 still ranked.",
-            "-4 miss \u00b7 EPS surprise -1.5% (morning export)",
-            "-3 alarm overnight",
-            "-2 +3 \u22124 cameras",
-            "+2 buy-side recom 1.0 (level, not a change \u00b7 morning export)",
+            "-8 +2 \u22126 cameras",
             "-1 join red",
             "-1 peer red",
-            "Weather cameras (not in idio score): gen good",
-            "News: neutral \u2014 Viridian Therapeutics to Participate in the Wells Fargo 21st Annual Healthcare Conference",
-            "miss \u00b7 EPS surprise -1.5% (morning export)",
-            "Tape RSI 38 \u00b7 MACD hist 0.6382",
-            "Side lean: short \u00b7 idio -7"
-          ],
-          "h1_px": 24.8,
-          "h1_date": "2026-10-29",
-          "h3_px": null,
-          "h3_date": null,
-          "h5_px": null,
-          "h5_date": null
-        },
-        {
-          "ticker": "VSAT",
-          "date": "2026-10-28",
-          "idio": -7,
-          "n_pos": 2,
-          "n_neg": 5,
-          "e_pol": "bad",
-          "e_label": "miss \u00b7 EPS surprise -19.8% (morning export)",
-          "r_pol": "good",
-          "news_tone": "good",
-          "headline": "Viasat Wins First Task Order Award as part of $307 Million Ceiling U.S. Marine Corps Enterprise Services Contract for Multi-Orbit Connectivity",
-          "yday_ret": 5.89,
-          "rsi": 47.8,
-          "macd_hist": 0.6145,
-          "flow_in": false,
-          "white": false,
-          "alarm": true,
-          "on_list": true,
-          "sources": [
-            "ohlc_hot"
-          ],
-          "open": 72.13,
-          "close": 78.26000213623047,
-          "day_pct": 8.5,
-          "boxes": {
-            "join": "bad",
-            "sector": "bad",
-            "gen": "good",
-            "news": "good",
-            "digest": "good",
-            "judge": "missing",
-            "ab": "bad",
-            "peer": "neutral",
-            "heat": "bad",
-            "vol": "bad",
-            "catal": "missing",
-            "buy": "neutral",
-            "yday": "missing"
-          },
-          "domains": {
-            "market": "missing",
-            "parent": "missing",
-            "child": "missing",
-            "company": "missing",
-            "setup": "missing",
-            "flow": "missing"
-          },
-          "parts": [
-            {
-              "k": "cameras",
-              "pts": -6,
-              "why": "+2 \u22125 cameras"
-            },
-            {
-              "k": "E",
-              "pts": -4,
-              "why": "miss \u00b7 EPS surprise -19.8% (morning export)"
-            },
-            {
-              "k": "R",
-              "pts": 2,
-              "why": "buy-side recom 1.4 (level, not a change \u00b7 morning export)"
-            },
-            {
-              "k": "news",
-              "pts": 2,
-              "why": "news camera green"
-            },
-            {
-              "k": "join",
-              "pts": -1,
-              "why": "join red"
-            },
-            {
-              "k": "yday",
-              "pts": 1,
-              "why": "yday +5.9%"
-            },
-            {
-              "k": "alarm",
-              "pts": -3,
-              "why": "alarm overnight"
-            },
-            {
-              "k": "macd",
-              "pts": 1,
-              "why": "MACD hist + / X+"
-            },
-            {
-              "k": "burst",
-              "pts": 1,
-              "why": "parabolic prior tape"
-            }
-          ],
-          "weather": [
-            "gen good",
-            "sector bad"
-          ],
-          "h1": -8.12,
-          "h3": null,
-          "h5": null,
-          "side": "short",
-          "why": [
-            "Weather S=6.621. Not a sit morning \u2014 still ranked.",
-            "-6 +2 \u22125 cameras",
-            "-4 miss \u00b7 EPS surprise -19.8% (morning export)",
-            "-3 alarm overnight",
-            "+2 buy-side recom 1.4 (level, not a change \u00b7 morning export)",
-            "+2 news camera green",
-            "-1 join red",
+            "+1 last bar green",
             "Weather cameras (not in idio score): gen good, sector bad",
-            "News: good \u2014 Viasat Wins First Task Order Award as part of $307 Million Ceiling U.S. Marine Corps Enterprise Services Contract for Mu",
-            "miss \u00b7 EPS surprise -19.8% (morning export)",
-            "Tape RSI 48 \u00b7 MACD hist 0.6145",
-            "Side lean: short \u00b7 idio -7"
+            "News: missing \u2014 Atomera Incorporated Q2 2026 Earnings Call Summary",
+            "Side lean: short \u00b7 idio -9"
           ],
-          "h1_px": 77.99,
-          "h1_date": "2026-10-29",
-          "h3_px": null,
-          "h3_date": null,
-          "h5_px": null,
-          "h5_date": null
-        },
-        {
-          "ticker": "ENHA",
-          "date": "2026-10-28",
-          "idio": -6,
-          "n_pos": 2,
-          "n_neg": 3,
-          "e_pol": "bad",
-          "e_label": "miss \u00b7 EPS surprise -194.4% (morning export)",
-          "r_pol": "good",
-          "news_tone": "neutral",
-          "headline": "Enhanced Group Announces Proposed 1-for-10 Reverse Stock Split",
-          "yday_ret": -0.92,
-          "rsi": 35.79,
-          "macd_hist": -0.0062,
-          "flow_in": false,
-          "white": false,
-          "alarm": false,
-          "on_list": true,
-          "sources": [
-            "yday_mover"
-          ],
-          "open": 1.09,
-          "close": 1.159999966621399,
-          "day_pct": 6.42,
-          "boxes": {
-            "join": "bad",
-            "sector": "neutral",
-            "gen": "good",
-            "news": "neutral",
-            "digest": "bad",
-            "judge": "missing",
-            "ab": "bad",
-            "peer": "missing",
-            "heat": "good",
-            "vol": "neutral",
-            "catal": "missing",
-            "buy": "neutral",
-            "yday": "missing"
-          },
-          "domains": {
-            "market": "missing",
-            "parent": "missing",
-            "child": "missing",
-            "company": "missing",
-            "setup": "missing",
-            "flow": "missing"
-          },
-          "parts": [
-            {
-              "k": "cameras",
-              "pts": -2,
-              "why": "+2 \u22123 cameras"
-            },
-            {
-              "k": "E",
-              "pts": -4,
-              "why": "miss \u00b7 EPS surprise -194.4% (morning export)"
-            },
-            {
-              "k": "R",
-              "pts": 2,
-              "why": "buy-side recom 1.0 (level, not a change \u00b7 morning export)"
-            },
-            {
-              "k": "join",
-              "pts": -1,
-              "why": "join red"
-            },
-            {
-              "k": "yday",
-              "pts": -1,
-              "why": "yday -0.9%"
-            }
-          ],
-          "weather": [
-            "gen good"
-          ],
-          "h1": -1084.4,
-          "h3": null,
-          "h5": null,
-          "side": "short",
-          "why": [
-            "Weather S=6.621. Not a sit morning \u2014 still ranked.",
-            "-4 miss \u00b7 EPS surprise -194.4% (morning export)",
-            "-2 +2 \u22123 cameras",
-            "+2 buy-side recom 1.0 (level, not a change \u00b7 morning export)",
-            "-1 join red",
-            "-1 yday -0.9%",
-            "Weather cameras (not in idio score): gen good",
-            "News: neutral \u2014 Enhanced Group Announces Proposed 1-for-10 Reverse Stock Split",
-            "miss \u00b7 EPS surprise -194.4% (morning export)",
-            "Tape RSI 36 \u00b7 MACD hist -0.0062",
-            "Side lean: short \u00b7 idio -6"
-          ],
-          "h1_px": 12.91,
-          "h1_date": "2026-10-29",
-          "h3_px": null,
-          "h3_date": null,
-          "h5_px": null,
-          "h5_date": null
-        },
-        {
-          "ticker": "MX",
-          "date": "2026-10-28",
-          "idio": -6,
-          "n_pos": 3,
-          "n_neg": 5,
-          "e_pol": "neutral",
-          "e_label": "E 91 sess ago \u00b7 polarity unknown (export stamped the date, not beat/miss)",
-          "r_pol": "good",
-          "news_tone": "neutral",
-          "headline": "Magnachip Shares Rise 14% After Securing $5 Million Investment From Navitas",
-          "yday_ret": 6.33,
-          "rsi": 74.19,
-          "macd_hist": -0.0476,
-          "flow_in": false,
-          "white": false,
-          "alarm": true,
-          "on_list": true,
-          "sources": [
-            "yday_gainer",
-            "yday_mover"
-          ],
-          "open": 2.58,
-          "close": 2.630000114440918,
-          "day_pct": 1.94,
-          "boxes": {
-            "join": "bad",
-            "sector": "bad",
-            "gen": "good",
-            "news": "neutral",
-            "digest": "good",
-            "judge": "missing",
-            "ab": "bad",
-            "peer": "good",
-            "heat": "bad",
-            "vol": "bad",
-            "catal": "missing",
-            "buy": "neutral",
-            "yday": "missing"
-          },
-          "domains": {
-            "market": "missing",
-            "parent": "missing",
-            "child": "missing",
-            "company": "missing",
-            "setup": "missing",
-            "flow": "missing"
-          },
-          "parts": [
-            {
-              "k": "cameras",
-              "pts": -4,
-              "why": "+3 \u22125 cameras"
-            },
-            {
-              "k": "R",
-              "pts": 2,
-              "why": "buy-side recom 1.0 (level, not a change \u00b7 morning export)"
-            },
-            {
-              "k": "join",
-              "pts": -1,
-              "why": "join red"
-            },
-            {
-              "k": "peer",
-              "pts": 1,
-              "why": "peer green"
-            },
-            {
-              "k": "yday",
-              "pts": 1,
-              "why": "yday +6.3%"
-            },
-            {
-              "k": "alarm",
-              "pts": -3,
-              "why": "alarm overnight"
-            },
-            {
-              "k": "rsi",
-              "pts": -2,
-              "why": "RSI 74 OB \u2014 pause longs"
-            }
-          ],
-          "weather": [
-            "gen good",
-            "sector bad"
-          ],
-          "h1": -1.94,
-          "h3": null,
-          "h5": null,
-          "side": "short",
-          "why": [
-            "Weather S=6.621. Not a sit morning \u2014 still ranked.",
-            "-4 +3 \u22125 cameras",
-            "-3 alarm overnight",
-            "+2 buy-side recom 1.0 (level, not a change \u00b7 morning export)",
-            "-2 RSI 74 OB \u2014 pause longs",
-            "-1 join red",
-            "+1 peer green",
-            "Weather cameras (not in idio score): gen good, sector bad",
-            "News: neutral \u2014 Magnachip Shares Rise 14% After Securing $5 Million Investment From Navitas",
-            "E 91 sess ago \u00b7 polarity unknown (export stamped the date, not beat/miss)",
-            "Tape RSI 74 OB \u00b7 MACD hist -0.0476",
-            "Side lean: short \u00b7 idio -6"
-          ],
-          "h1_px": 2.63,
+          "h1_px": 3.31,
           "h1_date": "2026-10-29",
           "h3_px": null,
           "h3_date": null,
@@ -97222,14 +97425,14 @@
           "h5_date": null
         }
       ],
-      "n_long_ok": 41,
-      "n_short_ok": 13
+      "n_long_ok": 81,
+      "n_short_ok": 31
     },
     {
       "date": "2026-10-29",
       "s": -6.946,
       "hard_red": true,
-      "n_cards": 63,
+      "n_cards": 146,
       "longs": [
         {
           "ticker": "GEHC",
@@ -97270,7 +97473,14 @@
             "buy": "neutral",
             "yday": "missing"
           },
-          "domains": null,
+          "domains": {
+            "market": "missing",
+            "parent": "missing",
+            "child": "missing",
+            "company": "missing",
+            "setup": "missing",
+            "flow": "missing"
+          },
           "parts": [
             {
               "k": "cameras",
@@ -97330,7 +97540,7 @@
             "Side lean: long \u00b7 idio +18"
           ],
           "h1_px": null,
-          "h1_date": null,
+          "h1_date": "2026-10-30",
           "h3_px": null,
           "h3_date": null,
           "h5_px": null,
@@ -97376,7 +97586,14 @@
             "buy": "neutral",
             "yday": "missing"
           },
-          "domains": null,
+          "domains": {
+            "market": "missing",
+            "parent": "missing",
+            "child": "missing",
+            "company": "missing",
+            "setup": "missing",
+            "flow": "missing"
+          },
           "parts": [
             {
               "k": "cameras",
@@ -97436,7 +97653,7 @@
             "Side lean: long \u00b7 idio +18"
           ],
           "h1_px": null,
-          "h1_date": null,
+          "h1_date": "2026-10-30",
           "h3_px": null,
           "h3_date": null,
           "h5_px": null,
@@ -97481,7 +97698,14 @@
             "buy": "neutral",
             "yday": "missing"
           },
-          "domains": null,
+          "domains": {
+            "market": "missing",
+            "parent": "missing",
+            "child": "missing",
+            "company": "missing",
+            "setup": "missing",
+            "flow": "missing"
+          },
           "parts": [
             {
               "k": "cameras",
@@ -97536,7 +97760,7 @@
             "Side lean: long \u00b7 idio +15"
           ],
           "h1_px": null,
-          "h1_date": null,
+          "h1_date": "2026-10-30",
           "h3_px": null,
           "h3_date": null,
           "h5_px": null,
@@ -97583,7 +97807,14 @@
             "buy": "neutral",
             "yday": "missing"
           },
-          "domains": null,
+          "domains": {
+            "market": "missing",
+            "parent": "missing",
+            "child": "missing",
+            "company": "missing",
+            "setup": "missing",
+            "flow": "missing"
+          },
           "parts": [
             {
               "k": "cameras",
@@ -97643,7 +97874,7 @@
             "Side lean: long \u00b7 idio +14"
           ],
           "h1_px": null,
-          "h1_date": null,
+          "h1_date": "2026-10-30",
           "h3_px": null,
           "h3_date": null,
           "h5_px": null,
@@ -97688,7 +97919,14 @@
             "buy": "neutral",
             "yday": "missing"
           },
-          "domains": null,
+          "domains": {
+            "market": "missing",
+            "parent": "missing",
+            "child": "missing",
+            "company": "missing",
+            "setup": "missing",
+            "flow": "missing"
+          },
           "parts": [
             {
               "k": "cameras",
@@ -97753,7 +97991,7 @@
             "Side lean: long \u00b7 idio +13"
           ],
           "h1_px": null,
-          "h1_date": null,
+          "h1_date": "2026-10-30",
           "h3_px": null,
           "h3_date": null,
           "h5_px": null,
@@ -97798,7 +98036,14 @@
             "buy": "neutral",
             "yday": "missing"
           },
-          "domains": null,
+          "domains": {
+            "market": "missing",
+            "parent": "missing",
+            "child": "missing",
+            "company": "missing",
+            "setup": "missing",
+            "flow": "missing"
+          },
           "parts": [
             {
               "k": "cameras",
@@ -97858,7 +98103,7 @@
             "Side lean: long \u00b7 idio +12"
           ],
           "h1_px": null,
-          "h1_date": null,
+          "h1_date": "2026-10-30",
           "h3_px": null,
           "h3_date": null,
           "h5_px": null,
@@ -97903,7 +98148,14 @@
             "buy": "neutral",
             "yday": "missing"
           },
-          "domains": null,
+          "domains": {
+            "market": "missing",
+            "parent": "missing",
+            "child": "missing",
+            "company": "missing",
+            "setup": "missing",
+            "flow": "missing"
+          },
           "parts": [
             {
               "k": "cameras",
@@ -97963,7 +98215,7 @@
             "Side lean: long \u00b7 idio +12"
           ],
           "h1_px": null,
-          "h1_date": null,
+          "h1_date": "2026-10-30",
           "h3_px": null,
           "h3_date": null,
           "h5_px": null,
@@ -98008,7 +98260,14 @@
             "buy": "neutral",
             "yday": "missing"
           },
-          "domains": null,
+          "domains": {
+            "market": "missing",
+            "parent": "missing",
+            "child": "missing",
+            "company": "missing",
+            "setup": "missing",
+            "flow": "missing"
+          },
           "parts": [
             {
               "k": "cameras",
@@ -98073,7 +98332,7 @@
             "Side lean: long \u00b7 idio +11"
           ],
           "h1_px": null,
-          "h1_date": null,
+          "h1_date": "2026-10-30",
           "h3_px": null,
           "h3_date": null,
           "h5_px": null,
@@ -98120,7 +98379,14 @@
             "buy": "neutral",
             "yday": "missing"
           },
-          "domains": null,
+          "domains": {
+            "market": "missing",
+            "parent": "missing",
+            "child": "missing",
+            "company": "missing",
+            "setup": "missing",
+            "flow": "missing"
+          },
           "parts": [
             {
               "k": "cameras",
@@ -98176,7 +98442,7 @@
             "Side lean: short \u00b7 idio -18"
           ],
           "h1_px": null,
-          "h1_date": null,
+          "h1_date": "2026-10-30",
           "h3_px": null,
           "h3_date": null,
           "h5_px": null,
@@ -98221,7 +98487,14 @@
             "buy": "neutral",
             "yday": "missing"
           },
-          "domains": null,
+          "domains": {
+            "market": "missing",
+            "parent": "missing",
+            "child": "missing",
+            "company": "missing",
+            "setup": "missing",
+            "flow": "missing"
+          },
           "parts": [
             {
               "k": "cameras",
@@ -98292,7 +98565,7 @@
             "Side lean: short \u00b7 idio -18"
           ],
           "h1_px": null,
-          "h1_date": null,
+          "h1_date": "2026-10-30",
           "h3_px": null,
           "h3_date": null,
           "h5_px": null,
@@ -98337,7 +98610,14 @@
             "buy": "neutral",
             "yday": "missing"
           },
-          "domains": null,
+          "domains": {
+            "market": "missing",
+            "parent": "missing",
+            "child": "missing",
+            "company": "missing",
+            "setup": "missing",
+            "flow": "missing"
+          },
           "parts": [
             {
               "k": "cameras",
@@ -98398,7 +98678,7 @@
             "Side lean: short \u00b7 idio -17"
           ],
           "h1_px": null,
-          "h1_date": null,
+          "h1_date": "2026-10-30",
           "h3_px": null,
           "h3_date": null,
           "h5_px": null,
@@ -98443,7 +98723,14 @@
             "buy": "neutral",
             "yday": "missing"
           },
-          "domains": null,
+          "domains": {
+            "market": "missing",
+            "parent": "missing",
+            "child": "missing",
+            "company": "missing",
+            "setup": "missing",
+            "flow": "missing"
+          },
           "parts": [
             {
               "k": "cameras",
@@ -98513,7 +98800,7 @@
             "Side lean: short \u00b7 idio -16"
           ],
           "h1_px": null,
-          "h1_date": null,
+          "h1_date": "2026-10-30",
           "h3_px": null,
           "h3_date": null,
           "h5_px": null,
@@ -98558,7 +98845,14 @@
             "buy": "neutral",
             "yday": "missing"
           },
-          "domains": null,
+          "domains": {
+            "market": "missing",
+            "parent": "missing",
+            "child": "missing",
+            "company": "missing",
+            "setup": "missing",
+            "flow": "missing"
+          },
           "parts": [
             {
               "k": "cameras",
@@ -98613,7 +98907,101 @@
             "Side lean: short \u00b7 idio -13"
           ],
           "h1_px": null,
-          "h1_date": null,
+          "h1_date": "2026-10-30",
+          "h3_px": null,
+          "h3_date": null,
+          "h5_px": null,
+          "h5_date": null
+        },
+        {
+          "ticker": "LDI",
+          "date": "2026-10-29",
+          "idio": -13,
+          "n_pos": 2,
+          "n_neg": 6,
+          "e_pol": "missing",
+          "e_label": "",
+          "r_pol": "missing",
+          "news_tone": "missing",
+          "headline": "War Heroes on Water Presented by loanDepot Underway as 130 Combat-wounded Veterans Fish Southern California Waters",
+          "yday_ret": null,
+          "rsi": null,
+          "macd_hist": null,
+          "flow_in": false,
+          "white": false,
+          "alarm": true,
+          "on_list": false,
+          "sources": [
+            "captured"
+          ],
+          "open": null,
+          "close": 0.5983999967575073,
+          "day_pct": -5.76,
+          "boxes": {
+            "join": "bad",
+            "sector": "bad",
+            "gen": "bad",
+            "news": "missing",
+            "digest": "good",
+            "judge": "missing",
+            "ab": "bad",
+            "peer": "bad",
+            "heat": "good",
+            "vol": "bad",
+            "catal": "missing",
+            "buy": "neutral",
+            "yday": "good"
+          },
+          "domains": {
+            "market": "bad",
+            "parent": "neutral",
+            "child": "neutral",
+            "company": "neutral",
+            "setup": "bad",
+            "flow": "neutral"
+          },
+          "parts": [
+            {
+              "k": "cameras",
+              "pts": -8,
+              "why": "+2 \u22126 cameras"
+            },
+            {
+              "k": "join",
+              "pts": -1,
+              "why": "join red"
+            },
+            {
+              "k": "peer",
+              "pts": -1,
+              "why": "peer red"
+            },
+            {
+              "k": "alarm",
+              "pts": -3,
+              "why": "alarm overnight"
+            }
+          ],
+          "weather": [
+            "gen bad",
+            "sector bad"
+          ],
+          "h1": null,
+          "h3": null,
+          "h5": null,
+          "side": "short",
+          "why": [
+            "Weather S=-6.946 \u2264 -3 \u2014 live sleeve SITS. This name is ranked anyway so idiosyncratic green is not invisible.",
+            "-8 +2 \u22126 cameras",
+            "-3 alarm overnight",
+            "-1 join red",
+            "-1 peer red",
+            "Weather cameras (not in idio score): gen bad, sector bad",
+            "News: missing \u2014 War Heroes on Water Presented by loanDepot Underway as 130 Combat-wounded Veterans Fish Southern California Waters",
+            "Side lean: short \u00b7 idio -13"
+          ],
+          "h1_px": null,
+          "h1_date": "2026-10-30",
           "h3_px": null,
           "h3_date": null,
           "h5_px": null,
@@ -98658,7 +99046,14 @@
             "buy": "neutral",
             "yday": "missing"
           },
-          "domains": null,
+          "domains": {
+            "market": "missing",
+            "parent": "missing",
+            "child": "missing",
+            "company": "missing",
+            "setup": "missing",
+            "flow": "missing"
+          },
           "parts": [
             {
               "k": "cameras",
@@ -98708,178 +99103,69 @@
             "Side lean: short \u00b7 idio -11"
           ],
           "h1_px": null,
-          "h1_date": null,
+          "h1_date": "2026-10-30",
           "h3_px": null,
           "h3_date": null,
           "h5_px": null,
           "h5_date": null
         },
         {
-          "ticker": "BBAI",
+          "ticker": "SUZ",
           "date": "2026-10-29",
-          "idio": -9,
-          "n_pos": 3,
+          "idio": -10,
+          "n_pos": 2,
           "n_neg": 6,
-          "e_pol": "bad",
-          "e_label": "miss \u00b7 EPS surprise -11.1% (morning export)",
-          "r_pol": "neutral",
-          "news_tone": "neutral",
-          "headline": "REDLattice To Become Public Via $1.25B SPAC Transaction",
-          "yday_ret": 4.68,
-          "rsi": 36.61,
-          "macd_hist": 0.0314,
-          "flow_in": false,
-          "white": false,
-          "alarm": false,
-          "on_list": true,
-          "sources": [
-            "ohlc_hot"
-          ],
-          "open": 2.45,
-          "close": 2.6700000762939453,
-          "day_pct": 8.98,
-          "boxes": {
-            "join": "bad",
-            "sector": "good",
-            "gen": "bad",
-            "news": "neutral",
-            "digest": "good",
-            "judge": "bad",
-            "ab": "bad",
-            "peer": "bad",
-            "heat": "good",
-            "vol": "bad",
-            "catal": "missing",
-            "buy": "neutral",
-            "yday": "missing"
-          },
-          "domains": null,
-          "parts": [
-            {
-              "k": "cameras",
-              "pts": -6,
-              "why": "+3 \u22126 cameras"
-            },
-            {
-              "k": "E",
-              "pts": -4,
-              "why": "miss \u00b7 EPS surprise -11.1% (morning export)"
-            },
-            {
-              "k": "join",
-              "pts": -1,
-              "why": "join red"
-            },
-            {
-              "k": "peer",
-              "pts": -1,
-              "why": "peer red"
-            },
-            {
-              "k": "yday",
-              "pts": 1,
-              "why": "yday +4.7%"
-            },
-            {
-              "k": "macd",
-              "pts": 1,
-              "why": "MACD hist + / X+"
-            },
-            {
-              "k": "burst",
-              "pts": 1,
-              "why": "parabolic prior tape"
-            }
-          ],
-          "weather": [
-            "gen bad",
-            "sector good"
-          ],
-          "h1": null,
-          "h3": null,
-          "h5": null,
-          "side": "short",
-          "why": [
-            "Weather S=-6.946 \u2264 -3 \u2014 live sleeve SITS. This name is ranked anyway so idiosyncratic green is not invisible.",
-            "-6 +3 \u22126 cameras",
-            "-4 miss \u00b7 EPS surprise -11.1% (morning export)",
-            "-1 join red",
-            "-1 peer red",
-            "+1 yday +4.7%",
-            "+1 MACD hist + / X+",
-            "Weather cameras (not in idio score): gen bad, sector good",
-            "News: neutral \u2014 REDLattice To Become Public Via $1.25B SPAC Transaction",
-            "miss \u00b7 EPS surprise -11.1% (morning export)",
-            "Tape RSI 37 \u00b7 MACD hist 0.0314",
-            "Side lean: short \u00b7 idio -9"
-          ],
-          "h1_px": null,
-          "h1_date": null,
-          "h3_px": null,
-          "h3_date": null,
-          "h5_px": null,
-          "h5_date": null
-        },
-        {
-          "ticker": "HUMA",
-          "date": "2026-10-29",
-          "idio": -8,
-          "n_pos": 3,
-          "n_neg": 5,
-          "e_pol": "bad",
-          "e_label": "miss \u00b7 EPS surprise -41.1% (morning export)",
-          "r_pol": "good",
-          "news_tone": "neutral",
-          "headline": "Humacyte Expands Board Expertise with Appointment of Scott Coward and Paul Kuznik",
-          "yday_ret": 5.33,
-          "rsi": 42.28,
-          "macd_hist": 0.0113,
+          "e_pol": "missing",
+          "e_label": "",
+          "r_pol": "missing",
+          "news_tone": "missing",
+          "headline": "Kimberly-Clark Corp (KMB) (Q2 2026) Earnings Call Highlights: Navigating China Disruption and ...",
+          "yday_ret": null,
+          "rsi": null,
+          "macd_hist": null,
           "flow_in": false,
           "white": false,
           "alarm": true,
-          "on_list": true,
+          "on_list": false,
           "sources": [
-            "ohlc_hot"
+            "captured"
           ],
-          "open": 0.47,
-          "close": 0.4697999954223633,
-          "day_pct": -0.63,
+          "open": null,
+          "close": 9.229999542236328,
+          "day_pct": 1.88,
           "boxes": {
-            "join": "bad",
-            "sector": "neutral",
+            "join": "good",
+            "sector": "bad",
             "gen": "bad",
-            "news": "neutral",
-            "digest": "good",
-            "judge": "good",
-            "ab": "bad",
+            "news": "missing",
+            "digest": "bad",
+            "judge": "missing",
+            "ab": "good",
             "peer": "bad",
-            "heat": "good",
+            "heat": "bad",
             "vol": "bad",
             "catal": "missing",
             "buy": "neutral",
-            "yday": "missing"
+            "yday": "bad"
           },
-          "domains": null,
+          "domains": {
+            "market": "bad",
+            "parent": "bad",
+            "child": "neutral",
+            "company": "neutral",
+            "setup": "good",
+            "flow": "bad"
+          },
           "parts": [
             {
               "k": "cameras",
-              "pts": -4,
-              "why": "+3 \u22125 cameras"
-            },
-            {
-              "k": "E",
-              "pts": -4,
-              "why": "miss \u00b7 EPS surprise -41.1% (morning export)"
-            },
-            {
-              "k": "R",
-              "pts": 2,
-              "why": "buy-side recom 1.4 (level, not a change \u00b7 morning export)"
+              "pts": -8,
+              "why": "+2 \u22126 cameras"
             },
             {
               "k": "join",
-              "pts": -1,
-              "why": "join red"
+              "pts": 1,
+              "why": "join green"
             },
             {
               "k": "peer",
@@ -98889,26 +99175,17 @@
             {
               "k": "yday",
               "pts": 1,
-              "why": "yday +5.3%"
+              "why": "last bar green"
             },
             {
               "k": "alarm",
               "pts": -3,
               "why": "alarm overnight"
-            },
-            {
-              "k": "macd",
-              "pts": 1,
-              "why": "MACD hist + / X+"
-            },
-            {
-              "k": "burst",
-              "pts": 1,
-              "why": "parabolic prior tape"
             }
           ],
           "weather": [
-            "gen bad"
+            "gen bad",
+            "sector bad"
           ],
           "h1": null,
           "h3": null,
@@ -98916,28 +99193,25 @@
           "side": "short",
           "why": [
             "Weather S=-6.946 \u2264 -3 \u2014 live sleeve SITS. This name is ranked anyway so idiosyncratic green is not invisible.",
-            "-4 +3 \u22125 cameras",
-            "-4 miss \u00b7 EPS surprise -41.1% (morning export)",
+            "-8 +2 \u22126 cameras",
             "-3 alarm overnight",
-            "+2 buy-side recom 1.4 (level, not a change \u00b7 morning export)",
-            "-1 join red",
+            "+1 join green",
             "-1 peer red",
-            "Weather cameras (not in idio score): gen bad",
-            "News: neutral \u2014 Humacyte Expands Board Expertise with Appointment of Scott Coward and Paul Kuznik",
-            "miss \u00b7 EPS surprise -41.1% (morning export)",
-            "Tape RSI 42 \u00b7 MACD hist 0.0113",
-            "Side lean: short \u00b7 idio -8"
+            "+1 last bar green",
+            "Weather cameras (not in idio score): gen bad, sector bad",
+            "News: missing \u2014 Kimberly-Clark Corp (KMB) (Q2 2026) Earnings Call Highlights: Navigating China Disruption and ...",
+            "Side lean: short \u00b7 idio -10"
           ],
           "h1_px": null,
-          "h1_date": null,
+          "h1_date": "2026-10-30",
           "h3_px": null,
           "h3_date": null,
           "h5_px": null,
           "h5_date": null
         }
       ],
-      "n_long_ok": 25,
-      "n_short_ok": 20,
+      "n_long_ok": 24,
+      "n_short_ok": 23,
       "all_top": [
         {
           "ticker": "GEHC",
@@ -98978,7 +99252,14 @@
             "buy": "neutral",
             "yday": "missing"
           },
-          "domains": null,
+          "domains": {
+            "market": "missing",
+            "parent": "missing",
+            "child": "missing",
+            "company": "missing",
+            "setup": "missing",
+            "flow": "missing"
+          },
           "parts": [
             {
               "k": "cameras",
@@ -99063,7 +99344,14 @@
             "buy": "neutral",
             "yday": "missing"
           },
-          "domains": null,
+          "domains": {
+            "market": "missing",
+            "parent": "missing",
+            "child": "missing",
+            "company": "missing",
+            "setup": "missing",
+            "flow": "missing"
+          },
           "parts": [
             {
               "k": "cameras",
@@ -99147,7 +99435,14 @@
             "buy": "neutral",
             "yday": "missing"
           },
-          "domains": null,
+          "domains": {
+            "market": "missing",
+            "parent": "missing",
+            "child": "missing",
+            "company": "missing",
+            "setup": "missing",
+            "flow": "missing"
+          },
           "parts": [
             {
               "k": "cameras",
@@ -99228,7 +99523,14 @@
             "buy": "neutral",
             "yday": "missing"
           },
-          "domains": null,
+          "domains": {
+            "market": "missing",
+            "parent": "missing",
+            "child": "missing",
+            "company": "missing",
+            "setup": "missing",
+            "flow": "missing"
+          },
           "parts": [
             {
               "k": "cameras",
@@ -99312,7 +99614,14 @@
             "buy": "neutral",
             "yday": "missing"
           },
-          "domains": null,
+          "domains": {
+            "market": "missing",
+            "parent": "missing",
+            "child": "missing",
+            "company": "missing",
+            "setup": "missing",
+            "flow": "missing"
+          },
           "parts": [
             {
               "k": "cameras",
@@ -99411,7 +99720,14 @@
             "buy": "neutral",
             "yday": "missing"
           },
-          "domains": null,
+          "domains": {
+            "market": "missing",
+            "parent": "missing",
+            "child": "missing",
+            "company": "missing",
+            "setup": "missing",
+            "flow": "missing"
+          },
           "parts": [
             {
               "k": "cameras",
@@ -99500,7 +99816,14 @@
             "buy": "neutral",
             "yday": "missing"
           },
-          "domains": null,
+          "domains": {
+            "market": "missing",
+            "parent": "missing",
+            "child": "missing",
+            "company": "missing",
+            "setup": "missing",
+            "flow": "missing"
+          },
           "parts": [
             {
               "k": "cameras",
@@ -99584,7 +99907,14 @@
             "buy": "neutral",
             "yday": "missing"
           },
-          "domains": null,
+          "domains": {
+            "market": "missing",
+            "parent": "missing",
+            "child": "missing",
+            "company": "missing",
+            "setup": "missing",
+            "flow": "missing"
+          },
           "parts": [
             {
               "k": "cameras",
@@ -99668,7 +99998,14 @@
             "buy": "neutral",
             "yday": "missing"
           },
-          "domains": null,
+          "domains": {
+            "market": "missing",
+            "parent": "missing",
+            "child": "missing",
+            "company": "missing",
+            "setup": "missing",
+            "flow": "missing"
+          },
           "parts": [
             {
               "k": "cameras",
@@ -99752,7 +100089,14 @@
             "buy": "neutral",
             "yday": "missing"
           },
-          "domains": null,
+          "domains": {
+            "market": "missing",
+            "parent": "missing",
+            "child": "missing",
+            "company": "missing",
+            "setup": "missing",
+            "flow": "missing"
+          },
           "parts": [
             {
               "k": "cameras",
@@ -99841,7 +100185,14 @@
             "buy": "neutral",
             "yday": "missing"
           },
-          "domains": null,
+          "domains": {
+            "market": "missing",
+            "parent": "missing",
+            "child": "missing",
+            "company": "missing",
+            "setup": "missing",
+            "flow": "missing"
+          },
           "parts": [
             {
               "k": "cameras",
@@ -99921,7 +100272,14 @@
             "buy": "neutral",
             "yday": "missing"
           },
-          "domains": null,
+          "domains": {
+            "market": "missing",
+            "parent": "missing",
+            "child": "missing",
+            "company": "missing",
+            "setup": "missing",
+            "flow": "missing"
+          },
           "parts": [
             {
               "k": "cameras",
@@ -100006,7 +100364,14 @@
             "buy": "neutral",
             "yday": "missing"
           },
-          "domains": null,
+          "domains": {
+            "market": "missing",
+            "parent": "missing",
+            "child": "missing",
+            "company": "missing",
+            "setup": "missing",
+            "flow": "missing"
+          },
           "parts": [
             {
               "k": "cameras",
@@ -100052,88 +100417,6 @@
           "h5": null
         },
         {
-          "ticker": "PDFS",
-          "date": "2026-10-29",
-          "idio": 9,
-          "n_pos": 5,
-          "n_neg": 4,
-          "e_pol": "good",
-          "e_label": "beat \u00b7 EPS surprise +0.8% (morning export)",
-          "r_pol": "good",
-          "news_tone": "neutral",
-          "headline": "Introducing Exensio Aurora: PDF Solutions Unveils Highly-Scalable Architecture for Exensio Analytics",
-          "yday_ret": 2.85,
-          "rsi": 69.83,
-          "macd_hist": -0.2477,
-          "flow_in": false,
-          "white": false,
-          "alarm": false,
-          "on_list": true,
-          "sources": [
-            "probable",
-            "yday_gainer",
-            "yday_mover"
-          ],
-          "open": 44.8,
-          "close": 45.560001373291016,
-          "day_pct": 1.7,
-          "boxes": {
-            "join": "bad",
-            "sector": "good",
-            "gen": "bad",
-            "news": "neutral",
-            "digest": "good",
-            "judge": "bad",
-            "ab": "good",
-            "peer": "good",
-            "heat": "good",
-            "vol": "bad",
-            "catal": "missing",
-            "buy": "neutral",
-            "yday": "missing"
-          },
-          "domains": null,
-          "parts": [
-            {
-              "k": "cameras",
-              "pts": 2,
-              "why": "+5 \u22124 cameras"
-            },
-            {
-              "k": "E",
-              "pts": 4,
-              "why": "beat \u00b7 EPS surprise +0.8% (morning export)"
-            },
-            {
-              "k": "R",
-              "pts": 2,
-              "why": "buy-side recom 1.4 (level, not a change \u00b7 morning export)"
-            },
-            {
-              "k": "join",
-              "pts": -1,
-              "why": "join red"
-            },
-            {
-              "k": "peer",
-              "pts": 1,
-              "why": "peer green"
-            },
-            {
-              "k": "yday",
-              "pts": 1,
-              "why": "yday +2.9%"
-            }
-          ],
-          "weather": [
-            "gen bad",
-            "sector good"
-          ],
-          "h1": null,
-          "h3": null,
-          "h5": null
-        },
-        {
           "ticker": "SMMT",
           "date": "2026-10-29",
           "idio": 9,
@@ -100172,9 +100455,16 @@
             "vol": "neutral",
             "catal": "missing",
             "buy": "neutral",
-            "yday": "missing"
+            "yday": "good"
           },
-          "domains": null,
+          "domains": {
+            "market": "bad",
+            "parent": "neutral",
+            "child": "neutral",
+            "company": "neutral",
+            "setup": "good",
+            "flow": "good"
+          },
           "parts": [
             {
               "k": "cameras",
@@ -100253,7 +100543,14 @@
             "buy": "neutral",
             "yday": "missing"
           },
-          "domains": null,
+          "domains": {
+            "market": "missing",
+            "parent": "missing",
+            "child": "missing",
+            "company": "missing",
+            "setup": "missing",
+            "flow": "missing"
+          },
           "parts": [
             {
               "k": "cameras",
@@ -100347,7 +100644,14 @@
             "buy": "neutral",
             "yday": "missing"
           },
-          "domains": null,
+          "domains": {
+            "market": "missing",
+            "parent": "missing",
+            "child": "missing",
+            "company": "missing",
+            "setup": "missing",
+            "flow": "missing"
+          },
           "parts": [
             {
               "k": "cameras",
@@ -100428,7 +100732,14 @@
             "buy": "neutral",
             "yday": "missing"
           },
-          "domains": null,
+          "domains": {
+            "market": "missing",
+            "parent": "missing",
+            "child": "missing",
+            "company": "missing",
+            "setup": "missing",
+            "flow": "missing"
+          },
           "parts": [
             {
               "k": "cameras",
@@ -100510,9 +100821,16 @@
             "vol": "bad",
             "catal": "missing",
             "buy": "neutral",
-            "yday": "missing"
+            "yday": "good"
           },
-          "domains": null,
+          "domains": {
+            "market": "bad",
+            "parent": "neutral",
+            "child": "neutral",
+            "company": "neutral",
+            "setup": "good",
+            "flow": "good"
+          },
           "parts": [
             {
               "k": "cameras",
@@ -100602,7 +100920,14 @@
             "buy": "neutral",
             "yday": "missing"
           },
-          "domains": null,
+          "domains": {
+            "market": "missing",
+            "parent": "missing",
+            "child": "missing",
+            "company": "missing",
+            "setup": "missing",
+            "flow": "missing"
+          },
           "parts": [
             {
               "k": "cameras",
@@ -100654,6 +100979,87 @@
           "h5": null
         },
         {
+          "ticker": "ARCT",
+          "date": "2026-10-29",
+          "idio": 6,
+          "n_pos": 5,
+          "n_neg": 2,
+          "e_pol": "missing",
+          "e_label": "",
+          "r_pol": "missing",
+          "news_tone": "missing",
+          "headline": "CoreWeave upgraded, Etsy downgraded: Wall Street's top analyst calls",
+          "yday_ret": null,
+          "rsi": null,
+          "macd_hist": null,
+          "flow_in": false,
+          "white": false,
+          "alarm": true,
+          "on_list": false,
+          "sources": [
+            "captured"
+          ],
+          "open": null,
+          "close": 12.149999618530273,
+          "day_pct": 0.66,
+          "boxes": {
+            "join": "good",
+            "sector": "neutral",
+            "gen": "bad",
+            "news": "missing",
+            "digest": "good",
+            "judge": "good",
+            "ab": "neutral",
+            "peer": "good",
+            "heat": "good",
+            "vol": "bad",
+            "catal": "missing",
+            "buy": "neutral",
+            "yday": "good"
+          },
+          "domains": {
+            "market": "bad",
+            "parent": "neutral",
+            "child": "neutral",
+            "company": "neutral",
+            "setup": "good",
+            "flow": "good"
+          },
+          "parts": [
+            {
+              "k": "cameras",
+              "pts": 6,
+              "why": "+5 \u22122 cameras"
+            },
+            {
+              "k": "join",
+              "pts": 1,
+              "why": "join green"
+            },
+            {
+              "k": "peer",
+              "pts": 1,
+              "why": "peer green"
+            },
+            {
+              "k": "yday",
+              "pts": 1,
+              "why": "last bar green"
+            },
+            {
+              "k": "alarm",
+              "pts": -3,
+              "why": "alarm overnight"
+            }
+          ],
+          "weather": [
+            "gen bad"
+          ],
+          "h1": null,
+          "h3": null,
+          "h5": null
+        },
+        {
           "ticker": "AURA",
           "date": "2026-10-29",
           "idio": 6,
@@ -100692,7 +101098,14 @@
             "buy": "neutral",
             "yday": "missing"
           },
-          "domains": null,
+          "domains": {
+            "market": "missing",
+            "parent": "missing",
+            "child": "missing",
+            "company": "missing",
+            "setup": "missing",
+            "flow": "missing"
+          },
           "parts": [
             {
               "k": "cameras",
@@ -100776,7 +101189,14 @@
             "buy": "neutral",
             "yday": "missing"
           },
-          "domains": null,
+          "domains": {
+            "market": "missing",
+            "parent": "missing",
+            "child": "missing",
+            "company": "missing",
+            "setup": "missing",
+            "flow": "missing"
+          },
           "parts": [
             {
               "k": "cameras",
@@ -100816,6 +101236,100 @@
           ],
           "weather": [
             "gen bad"
+          ],
+          "h1": null,
+          "h3": null,
+          "h5": null
+        },
+        {
+          "ticker": "PDFS",
+          "date": "2026-10-29",
+          "idio": 6,
+          "n_pos": 5,
+          "n_neg": 4,
+          "e_pol": "good",
+          "e_label": "beat \u00b7 EPS surprise +0.8% (morning export)",
+          "r_pol": "good",
+          "news_tone": "neutral",
+          "headline": "Introducing Exensio Aurora: PDF Solutions Unveils Highly-Scalable Architecture for Exensio Analytics",
+          "yday_ret": 2.85,
+          "rsi": 69.83,
+          "macd_hist": -0.2477,
+          "flow_in": false,
+          "white": false,
+          "alarm": true,
+          "on_list": true,
+          "sources": [
+            "probable",
+            "yday_gainer",
+            "yday_mover"
+          ],
+          "open": 44.8,
+          "close": 45.560001373291016,
+          "day_pct": 1.7,
+          "boxes": {
+            "join": "bad",
+            "sector": "good",
+            "gen": "bad",
+            "news": "neutral",
+            "digest": "good",
+            "judge": "bad",
+            "ab": "good",
+            "peer": "good",
+            "heat": "good",
+            "vol": "bad",
+            "catal": "missing",
+            "buy": "neutral",
+            "yday": "good"
+          },
+          "domains": {
+            "market": "bad",
+            "parent": "bad",
+            "child": "neutral",
+            "company": "neutral",
+            "setup": "good",
+            "flow": "good"
+          },
+          "parts": [
+            {
+              "k": "cameras",
+              "pts": 2,
+              "why": "+5 \u22124 cameras"
+            },
+            {
+              "k": "E",
+              "pts": 4,
+              "why": "beat \u00b7 EPS surprise +0.8% (morning export)"
+            },
+            {
+              "k": "R",
+              "pts": 2,
+              "why": "buy-side recom 1.4 (level, not a change \u00b7 morning export)"
+            },
+            {
+              "k": "join",
+              "pts": -1,
+              "why": "join red"
+            },
+            {
+              "k": "peer",
+              "pts": 1,
+              "why": "peer green"
+            },
+            {
+              "k": "yday",
+              "pts": 1,
+              "why": "yday +2.9%"
+            },
+            {
+              "k": "alarm",
+              "pts": -3,
+              "why": "alarm overnight"
+            }
+          ],
+          "weather": [
+            "gen bad",
+            "sector good"
           ],
           "h1": null,
           "h3": null,
@@ -100862,7 +101376,14 @@
             "buy": "neutral",
             "yday": "missing"
           },
-          "domains": null,
+          "domains": {
+            "market": "missing",
+            "parent": "missing",
+            "child": "missing",
+            "company": "missing",
+            "setup": "missing",
+            "flow": "missing"
+          },
           "parts": [
             {
               "k": "cameras",
@@ -100946,7 +101467,14 @@
             "buy": "neutral",
             "yday": "missing"
           },
-          "domains": null,
+          "domains": {
+            "market": "missing",
+            "parent": "missing",
+            "child": "missing",
+            "company": "missing",
+            "setup": "missing",
+            "flow": "missing"
+          },
           "parts": [
             {
               "k": "cameras",
@@ -100992,6 +101520,88 @@
           "h5": null
         },
         {
+          "ticker": "SONO",
+          "date": "2026-10-29",
+          "idio": 6,
+          "n_pos": 6,
+          "n_neg": 3,
+          "e_pol": "missing",
+          "e_label": "",
+          "r_pol": "missing",
+          "news_tone": "missing",
+          "headline": "Sonos Launches New Global Brand Campaign \"Love the Sound. Feel the System\"",
+          "yday_ret": null,
+          "rsi": null,
+          "macd_hist": null,
+          "flow_in": false,
+          "white": false,
+          "alarm": true,
+          "on_list": false,
+          "sources": [
+            "losers"
+          ],
+          "open": null,
+          "close": 17.459999084472656,
+          "day_pct": -0.63,
+          "boxes": {
+            "join": "good",
+            "sector": "good",
+            "gen": "bad",
+            "news": "missing",
+            "digest": "good",
+            "judge": "bad",
+            "ab": "good",
+            "peer": "good",
+            "heat": "good",
+            "vol": "bad",
+            "catal": "missing",
+            "buy": "neutral",
+            "yday": "bad"
+          },
+          "domains": {
+            "market": "bad",
+            "parent": "bad",
+            "child": "good",
+            "company": "neutral",
+            "setup": "good",
+            "flow": "neutral"
+          },
+          "parts": [
+            {
+              "k": "cameras",
+              "pts": 6,
+              "why": "+6 \u22123 cameras"
+            },
+            {
+              "k": "join",
+              "pts": 1,
+              "why": "join green"
+            },
+            {
+              "k": "peer",
+              "pts": 1,
+              "why": "peer green"
+            },
+            {
+              "k": "yday",
+              "pts": 1,
+              "why": "last bar green"
+            },
+            {
+              "k": "alarm",
+              "pts": -3,
+              "why": "alarm overnight"
+            }
+          ],
+          "weather": [
+            "gen bad",
+            "sector good"
+          ],
+          "h1": null,
+          "h3": null,
+          "h5": null
+        },
+        {
           "ticker": "FIS",
           "date": "2026-10-29",
           "idio": 5,
@@ -101028,9 +101638,16 @@
             "vol": "bad",
             "catal": "missing",
             "buy": "neutral",
-            "yday": "missing"
+            "yday": "good"
           },
-          "domains": null,
+          "domains": {
+            "market": "bad",
+            "parent": "bad",
+            "child": "good",
+            "company": "neutral",
+            "setup": "good",
+            "flow": "good"
+          },
           "parts": [
             {
               "k": "cameras",
@@ -101115,7 +101732,14 @@
             "buy": "neutral",
             "yday": "missing"
           },
-          "domains": null,
+          "domains": {
+            "market": "missing",
+            "parent": "missing",
+            "child": "missing",
+            "company": "missing",
+            "setup": "missing",
+            "flow": "missing"
+          },
           "parts": [
             {
               "k": "cameras",
@@ -101146,6 +101770,87 @@
           "weather": [
             "gen bad",
             "sector bad"
+          ],
+          "h1": null,
+          "h3": null,
+          "h5": null
+        },
+        {
+          "ticker": "LQDA",
+          "date": "2026-10-29",
+          "idio": 4,
+          "n_pos": 5,
+          "n_neg": 3,
+          "e_pol": "missing",
+          "e_label": "",
+          "r_pol": "missing",
+          "news_tone": "missing",
+          "headline": "FDA Grants Fast Track Designation to YUTREPIA for the Treatment of Raynaud's Phenomenon Associated with Systemic Sclerosis",
+          "yday_ret": null,
+          "rsi": null,
+          "macd_hist": null,
+          "flow_in": false,
+          "white": false,
+          "alarm": true,
+          "on_list": false,
+          "sources": [
+            "captured"
+          ],
+          "open": null,
+          "close": 44.9900016784668,
+          "day_pct": -2.68,
+          "boxes": {
+            "join": "good",
+            "sector": "neutral",
+            "gen": "bad",
+            "news": "missing",
+            "digest": "good",
+            "judge": "good",
+            "ab": "bad",
+            "peer": "good",
+            "heat": "good",
+            "vol": "bad",
+            "catal": "missing",
+            "buy": "neutral",
+            "yday": "bad"
+          },
+          "domains": {
+            "market": "bad",
+            "parent": "neutral",
+            "child": "neutral",
+            "company": "neutral",
+            "setup": "neutral",
+            "flow": "neutral"
+          },
+          "parts": [
+            {
+              "k": "cameras",
+              "pts": 4,
+              "why": "+5 \u22123 cameras"
+            },
+            {
+              "k": "join",
+              "pts": 1,
+              "why": "join green"
+            },
+            {
+              "k": "peer",
+              "pts": 1,
+              "why": "peer green"
+            },
+            {
+              "k": "yday",
+              "pts": 1,
+              "why": "last bar green"
+            },
+            {
+              "k": "alarm",
+              "pts": -3,
+              "why": "alarm overnight"
+            }
+          ],
+          "weather": [
+            "gen bad"
           ],
           "h1": null,
           "h3": null,
@@ -101190,7 +101895,14 @@
             "buy": "neutral",
             "yday": "missing"
           },
-          "domains": null,
+          "domains": {
+            "market": "missing",
+            "parent": "missing",
+            "child": "missing",
+            "company": "missing",
+            "setup": "missing",
+            "flow": "missing"
+          },
           "parts": [
             {
               "k": "cameras",
@@ -101225,91 +101937,6 @@
           ],
           "weather": [
             "gen bad"
-          ],
-          "h1": null,
-          "h3": null,
-          "h5": null
-        },
-        {
-          "ticker": "ORCL",
-          "date": "2026-10-29",
-          "idio": 4,
-          "n_pos": 4,
-          "n_neg": 5,
-          "e_pol": "good",
-          "e_label": "beat \u00b7 EPS surprise +10.4% (morning export)",
-          "r_pol": "good",
-          "news_tone": "neutral",
-          "headline": "Oracle's $18 Billion AI Project Just Hit a Major Hurdle",
-          "yday_ret": 10.73,
-          "rsi": 37.89,
-          "macd_hist": 0.7615,
-          "flow_in": false,
-          "white": false,
-          "alarm": false,
-          "on_list": true,
-          "sources": [
-            "ohlc_hot"
-          ],
-          "open": 144.13,
-          "close": 139.55999755859375,
-          "day_pct": -3.17,
-          "boxes": {
-            "join": "bad",
-            "sector": "good",
-            "gen": "bad",
-            "news": "neutral",
-            "digest": "good",
-            "judge": "bad",
-            "ab": "good",
-            "peer": "bad",
-            "heat": "good",
-            "vol": "bad",
-            "catal": "missing",
-            "buy": "neutral",
-            "yday": "missing"
-          },
-          "domains": null,
-          "parts": [
-            {
-              "k": "cameras",
-              "pts": -2,
-              "why": "+4 \u22125 cameras"
-            },
-            {
-              "k": "E",
-              "pts": 4,
-              "why": "beat \u00b7 EPS surprise +10.4% (morning export)"
-            },
-            {
-              "k": "R",
-              "pts": 2,
-              "why": "buy-side recom 1.6 (level, not a change \u00b7 morning export)"
-            },
-            {
-              "k": "join",
-              "pts": -1,
-              "why": "join red"
-            },
-            {
-              "k": "peer",
-              "pts": -1,
-              "why": "peer red"
-            },
-            {
-              "k": "yday",
-              "pts": 1,
-              "why": "yday +10.7%"
-            },
-            {
-              "k": "macd",
-              "pts": 1,
-              "why": "MACD hist + / X+"
-            }
-          ],
-          "weather": [
-            "gen bad",
-            "sector good"
           ],
           "h1": null,
           "h3": null,
@@ -101354,7 +101981,14 @@
             "buy": "neutral",
             "yday": "missing"
           },
-          "domains": null,
+          "domains": {
+            "market": "missing",
+            "parent": "missing",
+            "child": "missing",
+            "company": "missing",
+            "setup": "missing",
+            "flow": "missing"
+          },
           "parts": [
             {
               "k": "cameras",
@@ -101439,7 +102073,14 @@
             "buy": "neutral",
             "yday": "missing"
           },
-          "domains": null,
+          "domains": {
+            "market": "missing",
+            "parent": "missing",
+            "child": "missing",
+            "company": "missing",
+            "setup": "missing",
+            "flow": "missing"
+          },
           "parts": [
             {
               "k": "cameras",
@@ -101529,7 +102170,14 @@
             "buy": "neutral",
             "yday": "missing"
           },
-          "domains": null,
+          "domains": {
+            "market": "missing",
+            "parent": "missing",
+            "child": "missing",
+            "company": "missing",
+            "setup": "missing",
+            "flow": "missing"
+          },
           "parts": [
             {
               "k": "cameras",
@@ -101609,7 +102257,14 @@
             "buy": "neutral",
             "yday": "missing"
           },
-          "domains": null,
+          "domains": {
+            "market": "missing",
+            "parent": "missing",
+            "child": "missing",
+            "company": "missing",
+            "setup": "missing",
+            "flow": "missing"
+          },
           "parts": [
             {
               "k": "cameras",
@@ -101693,7 +102348,14 @@
             "buy": "neutral",
             "yday": "missing"
           },
-          "domains": null,
+          "domains": {
+            "market": "missing",
+            "parent": "missing",
+            "child": "missing",
+            "company": "missing",
+            "setup": "missing",
+            "flow": "missing"
+          },
           "parts": [
             {
               "k": "cameras",
@@ -101778,7 +102440,14 @@
             "buy": "neutral",
             "yday": "missing"
           },
-          "domains": null,
+          "domains": {
+            "market": "missing",
+            "parent": "missing",
+            "child": "missing",
+            "company": "missing",
+            "setup": "missing",
+            "flow": "missing"
+          },
           "parts": [
             {
               "k": "cameras",
@@ -101859,7 +102528,14 @@
             "buy": "neutral",
             "yday": "missing"
           },
-          "domains": null,
+          "domains": {
+            "market": "missing",
+            "parent": "missing",
+            "child": "missing",
+            "company": "missing",
+            "setup": "missing",
+            "flow": "missing"
+          },
           "parts": [
             {
               "k": "cameras",
@@ -101939,7 +102615,14 @@
             "buy": "neutral",
             "yday": "missing"
           },
-          "domains": null,
+          "domains": {
+            "market": "missing",
+            "parent": "missing",
+            "child": "missing",
+            "company": "missing",
+            "setup": "missing",
+            "flow": "missing"
+          },
           "parts": [
             {
               "k": "cameras",
@@ -101985,171 +102668,77 @@
           "h5": null
         },
         {
-          "ticker": "PRIM",
+          "ticker": "OABI",
           "date": "2026-10-29",
-          "idio": 1,
-          "n_pos": 3,
-          "n_neg": 6,
-          "e_pol": "good",
-          "e_label": "beat \u00b7 EPS surprise +23.8% (morning export)",
-          "r_pol": "good",
-          "news_tone": "neutral",
-          "headline": "Primoris Services Corporation Provides Business Update",
-          "yday_ret": 6.71,
-          "rsi": 52.48,
-          "macd_hist": -0.7698,
-          "flow_in": false,
-          "white": false,
-          "alarm": false,
-          "on_list": true,
-          "sources": [
-            "yday_gainer",
-            "yday_mover"
-          ],
-          "open": 72.99,
-          "close": 75.61000061035156,
-          "day_pct": 3.59,
-          "boxes": {
-            "join": "bad",
-            "sector": "bad",
-            "gen": "bad",
-            "news": "neutral",
-            "digest": "good",
-            "judge": "bad",
-            "ab": "good",
-            "peer": "good",
-            "heat": "bad",
-            "vol": "bad",
-            "catal": "missing",
-            "buy": "neutral",
-            "yday": "missing"
-          },
-          "domains": null,
-          "parts": [
-            {
-              "k": "cameras",
-              "pts": -6,
-              "why": "+3 \u22126 cameras"
-            },
-            {
-              "k": "E",
-              "pts": 4,
-              "why": "beat \u00b7 EPS surprise +23.8% (morning export)"
-            },
-            {
-              "k": "R",
-              "pts": 2,
-              "why": "buy-side recom 1.6 (level, not a change \u00b7 morning export)"
-            },
-            {
-              "k": "join",
-              "pts": -1,
-              "why": "join red"
-            },
-            {
-              "k": "peer",
-              "pts": 1,
-              "why": "peer green"
-            },
-            {
-              "k": "yday",
-              "pts": 1,
-              "why": "yday +6.7%"
-            }
-          ],
-          "weather": [
-            "gen bad",
-            "sector bad"
-          ],
-          "h1": null,
-          "h3": null,
-          "h5": null
-        },
-        {
-          "ticker": "TBBB",
-          "date": "2026-10-29",
-          "idio": 0,
-          "n_pos": 3,
-          "n_neg": 4,
-          "e_pol": "good",
-          "e_label": "beat \u00b7 EPS surprise +2.7% (morning export)",
-          "r_pol": "good",
-          "news_tone": "good",
-          "headline": "BBB Foods Inc (TBBB) (Q2 2026) Earnings Call Highlights: Revenue Surges 39% and Same-Store ...",
-          "yday_ret": -1.76,
-          "rsi": 75.05,
-          "macd_hist": -0.1599,
+          "idio": 2,
+          "n_pos": 5,
+          "n_neg": 3,
+          "e_pol": "missing",
+          "e_label": "",
+          "r_pol": "missing",
+          "news_tone": "missing",
+          "headline": "OmniAb to Host Investor & Analyst Day on October 6, 2026",
+          "yday_ret": null,
+          "rsi": null,
+          "macd_hist": null,
           "flow_in": false,
           "white": false,
           "alarm": true,
-          "on_list": true,
+          "on_list": false,
           "sources": [
-            "yday_gainer"
+            "captured"
           ],
-          "open": 56.38,
-          "close": 56.61000061035156,
-          "day_pct": 0.41,
+          "open": null,
+          "close": 5.230000019073486,
+          "day_pct": -2.24,
           "boxes": {
-            "join": "bad",
+            "join": "good",
             "sector": "neutral",
             "gen": "bad",
-            "news": "good",
-            "digest": "bad",
-            "judge": "missing",
+            "news": "missing",
+            "digest": "good",
+            "judge": "good",
             "ab": "good",
-            "peer": "good",
+            "peer": "bad",
             "heat": "good",
             "vol": "bad",
             "catal": "missing",
             "buy": "neutral",
-            "yday": "missing"
+            "yday": "good"
           },
-          "domains": null,
+          "domains": {
+            "market": "bad",
+            "parent": "neutral",
+            "child": "neutral",
+            "company": "neutral",
+            "setup": "good",
+            "flow": "neutral"
+          },
           "parts": [
             {
               "k": "cameras",
-              "pts": -2,
-              "why": "+3 \u22124 cameras"
-            },
-            {
-              "k": "E",
               "pts": 4,
-              "why": "beat \u00b7 EPS surprise +2.7% (morning export)"
-            },
-            {
-              "k": "R",
-              "pts": 2,
-              "why": "buy-side recom 1.4 (level, not a change \u00b7 morning export)"
-            },
-            {
-              "k": "news",
-              "pts": 2,
-              "why": "news camera green"
+              "why": "+5 \u22123 cameras"
             },
             {
               "k": "join",
-              "pts": -1,
-              "why": "join red"
+              "pts": 1,
+              "why": "join green"
             },
             {
               "k": "peer",
-              "pts": 1,
-              "why": "peer green"
+              "pts": -1,
+              "why": "peer red"
             },
             {
               "k": "yday",
-              "pts": -1,
-              "why": "yday -1.8%"
+              "pts": 1,
+              "why": "last bar green"
             },
             {
               "k": "alarm",
               "pts": -3,
               "why": "alarm overnight"
-            },
-            {
-              "k": "rsi",
-              "pts": -2,
-              "why": "RSI 75 OB \u2014 pause longs"
             }
           ],
           "weather": [
@@ -102160,175 +102749,81 @@
           "h5": null
         },
         {
-          "ticker": "AMX",
+          "ticker": "VIR",
           "date": "2026-10-29",
-          "idio": -1,
+          "idio": 2,
           "n_pos": 5,
-          "n_neg": 4,
-          "e_pol": "bad",
-          "e_label": "miss \u00b7 EPS surprise -5.0% (morning export)",
-          "r_pol": "good",
-          "news_tone": "good",
-          "headline": "Norwegian Cruise downgrade, Duolingo upgraded: Wall Street's top analyst calls",
-          "yday_ret": -0.54,
-          "rsi": 49.53,
-          "macd_hist": 0.2309,
+          "n_neg": 3,
+          "e_pol": "missing",
+          "e_label": "",
+          "r_pol": "missing",
+          "news_tone": "missing",
+          "headline": "Vir Biotechnology to Participate in the Morgan Stanley 24th Annual Global Healthcare Conference",
+          "yday_ret": null,
+          "rsi": null,
+          "macd_hist": null,
           "flow_in": false,
           "white": false,
           "alarm": true,
-          "on_list": true,
+          "on_list": false,
           "sources": [
-            "yday_gainer"
+            "captured"
           ],
-          "open": 24.01,
-          "close": 24.1299991607666,
-          "day_pct": 0.5,
+          "open": null,
+          "close": 11.75,
+          "day_pct": 0.0,
           "boxes": {
-            "join": "bad",
-            "sector": "bad",
+            "join": "good",
+            "sector": "neutral",
             "gen": "bad",
-            "news": "good",
+            "news": "missing",
             "digest": "good",
-            "judge": "missing",
+            "judge": "good",
             "ab": "good",
-            "peer": "good",
+            "peer": "bad",
             "heat": "good",
             "vol": "bad",
             "catal": "missing",
             "buy": "neutral",
-            "yday": "missing"
+            "yday": "good"
           },
-          "domains": null,
+          "domains": {
+            "market": "bad",
+            "parent": "neutral",
+            "child": "neutral",
+            "company": "neutral",
+            "setup": "good",
+            "flow": "neutral"
+          },
           "parts": [
             {
               "k": "cameras",
-              "pts": 2,
-              "why": "+5 \u22124 cameras"
-            },
-            {
-              "k": "E",
-              "pts": -4,
-              "why": "miss \u00b7 EPS surprise -5.0% (morning export)"
-            },
-            {
-              "k": "R",
-              "pts": 2,
-              "why": "buy-side recom 1.7 (level, not a change \u00b7 morning export)"
-            },
-            {
-              "k": "news",
-              "pts": 2,
-              "why": "news camera green"
+              "pts": 4,
+              "why": "+5 \u22123 cameras"
             },
             {
               "k": "join",
-              "pts": -1,
-              "why": "join red"
+              "pts": 1,
+              "why": "join green"
             },
             {
               "k": "peer",
-              "pts": 1,
-              "why": "peer green"
+              "pts": -1,
+              "why": "peer red"
             },
             {
               "k": "yday",
-              "pts": -1,
-              "why": "yday -0.5%"
+              "pts": 1,
+              "why": "last bar green"
             },
             {
               "k": "alarm",
               "pts": -3,
               "why": "alarm overnight"
-            },
-            {
-              "k": "macd",
-              "pts": 1,
-              "why": "MACD hist + / X+"
             }
           ],
           "weather": [
-            "gen bad",
-            "sector bad"
-          ],
-          "h1": null,
-          "h3": null,
-          "h5": null
-        },
-        {
-          "ticker": "CRS",
-          "date": "2026-10-29",
-          "idio": -1,
-          "n_pos": 3,
-          "n_neg": 6,
-          "e_pol": "good",
-          "e_label": "beat \u00b7 EPS surprise +4.7% (morning export)",
-          "r_pol": "good",
-          "news_tone": "neutral",
-          "headline": "Should You Buy Howmet Stock After Its Turbine Blade Scare?",
-          "yday_ret": -2.94,
-          "rsi": 39.31,
-          "macd_hist": -7.7447,
-          "flow_in": false,
-          "white": false,
-          "alarm": false,
-          "on_list": true,
-          "sources": [
-            "yday_gainer"
-          ],
-          "open": 279.0,
-          "close": 298.7200012207031,
-          "day_pct": 7.07,
-          "boxes": {
-            "join": "bad",
-            "sector": "bad",
-            "gen": "bad",
-            "news": "neutral",
-            "digest": "good",
-            "judge": "bad",
-            "ab": "good",
-            "peer": "good",
-            "heat": "bad",
-            "vol": "bad",
-            "catal": "missing",
-            "buy": "neutral",
-            "yday": "missing"
-          },
-          "domains": null,
-          "parts": [
-            {
-              "k": "cameras",
-              "pts": -6,
-              "why": "+3 \u22126 cameras"
-            },
-            {
-              "k": "E",
-              "pts": 4,
-              "why": "beat \u00b7 EPS surprise +4.7% (morning export)"
-            },
-            {
-              "k": "R",
-              "pts": 2,
-              "why": "buy-side recom 1.6 (level, not a change \u00b7 morning export)"
-            },
-            {
-              "k": "join",
-              "pts": -1,
-              "why": "join red"
-            },
-            {
-              "k": "peer",
-              "pts": 1,
-              "why": "peer green"
-            },
-            {
-              "k": "yday",
-              "pts": -1,
-              "why": "yday -2.9%"
-            }
-          ],
-          "weather": [
-            "gen bad",
-            "sector bad"
+            "gen bad"
           ],
           "h1": null,
           "h3": null,
