@@ -1,6 +1,6 @@
 # HIT Board — general + sectors (all dates)
 
-Generated: **2026-10-29T20:15:05.386956-04:00**
+Generated: **2026-10-30T16:18:12.168149-04:00**
 
 Source: `03_scoreboard/scoreboard.json`.
 
@@ -93,6 +93,7 @@ Source: `03_scoreboard/scoreboard.json`.
 | 2026-10-23 | down | mild | -7.538 | — | — | — | — |
 | 2026-10-26 | down | mild | -2.128 | 0.7 | up | MISS | HIT |
 | 2026-10-27 | up | mild | 5.515 | — | — | — | — |
+| 2026-10-30 | down | mild | -12.921 | — | — | — | — |
 
 ## Sectors — HIT% by date (model calls only)
 
@@ -168,6 +169,7 @@ Source: `03_scoreboard/scoreboard.json`.
 | 2026-10-23 | 0 | **—** | 0/0 | — |
 | 2026-10-26 | 0 | **—** | 0/0 | — |
 | 2026-10-27 | 0 | **—** | 0/0 | — |
+| 2026-10-30 | 0 | **—** | 0/0 | — |
 
 ## Sectors — HIT% by sector (across dates)
 
@@ -189,11 +191,11 @@ Source: `03_scoreboard/scoreboard.json`.
 
 HIT / MISS / NO_PRED / — . Actual % when graded.
 
-| Sector | 2026-10-14 | 2026-10-15 | 2026-10-16 | 2026-10-19 | 2026-10-20 | 2026-10-21 | 2026-10-22 | 2026-10-23 | 2026-10-26 | 2026-10-27 |
+| Sector | 2026-10-15 | 2026-10-16 | 2026-10-19 | 2026-10-20 | 2026-10-21 | 2026-10-22 | 2026-10-23 | 2026-10-26 | 2026-10-27 | 2026-10-30 |
 |--------|------|------|------|------|------|------|------|------|------|------|
-| Basic Materials | MISS (-0.1%) | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED |
-| Communication Services | MISS (-1.3%) | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED |
-| Consumer Cyclical | HIT (-0.8%) | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED |
+| Basic Materials | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED |
+| Communication Services | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED |
+| Consumer Cyclical | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED |
 | Consumer Defensive | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED |
 | Energy | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED |
 | Financial | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED |
