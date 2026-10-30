@@ -2,7 +2,7 @@
 
 _starts 10-08 open, no past days. Parent recipe `union_hot_n4_holdup` (same selection and exits); candidates only from inputs committed before 09:30 ET._
 
-Equity: 8736.7 | days: 16
+Equity: 8728.3 | days: 17
 
 | date | S | picks | buys | sells | cash | equity | mean% | sit / reason |
 |---|---|---|---|---|---|---|---|---|
@@ -22,3 +22,4 @@ Equity: 8736.7 | days: 16
 | 2026-10-27 | 5.515 | BMBL, CHKP, TTAN, HUBS | BMBL 384@5.95, CHKP 14@157.73, TTAN 27@82.352, HUBS 8@256.8 | - | 357.38 | 9101.52 | -0.4141 | - |
 | 2026-10-28 | 6.621 | SLN, PRME, MRVI, RH | SLN 4@19.76, PRME 21@4.245, MRVI 10@8.23 | - | 104.29 | 9017.39 | -0.9244 | - |
 | 2026-10-29 | -6.946 | - | - | BMBL 384@5.96, CHKP 14@148.02, HUBS 8@234.89, TTAN 27@78.88 | 8462.86 | 8736.7 | -3.1128 | S=-6.95 <= -3: no buys |
+| 2026-10-30 | -12.921 | - | - | MRVI 10@8.37, PRME 21@5.03, SLN 4@19.74 | 8728.3 | 8728.3 | -0.0961 | S=-12.92 <= -3: no buys |

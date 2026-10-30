@@ -281,6 +281,19 @@
             "SLN"
           ],
           "sit": true
+        },
+        {
+          "buys": [],
+          "date": "2026-10-30",
+          "equity": 9894.42,
+          "mean": 0.0,
+          "picks": [],
+          "reasons": [
+            "S=-12.92 <= -3: no buys"
+          ],
+          "s": -12.921,
+          "sells": [],
+          "sit": true
         }
       ],
       "label": "starts 10-08 open, no past days",
@@ -552,6 +565,23 @@
             "CHKP",
             "HUBS",
             "TTAN"
+          ],
+          "sit": true
+        },
+        {
+          "buys": [],
+          "date": "2026-10-30",
+          "equity": 8728.3,
+          "mean": -0.0961,
+          "picks": [],
+          "reasons": [
+            "S=-12.92 <= -3: no buys"
+          ],
+          "s": -12.921,
+          "sells": [
+            "MRVI",
+            "PRME",
+            "SLN"
           ],
           "sit": true
         }

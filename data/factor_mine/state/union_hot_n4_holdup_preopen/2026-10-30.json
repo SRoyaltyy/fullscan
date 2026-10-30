@@ -1,0 +1,78 @@
+{
+  "buys": [],
+  "cash": 8728.3,
+  "date": "2026-10-30",
+  "equity": 8728.3,
+  "fees": 2.8479,
+  "fills": [
+    {
+      "fees": 0.887,
+      "fill_rule": "open",
+      "pnl": -0.34,
+      "price": 8.37,
+      "shares": 10,
+      "side": "SELL",
+      "ticker": "MRVI"
+    },
+    {
+      "fees": 1.1393,
+      "fill_rule": "open",
+      "pnl": 14.39,
+      "price": 5.03,
+      "shares": 21,
+      "side": "SELL",
+      "ticker": "PRME"
+    },
+    {
+      "fees": 0.8216,
+      "fill_rule": "open",
+      "pnl": -1.7,
+      "price": 19.74,
+      "shares": 4,
+      "side": "SELL",
+      "ticker": "SLN"
+    }
+  ],
+  "holdings": [],
+  "label": "starts 10-08 open, no past days",
+  "mean": -0.0961,
+  "n_trades_today": 3,
+  "parent": "union_hot_n4_holdup",
+  "picks": [],
+  "reasons": [
+    "S=-12.92 <= -3: no buys"
+  ],
+  "recipe": "union_hot_n4_holdup_preopen",
+  "s": -12.921,
+  "seal_sha256": "49b15c405726c76820988d50874d8dd57e6405e501d37b8d56b569ace1424cc8",
+  "sells": [
+    {
+      "fill_rule": "open",
+      "price": 8.37,
+      "shares": 10,
+      "side": "SELL",
+      "ticker": "MRVI"
+    },
+    {
+      "fill_rule": "open",
+      "price": 5.03,
+      "shares": 21,
+      "side": "SELL",
+      "ticker": "PRME"
+    },
+    {
+      "fill_rule": "open",
+      "price": 19.74,
+      "shares": 4,
+      "side": "SELL",
+      "ticker": "SLN"
+    }
+  ],
+  "sit": true,
+  "state": {
+    "after": "2026-10-30",
+    "cash": 8728.3,
+    "pos": {},
+    "yday_equity": 8728.3
+  }
+}
