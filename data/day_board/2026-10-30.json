@@ -1,6 +1,6 @@
 {
   "date": "2026-10-30",
-  "generated_at": "2026-10-30T06:14:20.203976-04:00",
+  "generated_at": "2026-10-30T06:14:27.534719-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -10,8 +10,8 @@
     "MISSING AB checklist enriched `data/ab_checklist/2026-10-30_ab_checklist_enriched.csv` \u2014 missing"
   ],
   "counts": {
-    "ok": 3,
-    "partial": 3,
+    "ok": 4,
+    "partial": 2,
     "fail": 2,
     "n": 8
   },
@@ -630,7 +630,7 @@
       "inputs_ready": false,
       "n_req_ok": 1,
       "n_req": 4,
-      "n_opt_ok": 1,
+      "n_opt_ok": 2,
       "n_opt": 4,
       "files": [
         {
@@ -792,10 +792,10 @@
           "name": "Dashboard HTML",
           "path": "dashboard/index.html",
           "role": "optional",
-          "status": "FAIL",
-          "reason": "session 2026-10-30 not in dashboard dates (last=2026-10-07)",
+          "status": "OK",
+          "reason": "live-book poller + today.json (2026-10-30)",
           "size": 10510589,
-          "said": "session 2026-10-30 not in dashboard dates (last=2026-10-07)",
+          "said": "live-book poller + today.json (2026-10-30)",
           "bullets": []
         }
       ],
@@ -808,9 +808,9 @@
       "key": "publish",
       "name": "Dashboard / .io",
       "yaml": "deploy-dashboard.yml",
-      "status": "PARTIAL",
+      "status": "OK",
       "inputs_ready": false,
-      "n_req_ok": 1,
+      "n_req_ok": 2,
       "n_req": 2,
       "n_opt_ok": 0,
       "n_opt": 1,
@@ -831,10 +831,10 @@
           "name": "Dashboard HTML (repo)",
           "path": "dashboard/index.html",
           "role": "required",
-          "status": "FAIL",
-          "reason": "session 2026-10-30 not in dashboard dates (last=2026-10-07)",
+          "status": "OK",
+          "reason": "live-book poller + today.json (2026-10-30)",
           "size": 10510589,
-          "said": "session 2026-10-30 not in dashboard dates (last=2026-10-07)",
+          "said": "live-book poller + today.json (2026-10-30)",
           "bullets": []
         },
         {
@@ -870,82 +870,9 @@
   "news_mode": "on",
   "news_mode_reason": "",
   "selections": {
-    "buy_1d": [
-      {
-        "ticker": "HITI",
-        "score": 0.6288248722421503
-      },
-      {
-        "ticker": "CON",
-        "score": 0.7856556108017361
-      },
-      {
-        "ticker": "ASTH",
-        "score": 0.7698427137515671
-      },
-      {
-        "ticker": "AMN",
-        "score": 0.7601225205328173
-      },
-      {
-        "ticker": "SGRY",
-        "score": 0.6609555707958037
-      },
-      {
-        "ticker": "MD",
-        "score": 0.7136370354701527
-      },
-      {
-        "ticker": "PACS",
-        "score": 0.8801240813428637
-      },
-      {
-        "ticker": "BAND",
-        "score": 0.6785167804781911
-      }
-    ],
-    "sell_1d": [
-      {
-        "ticker": "NEOV",
-        "score": -0.26451321245618303
-      },
-      {
-        "ticker": "OKLO",
-        "score": -0.2609742612598779
-      },
-      {
-        "ticker": "FCEL",
-        "score": -0.22098003297586954
-      },
-      {
-        "ticker": "NNDM",
-        "score": -0.17697311533736837
-      },
-      {
-        "ticker": "POWL",
-        "score": 0.01578062637968132
-      },
-      {
-        "ticker": "EOSE",
-        "score": -0.32247180889306093
-      },
-      {
-        "ticker": "INDI",
-        "score": -0.08416303573269233
-      },
-      {
-        "ticker": "TE",
-        "score": -0.19693854480676193
-      }
-    ],
-    "flatten": {
-      "said": "0 priced buys \u00b7 cash $118,332.69 \u00b7 morning S missing",
-      "bullets": [
-        "0 priced buys",
-        "cash $118,332.69",
-        "morning S missing"
-      ]
-    },
+    "buy_1d": [],
+    "sell_1d": [],
+    "flatten": {},
     "general": {},
     "sectors": {},
     "news": {},
@@ -2007,6 +1934,31 @@
         }
       ],
       "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-10-30\n_Generated 2026-10-30T04:29:58.613415-04:00 \u00b7 export=data/exports/finviz_2026-10-29.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_"
+    },
+    {
+      "key": "map_heat",
+      "title": "Map heat tables",
+      "date": "2026-10-30",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-30T06:14:26.924616-04:00",
+      "files": [
+        {
+          "path": "01_daily/map_heat/2026-10-30_map_heat.json",
+          "ok": true,
+          "reason": "",
+          "size": 274689,
+          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
+        },
+        {
+          "path": "01_daily/map_heat/2026-10-30_map_heat.md",
+          "ok": true,
+          "reason": "",
+          "size": 18330,
+          "preview": "# MAP HEAT \u2014 2026-10-30\nExport `finviz_2026-10-29.csv` \u00b7 11616 names \u00b7 generated 2026-10-30T04:32:28.635672-04:00"
+        }
+      ],
+      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-10-30\nExport `finviz_2026-10-29.csv` \u00b7 11616 names \u00b7 generated 2026-10-30T04:32:28.635672-04:00"
     }
   ],
   "href": {
