@@ -158,3 +158,12 @@
 {"bytes":337,"date":"2026-10-29","kind":"close","recipe":"union_hot_n4_holdup__w0","seq":158,"sha256":"01a66f16cc63f6106a079d8c7cb68ad2841afbb594ed5e043e8a12adc588981f"}
 {"bytes":1697,"date":"2026-10-30","kind":"plan","recipe":"union_hot_n4_holdup__w0","seq":159,"sha256":"8248e1920e3c68053a7ea6edab06d9914db3f574a333bf369715c5d6bec9fc0b"}
 {"bytes":2363,"date":"2026-10-30","kind":"open_fill","recipe":"union_hot_n4_holdup__w0","seq":160,"sha256":"6cabc670d3056fb31ca64a94972e92240ead85d4a02c6540c26e5f12fc7ab731"}
+{"bytes":1063,"date":"2026-10-30","kind":"mark","recipe":"union_hot_n4_holdup__w0","seq":161,"sha256":"464f4a8ecb61ce45b1177d751caa029b3d5791d0b3a4237036b640729ed97807"}
+{"bytes":337,"date":"2026-10-30","kind":"close","recipe":"union_hot_n4_holdup__w0","seq":162,"sha256":"0009a5322d14f2d41c1753083c873edd30c8d7f7b08ea784e85fa4f0e45997b8"}
+{"bytes":326,"date":"2026-10-30","kind":"close","recipe":"union_hot_n4_holdup__w0","seq":163,"sha256":"8e812c4d797c8a329613716dc48cb87f897ba3e3d10db60e2c4f9b9c2c1fa3e9"}
+{"bytes":332,"date":"2026-10-30","kind":"close","recipe":"union_hot_n4_holdup__w0","seq":164,"sha256":"f90959a74a2f35ba11c61b1daad9f67ca0f2e6babe42f23c6f00201616455340"}
+{"bytes":342,"date":"2026-10-30","kind":"close","recipe":"union_hot_n4_holdup__w0","seq":165,"sha256":"79452e2af1ed10168f92f08ce6f263ac7bb41b3d12c766dc4880514df767c438"}
+{"bytes":323,"date":"2026-10-30","kind":"close","recipe":"union_hot_n4_holdup__w0","seq":166,"sha256":"ccac507faed3cc8ad145cf49652709966f45916a78c0287c032ce928cb61b391"}
+{"bytes":322,"date":"2026-10-30","kind":"close","recipe":"union_hot_n4_holdup__w0","seq":167,"sha256":"b5588c011a4679bd83f03c86f1d64c53857416b9984f18c0d2dc83801091f4ae"}
+{"bytes":340,"date":"2026-10-30","kind":"close","recipe":"union_hot_n4_holdup__w0","seq":168,"sha256":"09bc61be7ab6b21b7a4c3ee3b32161c677c7b94157b0580f99d52fff5f4afca9"}
+{"bytes":323,"date":"2026-10-30","kind":"close","recipe":"union_hot_n4_holdup__w0","seq":169,"sha256":"a789c340af73ca407408b7b15084cc89e52f98a51b12850273da1659acfbd292"}
