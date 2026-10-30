@@ -1,6 +1,6 @@
 {
   "date": "2026-10-30",
-  "generated_at": "2026-10-30T14:31:27.543403-04:00",
+  "generated_at": "2026-10-30T14:53:59.529862-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -545,8 +545,8 @@
           "path": "01_daily/weather/2026-10-30_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=10546 vix=spiking yields=rising",
-          "size": 10546,
+          "reason": "sectors=11 bytes=10384 vix=calm yields=flat",
+          "size": 10384,
           "said": "hostile 9 \u00b7 neutral 2",
           "bullets": [
             "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Technology, Utilities",
@@ -764,8 +764,8 @@
           "path": "01_daily/weather/2026-10-30_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=10546 vix=spiking yields=rising",
-          "size": 10546,
+          "reason": "sectors=11 bytes=10384 vix=calm yields=flat",
+          "size": 10384,
           "said": "hostile 9 \u00b7 neutral 2",
           "bullets": [
             "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Technology, Utilities",
@@ -792,10 +792,10 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=5901",
-          "size": 2248517,
-          "said": "224 rows",
+          "size": 2267684,
+          "said": "207 rows",
           "bullets": [
-            "BPOP, EG, CB, TRV, ALL, FUTU, GLBE, AFG"
+            "EXEL, REGN, NUTX, HRMY, CORT, ADMA, ARGX, INCY"
           ]
         },
         {
@@ -817,9 +817,9 @@
           "path": "data/stock_book/2026-10-30_stock_book.json",
           "role": "required",
           "status": "OK",
-          "reason": "horizons=5 names=206",
-          "size": 1508118,
-          "said": "1d BUY MQ, CNK, YEXT, GDYN, TDS, IOT, HITI, VFF \u00b7 SELL NEOV, OKLO, FCEL, EOSE, INDI, TE \u00b7 -0.5525",
+          "reason": "horizons=5 names=183",
+          "size": 1438790,
+          "said": "1d BUY PRCH, GDYN, HITI, CON, ASTH, AMN, SGRY, CBRL \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE \u00b7 -0.5525",
           "bullets": []
         },
         {
@@ -829,10 +829,10 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 79740,
+          "size": 71035,
           "said": "Stock book \u2014 2026-10-30",
           "bullets": [
-            "_Generated 2026-10-30T14:30:40.179565-04:00_",
+            "_Generated 2026-10-30T14:53:57.859981-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -873,9 +873,9 @@
           "bullets": []
         }
       ],
-      "said": "224 rows",
+      "said": "207 rows",
       "bullets": [
-        "BPOP, EG, CB, TRV, ALL"
+        "EXEL, REGN, NUTX, HRMY, CORT"
       ]
     },
     {
@@ -895,9 +895,9 @@
           "path": "data/stock_book/2026-10-30_stock_book.json",
           "role": "input",
           "status": "OK",
-          "reason": "horizons=5 names=206",
-          "size": 1508118,
-          "said": "1d BUY MQ, CNK, YEXT, GDYN, TDS, IOT, HITI, VFF \u00b7 SELL NEOV, OKLO, FCEL, EOSE, INDI, TE \u00b7 -0.5525",
+          "reason": "horizons=5 names=183",
+          "size": 1438790,
+          "said": "1d BUY PRCH, GDYN, HITI, CON, ASTH, AMN, SGRY, CBRL \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE \u00b7 -0.5525",
           "bullets": []
         },
         {
@@ -946,86 +946,89 @@
   "selections": {
     "buy_1d": [
       {
-        "ticker": "MQ",
-        "score": 0.6336299817765652
-      },
-      {
-        "ticker": "CNK",
-        "score": 0.6305795192802798
-      },
-      {
-        "ticker": "YEXT",
-        "score": 0.48482749786088997
+        "ticker": "PRCH",
+        "score": 0.6012300282358349
       },
       {
         "ticker": "GDYN",
-        "score": 0.5520788377173056
-      },
-      {
-        "ticker": "TDS",
-        "score": 0.43510560203275017
-      },
-      {
-        "ticker": "IOT",
-        "score": 0.21073586684966744
+        "score": 0.5210692406605829
       },
       {
         "ticker": "HITI",
-        "score": 0.47786930495786256
+        "score": 0.5271072413045478
       },
       {
-        "ticker": "VFF",
-        "score": 0.6370276596638982
+        "ticker": "CON",
+        "score": 0.663586724933733
+      },
+      {
+        "ticker": "ASTH",
+        "score": 0.6319861506818658
+      },
+      {
+        "ticker": "AMN",
+        "score": 0.640327945792873
+      },
+      {
+        "ticker": "SGRY",
+        "score": 0.5082161106563792
+      },
+      {
+        "ticker": "CBRL",
+        "score": 0.7147261761979158
+      },
+      {
+        "ticker": "MD",
+        "score": 0.5979788141901266
       }
     ],
     "sell_1d": [
       {
         "ticker": "NEOV",
-        "score": -0.26543706630678077
+        "score": -0.2655631553064647
       },
       {
         "ticker": "OKLO",
-        "score": -0.27668640455976146
+        "score": -0.27097691984932804
       },
       {
         "ticker": "FCEL",
-        "score": -0.2675698000577638
-      },
-      {
-        "ticker": "EOSE",
-        "score": -0.35908652118714685
-      },
-      {
-        "ticker": "INDI",
-        "score": -0.15693324952786808
-      },
-      {
-        "ticker": "TE",
-        "score": -0.19291000994283192
+        "score": -0.26411063816462926
       },
       {
         "ticker": "NNDM",
-        "score": -0.15955388560076683
+        "score": -0.21357094374182206
+      },
+      {
+        "ticker": "POWL",
+        "score": -0.02383773765263708
+      },
+      {
+        "ticker": "EOSE",
+        "score": -0.35656798343359425
+      },
+      {
+        "ticker": "INDI",
+        "score": -0.15356530882326402
+      },
+      {
+        "ticker": "TE",
+        "score": -0.19219621268840714
       },
       {
         "ticker": "SKYX",
-        "score": -0.3790459949149013
+        "score": -0.37458115905953204
       },
       {
         "ticker": "AMSC",
-        "score": -0.12496690899252777
-      },
-      {
-        "ticker": "LUNR",
-        "score": -0.32449242746766377
+        "score": -0.10963010277547997
       }
     ],
     "flatten": {
-      "said": "0 priced buys \u00b7 cash $118,332.69 \u00b7 morning S missing",
+      "said": "0 priced buys \u00b7 cash $122,354.26",
       "bullets": [
         "0 priced buys",
-        "cash $118,332.69",
-        "morning S missing"
+        "cash $122,354.26"
       ]
     },
     "general": {
@@ -3721,6 +3724,30 @@
       "commit_msg": "auto: stock book layer (ubuntu land) [2026-10-30]",
       "workflow": "Pre-Open ALL (predictive one-shot)",
       "run_id": "41088373764",
+      "manifest": "research/input_freeze/2026-10-30/manifest.json"
+    },
+    {
+      "path": "01_daily/2026-10-30_stock_book.md",
+      "at": "2026-10-30T14:54:22-04:00",
+      "commit_msg": "auto: strategy tickets 2026-10-30",
+      "workflow": "Publish strategy tickets",
+      "run_id": "41099329988",
+      "manifest": "research/input_freeze/2026-10-30/manifest.json"
+    },
+    {
+      "path": "data/stock_book/2026-10-30_input_health.json",
+      "at": "2026-10-30T14:54:22-04:00",
+      "commit_msg": "auto: strategy tickets 2026-10-30",
+      "workflow": "Publish strategy tickets",
+      "run_id": "41099329988",
+      "manifest": "research/input_freeze/2026-10-30/manifest.json"
+    },
+    {
+      "path": "data/stock_book/2026-10-30_stock_book.json",
+      "at": "2026-10-30T14:54:22-04:00",
+      "commit_msg": "auto: strategy tickets 2026-10-30",
+      "workflow": "Publish strategy tickets",
+      "run_id": "41099329988",
       "manifest": "research/input_freeze/2026-10-30/manifest.json"
     }
   ]
