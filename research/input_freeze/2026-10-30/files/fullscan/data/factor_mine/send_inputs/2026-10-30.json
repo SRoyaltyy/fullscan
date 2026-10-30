@@ -1,0 +1,90 @@
+{
+  "date": "2026-10-30",
+  "files": [
+    {
+      "bytes": 10472014,
+      "path": "data/factor_mine/panel.json",
+      "sha256": "909e34a7250ba4e645e162cb79115151d290819b5677059e9a58d389e0805008"
+    },
+    {
+      "path": "01_daily/general/2026-10-30_predict.md",
+      "sha256": "f2b8f86e4994c3696832156b4ff03a9f34df88a5e011372c521886a3dd8948a3"
+    },
+    {
+      "path": "01_daily/news/2026-10-30_actions.json",
+      "sha256": "4bb605e5844c922c57337735f5d04c63906143248d139c29eabef78c9b619e62"
+    },
+    {
+      "path": "01_daily/news/2026-10-30_finviz_digest.json",
+      "sha256": "131fa7fbed91ce27579940c44792b76c655a7e7b1989af57e06cf4cd0197b736"
+    },
+    {
+      "path": "01_daily/news/2026-10-30_judge.md",
+      "sha256": "7075f5554aaa67a77d2b8b83588666bcb20edef46d17c70d321f6e267ccf8a66"
+    },
+    {
+      "path": "01_daily/weather/2026-10-30_weather.json",
+      "sha256": "a97980cb7b9be226e0f32f4eaa07dd339c50f4adcd18c5034de5d383cf4d609a"
+    },
+    {
+      "path": "data/ab_checklist/2026-10-30_ab_checklist_enriched.csv",
+      "sha256": "971418001a5d1db488e906528228c6c35e0cd29ddd86fef3fed1bb053a447ec1"
+    },
+    {
+      "path": "data/join/2026-10-30_ranked.csv",
+      "sha256": "9aba8406340c01d1cab3cbf3de762c0e68c369e74009c0c296a4c44366fce4b9"
+    },
+    {
+      "path": "data/peers/2026-10-30_peer_rs.csv",
+      "sha256": "ddfb7334677cd9faeca962d70765b32d2761a81b9eb437bd02384acd0fa85445"
+    },
+    {
+      "path": "data/sleeve_merge/today.json",
+      "sha256": "af6e7795174a77053ad333c58d1e62d9629b06947af3a19933c7c66d74f0bcdd"
+    },
+    {
+      "path": "excel_bot/suggestions/suggestions.csv",
+      "sha256": "97d91a4b16196d32653d22d453f8c1c0e61a394039dcea090595d4203420e7be"
+    }
+  ],
+  "picks": {
+    "union_hot_n4_h1": [
+      "SLN",
+      "UPBD",
+      "FIRY",
+      "CVNA"
+    ],
+    "union_hot_n4_holdup": [
+      "SLN",
+      "UPBD",
+      "FIRY",
+      "CVNA"
+    ]
+  },
+  "prices": [
+    {
+      "px": 11.18,
+      "px_src": "session_export",
+      "ticker": "SLN"
+    },
+    {
+      "px": 15.8,
+      "px_src": "session_export",
+      "ticker": "UPBD"
+    },
+    {
+      "px": 12.51,
+      "px_src": "session_export",
+      "ticker": "FIRY"
+    },
+    {
+      "px": 60.5,
+      "px_src": "session_export",
+      "ticker": "CVNA"
+    }
+  ],
+  "reason": "",
+  "rows": [],
+  "sha256": "f43a1be89aaf89e2f51ba12abb9f4a4ab3533b125640cb9c4fe1319b8955334d",
+  "source": "no_same_day_panel"
+}

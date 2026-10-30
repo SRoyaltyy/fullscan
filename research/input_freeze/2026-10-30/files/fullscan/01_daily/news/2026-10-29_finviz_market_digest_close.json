@@ -1,0 +1,123 @@
+{
+  "date": "2026-10-29",
+  "generated_at": "2026-10-29T16:23:58.235134-04:00",
+  "timezone": "America/New_York",
+  "source": "live",
+  "source_url": "https://elite.finviz.com/",
+  "archive_snapshot_ts": null,
+  "archive_snapshot_at": null,
+  "archive_url": null,
+  "clock_legal": true,
+  "clock_same_morning": false,
+  "clock_use": "next_open",
+  "clock_legal_for": "2026-10-30",
+  "capture_slot": "close",
+  "clock_rule": "Live post-close answer-key (~16:05 ET). Always next_open for the NEXT session (2026-10-30) — never same_morning. Writes *_finviz_market_digest_close.* only. Capture only — not tape_anchor / predict / #210.",
+  "kind": "finviz_homepage_market_digest_close",
+  "represents": "Finviz homepage post-close answer-key. clock_use is always next_open; clock_legal_for is the next NYSE session. Lives at *_finviz_market_digest_close.*. Does not replace the same_morning warm-up file. Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "US stocks closed lower as stronger GDP and PCE data followed Fed rate hold while heavy AI spending and earnings resets weighed on tech",
+  "raw_text": "- The S&P 500 ($SPX) fell about 0.3% to 7,720, the Dow ($DJI) slipped about 0.25% to 52,343, the Nasdaq 100 ($NDX) lost roughly 1.4%, while the Russell 2000 (IWM) climbed about 1% and finished higher.\n- Alphabet (GOOGL) dropped about 13% after Q3 revenue of $127.6 billion missed estimates on slower search and advertising growth and the company reported roughly $9.1 billion in negative free cash flow tied to heavy AI capex.\n- Alphabet maintained a full-year capex outlook of $195–205 billion and disclosed AI-related commitments exceeding $900 billion, reviving investor concerns over the scale of AI spending.\n- ServiceNow (NOW) fell around 27% after a Q3 profit miss and underwhelming Q4 guidance, while Fortinet (FTNT) declined about 20% after cutting its full-year service revenue forecast.\n- Marvell Technology (MRVL) declined about 13% on reports of advanced talks to acquire Lumentum (LITE), adding to pressure in semiconductor names.\n- Caterpillar (CAT) lost about 9% despite beating EPS estimates with $7.20 and posting record Q3 sales, as investor concerns about the sustainability of AI data-center spending weighed on AI-exposed industrials.\n- Eli Lilly (LLY) gained around 7% after posting Q3 revenue of $24.4 billion versus $22.62 billion expected and raising its full-year sales forecast for the third time on strong Zepbound demand.\n- Crocs (CROX) jumped 25% after raising its 2026 outlook and citing a turnaround in its HEYDUDE brand, while Glaukos (GKOS) rallied 33% on record Q3 sales of $211 million versus $168 million expected.\n- The Bureau of Economic Analysis reported Q3 GDP growth of 3.4% and a September PCE price index gain of 0.5% month-over-month and 3.6% year-over-year, following the Fed’s decision a day earlier to hold rates at 3.75–4%.\n- DoorDash (DASH) announced a $17 billion acquisition of Instacart after beating Q3 estimates, while Amazon (AMZN) and Intel (INTC) reported earnings after the close and both declined sharply in extended trading.",
+  "raw_summary_md": "- The **S&P 500 ([$SPX](https://finviz.com/index/SPX?p=d)) fell about 0.3% to 7,720**, the **Dow ([$DJI](https://finviz.com/index/DJI?p=d)) slipped about 0.25% to 52,343**, the **Nasdaq 100 ([$NDX](https://finviz.com/index/NDX?p=d)) lost roughly 1.4%**, while the **Russell 2000 ([IWM](https://finviz.com/quote?t=IWM)) climbed about 1%** and finished higher.\n- **Alphabet ([GOOGL](https://finviz.com/quote?t=GOOGL)) dropped about 13%** after Q3 revenue of **$127.6 billion missed estimates** on slower search and advertising growth and the company reported roughly **$9.1 billion in negative free cash flow** tied to heavy AI capex.\n- Alphabet maintained a **full-year capex outlook of $195–205 billion** and disclosed **AI-related commitments exceeding $900 billion**, reviving investor concerns over the scale of AI spending.\n- **ServiceNow ([NOW](https://finviz.com/quote?t=NOW)) fell around 27%** after a Q3 profit miss and underwhelming Q4 guidance, while **Fortinet ([FTNT](https://finviz.com/quote?t=FTNT)) declined about 20%** after cutting its full-year service revenue forecast.\n- **Marvell Technology ([MRVL](https://finviz.com/quote?t=MRVL)) declined about 13%** on reports of advanced talks to acquire **Lumentum ([LITE](https://finviz.com/quote?t=LITE))**, adding to pressure in semiconductor names.\n- **Caterpillar ([CAT](https://finviz.com/quote?t=CAT)) lost about 9%** despite beating EPS estimates with **$7.20 and posting record Q3 sales**, as investor concerns about the sustainability of AI data-center spending weighed on AI-exposed industrials.\n- **Eli Lilly ([LLY](https://finviz.com/quote?t=LLY)) gained around 7%** after posting **Q3 revenue of $24.4 billion versus $22.62 billion expected** and raising its full-year sales forecast for the third time on strong Zepbound demand.\n- **Crocs ([CROX](https://finviz.com/quote?t=CROX)) jumped 25%** after raising its 2026 outlook and citing a turnaround in its HEYDUDE brand, while **Glaukos ([GKOS](https://finviz.com/quote?t=GKOS)) rallied 33% on record Q3 sales of $211 million versus $168 million expected**.\n- The Bureau of Economic Analysis reported **Q3 GDP growth of 3.4%** and a **September PCE price index gain of 0.5% month-over-month and 3.6% year-over-year**, following the **Fed’s decision a day earlier to hold rates at 3.75–4%**.\n- **DoorDash ([DASH](https://finviz.com/quote?t=DASH)) announced a $17 billion acquisition of Instacart after beating Q3 estimates**, while **Amazon ([AMZN](https://finviz.com/quote?t=AMZN)) and Intel ([INTC](https://finviz.com/quote?t=INTC)) reported earnings after the close and both declined sharply in extended trading**.",
+  "index_moves": [
+    {
+      "name": "S&P 500",
+      "code": "SPX",
+      "change_pct": -0.3,
+      "verb": "fell"
+    },
+    {
+      "name": "Dow",
+      "code": "DJI",
+      "change_pct": -0.25,
+      "verb": "slipped"
+    },
+    {
+      "name": "Nasdaq",
+      "code": "COMP",
+      "change_pct": -1.4,
+      "verb": "lost"
+    },
+    {
+      "name": "Russell 2000",
+      "code": "RUT",
+      "change_pct": 1.0,
+      "verb": "climbed"
+    }
+  ],
+  "oil": null,
+  "cpi": null,
+  "fed_odds": {
+    "pct": 3.6,
+    "action": "hold",
+    "text": "3.6% year-over-year, following the Fed’s decision a day earlier to hold"
+  },
+  "named_tickers": [
+    "GOOGL",
+    "NOW",
+    "FTNT",
+    "MRVL",
+    "LITE",
+    "CAT",
+    "LLY",
+    "CROX",
+    "GKOS",
+    "DASH",
+    "AMZN",
+    "INTC"
+  ],
+  "named_leaders": [
+    "GOOGL",
+    "NOW",
+    "FTNT",
+    "MRVL",
+    "LITE",
+    "CAT",
+    "LLY",
+    "CROX",
+    "GKOS",
+    "DASH",
+    "AMZN",
+    "INTC"
+  ],
+  "calendar": [],
+  "prior_close": {
+    "spx": -0.3,
+    "nasdaq": -1.4,
+    "dow": -0.25
+  },
+  "cpi_fed": {
+    "cpi": null,
+    "fed_odds": {
+      "pct": 3.6,
+      "action": "hold",
+      "text": "3.6% year-over-year, following the Fed’s decision a day earlier to hold"
+    }
+  },
+  "next_session_calendar": {
+    "housing": false,
+    "retail": false,
+    "fed": true,
+    "bullets": [],
+    "text": ""
+  },
+  "earnings_slate": {
+    "tickers": [
+      "DASH",
+      "AMZN",
+      "INTC"
+    ],
+    "text": "DoorDash (DASH) announced a $17 billion acquisition of Instacart after beating Q3 estimates, while Amazon (AMZN) and Intel (INTC) reported earnings after the close and both declined sharply in extended trading."
+  },
+  "geo_grain": {
+    "geo": false,
+    "grain": false,
+    "flags": [],
+    "text": ""
+  },
+  "finviz_id": 323287,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-10-29T16:08:35.213",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "bad"
+}
