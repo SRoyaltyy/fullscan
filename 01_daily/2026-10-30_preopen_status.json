@@ -1,8 +1,8 @@
 {
   "date": "2026-10-30",
-  "generated_at": "2026-10-30T06:14:26.923559-04:00",
-  "run_id": "41026024183",
-  "runner": "GitHub Actions 1000043219",
+  "generated_at": "2026-10-30T06:20:46.517559-04:00",
+  "run_id": "41034818182",
+  "runner": "GitHub Actions 1000043301",
   "all_ok": false,
   "qc_all_ok": false,
   "book_ok": false,
@@ -34,13 +34,13 @@
   "github_runs": [
     {
       "workflow": "preopen_all.yml",
-      "n_today": 1,
+      "n_today": 2,
       "latest": {
-        "id": 41026024183,
+        "id": 41034818182,
         "status": "in_progress",
         "conclusion": null,
         "event": "workflow_dispatch",
-        "html_url": "https://github.com/SRoyaltyy/fullscan/actions/runs/41026024183"
+        "html_url": "https://github.com/SRoyaltyy/fullscan/actions/runs/41034818182"
       }
     },
     {
@@ -48,8 +48,8 @@
       "n_today": 1,
       "latest": {
         "id": 41025996551,
-        "status": "in_progress",
-        "conclusion": null,
+        "status": "completed",
+        "conclusion": "cancelled",
         "event": "workflow_dispatch",
         "html_url": "https://github.com/SRoyaltyy/fullscan/actions/runs/41025996551"
       }
@@ -81,8 +81,14 @@
     },
     {
       "workflow": "catalyst_daily.yml",
-      "n_today": 0,
-      "latest": null
+      "n_today": 1,
+      "latest": {
+        "id": 41034819900,
+        "status": "completed",
+        "conclusion": "failure",
+        "event": "workflow_dispatch",
+        "html_url": "https://github.com/SRoyaltyy/fullscan/actions/runs/41034819900"
+      }
     },
     {
       "workflow": "daily_pipeline.yml",
