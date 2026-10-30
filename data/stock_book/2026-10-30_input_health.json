@@ -1,6 +1,6 @@
 {
   "date": "2026-10-30",
-  "generated_at": "2026-10-30T06:31:10.528335-04:00",
+  "generated_at": "2026-10-30T07:53:34.172894-04:00",
   "inputs": [
     {
       "name": "finviz_export",
@@ -26,16 +26,16 @@
     {
       "name": "news_actions",
       "family": "news",
-      "status": "missing",
-      "n": 0,
+      "status": "ok",
+      "n": 83,
       "detail": ""
     },
     {
       "name": "news_judge",
       "family": "news",
-      "status": "missing",
+      "status": "ok",
       "n": null,
-      "detail": "LLM ticker tilts absent"
+      "detail": ""
     },
     {
       "name": "finviz_digest",
@@ -68,23 +68,23 @@
     {
       "name": "events",
       "family": "addon",
-      "status": "stale",
+      "status": "ok",
       "n": null,
-      "detail": "scan_date=2026-10-26 (4d old \u2014 tilt ignored)"
+      "detail": "30 events, scan_date=2026-10-30"
     },
     {
       "name": "map_heat",
       "family": "heat",
-      "status": "degraded",
-      "n": 15,
-      "detail": "morning research missing; Finviz industry residuals applied (15 OVERRIDE/SPLIT rows)"
+      "status": "ok",
+      "n": null,
+      "detail": "post-close baseline + morning evidence refresh"
     },
     {
       "name": "general_predict",
       "family": "general",
-      "status": "missing",
+      "status": "ok",
       "n": null,
-      "detail": "s_general=0 \u2014 weight renormalized away"
+      "detail": ""
     },
     {
       "name": "sector_predicts",
@@ -103,20 +103,20 @@
   ],
   "family_status": {
     "join": "ok",
-    "news": "missing",
+    "news": "ok",
     "ab": "ok",
     "peer": "ok",
-    "heat": "degraded",
-    "general": "missing",
+    "heat": "ok",
+    "general": "ok",
     "sector": "missing"
   },
   "families_present": {
     "join": true,
-    "news": false,
+    "news": true,
     "ab": true,
     "peer": true,
     "heat": true,
-    "general": false,
+    "general": true,
     "sector": false
   },
   "learn_grade": true,
