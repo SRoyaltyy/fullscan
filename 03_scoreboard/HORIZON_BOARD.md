@@ -1,6 +1,6 @@
 # Horizon board — multi-timeframe prediction grades
 
-Updated: 2026-10-29. Calls are graded at T+h trading days using the scoreboard's own close history. Magnitude bands scale by √h (a 'mild' month ≈ ±1.4%, a 'severe' month ≈ ±9.2%).
+Updated: 2026-10-30. Calls are graded at T+h trading days using the scoreboard's own close history. Magnitude bands scale by √h (a 'mild' month ≈ ±1.4%, a 'severe' month ≈ ±9.2%).
 
 ## Hit rates by topic × horizon
 
@@ -85,5 +85,5 @@ Updated: 2026-10-29. Calls are graded at T+h trading days using the scoreboard's
 | 2026-09-03 | sector:Consumer Cyclical | 1m | flat/mild | -4.26% (down/mild) | ❌ | ✅ |
 | 2026-09-03 | sector:Basic Materials | 1m | flat/mild | -5.61% (down/notable) | ❌ | ❌ |
 
-*261 calls still maturing (T+h close not recorded yet).*
+*265 calls still maturing (T+h close not recorded yet).*
 
