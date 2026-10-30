@@ -52,7 +52,7 @@
   }
  },
  "date": "2026-10-30",
- "generated_at": "2026-10-30T07:40:52-04:00",
+ "generated_at": "2026-10-30T08:15:10-04:00",
  "strategies": [
   {
    "buys": [
@@ -67,7 +67,7 @@
    ],
    "family": "factor_mine",
    "name": "coil_h3_exit_alarm",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -76,7 +76,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "combo_e1er_5050_shared",
-   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -85,7 +85,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "combo_e1s_7030_shared",
-   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -94,7 +94,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "combo_ee1_3070_shared",
-   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -103,7 +103,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "combo_ee1_5050_shared",
-   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -112,7 +112,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "combo_ee1_7030_shared",
-   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -121,7 +121,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "combo_eer_5050_shared",
-   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -132,7 +132,7 @@
    ],
    "family": "factor_mine",
    "name": "combo_ef_3070_shared",
-   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -143,7 +143,7 @@
    ],
    "family": "factor_mine",
    "name": "combo_ef_5050_shared",
-   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -154,7 +154,7 @@
    ],
    "family": "factor_mine",
    "name": "combo_ef_7030_shared",
-   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -168,7 +168,7 @@
    ],
    "family": "factor_mine",
    "name": "combo_eh_3070_shared",
-   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -182,7 +182,7 @@
    ],
    "family": "factor_mine",
    "name": "combo_eh_5050_shared",
-   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -196,7 +196,7 @@
    ],
    "family": "factor_mine",
    "name": "combo_eh_7030_shared",
-   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -210,7 +210,7 @@
    ],
    "family": "factor_mine",
    "name": "combo_ehs_601525_shared",
-   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -224,7 +224,7 @@
    ],
    "family": "factor_mine",
    "name": "combo_ehs_702010_shared",
-   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -233,7 +233,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "combo_ej_5050_shared",
-   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -248,7 +248,7 @@
    ],
    "family": "factor_mine",
    "name": "combo_en_3070_shared",
-   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -263,7 +263,7 @@
    ],
    "family": "factor_mine",
    "name": "combo_en_5050_shared",
-   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -278,7 +278,7 @@
    ],
    "family": "factor_mine",
    "name": "combo_en_7030_shared",
-   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -287,7 +287,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "combo_ers_7030_shared",
-   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -296,7 +296,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "combo_es_8020_shared",
-   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -305,7 +305,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "combo_es_9010_shared",
-   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -316,7 +316,7 @@
    ],
    "family": "factor_mine",
    "name": "combo_fe1_5050_shared",
-   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -327,7 +327,7 @@
    ],
    "family": "factor_mine",
    "name": "combo_fe_5050_shared",
-   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -338,7 +338,7 @@
    ],
    "family": "factor_mine",
    "name": "combo_fer_5050_shared",
-   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -349,7 +349,7 @@
    ],
    "family": "factor_mine",
    "name": "combo_fes_403030_shared",
-   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -364,7 +364,7 @@
    ],
    "family": "factor_mine",
    "name": "combo_fh_7030_shared",
-   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -375,7 +375,7 @@
    ],
    "family": "factor_mine",
    "name": "combo_fse_333_shared",
-   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -389,7 +389,7 @@
    ],
    "family": "factor_mine",
    "name": "combo_he1_5050_shared",
-   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -403,7 +403,7 @@
    ],
    "family": "factor_mine",
    "name": "combo_her_5050_shared",
-   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -418,7 +418,7 @@
    ],
    "family": "factor_mine",
    "name": "combo_hf_5050_shared",
-   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -432,7 +432,7 @@
    ],
    "family": "factor_mine",
    "name": "combo_hj_5050_shared",
-   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -450,7 +450,7 @@
    ],
    "family": "factor_mine",
    "name": "combo_hn_3070_shared",
-   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -468,7 +468,7 @@
    ],
    "family": "factor_mine",
    "name": "combo_hn_5050_shared",
-   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -486,7 +486,7 @@
    ],
    "family": "factor_mine",
    "name": "combo_hn_7030_shared",
-   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -495,7 +495,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "combo_je1_5050_shared",
-   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -504,7 +504,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "combo_jer_5050_shared",
-   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -515,7 +515,7 @@
    ],
    "family": "factor_mine",
    "name": "combo_jf_5050_shared",
-   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -524,7 +524,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "combo_jse_333_shared",
-   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -539,7 +539,7 @@
    ],
    "family": "factor_mine",
    "name": "combo_ne1_5050_shared",
-   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -554,7 +554,7 @@
    ],
    "family": "factor_mine",
    "name": "combo_ner_5050_shared",
-   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -570,7 +570,7 @@
    ],
    "family": "factor_mine",
    "name": "combo_nf_5050_shared",
-   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -585,7 +585,7 @@
    ],
    "family": "factor_mine",
    "name": "combo_nj_5050_shared",
-   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -600,7 +600,7 @@
    ],
    "family": "factor_mine",
    "name": "combo_nse_333_shared",
-   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -614,7 +614,7 @@
    ],
    "family": "factor_mine",
    "name": "combo_oh_5050_shared",
-   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -625,7 +625,7 @@
    ],
    "family": "factor_mine",
    "name": "combo_p2s_5050_shared",
-   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -636,7 +636,7 @@
    ],
    "family": "factor_mine",
    "name": "combo_ps_5050_shared",
-   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -647,7 +647,7 @@
    ],
    "family": "factor_mine",
    "name": "combo_ps_7030_shared",
-   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -656,7 +656,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "combo_se1_5050_shared",
-   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -665,7 +665,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "combo_se_3070_shared",
-   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -674,7 +674,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "combo_se_5050_shared",
-   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -683,7 +683,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "combo_se_5050_skip",
-   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -692,7 +692,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "combo_se_5050_split",
-   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -701,7 +701,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "combo_se_5050_weather",
-   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -710,7 +710,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "combo_se_7030_shared",
-   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -724,7 +724,7 @@
    ],
    "family": "factor_mine",
    "name": "combo_seh_333_shared",
-   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -738,7 +738,7 @@
    ],
    "family": "factor_mine",
    "name": "combo_seh_333_skip",
-   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -752,7 +752,7 @@
    ],
    "family": "factor_mine",
    "name": "combo_seh_333_split",
-   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -766,7 +766,7 @@
    ],
    "family": "factor_mine",
    "name": "combo_seh_333_weather",
-   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -780,7 +780,7 @@
    ],
    "family": "factor_mine",
    "name": "combo_seh_403525_shared",
-   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -794,7 +794,7 @@
    ],
    "family": "factor_mine",
    "name": "combo_seh_404020_shared",
-   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -808,7 +808,7 @@
    ],
    "family": "factor_mine",
    "name": "combo_seh_451540_shared",
-   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -822,7 +822,7 @@
    ],
    "family": "factor_mine",
    "name": "combo_seh_502525_shared",
-   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -836,7 +836,7 @@
    ],
    "family": "factor_mine",
    "name": "combo_seh_502525_split",
-   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -850,7 +850,7 @@
    ],
    "family": "factor_mine",
    "name": "combo_seh_601525_shared",
-   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -859,7 +859,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "combo_ser_5050_shared",
-   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -870,7 +870,7 @@
    ],
    "family": "factor_mine",
    "name": "combo_sf_3070_shared",
-   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -881,7 +881,7 @@
    ],
    "family": "factor_mine",
    "name": "combo_sf_5050_shared",
-   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -892,7 +892,7 @@
    ],
    "family": "factor_mine",
    "name": "combo_sf_7030_shared",
-   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -906,7 +906,7 @@
    ],
    "family": "factor_mine",
    "name": "combo_sh_3070_shared",
-   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -920,7 +920,7 @@
    ],
    "family": "factor_mine",
    "name": "combo_sh_5050_shared",
-   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -934,7 +934,7 @@
    ],
    "family": "factor_mine",
    "name": "combo_sh_7030_shared",
-   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -948,7 +948,7 @@
    ],
    "family": "factor_mine",
    "name": "combo_sh_macd_5050_shared",
-   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -957,7 +957,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "combo_sj_3070_shared",
-   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -966,7 +966,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "combo_sj_5050_shared",
-   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -975,7 +975,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "combo_sj_7030_shared",
-   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -990,7 +990,7 @@
    ],
    "family": "factor_mine",
    "name": "combo_sn_3070_shared",
-   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -1005,7 +1005,7 @@
    ],
    "family": "factor_mine",
    "name": "combo_sn_5050_shared",
-   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -1020,7 +1020,7 @@
    ],
    "family": "factor_mine",
    "name": "combo_sn_7030_shared",
-   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -1035,7 +1035,7 @@
    ],
    "family": "factor_mine",
    "name": "combo_snj_333_shared",
-   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -1046,7 +1046,7 @@
    ],
    "family": "factor_mine",
    "name": "flatten_h1",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -1057,7 +1057,7 @@
    ],
    "family": "factor_mine",
    "name": "flatten_h3",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -1068,7 +1068,7 @@
    ],
    "family": "factor_mine",
    "name": "flatten_h3_cut",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -1079,7 +1079,7 @@
    ],
    "family": "factor_mine",
    "name": "flatten_h3_half",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -1090,7 +1090,7 @@
    ],
    "family": "factor_mine",
    "name": "flatten_h3_rankw",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -1101,7 +1101,7 @@
    ],
    "family": "factor_mine",
    "name": "flatten_h3_sboost",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -1112,7 +1112,7 @@
    ],
    "family": "factor_mine",
    "name": "flatten_h3_sizeup",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -1123,7 +1123,7 @@
    ],
    "family": "factor_mine",
    "name": "flatten_h3_time",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -1134,7 +1134,7 @@
    ],
    "family": "factor_mine",
    "name": "flatten_h3_topheavy",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -1145,7 +1145,7 @@
    ],
    "family": "factor_mine",
    "name": "flatten_h3_trail",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -1156,7 +1156,7 @@
    ],
    "family": "factor_mine",
    "name": "flatten_h5",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -1167,7 +1167,7 @@
    ],
    "family": "factor_mine",
    "name": "flatten_h5_cut",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -1178,7 +1178,7 @@
    ],
    "family": "factor_mine",
    "name": "flatten_h5_half",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -1189,7 +1189,7 @@
    ],
    "family": "factor_mine",
    "name": "flatten_h5_rankw",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -1200,7 +1200,7 @@
    ],
    "family": "factor_mine",
    "name": "flatten_h5_s8",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -1211,7 +1211,7 @@
    ],
    "family": "factor_mine",
    "name": "flatten_h5_sboost",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -1222,7 +1222,7 @@
    ],
    "family": "factor_mine",
    "name": "flatten_h5_sizeup",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -1233,7 +1233,7 @@
    ],
    "family": "factor_mine",
    "name": "flatten_h5_time",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -1244,7 +1244,7 @@
    ],
    "family": "factor_mine",
    "name": "flatten_h5_topheavy",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -1255,7 +1255,7 @@
    ],
    "family": "factor_mine",
    "name": "flatten_h5_trail",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -1264,7 +1264,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "flatten_live_h1",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -1273,7 +1273,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "flatten_live_h1_cut",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -1282,7 +1282,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "flatten_live_h1_half",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -1291,7 +1291,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "flatten_live_h1_rankw",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -1300,7 +1300,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "flatten_live_h1_sboost",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -1309,7 +1309,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "flatten_live_h1_sizeup",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -1318,7 +1318,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "flatten_live_h1_time",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -1327,7 +1327,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "flatten_live_h1_topheavy",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -1336,7 +1336,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "flatten_live_h1_trail",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -1345,7 +1345,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "flatten_live_h3",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -1354,7 +1354,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "flatten_live_h5",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -1363,7 +1363,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "flatten_vol_g_h3",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -1372,7 +1372,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "flatten_white_yday_h5",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -1389,7 +1389,7 @@
    ],
    "family": "factor_mine",
    "name": "ohlc_hot_coil_h1",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -1407,7 +1407,7 @@
    ],
    "family": "factor_mine",
    "name": "ohlc_hot_h1",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -1425,7 +1425,7 @@
    ],
    "family": "factor_mine",
    "name": "ohlc_hot_h3",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -1443,7 +1443,7 @@
    ],
    "family": "factor_mine",
    "name": "ohlc_hot_h5",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -1452,7 +1452,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "oppset_h1",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -1461,7 +1461,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "overnight_h1",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -1470,7 +1470,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "overnight_h3",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -1479,7 +1479,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "overnight_h5",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -1488,7 +1488,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "overnight_mega_green_h1",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -1497,7 +1497,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "overnight_mega_h1",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -1506,7 +1506,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "overnight_mega_h2",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -1524,7 +1524,7 @@
    ],
    "family": "factor_mine",
    "name": "probable_h1",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -1542,7 +1542,7 @@
    ],
    "family": "factor_mine",
    "name": "probable_h3",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -1560,7 +1560,7 @@
    ],
    "family": "factor_mine",
    "name": "probable_h5",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -1575,7 +1575,7 @@
    ],
    "family": "factor_mine",
    "name": "probable_probable_ok_h1",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -1590,7 +1590,7 @@
    ],
    "family": "factor_mine",
    "name": "probable_probable_ok_h3",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -1607,7 +1607,7 @@
    ],
    "family": "factor_mine",
    "name": "short_alarm_h1",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -1624,7 +1624,7 @@
    ],
    "family": "factor_mine",
    "name": "short_alarm_h3",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -1633,7 +1633,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "short_clk_ext_veto_h3",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -1642,7 +1642,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "short_clk_ext_veto_opp_h3",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -1651,7 +1651,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "short_clk_neg_weak_fail_h3",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -1660,7 +1660,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "short_clk_neg_weak_fail_opp_h3",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -1678,7 +1678,7 @@
    ],
    "family": "factor_mine",
    "name": "short_extended_h1",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -1696,7 +1696,7 @@
    ],
    "family": "factor_mine",
    "name": "short_extended_h3",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -1714,7 +1714,7 @@
    ],
    "family": "factor_mine",
    "name": "short_last_red_h1",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -1732,7 +1732,7 @@
    ],
    "family": "factor_mine",
    "name": "short_last_red_h3",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -1750,7 +1750,7 @@
    ],
    "family": "factor_mine",
    "name": "short_macd_dn_h1",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -1768,7 +1768,7 @@
    ],
    "family": "factor_mine",
    "name": "short_macd_dn_h3",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -1777,7 +1777,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "short_news_head_h3",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -1786,7 +1786,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "short_news_or_h3",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -1795,7 +1795,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "short_news_pack_h3",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -1804,7 +1804,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "short_news_r_h1",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -1813,7 +1813,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "short_news_r_h3",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -1822,7 +1822,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "short_news_r_macd_h3",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -1831,7 +1831,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "short_r_down_h1",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -1840,7 +1840,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "short_r_down_h3",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -1856,7 +1856,7 @@
    ],
    "family": "factor_mine",
    "name": "short_rsi_ob_h1",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -1872,7 +1872,7 @@
    ],
    "family": "factor_mine",
    "name": "short_rsi_ob_h3",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -1890,7 +1890,7 @@
    ],
    "family": "factor_mine",
    "name": "union_ab_g_h1",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -1908,7 +1908,7 @@
    ],
    "family": "factor_mine",
    "name": "union_ab_g_h3",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -1926,7 +1926,7 @@
    ],
    "family": "factor_mine",
    "name": "union_blue_coil_h1",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -1944,7 +1944,7 @@
    ],
    "family": "factor_mine",
    "name": "union_blue_coil_h3",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -1962,7 +1962,7 @@
    ],
    "family": "factor_mine",
    "name": "union_blue_h1",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -1980,7 +1980,7 @@
    ],
    "family": "factor_mine",
    "name": "union_blue_h3",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -1989,7 +1989,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_blue_vol_h1",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -1998,7 +1998,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_blue_vol_h3",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -2016,7 +2016,7 @@
    ],
    "family": "factor_mine",
    "name": "union_break10_h1",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -2034,7 +2034,7 @@
    ],
    "family": "factor_mine",
    "name": "union_break10_h3",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -2052,7 +2052,7 @@
    ],
    "family": "factor_mine",
    "name": "union_candle_h1",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -2070,7 +2070,7 @@
    ],
    "family": "factor_mine",
    "name": "union_candle_h3",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -2088,7 +2088,7 @@
    ],
    "family": "factor_mine",
    "name": "union_candle_score_h1",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -2106,7 +2106,7 @@
    ],
    "family": "factor_mine",
    "name": "union_candle_score_h3",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -2115,7 +2115,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_catal_present_h1",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -2124,7 +2124,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_catal_present_h3",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -2133,7 +2133,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_clk_earn_guide_react_h1",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -2142,7 +2142,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_clk_flow_coil_h1",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -2157,7 +2157,7 @@
    ],
    "family": "factor_mine",
    "name": "union_clk_fresh_cat_coil_h1",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -2166,7 +2166,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_clk_fresh_cat_coil_opp_h1",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -2175,7 +2175,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_clk_hold_vs_sector_h1",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -2184,7 +2184,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_clk_hold_vs_sector_opp_h1",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -2196,7 +2196,7 @@
    ],
    "family": "factor_mine",
    "name": "union_clk_insider_cash_stab_h3",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -2214,7 +2214,7 @@
    ],
    "family": "factor_mine",
    "name": "union_clk_mom_break_peer_h1",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -2223,7 +2223,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_clk_mom_break_peer_opp_h1",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -2235,7 +2235,7 @@
    ],
    "family": "factor_mine",
    "name": "union_clk_nr7_mom_h1",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -2244,7 +2244,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_clk_nr7_mom_opp_h1",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -2253,7 +2253,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_clk_r_up_coil_h1",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -2271,7 +2271,7 @@
    ],
    "family": "factor_mine",
    "name": "union_coil_green_h1",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -2289,7 +2289,7 @@
    ],
    "family": "factor_mine",
    "name": "union_coil_green_h3",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -2307,7 +2307,7 @@
    ],
    "family": "factor_mine",
    "name": "union_coil_off_h1",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -2325,7 +2325,7 @@
    ],
    "family": "factor_mine",
    "name": "union_coil_off_h3",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -2343,7 +2343,7 @@
    ],
    "family": "factor_mine",
    "name": "union_coil_off_h5",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -2361,7 +2361,7 @@
    ],
    "family": "factor_mine",
    "name": "union_cond_h1",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -2379,7 +2379,7 @@
    ],
    "family": "factor_mine",
    "name": "union_cond_h3",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -2393,7 +2393,7 @@
    ],
    "family": "factor_mine",
    "name": "union_cond_n4_h3",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -2402,7 +2402,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_e_fresh_h1",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -2411,7 +2411,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_e_fresh_h3",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -2420,7 +2420,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_e_green_h1",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -2429,7 +2429,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_e_green_h3",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -2438,7 +2438,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_earn_react_h1",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -2447,7 +2447,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_earn_react_h3",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -2458,7 +2458,7 @@
    ],
    "family": "factor_mine",
    "name": "union_flow_in_h1",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -2469,7 +2469,7 @@
    ],
    "family": "factor_mine",
    "name": "union_flow_in_h3",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -2480,7 +2480,7 @@
    ],
    "family": "factor_mine",
    "name": "union_flow_in_h5",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -2489,7 +2489,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_flow_in_white_h1",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -2498,7 +2498,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_flow_in_white_h3",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -2516,7 +2516,7 @@
    ],
    "family": "factor_mine",
    "name": "union_h1",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -2534,7 +2534,7 @@
    ],
    "family": "factor_mine",
    "name": "union_h1_cut",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -2552,7 +2552,7 @@
    ],
    "family": "factor_mine",
    "name": "union_h1_half",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -2570,7 +2570,7 @@
    ],
    "family": "factor_mine",
    "name": "union_h1_rankw",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -2588,7 +2588,7 @@
    ],
    "family": "factor_mine",
    "name": "union_h1_sboost",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -2606,7 +2606,7 @@
    ],
    "family": "factor_mine",
    "name": "union_h1_sizeup",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -2624,7 +2624,7 @@
    ],
    "family": "factor_mine",
    "name": "union_h1_time",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -2642,7 +2642,7 @@
    ],
    "family": "factor_mine",
    "name": "union_h1_topheavy",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -2660,7 +2660,7 @@
    ],
    "family": "factor_mine",
    "name": "union_h1_trail",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -2678,7 +2678,7 @@
    ],
    "family": "factor_mine",
    "name": "union_h3",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -2696,7 +2696,7 @@
    ],
    "family": "factor_mine",
    "name": "union_h3_cut",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -2714,7 +2714,7 @@
    ],
    "family": "factor_mine",
    "name": "union_h3_exit_alarm",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -2732,7 +2732,7 @@
    ],
    "family": "factor_mine",
    "name": "union_h3_exit_news_r",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -2750,7 +2750,7 @@
    ],
    "family": "factor_mine",
    "name": "union_h3_exit_red",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -2768,7 +2768,7 @@
    ],
    "family": "factor_mine",
    "name": "union_h3_half",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -2786,7 +2786,7 @@
    ],
    "family": "factor_mine",
    "name": "union_h3_rankw",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -2804,7 +2804,7 @@
    ],
    "family": "factor_mine",
    "name": "union_h3_sboost",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -2822,7 +2822,7 @@
    ],
    "family": "factor_mine",
    "name": "union_h3_sizeup",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -2840,7 +2840,7 @@
    ],
    "family": "factor_mine",
    "name": "union_h3_time",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -2858,7 +2858,7 @@
    ],
    "family": "factor_mine",
    "name": "union_h3_topheavy",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -2876,7 +2876,7 @@
    ],
    "family": "factor_mine",
    "name": "union_h3_trail",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -2894,7 +2894,7 @@
    ],
    "family": "factor_mine",
    "name": "union_h5",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -2912,7 +2912,7 @@
    ],
    "family": "factor_mine",
    "name": "union_h5_cut",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -2930,7 +2930,7 @@
    ],
    "family": "factor_mine",
    "name": "union_h5_exit_alarm",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -2948,7 +2948,7 @@
    ],
    "family": "factor_mine",
    "name": "union_h5_half",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -2966,7 +2966,7 @@
    ],
    "family": "factor_mine",
    "name": "union_h5_rankw",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -2984,7 +2984,7 @@
    ],
    "family": "factor_mine",
    "name": "union_h5_sboost",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -3002,7 +3002,7 @@
    ],
    "family": "factor_mine",
    "name": "union_h5_sizeup",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -3020,7 +3020,7 @@
    ],
    "family": "factor_mine",
    "name": "union_h5_time",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -3038,7 +3038,7 @@
    ],
    "family": "factor_mine",
    "name": "union_h5_topheavy",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -3056,7 +3056,7 @@
    ],
    "family": "factor_mine",
    "name": "union_h5_trail",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -3078,7 +3078,7 @@
    ],
    "family": "factor_mine",
    "name": "union_hot_n12_h1",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -3092,7 +3092,7 @@
    ],
    "family": "factor_mine",
    "name": "union_hot_n4_h1",
-   "note": "factor-mine cash-start recipe (pick_day on the session panel); sells are the continuous $10k book list-drop after min-hold; Clock-B/oppset do not widen the Webull HOT4 wire \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; list-drop exits still sell",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -3110,7 +3110,7 @@
    ],
    "family": "factor_mine",
    "name": "union_hot_n4_h1_preopen",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -3124,7 +3124,7 @@
    ],
    "family": "factor_mine",
    "name": "union_hot_n4_holdup",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -3142,7 +3142,7 @@
    ],
    "family": "factor_mine",
    "name": "union_hot_n4_holdup_preopen",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -3160,7 +3160,7 @@
    ],
    "family": "factor_mine",
    "name": "union_hot_score_h1",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -3178,7 +3178,7 @@
    ],
    "family": "factor_mine",
    "name": "union_hot_score_h3",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -3196,7 +3196,7 @@
    ],
    "family": "factor_mine",
    "name": "union_join_g_h1",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -3214,7 +3214,7 @@
    ],
    "family": "factor_mine",
    "name": "union_join_g_h3",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -3232,7 +3232,7 @@
    ],
    "family": "factor_mine",
    "name": "union_join_present_h1",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -3250,7 +3250,7 @@
    ],
    "family": "factor_mine",
    "name": "union_join_present_h3",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -3259,7 +3259,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_join_vol_green_h1",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -3268,7 +3268,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_join_vol_green_h3",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -3286,7 +3286,7 @@
    ],
    "family": "factor_mine",
    "name": "union_last_green_h1",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -3304,7 +3304,7 @@
    ],
    "family": "factor_mine",
    "name": "union_last_green_h3",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -3322,7 +3322,7 @@
    ],
    "family": "factor_mine",
    "name": "union_last_green_h5",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -3340,7 +3340,7 @@
    ],
    "family": "factor_mine",
    "name": "union_last_red_h1",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -3358,7 +3358,7 @@
    ],
    "family": "factor_mine",
    "name": "union_last_red_h3",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -3376,7 +3376,7 @@
    ],
    "family": "factor_mine",
    "name": "union_macd_hist_h1",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -3394,7 +3394,7 @@
    ],
    "family": "factor_mine",
    "name": "union_macd_hist_h3",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -3412,7 +3412,7 @@
    ],
    "family": "factor_mine",
    "name": "union_macd_up_h1",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -3430,7 +3430,7 @@
    ],
    "family": "factor_mine",
    "name": "union_macd_up_h3",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -3445,7 +3445,7 @@
    ],
    "family": "factor_mine",
    "name": "union_macd_xup_h1",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -3460,7 +3460,7 @@
    ],
    "family": "factor_mine",
    "name": "union_macd_xup_h3",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -3469,7 +3469,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_news_both_h1",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -3478,7 +3478,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_news_both_h3",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -3487,7 +3487,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_news_g_cam61_h1",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -3496,7 +3496,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_news_g_cam61_h3",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -3505,7 +3505,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_news_g_cam71_conv_h1",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -3514,7 +3514,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_news_g_cam71_h1",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -3523,7 +3523,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_news_g_cam71_h3",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -3532,7 +3532,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_news_g_cam71_n2_h1",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -3541,7 +3541,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_news_g_cam91_n1_h1",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -3556,7 +3556,7 @@
    ],
    "family": "factor_mine",
    "name": "union_news_g_cond_h1",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -3571,7 +3571,7 @@
    ],
    "family": "factor_mine",
    "name": "union_news_g_cond_h3",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -3585,7 +3585,7 @@
    ],
    "family": "factor_mine",
    "name": "union_news_g_conv_h1",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -3599,7 +3599,7 @@
    ],
    "family": "factor_mine",
    "name": "union_news_g_conv_h3",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -3614,7 +3614,7 @@
    ],
    "family": "factor_mine",
    "name": "union_news_g_h1",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -3629,7 +3629,7 @@
    ],
    "family": "factor_mine",
    "name": "union_news_g_h3",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -3644,7 +3644,7 @@
    ],
    "family": "factor_mine",
    "name": "union_news_g_h5",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -3658,7 +3658,7 @@
    ],
    "family": "factor_mine",
    "name": "union_news_head_h1",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -3672,7 +3672,7 @@
    ],
    "family": "factor_mine",
    "name": "union_news_head_h3",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -3681,7 +3681,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_news_missing_h1",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -3690,7 +3690,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_news_missing_h3",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -3705,7 +3705,7 @@
    ],
    "family": "factor_mine",
    "name": "union_news_or_h1",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -3720,7 +3720,7 @@
    ],
    "family": "factor_mine",
    "name": "union_news_or_h3",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -3731,7 +3731,7 @@
    ],
    "family": "factor_mine",
    "name": "union_news_or_net2_h1",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -3742,7 +3742,7 @@
    ],
    "family": "factor_mine",
    "name": "union_news_or_net2_h3",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -3751,7 +3751,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_news_or_net3_h1",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -3760,7 +3760,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_news_or_net3_h3",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -3769,7 +3769,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_news_or_net4_conv_h1",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -3778,7 +3778,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_news_or_net4_h1",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -3787,7 +3787,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_news_or_net4_h3",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -3796,7 +3796,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_news_or_net4_rw_h1",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -3805,7 +3805,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_news_or_net5_h1",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -3814,7 +3814,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_news_or_net5_h3",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -3825,7 +3825,7 @@
    ],
    "family": "factor_mine",
    "name": "union_news_pack_h1",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -3836,7 +3836,7 @@
    ],
    "family": "factor_mine",
    "name": "union_news_pack_h3",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -3847,7 +3847,7 @@
    ],
    "family": "factor_mine",
    "name": "union_news_pack_net2_h1",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -3858,7 +3858,7 @@
    ],
    "family": "factor_mine",
    "name": "union_news_pack_net2_h3",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -3867,7 +3867,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_news_pack_net3_h1",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -3876,7 +3876,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_news_pack_net3_h3",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -3894,7 +3894,7 @@
    ],
    "family": "factor_mine",
    "name": "union_news_present_h1",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -3912,7 +3912,7 @@
    ],
    "family": "factor_mine",
    "name": "union_news_present_h3",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -3921,7 +3921,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_news_vol_h1",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -3930,7 +3930,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_news_vol_h3",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -3939,7 +3939,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_oppset_h1",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -3948,7 +3948,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_overnight_h1",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -3957,7 +3957,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_overnight_h3",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -3966,7 +3966,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_r_up_h1",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -3975,7 +3975,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_r_up_h3",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -3993,7 +3993,7 @@
    ],
    "family": "factor_mine",
    "name": "union_ret_5_h1",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -4011,7 +4011,7 @@
    ],
    "family": "factor_mine",
    "name": "union_ret_5_h3",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -4029,7 +4029,7 @@
    ],
    "family": "factor_mine",
    "name": "union_rsi_h1",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -4047,7 +4047,7 @@
    ],
    "family": "factor_mine",
    "name": "union_rsi_h3",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -4063,7 +4063,7 @@
    ],
    "family": "factor_mine",
    "name": "union_rsi_os_h1",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -4079,7 +4079,7 @@
    ],
    "family": "factor_mine",
    "name": "union_rsi_os_h3",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -4095,7 +4095,7 @@
    ],
    "family": "factor_mine",
    "name": "union_rsi_os_h5",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -4111,7 +4111,7 @@
    ],
    "family": "factor_mine",
    "name": "union_rsi_os_macd_h1",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -4127,7 +4127,7 @@
    ],
    "family": "factor_mine",
    "name": "union_rsi_os_macd_h3",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -4136,7 +4136,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_vol_ab_h1",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -4145,7 +4145,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_vol_ab_h3",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -4156,7 +4156,7 @@
    ],
    "family": "factor_mine",
    "name": "union_vol_g_h1",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -4167,7 +4167,7 @@
    ],
    "family": "factor_mine",
    "name": "union_vol_g_h3",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -4178,7 +4178,7 @@
    ],
    "family": "factor_mine",
    "name": "union_vol_g_h5",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -4189,7 +4189,7 @@
    ],
    "family": "factor_mine",
    "name": "union_vol_green_h1",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -4200,7 +4200,7 @@
    ],
    "family": "factor_mine",
    "name": "union_vol_green_h3",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -4209,7 +4209,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_vol_missing_h1",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -4218,7 +4218,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_vol_missing_h3",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -4236,7 +4236,7 @@
    ],
    "family": "factor_mine",
    "name": "union_w_hot_candle_h1",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -4254,7 +4254,7 @@
    ],
    "family": "factor_mine",
    "name": "union_w_hot_candle_h3",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -4272,7 +4272,7 @@
    ],
    "family": "factor_mine",
    "name": "union_w_hot_cond_h1",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -4290,7 +4290,7 @@
    ],
    "family": "factor_mine",
    "name": "union_w_hot_cond_h3",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -4299,7 +4299,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_white_any_h1",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -4308,7 +4308,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_white_any_h2",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -4317,7 +4317,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_white_any_h3",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -4326,7 +4326,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_white_any_h5",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -4335,7 +4335,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_white_both_n4_h1",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -4344,7 +4344,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_white_both_n4_h2",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -4353,7 +4353,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_white_both_n4_h3",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -4362,7 +4362,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_white_both_n4_h5",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -4371,7 +4371,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_white_both_n4_h5_s12",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -4380,7 +4380,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_white_coil_h1",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -4389,7 +4389,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_white_coil_h3",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -4398,7 +4398,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_white_h1",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -4407,7 +4407,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_white_h3",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -4416,7 +4416,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_white_h5",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -4425,7 +4425,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_white_yday_h1",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -4434,7 +4434,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_white_yday_h3",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "SIT"
@@ -4452,7 +4452,7 @@
    ],
    "family": "factor_mine",
    "name": "yday_gainer_h1",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -4470,7 +4470,7 @@
    ],
    "family": "factor_mine",
    "name": "yday_gainer_h3",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
@@ -4488,21 +4488,22 @@
    ],
    "family": "factor_mine",
    "name": "yday_gainer_h5",
-   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
   },
   {
    "buys": [
+    "PRCH",
+    "GDYN",
     "HITI",
     "CON",
     "ASTH",
     "AMN",
     "SGRY",
-    "MD",
-    "PACS",
-    "BAND"
+    "CBRL",
+    "MD"
    ],
    "family": "stock_book",
    "name": "stock_book_1d",
@@ -4515,21 +4516,24 @@
     "POWL",
     "EOSE",
     "INDI",
-    "TE"
+    "TE",
+    "SKYX",
+    "AMSC"
    ],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
   },
   {
    "buys": [
+    "PRCH",
+    "GDYN",
     "HITI",
     "CON",
     "ASTH",
     "AMN",
     "SGRY",
-    "MD",
-    "PACS",
-    "BAND"
+    "CBRL",
+    "MD"
    ],
    "family": "paper",
    "name": "1d_top",
@@ -4542,28 +4546,30 @@
     "POWL",
     "EOSE",
     "INDI",
-    "TE"
+    "TE",
+    "SKYX",
+    "AMSC"
    ],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
   },
   {
    "buys": [
-    "CDNA",
     "PACS",
-    "BLFS",
-    "ETON",
-    "FIGS",
     "CBRL",
-    "SHOO",
-    "SIG",
+    "CON",
+    "AMN",
     "PRCH",
-    "PDFS",
-    "SONO",
     "AVPT",
+    "MQ",
     "BAND",
-    "SLDE",
-    "CNK"
+    "GDYN",
+    "SBH",
+    "KSS",
+    "MLKN",
+    "QDEL",
+    "EPC",
+    "BRO"
    ],
    "family": "stock_book",
    "name": "stock_book_3d",
@@ -4571,40 +4577,40 @@
    "sells": [
     "INTC",
     "PCT",
-    "SOC",
-    "BORR",
     "BAK",
+    "ARE",
     "RC",
     "PRM",
-    "CMTG",
-    "VNET",
-    "ACDC",
+    "VSAT",
     "TMC",
     "ANGI",
-    "VSAT",
-    "HP",
-    "SSTK"
+    "CMTG",
+    "NFLX",
+    "ACDC",
+    "LWLG",
+    "SOC",
+    "PLAY"
    ],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
   },
   {
    "buys": [
-    "CDNA",
     "PACS",
-    "BLFS",
-    "ETON",
-    "FIGS",
     "CBRL",
-    "SHOO",
-    "SIG",
+    "CON",
+    "AMN",
     "PRCH",
-    "PDFS",
-    "SONO",
     "AVPT",
+    "MQ",
     "BAND",
-    "SLDE",
-    "CNK"
+    "GDYN",
+    "SBH",
+    "KSS",
+    "MLKN",
+    "QDEL",
+    "EPC",
+    "BRO"
    ],
    "family": "paper",
    "name": "3d_top",
@@ -4612,223 +4618,223 @@
    "sells": [
     "INTC",
     "PCT",
-    "SOC",
-    "BORR",
     "BAK",
+    "ARE",
     "RC",
     "PRM",
-    "CMTG",
-    "VNET",
-    "ACDC",
+    "VSAT",
     "TMC",
     "ANGI",
-    "VSAT",
-    "HP",
-    "SSTK"
+    "CMTG",
+    "NFLX",
+    "ACDC",
+    "LWLG",
+    "SOC",
+    "PLAY"
    ],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
   },
   {
    "buys": [
-    "CDNA",
     "PACS",
-    "BLFS",
-    "ETON",
-    "FIGS",
-    "SHOO",
     "CBRL",
-    "SIG",
+    "CON",
+    "AMN",
     "PRCH",
-    "PDFS",
-    "SONO",
     "AVPT",
-    "SLDE",
+    "MQ",
     "BAND",
-    "EZPW"
+    "GDYN",
+    "SBH",
+    "MLKN",
+    "KSS",
+    "QDEL",
+    "EPC",
+    "BRO"
    ],
    "family": "stock_book",
    "name": "stock_book_1w",
    "note": "weighted ranker horizon",
    "sells": [
+    "INTC",
     "PCT",
-    "SOC",
-    "BORR",
     "BAK",
     "PRM",
-    "INTC",
-    "VNET",
-    "CMTG",
     "RC",
-    "ACDC",
+    "VSAT",
     "TMC",
+    "CMTG",
     "ANGI",
-    "HP",
-    "SSTK",
-    "LWLG"
+    "ARE",
+    "ACDC",
+    "SOC",
+    "LWLG",
+    "VNET",
+    "PLAY"
    ],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
   },
   {
    "buys": [
-    "CDNA",
     "PACS",
-    "BLFS",
-    "ETON",
-    "FIGS",
-    "SHOO",
     "CBRL",
-    "SIG",
+    "CON",
+    "AMN",
     "PRCH",
-    "PDFS",
-    "SONO",
     "AVPT",
-    "SLDE",
+    "MQ",
     "BAND",
-    "EZPW"
+    "GDYN",
+    "SBH",
+    "MLKN",
+    "KSS",
+    "QDEL",
+    "EPC",
+    "BRO"
    ],
    "family": "paper",
    "name": "1w_top",
    "note": "paper sleeve = same ranker list",
    "sells": [
+    "INTC",
     "PCT",
-    "SOC",
-    "BORR",
     "BAK",
     "PRM",
-    "INTC",
-    "VNET",
-    "CMTG",
     "RC",
-    "ACDC",
+    "VSAT",
     "TMC",
+    "CMTG",
     "ANGI",
-    "HP",
-    "SSTK",
-    "LWLG"
+    "ARE",
+    "ACDC",
+    "SOC",
+    "LWLG",
+    "VNET",
+    "PLAY"
    ],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
   },
   {
    "buys": [
-    "CDNA",
     "PACS",
-    "BLFS",
-    "ETON",
-    "FIGS",
-    "SHOO",
     "CBRL",
-    "SIG",
+    "CON",
+    "AMN",
     "PRCH",
-    "PDFS",
-    "SLDE",
-    "SONO",
     "AVPT",
-    "EZPW",
-    "BAND"
+    "BAND",
+    "SONO",
+    "MQ",
+    "SBH",
+    "MLKN",
+    "KSS",
+    "QDEL",
+    "EPC",
+    "GSHD"
    ],
    "family": "stock_book",
    "name": "stock_book_2w",
    "note": "weighted ranker horizon",
    "sells": [
     "PCT",
-    "SOC",
-    "BORR",
+    "INTC",
     "BAK",
+    "SOC",
     "PRM",
     "VNET",
-    "ACDC",
     "CMTG",
     "RC",
-    "INTC",
     "TMC",
+    "VSAT",
     "ANGI",
-    "HP",
-    "LWLG",
-    "GOGO"
+    "ACDC",
+    "ARE",
+    "SSTK",
+    "BORR"
    ],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
   },
   {
    "buys": [
-    "CDNA",
     "PACS",
-    "BLFS",
-    "ETON",
-    "FIGS",
-    "SHOO",
     "CBRL",
-    "SIG",
+    "CON",
+    "AMN",
     "PRCH",
-    "PDFS",
-    "SLDE",
-    "SONO",
     "AVPT",
-    "EZPW",
-    "BAND"
+    "BAND",
+    "SONO",
+    "MQ",
+    "SBH",
+    "MLKN",
+    "KSS",
+    "QDEL",
+    "EPC",
+    "GSHD"
    ],
    "family": "paper",
    "name": "2w_top",
    "note": "paper sleeve = same ranker list",
    "sells": [
     "PCT",
-    "SOC",
-    "BORR",
+    "INTC",
     "BAK",
+    "SOC",
     "PRM",
     "VNET",
-    "ACDC",
     "CMTG",
     "RC",
-    "INTC",
     "TMC",
+    "VSAT",
     "ANGI",
-    "HP",
-    "LWLG",
-    "GOGO"
+    "ACDC",
+    "ARE",
+    "SSTK",
+    "BORR"
    ],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
    "status": "OK"
   },
   {
    "buys": [
-    "CDNA",
     "PACS",
-    "BLFS",
-    "ETON",
-    "FIGS",
-    "SHOO",
+    "CON",
     "CBRL",
-    "SIG",
+    "AMN",
     "PRCH",
-    "SLDE",
-    "PDFS",
-    "SONO",
     "AVPT",
-    "EZPW",
-    "BAND"
+    "SONO",
+    "BAND",
+    "SBH",
+    "MLKN",
+    "MQ",
+    "KSS",
+    "QDEL",
+    "EPC",
+    "GSHD"
    ],
    "family": "stock_book",
    "name": "stock_book_1m",
    "note": "weighted ranker horizon",
    "sells": [
     "PCT",
-    "SOC",
-    "BORR",
-    "PRM",
     "BAK",
+    "SOC",
+    "PRM",
     "VNET",
-    "ACDC",
     "CMTG",
+    "INTC",
     "RC",
     "TMC",
+    "ACDC",
+    "VSAT",
     "ANGI",
-    "HP",
+    "BORR",
     "LWLG",
-    "GOGO",
     "SSTK"
    ],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
@@ -4836,40 +4842,40 @@
   },
   {
    "buys": [
-    "CDNA",
     "PACS",
-    "BLFS",
-    "ETON",
-    "FIGS",
-    "SHOO",
+    "CON",
     "CBRL",
-    "SIG",
+    "AMN",
     "PRCH",
-    "SLDE",
-    "PDFS",
-    "SONO",
     "AVPT",
-    "EZPW",
-    "BAND"
+    "SONO",
+    "BAND",
+    "SBH",
+    "MLKN",
+    "MQ",
+    "KSS",
+    "QDEL",
+    "EPC",
+    "GSHD"
    ],
    "family": "paper",
    "name": "1m_top",
    "note": "paper sleeve = same ranker list",
    "sells": [
     "PCT",
-    "SOC",
-    "BORR",
-    "PRM",
     "BAK",
+    "SOC",
+    "PRM",
     "VNET",
-    "ACDC",
     "CMTG",
+    "INTC",
     "RC",
     "TMC",
+    "ACDC",
+    "VSAT",
     "ANGI",
-    "HP",
+    "BORR",
     "LWLG",
-    "GOGO",
     "SSTK"
    ],
    "source": "data/day_board/2026-10-30_strategy_tickets.json",
