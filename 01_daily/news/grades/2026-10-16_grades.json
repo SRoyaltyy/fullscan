@@ -725,13 +725,13 @@
       "window_through": "2026-10-30",
       "trading_days_elapsed": 10,
       "complete": false,
-      "latest_close": 235.6,
-      "current_return_pct": 6.2,
+      "latest_close": 235.52,
+      "current_return_pct": 6.16,
       "horizon_returns_pct": {
         "1d": 1.14,
         "3d": 2.22,
         "5d": 5.12,
-        "10d": 6.2
+        "10d": 6.16
       },
       "mfe_pct": 6.59,
       "mfe_day": "2026-10-30",
@@ -1211,13 +1211,13 @@
       "window_through": "2026-10-30",
       "trading_days_elapsed": 10,
       "complete": false,
-      "latest_close": 179.52,
-      "current_return_pct": 4.88,
+      "latest_close": 179.51,
+      "current_return_pct": 4.89,
       "horizon_returns_pct": {
         "1d": 1.25,
         "3d": -0.14,
         "5d": 2.76,
-        "10d": 4.88
+        "10d": 4.89
       },
       "mfe_pct": 6.42,
       "mfe_day": "2026-10-30",
@@ -1705,7 +1705,7 @@
         "5d": 2.62,
         "10d": 9.92
       },
-      "mfe_pct": 10.76,
+      "mfe_pct": 10.8,
       "mfe_day": "2026-10-30",
       "ever_profitable": true,
       "first_profitable_day": "2026-10-16"
@@ -1913,13 +1913,13 @@
       "window_through": "2026-10-30",
       "trading_days_elapsed": 10,
       "complete": false,
-      "latest_close": 357.02,
-      "current_return_pct": 3.41,
+      "latest_close": 356.92,
+      "current_return_pct": 3.38,
       "horizon_returns_pct": {
         "1d": 0.23,
         "3d": 4.92,
         "5d": 1.27,
-        "10d": 3.41
+        "10d": 3.38
       },
       "mfe_pct": 5.58,
       "mfe_day": "2026-10-21",
@@ -2372,13 +2372,13 @@
       "window_through": "2026-10-30",
       "trading_days_elapsed": 10,
       "complete": false,
-      "latest_close": 83.42,
-      "current_return_pct": 0.24,
+      "latest_close": 83.4,
+      "current_return_pct": 0.26,
       "horizon_returns_pct": {
         "1d": 2.22,
         "3d": 1.46,
         "5d": 1.49,
-        "10d": 0.24
+        "10d": 0.26
       },
       "mfe_pct": 3.21,
       "mfe_day": "2026-10-22",
