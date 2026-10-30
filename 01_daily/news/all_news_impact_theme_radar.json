@@ -12,98 +12,107 @@
     }
   },
   "watermark": {
-    "deterministic::news_impact_v2::theme_radar_elite": 59338
+    "deterministic::news_impact_v2::theme_radar_elite": 60788
   },
   "funnel": {
-    "elite_raw_titles": 550668,
-    "unique": 59338,
-    "non_weather": 26751,
-    "reaction_in_title": 983,
-    "impulse_updown_listed": 13761,
+    "elite_raw_titles": 560217,
+    "unique": 60788,
+    "non_weather": 27599,
+    "reaction_in_title": 1034,
+    "impulse_updown_listed": 14263,
     "graded_articles": {
-      "0-1d": 1613,
-      "2d": 1530,
-      "3d": 1506,
-      "4d": 1490,
-      "5d": 1457,
-      "1-4w": 7186
+      "0-1d": 1651,
+      "2d": 1567,
+      "3d": 1527,
+      "4d": 1505,
+      "5d": 1486,
+      "1-4w": 7285
     }
   },
   "hit_rates": {
     "0-1d": {
-      "hits": 1463,
-      "n_calls": 2901,
-      "hit_rate": 0.5043,
-      "graded_articles": 1613
+      "hits": 1515,
+      "n_calls": 2983,
+      "hit_rate": 0.5079,
+      "graded_articles": 1651
     },
     "2d": {
-      "hits": 1386,
-      "n_calls": 2756,
-      "hit_rate": 0.5029,
-      "graded_articles": 1530
+      "hits": 1419,
+      "n_calls": 2813,
+      "hit_rate": 0.5044,
+      "graded_articles": 1567
     },
     "3d": {
-      "hits": 1333,
-      "n_calls": 2711,
-      "hit_rate": 0.4917,
-      "graded_articles": 1506
+      "hits": 1356,
+      "n_calls": 2753,
+      "hit_rate": 0.4926,
+      "graded_articles": 1527
     },
     "4d": {
-      "hits": 1361,
-      "n_calls": 2693,
-      "hit_rate": 0.5054,
-      "graded_articles": 1490
+      "hits": 1378,
+      "n_calls": 2710,
+      "hit_rate": 0.5085,
+      "graded_articles": 1505
     },
     "5d": {
-      "hits": 1343,
-      "n_calls": 2610,
-      "hit_rate": 0.5146,
-      "graded_articles": 1457
+      "hits": 1369,
+      "n_calls": 2688,
+      "hit_rate": 0.5093,
+      "graded_articles": 1486
     },
     "1-4w": {
-      "hits": 5213,
-      "n_calls": 11067,
-      "hit_rate": 0.471,
-      "graded_articles": 7186
+      "hits": 5296,
+      "n_calls": 11220,
+      "hit_rate": 0.472,
+      "graded_articles": 7285
     }
   },
   "hit_rates_broad_short": {
     "0-1d": {
-      "hits": 7213,
-      "n_calls": 14782,
-      "hit_rate": 0.488,
-      "graded_articles": 9665
+      "hits": 7512,
+      "n_calls": 15305,
+      "hit_rate": 0.4908,
+      "graded_articles": 10107
     },
     "2d": {
-      "hits": 6959,
-      "n_calls": 14167,
-      "hit_rate": 0.4912,
-      "graded_articles": 9189
+      "hits": 7105,
+      "n_calls": 14430,
+      "hit_rate": 0.4924,
+      "graded_articles": 9387
     },
     "3d": {
-      "hits": 6842,
-      "n_calls": 13996,
-      "hit_rate": 0.4889,
-      "graded_articles": 9074
+      "hits": 6937,
+      "n_calls": 14163,
+      "hit_rate": 0.4898,
+      "graded_articles": 9185
     },
     "4d": {
-      "hits": 6799,
-      "n_calls": 13748,
-      "hit_rate": 0.4945,
-      "graded_articles": 8859
+      "hits": 6932,
+      "n_calls": 13992,
+      "hit_rate": 0.4954,
+      "graded_articles": 9070
     },
     "5d": {
-      "hits": 6550,
-      "n_calls": 13413,
-      "hit_rate": 0.4883,
-      "graded_articles": 8611
+      "hits": 6714,
+      "n_calls": 13736,
+      "hit_rate": 0.4888,
+      "graded_articles": 8852
     }
   },
   "rippers": {
     "0-1d": {
-      "ge_5_n": 655,
-      "ge_10_n": 338,
+      "ge_5_n": 677,
+      "ge_10_n": 350,
       "ge_5": [
+        {
+          "ticker": "RSI",
+          "direction": "down",
+          "ret": -9.98,
+          "entry_date": "2026-10-29",
+          "published_at": "2026-10-28 16:15:00",
+          "title": "Rush Street Interactive Announces Third Quarter 2026 Results and Reiterates Full Year Guidance",
+          "event_class": "print_vs_priced"
+        },
         {
           "ticker": "BLSH",
           "direction": "up",
@@ -483,6 +492,15 @@
           "event_class": "print_vs_priced"
         },
         {
+          "ticker": "CTW",
+          "direction": "down",
+          "ret": -9.23,
+          "entry_date": "2026-10-29",
+          "published_at": "2026-10-29 08:30:00",
+          "title": "CTW to Participate in the BMO Capital Markets Technology and Innovation Leaders Conference",
+          "event_class": "print_vs_priced"
+        },
+        {
           "ticker": "SUPN",
           "direction": "up",
           "ret": 9.22,
@@ -508,6 +526,15 @@
           "published_at": "2026-08-06 07:45:00",
           "title": "Coincheck Reports Financial Results for First Quarter of Year Ending March 31, 2027",
           "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "VNDA",
+          "direction": "down",
+          "ret": -9.09,
+          "entry_date": "2026-10-29",
+          "published_at": "2026-10-28 18:37:22",
+          "title": "Vanda Pharmaceuticals Beats On A Timing-Aided Quarter, But A Guidance Cut To The Old Floor And Slower Launches Overshadow The Print",
+          "event_class": "guidance"
         },
         {
           "ticker": "SCYX",
@@ -624,6 +651,15 @@
           "entry_date": "2026-08-21",
           "published_at": "2026-08-20 19:02:04",
           "title": "Unifi Inc (UFI) (Q4 2026) Earnings Call Highlights: Strong Margin Recovery and Strategic Asset ...",
+          "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "FTNT",
+          "direction": "up",
+          "ret": 8.95,
+          "entry_date": "2026-10-29",
+          "published_at": "2026-10-28 16:52:00",
+          "title": "Fortinet Beats Expectations But Rosier Outlook Apparently Not Rosy Enough",
           "event_class": "print_vs_priced"
         },
         {
@@ -807,6 +843,15 @@
           "event_class": "capital_return"
         },
         {
+          "ticker": "SMHI",
+          "direction": "up",
+          "ret": 8.74,
+          "entry_date": "2026-10-29",
+          "published_at": "2026-10-28 16:37:53",
+          "title": "Seacor Marine: Q3 Earnings Snapshot",
+          "event_class": "print_vs_priced"
+        },
+        {
           "ticker": "MED",
           "direction": "up",
           "ret": 8.73,
@@ -858,6 +903,15 @@
           "entry_date": "2026-08-11",
           "published_at": "2026-08-11 08:30:00",
           "title": "Entravision Communications Corporation Q2 2026 Earnings Call Summary",
+          "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "OLED",
+          "direction": "down",
+          "ret": -8.69,
+          "entry_date": "2026-10-29",
+          "published_at": "2026-10-28 16:31:16",
+          "title": "Universal Display: Q3 Earnings Snapshot",
           "event_class": "print_vs_priced"
         },
         {
@@ -2247,6 +2301,15 @@
           "event_class": "print_vs_priced"
         },
         {
+          "ticker": "JMKE",
+          "direction": "up",
+          "ret": 7.37,
+          "entry_date": "2026-10-29",
+          "published_at": "2026-10-28 11:36:14",
+          "title": "Jersey Mike's Beats On EBITDA And Returns Capital Fast, But Comp Guidance Loses Its Ceiling",
+          "event_class": "print_vs_priced"
+        },
+        {
           "ticker": "FUTU",
           "direction": "up",
           "ret": 7.35,
@@ -2254,6 +2317,15 @@
           "published_at": "2026-08-20 15:03:04",
           "title": "Futu Holdings Ltd (FUTU) (Q2 2026) Earnings Call Highlights: Record Trading Volume and ...",
           "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "PRCH",
+          "direction": "up",
+          "ret": 7.35,
+          "entry_date": "2026-10-29",
+          "published_at": "2026-10-28 19:28:13",
+          "title": "Porch Group Swings To A Profit And Raises Guidance Again, But Policy Growth Is Outpacing Premium Growth",
+          "event_class": "guidance"
         },
         {
           "ticker": "FND",
@@ -2625,6 +2697,15 @@
           "event_class": "print_vs_priced"
         },
         {
+          "ticker": "XPOF",
+          "direction": "down",
+          "ret": -6.97,
+          "entry_date": "2026-10-29",
+          "published_at": "2026-10-28 21:43:35",
+          "title": "Xponential Fitness Faces Comp And Merchandise Test As Street Sits Above Its Cut Outlook",
+          "event_class": "guidance"
+        },
+        {
           "ticker": "MNTN",
           "direction": "down",
           "ret": -6.94,
@@ -2913,6 +2994,15 @@
           "event_class": "guidance"
         },
         {
+          "ticker": "REED",
+          "direction": "down",
+          "ret": -6.76,
+          "entry_date": "2026-10-29",
+          "published_at": "2026-10-28 13:30:00",
+          "title": "Reed's Announces Pricing of $10.0 Million Private Placement",
+          "event_class": "dilution"
+        },
+        {
           "ticker": "ZTS",
           "direction": "down",
           "ret": -6.75,
@@ -2983,6 +3073,15 @@
           "published_at": "2026-10-06 06:45:00",
           "title": "Bullish releases September 2026 monthly metrics",
           "event_class": "market_structure"
+        },
+        {
+          "ticker": "HAPN",
+          "direction": "up",
+          "ret": 6.72,
+          "entry_date": "2026-10-29",
+          "published_at": "2026-10-28 16:31:23",
+          "title": "Happen: Q3 Earnings Snapshot",
+          "event_class": "guidance"
         },
         {
           "ticker": "BNAI",
@@ -3075,6 +3174,15 @@
           "event_class": "gate"
         },
         {
+          "ticker": "TSAT",
+          "direction": "down",
+          "ret": -6.65,
+          "entry_date": "2026-10-29",
+          "published_at": "2026-10-29 08:06:21",
+          "title": "Telesat: Q3 Earnings Snapshot",
+          "event_class": "guidance"
+        },
+        {
           "ticker": "AHCO",
           "direction": "down",
           "ret": -6.62,
@@ -3109,6 +3217,15 @@
           "published_at": "2026-08-18 11:06:30",
           "title": "The RealReal Bets on Luxury Resale Boom",
           "event_class": "guidance"
+        },
+        {
+          "ticker": "MRAM",
+          "direction": "up",
+          "ret": 6.61,
+          "entry_date": "2026-10-29",
+          "published_at": "2026-10-28 16:00:00",
+          "title": "Everspin Reports Unaudited Third Quarter 2026 Financial Results",
+          "event_class": "print_vs_priced"
         },
         {
           "ticker": "GRWG",
@@ -3216,6 +3333,15 @@
           "entry_date": "2026-08-11",
           "published_at": "2026-08-10 16:05:00",
           "title": "Ceribell Reports Second Quarter 2026 Financial Results",
+          "event_class": "guidance"
+        },
+        {
+          "ticker": "FPI",
+          "direction": "down",
+          "ret": -6.48,
+          "entry_date": "2026-10-29",
+          "published_at": "2026-10-28 16:10:00",
+          "title": "Farmland Partners Inc. Reports Third Quarter 2026 Results",
           "event_class": "guidance"
         },
         {
@@ -4119,6 +4245,15 @@
           "event_class": "print_vs_priced"
         },
         {
+          "ticker": "CSL",
+          "direction": "up",
+          "ret": 5.81,
+          "entry_date": "2026-10-29",
+          "published_at": "2026-10-28 16:05:00",
+          "title": "Carlisle Companies Reports Third Quarter Results",
+          "event_class": "print_vs_priced"
+        },
+        {
           "ticker": "EH",
           "direction": "down",
           "ret": -5.8,
@@ -4479,6 +4614,15 @@
           "event_class": "print_vs_priced"
         },
         {
+          "ticker": "CAKE",
+          "direction": "up",
+          "ret": 5.69,
+          "entry_date": "2026-10-29",
+          "published_at": "2026-10-28 14:34:22",
+          "title": "Cheesecake Factory: Q3 Earnings Snapshot",
+          "event_class": "guidance"
+        },
+        {
           "ticker": "STRO",
           "direction": "down",
           "ret": -5.68,
@@ -4710,6 +4854,15 @@
           "entry_date": "2026-10-28",
           "published_at": "2026-10-27 16:15:00",
           "title": "The Cheesecake Factory Reports Results for Third Quarter of Fiscal 2026",
+          "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "HRTG",
+          "direction": "up",
+          "ret": 5.61,
+          "entry_date": "2026-10-29",
+          "published_at": "2026-10-28 16:40:50",
+          "title": "Heritage Insurance: Q3 Earnings Snapshot",
           "event_class": "print_vs_priced"
         },
         {
@@ -5053,6 +5206,15 @@
           "published_at": "2026-08-19 12:01:33",
           "title": "FEMY Stock Rallies On Key Regulatory Milestone For Investigational Birth Control Technology  Retail Sees 500% Upside Potential",
           "event_class": "gate"
+        },
+        {
+          "ticker": "PLBY",
+          "direction": "up",
+          "ret": 5.41,
+          "entry_date": "2026-10-29",
+          "published_at": "2026-10-28 20:41:15",
+          "title": "Playboy's Turnaround Faces Proof Test As Stock Slides Despite Profit Inflection",
+          "event_class": "print_vs_priced"
         },
         {
           "ticker": "TSAT",
@@ -5451,6 +5613,15 @@
           "event_class": "print_vs_priced"
         },
         {
+          "ticker": "OSW",
+          "direction": "up",
+          "ret": 5.24,
+          "entry_date": "2026-10-29",
+          "published_at": "2026-10-28 14:37:45",
+          "title": "OneSpaWorld: Q3 Earnings Snapshot",
+          "event_class": "guidance"
+        },
+        {
           "ticker": "RWAY",
           "direction": "up",
           "ret": 5.23,
@@ -5466,6 +5637,15 @@
           "entry_date": "2026-08-07",
           "published_at": "2026-08-07 08:30:00",
           "title": "Runway Growth Capital Appoints Michael Rovner as Co-Chief Executive Officer and Co-Chief Investment Officer",
+          "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "CHDN",
+          "direction": "up",
+          "ret": 5.23,
+          "entry_date": "2026-10-29",
+          "published_at": "2026-10-28 16:24:36",
+          "title": "Churchill Downs: Q3 Earnings Snapshot",
           "event_class": "print_vs_priced"
         },
         {
@@ -5485,6 +5665,15 @@
           "published_at": "2026-09-30 11:00:10",
           "title": "CADL Slips Despite Encouraging Prostate Cancer Drug Data  Retail Believes Stock Is Clearly A Buy And Hold",
           "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "DMC",
+          "direction": "down",
+          "ret": -5.22,
+          "entry_date": "2026-10-29",
+          "published_at": "2026-10-28 14:36:31",
+          "title": "Del Monte: Q3 Earnings Snapshot",
+          "event_class": "guidance"
         },
         {
           "ticker": "OTTR",
@@ -5665,6 +5854,15 @@
           "published_at": "2026-09-15 17:10:00",
           "title": "AI Is Still Fueling a Data Center Boom. This Energy Stock Is Cashing In.",
           "event_class": "listing_flow"
+        },
+        {
+          "ticker": "TPG",
+          "direction": "up",
+          "ret": 5.13,
+          "entry_date": "2026-10-29",
+          "published_at": "2026-10-29 07:00:00",
+          "title": "TPG Reports Third Quarter 2026 Results",
+          "event_class": "print_vs_priced"
         },
         {
           "ticker": "ESCA",
@@ -7064,6 +7262,24 @@
           "event_class": "print_vs_priced"
         },
         {
+          "ticker": "BHC",
+          "direction": "up",
+          "ret": 16.32,
+          "entry_date": "2026-10-29",
+          "published_at": "2026-10-28 16:07:00",
+          "title": "Bausch Health Announces Full Redemption of 8.500% Senior Notes Due 2027",
+          "event_class": "guidance"
+        },
+        {
+          "ticker": "BHC",
+          "direction": "up",
+          "ret": 16.32,
+          "entry_date": "2026-10-29",
+          "published_at": "2026-10-28 18:20:08",
+          "title": "Bausch Health Crushes Estimates And Raises 2026 Again, But Slowing Xifaxan Demand And An Unchanged 2027 Outlook Temper The Beat",
+          "event_class": "guidance"
+        },
+        {
           "ticker": "PRE",
           "direction": "up",
           "ret": 16.09,
@@ -7397,6 +7613,15 @@
           "event_class": "print_vs_priced"
         },
         {
+          "ticker": "NNBR",
+          "direction": "up",
+          "ret": 14.95,
+          "entry_date": "2026-10-29",
+          "published_at": "2026-10-28 16:21:00",
+          "title": "NN, Inc. Reports Third Quarter 2026 Results",
+          "event_class": "print_vs_priced"
+        },
+        {
           "ticker": "PEPG",
           "direction": "up",
           "ret": 14.76,
@@ -7484,6 +7709,15 @@
           "entry_date": "2026-08-07",
           "published_at": "2026-08-06 16:08:34",
           "title": "Halozyme Therapeutics: Q2 Earnings Snapshot",
+          "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "ARXS",
+          "direction": "up",
+          "ret": 14.58,
+          "entry_date": "2026-10-29",
+          "published_at": "2026-10-28 16:23:28",
+          "title": "Arxis: Q3 Earnings Snapshot",
           "event_class": "print_vs_priced"
         },
         {
@@ -7853,6 +8087,15 @@
           "entry_date": "2026-08-24",
           "published_at": "2026-08-24 06:46:48",
           "title": "Picard Medical Shares Soar After Quarterly Revenue Beats Forecasts",
+          "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "TENB",
+          "direction": "up",
+          "ret": 13.23,
+          "entry_date": "2026-10-29",
+          "published_at": "2026-10-28 16:05:00",
+          "title": "Tenable Announces Third Quarter 2026 Financial Results",
           "event_class": "print_vs_priced"
         },
         {
@@ -8268,6 +8511,24 @@
           "published_at": "2025-07-30 16:30:00",
           "title": "Bluemount Holdings Limited Announces Partial Exercise of Underwriters' Over-Allotment Option in Connection with its Initial Public Offering",
           "event_class": "dilution"
+        },
+        {
+          "ticker": "FINW",
+          "direction": "up",
+          "ret": 12.02,
+          "entry_date": "2026-10-29",
+          "published_at": "2026-10-28 16:15:00",
+          "title": "FinWise Bancorp Reports Third Quarter 2026 Results",
+          "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "FINW",
+          "direction": "up",
+          "ret": 12.02,
+          "entry_date": "2026-10-29",
+          "published_at": "2026-10-28 18:47:12",
+          "title": "FinWise Crushes Estimates, But A One-Time Gain And Pass-Through Accounting Do Much Of The Lifting Ahead Of A Thinner 2027 Growth Runway",
+          "event_class": "print_vs_priced"
         },
         {
           "ticker": "RBA",
@@ -8756,6 +9017,15 @@
           "event_class": "gate"
         },
         {
+          "ticker": "MVIS",
+          "direction": "up",
+          "ret": 10.77,
+          "entry_date": "2026-10-29",
+          "published_at": "2026-10-28 16:05:00",
+          "title": "MicroVision Reports Third Quarter 2026 Results with Record Lidar Revenue and Accelerated Path to Profitability",
+          "event_class": "print_vs_priced"
+        },
+        {
           "ticker": "GIFT",
           "direction": "up",
           "ret": 10.75,
@@ -8855,6 +9125,15 @@
           "event_class": "dilution"
         },
         {
+          "ticker": "BOOT",
+          "direction": "up",
+          "ret": 10.56,
+          "entry_date": "2026-10-29",
+          "published_at": "2026-10-28 16:05:00",
+          "title": "Boot Barn Holdings, Inc. Announces Second Quarter Fiscal Year 2027 Financial Results and Authorizes an Additional $400 Million Under Its Share Repurchase Program",
+          "event_class": "capital_return"
+        },
+        {
           "ticker": "LBRT",
           "direction": "down",
           "ret": -10.48,
@@ -8927,6 +9206,24 @@
           "event_class": "guidance"
         },
         {
+          "ticker": "TDOC",
+          "direction": "up",
+          "ret": 10.23,
+          "entry_date": "2026-10-29",
+          "published_at": "2026-10-28 16:05:00",
+          "title": "Teladoc Health Reports Third Quarter 2026 Results",
+          "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "TDOC",
+          "direction": "up",
+          "ret": 10.23,
+          "entry_date": "2026-10-29",
+          "published_at": "2026-10-29 08:05:32",
+          "title": "Teladoc Beats On Cost Discipline And BetterHelp Insurance Ramp, But Revenue Is Still Shrinking",
+          "event_class": "guidance"
+        },
+        {
           "ticker": "ASST",
           "direction": "up",
           "ret": 10.22,
@@ -8952,6 +9249,15 @@
           "published_at": "2026-08-20 09:52:00",
           "title": "Hovnanian Swings to a Loss Amid Continually Challenging Housing Market",
           "event_class": "guidance"
+        },
+        {
+          "ticker": "JBSS",
+          "direction": "down",
+          "ret": -10.14,
+          "entry_date": "2026-10-29",
+          "published_at": "2026-10-28 16:10:00",
+          "title": "John B. Sanfilippo & Son, Inc. Reports Fiscal 2027 First Quarter Results",
+          "event_class": "print_vs_priced"
         },
         {
           "ticker": "CWD",
@@ -9046,8 +9352,8 @@
       ]
     },
     "2d": {
-      "ge_5_n": 1230,
-      "ge_10_n": 666,
+      "ge_5_n": 1266,
+      "ge_10_n": 674,
       "ge_5": [
         {
           "ticker": "BBDC",
@@ -9221,6 +9527,15 @@
           "event_class": "print_vs_priced"
         },
         {
+          "ticker": "SWIM",
+          "direction": "up",
+          "ret": 9.83,
+          "entry_date": "2026-10-27",
+          "published_at": "2026-10-26 23:23:23",
+          "title": "Latham's Q3 Must Prove Its Demand Surge Can Finally Lift Margins",
+          "event_class": "guidance"
+        },
+        {
           "ticker": "CSV",
           "direction": "down",
           "ret": -9.82,
@@ -9327,6 +9642,15 @@
           "published_at": "2026-09-10 08:30:00",
           "title": "Skillsoft Corp. Q2 2027 Earnings Call Summary",
           "event_class": "guidance"
+        },
+        {
+          "ticker": "TTI",
+          "direction": "up",
+          "ret": 9.74,
+          "entry_date": "2026-10-27",
+          "published_at": "2026-10-26 15:03:36",
+          "title": "TETRA Technologies Faces A Margin Test After Stock Halves Its Post-Earnings Rally",
+          "event_class": "print_vs_priced"
         },
         {
           "ticker": "CYN",
@@ -9860,6 +10184,15 @@
           "event_class": "print_vs_priced"
         },
         {
+          "ticker": "APPS",
+          "direction": "up",
+          "ret": 9.42,
+          "entry_date": "2026-10-27",
+          "published_at": "2026-10-26 11:53:24",
+          "title": "Digital Turbine's Guidance Raise Faces A Skeptical Market As Device Headwinds Test Momentum",
+          "event_class": "print_vs_priced"
+        },
+        {
           "ticker": "BPRN",
           "direction": "up",
           "ret": 9.41,
@@ -10211,6 +10544,15 @@
           "event_class": "capacity"
         },
         {
+          "ticker": "SXTP",
+          "direction": "up",
+          "ret": 9.09,
+          "entry_date": "2026-10-27",
+          "published_at": "2026-10-27 08:06:00",
+          "title": "60 Degrees Pharmaceuticals Announces Clinical Improvement and Negative PCR Results in All Completed Expanded Access Babesiosis Study Patients",
+          "event_class": "gate"
+        },
+        {
           "ticker": "FLY",
           "direction": "down",
           "ret": -9.08,
@@ -10244,6 +10586,15 @@
           "entry_date": "2026-10-14",
           "published_at": "2026-10-14 08:30:00",
           "title": "Ralliant Announces Third Quarter 2026 Earnings Release and Conference Call Date",
+          "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "CHPT",
+          "direction": "up",
+          "ret": 9.06,
+          "entry_date": "2026-10-27",
+          "published_at": "2026-10-27 05:00:00",
+          "title": "ChargePoint Launches New Channel Partner Program to Help Resellers Grow Profitable EV Charging Businesses Across Europe",
           "event_class": "print_vs_priced"
         },
         {
@@ -10470,6 +10821,15 @@
           "published_at": "2026-08-12 15:00:00",
           "title": "5 LNG Megaprojects Poised to Power the Next Gas Boom",
           "event_class": "guidance"
+        },
+        {
+          "ticker": "CSHR",
+          "direction": "up",
+          "ret": 8.86,
+          "entry_date": "2026-10-27",
+          "published_at": "2026-10-27 09:28:01",
+          "title": "CoinShares stock jumps on $40M buyback program",
+          "event_class": "capital_return"
         },
         {
           "ticker": "BCRX",
@@ -11750,6 +12110,15 @@
           "event_class": "blast_legal"
         },
         {
+          "ticker": "MASS",
+          "direction": "up",
+          "ret": 7.89,
+          "entry_date": "2026-10-27",
+          "published_at": "2026-10-27 07:00:00",
+          "title": "908 Devices to Report Third Quarter 2026 Financial Results on November 10, 2026",
+          "event_class": "guidance"
+        },
+        {
           "ticker": "REI",
           "direction": "up",
           "ret": 7.87,
@@ -11819,6 +12188,15 @@
           "entry_date": "2026-10-20",
           "published_at": "2026-10-19 16:31:00",
           "title": "F.N.B. Corporation Reports Third Quarter 2026 Earnings",
+          "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "FLXS",
+          "direction": "up",
+          "ret": 7.83,
+          "entry_date": "2026-10-27",
+          "published_at": "2026-10-26 16:19:21",
+          "title": "Flexsteel: Fiscal Q1 Earnings Snapshot",
           "event_class": "print_vs_priced"
         },
         {
@@ -12479,6 +12857,15 @@
           "event_class": "print_vs_priced"
         },
         {
+          "ticker": "APH",
+          "direction": "up",
+          "ret": 7.5,
+          "entry_date": "2026-10-27",
+          "published_at": "2026-10-26 12:22:11",
+          "title": "Fabrinet's Upbeat Guidance Meets A 39% Stock Slide As Results Approach",
+          "event_class": "print_vs_priced"
+        },
+        {
           "ticker": "UNCY",
           "direction": "down",
           "ret": -7.49,
@@ -12486,6 +12873,15 @@
           "published_at": "2026-10-21 17:35:41",
           "title": "Unicycive Therapeutics Announces FDA Acceptance of Oxylanthanum Carbonate NDA Resubmission, PDUFA Date of March 25, 2027",
           "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "STM",
+          "direction": "up",
+          "ret": 7.48,
+          "entry_date": "2026-10-27",
+          "published_at": "2026-10-27 00:09:59",
+          "title": "Global chip, AI stocks surge on Anthropic IPO cheer",
+          "event_class": "listing_flow"
         },
         {
           "ticker": "NSPR",
@@ -12927,6 +13323,24 @@
           "published_at": "2026-09-14 10:34:00",
           "title": "Boeing Wins $13.4 Billion KC-46 Air Force Contract Amid Defense Awards",
           "event_class": "gate"
+        },
+        {
+          "ticker": "TEAM",
+          "direction": "down",
+          "ret": -7.3,
+          "entry_date": "2026-10-27",
+          "published_at": "2026-10-26 14:56:16",
+          "title": "Top infrastructure software stocks ahead of earnings: BofA Securities",
+          "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "TEAM",
+          "direction": "down",
+          "ret": -7.3,
+          "entry_date": "2026-10-27",
+          "published_at": "2026-10-26 14:56:16",
+          "title": "Top infrastructure software stocks ahead of earnings: BofA Securities",
+          "event_class": "print_vs_priced"
         },
         {
           "ticker": "UVE",
@@ -13568,6 +13982,15 @@
           "event_class": "dilution"
         },
         {
+          "ticker": "HLMN",
+          "direction": "up",
+          "ret": 7.0,
+          "entry_date": "2026-10-27",
+          "published_at": "2026-10-26 12:31:50",
+          "title": "Hillman's Guidance Raises Face A Skeptical Market As Stock Slides Toward Its Lows",
+          "event_class": "print_vs_priced"
+        },
+        {
           "ticker": "EMBC",
           "direction": "up",
           "ret": 6.98,
@@ -13827,6 +14250,42 @@
           "published_at": "2026-08-17 15:04:22",
           "title": "Tecogen Inc (TGEN) (Q2 2026) Earnings Call Highlights: Data Center Momentum Offsets Revenue Dip",
           "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "JEF",
+          "direction": "up",
+          "ret": 6.85,
+          "entry_date": "2026-10-27",
+          "published_at": "2026-10-26 10:30:00",
+          "title": "Flutters US gambling revenue on track as promotional spending falls, says Jefferies",
+          "event_class": "peer_spill"
+        },
+        {
+          "ticker": "JEF",
+          "direction": "up",
+          "ret": 6.85,
+          "entry_date": "2026-10-27",
+          "published_at": "2026-10-26 10:30:00",
+          "title": "Flutters US gambling revenue on track as promotional spending falls, says Jefferies",
+          "event_class": "peer_spill"
+        },
+        {
+          "ticker": "JEF",
+          "direction": "up",
+          "ret": 6.85,
+          "entry_date": "2026-10-27",
+          "published_at": "2026-10-26 10:30:00",
+          "title": "Flutters US gambling revenue on track as promotional spending falls, says Jefferies",
+          "event_class": "peer_spill"
+        },
+        {
+          "ticker": "JEF",
+          "direction": "up",
+          "ret": 6.85,
+          "entry_date": "2026-10-27",
+          "published_at": "2026-10-27 07:30:00",
+          "title": "HSBC holds 2026 guidance as brokers warn of tougher income growth ahead",
+          "event_class": "peer_spill"
         },
         {
           "ticker": "LMB",
@@ -14546,6 +15005,15 @@
           "entry_date": "2026-10-15",
           "published_at": "2026-10-15 08:00:00",
           "title": "Momentus Secures Commercial Contract with ARCSPACE to Advance In-Space Manufacturing",
+          "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "CX",
+          "direction": "up",
+          "ret": 6.59,
+          "entry_date": "2026-10-27",
+          "published_at": "2026-10-26 10:10:38",
+          "title": "Cemex Reports 12% Rise in Q3 Operating EBITDA to $990 Million, Shares Gain Nearly 3%",
           "event_class": "print_vs_priced"
         },
         {
@@ -16691,6 +17159,15 @@
           "event_class": "print_vs_priced"
         },
         {
+          "ticker": "FOA",
+          "direction": "down",
+          "ret": -5.92,
+          "entry_date": "2026-10-27",
+          "published_at": "2026-10-26 20:29:45",
+          "title": "Finance Of America Must Prove Its AI-Driven Lending Momentum After A 51% Stock Collapse",
+          "event_class": "print_vs_priced"
+        },
+        {
           "ticker": "NX",
           "direction": "up",
           "ret": 5.91,
@@ -17276,6 +17753,33 @@
           "event_class": "print_vs_priced"
         },
         {
+          "ticker": "IOT",
+          "direction": "down",
+          "ret": -5.73,
+          "entry_date": "2026-10-27",
+          "published_at": "2026-10-26 13:27:34",
+          "title": "BofA names top application software stocks heading into Q3 earnings",
+          "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "IOT",
+          "direction": "down",
+          "ret": -5.73,
+          "entry_date": "2026-10-27",
+          "published_at": "2026-10-26 13:27:34",
+          "title": "BofA names top application software stocks heading into Q3 earnings",
+          "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "IOT",
+          "direction": "down",
+          "ret": -5.73,
+          "entry_date": "2026-10-27",
+          "published_at": "2026-10-26 13:27:34",
+          "title": "BofA names top application software stocks heading into Q3 earnings",
+          "event_class": "print_vs_priced"
+        },
+        {
           "ticker": "XZO",
           "direction": "up",
           "ret": 5.72,
@@ -17537,6 +18041,15 @@
           "event_class": "print_vs_priced"
         },
         {
+          "ticker": "SSD",
+          "direction": "up",
+          "ret": 5.66,
+          "entry_date": "2026-10-27",
+          "published_at": "2026-10-26 19:20:43",
+          "title": "Simpson Manufacturing Beats On Cost Discipline, But Fading Price, Surging Steel And A Weak Implied Q4 Cloud The Setup",
+          "event_class": "print_vs_priced"
+        },
+        {
           "ticker": "DELL",
           "direction": "up",
           "ret": 5.65,
@@ -17561,6 +18074,24 @@
           "entry_date": "2026-10-20",
           "published_at": "2026-10-20 09:00:00",
           "title": "VistaPrint Partners With Google Gemini to Bring Print to AI Conversations",
+          "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "HWM",
+          "direction": "up",
+          "ret": 5.65,
+          "entry_date": "2026-10-27",
+          "published_at": "2026-10-26 16:30:00",
+          "title": "Howmet Aerospace Inc. stock outperforms competitors on strong trading day",
+          "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "HWM",
+          "direction": "up",
+          "ret": 5.65,
+          "entry_date": "2026-10-27",
+          "published_at": "2026-10-26 16:30:00",
+          "title": "Howmet Aerospace Inc. stock outperforms competitors on strong trading day",
           "event_class": "print_vs_priced"
         },
         {
@@ -17760,6 +18291,33 @@
           "published_at": "2026-10-19 06:10:00",
           "title": "Transocean Ltd. Announces Contract Awards Totaling $550 Million",
           "event_class": "gate"
+        },
+        {
+          "ticker": "ENVA",
+          "direction": "up",
+          "ret": 5.59,
+          "entry_date": "2026-10-27",
+          "published_at": "2026-10-26 16:16:25",
+          "title": "Fintech for SMEs: Pipe CEO Claurelle Rakipovic, Live from Money 20/20 2026",
+          "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "ENVA",
+          "direction": "up",
+          "ret": 5.59,
+          "entry_date": "2026-10-27",
+          "published_at": "2026-10-26 16:16:25",
+          "title": "Fintech for SMEs: Pipe CEO Claurelle Rakipovic, Live from Money 20/20 2026",
+          "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "ENVA",
+          "direction": "up",
+          "ret": 5.59,
+          "entry_date": "2026-10-27",
+          "published_at": "2026-10-26 16:16:25",
+          "title": "Fintech for SMEs: Pipe CEO Claurelle Rakipovic, Live from Money 20/20 2026",
+          "event_class": "print_vs_priced"
         },
         {
           "ticker": "RARE",
@@ -18011,6 +18569,15 @@
           "entry_date": "2026-09-16",
           "published_at": "2026-09-16 08:00:00",
           "title": "Live Nation Makes Show Day Easier for Fans With Salesforce's Agentforce",
+          "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "LIND",
+          "direction": "up",
+          "ret": 5.53,
+          "entry_date": "2026-10-27",
+          "published_at": "2026-10-26 17:15:52",
+          "title": "Lindblad's Peak Quarter Tests Whether Record Yields Can Finally Outrun Fuel Costs",
           "event_class": "print_vs_priced"
         },
         {
@@ -18311,6 +18878,15 @@
           "event_class": "print_vs_priced"
         },
         {
+          "ticker": "HUYA",
+          "direction": "down",
+          "ret": -5.45,
+          "entry_date": "2026-10-27",
+          "published_at": "2026-10-27 06:00:00",
+          "title": "HUYA Inc. to Report Third Quarter 2026 Financial Results on Tuesday, November 17, 2026",
+          "event_class": "print_vs_priced"
+        },
+        {
           "ticker": "ASTE",
           "direction": "down",
           "ret": -5.44,
@@ -18590,6 +19166,15 @@
           "event_class": "print_vs_priced"
         },
         {
+          "ticker": "AEIS",
+          "direction": "up",
+          "ret": 5.39,
+          "entry_date": "2026-10-27",
+          "published_at": "2026-10-26 11:51:18",
+          "title": "Advanced Energy Faces A Stock-Price Verdict As Record Growth Story Meets Skeptical Market",
+          "event_class": "print_vs_priced"
+        },
+        {
           "ticker": "MGX",
           "direction": "down",
           "ret": -5.38,
@@ -18749,6 +19334,15 @@
           "entry_date": "2026-10-23",
           "published_at": "2026-10-23 09:00:00",
           "title": "Belden and Radiflow Partner to Close the Gap Between OT Threat Detection and Network Response",
+          "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "LCLN",
+          "direction": "up",
+          "ret": 5.36,
+          "entry_date": "2026-10-27",
+          "published_at": "2026-10-27 08:30:00",
+          "title": "Lincoln CEO Rob Brown to Speak at the 2026 BMO Financials Conference",
           "event_class": "print_vs_priced"
         },
         {
@@ -19463,6 +20057,15 @@
           "event_class": "guidance"
         },
         {
+          "ticker": "ALLE",
+          "direction": "up",
+          "ret": 5.17,
+          "entry_date": "2026-10-27",
+          "published_at": "2026-10-27 08:00:00",
+          "title": "Allegion US Accelerates Modern Access Control with Seamless Hardware, Cloud, and Mobile Solutions at ISC East",
+          "event_class": "guidance"
+        },
+        {
           "ticker": "VVX",
           "direction": "up",
           "ret": 5.16,
@@ -19515,6 +20118,24 @@
           "published_at": "2026-09-21 15:36:00",
           "title": "XTIA Stockholders Have Rights If you Lost Money Investing XTI Aerospace, Inc. Contact Robbins LLP For Information About Recovering Your Assets",
           "event_class": "blast_legal"
+        },
+        {
+          "ticker": "CDNS",
+          "direction": "up",
+          "ret": 5.15,
+          "entry_date": "2026-10-27",
+          "published_at": "2026-10-26 18:04:00",
+          "title": "Cadence Design Systems Raises Guidance on Agentic AI Opportunities",
+          "event_class": "guidance"
+        },
+        {
+          "ticker": "CDNS",
+          "direction": "up",
+          "ret": 5.15,
+          "entry_date": "2026-10-27",
+          "published_at": "2026-10-27 07:16:27",
+          "title": "Cadence Design Systems (NASDAQ:CDNS) Reports 22% Q3 Revenue Growth, Raises 2026 Guidance as Shares Advance Premarket",
+          "event_class": "guidance"
         },
         {
           "ticker": "EGY",
@@ -20048,6 +20669,15 @@
           "event_class": "capital_return"
         },
         {
+          "ticker": "CNNE",
+          "direction": "up",
+          "ret": 5.02,
+          "entry_date": "2026-10-27",
+          "published_at": "2026-10-26 16:15:00",
+          "title": "Cannae Holdings, Inc. Announces Third Quarter 2026 Earnings Release Date and Conference Call",
+          "event_class": "print_vs_priced"
+        },
+        {
           "ticker": "MDLN",
           "direction": "down",
           "ret": -5.01,
@@ -20210,6 +20840,15 @@
           "published_at": "2026-08-06 08:00:00",
           "title": "Aligos Therapeutics Reports Recent Business Progress and Second Quarter 2026 Financial Results",
           "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "NUWE",
+          "direction": "up",
+          "ret": 81.19,
+          "entry_date": "2026-10-27",
+          "published_at": "2026-10-27 08:00:00",
+          "title": "Nuwellis Announces Acceptance of Multicenter Pediatric Aquadex Study in Pediatric Nephrology",
+          "event_class": "gate"
         },
         {
           "ticker": "JZ",
@@ -20581,6 +21220,15 @@
           "event_class": "print_vs_priced"
         },
         {
+          "ticker": "CTOS",
+          "direction": "up",
+          "ret": 32.2,
+          "entry_date": "2026-10-27",
+          "published_at": "2026-10-26 16:10:00",
+          "title": "Custom Truck One Source, Inc. Reports Record Third Quarter 2026 Results and Increases Full Year 2026 Adjusted EBITDA and SER Revenue Guidance",
+          "event_class": "print_vs_priced"
+        },
+        {
           "ticker": "DKS",
           "direction": "down",
           "ret": -31.42,
@@ -20786,6 +21434,15 @@
           "published_at": "2026-08-21 09:15:00",
           "title": "NFT LTD Announces Pricing of US$2.0 Million Public Offering",
           "event_class": "dilution"
+        },
+        {
+          "ticker": "GMAB",
+          "direction": "up",
+          "ret": 27.2,
+          "entry_date": "2026-10-27",
+          "published_at": "2026-10-27 07:11:02",
+          "title": "J.P. Morgan upgrades Genmab on cancer drug growth potential",
+          "event_class": "print_vs_priced"
         },
         {
           "ticker": "BZAI",
@@ -21001,6 +21658,15 @@
           "entry_date": "2026-09-03",
           "published_at": "2026-09-02 17:00:52",
           "title": "FuelCell Energy Inc (FCEL) (Q3 2026) Earnings Call Highlights: Record Cash Position and ...",
+          "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "MVST",
+          "direction": "up",
+          "ret": 24.28,
+          "entry_date": "2026-10-27",
+          "published_at": "2026-10-26 17:00:00",
+          "title": "Microvast Schedules Third Quarter Earnings Call",
           "event_class": "print_vs_priced"
         },
         {
@@ -22786,6 +23452,15 @@
           "event_class": "listing_flow"
         },
         {
+          "ticker": "XGN",
+          "direction": "up",
+          "ret": 14.93,
+          "entry_date": "2026-10-27",
+          "published_at": "2026-10-27 09:00:00",
+          "title": "Exagen to Announce Third Quarter Financial Results on November 10, 2026",
+          "event_class": "guidance"
+        },
+        {
           "ticker": "AGNT",
           "direction": "up",
           "ret": 14.92,
@@ -23684,6 +24359,15 @@
           "published_at": "2026-07-27 16:08:00",
           "title": "Scribe's Genetic Editing Aims to Prevent Heart Attacks",
           "event_class": "listing_flow"
+        },
+        {
+          "ticker": "HYFM",
+          "direction": "down",
+          "ret": -13.33,
+          "entry_date": "2026-10-27",
+          "published_at": "2026-10-27 09:29:00",
+          "title": "Hydrofarm Holdings Group Announces Termination of $109 Million Senior Secured Term Loan in Connection with Pricing of Aggregate $8.3 Million Registered Direct Offering and Concurre",
+          "event_class": "dilution"
         },
         {
           "ticker": "WATT",
@@ -24847,6 +25531,15 @@
           "event_class": "guidance"
         },
         {
+          "ticker": "CURV",
+          "direction": "up",
+          "ret": 11.56,
+          "entry_date": "2026-10-27",
+          "published_at": "2026-10-27 09:15:00",
+          "title": "The Votes Are In: Torrid Unveils Its 2026 Casting Call Finalists",
+          "event_class": "guidance"
+        },
+        {
           "ticker": "GDS",
           "direction": "up",
           "ret": 11.55,
@@ -25486,6 +26179,15 @@
           "event_class": "guidance"
         },
         {
+          "ticker": "SKHY",
+          "direction": "up",
+          "ret": 10.71,
+          "entry_date": "2026-10-27",
+          "published_at": "2026-10-26 09:57:57",
+          "title": "Stocks climb ahead of tech earnings, central bank calls",
+          "event_class": "listing_flow"
+        },
+        {
           "ticker": "CSAN",
           "direction": "up",
           "ret": 10.66,
@@ -26118,8 +26820,8 @@
       ]
     },
     "3d": {
-      "ge_5_n": 1361,
-      "ge_10_n": 804,
+      "ge_5_n": 1377,
+      "ge_10_n": 816,
       "ge_5": [
         {
           "ticker": "HOOD",
@@ -26201,6 +26903,15 @@
           "published_at": "2026-08-11 09:29:09",
           "title": "Earnings To Watch: Neonode Inc (NEON) Q2 2026 -- GF Value Sees 47% Upside",
           "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "ELMT",
+          "direction": "up",
+          "ret": 9.9,
+          "entry_date": "2026-10-26",
+          "published_at": "2026-10-23 11:04:00",
+          "title": "Defense Play Elmet, Up 45% Since Its April IPO, Gets 50% Target Hike",
+          "event_class": "listing_flow"
         },
         {
           "ticker": "QQQU",
@@ -26786,6 +27497,24 @@
           "published_at": "2026-07-29 08:30:00",
           "title": "Unum Group Q2 2026 Earnings Call Summary",
           "event_class": "guidance"
+        },
+        {
+          "ticker": "JEF",
+          "direction": "up",
+          "ret": 9.44,
+          "entry_date": "2026-10-26",
+          "published_at": "2026-10-23 11:17:00",
+          "title": "Fortinet growth outlook for 2027 becomes key test for investors, says Jefferies",
+          "event_class": "peer_spill"
+        },
+        {
+          "ticker": "JEF",
+          "direction": "up",
+          "ret": 9.44,
+          "entry_date": "2026-10-26",
+          "published_at": "2026-10-23 11:17:00",
+          "title": "Fortinet growth outlook for 2027 becomes key test for investors, says Jefferies",
+          "event_class": "peer_spill"
         },
         {
           "ticker": "BBDC",
@@ -28642,6 +29371,42 @@
           "event_class": "guidance"
         },
         {
+          "ticker": "TXN",
+          "direction": "up",
+          "ret": 8.31,
+          "entry_date": "2026-10-26",
+          "published_at": "2026-10-23 16:08:00",
+          "title": "Dow and Small Caps Climb Weekly While Nasdaq Slips on Megacap Earnings Charges",
+          "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "TXN",
+          "direction": "up",
+          "ret": 8.31,
+          "entry_date": "2026-10-26",
+          "published_at": "2026-10-23 16:08:00",
+          "title": "Dow and Small Caps Climb Weekly While Nasdaq Slips on Megacap Earnings Charges",
+          "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "TXN",
+          "direction": "up",
+          "ret": 8.31,
+          "entry_date": "2026-10-26",
+          "published_at": "2026-10-23 16:08:00",
+          "title": "Dow and Small Caps Climb Weekly While Nasdaq Slips on Megacap Earnings Charges",
+          "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "TXN",
+          "direction": "up",
+          "ret": 8.31,
+          "entry_date": "2026-10-26",
+          "published_at": "2026-10-23 16:08:00",
+          "title": "Dow and Small Caps Climb Weekly While Nasdaq Slips on Megacap Earnings Charges",
+          "event_class": "print_vs_priced"
+        },
+        {
           "ticker": "GRML",
           "direction": "down",
           "ret": -8.28,
@@ -29902,6 +30667,15 @@
           "event_class": "guidance"
         },
         {
+          "ticker": "AUGO",
+          "direction": "up",
+          "ret": 7.75,
+          "entry_date": "2026-10-26",
+          "published_at": "2026-10-26 06:07:06",
+          "title": "XP shares nearly halve on Brazil election shock, and other early market movers",
+          "event_class": "print_vs_priced"
+        },
+        {
           "ticker": "HRB",
           "direction": "up",
           "ret": 7.71,
@@ -30550,6 +31324,15 @@
           "event_class": "print_vs_priced"
         },
         {
+          "ticker": "TDY",
+          "direction": "up",
+          "ret": 7.45,
+          "entry_date": "2026-10-26",
+          "published_at": "2026-10-26 09:04:00",
+          "title": "Teledyne FLIR Defense Wins $48M Contract to Provide Next-Gen Nuclear, Biological and Chemical Reconnaissance Sensors for Bulgaria Strykers",
+          "event_class": "gate"
+        },
+        {
           "ticker": "INTU",
           "direction": "down",
           "ret": -7.44,
@@ -30683,6 +31466,15 @@
           "published_at": "2026-07-31 08:00:00",
           "title": "Wearable Devices Announces Pricing of $3.3 Million Private Placement Priced At-the-Market Under Nasdaq Rules with a Single Institutional Investor",
           "event_class": "dilution"
+        },
+        {
+          "ticker": "CTY",
+          "direction": "up",
+          "ret": 7.37,
+          "entry_date": "2026-10-26",
+          "published_at": "2026-10-24 14:56:00",
+          "title": "Forget Anthropic: Biotech Is Quietly Dominating the IPO Sphere",
+          "event_class": "listing_flow"
         },
         {
           "ticker": "MFP",
@@ -31304,6 +32096,15 @@
           "published_at": "2026-09-21 17:46:03",
           "title": "Robinhood CEO Says Crypto Will Beat Sports at Prediction Markets' Own Game",
           "event_class": "market_structure"
+        },
+        {
+          "ticker": "BAH",
+          "direction": "up",
+          "ret": 7.01,
+          "entry_date": "2026-10-26",
+          "published_at": "2026-10-23 09:37:08",
+          "title": "Booz Allen Beats On Earnings And Raises EPS Outlook, But Ultra Deal Masks A Softer Organic Revenue Picture",
+          "event_class": "guidance"
         },
         {
           "ticker": "GORO",
@@ -33286,6 +34087,24 @@
           "event_class": "print_vs_priced"
         },
         {
+          "ticker": "SNDK",
+          "direction": "up",
+          "ret": 6.24,
+          "entry_date": "2026-10-26",
+          "published_at": "2026-10-23 12:13:09",
+          "title": "Micron, Sandisk gain as SK Hynix scraps Solidigm IPO, LYNX says",
+          "event_class": "listing_flow"
+        },
+        {
+          "ticker": "SNDK",
+          "direction": "up",
+          "ret": 6.24,
+          "entry_date": "2026-10-26",
+          "published_at": "2026-10-23 12:13:09",
+          "title": "Micron, Sandisk gain as SK Hynix scraps Solidigm IPO, LYNX says",
+          "event_class": "listing_flow"
+        },
+        {
           "ticker": "KD",
           "direction": "down",
           "ret": -6.23,
@@ -33599,6 +34418,15 @@
           "published_at": "2026-07-31 08:15:00",
           "title": "Kaplan Fox Encourages Badger Meter, Inc. (BMI) Investors with Losses to Contact the Firm Before August 3, 2026",
           "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "OFIX",
+          "direction": "up",
+          "ret": 6.11,
+          "entry_date": "2026-10-26",
+          "published_at": "2026-10-23 16:00:00",
+          "title": "Orthofix to Report Third Quarter 2026 Financial Results",
+          "event_class": "guidance"
         },
         {
           "ticker": "WYFI",
@@ -36580,6 +37408,15 @@
           "event_class": "print_vs_priced"
         },
         {
+          "ticker": "ZVIA",
+          "direction": "down",
+          "ret": -5.38,
+          "entry_date": "2026-10-26",
+          "published_at": "2026-10-23 09:53:58",
+          "title": "US soft-drinks firm Zevia attracts milestone investment",
+          "event_class": "print_vs_priced"
+        },
+        {
           "ticker": "LDOS",
           "direction": "up",
           "ret": 5.37,
@@ -37640,6 +38477,15 @@
           "published_at": "2026-09-14 10:24:36",
           "title": "Not all tech is falling, as software sector is propelled by cybersecurity stocks",
           "event_class": "guidance"
+        },
+        {
+          "ticker": "SKYH",
+          "direction": "up",
+          "ret": 5.17,
+          "entry_date": "2026-10-26",
+          "published_at": "2026-10-26 08:30:00",
+          "title": "Boston Omaha Corporation Completes Sale of its Surety Insurance Business Unit to CopperPoint Insurance Company",
+          "event_class": "print_vs_priced"
         },
         {
           "ticker": "THC",
@@ -38805,6 +39651,15 @@
           "event_class": "print_vs_priced"
         },
         {
+          "ticker": "PURR",
+          "direction": "up",
+          "ret": 40.7,
+          "entry_date": "2026-10-26",
+          "published_at": "2026-10-23 16:15:00",
+          "title": "Hyperliquid Strategies Inc Announces Increase of Stock Repurchase Program to $100 Million",
+          "event_class": "capital_return"
+        },
+        {
           "ticker": "CYCU",
           "direction": "up",
           "ret": 40.46,
@@ -38884,6 +39739,15 @@
           "published_at": "2026-08-07 01:08:27",
           "title": "Senseonics Holdings Inc (SENS) (Q2 2026) Earnings Call Highlights: Revenue Soars 120% as ...",
           "event_class": "guidance"
+        },
+        {
+          "ticker": "BEAT",
+          "direction": "up",
+          "ret": 37.5,
+          "entry_date": "2026-10-26",
+          "published_at": "2026-10-26 08:31:00",
+          "title": "HeartBeam's Heart Attack Assessment Technology Accepted into FDA's Total Product Life Cycle Advisory Program (TAP)",
+          "event_class": "print_vs_priced"
         },
         {
           "ticker": "DFSC",
@@ -39136,6 +40000,15 @@
           "published_at": "2026-09-02 09:17:56",
           "title": "Three Infrastructure Layers Are Converging Into a Single Investable Thesis for Tokenized Finance",
           "event_class": "market_structure"
+        },
+        {
+          "ticker": "NOW",
+          "direction": "down",
+          "ret": -30.83,
+          "entry_date": "2026-10-26",
+          "published_at": "2026-10-23 11:16:00",
+          "title": "Hyperscalers Microsoft, Amazon Line Up With Earnings, Along With ServiceNow, Intel",
+          "event_class": "print_vs_priced"
         },
         {
           "ticker": "ULH",
@@ -42828,6 +43701,42 @@
           "event_class": "print_vs_priced"
         },
         {
+          "ticker": "FIX",
+          "direction": "up",
+          "ret": 12.87,
+          "entry_date": "2026-10-26",
+          "published_at": "2026-10-23 13:52:06",
+          "title": "The AI sell-off is crushing stocks of companies leading the data center build-out",
+          "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "FIX",
+          "direction": "up",
+          "ret": 12.87,
+          "entry_date": "2026-10-26",
+          "published_at": "2026-10-23 13:52:06",
+          "title": "The AI sell-off is crushing stocks of companies leading the data center build-out",
+          "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "FIX",
+          "direction": "up",
+          "ret": 12.87,
+          "entry_date": "2026-10-26",
+          "published_at": "2026-10-23 13:52:06",
+          "title": "The AI sell-off is crushing stocks of companies leading the data center build-out",
+          "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "FIX",
+          "direction": "up",
+          "ret": 12.87,
+          "entry_date": "2026-10-26",
+          "published_at": "2026-10-24 09:27:50",
+          "title": "Comfort Systems Posts A Record $17.8 Billion Backlog And Raises Guidance Again As Margins Slip And Shares Sit Near 30% Lower",
+          "event_class": "guidance"
+        },
+        {
           "ticker": "PBLS",
           "direction": "down",
           "ret": -12.83,
@@ -43069,6 +43978,15 @@
           "published_at": "2026-09-17 08:30:00",
           "title": "FibroBiologics Announces Closing of $0.5 Million Private Placement with Chief Scientific Officer",
           "event_class": "dilution"
+        },
+        {
+          "ticker": "AMRC",
+          "direction": "up",
+          "ret": 12.42,
+          "entry_date": "2026-10-26",
+          "published_at": "2026-10-26 08:05:00",
+          "title": "Ameresco Completes $5.9M Advanced Metering Infrastructure Project for the City of Mustang, Oklahoma",
+          "event_class": "gate"
         },
         {
           "ticker": "GPI",
@@ -45096,6 +46014,15 @@
           "event_class": "guidance"
         },
         {
+          "ticker": "NAMM",
+          "direction": "down",
+          "ret": -10.35,
+          "entry_date": "2026-10-26",
+          "published_at": "2026-10-26 09:00:00",
+          "title": "Namib Minerals Announces Expanded Milling Plant at How Mine Operating at Full Capacity, Ahead of Schedule",
+          "event_class": "print_vs_priced"
+        },
+        {
           "ticker": "BOBS",
           "direction": "up",
           "ret": 10.34,
@@ -45330,6 +46257,15 @@
           "event_class": "print_vs_priced"
         },
         {
+          "ticker": "CZWI",
+          "direction": "up",
+          "ret": 10.14,
+          "entry_date": "2026-10-26",
+          "published_at": "2026-10-26 08:30:00",
+          "title": "Citizens Community Bancorp, Inc. Reports Third Quarter 2026 Earnings of $0.56 Per Share; Board Approves 14% Increase in Quarterly Dividend to $0.12 per Share",
+          "event_class": "print_vs_priced"
+        },
+        {
           "ticker": "MRLN",
           "direction": "down",
           "ret": -10.13,
@@ -45510,6 +46446,24 @@
           "event_class": "print_vs_priced"
         },
         {
+          "ticker": "SECZ",
+          "direction": "up",
+          "ret": 10.05,
+          "entry_date": "2026-10-26",
+          "published_at": "2026-10-25 12:01:03",
+          "title": "Wells Fargo, Cisco, Intuit Among 6 More Companies Objecting to Tokenized Stocks",
+          "event_class": "market_structure"
+        },
+        {
+          "ticker": "SECZ",
+          "direction": "up",
+          "ret": 10.05,
+          "entry_date": "2026-10-26",
+          "published_at": "2026-10-25 12:01:03",
+          "title": "Wells Fargo, Cisco, Intuit Among 6 More Companies Objecting to Tokenized Stocks",
+          "event_class": "market_structure"
+        },
+        {
           "ticker": "STRR",
           "direction": "down",
           "ret": -10.04,
@@ -45611,8 +46565,8 @@
       ]
     },
     "4d": {
-      "ge_5_n": 1449,
-      "ge_10_n": 973,
+      "ge_5_n": 1480,
+      "ge_10_n": 985,
       "ge_5": [
         {
           "ticker": "GORO",
@@ -46182,6 +47136,15 @@
           "event_class": "print_vs_priced"
         },
         {
+          "ticker": "URI",
+          "direction": "up",
+          "ret": 9.68,
+          "entry_date": "2026-10-23",
+          "published_at": "2026-10-22 16:07:04",
+          "title": "United Rentals Beats Big And Raises Again As Fleet Productivity Surges, But Fleet Tightness And Flat Cash Flow Guidance Temper The Story",
+          "event_class": "guidance"
+        },
+        {
           "ticker": "OIS",
           "direction": "up",
           "ret": 9.67,
@@ -46254,6 +47217,15 @@
           "event_class": "gate"
         },
         {
+          "ticker": "CACI",
+          "direction": "up",
+          "ret": 9.62,
+          "entry_date": "2026-10-23",
+          "published_at": "2026-10-22 09:32:34",
+          "title": "CACI Beats On Margins And Nudges Guidance Higher, But Slowing Organic Growth And Flat Backlog Complicate The Story",
+          "event_class": "guidance"
+        },
+        {
           "ticker": "LMB",
           "direction": "down",
           "ret": -9.61,
@@ -46269,6 +47241,15 @@
           "entry_date": "2026-10-15",
           "published_at": "2026-10-15 08:00:00",
           "title": "Momentus Secures Commercial Contract with ARCSPACE to Advance In-Space Manufacturing",
+          "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "LUCK",
+          "direction": "down",
+          "ret": -9.6,
+          "entry_date": "2026-10-23",
+          "published_at": "2026-10-22 17:30:00",
+          "title": "Lucky Strike Entertainment to Report First Quarter 2027 Financial Results on November 5, 2026",
           "event_class": "print_vs_priced"
         },
         {
@@ -46515,6 +47496,15 @@
           "event_class": "print_vs_priced"
         },
         {
+          "ticker": "BE",
+          "direction": "up",
+          "ret": 9.5,
+          "entry_date": "2026-10-23",
+          "published_at": "2026-10-22 16:33:00",
+          "title": "Bloom Energy Lifts Outlook, Logs Higher Profit",
+          "event_class": "guidance"
+        },
+        {
           "ticker": "WIX",
           "direction": "up",
           "ret": 9.49,
@@ -46650,6 +47640,15 @@
           "event_class": "guidance"
         },
         {
+          "ticker": "FIX",
+          "direction": "up",
+          "ret": 9.44,
+          "entry_date": "2026-10-23",
+          "published_at": "2026-10-22 16:17:00",
+          "title": "Comfort Systems USA Increases Quarterly Dividend",
+          "event_class": "print_vs_priced"
+        },
+        {
           "ticker": "JAKK",
           "direction": "up",
           "ret": 9.43,
@@ -46657,6 +47656,15 @@
           "published_at": "2026-10-01 18:00:00",
           "title": "JAKKS Pacific, Inc. Announces Third Quarter 2026 Earnings Call",
           "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "ESI",
+          "direction": "up",
+          "ret": 9.43,
+          "entry_date": "2026-10-23",
+          "published_at": "2026-10-22 16:01:11",
+          "title": "Element Solutions Beats And Lifts EBITDA Outlook Again, But Slowing Organic Growth And A Soft Q4 Bridge Temper The Record Quarter",
+          "event_class": "guidance"
         },
         {
           "ticker": "ASTH",
@@ -47802,6 +48810,24 @@
           "event_class": "print_vs_priced"
         },
         {
+          "ticker": "PL",
+          "direction": "up",
+          "ret": 8.57,
+          "entry_date": "2026-10-23",
+          "published_at": "2026-10-23 03:57:15",
+          "title": "Stocktwits Space Race Weekly: RKLB, VSAT Beat SPCX With Modest Gains  ASTS And PL Sink Deeper",
+          "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "PL",
+          "direction": "up",
+          "ret": 8.57,
+          "entry_date": "2026-10-23",
+          "published_at": "2026-10-23 03:57:15",
+          "title": "Stocktwits Space Race Weekly: RKLB, VSAT Beat SPCX With Modest Gains  ASTS And PL Sink Deeper",
+          "event_class": "print_vs_priced"
+        },
+        {
           "ticker": "YSS",
           "direction": "down",
           "ret": -8.55,
@@ -48765,6 +49791,15 @@
           "event_class": "blast_legal"
         },
         {
+          "ticker": "LENZ",
+          "direction": "up",
+          "ret": 8.05,
+          "entry_date": "2026-10-23",
+          "published_at": "2026-10-22 10:38:06",
+          "title": "LENZ Must Show VIZZ's July Surge Was A Trend, Not A One-Month Blip",
+          "event_class": "print_vs_priced"
+        },
+        {
           "ticker": "ATOS",
           "direction": "up",
           "ret": 8.02,
@@ -49005,6 +50040,15 @@
           "entry_date": "2026-10-06",
           "published_at": "2026-10-06 09:20:00",
           "title": "Over half of Americans say social media posts have influenced their voting decisions during election season, according to new Sprout Social research",
+          "event_class": "guidance"
+        },
+        {
+          "ticker": "VC",
+          "direction": "down",
+          "ret": -7.86,
+          "entry_date": "2026-10-23",
+          "published_at": "2026-10-22 18:37:10",
+          "title": "Visteon's Sales Outperformance Is Overshadowed By A $77 Million Warranty Hit And Lower Profit And Cash Guidance",
           "event_class": "guidance"
         },
         {
@@ -49528,6 +50572,15 @@
           "published_at": "2026-10-06 10:43:21",
           "title": "Blaize Cuts 2026 Revenue Guidance to $32 Million-$36 Million After Preliminary Q3 Revenue of $0.5 Million",
           "event_class": "guidance"
+        },
+        {
+          "ticker": "DOV",
+          "direction": "up",
+          "ret": 7.64,
+          "entry_date": "2026-10-23",
+          "published_at": "2026-10-22 18:43:33",
+          "title": "Dover Hits The Whisper As A 35% Backlog Surge Shifts The Story Toward 2027",
+          "event_class": "print_vs_priced"
         },
         {
           "ticker": "BPRN",
@@ -50232,6 +51285,15 @@
           "event_class": "print_vs_priced"
         },
         {
+          "ticker": "MSM",
+          "direction": "up",
+          "ret": 7.33,
+          "entry_date": "2026-10-23",
+          "published_at": "2026-10-22 16:04:23",
+          "title": "MSC Industrial Beats And Guides Growth To ~10%, But Price-Led Sales And Margin Pressure Test A Stock Trading Near Its Highs",
+          "event_class": "print_vs_priced"
+        },
+        {
           "ticker": "FLNA",
           "direction": "down",
           "ret": -7.32,
@@ -50419,6 +51481,15 @@
           "published_at": "2026-09-11 08:00:00",
           "title": "Jerash Holdings Announces Results of 2026 Annual Meeting of Stockholders",
           "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "NABL",
+          "direction": "up",
+          "ret": 7.25,
+          "entry_date": "2026-10-23",
+          "published_at": "2026-10-22 17:09:00",
+          "title": "N-able to Host Third Quarter Earnings Conference Call on November 5, 2026",
+          "event_class": "capital_return"
         },
         {
           "ticker": "MAN",
@@ -51555,6 +52626,15 @@
           "event_class": "print_vs_priced"
         },
         {
+          "ticker": "BWMX",
+          "direction": "up",
+          "ret": 6.88,
+          "entry_date": "2026-10-23",
+          "published_at": "2026-10-22 16:15:00",
+          "title": "BeFra Reports Third Quarter 2026 Results",
+          "event_class": "guidance"
+        },
+        {
           "ticker": "PBYI",
           "direction": "up",
           "ret": 6.87,
@@ -51742,6 +52822,15 @@
           "published_at": "2026-08-10 07:30:00",
           "title": "ARS Pharmaceuticals, Inc. Sued for Securities Law Violations - Contact the DJS Law Group to Discuss Your Rights SPRY",
           "event_class": "blast_legal"
+        },
+        {
+          "ticker": "REI",
+          "direction": "up",
+          "ret": 6.77,
+          "entry_date": "2026-10-23",
+          "published_at": "2026-10-22 16:45:00",
+          "title": "Ring Energy Announces Timing of Third Quarter 2026 Earnings Release and Conference Call",
+          "event_class": "print_vs_priced"
         },
         {
           "ticker": "CRNC",
@@ -53409,6 +54498,15 @@
           "event_class": "guidance"
         },
         {
+          "ticker": "MID",
+          "direction": "down",
+          "ret": -6.3,
+          "entry_date": "2026-10-12",
+          "published_at": "2026-10-01 18:29:51",
+          "title": "Twilio to join S&P 500 as S&P Dow Jones reshuffles indices",
+          "event_class": "flow_index"
+        },
+        {
           "ticker": "HAL",
           "direction": "up",
           "ret": 6.3,
@@ -53571,6 +54669,15 @@
           "event_class": "print_vs_priced"
         },
         {
+          "ticker": "PEGA",
+          "direction": "down",
+          "ret": -6.24,
+          "entry_date": "2026-10-23",
+          "published_at": "2026-10-22 10:13:00",
+          "title": "Pega Named a Leader in AppGen and Low-Code Platforms by Independent Research Firm",
+          "event_class": "guidance"
+        },
+        {
           "ticker": "POCI",
           "direction": "up",
           "ret": 6.22,
@@ -53713,6 +54820,24 @@
           "published_at": "2026-10-08 06:52:58",
           "title": "Ryanair CEO sees no European jet fuel shortages into summer 2027",
           "event_class": "input_cost"
+        },
+        {
+          "ticker": "RL",
+          "direction": "up",
+          "ret": 6.19,
+          "entry_date": "2026-10-23",
+          "published_at": "2026-10-22 15:23:18",
+          "title": "Jefferies names top fashion stocks ahead of earnings season",
+          "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "RL",
+          "direction": "up",
+          "ret": 6.19,
+          "entry_date": "2026-10-23",
+          "published_at": "2026-10-22 15:23:18",
+          "title": "Jefferies names top fashion stocks ahead of earnings season",
+          "event_class": "print_vs_priced"
         },
         {
           "ticker": "XE",
@@ -56028,6 +57153,24 @@
           "event_class": "capital_return"
         },
         {
+          "ticker": "GBCI",
+          "direction": "up",
+          "ret": 5.67,
+          "entry_date": "2026-10-23",
+          "published_at": "2026-10-22 16:30:00",
+          "title": "Glacier Bancorp, Inc. Announces Results for the Quarter and Period Ended September 30, 2026",
+          "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "GBCI",
+          "direction": "up",
+          "ret": 5.67,
+          "entry_date": "2026-10-23",
+          "published_at": "2026-10-22 16:51:30",
+          "title": "Glacier Bancorp: Q3 Earnings Snapshot",
+          "event_class": "print_vs_priced"
+        },
+        {
           "ticker": "BETR",
           "direction": "down",
           "ret": -5.66,
@@ -56505,6 +57648,15 @@
           "event_class": "print_vs_priced"
         },
         {
+          "ticker": "DGX",
+          "direction": "up",
+          "ret": 5.55,
+          "entry_date": "2026-10-23",
+          "published_at": "2026-10-22 15:59:43",
+          "title": "Quest Diagnostics Beats And Raises For A Third Straight Quarter As Volume Accelerates, But 2027 Headwinds Sharpen",
+          "event_class": "guidance"
+        },
+        {
           "ticker": "GDYN",
           "direction": "up",
           "ret": 5.55,
@@ -56682,6 +57834,15 @@
           "entry_date": "2026-08-07",
           "published_at": "2026-08-06 19:02:47",
           "title": "Ring Energy Inc (REI) (Q2 2026) Earnings Call Highlights: Strategic Growth and Improved Leverage",
+          "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "ENVA",
+          "direction": "up",
+          "ret": 5.51,
+          "entry_date": "2026-10-23",
+          "published_at": "2026-10-22 16:16:00",
+          "title": "Enova Reports Third Quarter 2026 Results",
           "event_class": "print_vs_priced"
         },
         {
@@ -57027,6 +58188,24 @@
           "event_class": "guidance"
         },
         {
+          "ticker": "TMO",
+          "direction": "up",
+          "ret": 5.42,
+          "entry_date": "2026-10-23",
+          "published_at": "2026-10-23 09:00:00",
+          "title": "Qiagen agrees to private equity takeover",
+          "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "TMO",
+          "direction": "up",
+          "ret": 5.42,
+          "entry_date": "2026-10-23",
+          "published_at": "2026-10-23 09:00:00",
+          "title": "Qiagen agrees to private equity takeover",
+          "event_class": "print_vs_priced"
+        },
+        {
           "ticker": "GDRX",
           "direction": "up",
           "ret": 5.41,
@@ -57216,6 +58395,15 @@
           "event_class": "print_vs_priced"
         },
         {
+          "ticker": "SSD",
+          "direction": "up",
+          "ret": 5.37,
+          "entry_date": "2026-10-23",
+          "published_at": "2026-10-23 09:00:00",
+          "title": "Simpson Manufacturing Co., Inc. Declares Quarterly Dividend",
+          "event_class": "print_vs_priced"
+        },
+        {
           "ticker": "TRP",
           "direction": "down",
           "ret": -5.36,
@@ -57250,6 +58438,15 @@
           "published_at": "2026-09-28 13:07:21",
           "title": "Chip stocks fall as AI breach fuels safety concerns, but Nvidia bucks the trend: Chart of the Day",
           "event_class": "listing_flow"
+        },
+        {
+          "ticker": "BDC",
+          "direction": "up",
+          "ret": 5.36,
+          "entry_date": "2026-10-23",
+          "published_at": "2026-10-23 09:00:00",
+          "title": "Belden and Radiflow Partner to Close the Gap Between OT Threat Detection and Network Response",
+          "event_class": "print_vs_priced"
         },
         {
           "ticker": "PNNT",
@@ -57348,6 +58545,15 @@
           "entry_date": "2026-10-07",
           "published_at": "2026-10-07 07:30:00",
           "title": "Marriott Vacations Worldwide Corporation Announces Third Quarter Earnings Release and Conference Call",
+          "event_class": "guidance"
+        },
+        {
+          "ticker": "AUNA",
+          "direction": "down",
+          "ret": -5.33,
+          "entry_date": "2026-10-23",
+          "published_at": "2026-10-22 09:34:59",
+          "title": "Auna stock tumbles as company slashes 2026 EBITDA guidance",
           "event_class": "guidance"
         },
         {
@@ -57934,6 +59140,15 @@
           "published_at": "2026-10-01 09:31:00",
           "title": "ManpowerGroup to Announce 3rd Quarter 2026 Earnings Results",
           "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "SMID",
+          "direction": "up",
+          "ret": 5.18,
+          "entry_date": "2026-10-23",
+          "published_at": "2026-10-22 12:40:00",
+          "title": "Smith-Midland Wins $2.2M Virginia SlenderWall(R) School Contract",
+          "event_class": "gate"
         },
         {
           "ticker": "ACET",
@@ -58653,6 +59868,24 @@
           "entry_date": "2026-09-22",
           "published_at": "2026-09-22 07:05:10",
           "title": "Ferroglobe PLC's Dividend Analysis",
+          "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "DOW",
+          "direction": "up",
+          "ret": 5.0,
+          "entry_date": "2026-10-23",
+          "published_at": "2026-10-22 12:50:40",
+          "title": "Dow Inc. Q3 2026 Earnings Call Summary",
+          "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "HBNC",
+          "direction": "up",
+          "ret": 5.0,
+          "entry_date": "2026-10-23",
+          "published_at": "2026-10-22 16:02:24",
+          "title": "Horizon Bancorp Beats On A Steady 4.37% Margin And A Firmer NIM Outlook, But Slower Loans And A Book-Value Hit Temper The Quarter",
           "event_class": "print_vs_priced"
         }
       ],
@@ -59583,6 +60816,15 @@
           "published_at": "2026-08-07 16:01:00",
           "title": "InspireMD Announces Inducement Grants Under Nasdaq Listing Rule 5635(c)(4)",
           "event_class": "gate"
+        },
+        {
+          "ticker": "NDLS",
+          "direction": "up",
+          "ret": 30.38,
+          "entry_date": "2026-10-23",
+          "published_at": "2026-10-23 09:00:00",
+          "title": "Noodles & Company to Announce Third Quarter 2026 Results on November 13, 2026",
+          "event_class": "print_vs_priced"
         },
         {
           "ticker": "FRVO",
@@ -62582,6 +63824,24 @@
           "event_class": "capacity"
         },
         {
+          "ticker": "STM",
+          "direction": "up",
+          "ret": 15.21,
+          "entry_date": "2026-10-23",
+          "published_at": "2026-10-23 08:43:27",
+          "title": "BofA Names Preferred Picks Among European Chipmakers Ahead of Earnings",
+          "event_class": "capital_return"
+        },
+        {
+          "ticker": "STM",
+          "direction": "up",
+          "ret": 15.21,
+          "entry_date": "2026-10-23",
+          "published_at": "2026-10-23 08:43:27",
+          "title": "BofA Names Preferred Picks Among European Chipmakers Ahead of Earnings",
+          "event_class": "capital_return"
+        },
+        {
           "ticker": "FUFU",
           "direction": "down",
           "ret": -15.19,
@@ -63110,6 +64370,15 @@
           "entry_date": "2026-08-18",
           "published_at": "2026-08-17 23:02:23",
           "title": "Fervo Energy Co (FRVO) (Q2 2026) Earnings Call Highlights: Geothermal Pioneer Expands Pipeline ...",
+          "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "WDC",
+          "direction": "up",
+          "ret": 14.25,
+          "entry_date": "2026-10-23",
+          "published_at": "2026-10-22 16:22:00",
+          "title": "Western Digital Profit Grows on Data Storage Demand",
           "event_class": "print_vs_priced"
         },
         {
@@ -64247,6 +65516,15 @@
           "event_class": "print_vs_priced"
         },
         {
+          "ticker": "TXN",
+          "direction": "up",
+          "ret": 12.62,
+          "entry_date": "2026-10-23",
+          "published_at": "2026-10-22 12:34:00",
+          "title": "Chip Stocks Tumble Despite Solid Earnings Reports",
+          "event_class": "print_vs_priced"
+        },
+        {
           "ticker": "FIG",
           "direction": "down",
           "ret": -12.61,
@@ -64616,6 +65894,24 @@
           "event_class": "peer_spill"
         },
         {
+          "ticker": "SLM",
+          "direction": "down",
+          "ret": -12.3,
+          "entry_date": "2026-10-23",
+          "published_at": "2026-10-22 16:30:00",
+          "title": "Sallie Mae Reports Third Quarter 2026 Financial Results",
+          "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "SLM",
+          "direction": "down",
+          "ret": -12.3,
+          "entry_date": "2026-10-23",
+          "published_at": "2026-10-22 19:32:54",
+          "title": "Sallie Mae Swings To A Q3 Loss And Slashes 2026 Guidance As Record Originations Collide With Credit And Funding Pressure",
+          "event_class": "guidance"
+        },
+        {
           "ticker": "CNL",
           "direction": "down",
           "ret": -12.28,
@@ -64982,6 +66278,15 @@
           "entry_date": "2026-08-12",
           "published_at": "2026-08-11 17:07:01",
           "title": "Harvard Bioscience, Inc. Q2 2026 Earnings Call Summary",
+          "event_class": "guidance"
+        },
+        {
+          "ticker": "EQPT",
+          "direction": "up",
+          "ret": 11.88,
+          "entry_date": "2026-10-23",
+          "published_at": "2026-10-22 16:55:00",
+          "title": "EquipmentShare Announces Third Quarter 2026 Financial Results Conference Call",
           "event_class": "guidance"
         },
         {
@@ -65441,6 +66746,15 @@
           "entry_date": "2026-08-12",
           "published_at": "2026-08-11 15:18:15",
           "title": "Cerebras Stock Gets a Boost. Wedbush Sees More Upside Ahead of Earnings",
+          "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "MXL",
+          "direction": "up",
+          "ret": 11.58,
+          "entry_date": "2026-10-23",
+          "published_at": "2026-10-22 16:32:24",
+          "title": "MaxLinear: Q3 Earnings Snapshot",
           "event_class": "print_vs_priced"
         },
         {
@@ -65912,6 +67226,15 @@
           "event_class": "print_vs_priced"
         },
         {
+          "ticker": "BOF",
+          "direction": "down",
+          "ret": -11.22,
+          "entry_date": "2026-10-23",
+          "published_at": "2026-10-23 08:00:00",
+          "title": "BranchOut Food Inc. Announces $5.0 Million Underwritten Public Offering",
+          "event_class": "dilution"
+        },
+        {
           "ticker": "MFP",
           "direction": "up",
           "ret": 11.21,
@@ -66332,6 +67655,15 @@
           "entry_date": "2026-10-22",
           "published_at": "2026-10-21 16:25:18",
           "title": "Southwest: Q3 Earnings Snapshot",
+          "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "CODI",
+          "direction": "up",
+          "ret": 10.91,
+          "entry_date": "2026-10-23",
+          "published_at": "2026-10-22 16:10:00",
+          "title": "Compass Diversified Announces Third Quarter 2026 Earnings and Conference Call Information",
           "event_class": "print_vs_priced"
         },
         {
@@ -66818,6 +68150,15 @@
           "entry_date": "2026-10-22",
           "published_at": "2026-10-21 16:57:18",
           "title": "Kaiser: Q3 Earnings Snapshot",
+          "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "FTV",
+          "direction": "up",
+          "ret": 10.4,
+          "entry_date": "2026-10-23",
+          "published_at": "2026-10-22 16:15:00",
+          "title": "Fortive To Present at Baird 2026 Global Industrial Conference",
           "event_class": "print_vs_priced"
         },
         {
@@ -67417,8 +68758,8 @@
       ]
     },
     "5d": {
-      "ge_5_n": 1528,
-      "ge_10_n": 1076,
+      "ge_5_n": 1560,
+      "ge_10_n": 1102,
       "ge_5": [
         {
           "ticker": "STRO",
@@ -68078,6 +69419,15 @@
           "event_class": "dilution"
         },
         {
+          "ticker": "BCRX",
+          "direction": "up",
+          "ret": 9.51,
+          "entry_date": "2026-10-22",
+          "published_at": "2026-10-21 16:01:00",
+          "title": "BioCryst to Report Third Quarter 2026 Financial Results on November 4",
+          "event_class": "gate"
+        },
+        {
           "ticker": "COIN",
           "direction": "up",
           "ret": 9.5,
@@ -68165,6 +69515,15 @@
           "entry_date": "2026-10-15",
           "published_at": "2026-10-15 08:15:00",
           "title": "ZenaTech Extends Use of Tillerstack's Orsa+ AI Software and Plans Healthcare Teaching Applications Combined with Stacklens Smart Glasses",
+          "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "CRS",
+          "direction": "down",
+          "ret": -9.48,
+          "entry_date": "2026-10-22",
+          "published_at": "2026-10-22 08:08:31",
+          "title": "Carpenter: Fiscal Q1 Earnings Snapshot",
           "event_class": "print_vs_priced"
         },
         {
@@ -68291,6 +69650,15 @@
           "entry_date": "2026-09-21",
           "published_at": "2026-09-19 04:41:00",
           "title": "Blackstone bet on ZO Skin Health, a brand you wont find at Sephora. Now it could be worth $2 billion",
+          "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "WCN",
+          "direction": "up",
+          "ret": 9.39,
+          "entry_date": "2026-10-22",
+          "published_at": "2026-10-21 16:17:15",
+          "title": "Waste Connections: Q3 Earnings Snapshot",
           "event_class": "print_vs_priced"
         },
         {
@@ -70553,6 +71921,15 @@
           "event_class": "print_vs_priced"
         },
         {
+          "ticker": "GHM",
+          "direction": "up",
+          "ret": 8.31,
+          "entry_date": "2026-10-22",
+          "published_at": "2026-10-22 08:00:00",
+          "title": "Graham Corporation Announces Second Quarter Fiscal Year 2027 Financial Results Conference Call and Webcast",
+          "event_class": "print_vs_priced"
+        },
+        {
           "ticker": "INTA",
           "direction": "up",
           "ret": 8.3,
@@ -70694,6 +72071,15 @@
           "entry_date": "2026-08-12",
           "published_at": "2026-08-12 07:31:52",
           "title": "Boyd Group Services misses Q2 forecasts despite strong revenue and EBITDA growth",
+          "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "TCBI",
+          "direction": "up",
+          "ret": 8.22,
+          "entry_date": "2026-10-22",
+          "published_at": "2026-10-21 16:05:00",
+          "title": "Texas Capital Bancshares, Inc. Announces Third Quarter 2026 Results",
           "event_class": "print_vs_priced"
         },
         {
@@ -71318,6 +72704,15 @@
           "event_class": "print_vs_priced"
         },
         {
+          "ticker": "DAL",
+          "direction": "up",
+          "ret": 7.95,
+          "entry_date": "2026-10-22",
+          "published_at": "2026-10-22 05:39:00",
+          "title": "Southwest Airlines Beats Expectations but Slashes Profit Outlook on Rising Fuel Costs",
+          "event_class": "print_vs_priced"
+        },
+        {
           "ticker": "HYPR",
           "direction": "down",
           "ret": -7.94,
@@ -71352,6 +72747,15 @@
           "published_at": "2026-10-01 09:31:00",
           "title": "ManpowerGroup to Announce 3rd Quarter 2026 Earnings Results",
           "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "SBSI",
+          "direction": "up",
+          "ret": 7.94,
+          "entry_date": "2026-10-22",
+          "published_at": "2026-10-21 13:54:31",
+          "title": "Southside Bancshares Faces A Margin Test As CD Repricing Meets Record Loan Production",
+          "event_class": "capital_return"
         },
         {
           "ticker": "SECZ",
@@ -71885,6 +73289,15 @@
           "event_class": "listing_flow"
         },
         {
+          "ticker": "KSS",
+          "direction": "up",
+          "ret": 7.74,
+          "entry_date": "2026-10-22",
+          "published_at": "2026-10-21 12:00:00",
+          "title": "Kohl's Brings Holiday Magic to Life for Customers with Top Gifts, Incredible Savings, and New Ways to Shop",
+          "event_class": "print_vs_priced"
+        },
+        {
           "ticker": "ACHC",
           "direction": "up",
           "ret": 7.73,
@@ -72027,6 +73440,15 @@
           "published_at": "2026-08-13 13:22:00",
           "title": "Did You Lose Money Investing in Alarum Technologies Ltd.? Robbins LLP Urges Investors with Significant Losses to Contact the Firm for Information About their Rights Against ALAR",
           "event_class": "blast_legal"
+        },
+        {
+          "ticker": "EPRT",
+          "direction": "up",
+          "ret": 7.65,
+          "entry_date": "2026-10-22",
+          "published_at": "2026-10-21 16:36:09",
+          "title": "Essential Properties: Q3 Earnings Snapshot",
+          "event_class": "print_vs_priced"
         },
         {
           "ticker": "MFIN",
@@ -73271,6 +74693,15 @@
           "event_class": "print_vs_priced"
         },
         {
+          "ticker": "AOS",
+          "direction": "up",
+          "ret": 7.12,
+          "entry_date": "2026-10-22",
+          "published_at": "2026-10-21 09:54:16",
+          "title": "A.O. Smith Faces A Pivotal Quarter As China Decision And Steel Costs Converge",
+          "event_class": "print_vs_priced"
+        },
+        {
           "ticker": "CMPR",
           "direction": "down",
           "ret": -7.12,
@@ -73521,6 +74952,15 @@
           "published_at": "2026-09-16 14:33:20",
           "title": "ALVO Stock Jumps On Double Upgrade  Why Barclays Sees A 59% Upside",
           "event_class": "gate"
+        },
+        {
+          "ticker": "OIS",
+          "direction": "up",
+          "ret": 7.08,
+          "entry_date": "2026-10-22",
+          "published_at": "2026-10-22 08:16:05",
+          "title": "Oil States Must Prove Its Trimmed 2026 Outlook Holds As Backlog Sits At Decade High",
+          "event_class": "print_vs_priced"
         },
         {
           "ticker": "CEG",
@@ -73943,6 +75383,15 @@
           "entry_date": "2026-10-05",
           "published_at": "2026-10-05 08:00:00",
           "title": "TELA Bio Announces 510(k) Clearance for Liora Monofilament Scaffold for Soft Tissue Reinforcement",
+          "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "CATY",
+          "direction": "up",
+          "ret": 6.89,
+          "entry_date": "2026-10-22",
+          "published_at": "2026-10-21 16:30:00",
+          "title": "Cathay General Bancorp Announces Third Quarter 2026 Results",
           "event_class": "print_vs_priced"
         },
         {
@@ -74450,6 +75899,24 @@
           "event_class": "print_vs_priced"
         },
         {
+          "ticker": "TDY",
+          "direction": "up",
+          "ret": 6.74,
+          "entry_date": "2026-10-22",
+          "published_at": "2026-10-21 12:58:57",
+          "title": "Teledyne Beats And Raises Again As Digital Imaging Accelerates, But A Flat Q4 Guide And Soft Instrumentation Keep The Stock Range-Bound",
+          "event_class": "guidance"
+        },
+        {
+          "ticker": "TDY",
+          "direction": "up",
+          "ret": 6.74,
+          "entry_date": "2026-10-22",
+          "published_at": "2026-10-21 16:53:03",
+          "title": "Teledyne Technologies Incorporated Q3 2026 Earnings Call Summary",
+          "event_class": "guidance"
+        },
+        {
           "ticker": "COIN",
           "direction": "up",
           "ret": 6.73,
@@ -74945,6 +76412,15 @@
           "event_class": "print_vs_priced"
         },
         {
+          "ticker": "RKT",
+          "direction": "up",
+          "ret": 6.62,
+          "entry_date": "2026-10-22",
+          "published_at": "2026-10-22 08:00:00",
+          "title": "Redfin Reports U.S. Pending Home Sales Sink to a New Low",
+          "event_class": "peer_spill"
+        },
+        {
           "ticker": "MGY",
           "direction": "up",
           "ret": 6.61,
@@ -75051,6 +76527,15 @@
           "published_at": "2026-10-13 08:00:00",
           "title": "Prometheum and Federated Hermes Announce Strategic Partnership to Issue Tokenized Securities Funds",
           "event_class": "market_structure"
+        },
+        {
+          "ticker": "TFIN",
+          "direction": "up",
+          "ret": 6.58,
+          "entry_date": "2026-10-22",
+          "published_at": "2026-10-21 16:07:00",
+          "title": "Triumph Releases Third Quarter 2026 Financial Results",
+          "event_class": "print_vs_priced"
         },
         {
           "ticker": "KRYS",
@@ -75179,6 +76664,15 @@
           "event_class": "print_vs_priced"
         },
         {
+          "ticker": "EW",
+          "direction": "up",
+          "ret": 6.54,
+          "entry_date": "2026-10-22",
+          "published_at": "2026-10-22 05:15:20",
+          "title": "Edwards secures FDA approval for tricuspid valve repair system",
+          "event_class": "gate"
+        },
+        {
           "ticker": "GHM",
           "direction": "up",
           "ret": 6.53,
@@ -75204,6 +76698,24 @@
           "published_at": "2026-08-06 17:39:34",
           "title": "Alector: Q2 Earnings Snapshot",
           "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "OABI",
+          "direction": "up",
+          "ret": 6.52,
+          "entry_date": "2026-10-22",
+          "published_at": "2026-10-22 08:13:24",
+          "title": "OmniAb Faces Quieter Milestone Quarter After A Doubling Stock And Three Guidance Raises",
+          "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "OXLC",
+          "direction": "down",
+          "ret": -6.52,
+          "entry_date": "2026-10-22",
+          "published_at": "2026-10-22 08:00:00",
+          "title": "Oxford Lane Capital Corp. Prices Preferred Stock Offering",
+          "event_class": "dilution"
         },
         {
           "ticker": "KLAR",
@@ -77816,6 +79328,24 @@
           "event_class": "print_vs_priced"
         },
         {
+          "ticker": "WFRD",
+          "direction": "up",
+          "ret": 5.84,
+          "entry_date": "2026-10-22",
+          "published_at": "2026-10-21 11:18:57",
+          "title": "Weatherford's 37% EPS Beat Leans On A Tax Benefit, While Margins And Cash Flow Carry The Quarter And Middle East Weakness Trims The EBITDA Outlook",
+          "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "CRAI",
+          "direction": "up",
+          "ret": 5.84,
+          "entry_date": "2026-10-22",
+          "published_at": "2026-10-22 08:30:00",
+          "title": "Charles River Associates (CRA) to Host Third-Quarter Fiscal 2026 Financial Results Conference Call on November 5",
+          "event_class": "guidance"
+        },
+        {
           "ticker": "FANG",
           "direction": "up",
           "ret": 5.83,
@@ -77831,6 +79361,24 @@
           "entry_date": "2026-08-06",
           "published_at": "2026-08-05 13:15:26",
           "title": "Upstart Stock Rises as Loan Volume Outgrows Its Margins",
+          "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "FNLC",
+          "direction": "up",
+          "ret": 5.82,
+          "entry_date": "2026-10-22",
+          "published_at": "2026-10-21 16:15:00",
+          "title": "The First Bancorp Announces Third Quarter Results",
+          "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "FNLC",
+          "direction": "up",
+          "ret": 5.82,
+          "entry_date": "2026-10-22",
+          "published_at": "2026-10-21 16:56:11",
+          "title": "The First Bancorp Inc.: Q3 Earnings Snapshot",
           "event_class": "print_vs_priced"
         },
         {
@@ -78209,6 +79757,15 @@
           "entry_date": "2026-10-13",
           "published_at": "2026-10-12 09:41:53",
           "title": "Salesforce upgraded, Adobe downgraded: Wall Street's top analyst calls",
+          "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "DT",
+          "direction": "down",
+          "ret": -5.74,
+          "entry_date": "2026-10-22",
+          "published_at": "2026-10-22 03:34:50",
+          "title": "Top Software Stocks to Watch Going Into Sept-Qtr Earnings, According to Jefferies",
           "event_class": "print_vs_priced"
         },
         {
@@ -78779,6 +80336,24 @@
           "event_class": "print_vs_priced"
         },
         {
+          "ticker": "CRM",
+          "direction": "down",
+          "ret": -5.6,
+          "entry_date": "2026-10-22",
+          "published_at": "2026-10-21 10:00:00",
+          "title": "Illumia and HID Strengthen Partnership to Simplify Campus Mobile Credential Adoption",
+          "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "CNOB",
+          "direction": "up",
+          "ret": 5.6,
+          "entry_date": "2026-10-22",
+          "published_at": "2026-10-22 07:23:17",
+          "title": "ConnectOne: Q3 Earnings Snapshot",
+          "event_class": "print_vs_priced"
+        },
+        {
           "ticker": "CRON",
           "direction": "up",
           "ret": 5.59,
@@ -79103,6 +80678,15 @@
           "event_class": "print_vs_priced"
         },
         {
+          "ticker": "MCB",
+          "direction": "up",
+          "ret": 5.49,
+          "entry_date": "2026-10-22",
+          "published_at": "2026-10-21 11:25:08",
+          "title": "Metropolitan Bank's Earnings Surge On Margin Expansion And Lower Provisions, But Rate Hikes Cap The NIM Outlook",
+          "event_class": "print_vs_priced"
+        },
+        {
           "ticker": "MPAA",
           "direction": "down",
           "ret": -5.48,
@@ -79346,6 +80930,15 @@
           "event_class": "print_vs_priced"
         },
         {
+          "ticker": "BWFG",
+          "direction": "up",
+          "ret": 5.43,
+          "entry_date": "2026-10-22",
+          "published_at": "2026-10-21 11:36:32",
+          "title": "Bankwell's Margin Breakout Faces A Durability Test As Street Models A Sequential Earnings Dip",
+          "event_class": "print_vs_priced"
+        },
+        {
           "ticker": "CBL",
           "direction": "up",
           "ret": 5.42,
@@ -79571,6 +81164,15 @@
           "event_class": "print_vs_priced"
         },
         {
+          "ticker": "PKG",
+          "direction": "up",
+          "ret": 5.41,
+          "entry_date": "2026-10-22",
+          "published_at": "2026-10-22 08:30:00",
+          "title": "Packaging Corporation of America Q3 2026 Earnings Call Summary",
+          "event_class": "print_vs_priced"
+        },
+        {
           "ticker": "ULTA",
           "direction": "up",
           "ret": 5.4,
@@ -79659,6 +81261,15 @@
           "published_at": "2026-09-18 00:01:00",
           "title": "SEC Greenlights Tokenized Stocks After Clarity Act Fails in Senate",
           "event_class": "market_structure"
+        },
+        {
+          "ticker": "SBFG",
+          "direction": "up",
+          "ret": 5.4,
+          "entry_date": "2026-10-22",
+          "published_at": "2026-10-22 09:00:00",
+          "title": "SB Financial Group Announces Third Quarter 2026 Results",
+          "event_class": "print_vs_priced"
         },
         {
           "ticker": "GPK",
@@ -80145,6 +81756,15 @@
           "published_at": "2026-09-25 16:34:00",
           "title": "Goldgroup Closes Record US$122 Million Non-Brokered Private Placement",
           "event_class": "dilution"
+        },
+        {
+          "ticker": "DOV",
+          "direction": "up",
+          "ret": 5.25,
+          "entry_date": "2026-10-22",
+          "published_at": "2026-10-22 06:55:00",
+          "title": "Dover Reports Third Quarter 2026 Results",
+          "event_class": "print_vs_priced"
         },
         {
           "ticker": "JKHY",
@@ -80711,6 +82331,15 @@
           "entry_date": "2026-09-09",
           "published_at": "2026-09-08 18:20:00",
           "title": "Kaplan Fox Urges Medline Inc. (MDLN) Investors to Contact the Firm About Possible Securities Law Violations",
+          "event_class": "guidance"
+        },
+        {
+          "ticker": "CXM",
+          "direction": "up",
+          "ret": 5.09,
+          "entry_date": "2026-10-22",
+          "published_at": "2026-10-22 08:00:00",
+          "title": "Sprinklr Announces Availability of VOC Agent Suite in Gemini Enterprise Agent Marketplace",
           "event_class": "guidance"
         },
         {
@@ -82858,6 +84487,15 @@
           "event_class": "print_vs_priced"
         },
         {
+          "ticker": "SCNX",
+          "direction": "up",
+          "ret": 24.64,
+          "entry_date": "2026-10-22",
+          "published_at": "2026-10-22 08:05:00",
+          "title": "SCIENTURE Issues Shareholder Letter Highlighting Sequential Revenue Growth, Two FDA-Approved Commercial Products, and Continued Progress Toward Profitability in 2027",
+          "event_class": "gate"
+        },
+        {
           "ticker": "IBEX",
           "direction": "up",
           "ret": 24.63,
@@ -83992,6 +85630,15 @@
           "event_class": "print_vs_priced"
         },
         {
+          "ticker": "GUTS",
+          "direction": "down",
+          "ret": -19.35,
+          "entry_date": "2026-10-22",
+          "published_at": "2026-10-22 07:00:00",
+          "title": "Fractyl Health Sharpens Focus on Revita Following Positive Pivotal Results, Advancing Toward Planned FDA De Novo Submission in Post-GLP-1 Weight Maintenance",
+          "event_class": "print_vs_priced"
+        },
+        {
           "ticker": "BLSH",
           "direction": "up",
           "ret": 19.33,
@@ -84775,6 +86422,15 @@
           "event_class": "guidance"
         },
         {
+          "ticker": "REF",
+          "direction": "up",
+          "ret": 16.77,
+          "entry_date": "2026-10-22",
+          "published_at": "2026-10-22 09:00:00",
+          "title": "Reformation to Announce Third Quarter Fiscal 2026 Results on November 5, 2026",
+          "event_class": "print_vs_priced"
+        },
+        {
           "ticker": "BJDX",
           "direction": "down",
           "ret": -16.75,
@@ -84955,6 +86611,24 @@
           "event_class": "access_control"
         },
         {
+          "ticker": "CCI",
+          "direction": "up",
+          "ret": 16.44,
+          "entry_date": "2026-10-22",
+          "published_at": "2026-10-21 20:49:23",
+          "title": "Crown Castle Inc. Q3 2026 Earnings Call Summary",
+          "event_class": "guidance"
+        },
+        {
+          "ticker": "POOL",
+          "direction": "up",
+          "ret": 16.44,
+          "entry_date": "2026-10-22",
+          "published_at": "2026-10-22 07:17:30",
+          "title": "Pool Corp.: Q3 Earnings Snapshot",
+          "event_class": "guidance"
+        },
+        {
           "ticker": "NXDR",
           "direction": "up",
           "ret": 16.43,
@@ -85006,6 +86680,15 @@
           "entry_date": "2026-09-03",
           "published_at": "2026-09-03 07:11:00",
           "title": "Ciena Stock Rises as AI Drives Demand and Leads to an Earnings Beat",
+          "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "DRS",
+          "direction": "up",
+          "ret": 16.28,
+          "entry_date": "2026-10-22",
+          "published_at": "2026-10-21 12:09:15",
+          "title": "Leonardo DRS Faces A Credibility Test After Two Guidance Raises And A 27% Slide",
           "event_class": "print_vs_priced"
         },
         {
@@ -85358,6 +87041,15 @@
           "published_at": "2026-08-11 16:13:00",
           "title": "Stonegate Capital Partners Updates Coverage On Surf Air Mobility Inc. (SRFM) 2Q26",
           "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "BAND",
+          "direction": "up",
+          "ret": 15.61,
+          "entry_date": "2026-10-22",
+          "published_at": "2026-10-21 11:08:19",
+          "title": "Bandwidth Needs AI Voice Ramps To Back Up Its Raised Outlook As Street Hugs Guidance",
+          "event_class": "guidance"
         },
         {
           "ticker": "MRNA",
@@ -85990,6 +87682,15 @@
           "event_class": "gate"
         },
         {
+          "ticker": "GDYN",
+          "direction": "up",
+          "ret": 14.48,
+          "entry_date": "2026-10-22",
+          "published_at": "2026-10-21 19:06:17",
+          "title": "Grid Dynamics Must Prove Its AI-Fueled Guidance Raise Was The Start Of A Trend",
+          "event_class": "guidance"
+        },
+        {
           "ticker": "ASTL",
           "direction": "up",
           "ret": 14.47,
@@ -86212,6 +87913,24 @@
           "entry_date": "2026-08-14",
           "published_at": "2026-08-14 08:30:00",
           "title": "Data Storage Corporation Provides Second Quarter 2026 Business Update",
+          "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "JBSS",
+          "direction": "down",
+          "ret": -14.3,
+          "entry_date": "2026-10-22",
+          "published_at": "2026-10-21 16:15:00",
+          "title": "John B. Sanfilippo & Son, Inc. 1st Quarter Fiscal Year 2027 Operating Results Conference Call",
+          "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "JBSS",
+          "direction": "down",
+          "ret": -14.3,
+          "entry_date": "2026-10-22",
+          "published_at": "2026-10-22 07:20:05",
+          "title": "Sanfilippo Must Show Q4 Margin Collapse Was A Detour As New CEO Debuts",
           "event_class": "print_vs_priced"
         },
         {
@@ -87052,6 +88771,33 @@
           "event_class": "print_vs_priced"
         },
         {
+          "ticker": "WDFC",
+          "direction": "up",
+          "ret": 13.51,
+          "entry_date": "2026-10-22",
+          "published_at": "2026-10-21 16:05:00",
+          "title": "WD-40 Company Reports Fourth Quarter and Fiscal Year 2026 Financial Results",
+          "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "WDFC",
+          "direction": "up",
+          "ret": 13.51,
+          "entry_date": "2026-10-22",
+          "published_at": "2026-10-21 20:45:42",
+          "title": "WD-40 Company Q4 2026 Earnings Call Summary",
+          "event_class": "capital_return"
+        },
+        {
+          "ticker": "TBI",
+          "direction": "up",
+          "ret": 13.49,
+          "entry_date": "2026-10-22",
+          "published_at": "2026-10-21 16:05:00",
+          "title": "TrueBlue to Announce Third Quarter 2026 Results",
+          "event_class": "print_vs_priced"
+        },
+        {
           "ticker": "CSAN",
           "direction": "up",
           "ret": 13.48,
@@ -87229,6 +88975,15 @@
           "entry_date": "2026-09-22",
           "published_at": "2026-09-21 16:30:00",
           "title": "FMC Corporation announces date for third quarter 2026 earnings release and webcast conference call",
+          "event_class": "guidance"
+        },
+        {
+          "ticker": "HII",
+          "direction": "up",
+          "ret": 13.26,
+          "entry_date": "2026-10-22",
+          "published_at": "2026-10-21 12:50:23",
+          "title": "HII Faces A Proof Test On Shipbuilding Margins After Raised Guidance Failed To Lift The Stock",
           "event_class": "guidance"
         },
         {
@@ -87436,6 +89191,24 @@
           "entry_date": "2026-08-07",
           "published_at": "2026-08-06 19:04:59",
           "title": "BKV Corp (BKV) (Q2 2026) Earnings Call Highlights: Record Adjusted EBITDA and Strategic Power ...",
+          "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "APG",
+          "direction": "up",
+          "ret": 13.06,
+          "entry_date": "2026-10-22",
+          "published_at": "2026-10-21 09:54:47",
+          "title": "APi Group's Margins Face The Real Test After Three Guidance Raises In A Row",
+          "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "SPOK",
+          "direction": "up",
+          "ret": 13.05,
+          "entry_date": "2026-10-22",
+          "published_at": "2026-10-21 16:05:00",
+          "title": "Spok Sets Date to Report Third Quarter 2026 Results",
           "event_class": "print_vs_priced"
         },
         {
@@ -88166,6 +89939,15 @@
           "published_at": "2026-08-20 06:12:36",
           "title": "Deere Narrows Profit Outlook as Farm Recovery Seen in 2027",
           "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "FND",
+          "direction": "up",
+          "ret": 12.17,
+          "entry_date": "2026-10-22",
+          "published_at": "2026-10-22 08:35:00",
+          "title": "Floor & Decor Expands Florida Presence With New Melbourne Store",
+          "event_class": "guidance"
         },
         {
           "ticker": "ABR",
@@ -89086,6 +90868,24 @@
           "event_class": "print_vs_priced"
         },
         {
+          "ticker": "LUV",
+          "direction": "up",
+          "ret": 11.44,
+          "entry_date": "2026-10-22",
+          "published_at": "2026-10-21 16:25:18",
+          "title": "Southwest: Q3 Earnings Snapshot",
+          "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "LUV",
+          "direction": "up",
+          "ret": 11.44,
+          "entry_date": "2026-10-22",
+          "published_at": "2026-10-22 05:39:00",
+          "title": "Southwest Airlines Beats Expectations but Slashes Profit Outlook on Rising Fuel Costs",
+          "event_class": "print_vs_priced"
+        },
+        {
           "ticker": "PRCT",
           "direction": "down",
           "ret": -11.43,
@@ -89371,6 +91171,24 @@
           "entry_date": "2026-10-02",
           "published_at": "2026-10-02 09:00:00",
           "title": "Immuneering to Present at the 41st Annual Meeting of the Society for Immunotherapy of Cancer (SITC)",
+          "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "KALU",
+          "direction": "down",
+          "ret": -11.17,
+          "entry_date": "2026-10-22",
+          "published_at": "2026-10-21 16:30:00",
+          "title": "Kaiser Aluminum Corporation Reports Third Quarter 2026 Financial Results",
+          "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "KALU",
+          "direction": "down",
+          "ret": -11.17,
+          "entry_date": "2026-10-22",
+          "published_at": "2026-10-21 16:57:18",
+          "title": "Kaiser: Q3 Earnings Snapshot",
           "event_class": "print_vs_priced"
         },
         {
@@ -89734,6 +91552,15 @@
           "event_class": "print_vs_priced"
         },
         {
+          "ticker": "MNTS",
+          "direction": "down",
+          "ret": -10.88,
+          "entry_date": "2026-10-22",
+          "published_at": "2026-10-22 08:00:00",
+          "title": "NASA Awards Task Order Contract to Momentus for Mission Formulation Phase of Fly Foundational Robots Resupply Mission",
+          "event_class": "print_vs_priced"
+        },
+        {
           "ticker": "INSE",
           "direction": "down",
           "ret": -10.87,
@@ -90056,6 +91883,15 @@
           "published_at": "2026-09-16 13:00:00",
           "title": "Kaplan Fox Reminds PROCEPT BioRobotics Corporation (PRCT) Investors That They Have Until September 22, 2026 to Move for Lead Plaintiff",
           "event_class": "guidance"
+        },
+        {
+          "ticker": "SLG",
+          "direction": "up",
+          "ret": 10.62,
+          "entry_date": "2026-10-22",
+          "published_at": "2026-10-21 16:41:00",
+          "title": "SL Green Realty Corp. Reports Third Quarter 2026 EPS of $1.01 Per Share; and FFO of $1.59 Per Share",
+          "event_class": "print_vs_priced"
         },
         {
           "ticker": "ICMB",
@@ -90553,6 +92389,15 @@
           "event_class": "print_vs_priced"
         },
         {
+          "ticker": "ESTA",
+          "direction": "up",
+          "ret": 10.21,
+          "entry_date": "2026-10-22",
+          "published_at": "2026-10-21 12:34:40",
+          "title": "Establishment Labs Faces A Seasonal Test Of Its US Boom After A 32% Slide",
+          "event_class": "gate"
+        },
+        {
           "ticker": "BLSH",
           "direction": "up",
           "ret": 10.2,
@@ -90706,6 +92551,15 @@
           "event_class": "dilution"
         },
         {
+          "ticker": "LYNX",
+          "direction": "up",
+          "ret": 10.13,
+          "entry_date": "2026-10-22",
+          "published_at": "2026-10-21 14:55:00",
+          "title": "Defense tech company opens St. Paul hub, joins statewide security ecosystem",
+          "event_class": "gate"
+        },
+        {
           "ticker": "MORN",
           "direction": "up",
           "ret": 10.12,
@@ -90739,6 +92593,15 @@
           "entry_date": "2026-08-14",
           "published_at": "2026-08-14 08:00:00",
           "title": "PAVmed Provides Business Update and Reports Second Quarter 2026 Financial Results",
+          "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "TXN",
+          "direction": "up",
+          "ret": 10.11,
+          "entry_date": "2026-10-22",
+          "published_at": "2026-10-21 16:28:00",
+          "title": "Texas Instruments Posts Higher Profit, Revenue",
           "event_class": "print_vs_priced"
         },
         {
@@ -90890,78 +92753,78 @@
     "agree_5d": true,
     "ret_20d": 2.11,
     "agree_20d": true,
-    "note": "window open (1-6m not elapsed; through 2026-10-28)",
+    "note": "window open (1-6m not elapsed; through 2026-10-29)",
     "clock_rule": "Friday 2026-09-18 16:01 is after the cash close. Entry is Monday 2026-09-21 open→close for 0-1d, never Friday cash. Published at/after 09:30 ET (09:30+30m included) waits for the next RTH."
   },
   "harvest_source_mix": {
     "raw": {
-      "theme_radar_elite": 550668
+      "theme_radar_elite": 560217
     },
     "unique": {
-      "theme_radar_elite": 59338
+      "theme_radar_elite": 60788
     }
   },
   "ledger": {
     "counts": {
-      "singleton": 9135,
-      "converge": 678,
-      "clash": 103,
-      "converge_up": 452,
-      "converge_down": 226
+      "singleton": 9494,
+      "converge": 723,
+      "clash": 113,
+      "converge_up": 485,
+      "converge_down": 238
     },
     "hit_rates": {
       "singleton": {
         "0-1d": {
-          "hits": 741,
-          "n": 1540,
-          "hit_rate": 0.4812
+          "hits": 761,
+          "n": 1579,
+          "hit_rate": 0.482
         },
         "2d": {
-          "hits": 725,
-          "n": 1458,
-          "hit_rate": 0.4973
+          "hits": 744,
+          "n": 1488,
+          "hit_rate": 0.5
         },
         "3d": {
-          "hits": 711,
-          "n": 1432,
-          "hit_rate": 0.4965
+          "hits": 724,
+          "n": 1454,
+          "hit_rate": 0.4979
         },
         "4d": {
-          "hits": 718,
-          "n": 1418,
-          "hit_rate": 0.5063
+          "hits": 730,
+          "n": 1430,
+          "hit_rate": 0.5105
         },
         "5d": {
-          "hits": 714,
-          "n": 1395,
-          "hit_rate": 0.5118
+          "hits": 727,
+          "n": 1414,
+          "hit_rate": 0.5141
         }
       },
       "converge": {
         "0-1d": {
-          "hits": 80,
-          "n": 146,
-          "hit_rate": 0.5479
+          "hits": 83,
+          "n": 150,
+          "hit_rate": 0.5533
         },
         "2d": {
-          "hits": 65,
-          "n": 140,
-          "hit_rate": 0.4643
+          "hits": 67,
+          "n": 143,
+          "hit_rate": 0.4685
         },
         "3d": {
-          "hits": 68,
-          "n": 139,
-          "hit_rate": 0.4892
+          "hits": 69,
+          "n": 140,
+          "hit_rate": 0.4929
         },
         "4d": {
-          "hits": 68,
-          "n": 138,
-          "hit_rate": 0.4928
+          "hits": 69,
+          "n": 139,
+          "hit_rate": 0.4964
         },
         "5d": {
-          "hits": 69,
-          "n": 131,
-          "hit_rate": 0.5267
+          "hits": 70,
+          "n": 138,
+          "hit_rate": 0.5072
         }
       },
       "clash": {
@@ -90972,8 +92835,8 @@
         },
         "2d": {
           "hits": 6,
-          "n": 11,
-          "hit_rate": 0.5455
+          "n": 12,
+          "hit_rate": 0.5
         },
         "3d": {
           "hits": 9,
@@ -90986,9 +92849,9 @@
           "hit_rate": 0.4545
         },
         "5d": {
-          "hits": 4,
-          "n": 10,
-          "hit_rate": 0.4
+          "hits": 5,
+          "n": 11,
+          "hit_rate": 0.4545
         }
       }
     },
@@ -91163,6 +93026,27 @@
           "The SEC Greenlights Tokenized Stocks... With Caveats",
           "Could IBRX Be A Tokenized Stock? Founders Tease Sends ImmunityBio Traders Into Speculation Mode",
           "T. Rowe Price's Head Of Digital Assets Says Tokenized Stocks Must Be 'Instantly Fungible,' Agency Rules Can Move Without CLARITY Act"
+        ]
+      },
+      {
+        "ticker": "MSFT",
+        "date": "2026-10-29",
+        "label": "converge_down",
+        "n_bull": 0,
+        "n_bear": 5,
+        "n_direct": 5,
+        "n_indirect": 0,
+        "net": -5,
+        "direction": "down",
+        "ret_1d": -1.87,
+        "ret_2d": null,
+        "ret_5d": null,
+        "titles": [
+          "Tech, Media & Telecom Roundup: Market Talk",
+          "NiSource: Q3 Earnings Snapshot",
+          "A10 Networks Must Prove Its Raised Outlook And Microsoft Deal Can Outrun Memory Costs",
+          "Alphabet's $9bn cash burn drags neocloud stocks lower",
+          "NIPSCO to Deliver $57.5 Million in Savings to Electric Customers From Data Center Development"
         ]
       },
       {
@@ -91482,28 +93366,9 @@
           "Tilly's Shares Rise After Q2 Earnings and Revenue Exceed Estimates",
           "Tilly's, Inc. Q2 2026 Earnings Call Summary"
         ]
-      },
-      {
-        "ticker": "KMTS",
-        "date": "2026-09-15",
-        "label": "converge_up",
-        "n_bull": 3,
-        "n_bear": 0,
-        "n_direct": 3,
-        "n_indirect": 0,
-        "net": 3,
-        "direction": "up",
-        "ret_1d": 14.98,
-        "ret_2d": 11.19,
-        "ret_5d": 19.13,
-        "titles": [
-          "Kestra Medical Technologies Reports First Quarter Fiscal 2027 Financial Results",
-          "Kestra Medical Technologies Ltd (KMTS) (Q1 2027) Earnings Call Highlights: Revenue Jumps 60% as ...",
-          "KESTRA MEDICAL TECHNOLOGIES, LTD. Q1 2027 Earnings Call Summary"
-        ]
       }
     ],
-    "n_name_groups": 9916,
+    "n_name_groups": 10330,
     "n_theme_groups": 15,
     "theme_note": "Theme groups are router factor/macro keys only. They are not a second trade. The Elite Sector column is not a key.",
     "amrx_week": {
