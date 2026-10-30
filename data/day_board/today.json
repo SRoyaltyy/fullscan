@@ -1,6 +1,6 @@
 {
   "date": "2026-10-30",
-  "generated_at": "2026-10-30T04:55:23.794735-04:00",
+  "generated_at": "2026-10-30T04:56:15.569686-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -15,31 +15,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "finviz_digest",
-      "title": "Finviz digest",
-      "date": "2026-10-30",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-30T04:53:53.620194-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-10-30_finviz_digest.json",
-          "ok": true,
-          "reason": "",
-          "size": 97101,
-          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
-        },
-        {
-          "path": "01_daily/news/2026-10-30_finviz_digest.md",
-          "ok": true,
-          "reason": "",
-          "size": 11937,
-          "preview": "# Finviz Daily Digest \u2014 2026-10-30\n_Generated 2026-10-30T04:29:58.613415-04:00 \u00b7 export=data/exports/finviz_2026-10-29.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_"
-        }
-      ],
-      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-10-30\n_Generated 2026-10-30T04:29:58.613415-04:00 \u00b7 export=data/exports/finviz_2026-10-29.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_"
-    },
     {
       "key": "map_heat",
       "title": "Map heat tables",
@@ -185,6 +160,31 @@
         }
       ],
       "preview": "raw=9899 usable=785 single=807 \u00b7 Kongsberg Q3 orders jump on strong missile, air defence demand - Reuters | Ukraine's Zelenskiy: We have intelligence of new Russian ballistic missile strik | IMF says Federal Reserve is 'appropriately' keeping close eye on data - Reuters | Watch Fed Officials Left Interest Rates Unchanged - Bloomberg.com | Video: Macro Minute: Overall a good week incrementally for markets, given FOMC,  \u00b7 # News Parse v2 \u2014 2026-10-30T04:55:16.715955-04:00\nWindow\u224848h | news_mode=on | raw=9899 | usable=785 | single_name=807 | noise_dropped=8061\nusable polarity={'+': 19, '-': 162, 'mixed': 1, 'neutral': 603}"
+    },
+    {
+      "key": "finviz",
+      "title": "Finviz universe export",
+      "date": "2026-10-30",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-30T04:56:15.190292-04:00",
+      "files": [
+        {
+          "path": "data/exports/finviz_2026-10-30.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11030866,
+          "preview": "11686 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC"
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11588320,
+          "preview": "11781 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAB\""
+        }
+      ],
+      "preview": "11686 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11781 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAB\""
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
