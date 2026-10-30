@@ -1,6 +1,6 @@
 # Finviz homepage market digest — 2026-10-30
 
-**Generated:** 2026-10-30T04:29:47.068578-04:00 (America/New_York)
+**Generated:** 2026-10-30T04:30:28.735319-04:00 (America/New_York)
 **Source:** `live`
 **Banner:** US stocks set for lower open as tech-driven Nasdaq weakness and wage data focus weigh ahead of major energy and pharma earnings
 **Prior close:** SPX —  Nasdaq —  Dow —
