@@ -52,7 +52,7 @@
   }
  },
  "date": "2026-10-30",
- "generated_at": "2026-10-30T05:57:29-04:00",
+ "generated_at": "2026-10-30T06:13:16-04:00",
  "strategies": [
   {
    "buys": [
@@ -4502,7 +4502,7 @@
     "SGRY",
     "MD",
     "PACS",
-    "NTAP"
+    "BAND"
    ],
    "family": "stock_book",
    "name": "stock_book_1d",
@@ -4529,7 +4529,7 @@
     "SGRY",
     "MD",
     "PACS",
-    "NTAP"
+    "BAND"
    ],
    "family": "paper",
    "name": "1d_top",
