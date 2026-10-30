@@ -1,12 +1,6 @@
 {
-  "updated_at": "2026-10-30T14:26:44-04:00",
+  "updated_at": "2026-10-30T15:06:58-04:00",
   "runs": [
-    {
-      "date": "2026-10-23",
-      "workflow": "finviz_scrape",
-      "file": "2026-10-23_finviz_scrape.json",
-      "updated_at": "2026-10-23T04:30:17-04:00"
-    },
     {
       "date": "2026-10-21",
       "workflow": "postclose",
@@ -240,6 +234,12 @@
       "workflow": "fm_preopen",
       "file": "2026-10-30_fm_preopen.json",
       "updated_at": "2026-10-30T14:26:44-04:00"
+    },
+    {
+      "date": "2026-10-30",
+      "workflow": "webull_sim",
+      "file": "2026-10-30_webull_sim.json",
+      "updated_at": "2026-10-30T15:06:58-04:00"
     }
   ]
 }
