@@ -493,3 +493,4 @@ date,ticker,side,conviction,reason
 2026-10-28,VEEV,BUY,0.3691028321645527,no exit price (unsettleable)
 2026-10-28,COP,BUY,0.25036080383102366,no exit price (unsettleable)
 2026-10-28,VLO,BUY,0.12131264496880217,no exit price (unsettleable)
+2026-10-29,FIS,BUY,0.18517061586446382,day gate CLOSED: predict DOWN score -6.95 < +1.00

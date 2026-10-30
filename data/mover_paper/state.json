@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-29T02:47:51",
-  "asof": "2026-10-28",
+  "generated_at": "2026-10-30T02:46:01",
+  "asof": "2026-10-29",
   "params": {
     "capital": 100000.0,
     "top_n": 10,
@@ -11,20 +11,20 @@
     "rank": "cond / live 2w_size",
     "gate_score": 1.0
   },
-  "n_trades": 186,
+  "n_trades": 187,
   "n_skipped": 0,
-  "hit": 0.554,
-  "total_pnl": 15183.54,
-  "total_ret_pct": 19.09,
-  "final_equity": 119094.56,
+  "hit": 0.561,
+  "total_pnl": 16003.87,
+  "total_ret_pct": 19.97,
+  "final_equity": 119971.27,
   "max_dd_pct": 7.83,
-  "avg_win": 492.11,
-  "avg_loss": -427.76,
+  "avg_win": 488.28,
+  "avg_loss": -430.07,
   "by_side": {
     "BUY": {
-      "n": 186,
-      "hit": 0.554,
-      "pnl": 15183.54
+      "n": 187,
+      "hit": 0.561,
+      "pnl": 16003.87
     },
     "SELL": {
       "n": 0,
@@ -32,5 +32,5 @@
       "pnl": 0
     }
   },
-  "n_days": 54
+  "n_days": 55
 }
