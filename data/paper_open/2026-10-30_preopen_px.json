@@ -1,0 +1,17 @@
+{
+ "date": "2026-10-30",
+ "missing": [],
+ "prices": {
+  "GMAB": 57.1862,
+  "PACB": 2.78,
+  "PRME": 5.0423,
+  "SWRD": 3.31
+ },
+ "sources": {
+  "GMAB": "yahoo_premarket",
+  "PACB": "yahoo_premarket",
+  "PRME": "yahoo_premarket",
+  "SWRD": "yahoo_prior_close"
+ },
+ "written_at": "2026-10-30T12:41:06+00:00"
+}
