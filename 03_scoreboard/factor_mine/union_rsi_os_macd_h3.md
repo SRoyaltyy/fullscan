@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **+20.33%** ($12,033) · signal-only (no cash/fees) was +8.48%. Starts YES **1/30**. Fills 40 · skips 9 · realized $-574.52.
+Cash book **-5.39%** ($9,461) · signal-only (no cash/fees) was +8.48%. Starts YES **1/30**. Fills 42 · skips 9 · realized $-574.52.
 
 ## How this sleeve decides (like you are 10)
 
@@ -224,6 +224,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $4,112.31 | ▲ close $11,983.45 vs 09:30 $11,962.00 (session +21.45) | 16:00 close · cash $4,112.31 · equity $11,983.45 vs 09:30 $11,962.00 (+21.45; session marks +21.45) · 2 name(s) marked open→close (per-name table). ARI×611 09:30 $6.56 → close $6.56 +0.00; BX×33 09:30 $116.41 → close $117.06 +21.45 | — |
 | 2026-10-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $4,112.31 | ▲ 09:30 equity $12,025.36 vs yday $11,983.45 (+41.91) | 09:30 open · cash $4,112.31 (unchanged overnight, no fees) · equity $12,025.36 vs prior close $11,983.45 (+41.91) · 2 name(s) re-marked at the open (per-name table). ARI×611 yday $6.56 → 09:30 $6.56 +0.00; BX×33 yday $117.06 → 09:30 $118.33 +41.91 | — |
 | 2026-10-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $4,112.31 | ▲ close $12,033.06 vs 09:30 $12,025.36 (session +7.70) | 16:00 close · cash $4,112.31 · equity $12,033.06 vs 09:30 $12,025.36 (+7.70; session marks +7.70) · 2 name(s) marked open→close (per-name table). ARI×611 09:30 $6.56 → close $6.45 -67.21; BX×33 09:30 $118.33 → close $120.60 +74.91 | — |
+| 2026-10-30 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $4,112.31 | ▼ 09:30 equity $9,471.19 vs yday $12,033.06 (-2,561.87) | 09:30 open · cash $4,112.31 (unchanged overnight, no fees) · equity $9,471.19 vs prior close $12,033.06 (-2561.87) · 2 name(s) re-marked at the open (per-name table). ARI×611 yday $6.45 → 09:30 $2.32 -2523.43; BX×33 yday $120.60 → 09:30 $119.44 -38.44 | — |
+| 2026-10-30 09:30 ET | **SELL** | `ARI` | 611 | $2.32 | $7.99 | $-2637.07 | $5,521.84 | ▼ -2,637.07 after sell → book $9,463.19; vs 09:30 mark -8.00 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-30 09:30 ET | **SELL** | `BX` | 33 | $119.44 | $2.13 | $-22.86 | $9,461.06 | ▼ -22.86 after sell → book $9,461.06; vs 09:30 mark -2.13 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,461.06 | ▲ close $9,461.06 vs 09:30 $9,471.19 (session +0.00) | 16:00 close · cash $9,461.06 · no lots left · equity $9,461.06. | — |
 
 ## Not taken
 

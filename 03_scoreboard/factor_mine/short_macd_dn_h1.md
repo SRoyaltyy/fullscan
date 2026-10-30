@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · MACD histogram < 0
 
-Cash book **-1.25%** ($9,875) · signal-only (no cash/fees) was +6.85%. Starts YES **5/30**. Fills 425 · skips 108 · realized $-743.47.
+Cash book **+0.40%** ($10,040) · signal-only (no cash/fees) was +6.85%. Starts YES **5/30**. Fills 428 · skips 108 · realized $-743.47.
 
 ## How this sleeve decides (like you are 10)
 
@@ -605,6 +605,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-29 09:30 ET | **COVER** | `AUTL` | 463 | $1.63 | $5.97 | $-49.09 | $14,837.46 | ▼ -49.09 after sell → book $9,938.92; vs 09:30 mark -5.97 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-29 09:30 ET | **COVER** | `FDMT` | 60 | $13.00 | $2.17 | $-70.98 | $14,055.29 | ▼ -70.98 after sell → book $9,936.75; vs 09:30 mark -2.17 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,055.29 | ▼ close $9,874.79 vs 09:30 $9,946.98 (session -61.96) | 16:00 close · cash $14,055.29 · equity $9,874.79 vs 09:30 $9,946.98 (-72.19; session marks -61.96) · 5 name(s) marked open→close (per-name table). CXW×42 09:30 $30.92 → close $31.08 -6.72; MX×278 09:30 $2.57 → close $2.63 -16.68; NVTS×76 09:30 $9.09 → close $9.20 -8.36; PDFS×15 09:30 $44.80 → close $45.56 -11.40; SMMT×47 09:30 $15.80 → close $16.20 -18.80 | — |
+| 2026-10-30 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $14,055.29 | ▲ 09:30 equity $10,035.55 vs yday $9,874.79 (+160.76) | 09:30 open · cash $14,055.29 (unchanged overnight, no fees) · equity $10,035.55 vs prior close $9,874.79 (+160.76) · 5 name(s) re-marked at the open (per-name table). CXW×42 yday $31.08 → 09:30 $30.90 +7.56; MX×278 yday $2.63 → 09:30 $2.45 +50.04; NVTS×76 yday $9.20 → 09:30 $8.53 +50.92; PDFS×15 yday $45.56 → 09:30 $42.61 +44.25; SMMT×47 yday $16.20 → 09:30 $16.03 +7.99 | — |
+| 2026-10-30 09:30 ET | **COVER** | `CXW` | 42 | $30.90 | $2.12 | $-46.71 | $12,755.37 | ▼ -46.71 after sell → book $10,033.43; vs 09:30 mark -2.12 | dropped from list after 3 sess (min 1) | join🔴 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-30 09:30 ET | **COVER** | `NVTS` | 76 | $8.53 | $2.22 | $+58.60 | $12,104.88 | ▲ +58.60 after sell → book $10,031.22; vs 09:30 mark -2.21 | dropped from list after 2 sess (min 1) | join🔴 sector🔴 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-30 09:30 ET | **COVER** | `PDFS` | 15 | $42.61 | $2.04 | $+41.04 | $11,463.69 | ▲ +41.04 after sell → book $10,029.18; vs 09:30 mark -2.04 | dropped from list after 2 sess (min 1) | join🔴 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $11,463.69 | ▲ close $10,040.30 vs 09:30 $10,035.55 (session +11.12) | 16:00 close · cash $11,463.69 · equity $10,040.30 vs 09:30 $10,035.55 (+4.75; session marks +11.12) · 2 name(s) marked open→close (per-name table). MX×278 09:30 $2.45 → close $2.41 +11.12; SMMT×47 09:30 $16.03 → close $16.03 -0.00 | — |
 
 ## Not taken
 

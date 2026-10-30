@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · packet🟢 OR headline🟢 and camera net ≥ 4
 
-Cash book **-22.60%** ($7,740) · signal-only (no cash/fees) was -11.70%. Starts YES **2/30**. Fills 124 · skips 143 · realized $-1899.45.
+Cash book **-23.08%** ($7,692) · signal-only (no cash/fees) was -11.70%. Starts YES **2/30**. Fills 128 · skips 143 · realized $-1899.45.
 
 ## How this sleeve decides (like you are 10)
 
@@ -308,6 +308,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $247.53 | ▲ close $7,688.58 vs 09:30 $7,640.90 (session +47.68) | 16:00 close · cash $247.53 · equity $7,688.58 vs 09:30 $7,640.90 (+47.68; session marks +47.68) · 4 name(s) marked open→close (per-name table). AMX×78 09:30 $24.07 → close $23.93 -10.92; GH×10 09:30 $178.06 → close $182.59 +45.30; RY×9 09:30 $203.11 → close $204.77 +14.94; SGRY×82 09:30 $23.26 → close $23.24 -1.64 | — |
 | 2026-10-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $247.53 | ▲ 09:30 equity $7,724.14 vs yday $7,688.58 (+35.56) | 09:30 open · cash $247.53 (unchanged overnight, no fees) · equity $7,724.14 vs prior close $7,688.58 (+35.56) · 4 name(s) re-marked at the open (per-name table). AMX×78 yday $23.93 → 09:30 $24.01 +6.24; GH×10 yday $182.59 → 09:30 $185.17 +25.80; RY×9 yday $204.77 → 09:30 $205.07 +2.70; SGRY×82 yday $23.24 → 09:30 $23.25 +0.82 | — |
 | 2026-10-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $247.53 | ▲ close $7,740.26 vs 09:30 $7,724.14 (session +16.12) | 16:00 close · cash $247.53 · equity $7,740.26 vs 09:30 $7,724.14 (+16.12; session marks +16.12) · 4 name(s) marked open→close (per-name table). AMX×78 09:30 $24.01 → close $24.13 +9.36; GH×10 09:30 $185.17 → close $185.31 +1.40; RY×9 09:30 $205.07 → close $206.03 +8.64; SGRY×82 09:30 $23.25 → close $23.21 -3.28 | — |
+| 2026-10-30 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $247.53 | ▼ 09:30 equity $7,700.50 vs yday $7,740.26 (-39.76) | 09:30 open · cash $247.53 (unchanged overnight, no fees) · equity $7,700.50 vs prior close $7,740.26 (-39.76) · 4 name(s) re-marked at the open (per-name table). AMX×78 yday $24.13 → 09:30 $24.03 -7.80; GH×10 yday $185.31 → 09:30 $182.48 -28.30; RY×9 yday $206.03 → 09:30 $205.35 -6.12; SGRY×82 yday $23.21 → 09:30 $23.24 +2.46 | — |
+| 2026-10-30 09:30 ET | **SELL** | `AMX` | 78 | $24.03 | $2.25 | $-23.20 | $2,119.62 | ▼ -23.20 after sell → book $7,698.25; vs 09:30 mark -2.25 | dropped from list after 3 sess (min 3) | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-30 09:30 ET | **SELL** | `GH` | 10 | $182.48 | $2.04 | $+73.19 | $3,942.37 | ▲ +73.19 after sell → book $7,696.20; vs 09:30 mark -2.05 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-30 09:30 ET | **SELL** | `RY` | 9 | $205.35 | $2.04 | $+15.38 | $5,788.48 | ▲ +15.38 after sell → book $7,694.16; vs 09:30 mark -2.04 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-30 09:30 ET | **SELL** | `SGRY` | 82 | $23.24 | $2.26 | $-1.22 | $7,691.90 | ▼ -1.22 after sell → book $7,691.90; vs 09:30 mark -2.26 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,691.90 | ▲ close $7,691.90 vs 09:30 $7,700.50 (session +0.00) | 16:00 close · cash $7,691.90 · no lots left · equity $7,691.90. | — |
 
 ## Not taken
 

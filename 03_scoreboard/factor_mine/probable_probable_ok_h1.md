@@ -512,6 +512,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-29 09:30 ET | **SELL** | `CXW` | 174 | $30.92 | $2.58 | $-1.62 | $5,400.05 | ▼ -1.62 after sell → book $7,326.45; vs 09:30 mark -2.58 | dropped from list after 1 sess (min 1) | join🔴 sector🔴 gen🔴 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-29 09:30 ET | **SELL** | `PDFS` | 43 | $44.80 | $2.14 | $+127.32 | $7,324.30 | ▲ +127.32 after sell → book $7,324.30; vs 09:30 mark -2.15 | dropped from list after 2 sess (min 1) | join🔴 sector🟢 gen🔴 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,324.30 | ▲ close $7,324.30 vs 09:30 $7,329.03 (session +0.00) | 16:00 close · cash $7,324.30 · no lots left · equity $7,324.30. | — |
+| 2026-10-30 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,324.30 | ▲ 09:30 equity $7,324.30 vs yday $7,324.30 (+0.00) | 09:30 open · cash $7,324.30 · no holdings · equity $7,324.30 vs prior close $7,324.30 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,324.30 | ▲ close $7,324.30 vs 09:30 $7,324.30 (session +0.00) | 16:00 close · cash $7,324.30 · no lots left · equity $7,324.30. | — |
 
 ## Not taken
 

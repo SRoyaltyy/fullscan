@@ -645,6 +645,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-29 09:30 ET | **SELL** | `NXPI` | 4 | $249.49 | $2.02 | $+41.38 | $6,751.10 | ▲ +41.38 after sell → book $7,691.90; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-29 09:30 ET | **SELL** | `PDFS` | 21 | $44.80 | $2.07 | $-21.35 | $7,689.82 | ▼ -21.35 after sell → book $7,689.82; vs 09:30 mark -2.08 | dropped from list after 1 sess (min 1) | join🔴 sector🟢 gen🔴 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,689.82 | ▲ close $7,689.82 vs 09:30 $7,712.30 (session +0.00) | 16:00 close · cash $7,689.82 · no lots left · equity $7,689.82. | — |
+| 2026-10-30 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,689.82 | ▲ 09:30 equity $7,689.82 vs yday $7,689.82 (+0.00) | 09:30 open · cash $7,689.82 · no holdings · equity $7,689.82 vs prior close $7,689.82 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,689.82 | ▲ close $7,689.82 vs 09:30 $7,689.82 (session +0.00) | 16:00 close · cash $7,689.82 · no lots left · equity $7,689.82. | — |
 
 ## Not taken
 

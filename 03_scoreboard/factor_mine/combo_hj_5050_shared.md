@@ -678,6 +678,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-29 09:30 ET | **SELL** | `RH` | 21 | $148.16 | $2.09 | $+152.73 | $9,113.32 | ▲ +152.73 after sell → book $12,111.70; vs 09:30 mark -2.09 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟡 digest🟡 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-10-29 09:30 ET | **SELL** | `VCYT` | 59 | $50.82 | $2.20 | $+44.01 | $12,109.50 | ▲ +44.01 after sell → book $12,109.50; vs 09:30 mark -2.20 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | — |
 | 2026-10-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $12,109.50 | ▲ close $12,109.50 vs 09:30 $12,129.35 (session +0.00) | 16:00 close · cash $12,109.50 · no lots left · equity $12,109.50. | — |
+| 2026-10-30 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $12,109.50 | ▲ 09:30 equity $12,109.50 vs yday $12,109.50 (+0.00) | 09:30 open · cash $12,109.50 (unchanged overnight, no fees) · equity $12,109.50 vs prior close $12,109.50 (+0.00) | — |
+| 2026-10-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $12,109.50 | ▲ close $12,109.50 vs 09:30 $12,109.50 (session +0.00) | 16:00 close · cash $12,109.50 · no lots left · equity $12,109.50. | — |
 
 ## Not taken
 

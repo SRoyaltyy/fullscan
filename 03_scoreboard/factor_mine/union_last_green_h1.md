@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ last_green, no 🚨
 
-Cash book **-13.28%** ($8,672) · signal-only (no cash/fees) was +7.64%. Starts YES **9/30**. Fills 481 · skips 107 · realized $+492.16.
+Cash book **-13.68%** ($8,632) · signal-only (no cash/fees) was +7.64%. Starts YES **9/30**. Fills 481 · skips 107 · realized $+492.16.
 
 ## How this sleeve decides (like you are 10)
 
@@ -663,6 +663,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-29 09:30 ET | **SELL** | `PDFS` | 25 | $44.80 | $2.08 | $+72.35 | $6,493.11 | ▲ +72.35 after sell → book $8,637.37; vs 09:30 mark -2.08 | dropped from list after 2 sess (min 1) | join🔴 sector🟢 gen🔴 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-29 09:30 ET | **SELL** | `QTTB` | 122 | $9.20 | $2.39 | $+62.36 | $7,613.12 | ▲ +62.36 after sell → book $8,634.98; vs 09:30 mark -2.39 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-10-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,613.12 | ▲ close $8,671.66 vs 09:30 $8,650.76 (session +36.68) | 16:00 close · cash $7,613.12 · equity $8,671.66 vs 09:30 $8,650.76 (+20.90; session marks +36.68) · 1 name(s) marked open→close (per-name table). PRIM×14 09:30 $72.99 → close $75.61 +36.68 | — |
+| 2026-10-30 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,613.12 | ▼ 09:30 equity $8,622.66 vs yday $8,671.66 (-49.00) | 09:30 open · cash $7,613.12 (unchanged overnight, no fees) · equity $8,622.66 vs prior close $8,671.66 (-49.00) · 1 name(s) re-marked at the open (per-name table). PRIM×14 yday $75.61 → 09:30 $72.11 -49.00 | — |
+| 2026-10-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,613.12 | ▲ close $8,631.90 vs 09:30 $8,622.66 (session +9.24) | 16:00 close · cash $7,613.12 · equity $8,631.90 vs 09:30 $8,622.66 (+9.24; session marks +9.24) · 1 name(s) marked open→close (per-name table). PRIM×14 09:30 $72.11 → close $72.77 +9.24 | — |
 
 ## Not taken
 

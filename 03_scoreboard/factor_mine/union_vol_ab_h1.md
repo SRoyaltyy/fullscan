@@ -506,6 +506,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $1.63 | ▲ 09:30 equity $7,934.39 vs yday $7,934.39 (+0.00) | 09:30 open · cash $1.63 (unchanged overnight, no fees) · equity $7,934.39 vs prior close $7,934.39 (+0.00) · 1 name(s) re-marked at the open (per-name table). EGG×1639 yday $4.84 → 09:30 $4.84 +0.00 | — |
 | 2026-10-29 09:30 ET | **SELL** | `EGG` | 1639 | $4.84 | $21.48 | $-583.49 | $7,912.91 | ▼ -583.49 after sell → book $7,912.91; vs 09:30 mark -21.48 | dropped from list after 2 sess (min 1) | join🔴 sector🔴 gen🔴 news🟡 digest🟢 judge🔴 ab🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,912.91 | ▲ close $7,912.91 vs 09:30 $7,934.39 (session +0.00) | 16:00 close · cash $7,912.91 · no lots left · equity $7,912.91. | — |
+| 2026-10-30 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,912.91 | ▲ 09:30 equity $7,912.91 vs yday $7,912.91 (+0.00) | 09:30 open · cash $7,912.91 · no holdings · equity $7,912.91 vs prior close $7,912.91 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,912.91 | ▲ close $7,912.91 vs 09:30 $7,912.91 (session +0.00) | 16:00 close · cash $7,912.91 · no lots left · equity $7,912.91. | — |
 
 ## Not taken
 

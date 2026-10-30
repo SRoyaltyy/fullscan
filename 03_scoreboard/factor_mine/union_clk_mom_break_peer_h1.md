@@ -615,6 +615,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-29 09:30 ET | **SELL** | `PDFS` | 47 | $44.80 | $2.16 | $-42.83 | $6,514.71 | ▼ -42.83 after sell → book $8,638.61; vs 09:30 mark -2.15 | dropped from list after 1 sess (min 1) | join🔴 sector🟢 gen🔴 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-29 09:30 ET | **SELL** | `UPS` | 20 | $106.19 | $2.08 | $+11.97 | $8,636.53 | ▲ +11.97 after sell → book $8,636.53; vs 09:30 mark -2.08 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,636.53 | ▲ close $8,636.53 vs 09:30 $8,645.16 (session +0.00) | 16:00 close · cash $8,636.53 · no lots left · equity $8,636.53. | — |
+| 2026-10-30 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,636.53 | ▲ 09:30 equity $8,636.53 vs yday $8,636.53 (+0.00) | 09:30 open · cash $8,636.53 · no holdings · equity $8,636.53 vs prior close $8,636.53 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,636.53 | ▲ close $8,636.53 vs 09:30 $8,636.53 (session +0.00) | 16:00 close · cash $8,636.53 · no lots left · equity $8,636.53. | — |
 
 ## Not taken
 

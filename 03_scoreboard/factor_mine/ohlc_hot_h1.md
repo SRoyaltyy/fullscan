@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `ohlc_hot` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · baseline list, no extra gate
 
-Cash book **-18.66%** ($8,134) · signal-only (no cash/fees) was +6.95%. Starts YES **0/30**. Fills 440 · skips 93 · realized $-1456.67.
+Cash book **-18.78%** ($8,122) · signal-only (no cash/fees) was +6.95%. Starts YES **0/30**. Fills 441 · skips 93 · realized $-1456.67.
 
 ## How this sleeve decides (like you are 10)
 
@@ -618,6 +618,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-29 09:30 ET | **SELL** | `VCYT` | 18 | $50.82 | $2.06 | $+10.65 | $5,306.96 | ▲ +10.65 after sell → book $8,116.00; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-29 09:30 ET | **SELL** | `VRDN` | 40 | $24.35 | $2.13 | $+20.96 | $6,278.83 | ▲ +20.96 after sell → book $8,113.87; vs 09:30 mark -2.13 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-10-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,278.83 | ▲ close $8,133.97 vs 09:30 $8,129.84 (session +20.10) | 16:00 close · cash $6,278.83 · equity $8,133.97 vs 09:30 $8,129.84 (+4.13; session marks +20.10) · 2 name(s) marked open→close (per-name table). RH×6 09:30 $148.16 → close $150.79 +15.78; SLN×48 09:30 $19.71 → close $19.80 +4.32 | — |
+| 2026-10-30 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6,278.83 | ▼ 09:30 equity $8,123.41 vs yday $8,133.97 (-10.56) | 09:30 open · cash $6,278.83 (unchanged overnight, no fees) · equity $8,123.41 vs prior close $8,133.97 (-10.56) · 2 name(s) re-marked at the open (per-name table). RH×6 yday $150.79 → 09:30 $149.51 -7.68; SLN×48 yday $19.80 → 09:30 $19.74 -2.88 | — |
+| 2026-10-30 09:30 ET | **SELL** | `RH` | 6 | $149.51 | $2.03 | $+48.88 | $7,173.86 | ▲ +48.88 after sell → book $8,121.38; vs 09:30 mark -2.03 | dropped from list after 2 sess (min 1) | join🟢 sector🔴 gen🔴 news🟡 digest🟡 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,173.86 | ▲ close $8,121.86 vs 09:30 $8,123.41 (session +0.48) | 16:00 close · cash $7,173.86 · equity $8,121.86 vs 09:30 $8,123.41 (-1.55; session marks +0.48) · 1 name(s) marked open→close (per-name table). SLN×48 09:30 $19.74 → close $19.75 +0.48 | — |
 
 ## Not taken
 

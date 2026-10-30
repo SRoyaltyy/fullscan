@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · ret_5>15
 
-Cash book **-3.26%** ($9,674) · signal-only (no cash/fees) was -19.86%. Starts YES **3/30**. Fills 408 · skips 88 · realized $-1484.16.
+Cash book **-3.20%** ($9,680) · signal-only (no cash/fees) was -19.86%. Starts YES **3/30**. Fills 410 · skips 88 · realized $-1484.16.
 
 ## How this sleeve decides (like you are 10)
 
@@ -588,6 +588,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-29 09:30 ET | **COVER** | `SAIL` | 27 | $21.07 | $2.07 | $+26.33 | $11,563.33 | ▲ +26.33 after sell → book $9,663.40; vs 09:30 mark -2.08 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-29 09:30 ET | **COVER** | `VSAT` | 8 | $77.93 | $2.01 | $-50.46 | $10,937.88 | ▼ -50.46 after sell → book $9,661.39; vs 09:30 mark -2.01 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,937.88 | ▲ close $9,674.07 vs 09:30 $9,674.40 (session +12.68) | 16:00 close · cash $10,937.88 · equity $9,674.07 vs 09:30 $9,674.40 (-0.33; session marks +12.68) · 2 name(s) marked open→close (per-name table). FIP×233 09:30 $2.83 → close $2.87 -9.32; JLHL×110 09:30 $5.61 → close $5.41 +22.00 | — |
+| 2026-10-30 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,937.88 | ▲ 09:30 equity $9,685.46 vs yday $9,674.07 (+11.39) | 09:30 open · cash $10,937.88 (unchanged overnight, no fees) · equity $9,685.46 vs prior close $9,674.07 (+11.39) · 2 name(s) re-marked at the open (per-name table). FIP×233 yday $2.87 → 09:30 $2.84 +6.99; JLHL×110 yday $5.41 → 09:30 $5.37 +4.40 | — |
+| 2026-10-30 09:30 ET | **COVER** | `FIP` | 233 | $2.84 | $3.01 | $-50.35 | $10,273.15 | ▼ -50.35 after sell → book $9,682.45; vs 09:30 mark -3.01 | dropped from list after 2 sess (min 1) | join🔴 sector🔴 gen🔴 news🟡 digest🟢 ab🔴 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-30 09:30 ET | **COVER** | `JLHL` | 110 | $5.37 | $2.32 | $+20.61 | $9,680.13 | ▲ +20.61 after sell → book $9,680.13; vs 09:30 mark -2.32 | dropped from list after 2 sess (min 1) | join🔴 sector🔴 gen🔴 news🟡 digest🟢 ab🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,680.13 | ▲ close $9,680.13 vs 09:30 $9,685.46 (session +0.00) | 16:00 close · cash $9,680.13 · no lots left · equity $9,680.13. | — |
 
 ## Not taken
 

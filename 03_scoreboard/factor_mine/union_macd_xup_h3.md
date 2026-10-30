@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ macd_xup, no 🚨
 
-Cash book **-6.89%** ($9,311) · signal-only (no cash/fees) was -55.44%. Starts YES **5/30**. Fills 212 · skips 209 · realized $-2117.42.
+Cash book **-8.25%** ($9,175) · signal-only (no cash/fees) was -55.44%. Starts YES **5/30**. Fills 214 · skips 209 · realized $-2117.42.
 
 ## How this sleeve decides (like you are 10)
 
@@ -394,6 +394,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $48.17 | ▲ close $9,322.76 vs 09:30 $9,191.48 (session +132.17) | 16:00 close · cash $48.17 · equity $9,322.76 vs 09:30 $9,191.48 (+131.28; session marks +132.17) · 6 name(s) marked open→close (per-name table). GH×25 09:30 $178.06 → close $182.59 +113.25; RBRK×34 09:30 $135.47 → close $136.00 +18.02; NEO×1 09:30 $17.30 → close $17.99 +0.69; S×1 09:30 $25.56 → close $25.59 +0.03; AMPX×2 09:30 $8.98 → close $9.16 +0.36; SPCE×9 09:30 $2.68 → close $2.66 -0.18 | — |
 | 2026-10-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $48.17 | ▼ 09:30 equity $9,133.94 vs yday $9,322.76 (-188.82) | 09:30 open · cash $48.17 (unchanged overnight, no fees) · equity $9,133.94 vs prior close $9,322.76 (-188.82) · 6 name(s) re-marked at the open (per-name table). AMPX×2 yday $9.16 → 09:30 $9.02 -0.28; GH×25 yday $182.59 → 09:30 $185.17 +64.50; NEO×1 yday $17.99 → 09:30 $17.25 -0.74; RBRK×34 yday $136.00 → 09:30 $128.62 -250.75; S×1 yday $25.59 → 09:30 $24.31 -1.28; SPCE×9 yday $2.66 → 09:30 $2.63 -0.27 | — |
 | 2026-10-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $48.17 | ▲ close $9,310.83 vs 09:30 $9,133.94 (session +176.89) | 16:00 close · cash $48.17 · equity $9,310.83 vs 09:30 $9,133.94 (+176.89; session marks +176.89) · 6 name(s) marked open→close (per-name table). AMPX×2 09:30 $9.02 → close $9.14 +0.24; GH×25 09:30 $185.17 → close $185.31 +3.50; NEO×1 09:30 $17.25 → close $17.93 +0.68; RBRK×34 09:30 $128.62 → close $133.63 +170.17; S×1 09:30 $24.31 → close $25.71 +1.40; SPCE×9 09:30 $2.63 → close $2.73 +0.90 | — |
+| 2026-10-30 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $48.17 | ▼ 09:30 equity $9,180.45 vs yday $9,310.83 (-130.38) | 09:30 open · cash $48.17 (unchanged overnight, no fees) · equity $9,180.45 vs prior close $9,310.83 (-130.38) · 6 name(s) re-marked at the open (per-name table). AMPX×2 yday $9.14 → 09:30 $8.57 -1.14; GH×25 yday $185.31 → 09:30 $182.48 -70.75; NEO×1 yday $17.93 → 09:30 $17.95 +0.02; RBRK×34 yday $133.63 → 09:30 $131.94 -57.46; S×1 yday $25.71 → 09:30 $25.47 -0.24; SPCE×9 yday $2.73 → 09:30 $2.64 -0.81 | — |
+| 2026-10-30 09:30 ET | **SELL** | `GH` | 25 | $182.48 | $2.11 | $+188.95 | $4,608.06 | ▲ +188.95 after sell → book $9,178.34; vs 09:30 mark -2.11 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-30 09:30 ET | **SELL** | `RBRK` | 34 | $131.94 | $2.14 | $-22.93 | $9,091.88 | ▼ -22.93 after sell → book $9,176.20; vs 09:30 mark -2.14 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,091.88 | ▼ close $9,174.81 vs 09:30 $9,180.45 (session -1.39) | 16:00 close · cash $9,091.88 · equity $9,174.81 vs 09:30 $9,180.45 (-5.64; session marks -1.39) · 4 name(s) marked open→close (per-name table). AMPX×2 09:30 $8.57 → close $8.59 +0.04; NEO×1 09:30 $17.95 → close $17.38 -0.57; S×1 09:30 $25.47 → close $25.15 -0.32; SPCE×9 09:30 $2.64 → close $2.58 -0.54 | — |
 
 ## Not taken
 

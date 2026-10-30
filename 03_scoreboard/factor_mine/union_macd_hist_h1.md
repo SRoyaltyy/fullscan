@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `macd_hist` · size `leftover` · sell `list` · S-boost `none` · rank by macd_hist
 
-Cash book **-9.55%** ($9,045) · signal-only (no cash/fees) was +3.37%. Starts YES **20/30**. Fills 438 · skips 94 · realized $-657.32.
+Cash book **-9.48%** ($9,052) · signal-only (no cash/fees) was +3.37%. Starts YES **20/30**. Fills 439 · skips 94 · realized $-657.32.
 
 ## How this sleeve decides (like you are 10)
 
@@ -619,6 +619,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-29 09:30 ET | **SELL** | `UPS` | 10 | $106.19 | $2.04 | $+3.99 | $6,803.37 | ▲ +3.99 after sell → book $9,031.13; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-29 09:30 ET | **SELL** | `VCYT` | 22 | $50.82 | $2.08 | $+13.91 | $7,919.34 | ▲ +13.91 after sell → book $9,029.06; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,919.34 | ▲ close $9,044.94 vs 09:30 $9,043.62 (session +15.88) | 16:00 close · cash $7,919.34 · equity $9,044.94 vs 09:30 $9,043.62 (+1.32; session marks +15.88) · 1 name(s) marked open→close (per-name table). ITW×4 09:30 $277.43 → close $281.40 +15.88 | — |
+| 2026-10-30 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,919.34 | ▲ 09:30 equity $9,053.74 vs yday $9,044.94 (+8.80) | 09:30 open · cash $7,919.34 (unchanged overnight, no fees) · equity $9,053.74 vs prior close $9,044.94 (+8.80) · 1 name(s) re-marked at the open (per-name table). ITW×4 yday $281.40 → 09:30 $283.60 +8.80 | — |
+| 2026-10-30 09:30 ET | **SELL** | `ITW` | 4 | $283.60 | $2.02 | $+41.18 | $9,051.72 | ▲ +41.18 after sell → book $9,051.72; vs 09:30 mark -2.02 | dropped from list after 3 sess (min 1) | join🔴 sector🔴 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,051.72 | ▲ close $9,051.72 vs 09:30 $9,053.74 (session +0.00) | 16:00 close · cash $9,051.72 · no lots left · equity $9,051.72. | — |
 
 ## Not taken
 

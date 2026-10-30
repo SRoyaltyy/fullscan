@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · Clock-B #5 extreme ext + fade/fail-break as a short
 
-Cash book **-17.93%** ($8,207) · signal-only (no cash/fees) was -97.41%. Starts YES **0/30**. Fills 276 · skips 219 · realized $-964.15.
+Cash book **-16.75%** ($8,325) · signal-only (no cash/fees) was -97.41%. Starts YES **0/30**. Fills 279 · skips 219 · realized $-964.15.
 
 ## How this sleeve decides (like you are 10)
 
@@ -456,6 +456,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $18,829.42 | ▼ close $8,394.51 vs 09:30 $9,456.85 (session -1,041.24) | 16:00 close · cash $18,829.42 · equity $8,394.51 vs 09:30 $9,456.85 (-1062.34; session marks -1041.24) · 4 name(s) marked open→close (per-name table). CDNA×22 09:30 $69.91 → close $72.13 -48.84; EGG×305 09:30 $5.14 → close $4.84 +91.50; GMAB×35 09:30 $44.63 → close $57.29 -443.10; IMSR×1602 09:30 $2.95 → close $3.35 -640.80 | — |
 | 2026-10-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $18,829.42 | ▲ 09:30 equity $8,650.26 vs yday $8,394.51 (+255.75) | 09:30 open · cash $18,829.42 (unchanged overnight, no fees) · equity $8,650.26 vs prior close $8,394.51 (+255.75) · 4 name(s) re-marked at the open (per-name table). CDNA×22 yday $72.13 → 09:30 $72.02 +2.42; EGG×305 yday $4.84 → 09:30 $4.84 -0.00; GMAB×35 yday $57.29 → 09:30 $56.46 +29.05; IMSR×1602 yday $3.35 → 09:30 $3.21 +224.28 | — |
 | 2026-10-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $18,829.42 | ▼ close $8,206.72 vs 09:30 $8,650.26 (session -443.54) | 16:00 close · cash $18,829.42 · equity $8,206.72 vs 09:30 $8,650.26 (-443.54; session marks -443.54) · 4 name(s) marked open→close (per-name table). CDNA×22 09:30 $72.02 → close $71.52 +11.00; EGG×305 09:30 $4.84 → close $5.04 -61.00; GMAB×35 09:30 $56.46 → close $56.49 -1.05; IMSR×1602 09:30 $3.21 → close $3.46 -392.49 | — |
+| 2026-10-30 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $18,829.42 | ▲ 09:30 equity $8,397.31 vs yday $8,206.72 (+190.59) | 09:30 open · cash $18,829.42 (unchanged overnight, no fees) · equity $8,397.31 vs prior close $8,206.72 (+190.59) · 4 name(s) re-marked at the open (per-name table). CDNA×22 yday $71.52 → 09:30 $82.10 -232.76; EGG×305 yday $5.04 → 09:30 $5.00 +12.20; GMAB×35 yday $56.49 → 09:30 $57.33 -29.40; IMSR×1602 yday $3.46 → 09:30 $3.18 +440.55 | — |
+| 2026-10-30 09:30 ET | **COVER** | `CDNA` | 22 | $82.10 | $2.06 | $-290.18 | $17,021.16 | ▼ -290.18 after sell → book $8,395.25; vs 09:30 mark -2.06 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-30 09:30 ET | **COVER** | `EGG` | 305 | $5.00 | $3.93 | $+43.87 | $15,492.23 | ▲ +43.87 after sell → book $8,391.32; vs 09:30 mark -3.93 | dropped from list after 3 sess (min 3) | join🔴 sector🔴 gen🔴 news🟡 digest🟢 ab🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-30 09:30 ET | **COVER** | `GMAB` | 35 | $57.33 | $2.10 | $-456.45 | $13,483.58 | ▼ -456.45 after sell → book $8,389.22; vs 09:30 mark -2.10 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $13,483.58 | ▼ close $8,325.14 vs 09:30 $8,397.31 (session -64.08) | 16:00 close · cash $13,483.58 · equity $8,325.14 vs 09:30 $8,397.31 (-72.17; session marks -64.08) · 1 name(s) marked open→close (per-name table). IMSR×1602 09:30 $3.18 → close $3.22 -64.08 | — |
 
 ## Not taken
 

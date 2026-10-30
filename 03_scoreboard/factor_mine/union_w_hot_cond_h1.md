@@ -655,6 +655,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-29 09:30 ET | **SELL** | `VCYT` | 30 | $50.82 | $2.10 | $+20.42 | $10,647.55 | ▲ +20.42 after sell → book $12,162.80; vs 09:30 mark -2.10 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-29 09:30 ET | **SELL** | `VOYG` | 55 | $27.55 | $2.18 | $+6.67 | $12,160.62 | ▲ +6.67 after sell → book $12,160.62; vs 09:30 mark -2.18 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $12,160.62 | ▲ close $12,160.62 vs 09:30 $12,184.74 (session +0.00) | 16:00 close · cash $12,160.62 · no lots left · equity $12,160.62. | — |
+| 2026-10-30 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $12,160.62 | ▲ 09:30 equity $12,160.62 vs yday $12,160.62 (+0.00) | 09:30 open · cash $12,160.62 · no holdings · equity $12,160.62 vs prior close $12,160.62 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $12,160.62 | ▲ close $12,160.62 vs 09:30 $12,160.62 (session +0.00) | 16:00 close · cash $12,160.62 · no lots left · equity $12,160.62. | — |
 
 ## Not taken
 

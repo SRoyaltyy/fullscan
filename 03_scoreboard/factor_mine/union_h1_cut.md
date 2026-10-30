@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `cut_loser` · S-boost `none` · after min-hold, cut −3% losers
 
-Cash book **-16.22%** ($8,378) · signal-only (no cash/fees) was -0.80%. Starts YES **0/30**. Fills 443 · skips 108 · realized $-123.31.
+Cash book **-16.94%** ($8,306) · signal-only (no cash/fees) was -0.80%. Starts YES **0/30**. Fills 444 · skips 108 · realized $-123.31.
 
 ## How this sleeve decides (like you are 10)
 
@@ -621,6 +621,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-29 09:30 ET | **SELL** | `NEO` | 59 | $17.25 | $2.19 | $-7.30 | $4,255.95 | ▼ -7.30 after sell → book $8,345.69; vs 09:30 mark -2.19 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-29 09:30 ET | **SELL** | `SRRK` | 23 | $43.66 | $2.08 | $-7.82 | $5,258.05 | ▼ -7.82 after sell → book $8,343.61; vs 09:30 mark -2.08 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5,258.05 | ▲ close $8,378.16 vs 09:30 $8,360.84 (session +34.55) | 16:00 close · cash $5,258.05 · equity $8,378.16 vs 09:30 $8,360.84 (+17.32; session marks +34.55) · 3 name(s) marked open→close (per-name table). NVTS×109 09:30 $9.09 → close $9.20 +11.99; PRMB×53 09:30 $19.55 → close $19.47 -4.24; SMMT×67 09:30 $15.80 → close $16.20 +26.80 | — |
+| 2026-10-30 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $5,258.05 | ▼ 09:30 equity $8,292.68 vs yday $8,378.16 (-85.48) | 09:30 open · cash $5,258.05 (unchanged overnight, no fees) · equity $8,292.68 vs prior close $8,378.16 (-85.48) · 3 name(s) re-marked at the open (per-name table). NVTS×109 yday $9.20 → 09:30 $8.53 -73.03; PRMB×53 yday $19.47 → 09:30 $19.45 -1.06; SMMT×67 yday $16.20 → 09:30 $16.03 -11.39 | — |
+| 2026-10-30 09:30 ET | **SELL** | `NVTS` | 109 | $8.53 | $2.35 | $-95.13 | $6,185.47 | ▼ -95.13 after sell → book $8,290.33; vs 09:30 mark -2.35 | cut loser after 2 sess (−3% vs entry) | join🔴 sector🔴 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,185.47 | ▲ close $8,305.70 vs 09:30 $8,292.68 (session +15.37) | 16:00 close · cash $6,185.47 · equity $8,305.70 vs 09:30 $8,292.68 (+13.02; session marks +15.37) · 2 name(s) marked open→close (per-name table). PRMB×53 09:30 $19.45 → close $19.74 +15.37; SMMT×67 09:30 $16.03 → close $16.03 +0.00 | — |
 
 ## Not taken
 

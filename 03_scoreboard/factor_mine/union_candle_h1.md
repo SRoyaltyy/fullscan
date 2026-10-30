@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ candle, no 🚨
 
-Cash book **-14.35%** ($8,565) · signal-only (no cash/fees) was -3.26%. Starts YES **0/30**. Fills 474 · skips 106 · realized $-563.17.
+Cash book **-15.10%** ($8,490) · signal-only (no cash/fees) was -3.26%. Starts YES **0/30**. Fills 476 · skips 106 · realized $-563.17.
 
 ## How this sleeve decides (like you are 10)
 
@@ -656,6 +656,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-29 09:30 ET | **SELL** | `NEO` | 61 | $17.25 | $2.19 | $-7.42 | $5,369.48 | ▼ -7.42 after sell → book $8,588.94; vs 09:30 mark -2.19 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-29 09:30 ET | **SELL** | `PRIM` | 14 | $72.99 | $2.05 | $+21.82 | $6,389.29 | ▲ +21.82 after sell → book $8,586.89; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | join🔴 sector🔴 gen🔴 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,389.29 | ▼ close $8,564.87 vs 09:30 $8,600.72 (session -22.02) | 16:00 close · cash $6,389.29 · equity $8,564.87 vs 09:30 $8,600.72 (-35.85; session marks -22.02) · 2 name(s) marked open→close (per-name table). PDFS×24 09:30 $44.80 → close $45.56 +18.24; QTTB×122 09:30 $9.20 → close $8.87 -40.26 | — |
+| 2026-10-30 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6,389.29 | ▼ 09:30 equity $8,494.07 vs yday $8,564.87 (-70.80) | 09:30 open · cash $6,389.29 (unchanged overnight, no fees) · equity $8,494.07 vs prior close $8,564.87 (-70.80) · 2 name(s) re-marked at the open (per-name table). PDFS×24 yday $45.56 → 09:30 $42.61 -70.80; QTTB×122 yday $8.87 → 09:30 $8.87 +0.00 | — |
+| 2026-10-30 09:30 ET | **SELL** | `PDFS` | 24 | $42.61 | $2.08 | $+16.74 | $7,409.85 | ▲ +16.74 after sell → book $8,491.99; vs 09:30 mark -2.08 | dropped from list after 3 sess (min 1) | join🔴 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-30 09:30 ET | **SELL** | `QTTB` | 122 | $8.87 | $2.39 | $+22.10 | $8,489.60 | ▲ +22.10 after sell → book $8,489.60; vs 09:30 mark -2.39 | dropped from list after 2 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,489.60 | ▲ close $8,489.60 vs 09:30 $8,494.07 (session +0.00) | 16:00 close · cash $8,489.60 · no lots left · equity $8,489.60. | — |
 
 ## Not taken
 

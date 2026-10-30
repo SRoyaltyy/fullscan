@@ -474,6 +474,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-29 09:30 ET | **SELL** | `SPCE` | 637 | $2.63 | $8.34 | $-48.40 | $6,696.31 | ▼ -48.40 after sell → book $8,404.41; vs 09:30 mark -8.34 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-29 09:30 ET | **SELL** | `VOYG` | 62 | $27.55 | $2.20 | $+8.02 | $8,402.21 | ▲ +8.02 after sell → book $8,402.21; vs 09:30 mark -2.20 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,402.21 | ▲ close $8,402.21 vs 09:30 $8,419.88 (session +0.00) | 16:00 close · cash $8,402.21 · no lots left · equity $8,402.21. | — |
+| 2026-10-30 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,402.21 | ▲ 09:30 equity $8,402.21 vs yday $8,402.21 (+0.00) | 09:30 open · cash $8,402.21 · no holdings · equity $8,402.21 vs prior close $8,402.21 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,402.21 | ▲ close $8,402.21 vs 09:30 $8,402.21 (session +0.00) | 16:00 close · cash $8,402.21 · no lots left · equity $8,402.21. | — |
 
 ## Not taken
 

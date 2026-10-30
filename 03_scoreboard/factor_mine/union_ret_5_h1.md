@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `ret_5` · size `leftover` · sell `list` · S-boost `none` · rank by ret_5
 
-Cash book **+13.11%** ($11,311) · signal-only (no cash/fees) was +36.33%. Starts YES **29/30**. Fills 464 · skips 100 · realized $+370.60.
+Cash book **+12.98%** ($11,298) · signal-only (no cash/fees) was +36.33%. Starts YES **29/30**. Fills 465 · skips 100 · realized $+370.60.
 
 ## How this sleeve decides (like you are 10)
 
@@ -645,6 +645,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-29 09:30 ET | **SELL** | `S` | 54 | $24.31 | $2.17 | $-71.82 | $8,555.92 | ▼ -71.82 after sell → book $11,363.47; vs 09:30 mark -2.18 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-29 09:30 ET | **SELL** | `VOYG` | 51 | $27.55 | $2.16 | $+5.89 | $9,958.81 | ▲ +5.89 after sell → book $11,361.31; vs 09:30 mark -2.16 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,958.81 | ▼ close $11,311.31 vs 09:30 $11,385.56 (session -50.00) | 16:00 close · cash $9,958.81 · equity $11,311.31 vs 09:30 $11,385.56 (-74.25; session marks -50.00) · 1 name(s) marked open→close (per-name table). JLHL×250 09:30 $5.61 → close $5.41 -50.00 | — |
+| 2026-10-30 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,958.81 | ▼ 09:30 equity $11,301.31 vs yday $11,311.31 (-10.00) | 09:30 open · cash $9,958.81 (unchanged overnight, no fees) · equity $11,301.31 vs prior close $11,311.31 (-10.00) · 1 name(s) re-marked at the open (per-name table). JLHL×250 yday $5.41 → 09:30 $5.37 -10.00 | — |
+| 2026-10-30 09:30 ET | **SELL** | `JLHL` | 250 | $5.37 | $3.28 | $-64.00 | $11,298.03 | ▼ -64.00 after sell → book $11,298.03; vs 09:30 mark -3.28 | dropped from list after 2 sess (min 1) | join🔴 sector🔴 gen🔴 news🟡 digest🟢 ab🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $11,298.03 | ▲ close $11,298.03 vs 09:30 $11,301.31 (session +0.00) | 16:00 close · cash $11,298.03 · no lots left · equity $11,298.03. | — |
 
 ## Not taken
 

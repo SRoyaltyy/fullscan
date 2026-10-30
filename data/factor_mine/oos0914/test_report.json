@@ -33,7 +33,8 @@
     "2026-10-26",
     "2026-10-27",
     "2026-10-28",
-    "2026-10-29"
+    "2026-10-29",
+    "2026-10-30"
   ],
   "rules": [
     {
@@ -1191,14 +1192,46 @@
           "equity": 9696.77,
           "mean": 0.1839,
           "mean_flat_15bp": 0.2466
+        },
+        {
+          "date": "2026-10-30",
+          "buys": [],
+          "sells": [
+            {
+              "fill_rule": "open",
+              "price": 20.18,
+              "shares": 6,
+              "side": "SELL",
+              "ticker": "BETA"
+            },
+            {
+              "fill_rule": "open",
+              "price": 3.18,
+              "shares": 46,
+              "side": "SELL",
+              "ticker": "IMSR"
+            },
+            {
+              "fill_rule": "open",
+              "price": 51.54,
+              "shares": 2,
+              "side": "SELL",
+              "ticker": "VCYT"
+            }
+          ],
+          "fees": 3.9264,
+          "cash": 9676.59,
+          "equity": 9676.59,
+          "mean": -0.2081,
+          "mean_flat_15bp": -0.163
         }
       ],
       "keep_bar_met": false,
       "keep_bar_note": "12 train fires against the 30-fire bar. Excel's luck test p=0.87.",
-      "after_fees_return": -3.032,
-      "start_day_win_rate": 0.5882,
+      "after_fees_return": -3.234,
+      "start_day_win_rate": 0.4857,
       "best_stock": "SDGR",
-      "without_best_stock_return": -6.644
+      "without_best_stock_return": -6.818
     },
     {
       "name": "oos0914_rvol_lg_h1_sx",
@@ -2762,12 +2795,22 @@
           "equity": 10739.52,
           "mean": -1.1142,
           "mean_flat_15bp": -0.7676
+        },
+        {
+          "date": "2026-10-30",
+          "buys": [],
+          "sells": [],
+          "fees": 0,
+          "cash": 10739.52,
+          "equity": 10739.52,
+          "mean": 0.0,
+          "mean_flat_15bp": 0.0
         }
       ],
       "keep_bar_met": false,
       "keep_bar_note": "12 train fires against the 30-fire bar. Excel's luck test p=0.87.",
       "after_fees_return": 7.395,
-      "start_day_win_rate": 0.4412,
+      "start_day_win_rate": 0.4286,
       "best_stock": "SDEV",
       "without_best_stock_return": -11.129
     },
@@ -4332,12 +4375,22 @@
           "equity": 7382.51,
           "mean": -0.7017,
           "mean_flat_15bp": -0.5279
+        },
+        {
+          "date": "2026-10-30",
+          "buys": [],
+          "sells": [],
+          "fees": 0,
+          "cash": 7382.51,
+          "equity": 7382.51,
+          "mean": 0.0,
+          "mean_flat_15bp": 0.0
         }
       ],
       "keep_bar_met": false,
       "keep_bar_note": "12 train fires against the 30-fire bar. Excel's luck test p=0.87.",
       "after_fees_return": -26.175,
-      "start_day_win_rate": 0.2941,
+      "start_day_win_rate": 0.2857,
       "best_stock": "QSI",
       "without_best_stock_return": -29.545
     },
@@ -5122,12 +5175,22 @@
           "equity": 10269.61,
           "mean": 0.0,
           "mean_flat_15bp": 0.0
+        },
+        {
+          "date": "2026-10-30",
+          "buys": [],
+          "sells": [],
+          "fees": 0,
+          "cash": 10269.61,
+          "equity": 10269.61,
+          "mean": 0.0,
+          "mean_flat_15bp": 0.0
         }
       ],
       "keep_bar_met": false,
       "keep_bar_note": "12 train fires against the 30-fire bar. Excel's luck test p=0.87.",
       "after_fees_return": 2.696,
-      "start_day_win_rate": 0.2647,
+      "start_day_win_rate": 0.2571,
       "best_stock": "NAUT",
       "without_best_stock_return": -0.241
     }

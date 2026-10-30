@@ -688,6 +688,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-29 09:30 ET | **SELL** | `SMMT` | 67 | $15.80 | $2.21 | $+36.47 | $7,297.95 | ▲ +36.47 after sell → book $8,302.13; vs 09:30 mark -2.21 | time-stop after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 judge🟢 ab🟡 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-10-29 09:30 ET | **SELL** | `SRRK` | 23 | $43.66 | $2.08 | $-7.82 | $8,300.05 | ▼ -7.82 after sell → book $8,300.05; vs 09:30 mark -2.08 | time-stop after 1 sess (min 1) | — |
 | 2026-10-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,300.05 | ▲ close $8,300.05 vs 09:30 $8,323.96 (session +0.00) | 16:00 close · cash $8,300.05 · no lots left · equity $8,300.05. | — |
+| 2026-10-30 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,300.05 | ▲ 09:30 equity $8,300.05 vs yday $8,300.05 (+0.00) | 09:30 open · cash $8,300.05 · no holdings · equity $8,300.05 vs prior close $8,300.05 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,300.05 | ▲ close $8,300.05 vs 09:30 $8,300.05 (session +0.00) | 16:00 close · cash $8,300.05 · no lots left · equity $8,300.05. | — |
 
 ## Not taken
 

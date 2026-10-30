@@ -368,6 +368,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $4,504.45 | ▲ 09:30 equity $5,969.06 vs yday $5,964.18 (+4.88) | 09:30 open · cash $4,504.45 (unchanged overnight, no fees) · equity $5,969.06 vs prior close $5,964.18 (+4.88) · 1 name(s) re-marked at the open (per-name table). AMX×61 yday $23.93 → 09:30 $24.01 +4.88 | — |
 | 2026-10-29 09:30 ET | **SELL** | `AMX` | 61 | $24.01 | $2.19 | $-20.23 | $5,966.87 | ▼ -20.23 after sell → book $5,966.87; vs 09:30 mark -2.19 | dropped from list after 2 sess (min 1) | join🔴 sector🔴 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5,966.87 | ▲ close $5,966.87 vs 09:30 $5,969.06 (session +0.00) | 16:00 close · cash $5,966.87 · no lots left · equity $5,966.87. | — |
+| 2026-10-30 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $5,966.87 | ▲ 09:30 equity $5,966.87 vs yday $5,966.87 (+0.00) | 09:30 open · cash $5,966.87 · no holdings · equity $5,966.87 vs prior close $5,966.87 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5,966.87 | ▲ close $5,966.87 vs 09:30 $5,966.87 (session +0.00) | 16:00 close · cash $5,966.87 · no lots left · equity $5,966.87. | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ news_g, no 🚨
 
-Cash book **-36.44%** ($6,357) · signal-only (no cash/fees) was +177.31%. Starts YES **1/30**. Fills 248 · skips 234 · realized $-2132.89.
+Cash book **-37.97%** ($6,203) · signal-only (no cash/fees) was +177.31%. Starts YES **1/30**. Fills 251 · skips 234 · realized $-2132.89.
 
 ## How this sleeve decides (like you are 10)
 
@@ -430,6 +430,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8.89 | ▼ close $6,314.21 vs 09:30 $6,366.05 (session -49.81) | 16:00 close · cash $8.89 · equity $6,314.21 vs 09:30 $6,366.05 (-51.84; session marks -49.81) · 7 name(s) marked open→close (per-name table). AMTM×47 09:30 $21.59 → close $21.69 +4.70; GLND×329 09:30 $3.37 → close $3.24 -42.77; ITW×3 09:30 $276.75 → close $276.07 -2.04; NVTS×120 09:30 $9.36 → close $9.36 +0.00; SGRY×44 09:30 $23.26 → close $23.24 -0.88; TBBB×17 09:30 $56.82 → close $56.40 -7.14; AMX×12 09:30 $24.07 → close $23.93 -1.68 | — |
 | 2026-10-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8.89 | ▼ 09:30 equity $6,255.46 vs yday $6,314.21 (-58.75) | 09:30 open · cash $8.89 (unchanged overnight, no fees) · equity $6,255.46 vs prior close $6,314.21 (-58.75) · 7 name(s) re-marked at the open (per-name table). AMTM×47 yday $21.69 → 09:30 $22.00 +14.57; AMX×12 yday $23.93 → 09:30 $24.01 +0.96; GLND×329 yday $3.24 → 09:30 $3.10 -46.06; ITW×3 yday $276.07 → 09:30 $277.43 +4.08; NVTS×120 yday $9.36 → 09:30 $9.09 -32.40; SGRY×44 yday $23.24 → 09:30 $23.25 +0.44; TBBB×17 yday $56.40 → 09:30 $56.38 -0.34 | — |
 | 2026-10-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8.89 | ▲ close $6,356.54 vs 09:30 $6,255.46 (session +101.08) | 16:00 close · cash $8.89 · equity $6,356.54 vs 09:30 $6,255.46 (+101.08; session marks +101.08) · 7 name(s) marked open→close (per-name table). AMTM×47 09:30 $22.00 → close $22.07 +3.29; AMX×12 09:30 $24.01 → close $24.13 +1.44; GLND×329 09:30 $3.10 → close $3.31 +69.09; ITW×3 09:30 $277.43 → close $281.40 +11.91; NVTS×120 09:30 $9.09 → close $9.20 +13.20; SGRY×44 09:30 $23.25 → close $23.21 -1.76; TBBB×17 09:30 $56.38 → close $56.61 +3.91 | — |
+| 2026-10-30 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8.89 | ▼ 09:30 equity $6,241.38 vs yday $6,356.54 (-115.16) | 09:30 open · cash $8.89 (unchanged overnight, no fees) · equity $6,241.38 vs prior close $6,356.54 (-115.16) · 7 name(s) re-marked at the open (per-name table). AMTM×47 yday $22.07 → 09:30 $22.06 -0.47; AMX×12 yday $24.13 → 09:30 $24.03 -1.20; GLND×329 yday $3.31 → 09:30 $3.19 -39.48; ITW×3 yday $281.40 → 09:30 $283.60 +6.60; NVTS×120 yday $9.20 → 09:30 $8.53 -80.40; SGRY×44 yday $23.21 → 09:30 $23.24 +1.32; TBBB×17 yday $56.61 → 09:30 $56.52 -1.53 | — |
+| 2026-10-30 09:30 ET | **SELL** | `AMTM` | 47 | $22.06 | $2.15 | $-0.05 | $1,043.56 | ▼ -0.05 after sell → book $6,239.23; vs 09:30 mark -2.15 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-30 09:30 ET | **SELL** | `ITW` | 3 | $283.60 | $2.02 | $+29.88 | $1,892.34 | ▲ +29.88 after sell → book $6,237.21; vs 09:30 mark -2.02 | dropped from list after 3 sess (min 3) | join🔴 sector🔴 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-30 09:30 ET | **SELL** | `SGRY` | 44 | $23.24 | $2.14 | $-2.50 | $2,912.76 | ▼ -2.50 after sell → book $6,235.07; vs 09:30 mark -2.14 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2,912.76 | ▼ close $6,202.93 vs 09:30 $6,241.38 (session -32.14) | 16:00 close · cash $2,912.76 · equity $6,202.93 vs 09:30 $6,241.38 (-38.45; session marks -32.14) · 4 name(s) marked open→close (per-name table). AMX×12 09:30 $24.03 → close $24.48 +5.40; GLND×329 09:30 $3.19 → close $3.09 -32.90; NVTS×120 09:30 $8.53 → close $8.48 -6.00; TBBB×17 09:30 $56.52 → close $56.60 +1.36 | — |
 
 ## Not taken
 

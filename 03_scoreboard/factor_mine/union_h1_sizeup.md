@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `sizeup` · S≥+5: 1.35× leftover
 
-Cash book **-16.14%** ($8,385) · signal-only (no cash/fees) was -0.80%. Starts YES **0/30**. Fills 441 · skips 107 · realized $-106.46.
+Cash book **-16.90%** ($8,310) · signal-only (no cash/fees) was -0.80%. Starts YES **0/30**. Fills 441 · skips 107 · realized $-106.46.
 
 ## How this sleeve decides (like you are 10)
 
@@ -620,6 +620,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-29 09:30 ET | **SELL** | `NEO` | 59 | $17.25 | $2.19 | $-7.30 | $4,263.24 | ▼ -7.30 after sell → book $8,352.98; vs 09:30 mark -2.18 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-29 09:30 ET | **SELL** | `SRRK` | 23 | $43.66 | $2.08 | $-7.82 | $5,265.34 | ▼ -7.82 after sell → book $8,350.90; vs 09:30 mark -2.08 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5,265.34 | ▲ close $8,385.45 vs 09:30 $8,368.14 (session +34.55) | 16:00 close · cash $5,265.34 · equity $8,385.45 vs 09:30 $8,368.14 (+17.31; session marks +34.55) · 3 name(s) marked open→close (per-name table). NVTS×109 09:30 $9.09 → close $9.20 +11.99; PRMB×53 09:30 $19.55 → close $19.47 -4.24; SMMT×67 09:30 $15.80 → close $16.20 +26.80 | — |
+| 2026-10-30 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $5,265.34 | ▼ 09:30 equity $8,299.97 vs yday $8,385.45 (-85.48) | 09:30 open · cash $5,265.34 (unchanged overnight, no fees) · equity $8,299.97 vs prior close $8,385.45 (-85.48) · 3 name(s) re-marked at the open (per-name table). NVTS×109 yday $9.20 → 09:30 $8.53 -73.03; PRMB×53 yday $19.47 → 09:30 $19.45 -1.06; SMMT×67 yday $16.20 → 09:30 $16.03 -11.39 | — |
+| 2026-10-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5,265.34 | ▲ close $8,309.89 vs 09:30 $8,299.97 (session +9.92) | 16:00 close · cash $5,265.34 · equity $8,309.89 vs 09:30 $8,299.97 (+9.92; session marks +9.92) · 3 name(s) marked open→close (per-name table). NVTS×109 09:30 $8.53 → close $8.48 -5.45; PRMB×53 09:30 $19.45 → close $19.74 +15.37; SMMT×67 09:30 $16.03 → close $16.03 +0.00 | — |
 
 ## Not taken
 

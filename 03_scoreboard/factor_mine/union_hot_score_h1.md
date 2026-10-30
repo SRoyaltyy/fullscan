@@ -647,6 +647,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-29 09:30 ET | **SELL** | `UPS` | 13 | $106.19 | $2.05 | $+6.39 | $10,306.59 | ▲ +6.39 after sell → book $11,780.37; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-29 09:30 ET | **SELL** | `VCYT` | 29 | $50.82 | $2.10 | $+19.60 | $11,778.27 | ▲ +19.60 after sell → book $11,778.27; vs 09:30 mark -2.10 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $11,778.27 | ▲ close $11,778.27 vs 09:30 $11,804.74 (session +0.00) | 16:00 close · cash $11,778.27 · no lots left · equity $11,778.27. | — |
+| 2026-10-30 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $11,778.27 | ▲ 09:30 equity $11,778.27 vs yday $11,778.27 (+0.00) | 09:30 open · cash $11,778.27 · no holdings · equity $11,778.27 vs prior close $11,778.27 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $11,778.27 | ▲ close $11,778.27 vs 09:30 $11,778.27 (session +0.00) | 16:00 close · cash $11,778.27 · no lots left · equity $11,778.27. | — |
 
 ## Not taken
 

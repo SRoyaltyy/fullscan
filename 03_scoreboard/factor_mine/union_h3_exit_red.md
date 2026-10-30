@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · buy last-green, sell next 09:30 if last bar flipped red
 
-Cash book **-25.10%** ($7,490) · signal-only (no cash/fees) was +22.17%. Starts YES **3/30**. Fills 372 · skips 297 · realized $-713.89.
+Cash book **-27.95%** ($7,205) · signal-only (no cash/fees) was +22.17%. Starts YES **3/30**. Fills 375 · skips 297 · realized $-713.89.
 
 ## How this sleeve decides (like you are 10)
 
@@ -554,6 +554,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-29 09:30 ET | **SELL** | `ITW` | 1 | $277.43 | $2.01 | $-3.33 | $1,002.21 | ▼ -3.33 after sell → book $7,462.80; vs 09:30 mark -2.01 | exit last-red after 1 sess | join🟡 sector🔴 gen🔴 news🟢 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-29 09:30 ET | **SELL** | `PDFS` | 25 | $44.80 | $2.08 | $+72.35 | $2,120.12 | ▲ +72.35 after sell → book $7,460.71; vs 09:30 mark -2.09 | exit last-red after 2 sess | join🔴 sector🟢 gen🔴 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2,120.12 | ▲ close $7,489.66 vs 09:30 $7,469.05 (session +28.95) | 16:00 close · cash $2,120.12 · equity $7,489.66 vs 09:30 $7,469.05 (+20.61; session marks +28.95) · 8 name(s) marked open→close (per-name table). FDMT×27 09:30 $13.00 → close $12.78 -5.94; ILMN×3 09:30 $286.05 → close $290.06 +12.03; NEO×18 09:30 $17.25 → close $17.93 +12.24; NVTS×121 09:30 $9.09 → close $9.20 +13.31; PACS×21 09:30 $49.64 → close $49.68 +0.84; PRIM×4 09:30 $72.99 → close $75.61 +10.48; QTTB×37 09:30 $9.20 → close $8.87 -12.21; SGRY×45 09:30 $23.25 → close $23.21 -1.80 | — |
+| 2026-10-30 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $2,120.12 | ▼ 09:30 equity $7,273.51 vs yday $7,489.66 (-216.15) | 09:30 open · cash $2,120.12 (unchanged overnight, no fees) · equity $7,273.51 vs prior close $7,489.66 (-216.15) · 8 name(s) re-marked at the open (per-name table). FDMT×27 yday $12.78 → 09:30 $12.49 -7.83; ILMN×3 yday $290.06 → 09:30 $253.84 -108.66; NEO×18 yday $17.93 → 09:30 $17.95 +0.36; NVTS×121 yday $9.20 → 09:30 $8.53 -81.07; PACS×21 yday $49.68 → 09:30 $49.38 -6.30; PRIM×4 yday $75.61 → 09:30 $72.11 -14.00; QTTB×37 yday $8.87 → 09:30 $8.87 +0.00; SGRY×45 yday $23.21 → 09:30 $23.24 +1.35 | — |
+| 2026-10-30 09:30 ET | **SELL** | `ILMN` | 3 | $253.84 | $2.02 | $-50.76 | $2,879.62 | ▼ -50.76 after sell → book $7,271.49; vs 09:30 mark -2.02 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-30 09:30 ET | **SELL** | `QTTB` | 37 | $8.87 | $2.12 | $+3.92 | $3,205.69 | ▲ +3.92 after sell → book $7,269.37; vs 09:30 mark -2.12 | exit last-red after 2 sess | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-30 09:30 ET | **SELL** | `SGRY` | 45 | $23.24 | $2.15 | $-2.47 | $4,249.35 | ▼ -2.47 after sell → book $7,267.23; vs 09:30 mark -2.14 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $4,249.35 | ▼ close $7,204.66 vs 09:30 $7,273.51 (session -62.57) | 16:00 close · cash $4,249.35 · equity $7,204.66 vs 09:30 $7,273.51 (-68.85; session marks -62.57) · 5 name(s) marked open→close (per-name table). FDMT×27 09:30 $12.49 → close $11.90 -15.93; NEO×18 09:30 $17.95 → close $17.38 -10.26; NVTS×121 09:30 $8.53 → close $8.48 -6.05; PACS×21 09:30 $49.38 → close $47.81 -32.97; PRIM×4 09:30 $72.11 → close $72.77 +2.64 | — |
 
 ## Not taken
 
