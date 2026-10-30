@@ -1,6 +1,6 @@
 {
   "date": "2026-10-30",
-  "generated_at": "2026-10-30T13:26:06.573493-04:00",
+  "generated_at": "2026-10-30T13:26:47.140490-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -817,9 +817,9 @@
           "path": "data/stock_book/2026-10-30_stock_book.json",
           "role": "required",
           "status": "OK",
-          "reason": "horizons=5 names=183",
-          "size": 1438790,
-          "said": "1d BUY PRCH, GDYN, HITI, CON, ASTH, AMN, SGRY, CBRL \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE \u00b7 -0.5525",
+          "reason": "horizons=5 names=206",
+          "size": 1508118,
+          "said": "1d BUY MQ, CNK, YEXT, GDYN, TDS, IOT, HITI, VFF \u00b7 SELL NEOV, OKLO, FCEL, EOSE, INDI, TE \u00b7 -0.5525",
           "bullets": []
         },
         {
@@ -829,10 +829,10 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 71035,
+          "size": 79740,
           "said": "Stock book \u2014 2026-10-30",
           "bullets": [
-            "_Generated 2026-10-30T07:53:38.217693-04:00_",
+            "_Generated 2026-10-30T13:26:17.073346-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -895,9 +895,9 @@
           "path": "data/stock_book/2026-10-30_stock_book.json",
           "role": "input",
           "status": "OK",
-          "reason": "horizons=5 names=183",
-          "size": 1438790,
-          "said": "1d BUY PRCH, GDYN, HITI, CON, ASTH, AMN, SGRY, CBRL \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE \u00b7 -0.5525",
+          "reason": "horizons=5 names=206",
+          "size": 1508118,
+          "said": "1d BUY MQ, CNK, YEXT, GDYN, TDS, IOT, HITI, VFF \u00b7 SELL NEOV, OKLO, FCEL, EOSE, INDI, TE \u00b7 -0.5525",
           "bullets": []
         },
         {
@@ -946,82 +946,78 @@
   "selections": {
     "buy_1d": [
       {
-        "ticker": "PRCH",
-        "score": 0.6012300282358349
+        "ticker": "MQ",
+        "score": 0.6336299817765652
+      },
+      {
+        "ticker": "CNK",
+        "score": 0.6305795192802798
+      },
+      {
+        "ticker": "YEXT",
+        "score": 0.48482749786088997
       },
       {
         "ticker": "GDYN",
-        "score": 0.5210692406605829
+        "score": 0.5520788377173056
+      },
+      {
+        "ticker": "TDS",
+        "score": 0.43510560203275017
+      },
+      {
+        "ticker": "IOT",
+        "score": 0.21073586684966744
       },
       {
         "ticker": "HITI",
-        "score": 0.5271072413045478
+        "score": 0.47786930495786256
       },
       {
-        "ticker": "CON",
-        "score": 0.663586724933733
-      },
-      {
-        "ticker": "ASTH",
-        "score": 0.6319861506818658
-      },
-      {
-        "ticker": "AMN",
-        "score": 0.640327945792873
-      },
-      {
-        "ticker": "SGRY",
-        "score": 0.5082161106563792
-      },
-      {
-        "ticker": "CBRL",
-        "score": 0.7147261761979158
-      },
-      {
-        "ticker": "MD",
-        "score": 0.5979788141901266
+        "ticker": "VFF",
+        "score": 0.6370276596638982
       }
     ],
     "sell_1d": [
       {
         "ticker": "NEOV",
-        "score": -0.2655631553064647
+        "score": -0.26543706630678077
       },
       {
         "ticker": "OKLO",
-        "score": -0.27097691984932804
+        "score": -0.27668640455976146
       },
       {
         "ticker": "FCEL",
-        "score": -0.26411063816462926
-      },
-      {
-        "ticker": "NNDM",
-        "score": -0.21357094374182206
-      },
-      {
-        "ticker": "POWL",
-        "score": -0.02383773765263708
+        "score": -0.2675698000577638
       },
       {
         "ticker": "EOSE",
-        "score": -0.35656798343359425
+        "score": -0.35908652118714685
       },
       {
         "ticker": "INDI",
-        "score": -0.15356530882326402
+        "score": -0.15693324952786808
       },
       {
         "ticker": "TE",
-        "score": -0.19219621268840714
+        "score": -0.19291000994283192
+      },
+      {
+        "ticker": "NNDM",
+        "score": -0.15955388560076683
       },
       {
         "ticker": "SKYX",
-        "score": -0.37458115905953204
+        "score": -0.3790459949149013
       },
       {
         "ticker": "AMSC",
-        "score": -0.10963010277547997
+        "score": -0.12496690899252777
+      },
+      {
+        "ticker": "LUNR",
+        "score": -0.32449242746766377
       }
     ],
     "flatten": {
@@ -2957,6 +2953,59 @@
         }
       ],
       "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-10-30",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-30T13:26:45.820456-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-10-30_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1508118,
+          "preview": "1d BUY MQ, CNK, YEXT, GDYN, TDS, IOT, HITI, VFF \u00b7 SELL NEOV, OKLO, FCEL, EOSE, INDI, TE, NNDM, SKYX"
+        },
+        {
+          "path": "data/stock_book/2026-10-30_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-10-30_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2454,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-10-30_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12598,
+          "preview": "2026-10-30 BUY MQ, CNK, YEXT, GDYN, TDS, IOT, HITI, VFF \u00b7 SELL NEOV, OKLO, FCEL, EOSE, INDI, TE, NNDM, SKYX"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12598,
+          "preview": "2026-10-30 BUY MQ, CNK, YEXT, GDYN, TDS, IOT, HITI, VFF \u00b7 SELL NEOV, OKLO, FCEL, EOSE, INDI, TE, NNDM, SKYX"
+        },
+        {
+          "path": "01_daily/2026-10-30_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 80889,
+          "preview": "# Stock book \u2014 2026-10-30\n_Generated 2026-10-30T13:26:17.073346-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY MQ, CNK, YEXT, GDYN, TDS, IOT, HITI, VFF \u00b7 SELL NEOV, OKLO, FCEL, EOSE, INDI, TE, NNDM, SKYX \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-10-30 BUY MQ, CNK, YEXT, GDYN, TDS, IOT, HITI, VFF \u00b7 SELL NEOV, OKLO, FCEL, EOSE, INDI, TE, NNDM, SKYX \u00b7 2026-10-30 BUY MQ, CNK, YEXT, GDYN, TDS, IOT, HITI, VFF \u00b7 SELL NEOV, OKLO, FCEL, EOSE, INDI, TE, NNDM, SKYX \u00b7 # Stock book \u2014 2026-10-30\n_Generated 2026-10-30T13:26:17.073346-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "href": {
@@ -3002,6 +3051,46 @@
       "path": "data/day_board/2026-10-30.json",
       "at": "2026-10-30T13:26:07-04:00",
       "commit_msg": "auto: land peer_rs [2026-10-30]",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "41092064230",
+      "manifest": "research/input_freeze/2026-10-30/manifest.json"
+    },
+    {
+      "path": "01_daily/2026-10-30_stock_book.md",
+      "at": "2026-10-30T13:26:47-04:00",
+      "commit_msg": "auto: land stock_book [2026-10-30]",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "41092064230",
+      "manifest": "research/input_freeze/2026-10-30/manifest.json"
+    },
+    {
+      "path": "data/day_board/2026-10-30.json",
+      "at": "2026-10-30T13:26:47-04:00",
+      "commit_msg": "auto: land stock_book [2026-10-30]",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "41092064230",
+      "manifest": "research/input_freeze/2026-10-30/manifest.json"
+    },
+    {
+      "path": "data/stock_book/2026-10-30_input_health.json",
+      "at": "2026-10-30T13:26:47-04:00",
+      "commit_msg": "auto: land stock_book [2026-10-30]",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "41092064230",
+      "manifest": "research/input_freeze/2026-10-30/manifest.json"
+    },
+    {
+      "path": "data/stock_book/2026-10-30_stock_book.json",
+      "at": "2026-10-30T13:26:47-04:00",
+      "commit_msg": "auto: land stock_book [2026-10-30]",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "41092064230",
+      "manifest": "research/input_freeze/2026-10-30/manifest.json"
+    },
+    {
+      "path": "data/stock_book/2026-10-30_suggestions.json",
+      "at": "2026-10-30T13:26:47-04:00",
+      "commit_msg": "auto: land stock_book [2026-10-30]",
       "workflow": "Stock Book ALL (one-shot)",
       "run_id": "41092064230",
       "manifest": "research/input_freeze/2026-10-30/manifest.json"
