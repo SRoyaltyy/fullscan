@@ -1,6 +1,6 @@
 {
   "date": "2026-10-30",
-  "generated_at": "2026-10-30T16:35:37.242883-04:00",
+  "generated_at": "2026-10-30T16:44:35.387228-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -179,7 +179,7 @@
       "inputs_ready": true,
       "n_req_ok": 9,
       "n_req": 9,
-      "n_opt_ok": 2,
+      "n_opt_ok": 3,
       "n_opt": 14,
       "files": [
         {
@@ -336,11 +336,16 @@
           "name": "Sector board JSON",
           "path": "01_daily/sectors/2026-10-30/_board.json",
           "role": "optional",
-          "status": "SKIP",
-          "reason": "optional \u2014 sector board not required",
-          "size": 0,
-          "said": "optional \u2014 sector board not required",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 6085,
+          "said": "0 up / 0 down / 0 flat",
+          "bullets": [
+            "XLB missing",
+            "XLC missing",
+            "XLY missing",
+            "XLP missing"
+          ]
         },
         {
           "key": "qc",
@@ -504,13 +509,18 @@
           "bullets": []
         }
       ],
-      "said": "general DOWN  -12.921",
+      "said": "general DOWN  -12.921 \u00b7 sectors 0 up / 0 down / 0 flat",
       "bullets": [
         "bad: Amazon Q3 miss \u22126.3%",
         "bad: Intel afterhours \u221220%",
         "bad: Kospi \u22123.48% semis rout",
         "good: Apple +1.48%",
-        "good: Meta +1.97%"
+        "good: Meta +1.97%",
+        "XLB missing",
+        "XLC missing",
+        "XLY missing",
+        "XLP missing",
+        "XLE missing"
       ]
     },
     {
@@ -545,8 +555,8 @@
           "path": "01_daily/weather/2026-10-30_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=10492 vix=spiking yields=falling",
-          "size": 10492,
+          "reason": "sectors=11 bytes=10384 vix=calm yields=flat",
+          "size": 10384,
           "said": "hostile 9 \u00b7 neutral 2",
           "bullets": [
             "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Technology, Utilities",
@@ -683,7 +693,7 @@
       "n_req_ok": 4,
       "n_req": 4,
       "n_opt_ok": 3,
-      "n_opt": 4,
+      "n_opt": 3,
       "files": [
         {
           "key": "in_general",
@@ -705,12 +715,17 @@
           "key": "in_board",
           "name": "Sector board JSON",
           "path": "01_daily/sectors/2026-10-30/_board.json",
-          "role": "optional",
-          "status": "SKIP",
-          "reason": "optional \u2014 sector board not required",
-          "size": 0,
-          "said": "optional \u2014 sector board not required",
-          "bullets": []
+          "role": "input",
+          "status": "OK",
+          "reason": "",
+          "size": 6085,
+          "said": "0 up / 0 down / 0 flat",
+          "bullets": [
+            "XLB missing",
+            "XLC missing",
+            "XLY missing",
+            "XLP missing"
+          ]
         },
         {
           "key": "in_actions",
@@ -764,8 +779,8 @@
           "path": "01_daily/weather/2026-10-30_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=10492 vix=spiking yields=falling",
-          "size": 10492,
+          "reason": "sectors=11 bytes=10384 vix=calm yields=flat",
+          "size": 10384,
           "said": "hostile 9 \u00b7 neutral 2",
           "bullets": [
             "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Technology, Utilities",
@@ -792,10 +807,10 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=5901",
-          "size": 2249728,
-          "said": "221 rows",
+          "size": 2267684,
+          "said": "207 rows",
           "bullets": [
-            "FUTU, GLBE, BPOP, EBC, SLDE, CRCL, HG, SSB"
+            "EXEL, REGN, NUTX, HRMY, CORT, ADMA, ARGX, INCY"
           ]
         },
         {
@@ -817,9 +832,9 @@
           "path": "data/stock_book/2026-10-30_stock_book.json",
           "role": "required",
           "status": "OK",
-          "reason": "horizons=5 names=202",
-          "size": 1496025,
-          "said": "1d BUY MQ, YEXT, GDYN, IOT, HITI, PRGS, VFF, CON \u00b7 SELL NEOV, OKLO, FCEL, EOSE, INDI, TE \u00b7 -0.5525",
+          "reason": "horizons=5 names=183",
+          "size": 1438788,
+          "said": "1d BUY PRCH, GDYN, HITI, CON, ASTH, AMN, SGRY, CBRL \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE \u00b7 -0.5525",
           "bullets": []
         },
         {
@@ -829,10 +844,10 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 77638,
+          "size": 70999,
           "said": "Stock book \u2014 2026-10-30",
           "bullets": [
-            "_Generated 2026-10-30T16:34:51.074581-04:00_",
+            "_Generated 2026-10-30T16:44:32.067331-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -873,9 +888,9 @@
           "bullets": []
         }
       ],
-      "said": "221 rows",
+      "said": "207 rows",
       "bullets": [
-        "FUTU, GLBE, BPOP, EBC, SLDE"
+        "EXEL, REGN, NUTX, HRMY, CORT"
       ]
     },
     {
@@ -895,9 +910,9 @@
           "path": "data/stock_book/2026-10-30_stock_book.json",
           "role": "input",
           "status": "OK",
-          "reason": "horizons=5 names=202",
-          "size": 1496025,
-          "said": "1d BUY MQ, YEXT, GDYN, IOT, HITI, PRGS, VFF, CON \u00b7 SELL NEOV, OKLO, FCEL, EOSE, INDI, TE \u00b7 -0.5525",
+          "reason": "horizons=5 names=183",
+          "size": 1438788,
+          "said": "1d BUY PRCH, GDYN, HITI, CON, ASTH, AMN, SGRY, CBRL \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE \u00b7 -0.5525",
           "bullets": []
         },
         {
@@ -946,78 +961,82 @@
   "selections": {
     "buy_1d": [
       {
-        "ticker": "MQ",
-        "score": 0.6802274469501808
-      },
-      {
-        "ticker": "YEXT",
-        "score": 0.4585800588136826
+        "ticker": "PRCH",
+        "score": 0.6012300282358349
       },
       {
         "ticker": "GDYN",
-        "score": 0.5040930193974902
-      },
-      {
-        "ticker": "IOT",
-        "score": 0.2569500469340522
+        "score": 0.5210692406605829
       },
       {
         "ticker": "HITI",
-        "score": 0.49169239502750306
-      },
-      {
-        "ticker": "PRGS",
-        "score": 0.4573690228110135
-      },
-      {
-        "ticker": "VFF",
-        "score": 0.6521332893621858
+        "score": 0.5271072413045478
       },
       {
         "ticker": "CON",
-        "score": 0.5772405951706283
+        "score": 0.663586724933733
+      },
+      {
+        "ticker": "ASTH",
+        "score": 0.6319861506818658
+      },
+      {
+        "ticker": "AMN",
+        "score": 0.640327945792873
+      },
+      {
+        "ticker": "SGRY",
+        "score": 0.5082161106563792
+      },
+      {
+        "ticker": "CBRL",
+        "score": 0.7147261761979158
+      },
+      {
+        "ticker": "MD",
+        "score": 0.5979788141901266
       }
     ],
     "sell_1d": [
       {
         "ticker": "NEOV",
-        "score": -0.2563612296779829
+        "score": -0.2655631553064647
       },
       {
         "ticker": "OKLO",
-        "score": -0.2772536756379176
+        "score": -0.27097691984932804
       },
       {
         "ticker": "FCEL",
-        "score": -0.2663682882073997
-      },
-      {
-        "ticker": "EOSE",
-        "score": -0.35908652118714685
-      },
-      {
-        "ticker": "INDI",
-        "score": -0.15693324952786808
-      },
-      {
-        "ticker": "TE",
-        "score": -0.19291000994283192
-      },
-      {
-        "ticker": "SKYX",
-        "score": -0.3755258711769882
+        "score": -0.26411063816462926
       },
       {
         "ticker": "NNDM",
-        "score": -0.09462236919331167
+        "score": -0.21357094374182206
       },
       {
-        "ticker": "LUNR",
-        "score": -0.3242336656732668
+        "ticker": "POWL",
+        "score": -0.02383773765263708
+      },
+      {
+        "ticker": "EOSE",
+        "score": -0.35656798343359425
+      },
+      {
+        "ticker": "INDI",
+        "score": -0.15356530882326402
+      },
+      {
+        "ticker": "TE",
+        "score": -0.19219621268840714
+      },
+      {
+        "ticker": "SKYX",
+        "score": -0.37458115905953204
       },
       {
         "ticker": "AMSC",
-        "score": -0.11386557681603865
+        "score": -0.10963010277547997
       }
     ],
     "flatten": {
@@ -1039,7 +1058,22 @@
       "score": "-12.921",
       "direction": "down"
     },
-    "sectors": {},
+    "sectors": {
+      "said": "0 up / 0 down / 0 flat",
+      "bullets": [
+        "XLB missing",
+        "XLC missing",
+        "XLY missing",
+        "XLP missing",
+        "XLE missing",
+        "XLF missing",
+        "XLV missing",
+        "XLI missing",
+        "XLRE missing",
+        "XLK missing",
+        "XLU missing"
+      ]
+    },
     "news": {},
     "weather": {
       "said": "hostile 9 \u00b7 neutral 2",
@@ -4167,6 +4201,30 @@
       "commit_msg": "auto: stock book leftover sweep",
       "workflow": "Stock Book ALL (one-shot)",
       "run_id": "41108632002",
+      "manifest": "research/input_freeze/2026-10-30/manifest.json"
+    },
+    {
+      "path": "01_daily/2026-10-30_stock_book.md",
+      "at": "2026-10-30T16:45:05-04:00",
+      "commit_msg": "auto: strategy tickets 2026-10-30",
+      "workflow": "Publish strategy tickets",
+      "run_id": "41108022518",
+      "manifest": "research/input_freeze/2026-10-30/manifest.json"
+    },
+    {
+      "path": "data/stock_book/2026-10-30_input_health.json",
+      "at": "2026-10-30T16:45:05-04:00",
+      "commit_msg": "auto: strategy tickets 2026-10-30",
+      "workflow": "Publish strategy tickets",
+      "run_id": "41108022518",
+      "manifest": "research/input_freeze/2026-10-30/manifest.json"
+    },
+    {
+      "path": "data/stock_book/2026-10-30_stock_book.json",
+      "at": "2026-10-30T16:45:05-04:00",
+      "commit_msg": "auto: strategy tickets 2026-10-30",
+      "workflow": "Publish strategy tickets",
+      "run_id": "41108022518",
       "manifest": "research/input_freeze/2026-10-30/manifest.json"
     }
   ]
