@@ -21,8 +21,8 @@
    "SIT": 0
   },
   "h1": {
-   "MISSING": 1,
-   "OK": 0,
+   "MISSING": 0,
+   "OK": 1,
    "SIT": 0
   },
   "holdup": {
@@ -52,7 +52,7 @@
   }
  },
  "date": "2026-10-30",
- "generated_at": "2026-10-30T08:32:37-04:00",
+ "generated_at": "2026-10-30T08:41:01-04:00",
  "strategies": [
   {
    "buys": [
@@ -5013,13 +5013,23 @@
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "TDOC",
+    "GKOS",
+    "ADT",
+    "PURR"
+   ],
    "family": "h1",
    "name": "h1",
-   "note": "no sealed plan row",
-   "sells": [],
+   "note": "sealed 2026-10-30T12:40:27Z",
+   "sells": [
+    "GMAB 33",
+    "PACB 673",
+    "PRME 356",
+    "SWRD 575"
+   ],
    "source": "research/hot_n4_clean_v4/forward_h1/h1_log.jsonl",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [],
