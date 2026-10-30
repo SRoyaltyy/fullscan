@@ -9296,5 +9296,96 @@
     "sha256": "96b24ddff3602346c24acd370f6c6a67100065547e5a13df184189f900da55be",
     "shares": 1388,
     "ticker": "UWMC"
+  },
+  {
+    "bar_cutoff": "2026-10-29",
+    "cash_before": 480.22091580378014,
+    "committed_at": "2026-10-30T12:40:27Z",
+    "date": "2026-10-30",
+    "excluded_unexplained_legs": [],
+    "finviz_source": {
+      "commit": "3c4479e0d3d0b37a4d7142413f8309a3b956477c",
+      "commit_time": "2026-10-29T20:43:28Z",
+      "file_sha256": "6f986e0a5895ebbfb1cefcd98e8e391986c81e3e0b93daf8aab7822621b9ca2d",
+      "path": "data/snapshots/2026-10-29.csv",
+      "snapshot_date": "2026-10-29",
+      "status": "BEFORE_OPEN"
+    },
+    "holdup_on": false,
+    "kind": "plan",
+    "morning_s": -12.921,
+    "picks": [
+      {
+        "fv_avg_volume": 4251.75,
+        "fv_price": 8.73,
+        "rank": 1,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "TDOC"
+      },
+      {
+        "fv_avg_volume": 922.89,
+        "fv_price": 242.48,
+        "rank": 2,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "GKOS"
+      },
+      {
+        "fv_avg_volume": 7668.17,
+        "fv_price": 9.87,
+        "rank": 3,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "ADT"
+      },
+      {
+        "fv_avg_volume": 18368.78,
+        "fv_price": 12.29,
+        "rank": 4,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "PURR"
+      }
+    ],
+    "planned_sells": [
+      {
+        "reason": "hold-expired",
+        "shares": 33,
+        "ticker": "GMAB"
+      },
+      {
+        "reason": "hold-expired",
+        "shares": 673,
+        "ticker": "PACB"
+      },
+      {
+        "reason": "hold-expired",
+        "shares": 356,
+        "ticker": "PRME"
+      },
+      {
+        "reason": "hold-expired",
+        "shares": 575,
+        "ticker": "SWRD"
+      }
+    ],
+    "recipe": "union_hot_n4_h1__w0",
+    "s_source": {
+      "blob_sha": "07fd02ab22e300a1e4fb65a301105b4a468d6fb0",
+      "kind": "predict",
+      "path": "01_daily/general/2026-10-30_predict.md",
+      "server_time_utc": "2026-10-30T19:02:52+08:00",
+      "status": "BEFORE_1330"
+    },
+    "sha256": "91d8b5f16064f4aa986e8d0725f4ec31d49047f4edaaddc66ccd3833c3a7c3be"
   }
 ]
