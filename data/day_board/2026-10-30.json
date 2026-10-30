@@ -1,6 +1,6 @@
 {
   "date": "2026-10-30",
-  "generated_at": "2026-10-30T13:27:02.795144-04:00",
+  "generated_at": "2026-10-30T14:30:11.881847-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -545,8 +545,8 @@
           "path": "01_daily/weather/2026-10-30_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=10545 vix=spiking yields=rising",
-          "size": 10545,
+          "reason": "sectors=11 bytes=10546 vix=spiking yields=rising",
+          "size": 10546,
           "said": "hostile 9 \u00b7 neutral 2",
           "bullets": [
             "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Technology, Utilities",
@@ -764,8 +764,8 @@
           "path": "01_daily/weather/2026-10-30_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=10545 vix=spiking yields=rising",
-          "size": 10545,
+          "reason": "sectors=11 bytes=10546 vix=spiking yields=rising",
+          "size": 10546,
           "said": "hostile 9 \u00b7 neutral 2",
           "bullets": [
             "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Technology, Utilities",
@@ -792,10 +792,10 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=5901",
-          "size": 2248517,
-          "said": "224 rows",
+          "size": 2267684,
+          "said": "207 rows",
           "bullets": [
-            "BPOP, EG, CB, TRV, ALL, FUTU, GLBE, AFG"
+            "EXEL, REGN, NUTX, HRMY, CORT, ADMA, ARGX, INCY"
           ]
         },
         {
@@ -817,9 +817,9 @@
           "path": "data/stock_book/2026-10-30_stock_book.json",
           "role": "required",
           "status": "OK",
-          "reason": "horizons=5 names=206",
-          "size": 1508118,
-          "said": "1d BUY MQ, CNK, YEXT, GDYN, TDS, IOT, HITI, VFF \u00b7 SELL NEOV, OKLO, FCEL, EOSE, INDI, TE \u00b7 -0.5525",
+          "reason": "horizons=5 names=183",
+          "size": 1438790,
+          "said": "1d BUY PRCH, GDYN, HITI, CON, ASTH, AMN, SGRY, CBRL \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE \u00b7 -0.5525",
           "bullets": []
         },
         {
@@ -829,10 +829,10 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 79740,
+          "size": 71035,
           "said": "Stock book \u2014 2026-10-30",
           "bullets": [
-            "_Generated 2026-10-30T13:26:17.073346-04:00_",
+            "_Generated 2026-10-30T07:53:38.217693-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -873,9 +873,9 @@
           "bullets": []
         }
       ],
-      "said": "224 rows",
+      "said": "207 rows",
       "bullets": [
-        "BPOP, EG, CB, TRV, ALL"
+        "EXEL, REGN, NUTX, HRMY, CORT"
       ]
     },
     {
@@ -895,9 +895,9 @@
           "path": "data/stock_book/2026-10-30_stock_book.json",
           "role": "input",
           "status": "OK",
-          "reason": "horizons=5 names=206",
-          "size": 1508118,
-          "said": "1d BUY MQ, CNK, YEXT, GDYN, TDS, IOT, HITI, VFF \u00b7 SELL NEOV, OKLO, FCEL, EOSE, INDI, TE \u00b7 -0.5525",
+          "reason": "horizons=5 names=183",
+          "size": 1438790,
+          "said": "1d BUY PRCH, GDYN, HITI, CON, ASTH, AMN, SGRY, CBRL \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE \u00b7 -0.5525",
           "bullets": []
         },
         {
@@ -946,78 +946,82 @@
   "selections": {
     "buy_1d": [
       {
-        "ticker": "MQ",
-        "score": 0.6336299817765652
-      },
-      {
-        "ticker": "CNK",
-        "score": 0.6305795192802798
-      },
-      {
-        "ticker": "YEXT",
-        "score": 0.48482749786088997
+        "ticker": "PRCH",
+        "score": 0.6012300282358349
       },
       {
         "ticker": "GDYN",
-        "score": 0.5520788377173056
-      },
-      {
-        "ticker": "TDS",
-        "score": 0.43510560203275017
-      },
-      {
-        "ticker": "IOT",
-        "score": 0.21073586684966744
+        "score": 0.5210692406605829
       },
       {
         "ticker": "HITI",
-        "score": 0.47786930495786256
+        "score": 0.5271072413045478
       },
       {
-        "ticker": "VFF",
-        "score": 0.6370276596638982
+        "ticker": "CON",
+        "score": 0.663586724933733
+      },
+      {
+        "ticker": "ASTH",
+        "score": 0.6319861506818658
+      },
+      {
+        "ticker": "AMN",
+        "score": 0.640327945792873
+      },
+      {
+        "ticker": "SGRY",
+        "score": 0.5082161106563792
+      },
+      {
+        "ticker": "CBRL",
+        "score": 0.7147261761979158
+      },
+      {
+        "ticker": "MD",
+        "score": 0.5979788141901266
       }
     ],
     "sell_1d": [
       {
         "ticker": "NEOV",
-        "score": -0.26543706630678077
+        "score": -0.2655631553064647
       },
       {
         "ticker": "OKLO",
-        "score": -0.27668640455976146
+        "score": -0.27097691984932804
       },
       {
         "ticker": "FCEL",
-        "score": -0.2675698000577638
-      },
-      {
-        "ticker": "EOSE",
-        "score": -0.35908652118714685
-      },
-      {
-        "ticker": "INDI",
-        "score": -0.15693324952786808
-      },
-      {
-        "ticker": "TE",
-        "score": -0.19291000994283192
+        "score": -0.26411063816462926
       },
       {
         "ticker": "NNDM",
-        "score": -0.15955388560076683
+        "score": -0.21357094374182206
+      },
+      {
+        "ticker": "POWL",
+        "score": -0.02383773765263708
+      },
+      {
+        "ticker": "EOSE",
+        "score": -0.35656798343359425
+      },
+      {
+        "ticker": "INDI",
+        "score": -0.15356530882326402
+      },
+      {
+        "ticker": "TE",
+        "score": -0.19219621268840714
       },
       {
         "ticker": "SKYX",
-        "score": -0.3790459949149013
+        "score": -0.37458115905953204
       },
       {
         "ticker": "AMSC",
-        "score": -0.12496690899252777
-      },
-      {
-        "ticker": "LUNR",
-        "score": -0.32449242746766377
+        "score": -0.10963010277547997
       }
     ],
     "flatten": {
@@ -3147,6 +3151,31 @@
         }
       ],
       "preview": "# Paper trading \u2014 Futubull-fee simulation\nAs of **2026-10-07** \u00b7 $10,000 starting capital per sleeve \u00b7 fees per `00_grounding/futubull_fees.json`\nLatest book **2026-10-07** ranker: **weighted** (green pile liquid=0, need 8).\nSleeves: `{horizon}_top` = top-N overall buys, `{horizon}_size` = top 3 per size bucket. Fill at signal-day close. Sell only after min-hold (1d=1, 3d=3, 1w=5, 2w=10, 1m=21 **trading sessions** \u2014 weekends and NYSE holidays do not count) AND the name has left the book.\n| Sleeve | Equity | Return | Cash | Open pos | Trades | Fees paid | Realized P/L | Unrealized P/L | Closed win | Open win |\n|--------|--------|--------|------|----------|--------|-----------|--------------|----------------|------------|----------|\n| 1d_top | $8,825.81 | -11.74% | $4,458.43 | 2 | 510 | $1,080.39 | $-1,169.87 | $-4.32 | 32.7% | 0.0% |\n| 1d_size | $9,454.32 | -5.46% | $4,783.48 | 2 | 466 |  \u00b7 <!DOCTYPE html>\n<html lang=\"en\"><head><meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n<title>Paper Trading \u2014 Stock Book Simulation</title>\n<style>\n:root{\n--bg:#0f1420; --card:#171e2e; --line:#262f45; --line2:#232c42;\n--fg:#dfe6f2; --mut:#8b96ab; --dim:#6"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-10-30",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-30T14:30:10.449846-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-10-30_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 10546,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-10-30_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5994,
+          "preview": "# Weather report \u2014 2026-10-30\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-10-30\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
     }
   ],
   "href": {
@@ -3306,6 +3335,22 @@
       "commit_msg": "auto: stock book leftover sweep",
       "workflow": "Stock Book ALL (one-shot)",
       "run_id": "41092064230",
+      "manifest": "research/input_freeze/2026-10-30/manifest.json"
+    },
+    {
+      "path": "01_daily/weather/2026-10-30_weather.json",
+      "at": "2026-10-30T14:30:12-04:00",
+      "commit_msg": "auto: land weather [2026-10-30]",
+      "workflow": "Pre-Open ALL (predictive one-shot)",
+      "run_id": "41088373764",
+      "manifest": "research/input_freeze/2026-10-30/manifest.json"
+    },
+    {
+      "path": "data/day_board/2026-10-30.json",
+      "at": "2026-10-30T14:30:12-04:00",
+      "commit_msg": "auto: land weather [2026-10-30]",
+      "workflow": "Pre-Open ALL (predictive one-shot)",
+      "run_id": "41088373764",
       "manifest": "research/input_freeze/2026-10-30/manifest.json"
     }
   ]
