@@ -1,6 +1,6 @@
 {
  "date": "2026-10-30",
- "generated_at": "2026-10-30T14:30:10.290863-04:00",
+ "generated_at": "2026-10-30T16:34:21.690487-04:00",
  "stance_vocabulary": [
   "favorable",
   "neutral",
@@ -17,23 +17,23 @@
   "fed_score": -1.0,
   "dollar_oil_score": 0.5,
   "futures_score": -0.5,
-  "yields": "rising",
+  "yields": "falling",
   "yields_source": "fred_dgs10",
-  "dgs10_delta_1d": 0.06,
-  "dgs10_current": 5.05,
+  "dgs10_delta_1d": -0.07,
+  "dgs10_current": 4.98,
   "dollar": "flat",
   "dollar_source": "dxy",
   "dxy_pct_1d": -0.12,
-  "vix_ratio": 1.006,
-  "vix_spot": 22.35,
-  "vix_delta_1d": 5.15,
+  "vix_ratio": 0.935,
+  "vix_spot": 19.42,
+  "vix_delta_1d": 2.22,
   "vix_ratio_source": "vix/vix3m",
   "vix": "spiking",
-  "oil_pct_1d": 2.33,
-  "oil": "rising",
+  "oil_pct_1d": 0.96,
+  "oil": "flat",
   "fear_greed": null,
   "fear_greed_label": null,
-  "regime_corr": 0.71,
+  "regime_corr": 0.707,
   "sectors": {
    "Basic Materials": {
     "score": -4.97,
@@ -320,7 +320,7 @@
    "high": {
     "stance": "hostile",
     "confidence": "medium",
-    "why": "yields rising — leverage amplifies the downside [factors + general]"
+    "why": "risk-off — leverage amplifies the downside [factors + general]"
    },
    "low": {
     "stance": "favorable",
@@ -340,14 +340,14 @@
   },
   "style": {
    "growth": {
-    "stance": "hostile",
-    "confidence": "medium",
-    "why": "yields rising — long-duration growth de-rates [factor: Bond yields]"
-   },
-   "value": {
     "stance": "favorable",
     "confidence": "medium",
-    "why": "rising yields/reflation favors value & cyclicals [factor: Bond yields]"
+    "why": "yields falling — duration/growth re-rates [factor: Bond yields]"
+   },
+   "value": {
+    "stance": "neutral",
+    "confidence": "low",
+    "why": "value lags duration rallies"
    },
    "blend": {
     "stance": "neutral",

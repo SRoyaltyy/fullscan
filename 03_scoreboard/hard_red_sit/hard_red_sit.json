@@ -2919,155 +2919,11 @@
         "name": "flatten_robust",
         "family": "flatten",
         "sit": true,
-        "hard_red": false,
+        "hard_red": true,
         "side": "long",
-        "s": "morning S missing; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held",
+        "s": -12.921,
         "short_only": [],
         "dip_scoop": [
-          {
-            "ticker": "SMMT",
-            "side": "long",
-            "open": null,
-            "px": 19.17,
-            "px_src": "session_export+elite_live_skipped",
-            "low": null,
-            "scoops": {
-              "0.5": {
-                "kind": "no_open",
-                "x": 0.5,
-                "fill": null
-              },
-              "1.0": {
-                "kind": "no_open",
-                "x": 1.0,
-                "fill": null
-              },
-              "1.5": {
-                "kind": "no_open",
-                "x": 1.5,
-                "fill": null
-              },
-              "2.0": {
-                "kind": "no_open",
-                "x": 2.0,
-                "fill": null
-              },
-              "3.0": {
-                "kind": "no_open",
-                "x": 3.0,
-                "fill": null
-              }
-            },
-            "tag": "RESEARCH"
-          },
-          {
-            "ticker": "SYK",
-            "side": "long",
-            "open": null,
-            "px": 275.44,
-            "px_src": "session_export+elite_live_skipped",
-            "low": null,
-            "scoops": {
-              "0.5": {
-                "kind": "no_open",
-                "x": 0.5,
-                "fill": null
-              },
-              "1.0": {
-                "kind": "no_open",
-                "x": 1.0,
-                "fill": null
-              },
-              "1.5": {
-                "kind": "no_open",
-                "x": 1.5,
-                "fill": null
-              },
-              "2.0": {
-                "kind": "no_open",
-                "x": 2.0,
-                "fill": null
-              },
-              "3.0": {
-                "kind": "no_open",
-                "x": 3.0,
-                "fill": null
-              }
-            },
-            "tag": "RESEARCH"
-          },
-          {
-            "ticker": "VEEV",
-            "side": "long",
-            "open": null,
-            "px": 278.54,
-            "px_src": "session_export+elite_live_skipped",
-            "low": null,
-            "scoops": {
-              "0.5": {
-                "kind": "no_open",
-                "x": 0.5,
-                "fill": null
-              },
-              "1.0": {
-                "kind": "no_open",
-                "x": 1.0,
-                "fill": null
-              },
-              "1.5": {
-                "kind": "no_open",
-                "x": 1.5,
-                "fill": null
-              },
-              "2.0": {
-                "kind": "no_open",
-                "x": 2.0,
-                "fill": null
-              },
-              "3.0": {
-                "kind": "no_open",
-                "x": 3.0,
-                "fill": null
-              }
-            },
-            "tag": "RESEARCH"
-          },
-          {
-            "ticker": "CDNA",
-            "side": "long",
-            "open": null,
-            "px": 64.95,
-            "px_src": "session_export+elite_live_skipped",
-            "low": null,
-            "scoops": {
-              "0.5": {
-                "kind": "no_open",
-                "x": 0.5,
-                "fill": null
-              },
-              "1.0": {
-                "kind": "no_open",
-                "x": 1.0,
-                "fill": null
-              },
-              "1.5": {
-                "kind": "no_open",
-                "x": 1.5,
-                "fill": null
-              },
-              "2.0": {
-                "kind": "no_open",
-                "x": 2.0,
-                "fill": null
-              },
-              "3.0": {
-                "kind": "no_open",
-                "x": 3.0,
-                "fill": null
-              }
-            },
-            "tag": "RESEARCH"
-          },
           {
             "ticker": "PACS",
             "side": "long",
@@ -3105,10 +2961,10 @@
             "tag": "RESEARCH"
           },
           {
-            "ticker": "ARQT",
+            "ticker": "CON",
             "side": "long",
             "open": null,
-            "px": 27.63,
+            "px": 35.36,
             "px_src": "session_export+elite_live_skipped",
             "low": null,
             "scoops": {
@@ -3141,10 +2997,10 @@
             "tag": "RESEARCH"
           },
           {
-            "ticker": "BLFS",
+            "ticker": "MD",
             "side": "long",
             "open": null,
-            "px": 39.15,
+            "px": 25.93,
             "px_src": "session_export+elite_live_skipped",
             "low": null,
             "scoops": {
@@ -3177,10 +3033,10 @@
             "tag": "RESEARCH"
           },
           {
-            "ticker": "ETON",
+            "ticker": "AMN",
             "side": "long",
             "open": null,
-            "px": 59.18,
+            "px": 34.26,
             "px_src": "session_export+elite_live_skipped",
             "low": null,
             "scoops": {
@@ -3213,10 +3069,10 @@
             "tag": "RESEARCH"
           },
           {
-            "ticker": "CRON",
+            "ticker": "ASTH",
             "side": "long",
             "open": null,
-            "px": 3.41,
+            "px": 35.13,
             "px_src": "session_export+elite_live_skipped",
             "low": null,
             "scoops": {

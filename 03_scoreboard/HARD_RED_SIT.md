@@ -32,7 +32,7 @@ Per-sleeve paper counterfactuals on looked names. Live sit stays default. KEEP b
 
 | Sleeve | Side | (A) short-only @ open | (B) dip-scoop X% |
 |---|---|---|---|
-| `flatten_robust` | long | — | SMMT miss; SYK miss; VEEV miss; CDNA miss; PACS miss; ARQT miss; BLFS miss; ETON miss; CRON miss |
+| `flatten_robust` | long | — | PACS miss; CON miss; MD miss; AMN miss; ASTH miss |
 | `union_h1` | long | — | ACRS miss; ITW miss; SMMT miss; NVTS miss; EPR miss; CXW miss; MX miss; CRS miss |
 | `union_h3` | long | — | ACRS miss; ITW miss; SMMT miss; NVTS miss; EPR miss; CXW miss; MX miss; CRS miss |
 | `union_h5` | long | — | ACRS miss; ITW miss; SMMT miss; NVTS miss; EPR miss; CXW miss; MX miss; CRS miss |
