@@ -53,6 +53,20 @@ jobs:
         run: pip install numpy pandas pyarrow
       - name: Fetch the base branch
         run: git fetch --no-tags origin main
+      - name: Pick the append-only base
+        env:
+          EVENT: ${{ github.event_name }}
+          BEFORE: ${{ github.event.before }}
+        run: |
+          if [ "$EVENT" = "push" ] && [ -n "$BEFORE" ] && [ "$BEFORE" != "0000000000000000000000000000000000000000" ] && git cat-file -e "$BEFORE^{commit}" 2>/dev/null; then
+            base="$BEFORE"
+          elif [ "$EVENT" = "push" ]; then
+            base="$(git rev-parse HEAD^)"
+          else
+            base="$(git merge-base origin/main HEAD)"
+          fi
+          echo "append-only base: $base"
+          echo "APPEND_BASE_REF=$base" >> "$GITHUB_ENV"
       - name: Sealed log, seed match, and prefix
         run: |
           PYTHONHASHSEED=0 python3 research/hot_n4_clean_v4/forward/test_append_only.py
