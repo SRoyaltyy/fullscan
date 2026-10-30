@@ -5,8 +5,8 @@ Is today good for each *kind* of stock? Labels come from `data/universe/`; this 
 ## Snapshot
 
 - **Risk state:** OFF (general predict down score -12.9, conf 0.65)
-- **Yields:** flat (llm_factor_fallback) | **Dollar:** soft (dxy) | **Oil:** rising | **VIX:** calm (ratio 0.96 via vix/vix3m) spot 18.56
-- **Fear & Greed:** n/a | **Yield/SPX 5d corr:** +0.12
+- **Yields:** rising (fred_dgs10) | **Dollar:** flat (dxy) | **Oil:** rising | **VIX:** spiking (ratio 0.98 via vix/vix3m) spot 21.04
+- **Fear & Greed:** n/a | **Yield/SPX 5d corr:** +0.64
 - **High-impact events:** 1 bullish vs 3 bearish
 
 ## Sectors
@@ -29,8 +29,8 @@ Is today good for each *kind* of stock? Labels come from `data/universe/`; this 
 
 | Label | Weather | Conf | Why |
 |---|---|---|---|
-| size:micro | 🌧️ hostile | medium | risk-off — small caps de-rate first; risk-off, dollar soft [general predict + factors] |
-| size:small | 🌧️ hostile | medium | risk-off — small caps de-rate first; risk-off, dollar soft [general predict + factors] |
+| size:micro | 🌧️ hostile | medium | risk-off — small caps de-rate first; risk-off, dollar flat [general predict + factors] |
+| size:small | 🌧️ hostile | medium | risk-off — small caps de-rate first; risk-off, dollar flat [general predict + factors] |
 | size:large | 🌤️ favorable | medium | risk-off — defensive/quality bid concentrates in large & mega [general predict] |
 | size:mega | 🌤️ favorable | medium | risk-off — defensive/quality bid concentrates in large & mega [general predict] |
 | size:mid | ⛅ neutral | low | no dedicated mid-cap signal in v1 |
@@ -39,7 +39,7 @@ Is today good for each *kind* of stock? Labels come from `data/universe/`; this 
 
 | Label | Weather | Conf | Why |
 |---|---|---|---|
-| beta:high | 🌧️ hostile | medium | risk-off — high beta is the exit door [channel1 + general] |
+| beta:high | 🌧️ hostile | high | VIX spiking — high beta is the exit door [channel1 + general] |
 | beta:low | 🌤️ favorable | medium | defensive ballast bid in stress [general + channel1] |
 | beta:mid | ⛅ neutral | low | beta-neutral zone |
 
@@ -64,15 +64,15 @@ Is today good for each *kind* of stock? Labels come from `data/universe/`; this 
 
 | Label | Weather | Conf | Why |
 |---|---|---|---|
-| style:growth | ⛅ neutral | low | yields flat/unknown |
-| style:value | ⛅ neutral | low | yields flat/unknown |
+| style:growth | 🌧️ hostile | medium | yields rising — long-duration growth de-rates [factor: Bond yields] |
+| style:value | 🌤️ favorable | medium | rising yields/reflation favors value & cyclicals [factor: Bond yields] |
 | style:blend | ⛅ neutral | low | — |
 
 ## Leverage
 
 | Label | Weather | Conf | Why |
 |---|---|---|---|
-| lev:high | 🌧️ hostile | medium | risk-off — leverage amplifies the downside [factors + general] |
+| lev:high | 🌧️ hostile | medium | yields rising — leverage amplifies the downside [factors + general] |
 | lev:low | 🌤️ favorable | low | balance-sheet strength preferred in stress |
 | lev:mid | ⛅ neutral | low | — |
 | lev:neg_equity | 🌧️ hostile | low | negative equity is distressed in any regime |

@@ -1,6 +1,6 @@
 {
  "date": "2026-10-30",
- "generated_at": "2026-10-30T07:03:05.950716-04:00",
+ "generated_at": "2026-10-30T13:25:47.308630-04:00",
  "stance_vocabulary": [
   "favorable",
   "neutral",
@@ -17,21 +17,23 @@
   "fed_score": -1.0,
   "dollar_oil_score": 0.5,
   "futures_score": -0.5,
-  "yields": "flat",
-  "yields_source": "llm_factor_fallback",
-  "dollar": "soft",
+  "yields": "rising",
+  "yields_source": "fred_dgs10",
+  "dgs10_delta_1d": 0.06,
+  "dgs10_current": 5.05,
+  "dollar": "flat",
   "dollar_source": "dxy",
-  "dxy_pct_1d": -0.38,
-  "vix_ratio": 0.958,
-  "vix_spot": 18.56,
-  "vix_delta_1d": 1.36,
+  "dxy_pct_1d": -0.11,
+  "vix_ratio": 0.98,
+  "vix_spot": 21.04,
+  "vix_delta_1d": 3.84,
   "vix_ratio_source": "vix/vix3m",
-  "vix": "calm",
-  "oil_pct_1d": 2.22,
+  "vix": "spiking",
+  "oil_pct_1d": 2.73,
   "oil": "rising",
   "fear_greed": null,
   "fear_greed_label": null,
-  "regime_corr": 0.12,
+  "regime_corr": 0.64,
   "sectors": {
    "Basic Materials": {
     "score": -4.97,
@@ -179,12 +181,12 @@
    "micro": {
     "stance": "hostile",
     "confidence": "medium",
-    "why": "risk-off — small caps de-rate first; risk-off, dollar soft [general predict + factors]"
+    "why": "risk-off — small caps de-rate first; risk-off, dollar flat [general predict + factors]"
    },
    "small": {
     "stance": "hostile",
     "confidence": "medium",
-    "why": "risk-off — small caps de-rate first; risk-off, dollar soft [general predict + factors]"
+    "why": "risk-off — small caps de-rate first; risk-off, dollar flat [general predict + factors]"
    },
    "large": {
     "stance": "favorable",
@@ -221,7 +223,7 @@
    "rut": {
     "stance": "hostile",
     "confidence": "medium",
-    "why": "risk-off — small caps de-rate first; risk-off, dollar soft [general predict + factors]"
+    "why": "risk-off — small caps de-rate first; risk-off, dollar flat [general predict + factors]"
    },
    "none": {
     "stance": "neutral",
@@ -244,8 +246,8 @@
   "beta": {
    "high": {
     "stance": "hostile",
-    "confidence": "medium",
-    "why": "risk-off — high beta is the exit door [channel1 + general]"
+    "confidence": "high",
+    "why": "VIX spiking — high beta is the exit door [channel1 + general]"
    },
    "low": {
     "stance": "favorable",
@@ -318,7 +320,7 @@
    "high": {
     "stance": "hostile",
     "confidence": "medium",
-    "why": "risk-off — leverage amplifies the downside [factors + general]"
+    "why": "yields rising — leverage amplifies the downside [factors + general]"
    },
    "low": {
     "stance": "favorable",
@@ -338,14 +340,14 @@
   },
   "style": {
    "growth": {
-    "stance": "neutral",
-    "confidence": "low",
-    "why": "yields flat/unknown"
+    "stance": "hostile",
+    "confidence": "medium",
+    "why": "yields rising — long-duration growth de-rates [factor: Bond yields]"
    },
    "value": {
-    "stance": "neutral",
-    "confidence": "low",
-    "why": "yields flat/unknown"
+    "stance": "favorable",
+    "confidence": "medium",
+    "why": "rising yields/reflation favors value & cyclicals [factor: Bond yields]"
    },
    "blend": {
     "stance": "neutral",
