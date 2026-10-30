@@ -5,8 +5,8 @@
   "run_id": "41026024183",
   "model": "deepseek",
   "started_at": "2026-10-30T04:53:53-04:00",
-  "updated_at": "2026-10-30T04:56:53-04:00",
-  "heartbeat_at": "2026-10-30T04:56:53-04:00",
+  "updated_at": "2026-10-30T04:57:36-04:00",
+  "heartbeat_at": "2026-10-30T04:57:36-04:00",
   "stages": [
     {
       "name": "prep",
@@ -109,10 +109,10 @@
     },
     {
       "name": "deploy",
-      "state": "pending",
-      "started_at": "",
+      "state": "running",
+      "started_at": "2026-10-30T04:57:36-04:00",
       "ended_at": "",
-      "heartbeat_at": "",
+      "heartbeat_at": "2026-10-30T04:57:36-04:00",
       "done": 0,
       "total": 1,
       "model": "deepseek",
