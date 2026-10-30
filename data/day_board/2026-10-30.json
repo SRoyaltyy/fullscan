@@ -1,6 +1,6 @@
 {
   "date": "2026-10-30",
-  "generated_at": "2026-10-30T16:53:36.259799-04:00",
+  "generated_at": "2026-10-30T18:01:36.172403-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -836,7 +836,7 @@
           "role": "required",
           "status": "OK",
           "reason": "horizons=5 names=183",
-          "size": 1438790,
+          "size": 1438788,
           "said": "1d BUY PRCH, GDYN, HITI, CON, ASTH, AMN, SGRY, CBRL \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE \u00b7 -0.5525",
           "bullets": []
         },
@@ -847,10 +847,10 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 71035,
+          "size": 70999,
           "said": "Stock book \u2014 2026-10-30",
           "bullets": [
-            "_Generated 2026-10-30T07:53:38.217693-04:00_",
+            "_Generated 2026-10-30T18:01:32.603694-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -914,7 +914,7 @@
           "role": "input",
           "status": "OK",
           "reason": "horizons=5 names=183",
-          "size": 1438790,
+          "size": 1438788,
           "said": "1d BUY PRCH, GDYN, HITI, CON, ASTH, AMN, SGRY, CBRL \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE \u00b7 -0.5525",
           "bullets": []
         },
@@ -4261,6 +4261,30 @@
       "commit_msg": "auto: land finviz_market_digest_close [2026-10-30]",
       "workflow": "Finviz homepage market digest",
       "run_id": "41122683561",
+      "manifest": "research/input_freeze/2026-10-30/manifest.json"
+    },
+    {
+      "path": "01_daily/2026-10-30_stock_book.md",
+      "at": "2026-10-30T18:02:09-04:00",
+      "commit_msg": "auto: strategy tickets 2026-10-30",
+      "workflow": "Publish strategy tickets",
+      "run_id": "41126820849",
+      "manifest": "research/input_freeze/2026-10-30/manifest.json"
+    },
+    {
+      "path": "data/stock_book/2026-10-30_input_health.json",
+      "at": "2026-10-30T18:02:09-04:00",
+      "commit_msg": "auto: strategy tickets 2026-10-30",
+      "workflow": "Publish strategy tickets",
+      "run_id": "41126820849",
+      "manifest": "research/input_freeze/2026-10-30/manifest.json"
+    },
+    {
+      "path": "data/stock_book/2026-10-30_stock_book.json",
+      "at": "2026-10-30T18:02:09-04:00",
+      "commit_msg": "auto: strategy tickets 2026-10-30",
+      "workflow": "Publish strategy tickets",
+      "run_id": "41126820849",
       "manifest": "research/input_freeze/2026-10-30/manifest.json"
     }
   ]
