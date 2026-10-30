@@ -1,18 +1,17 @@
 {
   "date": "2026-10-30",
-  "generated_at": "2026-10-30T06:14:52.370632-04:00",
+  "generated_at": "2026-10-30T06:15:26.792578-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
     "MISSING General predict MD `01_daily/general/2026-10-30_predict.md` \u2014 missing",
     "MISSING News actions JSON `01_daily/news/2026-10-30_actions.json` \u2014 missing",
-    "MISSING News judge MD `01_daily/news/2026-10-30_judge.md` \u2014 missing",
-    "MISSING AB checklist enriched `data/ab_checklist/2026-10-30_ab_checklist_enriched.csv` \u2014 missing"
+    "MISSING News judge MD `01_daily/news/2026-10-30_judge.md` \u2014 missing"
   ],
   "counts": {
-    "ok": 3,
+    "ok": 4,
     "partial": 3,
-    "fail": 2,
+    "fail": 1,
     "n": 8
   },
   "processes": [
@@ -537,11 +536,11 @@
       "key": "ab",
       "name": "AB checklist",
       "yaml": "ab_checklist.yml",
-      "status": "FAIL",
+      "status": "OK",
       "inputs_ready": true,
-      "n_req_ok": 0,
+      "n_req_ok": 1,
       "n_req": 1,
-      "n_opt_ok": 0,
+      "n_opt_ok": 1,
       "n_opt": 1,
       "files": [
         {
@@ -549,26 +548,32 @@
           "name": "AB checklist raw",
           "path": "data/ab_checklist/2026-10-30_ab_checklist.csv",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "rows=2629",
+          "size": 7558841,
+          "said": "27 rows",
+          "bullets": [
+            "WMG, AUPH, AME, ELV, SWKS, EPAM, ZM, FRSH"
+          ]
         },
         {
           "key": "ab_enriched",
           "name": "AB checklist enriched",
           "path": "data/ab_checklist/2026-10-30_ab_checklist_enriched.csv",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "rows=2629",
+          "size": 8349692,
+          "said": "25 rows",
+          "bullets": [
+            "TLYS, AME, CDNA, FIGS, TJX, A, ATRC, BP"
+          ]
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "25 rows",
+      "bullets": [
+        "TLYS, AME, CDNA, FIGS, TJX"
+      ]
     },
     {
       "key": "catalyst",
@@ -628,7 +633,7 @@
       "yaml": "stock_book_all.yml",
       "status": "PARTIAL",
       "inputs_ready": false,
-      "n_req_ok": 1,
+      "n_req_ok": 2,
       "n_req": 4,
       "n_opt_ok": 1,
       "n_opt": 4,
@@ -710,11 +715,13 @@
           "name": "AB checklist enriched",
           "path": "data/ab_checklist/2026-10-30_ab_checklist_enriched.csv",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "rows=2629",
+          "size": 8349692,
+          "said": "25 rows",
+          "bullets": [
+            "TLYS, AME, CDNA, FIGS, TJX, A, ATRC, BP"
+          ]
         },
         {
           "key": "join",
@@ -734,11 +741,13 @@
           "name": "Peer RS CSV",
           "path": "data/peers/2026-10-30_peer_rs.csv",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "rows=5096",
+          "size": 821534,
+          "said": "489 rows",
+          "bullets": [
+            "A, AA, AACG, AAL, AAME, AAMI, AAOI, AAON"
+          ]
         },
         {
           "key": "book_json",
@@ -2009,6 +2018,31 @@
         }
       ],
       "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-10-30\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+    },
+    {
+      "key": "ab",
+      "title": "AB checklist",
+      "date": "2026-10-30",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-30T06:15:25.635833-04:00",
+      "files": [
+        {
+          "path": "data/ab_checklist/2026-10-30_ab_checklist.csv",
+          "ok": true,
+          "reason": "",
+          "size": 7558841,
+          "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 WMG, AUPH, AME, ELV, SWKS"
+        },
+        {
+          "path": "data/ab_checklist/2026-10-30_ab_checklist_enriched.csv",
+          "ok": true,
+          "reason": "",
+          "size": 8349692,
+          "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 TLYS, AME, CDNA, FIGS, TJX"
+        }
+      ],
+      "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 WMG, AUPH, AME, ELV, SWKS \u00b7 2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 TLYS, AME, CDNA, FIGS, TJX"
     }
   ],
   "href": {

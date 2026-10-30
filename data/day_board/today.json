@@ -1,12 +1,12 @@
 {
   "date": "2026-10-30",
-  "generated_at": "2026-10-30T06:14:52.370632-04:00",
+  "generated_at": "2026-10-30T06:15:26.792578-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
-    "ok": 3,
+    "ok": 4,
     "partial": 3,
-    "fail": 2,
+    "fail": 1,
     "n": 8
   },
   "buy_1d": [],
@@ -15,59 +15,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "stock_book",
-      "title": "Stock book + green",
-      "date": "2026-10-30",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-30T05:59:13.240684-04:00",
-      "files": [
-        {
-          "path": "data/stock_book/2026-10-30_stock_book.json",
-          "ok": true,
-          "reason": "",
-          "size": 1474094,
-          "preview": "1d BUY HITI, CON, ASTH, AMN, SGRY, MD, PACS, BAND \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, INDI, TE"
-        },
-        {
-          "path": "data/stock_book/2026-10-30_green.json",
-          "ok": true,
-          "reason": "",
-          "size": 585,
-          "preview": "green 0 \u00b7 "
-        },
-        {
-          "path": "data/stock_book/2026-10-30_input_health.json",
-          "ok": true,
-          "reason": "",
-          "size": 2615,
-          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
-        },
-        {
-          "path": "data/stock_book/2026-10-30_suggestions.json",
-          "ok": true,
-          "reason": "",
-          "size": 12445,
-          "preview": "2026-10-30 BUY HITI, CON, ASTH, AMN, SGRY, MD, PACS, BAND \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, INDI, TE"
-        },
-        {
-          "path": "data/stock_book/latest_suggestions.json",
-          "ok": true,
-          "reason": "",
-          "size": 12445,
-          "preview": "2026-10-30 BUY HITI, CON, ASTH, AMN, SGRY, MD, PACS, BAND \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, INDI, TE"
-        },
-        {
-          "path": "01_daily/2026-10-30_stock_book.md",
-          "ok": true,
-          "reason": "",
-          "size": 85285,
-          "preview": "# Stock book \u2014 2026-10-30\n_Generated 2026-10-30T05:54:51.044164-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
-        }
-      ],
-      "preview": "1d BUY HITI, CON, ASTH, AMN, SGRY, MD, PACS, BAND \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, INDI, TE \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-10-30 BUY HITI, CON, ASTH, AMN, SGRY, MD, PACS, BAND \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, INDI, TE \u00b7 2026-10-30 BUY HITI, CON, ASTH, AMN, SGRY, MD, PACS, BAND \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, INDI, TE \u00b7 # Stock book \u2014 2026-10-30\n_Generated 2026-10-30T05:54:51.044164-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
-    },
     {
       "key": "live_boards",
       "title": "Live 1d BUY/SELL strip",
@@ -361,6 +308,31 @@
         }
       ],
       "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-10-30\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+    },
+    {
+      "key": "ab",
+      "title": "AB checklist",
+      "date": "2026-10-30",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-30T06:15:25.635833-04:00",
+      "files": [
+        {
+          "path": "data/ab_checklist/2026-10-30_ab_checklist.csv",
+          "ok": true,
+          "reason": "",
+          "size": 7558841,
+          "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 WMG, AUPH, AME, ELV, SWKS"
+        },
+        {
+          "path": "data/ab_checklist/2026-10-30_ab_checklist_enriched.csv",
+          "ok": true,
+          "reason": "",
+          "size": 8349692,
+          "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 TLYS, AME, CDNA, FIGS, TJX"
+        }
+      ],
+      "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 WMG, AUPH, AME, ELV, SWKS \u00b7 2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 TLYS, AME, CDNA, FIGS, TJX"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
