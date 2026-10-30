@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-29T20:15:31-04:00",
+  "updated_at": "2026-10-29T20:25:04-04:00",
   "runs": [
     {
       "date": "2026-10-22",
@@ -183,6 +183,12 @@
     },
     {
       "date": "2026-10-28",
+      "workflow": "postclose",
+      "file": "2026-10-28_postclose.json",
+      "updated_at": "2026-10-28T20:39:51-04:00"
+    },
+    {
+      "date": "2026-10-28",
       "workflow": "factor_mine",
       "file": "2026-10-28_factor_mine.json",
       "updated_at": "2026-10-28T21:04:33-04:00"
@@ -201,12 +207,6 @@
     },
     {
       "date": "2026-10-29",
-      "workflow": "factor_mine",
-      "file": "2026-10-29_factor_mine.json",
-      "updated_at": "2026-10-29T13:48:51-04:00"
-    },
-    {
-      "date": "2026-10-29",
       "workflow": "fm_preopen",
       "file": "2026-10-29_fm_preopen.json",
       "updated_at": "2026-10-29T13:56:11-04:00"
@@ -219,27 +219,27 @@
     },
     {
       "date": "2026-10-29",
+      "workflow": "homepage_digest",
+      "file": "2026-10-29_homepage_digest.json",
+      "updated_at": "2026-10-29T16:24:14-04:00"
+    },
+    {
+      "date": "2026-10-29",
+      "workflow": "postclose",
+      "file": "2026-10-29_postclose.json",
+      "updated_at": "2026-10-29T17:07:17-04:00"
+    },
+    {
+      "date": "2026-10-29",
       "workflow": "pipeline_health",
       "file": "2026-10-29_pipeline_health.json",
       "updated_at": "2026-10-29T17:32:10-04:00"
     },
     {
       "date": "2026-10-29",
-      "workflow": "homepage_digest",
-      "file": "2026-10-29_homepage_digest.json",
-      "updated_at": "2026-10-29T20:06:23-04:00"
-    },
-    {
-      "date": "2026-10-28",
-      "workflow": "postclose",
-      "file": "2026-10-28_postclose.json",
-      "updated_at": "2026-10-29T20:09:24-04:00"
-    },
-    {
-      "date": "2026-10-29",
-      "workflow": "postclose",
-      "file": "2026-10-29_postclose.json",
-      "updated_at": "2026-10-29T20:15:31-04:00"
+      "workflow": "factor_mine",
+      "file": "2026-10-29_factor_mine.json",
+      "updated_at": "2026-10-29T20:25:04-04:00"
     }
   ]
 }
