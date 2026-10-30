@@ -1,14 +1,14 @@
 # flatten_robust card — 2026-10-30
 
-_Generated 2026-10-30T10:33:53 — live `flatten_robust`._
+_Generated 2026-10-30T17:48:09 — live `flatten_robust`._
 
-**morning S missing; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**
+**S=-12.92; hard-red: no new buys; holds and due 1d exits stay**
 
-- Score **—** (—) · route **io**
-- Cash leftover **$118,332.69** (after 09:30 $118,332.69 · after 16:00 $118,332.69)
-- Prior close **$118,332.69** · 09:30 **$118,332.69** · overnight **$+0.00** · session **$+0.00** · 16:00 **$118,332.69**
+- Score **-12.92** (DOWN) · route **hold** · HARD-RED
+- Cash leftover **$122,354.26** (after 09:30 $122,354.26 · after 16:00 $122,354.26)
+- Prior close **$122,354.26** · 09:30 **$122,354.26** · overnight **$+0.00** · session **$+0.00** · 16:00 **$122,354.26**
 - Overnight lots **0** · priced mover BUYs **0** · prior book yes
-- Planned buy cost **$0.00** ≤ leftover after sells **$118,332.69**
+- Planned buy cost **$0.00** ≤ leftover after sells **$122,354.26**
 
 ## Overnight holds (into 09:30)
 
@@ -32,22 +32,22 @@ _Generated 2026-10-30T10:33:53 — live `flatten_robust`._
 
 | Clock | Ticker | Why |
 |---|---|---|
-| 16:00 ET | * | io 3d cannot settle |
+| 16:00 ET | PACS | hard-red: no new buys |
+| 16:00 ET | CON | hard-red: no new buys |
+| 16:00 ET | MD | hard-red: no new buys |
+| 16:00 ET | AMN | hard-red: no new buys |
+| 16:00 ET | ASTH | hard-red: no new buys |
 
 ## Would have bought — holdings disregarded
 
-Sized from marked equity **$118,332.69** as if the book were flat. `io 3d_size (holdings disregarded)`. Not live tickets.
+Sized from marked equity **$122,354.26** as if the book were flat. `io 3d_size (holdings disregarded)`. Not live tickets.
 
 | Clock | Ticker | Sleeve | Shares | Px | $ | Blocked live by |
 |---|---|---|---:|---:|---:|---|
-| 16:00 ET | SMMT | io_core | 811 | $16.20 | $13,138.20 | cash tied |
-| 16:00 ET | SYK | io_core | 42 | $311.75 | $13,093.50 | cash tied |
-| 16:00 ET | VEEV | io_core | 42 | $310.34 | $13,034.28 | cash tied |
-| 16:00 ET | CDNA | io_core | 183 | $71.52 | $13,088.16 | cash tied |
-| 16:00 ET | PACS | io_core | 264 | $49.68 | $13,115.52 | cash tied |
-| 16:00 ET | ARQT | io_core | 411 | $31.97 | $13,139.67 | cash tied |
-| 16:00 ET | BLFS | io_core | 0 | $0.00 | $0.00 | no price |
-| 16:00 ET | ETON | io_core | 244 | $53.67 | $13,095.48 | cash tied |
-| 16:00 ET | CRON | io_core | 3913 | $3.36 | $13,147.68 | cash tied |
+| 16:00 ET | PACS | io_core | 504 | $48.46 | $24,423.84 | hard-red |
+| 16:00 ET | CON | io_core | 600 | $40.74 | $24,444.00 | hard-red |
+| 16:00 ET | MD | io_core | 822 | $29.75 | $24,454.50 | hard-red |
+| 16:00 ET | AMN | io_core | 525 | $46.53 | $24,430.87 | hard-red |
+| 16:00 ET | ASTH | io_core | 679 | $36.03 | $24,464.37 | hard-red |
 
 Dashboard: https://sroyaltyy.github.io/fullscan/dashboard/sleeve-merge/
