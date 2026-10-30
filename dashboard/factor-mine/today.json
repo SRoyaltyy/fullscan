@@ -1,6 +1,6 @@
 {
   "date": "2026-10-30",
-  "generated_at": "2026-10-30T07:53:41.463259-04:00",
+  "generated_at": "2026-10-30T13:26:20.672648-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -11,82 +11,78 @@
   },
   "buy_1d": [
     {
-      "ticker": "PRCH",
-      "score": 0.6012300282358349
+      "ticker": "MQ",
+      "score": 0.6336299817765652
+    },
+    {
+      "ticker": "CNK",
+      "score": 0.6305795192802798
+    },
+    {
+      "ticker": "YEXT",
+      "score": 0.48482749786088997
     },
     {
       "ticker": "GDYN",
-      "score": 0.5210692406605829
+      "score": 0.5520788377173056
+    },
+    {
+      "ticker": "TDS",
+      "score": 0.43510560203275017
+    },
+    {
+      "ticker": "IOT",
+      "score": 0.21073586684966744
     },
     {
       "ticker": "HITI",
-      "score": 0.5271072413045478
+      "score": 0.47786930495786256
     },
     {
-      "ticker": "CON",
-      "score": 0.663586724933733
-    },
-    {
-      "ticker": "ASTH",
-      "score": 0.6319861506818658
-    },
-    {
-      "ticker": "AMN",
-      "score": 0.640327945792873
-    },
-    {
-      "ticker": "SGRY",
-      "score": 0.5082161106563792
-    },
-    {
-      "ticker": "CBRL",
-      "score": 0.7147261761979158
-    },
-    {
-      "ticker": "MD",
-      "score": 0.5979788141901266
+      "ticker": "VFF",
+      "score": 0.6370276596638982
     }
   ],
   "sell_1d": [
     {
       "ticker": "NEOV",
-      "score": -0.2655631553064647
+      "score": -0.26543706630678077
     },
     {
       "ticker": "OKLO",
-      "score": -0.27097691984932804
+      "score": -0.27668640455976146
     },
     {
       "ticker": "FCEL",
-      "score": -0.26411063816462926
-    },
-    {
-      "ticker": "NNDM",
-      "score": -0.21357094374182206
-    },
-    {
-      "ticker": "POWL",
-      "score": -0.02383773765263708
+      "score": -0.2675698000577638
     },
     {
       "ticker": "EOSE",
-      "score": -0.35656798343359425
+      "score": -0.35908652118714685
     },
     {
       "ticker": "INDI",
-      "score": -0.15356530882326402
+      "score": -0.15693324952786808
     },
     {
       "ticker": "TE",
-      "score": -0.19219621268840714
+      "score": -0.19291000994283192
+    },
+    {
+      "ticker": "NNDM",
+      "score": -0.15955388560076683
     },
     {
       "ticker": "SKYX",
-      "score": -0.37458115905953204
+      "score": -0.3790459949149013
     },
     {
       "ticker": "AMSC",
-      "score": -0.10963010277547997
+      "score": -0.12496690899252777
+    },
+    {
+      "ticker": "LUNR",
+      "score": -0.32449242746766377
     }
   ],
   "flatten": {
@@ -1952,6 +1948,67 @@
         }
       ],
       "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-10-30T07:28:06.871177-04:00\nraw=9580 unique_events=5 tickers=83"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-10-30",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-30T13:25:47.443916-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-10-30_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 10545,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-10-30_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5994,
+          "preview": "# Weather report \u2014 2026-10-30\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-10-30\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-10-30",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-30T13:25:58.227371-04:00",
+      "files": [
+        {
+          "path": "data/join/2026-10-30_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2248517,
+          "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 BPOP, EG, CB, TRV, ALL"
+        }
+      ],
+      "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 BPOP, EG, CB, TRV, ALL"
+    },
+    {
+      "key": "peer_rs",
+      "title": "Peer RS",
+      "date": "2026-10-30",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-30T13:26:05.245630-04:00",
+      "files": [
+        {
+          "path": "data/peers/2026-10-30_peer_rs.csv",
+          "ok": true,
+          "reason": "",
+          "size": 821534,
+          "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+        }
+      ],
+      "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
     }
   ],
   "source": "publish_live_boards"

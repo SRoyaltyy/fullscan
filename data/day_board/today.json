@@ -1,6 +1,6 @@
 {
   "date": "2026-10-30",
-  "generated_at": "2026-10-30T13:26:47.140490-04:00",
+  "generated_at": "2026-10-30T13:26:54.693762-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -107,122 +107,6 @@
   },
   "sectors": {},
   "lands": [
-    {
-      "key": "live_boards",
-      "title": "Live 1d BUY/SELL strip",
-      "date": "2026-10-30",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-30T06:31:49.633652-04:00",
-      "files": [
-        {
-          "path": "data/day_board/today.json",
-          "ok": true,
-          "reason": "",
-          "size": 22982,
-          "preview": "2026-10-30 BUY HITI, CON, ASTH, AMN, SGRY, MD, PACS, BAND \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, INDI, TE"
-        },
-        {
-          "path": "data/day_board/latest.json",
-          "ok": true,
-          "reason": "",
-          "size": 1116,
-          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
-        },
-        {
-          "path": "data/day_board/2026-10-30.json",
-          "ok": true,
-          "reason": "",
-          "size": 142553,
-          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href"
-        },
-        {
-          "path": "data/day_board/2026-10-30_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 108736,
-          "preview": "2026-10-30 BUY HITI, CON, ASTH, AMN, SGRY, MD, PACS, BAND \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, INDI, TE"
-        },
-        {
-          "path": "data/day_board/strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 576597,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "data/day_board/2026-10-30_strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 576597,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "data/factor_mine/morning_look/2026-10-30.json",
-          "ok": true,
-          "reason": "",
-          "size": 144377,
-          "preview": "keys: asof_commit, asof_committed_at, cutoff_et, date, n, read_from, rows"
-        },
-        {
-          "path": "data/day_board/today_strategies.json",
-          "ok": true,
-          "reason": "",
-          "size": 763714,
-          "preview": "2026-10-30 BUY HITI, CON, ASTH, AMN, SGRY, MD, PACS, BAND \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, INDI, TE"
-        },
-        {
-          "path": "data/factor_mine/strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 576597,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "dashboard/factor-mine/today.json",
-          "ok": true,
-          "reason": "",
-          "size": 108736,
-          "preview": "2026-10-30 BUY HITI, CON, ASTH, AMN, SGRY, MD, PACS, BAND \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, INDI, TE"
-        },
-        {
-          "path": "dashboard/factor-mine/strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 576597,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "dashboard/factor-mine/today_strategies.json",
-          "ok": true,
-          "reason": "",
-          "size": 576597,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "dashboard/today_strategies.json",
-          "ok": true,
-          "reason": "",
-          "size": 763714,
-          "preview": "2026-10-30 BUY HITI, CON, ASTH, AMN, SGRY, MD, PACS, BAND \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, INDI, TE"
-        },
-        {
-          "path": "data/day_board/hold_live_px.json",
-          "ok": true,
-          "reason": "",
-          "size": 1662,
-          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
-        },
-        {
-          "path": "dashboard/factor-mine/hold_live_px.json",
-          "ok": true,
-          "reason": "",
-          "size": 1662,
-          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
-        }
-      ],
-      "preview": "2026-10-30 BUY HITI, CON, ASTH, AMN, SGRY, MD, PACS, BAND \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, INDI, TE \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href \u00b7 2026-10-30 BUY HITI, CON, ASTH, AMN, SGRY, MD, PACS, BAND \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, INDI, TE \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: asof_commit, asof_committed_at, cutoff_et, date, n, read_from, rows \u00b7 2026-10-30 BUY HITI, CON, ASTH, AMN, SGRY, MD, PACS, BAND \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, INDI, TE \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-10-30 BUY HITI, CON, ASTH, AMN, SGRY, MD, PACS, BAND \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, INDI, TE \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_f"
-    },
     {
       "key": "paper",
       "title": "Paper dashboard",
@@ -439,6 +323,122 @@
         }
       ],
       "preview": "1d BUY MQ, CNK, YEXT, GDYN, TDS, IOT, HITI, VFF \u00b7 SELL NEOV, OKLO, FCEL, EOSE, INDI, TE, NNDM, SKYX \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-10-30 BUY MQ, CNK, YEXT, GDYN, TDS, IOT, HITI, VFF \u00b7 SELL NEOV, OKLO, FCEL, EOSE, INDI, TE, NNDM, SKYX \u00b7 2026-10-30 BUY MQ, CNK, YEXT, GDYN, TDS, IOT, HITI, VFF \u00b7 SELL NEOV, OKLO, FCEL, EOSE, INDI, TE, NNDM, SKYX \u00b7 # Stock book \u2014 2026-10-30\n_Generated 2026-10-30T13:26:17.073346-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+    },
+    {
+      "key": "live_boards",
+      "title": "Live 1d BUY/SELL strip",
+      "date": "2026-10-30",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-30T13:26:53.383153-04:00",
+      "files": [
+        {
+          "path": "data/day_board/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 24674,
+          "preview": "2026-10-30 BUY MQ, CNK, YEXT, GDYN, TDS, IOT, HITI, VFF \u00b7 SELL NEOV, OKLO, FCEL, EOSE, INDI, TE, NNDM, SKYX"
+        },
+        {
+          "path": "data/day_board/latest.json",
+          "ok": true,
+          "reason": "",
+          "size": 1115,
+          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
+        },
+        {
+          "path": "data/day_board/2026-10-30.json",
+          "ok": true,
+          "reason": "",
+          "size": 172535,
+          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href"
+        },
+        {
+          "path": "data/day_board/2026-10-30_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 131713,
+          "preview": "2026-10-30 BUY MQ, CNK, YEXT, GDYN, TDS, IOT, HITI, VFF \u00b7 SELL NEOV, OKLO, FCEL, EOSE, INDI, TE, NNDM, SKYX"
+        },
+        {
+          "path": "data/day_board/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 1775402,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/2026-10-30_strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 1775402,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/factor_mine/morning_look/2026-10-30.json",
+          "ok": true,
+          "reason": "",
+          "size": 144377,
+          "preview": "keys: asof_commit, asof_committed_at, cutoff_et, date, n, read_from, rows"
+        },
+        {
+          "path": "data/day_board/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 1935639,
+          "preview": "2026-10-30 BUY PRCH, GDYN, HITI, CON, ASTH, AMN, SGRY, CBRL \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, INDI, TE"
+        },
+        {
+          "path": "data/factor_mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 1775402,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 131713,
+          "preview": "2026-10-30 BUY MQ, CNK, YEXT, GDYN, TDS, IOT, HITI, VFF \u00b7 SELL NEOV, OKLO, FCEL, EOSE, INDI, TE, NNDM, SKYX"
+        },
+        {
+          "path": "dashboard/factor-mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 1775402,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 1775402,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 1935639,
+          "preview": "2026-10-30 BUY PRCH, GDYN, HITI, CON, ASTH, AMN, SGRY, CBRL \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, INDI, TE"
+        },
+        {
+          "path": "data/day_board/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 1696,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        },
+        {
+          "path": "dashboard/factor-mine/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 1696,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        }
+      ],
+      "preview": "2026-10-30 BUY MQ, CNK, YEXT, GDYN, TDS, IOT, HITI, VFF \u00b7 SELL NEOV, OKLO, FCEL, EOSE, INDI, TE, NNDM, SKYX \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href \u00b7 2026-10-30 BUY MQ, CNK, YEXT, GDYN, TDS, IOT, HITI, VFF \u00b7 SELL NEOV, OKLO, FCEL, EOSE, INDI, TE, NNDM, SKYX \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: asof_commit, asof_committed_at, cutoff_et, date, n, read_from, rows \u00b7 2026-10-30 BUY PRCH, GDYN, HITI, CON, ASTH, AMN, SGRY, CBRL \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, INDI, TE \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-10-30 BUY MQ, CNK, YEXT, GDYN, TDS, IOT, HITI, VFF \u00b7 SELL NEOV, OKLO, FCEL, EOSE, INDI, TE, NNDM, SKYX \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, "
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
