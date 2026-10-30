@@ -5,8 +5,8 @@
   "run_id": "41026024183",
   "model": "deepseek",
   "started_at": "2026-10-30T04:53:53-04:00",
-  "updated_at": "2026-10-30T04:54:57-04:00",
-  "heartbeat_at": "2026-10-30T04:54:57-04:00",
+  "updated_at": "2026-10-30T04:55:27-04:00",
+  "heartbeat_at": "2026-10-30T04:55:27-04:00",
   "stages": [
     {
       "name": "prep",
@@ -21,11 +21,11 @@
     },
     {
       "name": "news",
-      "state": "running",
+      "state": "ok",
       "started_at": "2026-10-30T04:54:57-04:00",
-      "ended_at": "",
-      "heartbeat_at": "2026-10-30T04:54:57-04:00",
-      "done": 0,
+      "ended_at": "2026-10-30T04:55:27-04:00",
+      "heartbeat_at": "2026-10-30T04:55:27-04:00",
+      "done": 4,
       "total": 4,
       "model": "deepseek",
       "error": ""
