@@ -1,191 +1,164 @@
 [
   {
-    "n": 7893,
-    "title": "DCPD-202600657 - Remarks at a National Hispanic Heritage Month Celebration",
-    "url": "https://www.govinfo.gov/app/details/DCPD-202600657",
-    "published_at": "2026-10-30T21:16:00+00:00",
-    "official_issuer": "Compilation of Presidential Documents",
-    "document_type": "presidential_document",
-    "document_stage": "presidential_document_published",
+    "n": 7924,
+    "title": "H.R. 10950 (IH) - Data Center Oversight Act",
+    "url": "https://www.govinfo.gov/app/details/BILLS-119hr10950ih",
+    "published_at": "2026-10-31T09:47:01+00:00",
+    "official_issuer": "Congressional Bills",
+    "document_type": "bill",
+    "document_stage": "legislative_document_published",
     "source_ids": [
-      "us-govinfo-dcpd"
+      "us-govinfo-bills"
     ]
   },
   {
-    "n": 7894,
-    "title": "DCPD-202600659 - Notice-Continuation of the National Emergency With Respect to the Situation in and in Relation to Syria",
-    "url": "https://www.govinfo.gov/app/details/DCPD-202600659",
-    "published_at": "2026-10-30T21:16:00+00:00",
-    "official_issuer": "Compilation of Presidential Documents",
-    "document_type": "presidential_document",
-    "document_stage": "presidential_document_published",
+    "n": 7925,
+    "title": "H.R. 10922 (IH) - Fraud Accountability and Mandatory Sentencing Act",
+    "url": "https://www.govinfo.gov/app/details/BILLS-119hr10922ih",
+    "published_at": "2026-10-31T09:47:01+00:00",
+    "official_issuer": "Congressional Bills",
+    "document_type": "bill",
+    "document_stage": "legislative_document_published",
     "source_ids": [
-      "us-govinfo-dcpd"
+      "us-govinfo-bills"
     ]
   },
   {
-    "n": 7895,
-    "title": "DCPD-202600660 - Presidential Determination on the Revocation of Presidential Determinations Related to Lebanon",
-    "url": "https://www.govinfo.gov/app/details/DCPD-202600660",
-    "published_at": "2026-10-30T21:16:00+00:00",
-    "official_issuer": "Compilation of Presidential Documents",
-    "document_type": "presidential_document",
-    "document_stage": "presidential_document_published",
+    "n": 7926,
+    "title": "H.R. 10919 (IH) - Safety Net Provider Drug Pricing Protection Act",
+    "url": "https://www.govinfo.gov/app/details/BILLS-119hr10919ih",
+    "published_at": "2026-10-31T09:47:01+00:00",
+    "official_issuer": "Congressional Bills",
+    "document_type": "bill",
+    "document_stage": "legislative_document_published",
     "source_ids": [
-      "us-govinfo-dcpd"
+      "us-govinfo-bills"
     ]
   },
   {
-    "n": 7896,
-    "title": "SEC Issues Exemptive Relief from Treasury Clearing Requirements for Certain Inter-Affiliate and Non-U.S. Repo Transactions",
-    "url": "https://www.sec.gov/newsroom/press-releases/2026-111-sec-issues-exemptive-relief-treasury-clearing-requirements-certain-inter-affiliate-non-us-repo",
-    "published_at": "2026-10-30T19:30:00+00:00",
-    "official_issuer": "Securities and Exchange Commission",
-    "document_type": "official_announcement",
+    "n": 7927,
+    "title": "H.R. 10926 (IH) - Election Worker and Polling Place Protection Act",
+    "url": "https://www.govinfo.gov/app/details/BILLS-119hr10926ih",
+    "published_at": "2026-10-31T09:47:01+00:00",
+    "official_issuer": "Congressional Bills",
+    "document_type": "bill",
+    "document_stage": "legislative_document_published",
+    "source_ids": [
+      "us-govinfo-bills"
+    ]
+  },
+  {
+    "n": 7928,
+    "title": "H.R. 10930 (IH) - Childhood Offenders Rehabilitation and Safety Act of 2026",
+    "url": "https://www.govinfo.gov/app/details/BILLS-119hr10930ih",
+    "published_at": "2026-10-31T09:47:01+00:00",
+    "official_issuer": "Congressional Bills",
+    "document_type": "bill",
+    "document_stage": "legislative_document_published",
+    "source_ids": [
+      "us-govinfo-bills"
+    ]
+  },
+  {
+    "n": 7929,
+    "title": "H.R. 10931 (IH) - Library Construction and Modernization Act of 2026",
+    "url": "https://www.govinfo.gov/app/details/BILLS-119hr10931ih",
+    "published_at": "2026-10-31T09:47:01+00:00",
+    "official_issuer": "Congressional Bills",
+    "document_type": "bill",
+    "document_stage": "legislative_document_published",
+    "source_ids": [
+      "us-govinfo-bills"
+    ]
+  },
+  {
+    "n": 7930,
+    "title": "H.R. 10933 (IH) - EMS Supporting Personnel, Operations, Upgrades, Resources, and Training Act of 2026",
+    "url": "https://www.govinfo.gov/app/details/BILLS-119hr10933ih",
+    "published_at": "2026-10-31T09:47:01+00:00",
+    "official_issuer": "Congressional Bills",
+    "document_type": "bill",
+    "document_stage": "legislative_document_published",
+    "source_ids": [
+      "us-govinfo-bills"
+    ]
+  },
+  {
+    "n": 7931,
+    "title": "H.R. 10918 (IH) - Natural Gas Dominance Act",
+    "url": "https://www.govinfo.gov/app/details/BILLS-119hr10918ih",
+    "published_at": "2026-10-31T09:47:01+00:00",
+    "official_issuer": "Congressional Bills",
+    "document_type": "bill",
+    "document_stage": "legislative_document_published",
+    "source_ids": [
+      "us-govinfo-bills"
+    ]
+  },
+  {
+    "n": 7932,
+    "title": "H.R. 10925 (IH) - Countering Online Trafficking Act",
+    "url": "https://www.govinfo.gov/app/details/BILLS-119hr10925ih",
+    "published_at": "2026-10-31T09:47:02+00:00",
+    "official_issuer": "Congressional Bills",
+    "document_type": "bill",
+    "document_stage": "legislative_document_published",
+    "source_ids": [
+      "us-govinfo-bills"
+    ]
+  },
+  {
+    "n": 7933,
+    "title": "H.R. 10928 (IH) - Farmer Recovery Opportunity and Support for Temperatures Relief Act",
+    "url": "https://www.govinfo.gov/app/details/BILLS-119hr10928ih",
+    "published_at": "2026-10-31T09:47:02+00:00",
+    "official_issuer": "Congressional Bills",
+    "document_type": "bill",
+    "document_stage": "legislative_document_published",
+    "source_ids": [
+      "us-govinfo-bills"
+    ]
+  },
+  {
+    "n": 7934,
+    "title": "H.R. 10929 (IH) - Protecting American Hemp Farmers Act",
+    "url": "https://www.govinfo.gov/app/details/BILLS-119hr10929ih",
+    "published_at": "2026-10-31T09:47:02+00:00",
+    "official_issuer": "Congressional Bills",
+    "document_type": "bill",
+    "document_stage": "legislative_document_published",
+    "source_ids": [
+      "us-govinfo-bills"
+    ]
+  },
+  {
+    "n": 7935,
+    "title": "H.R. 10921 (IH) - Breast Cancer Patient Equity Act",
+    "url": "https://www.govinfo.gov/app/details/BILLS-119hr10921ih",
+    "published_at": "2026-10-31T09:47:02+00:00",
+    "official_issuer": "Congressional Bills",
+    "document_type": "bill",
+    "document_stage": "legislative_document_published",
+    "source_ids": [
+      "us-govinfo-bills"
+    ]
+  },
+  {
+    "n": 7936,
+    "title": "H. Rept. 119-856",
+    "url": "https://www.govinfo.gov/app/details/CRPT-119hrpt856",
+    "published_at": "2026-10-31T10:28:00+00:00",
+    "official_issuer": "Congressional Reports",
+    "document_type": "committee_report",
     "document_stage": "requires_semantic_review",
     "source_ids": [
-      "us-sec-8940dd7737"
+      "us-govinfo-crpt"
     ]
   },
   {
-    "n": 7897,
-    "title": "Cary Edward Urich",
-    "url": "https://www.sec.gov/enforcement-litigation/litigation-releases/lr-26681",
-    "published_at": "2026-10-30T20:59:50+00:00",
-    "official_issuer": "Securities and Exchange Commission",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "us-sec-2476f14c28"
-    ]
-  },
-  {
-    "n": 7898,
-    "title": "Bran Crudden and Transparent Equity Entrepreneurs, LLC",
-    "url": "https://www.sec.gov/enforcement-litigation/litigation-releases/lr-26680",
-    "published_at": "2026-10-30T20:42:20+00:00",
-    "official_issuer": "Securities and Exchange Commission",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "us-sec-2476f14c28"
-    ]
-  },
-  {
-    "n": 7899,
-    "title": "Florida Pharmacist Sentenced to Over 7 Years in Prison for Massive Illegal Oxycodone Distribution Conspiracy",
-    "url": "https://www.justice.gov/opa/pr/florida-pharmacist-sentenced-over-7-years-prison-massive-illegal-oxycodone-distribution",
-    "published_at": "2026-10-30T12:00:00+00:00",
-    "official_issuer": "Department of Justice",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "us-doj-b3d27e1dc3",
-      "us-doj-e05071794d"
-    ]
-  },
-  {
-    "n": 7900,
-    "title": "DOJ’s Fraud Division and the United States Attorney’s Office for the District Minnesota Uncover Nearly $30 Million in Benefits Fraud in Enforcement Surge",
-    "url": "https://www.justice.gov/usao-mn/pr/dojs-fraud-division-and-united-states-attorneys-office-district-minnesota-uncover-nearly",
-    "published_at": "2026-10-30T12:00:00+00:00",
-    "official_issuer": "Department of Justice",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "us-doj-b3d27e1dc3"
-    ]
-  },
-  {
-    "n": 7901,
-    "title": "Former Turkey Leg Hut owner sentenced for role in arson-for-hire scheme",
-    "url": "https://www.justice.gov/usao-sdtx/pr/houston-businessman-has-been-ordered-federal-prison-conspiring-commit-arson-commercial",
-    "published_at": "2026-10-30T12:00:00+00:00",
-    "official_issuer": "Department of Justice",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "us-doj-b3d27e1dc3"
-    ]
-  },
-  {
-    "n": 7902,
-    "title": "Forty-two Alleged Gang Members and Associates Charged with Trafficking Fentanyl and Methamphetamine Following Homeland Security Task Force Investigation",
-    "url": "https://www.justice.gov/usao-sdca/pr/forty-two-alleged-gang-members-and-associates-charged-trafficking-fentanyl-and",
-    "published_at": "2026-10-30T12:00:00+00:00",
-    "official_issuer": "Department of Justice",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "us-doj-b3d27e1dc3"
-    ]
-  },
-  {
-    "n": 7903,
-    "title": "Gun-Toting Felon Who Ran from Officers Sentenced to Federal Prison",
-    "url": "https://www.justice.gov/usao-ndia/pr/gun-toting-felon-who-ran-officers-sentenced-federal-prison",
-    "published_at": "2026-10-30T12:00:00+00:00",
-    "official_issuer": "Department of Justice",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "us-doj-b3d27e1dc3"
-    ]
-  },
-  {
-    "n": 7904,
-    "title": "Botox Fraud Doctor Sentenced to 15 Years in Prison for $45M Medicare Scheme",
-    "url": "https://www.justice.gov/opa/pr/botox-fraud-doctor-sentenced-15-years-prison-45m-medicare-scheme",
-    "published_at": "2026-10-30T12:00:00+00:00",
-    "official_issuer": "Department of Justice",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "us-doj-b3d27e1dc3",
-      "us-doj-e05071794d"
-    ]
-  },
-  {
-    "n": 7905,
-    "title": "District of Arizona Responds to Allegations of Non-Citizen Voter Registration",
-    "url": "https://www.justice.gov/usao-az/pr/district-arizona-responds-allegations-non-citizen-voter-registration",
-    "published_at": "2026-10-30T12:00:00+00:00",
-    "official_issuer": "Department of Justice",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "us-doj-b3d27e1dc3"
-    ]
-  },
-  {
-    "n": 7906,
-    "title": "Stamford Man Sentenced to Additional Prison Time for Distributing Crack Prior to Reporting to Prison",
-    "url": "https://www.justice.gov/usao-ct/pr/stamford-man-sentenced-additional-prison-time-distributing-crack-prior-reporting-prison",
-    "published_at": "2026-10-30T12:00:00+00:00",
-    "official_issuer": "Department of Justice",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "us-doj-b3d27e1dc3"
-    ]
-  },
-  {
-    "n": 7907,
-    "title": "Justice Department’s Statement on Its Investigation of Vistra’s Acquisition of Cogentrix",
-    "url": "https://www.justice.gov/opa/pr/justice-departments-statement-its-investigation-vistras-acquisition-cogentrix",
-    "published_at": "2026-10-30T12:00:00+00:00",
-    "official_issuer": "Department of Justice",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "us-doj-b3d27e1dc3",
-      "us-doj-e05071794d"
-    ]
-  },
-  {
-    "n": 7908,
-    "title": "Fifth Alien Charged for Illegally Voting in Nevada",
-    "url": "https://www.justice.gov/usao-nv/pr/fifth-alien-charged-illegally-voting-nevada",
+    "n": 7937,
+    "title": "Leader of South Georgia Check‑Theft and Forgery Scheme Sentenced to Prison",
+    "url": "https://www.justice.gov/usao-mdga/pr/leader-south-georgia-check-theft-and-forgery-scheme-sentenced-prison",
     "published_at": "2026-10-30T12:00:00+00:00",
     "official_issuer": "Department of Justice",
     "document_type": "official_announcement",
@@ -195,9 +168,9 @@
     ]
   },
   {
-    "n": 7909,
-    "title": "Homeland Security Task Force: Two Connecticut Men Found with 21 Kilos of Cocaine Sentenced to 10 Years in Federal Prison",
-    "url": "https://www.justice.gov/usao-ct/pr/homeland-security-task-force-two-connecticut-men-found-21-kilos-cocaine-sentenced-10-0",
+    "n": 7938,
+    "title": "Three Indicted for Violations of the Federal Controlled Substances Act Resulting in Death",
+    "url": "https://www.justice.gov/usao-edla/pr/three-indicted-violations-federal-controlled-substances-act-resulting-death",
     "published_at": "2026-10-30T12:00:00+00:00",
     "official_issuer": "Department of Justice",
     "document_type": "official_announcement",
@@ -207,9 +180,9 @@
     ]
   },
   {
-    "n": 7910,
-    "title": "Byrd Gang Members Sentenced to Life Imprisonment for 2017 Double Homicide Committed Outside Edna Karr High School Basketball Game",
-    "url": "https://www.justice.gov/usao-edla/pr/byrd-gang-members-sentenced-life-imprisonment-2017-double-homicide-committed-outside",
+    "n": 7939,
+    "title": "South Florida Selected as First Pilot Location for National Initiative to Combat Federal Nutrition Assistance Fraud",
+    "url": "https://www.justice.gov/usao-sdfl/pr/south-florida-selected-first-pilot-location-national-initiative-combat-federal-0",
     "published_at": "2026-10-30T12:00:00+00:00",
     "official_issuer": "Department of Justice",
     "document_type": "official_announcement",
@@ -219,151 +192,87 @@
     ]
   },
   {
-    "n": 7911,
-    "title": "Justice Department Announces Final Rule Allowing Federal Firearms Licensees to Voluntarily Use NICS for Employee Background Checks",
-    "url": "https://www.justice.gov/opa/pr/justice-department-announces-final-rule-allowing-federal-firearms-licensees-voluntarily-use",
+    "n": 7940,
+    "title": "Federal Law Enforcement Initiative Targets Sex Offender Registration Violations and Child Exploitation",
+    "url": "https://www.justice.gov/usao-wdmo/pr/federal-law-enforcement-initiative-targets-sex-offender-registration-violations-and",
     "published_at": "2026-10-30T12:00:00+00:00",
     "official_issuer": "Department of Justice",
     "document_type": "official_announcement",
     "document_stage": "requires_semantic_review",
     "source_ids": [
-      "us-doj-b3d27e1dc3",
-      "us-doj-e05071794d"
+      "us-doj-b3d27e1dc3"
     ]
   },
   {
-    "n": 7912,
-    "title": "Two Men Sentenced for Acting as Agents of the People’s Republic of China",
-    "url": "https://www.justice.gov/opa/pr/two-men-sentenced-acting-agents-peoples-republic-china",
+    "n": 7941,
+    "title": "Kansas man pleads guilty to illegal gun possession",
+    "url": "https://www.justice.gov/usao-ks/pr/kansas-man-pleads-guilty-illegal-gun-possession",
     "published_at": "2026-10-30T12:00:00+00:00",
     "official_issuer": "Department of Justice",
     "document_type": "official_announcement",
     "document_stage": "requires_semantic_review",
     "source_ids": [
-      "us-doj-b3d27e1dc3",
-      "us-doj-e05071794d"
+      "us-doj-b3d27e1dc3"
     ]
   },
   {
-    "n": 7913,
-    "title": "Indian National Pleads Guilty to $227M Medicare Fraud",
-    "url": "https://www.justice.gov/opa/pr/indian-national-pleads-guilty-227m-medicare-fraud",
+    "n": 7942,
+    "title": "U.S. Attorney Aaron Reitz issues statement regarding Harris County DA indicting ICE agent",
+    "url": "https://www.justice.gov/usao-sdtx/pr/us-attorney-aaron-reitz-issues-statement-regarding-harris-county-da-indicting-ice",
     "published_at": "2026-10-30T12:00:00+00:00",
     "official_issuer": "Department of Justice",
     "document_type": "official_announcement",
     "document_stage": "requires_semantic_review",
     "source_ids": [
-      "us-doj-b3d27e1dc3",
-      "us-doj-e05071794d"
+      "us-doj-b3d27e1dc3"
     ]
   },
   {
-    "n": 7914,
-    "title": "Israeli National Extradited to Face Charges for Stealing Nearly $3M in Virtual Currency Heist",
-    "url": "https://www.justice.gov/opa/pr/israeli-national-extradited-face-charges-stealing-nearly-3m-virtual-currency-heist",
+    "n": 7943,
+    "title": "Dominican National Pleads Guilty to Receiving Over $24,000 in SNAP Benefits",
+    "url": "https://www.justice.gov/usao-ma/pr/dominican-national-pleads-guilty-receiving-over-24000-snap-benefits",
     "published_at": "2026-10-30T12:00:00+00:00",
-    "official_issuer": "Department of Justice — RSS Feed",
+    "official_issuer": "Department of Justice",
     "document_type": "official_announcement",
     "document_stage": "requires_semantic_review",
     "source_ids": [
-      "us-doj-e05071794d"
+      "us-doj-b3d27e1dc3"
     ]
   },
   {
-    "n": 7915,
-    "title": "California Man Pleads Guilty to Attempting to Provide Material Support to the Islamic State of Iraq and al-Sham",
-    "url": "https://www.justice.gov/opa/pr/california-man-pleads-guilty-attempting-provide-material-support-islamic-state-iraq-and-al",
+    "n": 7944,
+    "title": "Federal Jury Convicts Georgia Felon for Illegal Possession of a Firearm",
+    "url": "https://www.justice.gov/usao-ndfl/pr/federal-jury-convicts-georgia-felon-illegal-possession-firearm",
     "published_at": "2026-10-30T12:00:00+00:00",
-    "official_issuer": "Department of Justice — RSS Feed",
+    "official_issuer": "Department of Justice",
     "document_type": "official_announcement",
     "document_stage": "requires_semantic_review",
     "source_ids": [
-      "us-doj-e05071794d"
+      "us-doj-b3d27e1dc3"
     ]
   },
   {
-    "n": 7916,
-    "title": "DOJ’s Fraud Division and the U.S. Attorney’s Office for the District Minnesota Uncover Nearly $30M in Benefits Fraud in Enforcement Surge",
-    "url": "https://www.justice.gov/opa/pr/dojs-fraud-division-and-us-attorneys-office-district-minnesota-uncover-voter-fraud-and",
+    "n": 7945,
+    "title": "Augusta Woman Pleads Guilty to Social Security Fraud",
+    "url": "https://www.justice.gov/usao-me/pr/augusta-woman-pleads-guilty-social-security-fraud",
     "published_at": "2026-10-30T12:00:00+00:00",
-    "official_issuer": "Department of Justice — RSS Feed",
+    "official_issuer": "Department of Justice",
     "document_type": "official_announcement",
     "document_stage": "requires_semantic_review",
     "source_ids": [
-      "us-doj-e05071794d"
+      "us-doj-b3d27e1dc3"
     ]
   },
   {
-    "n": 7917,
-    "title": "FDA Approves First Plasmid DNA-based Immunotherapy for Adults with Recurrent Respiratory Papillomatosis",
-    "url": "http://www.fda.gov/news-events/press-announcements/fda-approves-first-plasmid-dna-based-immunotherapy-adults-recurrent-respiratory-papillomatosis",
-    "published_at": "2026-10-30T20:32:08+00:00",
-    "official_issuer": "Food and Drug Administration — Press Releases",
+    "n": 7946,
+    "title": "EU-Canada Summit 2026: Leaders mark a historic moment in bilateral relations",
+    "url": "https://ec.europa.eu/commission/presscorner/detail/en/ac_26_2318",
+    "published_at": "2026-10-31T09:45:02+00:00",
+    "official_issuer": "European Commission press and decisions",
     "document_type": "official_announcement",
     "document_stage": "requires_semantic_review",
     "source_ids": [
-      "us-fda-00e9311ef2",
-      "us-fda-03f7703006"
-    ]
-  },
-  {
-    "n": 7918,
-    "title": "Digital Health Technologies for Drug Development: Demonstration Projects",
-    "url": "http://www.fda.gov/science-research/science-and-research-special-topics/digital-health-technologies-drug-development-demonstration-projects",
-    "published_at": "2026-10-30T20:02:30+00:00",
-    "official_issuer": "Food and Drug Administration — What's New: Drugs",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "us-fda-5696b24295"
-    ]
-  },
-  {
-    "n": 7919,
-    "title": "Digital Health Technologies (DHTs) for Drug Development",
-    "url": "http://www.fda.gov/science-research/science-and-research-special-topics/digital-health-technologies-dhts-drug-development",
-    "published_at": "2026-10-30T20:02:06+00:00",
-    "official_issuer": "Food and Drug Administration — What's New: Drugs",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "us-fda-5696b24295"
-    ]
-  },
-  {
-    "n": 7920,
-    "title": "Generic Drug User Fee Amendments",
-    "url": "http://www.fda.gov/industry/fda-user-fee-programs/generic-drug-user-fee-amendments",
-    "published_at": "2026-10-30T18:49:46+00:00",
-    "official_issuer": "Food and Drug Administration — What's New: Drugs",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "us-fda-5696b24295"
-    ]
-  },
-  {
-    "n": 7921,
-    "title": "Approved Cellular and Gene Therapy Products",
-    "url": "http://www.fda.gov/vaccines-blood-biologics/cellular-gene-therapy-products/approved-cellular-and-gene-therapy-products",
-    "published_at": "2026-10-30T23:55:49+00:00",
-    "official_issuer": "Food and Drug Administration — What's New: Vaccines, Blood and Biologics",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "us-fda-03f7703006"
-    ]
-  },
-  {
-    "n": 7922,
-    "title": "CMS Finalizes Rule to Help More Organs Reach Patients and Strengthen Accountability for Organ Procurement Organizations",
-    "url": "https://www.hhs.gov/press-room/cms-finalizes-rule-organ-procurement-organizations-transplant-accountability.html",
-    "published_at": "2026-10-30T20:56:00+00:00",
-    "official_issuer": "Health and Human Services",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "us-hhs-6f995a5754"
+      "eu-commission-07d4f58ccf"
     ]
   }
 ]

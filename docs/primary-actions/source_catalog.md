@@ -1,6 +1,6 @@
 # Primary-origin source catalog
 
-Verified 2026-10-24T16:39:29.833670+00:00. 1987 institution records; 121 enabled publication channels out of 365 checked candidates.
+Verified 2026-10-31T17:46:18.945180+00:00. 1989 institution records; 119 enabled publication channels out of 365 checked candidates.
 
 Institution records include historical/closed bodies and shared portals. This is a maintained coverage catalog, not an exhaustive worldwide directory. Disabled/blocked channels remain visible below.
 
@@ -9,13 +9,13 @@ Institution records include historical/closed bodies and shared portals. This is
 | Federal Register issuing agencies | US | rules_notices_and_presidential_documents | [federal_register](https://www.federalregister.gov/api/v1/documents.json) | True | ok |
 | Hong Kong Monetary Authority official press releases | HK | monetary_and_supervisory | [hkma_press](https://api.hkma.gov.hk/public/press-releases) | True | ok |
 | GOV.UK decision | UK | typed_government_documents | [govuk_search](https://www.gov.uk/api/search.json) | True | ok |
-| GOV.UK regulation | UK | typed_government_documents | [govuk_search](https://www.gov.uk/api/search.json) | True | ok |
+| GOV.UK regulation | UK | typed_government_documents | [govuk_search](https://www.gov.uk/api/search.json) | True | valid_empty |
 | GOV.UK statutory instrument | UK | typed_government_documents | [govuk_search](https://www.gov.uk/api/search.json) | True | valid_empty |
 | GOV.UK consultation outcome | UK | typed_government_documents | [govuk_search](https://www.gov.uk/api/search.json) | True | ok |
 | GOV.UK government response | UK | typed_government_documents | [govuk_search](https://www.gov.uk/api/search.json) | True | valid_empty |
-| GOV.UK medical safety alert | UK | typed_government_documents | [govuk_search](https://www.gov.uk/api/search.json) | True | valid_empty |
+| GOV.UK medical safety alert | UK | typed_government_documents | [govuk_search](https://www.gov.uk/api/search.json) | True | ok |
 | GOV.UK drug safety update | UK | typed_government_documents | [govuk_search](https://www.gov.uk/api/search.json) | True | valid_empty |
-| GOV.UK product safety alert report recall | UK | typed_government_documents | [govuk_search](https://www.gov.uk/api/search.json) | True | ok |
+| GOV.UK product safety alert report recall | UK | typed_government_documents | [govuk_search](https://www.gov.uk/api/search.json) | True | valid_empty |
 | GOV.UK international treaty | UK | typed_government_documents | [govuk_search](https://www.gov.uk/api/search.json) | True | valid_empty |
 | Congressional Bills | US | legislative_and_presidential_documents | [rss](https://www.govinfo.gov/rss/bills.xml) | True | ok |
 | Congressional Bills (Enrolled) | US | legislative_and_presidential_documents | [rss](https://www.govinfo.gov/rss/bills-enr.xml) | True | ok |
@@ -24,11 +24,11 @@ Institution records include historical/closed bodies and shared portals. This is
 | Congressional Hearings | US | legislative_and_presidential_documents | [rss](https://www.govinfo.gov/rss/chrg.xml) | False | ok; congressional_record_floor_proceedings |
 | Congressional Reports | US | legislative_and_presidential_documents | [rss](https://www.govinfo.gov/rss/crpt.xml) | True | ok |
 | White House presidential actions | US | executive_instruments | [rss](https://www.whitehouse.gov/presidential-actions/feed/) | True | ok |
-| Congress.gov legislative status | US | legislative_procedure | [rss](https://www.congress.gov/rss/presented-to-president.xml) | True | valid_empty |
+| Congress.gov legislative status | US | legislative_procedure | [rss](https://www.congress.gov/rss/presented-to-president.xml) | True | ok |
 | Supreme Court opinions and orders | US | judicial_decisions | [html_index](https://www.supremecourt.gov/opinions/slipopinion/26) | True | ok |
 | Securities and Exchange Commission | US | enforcement_and_market_rules | [rss](https://www.sec.gov/news/pressreleases.rss) | True | ok |
 | Securities and Exchange Commission | US | enforcement_and_market_rules | [rss](https://www.sec.gov/enforcement-litigation/litigation-releases/rss) | True | ok |
-| Securities and Exchange Commission | US | enforcement_and_market_rules | [rss](https://www.sec.gov/enforcement-litigation/administrative-proceedings/rss) | True | ok |
+| Securities and Exchange Commission | US | enforcement_and_market_rules | [rss](https://www.sec.gov/enforcement-litigation/administrative-proceedings/rss) | False | invalid_feed_or_network_error |
 | Federal Trade Commission | US | competition_and_enforcement | [rss](https://www.ftc.gov/news-events/news/press-releases/rss) | False | invalid_feed_or_network_error |
 | Federal Trade Commission — Press Releases | US | competition_and_enforcement | [rss](https://www.ftc.gov/feeds/press-release.xml) | True | ok |
 | Federal Trade Commission — Competition Press Releases | US | competition_and_enforcement | [rss](https://www.ftc.gov/feeds/press-release-competition.xml) | True | ok |
@@ -38,7 +38,7 @@ Institution records include historical/closed bodies and shared portals. This is
 | Federal Trade Commission — Business Blog | US | competition_and_enforcement | [rss](https://www.ftc.gov/feeds/blog-business.xml) | False | ok; reference data, research, speeches or commentary |
 | Federal Trade Commission — Competition Matters Blog | US | competition_and_enforcement | [rss](https://www.ftc.gov/feeds/blog-competition-matters.xml) | False | ok; reference data, research, speeches or commentary |
 | Federal Trade Commission — Data Spotlight | US | competition_and_enforcement | [rss](https://www.ftc.gov/feeds/data-spotlight.xml) | True | ok |
-| Federal Trade Commission — Inspector General Releases and Reports | US | competition_and_enforcement | [rss](https://www.ftc.gov/feeds/oig-reports-press-releases.xml) | True | valid_empty |
+| Federal Trade Commission — Inspector General Releases and Reports | US | competition_and_enforcement | [rss](https://www.ftc.gov/feeds/oig-reports-press-releases.xml) | False | blocked |
 | Department of Justice | US | judicial_and_enforcement | [rss](https://www.justice.gov/news/rss) | True | ok |
 | Department of Justice — RSS Feed | US | judicial_and_enforcement | [rss](https://www.justice.gov/news/rss?m=1) | True | ok |
 | Treasury Office of Foreign Assets Control | US | sanctions_and_access | [html_index](https://ofac.treasury.gov/recent-actions) | True | ok |
@@ -91,8 +91,8 @@ Institution records include historical/closed bodies and shared portals. This is
 | Federal Reserve Board — Senior Loan Officer Opinion Survey on Bank Lending Practices | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/sloos.xml) | True | ok |
 | Federal Reserve Board — Survey of Terms of Business Lending (E.2) | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/e2.xml) | False | ok; Fed research, speeches/testimony or reference data; policy releases remain enabled |
 | Federal Deposit Insurance Corporation | US | financial_enforcement | [html_index](https://www.fdic.gov/news/press-releases) | True | ok |
-| Office of the Comptroller of the Currency | US | financial_enforcement | [rss](https://www.occ.gov/rss/occ_news.xml) | True | ok |
-| Office of the Comptroller of the Currency | US | financial_enforcement | [rss](https://www.occ.gov/rss/index-rss.html) | False | invalid_feed_or_network_error |
+| Office of the Comptroller of the Currency | US | financial_enforcement | [rss](https://www.occ.gov/rss/occ_news.xml) | False | invalid_feed_or_network_error |
+| Office of the Comptroller of the Currency | US | financial_enforcement | [rss](https://www2.occ.gov/rss/index-rss.html) | False | invalid_feed_or_network_error |
 | Consumer Financial Protection Bureau | US | financial_enforcement | [rss](https://www.consumerfinance.gov/about-us/newsroom/feed/) | True | ok |
 | Financial Crimes Enforcement Network | US | sanctions_and_enforcement | [html_index](https://www.fincen.gov/news/press-releases) | True | ok |
 | Commodity Futures Trading Commission | US | financial_enforcement | [rss](https://www.cftc.gov/RSS/RSSGP/rssgp.xml) | True | ok |
@@ -113,19 +113,19 @@ Institution records include historical/closed bodies and shared portals. This is
 | Food and Drug Administration — What's New: Vaccines, Blood and Biologics | US | product_permissions_and_safety | [rss](https://www.fda.gov/about-fda/contact-fda/stay-informed/rss-feeds/biologics/rss.xml) | True | ok |
 | Consumer Product Safety Commission | US | product_safety | [rss](https://www.cpsc.gov/Newsroom/CPSC-RSS-Feed/Recalls-RSS) | True | ok |
 | Consumer Product Safety Commission | US | product_safety | [rss](https://www.cpsc.gov/Newsroom/CPSC-RSS-Feed/News-RSS) | True | ok |
-| USDA Food Safety and Inspection Service — News & Events | US | product_safety | [rss](https://www.fsis.usda.gov/fsis-content/rss/news-release) | True | ok |
-| USDA Food Safety and Inspection Service — Recalls | US | product_safety | [rss](https://www.fsis.usda.gov/fsis-content/rss/recalls) | False | invalid_feed_or_network_error |
-| USDA Food Safety and Inspection Service — FSIS Directives | US | product_safety | [rss](https://www.fsis.usda.gov/fsis-content/rss/directives) | False | ok; FSIS internal directives; recalls and news remain enabled |
-| USDA Food Safety and Inspection Service — FSIS Notices | US | product_safety | [rss](https://www.fsis.usda.gov/fsis-content/rss/notices) | False | ok; FSIS internal directives; recalls and news remain enabled |
+| USDA Food Safety and Inspection Service — News & Events | US | product_safety | [rss](https://www.fsis.usda.gov/fsis-content/rss/news-release) | False | blocked |
+| USDA Food Safety and Inspection Service — Recalls | US | product_safety | [rss](https://www.fsis.usda.gov/fsis-content/rss/recalls) | False | blocked |
+| USDA Food Safety and Inspection Service — FSIS Directives | US | product_safety | [rss](https://www.fsis.usda.gov/fsis-content/rss/directives) | False | blocked; FSIS internal directives; recalls and news remain enabled |
+| USDA Food Safety and Inspection Service — FSIS Notices | US | product_safety | [rss](https://www.fsis.usda.gov/fsis-content/rss/notices) | False | blocked; FSIS internal directives; recalls and news remain enabled |
 | Health and Human Services | US | health_administration | [rss](https://www.hhs.gov/rss/news.xml) | True | ok |
 | Environmental Protection Agency | US | environmental_rules_and_enforcement | [rss](https://www.epa.gov/rss.xml) | True | valid_empty |
-| Federal Communications Commission | US | telecom_rules_and_licences | [rss](https://www.fcc.gov/feed) | False | invalid_feed_or_network_error |
-| Federal Communications Commission — Wireline Competition Bureau - Industry Analysis Reports | US | telecom_rules_and_licences | [rss](https://www.fcc.gov/bureaus/wcb/iatd/reports-rss-feed.xml) | False | ok; FCC licence, callsign or admin feed; enforcement and rulemaking remain enabled |
+| Federal Communications Commission | US | telecom_rules_and_licences | [rss](https://www.fcc.gov/feed) | False | blocked |
+| Federal Communications Commission — Wireline Competition Bureau - Industry Analysis Reports | US | telecom_rules_and_licences | [rss](https://www.fcc.gov/bureaus/wcb/iatd/reports-rss-feed.xml) | False | blocked; FCC licence, callsign or admin feed; enforcement and rulemaking remain enabled |
 | Federal Communications Commission — Federal Communications Commission Record | US | telecom_rules_and_licences | [rss](https://www.govinfo.gov/rss/gpo-fcc.xml) | True | ok |
-| Federal Communications Commission — Blog | US | telecom_rules_and_licences | [rss](https://www.fcc.gov/blog/feed/) | False | blocked; reference data, research, speeches or commentary |
-| Federal Communications Commission — Events | US | telecom_rules_and_licences | [rss](https://www.fcc.gov/events/feed/) | False | ok; FCC licence, callsign or admin feed; enforcement and rulemaking remain enabled |
-| Federal Communications Commission — Guides | US | telecom_rules_and_licences | [rss](https://www.fcc.gov/guides/feed/) | False | ok; FCC licence, callsign or admin feed; enforcement and rulemaking remain enabled |
-| Federal Communications Commission — FCC Recent Releases (Combined) | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss) | False | ok; FCC licence, callsign or admin feed; enforcement and rulemaking remain enabled |
+| Federal Communications Commission — Blog | US | telecom_rules_and_licences | [rss](https://www.fcc.gov/blog/feed/) | False | ok; reference data, research, speeches or commentary |
+| Federal Communications Commission — Events | US | telecom_rules_and_licences | [rss](https://www.fcc.gov/events/feed/) | False | blocked; FCC licence, callsign or admin feed; enforcement and rulemaking remain enabled |
+| Federal Communications Commission — Guides | US | telecom_rules_and_licences | [rss](https://www.fcc.gov/guides/feed/) | False | blocked; FCC licence, callsign or admin feed; enforcement and rulemaking remain enabled |
+| Federal Communications Commission — FCC Recent Releases (Combined) | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss) | False | invalid_feed_or_network_error |
 | Federal Communications Commission — Commissioner's Statements | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/docTypes/Statement) | False | ok; FCC licence, callsign or admin feed; enforcement and rulemaking remain enabled |
 | Federal Communications Commission — Commissioner's Speeches | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/docTypes/Speech) | False | ok; FCC licence, callsign or admin feed; enforcement and rulemaking remain enabled |
 | Federal Communications Commission — Commissioner's Testimonies | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/docTypes/Testimony) | False | ok; FCC licence, callsign or admin feed; enforcement and rulemaking remain enabled |
@@ -161,7 +161,7 @@ Institution records include historical/closed bodies and shared portals. This is
 | Federal Communications Commission — Office of Communications Business Opportunities | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/bureaus/OCBO) | False | ok; FCC licence, callsign or admin feed; enforcement and rulemaking remain enabled |
 | Federal Communications Commission — Office of Economics and Analytics | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/bureaus/OEA) | False | ok; FCC licence, callsign or admin feed; enforcement and rulemaking remain enabled |
 | Federal Communications Commission — Office of Economics and Analytics - Auctions | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/bureaus/AU) | False | ok; FCC licence, callsign or admin feed; enforcement and rulemaking remain enabled |
-| Federal Communications Commission — Office of Engineering & Technology | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/bureaus/OET) | False | ok; FCC licence, callsign or admin feed; enforcement and rulemaking remain enabled |
+| Federal Communications Commission — Office of Engineering & Technology | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/bureaus/OET) | False | invalid_feed_or_network_error |
 | Federal Communications Commission — Office of General Counsel | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/bureaus/OGC) | False | ok; FCC licence, callsign or admin feed; enforcement and rulemaking remain enabled |
 | Federal Communications Commission — Office of Inspector General | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/bureaus/OIG) | False | ok; FCC licence, callsign or admin feed; enforcement and rulemaking remain enabled |
 | Federal Communications Commission — Office of International Affairs | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/bureaus/OIA) | False | ok; FCC licence, callsign or admin feed; enforcement and rulemaking remain enabled |
@@ -180,7 +180,7 @@ Institution records include historical/closed bodies and shared portals. This is
 | National Labor Relations Board — https://www.nlrb.gov/rss/rssWeeklySummaries.xml | US | labour_decisions | [rss](https://www.nlrb.gov/rss/rssWeeklySummaries.xml) | True | ok |
 | National Labor Relations Board — https://www.nlrb.gov/rss/rssAnnouncements.xml | US | labour_decisions | [rss](https://www.nlrb.gov/rss/rssAnnouncements.xml) | False | ok; NLRB procedural announcements; decisions remain enabled |
 | Department of the Interior | US | permits_and_resources | [rss](https://www.doi.gov/feeds/content/36980/rss.xml) | False | valid_empty; agency_output_not_us_market_actionable |
-| Department of Transportation | US | transport_permissions | [rss](https://www.transportation.gov/rss.xml) | False | blocked |
+| Department of Transportation | US | transport_permissions | [rss](https://www.transportation.gov/rss.xml) | True | ok |
 | Department of State | US | diplomatic_engagements_and_sanctions | [rss](https://www.state.gov/press-releases/feed/) | True | valid_empty |
 | Department of State — United States Department of State » Feed | US | diplomatic_engagements_and_sanctions | [rss](https://www.state.gov/feed/) | False | valid_empty; State Department catch-all or comments feed; press releases remain enabled |
 | Department of State — United States Department of State » Comments Feed | US | diplomatic_engagements_and_sanctions | [rss](https://www.state.gov/comments/feed/) | False | valid_empty; State Department catch-all or comments feed; press releases remain enabled |
@@ -264,7 +264,7 @@ Institution records include historical/closed bodies and shared portals. This is
 | European Central Bank — Thai baht (THB) | EU | monetary_operations | [rss](https://www.ecb.europa.eu/rss/fxref-thb.html) | False | ok; ECB reference data or research; press releases remain enabled |
 | European Central Bank — South African rand (ZAR) | EU | monetary_operations | [rss](https://www.ecb.europa.eu/rss/fxref-zar.html) | False | ok; ECB reference data or research; press releases remain enabled |
 | European Central Bank | EU | monetary_operations | [rss](https://www.ecb.europa.eu/rss) | False | invalid_feed_or_network_error |
-| European Securities and Markets Authority | EU | market_rules_and_enforcement | [rss](https://www.esma.europa.eu/rss.xml) | False | invalid_feed_or_network_error |
+| European Securities and Markets Authority | EU | market_rules_and_enforcement | [rss](https://www.esma.europa.eu/rss.xml) | True | ok |
 | European Banking Authority | EU | financial_supervision | [rss](https://www.eba.europa.eu/news-press/news/rss.xml) | True | ok |
 | European Medicines Agency | EU | product_permissions_and_safety | [rss](https://www.ema.europa.eu/en/whats-new.xml) | False | ok; agency_output_not_us_market_actionable |
 | UK legislation | UK | legal_instruments | [rss](https://www.legislation.gov.uk/new/data.feed) | False | ok; agency_output_not_us_market_actionable |
@@ -338,7 +338,7 @@ Institution records include historical/closed bodies and shared portals. This is
 | Reserve Bank of India — Publications | IN | monetary_and_supervisory | [rss](https://rbi.org.in/Publication_rss.xml) | False | ok; RBI admin or speech feed; policy outputs remain enabled |
 | Securities and Exchange Board of India — https://www.sebi.gov.in/sebirss.xml | IN | financial_enforcement | [rss](https://www.sebi.gov.in/sebirss.xml) | False | ok; agency_output_not_us_market_actionable |
 | State Council of China policies | CN | executive_instruments | [html_index](https://english.www.gov.cn/policies/latestreleases/) | True | ok |
-| Ministry of Commerce of China announcements and orders | CN | trade_and_export_controls | [html_index](https://english.mofcom.gov.cn/Policies/AnnouncementsOrders/index.html) | False | invalid_feed_or_network_error |
+| Ministry of Commerce of China announcements and orders | CN | trade_and_export_controls | [html_index](https://english.mofcom.gov.cn/Policies/AnnouncementsOrders/index.html) | False | selector_empty |
 | Bank of Japan | JP | monetary_operations | [rss](https://www.boj.or.jp/en/rss/whatsnew.xml) | True | ok |
 | Japan Ministry of Economy Trade and Industry | JP | trade_and_industry_policy | [html_index](https://www.meti.go.jp/english/press/) | True | ok |
 | Japan Fair Trade Commission (official-site news mirror) | JP | competition_and_enforcement | [google_news_rss](https://news.google.com/rss/search?q=site%3Ajftc.go.jp+when%3A14d&hl=en-US&gl=US&ceid=US:en) | True | ok |
@@ -365,7 +365,7 @@ Institution records include historical/closed bodies and shared portals. This is
 | Deutsche Bundesbank — RSS | DE | monetary_and_supervisory | [rss](https://www.bundesbank.de/en/homepage/rss) | False | invalid_feed_or_network_error |
 | World Trade Organization disputes and decisions | INT | trade_and_dispute_decisions | [rss](https://www.wto.org/library/rss/latest_news_e.xml) | True | ok |
 | World Trade Organization disputes and decisions | INT | trade_and_dispute_decisions | [rss](https://www.wto.org/library/rss/podcasts_e.xml) | False | ok; reference data, research, speeches or commentary |
-| Bank for International Settlements — View feed | INT | supervisory_standards | [rss](https://www.bis.org/doclist/all_pressrels.rss) | True | ok |
+| Bank for International Settlements — View feed | INT | supervisory_standards | [rss](https://www.bis.org/doclist/all_pressrels.rss) | True | valid_empty |
 | Bank for International Settlements — View feed | INT | supervisory_standards | [rss](https://www.bis.org/doclist/bis_fsi_publs.rss) | False | ok; BIS vacancies or research publications |
 | Bank for International Settlements — View feed | INT | supervisory_standards | [rss](https://www.bis.org/doclist/vacancies.rss) | False | ok; BIS vacancies or research publications |
 | Bank for International Settlements — View feed | INT | supervisory_standards | [rss](https://www.bis.org/doclist/mgmtspeeches.rss) | True | ok |
@@ -1226,6 +1226,7 @@ Institution records include historical/closed bodies and shared portals. This is
 | Equitable Life Inquiry | UK | closed | [source](https://www.gov.uk/government/organisations/equitable-life-inquiry) |
 | Estyn | UK | exempt | [source](https://www.gov.uk/government/organisations/estyn) |
 | Ethics and Integrity Commission | UK | exempt | [source](https://www.gov.uk/government/organisations/ethics-and-integrity-commission) |
+| Euston Delivery Company | UK | joining | [source](https://www.gov.uk/government/organisations/euston-delivery-company) |
 | Evaluation Task Force | UK | live | [source](https://www.gov.uk/government/organisations/evaluation-task-force) |
 | Examination team on child care procedures and practice in North Wales | UK | closed | [source](https://www.gov.uk/government/organisations/examination-team-on-child-care-procedures-and-practice-in-north-wales) |
 | Exchequer and Audit Department | UK | closed | [source](https://www.gov.uk/government/organisations/exchequer-and-audit-department) |
@@ -1467,7 +1468,7 @@ Institution records include historical/closed bodies and shared portals. This is
 | Intelligence Services Commissioner | UK | closed | [source](https://www.gov.uk/government/organisations/intelligence-services-commissioner) |
 | Interception of Communications Commissioner | UK | closed | [source](https://www.gov.uk/government/organisations/interception-of-communications-commissioner) |
 | Internal Audit Profession | UK | live | [source](https://www.gov.uk/government/organisations/civil-service-internal-audit-profession) |
-| Intertrade UK | UK | joining | [source](https://www.gov.uk/government/organisations/intertrade-uk) |
+| Intertrade UK | UK | live | [source](https://www.gov.uk/government/organisations/intertrade-uk) |
 | Invest Northern Ireland | UK | exempt | [source](https://www.gov.uk/government/organisations/invest-northern-ireland) |
 | Investigatory Powers Commissioner's Office | UK | exempt | [source](https://www.gov.uk/government/organisations/investigatory-powers-commissioners-office) |
 | Investigatory Powers Tribunal | UK | exempt | [source](https://www.gov.uk/government/organisations/investigatory-powers-tribunal) |
@@ -2000,7 +2001,8 @@ Institution records include historical/closed bodies and shared portals. This is
 | The Pensions Ombudsman | UK | exempt | [source](https://www.gov.uk/government/organisations/pensions-ombudsman) |
 | The Pensions Regulator | UK | exempt | [source](https://www.gov.uk/government/organisations/the-pensions-regulator) |
 | The Property, Trusts and Probate List | UK | live | [source](https://www.gov.uk/government/organisations/the-property-trusts-and-probate-list) |
-| The Queen Elizabeth Memorial Committee | UK | live | [source](https://www.gov.uk/government/organisations/the-queen-elizabeth-memorial-committee) |
+| The Queen Elizabeth Memorial Committee | UK | closed | [source](https://www.gov.uk/government/organisations/the-queen-elizabeth-memorial-committee) |
+| The Queen Elizabeth Memorial Programme | UK | live | [source](https://www.gov.uk/government/organisations/the-queen-elizabeth-memorial-programme) |
 | The Revenue List | UK | live | [source](https://www.gov.uk/government/organisations/the-revenue-list) |
 | The Reviewing Committee on the Export of Works of Art and Objects of Cultural Interest | UK | exempt | [source](https://www.gov.uk/government/organisations/the-reviewing-committee-on-the-export-of-works-of-art-and-objects-of-cultural-interest) |
 | The Scottish Government | UK | exempt | [source](https://www.gov.uk/government/organisations/the-scottish-government) |
@@ -2272,7 +2274,7 @@ Institution records include historical/closed bodies and shared portals. This is
 | National Labor Relations Board | US | official_publication_page_checked | [source](https://www.nlrb.gov/resources/rss-feeds) |
 | Department of Energy | US | official_publication_page_checked | [source](https://www.energy.gov/newsroom) |
 | Department of the Interior | US | official_publication_page_checked | [source](https://www.doi.gov/news) |
-| Department of Transportation | US | page_unavailable; verification pending | [source](https://www.transportation.gov/briefing-room) |
+| Department of Transportation | US | official_publication_page_checked | [source](https://www.transportation.gov/briefing-room) |
 | Federal Aviation Administration | US | official_publication_page_checked | [source](https://www.faa.gov/newsroom) |
 | National Highway Traffic Safety Administration | US | official_publication_page_checked | [source](https://www.nhtsa.gov/press-releases) |
 | Department of State | US | official_publication_page_checked | [source](https://www.state.gov/press-releases/) |
@@ -2333,7 +2335,7 @@ Institution records include historical/closed bodies and shared portals. This is
 | Gazette of India | IN | official_publication_page_checked | [source](https://egazette.gov.in/) |
 | Competition Commission of India | IN | official_publication_page_checked | [source](https://www.cci.gov.in/) |
 | State Council of China policies | CN | official_publication_page_checked | [source](https://english.www.gov.cn/policies/) |
-| Ministry of Commerce of China announcements and orders | CN | page_unavailable; verification pending | [source](https://english.mofcom.gov.cn/Policies/AnnouncementsOrders/index.html) |
+| Ministry of Commerce of China announcements and orders | CN | official_publication_page_checked | [source](https://english.mofcom.gov.cn/Policies/AnnouncementsOrders/index.html) |
 | People's Bank of China | CN | official_publication_page_checked | [source](http://www.pbc.gov.cn/en/) |
 | Bank of Japan | JP | official_publication_page_checked | [source](https://www.boj.or.jp/en/) |
 | Japan Ministry of Economy Trade and Industry | JP | official_publication_page_checked | [source](https://www.meti.go.jp/english/press/) |

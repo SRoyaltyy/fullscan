@@ -1,155 +1,323 @@
 [
   {
-    "title": "DCPD-202600657 - Remarks at a National Hispanic Heritage Month Celebration",
-    "url": "https://www.govinfo.gov/app/details/DCPD-202600657",
-    "native_id": "DCPD-202600657",
-    "published_at": "2026-10-30T21:16:00+00:00",
-    "published_raw": "Fri, 30 Oct 2026 21:16:00 +0000",
-    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "title": "H.R. 10950 (IH) - Data Center Oversight Act",
+    "url": "https://www.govinfo.gov/app/details/BILLS-119hr10950ih",
+    "native_id": "BILLS-119hr10950ih",
+    "published_at": "2026-10-31T09:47:01+00:00",
+    "published_raw": "Sat, 31 Oct 2026 09:47:01 +0000",
+    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
     "source_metadata": {
-      "document_type": "presidential_document",
-      "document_stage": "presidential_document_published",
+      "document_type": "bill",
+      "document_stage": "legislative_document_published",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Compilation of Presidential Documents",
+      "issuer": "Congressional Bills",
       "jurisdiction": "US",
       "family": "legislative_and_presidential_documents"
     },
-    "primary_source_id": "us-govinfo-dcpd",
-    "n": 7893,
-    "first_seen": "2026-10-31T07:20:30.145427+00:00",
-    "last_seen": "2026-10-31T07:20:30.145427+00:00",
+    "primary_source_id": "us-govinfo-bills",
+    "n": 7924,
+    "first_seen": "2026-10-31T17:48:38.297024+00:00",
+    "last_seen": "2026-10-31T17:48:38.297024+00:00",
     "source_ids": [
-      "us-govinfo-dcpd"
+      "us-govinfo-bills"
     ]
   },
   {
-    "title": "DCPD-202600659 - Notice-Continuation of the National Emergency With Respect to the Situation in and in Relation to Syria",
-    "url": "https://www.govinfo.gov/app/details/DCPD-202600659",
-    "native_id": "DCPD-202600659",
-    "published_at": "2026-10-30T21:16:00+00:00",
-    "published_raw": "Fri, 30 Oct 2026 21:16:00 +0000",
-    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "title": "H.R. 10922 (IH) - Fraud Accountability and Mandatory Sentencing Act",
+    "url": "https://www.govinfo.gov/app/details/BILLS-119hr10922ih",
+    "native_id": "BILLS-119hr10922ih",
+    "published_at": "2026-10-31T09:47:01+00:00",
+    "published_raw": "Sat, 31 Oct 2026 09:47:01 +0000",
+    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
     "source_metadata": {
-      "document_type": "presidential_document",
-      "document_stage": "presidential_document_published",
+      "document_type": "bill",
+      "document_stage": "legislative_document_published",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Compilation of Presidential Documents",
+      "issuer": "Congressional Bills",
       "jurisdiction": "US",
       "family": "legislative_and_presidential_documents"
     },
-    "primary_source_id": "us-govinfo-dcpd",
-    "n": 7894,
-    "first_seen": "2026-10-31T07:20:30.145427+00:00",
-    "last_seen": "2026-10-31T07:20:30.145427+00:00",
+    "primary_source_id": "us-govinfo-bills",
+    "n": 7925,
+    "first_seen": "2026-10-31T17:48:38.297024+00:00",
+    "last_seen": "2026-10-31T17:48:38.297024+00:00",
     "source_ids": [
-      "us-govinfo-dcpd"
+      "us-govinfo-bills"
     ]
   },
   {
-    "title": "DCPD-202600660 - Presidential Determination on the Revocation of Presidential Determinations Related to Lebanon",
-    "url": "https://www.govinfo.gov/app/details/DCPD-202600660",
-    "native_id": "DCPD-202600660",
-    "published_at": "2026-10-30T21:16:00+00:00",
-    "published_raw": "Fri, 30 Oct 2026 21:16:00 +0000",
-    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "title": "H.R. 10919 (IH) - Safety Net Provider Drug Pricing Protection Act",
+    "url": "https://www.govinfo.gov/app/details/BILLS-119hr10919ih",
+    "native_id": "BILLS-119hr10919ih",
+    "published_at": "2026-10-31T09:47:01+00:00",
+    "published_raw": "Sat, 31 Oct 2026 09:47:01 +0000",
+    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
     "source_metadata": {
-      "document_type": "presidential_document",
-      "document_stage": "presidential_document_published",
+      "document_type": "bill",
+      "document_stage": "legislative_document_published",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Compilation of Presidential Documents",
+      "issuer": "Congressional Bills",
       "jurisdiction": "US",
       "family": "legislative_and_presidential_documents"
     },
-    "primary_source_id": "us-govinfo-dcpd",
-    "n": 7895,
-    "first_seen": "2026-10-31T07:20:30.145427+00:00",
-    "last_seen": "2026-10-31T07:20:30.145427+00:00",
+    "primary_source_id": "us-govinfo-bills",
+    "n": 7926,
+    "first_seen": "2026-10-31T17:48:38.297024+00:00",
+    "last_seen": "2026-10-31T17:48:38.297024+00:00",
     "source_ids": [
-      "us-govinfo-dcpd"
+      "us-govinfo-bills"
     ]
   },
   {
-    "title": "SEC Issues Exemptive Relief from Treasury Clearing Requirements for Certain Inter-Affiliate and Non-U.S. Repo Transactions",
-    "url": "https://www.sec.gov/newsroom/press-releases/2026-111-sec-issues-exemptive-relief-treasury-clearing-requirements-certain-inter-affiliate-non-us-repo",
-    "native_id": "57c0bf48-4b38-4a9c-8d4c-fc217f39e7aa",
-    "published_at": "2026-10-30T19:30:00+00:00",
-    "published_raw": "Fri, 30 Oct 2026 15:30:00 -0400",
-    "summary": "The Securities and Exchange Commission took another step forward today to assist broker-dealers and other market participants on the path to central clearing of U.S. Treasury securities by issuing exemptive relief related to inter-affiliate repo…",
+    "title": "H.R. 10926 (IH) - Election Worker and Polling Place Protection Act",
+    "url": "https://www.govinfo.gov/app/details/BILLS-119hr10926ih",
+    "native_id": "BILLS-119hr10926ih",
+    "published_at": "2026-10-31T09:47:01+00:00",
+    "published_raw": "Sat, 31 Oct 2026 09:47:01 +0000",
+    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
     "source_metadata": {
-      "document_type": "official_announcement",
+      "document_type": "bill",
+      "document_stage": "legislative_document_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Congressional Bills",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-bills",
+    "n": 7927,
+    "first_seen": "2026-10-31T17:48:38.297024+00:00",
+    "last_seen": "2026-10-31T17:48:38.297024+00:00",
+    "source_ids": [
+      "us-govinfo-bills"
+    ]
+  },
+  {
+    "title": "H.R. 10930 (IH) - Childhood Offenders Rehabilitation and Safety Act of 2026",
+    "url": "https://www.govinfo.gov/app/details/BILLS-119hr10930ih",
+    "native_id": "BILLS-119hr10930ih",
+    "published_at": "2026-10-31T09:47:01+00:00",
+    "published_raw": "Sat, 31 Oct 2026 09:47:01 +0000",
+    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "bill",
+      "document_stage": "legislative_document_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Congressional Bills",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-bills",
+    "n": 7928,
+    "first_seen": "2026-10-31T17:48:38.297024+00:00",
+    "last_seen": "2026-10-31T17:48:38.297024+00:00",
+    "source_ids": [
+      "us-govinfo-bills"
+    ]
+  },
+  {
+    "title": "H.R. 10931 (IH) - Library Construction and Modernization Act of 2026",
+    "url": "https://www.govinfo.gov/app/details/BILLS-119hr10931ih",
+    "native_id": "BILLS-119hr10931ih",
+    "published_at": "2026-10-31T09:47:01+00:00",
+    "published_raw": "Sat, 31 Oct 2026 09:47:01 +0000",
+    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "bill",
+      "document_stage": "legislative_document_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Congressional Bills",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-bills",
+    "n": 7929,
+    "first_seen": "2026-10-31T17:48:38.297024+00:00",
+    "last_seen": "2026-10-31T17:48:38.297024+00:00",
+    "source_ids": [
+      "us-govinfo-bills"
+    ]
+  },
+  {
+    "title": "H.R. 10933 (IH) - EMS Supporting Personnel, Operations, Upgrades, Resources, and Training Act of 2026",
+    "url": "https://www.govinfo.gov/app/details/BILLS-119hr10933ih",
+    "native_id": "BILLS-119hr10933ih",
+    "published_at": "2026-10-31T09:47:01+00:00",
+    "published_raw": "Sat, 31 Oct 2026 09:47:01 +0000",
+    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "bill",
+      "document_stage": "legislative_document_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Congressional Bills",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-bills",
+    "n": 7930,
+    "first_seen": "2026-10-31T17:48:38.297024+00:00",
+    "last_seen": "2026-10-31T17:48:38.297024+00:00",
+    "source_ids": [
+      "us-govinfo-bills"
+    ]
+  },
+  {
+    "title": "H.R. 10918 (IH) - Natural Gas Dominance Act",
+    "url": "https://www.govinfo.gov/app/details/BILLS-119hr10918ih",
+    "native_id": "BILLS-119hr10918ih",
+    "published_at": "2026-10-31T09:47:01+00:00",
+    "published_raw": "Sat, 31 Oct 2026 09:47:01 +0000",
+    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "bill",
+      "document_stage": "legislative_document_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Congressional Bills",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-bills",
+    "n": 7931,
+    "first_seen": "2026-10-31T17:48:38.297024+00:00",
+    "last_seen": "2026-10-31T17:48:38.297024+00:00",
+    "source_ids": [
+      "us-govinfo-bills"
+    ]
+  },
+  {
+    "title": "H.R. 10925 (IH) - Countering Online Trafficking Act",
+    "url": "https://www.govinfo.gov/app/details/BILLS-119hr10925ih",
+    "native_id": "BILLS-119hr10925ih",
+    "published_at": "2026-10-31T09:47:02+00:00",
+    "published_raw": "Sat, 31 Oct 2026 09:47:02 +0000",
+    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "bill",
+      "document_stage": "legislative_document_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Congressional Bills",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-bills",
+    "n": 7932,
+    "first_seen": "2026-10-31T17:48:38.297024+00:00",
+    "last_seen": "2026-10-31T17:48:38.297024+00:00",
+    "source_ids": [
+      "us-govinfo-bills"
+    ]
+  },
+  {
+    "title": "H.R. 10928 (IH) - Farmer Recovery Opportunity and Support for Temperatures Relief Act",
+    "url": "https://www.govinfo.gov/app/details/BILLS-119hr10928ih",
+    "native_id": "BILLS-119hr10928ih",
+    "published_at": "2026-10-31T09:47:02+00:00",
+    "published_raw": "Sat, 31 Oct 2026 09:47:02 +0000",
+    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "bill",
+      "document_stage": "legislative_document_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Congressional Bills",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-bills",
+    "n": 7933,
+    "first_seen": "2026-10-31T17:48:38.297024+00:00",
+    "last_seen": "2026-10-31T17:48:38.297024+00:00",
+    "source_ids": [
+      "us-govinfo-bills"
+    ]
+  },
+  {
+    "title": "H.R. 10929 (IH) - Protecting American Hemp Farmers Act",
+    "url": "https://www.govinfo.gov/app/details/BILLS-119hr10929ih",
+    "native_id": "BILLS-119hr10929ih",
+    "published_at": "2026-10-31T09:47:02+00:00",
+    "published_raw": "Sat, 31 Oct 2026 09:47:02 +0000",
+    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "bill",
+      "document_stage": "legislative_document_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Congressional Bills",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-bills",
+    "n": 7934,
+    "first_seen": "2026-10-31T17:48:38.297024+00:00",
+    "last_seen": "2026-10-31T17:48:38.297024+00:00",
+    "source_ids": [
+      "us-govinfo-bills"
+    ]
+  },
+  {
+    "title": "H.R. 10921 (IH) - Breast Cancer Patient Equity Act",
+    "url": "https://www.govinfo.gov/app/details/BILLS-119hr10921ih",
+    "native_id": "BILLS-119hr10921ih",
+    "published_at": "2026-10-31T09:47:02+00:00",
+    "published_raw": "Sat, 31 Oct 2026 09:47:02 +0000",
+    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "bill",
+      "document_stage": "legislative_document_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Congressional Bills",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-bills",
+    "n": 7935,
+    "first_seen": "2026-10-31T17:48:38.297024+00:00",
+    "last_seen": "2026-10-31T17:48:38.297024+00:00",
+    "source_ids": [
+      "us-govinfo-bills"
+    ]
+  },
+  {
+    "title": "H. Rept. 119-856",
+    "url": "https://www.govinfo.gov/app/details/CRPT-119hrpt856",
+    "native_id": "CRPT-119hrpt856",
+    "published_at": "2026-10-31T10:28:00+00:00",
+    "published_raw": "Sat, 31 Oct 2026 10:28:00 +0000",
+    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "committee_report",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Securities and Exchange Commission",
+      "issuer": "Congressional Reports",
       "jurisdiction": "US",
-      "family": "enforcement_and_market_rules"
+      "family": "legislative_and_presidential_documents"
     },
-    "primary_source_id": "us-sec-8940dd7737",
-    "n": 7896,
-    "first_seen": "2026-10-31T07:20:30.145427+00:00",
-    "last_seen": "2026-10-31T07:20:30.145427+00:00",
+    "primary_source_id": "us-govinfo-crpt",
+    "n": 7936,
+    "first_seen": "2026-10-31T17:48:38.297024+00:00",
+    "last_seen": "2026-10-31T17:48:38.297024+00:00",
     "source_ids": [
-      "us-sec-8940dd7737"
+      "us-govinfo-crpt"
     ]
   },
   {
-    "title": "Cary Edward Urich",
-    "url": "https://www.sec.gov/enforcement-litigation/litigation-releases/lr-26681",
-    "native_id": "f015f848-a908-4dfa-a476-5e6b512ca85b",
-    "published_at": "2026-10-30T20:59:50+00:00",
-    "published_raw": "Fri, 30 Oct 2026 16:59:50 -0400",
-    "summary": "Cary Edward Urich",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Securities and Exchange Commission",
-      "jurisdiction": "US",
-      "family": "enforcement_and_market_rules"
-    },
-    "primary_source_id": "us-sec-2476f14c28",
-    "n": 7897,
-    "first_seen": "2026-10-31T07:20:30.145427+00:00",
-    "last_seen": "2026-10-31T07:20:30.145427+00:00",
-    "source_ids": [
-      "us-sec-2476f14c28"
-    ]
-  },
-  {
-    "title": "Bran Crudden and Transparent Equity Entrepreneurs, LLC",
-    "url": "https://www.sec.gov/enforcement-litigation/litigation-releases/lr-26680",
-    "native_id": "31472915-01a2-47ae-a009-13b54f4808bc",
-    "published_at": "2026-10-30T20:42:20+00:00",
-    "published_raw": "Fri, 30 Oct 2026 16:42:20 -0400",
-    "summary": "Bran Crudden and Transparent Equity Entrepreneurs, LLC",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Securities and Exchange Commission",
-      "jurisdiction": "US",
-      "family": "enforcement_and_market_rules"
-    },
-    "primary_source_id": "us-sec-2476f14c28",
-    "n": 7898,
-    "first_seen": "2026-10-31T07:20:30.145427+00:00",
-    "last_seen": "2026-10-31T07:20:30.145427+00:00",
-    "source_ids": [
-      "us-sec-2476f14c28"
-    ]
-  },
-  {
-    "title": "Florida Pharmacist Sentenced to Over 7 Years in Prison for Massive Illegal Oxycodone Distribution Conspiracy",
-    "url": "https://www.justice.gov/opa/pr/florida-pharmacist-sentenced-over-7-years-prison-massive-illegal-oxycodone-distribution",
-    "native_id": "https://www.justice.gov/opa/pr/florida-pharmacist-sentenced-over-7-years-prison-massive-illegal-oxycodone-distribution",
+    "title": "Leader of South Georgia Check‑Theft and Forgery Scheme Sentenced to Prison",
+    "url": "https://www.justice.gov/usao-mdga/pr/leader-south-georgia-check-theft-and-forgery-scheme-sentenced-prison",
+    "native_id": "https://www.justice.gov/usao-mdga/pr/leader-south-georgia-check-theft-and-forgery-scheme-sentenced-prison",
     "published_at": "2026-10-30T12:00:00+00:00",
     "published_raw": "Fri, 30 Oct 2026 12:00:00 +0000",
-    "summary": "A Florida pharmacist and pharmacy owner was sentenced yesterday to 90 months in prison for her role in illegally dispensing over 300,000 oxycodone 30mg pills to pharmacy patrons who had no medical need for the drug.",
+    "summary": "ALBANY, Ga. – A Thomasville, Georgia, man who directed a $115,000 check theft and forgery scheme in the region has been sentenced to federal prison. “Stealing checks and forging financial documents is not a victimless crime. These types of schemes siphon money from hardworking individuals and local businesses, causing real financial harm across our communities,” said U.S. Attorney William R. “Will” Keyes. “Thanks to the outstanding work of our federal and local law enforcement partners, this conspiracy has been dismantled, and those responsible are being held accountable.”",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
@@ -160,45 +328,20 @@
       "family": "judicial_and_enforcement"
     },
     "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 7899,
-    "first_seen": "2026-10-31T07:20:30.145427+00:00",
-    "last_seen": "2026-10-31T07:20:30.145427+00:00",
-    "source_ids": [
-      "us-doj-b3d27e1dc3",
-      "us-doj-e05071794d"
-    ]
-  },
-  {
-    "title": "DOJ’s Fraud Division and the United States Attorney’s Office for the District Minnesota Uncover Nearly $30 Million in Benefits Fraud in Enforcement Surge",
-    "url": "https://www.justice.gov/usao-mn/pr/dojs-fraud-division-and-united-states-attorneys-office-district-minnesota-uncover-nearly",
-    "native_id": "https://www.justice.gov/usao-mn/pr/dojs-fraud-division-and-united-states-attorneys-office-district-minnesota-uncover-nearly",
-    "published_at": "2026-10-30T12:00:00+00:00",
-    "published_raw": "Fri, 30 Oct 2026 12:00:00 +0000",
-    "summary": "",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Department of Justice",
-      "jurisdiction": "US",
-      "family": "judicial_and_enforcement"
-    },
-    "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 7900,
-    "first_seen": "2026-10-31T07:20:30.145427+00:00",
-    "last_seen": "2026-10-31T07:20:30.145427+00:00",
+    "n": 7937,
+    "first_seen": "2026-10-31T17:48:38.297024+00:00",
+    "last_seen": "2026-10-31T17:48:38.297024+00:00",
     "source_ids": [
       "us-doj-b3d27e1dc3"
     ]
   },
   {
-    "title": "Former Turkey Leg Hut owner sentenced for role in arson-for-hire scheme",
-    "url": "https://www.justice.gov/usao-sdtx/pr/houston-businessman-has-been-ordered-federal-prison-conspiring-commit-arson-commercial",
-    "native_id": "https://www.justice.gov/usao-sdtx/pr/houston-businessman-has-been-ordered-federal-prison-conspiring-commit-arson-commercial",
+    "title": "Three Indicted for Violations of the Federal Controlled Substances Act Resulting in Death",
+    "url": "https://www.justice.gov/usao-edla/pr/three-indicted-violations-federal-controlled-substances-act-resulting-death",
+    "native_id": "https://www.justice.gov/usao-edla/pr/three-indicted-violations-federal-controlled-substances-act-resulting-death",
     "published_at": "2026-10-30T12:00:00+00:00",
     "published_raw": "Fri, 30 Oct 2026 12:00:00 +0000",
-    "summary": "A Houston businessman has been ordered to federal prison for conspiring to commit arson of a commercial building",
+    "summary": "NEW ORLEANS, LOUISIANA –United States Attorney David I. Courcelle announced that IVORY CARTER (“CARTER”) age 44 , DONNISHA BROWN (“BROWN”) age 42 , AND CHRISTOPHER LEHMANN (“LEHMANN”) age 30, were charged in a recently unsealed four-count indictment on October 1, 2026.",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
@@ -209,20 +352,20 @@
       "family": "judicial_and_enforcement"
     },
     "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 7901,
-    "first_seen": "2026-10-31T07:20:30.145427+00:00",
-    "last_seen": "2026-10-31T07:20:30.145427+00:00",
+    "n": 7938,
+    "first_seen": "2026-10-31T17:48:38.297024+00:00",
+    "last_seen": "2026-10-31T17:48:38.297024+00:00",
     "source_ids": [
       "us-doj-b3d27e1dc3"
     ]
   },
   {
-    "title": "Forty-two Alleged Gang Members and Associates Charged with Trafficking Fentanyl and Methamphetamine Following Homeland Security Task Force Investigation",
-    "url": "https://www.justice.gov/usao-sdca/pr/forty-two-alleged-gang-members-and-associates-charged-trafficking-fentanyl-and",
-    "native_id": "https://www.justice.gov/usao-sdca/pr/forty-two-alleged-gang-members-and-associates-charged-trafficking-fentanyl-and",
+    "title": "South Florida Selected as First Pilot Location for National Initiative to Combat Federal Nutrition Assistance Fraud",
+    "url": "https://www.justice.gov/usao-sdfl/pr/south-florida-selected-first-pilot-location-national-initiative-combat-federal-0",
+    "native_id": "https://www.justice.gov/usao-sdfl/pr/south-florida-selected-first-pilot-location-national-initiative-combat-federal-0",
     "published_at": "2026-10-30T12:00:00+00:00",
     "published_raw": "Fri, 30 Oct 2026 12:00:00 +0000",
-    "summary": "SAN DIEGO – Four federal grand jury indictments charge 42 alleged members and associates of various San Diego County street gangs, including an increasingly violent and sophisticated Poway gang called Varrio Hidden Hills, with distributing large amounts of methamphetamine and fentanyl. In a coordinated takedown on Wednesday and Thursday, hundreds of FBI agents, members of the North County Regional Gang Task Force and federal, state, and local law enforcement officials arrested 35 defendants and executed 10 search warrants on homes and vehicles in Poway, Lemon Grove, San Diego, National City, Chula Vista, Imperial Beach, El Cajon, Oceanside, Escondido, Vista, Temecula, Murrieta, Riverside, and Tulare. As of 2:30 p.m. today, seven defendants were still being sought. Authorities seized drugs, guns, ammunition and cash during the takedown and throughout the two-year investigation.",
+    "summary": "U.S. Attorney Jason A. Reding Quiñones for the Southern District of Florida today joined U.S. Department of Agriculture (USDA) Inspector General John Walk and federal, state, and local law enforcement partners to launch the Hunger Assistance Enforcement and Accountability Teams (HEAT) initiative, a coordinated effort to investigate and prosecute fraud involving federal nutrition assistance programs. South Florida will serve as the first pilot location for the national initiative, underscoring the U.S. Attorney’s Office’s commitment to protecting taxpayer-funded assistance programs and holding accountable those who exploit resources intended for vulnerable Americans.",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
@@ -233,20 +376,20 @@
       "family": "judicial_and_enforcement"
     },
     "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 7902,
-    "first_seen": "2026-10-31T07:20:30.145427+00:00",
-    "last_seen": "2026-10-31T07:20:30.145427+00:00",
+    "n": 7939,
+    "first_seen": "2026-10-31T17:48:38.297024+00:00",
+    "last_seen": "2026-10-31T17:48:38.297024+00:00",
     "source_ids": [
       "us-doj-b3d27e1dc3"
     ]
   },
   {
-    "title": "Gun-Toting Felon Who Ran from Officers Sentenced to Federal Prison",
-    "url": "https://www.justice.gov/usao-ndia/pr/gun-toting-felon-who-ran-officers-sentenced-federal-prison",
-    "native_id": "https://www.justice.gov/usao-ndia/pr/gun-toting-felon-who-ran-officers-sentenced-federal-prison",
+    "title": "Federal Law Enforcement Initiative Targets Sex Offender Registration Violations and Child Exploitation",
+    "url": "https://www.justice.gov/usao-wdmo/pr/federal-law-enforcement-initiative-targets-sex-offender-registration-violations-and",
+    "native_id": "https://www.justice.gov/usao-wdmo/pr/federal-law-enforcement-initiative-targets-sex-offender-registration-violations-and",
     "published_at": "2026-10-30T12:00:00+00:00",
     "published_raw": "Fri, 30 Oct 2026 12:00:00 +0000",
-    "summary": "",
+    "summary": "The U.S. Attorney for the Western District of Missouri announced today that, as part of its ongoing Project Safe Childhood initiative, federal, state, and local law enforcement partners have conducted a focused enforcement effort targeting individuals who fail to comply with federal sex offender registration requirements and those involved in child exploitation.",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
@@ -257,20 +400,20 @@
       "family": "judicial_and_enforcement"
     },
     "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 7903,
-    "first_seen": "2026-10-31T07:20:30.145427+00:00",
-    "last_seen": "2026-10-31T07:20:30.145427+00:00",
+    "n": 7940,
+    "first_seen": "2026-10-31T17:48:38.297024+00:00",
+    "last_seen": "2026-10-31T17:48:38.297024+00:00",
     "source_ids": [
       "us-doj-b3d27e1dc3"
     ]
   },
   {
-    "title": "Botox Fraud Doctor Sentenced to 15 Years in Prison for $45M Medicare Scheme",
-    "url": "https://www.justice.gov/opa/pr/botox-fraud-doctor-sentenced-15-years-prison-45m-medicare-scheme",
-    "native_id": "https://www.justice.gov/opa/pr/botox-fraud-doctor-sentenced-15-years-prison-45m-medicare-scheme",
+    "title": "Kansas man pleads guilty to illegal gun possession",
+    "url": "https://www.justice.gov/usao-ks/pr/kansas-man-pleads-guilty-illegal-gun-possession",
+    "native_id": "https://www.justice.gov/usao-ks/pr/kansas-man-pleads-guilty-illegal-gun-possession",
     "published_at": "2026-10-30T12:00:00+00:00",
     "published_raw": "Fri, 30 Oct 2026 12:00:00 +0000",
-    "summary": "California doctor Violetta Mailyan was sentenced yesterday to 15 years in prison for using her medical practice to fraudulently bill Medicare more than $45 million for Botox injection services that were medically unnecessary and never provided.",
+    "summary": "A Kansas man pleaded guilty to illegally possessing a firearm while facing criminal charges.",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
@@ -281,45 +424,20 @@
       "family": "judicial_and_enforcement"
     },
     "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 7904,
-    "first_seen": "2026-10-31T07:20:30.145427+00:00",
-    "last_seen": "2026-10-31T07:20:30.145427+00:00",
-    "source_ids": [
-      "us-doj-b3d27e1dc3",
-      "us-doj-e05071794d"
-    ]
-  },
-  {
-    "title": "District of Arizona Responds to Allegations of Non-Citizen Voter Registration",
-    "url": "https://www.justice.gov/usao-az/pr/district-arizona-responds-allegations-non-citizen-voter-registration",
-    "native_id": "https://www.justice.gov/usao-az/pr/district-arizona-responds-allegations-non-citizen-voter-registration",
-    "published_at": "2026-10-30T12:00:00+00:00",
-    "published_raw": "Fri, 30 Oct 2026 12:00:00 +0000",
-    "summary": "PHOENIX, Ariz. – Today, U.S. Attorney Timothy Courchaine announced that his office has opened a case into recent reporting about three non-profit organizations registering non-citizens to vote in Arizona. The United States Attorney’s Office has already referred the matter to the FBI for a thorough federal investigation.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Department of Justice",
-      "jurisdiction": "US",
-      "family": "judicial_and_enforcement"
-    },
-    "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 7905,
-    "first_seen": "2026-10-31T07:20:30.145427+00:00",
-    "last_seen": "2026-10-31T07:20:30.145427+00:00",
+    "n": 7941,
+    "first_seen": "2026-10-31T17:48:38.297024+00:00",
+    "last_seen": "2026-10-31T17:48:38.297024+00:00",
     "source_ids": [
       "us-doj-b3d27e1dc3"
     ]
   },
   {
-    "title": "Stamford Man Sentenced to Additional Prison Time for Distributing Crack Prior to Reporting to Prison",
-    "url": "https://www.justice.gov/usao-ct/pr/stamford-man-sentenced-additional-prison-time-distributing-crack-prior-reporting-prison",
-    "native_id": "https://www.justice.gov/usao-ct/pr/stamford-man-sentenced-additional-prison-time-distributing-crack-prior-reporting-prison",
+    "title": "U.S. Attorney Aaron Reitz issues statement regarding Harris County DA indicting ICE agent",
+    "url": "https://www.justice.gov/usao-sdtx/pr/us-attorney-aaron-reitz-issues-statement-regarding-harris-county-da-indicting-ice",
+    "native_id": "https://www.justice.gov/usao-sdtx/pr/us-attorney-aaron-reitz-issues-statement-regarding-harris-county-da-indicting-ice",
     "published_at": "2026-10-30T12:00:00+00:00",
     "published_raw": "Fri, 30 Oct 2026 12:00:00 +0000",
-    "summary": "DANNY TURKVAN, also known as “Smooth” 55, of Stamford, was sentenced today by U.S. District Judge Stefan R. Underhill in Bridgeport to an additional 14 months of imprisonment for distributing crack cocaine after he had been sentenced in another federal case and prior to reporting to prison.",
+    "summary": "Disappointed in his inability to swiftly bring charges in the tragic Salgado shooting in July, the Harris County District Attorney now appears determined to put a different federal agent’s scalp on the wall. This time, he’s pursuing what looks like a political prosecution of an ICE agent for doing his job—exactly what his allies have been agitating for",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
@@ -330,20 +448,20 @@
       "family": "judicial_and_enforcement"
     },
     "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 7906,
-    "first_seen": "2026-10-31T07:20:30.145427+00:00",
-    "last_seen": "2026-10-31T07:20:30.145427+00:00",
+    "n": 7942,
+    "first_seen": "2026-10-31T17:48:38.297024+00:00",
+    "last_seen": "2026-10-31T17:48:38.297024+00:00",
     "source_ids": [
       "us-doj-b3d27e1dc3"
     ]
   },
   {
-    "title": "Justice Department’s Statement on Its Investigation of Vistra’s Acquisition of Cogentrix",
-    "url": "https://www.justice.gov/opa/pr/justice-departments-statement-its-investigation-vistras-acquisition-cogentrix",
-    "native_id": "https://www.justice.gov/opa/pr/justice-departments-statement-its-investigation-vistras-acquisition-cogentrix",
+    "title": "Dominican National Pleads Guilty to Receiving Over $24,000 in SNAP Benefits",
+    "url": "https://www.justice.gov/usao-ma/pr/dominican-national-pleads-guilty-receiving-over-24000-snap-benefits",
+    "native_id": "https://www.justice.gov/usao-ma/pr/dominican-national-pleads-guilty-receiving-over-24000-snap-benefits",
     "published_at": "2026-10-30T12:00:00+00:00",
     "published_raw": "Fri, 30 Oct 2026 12:00:00 +0000",
-    "summary": "Associate Attorney General Stanley E. Woodward, Jr. of the U.S. Department of Justice issued the following statement today in connection with the Antitrust Division’s investigation into the acquisition of Cogentrix Energy (Cogentrix) by Vistra Corp. (Vistra) (together, the “Parties”):",
+    "summary": "BOSTON – A Boston man, who was born in the Dominican Republic and is a Lawful Permanent Resident, pleaded guilty today in federal court in Boston to stealing the identity of a U.S. citizen from Puerto Rico and using the stolen identity to obtain more than $20,000 in federally funded benefits from Massachusetts.",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
@@ -354,45 +472,20 @@
       "family": "judicial_and_enforcement"
     },
     "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 7907,
-    "first_seen": "2026-10-31T07:20:30.145427+00:00",
-    "last_seen": "2026-10-31T07:20:30.145427+00:00",
-    "source_ids": [
-      "us-doj-b3d27e1dc3",
-      "us-doj-e05071794d"
-    ]
-  },
-  {
-    "title": "Fifth Alien Charged for Illegally Voting in Nevada",
-    "url": "https://www.justice.gov/usao-nv/pr/fifth-alien-charged-illegally-voting-nevada",
-    "native_id": "https://www.justice.gov/usao-nv/pr/fifth-alien-charged-illegally-voting-nevada",
-    "published_at": "2026-10-30T12:00:00+00:00",
-    "published_raw": "Fri, 30 Oct 2026 12:00:00 +0000",
-    "summary": "LAS VEGAS – An Argentine national was charged today for illegally voting in the 2024 general election in Clark County, Nevada.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Department of Justice",
-      "jurisdiction": "US",
-      "family": "judicial_and_enforcement"
-    },
-    "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 7908,
-    "first_seen": "2026-10-31T07:20:30.145427+00:00",
-    "last_seen": "2026-10-31T07:20:30.145427+00:00",
+    "n": 7943,
+    "first_seen": "2026-10-31T17:48:38.297024+00:00",
+    "last_seen": "2026-10-31T17:48:38.297024+00:00",
     "source_ids": [
       "us-doj-b3d27e1dc3"
     ]
   },
   {
-    "title": "Homeland Security Task Force: Two Connecticut Men Found with 21 Kilos of Cocaine Sentenced to 10 Years in Federal Prison",
-    "url": "https://www.justice.gov/usao-ct/pr/homeland-security-task-force-two-connecticut-men-found-21-kilos-cocaine-sentenced-10-0",
-    "native_id": "https://www.justice.gov/usao-ct/pr/homeland-security-task-force-two-connecticut-men-found-21-kilos-cocaine-sentenced-10-0",
+    "title": "Federal Jury Convicts Georgia Felon for Illegal Possession of a Firearm",
+    "url": "https://www.justice.gov/usao-ndfl/pr/federal-jury-convicts-georgia-felon-illegal-possession-firearm",
+    "native_id": "https://www.justice.gov/usao-ndfl/pr/federal-jury-convicts-georgia-felon-illegal-possession-firearm",
     "published_at": "2026-10-30T12:00:00+00:00",
     "published_raw": "Fri, 30 Oct 2026 12:00:00 +0000",
-    "summary": "REGINALD ROGERS 38, of Woodbridge, and LESTER ARRINGTON, 34, of Naugatuck, have each been sentenced by U.S. District Judge Stefan R. Underhill in Bridgeport to 120 months of imprisonment and five years of supervised release for trafficking cocaine. Rogers was sentenced today and Arrington was sentenced on October 27.",
+    "summary": "Tallahassee, Florida – Jonathan Deon Morehead, 38, of Atlanta, Georgia, was found guilty by a federal jury in Tallahassee following a trial for possession of a firearm by a convicted felon. The verdict was announced by John P. Heekin, United States Attorney for the Northern District of Florida.",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
@@ -403,20 +496,20 @@
       "family": "judicial_and_enforcement"
     },
     "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 7909,
-    "first_seen": "2026-10-31T07:20:30.145427+00:00",
-    "last_seen": "2026-10-31T07:20:30.145427+00:00",
+    "n": 7944,
+    "first_seen": "2026-10-31T17:48:38.297024+00:00",
+    "last_seen": "2026-10-31T17:48:38.297024+00:00",
     "source_ids": [
       "us-doj-b3d27e1dc3"
     ]
   },
   {
-    "title": "Byrd Gang Members Sentenced to Life Imprisonment for 2017 Double Homicide Committed Outside Edna Karr High School Basketball Game",
-    "url": "https://www.justice.gov/usao-edla/pr/byrd-gang-members-sentenced-life-imprisonment-2017-double-homicide-committed-outside",
-    "native_id": "https://www.justice.gov/usao-edla/pr/byrd-gang-members-sentenced-life-imprisonment-2017-double-homicide-committed-outside",
+    "title": "Augusta Woman Pleads Guilty to Social Security Fraud",
+    "url": "https://www.justice.gov/usao-me/pr/augusta-woman-pleads-guilty-social-security-fraud",
+    "native_id": "https://www.justice.gov/usao-me/pr/augusta-woman-pleads-guilty-social-security-fraud",
     "published_at": "2026-10-30T12:00:00+00:00",
     "published_raw": "Fri, 30 Oct 2026 12:00:00 +0000",
-    "summary": "NEW ORLEANS – U.S. Attorney David I. Courcelle announced that TERRAN WILLIAMS, a/k/a “Funky” (“WILLIAMS,”) TYRONE BOVIA, a/k/a “Sixx” (“BOVIA, ”) and JAVONTA DOLEMAN, a/k/a “Dutt” (“DOLEMAN,”) all from New Orleans, were sentenced to life imprisonment by United States District Judge Jane Triche Milazzo.",
+    "summary": "According to court records, from about October 2018 to April 2022, Deborah Oldis , 63, intentionally concealed and failed to disclose her ownership of assets, including bonds, stocks, and a personal bank account.",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
@@ -427,327 +520,107 @@
       "family": "judicial_and_enforcement"
     },
     "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 7910,
-    "first_seen": "2026-10-31T07:20:30.145427+00:00",
-    "last_seen": "2026-10-31T07:20:30.145427+00:00",
+    "n": 7945,
+    "first_seen": "2026-10-31T17:48:38.297024+00:00",
+    "last_seen": "2026-10-31T17:48:38.297024+00:00",
     "source_ids": [
       "us-doj-b3d27e1dc3"
     ]
   },
   {
-    "title": "Justice Department Announces Final Rule Allowing Federal Firearms Licensees to Voluntarily Use NICS for Employee Background Checks",
-    "url": "https://www.justice.gov/opa/pr/justice-department-announces-final-rule-allowing-federal-firearms-licensees-voluntarily-use",
-    "native_id": "https://www.justice.gov/opa/pr/justice-department-announces-final-rule-allowing-federal-firearms-licensees-voluntarily-use",
-    "published_at": "2026-10-30T12:00:00+00:00",
-    "published_raw": "Fri, 30 Oct 2026 12:00:00 +0000",
-    "summary": "Today, the Department of Justice announced a final rule authorizing Federal Firearms Licensees (FFLs) to voluntarily use the FBI's National Instant Criminal Background Check System (NICS) to conduct background checks on certain current and prospective employees.",
+    "title": "EU-Canada Summit 2026: Leaders mark a historic moment in bilateral relations",
+    "url": "https://ec.europa.eu/commission/presscorner/detail/en/ac_26_2318",
+    "native_id": "https://ec.europa.eu/commission/presscorner/detail/en/ac_26_2318",
+    "published_at": "2026-10-31T09:45:02+00:00",
+    "published_raw": "Sat, 31 Oct 2026 09:45:02 GMT",
+    "summary": "European Commission News Brussels, 31 Oct 2026 Commission President Ursula von der Leyen, along with European Council President António Costa, took part in the EU-Canada Summit hosted by Canadian Prime Mini...",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Department of Justice",
-      "jurisdiction": "US",
-      "family": "judicial_and_enforcement"
+      "issuer": "European Commission press and decisions",
+      "jurisdiction": "EU",
+      "family": "executive_and_regulatory"
     },
-    "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 7911,
-    "first_seen": "2026-10-31T07:20:30.145427+00:00",
-    "last_seen": "2026-10-31T07:20:30.145427+00:00",
+    "primary_source_id": "eu-commission-07d4f58ccf",
+    "n": 7946,
+    "first_seen": "2026-10-31T17:48:38.297024+00:00",
+    "last_seen": "2026-10-31T17:48:38.297024+00:00",
     "source_ids": [
-      "us-doj-b3d27e1dc3",
-      "us-doj-e05071794d"
+      "eu-commission-07d4f58ccf"
     ]
   },
   {
-    "title": "Two Men Sentenced for Acting as Agents of the People’s Republic of China",
-    "url": "https://www.justice.gov/opa/pr/two-men-sentenced-acting-agents-peoples-republic-china",
-    "native_id": "https://www.justice.gov/opa/pr/two-men-sentenced-acting-agents-peoples-republic-china",
-    "published_at": "2026-10-30T12:00:00+00:00",
-    "published_raw": "Fri, 30 Oct 2026 12:00:00 +0000",
-    "summary": "",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Department of Justice",
-      "jurisdiction": "US",
-      "family": "judicial_and_enforcement"
-    },
-    "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 7912,
-    "first_seen": "2026-10-31T07:20:30.145427+00:00",
-    "last_seen": "2026-10-31T07:20:30.145427+00:00",
-    "source_ids": [
-      "us-doj-b3d27e1dc3",
-      "us-doj-e05071794d"
-    ]
-  },
-  {
-    "title": "Indian National Pleads Guilty to $227M Medicare Fraud",
-    "url": "https://www.justice.gov/opa/pr/indian-national-pleads-guilty-227m-medicare-fraud",
-    "native_id": "https://www.justice.gov/opa/pr/indian-national-pleads-guilty-227m-medicare-fraud",
-    "published_at": "2026-10-30T12:00:00+00:00",
-    "published_raw": "Fri, 30 Oct 2026 12:00:00 +0000",
-    "summary": "An Indian national pleaded guilty today to a $227 million Medicare fraud scheme in which hundreds of thousands of Medicare beneficiaries’ personally identifiable information was purchased from a company based in Pakistan and used to bill Medicare for COVID-19 test kits that were never provided.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Department of Justice",
-      "jurisdiction": "US",
-      "family": "judicial_and_enforcement"
-    },
-    "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 7913,
-    "first_seen": "2026-10-31T07:20:30.145427+00:00",
-    "last_seen": "2026-10-31T07:20:30.145427+00:00",
-    "source_ids": [
-      "us-doj-b3d27e1dc3",
-      "us-doj-e05071794d"
-    ]
-  },
-  {
-    "title": "Israeli National Extradited to Face Charges for Stealing Nearly $3M in Virtual Currency Heist",
-    "url": "https://www.justice.gov/opa/pr/israeli-national-extradited-face-charges-stealing-nearly-3m-virtual-currency-heist",
-    "native_id": "https://www.justice.gov/opa/pr/israeli-national-extradited-face-charges-stealing-nearly-3m-virtual-currency-heist",
-    "published_at": "2026-10-30T12:00:00+00:00",
-    "published_raw": "Fri, 30 Oct 2026 12:00:00 +0000",
-    "summary": "Alexander Gurevich, 49, an Israeli national, had his initial appearance today in the Northern District of California on a 2023 indictment that charged him for exploiting the Nomad Bridge’s self-executing computer program, also known as a smart contract, to steal $2.89 million in virtual currency.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Department of Justice — RSS Feed",
-      "jurisdiction": "US",
-      "family": "judicial_and_enforcement"
-    },
-    "primary_source_id": "us-doj-e05071794d",
-    "n": 7914,
-    "first_seen": "2026-10-31T07:20:30.145427+00:00",
-    "last_seen": "2026-10-31T07:20:30.145427+00:00",
-    "source_ids": [
-      "us-doj-e05071794d"
-    ]
-  },
-  {
-    "title": "California Man Pleads Guilty to Attempting to Provide Material Support to the Islamic State of Iraq and al-Sham",
-    "url": "https://www.justice.gov/opa/pr/california-man-pleads-guilty-attempting-provide-material-support-islamic-state-iraq-and-al",
-    "native_id": "https://www.justice.gov/opa/pr/california-man-pleads-guilty-attempting-provide-material-support-islamic-state-iraq-and-al",
-    "published_at": "2026-10-30T12:00:00+00:00",
-    "published_raw": "Fri, 30 Oct 2026 12:00:00 +0000",
-    "summary": "Ammaad Akhtar, 34, of California, pleaded guilty today to attempting to provide material support to a designated foreign terrorist organization.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Department of Justice — RSS Feed",
-      "jurisdiction": "US",
-      "family": "judicial_and_enforcement"
-    },
-    "primary_source_id": "us-doj-e05071794d",
-    "n": 7915,
-    "first_seen": "2026-10-31T07:20:30.145427+00:00",
-    "last_seen": "2026-10-31T07:20:30.145427+00:00",
-    "source_ids": [
-      "us-doj-e05071794d"
-    ]
-  },
-  {
-    "title": "DOJ’s Fraud Division and the U.S. Attorney’s Office for the District Minnesota Uncover Nearly $30M in Benefits Fraud in Enforcement Surge",
-    "url": "https://www.justice.gov/opa/pr/dojs-fraud-division-and-us-attorneys-office-district-minnesota-uncover-voter-fraud-and",
-    "native_id": "https://www.justice.gov/opa/pr/dojs-fraud-division-and-us-attorneys-office-district-minnesota-uncover-voter-fraud-and",
-    "published_at": "2026-10-30T12:00:00+00:00",
-    "published_raw": "Fri, 30 Oct 2026 12:00:00 +0000",
-    "summary": "The Justice Department’s National Fraud Enforcement Division (Fraud Division), and the U.S. Attorney’s Office for the District of Minnesota announced a series of enforcement actions targeting fraud involving taxpayer-funded Medicaid and SNAP programs.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Department of Justice — RSS Feed",
-      "jurisdiction": "US",
-      "family": "judicial_and_enforcement"
-    },
-    "primary_source_id": "us-doj-e05071794d",
-    "n": 7916,
-    "first_seen": "2026-10-31T07:20:30.145427+00:00",
-    "last_seen": "2026-10-31T07:20:30.145427+00:00",
-    "source_ids": [
-      "us-doj-e05071794d"
-    ]
-  },
-  {
-    "title": "FDA Approves First Plasmid DNA-based Immunotherapy for Adults with Recurrent Respiratory Papillomatosis",
-    "url": "http://www.fda.gov/news-events/press-announcements/fda-approves-first-plasmid-dna-based-immunotherapy-adults-recurrent-respiratory-papillomatosis",
-    "native_id": "http://www.fda.gov/news-events/press-announcements/fda-approves-first-plasmid-dna-based-immunotherapy-adults-recurrent-respiratory-papillomatosis",
-    "published_at": "2026-10-30T20:32:08+00:00",
-    "published_raw": "Fri, 30 Oct 2026 16:32:08 EDT",
-    "summary": "The U.S. Food and Drug Administration today granted accelerated approval for Voceryq (doruxapapogene ralaplasmid and lalikinogene sifuplasmid-gxfd) for treatment of adults with recurrent respiratory papillomatosis (RRP).",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Food and Drug Administration — Press Releases",
-      "jurisdiction": "US",
-      "family": "product_permissions_and_safety"
-    },
-    "primary_source_id": "us-fda-00e9311ef2",
-    "n": 7917,
-    "first_seen": "2026-10-31T07:20:30.145427+00:00",
-    "last_seen": "2026-10-31T07:20:30.145427+00:00",
-    "source_ids": [
-      "us-fda-00e9311ef2",
-      "us-fda-03f7703006"
-    ]
-  },
-  {
-    "title": "Digital Health Technologies for Drug Development: Demonstration Projects",
-    "url": "http://www.fda.gov/science-research/science-and-research-special-topics/digital-health-technologies-drug-development-demonstration-projects",
-    "native_id": "http://www.fda.gov/science-research/science-and-research-special-topics/digital-health-technologies-drug-development-demonstration-projects",
-    "published_at": "2026-10-30T20:02:30+00:00",
-    "published_raw": "Fri, 30 Oct 2026 16:02:30 EDT",
-    "summary": "Digital Health Technologies for Drug Development Demonstration Projects",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Food and Drug Administration — What's New: Drugs",
-      "jurisdiction": "US",
-      "family": "product_permissions_and_safety"
-    },
-    "primary_source_id": "us-fda-5696b24295",
-    "n": 7918,
-    "first_seen": "2026-10-31T07:20:30.145427+00:00",
-    "last_seen": "2026-10-31T07:20:30.145427+00:00",
-    "source_ids": [
-      "us-fda-5696b24295"
-    ]
-  },
-  {
-    "title": "Digital Health Technologies (DHTs) for Drug Development",
-    "url": "http://www.fda.gov/science-research/science-and-research-special-topics/digital-health-technologies-dhts-drug-development",
-    "native_id": "http://www.fda.gov/science-research/science-and-research-special-topics/digital-health-technologies-dhts-drug-development",
-    "published_at": "2026-10-30T20:02:06+00:00",
-    "published_raw": "Fri, 30 Oct 2026 16:02:06 EDT",
-    "summary": "Digital Health Technologies (DHTs) for Drug Development",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Food and Drug Administration — What's New: Drugs",
-      "jurisdiction": "US",
-      "family": "product_permissions_and_safety"
-    },
-    "primary_source_id": "us-fda-5696b24295",
-    "n": 7919,
-    "first_seen": "2026-10-31T07:20:30.145427+00:00",
-    "last_seen": "2026-10-31T07:20:30.145427+00:00",
-    "source_ids": [
-      "us-fda-5696b24295"
-    ]
-  },
-  {
-    "title": "Generic Drug User Fee Amendments",
-    "url": "http://www.fda.gov/industry/fda-user-fee-programs/generic-drug-user-fee-amendments",
-    "native_id": "http://www.fda.gov/industry/fda-user-fee-programs/generic-drug-user-fee-amendments",
-    "published_at": "2026-10-30T18:49:46+00:00",
-    "published_raw": "Fri, 30 Oct 2026 14:49:46 EDT",
-    "summary": "This page features news and information for industry and stakeholders about GDUFA, its fee structure, payment methods, and related information.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Food and Drug Administration — What's New: Drugs",
-      "jurisdiction": "US",
-      "family": "product_permissions_and_safety"
-    },
-    "primary_source_id": "us-fda-5696b24295",
-    "n": 7920,
-    "first_seen": "2026-10-31T07:20:30.145427+00:00",
-    "last_seen": "2026-10-31T07:20:30.145427+00:00",
-    "source_ids": [
-      "us-fda-5696b24295"
-    ]
-  },
-  {
-    "title": "Approved Cellular and Gene Therapy Products",
-    "url": "http://www.fda.gov/vaccines-blood-biologics/cellular-gene-therapy-products/approved-cellular-and-gene-therapy-products",
-    "native_id": "http://www.fda.gov/vaccines-blood-biologics/cellular-gene-therapy-products/approved-cellular-and-gene-therapy-products",
-    "published_at": "2026-10-30T23:55:49+00:00",
-    "published_raw": "Fri, 30 Oct 2026 19:55:49 EDT",
-    "summary": "Listing of licensed and approved products from the Office of Therapeutic Products (OTP).",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Food and Drug Administration — What's New: Vaccines, Blood and Biologics",
-      "jurisdiction": "US",
-      "family": "product_permissions_and_safety"
-    },
-    "primary_source_id": "us-fda-03f7703006",
-    "n": 7921,
-    "first_seen": "2026-10-31T07:20:30.145427+00:00",
-    "last_seen": "2026-10-31T07:20:30.145427+00:00",
-    "source_ids": [
-      "us-fda-03f7703006"
-    ]
-  },
-  {
-    "title": "CMS Finalizes Rule to Help More Organs Reach Patients and Strengthen Accountability for Organ Procurement Organizations",
-    "url": "https://www.hhs.gov/press-room/cms-finalizes-rule-organ-procurement-organizations-transplant-accountability.html",
-    "native_id": "https://www.hhs.gov/press-room/cms-finalizes-rule-organ-procurement-organizations-transplant-accountability.html",
-    "published_at": "2026-10-30T20:56:00+00:00",
-    "published_raw": "Fri, 30 Oct 2026 16:56:00 -0400",
-    "summary": "HHS finalized a rule to help donated organs reach patients by strengthening oversight of Organ Procurement Organizations (OPOs).",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Health and Human Services",
-      "jurisdiction": "US",
-      "family": "health_administration"
-    },
-    "primary_source_id": "us-hhs-6f995a5754",
-    "n": 7922,
-    "first_seen": "2026-10-31T07:20:30.145427+00:00",
-    "last_seen": "2026-10-31T07:20:30.145427+00:00",
-    "source_ids": [
-      "us-hhs-6f995a5754"
-    ]
-  },
-  {
-    "title": "The Public Safety and Homeland Security Bureau Announces Conditional Approval and Exemption of Certain Uncrewed Aircraft Systems, Power Inverters, and Advanced Robotic Devices from FCC Covered Lis",
-    "url": "https://www.fcc.gov/edoc/426369",
-    "native_id": "426369",
+    "title": "ESMA publishes latest edition of its newsletter",
+    "url": "https://www.esma.europa.eu/press-news/esma-news/esma-publishes-latest-edition-its-newsletter-45",
+    "native_id": "https://www.esma.europa.eu/press-news/esma-news/esma-publishes-latest-edition-its-newsletter-45",
     "published_at": null,
     "published_raw": "",
-    "summary": ".",
+    "summary": "ESMA publishes latest edition of its newsletter 29 October 2026 ESMA newsletter The European Securities and Markets Authority (ESMA), the EU’s financial markets regulator and supervisor, has published today the latest edition of its Spotlight on Markets newsletter , covering key activities and publications from September and October 2026. This edition opens with the appointment of Carlo Comporti as ESMA’s next Chair . His appointment was confirmed by the Council of the European Union, and he will take up his position on 1 November 2026. Top news highlights include ESMA’s 2027 Annual Work Programme , setting out priorities for stronger, simpler and more integrated EU capital markets; the new Union Strategic Supervisory Priority on digital innovation; and the European Supervisory Authorities’ priorities for 2027 . Other key publications featured in this edition include: the preparations for the transition to T+1 settlement , the ESAs’ call for vigilance over external dependencies, cyber threats and private markets , ESMA’s proposals to make MiCA clearer, safer and ready for emerging services , and its second Trends, Risks and Vulnerabilities Report of 2026 . Other updates include a M",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Public Notices",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
+      "issuer": "European Securities and Markets Authority",
+      "jurisdiction": "EU",
+      "family": "market_rules_and_enforcement"
     },
-    "primary_source_id": "us-fcc-e95ecda3bb",
-    "n": 7923,
-    "first_seen": "2026-10-31T07:20:30.145427+00:00",
-    "last_seen": "2026-10-31T07:20:30.145427+00:00",
+    "primary_source_id": "eu-esma-73e01d4013",
+    "n": 7947,
+    "first_seen": "2026-10-31T17:48:38.297024+00:00",
+    "last_seen": "2026-10-31T17:48:38.297024+00:00",
     "source_ids": [
-      "us-fcc-e95ecda3bb"
+      "eu-esma-73e01d4013"
+    ]
+  },
+  {
+    "title": "ESMA proposes simpler EU Taxonomy reporting",
+    "url": "https://www.esma.europa.eu/press-news/esma-news/esma-proposes-simpler-eu-taxonomy-reporting",
+    "native_id": "https://www.esma.europa.eu/press-news/esma-news/esma-proposes-simpler-eu-taxonomy-reporting",
+    "published_at": null,
+    "published_raw": "",
+    "summary": "ESMA proposes simpler EU Taxonomy reporting 29 October 2026 Issuer disclosure Sustainable finance The European Securities and Markets Authority (ESMA), the EU’s financial markets regulator and supervisor, has published its Final Report providing technical advice to the European Commission on simplifying key performance indicators under the Taxonomy Disclosures Delegated Act. ESMA recommends narrowing the mandatory operating expenditure (OpEx) KPI to non-capitalised research and development expenditure. It also proposes simpler group Taxonomy reporting, including removing the weighted-average KPI, and targeted measures to make disclosures more proportionate, clearer and easier to use. The Technical Advice was coordinated with the other European Supervisory Authorities, in particular on the voluntary use of counterparties’ OpEx information and group-level Taxonomy reporting. The proposals support ESMA’s simplification and burden reduction objectives, while focussing reporting on information that is useful for decision-making, and preserving the relevance, comparability and reliability of Taxonomy disclosures. Next steps ESMA has submitted the Final Report and its technical advice to ",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "European Securities and Markets Authority",
+      "jurisdiction": "EU",
+      "family": "market_rules_and_enforcement"
+    },
+    "primary_source_id": "eu-esma-73e01d4013",
+    "n": 7948,
+    "first_seen": "2026-10-31T17:48:38.297024+00:00",
+    "last_seen": "2026-10-31T17:48:38.297024+00:00",
+    "source_ids": [
+      "eu-esma-73e01d4013"
+    ]
+  },
+  {
+    "title": "ESMA streamlines several Q&As as part of simplification efforts",
+    "url": "https://www.esma.europa.eu/press-news/esma-news/esma-streamlines-several-qas-part-simplification-efforts",
+    "native_id": "https://www.esma.europa.eu/press-news/esma-news/esma-streamlines-several-qas-part-simplification-efforts",
+    "published_at": null,
+    "published_raw": "",
+    "summary": "ESMA streamlines several Q&As as part of simplification efforts 22 October 2026 Market Abuse MiFID - Secondary Markets Short Selling Simplification and Burden Reduction The European Securities and Markets Authority (ESMA), the EU regulator and supervisor, has updated its Questions and Answers (Q&As) on market structure under MiFID II , the Market Abuse Regulation (MAR) and the Short Selling Regulation (SSR) , removing outdated, duplicative and no longer relevant guidance as part of its Simplification and Burden Reduction (SBR) initiative . The exercise focused on identifying Q&As that are no longer relevant due to legislative amendments that are reflected in established market practices, or that are covered by other ESMA guidance. As a result, several Q&As have been withdrawn or amended, including instances where the same issues are addressed in other ESMA publications such as supervisory briefings and opinions. The goal of the initiative is to reduce unnecessary complexity, remove obsolete guidance and ensure that ESMA's Q&As remain relevant, proportionate and consistent with the current legislative framework. Stakeholders are encouraged to refer to the updated set of Q&As togethe",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "European Securities and Markets Authority",
+      "jurisdiction": "EU",
+      "family": "market_rules_and_enforcement"
+    },
+    "primary_source_id": "eu-esma-73e01d4013",
+    "n": 7949,
+    "first_seen": "2026-10-31T17:48:38.297024+00:00",
+    "last_seen": "2026-10-31T17:48:38.297024+00:00",
+    "source_ids": [
+      "eu-esma-73e01d4013"
     ]
   }
 ]

@@ -1,6 +1,6 @@
 {
   "version": "primary-action-institutions-v1",
-  "generated_at": "2026-10-24T16:39:29.833670+00:00",
+  "generated_at": "2026-10-31T17:46:18.945180+00:00",
   "scope": "Directory identities include historical/closed bodies. Shared portals are not counted as thousands of distinct working websites. Publication-channel health is separate.",
   "institutions": [
     {
@@ -11577,6 +11577,27 @@
       ]
     },
     {
+      "id": "uk-gov:euston-delivery-company",
+      "name": "Euston Delivery Company",
+      "jurisdiction": "UK",
+      "website": "https://www.gov.uk/government/organisations/euston-delivery-company",
+      "official_directory_url": "https://www.gov.uk/api/organisations/euston-delivery-company",
+      "status": "joining",
+      "closed_at": null,
+      "institution_type": "Executive non-departmental public body",
+      "shared_publication_source_ids": [
+        "uk-govuk-decision",
+        "uk-govuk-regulation",
+        "uk-govuk-statutory_instrument",
+        "uk-govuk-consultation_outcome",
+        "uk-govuk-government_response",
+        "uk-govuk-medical_safety_alert",
+        "uk-govuk-drug_safety_update",
+        "uk-govuk-product_safety_alert_report_recall",
+        "uk-govuk-international_treaty"
+      ]
+    },
+    {
       "id": "uk-gov:evaluation-task-force",
       "name": "Evaluation Task Force",
       "jurisdiction": "UK",
@@ -15703,7 +15724,7 @@
       "jurisdiction": "UK",
       "website": "https://www.gov.uk/government/organisations/intertrade-uk",
       "official_directory_url": "https://www.gov.uk/api/organisations/intertrade-uk",
-      "status": "joining",
+      "status": "live",
       "closed_at": null,
       "institution_type": "Other",
       "shared_publication_source_ids": [
@@ -24356,6 +24377,17 @@
       "jurisdiction": "UK",
       "website": "https://www.gov.uk/government/organisations/the-queen-elizabeth-memorial-committee",
       "official_directory_url": "https://www.gov.uk/api/organisations/the-queen-elizabeth-memorial-committee",
+      "status": "closed",
+      "closed_at": "2026-10-29T00:00:00.000+00:00",
+      "institution_type": "Sub organisation",
+      "shared_publication_source_ids": []
+    },
+    {
+      "id": "uk-gov:the-queen-elizabeth-memorial-programme",
+      "name": "The Queen Elizabeth Memorial Programme",
+      "jurisdiction": "UK",
+      "website": "https://www.gov.uk/government/organisations/the-queen-elizabeth-memorial-programme",
+      "official_directory_url": "https://www.gov.uk/api/organisations/the-queen-elizabeth-memorial-programme",
       "status": "live",
       "closed_at": null,
       "institution_type": "Sub organisation",
@@ -27653,7 +27685,7 @@
       "status": "official_publication_page_checked",
       "shared_publication_source_ids": [
         "us-occ-6f63126133",
-        "us-occ-817aa94321"
+        "us-occ-ca3024bfbd"
       ]
     },
     {
@@ -27916,7 +27948,7 @@
       "jurisdiction": "US",
       "website": "https://www.transportation.gov/briefing-room",
       "official_directory_url": "https://www.transportation.gov/briefing-room",
-      "status": "page_unavailable; verification pending",
+      "status": "official_publication_page_checked",
       "shared_publication_source_ids": [
         "us-dot-6464bc66ac"
       ]
@@ -28658,7 +28690,7 @@
       "jurisdiction": "CN",
       "website": "https://english.mofcom.gov.cn/Policies/AnnouncementsOrders/index.html",
       "official_directory_url": "https://english.mofcom.gov.cn/Policies/AnnouncementsOrders/index.html",
-      "status": "page_unavailable; verification pending",
+      "status": "official_publication_page_checked",
       "shared_publication_source_ids": [
         "cn-commerce-index"
       ]
@@ -28975,410 +29007,410 @@
   "directory_evidence": [
     {
       "url": "https://www.federalregister.gov/api/v1/agencies.json",
-      "verified_at": "2026-10-24T16:39:29.833670+00:00",
+      "verified_at": "2026-10-31T17:46:18.945180+00:00",
       "sha256": "7a806d209d75ee543e6e91506e485ec6a8f42687056e14a1484c8bc9e79f5443",
       "bytes": 695071
     },
     {
       "url": "https://www.gov.uk/api/organisations?page=1",
-      "verified_at": "2026-10-24T16:39:29.833670+00:00",
-      "sha256": "cc26475ecd24a21f6c352084986de2d5abb478ec90c53a370db1a121e4704f4b",
+      "verified_at": "2026-10-31T17:46:18.945180+00:00",
+      "sha256": "8f8e49cd4f984fd1ab58a64edfe1f28e2ddc4129c1924bc052f2b76f1984b540",
       "bytes": 20030
     },
     {
       "url": "https://www.gov.uk/api/organisations?page=2",
-      "verified_at": "2026-10-24T16:39:29.833670+00:00",
-      "sha256": "2c22d7fd805c419df435223ccc43bc7df2d7874b36d5f666f1e4e9c230cea7dc",
+      "verified_at": "2026-10-31T17:46:18.945180+00:00",
+      "sha256": "fd62b0cf46dbc038edc1a1cc875c5b57ef11125905b32d514160ffd422321823",
       "bytes": 21672
     },
     {
       "url": "https://www.gov.uk/api/organisations?page=3",
-      "verified_at": "2026-10-24T16:39:29.833670+00:00",
-      "sha256": "0c7da59b09038181575eccc3c61c166f62713749cd61ae0db4e11b7ff26903af",
+      "verified_at": "2026-10-31T17:46:18.945180+00:00",
+      "sha256": "4718648e07538a38ff2345c57e9b25010c0efc52043622cca155b52ff3f08e1b",
       "bytes": 18777
     },
     {
       "url": "https://www.gov.uk/api/organisations?page=4",
-      "verified_at": "2026-10-24T16:39:29.833670+00:00",
-      "sha256": "2c913e78b02817cb7d7d621a9c087ec1f58dfc3f9ae9c178b432a1258125ce92",
+      "verified_at": "2026-10-31T17:46:18.945180+00:00",
+      "sha256": "d5044d07c9e6006d04932bdcf1da7ce41548f713ea11e548137ced20b1eaca84",
       "bytes": 19794
     },
     {
       "url": "https://www.gov.uk/api/organisations?page=5",
-      "verified_at": "2026-10-24T16:39:29.833670+00:00",
-      "sha256": "1aeafddb7c90334ecb50fd60aef03f824dadb5d64a28337600bb0df8c57a5afd",
+      "verified_at": "2026-10-31T17:46:18.945180+00:00",
+      "sha256": "f56d500494433c42cad5f3c0b00e6f4c2759498833e3f42ca0dda38299383f83",
       "bytes": 18548
     },
     {
       "url": "https://www.gov.uk/api/organisations?page=6",
-      "verified_at": "2026-10-24T16:39:29.833670+00:00",
-      "sha256": "28d83163928692cddb0890ce6aa21744f2237fafe8119cd0f976a0dcc36e7f4c",
+      "verified_at": "2026-10-31T17:46:18.945180+00:00",
+      "sha256": "7141d9b19708b4bbbcf5d8ae1196c983433f040e0a396f835356c34dce925e57",
       "bytes": 19438
     },
     {
       "url": "https://www.gov.uk/api/organisations?page=7",
-      "verified_at": "2026-10-24T16:39:29.833670+00:00",
-      "sha256": "833d4063bbb98ad05eb0b1e56dcfb83f93da82ded4345c3aa784d5cfc6dbdb4e",
+      "verified_at": "2026-10-31T17:46:18.945180+00:00",
+      "sha256": "2197296c4049713a289c00c1a62dcf84d3bb50188fc3747002dd49f5919d7e38",
       "bytes": 30462
     },
     {
       "url": "https://www.gov.uk/api/organisations?page=8",
-      "verified_at": "2026-10-24T16:39:29.833670+00:00",
-      "sha256": "00c8e3b77be9e08362eb9b8858e73c8240170c35645fc7a1a751deff6b735e4e",
+      "verified_at": "2026-10-31T17:46:18.945180+00:00",
+      "sha256": "deb3e62afc09c5195e6448761168a8a7c4e7cd76faa441e730dc3159ea634d27",
       "bytes": 19837
     },
     {
       "url": "https://www.gov.uk/api/organisations?page=9",
-      "verified_at": "2026-10-24T16:39:29.833670+00:00",
-      "sha256": "aa011c6cc38b6af5af6421c04c0b02b52d406df2ee2af82a7974546ca07c0207",
+      "verified_at": "2026-10-31T17:46:18.945180+00:00",
+      "sha256": "b5009ccc958b494bc4c9c76ae603352d4e2eb751c7e59d910a242cc349aa9e57",
       "bytes": 25819
     },
     {
       "url": "https://www.gov.uk/api/organisations?page=10",
-      "verified_at": "2026-10-24T16:39:29.833670+00:00",
-      "sha256": "22cadc77ccca318d8c76461a34e62da085fe097557df4c98396dcbcc85da5ef3",
+      "verified_at": "2026-10-31T17:46:18.945180+00:00",
+      "sha256": "a8cbb5a10c5869a735ec8d6bc6d395c06f7225d4141e2159d1188578546c095e",
       "bytes": 19456
     },
     {
       "url": "https://www.gov.uk/api/organisations?page=11",
-      "verified_at": "2026-10-24T16:39:29.833670+00:00",
-      "sha256": "ec24354e349537cbe922e04d74fea0cdd3749b6c22c139603f37acc0a7911624",
+      "verified_at": "2026-10-31T17:46:18.945180+00:00",
+      "sha256": "2f73c1f06eed37adde24e45864410ac972f1a984fa887fa5c51e025ceeb8a2f1",
       "bytes": 18609
     },
     {
       "url": "https://www.gov.uk/api/organisations?page=12",
-      "verified_at": "2026-10-24T16:39:29.833670+00:00",
-      "sha256": "3624b57773d414d1bba786f062fdb8d020c4d6afdd044932b82f1f86f78a8c6b",
+      "verified_at": "2026-10-31T17:46:18.945180+00:00",
+      "sha256": "e8b59f28a4134101d4803cc1f813e54460f1d30fd3208f9f5141f1e98d0835e8",
       "bytes": 18967
     },
     {
       "url": "https://www.gov.uk/api/organisations?page=13",
-      "verified_at": "2026-10-24T16:39:29.833670+00:00",
-      "sha256": "35ee50371d59967061266d2c88d988219ff2812c816440969721e3566b8fd2ee",
+      "verified_at": "2026-10-31T17:46:18.945180+00:00",
+      "sha256": "da3e484a152cdafd29a984b86eb4ccc41904ba283967277aa52f0f11bf329a72",
       "bytes": 18795
     },
     {
       "url": "https://www.gov.uk/api/organisations?page=14",
-      "verified_at": "2026-10-24T16:39:29.833670+00:00",
-      "sha256": "0c73945bdb184ad97292a527acb903ce74c8dd32521f0e6388fa89d6401e90c2",
-      "bytes": 43505
+      "verified_at": "2026-10-31T17:46:18.945180+00:00",
+      "sha256": "2fcd3a8ea2a6f564950ea03e35f67c5bace58b7922c9094a3ea7436efacf81dc",
+      "bytes": 43685
     },
     {
       "url": "https://www.gov.uk/api/organisations?page=15",
-      "verified_at": "2026-10-24T16:39:29.833670+00:00",
-      "sha256": "7e7228539fc27bf066efee56cda77c6e6258ff1fb3ddc338cb7b5ab333c00265",
-      "bytes": 53062
+      "verified_at": "2026-10-31T17:46:18.945180+00:00",
+      "sha256": "60d7905e1d6b14a14fdace3e5c04f6ae74031cac45eaeea67e87c63e9a0f0c01",
+      "bytes": 53212
     },
     {
       "url": "https://www.gov.uk/api/organisations?page=16",
-      "verified_at": "2026-10-24T16:39:29.833670+00:00",
-      "sha256": "0705bb58ec67e7b46d9e539488f13a5a362e9afd9128f871332f6c35f483dc63",
+      "verified_at": "2026-10-31T17:46:18.945180+00:00",
+      "sha256": "9b61b052ded95929b967ebfcb975971a45a334f69fda1daf6b81b960723d70c0",
       "bytes": 29928
     },
     {
       "url": "https://www.gov.uk/api/organisations?page=17",
-      "verified_at": "2026-10-24T16:39:29.833670+00:00",
-      "sha256": "6a45f15b8397ee6ce569e306f66dd4dfc218d007e0079a1cad3802da90ed3bbc",
+      "verified_at": "2026-10-31T17:46:18.945180+00:00",
+      "sha256": "7ef326fed88dde2d664cd2e0aa11dd3b2d299a0b08e28541aa2b21b14fc828c5",
       "bytes": 20364
     },
     {
       "url": "https://www.gov.uk/api/organisations?page=18",
-      "verified_at": "2026-10-24T16:39:29.833670+00:00",
-      "sha256": "59ca3669aea3aac41f529f36458123ccc18f75085c954e3960abb26d3bae8f0d",
+      "verified_at": "2026-10-31T17:46:18.945180+00:00",
+      "sha256": "ac2da1be74391c814a59aa7b6c242b3230149127dfb421e0e61026c34140cd41",
       "bytes": 18956
     },
     {
       "url": "https://www.gov.uk/api/organisations?page=19",
-      "verified_at": "2026-10-24T16:39:29.833670+00:00",
-      "sha256": "ff0e0380ffa4575090719dc4e5465a4267867441ea0a2de7642af3e67906f72d",
-      "bytes": 18627
+      "verified_at": "2026-10-31T17:46:18.945180+00:00",
+      "sha256": "9a08d11ec92b1491eca0d1bfb43c6e8fbc1fc7f1f771cc51fd490d47e7dcc538",
+      "bytes": 18749
     },
     {
       "url": "https://www.gov.uk/api/organisations?page=20",
-      "verified_at": "2026-10-24T16:39:29.833670+00:00",
-      "sha256": "3c3225025a8805c1863020a7566ecf8a1c33a0ab90658fb2c703e8b0e366b6bd",
-      "bytes": 19012
+      "verified_at": "2026-10-31T17:46:18.945180+00:00",
+      "sha256": "264ac1773bef27e3b02ca9217b145ab0f85066bbf4abccde0cf1fa84b1883525",
+      "bytes": 18857
     },
     {
       "url": "https://www.gov.uk/api/organisations?page=21",
-      "verified_at": "2026-10-24T16:39:29.833670+00:00",
-      "sha256": "d93bcebeec2148b34b7e0d6671ded93bd486a009907e3c8fdc5a423c9f2fd3c2",
-      "bytes": 21550
+      "verified_at": "2026-10-31T17:46:18.945180+00:00",
+      "sha256": "ae53546c2daf152f4362076ed336a227fbe81ee0ae2ac0f5b67438ef2d7eb6fc",
+      "bytes": 21351
     },
     {
       "url": "https://www.gov.uk/api/organisations?page=22",
-      "verified_at": "2026-10-24T16:39:29.833670+00:00",
-      "sha256": "7447b1eb3e6294876be52756cea3f1f8a9b3a2dae440e29efaa81030290309f7",
-      "bytes": 21926
+      "verified_at": "2026-10-31T17:46:18.945180+00:00",
+      "sha256": "ce352be7ef002a74b4e19b4e328af33aad44f8bd96f6009da9fc1da36f612cd3",
+      "bytes": 22076
     },
     {
       "url": "https://www.gov.uk/api/organisations?page=23",
-      "verified_at": "2026-10-24T16:39:29.833670+00:00",
-      "sha256": "4987d7b4a00095f5567e628c88f6f96ebb3aebc6c7beb18e30ca01693584e34a",
-      "bytes": 20878
+      "verified_at": "2026-10-31T17:46:18.945180+00:00",
+      "sha256": "9870e03e00abb89888d67aaeecbc4d74c0d451085c373a1aa0099940f218bff0",
+      "bytes": 20648
     },
     {
       "url": "https://www.gov.uk/api/organisations?page=24",
-      "verified_at": "2026-10-24T16:39:29.833670+00:00",
-      "sha256": "0a82ad967e9e560ceb0ec5ba63443ce68dc289d5328b37cdf142eb8b5c6a9713",
-      "bytes": 21845
+      "verified_at": "2026-10-31T17:46:18.945180+00:00",
+      "sha256": "6fbfb839de90f4207b4a08a736e8b6a4fe7c002cf6fb5b2740a15845fcfbf2dc",
+      "bytes": 22271
     },
     {
       "url": "https://www.gov.uk/api/organisations?page=25",
-      "verified_at": "2026-10-24T16:39:29.833670+00:00",
-      "sha256": "390b1ea8d8df17624dbe301c6ec06c9d2bace57f1df63e4c7f5625a27bfb806b",
-      "bytes": 21228
+      "verified_at": "2026-10-31T17:46:18.945180+00:00",
+      "sha256": "05de23d4e23020be3031abb928d15ecf600f4cda7655887c2d170a6434b44d8e",
+      "bytes": 20938
     },
     {
       "url": "https://www.gov.uk/api/organisations?page=26",
-      "verified_at": "2026-10-24T16:39:29.833670+00:00",
-      "sha256": "ebee4a6d0121d5ab521334abf1c3fde39be12fb0571789f3471288ac2abca34d",
-      "bytes": 18805
+      "verified_at": "2026-10-31T17:46:18.945180+00:00",
+      "sha256": "97564f0dde6cd87791534322fa6c161cf282ea43cf2f9f0057b0372ed7c3d2ee",
+      "bytes": 18702
     },
     {
       "url": "https://www.gov.uk/api/organisations?page=27",
-      "verified_at": "2026-10-24T16:39:29.833670+00:00",
-      "sha256": "ddca3486726e44595cb9634463f92640d6ec89b1839a2d757eeca58a3608db34",
-      "bytes": 28366
+      "verified_at": "2026-10-31T17:46:18.945180+00:00",
+      "sha256": "51bd2801a520898b1c24f6886c3c3bebadccd9c35a861df33480be97d6c86021",
+      "bytes": 28023
     },
     {
       "url": "https://www.gov.uk/api/organisations?page=28",
-      "verified_at": "2026-10-24T16:39:29.833670+00:00",
-      "sha256": "693412fdcc30d51edb78a87c13ad0de89e643d8066777b03ff380e3a40a5888f",
-      "bytes": 34080
+      "verified_at": "2026-10-31T17:46:18.945180+00:00",
+      "sha256": "d5c6b0f53f3b68aa533db29a92553e1ff174c173dfdc01850dcd457455c17457",
+      "bytes": 34685
     },
     {
       "url": "https://www.gov.uk/api/organisations?page=29",
-      "verified_at": "2026-10-24T16:39:29.833670+00:00",
-      "sha256": "1c2bc361dc6825474b273fed64fe8f483b378ba0c5366f9b39474eca0fc91064",
-      "bytes": 20900
+      "verified_at": "2026-10-31T17:46:18.945180+00:00",
+      "sha256": "c3d9c9153d7601895e08afafc06d6d3a2ee377154f691a2e6c5f0959050b8749",
+      "bytes": 20867
     },
     {
       "url": "https://www.gov.uk/api/organisations?page=30",
-      "verified_at": "2026-10-24T16:39:29.833670+00:00",
-      "sha256": "17f001154efde15785987157ef166c8bc2be1a825bcd1b1e6657967fefd3ba03",
-      "bytes": 18863
+      "verified_at": "2026-10-31T17:46:18.945180+00:00",
+      "sha256": "b25fef04b7fe1d27746ba94312519f60b0f5fff160aaaa62a8c66e809c939899",
+      "bytes": 18905
     },
     {
       "url": "https://www.gov.uk/api/organisations?page=31",
-      "verified_at": "2026-10-24T16:39:29.833670+00:00",
-      "sha256": "7701ee7bf4c0f047a918d2f3aeda0d42a4e736e12801fc965b0171c7fcb2a17d",
-      "bytes": 21102
+      "verified_at": "2026-10-31T17:46:18.945180+00:00",
+      "sha256": "ad7e9a2f9543f23a3576861bc7bacfe3b64619637c6633ddda2090f19caef434",
+      "bytes": 21101
     },
     {
       "url": "https://www.gov.uk/api/organisations?page=32",
-      "verified_at": "2026-10-24T16:39:29.833670+00:00",
-      "sha256": "72a9b4e5cf7f83a38eb1819f80c1d9a58c5fdf937af314d1c8cf773b4f04bb56",
-      "bytes": 19421
+      "verified_at": "2026-10-31T17:46:18.945180+00:00",
+      "sha256": "b78f98da96db579d360b78a9169213b313f9c791076836fc728275d036934813",
+      "bytes": 19639
     },
     {
       "url": "https://www.gov.uk/api/organisations?page=33",
-      "verified_at": "2026-10-24T16:39:29.833670+00:00",
-      "sha256": "2b950d855c2905012a76c111fef168e22b14a1c33c4bc9f71c7b091ac0195910",
-      "bytes": 18315
+      "verified_at": "2026-10-31T17:46:18.945180+00:00",
+      "sha256": "30a6d2f9362a2a867c7f658c97b913f7e0cb5faffc2d5baafa6cbfffc22503f3",
+      "bytes": 18241
     },
     {
       "url": "https://www.gov.uk/api/organisations?page=34",
-      "verified_at": "2026-10-24T16:39:29.833670+00:00",
-      "sha256": "d40262f6c9baad2d8f83a59df1ba23e2f41f6a45e7bff6448b2e295f1f46c86d",
-      "bytes": 19023
+      "verified_at": "2026-10-31T17:46:18.945180+00:00",
+      "sha256": "6b32ee0bd867958feb49082ae48af97060b320d447854a5750a73d25267087e3",
+      "bytes": 18906
     },
     {
       "url": "https://www.gov.uk/api/organisations?page=35",
-      "verified_at": "2026-10-24T16:39:29.833670+00:00",
-      "sha256": "54a115c4acb0cd4e74fae42d875317e428198dfba05c570c52676fa365702e90",
-      "bytes": 42619
+      "verified_at": "2026-10-31T17:46:18.945180+00:00",
+      "sha256": "3778f1220476e099f3041c08d241b8ffaa51f67a2e595042649df264cdd32dec",
+      "bytes": 42380
     },
     {
       "url": "https://www.gov.uk/api/organisations?page=36",
-      "verified_at": "2026-10-24T16:39:29.833670+00:00",
-      "sha256": "8d62b3827903eddb6b7ac08ee66509f726e5c939b4011f695a78ccb5bc12aaf0",
-      "bytes": 19090
+      "verified_at": "2026-10-31T17:46:18.945180+00:00",
+      "sha256": "ba24b888082823f3124f766180df9a009a5ceb25d3d469a5889dbf7f1c28d7b7",
+      "bytes": 19157
     },
     {
       "url": "https://www.gov.uk/api/organisations?page=37",
-      "verified_at": "2026-10-24T16:39:29.833670+00:00",
-      "sha256": "a0f86d9f495f0d5db8e222c597d7fd1d638ad0cc156f1106b48315748291bb9e",
-      "bytes": 22008
+      "verified_at": "2026-10-31T17:46:18.945180+00:00",
+      "sha256": "9c6cf5e5e331142d3494215bd1baa3988ae0d48fa2b10621ef188302db920332",
+      "bytes": 21523
     },
     {
       "url": "https://www.gov.uk/api/organisations?page=38",
-      "verified_at": "2026-10-24T16:39:29.833670+00:00",
-      "sha256": "928e17232ed642f0aede5faef81488e37cee747ac8dfbbd3b2590f13a2717115",
-      "bytes": 19764
+      "verified_at": "2026-10-31T17:46:18.945180+00:00",
+      "sha256": "ff9ec69e571b8314c110c3bb20c4c26d978ee44a4e186fa5c120378ad78c1543",
+      "bytes": 20447
     },
     {
       "url": "https://www.gov.uk/api/organisations?page=39",
-      "verified_at": "2026-10-24T16:39:29.833670+00:00",
-      "sha256": "65652ed644f070906b4ff74d58c436e7339a18fde0a210a294c5ef66cd79d880",
-      "bytes": 20079
+      "verified_at": "2026-10-31T17:46:18.945180+00:00",
+      "sha256": "1c0c64863aaf1a7379a88095788416b02df80022970f5a3082f81a1cf2eab042",
+      "bytes": 19587
     },
     {
       "url": "https://www.gov.uk/api/organisations?page=40",
-      "verified_at": "2026-10-24T16:39:29.833670+00:00",
-      "sha256": "e8479a743fb40fa0e83a658e5639be3dcffd83f154e0adda6fcc7c57439e3346",
-      "bytes": 17686
+      "verified_at": "2026-10-31T17:46:18.945180+00:00",
+      "sha256": "2f61a55fdaf92440b96221d8418f50dc7e292c04995655817af5a6ab19193962",
+      "bytes": 18204
     },
     {
       "url": "https://www.gov.uk/api/organisations?page=41",
-      "verified_at": "2026-10-24T16:39:29.833670+00:00",
-      "sha256": "d5e353d17df769e5d7d28a5493b69f8bb0a8b3a4837638ccfdc99d9aaa7eca32",
-      "bytes": 35897
+      "verified_at": "2026-10-31T17:46:18.945180+00:00",
+      "sha256": "2210adb27d8b1084b2c0308f6e3d946d4ecb5e43559766622b1ad0c6c63b3dbd",
+      "bytes": 35837
     },
     {
       "url": "https://www.gov.uk/api/organisations?page=42",
-      "verified_at": "2026-10-24T16:39:29.833670+00:00",
-      "sha256": "40fc06571d4317693a327e769f2e5a4b5d0ca6f1d1f14c30122fdf59fa8fa09e",
-      "bytes": 21124
+      "verified_at": "2026-10-31T17:46:18.945180+00:00",
+      "sha256": "fc79d5dc3db7c3c2e67ca95750f9e4eb780cb390e9bd1b2cf026420019af472a",
+      "bytes": 21001
     },
     {
       "url": "https://www.gov.uk/api/organisations?page=43",
-      "verified_at": "2026-10-24T16:39:29.833670+00:00",
-      "sha256": "75dc5c8e3736e7bd527a1a4442523bf41f311337d1aab699123d644f9cef0a1a",
-      "bytes": 22550
+      "verified_at": "2026-10-31T17:46:18.945180+00:00",
+      "sha256": "374e4f9b9dcb09155eb1b2d95aed74f3e30a17eb3f6ce4a1f0b76c317325e03e",
+      "bytes": 22399
     },
     {
       "url": "https://www.gov.uk/api/organisations?page=44",
-      "verified_at": "2026-10-24T16:39:29.833670+00:00",
-      "sha256": "5c0aff1bede040e273c9a3d62caef02e5a628dfc3c0ce59c4ac2f0878d29f0e6",
-      "bytes": 20621
+      "verified_at": "2026-10-31T17:46:18.945180+00:00",
+      "sha256": "df5055ba1e73aaa778700151e5c9d06f200639f589ba383770591332673be6db",
+      "bytes": 20791
     },
     {
       "url": "https://www.gov.uk/api/organisations?page=45",
-      "verified_at": "2026-10-24T16:39:29.833670+00:00",
-      "sha256": "aae3c6ec751e4d6ba333d447c2f2e64a5ab917f69619bc23f8d771a105c9b735",
-      "bytes": 19243
+      "verified_at": "2026-10-31T17:46:18.945180+00:00",
+      "sha256": "b708a0888bc7b4fbfb10ef159b0ab7423c3938becf93d08290b09d6a04d2e21f",
+      "bytes": 19288
     },
     {
       "url": "https://www.gov.uk/api/organisations?page=46",
-      "verified_at": "2026-10-24T16:39:29.833670+00:00",
-      "sha256": "ea5b1b63c2a86d67a8a153262ae2f6ad848bfc35b65fe559091fb6bf1c315f48",
-      "bytes": 18915
+      "verified_at": "2026-10-31T17:46:18.945180+00:00",
+      "sha256": "fd9fdbd3d5039dfb8eab0e97af52650a84f447efca5470ff0d7682af421d5e0e",
+      "bytes": 18935
     },
     {
       "url": "https://www.gov.uk/api/organisations?page=47",
-      "verified_at": "2026-10-24T16:39:29.833670+00:00",
-      "sha256": "533e9157fa13d5e8b22ea3615296141ac5299a13943352f719f422c79cdef460",
-      "bytes": 17743
+      "verified_at": "2026-10-31T17:46:18.945180+00:00",
+      "sha256": "3d46a116763c3cf63ee76cb9e9e44bc4d26bda9b4862114214753e3db5194a14",
+      "bytes": 17907
     },
     {
       "url": "https://www.gov.uk/api/organisations?page=48",
-      "verified_at": "2026-10-24T16:39:29.833670+00:00",
-      "sha256": "6b114d449dc37736655bd9c2e68f7ddbf3ba7985d5b42c9145c4a6eaf16fe5f0",
-      "bytes": 18472
+      "verified_at": "2026-10-31T17:46:18.945180+00:00",
+      "sha256": "a7f063ef8bb5841aa29e32b2c678e933ed9831229989db32a39030d83261530e",
+      "bytes": 18343
     },
     {
       "url": "https://www.gov.uk/api/organisations?page=49",
-      "verified_at": "2026-10-24T16:39:29.833670+00:00",
-      "sha256": "ad7badf546278537ab333bdc9f95ba3570dbf35cc6a340f23035667209745b87",
-      "bytes": 19640
+      "verified_at": "2026-10-31T17:46:18.945180+00:00",
+      "sha256": "23e557ad6e3daf65e0a7c84b362c33ca0d579dee9dd52c9fa1c203cf4a29397b",
+      "bytes": 19718
     },
     {
       "url": "https://www.gov.uk/api/organisations?page=50",
-      "verified_at": "2026-10-24T16:39:29.833670+00:00",
-      "sha256": "f6e6397535e1341045844dbe9cf70aa8df4cde6c9e99ddf2d177b0052956dfad",
-      "bytes": 19675
+      "verified_at": "2026-10-31T17:46:18.945180+00:00",
+      "sha256": "fac68c6522d8b1fa984e79ffd9d01de1cc569e450076c2431a7933b06c97690f",
+      "bytes": 19545
     },
     {
       "url": "https://www.gov.uk/api/organisations?page=51",
-      "verified_at": "2026-10-24T16:39:29.833670+00:00",
-      "sha256": "f731e9b7acf84b850f1fb37c85f97c93e4ddac4bcce3afbacdfe4b67f756c9f3",
-      "bytes": 20491
+      "verified_at": "2026-10-31T17:46:18.945180+00:00",
+      "sha256": "2f1cf6b36982b9520ab209fbe5f60df24aaa2a3119c32fd6fa36db42a0d32dd1",
+      "bytes": 20601
     },
     {
       "url": "https://www.gov.uk/api/organisations?page=52",
-      "verified_at": "2026-10-24T16:39:29.833670+00:00",
-      "sha256": "1a1a7863c29b11ac325e680d4e3e7bd8ddf68ce74a5af5bc1e1079aed5382c32",
-      "bytes": 17961
+      "verified_at": "2026-10-31T17:46:18.945180+00:00",
+      "sha256": "d73dc3bf6cd0dd952d73b70c303bb5068b6e5a6a4979ed3822999200cf0a42b6",
+      "bytes": 17855
     },
     {
       "url": "https://www.gov.uk/api/organisations?page=53",
-      "verified_at": "2026-10-24T16:39:29.833670+00:00",
-      "sha256": "ad3f07ca1e9f01ddbfc54fb294a358a901834d4bbc6027a03dd70bdf61ede6e6",
-      "bytes": 19147
+      "verified_at": "2026-10-31T17:46:18.945180+00:00",
+      "sha256": "96f64c0dcacfb86d3ca5e6590fcb39296741a386d7d3a4785754ad5404e96ea6",
+      "bytes": 19196
     },
     {
       "url": "https://www.gov.uk/api/organisations?page=54",
-      "verified_at": "2026-10-24T16:39:29.833670+00:00",
-      "sha256": "2c0d92e0aca94437df5012766bf8b0dfd394837be0ad6aa408507e3d56e12b42",
-      "bytes": 19347
+      "verified_at": "2026-10-31T17:46:18.945180+00:00",
+      "sha256": "9aaac3932d7c2cb39748b9a516d14fdb8a7dacedee0a37ff9cf993794c1414cd",
+      "bytes": 19139
     },
     {
       "url": "https://www.gov.uk/api/organisations?page=55",
-      "verified_at": "2026-10-24T16:39:29.833670+00:00",
-      "sha256": "38d4d6468d7a62ce9b80ad7c76e540f80c4ba05ac84f6daea62603c017fb4afa",
-      "bytes": 19837
+      "verified_at": "2026-10-31T17:46:18.945180+00:00",
+      "sha256": "a809d8ad69b15809c9fd2d4139cb4b76dfce6a7ba4f62f272bd6a2c4208e8176",
+      "bytes": 19796
     },
     {
       "url": "https://www.gov.uk/api/organisations?page=56",
-      "verified_at": "2026-10-24T16:39:29.833670+00:00",
-      "sha256": "4b0d919edaefbd11a8c16ec5353e5f3ef9e6da184866362d0ba126ce78ab8521",
-      "bytes": 18578
+      "verified_at": "2026-10-31T17:46:18.945180+00:00",
+      "sha256": "bd7983df6e5253d3f1fdcd4f51555274982c4b301f777115c5b4c879ed8ab8b9",
+      "bytes": 18606
     },
     {
       "url": "https://www.gov.uk/api/organisations?page=57",
-      "verified_at": "2026-10-24T16:39:29.833670+00:00",
-      "sha256": "8828160017b78fa55b2d087933c22ae36d5334c92c113fbf80116b9ef321733c",
-      "bytes": 19589
+      "verified_at": "2026-10-31T17:46:18.945180+00:00",
+      "sha256": "dbbc355cdf31072be9f6ac6c57744a68806bf59a2ca12f65c50f6d37cae7dc74",
+      "bytes": 19838
     },
     {
       "url": "https://www.gov.uk/api/organisations?page=58",
-      "verified_at": "2026-10-24T16:39:29.833670+00:00",
-      "sha256": "f9aaf0561560574ab7f272a34a0feb62b3b2d87f1f28b07f6eb9b150b616707e",
-      "bytes": 21297
+      "verified_at": "2026-10-31T17:46:18.945180+00:00",
+      "sha256": "9e5475d6c965737311f9275a402766f7df494743d81df9db679bb92852873b7c",
+      "bytes": 21619
     },
     {
       "url": "https://www.gov.uk/api/organisations?page=59",
-      "verified_at": "2026-10-24T16:39:29.833670+00:00",
-      "sha256": "d333bf4d8453167e2957fd79b8d127efcca4fad0d6e45ecf4edc2637fef386e0",
-      "bytes": 21157
+      "verified_at": "2026-10-31T17:46:18.945180+00:00",
+      "sha256": "23839219464379d20a5ce8a8c6cb48cce814a473bcc4aea93818b532a62c4c97",
+      "bytes": 20777
     },
     {
       "url": "https://www.gov.uk/api/organisations?page=60",
-      "verified_at": "2026-10-24T16:39:29.833670+00:00",
-      "sha256": "2ba0c1ff10a860594fb808bb8568a3f24ab4dc6adea9cb024d7c3254cc543a8a",
-      "bytes": 24081
+      "verified_at": "2026-10-31T17:46:18.945180+00:00",
+      "sha256": "abe2b0a36ff3fecaea9fba03b813e69e61ce27e85ca7a3130e4c0a3e63888bda",
+      "bytes": 22839
     },
     {
       "url": "https://www.gov.uk/api/organisations?page=61",
-      "verified_at": "2026-10-24T16:39:29.833670+00:00",
-      "sha256": "b138713f618d4e38599b7184104e24844a850ebac19226de27874b4c513f3738",
-      "bytes": 20690
+      "verified_at": "2026-10-31T17:46:18.945180+00:00",
+      "sha256": "35132a3b14c708d5d121798672002c381fd7aa9961ff74304daf2047410b0b66",
+      "bytes": 21995
     },
     {
       "url": "https://www.gov.uk/api/organisations?page=62",
-      "verified_at": "2026-10-24T16:39:29.833670+00:00",
-      "sha256": "452c782f18313de010901b513f9bb084521a3c96f117683e8e634c2cd4ea0b50",
-      "bytes": 18937
+      "verified_at": "2026-10-31T17:46:18.945180+00:00",
+      "sha256": "c386b9ae5f9589dfee7a3d6b451179ed8ad48fde8ada822ef8803aaab81de965",
+      "bytes": 19490
     },
     {
       "url": "https://www.gov.uk/api/organisations?page=63",
-      "verified_at": "2026-10-24T16:39:29.833670+00:00",
-      "sha256": "e116b28ad95fee9a8e908f93fcfb9a8b21dd1799a565abbf55af6085427b3f5b",
-      "bytes": 20924
+      "verified_at": "2026-10-31T17:46:18.945180+00:00",
+      "sha256": "40c0c195effcc1809efd400fbba18012232f2ff135591b9c18d5ba636845f46c",
+      "bytes": 20366
     },
     {
       "url": "https://www.gov.uk/api/organisations?page=64",
-      "verified_at": "2026-10-24T16:39:29.833670+00:00",
-      "sha256": "475892c0bc1533ae7189b645b6f3404c5b4ec914f99d7c6b4693e91e3bed4947",
-      "bytes": 8239
+      "verified_at": "2026-10-31T17:46:18.945180+00:00",
+      "sha256": "6cd9befefaddf850e6b57f4fead999fae6be33bd4e5e9427d7e1c8d7862bc10a",
+      "bytes": 10338
     },
     {
       "url": "https://www.govinfo.gov/feeds",
-      "verified_at": "2026-10-24T16:39:29.833670+00:00",
+      "verified_at": "2026-10-31T17:46:18.945180+00:00",
       "sha256": "87a1a404651e1af664a0ebceb4b27bb3a8cca3e45e0bcb98218caee9bd3fcc67",
       "bytes": 86771
     },
     {
       "url": "https://www.bis.org/about/organisation/members",
-      "verified_at": "2026-10-24T16:39:29.833670+00:00",
-      "sha256": "fee4d6808708df21ed1c8f016e2dae64d844bd851f7eeeae57e89ad26e5c2830",
-      "bytes": 140225
+      "verified_at": "2026-10-31T17:46:18.945180+00:00",
+      "sha256": "9f24e5149fe5bdd4e6d525058ca2ecff09e6e7a53afbb4d16708d9a30d58948b",
+      "bytes": 140238
     },
     {
       "url": "https://www.usa.gov/state-governments",
-      "verified_at": "2026-10-24T16:39:29.833670+00:00",
-      "sha256": "79f92cef57079aec10ac26fee2b217bba8c4e5cf762b0006cf0e14360144b78e",
+      "verified_at": "2026-10-31T17:46:18.945180+00:00",
+      "sha256": "2349472c0c0659a0e5989833905a7315e80f90207554e289e2d469f0b21c49b1",
       "bytes": 47944
     }
   ],
