@@ -1,6 +1,6 @@
 # Stock-book paper trading
 
-_Generated 2026-10-30T02:46:36 — calls 2026-08-13 → 2026-10-29_
+_Generated 2026-10-31T02:42:15 — calls 2026-08-13 → 2026-10-30_
 
 **Strategy:** LONG-only · top 10/day by book · entry close (16:00 ET) · hold 1w (exit 16:00 ET) · 10% of equity per trade · Futubull fees · cash-accounted (unfittable trades skipped and logged). Selection: `1d` stock-book buy list (prints ~13:00-15:45 ET, hence close entry).
 
@@ -10,11 +10,11 @@ _Generated 2026-10-30T02:46:36 — calls 2026-08-13 → 2026-10-29_
 
 | Start capital | Final equity | Return | Max DD | Trades | Skipped | Win rate |
 |---:|---:|---:|---:|---:|---:|---:|
-| $100,000 | $104,204.90 | **4.2%** | 9.9% | 87 | 495 | 57.5% |
+| $100,000 | $104,540.19 | **4.54%** | 9.9% | 87 | 504 | 57.5% |
 
 | Side | Trades | Win rate | P&L |
 |---:|---:|---:|---:|
-| BUY (long) | 87 | 57.5% | $4,204.92 |
+| BUY (long) | 87 | 57.5% | $4,540.20 |
 | SELL (short) | 0 | 0% | $0.00 |
 
 ## Day gate (per session)
@@ -76,6 +76,7 @@ _Generated 2026-10-30T02:46:36 — calls 2026-08-13 → 2026-10-29_
 | 2026-10-27 | UP | 5.515 | 1 | **OPEN** — predict score +5.51 >= +1.00 | — |
 | 2026-10-28 | UP | 6.621 | 1 | **OPEN** — predict score +6.62 >= +1.00 | — |
 | 2026-10-29 | DOWN | -6.946 | 1 | **CLOSED** — predict DOWN score -6.95 < +1.00 | events: high uncertainty |
+| 2026-10-30 | DOWN | -12.921 | 1 | **CLOSED** — predict DOWN score -12.92 < +1.00 | — |
 
 ## Last 25 filled trades
 
@@ -104,8 +105,8 @@ _Generated 2026-10-30T02:46:36 — calls 2026-08-13 → 2026-10-29_
 | 2026-10-16 16:00 ET | `ETON` | BUY | 205 | $50.31 | 2026-10-23 16:00 ET | $50.00 | $-68.95 | -0.67% | small |
 | 2026-10-16 16:00 ET | `WAY` | BUY | 377 | $27.36 | 2026-10-23 16:00 ET | $28.85 | $551.86 | 5.35% | mid |
 | 2026-10-19 16:00 ET | `CDNA` | BUY | 155 | $67.08 | 2026-10-26 16:00 ET | $69.10 | $308.07 | 2.96% | mid |
+| 2026-10-19 16:00 ET | `PRCH` | BUY | 592 | $17.65 | 2026-10-26 16:00 ET | $17.37 | $-181.22 | -1.73% | small |
 | 2026-10-19 16:00 ET | `CBRL` | BUY | 151 | $69.02 | 2026-10-26 16:00 ET | $68.84 | $-32.17 | -0.31% | small |
-| 2026-10-19 16:00 ET | `SHOO` | BUY | 232 | $44.96 | 2026-10-26 16:00 ET | $42.76 | $-516.50 | -4.95% | mid |
 
 Full records: `data/book_paper/trades.csv` (every fill with ET timestamps, prices, fees), `skipped.csv`, `equity_curve.csv`. Lever sweep: `BOOK_STRATEGY_SWEEP.md`. Dashboard: `dashboard/book-paper/index.html`.
 

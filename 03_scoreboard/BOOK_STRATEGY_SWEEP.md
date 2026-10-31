@@ -4,22 +4,22 @@ Every lever combo re-scored on the latest payload. **Sorted by trimmed compound*
 
 | # | Side | Filter | Rank | N | Entry | Hold | Gate | Trimmed % | Raw % | Hit | Trades | Days |
 |---:|---|---|---|---:|---|---|---|---:|---:|---:|---:|---:|
-| 1 | long | book | book | 5 | close | 1w | score | **40.8** | 41.4 | 0.65 | 103 | 22 |
-| 2 | long | book | book | 5 | close | 1w | none | **34.8** | 97.7 | 0.571 | 189 | 45 |
-| 3 | long | book | book | 5 | close | 3d | none | **31.8** | 71.5 | 0.563 | 197 | 47 |
-| 4 | long | book | book | 5 | close | 3d | score | **31.0** | 35.5 | 0.617 | 107 | 22 |
-| 5 | long | book | book | 15 | close | 1w | score | **29.3** | 29.2 | 0.583 | 264 | 23 |
-| 6 | long | book | book | 15 | close | 1w | none | **26.7** | 85.6 | 0.544 | 410 | 46 |
-| 7 | long | book | book | 10 | close | 3d | none | **26.6** | 39.0 | 0.548 | 343 | 48 |
-| 8 | long | book | book | 15 | close | 3d | none | **25.2** | 25.8 | 0.531 | 429 | 48 |
-| 9 | long | book | book | 10 | close | 3d | score | **21.7** | 38.8 | 0.568 | 199 | 23 |
-| 10 | long | book | book | 15 | close | 3d | score | **21.0** | 25.3 | 0.542 | 275 | 23 |
-| 11 | long | book | book | 10 | close | 1w | score | **18.6** | 35.7 | 0.597 | 191 | 23 |
-| 12 | long | book | book | 10 | close | 1w | none | **16.2** | 93.5 | 0.55 | 327 | 46 |
-| 13 | long | book | book | 5 | close | 1d | none | **10.9** | 59.8 | 0.512 | 205 | 49 |
+| 1 | long | book | book | 5 | close | 1w | none | **40.0** | 118.1 | 0.571 | 196 | 46 |
+| 2 | long | book | book | 5 | close | 3d | none | **39.0** | 37.4 | 0.556 | 207 | 48 |
+| 3 | long | book | book | 5 | close | 1w | score | **38.2** | 38.8 | 0.642 | 106 | 22 |
+| 4 | long | book | book | 5 | close | 3d | score | **37.1** | 45.0 | 0.613 | 111 | 23 |
+| 5 | long | book | book | 10 | close | 1w | none | **34.7** | 100.2 | 0.544 | 338 | 47 |
+| 6 | long | book | book | 10 | close | 3d | none | **32.3** | 37.9 | 0.542 | 356 | 49 |
+| 7 | long | book | book | 15 | close | 1w | none | **30.1** | 93.4 | 0.539 | 421 | 47 |
+| 8 | long | book | book | 10 | close | 3d | score | **29.2** | 47.3 | 0.569 | 204 | 24 |
+| 9 | long | book | book | 15 | close | 3d | none | **28.9** | 23.0 | 0.528 | 445 | 49 |
+| 10 | long | book | book | 15 | close | 1w | score | **28.6** | 28.5 | 0.581 | 267 | 23 |
+| 11 | long | book | book | 15 | close | 3d | score | **26.6** | 31.1 | 0.544 | 283 | 24 |
+| 12 | long | book | book | 10 | close | 1w | score | **17.1** | 34.0 | 0.593 | 194 | 23 |
+| 13 | long | book | book | 5 | close | 1d | none | **14.6** | 24.9 | 0.509 | 212 | 50 |
 | 14 | long | book | book | 5 | close | 1d | score | **6.4** | 8.8 | 0.518 | 114 | 24 |
-| 15 | long | book | book | 15 | close | 1d | none | **3.9** | 16.2 | 0.497 | 447 | 50 |
-| 16 | long | book | book | 10 | close | 1d | none | **0.8** | 21.7 | 0.48 | 354 | 50 |
+| 15 | long | book | book | 15 | close | 1d | none | **5.8** | 12.2 | 0.493 | 456 | 51 |
+| 16 | long | book | book | 10 | close | 1d | none | **2.6** | 17.5 | 0.477 | 363 | 51 |
 | 17 | long | book | book | 15 | close | 1d | score | **0.6** | 3.3 | 0.493 | 292 | 25 |
 | 18 | long | book | book | 10 | close | 1d | score | **-1.6** | 9.1 | 0.474 | 209 | 25 |
 
