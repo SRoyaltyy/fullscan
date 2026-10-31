@@ -1,0 +1,1321 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Scanner backtest</title>
+<style>
+:root{--bg:#0b1020;--card:#131b31;--line:#2b3552;--text:#edf2ff;--muted:#9cabc9;--good:#4ade80;--warn:#fbbf24}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:15px/1.45 system-ui,sans-serif}
+main{max-width:920px;margin:auto;padding:20px 16px 48px}
+h1{margin:0 0 6px;font-size:28px}
+.muted{color:var(--muted)}
+.row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:16px 0}
+button{background:#1d4ed8;color:white;border:0;border-radius:10px;padding:10px 16px;font:600 15px system-ui;cursor:pointer}
+button.secondary{background:#243049}
+button:disabled{opacity:.45;cursor:wait}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin:12px 0}
+.article{white-space:pre-wrap;max-height:320px;overflow:auto;margin:10px 0 0}
+a{color:#93c5fd}
+table{width:100%;border-collapse:collapse}
+th,td{text-align:left;padding:8px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--muted);font-weight:600}
+.pass{color:var(--good);font-weight:700}
+.quote{color:var(--muted);font-size:13px;margin:4px 0 0}
+.empty{color:var(--warn)}
+.badge{display:inline-block;background:#243049;border-radius:6px;padding:2px 8px;font-size:12px;color:var(--muted);margin-left:8px}
+.badge.full{background:#14532d;color:#bbf7d0}
+.badge.headline{background:#3b2f14;color:#fde68a}
+.badge.source-edgar{background:#1e3a5f;color:#bfdbfe}
+input[type=text]{background:#0f172a;border:1px solid var(--line);color:var(--text);border-radius:10px;padding:10px 14px;font:600 15px system-ui;width:180px;text-transform:uppercase}
+.factgroup{margin:10px 0}
+.factgroup h3{margin:0 0 6px;font-size:14px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
+.factterm{display:inline-block;background:#1a2440;border-radius:6px;padding:2px 8px;font-size:13px;margin:2px 4px 2px 0}
+details{margin:8px 0}
+summary{cursor:pointer;color:#93c5fd}
+.linklist li{margin:4px 0;cursor:pointer}
+.linklist li:hover{color:#93c5fd}
+.ticker-hit{color:var(--good);font-weight:700;cursor:pointer}
+.ticker-hit:hover{text-decoration:underline}
+textarea{width:100%;min-height:110px;background:#0f172a;color:var(--text);border:1px solid var(--line);border-radius:8px;padding:10px;font:15px system-ui}
+</style>
+</head>
+<body>
+<main>
+<h1>Scanner backtest</h1>
+<p id="completed-stock-results"><a href="completed/">Browse the archived stock universe: specific disclosures and exact source paragraphs</a></p>
+<p class="muted" id="status">Loading…</p>
+<p class="muted" id="snapshot">Checking scoring snapshot…</p>
+<p class="muted">Experimental classifier, not a validated accuracy result. The static page looks up an offline run; only live mode reruns Python. Filing identities cover only the issuers listed for that run.</p>
+<div class="row">
+  <button type="button" id="another" class="secondary" disabled>Another article</button>
+  <button type="button" id="test" disabled>Test</button>
+  <span class="badge" id="drawno"></span>
+</div>
+<div class="row">
+  <input type="text" id="ticker" list="tickerlist" placeholder="TICKER e.g. BB" maxlength="8">
+  <datalist id="tickerlist"></datalist>
+  <button type="button" id="analyze" class="secondary" disabled>Analyze ticker</button>
+  <button type="button" id="random-stock" class="secondary" disabled>Random stock</button>
+  <label><input type="checkbox" id="sec-only" checked> SEC-covered stocks only</label>
+  <span class="muted" id="ticker-hint">stock-side profile: what the engine knows</span>
+</div>
+<p class="muted" id="stock-pool"></p>
+<p id="stock-article-pair">Choose a stock and test an article to inspect that pair.</p>
+<article class="card" id="article">
+  <h2 id="title">Fetching an article…</h2>
+  <p class="muted" id="meta"></p>
+  <p><span class="badge headline" id="textbadge">headline only</span></p>
+  <div class="article" id="body"></div>
+</article>
+<section class="card" id="results" hidden>
+  <h2>Match results</h2>
+  <p id="decision"></p>
+  <div id="matches"></div>
+  <div id="article-keywords"></div>
+</section>
+<section class="card">
+  <h2>Compare any article to stock keywords</h2>
+  <p class="muted">Custom text uses browser-only matching, without the pinned spaCy parser or article-role analysis. Use the intake article draws to test the full cached Python/spaCy path. Custom comparisons use the displayed filing cutoff; dated intake tests exclude future filing evidence.</p>
+  <textarea id="keyword-text" aria-label="Article text to compare" placeholder="Western Digital faces hard-drive supply disruption"></textarea>
+  <button type="button" id="compare-keywords">Compare keywords</button>
+  <div id="custom-keywords"></div>
+</section>
+<section class="card" id="spacy" hidden>
+  <h2>spaCy analysis <span class="badge" id="spacy-cluster"></span></h2>
+  <p class="muted" id="spacy-note">Pinned article grammar from the scored text. Context-universe resolution remains unfinished.</p>
+  <div id="spacy-body"></div>
+</section>
+<section class="card" id="profile" hidden>
+  <h2 id="profile-title">Stock profile</h2>
+  <p class="muted" id="profile-meta"></p>
+  <p id="profile-warnings"></p>
+  <div id="profile-facts"></div>
+  <div id="profile-filing"></div>
+  <h3 class="factgroup">Intake articles linked to this ticker</h3>
+  <ul class="linklist" id="profile-links"></ul>
+</section>
+</main>
+<script>
+// Two modes, one scoring path.
+//  - live: served by `python -m src.scanner_backtest`; /api/* scores on demand.
+//  - static: GitHub Pages; matches are precomputed offline by
+//    scripts/export_backtest_static.py through the same engine="evidence"
+//    path, committed as results.jsonl, and "Test" is a lookup by article id.
+// Random draws use a seeded PRNG so every article is referable by number.
+let mode = null;           // "live" | "static"
+let current = null;
+let staticArticles = [];   // [{id,title,...}]
+let staticResults = new Map();
+let spacyResults = new Map();
+let spacyClusters = {};
+let staticMeta = null;
+let rngState = null;       // {seed, n}
+let staticProfiles = null; // ticker -> profile (lazy)
+let tickerIndex = null;    // ticker -> [{id, decision, tier, reasons}] (lazy)
+let selectedTicker = "", lastPairResult = null;
+const DEFAULT_SEED = 1722;
+
+function text(id, value) {
+  document.getElementById(id).textContent = value;
+}
+
+function renderSnapshot(snapshot) {
+  if (!snapshot || !snapshot.snapshot_id) {
+    text("snapshot", "Historical cache: engine/source fingerprints and scored input mode were not recorded. SEC-enriched display profiles may differ from the scoring board. Not the latest candidate.");
+    return;
+  }
+  const coverage = snapshot.filing_coverage || {};
+  const tickers = coverage.covered_tickers || [];
+  const review = coverage.scope === "archived_relationships_with_current_disclosures";
+  const deep = coverage.scope === "deep_filing_relationships" || review;
+  text("snapshot", `${snapshot.compiler_version} · input=${snapshot.input_mode} · snapshot ${snapshot.snapshot_id.slice(0, 16)}` +
+    (snapshot.source_revision ? ` · parser commit ${snapshot.source_revision.slice(0, 12)}` : "") +
+    ` · ${deep ? "SEC relationships" : "filing identities"}: ${tickers.length}/${coverage.catalog_tickers || "?"} tickers` +
+    (deep ? ` · ${coverage.filings.toLocaleString()} filings · ${coverage.companies.toLocaleString()} issuers` : "") +
+    (coverage.as_of ? ` · cutoff ${coverage.as_of}` : "") +
+    (tickers.length && tickers.length <= 10 ? ` · ${tickers.join(", ")}` : tickers.length ? "" : " · description-only") +
+    (deep ? " · missing relationships remain unknown" : " · full filing-business coverage: not established") +
+    (snapshot.profile_publication?.dataset_scope === "development_sample" ? " · DEVELOPMENT SAMPLE ONLY — whole-archive recovery is still running" : "") +
+    (review ? ` · ${coverage.detail_extractor} across the archived universe · original grammar retained; exhaustive new term inventory unavailable` : ""));
+  renderStockPool();
+}
+
+function coveredStockPool() {
+  const coverage=staticMeta?.snapshot?.filing_coverage;
+  return ["deep_filing_relationships","archived_relationships_with_current_disclosures"].includes(coverage?.scope) ? coverage.covered_tickers || [] : [];
+}
+
+function renderStockPool() {
+  const covered=coveredStockPool();
+  text("stock-pool",`SEC-covered stock pool: ${covered.length}${covered.length<=10 ? " ("+covered.join(", ")+")" : ""}. Uncheck SEC-only to draw from all catalog stocks; those without filings cannot test full stock-side extraction.`);
+}
+
+function renderSelectedPair() {
+  if (!selectedTicker) return;
+  const covered=coveredStockPool().includes(selectedTicker);
+  const scope=covered ? "SEC-backed stock" : "No complete SEC graph for this stock in this snapshot";
+  if (!lastPairResult) {text("stock-article-pair",`${selectedTicker} · ${scope}. Press Test for the current article.`);return;}
+  const comparison=lastPairResult.keyword_comparison;
+  if (!comparison) {text("stock-article-pair",`${selectedTicker} · ${scope}. This snapshot has no comparable keyword output.`);return;}
+  const hits=(comparison.matches || []).filter(r=>r.stock===selectedTicker);
+  const unresolved=(comparison.unresolved_matches || []).filter(r=>r.stock===selectedTicker).length;
+  const rejected=(comparison.rejected_matches || []).filter(r=>r.stock===selectedTicker).length;
+  const direct=(lastPairResult.passes || []).some(r=>r.ticker===selectedTicker);
+  text("stock-article-pair",`${selectedTicker} × article ${current?.id || ""} · ${scope} · engine pass: ${direct ? "yes" : "no"} · ${hits.length} aligned keyword candidates; ${unresolved} unresolved; ${rejected} rejected.`+(hits.length ? " "+hits.map(r=>`${r.relationship} → ${r.keyword}`).join("; ") : " No aligned keyword evidence for this pair; this does not prove no exposure exists."));
+}
+
+async function randomStock() {
+  if (!(await loadProfiles())) return;
+  const pool=document.getElementById("sec-only").checked ? coveredStockPool().filter(t=>staticProfiles[t]) : Object.keys(staticProfiles);
+  if (!pool.length) {text("stock-pool","No SEC-covered stocks are available in this snapshot.");return;}
+  const ticker=pool[Math.floor(Math.random()*pool.length)];
+  document.getElementById("ticker").value=ticker;
+  await showTickerProfile(ticker);
+}
+
+// mulberry32: tiny deterministic PRNG so draws are reproducible and
+// referable ("article #4821") for the accuracy loop.
+function mulberry32(seed) {
+  let a = seed >>> 0;
+  return function () {
+    a |= 0; a = (a + 0x6D2B79F5) | 0;
+    let t = Math.imul(a ^ (a >>> 15), 1 | a);
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+}
+
+function drawIndex() {
+  if (mode === "static" && staticArticles.length) {
+    if (rngState === null) rngState = {seed: DEFAULT_SEED, n: 0, rand: mulberry32(DEFAULT_SEED)};
+    rngState.n += 1;
+    return Math.floor(rngState.rand() * staticArticles.length);
+  }
+  return -1;
+}
+
+function showDrawNo(index) {
+  document.getElementById("drawno").textContent =
+    index >= 0 && rngState ? `draw #${rngState.n} · article #${index} · seed ${rngState.seed}` : "";
+}
+
+function renderArticle(article) {
+  lastPairResult=null;
+  renderSelectedPair();
+  current = article;
+  text("title", article.title || "(untitled)");
+  const bits = [article.source, article.published_at].filter(Boolean);
+  const meta = document.getElementById("meta");
+  meta.textContent = "";
+  if (bits.length) meta.append(bits.join(" · "));
+  if (article.url) {
+    if (bits.length) meta.append(" · ");
+    const link = document.createElement("a");
+    link.href = article.url;
+    link.target = "_blank";
+    link.rel = "noreferrer";
+    link.textContent = article.url;
+    meta.append(link);
+  }
+  if (article.truncated) {
+    if (meta.textContent) meta.append(" · ");
+    const t = document.createElement("span");
+    t.textContent = "display truncated; scoring used the complete declared input";
+    meta.append(t);
+  }
+  const badge = document.getElementById("textbadge");
+  if (article.input_mode === "headline") {
+    badge.textContent = "scored input: primary headline only";
+    badge.className = "badge headline";
+  } else if (article.full_text || article.input_mode === "full-text") {
+    badge.textContent = "full text";
+    badge.className = "badge full";
+  } else {
+    badge.textContent = "headline only";
+    badge.className = "badge headline";
+  }
+  text("body", article.text || "");
+  document.getElementById("results").hidden = true;
+  if (mode === "static") renderSpacy(article.id);
+}
+
+async function loadArticle() {
+  const button = document.getElementById("another");
+  button.disabled = true;
+  try {
+    if (mode === "static") {
+      const index = drawIndex();
+      const article = staticArticles[index];
+      if (!article) throw new Error("article pool is empty");
+      showDrawNo(index);
+      renderArticle(article);
+    } else {
+      const response = await fetch("/api/article");
+      const article = await response.json();
+      if (!response.ok) throw new Error(article.error || "could not fetch an article");
+      renderArticle(article);
+    }
+  } catch (err) {
+    text("title", "Could not fetch an article");
+    text("body", err.message);
+  } finally {
+    button.disabled = false;
+  }
+}
+
+function renderMatches(result) {
+  lastPairResult=result;
+  renderSelectedPair();
+  renderKeywordComparison(document.getElementById("article-keywords"), result.keyword_comparison);
+  const box = document.getElementById("results");
+  box.hidden = false;
+  const decision = document.getElementById("decision");
+  decision.textContent = `${result.decision || "scored"} · ${result.engine || "evidence"} · ${result.input_mode || "historical input mode unrecorded"} · ${result.pass_count} pass${result.pass_count === 1 ? "" : "es"}`;
+  const matches = document.getElementById("matches");
+  matches.textContent = "";
+  if (!result.passes || !result.passes.length) {
+    const p = document.createElement("p");
+    p.className = "empty";
+    p.textContent = "No stock passed.";
+    matches.append(p);
+    return;
+  }
+  const table = document.createElement("table");
+  const head = document.createElement("tr");
+  for (const label of ["Ticker", "Company", "Industry", "Tier", "Why"]) {
+    const th = document.createElement("th");
+    th.textContent = label;
+    head.append(th);
+  }
+  const thead = document.createElement("thead");
+  thead.append(head);
+  table.append(thead);
+  const body = document.createElement("tbody");
+  for (const row of result.passes) {
+    const tr = document.createElement("tr");
+    const cells = [
+      row.ticker,
+      row.name,
+      row.industry,
+      row.tier == null ? "" : String(row.tier),
+      (row.reasons || []).join(", "),
+    ];
+    cells.forEach((value, index) => {
+      const td = document.createElement("td");
+      if (index === 0) {
+        td.className = "ticker-hit";
+        td.textContent = value || "";
+        td.title = "show stock-side profile";
+        td.addEventListener("click", () => showTickerProfile(row.ticker));
+      } else {
+        td.textContent = value || "";
+      }
+      tr.append(td);
+    });
+    body.append(tr);
+    const evidence = (row.evidence || [])[0];
+    if (evidence && evidence.passage) {
+      const quote = document.createElement("tr");
+      const td = document.createElement("td");
+      td.colSpan = 5;
+      const p = document.createElement("p");
+      p.className = "quote";
+      const terms = (evidence.terms || []).join(", ");
+      p.textContent = (evidence.channel ? evidence.channel + " — " : "") + evidence.passage + (terms ? " [" + terms + "]" : "");
+      td.append(p);
+      const witness = evidence.stock_evidence || {};
+      if (witness.passage) {
+        const source = document.createElement("p");
+        source.className = "quote";
+        source.textContent = `Company witness: ${witness.source || ""} · ${witness.filing_date || "undated description"} · ${witness.accession || ""} · ${witness.section || ""} — ${witness.passage}`;
+        td.append(source);
+      }
+      quote.append(td);
+      body.append(quote);
+    }
+  }
+  table.append(body);
+  matches.append(table);
+}
+
+async function runTest() {
+  if (!current || !current.id) return;
+  const testedArticle=current;
+  const button = document.getElementById("test");
+  button.disabled = true;
+  button.textContent = "Running…";
+  try {
+    if (mode === "static") {
+      const result = staticResults.get(String(testedArticle.id));
+      if (!result) throw new Error("no precomputed result for this article id");
+      if (staticMeta.snapshot && result.snapshot_id !== staticMeta.snapshot.snapshot_id)
+        throw new Error("Cached result does not match this snapshot; regenerate artifacts.");
+      if(result.keyword_comparison_mode==="browser_preview" && !result.keyword_comparison) {
+        const index=await keywordIndexForText(testedArticle.text || "");
+        result.keyword_comparison=browserKeywordPreview(index,testedArticle.text || "",String(testedArticle.published_at || "").slice(0,10));
+      }
+      if(current?.id!==testedArticle.id) return;
+      renderMatches(result);
+    } else {
+      const response = await fetch("/api/test", {
+        method: "POST",
+        headers: {"content-type": "application/json"},
+        body: JSON.stringify({id: testedArticle.id}),
+      });
+      const result = await response.json();
+      if (!response.ok) throw new Error(result.error || "test failed");
+      if(current?.id!==testedArticle.id) return;
+      renderMatches(result);
+    }
+  } catch (err) {
+    const box = document.getElementById("results");
+    box.hidden = false;
+    text("decision", err.message);
+    document.getElementById("matches").textContent = "";
+  } finally {
+    button.disabled = false;
+    button.textContent = "Test";
+  }
+}
+
+async function loadStatic() {
+  const metaRes = await fetch("./meta.json?refresh=" + Date.now(), {cache: "no-store"});
+  staticMeta = metaRes.ok ? await metaRes.json() : {};
+  const version = (staticMeta.snapshot || {}).snapshot_id || staticMeta.generated_at || "historical";
+  const query = "?snapshot=" + encodeURIComponent(version);
+  const [artsRes, resultsRes] = await Promise.all([
+    fetch("./articles.json" + query),
+    fetch("./results.jsonl" + query),
+  ]);
+  const [spacyRes, clusterRes] = staticMeta.snapshot ? [{ok: false}, {ok: false}] : await Promise.all([
+    fetch("./spacy.jsonl" + query), fetch("./spacy-clusters.json" + query),
+  ]);
+  if (!artsRes.ok || !resultsRes.ok) throw new Error("static artifacts missing");
+  staticArticles = await artsRes.json();
+  const raw = await resultsRes.text();
+  for (const line of raw.split("\n")) {
+    const trimmed = line.trim();
+    if (!trimmed) continue;
+    const row = JSON.parse(trimmed);
+    staticResults.set(String(row.id), row);
+  }
+  if (spacyRes.ok) {
+    const sraw = await spacyRes.text();
+    for (const line of sraw.split("\n")) {
+      const trimmed = line.trim();
+      if (!trimmed) continue;
+      const row = JSON.parse(trimmed);
+      spacyResults.set(String(row.id), row);
+    }
+  }
+  spacyClusters = clusterRes.ok ? (await clusterRes.json()).clusters || {} : {};
+  if (!staticArticles.length) throw new Error("static article pool is empty");
+  const m = staticMeta || {};
+  renderSnapshot(m.snapshot);
+  const fullN = staticArticles.filter((a) => a.full_text).length;
+  text("status",
+    `precomputed · engine=${m.engine || "evidence"} · ${staticArticles.length} articles` +
+    (m.generated_at ? ` · run ${m.generated_at}` : "") +
+    (m.articles_with_passes != null ? ` · ${m.articles_with_passes} with passes` : "") +
+    (fullN ? ` · ${fullN} full-text bodies` : "") +
+    (spacyResults.size ? ` · spaCy layer: ${spacyResults.size}` : ""));
+  mode = "static";
+  document.getElementById("another").disabled = false;
+  document.getElementById("test").disabled = false;
+  document.getElementById("analyze").disabled = false;
+  document.getElementById("random-stock").disabled = false;
+}
+
+function renderSpacy(id) {
+  const box = document.getElementById("spacy");
+  const parsed=current?.article_parse;
+  if (parsed && String(current.id)===String(id)) {
+    box.hidden=false;
+    const model=parsed.parser || {};
+    text("spacy-cluster",`spaCy ${model.spacy || "unrecorded"} · ${model.model || "unrecorded"} ${model.model_version || ""}`);
+    text("spacy-note",`Exact scored ${current.input_mode || "headline"} · input hash ${parsed.input_sha256.slice(0,16)}. These are parser observations; concept senses and impact relevance remain unresolved.`);
+    const body=document.getElementById("spacy-body");body.replaceChildren();
+    const value=current.text || "", token=parsed.syntax || [], phrase=i=>{
+      const p=parsed.noun_phrases.find(p=>p.head===i) || token[i];
+      return p ? value.slice(p.start,p.end) : "";
+    };
+    function group(label,rows,render) {
+      const title=document.createElement("p");title.textContent=`${label} (${rows.length})`;body.append(title);
+      appendPaged(body,rows,row=>{const p=document.createElement("p");p.textContent=render(row);return p;});
+    }
+    group("Named entities",parsed.mentions,e=>`${value.slice(e.start,e.end)} · ${e.label} · characters ${e.start}–${e.end}`);
+    group("Noun phrases",parsed.noun_phrases,p=>`${value.slice(p.start,p.end)} · characters ${p.start}–${p.end}`);
+    const triples=[];
+    token.forEach((verb,i)=>{
+      if (!["VERB","AUX"].includes(verb.pos)) return;
+      const subjects=token.map((t,j)=>({t,j})).filter(({t})=>t.head===i && ["nsubj","nsubjpass","csubj"].includes(t.dependency));
+      const objects=token.map((t,j)=>({t,j})).filter(({t})=>t.head===i && ["dobj","obj","attr","oprd"].includes(t.dependency));
+      for (const s of subjects) for (const o of objects) triples.push(`${phrase(s.j)} → ${verb.lemma} → ${phrase(o.j)}`);
+    });
+    group("Observed subject → verb → object",triples,x=>x);
+    const detail=document.createElement("details"), summary=document.createElement("summary");
+    summary.textContent=`Full dependency parse (${token.length} tokens)`;detail.append(summary);
+    appendPaged(detail,token,t=>{const p=document.createElement("p");p.textContent=`${value.slice(t.start,t.end)} · ${t.pos} · ${t.dependency} → ${phrase(t.head)}`;return p;});
+    body.append(detail);
+    return;
+  }
+  const row = spacyResults.get(String(id));
+  if (!row || (staticMeta && staticMeta.snapshot)) { box.hidden = true; return; }
+  box.hidden = false;
+  const clusterInfo = row.cluster != null ? spacyClusters[String(row.cluster)] : null;
+  text("spacy-cluster", clusterInfo
+    ? `theme cluster #${row.cluster} · ${clusterInfo.count} articles · ${clusterInfo.label}`
+    : (row.cluster != null ? `theme cluster #${row.cluster}` : ""));
+  const body = document.getElementById("spacy-body");
+  body.textContent = "";
+  const addBlock = (title, items, render) => {
+    if (!items || !items.length) return;
+    const h = document.createElement("p");
+    h.className = "quote";
+    h.textContent = title;
+    body.append(h);
+    const ul = document.createElement("ul");
+    for (const item of items.slice(0, 12)) {
+      const li = document.createElement("li");
+      li.textContent = render(item);
+      ul.append(li);
+    }
+    body.append(ul);
+  };
+  for (const [label, values] of Object.entries(row.entities || {})) {
+    addBlock(label, values, (v) => v);
+  }
+  addBlock("SUBJECT → VERB → OBJECT", row.svos || [], (t) => `${t[0]}  →  ${t[1]}  →  ${t[2]}`);
+  addBlock("subjects", row.subjects || [], (v) => v);
+  addBlock("objects", row.objects || [], (v) => v);
+}
+
+async function loadProfiles() {
+  if (staticProfiles) return true;
+  const hint = document.getElementById("ticker-hint");
+  hint.textContent = "loading stock profiles…";
+  const query = staticMeta && staticMeta.snapshot ? "?snapshot=" + encodeURIComponent(staticMeta.snapshot.snapshot_id) : "";
+  const [pRes, iRes] = await Promise.all([
+    fetch("./profiles.json" + query),
+    fetch("./ticker-index.json" + query),
+  ]);
+  if (!pRes.ok || !iRes.ok) {
+    hint.textContent = "profile artifacts missing";
+    return false;
+  }
+  staticProfiles = await pRes.json();
+  tickerIndex = await iRes.json();
+  const list = document.getElementById("tickerlist");
+  for (const t of Object.keys(staticProfiles).sort()) {
+    const opt = document.createElement("option");
+    opt.value = t;
+    list.append(opt);
+  }
+  hint.textContent = `${Object.keys(staticProfiles).length} tickers loaded · type one and press Enter`;
+  return true;
+}
+
+async function jumpToArticle(id) {
+  const index = staticArticles.findIndex((a) => String(a.id) === String(id));
+  if (index < 0) return;
+  showDrawNo(index);
+  renderArticle(staticArticles[index]);
+  const result = staticResults.get(String(id));
+  if (result) await runTest();
+  document.getElementById("article").scrollIntoView({behavior: "smooth"});
+}
+
+const KIND_LABELS = {
+  company_alias: "Aliases & names",
+  derived_initialism: "Initialisms",
+  operating_brand: "Operating brands / segments",
+  product: "Products & outputs",
+  service: "Services",
+  input: "Inputs & supplies",
+  supplier: "Suppliers",
+  customer: "Customers",
+  partner: "Partners",
+  competitor: "Competitors",
+  person: "People",
+  jurisdiction: "Jurisdictions",
+  exposure: "Exposures (Item 1A risks)",
+  business: "Business description terms",
+  history: "History",
+  dependency: "Operational dependencies",
+  offering: "Products and services offered",
+  regulatory_exposure: "Agencies, laws and approvals",
+  policy_exposure: "Policy and macro risk mentions",
+  differentiation_claim: "Company claims about differentiation",
+};
+
+async function loadPackedProfile(path, expectedHash) {
+  if (!/^(scoring-profiles\/[a-f0-9]+|filing-profiles\/issuers\/\d{10}|keyword-index(?:\/[a-f0-9]{1,2})?)\.json\.gz$/.test(path))
+    throw new Error("Invalid profile asset path");
+  const query = staticMeta.snapshot ? "?snapshot=" + encodeURIComponent(staticMeta.snapshot.snapshot_id) : "";
+  const base = staticMeta.asset_base_url || "./";
+  if (base !== "./" && !/^https:\/\/raw\.githubusercontent\.com\/SRoyaltyy\/fullscan\/[a-f0-9]{40}\/dashboard\/scanner-backtest\/$/.test(base))
+    throw new Error("Invalid keyword asset origin");
+  const response = await fetch(base + path + query,{credentials:"omit"});
+  if (!response.ok) throw new Error("Filing profile could not be loaded");
+  const bytes = await response.arrayBuffer();
+  return decodePackedBytes(bytes,expectedHash);
+}
+
+async function loadExternalGraph(url, expectedHash) {
+  const base = staticMeta.snapshot?.profile_publication?.base_url || "";
+  if (!base.startsWith("https://") || !url.startsWith(base.replace(/\/$/,"")+"/")) throw new Error("Untrusted external profile location");
+  const response = await fetch(url,{credentials:"omit"});
+  if (!response.ok) throw new Error("External archive unavailable; keyword evidence is still accessible above");
+  return decodePackedBytes(await response.arrayBuffer(),expectedHash);
+}
+
+async function decodePackedBytes(bytes, expectedHash) {
+  const digest = await crypto.subtle.digest("SHA-256", bytes);
+  const actual = Array.from(new Uint8Array(digest), n => n.toString(16).padStart(2, "0")).join("");
+  if (actual !== expectedHash) throw new Error("Filing profile does not match this snapshot");
+  const stream = new Blob([bytes]).stream().pipeThrough(new DecompressionStream("gzip"));
+  return JSON.parse(await new Response(stream).text());
+}
+
+function scannerRowVisible(row, articleDate="") {
+  if(row.relationship==="issuer") return true;
+  const policy=row.scanner;
+  if(!policy?.eligible || row.assertion==="negated" || row.qualifiers?.applicability==="explicitly_out_of_scope") return false;
+  const events=(policy.connection_events || []).filter(e=>!articleDate || e.date<=articleDate);
+  return events.length ? events.at(-1).connected : !(policy.connection_events || []).length;
+}
+
+function consolidateKeywordRecords(records) {
+  const groups=new Map();
+  for(const row of records) {
+    // An alias is consolidated only when the existing identity is resolved.
+    // Distinct roles, legal scope and article spans stay separate.
+    const identity=typeof row.identity?.id==="string" && !row.identity.id.startsWith("unresolved-") ? row.identity.id : (row.id || JSON.stringify([row.keyword,row.object_type,row.qualifiers || {}]));
+    const key=JSON.stringify([row.stock,identity,row.scanner?.group,row.scanner?.label,row.qualifiers?.applicability || "",row.assertion==="historical",row.assertion==="potential",row.article_span || null]);
+    if(!groups.has(key)) groups.set(key,{...row,evidence_ids:[],term_occurrence_ids:[],source_record_ids:[],keyword_aliases:[],review_reasons:[]});
+    const item=groups.get(key);
+    for(const field of ["evidence_ids","term_occurrence_ids","review_reasons"]) item[field]=[...new Set([...item[field],...(row[field] || [])])];
+    item.source_record_ids.push(row.id);
+    item.keyword_aliases=[...new Set([...item.keyword_aliases,row.keyword])];
+    item.first_filing_date=[item.first_filing_date,row.first_filing_date].filter(Boolean).sort()[0];
+    item.latest_filing_date=[item.latest_filing_date,row.latest_filing_date].filter(Boolean).sort().at(-1);
+  }
+  return [...groups.values()].sort((a,b)=>(a.scanner?.group || "").localeCompare(b.scanner?.group || "") || a.keyword.localeCompare(b.keyword));
+}
+
+function renderKeywordRecords(container, records, evidence = {}, inspectSource = null) {
+  records = records.filter(row=>scannerRowVisible(row,row.article_date || ""));
+  const sourceRecordCount=records.length;
+  records = consolidateKeywordRecords(records);
+  const query = document.createElement("input");
+  query.placeholder = "Search concrete term, stock or relationship";
+  query.setAttribute("aria-label", "Search stock keyword records");
+  const list = document.createElement("div");
+  function draw() {
+    list.replaceChildren();
+    const q = (query.value || "").trim().toLowerCase();
+    const rows = records.filter(r => !q || [r.stock,...r.keyword_aliases,r.scanner?.group,r.scanner?.label,r.assertion].join(" ").toLowerCase().includes(q));
+    const count = document.createElement("p");
+    count.textContent = `${rows.length.toLocaleString()} of ${records.length.toLocaleString()} unique concrete connections · ${sourceRecordCount.toLocaleString()} source records consolidated · all retained evidence available`;
+    list.append(count);
+    const groups=new Map();
+    for(const row of rows) {const group=row.scanner?.group || "Company identity";if(!groups.has(group))groups.set(group,[]);groups.get(group).push(row);}
+    for(const [group,items] of groups) {
+    const heading=document.createElement("h4");heading.textContent=`${group} (${items.length})`;list.append(heading);
+    appendPaged(list, items, row => {
+      const detail = document.createElement("details");
+      const title = document.createElement("summary");
+      title.textContent = `${row.stock} → ${row.scanner?.label || "company identity"} → ${row.keyword}${row.assertion==="potential" ? " [possible connection]" : row.assertion==="historical" ? " [historical]" : ""}${row.review_required ? " [review required]" : ""}`;
+      const flags = document.createElement("p");
+      flags.textContent = (row.review_reasons || []).join(" · ")+(row.article_span ? ` · Article: ${row.article_span.text} (${row.article_span.start}–${row.article_span.end})` : "")+` · Filing dates ${row.first_filing_date || "—"} to ${row.latest_filing_date || "—"}`;
+      if(row.keyword_aliases.length>1) flags.textContent+=` · Source names: ${row.keyword_aliases.join(" / ")}`;
+      if (row.identity) flags.textContent += ` · Source ${row.identity.type}: ${row.identity.id}`;
+      if (row.alignment) flags.textContent += ` · Alignment ${row.alignment.status}: ${row.alignment.reasons.join(", ")} · Context support ${row.alignment.context_score}`;
+      if (row.article_capacity) flags.textContent += ` · Article role: ${row.article_capacity.dependency}; ${row.article_capacity.governor.text} → ${row.article_capacity.objects.map(o=>o.text).join(", ")}${row.article_capacity.negated ? " (negated)" : ""}`;
+      if (row.exposure_path) flags.textContent += ` · Indirect path through ${row.keyword}; article-context relevance and financial impact remain unassessed`;
+      const qualifiers = document.createElement("p");
+      qualifiers.textContent = JSON.stringify(row.qualifiers || {});
+      const stock = document.createElement("button");
+      stock.textContent = `Inspect ${row.stock} and its filing evidence`;
+      stock.addEventListener("click", () => showTickerProfile(row.stock));
+      detail.append(title, flags, qualifiers, stock);
+      if (inspectSource) {
+        const inspect = document.createElement("button");
+        inspect.textContent = "Review exact source paragraphs for this keyword";
+        inspect.addEventListener("click", () => inspectSource(row));
+        detail.append(inspect);
+      }
+      const witnesses = (row.evidence_ids || []).flatMap(id => (evidence[id] || {}).witnesses || []);
+      appendPaged(detail,witnesses,w => {
+        const block = document.createElement("blockquote");
+        const s = w.source || {};
+        block.textContent = [s.form,s.filing_date,s.accession,s.document,s.section,w.offset_scope === "quote_only" ? "source quote; document offsets unavailable" : `characters ${w.start}–${w.end}`,w.quote].filter(Boolean).join(" · ");
+        if (s.url && /^https:\/\/www\.sec\.gov\/Archives\//.test(s.url)) {
+          const link = document.createElement("a"); link.href = s.url;
+          link.target = "_blank"; link.rel = "noopener noreferrer";
+          link.textContent = " SEC source"; block.append(link);
+        }
+        return block;
+      });
+      return detail;
+    });
+    }
+  }
+  query.addEventListener("input",draw);
+  container.append(query,list); draw();
+}
+
+function renderKeywordComparison(container, comparison) {
+  container.replaceChildren();
+  const title = document.createElement("h3"); title.textContent = "Stock → relationship → keyword";
+  const note = document.createElement("p");
+  note.textContent = comparison ? (comparison.alignment_version ? "Entity/concept alignment checked before relevance. Inspect the identity, context reasons, filing date and quote. Uncertain candidates require review." : "Historical keyword-only comparison; entity alignment was not recorded.") : "Keyword comparison is unavailable in this older snapshot. Waiting for the new parser export.";
+  if(comparison?.execution==="browser_preview") note.textContent="On-demand browser keyword preview, not an offline spaCy comparison. Cached engine passes remain separate. Historical previews abstain on mixed or future-dated source evidence; applicability and relevance still require review.";
+  container.append(title,note);
+  if (!comparison) return;
+  renderKeywordRecords(container,comparison.matches || []);
+  for (const [key,label] of [["unresolved_matches","Unresolved identities"],["rejected_matches","Rejected identity matches"]]) {
+    const rows = comparison[key] || [];
+    if (!rows.length) continue;
+    const detail=document.createElement("details"), summary=document.createElement("summary");
+    summary.textContent=`${label} (${rows.length}) — excluded from aligned matches`;
+    detail.append(summary); renderKeywordRecords(detail,rows); container.append(detail);
+  }
+  for (const row of comparison.broad_matches || []) {
+    const p = document.createElement("p");
+    p.textContent = `${row.keyword} → ${row.relationship}: ${row.candidate_stock_count} possible stocks; additional stock context required.`;
+    container.append(p);
+  }
+}
+
+let keywordSearchIndex = null;
+let keywordManifest = null;
+const keywordBuckets = new Map();
+function prepareKeywordIndex(payload) {
+  const first = new Map(), df = new Map(), peers = new Map();
+  for (const entry of payload.phrases) {
+    if(entry.row.relationship!=="issuer" && !entry.row.scanner?.eligible) continue;
+    const initial = entry.phrase[0];
+    if (!first.has(initial)) first.set(initial,[]);
+    first.get(initial).push(entry);
+    if (entry.row.identity) {
+      const key=entry.phrase.join(" ");
+      if (!peers.has(key)) peers.set(key,[]);
+      peers.get(key).push(entry.row.identity);
+    }
+    if (entry.row.relationship !== "issuer") {
+      if (!df.has(entry.row.normalized)) df.set(entry.row.normalized,new Set());
+      df.get(entry.row.normalized).add(entry.row.stock);
+    }
+  }
+  return {...payload,first,df,peers};
+}
+
+function entitySurface(value) {
+  return [...value.matchAll(/\d+(?:[.\/-]\d+)*|[A-Za-z][A-Za-z0-9]*(?:['’][A-Za-z0-9]+)*/g)].map(m=>m[0].replaceAll("’", "'").toLowerCase()).join(" ");
+}
+
+function entityContextWords(index,text) {
+  const stop=new Set(index.stopwords || []);
+  return new Set([...text.matchAll(/\d+(?:[.\/-]\d+)*|[A-Za-z][A-Za-z0-9]*(?:['’][A-Za-z0-9]+)*/g)].map(m=>{
+    const raw=m[0].replaceAll("’", "'").toLowerCase().replace(/'s$/,"");
+    return index.normalization[raw] || raw;
+  }).filter(w=>w.length>=3 && !stop.has(w)));
+}
+
+function alignKeywordEntity(index,entity,text,start,end,peers=[]) {
+  if (!entity || !index.identity_policy) return {status:"unresolved",reasons:["entity_metadata_unavailable"],context_score:0};
+  const breaks=[...text.slice(0,start).matchAll(/[!?;\n]|\.(?=\s|$)/g)];
+  const left=breaks.length ? breaks.at(-1).index+breaks.at(-1)[0].length : 0;
+  const right=text.slice(end).search(/[!?;\n]|\.(?=\s|$)/);
+  const context=text.slice(Math.max(left,start-180),Math.min(right<0 ? text.length : end+right,end+180));
+  const actual=text.slice(start,end), raw=entitySurface(actual).replace(/'s$/,""), kind=entity.type;
+  const exact=entity.aliases.includes(raw) || entity.aliases.includes(entitySurface(actual));
+  const words=entityContextWords(index,context), context_score=[...words].filter(w=>entity.source_context_terms.includes(w)).length;
+  const re=pattern=>new RegExp(pattern,"i");
+  const policy=index.identity_policy;
+  const escaped=s=>s.replace(/[.*+?^${}()|[\]\\]/g,"\\$&");
+  const owner=entity.owner_aliases.some(a=>new RegExp(`(^|[^A-Za-z0-9])${escaped(a)}([^A-Za-z0-9]|$)`).test(entitySurface(context)));
+  const competitors=new Set(peers.filter(p=>p.type===kind && (!owner || p.owner===entity.owner)).map(p=>p.id));
+  let status="unresolved", reason="";
+  if (kind==="PERSON") {
+    const prefix=text.slice(Math.max(0,start-70),start), previous=prefix.match(/\b([A-Z][a-z]+)\s*$/);
+    const allowed=new Set([...entity.name.toLowerCase().split(" "),"ceo","cfo","coo","cto","ciso","officer","director","president","founder","chairman","chairwoman","mr","mrs","ms","dr"]);
+    const attachedRole=re(policy.person_before).test(prefix) || re(policy.person_after).test(text.slice(end,end+70));
+    if (!exact) {status="rejected";reason="proper_name_surface_differs";}
+    else if (raw.split(" ").length===1 && previous && !allowed.has(previous[1].toLowerCase())) {status="rejected";reason="different_given_name";}
+    else if ((!attachedRole || entitySurface(actual).endsWith("'s")) && re(policy.company).test(context) && raw.split(" ").length===1) {status="rejected";reason="company_usage_is_not_officer_identity";}
+    else if (raw.split(" ").length===1 && !(owner && attachedRole)) reason="surname_requires_employer_and_person_role";
+    else if (competitors.size>1) reason="multiple_person_identities_require_employer";
+    else {
+      status="resolved";reason=owner ? "person_name_and_affiliation_supported" : "unique_full_person_name";
+    }
+  } else if (["ORG","PRODUCT","GPE","GOV_AGENCY","LAW"].includes(kind)) {
+    if (!exact) {status="rejected";reason="proper_name_surface_differs";}
+    else if (kind==="ORG" && (re(policy.place).test(context) || (re(policy.person).test(context) && !re(policy.company).test(context)))) reason="organization_usage_not_established";
+    else if (competitors.size>1) reason="alias_has_multiple_entity_identities";
+    else if (kind==="ORG" && !entity.registered_organization && !owner) reason="unregistered_name_requires_stock_or_typed_context";
+    else if (["PRODUCT","GPE"].includes(kind) && !owner) reason="type_or_owner_context_required";
+    else if (kind==="ORG" && ["apple","amazon","orange","target","shell","gap","meta"].includes(raw) && !re(policy.company).test(context)) reason="common_name_requires_organization_context";
+    else {status="resolved";reason="typed_name_and_scope_supported";}
+  } else {
+    const actualWords=entityContextWords(index,actual), candidates=[];
+    for (const sense of entity.senses) {
+      if (sense.positive) {
+        if (re(sense.negative).test(context)) continue;
+        candidates.push({id:sense.id,score:re(sense.positive).test(context) ? 2 : 0});
+      } else candidates.push({id:sense.id,score:[...words].filter(w=>!actualWords.has(w) && sense.terms.includes(w)).length});
+    }
+    candidates.sort((a,b)=>b.score-a.score || b.id.localeCompare(a.id));
+    let selected=null;
+    if (candidates.length===1 && (!entity.senses[0]?.positive || candidates[0].score>=2)) selected=candidates[0].id;
+    else if (candidates.length && candidates[0].score>=2 && (candidates.length===1 || candidates[0].score>candidates[1].score)) selected=candidates[0].id;
+    if (entity.sense && selected===entity.sense) {status="resolved";reason="same_contextual_concept_sense";}
+    else if (selected && entity.sense) {status="rejected";reason="different_concept_sense";}
+    else reason="concept_sense_not_established_on_both_sides";
+  }
+  return {status,reasons:[reason],stock_entity_id:entity.id,article_entity_id:status==="resolved" ? entity.id : null,source_type:kind,article_types:[],context_score};
+}
+
+function compareKeywordText(index, text, {articleDate=""}={}) {
+  const tokens = [...text.matchAll(/\d+(?:[.\/-]\d+)*|[A-Za-z][A-Za-z0-9]*(?:['’][A-Za-z0-9]+)*/g)];
+  const words = tokens.map(t => {
+    const word = t[0].toLowerCase().replaceAll("’", "'").replace(/'s$/, "");
+    return index.normalization[word] || word;
+  });
+  const hits = [], named = new Set(), seen = new Set(), broad = new Map(), matches = [], unresolved_matches=[],rejected_matches=[];
+  for (let i = 0; i < words.length; i++) {
+    for (const {phrase,row} of index.first.get(words[i]) || []) {
+      if(!scannerRowVisible(row,articleDate)) continue;
+      // A preview cannot reconstruct a historical subset of a mixed-date
+      // context. Abstain on the entire row instead of importing later evidence.
+      if(articleDate && row.relationship!=="issuer" && (!row.latest_filing_date || row.latest_filing_date>articleDate || (row.source_declared_identity?.known_from || "")>articleDate)) continue;
+      const end = i+phrase.length;
+      if (end > words.length || phrase.some((w,j) => w !== words[i+j]) || /[.!?;:\n]/.test(text.slice(tokens[i].index+tokens[i][0].length,tokens[end-1].index))) continue;
+      const start=tokens[i].index, finish=tokens[end-1].index+tokens[end-1][0].length;
+      if (row.relationship === "issuer") {
+        if (alignKeywordEntity(index,row.identity,text,start,finish).status==="resolved") named.add(row.stock);
+      } else hits.push({row,phrase,start,end:finish});
+    }
+  }
+  const entityRoles = new Set(["issuer","supplier","customer","competitor","partner","subsidiary","regulator","approval_authority","acquisition_target","divestiture_target"]);
+  const grouped=new Map(), longest=[];
+  for (const hit of hits) {if (!grouped.has(hit.row.id)) grouped.set(hit.row.id,[]); grouped.get(hit.row.id).push(hit);}
+  for (const group of grouped.values()) {
+    let previousEnd=-1;
+    for (const hit of group.sort((a,b)=>a.start-b.start || b.end-a.end)) {if (hit.end<=previousEnd) continue;longest.push(hit);previousEnd=hit.end;}
+  }
+  for (const {row,phrase,start,end} of longest) {
+    const key = `${row.id}:${start}:${end}`;
+    if (seen.has(key)) continue; seen.add(key);
+    const alignment=alignKeywordEntity(index,row.identity,text,start,end,index.peers.get(phrase.join(" ")) || []);
+    const candidate={...row,article_date:articleDate,alignment,article_span:{start:[...text.slice(0,start)].length,end:[...text.slice(0,end)].length,text:text.slice(start,end)}};
+    if (entityRoles.has(row.relationship) && row.relationship!=="issuer") candidate.exposure_path={stock:row.stock,relationship:row.relationship,entity:row.keyword,entity_id:row.identity.id,order:2,core_industry_inferred:false,context_alignment:"not_assessed",impact:"not_inferred"};
+    if (alignment.status!=="resolved") {(alignment.status==="rejected" ? rejected_matches : unresolved_matches).push(candidate);continue;}
+    const count = (index.df.get(row.normalized) || new Set()).size;
+    if (count >= Math.max(8,Math.ceil(index.catalog_tickers*.05)) && !entityRoles.has(row.relationship) && !named.has(row.stock)) {
+      broad.set(`${row.normalized}:${row.relationship}`,{keyword:row.keyword,relationship:row.relationship,candidate_stock_count:count});
+    } else matches.push({...candidate,decision:"identity_aligned_candidate"});
+  }
+  return {matches,broad_matches:[...broad.values()],unresolved_matches,rejected_matches,alignment_version:index.alignment_version,stock_passes_changed:false};
+}
+
+function browserKeywordPreview(index,value,articleDate="") {
+  const result=compareKeywordText(index,value,{articleDate});
+  result.execution="browser_preview";
+  for(const key of ["matches","unresolved_matches","rejected_matches"]) result[key]=result[key].map(row=>({...row,
+    usable_for_scoring:false,review_required:true,
+    review_reasons:[...(row.review_reasons || []),"browser_preview_requires_offline_validation"]}));
+  return result;
+}
+
+async function keywordIndexForText(article) {
+  const asset = staticMeta && staticMeta.keyword_index;
+  if (!asset) throw new Error("The current published snapshot has no keyword index yet.");
+  if (!keywordManifest) keywordManifest = await loadPackedProfile(asset.path,asset.sha256);
+  if(keywordManifest.bucket_method && keywordManifest.bucket_method!=="token_sha256_2") throw new Error("Unsupported keyword bucket method");
+  const wanted = new Set(await Promise.all([...article.matchAll(/\d+(?:[.\/-]\d+)*|[A-Za-z][A-Za-z0-9]*(?:['’][A-Za-z0-9]+)*/g)].map(async t => {
+    const raw = t[0].toLowerCase().replaceAll("’", "'").replace(/'s$/, "");
+    const word = keywordManifest.normalization[raw] || raw;
+    if(keywordManifest.bucket_method==="token_sha256_2") {
+      const digest=new Uint8Array(await crypto.subtle.digest("SHA-256",new TextEncoder().encode(word)));
+      return digest[0].toString(16).padStart(2,"0");
+    }
+    return (word.charCodeAt(0)%16).toString(16);
+  })));
+  await Promise.all([...wanted].map(async bucket => {
+    if (!keywordBuckets.has(bucket) && keywordManifest.buckets[bucket]) {
+      const entry = keywordManifest.buckets[bucket];
+      keywordBuckets.set(bucket,await loadPackedProfile(entry.path,entry.sha256));
+    } else if(keywordBuckets.has(bucket)) {
+      const cached=keywordBuckets.get(bucket);keywordBuckets.delete(bucket);keywordBuckets.set(bucket,cached);
+    }
+  }));
+  for(const bucket of keywordBuckets.keys()) {
+    if(keywordBuckets.size<=Math.max(32,wanted.size)) break;
+    if(!wanted.has(bucket)) keywordBuckets.delete(bucket);
+  }
+  keywordSearchIndex = prepareKeywordIndex({...keywordManifest,phrases:[...wanted].flatMap(bucket=>keywordBuckets.get(bucket) || [])});
+  return keywordSearchIndex;
+}
+
+async function compareCustomKeywords() {
+  const button = document.getElementById("compare-keywords"), box = document.getElementById("custom-keywords");
+  const article = document.getElementById("keyword-text").value || "";
+  if (!article.trim()) { box.textContent = "Paste a headline or article first."; return; }
+  button.disabled = true; box.textContent = "Loading the keyword index…";
+  try {
+    let result;
+    if (mode === "live") {
+      const response = await fetch("/api/keywords",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({text:article})});
+      result = await response.json(); if (!response.ok) throw new Error(result.error);
+    } else {
+      const index=await keywordIndexForText(article);
+      result = browserKeywordPreview(index,article);
+    }
+    renderKeywordComparison(box,result);
+  } catch (err) { box.textContent = err.message; }
+  finally { button.disabled = false; }
+}
+document.getElementById("compare-keywords").addEventListener("click",compareCustomKeywords);
+
+function appendPaged(container, entries, render, pageSize = 100) {
+  let position = 0;
+  const more = document.createElement("button");
+  more.type = "button";
+  function next() {
+    more.remove();
+    for (const entry of entries.slice(position, position + pageSize)) container.append(render(entry));
+    position += pageSize;
+    if (position < entries.length) {
+      more.textContent = `Show more (${entries.length - position} remaining)`;
+      container.append(more);
+    }
+  }
+  more.addEventListener("click", next);
+  next();
+}
+
+function highlightedParagraph(paragraph, spans) {
+  const block = document.createElement("div");
+  block.className = "article"; block.style = "white-space:pre-wrap";
+  // Python source offsets count Unicode code points, not JavaScript UTF-16 units.
+  const chars = Array.from(paragraph.text);
+  const ranges = spans.filter(s=>s.start < paragraph.end && s.end > paragraph.start)
+    .map(s=>[Math.max(0,s.start-paragraph.start),Math.min(chars.length,s.end-paragraph.start)])
+    .sort((a,b)=>a[0]-b[0]);
+  let cursor=0;
+  for (const [start,end] of ranges) {
+    if (end<=cursor) continue;
+    if (start>cursor) { const text=document.createElement("span"); text.textContent=chars.slice(cursor,start).join(""); block.append(text); }
+    const mark=document.createElement("mark"); mark.textContent=chars.slice(Math.max(cursor,start),end).join(""); block.append(mark);
+    cursor=end;
+  }
+  const tail=document.createElement("span"); tail.textContent=chars.slice(cursor).join(""); block.append(tail);
+  return block;
+}
+
+function renderTermReview(container, graph) {
+  if (!graph.term_inventory && !graph.specific_records) return null;
+  const terms=graph.term_inventory?.terms || [];
+  const paragraphs=new Map((graph.paragraphs || []).map(p=>[p.id,p]));
+  const sources=new Map(graph.sources.map(s=>[s.id,s]));
+  const facts=new Map(graph.facts.map(f=>[f.id,f]));
+  const disclosures=new Map((graph.specific_records?.records || []).map(r=>["specific:"+r.id,r]));
+  const root=document.createElement("section"), heading=document.createElement("h3");
+  heading.textContent="Review keywords and their exact source paragraphs";
+  const note=document.createElement("p");
+  note.textContent="Every entity and terminology occurrence remains separate. Labels are parser observations; relationship rules can be wrong. Unresolved relationships and concept senses are shown explicitly. Source offsets refer to archived text, whose paragraph boundaries may differ from SEC page layout.";
+  if (!graph.term_inventory) note.textContent="Current disclosure records and preserved relationship witnesses retain exact source paragraphs. An exhaustive new spaCy occurrence inventory is unavailable for this archive projection. Source offsets refer to archived text.";
+  const query=document.createElement("input"); query.setAttribute("aria-label","Search all stock term occurrences"); query.placeholder="Search keyword, label or company relationship";
+  const selection=document.createElement("p"), list=document.createElement("div");
+  let chosen=null;
+  function sourceBlock(p, spans) {
+    const source=sources.get(p.source_id) || {}, wrap=document.createElement("div"), origin=document.createElement("p");
+    origin.textContent=[source.form,source.filing_date,source.accession,source.document,source.section,`Paragraph ${p.id}`,`characters ${p.start}–${p.end}`].filter(Boolean).join(" · ");
+    wrap.append(origin,highlightedParagraph(p,spans));
+    if (/^https:\/\/www\.sec\.gov\/Archives\//.test(source.url || "")) {
+      const link=document.createElement("a");link.href=source.url;link.target="_blank";link.rel="noopener noreferrer";link.textContent="Read SEC source";wrap.append(link);
+    }
+    return wrap;
+  }
+  function draw() {
+    list.replaceChildren();
+    const q=(query.value || "").trim().toLowerCase();
+    const ids=chosen ? new Set(chosen.term_occurrence_ids || []) : null;
+    const rows=terms.filter(t=>(!ids || ids.has(t.id)) && (!q || [t.text,...(t.entity_types || []),...(t.kinds || []),...(t.relationships || []).flatMap(r=>[r.subject,r.predicate,r.object])].join(" ").toLowerCase().includes(q)));
+    const count=document.createElement("p"); count.textContent=`${rows.length.toLocaleString()} of ${terms.length.toLocaleString()} term occurrences · each has its own source references`;list.append(count);
+    selection.textContent=chosen ? `Selected decision: ${chosen.stock} → ${chosen.relationship} → ${chosen.keyword} [${chosen.assertion}].` : "All extracted occurrences, including terms with unresolved company relationships.";
+    if (chosen) {
+      const witnessIds=new Set(chosen.evidence_ids || []), seen=new Set();
+      for (const id of witnessIds) {
+        const disclosure=disclosures.get(id);
+        if(disclosure) {
+          const p=paragraphs.get(disclosure.paragraph_id),why=document.createElement("p");
+          why.textContent=`Rule ${disclosure.rule} · ${disclosure.entity} · ${disclosure.applicability.replaceAll("_"," ")} · ${disclosure.evidence.quote}`;list.append(why);
+          if(p&&!seen.has(p.id)) {list.append(sourceBlock(p,[disclosure.evidence.anchor]));seen.add(p.id);}
+        }
+        const fact=facts.get(id);
+        const witnesses=fact?.evidence || [];
+        if (id.startsWith("paragraph:")) { const p=paragraphs.get(id.slice(10)); if(p) {list.append(sourceBlock(p,[]));seen.add(p.id);} }
+        for (const ev of witnesses) {
+          const why=document.createElement("p");why.textContent=`Rule ${fact.rule || "unrecorded"} · ${fact.subject} → ${fact.predicate} → ${fact.object} [${fact.status}] · Trigger: ${ev.trigger?.text || "unrecorded"} · Argument: ${ev.argument?.text || "unrecorded"}`;list.append(why);
+          for (const p of paragraphs.values()) if(p.source_id===ev.source_id && p.start<ev.end && p.end>ev.start && !seen.has(p.id)) {list.append(sourceBlock(p,[ev.argument,ev.trigger].filter(Boolean)));seen.add(p.id);}
+        }
+      }
+      if (!seen.size) {const empty=document.createElement("p");empty.textContent="No complete SEC paragraph witness is available for this decision. Check its original quote and source metadata in the keyword record.";list.append(empty);}
+      if (!rows.length) {const empty=document.createElement("p");empty.textContent="No spaCy occurrence was linked to this decision; an occurrence link is not inferred.";list.append(empty);}
+    }
+    appendPaged(list,rows,term=>{
+      const detail=document.createElement("details"), title=document.createElement("summary");
+      title.textContent=`${term.text} · ${(term.entity_types || []).join(", ") || (term.kinds || []).join(", ")} · characters ${term.start}–${term.end} · ${(term.relationships || []).length ? "company argument linked" : "company relationship unresolved"}`;
+      const why=document.createElement("p"); why.textContent=`Extraction: ${(term.kinds || []).join(", ")} · spaCy entity label: ${(term.entity_types || []).join(", ") || "none"} · Phrase: ${term.context.noun_phrase.text} · Dependency: ${term.capacity.dependency} → ${term.capacity.governor.text} · Concept sense: unresolved`;
+      detail.append(title,why);
+      for(const relation of term.relationships || []) {
+        const fact=facts.get(relation.relationship_id), claim=document.createElement("p");
+        claim.textContent=`${relation.subject} → ${relation.predicate} → ${relation.object} [${relation.assertion}] · Rule: ${fact?.rule || "unrecorded"} · Link: ${relation.attachment || "unrecorded"}`;detail.append(claim);
+        for(const ev of fact?.evidence || []) if(ev.source_id===term.source_id && ev.argument?.start<=term.start && ev.argument?.end>=term.end) {const evidence=document.createElement("p");evidence.textContent=`Trigger: ${ev.trigger?.text || "unrecorded"} · Argument: ${ev.argument.text} · Relationship witness: ${ev.quote}`;detail.append(evidence);}
+      }
+      for(const id of term.paragraph_ids || []) {const p=paragraphs.get(id);if(p) detail.append(sourceBlock(p,[term]));}
+      return detail;
+    });
+  }
+  query.addEventListener("input",()=>{chosen=null;draw();});
+  const reset=document.createElement("button");reset.textContent="Show all term occurrences";
+  reset.addEventListener("click",()=>{chosen=null;query.value="";draw();});
+  root.append(heading,note,query,reset,selection,list);container.append(root);draw();
+  return row=>{chosen=row;query.value="";draw();root.scrollIntoView({block:"start"});};
+}
+
+function renderParagraphs(container, graph) {
+  const archivedReview=graph.schema==="completed-parser-review-1";
+  const paragraphs = (graph.paragraphs || []).map(p=>archivedReview ? {...p,importance:{priority:"review",reasons:["Retained source witness; original paragraph classification is in the full archive"]},extraction_status:"retained_source_witness",review_required:true,classification_evidence:[],signals:[],relationship_ids:[]} : p);
+  const terms = new Map((graph.term_inventory?.terms || []).map(t=>[t.id,t]));
+  const title = document.createElement("h3");
+  title.textContent = `Every filing paragraph and attachment block (${paragraphs.length.toLocaleString()})`;
+  if(archivedReview) title.textContent=`Retained complete source paragraphs (${paragraphs.length.toLocaleString()})`;
+  const note = document.createElement("p");
+  const outcomes = Object.entries(graph.coverage.paragraph_outcomes || {}).map(([k,v]) => `${k.replaceAll("_", " ")}: ${v.toLocaleString()}`).join(" · ");
+  note.textContent = `${outcomes}. Review priority is a rule-based aid, not a materiality verdict. Every prose passage is grammar analyzed; unknown topics remain flagged. Paragraph boundaries follow archived text lines, which may differ from the original page layout.`;
+  if(archivedReview) note.textContent="All archived blocks were scanned by the current disclosure pass. This projection retains paragraphs supporting disclosures or preserved relationships. Original full text and classifications remain in the source archive.";
+  const query = document.createElement("input");
+  query.value = "";
+  query.placeholder = "Search every paragraph, filing or topic";
+  query.setAttribute("aria-label", "Search all filing paragraphs");
+  function choose(label, values) {
+    const select = document.createElement("select");
+    select.setAttribute("aria-label", label);
+    for (const [value, name] of [["", label], ...values.map(v => [v, v.replaceAll("_", " ")])]) {
+      const option = document.createElement("option");
+      option.value = value; option.textContent = name; select.append(option);
+    }
+    select.value = "";
+    return select;
+  }
+  const topics = choose("All topics", [...new Set(paragraphs.flatMap(p => p.labels))].sort());
+  const status = choose("All outcomes", [...new Set(paragraphs.map(p => p.extraction_status))].sort());
+  const priority = choose("All priorities", ["high", "normal", "review", "administrative"]);
+  const review = choose("All review states", ["requires_review"]);
+  const list = document.createElement("div");
+  const sources = new Map(graph.sources.map(s => [s.id, s]));
+  const facts = new Map(graph.facts.map(f => [f.id, f]));
+  function draw() {
+    list.replaceChildren();
+    const q = query.value.trim().toLowerCase();
+    const selected = paragraphs.filter(p => (!topics.value || p.labels.includes(topics.value)) &&
+      (!status.value || p.extraction_status === status.value) &&
+      (!priority.value || p.importance.priority === priority.value) &&
+      (!review.value || p.review_required) &&
+      (!q || [p.text, ...p.labels, ...Object.values(sources.get(p.source_id) || {})].join(" ").toLowerCase().includes(q)));
+    const count = document.createElement("p");
+    count.textContent = `${selected.length.toLocaleString()} of ${paragraphs.length.toLocaleString()} paragraphs match`;
+    list.append(count);
+    appendPaged(list, selected, p => {
+      const detail = document.createElement("details");
+      const summary = document.createElement("summary");
+      summary.textContent = `[${p.importance.priority}] ${p.labels.join(", ")} · ${p.extraction_status.replaceAll("_", " ")} · ${p.text.trim().slice(0,160)}`;
+      const source = sources.get(p.source_id) || {};
+      const origin = document.createElement("p");
+      origin.textContent = [source.form, source.filing_date, source.accession, source.document, source.section, `characters ${p.start}–${p.end}`].filter(Boolean).join(" · ");
+      const why = document.createElement("p");
+      why.textContent = p.importance.reasons.join(" · ")+(p.review_required ? " · Review required" : "");
+      const text = document.createElement("div");
+      text.className = "article"; text.style = "white-space:pre-wrap";
+      text.textContent = p.text;
+      detail.append(summary, origin, why, text);
+      if (graph.term_inventory) {
+        const inventory=document.createElement("details"), label=document.createElement("summary");
+        label.textContent=`Entities and terminology (${(p.term_ids || []).length})`;
+        inventory.append(label);
+        appendPaged(inventory,(p.term_ids || []).map(id=>terms.get(id)).filter(Boolean),term=>{
+          const entry=document.createElement("p");
+          const relationships=term.relationships.map(r=>`${r.subject} → ${r.predicate} → ${r.object} [${r.assertion}]`).join("; ") || "Company relationship unresolved";
+          entry.textContent=`${term.text} (${term.start}–${term.end}) · ${term.entity_types.join(", ") || term.kinds.join(", ")} · Phrase: ${term.context.noun_phrase.text} · ${term.capacity.dependency}: ${term.capacity.governor.text} · ${relationships} · Concept sense unresolved`;
+          return entry;
+        });
+        detail.append(inventory);
+      }
+      if (p.classification_evidence.length) {
+        const labels = document.createElement("details");
+        const labelTitle = document.createElement("summary");
+        labelTitle.textContent = "Why these topics matched";
+        const witnesses = document.createElement("p");
+        witnesses.textContent = p.classification_evidence.map(e => `${e.label}: ${e.quote} (${e.start}–${e.end})`).join("; ");
+        labels.append(labelTitle, witnesses); detail.append(labels);
+      }
+      if (p.signals.length) {
+        const quantities = document.createElement("p");
+        quantities.textContent = "Reported quantities (context required): "+p.signals.map(s => s.quote).join("; ");
+        detail.append(quantities);
+      }
+      for (const id of p.relationship_ids) {
+        const f = facts.get(id);
+        if (!f) continue;
+        const claim = document.createElement("p");
+        claim.textContent = `${f.subject} → ${f.predicate.replaceAll("_", " ")} → ${f.object} [${f.status}]`;
+        detail.append(claim);
+      }
+      if (source.url && /^https:\/\/www\.sec\.gov\/Archives\//.test(source.url)) {
+        const link = document.createElement("a");
+        link.href = source.url; link.target = "_blank"; link.rel = "noopener noreferrer";
+        link.textContent = "Read SEC source"; detail.append(link);
+      }
+      return detail;
+    });
+  }
+  query.addEventListener("input", draw);
+  for (const select of [topics, status, priority, review]) select.addEventListener("change", draw);
+  container.append(title, note, query, topics, status, priority, review, list);
+  draw();
+}
+
+function renderFilingGraph(container, graph) {
+  activeTermReview=renderTermReview(container,graph);
+  renderParagraphs(container, graph);
+
+}
+
+let activeProfileRequest = 0;
+let activeTermReview = null;
+async function showTickerProfile(rawTicker) {
+  const request = ++activeProfileRequest;
+  activeTermReview=null;
+  const ticker = String(rawTicker || "").trim().toUpperCase();
+  if (!ticker) return;
+  selectedTicker=ticker;
+  renderSelectedPair();
+  if (mode !== "live" && !(await loadProfiles())) return;
+  const box = document.getElementById("profile");
+  box.hidden = false;
+  let prof;
+  if (mode === "live") {
+    try {
+      const response = await fetch(`/api/profile?ticker=${encodeURIComponent(ticker)}`);
+      const payload = await response.json();
+      if (request !== activeProfileRequest) return;
+      if (!response.ok) throw new Error(payload.error || "profile failed");
+      prof = payload;
+    } catch (err) {
+      if (request !== activeProfileRequest) return;
+      text("profile-title", ticker);
+      text("profile-meta", err.message);
+      for (const id of ["profile-warnings", "profile-facts", "profile-filing", "profile-links"]) text(id, "");
+      return;
+    }
+  } else {
+    prof = staticProfiles[ticker];
+    if (prof && prof.profile_path) {
+      try {
+        prof = await loadPackedProfile(prof.profile_path, prof.profile_sha256);
+        if (request !== activeProfileRequest) return;
+      } catch (err) {
+        if (request !== activeProfileRequest) return;
+        text("profile-meta", err.message);
+        return;
+      }
+    }
+  }
+  const title = document.getElementById("profile-title");
+  const meta = document.getElementById("profile-meta");
+  const warnings = document.getElementById("profile-warnings");
+  const factsBox = document.getElementById("profile-facts");
+  const filingBox = document.getElementById("profile-filing");
+  const linksBox = document.getElementById("profile-links");
+  factsBox.textContent = "";
+  filingBox.textContent = "";
+  linksBox.textContent = "";
+  warnings.textContent = "";
+  if (!prof) {
+    title.textContent = `${ticker} — not on the board`;
+    meta.textContent = "no profile; ticker absent from the Finviz description set";
+    return;
+  }
+  title.textContent = `${ticker} — ${prof.name || "(no name)"}`;
+  if (prof.keyword_schema) {
+    const heading = document.createElement("h3"); heading.textContent = `Concrete company connections (${consolidateKeywordRecords((prof.keywords || []).filter(row=>scannerRowVisible(row))).length})`;
+    factsBox.append(heading);
+    const policyNote=document.createElement("p");policyNote.textContent="All admitted concrete terms found in the stored filing records, grouped by relationship. Repeated records are consolidated with their dates and evidence. No new web research is added. Generic fragments, unsupported relationship attachments and explicitly negated connections are excluded. Extraction can still miss terms; this view does not certify complete recovery or trading importance.";factsBox.append(policyNote);
+    const coverage=prof.keyword_coverage?.paragraph_coverage || {};
+    const sourceNote=document.createElement("p");
+    const stored=(prof.sources || []).filter(s=>s.accession);
+    sourceNote.textContent=`Stored evidence: ${new Set(stored.map(s=>s.accession)).size} filings; ${[...new Set(stored.map(s=>s.form).filter(Boolean))].sort().join(", ") || "source forms unavailable"}.`+
+      (coverage.source_sections ? ` Archive scan: ${coverage.source_sections.toLocaleString()} source sections, ${(coverage.characters_read || 0).toLocaleString()} characters.` : "")+
+      " All admitted terms are searchable below; source dates and quotations are retained for each connection.";
+    factsBox.append(sourceNote);
+    renderKeywordRecords(factsBox,prof.keywords || [],prof.keyword_evidence || {},row=>{
+      if(activeTermReview) activeTermReview(row);
+      else { const note=document.createElement("p");note.textContent="The full source graph is loading or unavailable. Exact decision quotes are shown below; paragraph review needs the complete graph.";factsBox.append(note); }
+    });
+  }
+  const bits = [prof.industry, prof.sector].filter(Boolean);
+  const srcBadge = document.createElement("span");
+  if (prof.used_for_scoring) {
+    srcBadge.className = "badge source-edgar";
+    srcBadge.textContent = prof.deep_profile ? "SEC relationships and scoring profile" : prof.enriched ? "Dated filing identity overlay" : "Description only";
+  } else if (prof.enriched) {
+    srcBadge.className = "badge source-edgar";
+    srcBadge.textContent = `Historical SEC-enriched display · NOT verified as scoring input`;
+  } else {
+    srcBadge.className = "badge headline";
+    srcBadge.textContent = "Finviz description only (no filing parsed)";
+  }
+  meta.textContent = bits.join(" · ");
+  meta.append(" ", srcBadge);
+  [...new Set(prof.warnings || [])].forEach((w) => {
+    const p = document.createElement("p");
+    p.className = "empty";
+    p.textContent = "⚠ " + w;
+    warnings.append(p);
+  });
+  const kinds = Object.entries(prof.keyword_schema ? {} : (prof.facts || {})).sort((a, b) => b[1].length - a[1].length);
+  for (const [kind, entries] of kinds) {
+    const group = document.createElement("div");
+    group.className = "factgroup";
+    const h = document.createElement("h3");
+    h.textContent = `${KIND_LABELS[kind] || kind} (${entries.length})`;
+    group.append(h);
+    appendPaged(group, entries, e => {
+      const span = document.createElement("span");
+      span.className = "factterm";
+      span.textContent = e.term || e.text || e.passage;
+      if (e.passage) span.title = [e.passage, e.display_truncated ? "display excerpt; full source retained" : "", e.filing_date, e.accession, e.confidence].filter(Boolean).join(" · ");
+      return span;
+    });
+    factsBox.append(group);
+  }
+  if (prof.sources && prof.sources.length) {
+    const det = document.createElement("details");
+    const sum = document.createElement("summary");
+    sum.textContent = `Scoring source sections (${prof.sources.length}); source archive retains whole documents`;
+    det.append(sum);
+    appendPaged(det, prof.sources, source => {
+      const p = document.createElement("p");
+      p.className = "quote";
+      p.textContent = [source.source, source.form, source.filing_date, source.accession, source.section, source.sha256].filter(Boolean).join(" · ");
+      return p;
+    });
+    filingBox.append(det);
+  }
+  if (prof.deep_profile && !prof.deep_profile.path && !prof.deep_profile.external_url) {
+    const note = document.createElement("p");
+    note.textContent = "All extracted keyword candidates and their quotes are above. Whole documents and exhaustive paragraph classifications remain in the full parser archive, not this compact page.";
+    filingBox.append(note);
+    if (/^https:\/\/github\.com\/SRoyaltyy\/fullscan\/actions\/runs\/\d+$/.test(prof.deep_profile.archive_url || "")) {
+      const link = document.createElement("a"); link.href = prof.deep_profile.archive_url;
+      link.textContent = "Open full parser archive (GitHub sign-in may be required; artifacts have retention limits)"; filingBox.append(link);
+    }
+  }
+  if (prof.deep_profile && (prof.deep_profile.path || prof.deep_profile.external_url) && mode === "static") {
+    try {
+      const graph = prof.deep_profile.external_url
+        ? await loadExternalGraph(prof.deep_profile.external_url,prof.deep_profile.sha256)
+        : await loadPackedProfile(prof.deep_profile.path, prof.deep_profile.sha256);
+      if (request !== activeProfileRequest) return;
+      renderFilingGraph(filingBox, graph);
+    } catch (err) {
+      if (request !== activeProfileRequest) return;
+      const error = document.createElement("p");
+      error.textContent = err.message;
+      filingBox.append(error);
+    }
+  }
+  if (prof.filing && prof.filing.items) {
+    for (const [label, text] of Object.entries(prof.filing.items)) {
+      const det = document.createElement("details");
+      const sum = document.createElement("summary");
+      sum.textContent = `Item ${label} text (first ${text.length.toLocaleString()} chars)`;
+      const pre = document.createElement("div");
+      pre.className = "article";
+      pre.textContent = text;
+      det.append(sum, pre);
+      filingBox.append(det);
+    }
+  }
+  const links = mode === "static" && tickerIndex ? tickerIndex[ticker] || [] : [];
+  const h = document.createElement("h3");
+  h.className = "factgroup";
+  h.textContent = `Intake articles linked to ${ticker} (${links.length})`;
+  linksBox.append(h);
+  const ul = document.createElement("ul");
+  ul.className = "linklist";
+  for (const link of links.slice(0, 50)) {
+    const li = document.createElement("li");
+    const art = staticArticles.find((a) => String(a.id) === String(link.id));
+    li.textContent = (art && art.title ? art.title : link.id).slice(0, 90);
+    li.title = `${link.decision || ""} · tier ${link.tier} · ${(link.reasons || []).join(", ")}`;
+    li.addEventListener("click", () => jumpToArticle(link.id));
+    ul.append(li);
+  }
+  linksBox.append(ul);
+  box.scrollIntoView({behavior: "smooth"});
+}
+
+async function poll() {
+  try {
+    const status = await fetch("/api/status").then((r) => r.json());
+    const line = document.getElementById("status");
+    if (status.error) {
+      line.textContent = status.error;
+      return;
+    }
+    if (status.ready) {
+      mode = "live";
+      line.textContent = `live · evidence engine · ${status.stocks} stocks · ${status.articles} articles`;
+      renderSnapshot(status.snapshot);
+      document.getElementById("another").disabled = false;
+      document.getElementById("test").disabled = false;
+      document.getElementById("analyze").disabled = false;
+      return;
+    }
+    line.textContent = `Loading the stock board… ${status.articles} articles ready`;
+  } catch (err) {
+    // No local server: this is the GitHub Pages static build.
+    try {
+      await loadStatic();
+      return;
+    } catch (staticErr) {
+      text("status", `no live server and no static artifacts (${staticErr.message})`);
+      return;
+    }
+  }
+  setTimeout(poll, 500);
+}
+
+document.getElementById("another").addEventListener("click", loadArticle);
+document.getElementById("test").addEventListener("click", runTest);
+document.getElementById("analyze").addEventListener("click", () => {
+  showTickerProfile(document.getElementById("ticker").value);
+});
+document.getElementById("ticker").addEventListener("keydown", (e) => {
+  if (e.key === "Enter") showTickerProfile(document.getElementById("ticker").value);
+});
+document.getElementById("random-stock").addEventListener("click",randomStock);
+poll().then(() => loadArticle());
+</script>
+</body>
+</html>
+
+
+
