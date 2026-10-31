@@ -4334,6 +4334,14 @@
       "workflow": "Publish strategy tickets",
       "run_id": "41148549580",
       "manifest": "research/input_freeze/2026-10-30/manifest.json"
+    },
+    {
+      "path": "data/exports/finviz_2026-10-30.csv",
+      "at": "2026-10-31T03:38:43-04:00",
+      "commit_msg": "auto: land finviz export [2026-10-30]",
+      "workflow": "Finviz ALL (GH-hosted Elite)",
+      "run_id": "41178482043",
+      "manifest": "research/input_freeze/2026-10-30/manifest.json"
     }
   ]
 }
