@@ -9869,8 +9869,8 @@
  "summary": {
   "strategy": "updown_rel1_hv_v1",
   "label": "paper only \u2014 failed multiple-testing haircut (t 2.02 vs 3.37)",
-  "days_locked": 18,
-  "days_realized": 16,
+  "days_locked": 19,
+  "days_realized": 17,
   "days_missed": 0,
   "missed_dates": [],
   "rule": {
@@ -9879,45 +9879,45 @@
    "missed": "Missed days (not frozen before 09:25 ET) are recorded in MISSED.jsonl, never back-filled, and earn nothing."
   },
   "gross": {
-   "cum": 0.0524188473,
-   "mean_bp": 35.5442789249,
-   "t_nw": 0.9520829567
+   "cum": 0.1116257727,
+   "mean_bp": 67.0808488948,
+   "t_nw": 1.7089713031
   },
   "net5": {
-   "cum": 0.0305822318,
-   "mean_bp": 22.4442789249,
-   "t_nw": 0.5958848273
+   "cum": 0.0875093823,
+   "mean_bp": 54.1514371301,
+   "t_nw": 1.3639359954
   },
   "net10": {
-   "cum": 0.0091697282,
-   "mean_bp": 9.3442789249,
-   "t_nw": 0.2458772824
+   "cum": 0.0638846488,
+   "mean_bp": 41.2220253653,
+   "t_nw": 1.0265330954
   },
   "net15": {
-   "cum": -0.0118263396,
-   "mean_bp": -3.7557210751,
-   "t_nw": -0.0979375663
+   "cum": 0.0407421899,
+   "mean_bp": 28.2926136006,
+   "t_nw": 0.6966102416
   },
   "hedged_net10": {
-   "cum": -0.0776421474,
-   "mean_bp": -47.5620264662,
-   "t_nw": -1.0045028079
+   "cum": -0.0124002295,
+   "mean_bp": -3.3370445425,
+   "t_nw": -0.0563324997
   },
   "iwm_oo1": {
-   "cum": null,
-   "mean_bp": null,
-   "t_nw": null
+   "cum": 0.0133692766,
+   "mean_bp": 8.2438744591,
+   "t_nw": 0.4452246981
   },
   "rand_med_net10": {
-   "cum": -0.0537562259,
-   "mean_bp": -34.4738665539,
-   "t_nw": -50.4103681091
+   "cum": -0.0580406934,
+   "mean_bp": -35.1094768078,
+   "t_nw": -38.4784266389
   },
   "best_stock": "TTMI",
-  "best_stock_contrib": 0.0100916781,
-  "net10_ex_best_cum": -0.0006573915,
-  "mean_turnover": 2.62,
-  "status": "collecting (16 realized days; kill check from day 20/60, promotion review not before day 120)",
+  "best_stock_contrib": 0.0123006279,
+  "net10_ex_best_cum": 0.0513343568,
+  "mean_turnover": 2.5858823529,
+  "status": "collecting (17 realized days; kill check from day 20/60, promotion review not before day 120)",
   "killed": false
  },
  "realized_cols": [
@@ -10083,8 +10083,8 @@
    -0.0070976475,
    -0.0031132373,
    -0.016619992,
-   "WFF",
    null,
+   "WFF",
    -0.0080588677,
    -0.0082576475,
    -0.0092188677,
@@ -10092,13 +10092,13 @@
    -0.010378868,
    -0.010577648,
    -0.0093053815,
-   -0.0020471299,
-   0.010027009,
-   -0.0038317404,
-   0.0082487267,
-   -0.0056427836,
-   0.0064534962,
-   0.229,
+   -0.0017864619,
+   0.016005053,
+   -0.0035842037,
+   0.014204053,
+   -0.0053941265,
+   0.012398215,
+   0.266,
    -0.010556591
   ],
   [
@@ -10406,30 +10406,60 @@
    "2026-10-29",
    50,
    50,
-   0.0,
+   -0.012957685,
    1.92,
    -2.1838484,
-   -0.0043505845,
-   -0.0095010169,
+   0.0033691143,
+   -0.00560005,
+   -0.0034222349,
+   0.007347949,
    null,
    null,
-   "AAOI;AEHR;AJG;ALAB;AMD;AMZN;ANET;ANF;APH;APLD;ARM;ASTS;ASX;AWK;AXTI;BE;BRKR;BSP;CAT;CIEN;CLH;COHR;CORZ;CRDO;CRWV;CTSH;CVLT;DINO;DOCN;DVA;DXCM;EGO;EIX;FCEL;FDX;FLS;FN;FTI;FTNT;GDDY;GKOS;GRMN;HUBB;HUBS;HUT;IBRX;IEX;INIO;INTC;IONQ;IR;IREN;JOBY;KRMN;LLY;LUNR;MPC;MPWR;MRNA;MSFT;MXL;NBIS;NVAX;NVTS;OKLO;ONDS;P;PBF;PBR;PENG;PINS;PL;PLTR;PSX;PURR;RDW;RIOT;RKLB;SCCO;SITM;SMCI;SMR;STM;STX;TEM;THC;TMUS;TTMI;TVTX;TWST;TXG;VICR;VLO;VSXY;WCC;WOLF;WSO;WULF;XP;XPO",
+   -0.013917685,
+   -0.00656005,
+   -0.014877685,
+   -0.00752005,
+   -0.015837685,
+   -0.00848005,
+   -0.022351327,
+   -0.0026038688,
+   0.013757706,
+   -0.0043906004,
+   0.011878706,
+   -0.0062117842,
+   0.010098394,
+   0.129,
+   -0.015020026
+  ],
+  [
+   "2026-10-29",
+   "2026-10-30",
+   50,
+   50,
+   0.070124282,
+   2.04,
+   -2.0897172,
+   -0.0007460253,
+   0.0685653,
+   -0.0096384882,
+   -0.0015580271,
    null,
-   -0.00096,
-   -0.010461017,
-   -0.00192,
-   -0.011421017,
-   -0.00288,
-   -0.012381017,
    null,
-   -0.00182,
-   -0.0012079922,
-   -0.00364,
-   -0.0030279922,
-   -0.00546,
-   -0.0048479922,
+   0.069104282,
+   0.0675453,
+   0.068084282,
+   0.0665253,
+   0.067064282,
+   0.0655053,
+   0.047942567,
+   -0.002223681,
+   0.015278437,
+   -0.0040248603,
+   0.013380109,
+   -0.0058083827,
+   0.011607876,
    1.0,
-   -0.00192
+   0.066017673
   ]
  ]
 }

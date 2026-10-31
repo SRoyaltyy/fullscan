@@ -1,8 +1,8 @@
 {
  "strategy": "updown_rel1_hv_v1",
  "label": "paper only \u2014 failed multiple-testing haircut (t 2.02 vs 3.37)",
- "days_locked": 18,
- "days_realized": 16,
+ "days_locked": 19,
+ "days_realized": 17,
  "days_missed": 0,
  "missed_dates": [],
  "rule": {
@@ -11,44 +11,44 @@
   "missed": "Missed days (not frozen before 09:25 ET) are recorded in MISSED.jsonl, never back-filled, and earn nothing."
  },
  "gross": {
-  "cum": 0.0524188473,
-  "mean_bp": 35.5442789249,
-  "t_nw": 0.9520829567
+  "cum": 0.1116257727,
+  "mean_bp": 67.0808488948,
+  "t_nw": 1.7089713031
  },
  "net5": {
-  "cum": 0.0305822318,
-  "mean_bp": 22.4442789249,
-  "t_nw": 0.5958848273
+  "cum": 0.0875093823,
+  "mean_bp": 54.1514371301,
+  "t_nw": 1.3639359954
  },
  "net10": {
-  "cum": 0.0091697282,
-  "mean_bp": 9.3442789249,
-  "t_nw": 0.2458772824
+  "cum": 0.0638846488,
+  "mean_bp": 41.2220253653,
+  "t_nw": 1.0265330954
  },
  "net15": {
-  "cum": -0.0118263396,
-  "mean_bp": -3.7557210751,
-  "t_nw": -0.0979375663
+  "cum": 0.0407421899,
+  "mean_bp": 28.2926136006,
+  "t_nw": 0.6966102416
  },
  "hedged_net10": {
-  "cum": -0.0776421474,
-  "mean_bp": -47.5620264662,
-  "t_nw": -1.0045028079
+  "cum": -0.0124002295,
+  "mean_bp": -3.3370445425,
+  "t_nw": -0.0563324997
  },
  "iwm_oo1": {
-  "cum": null,
-  "mean_bp": null,
-  "t_nw": null
+  "cum": 0.0133692766,
+  "mean_bp": 8.2438744591,
+  "t_nw": 0.4452246981
  },
  "rand_med_net10": {
-  "cum": -0.0537562259,
-  "mean_bp": -34.4738665539,
-  "t_nw": -50.4103681091
+  "cum": -0.0580406934,
+  "mean_bp": -35.1094768078,
+  "t_nw": -38.4784266389
  },
  "best_stock": "TTMI",
- "best_stock_contrib": 0.0100916781,
- "net10_ex_best_cum": -0.0006573915,
- "mean_turnover": 2.62,
- "status": "collecting (16 realized days; kill check from day 20/60, promotion review not before day 120)",
+ "best_stock_contrib": 0.0123006279,
+ "net10_ex_best_cum": 0.0513343568,
+ "mean_turnover": 2.5858823529,
+ "status": "collecting (17 realized days; kill check from day 20/60, promotion review not before day 120)",
  "killed": false
 }
