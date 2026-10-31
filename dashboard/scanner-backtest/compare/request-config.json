@@ -1,0 +1,14 @@
+{
+  "schema": "stock-parser-request-config-1",
+  "workflow": "stock-parser-request.yml",
+  "execution_ref": "main",
+  "repository": "SRoyaltyy/fullscan",
+  "old_sha": "4d221aa78f21d1968fe4878998a2ac9455d3b6aa",
+  "new_sha": "6dad95df8f7c2bb3b49df4de62c9ab80813c20db",
+  "catalog_revision": "3e129436a505e2282048439d53a86bfc06fa6006",
+  "catalog_sha256": "2d9ff068dcfe5bd11b41bfface8c4c516b0b35bf0d5ffe623adfc1fa75b27b03",
+  "ui_revision": "b608415f92db9cd999a105de88cf15f9747c2353",
+  "saved_comparison": "history/3e129436a505e2282048439d53a86bfc06fa6006/",
+  "experimental": true,
+  "accuracy_certified": false
+}

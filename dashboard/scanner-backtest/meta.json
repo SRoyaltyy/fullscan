@@ -2190,5 +2190,6 @@
     "schema": "stock-keywords-1.1",
     "phrases": 277423
   },
-  "generated_at": "2026-10-25T07:42:13Z"
+  "generated_at": "2026-10-25T07:42:13Z",
+  "asset_base_url": "https://raw.githubusercontent.com/SRoyaltyy/fullscan/a193c08e6974bf0e2f59d82dea5b91f6b0fd6e5a/dashboard/scanner-backtest/"
 }

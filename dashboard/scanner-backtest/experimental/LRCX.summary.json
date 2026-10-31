@@ -1,0 +1,23 @@
+{
+  "ticker": "LRCX",
+  "name": "Lam Research Corporation",
+  "source_sha": "629279628434865e8e8958f31c648822d67f7055",
+  "method": "stock-evidence-graph-2",
+  "source_receipt": {
+    "source": "PR642-full-text",
+    "companies": 1,
+    "filings": 2,
+    "documents": 126,
+    "characters": 5098218,
+    "errors": [],
+    "as_of": null,
+    "full_source_archive": true,
+    "complete": true
+  },
+  "elapsed_seconds": 109.07,
+  "entities": 865,
+  "assertions": 278,
+  "asset": "LRCX.json.gz",
+  "sha256": "f5f37e1e4725dc014f368760a9ddd18f7f73c749071f3ba26c6cde58b5d5e58f",
+  "bytes": 555274
+}
