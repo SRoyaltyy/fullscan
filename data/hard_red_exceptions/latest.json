@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "generated_at": "2026-10-30T19:11:41.631683-04:00",
+  "generated_at": "2026-10-30T21:18:59.055314-04:00",
   "from_date": "2026-08-13",
   "to_date": "2026-10-30",
   "n_days": 56,
@@ -90888,7 +90888,7 @@
           ],
           "h1": -2.75,
           "h3": -6.67,
-          "h5": -9.67,
+          "h5": null,
           "side": "long",
           "why": [
             "Weather S=-7.538 \u2264 -3 \u2014 live sleeve SITS. This name is ranked anyway so idiosyncratic green is not invisible.",
@@ -90908,7 +90908,7 @@
           "h1_date": "2026-10-26",
           "h3_px": 45.76,
           "h3_date": "2026-10-28",
-          "h5_px": 44.29,
+          "h5_px": null,
           "h5_date": "2026-10-30"
         },
         {
@@ -90995,7 +90995,7 @@
           ],
           "h1": 0.14,
           "h3": 0.17,
-          "h5": 0.17,
+          "h5": null,
           "side": "long",
           "why": [
             "Weather S=-7.538 \u2264 -3 \u2014 live sleeve SITS. This name is ranked anyway so idiosyncratic green is not invisible.",
@@ -91015,7 +91015,7 @@
           "h1_date": "2026-10-26",
           "h3_px": 36.39,
           "h3_date": "2026-10-28",
-          "h5_px": 36.39,
+          "h5_px": null,
           "h5_date": "2026-10-30"
         },
         {
