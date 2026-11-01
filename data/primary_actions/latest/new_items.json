@@ -1,626 +1,74 @@
 [
   {
-    "title": "H.R. 10950 (IH) - Data Center Oversight Act",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr10950ih",
-    "native_id": "BILLS-119hr10950ih",
-    "published_at": "2026-10-31T09:47:01+00:00",
-    "published_raw": "Sat, 31 Oct 2026 09:47:01 +0000",
-    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "bill",
-      "document_stage": "legislative_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Bills",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-bills",
-    "n": 7924,
-    "first_seen": "2026-10-31T17:48:38.297024+00:00",
-    "last_seen": "2026-10-31T17:48:38.297024+00:00",
-    "source_ids": [
-      "us-govinfo-bills"
-    ]
-  },
-  {
-    "title": "H.R. 10922 (IH) - Fraud Accountability and Mandatory Sentencing Act",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr10922ih",
-    "native_id": "BILLS-119hr10922ih",
-    "published_at": "2026-10-31T09:47:01+00:00",
-    "published_raw": "Sat, 31 Oct 2026 09:47:01 +0000",
-    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "bill",
-      "document_stage": "legislative_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Bills",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-bills",
-    "n": 7925,
-    "first_seen": "2026-10-31T17:48:38.297024+00:00",
-    "last_seen": "2026-10-31T17:48:38.297024+00:00",
-    "source_ids": [
-      "us-govinfo-bills"
-    ]
-  },
-  {
-    "title": "H.R. 10919 (IH) - Safety Net Provider Drug Pricing Protection Act",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr10919ih",
-    "native_id": "BILLS-119hr10919ih",
-    "published_at": "2026-10-31T09:47:01+00:00",
-    "published_raw": "Sat, 31 Oct 2026 09:47:01 +0000",
-    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "bill",
-      "document_stage": "legislative_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Bills",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-bills",
-    "n": 7926,
-    "first_seen": "2026-10-31T17:48:38.297024+00:00",
-    "last_seen": "2026-10-31T17:48:38.297024+00:00",
-    "source_ids": [
-      "us-govinfo-bills"
-    ]
-  },
-  {
-    "title": "H.R. 10926 (IH) - Election Worker and Polling Place Protection Act",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr10926ih",
-    "native_id": "BILLS-119hr10926ih",
-    "published_at": "2026-10-31T09:47:01+00:00",
-    "published_raw": "Sat, 31 Oct 2026 09:47:01 +0000",
-    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "bill",
-      "document_stage": "legislative_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Bills",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-bills",
-    "n": 7927,
-    "first_seen": "2026-10-31T17:48:38.297024+00:00",
-    "last_seen": "2026-10-31T17:48:38.297024+00:00",
-    "source_ids": [
-      "us-govinfo-bills"
-    ]
-  },
-  {
-    "title": "H.R. 10930 (IH) - Childhood Offenders Rehabilitation and Safety Act of 2026",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr10930ih",
-    "native_id": "BILLS-119hr10930ih",
-    "published_at": "2026-10-31T09:47:01+00:00",
-    "published_raw": "Sat, 31 Oct 2026 09:47:01 +0000",
-    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "bill",
-      "document_stage": "legislative_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Bills",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-bills",
-    "n": 7928,
-    "first_seen": "2026-10-31T17:48:38.297024+00:00",
-    "last_seen": "2026-10-31T17:48:38.297024+00:00",
-    "source_ids": [
-      "us-govinfo-bills"
-    ]
-  },
-  {
-    "title": "H.R. 10931 (IH) - Library Construction and Modernization Act of 2026",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr10931ih",
-    "native_id": "BILLS-119hr10931ih",
-    "published_at": "2026-10-31T09:47:01+00:00",
-    "published_raw": "Sat, 31 Oct 2026 09:47:01 +0000",
-    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "bill",
-      "document_stage": "legislative_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Bills",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-bills",
-    "n": 7929,
-    "first_seen": "2026-10-31T17:48:38.297024+00:00",
-    "last_seen": "2026-10-31T17:48:38.297024+00:00",
-    "source_ids": [
-      "us-govinfo-bills"
-    ]
-  },
-  {
-    "title": "H.R. 10933 (IH) - EMS Supporting Personnel, Operations, Upgrades, Resources, and Training Act of 2026",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr10933ih",
-    "native_id": "BILLS-119hr10933ih",
-    "published_at": "2026-10-31T09:47:01+00:00",
-    "published_raw": "Sat, 31 Oct 2026 09:47:01 +0000",
-    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "bill",
-      "document_stage": "legislative_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Bills",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-bills",
-    "n": 7930,
-    "first_seen": "2026-10-31T17:48:38.297024+00:00",
-    "last_seen": "2026-10-31T17:48:38.297024+00:00",
-    "source_ids": [
-      "us-govinfo-bills"
-    ]
-  },
-  {
-    "title": "H.R. 10918 (IH) - Natural Gas Dominance Act",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr10918ih",
-    "native_id": "BILLS-119hr10918ih",
-    "published_at": "2026-10-31T09:47:01+00:00",
-    "published_raw": "Sat, 31 Oct 2026 09:47:01 +0000",
-    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "bill",
-      "document_stage": "legislative_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Bills",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-bills",
-    "n": 7931,
-    "first_seen": "2026-10-31T17:48:38.297024+00:00",
-    "last_seen": "2026-10-31T17:48:38.297024+00:00",
-    "source_ids": [
-      "us-govinfo-bills"
-    ]
-  },
-  {
-    "title": "H.R. 10925 (IH) - Countering Online Trafficking Act",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr10925ih",
-    "native_id": "BILLS-119hr10925ih",
-    "published_at": "2026-10-31T09:47:02+00:00",
-    "published_raw": "Sat, 31 Oct 2026 09:47:02 +0000",
-    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "bill",
-      "document_stage": "legislative_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Bills",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-bills",
-    "n": 7932,
-    "first_seen": "2026-10-31T17:48:38.297024+00:00",
-    "last_seen": "2026-10-31T17:48:38.297024+00:00",
-    "source_ids": [
-      "us-govinfo-bills"
-    ]
-  },
-  {
-    "title": "H.R. 10928 (IH) - Farmer Recovery Opportunity and Support for Temperatures Relief Act",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr10928ih",
-    "native_id": "BILLS-119hr10928ih",
-    "published_at": "2026-10-31T09:47:02+00:00",
-    "published_raw": "Sat, 31 Oct 2026 09:47:02 +0000",
-    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "bill",
-      "document_stage": "legislative_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Bills",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-bills",
-    "n": 7933,
-    "first_seen": "2026-10-31T17:48:38.297024+00:00",
-    "last_seen": "2026-10-31T17:48:38.297024+00:00",
-    "source_ids": [
-      "us-govinfo-bills"
-    ]
-  },
-  {
-    "title": "H.R. 10929 (IH) - Protecting American Hemp Farmers Act",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr10929ih",
-    "native_id": "BILLS-119hr10929ih",
-    "published_at": "2026-10-31T09:47:02+00:00",
-    "published_raw": "Sat, 31 Oct 2026 09:47:02 +0000",
-    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "bill",
-      "document_stage": "legislative_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Bills",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-bills",
-    "n": 7934,
-    "first_seen": "2026-10-31T17:48:38.297024+00:00",
-    "last_seen": "2026-10-31T17:48:38.297024+00:00",
-    "source_ids": [
-      "us-govinfo-bills"
-    ]
-  },
-  {
-    "title": "H.R. 10921 (IH) - Breast Cancer Patient Equity Act",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr10921ih",
-    "native_id": "BILLS-119hr10921ih",
-    "published_at": "2026-10-31T09:47:02+00:00",
-    "published_raw": "Sat, 31 Oct 2026 09:47:02 +0000",
-    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "bill",
-      "document_stage": "legislative_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Bills",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-bills",
-    "n": 7935,
-    "first_seen": "2026-10-31T17:48:38.297024+00:00",
-    "last_seen": "2026-10-31T17:48:38.297024+00:00",
-    "source_ids": [
-      "us-govinfo-bills"
-    ]
-  },
-  {
-    "title": "H. Rept. 119-856",
-    "url": "https://www.govinfo.gov/app/details/CRPT-119hrpt856",
-    "native_id": "CRPT-119hrpt856",
-    "published_at": "2026-10-31T10:28:00+00:00",
-    "published_raw": "Sat, 31 Oct 2026 10:28:00 +0000",
-    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "committee_report",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Reports",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-crpt",
-    "n": 7936,
-    "first_seen": "2026-10-31T17:48:38.297024+00:00",
-    "last_seen": "2026-10-31T17:48:38.297024+00:00",
-    "source_ids": [
-      "us-govinfo-crpt"
-    ]
-  },
-  {
-    "title": "Leader of South Georgia Check‑Theft and Forgery Scheme Sentenced to Prison",
-    "url": "https://www.justice.gov/usao-mdga/pr/leader-south-georgia-check-theft-and-forgery-scheme-sentenced-prison",
-    "native_id": "https://www.justice.gov/usao-mdga/pr/leader-south-georgia-check-theft-and-forgery-scheme-sentenced-prison",
-    "published_at": "2026-10-30T12:00:00+00:00",
-    "published_raw": "Fri, 30 Oct 2026 12:00:00 +0000",
-    "summary": "ALBANY, Ga. – A Thomasville, Georgia, man who directed a $115,000 check theft and forgery scheme in the region has been sentenced to federal prison. “Stealing checks and forging financial documents is not a victimless crime. These types of schemes siphon money from hardworking individuals and local businesses, causing real financial harm across our communities,” said U.S. Attorney William R. “Will” Keyes. “Thanks to the outstanding work of our federal and local law enforcement partners, this conspiracy has been dismantled, and those responsible are being held accountable.”",
+    "title": "Remarks by Angus McGregor, Assistant Governor Financial Stability - Reserve Bank of New Zealand",
+    "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPSjlmNkFuZ3V4c1huVnBoM2cxY2FKbmRPNXgxM2tVektLNDY4U2Z1V2FaWW02NlRDZ3BaSnpQSkFhQWxKTS1uUVY5R0FxeGR6MmtvNF8zSXU1bVlOd1NWZzlWTU9wUllscHlPRThqeVNYcDNXYlZwUmFZYVFPYkY3TmFRaG5ISUFJSmlsR01fT3RaaHhQdXNhSzBvZF9YR0xlZzdNemhB",
+    "native_id": "CBMipgFBVV95cUxPSjlmNkFuZ3V4c1huVnBoM2cxY2FKbmRPNXgxM2tVektLNDY4U2Z1V2FaWW02NlRDZ3BaSnpQSkFhQWxKTS1uUVY5R0FxeGR6MmtvNF8zSXU1bVlOd1NWZzlWTU9wUllscHlPRThqeVNYcDNXYlZwUmFZYVFPYkY3TmFRaG5ISUFJSmlsR01fT3RaaHhQdXNhSzBvZF9YR0xlZzdNemhB",
+    "published_at": "2026-10-31T22:33:19+00:00",
+    "published_raw": "Sat, 31 Oct 2026 22:33:19 GMT",
+    "summary": "Remarks by Angus McGregor, Assistant Governor Financial Stability Reserve Bank of New Zealand",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Department of Justice",
-      "jurisdiction": "US",
-      "family": "judicial_and_enforcement"
+      "issuer": "Reserve Bank of New Zealand (official-site news mirror)",
+      "jurisdiction": "NZ",
+      "family": "monetary_operations"
     },
-    "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 7937,
-    "first_seen": "2026-10-31T17:48:38.297024+00:00",
-    "last_seen": "2026-10-31T17:48:38.297024+00:00",
+    "primary_source_id": "nz-rbnz-gnews",
+    "n": 7950,
+    "first_seen": "2026-11-01T07:35:42.805953+00:00",
+    "last_seen": "2026-11-01T07:35:42.805953+00:00",
     "source_ids": [
-      "us-doj-b3d27e1dc3"
+      "nz-rbnz-gnews"
     ]
   },
   {
-    "title": "Three Indicted for Violations of the Federal Controlled Substances Act Resulting in Death",
-    "url": "https://www.justice.gov/usao-edla/pr/three-indicted-violations-federal-controlled-substances-act-resulting-death",
-    "native_id": "https://www.justice.gov/usao-edla/pr/three-indicted-violations-federal-controlled-substances-act-resulting-death",
-    "published_at": "2026-10-30T12:00:00+00:00",
-    "published_raw": "Fri, 30 Oct 2026 12:00:00 +0000",
-    "summary": "NEW ORLEANS, LOUISIANA –United States Attorney David I. Courcelle announced that IVORY CARTER (“CARTER”) age 44 , DONNISHA BROWN (“BROWN”) age 42 , AND CHRISTOPHER LEHMANN (“LEHMANN”) age 30, were charged in a recently unsealed four-count indictment on October 1, 2026.",
+    "title": "Asset quality summary – Banks System NPL ratio - Reserve Bank of New Zealand",
+    "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNbktBMWdGTkdEaTRWV1pvWDlBd0pBRXpHNi1kUjBnV25rRmE2ZTdscWlSUlBMMXktaFdxemNkWGl5Z0p4M3dFTkg4Q2JRSnM1ZHZsSVQwSFlpaWsxb0FZY1ZLTnBZWkZ3YWNiRF9ZRlVkWjVxRklIbTg5NUU0d3pOTjdqNEtQYVhmWElxS0VqVGV1bnBjNkpxbzk3NG1aY29LTFNfVkd1cU92TkljZ2pwVlhkQ2o5VVRpWUVBc2k0VHZhS01rUlNNa0xXRnZldw",
+    "native_id": "CBMizgFBVV95cUxNbktBMWdGTkdEaTRWV1pvWDlBd0pBRXpHNi1kUjBnV25rRmE2ZTdscWlSUlBMMXktaFdxemNkWGl5Z0p4M3dFTkg4Q2JRSnM1ZHZsSVQwSFlpaWsxb0FZY1ZLTnBZWkZ3YWNiRF9ZRlVkWjVxRklIbTg5NUU0d3pOTjdqNEtQYVhmWElxS0VqVGV1bnBjNkpxbzk3NG1aY29LTFNfVkd1cU92TkljZ2pwVlhkQ2o5VVRpWUVBc2k0VHZhS01rUlNNa0xXRnZldw",
+    "published_at": "2026-10-31T07:27:42+00:00",
+    "published_raw": "Sat, 31 Oct 2026 07:27:42 GMT",
+    "summary": "Asset quality summary – Banks System NPL ratio Reserve Bank of New Zealand",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Department of Justice",
-      "jurisdiction": "US",
-      "family": "judicial_and_enforcement"
+      "issuer": "Reserve Bank of New Zealand (official-site news mirror)",
+      "jurisdiction": "NZ",
+      "family": "monetary_operations"
     },
-    "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 7938,
-    "first_seen": "2026-10-31T17:48:38.297024+00:00",
-    "last_seen": "2026-10-31T17:48:38.297024+00:00",
+    "primary_source_id": "nz-rbnz-gnews",
+    "n": 7951,
+    "first_seen": "2026-11-01T07:35:42.805953+00:00",
+    "last_seen": "2026-11-01T07:35:42.805953+00:00",
     "source_ids": [
-      "us-doj-b3d27e1dc3"
+      "nz-rbnz-gnews"
     ]
   },
   {
-    "title": "South Florida Selected as First Pilot Location for National Initiative to Combat Federal Nutrition Assistance Fraud",
-    "url": "https://www.justice.gov/usao-sdfl/pr/south-florida-selected-first-pilot-location-national-initiative-combat-federal-0",
-    "native_id": "https://www.justice.gov/usao-sdfl/pr/south-florida-selected-first-pilot-location-national-initiative-combat-federal-0",
-    "published_at": "2026-10-30T12:00:00+00:00",
-    "published_raw": "Fri, 30 Oct 2026 12:00:00 +0000",
-    "summary": "U.S. Attorney Jason A. Reding Quiñones for the Southern District of Florida today joined U.S. Department of Agriculture (USDA) Inspector General John Walk and federal, state, and local law enforcement partners to launch the Hunger Assistance Enforcement and Accountability Teams (HEAT) initiative, a coordinated effort to investigate and prosecute fraud involving federal nutrition assistance programs. South Florida will serve as the first pilot location for the national initiative, underscoring the U.S. Attorney’s Office’s commitment to protecting taxpayer-funded assistance programs and holding accountable those who exploit resources intended for vulnerable Americans.",
+    "title": "Bundesbank Invited Speaers: Itay Goldstein",
+    "url": "https://www.bundesbank.de/de/aufgaben/themen/finanzstabilitaetsbericht-1013296",
+    "native_id": "https://www.bundesbank.de/de/aufgaben/themen/finanzstabilitaetsbericht-1013296",
+    "published_at": "2026-11-01T23:00:00+00:00",
+    "published_raw": "Sun, 01 Nov 2026 23:00:00 GMT",
+    "summary": "",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Department of Justice",
-      "jurisdiction": "US",
-      "family": "judicial_and_enforcement"
+      "issuer": "Deutsche Bundesbank — Topics",
+      "jurisdiction": "DE",
+      "family": "monetary_and_supervisory"
     },
-    "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 7939,
-    "first_seen": "2026-10-31T17:48:38.297024+00:00",
-    "last_seen": "2026-10-31T17:48:38.297024+00:00",
+    "primary_source_id": "de-bundesbank-fe89ad3ac9",
+    "n": 7952,
+    "first_seen": "2026-11-01T07:35:42.805953+00:00",
+    "last_seen": "2026-11-01T07:35:42.805953+00:00",
     "source_ids": [
-      "us-doj-b3d27e1dc3"
-    ]
-  },
-  {
-    "title": "Federal Law Enforcement Initiative Targets Sex Offender Registration Violations and Child Exploitation",
-    "url": "https://www.justice.gov/usao-wdmo/pr/federal-law-enforcement-initiative-targets-sex-offender-registration-violations-and",
-    "native_id": "https://www.justice.gov/usao-wdmo/pr/federal-law-enforcement-initiative-targets-sex-offender-registration-violations-and",
-    "published_at": "2026-10-30T12:00:00+00:00",
-    "published_raw": "Fri, 30 Oct 2026 12:00:00 +0000",
-    "summary": "The U.S. Attorney for the Western District of Missouri announced today that, as part of its ongoing Project Safe Childhood initiative, federal, state, and local law enforcement partners have conducted a focused enforcement effort targeting individuals who fail to comply with federal sex offender registration requirements and those involved in child exploitation.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Department of Justice",
-      "jurisdiction": "US",
-      "family": "judicial_and_enforcement"
-    },
-    "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 7940,
-    "first_seen": "2026-10-31T17:48:38.297024+00:00",
-    "last_seen": "2026-10-31T17:48:38.297024+00:00",
-    "source_ids": [
-      "us-doj-b3d27e1dc3"
-    ]
-  },
-  {
-    "title": "Kansas man pleads guilty to illegal gun possession",
-    "url": "https://www.justice.gov/usao-ks/pr/kansas-man-pleads-guilty-illegal-gun-possession",
-    "native_id": "https://www.justice.gov/usao-ks/pr/kansas-man-pleads-guilty-illegal-gun-possession",
-    "published_at": "2026-10-30T12:00:00+00:00",
-    "published_raw": "Fri, 30 Oct 2026 12:00:00 +0000",
-    "summary": "A Kansas man pleaded guilty to illegally possessing a firearm while facing criminal charges.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Department of Justice",
-      "jurisdiction": "US",
-      "family": "judicial_and_enforcement"
-    },
-    "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 7941,
-    "first_seen": "2026-10-31T17:48:38.297024+00:00",
-    "last_seen": "2026-10-31T17:48:38.297024+00:00",
-    "source_ids": [
-      "us-doj-b3d27e1dc3"
-    ]
-  },
-  {
-    "title": "U.S. Attorney Aaron Reitz issues statement regarding Harris County DA indicting ICE agent",
-    "url": "https://www.justice.gov/usao-sdtx/pr/us-attorney-aaron-reitz-issues-statement-regarding-harris-county-da-indicting-ice",
-    "native_id": "https://www.justice.gov/usao-sdtx/pr/us-attorney-aaron-reitz-issues-statement-regarding-harris-county-da-indicting-ice",
-    "published_at": "2026-10-30T12:00:00+00:00",
-    "published_raw": "Fri, 30 Oct 2026 12:00:00 +0000",
-    "summary": "Disappointed in his inability to swiftly bring charges in the tragic Salgado shooting in July, the Harris County District Attorney now appears determined to put a different federal agent’s scalp on the wall. This time, he’s pursuing what looks like a political prosecution of an ICE agent for doing his job—exactly what his allies have been agitating for",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Department of Justice",
-      "jurisdiction": "US",
-      "family": "judicial_and_enforcement"
-    },
-    "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 7942,
-    "first_seen": "2026-10-31T17:48:38.297024+00:00",
-    "last_seen": "2026-10-31T17:48:38.297024+00:00",
-    "source_ids": [
-      "us-doj-b3d27e1dc3"
-    ]
-  },
-  {
-    "title": "Dominican National Pleads Guilty to Receiving Over $24,000 in SNAP Benefits",
-    "url": "https://www.justice.gov/usao-ma/pr/dominican-national-pleads-guilty-receiving-over-24000-snap-benefits",
-    "native_id": "https://www.justice.gov/usao-ma/pr/dominican-national-pleads-guilty-receiving-over-24000-snap-benefits",
-    "published_at": "2026-10-30T12:00:00+00:00",
-    "published_raw": "Fri, 30 Oct 2026 12:00:00 +0000",
-    "summary": "BOSTON – A Boston man, who was born in the Dominican Republic and is a Lawful Permanent Resident, pleaded guilty today in federal court in Boston to stealing the identity of a U.S. citizen from Puerto Rico and using the stolen identity to obtain more than $20,000 in federally funded benefits from Massachusetts.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Department of Justice",
-      "jurisdiction": "US",
-      "family": "judicial_and_enforcement"
-    },
-    "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 7943,
-    "first_seen": "2026-10-31T17:48:38.297024+00:00",
-    "last_seen": "2026-10-31T17:48:38.297024+00:00",
-    "source_ids": [
-      "us-doj-b3d27e1dc3"
-    ]
-  },
-  {
-    "title": "Federal Jury Convicts Georgia Felon for Illegal Possession of a Firearm",
-    "url": "https://www.justice.gov/usao-ndfl/pr/federal-jury-convicts-georgia-felon-illegal-possession-firearm",
-    "native_id": "https://www.justice.gov/usao-ndfl/pr/federal-jury-convicts-georgia-felon-illegal-possession-firearm",
-    "published_at": "2026-10-30T12:00:00+00:00",
-    "published_raw": "Fri, 30 Oct 2026 12:00:00 +0000",
-    "summary": "Tallahassee, Florida – Jonathan Deon Morehead, 38, of Atlanta, Georgia, was found guilty by a federal jury in Tallahassee following a trial for possession of a firearm by a convicted felon. The verdict was announced by John P. Heekin, United States Attorney for the Northern District of Florida.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Department of Justice",
-      "jurisdiction": "US",
-      "family": "judicial_and_enforcement"
-    },
-    "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 7944,
-    "first_seen": "2026-10-31T17:48:38.297024+00:00",
-    "last_seen": "2026-10-31T17:48:38.297024+00:00",
-    "source_ids": [
-      "us-doj-b3d27e1dc3"
-    ]
-  },
-  {
-    "title": "Augusta Woman Pleads Guilty to Social Security Fraud",
-    "url": "https://www.justice.gov/usao-me/pr/augusta-woman-pleads-guilty-social-security-fraud",
-    "native_id": "https://www.justice.gov/usao-me/pr/augusta-woman-pleads-guilty-social-security-fraud",
-    "published_at": "2026-10-30T12:00:00+00:00",
-    "published_raw": "Fri, 30 Oct 2026 12:00:00 +0000",
-    "summary": "According to court records, from about October 2018 to April 2022, Deborah Oldis , 63, intentionally concealed and failed to disclose her ownership of assets, including bonds, stocks, and a personal bank account.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Department of Justice",
-      "jurisdiction": "US",
-      "family": "judicial_and_enforcement"
-    },
-    "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 7945,
-    "first_seen": "2026-10-31T17:48:38.297024+00:00",
-    "last_seen": "2026-10-31T17:48:38.297024+00:00",
-    "source_ids": [
-      "us-doj-b3d27e1dc3"
-    ]
-  },
-  {
-    "title": "EU-Canada Summit 2026: Leaders mark a historic moment in bilateral relations",
-    "url": "https://ec.europa.eu/commission/presscorner/detail/en/ac_26_2318",
-    "native_id": "https://ec.europa.eu/commission/presscorner/detail/en/ac_26_2318",
-    "published_at": "2026-10-31T09:45:02+00:00",
-    "published_raw": "Sat, 31 Oct 2026 09:45:02 GMT",
-    "summary": "European Commission News Brussels, 31 Oct 2026 Commission President Ursula von der Leyen, along with European Council President António Costa, took part in the EU-Canada Summit hosted by Canadian Prime Mini...",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "European Commission press and decisions",
-      "jurisdiction": "EU",
-      "family": "executive_and_regulatory"
-    },
-    "primary_source_id": "eu-commission-07d4f58ccf",
-    "n": 7946,
-    "first_seen": "2026-10-31T17:48:38.297024+00:00",
-    "last_seen": "2026-10-31T17:48:38.297024+00:00",
-    "source_ids": [
-      "eu-commission-07d4f58ccf"
-    ]
-  },
-  {
-    "title": "ESMA publishes latest edition of its newsletter",
-    "url": "https://www.esma.europa.eu/press-news/esma-news/esma-publishes-latest-edition-its-newsletter-45",
-    "native_id": "https://www.esma.europa.eu/press-news/esma-news/esma-publishes-latest-edition-its-newsletter-45",
-    "published_at": null,
-    "published_raw": "",
-    "summary": "ESMA publishes latest edition of its newsletter 29 October 2026 ESMA newsletter The European Securities and Markets Authority (ESMA), the EU’s financial markets regulator and supervisor, has published today the latest edition of its Spotlight on Markets newsletter , covering key activities and publications from September and October 2026. This edition opens with the appointment of Carlo Comporti as ESMA’s next Chair . His appointment was confirmed by the Council of the European Union, and he will take up his position on 1 November 2026. Top news highlights include ESMA’s 2027 Annual Work Programme , setting out priorities for stronger, simpler and more integrated EU capital markets; the new Union Strategic Supervisory Priority on digital innovation; and the European Supervisory Authorities’ priorities for 2027 . Other key publications featured in this edition include: the preparations for the transition to T+1 settlement , the ESAs’ call for vigilance over external dependencies, cyber threats and private markets , ESMA’s proposals to make MiCA clearer, safer and ready for emerging services , and its second Trends, Risks and Vulnerabilities Report of 2026 . Other updates include a M",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "European Securities and Markets Authority",
-      "jurisdiction": "EU",
-      "family": "market_rules_and_enforcement"
-    },
-    "primary_source_id": "eu-esma-73e01d4013",
-    "n": 7947,
-    "first_seen": "2026-10-31T17:48:38.297024+00:00",
-    "last_seen": "2026-10-31T17:48:38.297024+00:00",
-    "source_ids": [
-      "eu-esma-73e01d4013"
-    ]
-  },
-  {
-    "title": "ESMA proposes simpler EU Taxonomy reporting",
-    "url": "https://www.esma.europa.eu/press-news/esma-news/esma-proposes-simpler-eu-taxonomy-reporting",
-    "native_id": "https://www.esma.europa.eu/press-news/esma-news/esma-proposes-simpler-eu-taxonomy-reporting",
-    "published_at": null,
-    "published_raw": "",
-    "summary": "ESMA proposes simpler EU Taxonomy reporting 29 October 2026 Issuer disclosure Sustainable finance The European Securities and Markets Authority (ESMA), the EU’s financial markets regulator and supervisor, has published its Final Report providing technical advice to the European Commission on simplifying key performance indicators under the Taxonomy Disclosures Delegated Act. ESMA recommends narrowing the mandatory operating expenditure (OpEx) KPI to non-capitalised research and development expenditure. It also proposes simpler group Taxonomy reporting, including removing the weighted-average KPI, and targeted measures to make disclosures more proportionate, clearer and easier to use. The Technical Advice was coordinated with the other European Supervisory Authorities, in particular on the voluntary use of counterparties’ OpEx information and group-level Taxonomy reporting. The proposals support ESMA’s simplification and burden reduction objectives, while focussing reporting on information that is useful for decision-making, and preserving the relevance, comparability and reliability of Taxonomy disclosures. Next steps ESMA has submitted the Final Report and its technical advice to ",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "European Securities and Markets Authority",
-      "jurisdiction": "EU",
-      "family": "market_rules_and_enforcement"
-    },
-    "primary_source_id": "eu-esma-73e01d4013",
-    "n": 7948,
-    "first_seen": "2026-10-31T17:48:38.297024+00:00",
-    "last_seen": "2026-10-31T17:48:38.297024+00:00",
-    "source_ids": [
-      "eu-esma-73e01d4013"
-    ]
-  },
-  {
-    "title": "ESMA streamlines several Q&As as part of simplification efforts",
-    "url": "https://www.esma.europa.eu/press-news/esma-news/esma-streamlines-several-qas-part-simplification-efforts",
-    "native_id": "https://www.esma.europa.eu/press-news/esma-news/esma-streamlines-several-qas-part-simplification-efforts",
-    "published_at": null,
-    "published_raw": "",
-    "summary": "ESMA streamlines several Q&As as part of simplification efforts 22 October 2026 Market Abuse MiFID - Secondary Markets Short Selling Simplification and Burden Reduction The European Securities and Markets Authority (ESMA), the EU regulator and supervisor, has updated its Questions and Answers (Q&As) on market structure under MiFID II , the Market Abuse Regulation (MAR) and the Short Selling Regulation (SSR) , removing outdated, duplicative and no longer relevant guidance as part of its Simplification and Burden Reduction (SBR) initiative . The exercise focused on identifying Q&As that are no longer relevant due to legislative amendments that are reflected in established market practices, or that are covered by other ESMA guidance. As a result, several Q&As have been withdrawn or amended, including instances where the same issues are addressed in other ESMA publications such as supervisory briefings and opinions. The goal of the initiative is to reduce unnecessary complexity, remove obsolete guidance and ensure that ESMA's Q&As remain relevant, proportionate and consistent with the current legislative framework. Stakeholders are encouraged to refer to the updated set of Q&As togethe",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "European Securities and Markets Authority",
-      "jurisdiction": "EU",
-      "family": "market_rules_and_enforcement"
-    },
-    "primary_source_id": "eu-esma-73e01d4013",
-    "n": 7949,
-    "first_seen": "2026-10-31T17:48:38.297024+00:00",
-    "last_seen": "2026-10-31T17:48:38.297024+00:00",
-    "source_ids": [
-      "eu-esma-73e01d4013"
+      "de-bundesbank-fe89ad3ac9"
     ]
   }
 ]

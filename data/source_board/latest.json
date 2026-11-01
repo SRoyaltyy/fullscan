@@ -1,6 +1,6 @@
 {
- "date": "2026-10-31",
- "generated_at": "2026-10-31T17:48:56.983958+00:00",
+ "date": "2026-11-01",
+ "generated_at": "2026-11-01T07:36:03.583510+00:00",
  "catalog": {
   "generated_at": "2026-10-31T17:46:18.945180+00:00",
   "channels": 365,
@@ -34,48 +34,41 @@
   }
  },
  "collect": {
-  "generated_at": "2026-10-31T17:48:38.297024+00:00",
+  "generated_at": "2026-11-01T07:35:42.805953+00:00",
   "enabled_sources": 119,
   "sources_ok": 119,
   "sources_failed": 0,
   "coverage_status": "degraded",
   "counts": {
-   "observed": 1996,
-   "old": 1187,
-   "future": 0,
-   "undated": 253,
-   "new": 26,
-   "duplicates": 783
+   "observed": 1715,
+   "old": 1186,
+   "future": 2,
+   "undated": 243,
+   "new": 3,
+   "duplicates": 524
   },
-  "current_dated_documents": 686
+  "current_dated_documents": 529
  },
  "new_today": {
-  "count": 26,
+  "count": 3,
   "by_source": {
-   "us-govinfo-bills": 12,
-   "us-doj-b3d27e1dc3": 9,
-   "eu-esma-73e01d4013": 3,
-   "us-govinfo-crpt": 1,
-   "eu-commission-07d4f58ccf": 1
+   "nz-rbnz-gnews": 2,
+   "de-bundesbank-fe89ad3ac9": 1
   },
   "by_class": {
-   "routine": 16,
-   "high": 6,
-   "watch": 1,
-   "docket": 3
+   "watch": 3
   }
  },
  "parsed_today": {
-  "count": 14,
+  "count": 1,
   "by_class": {
-   "high": 1,
-   "routine": 13
+   "watch": 1
   }
  },
  "n_failures": 0,
  "dates": [
-  "2026-10-31"
+  "2026-11-01"
  ],
- "href": "https://raw.githubusercontent.com/SRoyaltyy/fullscan/main/data/source_board/2026-10-31.json",
+ "href": "https://raw.githubusercontent.com/SRoyaltyy/fullscan/main/data/source_board/2026-11-01.json",
  "pages": "https://sroyaltyy.github.io/fullscan/dashboard/source-board/"
 }
