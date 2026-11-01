@@ -23,10 +23,10 @@
     "graded_articles": {
       "0-1d": 1678,
       "2d": 1612,
-      "3d": 1570,
+      "3d": 1571,
       "4d": 1529,
       "5d": 1503,
-      "1-4w": 7373
+      "1-4w": 7374
     }
   },
   "hit_rates": {
@@ -43,10 +43,10 @@
       "graded_articles": 1612
     },
     "3d": {
-      "hits": 1384,
-      "n_calls": 2816,
-      "hit_rate": 0.4915,
-      "graded_articles": 1570
+      "hits": 1385,
+      "n_calls": 2817,
+      "hit_rate": 0.4917,
+      "graded_articles": 1571
     },
     "4d": {
       "hits": 1390,
@@ -62,29 +62,29 @@
     },
     "1-4w": {
       "hits": 5358,
-      "n_calls": 11351,
-      "hit_rate": 0.472,
-      "graded_articles": 7373
+      "n_calls": 11358,
+      "hit_rate": 0.4717,
+      "graded_articles": 7374
     }
   },
   "hit_rates_broad_short": {
     "0-1d": {
-      "hits": 7709,
+      "hits": 7710,
       "n_calls": 15790,
-      "hit_rate": 0.4882,
+      "hit_rate": 0.4883,
       "graded_articles": 10492
     },
     "2d": {
       "hits": 7291,
-      "n_calls": 14777,
+      "n_calls": 14778,
       "hit_rate": 0.4934,
-      "graded_articles": 9661
+      "graded_articles": 9662
     },
     "3d": {
-      "hits": 7079,
-      "n_calls": 14438,
+      "hits": 7080,
+      "n_calls": 14439,
       "hit_rate": 0.4903,
-      "graded_articles": 9395
+      "graded_articles": 9396
     },
     "4d": {
       "hits": 7019,
@@ -1201,6 +1201,24 @@
           "published_at": "2026-09-10 08:30:00",
           "title": "Lakeland Industries, Inc. Q2 2027 Earnings Call Summary",
           "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "CDNA",
+          "direction": "up",
+          "ret": 8.43,
+          "entry_date": "2026-10-30",
+          "published_at": "2026-10-29 16:01:00",
+          "title": "CareDx Announces Third Quarter 2026 Financial Results",
+          "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "CDNA",
+          "direction": "up",
+          "ret": 8.43,
+          "entry_date": "2026-10-30",
+          "published_at": "2026-10-29 19:01:03",
+          "title": "CareDx Raises Guidance For A Third Straight Quarter As Transplant Volume Accelerates, But One-Time Items And A Softer Implied Q4 Temper The Beat",
+          "event_class": "guidance"
         },
         {
           "ticker": "TNON",
@@ -3433,24 +3451,6 @@
           "published_at": "2026-08-20 16:05:00",
           "title": "FMX to Host Investor Day on October 13, 2026",
           "event_class": "print_vs_priced"
-        },
-        {
-          "ticker": "CDNA",
-          "direction": "up",
-          "ret": 6.47,
-          "entry_date": "2026-10-30",
-          "published_at": "2026-10-29 16:01:00",
-          "title": "CareDx Announces Third Quarter 2026 Financial Results",
-          "event_class": "print_vs_priced"
-        },
-        {
-          "ticker": "CDNA",
-          "direction": "up",
-          "ret": 6.47,
-          "entry_date": "2026-10-30",
-          "published_at": "2026-10-29 19:01:03",
-          "title": "CareDx Raises Guidance For A Third Straight Quarter As Transplant Volume Accelerates, But One-Time Items And A Softer Implied Q4 Temper The Beat",
-          "event_class": "guidance"
         },
         {
           "ticker": "AGMB",
@@ -6605,24 +6605,6 @@
           "event_class": "guidance"
         },
         {
-          "ticker": "GDYN",
-          "direction": "up",
-          "ret": 28.21,
-          "entry_date": "2026-10-30",
-          "published_at": "2026-10-29 16:05:00",
-          "title": "Grid Dynamics Reports Record Third Quarter 2026 Financial Results",
-          "event_class": "print_vs_priced"
-        },
-        {
-          "ticker": "GDYN",
-          "direction": "up",
-          "ret": 28.21,
-          "entry_date": "2026-10-30",
-          "published_at": "2026-10-30 07:31:37",
-          "title": "Grid Dynamics Delivers A Margin Step-Change And Accelerating Growth, But A Flat Q4 Guide And Slowing AI Growth Temper The Story",
-          "event_class": "print_vs_priced"
-        },
-        {
           "ticker": "NIVF",
           "direction": "down",
           "ret": -28.0,
@@ -6648,6 +6630,24 @@
           "published_at": "2026-08-11 09:28:00",
           "title": "CleanCore Solutions, Inc. (NYSE American: ZONE) Announces Pricing of $100 Million Public Offering",
           "event_class": "dilution"
+        },
+        {
+          "ticker": "GDYN",
+          "direction": "up",
+          "ret": 27.6,
+          "entry_date": "2026-10-30",
+          "published_at": "2026-10-29 16:05:00",
+          "title": "Grid Dynamics Reports Record Third Quarter 2026 Financial Results",
+          "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "GDYN",
+          "direction": "up",
+          "ret": 27.6,
+          "entry_date": "2026-10-30",
+          "published_at": "2026-10-30 07:31:37",
+          "title": "Grid Dynamics Delivers A Margin Step-Change And Accelerating Growth, But A Flat Q4 Guide And Slowing AI Growth Temper The Story",
+          "event_class": "print_vs_priced"
         },
         {
           "ticker": "CTOS",
@@ -44268,6 +44268,15 @@
           "event_class": "print_vs_priced"
         },
         {
+          "ticker": "MVST",
+          "direction": "up",
+          "ret": 13.8,
+          "entry_date": "2026-10-27",
+          "published_at": "2026-10-26 17:00:00",
+          "title": "Microvast Schedules Third Quarter Earnings Call",
+          "event_class": "print_vs_priced"
+        },
+        {
           "ticker": "GPK",
           "direction": "down",
           "ret": -13.78,
@@ -44292,15 +44301,6 @@
           "entry_date": "2026-08-14",
           "published_at": "2026-08-14 01:02:03",
           "title": "HeartBeam Inc (BEAT) (Q2 2026) Earnings Call Highlights: FDA Submission Advances and Commercial ...",
-          "event_class": "print_vs_priced"
-        },
-        {
-          "ticker": "MVST",
-          "direction": "up",
-          "ret": 13.74,
-          "entry_date": "2026-10-27",
-          "published_at": "2026-10-26 17:00:00",
-          "title": "Microvast Schedules Third Quarter Earnings Call",
           "event_class": "print_vs_priced"
         },
         {
@@ -94360,9 +94360,9 @@
           "hit_rate": 0.5013
         },
         "3d": {
-          "hits": 739,
-          "n": 1491,
-          "hit_rate": 0.4956
+          "hits": 740,
+          "n": 1492,
+          "hit_rate": 0.496
         },
         "4d": {
           "hits": 740,

@@ -23,10 +23,10 @@ Rubric hit rates count a call only when q5=impulse, direction in {up, down}, tra
 | impulse + up/down + listed | 14544 |
 | graded articles 0-1d | 1678 |
 | graded articles 2d | 1612 |
-| graded articles 3d | 1570 |
+| graded articles 3d | 1571 |
 | graded articles 4d | 1529 |
 | graded articles 5d | 1503 |
-| graded articles 1-4w | 7373 |
+| graded articles 1-4w | 7374 |
 
 ## Hit rates
 
@@ -34,12 +34,12 @@ Rubric column skips long-horizon classes on 0-1d and 2-5d. Broad column keeps th
 
 | horizon | rubric hits | rubric n | rubric rate | broad hits | broad n | broad rate |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| 0-1d | 1532 | 3044 | 1532/3044 = 50.3% | 7709 | 15790 | 7709/15790 = 48.8% |
-| 2d | 1456 | 2900 | 1456/2900 = 50.2% | 7291 | 14777 | 7291/14777 = 49.3% |
-| 3d | 1384 | 2816 | 1384/2816 = 49.1% | 7079 | 14438 | 7079/14438 = 49.0% |
+| 0-1d | 1532 | 3044 | 1532/3044 = 50.3% | 7710 | 15790 | 7710/15790 = 48.8% |
+| 2d | 1456 | 2900 | 1456/2900 = 50.2% | 7291 | 14778 | 7291/14778 = 49.3% |
+| 3d | 1385 | 2817 | 1385/2817 = 49.2% | 7080 | 14439 | 7080/14439 = 49.0% |
 | 4d | 1390 | 2755 | 1390/2755 = 50.5% | 7019 | 14165 | 7019/14165 = 49.6% |
 | 5d | 1385 | 2707 | 1385/2707 = 51.2% | 6845 | 13987 | 6845/13987 = 48.9% |
-| 1-4w | 5358 | 11351 | 5358/11351 = 47.2% | — | — | — |
+| 1-4w | 5358 | 11358 | 5358/11358 = 47.2% | — | — | — |
 
 ## Convergence / clash ledger
 
@@ -59,7 +59,7 @@ Hit rates grade the entity once per session. Converge uses that side. Clash uses
 
 | bucket | 0-1d | 2d | 3d | 4d | 5d |
 | --- | --- | --- | --- | --- | --- |
-| singleton | 770/1605 = 48.0% | 771/1538 = 50.1% | 739/1491 = 49.6% | 740/1456 = 50.8% | 739/1429 = 51.7% |
+| singleton | 770/1605 = 48.0% | 771/1538 = 50.1% | 740/1492 = 49.6% | 740/1456 = 50.8% | 739/1429 = 51.7% |
 | converge | 84/154 = 54.5% | 68/146 = 46.6% | 71/143 = 49.7% | 69/140 = 49.3% | 71/139 = 51.1% |
 | clash | 4/12 = 33.3% | 6/12 = 50.0% | 9/12 = 75.0% | 5/11 = 45.5% | 5/11 = 45.5% |
 
