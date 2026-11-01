@@ -1,38 +1,14 @@
 [
   {
-    "n": 7950,
-    "title": "Remarks by Angus McGregor, Assistant Governor Financial Stability - Reserve Bank of New Zealand",
-    "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPSjlmNkFuZ3V4c1huVnBoM2cxY2FKbmRPNXgxM2tVektLNDY4U2Z1V2FaWW02NlRDZ3BaSnpQSkFhQWxKTS1uUVY5R0FxeGR6MmtvNF8zSXU1bVlOd1NWZzlWTU9wUllscHlPRThqeVNYcDNXYlZwUmFZYVFPYkY3TmFRaG5ISUFJSmlsR01fT3RaaHhQdXNhSzBvZF9YR0xlZzdNemhB",
-    "published_at": "2026-10-31T22:33:19+00:00",
-    "official_issuer": "Reserve Bank of New Zealand (official-site news mirror)",
+    "n": 7953,
+    "title": "Joint statement by Executive Vice-President Virkkunen, High Representative Kallas and Commissioner McGrath ahead of the International Day to End Impunity for Crimes against Journalists",
+    "url": "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2317",
+    "published_at": "2026-10-31T23:00:00+00:00",
+    "official_issuer": "European Commission press and decisions",
     "document_type": "official_announcement",
     "document_stage": "requires_semantic_review",
     "source_ids": [
-      "nz-rbnz-gnews"
-    ]
-  },
-  {
-    "n": 7951,
-    "title": "Asset quality summary – Banks System NPL ratio - Reserve Bank of New Zealand",
-    "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNbktBMWdGTkdEaTRWV1pvWDlBd0pBRXpHNi1kUjBnV25rRmE2ZTdscWlSUlBMMXktaFdxemNkWGl5Z0p4M3dFTkg4Q2JRSnM1ZHZsSVQwSFlpaWsxb0FZY1ZLTnBZWkZ3YWNiRF9ZRlVkWjVxRklIbTg5NUU0d3pOTjdqNEtQYVhmWElxS0VqVGV1bnBjNkpxbzk3NG1aY29LTFNfVkd1cU92TkljZ2pwVlhkQ2o5VVRpWUVBc2k0VHZhS01rUlNNa0xXRnZldw",
-    "published_at": "2026-10-31T07:27:42+00:00",
-    "official_issuer": "Reserve Bank of New Zealand (official-site news mirror)",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "nz-rbnz-gnews"
-    ]
-  },
-  {
-    "n": 7952,
-    "title": "Bundesbank Invited Speaers: Itay Goldstein",
-    "url": "https://www.bundesbank.de/de/aufgaben/themen/finanzstabilitaetsbericht-1013296",
-    "published_at": "2026-11-01T23:00:00+00:00",
-    "official_issuer": "Deutsche Bundesbank — Topics",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "de-bundesbank-fe89ad3ac9"
+      "eu-commission-07d4f58ccf"
     ]
   }
 ]

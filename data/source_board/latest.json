@@ -1,6 +1,6 @@
 {
  "date": "2026-11-01",
- "generated_at": "2026-11-01T07:36:03.583510+00:00",
+ "generated_at": "2026-11-01T18:26:58.630297+00:00",
  "catalog": {
   "generated_at": "2026-10-31T17:46:18.945180+00:00",
   "channels": 365,
@@ -34,29 +34,28 @@
   }
  },
  "collect": {
-  "generated_at": "2026-11-01T07:35:42.805953+00:00",
+  "generated_at": "2026-11-01T18:26:35.788512+00:00",
   "enabled_sources": 119,
   "sources_ok": 119,
   "sources_failed": 0,
   "coverage_status": "degraded",
   "counts": {
-   "observed": 1715,
-   "old": 1186,
+   "observed": 1691,
+   "old": 1195,
    "future": 2,
-   "undated": 243,
-   "new": 3,
-   "duplicates": 524
+   "undated": 262,
+   "new": 1,
+   "duplicates": 493
   },
-  "current_dated_documents": 529
+  "current_dated_documents": 413
  },
  "new_today": {
-  "count": 3,
+  "count": 1,
   "by_source": {
-   "nz-rbnz-gnews": 2,
-   "de-bundesbank-fe89ad3ac9": 1
+   "eu-commission-07d4f58ccf": 1
   },
   "by_class": {
-   "watch": 3
+   "routine": 1
   }
  },
  "parsed_today": {
