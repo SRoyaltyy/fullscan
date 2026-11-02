@@ -34,13 +34,23 @@ concurrency:
 jobs:
   gate:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    # 2026-11-02: a full checkout hung in `git fetch main` past 5 min
+    # (41464776218, 41464784743, 41465774154, 41465782037). The gate reads
+    # one script and one ledger, so fetch only those, shallow and sparse.
+    timeout-minutes: 12
     outputs:
       run: ${{ steps.gate.outputs.run }}
     steps:
       - uses: actions/checkout@v4
+        timeout-minutes: 10
         with:
           ref: main
+          fetch-depth: 1
+          filter: blob:none
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /scripts/open_fill_gate.py
+            /research/hot_n4_clean_v4/forward/holdup_log.jsonl
       - name: Today's plan sealed and open fill not yet sealed (America/New_York)
         id: gate
         run: python3 scripts/open_fill_gate.py research/hot_n4_clean_v4/forward/holdup_log.jsonl
