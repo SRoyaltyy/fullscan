@@ -173,9 +173,19 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
+      # 2026-11-02 (run 41440630835): Land book ran out of runner disk in
+      # checkout. The tree is ~6.9 GB; free unused toolchains first.
+      - name: Free runner disk (github-hosted only)
+        if: runner.environment == 'github-hosted'
+        run: |
+          df -h / | tail -1
+          sudo rm -rf /usr/share/dotnet /opt/ghc /usr/local/.ghcup /usr/local/lib/android \
+            /opt/hostedtoolcache/CodeQL /usr/share/swift /usr/local/share/powershell || true
+          sudo docker system prune -af >/dev/null 2>&1 || true
+          df -h / | tail -1
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 0
+          fetch-depth: 1  # safe_git_push builds from origin/main's tree; no history needed
       - name: Twin guard (completed Pre-Open pass already landed)
         if: github.event.inputs.force != 'true'
         run: |
@@ -244,9 +254,19 @@ jobs:
       FINVIZ_SKIP_LIVE: "1"
       FULLSCAN_DB_OPTIONAL: "1"
     steps:
+      # 2026-11-02 (run 41440630835): Land book ran out of runner disk in
+      # checkout. The tree is ~6.9 GB; free unused toolchains first.
+      - name: Free runner disk (github-hosted only)
+        if: runner.environment == 'github-hosted'
+        run: |
+          df -h / | tail -1
+          sudo rm -rf /usr/share/dotnet /opt/ghc /usr/local/.ghcup /usr/local/lib/android \
+            /opt/hostedtoolcache/CodeQL /usr/share/swift /usr/local/share/powershell || true
+          sudo docker system prune -af >/dev/null 2>&1 || true
+          df -h / | tail -1
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 0
+          fetch-depth: 1  # safe_git_push builds from origin/main's tree; no history needed
       - name: Pull scrape + export from main (this run's SHA predates the scrape commit)
         run: |
           git fetch origin main
@@ -355,11 +375,35 @@ jobs:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       FULLSCAN_PUSH_TOKEN: ${{ secrets.FULLSCAN_PUSH_TOKEN }}
     steps:
+      # 2026-11-02 (run 41440630835): Land book ran out of runner disk in
+      # checkout. The tree is ~6.9 GB; free unused toolchains first.
+      - name: Free runner disk (github-hosted only)
+        if: runner.environment == 'github-hosted'
+        run: |
+          df -h / | tail -1
+          sudo rm -rf /usr/share/dotnet /opt/ghc /usr/local/.ghcup /usr/local/lib/android \
+            /opt/hostedtoolcache/CodeQL /usr/share/swift /usr/local/share/powershell || true
+          sudo docker system prune -af >/dev/null 2>&1 || true
+          df -h / | tail -1
+      # 41437541901: the full-tree checkout hit its 20 min cap on ubuntu.
+      # Preflight only reads code + config, so on github-hosted runners
+      # fetch just those (shallow, sparse, blob:none) like the gate job.
+      - name: Shallow sparse fetch (preflight files only, github-hosted)
+        if: runner.environment == 'github-hosted'
+        timeout-minutes: 8
+        run: |
+          git init -q .
+          git remote add origin "https://github.com/${{ github.repository }}"
+          git sparse-checkout set --no-cone '/src/' '/scripts/' '/config/' '/.github/' '/requirements.txt' '/01_daily/_progress/*_preopen_all_preflight.*'
+          git fetch -q --depth 1 --filter=blob:none origin "+refs/heads/main:refs/remotes/origin/main"
+          git checkout -q -B main origin/main
+          [ -f requirements.txt ] && [ -f scripts/preflight.py ]
       # Reuse the runner's warm workspace (clean: false) so only the delta
       # is fetched. 2026-10-18: cap 5 -> 20 min (job 7 -> 25); a full re-fetch
       # took 8m53s on the 10-18 canary. ecs_warmup.yml refreshes it ~02:30 ET. 10-16 06:49: clean checkout of the
       # 6.9 GB tree overran the old 2 min job cap. No sparse on ECS.
       - name: Clear stale git index.lock (shared ECS workspace)
+        if: runner.environment != 'github-hosted'
         shell: bash
         run: |
           # A job killed mid-checkout leaves .git/index.lock; the next checkout then hangs.
@@ -393,12 +437,14 @@ jobs:
             rm -rf "$GH_TMP_HOME"
           fi
       - uses: actions/checkout@v4
+        if: runner.environment != 'github-hosted'
         timeout-minutes: 20
         with:
           ref: main
           fetch-depth: 1
           clean: false
       - name: Full tree after leftover sparse-checkout
+        if: runner.environment != 'github-hosted'
         run: |
           git sparse-checkout disable || true
           test -f requirements.txt || { echo "ERROR: requirements.txt missing"; exit 1; }
@@ -434,6 +480,16 @@ jobs:
       PREOPEN_LOCK: "/home/gha/fullscan-persist/locks/preopen.lock"
       FULLSCAN_LAND: "1"
     steps:
+      # 2026-11-02 (run 41440630835): Land book ran out of runner disk in
+      # checkout. The tree is ~6.9 GB; free unused toolchains first.
+      - name: Free runner disk (github-hosted only)
+        if: runner.environment == 'github-hosted'
+        run: |
+          df -h / | tail -1
+          sudo rm -rf /usr/share/dotnet /opt/ghc /usr/local/.ghcup /usr/local/lib/android \
+            /opt/hostedtoolcache/CodeQL /usr/share/swift /usr/local/share/powershell || true
+          sudo docker system prune -af >/dev/null 2>&1 || true
+          df -h / | tail -1
       - name: Wait if ECS systemd pre-open owns the box
         run: |
           echo "waited_for_lock=no" >> "$GITHUB_ENV"
