@@ -1,8 +1,8 @@
 {
   "date": "2026-11-02",
-  "generated_at": "2026-11-02T04:25:44.831339-05:00",
+  "generated_at": "2026-11-02T04:25:56.520988-05:00",
   "phase": "morning_overlay",
-  "export": "finviz_2026-10-30.csv",
+  "export": "finviz_2026-11-02.csv",
   "n_tickers": 11616,
   "sectors": [
     {
@@ -9037,7 +9037,7 @@
       ]
     },
     {
-      "time": "36 min",
+      "time": "37 min",
       "title": "Michael Burrys Fiserv Buyout Math Hits $120  Reaffirms PayPal As A Fat Pitch Amid Global Payments Deal Buzz",
       "url": "https://finance.yahoo.com/markets/stocks/articles/michael-burry-fiserv-buyout-math-084842243.html",
       "source": "Stocktwits",
@@ -9065,8 +9065,8 @@
         "SMCI",
         "AMD",
         "PLTR",
-        "GOOGL",
-        "INTC"
+        "INTC",
+        "GOOGL"
       ]
     },
     {
@@ -10371,7 +10371,7 @@
       "company": "Apple Inc",
       "datetime": "2026-11-02T16:30:00",
       "session": "AMC",
-      "mcap": 5005755.534900313,
+      "mcap": 5008459.876304,
       "eps_est": 1.9897
     },
     {
@@ -10379,7 +10379,7 @@
       "company": "NVIDIA Corp",
       "datetime": "2026-11-17T16:30:00",
       "session": "AMC",
-      "mcap": 5005329.0636175545,
+      "mcap": 5003386.677751442,
       "eps_est": 2.4725
     },
     {
@@ -10639,20 +10639,20 @@
       "eps_est": -1.0008
     },
     {
-      "ticker": "VYLR",
-      "company": "Vylor Inc",
-      "datetime": "2026-11-11T16:30:00",
-      "session": "AMC",
-      "mcap": 49105.73803519279,
-      "eps_est": -0.5321
-    },
-    {
       "ticker": "KDP",
       "company": "Keurig Dr Pepper Inc",
       "datetime": "2026-11-03T08:30:00",
       "session": "BMO",
       "mcap": 48567.88399863186,
       "eps_est": 0.6181
+    },
+    {
+      "ticker": "VYLR",
+      "company": "Vylor Inc",
+      "datetime": "2026-11-11T16:30:00",
+      "session": "AMC",
+      "mcap": 47745.3160301732,
+      "eps_est": -0.5321
     },
     {
       "ticker": "VST",
@@ -10739,7 +10739,7 @@
       "company": "Apple Inc",
       "datetime": "2026-11-02T16:30:00",
       "session": "AMC",
-      "mcap": 5005755.534900313,
+      "mcap": 5008459.876304,
       "eps_est": 1.9897
     },
     {
@@ -10762,5 +10762,5 @@
   "calendar_window_days": 16,
   "econ_window_count": 203,
   "earnings_window_count": 624,
-  "overlay_at": "2026-11-02T04:25:44.831339-05:00"
+  "overlay_at": "2026-11-02T04:25:56.520988-05:00"
 }
