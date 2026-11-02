@@ -1,6 +1,6 @@
 # MAP HEAT — 2026-11-02
 
-Export `finviz_2026-10-30.csv` · 11616 names · generated 2026-11-02T04:25:44.831339-05:00
+Export `finviz_2026-11-02.csv` · 11616 names · generated 2026-11-02T04:25:56.520988-05:00
 
 ## TAPE (live futures)
 | Contract | Last | Change |
@@ -145,8 +145,8 @@ Mega-cap earnings:
 - BMO **BDX**  EPS est 4.0678  (Becton Dickinson \u0026 Co)
 - BMO **ETR**  EPS est 1.7264  (Entergy Corp)
 - BMO **HUM**  EPS est -1.0008  (Humana Inc)
-- AMC **VYLR**  EPS est -0.5321  (Vylor Inc)
 - BMO **KDP**  EPS est 0.6181  (Keurig Dr Pepper Inc)
+- AMC **VYLR**  EPS est -0.5321  (Vylor Inc)
 - BMO **VST**  EPS est 2.9788  (Vistra Corp)
 - BMO **FERG**  EPS est 3.3028  (Ferguson Enterprises Inc)
 - BMO **HMC**  EPS est 0.9544  (Honda Motor ADR)
@@ -291,9 +291,9 @@ COLD (1w):
 - 25 min **HLI** Houlihan Lokey Expands European Business Services Capabilities With Senior Hire (Business Wire)
 - 31 min **BP,AZN,SHEL** FTSE 100 today: Stocks fall as crude slide drags oil majors lower (Investing.com)
 - 34 min **SHEL** Voting Rights and Capital (GlobeNewswire)
-- 36 min **GPN,FISV,PYPL** Michael Burrys Fiserv Buyout Math Hits $120  Reaffirms PayPal As A Fat Pitch Amid Global Payments Deal Buzz (Stocktwits)
+- 37 min **GPN,FISV,PYPL** Michael Burrys Fiserv Buyout Math Hits $120  Reaffirms PayPal As A Fat Pitch Amid Global Payments Deal Buzz (Stocktwits)
 - 45 min **PGEN** PGEN Stock Crashes Premarket: Retail Sees Buyout Opening As Inovio Rival Crashes The Party Before Earnings (Stocktwits)
-- 45 min **SMCI,AMD,PLTR,GOOGL,INTC** Apple And Palantir To Kick Off Tech Earnings In Another Crucial Week, AMD To Settle Chip Debate After Intels Warning (Stocktwits)
+- 45 min **SMCI,AMD,PLTR,INTC,GOOGL** Apple And Palantir To Kick Off Tech Earnings In Another Crucial Week, AMD To Settle Chip Debate After Intels Warning (Stocktwits)
 - 47 min **NVDA,AAPL,LCO** European shares inch lower as Fitch cuts Frances outlook (Investing.com)
 - 50 min **GOOGL,GOOG,AMZN,MSFT,META** Stocks mixed as tech sector struggles to rebound from selloff (AFP)
 - 53 min **AEHR,EL,FN,TEM,ETR** Stock Market Today: Dow, S&P and Nasdaq set to rebound after worst day in five months; Apple results on tap (MarketWatch)
