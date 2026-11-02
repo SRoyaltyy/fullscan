@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ macd_xup, no 🚨
 
-Cash book **-8.25%** ($9,175) · signal-only (no cash/fees) was -55.44%. Starts YES **5/30**. Fills 214 · skips 209 · realized $-2117.42.
+Cash book **-12.57%** ($8,743) · signal-only (no cash/fees) was -55.44%. Starts YES **5/30**. Fills 220 · skips 209 · realized $-2117.42.
 
 ## How this sleeve decides (like you are 10)
 
@@ -398,6 +398,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-30 09:30 ET | **SELL** | `GH` | 25 | $182.48 | $2.11 | $+188.95 | $4,608.06 | ▲ +188.95 after sell → book $9,178.34; vs 09:30 mark -2.11 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-30 09:30 ET | **SELL** | `RBRK` | 34 | $131.94 | $2.14 | $-22.93 | $9,091.88 | ▼ -22.93 after sell → book $9,176.20; vs 09:30 mark -2.14 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,091.88 | ▼ close $9,174.81 vs 09:30 $9,180.45 (session -1.39) | 16:00 close · cash $9,091.88 · equity $9,174.81 vs 09:30 $9,180.45 (-5.64; session marks -1.39) · 4 name(s) marked open→close (per-name table). AMPX×2 09:30 $8.57 → close $8.59 +0.04; NEO×1 09:30 $17.95 → close $17.38 -0.57; S×1 09:30 $25.47 → close $25.15 -0.32; SPCE×9 09:30 $2.64 → close $2.58 -0.54 | — |
+| 2026-11-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,091.88 | ▲ 09:30 equity $9,175.94 vs yday $9,174.81 (+1.13) | 09:30 open · cash $9,091.88 (unchanged overnight, no fees) · equity $9,175.94 vs prior close $9,174.81 (+1.13) · 4 name(s) re-marked at the open (per-name table). AMPX×2 yday $8.59 → 09:30 $8.86 +0.54; NEO×1 yday $17.38 → 09:30 $17.66 +0.28; S×1 yday $25.15 → 09:30 $25.10 -0.05; SPCE×9 yday $2.58 → 09:30 $2.62 +0.36 | — |
+| 2026-11-02 09:30 ET | **SELL** | `AMPX` | 2 | $8.86 | $0.20 | $-0.63 | $9,109.40 | ▼ -0.63 after sell → book $9,175.74; vs 09:30 mark -0.20 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-02 09:30 ET | **SELL** | `NEO` | 1 | $17.66 | $0.20 | $-0.02 | $9,126.86 | ▼ -0.02 after sell → book $9,175.54; vs 09:30 mark -0.20 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-02 09:30 ET | **SELL** | `S` | 1 | $25.10 | $0.27 | $-0.99 | $9,151.68 | ▼ -0.99 after sell → book $9,175.26; vs 09:30 mark -0.28 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-02 09:30 ET | **SELL** | `SPCE` | 9 | $2.62 | $0.28 | $-1.09 | $9,174.98 | ▼ -1.09 after sell → book $9,174.98; vs 09:30 mark -0.28 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-02 09:30 ET | **BUY** | `SMMT` | 286 | $16.00 | $3.69 | — | $4,595.29 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list probable,yday_gainer,yday_mover; ret5=+3.6; leftover $4587.49 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `BTSG` | 67 | $67.50 | $2.19 | — | $70.60 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list ohlc_hot; ret5=+11.3; leftover $4587.49 | join🟡 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $70.60 | ▼ close $8,742.82 vs 09:30 $9,175.94 (session -426.28) | 16:00 close · cash $70.60 · equity $8,742.82 vs 09:30 $9,175.94 (-433.12; session marks -426.28) · 2 name(s) marked open→close (per-name table). SMMT×286 09:30 $16.00 → close $14.80 -343.20; BTSG×67 09:30 $67.50 → close $66.26 -83.08 | — |
 
 ## Not taken
 

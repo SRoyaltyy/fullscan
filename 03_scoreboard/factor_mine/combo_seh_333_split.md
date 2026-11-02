@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · split short_news_r_h3/union_e_fresh_h3/union_hot_n4_h1 w=0.33,0.33,0.33 net=priority
 
-Cash book **-0.12%** ($9,988) · signal-only (no cash/fees) was —. Starts YES **29/30**. Fills 570 · skips 367 · realized $+2181.46.
+Cash book **+0.06%** ($10,006) · signal-only (no cash/fees) was —. Starts YES **29/30**. Fills 577 · skips 367 · realized $+2181.46.
 
 ## How this sleeve decides (like you are 10)
 
@@ -56,7 +56,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $11,366.26.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $7,054.29.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -876,6 +876,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-30 09:30 ET | **COVER** | `BAH` | 8 | $85.60 | $2.01 | $-28.67 | $4,972.39 | ▼ -28.67 after sell → book $2,853.48; vs 09:30 mark -2.01 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-30 09:30 ET | **COVER** | `VVX` | 9 | $80.27 | $2.02 | $-33.28 | $4,247.98 | ▼ -33.28 after sell → book $2,851.46; vs 09:30 mark -2.02 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-30 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $5,659.20 | ▲ 09:30 equity $2,855.49 vs yday $2,806.24 (+49.26) | 09:30 open · cash $5,659.20 (unchanged overnight, no fees) · equity $2,855.49 vs prior close $2,806.24 (+49.26) · 4 name(s) re-marked at the open (per-name table). BAH×8 yday $84.23 → 09:30 $85.60 -10.96; SPCE×268 yday $2.73 → 09:30 $2.64 +24.12; VOYG×26 yday $27.80 → 09:30 $26.50 +33.80; VVX×9 yday $80.52 → 09:30 $80.27 +2.29 | — |
+| 2026-11-02 09:30 ET | **BUY** | `BC` | 14 | $76.25 | $2.03 | — | $110.42 | — | top 4 by hot; rank hot_score; list ohlc_hot; 🔵; ret5=+14.4; leftover $1104.74 | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `CDNA` | 12 | $86.88 | $2.03 | — | $3,374.36 | — | top 4 by hot; rank hot_score; list flatten; 🔵; ret5=+26.3; leftover $1104.74 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `GEN` | 38 | $29.05 | $2.10 | — | $1,179.95 | — | top 4 by hot; rank hot_score; list ohlc_hot; 🔵; ret5=+17.1; leftover $1104.74 | join🟡 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `SLN` | 55 | $19.75 | $2.15 | — | $2,285.96 | — | top 4 by hot; rank hot_score; list ohlc_hot; ret5=+0.4; leftover $1104.74 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $4,244.54 | ▼ close $2,836.22 vs 09:30 $2,857.60 (session -13.76) | 16:00 close · cash $4,244.54 · equity $2,836.22 vs 09:30 $2,857.60 (-21.38; session marks -13.76) · 1 name(s) marked open→close (per-name table). BAH×16 09:30 $87.16 → close $88.02 -13.76 | — |
+| 2026-11-02 09:30 ET | **COVER** | `SPCE` | 268 | $2.62 | $3.46 | $+9.09 | $3,542.36 | ▲ +9.09 after sell → book $2,854.14; vs 09:30 mark -3.46 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-02 09:30 ET | **COVER** | `VOYG` | 26 | $26.47 | $2.07 | $+18.70 | $2,852.07 | ▲ +18.70 after sell → book $2,852.07; vs 09:30 mark -2.07 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $4,247.98 | ▼ 09:30 equity $2,857.60 vs yday $2,869.36 (-11.76) | 09:30 open · cash $4,247.98 (unchanged overnight, no fees) · equity $2,857.60 vs prior close $2,869.36 (-11.76) · 2 name(s) re-marked at the open (per-name table). SPCE×268 yday $2.58 → 09:30 $2.62 -10.72; VOYG×26 yday $26.43 → 09:30 $26.47 -1.04 | — |
+| 2026-11-02 09:30 ET | **SHORT** | `BAH` | 16 | $87.16 | $2.10 | — | $4,244.54 | — | news🔴; gate news=bad; list ohlc_hot; 🔵; ret5=+13.0; leftover $1426.04 | join🔴 sector🔴 gen🟢 news🔴 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
 
 ## Not taken
 

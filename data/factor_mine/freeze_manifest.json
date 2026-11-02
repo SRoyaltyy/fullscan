@@ -279,6 +279,11 @@
       "bytes": 93694,
       "sha256": "3898ca63d13c5d021afc201b66b780718a2fbd33accc6b62baeba4e3648c436d",
       "written_at": "2026-10-30T17:43:38.867756-04:00"
+    },
+    "2026-11-02": {
+      "bytes": 93694,
+      "sha256": "aa07738386b96ec0e12bb2fc5cfe915114285c5f1c490817292216446a0e721c",
+      "written_at": "2026-11-02T18:42:27.837877-05:00"
     }
   },
   "excel_signals": {
@@ -1622,6 +1627,12 @@
       "encoding": "gzip",
       "sha256": "dfa6c9f9ecdb001558103b59b4fdfd9095ac81f2da4f1548c6439775abae4c0b",
       "written_at": "2026-10-30T17:44:43.659532-04:00"
+    },
+    "2026-11-02": {
+      "bytes": 10617617,
+      "encoding": "gzip",
+      "sha256": "db9c7c54d384b1e6258818146d26275f3d8a473d3e3339f17b92d21a8dd65069",
+      "written_at": "2026-11-02T18:44:22.933645-05:00"
     }
   },
   "lineups": {
@@ -1904,6 +1915,11 @@
       "bytes": 795,
       "sha256": "1ab4972cf09d0f321a6c5bc0003a711fd766add834dfe503ba41624db32fccfb",
       "written_at": "2026-10-30T17:45:39.017899-04:00"
+    },
+    "2026-11-02": {
+      "bytes": 857,
+      "sha256": "8030df42750a71cb9b368f787e3fd5123e5871e4fd2a44bb4a0aac9fcc8250a2",
+      "written_at": "2026-11-02T18:45:16.419035-05:00"
     }
   },
   "prices": {
@@ -2036,6 +2052,11 @@
       "bytes": 573318,
       "sha256": "b873ad0e0af2d8a96320c4db5a4e226878e4df56122e28c10d3345a2ecfa7e0f",
       "written_at": "2026-10-30T17:43:38.888355-04:00"
+    },
+    "2026-11-02": {
+      "bytes": 589950,
+      "sha256": "66c3044047792d66689e647cc3bab9928193f19c6680314adf82511dc89825e7",
+      "written_at": "2026-11-02T18:42:27.862482-05:00"
     }
   },
   "recipe_rules": {
@@ -14982,6 +15003,27 @@
         "TJGC"
       ],
       "written_at": "2026-10-30T17:43:44.243533-04:00"
+    },
+    "2026-11-02": {
+      "bytes": 207963,
+      "dropped_missing_bars": [
+        "CCO",
+        "DBRG",
+        "KVUE",
+        "PSKY",
+        "QRVO",
+        "TJGC",
+        "WBD"
+      ],
+      "heat_vintage": "2026-11-02",
+      "n_rows": 70,
+      "sha256": "f70e6a0740c283183f67a39aee3cbf366e4f0d39c1e8a57d0fafc26b8ee40408",
+      "unpriced_held": [
+        "BLFS",
+        "DBRG",
+        "TJGC"
+      ],
+      "written_at": "2026-11-02T18:42:31.963855-05:00"
     }
   },
   "version": 1

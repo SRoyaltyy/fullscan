@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ break10, no 🚨
 
-Cash book **+11.60%** ($11,160) · signal-only (no cash/fees) was +49.44%. Starts YES **25/30**. Fills 344 · skips 298 · realized $+167.97.
+Cash book **+13.67%** ($11,367) · signal-only (no cash/fees) was +49.44%. Starts YES **25/30**. Fills 354 · skips 298 · realized $+167.97.
 
 ## How this sleeve decides (like you are 10)
 
@@ -528,6 +528,18 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-30 09:30 ET | **SELL** | `SGRY` | 57 | $23.24 | $2.18 | $-2.06 | $9,809.55 | ▼ -2.06 after sell → book $11,162.23; vs 09:30 mark -2.18 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-30 09:30 ET | **SELL** | `SLN` | 67 | $19.74 | $2.21 | $-7.08 | $11,129.92 | ▼ -7.08 after sell → book $11,160.02; vs 09:30 mark -2.21 | dropped from list after 3 sess (min 3) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-10-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $11,129.92 | ▲ close $11,160.32 vs 09:30 $11,179.40 (session +0.30) | 16:00 close · cash $11,129.92 · equity $11,160.32 vs 09:30 $11,179.40 (-19.08; session marks +0.30) · 2 name(s) marked open→close (per-name table). FIP×5 09:30 $2.84 → close $2.86 +0.10; IMSR×5 09:30 $3.18 → close $3.22 +0.20 | — |
+| 2026-11-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $11,129.92 | ▲ 09:30 equity $11,160.62 vs yday $11,160.32 (+0.30) | 09:30 open · cash $11,129.92 (unchanged overnight, no fees) · equity $11,160.62 vs prior close $11,160.32 (+0.30) · 2 name(s) re-marked at the open (per-name table). FIP×5 yday $2.86 → 09:30 $2.90 +0.20; IMSR×5 yday $3.22 → 09:30 $3.24 +0.10 | — |
+| 2026-11-02 09:30 ET | **SELL** | `FIP` | 5 | $2.90 | $0.18 | $+0.92 | $11,144.24 | ▲ +0.92 after sell → book $11,160.44; vs 09:30 mark -0.18 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-02 09:30 ET | **SELL** | `IMSR` | 5 | $3.24 | $0.20 | $+1.09 | $11,160.24 | ▲ +1.09 after sell → book $11,160.24; vs 09:30 mark -0.20 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-02 09:30 ET | **BUY** | `CDNA` | 16 | $86.88 | $2.04 | — | $9,768.12 | — | union ∩ break10, no 🚨; gate break_10=True; list flatten; 🔵; ret5=+26.3; leftover $1395.03 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `POOL` | 6 | $208.87 | $2.01 | — | $8,512.90 | — | union ∩ break10, no 🚨; gate break_10=True; list yday_gainer; 🔵; ret5=+3.5; leftover $1395.03 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `GEN` | 48 | $29.05 | $2.13 | — | $7,116.36 | — | union ∩ break10, no 🚨; gate break_10=True; list ohlc_hot; 🔵; ret5=+17.1; leftover $1395.03 | join🟡 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `BC` | 18 | $76.25 | $2.04 | — | $5,741.82 | — | union ∩ break10, no 🚨; gate break_10=True; list ohlc_hot; 🔵; ret5=+14.4; leftover $1395.03 | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `BAH` | 16 | $87.16 | $2.04 | — | $4,345.22 | — | union ∩ break10, no 🚨; gate break_10=True; list ohlc_hot; 🔵; ret5=+13.0; leftover $1395.03 | join🔴 sector🔴 gen🟢 news🔴 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `BLDR` | 21 | $65.73 | $2.05 | — | $2,962.84 | — | union ∩ break10, no 🚨; gate break_10=True; list ohlc_hot; 🔵; ret5=+14.2; leftover $1395.03 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🟡 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `REAL` | 113 | $12.31 | $2.33 | — | $1,569.48 | — | union ∩ break10, no 🚨; gate break_10=True; list ohlc_hot; 🔵; ret5=+10.3; leftover $1395.03 | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🟡 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `BTSG` | 20 | $67.50 | $2.05 | — | $217.43 | — | union ∩ break10, no 🚨; gate break_10=True; list ohlc_hot; ret5=+11.3; leftover $1395.03 | join🟡 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $217.43 | ▲ close $11,366.69 vs 09:30 $11,160.62 (session +223.14) | 16:00 close · cash $217.43 · equity $11,366.69 vs 09:30 $11,160.62 (+206.07; session marks +223.14) · 8 name(s) marked open→close (per-name table). CDNA×16 09:30 $86.88 → close $85.88 -16.00; POOL×6 09:30 $208.87 → close $214.76 +35.34; GEN×48 09:30 $29.05 → close $29.89 +40.32; BC×18 09:30 $76.25 → close $79.05 +50.40; BAH×16 09:30 $87.16 → close $88.02 +13.76; BLDR×21 09:30 $65.73 → close $67.82 +43.89; REAL×113 09:30 $12.31 → close $13.02 +80.23; BTSG×20 09:30 $67.50 → close $66.26 -24.80 | — |
 
 ## Not taken
 

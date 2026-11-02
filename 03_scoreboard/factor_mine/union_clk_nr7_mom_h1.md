@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `hot_score` · size `leftover` · sell `list` · S-boost `none` · Clock-B #10 NR7 + moderate momentum
 
-Cash book **-0.64%** ($9,936) · signal-only (no cash/fees) was +27.44%. Starts YES **25/30**. Fills 104 · skips 16 · realized $+1589.64.
+Cash book **+0.71%** ($10,071) · signal-only (no cash/fees) was +27.44%. Starts YES **25/30**. Fills 105 · skips 16 · realized $+1589.64.
 
 ## How this sleeve decides (like you are 10)
 
@@ -290,6 +290,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,936.47 | ▲ close $9,936.47 vs 09:30 $9,941.31 (session +0.00) | 16:00 close · cash $9,936.47 · no lots left · equity $9,936.47. | — |
 | 2026-10-30 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,936.47 | ▲ 09:30 equity $9,936.47 vs yday $9,936.47 (+0.00) | 09:30 open · cash $9,936.47 · no holdings · equity $9,936.47 vs prior close $9,936.47 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-10-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,936.47 | ▲ close $9,936.47 vs 09:30 $9,936.47 (session +0.00) | 16:00 close · cash $9,936.47 · no lots left · equity $9,936.47. | — |
+| 2026-11-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,936.47 | ▲ 09:30 equity $9,936.47 vs yday $9,936.47 (+0.00) | 09:30 open · cash $9,936.47 · no holdings · equity $9,936.47 vs prior close $9,936.47 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-02 09:30 ET | **BUY** | `ROP` | 10 | $465.90 | $2.02 | — | $5,275.45 | — | Clock-B #10 NR7 + moderate momentum; gate clk_nr7_mom=True; rank hot_score; list ohlc_hot; 🔵; ret5=+6.5; leftover $4968.23 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5,275.45 | ▲ close $10,070.85 vs 09:30 $9,936.47 (session +136.40) | 16:00 close · cash $5,275.45 · equity $10,070.85 vs 09:30 $9,936.47 (+134.38; session marks +136.40) · 1 name(s) marked open→close (per-name table). ROP×10 09:30 $465.90 → close $479.54 +136.40 | — |
 
 ## Not taken
 

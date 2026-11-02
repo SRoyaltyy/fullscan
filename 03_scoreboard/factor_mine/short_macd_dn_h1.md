@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · MACD histogram < 0
 
-Cash book **+0.40%** ($10,040) · signal-only (no cash/fees) was +6.85%. Starts YES **5/30**. Fills 428 · skips 108 · realized $-743.47.
+Cash book **+0.81%** ($10,081) · signal-only (no cash/fees) was +6.85%. Starts YES **5/30**. Fills 436 · skips 108 · realized $-743.47.
 
 ## How this sleeve decides (like you are 10)
 
@@ -610,6 +610,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-30 09:30 ET | **COVER** | `NVTS` | 76 | $8.53 | $2.22 | $+58.60 | $12,104.88 | ▲ +58.60 after sell → book $10,031.22; vs 09:30 mark -2.21 | dropped from list after 2 sess (min 1) | join🔴 sector🔴 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-30 09:30 ET | **COVER** | `PDFS` | 15 | $42.61 | $2.04 | $+41.04 | $11,463.69 | ▲ +41.04 after sell → book $10,029.18; vs 09:30 mark -2.04 | dropped from list after 2 sess (min 1) | join🔴 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $11,463.69 | ▲ close $10,040.30 vs 09:30 $10,035.55 (session +11.12) | 16:00 close · cash $11,463.69 · equity $10,040.30 vs 09:30 $10,035.55 (+4.75; session marks +11.12) · 2 name(s) marked open→close (per-name table). MX×278 09:30 $2.45 → close $2.41 +11.12; SMMT×47 09:30 $16.03 → close $16.03 -0.00 | — |
+| 2026-11-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $11,463.69 | ▼ 09:30 equity $10,025.03 vs yday $10,040.30 (-15.27) | 09:30 open · cash $11,463.69 (unchanged overnight, no fees) · equity $10,025.03 vs prior close $10,040.30 (-15.27) · 2 name(s) re-marked at the open (per-name table). MX×278 yday $2.41 → 09:30 $2.47 -16.68; SMMT×47 yday $16.03 → 09:30 $16.00 +1.41 | — |
+| 2026-11-02 09:30 ET | **COVER** | `SMMT` | 47 | $16.00 | $2.13 | $-42.37 | $10,709.56 | ▼ -42.37 after sell → book $10,022.90; vs 09:30 mark -2.13 | dropped from list after 3 sess (min 1) | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-02 09:30 ET | **SHORT** | `VEEV` | 2 | $316.20 | $2.03 | — | $11,339.93 | — | MACD histogram < 0; gate macd_down=True; list flatten; 🔵; ret5=-3.1; leftover $715.92 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **SHORT** | `CORT` | 8 | $80.93 | $2.05 | — | $11,985.31 | — | MACD histogram < 0; gate macd_down=True; list flatten; 🔵; ret5=-5.5; leftover $715.92 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **SHORT** | `VLO` | 1 | $392.68 | $2.02 | — | $12,375.97 | — | MACD histogram < 0; gate macd_down=True; list flatten; 🔵; ret5=-4.7; leftover $715.92 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **SHORT** | `PDFS` | 17 | $42.10 | $2.08 | — | $13,089.59 | — | MACD histogram < 0; gate macd_down=True; list probable,yday_gainer,yday_mover; 🔵; ret5=+4.3; leftover $715.92 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **SHORT** | `EGG` | 145 | $4.91 | $2.48 | — | $13,799.06 | — | MACD histogram < 0; gate macd_down=True; list yday_gainer,yday_mover; 🔵; ret5=-4.3; leftover $715.92 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-11-02 09:30 ET | **SHORT** | `PRIM` | 9 | $73.90 | $2.06 | — | $14,462.11 | — | MACD histogram < 0; gate macd_down=True; list yday_gainer,yday_mover; 🔵; ret5=+11.9; leftover $715.92 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **SHORT** | `CRS` | 2 | $285.91 | $2.03 | — | $15,031.89 | — | MACD histogram < 0; gate macd_down=True; list yday_gainer; 🔵; ret5=-0.6; leftover $715.92 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $15,031.89 | ▲ close $10,080.87 vs 09:30 $10,025.03 (session +72.72) | 16:00 close · cash $15,031.89 · equity $10,080.87 vs 09:30 $10,025.03 (+55.84; session marks +72.72) · 8 name(s) marked open→close (per-name table). MX×278 09:30 $2.47 → close $2.47 -0.00; VEEV×2 09:30 $316.20 → close $307.00 +18.40; CORT×8 09:30 $80.93 → close $80.46 +3.76; VLO×1 09:30 $392.68 → close $381.46 +11.22; PDFS×17 09:30 $42.10 → close $38.97 +53.21; EGG×145 09:30 $4.91 → close $4.94 -4.76; PRIM×9 09:30 $73.90 → close $73.79 +0.99; CRS×2 09:30 $285.91 → close $290.96 -10.10 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-28.16%** ($7,184) · signal-only (no cash/fees) was -21.07%. Starts YES **1/30**. Fills 349 · skips 304 · realized $-1242.34.
+Cash book **-28.38%** ($7,162) · signal-only (no cash/fees) was -21.07%. Starts YES **1/30**. Fills 363 · skips 304 · realized $-1242.34.
 
 ## How this sleeve decides (like you are 10)
 
@@ -538,6 +538,22 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-30 09:30 ET | **SELL** | `TBBB` | 18 | $56.52 | $2.06 | $-35.07 | $4,397.39 | ▼ -35.07 after sell → book $7,237.87; vs 09:30 mark -2.06 | dropped from list after 3 sess (min 3) | join🔴 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-30 09:30 ET | **SELL** | `TRU` | 12 | $74.78 | $2.05 | $-92.75 | $5,292.70 | ▼ -92.75 after sell → book $7,235.82; vs 09:30 mark -2.05 | dropped from list after 3 sess (min 3) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5,292.70 | ▼ close $7,183.70 vs 09:30 $7,246.19 (session -52.12) | 16:00 close · cash $5,292.70 · equity $7,183.70 vs 09:30 $7,246.19 (-62.49; session marks -52.12) · 7 name(s) marked open→close (per-name table). AEO×8 09:30 $20.30 → close $19.61 -5.52; BBWI×7 09:30 $22.78 → close $22.77 -0.07; EGG×30 09:30 $5.00 → close $4.91 -2.70; NEO×9 09:30 $17.95 → close $17.38 -5.13; NFGC×90 09:30 $1.61 → close $1.60 -0.90; PACS×21 09:30 $49.38 → close $47.81 -32.97; PDFS×3 09:30 $42.61 → close $41.00 -4.83 | — |
+| 2026-11-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $5,292.70 | ▲ 09:30 equity $7,196.07 vs yday $7,183.70 (+12.37) | 09:30 open · cash $5,292.70 (unchanged overnight, no fees) · equity $7,196.07 vs prior close $7,183.70 (+12.37) · 7 name(s) re-marked at the open (per-name table). AEO×8 yday $19.61 → 09:30 $19.62 +0.08; BBWI×7 yday $22.77 → 09:30 $23.30 +3.71; EGG×30 yday $4.91 → 09:30 $4.91 +0.00; NEO×9 yday $17.38 → 09:30 $17.66 +2.52; NFGC×90 yday $1.60 → 09:30 $1.64 +3.60; PACS×21 yday $47.81 → 09:30 $47.77 -0.84; PDFS×3 yday $41.00 → 09:30 $42.10 +3.30 | — |
+| 2026-11-02 09:30 ET | **SELL** | `AEO` | 8 | $19.62 | $1.61 | $-1.35 | $5,448.05 | ▼ -1.35 after sell → book $7,194.46; vs 09:30 mark -1.61 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-02 09:30 ET | **SELL** | `BBWI` | 7 | $23.30 | $1.67 | $+7.99 | $5,609.47 | ▲ +7.99 after sell → book $7,192.78; vs 09:30 mark -1.68 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-02 09:30 ET | **SELL** | `EGG` | 30 | $4.91 | $1.58 | $-10.11 | $5,755.19 | ▼ -10.11 after sell → book $7,191.20; vs 09:30 mark -1.58 | dropped from list after 3 sess (min 3) | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-11-02 09:30 ET | **SELL** | `NEO` | 9 | $17.66 | $1.64 | $+0.02 | $5,912.49 | ▲ +0.02 after sell → book $7,189.56; vs 09:30 mark -1.64 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-02 09:30 ET | **SELL** | `NFGC` | 90 | $1.64 | $1.77 | $-12.61 | $6,058.32 | ▼ -12.61 after sell → book $7,187.79; vs 09:30 mark -1.77 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-02 09:30 ET | **SELL** | `PACS` | 21 | $47.77 | $2.07 | $-13.79 | $7,059.42 | ▼ -13.79 after sell → book $7,185.72; vs 09:30 mark -2.07 | dropped from list after 4 sess (min 3) | — |
+| 2026-11-02 09:30 ET | **SELL** | `PDFS` | 3 | $42.10 | $1.29 | $-13.23 | $7,184.43 | ▼ -13.23 after sell → book $7,184.43; vs 09:30 mark -1.29 | dropped from list after 3 sess (min 3) | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `PRMB` | 44 | $20.03 | $2.12 | — | $6,300.99 | — | combo gate; gate last_green=True,ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list probable,yday_gainer,yday_mover; 🔵; ret5=+0.3; leftover $898.05 | join🟡 sector🟡 gen🟢 news🟡 digest🔴 ab🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `ROP` | 1 | $465.90 | $1.99 | — | $5,833.09 | — | combo gate; gate last_green=True,ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list ohlc_hot; 🔵; ret5=+6.5; leftover $898.05 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `BBIO` | 11 | $75.01 | $2.02 | — | $5,005.96 | — | combo gate; gate last_green=True,ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list ohlc_hot; ret5=+9.3; leftover $898.05 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🟡 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `RKT` | 68 | $13.05 | $2.19 | — | $4,116.37 | — | combo gate; gate last_green=True,ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list ohlc_hot; 🔵; ret5=+9.1; leftover $898.05 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `RIG` | 135 | $6.65 | $2.40 | — | $3,216.22 | — | combo gate; gate last_green=True,ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list ohlc_hot; 🔵; ret5=+8.3; leftover $898.05 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `VAL` | 8 | $101.40 | $2.01 | — | $2,403.01 | — | combo gate; gate last_green=True,ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list ohlc_hot; 🔵; ret5=+8.2; leftover $898.05 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `AZN` | 4 | $184.59 | $2.00 | — | $1,662.65 | — | combo gate; gate last_green=True,ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list ohlc_hot; ret5=+8.8; leftover $898.05 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,662.65 | ▼ close $7,162.26 vs 09:30 $7,196.07 (session -7.43) | 16:00 close · cash $1,662.65 · equity $7,162.26 vs 09:30 $7,196.07 (-33.81; session marks -7.43) · 7 name(s) marked open→close (per-name table). PRMB×44 09:30 $20.03 → close $20.77 +32.56; ROP×1 09:30 $465.90 → close $479.54 +13.64; BBIO×11 09:30 $75.01 → close $75.00 -0.17; RKT×68 09:30 $13.05 → close $13.77 +48.96; RIG×135 09:30 $6.65 → close $6.23 -56.70; VAL×8 09:30 $101.40 → close $94.69 -53.68; AZN×4 09:30 $184.59 → close $186.58 +7.96 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 4 · rank `hot_score` · size `leftover` · sell `list` · S-boost `none` · top 4 by hot
 
-Cash book **+24.43%** ($12,444) · signal-only (no cash/fees) was +89.81%. Starts YES **29/30**. Fills 149 · skips 47 · realized $+2978.17.
+Cash book **+26.03%** ($12,603) · signal-only (no cash/fees) was +89.81%. Starts YES **29/30**. Fills 153 · skips 47 · realized $+2978.17.
 
 ## How this sleeve decides (like you are 10)
 
@@ -332,6 +332,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $12,443.54 | ▲ close $12,443.54 vs 09:30 $12,463.78 (session +0.00) | 16:00 close · cash $12,443.54 · no lots left · equity $12,443.54. | — |
 | 2026-10-30 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $12,443.54 | ▲ 09:30 equity $12,443.54 vs yday $12,443.54 (+0.00) | 09:30 open · cash $12,443.54 · no holdings · equity $12,443.54 vs prior close $12,443.54 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-10-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $12,443.54 | ▲ close $12,443.54 vs 09:30 $12,443.54 (session +0.00) | 16:00 close · cash $12,443.54 · no lots left · equity $12,443.54. | — |
+| 2026-11-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $12,443.54 | ▲ 09:30 equity $12,443.54 vs yday $12,443.54 (+0.00) | 09:30 open · cash $12,443.54 · no holdings · equity $12,443.54 vs prior close $12,443.54 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-02 09:30 ET | **BUY** | `CDNA` | 35 | $86.88 | $2.10 | — | $9,400.65 | — | top 4 by hot; rank hot_score; list flatten; 🔵; ret5=+26.3; leftover $3110.89 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `SLN` | 157 | $19.75 | $2.46 | — | $6,297.43 | — | top 4 by hot; rank hot_score; list ohlc_hot; ret5=+0.4; leftover $3110.89 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `GEN` | 107 | $29.05 | $2.31 | — | $3,186.77 | — | top 4 by hot; rank hot_score; list ohlc_hot; 🔵; ret5=+17.1; leftover $3110.89 | join🟡 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `BC` | 40 | $76.25 | $2.11 | — | $134.66 | — | top 4 by hot; rank hot_score; list ohlc_hot; 🔵; ret5=+14.4; leftover $3110.89 | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-11-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $134.66 | ▲ close $12,603.01 vs 09:30 $12,443.54 (session +168.45) | 16:00 close · cash $134.66 · equity $12,603.01 vs 09:30 $12,443.54 (+159.47; session marks +168.45) · 4 name(s) marked open→close (per-name table). CDNA×35 09:30 $86.88 → close $85.88 -35.00; SLN×157 09:30 $19.75 → close $19.76 +1.57; GEN×107 09:30 $29.05 → close $29.89 +89.88; BC×40 09:30 $76.25 → close $79.05 +112.00 | — |
 
 ## Not taken
 

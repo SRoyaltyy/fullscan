@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `rsi` · size `leftover` · sell `list` · S-boost `none` · rank by rsi
 
-Cash book **-20.98%** ($7,902) · signal-only (no cash/fees) was -34.58%. Starts YES **0/30**. Fills 320 · skips 269 · realized $-1699.80.
+Cash book **-19.86%** ($8,014) · signal-only (no cash/fees) was -34.58%. Starts YES **0/30**. Fills 334 · skips 269 · realized $-1699.80.
 
 ## How this sleeve decides (like you are 10)
 
@@ -503,6 +503,22 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-30 09:30 ET | **SELL** | `PATH` | 76 | $13.75 | $2.24 | $-37.90 | $4,831.84 | ▼ -37.90 after sell → book $8,309.46; vs 09:30 mark -2.24 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-30 09:30 ET | **SELL** | `SLN` | 54 | $19.74 | $2.17 | $-6.48 | $5,895.63 | ▼ -6.48 after sell → book $8,307.29; vs 09:30 mark -2.17 | dropped from list after 3 sess (min 3) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-10-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5,895.63 | ▼ close $7,901.93 vs 09:30 $8,320.80 (session -405.36) | 16:00 close · cash $5,895.63 · equity $7,901.93 vs 09:30 $8,320.80 (-418.87; session marks -405.36) · 7 name(s) marked open→close (per-name table). BBWI×6 09:30 $22.78 → close $22.77 -0.06; ENHA×127 09:30 $12.68 → close $9.43 -412.75; FIP×52 09:30 $2.84 → close $2.86 +1.04; HAWK×10 09:30 $13.82 → close $13.55 -2.70; JLHL×24 09:30 $5.37 → close $5.71 +8.16; QTTB×16 09:30 $8.87 → close $8.91 +0.64; UPS×1 09:30 $107.94 → close $108.25 +0.31 | — |
+| 2026-11-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $5,895.63 | ▲ 09:30 equity $7,919.15 vs yday $7,901.93 (+17.22) | 09:30 open · cash $5,895.63 (unchanged overnight, no fees) · equity $7,919.15 vs prior close $7,901.93 (+17.22) · 7 name(s) re-marked at the open (per-name table). BBWI×6 yday $22.77 → 09:30 $23.30 +3.18; ENHA×127 yday $9.43 → 09:30 $9.49 +7.62; FIP×52 yday $2.86 → 09:30 $2.90 +2.08; HAWK×10 yday $13.55 → 09:30 $13.65 +1.00; JLHL×24 yday $5.71 → 09:30 $5.76 +1.20; QTTB×16 yday $8.91 → 09:30 $9.00 +1.44; UPS×1 yday $108.25 → 09:30 $108.95 +0.70 | — |
+| 2026-11-02 09:30 ET | **SELL** | `BBWI` | 6 | $23.30 | $1.44 | $+6.84 | $6,033.99 | ▲ +6.84 after sell → book $7,917.72; vs 09:30 mark -1.43 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-02 09:30 ET | **SELL** | `ENHA` | 127 | $9.49 | $2.40 | $+1062.63 | $7,236.82 | ▲ +1,062.63 after sell → book $7,915.32; vs 09:30 mark -2.40 | dropped from list after 3 sess (min 3) | join🔴 sector🟡 gen🟢 news🟡 digest🔴 ab🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-11-02 09:30 ET | **SELL** | `FIP` | 52 | $2.90 | $1.68 | $+9.78 | $7,385.94 | ▲ +9.78 after sell → book $7,913.63; vs 09:30 mark -1.69 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-02 09:30 ET | **SELL** | `HAWK` | 10 | $13.65 | $1.42 | $-1.80 | $7,521.02 | ▼ -1.80 after sell → book $7,912.22; vs 09:30 mark -1.41 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-02 09:30 ET | **SELL** | `JLHL` | 24 | $5.76 | $1.47 | $+0.95 | $7,657.79 | ▲ +0.95 after sell → book $7,910.74; vs 09:30 mark -1.48 | dropped from list after 3 sess (min 3) | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **SELL** | `QTTB` | 16 | $9.00 | $1.51 | $+2.66 | $7,800.28 | ▲ +2.66 after sell → book $7,909.24; vs 09:30 mark -1.50 | dropped from list after 3 sess (min 3) | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **SELL** | `UPS` | 1 | $108.95 | $1.11 | $+1.40 | $7,908.12 | ▲ +1.40 after sell → book $7,908.12; vs 09:30 mark -1.12 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-02 09:30 ET | **BUY** | `GEN` | 34 | $29.05 | $2.09 | — | $6,918.33 | — | rank by rsi; rank rsi; list ohlc_hot; 🔵; ret5=+17.1; leftover $988.52 | join🟡 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `DGX` | 3 | $251.60 | $2.00 | — | $6,161.53 | — | rank by rsi; rank rsi; list yday_mover; ret5=+4.1; leftover $988.52 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `PENN` | 61 | $16.00 | $2.17 | — | $5,183.36 | — | rank by rsi; rank rsi; list ohlc_hot; 🔵; ret5=+9.6; leftover $988.52 | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🔴 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `WEN` | 136 | $7.22 | $2.40 | — | $4,199.04 | — | rank by rsi; rank rsi; list ohlc_hot; 🔵; ret5=+15.9; leftover $988.52 | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `BC` | 12 | $76.25 | $2.03 | — | $3,282.01 | — | rank by rsi; rank rsi; list ohlc_hot; 🔵; ret5=+14.4; leftover $988.52 | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `ROP` | 2 | $465.90 | $2.00 | — | $2,348.22 | — | rank by rsi; rank rsi; list ohlc_hot; 🔵; ret5=+6.5; leftover $988.52 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `FRSH` | 67 | $14.72 | $2.19 | — | $1,359.79 | — | rank by rsi; rank rsi; list yday_mover; 🔵; ret5=-5.0; leftover $988.52 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,359.79 | ▲ close $8,013.81 vs 09:30 $7,919.15 (session +120.56) | 16:00 close · cash $1,359.79 · equity $8,013.81 vs 09:30 $7,919.15 (+94.66; session marks +120.56) · 7 name(s) marked open→close (per-name table). GEN×34 09:30 $29.05 → close $29.89 +28.56; DGX×3 09:30 $251.60 → close $250.81 -2.37; PENN×61 09:30 $16.00 → close $17.02 +62.22; WEN×136 09:30 $7.22 → close $7.26 +5.44; BC×12 09:30 $76.25 → close $79.05 +33.60; ROP×2 09:30 $465.90 → close $479.54 +27.28; FRSH×67 09:30 $14.72 → close $14.21 -34.17 | — |
 
 ## Not taken
 

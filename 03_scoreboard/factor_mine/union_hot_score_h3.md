@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `hot_score` · size `leftover` · sell `list` · S-boost `none` · rank by hot_score
 
-Cash book **+9.22%** ($10,922) · signal-only (no cash/fees) was +392.57%. Starts YES **29/30**. Fills 342 · skips 265 · realized $+1176.18.
+Cash book **+10.91%** ($11,091) · signal-only (no cash/fees) was +392.57%. Starts YES **29/30**. Fills 354 · skips 265 · realized $+1176.18.
 
 ## How this sleeve decides (like you are 10)
 
@@ -525,6 +525,20 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-30 09:30 ET | **SELL** | `RIG` | 201 | $6.76 | $2.64 | $+51.04 | $8,198.85 | ▲ +51.04 after sell → book $10,923.51; vs 09:30 mark -2.64 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-30 09:30 ET | **SELL** | `SGRY` | 56 | $23.24 | $2.18 | $-2.10 | $9,498.11 | ▼ -2.10 after sell → book $10,921.33; vs 09:30 mark -2.18 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,498.11 | ▲ close $10,921.57 vs 09:30 $10,938.33 (session +0.24) | 16:00 close · cash $9,498.11 · equity $10,921.57 vs 09:30 $10,938.33 (-16.76; session marks +0.24) · 6 name(s) marked open→close (per-name table). BETA×1 09:30 $20.18 → close $20.05 -0.13; EQPT×1 09:30 $17.71 → close $17.18 -0.53; FIP×10 09:30 $2.84 → close $2.86 +0.20; IMSR×9 09:30 $3.18 → close $3.22 +0.36; S×1 09:30 $25.47 → close $25.15 -0.32; SLN×66 09:30 $19.74 → close $19.75 +0.66 | — |
+| 2026-11-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,498.11 | ▲ 09:30 equity $10,922.71 vs yday $10,921.57 (+1.14) | 09:30 open · cash $9,498.11 (unchanged overnight, no fees) · equity $10,922.71 vs prior close $10,921.57 (+1.14) · 6 name(s) re-marked at the open (per-name table). BETA×1 yday $20.05 → 09:30 $20.29 +0.24; EQPT×1 yday $17.18 → 09:30 $17.55 +0.37; FIP×10 yday $2.86 → 09:30 $2.90 +0.40; IMSR×9 yday $3.22 → 09:30 $3.24 +0.18; S×1 yday $25.15 → 09:30 $25.10 -0.05; SLN×66 yday $19.75 → 09:30 $19.75 +0.00 | — |
+| 2026-11-02 09:30 ET | **SELL** | `BETA` | 1 | $20.29 | $0.23 | $-1.03 | $9,518.17 | ▼ -1.03 after sell → book $10,922.48; vs 09:30 mark -0.23 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-02 09:30 ET | **SELL** | `EQPT` | 1 | $17.55 | $0.20 | $-0.64 | $9,535.53 | ▼ -0.64 after sell → book $10,922.29; vs 09:30 mark -0.19 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-02 09:30 ET | **SELL** | `FIP` | 10 | $2.90 | $0.34 | $+1.86 | $9,564.19 | ▲ +1.86 after sell → book $10,921.95; vs 09:30 mark -0.34 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-02 09:30 ET | **SELL** | `IMSR` | 9 | $3.24 | $0.34 | $+1.98 | $9,593.01 | ▲ +1.98 after sell → book $10,921.61; vs 09:30 mark -0.34 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-02 09:30 ET | **SELL** | `S` | 1 | $25.10 | $0.27 | $-0.99 | $9,617.83 | ▼ -0.99 after sell → book $10,921.33; vs 09:30 mark -0.28 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-02 09:30 ET | **BUY** | `CDNA` | 15 | $86.88 | $2.04 | — | $8,312.60 | — | rank by hot_score; rank hot_score; list flatten; 🔵; ret5=+26.3; leftover $1373.98 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `GEN` | 47 | $29.05 | $2.13 | — | $6,945.12 | — | rank by hot_score; rank hot_score; list ohlc_hot; 🔵; ret5=+17.1; leftover $1373.98 | join🟡 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `BC` | 18 | $76.25 | $2.04 | — | $5,570.57 | — | rank by hot_score; rank hot_score; list ohlc_hot; 🔵; ret5=+14.4; leftover $1373.98 | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `BAH` | 15 | $87.16 | $2.04 | — | $4,261.14 | — | rank by hot_score; rank hot_score; list ohlc_hot; 🔵; ret5=+13.0; leftover $1373.98 | join🔴 sector🔴 gen🟢 news🔴 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `BLDR` | 20 | $65.73 | $2.05 | — | $2,944.49 | — | rank by hot_score; rank hot_score; list ohlc_hot; 🔵; ret5=+14.2; leftover $1373.98 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🟡 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `REAL` | 111 | $12.31 | $2.32 | — | $1,575.76 | — | rank by hot_score; rank hot_score; list ohlc_hot; 🔵; ret5=+10.3; leftover $1373.98 | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🟡 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `BTSG` | 20 | $67.50 | $2.05 | — | $223.71 | — | rank by hot_score; rank hot_score; list ohlc_hot; ret5=+11.3; leftover $1373.98 | join🟡 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $223.71 | ▲ close $11,090.91 vs 09:30 $10,922.71 (session +184.25) | 16:00 close · cash $223.71 · equity $11,090.91 vs 09:30 $10,922.71 (+168.20; session marks +184.25) · 8 name(s) marked open→close (per-name table). SLN×66 09:30 $19.75 → close $19.76 +0.66; CDNA×15 09:30 $86.88 → close $85.88 -15.00; GEN×47 09:30 $29.05 → close $29.89 +39.48; BC×18 09:30 $76.25 → close $79.05 +50.40; BAH×15 09:30 $87.16 → close $88.02 +12.90; BLDR×20 09:30 $65.73 → close $67.82 +41.80; REAL×111 09:30 $12.31 → close $13.02 +78.81; BTSG×20 09:30 $67.50 → close $66.26 -24.80 | — |
 
 ## Not taken
 

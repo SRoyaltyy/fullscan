@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `w_hot_cond` · size `leftover` · sell `list` · S-boost `none` · rank by w_hot_cond
 
-Cash book **+21.61%** ($12,161) · signal-only (no cash/fees) was +31.34%. Starts YES **29/30**. Fills 474 · skips 96 · realized $-9.27.
+Cash book **+20.17%** ($12,017) · signal-only (no cash/fees) was +31.34%. Starts YES **29/30**. Fills 482 · skips 96 · realized $-9.27.
 
 ## How this sleeve decides (like you are 10)
 
@@ -657,6 +657,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $12,160.62 | ▲ close $12,160.62 vs 09:30 $12,184.74 (session +0.00) | 16:00 close · cash $12,160.62 · no lots left · equity $12,160.62. | — |
 | 2026-10-30 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $12,160.62 | ▲ 09:30 equity $12,160.62 vs yday $12,160.62 (+0.00) | 09:30 open · cash $12,160.62 · no holdings · equity $12,160.62 vs prior close $12,160.62 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-10-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $12,160.62 | ▲ close $12,160.62 vs 09:30 $12,160.62 (session +0.00) | 16:00 close · cash $12,160.62 · no lots left · equity $12,160.62. | — |
+| 2026-11-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $12,160.62 | ▲ 09:30 equity $12,160.62 vs yday $12,160.62 (+0.00) | 09:30 open · cash $12,160.62 · no holdings · equity $12,160.62 vs prior close $12,160.62 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-02 09:30 ET | **BUY** | `CDNA` | 17 | $86.88 | $2.04 | — | $10,681.62 | — | rank by w_hot_cond; rank w_hot_cond; list flatten; 🔵; ret5=+26.3; leftover $1520.08 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `LLY` | 1 | $1393.15 | $1.99 | — | $9,286.48 | — | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; 🔵; ret5=+11.3; leftover $1520.08 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `VRTX` | 2 | $559.93 | $2.00 | — | $8,164.62 | — | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; 🔵; ret5=+6.7; leftover $1520.08 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `BTSG` | 22 | $67.50 | $2.06 | — | $6,677.56 | — | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; ret5=+11.3; leftover $1520.08 | join🟡 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `LNG` | 4 | $317.48 | $2.00 | — | $5,405.64 | — | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; 🔵; ret5=+10.6; leftover $1520.08 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `SLN` | 76 | $19.75 | $2.22 | — | $3,902.42 | — | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; ret5=+0.4; leftover $1520.08 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `UWMC` | 968 | $1.57 | $12.49 | — | $2,370.18 | — | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; ret5=+8.3; leftover $1520.08 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `AMN` | 32 | $47.47 | $2.09 | — | $849.05 | — | rank by w_hot_cond; rank w_hot_cond; list flatten; 🔵; ret5=-1.9; leftover $1520.08 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟢 |
+| 2026-11-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $849.05 | ▼ close $12,016.86 vs 09:30 $12,160.62 (session -116.88) | 16:00 close · cash $849.05 · equity $12,016.86 vs 09:30 $12,160.62 (-143.76; session marks -116.88) · 8 name(s) marked open→close (per-name table). CDNA×17 09:30 $86.88 → close $85.88 -17.00; LLY×1 09:30 $1393.15 → close $1410.99 +17.84; VRTX×2 09:30 $559.93 → close $553.15 -13.56; BTSG×22 09:30 $67.50 → close $66.26 -27.28; LNG×4 09:30 $317.48 → close $311.67 -23.24; SLN×76 09:30 $19.75 → close $19.76 +0.76; UWMC×968 09:30 $1.57 → close $1.57 +0.00; AMN×32 09:30 $47.47 → close $45.77 -54.40 | — |
 
 ## Not taken
 

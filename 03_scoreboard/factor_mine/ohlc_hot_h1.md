@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `ohlc_hot` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · baseline list, no extra gate
 
-Cash book **-18.78%** ($8,122) · signal-only (no cash/fees) was +6.95%. Starts YES **0/30**. Fills 441 · skips 93 · realized $-1456.67.
+Cash book **-17.62%** ($8,238) · signal-only (no cash/fees) was +6.95%. Starts YES **0/30**. Fills 448 · skips 93 · realized $-1456.67.
 
 ## How this sleeve decides (like you are 10)
 
@@ -621,6 +621,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-30 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6,278.83 | ▼ 09:30 equity $8,123.41 vs yday $8,133.97 (-10.56) | 09:30 open · cash $6,278.83 (unchanged overnight, no fees) · equity $8,123.41 vs prior close $8,133.97 (-10.56) · 2 name(s) re-marked at the open (per-name table). RH×6 yday $150.79 → 09:30 $149.51 -7.68; SLN×48 yday $19.80 → 09:30 $19.74 -2.88 | — |
 | 2026-10-30 09:30 ET | **SELL** | `RH` | 6 | $149.51 | $2.03 | $+48.88 | $7,173.86 | ▲ +48.88 after sell → book $8,121.38; vs 09:30 mark -2.03 | dropped from list after 2 sess (min 1) | join🟢 sector🔴 gen🔴 news🟡 digest🟡 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-10-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,173.86 | ▲ close $8,121.86 vs 09:30 $8,123.41 (session +0.48) | 16:00 close · cash $7,173.86 · equity $8,121.86 vs 09:30 $8,123.41 (-1.55; session marks +0.48) · 1 name(s) marked open→close (per-name table). SLN×48 09:30 $19.74 → close $19.75 +0.48 | — |
+| 2026-11-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,173.86 | ▲ 09:30 equity $8,121.86 vs yday $8,121.86 (+0.00) | 09:30 open · cash $7,173.86 (unchanged overnight, no fees) · equity $8,121.86 vs prior close $8,121.86 (+0.00) · 1 name(s) re-marked at the open (per-name table). SLN×48 yday $19.75 → 09:30 $19.75 +0.00 | — |
+| 2026-11-02 09:30 ET | **BUY** | `GEN` | 35 | $29.05 | $2.10 | — | $6,155.01 | — | baseline list, no extra gate; list ohlc_hot; 🔵; ret5=+17.1; leftover $1024.84 | join🟡 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `BC` | 13 | $76.25 | $2.03 | — | $5,161.74 | — | baseline list, no extra gate; list ohlc_hot; 🔵; ret5=+14.4; leftover $1024.84 | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `BAH` | 11 | $87.16 | $2.02 | — | $4,200.95 | — | baseline list, no extra gate; list ohlc_hot; 🔵; ret5=+13.0; leftover $1024.84 | join🔴 sector🔴 gen🟢 news🔴 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `BLDR` | 15 | $65.73 | $2.04 | — | $3,212.97 | — | baseline list, no extra gate; list ohlc_hot; 🔵; ret5=+14.2; leftover $1024.84 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🟡 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `REAL` | 83 | $12.31 | $2.24 | — | $2,189.00 | — | baseline list, no extra gate; list ohlc_hot; 🔵; ret5=+10.3; leftover $1024.84 | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🟡 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `BTSG` | 15 | $67.50 | $2.04 | — | $1,174.46 | — | baseline list, no extra gate; list ohlc_hot; ret5=+11.3; leftover $1024.84 | join🟡 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `TGTX` | 16 | $61.01 | $2.04 | — | $196.27 | — | baseline list, no extra gate; list ohlc_hot; ret5=+12.9; leftover $1024.84 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $196.27 | ▲ close $8,237.83 vs 09:30 $8,121.86 (session +130.46) | 16:00 close · cash $196.27 · equity $8,237.83 vs 09:30 $8,121.86 (+115.97; session marks +130.46) · 8 name(s) marked open→close (per-name table). SLN×48 09:30 $19.75 → close $19.76 +0.48; GEN×35 09:30 $29.05 → close $29.89 +29.40; BC×13 09:30 $76.25 → close $79.05 +36.40; BAH×11 09:30 $87.16 → close $88.02 +9.46; BLDR×15 09:30 $65.73 → close $67.82 +31.35; REAL×83 09:30 $12.31 → close $13.02 +58.93; BTSG×15 09:30 $67.50 → close $66.26 -18.60; TGTX×16 09:30 $61.01 → close $59.95 -16.96 | — |
 
 ## Not taken
 

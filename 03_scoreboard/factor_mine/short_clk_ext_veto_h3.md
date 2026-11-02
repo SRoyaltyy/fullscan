@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · Clock-B #5 extreme ext + fade/fail-break as a short
 
-Cash book **-16.75%** ($8,325) · signal-only (no cash/fees) was -97.41%. Starts YES **0/30**. Fills 279 · skips 219 · realized $-964.15.
+Cash book **-16.81%** ($8,319) · signal-only (no cash/fees) was -97.41%. Starts YES **0/30**. Fills 281 · skips 219 · realized $-964.15.
 
 ## How this sleeve decides (like you are 10)
 
@@ -461,6 +461,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-30 09:30 ET | **COVER** | `EGG` | 305 | $5.00 | $3.93 | $+43.87 | $15,492.23 | ▲ +43.87 after sell → book $8,391.32; vs 09:30 mark -3.93 | dropped from list after 3 sess (min 3) | join🔴 sector🔴 gen🔴 news🟡 digest🟢 ab🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-10-30 09:30 ET | **COVER** | `GMAB` | 35 | $57.33 | $2.10 | $-456.45 | $13,483.58 | ▼ -456.45 after sell → book $8,389.22; vs 09:30 mark -2.10 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $13,483.58 | ▼ close $8,325.14 vs 09:30 $8,397.31 (session -64.08) | 16:00 close · cash $13,483.58 · equity $8,325.14 vs 09:30 $8,397.31 (-72.17; session marks -64.08) · 1 name(s) marked open→close (per-name table). IMSR×1602 09:30 $3.18 → close $3.22 -64.08 | — |
+| 2026-11-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $13,483.58 | ▼ 09:30 equity $8,293.10 vs yday $8,325.14 (-32.04) | 09:30 open · cash $13,483.58 (unchanged overnight, no fees) · equity $8,293.10 vs prior close $8,325.14 (-32.04) · 1 name(s) re-marked at the open (per-name table). IMSR×1602 yday $3.22 → 09:30 $3.24 -32.04 | — |
+| 2026-11-02 09:30 ET | **COVER** | `IMSR` | 1602 | $3.24 | $20.67 | $-506.34 | $8,272.43 | ▼ -506.34 after sell → book $8,272.43; vs 09:30 mark -20.67 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-02 09:30 ET | **SHORT** | `HLP` | 1001 | $4.13 | $13.23 | — | $12,393.34 | — | Clock-B #5 extreme ext + fade/fail-break as a short; gate clk_ext_veto=True; list ohlc_hot; 🔵; ret5=+15.7; leftover $4136.22 | join🔴 sector🟡 gen🟢 news🟡 digest🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $12,393.34 | ▲ close $8,319.27 vs 09:30 $8,293.10 (session +60.06) | 16:00 close · cash $12,393.34 · equity $8,319.27 vs 09:30 $8,293.10 (+26.17; session marks +60.06) · 1 name(s) marked open→close (per-name table). HLP×1001 09:30 $4.13 → close $4.07 +60.06 | — |
 
 ## Not taken
 

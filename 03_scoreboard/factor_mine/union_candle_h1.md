@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ candle, no 🚨
 
-Cash book **-15.10%** ($8,490) · signal-only (no cash/fees) was -3.26%. Starts YES **0/30**. Fills 476 · skips 106 · realized $-563.17.
+Cash book **-15.43%** ($8,457) · signal-only (no cash/fees) was -3.26%. Starts YES **0/30**. Fills 484 · skips 106 · realized $-563.17.
 
 ## How this sleeve decides (like you are 10)
 
@@ -660,6 +660,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-30 09:30 ET | **SELL** | `PDFS` | 24 | $42.61 | $2.08 | $+16.74 | $7,409.85 | ▲ +16.74 after sell → book $8,491.99; vs 09:30 mark -2.08 | dropped from list after 3 sess (min 1) | join🔴 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-30 09:30 ET | **SELL** | `QTTB` | 122 | $8.87 | $2.39 | $+22.10 | $8,489.60 | ▲ +22.10 after sell → book $8,489.60; vs 09:30 mark -2.39 | dropped from list after 2 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-10-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,489.60 | ▲ close $8,489.60 vs 09:30 $8,494.07 (session +0.00) | 16:00 close · cash $8,489.60 · no lots left · equity $8,489.60. | — |
+| 2026-11-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,489.60 | ▲ 09:30 equity $8,489.60 vs yday $8,489.60 (+0.00) | 09:30 open · cash $8,489.60 · no holdings · equity $8,489.60 vs prior close $8,489.60 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-02 09:30 ET | **BUY** | `CDNA` | 12 | $86.88 | $2.03 | — | $7,445.01 | — | union ∩ candle, no 🚨; gate candle_capture=True; list flatten; 🔵; ret5=+26.3; leftover $1061.20 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `AMN` | 22 | $47.47 | $2.06 | — | $6,398.62 | — | union ∩ candle, no 🚨; gate candle_capture=True; list flatten; 🔵; ret5=-1.9; leftover $1061.20 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟢 |
+| 2026-11-02 09:30 ET | **BUY** | `PRMB` | 52 | $20.03 | $2.15 | — | $5,354.91 | — | union ∩ candle, no 🚨; gate candle_capture=True; list probable,yday_gainer,yday_mover; 🔵; ret5=+0.3; leftover $1061.20 | join🟡 sector🟡 gen🟢 news🟡 digest🔴 ab🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `NVTS` | 123 | $8.56 | $2.36 | — | $4,299.67 | — | union ∩ candle, no 🚨; gate candle_capture=True; list probable,yday_gainer,yday_mover; ret5=+1.2; leftover $1061.20 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `EPR` | 18 | $57.70 | $2.04 | — | $3,259.03 | — | union ∩ candle, no 🚨; gate candle_capture=True; list probable,yday_gainer,yday_mover; 🔵; ret5=+3.7; leftover $1061.20 | join🟡 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `POOL` | 5 | $208.87 | $2.00 | — | $2,212.67 | — | union ∩ candle, no 🚨; gate candle_capture=True; list yday_gainer; 🔵; ret5=+3.5; leftover $1061.20 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `AMX` | 43 | $24.57 | $2.12 | — | $1,154.05 | — | union ∩ candle, no 🚨; gate candle_capture=True; list yday_gainer; 🔵; ret5=-0.4; leftover $1061.20 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `TBBB` | 18 | $56.87 | $2.04 | — | $128.34 | — | union ∩ candle, no 🚨; gate candle_capture=True; list yday_gainer; 🔵; ret5=-3.2; leftover $1061.20 | join🔴 sector🟡 gen🟢 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $128.34 | ▼ close $8,456.79 vs 09:30 $8,489.60 (session -16.01) | 16:00 close · cash $128.34 · equity $8,456.79 vs 09:30 $8,489.60 (-32.81; session marks -16.01) · 8 name(s) marked open→close (per-name table). CDNA×12 09:30 $86.88 → close $85.88 -12.00; AMN×22 09:30 $47.47 → close $45.77 -37.40; PRMB×52 09:30 $20.03 → close $20.77 +38.48; NVTS×123 09:30 $8.56 → close $7.93 -77.49; EPR×18 09:30 $57.70 → close $59.58 +33.84; POOL×5 09:30 $208.87 → close $214.76 +29.45; AMX×43 09:30 $24.57 → close $24.74 +7.31; TBBB×18 09:30 $56.87 → close $56.97 +1.80 | — |
 
 ## Not taken
 

@@ -1,0 +1,147 @@
+{
+  "buys": [
+    {
+      "fill_rule": "open",
+      "price": 86.88,
+      "shares": 21,
+      "side": "BUY",
+      "ticker": "CDNA"
+    },
+    {
+      "fill_rule": "open",
+      "price": 29.05,
+      "shares": 63,
+      "side": "BUY",
+      "ticker": "GEN"
+    },
+    {
+      "fill_rule": "open",
+      "price": 76.25,
+      "shares": 24,
+      "side": "BUY",
+      "ticker": "BC"
+    },
+    {
+      "fill_rule": "open",
+      "price": 87.16,
+      "shares": 21,
+      "side": "BUY",
+      "ticker": "BAH"
+    }
+  ],
+  "cash": 59.17,
+  "date": "2026-11-02",
+  "equity": 7491.34,
+  "fees": 8.347,
+  "fills": [
+    {
+      "fees": 2.053,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 86.88,
+      "shares": 21,
+      "side": "BUY",
+      "ticker": "CDNA"
+    },
+    {
+      "fees": 2.179,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 29.05,
+      "shares": 63,
+      "side": "BUY",
+      "ticker": "GEN"
+    },
+    {
+      "fees": 2.062,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 76.25,
+      "shares": 24,
+      "side": "BUY",
+      "ticker": "BC"
+    },
+    {
+      "fees": 2.053,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 87.16,
+      "shares": 21,
+      "side": "BUY",
+      "ticker": "BAH"
+    }
+  ],
+  "holdings": [
+    "BAH",
+    "BC",
+    "CDNA",
+    "GEN"
+  ],
+  "mean": 1.4742,
+  "n_trades_today": 4,
+  "recipe": "oos0914_break10_h1_sx",
+  "sells": [],
+  "state": {
+    "after": "2026-11-02",
+    "cash": 59.17,
+    "pos": {
+      "BAH": {
+        "close_px": 88.02,
+        "cost": 1832.413,
+        "entry_date": "2026-11-02",
+        "entry_px": 87.16,
+        "fee_in": 2.053,
+        "last_px": 87.16,
+        "min_hold": 1,
+        "notional": 1830.36,
+        "peak_px": 87.16,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list ohlc_hot; \ud83d\udd35; ret5=+13.0; leftover $1845.63",
+        "shares": 21,
+        "ticker": "BAH"
+      },
+      "BC": {
+        "close_px": 79.05,
+        "cost": 1832.062,
+        "entry_date": "2026-11-02",
+        "entry_px": 76.25,
+        "fee_in": 2.062,
+        "last_px": 76.25,
+        "min_hold": 1,
+        "notional": 1830.0,
+        "peak_px": 76.25,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list ohlc_hot; \ud83d\udd35; ret5=+14.4; leftover $1845.63",
+        "shares": 24,
+        "ticker": "BC"
+      },
+      "CDNA": {
+        "close_px": 85.88,
+        "cost": 1826.5330000000001,
+        "entry_date": "2026-11-02",
+        "entry_px": 86.88,
+        "fee_in": 2.053,
+        "last_px": 86.88,
+        "min_hold": 1,
+        "notional": 1824.48,
+        "peak_px": 86.88,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list flatten; \ud83d\udd35; ret5=+26.3; leftover $1845.63",
+        "shares": 21,
+        "ticker": "CDNA"
+      },
+      "GEN": {
+        "close_px": 29.89,
+        "cost": 1832.3290000000002,
+        "entry_date": "2026-11-02",
+        "entry_px": 29.05,
+        "fee_in": 2.179,
+        "last_px": 29.05,
+        "min_hold": 1,
+        "notional": 1830.15,
+        "peak_px": 29.05,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list ohlc_hot; \ud83d\udd35; ret5=+17.1; leftover $1845.63",
+        "shares": 63,
+        "ticker": "GEN"
+      }
+    },
+    "yday_equity": 7491.34
+  }
+}

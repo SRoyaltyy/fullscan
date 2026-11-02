@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · short prior-export headline🔴
 
-Cash book **-15.99%** ($8,401) · signal-only (no cash/fees) was +2.90%. Starts YES **2/30**. Fills 127 · skips 94 · realized $+602.64.
+Cash book **-16.89%** ($8,311) · signal-only (no cash/fees) was +2.90%. Starts YES **2/30**. Fills 130 · skips 94 · realized $+602.64.
 
 ## How this sleeve decides (like you are 10)
 
@@ -309,6 +309,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-30 09:30 ET | **COVER** | `BAH` | 25 | $85.60 | $2.06 | $-81.09 | $14,630.16 | ▼ -81.09 after sell → book $8,350.11; vs 09:30 mark -2.06 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-30 09:30 ET | **COVER** | `VVX` | 27 | $80.27 | $2.07 | $-91.84 | $12,460.94 | ▼ -91.84 after sell → book $8,348.04; vs 09:30 mark -2.07 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $12,460.94 | ▲ close $8,400.53 vs 09:30 $8,352.17 (session +52.49) | 16:00 close · cash $12,460.94 · equity $8,400.53 vs 09:30 $8,352.17 (+48.36; session marks +52.49) · 2 name(s) marked open→close (per-name table). SPCE×785 09:30 $2.64 → close $2.58 +47.10; VOYG×77 09:30 $26.50 → close $26.43 +5.39 | — |
+| 2026-11-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $12,460.94 | ▼ 09:30 equity $8,366.05 vs yday $8,400.53 (-34.48) | 09:30 open · cash $12,460.94 (unchanged overnight, no fees) · equity $8,366.05 vs prior close $8,400.53 (-34.48) · 2 name(s) re-marked at the open (per-name table). SPCE×785 yday $2.58 → 09:30 $2.62 -31.40; VOYG×77 yday $26.43 → 09:30 $26.47 -3.08 | — |
+| 2026-11-02 09:30 ET | **COVER** | `SPCE` | 785 | $2.62 | $10.13 | $+26.64 | $10,394.11 | ▲ +26.64 after sell → book $8,355.92; vs 09:30 mark -10.13 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-02 09:30 ET | **COVER** | `VOYG` | 77 | $26.47 | $2.22 | $+63.23 | $8,353.70 | ▲ +63.23 after sell → book $8,353.70; vs 09:30 mark -2.22 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-02 09:30 ET | **SHORT** | `BAH` | 47 | $87.16 | $2.29 | — | $12,447.94 | — | short prior-export headline🔴; gate headline=bad; list ohlc_hot; 🔵; ret5=+13.0; leftover $4176.85 | join🔴 sector🔴 gen🟢 news🔴 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $12,447.94 | ▼ close $8,311.00 vs 09:30 $8,366.05 (session -40.42) | 16:00 close · cash $12,447.94 · equity $8,311.00 vs 09:30 $8,366.05 (-55.05; session marks -40.42) · 1 name(s) marked open→close (per-name table). BAH×47 09:30 $87.16 → close $88.02 -40.42 | — |
 
 ## Not taken
 

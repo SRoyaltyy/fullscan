@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ rsi_os hold 5, no 🚨
 
-Cash book **-35.75%** ($6,425) · signal-only (no cash/fees) was -62.78%. Starts YES **4/30**. Fills 126 · skips 145 · realized $-2687.08.
+Cash book **-34.90%** ($6,510) · signal-only (no cash/fees) was -62.78%. Starts YES **4/30**. Fills 129 · skips 145 · realized $-2687.08.
 
 ## How this sleeve decides (like you are 10)
 
@@ -310,6 +310,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2,851.03 | ▲ close $8,180.98 vs 09:30 $8,176.69 (session +4.29) | 16:00 close · cash $2,851.03 · equity $8,180.98 vs 09:30 $8,176.69 (+4.29; session marks +4.29) · 2 name(s) marked open→close (per-name table). ARI×415 09:30 $6.56 → close $6.45 -45.65; BX×22 09:30 $118.33 → close $120.60 +49.94 | — |
 | 2026-10-30 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $2,851.03 | ▼ 09:30 equity $6,441.40 vs yday $8,180.98 (-1,739.58) | 09:30 open · cash $2,851.03 (unchanged overnight, no fees) · equity $6,441.40 vs prior close $8,180.98 (-1739.58) · 2 name(s) re-marked at the open (per-name table). ARI×415 yday $6.45 → 09:30 $2.32 -1713.95; BX×22 yday $120.60 → 09:30 $119.44 -25.63 | — |
 | 2026-10-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2,851.03 | ▼ close $6,425.20 vs 09:30 $6,441.40 (session -16.20) | 16:00 close · cash $2,851.03 · equity $6,425.20 vs 09:30 $6,441.40 (-16.20; session marks -16.20) · 2 name(s) marked open→close (per-name table). ARI×415 09:30 $2.32 → close $2.33 +4.15; BX×22 09:30 $119.44 → close $118.51 -20.35 | — |
+| 2026-11-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $2,851.03 | ▲ 09:30 equity $6,425.75 vs yday $6,425.20 (+0.55) | 09:30 open · cash $2,851.03 (unchanged overnight, no fees) · equity $6,425.75 vs prior close $6,425.20 (+0.55) · 2 name(s) re-marked at the open (per-name table). ARI×415 yday $2.33 → 09:30 $2.33 +0.00; BX×22 yday $118.51 → 09:30 $118.53 +0.55 | — |
+| 2026-11-02 09:30 ET | **BUY** | `DGX` | 2 | $251.60 | $2.00 | — | $2,345.83 | — | union ∩ rsi_os hold 5, no 🚨; gate rsi_os=True; list yday_mover; ret5=+4.1; leftover $712.76 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `GEN` | 24 | $29.05 | $2.06 | — | $1,646.57 | — | union ∩ rsi_os hold 5, no 🚨; gate rsi_os=True; list ohlc_hot; 🔵; ret5=+17.1; leftover $712.76 | join🟡 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `PENN` | 44 | $16.00 | $2.12 | — | $940.45 | — | union ∩ rsi_os hold 5, no 🚨; gate rsi_os=True; list ohlc_hot; 🔵; ret5=+9.6; leftover $712.76 | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🔴 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-11-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $940.45 | ▲ close $6,510.04 vs 09:30 $6,425.75 (session +90.47) | 16:00 close · cash $940.45 · equity $6,510.04 vs 09:30 $6,425.75 (+84.29; session marks +90.47) · 5 name(s) marked open→close (per-name table). ARI×415 09:30 $2.33 → close $2.31 -8.30; BX×22 09:30 $118.53 → close $120.14 +35.31; DGX×2 09:30 $251.60 → close $250.81 -1.58; GEN×24 09:30 $29.05 → close $29.89 +20.16; PENN×44 09:30 $16.00 → close $17.02 +44.88 | — |
 
 ## Not taken
 

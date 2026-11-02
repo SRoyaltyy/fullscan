@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-23.10%** ($7,690) · signal-only (no cash/fees) was -12.21%. Starts YES **0/30**. Fills 458 · skips 101 · realized $-768.45.
+Cash book **-23.21%** ($7,679) · signal-only (no cash/fees) was -12.21%. Starts YES **0/30**. Fills 465 · skips 101 · realized $-768.45.
 
 ## How this sleeve decides (like you are 10)
 
@@ -647,6 +647,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,689.82 | ▲ close $7,689.82 vs 09:30 $7,712.30 (session +0.00) | 16:00 close · cash $7,689.82 · no lots left · equity $7,689.82. | — |
 | 2026-10-30 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,689.82 | ▲ 09:30 equity $7,689.82 vs yday $7,689.82 (+0.00) | 09:30 open · cash $7,689.82 · no holdings · equity $7,689.82 vs prior close $7,689.82 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-10-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,689.82 | ▲ close $7,689.82 vs 09:30 $7,689.82 (session +0.00) | 16:00 close · cash $7,689.82 · no lots left · equity $7,689.82. | — |
+| 2026-11-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,689.82 | ▲ 09:30 equity $7,689.82 vs yday $7,689.82 (+0.00) | 09:30 open · cash $7,689.82 · no holdings · equity $7,689.82 vs prior close $7,689.82 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-02 09:30 ET | **BUY** | `PRMB` | 47 | $20.03 | $2.13 | — | $6,746.28 | — | combo gate; gate last_green=True,ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list probable,yday_gainer,yday_mover; 🔵; ret5=+0.3; leftover $961.23 | join🟡 sector🟡 gen🟢 news🟡 digest🔴 ab🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `ROP` | 2 | $465.90 | $2.00 | — | $5,812.48 | — | combo gate; gate last_green=True,ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list ohlc_hot; 🔵; ret5=+6.5; leftover $961.23 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `BBIO` | 12 | $75.01 | $2.03 | — | $4,910.34 | — | combo gate; gate last_green=True,ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list ohlc_hot; ret5=+9.3; leftover $961.23 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🟡 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `RKT` | 73 | $13.05 | $2.21 | — | $3,955.48 | — | combo gate; gate last_green=True,ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list ohlc_hot; 🔵; ret5=+9.1; leftover $961.23 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `RIG` | 144 | $6.65 | $2.42 | — | $2,995.46 | — | combo gate; gate last_green=True,ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list ohlc_hot; 🔵; ret5=+8.3; leftover $961.23 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `VAL` | 9 | $101.40 | $2.02 | — | $2,080.84 | — | combo gate; gate last_green=True,ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list ohlc_hot; 🔵; ret5=+8.2; leftover $961.23 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `AZN` | 5 | $184.59 | $2.00 | — | $1,155.88 | — | combo gate; gate last_green=True,ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list ohlc_hot; ret5=+8.8; leftover $961.23 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,155.88 | ▲ close $7,678.53 vs 09:30 $7,689.82 (session +3.52) | 16:00 close · cash $1,155.88 · equity $7,678.53 vs 09:30 $7,689.82 (-11.29; session marks +3.52) · 7 name(s) marked open→close (per-name table). PRMB×47 09:30 $20.03 → close $20.77 +34.78; ROP×2 09:30 $465.90 → close $479.54 +27.28; BBIO×12 09:30 $75.01 → close $75.00 -0.18; RKT×73 09:30 $13.05 → close $13.77 +52.56; RIG×144 09:30 $6.65 → close $6.23 -60.48; VAL×9 09:30 $101.40 → close $94.69 -60.39; AZN×5 09:30 $184.59 → close $186.58 +9.95 | — |
 
 ## Not taken
 

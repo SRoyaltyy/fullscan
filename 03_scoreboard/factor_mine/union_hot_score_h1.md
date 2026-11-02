@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `hot_score` · size `leftover` · sell `list` · S-boost `none` · rank by hot_score
 
-Cash book **+17.78%** ($11,778) · signal-only (no cash/fees) was +50.67%. Starts YES **29/30**. Fills 466 · skips 90 · realized $+477.92.
+Cash book **+19.59%** ($11,959) · signal-only (no cash/fees) was +50.67%. Starts YES **29/30**. Fills 474 · skips 90 · realized $+477.92.
 
 ## How this sleeve decides (like you are 10)
 
@@ -649,6 +649,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $11,778.27 | ▲ close $11,778.27 vs 09:30 $11,804.74 (session +0.00) | 16:00 close · cash $11,778.27 · no lots left · equity $11,778.27. | — |
 | 2026-10-30 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $11,778.27 | ▲ 09:30 equity $11,778.27 vs yday $11,778.27 (+0.00) | 09:30 open · cash $11,778.27 · no holdings · equity $11,778.27 vs prior close $11,778.27 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-10-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $11,778.27 | ▲ close $11,778.27 vs 09:30 $11,778.27 (session +0.00) | 16:00 close · cash $11,778.27 · no lots left · equity $11,778.27. | — |
+| 2026-11-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $11,778.27 | ▲ 09:30 equity $11,778.27 vs yday $11,778.27 (+0.00) | 09:30 open · cash $11,778.27 · no holdings · equity $11,778.27 vs prior close $11,778.27 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-02 09:30 ET | **BUY** | `CDNA` | 16 | $86.88 | $2.04 | — | $10,386.15 | — | rank by hot_score; rank hot_score; list flatten; 🔵; ret5=+26.3; leftover $1472.28 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `SLN` | 74 | $19.75 | $2.21 | — | $8,922.44 | — | rank by hot_score; rank hot_score; list ohlc_hot; ret5=+0.4; leftover $1472.28 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `GEN` | 50 | $29.05 | $2.14 | — | $7,467.80 | — | rank by hot_score; rank hot_score; list ohlc_hot; 🔵; ret5=+17.1; leftover $1472.28 | join🟡 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `BC` | 19 | $76.25 | $2.05 | — | $6,017.00 | — | rank by hot_score; rank hot_score; list ohlc_hot; 🔵; ret5=+14.4; leftover $1472.28 | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `BAH` | 16 | $87.16 | $2.04 | — | $4,620.41 | — | rank by hot_score; rank hot_score; list ohlc_hot; 🔵; ret5=+13.0; leftover $1472.28 | join🔴 sector🔴 gen🟢 news🔴 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `BLDR` | 22 | $65.73 | $2.06 | — | $3,172.29 | — | rank by hot_score; rank hot_score; list ohlc_hot; 🔵; ret5=+14.2; leftover $1472.28 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🟡 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `REAL` | 119 | $12.31 | $2.35 | — | $1,705.05 | — | rank by hot_score; rank hot_score; list ohlc_hot; 🔵; ret5=+10.3; leftover $1472.28 | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🟡 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `BTSG` | 21 | $67.50 | $2.05 | — | $285.50 | — | rank by hot_score; rank hot_score; list ohlc_hot; ret5=+11.3; leftover $1472.28 | join🟡 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $285.50 | ▲ close $11,959.47 vs 09:30 $11,778.27 (session +198.13) | 16:00 close · cash $285.50 · equity $11,959.47 vs 09:30 $11,778.27 (+181.20; session marks +198.13) · 8 name(s) marked open→close (per-name table). CDNA×16 09:30 $86.88 → close $85.88 -16.00; SLN×74 09:30 $19.75 → close $19.76 +0.74; GEN×50 09:30 $29.05 → close $29.89 +42.00; BC×19 09:30 $76.25 → close $79.05 +53.20; BAH×16 09:30 $87.16 → close $88.02 +13.76; BLDR×22 09:30 $65.73 → close $67.82 +45.98; REAL×119 09:30 $12.31 → close $13.02 +84.49; BTSG×21 09:30 $67.50 → close $66.26 -26.04 | — |
 
 ## Not taken
 

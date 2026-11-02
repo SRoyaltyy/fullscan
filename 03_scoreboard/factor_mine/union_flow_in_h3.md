@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ flow_in, no 🚨
 
-Cash book **-12.52%** ($8,748) · signal-only (no cash/fees) was +15.53%. Starts YES **3/30**. Fills 100 · skips 105 · realized $-281.48.
+Cash book **-11.65%** ($8,835) · signal-only (no cash/fees) was +15.53%. Starts YES **3/30**. Fills 102 · skips 105 · realized $-281.48.
 
 ## How this sleeve decides (like you are 10)
 
@@ -284,6 +284,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $323.92 | ▲ close $9,025.72 vs 09:30 $8,670.37 (session +355.35) | 16:00 close · cash $323.92 · equity $9,025.72 vs 09:30 $8,670.37 (+355.35; session marks +355.35) · 2 name(s) marked open→close (per-name table). CRS×15 09:30 $279.00 → close $298.72 +295.80; ITW×15 09:30 $277.43 → close $281.40 +59.55 | — |
 | 2026-10-30 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $323.92 | ▼ 09:30 equity $8,917.72 vs yday $9,025.72 (-108.00) | 09:30 open · cash $323.92 (unchanged overnight, no fees) · equity $8,917.72 vs prior close $9,025.72 (-108.00) · 2 name(s) re-marked at the open (per-name table). CRS×15 yday $298.72 → 09:30 $289.32 -141.00; ITW×15 yday $281.40 → 09:30 $283.60 +33.00 | — |
 | 2026-10-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $323.92 | ▼ close $8,748.37 vs 09:30 $8,917.72 (session -169.35) | 16:00 close · cash $323.92 · equity $8,748.37 vs 09:30 $8,917.72 (-169.35; session marks -169.35) · 2 name(s) marked open→close (per-name table). CRS×15 09:30 $289.32 → close $283.08 -93.60; ITW×15 09:30 $283.60 → close $278.55 -75.75 | — |
+| 2026-11-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $323.92 | ▲ 09:30 equity $8,839.12 vs yday $8,748.37 (+90.75) | 09:30 open · cash $323.92 (unchanged overnight, no fees) · equity $8,839.12 vs prior close $8,748.37 (+90.75) · 2 name(s) re-marked at the open (per-name table). CRS×15 yday $283.08 → 09:30 $285.91 +42.45; ITW×15 yday $278.55 → 09:30 $281.77 +48.30 | — |
+| 2026-11-02 09:30 ET | **SELL** | `CRS` | 15 | $285.91 | $2.08 | $-91.86 | $4,610.49 | ▼ -91.86 after sell → book $8,837.04; vs 09:30 mark -2.08 | dropped from list after 3 sess (min 3) | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **SELL** | `ITW` | 15 | $281.77 | $2.08 | $+71.19 | $8,834.96 | ▲ +71.19 after sell → book $8,834.96; vs 09:30 mark -2.08 | dropped from list after 3 sess (min 3) | join🔴 sector🔴 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,834.96 | ▲ close $8,834.96 vs 09:30 $8,839.12 (session +0.00) | 16:00 close · cash $8,834.96 · no lots left · equity $8,834.96. | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · ret_5>15
 
-Cash book **-3.20%** ($9,680) · signal-only (no cash/fees) was -19.86%. Starts YES **3/30**. Fills 410 · skips 88 · realized $-1484.16.
+Cash book **-3.95%** ($9,605) · signal-only (no cash/fees) was -19.86%. Starts YES **3/30**. Fills 418 · skips 88 · realized $-1484.16.
 
 ## How this sleeve decides (like you are 10)
 
@@ -592,6 +592,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-30 09:30 ET | **COVER** | `FIP` | 233 | $2.84 | $3.01 | $-50.35 | $10,273.15 | ▼ -50.35 after sell → book $9,682.45; vs 09:30 mark -3.01 | dropped from list after 2 sess (min 1) | join🔴 sector🔴 gen🔴 news🟡 digest🟢 ab🔴 peer🔴 heat🔴 vol🔴 buy🟡 |
 | 2026-10-30 09:30 ET | **COVER** | `JLHL` | 110 | $5.37 | $2.32 | $+20.61 | $9,680.13 | ▲ +20.61 after sell → book $9,680.13; vs 09:30 mark -2.32 | dropped from list after 2 sess (min 1) | join🔴 sector🔴 gen🔴 news🟡 digest🟢 ab🔴 heat🔴 vol🔴 buy🟡 |
 | 2026-10-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,680.13 | ▲ close $9,680.13 vs 09:30 $9,685.46 (session +0.00) | 16:00 close · cash $9,680.13 · no lots left · equity $9,680.13. | — |
+| 2026-11-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,680.13 | ▲ 09:30 equity $9,680.13 vs yday $9,680.13 (+0.00) | 09:30 open · cash $9,680.13 · no holdings · equity $9,680.13 vs prior close $9,680.13 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-02 09:30 ET | **SHORT** | `CDNA` | 6 | $86.88 | $2.04 | — | $10,199.37 | — | ret_5>15; gate ret_5_min=15.0; list flatten; 🔵; ret5=+26.3; leftover $605.01 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **SHORT** | `JLHL` | 105 | $5.76 | $2.35 | — | $10,801.82 | — | ret_5>15; gate ret_5_min=15.0; list yday_mover; 🔵; ret5=+16.3; leftover $605.01 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **SHORT** | `GEN` | 20 | $29.05 | $2.09 | — | $11,380.73 | — | ret_5>15; gate ret_5_min=15.0; list ohlc_hot; 🔵; ret5=+17.1; leftover $605.01 | join🟡 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **SHORT** | `HLP` | 146 | $4.13 | $2.48 | — | $11,981.23 | — | ret_5>15; gate ret_5_min=15.0; list ohlc_hot; 🔵; ret5=+15.7; leftover $605.01 | join🔴 sector🟡 gen🟢 news🟡 digest🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **SHORT** | `DNUT` | 183 | $3.30 | $2.60 | — | $12,582.54 | — | ret_5>15; gate ret_5_min=15.0; list ohlc_hot; 🔵; ret5=+16.1; leftover $605.01 | join🔴 sector🟡 gen🟢 news🟡 digest🔴 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **SHORT** | `WEN` | 83 | $7.22 | $2.28 | — | $13,179.52 | — | ret_5>15; gate ret_5_min=15.0; list ohlc_hot; 🔵; ret5=+15.9; leftover $605.01 | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **SHORT** | `GM` | 6 | $88.50 | $2.04 | — | $13,708.48 | — | ret_5>15; gate ret_5_min=15.0; list ohlc_hot; 🔵; ret5=+15.1; leftover $605.01 | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **SHORT** | `CMG` | 18 | $31.90 | $2.08 | — | $14,280.60 | — | ret_5>15; gate ret_5_min=15.0; list ohlc_hot; 🔵; ret5=+15.9; leftover $605.01 | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,280.60 | ▼ close $9,605.13 vs 09:30 $9,680.13 (session -57.05) | 16:00 close · cash $14,280.60 · equity $9,605.13 vs 09:30 $9,680.13 (-75.00; session marks -57.05) · 8 name(s) marked open→close (per-name table). CDNA×6 09:30 $86.88 → close $85.88 +6.00; JLHL×105 09:30 $5.76 → close $5.84 -8.40; GEN×20 09:30 $29.05 → close $29.89 -16.80; HLP×146 09:30 $4.13 → close $4.07 +8.76; DNUT×183 09:30 $3.30 → close $3.39 -16.47; WEN×83 09:30 $7.22 → close $7.26 -3.32; GM×6 09:30 $88.50 → close $89.94 -8.64; CMG×18 09:30 $31.90 → close $32.91 -18.18 | — |
 
 ## Not taken
 

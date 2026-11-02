@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ macd_xup, no 🚨
 
-Cash book **-15.98%** ($8,402) · signal-only (no cash/fees) was -19.02%. Starts YES **0/30**. Fills 292 · skips 71 · realized $-1788.82.
+Cash book **-19.95%** ($8,005) · signal-only (no cash/fees) was -19.02%. Starts YES **0/30**. Fills 294 · skips 71 · realized $-1788.82.
 
 ## How this sleeve decides (like you are 10)
 
@@ -476,6 +476,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,402.21 | ▲ close $8,402.21 vs 09:30 $8,419.88 (session +0.00) | 16:00 close · cash $8,402.21 · no lots left · equity $8,402.21. | — |
 | 2026-10-30 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,402.21 | ▲ 09:30 equity $8,402.21 vs yday $8,402.21 (+0.00) | 09:30 open · cash $8,402.21 · no holdings · equity $8,402.21 vs prior close $8,402.21 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-10-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,402.21 | ▲ close $8,402.21 vs 09:30 $8,402.21 (session +0.00) | 16:00 close · cash $8,402.21 · no lots left · equity $8,402.21. | — |
+| 2026-11-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,402.21 | ▲ 09:30 equity $8,402.21 vs yday $8,402.21 (+0.00) | 09:30 open · cash $8,402.21 · no holdings · equity $8,402.21 vs prior close $8,402.21 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-02 09:30 ET | **BUY** | `SMMT` | 262 | $16.00 | $3.38 | — | $4,206.83 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list probable,yday_gainer,yday_mover; ret5=+3.6; leftover $4201.10 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `BTSG` | 62 | $67.50 | $2.18 | — | $19.65 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list ohlc_hot; ret5=+11.3; leftover $4201.10 | join🟡 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $19.65 | ▼ close $8,005.37 vs 09:30 $8,402.21 (session -391.28) | 16:00 close · cash $19.65 · equity $8,005.37 vs 09:30 $8,402.21 (-396.84; session marks -391.28) · 2 name(s) marked open→close (per-name table). SMMT×262 09:30 $16.00 → close $14.80 -314.40; BTSG×62 09:30 $67.50 → close $66.26 -76.88 | — |
 
 ## Not taken
 

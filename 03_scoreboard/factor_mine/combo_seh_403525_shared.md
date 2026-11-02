@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared short_news_r_h3/union_e_fresh_h3/union_hot_n4_h1 w=0.4,0.35,0.25 net=priority
 
-Cash book **+57.74%** ($15,774) · signal-only (no cash/fees) was —. Starts YES **29/30**. Fills 605 · skips 369 · realized $+2687.34.
+Cash book **+56.81%** ($15,681) · signal-only (no cash/fees) was —. Starts YES **29/30**. Fills 612 · skips 369 · realized $+2687.34.
 
 ## How this sleeve decides (like you are 10)
 
@@ -56,7 +56,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $23,278.60.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $17,527.19.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -791,6 +791,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-30 09:30 ET | **COVER** | `BAH` | 47 | $85.60 | $2.13 | $-148.93 | $27,293.99 | ▼ -148.93 after sell → book $15,679.18; vs 09:30 mark -2.13 | short_news_r_h3: dropped from list after 3 sess (min 3) | — |
 | 2026-10-30 09:30 ET | **COVER** | `VVX` | 50 | $80.27 | $2.14 | $-166.68 | $23,278.60 | ▼ -166.68 after sell → book $15,677.04; vs 09:30 mark -2.14 | short_news_r_h3: dropped from list after 3 sess (min 3) | — |
 | 2026-10-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $23,278.60 | ▲ close $15,774.22 vs 09:30 $15,681.31 (session +97.18) | 16:00 close · cash $23,278.60 · equity $15,774.22 vs 09:30 $15,681.31 (+92.91; session marks +97.18) · 2 name(s) marked open→close (per-name table). SPCE×1454 09:30 $2.64 → close $2.58 +87.24; VOYG×142 09:30 $26.50 → close $26.43 +9.94 | — |
+| 2026-11-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $23,278.60 | ▼ 09:30 equity $15,710.38 vs yday $15,774.22 (-63.84) | 09:30 open · cash $23,278.60 (unchanged overnight, no fees) · equity $15,710.38 vs prior close $15,774.22 (-63.84) | — |
+| 2026-11-02 09:30 ET | **COVER** | `SPCE` | 1454 | $2.62 | $18.76 | $+49.35 | $19,450.36 | ▲ +49.35 after sell → book $15,691.62; vs 09:30 mark -18.76 | short_news_r_h3: dropped from list after 3 sess (min 3) | — |
+| 2026-11-02 09:30 ET | **COVER** | `VOYG` | 142 | $26.47 | $2.42 | $+119.97 | $15,689.21 | ▲ +119.97 after sell → book $15,689.21; vs 09:30 mark -2.41 | short_news_r_h3: dropped from list after 3 sess (min 3) | — |
+| 2026-11-02 09:30 ET | **BUY** | `CDNA` | 17 | $86.88 | $2.04 | — | $14,210.21 | — | top 4 by hot; rank hot_score; list flatten; 🔵; ret5=+26.3; combo leftover $1508.58; owner union_hot_n4_h1 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `SLN` | 76 | $19.75 | $2.22 | — | $12,706.99 | — | top 4 by hot; rank hot_score; list ohlc_hot; ret5=+0.4; combo leftover $1508.58; owner union_hot_n4_h1 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `GEN` | 51 | $29.05 | $2.14 | — | $11,223.30 | — | top 4 by hot; rank hot_score; list ohlc_hot; 🔵; ret5=+17.1; combo leftover $1508.58; owner union_hot_n4_h1 | join🟡 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `BC` | 19 | $76.25 | $2.05 | — | $9,772.50 | — | top 4 by hot; rank hot_score; list ohlc_hot; 🔵; ret5=+14.4; combo leftover $1508.58; owner union_hot_n4_h1 | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **SHORT** | `BAH` | 89 | $87.16 | $2.55 | — | $17,527.19 | — | news🔴; gate news=bad; list ohlc_hot; 🔵; ret5=+13.0; combo leftover $7840.38; owner short_news_r_h3 | join🔴 sector🔴 gen🟢 news🔴 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $17,527.19 | ▲ close $15,681.47 vs 09:30 $15,710.38 (session +3.26) | 16:00 close · cash $17,527.19 · equity $15,681.47 vs 09:30 $15,710.38 (-28.91; session marks +3.26) · 5 name(s) marked open→close (per-name table). CDNA×17 09:30 $86.88 → close $85.88 -17.00; SLN×76 09:30 $19.75 → close $19.76 +0.76; GEN×51 09:30 $29.05 → close $29.89 +42.84; BC×19 09:30 $76.25 → close $79.05 +53.20; BAH×89 09:30 $87.16 → close $88.02 -76.54 | — |
 
 ## Not taken
 

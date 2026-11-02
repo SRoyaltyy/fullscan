@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ flow_in hold 5, no 🚨
 
-Cash book **-7.56%** ($9,244) · signal-only (no cash/fees) was -2.74%. Starts YES **16/30**. Fills 76 · skips 144 · realized $+404.42.
+Cash book **-4.46%** ($9,554) · signal-only (no cash/fees) was -2.74%. Starts YES **16/30**. Fills 76 · skips 144 · realized $+404.42.
 
 ## How this sleeve decides (like you are 10)
 
@@ -260,6 +260,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $257.60 | ▲ close $9,539.52 vs 09:30 $9,160.48 (session +379.04) | 16:00 close · cash $257.60 · equity $9,539.52 vs 09:30 $9,160.48 (+379.04; session marks +379.04) · 2 name(s) marked open→close (per-name table). CRS×16 09:30 $279.00 → close $298.72 +315.52; ITW×16 09:30 $277.43 → close $281.40 +63.52 | — |
 | 2026-10-30 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $257.60 | ▼ 09:30 equity $9,424.32 vs yday $9,539.52 (-115.20) | 09:30 open · cash $257.60 (unchanged overnight, no fees) · equity $9,424.32 vs prior close $9,539.52 (-115.20) · 2 name(s) re-marked at the open (per-name table). CRS×16 yday $298.72 → 09:30 $289.32 -150.40; ITW×16 yday $281.40 → 09:30 $283.60 +35.20 | — |
 | 2026-10-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $257.60 | ▼ close $9,243.68 vs 09:30 $9,424.32 (session -180.64) | 16:00 close · cash $257.60 · equity $9,243.68 vs 09:30 $9,424.32 (-180.64; session marks -180.64) · 2 name(s) marked open→close (per-name table). CRS×16 09:30 $289.32 → close $283.08 -99.84; ITW×16 09:30 $283.60 → close $278.55 -80.80 | — |
+| 2026-11-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $257.60 | ▲ 09:30 equity $9,340.48 vs yday $9,243.68 (+96.80) | 09:30 open · cash $257.60 (unchanged overnight, no fees) · equity $9,340.48 vs prior close $9,243.68 (+96.80) · 2 name(s) re-marked at the open (per-name table). CRS×16 yday $283.08 → 09:30 $285.91 +45.28; ITW×16 yday $278.55 → 09:30 $281.77 +51.52 | — |
+| 2026-11-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $257.60 | ▲ close $9,553.76 vs 09:30 $9,340.48 (session +213.28) | 16:00 close · cash $257.60 · equity $9,553.76 vs 09:30 $9,340.48 (+213.28; session marks +213.28) · 2 name(s) marked open→close (per-name table). CRS×16 09:30 $285.91 → close $290.96 +80.80; ITW×16 09:30 $281.77 → close $290.05 +132.48 | — |
 
 ## Not taken
 

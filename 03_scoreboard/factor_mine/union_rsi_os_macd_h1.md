@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **+16.11%** ($11,612) · signal-only (no cash/fees) was -3.93%. Starts YES **1/30**. Fills 48 · skips 0 · realized $-826.45.
+Cash book **+18.64%** ($11,864) · signal-only (no cash/fees) was -3.93%. Starts YES **1/30**. Fills 51 · skips 0 · realized $-826.45.
 
 ## How this sleeve decides (like you are 10)
 
@@ -234,3 +234,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $11,611.53 | ▲ close $11,611.53 vs 09:30 $11,611.53 (session +0.00) | 16:00 close · cash $11,611.53 · no lots left · equity $11,611.53. | — |
 | 2026-10-30 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $11,611.53 | ▲ 09:30 equity $11,611.53 vs yday $11,611.53 (+0.00) | 09:30 open · cash $11,611.53 · no holdings · equity $11,611.53 vs prior close $11,611.53 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-10-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $11,611.53 | ▲ close $11,611.53 vs 09:30 $11,611.53 (session +0.00) | 16:00 close · cash $11,611.53 · no lots left · equity $11,611.53. | — |
+| 2026-11-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $11,611.53 | ▲ 09:30 equity $11,611.53 vs yday $11,611.53 (+0.00) | 09:30 open · cash $11,611.53 · no holdings · equity $11,611.53 vs prior close $11,611.53 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-02 09:30 ET | **BUY** | `DGX` | 11 | $251.60 | $2.02 | — | $8,841.91 | — | combo gate; gate macd_up=True,rsi_os=True; list yday_mover; ret5=+4.1; leftover $2902.88 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `GEN` | 99 | $29.05 | $2.29 | — | $5,963.67 | — | combo gate; gate macd_up=True,rsi_os=True; list ohlc_hot; 🔵; ret5=+17.1; leftover $2902.88 | join🟡 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `PENN` | 181 | $16.00 | $2.53 | — | $3,065.14 | — | combo gate; gate macd_up=True,rsi_os=True; list ohlc_hot; 🔵; ret5=+9.6; leftover $2902.88 | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🔴 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-11-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $3,065.14 | ▲ close $11,863.78 vs 09:30 $11,611.53 (session +259.09) | 16:00 close · cash $3,065.14 · equity $11,863.78 vs 09:30 $11,611.53 (+252.25; session marks +259.09) · 3 name(s) marked open→close (per-name table). DGX×11 09:30 $251.60 → close $250.81 -8.69; GEN×99 09:30 $29.05 → close $29.89 +83.16; PENN×181 09:30 $16.00 → close $17.02 +184.62 | — |

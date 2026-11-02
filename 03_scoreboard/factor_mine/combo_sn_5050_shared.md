@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared short_news_r_h3/union_news_g_h1 w=0.5,0.5 net=priority
 
-Cash book **-40.74%** ($5,926) · signal-only (no cash/fees) was —. Starts YES **0/30**. Fills 470 · skips 197 · realized $-335.14.
+Cash book **-42.25%** ($5,775) · signal-only (no cash/fees) was —. Starts YES **0/30**. Fills 477 · skips 197 · realized $-335.14.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $8,404.22.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $6,490.01.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -655,6 +655,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-30 09:30 ET | **SELL** | `ITW` | 1 | $283.60 | $2.01 | $+7.29 | $9,931.31 | ▲ +7.29 after sell → book $5,903.54; vs 09:30 mark -2.01 | union_news_g_h1: dropped from list after 3 sess (min 1) | join🔴 sector🔴 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-30 09:30 ET | **COVER** | `VVX` | 19 | $80.27 | $2.05 | $-65.81 | $8,404.22 | ▼ -65.81 after sell → book $5,901.49; vs 09:30 mark -2.05 | short_news_r_h3: dropped from list after 3 sess (min 3) | — |
 | 2026-10-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,404.22 | ▲ close $5,926.19 vs 09:30 $5,907.59 (session +24.70) | 16:00 close · cash $8,404.22 · equity $5,926.19 vs 09:30 $5,907.59 (+18.60; session marks +24.70) · 3 name(s) marked open→close (per-name table). GLND×125 09:30 $3.19 → close $3.09 -12.50; SPCE×557 09:30 $2.64 → close $2.58 +33.42; VOYG×54 09:30 $26.50 → close $26.43 +3.78 | — |
+| 2026-11-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,404.22 | ▼ 09:30 equity $5,905.50 vs yday $5,926.19 (-20.69) | 09:30 open · cash $8,404.22 (unchanged overnight, no fees) · equity $5,905.50 vs prior close $5,926.19 (-20.69) | — |
+| 2026-11-02 09:30 ET | **COVER** | `SPCE` | 557 | $2.62 | $7.19 | $+18.90 | $6,937.69 | ▲ +18.90 after sell → book $5,898.31; vs 09:30 mark -7.19 | short_news_r_h3: dropped from list after 3 sess (min 3) | — |
+| 2026-11-02 09:30 ET | **COVER** | `VOYG` | 54 | $26.47 | $2.15 | $+43.15 | $5,506.16 | ▲ +43.15 after sell → book $5,896.16; vs 09:30 mark -2.15 | short_news_r_h3: dropped from list after 3 sess (min 3) | — |
+| 2026-11-02 09:30 ET | **BUY** | `NVTS` | 64 | $8.56 | $2.18 | — | $4,956.14 | — | union ∩ news_g, no 🚨; gate news=good; list probable,yday_gainer,yday_mover; ret5=+1.2; combo leftover $550.62; owner union_news_g_h1 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `ITW` | 1 | $281.77 | $1.99 | — | $4,672.38 | — | union ∩ news_g, no 🚨; gate news=good; list yday_gainer; 🔵; ret5=+1.0; combo leftover $550.62; owner union_news_g_h1 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `AMX` | 22 | $24.57 | $2.06 | — | $4,129.78 | — | union ∩ news_g, no 🚨; gate news=good; list yday_gainer; 🔵; ret5=-0.4; combo leftover $550.62; owner union_news_g_h1 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `TBBB` | 9 | $56.87 | $2.02 | — | $3,615.93 | — | union ∩ news_g, no 🚨; gate news=good; list yday_gainer; 🔵; ret5=-3.2; combo leftover $550.62; owner union_news_g_h1 | join🔴 sector🟡 gen🟢 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **SHORT** | `BAH` | 33 | $87.16 | $2.20 | — | $6,490.01 | — | news🔴; gate news=bad; list ohlc_hot; 🔵; ret5=+13.0; combo leftover $2943.96; owner short_news_r_h3 | join🔴 sector🔴 gen🟢 news🔴 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,490.01 | ▼ close $5,774.93 vs 09:30 $5,905.50 (session -110.78) | 16:00 close · cash $6,490.01 · equity $5,774.93 vs 09:30 $5,905.50 (-130.57; session marks -110.78) · 6 name(s) marked open→close (per-name table). GLND×125 09:30 $3.12 → close $2.68 -55.00; NVTS×64 09:30 $8.56 → close $7.93 -40.32; ITW×1 09:30 $281.77 → close $290.05 +8.28; AMX×22 09:30 $24.57 → close $24.74 +3.74; TBBB×9 09:30 $56.87 → close $56.97 +0.90; BAH×33 09:30 $87.16 → close $88.02 -28.38 | — |
 
 ## Not taken
 

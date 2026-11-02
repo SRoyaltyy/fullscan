@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `probable` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · baseline list, no extra gate
 
-Cash book **-31.77%** ($6,823) · signal-only (no cash/fees) was +7.17%. Starts YES **3/30**. Fills 309 · skips 315 · realized $-769.20.
+Cash book **-34.69%** ($6,531) · signal-only (no cash/fees) was +7.17%. Starts YES **3/30**. Fills 309 · skips 315 · realized $-769.20.
 
 ## How this sleeve decides (like you are 10)
 
@@ -489,6 +489,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2.35 | ▼ close $6,857.17 vs 09:30 $6,960.25 (session -103.08) | 16:00 close · cash $2.35 · equity $6,857.17 vs 09:30 $6,960.25 (-103.08; session marks -103.08) · 1 name(s) marked open→close (per-name table). ACRS×1718 09:30 $4.05 → close $3.99 -103.08 | — |
 | 2026-10-30 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $2.35 | ▲ 09:30 equity $6,906.13 vs yday $6,857.17 (+48.96) | 09:30 open · cash $2.35 (unchanged overnight, no fees) · equity $6,906.13 vs prior close $6,857.17 (+48.96) · 1 name(s) re-marked at the open (per-name table). ACRS×1718 yday $3.99 → 09:30 $4.02 +48.96 | — |
 | 2026-10-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2.35 | ▼ close $6,822.81 vs 09:30 $6,906.13 (session -83.32) | 16:00 close · cash $2.35 · equity $6,822.81 vs 09:30 $6,906.13 (-83.32; session marks -83.32) · 1 name(s) marked open→close (per-name table). ACRS×1718 09:30 $4.02 → close $3.97 -83.32 | — |
+| 2026-11-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $2.35 | ▼ 09:30 equity $6,805.63 vs yday $6,822.81 (-17.18) | 09:30 open · cash $2.35 (unchanged overnight, no fees) · equity $6,805.63 vs prior close $6,822.81 (-17.18) · 1 name(s) re-marked at the open (per-name table). ACRS×1718 yday $3.97 → 09:30 $3.96 -17.18 | — |
+| 2026-11-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2.35 | ▼ close $6,530.75 vs 09:30 $6,805.63 (session -274.88) | 16:00 close · cash $2.35 · equity $6,530.75 vs 09:30 $6,805.63 (-274.88; session marks -274.88) · 1 name(s) marked open→close (per-name table). ACRS×1718 09:30 $3.96 → close $3.80 -274.88 | — |
 
 ## Not taken
 
