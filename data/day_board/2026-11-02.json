@@ -1,12 +1,10 @@
 {
   "date": "2026-11-02",
-  "generated_at": "2026-11-02T07:38:19.909891-05:00",
+  "generated_at": "2026-11-02T07:48:26.488690-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
-    "MISSING General predict MD `01_daily/general/2026-11-02_predict.md` \u2014 missing",
-    "MISSING News actions JSON `01_daily/news/2026-11-02_actions.json` \u2014 missing",
-    "MISSING News judge MD `01_daily/news/2026-11-02_judge.md` \u2014 missing"
+    "MISSING News actions JSON `01_daily/news/2026-11-02_actions.json` \u2014 missing"
   ],
   "counts": {
     "ok": 6,
@@ -181,7 +179,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 4,
+      "n_req_ok": 7,
       "n_req": 9,
       "n_opt_ok": 1,
       "n_opt": 14,
@@ -250,22 +248,31 @@
           "name": "Events JSON",
           "path": "01_daily/events/2026-11-02_events.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 34454,
+          "said": "43 events \u00b7 elevated uncertainty \u00b7 Markets enter the midterm election and a dense macro week with the Fed on hold but explicitly hawkish, inflation still sticky, and oil price",
+          "bullets": [
+            "US ISM Manufacturing PMI for October",
+            "Apple FQ4 2026 earnings",
+            "Palantir Q3 2026 earnings",
+            "Nongshim US unit files tariff refund lawsuit"
+          ]
         },
         {
           "key": "judge",
           "name": "News judge MD",
           "path": "01_daily/news/2026-11-02_judge.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 7905,
+          "said": "Apple earnings test as memory costs surge / margin relief hopes \u2014 mega-cap tech is the cleanest SPX/NDX risk-appetite swing factor in the set \u2014 sector_fundament",
+          "bullets": [
+            "Palantir Q3 report tests AI-stock defensiveness amid AI panic \u2014 AI/software sentiment is the live crowded-basket stress point \u2014 sentiment",
+            "OPEC+ holds December output steady; oil plunges on Iran diplomacy \u2014 energy-sector driver with inflation/rates transmission \u2014 sector_policy",
+            "Hawkish Fed officials call for continued rate hikes; gold drops >$100 \u2014 rates/hawkish repricing is the main macro cross-asset signal \u2014 rates"
+          ]
         },
         {
           "key": "research_json",
@@ -305,11 +312,16 @@
           "name": "General predict MD",
           "path": "01_daily/general/2026-11-02_predict.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 15577,
+          "said": "UP 3.044",
+          "bullets": [
+            "bad: China PMI 49.3 contraction",
+            "bad: Fitch France outlook negative",
+            "bad: fresh Hormuz tanker mines",
+            "good: Oil collapse (WTI -4.45%)"
+          ]
         },
         {
           "key": "board",
@@ -484,8 +496,14 @@
           "bullets": []
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "general UP  3.044",
+      "bullets": [
+        "bad: China PMI 49.3 contraction",
+        "bad: Fitch France outlook negative",
+        "bad: fresh Hormuz tanker mines",
+        "good: Oil collapse (WTI -4.45%)",
+        "good: OPEC+ quota rollover"
+      ]
     },
     {
       "key": "weather",
@@ -519,8 +537,8 @@
           "path": "01_daily/weather/2026-11-02_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=9440 vix=calm yields=falling",
-          "size": 9440,
+          "reason": "sectors=11 bytes=9544 vix=calm yields=falling",
+          "size": 9544,
           "said": "hostile 9 \u00b7 neutral 2",
           "bullets": [
             "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Technology, Utilities",
@@ -650,11 +668,16 @@
           "name": "General predict MD",
           "path": "01_daily/general/2026-11-02_predict.md",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 15577,
+          "said": "UP 3.044",
+          "bullets": [
+            "bad: China PMI 49.3 contraction",
+            "bad: Fitch France outlook negative",
+            "bad: fresh Hormuz tanker mines",
+            "good: Oil collapse (WTI -4.45%)"
+          ]
         },
         {
           "key": "in_board",
@@ -698,11 +721,15 @@
           "name": "News judge MD",
           "path": "01_daily/news/2026-11-02_judge.md",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 7905,
+          "said": "Apple earnings test as memory costs surge / margin relief hopes \u2014 mega-cap tech is the cleanest SPX/NDX risk-appetite swing factor in the set \u2014 sector_fundament",
+          "bullets": [
+            "Palantir Q3 report tests AI-stock defensiveness amid AI panic \u2014 AI/software sentiment is the live crowded-basket stress point \u2014 sentiment",
+            "OPEC+ holds December output steady; oil plunges on Iran diplomacy \u2014 energy-sector driver with inflation/rates transmission \u2014 sector_policy",
+            "Hawkish Fed officials call for continued rate hikes; gold drops >$100 \u2014 rates/hawkish repricing is the main macro cross-asset signal \u2014 rates"
+          ]
         },
         {
           "key": "in_weather",
@@ -710,8 +737,8 @@
           "path": "01_daily/weather/2026-11-02_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=9440 vix=calm yields=falling",
-          "size": 9440,
+          "reason": "sectors=11 bytes=9544 vix=calm yields=falling",
+          "size": 9544,
           "said": "hostile 9 \u00b7 neutral 2",
           "bullets": [
             "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Technology, Utilities",
@@ -966,7 +993,18 @@
         "morning S missing"
       ]
     },
-    "general": {},
+    "general": {
+      "said": "UP  3.044",
+      "bullets": [
+        "bad: China PMI 49.3 contraction",
+        "bad: Fitch France outlook negative",
+        "bad: fresh Hormuz tanker mines",
+        "good: Oil collapse (WTI -4.45%)",
+        "good: OPEC+ quota rollover"
+      ],
+      "score": "3.044",
+      "direction": "up"
+    },
     "sectors": {},
     "news": {},
     "weather": {
@@ -2003,6 +2041,31 @@
         }
       ],
       "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, sectors_required, all_ok \u00b7 keys: date, generated_at, run_id, runner, all_ok, qc_all_ok, book_ok, grok_ok, grok_fails, missing_required, attempts, github_runs \u00b7 # Pre-open ALL status \u2014 2026-11-02\nall_ok=False  qc_all_ok=False  book_ok=False  grok_ok=False  news_mode=on  missing=['events', 'news_judge', 'map_heat_research', 'general_predict']\nPredictive modules + stock book (must land before 09:30 ET).\nOutcome / learn / tonight's captain research = Post-Close ALL.\n- Weather / regime: exit 0\n- News parse: exit 0"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-11-02",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-02T07:48:25.337258-05:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-11-02_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 9544,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-11-02_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5139,
+          "preview": "# Weather report \u2014 2026-11-02\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-11-02\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
     }
   ],
   "href": {
