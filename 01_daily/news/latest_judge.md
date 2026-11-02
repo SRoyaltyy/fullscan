@@ -1,68 +1,57 @@
-# News Judge — 2026-10-30
+# News Judge — 2026-11-02
 
 ### IMPORTANT NEWS (my ranking)
-1. **Fed holds; Warsh refuses forward guidance, December hike odds surge to ~85%** — the dominant rates/risk-appetite variable; hawkish path pressures multiples and rate-sensitive baskets. Provisional channel: rates.
-2. **Alphabet erases ~$500B in biggest market plunge; tech rally stalls** — mega-cap tech/communication weakness is the clearest SPX/QQQ beta driver today. Provisional channel: risk.
-3. **Iran/Hormuz: IRGC says four tankers struck mines** — fresh kinetic/oil-supply tail risk can lift energy and cap broad risk appetite. Provisional channel: risk.
-4. **Boeing 737 MAX 10 certification halted by FAA over software glitch** — direct aerospace/industrials sector-fundamental hit with supply-chain read-through. Provisional channel: sector_fundamental.
-5. **ABBV JUVMO FDA approval; AMGN positive Phase 3 dazodalibep data** — healthcare sector sympathy catalyst, not just single-name color. Provisional channel: sector_fundamental.
-6. **Taiwan stocks head for correction as global AI selloff deepens** — semis/AI-risk transmission and QQQ/SPX breadth signal. Provisional channel: risk.
-7. **Amazon slides on light Q4 sales estimates and high cash burn** — mega-cap consumer/e-commerce weakness adds to tech/consumer discretionary drag. Provisional channel: sector_fundamental.
-8. **Gold drops >$100 as hawkish Fed comments lift hike expectations; AEM falls** — rates/substitution signal; gold-miner basket weakness confirms hawkish real-yield pressure. Provisional channel: substitution.
-
-RULES_APPLIED: fresh-overnight-kinetic-oil-supply-escalation-iran-hormuz (Hormuz/oil context noted; magnitude gate not scored in this news-judge layer).
+- Apple earnings test as memory costs surge / margin relief hopes — mega-cap tech is the cleanest SPX/NDX risk-appetite swing factor in the set — sector_fundamental
+- Palantir Q3 report tests AI-stock defensiveness amid AI panic — AI/software sentiment is the live crowded-basket stress point — sentiment
+- OPEC+ holds December output steady; oil plunges on Iran diplomacy — energy-sector driver with inflation/rates transmission — sector_policy
+- Hawkish Fed officials call for continued rate hikes; gold drops >$100 — rates/hawkish repricing is the main macro cross-asset signal — rates
+- Boeing 737 MAX 10 FAA certification halt threatens 31% of undelivered order book — clear industrials/supply-chain negative — sector_fundamental
+- Amgen positive Phase 3 Sjögren’s data / Jefferies PT hike — late-stage trial success can lift healthcare/biotech sympathy — sector_fundamental
+- AbbVie FDA approval of JUVMO/tavapadon for Parkinson’s — first-in-class approval supports pharma/biotech sector tone — sector_fundamental
+- Chip ETF dip-buying inflows top $44B amid AI selloff — semis flow signal, but mixed against AI panic — sentiment
 
 ### STEP 1 — FRAMEWORK SCORE
-- Fed hold / Warsh / Dec hike odds ~85%: keep; us_relevance high; channel rates; geography us_domestic; severity regime; horizon 1w-1m; action_object spx:SPX beta/rates; polarity hawkish; confidence 0.86.
-- Alphabet $500B plunge / tech rally stalls: keep; us_relevance high; channel risk; geography us_domestic; severity session; horizon 1d-1w; action_object sector_etf:QQQ/communication services; polarity bearish; confidence 0.84.
-- Iran/Hormuz tanker mine strikes: keep; us_relevance high; channel risk; geography global_priced; severity session; horizon 1d-1w; action_object sector_etf:XLE/oil tail risk; polarity bearish; confidence 0.78.
-- BA 737 MAX 10 certification halt: keep; us_relevance high; channel sector_fundamental; geography us_domestic; severity session; horizon 1d-1w; action_object sector_etf:ITA/aerospace; polarity bearish; confidence 0.80.
-- ABBV FDA approval + AMGN Phase 3 positive: keep; us_relevance medium; channel sector_fundamental; geography us_domestic; severity session; horizon 1d-1w; action_object basket:XBI/IBB healthcare; polarity bullish; confidence 0.76.
-- Taiwan AI selloff/correction: keep; us_relevance high; channel risk; geography us_supply_chain; severity session; horizon 1d-1w; action_object sector_etf:SMH/EWT semis; polarity bearish; confidence 0.75.
-- Amazon light Q4 sales/high cash burn: conditional; us_relevance high; channel sector_fundamental; geography us_domestic; severity session; horizon 1d-1w; action_object sector_etf:XLY/QQQ; polarity bearish; confidence 0.72.
-- Gold drop >$100 / AEM falls on hawkish Fed: conditional; us_relevance medium; channel substitution; geography global_priced; severity session; horizon 1d-1w; action_object basket:GDX/gold miners; polarity bearish; confidence 0.68.
+- Apple earnings/memory margins: keep | us_relevance high — mega-cap SPX/NDX weight | channel sector_fundamental | geography us_domestic | severity session | horizon 1d-1w | object spx:SPX/NDX mega-cap tech | pol mixed — margin pressure vs relief hopes | conf 0.78
+- Palantir Q3/AI defensiveness: keep | us_relevance high — AI/software sentiment proxy | channel sentiment | geography us_domestic | severity session | horizon 1d-1w | object sector_etf:IGV/software basket | pol mixed — test of crowded AI trade | conf 0.72
+- OPEC+ steady/oil plunge: keep | us_relevance high — XLE and inflation/rates channel | channel sector_policy | geography global_priced | severity session | horizon 1d-1w | object sector_etf:XLE | pol mixed — lower oil pressures energy but eases inflation | conf 0.80
+- Hawkish Fed/gold drop: keep | us_relevance high — rates/risk beta | channel rates | geography us_domestic | severity session | horizon 1d-1w | object spx:SPX beta/rates | pol hawkish — hike expectations weigh risk appetite | conf 0.75
+- Boeing 737 MAX 10 halt: keep | us_relevance high — BA/industrials supply chain | channel sector_fundamental | geography us_supply_chain | severity session | horizon 1d-1w | object sector_etf:ITA/industrials | pol bearish — order-book/certification risk | conf 0.80
+- Amgen Phase 3: keep | us_relevance medium — biotech/pharma basket | channel sector_fundamental | geography us_domestic | severity session | horizon 1d-1w | object basket:XLV/IBB biotech | pol bullish — positive late-stage data | conf 0.70
+- AbbVie FDA approval: keep | us_relevance medium — pharma sentiment | channel sector_fundamental | geography us_domestic | severity session | horizon 1d-1w | object basket:XLV/IBB pharma | pol bullish — first-in-class approval | conf 0.66
+- Chip ETF inflows: conditional | us_relevance medium — semis flow vs AI panic | channel sentiment | geography us_domestic | severity session | horizon 1d-1w | object sector_etf:SMH | pol mixed — dip-buying but AI selloff risk | conf 0.65
 
 ### STEP 2 — INTERACTIONS
-Hawkish Fed + Alphabet/tech plunge → tech multiple compression; do not buy software on dovish-rates hope. AI selloff + chip ETF dip-buying → semis mixed; do not double-count bearish AI without checking inflows. ABBV/AMGN positive readouts → Healthcare basket sympathy, not only single names. Hormuz mine strikes + oil tail risk → energy bid, but index risk capped unless futures confirm. Fed path + gold drop → one hawkish real-yield cluster, not separate bullish-gold signal.
+Healthcare Phase 3 success + FDA approval fires the biotech/pharma sympathy pattern: use XLV/IBB basket, not only AMGN/ABBV. AI panic + $44B chip ETF dip-buying leaves semis mixed; do not treat inflows as clean risk-on. Hawkish Fed comments + pending NFP/midterms risk form one rates cluster; no futures confirmation is available in this packet, so it is a headline-risk watch, not a directional gate.
 
 ### STEP 3 — RECLASSIFY AUDIT
-Dropped from usable: many `topic_fed` Powell-name sports/obituary/political/viral items and generic Fed-hold duplicates that add no market signal. Rescued from noise: Taiwan AI selloff/correction; Bitcoin/Binance hack risk-off; dollar rate-fueled rally; yen/BOJ AI-jitter Treasury rally. These are regime/session context, not pure noise.
+RESCUED: Apple earnings test, Palantir Q3, Boeing 737 MAX 10, Amgen Phase 3, AbbVie FDA approval, chip ETF inflows — all carry sector/index force beyond pure single-name color.
+DROPPED FROM USABLE: Powell River sports/obituary/local items — false “Powell” matches; Fed security-program audit — low equity relevance; OPEC+ preview duplicate — superseded by decision headline; “Fed holds rates steady” — stale/contradicts hawkish-official signal; gold forecast ahead of NFP/midterms — forecast/calendar watch, not hard catalyst; BlackRock oil-Treasury correlation commentary — context only.
 
-### STEP 4 — B1 / SECTOR INJECT
-NEWS_JUDGE: n=8 rescued=4
-MACRO rates: [pol] Fed hold with Warsh no forward guidance and Dec hike odds ~85% keeps front-end hawkish (regime/1w-1m)
-MACRO risk: [pol] Alphabet $500B plunge/tech rally stall pressures QQQ/SPX beta (session/1d-1w)
-SECTOR energy: [pol] Hormuz tanker mine strikes lift oil tail risk (session/1d-1w)
-SECTOR healthcare: [pol] ABBV FDA approval + AMGN Phase 3 positive support XBI/IBB (session/1d-1w)
-SECTOR industrials: [pol] BA 737 MAX 10 cert halt pressures aerospace basket (session/1d-1w)
-SECTOR semis: [pol] Taiwan AI selloff/correction; chip ETF dip-buying mixed (session/1d-1w)
-SECTOR consumer: [pol] Amazon light Q4 sales/high cash burn weighs XLY/QQQ (session/1d-1w)
-INTERACTION: hawkish Fed + tech multiple compression; AI selloff + chip inflows = semis mixed; biotech readouts lift Healthcare basket
-WATCH: usable set polluted by Powell-name noise; Iran/Hormuz headline risk can dominate intraday
+RULES_APPLIED: none directly — no B6/futures or prediction emit in this judge packet; pending NFP/midterms treated as WATCH only.
 
 NEWS_PARSE_BEGIN
 IMPORTANT_COUNT: 8
 TOP_ITEMS:
-- Fed holds; Warsh refuses forward guidance, December hike odds surge to ~85% | keep=keep | channel=rates | severity=regime | horizon=1w-1m | object=spx:SPX beta/rates | pol=hawkish | conf=0.86
-- Alphabet erases ~$500B in biggest market plunge; tech rally stalls | keep=keep | channel=risk | severity=session | horizon=1d-1w | object=sector_etf:QQQ/communication services | pol=bearish | conf=0.84
-- Iran/Hormuz: IRGC says four tankers struck mines | keep=keep | channel=risk | severity=session | horizon=1d-1w | object=sector_etf:XLE/oil tail risk | pol=bearish | conf=0.78
-- Boeing 737 MAX 10 certification halted by FAA over software glitch | keep=keep | channel=sector_fundamental | severity=session | horizon=1d-1w | object=sector_etf:ITA/aerospace | pol=bearish | conf=0.80
-- ABBV JUVMO FDA approval; AMGN positive Phase 3 dazodalibep data | keep=keep | channel=sector_fundamental | severity=session | horizon=1d-1w | object=basket:XBI/IBB healthcare | pol=bullish | conf=0.76
-- Taiwan stocks head for correction as global AI selloff deepens | keep=keep | channel=risk | severity=session | horizon=1d-1w | object=sector_etf:SMH/EWT semis | pol=bearish | conf=0.75
-- Amazon slides on light Q4 sales estimates and high cash burn | keep=conditional | channel=sector_fundamental | severity=session | horizon=1d-1w | object=sector_etf:XLY/QQQ | pol=bearish | conf=0.72
-- Gold drops >$100 as hawkish Fed comments lift hike expectations; AEM falls | keep=conditional | channel=substitution | severity=session | horizon=1d-1w | object=basket:GDX/gold miners | pol=bearish | conf=0.68
-INTERACTIONS: hawkish Fed + Alphabet/tech plunge → multiple compression; do not buy software on dovish-rates hope; AI selloff + chip ETF inflows → semis mixed; do not double-count; ABBV/AMGN positive readouts → Healthcare basket sympathy; Hormuz mine strikes + oil tail risk → energy bid but index risk capped unless futures confirm
-RESCUED_FROM_NOISE: Taiwan Stocks Heads for Correction as Global AI Selloff Deepens; Bitcoin Drops on Binance Hack as Stock Selloff Also Weighs; Dollar’s Rate-Fueled Rally Set to Ride Out US Midterm Gridlock; Yen steady before BOJ, AI jitters drive Treasury rally, weigh on dollar
-DROPPED_FROM_USABLE: Norman Powell Bulls podcast; Frank Powell obituary; Jenny Bailey obituary; Willie T. Powell obituary; Celina Powell viral video; Powell and Harding Nebraska race; Hakeem Jeffries and Don Bacon Omaha seat race; North Miami vs Booker T Washington
+- Apple earnings test as memory costs surge / margin relief hopes | keep=keep | channel=sector_fundamental | severity=session | horizon=1d-1w | object=spx:SPX/NDX mega-cap tech | pol=mixed | conf=0.78
+- Palantir Q3 report tests AI stock defensiveness amid AI panic | keep=keep | channel=sentiment | severity=session | horizon=1d-1w | object=sector_etf:IGV/software basket | pol=mixed | conf=0.72
+- OPEC+ holds December output steady; oil plunges on Iran diplomacy | keep=keep | channel=sector_policy | severity=session | horizon=1d-1w | object=sector_etf:XLE | pol=mixed | conf=0.80
+- Hawkish Fed officials call for continued rate hikes; gold drops >$100 | keep=keep | channel=rates | severity=session | horizon=1d-1w | object=spx:SPX beta/rates | pol=hawkish | conf=0.75
+- Boeing 737 MAX 10 FAA certification halt threatens 31% of undelivered order book | keep=keep | channel=sector_fundamental | severity=session | horizon=1d-1w | object=sector_etf:ITA/industrials | pol=bearish | conf=0.80
+- Amgen positive Phase 3 Sjogren's data; Jefferies raises PT | keep=keep | channel=sector_fundamental | severity=session | horizon=1d-1w | object=basket:XLV/IBB biotech | pol=bullish | conf=0.70
+- AbbVie FDA approval of JUVMO/tavapadon for Parkinson's | keep=keep | channel=sector_fundamental | severity=session | horizon=1d-1w | object=basket:XLV/IBB pharma | pol=bullish | conf=0.66
+- Chip ETF dip-buying inflows top $44B amid AI selloff | keep=conditional | channel=sentiment | severity=session | horizon=1d-1w | object=sector_etf:SMH | pol=mixed | conf=0.65
+INTERACTIONS: Healthcare Phase 3/FDA sympathy -> XLV/IBB basket; AI panic + chip ETF dip-buying -> semis mixed, not clean risk-on; hawkish Fed + pending NFP/midterms -> one rates cluster
+RESCUED_FROM_NOISE: Apple earnings test; Palantir Q3 AI defensiveness; Boeing 737 MAX 10 certification halt; Amgen Phase 3 Sjogren's data; AbbVie JUVMO FDA approval; chip ETF dip-buying inflows
+DROPPED_FROM_USABLE: Clippers earn OT victory in Powell River; Federal Reserve security program rated ineffective in watchdog audit; Powell County Varsity Football @ Rockcastle County; Why is York poet Robert Powell publishing a collection about his Canadian past; OPEC+ Set to Stick With Plan for Steady Quotas; Federal Reserve holds interest rates steady; Gold price forecast ahead of US midterm elections and nonfarm payrolls data; BlackRock 80% oil-Treasury correlation commentary
 B1_INJECT:
-NEWS_JUDGE: n=8 rescued=4
-MACRO rates: [pol] Fed hold with Warsh no forward guidance and Dec hike odds ~85% keeps front-end hawkish (regime/1w-1m)
-MACRO risk: [pol] Alphabet $500B plunge/tech rally stall pressures QQQ/SPX beta (session/1d-1w)
-SECTOR energy: [pol] Hormuz tanker mine strikes lift oil tail risk (session/1d-1w)
-SECTOR healthcare: [pol] ABBV FDA approval + AMGN Phase 3 positive support XBI/IBB (session/1d-1w)
-SECTOR industrials: [pol] BA 737 MAX 10 cert halt pressures aerospace basket (session/1d-1w)
-SECTOR semis: [pol] Taiwan AI selloff/correction; chip ETF dip-buying mixed (session/1d-1w)
-SECTOR consumer: [pol] Amazon light Q4 sales/high cash burn weighs XLY/QQQ (session/1d-1w)
-INTERACTION: hawkish Fed + tech multiple compression; AI selloff + chip inflows = semis mixed; biotech readouts lift Healthcare basket
-WATCH: usable set polluted by Powell-name noise; Iran/Hormuz headline risk can dominate intraday
+NEWS_JUDGE: n=8 rescued=6
+MACRO rates: [hawkish] Fed officials push more hikes; gold >$100 drop signals hawkish repricing (session/1d-1w)
+MACRO energy: [policy] OPEC+ holds December quotas; oil slides on Iran diplomacy (session/1d-1w)
+SECTOR Technology: [fundamental] Apple memory-cost margin test + Palantir AI-defensiveness report (SPX/NDX, IGV)
+SECTOR Industrials: [fundamental] Boeing 737 MAX 10 FAA certification halt threatens order book (ITA/BA)
+SECTOR Healthcare: [fundamental] Amgen Phase 3 positive + AbbVie first-in-class Parkinson's FDA approval (XLV/IBB)
+SECTOR Semis: [sentiment] $44B chip ETF dip-buying vs AI panic leaves SMH mixed
+INTERACTION: Healthcare trial/FDA sympathy -> XLV/IBB basket; AI panic + chip inflows -> semis mixed; Fed + NFP -> one rates cluster
+WATCH: NFP/midterms ahead; no futures confirmation in packet, so rates is headline-risk not directional gate
 NEWS_PARSE_END
+

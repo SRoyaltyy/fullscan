@@ -1,13 +1,627 @@
 {
-  "scan_date": "2026-10-30",
+  "scan_date": "2026-11-02",
   "events": [
+    {
+      "title": "US ISM Manufacturing PMI for October",
+      "category": "macro_data",
+      "timing": "today",
+      "date_or_window": "2026-11-02",
+      "regions": [
+        "US"
+      ],
+      "sectors": [
+        "Industrials",
+        "Basic Materials"
+      ],
+      "expected_direction": "mixed",
+      "impact": 2,
+      "confidence": "high",
+      "why_it_matters": "Manufacturing has been hovering near expansion, and a weak print would reinforce the two-speed US economy narrative on the eve of the midterms.",
+      "what_to_watch": "Consensus is 54.5-54.7; any drop below 54 would signal broadening slowdown.",
+      "status": "carried",
+      "sources": [
+        "https://us.econoday.com",
+        "https://jp.investing.com"
+      ]
+    },
+    {
+      "title": "Apple FQ4 2026 earnings",
+      "category": "earnings",
+      "timing": "today",
+      "date_or_window": "2026-11-02",
+      "regions": [
+        "US"
+      ],
+      "sectors": [
+        "Technology",
+        "Communication Services"
+      ],
+      "expected_direction": "mixed",
+      "impact": 3,
+      "confidence": "high",
+      "why_it_matters": "Apple is the largest S&P 500 component and its first report under new CEO John Ternus will be a key test of tech leadership after the recent AI-driven selloff.",
+      "what_to_watch": "Revenue consensus ~$113.3bn, EPS ~$1.98; iPhone demand and memory-cost commentary will drive the tape.",
+      "status": "carried",
+      "sources": [
+        "https://sg.finance.yahoo.com",
+        "https://www.mitrade.com"
+      ]
+    },
+    {
+      "title": "Palantir Q3 2026 earnings",
+      "category": "earnings",
+      "timing": "today",
+      "date_or_window": "2026-11-02",
+      "regions": [
+        "US"
+      ],
+      "sectors": [
+        "Technology"
+      ],
+      "expected_direction": "mixed",
+      "impact": 2,
+      "confidence": "high",
+      "why_it_matters": "Palantir is a high-beta AI proxy and its results will indicate whether enterprise AI demand is holding up after last quarter's 93% revenue surge.",
+      "what_to_watch": "Revenue consensus ~$2.18bn; guidance for government and commercial AI bookings.",
+      "status": "new",
+      "sources": [
+        "https://www.nasdaq.com",
+        "https://stockanalysis.com"
+      ]
+    },
+    {
+      "title": "Nongshim US unit files tariff refund lawsuit",
+      "category": "judicial",
+      "timing": "today",
+      "date_or_window": "2026-11-02",
+      "regions": [
+        "US",
+        "South Korea"
+      ],
+      "sectors": [
+        "Consumer Defensive"
+      ],
+      "expected_direction": "mixed",
+      "impact": 1,
+      "confidence": "medium",
+      "why_it_matters": "The first major corporate lawsuit seeking IEEPA tariff refunds could open the floodgates for thousands of importers and pressure CBP's refund process.",
+      "what_to_watch": "Whether other consumer and industrial companies follow with similar suits.",
+      "status": "new",
+      "sources": [
+        "https://www.ajupress.com",
+        "https://en.edaily.co.kr"
+      ]
+    },
+    {
+      "title": "US midterm elections",
+      "category": "government",
+      "timing": "upcoming",
+      "date_or_window": "2026-11-03",
+      "regions": [
+        "US"
+      ],
+      "sectors": [
+        "BROAD"
+      ],
+      "expected_direction": "mixed",
+      "impact": 4,
+      "confidence": "high",
+      "why_it_matters": "All 435 House seats and 35 Senate seats are contested, with prediction markets pricing a Democratic House; the outcome will determine the legislative path for taxes, tariffs, and regulation.",
+      "what_to_watch": "Whether Democrats sweep both chambers or Republicans hold the Senate; a delayed or contested result is the key tail risk.",
+      "status": "carried",
+      "sources": [
+        "https://www.bbc.co.uk",
+        "https://www.thehindu.com",
+        "https://www.cnbc.com"
+      ]
+    },
+    {
+      "title": "RBA November rate decision",
+      "category": "macro_data",
+      "timing": "upcoming",
+      "date_or_window": "2026-11-03",
+      "regions": [
+        "Australia"
+      ],
+      "sectors": [
+        "BROAD",
+        "Financial"
+      ],
+      "expected_direction": "bearish",
+      "impact": 2,
+      "confidence": "high",
+      "why_it_matters": "The RBA is expected to hike 25bp to 4.85%, its fifth increase of 2026, reinforcing the global hawkish tilt and supporting AUD.",
+      "what_to_watch": "Any pause signal in the statement; Deutsche Bank is the lone forecaster expecting a hold.",
+      "status": "new",
+      "sources": [
+        "https://www.cnfin.com",
+        "https://en.infomaxai.com"
+      ]
+    },
+    {
+      "title": "AMD Q3 2026 earnings",
+      "category": "earnings",
+      "timing": "upcoming",
+      "date_or_window": "2026-11-03",
+      "regions": [
+        "US"
+      ],
+      "sectors": [
+        "Technology"
+      ],
+      "expected_direction": "mixed",
+      "impact": 3,
+      "confidence": "high",
+      "why_it_matters": "AMD is a key AI-chip bellwether and its results will test whether the AI capex cycle can justify premium valuations after the recent tech selloff.",
+      "what_to_watch": "Revenue consensus ~$13.1bn, EPS ~$1.95; MI-series GPU guidance and data-center share gains versus Nvidia.",
+      "status": "new",
+      "sources": [
+        "https://finance.yahoo.com",
+        "https://news.futunn.com"
+      ]
+    },
+    {
+      "title": "US JOLTS job openings for September",
+      "category": "macro_data",
+      "timing": "upcoming",
+      "date_or_window": "2026-11-03",
+      "regions": [
+        "US"
+      ],
+      "sectors": [
+        "BROAD"
+      ],
+      "expected_direction": "mixed",
+      "impact": 2,
+      "confidence": "medium",
+      "why_it_matters": "JOLTS is a key gauge of labour-market tightness and will inform the Fed's December decision after the October FOMC showed two hawkish dissents.",
+      "what_to_watch": "Consensus ~7.13 million openings versus 7.08 million prior.",
+      "status": "new",
+      "sources": [
+        "https://us.econoday.com",
+        "https://cn.investing.com"
+      ]
+    },
+    {
+      "title": "McDonald's Q3 2026 earnings",
+      "category": "earnings",
+      "timing": "upcoming",
+      "date_or_window": "2026-11-04",
+      "regions": [
+        "US"
+      ],
+      "sectors": [
+        "Consumer Cyclical"
+      ],
+      "expected_direction": "mixed",
+      "impact": 2,
+      "confidence": "high",
+      "why_it_matters": "McDonald's is a global consumer bellwether and its results will show whether low-income consumers are pulling back amid persistent inflation.",
+      "what_to_watch": "US same-store sales and commentary on traffic versus pricing.",
+      "status": "new",
+      "sources": [
+        "https://www.tipranks.com",
+        "https://www.marketbeat.com"
+      ]
+    },
+    {
+      "title": "US ADP private employment for October",
+      "category": "macro_data",
+      "timing": "upcoming",
+      "date_or_window": "2026-11-04",
+      "regions": [
+        "US"
+      ],
+      "sectors": [
+        "BROAD"
+      ],
+      "expected_direction": "mixed",
+      "impact": 2,
+      "confidence": "medium",
+      "why_it_matters": "ADP is a preview for Friday's nonfarm payrolls and will be scrutinised for evidence that hiring is slowing after September's weak 29k print.",
+      "what_to_watch": "Consensus ~70k private jobs versus 90k prior.",
+      "status": "new",
+      "sources": [
+        "https://us.econoday.com"
+      ]
+    },
+    {
+      "title": "Bank of England November rate decision",
+      "category": "macro_data",
+      "timing": "upcoming",
+      "date_or_window": "2026-11-05",
+      "regions": [
+        "UK"
+      ],
+      "sectors": [
+        "BROAD",
+        "Financial"
+      ],
+      "expected_direction": "bearish",
+      "impact": 2,
+      "confidence": "high",
+      "why_it_matters": "The BoE is expected to hike 25bp to 4.00%, its first increase since August 2023, as energy-driven inflation forces its hand.",
+      "what_to_watch": "The vote split and whether Bailey signals a pause after this hike.",
+      "status": "new",
+      "sources": [
+        "https://www.rsmuk.com",
+        "https://hk.investing.com"
+      ]
+    },
+    {
+      "title": "Qualcomm FQ4 2026 earnings",
+      "category": "earnings",
+      "timing": "upcoming",
+      "date_or_window": "2026-11-05",
+      "regions": [
+        "US"
+      ],
+      "sectors": [
+        "Technology"
+      ],
+      "expected_direction": "mixed",
+      "impact": 2,
+      "confidence": "high",
+      "why_it_matters": "Qualcomm gives a read on smartphone and auto-chip demand, both of which are facing headwinds from memory-cost inflation and weak handset sales.",
+      "what_to_watch": "Revenue consensus ~$10.1bn; handset versus automotive segment growth.",
+      "status": "new",
+      "sources": [
+        "https://in.marketscreener.com",
+        "https://www.futunn.com"
+      ]
+    },
+    {
+      "title": "US nonfarm payrolls for October",
+      "category": "macro_data",
+      "timing": "upcoming",
+      "date_or_window": "2026-11-06",
+      "regions": [
+        "US"
+      ],
+      "sectors": [
+        "BROAD"
+      ],
+      "expected_direction": "mixed",
+      "impact": 4,
+      "confidence": "high",
+      "why_it_matters": "The jobs report is the single most important data point before the December FOMC, with the Fed signalling further hikes if inflation stays hot.",
+      "what_to_watch": "Consensus ~55k-65k payrolls, unemployment 4.2%; any upside surprise would harden December hike odds.",
+      "status": "new",
+      "sources": [
+        "https://us.econoday.com",
+        "https://hk.finance.yahoo.com"
+      ]
+    },
+    {
+      "title": "University of Michigan consumer sentiment preliminary November",
+      "category": "macro_data",
+      "timing": "upcoming",
+      "date_or_window": "2026-11-06",
+      "regions": [
+        "US"
+      ],
+      "sectors": [
+        "BROAD",
+        "Consumer Cyclical"
+      ],
+      "expected_direction": "bearish",
+      "impact": 2,
+      "confidence": "medium",
+      "why_it_matters": "Sentiment is at or near record lows, reflecting cost-of-living pressures that are a central theme of the midterm election.",
+      "what_to_watch": "Consensus ~47.5 versus 48.0 prior; inflation expectations sub-index.",
+      "status": "new",
+      "sources": [
+        "https://us.econoday.com",
+        "https://polyinsider.io"
+      ]
+    },
+    {
+      "title": "China CPI for October",
+      "category": "macro_data",
+      "timing": "upcoming",
+      "date_or_window": "2026-11-09",
+      "regions": [
+        "China"
+      ],
+      "sectors": [
+        "BROAD",
+        "Basic Materials",
+        "Consumer Defensive"
+      ],
+      "expected_direction": "mixed",
+      "impact": 2,
+      "confidence": "medium",
+      "why_it_matters": "China's CPI remains near zero, and a weak print would reinforce deflation fears and pressure Beijing for more stimulus.",
+      "what_to_watch": "Consensus around 0.9% y/y; any upside surprise from food or energy.",
+      "status": "new",
+      "sources": [
+        "https://finance.eastmoney.com",
+        "https://fxmacrodata.com"
+      ]
+    },
+    {
+      "title": "China trade data for October",
+      "category": "macro_data",
+      "timing": "upcoming",
+      "date_or_window": "2026-11-10",
+      "regions": [
+        "China"
+      ],
+      "sectors": [
+        "Industrials",
+        "Basic Materials",
+        "Technology"
+      ],
+      "expected_direction": "mixed",
+      "impact": 2,
+      "confidence": "medium",
+      "why_it_matters": "Trade data will show whether export momentum is holding up after the US tariff reset and China's own export controls on AI and chip technology.",
+      "what_to_watch": "Export growth versus consensus; shipments to the US and EU.",
+      "status": "new",
+      "sources": [
+        "https://cmegroup.econoday.com"
+      ]
+    },
+    {
+      "title": "US CPI for October",
+      "category": "macro_data",
+      "timing": "upcoming",
+      "date_or_window": "2026-11-10",
+      "regions": [
+        "US"
+      ],
+      "sectors": [
+        "BROAD"
+      ],
+      "expected_direction": "mixed",
+      "impact": 4,
+      "confidence": "high",
+      "why_it_matters": "CPI is the last major inflation reading before the December FOMC and will determine whether the Fed follows through on the hike priced by markets.",
+      "what_to_watch": "Headline consensus ~3.7% y/y; core services ex-housing is the Fed's focus.",
+      "status": "new",
+      "sources": [
+        "https://cmegroup.econoday.com",
+        "https://coinmarketcap.com"
+      ]
+    },
+    {
+      "title": "US PPI for October",
+      "category": "macro_data",
+      "timing": "upcoming",
+      "date_or_window": "2026-11-13",
+      "regions": [
+        "US"
+      ],
+      "sectors": [
+        "BROAD",
+        "Industrials"
+      ],
+      "expected_direction": "mixed",
+      "impact": 2,
+      "confidence": "medium",
+      "why_it_matters": "PPI provides an early read on pipeline inflation and margin pressure after September's upside surprise.",
+      "what_to_watch": "Whether goods disinflation offsets services inflation.",
+      "status": "new",
+      "sources": [
+        "https://giacatloi.vn"
+      ]
+    },
+    {
+      "title": "Japan Q3 GDP first preliminary estimate",
+      "category": "macro_data",
+      "timing": "upcoming",
+      "date_or_window": "2026-11-16",
+      "regions": [
+        "Japan"
+      ],
+      "sectors": [
+        "BROAD",
+        "Industrials",
+        "Consumer Cyclical"
+      ],
+      "expected_direction": "mixed",
+      "impact": 2,
+      "confidence": "medium",
+      "why_it_matters": "A weak GDP print would complicate the BoJ's plan to hike in December and could trigger yen volatility.",
+      "what_to_watch": "Consensus ~+1.5% annualised; private consumption and capex.",
+      "status": "new",
+      "sources": [
+        "https://www.esri.cao.go.jp",
+        "https://www.dir.co.jp"
+      ]
+    },
+    {
+      "title": "Anthropic IPO roadshow and pricing",
+      "category": "ipo",
+      "timing": "upcoming",
+      "date_or_window": "2026-11-09..2026-11-20",
+      "regions": [
+        "US"
+      ],
+      "sectors": [
+        "Technology"
+      ],
+      "expected_direction": "mixed",
+      "impact": 4,
+      "confidence": "medium",
+      "why_it_matters": "Anthropic's IPO could be the largest in history at a $1.5-2tn valuation, and its reception will be a landmark test for AI sentiment and the broader IPO market.",
+      "what_to_watch": "Roadshow demand, final valuation range, and whether the listing prices above or below the initial $2tn target.",
+      "status": "new",
+      "sources": [
+        "https://www.renaissancecapital.com",
+        "https://ceoworld.biz"
+      ]
+    },
+    {
+      "title": "Russia-Ukraine-US trilateral talks in Abu Dhabi",
+      "category": "geopolitical",
+      "timing": "upcoming",
+      "date_or_window": "2026-11-04",
+      "regions": [
+        "Russia",
+        "Ukraine",
+        "US",
+        "Middle East"
+      ],
+      "sectors": [
+        "Energy",
+        "BROAD"
+      ],
+      "expected_direction": "mixed",
+      "impact": 3,
+      "confidence": "medium",
+      "why_it_matters": "The talks could produce a ceasefire framework, which would be bearish for European gas and oil risk premia, but Ukraine opposes sanctions relief before a leaders' summit.",
+      "what_to_watch": "Whether a demilitarised-zone or gas-supply deal is tabled; any US sanctions easing on Russia.",
+      "status": "new",
+      "sources": [
+        "https://vov.vn",
+        "https://news.cri.cn"
+      ]
+    },
+    {
+      "title": "Brigham and Women's nurses open-ended strike",
+      "category": "ongoing",
+      "timing": "upcoming",
+      "date_or_window": "2026-11-12",
+      "regions": [
+        "US"
+      ],
+      "sectors": [
+        "Healthcare"
+      ],
+      "expected_direction": "bearish",
+      "impact": 1,
+      "confidence": "high",
+      "why_it_matters": "The strike highlights persistent labour-cost pressure in healthcare and could disrupt operations at a major Boston hospital.",
+      "what_to_watch": "Whether a last-minute contract deal is reached; any spillover to other hospital systems.",
+      "status": "new",
+      "sources": [
+        "https://www.boston.com",
+        "https://www.wgbh.org"
+      ]
+    },
+    {
+      "title": "SEMICON Europa 2026",
+      "category": "ongoing",
+      "timing": "upcoming",
+      "date_or_window": "2026-11-10..2026-11-13",
+      "regions": [
+        "EU"
+      ],
+      "sectors": [
+        "Technology"
+      ],
+      "expected_direction": "mixed",
+      "impact": 2,
+      "confidence": "high",
+      "why_it_matters": "The conference will spotlight Europe's semiconductor strategy, advanced packaging, and fab-management trends amid the AI boom.",
+      "what_to_watch": "Any EU Chips Act funding announcements or capex guidance from equipment makers.",
+      "status": "new",
+      "sources": [
+        "https://www.semi.org",
+        "https://messe-muenchen.de"
+      ]
+    },
+    {
+      "title": "IG Metall warning strikes in Germany",
+      "category": "ongoing",
+      "timing": "past",
+      "date_or_window": "2026-11-01..ongoing",
+      "regions": [
+        "Germany",
+        "EU"
+      ],
+      "sectors": [
+        "Industrials",
+        "Consumer Cyclical"
+      ],
+      "expected_direction": "bearish",
+      "impact": 2,
+      "confidence": "high",
+      "why_it_matters": "Warning strikes by 3.7 million metalworkers threaten German auto and machinery output, adding to the sector's deepening crisis.",
+      "what_to_watch": "Whether strikes escalate into full walkouts and whether a wage deal is reached in the third round.",
+      "status": "new",
+      "sources": [
+        "https://www.lusa.pt",
+        "https://www.n-tv.de"
+      ]
+    },
+    {
+      "title": "US existing home sales for October",
+      "category": "macro_data",
+      "timing": "upcoming",
+      "date_or_window": "2026-11-12",
+      "regions": [
+        "US"
+      ],
+      "sectors": [
+        "Real Estate",
+        "Financial"
+      ],
+      "expected_direction": "mixed",
+      "impact": 2,
+      "confidence": "medium",
+      "why_it_matters": "Housing is the most rate-sensitive sector and a weak print would confirm the drag from elevated mortgage rates.",
+      "what_to_watch": "Annualised rate versus 3.99 million prior.",
+      "status": "new",
+      "sources": [
+        "https://cmegroup.econoday.com",
+        "https://www.nar.realtor"
+      ]
+    },
+    {
+      "title": "US Treasury quarterly refunding announcement",
+      "category": "macro_data",
+      "timing": "upcoming",
+      "date_or_window": "2026-11-03..2026-11-04",
+      "regions": [
+        "US"
+      ],
+      "sectors": [
+        "Financial",
+        "BROAD"
+      ],
+      "expected_direction": "mixed",
+      "impact": 3,
+      "confidence": "medium",
+      "why_it_matters": "The refunding statement will signal whether Treasury is increasing coupon auction sizes, which could pressure long-end yields.",
+      "what_to_watch": "Any change to auction-size guidance; JPMorgan expects unchanged sizes.",
+      "status": "new",
+      "sources": [
+        "https://www.treasurydirect.gov",
+        "https://news.platform.elebank.com"
+      ]
+    },
+    {
+      "title": "FDA PDUFA: ivonescimab for NSCLC",
+      "category": "ongoing",
+      "timing": "upcoming",
+      "date_or_window": "2026-11-14",
+      "regions": [
+        "US"
+      ],
+      "sectors": [
+        "Healthcare"
+      ],
+      "expected_direction": "mixed",
+      "impact": 2,
+      "confidence": "medium",
+      "why_it_matters": "If approved, ivonescimab would be the first PD-1xVEGF bispecific in the US, a potential blockbuster for Summit/Akeso and a competitive threat to Merck.",
+      "what_to_watch": "Approval decision and label breadth.",
+      "status": "new",
+      "sources": [
+        "https://insights.citeline.com",
+        "https://www.endocrinologyadvisor.com"
+      ]
+    },
     {
       "title": "Supreme Court strikes down IEEPA tariffs",
       "category": "judicial",
       "timing": "past",
       "date_or_window": "2026-10-23",
       "regions": [
-        "US"
+        "US",
+        "Global"
       ],
       "sectors": [
         "BROAD",
@@ -18,11 +632,11 @@
       "impact": 4,
       "confidence": "high",
       "why_it_matters": "The 6-3 ruling invalidated the legal basis for Trump's broadest tariffs, forcing a chaotic reset of US trade policy and opening refund claims for importers.",
-      "what_to_watch": "Whether the new Section 122 tariff survives legal challenge and how quickly refunds reach retailers.",
+      "what_to_watch": "The refund process and whether the administration finds another legal vehicle for tariffs.",
       "status": "resolved",
       "sources": [
-        "https://www.supremecourt.gov",
-        "https://www.cfr.org"
+        "https://www.americanbar.org",
+        "https://www.sheppard.com"
       ]
     },
     {
@@ -43,11 +657,11 @@
       "impact": 4,
       "confidence": "high",
       "why_it_matters": "Within days of the Supreme Court loss, the administration re-imposed a universal tariff at 15%, keeping trade costs elevated and uncertainty high for importers.",
-      "what_to_watch": "Implementation guidance, exempted product lists, and retaliation from major trading partners.",
+      "what_to_watch": "Legal challenges to Section 122 and the tariff's 150-day expiration window.",
       "status": "carried",
       "sources": [
-        "https://ustr.gov",
-        "https://www.businessday.ng"
+        "https://www.americanbar.org",
+        "https://www.millernash.com"
       ]
     },
     {
@@ -67,11 +681,11 @@
       "impact": 3,
       "confidence": "high",
       "why_it_matters": "The plenum focused on party governance rather than a large consumption or property stimulus, disappointing cyclical bulls expecting a demand boost.",
-      "what_to_watch": "Follow-through from the NDRC on already-announced incremental policies and the 15th Five-Year Plan framework.",
+      "what_to_watch": "Whether the December Central Economic Work Conference delivers more support.",
       "status": "resolved",
       "sources": [
-        "http://en.theorychina.org.cn",
-        "https://www.gov.cn"
+        "https://en.qstheory.cn",
+        "https://romanian.cgtn.com"
       ]
     },
     {
@@ -89,14 +703,14 @@
       "impact": 3,
       "confidence": "high",
       "why_it_matters": "Growth accelerated well above the 3.1% consensus, reinforcing the soft-landing narrative and reducing near-term recession odds.",
-      "what_to_watch": "The second estimate on Nov 25 for revisions to consumer spending and investment.",
+      "what_to_watch": "Revisions in the second estimate and the composition of growth.",
       "status": "resolved",
       "sources": [
-        "https://www.bea.gov"
+        "https://us.econoday.com"
       ]
     },
     {
-      "title": "US September PCE inflation 3.6% y/y, core 0.3% m/m",
+      "title": "US September PCE inflation 3.6% y/y",
       "category": "macro_data",
       "timing": "past",
       "date_or_window": "2026-10-29",
@@ -110,15 +724,14 @@
       "impact": 3,
       "confidence": "high",
       "why_it_matters": "Headline PCE accelerated to 3.6% and core matched expectations, keeping inflation uncomfortably above target and a December hike live.",
-      "what_to_watch": "Whether October CPI on Nov 4 confirms sticky services inflation.",
+      "what_to_watch": "Core PCE trend and whether goods or services are driving the upside.",
       "status": "resolved",
       "sources": [
-        "https://www.bea.gov",
-        "https://en.fnnews.com"
+        "https://us.econoday.com"
       ]
     },
     {
-      "title": "FOMC holds rates at 3.75%–4.00%, two dissents for a hike",
+      "title": "FOMC holds rates at 3.75%-4.00%, two dissents for a hike",
       "category": "macro_data",
       "timing": "past",
       "date_or_window": "2026-10-28",
@@ -133,15 +746,15 @@
       "impact": 3,
       "confidence": "high",
       "why_it_matters": "The Fed paused as widely expected, but two dissents preferring a 25bp hike signal the committee is not done tightening, keeping rate volatility elevated.",
-      "what_to_watch": "Fed speeches next week for the December meeting odds and any hint on the balance sheet.",
+      "what_to_watch": "Fed speakers between now and December; market pricing currently favours a December hike.",
       "status": "resolved",
       "sources": [
         "https://www.federalreserve.gov",
-        "https://am.jpmorgan.com"
+        "https://www.cnfin.com"
       ]
     },
     {
-      "title": "ECB holds rates unchanged",
+      "title": "ECB holds rates unchanged at 2.50% deposit rate",
       "category": "macro_data",
       "timing": "past",
       "date_or_window": "2026-10-29",
@@ -156,16 +769,17 @@
       "impact": 2,
       "confidence": "high",
       "why_it_matters": "The ECB paused amid weak growth and elevated energy-driven inflation, leaving the euro and European bonds data-dependent.",
-      "what_to_watch": "Eurozone flash CPI and GDP revisions for the next policy signal.",
+      "what_to_watch": "December hike expectations after Kazimir's hawkish comments.",
       "status": "resolved",
       "sources": [
-        "https://www.ecb.europa.eu"
+        "https://www.ecb.europa.eu",
+        "https://www.marketscreener.com"
       ]
     },
     {
-      "title": "Bank of Japan holds at 1.25%, one dissent, raises ETF purchase pace",
+      "title": "Bank of Japan holds at 1.25%, signals December hike",
       "category": "macro_data",
-      "timing": "today",
+      "timing": "past",
       "date_or_window": "2026-10-30",
       "regions": [
         "Japan"
@@ -177,12 +791,12 @@
       "expected_direction": "mixed",
       "impact": 2,
       "confidence": "high",
-      "why_it_matters": "The BOJ held as expected but the dissent and ETF buying adjustment keep a December hike on the table, supporting yen volatility.",
-      "what_to_watch": "Governor Ueda's guidance on wage-driven inflation and the next meeting in December.",
-      "status": "new",
+      "why_it_matters": "The BoJ held as expected but Governor Ueda all but locked in a December hike, keeping yen volatility elevated.",
+      "what_to_watch": "December meeting outcome and the neutral-rate debate.",
+      "status": "resolved",
       "sources": [
-        "https://www.boj.or.jp",
-        "https://en.infomaxai.com"
+        "https://www.zawya.com",
+        "https://www.zonebourse.com"
       ]
     },
     {
@@ -201,13 +815,12 @@
       ],
       "expected_direction": "bearish",
       "impact": 2,
-      "confidence": "high",
+      "confidence": "medium",
       "why_it_matters": "The violence has subsided but the political damage weakens the French government and reinforces ECB caution.",
-      "what_to_watch": "Whether protests re-escalate around budget debates or pension reform.",
+      "what_to_watch": "Whether unrest reignites around budget negotiations.",
       "status": "resolved",
       "sources": [
-        "https://www.reuters.com",
-        "https://www.pbs.org"
+        "https://www.reuters.com"
       ]
     },
     {
@@ -225,17 +838,16 @@
       ],
       "expected_direction": "bullish",
       "impact": 2,
-      "confidence": "high",
+      "confidence": "medium",
       "why_it_matters": "A strike at a major Canadian copper mine is tightening concentrate supply, adding upside pressure to copper prices already supported by electrification demand.",
-      "what_to_watch": "Negotiation progress and whether other copper operations face similar labour actions.",
+      "what_to_watch": "Duration of the strike and whether other mines face similar labour actions.",
       "status": "carried",
       "sources": [
-        "https://www.teck.com",
-        "https://www.scrapmonster.com"
+        "https://www.reuters.com"
       ]
     },
     {
-      "title": "Iran/Hormuz tensions escalate; Brent above $115",
+      "title": "Iran/Hormuz tensions; Brent above $115",
       "category": "geopolitical",
       "timing": "past",
       "date_or_window": "2026-10-14..ongoing",
@@ -251,16 +863,16 @@
       "expected_direction": "mixed",
       "impact": 4,
       "confidence": "high",
-      "why_it_matters": "Reports of possible new US strikes on Iran and disruptions around the Strait of Hormuz are keeping a large geopolitical risk premium in oil, with Brent near $116.",
-      "what_to_watch": "Any confirmed military action, Iranian retaliation, or closure of shipping lanes.",
+      "why_it_matters": "Reports of possible new US strikes on Iran and disruptions around the Strait of Hormuz are keeping a large geopolitical risk premium in oil.",
+      "what_to_watch": "Qatar-brokered talks on a two-day Hormuz reopening plan; any US military action.",
       "status": "carried",
       "sources": [
-        "https://www.aljazeera.com",
-        "https://qna.org.qa"
+        "https://www.investinglive.com",
+        "https://www.eleconomista.es"
       ]
     },
     {
-      "title": "US sanctions relief for Russia continues via diesel deal",
+      "title": "US sanctions relief for Russia via diesel deal",
       "category": "geopolitical",
       "timing": "past",
       "date_or_window": "2026-10-17..ongoing",
@@ -277,11 +889,11 @@
       "impact": 3,
       "confidence": "medium",
       "why_it_matters": "Washington is selectively easing sanctions to allow Russian diesel imports, a potential bearish supply signal for oil products but a geopolitical gamble that could unsettle allies.",
-      "what_to_watch": "Whether the EU follows or pushes back, and whether the deal expands to crude.",
+      "what_to_watch": "Whether the diesel deal expands into broader sanctions relief ahead of the Abu Dhabi talks.",
       "status": "carried",
       "sources": [
-        "https://www.consilium.europa.eu",
-        "https://www.aa.com.tr"
+        "https://www.chinadaily.com.cn",
+        "https://vov.vn"
       ]
     },
     {
@@ -299,10 +911,9 @@
       "impact": 3,
       "confidence": "high",
       "why_it_matters": "Beijing added 23 AI technologies to its export-control list and imposed registration on outbound frontier models and chip IP, escalating tech fragmentation.",
-      "what_to_watch": "Retaliation from the US and Taiwan and compliance costs for global semiconductor firms.",
+      "what_to_watch": "Retaliation from the US and Taiwan and the impact on global AI supply chains.",
       "status": "carried",
       "sources": [
-        "https://www.mofcom.gov.cn",
         "https://www.reuters.com"
       ]
     },
@@ -323,17 +934,16 @@
       "impact": 3,
       "confidence": "high",
       "why_it_matters": "Taipei criminalised unauthorised AI chip and server exports to China, aligning with US restrictions and adding compliance risk across the semiconductor supply chain.",
-      "what_to_watch": "Enforcement actions and whether TSMC and other foundries face new licensing requirements.",
+      "what_to_watch": "Enforcement actions and any impact on TSMC's China revenue.",
       "status": "carried",
       "sources": [
-        "https://www.reuters.com",
-        "https://eastasiabrief.com"
+        "https://www.reuters.com"
       ]
     },
     {
-      "title": "OPEC+ monthly meeting",
+      "title": "OPEC+ November 1 meeting decides to maintain December production",
       "category": "geopolitical",
-      "timing": "upcoming",
+      "timing": "past",
       "date_or_window": "2026-11-01",
       "regions": [
         "Global",
@@ -345,373 +955,62 @@
       "expected_direction": "mixed",
       "impact": 3,
       "confidence": "high",
-      "why_it_matters": "The seven OPEC+ countries meet with Brent above $115; consensus expects a rollover of quotas, but any surprise cut would tighten an already nervous market.",
-      "what_to_watch": "Compliance rhetoric from Saudi Arabia and Russia and whether the group acknowledges the Hormuz risk premium.",
-      "status": "new",
+      "why_it_matters": "The seven OPEC+ countries kept December quotas unchanged, as expected, but the decision comes with Brent above $110 and Hormuz risk elevated.",
+      "what_to_watch": "The next meeting on November 29 and whether geopolitics forces a policy response.",
+      "status": "resolved",
       "sources": [
+        "https://www.spa.gov.sa",
         "https://www.opec.org"
       ]
     },
     {
-      "title": "US ISM Manufacturing PMI for October",
-      "category": "macro_data",
-      "timing": "upcoming",
-      "date_or_window": "2026-11-02",
-      "regions": [
-        "US"
-      ],
-      "sectors": [
-        "Industrials",
-        "Basic Materials"
-      ],
-      "expected_direction": "mixed",
-      "impact": 2,
-      "confidence": "high",
-      "why_it_matters": "Manufacturing has been hovering near expansion; a weak print would reinforce the two-speed US economy narrative ahead of the midterms.",
-      "what_to_watch": "New orders and prices-paid sub-indices for tariff pass-through signals.",
-      "status": "new",
-      "sources": [
-        "https://www.ismworld.org",
-        "https://www.scotiabank.com"
-      ]
-    },
-    {
-      "title": "Apple FQ4 2026 earnings",
-      "category": "earnings",
-      "timing": "upcoming",
-      "date_or_window": "2026-11-02",
-      "regions": [
-        "US"
-      ],
-      "sectors": [
-        "Technology",
-        "Communication Services"
-      ],
-      "expected_direction": "mixed",
-      "impact": 3,
-      "confidence": "high",
-      "why_it_matters": "Consensus expects ~$113.3B revenue and ~$1.98 EPS; a strong iPhone cycle could steady mega-cap tech after a volatile October.",
-      "what_to_watch": "Gross margin guidance amid rising memory costs and commentary on the foldable iPhone pipeline.",
-      "status": "new",
-      "sources": [
-        "https://investor.apple.com",
-        "https://pepperstone.com"
-      ]
-    },
-    {
-      "title": "US midterm elections",
+      "title": "Iran-Qatar talks on two-day Hormuz reopening plan",
       "category": "geopolitical",
-      "timing": "upcoming",
-      "date_or_window": "2026-11-03",
-      "regions": [
-        "US"
-      ],
-      "sectors": [
-        "BROAD",
-        "Healthcare",
-        "Energy",
-        "Financial"
-      ],
-      "expected_direction": "mixed",
-      "impact": 4,
-      "confidence": "high",
-      "why_it_matters": "Prediction markets price a Democratic House and a toss-up Senate; divided government would limit legislation but shift oversight and regulatory risk.",
-      "what_to_watch": "Whether results are clear on election night or contested, and the sector implications for healthcare, energy and financials.",
-      "status": "new",
-      "sources": [
-        "https://www.morganstanley.com",
-        "https://finance.yahoo.com"
-      ]
-    },
-    {
-      "title": "AMD Q3 2026 earnings",
-      "category": "earnings",
-      "timing": "upcoming",
-      "date_or_window": "2026-11-03",
-      "regions": [
-        "US"
-      ],
-      "sectors": [
-        "Technology"
-      ],
-      "expected_direction": "mixed",
-      "impact": 2,
-      "confidence": "high",
-      "why_it_matters": "AMD is a key AI and data-center bellwether; consensus EPS is ~$1.94, and guidance will frame the semiconductor outlook into 2027.",
-      "what_to_watch": "MI-series GPU shipment commentary and whether AI capex is broadening beyond Nvidia.",
-      "status": "new",
-      "sources": [
-        "https://ir.amd.com",
-        "https://stockanalysis.com"
-      ]
-    },
-    {
-      "title": "US JOLTS job openings for September",
-      "category": "macro_data",
-      "timing": "upcoming",
-      "date_or_window": "2026-11-03",
-      "regions": [
-        "US"
-      ],
-      "sectors": [
-        "BROAD"
-      ],
-      "expected_direction": "mixed",
-      "impact": 1,
-      "confidence": "high",
-      "why_it_matters": "A further cooling in openings would support the Fed's pause, while resilience would keep a December hike in play.",
-      "what_to_watch": "Quits rate and layoffs for signs of labour-market tightening or loosening.",
-      "status": "new",
-      "sources": [
-        "https://www.bls.gov"
-      ]
-    },
-    {
-      "title": "US CPI for October",
-      "category": "macro_data",
-      "timing": "upcoming",
-      "date_or_window": "2026-11-04",
-      "regions": [
-        "US"
-      ],
-      "sectors": [
-        "BROAD"
-      ],
-      "expected_direction": "mixed",
-      "impact": 4,
-      "confidence": "high",
-      "why_it_matters": "With September CPI at 3.7%, October CPI is the last major inflation print before the December FOMC and could decide whether the Fed hikes again.",
-      "what_to_watch": "Core services ex-housing and goods prices for tariff pass-through.",
-      "status": "new",
-      "sources": [
-        "https://www.bls.gov",
-        "https://www.newsquawk.com"
-      ]
-    },
-    {
-      "title": "Qualcomm FQ4 2026 earnings",
-      "category": "earnings",
-      "timing": "upcoming",
-      "date_or_window": "2026-11-04",
-      "regions": [
-        "US"
-      ],
-      "sectors": [
-        "Technology"
-      ],
-      "expected_direction": "mixed",
-      "impact": 2,
-      "confidence": "high",
-      "why_it_matters": "Qualcomm is a key smartphone and edge-AI supplier; consensus EPS is ~$1.46, and guidance will signal handset demand into the holiday season.",
-      "what_to_watch": "Automotive and IoT growth versus handset weakness, and any China demand commentary.",
-      "status": "new",
-      "sources": [
-        "https://investor.qualcomm.com",
-        "https://www.barchart.com"
-      ]
-    },
-    {
-      "title": "Bank of England rate decision and Monetary Policy Report",
-      "category": "macro_data",
-      "timing": "upcoming",
-      "date_or_window": "2026-11-05",
-      "regions": [
-        "UK",
-        "EU"
-      ],
-      "sectors": [
-        "BROAD",
-        "Financial"
-      ],
-      "expected_direction": "mixed",
-      "impact": 3,
-      "confidence": "high",
-      "why_it_matters": "The BoE is expected to hold at 3.75% after the ECB pause; the vote split and new forecasts will shape GBP and gilt markets.",
-      "what_to_watch": "Whether any MPC members vote for a cut and the inflation projection path.",
-      "status": "new",
-      "sources": [
-        "https://www.bankofengland.co.uk",
-        "https://cambridgecurrencies.com"
-      ]
-    },
-    {
-      "title": "US October employment report",
-      "category": "macro_data",
-      "timing": "upcoming",
-      "date_or_window": "2026-11-06",
-      "regions": [
-        "US"
-      ],
-      "sectors": [
-        "BROAD"
-      ],
-      "expected_direction": "mixed",
-      "impact": 4,
-      "confidence": "high",
-      "why_it_matters": "The jobs report is the last major labour-market data before the December FOMC; consensus expects payroll growth to cool but remain positive.",
-      "what_to_watch": "Unemployment rate, average hourly earnings, and any strike-related distortions.",
-      "status": "new",
-      "sources": [
-        "https://www.bls.gov",
-        "https://www.newsquawk.com"
-      ]
-    },
-    {
-      "title": "China October trade data",
-      "category": "macro_data",
-      "timing": "upcoming",
-      "date_or_window": "2026-11-10",
-      "regions": [
-        "China"
-      ],
-      "sectors": [
-        "Industrials",
-        "Basic Materials",
-        "Technology"
-      ],
-      "expected_direction": "mixed",
-      "impact": 2,
-      "confidence": "high",
-      "why_it_matters": "Trade data will show whether export strength is offsetting weak domestic demand, a key signal for global cyclical sentiment.",
-      "what_to_watch": "Export growth to the US and EU, and chip-related import volumes.",
-      "status": "new",
-      "sources": [
-        "http://www.customs.gov.cn",
-        "https://cmegroup.econoday.com"
-      ]
-    },
-    {
-      "title": "Anthropic IPO on Nasdaq",
-      "category": "ipo",
-      "timing": "upcoming",
-      "date_or_window": "2026-11-12",
-      "regions": [
-        "US"
-      ],
-      "sectors": [
-        "Technology"
-      ],
-      "expected_direction": "mixed",
-      "impact": 3,
-      "confidence": "medium",
-      "why_it_matters": "A mega-cap AI IPO valued at up to $2T could either validate the AI trade or drain liquidity from existing tech names, making it a sentiment pivot.",
-      "what_to_watch": "Final pricing, demand metrics, and first-day trading stability.",
-      "status": "new",
-      "sources": [
-        "https://www.sec.gov",
-        "https://www.valuewalk.com"
-      ]
-    },
-    {
-      "title": "US PPI for October",
-      "category": "macro_data",
-      "timing": "upcoming",
-      "date_or_window": "2026-11-13",
-      "regions": [
-        "US"
-      ],
-      "sectors": [
-        "BROAD",
-        "Industrials"
-      ],
-      "expected_direction": "mixed",
-      "impact": 2,
-      "confidence": "high",
-      "why_it_matters": "Producer prices will show whether tariff costs are feeding into pipeline inflation, a key input for the Fed's December decision.",
-      "what_to_watch": "Core PPI and services margin trends.",
-      "status": "new",
-      "sources": [
-        "https://www.bls.gov",
-        "https://www.hfm.com"
-      ]
-    },
-    {
-      "title": "Palantir Q3 2026 earnings",
-      "category": "earnings",
-      "timing": "upcoming",
+      "timing": "today",
       "date_or_window": "2026-11-02",
       "regions": [
-        "US"
+        "Iran",
+        "Qatar",
+        "US",
+        "Middle East"
       ],
       "sectors": [
-        "Technology"
-      ],
-      "expected_direction": "mixed",
-      "impact": 2,
-      "confidence": "high",
-      "why_it_matters": "Palantir is a high-beta AI software bellwether; its commercial growth and government contract pipeline will be watched closely.",
-      "what_to_watch": "US commercial customer additions and AI platform revenue acceleration.",
-      "status": "new",
-      "sources": [
-        "https://investors.palantir.com",
-        "https://www.earningswhispers.com"
-      ]
-    },
-    {
-      "title": "RBA rate decision",
-      "category": "macro_data",
-      "timing": "upcoming",
-      "date_or_window": "2026-11-03",
-      "regions": [
-        "Australia"
-      ],
-      "sectors": [
-        "BROAD",
-        "Basic Materials"
-      ],
-      "expected_direction": "mixed",
-      "impact": 1,
-      "confidence": "high",
-      "why_it_matters": "The RBA is expected to hold, but its tone matters for AUD and Australian miners exposed to China demand.",
-      "what_to_watch": "Statement language on inflation and any hint of a 2027 cut.",
-      "status": "new",
-      "sources": [
-        "https://www.rba.gov.au"
-      ]
-    },
-    {
-      "title": "Fed's Goolsbee speech",
-      "category": "macro_data",
-      "timing": "upcoming",
-      "date_or_window": "2026-11-03",
-      "regions": [
-        "US"
-      ],
-      "sectors": [
+        "Energy",
         "BROAD"
       ],
       "expected_direction": "mixed",
-      "impact": 1,
-      "confidence": "high",
-      "why_it_matters": "Goolsbee is a 2026 voter; his comments after the hold will be parsed for the December hike debate.",
-      "what_to_watch": "Any explicit signal on whether the Fed is done or still leaning hawkish.",
-      "status": "new",
+      "impact": 4,
+      "confidence": "medium",
+      "why_it_matters": "Iran has agreed to a Qatari-brokered plan to reopen Hormuz within two days if the US meets conditions, a potential de-escalation that could remove a large oil risk premium.",
+      "what_to_watch": "Whether the US accepts the conditions and whether a draft deal is formalised.",
+      "status": "carried",
       "sources": [
-        "https://www.chicagofed.org"
+        "https://www.thestar.com.my",
+        "https://www.arabnews.jp"
       ]
     }
   ],
   "top_risks": [
-    "Iran/Hormuz escalation pushing Brent above $120 and reviving global inflation.",
-    "October CPI surprising to the upside and forcing a December Fed hike.",
-    "A contested or delayed US midterm result rattling already-edgy markets.",
-    "Legal and retaliatory chaos from the new 15% global tariff regime.",
-    "A weak Apple or AMD guide that cracks the AI/mega-cap leadership trade."
+    "A contested or delayed US midterm result could trigger sharp risk-off moves across equities and rates.",
+    "A upside surprise in Friday's US payrolls or next week's CPI would harden December Fed hike expectations and pressure duration-sensitive sectors.",
+    "Iran-Hormuz talks could collapse, sending Brent back above $120 and reigniting global inflation fears.",
+    "Anthropic's IPO pricing below the $1.5-2tn target would be a major negative signal for AI sentiment and the broader tech complex.",
+    "The December 11 government funding deadline remains a tail risk for a partial shutdown, though it is outside the two-week window."
   ],
   "top_opportunities": [
-    "Apple earnings beat and strong iPhone guidance stabilizing mega-cap tech.",
-    "OPEC+ surprise supply restraint lifting energy equities further.",
-    "Copper supply squeeze from Teck strike supporting miners.",
-    "Clear midterm outcome removing a political uncertainty premium.",
-    "Anthropic IPO successfully pricing and validating the AI ecosystem."
+    "A clean Democratic midterm sweep could unlock fiscal support and reduce trade-policy uncertainty, benefiting cyclicals and small caps.",
+    "A Hormuz reopening deal would be strongly bullish for airlines, transports, and consumer discretionary via lower energy costs.",
+    "Apple and AMD earnings could stabilise tech sentiment if results beat lowered expectations.",
+    "Anthropic's IPO, if well received, could revive the IPO market and boost AI-linked names.",
+    "A soft payrolls print would reduce December hike odds and support bonds and growth stocks."
   ],
   "uncertainty": "elevated",
-  "summary": "Markets enter the final days before the US midterms with the Fed on hold but not done, inflation still sticky at 3.6% PCE, Brent above $115 on Hormuz risk, and a chaotic tariff reset after the Supreme Court struck down IEEPA duties. The coming week is dominated by mega-cap earnings (Apple, AMD, Qualcomm), the midterm election, US CPI and payrolls, and OPEC+; China's plenum delivered no major stimulus, leaving global cyclicals reliant on trade and inventory data. The main tension is between a market pricing a benign pause and a data-dependent path that could still force a December hike.",
+  "summary": "Markets enter the midterm election and a dense macro week with the Fed on hold but explicitly hawkish, inflation still sticky, and oil prices whipsawing on Hormuz diplomacy. The coming fortnight is dominated by the US midterms, payrolls, CPI, mega-cap tech earnings, and the RBA/BoE decisions, with Anthropic's blockbuster IPO as a sentiment wildcard. The main tension is between a market pricing a benign pause and a data-dependent path that could still force a December hike.",
   "windows": {
-    "past": "2026-10-16..2026-10-29",
-    "today": "2026-10-30",
-    "upcoming": "2026-10-31..2026-11-13"
+    "past": "2026-10-19..2026-11-01",
+    "today": "2026-11-02",
+    "upcoming": "2026-11-03..2026-11-16"
   },
   "repaired": false,
-  "provider": "deepseek-web"
+  "provider": "openclaw"
 }
