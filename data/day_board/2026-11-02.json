@@ -1,6 +1,6 @@
 {
   "date": "2026-11-02",
-  "generated_at": "2026-11-02T07:13:47.868403-05:00",
+  "generated_at": "2026-11-02T07:31:31.228633-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -181,7 +181,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 3,
+      "n_req_ok": 2,
       "n_req": 9,
       "n_opt_ok": 1,
       "n_opt": 14,
@@ -239,10 +239,10 @@
           "name": "News parse JSON",
           "path": "01_daily/news/2026-11-02_parsed.json",
           "role": "required",
-          "status": "OK",
-          "reason": "",
-          "size": 2440289,
-          "said": "2440289B on disk",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
           "bullets": []
         },
         {
@@ -329,13 +329,13 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7574,
-          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 17 fail",
+          "size": 7575,
+          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 18 fail",
           "bullets": [
             "general_predict:missing",
             "events:missing",
             "news_judge:missing",
-            "news_actions:missing"
+            "news_parse:missing"
           ]
         },
         {
@@ -1538,6 +1538,31 @@
         }
       ],
       "preview": "raw=3364 usable=220 single=202 \u00b7 OPEC+ Leaves Oil Output Targets Unchanged for December (Table) - Bloomberg.com | OPEC+ Set to Stick With Plan for Steady Quotas, Delegates Say - Bloomberg.com | Breakingviews - COMMENTARY: PAG's China property deal blueprint comes together - | Three Federal Reserve officials called for continued interest rate hikes; why is | COMMENTARY: Asia's crude oil imports back to pre-war levels but refined fuels la \u00b7 # News Parse v2 \u2014 2026-11-02T07:13:46.762829-05:00\nWindow\u224824h | news_mode=on | raw=3364 | usable=220 | single_name=202 | noise_dropped=2801\nusable polarity={'+': 0, '-': 53, 'mixed': 0, 'neutral': 167}"
+    },
+    {
+      "key": "finviz_digest",
+      "title": "Finviz digest",
+      "date": "2026-11-02",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-02T07:31:30.294651-05:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-11-02_finviz_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 97014,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        },
+        {
+          "path": "01_daily/news/2026-11-02_finviz_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 11850,
+          "preview": "# Finviz Daily Digest \u2014 2026-11-02\n_Generated 2026-11-02T04:23:16.947618-05:00 \u00b7 export=data/exports/finviz_2026-10-30.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_"
+        }
+      ],
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-11-02\n_Generated 2026-11-02T04:23:16.947618-05:00 \u00b7 export=data/exports/finviz_2026-10-30.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_"
     }
   ],
   "href": {
