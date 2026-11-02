@@ -1,6 +1,6 @@
 {
  "date": "2026-11-02",
- "generated_at": "2026-11-02T07:53:27.564790-05:00",
+ "generated_at": "2026-11-02T15:35:02.241424-05:00",
  "stance_vocabulary": [
   "favorable",
   "neutral",
@@ -17,21 +17,23 @@
   "fed_score": 0.0,
   "dollar_oil_score": 1.0,
   "futures_score": 0.5,
-  "yields": "flat",
-  "yields_source": "llm_factor_fallback",
-  "dollar": "soft",
+  "yields": "falling",
+  "yields_source": "fred_dgs10",
+  "dgs10_delta_1d": -0.07,
+  "dgs10_current": 4.98,
+  "dollar": "flat",
   "dollar_source": "dxy",
-  "dxy_pct_1d": -0.3,
-  "vix_ratio": 0.933,
-  "vix_spot": 19.39,
-  "vix_delta_1d": -0.03,
+  "dxy_pct_1d": -0.12,
+  "vix_ratio": 0.975,
+  "vix_spot": 20.83,
+  "vix_delta_1d": 1.41,
   "vix_ratio_source": "vix/vix3m",
   "vix": "calm",
-  "oil_pct_1d": -4.26,
+  "oil_pct_1d": -7.81,
   "oil": "falling",
   "fear_greed": null,
   "fear_greed_label": null,
-  "regime_corr": 0.707,
+  "regime_corr": 0.722,
   "sectors": {
    "Basic Materials": {
     "score": -4.97,
@@ -180,12 +182,12 @@
    "micro": {
     "stance": "neutral",
     "confidence": "low",
-    "why": "risk-mixed, dollar soft [general predict + factors]"
+    "why": "risk-mixed, dollar flat [general predict + factors]"
    },
    "small": {
     "stance": "neutral",
     "confidence": "low",
-    "why": "risk-mixed, dollar soft [general predict + factors]"
+    "why": "risk-mixed, dollar flat [general predict + factors]"
    },
    "large": {
     "stance": "neutral",
@@ -222,7 +224,7 @@
    "rut": {
     "stance": "neutral",
     "confidence": "low",
-    "why": "risk-mixed, dollar soft [general predict + factors]"
+    "why": "risk-mixed, dollar flat [general predict + factors]"
    },
    "none": {
     "stance": "neutral",
@@ -339,14 +341,14 @@
   },
   "style": {
    "growth": {
-    "stance": "neutral",
-    "confidence": "low",
-    "why": "yields flat/unknown"
+    "stance": "favorable",
+    "confidence": "medium",
+    "why": "yields falling — duration/growth re-rates [factor: Bond yields]"
    },
    "value": {
     "stance": "neutral",
     "confidence": "low",
-    "why": "yields flat/unknown"
+    "why": "value lags duration rallies"
    },
    "blend": {
     "stance": "neutral",
