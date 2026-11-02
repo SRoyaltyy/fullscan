@@ -1,6 +1,6 @@
 {
  "date": "2026-11-02",
- "generated_at": "2026-11-02T07:42:27.058639+00:00",
+ "generated_at": "2026-11-02T22:21:18.768336+00:00",
  "catalog": {
   "generated_at": "2026-10-31T17:46:18.945180+00:00",
   "channels": 365,
@@ -34,40 +34,76 @@
   }
  },
  "collect": {
-  "generated_at": "2026-11-02T07:42:04.715422+00:00",
+  "generated_at": "2026-11-02T22:20:55.750782+00:00",
   "enabled_sources": 119,
   "sources_ok": 119,
   "sources_failed": 0,
   "coverage_status": "degraded",
   "counts": {
-   "observed": 1683,
-   "old": 1218,
-   "future": 12,
-   "undated": 252,
-   "new": 107,
-   "duplicates": 346
+   "observed": 2019,
+   "old": 1491,
+   "future": 11,
+   "undated": 300,
+   "new": 98,
+   "duplicates": 419
   },
-  "current_dated_documents": 353
+  "current_dated_documents": 225
  },
  "new_today": {
-  "count": 107,
+  "count": 98,
   "by_source": {
-   "us-federal-register": 102,
-   "in-rbi-cc71120b98": 3,
-   "jp-boj-d488538690": 2
+   "us-doj-b3d27e1dc3": 15,
+   "uk-govuk-decision": 10,
+   "io-bis-140216a5b6": 7,
+   "uk-govuk-product_safety_alert_report_recall": 6,
+   "us-fcc-e95ecda3bb": 6,
+   "us-fda-5696b24295": 5,
+   "hk-hkma-public-press": 4,
+   "us-fcc-eeb7d739be": 4,
+   "us-govinfo-dcpd": 3,
+   "us-ustr-index": 3,
+   "us-fda-03f7703006": 3,
+   "de-bundesbank-027ac4024f": 3,
+   "de-bundesbank-fe89ad3ac9": 3,
+   "us-govinfo-crpt": 2,
+   "uk-fca-7b9977ec8e": 2,
+   "in-rbi-cc71120b98": 2,
+   "ch-snb-b0f42db828": 2,
+   "uk-govuk-consultation_outcome": 1,
+   "us-sec-2476f14c28": 1,
+   "us-ftc-58b0383166": 1,
+   "us-doj-e05071794d": 1,
+   "us-fda-00e9311ef2": 1,
+   "us-hhs-6f995a5754": 1,
+   "us-dol-99f477805a": 1,
+   "us-nlrb-3db5e72bf9": 1,
+   "us-nlrb-7c63020d7d": 1,
+   "us-dot-6464bc66ac": 1,
+   "eu-council-9d9e9444da": 1,
+   "eu-ecb-991c113079": 1,
+   "eu-ecb-fb5fd59aed": 1,
+   "ca-boc-1f26bb2971": 1,
+   "ca-boc-30d6d14378": 1,
+   "nz-rbnz-gnews": 1,
+   "de-bundesbank-e5b1c4a067": 1,
+   "io-wto-497f28e20d": 1
   },
   "by_class": {
-   "high": 14,
-   "routine": 88,
-   "watch": 5
+   "watch": 45,
+   "high": 12,
+   "routine": 31,
+   "docket": 9,
+   "noise": 1
   }
  },
  "parsed_today": {
-  "count": 35,
+  "count": 132,
   "by_class": {
-   "high": 14,
-   "routine": 16,
-   "watch": 5
+   "high": 26,
+   "routine": 49,
+   "watch": 51,
+   "docket": 9,
+   "noise": 1
   }
  },
  "n_failures": 0,

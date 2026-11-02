@@ -1,0 +1,99 @@
+{
+  "date": "2026-11-02",
+  "generated_at": "2026-11-02T16:34:40.924013-05:00",
+  "timezone": "America/New_York",
+  "source": "live",
+  "source_url": "https://elite.finviz.com/",
+  "archive_snapshot_ts": null,
+  "archive_snapshot_at": null,
+  "archive_url": null,
+  "clock_legal": true,
+  "clock_same_morning": false,
+  "clock_use": "next_open",
+  "clock_legal_for": "2026-11-03",
+  "capture_slot": "close",
+  "clock_rule": "Live post-close answer-key (~16:05 ET). Always next_open for the NEXT session (2026-11-03) — never same_morning. Writes *_finviz_market_digest_close.* only. Capture only — not tape_anchor / predict / #210.",
+  "kind": "finviz_homepage_market_digest_close",
+  "represents": "Finviz homepage post-close answer-key. clock_use is always next_open; clock_legal_for is the next NYSE session. Lives at *_finviz_market_digest_close.*. Does not replace the same_morning warm-up file. Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "US stocks closed mixed as crude tumbled on US–Iran diplomacy hopes, with lingering AI-related pressure still in focus ahead of Apple earnings and US midterm elections",
+  "raw_text": "- The Dow Jones Industrial Average ($DJI) rose about 0.4% to 51,984, the S&P 500 ($SPX) slipped about 0.5% to 7,541, and the Nasdaq Composite ($COMP) fell about 1.1% to 25,164, as lingering AI-related pressure weighed on growth stocks.\n- Crude oil (@CL) fell about 8% on prospects of a US–Iran diplomatic breakthrough that could ease Middle East supply risks, weighing on energy shares.\n- Energy underperformed as ExxonMobil (XOM) fell about 4%, while the crude slide boosted consumer discretionary stocks, with Amazon (AMZN) up about 2% after Phillip Securities upgraded the shares to Buy, citing AI positioning.\n- Mohawk Industries (MHK) climbed about 7% after announcing a share repurchase program.\n- Oracle (ORCL) dropped about 9% after announcing a $10 billion stock offering as part of a $20 billion capital-raising plan to fund its AI cloud buildout.\n- Marvell Technology (MRVL) slid about 13% and Lumentum (LITE) plunged about 19% after unveiling a $115 billion all-stock deal, a data center AI combination drawing comparisons to dot-com-era excess.\n- ISM Manufacturing PMI showed expansion in October but with input prices still elevated, as investors continued to scrutinize heavy AI-related capital spending.\n- Microsoft (MSFT) fell about 3% as it announced an expanded strategic collaboration with Lumen to co-sell enterprise AI-ready network solutions to joint customers.\n- Apple (AAPL) is scheduled to announce Q4 results after the close with iPhone sales in focus, while Nasdaq 100 futures (@NQ) fell more than 1%.\n- Investors now turn to tonight’s US midterm election results and another heavy batch of corporate earnings.",
+  "raw_summary_md": "- The **Dow Jones Industrial Average** ([$DJI](https://finviz.com/index/DJI?p=d)) **rose about 0.4% to 51,984**, the **S&P 500** ([$SPX](https://finviz.com/index/SPX?p=d)) **slipped about 0.5% to 7,541**, and the **Nasdaq Composite** ([$COMP](https://finviz.com/index/COMP?p=d)) **fell about 1.1% to 25,164**, as lingering **AI-related pressure** weighed on growth stocks.\n- **Crude oil** ([@CL](https://finviz.com/futures_charts?t=CL)) **fell about 8%** on prospects of a **US–Iran diplomatic breakthrough** that could ease Middle East supply risks, weighing on **energy shares**.\n- **Energy underperformed** as **ExxonMobil** ([XOM](https://finviz.com/quote?t=XOM)) **fell about 4%**, while the crude slide boosted **consumer discretionary stocks**, with **Amazon** ([AMZN](https://finviz.com/quote?t=AMZN)) **up about 2% after Phillip Securities upgraded the shares to Buy**, citing **AI positioning**.\n- **Mohawk Industries** ([MHK](https://finviz.com/quote?t=MHK)) **climbed about 7%** after announcing a **share repurchase program**.\n- **Oracle** ([ORCL](https://finviz.com/quote?t=ORCL)) **dropped about 9%** after announcing a **$10 billion stock offering** as part of a **$20 billion capital-raising plan** to fund its **AI cloud buildout**.\n- **Marvell Technology** ([MRVL](https://finviz.com/quote?t=MRVL)) **slid about 13%** and **Lumentum** ([LITE](https://finviz.com/quote?t=LITE)) **plunged about 19%** after unveiling a **$115 billion all-stock deal**, a **data center AI combination** drawing comparisons to **dot-com-era excess**.\n- **ISM Manufacturing PMI** showed **expansion in October** but with **input prices still elevated**, as investors continued to scrutinize heavy **AI-related capital spending**.\n- **Microsoft** ([MSFT](https://finviz.com/quote?t=MSFT)) **fell about 3%** as it announced an **expanded strategic collaboration with Lumen** to co-sell **enterprise AI-ready network solutions** to joint customers.\n- **Apple** ([AAPL](https://finviz.com/quote?t=AAPL)) is scheduled to announce **Q4 results** after the close with **iPhone sales in focus**, while **Nasdaq 100 futures** ([@NQ](https://finviz.com/futures_charts?t=NQ)) **fell more than 1%**.\n- Investors now turn to tonight’s **US midterm election results** and another **heavy batch of corporate earnings**.",
+  "index_moves": [
+    {
+      "name": "Dow Jones Industrial Average",
+      "code": "DJI",
+      "change_pct": 0.4,
+      "verb": "rose"
+    },
+    {
+      "name": "S&P 500",
+      "code": "SPX",
+      "change_pct": -0.5,
+      "verb": "slipped"
+    },
+    {
+      "name": "Nasdaq Composite",
+      "code": "COMP",
+      "change_pct": -1.1,
+      "verb": "fell"
+    }
+  ],
+  "oil": null,
+  "cpi": null,
+  "fed_odds": null,
+  "named_tickers": [
+    "XOM",
+    "AMZN",
+    "MHK",
+    "ORCL",
+    "MRVL",
+    "LITE",
+    "MSFT",
+    "AAPL"
+  ],
+  "named_leaders": [
+    "XOM",
+    "AMZN",
+    "MHK",
+    "ORCL",
+    "MRVL",
+    "LITE",
+    "MSFT",
+    "AAPL"
+  ],
+  "calendar": [],
+  "prior_close": {
+    "spx": -0.5,
+    "nasdaq": -1.1,
+    "dow": 0.4
+  },
+  "cpi_fed": {
+    "cpi": null,
+    "fed_odds": null
+  },
+  "next_session_calendar": {
+    "housing": false,
+    "retail": false,
+    "fed": false,
+    "bullets": [],
+    "text": ""
+  },
+  "earnings_slate": {
+    "tickers": [],
+    "text": ""
+  },
+  "geo_grain": {
+    "geo": true,
+    "grain": false,
+    "flags": [
+      "geo"
+    ],
+    "text": "Crude oil (@CL) fell about 8% on prospects of a US–Iran diplomatic breakthrough that could ease Middle East supply risks, weighing on energy shares."
+  },
+  "finviz_id": 326419,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-11-02T16:07:48.507",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "bad"
+}

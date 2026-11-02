@@ -2,7 +2,7 @@
  "strategy": "updown_rel1_hv_v1",
  "label": "paper only \u2014 failed multiple-testing haircut (t 2.02 vs 3.37)",
  "days_locked": 19,
- "days_realized": 17,
+ "days_realized": 18,
  "days_missed": 0,
  "missed_dates": [],
  "rule": {
@@ -11,44 +11,44 @@
   "missed": "Missed days (not frozen before 09:25 ET) are recorded in MISSED.jsonl, never back-filled, and earn nothing."
  },
  "gross": {
-  "cum": 0.1116257727,
-  "mean_bp": 67.0808488948,
-  "t_nw": 1.7089713031
+  "cum": 0.1065733202,
+  "mean_bp": 60.8290784424,
+  "t_nw": 1.7250101773
  },
  "net5": {
-  "cum": 0.0875093823,
-  "mean_bp": 54.1514371301,
-  "t_nw": 1.3639359954
+  "cum": 0.0814790319,
+  "mean_bp": 48.0624117757,
+  "t_nw": 1.3458499386
  },
  "net10": {
-  "cum": 0.0638846488,
-  "mean_bp": 41.2220253653,
-  "t_nw": 1.0265330954
+  "cum": 0.0569214153,
+  "mean_bp": 35.2957451091,
+  "t_nw": 0.9759374218
  },
  "net15": {
-  "cum": 0.0407421899,
-  "mean_bp": 28.2926136006,
-  "t_nw": 0.6966102416
+  "cum": 0.0328896841,
+  "mean_bp": 22.5290784424,
+  "t_nw": 0.6151103021
  },
  "hedged_net10": {
-  "cum": -0.0124002295,
-  "mean_bp": -3.3370445425,
-  "t_nw": -0.0563324997
+  "cum": -0.0193405291,
+  "mean_bp": -7.0563364501,
+  "t_nw": -0.129835108
  },
  "iwm_oo1": {
-  "cum": 0.0133692766,
-  "mean_bp": 8.2438744591,
-  "t_nw": 0.4452246981
+  "cum": 0.0121833411,
+  "mean_bp": 7.1357205204,
+  "t_nw": 0.4143979114
  },
  "rand_med_net10": {
-  "cum": -0.0580406934,
-  "mean_bp": -35.1094768078,
-  "t_nw": -38.4784266389
+  "cum": -0.0613497813,
+  "mean_bp": -35.1106080858,
+  "t_nw": -40.7177860769
  },
  "best_stock": "TTMI",
  "best_stock_contrib": 0.0123006279,
- "net10_ex_best_cum": 0.0513343568,
- "mean_turnover": 2.5858823529,
- "status": "collecting (17 realized days; kill check from day 20/60, promotion review not before day 120)",
+ "net10_ex_best_cum": 0.0444532663,
+ "mean_turnover": 2.5533333333,
+ "status": "collecting (18 realized days; kill check from day 20/60, promotion review not before day 120)",
  "killed": false
 }

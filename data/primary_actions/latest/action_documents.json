@@ -1,5 +1,425 @@
 [
   {
+    "title": "DCPD-202600574 - Remarks During a Rose Garden Club Dinner",
+    "url": "https://www.govinfo.gov/app/details/DCPD-202600574",
+    "native_id": "DCPD-202600574",
+    "published_at": "2026-11-02T22:09:00+00:00",
+    "published_raw": "Mon, 02 Nov 2026 22:09:00 +0000",
+    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "presidential_document",
+      "document_stage": "presidential_document_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Compilation of Presidential Documents",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-dcpd",
+    "n": 8084,
+    "first_seen": "2026-11-02T22:20:55.750782+00:00",
+    "last_seen": "2026-11-02T22:20:55.750782+00:00",
+    "source_ids": [
+      "us-govinfo-dcpd"
+    ]
+  },
+  {
+    "title": "DCPD-202600663 - Remarks in an Exchange With Reporters During a Tour of Peterbilt Motors Company in Denton, Texas",
+    "url": "https://www.govinfo.gov/app/details/DCPD-202600663",
+    "native_id": "DCPD-202600663",
+    "published_at": "2026-11-02T22:09:00+00:00",
+    "published_raw": "Mon, 02 Nov 2026 22:09:00 +0000",
+    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "presidential_document",
+      "document_stage": "presidential_document_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Compilation of Presidential Documents",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-dcpd",
+    "n": 8083,
+    "first_seen": "2026-11-02T22:20:55.750782+00:00",
+    "last_seen": "2026-11-02T22:20:55.750782+00:00",
+    "source_ids": [
+      "us-govinfo-dcpd"
+    ]
+  },
+  {
+    "title": "DCPD-202600662 - Remarks and an Exchange With Reporters Upon Arrival in Dallas, Texas",
+    "url": "https://www.govinfo.gov/app/details/DCPD-202600662",
+    "native_id": "DCPD-202600662",
+    "published_at": "2026-11-02T22:09:00+00:00",
+    "published_raw": "Mon, 02 Nov 2026 22:09:00 +0000",
+    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "presidential_document",
+      "document_stage": "presidential_document_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Compilation of Presidential Documents",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-dcpd",
+    "n": 8082,
+    "first_seen": "2026-11-02T22:20:55.750782+00:00",
+    "last_seen": "2026-11-02T22:20:55.750782+00:00",
+    "source_ids": [
+      "us-govinfo-dcpd"
+    ]
+  },
+  {
+    "title": "CAC Outcome: Unite the Union & Calor Gas Limited (4)",
+    "url": "https://www.gov.uk/government/publications/cac-outcome-unite-the-union-calor-gas-limited-4",
+    "native_id": "/government/publications/cac-outcome-unite-the-union-calor-gas-limited-4",
+    "published_at": "2026-11-02T16:02:30+00:00",
+    "published_raw": "2026-11-02T16:02:30Z",
+    "document_type": "decision",
+    "issuer": "Central Arbitration Committee",
+    "issuer_ids": [
+      "uk-gov:central-arbitration-committee"
+    ],
+    "summary": "Outcome(s) by the Central Arbitration Committee on an application from Unite the Union.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Central Arbitration Committee",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 8065,
+    "first_seen": "2026-11-02T22:20:55.750782+00:00",
+    "last_seen": "2026-11-02T22:20:55.750782+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Teacher misconduct panel outcome: Mr Anton Van Der Watt",
+    "url": "https://www.gov.uk/government/publications/teacher-misconduct-panel-outcome-mr-anton-van-der-watt",
+    "native_id": "/government/publications/teacher-misconduct-panel-outcome-mr-anton-van-der-watt",
+    "published_at": "2026-11-02T16:02:04+00:00",
+    "published_raw": "2026-11-02T16:02:04Z",
+    "document_type": "decision",
+    "issuer": "Teaching Regulation Agency",
+    "issuer_ids": [
+      "uk-gov:teaching-regulation-agency"
+    ],
+    "summary": "Professional conduct panel outcome, including decision and reasons.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Teaching Regulation Agency",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 8066,
+    "first_seen": "2026-11-02T22:20:55.750782+00:00",
+    "last_seen": "2026-11-02T22:20:55.750782+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Darren Jones - former Chief Secretary to the Prime Minister, Chancellor of the Duchy of Lancaster and Minister for Intergovernmental Relations, Cabinet Office - advice under the government's Business Appointment Rules",
+    "url": "https://www.gov.uk/government/publications/darren-jones-former-chief-secretary-to-the-prime-minister-chancellor-of-the-duchy-of-lancaster-and-minister-for-intergovernmental-relations-cabinet-of",
+    "native_id": "/government/publications/darren-jones-former-chief-secretary-to-the-prime-minister-chancellor-of-the-duchy-of-lancaster-and-minister-for-intergovernmental-relations-cabinet-of",
+    "published_at": "2026-11-02T15:57:45+00:00",
+    "published_raw": "2026-11-02T15:57:45Z",
+    "document_type": "decision",
+    "issuer": "Independent Adviser on Ministerial Standards",
+    "issuer_ids": [
+      "uk-gov:independent-adviser-on-ministers-interests"
+    ],
+    "summary": "Advice provided to the Rt Hon Darren Jones MP, former Chief Secretary to the Prime Minister, Chancellor of the Duchy of Lancaster and Minister for Intergovernmental Relations, Cabinet Office and, previously, Chief Secretary to the Treasury, HM Treasury, on appointments and employment taken up within two years of leaving office",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Independent Adviser on Ministerial Standards",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 8067,
+    "first_seen": "2026-11-02T22:20:55.750782+00:00",
+    "last_seen": "2026-11-02T22:20:55.750782+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Rachel Reeves - former Chancellor of the Exchequer, HM Treasury - advice under the government’s Business Appointment Rules",
+    "url": "https://www.gov.uk/government/publications/rachel-reeves-former-chancellor-of-the-exchequer-hm-treasury-advice-under-the-governments-business-appointment-rules",
+    "native_id": "/government/publications/rachel-reeves-former-chancellor-of-the-exchequer-hm-treasury-advice-under-the-governments-business-appointment-rules",
+    "published_at": "2026-11-02T15:57:33+00:00",
+    "published_raw": "2026-11-02T15:57:33Z",
+    "document_type": "decision",
+    "issuer": "Independent Adviser on Ministerial Standards",
+    "issuer_ids": [
+      "uk-gov:independent-adviser-on-ministers-interests"
+    ],
+    "summary": "Advice provided to The Rt Hon Rachel Reeves MP, former Chancellor of the Exchequer at HM Treasury, on appointments and employment taken up within two years of leaving office",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Independent Adviser on Ministerial Standards",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 7370,
+    "first_seen": "2026-10-29T18:58:38.270102+00:00",
+    "last_seen": "2026-11-02T22:20:55.750782+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "David Lammy - former Deputy Prime Minister, Lord Chancellor and Secretary of State for Justice, Ministry of Justice - advice under the Business Appointment Rules",
+    "url": "https://www.gov.uk/government/publications/david-lammy-former-deputy-prime-minister-lord-chancellor-and-secretary-of-state-for-justice-ministry-of-justice-advice-under-the-business-appointment-",
+    "native_id": "/government/publications/david-lammy-former-deputy-prime-minister-lord-chancellor-and-secretary-of-state-for-justice-ministry-of-justice-advice-under-the-business-appointment-",
+    "published_at": "2026-11-02T15:57:07+00:00",
+    "published_raw": "2026-11-02T15:57:07Z",
+    "document_type": "decision",
+    "issuer": "Independent Adviser on Ministerial Standards",
+    "issuer_ids": [
+      "uk-gov:independent-adviser-on-ministers-interests"
+    ],
+    "summary": "Advice provided to The Rt Hon David Lammy MP, former Deputy Prime Minister, Lord Chancellor and Secretary of State for Justice at the Ministry of Justice, on appointments and employment taken up within two years of leaving office",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Independent Adviser on Ministerial Standards",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 8068,
+    "first_seen": "2026-11-02T22:20:55.750782+00:00",
+    "last_seen": "2026-11-02T22:20:55.750782+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Orphan registered medicinal products",
+    "url": "https://www.gov.uk/government/publications/orphan-registered-medicinal-products",
+    "native_id": "/government/publications/orphan-registered-medicinal-products",
+    "published_at": "2026-11-02T15:36:10+00:00",
+    "published_raw": "2026-11-02T15:36:10Z",
+    "document_type": "decision",
+    "issuer": "Medicines and Healthcare products Regulatory Agency",
+    "issuer_ids": [
+      "uk-gov:medicines-and-healthcare-products-regulatory-agency"
+    ],
+    "summary": "A list of authorised orphan medicinal products registered by the UK licensing authority.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Medicines and Healthcare products Regulatory Agency",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 4,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-11-02T22:20:55.750782+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Fishing opportunities for British fishing boats: determinations published in 2026",
+    "url": "https://www.gov.uk/government/publications/fishing-opportunities-for-british-fishing-boats-determinations-published-in-2026",
+    "native_id": "/government/publications/fishing-opportunities-for-british-fishing-boats-determinations-published-in-2026",
+    "published_at": "2026-11-02T15:00:03+00:00",
+    "published_raw": "2026-11-02T15:00:03Z",
+    "document_type": "decision",
+    "issuer": "Department for Environment, Food & Rural Affairs",
+    "issuer_ids": [
+      "uk-gov:department-for-environment-food-rural-affairs"
+    ],
+    "summary": "This sets out fishing opportunities for British fishing boats for certain fish stocks and groups of fish stocks published in 2026.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Department for Environment, Food & Rural Affairs",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 8069,
+    "first_seen": "2026-11-02T22:20:55.750782+00:00",
+    "last_seen": "2026-11-02T22:20:55.750782+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Company Names Tribunal decision: Lloyds Group Limited",
+    "url": "https://www.gov.uk/government/publications/company-names-tribunal-decision-lloyds-group-limited",
+    "native_id": "/government/publications/company-names-tribunal-decision-lloyds-group-limited",
+    "published_at": "2026-11-02T14:34:46+00:00",
+    "published_raw": "2026-11-02T14:34:46Z",
+    "document_type": "decision",
+    "issuer": "Company Names Tribunal",
+    "issuer_ids": [
+      "uk-gov:company-names-tribunal"
+    ],
+    "summary": "Decision for applicant Lloyds Bank Plc registration number 16847716 applicant successful.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Company Names Tribunal",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 8070,
+    "first_seen": "2026-11-02T22:20:55.750782+00:00",
+    "last_seen": "2026-11-02T22:20:55.750782+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Company Names Tribunal decision: Wolex Properties Limited",
+    "url": "https://www.gov.uk/government/publications/company-names-tribunal-decision-wolex-properties-limited",
+    "native_id": "/government/publications/company-names-tribunal-decision-wolex-properties-limited",
+    "published_at": "2026-11-02T14:34:22+00:00",
+    "published_raw": "2026-11-02T14:34:22Z",
+    "document_type": "decision",
+    "issuer": "Company Names Tribunal",
+    "issuer_ids": [
+      "uk-gov:company-names-tribunal"
+    ],
+    "summary": "Decision for applicant Rolex SA registration number 16907313 applicant successful.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Company Names Tribunal",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 8071,
+    "first_seen": "2026-11-02T22:20:55.750782+00:00",
+    "last_seen": "2026-11-02T22:20:55.750782+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "CAC Outcome: Prospect & MUBI UK LIMITED",
+    "url": "https://www.gov.uk/government/publications/cac-outcome-prospect-mubi-uk-limited",
+    "native_id": "/government/publications/cac-outcome-prospect-mubi-uk-limited",
+    "published_at": "2026-11-02T13:01:30+00:00",
+    "published_raw": "2026-11-02T13:01:30Z",
+    "document_type": "decision",
+    "issuer": "Central Arbitration Committee",
+    "issuer_ids": [
+      "uk-gov:central-arbitration-committee"
+    ],
+    "summary": "Outcome(s) by the Central Arbitration Committee on an application from Prospect.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Central Arbitration Committee",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 8072,
+    "first_seen": "2026-11-02T22:20:55.750782+00:00",
+    "last_seen": "2026-11-02T22:20:55.750782+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "CAC Outcome: RMT & GE Energy (UK) Limited",
+    "url": "https://www.gov.uk/government/publications/cac-outcome-rmt-ge-energy-uk-limited",
+    "native_id": "/government/publications/cac-outcome-rmt-ge-energy-uk-limited",
+    "published_at": "2026-11-02T13:01:17+00:00",
+    "published_raw": "2026-11-02T13:01:17Z",
+    "document_type": "decision",
+    "issuer": "Central Arbitration Committee",
+    "issuer_ids": [
+      "uk-gov:central-arbitration-committee"
+    ],
+    "summary": "Outcome(s) by the Central Arbitration Committee on an application from RMT.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Central Arbitration Committee",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 8073,
+    "first_seen": "2026-11-02T22:20:55.750782+00:00",
+    "last_seen": "2026-11-02T22:20:55.750782+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Compulsory purchase orders: Register of decisions",
+    "url": "https://www.gov.uk/government/publications/compulsory-purchase-orders-register-of-decisions",
+    "native_id": "/government/publications/compulsory-purchase-orders-register-of-decisions",
+    "published_at": "2026-11-02T11:50:00+00:00",
+    "published_raw": "2026-11-02T11:50:00Z",
+    "document_type": "decision",
+    "issuer": "Ministry of Housing, Communities and Local Government",
+    "issuer_ids": [
+      "uk-gov:ministry-of-housing-communities-local-government"
+    ],
+    "summary": "Register of decisions on the confirmation of compulsory purchase orders in England.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Ministry of Housing, Communities and Local Government",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 8074,
+    "first_seen": "2026-11-02T22:20:55.750782+00:00",
+    "last_seen": "2026-11-02T22:20:55.750782+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
     "title": "Conforming Amendment Regarding the Criminal Law Technical Amendments Act of 2002",
     "url": "https://www.federalregister.gov/documents/2026/11/02/2026-22285/conforming-amendment-regarding-the-criminal-law-technical-amendments-act-of-2002",
     "native_id": "2026-22285",
@@ -25,7 +445,7 @@
     "primary_source_id": "us-federal-register",
     "n": 8022,
     "first_seen": "2026-11-02T07:42:04.715422+00:00",
-    "last_seen": "2026-11-02T07:42:04.715422+00:00",
+    "last_seen": "2026-11-02T22:20:55.750782+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -56,7 +476,7 @@
     "primary_source_id": "us-federal-register",
     "n": 8012,
     "first_seen": "2026-11-02T07:42:04.715422+00:00",
-    "last_seen": "2026-11-02T07:42:04.715422+00:00",
+    "last_seen": "2026-11-02T22:20:55.750782+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -87,7 +507,7 @@
     "primary_source_id": "us-federal-register",
     "n": 8002,
     "first_seen": "2026-11-02T07:42:04.715422+00:00",
-    "last_seen": "2026-11-02T07:42:04.715422+00:00",
+    "last_seen": "2026-11-02T22:20:55.750782+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -118,7 +538,7 @@
     "primary_source_id": "us-federal-register",
     "n": 8001,
     "first_seen": "2026-11-02T07:42:04.715422+00:00",
-    "last_seen": "2026-11-02T07:42:04.715422+00:00",
+    "last_seen": "2026-11-02T22:20:55.750782+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -149,7 +569,7 @@
     "primary_source_id": "us-federal-register",
     "n": 7998,
     "first_seen": "2026-11-02T07:42:04.715422+00:00",
-    "last_seen": "2026-11-02T07:42:04.715422+00:00",
+    "last_seen": "2026-11-02T22:20:55.750782+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -180,7 +600,7 @@
     "primary_source_id": "us-federal-register",
     "n": 7992,
     "first_seen": "2026-11-02T07:42:04.715422+00:00",
-    "last_seen": "2026-11-02T07:42:04.715422+00:00",
+    "last_seen": "2026-11-02T22:20:55.750782+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -211,7 +631,7 @@
     "primary_source_id": "us-federal-register",
     "n": 7991,
     "first_seen": "2026-11-02T07:42:04.715422+00:00",
-    "last_seen": "2026-11-02T07:42:04.715422+00:00",
+    "last_seen": "2026-11-02T22:20:55.750782+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -241,7 +661,7 @@
     "primary_source_id": "us-federal-register",
     "n": 7975,
     "first_seen": "2026-11-02T07:42:04.715422+00:00",
-    "last_seen": "2026-11-02T07:42:04.715422+00:00",
+    "last_seen": "2026-11-02T22:20:55.750782+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -271,7 +691,7 @@
     "primary_source_id": "us-federal-register",
     "n": 7955,
     "first_seen": "2026-11-02T07:42:04.715422+00:00",
-    "last_seen": "2026-11-02T07:42:04.715422+00:00",
+    "last_seen": "2026-11-02T22:20:55.750782+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -301,476 +721,9 @@
     "primary_source_id": "us-federal-register",
     "n": 7954,
     "first_seen": "2026-11-02T07:42:04.715422+00:00",
-    "last_seen": "2026-11-02T07:42:04.715422+00:00",
+    "last_seen": "2026-11-02T22:20:55.750782+00:00",
     "source_ids": [
       "us-federal-register"
-    ]
-  },
-  {
-    "title": "DCPD-202600660 - Presidential Determination on the Revocation of Presidential Determinations Related to Lebanon",
-    "url": "https://www.govinfo.gov/app/details/DCPD-202600660",
-    "native_id": "DCPD-202600660",
-    "published_at": "2026-10-30T21:16:00+00:00",
-    "published_raw": "Fri, 30 Oct 2026 21:16:00 +0000",
-    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "presidential_document",
-      "document_stage": "presidential_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Compilation of Presidential Documents",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-dcpd",
-    "n": 7895,
-    "first_seen": "2026-10-31T07:20:30.145427+00:00",
-    "last_seen": "2026-10-31T07:20:30.145427+00:00",
-    "source_ids": [
-      "us-govinfo-dcpd"
-    ]
-  },
-  {
-    "title": "DCPD-202600659 - Notice-Continuation of the National Emergency With Respect to the Situation in and in Relation to Syria",
-    "url": "https://www.govinfo.gov/app/details/DCPD-202600659",
-    "native_id": "DCPD-202600659",
-    "published_at": "2026-10-30T21:16:00+00:00",
-    "published_raw": "Fri, 30 Oct 2026 21:16:00 +0000",
-    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "presidential_document",
-      "document_stage": "presidential_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Compilation of Presidential Documents",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-dcpd",
-    "n": 7894,
-    "first_seen": "2026-10-31T07:20:30.145427+00:00",
-    "last_seen": "2026-10-31T07:20:30.145427+00:00",
-    "source_ids": [
-      "us-govinfo-dcpd"
-    ]
-  },
-  {
-    "title": "DCPD-202600657 - Remarks at a National Hispanic Heritage Month Celebration",
-    "url": "https://www.govinfo.gov/app/details/DCPD-202600657",
-    "native_id": "DCPD-202600657",
-    "published_at": "2026-10-30T21:16:00+00:00",
-    "published_raw": "Fri, 30 Oct 2026 21:16:00 +0000",
-    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "presidential_document",
-      "document_stage": "presidential_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Compilation of Presidential Documents",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-dcpd",
-    "n": 7893,
-    "first_seen": "2026-10-31T07:20:30.145427+00:00",
-    "last_seen": "2026-10-31T07:20:30.145427+00:00",
-    "source_ids": [
-      "us-govinfo-dcpd"
-    ]
-  },
-  {
-    "title": "Public Law 119 - 111 - Lindsey O. Graham Sanctioning Russia and Iran Act of 2026",
-    "url": "https://www.govinfo.gov/app/details/PLAW-119publ111",
-    "native_id": "PLAW-119publ111",
-    "published_at": "2026-10-30T15:31:04+00:00",
-    "published_raw": "Fri, 30 Oct 2026 15:31:04 +0000",
-    "summary": "Content Files PDF TEXT USLM Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "public_law",
-      "document_stage": "law_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Public and Private Laws",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-plaw",
-    "n": 7712,
-    "first_seen": "2026-10-30T18:57:21.617502+00:00",
-    "last_seen": "2026-10-30T18:57:21.617502+00:00",
-    "source_ids": [
-      "us-govinfo-plaw"
-    ]
-  },
-  {
-    "title": "Public Law 119 - 104 - Hershel `Woody' Williams National Medal of Honor Monument Location Act",
-    "url": "https://www.govinfo.gov/app/details/PLAW-119publ104",
-    "native_id": "PLAW-119publ104",
-    "published_at": "2026-10-30T15:31:04+00:00",
-    "published_raw": "Fri, 30 Oct 2026 15:31:04 +0000",
-    "summary": "Content Files PDF TEXT USLM Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "public_law",
-      "document_stage": "law_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Public and Private Laws",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-plaw",
-    "n": 7711,
-    "first_seen": "2026-10-30T18:57:21.617502+00:00",
-    "last_seen": "2026-10-30T18:57:21.617502+00:00",
-    "source_ids": [
-      "us-govinfo-plaw"
-    ]
-  },
-  {
-    "title": "Public Law 119 - 108 - Doug LaMalfa Federal Disaster Tax Relief Certainty Act",
-    "url": "https://www.govinfo.gov/app/details/PLAW-119publ108",
-    "native_id": "PLAW-119publ108",
-    "published_at": "2026-10-30T15:31:04+00:00",
-    "published_raw": "Fri, 30 Oct 2026 15:31:04 +0000",
-    "summary": "Content Files PDF TEXT USLM Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "public_law",
-      "document_stage": "law_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Public and Private Laws",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-plaw",
-    "n": 7710,
-    "first_seen": "2026-10-30T18:57:21.617502+00:00",
-    "last_seen": "2026-10-30T18:57:21.617502+00:00",
-    "source_ids": [
-      "us-govinfo-plaw"
-    ]
-  },
-  {
-    "title": "Public Law 119 - 107 - National Emergency Medical Services Memorial Extension Act",
-    "url": "https://www.govinfo.gov/app/details/PLAW-119publ107",
-    "native_id": "PLAW-119publ107",
-    "published_at": "2026-10-30T15:31:03+00:00",
-    "published_raw": "Fri, 30 Oct 2026 15:31:03 +0000",
-    "summary": "Content Files PDF TEXT USLM Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "public_law",
-      "document_stage": "law_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Public and Private Laws",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-plaw",
-    "n": 7709,
-    "first_seen": "2026-10-30T18:57:21.617502+00:00",
-    "last_seen": "2026-10-30T18:57:21.617502+00:00",
-    "source_ids": [
-      "us-govinfo-plaw"
-    ]
-  },
-  {
-    "title": "Public Law 119 - 105 - An act to remove restrictions from a parcel of land in Paducah, Kentucky.",
-    "url": "https://www.govinfo.gov/app/details/PLAW-119publ105",
-    "native_id": "PLAW-119publ105",
-    "published_at": "2026-10-30T15:30:11+00:00",
-    "published_raw": "Fri, 30 Oct 2026 15:30:11 +0000",
-    "summary": "Content Files PDF TEXT USLM Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "public_law",
-      "document_stage": "law_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Public and Private Laws",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-plaw",
-    "n": 7708,
-    "first_seen": "2026-10-30T18:57:21.617502+00:00",
-    "last_seen": "2026-10-30T18:57:21.617502+00:00",
-    "source_ids": [
-      "us-govinfo-plaw"
-    ]
-  },
-  {
-    "title": "Public Law 119 - 103 - Continuing Appropriations and Extensions Act, 2027",
-    "url": "https://www.govinfo.gov/app/details/PLAW-119publ103",
-    "native_id": "PLAW-119publ103",
-    "published_at": "2026-10-30T15:30:11+00:00",
-    "published_raw": "Fri, 30 Oct 2026 15:30:11 +0000",
-    "summary": "Content Files PDF TEXT USLM Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "public_law",
-      "document_stage": "law_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Public and Private Laws",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-plaw",
-    "n": 7707,
-    "first_seen": "2026-10-30T18:57:21.617502+00:00",
-    "last_seen": "2026-10-30T18:57:21.617502+00:00",
-    "source_ids": [
-      "us-govinfo-plaw"
-    ]
-  },
-  {
-    "title": "Public Law 119 - 106 - Stop Secret Spending Act of 2025",
-    "url": "https://www.govinfo.gov/app/details/PLAW-119publ106",
-    "native_id": "PLAW-119publ106",
-    "published_at": "2026-10-30T15:30:11+00:00",
-    "published_raw": "Fri, 30 Oct 2026 15:30:11 +0000",
-    "summary": "Content Files PDF TEXT USLM Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "public_law",
-      "document_stage": "law_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Public and Private Laws",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-plaw",
-    "n": 7706,
-    "first_seen": "2026-10-30T18:57:21.617502+00:00",
-    "last_seen": "2026-10-30T18:57:21.617502+00:00",
-    "source_ids": [
-      "us-govinfo-plaw"
-    ]
-  },
-  {
-    "title": "Public Law 119 - 68 - La Paz County Solar Energy and Job Creation Act",
-    "url": "https://www.govinfo.gov/app/details/PLAW-119publ68",
-    "native_id": "PLAW-119publ68",
-    "published_at": "2026-10-30T15:30:07+00:00",
-    "published_raw": "Fri, 30 Oct 2026 15:30:07 +0000",
-    "summary": "Content Files PDF TEXT USLM Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "public_law",
-      "document_stage": "law_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Public and Private Laws",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-plaw",
-    "n": 7705,
-    "first_seen": "2026-10-30T18:57:21.617502+00:00",
-    "last_seen": "2026-10-30T18:57:21.617502+00:00",
-    "source_ids": [
-      "us-govinfo-plaw"
-    ]
-  },
-  {
-    "title": "Avanti House School: 30 October 2026",
-    "url": "https://www.gov.uk/government/publications/avanti-house-school-30-october-2026",
-    "native_id": "/government/publications/avanti-house-school-30-october-2026",
-    "published_at": "2026-10-30T14:45:25+00:00",
-    "published_raw": "2026-10-30T14:45:25Z",
-    "document_type": "decision",
-    "issuer": "Office of the Schools Adjudicator",
-    "issuer_ids": [
-      "uk-gov:office-of-the-schools-adjudicator"
-    ],
-    "summary": "The schools adjudicator’s objection decision about Avanti House School.",
-    "source_metadata": {
-      "document_type": "decision",
-      "document_stage": "decision_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Office of the Schools Adjudicator",
-      "jurisdiction": "UK",
-      "family": "typed_government_documents"
-    },
-    "primary_source_id": "uk-govuk-decision",
-    "n": 7697,
-    "first_seen": "2026-10-30T18:57:21.617502+00:00",
-    "last_seen": "2026-11-02T07:42:04.715422+00:00",
-    "source_ids": [
-      "uk-govuk-decision"
-    ]
-  },
-  {
-    "title": "Deep Drilling Screening Directions – 2026",
-    "url": "https://www.gov.uk/government/publications/deep-drilling-screening-directions-2026",
-    "native_id": "/government/publications/deep-drilling-screening-directions-2026",
-    "published_at": "2026-10-30T14:11:03+00:00",
-    "published_raw": "2026-10-30T14:11:03Z",
-    "document_type": "decision",
-    "issuer": "Offshore Petroleum Regulator for Environment and Decommissioning",
-    "issuer_ids": [
-      "uk-gov:offshore-petroleum-regulator-for-environment-and-decommissioning"
-    ],
-    "summary": "Screening Directions",
-    "source_metadata": {
-      "document_type": "decision",
-      "document_stage": "decision_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Offshore Petroleum Regulator for Environment and Decommissioning",
-      "jurisdiction": "UK",
-      "family": "typed_government_documents"
-    },
-    "primary_source_id": "uk-govuk-decision",
-    "n": 3303,
-    "first_seen": "2026-10-16T10:36:18.842579+00:00",
-    "last_seen": "2026-11-02T07:42:04.715422+00:00",
-    "source_ids": [
-      "uk-govuk-decision"
-    ]
-  },
-  {
-    "title": "CAC Outcome: RMT & Hitachi Rail Limited",
-    "url": "https://www.gov.uk/government/publications/cac-outcome-rmt-hitachi-rail-limited",
-    "native_id": "/government/publications/cac-outcome-rmt-hitachi-rail-limited",
-    "published_at": "2026-10-30T11:27:03+00:00",
-    "published_raw": "2026-10-30T11:27:03Z",
-    "document_type": "decision",
-    "issuer": "Central Arbitration Committee",
-    "issuer_ids": [
-      "uk-gov:central-arbitration-committee"
-    ],
-    "summary": "Outcome(s) by the Central Arbitration Committee on an application from RMT",
-    "source_metadata": {
-      "document_type": "decision",
-      "document_stage": "decision_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Central Arbitration Committee",
-      "jurisdiction": "UK",
-      "family": "typed_government_documents"
-    },
-    "primary_source_id": "uk-govuk-decision",
-    "n": 7698,
-    "first_seen": "2026-10-30T18:57:21.617502+00:00",
-    "last_seen": "2026-11-02T07:42:04.715422+00:00",
-    "source_ids": [
-      "uk-govuk-decision"
-    ]
-  },
-  {
-    "title": "CAC Outcome: GMB & Radnor Hills Mineral Water Company Limited (2)",
-    "url": "https://www.gov.uk/government/publications/cac-outcome-gmb-radnor-hills-mineral-water-company-limited-2",
-    "native_id": "/government/publications/cac-outcome-gmb-radnor-hills-mineral-water-company-limited-2",
-    "published_at": "2026-10-30T11:26:41+00:00",
-    "published_raw": "2026-10-30T11:26:41Z",
-    "document_type": "decision",
-    "issuer": "Central Arbitration Committee",
-    "issuer_ids": [
-      "uk-gov:central-arbitration-committee"
-    ],
-    "summary": "Outcome(s) by the Central Arbitration Committee on an application from GMB",
-    "source_metadata": {
-      "document_type": "decision",
-      "document_stage": "decision_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Central Arbitration Committee",
-      "jurisdiction": "UK",
-      "family": "typed_government_documents"
-    },
-    "primary_source_id": "uk-govuk-decision",
-    "n": 7699,
-    "first_seen": "2026-10-30T18:57:21.617502+00:00",
-    "last_seen": "2026-11-02T07:42:04.715422+00:00",
-    "source_ids": [
-      "uk-govuk-decision"
-    ]
-  },
-  {
-    "title": "CAC Outcome: TSSA & Thameslink Southern Great Northern Railway Limited",
-    "url": "https://www.gov.uk/government/publications/cac-outcome-tssa-thameslink-southern-great-northern-railway-limited",
-    "native_id": "/government/publications/cac-outcome-tssa-thameslink-southern-great-northern-railway-limited",
-    "published_at": "2026-10-30T11:26:15+00:00",
-    "published_raw": "2026-10-30T11:26:15Z",
-    "document_type": "decision",
-    "issuer": "Central Arbitration Committee",
-    "issuer_ids": [
-      "uk-gov:central-arbitration-committee"
-    ],
-    "summary": "Outcome(s) by the Central Arbitration Committee on an application from TSSA",
-    "source_metadata": {
-      "document_type": "decision",
-      "document_stage": "decision_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Central Arbitration Committee",
-      "jurisdiction": "UK",
-      "family": "typed_government_documents"
-    },
-    "primary_source_id": "uk-govuk-decision",
-    "n": 7700,
-    "first_seen": "2026-10-30T18:57:21.617502+00:00",
-    "last_seen": "2026-11-02T07:42:04.715422+00:00",
-    "source_ids": [
-      "uk-govuk-decision"
-    ]
-  },
-  {
-    "title": "CAC Outcome: RMT & London North Eastern Railway Limited",
-    "url": "https://www.gov.uk/government/publications/cac-outcome-rmt-london-north-eastern-railway-limited",
-    "native_id": "/government/publications/cac-outcome-rmt-london-north-eastern-railway-limited",
-    "published_at": "2026-10-30T11:25:58+00:00",
-    "published_raw": "2026-10-30T11:25:58Z",
-    "document_type": "decision",
-    "issuer": "Central Arbitration Committee",
-    "issuer_ids": [
-      "uk-gov:central-arbitration-committee"
-    ],
-    "summary": "Outcome(s) by the Central Arbitration Committee on an application from RMT.",
-    "source_metadata": {
-      "document_type": "decision",
-      "document_stage": "decision_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Central Arbitration Committee",
-      "jurisdiction": "UK",
-      "family": "typed_government_documents"
-    },
-    "primary_source_id": "uk-govuk-decision",
-    "n": 7701,
-    "first_seen": "2026-10-30T18:57:21.617502+00:00",
-    "last_seen": "2026-11-02T07:42:04.715422+00:00",
-    "source_ids": [
-      "uk-govuk-decision"
-    ]
-  },
-  {
-    "title": "Orphan registered medicinal products",
-    "url": "https://www.gov.uk/government/publications/orphan-registered-medicinal-products",
-    "native_id": "/government/publications/orphan-registered-medicinal-products",
-    "published_at": "2026-10-30T10:20:09+00:00",
-    "published_raw": "2026-10-30T10:20:09Z",
-    "document_type": "decision",
-    "issuer": "Medicines and Healthcare products Regulatory Agency",
-    "issuer_ids": [
-      "uk-gov:medicines-and-healthcare-products-regulatory-agency"
-    ],
-    "summary": "A list of authorised orphan medicinal products registered by the UK licensing authority.",
-    "source_metadata": {
-      "document_type": "decision",
-      "document_stage": "decision_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Medicines and Healthcare products Regulatory Agency",
-      "jurisdiction": "UK",
-      "family": "typed_government_documents"
-    },
-    "primary_source_id": "uk-govuk-decision",
-    "n": 4,
-    "first_seen": "2026-10-15T10:17:11.133023+00:00",
-    "last_seen": "2026-11-02T07:42:04.715422+00:00",
-    "source_ids": [
-      "uk-govuk-decision"
     ]
   }
 ]
