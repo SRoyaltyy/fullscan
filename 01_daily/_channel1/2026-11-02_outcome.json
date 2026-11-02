@@ -1,6 +1,6 @@
 {
   "stage": "outcome",
-  "fetched_at": "2026-11-02T16:36:29.928570-05:00",
+  "fetched_at": "2026-11-02T17:01:23.079977-05:00",
   "fred": {
     "DGS30": {
       "available": true,
@@ -88,41 +88,41 @@
     "CL=F": {
       "available": true,
       "date": "2026-11-02",
-      "last": 96.06,
-      "pct_1d": -7.74
+      "last": 96.1,
+      "pct_1d": -7.7
     },
     "BZ=F": {
       "available": true,
       "date": "2026-11-02",
-      "last": 104.08,
-      "pct_1d": -11.53
+      "last": 104.06,
+      "pct_1d": -11.54
     },
     "GC=F": {
       "available": true,
       "date": "2026-11-02",
-      "last": 3956.4,
-      "pct_1d": 1.47
+      "last": 3957.4,
+      "pct_1d": 1.5
     },
     "DXY": {
       "available": true,
       "date": "2026-11-02",
       "source": "DX-Y.NYB",
-      "pct_1d": -0.11,
-      "pct_1m": -0.16
+      "pct_1d": -0.1,
+      "pct_1m": -0.15
     }
   },
   "futures": {
     "ES=F": {
       "available": true,
       "date": "2026-11-02",
-      "last": 7589.75,
-      "pct_1d": -0.32
+      "last": 7587.5,
+      "pct_1d": -0.35
     },
     "NQ=F": {
       "available": true,
       "date": "2026-11-02",
-      "last": 28242.25,
-      "pct_1d": -1.02
+      "last": 28221.75,
+      "pct_1d": -1.09
     }
   },
   "finviz_futures_tape": {
