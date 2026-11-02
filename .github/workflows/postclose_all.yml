@@ -11,7 +11,7 @@ name: Post-Close ALL (grade + learn + next captains)
 
 on:
   schedule:
-    - cron: "10 20 * * 1-5"   # ~16:10 ET — ubuntu (new cron may skip day 1)
+    - cron: "10 21 * * 1-5"   # ~16:10 ET — ubuntu (new cron may skip day 1)
     - cron: "30 3 * * 2-6"    # ~23:30 ET — ubuntu backup if ECS queued/offline
   # This agent cannot workflow_dispatch (403). A merge of healer code
   # must start ubuntu last-closed the same way book push starts a skip.

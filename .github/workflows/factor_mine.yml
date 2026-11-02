@@ -19,7 +19,7 @@ on:
   schedule:
     # 16:25 ET while EDT (20:25 UTC). Saturday noon UTC catches a Friday
     # close if the evening job died.
-    - cron: "25 20 * * 1-5"
+    - cron: "25 21 * * 1-5"
     - cron: "0 12 * * 6"
   workflow_run:
     workflows:

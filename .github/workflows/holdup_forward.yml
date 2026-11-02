@@ -21,8 +21,8 @@ name: Holdup append-only forward
 
 on:
   schedule:
-    - cron: "5 13 * * 1-5"
-    - cron: "17,41 12 * * 1-5"
+    - cron: "5 14 * * 1-5"
+    - cron: "17,41 13 * * 1-5"
   # Hosted cron ran 4-8 h late on 2026-10-07..16 (always after the open), so
   # also start right after Pre-Open ALL, the same trigger h1 uses.
   workflow_run:

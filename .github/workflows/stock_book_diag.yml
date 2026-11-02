@@ -22,7 +22,7 @@ on:
         default: ""
   schedule:
     # 08:50 ET — after Pre-Open ALL should have written the book
-    - cron: "50 12 * * 1-5"
+    - cron: "50 13 * * 1-5"
 
 permissions:
   contents: read

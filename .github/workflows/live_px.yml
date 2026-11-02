@@ -10,8 +10,10 @@ on:
     # ~15–20 min during RTH. UTC: 14:00–19:40 = 10:00–15:40 ET (EDT).
     # 13:45 = 09:45 ET first post-open tick; 20:00 = 16:00 ET last.
     - cron: "45 13 * * 1-5"
-    - cron: "0,20,40 14-19 * * 1-5"
+    - cron: "45 14 * * 1-5"   # EST twin; in-job NY-time gate
+    - cron: "0,20,40 14-20 * * 1-5"
     - cron: "0 20 * * 1-5"
+    - cron: "0 21 * * 1-5"    # EST twin
   workflow_dispatch:
     inputs:
       run_date:

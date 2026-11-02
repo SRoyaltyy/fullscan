@@ -25,6 +25,10 @@ on:
     # 10-16: GitHub created no run for 09:02 or 09:15. Off-minute backups.
     - cron: "7 13 * * 1-5"    # 09:07 EDT seal backup
     - cron: "19 13 * * 1-5"   # 09:19 EDT seal backup
+    - cron: "2 14 * * 1-5"    # 09:02 EST seal (in-job 09:00-09:25 ET gate)
+    - cron: "7 14 * * 1-5"    # 09:07 EST seal backup
+    - cron: "15 14 * * 1-5"   # 09:15 EST seal fallback
+    - cron: "19 14 * * 1-5"   # 09:19 EST seal backup
     - cron: "40 21 * * 1-5"   # 17:40 EDT book
   workflow_run:
     workflows:
