@@ -27,6 +27,16 @@ on:
   # src.news_actions skip-if-good no-ops when today's actions are landed.
   schedule:
     - cron: '35 10,11 * * 1-5'
+  # 2026-11-02: both crons were dropped/late and Pre-Open skipped actions
+  # with its LLM essays, so nothing made actions.json before 09:25 and the
+  # Webull seal send never got a ready ticket. Chain off the producers;
+  # skip-if-good makes these a no-op when actions are already landed.
+  workflow_run:
+    workflows: ["Pre-Open ALL (predictive one-shot)", "News Parse (Supabase)"]
+    types: [completed]
+  push:
+    branches: [main]
+    paths: ['01_daily/news/*_parsed.json', '01_daily/news/*_judge.md']
 
 permissions:
   actions: write
@@ -35,7 +45,7 @@ permissions:
 concurrency:
   group: news-actions
   # A fallback cron never cancels an in-flight dispatched run.
-  cancel-in-progress: ${{ github.event_name != 'schedule' }}
+  cancel-in-progress: ${{ github.event_name == 'workflow_dispatch' }}
 
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -60,7 +70,7 @@ jobs:
           pip install -r requirements.txt
           pip install psycopg2-binary pandas || true
       - name: Skip if past 09:25 ET
-        if: github.event_name == 'schedule'
+        if: github.event_name != 'workflow_dispatch'
         run: |
           ET_HM=$((10#$(TZ=America/New_York date +%H%M)))
           echo "ET_HM=$ET_HM"
