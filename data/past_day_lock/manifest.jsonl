@@ -12867,3 +12867,6 @@
 {"date":"2026-10-30","kind":"day","name":"union_hot_n4_h1_preopen","record":"factor_mine","sha256":"4ad415db7d728a675df2547dea99b29bfdb05626dfe672dfbb101aecc4a66d33"}
 {"date":"2026-10-30","kind":"day","name":"union_hot_n4_holdup_preopen","record":"factor_mine","sha256":"f00ec1f2f871d5e8fc47a19ea2d61e8ca11da5b8019c82e3aee844f2286f2faf"}
 {"date":"2026-10-30","kind":"day","name":"","record":"flatten_robust","sha256":"238d2c88eced8e5fdc6825f30cdf74b223efe4df8842f642ad09432e2da6566f"}
+{"date":"2026-10-30","kind":"day","name":"","record":"paper_equity","sha256":"60dcfba02d6c4dcfbbdfd12b7f78fb813af41bb8aba814b5379c5d7f296e22cb"}
+{"date":"2026-10-30","kind":"day","name":"","record":"paper_trades","sha256":"5e2fafd79a64f9b228b5d121a43b40a7a1a452d16e746b71e4d6acdf5f78d1ff"}
+{"date":"2026-10-30","kind":"day","name":"","record":"paper_skipped","sha256":"6d7fb776007f64b9b61215484dfdb64c4f7020d5cfd930eccfd61d645f1e0601"}
