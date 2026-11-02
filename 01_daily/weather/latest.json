@@ -1,6 +1,6 @@
 {
  "date": "2026-11-02",
- "generated_at": "2026-11-02T15:03:33.589424-05:00",
+ "generated_at": "2026-11-02T15:35:02.241424-05:00",
  "stance_vocabulary": [
   "favorable",
   "neutral",
@@ -21,19 +21,19 @@
   "yields_source": "fred_dgs10",
   "dgs10_delta_1d": -0.07,
   "dgs10_current": 4.98,
-  "dollar": "soft",
+  "dollar": "flat",
   "dollar_source": "dxy",
-  "dxy_pct_1d": -0.16,
-  "vix_ratio": 0.991,
-  "vix_spot": 21.44,
-  "vix_delta_1d": 2.02,
+  "dxy_pct_1d": -0.12,
+  "vix_ratio": 0.975,
+  "vix_spot": 20.83,
+  "vix_delta_1d": 1.41,
   "vix_ratio_source": "vix/vix3m",
-  "vix": "spiking",
-  "oil_pct_1d": -7.22,
+  "vix": "calm",
+  "oil_pct_1d": -7.81,
   "oil": "falling",
   "fear_greed": null,
   "fear_greed_label": null,
-  "regime_corr": 0.69,
+  "regime_corr": 0.722,
   "sectors": {
    "Basic Materials": {
     "score": -4.97,
@@ -182,12 +182,12 @@
    "micro": {
     "stance": "neutral",
     "confidence": "low",
-    "why": "risk-mixed, dollar soft [general predict + factors]"
+    "why": "risk-mixed, dollar flat [general predict + factors]"
    },
    "small": {
     "stance": "neutral",
     "confidence": "low",
-    "why": "risk-mixed, dollar soft [general predict + factors]"
+    "why": "risk-mixed, dollar flat [general predict + factors]"
    },
    "large": {
     "stance": "neutral",
@@ -224,7 +224,7 @@
    "rut": {
     "stance": "neutral",
     "confidence": "low",
-    "why": "risk-mixed, dollar soft [general predict + factors]"
+    "why": "risk-mixed, dollar flat [general predict + factors]"
    },
    "none": {
     "stance": "neutral",
@@ -246,14 +246,14 @@
   },
   "beta": {
    "high": {
-    "stance": "hostile",
-    "confidence": "high",
-    "why": "VIX spiking — high beta is the exit door [channel1 + general]"
+    "stance": "neutral",
+    "confidence": "low",
+    "why": "risk-mixed, VIX calm"
    },
    "low": {
-    "stance": "favorable",
-    "confidence": "medium",
-    "why": "defensive ballast bid in stress [general + channel1]"
+    "stance": "neutral",
+    "confidence": "low",
+    "why": "risk-mixed, VIX calm"
    },
    "mid": {
     "stance": "neutral",
@@ -285,14 +285,14 @@
   },
   "vol": {
    "high": {
-    "stance": "hostile",
-    "confidence": "medium",
-    "why": "stress market — high-vol names de-rate fast [general + channel1]"
+    "stance": "neutral",
+    "confidence": "low",
+    "why": "calm tape — vol regime not decisive [general + channel1]"
    },
    "low": {
-    "stance": "favorable",
+    "stance": "neutral",
     "confidence": "low",
-    "why": "low-vol preferred in stress"
+    "why": "calm tape"
    },
    "mid": {
     "stance": "neutral",
