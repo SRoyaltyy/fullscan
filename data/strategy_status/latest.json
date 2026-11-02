@@ -26,8 +26,8 @@
    "SIT": 0
   },
   "holdup": {
-   "MISSING": 1,
-   "OK": 0,
+   "MISSING": 0,
+   "OK": 1,
    "SIT": 0
   },
   "paper": {
@@ -52,7 +52,7 @@
   }
  },
  "date": "2026-11-02",
- "generated_at": "2026-11-02T08:25:00-05:00",
+ "generated_at": "2026-11-02T09:01:53-05:00",
  "strategies": [
   {
    "buys": [
@@ -5195,13 +5195,23 @@
    "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "GDYN",
+    "CDNA",
+    "SLN",
+    "CPRI"
+   ],
    "family": "holdup",
    "name": "holdup",
-   "note": "no sealed plan row",
-   "sells": [],
+   "note": "sealed 2026-11-02T13:52:29Z",
+   "sells": [
+    "ADT 189",
+    "GKOS 7",
+    "PURR 162",
+    "TDOC 212"
+   ],
    "source": "research/hot_n4_clean_v4/forward/holdup_log.jsonl",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [],
