@@ -1,6 +1,6 @@
 {
   "date": "2026-11-02",
-  "generated_at": "2026-11-02T16:25:56.578861-05:00",
+  "generated_at": "2026-11-02T16:34:42.063564-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -164,7 +164,7 @@
           "size": 3250,
           "said": "Finviz homepage market digest (close) \u2014 2026-11-02",
           "bullets": [
-            "Generated:** 2026-11-02T16:25:55.313829-05:00 (America/New_York)",
+            "Generated:** 2026-11-02T16:34:40.924013-05:00 (America/New_York)",
             "Source:** `live`"
           ]
         }
@@ -2942,6 +2942,31 @@
         }
       ],
       "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest (close) \u2014 2026-11-02\n**Generated:** 2026-11-02T16:25:55.313829-05:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks closed mixed as crude tumbled on US\u2013Iran diplomacy hopes, with lingering AI-related pressure still in focus ahead of Apple earnings and US midterm elections\n**Prior close:** SPX -0.50%  Nasdaq -1.10%  Dow +0.40%\n**SPX:** -0.50%  **Nasdaq:** -1.10%  **Dow:** +0.40%\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** XOM, AMZN, MHK, ORCL, MRVL, LITE, MSFT, AAPL\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** \u2014\n**Geo/grain:** geo\n**Clock legal for:** 2026-11-03\n**Clock use:** `next_open`"
+    },
+    {
+      "key": "finviz_market_digest_close",
+      "title": "Finviz homepage market digest (close)",
+      "date": "2026-11-02",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-02T16:34:40.947790-05:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-11-02_finviz_market_digest_close.json",
+          "ok": true,
+          "reason": "",
+          "size": 6579,
+          "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for"
+        },
+        {
+          "path": "01_daily/news/2026-11-02_finviz_market_digest_close.md",
+          "ok": true,
+          "reason": "",
+          "size": 3250,
+          "preview": "# Finviz homepage market digest (close) \u2014 2026-11-02\n**Generated:** 2026-11-02T16:34:40.924013-05:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks closed mixed as crude tumbled on US\u2013Iran diplomacy hopes, with lingering AI-related pressure still in focus ahead of Apple earnings and US midterm elections\n**Prior close:** SPX -0.50%  Nasdaq -1.10%  Dow +0.40%\n**SPX:** -0.50%  **Nasdaq:** -1.10%  **Dow:** +0.40%\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** XOM, AMZN, MHK, ORCL, MRVL, LITE, MSFT, AAPL\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** \u2014\n**Geo/grain:** geo\n**Clock legal for:** 2026-11-03\n**Clock use:** `next_open`"
+        }
+      ],
+      "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest (close) \u2014 2026-11-02\n**Generated:** 2026-11-02T16:34:40.924013-05:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks closed mixed as crude tumbled on US\u2013Iran diplomacy hopes, with lingering AI-related pressure still in focus ahead of Apple earnings and US midterm elections\n**Prior close:** SPX -0.50%  Nasdaq -1.10%  Dow +0.40%\n**SPX:** -0.50%  **Nasdaq:** -1.10%  **Dow:** +0.40%\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** XOM, AMZN, MHK, ORCL, MRVL, LITE, MSFT, AAPL\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** \u2014\n**Geo/grain:** geo\n**Clock legal for:** 2026-11-03\n**Clock use:** `next_open`"
     }
   ],
   "href": {
@@ -3253,6 +3278,14 @@
       "commit_msg": "auto: land finviz_market_digest_close [2026-11-02]",
       "workflow": "Finviz homepage market digest",
       "run_id": "41527169508",
+      "manifest": "research/input_freeze/2026-11-02/manifest.json"
+    },
+    {
+      "path": "data/day_board/2026-11-02.json",
+      "at": "2026-11-02T16:34:42-05:00",
+      "commit_msg": "auto: land finviz_market_digest_close [2026-11-02]",
+      "workflow": "Finviz homepage market digest",
+      "run_id": "41527293461",
       "manifest": "research/input_freeze/2026-11-02/manifest.json"
     }
   ]

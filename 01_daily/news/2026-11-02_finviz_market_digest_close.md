@@ -1,6 +1,6 @@
 # Finviz homepage market digest (close) — 2026-11-02
 
-**Generated:** 2026-11-02T16:25:55.313829-05:00 (America/New_York)
+**Generated:** 2026-11-02T16:34:40.924013-05:00 (America/New_York)
 **Source:** `live`
 **Banner:** US stocks closed mixed as crude tumbled on US–Iran diplomacy hopes, with lingering AI-related pressure still in focus ahead of Apple earnings and US midterm elections
 **Prior close:** SPX -0.50%  Nasdaq -1.10%  Dow +0.40%
