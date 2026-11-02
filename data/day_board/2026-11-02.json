@@ -1,6 +1,6 @@
 {
   "date": "2026-11-02",
-  "generated_at": "2026-11-02T06:51:46.520337-05:00",
+  "generated_at": "2026-11-02T07:13:47.868403-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -181,7 +181,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 2,
+      "n_req_ok": 3,
       "n_req": 9,
       "n_opt_ok": 1,
       "n_opt": 14,
@@ -239,10 +239,10 @@
           "name": "News parse JSON",
           "path": "01_daily/news/2026-11-02_parsed.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "",
+          "size": 2440289,
+          "said": "2440289B on disk",
           "bullets": []
         },
         {
@@ -329,13 +329,13 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7575,
-          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 18 fail",
+          "size": 7574,
+          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 17 fail",
           "bullets": [
             "general_predict:missing",
             "events:missing",
             "news_judge:missing",
-            "news_parse:missing"
+            "news_actions:missing"
           ]
         },
         {
@@ -1513,6 +1513,31 @@
         }
       ],
       "preview": "# flatten_robust card \u2014 2026-11-02\n_Generated 2026-11-02T11:51:44 \u2014 live `flatten_robust`._\n**morning S missing; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**\n- Score **\u2014** (\u2014) \u00b7 route **io**\n- Cash leftover **$117,285.24** (after 09:30 $117,285.24 \u00b7 after 16:00 $117,285.24)\n- Prior close **$117,285.24** \u00b7 09:30 **$117,285.24** \u00b7 overnight **$+0.00** \u00b7 session **$+0.00** \u00b7 16:00 **$117,285.24**\n- Overnight lots **0** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$0.00** \u2264 leftover after sells **$117,285.24** \u00b7 2026-10-30 BUY \u2014 \u00b7 SELL \u2014 \u00b7 keys: date, policy, generated, score, predict, hard_red, flatten_ok, n_priced_buys, prior_book, route, cash_open, cash_after_0930 \u00b7 [{\"date\": \"2026-08-13\", \"route\": \"io\", \"score\": 8.525, \"predict\": \"UP\", \"yday_equity\": 100000.0, \"open_cash\": 100000.0, \"open_held\": 0, \"open_equity\": 100000.0, \"overnight_delta\": 0.0, \"session_delta\": -169.94, \"equity\": 99830.06, \"cash\": 9917.52, \"overnight_names\": \"\", \"overnight\": [], \"marks\": [{\"ticker\": \"BTSG\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 166, \"shares\": 166, \"side\": \"BUY\", \"yday_px\": null, \"open_px\":"
+    },
+    {
+      "key": "news_parse",
+      "title": "News parse",
+      "date": "2026-11-02",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-02T07:13:47.045900-05:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-11-02_parsed.json",
+          "ok": true,
+          "reason": "",
+          "size": 2440289,
+          "preview": "raw=3364 usable=220 single=202 \u00b7 OPEC+ Leaves Oil Output Targets Unchanged for December (Table) - Bloomberg.com | OPEC+ Set to Stick With Plan for Steady Quotas, Delegates Say - Bloomberg.com | Breakingviews - COMMENTARY: PAG's China property deal blueprint comes together - | Three Federal Reserve officials called for continued interest rate hikes; why is | COMMENTARY: Asia's crude oil imports back to pre-war levels but refined fuels la"
+        },
+        {
+          "path": "01_daily/news/2026-11-02_parsed.md",
+          "ok": true,
+          "reason": "",
+          "size": 10454,
+          "preview": "# News Parse v2 \u2014 2026-11-02T07:13:46.762829-05:00\nWindow\u224824h | news_mode=on | raw=3364 | usable=220 | single_name=202 | noise_dropped=2801\nusable polarity={'+': 0, '-': 53, 'mixed': 0, 'neutral': 167}"
+        }
+      ],
+      "preview": "raw=3364 usable=220 single=202 \u00b7 OPEC+ Leaves Oil Output Targets Unchanged for December (Table) - Bloomberg.com | OPEC+ Set to Stick With Plan for Steady Quotas, Delegates Say - Bloomberg.com | Breakingviews - COMMENTARY: PAG's China property deal blueprint comes together - | Three Federal Reserve officials called for continued interest rate hikes; why is | COMMENTARY: Asia's crude oil imports back to pre-war levels but refined fuels la \u00b7 # News Parse v2 \u2014 2026-11-02T07:13:46.762829-05:00\nWindow\u224824h | news_mode=on | raw=3364 | usable=220 | single_name=202 | noise_dropped=2801\nusable polarity={'+': 0, '-': 53, 'mixed': 0, 'neutral': 167}"
     }
   ],
   "href": {
