@@ -168,3 +168,4 @@
 {"bytes":340,"date":"2026-10-30","kind":"close","recipe":"union_hot_n4_holdup__w0","seq":168,"sha256":"09bc61be7ab6b21b7a4c3ee3b32161c677c7b94157b0580f99d52fff5f4afca9"}
 {"bytes":323,"date":"2026-10-30","kind":"close","recipe":"union_hot_n4_holdup__w0","seq":169,"sha256":"a789c340af73ca407408b7b15084cc89e52f98a51b12850273da1659acfbd292"}
 {"bytes":1444,"date":"2026-11-02","kind":"plan","recipe":"union_hot_n4_holdup__w0","seq":170,"sha256":"1b596d7867f7647245c48e27fe21f2b79c54d905db42dd311f2d157fb0e64b1a"}
+{"bytes":2009,"date":"2026-11-02","kind":"open_fill","recipe":"union_hot_n4_holdup__w0","seq":171,"sha256":"1e96518a345c4977d16825fab089a63b766cb08667e13be08ddbf6d405ef3a4e"}
