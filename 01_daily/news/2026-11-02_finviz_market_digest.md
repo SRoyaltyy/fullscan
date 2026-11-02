@@ -1,6 +1,6 @@
 # Finviz homepage market digest — 2026-11-02
 
-**Generated:** 2026-11-02T04:22:26.394326-05:00 (America/New_York)
+**Generated:** 2026-11-02T04:23:14.342739-05:00 (America/New_York)
 **Source:** `live`
 **Banner:** US stocks set to open higher as futures gap up amid softer oil, firmer gold and key ISM manufacturing data ahead
 **Prior close:** SPX —  Nasdaq —  Dow —
