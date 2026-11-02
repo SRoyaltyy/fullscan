@@ -1,6 +1,6 @@
 {
   "date": "2026-11-02",
-  "generated_at": "2026-11-02T07:48:36.218835-05:00",
+  "generated_at": "2026-11-02T07:48:45.628241-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -99,59 +99,6 @@
   },
   "sectors": {},
   "lands": [
-    {
-      "key": "stock_book",
-      "title": "Stock book + green",
-      "date": "2026-11-02",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-11-02T07:34:21.653179-05:00",
-      "files": [
-        {
-          "path": "data/stock_book/2026-11-02_stock_book.json",
-          "ok": true,
-          "reason": "",
-          "size": 1451279,
-          "preview": "1d BUY CON, AMN, PACS, NTAP, BAND, MQ, SGRY, ASTH \u00b7 SELL OKLO, NEOV, FCEL, EOSE, NNDM, POWL, TE, NRGV"
-        },
-        {
-          "path": "data/stock_book/2026-11-02_green.json",
-          "ok": true,
-          "reason": "",
-          "size": 585,
-          "preview": "green 0 \u00b7 "
-        },
-        {
-          "path": "data/stock_book/2026-11-02_input_health.json",
-          "ok": true,
-          "reason": "",
-          "size": 2594,
-          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
-        },
-        {
-          "path": "data/stock_book/2026-11-02_suggestions.json",
-          "ok": true,
-          "reason": "",
-          "size": 12445,
-          "preview": "2026-11-02 BUY CON, AMN, PACS, NTAP, BAND, MQ, SGRY, ASTH \u00b7 SELL OKLO, NEOV, FCEL, EOSE, NNDM, POWL, TE, NRGV"
-        },
-        {
-          "path": "data/stock_book/latest_suggestions.json",
-          "ok": true,
-          "reason": "",
-          "size": 12445,
-          "preview": "2026-11-02 BUY CON, AMN, PACS, NTAP, BAND, MQ, SGRY, ASTH \u00b7 SELL OKLO, NEOV, FCEL, EOSE, NNDM, POWL, TE, NRGV"
-        },
-        {
-          "path": "01_daily/2026-11-02_stock_book.md",
-          "ok": true,
-          "reason": "",
-          "size": 84941,
-          "preview": "# Stock book \u2014 2026-11-02\n_Generated 2026-11-02T07:33:55.270418-05:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
-        }
-      ],
-      "preview": "1d BUY CON, AMN, PACS, NTAP, BAND, MQ, SGRY, ASTH \u00b7 SELL OKLO, NEOV, FCEL, EOSE, NNDM, POWL, TE, NRGV \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-11-02 BUY CON, AMN, PACS, NTAP, BAND, MQ, SGRY, ASTH \u00b7 SELL OKLO, NEOV, FCEL, EOSE, NNDM, POWL, TE, NRGV \u00b7 2026-11-02 BUY CON, AMN, PACS, NTAP, BAND, MQ, SGRY, ASTH \u00b7 SELL OKLO, NEOV, FCEL, EOSE, NNDM, POWL, TE, NRGV \u00b7 # Stock book \u2014 2026-11-02\n_Generated 2026-11-02T07:33:55.270418-05:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
-    },
     {
       "key": "live_boards",
       "title": "Live 1d BUY/SELL strip",
@@ -445,6 +392,24 @@
         }
       ],
       "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 GLBE, SHOO, HLNE, VCTR, WT"
+    },
+    {
+      "key": "peer_rs",
+      "title": "Peer RS",
+      "date": "2026-11-02",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-02T07:48:44.553856-05:00",
+      "files": [
+        {
+          "path": "data/peers/2026-11-02_peer_rs.csv",
+          "ok": true,
+          "reason": "",
+          "size": 821534,
+          "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+        }
+      ],
+      "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
