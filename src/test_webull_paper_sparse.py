@@ -147,7 +147,17 @@ def _latest_sealed_day_with_tickets() -> str | None:
         if row.get('kind') == 'plan' and row.get('date'):
             days.append(row['date'])
     for d in sorted(set(days), reverse=True):
-        if (ROOT / f'data/day_board/{d}_strategy_tickets.json').is_file():
+        f = ROOT / f'data/day_board/{d}_strategy_tickets.json'
+        if not f.is_file():
+            continue
+        # A sealed day whose ticket never went ready (e.g. 2026-11-02:
+        # actions.json missing) is correctly refused by validate_payload;
+        # it is not a sparse-read fixture. Pick the latest *ready* day.
+        try:
+            proof = json.loads(f.read_text()).get('decision_readiness') or {}
+        except ValueError:
+            continue
+        if proof.get('ready') is True and proof.get('fingerprint'):
             return d
     return None
 
