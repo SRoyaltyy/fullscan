@@ -7700,5 +7700,145 @@
       "status": "BEFORE_1330"
     },
     "sha256": "1b596d7867f7647245c48e27fe21f2b79c54d905db42dd311f2d157fb0e64b1a"
+  },
+  {
+    "buys": [
+      {
+        "fee": 2.395,
+        "fill": 13.25,
+        "fill_basis": "open",
+        "liquidity_cap_shares": 12728,
+        "rank": 1,
+        "shares": 135,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "GDYN"
+      },
+      {
+        "fee": 2.05,
+        "fill": 86.879997,
+        "fill_basis": "open",
+        "liquidity_cap_shares": 13090,
+        "rank": 2,
+        "shares": 20,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "CDNA"
+      },
+      {
+        "fee": 2.26,
+        "fill": 19.75,
+        "fill_basis": "open",
+        "liquidity_cap_shares": 27352,
+        "rank": 3,
+        "shares": 90,
+        "sources": [
+          "ohlc_hot"
+        ],
+        "ticker": "SLN"
+      },
+      {
+        "fee": 2.272,
+        "fill": 18.934999,
+        "fill_basis": "open",
+        "liquidity_cap_shares": 43810,
+        "rank": 4,
+        "shares": 94,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "CPRI"
+      }
+    ],
+    "cash_primary": 93.04614620837583,
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-11-02",
+    "excluded_on_fill": [],
+    "holdings": [
+      {
+        "cost_primary": 1748.3379396999999,
+        "entry_date": "2026-11-02",
+        "entry_px": 86.879997,
+        "last_px": 86.879997,
+        "min_hold": 2,
+        "peak_px": 86.879997,
+        "shares": 20,
+        "ticker": "CDNA"
+      },
+      {
+        "cost_primary": 1791.06135553,
+        "entry_date": "2026-11-02",
+        "entry_px": 18.934999,
+        "last_px": 18.934999,
+        "min_hold": 2,
+        "peak_px": 18.934999,
+        "shares": 94,
+        "ticker": "CPRI"
+      },
+      {
+        "cost_primary": 1800.08875,
+        "entry_date": "2026-11-02",
+        "entry_px": 13.25,
+        "last_px": 13.25,
+        "min_hold": 2,
+        "peak_px": 13.25,
+        "shares": 135,
+        "ticker": "GDYN"
+      },
+      {
+        "cost_primary": 1788.6474999999998,
+        "entry_date": "2026-11-02",
+        "entry_px": 19.75,
+        "last_px": 19.75,
+        "min_hold": 2,
+        "peak_px": 19.75,
+        "shares": 90,
+        "ticker": "SLN"
+      }
+    ],
+    "holdup_on": true,
+    "kind": "open_fill",
+    "morning_s": 3.044,
+    "open_source": "yahoo_split_adjusted_daily_open",
+    "plan_sha256": "1b596d7867f7647245c48e27fe21f2b79c54d905db42dd311f2d157fb0e64b1a",
+    "pnl_status": "pending",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sells": [
+      {
+        "fee": 2.6033,
+        "fill": 9.87,
+        "reason": "hold-expired",
+        "shares": 189,
+        "ticker": "ADT"
+      },
+      {
+        "fee": 2.0342,
+        "fill": 235.0,
+        "reason": "hold-expired",
+        "shares": 7,
+        "ticker": "GKOS"
+      },
+      {
+        "fee": 2.5169,
+        "fill": 10.8,
+        "reason": "hold-expired",
+        "shares": 162,
+        "ticker": "PURR"
+      },
+      {
+        "fee": 2.7845,
+        "fill": 8.56,
+        "reason": "hold-expired",
+        "shares": 212,
+        "ticker": "TDOC"
+      }
+    ],
+    "sha256": "1e96518a345c4977d16825fab089a63b766cb08667e13be08ddbf6d405ef3a4e",
+    "unfilled": []
   }
 ]
