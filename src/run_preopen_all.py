@@ -887,6 +887,15 @@ def _run_preopen_body(date: str | None = None, force: bool = False,
             if output_qc.qc_news_parse(parsed_p).ok:
                 _land(date, "news_parse", "News parse (limit-80 retry)")
 
+    # 2026-11-02: DeepSeek 402 set skip_essays, so news_actions (file/DB,
+    # no LLM) never ran; the decision ticket stayed blocked on a missing
+    # actions.json and the Webull seal send waited out 09:25. Run it here
+    # whenever essays are skipped for credits/gateway reasons.
+    if not skip_writes and skip_essays and not late:
+        step("news_actions", "News actions (no LLM)",
+             [py, "-m", "src.news_actions", "--hours", "48",
+              "--limit", "400", "--date", date, *fa], timeout_s=300)
+
     if not skip_writes and not skip_essays:
         # Prove the gateway with a tiny completion before any essay.
         # A port that answers is not a Grok that answers (2026-10-14).
