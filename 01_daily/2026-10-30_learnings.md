@@ -1,6 +1,6 @@
 # Learnings report — 2026-10-30
 
-Generated: **2026-10-30T20:14:30.885509-04:00** by `src/learn_cycle.py`.
+Generated: **2026-11-02T17:00:22.986040-05:00** by `src/learn_cycle.py`.
 
 This is the human-readable digest of what the bot **actually learned** this cycle: graded evidence, hypotheses (wins and losses), promoted standing rules, and **how that changes every daily workflow**.
 
@@ -18,7 +18,7 @@ Machine policy file (injected into predicts): `00_grounding/mutable_policy.md`.
 | Lessons promoted to active | 0 |
 | Lessons retired (efficacy-gated) | 10 |
 | Active lesson files now | 211 |
-| Engine policy version | 140 |
+| Engine policy version | 142 |
 
 ## 2. Accuracy by topic (evidence this cycle learned from)
 
@@ -81,7 +81,7 @@ Each scope lists recent win and loss hypotheses: the **counterfactual ask**, the
 ### `news` — 0 wins, 1 losses
 
 #### LOSS — news
-- **When:** [news] Global 1d close win rate 52.0% (n=3586).
+- **When:** [news] Global 1d close win rate 51.8% (n=3777).
 - **Ask:** Entry timing, side mix, or event taxonomy noise?
 - **Experiment:** [news] Raise min net weight to map a ticker; drop weak edges.
 - **Do instead:** [news] Only emit actions with |net| above a higher floor.
