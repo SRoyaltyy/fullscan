@@ -1,6 +1,6 @@
 {
   "date": "2026-11-02",
-  "generated_at": "2026-11-02T07:32:26.895722-05:00",
+  "generated_at": "2026-11-02T07:33:22.981508-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -88,122 +88,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "live_boards",
-      "title": "Live 1d BUY/SELL strip",
-      "date": "2026-11-02",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-11-02T06:48:49.174035-05:00",
-      "files": [
-        {
-          "path": "data/day_board/today.json",
-          "ok": true,
-          "reason": "",
-          "size": 13096,
-          "preview": "2026-11-02 BUY CON, AMN, PACS, NTAP, BAND, MQ, SGRY, ASTH \u00b7 SELL OKLO, NEOV, FCEL, EOSE, NNDM, POWL, TE, NRGV"
-        },
-        {
-          "path": "data/day_board/latest.json",
-          "ok": true,
-          "reason": "",
-          "size": 1116,
-          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
-        },
-        {
-          "path": "data/day_board/2026-11-02.json",
-          "ok": true,
-          "reason": "",
-          "size": 53983,
-          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href"
-        },
-        {
-          "path": "data/day_board/2026-11-02_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 20293,
-          "preview": "2026-11-02 BUY CON, AMN, PACS, NTAP, BAND, MQ, SGRY, ASTH \u00b7 SELL OKLO, NEOV, FCEL, EOSE, NNDM, POWL, TE, NRGV"
-        },
-        {
-          "path": "data/day_board/strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 617630,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "data/day_board/2026-11-02_strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 617630,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "data/factor_mine/morning_look/2026-11-02.json",
-          "ok": true,
-          "reason": "",
-          "size": 153546,
-          "preview": "keys: asof_commit, asof_committed_at, cutoff_et, date, n, read_from, rows"
-        },
-        {
-          "path": "data/day_board/today_strategies.json",
-          "ok": true,
-          "reason": "",
-          "size": 840223,
-          "preview": "2026-11-02 BUY CON, AMN, PACS, NTAP, BAND, MQ, SGRY, ASTH \u00b7 SELL OKLO, NEOV, FCEL, EOSE, NNDM, POWL, TE, NRGV"
-        },
-        {
-          "path": "data/factor_mine/strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 617630,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "dashboard/factor-mine/today.json",
-          "ok": true,
-          "reason": "",
-          "size": 20293,
-          "preview": "2026-11-02 BUY CON, AMN, PACS, NTAP, BAND, MQ, SGRY, ASTH \u00b7 SELL OKLO, NEOV, FCEL, EOSE, NNDM, POWL, TE, NRGV"
-        },
-        {
-          "path": "dashboard/factor-mine/strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 617630,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "dashboard/factor-mine/today_strategies.json",
-          "ok": true,
-          "reason": "",
-          "size": 617630,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "dashboard/today_strategies.json",
-          "ok": true,
-          "reason": "",
-          "size": 840223,
-          "preview": "2026-11-02 BUY CON, AMN, PACS, NTAP, BAND, MQ, SGRY, ASTH \u00b7 SELL OKLO, NEOV, FCEL, EOSE, NNDM, POWL, TE, NRGV"
-        },
-        {
-          "path": "data/day_board/hold_live_px.json",
-          "ok": true,
-          "reason": "",
-          "size": 1542,
-          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
-        },
-        {
-          "path": "dashboard/factor-mine/hold_live_px.json",
-          "ok": true,
-          "reason": "",
-          "size": 1542,
-          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
-        }
-      ],
-      "preview": "2026-11-02 BUY CON, AMN, PACS, NTAP, BAND, MQ, SGRY, ASTH \u00b7 SELL OKLO, NEOV, FCEL, EOSE, NNDM, POWL, TE, NRGV \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href \u00b7 2026-11-02 BUY CON, AMN, PACS, NTAP, BAND, MQ, SGRY, ASTH \u00b7 SELL OKLO, NEOV, FCEL, EOSE, NNDM, POWL, TE, NRGV \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: asof_commit, asof_committed_at, cutoff_et, date, n, read_from, rows \u00b7 2026-11-02 BUY CON, AMN, PACS, NTAP, BAND, MQ, SGRY, ASTH \u00b7 SELL OKLO, NEOV, FCEL, EOSE, NNDM, POWL, TE, NRGV \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-11-02 BUY CON, AMN, PACS, NTAP, BAND, MQ, SGRY, ASTH \u00b7 SELL OKLO, NEOV, FCEL, EOSE, NNDM, POWL, TE, NRGV \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_f"
-    },
     {
       "key": "paper",
       "title": "Paper dashboard",
@@ -406,6 +290,31 @@
         }
       ],
       "preview": "raw=5852 usable=391 single=338 \u00b7 OPEC+ Leaves Oil Output Targets Unchanged for December (Table) - Bloomberg.com | OPEC+ Set to Stick With Plan for Steady Quotas, Delegates Say - Bloomberg.com | Breakingviews - COMMENTARY: PAG's China property deal blueprint comes together - | Stocks gain as Fed official backs quarter-point hike - Reuters | Three Federal Reserve officials called for continued interest rate hikes; why is \u00b7 # News Parse v2 \u2014 2026-11-02T07:32:18.133193-05:00\nWindow\u224848h | news_mode=on | raw=5852 | usable=391 | single_name=338 | noise_dropped=4916\nusable polarity={'+': 6, '-': 82, 'mixed': 2, 'neutral': 301}"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-11-02",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-02T07:33:21.889066-05:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-11-02_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 9440,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-11-02_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5067,
+          "preview": "# Weather report \u2014 2026-11-02\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-11-02\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
