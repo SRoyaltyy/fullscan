@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-02T16:17:20.512440-05:00",
+  "generated": "2026-11-02T18:13:20.012172-05:00",
   "capital": 10000.0,
   "dates": [
     "2026-08-13",
@@ -22939,10 +22939,10 @@
         "n_loss_days": 51,
         "p_loss_day": 0.8361,
         "p_win_day": 0.1475,
-        "mean_day": 4.063,
+        "mean_day": 4.005,
         "avg_win_day": 74.168,
-        "avg_loss_day": -8.228,
-        "cum_sum": 247.858
+        "avg_loss_day": -8.298,
+        "cum_sum": 244.302
       },
       "equity": [
         9880.7,
@@ -23005,9 +23005,9 @@
         417.41,
         393.15,
         392.34,
-        253.22
+        239.27
       ],
-      "final": 253.22,
+      "final": 239.27,
       "orig_window": {
         "start": "2026-08-13",
         "end": "2026-08-21",
@@ -47542,16 +47542,17 @@
         },
         {
           "date": "2026-11-02",
-          "day_pnl": -35.459,
-          "equity": 253.22,
+          "day_pnl": -39.015,
+          "equity": 239.27,
           "n_held": 25,
           "n_buy": 0,
-          "n_sell": 10,
-          "n_skip": 24,
+          "n_sell": 11,
+          "n_skip": 25,
           "n_cand": 25,
           "hard_red": false,
           "bought": [],
           "sold": [
+            "CURI",
             "NVAX",
             "DNA",
             "SES",
@@ -47563,11 +47564,18 @@
             "ACHV",
             "ANNX"
           ],
-          "held": [
-            "CURI"
-          ],
+          "held": [],
           "buys": [],
           "sells": [
+            {
+              "ticker": "CURI",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 2.7899999618530273,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
             {
               "ticker": "NVAX",
               "side": "sell",
@@ -47660,7 +47668,7 @@
             }
           ],
           "cash": 239.27,
-          "invested": 13.95,
+          "invested": 0.0,
           "fees_cum": 2714.5
         }
       ]
@@ -102366,7 +102374,7 @@
           "n_held": 25,
           "n_buy": 0,
           "n_sell": 5,
-          "n_skip": 15,
+          "n_skip": 14,
           "n_cand": 19,
           "hard_red": false,
           "bought": [],

@@ -8,7 +8,7 @@ Dashboard: `dashboard/boring-winners/index.html` → https://sroyaltyy.github.io
 
 | sleeve | source | n | hold | color | hard_red | mean day | cum | p(loss day) | final $10k | orig 8/13–8/21 |
 |---|---|---:|---:|---|---|---:|---:|---:|---:|---:|
-| `mine_25_h1` | mine | 25 | 1 | all | none | +4.06 | +247.86 | 83.6% | 253 | 70,574 (+605.74 / 7d) |
+| `mine_25_h1` | mine | 25 | 1 | all | none | +4.00 | +244.30 | 83.6% | 239 | 70,574 (+605.74 / 7d) |
 | `book_25_h3` | book | 25 | 3 | all | none | -1.61 | -98.06 | 54.1% | 3,096 | 10,213 (+2.13 / 7d) |
 | `overlay_25_h3_blue` | overlay | 25 | 3 | blue | none | -2.76 | -168.12 | 70.5% | 1,624 | 10,223 (+2.23 / 7d) |
 | `overlay_10_h3` | overlay | 10 | 3 | all | none | -3.13 | -191.05 | 55.7% | 1,088 | 10,493 (+4.93 / 7d) |
