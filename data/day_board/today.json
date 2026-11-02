@@ -1,6 +1,6 @@
 {
   "date": "2026-11-02",
-  "generated_at": "2026-11-02T07:31:44.002832-05:00",
+  "generated_at": "2026-11-02T07:32:19.669971-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -88,59 +88,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "stock_book",
-      "title": "Stock book + green",
-      "date": "2026-11-02",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-11-02T06:48:43.536890-05:00",
-      "files": [
-        {
-          "path": "data/stock_book/2026-11-02_stock_book.json",
-          "ok": true,
-          "reason": "",
-          "size": 1451276,
-          "preview": "1d BUY CON, AMN, PACS, NTAP, BAND, MQ, SGRY, ASTH \u00b7 SELL OKLO, NEOV, FCEL, EOSE, NNDM, POWL, TE, NRGV"
-        },
-        {
-          "path": "data/stock_book/2026-11-02_green.json",
-          "ok": true,
-          "reason": "",
-          "size": 585,
-          "preview": "green 0 \u00b7 "
-        },
-        {
-          "path": "data/stock_book/2026-11-02_input_health.json",
-          "ok": true,
-          "reason": "",
-          "size": 2594,
-          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
-        },
-        {
-          "path": "data/stock_book/2026-11-02_suggestions.json",
-          "ok": true,
-          "reason": "",
-          "size": 12445,
-          "preview": "2026-11-02 BUY CON, AMN, PACS, NTAP, BAND, MQ, SGRY, ASTH \u00b7 SELL OKLO, NEOV, FCEL, EOSE, NNDM, POWL, TE, NRGV"
-        },
-        {
-          "path": "data/stock_book/latest_suggestions.json",
-          "ok": true,
-          "reason": "",
-          "size": 12445,
-          "preview": "2026-11-02 BUY CON, AMN, PACS, NTAP, BAND, MQ, SGRY, ASTH \u00b7 SELL OKLO, NEOV, FCEL, EOSE, NNDM, POWL, TE, NRGV"
-        },
-        {
-          "path": "01_daily/2026-11-02_stock_book.md",
-          "ok": true,
-          "reason": "",
-          "size": 84941,
-          "preview": "# Stock book \u2014 2026-11-02\n_Generated 2026-11-02T06:45:21.510416-05:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
-        }
-      ],
-      "preview": "1d BUY CON, AMN, PACS, NTAP, BAND, MQ, SGRY, ASTH \u00b7 SELL OKLO, NEOV, FCEL, EOSE, NNDM, POWL, TE, NRGV \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-11-02 BUY CON, AMN, PACS, NTAP, BAND, MQ, SGRY, ASTH \u00b7 SELL OKLO, NEOV, FCEL, EOSE, NNDM, POWL, TE, NRGV \u00b7 2026-11-02 BUY CON, AMN, PACS, NTAP, BAND, MQ, SGRY, ASTH \u00b7 SELL OKLO, NEOV, FCEL, EOSE, NNDM, POWL, TE, NRGV \u00b7 # Stock book \u2014 2026-11-02\n_Generated 2026-11-02T06:45:21.510416-05:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
-    },
     {
       "key": "live_boards",
       "title": "Live 1d BUY/SELL strip",
@@ -434,6 +381,31 @@
         }
       ],
       "preview": "keys: date, source_heat_date, phase, generated_at, n_targets, n_cards, coverage, validation_errors, source_calendar_results, source_market_reaction_pct, cards, size_gate \u00b7 # MAP HEAT RESEARCH \u2014 2026-11-02\n142 captain cards \u00b7 size_gate=False set by pre-open refresh"
+    },
+    {
+      "key": "news_parse",
+      "title": "News parse",
+      "date": "2026-11-02",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-02T07:32:18.636740-05:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-11-02_parsed.json",
+          "ok": true,
+          "reason": "",
+          "size": 4240972,
+          "preview": "raw=5852 usable=391 single=338 \u00b7 OPEC+ Leaves Oil Output Targets Unchanged for December (Table) - Bloomberg.com | OPEC+ Set to Stick With Plan for Steady Quotas, Delegates Say - Bloomberg.com | Breakingviews - COMMENTARY: PAG's China property deal blueprint comes together - | Stocks gain as Fed official backs quarter-point hike - Reuters | Three Federal Reserve officials called for continued interest rate hikes; why is"
+        },
+        {
+          "path": "01_daily/news/2026-11-02_parsed.md",
+          "ok": true,
+          "reason": "",
+          "size": 10846,
+          "preview": "# News Parse v2 \u2014 2026-11-02T07:32:18.133193-05:00\nWindow\u224848h | news_mode=on | raw=5852 | usable=391 | single_name=338 | noise_dropped=4916\nusable polarity={'+': 6, '-': 82, 'mixed': 2, 'neutral': 301}"
+        }
+      ],
+      "preview": "raw=5852 usable=391 single=338 \u00b7 OPEC+ Leaves Oil Output Targets Unchanged for December (Table) - Bloomberg.com | OPEC+ Set to Stick With Plan for Steady Quotas, Delegates Say - Bloomberg.com | Breakingviews - COMMENTARY: PAG's China property deal blueprint comes together - | Stocks gain as Fed official backs quarter-point hike - Reuters | Three Federal Reserve officials called for continued interest rate hikes; why is \u00b7 # News Parse v2 \u2014 2026-11-02T07:32:18.133193-05:00\nWindow\u224848h | news_mode=on | raw=5852 | usable=391 | single_name=338 | noise_dropped=4916\nusable polarity={'+': 6, '-': 82, 'mixed': 2, 'neutral': 301}"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
