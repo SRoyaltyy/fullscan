@@ -4,666 +4,666 @@
     "1d": {
       "buy": [
         {
-          "ticker": "CDNA",
-          "score": 0.8512524004599091
-        },
-        {
           "ticker": "VEEV",
-          "score": 0.4159949642709866
+          "score": 0.4059854397844582
         },
         {
-          "ticker": "ARQT",
-          "score": 0.7981978987964153
-        },
-        {
-          "ticker": "ETON",
-          "score": 0.7616873797938088
+          "ticker": "CORT",
+          "score": 0.35523399492131524
         },
         {
           "ticker": "PRCH",
-          "score": 0.7505120507463456
+          "score": 0.7382492014223462
         },
         {
-          "ticker": "LAUR",
-          "score": 0.6669186851789224
+          "ticker": "ETON",
+          "score": 0.7368344453242683
         },
         {
           "ticker": "VLO",
-          "score": 0.30808351046702287
+          "score": 0.35239187942570943
         },
         {
-          "ticker": "TRU",
-          "score": 0.5279021823763514
+          "ticker": "LAUR",
+          "score": 0.6861515563922498
         },
         {
-          "ticker": "ABX",
-          "score": 0.6059778107004103
+          "ticker": "BIIB",
+          "score": 0.32706470520134434
+        },
+        {
+          "ticker": "OLLI",
+          "score": 0.7199387268427153
+        },
+        {
+          "ticker": "AVO",
+          "score": 0.6697696818503895
+        },
+        {
+          "ticker": "TBBB",
+          "score": 0.6965365217972828
+        },
+        {
+          "ticker": "IMAX",
+          "score": 0.6530017738487479
         },
         {
           "ticker": "EZPW",
           "score": 0.5718282701691433
         },
         {
-          "ticker": "AVO",
-          "score": 0.612265152715354
+          "ticker": "ABX",
+          "score": 0.6021847351622469
         },
         {
           "ticker": "CNK",
-          "score": 0.6532462933911058
+          "score": 0.6517234106602428
         },
         {
-          "ticker": "FANG",
-          "score": 0.3968477161968042
-        },
-        {
-          "ticker": "CHEF",
-          "score": 0.5292408274665383
-        },
-        {
-          "ticker": "EDU",
-          "score": 0.4915269081927376
+          "ticker": "JXN",
+          "score": 0.5453692271544431
         }
       ],
       "sell": [
         {
           "ticker": "ROIV",
-          "score": -0.5975647012335754
-        },
-        {
-          "ticker": "BNTX",
-          "score": -0.3976429541509999
+          "score": -0.5910030835543749
         },
         {
           "ticker": "GH",
-          "score": -0.3746665336655278
+          "score": -0.43550629142662095
         },
         {
           "ticker": "IFRX",
-          "score": -0.3718269762460771
+          "score": -0.3990923788448758
         },
         {
-          "ticker": "WVE",
-          "score": -0.36912025779785945
-        },
-        {
-          "ticker": "CGEM",
-          "score": -0.3583993180761336
-        },
-        {
-          "ticker": "ALMS",
-          "score": -0.35446791443290543
-        },
-        {
-          "ticker": "AXSM",
-          "score": -0.3388659313533725
-        },
-        {
-          "ticker": "SOC",
-          "score": -0.32855513311214835
-        },
-        {
-          "ticker": "TYRA",
-          "score": -0.32373967053327407
-        },
-        {
-          "ticker": "LXRX",
-          "score": -0.32315754028473637
-        },
-        {
-          "ticker": "CHRS",
-          "score": -0.32200904828351584
+          "ticker": "BNTX",
+          "score": -0.39480208772096026
         },
         {
           "ticker": "PYXS",
-          "score": -0.31695973308364866
+          "score": -0.366332532281908
         },
         {
-          "ticker": "MLYS",
-          "score": -0.31337771818378196
+          "ticker": "WVE",
+          "score": -0.35516907587519125
         },
         {
-          "ticker": "IMNM",
-          "score": -0.31283494835269526
+          "ticker": "ALMS",
+          "score": -0.3462108864932431
+        },
+        {
+          "ticker": "NRXP",
+          "score": -0.34234730294729254
+        },
+        {
+          "ticker": "AUR",
+          "score": -0.3340004266940584
+        },
+        {
+          "ticker": "AXSM",
+          "score": -0.3316548563555808
+        },
+        {
+          "ticker": "CGEM",
+          "score": -0.3314177824402737
+        },
+        {
+          "ticker": "ZNTL",
+          "score": -0.33123000329969643
+        },
+        {
+          "ticker": "CHRS",
+          "score": -0.32801986324064136
+        },
+        {
+          "ticker": "LXRX",
+          "score": -0.3241738934276254
+        },
+        {
+          "ticker": "BAK",
+          "score": -0.3170582275927229
         }
       ]
     },
     "3d": {
       "buy": [
         {
-          "ticker": "CDNA",
-          "score": 0.9160880795311197
-        },
-        {
           "ticker": "VEEV",
-          "score": 0.48443548806285475
+          "score": 0.47046870970955945
         },
         {
-          "ticker": "ARQT",
-          "score": 0.869585045530535
-        },
-        {
-          "ticker": "ETON",
-          "score": 0.8347122965454519
+          "ticker": "CORT",
+          "score": 0.4286375409849402
         },
         {
           "ticker": "PRCH",
-          "score": 0.8193668301408947
+          "score": 0.8022558775957791
         },
         {
-          "ticker": "LAUR",
-          "score": 0.7264471143213604
+          "ticker": "ETON",
+          "score": 0.8000337833321391
         },
         {
           "ticker": "VLO",
-          "score": 0.35760919683336656
+          "score": 0.4194348279385106
         },
         {
-          "ticker": "TRU",
-          "score": 0.5932522855122585
+          "ticker": "LAUR",
+          "score": 0.7532836788050732
         },
         {
-          "ticker": "ABX",
-          "score": 0.6711421657137508
+          "ticker": "BIIB",
+          "score": 0.3944770489774371
+        },
+        {
+          "ticker": "OLLI",
+          "score": 0.7713053599439512
+        },
+        {
+          "ticker": "AVO",
+          "score": 0.7279424623666111
+        },
+        {
+          "ticker": "TBBB",
+          "score": 0.7407388227165916
+        },
+        {
+          "ticker": "IMAX",
+          "score": 0.7055306224050817
         },
         {
           "ticker": "EZPW",
           "score": 0.6359920622794032
         },
         {
-          "ticker": "AVO",
-          "score": 0.6477035845037706
+          "ticker": "ABX",
+          "score": 0.6658495021721273
         },
         {
           "ticker": "CNK",
-          "score": 0.6836926083610564
+          "score": 0.6815676557133405
         },
         {
-          "ticker": "FANG",
-          "score": 0.44154337601791843
-        },
-        {
-          "ticker": "CHEF",
-          "score": 0.5720410680769096
-        },
-        {
-          "ticker": "EDU",
-          "score": 0.5212458550434828
+          "ticker": "JXN",
+          "score": 0.6007177251379059
         }
       ],
       "sell": [
         {
           "ticker": "ROIV",
-          "score": -0.6738622674800083
-        },
-        {
-          "ticker": "BNTX",
-          "score": -0.47591464835931874
-        },
-        {
-          "ticker": "WVE",
-          "score": -0.45059852187620913
-        },
-        {
-          "ticker": "ALMS",
-          "score": -0.4356954887255425
-        },
-        {
-          "ticker": "IFRX",
-          "score": -0.43441011297675974
-        },
-        {
-          "ticker": "CGEM",
-          "score": -0.4327541643738971
-        },
-        {
-          "ticker": "AXSM",
-          "score": -0.41180852969165205
-        },
-        {
-          "ticker": "SOC",
-          "score": -0.4065368482103865
+          "score": -0.6647065218811236
         },
         {
           "ticker": "GH",
-          "score": -0.4027052141113386
+          "score": -0.4875978993593755
         },
         {
-          "ticker": "TYRA",
-          "score": -0.4018183362313292
+          "ticker": "IFRX",
+          "score": -0.4724548607890369
+        },
+        {
+          "ticker": "BNTX",
+          "score": -0.471950648689496
+        },
+        {
+          "ticker": "WVE",
+          "score": -0.43113175640271856
+        },
+        {
+          "ticker": "PYXS",
+          "score": -0.43093845199964337
+        },
+        {
+          "ticker": "ALMS",
+          "score": -0.42417405439113004
+        },
+        {
+          "ticker": "NRXP",
+          "score": -0.4138648442795997
+        },
+        {
+          "ticker": "ZNTL",
+          "score": -0.40180754897614135
+        },
+        {
+          "ticker": "AXSM",
+          "score": -0.40174656457845437
         },
         {
           "ticker": "IMNM",
-          "score": -0.3982518841316755
+          "score": -0.40047802442788955
+        },
+        {
+          "ticker": "BAK",
+          "score": -0.3976976994603702
         },
         {
           "ticker": "LXRX",
-          "score": -0.3959981883648946
+          "score": -0.3974163555410189
         },
         {
-          "ticker": "MLYS",
-          "score": -0.39058691527354955
-        },
-        {
-          "ticker": "BIDU",
-          "score": -0.3891383278993969
+          "ticker": "CGEM",
+          "score": -0.3951055099982786
         },
         {
           "ticker": "CHRS",
-          "score": -0.38420072029145313
+          "score": -0.3925879039525586
         }
       ]
     },
     "1w": {
       "buy": [
         {
-          "ticker": "CDNA",
-          "score": 0.9669063743144235
-        },
-        {
           "ticker": "VEEV",
-          "score": 0.5341412321337453
+          "score": 0.5180494009449755
         },
         {
-          "ticker": "ARQT",
-          "score": 0.9218755499626203
-        },
-        {
-          "ticker": "ETON",
-          "score": 0.8877511284523179
+          "ticker": "CORT",
+          "score": 0.4803907539835738
         },
         {
           "ticker": "PRCH",
-          "score": 0.8633886909238366
+          "score": 0.843674297749545
         },
         {
-          "ticker": "LAUR",
-          "score": 0.768081331518365
+          "ticker": "ETON",
+          "score": 0.847796260809238
         },
         {
           "ticker": "VLO",
-          "score": 0.40050617769869534
+          "score": 0.4717386118160737
         },
         {
-          "ticker": "TRU",
-          "score": 0.6397653254815303
+          "ticker": "LAUR",
+          "score": 0.799001093716535
         },
         {
-          "ticker": "ABX",
-          "score": 0.7185135303440913
+          "ticker": "BIIB",
+          "score": 0.4461740903227207
+        },
+        {
+          "ticker": "OLLI",
+          "score": 0.8148125370209969
+        },
+        {
+          "ticker": "AVO",
+          "score": 0.7715240599318396
+        },
+        {
+          "ticker": "TBBB",
+          "score": 0.7767913559915649
+        },
+        {
+          "ticker": "IMAX",
+          "score": 0.7460824968382187
         },
         {
           "ticker": "EZPW",
           "score": 0.6766417479111044
         },
         {
-          "ticker": "AVO",
-          "score": 0.6790767936629865
+          "ticker": "ABX",
+          "score": 0.7124155851990919
         },
         {
           "ticker": "CNK",
-          "score": 0.7155861735327609
+          "score": 0.7131379081972474
         },
         {
-          "ticker": "FANG",
-          "score": 0.4798080064034566
-        },
-        {
-          "ticker": "CHEF",
-          "score": 0.6002777358279712
-        },
-        {
-          "ticker": "EDU",
-          "score": 0.5433956387743439
+          "ticker": "JXN",
+          "score": 0.6336648505857505
         }
       ],
       "sell": [
         {
           "ticker": "ROIV",
-          "score": -0.7310644706318177
+          "score": -0.7205156734176188
         },
         {
           "ticker": "BNTX",
-          "score": -0.5336133052985057
-        },
-        {
-          "ticker": "WVE",
-          "score": -0.5105960156606291
-        },
-        {
-          "ticker": "ALMS",
-          "score": -0.4938452295245274
-        },
-        {
-          "ticker": "CGEM",
-          "score": -0.4879032345591538
+          "score": -0.5290461809477368
         },
         {
           "ticker": "IFRX",
-          "score": -0.4835075707973094
+          "score": -0.5273408474433902
         },
         {
-          "ticker": "AXSM",
-          "score": -0.46723085017876664
+          "ticker": "GH",
+          "score": -0.5230420367047794
         },
         {
-          "ticker": "SOC",
-          "score": -0.46363659254376116
+          "ticker": "WVE",
+          "score": -0.488167371354344
+        },
+        {
+          "ticker": "PYXS",
+          "score": -0.48320823342980096
+        },
+        {
+          "ticker": "ALMS",
+          "score": -0.4805708027618146
+        },
+        {
+          "ticker": "NRXP",
+          "score": -0.46846455079883886
         },
         {
           "ticker": "IMNM",
-          "score": -0.4613289291620121
-        },
-        {
-          "ticker": "TYRA",
-          "score": -0.45639649492876927
-        },
-        {
-          "ticker": "LXRX",
-          "score": -0.45129884335189246
-        },
-        {
-          "ticker": "MLYS",
-          "score": -0.4465921704942007
-        },
-        {
-          "ticker": "BIDU",
-          "score": -0.44625899360778903
-        },
-        {
-          "ticker": "SRPT",
-          "score": -0.4355899232454729
+          "score": -0.46389377790114467
         },
         {
           "ticker": "BAK",
-          "score": -0.432537348074667
+          "score": -0.45856013560132286
+        },
+        {
+          "ticker": "AXSM",
+          "score": -0.45563795166393717
+        },
+        {
+          "ticker": "LXRX",
+          "score": -0.4529327854263196
+        },
+        {
+          "ticker": "ZNTL",
+          "score": -0.45208328357183136
+        },
+        {
+          "ticker": "EYPT",
+          "score": -0.44786877913675405
+        },
+        {
+          "ticker": "CGEM",
+          "score": -0.4445263171790729
         }
       ]
     },
     "2w": {
       "buy": [
         {
-          "ticker": "CDNA",
-          "score": 0.9992652428575357
-        },
-        {
           "ticker": "VEEV",
-          "score": 0.5689810806904634
+          "score": 0.5506665793981584
         },
         {
-          "ticker": "ARQT",
-          "score": 0.9585672494562525
-        },
-        {
-          "ticker": "ETON",
-          "score": 0.924910354195581
+          "ticker": "CORT",
+          "score": 0.5178786732694117
         },
         {
           "ticker": "PRCH",
-          "score": 0.9007965906144946
+          "score": 0.8783591641319479
         },
         {
-          "ticker": "LAUR",
-          "score": 0.798604391355553
+          "ticker": "ETON",
+          "score": 0.8794367554174791
         },
         {
           "ticker": "VLO",
-          "score": 0.4233585072079442
+          "score": 0.5044298589635606
         },
         {
-          "ticker": "TRU",
-          "score": 0.6738888941281846
+          "ticker": "LAUR",
+          "score": 0.8337949186543567
         },
         {
-          "ticker": "ABX",
-          "score": 0.7513945267104079
+          "ticker": "BIIB",
+          "score": 0.47932941662242323
+        },
+        {
+          "ticker": "OLLI",
+          "score": 0.838802414236709
+        },
+        {
+          "ticker": "AVO",
+          "score": 0.8004608947706209
+        },
+        {
+          "ticker": "TBBB",
+          "score": 0.7978682796865832
+        },
+        {
+          "ticker": "IMAX",
+          "score": 0.7718498316201297
         },
         {
           "ticker": "EZPW",
           "score": 0.7108732491741032
         },
         {
-          "ticker": "AVO",
-          "score": 0.6952444307343477
+          "ticker": "ABX",
+          "score": 0.7444543082276016
         },
         {
           "ticker": "CNK",
-          "score": 0.7283018107083019
+          "score": 0.7255153808654098
         },
         {
-          "ticker": "FANG",
-          "score": 0.5006083930251529
-        },
-        {
-          "ticker": "CHEF",
-          "score": 0.6236566655876936
-        },
-        {
-          "ticker": "EDU",
-          "score": 0.5582790687193158
+          "ticker": "JXN",
+          "score": 0.6647207071257797
         }
       ],
       "sell": [
         {
           "ticker": "ROIV",
-          "score": -0.7683404917678698
+          "score": -0.756334651168042
         },
         {
           "ticker": "BNTX",
-          "score": -0.5721731429981576
-        },
-        {
-          "ticker": "WVE",
-          "score": -0.5510882593800122
-        },
-        {
-          "ticker": "ALMS",
-          "score": -0.5347282578538644
-        },
-        {
-          "ticker": "CGEM",
-          "score": -0.5247065559156934
+          "score": -0.5669751885924061
         },
         {
           "ticker": "IFRX",
-          "score": -0.5127811882550563
+          "score": -0.5626688978863166
+        },
+        {
+          "ticker": "GH",
+          "score": -0.548943725195522
+        },
+        {
+          "ticker": "WVE",
+          "score": -0.5255616782026771
+        },
+        {
+          "ticker": "ALMS",
+          "score": -0.5196203125089012
+        },
+        {
+          "ticker": "PYXS",
+          "score": -0.5129801998276834
         },
         {
           "ticker": "IMNM",
-          "score": -0.5028982866229932
+          "score": -0.5058174028501254
         },
         {
-          "ticker": "AXSM",
-          "score": -0.5026330902844026
-        },
-        {
-          "ticker": "SOC",
-          "score": -0.5024784986509794
-        },
-        {
-          "ticker": "TYRA",
-          "score": -0.4960969744547716
-        },
-        {
-          "ticker": "LXRX",
-          "score": -0.4866111854404955
-        },
-        {
-          "ticker": "MLYS",
-          "score": -0.4852247281272037
-        },
-        {
-          "ticker": "BIDU",
-          "score": -0.48510120168629894
-        },
-        {
-          "ticker": "SRPT",
-          "score": -0.4754211490532057
+          "ticker": "NRXP",
+          "score": -0.5025439023979669
         },
         {
           "ticker": "BAK",
-          "score": -0.46771201961327297
+          "score": -0.4973291818986269
+        },
+        {
+          "ticker": "AXSM",
+          "score": -0.48943893280532236
+        },
+        {
+          "ticker": "LXRX",
+          "score": -0.48847081433434886
+        },
+        {
+          "ticker": "EYPT",
+          "score": -0.4879140794313409
+        },
+        {
+          "ticker": "ZNTL",
+          "score": -0.4868120226806987
+        },
+        {
+          "ticker": "TYRA",
+          "score": -0.4772368862730017
         }
       ]
     },
     "1m": {
       "buy": [
         {
-          "ticker": "CDNA",
-          "score": 1.056359395003869
-        },
-        {
           "ticker": "VEEV",
-          "score": 0.6240940112526863
+          "score": 0.6034442045475454
         },
         {
-          "ticker": "ARQT",
-          "score": 1.017332190405155
-        },
-        {
-          "ticker": "ETON",
-          "score": 0.9836459245527964
+          "ticker": "CORT",
+          "score": 0.5746517598798209
         },
         {
           "ticker": "PRCH",
-          "score": 0.9507057873367046
+          "score": 0.9254073359931199
         },
         {
-          "ticker": "LAUR",
-          "score": 0.8443445529462326
+          "ticker": "ETON",
+          "score": 0.9323739292105333
         },
         {
           "ticker": "VLO",
-          "score": 0.4702636933760028
+          "score": 0.5616725565690923
         },
         {
-          "ticker": "TRU",
-          "score": 0.7263598792724557
+          "ticker": "LAUR",
+          "score": 0.884022269252797
         },
         {
-          "ticker": "ABX",
-          "score": 0.8033241763756298
+          "ticker": "BIIB",
+          "score": 0.5359264718628141
+        },
+        {
+          "ticker": "OLLI",
+          "score": 0.8864014685756574
+        },
+        {
+          "ticker": "AVO",
+          "score": 0.8482490391061517
+        },
+        {
+          "ticker": "TBBB",
+          "score": 0.8374001344438311
+        },
+        {
+          "ticker": "IMAX",
+          "score": 0.8163077819809754
         },
         {
           "ticker": "EZPW",
           "score": 0.7556243947887025
         },
         {
-          "ticker": "AVO",
-          "score": 0.7296162895777587
+          "ticker": "ABX",
+          "score": 0.79549900178452
         },
         {
           "ticker": "CNK",
-          "score": 0.7637395372707505
+          "score": 0.7605978062055792
         },
         {
-          "ticker": "FANG",
-          "score": 0.5424676354433862
-        },
-        {
-          "ticker": "CHEF",
-          "score": 0.6562398314585158
-        },
-        {
-          "ticker": "EDU",
-          "score": 0.5827018782590407
+          "ticker": "JXN",
+          "score": 0.7025472470168593
         }
       ],
       "sell": [
         {
           "ticker": "ROIV",
-          "score": -0.8298513713487512
+          "score": -0.8163146507052388
         },
         {
           "ticker": "BNTX",
-          "score": -0.6342480241815623
-        },
-        {
-          "ticker": "WVE",
-          "score": -0.6162969464566264
-        },
-        {
-          "ticker": "ALMS",
-          "score": -0.5979626344688531
-        },
-        {
-          "ticker": "CGEM",
-          "score": -0.5846249443331204
-        },
-        {
-          "ticker": "IMNM",
-          "score": -0.5700024166753237
+          "score": -0.6283872719815555
         },
         {
           "ticker": "IFRX",
-          "score": -0.5645819192424373
+          "score": -0.6208308743412343
         },
         {
-          "ticker": "SOC",
-          "score": -0.5645385606202056
+          "ticker": "WVE",
+          "score": -0.5875154383641001
         },
         {
-          "ticker": "AXSM",
-          "score": -0.562173674978409
+          "ticker": "GH",
+          "score": -0.5859782241021875
         },
         {
-          "ticker": "TYRA",
-          "score": -0.5554661661052362
+          "ticker": "ALMS",
+          "score": -0.5809282557486197
         },
         {
-          "ticker": "BIDU",
-          "score": -0.5471588093772698
+          "ticker": "IMNM",
+          "score": -0.5732937531347799
         },
         {
-          "ticker": "MLYS",
-          "score": -0.5460936298943506
-        },
-        {
-          "ticker": "LXRX",
-          "score": -0.5460621141069715
-        },
-        {
-          "ticker": "SRPT",
-          "score": -0.5332166500366435
+          "ticker": "PYXS",
+          "score": -0.568191147997512
         },
         {
           "ticker": "BAK",
-          "score": -0.5286007056497577
+          "score": -0.5619943900633384
+        },
+        {
+          "ticker": "NRXP",
+          "score": -0.5603633253998513
+        },
+        {
+          "ticker": "LXRX",
+          "score": -0.5481588666523165
+        },
+        {
+          "ticker": "AXSM",
+          "score": -0.5472971136551327
+        },
+        {
+          "ticker": "EYPT",
+          "score": -0.546699110901695
+        },
+        {
+          "ticker": "ZNTL",
+          "score": -0.5400111565349096
+        },
+        {
+          "ticker": "LAB",
+          "score": -0.534563842548032
         }
       ]
     }
   },
   "buy_1d": [
-    "CDNA",
     "VEEV",
-    "ARQT",
-    "ETON",
+    "CORT",
     "PRCH",
-    "LAUR",
+    "ETON",
     "VLO",
-    "TRU",
-    "ABX",
-    "EZPW",
+    "LAUR",
+    "BIIB",
+    "OLLI",
     "AVO",
+    "TBBB",
+    "IMAX",
+    "EZPW",
+    "ABX",
     "CNK",
-    "FANG",
-    "CHEF",
-    "EDU"
+    "JXN"
   ],
   "sell_1d": [
     "ROIV",
-    "BNTX",
     "GH",
     "IFRX",
-    "WVE",
-    "CGEM",
-    "ALMS",
-    "AXSM",
-    "SOC",
-    "TYRA",
-    "LXRX",
-    "CHRS",
+    "BNTX",
     "PYXS",
-    "MLYS",
-    "IMNM"
+    "WVE",
+    "ALMS",
+    "NRXP",
+    "AUR",
+    "AXSM",
+    "CGEM",
+    "ZNTL",
+    "CHRS",
+    "LXRX",
+    "BAK"
   ]
 }
