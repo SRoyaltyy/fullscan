@@ -934,20 +934,18 @@
       "events": [
         "ai_chip_demand_spike"
       ],
-      "entry_date": "2026-09-14",
-      "entry_open": 114.11,
-      "window_through": "2026-10-05",
-      "trading_days_elapsed": 1,
+      "entry_date": "2026-10-02",
+      "entry_open": 112.38,
+      "window_through": "2026-10-02",
+      "trading_days_elapsed": 0,
       "complete": false,
       "latest_close": 114.17,
-      "current_return_pct": 0.05,
-      "horizon_returns_pct": {
-        "1d": 0.05
-      },
-      "mfe_pct": 0.85,
-      "mfe_day": "2026-09-14",
+      "current_return_pct": 1.59,
+      "horizon_returns_pct": {},
+      "mfe_pct": 2.88,
+      "mfe_day": "2026-10-02",
       "ever_profitable": true,
-      "first_profitable_day": "2026-09-14"
+      "first_profitable_day": "2026-10-02"
     },
     {
       "signal_date": "2026-09-01",
@@ -1910,9 +1908,9 @@
       "win_rate": 100.0
     },
     "close_1d": {
-      "n": 68,
-      "wins": 34,
-      "win_rate": 50.0,
+      "n": 67,
+      "wins": 33,
+      "win_rate": 49.3,
       "avg": 0.23
     },
     "close_3d": {
@@ -1945,7 +1943,7 @@
         "n": 54,
         "wins": 54,
         "win_rate": 100.0,
-        "avg": 8.44
+        "avg": 8.48
       },
       "close_5d": {
         "n": 53,
