@@ -1,24 +1,28 @@
 # Primary-origin action documents
 
-Updated 2026-11-02T07:42:04.715422+00:00. 353 dated documents in the configured 3-day window; 107 newly retained; 346 repeat observations.
+Updated 2026-11-02T22:20:55.750782+00:00. 225 dated documents in the configured 3-day window; 98 newly retained; 419 repeat observations.
 Source health: 119/119 checked successfully. Collection uses zero LLM calls.
 
 Document stage comes from publisher metadata. Proposed rules, bills and announcements are not automatically labelled enacted policy or concrete public actions.
 
 ## consultation_response_published
 
-- [Make Work Pay: recognition code of practice and e-balloting unfair practices](https://www.gov.uk/government/consultations/make-work-pay-recognition-code-of-practice-and-e-balloting-unfair-practices) — Department for Business, Innovation, Science and Trade; Department for Business and Trade; 2026-10-30T09:30:02+00:00
-- [Make Work Pay: draft code of practice on trade union right of access](https://www.gov.uk/government/consultations/make-work-pay-draft-code-of-practice-on-trade-union-right-of-access) — Department for Business and Trade; Department for Business, Innovation, Science and Trade; 2026-10-30T09:30:02+00:00
+- [Earned settlement](https://www.gov.uk/government/consultations/earned-settlement) — Home Office; Department for Culture, Media and Sport; Department for Work and Pensions; HM Treasury; 2026-11-02T16:09:05+00:00
 
 ## decision_published
 
-- [Avanti House School: 30 October 2026](https://www.gov.uk/government/publications/avanti-house-school-30-october-2026) — Office of the Schools Adjudicator; 2026-10-30T14:45:25+00:00
-- [Deep Drilling Screening Directions – 2026](https://www.gov.uk/government/publications/deep-drilling-screening-directions-2026) — Offshore Petroleum Regulator for Environment and Decommissioning; 2026-10-30T14:11:03+00:00
-- [CAC Outcome: RMT & Hitachi Rail Limited](https://www.gov.uk/government/publications/cac-outcome-rmt-hitachi-rail-limited) — Central Arbitration Committee; 2026-10-30T11:27:03+00:00
-- [CAC Outcome: GMB & Radnor Hills Mineral Water Company Limited (2)](https://www.gov.uk/government/publications/cac-outcome-gmb-radnor-hills-mineral-water-company-limited-2) — Central Arbitration Committee; 2026-10-30T11:26:41+00:00
-- [CAC Outcome: TSSA & Thameslink Southern Great Northern Railway Limited](https://www.gov.uk/government/publications/cac-outcome-tssa-thameslink-southern-great-northern-railway-limited) — Central Arbitration Committee; 2026-10-30T11:26:15+00:00
-- [CAC Outcome: RMT & London North Eastern Railway Limited](https://www.gov.uk/government/publications/cac-outcome-rmt-london-north-eastern-railway-limited) — Central Arbitration Committee; 2026-10-30T11:25:58+00:00
-- [Orphan registered medicinal products](https://www.gov.uk/government/publications/orphan-registered-medicinal-products) — Medicines and Healthcare products Regulatory Agency; 2026-10-30T10:20:09+00:00
+- [CAC Outcome: Unite the Union & Calor Gas Limited (4)](https://www.gov.uk/government/publications/cac-outcome-unite-the-union-calor-gas-limited-4) — Central Arbitration Committee; 2026-11-02T16:02:30+00:00
+- [Teacher misconduct panel outcome: Mr Anton Van Der Watt](https://www.gov.uk/government/publications/teacher-misconduct-panel-outcome-mr-anton-van-der-watt) — Teaching Regulation Agency; 2026-11-02T16:02:04+00:00
+- [Darren Jones - former Chief Secretary to the Prime Minister, Chancellor of the Duchy of Lancaster and Minister for Intergovernmental Relations, Cabinet Office - advice under the government's Business Appointment Rules](https://www.gov.uk/government/publications/darren-jones-former-chief-secretary-to-the-prime-minister-chancellor-of-the-duchy-of-lancaster-and-minister-for-intergovernmental-relations-cabinet-of) — Independent Adviser on Ministerial Standards; 2026-11-02T15:57:45+00:00
+- [Rachel Reeves - former Chancellor of the Exchequer, HM Treasury - advice under the government’s Business Appointment Rules](https://www.gov.uk/government/publications/rachel-reeves-former-chancellor-of-the-exchequer-hm-treasury-advice-under-the-governments-business-appointment-rules) — Independent Adviser on Ministerial Standards; 2026-11-02T15:57:33+00:00
+- [David Lammy - former Deputy Prime Minister, Lord Chancellor and Secretary of State for Justice, Ministry of Justice - advice under the Business Appointment Rules](https://www.gov.uk/government/publications/david-lammy-former-deputy-prime-minister-lord-chancellor-and-secretary-of-state-for-justice-ministry-of-justice-advice-under-the-business-appointment-) — Independent Adviser on Ministerial Standards; 2026-11-02T15:57:07+00:00
+- [Orphan registered medicinal products](https://www.gov.uk/government/publications/orphan-registered-medicinal-products) — Medicines and Healthcare products Regulatory Agency; 2026-11-02T15:36:10+00:00
+- [Fishing opportunities for British fishing boats: determinations published in 2026](https://www.gov.uk/government/publications/fishing-opportunities-for-british-fishing-boats-determinations-published-in-2026) — Department for Environment, Food & Rural Affairs; 2026-11-02T15:00:03+00:00
+- [Company Names Tribunal decision: Lloyds Group Limited](https://www.gov.uk/government/publications/company-names-tribunal-decision-lloyds-group-limited) — Company Names Tribunal; 2026-11-02T14:34:46+00:00
+- [Company Names Tribunal decision: Wolex Properties Limited](https://www.gov.uk/government/publications/company-names-tribunal-decision-wolex-properties-limited) — Company Names Tribunal; 2026-11-02T14:34:22+00:00
+- [CAC Outcome: Prospect & MUBI UK LIMITED](https://www.gov.uk/government/publications/cac-outcome-prospect-mubi-uk-limited) — Central Arbitration Committee; 2026-11-02T13:01:30+00:00
+- [CAC Outcome: RMT & GE Energy (UK) Limited](https://www.gov.uk/government/publications/cac-outcome-rmt-ge-energy-uk-limited) — Central Arbitration Committee; 2026-11-02T13:01:17+00:00
+- [Compulsory purchase orders: Register of decisions](https://www.gov.uk/government/publications/compulsory-purchase-orders-register-of-decisions) — Ministry of Housing, Communities and Local Government; 2026-11-02T11:50:00+00:00
 
 ## final_rule_published
 
@@ -30,17 +34,6 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [Airworthiness Directives; The Boeing Company Airplanes](https://www.federalregister.gov/documents/2026/11/02/2026-22317/airworthiness-directives-the-boeing-company-airplanes) — Transportation Department; Federal Aviation Administration; 2026-11-02T00:00:00+00:00
 - [Airworthiness Directives; The Boeing Company Airplanes](https://www.federalregister.gov/documents/2026/11/02/2026-22318/airworthiness-directives-the-boeing-company-airplanes) — Transportation Department; Federal Aviation Administration; 2026-11-02T00:00:00+00:00
 - [Reducing Barriers to Network Improvements and Service Changes, Accelerating Network Modernization; Correction](https://www.federalregister.gov/documents/2026/11/02/2026-22334/reducing-barriers-to-network-improvements-and-service-changes-accelerating-network-modernization) — Federal Communications Commission; 2026-11-02T00:00:00+00:00
-
-## law_published
-
-- [Public Law 119 - 111 - Lindsey O. Graham Sanctioning Russia and Iran Act of 2026](https://www.govinfo.gov/app/details/PLAW-119publ111) — Public and Private Laws; 2026-10-30T15:31:04+00:00
-- [Public Law 119 - 104 - Hershel `Woody' Williams National Medal of Honor Monument Location Act](https://www.govinfo.gov/app/details/PLAW-119publ104) — Public and Private Laws; 2026-10-30T15:31:04+00:00
-- [Public Law 119 - 108 - Doug LaMalfa Federal Disaster Tax Relief Certainty Act](https://www.govinfo.gov/app/details/PLAW-119publ108) — Public and Private Laws; 2026-10-30T15:31:04+00:00
-- [Public Law 119 - 107 - National Emergency Medical Services Memorial Extension Act](https://www.govinfo.gov/app/details/PLAW-119publ107) — Public and Private Laws; 2026-10-30T15:31:03+00:00
-- [Public Law 119 - 105 - An act to remove restrictions from a parcel of land in Paducah, Kentucky.](https://www.govinfo.gov/app/details/PLAW-119publ105) — Public and Private Laws; 2026-10-30T15:30:11+00:00
-- [Public Law 119 - 103 - Continuing Appropriations and Extensions Act, 2027](https://www.govinfo.gov/app/details/PLAW-119publ103) — Public and Private Laws; 2026-10-30T15:30:11+00:00
-- [Public Law 119 - 106 - Stop Secret Spending Act of 2025](https://www.govinfo.gov/app/details/PLAW-119publ106) — Public and Private Laws; 2026-10-30T15:30:11+00:00
-- [Public Law 119 - 68 - La Paz County Solar Energy and Job Creation Act](https://www.govinfo.gov/app/details/PLAW-119publ68) — Public and Private Laws; 2026-10-30T15:30:07+00:00
 
 ## legislative_document_published
 
@@ -56,7 +49,6 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [H.R. 10919 (IH) - Safety Net Provider Drug Pricing Protection Act](https://www.govinfo.gov/app/details/BILLS-119hr10919ih) — Congressional Bills; 2026-10-31T09:47:01+00:00
 - [H.R. 10922 (IH) - Fraud Accountability and Mandatory Sentencing Act](https://www.govinfo.gov/app/details/BILLS-119hr10922ih) — Congressional Bills; 2026-10-31T09:47:01+00:00
 - [H.R. 10950 (IH) - Data Center Oversight Act](https://www.govinfo.gov/app/details/BILLS-119hr10950ih) — Congressional Bills; 2026-10-31T09:47:01+00:00
-- [H.R. 8183 (RH) - Modernizing Access to Talents, Credentials, and Hiring Act of 2026](https://www.govinfo.gov/app/details/BILLS-119hr8183rh) — Congressional Bills; 2026-10-30T08:42:00+00:00
 
 ## notice_published
 
@@ -150,11 +142,11 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 
 ## presidential_document_published
 
+- [DCPD-202600574 - Remarks During a Rose Garden Club Dinner](https://www.govinfo.gov/app/details/DCPD-202600574) — Compilation of Presidential Documents; 2026-11-02T22:09:00+00:00
+- [DCPD-202600663 - Remarks in an Exchange With Reporters During a Tour of Peterbilt Motors Company in Denton, Texas](https://www.govinfo.gov/app/details/DCPD-202600663) — Compilation of Presidential Documents; 2026-11-02T22:09:00+00:00
+- [DCPD-202600662 - Remarks and an Exchange With Reporters Upon Arrival in Dallas, Texas](https://www.govinfo.gov/app/details/DCPD-202600662) — Compilation of Presidential Documents; 2026-11-02T22:09:00+00:00
 - [Adjusting Imports of Robotics, Industrial Machinery, and Their Parts and Components Into the United States](https://www.federalregister.gov/documents/2026/11/02/2026-22385/adjusting-imports-of-robotics-industrial-machinery-and-their-parts-and-components-into-the-united) — Executive Office of the President; 2026-11-02T00:00:00+00:00
 - [Delegation of Authority Under Section 8335 of the National Defense Authorization Act for Fiscal Year 2026](https://www.federalregister.gov/documents/2026/11/02/2026-22386/delegation-of-authority-under-section-8335-of-the-national-defense-authorization-act-for-fiscal-year) — Executive Office of the President; 2026-11-02T00:00:00+00:00
-- [DCPD-202600660 - Presidential Determination on the Revocation of Presidential Determinations Related to Lebanon](https://www.govinfo.gov/app/details/DCPD-202600660) — Compilation of Presidential Documents; 2026-10-30T21:16:00+00:00
-- [DCPD-202600659 - Notice-Continuation of the National Emergency With Respect to the Situation in and in Relation to Syria](https://www.govinfo.gov/app/details/DCPD-202600659) — Compilation of Presidential Documents; 2026-10-30T21:16:00+00:00
-- [DCPD-202600657 - Remarks at a National Hispanic Heritage Month Celebration](https://www.govinfo.gov/app/details/DCPD-202600657) — Compilation of Presidential Documents; 2026-10-30T21:16:00+00:00
 
 ## proposal_published
 
@@ -166,11 +158,94 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 
 ## requires_semantic_review
 
+- [Parliamentary Appearance by the Governor and the Senior Deputy Governor of the Bank of Canada](https://www.bankofcanada.ca/2026/11/parliamentary-appearance-governor-senior-deputy-governor-2026-11-3/) — Bank of Canada — Press; 2026-11-03T11:00:36+00:00
+- [Timeline of Selected FDA Activities and Significant Events Addressing Substance Use and Overdose Prevention](http://www.fda.gov/drugs/food-and-drug-administration-overdose-prevention-framework/timeline-selected-fda-activities-and-significant-events-addressing-substance-use-and-overdose) — Food and Drug Administration — What's New: Drugs; 2026-11-02T21:11:25+00:00
+- [Generic Drug Facilities, Sites and Organization Lists](http://www.fda.gov/industry/generic-drug-user-fee-amendments/generic-drug-facilities-sites-and-organization-lists) — Food and Drug Administration — What's New: Drugs; 2026-11-02T20:57:44+00:00
+- [Blood Guidances](http://www.fda.gov/vaccines-blood-biologics/biologics-guidances/blood-guidances) — Food and Drug Administration — What's New: Vaccines, Blood and Biologics; 2026-11-02T20:55:20+00:00
+- [WTAS: HHS Wins for Women Under President Trump](https://www.hhs.gov/press-room/wtas-hhs-wins-women-president-trump.html) — Health and Human Services; 2026-11-02T20:30:00+00:00
+- [Alyssa D'Urso, Antonella Chiaramonte, Daniel Wellcome, Jay Garnock, and Michael D'Urso](https://www.sec.gov/enforcement-litigation/litigation-releases/lr-26682) — Securities and Exchange Commission; 2026-11-02T20:27:17+00:00
+- [RBNZ registers Revolut as a bank in New Zealand - Reserve Bank of New Zealand](https://news.google.com/rss/articles/CBMiowFBVV95cUxNZS1OMV9XS1g5LVZ3emQ3eWRoZXdFTzlFYXNqd1VUQXJCS0RLcTh5TVEwcmc1WTdKdDFibm9uLUF4dlhtS1RsQTdZYzlsX3d2a0w1aWVqMVhYYnhqbWFLcjcxTENGWEp6eGlrZ29faWpvT3ItNHRwb00xNUxkRHZ4QXhycU9yX0gxdlhSaHc5dnUxWjRkTDJ1aFlqRGx1RHJkTXY4) — Reserve Bank of New Zealand (official-site news mirror); 2026-11-02T20:06:15+00:00
+- [FDA approves atezolizumab in combination with chemotherapy for Stage III mismatch repair deficient colon cancer](http://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-atezolizumab-combination-chemotherapy-stage-iii-mismatch-repair-deficient-colon-cancer) — Food and Drug Administration — What's New: Drugs; 2026-11-02T19:19:49+00:00
+- [Office of Prescription Drug Promotion (OPDP) Metrics](http://www.fda.gov/about-fda/center-drug-evaluation-and-research-cder/office-prescription-drug-promotion-opdp-metrics) — Food and Drug Administration — What's New: Drugs; 2026-11-02T19:18:09+00:00
+- [Crash Causal Factors Program](https://www.transportation.gov/rural/grant-toolkit/crash-causal-factors-program) — Department of Transportation; 2026-11-02T18:51:33+00:00
+- [Auction of Government of India Dated Securities](https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63902) — Reserve Bank of India; 2026-11-02T18:25:00+00:00
+- [Summary of NLRB Decisions for Week of October 19 - 23, 2026](https://www.nlrb.gov/cases-decisions/weekly-summaries-decisions/summary-of-nlrb-decisions-for-week-of-october-19-23-2026) — National Labor Relations Board — https://www.nlrb.gov/rss/rssWeeklySummaries.xml; 2026-11-02T17:23:30+00:00
+- [Processing of Applications Received Under the Citizen’s Charter Status as on October 31, 2026](https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63901) — Reserve Bank of India; 2026-11-02T17:15:00+00:00
+- [Amy L. Cocuzza Named Solicitor to the National Labor Relations Board](https://www.nlrb.gov/news-outreach/news-story/amy-l-cocuzza-named-solicitor-to-the-national-labor-relations-board) — National Labor Relations Board — https://www.nlrb.gov/rss/rssPressReleases.xml; 2026-11-02T15:55:47+00:00
+- [Product Recall: ASDA Ladies’ Handbags (2609-0009)](https://www.gov.uk/product-safety-alerts-reports-recalls/product-recall-asda-ladies-handbags-2609-0009) — Office for Product Safety and Standards; 2026-11-02T15:30:49+00:00
+- [H. Rept. 119-854](https://www.govinfo.gov/app/details/CRPT-119hrpt854) — Congressional Reports; 2026-11-02T15:08:00+00:00
+- [H. Rept. 119-853](https://www.govinfo.gov/app/details/CRPT-119hrpt853) — Congressional Reports; 2026-11-02T15:08:00+00:00
+- [Main refinancing operation – Announcement | Tender-ID: 20260097 | Reverse transaction](https://www.bundesbank.de/en/tasks/monetary-policy/open-market-operations/outstanding-open-market-operations/main-refinancing-operation-announcement-1013718) — Deutsche Bundesbank — Outstanding open market operations; 2026-11-02T14:50:06+00:00
+- [Frequently Requested or Proactively Posted Compliance Records](http://www.fda.gov/drugs/cder-foia-electronic-reading-room/frequently-requested-or-proactively-posted-compliance-records) — Food and Drug Administration — What's New: Drugs; 2026-11-02T14:30:04+00:00
+- [What’s New for Biologics](http://www.fda.gov/vaccines-blood-biologics/news-events-biologics/whats-new-biologics) — Food and Drug Administration — What's New: Vaccines, Blood and Biologics; 2026-11-02T14:18:31+00:00
+- [What's New Related to Drugs](http://www.fda.gov/drugs/news-events-human-drugs/whats-new-related-drugs) — Food and Drug Administration — What's New: Drugs; 2026-11-02T14:14:07+00:00
+- [Newly Added Guidance Documents](http://www.fda.gov/drugs/guidances-drugs/newly-added-guidance-documents) — Food and Drug Administration — What's New: Drugs; 2026-11-02T14:12:59+00:00
+- [Recommendations for Reducing the Risk of Transfusion-Transmitted Hepatitis B Virus](http://www.fda.gov/regulatory-information/search-fda-guidance-documents/recommendations-reducing-risk-transfusion-transmitted-hepatitis-b-virus) — Food and Drug Administration — What's New: Vaccines, Blood and Biologics; 2026-11-02T14:12:17+00:00
+- [Registered Outsourcing Facilities](http://www.fda.gov/drugs/human-drug-compounding/registered-outsourcing-facilities) — Food and Drug Administration — What's New: Drugs; 2026-11-02T14:11:18+00:00
+- [Drugs@FDA Data Files](http://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files) — Food and Drug Administration — What's New: Drugs; 2026-11-02T13:59:46+00:00
+- [Cellular & Gene Therapy Guidances](http://www.fda.gov/vaccines-blood-biologics/biologics-guidances/cellular-gene-therapy-guidances) — Food and Drug Administration — What's New: Vaccines, Blood and Biologics; 2026-11-02T13:57:07+00:00
+- [Office of Therapeutic Products (OTP) Events, Meetings, and Workshops](http://www.fda.gov/vaccines-blood-biologics/workshops-meetings-conferences-biologics/office-therapeutic-products-otp-events-meetings-and-workshops) — Food and Drug Administration — What's New: Vaccines, Blood and Biologics; 2026-11-02T13:56:25+00:00
+- [FDA Provides Clarity to Support Cell and Gene Therapy Development and Quality](http://www.fda.gov/news-events/press-announcements/fda-provides-clarity-support-cell-and-gene-therapy-development-and-quality) — Food and Drug Administration — Press Releases; 2026-11-02T13:56:06+00:00
+- [Recently Issued Biologics Guidance Documents](http://www.fda.gov/vaccines-blood-biologics/biologics-guidances/recently-issued-biologics-guidance-documents) — Food and Drug Administration — What's New: Drugs; 2026-11-02T13:55:26+00:00
+- [Guidance for Industry: Potency Assurance for Cellular and Gene Therapy Products](http://www.fda.gov/regulatory-information/search-fda-guidance-documents/guidance-industry-potency-assurance-cellular-and-gene-therapy-products) — Food and Drug Administration — What's New: Vaccines, Blood and Biologics; 2026-11-02T13:53:44+00:00
+- [Withdrawn and Expired Guidances | Drugs](http://www.fda.gov/drugs/guidances-drugs/withdrawn-and-expired-guidances-drugs) — Food and Drug Administration — What's New: Drugs; 2026-11-02T13:52:51+00:00
+- [2026-11-02 - Data portal - Interest rates and exchange rates, November 2026](https://www.snb.ch/en/publications/statistical-publications/data-portal/2026/11/statpub_news_20261102_a) — Swiss National Bank; 2026-11-02T13:30:00+00:00
+- [FDA Approves First Once-Weekly Insulin for Type 2 Diabetes Mellitus in Pediatric Patients](http://www.fda.gov/drugs/news-events-human-drugs/fda-approves-first-once-weekly-insulin-type-2-diabetes-mellitus-pediatric-patients) — Food and Drug Administration — What's New: Drugs; 2026-11-02T12:20:29+00:00
 - [Money Market Operations as on November 01, 2026](https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63900) — Reserve Bank of India; 2026-11-02T12:10:00+00:00
 - [Money Market Operations as on October 31, 2026](https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63899) — Reserve Bank of India; 2026-11-02T12:05:00+00:00
+- [Product Recall: Piper K Bag Charms – Seal Lifeguard and Duck in Dungarees sold by TK Maxx (2607-0266)](https://www.gov.uk/product-safety-alerts-reports-recalls/product-recall-piper-k-bag-charms-seal-lifeguard-and-duck-in-dungarees-sold-by-tk-maxx-2607-0266) — Office for Product Safety and Standards; 2026-11-02T12:00:47+00:00
+- [US Department of Labor launches Registered Apprenticeship incentive payments for high-growth industries](http://www.dol.gov/newsroom/releases/eta/eta20261102) — Department of Labor; 2026-11-02T12:00:00+00:00
+- [Justice Department Announces Charges Involving 63 Individuals for Election-Related Crimes](https://www.justice.gov/opa/pr/justice-department-announces-charges-involving-63-individuals-election-related-crimes) — Department of Justice — RSS Feed; 2026-11-02T12:00:00+00:00
+- [St. Louis Man Who Sold Fentanyl, Meth to the ATF Sentenced to 8 years in Prison](https://www.justice.gov/usao-edmo/pr/st-louis-man-who-sold-fentanyl-meth-atf-sentenced-8-years-prison) — Department of Justice; 2026-11-02T12:00:00+00:00
+- [Jury Convicts Tennessee Man of Trafficking Drugs and Illegally Possessing a Firearm in West Memphis](https://www.justice.gov/usao-edar/pr/jury-convicts-tennessee-man-trafficking-drugs-and-illegally-possessing-firearm-west) — Department of Justice; 2026-11-02T12:00:00+00:00
+- [Madison Man Sentenced to 10 Years in Homeland Security Task Force Drug Case](https://www.justice.gov/usao-wdwi/pr/madison-man-sentenced-10-years-homeland-security-task-force-drug-case) — Department of Justice; 2026-11-02T12:00:00+00:00
+- [Knoxville Man Sentenced To More Than 10 Years For Distribution of Child Pornography](https://www.justice.gov/usao-edtn/pr/knoxville-man-sentenced-more-10-years-distribution-child-pornography) — Department of Justice; 2026-11-02T12:00:00+00:00
+- [Reno Man Pleads Guilty to Bank Robbery](https://www.justice.gov/usao-nv/pr/reno-man-pleads-guilty-bank-robbery-0) — Department of Justice; 2026-11-02T12:00:00+00:00
+- [California man pleads guilty to shipping fentanyl cross country to Buffalo following Homeland Security Task Force investigation](https://www.justice.gov/usao-wdny/pr/california-man-pleads-guilty-shipping-fentanyl-cross-country-buffalo-following) — Department of Justice; 2026-11-02T12:00:00+00:00
+- [Fourth Alien Arrested in North Georgia for Voting in Federal Elections](https://www.justice.gov/usao-ndga/pr/fourth-alien-arrested-north-georgia-voting-federal-elections) — Department of Justice; 2026-11-02T12:00:00+00:00
+- [Homeland Security Task Force Case Results in Life Imprisonment for Illegal Alien](https://www.justice.gov/usao-wdtx/pr/homeland-security-task-force-case-results-life-imprisonment-illegal-alien) — Department of Justice; 2026-11-02T12:00:00+00:00
+- [Georgia Man Sentenced to More Than 21 Years in Prison for Methamphetamine Trafficking](https://www.justice.gov/usao-mdal/pr/georgia-man-sentenced-more-21-years-prison-methamphetamine-trafficking) — Department of Justice; 2026-11-02T12:00:00+00:00
+- [Federal, state and local partners launch "Operation Deep Cover" to end violence in Deep Ellum; Convicted felon charged with federal firearm offense](https://www.justice.gov/usao-ndtx/pr/federal-state-and-local-partners-launch-operation-deep-cover-end-violence-deep-ellum) — Department of Justice; 2026-11-02T12:00:00+00:00
+- [Federal Jury Convicts Smiths Station Man of Methamphetamine Distribution](https://www.justice.gov/usao-mdal/pr/federal-jury-convicts-smiths-station-man-methamphetamine-distribution) — Department of Justice; 2026-11-02T12:00:00+00:00
+- [Georgia man pleads guilty to his role in international drug trafficking ring involving pharmaceuticals following Homeland Security Task Force investigation](https://www.justice.gov/usao-wdny/pr/georgia-man-pleads-guilty-his-role-international-drug-trafficking-ring-involving) — Department of Justice; 2026-11-02T12:00:00+00:00
+- [Joint Base San Antonio Contractor Arrested for Mishandling Classified Documents, Possessing Firearms While on Base](https://www.justice.gov/usao-wdtx/pr/joint-base-san-antonio-contractor-arrested-mishandling-classified-documents-possessing) — Department of Justice; 2026-11-02T12:00:00+00:00
+- [Ohio Man Pleads Guilty to Fentanyl Crime](https://www.justice.gov/usao-sdwv/pr/ohio-man-pleads-guilty-fentanyl-crime-5) — Department of Justice; 2026-11-02T12:00:00+00:00
+- [Utah County Man Admits His Part in a Multimillion-Dollar Ponzi Scheme](https://www.justice.gov/usao-ut/pr/utah-county-man-admits-his-part-multimillion-dollar-ponzi-scheme) — Department of Justice; 2026-11-02T12:00:00+00:00
+- [FTC, Washington Take Action Against Payment Processor for Deceiving Small Businesses About Costs and Cancellation Terms](https://www.ftc.gov/news-events/news/press-releases/2026/11/ftc-washington-take-action-against-payment-processor-deceiving-small-businesses-about-costs) — Federal Trade Commission — Press Releases; 2026-11-02T12:00:00+00:00
+- [Product Safety Report: Move2Play Baby Gym Deluxe sold via Amazon (2610-0190)](https://www.gov.uk/product-safety-alerts-reports-recalls/product-safety-report-move2play-baby-gym-deluxe-sold-via-amazon-2610-0190) — Office for Product Safety and Standards; 2026-11-02T11:59:03+00:00
+- [Product Safety Report: Move2Play Baby Gym Basic sold via Amazon (2610-0234)](https://www.gov.uk/product-safety-alerts-reports-recalls/product-safety-report-move2play-baby-gym-basic-sold-via-amazon-2610-0234) — Office for Product Safety and Standards; 2026-11-02T11:57:50+00:00
+- [Product Recall: Decathlon Electric Assistance for Stand-Up Paddleboard (SUP) and Battery (2610-0191)](https://www.gov.uk/product-safety-alerts-reports-recalls/product-recall-decathlon-electric-assistance-for-stand-up-paddleboard-sup-and-battery-2610-0191) — Office for Product Safety and Standards; 2026-11-02T11:56:31+00:00
+- [Product Recall: Ancient Wisdom Bath Donut (2610-0144)](https://www.gov.uk/product-safety-alerts-reports-recalls/product-recall-ancient-wisdom-bath-donut-2610-0144) — Office for Product Safety and Standards; 2026-11-02T11:51:29+00:00
+- [Statement by the High Representative on behalf of the European Union on the situation in Yemen](https://www.consilium.europa.eu/en/press/press-releases/2026/11/02/statement-of-the-high-representative-on-behalf-of-the-eu-on-the-situation-in-yemen/) — Council of the European Union; 2026-11-02T11:22:00+00:00
+- [Bank of Canada launches consultation on draft supervisory guidelines related to accreditation](https://www.bankofcanada.ca/2026/11/bank-of-canada-launches-consultation-on-draft-supervisory-guidelines-related-to-accreditation/) — Bank of Canada — Subscribe to Regulatory news; 2026-11-02T11:00:34+00:00
+- [CDER Manual of Policies & Procedures | MAPP](http://www.fda.gov/about-fda/center-drug-evaluation-and-research-cder/cder-manual-policies-procedures-mapp) — Food and Drug Administration — What's New: Drugs; 2026-11-02T11:00:04+00:00
+- [Auction result – Federal Treasury discount paper (Bubills)](https://www.bundesbank.de/en/press/press-releases/federal-securities/auction-result-federal-treasury-discount-paper-bubills--1013710) — Deutsche Bundesbank; 2026-11-02T10:45:00+00:00
+- [Boris Vujčić: Integrated, open and resilient: Europe’s strengths in a fragmenting world](https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp.261102~70003226e9.en.html) — European Central Bank; 2026-11-02T09:30:00+00:00
+- [Invitation to bid for 3-months Bills of the European Stability Mechanism (ESM)](https://www.bundesbank.de/en/press/press-releases/esm/invitation-to-bid-for-3-months-bills-of-the-european-stability-mechanism-esm--1013700) — Deutsche Bundesbank; 2026-11-02T09:00:00+00:00
+- [2026-11-02 - Data portal - Important monetary policy data, 2 November 2026](https://www.snb.ch/en/publications/statistical-publications/data-portal/2026/11/statpub_news_20261102_gwd) — Swiss National Bank; 2026-11-02T09:00:00+00:00
+- [Euro area bank interest rate statistics: September 2026](https://www.ecb.europa.eu//press/stats/mfi/html/ecb.mir2611~2502265512.en.html) — European Central Bank — Statistical press releases; 2026-11-02T09:00:00+00:00
 - [Money Market Operations as on October 30, 2026](https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63898) — Reserve Bank of India; 2026-11-02T09:00:00+00:00
+- [Philipp Nimmermann ist neues Vorstandsmitglied der Bundesbank](https://www.bundesbank.de/de/aufgaben/themen/finanzstabilitaetsbericht-1013622) — Deutsche Bundesbank — Topics; 2026-11-02T08:00:00+00:00
+- [Philipp Nimmermann joins Bundesbank as new Executive Board member](https://www.bundesbank.de/en/tasks/topics/finanzstabilitaetsbericht-1013704) — Deutsche Bundesbank — Topics; 2026-11-02T08:00:00+00:00
+- [Invitation to bid by auction – Reopening of five-year Federal notes (Bundesobligationen – “Bobls”) series 194](https://www.bundesbank.de/en/press/press-releases/federal-securities/invitation-to-bid-by-auction-reopening-of-five-year-federal-notes-bundesobligationen-bobls-series-194-1013696) — Deutsche Bundesbank; 2026-11-02T08:00:00+00:00
 - [Outlook for Economic Activity and Prices (October 2026, full text)](http://www.boj.or.jp/en/mopo/outlook/gor2610b.pdf) — Bank of Japan; 2026-11-02T05:00:00+00:00
 - [Sources of Changes in Current Account Balances and Market Operations (Oct.)](http://www.boj.or.jp/en/statistics/boj/fm/juqf/juqf10.xlsx) — Bank of Japan; 2026-11-02T04:00:00+00:00
+- [Statement - base rate of the National Bank of Kazakhstan](https://www.bis.org/speeches/20261102-statement-base-rate-national-bank-kazakhstan) — Bank for International Settlements — View feed; 2026-11-02T00:00:00+00:00
+- [Sustainable revenue streams - financing the future of Eswatini's local authorities and unlocking local government financing](https://www.bis.org/speeches/20261102-sustainable-revenue-streams-financing-future-eswatinis-local-authorities-and-unlocking-local-government-financing) — Bank for International Settlements — View feed; 2026-11-02T00:00:00+00:00
+- [Capital needs AI, and AI needs capital - Europe's opportunity for more growth](https://www.bis.org/speeches/20261102-capital-needs-ai-and-ai-needs-capital-europes-opportunity-more-growth) — Bank for International Settlements — View feed; 2026-11-02T00:00:00+00:00
+- [Savings in a changing society](https://www.bis.org/speeches/20261102-savings-changing-society) — Bank for International Settlements — View feed; 2026-11-02T00:00:00+00:00
+- [AI adoption in Europe](https://www.bis.org/speeches/20261102-ai-adoption-europe) — Bank for International Settlements — View feed; 2026-11-02T00:00:00+00:00
+- [Next-day securities settlement, tokenisation and the transformation of Europe’s financial infrastructure](https://www.bis.org/speeches/20261102-next-day-securities-settlement-tokenisation-and-transformation-europes-financial-infrastructure) — Bank for International Settlements — View feed; 2026-11-02T00:00:00+00:00
+- [Liquidity against collateral - the Swiss National Bank’s approach](https://www.bis.org/speeches/20261102-liquidity-against-collateral-swiss-national-banks-approach) — Bank for International Settlements — View feed; 2026-11-02T00:00:00+00:00
+- [EU launches safeguard investigation on certain new hybrid vehicles](https://www.wto.org/english/news_e/news26_e/safe_eec_02nov26_536_e.htm) — World Trade Organization disputes and decisions; 2026-11-02T00:00:00+00:00
+- [Ambassador Greer Issues Statement on President Trump’s Intent to Terminate Rwanda and South Africa from the AGOA Trade Preference Program](https://ustr.gov/about/policy-offices/press-office/press-releases/2026/november/ambassador-greer-issues-statement-president-trumps-intent-terminate-rwanda-and-south-africa-agoa) — United States Trade Representative; 2026-11-02T00:00:00+00:00
+- [United States and Mexico Announce Memorandum of Understanding at Industrias Tecnos Facility](https://ustr.gov/about/policy-offices/press-office/press-releases/2026/november/united-states-and-mexico-announce-memorandum-understanding-industrias-tecnos-facility) — United States Trade Representative; 2026-11-02T00:00:00+00:00
+- [United States Seeks Mexico’s Review of Alleged Denial of Workers’ Rights at Madobox](https://ustr.gov/about/policy-offices/press-office/press-releases/2026/november/united-states-seeks-mexicos-review-alleged-denial-workers-rights-madobox) — United States Trade Representative; 2026-11-02T00:00:00+00:00
+- [Hong Kong FinTech Week 2026](https://www.hkma.gov.hk/eng/news-and-media/press-releases/2026/11/20261102-3/) — Hong Kong Monetary Authority; 2026-11-02T00:00:00+00:00
+- [HKMA launches Project SAGE and establishes Expert Group for agentic finance](https://www.hkma.gov.hk/eng/news-and-media/press-releases/2026/11/20261102-4/) — Hong Kong Monetary Authority; 2026-11-02T00:00:00+00:00
+- [HKMA advances Project Ensemble pilot phase to 24/7 settlement in tokenised Central Bank Money](https://www.hkma.gov.hk/eng/news-and-media/press-releases/2026/11/20261102-5/) — Hong Kong Monetary Authority; 2026-11-02T00:00:00+00:00
+- [HKMA and HKUST launch PQC Toolkit to support banks’ quantum preparedness](https://www.hkma.gov.hk/eng/news-and-media/press-releases/2026/11/20261102-6/) — Hong Kong Monetary Authority; 2026-11-02T00:00:00+00:00
+- [Im Livestream: Pressekonferenz zum Finanzstabilitätsbericht 2026](https://www.bundesbank.de/de/aufgaben/themen/finanzstabilitaetsbericht-1013174) — Deutsche Bundesbank — Topics; 2026-11-01T23:00:00+00:00
 - [Bundesbank Invited Speaers: Itay Goldstein](https://www.bundesbank.de/de/aufgaben/themen/finanzstabilitaetsbericht-1013296) — Deutsche Bundesbank — Topics; 2026-11-01T23:00:00+00:00
 - [Joint statement by Executive Vice-President Virkkunen, High Representative Kallas and Commissioner McGrath ahead of the International Day to End Impunity for Crimes against Journalists](https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2317) — European Commission press and decisions; 2026-10-31T23:00:00+00:00
 - [Remarks by Angus McGregor, Assistant Governor Financial Stability - Reserve Bank of New Zealand](https://news.google.com/rss/articles/CBMipgFBVV95cUxPSjlmNkFuZ3V4c1huVnBoM2cxY2FKbmRPNXgxM2tVektLNDY4U2Z1V2FaWW02NlRDZ3BaSnpQSkFhQWxKTS1uUVY5R0FxeGR6MmtvNF8zSXU1bVlOd1NWZzlWTU9wUllscHlPRThqeVNYcDNXYlZwUmFZYVFPYkY3TmFRaG5ISUFJSmlsR01fT3RaaHhQdXNhSzBvZF9YR0xlZzdNemhB) — Reserve Bank of New Zealand (official-site news mirror); 2026-10-31T22:33:19+00:00
@@ -178,227 +253,18 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [EU-Canada Summit 2026: Leaders mark a historic moment in bilateral relations](https://ec.europa.eu/commission/presscorner/detail/en/ac_26_2318) — European Commission press and decisions; 2026-10-31T09:45:02+00:00
 - [Asset quality summary – Banks System NPL ratio - Reserve Bank of New Zealand](https://news.google.com/rss/articles/CBMizgFBVV95cUxNbktBMWdGTkdEaTRWV1pvWDlBd0pBRXpHNi1kUjBnV25rRmE2ZTdscWlSUlBMMXktaFdxemNkWGl5Z0p4M3dFTkg4Q2JRSnM1ZHZsSVQwSFlpaWsxb0FZY1ZLTnBZWkZ3YWNiRF9ZRlVkWjVxRklIbTg5NUU0d3pOTjdqNEtQYVhmWElxS0VqVGV1bnBjNkpxbzk3NG1aY29LTFNfVkd1cU92TkljZ2pwVlhkQ2o5VVRpWUVBc2k0VHZhS01rUlNNa0xXRnZldw) — Reserve Bank of New Zealand (official-site news mirror); 2026-10-31T07:27:42+00:00
 - [Approved Cellular and Gene Therapy Products](http://www.fda.gov/vaccines-blood-biologics/cellular-gene-therapy-products/approved-cellular-and-gene-therapy-products) — Food and Drug Administration — What's New: Vaccines, Blood and Biologics; 2026-10-30T23:55:49+00:00
-- [What’s New for Biologics](http://www.fda.gov/vaccines-blood-biologics/news-events-biologics/whats-new-biologics) — Food and Drug Administration — What's New: Vaccines, Blood and Biologics; 2026-10-30T23:55:20+00:00
-- [Cary Edward Urich](https://www.sec.gov/enforcement-litigation/litigation-releases/lr-26681) — Securities and Exchange Commission; 2026-10-30T20:59:50+00:00
-- [CMS Finalizes Rule to Help More Organs Reach Patients and Strengthen Accountability for Organ Procurement Organizations](https://www.hhs.gov/press-room/cms-finalizes-rule-organ-procurement-organizations-transplant-accountability.html) — Health and Human Services; 2026-10-30T20:56:00+00:00
-- [Bran Crudden and Transparent Equity Entrepreneurs, LLC](https://www.sec.gov/enforcement-litigation/litigation-releases/lr-26680) — Securities and Exchange Commission; 2026-10-30T20:42:20+00:00
-- [FDA Approves First Plasmid DNA-based Immunotherapy for Adults with Recurrent Respiratory Papillomatosis](http://www.fda.gov/news-events/press-announcements/fda-approves-first-plasmid-dna-based-immunotherapy-adults-recurrent-respiratory-papillomatosis) — Food and Drug Administration — Press Releases; 2026-10-30T20:32:08+00:00
-- [Digital Health Technologies for Drug Development: Demonstration Projects](http://www.fda.gov/science-research/science-and-research-special-topics/digital-health-technologies-drug-development-demonstration-projects) — Food and Drug Administration — What's New: Drugs; 2026-10-30T20:02:30+00:00
-- [Digital Health Technologies (DHTs) for Drug Development](http://www.fda.gov/science-research/science-and-research-special-topics/digital-health-technologies-dhts-drug-development) — Food and Drug Administration — What's New: Drugs; 2026-10-30T20:02:06+00:00
-- [eSubmitter Application History](http://www.fda.gov/industry/fda-esubmitter/esubmitter-application-history) — Food and Drug Administration — What's New: Vaccines, Blood and Biologics; 2026-10-30T19:37:13+00:00
-- [SEC Issues Exemptive Relief from Treasury Clearing Requirements for Certain Inter-Affiliate and Non-U.S. Repo Transactions](https://www.sec.gov/newsroom/press-releases/2026-111-sec-issues-exemptive-relief-treasury-clearing-requirements-certain-inter-affiliate-non-us-repo) — Securities and Exchange Commission; 2026-10-30T19:30:00+00:00
-- [Center for Drug Evaluation and Research Organization Chart](http://www.fda.gov/about-fda/fda-organization-charts/center-drug-evaluation-and-research-organization-chart) — Food and Drug Administration — What's New: Drugs; 2026-10-30T19:03:48+00:00
-- [Generic Drug Facilities, Sites and Organization Lists](http://www.fda.gov/industry/generic-drug-user-fee-amendments/generic-drug-facilities-sites-and-organization-lists) — Food and Drug Administration — What's New: Drugs; 2026-10-30T18:53:18+00:00
-- [Generic Drug User Fee Amendments](http://www.fda.gov/industry/fda-user-fee-programs/generic-drug-user-fee-amendments) — Food and Drug Administration — What's New: Drugs; 2026-10-30T18:49:46+00:00
-- [Premature redemption under Sovereign Gold Bond (SGB) Scheme - Redemption Price for premature redemption of SGB 2021-22 Series VII due on November 02, 2026](https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63897) — Reserve Bank of India; 2026-10-30T18:40:00+00:00
-- [GDUFA Paid Facilities List](http://www.fda.gov/industry/generic-drug-user-fee-amendments/gdufa-paid-facilities-list) — Food and Drug Administration — What's New: Drugs; 2026-10-30T18:24:33+00:00
-- [Auction of State Government Securities](https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63896) — Reserve Bank of India; 2026-10-30T18:10:00+00:00
-- [Weekly schedule of President António Costa](https://www.consilium.europa.eu/en/press/press-releases/2026/10/30/weekly-schedule-of-president-antonio-costa/) — Council of the European Union; 2026-10-30T17:50:00+00:00
-- [Postmarketing Requirements and Commitments: Searchable Database](http://www.fda.gov/drugs/postmarketing-requirements-and-commitments-introduction/postmarketing-requirements-and-commitments-searchable-database) — Food and Drug Administration — What's New: Drugs; 2026-10-30T17:43:44+00:00
-- [Auction of 91-Day, 182-Day and 364-Day Treasury Bills](https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63895) — Reserve Bank of India; 2026-10-30T17:40:00+00:00
-- [Lending and Deposit Rates of Scheduled Commercial Banks – October 2026](https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63894) — Reserve Bank of India; 2026-10-30T17:35:00+00:00
-- [Notices of Updates](http://www.fda.gov/drugs/development-resources/notices-updates) — Food and Drug Administration — What's New: Drugs; 2026-10-30T17:33:57+00:00
-- [Minocycline Oral, Injection products](http://www.fda.gov/drugs/development-resources/minocycline-oral-injection-products) — Food and Drug Administration — What's New: Drugs; 2026-10-30T17:33:40+00:00
-- [FDA Rationale for Breakpoints Recognition Decision: Minocycline for Stenotrophomonas maltophilia](http://www.fda.gov/drugs/development-resources/fda-rationale-breakpoints-recognition-decision-minocycline-stenotrophomonas-maltophilia) — Food and Drug Administration — What's New: Drugs; 2026-10-30T17:33:20+00:00
-- [Monthly Data on India’s International Trade in Services for the Month of September 2026](https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63893) — Reserve Bank of India; 2026-10-30T17:30:00+00:00
-- [Remarks by President António Costa at the press conference following the EU-Canada summit](https://www.consilium.europa.eu/en/press/press-releases/2026/10/30/remarks-by-president-antonio-costa-at-the-press-conference-following-the-eu-canada-summit/) — Council of the European Union; 2026-10-30T17:20:00+00:00
-- [625 th Meeting of Central Board of the Reserve Bank of India](https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63892) — Reserve Bank of India; 2026-10-30T17:10:00+00:00
-- [Reserve Bank of India – Bulletin Weekly Statistical Supplement – Extract](https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63890) — Reserve Bank of India; 2026-10-30T17:00:00+00:00
-- [Sectoral Deployment of Bank Credit – September 2026](https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63891) — Reserve Bank of India; 2026-10-30T17:00:00+00:00
-- [Menopausal Hormone Therapies with Updated Prescribing Information](http://www.fda.gov/drugs/drug-safety-and-availability/menopausal-hormone-therapies-updated-prescribing-information) — Food and Drug Administration — What's New: Drugs; 2026-10-30T16:53:34+00:00
-- [Joint statement EU-Canada summit, 30 October 2026](https://www.consilium.europa.eu/en/press/press-releases/2026/10/30/joint-statement-eu-canada-summit-30-october-2026/) — Council of the European Union; 2026-10-30T16:40:00+00:00
-- [Vitality Works Inc. Recalls 365 Whole Foods Market Ashwagandha Capsules Sold Nationwide Due to Potential Salmonella Contamination](http://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/vitality-works-inc-recalls-365-whole-foods-market-ashwagandha-capsules-sold-nationwide-due-potential) — Food and Drug Administration — Food Safety Recalls; 2026-10-30T16:16:00+00:00
-- [Philip R. Lane: AI adoption in Europe](https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261030~08d9d540f0.en.html) — European Central Bank; 2026-10-30T16:10:00+00:00
-- [HHS Announces LymeX Visible Voices Prize Winners](https://www.hhs.gov/press-room/hhs-announces-lymex-visible-voices-prize-winners.html) — Health and Human Services; 2026-10-30T16:07:02+00:00
-- [Forward look: 2 - 15 November 2026](https://www.consilium.europa.eu/en/press/press-releases/2026/10/30/forward-look-2026/) — Council of the European Union; 2026-10-30T16:00:00+00:00
-- [Government Stock - Full Auction Results](https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63889) — Reserve Bank of India; 2026-10-30T15:40:00+00:00
-- [H. Rept. 119-814](https://www.govinfo.gov/app/details/CRPT-119hrpt814) — Congressional Reports; 2026-10-30T15:31:05+00:00
-- [H. Rept. 119-817](https://www.govinfo.gov/app/details/CRPT-119hrpt817) — Congressional Reports; 2026-10-30T15:31:05+00:00
-- [H. Rept. 119-815](https://www.govinfo.gov/app/details/CRPT-119hrpt815) — Congressional Reports; 2026-10-30T15:31:04+00:00
-- [H. Rept. 119-812](https://www.govinfo.gov/app/details/CRPT-119hrpt812) — Congressional Reports; 2026-10-30T15:31:04+00:00
-- [H. Rept. 119-813](https://www.govinfo.gov/app/details/CRPT-119hrpt813) — Congressional Reports; 2026-10-30T15:31:04+00:00
-- [H. Rept. 119-827](https://www.govinfo.gov/app/details/CRPT-119hrpt827) — Congressional Reports; 2026-10-30T15:31:04+00:00
-- [H. Rept. 119-828](https://www.govinfo.gov/app/details/CRPT-119hrpt828) — Congressional Reports; 2026-10-30T15:31:04+00:00
-- [H. Rept. 119-821](https://www.govinfo.gov/app/details/CRPT-119hrpt821) — Congressional Reports; 2026-10-30T15:31:04+00:00
-- [H. Rept. 119-822](https://www.govinfo.gov/app/details/CRPT-119hrpt822) — Congressional Reports; 2026-10-30T15:31:04+00:00
-- [H. Rept. 119-816](https://www.govinfo.gov/app/details/CRPT-119hrpt816) — Congressional Reports; 2026-10-30T15:31:04+00:00
-- [S. Rept. 119-142](https://www.govinfo.gov/app/details/CRPT-119srpt142) — Congressional Reports; 2026-10-30T15:31:04+00:00
-- [S. Rept. 119-143](https://www.govinfo.gov/app/details/CRPT-119srpt143) — Congressional Reports; 2026-10-30T15:31:04+00:00
-- [S. Rept. 119-144](https://www.govinfo.gov/app/details/CRPT-119srpt144) — Congressional Reports; 2026-10-30T15:31:04+00:00
-- [H. Rept. 119-806](https://www.govinfo.gov/app/details/CRPT-119hrpt806) — Congressional Reports; 2026-10-30T15:31:04+00:00
-- [H. Rept. 119-801](https://www.govinfo.gov/app/details/CRPT-119hrpt801) — Congressional Reports; 2026-10-30T15:31:03+00:00
-- [S. Rept. 119-35](https://www.govinfo.gov/app/details/CRPT-119srpt35) — Congressional Reports; 2026-10-30T15:31:03+00:00
-- [H. Rept. 119-810](https://www.govinfo.gov/app/details/CRPT-119hrpt810) — Congressional Reports; 2026-10-30T15:31:03+00:00
-- [H. Rept. 119-802](https://www.govinfo.gov/app/details/CRPT-119hrpt802) — Congressional Reports; 2026-10-30T15:31:03+00:00
-- [H. Rept. 119-804](https://www.govinfo.gov/app/details/CRPT-119hrpt804) — Congressional Reports; 2026-10-30T15:31:03+00:00
-- [H. Rept. 119-800](https://www.govinfo.gov/app/details/CRPT-119hrpt800) — Congressional Reports; 2026-10-30T15:31:03+00:00
-- [H. Rept. 119-798](https://www.govinfo.gov/app/details/CRPT-119hrpt798) — Congressional Reports; 2026-10-30T15:31:03+00:00
-- [H. Rept. 119-805](https://www.govinfo.gov/app/details/CRPT-119hrpt805) — Congressional Reports; 2026-10-30T15:31:03+00:00
-- [H. Rept. 119-819](https://www.govinfo.gov/app/details/CRPT-119hrpt819) — Congressional Reports; 2026-10-30T15:31:03+00:00
-- [H. Rept. 119-824](https://www.govinfo.gov/app/details/CRPT-119hrpt824) — Congressional Reports; 2026-10-30T15:31:03+00:00
-- [H. Rept. 119-811](https://www.govinfo.gov/app/details/CRPT-119hrpt811) — Congressional Reports; 2026-10-30T15:31:03+00:00
-- [H. Rept. 119-797](https://www.govinfo.gov/app/details/CRPT-119hrpt797) — Congressional Reports; 2026-10-30T15:31:03+00:00
-- [H. Rept. 119-799](https://www.govinfo.gov/app/details/CRPT-119hrpt799) — Congressional Reports; 2026-10-30T15:31:03+00:00
-- [S. Rept. 119-141](https://www.govinfo.gov/app/details/CRPT-119srpt141) — Congressional Reports; 2026-10-30T15:31:03+00:00
-- [H. Rept. 119-807](https://www.govinfo.gov/app/details/CRPT-119hrpt807) — Congressional Reports; 2026-10-30T15:31:03+00:00
-- [H. Rept. 119-803](https://www.govinfo.gov/app/details/CRPT-119hrpt803) — Congressional Reports; 2026-10-30T15:31:03+00:00
-- [H. Rept. 119-796](https://www.govinfo.gov/app/details/CRPT-119hrpt796) — Congressional Reports; 2026-10-30T15:30:11+00:00
-- [H. Rept. 119-788](https://www.govinfo.gov/app/details/CRPT-119hrpt788) — Congressional Reports; 2026-10-30T15:30:11+00:00
-- [H. Rept. 119-825](https://www.govinfo.gov/app/details/CRPT-119hrpt825) — Congressional Reports; 2026-10-30T15:30:10+00:00
-- [H. Rept. 119-831](https://www.govinfo.gov/app/details/CRPT-119hrpt831) — Congressional Reports; 2026-10-30T15:30:10+00:00
-- [H. Rept. 119-794](https://www.govinfo.gov/app/details/CRPT-119hrpt794) — Congressional Reports; 2026-10-30T15:30:10+00:00
-- [H. Rept. 119-781](https://www.govinfo.gov/app/details/CRPT-119hrpt781) — Congressional Reports; 2026-10-30T15:30:10+00:00
-- [H. Rept. 119-768](https://www.govinfo.gov/app/details/CRPT-119hrpt768) — Congressional Reports; 2026-10-30T15:30:10+00:00
-- [H. Rept. 119-779](https://www.govinfo.gov/app/details/CRPT-119hrpt779) — Congressional Reports; 2026-10-30T15:30:10+00:00
-- [H. Rept. 119-809](https://www.govinfo.gov/app/details/CRPT-119hrpt809) — Congressional Reports; 2026-10-30T15:30:10+00:00
-- [H. Rept. 119-789](https://www.govinfo.gov/app/details/CRPT-119hrpt789) — Congressional Reports; 2026-10-30T15:30:10+00:00
-- [H. Rept. 119-790](https://www.govinfo.gov/app/details/CRPT-119hrpt790) — Congressional Reports; 2026-10-30T15:30:10+00:00
-- [H. Rept. 119-792](https://www.govinfo.gov/app/details/CRPT-119hrpt792) — Congressional Reports; 2026-10-30T15:30:10+00:00
-- [H. Rept. 119-791](https://www.govinfo.gov/app/details/CRPT-119hrpt791) — Congressional Reports; 2026-10-30T15:30:10+00:00
-- [H. Rept. 119-787](https://www.govinfo.gov/app/details/CRPT-119hrpt787) — Congressional Reports; 2026-10-30T15:30:10+00:00
-- [H. Rept. 119-784](https://www.govinfo.gov/app/details/CRPT-119hrpt784) — Congressional Reports; 2026-10-30T15:30:09+00:00
-- [H. Rept. 119-793](https://www.govinfo.gov/app/details/CRPT-119hrpt793) — Congressional Reports; 2026-10-30T15:30:09+00:00
-- [H. Rept. 119-778](https://www.govinfo.gov/app/details/CRPT-119hrpt778) — Congressional Reports; 2026-10-30T15:30:09+00:00
-- [H. Rept. 119-765](https://www.govinfo.gov/app/details/CRPT-119hrpt765) — Congressional Reports; 2026-10-30T15:30:09+00:00
-- [H. Rept. 119-783](https://www.govinfo.gov/app/details/CRPT-119hrpt783) — Congressional Reports; 2026-10-30T15:30:09+00:00
-- [H. Rept. 119-774](https://www.govinfo.gov/app/details/CRPT-119hrpt774) — Congressional Reports; 2026-10-30T15:30:09+00:00
-- [H. Rept. 119-773](https://www.govinfo.gov/app/details/CRPT-119hrpt773) — Congressional Reports; 2026-10-30T15:30:09+00:00
-- [H. Rept. 119-786](https://www.govinfo.gov/app/details/CRPT-119hrpt786) — Congressional Reports; 2026-10-30T15:30:09+00:00
-- [H. Rept. 119-782](https://www.govinfo.gov/app/details/CRPT-119hrpt782) — Congressional Reports; 2026-10-30T15:30:09+00:00
-- [H. Rept. 119-770](https://www.govinfo.gov/app/details/CRPT-119hrpt770) — Congressional Reports; 2026-10-30T15:30:09+00:00
-- [H. Rept. 119-775](https://www.govinfo.gov/app/details/CRPT-119hrpt775) — Congressional Reports; 2026-10-30T15:30:09+00:00
-- [H. Rept. 119-767](https://www.govinfo.gov/app/details/CRPT-119hrpt767) — Congressional Reports; 2026-10-30T15:30:09+00:00
-- [H. Rept. 119-769](https://www.govinfo.gov/app/details/CRPT-119hrpt769) — Congressional Reports; 2026-10-30T15:30:09+00:00
-- [S. Rept. 106-248](https://www.govinfo.gov/app/details/CRPT-106srpt248) — Congressional Reports; 2026-10-30T15:30:08+00:00
-- [S. Rept. 106-245](https://www.govinfo.gov/app/details/CRPT-106srpt245) — Congressional Reports; 2026-10-30T15:30:08+00:00
-- [S. Rept. 106-244](https://www.govinfo.gov/app/details/CRPT-106srpt244) — Congressional Reports; 2026-10-30T15:30:08+00:00
-- [S. Rept. 106-240](https://www.govinfo.gov/app/details/CRPT-106srpt240) — Congressional Reports; 2026-10-30T15:30:08+00:00
-- [S. Rept. 106-236](https://www.govinfo.gov/app/details/CRPT-106srpt236) — Congressional Reports; 2026-10-30T15:30:08+00:00
-- [S. Rept. 106-241](https://www.govinfo.gov/app/details/CRPT-106srpt241) — Congressional Reports; 2026-10-30T15:30:08+00:00
-- [S. Rept. 106-233](https://www.govinfo.gov/app/details/CRPT-106srpt233) — Congressional Reports; 2026-10-30T15:30:08+00:00
-- [S. Rept. 106-242](https://www.govinfo.gov/app/details/CRPT-106srpt242) — Congressional Reports; 2026-10-30T15:30:08+00:00
-- [S. Rept. 106-237](https://www.govinfo.gov/app/details/CRPT-106srpt237) — Congressional Reports; 2026-10-30T15:30:08+00:00
-- [S. Rept. 106-238](https://www.govinfo.gov/app/details/CRPT-106srpt238) — Congressional Reports; 2026-10-30T15:30:08+00:00
-- [S. Rept. 106-234](https://www.govinfo.gov/app/details/CRPT-106srpt234) — Congressional Reports; 2026-10-30T15:30:08+00:00
-- [H. Rept. 119-772](https://www.govinfo.gov/app/details/CRPT-119hrpt772) — Congressional Reports; 2026-10-30T15:30:08+00:00
-- [S. Rept. 106-235](https://www.govinfo.gov/app/details/CRPT-106srpt235) — Congressional Reports; 2026-10-30T15:30:08+00:00
-- [S. Rept. 106-232](https://www.govinfo.gov/app/details/CRPT-106srpt232) — Congressional Reports; 2026-10-30T15:30:08+00:00
-- [H. Rept. 119-785](https://www.govinfo.gov/app/details/CRPT-119hrpt785) — Congressional Reports; 2026-10-30T15:30:08+00:00
-- [H. Rept. 108-437](https://www.govinfo.gov/app/details/CRPT-108hrpt437) — Congressional Reports; 2026-10-30T15:30:07+00:00
-- [H. Rept. 119-776](https://www.govinfo.gov/app/details/CRPT-119hrpt776) — Congressional Reports; 2026-10-30T15:30:07+00:00
-- [H. Rept. 119-771](https://www.govinfo.gov/app/details/CRPT-119hrpt771) — Congressional Reports; 2026-10-30T15:30:07+00:00
-- [H. Rept. 118-53](https://www.govinfo.gov/app/details/CRPT-118hrpt53) — Congressional Reports; 2026-10-30T15:30:07+00:00
-- [S. Rept. 106-349](https://www.govinfo.gov/app/details/CRPT-106srpt349) — Congressional Reports; 2026-10-30T15:30:07+00:00
-- [S. Rept. 106-310](https://www.govinfo.gov/app/details/CRPT-106srpt310) — Congressional Reports; 2026-10-30T15:30:07+00:00
-- [H. Rept. 119-780](https://www.govinfo.gov/app/details/CRPT-119hrpt780) — Congressional Reports; 2026-10-30T15:30:07+00:00
-- [S. Rept. 106-301](https://www.govinfo.gov/app/details/CRPT-106srpt301) — Congressional Reports; 2026-10-30T15:30:07+00:00
-- [H. Rept. 119-756](https://www.govinfo.gov/app/details/CRPT-119hrpt756) — Congressional Reports; 2026-10-30T15:30:07+00:00
-- [S. Rept. 119-46](https://www.govinfo.gov/app/details/CRPT-119srpt46) — Congressional Reports; 2026-10-30T15:30:06+00:00
-- [Implementation of Section 51A of UAPA, 1967: Updates to UNSC’s 1988 (2011) Taliban Sanctions List: Amendment of 05 Entries](https://www.rbi.org.in/scripts/NotificationUser.aspx?Id=13749&Mode=0) — Reserve Bank of India; 2026-10-30T15:15:00+00:00
-- [HHS Final Rule Amends Section 504 Regulations to Codify Statutory Exclusions from the Definition of Disability](https://www.hhs.gov/press-room/hhs-finalizes-section-504-rule-gender-dysphoria-disability.html) — Health and Human Services; 2026-10-30T15:15:00+00:00
-- [Despite Hurdles, Board and General Counsel Report Favorable Case Processing Data for FY 2026, but Emphasize there is More Work to be Done](https://www.nlrb.gov/news-outreach/news-story/despite-hurdles-board-and-general-counsel-report-favorable-case-processing) — National Labor Relations Board — https://www.nlrb.gov/rss/rssPressReleases.xml; 2026-10-30T14:34:30+00:00
-- [Government Stock - Auction Results: Cut-off](https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63888) — Reserve Bank of India; 2026-10-30T14:30:00+00:00
-- [Trump Administration Delivers for Women with Major Advances in Menopause Care](https://www.hhs.gov/press-room/fda-advances-menopause-care-hormone-therapy-labeling-access.html) — Health and Human Services; 2026-10-30T14:30:00+00:00
-- [Joint Statement: The European Union and Canada building together an Alliance for the future](https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2313) — European Commission press and decisions; 2026-10-30T14:15:09+00:00
-- [Statement by President von der Leyen following the EU-Canada summit](https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2312) — European Commission press and decisions; 2026-10-30T14:01:50+00:00
-- [Decisions taken by the Governing Council of the ECB (in addition to decisions setting interest rates)](https://www.ecb.europa.eu//press/govcdec/otherdec/2026/html/ecb.gc261030~e40f864093.en.html) — European Central Bank; 2026-10-30T14:00:00+00:00
-- [BG Wealth Sharing Ltd and DSJ Exchange Pty Ltd](https://www.sec.gov/enforcement-litigation/litigation-releases/lr-26679) — Securities and Exchange Commission; 2026-10-30T13:32:46+00:00
-- [Drugs@FDA Data Files](http://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files) — Food and Drug Administration — What's New: Drugs; 2026-10-30T13:11:11+00:00
-- [S7B Nonclinical Evaluation of the Potential for Delayed Ventricular Repolarization (QT Interval Prolongation) by Human Pharmaceuticals](http://www.fda.gov/regulatory-information/search-fda-guidance-documents/s7b-nonclinical-evaluation-potential-delayed-ventricular-repolarization-qt-interval-prolongation) — Food and Drug Administration — What's New: Drugs; 2026-10-30T12:51:27+00:00
-- [E14 Clinical Evaluation of QT/QTc Interval Prolongation and Proarrhythmic Potential for Non-Antiarrhythmic Drugs](http://www.fda.gov/regulatory-information/search-fda-guidance-documents/e14-clinical-evaluation-qtqtc-interval-prolongation-and-proarrhythmic-potential-non-antiarrhythmic-0) — Food and Drug Administration — What's New: Drugs; 2026-10-30T12:51:05+00:00
-- [What's New Related to Drugs](http://www.fda.gov/drugs/news-events-human-drugs/whats-new-related-drugs) — Food and Drug Administration — What's New: Drugs; 2026-10-30T12:50:25+00:00
-- [Newly Added Guidance Documents](http://www.fda.gov/drugs/guidances-drugs/newly-added-guidance-documents) — Food and Drug Administration — What's New: Drugs; 2026-10-30T12:48:44+00:00
-- [E14 and S7B Clinical and Nonclinical Evaluation of QT/QTc Interval Prolongation and Proarrhythmic Potential--Questions and Answers (R1)](http://www.fda.gov/regulatory-information/search-fda-guidance-documents/e14-and-s7b-clinical-and-nonclinical-evaluation-qtqtc-interval-prolongation-and-proarrhythmic) — Food and Drug Administration — What's New: Drugs; 2026-10-30T12:47:34+00:00
-- [Augusta Woman Pleads Guilty to Social Security Fraud](https://www.justice.gov/usao-me/pr/augusta-woman-pleads-guilty-social-security-fraud) — Department of Justice; 2026-10-30T12:00:00+00:00
-- [Federal Jury Convicts Georgia Felon for Illegal Possession of a Firearm](https://www.justice.gov/usao-ndfl/pr/federal-jury-convicts-georgia-felon-illegal-possession-firearm) — Department of Justice; 2026-10-30T12:00:00+00:00
-- [Dominican National Pleads Guilty to Receiving Over $24,000 in SNAP Benefits](https://www.justice.gov/usao-ma/pr/dominican-national-pleads-guilty-receiving-over-24000-snap-benefits) — Department of Justice; 2026-10-30T12:00:00+00:00
-- [U.S. Attorney Aaron Reitz issues statement regarding Harris County DA indicting ICE agent](https://www.justice.gov/usao-sdtx/pr/us-attorney-aaron-reitz-issues-statement-regarding-harris-county-da-indicting-ice) — Department of Justice; 2026-10-30T12:00:00+00:00
-- [Kansas man pleads guilty to illegal gun possession](https://www.justice.gov/usao-ks/pr/kansas-man-pleads-guilty-illegal-gun-possession) — Department of Justice; 2026-10-30T12:00:00+00:00
-- [Federal Law Enforcement Initiative Targets Sex Offender Registration Violations and Child Exploitation](https://www.justice.gov/usao-wdmo/pr/federal-law-enforcement-initiative-targets-sex-offender-registration-violations-and) — Department of Justice; 2026-10-30T12:00:00+00:00
-- [South Florida Selected as First Pilot Location for National Initiative to Combat Federal Nutrition Assistance Fraud](https://www.justice.gov/usao-sdfl/pr/south-florida-selected-first-pilot-location-national-initiative-combat-federal-0) — Department of Justice; 2026-10-30T12:00:00+00:00
-- [Three Indicted for Violations of the Federal Controlled Substances Act Resulting in Death](https://www.justice.gov/usao-edla/pr/three-indicted-violations-federal-controlled-substances-act-resulting-death) — Department of Justice; 2026-10-30T12:00:00+00:00
-- [Leader of South Georgia Check‑Theft and Forgery Scheme Sentenced to Prison](https://www.justice.gov/usao-mdga/pr/leader-south-georgia-check-theft-and-forgery-scheme-sentenced-prison) — Department of Justice; 2026-10-30T12:00:00+00:00
-- [DOJ’s Fraud Division and the U.S. Attorney’s Office for the District Minnesota Uncover Nearly $30M in Benefits Fraud in Enforcement Surge](https://www.justice.gov/opa/pr/dojs-fraud-division-and-us-attorneys-office-district-minnesota-uncover-voter-fraud-and) — Department of Justice — RSS Feed; 2026-10-30T12:00:00+00:00
-- [California Man Pleads Guilty to Attempting to Provide Material Support to the Islamic State of Iraq and al-Sham](https://www.justice.gov/opa/pr/california-man-pleads-guilty-attempting-provide-material-support-islamic-state-iraq-and-al) — Department of Justice — RSS Feed; 2026-10-30T12:00:00+00:00
-- [Israeli National Extradited to Face Charges for Stealing Nearly $3M in Virtual Currency Heist](https://www.justice.gov/opa/pr/israeli-national-extradited-face-charges-stealing-nearly-3m-virtual-currency-heist) — Department of Justice — RSS Feed; 2026-10-30T12:00:00+00:00
-- [Indian National Pleads Guilty to $227M Medicare Fraud](https://www.justice.gov/opa/pr/indian-national-pleads-guilty-227m-medicare-fraud) — Department of Justice; 2026-10-30T12:00:00+00:00
-- [Two Men Sentenced for Acting as Agents of the People’s Republic of China](https://www.justice.gov/opa/pr/two-men-sentenced-acting-agents-peoples-republic-china) — Department of Justice; 2026-10-30T12:00:00+00:00
-- [Justice Department Announces Final Rule Allowing Federal Firearms Licensees to Voluntarily Use NICS for Employee Background Checks](https://www.justice.gov/opa/pr/justice-department-announces-final-rule-allowing-federal-firearms-licensees-voluntarily-use) — Department of Justice; 2026-10-30T12:00:00+00:00
-- [Byrd Gang Members Sentenced to Life Imprisonment for 2017 Double Homicide Committed Outside Edna Karr High School Basketball Game](https://www.justice.gov/usao-edla/pr/byrd-gang-members-sentenced-life-imprisonment-2017-double-homicide-committed-outside) — Department of Justice; 2026-10-30T12:00:00+00:00
-- [Homeland Security Task Force: Two Connecticut Men Found with 21 Kilos of Cocaine Sentenced to 10 Years in Federal Prison](https://www.justice.gov/usao-ct/pr/homeland-security-task-force-two-connecticut-men-found-21-kilos-cocaine-sentenced-10-0) — Department of Justice; 2026-10-30T12:00:00+00:00
-- [Fifth Alien Charged for Illegally Voting in Nevada](https://www.justice.gov/usao-nv/pr/fifth-alien-charged-illegally-voting-nevada) — Department of Justice; 2026-10-30T12:00:00+00:00
-- [Justice Department’s Statement on Its Investigation of Vistra’s Acquisition of Cogentrix](https://www.justice.gov/opa/pr/justice-departments-statement-its-investigation-vistras-acquisition-cogentrix) — Department of Justice; 2026-10-30T12:00:00+00:00
-- [Stamford Man Sentenced to Additional Prison Time for Distributing Crack Prior to Reporting to Prison](https://www.justice.gov/usao-ct/pr/stamford-man-sentenced-additional-prison-time-distributing-crack-prior-reporting-prison) — Department of Justice; 2026-10-30T12:00:00+00:00
-- [District of Arizona Responds to Allegations of Non-Citizen Voter Registration](https://www.justice.gov/usao-az/pr/district-arizona-responds-allegations-non-citizen-voter-registration) — Department of Justice; 2026-10-30T12:00:00+00:00
-- [Botox Fraud Doctor Sentenced to 15 Years in Prison for $45M Medicare Scheme](https://www.justice.gov/opa/pr/botox-fraud-doctor-sentenced-15-years-prison-45m-medicare-scheme) — Department of Justice; 2026-10-30T12:00:00+00:00
-- [Gun-Toting Felon Who Ran from Officers Sentenced to Federal Prison](https://www.justice.gov/usao-ndia/pr/gun-toting-felon-who-ran-officers-sentenced-federal-prison) — Department of Justice; 2026-10-30T12:00:00+00:00
-- [Forty-two Alleged Gang Members and Associates Charged with Trafficking Fentanyl and Methamphetamine Following Homeland Security Task Force Investigation](https://www.justice.gov/usao-sdca/pr/forty-two-alleged-gang-members-and-associates-charged-trafficking-fentanyl-and) — Department of Justice; 2026-10-30T12:00:00+00:00
-- [Former Turkey Leg Hut owner sentenced for role in arson-for-hire scheme](https://www.justice.gov/usao-sdtx/pr/houston-businessman-has-been-ordered-federal-prison-conspiring-commit-arson-commercial) — Department of Justice; 2026-10-30T12:00:00+00:00
-- [DOJ’s Fraud Division and the United States Attorney’s Office for the District Minnesota Uncover Nearly $30 Million in Benefits Fraud in Enforcement Surge](https://www.justice.gov/usao-mn/pr/dojs-fraud-division-and-united-states-attorneys-office-district-minnesota-uncover-nearly) — Department of Justice; 2026-10-30T12:00:00+00:00
-- [Florida Pharmacist Sentenced to Over 7 Years in Prison for Massive Illegal Oxycodone Distribution Conspiracy](https://www.justice.gov/opa/pr/florida-pharmacist-sentenced-over-7-years-prison-massive-illegal-oxycodone-distribution) — Department of Justice; 2026-10-30T12:00:00+00:00
-- [Former BizJet Sales Manager Pleads Guilty to Foreign Bribery](https://www.justice.gov/opa/pr/former-bizjet-sales-manager-pleads-guilty-foreign-bribery) — Department of Justice — RSS Feed; 2026-10-30T12:00:00+00:00
-- [Former U.S. Government Contractor Arrested for Allegedly Leaking National Defense Information and Stealing Night Vision Goggles](https://www.justice.gov/opa/pr/former-us-government-contractor-arrested-allegedly-leaking-national-defense-information-and) — Department of Justice — RSS Feed; 2026-10-30T12:00:00+00:00
-- [Former Correctional Officer Sentenced on Federal Civil Rights Charges in Connection with Conspiracy to Violate Inmates’ Rights at West Virginia Jail](https://www.justice.gov/opa/pr/former-correctional-officer-sentenced-federal-civil-rights-charges-connection-conspiracy) — Department of Justice — RSS Feed; 2026-10-30T12:00:00+00:00
-- [Laplace Resident Charged With Mail Fraud](https://www.justice.gov/usao-edla/pr/laplace-resident-charged-mail-fraud) — Department of Justice; 2026-10-30T12:00:00+00:00
-- [Bronx Man Sentenced to Federal Prison for Mail Theft Offenses](https://www.justice.gov/usao-ct/pr/bronx-man-sentenced-federal-prison-mail-theft-offenses) — Department of Justice; 2026-10-30T12:00:00+00:00
-- [Malden Man Pleads Guilty to Drug Trafficking Conspiracy](https://www.justice.gov/usao-ma/pr/malden-man-pleads-guilty-drug-trafficking-conspiracy-0) — Department of Justice; 2026-10-30T12:00:00+00:00
-- [Pennsylvania Man Admits to Armed Bank Robbery](https://www.justice.gov/usao-nj/pr/pennsylvania-man-admits-armed-bank-robbery) — Department of Justice; 2026-10-30T12:00:00+00:00
-- [Illegal Alien Sentenced to 25 Years for Drug Trafficking Crimes](https://www.justice.gov/usao-sdal/pr/illegal-alien-sentenced-25-years-drug-trafficking-crimes) — Department of Justice; 2026-10-30T12:00:00+00:00
-- [Chinese Nationals Sentenced for Conspiracy to Defraud Elderly Victims](https://www.justice.gov/usao-mdpa/pr/chinese-nationals-sentenced-conspiracy-defraud-elderly-victims) — Department of Justice; 2026-10-30T12:00:00+00:00
-- [Anaheim Woman Federally Charged with Animal Crushing for Allegedly Luring Puppy Under Her Minivan Then Driving Over It](https://www.justice.gov/usao-cdca/pr/anaheim-woman-federally-charged-animal-crushing-allegedly-luring-puppy-under-her) — Department of Justice; 2026-10-30T12:00:00+00:00
-- [Honduran Illegal Alien Guilty of Violation of the Federal Gun Control Act](https://www.justice.gov/usao-edla/pr/honduran-illegal-alien-guilty-violation-federal-gun-control-act) — Department of Justice; 2026-10-30T12:00:00+00:00
-- [Justice Department Defends the Navy’s Actions to Address a Fuel Release at Joint Base Pearl Harbor-Hickam in Hawaii](https://www.justice.gov/opa/pr/justice-department-defends-navys-actions-address-fuel-release-joint-base-pearl-harbor-hickam) — Department of Justice; 2026-10-30T12:00:00+00:00
-- [Kalder CEO Sentenced To 25 Months In Prison](https://www.justice.gov/usao-sdny/pr/kalder-ceo-sentenced-25-months-prison) — Department of Justice; 2026-10-30T12:00:00+00:00
-- [Justice Department Announces Issuance of Federal Registrations for Medical Marijuana Dispensaries](https://www.justice.gov/opa/pr/justice-department-announces-issuance-federal-registrations-medical-marijuana-dispensaries) — Department of Justice; 2026-10-30T12:00:00+00:00
-- [Chinese nationals sentenced to prison for operating illicit massage businesses in southern Illinois](https://www.justice.gov/usao-sdil/pr/chinese-nationals-sentenced-prison-operating-illicit-massage-businesses-southern) — Department of Justice; 2026-10-30T12:00:00+00:00
-- [2 Dayton men plead guilty to drug & gun charges as part of ‘Operation Fly City’](https://www.justice.gov/usao-sdoh/pr/2-dayton-men-plead-guilty-drug-gun-charges-part-operation-fly-city) — Department of Justice; 2026-10-30T12:00:00+00:00
-- [Justice Department Announces Nearly $300 Million in Awards to Four Model Cities to Combat Violent Crime and Restore Law and Order](https://www.justice.gov/opa/pr/justice-department-announces-nearly-300-million-awards-four-model-cities-combat-violent) — Department of Justice; 2026-10-30T12:00:00+00:00
-- [Scott Twito sworn in as Interim U.S. Attorney for the District of Montana](https://www.justice.gov/usao-mt/pr/scott-twito-sworn-interim-us-attorney-district-montana-0) — Department of Justice; 2026-10-30T12:00:00+00:00
-- [Luzerne County Man Sentenced to 108 Months in Federal Prison for Distribution of Child Pornography](https://www.justice.gov/usao-mdpa/pr/luzerne-county-man-sentenced-108-months-federal-prison-distribution-child-pornography) — Department of Justice; 2026-10-30T12:00:00+00:00
-- [Three Aliens in Middle Tennessee Charged With Illegal Voting in Federal Elections](https://www.justice.gov/usao-mdtn/pr/three-aliens-middle-tennessee-charged-illegal-voting-federal-elections) — Department of Justice; 2026-10-30T12:00:00+00:00
-- [Honduran National Pleads Guilty to Illegally Reentering U.S.](https://www.justice.gov/usao-ct/pr/honduran-national-pleads-guilty-illegally-reentering-us) — Department of Justice; 2026-10-30T12:00:00+00:00
-- [Former Veterans Affairs Employee Sentenced for Fraudulently Obtaining Multiple Covid-19 Benefits](https://www.justice.gov/usao-ma/pr/former-veterans-affairs-employee-sentenced-fraudulently-obtaining-multiple-covid-19) — Department of Justice; 2026-10-30T12:00:00+00:00
-- [U.S. Attorney Announces Influx of Federal Gun Crime Prosecutions in San Antonio](https://www.justice.gov/usao-wdtx/pr/us-attorney-announces-influx-federal-gun-crime-prosecutions-san-antonio) — Department of Justice; 2026-10-30T12:00:00+00:00
-- [Chesterfield Township Man Charged With Threatening to Kill FBI Director and His Associate](https://www.justice.gov/usao-edmi/pr/chesterfield-township-man-charged-threatening-kill-fbi-director-and-his-associate) — Department of Justice; 2026-10-30T12:00:00+00:00
-- [Man Sentenced to 210 months for Distributing Child Sex Abuse Material](https://www.justice.gov/usao-sdal/pr/man-sentenced-210-months-distributing-child-sex-abuse-material) — Department of Justice; 2026-10-30T12:00:00+00:00
-- [Hollywood Store Owner Charged in $500,000 SNAP Benefits Fraud Scheme](https://www.justice.gov/usao-sdfl/pr/hollywood-store-owner-charged-500000-snap-benefits-fraud-scheme) — Department of Justice; 2026-10-30T12:00:00+00:00
-- [U.S. Attorney General Honors Three West Michigan Prosecutors](https://www.justice.gov/usao-wdmi/pr/2026_1030_WDMI_Directors_Award_PR) — Department of Justice; 2026-10-30T12:00:00+00:00
-- [Stockton man pleads guilty to attempting to provide material support to the Islamic State of Iraq and Al-Sham](https://www.justice.gov/usao-edca/pr/stockton-man-pleads-guilty-attempting-provide-material-support-islamic-state-iraq-and) — Department of Justice; 2026-10-30T12:00:00+00:00
-- [FY26 Q4 Data Due](https://www.justice.gov/oip/event/fy26-q4-data-due) — Department of Justice; 2026-10-30T12:00:00+00:00
-- [October 30, 2026: Dermatologic and Ophthalmic Drugs Advisory Committee Meeting Announcement - 10/30/2026](http://www.fda.gov/advisory-committees/advisory-committee-calendar/october-30-2026-dermatologic-and-ophthalmic-drugs-advisory-committee-meeting-announcement-10302026) — Food and Drug Administration — What's New: Drugs; 2026-10-30T11:55:04+00:00
-- [Opening statement by President von der Leyen at the EU-Canada summit](https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2310) — European Commission press and decisions; 2026-10-30T11:45:01+00:00
-- [EU and Canada intensify cooperation in the area of medical countermeasures for preparedness and response to combat health emergencies](https://ec.europa.eu/commission/presscorner/detail/en/jp_26_2309) — European Commission press and decisions; 2026-10-30T11:36:57+00:00
-- [Neue Studie untersucht jüngsten Anstieg der Inflationsrate](https://www.bundesbank.de/de/aufgaben/themen/neue-studie-untersucht-juengsten-anstieg-der-inflationsrate-1013610) — Deutsche Bundesbank — Topics; 2026-10-30T11:00:00+00:00
-- [MHRA Safety Roundup: October 2026](https://www.gov.uk/drug-device-alerts/mhra-safety-roundup-october-2026) — Medicines and Healthcare products Regulatory Agency; 2026-10-30T10:59:20+00:00
-- [Scheduled Banks’ Statement of Position in India as on October 15, 2026](https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63887) — Reserve Bank of India; 2026-10-30T10:35:00+00:00
-- [Daily News 30 / 10 / 2026](https://ec.europa.eu/commission/presscorner/detail/en/mex_26_2307) — European Commission press and decisions; 2026-10-30T10:27:23+00:00
-- [Result of Underwriting Auction conducted on October 30, 2026](https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63886) — Reserve Bank of India; 2026-10-30T10:05:00+00:00
-- [Factsheet - 2026 EU-Canada Summit](https://ec.europa.eu/commission/presscorner/detail/en/fs_26_2305) — European Commission press and decisions; 2026-10-30T09:40:56+00:00
-- [Announcement of auction – 3-months Bills of the European Stability Mechanism (ESM)](https://www.bundesbank.de/en/press/press-releases/esm/announcement-of-auction-3-months-bills-of-the-european-stability-mechanism-esm--1013602) — Deutsche Bundesbank; 2026-10-30T09:15:00+00:00
-- [Foreign exchange transactions in November 2026](https://www.norges-bank.no/en/news-events/news/Press-releases/2026/2026-10-30-fx/) — Norges Bank; 2026-10-30T09:00:00+00:00
-- [Results of the ECB Survey of Professional Forecasters for the fourth quarter of 2026](https://www.ecb.europa.eu//press/pr/date/2026/html/ecb.pr261030~e92c3c838c.en.html) — European Central Bank; 2026-10-30T09:00:00+00:00
-- [Money Market Operations as on October 29, 2026](https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63885) — Reserve Bank of India; 2026-10-30T09:00:00+00:00
-- [Invitation to bid – Federal Treasury discount paper (Bubills)](https://www.bundesbank.de/en/press/press-releases/federal-securities/invitation-to-bid-federal-treasury-discount-paper-bubills--1013596) — Deutsche Bundesbank; 2026-10-30T08:30:00+00:00
-- [Commission disburses almost €6.5 billion to France, Austria and Luxembourg under NextGenerationEU](https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2303) — European Commission press and decisions; 2026-10-30T08:17:48+00:00
-- [2026-10-30 - Data portal - IMF SDDS Plus, 30 October 2026](https://www.snb.ch/en/publications/statistical-publications/data-portal/2026/10/statpub_news_20261030_sddsplus) — Swiss National Bank; 2026-10-30T08:00:00+00:00
-- [2026-10-30 - Data portal - SNB balance sheet items end of September 2026](https://www.snb.ch/en/publications/statistical-publications/data-portal/2026/10/statpub_news_20261030_c) — Swiss National Bank; 2026-10-30T08:00:00+00:00
-- [Timetable and Schedule of U.S. Dollar Funds-Supplying Operations (November 2026-March 2027)](http://www.boj.or.jp/en/mopo/mpmdeci/mpr_2026/mpr261030b.pdf) — Bank of Japan; 2026-10-30T08:00:00+00:00
-- [Quarterly Schedule of Outright Purchases of Japanese Government Bonds (Competitive Auction Method) (October-December 2026) (Schedule Updates)](http://www.boj.or.jp/en/mopo/mpmdeci/mpr_2026/mpr261030c.pdf) — Bank of Japan; 2026-10-30T08:00:00+00:00
 
 ## Source failures and coverage warnings
 
-- hk-hkma-public-press: ok; stale_feed_outside_requested_window
 - us-govinfo-bills-enr: unchanged; stale_feed_outside_requested_window
 - us-white-house-0691096d16: ok; stale_feed_outside_requested_window
 - us-supreme-court-index: unchanged; stale_feed_outside_requested_window
-- us-ftc-58b0383166: ok; stale_feed_outside_requested_window
+- us-sec-8940dd7737: ok; stale_feed_outside_requested_window
 - us-ftc-ebb4359fb7: ok; stale_feed_outside_requested_window
-- us-ftc-62f72b4a5d: ok; stale_feed_outside_requested_window
 - us-ftc-df73e297e1: ok; stale_feed_outside_requested_window
 - us-ftc-69601f2e49: ok; stale_feed_outside_requested_window
 - us-ofac-index: ok; stale_feed_outside_requested_window
 - us-treasury-a69e5b5ef0: ok; stale_feed_outside_requested_window
-- us-ustr-index: ok; stale_feed_outside_requested_window
 - us-fed-a12cd46677: ok; stale_feed_outside_requested_window
 - us-fed-7cfba7c4ca: ok; stale_feed_outside_requested_window
 - us-fed-a383ca0d09: ok; stale_feed_outside_requested_window
@@ -414,36 +280,30 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - us-fda-1a1096082f: ok; stale_feed_outside_requested_window
 - us-fda-2d9c4fc2f9: ok; stale_feed_outside_requested_window
 - us-fda-3eaddf14de: ok; stale_feed_outside_requested_window
+- us-fda-2cdcdcca63: ok; stale_feed_outside_requested_window
 - us-fcc-1ad902e468: unchanged; stale_feed_outside_requested_window
-- us-dol-99f477805a: ok; stale_feed_outside_requested_window
 - us-osha-d8e445af0b: ok; stale_feed_outside_requested_window
 - us-osha-21c4745f76: ok; stale_feed_outside_requested_window
-- us-nlrb-7c63020d7d: ok; stale_feed_outside_requested_window
-- us-dot-6464bc66ac: ok; stale_feed_outside_requested_window
-- us-fmc-fe8f0538ae: unchanged; stale_feed_outside_requested_window
-- us-fhfa-index: unchanged; stale_feed_outside_requested_window
+- us-fmc-fe8f0538ae: ok; stale_feed_outside_requested_window
+- us-fhfa-index: ok; stale_feed_outside_requested_window
 - us-ca-oal-c1209cfd66: unchanged; stale_feed_outside_requested_window
 - eu-court-1433471e58: ok; stale_feed_outside_requested_window
-- eu-ecb-fb5fd59aed: ok; stale_feed_outside_requested_window
 - eu-eba-60bdc59843: ok; stale_feed_outside_requested_window
 - uk-boe-4feb372611: ok; stale_feed_outside_requested_window
 - ca-boc-4aa19b2183: ok; stale_feed_outside_requested_window
-- ca-boc-1f26bb2971: unchanged; stale_feed_outside_requested_window
 - ca-boc-4192a605ae: ok; stale_feed_outside_requested_window
-- ca-boc-5cc0603f1f: unchanged; stale_feed_outside_requested_window
+- ca-boc-5cc0603f1f: ok; stale_feed_outside_requested_window
 - ca-boc-1c9979e6ac: ok; stale_feed_outside_requested_window
-- ca-boc-e24c58f2d0: unchanged; stale_feed_outside_requested_window
+- ca-boc-e24c58f2d0: ok; stale_feed_outside_requested_window
 - ca-boc-cffefa81f7: ok; stale_feed_outside_requested_window
 - ca-boc-49364b93d8: ok; stale_feed_outside_requested_window
 - ca-boc-a5cb9e38c1: ok; stale_feed_outside_requested_window
 - au-rba-9e35f5f8d1: unchanged; stale_feed_outside_requested_window
 - au-rba-5ba995e001: unchanged; stale_feed_outside_requested_window
+- in-rbi-738b09bded: ok; stale_feed_outside_requested_window
 - jp-jftc-gnews: ok; stale_feed_outside_requested_window
 - ch-snb-4a868c4407: ok; stale_feed_outside_requested_window
 - se-riksbank-8ea6f8481e: ok; stale_feed_outside_requested_window
-- de-bundesbank-e5b1c4a067: ok; stale_feed_outside_requested_window
+- no-norges-5079edc79e: ok; stale_feed_outside_requested_window
 - de-bundesbank-617511c682: ok; stale_feed_outside_requested_window
-- io-wto-497f28e20d: ok; stale_feed_outside_requested_window
-- io-bis-8d1fbea6ca: ok; stale_feed_outside_requested_window
 - io-bis-b3dfd5b7aa: ok; stale_feed_outside_requested_window
-- io-bis-140216a5b6: ok; stale_feed_outside_requested_window
