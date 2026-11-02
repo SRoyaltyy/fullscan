@@ -1,6 +1,6 @@
 {
   "date": "2026-11-02",
-  "generated_at": "2026-11-02T07:33:36.594863-05:00",
+  "generated_at": "2026-11-02T07:34:22.744428-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -62,7 +62,7 @@
     },
     {
       "ticker": "NNDM",
-      "score": -0.17109638366624602
+      "score": -0.17109638366624608
     },
     {
       "ticker": "POWL",
@@ -88,31 +88,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "news_parse",
-      "title": "News parse",
-      "date": "2026-11-02",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-11-02T07:13:47.045900-05:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-11-02_parsed.json",
-          "ok": true,
-          "reason": "",
-          "size": 2440289,
-          "preview": "raw=3364 usable=220 single=202 \u00b7 OPEC+ Leaves Oil Output Targets Unchanged for December (Table) - Bloomberg.com | OPEC+ Set to Stick With Plan for Steady Quotas, Delegates Say - Bloomberg.com | Breakingviews - COMMENTARY: PAG's China property deal blueprint comes together - | Three Federal Reserve officials called for continued interest rate hikes; why is | COMMENTARY: Asia's crude oil imports back to pre-war levels but refined fuels la"
-        },
-        {
-          "path": "01_daily/news/2026-11-02_parsed.md",
-          "ok": true,
-          "reason": "",
-          "size": 10454,
-          "preview": "# News Parse v2 \u2014 2026-11-02T07:13:46.762829-05:00\nWindow\u224824h | news_mode=on | raw=3364 | usable=220 | single_name=202 | noise_dropped=2801\nusable polarity={'+': 0, '-': 53, 'mixed': 0, 'neutral': 167}"
-        }
-      ],
-      "preview": "raw=3364 usable=220 single=202 \u00b7 OPEC+ Leaves Oil Output Targets Unchanged for December (Table) - Bloomberg.com | OPEC+ Set to Stick With Plan for Steady Quotas, Delegates Say - Bloomberg.com | Breakingviews - COMMENTARY: PAG's China property deal blueprint comes together - | Three Federal Reserve officials called for continued interest rate hikes; why is | COMMENTARY: Asia's crude oil imports back to pre-war levels but refined fuels la \u00b7 # News Parse v2 \u2014 2026-11-02T07:13:46.762829-05:00\nWindow\u224824h | news_mode=on | raw=3364 | usable=220 | single_name=202 | noise_dropped=2801\nusable polarity={'+': 0, '-': 53, 'mixed': 0, 'neutral': 167}"
-    },
     {
       "key": "finviz_digest",
       "title": "Finviz digest",
@@ -273,6 +248,59 @@
         }
       ],
       "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-11-02",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-02T07:34:21.653179-05:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-11-02_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1451279,
+          "preview": "1d BUY CON, AMN, PACS, NTAP, BAND, MQ, SGRY, ASTH \u00b7 SELL OKLO, NEOV, FCEL, EOSE, NNDM, POWL, TE, NRGV"
+        },
+        {
+          "path": "data/stock_book/2026-11-02_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-11-02_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2594,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-11-02_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12445,
+          "preview": "2026-11-02 BUY CON, AMN, PACS, NTAP, BAND, MQ, SGRY, ASTH \u00b7 SELL OKLO, NEOV, FCEL, EOSE, NNDM, POWL, TE, NRGV"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12445,
+          "preview": "2026-11-02 BUY CON, AMN, PACS, NTAP, BAND, MQ, SGRY, ASTH \u00b7 SELL OKLO, NEOV, FCEL, EOSE, NNDM, POWL, TE, NRGV"
+        },
+        {
+          "path": "01_daily/2026-11-02_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 84941,
+          "preview": "# Stock book \u2014 2026-11-02\n_Generated 2026-11-02T07:33:55.270418-05:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY CON, AMN, PACS, NTAP, BAND, MQ, SGRY, ASTH \u00b7 SELL OKLO, NEOV, FCEL, EOSE, NNDM, POWL, TE, NRGV \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-11-02 BUY CON, AMN, PACS, NTAP, BAND, MQ, SGRY, ASTH \u00b7 SELL OKLO, NEOV, FCEL, EOSE, NNDM, POWL, TE, NRGV \u00b7 2026-11-02 BUY CON, AMN, PACS, NTAP, BAND, MQ, SGRY, ASTH \u00b7 SELL OKLO, NEOV, FCEL, EOSE, NNDM, POWL, TE, NRGV \u00b7 # Stock book \u2014 2026-11-02\n_Generated 2026-11-02T07:33:55.270418-05:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
