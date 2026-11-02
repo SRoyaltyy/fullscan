@@ -1,6 +1,6 @@
 {
   "date": "2026-11-02",
-  "generated_at": "2026-11-02T15:03:48.235659-05:00",
+  "generated_at": "2026-11-02T15:04:13.057869-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -11,126 +11,126 @@
   },
   "buy_1d": [
     {
-      "ticker": "CDNA",
-      "score": 0.8512524004599091
-    },
-    {
       "ticker": "VEEV",
-      "score": 0.4159949642709866
+      "score": 0.4059854397844582
     },
     {
-      "ticker": "ARQT",
-      "score": 0.7981978987964153
-    },
-    {
-      "ticker": "ETON",
-      "score": 0.7616873797938088
+      "ticker": "CORT",
+      "score": 0.35523399492131524
     },
     {
       "ticker": "PRCH",
-      "score": 0.7505120507463456
+      "score": 0.7382492014223462
     },
     {
-      "ticker": "LAUR",
-      "score": 0.6669186851789224
+      "ticker": "ETON",
+      "score": 0.7368344453242683
     },
     {
       "ticker": "VLO",
-      "score": 0.30808351046702287
+      "score": 0.35239187942570943
     },
     {
-      "ticker": "TRU",
-      "score": 0.5279021823763514
+      "ticker": "LAUR",
+      "score": 0.6861515563922498
     },
     {
-      "ticker": "ABX",
-      "score": 0.6059778107004103
+      "ticker": "BIIB",
+      "score": 0.32706470520134434
+    },
+    {
+      "ticker": "OLLI",
+      "score": 0.7199387268427153
+    },
+    {
+      "ticker": "AVO",
+      "score": 0.6697696818503895
+    },
+    {
+      "ticker": "TBBB",
+      "score": 0.6965365217972828
+    },
+    {
+      "ticker": "IMAX",
+      "score": 0.6530017738487479
     },
     {
       "ticker": "EZPW",
       "score": 0.5718282701691433
     },
     {
-      "ticker": "AVO",
-      "score": 0.612265152715354
+      "ticker": "ABX",
+      "score": 0.6021847351622469
     },
     {
       "ticker": "CNK",
-      "score": 0.6532462933911058
+      "score": 0.6517234106602428
     },
     {
-      "ticker": "FANG",
-      "score": 0.3968477161968042
-    },
-    {
-      "ticker": "CHEF",
-      "score": 0.5292408274665383
-    },
-    {
-      "ticker": "EDU",
-      "score": 0.4915269081927376
+      "ticker": "JXN",
+      "score": 0.5453692271544431
     }
   ],
   "sell_1d": [
     {
       "ticker": "ROIV",
-      "score": -0.5975647012335754
-    },
-    {
-      "ticker": "BNTX",
-      "score": -0.3976429541509999
+      "score": -0.5910030835543749
     },
     {
       "ticker": "GH",
-      "score": -0.3746665336655278
+      "score": -0.43550629142662095
     },
     {
       "ticker": "IFRX",
-      "score": -0.3718269762460771
+      "score": -0.3990923788448758
     },
     {
-      "ticker": "WVE",
-      "score": -0.36912025779785945
-    },
-    {
-      "ticker": "CGEM",
-      "score": -0.3583993180761336
-    },
-    {
-      "ticker": "ALMS",
-      "score": -0.35446791443290543
-    },
-    {
-      "ticker": "AXSM",
-      "score": -0.3388659313533725
-    },
-    {
-      "ticker": "SOC",
-      "score": -0.32855513311214835
-    },
-    {
-      "ticker": "TYRA",
-      "score": -0.32373967053327407
-    },
-    {
-      "ticker": "LXRX",
-      "score": -0.32315754028473637
-    },
-    {
-      "ticker": "CHRS",
-      "score": -0.32200904828351584
+      "ticker": "BNTX",
+      "score": -0.39480208772096026
     },
     {
       "ticker": "PYXS",
-      "score": -0.31695973308364866
+      "score": -0.366332532281908
     },
     {
-      "ticker": "MLYS",
-      "score": -0.31337771818378196
+      "ticker": "WVE",
+      "score": -0.35516907587519125
     },
     {
-      "ticker": "IMNM",
-      "score": -0.31283494835269526
+      "ticker": "ALMS",
+      "score": -0.3462108864932431
+    },
+    {
+      "ticker": "NRXP",
+      "score": -0.34234730294729254
+    },
+    {
+      "ticker": "AUR",
+      "score": -0.3340004266940584
+    },
+    {
+      "ticker": "AXSM",
+      "score": -0.3316548563555808
+    },
+    {
+      "ticker": "CGEM",
+      "score": -0.3314177824402737
+    },
+    {
+      "ticker": "ZNTL",
+      "score": -0.33123000329969643
+    },
+    {
+      "ticker": "CHRS",
+      "score": -0.32801986324064136
+    },
+    {
+      "ticker": "LXRX",
+      "score": -0.3241738934276254
+    },
+    {
+      "ticker": "BAK",
+      "score": -0.3170582275927229
     }
   ],
   "flatten": {
@@ -154,24 +154,6 @@
   },
   "sectors": {},
   "lands": [
-    {
-      "key": "peer_rs",
-      "title": "Peer RS",
-      "date": "2026-11-02",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-11-02T07:48:44.553856-05:00",
-      "files": [
-        {
-          "path": "data/peers/2026-11-02_peer_rs.csv",
-          "ok": true,
-          "reason": "",
-          "size": 821534,
-          "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
-        }
-      ],
-      "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
-    },
     {
       "key": "stock_book",
       "title": "Stock book + green",
@@ -479,6 +461,59 @@
         }
       ],
       "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-11-02",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-02T15:04:12.431264-05:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-11-02_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1436315,
+          "preview": "1d BUY VEEV, CORT, PRCH, ETON, VLO, LAUR, BIIB, OLLI \u00b7 SELL ROIV, GH, IFRX, BNTX, PYXS, WVE, ALMS, NRXP"
+        },
+        {
+          "path": "data/stock_book/2026-11-02_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 1625,
+          "preview": "green 85 \u00b7 VCTR, WT, FHI, EZPW, SNEX, JXN, BAM, FNF, WAY, CORT"
+        },
+        {
+          "path": "data/stock_book/2026-11-02_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2512,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-11-02_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 13847,
+          "preview": "2026-11-02 BUY VEEV, CORT, PRCH, ETON, VLO, LAUR, BIIB, OLLI \u00b7 SELL ROIV, GH, IFRX, BNTX, PYXS, WVE, ALMS, NRXP"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 13847,
+          "preview": "2026-11-02 BUY VEEV, CORT, PRCH, ETON, VLO, LAUR, BIIB, OLLI \u00b7 SELL ROIV, GH, IFRX, BNTX, PYXS, WVE, ALMS, NRXP"
+        },
+        {
+          "path": "01_daily/2026-11-02_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 77966,
+          "preview": "# Stock book \u2014 2026-11-02\n_Generated 2026-11-02T15:03:55.250490-05:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY VEEV, CORT, PRCH, ETON, VLO, LAUR, BIIB, OLLI \u00b7 SELL ROIV, GH, IFRX, BNTX, PYXS, WVE, ALMS, NRXP \u00b7 green 85 \u00b7 VCTR, WT, FHI, EZPW, SNEX, JXN, BAM, FNF, WAY, CORT \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-11-02 BUY VEEV, CORT, PRCH, ETON, VLO, LAUR, BIIB, OLLI \u00b7 SELL ROIV, GH, IFRX, BNTX, PYXS, WVE, ALMS, NRXP \u00b7 2026-11-02 BUY VEEV, CORT, PRCH, ETON, VLO, LAUR, BIIB, OLLI \u00b7 SELL ROIV, GH, IFRX, BNTX, PYXS, WVE, ALMS, NRXP \u00b7 # Stock book \u2014 2026-11-02\n_Generated 2026-11-02T15:03:55.250490-05:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
