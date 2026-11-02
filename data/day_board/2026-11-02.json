@@ -1,6 +1,6 @@
 {
   "date": "2026-11-02",
-  "generated_at": "2026-11-02T04:23:14.564554-05:00",
+  "generated_at": "2026-11-02T04:23:17.286217-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -90,7 +90,7 @@
       "inputs_ready": true,
       "n_req_ok": 1,
       "n_req": 1,
-      "n_opt_ok": 3,
+      "n_opt_ok": 1,
       "n_opt": 5,
       "files": [
         {
@@ -118,7 +118,7 @@
           "size": 11826,
           "said": "Finviz Daily Digest \u2014 2026-11-02",
           "bullets": [
-            "_Generated 2026-11-02T04:22:58.300726-05:00 \u00b7 export=data/exports/finviz_2026-11-02.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_",
+            "_Generated 2026-11-02T04:23:16.947618-05:00 \u00b7 export=data/exports/finviz_2026-10-30.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_",
             "Major indices (live quote page)"
           ]
         },
@@ -127,10 +127,10 @@
           "name": "Homepage warm-up JSON (*_finviz_market_digest)",
           "path": "01_daily/news/2026-11-02_finviz_market_digest.json",
           "role": "optional",
-          "status": "OK",
-          "reason": "",
-          "size": 5338,
-          "said": "US stocks set to open higher as futures gap up amid softer oil, firmer gold and key ISM manufacturing data ahead \u00b7 leaders NET, F, HOOD, MAR, ETR, CHKP \u00b7 good",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
           "bullets": []
         },
         {
@@ -138,14 +138,11 @@
           "name": "Homepage warm-up MD (*_finviz_market_digest)",
           "path": "01_daily/news/2026-11-02_finviz_market_digest.md",
           "role": "optional",
-          "status": "OK",
-          "reason": "",
-          "size": 2405,
-          "said": "Finviz homepage market digest \u2014 2026-11-02",
-          "bullets": [
-            "Generated:** 2026-11-02T04:23:14.342739-05:00 (America/New_York)",
-            "Source:** `live`"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "market_digest_close_json",
@@ -185,7 +182,7 @@
       "inputs_ready": false,
       "n_req_ok": 2,
       "n_req": 9,
-      "n_opt_ok": 1,
+      "n_opt_ok": 0,
       "n_opt": 14,
       "files": [
         {
@@ -208,10 +205,10 @@
           "name": "Homepage warm-up JSON (*_finviz_market_digest)",
           "path": "01_daily/news/2026-11-02_finviz_market_digest.json",
           "role": "optional",
-          "status": "OK",
-          "reason": "",
-          "size": 5338,
-          "said": "US stocks set to open higher as futures gap up amid softer oil, firmer gold and key ISM manufacturing data ahead \u00b7 leaders NET, F, HOOD, MAR, ETR, CHKP \u00b7 good",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
           "bullets": []
         },
         {
@@ -965,6 +962,45 @@
         }
       ],
       "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest \u2014 2026-11-02\n**Generated:** 2026-11-02T04:23:14.342739-05:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks set to open higher as futures gap up amid softer oil, firmer gold and key ISM manufacturing data ahead\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** NET, F, HOOD, MAR, ETR, CHKP, FOXA\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** MAR, ETR, CHKP, FOXA\n**Geo/grain:** geo\n**Clock legal for:** 2026-11-02\n**Clock use:** `same_morning`"
+    },
+    {
+      "key": "finviz_digest",
+      "title": "Finviz digest",
+      "date": "2026-11-02",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-02T04:23:17.098394-05:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-11-02_finviz_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 97014,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        },
+        {
+          "path": "01_daily/news/2026-11-02_finviz_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 11850,
+          "preview": "# Finviz Daily Digest \u2014 2026-11-02\n_Generated 2026-11-02T04:23:16.947618-05:00 \u00b7 export=data/exports/finviz_2026-10-30.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_"
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11068056,
+          "preview": "11786 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAB\""
+        },
+        {
+          "path": "01_daily/news/2026-11-02_finviz_digest_preopen.json",
+          "ok": true,
+          "reason": "",
+          "size": 97014,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        }
+      ],
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-11-02\n_Generated 2026-11-02T04:23:16.947618-05:00 \u00b7 export=data/exports/finviz_2026-10-30.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_ \u00b7 11786 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAB\" \u00b7 keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
     }
   ],
   "href": {
