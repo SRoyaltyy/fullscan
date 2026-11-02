@@ -1,18 +1,16 @@
 {
  "workflow": "preopen_all",
  "date": "2026-11-02",
- "checked_at": "2026-11-02 04:35 ET",
- "run_id": "41419239215",
- "ok": false,
- "failed": [
-  "ecs_code_current"
- ],
+ "checked_at": "2026-11-02 07:13 ET",
+ "run_id": "41440630835",
+ "ok": true,
+ "failed": [],
  "items": [
   {
    "id": "ecs_code_current",
-   "ok": false,
+   "ok": true,
    "plain": "code stale: this checkout's code (src, scripts, config, .github) must match GitHub main",
-   "detail": "ecs code stale: HEAD fd6562d0 vs main e4ba6c0c differ in 3 code file(s): .github/workflows/h1_open_fill.yml, .github/workflows/holdup_open_fill.yml, scripts/open_fill_gate.py"
+   "detail": "code matches main (HEAD b2a51245, main b2a51245)"
   },
   {
    "id": "no_unapproved_paid_fallback",
