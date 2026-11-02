@@ -1,6 +1,6 @@
 {
   "date": "2026-11-02",
-  "generated_at": "2026-11-02T15:36:12.571014-05:00",
+  "generated_at": "2026-11-02T16:34:42.063564-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -134,10 +134,10 @@
     }
   ],
   "flatten": {
-    "said": "0 priced buys \u00b7 cash $117,285.24",
+    "said": "0 priced buys \u00b7 cash $121,526.25",
     "bullets": [
       "0 priced buys",
-      "cash $117,285.24"
+      "cash $121,526.25"
     ]
   },
   "general": {
@@ -154,147 +154,6 @@
   },
   "sectors": {},
   "lands": [
-    {
-      "key": "live_boards",
-      "title": "Live 1d BUY/SELL strip",
-      "date": "2026-11-02",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-11-02T15:04:19.637709-05:00",
-      "files": [
-        {
-          "path": "data/day_board/today.json",
-          "ok": true,
-          "reason": "",
-          "size": 27082,
-          "preview": "2026-11-02 BUY VEEV, CORT, PRCH, ETON, VLO, LAUR, BIIB, OLLI \u00b7 SELL ROIV, GH, IFRX, BNTX, PYXS, WVE, ALMS, NRXP"
-        },
-        {
-          "path": "data/day_board/latest.json",
-          "ok": true,
-          "reason": "",
-          "size": 1116,
-          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
-        },
-        {
-          "path": "data/day_board/2026-11-02.json",
-          "ok": true,
-          "reason": "",
-          "size": 138793,
-          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href"
-        },
-        {
-          "path": "data/day_board/2026-11-02_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 98887,
-          "preview": "2026-11-02 BUY VEEV, CORT, PRCH, ETON, VLO, LAUR, BIIB, OLLI \u00b7 SELL ROIV, GH, IFRX, BNTX, PYXS, WVE, ALMS, NRXP"
-        },
-        {
-          "path": "data/day_board/strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 632313,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "data/day_board/2026-11-02_strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 632313,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "data/factor_mine/morning_look/2026-11-02.json",
-          "ok": true,
-          "reason": "",
-          "size": 153546,
-          "preview": "keys: asof_commit, asof_committed_at, cutoff_et, date, n, read_from, rows"
-        },
-        {
-          "path": "data/day_board/today_strategies.json",
-          "ok": true,
-          "reason": "",
-          "size": 856786,
-          "preview": "2026-11-02 BUY CDNA, VEEV, ARQT, ETON, PRCH, LAUR, VLO, TRU \u00b7 SELL ROIV, BNTX, GH, IFRX, WVE, CGEM, ALMS, AXSM"
-        },
-        {
-          "path": "data/factor_mine/strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 632313,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "dashboard/factor-mine/today.json",
-          "ok": true,
-          "reason": "",
-          "size": 98887,
-          "preview": "2026-11-02 BUY VEEV, CORT, PRCH, ETON, VLO, LAUR, BIIB, OLLI \u00b7 SELL ROIV, GH, IFRX, BNTX, PYXS, WVE, ALMS, NRXP"
-        },
-        {
-          "path": "dashboard/factor-mine/strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 632313,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "dashboard/factor-mine/today_strategies.json",
-          "ok": true,
-          "reason": "",
-          "size": 632313,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "dashboard/today_strategies.json",
-          "ok": true,
-          "reason": "",
-          "size": 856786,
-          "preview": "2026-11-02 BUY CDNA, VEEV, ARQT, ETON, PRCH, LAUR, VLO, TRU \u00b7 SELL ROIV, BNTX, GH, IFRX, WVE, CGEM, ALMS, AXSM"
-        },
-        {
-          "path": "data/day_board/hold_live_px.json",
-          "ok": true,
-          "reason": "",
-          "size": 1576,
-          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
-        },
-        {
-          "path": "dashboard/factor-mine/hold_live_px.json",
-          "ok": true,
-          "reason": "",
-          "size": 1576,
-          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
-        }
-      ],
-      "preview": "2026-11-02 BUY VEEV, CORT, PRCH, ETON, VLO, LAUR, BIIB, OLLI \u00b7 SELL ROIV, GH, IFRX, BNTX, PYXS, WVE, ALMS, NRXP \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href \u00b7 2026-11-02 BUY VEEV, CORT, PRCH, ETON, VLO, LAUR, BIIB, OLLI \u00b7 SELL ROIV, GH, IFRX, BNTX, PYXS, WVE, ALMS, NRXP \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: asof_commit, asof_committed_at, cutoff_et, date, n, read_from, rows \u00b7 2026-11-02 BUY CDNA, VEEV, ARQT, ETON, PRCH, LAUR, VLO, TRU \u00b7 SELL ROIV, BNTX, GH, IFRX, WVE, CGEM, ALMS, AXSM \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-11-02 BUY VEEV, CORT, PRCH, ETON, VLO, LAUR, BIIB, OLLI \u00b7 SELL ROIV, GH, IFRX, BNTX, PYXS, WVE, ALMS, NRXP \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_"
-    },
-    {
-      "key": "paper",
-      "title": "Paper dashboard",
-      "date": "2026-11-02",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-11-02T15:04:27.057379-05:00",
-      "files": [
-        {
-          "path": "03_scoreboard/PAPER_TRADING.md",
-          "ok": true,
-          "reason": "",
-          "size": 1837,
-          "preview": "# Paper trading \u2014 Futubull-fee simulation\nAs of **2026-10-07** \u00b7 $10,000 starting capital per sleeve \u00b7 fees per `00_grounding/futubull_fees.json`\nLatest book **2026-10-07** ranker: **weighted** (green pile liquid=0, need 8).\nSleeves: `{horizon}_top` = top-N overall buys, `{horizon}_size` = top 3 per size bucket. Fill at signal-day close. Sell only after min-hold (1d=1, 3d=3, 1w=5, 2w=10, 1m=21 **trading sessions** \u2014 weekends and NYSE holidays do not count) AND the name has left the book.\n| Sleeve | Equity | Return | Cash | Open pos | Trades | Fees paid | Realized P/L | Unrealized P/L | Closed win | Open win |\n|--------|--------|--------|------|----------|--------|-----------|--------------|----------------|------------|----------|\n| 1d_top | $8,825.81 | -11.74% | $4,458.43 | 2 | 510 | $1,080.39 | $-1,169.87 | $-4.32 | 32.7% | 0.0% |\n| 1d_size | $9,454.32 | -5.46% | $4,783.48 | 2 | 466 | "
-        },
-        {
-          "path": "dashboard/index.html",
-          "ok": true,
-          "reason": "",
-          "size": 10510817,
-          "preview": "<!DOCTYPE html>\n<html lang=\"en\"><head><meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n<title>Paper Trading \u2014 Stock Book Simulation</title>\n<style>\n:root{\n--bg:#0f1420; --card:#171e2e; --line:#262f45; --line2:#232c42;\n--fg:#dfe6f2; --mut:#8b96ab; --dim:#66708a; --pos:#4ade80; --neg:#f87171;\n--chip:#2a3450; --day:#121826; --gold:#fbbf24;\n}\n*{box-sizing:border-box}\nhtml,body{overflow-x:hidden}\nbody{margin:0;background:var(--bg);color:var(--fg);font:14px/1.5 -apple-system,Segoe UI,Roboto,sans-serif}\n.wrap{max-width:1180px;margin:0 auto;padding:16px 16px 48px;width:100%}\nh1{font-size:20px;margin:0 0 4px}\n.sub{color:var(--mut);font-size:12px;margin:0 0 12px}\n.merge-hero{display:block;margin:0 0 14px;padding:14px 16px;border-radius:12px;\nbackground:linear-gradient(180deg,#1a2744,#171e2e);border:1px solid #3b4d78;\ncolor:var(--fg);text-decoration:none}\n."
-        }
-      ],
-      "preview": "# Paper trading \u2014 Futubull-fee simulation\nAs of **2026-10-07** \u00b7 $10,000 starting capital per sleeve \u00b7 fees per `00_grounding/futubull_fees.json`\nLatest book **2026-10-07** ranker: **weighted** (green pile liquid=0, need 8).\nSleeves: `{horizon}_top` = top-N overall buys, `{horizon}_size` = top 3 per size bucket. Fill at signal-day close. Sell only after min-hold (1d=1, 3d=3, 1w=5, 2w=10, 1m=21 **trading sessions** \u2014 weekends and NYSE holidays do not count) AND the name has left the book.\n| Sleeve | Equity | Return | Cash | Open pos | Trades | Fees paid | Realized P/L | Unrealized P/L | Closed win | Open win |\n|--------|--------|--------|------|----------|--------|-----------|--------------|----------------|------------|----------|\n| 1d_top | $8,825.81 | -11.74% | $4,458.43 | 2 | 510 | $1,080.39 | $-1,169.87 | $-4.32 | 32.7% | 0.0% |\n| 1d_size | $9,454.32 | -5.46% | $4,783.48 | 2 | 466 |  \u00b7 <!DOCTYPE html>\n<html lang=\"en\"><head><meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n<title>Paper Trading \u2014 Stock Book Simulation</title>\n<style>\n:root{\n--bg:#0f1420; --card:#171e2e; --line:#262f45; --line2:#232c42;\n--fg:#dfe6f2; --mut:#8b96ab; --dim:#6"
-    },
     {
       "key": "weather",
       "title": "Weather / regime",
@@ -549,6 +408,56 @@
         }
       ],
       "preview": "# Paper trading \u2014 Futubull-fee simulation\nAs of **2026-10-07** \u00b7 $10,000 starting capital per sleeve \u00b7 fees per `00_grounding/futubull_fees.json`\nLatest book **2026-10-07** ranker: **weighted** (green pile liquid=0, need 8).\nSleeves: `{horizon}_top` = top-N overall buys, `{horizon}_size` = top 3 per size bucket. Fill at signal-day close. Sell only after min-hold (1d=1, 3d=3, 1w=5, 2w=10, 1m=21 **trading sessions** \u2014 weekends and NYSE holidays do not count) AND the name has left the book.\n| Sleeve | Equity | Return | Cash | Open pos | Trades | Fees paid | Realized P/L | Unrealized P/L | Closed win | Open win |\n|--------|--------|--------|------|----------|--------|-----------|--------------|----------------|------------|----------|\n| 1d_top | $8,825.81 | -11.74% | $4,458.43 | 2 | 510 | $1,080.39 | $-1,169.87 | $-4.32 | 32.7% | 0.0% |\n| 1d_size | $9,454.32 | -5.46% | $4,783.48 | 2 | 466 |  \u00b7 <!DOCTYPE html>\n<html lang=\"en\"><head><meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n<title>Paper Trading \u2014 Stock Book Simulation</title>\n<style>\n:root{\n--bg:#0f1420; --card:#171e2e; --line:#262f45; --line2:#232c42;\n--fg:#dfe6f2; --mut:#8b96ab; --dim:#6"
+    },
+    {
+      "key": "finviz_market_digest_close",
+      "title": "Finviz homepage market digest (close)",
+      "date": "2026-11-02",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-02T16:25:55.349902-05:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-11-02_finviz_market_digest_close.json",
+          "ok": true,
+          "reason": "",
+          "size": 6579,
+          "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for"
+        },
+        {
+          "path": "01_daily/news/2026-11-02_finviz_market_digest_close.md",
+          "ok": true,
+          "reason": "",
+          "size": 3250,
+          "preview": "# Finviz homepage market digest (close) \u2014 2026-11-02\n**Generated:** 2026-11-02T16:25:55.313829-05:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks closed mixed as crude tumbled on US\u2013Iran diplomacy hopes, with lingering AI-related pressure still in focus ahead of Apple earnings and US midterm elections\n**Prior close:** SPX -0.50%  Nasdaq -1.10%  Dow +0.40%\n**SPX:** -0.50%  **Nasdaq:** -1.10%  **Dow:** +0.40%\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** XOM, AMZN, MHK, ORCL, MRVL, LITE, MSFT, AAPL\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** \u2014\n**Geo/grain:** geo\n**Clock legal for:** 2026-11-03\n**Clock use:** `next_open`"
+        }
+      ],
+      "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest (close) \u2014 2026-11-02\n**Generated:** 2026-11-02T16:25:55.313829-05:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks closed mixed as crude tumbled on US\u2013Iran diplomacy hopes, with lingering AI-related pressure still in focus ahead of Apple earnings and US midterm elections\n**Prior close:** SPX -0.50%  Nasdaq -1.10%  Dow +0.40%\n**SPX:** -0.50%  **Nasdaq:** -1.10%  **Dow:** +0.40%\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** XOM, AMZN, MHK, ORCL, MRVL, LITE, MSFT, AAPL\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** \u2014\n**Geo/grain:** geo\n**Clock legal for:** 2026-11-03\n**Clock use:** `next_open`"
+    },
+    {
+      "key": "finviz_market_digest_close",
+      "title": "Finviz homepage market digest (close)",
+      "date": "2026-11-02",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-02T16:34:40.947790-05:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-11-02_finviz_market_digest_close.json",
+          "ok": true,
+          "reason": "",
+          "size": 6579,
+          "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for"
+        },
+        {
+          "path": "01_daily/news/2026-11-02_finviz_market_digest_close.md",
+          "ok": true,
+          "reason": "",
+          "size": 3250,
+          "preview": "# Finviz homepage market digest (close) \u2014 2026-11-02\n**Generated:** 2026-11-02T16:34:40.924013-05:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks closed mixed as crude tumbled on US\u2013Iran diplomacy hopes, with lingering AI-related pressure still in focus ahead of Apple earnings and US midterm elections\n**Prior close:** SPX -0.50%  Nasdaq -1.10%  Dow +0.40%\n**SPX:** -0.50%  **Nasdaq:** -1.10%  **Dow:** +0.40%\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** XOM, AMZN, MHK, ORCL, MRVL, LITE, MSFT, AAPL\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** \u2014\n**Geo/grain:** geo\n**Clock legal for:** 2026-11-03\n**Clock use:** `next_open`"
+        }
+      ],
+      "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest (close) \u2014 2026-11-02\n**Generated:** 2026-11-02T16:34:40.924013-05:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks closed mixed as crude tumbled on US\u2013Iran diplomacy hopes, with lingering AI-related pressure still in focus ahead of Apple earnings and US midterm elections\n**Prior close:** SPX -0.50%  Nasdaq -1.10%  Dow +0.40%\n**SPX:** -0.50%  **Nasdaq:** -1.10%  **Dow:** +0.40%\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** XOM, AMZN, MHK, ORCL, MRVL, LITE, MSFT, AAPL\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** \u2014\n**Geo/grain:** geo\n**Clock legal for:** 2026-11-03\n**Clock use:** `next_open`"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
