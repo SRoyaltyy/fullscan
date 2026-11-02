@@ -1,6 +1,6 @@
 {
   "date": "2026-11-02",
-  "generated_at": "2026-11-02T15:35:19.699038-05:00",
+  "generated_at": "2026-11-02T15:35:58.804591-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -805,7 +805,7 @@
           "size": 76762,
           "said": "Stock book \u2014 2026-11-02",
           "bullets": [
-            "_Generated 2026-11-02T07:48:55.464104-05:00_",
+            "_Generated 2026-11-02T15:35:29.756183-05:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -2720,6 +2720,59 @@
         }
       ],
       "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-11-02",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-02T15:35:57.728427-05:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-11-02_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1436401,
+          "preview": "1d BUY CDNA, VEEV, ARQT, ETON, PRCH, LAUR, VLO, TRU \u00b7 SELL ROIV, BNTX, GH, IFRX, WVE, CGEM, ALMS, AXSM"
+        },
+        {
+          "path": "data/stock_book/2026-11-02_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 1481,
+          "preview": "green 72 \u00b7 VCTR, WT, JXN, PRCH, FHI, EZPW, BAM, SNEX, FNF, CG"
+        },
+        {
+          "path": "data/stock_book/2026-11-02_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2512,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-11-02_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 13854,
+          "preview": "2026-11-02 BUY CDNA, VEEV, ARQT, ETON, PRCH, LAUR, VLO, TRU \u00b7 SELL ROIV, BNTX, GH, IFRX, WVE, CGEM, ALMS, AXSM"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 13854,
+          "preview": "2026-11-02 BUY CDNA, VEEV, ARQT, ETON, PRCH, LAUR, VLO, TRU \u00b7 SELL ROIV, BNTX, GH, IFRX, WVE, CGEM, ALMS, AXSM"
+        },
+        {
+          "path": "01_daily/2026-11-02_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 77894,
+          "preview": "# Stock book \u2014 2026-11-02\n_Generated 2026-11-02T15:35:29.756183-05:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY CDNA, VEEV, ARQT, ETON, PRCH, LAUR, VLO, TRU \u00b7 SELL ROIV, BNTX, GH, IFRX, WVE, CGEM, ALMS, AXSM \u00b7 green 72 \u00b7 VCTR, WT, JXN, PRCH, FHI, EZPW, BAM, SNEX, FNF, CG \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-11-02 BUY CDNA, VEEV, ARQT, ETON, PRCH, LAUR, VLO, TRU \u00b7 SELL ROIV, BNTX, GH, IFRX, WVE, CGEM, ALMS, AXSM \u00b7 2026-11-02 BUY CDNA, VEEV, ARQT, ETON, PRCH, LAUR, VLO, TRU \u00b7 SELL ROIV, BNTX, GH, IFRX, WVE, CGEM, ALMS, AXSM \u00b7 # Stock book \u2014 2026-11-02\n_Generated 2026-11-02T15:35:29.756183-05:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "href": {
@@ -2925,6 +2978,38 @@
       "path": "data/day_board/2026-11-02.json",
       "at": "2026-11-02T15:35:20-05:00",
       "commit_msg": "auto: land peer_rs [2026-11-02]",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "41519330873",
+      "manifest": "research/input_freeze/2026-11-02/manifest.json"
+    },
+    {
+      "path": "01_daily/2026-11-02_stock_book.md",
+      "at": "2026-11-02T15:35:59-05:00",
+      "commit_msg": "auto: land stock_book [2026-11-02]",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "41519330873",
+      "manifest": "research/input_freeze/2026-11-02/manifest.json"
+    },
+    {
+      "path": "data/day_board/2026-11-02.json",
+      "at": "2026-11-02T15:35:59-05:00",
+      "commit_msg": "auto: land stock_book [2026-11-02]",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "41519330873",
+      "manifest": "research/input_freeze/2026-11-02/manifest.json"
+    },
+    {
+      "path": "data/stock_book/2026-11-02_input_health.json",
+      "at": "2026-11-02T15:35:59-05:00",
+      "commit_msg": "auto: land stock_book [2026-11-02]",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "41519330873",
+      "manifest": "research/input_freeze/2026-11-02/manifest.json"
+    },
+    {
+      "path": "data/stock_book/2026-11-02_stock_book.json",
+      "at": "2026-11-02T15:35:59-05:00",
+      "commit_msg": "auto: land stock_book [2026-11-02]",
       "workflow": "Stock Book ALL (one-shot)",
       "run_id": "41519330873",
       "manifest": "research/input_freeze/2026-11-02/manifest.json"
