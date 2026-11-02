@@ -1,0 +1,8 @@
+cell,signal_date,ticker,entry_date,hold_days,rules_sha256,source
+fresh_dcp_t1_ep_ge03_2d,2026-10-30,IR,2026-11-02,2,187856c9db6143c2c4c2820cde8be1e3d87363478587558e296758cbf5369845,preopen_plan_2026-11-02
+fresh_dcp_t1_ep_ge03_2d,2026-10-30,SPXC,2026-11-02,2,187856c9db6143c2c4c2820cde8be1e3d87363478587558e296758cbf5369845,preopen_plan_2026-11-02
+fresh_dcp_t1_ep_ge03_2d,2026-10-30,VNTG,2026-11-02,2,187856c9db6143c2c4c2820cde8be1e3d87363478587558e296758cbf5369845,preopen_plan_2026-11-02
+fresh_dcp_t1_avoid_ah_3d,2026-10-30,VNTG,2026-11-02,3,462719f77f2c36880f9c36d77c6591ca681e98c425c83697847463c4b3af7934,preopen_plan_2026-11-02
+# status=fires rows=4 fpe_delta_t3_earn_today_3d=0 fresh_dcp_t1_ep_ge03_2d=3 fresh_dcp_t1_avoid_ah_3d=1
+# built_at_utc=2026-11-02T10:23:59Z signal_date=2026-10-30 entry_date=2026-11-02 builder_sha256=9e70523ee355d655b125ffd46f8ccd08a25fe762fccfa6ee08c97eb3c5d52840
+# inputs: {"dcp_candidates":["CWK","D","EQIX","HSBC","IR","SPXC","VNTG","WEC"],"dcp_prior_snapshot":"2026-10-29","earn_gate_n":0,"fails":"[]","features_T_sha256":"8e66fb8235c75d8c95db0c83450014ac9c5f36f34ab29d1662c0adcd11945826","fpe_prior_snapshot":"2026-10-27","fpe_signal_n":1494,"letters_log":"rows 8 skipped {'2026-11-02': 0} FAILS []","letters_rows":8,"letters_sha256":"dda356b6f473d61013e8a6a11ee4231a212fb7b12b662a0dfc06c5618d5b7cf7","membership":"fullscan@91ef706d6 (committed 2026-11-02T09:39:35Z) sha256=2cafec018941d7b8f688e033da0c1081345e5e75dc4fcd768caac9c2a0fbe398","skipped":"{'2026-11-02': 0}","snapshot_T_sha256":"096bb358d3e90c312506645f39f1e78ebe257b3fca81642effbf5ed19346f268","snapshots_after_T_ignored":[],"tr_head":"2773726bf","universe_log":"2026-11-02 cand 8 in membership 8 liquid 6 universe 8 excluded []"}

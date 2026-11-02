@@ -1,0 +1,115 @@
+{
+  "date": "2026-10-30",
+  "generated_at": "2026-10-30T16:53:34.755042-04:00",
+  "timezone": "America/New_York",
+  "source": "live",
+  "source_url": "https://elite.finviz.com/",
+  "archive_snapshot_ts": null,
+  "archive_snapshot_at": null,
+  "archive_url": null,
+  "clock_legal": true,
+  "clock_same_morning": false,
+  "clock_use": "next_open",
+  "clock_legal_for": "2026-11-02",
+  "capture_slot": "close",
+  "clock_rule": "Live post-close answer-key (~16:05 ET). Always next_open for the NEXT session (2026-11-02) — never same_morning. Writes *_finviz_market_digest_close.* only. Capture only — not tape_anchor / predict / #210.",
+  "kind": "finviz_homepage_market_digest_close",
+  "represents": "Finviz homepage post-close answer-key. clock_use is always next_open; clock_legal_for is the next NYSE session. Lives at *_finviz_market_digest_close.*. Does not replace the same_morning warm-up file. Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "US stocks closed sharply lower as tech-led selloff deepened on weak Big Tech earnings and AI capex concerns while energy outperformed on strong oil-driven results",
+  "raw_text": "- The S&P 500 ($SPX) fell 1.8% to 7,580.07, the Dow Jones Industrial Average ($DJI) lost 1.1% to 51,770.31, and the Nasdaq Composite ($COMP) dropped 2.9% to 25,437.00, leaving the Nasdaq on track for its worst month since March 2025.\n- Intel (INTC) slid roughly 29% for its worst day since 1974 after weak Q4 guidance triggered broad analyst downgrades, with the company citing PC market softness, memory-chip shortages, and an Israel plant impact.\n- Reddit (RDDT) dropped roughly 29% after multiple firms downgraded the stock or cut price targets on search-traffic and logged-in shift risks, with Q4 guidance viewed as weaker than expected.\n- Amazon (AMZN) fell about 1.4% after arranging an up to $80 billion loan facility to finance generative AI hardware investments, following a revenue miss, negative free cash flow, and 2026 capex forecasts of about $220 billion tied to AI infrastructure.\n- Grid Dynamics (GDYN) rose about 41% after posting record Q3 results that beat estimates on AI-driven margin gains, making it one of the session’s strongest gainers.\n- Regeneron (REGN) climbed around 13% after a strong earnings beat, with revenue up 36% and EPS up 70% on core brands and Sanofi profit share, and raised 2026 margin guidance.\n- FedEx (FDX) shares advanced, with FedEx Freight (FDXF) up about 15%, after the freight unit said it will implement a 2027 general rate increase averaging 6.9% effective Jan. 8 following its Q3 report.\n- Energy outperformed as ExxonMobil (XOM) and Chevron (CVX) exceeded earnings estimates on strong refining margins and profits, helped by rising oil (@CL) prices and Middle East tensions, with both stocks briefly touching record highs, while technology lagged and health care, consumer staples, and real estate held up better.\n- A $6.3 billion Binance hack linked to North Korea pressured Bitcoin (@BTC) and cryptocurrency-related stocks lower during the session.\n- In after-hours trading, index futures moved lower and reactions to additional earnings beats from names such as AbbVie (ABBV) were modest as investors looked ahead to next week’s economic data releases, further earnings reports, and midterm election developments.",
+  "raw_summary_md": "- The **S&P 500** ([$SPX](https://finviz.com/index/SPX?p=d)) fell **1.8%** to **7,580.07**, the **Dow Jones Industrial Average** ([$DJI](https://finviz.com/index/DJI?p=d)) lost **1.1%** to **51,770.31**, and the **Nasdaq Composite** ([$COMP](https://finviz.com/index/COMP?p=d)) dropped **2.9%** to **25,437.00**, leaving the Nasdaq on track for its **worst month since March 2025**.\n- Intel ([INTC](https://finviz.com/quote?t=INTC)) slid roughly **29%** for its **worst day since 1974** after weak Q4 guidance triggered broad analyst downgrades, with the company citing PC market softness, memory-chip shortages, and an Israel plant impact.\n- Reddit ([RDDT](https://finviz.com/quote?t=RDDT)) dropped roughly **29%** after multiple firms downgraded the stock or cut price targets on search-traffic and logged-in shift risks, with Q4 guidance viewed as **weaker than expected**.\n- Amazon ([AMZN](https://finviz.com/quote?t=AMZN)) fell about 1.4% after arranging an **up to $80 billion loan facility** to finance generative AI hardware investments, following a revenue miss, negative free cash flow, and **2026 capex forecasts of about $220 billion** tied to AI infrastructure.\n- Grid Dynamics ([GDYN](https://finviz.com/quote?t=GDYN)) rose about **41%** after posting **record Q3 results** that beat estimates on AI-driven margin gains, making it one of the session’s strongest gainers.\n- Regeneron ([REGN](https://finviz.com/quote?t=REGN)) climbed around **13%** after a strong earnings beat, with **revenue up 36% and EPS up 70%** on core brands and Sanofi profit share, and **raised 2026 margin guidance**.\n- FedEx ([FDX](https://finviz.com/quote?t=FDX)) shares advanced, with **FedEx Freight** ([FDXF](https://finviz.com/quote?t=FDXF)) up about **15%**, after the freight unit said it will implement a **2027 general rate increase averaging 6.9% effective Jan. 8** following its Q3 report.\n- Energy outperformed as **ExxonMobil** ([XOM](https://finviz.com/quote?t=XOM)) and **Chevron** ([CVX](https://finviz.com/quote?t=CVX)) exceeded earnings estimates on strong refining margins and profits, helped by **rising oil** ([@CL](https://finviz.com/futures_charts?t=CL)) prices and **Middle East tensions**, with both stocks briefly touching record highs, while technology lagged and health care, consumer staples, and real estate held up better.\n- A **$6.3 billion Binance hack linked to North Korea** pressured **Bitcoin** ([@BTC](https://finviz.com/futures_charts?t=BTC)) and cryptocurrency-related stocks lower during the session.\n- In **after-hours trading**, index futures moved lower and reactions to additional earnings beats from names such as **AbbVie** ([ABBV](https://finviz.com/quote?t=ABBV)) were modest as investors looked ahead to next week’s economic data releases, further earnings reports, and midterm election developments.",
+  "index_moves": [
+    {
+      "name": "S&P 500",
+      "code": "SPX",
+      "change_pct": -1.8,
+      "verb": "fell"
+    },
+    {
+      "name": "Dow Jones Industrial Average",
+      "code": "DJI",
+      "change_pct": -1.1,
+      "verb": "lost"
+    },
+    {
+      "name": "Nasdaq Composite",
+      "code": "COMP",
+      "change_pct": -2.9,
+      "verb": "dropped"
+    }
+  ],
+  "oil": null,
+  "cpi": null,
+  "fed_odds": {
+    "pct": 29.0,
+    "action": "cut",
+    "text": "roughly 29% after multiple firms downgraded the stock or cut"
+  },
+  "named_tickers": [
+    "INTC",
+    "RDDT",
+    "AMZN",
+    "GDYN",
+    "REGN",
+    "FDX",
+    "FDXF",
+    "XOM",
+    "CVX",
+    "ABBV"
+  ],
+  "named_leaders": [
+    "INTC",
+    "RDDT",
+    "AMZN",
+    "GDYN",
+    "REGN",
+    "FDX",
+    "FDXF",
+    "XOM",
+    "CVX",
+    "ABBV"
+  ],
+  "calendar": [
+    "In after-hours trading, index futures moved lower and reactions to additional earnings beats from names such as AbbVie (ABBV) were modest as investors looked ahead to next week’s economic data releases, further earnings reports, and midterm election developments."
+  ],
+  "prior_close": {
+    "spx": -1.8,
+    "nasdaq": -2.9,
+    "dow": -1.1
+  },
+  "cpi_fed": {
+    "cpi": null,
+    "fed_odds": {
+      "pct": 29.0,
+      "action": "cut",
+      "text": "roughly 29% after multiple firms downgraded the stock or cut"
+    }
+  },
+  "next_session_calendar": {
+    "housing": false,
+    "retail": false,
+    "fed": false,
+    "bullets": [
+      "In after-hours trading, index futures moved lower and reactions to additional earnings beats from names such as AbbVie (ABBV) were modest as investors looked ahead to next week’s economic data releases, further earnings reports, and midterm election developments."
+    ],
+    "text": "In after-hours trading, index futures moved lower and reactions to additional earnings beats from names such as AbbVie (ABBV) were modest as investors looked ahead to next week’s economic data releases, further earnings reports, and midterm election developments."
+  },
+  "earnings_slate": {
+    "tickers": [],
+    "text": ""
+  },
+  "geo_grain": {
+    "geo": true,
+    "grain": false,
+    "flags": [
+      "geo"
+    ],
+    "text": "Intel (INTC) slid roughly 29% for its worst day since 1974 after weak Q4 guidance triggered broad analyst downgrades, with the company citing PC market softness, memory-chip shortages, and an Israel plant impact. Energy outperformed as ExxonMobil (XOM) and Chevron (CVX) exceeded earnings estimates on strong refining margins and profits, helped by rising oil (@CL) prices and Middle East tensions, with both stocks briefly touching record highs, while technology lagged and health care, consumer staples, and real estate held up better."
+  },
+  "finviz_id": 325113,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-10-30T16:38:24.35",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "bad"
+}

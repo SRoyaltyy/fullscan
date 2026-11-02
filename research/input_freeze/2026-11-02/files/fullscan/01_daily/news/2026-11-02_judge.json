@@ -1,0 +1,12 @@
+{
+ "risk_tilt": "off",
+ "macros": [
+  "hawkish"
+ ],
+ "sector_tilts": {},
+ "tickers": {
+  "AMGN": 1.5
+ },
+ "b1_inject": "NEWS_JUDGE: n=8 rescued=6\nMACRO rates: [hawkish] Fed officials push more hikes; gold >$100 drop signals hawkish repricing (session/1d-1w)\nMACRO energy: [policy] OPEC+ holds December quotas; oil slides on Iran diplomacy (session/1d-1w)\nSECTOR Technology: [fundamental] Apple memory-cost margin test + Palantir AI-defensiveness report (SPX/NDX, IGV)\nSECTOR Industrials: [fundamental] Boeing 737 MAX 10 FAA certification halt threatens order book (ITA/BA)\nSECTOR Healthcare: [fundamental] Amgen Phase 3 positive + AbbVie first-in-class Parkinson's FDA approval (XLV/IBB)\nSECTOR Semis: [sentiment] $44B chip ETF dip-buying vs AI panic leaves SMH mixed\nINTERACTION: Healthcare trial/FDA sympathy -> XLV/IBB basket; AI panic + chip inflows -> semis mixed; Fed + NFP -> one rates cluster\nWATCH: NFP/midterms ahead; no futures confirmation in packet, so rates is headline-risk not directional gate",
+ "date": "2026-11-02"
+}
