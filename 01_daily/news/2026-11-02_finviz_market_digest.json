@@ -1,0 +1,86 @@
+{
+  "date": "2026-11-02",
+  "generated_at": "2026-11-02T04:22:26.394326-05:00",
+  "timezone": "America/New_York",
+  "source": "live",
+  "source_url": "https://elite.finviz.com/",
+  "archive_snapshot_ts": null,
+  "archive_snapshot_at": null,
+  "archive_url": null,
+  "clock_legal": true,
+  "clock_same_morning": true,
+  "clock_use": "same_morning",
+  "clock_legal_for": "2026-11-02",
+  "clock_rule": "Live: Generated must be before 09:30 ET on this date or leave missing. Wayback: capture before 09:30 ET that day is legal for that morning's Pre-Open. Afternoon Wayback is legal for the NEXT session open only (prior-day close recap), marked by clock_legal_for. Gaps stay gaps. Capture only — not tape_anchor / predict / #210.",
+  "kind": "finviz_homepage_market_digest",
+  "represents": "Finviz homepage market-day prose. Same-morning Pre-Open when Generated is before 09:30 ET; afternoon Wayback is a prior-day close recap legal for the next session only. Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "US stocks set to open higher as futures gap up amid softer oil, firmer gold and key ISM manufacturing data ahead",
+  "raw_text": "- S&P 500 Futures (@ES) rise 0.37%, Dow Jones Futures (@YM) gain 0.33%, Nasdaq 100 Futures (@NQ) advance 0.74%, and Russell 2000 Futures (@ER2) add 0.54% after last week's tech selloff\n- Cloudflare (NET) trades roughly 2% higher pre-market\n- Ford (F) gains pre-market as stronger 2026 guidance offsets a miss tied to EV charges and supply issues\n- Robinhood Markets (HOOD) trades roughly 1.5% higher pre-market after disappointing revenue and user metrics\n- Marriott International (MAR), Estée Lauder, Entergy (ETR), Check Point Software (CHKP), and Fox Corporation (FOXA) report earnings before the bell, with their moves expected to influence early trading\n- Oil (@CL) prices fall sharply on US-Iran diplomatic signals related to the Middle East, while gold (@GC) prices move higher\n- Asian equities trade mixed and major European indexes edge higher in early Monday activity\n- Traders monitor the ISM Manufacturing PMI due at 10:00 AM ET for sector and cyclical demand signals",
+  "raw_summary_md": "- **S&P 500 Futures** ([@ES](https://finviz.com/futures_charts?t=ES)) rise **0.37%**, **Dow Jones Futures** ([@YM](https://finviz.com/futures_charts?t=YM)) gain **0.33%**, **Nasdaq 100 Futures** ([@NQ](https://finviz.com/futures_charts?t=NQ)) advance **0.74%**, and **Russell 2000 Futures** ([@ER2](https://finviz.com/futures_charts?t=ER2)) add **0.54%** after last week's tech selloff\n- **Cloudflare** ([NET](https://finviz.com/quote?t=NET)) trades roughly **2% higher pre-market**\n- **Ford** ([F](https://finviz.com/quote?t=F)) gains pre-market as **stronger 2026 guidance** offsets a miss tied to EV charges and supply issues\n- **Robinhood Markets** ([HOOD](https://finviz.com/quote?t=HOOD)) trades roughly **1.5% higher pre-market** after **disappointing revenue and user metrics**\n- **Marriott International** ([MAR](https://finviz.com/quote?t=MAR)), **Estée Lauder**, **Entergy** ([ETR](https://finviz.com/quote?t=ETR)), **Check Point Software** ([CHKP](https://finviz.com/quote?t=CHKP)), and **Fox Corporation** ([FOXA](https://finviz.com/quote?t=FOXA)) report **earnings before the bell**, with their moves expected to influence early trading\n- **Oil** ([@CL](https://finviz.com/futures_charts?t=CL)) prices **fall sharply** on US-Iran diplomatic signals related to the Middle East, while **gold** ([@GC](https://finviz.com/futures_charts?t=GC)) prices **move higher**\n- **Asian equities trade mixed** and **major European indexes edge higher** in early Monday activity\n- Traders monitor the **ISM Manufacturing PMI** due at **10:00 AM ET** for sector and cyclical demand signals",
+  "index_moves": [],
+  "oil": null,
+  "cpi": null,
+  "fed_odds": null,
+  "named_tickers": [
+    "NET",
+    "F",
+    "HOOD",
+    "MAR",
+    "ETR",
+    "CHKP",
+    "FOXA"
+  ],
+  "named_leaders": [
+    "NET",
+    "F",
+    "HOOD",
+    "MAR",
+    "ETR",
+    "CHKP",
+    "FOXA"
+  ],
+  "calendar": [
+    "Asian equities trade mixed and major European indexes edge higher in early Monday activity"
+  ],
+  "prior_close": {
+    "spx": null,
+    "nasdaq": null,
+    "dow": null
+  },
+  "cpi_fed": {
+    "cpi": null,
+    "fed_odds": null
+  },
+  "next_session_calendar": {
+    "housing": false,
+    "retail": false,
+    "fed": false,
+    "bullets": [
+      "Asian equities trade mixed and major European indexes edge higher in early Monday activity"
+    ],
+    "text": "Asian equities trade mixed and major European indexes edge higher in early Monday activity"
+  },
+  "earnings_slate": {
+    "tickers": [
+      "MAR",
+      "ETR",
+      "CHKP",
+      "FOXA"
+    ],
+    "text": "Marriott International (MAR), Estée Lauder, Entergy (ETR), Check Point Software (CHKP), and Fox Corporation (FOXA) report earnings before the bell, with their moves expected to influence early trading"
+  },
+  "geo_grain": {
+    "geo": true,
+    "grain": false,
+    "flags": [
+      "geo"
+    ],
+    "text": "Oil (@CL) prices fall sharply on US-Iran diplomatic signals related to the Middle East, while gold (@GC) prices move higher"
+  },
+  "finviz_id": 325543,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-11-02T04:06:50.103",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "good"
+}
