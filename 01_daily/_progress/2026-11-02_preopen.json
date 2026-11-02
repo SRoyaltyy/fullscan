@@ -5,8 +5,8 @@
   "run_id": "41440630835",
   "model": "deepseek",
   "started_at": "2026-11-02T07:31:30-05:00",
-  "updated_at": "2026-11-02T07:39:32-05:00",
-  "heartbeat_at": "2026-11-02T07:39:32-05:00",
+  "updated_at": "2026-11-02T07:41:00-05:00",
+  "heartbeat_at": "2026-11-02T07:41:00-05:00",
   "stages": [
     {
       "name": "prep",
@@ -109,11 +109,11 @@
     },
     {
       "name": "deploy",
-      "state": "running",
+      "state": "ok",
       "started_at": "2026-11-02T07:39:32-05:00",
-      "ended_at": "",
+      "ended_at": "2026-11-02T07:41:00-05:00",
       "heartbeat_at": "2026-11-02T07:39:32-05:00",
-      "done": 0,
+      "done": 1,
       "total": 1,
       "model": "deepseek",
       "error": ""
