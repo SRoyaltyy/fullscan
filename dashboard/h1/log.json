@@ -9639,5 +9639,95 @@
     "sha256": "bbcb924d1cd86bf1e904e084bf7abca5c472d8d80acb982d91a27f970ad5c1be",
     "shares": 575,
     "ticker": "SWRD"
+  },
+  {
+    "bar_cutoff": "2026-10-30",
+    "cash_before": 290.16882054378107,
+    "committed_at": "2026-11-02T13:24:28Z",
+    "date": "2026-11-02",
+    "excluded_unexplained_legs": [],
+    "finviz_source": {
+      "commit": "9396bdb6d680b770ac33e9122c714d8974747093",
+      "commit_time": "2026-10-30T20:52:43Z",
+      "file_sha256": "096bb358d3e90c312506645f39f1e78ebe257b3fca81642effbf5ed19346f268",
+      "path": "data/snapshots/2026-10-30.csv",
+      "snapshot_date": "2026-10-30",
+      "status": "BEFORE_OPEN"
+    },
+    "holdup_on": false,
+    "kind": "plan",
+    "morning_s": 3.044,
+    "picks": [
+      {
+        "fv_avg_volume": 1262.4,
+        "fv_price": 13.36,
+        "rank": 1,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "GDYN"
+      },
+      {
+        "fv_avg_volume": 1301.11,
+        "fv_price": 87.41,
+        "rank": 2,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "CDNA"
+      },
+      {
+        "fv_avg_volume": 2735.26,
+        "fv_price": 19.75,
+        "rank": 3,
+        "sources": [
+          "ohlc_hot"
+        ],
+        "ticker": "SLN"
+      },
+      {
+        "fv_avg_volume": 4440.87,
+        "fv_price": 18.68,
+        "rank": 4,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "CPRI"
+      }
+    ],
+    "planned_sells": [
+      {
+        "reason": "hold-expired",
+        "shares": 196,
+        "ticker": "ADT"
+      },
+      {
+        "reason": "hold-expired",
+        "shares": 7,
+        "ticker": "GKOS"
+      },
+      {
+        "reason": "hold-expired",
+        "shares": 157,
+        "ticker": "PURR"
+      },
+      {
+        "reason": "hold-expired",
+        "shares": 221,
+        "ticker": "TDOC"
+      }
+    ],
+    "recipe": "union_hot_n4_h1__w0",
+    "s_source": {
+      "blob_sha": "2951c727a444a35495ba956edc028c0bfb8ab142",
+      "kind": "predict",
+      "path": "01_daily/general/2026-11-02_predict.md",
+      "server_time_utc": "2026-11-02T20:33:37+08:00",
+      "status": "BEFORE_1330"
+    },
+    "sha256": "ff7a3c8b981e51684703c21ed112475be4f42e8c254ce128a5b59910a6c4960c"
   }
 ]
