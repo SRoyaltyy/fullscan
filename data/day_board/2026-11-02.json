@@ -1,6 +1,6 @@
 {
   "date": "2026-11-02",
-  "generated_at": "2026-11-02T16:34:42.063564-05:00",
+  "generated_at": "2026-11-02T16:56:11.482662-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -184,7 +184,7 @@
       "inputs_ready": true,
       "n_req_ok": 7,
       "n_req": 9,
-      "n_opt_ok": 1,
+      "n_opt_ok": 2,
       "n_opt": 14,
       "files": [
         {
@@ -331,11 +331,16 @@
           "name": "Sector board JSON",
           "path": "01_daily/sectors/2026-11-02/_board.json",
           "role": "optional",
-          "status": "SKIP",
-          "reason": "optional \u2014 sector board not required",
-          "size": 0,
-          "said": "optional \u2014 sector board not required",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 6085,
+          "said": "0 up / 0 down / 0 flat",
+          "bullets": [
+            "XLB missing",
+            "XLC missing",
+            "XLY missing",
+            "XLP missing"
+          ]
         },
         {
           "key": "qc",
@@ -499,13 +504,18 @@
           "bullets": []
         }
       ],
-      "said": "general UP  3.044",
+      "said": "general UP  3.044 \u00b7 sectors 0 up / 0 down / 0 flat",
       "bullets": [
         "bad: China PMI 49.3 contraction",
         "bad: Fitch France outlook negative",
         "bad: fresh Hormuz tanker mines",
         "good: Oil collapse (WTI -4.45%)",
-        "good: OPEC+ quota rollover"
+        "good: OPEC+ quota rollover",
+        "XLB missing",
+        "XLC missing",
+        "XLY missing",
+        "XLP missing",
+        "XLE missing"
       ]
     },
     {
@@ -540,8 +550,8 @@
           "path": "01_daily/weather/2026-11-02_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=9438 vix=calm yields=flat",
-          "size": 9438,
+          "reason": "sectors=11 bytes=9657 vix=spiking yields=falling",
+          "size": 9657,
           "said": "hostile 9 \u00b7 neutral 2",
           "bullets": [
             "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Technology, Utilities",
@@ -664,7 +674,7 @@
       "n_req_ok": 4,
       "n_req": 4,
       "n_opt_ok": 3,
-      "n_opt": 4,
+      "n_opt": 3,
       "files": [
         {
           "key": "in_general",
@@ -686,12 +696,17 @@
           "key": "in_board",
           "name": "Sector board JSON",
           "path": "01_daily/sectors/2026-11-02/_board.json",
-          "role": "optional",
-          "status": "SKIP",
-          "reason": "optional \u2014 sector board not required",
-          "size": 0,
-          "said": "optional \u2014 sector board not required",
-          "bullets": []
+          "role": "input",
+          "status": "OK",
+          "reason": "",
+          "size": 6085,
+          "said": "0 up / 0 down / 0 flat",
+          "bullets": [
+            "XLB missing",
+            "XLC missing",
+            "XLY missing",
+            "XLP missing"
+          ]
         },
         {
           "key": "in_actions",
@@ -740,8 +755,8 @@
           "path": "01_daily/weather/2026-11-02_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=9438 vix=calm yields=flat",
-          "size": 9438,
+          "reason": "sectors=11 bytes=9657 vix=spiking yields=falling",
+          "size": 9657,
           "said": "hostile 9 \u00b7 neutral 2",
           "bullets": [
             "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Technology, Utilities",
@@ -1063,7 +1078,22 @@
       "score": "3.044",
       "direction": "up"
     },
-    "sectors": {},
+    "sectors": {
+      "said": "0 up / 0 down / 0 flat",
+      "bullets": [
+        "XLB missing",
+        "XLC missing",
+        "XLY missing",
+        "XLP missing",
+        "XLE missing",
+        "XLF missing",
+        "XLV missing",
+        "XLI missing",
+        "XLRE missing",
+        "XLK missing",
+        "XLU missing"
+      ]
+    },
     "news": {},
     "weather": {
       "said": "hostile 9 \u00b7 neutral 2",
@@ -2967,6 +2997,31 @@
         }
       ],
       "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest (close) \u2014 2026-11-02\n**Generated:** 2026-11-02T16:34:40.924013-05:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks closed mixed as crude tumbled on US\u2013Iran diplomacy hopes, with lingering AI-related pressure still in focus ahead of Apple earnings and US midterm elections\n**Prior close:** SPX -0.50%  Nasdaq -1.10%  Dow +0.40%\n**SPX:** -0.50%  **Nasdaq:** -1.10%  **Dow:** +0.40%\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** XOM, AMZN, MHK, ORCL, MRVL, LITE, MSFT, AAPL\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** \u2014\n**Geo/grain:** geo\n**Clock legal for:** 2026-11-03\n**Clock use:** `next_open`"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-11-02",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-02T16:56:10.321145-05:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-11-02_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 9657,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-11-02_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5231,
+          "preview": "# Weather report \u2014 2026-11-02\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-11-02\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
     }
   ],
   "href": {
@@ -3286,6 +3341,22 @@
       "commit_msg": "auto: land finviz_market_digest_close [2026-11-02]",
       "workflow": "Finviz homepage market digest",
       "run_id": "41527293461",
+      "manifest": "research/input_freeze/2026-11-02/manifest.json"
+    },
+    {
+      "path": "01_daily/weather/2026-11-02_weather.json",
+      "at": "2026-11-02T16:56:11-05:00",
+      "commit_msg": "auto: land weather [2026-11-02]",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "41531621362",
+      "manifest": "research/input_freeze/2026-11-02/manifest.json"
+    },
+    {
+      "path": "data/day_board/2026-11-02.json",
+      "at": "2026-11-02T16:56:11-05:00",
+      "commit_msg": "auto: land weather [2026-11-02]",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "41531621362",
       "manifest": "research/input_freeze/2026-11-02/manifest.json"
     }
   ]
