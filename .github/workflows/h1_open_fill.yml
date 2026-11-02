@@ -51,9 +51,16 @@ jobs:
           sparse-checkout: |
             /scripts/open_fill_gate.py
             /research/hot_n4_clean_v4/forward_h1/h1_log.jsonl
+            /research/hot_n4_clean_v4/forward_h1/skips.jsonl
+            /research/hot_n4_clean_v4/forward_h1/fill_missing_notes.jsonl
+            /data/paper_open/*_status.json
       - name: Today's plan sealed and open fill not yet sealed (America/New_York)
         id: gate
-        run: python3 scripts/open_fill_gate.py research/hot_n4_clean_v4/forward_h1/h1_log.jsonl
+        run: >-
+          python3 scripts/open_fill_gate.py research/hot_n4_clean_v4/forward_h1/h1_log.jsonl
+          --skips research/hot_n4_clean_v4/forward_h1/skips.jsonl
+          --notes research/hot_n4_clean_v4/forward_h1/fill_missing_notes.jsonl
+          --paper-status-dir data/paper_open
 
   open-fill:
     needs: gate
