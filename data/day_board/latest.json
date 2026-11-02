@@ -1,12 +1,12 @@
 {
   "date": "2026-11-02",
-  "generated_at": "2026-11-02T04:22:26.716027-05:00",
-  "overall": "FAIL",
+  "generated_at": "2026-11-02T04:22:58.673980-05:00",
+  "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
-    "ok": 0,
-    "partial": 2,
-    "fail": 6,
+    "ok": 1,
+    "partial": 3,
+    "fail": 4,
     "n": 8
   },
   "dates": [
