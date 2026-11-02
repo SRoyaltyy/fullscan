@@ -2052,8 +2052,8 @@ def test_workflow_is_after_the_freeze_and_on_ubuntu() -> None:
     text = (ROOT / ".github/workflows/webull_sim.yml").read_text(encoding="utf-8")
     assert "ubuntu-latest" in text
     assert "workflow_dispatch" in text
-    assert "45 13 * * 1-5" in text
-    assert "15 20 * * 1-5" in text
+    assert "45 14 * * 1-5" in text
+    assert "15 21 * * 1-5" in text
     assert "OpenClaw" not in text
     assert "webull_sim" in text
     assert "https://github.com/SRoyaltyy/theme-radar.git" in text
