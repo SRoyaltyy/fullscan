@@ -15,6 +15,13 @@ name: h1 open fill
 on:
   schedule:
     - cron: "35 13 * * 1-5"
+    # Backup ~10 min later. GitHub can drop or delay a scheduled run; the gate
+    # job below makes either cron a no-op once today's open_fill is sealed.
+    - cron: "45 13 * * 1-5"
+    # EST (from 2026-11-01): 09:35/09:45 ET. The gate skips any run before
+    # 09:35 New York time, so the off-season pair is a no-op.
+    - cron: "35 14 * * 1-5"
+    - cron: "45 14 * * 1-5"
   workflow_dispatch:
 
 permissions:
@@ -25,7 +32,23 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  gate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    outputs:
+      run: ${{ steps.gate.outputs.run }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Today's plan sealed and open fill not yet sealed (America/New_York)
+        id: gate
+        run: python3 scripts/open_fill_gate.py research/hot_n4_clean_v4/forward_h1/h1_log.jsonl
+
   open-fill:
+    needs: gate
+    # A manual dispatch always runs; a scheduled run only when the gate says so.
+    if: github.event_name == 'workflow_dispatch' || needs.gate.outputs.run == 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 45
     steps:
