@@ -49,6 +49,7 @@ name: h1 append-only forward
 on:
   schedule:
     - cron: "5 13 * * 1-5"
+    - cron: "5 14 * * 1-5"    # EST twin; in-job NY-time gate
   workflow_run:
     workflows:
       - "Pre-Open ALL (predictive one-shot)"

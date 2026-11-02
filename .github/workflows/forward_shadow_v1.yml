@@ -15,7 +15,7 @@ on:
         required: false
         default: ""
   schedule:
-    - cron: "20 14 * * 1-5"
+    - cron: "20 15 * * 1-5"
     - cron: "45 21 * * 1-5"
     - cron: "15 23 * * 1-5"
   workflow_run:

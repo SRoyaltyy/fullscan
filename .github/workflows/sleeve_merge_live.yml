@@ -11,7 +11,7 @@ on:
         required: false
         default: ""
   schedule:
-    - cron: "25 13 * * 1-5"   # ~09:25 ET — after book heal, around the bell
+    - cron: "25 14 * * 1-5"   # ~09:25 ET — after book heal, around the bell
   workflow_run:
     # Stock Book ALL is the later parent. Listening to Pre-Open AND the
     # book job canceled the first card mid-write (cancel-in-progress).

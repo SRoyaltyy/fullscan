@@ -20,7 +20,7 @@ name: Post-Close last-closed (ubuntu/DeepSeek sidecar)
 on:
   schedule:
     - cron: "25 15 * * 1-5"   # ~11:25 ET — last-closed heal while session is live
-    - cron: "15 20 * * 1-5"   # ~16:15 ET — last_closed flips at the bell (Fri→Mon baseline)
+    - cron: "15 21 * * 1-5"   # ~16:15 ET — last_closed flips at the bell (Fri→Mon baseline)
   push:
     branches: [main]
     paths:

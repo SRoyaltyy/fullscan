@@ -53,8 +53,8 @@ on:
   # cron used to steal the box and miss 09:30. Schedule MUST force
   # ubuntu + skip_llm + skip_extras — inputs are empty on cron.
   schedule:
-    - cron: "10 10 * * 1-5"   # ~06:10 ET — after 05:40 scrape
-    - cron: "15 13 * * 1-5"   # ~09:15 ET — last chance before the bell
+    - cron: "10 11 * * 1-5"   # ~06:10 ET — after 05:40 scrape
+    - cron: "15 14 * * 1-5"   # ~09:15 ET — last chance before the bell
   # Merge of ranker/heal code must not wait for a newly-registered cron.
   # Do not match data/stock_book commits (GITHUB_TOKEN already will not
   # retrigger; a PAT still must not start a second rank). Pre-Open ALL
