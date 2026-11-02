@@ -1,0 +1,36 @@
+{
+ "workflow": "preopen_all",
+ "date": "2026-11-02",
+ "checked_at": "2026-11-02 04:35 ET",
+ "run_id": "41419239215",
+ "ok": false,
+ "failed": [
+  "ecs_code_current"
+ ],
+ "items": [
+  {
+   "id": "ecs_code_current",
+   "ok": false,
+   "plain": "code stale: this checkout's code (src, scripts, config, .github) must match GitHub main",
+   "detail": "ecs code stale: HEAD fd6562d0 vs main e4ba6c0c differ in 3 code file(s): .github/workflows/h1_open_fill.yml, .github/workflows/holdup_open_fill.yml, scripts/open_fill_gate.py"
+  },
+  {
+   "id": "no_unapproved_paid_fallback",
+   "ok": true,
+   "plain": "fallback model is not on the approved free list",
+   "detail": "LLM_FALLBACK_MODEL=(none)"
+  },
+  {
+   "id": "no_twin_preopen",
+   "ok": true,
+   "plain": "another Pre-Open is already running",
+   "detail": "no twin"
+  },
+  {
+   "id": "read_cap_fits",
+   "ok": true,
+   "plain": "OPENCLAW_PREDICT_READ_CAP_S (general predict + news judge) is under 300s",
+   "detail": "OPENCLAW_PREDICT_READ_CAP_S=300, need >= 300"
+  }
+ ]
+}
