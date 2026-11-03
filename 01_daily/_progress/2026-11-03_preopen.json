@@ -5,8 +5,8 @@
   "run_id": "41617404646",
   "model": "deepseek",
   "started_at": "2026-11-03T05:52:30-05:00",
-  "updated_at": "2026-11-03T05:59:51-05:00",
-  "heartbeat_at": "2026-11-03T05:59:51-05:00",
+  "updated_at": "2026-11-03T06:00:10-05:00",
+  "heartbeat_at": "2026-11-03T06:00:10-05:00",
   "stages": [
     {
       "name": "prep",
@@ -76,14 +76,14 @@
     },
     {
       "name": "book_sleeve",
-      "state": "running",
+      "state": "failed",
       "started_at": "2026-11-03T05:55:35-05:00",
-      "ended_at": "",
+      "ended_at": "2026-11-03T06:00:10-05:00",
       "heartbeat_at": "2026-11-03T05:59:51-05:00",
       "done": 0,
       "total": 1,
       "model": "deepseek",
-      "error": ""
+      "error": "stock book still missing"
     },
     {
       "name": "catalyst",
