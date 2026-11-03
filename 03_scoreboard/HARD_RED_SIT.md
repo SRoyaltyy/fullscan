@@ -26,13 +26,259 @@ Clock split: (A) short-only is a pre-open policy call — shorts fire at the clo
 
 ## RESEARCH per sleeve (paper, not a wire)
 
-**2026-11-03** — `1` sit sleeves with looked names / `1` sit sleeves total. Live policy sits. KEEP bar unchanged. Label: **RESEARCH**.
+**2026-11-03** — `247` sit sleeves with looked names / `342` sit sleeves total. Live policy sits. KEEP bar unchanged. Label: **RESEARCH**.
 
 Per-sleeve paper counterfactuals on looked names. Live sit stays default. KEEP bar unchanged. (A) short-only fires the short kid at the 09:30 open. (B) dip-scoop longs wait for open−X% (session low / Elite live). Close does not trigger.
 
 | Sleeve | Side | (A) short-only @ open | (B) dip-scoop X% |
 |---|---|---|---|
 | `flatten_robust` | long | — | CDNA miss; TOST miss; TRU miss; IT miss; MHK miss; CAKE miss; AMN miss; CON miss; LLY miss; PRCH miss; AVPT miss; SONO miss; ABX miss; ADCT miss; ADMA miss; AMRX miss; SMMT miss |
+| `union_h1` | long | — | CRS miss; ITW miss; AMX miss; IT miss; NVTS miss; EPR miss; AIP miss; TBBB miss |
+| `union_h3` | long | — | CRS miss; ITW miss; AMX miss; IT miss; NVTS miss; EPR miss; AIP miss; TBBB miss |
+| `union_h5` | long | — | CRS miss; ITW miss; AMX miss; IT miss; NVTS miss; EPR miss; AIP miss; TBBB miss |
+| `flatten_h1` | long | — | IT miss; CDNA miss; TOST miss; TRU miss; MHK miss; CAKE miss |
+| `flatten_h3` | long | — | IT miss; CDNA miss; TOST miss; TRU miss; MHK miss; CAKE miss |
+| `flatten_h5` | long | — | IT miss; CDNA miss; TOST miss; TRU miss; MHK miss; CAKE miss |
+| `probable_h1` | long | — | NVTS miss; EPR miss; AIP miss; SMMT miss; PRMB miss; PDFS miss; CXW miss; ACRS miss |
+| `probable_h3` | long | — | NVTS miss; EPR miss; AIP miss; SMMT miss; PRMB miss; PDFS miss; CXW miss; ACRS miss |
+| `probable_h5` | long | — | NVTS miss; EPR miss; AIP miss; SMMT miss; PRMB miss; PDFS miss; CXW miss; ACRS miss |
+| `yday_gainer_h1` | long | — | CRS miss; ITW miss; AMX miss; NVTS miss; EPR miss; AIP miss; TBBB miss; TRU miss |
+| `yday_gainer_h3` | long | — | CRS miss; ITW miss; AMX miss; NVTS miss; EPR miss; AIP miss; TBBB miss; TRU miss |
+| `yday_gainer_h5` | long | — | CRS miss; ITW miss; AMX miss; NVTS miss; EPR miss; AIP miss; TBBB miss; TRU miss |
+| `ohlc_hot_h1` | long | — | KVYO miss; VVX miss; TAP miss; POOL miss; TEM miss; DNUT miss; ROAD miss; RUN miss |
+| `ohlc_hot_h3` | long | — | KVYO miss; VVX miss; TAP miss; POOL miss; TEM miss; DNUT miss; ROAD miss; RUN miss |
+| `ohlc_hot_h5` | long | — | KVYO miss; VVX miss; TAP miss; POOL miss; TEM miss; DNUT miss; ROAD miss; RUN miss |
+| `union_vol_g_h1` | long | — | EGG miss |
+| `union_vol_g_h3` | long | — | EGG miss |
+| `union_ab_g_h1` | long | — | CRS miss; ITW miss; AMX miss; IT miss; EPR miss; TBBB miss; DBRG miss; GLND miss |
+| `union_ab_g_h3` | long | — | CRS miss; ITW miss; AMX miss; IT miss; EPR miss; TBBB miss; DBRG miss; GLND miss |
+| `union_join_g_h1` | long | — | IT miss; DBRG miss; CDNA miss; TOST miss; TRU miss; MHK miss; CAKE miss; CXW miss |
+| `union_join_g_h3` | long | — | IT miss; DBRG miss; CDNA miss; TOST miss; TRU miss; MHK miss; CAKE miss; CXW miss |
+| `union_join_present_h1` | long | — | CRS miss; ITW miss; AMX miss; IT miss; NVTS miss; EPR miss; AIP miss; TBBB miss |
+| `union_join_present_h3` | long | — | CRS miss; ITW miss; AMX miss; IT miss; NVTS miss; EPR miss; AIP miss; TBBB miss |
+| `union_news_g_h1` | long | — | ITW miss; AMX miss; NVTS miss; AIP miss; TBBB miss; GLND miss; TEM miss; RCL miss |
+| `union_news_g_h3` | long | — | ITW miss; AMX miss; NVTS miss; AIP miss; TBBB miss; GLND miss; TEM miss; RCL miss |
+| `union_news_present_h1` | long | — | CRS miss; ITW miss; AMX miss; IT miss; NVTS miss; EPR miss; AIP miss; TBBB miss |
+| `union_news_present_h3` | long | — | CRS miss; ITW miss; AMX miss; IT miss; NVTS miss; EPR miss; AIP miss; TBBB miss |
+| `union_blue_h1` | long | — | CRS miss; ITW miss; IT miss; NVTS miss; AIP miss; KVYO miss; VVX miss; CDNA miss |
+| `union_blue_h3` | long | — | CRS miss; ITW miss; IT miss; NVTS miss; AIP miss; KVYO miss; VVX miss; CDNA miss |
+| `union_last_green_h1` | long | — | CRS miss; ITW miss; AMX miss; IT miss; EPR miss; TBBB miss; DBRG miss; KVYO miss |
+| `union_last_green_h3` | long | — | CRS miss; ITW miss; AMX miss; IT miss; EPR miss; TBBB miss; DBRG miss; KVYO miss |
+| `union_last_red_h1` | long | — | NVTS miss; AIP miss; GLND miss; CDNA miss; TOST miss; MHK miss; CAKE miss; SMMT miss |
+| `union_last_red_h3` | long | — | NVTS miss; AIP miss; GLND miss; CDNA miss; TOST miss; MHK miss; CAKE miss; SMMT miss |
+| `union_candle_h1` | long | — | CRS miss; AMX miss; IT miss; EPR miss; TBBB miss; DBRG miss; KVYO miss; VVX miss |
+| `union_candle_h3` | long | — | CRS miss; AMX miss; IT miss; EPR miss; TBBB miss; DBRG miss; KVYO miss; VVX miss |
+| `union_coil_off_h1` | long | — | CRS miss; ITW miss; IT miss; EPR miss; DBRG miss; VVX miss; CAKE miss; SMMT miss |
+| `union_coil_off_h3` | long | — | CRS miss; ITW miss; IT miss; EPR miss; DBRG miss; VVX miss; CAKE miss; SMMT miss |
+| `union_break10_h1` | long | — | ITW miss; IT miss; EPR miss; KVYO miss; VVX miss; TAP miss; PRMB miss; POOL miss |
+| `union_break10_h3` | long | — | ITW miss; IT miss; EPR miss; KVYO miss; VVX miss; TAP miss; PRMB miss; POOL miss |
+| `union_rsi_os_h1` | long | — | DBRG miss; DGX miss; PENN miss; OWL miss; MRP miss; UAA miss; FLUT miss |
+| `union_rsi_os_h3` | long | — | DBRG miss; DGX miss; PENN miss; OWL miss; MRP miss; UAA miss; FLUT miss |
+| `union_macd_up_h1` | long | — | ITW miss; AMX miss; IT miss; EPR miss; DBRG miss; KVYO miss; VVX miss; TAP miss |
+| `union_macd_up_h3` | long | — | ITW miss; AMX miss; IT miss; EPR miss; DBRG miss; KVYO miss; VVX miss; TAP miss |
+| `union_macd_xup_h1` | long | — | PRIM miss; RIVN miss |
+| `union_macd_xup_h3` | long | — | PRIM miss; RIVN miss |
+| `union_vol_g_h5` | long | — | EGG miss |
+| `union_coil_off_h5` | long | — | CRS miss; ITW miss; IT miss; EPR miss; DBRG miss; VVX miss; CAKE miss; SMMT miss |
+| `union_last_green_h5` | long | — | CRS miss; ITW miss; AMX miss; IT miss; EPR miss; TBBB miss; DBRG miss; KVYO miss |
+| `union_news_g_h5` | long | — | ITW miss; AMX miss; NVTS miss; AIP miss; TBBB miss; GLND miss; TEM miss; RCL miss |
+| `union_rsi_os_h5` | long | — | DBRG miss; DGX miss; PENN miss; OWL miss; MRP miss; UAA miss; FLUT miss |
+| `union_news_pack_h1` | long | — | AMX miss; AIP miss |
+| `union_news_head_h1` | long | — | ITW miss; TBBB miss; GLND miss; NVTS miss; RCL miss; TEM miss; CRH miss |
+| `union_news_or_h1` | long | — | AMX miss; ITW miss; TBBB miss; AIP miss; GLND miss; NVTS miss; RCL miss; TEM miss |
+| `union_news_g_cond_h1` | long | — | AMX miss; ITW miss; TBBB miss; AIP miss; GLND miss; NVTS miss; RCL miss; TEM miss |
+| `union_news_or_net2_h1` | long | — | AMX miss; RCL miss; TEM miss |
+| `union_news_or_net3_h1` | long | — | AMX miss; RCL miss; TEM miss |
+| `union_news_or_net4_h1` | long | — | AMX miss; RCL miss |
+| `union_news_pack_net3_h1` | long | — | AMX miss |
+| `union_news_pack_net2_h1` | long | — | AMX miss |
+| `union_news_pack_h3` | long | — | AMX miss; AIP miss |
+| `union_news_head_h3` | long | — | ITW miss; TBBB miss; GLND miss; NVTS miss; RCL miss; TEM miss; CRH miss |
+| `union_news_or_h3` | long | — | AMX miss; ITW miss; TBBB miss; AIP miss; GLND miss; NVTS miss; RCL miss; TEM miss |
+| `union_news_g_cond_h3` | long | — | AMX miss; ITW miss; TBBB miss; AIP miss; GLND miss; NVTS miss; RCL miss; TEM miss |
+| `union_news_or_net2_h3` | long | — | AMX miss; RCL miss; TEM miss |
+| `union_news_or_net3_h3` | long | — | AMX miss; RCL miss; TEM miss |
+| `union_news_or_net4_h3` | long | — | AMX miss; RCL miss |
+| `union_news_pack_net3_h3` | long | — | AMX miss |
+| `union_news_pack_net2_h3` | long | — | AMX miss |
+| `union_news_or_net4_rw_h1` | long | — | AMX miss; RCL miss |
+| `union_news_or_net4_conv_h1` | long | — | AMX miss; RCL miss |
+| `union_news_g_conv_h1` | long | — | AMX miss; ITW miss; TBBB miss; AIP miss |
+| `union_news_g_conv_h3` | long | — | AMX miss; ITW miss; TBBB miss; AIP miss |
+| `short_news_pack_h3` | short | CRH @— | — |
+| `short_news_head_h3` | short | VVX @— | — |
+| `short_news_or_h3` | short | VVX @—; CRH @— | — |
+| `union_vol_ab_h1` | long | — | EGG miss |
+| `union_vol_ab_h3` | long | — | EGG miss |
+| `union_blue_vol_h1` | long | — | EGG miss |
+| `union_blue_vol_h3` | long | — | EGG miss |
+| `probable_probable_ok_h1` | long | — | EPR miss; PRMB miss |
+| `probable_probable_ok_h3` | long | — | EPR miss; PRMB miss |
+| `union_vol_green_h1` | long | — | EGG miss |
+| `union_vol_green_h3` | long | — | EGG miss |
+| `union_coil_green_h1` | long | — | CRS miss; ITW miss; IT miss; EPR miss; DBRG miss; PRMB miss; RCKT miss; ROP miss |
+| `union_coil_green_h3` | long | — | CRS miss; ITW miss; IT miss; EPR miss; DBRG miss; PRMB miss; RCKT miss; ROP miss |
+| `union_blue_coil_h1` | long | — | CRS miss; ITW miss; IT miss; NVTS miss; AIP miss; KVYO miss; TOST miss; TRU miss |
+| `union_blue_coil_h3` | long | — | CRS miss; ITW miss; IT miss; NVTS miss; AIP miss; KVYO miss; TOST miss; TRU miss |
+| `union_rsi_os_macd_h1` | long | — | DBRG miss; DGX miss; PENN miss; OWL miss; MRP miss; UAA miss; FLUT miss |
+| `union_rsi_os_macd_h3` | long | — | DBRG miss; DGX miss; PENN miss; OWL miss; MRP miss; UAA miss; FLUT miss |
+| `ohlc_hot_coil_h1` | long | — | VVX miss; ROP miss; ARES miss; SNY miss; MTH miss; FLUT miss |
+| `union_hot_score_h1` | long | — | ITW miss; AMX miss; CRS miss; KVYO miss; VVX miss; TAP miss; EPR miss; IT miss |
+| `union_hot_score_h3` | long | — | ITW miss; AMX miss; CRS miss; KVYO miss; VVX miss; TAP miss; EPR miss; IT miss |
+| `union_candle_score_h1` | long | — | AMX miss; ITW miss; CRS miss; VVX miss; KVYO miss; IT miss; TAP miss; EPR miss |
+| `union_candle_score_h3` | long | — | AMX miss; ITW miss; CRS miss; VVX miss; KVYO miss; IT miss; TAP miss; EPR miss |
+| `union_ret_5_h1` | long | — | ITW miss; AMX miss; CRS miss; VVX miss; TAP miss; EPR miss; KVYO miss; IT miss |
+| `union_ret_5_h3` | long | — | ITW miss; AMX miss; CRS miss; VVX miss; TAP miss; EPR miss; KVYO miss; IT miss |
+| `union_cond_h1` | long | — | AMX miss; CRS miss; ITW miss; IT miss; KVYO miss; DBRG miss; TBBB miss; VVX miss |
+| `union_cond_h3` | long | — | AMX miss; CRS miss; ITW miss; IT miss; KVYO miss; DBRG miss; TBBB miss; VVX miss |
+| `union_w_hot_cond_h1` | long | — | AMX miss; ITW miss; CRS miss; IT miss; KVYO miss; VVX miss; EPR miss; TAP miss |
+| `union_w_hot_cond_h3` | long | — | AMX miss; ITW miss; CRS miss; IT miss; KVYO miss; VVX miss; EPR miss; TAP miss |
+| `union_w_hot_candle_h1` | long | — | ITW miss; AMX miss; CRS miss; VVX miss; KVYO miss; IT miss; TAP miss; EPR miss |
+| `union_w_hot_candle_h3` | long | — | ITW miss; AMX miss; CRS miss; VVX miss; KVYO miss; IT miss; TAP miss; EPR miss |
+| `union_rsi_h1` | long | — | CRS miss; AMX miss; ITW miss; DBRG miss; TAP miss; KVYO miss; VVX miss; IT miss |
+| `union_rsi_h3` | long | — | CRS miss; AMX miss; ITW miss; DBRG miss; TAP miss; KVYO miss; VVX miss; IT miss |
+| `union_macd_hist_h1` | long | — | ITW miss; AMX miss; CRS miss; VVX miss; IT miss; EPR miss; TAP miss; KVYO miss |
+| `union_macd_hist_h3` | long | — | ITW miss; AMX miss; CRS miss; VVX miss; IT miss; EPR miss; TAP miss; KVYO miss |
+| `union_hot_n4_h1` | long | — | TEM miss; DNUT miss; ROAD miss; RUN miss; CDNA miss; SLN miss; GEN miss; BC miss |
+| `union_hot_n4_holdup` | long | — | TEM miss; DNUT miss; ROAD miss; RUN miss |
+| `union_hot_n12_h1` | long | — | ITW miss; AMX miss; CRS miss; KVYO miss; VVX miss; TAP miss; EPR miss; IT miss; TBBB miss; DBRG miss; AIP miss; NVTS miss |
+| `union_cond_n4_h3` | long | — | AMX miss; CRS miss; ITW miss; IT miss |
+| `union_h3_exit_alarm` | long | — | CRS miss; ITW miss; AMX miss; IT miss; NVTS miss; EPR miss; AIP miss; TBBB miss |
+| `union_h5_exit_alarm` | long | — | CRS miss; ITW miss; AMX miss; IT miss; NVTS miss; EPR miss; AIP miss; TBBB miss |
+| `union_h3_exit_red` | long | — | CRS miss; ITW miss; AMX miss; IT miss; EPR miss; TBBB miss; DBRG miss; KVYO miss |
+| `union_h3_exit_news_r` | long | — | CRS miss; ITW miss; AMX miss; IT miss; NVTS miss; EPR miss; AIP miss; TBBB miss |
+| `coil_h3_exit_alarm` | long | — | CRS miss; ITW miss; AMX miss; IT miss; EPR miss; DBRG miss; VVX miss; CAKE miss |
+| `short_alarm_h1` | short | ACRS @—; KURA @—; QTTB @—; TLSA @—; KLRA @—; GRFS @— | — |
+| `short_alarm_h3` | short | ACRS @—; KURA @—; QTTB @—; TLSA @—; KLRA @—; GRFS @— | — |
+| `short_news_r_h1` | short | VVX @—; CRH @— | — |
+| `short_news_r_h3` | short | VVX @—; CRH @— | — |
+| `short_extended_h1` | short | CDNA @—; TEM @—; DNUT @—; ROAD @—; RIVN @—; GM @—; CMG @— | — |
+| `short_extended_h3` | short | CDNA @—; TEM @—; DNUT @—; ROAD @—; RIVN @—; GM @—; CMG @— | — |
+| `short_last_red_h1` | short | NVTS @—; AIP @—; GLND @—; CDNA @—; TOST @—; MHK @—; CAKE @—; SMMT @— | — |
+| `short_last_red_h3` | short | NVTS @—; AIP @—; GLND @—; CDNA @—; TOST @—; MHK @—; CAKE @—; SMMT @— | — |
+| `short_rsi_ob_h1` | short | ITW @—; EPR @—; TBBB @—; CDNA @—; EGG @—; MX @—; TEM @— | — |
+| `short_rsi_ob_h3` | short | ITW @—; EPR @—; TBBB @—; CDNA @—; EGG @—; MX @—; TEM @— | — |
+| `short_macd_dn_h1` | short | CRS @—; NVTS @—; AIP @—; TBBB @—; GLND @—; MHK @—; CAKE @—; SMMT @— | — |
+| `short_macd_dn_h3` | short | CRS @—; NVTS @—; AIP @—; TBBB @—; GLND @—; MHK @—; CAKE @—; SMMT @— | — |
+| `short_news_r_macd_h3` | short | VVX @—; CRH @— | — |
+| `flatten_h5_rankw` | long | — | IT miss; CDNA miss; TOST miss; TRU miss; MHK miss; CAKE miss |
+| `flatten_h5_topheavy` | long | — | IT miss; CDNA miss; TOST miss; TRU miss; MHK miss; CAKE miss |
+| `flatten_h5_half` | long | — | IT miss; CDNA miss; TOST miss; TRU miss; MHK miss; CAKE miss |
+| `flatten_h5_time` | long | — | IT miss; CDNA miss; TOST miss; TRU miss; MHK miss; CAKE miss |
+| `flatten_h5_cut` | long | — | IT miss; CDNA miss; TOST miss; TRU miss; MHK miss; CAKE miss |
+| `flatten_h5_trail` | long | — | IT miss; CDNA miss; TOST miss; TRU miss; MHK miss; CAKE miss |
+| `flatten_h5_sboost` | long | — | IT miss; CDNA miss; TOST miss; TRU miss; MHK miss; CAKE miss |
+| `flatten_h5_sizeup` | long | — | IT miss; CDNA miss; TOST miss; TRU miss; MHK miss; CAKE miss |
+| `flatten_h3_rankw` | long | — | IT miss; CDNA miss; TOST miss; TRU miss; MHK miss; CAKE miss |
+| `flatten_h3_topheavy` | long | — | IT miss; CDNA miss; TOST miss; TRU miss; MHK miss; CAKE miss |
+| `flatten_h3_half` | long | — | IT miss; CDNA miss; TOST miss; TRU miss; MHK miss; CAKE miss |
+| `flatten_h3_time` | long | — | IT miss; CDNA miss; TOST miss; TRU miss; MHK miss; CAKE miss |
+| `flatten_h3_cut` | long | — | IT miss; CDNA miss; TOST miss; TRU miss; MHK miss; CAKE miss |
+| `flatten_h3_trail` | long | — | IT miss; CDNA miss; TOST miss; TRU miss; MHK miss; CAKE miss |
+| `flatten_h3_sboost` | long | — | IT miss; CDNA miss; TOST miss; TRU miss; MHK miss; CAKE miss |
+| `flatten_h3_sizeup` | long | — | IT miss; CDNA miss; TOST miss; TRU miss; MHK miss; CAKE miss |
+| `union_h5_rankw` | long | — | CRS miss; ITW miss; AMX miss; IT miss; NVTS miss; EPR miss; AIP miss; TBBB miss |
+| `union_h5_topheavy` | long | — | CRS miss; ITW miss; AMX miss; IT miss; NVTS miss; EPR miss; AIP miss; TBBB miss |
+| `union_h5_half` | long | — | CRS miss; ITW miss; AMX miss; IT miss; NVTS miss; EPR miss; AIP miss; TBBB miss |
+| `union_h5_time` | long | — | CRS miss; ITW miss; AMX miss; IT miss; NVTS miss; EPR miss; AIP miss; TBBB miss |
+| `union_h5_cut` | long | — | CRS miss; ITW miss; AMX miss; IT miss; NVTS miss; EPR miss; AIP miss; TBBB miss |
+| `union_h5_trail` | long | — | CRS miss; ITW miss; AMX miss; IT miss; NVTS miss; EPR miss; AIP miss; TBBB miss |
+| `union_h5_sboost` | long | — | CRS miss; ITW miss; AMX miss; IT miss; NVTS miss; EPR miss; AIP miss; TBBB miss |
+| `union_h5_sizeup` | long | — | CRS miss; ITW miss; AMX miss; IT miss; NVTS miss; EPR miss; AIP miss; TBBB miss |
+| `union_h3_rankw` | long | — | CRS miss; ITW miss; AMX miss; IT miss; NVTS miss; EPR miss; AIP miss; TBBB miss |
+| `union_h3_topheavy` | long | — | CRS miss; ITW miss; AMX miss; IT miss; NVTS miss; EPR miss; AIP miss; TBBB miss |
+| `union_h3_half` | long | — | CRS miss; ITW miss; AMX miss; IT miss; NVTS miss; EPR miss; AIP miss; TBBB miss |
+| `union_h3_time` | long | — | CRS miss; ITW miss; AMX miss; IT miss; NVTS miss; EPR miss; AIP miss; TBBB miss |
+| `union_h3_cut` | long | — | CRS miss; ITW miss; AMX miss; IT miss; NVTS miss; EPR miss; AIP miss; TBBB miss |
+| `union_h3_trail` | long | — | CRS miss; ITW miss; AMX miss; IT miss; NVTS miss; EPR miss; AIP miss; TBBB miss |
+| `union_h3_sboost` | long | — | CRS miss; ITW miss; AMX miss; IT miss; NVTS miss; EPR miss; AIP miss; TBBB miss |
+| `union_h3_sizeup` | long | — | CRS miss; ITW miss; AMX miss; IT miss; NVTS miss; EPR miss; AIP miss; TBBB miss |
+| `union_h1_rankw` | long | — | CRS miss; ITW miss; AMX miss; IT miss; NVTS miss; EPR miss; AIP miss; TBBB miss |
+| `union_h1_topheavy` | long | — | CRS miss; ITW miss; AMX miss; IT miss; NVTS miss; EPR miss; AIP miss; TBBB miss |
+| `union_h1_half` | long | — | CRS miss; ITW miss; AMX miss; IT miss; NVTS miss; EPR miss; AIP miss; TBBB miss |
+| `union_h1_time` | long | — | CRS miss; ITW miss; AMX miss; IT miss; NVTS miss; EPR miss; AIP miss; TBBB miss |
+| `union_h1_cut` | long | — | CRS miss; ITW miss; AMX miss; IT miss; NVTS miss; EPR miss; AIP miss; TBBB miss |
+| `union_h1_trail` | long | — | CRS miss; ITW miss; AMX miss; IT miss; NVTS miss; EPR miss; AIP miss; TBBB miss |
+| `union_h1_sboost` | long | — | CRS miss; ITW miss; AMX miss; IT miss; NVTS miss; EPR miss; AIP miss; TBBB miss |
+| `union_h1_sizeup` | long | — | CRS miss; ITW miss; AMX miss; IT miss; NVTS miss; EPR miss; AIP miss; TBBB miss |
+| `flatten_h5_s8` | long | — | IT miss; CDNA miss; TOST miss; TRU miss; MHK miss; CAKE miss |
+| `union_clk_mom_break_peer_h1` | long | — | ITW miss; AMX miss; CRS miss; KVYO miss; VVX miss; TAP miss; EPR miss; IT miss |
+| `union_clk_fresh_cat_coil_h1` | long | — | AMX miss; ITW miss; TBBB miss; AIP miss; GLND miss; NVTS miss |
+| `union_clk_insider_cash_stab_h3` | long | — | MRP miss |
+| `union_clk_nr7_mom_h1` | long | — | CRS miss; DBRG miss |
+| `combo_seh_333_shared` | mixed | VVX @—; CRH @— | ITW miss; AMX miss; CRS miss; KVYO miss |
+| `combo_seh_333_split` | mixed | VVX @—; CRH @— | ITW miss; AMX miss; CRS miss; KVYO miss |
+| `combo_seh_502525_shared` | mixed | VVX @—; CRH @— | ITW miss; AMX miss; CRS miss; KVYO miss |
+| `combo_seh_502525_split` | mixed | VVX @—; CRH @— | ITW miss; AMX miss; CRS miss; KVYO miss |
+| `combo_seh_404020_shared` | mixed | VVX @—; CRH @— | ITW miss; AMX miss; CRS miss; KVYO miss |
+| `combo_seh_403525_shared` | mixed | VVX @—; CRH @— | ITW miss; AMX miss; CRS miss; KVYO miss |
+| `combo_seh_451540_shared` | mixed | VVX @—; CRH @— | ITW miss; AMX miss; CRS miss; KVYO miss |
+| `combo_seh_601525_shared` | mixed | VVX @—; CRH @— | ITW miss; AMX miss; CRS miss; KVYO miss |
+| `combo_se_5050_shared` | mixed | VVX @—; CRH @— | — |
+| `combo_se_7030_shared` | mixed | VVX @—; CRH @— | — |
+| `combo_eh_5050_shared` | long | — | ITW miss; AMX miss; CRS miss; KVYO miss |
+| `combo_sh_5050_shared` | mixed | VVX @—; CRH @— | ITW miss; AMX miss; CRS miss; KVYO miss |
+| `combo_sh_macd_5050_shared` | mixed | VVX @—; CRH @— | ITW miss; AMX miss; CRS miss; KVYO miss |
+| `combo_se_5050_skip` | mixed | VVX @—; CRH @— | — |
+| `combo_seh_333_skip` | mixed | VVX @—; CRH @— | ITW miss; AMX miss; CRS miss; KVYO miss |
+| `combo_seh_333_weather` | mixed | VVX @—; CRH @— | ITW miss; AMX miss; CRS miss; KVYO miss |
+| `combo_se_5050_weather` | mixed | VVX @—; CRH @— | — |
+| `combo_se_5050_split` | mixed | VVX @—; CRH @— | — |
+| `combo_es_8020_shared` | mixed | VVX @—; CRH @— | — |
+| `combo_es_9010_shared` | mixed | VVX @—; CRH @— | — |
+| `combo_ehs_702010_shared` | mixed | VVX @—; CRH @— | ITW miss; AMX miss; CRS miss; KVYO miss |
+| `combo_ehs_601525_shared` | mixed | VVX @—; CRH @— | ITW miss; AMX miss; CRS miss; KVYO miss |
+| `combo_ps_5050_shared` | mixed | VVX @—; CRH @— | AMX miss; AIP miss |
+| `combo_ps_7030_shared` | mixed | VVX @—; CRH @— | AMX miss; AIP miss |
+| `combo_p2s_5050_shared` | mixed | VVX @—; CRH @— | AMX miss |
+| `combo_oh_5050_shared` | long | — | ITW miss; AMX miss; CRS miss; KVYO miss |
+| `combo_sn_5050_shared` | mixed | VVX @—; CRH @— | ITW miss; AMX miss; NVTS miss; AIP miss; TBBB miss; GLND miss; TEM miss; RCL miss |
+| `combo_sj_5050_shared` | mixed | VVX @—; CRH @— | — |
+| `combo_sf_5050_shared` | mixed | VVX @—; CRH @— | IT miss; CDNA miss; TOST miss; TRU miss; MHK miss; CAKE miss |
+| `combo_snj_333_shared` | mixed | VVX @—; CRH @— | ITW miss; AMX miss; NVTS miss; AIP miss; TBBB miss; GLND miss; TEM miss; RCL miss |
+| `combo_nse_333_shared` | mixed | VVX @—; CRH @— | ITW miss; AMX miss; NVTS miss; AIP miss; TBBB miss; GLND miss; TEM miss; RCL miss |
+| `combo_jse_333_shared` | mixed | VVX @—; CRH @— | — |
+| `combo_fse_333_shared` | mixed | VVX @—; CRH @— | IT miss; CDNA miss; TOST miss; TRU miss; MHK miss; CAKE miss |
+| `combo_e1s_7030_shared` | mixed | VVX @—; CRH @— | — |
+| `combo_ers_7030_shared` | mixed | VVX @—; CRH @— | — |
+| `combo_eh_7030_shared` | long | — | ITW miss; AMX miss; CRS miss; KVYO miss |
+| `combo_fh_7030_shared` | long | — | IT miss; CDNA miss; TOST miss; TRU miss; MHK miss; CAKE miss; ITW miss; AMX miss; CRS miss; KVYO miss |
+| `combo_fe_5050_shared` | long | — | IT miss; CDNA miss; TOST miss; TRU miss; MHK miss; CAKE miss |
+| `combo_fes_403030_shared` | mixed | VVX @—; CRH @— | IT miss; CDNA miss; TOST miss; TRU miss; MHK miss; CAKE miss |
+| `combo_se1_5050_shared` | mixed | VVX @—; CRH @— | — |
+| `combo_ser_5050_shared` | mixed | VVX @—; CRH @— | — |
+| `combo_en_5050_shared` | long | — | ITW miss; AMX miss; NVTS miss; AIP miss; TBBB miss; GLND miss; TEM miss; RCL miss |
+| `combo_ef_5050_shared` | long | — | IT miss; CDNA miss; TOST miss; TRU miss; MHK miss; CAKE miss |
+| `combo_hn_5050_shared` | long | — | ITW miss; AMX miss; CRS miss; KVYO miss; NVTS miss; AIP miss; TBBB miss; GLND miss; TEM miss; RCL miss |
+| `combo_hj_5050_shared` | long | — | ITW miss; AMX miss; CRS miss; KVYO miss |
+| `combo_hf_5050_shared` | long | — | ITW miss; AMX miss; CRS miss; KVYO miss; IT miss; CDNA miss; TOST miss; TRU miss; MHK miss; CAKE miss |
+| `combo_he1_5050_shared` | long | — | ITW miss; AMX miss; CRS miss; KVYO miss |
+| `combo_her_5050_shared` | long | — | ITW miss; AMX miss; CRS miss; KVYO miss |
+| `combo_nj_5050_shared` | long | — | ITW miss; AMX miss; NVTS miss; AIP miss; TBBB miss; GLND miss; TEM miss; RCL miss |
+| `combo_nf_5050_shared` | long | — | ITW miss; AMX miss; NVTS miss; AIP miss; TBBB miss; GLND miss; TEM miss; RCL miss; IT miss; CDNA miss; TOST miss; TRU miss; MHK miss; CAKE miss |
+| `combo_ne1_5050_shared` | long | — | ITW miss; AMX miss; NVTS miss; AIP miss; TBBB miss; GLND miss; TEM miss; RCL miss |
+| `combo_ner_5050_shared` | long | — | ITW miss; AMX miss; NVTS miss; AIP miss; TBBB miss; GLND miss; TEM miss; RCL miss |
+| `combo_jf_5050_shared` | long | — | IT miss; CDNA miss; TOST miss; TRU miss; MHK miss; CAKE miss |
+| `combo_fe1_5050_shared` | long | — | IT miss; CDNA miss; TOST miss; TRU miss; MHK miss; CAKE miss |
+| `combo_fer_5050_shared` | long | — | IT miss; CDNA miss; TOST miss; TRU miss; MHK miss; CAKE miss |
+| `combo_se_3070_shared` | mixed | VVX @—; CRH @— | — |
+| `combo_sh_7030_shared` | mixed | VVX @—; CRH @— | ITW miss; AMX miss; CRS miss; KVYO miss |
+| `combo_sh_3070_shared` | mixed | VVX @—; CRH @— | ITW miss; AMX miss; CRS miss; KVYO miss |
+| `combo_eh_3070_shared` | long | — | ITW miss; AMX miss; CRS miss; KVYO miss |
+| `combo_sn_7030_shared` | mixed | VVX @—; CRH @— | ITW miss; AMX miss; NVTS miss; AIP miss; TBBB miss; GLND miss; TEM miss; RCL miss |
+| `combo_sn_3070_shared` | mixed | VVX @—; CRH @— | ITW miss; AMX miss; NVTS miss; AIP miss; TBBB miss; GLND miss; TEM miss; RCL miss |
+| `combo_sj_7030_shared` | mixed | VVX @—; CRH @— | — |
+| `combo_sj_3070_shared` | mixed | VVX @—; CRH @— | — |
+| `combo_sf_7030_shared` | mixed | VVX @—; CRH @— | IT miss; CDNA miss; TOST miss; TRU miss; MHK miss; CAKE miss |
+| `combo_sf_3070_shared` | mixed | VVX @—; CRH @— | IT miss; CDNA miss; TOST miss; TRU miss; MHK miss; CAKE miss |
+| `combo_en_7030_shared` | long | — | ITW miss; AMX miss; NVTS miss; AIP miss; TBBB miss; GLND miss; TEM miss; RCL miss |
+| `combo_en_3070_shared` | long | — | ITW miss; AMX miss; NVTS miss; AIP miss; TBBB miss; GLND miss; TEM miss; RCL miss |
+| `combo_ef_7030_shared` | long | — | IT miss; CDNA miss; TOST miss; TRU miss; MHK miss; CAKE miss |
+| `combo_ef_3070_shared` | long | — | IT miss; CDNA miss; TOST miss; TRU miss; MHK miss; CAKE miss |
+| `combo_hn_7030_shared` | long | — | ITW miss; AMX miss; CRS miss; KVYO miss; NVTS miss; AIP miss; TBBB miss; GLND miss; TEM miss; RCL miss |
+| `combo_hn_3070_shared` | long | — | ITW miss; AMX miss; CRS miss; KVYO miss; NVTS miss; AIP miss; TBBB miss; GLND miss; TEM miss; RCL miss |
+| `union_hot_n4_h1_preopen` | long | — | CRS miss; ITW miss; AMX miss; IT miss; NVTS miss; EPR miss; AIP miss; TBBB miss |
+| `union_hot_n4_holdup_preopen` | long | — | CRS miss; ITW miss; AMX miss; IT miss; NVTS miss; EPR miss; AIP miss; TBBB miss |
 
 Scoop trigger = official open + session low (Elite live only when the low has not printed). Close / last / Theme Radar never trigger. #236 KILL of global short-only / dip-scoop stands — this table is display/paper only.
 

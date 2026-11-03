@@ -1,6 +1,6 @@
-# Book learn — weight tuner ledger (v18)
+# Book learn — weight tuner ledger (v19)
 
-Updated: **2026-10-29T07:34:42.746296-04:00** · evaluation as of **2026-10-29**
+Updated: **2026-11-03T07:49:49.625199-05:00** · evaluation as of **2026-11-03**
 
 Objective: mean forward return of the top-10 buy book **in excess of the
 liquid-universe median**, walk-forward on fully-realized dates only.
@@ -8,11 +8,11 @@ Guardrails: ≥5 dates, ≥0.05pp improvement, wins on ≥60% of dates, half-ste
 
 | Horizon | dates | incumbent excess | best excess | decision |
 |---------|-------|------------------|-------------|----------|
-| 1d | 38 | 0.5348 | 0.6541 | hold — wins only 37% of dates (< 60%) |
-| 3d | 36 | 1.8594 | 2.028 | hold — wins only 33% of dates (< 60%) |
-| 1w | 34 | 4.3313 | 4.4242 | hold — wins only 26% of dates (< 60%) |
-| 2w | 28 | 5.382 | 5.6115 | hold — wins only 29% of dates (< 60%) |
-| 1m | 17 | 7.0895 | 7.7751 | hold — wins only 53% of dates (< 60%) |
+| 1d | 38 | 0.8078 | 0.9033 | hold — wins only 37% of dates (< 60%) |
+| 3d | 36 | 2.1445 | 2.386 | hold — wins only 36% of dates (< 60%) |
+| 1w | 34 | 4.3515 | 4.4724 | hold — wins only 26% of dates (< 60%) |
+| 2w | 29 | 6.0427 | 6.3605 | hold — wins only 34% of dates (< 60%) |
+| 1m | 17 | 8.7419 | 9.4779 | hold — wins only 47% of dates (< 60%) |
 
 ## Adopted weights (join / sector / general / news / AB / peer)
 
@@ -26,18 +26,19 @@ Guardrails: ≥5 dates, ≥0.05pp improvement, wins on ≥60% of dates, half-ste
 
 ## Sell-book construction
 
-- core=2.404pp full=1.726pp → sell_excludes_addons=False (n=34)
+- core=2.213pp full=1.611pp → sell_excludes_addons=False (n=34)
 
 ## Risk-off entry scaling (LLM weather call → sizing action)
 
-- scale: **1.0** (effective 2026-08-25) — book still makes +0.47% on risk-off days → scale back to 1.0 (cash drag not justified)
+- scale: **1.0** (effective 2026-08-25) — book still makes +0.73% on risk-off days → scale back to 1.0 (cash drag not justified)
 
 ## Map/captain heat scale (realized 1d excess return)
 
-- scale: **0.25** — hold 0.25 — best 0.00, improvement 0.030pp, wins 31%
+- scale: **0.25** — hold 0.25 — best 0.00, improvement 0.052pp, wins 31%
 
 ## History
 
+- v19 @ 2026-11-03: 1d: hold — wins only 37% of dates (< 60%); 3d: hold — wins only 36% of dates (< 60%); 1w: hold — wins only 26% of dates (< 60%); 2w: hold — wins only 34% of dates (< 60%); 1m: hold — wins only 47% of dates (< 60%)
 - v18 @ 2026-10-29: 1d: hold — wins only 37% of dates (< 60%); 3d: hold — wins only 33% of dates (< 60%); 1w: hold — wins only 26% of dates (< 60%); 2w: hold — wins only 29% of dates (< 60%); 1m: hold — wins only 53% of dates (< 60%)
 - v17 @ 2026-10-26: 1d: hold — wins only 37% of dates (< 60%); 3d: hold — wins only 36% of dates (< 60%); 1w: hold — wins only 30% of dates (< 60%); 2w: hold — wins only 32% of dates (< 60%); 1m: hold — wins only 25% of dates (< 60%)
 - v16 @ 2026-10-23: 1d: hold — wins only 39% of dates (< 60%); 3d: hold — wins only 36% of dates (< 60%); 1w: hold — wins only 30% of dates (< 60%); 2w: hold — wins only 25% of dates (< 60%); 1m: hold — wins only 25% of dates (< 60%)
@@ -47,4 +48,3 @@ Guardrails: ≥5 dates, ≥0.05pp improvement, wins on ≥60% of dates, half-ste
 - v12 @ 2026-09-10: 1d: hold — wins only 29% of dates (< 60%); 3d: hold — wins only 23% of dates (< 60%); 1w: hold — wins only 36% of dates (< 60%); 2w: hold — wins only 43% of dates (< 60%); 1m: observe — only 0 realized dates (< 5)
 - v11 @ 2026-09-03: 1d: hold — wins only 33% of dates (< 60%); 3d: hold — wins only 10% of dates (< 60%); 1w: hold — wins only 38% of dates (< 60%); 2w: hold — wins only 50% of dates (< 60%); 1m: observe — only 0 realized dates (< 5)
 - v10 @ 2026-09-02: 1d: hold — wins only 27% of dates (< 60%); 3d: hold — wins only 12% of dates (< 60%); 1w: hold — wins only 29% of dates (< 60%); 2w: hold — wins only 40% of dates (< 60%); 1m: observe — only 0 realized dates (< 5)
-- v9 @ 2026-09-02: 1d: hold — wins only 27% of dates (< 60%); 3d: hold — wins only 12% of dates (< 60%); 1w: hold — wins only 29% of dates (< 60%); 2w: hold — wins only 40% of dates (< 60%); 1m: observe — only 0 realized dates (< 5)
