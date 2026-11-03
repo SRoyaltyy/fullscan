@@ -5,19 +5,19 @@
   "run_id": "41626061405",
   "model": "deepseek",
   "started_at": "2026-11-03T06:38:13-05:00",
-  "updated_at": "2026-11-03T06:38:14-05:00",
-  "heartbeat_at": "2026-11-03T06:38:14-05:00",
+  "updated_at": "2026-11-03T06:38:19-05:00",
+  "heartbeat_at": "2026-11-03T06:38:19-05:00",
   "stages": [
     {
       "name": "outcome",
-      "state": "running",
+      "state": "skipped",
       "started_at": "2026-11-03T06:38:14-05:00",
-      "ended_at": "",
+      "ended_at": "2026-11-03T06:38:19-05:00",
       "heartbeat_at": "2026-11-03T06:38:14-05:00",
       "done": 1,
       "total": 1,
       "model": "deepseek",
-      "error": ""
+      "error": "morning window"
     },
     {
       "name": "horizon",
