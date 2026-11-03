@@ -1,0 +1,9 @@
+cell,signal_date,ticker,entry_date,hold_days,rules_sha256,source
+fresh_dcp_t1_ep_ge03_2d,2026-11-02,BAM,2026-11-03,2,187856c9db6143c2c4c2820cde8be1e3d87363478587558e296758cbf5369845,preopen_plan_2026-11-03
+fresh_dcp_t1_ep_ge03_2d,2026-11-02,PENG,2026-11-03,2,187856c9db6143c2c4c2820cde8be1e3d87363478587558e296758cbf5369845,preopen_plan_2026-11-03
+fresh_dcp_t1_avoid_ah_3d,2026-11-02,AAON,2026-11-03,3,462719f77f2c36880f9c36d77c6591ca681e98c425c83697847463c4b3af7934,preopen_plan_2026-11-03
+fresh_dcp_t1_avoid_ah_3d,2026-11-02,PENG,2026-11-03,3,462719f77f2c36880f9c36d77c6591ca681e98c425c83697847463c4b3af7934,preopen_plan_2026-11-03
+fresh_dcp_t1_avoid_ah_3d,2026-11-02,WAVE,2026-11-03,3,462719f77f2c36880f9c36d77c6591ca681e98c425c83697847463c4b3af7934,preopen_plan_2026-11-03
+# status=fires rows=5 fpe_delta_t3_earn_today_3d=0 fresh_dcp_t1_ep_ge03_2d=2 fresh_dcp_t1_avoid_ah_3d=3
+# built_at_utc=2026-11-03T10:26:46Z signal_date=2026-11-02 entry_date=2026-11-03 builder_sha256=9e70523ee355d655b125ffd46f8ccd08a25fe762fccfa6ee08c97eb3c5d52840
+# inputs: {"dcp_candidates":["AAON","BAM","ETR","PENG","RZAI","TH","WAVE"],"dcp_prior_snapshot":"2026-10-30","earn_gate_n":0,"fails":"[]","features_T_sha256":"d0ca5828ddb465084755c5ff00ae913d450b83d77c8f55a9e52a91942c59bf9d","fpe_prior_snapshot":"2026-10-28","fpe_signal_n":1707,"letters_log":"rows 6 skipped {'2026-11-03': 0} FAILS []","letters_rows":6,"letters_sha256":"4a22b43b32fba1c13eedec70d97fea1fa6769a1d000a0a626a358da12578b86d","membership":"fullscan@5c2760aa8 (committed 2026-11-03T09:45:44Z) sha256=2cafec018941d7b8f688e033da0c1081345e5e75dc4fcd768caac9c2a0fbe398","skipped":"{'2026-11-03': 0}","snapshot_T_sha256":"25c567adf8959bd432bb0fbd26a50539a088e803bcc3bf68a87434a0a2bd4bb6","snapshots_after_T_ignored":[],"tr_head":"635b9cefe","universe_log":"2026-11-03 cand 7 in membership 6 liquid 5 universe 6 excluded ['RZAI']"}
