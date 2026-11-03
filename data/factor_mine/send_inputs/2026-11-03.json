@@ -1,0 +1,110 @@
+{
+  "date": "2026-11-03",
+  "files": [
+    {
+      "bytes": 10791708,
+      "path": "data/factor_mine/panel.json",
+      "sha256": "5a8cd54d569c141e905aaebd46c8ab83d1621a08476c9ff7071b3f56922d5e39"
+    },
+    {
+      "path": "01_daily/general/2026-11-03_predict.md",
+      "sha256": "a879df295e92871e9826956e90efbfe6f4b902183b3e3ab07d6f010b5b909207"
+    },
+    {
+      "path": "01_daily/news/2026-11-03_actions.json",
+      "sha256": "34efa14670115319672ad5cdeeadc78125bbda3e2bae94705f6930e437253523"
+    },
+    {
+      "path": "01_daily/news/2026-11-03_finviz_digest.json",
+      "sha256": "ca15eb46cbf3c2196207442c3fa414c42bb2db0ae707713ef124ef6d65b4a9a1"
+    },
+    {
+      "path": "01_daily/news/2026-11-03_judge.md",
+      "sha256": "78f9eb63cef70c17af6d5d436307becd7e1732b9966b6a82a68b8bafec037ec7"
+    },
+    {
+      "path": "01_daily/weather/2026-11-03_weather.json",
+      "sha256": "33d067fae6b826f357b1a43e3e6ac257352b4ce31cf25da154fd7294c5860aca"
+    },
+    {
+      "path": "data/ab_checklist/2026-11-03_ab_checklist_enriched.csv",
+      "sha256": "5582e93db416088583dcfdd193a0d657725488d365b50e500ad18897180c7028"
+    },
+    {
+      "path": "data/join/2026-11-03_ranked.csv",
+      "sha256": "7ed53d000451eeca5ecd389f5dcca33a993a31111a10ab5de0a9652812834253"
+    },
+    {
+      "path": "data/peers/2026-11-03_peer_rs.csv",
+      "sha256": "ddfb7334677cd9faeca962d70765b32d2761a81b9eb437bd02384acd0fa85445"
+    },
+    {
+      "path": "data/sleeve_merge/today.json",
+      "sha256": "d25a22e99be1cfd14bd13dd10f4750e2220409180ee66407c8ed4544765f91bf"
+    },
+    {
+      "path": "excel_bot/suggestions/suggestions.csv",
+      "sha256": "c1f4f63b348cd3f7c7be2d0e9cb393392d8c55396885361559f3aee5cd0f0728"
+    }
+  ],
+  "picks": {
+    "union_hot_n4_h1": [
+      "TEM",
+      "DNUT",
+      "ROAD",
+      "RUN"
+    ],
+    "union_hot_n4_holdup": [
+      "TEM",
+      "DNUT",
+      "ROAD",
+      "RUN"
+    ]
+  },
+  "prices": [
+    {
+      "px": 85.3,
+      "px_src": "session_export",
+      "ticker": "TEM"
+    },
+    {
+      "px": 2.93,
+      "px_src": "session_export",
+      "ticker": "DNUT"
+    },
+    {
+      "px": 91.52,
+      "px_src": "session_export",
+      "ticker": "ROAD"
+    },
+    {
+      "px": 7.69,
+      "px_src": "session_export",
+      "ticker": "RUN"
+    },
+    {
+      "px": 64.95,
+      "px_src": "session_export",
+      "ticker": "CDNA"
+    },
+    {
+      "px": 11.18,
+      "px_src": "session_export",
+      "ticker": "SLN"
+    },
+    {
+      "px": 20.9,
+      "px_src": "session_export",
+      "ticker": "GEN"
+    },
+    {
+      "px": 66.46,
+      "px_src": "session_export",
+      "ticker": "BC"
+    }
+  ],
+  "reason": "",
+  "rows": [],
+  "sha256": "470e9bdf361570b4d73e710c23f0190bed2c397c07319ad02e75722e21372ad6",
+  "source": "no_same_day_panel"
+}
