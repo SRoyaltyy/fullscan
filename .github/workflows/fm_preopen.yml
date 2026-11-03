@@ -73,7 +73,7 @@ jobs:
           set -euo pipefail
           step=book
           if [ "$EV" = "workflow_dispatch" ]; then step="$IN_STEP"
-          elif [ "$EV" = "schedule" ] && { [ "$SCHED" = "2 13 * * 1-5" ] || [ "$SCHED" = "15 13 * * 1-5" ] || [ "$SCHED" = "7 13 * * 1-5" ] || [ "$SCHED" = "19 13 * * 1-5" ]; }; then step=seal
+          elif [ "$EV" = "schedule" ] && { [ "$SCHED" = "2 13 * * 1-5" ] || [ "$SCHED" = "15 13 * * 1-5" ] || [ "$SCHED" = "7 13 * * 1-5" ] || [ "$SCHED" = "19 13 * * 1-5" ] || [ "$SCHED" = "2 14 * * 1-5" ] || [ "$SCHED" = "7 14 * * 1-5" ] || [ "$SCHED" = "15 14 * * 1-5" ] || [ "$SCHED" = "19 14 * * 1-5" ]; }; then step=seal
           elif [ "$EV" = "workflow_run" ] && [ "$WF" = "Pre-Open ALL (predictive one-shot)" ]; then step=seal
           fi
           hhmm=$((10#$(TZ=America/New_York date +%H%M)))
