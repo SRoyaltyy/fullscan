@@ -1,6 +1,6 @@
 # HIT Board — general + sectors (all dates)
 
-Generated: **2026-11-02T18:51:11.331524-05:00**
+Generated: **2026-11-03T16:56:18.290452-05:00**
 
 Source: `03_scoreboard/scoreboard.json`.
 
@@ -95,6 +95,7 @@ Source: `03_scoreboard/scoreboard.json`.
 | 2026-10-27 | up | mild | 5.515 | — | — | — | — |
 | 2026-10-30 | down | mild | -12.921 | — | — | — | — |
 | 2026-11-02 | up | mild | 3.044 | — | — | — | — |
+| 2026-11-03 | down | mild | -5.632 | — | — | — | — |
 
 ## Sectors — HIT% by date (model calls only)
 
@@ -172,6 +173,7 @@ Source: `03_scoreboard/scoreboard.json`.
 | 2026-10-27 | 0 | **—** | 0/0 | — |
 | 2026-10-30 | 0 | **—** | 0/0 | — |
 | 2026-11-02 | 0 | **—** | 0/0 | — |
+| 2026-11-03 | 0 | **—** | 0/0 | — |
 
 ## Sectors — HIT% by sector (across dates)
 
@@ -193,7 +195,7 @@ Source: `03_scoreboard/scoreboard.json`.
 
 HIT / MISS / NO_PRED / — . Actual % when graded.
 
-| Sector | 2026-10-16 | 2026-10-19 | 2026-10-20 | 2026-10-21 | 2026-10-22 | 2026-10-23 | 2026-10-26 | 2026-10-27 | 2026-10-30 | 2026-11-02 |
+| Sector | 2026-10-19 | 2026-10-20 | 2026-10-21 | 2026-10-22 | 2026-10-23 | 2026-10-26 | 2026-10-27 | 2026-10-30 | 2026-11-02 | 2026-11-03 |
 |--------|------|------|------|------|------|------|------|------|------|------|
 | Basic Materials | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED |
 | Communication Services | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED |
