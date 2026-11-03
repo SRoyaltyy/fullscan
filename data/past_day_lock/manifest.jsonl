@@ -13212,3 +13212,4 @@
 {"date":"2026-11-02","kind":"day","name":"yday_gainer_h5","record":"factor_mine","sha256":"e5272a672b955a7b9800d95a6f0d55aded44954778bf859b21cbc1769519fb72"}
 {"date":"2026-11-02","kind":"day","name":"union_hot_n4_h1_preopen","record":"factor_mine","sha256":"23449b080cffdf132792c8405bf84ee73100f1021fa3e3774f310d2735144d10"}
 {"date":"2026-11-02","kind":"day","name":"union_hot_n4_holdup_preopen","record":"factor_mine","sha256":"5f616c13c6f6057e1c3496a940e6da207fa13b80112023701463e8beeedb056f"}
+{"date":"2026-11-02","kind":"day","name":"","record":"flatten_robust","sha256":"5e7e0621390744611968aa33a8ee815a7465c62168f76c1ae3777755626f0427"}
