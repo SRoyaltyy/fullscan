@@ -5,8 +5,8 @@
   "run_id": "41649619841",
   "model": "",
   "started_at": "2026-11-03T09:12:10-05:00",
-  "updated_at": "2026-11-03T15:39:50-05:00",
-  "heartbeat_at": "2026-11-03T15:39:50-05:00",
+  "updated_at": "2026-11-03T15:40:05-05:00",
+  "heartbeat_at": "2026-11-03T15:40:05-05:00",
   "stages": [
     {
       "name": "seal",
@@ -21,11 +21,11 @@
     },
     {
       "name": "book",
-      "state": "running",
+      "state": "ok",
       "started_at": "2026-11-03T15:39:50-05:00",
-      "ended_at": "",
+      "ended_at": "2026-11-03T15:40:05-05:00",
       "heartbeat_at": "2026-11-03T15:39:50-05:00",
-      "done": 0,
+      "done": 1,
       "total": 1,
       "model": "",
       "error": ""
