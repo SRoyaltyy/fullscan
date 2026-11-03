@@ -1,6 +1,6 @@
 {
   "date": "2026-11-03",
-  "generated_at": "2026-11-03T07:18:07.245663-05:00",
+  "generated_at": "2026-11-03T07:18:16.764193-05:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -99,122 +99,6 @@
   },
   "sectors": {},
   "lands": [
-    {
-      "key": "live_boards",
-      "title": "Live 1d BUY/SELL strip",
-      "date": "2026-11-03",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-11-03T06:15:03.348142-05:00",
-      "files": [
-        {
-          "path": "data/day_board/today.json",
-          "ok": true,
-          "reason": "",
-          "size": 23031,
-          "preview": "2026-11-03 BUY HITI, NTAP, CON, TOST, TWLO, AMN, IOT, NTSK \u00b7 SELL OKLO, NEOV, FCEL, EOSE, NNDM, POWL, TE, INDI"
-        },
-        {
-          "path": "data/day_board/latest.json",
-          "ok": true,
-          "reason": "",
-          "size": 1116,
-          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
-        },
-        {
-          "path": "data/day_board/2026-11-03.json",
-          "ok": true,
-          "reason": "",
-          "size": 116570,
-          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href"
-        },
-        {
-          "path": "data/day_board/2026-11-03_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 81773,
-          "preview": "2026-11-03 BUY HITI, NTAP, CON, TOST, TWLO, AMN, IOT, NTSK \u00b7 SELL OKLO, NEOV, FCEL, EOSE, NNDM, POWL, TE, INDI"
-        },
-        {
-          "path": "data/day_board/strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 679692,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "data/day_board/2026-11-03_strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 679692,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "data/factor_mine/morning_look/2026-11-03.json",
-          "ok": true,
-          "reason": "",
-          "size": 151434,
-          "preview": "keys: asof_commit, asof_committed_at, cutoff_et, date, n, read_from, rows"
-        },
-        {
-          "path": "data/day_board/today_strategies.json",
-          "ok": true,
-          "reason": "",
-          "size": 932556,
-          "preview": "2026-11-03 BUY HITI, NTAP, CON, TOST, TWLO, AMN, IOT, NTSK \u00b7 SELL OKLO, NEOV, FCEL, EOSE, NNDM, POWL, TE, INDI"
-        },
-        {
-          "path": "data/factor_mine/strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 679692,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "dashboard/factor-mine/today.json",
-          "ok": true,
-          "reason": "",
-          "size": 81773,
-          "preview": "2026-11-03 BUY HITI, NTAP, CON, TOST, TWLO, AMN, IOT, NTSK \u00b7 SELL OKLO, NEOV, FCEL, EOSE, NNDM, POWL, TE, INDI"
-        },
-        {
-          "path": "dashboard/factor-mine/strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 679692,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "dashboard/factor-mine/today_strategies.json",
-          "ok": true,
-          "reason": "",
-          "size": 679692,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "dashboard/today_strategies.json",
-          "ok": true,
-          "reason": "",
-          "size": 932556,
-          "preview": "2026-11-03 BUY HITI, NTAP, CON, TOST, TWLO, AMN, IOT, NTSK \u00b7 SELL OKLO, NEOV, FCEL, EOSE, NNDM, POWL, TE, INDI"
-        },
-        {
-          "path": "data/day_board/hold_live_px.json",
-          "ok": true,
-          "reason": "",
-          "size": 1782,
-          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
-        },
-        {
-          "path": "dashboard/factor-mine/hold_live_px.json",
-          "ok": true,
-          "reason": "",
-          "size": 1782,
-          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
-        }
-      ],
-      "preview": "2026-11-03 BUY HITI, NTAP, CON, TOST, TWLO, AMN, IOT, NTSK \u00b7 SELL OKLO, NEOV, FCEL, EOSE, NNDM, POWL, TE, INDI \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href \u00b7 2026-11-03 BUY HITI, NTAP, CON, TOST, TWLO, AMN, IOT, NTSK \u00b7 SELL OKLO, NEOV, FCEL, EOSE, NNDM, POWL, TE, INDI \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: asof_commit, asof_committed_at, cutoff_et, date, n, read_from, rows \u00b7 2026-11-03 BUY HITI, NTAP, CON, TOST, TWLO, AMN, IOT, NTSK \u00b7 SELL OKLO, NEOV, FCEL, EOSE, NNDM, POWL, TE, INDI \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-11-03 BUY HITI, NTAP, CON, TOST, TWLO, AMN, IOT, NTSK \u00b7 SELL OKLO, NEOV, FCEL, EOSE, NNDM, POWL, TE, INDI \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_leg"
-    },
     {
       "key": "paper",
       "title": "Paper dashboard",
@@ -396,6 +280,31 @@
         }
       ],
       "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "ab",
+      "title": "AB checklist",
+      "date": "2026-11-03",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-03T07:18:15.604868-05:00",
+      "files": [
+        {
+          "path": "data/ab_checklist/2026-11-03_ab_checklist.csv",
+          "ok": true,
+          "reason": "",
+          "size": 7547623,
+          "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 TRI, CDNA, DEO, HOMB, HHH"
+        },
+        {
+          "path": "data/ab_checklist/2026-11-03_ab_checklist_enriched.csv",
+          "ok": true,
+          "reason": "",
+          "size": 8356834,
+          "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CDNA, TRI, CP, PFE, TLYS"
+        }
+      ],
+      "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 TRI, CDNA, DEO, HOMB, HHH \u00b7 2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CDNA, TRI, CP, PFE, TLYS"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
