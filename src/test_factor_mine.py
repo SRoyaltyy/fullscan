@@ -1648,7 +1648,7 @@ def test_factor_mine_workflow_lands_after_close() -> None:
     assert "Post-Close ALL (grade + learn + next captains)" in yml
     assert "--land-closed" in yml
     assert '--to-date "$TO_DATE"' in yml
-    assert 'cron: "25 20 * * 1-5"' in yml
+    assert 'cron: "25 21 * * 1-5"' in yml  # EST since #734 (16:25 ET); was 25 20 under EDT, move back 2027-03-14
     assert 'cron: "0 12 * * 6"' in yml
     assert "data/factor_mine/panel.json" in yml
     assert "data/factor_mine/snapshots/" in yml
