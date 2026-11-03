@@ -154,9 +154,19 @@ jobs:
           if [ "$(git -C "$W" config --get core.sparseCheckout 2>/dev/null)" = "true" ]; then
             echo "::warning::shared ECS workspace is sparse; this checkout re-materializes the full tree"
           fi
+      # 2026-11-03: checkout of the ~6.9 GB tree timed out / was cancelled.
+      # Same lighter checkout as #730/#738: free unused toolchains, then depth 1.
+      - name: Free runner disk (github-hosted only)
+        if: runner.environment == 'github-hosted'
+        run: |
+          df -h / | tail -1
+          sudo rm -rf /usr/share/dotnet /opt/ghc /usr/local/.ghcup /usr/local/lib/android \
+            /opt/hostedtoolcache/CodeQL /usr/share/swift /usr/local/share/powershell || true
+          sudo docker system prune -af >/dev/null 2>&1 || true
+          df -h / | tail -1
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 0
+          fetch-depth: 1  # safe_git_push builds from origin/main's tree; no history needed
           persist-credentials: true
           token: ${{ secrets.GITHUB_TOKEN }}
 
