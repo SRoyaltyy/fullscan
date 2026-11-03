@@ -1,6 +1,6 @@
 name: Workflow self-check
 
-# Never-again for #242: over-escaped fromJSON('[\"self-hosted\",\"ecs\"]')
+# Never-again for #242: an over-escaped fromJSON(...) of the ECS runner labels
 # is invalid JSON, so runner=ecs never spawned the predictive preopen job.
 # This job parses workflow YAML locally. No Actions API. No secrets.
 
