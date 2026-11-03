@@ -1,38 +1,38 @@
 {
   "date": "2026-11-03",
-  "generated_at": "2026-11-03T06:00:40.209358-05:00",
+  "generated_at": "2026-11-03T07:19:52.745309-05:00",
   "items": [
     {
-      "ok": false,
+      "ok": true,
       "kind": "general_predict",
       "path": "01_daily/general/2026-11-03_predict.md",
-      "reason": "missing",
-      "size": 0,
+      "reason": "",
+      "size": 12024,
       "carried": false,
       "timeout": false,
-      "empty": true,
+      "empty": false,
       "missing_markers": []
     },
     {
-      "ok": false,
+      "ok": true,
       "kind": "events",
       "path": "01_daily/events/2026-11-03_events.json",
-      "reason": "missing",
-      "size": 0,
+      "reason": "",
+      "size": 26349,
       "carried": false,
       "timeout": false,
-      "empty": true,
+      "empty": false,
       "missing_markers": []
     },
     {
-      "ok": false,
+      "ok": true,
       "kind": "news_judge",
       "path": "01_daily/news/2026-11-03_judge.md",
-      "reason": "missing",
-      "size": 0,
+      "reason": "",
+      "size": 11010,
       "carried": false,
       "timeout": false,
-      "empty": true,
+      "empty": false,
       "missing_markers": []
     },
     {
@@ -62,7 +62,7 @@
       "kind": "finviz_digest",
       "path": "01_daily/news/2026-11-03_finviz_digest.json",
       "reason": "",
-      "size": 97114,
+      "size": 97156,
       "carried": false,
       "timeout": false,
       "empty": false,
@@ -327,5 +327,5 @@
   "sector_n_ok": 0,
   "sector_n_total": 11,
   "sectors_required": false,
-  "all_ok": false
+  "all_ok": true
 }

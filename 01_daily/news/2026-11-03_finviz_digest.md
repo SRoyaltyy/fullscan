@@ -1,13 +1,13 @@
 # Finviz Daily Digest — 2026-11-03
 
-_Generated 2026-11-03T04:45:07.916171-05:00 · export=data/exports/finviz_2026-11-03.csv · ticker digests=5887 · high-signal=2046_
+_Generated 2026-11-03T07:19:52.492131-05:00 · export=data/exports/finviz_2026-11-03.csv · ticker digests=5887 · high-signal=2046_
 
 ## Major indices (live quote page)
 
-- **S&P 500 (SPY)**: TSLA Stock Slips Overnight: Trump Vows To Shield Musk  But Influencer Flags Tougher Than Ever SpaceX Merger Vote
-- **Nasdaq-100 (QQQ)**: TSLA Stock Slips Overnight: Trump Vows To Shield Musk  But Influencer Flags Tougher Than Ever SpaceX Merger Vote
-- **Dow Jones (DIA)**: S&P 500, Nasdaq Drop As Capex Concerns Grip Tech Investors, Outweighing US-Iran Diplomacy Hope   ORCL, META, PLTR, AAPL In Focus
-- **Russell 2000 (IWM)**: Investors Buy the Dip in Chip ETFs as Inflows Top $44B
+- **S&P 500 (SPY)**: Michael Burry Weighs Peter Schiffs S&P 500 Crash Warning As UBS Flags Fed Risk  Rare October Hike Odds Hit 70%
+- **Nasdaq-100 (QQQ)**: Michael Burry Weighs Peter Schiffs S&P 500 Crash Warning As UBS Flags Fed Risk  Rare October Hike Odds Hit 70%
+- **Dow Jones (DIA)**: S&P 500, Dow, Nasdaq Drop Under Pressure From Elevated Yields As Investors Shrug Off Trumps Iran Sanction Relief  NVDA, BA, AMD, NVTS, CBRS In Focus
+- **Russell 2000 (IWM)**: Evolution Metals Just Joined the Indexes Behind $12.2 Trillion in Invested Assets (NASDAQ: EMAT)
 
 ## High-signal ticker digests (ranked)
 

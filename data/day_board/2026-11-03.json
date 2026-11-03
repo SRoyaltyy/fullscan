@@ -1,6 +1,6 @@
 {
   "date": "2026-11-03",
-  "generated_at": "2026-11-03T07:18:16.764193-05:00",
+  "generated_at": "2026-11-03T07:19:55.155362-05:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -94,7 +94,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 97114,
+          "size": 97156,
           "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
           "bullets": [
             "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
@@ -109,10 +109,10 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 11926,
+          "size": 11984,
           "said": "Finviz Daily Digest \u2014 2026-11-03",
           "bullets": [
-            "_Generated 2026-11-03T04:45:07.916171-05:00 \u00b7 export=data/exports/finviz_2026-11-03.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_",
+            "_Generated 2026-11-03T07:19:52.492131-05:00 \u00b7 export=data/exports/finviz_2026-11-03.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_",
             "Major indices (live quote page)"
           ]
         },
@@ -189,7 +189,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 97114,
+          "size": 97156,
           "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
           "bullets": [
             "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
@@ -343,14 +343,14 @@
           "path": "01_daily/2026-11-03_preopen_qc.json",
           "role": "required",
           "status": "OK",
-          "reason": "all_ok=False",
-          "size": 7571,
-          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 16 fail",
+          "reason": "all_ok=True",
+          "size": 7561,
+          "said": "all_ok=True \u00b7 sectors 0/11 \u00b7 13 fail",
           "bullets": [
-            "general_predict:missing",
-            "events:missing",
-            "news_judge:missing",
-            "finviz_market_digest:missing"
+            "finviz_market_digest:missing",
+            "map_heat_research:missing",
+            "sector_predict:missing",
+            "sector_predict:missing"
           ]
         },
         {
@@ -359,9 +359,9 @@
           "path": "01_daily/2026-11-03_preopen_status.json",
           "role": "required",
           "status": "OK",
-          "reason": "all_ok=False missing=['events', 'news_judge', 'map_heat_research', 'general_predict']",
-          "size": 6854,
-          "said": "all_ok=False \u00b7 qc=False \u00b7 grok=False \u00b7 book=False \u00b7 missing events, news_judge, map_heat_research, general_predict",
+          "reason": "all_ok=False missing=['map_heat_research']",
+          "size": 6786,
+          "said": "all_ok=False \u00b7 qc=True \u00b7 grok=False \u00b7 book=False \u00b7 missing map_heat_research",
           "bullets": []
         },
         {
@@ -371,7 +371,7 @@
           "role": "required",
           "status": "OK",
           "reason": "ok=False Grok returned an empty review",
-          "size": 308,
+          "size": 309,
           "said": "ok=False \u00b7 empty_review_reply (review)",
           "bullets": [
             "Grok returned an empty review"
@@ -526,7 +526,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 97114,
+          "size": 97156,
           "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
           "bullets": [
             "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
@@ -632,7 +632,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 97114,
+          "size": 97156,
           "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
           "bullets": [
             "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
@@ -730,7 +730,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 97114,
+          "size": 97156,
           "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
           "bullets": [
             "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
@@ -2557,6 +2557,52 @@
         }
       ],
       "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 TRI, CDNA, DEO, HOMB, HHH \u00b7 2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CDNA, TRI, CP, PFE, TLYS"
+    },
+    {
+      "key": "finviz_digest",
+      "title": "Finviz digest",
+      "date": "2026-11-03",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-03T07:19:53.969830-05:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-11-03_finviz_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 97156,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        },
+        {
+          "path": "01_daily/news/2026-11-03_finviz_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 12008,
+          "preview": "# Finviz Daily Digest \u2014 2026-11-03\n_Generated 2026-11-03T07:19:52.492131-05:00 \u00b7 export=data/exports/finviz_2026-11-03.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_"
+        },
+        {
+          "path": "data/exports/finviz_2026-11-03.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11030866,
+          "preview": "11686 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC"
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 10986386,
+          "preview": "11749 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAB\""
+        },
+        {
+          "path": "01_daily/news/2026-11-03_finviz_digest_preopen.json",
+          "ok": true,
+          "reason": "",
+          "size": 97114,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        }
+      ],
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-11-03\n_Generated 2026-11-03T07:19:52.492131-05:00 \u00b7 export=data/exports/finviz_2026-11-03.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_ \u00b7 11686 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11749 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAB\" \u00b7 keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
     }
   ],
   "href": {
