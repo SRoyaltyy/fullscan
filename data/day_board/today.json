@@ -1,6 +1,6 @@
 {
   "date": "2026-11-03",
-  "generated_at": "2026-11-03T18:15:33.348817-05:00",
+  "generated_at": "2026-11-03T18:29:31.427963-05:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -12,29 +12,29 @@
   "buy_1d": [
     {
       "ticker": "HITI",
-      "score": 0.39313547198312787
+      "score": 0.39174355573143077
     },
     {
       "ticker": "MXCT",
-      "score": 0.1963197702358676
+      "score": 0.20377275735648298
     },
     {
       "ticker": "REPL",
-      "score": 0.3726075171080097
+      "score": 0.36294849990499856
     },
     {
       "ticker": "SY",
-      "score": 0.2117337798500471
+      "score": 0.2094448209817628
     },
     {
       "ticker": "CERS",
-      "score": 0.12448066575317142
+      "score": 0.12066910330743348
     }
   ],
   "sell_1d": [
     {
       "ticker": "NEOV",
-      "score": -0.4174482559631263
+      "score": -0.4203611394321515
     },
     {
       "ticker": "OKLO",
@@ -42,19 +42,19 @@
     },
     {
       "ticker": "FCEL",
-      "score": -0.3074248924577048
+      "score": -0.3080926867167317
     },
     {
       "ticker": "EOSE",
       "score": -0.4482253743772798
     },
     {
-      "ticker": "NRGV",
-      "score": -0.3772187351475767
+      "ticker": "NNDM",
+      "score": -0.21816645789850053
     },
     {
-      "ticker": "NNDM",
-      "score": -0.21340013318492634
+      "ticker": "NRGV",
+      "score": -0.3791743818570063
     },
     {
       "ticker": "INDI",
@@ -66,11 +66,11 @@
     },
     {
       "ticker": "SKYX",
-      "score": -0.3862286552071018
+      "score": -0.387597482910478
     },
     {
       "ticker": "AMSC",
-      "score": -0.16084473541774058
+      "score": -0.16541210176171345
     }
   ],
   "flatten": {
@@ -92,139 +92,8 @@
     "score": "-5.632",
     "direction": "down"
   },
-  "sectors": {
-    "said": "0 up / 0 down / 0 flat",
-    "bullets": [
-      "XLB missing",
-      "XLC missing",
-      "XLY missing",
-      "XLP missing",
-      "XLE missing",
-      "XLF missing",
-      "XLV missing",
-      "XLI missing",
-      "XLRE missing",
-      "XLK missing",
-      "XLU missing"
-    ]
-  },
+  "sectors": {},
   "lands": [
-    {
-      "key": "live_boards",
-      "title": "Live 1d BUY/SELL strip",
-      "date": "2026-11-03",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-11-03T12:59:43.501259-05:00",
-      "files": [
-        {
-          "path": "data/day_board/today.json",
-          "ok": true,
-          "reason": "",
-          "size": 25524,
-          "preview": "2026-11-03 BUY HITI, MXCT, REPL, SY, CERS \u00b7 SELL NEOV, OKLO, FCEL, EOSE, NRGV, NNDM, INDI, TE"
-        },
-        {
-          "path": "data/day_board/latest.json",
-          "ok": true,
-          "reason": "",
-          "size": 1115,
-          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
-        },
-        {
-          "path": "data/day_board/2026-11-03.json",
-          "ok": true,
-          "reason": "",
-          "size": 171219,
-          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href"
-        },
-        {
-          "path": "data/day_board/2026-11-03_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 130797,
-          "preview": "2026-11-03 BUY HITI, MXCT, REPL, SY, CERS \u00b7 SELL NEOV, OKLO, FCEL, EOSE, NRGV, NNDM, INDI, TE"
-        },
-        {
-          "path": "data/day_board/strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 2177724,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "data/day_board/2026-11-03_strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 2177724,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "data/factor_mine/morning_look/2026-11-03.json",
-          "ok": true,
-          "reason": "",
-          "size": 151434,
-          "preview": "keys: asof_commit, asof_committed_at, cutoff_et, date, n, read_from, rows"
-        },
-        {
-          "path": "data/day_board/today_strategies.json",
-          "ok": true,
-          "reason": "",
-          "size": 2382943,
-          "preview": "2026-11-03 BUY HITI, MXCT, REPL, SY, CERS \u00b7 SELL NEOV, OKLO, FCEL, EOSE, NNDM, NRGV, INDI, TE"
-        },
-        {
-          "path": "data/factor_mine/strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 2177724,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "dashboard/factor-mine/today.json",
-          "ok": true,
-          "reason": "",
-          "size": 130797,
-          "preview": "2026-11-03 BUY HITI, MXCT, REPL, SY, CERS \u00b7 SELL NEOV, OKLO, FCEL, EOSE, NRGV, NNDM, INDI, TE"
-        },
-        {
-          "path": "dashboard/factor-mine/strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 2177724,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "dashboard/factor-mine/today_strategies.json",
-          "ok": true,
-          "reason": "",
-          "size": 2177724,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "dashboard/today_strategies.json",
-          "ok": true,
-          "reason": "",
-          "size": 2382943,
-          "preview": "2026-11-03 BUY HITI, MXCT, REPL, SY, CERS \u00b7 SELL NEOV, OKLO, FCEL, EOSE, NNDM, NRGV, INDI, TE"
-        },
-        {
-          "path": "data/day_board/hold_live_px.json",
-          "ok": true,
-          "reason": "",
-          "size": 1816,
-          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
-        },
-        {
-          "path": "dashboard/factor-mine/hold_live_px.json",
-          "ok": true,
-          "reason": "",
-          "size": 1816,
-          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
-        }
-      ],
-      "preview": "2026-11-03 BUY HITI, MXCT, REPL, SY, CERS \u00b7 SELL NEOV, OKLO, FCEL, EOSE, NRGV, NNDM, INDI, TE \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href \u00b7 2026-11-03 BUY HITI, MXCT, REPL, SY, CERS \u00b7 SELL NEOV, OKLO, FCEL, EOSE, NRGV, NNDM, INDI, TE \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: asof_commit, asof_committed_at, cutoff_et, date, n, read_from, rows \u00b7 2026-11-03 BUY HITI, MXCT, REPL, SY, CERS \u00b7 SELL NEOV, OKLO, FCEL, EOSE, NNDM, NRGV, INDI, TE \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-11-03 BUY HITI, MXCT, REPL, SY, CERS \u00b7 SELL NEOV, OKLO, FCEL, EOSE, NRGV, NNDM, INDI, TE \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, "
-    },
     {
       "key": "paper",
       "title": "Paper dashboard",
@@ -504,6 +373,31 @@
         }
       ],
       "preview": "# Paper trading \u2014 Futubull-fee simulation\nAs of **2026-10-07** \u00b7 $10,000 starting capital per sleeve \u00b7 fees per `00_grounding/futubull_fees.json`\nLatest book **2026-10-07** ranker: **weighted** (green pile liquid=0, need 8).\nSleeves: `{horizon}_top` = top-N overall buys, `{horizon}_size` = top 3 per size bucket. Fill at signal-day close. Sell only after min-hold (1d=1, 3d=3, 1w=5, 2w=10, 1m=21 **trading sessions** \u2014 weekends and NYSE holidays do not count) AND the name has left the book.\n| Sleeve | Equity | Return | Cash | Open pos | Trades | Fees paid | Realized P/L | Unrealized P/L | Closed win | Open win |\n|--------|--------|--------|------|----------|--------|-----------|--------------|----------------|------------|----------|\n| 1d_top | $8,825.81 | -11.74% | $4,458.43 | 2 | 510 | $1,080.39 | $-1,169.87 | $-4.32 | 32.7% | 0.0% |\n| 1d_size | $9,454.32 | -5.46% | $4,783.48 | 2 | 466 |  \u00b7 <!DOCTYPE html>\n<html lang=\"en\"><head><meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n<title>Paper Trading \u2014 Stock Book Simulation</title>\n<style>\n:root{\n--bg:#0f1420; --card:#171e2e; --line:#262f45; --line2:#232c42;\n--fg:#dfe6f2; --mut:#8b96ab; --dim:#6"
+    },
+    {
+      "key": "finviz_market_digest_close",
+      "title": "Finviz homepage market digest (close)",
+      "date": "2026-11-03",
+      "ok": true,
+      "pushed": false,
+      "at": "2026-11-03T18:26:29.431730-05:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-11-03_finviz_market_digest_close.json",
+          "ok": true,
+          "reason": "",
+          "size": 6534,
+          "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for"
+        },
+        {
+          "path": "01_daily/news/2026-11-03_finviz_market_digest_close.md",
+          "ok": true,
+          "reason": "",
+          "size": 3152,
+          "preview": "# Finviz homepage market digest (close) \u2014 2026-11-03\n**Generated:** 2026-11-03T18:26:29.410173-05:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks ended mixed on midterm Election Day as AI and chip names rebounded ahead of key earnings\n**Prior close:** SPX -1.93%  Nasdaq \u2014  Dow \u2014\n**SPX:** -1.93%  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** NVDA, MSFT, AMZN, AMD, AAPL, SMCI, XYZ\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** XYZ\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-11-04\n**Clock use:** `next_open`"
+        }
+      ],
+      "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest (close) \u2014 2026-11-03\n**Generated:** 2026-11-03T18:26:29.410173-05:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks ended mixed on midterm Election Day as AI and chip names rebounded ahead of key earnings\n**Prior close:** SPX -1.93%  Nasdaq \u2014  Dow \u2014\n**SPX:** -1.93%  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** NVDA, MSFT, AMZN, AMD, AAPL, SMCI, XYZ\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** XYZ\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-11-04\n**Clock use:** `next_open`"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
