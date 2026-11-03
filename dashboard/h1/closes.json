@@ -1615,5 +1615,47 @@
       "open": 8.81,
       "prior_close": 8.73
     }
+  },
+  "2026-11-03": {
+    "ADT": {
+      "close": 9.85,
+      "open": 9.85,
+      "prior_close": 9.83
+    },
+    "CPRI": {
+      "close": 20.059999,
+      "open": 20.01,
+      "prior_close": 20.049999
+    },
+    "ECX": {
+      "close": 0.8902,
+      "open": 0.9934,
+      "prior_close": 1.01
+    },
+    "GKOS": {
+      "close": 233.039993,
+      "open": 240.940002,
+      "prior_close": 238.610001
+    },
+    "IDXX": {
+      "close": 672.039978,
+      "open": 662.26001,
+      "prior_close": 671.640015
+    },
+    "PURR": {
+      "close": 10.16,
+      "open": 9.98,
+      "prior_close": 9.71
+    },
+    "TDOC": {
+      "close": 8.89,
+      "open": 8.58,
+      "prior_close": 8.63
+    },
+    "UPBD": {
+      "close": 22.459999,
+      "open": 23.0,
+      "prior_close": 22.84
+    }
   }
 }
