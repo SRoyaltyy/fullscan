@@ -4,7 +4,7 @@ _starts 10-08 open, no past days. Parent recipe `union_hot_n4_h1` (same selectio
 
 _Factor Mine recipe union_hot_n4_h1, not the separate IRONCLAD h1 book (research/hot_n4_clean_v4/forward_h1)._
 
-Equity: 9894.42 | days: 17
+Equity: 10071.98 | days: 18
 
 | date | S | picks | buys | sells | cash | equity | mean% | sit / reason |
 |---|---|---|---|---|---|---|---|---|
@@ -25,3 +25,4 @@ Equity: 9894.42 | days: 17
 | 2026-10-28 | 6.621 | SLN, PRME, MRVI, RH | SLN 116@19.76, PRME 540@4.245, MRVI 278@8.23, RH 16@140.69 | BMBL 391@5.96, CHKP 14@158.595, HUBS 9@248.18, TTAN 28@80.29 | 35.85 | 9900.57 | 6.7846 | - |
 | 2026-10-29 | -6.946 | - | - | MRVI 278@8.49, PRME 540@5.29, RH 16@148.16, SLN 116@19.71 | 9894.42 | 9894.42 | -0.0621 | S=-6.95 <= -3: no buys |
 | 2026-10-30 | -12.921 | - | - | - | 9894.42 | 9894.42 | 0.0 | S=-12.92 <= -3: no buys |
+| 2026-11-02 | 3.044 | SLN, GEN, BC, BAH | SLN 125@19.75, GEN 85@29.05, BC 32@76.25, BAH 28@87.16 | - | 67.17 | 10071.98 | 1.7945 | - |

@@ -294,6 +294,27 @@
           "s": -12.921,
           "sells": [],
           "sit": true
+        },
+        {
+          "buys": [
+            "SLN",
+            "GEN",
+            "BC",
+            "BAH"
+          ],
+          "date": "2026-11-02",
+          "equity": 10071.98,
+          "mean": 1.7945,
+          "picks": [
+            "SLN",
+            "GEN",
+            "BC",
+            "BAH"
+          ],
+          "reasons": [],
+          "s": 3.044,
+          "sells": [],
+          "sit": false
         }
       ],
       "label": "starts 10-08 open, no past days",
@@ -584,6 +605,27 @@
             "SLN"
           ],
           "sit": true
+        },
+        {
+          "buys": [
+            "SLN",
+            "GEN",
+            "BC",
+            "BAH"
+          ],
+          "date": "2026-11-02",
+          "equity": 8883.63,
+          "mean": 1.7796,
+          "picks": [
+            "SLN",
+            "GEN",
+            "BC",
+            "BAH"
+          ],
+          "reasons": [],
+          "s": 3.044,
+          "sells": [],
+          "sit": false
         }
       ],
       "label": "starts 10-08 open, no past days",
