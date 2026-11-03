@@ -50,7 +50,7 @@ jobs:
           df -h / | tail -1
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 1  # safe_git_push builds from origin/main's tree; no history needed
+          fetch-depth: 0  # src.test_webull_sim resolves the h1 plan commit from history; shallow fails (#739 CI)
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
