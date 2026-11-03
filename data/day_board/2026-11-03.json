@@ -1,6 +1,6 @@
 {
   "date": "2026-11-03",
-  "generated_at": "2026-11-03T05:54:40.453546-05:00",
+  "generated_at": "2026-11-03T05:54:48.991769-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -8,8 +8,8 @@
     "MISSING News judge MD `01_daily/news/2026-11-03_judge.md` \u2014 missing"
   ],
   "counts": {
-    "ok": 4,
-    "partial": 3,
+    "ok": 5,
+    "partial": 2,
     "fail": 1,
     "n": 8
   },
@@ -660,7 +660,7 @@
       "inputs_ready": false,
       "n_req_ok": 1,
       "n_req": 4,
-      "n_opt_ok": 1,
+      "n_opt_ok": 2,
       "n_opt": 4,
       "files": [
         {
@@ -830,10 +830,10 @@
           "name": "Dashboard HTML",
           "path": "dashboard/index.html",
           "role": "optional",
-          "status": "FAIL",
-          "reason": "session 2026-11-03 not in dashboard dates (last=2026-10-07)",
+          "status": "OK",
+          "reason": "live-book poller + today.json (2026-11-03)",
           "size": 10510589,
-          "said": "session 2026-11-03 not in dashboard dates (last=2026-10-07)",
+          "said": "live-book poller + today.json (2026-11-03)",
           "bullets": []
         }
       ],
@@ -846,9 +846,9 @@
       "key": "publish",
       "name": "Dashboard / .io",
       "yaml": "deploy-dashboard.yml",
-      "status": "PARTIAL",
+      "status": "OK",
       "inputs_ready": false,
-      "n_req_ok": 1,
+      "n_req_ok": 2,
       "n_req": 2,
       "n_opt_ok": 0,
       "n_opt": 1,
@@ -869,10 +869,10 @@
           "name": "Dashboard HTML (repo)",
           "path": "dashboard/index.html",
           "role": "required",
-          "status": "FAIL",
-          "reason": "session 2026-11-03 not in dashboard dates (last=2026-10-07)",
+          "status": "OK",
+          "reason": "live-book poller + today.json (2026-11-03)",
           "size": 10510589,
-          "said": "session 2026-11-03 not in dashboard dates (last=2026-10-07)",
+          "said": "live-book poller + today.json (2026-11-03)",
           "bullets": []
         },
         {
@@ -908,82 +908,9 @@
   "news_mode": "on",
   "news_mode_reason": "",
   "selections": {
-    "buy_1d": [
-      {
-        "ticker": "HITI",
-        "score": 0.4198871806435654
-      },
-      {
-        "ticker": "NTAP",
-        "score": 0.22070711147198352
-      },
-      {
-        "ticker": "CON",
-        "score": 0.6274403633192693
-      },
-      {
-        "ticker": "TOST",
-        "score": 0.5706110220097232
-      },
-      {
-        "ticker": "TWLO",
-        "score": 0.317201149200913
-      },
-      {
-        "ticker": "AMN",
-        "score": 0.5756576224311789
-      },
-      {
-        "ticker": "IOT",
-        "score": 0.36371504837588503
-      },
-      {
-        "ticker": "NTSK",
-        "score": 0.36781920799967527
-      }
-    ],
-    "sell_1d": [
-      {
-        "ticker": "OKLO",
-        "score": -0.32974893929055865
-      },
-      {
-        "ticker": "NEOV",
-        "score": -0.4145270859457877
-      },
-      {
-        "ticker": "FCEL",
-        "score": -0.29406334750404933
-      },
-      {
-        "ticker": "EOSE",
-        "score": -0.44418808836690954
-      },
-      {
-        "ticker": "NNDM",
-        "score": -0.221096383666246
-      },
-      {
-        "ticker": "POWL",
-        "score": -0.13167951263529554
-      },
-      {
-        "ticker": "TE",
-        "score": -0.40036033450347613
-      },
-      {
-        "ticker": "INDI",
-        "score": -0.2853224908166028
-      }
-    ],
-    "flatten": {
-      "said": "0 priced buys \u00b7 cash $9.76 \u00b7 morning S missing",
-      "bullets": [
-        "0 priced buys",
-        "cash $9.76",
-        "morning S missing"
-      ]
-    },
+    "buy_1d": [],
+    "sell_1d": [],
+    "flatten": {},
     "general": {},
     "sectors": {},
     "news": {},
@@ -1702,7 +1629,7 @@
       "date": "2026-11-03",
       "ok": true,
       "pushed": true,
-      "at": "2026-11-03T05:54:39.382206-05:00",
+      "at": "2026-11-03T05:54:47.920360-05:00",
       "files": [
         {
           "path": "01_daily/news/2026-11-03_parsed.json",
