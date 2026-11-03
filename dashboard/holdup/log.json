@@ -7951,5 +7951,85 @@
     "sha256": "4813d4b28ba89fed2060cf71e1870a0290732351a74175c7f717de86a3c52181",
     "shares": 212,
     "ticker": "TDOC"
+  },
+  {
+    "bar_cutoff": "2026-11-02",
+    "cash_before": 93.04614620837583,
+    "committed_at": "2026-11-03T13:14:12Z",
+    "date": "2026-11-03",
+    "excluded_unexplained_legs": [
+      {
+        "bar_date": "2026-11-02",
+        "leg": "close_over_prev_close",
+        "reason": "not a verified split and not a filing-verified real move",
+        "ticker": "INO"
+      },
+      {
+        "bar_date": "2026-11-02",
+        "leg": "open_over_prev_close",
+        "reason": "not a verified split and not a filing-verified real move",
+        "ticker": "INO"
+      }
+    ],
+    "finviz_source": {
+      "commit": "e8dc91a7a38c1a8cdaf3541fc90b1a305030e525",
+      "commit_time": "2026-11-02T21:45:18Z",
+      "file_sha256": "25c567adf8959bd432bb0fbd26a50539a088e803bcc3bf68a87434a0a2bd4bb6",
+      "path": "data/snapshots/2026-11-02.csv",
+      "snapshot_date": "2026-11-02",
+      "status": "BEFORE_OPEN"
+    },
+    "holdup_on": false,
+    "kind": "plan",
+    "morning_s": -5.632,
+    "picks": [
+      {
+        "fv_avg_volume": 1067.51,
+        "fv_price": 22.84,
+        "rank": 1,
+        "sources": [
+          "yday_gainer"
+        ],
+        "ticker": "UPBD"
+      },
+      {
+        "fv_avg_volume": 4560.05,
+        "fv_price": 20.05,
+        "rank": 2,
+        "sources": [
+          "yday_gainer"
+        ],
+        "ticker": "CPRI"
+      },
+      {
+        "fv_avg_volume": 912.69,
+        "fv_price": 1.01,
+        "rank": 3,
+        "sources": [
+          "yday_gainer"
+        ],
+        "ticker": "ECX"
+      },
+      {
+        "fv_avg_volume": 554.25,
+        "fv_price": 671.64,
+        "rank": 4,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "IDXX"
+      }
+    ],
+    "planned_sells": [],
+    "recipe": "union_hot_n4_holdup__w0",
+    "s_source": {
+      "blob_sha": "d17ff43ca54fbf4a18eda903e597102d3988fb2a",
+      "kind": "predict",
+      "path": "01_daily/general/2026-11-03_predict.md",
+      "server_time_utc": "2026-11-03T19:23:42+08:00",
+      "status": "BEFORE_1330"
+    },
+    "sha256": "e0ab516f9babaa588de421b7a535145881c6c5d63ade1d0edf3f29bb4ec11a8c"
   }
 ]
