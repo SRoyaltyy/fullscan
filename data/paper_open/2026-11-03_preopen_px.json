@@ -1,0 +1,17 @@
+{
+ "date": "2026-11-03",
+ "missing": [],
+ "prices": {
+  "ADT": 9.85,
+  "GKOS": 237.6,
+  "PURR": 10.22,
+  "TDOC": 8.61
+ },
+ "sources": {
+  "ADT": "yahoo_premarket",
+  "GKOS": "yahoo_prior_close",
+  "PURR": "yahoo_premarket",
+  "TDOC": "yahoo_premarket"
+ },
+ "written_at": "2026-11-03T14:01:52+00:00"
+}
