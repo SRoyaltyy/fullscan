@@ -1,6 +1,6 @@
 {
  "date": "2026-11-03",
- "generated_at": "2026-11-03T07:17:38.661565-05:00",
+ "generated_at": "2026-11-03T07:22:15.532765-05:00",
  "stance_vocabulary": [
   "favorable",
   "neutral",
@@ -17,19 +17,17 @@
   "fed_score": -0.5,
   "dollar_oil_score": 0.0,
   "futures_score": 0.0,
-  "yields": "falling",
-  "yields_source": "fred_dgs10",
-  "dgs10_delta_1d": -0.04,
-  "dgs10_current": 4.94,
+  "yields": "flat",
+  "yields_source": "llm_factor_fallback",
   "dollar": "flat",
   "dollar_source": "dxy",
   "dxy_pct_1d": 0.1,
-  "vix_ratio": 1.005,
-  "vix_spot": 21.71,
-  "vix_delta_1d": 0.56,
+  "vix_ratio": 1.003,
+  "vix_spot": 21.66,
+  "vix_delta_1d": 0.51,
   "vix_ratio_source": "vix/vix3m",
   "vix": "calm",
-  "oil_pct_1d": 2.29,
+  "oil_pct_1d": 2.3,
   "oil": "rising",
   "fear_greed": null,
   "fear_greed_label": null,
@@ -340,14 +338,14 @@
   },
   "style": {
    "growth": {
-    "stance": "favorable",
-    "confidence": "medium",
-    "why": "yields falling — duration/growth re-rates [factor: Bond yields]"
+    "stance": "neutral",
+    "confidence": "low",
+    "why": "yields flat/unknown"
    },
    "value": {
     "stance": "neutral",
     "confidence": "low",
-    "why": "value lags duration rallies"
+    "why": "yields flat/unknown"
    },
    "blend": {
     "stance": "neutral",
