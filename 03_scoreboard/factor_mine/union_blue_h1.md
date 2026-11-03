@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ blue, no 🚨
 
-Cash book **-24.52%** ($7,548) · signal-only (no cash/fees) was -5.21%. Starts YES **0/30**. Fills 450 · skips 91 · realized $-561.25.
+Cash book **-25.81%** ($7,419) · signal-only (no cash/fees) was -5.21%. Starts YES **0/30**. Fills 458 · skips 91 · realized $-561.25.
 
 ## How this sleeve decides (like you are 10)
 
@@ -634,6 +634,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,548.02 | ▲ close $7,548.02 vs 09:30 $7,565.19 (session +0.00) | 16:00 close · cash $7,548.02 · no lots left · equity $7,548.02. | — |
 | 2026-10-30 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,548.02 | ▲ 09:30 equity $7,548.02 vs yday $7,548.02 (+0.00) | 09:30 open · cash $7,548.02 · no holdings · equity $7,548.02 vs prior close $7,548.02 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-10-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,548.02 | ▲ close $7,548.02 vs 09:30 $7,548.02 (session +0.00) | 16:00 close · cash $7,548.02 · no lots left · equity $7,548.02. | — |
+| 2026-11-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,548.02 | ▲ 09:30 equity $7,548.02 vs yday $7,548.02 (+0.00) | 09:30 open · cash $7,548.02 · no holdings · equity $7,548.02 vs prior close $7,548.02 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-02 09:30 ET | **BUY** | `VEEV` | 2 | $316.20 | $2.00 | — | $6,913.62 | — | union ∩ blue, no 🚨; gate blue=True; list flatten; 🔵; ret5=-3.1; leftover $943.50 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `CORT` | 11 | $80.93 | $2.02 | — | $6,021.37 | — | union ∩ blue, no 🚨; gate blue=True; list flatten; 🔵; ret5=-5.5; leftover $943.50 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `VLO` | 2 | $392.68 | $2.00 | — | $5,234.02 | — | union ∩ blue, no 🚨; gate blue=True; list flatten; 🔵; ret5=-4.7; leftover $943.50 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `CDNA` | 10 | $86.88 | $2.02 | — | $4,363.20 | — | union ∩ blue, no 🚨; gate blue=True; list flatten; 🔵; ret5=+26.3; leftover $943.50 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `ARQT` | 29 | $32.08 | $2.08 | — | $3,430.89 | — | union ∩ blue, no 🚨; gate blue=True; list flatten; 🔵; ret5=+2.8; leftover $943.50 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `ETON` | 17 | $52.92 | $2.04 | — | $2,529.21 | — | union ∩ blue, no 🚨; gate blue=True; list flatten; 🔵; ret5=+4.4; leftover $943.50 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `AMN` | 19 | $47.47 | $2.05 | — | $1,625.23 | — | union ∩ blue, no 🚨; gate blue=True; list flatten; 🔵; ret5=-1.9; leftover $943.50 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟢 |
+| 2026-11-02 09:30 ET | **BUY** | `PRMB` | 47 | $20.03 | $2.13 | — | $681.69 | — | union ∩ blue, no 🚨; gate blue=True; list probable,yday_gainer,yday_mover; 🔵; ret5=+0.3; leftover $943.50 | join🟡 sector🟡 gen🟢 news🟡 digest🔴 ab🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $681.69 | ▼ close $7,418.60 vs 09:30 $7,548.02 (session -113.09) | 16:00 close · cash $681.69 · equity $7,418.60 vs 09:30 $7,548.02 (-129.42; session marks -113.09) · 8 name(s) marked open→close (per-name table). VEEV×2 09:30 $316.20 → close $307.00 -18.40; CORT×11 09:30 $80.93 → close $80.46 -5.17; VLO×2 09:30 $392.68 → close $381.46 -22.44; CDNA×10 09:30 $86.88 → close $85.88 -10.00; ARQT×29 09:30 $32.08 → close $31.26 -23.69; ETON×17 09:30 $52.92 → close $50.81 -35.87; AMN×19 09:30 $47.47 → close $45.77 -32.30; PRMB×47 09:30 $20.03 → close $20.77 +34.78 | — |
 
 ## Not taken
 

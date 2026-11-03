@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · last bar red
 
-Cash book **-3.14%** ($9,686) · signal-only (no cash/fees) was -2.93%. Starts YES **19/30**. Fills 470 · skips 107 · realized $-717.78.
+Cash book **-1.72%** ($9,828) · signal-only (no cash/fees) was -2.93%. Starts YES **19/30**. Fills 478 · skips 107 · realized $-717.78.
 
 ## How this sleeve decides (like you are 10)
 
@@ -652,6 +652,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-30 09:30 ET | **COVER** | `EPR` | 12 | $58.38 | $2.03 | $-34.39 | $10,361.13 | ▼ -34.39 after sell → book $9,688.11; vs 09:30 mark -2.02 | dropped from list after 2 sess (min 1) | join🔴 sector🟡 gen🔴 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-30 09:30 ET | **COVER** | `TRU` | 9 | $74.78 | $2.02 | $-7.40 | $9,686.09 | ▼ -7.40 after sell → book $9,686.09; vs 09:30 mark -2.02 | dropped from list after 2 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,686.09 | ▲ close $9,686.09 vs 09:30 $9,694.13 (session +0.00) | 16:00 close · cash $9,686.09 · no lots left · equity $9,686.09. | — |
+| 2026-11-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,686.09 | ▲ 09:30 equity $9,686.09 vs yday $9,686.09 (+0.00) | 09:30 open · cash $9,686.09 · no holdings · equity $9,686.09 vs prior close $9,686.09 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-02 09:30 ET | **SHORT** | `CORT` | 7 | $80.93 | $2.05 | — | $10,250.55 | — | last bar red; gate last_red=True; list flatten; 🔵; ret5=-5.5; leftover $605.38 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **SHORT** | `ARQT` | 18 | $32.08 | $2.08 | — | $10,825.86 | — | last bar red; gate last_red=True; list flatten; 🔵; ret5=+2.8; leftover $605.38 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **SHORT** | `ETON` | 11 | $52.92 | $2.06 | — | $11,405.92 | — | last bar red; gate last_red=True; list flatten; 🔵; ret5=+4.4; leftover $605.38 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **SHORT** | `NVTS` | 70 | $8.56 | $2.24 | — | $12,002.88 | — | last bar red; gate last_red=True; list probable,yday_gainer,yday_mover; ret5=+1.2; leftover $605.38 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **SHORT** | `EPR` | 10 | $57.70 | $2.06 | — | $12,577.82 | — | last bar red; gate last_red=True; list probable,yday_gainer,yday_mover; 🔵; ret5=+3.7; leftover $605.38 | join🟡 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **SHORT** | `PDFS` | 14 | $42.10 | $2.07 | — | $13,165.16 | — | last bar red; gate last_red=True; list probable,yday_gainer,yday_mover; 🔵; ret5=+4.3; leftover $605.38 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **SHORT** | `AIP` | 31 | $19.05 | $2.12 | — | $13,753.59 | — | last bar red; gate last_red=True; list probable,yday_gainer,yday_mover; 🔵; ret5=-1.4; leftover $605.38 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **SHORT** | `CXW` | 19 | $30.94 | $2.08 | — | $14,339.36 | — | last bar red; gate last_red=True; list probable,yday_gainer,yday_mover; 🔵; ret5=+2.8; leftover $605.38 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,339.36 | ▲ close $9,828.45 vs 09:30 $9,686.09 (session +159.11) | 16:00 close · cash $14,339.36 · equity $9,828.45 vs 09:30 $9,686.09 (+142.36; session marks +159.11) · 8 name(s) marked open→close (per-name table). CORT×7 09:30 $80.93 → close $80.46 +3.29; ARQT×18 09:30 $32.08 → close $31.26 +14.70; ETON×11 09:30 $52.92 → close $50.81 +23.21; NVTS×70 09:30 $8.56 → close $7.93 +44.10; EPR×10 09:30 $57.70 → close $59.58 -18.80; PDFS×14 09:30 $42.10 → close $38.97 +43.82; AIP×31 09:30 $19.05 → close $17.85 +37.20; CXW×19 09:30 $30.94 → close $30.33 +11.59 | — |
 
 ## Not taken
 

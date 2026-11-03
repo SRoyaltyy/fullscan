@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `macd_hist` · size `leftover` · sell `list` · S-boost `none` · rank by macd_hist
 
-Cash book **-9.48%** ($9,052) · signal-only (no cash/fees) was +3.37%. Starts YES **20/30**. Fills 439 · skips 94 · realized $-657.32.
+Cash book **-10.02%** ($8,998) · signal-only (no cash/fees) was +3.37%. Starts YES **20/30**. Fills 446 · skips 94 · realized $-657.32.
 
 ## How this sleeve decides (like you are 10)
 
@@ -622,6 +622,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-30 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,919.34 | ▲ 09:30 equity $9,053.74 vs yday $9,044.94 (+8.80) | 09:30 open · cash $7,919.34 (unchanged overnight, no fees) · equity $9,053.74 vs prior close $9,044.94 (+8.80) · 1 name(s) re-marked at the open (per-name table). ITW×4 yday $281.40 → 09:30 $283.60 +8.80 | — |
 | 2026-10-30 09:30 ET | **SELL** | `ITW` | 4 | $283.60 | $2.02 | $+41.18 | $9,051.72 | ▲ +41.18 after sell → book $9,051.72; vs 09:30 mark -2.02 | dropped from list after 3 sess (min 1) | join🔴 sector🔴 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,051.72 | ▲ close $9,051.72 vs 09:30 $9,053.74 (session +0.00) | 16:00 close · cash $9,051.72 · no lots left · equity $9,051.72. | — |
+| 2026-11-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,051.72 | ▲ 09:30 equity $9,051.72 vs yday $9,051.72 (+0.00) | 09:30 open · cash $9,051.72 · no holdings · equity $9,051.72 vs prior close $9,051.72 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-02 09:30 ET | **BUY** | `ROP` | 2 | $465.90 | $2.00 | — | $8,117.92 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; 🔵; ret5=+6.5; leftover $1131.46 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `VRTX` | 2 | $559.93 | $2.00 | — | $6,996.07 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; 🔵; ret5=+6.7; leftover $1131.46 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `POOL` | 5 | $208.87 | $2.00 | — | $5,949.71 | — | rank by macd_hist; rank macd_hist; list yday_gainer; 🔵; ret5=+3.5; leftover $1131.46 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `LNG` | 3 | $317.48 | $2.00 | — | $4,995.27 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; 🔵; ret5=+10.6; leftover $1131.46 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `DGX` | 4 | $251.60 | $2.00 | — | $3,986.87 | — | rank by macd_hist; rank macd_hist; list yday_mover; ret5=+4.1; leftover $1131.46 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `VAL` | 11 | $101.40 | $2.02 | — | $2,869.45 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; 🔵; ret5=+8.2; leftover $1131.46 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `AZN` | 6 | $184.59 | $2.01 | — | $1,759.90 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; ret5=+8.8; leftover $1131.46 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,759.90 | ▼ close $8,998.40 vs 09:30 $9,051.72 (session -39.29) | 16:00 close · cash $1,759.90 · equity $8,998.40 vs 09:30 $9,051.72 (-53.32; session marks -39.29) · 7 name(s) marked open→close (per-name table). ROP×2 09:30 $465.90 → close $479.54 +27.28; VRTX×2 09:30 $559.93 → close $553.15 -13.56; POOL×5 09:30 $208.87 → close $214.76 +29.45; LNG×3 09:30 $317.48 → close $311.67 -17.43; DGX×4 09:30 $251.60 → close $250.81 -3.16; VAL×11 09:30 $101.40 → close $94.69 -73.81; AZN×6 09:30 $184.59 → close $186.58 +11.94 | — |
 
 ## Not taken
 

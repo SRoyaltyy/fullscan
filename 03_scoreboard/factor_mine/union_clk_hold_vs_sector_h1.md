@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · Clock-B #6 stock holds while sector camera is red
 
-Cash book **-14.46%** ($8,554) · signal-only (no cash/fees) was -2.27%. Starts YES **25/30**. Fills 351 · skips 96 · realized $+387.41.
+Cash book **-12.70%** ($8,730) · signal-only (no cash/fees) was -2.27%. Starts YES **25/30**. Fills 359 · skips 96 · realized $+387.41.
 
 ## How this sleeve decides (like you are 10)
 
@@ -537,6 +537,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,554.04 | ▲ close $8,554.04 vs 09:30 $8,572.48 (session +0.00) | 16:00 close · cash $8,554.04 · no lots left · equity $8,554.04. | — |
 | 2026-10-30 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,554.04 | ▲ 09:30 equity $8,554.04 vs yday $8,554.04 (+0.00) | 09:30 open · cash $8,554.04 · no holdings · equity $8,554.04 vs prior close $8,554.04 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-10-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,554.04 | ▲ close $8,554.04 vs 09:30 $8,554.04 (session +0.00) | 16:00 close · cash $8,554.04 · no lots left · equity $8,554.04. | — |
+| 2026-11-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,554.04 | ▲ 09:30 equity $8,554.04 vs yday $8,554.04 (+0.00) | 09:30 open · cash $8,554.04 · no holdings · equity $8,554.04 vs prior close $8,554.04 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-02 09:30 ET | **BUY** | `CMG` | 33 | $31.90 | $2.09 | — | $7,499.25 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list ohlc_hot; 🔵; ret5=+15.9; leftover $1069.26 | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `GEN` | 36 | $29.05 | $2.10 | — | $6,451.35 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list ohlc_hot; 🔵; ret5=+17.1; leftover $1069.26 | join🟡 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `GM` | 12 | $88.50 | $2.03 | — | $5,387.33 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list ohlc_hot; 🔵; ret5=+15.1; leftover $1069.26 | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `WEN` | 148 | $7.22 | $2.43 | — | $4,316.33 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list ohlc_hot; 🔵; ret5=+15.9; leftover $1069.26 | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `BAH` | 12 | $87.16 | $2.03 | — | $3,268.39 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list ohlc_hot; 🔵; ret5=+13.0; leftover $1069.26 | join🔴 sector🔴 gen🟢 news🔴 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `BSY` | 26 | $40.95 | $2.07 | — | $2,201.62 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list ohlc_hot; 🔵; ret5=+3.0; leftover $1069.26 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `GLOB` | 22 | $46.50 | $2.06 | — | $1,176.56 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list ohlc_hot; 🔵; ret5=+3.8; leftover $1069.26 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `POOL` | 5 | $208.87 | $2.00 | — | $130.21 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list yday_gainer; 🔵; ret5=+3.5; leftover $1069.26 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $130.21 | ▲ close $8,729.64 vs 09:30 $8,554.04 (session +192.40) | 16:00 close · cash $130.21 · equity $8,729.64 vs 09:30 $8,554.04 (+175.60; session marks +192.40) · 8 name(s) marked open→close (per-name table). CMG×33 09:30 $31.90 → close $32.91 +33.33; GEN×36 09:30 $29.05 → close $29.89 +30.24; GM×12 09:30 $88.50 → close $89.94 +17.28; WEN×148 09:30 $7.22 → close $7.26 +5.92; BAH×12 09:30 $87.16 → close $88.02 +10.32; BSY×26 09:30 $40.95 → close $42.40 +37.70; GLOB×22 09:30 $46.50 → close $47.78 +28.16; POOL×5 09:30 $208.87 → close $214.76 +29.45 | — |
 
 ## Not taken
 

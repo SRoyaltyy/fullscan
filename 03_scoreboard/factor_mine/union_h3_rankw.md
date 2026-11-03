@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `rank_w` · sell `list` · S-boost `none` · rank-weighted leftover
 
-Cash book **-19.46%** ($8,054) · signal-only (no cash/fees) was -4.92%. Starts YES **0/30**. Fills 308 · skips 290 · realized $-875.40.
+Cash book **-21.34%** ($7,866) · signal-only (no cash/fees) was -4.92%. Starts YES **0/30**. Fills 323 · skips 290 · realized $-875.40.
 
 ## How this sleeve decides (like you are 10)
 
@@ -488,6 +488,23 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-30 09:30 ET | **SELL** | `SGRY` | 12 | $23.24 | $2.05 | $-3.59 | $4,361.04 | ▼ -3.59 after sell → book $8,109.58; vs 09:30 mark -2.04 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-30 09:30 ET | **SELL** | `VEEV` | 6 | $312.06 | $2.03 | $-24.68 | $6,231.37 | ▼ -24.68 after sell → book $8,107.55; vs 09:30 mark -2.03 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,231.37 | ▼ close $8,054.18 vs 09:30 $8,117.90 (session -53.37) | 16:00 close · cash $6,231.37 · equity $8,054.18 vs 09:30 $8,117.90 (-63.72; session marks -53.37) · 9 name(s) marked open→close (per-name table). AUTL×71 09:30 $1.58 → close $1.52 -4.26; BRKR×2 09:30 $59.47 → close $57.07 -4.80; FDMT×7 09:30 $12.49 → close $11.90 -4.13; NEO×7 09:30 $17.95 → close $17.38 -3.99; NVTS×2 09:30 $8.53 → close $8.48 -0.10; PACS×23 09:30 $49.38 → close $47.81 -36.11; PRMB×2 09:30 $19.45 → close $19.74 +0.58; SMMT×4 09:30 $16.03 → close $16.03 +0.00; SRRK×4 09:30 $44.04 → close $43.90 -0.56 | — |
+| 2026-11-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6,231.37 | ▲ 09:30 equity $8,058.71 vs yday $8,054.18 (+4.53) | 09:30 open · cash $6,231.37 (unchanged overnight, no fees) · equity $8,058.71 vs prior close $8,054.18 (+4.53) · 9 name(s) re-marked at the open (per-name table). AUTL×71 yday $1.52 → 09:30 $1.55 +2.13; BRKR×2 yday $57.07 → 09:30 $57.07 +0.00; FDMT×7 yday $11.90 → 09:30 $11.88 -0.14; NEO×7 yday $17.38 → 09:30 $17.66 +1.96; NVTS×2 yday $8.48 → 09:30 $8.56 +0.16; PACS×23 yday $47.81 → 09:30 $47.77 -0.92; PRMB×2 yday $19.74 → 09:30 $20.03 +0.58; SMMT×4 yday $16.03 → 09:30 $16.00 -0.12; SRRK×4 yday $43.90 → 09:30 $44.12 +0.88 | — |
+| 2026-11-02 09:30 ET | **SELL** | `AUTL` | 71 | $1.55 | $1.34 | $-2.65 | $6,340.08 | ▼ -2.65 after sell → book $8,057.37; vs 09:30 mark -1.34 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-02 09:30 ET | **SELL** | `BRKR` | 2 | $57.07 | $1.17 | $-9.57 | $6,453.06 | ▼ -9.57 after sell → book $8,056.21; vs 09:30 mark -1.16 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-02 09:30 ET | **SELL** | `FDMT` | 7 | $11.88 | $0.87 | $-1.80 | $6,535.34 | ▼ -1.80 after sell → book $8,055.33; vs 09:30 mark -0.88 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-02 09:30 ET | **SELL** | `NEO` | 7 | $17.66 | $1.28 | $+0.01 | $6,657.69 | ▲ +0.01 after sell → book $8,054.06; vs 09:30 mark -1.27 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-02 09:30 ET | **SELL** | `NVTS` | 2 | $8.56 | $0.20 | $-1.99 | $6,674.61 | ▼ -1.99 after sell → book $8,053.86; vs 09:30 mark -0.20 | dropped from list after 3 sess (min 3) | join🔴 sector🔴 gen🟢 news🟢 digest🟢 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **SELL** | `PACS` | 23 | $47.77 | $2.08 | $-14.72 | $7,771.24 | ▼ -14.72 after sell → book $8,051.78; vs 09:30 mark -2.08 | dropped from list after 4 sess (min 3) | — |
+| 2026-11-02 09:30 ET | **SELL** | `PRMB` | 2 | $20.03 | $0.43 | $+1.25 | $7,810.87 | ▲ +1.25 after sell → book $8,051.35; vs 09:30 mark -0.43 | dropped from list after 3 sess (min 3) | join🟡 sector🟡 gen🟢 news🟡 digest🔴 ab🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **SELL** | `SRRK` | 4 | $44.12 | $1.80 | $-2.36 | $7,985.56 | ▼ -2.36 after sell → book $8,049.56; vs 09:30 mark -1.79 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-02 09:30 ET | **BUY** | `VEEV` | 6 | $316.20 | $2.01 | — | $6,086.35 | — | rank-weighted leftover; list flatten; 🔵; ret5=-3.1; leftover $1996.39 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `CORT` | 21 | $80.93 | $2.05 | — | $4,384.77 | — | rank-weighted leftover; list flatten; 🔵; ret5=-5.5; leftover $1711.19 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `VLO` | 3 | $392.68 | $2.00 | — | $3,204.73 | — | rank-weighted leftover; list flatten; 🔵; ret5=-4.7; leftover $1425.99 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `CDNA` | 13 | $86.88 | $2.03 | — | $2,073.26 | — | rank-weighted leftover; list flatten; 🔵; ret5=+26.3; leftover $1140.79 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `ARQT` | 26 | $32.08 | $2.07 | — | $1,237.19 | — | rank-weighted leftover; list flatten; 🔵; ret5=+2.8; leftover $855.60 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `ETON` | 10 | $52.92 | $2.02 | — | $705.97 | — | rank-weighted leftover; list flatten; 🔵; ret5=+4.4; leftover $570.40 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `AMN` | 6 | $47.47 | $2.01 | — | $419.15 | — | rank-weighted leftover; list flatten; 🔵; ret5=-1.9; leftover $285.20 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟢 |
+| 2026-11-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $419.15 | ▼ close $7,866.31 vs 09:30 $8,058.71 (session -169.07) | 16:00 close · cash $419.15 · equity $7,866.31 vs 09:30 $8,058.71 (-192.40; session marks -169.07) · 8 name(s) marked open→close (per-name table). SMMT×4 09:30 $16.00 → close $14.80 -4.80; VEEV×6 09:30 $316.20 → close $307.00 -55.20; CORT×21 09:30 $80.93 → close $80.46 -9.87; VLO×3 09:30 $392.68 → close $381.46 -33.66; CDNA×13 09:30 $86.88 → close $85.88 -13.00; ARQT×26 09:30 $32.08 → close $31.26 -21.24; ETON×10 09:30 $52.92 → close $50.81 -21.10; AMN×6 09:30 $47.47 → close $45.77 -10.20 | — |
 
 ## Not taken
 

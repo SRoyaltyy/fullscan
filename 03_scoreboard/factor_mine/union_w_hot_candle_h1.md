@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `w_hot_candle` · size `leftover` · sell `list` · S-boost `none` · rank by w_hot_candle
 
-Cash book **+15.23%** ($11,523) · signal-only (no cash/fees) was +36.45%. Starts YES **29/30**. Fills 471 · skips 97 · realized $+14.68.
+Cash book **+16.95%** ($11,695) · signal-only (no cash/fees) was +36.45%. Starts YES **29/30**. Fills 479 · skips 97 · realized $+14.68.
 
 ## How this sleeve decides (like you are 10)
 
@@ -654,6 +654,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $11,522.59 | ▲ close $11,522.59 vs 09:30 $11,549.28 (session +0.00) | 16:00 close · cash $11,522.59 · no lots left · equity $11,522.59. | — |
 | 2026-10-30 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $11,522.59 | ▲ 09:30 equity $11,522.59 vs yday $11,522.59 (+0.00) | 09:30 open · cash $11,522.59 · no holdings · equity $11,522.59 vs prior close $11,522.59 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-10-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $11,522.59 | ▲ close $11,522.59 vs 09:30 $11,522.59 (session +0.00) | 16:00 close · cash $11,522.59 · no lots left · equity $11,522.59. | — |
+| 2026-11-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $11,522.59 | ▲ 09:30 equity $11,522.59 vs yday $11,522.59 (+0.00) | 09:30 open · cash $11,522.59 · no holdings · equity $11,522.59 vs prior close $11,522.59 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-02 09:30 ET | **BUY** | `CDNA` | 16 | $86.88 | $2.04 | — | $10,130.47 | — | rank by w_hot_candle; rank w_hot_candle; list flatten; 🔵; ret5=+26.3; leftover $1440.32 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `SLN` | 72 | $19.75 | $2.21 | — | $8,706.27 | — | rank by w_hot_candle; rank w_hot_candle; list ohlc_hot; ret5=+0.4; leftover $1440.32 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `BAH` | 16 | $87.16 | $2.04 | — | $7,309.67 | — | rank by w_hot_candle; rank w_hot_candle; list ohlc_hot; 🔵; ret5=+13.0; leftover $1440.32 | join🔴 sector🔴 gen🟢 news🔴 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `BC` | 18 | $76.25 | $2.04 | — | $5,935.12 | — | rank by w_hot_candle; rank w_hot_candle; list ohlc_hot; 🔵; ret5=+14.4; leftover $1440.32 | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `TGTX` | 23 | $61.01 | $2.06 | — | $4,529.84 | — | rank by w_hot_candle; rank w_hot_candle; list ohlc_hot; ret5=+12.9; leftover $1440.32 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `REAL` | 117 | $12.31 | $2.34 | — | $3,087.22 | — | rank by w_hot_candle; rank w_hot_candle; list ohlc_hot; 🔵; ret5=+10.3; leftover $1440.32 | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🟡 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `GEN` | 49 | $29.05 | $2.14 | — | $1,661.64 | — | rank by w_hot_candle; rank w_hot_candle; list ohlc_hot; 🔵; ret5=+17.1; leftover $1440.32 | join🟡 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `ROP` | 3 | $465.90 | $2.00 | — | $261.94 | — | rank by w_hot_candle; rank w_hot_candle; list ohlc_hot; 🔵; ret5=+6.5; leftover $1440.32 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $261.94 | ▲ close $11,695.38 vs 09:30 $11,522.59 (session +189.65) | 16:00 close · cash $261.94 · equity $11,695.38 vs 09:30 $11,522.59 (+172.79; session marks +189.65) · 8 name(s) marked open→close (per-name table). CDNA×16 09:30 $86.88 → close $85.88 -16.00; SLN×72 09:30 $19.75 → close $19.76 +0.72; BAH×16 09:30 $87.16 → close $88.02 +13.76; BC×18 09:30 $76.25 → close $79.05 +50.40; TGTX×23 09:30 $61.01 → close $59.95 -24.38; REAL×117 09:30 $12.31 → close $13.02 +83.07; GEN×49 09:30 $29.05 → close $29.89 +41.16; ROP×3 09:30 $465.90 → close $479.54 +40.92 | — |
 
 ## Not taken
 

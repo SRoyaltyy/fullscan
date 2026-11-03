@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · merged news🟢 and cameras +7 −≤1
 
-Cash book **-22.98%** ($7,702) · signal-only (no cash/fees) was -11.63%. Starts YES **4/30**. Fills 86 · skips 12 · realized $-910.91.
+Cash book **-22.11%** ($7,789) · signal-only (no cash/fees) was -11.63%. Starts YES **4/30**. Fills 87 · skips 12 · realized $-910.91.
 
 ## How this sleeve decides (like you are 10)
 
@@ -273,6 +273,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,701.50 | ▲ close $7,701.50 vs 09:30 $7,701.50 (session +0.00) | 16:00 close · cash $7,701.50 · no lots left · equity $7,701.50. | — |
 | 2026-10-30 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,701.50 | ▲ 09:30 equity $7,701.50 vs yday $7,701.50 (+0.00) | 09:30 open · cash $7,701.50 · no holdings · equity $7,701.50 vs prior close $7,701.50 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-10-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,701.50 | ▲ close $7,701.50 vs 09:30 $7,701.50 (session +0.00) | 16:00 close · cash $7,701.50 · no lots left · equity $7,701.50. | — |
+| 2026-11-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,701.50 | ▲ 09:30 equity $7,701.50 vs yday $7,701.50 (+0.00) | 09:30 open · cash $7,701.50 · no holdings · equity $7,701.50 vs prior close $7,701.50 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-02 09:30 ET | **BUY** | `LLY` | 5 | $1393.15 | $2.00 | — | $733.74 | — | merged news🟢 and cameras +7 −≤1; gate cam_bad_max=1,n_pos_min=7,news=good; rank cond; list ohlc_hot; 🔵; ret5=+11.3; leftover $7701.50 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $733.74 | ▲ close $7,788.69 vs 09:30 $7,701.50 (session +89.20) | 16:00 close · cash $733.74 · equity $7,788.69 vs 09:30 $7,701.50 (+87.19; session marks +89.20) · 1 name(s) marked open→close (per-name table). LLY×5 09:30 $1393.15 → close $1410.99 +89.20 | — |
 
 ## Not taken
 

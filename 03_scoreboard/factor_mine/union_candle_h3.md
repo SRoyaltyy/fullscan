@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ candle, no 🚨
 
-Cash book **-21.40%** ($7,860) · signal-only (no cash/fees) was +24.03%. Starts YES **8/30**. Fills 341 · skips 304 · realized $-1035.82.
+Cash book **-21.78%** ($7,822) · signal-only (no cash/fees) was +24.03%. Starts YES **8/30**. Fills 356 · skips 304 · realized $-1035.82.
 
 ## How this sleeve decides (like you are 10)
 
@@ -525,6 +525,23 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-30 09:30 ET | **SELL** | `POOL` | 6 | $206.00 | $2.03 | $+60.58 | $4,822.59 | ▲ +60.58 after sell → book $7,906.15; vs 09:30 mark -2.03 | dropped from list after 3 sess (min 3) | join🔴 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-30 09:30 ET | **SELL** | `SGRY` | 56 | $23.24 | $2.18 | $-2.10 | $6,121.86 | ▼ -2.10 after sell → book $7,903.98; vs 09:30 mark -2.17 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,121.86 | ▼ close $7,860.20 vs 09:30 $7,914.33 (session -43.78) | 16:00 close · cash $6,121.86 · equity $7,860.20 vs 09:30 $7,914.33 (-54.13; session marks -43.78) · 7 name(s) marked open→close (per-name table). EGG×15 09:30 $5.00 → close $4.91 -1.35; FDMT×6 09:30 $12.49 → close $11.90 -3.54; JLHL×14 09:30 $5.37 → close $5.71 +4.76; NEO×4 09:30 $17.95 → close $17.38 -2.28; PACS×27 09:30 $49.38 → close $47.81 -42.39; PRIM×1 09:30 $72.11 → close $72.77 +0.66; QTTB×9 09:30 $8.87 → close $8.91 +0.36 | — |
+| 2026-11-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6,121.86 | ▲ 09:30 equity $7,862.76 vs yday $7,860.20 (+2.56) | 09:30 open · cash $6,121.86 (unchanged overnight, no fees) · equity $7,862.76 vs prior close $7,860.20 (+2.56) · 7 name(s) re-marked at the open (per-name table). EGG×15 yday $4.91 → 09:30 $4.91 +0.00; FDMT×6 yday $11.90 → 09:30 $11.88 -0.12; JLHL×14 yday $5.71 → 09:30 $5.76 +0.70; NEO×4 yday $17.38 → 09:30 $17.66 +1.12; PACS×27 yday $47.81 → 09:30 $47.77 -1.08; PRIM×1 yday $72.77 → 09:30 $73.90 +1.13; QTTB×9 yday $8.91 → 09:30 $9.00 +0.81 | — |
+| 2026-11-02 09:30 ET | **SELL** | `EGG` | 15 | $4.91 | $0.80 | $-5.07 | $6,194.71 | ▼ -5.07 after sell → book $7,861.96; vs 09:30 mark -0.80 | dropped from list after 3 sess (min 3) | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-11-02 09:30 ET | **SELL** | `FDMT` | 6 | $11.88 | $0.75 | $-1.54 | $6,265.24 | ▼ -1.54 after sell → book $7,861.21; vs 09:30 mark -0.75 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-02 09:30 ET | **SELL** | `JLHL` | 14 | $5.76 | $0.87 | $+0.55 | $6,345.01 | ▲ +0.55 after sell → book $7,860.34; vs 09:30 mark -0.87 | dropped from list after 3 sess (min 3) | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **SELL** | `NEO` | 4 | $17.66 | $0.74 | $-0.00 | $6,414.91 | ▼ -0.00 after sell → book $7,859.60; vs 09:30 mark -0.74 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-02 09:30 ET | **SELL** | `PACS` | 27 | $47.77 | $2.09 | $-16.58 | $7,702.61 | ▼ -16.58 after sell → book $7,857.51; vs 09:30 mark -2.09 | dropped from list after 4 sess (min 3) | — |
+| 2026-11-02 09:30 ET | **SELL** | `PRIM` | 1 | $73.90 | $0.76 | $+1.28 | $7,775.75 | ▲ +1.28 after sell → book $7,856.75; vs 09:30 mark -0.76 | dropped from list after 3 sess (min 3) | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **SELL** | `QTTB` | 9 | $9.00 | $0.86 | $+1.49 | $7,855.89 | ▲ +1.49 after sell → book $7,855.89; vs 09:30 mark -0.86 | dropped from list after 3 sess (min 3) | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `CDNA` | 11 | $86.88 | $2.02 | — | $6,898.19 | — | union ∩ candle, no 🚨; gate candle_capture=True; list flatten; 🔵; ret5=+26.3; leftover $981.99 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `AMN` | 20 | $47.47 | $2.05 | — | $5,946.74 | — | union ∩ candle, no 🚨; gate candle_capture=True; list flatten; 🔵; ret5=-1.9; leftover $981.99 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟢 |
+| 2026-11-02 09:30 ET | **BUY** | `PRMB` | 49 | $20.03 | $2.14 | — | $4,963.13 | — | union ∩ candle, no 🚨; gate candle_capture=True; list probable,yday_gainer,yday_mover; 🔵; ret5=+0.3; leftover $981.99 | join🟡 sector🟡 gen🟢 news🟡 digest🔴 ab🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `NVTS` | 114 | $8.56 | $2.33 | — | $3,984.96 | — | union ∩ candle, no 🚨; gate candle_capture=True; list probable,yday_gainer,yday_mover; ret5=+1.2; leftover $981.99 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `EPR` | 17 | $57.70 | $2.04 | — | $3,002.02 | — | union ∩ candle, no 🚨; gate candle_capture=True; list probable,yday_gainer,yday_mover; 🔵; ret5=+3.7; leftover $981.99 | join🟡 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `POOL` | 4 | $208.87 | $2.00 | — | $2,164.54 | — | union ∩ candle, no 🚨; gate candle_capture=True; list yday_gainer; 🔵; ret5=+3.5; leftover $981.99 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `AMX` | 39 | $24.57 | $2.11 | — | $1,204.20 | — | union ∩ candle, no 🚨; gate candle_capture=True; list yday_gainer; 🔵; ret5=-0.4; leftover $981.99 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `TBBB` | 17 | $56.87 | $2.04 | — | $235.37 | — | union ∩ candle, no 🚨; gate candle_capture=True; list yday_gainer; 🔵; ret5=-3.2; leftover $981.99 | join🔴 sector🟡 gen🟢 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $235.37 | ▼ close $7,822.45 vs 09:30 $7,862.76 (session -16.71) | 16:00 close · cash $235.37 · equity $7,822.45 vs 09:30 $7,862.76 (-40.31; session marks -16.71) · 8 name(s) marked open→close (per-name table). CDNA×11 09:30 $86.88 → close $85.88 -11.00; AMN×20 09:30 $47.47 → close $45.77 -34.00; PRMB×49 09:30 $20.03 → close $20.77 +36.26; NVTS×114 09:30 $8.56 → close $7.93 -71.82; EPR×17 09:30 $57.70 → close $59.58 +31.96; POOL×4 09:30 $208.87 → close $214.76 +23.56; AMX×39 09:30 $24.57 → close $24.74 +6.63; TBBB×17 09:30 $56.87 → close $56.97 +1.70 | — |
 
 ## Not taken
 

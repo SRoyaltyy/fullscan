@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · Clock-B #2 fresh catalyst + limited extension (research; not KEEP)
 
-Cash book **-17.50%** ($8,250) · signal-only (no cash/fees) was -4.91%. Starts YES **13/30**. Fills 381 · skips 106 · realized $-137.13.
+Cash book **-19.74%** ($8,026) · signal-only (no cash/fees) was -4.91%. Starts YES **13/30**. Fills 385 · skips 106 · realized $-137.13.
 
 ## How this sleeve decides (like you are 10)
 
@@ -567,6 +567,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-30 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $5,987.16 | ▼ 09:30 equity $8,289.10 vs yday $8,324.22 (-35.12) | 09:30 open · cash $5,987.16 (unchanged overnight, no fees) · equity $8,289.10 vs prior close $8,324.22 (-35.12) · 2 name(s) re-marked at the open (per-name table). GLND×366 yday $3.31 → 09:30 $3.19 -43.92; ITW×4 yday $281.40 → 09:30 $283.60 +8.80 | — |
 | 2026-10-30 09:30 ET | **SELL** | `ITW` | 4 | $283.60 | $2.02 | $+41.18 | $7,119.54 | ▲ +41.18 after sell → book $8,287.08; vs 09:30 mark -2.02 | dropped from list after 3 sess (min 1) | join🔴 sector🔴 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,119.54 | ▼ close $8,250.48 vs 09:30 $8,289.10 (session -36.60) | 16:00 close · cash $7,119.54 · equity $8,250.48 vs 09:30 $8,289.10 (-38.62; session marks -36.60) · 1 name(s) marked open→close (per-name table). GLND×366 09:30 $3.19 → close $3.09 -36.60 | — |
+| 2026-11-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,119.54 | ▲ 09:30 equity $8,261.46 vs yday $8,250.48 (+10.98) | 09:30 open · cash $7,119.54 (unchanged overnight, no fees) · equity $8,261.46 vs prior close $8,250.48 (+10.98) · 1 name(s) re-marked at the open (per-name table). GLND×366 yday $3.09 → 09:30 $3.12 +10.98 | — |
+| 2026-11-02 09:30 ET | **BUY** | `AMX` | 72 | $24.57 | $2.21 | — | $5,348.29 | — | Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list yday_gainer; 🔵; ret5=-0.4; leftover $1779.88 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `TBBB` | 31 | $56.87 | $2.08 | — | $3,583.24 | — | Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list yday_gainer; 🔵; ret5=-3.2; leftover $1779.88 | join🔴 sector🟡 gen🟢 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `ITW` | 6 | $281.77 | $2.01 | — | $1,890.61 | — | Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list yday_gainer; 🔵; ret5=+1.0; leftover $1779.88 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `NVTS` | 207 | $8.56 | $2.67 | — | $116.02 | — | Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list probable,yday_gainer,yday_mover; ret5=+1.2; leftover $1779.88 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $116.02 | ▼ close $8,026.06 vs 09:30 $8,261.46 (session -226.43) | 16:00 close · cash $116.02 · equity $8,026.06 vs 09:30 $8,261.46 (-235.40; session marks -226.43) · 5 name(s) marked open→close (per-name table). GLND×366 09:30 $3.12 → close $2.68 -161.04; AMX×72 09:30 $24.57 → close $24.74 +12.24; TBBB×31 09:30 $56.87 → close $56.97 +3.10; ITW×6 09:30 $281.77 → close $290.05 +49.68; NVTS×207 09:30 $8.56 → close $7.93 -130.41 | — |
 
 ## Not taken
 

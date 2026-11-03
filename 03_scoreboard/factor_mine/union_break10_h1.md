@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ break10, no 🚨
 
-Cash book **-16.23%** ($8,377) · signal-only (no cash/fees) was +11.56%. Starts YES **14/30**. Fills 485 · skips 100 · realized $-529.03.
+Cash book **-14.72%** ($8,528) · signal-only (no cash/fees) was +11.56%. Starts YES **14/30**. Fills 493 · skips 100 · realized $-529.03.
 
 ## How this sleeve decides (like you are 10)
 
@@ -669,6 +669,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,376.57 | ▲ close $8,376.57 vs 09:30 $8,398.86 (session +0.00) | 16:00 close · cash $8,376.57 · no lots left · equity $8,376.57. | — |
 | 2026-10-30 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,376.57 | ▲ 09:30 equity $8,376.57 vs yday $8,376.57 (+0.00) | 09:30 open · cash $8,376.57 · no holdings · equity $8,376.57 vs prior close $8,376.57 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-10-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,376.57 | ▲ close $8,376.57 vs 09:30 $8,376.57 (session +0.00) | 16:00 close · cash $8,376.57 · no lots left · equity $8,376.57. | — |
+| 2026-11-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,376.57 | ▲ 09:30 equity $8,376.57 vs yday $8,376.57 (+0.00) | 09:30 open · cash $8,376.57 · no holdings · equity $8,376.57 vs prior close $8,376.57 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-02 09:30 ET | **BUY** | `CDNA` | 12 | $86.88 | $2.03 | — | $7,331.98 | — | union ∩ break10, no 🚨; gate break_10=True; list flatten; 🔵; ret5=+26.3; leftover $1047.07 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `POOL` | 5 | $208.87 | $2.00 | — | $6,285.63 | — | union ∩ break10, no 🚨; gate break_10=True; list yday_gainer; 🔵; ret5=+3.5; leftover $1047.07 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `GEN` | 36 | $29.05 | $2.10 | — | $5,237.73 | — | union ∩ break10, no 🚨; gate break_10=True; list ohlc_hot; 🔵; ret5=+17.1; leftover $1047.07 | join🟡 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `BC` | 13 | $76.25 | $2.03 | — | $4,244.45 | — | union ∩ break10, no 🚨; gate break_10=True; list ohlc_hot; 🔵; ret5=+14.4; leftover $1047.07 | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `BAH` | 12 | $87.16 | $2.03 | — | $3,196.51 | — | union ∩ break10, no 🚨; gate break_10=True; list ohlc_hot; 🔵; ret5=+13.0; leftover $1047.07 | join🔴 sector🔴 gen🟢 news🔴 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `BLDR` | 15 | $65.73 | $2.04 | — | $2,208.52 | — | union ∩ break10, no 🚨; gate break_10=True; list ohlc_hot; 🔵; ret5=+14.2; leftover $1047.07 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🟡 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `REAL` | 85 | $12.31 | $2.25 | — | $1,159.93 | — | union ∩ break10, no 🚨; gate break_10=True; list ohlc_hot; 🔵; ret5=+10.3; leftover $1047.07 | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🟡 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `BTSG` | 15 | $67.50 | $2.04 | — | $145.39 | — | union ∩ break10, no 🚨; gate break_10=True; list ohlc_hot; ret5=+11.3; leftover $1047.07 | join🟡 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $145.39 | ▲ close $8,527.58 vs 09:30 $8,376.57 (session +167.51) | 16:00 close · cash $145.39 · equity $8,527.58 vs 09:30 $8,376.57 (+151.01; session marks +167.51) · 8 name(s) marked open→close (per-name table). CDNA×12 09:30 $86.88 → close $85.88 -12.00; POOL×5 09:30 $208.87 → close $214.76 +29.45; GEN×36 09:30 $29.05 → close $29.89 +30.24; BC×13 09:30 $76.25 → close $79.05 +36.40; BAH×12 09:30 $87.16 → close $88.02 +10.32; BLDR×15 09:30 $65.73 → close $67.82 +31.35; REAL×85 09:30 $12.31 → close $13.02 +60.35; BTSG×15 09:30 $67.50 → close $66.26 -18.60 | — |
 
 ## Not taken
 

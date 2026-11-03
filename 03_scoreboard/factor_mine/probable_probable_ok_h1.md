@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `probable` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-26.76%** ($7,324) · signal-only (no cash/fees) was -9.22%. Starts YES **0/30**. Fills 328 · skips 53 · realized $-864.75.
+Cash book **-24.10%** ($7,590) · signal-only (no cash/fees) was -9.22%. Starts YES **0/30**. Fills 329 · skips 53 · realized $-864.75.
 
 ## How this sleeve decides (like you are 10)
 
@@ -514,6 +514,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,324.30 | ▲ close $7,324.30 vs 09:30 $7,329.03 (session +0.00) | 16:00 close · cash $7,324.30 · no lots left · equity $7,324.30. | — |
 | 2026-10-30 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,324.30 | ▲ 09:30 equity $7,324.30 vs yday $7,324.30 (+0.00) | 09:30 open · cash $7,324.30 · no holdings · equity $7,324.30 vs prior close $7,324.30 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-10-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,324.30 | ▲ close $7,324.30 vs 09:30 $7,324.30 (session +0.00) | 16:00 close · cash $7,324.30 · no lots left · equity $7,324.30. | — |
+| 2026-11-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,324.30 | ▲ 09:30 equity $7,324.30 vs yday $7,324.30 (+0.00) | 09:30 open · cash $7,324.30 · no holdings · equity $7,324.30 vs prior close $7,324.30 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-02 09:30 ET | **BUY** | `PRMB` | 365 | $20.03 | $4.71 | — | $8.64 | — | combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer,yday_mover; 🔵; ret5=+0.3; leftover $7324.30 | join🟡 sector🟡 gen🟢 news🟡 digest🔴 ab🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8.64 | ▲ close $7,589.69 vs 09:30 $7,324.30 (session +270.10) | 16:00 close · cash $8.64 · equity $7,589.69 vs 09:30 $7,324.30 (+265.39; session marks +270.10) · 1 name(s) marked open→close (per-name table). PRMB×365 09:30 $20.03 → close $20.77 +270.10 | — |
 
 ## Not taken
 

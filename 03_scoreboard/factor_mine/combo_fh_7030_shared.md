@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared flatten_h5/union_hot_n4_h1 w=0.7,0.3 net=priority
 
-Cash book **+1.29%** ($10,129) · signal-only (no cash/fees) was —. Starts YES **17/30**. Fills 485 · skips 411 · realized $+280.04.
+Cash book **-1.40%** ($9,860) · signal-only (no cash/fees) was —. Starts YES **17/30**. Fills 493 · skips 411 · realized $+280.04.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $2,411.36.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $669.36.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -670,6 +670,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2,411.36 | ▼ close $10,405.13 vs 09:30 $10,420.48 (session -6.54) | 16:00 close · cash $2,411.36 · equity $10,405.13 vs 09:30 $10,420.48 (-15.35; session marks -6.54) · 6 name(s) marked open→close (per-name table). AUTL×729 09:30 $1.63 → close $1.58 -36.45; BRKR×18 09:30 $61.18 → close $62.00 +14.76; FDMT×95 09:30 $13.00 → close $12.78 -20.90; NEO×65 09:30 $17.25 → close $17.93 +44.20; PRGO×141 09:30 $16.05 → close $15.90 -21.15; SRRK×25 09:30 $43.66 → close $44.18 +13.00 | — |
 | 2026-10-30 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $2,411.36 | ▼ 09:30 equity $10,353.81 vs yday $10,405.13 (-51.32) | 09:30 open · cash $2,411.36 (unchanged overnight, no fees) · equity $10,353.81 vs prior close $10,405.13 (-51.32) | — |
 | 2026-10-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2,411.36 | ▼ close $10,129.38 vs 09:30 $10,353.81 (session -224.43) | 16:00 close · cash $2,411.36 · equity $10,129.38 vs 09:30 $10,353.81 (-224.43; session marks -224.43) · 6 name(s) marked open→close (per-name table). AUTL×729 09:30 $1.58 → close $1.52 -43.74; BRKR×18 09:30 $59.47 → close $57.07 -43.20; FDMT×95 09:30 $12.49 → close $11.90 -56.05; NEO×65 09:30 $17.95 → close $17.38 -37.05; PRGO×141 09:30 $16.07 → close $15.78 -40.89; SRRK×25 09:30 $44.04 → close $43.90 -3.50 | — |
+| 2026-11-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $2,411.36 | ▲ 09:30 equity $10,197.02 vs yday $10,129.38 (+67.64) | 09:30 open · cash $2,411.36 (unchanged overnight, no fees) · equity $10,197.02 vs prior close $10,129.38 (+67.64) | — |
+| 2026-11-02 09:30 ET | **BUY** | `CDNA` | 2 | $86.88 | $1.74 | — | $2,235.86 | — | top 4 by hot; rank hot_score; list flatten; 🔵; ret5=+26.3; combo leftover $180.85; owner union_hot_n4_h1 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `SLN` | 9 | $19.75 | $1.80 | — | $2,056.30 | — | top 4 by hot; rank hot_score; list ohlc_hot; ret5=+0.4; combo leftover $180.85; owner union_hot_n4_h1 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `GEN` | 6 | $29.05 | $1.76 | — | $1,880.24 | — | top 4 by hot; rank hot_score; list ohlc_hot; 🔵; ret5=+17.1; combo leftover $180.85; owner union_hot_n4_h1 | join🟡 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `BC` | 2 | $76.25 | $1.53 | — | $1,726.21 | — | top 4 by hot; rank hot_score; list ohlc_hot; 🔵; ret5=+14.4; combo leftover $180.85; owner union_hot_n4_h1 | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `CORT` | 3 | $80.93 | $2.00 | — | $1,481.42 | — | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ret5=-5.5; combo leftover $287.70; owner flatten_h5 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `ARQT` | 8 | $32.08 | $2.01 | — | $1,222.79 | — | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ret5=+2.8; combo leftover $287.70; owner flatten_h5 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `ETON` | 5 | $52.92 | $2.00 | — | $956.19 | — | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ret5=+4.4; combo leftover $287.70; owner flatten_h5 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `AMN` | 6 | $47.47 | $2.01 | — | $669.36 | — | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ret5=-1.9; combo leftover $287.70; owner flatten_h5 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟢 |
+| 2026-11-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $669.36 | ▼ close $9,859.63 vs 09:30 $10,197.02 (session -322.52) | 16:00 close · cash $669.36 · equity $9,859.63 vs 09:30 $10,197.02 (-337.39; session marks -322.52) · 14 name(s) marked open→close (per-name table). AUTL×729 09:30 $1.55 → close $1.42 -94.77; BRKR×18 09:30 $57.07 → close $55.69 -24.84; FDMT×95 09:30 $11.88 → close $11.37 -48.45; NEO×65 09:30 $17.66 → close $16.49 -76.05; PRGO×141 09:30 $15.95 → close $15.75 -28.20; SRRK×25 09:30 $44.12 → close $42.91 -30.25; CDNA×2 09:30 $86.88 → close $85.88 -2.00; SLN×9 09:30 $19.75 → close $19.76 +0.09; GEN×6 09:30 $29.05 → close $29.89 +5.04; BC×2 09:30 $76.25 → close $79.05 +5.60; CORT×3 09:30 $80.93 → close $80.46 -1.41; ARQT×8 09:30 $32.08 → close $31.26 -6.53; ETON×5 09:30 $52.92 → close $50.81 -10.55; AMN×6 09:30 $47.47 → close $45.77 -10.20 | — |
 
 ## Not taken
 

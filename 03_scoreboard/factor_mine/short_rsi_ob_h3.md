@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · RSI overbought
 
-Cash book **-9.69%** ($9,031) · signal-only (no cash/fees) was -115.85%. Starts YES **1/30**. Fills 353 · skips 279 · realized $-808.98.
+Cash book **-10.18%** ($8,982) · signal-only (no cash/fees) was -115.85%. Starts YES **1/30**. Fills 355 · skips 279 · realized $-808.98.
 
 ## How this sleeve decides (like you are 10)
 
@@ -535,6 +535,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-30 09:30 ET | **COVER** | `CDNA` | 22 | $82.10 | $2.06 | $-290.18 | $14,686.74 | ▼ -290.18 after sell → book $8,978.57; vs 09:30 mark -2.06 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-30 09:30 ET | **COVER** | `ILMN` | 5 | $253.84 | $2.00 | $+73.83 | $13,415.54 | ▲ +73.83 after sell → book $8,976.57; vs 09:30 mark -2.00 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $13,415.54 | ▲ close $9,031.13 vs 09:30 $8,980.63 (session +54.56) | 16:00 close · cash $13,415.54 · equity $9,031.13 vs 09:30 $8,980.63 (+50.50; session marks +54.56) · 5 name(s) marked open→close (per-name table). EGG×177 09:30 $5.00 → close $4.91 +15.93; EPR×16 09:30 $58.38 → close $57.71 +10.64; ITW×3 09:30 $283.60 → close $278.55 +15.15; MX×353 09:30 $2.45 → close $2.41 +14.12; TBBB×16 09:30 $56.52 → close $56.60 -1.28 | — |
+| 2026-11-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $13,415.54 | ▼ 09:30 equity $8,996.13 vs yday $9,031.13 (-35.00) | 09:30 open · cash $13,415.54 (unchanged overnight, no fees) · equity $8,996.13 vs prior close $9,031.13 (-35.00) · 5 name(s) re-marked at the open (per-name table). EGG×177 yday $4.91 → 09:30 $4.91 -0.00; EPR×16 yday $57.71 → 09:30 $57.70 +0.16; ITW×3 yday $278.55 → 09:30 $281.77 -9.66; MX×353 yday $2.41 → 09:30 $2.47 -21.18; TBBB×16 yday $56.60 → 09:30 $56.87 -4.32 | — |
+| 2026-11-02 09:30 ET | **SHORT** | `CDNA` | 25 | $86.88 | $2.15 | — | $15,585.39 | — | RSI overbought; gate rsi_ob=True; list flatten; 🔵; ret5=+26.3; leftover $2249.03 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **SHORT** | `HLP` | 544 | $4.13 | $7.19 | — | $17,824.92 | — | RSI overbought; gate rsi_ob=True; list ohlc_hot; 🔵; ret5=+15.7; leftover $2249.03 | join🔴 sector🟡 gen🟢 news🟡 digest🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $17,824.92 | ▼ close $8,982.11 vs 09:30 $8,996.13 (session -4.69) | 16:00 close · cash $17,824.92 · equity $8,982.11 vs 09:30 $8,996.13 (-14.02; session marks -4.69) · 7 name(s) marked open→close (per-name table). EGG×177 09:30 $4.91 → close $4.94 -5.81; EPR×16 09:30 $57.70 → close $59.58 -30.08; ITW×3 09:30 $281.77 → close $290.05 -24.84; MX×353 09:30 $2.47 → close $2.47 -0.00; TBBB×16 09:30 $56.87 → close $56.97 -1.60; CDNA×25 09:30 $86.88 → close $85.88 +25.00; HLP×544 09:30 $4.13 → close $4.07 +32.64 | — |
 
 ## Not taken
 

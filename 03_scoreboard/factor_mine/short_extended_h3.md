@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · ret_5>15
 
-Cash book **-6.24%** ($9,376) · signal-only (no cash/fees) was -55.91%. Starts YES **1/30**. Fills 375 · skips 265 · realized $-1568.09.
+Cash book **-7.55%** ($9,245) · signal-only (no cash/fees) was -55.91%. Starts YES **1/30**. Fills 389 · skips 265 · realized $-1568.09.
 
 ## How this sleeve decides (like you are 10)
 
@@ -557,6 +557,22 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-30 09:30 ET | **COVER** | `RBRK` | 6 | $131.94 | $2.01 | $-0.76 | $15,179.20 | ▼ -0.76 after sell → book $9,394.17; vs 09:30 mark -2.01 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-30 09:30 ET | **COVER** | `SGRY` | 35 | $23.24 | $2.10 | $-5.63 | $14,363.70 | ▼ -5.63 after sell → book $9,392.07; vs 09:30 mark -2.10 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,363.70 | ▼ close $9,375.68 vs 09:30 $9,404.77 (session -16.39) | 16:00 close · cash $14,363.70 · equity $9,375.68 vs 09:30 $9,404.77 (-29.09; session marks -16.39) · 8 name(s) marked open→close (per-name table). ABSI×58 09:30 $11.41 → close $11.13 +16.24; FIP×233 09:30 $2.84 → close $2.86 -4.66; IMSR×209 09:30 $3.18 → close $3.22 -8.36; JLHL×110 09:30 $5.37 → close $5.71 -37.40; RH×4 09:30 $149.51 → close $146.66 +11.40; S×24 09:30 $25.47 → close $25.15 +7.68; SAIL×27 09:30 $21.83 → close $21.06 +20.79; VSAT×8 09:30 $74.26 → close $77.02 -22.08 | — |
+| 2026-11-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $14,363.70 | ▼ 09:30 equity $9,339.15 vs yday $9,375.68 (-36.53) | 09:30 open · cash $14,363.70 (unchanged overnight, no fees) · equity $9,339.15 vs prior close $9,375.68 (-36.53) · 8 name(s) re-marked at the open (per-name table). ABSI×58 yday $11.13 → 09:30 $11.29 -9.28; FIP×233 yday $2.86 → 09:30 $2.90 -9.32; IMSR×209 yday $3.22 → 09:30 $3.24 -4.18; JLHL×110 yday $5.71 → 09:30 $5.76 -5.50; RH×4 yday $146.66 → 09:30 $148.55 -7.56; S×24 yday $25.15 → 09:30 $25.10 +1.20; SAIL×27 yday $21.06 → 09:30 $21.13 -1.89; VSAT×8 yday $77.02 → 09:30 $77.02 -0.00 | — |
+| 2026-11-02 09:30 ET | **COVER** | `ABSI` | 58 | $11.29 | $2.16 | $-47.28 | $13,706.72 | ▼ -47.28 after sell → book $9,336.99; vs 09:30 mark -2.16 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-02 09:30 ET | **COVER** | `FIP` | 233 | $2.90 | $3.01 | $-64.33 | $13,028.01 | ▼ -64.33 after sell → book $9,333.98; vs 09:30 mark -3.01 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-02 09:30 ET | **COVER** | `IMSR` | 209 | $3.24 | $2.70 | $-66.06 | $12,348.15 | ▼ -66.06 after sell → book $9,331.28; vs 09:30 mark -2.70 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-02 09:30 ET | **COVER** | `RH` | 4 | $148.55 | $2.00 | $-35.48 | $11,751.95 | ▼ -35.48 after sell → book $9,329.28; vs 09:30 mark -2.00 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-02 09:30 ET | **COVER** | `S` | 24 | $25.10 | $2.06 | $+6.88 | $11,147.49 | ▲ +6.88 after sell → book $9,327.22; vs 09:30 mark -2.06 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-02 09:30 ET | **COVER** | `SAIL` | 27 | $21.13 | $2.07 | $+24.71 | $10,574.91 | ▲ +24.71 after sell → book $9,325.15; vs 09:30 mark -2.07 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-02 09:30 ET | **COVER** | `VSAT` | 8 | $77.02 | $2.01 | $-43.18 | $9,956.74 | ▼ -43.18 after sell → book $9,323.14; vs 09:30 mark -2.01 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-02 09:30 ET | **SHORT** | `CDNA` | 7 | $86.88 | $2.05 | — | $10,562.85 | — | ret_5>15; gate ret_5_min=15.0; list flatten; 🔵; ret5=+26.3; leftover $665.94 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **SHORT** | `GEN` | 22 | $29.05 | $2.09 | — | $11,199.85 | — | ret_5>15; gate ret_5_min=15.0; list ohlc_hot; 🔵; ret5=+17.1; leftover $665.94 | join🟡 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **SHORT** | `HLP` | 161 | $4.13 | $2.53 | — | $11,862.26 | — | ret_5>15; gate ret_5_min=15.0; list ohlc_hot; 🔵; ret5=+15.7; leftover $665.94 | join🔴 sector🟡 gen🟢 news🟡 digest🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **SHORT** | `DNUT` | 201 | $3.30 | $2.66 | — | $12,522.90 | — | ret_5>15; gate ret_5_min=15.0; list ohlc_hot; 🔵; ret5=+16.1; leftover $665.94 | join🔴 sector🟡 gen🟢 news🟡 digest🔴 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **SHORT** | `WEN` | 92 | $7.22 | $2.31 | — | $13,184.83 | — | ret_5>15; gate ret_5_min=15.0; list ohlc_hot; 🔵; ret5=+15.9; leftover $665.94 | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **SHORT** | `GM` | 7 | $88.50 | $2.05 | — | $13,802.28 | — | ret_5>15; gate ret_5_min=15.0; list ohlc_hot; 🔵; ret5=+15.1; leftover $665.94 | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **SHORT** | `CMG` | 20 | $31.90 | $2.09 | — | $14,438.19 | — | ret_5>15; gate ret_5_min=15.0; list ohlc_hot; 🔵; ret5=+15.9; leftover $665.94 | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,438.19 | ▼ close $9,244.69 vs 09:30 $9,339.15 (session -62.67) | 16:00 close · cash $14,438.19 · equity $9,244.69 vs 09:30 $9,339.15 (-94.46; session marks -62.67) · 8 name(s) marked open→close (per-name table). JLHL×110 09:30 $5.76 → close $5.84 -8.80; CDNA×7 09:30 $86.88 → close $85.88 +7.00; GEN×22 09:30 $29.05 → close $29.89 -18.48; HLP×161 09:30 $4.13 → close $4.07 +9.66; DNUT×201 09:30 $3.30 → close $3.39 -18.09; WEN×92 09:30 $7.22 → close $7.26 -3.68; GM×7 09:30 $88.50 → close $89.94 -10.08; CMG×20 09:30 $31.90 → close $32.91 -20.20 | — |
 
 ## Not taken
 

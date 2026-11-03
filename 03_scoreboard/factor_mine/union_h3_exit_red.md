@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · buy last-green, sell next 09:30 if last bar flipped red
 
-Cash book **-27.95%** ($7,205) · signal-only (no cash/fees) was +22.17%. Starts YES **3/30**. Fills 375 · skips 297 · realized $-713.89.
+Cash book **-28.74%** ($7,126) · signal-only (no cash/fees) was +22.17%. Starts YES **3/30**. Fills 386 · skips 297 · realized $-713.89.
 
 ## How this sleeve decides (like you are 10)
 
@@ -559,6 +559,19 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-30 09:30 ET | **SELL** | `QTTB` | 37 | $8.87 | $2.12 | $+3.92 | $3,205.69 | ▲ +3.92 after sell → book $7,269.37; vs 09:30 mark -2.12 | exit last-red after 2 sess | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-10-30 09:30 ET | **SELL** | `SGRY` | 45 | $23.24 | $2.15 | $-2.47 | $4,249.35 | ▼ -2.47 after sell → book $7,267.23; vs 09:30 mark -2.14 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $4,249.35 | ▼ close $7,204.66 vs 09:30 $7,273.51 (session -62.57) | 16:00 close · cash $4,249.35 · equity $7,204.66 vs 09:30 $7,273.51 (-68.85; session marks -62.57) · 5 name(s) marked open→close (per-name table). FDMT×27 09:30 $12.49 → close $11.90 -15.93; NEO×18 09:30 $17.95 → close $17.38 -10.26; NVTS×121 09:30 $8.53 → close $8.48 -6.05; PACS×21 09:30 $49.38 → close $47.81 -32.97; PRIM×4 09:30 $72.11 → close $72.77 +2.64 | — |
+| 2026-11-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $4,249.35 | ▲ 09:30 equity $7,222.52 vs yday $7,204.66 (+17.86) | 09:30 open · cash $4,249.35 (unchanged overnight, no fees) · equity $7,222.52 vs prior close $7,204.66 (+17.86) · 5 name(s) re-marked at the open (per-name table). FDMT×27 yday $11.90 → 09:30 $11.88 -0.54; NEO×18 yday $17.38 → 09:30 $17.66 +5.04; NVTS×121 yday $8.48 → 09:30 $8.56 +9.68; PACS×21 yday $47.81 → 09:30 $47.77 -0.84; PRIM×4 yday $72.77 → 09:30 $73.90 +4.52 | — |
+| 2026-11-02 09:30 ET | **SELL** | `FDMT` | 27 | $11.88 | $2.09 | $-4.43 | $4,568.02 | ▼ -4.43 after sell → book $7,220.43; vs 09:30 mark -2.09 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-02 09:30 ET | **SELL** | `NEO` | 18 | $17.66 | $2.06 | $+2.37 | $4,883.84 | ▲ +2.37 after sell → book $7,218.36; vs 09:30 mark -2.07 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-02 09:30 ET | **SELL** | `NVTS` | 121 | $8.56 | $2.38 | $-12.00 | $5,917.21 | ▼ -12.00 after sell → book $7,215.98; vs 09:30 mark -2.39 | exit last-red after 4 sess | join🔴 sector🔴 gen🟢 news🟢 digest🟢 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **SELL** | `PACS` | 21 | $47.77 | $2.07 | $-13.79 | $6,918.31 | ▼ -13.79 after sell → book $7,213.91; vs 09:30 mark -2.07 | dropped from list after 4 sess (min 3) | — |
+| 2026-11-02 09:30 ET | **BUY** | `VEEV` | 3 | $316.20 | $2.00 | — | $5,967.71 | — | buy last-green, sell next 09:30 if last bar flipped red; gate last_green=True; list flatten; 🔵; ret5=-3.1; leftover $988.33 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `VLO` | 2 | $392.68 | $2.00 | — | $5,180.35 | — | buy last-green, sell next 09:30 if last bar flipped red; gate last_green=True; list flatten; 🔵; ret5=-4.7; leftover $988.33 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `CDNA` | 11 | $86.88 | $2.02 | — | $4,222.65 | — | buy last-green, sell next 09:30 if last bar flipped red; gate last_green=True; list flatten; 🔵; ret5=+26.3; leftover $988.33 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `AMN` | 20 | $47.47 | $2.05 | — | $3,271.20 | — | buy last-green, sell next 09:30 if last bar flipped red; gate last_green=True; list flatten; 🔵; ret5=-1.9; leftover $988.33 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟢 |
+| 2026-11-02 09:30 ET | **BUY** | `PRMB` | 49 | $20.03 | $2.14 | — | $2,287.59 | — | buy last-green, sell next 09:30 if last bar flipped red; gate last_green=True; list probable,yday_gainer,yday_mover; 🔵; ret5=+0.3; leftover $988.33 | join🟡 sector🟡 gen🟢 news🟡 digest🔴 ab🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `QTTB` | 109 | $9.00 | $2.32 | — | $1,304.28 | — | buy last-green, sell next 09:30 if last bar flipped red; gate last_green=True; list yday_gainer; 🔵; ret5=+3.0; leftover $988.33 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `TRU` | 12 | $77.74 | $2.03 | — | $369.37 | — | buy last-green, sell next 09:30 if last bar flipped red; gate last_green=True; list yday_gainer; 🔵; ret5=-5.8; leftover $988.33 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $369.37 | ▼ close $7,126.41 vs 09:30 $7,222.52 (session -72.95) | 16:00 close · cash $369.37 · equity $7,126.41 vs 09:30 $7,222.52 (-96.11; session marks -72.95) · 8 name(s) marked open→close (per-name table). PRIM×4 09:30 $73.90 → close $73.79 -0.44; VEEV×3 09:30 $316.20 → close $307.00 -27.60; VLO×2 09:30 $392.68 → close $381.46 -22.44; CDNA×11 09:30 $86.88 → close $85.88 -11.00; AMN×20 09:30 $47.47 → close $45.77 -34.00; PRMB×49 09:30 $20.03 → close $20.77 +36.26; QTTB×109 09:30 $9.00 → close $8.71 -31.61; TRU×12 09:30 $77.74 → close $79.23 +17.88 | — |
 
 ## Not taken
 

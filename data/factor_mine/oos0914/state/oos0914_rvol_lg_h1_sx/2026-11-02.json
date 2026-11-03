@@ -1,0 +1,147 @@
+{
+  "buys": [
+    {
+      "fill_rule": "open",
+      "price": 86.88,
+      "shares": 30,
+      "side": "BUY",
+      "ticker": "CDNA"
+    },
+    {
+      "fill_rule": "open",
+      "price": 76.25,
+      "shares": 35,
+      "side": "BUY",
+      "ticker": "BC"
+    },
+    {
+      "fill_rule": "open",
+      "price": 87.16,
+      "shares": 30,
+      "side": "BUY",
+      "ticker": "BAH"
+    },
+    {
+      "fill_rule": "open",
+      "price": 65.73,
+      "shares": 40,
+      "side": "BUY",
+      "ticker": "BLDR"
+    }
+  ],
+  "cash": 212.01,
+  "date": "2026-11-02",
+  "equity": 10908.56,
+  "fees": 8.365,
+  "fills": [
+    {
+      "fees": 2.08,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 86.88,
+      "shares": 30,
+      "side": "BUY",
+      "ticker": "CDNA"
+    },
+    {
+      "fees": 2.095,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 76.25,
+      "shares": 35,
+      "side": "BUY",
+      "ticker": "BC"
+    },
+    {
+      "fees": 2.08,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 87.16,
+      "shares": 30,
+      "side": "BUY",
+      "ticker": "BAH"
+    },
+    {
+      "fees": 2.11,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 65.73,
+      "shares": 40,
+      "side": "BUY",
+      "ticker": "BLDR"
+    }
+  ],
+  "holdings": [
+    "BAH",
+    "BC",
+    "BLDR",
+    "CDNA"
+  ],
+  "mean": 1.574,
+  "n_trades_today": 4,
+  "recipe": "oos0914_rvol_lg_h1_sx",
+  "sells": [],
+  "state": {
+    "after": "2026-11-02",
+    "cash": 212.01,
+    "pos": {
+      "BAH": {
+        "close_px": 88.02,
+        "cost": 2616.8799999999997,
+        "entry_date": "2026-11-02",
+        "entry_px": 87.16,
+        "fee_in": 2.08,
+        "last_px": 87.16,
+        "min_hold": 1,
+        "notional": 2614.7999999999997,
+        "peak_px": 87.16,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate last_green=True,rvol_min=1.5; rank hot_score; list ohlc_hot; \ud83d\udd35; ret5=+13.0; leftover $2684.88",
+        "shares": 30,
+        "ticker": "BAH"
+      },
+      "BC": {
+        "close_px": 79.05,
+        "cost": 2670.845,
+        "entry_date": "2026-11-02",
+        "entry_px": 76.25,
+        "fee_in": 2.095,
+        "last_px": 76.25,
+        "min_hold": 1,
+        "notional": 2668.75,
+        "peak_px": 76.25,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate last_green=True,rvol_min=1.5; rank hot_score; list ohlc_hot; \ud83d\udd35; ret5=+14.4; leftover $2684.88",
+        "shares": 35,
+        "ticker": "BC"
+      },
+      "BLDR": {
+        "close_px": 67.82,
+        "cost": 2631.3100000000004,
+        "entry_date": "2026-11-02",
+        "entry_px": 65.73,
+        "fee_in": 2.11,
+        "last_px": 65.73,
+        "min_hold": 1,
+        "notional": 2629.2000000000003,
+        "peak_px": 65.73,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate last_green=True,rvol_min=1.5; rank hot_score; list ohlc_hot; \ud83d\udd35; ret5=+14.2; leftover $2684.88",
+        "shares": 40,
+        "ticker": "BLDR"
+      },
+      "CDNA": {
+        "close_px": 85.88,
+        "cost": 2608.4799999999996,
+        "entry_date": "2026-11-02",
+        "entry_px": 86.88,
+        "fee_in": 2.08,
+        "last_px": 86.88,
+        "min_hold": 1,
+        "notional": 2606.3999999999996,
+        "peak_px": 86.88,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate last_green=True,rvol_min=1.5; rank hot_score; list flatten; \ud83d\udd35; ret5=+26.3; leftover $2684.88",
+        "shares": 30,
+        "ticker": "CDNA"
+      }
+    },
+    "yday_equity": 10908.56
+  }
+}

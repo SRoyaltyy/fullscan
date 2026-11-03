@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ last_red, no 🚨
 
-Cash book **-38.50%** ($6,150) · signal-only (no cash/fees) was +0.15%. Starts YES **10/30**. Fills 336 · skips 295 · realized $+93.52.
+Cash book **-40.70%** ($5,930) · signal-only (no cash/fees) was +0.15%. Starts YES **10/30**. Fills 346 · skips 295 · realized $+93.52.
 
 ## How this sleeve decides (like you are 10)
 
@@ -520,6 +520,18 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-30 09:30 ET | **SELL** | `SMMT` | 51 | $16.03 | $2.16 | $+73.72 | $5,365.13 | ▲ +73.72 after sell → book $6,204.01; vs 09:30 mark -2.17 | dropped from list after 3 sess (min 3) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-10-30 09:30 ET | **SELL** | `VEEV` | 2 | $312.06 | $2.02 | $-10.89 | $5,987.24 | ▼ -10.89 after sell → book $6,202.00; vs 09:30 mark -2.01 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5,987.24 | ▼ close $6,150.10 vs 09:30 $6,221.19 (session -51.90) | 16:00 close · cash $5,987.24 · equity $6,150.10 vs 09:30 $6,221.19 (-71.09; session marks -51.90) · 2 name(s) marked open→close (per-name table). ANGI×2 09:30 $5.94 → close $5.99 +0.10; ENHA×16 09:30 $12.68 → close $9.43 -52.00 | — |
+| 2026-11-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $5,987.24 | ▲ 09:30 equity $6,151.14 vs yday $6,150.10 (+1.04) | 09:30 open · cash $5,987.24 (unchanged overnight, no fees) · equity $6,151.14 vs prior close $6,150.10 (+1.04) · 2 name(s) re-marked at the open (per-name table). ANGI×2 yday $5.99 → 09:30 $6.03 +0.08; ENHA×16 yday $9.43 → 09:30 $9.49 +0.96 | — |
+| 2026-11-02 09:30 ET | **SELL** | `ANGI` | 2 | $6.03 | $0.15 | $-0.54 | $5,999.15 | ▼ -0.54 after sell → book $6,150.99; vs 09:30 mark -0.15 | dropped from list after 3 sess (min 3) | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **SELL** | `ENHA` | 16 | $9.49 | $1.59 | $+132.59 | $6,149.41 | ▲ +132.59 after sell → book $6,149.41; vs 09:30 mark -1.58 | dropped from list after 3 sess (min 3) | join🔴 sector🟡 gen🟢 news🟡 digest🔴 ab🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `CORT` | 9 | $80.93 | $2.02 | — | $5,419.02 | — | union ∩ last_red, no 🚨; gate last_red=True; list flatten; 🔵; ret5=-5.5; leftover $768.68 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `ARQT` | 23 | $32.08 | $2.06 | — | $4,679.19 | — | union ∩ last_red, no 🚨; gate last_red=True; list flatten; 🔵; ret5=+2.8; leftover $768.68 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `ETON` | 14 | $52.92 | $2.03 | — | $3,936.28 | — | union ∩ last_red, no 🚨; gate last_red=True; list flatten; 🔵; ret5=+4.4; leftover $768.68 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `NVTS` | 89 | $8.56 | $2.26 | — | $3,172.19 | — | union ∩ last_red, no 🚨; gate last_red=True; list probable,yday_gainer,yday_mover; ret5=+1.2; leftover $768.68 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `EPR` | 13 | $57.70 | $2.03 | — | $2,420.06 | — | union ∩ last_red, no 🚨; gate last_red=True; list probable,yday_gainer,yday_mover; 🔵; ret5=+3.7; leftover $768.68 | join🟡 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `PDFS` | 18 | $42.10 | $2.04 | — | $1,660.21 | — | union ∩ last_red, no 🚨; gate last_red=True; list probable,yday_gainer,yday_mover; 🔵; ret5=+4.3; leftover $768.68 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `AIP` | 40 | $19.05 | $2.11 | — | $896.10 | — | union ∩ last_red, no 🚨; gate last_red=True; list probable,yday_gainer,yday_mover; 🔵; ret5=-1.4; leftover $768.68 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `CXW` | 24 | $30.94 | $2.06 | — | $151.48 | — | union ∩ last_red, no 🚨; gate last_red=True; list probable,yday_gainer,yday_mover; 🔵; ret5=+2.8; leftover $768.68 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $151.48 | ▼ close $5,929.63 vs 09:30 $6,151.14 (session -203.17) | 16:00 close · cash $151.48 · equity $5,929.63 vs 09:30 $6,151.14 (-221.51; session marks -203.17) · 8 name(s) marked open→close (per-name table). CORT×9 09:30 $80.93 → close $80.46 -4.23; ARQT×23 09:30 $32.08 → close $31.26 -18.79; ETON×14 09:30 $52.92 → close $50.81 -29.54; NVTS×89 09:30 $8.56 → close $7.93 -56.07; EPR×13 09:30 $57.70 → close $59.58 +24.44; PDFS×18 09:30 $42.10 → close $38.97 -56.34; AIP×40 09:30 $19.05 → close $17.85 -48.00; CXW×24 09:30 $30.94 → close $30.33 -14.64 | — |
 
 ## Not taken
 

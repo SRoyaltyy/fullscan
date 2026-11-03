@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `ohlc_hot` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · baseline list, no extra gate
 
-Cash book **-12.04%** ($8,796) · signal-only (no cash/fees) was +107.52%. Starts YES **4/30**. Fills 360 · skips 271 · realized $-671.83.
+Cash book **-10.80%** ($8,920) · signal-only (no cash/fees) was +107.52%. Starts YES **4/30**. Fills 373 · skips 271 · realized $-671.83.
 
 ## How this sleeve decides (like you are 10)
 
@@ -540,6 +540,21 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-30 09:30 ET | **SELL** | `RBRK` | 7 | $131.94 | $2.03 | $-7.89 | $6,185.34 | ▼ -7.89 after sell → book $8,813.59; vs 09:30 mark -2.03 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-30 09:30 ET | **SELL** | `RIG` | 161 | $6.76 | $2.51 | $+40.10 | $7,271.19 | ▲ +40.10 after sell → book $8,811.08; vs 09:30 mark -2.51 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,271.19 | ▼ close $8,796.10 vs 09:30 $8,826.97 (session -14.98) | 16:00 close · cash $7,271.19 · equity $8,796.10 vs 09:30 $8,826.97 (-30.87; session marks -14.98) · 7 name(s) marked open→close (per-name table). ABSI×8 09:30 $11.41 → close $11.13 -2.24; IMSR×31 09:30 $3.18 → close $3.22 +1.24; MRVI×11 09:30 $8.37 → close $7.81 -6.16; PRME×21 09:30 $5.03 → close $4.72 -6.51; SLN×52 09:30 $19.74 → close $19.75 +0.52; VCYT×1 09:30 $51.54 → close $50.01 -1.53; VRDN×3 09:30 $24.77 → close $24.67 -0.30 | — |
+| 2026-11-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,271.19 | ▲ 09:30 equity $8,799.17 vs yday $8,796.10 (+3.07) | 09:30 open · cash $7,271.19 (unchanged overnight, no fees) · equity $8,799.17 vs prior close $8,796.10 (+3.07) · 7 name(s) re-marked at the open (per-name table). ABSI×8 yday $11.13 → 09:30 $11.29 +1.28; IMSR×31 yday $3.22 → 09:30 $3.24 +0.62; MRVI×11 yday $7.81 → 09:30 $7.81 +0.00; PRME×21 yday $4.72 → 09:30 $4.74 +0.42; SLN×52 yday $19.75 → 09:30 $19.75 +0.00; VCYT×1 yday $50.01 → 09:30 $50.43 +0.42; VRDN×3 yday $24.67 → 09:30 $24.78 +0.33 | — |
+| 2026-11-02 09:30 ET | **SELL** | `ABSI` | 8 | $11.29 | $0.95 | $+4.10 | $7,360.56 | ▲ +4.10 after sell → book $8,798.22; vs 09:30 mark -0.95 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-02 09:30 ET | **SELL** | `IMSR` | 31 | $3.24 | $1.12 | $+6.87 | $7,459.89 | ▲ +6.87 after sell → book $8,797.11; vs 09:30 mark -1.11 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-02 09:30 ET | **SELL** | `MRVI` | 11 | $7.81 | $0.91 | $-6.47 | $7,544.88 | ▼ -6.47 after sell → book $8,796.19; vs 09:30 mark -0.92 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-02 09:30 ET | **SELL** | `PRME` | 21 | $4.74 | $1.08 | $+8.36 | $7,643.34 | ▲ +8.36 after sell → book $8,795.11; vs 09:30 mark -1.08 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-02 09:30 ET | **SELL** | `VCYT` | 1 | $50.43 | $0.53 | $-0.60 | $7,693.25 | ▼ -0.60 after sell → book $8,794.59; vs 09:30 mark -0.52 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-02 09:30 ET | **SELL** | `VRDN` | 3 | $24.78 | $0.77 | $+1.69 | $7,766.82 | ▲ +1.69 after sell → book $8,793.82; vs 09:30 mark -0.77 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-02 09:30 ET | **BUY** | `GEN` | 38 | $29.05 | $2.10 | — | $6,660.81 | — | baseline list, no extra gate; list ohlc_hot; 🔵; ret5=+17.1; leftover $1109.55 | join🟡 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `BC` | 14 | $76.25 | $2.03 | — | $5,591.28 | — | baseline list, no extra gate; list ohlc_hot; 🔵; ret5=+14.4; leftover $1109.55 | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `BAH` | 12 | $87.16 | $2.03 | — | $4,543.33 | — | baseline list, no extra gate; list ohlc_hot; 🔵; ret5=+13.0; leftover $1109.55 | join🔴 sector🔴 gen🟢 news🔴 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `BLDR` | 16 | $65.73 | $2.04 | — | $3,489.62 | — | baseline list, no extra gate; list ohlc_hot; 🔵; ret5=+14.2; leftover $1109.55 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🟡 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `REAL` | 90 | $12.31 | $2.26 | — | $2,379.46 | — | baseline list, no extra gate; list ohlc_hot; 🔵; ret5=+10.3; leftover $1109.55 | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🟡 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `BTSG` | 16 | $67.50 | $2.04 | — | $1,297.42 | — | baseline list, no extra gate; list ohlc_hot; ret5=+11.3; leftover $1109.55 | join🟡 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `TGTX` | 18 | $61.01 | $2.04 | — | $197.19 | — | baseline list, no extra gate; list ohlc_hot; ret5=+12.9; leftover $1109.55 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $197.19 | ▲ close $8,919.65 vs 09:30 $8,799.17 (session +140.38) | 16:00 close · cash $197.19 · equity $8,919.65 vs 09:30 $8,799.17 (+120.48; session marks +140.38) · 8 name(s) marked open→close (per-name table). SLN×52 09:30 $19.75 → close $19.76 +0.52; GEN×38 09:30 $29.05 → close $29.89 +31.92; BC×14 09:30 $76.25 → close $79.05 +39.20; BAH×12 09:30 $87.16 → close $88.02 +10.32; BLDR×16 09:30 $65.73 → close $67.82 +33.44; REAL×90 09:30 $12.31 → close $13.02 +63.90; BTSG×16 09:30 $67.50 → close $66.26 -19.84; TGTX×18 09:30 $61.01 → close $59.95 -19.08 | — |
 
 ## Not taken
 

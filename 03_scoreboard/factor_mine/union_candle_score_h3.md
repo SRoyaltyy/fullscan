@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `candle_score` · size `leftover` · sell `list` · S-boost `none` · rank by candle_score
 
-Cash book **-7.42%** ($9,258) · signal-only (no cash/fees) was +43.18%. Starts YES **21/30**. Fills 353 · skips 288 · realized $+91.50.
+Cash book **-5.94%** ($9,406) · signal-only (no cash/fees) was +43.18%. Starts YES **21/30**. Fills 362 · skips 288 · realized $+91.50.
 
 ## How this sleeve decides (like you are 10)
 
@@ -536,6 +536,17 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-30 09:30 ET | **SELL** | `POOL` | 6 | $206.00 | $2.03 | $+60.58 | $7,850.56 | ▲ +60.58 after sell → book $9,257.95; vs 09:30 mark -2.03 | dropped from list after 3 sess (min 3) | join🔴 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-30 09:30 ET | **SELL** | `VVX` | 16 | $80.27 | $2.06 | $+47.82 | $9,132.74 | ▲ +47.82 after sell → book $9,255.89; vs 09:30 mark -2.06 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,132.74 | ▲ close $9,257.53 vs 09:30 $9,272.28 (session +1.64) | 16:00 close · cash $9,132.74 · equity $9,257.53 vs 09:30 $9,272.28 (-14.75; session marks +1.64) · 3 name(s) marked open→close (per-name table). BBWI×2 09:30 $22.78 → close $22.77 -0.02; EGG×8 09:30 $5.00 → close $4.91 -0.72; JLHL×7 09:30 $5.37 → close $5.71 +2.38 | — |
+| 2026-11-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,132.74 | ▲ 09:30 equity $9,258.94 vs yday $9,257.53 (+1.41) | 09:30 open · cash $9,132.74 (unchanged overnight, no fees) · equity $9,258.94 vs prior close $9,257.53 (+1.41) · 3 name(s) re-marked at the open (per-name table). BBWI×2 yday $22.77 → 09:30 $23.30 +1.06; EGG×8 yday $4.91 → 09:30 $4.91 +0.00; JLHL×7 yday $5.71 → 09:30 $5.76 +0.35 | — |
+| 2026-11-02 09:30 ET | **SELL** | `BBWI` | 2 | $23.30 | $0.49 | $+2.27 | $9,178.85 | ▲ +2.27 after sell → book $9,258.45; vs 09:30 mark -0.49 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-02 09:30 ET | **SELL** | `EGG` | 8 | $4.91 | $0.44 | $-2.71 | $9,217.69 | ▼ -2.71 after sell → book $9,258.01; vs 09:30 mark -0.44 | dropped from list after 3 sess (min 3) | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `BAH` | 15 | $87.16 | $2.04 | — | $7,908.26 | — | rank by candle_score; rank candle_score; list ohlc_hot; 🔵; ret5=+13.0; leftover $1316.81 | join🔴 sector🔴 gen🟢 news🔴 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `BSY` | 32 | $40.95 | $2.09 | — | $6,595.77 | — | rank by candle_score; rank candle_score; list ohlc_hot; 🔵; ret5=+3.0; leftover $1316.81 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `GLOB` | 28 | $46.50 | $2.07 | — | $5,291.70 | — | rank by candle_score; rank candle_score; list ohlc_hot; 🔵; ret5=+3.8; leftover $1316.81 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `TGTX` | 21 | $61.01 | $2.05 | — | $4,008.43 | — | rank by candle_score; rank candle_score; list ohlc_hot; ret5=+12.9; leftover $1316.81 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `BC` | 17 | $76.25 | $2.04 | — | $2,710.14 | — | rank by candle_score; rank candle_score; list ohlc_hot; 🔵; ret5=+14.4; leftover $1316.81 | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `ROP` | 2 | $465.90 | $2.00 | — | $1,776.35 | — | rank by candle_score; rank candle_score; list ohlc_hot; 🔵; ret5=+6.5; leftover $1316.81 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `AZN` | 7 | $184.59 | $2.01 | — | $482.21 | — | rank by candle_score; rank candle_score; list ohlc_hot; ret5=+8.8; leftover $1316.81 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $482.21 | ▲ close $9,405.97 vs 09:30 $9,258.94 (session +162.25) | 16:00 close · cash $482.21 · equity $9,405.97 vs 09:30 $9,258.94 (+147.03; session marks +162.25) · 8 name(s) marked open→close (per-name table). JLHL×7 09:30 $5.76 → close $5.84 +0.56; BAH×15 09:30 $87.16 → close $88.02 +12.90; BSY×32 09:30 $40.95 → close $42.40 +46.40; GLOB×28 09:30 $46.50 → close $47.78 +35.84; TGTX×21 09:30 $61.01 → close $59.95 -22.26; BC×17 09:30 $76.25 → close $79.05 +47.60; ROP×2 09:30 $465.90 → close $479.54 +27.28; AZN×7 09:30 $184.59 → close $186.58 +13.93 | — |
 
 ## Not taken
 

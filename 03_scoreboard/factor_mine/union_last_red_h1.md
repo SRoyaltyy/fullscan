@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ last_red, no 🚨
 
-Cash book **+62.74%** ($16,274) · signal-only (no cash/fees) was +1.25%. Starts YES **0/30**. Fills 468 · skips 105 · realized $-1315.32.
+Cash book **+57.12%** ($15,712) · signal-only (no cash/fees) was +1.25%. Starts YES **0/30**. Fills 476 · skips 105 · realized $-1315.32.
 
 ## How this sleeve decides (like you are 10)
 
@@ -652,6 +652,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-30 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $15,697.36 | ▼ 09:30 equity $16,276.00 vs yday $16,294.80 (-18.80) | 09:30 open · cash $15,697.36 (unchanged overnight, no fees) · equity $16,276.00 vs prior close $16,294.80 (-18.80) · 1 name(s) re-marked at the open (per-name table). CRS×2 yday $298.72 → 09:30 $289.32 -18.80 | — |
 | 2026-10-30 09:30 ET | **SELL** | `CRS` | 2 | $289.32 | $2.02 | $-8.89 | $16,273.98 | ▼ -8.89 after sell → book $16,273.98; vs 09:30 mark -2.02 | dropped from list after 2 sess (min 1) | join🔴 sector🔴 gen🔴 news🟡 digest🟢 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $16,273.98 | ▲ close $16,273.98 vs 09:30 $16,276.00 (session +0.00) | 16:00 close · cash $16,273.98 · no lots left · equity $16,273.98. | — |
+| 2026-11-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $16,273.98 | ▲ 09:30 equity $16,273.98 vs yday $16,273.98 (+0.00) | 09:30 open · cash $16,273.98 · no holdings · equity $16,273.98 vs prior close $16,273.98 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-02 09:30 ET | **BUY** | `CORT` | 25 | $80.93 | $2.06 | — | $14,248.66 | — | union ∩ last_red, no 🚨; gate last_red=True; list flatten; 🔵; ret5=-5.5; leftover $2034.25 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `ARQT` | 63 | $32.08 | $2.18 | — | $12,225.65 | — | union ∩ last_red, no 🚨; gate last_red=True; list flatten; 🔵; ret5=+2.8; leftover $2034.25 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `ETON` | 38 | $52.92 | $2.10 | — | $10,212.58 | — | union ∩ last_red, no 🚨; gate last_red=True; list flatten; 🔵; ret5=+4.4; leftover $2034.25 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `NVTS` | 237 | $8.56 | $3.06 | — | $8,180.81 | — | union ∩ last_red, no 🚨; gate last_red=True; list probable,yday_gainer,yday_mover; ret5=+1.2; leftover $2034.25 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `EPR` | 35 | $57.70 | $2.10 | — | $6,159.21 | — | union ∩ last_red, no 🚨; gate last_red=True; list probable,yday_gainer,yday_mover; 🔵; ret5=+3.7; leftover $2034.25 | join🟡 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `PDFS` | 48 | $42.10 | $2.13 | — | $4,136.28 | — | union ∩ last_red, no 🚨; gate last_red=True; list probable,yday_gainer,yday_mover; 🔵; ret5=+4.3; leftover $2034.25 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `AIP` | 106 | $19.05 | $2.31 | — | $2,114.67 | — | union ∩ last_red, no 🚨; gate last_red=True; list probable,yday_gainer,yday_mover; 🔵; ret5=-1.4; leftover $2034.25 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-02 09:30 ET | **BUY** | `CXW` | 65 | $30.94 | $2.19 | — | $101.38 | — | union ∩ last_red, no 🚨; gate last_red=True; list probable,yday_gainer,yday_mover; 🔵; ret5=+2.8; leftover $2034.25 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $101.38 | ▼ close $15,711.86 vs 09:30 $16,273.98 (session -543.99) | 16:00 close · cash $101.38 · equity $15,711.86 vs 09:30 $16,273.98 (-562.12; session marks -543.99) · 8 name(s) marked open→close (per-name table). CORT×25 09:30 $80.93 → close $80.46 -11.75; ARQT×63 09:30 $32.08 → close $31.26 -51.46; ETON×38 09:30 $52.92 → close $50.81 -80.18; NVTS×237 09:30 $8.56 → close $7.93 -149.31; EPR×35 09:30 $57.70 → close $59.58 +65.80; PDFS×48 09:30 $42.10 → close $38.97 -150.24; AIP×106 09:30 $19.05 → close $17.85 -127.20; CXW×65 09:30 $30.94 → close $30.33 -39.65 | — |
 
 ## Not taken
 
