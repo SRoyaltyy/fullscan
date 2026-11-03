@@ -3633,6 +3633,62 @@
       "workflow": "Stock Book ALL (one-shot)",
       "run_id": "41733706376",
       "manifest": "research/input_freeze/2026-11-03/manifest.json"
+    },
+    {
+      "path": "01_daily/2026-11-03_stock_book.md",
+      "at": "2026-11-03T18:16:42-05:00",
+      "commit_msg": "auto: stock book leftover sweep",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "41733706376",
+      "manifest": "research/input_freeze/2026-11-03/manifest.json"
+    },
+    {
+      "path": "01_daily/_channel1/2026-11-03_predict.json",
+      "at": "2026-11-03T18:16:42-05:00",
+      "commit_msg": "auto: stock book leftover sweep",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "41733706376",
+      "manifest": "research/input_freeze/2026-11-03/manifest.json"
+    },
+    {
+      "path": "01_daily/weather/2026-11-03_weather.json",
+      "at": "2026-11-03T18:16:42-05:00",
+      "commit_msg": "auto: stock book leftover sweep",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "41733706376",
+      "manifest": "research/input_freeze/2026-11-03/manifest.json"
+    },
+    {
+      "path": "data/join/2026-11-03_ranked.csv",
+      "at": "2026-11-03T18:16:42-05:00",
+      "commit_msg": "auto: stock book leftover sweep",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "41733706376",
+      "manifest": "research/input_freeze/2026-11-03/manifest.json"
+    },
+    {
+      "path": "data/stock_book/2026-11-03_input_health.json",
+      "at": "2026-11-03T18:16:42-05:00",
+      "commit_msg": "auto: stock book leftover sweep",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "41733706376",
+      "manifest": "research/input_freeze/2026-11-03/manifest.json"
+    },
+    {
+      "path": "data/stock_book/2026-11-03_stock_book.json",
+      "at": "2026-11-03T18:16:42-05:00",
+      "commit_msg": "auto: stock book leftover sweep",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "41733706376",
+      "manifest": "research/input_freeze/2026-11-03/manifest.json"
+    },
+    {
+      "path": "data/stock_book/2026-11-03_suggestions.json",
+      "at": "2026-11-03T18:16:42-05:00",
+      "commit_msg": "auto: stock book leftover sweep",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "41733706376",
+      "manifest": "research/input_freeze/2026-11-03/manifest.json"
     }
   ]
 }
