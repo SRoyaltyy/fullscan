@@ -45,6 +45,15 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 1
+          # Full tree checkout of this repo overruns the job timeout; the
+          # contract tests only read these paths.
+          sparse-checkout: |
+            .github
+            src
+            scripts
+            tests
+            02_lessons
+          sparse-checkout-cone-mode: true
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
