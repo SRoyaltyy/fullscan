@@ -1,6 +1,6 @@
 {
   "date": "2026-11-03",
-  "generated_at": "2026-11-03T07:17:07.925598-05:00",
+  "generated_at": "2026-11-03T07:17:18.730018-05:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -2453,6 +2453,24 @@
         }
       ],
       "preview": "11686 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11749 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAB\""
+    },
+    {
+      "key": "universe",
+      "title": "Universe labels",
+      "date": "2026-11-03",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-03T07:17:17.557693-05:00",
+      "files": [
+        {
+          "path": "data/universe/2026-11-03_membership.csv",
+          "ok": true,
+          "reason": "",
+          "size": 1122695,
+          "preview": "5901 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
+        }
+      ],
+      "preview": "5901 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
     }
   ],
   "href": {
