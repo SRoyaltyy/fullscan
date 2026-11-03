@@ -1,6 +1,6 @@
 # flatten_robust card — 2026-11-03
 
-_Generated 2026-11-03T10:54:01 — live `flatten_robust`._
+_Generated 2026-11-03T10:59:55 — live `flatten_robust`._
 
 **morning S missing; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**
 
@@ -21,7 +21,7 @@ _Generated 2026-11-03T10:54:01 — live `flatten_robust`._
 | AVPT | mover_long | 701 | $16.71 | $16.71 | $+0.00 | +0.00% | $16.71 | 2026-11-02 |
 | SONO | mover_long | 715 | $15.73 | $15.73 | $+0.00 | +0.00% | $16.39 | 2026-11-02 |
 | ABX | mover_long | 1359 | $8.64 | $8.64 | $+0.00 | +0.00% | $8.63 | 2026-11-02 |
-| ADCT | mover_long | 7615 | $1.54 | $1.54 | $+0.00 | +0.00% | $1.54 | 2026-11-02 |
+| ADCT | mover_long | 7615 | $1.54 | $1.54 | $+0.00 | -0.00% | $1.54 | 2026-11-02 |
 | ADMA | mover_long | 1027 | $11.06 | $11.06 | $+0.00 | +0.00% | $11.42 | 2026-11-02 |
 | AMRX | mover_long | 544 | $20.44 | $20.44 | $+0.00 | +0.00% | $21.53 | 2026-11-02 |
 | SMMT | ripper_long | 29 | $14.80 | $14.80 | $+0.00 | +0.00% | $16.00 | 2026-11-02 |

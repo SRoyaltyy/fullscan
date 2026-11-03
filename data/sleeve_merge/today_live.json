@@ -1,7 +1,7 @@
 {
   "date": "2026-11-03",
   "policy": "flatten_robust",
-  "generated": "2026-11-03T10:54:01",
+  "generated": "2026-11-03T10:59:55",
   "score": null,
   "predict": null,
   "hard_red": false,
@@ -135,8 +135,8 @@
       "last_px": 1.54,
       "yday_px": 1.54,
       "open_px": 1.54,
-      "overnight": 0.0,
-      "pct": 0.0,
+      "overnight": -0.0,
+      "pct": -0.0,
       "mv": 11727.1,
       "exit_date": "2026-11-03",
       "reason": ""
@@ -281,8 +281,8 @@
       "open_px": 1.54,
       "entry_px": 1.54,
       "entry_date": "2026-11-02",
-      "overnight": 0.0,
-      "pct": 0.0
+      "overnight": -0.0,
+      "pct": -0.0
     },
     {
       "ticker": "ADMA",
@@ -470,7 +470,7 @@
       "overnight": 0.0,
       "session": 0.0,
       "day": 0.0,
-      "pct_overnight": 0.0,
+      "pct_overnight": -0.0,
       "pct_session": 0.0,
       "held": "sold-close"
     },
