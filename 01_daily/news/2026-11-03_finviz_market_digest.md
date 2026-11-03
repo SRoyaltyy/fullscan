@@ -1,6 +1,6 @@
 # Finviz homepage market digest — 2026-11-03
 
-**Generated:** 2026-11-03T04:40:17.626272-05:00 (America/New_York)
+**Generated:** 2026-11-03T04:45:13.859964-05:00 (America/New_York)
 **Source:** `live`
 **Banner:** US stocks set for mixed open as traders digest Apple earnings, midterm elections and busy data and earnings slate
 **Prior close:** SPX —  Nasdaq —  Dow —
