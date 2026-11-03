@@ -1,6 +1,12 @@
 {
-  "updated_at": "2026-11-02T18:53:06-05:00",
+  "updated_at": "2026-11-02T18:59:58-05:00",
   "runs": [
+    {
+      "date": "2026-10-26",
+      "workflow": "factor_mine",
+      "file": "2026-10-26_factor_mine.json",
+      "updated_at": "2026-10-26T20:28:20-04:00"
+    },
     {
       "date": "2026-10-26",
       "workflow": "fm_preopen",
@@ -201,12 +207,6 @@
     },
     {
       "date": "2026-11-02",
-      "workflow": "fm_preopen",
-      "file": "2026-11-02_fm_preopen.json",
-      "updated_at": "2026-11-02T09:23:49-05:00"
-    },
-    {
-      "date": "2026-11-02",
       "workflow": "homepage_digest",
       "file": "2026-11-02_homepage_digest.json",
       "updated_at": "2026-11-02T16:34:40-05:00"
@@ -216,12 +216,6 @@
       "workflow": "postclose",
       "file": "2026-10-30_postclose.json",
       "updated_at": "2026-11-02T17:00:39-05:00"
-    },
-    {
-      "date": "2026-11-02",
-      "workflow": "postclose",
-      "file": "2026-11-02_postclose.json",
-      "updated_at": "2026-11-02T17:03:45-05:00"
     },
     {
       "date": "2026-11-02",
@@ -237,9 +231,15 @@
     },
     {
       "date": "2026-11-02",
-      "workflow": "webull_sim",
-      "file": "2026-11-02_webull_sim.json",
-      "updated_at": "2026-11-02T18:53:06-05:00"
+      "workflow": "postclose",
+      "file": "2026-11-02_postclose.json",
+      "updated_at": "2026-11-02T18:50:02-05:00"
+    },
+    {
+      "date": "2026-11-02",
+      "workflow": "fm_preopen",
+      "file": "2026-11-02_fm_preopen.json",
+      "updated_at": "2026-11-02T18:59:58-05:00"
     }
   ]
 }
