@@ -314,7 +314,7 @@ def test_preopen_does_not_skip_python_after_cutoff() -> None:
     assert 'already_running "preopen_all.yml"' in orch
     assert "book heal stays on ubuntu" in orch
     # 16:10 postclose cron is new and may skip day 1. 16:20 + 17:15 orch fire.
-    assert 'cron: "20 20 * * 1-5"' in orch
+    assert 'cron: "20 21 * * 1-5"' in orch  # EST since #734; was 20 20 under EDT (move back 2027-03-14)
     assert 'cron: "15 21 * * 1-5"' in orch
     assert "maybe postclose_all.yml" in orch
     assert "skip postclose_all.yml second writer" in orch
@@ -407,7 +407,7 @@ def test_ranker_inputs_before_llm_packet() -> None:
     assert 'OPENCLAW_TIMEOUT: "900"' in post_yml
     assert 'OPENCLAW_TIMEOUT: "10800"' not in post_yml
     assert "timeout-minutes: 1080" in post_yml
-    assert 'cron: "10 20 * * 1-5"' in post_yml
+    assert 'cron: "10 21 * * 1-5"' in post_yml  # EST since #734; was 10 20 under EDT
     assert 'cron: "30 3 * * 2-6"' in post_yml
     assert "postclose-all-${{" in post_yml
     assert "github.event.inputs.runner != 'ecs'" in post_yml  # 2026-10-27 hosted unless ecs
@@ -483,8 +483,8 @@ def test_ranker_inputs_before_llm_packet() -> None:
     book_yml = (WF / "stock_book_all.yml").read_text(encoding="utf-8")
     assert "skip_extras:" in book_yml
     assert "past 09:25 ET — skip LLM + extras" in book_yml
-    assert 'cron: "10 10 * * 1-5"' in book_yml
-    assert 'cron: "15 13 * * 1-5"' in book_yml
+    assert 'cron: "10 11 * * 1-5"' in book_yml  # EST since #734; was 10 10 under EDT
+    assert 'cron: "15 14 * * 1-5"' in book_yml  # EST since #734; was 15 13 under EDT
     assert "ubuntu land-book" in book_yml
     assert "github.event.inputs.runner != 'ecs'" in book_yml  # 2026-10-27 hosted unless ecs
     assert "stock-book-all-ubuntu" in book_yml
@@ -973,7 +973,7 @@ def test_factor_mine_lands_closed_after_postclose() -> None:
     assert "Post-Close ALL (grade + learn + next captains)" in yml
     assert "--land-closed" in yml
     assert '[ -n "${TO_DATE:-}" ] && ARGS+=(--to-date "$TO_DATE")' in yml
-    assert 'cron: "25 20 * * 1-5"' in yml
+    assert 'cron: "25 21 * * 1-5"' in yml  # EST since #734; was 25 20 under EDT
     assert 'cron: "0 12 * * 6"' in yml
     assert "data/factor_mine/panel.json" in yml
     assert "Stock Book ALL (one-shot)" in yml
@@ -999,7 +999,7 @@ def test_last_closed_sidecar_does_not_share_ubuntu_concurrency() -> None:
     assert "HOME: /home/runner" in yml
     assert "ubuntu-latest" in yml
     assert 'cron: "25 15 * * 1-5"' in yml
-    assert 'cron: "15 20 * * 1-5"' in yml
+    assert 'cron: "15 21 * * 1-5"' in yml  # EST since #734; was 15 20 under EDT
     on_push = yml.split("\n  push:\n", 1)[1].split("\n  workflow_dispatch:", 1)[0]
     assert "postclose_last_closed.yml" in on_push
     assert "src/run_postclose_all.py" not in on_push
