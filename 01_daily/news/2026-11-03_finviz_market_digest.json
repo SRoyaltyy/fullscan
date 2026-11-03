@@ -1,0 +1,92 @@
+{
+  "date": "2026-11-03",
+  "generated_at": "2026-11-03T04:27:39.114372-05:00",
+  "timezone": "America/New_York",
+  "source": "live",
+  "source_url": "https://elite.finviz.com/",
+  "archive_snapshot_ts": null,
+  "archive_snapshot_at": null,
+  "archive_url": null,
+  "clock_legal": true,
+  "clock_same_morning": true,
+  "clock_use": "same_morning",
+  "clock_legal_for": "2026-11-03",
+  "clock_rule": "Live: Generated must be before 09:30 ET on this date or leave missing. Wayback: capture before 09:30 ET that day is legal for that morning's Pre-Open. Afternoon Wayback is legal for the NEXT session open only (prior-day close recap), marked by clock_legal_for. Gaps stay gaps. Capture only — not tape_anchor / predict / #210.",
+  "kind": "finviz_homepage_market_digest",
+  "represents": "Finviz homepage market-day prose. Same-morning Pre-Open when Generated is before 09:30 ET; afternoon Wayback is a prior-day close recap legal for the next session only. Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "US futures trade mixed with Dow under pressure as earnings ramp up and durable goods and JOLTs data loom while oil steadies after Iran-linked volatility",
+  "raw_text": "- Oracle (ORCL) trades roughly flat pre-market after pricing a $10 billion stock offering and $10 billion in senior notes as part of a $20 billion capital-raising plan to fund its AI cloud infrastructure buildout\n- Campbell’s Co (CPB) trades lower pre-market after an EPS miss, soft sales, and reduced full-year guidance\n- Uber (UBER) slips pre-market on news of a robotaxi partnership with Amazon’s (AMZN) Zoox unit\n- S&P 500 Futures (@ES) are down 0.20%, Dow Jones Futures (@YM) fall 0.66%, Nasdaq 100 Futures (@NQ) edge higher by 0.05%, and Russell 2000 Futures (@ER2) decline 0.22%\n- Asian shares retreat overnight, with South Korean tech names under pressure ahead of US midterm elections\n- European markets open lower in early trading following the weak tone in Asia\n- Oil futures (@CL) gain as prices stabilize after recent volatility tied to developments in Iran\n- A busy earnings slate features Shopify (SHOP), Pfizer (PFE), Eaton (ETN) and others reporting before the open, with AMD (AMD), Amgen (AMGN) and Arista Networks (ANET) due after the close\n- Key US data releases include durable goods orders at 8:30 AM ET and JOLTs job openings at 10:00 AM ET, both seen as potential intraday volatility catalysts\n- No major new catalysts have emerged since the 4 AM session start, according to the summary",
+  "raw_summary_md": "- **Oracle** ([ORCL](https://finviz.com/quote?t=ORCL)) trades roughly flat pre-market after pricing a $10 billion stock offering and $10 billion in senior notes as part of a **$20 billion capital-raising plan** to fund its AI cloud infrastructure buildout\n- **Campbell’s Co** ([CPB](https://finviz.com/quote?t=CPB)) trades lower pre-market after an **EPS miss, soft sales, and reduced full-year guidance**\n- **Uber** ([UBER](https://finviz.com/quote?t=UBER)) slips pre-market on news of a **robotaxi partnership with Amazon’s** ([AMZN](https://finviz.com/quote?t=AMZN)) **Zoox unit**\n- **S&P 500 Futures** ([@ES](https://finviz.com/futures_charts?t=ES)) are **down 0.20%**, **Dow Jones Futures** ([@YM](https://finviz.com/futures_charts?t=YM)) fall **0.66%**, **Nasdaq 100 Futures** ([@NQ](https://finviz.com/futures_charts?t=NQ)) edge higher by **0.05%**, and **Russell 2000 Futures** ([@ER2](https://finviz.com/futures_charts?t=ER2)) decline **0.22%**\n- **Asian shares retreat overnight**, with **South Korean tech names under pressure** ahead of US midterm elections\n- **European markets open lower** in early trading following the weak tone in Asia\n- **Oil futures** ([@CL](https://finviz.com/futures_charts?t=CL)) **gain** as prices stabilize after recent volatility tied to **developments in Iran**\n- A **busy earnings slate** features **Shopify** ([SHOP](https://finviz.com/quote?t=SHOP)), **Pfizer** ([PFE](https://finviz.com/quote?t=PFE)), **Eaton** ([ETN](https://finviz.com/quote?t=ETN)) and others reporting **before the open**, with **AMD** ([AMD](https://finviz.com/quote?t=AMD)), **Amgen** ([AMGN](https://finviz.com/quote?t=AMGN)) and **Arista Networks** ([ANET](https://finviz.com/quote?t=ANET)) due **after the close**\n- **Key US data releases** include **durable goods orders at 8:30 AM ET** and **JOLTs job openings at 10:00 AM ET**, both seen as **potential intraday volatility catalysts**\n- **No major new catalysts** have emerged **since the 4 AM session start**, according to the summary",
+  "index_moves": [],
+  "oil": null,
+  "cpi": null,
+  "fed_odds": null,
+  "named_tickers": [
+    "ORCL",
+    "CPB",
+    "UBER",
+    "AMZN",
+    "SHOP",
+    "PFE",
+    "ETN",
+    "AMD",
+    "AMGN",
+    "ANET"
+  ],
+  "named_leaders": [
+    "ORCL",
+    "CPB",
+    "UBER",
+    "AMZN",
+    "SHOP",
+    "PFE",
+    "ETN",
+    "AMD",
+    "AMGN",
+    "ANET"
+  ],
+  "calendar": [
+    "A busy earnings slate features Shopify (SHOP), Pfizer (PFE), Eaton (ETN) and others reporting before the open, with AMD (AMD), Amgen (AMGN) and Arista Networks (ANET) due after the close"
+  ],
+  "prior_close": {
+    "spx": null,
+    "nasdaq": null,
+    "dow": null
+  },
+  "cpi_fed": {
+    "cpi": null,
+    "fed_odds": null
+  },
+  "next_session_calendar": {
+    "housing": false,
+    "retail": false,
+    "fed": false,
+    "bullets": [],
+    "text": ""
+  },
+  "earnings_slate": {
+    "tickers": [
+      "SHOP",
+      "PFE",
+      "ETN",
+      "AMD",
+      "AMGN",
+      "ANET"
+    ],
+    "text": "A busy earnings slate features Shopify (SHOP), Pfizer (PFE), Eaton (ETN) and others reporting before the open, with AMD (AMD), Amgen (AMGN) and Arista Networks (ANET) due after the close"
+  },
+  "geo_grain": {
+    "geo": true,
+    "grain": false,
+    "flags": [
+      "geo"
+    ],
+    "text": "Oil futures (@CL) gain as prices stabilize after recent volatility tied to developments in Iran"
+  },
+  "finviz_id": 327268,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-11-03T04:07:15.163",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "bad"
+}
