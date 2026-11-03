@@ -26,8 +26,8 @@
    "SIT": 0
   },
   "holdup": {
-   "MISSING": 1,
-   "OK": 0,
+   "MISSING": 0,
+   "OK": 1,
    "SIT": 0
   },
   "paper": {
@@ -52,7 +52,7 @@
   }
  },
  "date": "2026-11-03",
- "generated_at": "2026-11-03T08:13:29-05:00",
+ "generated_at": "2026-11-03T08:19:30-05:00",
  "strategies": [
   {
    "buys": [
@@ -5297,13 +5297,18 @@
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "UPBD",
+    "CPRI",
+    "ECX",
+    "IDXX"
+   ],
    "family": "holdup",
    "name": "holdup",
-   "note": "no sealed plan row",
+   "note": "sealed 2026-11-03T13:14:12Z",
    "sells": [],
    "source": "research/hot_n4_clean_v4/forward/holdup_log.jsonl",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [],
