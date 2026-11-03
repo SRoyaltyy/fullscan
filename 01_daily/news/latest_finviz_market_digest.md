@@ -1,6 +1,6 @@
 # Finviz homepage market digest — 2026-11-03
 
-**Generated:** 2026-11-03T04:27:39.114372-05:00 (America/New_York)
+**Generated:** 2026-11-03T04:28:31.222778-05:00 (America/New_York)
 **Source:** `live`
 **Banner:** US futures trade mixed with Dow under pressure as earnings ramp up and durable goods and JOLTs data loom while oil steadies after Iran-linked volatility
 **Prior close:** SPX —  Nasdaq —  Dow —
