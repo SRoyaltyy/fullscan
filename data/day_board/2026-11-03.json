@@ -1,6 +1,6 @@
 {
   "date": "2026-11-03",
-  "generated_at": "2026-11-03T04:45:14.090221-05:00",
+  "generated_at": "2026-11-03T04:45:31.158843-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -118,7 +118,7 @@
           "size": 11926,
           "said": "Finviz Daily Digest \u2014 2026-11-03",
           "bullets": [
-            "_Generated 2026-11-03T04:45:07.916171-05:00 \u00b7 export=data/exports/finviz_2026-11-03.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_",
+            "_Generated 2026-11-03T04:40:08.244568-05:00 \u00b7 export=data/exports/finviz_2026-11-02.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_",
             "Major indices (live quote page)"
           ]
         },
@@ -143,7 +143,7 @@
           "size": 3448,
           "said": "Finviz homepage market digest \u2014 2026-11-03",
           "bullets": [
-            "Generated:** 2026-11-03T04:45:13.859964-05:00 (America/New_York)",
+            "Generated:** 2026-11-03T04:40:17.626272-05:00 (America/New_York)",
             "Source:** `live`"
           ]
         },
@@ -1125,6 +1125,24 @@
         }
       ],
       "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest \u2014 2026-11-03\n**Generated:** 2026-11-03T04:45:13.859964-05:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks set for mixed open as traders digest Apple earnings, midterm elections and busy data and earnings slate\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** AAPL, ORCL, UBER, AMZN, CPB, SHOP, PFE, ETN, MPC, AMD, SMCI, AMGN, ANET\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** \u2014\n**Geo/grain:** geo\n**Clock legal for:** 2026-11-03\n**Clock use:** `same_morning`"
+    },
+    {
+      "key": "universe",
+      "title": "Universe labels",
+      "date": "2026-11-03",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-03T04:45:30.871728-05:00",
+      "files": [
+        {
+          "path": "data/universe/2026-11-03_membership.csv",
+          "ok": true,
+          "reason": "",
+          "size": 1122695,
+          "preview": "5901 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
+        }
+      ],
+      "preview": "5901 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
     }
   ],
   "href": {
