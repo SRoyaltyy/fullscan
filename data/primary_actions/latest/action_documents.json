@@ -1,5 +1,267 @@
 [
   {
+    "title": "UK's steel trade measure from 1 July 2026",
+    "url": "https://www.gov.uk/government/publications/uks-steel-trade-measure-from-1-july-2026",
+    "native_id": "/government/publications/uks-steel-trade-measure-from-1-july-2026",
+    "published_at": "2026-11-03T15:31:52+00:00",
+    "published_raw": "2026-11-03T15:31:52Z",
+    "document_type": "decision",
+    "issuer": "Department for Business, Innovation, Science and Trade; Department for Business and Trade",
+    "issuer_ids": [
+      "uk-gov:department-for-business-innovation-science-and-trade",
+      "uk-gov:department-for-business-and-trade"
+    ],
+    "summary": "Details about a new steel trade measure from 1 July 2026, which limits tariff-free steel import quota volumes.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Department for Business, Innovation, Science and Trade; Department for Business and Trade",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 8273,
+    "first_seen": "2026-11-03T20:18:37.164529+00:00",
+    "last_seen": "2026-11-03T20:18:37.164529+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Company Names Tribunal undefended decisions and orders",
+    "url": "https://www.gov.uk/government/publications/company-names-tribunal-undefended-decisions-and-orders",
+    "native_id": "/government/publications/company-names-tribunal-undefended-decisions-and-orders",
+    "published_at": "2026-11-03T13:39:03+00:00",
+    "published_raw": "2026-11-03T13:39:03Z",
+    "document_type": "decision",
+    "issuer": "Company Names Tribunal",
+    "issuer_ids": [
+      "uk-gov:company-names-tribunal"
+    ],
+    "summary": "Decisions and orders of the Company Names Tribunal - undefended.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Company Names Tribunal",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 2103,
+    "first_seen": "2026-10-15T12:16:32.997656+00:00",
+    "last_seen": "2026-11-03T20:18:37.164529+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Company Names Tribunal decision: Krystal Microsoft Academy Limited",
+    "url": "https://www.gov.uk/government/publications/company-names-tribunal-decision-krystal-microsoft-academy-limited",
+    "native_id": "/government/publications/company-names-tribunal-decision-krystal-microsoft-academy-limited",
+    "published_at": "2026-11-03T13:35:46+00:00",
+    "published_raw": "2026-11-03T13:35:46Z",
+    "document_type": "decision",
+    "issuer": "Company Names Tribunal",
+    "issuer_ids": [
+      "uk-gov:company-names-tribunal"
+    ],
+    "summary": "Decision for applicant Microsoft Corporation registration number 12924227, applicant successful.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Company Names Tribunal",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 8274,
+    "first_seen": "2026-11-03T20:18:37.164529+00:00",
+    "last_seen": "2026-11-03T20:18:37.164529+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Company Names Tribunal decision: Renpho Limited",
+    "url": "https://www.gov.uk/government/publications/company-names-tribunal-decision-renpho-limited",
+    "native_id": "/government/publications/company-names-tribunal-decision-renpho-limited",
+    "published_at": "2026-11-03T13:35:19+00:00",
+    "published_raw": "2026-11-03T13:35:19Z",
+    "document_type": "decision",
+    "issuer": "Company Names Tribunal",
+    "issuer_ids": [
+      "uk-gov:company-names-tribunal"
+    ],
+    "summary": "Decision for applicant TIT International Limited registration number 16902208 applicant successful.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Company Names Tribunal",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 8275,
+    "first_seen": "2026-11-03T20:18:37.164529+00:00",
+    "last_seen": "2026-11-03T20:18:37.164529+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Company Names Tribunal decision: TD Asset Management Ltd",
+    "url": "https://www.gov.uk/government/publications/company-names-tribunal-decision-td-asset-management-ltd",
+    "native_id": "/government/publications/company-names-tribunal-decision-td-asset-management-ltd",
+    "published_at": "2026-11-03T13:35:00+00:00",
+    "published_raw": "2026-11-03T13:35:00Z",
+    "document_type": "decision",
+    "issuer": "Company Names Tribunal",
+    "issuer_ids": [
+      "uk-gov:company-names-tribunal"
+    ],
+    "summary": "Decision for applicant The Toronto-Dominion Bank registration number 13074334 applicant successful.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Company Names Tribunal",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 8276,
+    "first_seen": "2026-11-03T20:18:37.164529+00:00",
+    "last_seen": "2026-11-03T20:18:37.164529+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Company Names Tribunal decision: Intelsico Ltd",
+    "url": "https://www.gov.uk/government/publications/company-names-tribunal-decision-intelsico-ltd",
+    "native_id": "/government/publications/company-names-tribunal-decision-intelsico-ltd",
+    "published_at": "2026-11-03T13:34:37+00:00",
+    "published_raw": "2026-11-03T13:34:37Z",
+    "document_type": "decision",
+    "issuer": "Company Names Tribunal",
+    "issuer_ids": [
+      "uk-gov:company-names-tribunal"
+    ],
+    "summary": "Decision for applicant Intel Corporation registration number 16695210 applicant successful.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Company Names Tribunal",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 8277,
+    "first_seen": "2026-11-03T20:18:37.164529+00:00",
+    "last_seen": "2026-11-03T20:18:37.164529+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Company Names Tribunal decision: BMW Digital Ltd",
+    "url": "https://www.gov.uk/government/publications/company-names-tribunal-decision-bmw-digital-ltd",
+    "native_id": "/government/publications/company-names-tribunal-decision-bmw-digital-ltd",
+    "published_at": "2026-11-03T13:34:03+00:00",
+    "published_raw": "2026-11-03T13:34:03Z",
+    "document_type": "decision",
+    "issuer": "Company Names Tribunal",
+    "issuer_ids": [
+      "uk-gov:company-names-tribunal"
+    ],
+    "summary": "Decision for applicant Bayerische Motoren Werke Aktiengesellschaft (“BMW”) registration number 16749491 applicant successful.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Company Names Tribunal",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 8278,
+    "first_seen": "2026-11-03T20:18:37.164529+00:00",
+    "last_seen": "2026-11-03T20:18:37.164529+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Company Names Tribunal decision: Boscht Limited",
+    "url": "https://www.gov.uk/government/publications/company-names-tribunal-decision-boscht-limited",
+    "native_id": "/government/publications/company-names-tribunal-decision-boscht-limited",
+    "published_at": "2026-11-03T10:20:54+00:00",
+    "published_raw": "2026-11-03T10:20:54Z",
+    "document_type": "decision",
+    "issuer": "Company Names Tribunal",
+    "issuer_ids": [
+      "uk-gov:company-names-tribunal"
+    ],
+    "summary": "Decision for applicant Robert Bosch GmbH registration number 16827341 applicant successful.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Company Names Tribunal",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 8279,
+    "first_seen": "2026-11-03T20:18:37.164529+00:00",
+    "last_seen": "2026-11-03T20:18:37.164529+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Company Names Tribunal decision: Bosh Services Ltd",
+    "url": "https://www.gov.uk/government/publications/company-names-tribunal-decision-bosh-services-ltd",
+    "native_id": "/government/publications/company-names-tribunal-decision-bosh-services-ltd",
+    "published_at": "2026-11-03T10:18:55+00:00",
+    "published_raw": "2026-11-03T10:18:55Z",
+    "document_type": "decision",
+    "issuer": "Company Names Tribunal",
+    "issuer_ids": [
+      "uk-gov:company-names-tribunal"
+    ],
+    "summary": "Decision for applicant Robert Bosch GmbH registration number 16331684 applicant successful.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Company Names Tribunal",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 8280,
+    "first_seen": "2026-11-03T20:18:37.164529+00:00",
+    "last_seen": "2026-11-03T20:18:37.164529+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
     "title": "Nondiscrimination on the Basis of Disability in Programs or Activities Receiving Federal Financial Assistance",
     "url": "https://www.federalregister.gov/documents/2026/11/03/2026-22380/nondiscrimination-on-the-basis-of-disability-in-programs-or-activities-receiving-federal-financial",
     "native_id": "2026-22380",
@@ -24,7 +286,7 @@
     "primary_source_id": "us-federal-register",
     "n": 8214,
     "first_seen": "2026-11-03T07:57:02.713515+00:00",
-    "last_seen": "2026-11-03T07:57:02.713515+00:00",
+    "last_seen": "2026-11-03T20:18:37.164529+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -55,7 +317,7 @@
     "primary_source_id": "us-federal-register",
     "n": 8213,
     "first_seen": "2026-11-03T07:57:02.713515+00:00",
-    "last_seen": "2026-11-03T07:57:02.713515+00:00",
+    "last_seen": "2026-11-03T20:18:37.164529+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -85,7 +347,7 @@
     "primary_source_id": "us-federal-register",
     "n": 8194,
     "first_seen": "2026-11-03T07:57:02.713515+00:00",
-    "last_seen": "2026-11-03T07:57:02.713515+00:00",
+    "last_seen": "2026-11-03T20:18:37.164529+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -115,7 +377,7 @@
     "primary_source_id": "us-federal-register",
     "n": 8192,
     "first_seen": "2026-11-03T07:57:02.713515+00:00",
-    "last_seen": "2026-11-03T07:57:02.713515+00:00",
+    "last_seen": "2026-11-03T20:18:37.164529+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -145,7 +407,7 @@
     "primary_source_id": "us-federal-register",
     "n": 8189,
     "first_seen": "2026-11-03T07:57:02.713515+00:00",
-    "last_seen": "2026-11-03T07:57:02.713515+00:00",
+    "last_seen": "2026-11-03T20:18:37.164529+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -175,7 +437,7 @@
     "primary_source_id": "us-federal-register",
     "n": 8177,
     "first_seen": "2026-11-03T07:57:02.713515+00:00",
-    "last_seen": "2026-11-03T07:57:02.713515+00:00",
+    "last_seen": "2026-11-03T20:18:37.164529+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -205,7 +467,7 @@
     "primary_source_id": "us-federal-register",
     "n": 8160,
     "first_seen": "2026-11-03T07:57:02.713515+00:00",
-    "last_seen": "2026-11-03T07:57:02.713515+00:00",
+    "last_seen": "2026-11-03T20:18:37.164529+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -306,7 +568,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 8065,
     "first_seen": "2026-11-02T22:20:55.750782+00:00",
-    "last_seen": "2026-11-03T07:57:02.713515+00:00",
+    "last_seen": "2026-11-03T20:18:37.164529+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -335,7 +597,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 8066,
     "first_seen": "2026-11-02T22:20:55.750782+00:00",
-    "last_seen": "2026-11-03T07:57:02.713515+00:00",
+    "last_seen": "2026-11-03T20:18:37.164529+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -364,7 +626,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 8067,
     "first_seen": "2026-11-02T22:20:55.750782+00:00",
-    "last_seen": "2026-11-03T07:57:02.713515+00:00",
+    "last_seen": "2026-11-03T20:18:37.164529+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -393,7 +655,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 7370,
     "first_seen": "2026-10-29T18:58:38.270102+00:00",
-    "last_seen": "2026-11-03T07:57:02.713515+00:00",
+    "last_seen": "2026-11-03T20:18:37.164529+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -422,7 +684,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 8068,
     "first_seen": "2026-11-02T22:20:55.750782+00:00",
-    "last_seen": "2026-11-03T07:57:02.713515+00:00",
+    "last_seen": "2026-11-03T20:18:37.164529+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -451,7 +713,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 4,
     "first_seen": "2026-10-15T10:17:11.133023+00:00",
-    "last_seen": "2026-11-03T07:57:02.713515+00:00",
+    "last_seen": "2026-11-03T20:18:37.164529+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -480,7 +742,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 8069,
     "first_seen": "2026-11-02T22:20:55.750782+00:00",
-    "last_seen": "2026-11-03T07:57:02.713515+00:00",
+    "last_seen": "2026-11-03T20:18:37.164529+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -509,7 +771,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 8070,
     "first_seen": "2026-11-02T22:20:55.750782+00:00",
-    "last_seen": "2026-11-03T07:57:02.713515+00:00",
+    "last_seen": "2026-11-03T20:18:37.164529+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -538,7 +800,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 8071,
     "first_seen": "2026-11-02T22:20:55.750782+00:00",
-    "last_seen": "2026-11-03T07:57:02.713515+00:00",
+    "last_seen": "2026-11-03T20:18:37.164529+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -567,7 +829,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 8072,
     "first_seen": "2026-11-02T22:20:55.750782+00:00",
-    "last_seen": "2026-11-03T07:57:02.713515+00:00",
+    "last_seen": "2026-11-03T20:18:37.164529+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -596,7 +858,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 8073,
     "first_seen": "2026-11-02T22:20:55.750782+00:00",
-    "last_seen": "2026-11-03T07:57:02.713515+00:00",
+    "last_seen": "2026-11-03T20:18:37.164529+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -625,7 +887,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 8074,
     "first_seen": "2026-11-02T22:20:55.750782+00:00",
-    "last_seen": "2026-11-03T07:57:02.713515+00:00",
+    "last_seen": "2026-11-03T20:18:37.164529+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -656,7 +918,7 @@
     "primary_source_id": "us-federal-register",
     "n": 8022,
     "first_seen": "2026-11-02T07:42:04.715422+00:00",
-    "last_seen": "2026-11-03T07:57:02.713515+00:00",
+    "last_seen": "2026-11-03T20:18:37.164529+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -687,7 +949,7 @@
     "primary_source_id": "us-federal-register",
     "n": 8012,
     "first_seen": "2026-11-02T07:42:04.715422+00:00",
-    "last_seen": "2026-11-03T07:57:02.713515+00:00",
+    "last_seen": "2026-11-03T20:18:37.164529+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -718,7 +980,7 @@
     "primary_source_id": "us-federal-register",
     "n": 8002,
     "first_seen": "2026-11-02T07:42:04.715422+00:00",
-    "last_seen": "2026-11-03T07:57:02.713515+00:00",
+    "last_seen": "2026-11-03T20:18:37.164529+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -749,7 +1011,7 @@
     "primary_source_id": "us-federal-register",
     "n": 8001,
     "first_seen": "2026-11-02T07:42:04.715422+00:00",
-    "last_seen": "2026-11-03T07:57:02.713515+00:00",
+    "last_seen": "2026-11-03T20:18:37.164529+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -780,7 +1042,7 @@
     "primary_source_id": "us-federal-register",
     "n": 7998,
     "first_seen": "2026-11-02T07:42:04.715422+00:00",
-    "last_seen": "2026-11-03T07:57:02.713515+00:00",
+    "last_seen": "2026-11-03T20:18:37.164529+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -811,7 +1073,7 @@
     "primary_source_id": "us-federal-register",
     "n": 7992,
     "first_seen": "2026-11-02T07:42:04.715422+00:00",
-    "last_seen": "2026-11-03T07:57:02.713515+00:00",
+    "last_seen": "2026-11-03T20:18:37.164529+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -842,7 +1104,7 @@
     "primary_source_id": "us-federal-register",
     "n": 7991,
     "first_seen": "2026-11-02T07:42:04.715422+00:00",
-    "last_seen": "2026-11-03T07:57:02.713515+00:00",
+    "last_seen": "2026-11-03T20:18:37.164529+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -872,7 +1134,7 @@
     "primary_source_id": "us-federal-register",
     "n": 7975,
     "first_seen": "2026-11-02T07:42:04.715422+00:00",
-    "last_seen": "2026-11-03T07:57:02.713515+00:00",
+    "last_seen": "2026-11-03T20:18:37.164529+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -902,7 +1164,7 @@
     "primary_source_id": "us-federal-register",
     "n": 7955,
     "first_seen": "2026-11-02T07:42:04.715422+00:00",
-    "last_seen": "2026-11-03T07:57:02.713515+00:00",
+    "last_seen": "2026-11-03T20:18:37.164529+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -932,7 +1194,7 @@
     "primary_source_id": "us-federal-register",
     "n": 7954,
     "first_seen": "2026-11-02T07:42:04.715422+00:00",
-    "last_seen": "2026-11-03T07:57:02.713515+00:00",
+    "last_seen": "2026-11-03T20:18:37.164529+00:00",
     "source_ids": [
       "us-federal-register"
     ]

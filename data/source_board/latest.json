@@ -1,6 +1,6 @@
 {
  "date": "2026-11-03",
- "generated_at": "2026-11-03T07:57:23.825298+00:00",
+ "generated_at": "2026-11-03T20:18:57.815437+00:00",
  "catalog": {
   "generated_at": "2026-10-31T17:46:18.945180+00:00",
   "channels": 365,
@@ -34,48 +34,70 @@
   }
  },
  "collect": {
-  "generated_at": "2026-11-03T07:57:02.713515+00:00",
+  "generated_at": "2026-11-03T20:18:37.164529+00:00",
   "enabled_sources": 119,
-  "sources_ok": 119,
-  "sources_failed": 0,
+  "sources_ok": 116,
+  "sources_failed": 3,
   "coverage_status": "degraded",
   "counts": {
-   "observed": 1678,
-   "old": 1105,
-   "future": 0,
-   "undated": 259,
-   "new": 112,
-   "duplicates": 461
+   "observed": 1824,
+   "old": 1199,
+   "future": 11,
+   "undated": 242,
+   "new": 104,
+   "duplicates": 510
   },
-  "current_dated_documents": 334
+  "current_dated_documents": 422
  },
  "new_today": {
-  "count": 112,
+  "count": 104,
   "by_source": {
-   "us-federal-register": 81,
-   "us-govinfo-bills": 23,
-   "in-rbi-cc71120b98": 3,
-   "us-hhs-6f995a5754": 1,
-   "au-rba-c3677bbece": 1,
-   "au-rba-5ba995e001": 1,
-   "nz-rbnz-gnews": 1,
-   "us-supreme-court-orders-index": 1
+   "us-doj-b3d27e1dc3": 15,
+   "us-fda-5696b24295": 14,
+   "eu-council-9d9e9444da": 9,
+   "io-bis-140216a5b6": 9,
+   "uk-govuk-decision": 8,
+   "eu-commission-07d4f58ccf": 8,
+   "in-rbi-cc71120b98": 6,
+   "de-bundesbank-027ac4024f": 5,
+   "us-govinfo-crpt": 4,
+   "us-fcc-e95ecda3bb": 4,
+   "uk-govuk-consultation_outcome": 3,
+   "hk-hkma-public-press": 2,
+   "us-doj-e05071794d": 2,
+   "eu-court-1433471e58": 2,
+   "uk-fca-7b9977ec8e": 2,
+   "us-sec-2476f14c28": 1,
+   "us-itc-index": 1,
+   "us-cftc-fda5c3631d": 1,
+   "us-fda-2cdcdcca63": 1,
+   "uk-boe-4feb372611": 1,
+   "ca-boc-30d6d14378": 1,
+   "in-rbi-738b09bded": 1,
+   "ch-snb-b0f42db828": 1,
+   "de-bundesbank-e5b1c4a067": 1,
+   "de-bundesbank-617511c682": 1,
+   "de-bundesbank-fe89ad3ac9": 1
   },
   "by_class": {
-   "routine": 92,
-   "high": 15,
-   "watch": 5
+   "watch": 50,
+   "noise": 2,
+   "routine": 40,
+   "docket": 6,
+   "high": 6
   }
  },
  "parsed_today": {
-  "count": 46,
+  "count": 145,
   "by_class": {
-   "high": 15,
-   "routine": 26,
-   "watch": 5
+   "high": 20,
+   "routine": 66,
+   "watch": 56,
+   "noise": 2,
+   "docket": 6
   }
  },
- "n_failures": 0,
+ "n_failures": 3,
  "dates": [
   "2026-11-03"
  ],

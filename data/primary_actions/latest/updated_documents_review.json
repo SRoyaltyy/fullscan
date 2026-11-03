@@ -1,74 +1,203 @@
 [
   {
-    "title": "Don’t Be Left Out in the Cold This Holiday Season with Unsafe Presents: Buy from Trusted Sources",
-    "url": "https://www.cpsc.gov/Newsroom/News-Releases/2026/Dont-Be-Left-Out-in-the-Cold-This-Holiday-Season-with-Unsafe-Presents-Buy-from-Trusted-Sources",
-    "native_id": "https://www.cpsc.gov/_6d039050-7fba-4cdf-8361-f7db2f5e3963",
-    "published_at": null,
-    "published_raw": "Tue, 12/09/2025 - 12:00",
-    "summary": "CPSC Reminds Consumers to Shop Safely This Holiday Season",
+    "title": "GDUFA Paid Facilities List",
+    "url": "http://www.fda.gov/industry/generic-drug-user-fee-amendments/gdufa-paid-facilities-list",
+    "native_id": "http://www.fda.gov/industry/generic-drug-user-fee-amendments/gdufa-paid-facilities-list",
+    "published_at": "2026-11-03T19:36:14+00:00",
+    "published_raw": "Tue, 03 Nov 2026 14:36:14 EST",
+    "summary": "This list contains GDUFA facility payments received by the Agency. Data are extract from the User Fee System and GDUFA Facility User Fee Coversheets. The following table explains the terms used in the list:",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Consumer Product Safety Commission",
+      "issuer": "Food and Drug Administration — What's New: Drugs",
       "jurisdiction": "US",
-      "family": "product_safety"
+      "family": "product_permissions_and_safety"
     },
-    "primary_source_id": "us-cpsc-08fe06e2e6",
-    "n": 3537,
-    "first_seen": "2026-10-16T10:36:18.842579+00:00",
-    "last_seen": "2026-11-03T07:57:02.713515+00:00",
+    "primary_source_id": "us-fda-5696b24295",
+    "n": 1388,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-11-03T20:18:37.164529+00:00",
     "source_ids": [
-      "us-cpsc-08fe06e2e6"
+      "us-fda-5696b24295"
     ]
   },
   {
-    "title": "Ponga la seguridad en el menú para unas felices fiestas: la Comisión de Seguridad de Productos del Consumidor ofrece consejos para cocinar con seguridad",
-    "url": "https://www.cpsc.gov/es/Newsroom/News-Releases/2026/Put-Safety-on-the-Menu-Consumer-Product-Safety-Commission-Offers-Safe-Cooking-Tips-for-a-Joyful-Holiday-Season",
-    "native_id": "https://www.cpsc.gov/_59de4207-4ace-44ca-ace0-3cde0cfb8ddb",
-    "published_at": null,
-    "published_raw": "Wed, 11/19/2025 - 12:00",
-    "summary": "WASHINGTON, D.C. – A medida que las familias de todo Estados Unidos se preparan para reunirse en Acción de Gracias, la Comisión de Seguridad de Productos del Consumidor de Estados Unidos (CPSC, por sus siglas en inglés) emite un recordatorio urgente: la",
+    "title": "FDA Rare Disease Innovation Hub",
+    "url": "http://www.fda.gov/industry/medical-products-rare-diseases-and-conditions/fda-rare-disease-innovation-hub",
+    "native_id": "http://www.fda.gov/industry/medical-products-rare-diseases-and-conditions/fda-rare-disease-innovation-hub",
+    "published_at": "2026-11-03T15:47:08+00:00",
+    "published_raw": "Tue, 03 Nov 2026 10:47:08 EST",
+    "summary": "FDA created the Rare Disease Innovation Hub (the Hub) to serve as a point of collaboration and connectivity between CBER and CDER with the goal of ultimately improving outcomes for patients.",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Consumer Product Safety Commission",
+      "issuer": "Food and Drug Administration — What's New: Drugs",
       "jurisdiction": "US",
-      "family": "product_safety"
+      "family": "product_permissions_and_safety"
     },
-    "primary_source_id": "us-cpsc-08fe06e2e6",
-    "n": 3538,
-    "first_seen": "2026-10-16T10:36:18.842579+00:00",
-    "last_seen": "2026-11-03T07:57:02.713515+00:00",
+    "primary_source_id": "us-fda-5696b24295",
+    "n": 1389,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-11-03T20:18:37.164529+00:00",
     "source_ids": [
-      "us-cpsc-08fe06e2e6"
+      "us-fda-03f7703006",
+      "us-fda-5696b24295"
     ]
   },
   {
-    "title": "La CPSC aprueba nueva norma federal de seguridad para las bolas de gel con el fin de reducir el riesgo de lesiones y muerte niños pequeños",
-    "url": "https://www.cpsc.gov/es/Newsroom/News-Releases/2025/CPSC-Approves-New-Federal-Safety-Standard-for-Water-Beads-to-Reduce-the-Risk-of-Injury-and-Death-to-Young-Children",
-    "native_id": "https://www.cpsc.gov/_51cc46a0-5dc1-4f70-8cc1-c6b5b0f0a782",
-    "published_at": null,
-    "published_raw": "Thu, 08/21/2025 - 12:00",
-    "summary": "WASHINGTON D. C. – La Comisión de Seguridad de Productos del Consumidor (CPSC, por sus iniciales en inglés) aprobó una norma de seguridad de productos de consumo para juguetes tipo bolas de gel, lo que refleja el compromiso constante de la entidad con la",
+    "title": "Patient Listening Session Summaries",
+    "url": "http://www.fda.gov/patients/fda-patient-listening-sessions/patient-listening-session-summaries",
+    "native_id": "http://www.fda.gov/patients/fda-patient-listening-sessions/patient-listening-session-summaries",
+    "published_at": "2026-11-03T19:44:45+00:00",
+    "published_raw": "Tue, 03 Nov 2026 14:44:45 EST",
+    "summary": "Patient Listening Session summaries are published after each session to share a high-level summary of the discussion. The Office of Public Engagement draft summaries for FDA-requested sessions and the patient community requester drafts summaries for Patient-led sessions.",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Consumer Product Safety Commission",
+      "issuer": "Food and Drug Administration — What's New: Drugs",
       "jurisdiction": "US",
-      "family": "product_safety"
+      "family": "product_permissions_and_safety"
     },
-    "primary_source_id": "us-cpsc-08fe06e2e6",
-    "n": 3539,
-    "first_seen": "2026-10-16T10:36:18.842579+00:00",
-    "last_seen": "2026-11-03T07:57:02.713515+00:00",
+    "primary_source_id": "us-fda-5696b24295",
+    "n": 1405,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-11-03T20:18:37.164529+00:00",
     "source_ids": [
-      "us-cpsc-08fe06e2e6"
+      "us-fda-03f7703006",
+      "us-fda-5696b24295"
+    ]
+  },
+  {
+    "title": "Company Names Tribunal undefended decisions and orders",
+    "url": "https://www.gov.uk/government/publications/company-names-tribunal-undefended-decisions-and-orders",
+    "native_id": "/government/publications/company-names-tribunal-undefended-decisions-and-orders",
+    "published_at": "2026-11-03T13:39:03+00:00",
+    "published_raw": "2026-11-03T13:39:03Z",
+    "document_type": "decision",
+    "issuer": "Company Names Tribunal",
+    "issuer_ids": [
+      "uk-gov:company-names-tribunal"
+    ],
+    "summary": "Decisions and orders of the Company Names Tribunal - undefended.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Company Names Tribunal",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 2103,
+    "first_seen": "2026-10-15T12:16:32.997656+00:00",
+    "last_seen": "2026-11-03T20:18:37.164529+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Untitled Letters",
+    "url": "http://www.fda.gov/drugs/warning-letters-and-notice-violation-letters-pharmaceutical-companies/untitled-letters",
+    "native_id": "http://www.fda.gov/drugs/warning-letters-and-notice-violation-letters-pharmaceutical-companies/untitled-letters",
+    "published_at": "2026-11-03T19:59:46+00:00",
+    "published_raw": "Tue, 03 Nov 2026 14:59:46 EST",
+    "summary": "These letters are supplied by the CDER Freedom of Information Office and only cover Office of Prescription Drug Promotion's untitled letters. FDA may have redacted or edited some of the letters to remove confidential information.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Food and Drug Administration — What's New: Drugs",
+      "jurisdiction": "US",
+      "family": "product_permissions_and_safety"
+    },
+    "primary_source_id": "us-fda-5696b24295",
+    "n": 5191,
+    "first_seen": "2026-10-17T11:48:15.567792+00:00",
+    "last_seen": "2026-11-03T20:18:37.164529+00:00",
+    "source_ids": [
+      "us-fda-5696b24295"
+    ]
+  },
+  {
+    "title": "Recently Issued Biologics Guidance Documents",
+    "url": "http://www.fda.gov/vaccines-blood-biologics/biologics-guidances/recently-issued-biologics-guidance-documents",
+    "native_id": "http://www.fda.gov/vaccines-blood-biologics/biologics-guidances/recently-issued-biologics-guidance-documents",
+    "published_at": "2026-11-03T17:17:28+00:00",
+    "published_raw": "Tue, 03 Nov 2026 12:17:28 EST",
+    "summary": "This page lists Recently Issued CBER and Cross-Center Guidance Documents.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Food and Drug Administration — What's New: Drugs",
+      "jurisdiction": "US",
+      "family": "product_permissions_and_safety"
+    },
+    "primary_source_id": "us-fda-5696b24295",
+    "n": 6382,
+    "first_seen": "2026-10-23T17:53:51.765604+00:00",
+    "last_seen": "2026-11-03T20:18:37.164529+00:00",
+    "source_ids": [
+      "us-fda-03f7703006",
+      "us-fda-5696b24295"
+    ]
+  },
+  {
+    "title": "Generic Drug Facilities, Sites and Organization Lists",
+    "url": "http://www.fda.gov/industry/generic-drug-user-fee-amendments/generic-drug-facilities-sites-and-organization-lists",
+    "native_id": "http://www.fda.gov/industry/generic-drug-user-fee-amendments/generic-drug-facilities-sites-and-organization-lists",
+    "published_at": "2026-11-03T17:34:21+00:00",
+    "published_raw": "Tue, 03 Nov 2026 12:34:21 EST",
+    "summary": "Generic Drug Facilities, Sites and Organization Lists",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Food and Drug Administration — What's New: Drugs",
+      "jurisdiction": "US",
+      "family": "product_permissions_and_safety"
+    },
+    "primary_source_id": "us-fda-5696b24295",
+    "n": 6652,
+    "first_seen": "2026-10-26T19:21:36.282284+00:00",
+    "last_seen": "2026-11-03T20:18:37.164529+00:00",
+    "source_ids": [
+      "us-fda-5696b24295"
+    ]
+  },
+  {
+    "title": "Statement by the HR on behalf of the EU on the alignment of certain countries concerning restrictive measures in respect of actions undermining or threatening the territorial integrity, sovereignty and independence of Ukraine",
+    "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/11/03/hr-statement-on-behalf-of-eu-alignment-of-certain-countries-concerning-restrictive-measures-in-respect-of-actions-undermining-or-threatening-the-territorial-integrity-sovereignty-and-independence-of-ukraine/",
+    "native_id": "151946",
+    "published_at": "2026-11-03T14:00:00+00:00",
+    "published_raw": "2026-11-03T15:00:00+01:00",
+    "summary": "Statement by the High Representative on behalf of the European Union on the alignment of certain third countries with Council Decision (CFSP) 2026/2185 of 28 September 2026 amending Decision 2014/145/CFSP concerning restrictive measures in respect of actions undermining or threatening the territorial integrity, sovereignty and independence of Ukraine.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Council of the European Union",
+      "jurisdiction": "EU",
+      "family": "sanctions_and_legislation"
+    },
+    "primary_source_id": "eu-council-9d9e9444da",
+    "n": 8340,
+    "first_seen": "2026-11-03T20:18:37.164529+00:00",
+    "last_seen": "2026-11-03T20:18:37.164529+00:00",
+    "source_ids": [
+      "eu-council-9d9e9444da",
+      "eu-council-9d9e9444da"
     ]
   }
 ]
