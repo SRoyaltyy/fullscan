@@ -1,6 +1,6 @@
 {
   "date": "2026-11-03",
-  "generated_at": "2026-11-03T04:28:31.222778-05:00",
+  "generated_at": "2026-11-03T04:40:17.626272-05:00",
   "timezone": "America/New_York",
   "source": "live",
   "source_url": "https://elite.finviz.com/",
@@ -15,39 +15,45 @@
   "kind": "finviz_homepage_market_digest",
   "represents": "Finviz homepage market-day prose. Same-morning Pre-Open when Generated is before 09:30 ET; afternoon Wayback is a prior-day close recap legal for the next session only. Not quote-page ticker blurbs.",
   "error": null,
-  "headline": "US futures trade mixed with Dow under pressure as earnings ramp up and durable goods and JOLTs data loom while oil steadies after Iran-linked volatility",
-  "raw_text": "- Oracle (ORCL) trades roughly flat pre-market after pricing a $10 billion stock offering and $10 billion in senior notes as part of a $20 billion capital-raising plan to fund its AI cloud infrastructure buildout\n- Campbell’s Co (CPB) trades lower pre-market after an EPS miss, soft sales, and reduced full-year guidance\n- Uber (UBER) slips pre-market on news of a robotaxi partnership with Amazon’s (AMZN) Zoox unit\n- S&P 500 Futures (@ES) are down 0.20%, Dow Jones Futures (@YM) fall 0.66%, Nasdaq 100 Futures (@NQ) edge higher by 0.05%, and Russell 2000 Futures (@ER2) decline 0.22%\n- Asian shares retreat overnight, with South Korean tech names under pressure ahead of US midterm elections\n- European markets open lower in early trading following the weak tone in Asia\n- Oil futures (@CL) gain as prices stabilize after recent volatility tied to developments in Iran\n- A busy earnings slate features Shopify (SHOP), Pfizer (PFE), Eaton (ETN) and others reporting before the open, with AMD (AMD), Amgen (AMGN) and Arista Networks (ANET) due after the close\n- Key US data releases include durable goods orders at 8:30 AM ET and JOLTs job openings at 10:00 AM ET, both seen as potential intraday volatility catalysts\n- No major new catalysts have emerged since the 4 AM session start, according to the summary",
-  "raw_summary_md": "- **Oracle** ([ORCL](https://finviz.com/quote?t=ORCL)) trades roughly flat pre-market after pricing a $10 billion stock offering and $10 billion in senior notes as part of a **$20 billion capital-raising plan** to fund its AI cloud infrastructure buildout\n- **Campbell’s Co** ([CPB](https://finviz.com/quote?t=CPB)) trades lower pre-market after an **EPS miss, soft sales, and reduced full-year guidance**\n- **Uber** ([UBER](https://finviz.com/quote?t=UBER)) slips pre-market on news of a **robotaxi partnership with Amazon’s** ([AMZN](https://finviz.com/quote?t=AMZN)) **Zoox unit**\n- **S&P 500 Futures** ([@ES](https://finviz.com/futures_charts?t=ES)) are **down 0.20%**, **Dow Jones Futures** ([@YM](https://finviz.com/futures_charts?t=YM)) fall **0.66%**, **Nasdaq 100 Futures** ([@NQ](https://finviz.com/futures_charts?t=NQ)) edge higher by **0.05%**, and **Russell 2000 Futures** ([@ER2](https://finviz.com/futures_charts?t=ER2)) decline **0.22%**\n- **Asian shares retreat overnight**, with **South Korean tech names under pressure** ahead of US midterm elections\n- **European markets open lower** in early trading following the weak tone in Asia\n- **Oil futures** ([@CL](https://finviz.com/futures_charts?t=CL)) **gain** as prices stabilize after recent volatility tied to **developments in Iran**\n- A **busy earnings slate** features **Shopify** ([SHOP](https://finviz.com/quote?t=SHOP)), **Pfizer** ([PFE](https://finviz.com/quote?t=PFE)), **Eaton** ([ETN](https://finviz.com/quote?t=ETN)) and others reporting **before the open**, with **AMD** ([AMD](https://finviz.com/quote?t=AMD)), **Amgen** ([AMGN](https://finviz.com/quote?t=AMGN)) and **Arista Networks** ([ANET](https://finviz.com/quote?t=ANET)) due **after the close**\n- **Key US data releases** include **durable goods orders at 8:30 AM ET** and **JOLTs job openings at 10:00 AM ET**, both seen as **potential intraday volatility catalysts**\n- **No major new catalysts** have emerged **since the 4 AM session start**, according to the summary",
+  "headline": "US stocks set for mixed open as traders digest Apple earnings, midterm elections and busy data and earnings slate",
+  "raw_text": "- S&P 500 Futures (@ES) -0.10%, Dow Jones Futures (@YM) -0.53%, Nasdaq 100 Futures (@NQ) +0.23% and Russell 2000 Futures (@ER2) -0.04% indicate a mixed open, with the Dow showing relative weakness as traders weigh Apple’s results (AAPL) and looming U.S. midterm elections\n- Apple (AAPL) falls roughly 4.6% pre-market despite beating estimates with $114.5 billion in revenue (+12% y/y) and $2.10 EPS, as its December-quarter outlook for 7–10% revenue growth flags higher memory chip costs, AI cloud spending and slower services growth\n- Oracle (ORCL) trades slightly lower pre-market after pricing a $10 billion stock offering at $116 and $10 billion in senior notes as part of a $20 billion capital-raising plan to fund its AI cloud infrastructure buildout\n- Uber (UBER) trades roughly flat in early trading after announcing a robotaxi partnership deal with Amazon (AMZN)’s Zoox\n- Campbell Soup (CPB) declines pre-market on an EPS miss, soft sales and lowered full-year guidance, according to Investing.com\n- Asian shares trade mixed, with South Korean tech names under pressure and broader regional tech hardware sentiment weighed down by the reaction to Apple’s results (AAPL)\n- European markets trade mostly lower, with Germany’s DAX (@DY) down around 0.7%\n- Oil futures (@CL) rise about 1.8% as prices stabilize following recent Iran-related volatility, while gold (@GC) prices decline\n- Key U.S. data releases include durable goods orders at 8:30 AM ET and JOLTs job openings at 10:00 AM ET, both seen as potential drivers of intraday volatility\n- Today’s earnings calendar features pre-bell reports from Shopify (SHOP), Pfizer (PFE), Eaton (ETN) and Marathon Petroleum (MPC), with Advanced Micro Devices (AMD), Super Micro Computer (SMCI), Amgen (AMGN) and Arista Networks (ANET) due after the close",
+  "raw_summary_md": "- **S&P 500 Futures ([@ES](https://finviz.com/futures_charts?t=ES)) -0.10%, Dow Jones Futures ([@YM](https://finviz.com/futures_charts?t=YM)) -0.53%, Nasdaq 100 Futures ([@NQ](https://finviz.com/futures_charts?t=NQ)) +0.23% and Russell 2000 Futures ([@ER2](https://finviz.com/futures_charts?t=ER2)) -0.04%** indicate a mixed open, with the **Dow showing relative weakness** as traders weigh **Apple’s results ([AAPL](https://finviz.com/quote?t=AAPL)) and looming U.S. midterm elections**\n- **Apple (AAPL) falls roughly 4.6% pre-market** despite beating estimates with **$114.5 billion in revenue (+12% y/y) and $2.10 EPS**, as its **December-quarter outlook for 7–10% revenue growth** flags higher memory chip costs, AI cloud spending and slower services growth\n- **Oracle ([ORCL](https://finviz.com/quote?t=ORCL)) trades slightly lower pre-market** after pricing a **$10 billion stock offering at $116 and $10 billion in senior notes** as part of a **$20 billion capital-raising plan** to fund its **AI cloud infrastructure buildout**\n- **Uber ([UBER](https://finviz.com/quote?t=UBER)) trades roughly flat in early trading** after announcing a **robotaxi partnership deal with Amazon ([AMZN](https://finviz.com/quote?t=AMZN))’s Zoox**\n- **Campbell Soup ([CPB](https://finviz.com/quote?t=CPB)) declines pre-market** on an **EPS miss, soft sales and lowered full-year guidance**, according to Investing.com\n- **Asian shares trade mixed**, with **South Korean tech names under pressure** and broader regional tech hardware sentiment weighed down by the reaction to **Apple’s results ([AAPL](https://finviz.com/quote?t=AAPL))**\n- **European markets trade mostly lower**, with **Germany’s DAX ([@DY](https://finviz.com/futures_charts?t=DY)) down around 0.7%**\n- **Oil futures ([@CL](https://finviz.com/futures_charts?t=CL)) rise about 1.8%** as prices stabilize following recent Iran-related volatility, while **gold ([@GC](https://finviz.com/futures_charts?t=GC)) prices decline**\n- **Key U.S. data releases include durable goods orders at 8:30 AM ET and JOLTs job openings at 10:00 AM ET**, both seen as potential **drivers of intraday volatility**\n- **Today’s earnings calendar features pre-bell reports from Shopify ([SHOP](https://finviz.com/quote?t=SHOP)), Pfizer ([PFE](https://finviz.com/quote?t=PFE)), Eaton ([ETN](https://finviz.com/quote?t=ETN)) and Marathon Petroleum ([MPC](https://finviz.com/quote?t=MPC)), with Advanced Micro Devices ([AMD](https://finviz.com/quote?t=AMD)), Super Micro Computer ([SMCI](https://finviz.com/quote?t=SMCI)), Amgen ([AMGN](https://finviz.com/quote?t=AMGN)) and Arista Networks ([ANET](https://finviz.com/quote?t=ANET)) due after the close**",
   "index_moves": [],
   "oil": null,
   "cpi": null,
   "fed_odds": null,
   "named_tickers": [
+    "AAPL",
     "ORCL",
-    "CPB",
     "UBER",
     "AMZN",
+    "CPB",
     "SHOP",
     "PFE",
     "ETN",
+    "MPC",
     "AMD",
+    "SMCI",
     "AMGN",
     "ANET"
   ],
   "named_leaders": [
+    "AAPL",
     "ORCL",
-    "CPB",
     "UBER",
     "AMZN",
+    "CPB",
     "SHOP",
     "PFE",
     "ETN",
+    "MPC",
     "AMD",
+    "SMCI",
     "AMGN",
     "ANET"
   ],
   "calendar": [
-    "A busy earnings slate features Shopify (SHOP), Pfizer (PFE), Eaton (ETN) and others reporting before the open, with AMD (AMD), Amgen (AMGN) and Arista Networks (ANET) due after the close"
+    "Today’s earnings calendar features pre-bell reports from Shopify (SHOP), Pfizer (PFE), Eaton (ETN) and Marathon Petroleum (MPC), with Advanced Micro Devices (AMD), Super Micro Computer (SMCI), Amgen (AMGN) and Arista Networks (ANET) due after the close"
   ],
   "prior_close": {
     "spx": null,
@@ -62,19 +68,14 @@
     "housing": false,
     "retail": false,
     "fed": false,
-    "bullets": [],
-    "text": ""
+    "bullets": [
+      "Today’s earnings calendar features pre-bell reports from Shopify (SHOP), Pfizer (PFE), Eaton (ETN) and Marathon Petroleum (MPC), with Advanced Micro Devices (AMD), Super Micro Computer (SMCI), Amgen (AMGN) and Arista Networks (ANET) due after the close"
+    ],
+    "text": "Today’s earnings calendar features pre-bell reports from Shopify (SHOP), Pfizer (PFE), Eaton (ETN) and Marathon Petroleum (MPC), with Advanced Micro Devices (AMD), Super Micro Computer (SMCI), Amgen (AMGN) and Arista Networks (ANET) due after the close"
   },
   "earnings_slate": {
-    "tickers": [
-      "SHOP",
-      "PFE",
-      "ETN",
-      "AMD",
-      "AMGN",
-      "ANET"
-    ],
-    "text": "A busy earnings slate features Shopify (SHOP), Pfizer (PFE), Eaton (ETN) and others reporting before the open, with AMD (AMD), Amgen (AMGN) and Arista Networks (ANET) due after the close"
+    "tickers": [],
+    "text": ""
   },
   "geo_grain": {
     "geo": true,
@@ -82,11 +83,11 @@
     "flags": [
       "geo"
     ],
-    "text": "Oil futures (@CL) gain as prices stabilize after recent volatility tied to developments in Iran"
+    "text": "Oil futures (@CL) rise about 1.8% as prices stabilize following recent Iran-related volatility, while gold (@GC) prices decline"
   },
-  "finviz_id": 327268,
+  "finviz_id": 327314,
   "finviz_ticker": "$MARKET",
-  "finviz_published_at": "2026-11-03T04:07:15.163",
+  "finviz_published_at": "2026-11-03T04:38:40.673",
   "finviz_source": "market_summary",
   "finviz_sentiment": "bad"
 }
