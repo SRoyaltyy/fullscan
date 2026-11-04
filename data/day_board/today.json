@@ -1,6 +1,6 @@
 {
   "date": "2026-11-04",
-  "generated_at": "2026-11-04T13:16:12.632654-05:00",
+  "generated_at": "2026-11-04T13:16:41.131683-05:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -32,37 +32,37 @@
     },
     {
       "ticker": "LAUR",
-      "score": 0.659884782245604
+      "score": 0.6704088476722929
     },
     {
       "ticker": "CNK",
-      "score": 0.6753681310382919
-    },
-    {
-      "ticker": "TRU",
-      "score": 0.508811218194425
+      "score": 0.6890165319540886
     },
     {
       "ticker": "CHEF",
-      "score": 0.6285082053494221
+      "score": 0.6466544412958475
     },
     {
-      "ticker": "AVO",
-      "score": 0.5415655401504464
+      "ticker": "TRU",
+      "score": 0.5160039541015978
     },
     {
       "ticker": "PEB",
-      "score": 0.5750426305890313
+      "score": 0.6094003954602434
+    },
+    {
+      "ticker": "AVO",
+      "score": 0.5565699990116773
     },
     {
       "ticker": "ABX",
-      "score": 0.5204083726898243
+      "score": 0.519696343283465
     }
   ],
   "sell_1d": [
     {
       "ticker": "NEOV",
-      "score": -0.3421932302043928
+      "score": -0.34106065552262504
     },
     {
       "ticker": "BIDU",
@@ -70,55 +70,55 @@
     },
     {
       "ticker": "ROIV",
-      "score": -0.3042068127888413
+      "score": -0.3080817295910762
     },
     {
       "ticker": "BAK",
-      "score": -0.2949945082610011
-    },
-    {
-      "ticker": "GFL",
-      "score": -0.294129102220237
+      "score": -0.3000159137683564
     },
     {
       "ticker": "PAL",
-      "score": -0.28881322757671424
+      "score": -0.2877258660105546
+    },
+    {
+      "ticker": "GFL",
+      "score": -0.28610727001780434
     },
     {
       "ticker": "VNET",
-      "score": -0.28722599181355113
-    },
-    {
-      "ticker": "NFLX",
-      "score": -0.28109343468183645
+      "score": -0.28267493621912076
     },
     {
       "ticker": "NOK",
-      "score": -0.2760105980320211
-    },
-    {
-      "ticker": "VSAT",
-      "score": -0.27589109410468576
-    },
-    {
-      "ticker": "CMTG",
-      "score": -0.27438294487648435
-    },
-    {
-      "ticker": "HMY",
-      "score": -0.27272877353062586
-    },
-    {
-      "ticker": "NN",
-      "score": -0.26474611498248435
+      "score": -0.2824046383160953
     },
     {
       "ticker": "SSTK",
-      "score": -0.26447865908078233
+      "score": -0.27052283682097084
     },
     {
-      "ticker": "AUR",
-      "score": -0.2637216902819246
+      "ticker": "VSAT",
+      "score": -0.27041351663524205
+    },
+    {
+      "ticker": "HMY",
+      "score": -0.26736171131943054
+    },
+    {
+      "ticker": "NN",
+      "score": -0.26526922146095666
+    },
+    {
+      "ticker": "NFLX",
+      "score": -0.2641335785155275
+    },
+    {
+      "ticker": "CMTG",
+      "score": -0.26312905243535173
+    },
+    {
+      "ticker": "AREC",
+      "score": -0.25800125813104285
     }
   ],
   "flatten": {
@@ -142,31 +142,6 @@
   },
   "sectors": {},
   "lands": [
-    {
-      "key": "ab",
-      "title": "AB checklist",
-      "date": "2026-11-04",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-11-04T10:02:17.057744-05:00",
-      "files": [
-        {
-          "path": "data/ab_checklist/2026-11-04_ab_checklist.csv",
-          "ok": true,
-          "reason": "",
-          "size": 7552478,
-          "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 TRI, ELV, AUPH, HHH, EPAM"
-        },
-        {
-          "path": "data/ab_checklist/2026-11-04_ab_checklist_enriched.csv",
-          "ok": true,
-          "reason": "",
-          "size": 8361702,
-          "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CDNA, FIGS, PFE, TLYS, TRI"
-        }
-      ],
-      "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 TRI, ELV, AUPH, HHH, EPAM \u00b7 2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CDNA, FIGS, PFE, TLYS, TRI"
-    },
     {
       "key": "stock_book",
       "title": "Stock book + green",
@@ -467,6 +442,59 @@
         }
       ],
       "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-11-04",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-04T13:16:40.313598-05:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-11-04_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1408758,
+          "preview": "1d BUY CDNA, BLFS, VEEV, ILMN, PRCH, LAUR, CNK, CHEF \u00b7 SELL NEOV, BIDU, ROIV, BAK, PAL, GFL, VNET, NOK"
+        },
+        {
+          "path": "data/stock_book/2026-11-04_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 1778,
+          "preview": "green 97 \u00b7 ETON, AMN, ARQT, AGEN, CDNA, CORT, INCY, BLFS, SGRY, VEEV"
+        },
+        {
+          "path": "data/stock_book/2026-11-04_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2503,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-11-04_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12500,
+          "preview": "2026-11-04 BUY CDNA, BLFS, VEEV, ILMN, PRCH, LAUR, CNK, CHEF \u00b7 SELL NEOV, BIDU, ROIV, BAK, PAL, GFL, VNET, NOK"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12500,
+          "preview": "2026-11-04 BUY CDNA, BLFS, VEEV, ILMN, PRCH, LAUR, CNK, CHEF \u00b7 SELL NEOV, BIDU, ROIV, BAK, PAL, GFL, VNET, NOK"
+        },
+        {
+          "path": "01_daily/2026-11-04_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 68425,
+          "preview": "# Stock book \u2014 2026-11-04\n_Generated 2026-11-04T13:16:19.386078-05:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY CDNA, BLFS, VEEV, ILMN, PRCH, LAUR, CNK, CHEF \u00b7 SELL NEOV, BIDU, ROIV, BAK, PAL, GFL, VNET, NOK \u00b7 green 97 \u00b7 ETON, AMN, ARQT, AGEN, CDNA, CORT, INCY, BLFS, SGRY, VEEV \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-11-04 BUY CDNA, BLFS, VEEV, ILMN, PRCH, LAUR, CNK, CHEF \u00b7 SELL NEOV, BIDU, ROIV, BAK, PAL, GFL, VNET, NOK \u00b7 2026-11-04 BUY CDNA, BLFS, VEEV, ILMN, PRCH, LAUR, CNK, CHEF \u00b7 SELL NEOV, BIDU, ROIV, BAK, PAL, GFL, VNET, NOK \u00b7 # Stock book \u2014 2026-11-04\n_Generated 2026-11-04T13:16:19.386078-05:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"

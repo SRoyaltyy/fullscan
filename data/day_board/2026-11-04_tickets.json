@@ -1,6 +1,6 @@
 {
   "date": "2026-11-04",
-  "generated_at": "2026-11-04T11:14:30.044355-05:00",
+  "generated_at": "2026-11-04T13:16:21.720148-05:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -32,37 +32,37 @@
     },
     {
       "ticker": "LAUR",
-      "score": 0.659884782245604
+      "score": 0.6704088476722929
     },
     {
       "ticker": "CNK",
-      "score": 0.6753681310382919
-    },
-    {
-      "ticker": "TRU",
-      "score": 0.508811218194425
+      "score": 0.6890165319540886
     },
     {
       "ticker": "CHEF",
-      "score": 0.6285082053494221
+      "score": 0.6466544412958475
     },
     {
-      "ticker": "AVO",
-      "score": 0.5415655401504464
+      "ticker": "TRU",
+      "score": 0.5160039541015978
     },
     {
       "ticker": "PEB",
-      "score": 0.5750426305890313
+      "score": 0.6094003954602434
+    },
+    {
+      "ticker": "AVO",
+      "score": 0.5565699990116773
     },
     {
       "ticker": "ABX",
-      "score": 0.5204083726898243
+      "score": 0.519696343283465
     }
   ],
   "sell_1d": [
     {
       "ticker": "NEOV",
-      "score": -0.3421932302043928
+      "score": -0.34106065552262504
     },
     {
       "ticker": "BIDU",
@@ -70,55 +70,55 @@
     },
     {
       "ticker": "ROIV",
-      "score": -0.3042068127888413
+      "score": -0.3080817295910762
     },
     {
       "ticker": "BAK",
-      "score": -0.2949945082610011
-    },
-    {
-      "ticker": "GFL",
-      "score": -0.294129102220237
+      "score": -0.3000159137683564
     },
     {
       "ticker": "PAL",
-      "score": -0.28881322757671424
+      "score": -0.2877258660105546
+    },
+    {
+      "ticker": "GFL",
+      "score": -0.28610727001780434
     },
     {
       "ticker": "VNET",
-      "score": -0.28722599181355113
-    },
-    {
-      "ticker": "NFLX",
-      "score": -0.28109343468183645
+      "score": -0.28267493621912076
     },
     {
       "ticker": "NOK",
-      "score": -0.2760105980320211
-    },
-    {
-      "ticker": "VSAT",
-      "score": -0.27589109410468576
-    },
-    {
-      "ticker": "CMTG",
-      "score": -0.27438294487648435
-    },
-    {
-      "ticker": "HMY",
-      "score": -0.27272877353062586
-    },
-    {
-      "ticker": "NN",
-      "score": -0.26474611498248435
+      "score": -0.2824046383160953
     },
     {
       "ticker": "SSTK",
-      "score": -0.26447865908078233
+      "score": -0.27052283682097084
     },
     {
-      "ticker": "AUR",
-      "score": -0.2637216902819246
+      "ticker": "VSAT",
+      "score": -0.27041351663524205
+    },
+    {
+      "ticker": "HMY",
+      "score": -0.26736171131943054
+    },
+    {
+      "ticker": "NN",
+      "score": -0.26526922146095666
+    },
+    {
+      "ticker": "NFLX",
+      "score": -0.2641335785155275
+    },
+    {
+      "ticker": "CMTG",
+      "score": -0.26312905243535173
+    },
+    {
+      "ticker": "AREC",
+      "score": -0.25800125813104285
     }
   ],
   "flatten": {
@@ -884,6 +884,67 @@
         }
       ],
       "preview": "# flatten_robust card \u2014 2026-11-04\n_Generated 2026-11-04T15:07:02 \u2014 live `flatten_robust`._\n**S=+10.85; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**\n- Score **+10.85** (UP) \u00b7 route **io**\n- Cash leftover **$115,783.62** (after 09:30 $115,783.62 \u00b7 after 16:00 $115,783.62)\n- Prior close **$115,783.62** \u00b7 09:30 **$115,783.62** \u00b7 overnight **$+0.00** \u00b7 session **$+0.00** \u00b7 16:00 **$115,783.62**\n- Overnight lots **0** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$0.00** \u2264 leftover after sells **$115,783.62** \u00b7 2026-11-04 BUY \u2014 \u00b7 SELL \u2014 \u00b7 keys: date, policy, generated, score, predict, hard_red, flatten_ok, n_priced_buys, prior_book, route, cash_open, cash_after_0930 \u00b7 [{\"date\": \"2026-08-13\", \"route\": \"io\", \"score\": 8.525, \"predict\": \"UP\", \"yday_equity\": 100000.0, \"open_cash\": 100000.0, \"open_held\": 0, \"open_equity\": 100000.0, \"overnight_delta\": 0.0, \"session_delta\": -169.94, \"equity\": 99830.06, \"cash\": 9917.52, \"overnight_names\": \"\", \"overnight\": [], \"marks\": [{\"ticker\": \"BTSG\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 166, \"shares\": 166, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 59"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-11-04",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-04T13:15:58.040476-05:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-11-04_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 10303,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-11-04_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5816,
+          "preview": "# Weather report \u2014 2026-11-04\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-11-04\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-11-04",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-04T13:16:07.061909-05:00",
+      "files": [
+        {
+          "path": "data/join/2026-11-04_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2297694,
+          "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 FTK, RIGL, OMER, HALO, ETON"
+        }
+      ],
+      "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 FTK, RIGL, OMER, HALO, ETON"
+    },
+    {
+      "key": "peer_rs",
+      "title": "Peer RS",
+      "date": "2026-11-04",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-04T13:16:11.814442-05:00",
+      "files": [
+        {
+          "path": "data/peers/2026-11-04_peer_rs.csv",
+          "ok": true,
+          "reason": "",
+          "size": 821534,
+          "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+        }
+      ],
+      "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
     }
   ],
   "source": "publish_live_boards"
