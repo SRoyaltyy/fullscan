@@ -175,6 +175,12 @@ jobs:
             echo "Used dashboard/index.html from main"
           fi
 
+          # A stock-book artifact can be older than the page just rendered
+          # onto main (Publish strategy tickets, no-publish gate). The newer
+          # data-asof wins. An equal stamp keeps the artifact.
+          python3 -m src.pages_publish_gate --apply-newer-main-page \
+            pages_out/dashboard/index.html dashboard/index.html
+
           overlay() {
             local sub="$1"
             if [ -f "dashboard/${sub}/index.html" ]; then

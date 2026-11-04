@@ -552,6 +552,32 @@ def test_gate_block_fails_the_workflow() -> None:
     assert "empty = latest completed NYSE session" in dep
 
 
+def test_newer_main_page_replaces_an_older_artifact() -> None:
+    """A rendered main page newer than a stock-book artifact is what deploys."""
+    with tempfile.TemporaryDirectory() as d:
+        root = Path(d)
+        artifact = root / "pages_out" / "dashboard" / "index.html"
+        main = root / "dashboard" / "index.html"
+        artifact.parent.mkdir(parents=True)
+        main.parent.mkdir(parents=True)
+        old = b'<meta charset="utf-8">\n<meta name="data-asof" content="2026-10-07">\n'
+        new = b'<meta charset="utf-8">\n<meta name="data-asof" content="2026-11-03">\n'
+        artifact.write_bytes(old)
+        main.write_bytes(new)
+        assert gate.apply_newer_main_page(artifact, main) == "main"
+        assert artifact.read_bytes() == new
+        assert (root / "pages_out" / "index.html").read_bytes() == new
+        artifact.write_bytes(new)
+        main.write_bytes(old)
+        assert gate.apply_newer_main_page(artifact, main) == "artifact"
+        assert artifact.read_bytes() == new
+        same = new
+        assert gate.apply_newer_main_page(artifact, main.parent / "missing.html") == "artifact"
+        main.write_bytes(same)
+        assert gate.apply_newer_main_page(artifact, main) == "artifact"
+        assert artifact.read_bytes() == same
+
+
 def test_workflows_wire_the_gate() -> None:
     root = Path(__file__).resolve().parent.parent
     dep = (root / ".github" / "workflows" / "deploy-dashboard.yml").read_text(
@@ -571,7 +597,8 @@ def test_workflows_wire_the_gate() -> None:
     assert "newest successful Stock Book ALL" in dep
     main_fallback = dep.index("Used dashboard/index.html from main")
     artifact_fallback = dep.index("newest successful Stock Book ALL")
-    assert artifact_fallback < main_fallback
+    newer = dep.index("--apply-newer-main-page")
+    assert artifact_fallback < main_fallback < newer
 
 
 def main() -> None:
@@ -581,6 +608,7 @@ def main() -> None:
         test_fallback_when_book_required_missing,
         test_blocked_without_tickets,
         test_main_page_fresh_blocks_a_stale_stamp,
+        test_newer_main_page_replaces_an_older_artifact,
         test_legacy_curve_dates_count_as_data_asof,
         test_blocked_when_today_json_is_yesterday,
         test_live_2026_09_16_board_is_ready,

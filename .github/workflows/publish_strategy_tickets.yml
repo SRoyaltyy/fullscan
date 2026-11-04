@@ -4,6 +4,9 @@ name: Publish strategy tickets
 # The gate skips a run whose input hash already matches the landed
 # ticket, and that skip does not cancel an in-flight publish.
 # A newer hash still cancels the older publish job: latest inputs win.
+# The main dashboard page is not a ticket. A no-publish gate still
+# renders dashboard/index.html from the printed curve and deploys it.
+# Ticket writes stay on the tickets job.
 # This workflow never places a Webull order. A ticket republish and a
 # stock-book rebuild (workflow_run from Stock Book ALL or Pre-Open ALL)
 # only write tickets. The sealed h1 paper send is webull_paper.yml before
@@ -146,13 +149,6 @@ jobs:
           PY
           test -s data/day_board/today_strategies.json
           test -s dashboard/factor-mine/strategy_tickets.json
-      - name: Render main page from the paper curve
-        if: steps.readiness.outputs.ready == 'true'
-        run: |
-          set -euo pipefail
-          # Regenerates dashboard/index.html from the printed curve.
-          # Does not append buys, sells, or curve rows.
-          python3 -m src.paper_trade_append --render-only
       - name: Push tickets
         if: always() && steps.readiness.outputs.ready == 'true'
         env:
@@ -190,8 +186,59 @@ jobs:
             "01_daily/${DATE}_stock_book.md"
           chmod +x scripts/publish_dashboard.sh || true
           bash scripts/publish_dashboard.sh
-      - name: Restamp GitHub Pages
-        if: always() && steps.readiness.outputs.ready == 'true'
+
+  # Runs when the gate succeeds, including publish=false (run 41849547018
+  # skipped tickets and left the main page on 2026-10-07). Ticket publishing
+  # stays on the tickets job. needs tickets so a real publish lands first;
+  # a skipped tickets job does not skip this one.
+  page:
+    needs: [gate, tickets]
+    if: >-
+      always() &&
+      needs.gate.result == 'success' &&
+      needs.tickets.result != 'cancelled'
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install
+        run: pip install pandas numpy pyarrow openpyxl requests yfinance
+      - name: Render main page from the paper curve
+        run: |
+          set -euo pipefail
+          # Regenerates dashboard/index.html from the printed curve.
+          # Does not append buys, sells, or curve rows.
+          python3 -m src.paper_trade_append --render-only
+      - name: Sealed buy and sell rows stayed byte-identical
+        run: |
+          set -euo pipefail
+          git diff --exit-code -- data/paper ':(glob)data/**/roundtrips*'
+      - name: Upload dashboard artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: dashboard
+          path: dashboard/index.html
+          if-no-files-found: error
+      - name: Push the rendered page
         env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          bash scripts/safe_git_push.sh \
+            "auto: main dashboard page $(TZ=America/New_York date +%F)" \
+            dashboard/index.html
+      - name: Deploy the main page
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: gh workflow run deploy-dashboard.yml --ref main
+        run: |
+          set -euo pipefail
+          chmod +x scripts/publish_dashboard.sh || true
+          bash scripts/publish_dashboard.sh
+          gh workflow run deploy-dashboard.yml --ref main

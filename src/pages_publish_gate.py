@@ -345,6 +345,32 @@ def _evaluate_date(date: str, *, root: Path) -> dict:
     }
 
 
+def apply_newer_main_page(artifact: Path, main: Path) -> str:
+    """Copy ``main`` over ``artifact`` when its data-asof is strictly newer.
+
+    An equal stamp keeps the artifact. Returns ``main`` or ``artifact``.
+    When the artifact path is ``.../dashboard/index.html``, the root
+    ``index.html`` beside that dashboard directory is updated too.
+    """
+    def asof(path: Path) -> str:
+        if not path.is_file():
+            return ""
+        return data_asof_from_html(
+            path.read_text(encoding="utf-8", errors="replace")[:262144]
+        )
+
+    art_asof = asof(artifact)
+    main_asof = asof(main)
+    if not (main.is_file() and main_asof and (not art_asof or main_asof > art_asof)):
+        return "artifact"
+    blob = main.read_bytes()
+    artifact.parent.mkdir(parents=True, exist_ok=True)
+    artifact.write_bytes(blob)
+    if artifact.parent.name == "dashboard":
+        (artifact.parent.parent / "index.html").write_bytes(blob)
+    return "main"
+
+
 def format_verdict(v: dict) -> str:
     bits = []
     for key in PAGES_PROCESS_KEYS:
@@ -368,7 +394,18 @@ def format_verdict(v: dict) -> str:
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--date", default="")
+    ap.add_argument(
+        "--apply-newer-main-page",
+        nargs=2,
+        metavar=("ARTIFACT", "MAIN"),
+        help="Copy MAIN over ARTIFACT when MAIN data-asof is newer.",
+    )
     args = ap.parse_args()
+    if args.apply_newer_main_page:
+        artifact, main_page = (Path(p) for p in args.apply_newer_main_page)
+        choice = apply_newer_main_page(artifact, main_page)
+        print(f"page={choice}", flush=True)
+        return
     verdict = evaluate(args.date)
     line = format_verdict(verdict)
     print(line, flush=True)
