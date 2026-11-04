@@ -34779,18 +34779,125 @@
         "B7_OIL_DOLLAR": 1.0
       },
       "leading_sum": 4.0,
-      "actual_open": null,
-      "actual_close": null,
-      "actual_pct_change": null,
-      "actual_direction": null,
-      "actual_magnitude_band": null,
-      "direction_hit": null,
-      "magnitude_hit": null,
+      "actual_open": 7635.81,
+      "actual_close": 7688.62,
+      "actual_pct_change": 1.58,
+      "actual_direction": "up",
+      "actual_magnitude_band": "notable",
+      "direction_hit": true,
+      "magnitude_hit": true,
       "divergence_flagged": false,
       "divergence_verdict": null,
-      "per_factor_breakdown": [],
+      "per_factor_breakdown": [
+        {
+          "factor": "B0_ASIA",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B0_EUROPE",
+          "score": 0.5,
+          "status": "hit"
+        },
+        {
+          "factor": "B1_CATALYSTS",
+          "score": 1.0,
+          "status": "hit"
+        },
+        {
+          "factor": "B2_BONDS",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B3_FEDPATH",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B4_VIX",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B5_SENTIMENT",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B6_FUTURES",
+          "score": 0.5,
+          "status": "hit"
+        },
+        {
+          "factor": "B7_OIL_DOLLAR",
+          "score": 1.0,
+          "status": "hit"
+        }
+      ],
       "reflection_lesson_ref": null,
-      "sources_used": [],
+      "sources_used": [
+        {
+          "url": "https://apnews.com/article/wall-street-stocks-dow-nasdaq-c0be7ca45b5875abe758e0570cb9a265",
+          "date_accessed": "2026-11-04",
+          "summary": "AP confirms the closing numbers and frames the rally as a post-midterm relief move.",
+          "verification": "http_403"
+        },
+        {
+          "url": "https://www.geo.tv/latest/689772-oil-prices-crash-nearly-9-after-democrats-sweep-us-midterms",
+          "date_accessed": "2026-11-04",
+          "summary": "Geo.tv establishes the oil crash as a direct consequence of the midterm result and war-de-escalation hopes.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://en.infomaxai.com/news/articleView.html?idxno=146736",
+          "date_accessed": "2026-11-04",
+          "summary": "Yonhap Infomax details AMD’s clean beat and strong guidance, confirming the AI-hardware catalyst.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://finance.yahoo.com/markets/stocks/articles/apple-soars-6-bernstein-lifts-152924266.html",
+          "date_accessed": "2026-11-04",
+          "summary": "Yahoo Finance documents Apple’s intraday sentiment reversal, a key contributor to the afternoon tech stabilisation.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.barrons.com/articles/palantir-earnings-stock-price-d18e9a00",
+          "date_accessed": "2026-11-04",
+          "summary": "Barron’s confirms the sell-the-news reaction despite a fundamental beat.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.hsbc.com.cn/en-cn/wealth/insights/fx-insights/fx-viewpoint/strong-usd-view-intact-after-fomc-hold/",
+          "date_accessed": "2026-11-04",
+          "summary": "HSBC confirms the hawkish hold and the December hike option, establishing the Fed as a known background factor.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.thehindu.com/news/international/iran-says-tankers-destroyed-after-hitting-mines-in-hormuz/article70243456.ece",
+          "date_accessed": "2026-11-04",
+          "summary": "The Hindu confirms the IRGC claim, which is notable precisely because the market ignored it — a key “what doesn’t fit” data point.",
+          "verification": "http_404"
+        },
+        {
+          "url": "https://www.benzinga.com/markets/equities/26/11/stock-market-today-dow-up-2-9-oil-sinks-7-after-midterms",
+          "date_accessed": "2026-11-04",
+          "summary": "Benzinga documents the cross-asset bond rally, reinforcing the “oil crash → inflation relief” channel.",
+          "verification": "http_403"
+        },
+        {
+          "url": "https://www.tipranks.com/news/sp-500-top-stock-gainers-today-11-4-26",
+          "date_accessed": "2026-11-04",
+          "summary": "TipRanks quantifies the sector rotation that the headline index number masks.",
+          "verification": "http_403"
+        },
+        {
+          "url": "https://www.swissinfo.ch/eng/stocks%2c-bonds-climb-after-us-election-as-oil-sinks%3a-markets-wrap/92323391",
+          "date_accessed": "2026-11-04",
+          "summary": "Bloomberg/Swissinfo captures the dominant “gridlock = good” attribution, which coexists with the oil-crash attribution in a contested narrative.",
+          "verification": "quote_not_found"
+        }
+      ],
       "horizon_calls": {
         "HORIZON_3D": {
           "trading_days": 3,
@@ -34820,7 +34927,14 @@
       "news_judge_present": true,
       "engine": "v2",
       "anchor_score": 6.098,
-      "overlay_score": 4.75
+      "overlay_score": 4.75,
+      "ops_fail": false,
+      "path_shape": "choppy / range-bound",
+      "primary_driver": "Democratic midterm sweep → oil crash (~8-9%) on Iran war de-escalation hopes → broad equity relief rally, amplified by gridlock optimism and bond rally.",
+      "key_interaction": "Amplification — midterm sweep + oil crash + bond rally compounded into a broad risk-on move, while the energy sector (-4.4%) offset at the sector level, masking extreme internal dispersion behind the +1.6% S&P headline.",
+      "knowable_at_9am": "partially",
+      "attribution_contested": "yes — outlets split between “gridlock is good” (AP/Bloomberg), “oil crash / peace dividend” (Geo.tv/XTB), and “earnings/AI” (tech coverage).",
+      "outlier_watch": "Energy sector -4.4% to -4.7% while the broad market rallied +1.6%; NDX lagged Dow by ~1.6pp; Apple reversed from -4% to +6%; Hormuz mine claims completely ignored by oil."
     }
   ]
 }
