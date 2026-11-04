@@ -1,6 +1,6 @@
 {
   "date": "2026-11-03",
-  "generated_at": "2026-11-03T21:36:42.635137-05:00",
+  "generated_at": "2026-11-04T02:34:33.156564-05:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -94,12 +94,12 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 97156,
-          "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
+          "size": 103518,
+          "said": "1109 tickers \u00b7 504 signals \u00b7 top ADI, AME, AMGN, AMZN, ANET, AZN, BE, BKNG",
           "bullets": [
-            "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
-            "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
-            "Banks have profited from idle cash for years. AI agents could change that."
+            "Analog Devices Completes Acquisition of Alif Semiconductor",
+            "Ametek: Q3 Earnings Snapshot",
+            "Amgen Beats And Raises Again As Imdelltra Data Strengthen The Pipeline, But Growth Is Decelerating Beneath The Headline"
           ]
         },
         {
@@ -109,10 +109,10 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 11984,
+          "size": 11818,
           "said": "Finviz Daily Digest \u2014 2026-11-03",
           "bullets": [
-            "_Generated 2026-11-03T07:19:52.492131-05:00 \u00b7 export=data/exports/finviz_2026-11-03.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_",
+            "_Generated 2026-11-04T02:34:31.321487-05:00 \u00b7 export=data/exports/finviz_2026-11-03.csv \u00b7 ticker digests=1109 \u00b7 high-signal=504_",
             "Major indices (live quote page)"
           ]
         },
@@ -167,11 +167,11 @@
           ]
         }
       ],
-      "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
+      "said": "1109 tickers \u00b7 504 signals \u00b7 top ADI, AME, AMGN, AMZN, ANET, AZN, BE, BKNG",
       "bullets": [
-        "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
-        "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
-        "Banks have profited from idle cash for years. AI agents could change that."
+        "Analog Devices Completes Acquisition of Alif Semiconductor",
+        "Ametek: Q3 Earnings Snapshot",
+        "Amgen Beats And Raises Again As Imdelltra Data Strengthen The Pipeline, But Growth Is Decelerating Beneath The Headline"
       ]
     },
     {
@@ -192,12 +192,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 97156,
-          "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
+          "size": 103518,
+          "said": "1109 tickers \u00b7 504 signals \u00b7 top ADI, AME, AMGN, AMZN, ANET, AZN, BE, BKNG",
           "bullets": [
-            "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
-            "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
-            "Banks have profited from idle cash for years. AI agents could change that."
+            "Analog Devices Completes Acquisition of Alif Semiconductor",
+            "Ametek: Q3 Earnings Snapshot",
+            "Amgen Beats And Raises Again As Imdelltra Data Strengthen The Pipeline, But Growth Is Decelerating Beneath The Headline"
           ]
         },
         {
@@ -352,11 +352,11 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=True",
-          "size": 7561,
-          "said": "all_ok=True \u00b7 sectors 0/11 \u00b7 13 fail",
+          "size": 7558,
+          "said": "all_ok=True \u00b7 sectors 0/11 \u00b7 12 fail",
           "bullets": [
-            "finviz_market_digest:missing",
             "map_heat_research:missing",
+            "sector_predict:missing",
             "sector_predict:missing",
             "sector_predict:missing"
           ]
@@ -368,7 +368,7 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False missing=['map_heat_research']",
-          "size": 6786,
+          "size": 6782,
           "said": "all_ok=False \u00b7 qc=True \u00b7 grok=False \u00b7 book=False \u00b7 missing map_heat_research",
           "bullets": []
         },
@@ -539,12 +539,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 97156,
-          "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
+          "size": 103518,
+          "said": "1109 tickers \u00b7 504 signals \u00b7 top ADI, AME, AMGN, AMZN, ANET, AZN, BE, BKNG",
           "bullets": [
-            "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
-            "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
-            "Banks have profited from idle cash for years. AI agents could change that."
+            "Analog Devices Completes Acquisition of Alif Semiconductor",
+            "Ametek: Q3 Earnings Snapshot",
+            "Amgen Beats And Raises Again As Imdelltra Data Strengthen The Pipeline, But Growth Is Decelerating Beneath The Headline"
           ]
         },
         {
@@ -645,12 +645,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 97156,
-          "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
+          "size": 103518,
+          "said": "1109 tickers \u00b7 504 signals \u00b7 top ADI, AME, AMGN, AMZN, ANET, AZN, BE, BKNG",
           "bullets": [
-            "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
-            "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
-            "Banks have profited from idle cash for years. AI agents could change that."
+            "Analog Devices Completes Acquisition of Alif Semiconductor",
+            "Ametek: Q3 Earnings Snapshot",
+            "Amgen Beats And Raises Again As Imdelltra Data Strengthen The Pipeline, But Growth Is Decelerating Beneath The Headline"
           ]
         },
         {
@@ -748,12 +748,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 97156,
-          "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
+          "size": 103518,
+          "said": "1109 tickers \u00b7 504 signals \u00b7 top ADI, AME, AMGN, AMZN, ANET, AZN, BE, BKNG",
           "bullets": [
-            "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
-            "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
-            "Banks have profited from idle cash for years. AI agents could change that."
+            "Analog Devices Completes Acquisition of Alif Semiconductor",
+            "Ametek: Q3 Earnings Snapshot",
+            "Amgen Beats And Raises Again As Imdelltra Data Strengthen The Pipeline, But Growth Is Decelerating Beneath The Headline"
           ]
         },
         {
@@ -831,7 +831,7 @@
           "role": "required",
           "status": "OK",
           "reason": "horizons=5 names=123",
-          "size": 1045508,
+          "size": 1045510,
           "said": "1d BUY HITI, MXCT, REPL, SY, CERS \u00b7 SELL NEOV, OKLO, FCEL, EOSE, NNDM, NRGV \u00b7 -0.61625",
           "bullets": []
         },
@@ -842,10 +842,10 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 37370,
+          "size": 37406,
           "said": "Stock book \u2014 2026-11-03",
           "bullets": [
-            "_Generated 2026-11-03T21:36:40.437988-05:00_",
+            "_Generated 2026-11-03T07:48:52.022109-05:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -909,7 +909,7 @@
           "role": "input",
           "status": "OK",
           "reason": "horizons=5 names=123",
-          "size": 1045508,
+          "size": 1045510,
           "said": "1d BUY HITI, MXCT, REPL, SY, CERS \u00b7 SELL NEOV, OKLO, FCEL, EOSE, NNDM, NRGV \u00b7 -0.61625",
           "bullets": []
         },
@@ -3413,6 +3413,52 @@
         }
       ],
       "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest (close) \u2014 2026-11-03\n**Generated:** 2026-11-03T18:26:29.410173-05:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks ended mixed on midterm Election Day as AI and chip names rebounded ahead of key earnings\n**Prior close:** SPX -1.93%  Nasdaq \u2014  Dow \u2014\n**SPX:** -1.93%  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** NVDA, MSFT, AMZN, AMD, AAPL, SMCI, XYZ\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** XYZ\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-11-04\n**Clock use:** `next_open`"
+    },
+    {
+      "key": "finviz_digest",
+      "title": "Finviz digest",
+      "date": "2026-11-03",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-04T02:34:31.900773-05:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-11-03_finviz_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 103518,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        },
+        {
+          "path": "01_daily/news/2026-11-03_finviz_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 11873,
+          "preview": "# Finviz Daily Digest \u2014 2026-11-03\n_Generated 2026-11-04T02:34:31.321487-05:00 \u00b7 export=data/exports/finviz_2026-11-03.csv \u00b7 ticker digests=1109 \u00b7 high-signal=504_"
+        },
+        {
+          "path": "data/exports/finviz_2026-11-03.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11030201,
+          "preview": "11752 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAB\""
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11030201,
+          "preview": "11752 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAB\""
+        },
+        {
+          "path": "01_daily/news/2026-11-03_finviz_digest_preopen.json",
+          "ok": true,
+          "reason": "",
+          "size": 97114,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        }
+      ],
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-11-03\n_Generated 2026-11-04T02:34:31.321487-05:00 \u00b7 export=data/exports/finviz_2026-11-03.csv \u00b7 ticker digests=1109 \u00b7 high-signal=504_ \u00b7 11752 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAB\" \u00b7 11752 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAB\" \u00b7 keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
     }
   ],
   "href": {
@@ -3778,6 +3824,62 @@
       "path": "data/exports/finviz_2026-11-03.csv",
       "at": "2026-11-04T02:34:07-05:00",
       "commit_msg": "auto: land finviz export [2026-11-03]",
+      "workflow": "Finviz ALL (GH-hosted Elite)",
+      "run_id": "41792330437",
+      "manifest": "research/input_freeze/2026-11-03/manifest.json"
+    },
+    {
+      "path": "01_daily/2026-11-03_grok_review.json",
+      "at": "2026-11-04T02:34:33-05:00",
+      "commit_msg": "auto: land finviz_digest [2026-11-03]",
+      "workflow": "Finviz ALL (GH-hosted Elite)",
+      "run_id": "41792330437",
+      "manifest": "research/input_freeze/2026-11-03/manifest.json"
+    },
+    {
+      "path": "01_daily/2026-11-03_preopen_qc.json",
+      "at": "2026-11-04T02:34:33-05:00",
+      "commit_msg": "auto: land finviz_digest [2026-11-03]",
+      "workflow": "Finviz ALL (GH-hosted Elite)",
+      "run_id": "41792330437",
+      "manifest": "research/input_freeze/2026-11-03/manifest.json"
+    },
+    {
+      "path": "01_daily/2026-11-03_preopen_status.json",
+      "at": "2026-11-04T02:34:33-05:00",
+      "commit_msg": "auto: land finviz_digest [2026-11-03]",
+      "workflow": "Finviz ALL (GH-hosted Elite)",
+      "run_id": "41792330437",
+      "manifest": "research/input_freeze/2026-11-03/manifest.json"
+    },
+    {
+      "path": "01_daily/news/2026-11-03_finviz_digest.json",
+      "at": "2026-11-04T02:34:33-05:00",
+      "commit_msg": "auto: land finviz_digest [2026-11-03]",
+      "workflow": "Finviz ALL (GH-hosted Elite)",
+      "run_id": "41792330437",
+      "manifest": "research/input_freeze/2026-11-03/manifest.json"
+    },
+    {
+      "path": "01_daily/news/2026-11-03_finviz_digest.md",
+      "at": "2026-11-04T02:34:33-05:00",
+      "commit_msg": "auto: land finviz_digest [2026-11-03]",
+      "workflow": "Finviz ALL (GH-hosted Elite)",
+      "run_id": "41792330437",
+      "manifest": "research/input_freeze/2026-11-03/manifest.json"
+    },
+    {
+      "path": "data/day_board/2026-11-03.json",
+      "at": "2026-11-04T02:34:33-05:00",
+      "commit_msg": "auto: land finviz_digest [2026-11-03]",
+      "workflow": "Finviz ALL (GH-hosted Elite)",
+      "run_id": "41792330437",
+      "manifest": "research/input_freeze/2026-11-03/manifest.json"
+    },
+    {
+      "path": "data/exports/finviz_2026-11-03.csv",
+      "at": "2026-11-04T02:34:33-05:00",
+      "commit_msg": "auto: land finviz_digest [2026-11-03]",
       "workflow": "Finviz ALL (GH-hosted Elite)",
       "run_id": "41792330437",
       "manifest": "research/input_freeze/2026-11-03/manifest.json"
