@@ -229,6 +229,53 @@ def test_stale_page_allows_only_a_recorded_miss_that_the_page_shows() -> None:
         )
 
 
+def test_page_rewrite_restores_the_recorded_miss_note() -> None:
+    """A paper render replaces the HTML. The missed note has to come back.
+
+    The two-session gap, a missing note, and a wrong-day note still fail.
+    Restoring the note does not add a curve row.
+    """
+    with tempfile.TemporaryDirectory() as raw:
+        root = Path(raw)
+        date = "2026-11-04"
+        _board(root, date, [
+            _proc("stock_book", [_file("book_json", "required", "OK")]),
+            _proc("publish", [_file("dash_html", "required", "OK")]),
+        ])
+        _fm_and_tickets(root, date)
+        page = root / "dashboard" / "index.html"
+        gate.stamp_data_asof(page, "2026-11-03")
+        _write(root, "data/paper/missed.json", {
+            "sessions": {
+                "2026-11-04": {"status": "missed", "reason": "not on main"},
+            },
+        })
+        curve = root / "data" / "paper" / "equity_curve.csv"
+        curve.write_text("date,equity\n2026-11-03,1\n", encoding="utf-8")
+        gate.stamp_missed_note(page, date)
+        assert gate.evaluate(date, root=root)["ready"] is True
+
+        page.write_text(
+            '<html><head></head><body><div>rewritten curve</div></body></html>',
+            encoding="utf-8")
+        gate.stamp_data_asof(page, "2026-11-03")
+        wiped = gate.evaluate(date, root=root)
+        assert wiped["ready"] is False
+        assert wiped["main_page_fresh"] is False
+
+        gate.stamp_recorded_misses(page, root=root)
+        restored = gate.evaluate(date, root=root)
+        assert restored["ready"] is True
+        assert "2026-11-04 missed" in page.read_text(encoding="utf-8")
+        assert "2026-11-04" not in curve.read_text(encoding="utf-8")
+
+        gate.stamp_data_asof(page, "2026-11-02")
+        assert gate.evaluate(date, root=root)["ready"] is False
+        gate.stamp_data_asof(page, "2026-11-03")
+        gate.stamp_missed_note(page, "2026-11-02")
+        assert gate.evaluate(date, root=root)["ready"] is False
+
+
 def test_live_curve_keeps_2026_11_04_recorded_as_missed() -> None:
     """11-04 stays off the sealed paper curve. The page shows the miss."""
     root = Path(__file__).resolve().parent.parent
@@ -696,6 +743,7 @@ def main() -> None:
         test_blocked_without_tickets,
         test_main_page_fresh_blocks_a_stale_stamp,
         test_stale_page_allows_only_a_recorded_miss_that_the_page_shows,
+        test_page_rewrite_restores_the_recorded_miss_note,
         test_live_curve_keeps_2026_11_04_recorded_as_missed,
         test_newer_main_page_replaces_an_older_artifact,
         test_legacy_curve_dates_count_as_data_asof,

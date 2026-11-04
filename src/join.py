@@ -311,14 +311,17 @@ def main() -> None:
 
     JOIN_DIR.mkdir(parents=True, exist_ok=True)
     ranked_path = JOIN_DIR / f"{date_str}_ranked.csv"
-    ranked.to_csv(ranked_path, index=False)
+    from src.freeze_guard import place_bytes
+    written = place_bytes(
+        ranked_path, ranked.to_csv(index=False).encode("utf-8"),
+        date=date_str, root=ROOT)
     report = write_report(date_str, ranked, weather, rules)
 
     longs = ranked[~ranked["veto"]] if len(ranked) else ranked
     print(
         f"[join] {date_str}: {len(ranked):,} scored "
         f"({int(ranked['veto'].sum()) if len(ranked) else 0:,} vetoed) <- {mem_path.name} × "
-        f"{weather_path.name} -> {ranked_path.name}, {report.name}"
+        f"{weather_path.name} -> {written.name}, {report.name}"
     )
     if len(longs):
         print(

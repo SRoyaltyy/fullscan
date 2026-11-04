@@ -403,8 +403,10 @@ def _typed_roundtrip_rows(rows: list[dict]) -> list[dict]:
 
 def _stamp_dashboard(asof: str) -> None:
     """Stamp the page write_dashboard just wrote. The engine file stays pinned."""
-    from src.pages_publish_gate import stamp_data_asof
-    stamp_data_asof(engine.DASH_DIR / 'index.html', asof)
+    from src.pages_publish_gate import stamp_data_asof, stamp_recorded_misses
+    page = engine.DASH_DIR / 'index.html'
+    stamp_data_asof(page, asof)
+    stamp_recorded_misses(page, root=engine.ROOT)
 
 def _restore_bytes(path: Path, before: bytes | None) -> None:
     if before is None:

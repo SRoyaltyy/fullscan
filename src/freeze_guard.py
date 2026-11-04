@@ -18,6 +18,11 @@ never blocked: they are rewritten every day by design.
 The guard is fail-open: if it cannot read a manifest it prints a warning
 and lets the land continue, so it can never sink a packet.
 
+A landing whose bytes differ from the frozen copy does not overwrite that
+file. ``divert_frozen_lands`` restores the frozen bytes and writes the new
+bytes to ``<stem>.after-freeze-N<suffix>``. The ticket reads the frozen
+copy, never the version file.
+
 CLI (used by safe_git_push.sh):
   python3 src/freeze_guard.py filter --ref <sha> --msg "<commit msg>" PATH...
 prints one blocked path per line on stdout; everything else on stderr.
@@ -25,6 +30,7 @@ prints one blocked path per line on stdout; everything else on stderr.
 from __future__ import annotations
 
 import argparse
+import gzip
 import json
 import os
 import re
@@ -166,6 +172,140 @@ def run_filter(paths: list[str], ref: str, msg: str, cwd: Path = ROOT,
     for d, rows in by_date.items():
         record_skips(d, rows, board_dir or (cwd / "data" / "day_board"))
     return sorted(blocked)
+
+
+NOT_COPIED = "absent"
+
+
+def read_frozen(root: Path, rel: str, date: str):
+    """Frozen bytes for ``rel`` on ``date``.
+
+    ``None`` — this date has no frozen manifest (caller may read the live file).
+    ``NOT_COPIED`` — the day is frozen and this path is not a copied row.
+    ``bytes`` — the stored copy, decompressed when the manifest says gzip.
+    """
+    manifest_path = root / "research" / "input_freeze" / date / "manifest.json"
+    if not manifest_path.is_file():
+        return None
+    try:
+        manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return None
+    if manifest.get("status") != "frozen":
+        return None
+    rows = [
+        row for row in (manifest.get("files") or [])
+        if isinstance(row, dict) and row.get("source_path") == rel
+    ]
+    if not rows:
+        return NOT_COPIED
+    row = rows[0]
+    if row.get("status") != "copied" or not row.get("stored_path"):
+        return NOT_COPIED
+    stored = root / "research" / "input_freeze" / date / str(row["stored_path"])
+    if not stored.is_file():
+        return NOT_COPIED
+    try:
+        data = stored.read_bytes()
+        if row.get("gzip"):
+            data = gzip.decompress(data)
+    except OSError:
+        return NOT_COPIED
+    return data
+
+
+def _rel(path: Path, root: Path) -> str | None:
+    try:
+        return path.resolve().relative_to(root.resolve()).as_posix()
+    except ValueError:
+        return None
+
+
+def _version_path(path: Path) -> Path:
+    n = 1
+    while n <= 1000:
+        cand = path.with_name(f"{path.stem}.after-freeze-{n}{path.suffix}")
+        if not cand.exists():
+            return cand
+        n += 1
+    raise RuntimeError(f"too many after-freeze versions for {path}")
+
+
+def include_version_files(paths: list[Path]) -> list[Path]:
+    """Add sibling ``*.after-freeze-N`` files next to each path."""
+    out = list(paths)
+    seen = {p.resolve() for p in paths if p.exists()}
+    for path in list(paths):
+        parent = path.parent
+        if not parent.is_dir():
+            continue
+        pattern = f"{path.stem}.after-freeze-*{path.suffix}"
+        for cand in sorted(parent.glob(pattern)):
+            if cand.is_file() and cand.resolve() not in seen:
+                seen.add(cand.resolve())
+                out.append(cand)
+    return out
+
+
+def place_bytes(path: Path, data: bytes, *, date: str, root: Path = ROOT) -> Path:
+    """Write ``data``. A frozen path keeps its frozen bytes.
+
+    Returns the path that received ``data``: ``path`` when it is not a copied
+    frozen input, otherwise a new ``after-freeze-N`` file. Never overwrites
+    the frozen file.
+    """
+    rel = _rel(path, root)
+    pinned = read_frozen(root, rel, date) if rel else None
+    if not isinstance(pinned, (bytes, bytearray)):
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_bytes(data)
+        return path
+    frozen = bytes(pinned)
+    if not path.is_file() or path.read_bytes() != frozen:
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_bytes(frozen)
+    if data == frozen:
+        return path
+    version = _version_path(path)
+    version.parent.mkdir(parents=True, exist_ok=True)
+    version.write_bytes(data)
+    print(f"[freeze-guard] {rel} is frozen; wrote {version.name} instead",
+          file=sys.stderr)
+    return version
+
+
+def divert_frozen_lands(paths: list[Path], date: str, root: Path = ROOT) -> list[Path]:
+    """Restore frozen inputs and keep a newer landing in a version file.
+
+    Paths that are not copied frozen inputs pass through. A frozen path whose
+    bytes differ is restored to the stored copy; the new bytes go to
+    ``<stem>.after-freeze-N<suffix>``, which replaces that path in the list
+    to commit. Sibling version files already on disk are included too.
+    """
+    out: list[Path] = []
+    for path in paths:
+        rel = _rel(path, root)
+        pinned = read_frozen(root, rel, date) if rel else None
+        if not isinstance(pinned, (bytes, bytearray)):
+            out.append(path)
+            continue
+        frozen = bytes(pinned)
+        current = path.read_bytes() if path.is_file() else None
+        if current == frozen:
+            out.append(path)
+            continue
+        version: Path | None = None
+        if current is not None:
+            version = _version_path(path)
+            version.parent.mkdir(parents=True, exist_ok=True)
+            version.write_bytes(current)
+            out.append(version)
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_bytes(frozen)
+        where = version.name if version is not None else "refused (nothing new to keep)"
+        print(f"[freeze-guard] REFUSE overwrite of frozen {rel}; new bytes -> {where}",
+              file=sys.stderr)
+    return include_version_files(out)
 
 
 def main(argv: list[str] | None = None) -> int:

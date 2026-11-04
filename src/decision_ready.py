@@ -112,6 +112,32 @@ def apply_main_gate(proof: dict) -> dict:
     return out
 
 
+def frozen_digest(date: str, rel: str) -> str | None:
+    """Digest the ticket must record once ``date`` is frozen.
+
+    ``None`` — no frozen manifest yet, so the caller hashes the live file.
+    Otherwise the sha256 of the stored copy, or ``ABSENT`` when that path
+    is not a copied row. The live file is not read.
+    """
+    from .freeze_guard import read_frozen
+    pinned = read_frozen(ROOT, str(rel), str(date)[:10])
+    if pinned is None:
+        return None
+    if isinstance(pinned, (bytes, bytearray)):
+        return hashlib.sha256(pinned).hexdigest()
+    return ABSENT
+
+
+def _hash_input(date: str, rel: str, path: Path) -> str | None:
+    """Frozen copy when the session is frozen, else the live file, else None."""
+    pinned = frozen_digest(date, rel)
+    if pinned is not None:
+        return pinned
+    if path.is_file():
+        return hashlib.sha256(path.read_bytes()).hexdigest()
+    return None
+
+
 def evaluate(date):
     from . import stock_book_diag as diag
     spec = next(x for x in diag.workflow_specs(date, as_of=True) if x['key'] == 'stock_book')
@@ -127,19 +153,19 @@ def evaluate(date):
             continue
         if check.status != 'OK':
             missing.append({'path': item['rel'], 'reason': check.reason or check.status})
-        elif path.is_file():
-            hashes[item['rel']] = hashlib.sha256(path.read_bytes()).hexdigest()
-    panel = ROOT / 'data/factor_mine/panel.json'
-    if not panel.is_file():
-        missing.append({'path': 'data/factor_mine/panel.json', 'reason': 'missing historical panel'})
-    else:
-        hashes['data/factor_mine/panel.json'] = hashlib.sha256(panel.read_bytes()).hexdigest()
+        digest = _hash_input(date, item['rel'], path)
+        if digest is not None and (check.status == 'OK' or frozen_digest(date, item['rel']) is not None):
+            hashes[item['rel']] = digest
+    panel_rel = 'data/factor_mine/panel.json'
+    panel = ROOT / panel_rel
+    panel_digest = _hash_input(date, panel_rel, panel)
+    if panel_digest is None or panel_digest == ABSENT:
+        missing.append({'path': panel_rel, 'reason': 'missing historical panel'})
+    if panel_digest is not None:
+        hashes[panel_rel] = panel_digest
     for rel in EXTRA_INPUTS:
-        path = ROOT / rel
-        if path.is_file():
-            hashes[rel] = hashlib.sha256(path.read_bytes()).hexdigest()
-        else:
-            hashes[rel] = ABSENT
+        digest = _hash_input(date, rel, ROOT / rel)
+        hashes[rel] = digest if digest is not None else ABSENT
     fingerprint = hashlib.sha256(json.dumps(hashes, sort_keys=True).encode()).hexdigest()
     return {'date': date, 'ready': bool(required) and not missing,
             'fingerprint': fingerprint, 'inputs': hashes, 'blockers': missing}

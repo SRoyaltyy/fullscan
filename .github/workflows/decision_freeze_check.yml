@@ -8,6 +8,10 @@ name: Decision freeze replay check
 # (or be an absent/missing pair), and every stored copy must re-hash to
 # its recorded sha256. Mismatch after the freeze cutoff, a tampered
 # stored copy, or an uncovered fingerprinted input (v2+ folders) fails.
+# A date listed in research/input_freeze/not_provably_replayable.jsonl
+# (add-only) is reported and is not a failure. A tampered stored copy
+# still fails. That record does not reseal the ticket or the freeze folder.
+# Checkout is shallow (fetch-depth: 1).
 
 on:
   schedule:

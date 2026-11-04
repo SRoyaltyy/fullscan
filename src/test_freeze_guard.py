@@ -155,3 +155,89 @@ def test_safe_git_push_all_frozen_exits_zero():
         assert files == [f"data/day_board/{D}.json"]  # only the skip note lands
         assert subprocess.run(["git", "show", f"main:{WX}"], cwd=origin,
                               capture_output=True, text=True).stdout == "a"
+
+
+def _store_frozen(root: Path, day: str, files: dict[str, bytes]) -> None:
+    import gzip
+    import hashlib
+    folder = root / "research" / "input_freeze" / day
+    rows = []
+    for rel, data in files.items():
+        gz = gzip.compress(data, mtime=0)
+        stored = f"files/fullscan/{rel}.gz"
+        dest = folder / stored
+        dest.parent.mkdir(parents=True, exist_ok=True)
+        dest.write_bytes(gz)
+        rows.append({
+            "repo": "fullscan", "source_path": rel, "status": "copied",
+            "gzip": True, "stored_path": stored,
+            "sha256": hashlib.sha256(data).hexdigest(),
+        })
+    (folder / "manifest.json").write_text(json.dumps({
+        "schema": "input_freeze/v2", "date": day, "status": "frozen", "files": rows,
+    }))
+
+
+def test_land_after_freeze_versions_weather_and_join(tmp_path, monkeypatch):
+    """auto: land weather/join must not overwrite the frozen file the ticket reads."""
+    from src import land_file
+    day = "2026-11-04"
+    wx_rel = f"01_daily/weather/{day}_weather.json"
+    join_rel = f"data/join/{day}_ranked.csv"
+    frozen_wx = b'{"v":"frozen-weather"}' + b" " * 80
+    frozen_join = b"ticker,score\nAAA,1\n" + b" " * 80
+    new_wx = b'{"v":"rewritten-weather"}' + b" " * 80
+    new_join = b"ticker,score\nBBB,9\n" + b" " * 80
+    _store_frozen(tmp_path, day, {wx_rel: frozen_wx, join_rel: frozen_join})
+    wx = tmp_path / wx_rel
+    ranked = tmp_path / join_rel
+    wx.parent.mkdir(parents=True, exist_ok=True)
+    ranked.parent.mkdir(parents=True, exist_ok=True)
+    wx.write_bytes(new_wx)
+    ranked.write_bytes(new_join)
+    monkeypatch.setattr(land_file, "ROOT", tmp_path)
+    captured: dict = {}
+
+    def push(msg, paths):
+        captured["msg"] = msg
+        captured["paths"] = [Path(p) for p in paths]
+        return True
+
+    monkeypatch.setattr(land_file, "_push", push)
+    monkeypatch.setattr(land_file, "_write_board_payload", lambda *a, **k: [])
+    monkeypatch.setattr(
+        land_file, "_qc_one",
+        lambda path, date: type("Q", (), {"ok": True, "reason": "", "size": 100})(),
+    )
+    weather = land_file.land(day, "weather", commit_msg=f"auto: land weather [{day}]",
+                             require_qc=False)
+    assert weather["pushed"] is True
+    assert captured["msg"] == f"auto: land weather [{day}]"
+    assert wx.read_bytes() == frozen_wx
+    versions = [p for p in captured["paths"] if "after-freeze-" in p.name]
+    assert len(versions) == 1
+    assert versions[0].read_bytes() == new_wx
+    assert wx not in captured["paths"] or wx.read_bytes() == frozen_wx
+
+    join = land_file.land(day, "join", commit_msg=f"auto: land join [{day}]",
+                          require_qc=False)
+    assert join["pushed"] is True
+    assert ranked.read_bytes() == frozen_join
+    join_versions = [p for p in captured["paths"] if "after-freeze-" in p.name
+                     and p.suffix == ".csv"]
+    assert len(join_versions) == 1
+    assert join_versions[0].read_bytes() == new_join
+    # A second landing writes the next version and still leaves the frozen file.
+    newer = b"ticker,score\nCCC,3\n" + b" " * 80
+    ranked.write_bytes(newer)
+    again = land_file.land(day, "join", commit_msg=f"auto: land join [{day}]",
+                           require_qc=False)
+    assert again["pushed"] is True
+    assert ranked.read_bytes() == frozen_join
+    assert join_versions[0].read_bytes() == new_join
+    second = sorted(ranked.parent.glob(f"{ranked.stem}.after-freeze-*{ranked.suffix}"))
+    assert [p.name for p in second] == [
+        f"{ranked.stem}.after-freeze-1.csv",
+        f"{ranked.stem}.after-freeze-2.csv",
+    ]
+    assert second[1].read_bytes() == newer
