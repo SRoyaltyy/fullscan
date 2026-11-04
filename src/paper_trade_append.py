@@ -12,6 +12,7 @@ a sealed buy/sell day that would change fails closed.
 from __future__ import annotations
 
 import argparse
+import ast
 import csv
 import io
 import json
@@ -297,10 +298,155 @@ def _write_fresh(curve_rows, trade_rows, skips) -> None:
     if skips:
         _commit_csv('paper_skipped', 'skipped.csv', _frame_csv(pd.DataFrame(skips)), 'date')
 
+def _csv_number(value, *, as_int: bool = False):
+    if value is None or value == '':
+        return None
+    if isinstance(value, bool):
+        return value
+    if isinstance(value, int):
+        return value
+    if isinstance(value, float):
+        return int(value) if as_int and value.is_integer() else value
+    text = str(value).strip()
+    if text == '':
+        return None
+    try:
+        if as_int or text.lstrip('-').isdigit():
+            return int(text)
+        return float(text)
+    except ValueError:
+        return value
+
+def _csv_struct(value):
+    if isinstance(value, str) and value[:1] in '[{':
+        try:
+            return ast.literal_eval(value)
+        except (ValueError, SyntaxError):
+            return value
+    return value
+
+def _typed_trade_rows(rows: list[dict]) -> list[dict]:
+    """CSV fills use the same types write_dashboard stored on 2026-10-07."""
+    out = []
+    for row in rows:
+        item = dict(row)
+        for key in ('shares', 'ab_score'):
+            if key in item:
+                item[key] = _csv_number(item.get(key), as_int=True)
+        for key in ('price', 'fees', 'amount', 'realized_pnl', 'cash_before', 'cash_after'):
+            if key in item:
+                item[key] = _csv_number(item.get(key))
+        if 'ab_trail' in item:
+            item['ab_trail'] = _csv_struct(item.get('ab_trail')) or []
+        out.append(item)
+    return out
+
+def _typed_roundtrip_rows(rows: list[dict]) -> list[dict]:
+    """Disk roundtrips match the live page: ab_score stays text, money is numeric."""
+    ints = {'shares', 'held_sessions', 'held_cal_days', 'sell_ab_score'}
+    floats = {'buy_px', 'sell_px', 'last', 'realized_pnl', 'unrealized_pnl', 'buy_fees', 'sell_fees'}
+    out = []
+    for row in rows:
+        item = dict(row)
+        for key in ints:
+            if key in item:
+                item[key] = _csv_number(item.get(key), as_int=True)
+        for key in floats:
+            if key in item:
+                item[key] = _csv_number(item.get(key))
+        for key in ('buy_trail', 'sell_trail'):
+            if key in item:
+                item[key] = _csv_struct(item.get(key))
+        if not str(item.get('sell_date') or '').strip():
+            item['sell_date'] = None
+            if item.get('sell_ab_context') in ('', None):
+                item['sell_ab_context'] = None
+            if 'ab_score' in item:
+                item['ab_score'] = _csv_number(item.get('ab_score'), as_int=True)
+        out.append(item)
+    return out
+
 def _stamp_dashboard(asof: str) -> None:
     """Stamp the page write_dashboard just wrote. The engine file stays pinned."""
     from src.pages_publish_gate import stamp_data_asof
     stamp_data_asof(engine.DASH_DIR / 'index.html', asof)
+
+def _restore_bytes(path: Path, before: bytes | None) -> None:
+    if before is None:
+        if path.is_file():
+            path.unlink()
+        return
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_bytes(before)
+
+def _last_sealed_sell_day(text: str) -> str:
+    """Newest sell_date that must not change. The open tail is the newest day."""
+    from src import past_day_lock as pdl
+    rows = pdl.load_manifest()
+    seed = pdl._seed_row(rows, 'paper_roundtrips')
+    watermark = str((seed or {}).get('watermark') or '')
+    locked = [str(row.get('date') or '') for row in pdl._day_rows(rows, 'paper_roundtrips')]
+    locked = [day for day in locked if day]
+    if watermark:
+        locked.append(watermark)
+    if text.strip():
+        _header, days, _undated = pdl._split_csv(text, 'sell_date')
+        dates = sorted(days)
+        if len(dates) >= 2:
+            locked.extend(dates[:-1])
+        elif len(dates) == 1 and watermark and dates[0] <= watermark:
+            locked.append(dates[0])
+    return max(locked) if locked else ''
+
+def _dated_roundtrip_lines(text: str) -> dict[str, list[str]]:
+    if not text.strip():
+        return {}
+    from src import past_day_lock as pdl
+    _header, days, _undated = pdl._split_csv(text, 'sell_date')
+    return {day: list(lines) for day, lines in days.items()}
+
+def _sealed_roundtrip_rows_held(before: bytes | None, after: bytes) -> bool:
+    """True when no row dated on or before the last sealed day was edited or added."""
+    old = before.decode('utf-8') if before else ''
+    new = after.decode('utf-8')
+    limit = _last_sealed_sell_day(old)
+    if not limit:
+        return True
+    old_days = _dated_roundtrip_lines(old)
+    new_days = _dated_roundtrip_lines(new)
+    for day, lines in new_days.items():
+        if day <= limit and lines != old_days.get(day):
+            return False
+    for day, lines in old_days.items():
+        if day <= limit and new_days.get(day) != lines:
+            return False
+    return True
+
+def _commit_roundtrips(new_text: str) -> bool:
+    """Write roundtrips, or leave the file untouched when a sealed day would change.
+
+    A past-day lock refusal only re-renders the page. Rows dated on or
+    before the last sealed sell day are never modified or added.
+    """
+    from src import past_day_lock as pdl
+    path = engine.PAPER_DIR / 'roundtrips.csv'
+    before = path.read_bytes() if path.is_file() else None
+    try:
+        _commit_csv('paper_roundtrips', 'roundtrips.csv', new_text, 'sell_date')
+    except SystemExit as exc:
+        if 'past-day lock' not in str(exc) or 'paper_roundtrips' not in str(exc):
+            _restore_bytes(path, before)
+            raise
+        _restore_bytes(path, before)
+        print(f'[paper] {exc}; roundtrips file unchanged; refreshing the page', flush=True)
+        return False
+    if pdl.in_repo(path):
+        after = path.read_bytes() if path.is_file() else b''
+        if not _sealed_roundtrip_rows_held(before, after):
+            _restore_bytes(path, before)
+            print('[paper] refused roundtrip write: a row on or before the last sealed day would change', flush=True)
+            return False
+    return True
 
 def _sleeve_book(state: dict) -> dict:
     out = {}
@@ -331,9 +477,9 @@ def _refresh_dashboard_from_disk(books: list[tuple[str, Path]], top_n: int, capi
     if not st:
         print('[paper] state.json has no sleeves; dashboard not rendered', flush=True)
         return
-    trade_rows = _read_csv_rows(engine.PAPER_DIR / 'trades.csv')
+    trade_rows = _typed_trade_rows(_read_csv_rows(engine.PAPER_DIR / 'trades.csv'))
     skips = _read_csv_rows(engine.PAPER_DIR / 'skipped.csv')
-    trips = _read_csv_rows(engine.PAPER_DIR / 'roundtrips.csv')
+    trips = _typed_roundtrip_rows(_read_csv_rows(engine.PAPER_DIR / 'roundtrips.csv'))
     last = _max_date(curve_rows)
     tickers = _open_tickers(st)
     last_book = None
@@ -347,7 +493,12 @@ def _refresh_dashboard_from_disk(books: list[tuple[str, Path]], top_n: int, capi
         for picks in engine.picks_from_book(book, top_n).values():
             tickers.update(picks)
     anchor = str(curve_rows[0].get('date') or '')[:10]
-    prices = engine.get_prices(sorted(tickers), anchor or last, last)
+    cache_path = engine.PRICE_CACHE
+    cache_before = cache_path.read_bytes() if cache_path.is_file() else None
+    try:
+        prices = engine.get_prices(sorted(tickers), anchor or last, last)
+    finally:
+        _restore_bytes(cache_path, cache_before)
     curve = pd.DataFrame(curve_rows)
     for col in ('equity', 'cash', 'invested', 'fees_cum', 'realized_cum'):
         if col in curve.columns:
@@ -446,16 +597,8 @@ def run(date: str | None=None, top_n: int=10, capital: float | None=None, render
     else:
         _write_fresh(curve_rows, trade_rows, skips)
     if trips:
-        try:
-            _commit_csv('paper_roundtrips', 'roundtrips.csv', _frame_csv(pd.DataFrame(trips)), 'sell_date')
-        except SystemExit as exc:
-            # Recomputing roundtrips can change a sealed day. The lock
-            # refuses that write. The curve append already landed, so the
-            # page still has to render from the sealed roundtrip file.
-            if 'past-day lock' not in str(exc) or 'paper_roundtrips' not in str(exc):
-                raise
-            print(f'[paper] {exc}; refreshing dashboard from the sealed roundtrips', flush=True)
-            trips = _read_csv_rows(engine.PAPER_DIR / 'roundtrips.csv')
+        if not _commit_roundtrips(_frame_csv(pd.DataFrame(trips))):
+            trips = _typed_roundtrip_rows(_read_csv_rows(engine.PAPER_DIR / 'roundtrips.csv'))
     (engine.PAPER_DIR / 'state.json').write_text(json.dumps(st, indent=2, default=str), encoding='utf-8')
     curve = pd.DataFrame(prior_curve + curve_rows)
     for col in ('equity', 'cash', 'invested', 'fees_cum', 'realized_cum'):

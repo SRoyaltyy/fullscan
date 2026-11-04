@@ -270,6 +270,61 @@ def test_sealed_roundtrips_still_refresh_the_dashboard(tmp_path, monkeypatch):
     assert 'name="data-asof" content="2026-10-06"' in html
 
 
+def test_roundtrip_lock_does_not_write_sealed_rows(tmp_path, monkeypatch):
+    """A refused roundtrip write leaves every sealed row byte-for-byte."""
+    from src import past_day_lock as pdl
+
+    paper = tmp_path / "paper"
+    paper.mkdir()
+    manifest = tmp_path / "manifest.jsonl"
+    manifest.write_text(
+        '{"kind":"seed","record":"paper_roundtrips","watermark":"2026-10-06"}\n',
+        encoding="utf-8",
+    )
+    header = "status,sell_date,ticker\n"
+    sealed = header + "closed,2026-10-06,AAA\nclosed,2026-10-07,BBB\nclosed,2026-10-08,CCC\n"
+    path = paper / "roundtrips.csv"
+    path.write_bytes(sealed.encode("utf-8"))
+    monkeypatch.setattr(pt, "PAPER_DIR", paper)
+    monkeypatch.setattr(pdl, "MANIFEST_PATH", manifest)
+    monkeypatch.setattr(pdl, "in_repo", lambda _path: True)
+    assert pa._last_sealed_sell_day(sealed) == "2026-10-07"
+
+    changed = (
+        header
+        + "closed,2026-10-06,AAA\n"
+        + "closed,2026-10-07,ZZZ\n"
+        + "closed,2026-10-07,NEW\n"
+        + "closed,2026-10-08,CCC\n"
+        + "closed,2026-10-09,DDD\n"
+    )
+    assert pa._commit_roundtrips(changed) is False
+    assert path.read_bytes() == sealed.encode("utf-8")
+    text = path.read_text(encoding="utf-8")
+    assert text.count("2026-10-07") == 1
+    assert "ZZZ" not in text
+    assert "NEW" not in text
+    assert "2026-10-09" not in text
+
+    appended = (
+        header
+        + "closed,2026-10-06,AAA\n"
+        + "closed,2026-10-07,BBB\n"
+        + "closed,2026-10-08,CCC\n"
+        + "closed,2026-10-09,DDD\n"
+    )
+    assert pa._commit_roundtrips(appended) is True
+    after = path.read_text(encoding="utf-8")
+    assert "closed,2026-10-06,AAA" in after
+    assert "closed,2026-10-07,BBB" in after
+    assert after.count("2026-10-07") == 1
+    assert "closed,2026-10-09,DDD" in after
+    old_lines = pa._dated_roundtrip_lines(sealed)
+    new_lines = pa._dated_roundtrip_lines(after)
+    assert new_lines["2026-10-06"] == old_lines["2026-10-06"]
+    assert new_lines["2026-10-07"] == old_lines["2026-10-07"]
+
+
 def test_unpriced_resume_does_not_skip_ahead(tmp_path, monkeypatch):
     paper, books, blob = _layout(tmp_path)
     # 10-02 has no bar at all, and nothing on or before it. 10-06 must stay missing.
@@ -317,6 +372,7 @@ if __name__ == "__main__":
     _run(test_nothing_eligible_still_renders_the_dashboard)
     _run(test_render_only_does_not_append)
     _run(test_sealed_roundtrips_still_refresh_the_dashboard)
+    _run(test_roundtrip_lock_does_not_write_sealed_rows)
     _run(test_unpriced_resume_does_not_skip_ahead)
     _run(test_book_committed_before_0930_is_appended)
     _run(test_late_book_stays_missing_and_the_next_session_appends)

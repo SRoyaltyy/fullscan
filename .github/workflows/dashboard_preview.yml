@@ -1,0 +1,38 @@
+name: Dashboard preview
+
+# Rebuild dashboard/index.html from the printed curve and upload it.
+# The job does not push. A past-day lock failure fails the preview.
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install
+        run: pip install pandas numpy
+      - name: Render from the printed curve
+        run: python3 -m src.paper_trade_append --render-only
+      - name: Sealed paper rows stayed byte-for-byte
+        run: |
+          set -euo pipefail
+          git diff --exit-code -- data/paper ':(glob)data/**/roundtrips*'
+      - name: Upload rebuilt main page
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: dashboard-preview
+          path: dashboard/index.html
+          if-no-files-found: error
