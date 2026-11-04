@@ -228,6 +228,65 @@ def test_baked_days_clocks_differ_on_aug13():
     assert ig["pct"] != ag["pct"]
 
 
+def test_sealed_gainer_loser_rows_are_byte_identical(tmp_path, monkeypatch):
+    old_day = {
+        "date": "2026-10-30",
+        "s": -12.921,
+        "interday": {
+            "n": 1,
+            "gainers": [{"t": "AAA", "pct": 4.2, "k": "gap"}],
+            "losers": [{"t": "BBB", "pct": -3.1, "k": "gap"}],
+        },
+        "intraday": {
+            "n": 1,
+            "gainers": [{"t": "CCC", "pct": 1.0, "k": "oc"}],
+            "losers": [{"t": "DDD", "pct": -1.0, "k": "oc"}],
+        },
+    }
+    (tmp_path / "days.json").write_text(json.dumps({
+        "ok": True,
+        "from_date": "2026-10-30",
+        "to_date": "2026-10-30",
+        "n_days": 1,
+        "dates": ["2026-10-30"],
+        "days": [old_day],
+    }), encoding="utf-8")
+    before = json.dumps(old_day, default=str)
+    rewritten = {
+        "date": "2026-10-30",
+        "s": 0,
+        "interday": {"n": 1, "gainers": [{"t": "ZZZ", "pct": 9}], "losers": []},
+        "intraday": {"n": 0, "gainers": [], "losers": []},
+    }
+    added = {
+        "date": "2026-11-02",
+        "s": 1,
+        "interday": {"n": 1, "gainers": [{"t": "EEE", "pct": 2.0, "k": "gap"}], "losers": []},
+        "intraday": {"n": 0, "gainers": [], "losers": []},
+    }
+    monkeypatch.setattr(dm, "DASH_DIR", tmp_path)
+    monkeypatch.setattr(dm, "bake", lambda **kw: {
+        "ok": True,
+        "from_date": "2026-10-01",
+        "to_date": "2026-11-02",
+        "n_days": 2,
+        "dates": ["2026-10-30", "2026-11-02"],
+        "days": [rewritten, added],
+    })
+    dm.write_from_hre({"from_date": "2026-10-30", "to_date": "2026-11-02"},
+                      today="2026-11-04")
+    saved = json.loads((tmp_path / "days.json").read_text(encoding="utf-8"))
+    assert json.dumps(saved["days"][0], default=str) == before
+    assert before in (tmp_path / "days.json").read_text(encoding="utf-8")
+    assert saved["days"][0]["interday"]["gainers"][0]["t"] == "AAA"
+    assert saved["days"][0]["interday"]["losers"][0]["t"] == "BBB"
+    assert saved["days"][1]["date"] == "2026-11-02"
+    assert "ZZZ" not in json.dumps(saved["days"][0])
+    assert saved["from_date"] == "2026-10-30"
+    assert saved["to_date"] == "2026-11-02"
+    assert "2026-11-03" not in saved["dates"]
+
+
 def test_hre_write_emits_day_movers():
     text = (ROOT / "src" / "hard_red_exceptions.py").read_text(encoding="utf-8")
     assert "day_movers" in text

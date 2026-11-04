@@ -1,0 +1,90 @@
+name: updown o2c v2 daily append
+
+# dashboard/updown/data/index.json and data/y/*.bin.gz (updown_o2c_v2) were
+# written by hand on 2026-10-06 (cffac6ee16, b4b0b34922). git log has no
+# workflow commit to those files after that. updown_shadow.yml writes only
+# dashboard/updown/data/expmove/ and dashboard/updown-shadow/.
+#
+# This job appends sessions after the last sealed day when
+# research/updown_o2c_v2/forward/YYYY-MM-DD.json has p_up rows. No source
+# file means the day stays missing. It does not score a model and does not
+# touch expmove. GitHub-hosted ubuntu-latest only (no ECS).
+
+on:
+  schedule:
+    # ~16:45 ET, after the close. Weekdays only.
+    - cron: "45 21 * * 1-5"
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - "src/updown_o2c_append.py"
+      - "src/test_updown_o2c_append.py"
+      - "src/staleness_coverage.py"
+      - "src/staleness_coverage.json"
+      - "src/test_staleness_coverage.py"
+      - "dashboard/updown/data/index.json"
+      - "dashboard/updown/data/y/**"
+      - ".github/workflows/updown_o2c_daily.yml"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: updown-o2c-daily
+  cancel-in-progress: false
+
+jobs:
+  test:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    # Full-repo fetch of this checkout exceeded 20 minutes on the sibling
+    # hard-red test job. These tests read src plus the 2026 o2c bin.
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          filter: blob:none
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            src
+            .github/workflows/updown_o2c_daily.yml
+            dashboard/updown/data/index.json
+            dashboard/updown/data/y/2026.bin.gz
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install
+        run: pip install pytest
+      - name: Test append-only sealed rows
+        run: python -m pytest -q src/test_updown_o2c_append.py src/test_staleness_coverage.py
+
+  append:
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+          filter: blob:none
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            src
+            scripts/safe_git_push.sh
+            dashboard/updown/data/index.json
+            dashboard/updown/data/y
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Append sealed-forward days (no source day stays missing)
+        run: python -m src.updown_o2c_append --write
+      - name: Commit
+        run: |
+          bash scripts/safe_git_push.sh \
+            "auto: updown_o2c_v2 append-only forward days" \
+            dashboard/updown/data/index.json \
+            dashboard/updown/data/y

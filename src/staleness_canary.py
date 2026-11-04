@@ -27,7 +27,7 @@ REPORT = Path("data/health/staleness.json")
 _MISSING_LAG = 10_000
 
 # path, kind, allowed session lag
-SOURCES = (
+_BASE_SOURCES = (
     ("dashboard/index.html", "html", 0),
     ("data/webull_sim/days.jsonl", "jsonl", 1),
     ("dashboard/h1/closes.json", "closes", 0),
@@ -38,6 +38,23 @@ SOURCES = (
     ("dashboard/jev-train/days.json", "jev_days", 1),
     ("dashboard/factor-mine/strategy_tickets.json", "json", 0),
 )
+
+
+def _sources() -> tuple[tuple[str, str, int], ...]:
+    """Base list plus daily pages from staleness_coverage.json.
+
+    Manual/frozen pages stay out of this tuple. They are reported by
+    ``evaluate`` and do not fail the canary. A path already in the base
+    list (jev-train) is not added twice.
+    """
+    from src.staleness_coverage import sources_for_canary
+
+    have = {row[0] for row in _BASE_SOURCES}
+    extra = tuple(row for row in sources_for_canary() if row[0] not in have)
+    return _BASE_SOURCES + extra
+
+
+SOURCES = _sources()
 
 
 def sessions_behind(asof: str, session: str) -> int:
@@ -156,6 +173,9 @@ def newest_date(text: str, kind: str) -> str:
         return _closes_max_date(text)
     if kind == "jev_days":
         return _jev_days_max(text)
+    if kind == "updown_days":
+        from src.staleness_coverage import newest_updown_day
+        return newest_updown_day(text)
     if kind == "json":
         return _json_max_date(text)
     return ""
@@ -204,6 +224,30 @@ def evaluate(*, root: Path | None = None, now: datetime | None = None,
             "live_lag": live_lag,
             "live_error": live_error,
             "ok": ok,
+            "frozen": False,
+        })
+    from src.staleness_coverage import pages as coverage_pages
+
+    listed = {row["path"] for row in rows}
+    for page in coverage_pages():
+        if not (page.get("manual") or page.get("frozen")):
+            continue
+        path = str(page.get("path") or "")
+        if not path or path in listed:
+            continue
+        kind = str(page.get("kind") or "json")
+        main_text = _read_text(root / path)
+        rows.append({
+            "path": path,
+            "lag_limit": None,
+            "main_date": newest_date(main_text, kind),
+            "live_date": "",
+            "main_lag": None,
+            "live_lag": None,
+            "live_error": "",
+            "ok": True,
+            "frozen": True,
+            "manual": True,
         })
     report = {
         "generated_at": datetime.now().astimezone().isoformat(),

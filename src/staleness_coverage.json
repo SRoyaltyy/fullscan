@@ -1,0 +1,53 @@
+{
+  "depends_on_pr": 743,
+  "depends_on": "https://github.com/SRoyaltyy/fullscan/pull/743",
+  "note": "PR #743 is on main. src/staleness_canary.py loads sources_for_canary() onto SOURCES and reports manual/frozen pages without failing. updown_days reads days[-1][0]. jev-train already has a weekday cron from that PR and is already in the canary base list (lag 1), so it is not appended twice and is not frozen.",
+  "pages": [
+    {
+      "path": "dashboard/updown/data/index.json",
+      "kind": "updown_days",
+      "lag_limit": 0,
+      "manual": false,
+      "frozen": false,
+      "writer": ".github/workflows/updown_o2c_daily.yml",
+      "date_note": "Newest session is days[-1][0]. The file has no date object key, so kind json would miss it."
+    },
+    {
+      "path": "dashboard/hard-red-exceptions/latest.json",
+      "kind": "json",
+      "lag_limit": 0,
+      "manual": false,
+      "frozen": false,
+      "writer": ".github/workflows/hard_red_exceptions.yml",
+      "date_note": "Newest session is the max object key date. Hold fields are h1_date, not date."
+    },
+    {
+      "path": "dashboard/day-movers/days.json",
+      "kind": "json",
+      "lag_limit": 0,
+      "manual": false,
+      "frozen": false,
+      "writer": ".github/workflows/hard_red_exceptions.yml",
+      "date_note": "Same bake as hard-red exceptions. Newest session is the max object key date."
+    },
+    {
+      "path": "dashboard/scanner-backtest/index.html",
+      "kind": "html",
+      "lag_limit": null,
+      "manual": true,
+      "frozen": true,
+      "writer": null,
+      "date_note": "scanner-backtest-publish.yml, scanner-keyword-publish.yml, and publish-completed-parser.yml have no weekday cron. They publish when parser inputs change. Manual and frozen for the daily canary."
+    },
+    {
+      "path": "dashboard/jev-train/days.json",
+      "kind": "jev_days",
+      "lag_limit": 1,
+      "manual": false,
+      "frozen": false,
+      "already_in_canary": true,
+      "writer": ".github/workflows/jev_train.yml",
+      "date_note": "Weekday cron 30 21 * * 1-5 landed with PR #743. The canary base list already has this path at lag 1. Not frozen."
+    }
+  ]
+}

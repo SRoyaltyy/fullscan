@@ -4,12 +4,25 @@ name: Hard-red exceptions (daily investigator list)
 # mornings. Live flatten_robust / Webull sit is untouched.
 
 on:
+  schedule:
+    # ~16:45 ET, after the close. Weekdays only. GitHub-hosted ubuntu-latest.
+    - cron: "45 21 * * 1-5"
   workflow_dispatch:
   workflow_run:
     workflows:
       - "Factor strategy mine"
       - "Pre-Open ALL (predictive one-shot)"
     types: [completed]
+  pull_request:
+    paths:
+      - "src/hard_red_exceptions.py"
+      - "src/day_movers.py"
+      - "src/test_hard_red_exceptions.py"
+      - "src/test_day_movers.py"
+      - "src/staleness_coverage.py"
+      - "src/staleness_coverage.json"
+      - "src/test_staleness_coverage.py"
+      - ".github/workflows/hard_red_exceptions.yml"
 
 permissions:
   contents: write
@@ -17,11 +30,56 @@ permissions:
 
 concurrency:
   group: hard-red-exceptions
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
+  test:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    # A full checkout of this repo did not finish inside 20 minutes
+    # (run 41857836727 cancelled during git fetch). The tests only need src
+    # and a few dashboard pages.
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          filter: blob:none
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            src
+            .github/workflows/hard_red_exceptions.yml
+            dashboard/day-movers/index.html
+            dashboard/day-movers/index-core.js
+            dashboard/day-movers/days.json
+            dashboard/hard-red-exceptions/index.html
+            dashboard/day-board/index.html
+            dashboard/factor-mine/index.html
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install
+        run: pip install pandas pyarrow pytest
+      - name: Test
+        run: python -m pytest -q src/test_hard_red_exceptions.py src/test_day_movers.py src/test_staleness_coverage.py
+
+  refuse-skip:
+    # A parent that did not succeed used to skip this whole workflow
+    # (2026-11-04 runs 41817206147 and the rest that day). That is a
+    # failure, not a green skip. The weekday schedule still writes.
+    if: github.event_name == 'workflow_run' && github.event.workflow_run.conclusion != 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: A skipped hard-red run is a failure
+        run: |
+          echo "ERROR: Hard-red exceptions did not rank."
+          echo "Trigger: ${{ github.event.workflow_run.name }} run ${{ github.event.workflow_run.id }} concluded ${{ github.event.workflow_run.conclusion }}."
+          echo "A skipped hard-red run is a failure. The page is not updated."
+          exit 1
+
   rank:
-    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch' || (github.event_name == 'workflow_run' && github.event.workflow_run.conclusion == 'success')
     runs-on: ubuntu-latest
     timeout-minutes: 40
     steps:
