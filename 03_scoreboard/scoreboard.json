@@ -34989,6 +34989,29 @@
       "attribution_contested": "yes — outlets split between “gridlock is good” (AP/Bloomberg), “oil crash / peace dividend” (Geo.tv/XTB), and “earnings/AI” (tech coverage).",
       "outlier_watch": "Energy sector -4.4% to -4.7% while the broad market rallied +1.6%; NDX lagged Dow by ~1.6pp; Apple reversed from -4% to +6%; Hormuz mine claims completely ignored by oil.",
       "lesson_schema_ok": true
+    },
+    {
+      "date": "2026-10-28",
+      "topic": "general",
+      "predicted_direction": "up",
+      "predicted_magnitude_band": "mild",
+      "confidence_score": null,
+      "total_score": null,
+      "multiplier": null,
+      "components": {},
+      "leading_sum": 7.0,
+      "actual_open": null,
+      "actual_close": null,
+      "actual_pct_change": null,
+      "actual_direction": null,
+      "actual_magnitude_band": null,
+      "direction_hit": null,
+      "magnitude_hit": null,
+      "divergence_flagged": false,
+      "divergence_verdict": null,
+      "per_factor_breakdown": [],
+      "reflection_lesson_ref": null,
+      "sources_used": []
     }
   ]
 }
