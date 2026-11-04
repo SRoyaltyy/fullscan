@@ -34535,7 +34535,7 @@
       "direction_hit": true,
       "magnitude_hit": true,
       "divergence_flagged": false,
-      "divergence_verdict": null,
+      "divergence_verdict": "futures_right",
       "per_factor_breakdown": [
         {
           "factor": "B0_ASIA",
@@ -34583,7 +34583,7 @@
           "status": "hit"
         }
       ],
-      "reflection_lesson_ref": null,
+      "reflection_lesson_ref": "02_lessons/candidate/2026-10-27_lesson.md",
       "sources_used": [],
       "horizon_calls": {
         "HORIZON_3D": {
@@ -34621,7 +34621,8 @@
       "key_interaction": "Boeing -10.7% masked broad chip strength in the Dow, while energy weakness offset tech gains in the SPX — headline +0.60% understated extreme cross-sectional dispersion",
       "knowable_at_9am": "partially — AI/oil direction was knowable from Asia and overnight tape, but the magnitude of the economic-data surprise and Boeing's reaction function were intraday increments",
       "attribution_contested": "yes — sources lead with either chip rally (HDFC), economic data (Yonhap), or FOMC-eve caution (dpa-AFX); no single driver fully explains both the cross-section and the rates/dollar move",
-      "outlier_watch": "consumer confidence blowout produced only a 0.50bp rise in 10Y and 0.30% dollar gain — bond market refused to validate the strength signal ahead of FOMC"
+      "outlier_watch": "consumer confidence blowout produced only a 0.50bp rise in 10Y and 0.30% dollar gain — bond market refused to validate the strength signal ahead of FOMC",
+      "lesson_schema_ok": true
     },
     {
       "date": "2026-10-30",
