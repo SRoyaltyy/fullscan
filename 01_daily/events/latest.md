@@ -1,146 +1,227 @@
-# Event Scan — 2026-11-03
+# Event Scan — 2026-11-04
 
 - events tracked: **33** (via deepseek-web)
 - uncertainty: **elevated**
-- summary: Markets enter the midterm election and a dense macro week with the Fed on hold but explicitly hawkish, inflation still sticky, and oil prices whipsawing on Hormuz diplomacy. The coming fortnight is dominated by the US midterms, payrolls, CPI, mega-cap tech earnings (Nvidia, Home Depot, Disney), the BoE decision, and Anthropic's blockbuster IPO as a sentiment wildcard. The main tension is between a market pricing a benign pause and a data-dependent path that could still force a December hike.
+- summary: Markets enter the post-midterm period with a Democratic Congress, a hawkish Fed on hold, and critical inflation and mega-cap tech earnings in the next fortnight. The main tension is between a market pricing a benign pause and data that could force a December hike, while US-China tariff expiry and AI earnings are key swing factors.
 
 ## Events tracked (33)
 
-1. **US midterm elections**
-   - government | today | 2026-11-03 | impact 4/5 | mixed
+1. **US midterm elections — Democrats win Congress**
+   - government | today | 2026-11-03..2026-11-04 | impact 5/5 | mixed
    - regions: US | sectors: BROAD
-   - Control of both chambers of Congress is at stake, determining the legislative path for taxes, tariffs, regulation and investigations for the final two years of Trump's presidency.
-2. **RBA November rate decision**
-   - macro_data | today | 2026-11-03 | impact 2/5 | bearish
-   - regions: Australia | sectors: BROAD, Financial
-   - The RBA hiked 25bp to 4.85%, its fifth increase of 2026, reinforcing the global hawkish tilt and supporting AUD.
-3. **AMD Q3 2026 earnings**
-   - earnings | today | 2026-11-03 | impact 3/5 | mixed
-   - regions: US | sectors: Technology
-   - AMD is a key AI-chip bellwether and its results will test whether the AI capex cycle can justify premium valuations after the recent tech selloff.
-4. **US JOLTS job openings for September**
-   - macro_data | today | 2026-11-03 | impact 2/5 | mixed
+   - Democratic control of both chambers blocks Trump's legislative agenda and signals gridlock, but may reduce tariff-escalation risk.
+2. **OPEC+ holds December oil production steady**
+   - geopolitical | past | 2026-11-01 | impact 3/5 | bearish
+   - regions: Saudi Arabia, Russia, Global | sectors: Energy
+   - Keeping output unchanged maintains supply amid demand concerns, capping oil price upside.
+3. **South Korea top court upholds Broadcom antitrust fine**
+   - judicial | past | 2026-11-02 | impact 2/5 | bearish
+   - regions: South Korea, US | sectors: Technology
+   - Reinforces antitrust risk for US chipmakers in Korea; minor financial impact but precedent-setting.
+4. **Supreme Court rejects Trump bid to set aside California ballots**
+   - judicial | past | 2026-11-02 | impact 2/5 | mixed
    - regions: US | sectors: BROAD
-   - JOLTS is a key gauge of labour-market tightness and will inform the Fed's December decision after the October FOMC showed two hawkish dissents.
-5. **US ISM Services PMI for October**
-   - macro_data | upcoming | 2026-11-04 | impact 2/5 | mixed
-   - regions: US | sectors: BROAD, Consumer Cyclical
-   - Services is the bulk of the US economy; a stable reading near 54.7 would support the soft-landing narrative.
-6. **Brazil Copom rate decision**
-   - macro_data | upcoming | 2026-11-04 | impact 2/5 | mixed
-   - regions: Brazil | sectors: BROAD, Financial
-   - Post-election market turmoil has shifted expectations toward holding the Selic at 13.75%, pausing the easing cycle.
-7. **McDonald's Q3 2026 earnings**
-   - earnings | upcoming | 2026-11-04 | impact 2/5 | mixed
-   - regions: US | sectors: Consumer Cyclical
-   - McDonald's is a global consumer bellwether and its results will show whether low-income consumers are pulling back amid persistent inflation.
-8. **Bank of England November rate decision**
-   - macro_data | upcoming | 2026-11-05 | impact 2/5 | bearish
+   - Reduces election-litigation risk, supporting a smooth transfer of power and lowering political uncertainty.
+5. **LA/Long Beach port watchmen strike deadline**
+   - ongoing | today | 2026-11-04 | impact 3/5 | bearish
+   - regions: US | sectors: Industrials, Consumer Cyclical
+   - A strike at the largest US port complex would disrupt trans-Pacific trade and supply chains.
+6. **Bank of England rate decision**
+   - macro_data | upcoming | 2026-11-05 | impact 2/5 | mixed
    - regions: UK | sectors: BROAD, Financial
-   - The BoE is expected to hike 25bp to 4.00%, its first increase since August 2023, as energy-driven inflation forces its hand.
-9. **Qualcomm FQ4 2026 earnings**
-   - earnings | upcoming | 2026-11-05 | impact 2/5 | mixed
-   - regions: US | sectors: Technology
-   - Qualcomm gives a read on smartphone and auto-chip demand, both facing headwinds from memory-cost inflation and weak handset sales.
-10. **US nonfarm payrolls for October**
+   - Expected 25bp hike to 4.00%, the first of 2026, as inflation persists; signals global hawkish tilt.
+7. **US nonfarm payrolls for October**
    - macro_data | upcoming | 2026-11-06 | impact 4/5 | mixed
    - regions: US | sectors: BROAD
-   - The jobs report is the single most important data point before the December FOMC, with the Fed signalling further hikes if inflation stays hot.
-11. **China CPI for October**
-   - macro_data | upcoming | 2026-11-09 | impact 2/5 | mixed
-   - regions: China | sectors: BROAD, Basic Materials, Consumer Defensive
-   - China's CPI remains near zero, and a weak print would reinforce deflation fears and pressure Beijing for more stimulus.
-12. **China trade data for October**
-   - macro_data | upcoming | 2026-11-10 | impact 2/5 | mixed
+   - Key labour data before the December FOMC; consensus +50k, unemployment 4.2%.
+8. **China October trade data**
+   - macro_data | upcoming | 2026-11-07 | impact 2/5 | mixed
    - regions: China | sectors: Industrials, Basic Materials, Technology
-   - Trade data will show whether export momentum is holding up after the US tariff reset and China's own export controls on AI and chip technology.
-13. **US CPI for October**
-   - macro_data | upcoming | 2026-11-10 | impact 4/5 | mixed
+   - Exports have been strong; data will show momentum amid the tariff truce.
+9. **China October CPI**
+   - macro_data | upcoming | 2026-11-09 | impact 2/5 | mixed
+   - regions: China | sectors: BROAD, Consumer Defensive
+   - Inflation near 0.9%; a weak print reinforces deflation fears and stimulus expectations.
+10. **US October CPI**
+   - macro_data | upcoming | 2026-11-10 | impact 5/5 | mixed
    - regions: US | sectors: BROAD
-   - CPI is the last major inflation reading before the December FOMC and will determine whether the Fed follows through on the hike priced by markets.
-14. **Russia-Ukraine peace talks in Abu Dhabi**
+   - Last major inflation reading before the December FOMC; consensus 3.7% y/y, could determine a hike.
+11. **Russia-Ukraine-US peace talks in Abu Dhabi**
    - geopolitical | upcoming | 2026-11-10..2026-11-11 | impact 3/5 | mixed
    - regions: US, Russia, Ukraine, UAE | sectors: Energy, BROAD
-   - US-mediated trilateral talks could lead to a ceasefire framework, potentially easing energy and commodity supply risks.
-15. **US PPI for October**
+   - A ceasefire framework could ease energy and commodity supply risks.
+12. **US-China tariff truce expiration**
+   - government | upcoming | 2026-11-10 | impact 4/5 | bearish
+   - regions: US, China | sectors: BROAD, Technology, Industrials
+   - The 90-day suspension of 24% reciprocal tariffs expires; failure to extend would raise tariffs and disrupt trade.
+13. **Applied Materials FQ4 2026 earnings**
+   - earnings | upcoming | 2026-11-12 | impact 3/5 | mixed
+   - regions: US | sectors: Technology
+   - Semiconductor equipment bellwether; AI capex demand in focus.
+14. **Cisco FQ1 2027 earnings**
+   - earnings | upcoming | 2026-11-12 | impact 2/5 | mixed
+   - regions: US | sectors: Technology, Communication Services
+   - Networking and AI infrastructure demand read.
+15. **US October PPI**
    - macro_data | upcoming | 2026-11-13 | impact 2/5 | mixed
    - regions: US | sectors: BROAD, Industrials
-   - PPI provides an early read on pipeline inflation and margin pressure after September's upside surprise (6.3% y/y).
-16. **Japan Q3 GDP first preliminary estimate**
+   - Pipeline inflation gauge after September's upside surprise.
+16. **Eurozone Q3 GDP flash estimate**
+   - macro_data | upcoming | 2026-11-13 | impact 2/5 | mixed
+   - regions: EU | sectors: BROAD, Financial
+   - Q3 growth expected 0.4% q/q; resilience supports an ECB pause.
+17. **Japan Q3 GDP first preliminary**
    - macro_data | upcoming | 2026-11-16 | impact 2/5 | mixed
    - regions: Japan | sectors: BROAD
-   - GDP is forecast nearly flat (+0.1% q/q) as bad weather and weak consumption weigh; a contraction would complicate the BoJ's hike path.
-17. **Nvidia Q3 FY2027 earnings**
-   - earnings | upcoming | 2026-11-17 | impact 4/5 | mixed
+   - Weak consumption may complicate the BoJ hike path; a contraction would be dovish.
+18. **China October retail sales and industrial production**
+   - macro_data | upcoming | 2026-11-16 | impact 2/5 | mixed
+   - regions: China | sectors: BROAD, Consumer Cyclical, Industrials
+   - Retail sales growth near 1%; industrial production slowing; shows stimulus effectiveness.
+19. **Anthropic IPO on Nasdaq**
+   - ipo | upcoming | 2026-11-16..2026-11-20 | impact 4/5 | mixed
    - regions: US | sectors: Technology
-   - Nvidia is the largest AI bellwether; its results and guidance will determine whether the AI trade stabilises after the recent semiconductor selloff.
-18. **Home Depot Q3 2026 earnings**
+   - Potential record IPO ($1.5-2T valuation) could be a sentiment wildcard for the AI trade.
+20. **Nvidia Q3 FY2027 earnings**
+   - earnings | upcoming | 2026-11-17 | impact 5/5 | mixed
+   - regions: US | sectors: Technology
+   - Largest AI bellwether; guidance will determine AI trade direction after the recent selloff.
+21. **Home Depot Q3 2026 earnings**
    - earnings | upcoming | 2026-11-17 | impact 2/5 | mixed
    - regions: US | sectors: Consumer Cyclical, Industrials
-   - Home Depot is a housing-market bellwether; weak results would signal ongoing stress in residential investment.
-19. **Disney FQ4 2026 earnings**
+   - Housing-market bellwether; weak results signal residential investment stress.
+22. **Disney FQ4 2026 earnings**
    - earnings | upcoming | 2026-11-17 | impact 2/5 | mixed
    - regions: US | sectors: Communication Services, Consumer Cyclical
-   - Disney's results will show whether streaming profitability and theme-park demand are holding up amid consumer pressure.
-20. **US retail sales for October**
-   - macro_data | upcoming | 2026-11-17 | impact 2/5 | mixed
-   - regions: US | sectors: BROAD, Consumer Cyclical
-   - Retail sales will show whether the consumer is holding up after September's strong 0.8% m/m gain.
-21. **Anthropic IPO roadshow and pricing**
-   - ipo | upcoming | 2026-11-09..2026-11-20 | impact 3/5 | mixed
+   - Streaming profitability and theme-park demand amid consumer pressure.
+23. **Target Q3 2026 earnings**
+   - earnings | upcoming | 2026-11-18 | impact 2/5 | mixed
+   - regions: US | sectors: Consumer Cyclical, Consumer Defensive
+   - Consumer discretionary bellwether; signals spending strain.
+24. **Palo Alto Networks FQ1 2027 earnings**
+   - earnings | upcoming | 2026-11-18 | impact 2/5 | mixed
    - regions: US | sectors: Technology
-   - Anthropic's blockbuster IPO (ticker ANT) could be a sentiment wildcard for the AI trade, with a reported valuation target of $1.5-2 trillion.
-22. **FDA PDUFA decision for Ivonescimab (Summit Therapeutics)**
-   - judicial | upcoming | 2026-11-14 | impact 2/5 | mixed
-   - regions: US | sectors: Healthcare
-   - A positive FDA decision for Summit's lung-cancer drug would validate the bispecific antibody class and boost the biotech sector.
-23. **FOMC October meeting outcome**
-   - macro_data | past | 2026-10-27..2026-10-28 | impact 4/5 | bearish
+   - Cybersecurity spending trend; AI-driven demand.
+25. **Walmart Q3 FY2027 earnings**
+   - earnings | upcoming | 2026-11-19 | impact 3/5 | mixed
+   - regions: US | sectors: Consumer Defensive, Consumer Cyclical
+   - Largest US retailer; consumer health gauge.
+26. **Intuit FQ1 2027 earnings**
+   - earnings | upcoming | 2026-11-19 | impact 2/5 | mixed
+   - regions: US | sectors: Technology
+   - Small business and consumer finance software demand.
+27. **FOMC October meeting minutes**
+   - macro_data | upcoming | 2026-11-18 | impact 3/5 | mixed
    - regions: US | sectors: BROAD
-   - The Fed held rates at 3.75-4.00% but with two hawkish dissents (Cook, Hammack), signalling that a December hike remains live.
-24. **Apple FQ4 2026 earnings**
-   - earnings | past | 2026-11-02 | impact 3/5 | mixed
-   - regions: US | sectors: Technology, Communication Services
-   - Apple beat on revenue ($114.5B, +12%) and EPS, but margin guidance disappointed, weighing on tech sentiment.
-25. **Nongshim US unit files tariff refund lawsuit**
-   - judicial | past | 2026-10-28 | impact 1/5 | mixed
-   - regions: US, South Korea | sectors: Consumer Defensive
-   - The first major corporate lawsuit seeking IEEPA tariff refunds could open the floodgates for thousands of importers and pressure CBP's refund process.
-26. **South Korea Supreme Court upholds Broadcom antitrust fine**
-   - judicial | past | 2026-11-02 | impact 1/5 | bearish
-   - regions: South Korea, US | sectors: Technology
-   - The ruling confirms that global chipmakers can be held liable for abusing bargaining power over Korean conglomerates, a precedent for antitrust enforcement.
-27. **OPEC+ November meeting maintains production**
-   - geopolitical | past | 2026-11-01 | impact 3/5 | bearish
-   - regions: Saudi Arabia, Russia, OPEC+ | sectors: Energy
-   - OPEC+ kept December output at September levels, deferring the decision on 2027 quotas and keeping oil supply tight amid Hormuz disruptions.
-28. **China official manufacturing PMI for October**
-   - macro_data | past | 2026-10-31 | impact 2/5 | bearish
-   - regions: China | sectors: Industrials, Basic Materials
-   - The PMI fell to 49.3 (from 50.1), missing expectations and re-entering contraction, highlighting weak domestic demand.
-29. **South Korea October exports surge on chip demand**
-   - macro_data | past | 2026-11-01 | impact 2/5 | bullish
-   - regions: South Korea | sectors: Technology, Industrials
-   - Exports hit a record $115.3B (+93.7% y/y), with semiconductor exports up 259%, confirming the AI-driven chip boom.
-30. **US-China tariff relief limited; Section 301 exclusions expire**
-   - government | past | 2026-10-31..2026-11-10 | impact 2/5 | mixed
-   - regions: US, China | sectors: Industrials, Technology, Basic Materials
-   - The USTR limited tariff relief to $60B in consumer goods and excluded intermediate electronics; 178 industrial exclusions expire Nov 10 unless extended.
-31. **US government funding continuing resolution through Dec 11**
-   - legislative | past | 2026-09-02..2026-12-11 | impact 2/5 | mixed
+   - Details of the hawkish hold; may reveal the December hike debate.
+28. **UK October CPI**
+   - macro_data | upcoming | 2026-11-18 | impact 2/5 | mixed
+   - regions: UK | sectors: BROAD, Financial
+   - Inflation data after the BoE hike; informs the future path.
+29. **Eurozone October CPI final**
+   - macro_data | upcoming | 2026-11-18 | impact 2/5 | mixed
+   - regions: EU | sectors: BROAD
+   - Confirms the inflation trend amid energy price pressures.
+30. **Congress returns for lame-duck session**
+   - legislative | upcoming | 2026-11-09 | impact 3/5 | mixed
    - regions: US | sectors: BROAD
-   - The CR avoids a shutdown before the midterms but sets up a compressed lame-duck session with a Dec 11 deadline for FY2027 appropriations.
-32. **Iran conflict and Strait of Hormuz disruption**
-   - geopolitical | past | 2026-02..ongoing | impact 3/5 | mixed
-   - regions: Iran, US, Middle East | sectors: Energy, BROAD
-   - The US-Israel war on Iran has disrupted Hormuz shipping and drawn down global oil inventories by ~1B barrels; headlines on strikes or diplomacy whipsaw oil prices.
-33. **Hyosung Heavy Industries white-collar strike**
-   - ongoing | upcoming | 2026-11-04..2026-11-06 | impact 1/5 | mixed
-   - regions: South Korea | sectors: Industrials
-   - A 72-hour strike by office/technical workers at Hyosung Heavy is the first since the union formed in June; the company says the Changwon plant will operate normally.
+   - Must address government funding before the Dec 11 deadline; Democratic control may reshape priorities.
+31. **Fed officials speeches**
+   - macro_data | upcoming | 2026-11-05..2026-11-18 | impact 2/5 | mixed
+   - regions: US | sectors: BROAD
+   - Speeches may signal December hike intentions after the hawkish hold.
+32. **Gaza ceasefire violations continue**
+   - geopolitical | ongoing | 2026-10-21..2026-11-18 | impact 2/5 | mixed
+   - regions: Middle East, US | sectors: Energy, BROAD
+   - Ongoing violations keep a geopolitical risk premium in oil.
+33. **Atlantic hurricane season late-season development**
+   - ongoing | upcoming | 2026-11-05..2026-11-18 | impact 2/5 | mixed
+   - regions: US, Caribbean | sectors: Energy, Utilities, Real Estate
+   - A late-season storm could disrupt Gulf energy production and insurers.
 
 ---
 
 ## Model narrative
 
+## TODAY — 2026-11-04
 
+**Government**
+- **US midterm elections — Democrats win Congress** (Nov 3–4). Sectors: BROAD. Why it matters: Divided government blocks Trump’s legislative agenda and may reduce tariff-escalation risk, but creates fiscal and regulatory uncertainty. Watch: whether Democrats force spending concessions or investigate tariffs. Status: resolved.
+
+**Ongoing**
+- **LA/Long Beach port watchmen strike deadline** (Nov 4, 5pm PT). Sectors: Industrials, Consumer Cyclical. Why it matters: A strike at the largest US port complex would disrupt trans-Pacific trade. Watch: whether a last-minute deal is reached. Status: new.
+
+**Judicial (past)**
+- **South Korea top court upholds Broadcom antitrust fine** (Nov 2). Sectors: Technology. Minor financial impact but reinforces antitrust risk for US chipmakers. Status: resolved.
+- **Supreme Court rejects Trump bid to set aside California ballots** (Nov 2). Sectors: BROAD. Reduces election-litigation risk and political uncertainty. Status: resolved.
+
+**Geopolitical (past)**
+- **OPEC+ holds December oil production steady** (Nov 1). Sectors: Energy. Keeps supply unchanged amid demand concerns, capping oil upside. Watch: next meeting Nov 29. Status: resolved.
+
+## THIS WEEK AND NEXT (upcoming)
+
+**Macro data & central banks**
+- **BoE rate decision** (Nov 5). Sectors: BROAD, Financial. Expected 25bp hike to 4.00%; first of 2026. Watch vote split and guidance.
+- **US nonfarm payrolls** (Nov 6). Sectors: BROAD. Consensus +50k, unemployment 4.2%; key before December FOMC. Watch wages and revisions.
+- **China trade data** (Nov 7). Sectors: Industrials, Basic Materials, Technology. Export momentum amid tariff truce. Watch US/EU export growth.
+- **China CPI** (Nov 9). Sectors: BROAD, Consumer Defensive. Inflation near 0.9%; weak print reinforces deflation fears.
+- **US CPI** (Nov 10). Sectors: BROAD. Consensus 3.7% y/y; last major inflation read before December FOMC. Watch core CPI and shelter.
+- **US PPI** (Nov 13). Sectors: BROAD, Industrials. Pipeline inflation after September’s upside surprise.
+- **Eurozone Q3 GDP flash** (Nov 13). Sectors: BROAD, Financial. Expected +0.4% q/q; resilience supports ECB pause.
+- **Japan Q3 GDP first preliminary** (Nov 16). Sectors: BROAD. Weak consumption may complicate BoJ hike path.
+- **China October retail sales & industrial production** (Nov 16). Sectors: BROAD, Consumer Cyclical, Industrials. Shows stimulus effectiveness.
+- **FOMC October minutes** (Nov 18). Sectors: BROAD. Details of hawkish hold; may reveal December hike debate.
+- **UK October CPI** (Nov 18). Sectors: BROAD, Financial. Services inflation key after BoE hike.
+- **Eurozone October CPI final** (Nov 18). Sectors: BROAD. Confirms inflation trend amid energy pressures.
+- **Fed officials speeches** (Nov 5–18). Sectors: BROAD. May signal December hike intentions.
+
+**Government / legislative**
+- **US-China tariff truce expiration** (Nov 10). Sectors: BROAD, Technology, Industrials. The 90-day suspension of 24% reciprocal tariffs expires; failure to extend would raise tariffs. Watch USTR announcement.
+- **Congress returns for lame-duck session** (Nov 9). Sectors: BROAD. Must address government funding before Dec 11 deadline; Democratic control reshapes priorities.
+
+**Geopolitical**
+- **Russia-Ukraine-US peace talks in Abu Dhabi** (Nov 10–11). Sectors: Energy, BROAD. Ceasefire framework could ease energy and commodity supply risks. Watch whether Russia agrees.
+
+**Earnings**
+- **Applied Materials FQ4** (Nov 12). Sectors: Technology. Semiconductor equipment bellwether; AI capex in focus.
+- **Cisco FQ1** (Nov 12). Sectors: Technology, Communication Services. Networking and AI infrastructure demand.
+- **Nvidia Q3 FY2027** (Nov 17). Sectors: Technology. Largest AI bellwether; guidance determines AI trade direction.
+- **Home Depot Q3** (Nov 17). Sectors: Consumer Cyclical, Industrials. Housing-market bellwether.
+- **Disney FQ4** (Nov 17). Sectors: Communication Services, Consumer Cyclical. Streaming profitability and parks demand.
+- **Target Q3** (Nov 18). Sectors: Consumer Cyclical, Consumer Defensive. Consumer discretionary bellwether.
+- **Palo Alto Networks FQ1** (Nov 18). Sectors: Technology. Cybersecurity spending trend.
+- **Walmart Q3** (Nov 19). Sectors: Consumer Defensive, Consumer Cyclical. Largest US retailer; consumer health gauge.
+- **Intuit FQ1** (Nov 19). Sectors: Technology. Small business and consumer finance demand.
+
+**IPO**
+- **Anthropic IPO on Nasdaq** (week of Nov 16–20). Sectors: Technology. Potential record IPO ($1.5–2T valuation) could be a sentiment wildcard for the AI trade.
+
+**Ongoing**
+- **Gaza ceasefire violations** (Oct 21–Nov 18). Sectors: Energy, BROAD. Keeps geopolitical risk premium in oil.
+- **Atlantic hurricane season late-season development** (Nov 5–18). Sectors: Energy, Utilities, Real Estate. Low confidence but could disrupt Gulf production.
+
+## STILL IN PLAY (recent past)
+
+- **US midterm elections**: Democratic control of Congress is a regime-level political shift; market implications for taxes, tariffs, and regulation will unfold over months. Status: resolved but still driving sentiment.
+- **OPEC+ production hold**: Oil prices remain sensitive to demand signals and compliance; next meeting Nov 29. Status: resolved but live.
+- **Port strike**: Deadline today; any disruption would have immediate supply-chain effects. Status: unresolved.
+
+## TOP RISKS / TOP OPPORTUNITIES
+
+**Top risks (ranked)**
+1. US CPI upside surprise forcing a December Fed hike.
+2. Nvidia earnings disappointment reigniting the AI/semiconductor selloff.
+3. US-China tariff truce expiry raising tariffs and disrupting trade.
+4. Russia-Ukraine talks failure keeping energy risk premium elevated.
+5. LA/Long Beach port strike disrupting trans-Pacific supply chains.
+
+**Top opportunities (ranked)**
+1. Midterm gridlock reduces regulatory and tariff-escalation risk.
+2. Anthropic IPO boosting AI sentiment and drawing capital into tech.
+3. Weak China data raising stimulus expectations, lifting commodities.
+4. BoE hike priced in; sterling and UK banks may rally on relief.
+5. Resilient retail earnings easing consumer slowdown fears.
+
+## UNCERTAINTY
+
+**Elevated** — The post-midterm political shift, a hawkish Fed on hold, and a dense macro/earnings calendar create multiple binary outcomes in the next two weeks.
