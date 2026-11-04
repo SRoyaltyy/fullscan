@@ -158,6 +158,93 @@ def test_main_page_fresh_blocks_a_stale_stamp() -> None:
         assert gate.latest_completed_session(preopen) == "2026-10-06"
 
 
+def test_stale_page_allows_only_a_recorded_miss_that_the_page_shows() -> None:
+    """One session behind is fresh only for a recorded miss printed on the page.
+
+    Every other reason the page is behind still blocks: a wider gap, a
+    missing record, a status other than missed, or a note that does not
+    name that session.
+    """
+    with tempfile.TemporaryDirectory() as raw:
+        root = Path(raw)
+        date = "2026-11-04"
+        _board(root, date, [
+            _proc("stock_book", [_file("book_json", "required", "OK")]),
+            _proc("publish", [_file("dash_html", "required", "OK")]),
+        ])
+        _fm_and_tickets(root, date)
+        page = root / "dashboard" / "index.html"
+        gate.stamp_data_asof(page, "2026-11-03")
+        blocked = gate.evaluate(date, root=root)
+        assert blocked["ready"] is False
+        assert blocked["main_page_fresh"] is False
+        assert "older than 2026-11-04" in blocked["reason"]
+
+        _write(root, "data/paper/missed.json", {
+            "sessions": {"2026-11-04": {"status": "late", "reason": "something else"}},
+        })
+        late = gate.evaluate(date, root=root)
+        assert late["ready"] is False
+        assert late["main_page_fresh"] is False
+
+        _write(root, "data/paper/missed.json", {
+            "sessions": {
+                "2026-11-04": {
+                    "status": "missed",
+                    "reason": "stock book was not on main before 09:30 ET",
+                },
+            },
+        })
+        unshown = gate.evaluate(date, root=root)
+        assert unshown["ready"] is False
+        assert unshown["main_page_fresh"] is False
+        assert gate.page_shows_missed_note(date, root=root) is False
+
+        gate.stamp_missed_note(page, "2026-11-02")
+        wrong_day = gate.evaluate(date, root=root)
+        assert wrong_day["ready"] is False
+        assert gate.page_shows_missed_note("2026-11-02", root=root) is True
+        assert gate.page_shows_missed_note(date, root=root) is False
+
+        gate.stamp_data_asof(page, "2026-11-02")
+        gate.stamp_missed_note(page, date)
+        two_behind = gate.evaluate(date, root=root)
+        assert two_behind["ready"] is False
+        assert two_behind["main_page_asof"] == "2026-11-02"
+        assert gate.recorded_miss_covers("2026-11-02", date, root=root) is False
+
+        gate.stamp_data_asof(page, "2026-11-03")
+        gate.stamp_missed_note(page, date)
+        allowed = gate.evaluate(date, root=root)
+        assert allowed["ready"] is True
+        assert allowed["main_page_fresh"] is True
+        assert allowed["main_page_asof"] == "2026-11-03"
+        assert "recorded missed" in allowed["reason"]
+        text = page.read_text(encoding="utf-8")
+        assert 'id="missed-note"' in text
+        assert "2026-11-04 missed" in text
+        assert '"dates"' not in text or "2026-11-04" not in (
+            gate._DATES_ARRAY.search(text).group(1)
+            if gate._DATES_ARRAY.search(text) else ""
+        )
+
+
+def test_live_curve_keeps_2026_11_04_recorded_as_missed() -> None:
+    """11-04 stays off the sealed paper curve. The page shows the miss."""
+    root = Path(__file__).resolve().parent.parent
+    page = (root / "dashboard" / "index.html").read_text(encoding="utf-8")
+    assert gate.data_asof_from_html(page) == "2026-11-03"
+    assert gate.page_shows_missed_note("2026-11-04", text=page)
+    match = gate._DATES_ARRAY.search(page)
+    assert match is not None
+    assert "2026-11-04" not in match.group(1)
+    missed = json.loads((root / "data" / "paper" / "missed.json").read_text(
+        encoding="utf-8"))
+    assert missed["sessions"]["2026-11-04"]["status"] == "missed"
+    curve = (root / "data" / "paper" / "equity_curve.csv").read_text(encoding="utf-8")
+    assert "2026-11-04" not in curve
+
+
 def test_legacy_curve_dates_count_as_data_asof() -> None:
     html = (
         '<html><head><meta charset="utf-8"></head><script>const D = '
@@ -608,6 +695,8 @@ def main() -> None:
         test_fallback_when_book_required_missing,
         test_blocked_without_tickets,
         test_main_page_fresh_blocks_a_stale_stamp,
+        test_stale_page_allows_only_a_recorded_miss_that_the_page_shows,
+        test_live_curve_keeps_2026_11_04_recorded_as_missed,
         test_newer_main_page_replaces_an_older_artifact,
         test_legacy_curve_dates_count_as_data_asof,
         test_blocked_when_today_json_is_yesterday,

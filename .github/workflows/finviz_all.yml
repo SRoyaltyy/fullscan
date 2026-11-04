@@ -116,7 +116,9 @@ jobs:
               if not looks_csv(raw) or len(raw) < 200:
                   print(f"[export] reject {src}: not csv ({len(raw)} bytes)")
                   return False
-              dest.write_bytes(raw)
+              sys.path.insert(0, ".")
+              from src.finviz_export_guard import publish_bytes
+              publish_bytes(date, raw, dest)
               Path("data/finviz/latest.csv").write_bytes(raw)
               n = raw.count(b"\n")
               print(f"[export] wrote {dest} lines={n} src={src}")
