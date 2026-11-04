@@ -61,11 +61,65 @@ def list_parse_days(news_dir: Path | None = None) -> list[dict]:
 
 def write_days_index(*, root: Path | None = None,
                      news_dir: Path | None = None) -> Path:
+    """Append parse days that are not already listed.
+
+    An existing day row is left as stored, including its flags. A second
+    call with no new date does not rewrite the file.
+    """
     root = root or ROOT
     news_dir = news_dir or (root / "01_daily" / "news")
     path = dashboard_days_path(root)
+    prior: list[dict] = []
+    have: set[str] = set()
+    if path.is_file():
+        blob = _load_json(path)
+        rows = blob.get("days") if isinstance(blob, dict) else None
+        if isinstance(rows, list):
+            for row in rows:
+                if not isinstance(row, dict):
+                    continue
+                day = str(row.get("date") or "")
+                if not day or day in have:
+                    continue
+                prior.append(dict(row))
+                have.add(day)
+    added: list[dict] = []
+    for row in list_parse_days(news_dir):
+        day = str(row.get("date") or "")
+        if not day or day in have:
+            continue
+        added.append(dict(row))
+        have.add(day)
+    if path.is_file() and not added:
+        return path
     path.parent.mkdir(parents=True, exist_ok=True)
-    _write_json(path, {"schema": "jev-train-days-1", "days": list_parse_days(news_dir)})
+    _write_json(path, {"schema": "jev-train-days-1", "days": prior + added})
+    return path
+
+
+def append_new_days(*, root: Path | None = None,
+                    news_dir: Path | None = None) -> Path:
+    """Index new parse days. Does not draw or redraw any day."""
+    root = root or ROOT
+    path = dashboard_days_path(root)
+    before: set[str] = set()
+    if path.is_file():
+        blob = _load_json(path) or {}
+        before = {
+            str(row.get("date"))
+            for row in (blob.get("days") or [])
+            if isinstance(row, dict)
+        }
+    path = write_days_index(root=root, news_dir=news_dir)
+    blob = _load_json(path) or {}
+    after = [
+        str(row.get("date"))
+        for row in (blob.get("days") or [])
+        if isinstance(row, dict)
+    ]
+    added = [day for day in after if day not in before]
+    tail = " " + " ".join(added) if added else " (past days unchanged)"
+    print(f"[jev_day] appended {len(added)} day(s){tail}")
     return path
 
 
@@ -209,11 +263,17 @@ def run_day_draw(*, day: str, stamp: str = "", write: bool = True,
 def main(argv: list[str] | None = None) -> int:
     import argparse
     parser = argparse.ArgumentParser(description="Jev trainer day draw")
-    parser.add_argument("cmd", choices=["draw"])
-    parser.add_argument("--day", required=True)
+    parser.add_argument("cmd", choices=["draw", "append"])
+    parser.add_argument("--day", default="")
     parser.add_argument("--stamp", default="")
     args = parser.parse_args(argv)
     try:
+        if args.cmd == "append":
+            append_new_days()
+            return 0
+        if not args.day:
+            print("[jev_day] day must be YYYY-MM-DD")
+            return 1
         run_day_draw(day=args.day, stamp=args.stamp or "", write=True)
     except Exception as exc:  # noqa: BLE001
         print(f"[jev_day] {type(exc).__name__}: {exc}")

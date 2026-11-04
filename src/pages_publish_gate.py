@@ -23,6 +23,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 from datetime import datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
@@ -36,6 +37,12 @@ IGNORE_PROCESS_KEYS = frozenset({"catalyst"})
 # Regular-session open. Before this bell the day has not started, so
 # the latest completed session is still the previous NYSE session.
 OPEN_H, OPEN_M = 9, 30
+_ASOF_META = re.compile(
+    r'<meta name="data-asof" content="(20\d{2}-\d{2}-\d{2})">'
+)
+_ASOF_JSON = re.compile(r'"data_asof"\s*:\s*"(20\d{2}-\d{2}-\d{2})"')
+_DATES_ARRAY = re.compile(r'"dates"\s*:\s*\[(.*?)\]', re.S)
+_DAY = re.compile(r"20\d{2}-\d{2}-\d{2}")
 
 
 def _load_json(path: Path) -> dict:
@@ -84,6 +91,74 @@ def latest_completed_session(now: datetime | None = None) -> str:
     if _session_date(now.date()) and now >= bell:
         return now.date().isoformat()
     return _prev_weekday(now.date().isoformat())
+
+
+def data_asof_from_html(text: str) -> str:
+    """Data date stamped on the main page, else the last embedded curve date."""
+    match = _ASOF_META.search(text or "")
+    if match:
+        return match.group(1)
+    match = _ASOF_JSON.search(text or "")
+    if match:
+        return match.group(1)
+    match = _DATES_ARRAY.search(text or "")
+    if not match:
+        return ""
+    days = _DAY.findall(match.group(1))
+    return days[-1] if days else ""
+
+
+def stamp_data_asof(path: Path, asof: str) -> None:
+    """Stamp ``dashboard/index.html`` with the curve's data date.
+
+    ``src/paper_trade.py`` is an engine pin, so the append renderer calls
+    this immediately after ``write_dashboard`` instead of editing that file.
+    The stamp is the newest curve session, not the wall clock.
+    """
+    day = str(asof or "")[:10]
+    if not _DAY.fullmatch(day):
+        raise ValueError(f"data-asof must be YYYY-MM-DD, got {asof!r}")
+    text = path.read_text(encoding="utf-8")
+    tag = f'<meta name="data-asof" content="{day}">'
+    if 'name="data-asof"' in text:
+        text = _ASOF_META.sub(tag, text, count=1)
+    else:
+        needle = '<meta charset="utf-8">'
+        if needle in text:
+            text = text.replace(needle, needle + "\n" + tag, 1)
+        else:
+            text = tag + "\n" + text
+    token = '"generated":'
+    if '"data_asof":' in text:
+        text = _ASOF_JSON.sub(f'"data_asof":"{day}"', text, count=1)
+    elif token in text:
+        text = text.replace(token, f'"data_asof":"{day}",{token}', 1)
+    path.write_text(text, encoding="utf-8")
+
+
+def main_page_asof(root: Path | None = None) -> str:
+    path = (root or ROOT) / "dashboard" / "index.html"
+    if not path.is_file():
+        return ""
+    # The stamp and the curve dates sit in the head / payload preamble.
+    # Later trade rows are not the page's data-asof.
+    with path.open(encoding="utf-8", errors="replace") as handle:
+        return data_asof_from_html(handle.read(262144))
+
+
+def main_page_fresh(date: str, *, root: Path | None = None,
+                    now: datetime | None = None) -> bool:
+    """False when the main page data-asof is older than ``date``.
+
+    Deploy omits ``--date``, so ``date`` is ``latest_completed_session()``.
+    A stamp older than that session fails the publish. An explicit older
+    ``--date`` is fresh when the page already covers that session.
+    """
+    asof = main_page_asof(root)
+    need = str(date or "").strip()[:10] or latest_completed_session(now)
+    if not asof or not need:
+        return False
+    return asof >= need
 
 
 def resolve_date(date: str = "", *, root: Path | None = None,
@@ -221,8 +296,10 @@ def _evaluate_date(date: str, *, root: Path) -> dict:
             required_ready = False
     fm_ok, fm_note = factor_mine_today_ok(date, root=root)
     tk_ok, tk_note = tickets_ok(date, root=root)
+    page_asof = main_page_asof(root)
+    page_ok = main_page_fresh(date, root=root)
     fallback = (not required_ready) and fm_ok and tk_ok
-    ready = (required_ready and fm_ok and tk_ok) or fallback
+    ready = ((required_ready and fm_ok and tk_ok) or fallback) and page_ok
     reason = []
     if required_ready and fm_ok and tk_ok:
         reason.append(
@@ -244,6 +321,11 @@ def _evaluate_date(date: str, *, root: Path) -> dict:
             reason.append(fm_note)
         if not tk_ok:
             reason.append(tk_note)
+    if not page_ok:
+        reason.append(
+            f"main page data-asof {page_asof or 'missing'} is older than {date} "
+            "(latest completed session when --date is empty)"
+        )
     return {
         "date": date,
         "ready": ready,
@@ -257,6 +339,8 @@ def _evaluate_date(date: str, *, root: Path) -> dict:
         "factor_mine_today_note": fm_note,
         "tickets": tk_ok,
         "tickets_note": tk_note,
+        "main_page_asof": page_asof,
+        "main_page_fresh": page_ok,
         "reason": "; ".join(reason) or "not ready",
     }
 
@@ -274,6 +358,7 @@ def format_verdict(v: dict) -> str:
         f"{' '.join(bits)} "
         f"factor-mine today.json={'OK' if v.get('factor_mine_today') else 'NO'} "
         f"tickets={'OK' if v.get('tickets') else 'NO'} "
+        f"main={v.get('main_page_asof') or 'STALE'} "
         f"overall={v.get('overall') or '?'} "
         f"catalyst={v.get('catalyst_status') or 'n/a'} (ignored) "
         f"— {v.get('reason')}"

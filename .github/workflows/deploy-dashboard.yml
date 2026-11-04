@@ -107,23 +107,66 @@ jobs:
           mkdir -p pages_out/dashboard
           touch pages_out/.nojekyll
 
+          take_dashboard() {
+            local url="$1"
+            [ -n "${url:-}" ] && [ "$url" != "null" ] || return 1
+            rm -rf dashboard_artifact artifact.zip
+            curl -fsSL -H "Authorization: token ${TOKEN}" -o artifact.zip "$url" || return 1
+            mkdir -p dashboard_artifact
+            unzip -o artifact.zip -d dashboard_artifact >/dev/null
+            if [ -f dashboard_artifact/index.html ]; then
+              mkdir -p pages_out/dashboard
+              cp -a dashboard_artifact/. pages_out/dashboard/
+              cp dashboard_artifact/index.html pages_out/index.html
+              return 0
+            fi
+            if [ -f dashboard_artifact/dashboard/index.html ]; then
+              mkdir -p pages_out/dashboard
+              cp -a dashboard_artifact/dashboard/. pages_out/dashboard/
+              cp dashboard_artifact/dashboard/index.html pages_out/index.html
+              return 0
+            fi
+            return 1
+          }
+          artifact_url() {
+            local rid="$1" body dash book
+            body=$(curl -fsSL -H "Authorization: token ${TOKEN}" \
+              "https://api.github.com/repos/${REPO}/actions/runs/${rid}/artifacts") || return 1
+            dash=$(printf '%s' "$body" | jq -r '[.artifacts[]? | select(.name=="dashboard") | .archive_download_url][0] // empty')
+            if [ -n "$dash" ]; then
+              printf '%s\n' "$dash"
+              return 0
+            fi
+            book=$(printf '%s' "$body" | jq -r '[.artifacts[]? | select(.name=="stock-book-all") | .archive_download_url][0] // empty')
+            [ -n "$book" ] || return 1
+            printf '%s\n' "$book"
+          }
+
           if [ -n "${RUN_ID:-}" ] && [ "$RUN_ID" != "" ]; then
             echo "Run ID: $RUN_ID"
-            artifacts_url="https://api.github.com/repos/${REPO}/actions/runs/${RUN_ID}/artifacts"
-            curl -s -H "Authorization: token ${TOKEN}" "$artifacts_url" > artifacts.json || true
-            url=$(jq -r '.artifacts[]? | select(.name=="dashboard" or .name=="stock-book-all") | .archive_download_url' artifacts.json 2>/dev/null | head -1 || true)
-            if [ -n "${url:-}" ] && [ "$url" != "null" ]; then
-              curl -L -H "Authorization: token ${TOKEN}" -o artifact.zip "$url"
-              mkdir -p dashboard_artifact
-              unzip -o artifact.zip -d dashboard_artifact
-              if [ -f dashboard_artifact/index.html ]; then
-                cp -a dashboard_artifact/. pages_out/dashboard/
-                cp dashboard_artifact/index.html pages_out/index.html
-              elif [ -f dashboard_artifact/dashboard/index.html ]; then
-                cp -a dashboard_artifact/dashboard/. pages_out/dashboard/
-                cp dashboard_artifact/dashboard/index.html pages_out/index.html
-              fi
+            url=$(artifact_url "$RUN_ID" || true)
+            if take_dashboard "${url:-}"; then
+              echo "Used dashboard artifact from triggering run ${RUN_ID}"
             fi
+          fi
+
+          if [ ! -f pages_out/dashboard/index.html ]; then
+            echo "Triggering run has no dashboard artifact; newest successful Stock Book ALL"
+            mapfile -t book_runs < <(curl -fsSL -H "Authorization: token ${TOKEN}" \
+              "https://api.github.com/repos/${REPO}/actions/workflows/stock_book_all.yml/runs?status=success&per_page=20" \
+              | jq -r '.workflow_runs[]?.id')
+            n=0
+            for rid in "${book_runs[@]}"; do
+              n=$((n + 1))
+              [ "$n" -gt 8 ] && break
+              [ -n "$rid" ] || continue
+              [ "$rid" = "${RUN_ID:-}" ] && continue
+              url=$(artifact_url "$rid" || true)
+              if take_dashboard "${url:-}"; then
+                echo "Used dashboard artifact from Stock Book ALL run ${rid}"
+                break
+              fi
+            done
           fi
 
           if [ ! -f pages_out/dashboard/index.html ] && [ -f dashboard/index.html ]; then
@@ -147,6 +190,9 @@ jobs:
                      webull-sim updown updown-shadow updown-v3 updown-v4 strategy-status progress scanner-backtest; do
             overlay "$sub"
           done
+          # days.json lives here. Main was ahead of Pages (09-29 vs 09-23)
+          # when an older artifact won the copy. Overlay it from this main checkout.
+          overlay jev-train
           if [ -f dashboard/factor-mine/index.html ]; then
             python3 scripts/patch_fm_ovcal.py pages_out/dashboard/factor-mine/index.html
             python3 scripts/patch_fm_holdup.py pages_out/dashboard/factor-mine/index.html

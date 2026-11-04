@@ -1,7 +1,8 @@
 name: Jev train
 
-# Homework for the hop-0 gate. workflow_dispatch only.
-# No schedule. The weekday harvest workflow stays as it is.
+# Homework for the hop-0 gate. Weekday 21:30 UTC appends new parse days
+# onto dashboard/jev-train/days.json. Past days stay as stored.
+# A dispatch can still draw or grade. The weekday harvest workflow stays as it is.
 # The page has no API key. JEV_API_KEY is read here, on mixed draw only.
 # A day draw asks live Jev when the secret is present; else regex fallback.
 # Chips read 01_daily/news on the page.
@@ -11,6 +12,8 @@ name: Jev train
 # Allowlist: 00_grounding/jev_train/ 00_grounding/jev_hard_misses.json dashboard/jev-train/draw.json dashboard/jev-train/days.json
 
 on:
+  schedule:
+    - cron: "30 21 * * 1-5"
   workflow_dispatch:
     inputs:
       mode:
@@ -77,6 +80,12 @@ jobs:
           PYTHONPATH=. python3 -m src.test_jev_day
           PYTHONPATH=. python3 -m src.test_jev_candidate
 
+      - name: Append new days
+        if: github.event_name == 'schedule'
+        run: |
+          set -euo pipefail
+          PYTHONPATH=. python3 -m src.jev_day append
+
       - name: Draw
         id: draw
         if: github.event.inputs.mode == 'draw'
@@ -137,6 +146,9 @@ jobs:
           fi
           if git diff --cached --quiet; then
             echo "no trainer output to commit"
+            if [ "${{ github.event_name }}" = "schedule" ]; then
+              exit 0
+            fi
             exit 1
           fi
           if grep -R -E -n 'ghp_[A-Za-z0-9]{20,}|github_pat_[A-Za-z0-9_]{20,}|JEV_API_KEY[[:space:]]*=|sk-[A-Za-z0-9]{24,}' \
@@ -144,7 +156,7 @@ jobs:
             echo "refusing to commit secret-like material"
             exit 1
           fi
-          git commit -m "jev train: ${{ github.event.inputs.mode }} [skip ci]"
+          git commit -m "jev train: ${{ github.event_name == 'schedule' && 'append' || github.event.inputs.mode }} [skip ci]"
           n=0
           while [ "$n" -lt 6 ]; do
             if git push origin HEAD:main; then
@@ -170,7 +182,7 @@ jobs:
             tree=$(GIT_INDEX_FILE="$tmp" git write-tree)
             rm -f "$tmp"
             new=$(git commit-tree "$tree" -p "$parent" \
-              -m "jev train: ${{ github.event.inputs.mode }} [skip ci]")
+              -m "jev train: ${{ github.event_name == 'schedule' && 'append' || github.event.inputs.mode }} [skip ci]")
             git update-ref HEAD "$new"
           done
           echo "could not push trainer sheet after ${n} attempts"

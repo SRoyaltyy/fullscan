@@ -218,6 +218,58 @@ def test_open_cutoff_is_strict_and_reads_the_oldest_main_commit(tmp_path, monkey
     assert pa.book_on_main_before_open("2026-10-06") is False
 
 
+def test_nothing_eligible_still_renders_the_dashboard(tmp_path, monkeypatch):
+    paper, _books, blob = _layout(tmp_path)
+    _patch(monkeypatch, tmp_path, _prices())
+    pa.run(date="2026-10-06", top_n=10, capital=10000)
+    locked = (paper / "equity_curve.csv").read_bytes()
+    assert locked.startswith(blob)
+    dash = tmp_path / "dash" / "index.html"
+    dash.write_text("<html>stale</html>", encoding="utf-8")
+    pa.run(date="2026-10-06", top_n=10, capital=10000)
+    assert (paper / "equity_curve.csv").read_bytes() == locked
+    html = dash.read_text(encoding="utf-8")
+    assert "stale" not in html
+    assert 'name="data-asof" content="2026-10-06"' in html
+
+
+def test_render_only_does_not_append(tmp_path, monkeypatch):
+    paper, _books, blob = _layout(tmp_path)
+    _patch(monkeypatch, tmp_path, _prices())
+    pa.run(date="2026-10-06", top_n=10, capital=10000, render_only=True)
+    assert (paper / "equity_curve.csv").read_bytes() == blob
+    html = (tmp_path / "dash" / "index.html").read_text(encoding="utf-8")
+    assert 'name="data-asof" content="2026-10-01"' in html
+
+
+def test_sealed_roundtrips_still_refresh_the_dashboard(tmp_path, monkeypatch):
+    """A roundtrip lock must not skip the page after the curve has appended."""
+    paper, _books, blob = _layout(tmp_path)
+    _patch(monkeypatch, tmp_path, _prices())
+    monkeypatch.setattr(pt, "match_roundtrips", lambda *a, **k: [
+        {"status": "closed", "sell_date": "2026-10-02", "ticker": "AAA"},
+    ])
+    monkeypatch.setattr(pt, "attach_trails", lambda *a, **k: None)
+    real = pa._commit_csv
+
+    def wrapped(record, filename, new_text, column):
+        if record == "paper_roundtrips":
+            raise SystemExit(
+                "past-day lock: paper_roundtrips 2026-10-01 was already written "
+                "and changed. Not rescoring a sealed day."
+            )
+        return real(record, filename, new_text, column)
+
+    monkeypatch.setattr(pa, "_commit_csv", wrapped)
+    pa.run(date="2026-10-06", top_n=10, capital=10000)
+    out = (paper / "equity_curve.csv").read_bytes()
+    assert out.startswith(blob)
+    assert b"2026-10-06" in out
+    assert not (paper / "roundtrips.csv").is_file()
+    html = (tmp_path / "dash" / "index.html").read_text(encoding="utf-8")
+    assert 'name="data-asof" content="2026-10-06"' in html
+
+
 def test_unpriced_resume_does_not_skip_ahead(tmp_path, monkeypatch):
     paper, books, blob = _layout(tmp_path)
     # 10-02 has no bar at all, and nothing on or before it. 10-06 must stay missing.
@@ -262,6 +314,9 @@ if __name__ == "__main__":
 
     _run(test_resume_appends_later_books_and_keeps_printed_bytes)
     _run(test_missing_state_refuses_to_rewrite_the_curve)
+    _run(test_nothing_eligible_still_renders_the_dashboard)
+    _run(test_render_only_does_not_append)
+    _run(test_sealed_roundtrips_still_refresh_the_dashboard)
     _run(test_unpriced_resume_does_not_skip_ahead)
     _run(test_book_committed_before_0930_is_appended)
     _run(test_late_book_stays_missing_and_the_next_session_appends)
