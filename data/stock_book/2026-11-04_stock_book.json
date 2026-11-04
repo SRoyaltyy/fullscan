@@ -1,13 +1,13 @@
 {
   "meta": {
     "date": "2026-11-04",
-    "generated_at": "2026-11-04T18:21:18.870697-05:00",
+    "generated_at": "2026-11-04T18:52:05.269751-05:00",
     "general_bias": 0.7224999999999999,
     "sector_bias": {},
     "accuracy_gates": {
       "general": {
-        "hit_rate": 0.527,
-        "n": 55,
+        "hit_rate": 0.533,
+        "n": 60,
         "gate": 0.85
       },
       "sector:Basic Materials": {
@@ -289,7 +289,7 @@
     "pile_used": true,
     "green_min": 8,
     "ranker": "decision_lattice",
-    "as_of": true,
+    "as_of": false,
     "general_direction": "up",
     "market_decision": {
       "date": "2026-11-04",
