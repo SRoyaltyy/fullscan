@@ -1,6 +1,6 @@
 {
   "date": "2026-11-04",
-  "generated_at": "2026-11-04T05:11:18.479473-05:00",
+  "generated_at": "2026-11-04T05:24:21.204946-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -1221,11 +1221,11 @@
     },
     {
       "key": "news_actions",
-      "title": "News actions",
+      "title": "News actions (no LLM)",
       "date": "2026-11-04",
       "ok": true,
-      "pushed": true,
-      "at": "2026-11-04T05:11:18.163500-05:00",
+      "pushed": false,
+      "at": "2026-11-04T05:12:56.457078-05:00",
       "files": [
         {
           "path": "01_daily/news/2026-11-04_actions.json",
@@ -1243,6 +1243,31 @@
         }
       ],
       "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-11-04T05:11:18.153314-05:00\nraw=8915 unique_events=7 tickers=102"
+    },
+    {
+      "key": "finviz",
+      "title": "Finviz universe export",
+      "date": "2026-11-04",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-04T05:24:20.801116-05:00",
+      "files": [
+        {
+          "path": "data/exports/finviz_2026-11-04.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11030866,
+          "preview": "11686 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC"
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11030201,
+          "preview": "11752 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAB\""
+        }
+      ],
+      "preview": "11686 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11752 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAB\""
     }
   ],
   "href": {
