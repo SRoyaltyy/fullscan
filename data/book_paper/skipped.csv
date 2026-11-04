@@ -518,3 +518,8 @@ date,ticker,side,conviction,reason
 2026-11-02,VEEV,BUY,0.4159949642709866,no exit price (unsettleable)
 2026-11-02,FANG,BUY,0.3968477161968042,no exit price (unsettleable)
 2026-11-02,VLO,BUY,0.30808351046702287,no exit price (unsettleable)
+2026-11-03,HITI,BUY,0.39174355573143077,day gate CLOSED: predict DOWN score -5.63 < +1.00
+2026-11-03,MXCT,BUY,0.20377275735648298,day gate CLOSED: predict DOWN score -5.63 < +1.00
+2026-11-03,REPL,BUY,0.36294849990499856,day gate CLOSED: predict DOWN score -5.63 < +1.00
+2026-11-03,SY,BUY,0.2094448209817628,day gate CLOSED: predict DOWN score -5.63 < +1.00
+2026-11-03,CERS,BUY,0.12066910330743348,day gate CLOSED: predict DOWN score -5.63 < +1.00

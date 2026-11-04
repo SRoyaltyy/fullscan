@@ -1,6 +1,6 @@
 # Stock-book paper trading
 
-_Generated 2026-11-03T04:10:30 — calls 2026-08-13 → 2026-11-02_
+_Generated 2026-11-04T03:23:06 — calls 2026-08-13 → 2026-11-03_
 
 **Strategy:** LONG-only · top 10/day by book · entry close (16:00 ET) · hold 1w (exit 16:00 ET) · 10% of equity per trade · Futubull fees · cash-accounted (unfittable trades skipped and logged). Selection: `1d` stock-book buy list (prints ~13:00-15:45 ET, hence close entry).
 
@@ -10,7 +10,7 @@ _Generated 2026-11-03T04:10:30 — calls 2026-08-13 → 2026-11-02_
 
 | Start capital | Final equity | Return | Max DD | Trades | Skipped | Win rate |
 |---:|---:|---:|---:|---:|---:|---:|
-| $100,000 | $104,540.19 | **4.54%** | 9.9% | 87 | 519 | 57.5% |
+| $100,000 | $104,540.19 | **4.54%** | 9.9% | 87 | 524 | 57.5% |
 
 | Side | Trades | Win rate | P&L |
 |---:|---:|---:|---:|
@@ -78,6 +78,7 @@ _Generated 2026-11-03T04:10:30 — calls 2026-08-13 → 2026-11-02_
 | 2026-10-29 | DOWN | -6.946 | 1 | **CLOSED** — predict DOWN score -6.95 < +1.00 | events: high uncertainty |
 | 2026-10-30 | DOWN | -12.921 | 1 | **CLOSED** — predict DOWN score -12.92 < +1.00 | — |
 | 2026-11-02 | UP | 3.044 | 1 | **OPEN** — predict score +3.04 >= +1.00 | — |
+| 2026-11-03 | DOWN | -5.632 | 1 | **CLOSED** — predict DOWN score -5.63 < +1.00 | — |
 
 ## Last 25 filled trades
 
