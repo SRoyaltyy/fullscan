@@ -2919,16 +2919,16 @@
         "name": "flatten_robust",
         "family": "flatten",
         "sit": true,
-        "hard_red": true,
+        "hard_red": false,
         "side": "long",
-        "s": -5.632,
+        "s": 10.848,
         "short_only": [],
         "dip_scoop": [
           {
-            "ticker": "REPL",
+            "ticker": "VEEV",
             "side": "long",
             "open": null,
-            "px": 12.56,
+            "px": 278.54,
             "px_src": "session_export+elite_live_skipped",
             "low": null,
             "scoops": {
@@ -2961,10 +2961,10 @@
             "tag": "RESEARCH"
           },
           {
-            "ticker": "CERS",
+            "ticker": "ILMN",
             "side": "long",
             "open": null,
-            "px": 2.45,
+            "px": 271.8,
             "px_src": "session_export+elite_live_skipped",
             "low": null,
             "scoops": {
@@ -2997,10 +2997,82 @@
             "tag": "RESEARCH"
           },
           {
-            "ticker": "AMN",
+            "ticker": "RGEN",
             "side": "long",
             "open": null,
-            "px": 34.26,
+            "px": 194.09,
+            "px_src": "session_export+elite_live_skipped",
+            "low": null,
+            "scoops": {
+              "0.5": {
+                "kind": "no_open",
+                "x": 0.5,
+                "fill": null
+              },
+              "1.0": {
+                "kind": "no_open",
+                "x": 1.0,
+                "fill": null
+              },
+              "1.5": {
+                "kind": "no_open",
+                "x": 1.5,
+                "fill": null
+              },
+              "2.0": {
+                "kind": "no_open",
+                "x": 2.0,
+                "fill": null
+              },
+              "3.0": {
+                "kind": "no_open",
+                "x": 3.0,
+                "fill": null
+              }
+            },
+            "tag": "RESEARCH"
+          },
+          {
+            "ticker": "CDNA",
+            "side": "long",
+            "open": null,
+            "px": 64.95,
+            "px_src": "session_export+elite_live_skipped",
+            "low": null,
+            "scoops": {
+              "0.5": {
+                "kind": "no_open",
+                "x": 0.5,
+                "fill": null
+              },
+              "1.0": {
+                "kind": "no_open",
+                "x": 1.0,
+                "fill": null
+              },
+              "1.5": {
+                "kind": "no_open",
+                "x": 1.5,
+                "fill": null
+              },
+              "2.0": {
+                "kind": "no_open",
+                "x": 2.0,
+                "fill": null
+              },
+              "3.0": {
+                "kind": "no_open",
+                "x": 3.0,
+                "fill": null
+              }
+            },
+            "tag": "RESEARCH"
+          },
+          {
+            "ticker": "PACS",
+            "side": "long",
+            "open": null,
+            "px": 42.84,
             "px_src": "session_export+elite_live_skipped",
             "low": null,
             "scoops": {
@@ -3069,10 +3141,10 @@
             "tag": "RESEARCH"
           },
           {
-            "ticker": "LLY",
+            "ticker": "BLFS",
             "side": "long",
             "open": null,
-            "px": 1188.7,
+            "px": 39.15,
             "px_src": "session_export+elite_live_skipped",
             "low": null,
             "scoops": {
@@ -3105,10 +3177,10 @@
             "tag": "RESEARCH"
           },
           {
-            "ticker": "PRCH",
+            "ticker": "PCRX",
             "side": "long",
             "open": null,
-            "px": 16.83,
+            "px": 25.39,
             "px_src": "session_export+elite_live_skipped",
             "low": null,
             "scoops": {
@@ -3141,226 +3213,10 @@
             "tag": "RESEARCH"
           },
           {
-            "ticker": "AVPT",
+            "ticker": "CNMD",
             "side": "long",
             "open": null,
-            "px": 13.67,
-            "px_src": "session_export+elite_live_skipped",
-            "low": null,
-            "scoops": {
-              "0.5": {
-                "kind": "no_open",
-                "x": 0.5,
-                "fill": null
-              },
-              "1.0": {
-                "kind": "no_open",
-                "x": 1.0,
-                "fill": null
-              },
-              "1.5": {
-                "kind": "no_open",
-                "x": 1.5,
-                "fill": null
-              },
-              "2.0": {
-                "kind": "no_open",
-                "x": 2.0,
-                "fill": null
-              },
-              "3.0": {
-                "kind": "no_open",
-                "x": 3.0,
-                "fill": null
-              }
-            },
-            "tag": "RESEARCH"
-          },
-          {
-            "ticker": "SONO",
-            "side": "long",
-            "open": null,
-            "px": 17.18,
-            "px_src": "session_export+elite_live_skipped",
-            "low": null,
-            "scoops": {
-              "0.5": {
-                "kind": "no_open",
-                "x": 0.5,
-                "fill": null
-              },
-              "1.0": {
-                "kind": "no_open",
-                "x": 1.0,
-                "fill": null
-              },
-              "1.5": {
-                "kind": "no_open",
-                "x": 1.5,
-                "fill": null
-              },
-              "2.0": {
-                "kind": "no_open",
-                "x": 2.0,
-                "fill": null
-              },
-              "3.0": {
-                "kind": "no_open",
-                "x": 3.0,
-                "fill": null
-              }
-            },
-            "tag": "RESEARCH"
-          },
-          {
-            "ticker": "ABX",
-            "side": "long",
-            "open": null,
-            "px": 8.22,
-            "px_src": "session_export+elite_live_skipped",
-            "low": null,
-            "scoops": {
-              "0.5": {
-                "kind": "no_open",
-                "x": 0.5,
-                "fill": null
-              },
-              "1.0": {
-                "kind": "no_open",
-                "x": 1.0,
-                "fill": null
-              },
-              "1.5": {
-                "kind": "no_open",
-                "x": 1.5,
-                "fill": null
-              },
-              "2.0": {
-                "kind": "no_open",
-                "x": 2.0,
-                "fill": null
-              },
-              "3.0": {
-                "kind": "no_open",
-                "x": 3.0,
-                "fill": null
-              }
-            },
-            "tag": "RESEARCH"
-          },
-          {
-            "ticker": "ADCT",
-            "side": "long",
-            "open": null,
-            "px": 1.26,
-            "px_src": "session_export+elite_live_skipped",
-            "low": null,
-            "scoops": {
-              "0.5": {
-                "kind": "no_open",
-                "x": 0.5,
-                "fill": null
-              },
-              "1.0": {
-                "kind": "no_open",
-                "x": 1.0,
-                "fill": null
-              },
-              "1.5": {
-                "kind": "no_open",
-                "x": 1.5,
-                "fill": null
-              },
-              "2.0": {
-                "kind": "no_open",
-                "x": 2.0,
-                "fill": null
-              },
-              "3.0": {
-                "kind": "no_open",
-                "x": 3.0,
-                "fill": null
-              }
-            },
-            "tag": "RESEARCH"
-          },
-          {
-            "ticker": "ADMA",
-            "side": "long",
-            "open": null,
-            "px": 10.15,
-            "px_src": "session_export+elite_live_skipped",
-            "low": null,
-            "scoops": {
-              "0.5": {
-                "kind": "no_open",
-                "x": 0.5,
-                "fill": null
-              },
-              "1.0": {
-                "kind": "no_open",
-                "x": 1.0,
-                "fill": null
-              },
-              "1.5": {
-                "kind": "no_open",
-                "x": 1.5,
-                "fill": null
-              },
-              "2.0": {
-                "kind": "no_open",
-                "x": 2.0,
-                "fill": null
-              },
-              "3.0": {
-                "kind": "no_open",
-                "x": 3.0,
-                "fill": null
-              }
-            },
-            "tag": "RESEARCH"
-          },
-          {
-            "ticker": "AMRX",
-            "side": "long",
-            "open": null,
-            "px": 20.52,
-            "px_src": "session_export+elite_live_skipped",
-            "low": null,
-            "scoops": {
-              "0.5": {
-                "kind": "no_open",
-                "x": 0.5,
-                "fill": null
-              },
-              "1.0": {
-                "kind": "no_open",
-                "x": 1.0,
-                "fill": null
-              },
-              "1.5": {
-                "kind": "no_open",
-                "x": 1.5,
-                "fill": null
-              },
-              "2.0": {
-                "kind": "no_open",
-                "x": 2.0,
-                "fill": null
-              },
-              "3.0": {
-                "kind": "no_open",
-                "x": 3.0,
-                "fill": null
-              }
-            },
-            "tag": "RESEARCH"
-          },
-          {
-            "ticker": "SMMT",
-            "side": "long",
-            "open": null,
-            "px": 19.17,
+            "px": 46.48,
             "px_src": "session_export+elite_live_skipped",
             "low": null,
             "scoops": {
