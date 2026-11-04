@@ -8217,5 +8217,94 @@
     "pnl_status": "marked",
     "recipe": "union_hot_n4_holdup__w0",
     "sha256": "44bcdb368a0962f281c398f59cb69d7110b914c847ce41c8a0f300856747081a"
+  },
+  {
+    "bar_cutoff": "2026-11-03",
+    "cash_before": 39.35913620837583,
+    "committed_at": "2026-11-04T13:36:03Z",
+    "date": "2026-11-04",
+    "excluded_unexplained_legs": [],
+    "finviz_source": {
+      "commit": "bb901dda4431fc5ac39e362d47ecce527bd52dc5",
+      "commit_time": "2026-11-03T22:08:26Z",
+      "file_sha256": "d5a364d5217d1cbe97a2b5a9874ad29273019b5933105e4a3d0af06e8838b79c",
+      "path": "data/snapshots/2026-11-03.csv",
+      "snapshot_date": "2026-11-03",
+      "status": "BEFORE_OPEN"
+    },
+    "holdup_on": true,
+    "kind": "plan",
+    "morning_s": 10.848,
+    "picks": [
+      {
+        "fv_avg_volume": 1347.3,
+        "fv_price": 13.37,
+        "rank": 1,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "GDYN"
+      },
+      {
+        "fv_avg_volume": 7024.89,
+        "fv_price": 77.8,
+        "rank": 2,
+        "sources": [
+          "ohlc_hot"
+        ],
+        "ticker": "TEM"
+      },
+      {
+        "fv_avg_volume": 1037.28,
+        "fv_price": 22.46,
+        "rank": 3,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "UPBD"
+      },
+      {
+        "fv_avg_volume": 2694.96,
+        "fv_price": 3.27,
+        "rank": 4,
+        "sources": [
+          "ohlc_hot"
+        ],
+        "ticker": "DNUT"
+      }
+    ],
+    "planned_sells": [
+      {
+        "reason": "holdup extension",
+        "shares": 20,
+        "ticker": "CDNA"
+      },
+      {
+        "reason": "holdup extension",
+        "shares": 94,
+        "ticker": "CPRI"
+      },
+      {
+        "reason": "hold-expired",
+        "shares": 30,
+        "ticker": "ECX"
+      },
+      {
+        "reason": "holdup extension",
+        "shares": 90,
+        "ticker": "SLN"
+      }
+    ],
+    "recipe": "union_hot_n4_holdup__w0",
+    "s_source": {
+      "blob_sha": "afdc38e96401bbdc37531fae06c08eaa2cbe81e9",
+      "kind": "predict",
+      "path": "01_daily/general/2026-11-04_predict.md",
+      "server_time_utc": "2026-11-04T19:42:43+08:00",
+      "status": "BEFORE_1330"
+    },
+    "sha256": "d26b79f2e7419423b4849e07f2c2c7a660fbb7a86917ead1adf200129edafbd0"
   }
 ]
