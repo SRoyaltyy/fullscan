@@ -88,14 +88,28 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
+      # 2026-11-04: fetch-depth 0 of the full pack (~16 GB of blobs) filled
+      # the runner during checkout ("No space left on device") before
+      # check_against ran. Free the unused toolchains, then a blobless
+      # clone. git show origin/main:<manifest> still fetches that blob,
+      # and check_manifest still hashes every sealed file in the tree.
+      - name: Free runner disk (github-hosted only)
+        if: runner.environment == 'github-hosted'
+        run: |
+          df -h / | tail -1
+          sudo rm -rf /usr/share/dotnet /opt/ghc /usr/local/.ghcup /usr/local/lib/android \
+            /opt/hostedtoolcache/CodeQL /usr/share/swift /usr/local/share/powershell || true
+          sudo docker system prune -af >/dev/null 2>&1 || true
+          df -h / | tail -1
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          filter: blob:none
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
       - name: Fetch the base branch
-        run: git fetch --no-tags origin main
+        run: git fetch --no-tags --filter=blob:none origin main
       - name: Past-day lock
         run: |
           python3 -m src.past_day_lock --check-against origin/main
