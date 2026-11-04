@@ -1,6 +1,6 @@
 {
   "date": "2026-11-04",
-  "generated_at": "2026-11-04T10:01:51.917776-05:00",
+  "generated_at": "2026-11-04T10:02:00.050118-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -26,16 +26,6 @@
   },
   "sectors": {},
   "lands": [
-    {
-      "key": "ab",
-      "title": "AB checklist",
-      "date": "2026-11-04",
-      "ok": false,
-      "pushed": false,
-      "at": "2026-11-04T05:07:50.226460-05:00",
-      "files": [],
-      "preview": "no files"
-    },
     {
       "key": "news_parse",
       "title": "News parse",
@@ -210,6 +200,24 @@
         }
       ],
       "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 FTK, RIGL, OMER, HALO, ETON"
+    },
+    {
+      "key": "peer_rs",
+      "title": "Peer RS",
+      "date": "2026-11-04",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-04T10:01:59.659246-05:00",
+      "files": [
+        {
+          "path": "data/peers/2026-11-04_peer_rs.csv",
+          "ok": true,
+          "reason": "",
+          "size": 821534,
+          "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+        }
+      ],
+      "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
