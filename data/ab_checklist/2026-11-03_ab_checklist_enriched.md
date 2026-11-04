@@ -18,28 +18,28 @@
 
 | Ticker | enr | base | ctx | rs_w | beat% | ind_med_w | sector | board | label |
 |--------|----:|-----:|----:|-----:|------:|----------:|--------|-------|-------|
-| CDNA | +18 | +15 | +3 | +11.2 | 100% | +2.5 | Healthcare | — | LEAD,peers↑,ind↑ |
-| TRI | +16 | +17 | -1 | +3.7 | 80% | -2.4 | Industrials | — | LEAD,peers↓,ind↓ |
-| CP | +16 | +15 | +1 | -0.3 | 30% | +0.0 | Industrials | — | LAG,peers↑,ind↑ |
-| PFE | +16 | +13 | +3 | +1.9 | 90% | +0.2 | Healthcare | — | LEAD,peers↑,ind↑ |
-| TLYS | +16 | +13 | +3 | +12.3 | 100% | +1.1 | Consumer Cyclical | — | LEAD,peers↑,ind↑ |
-| UHS | +15 | +14 | +1 | +0.8 | 67% | -2.6 | Healthcare | — | LEAD,peers↑,ind↓ |
-| ABBV | +15 | +12 | +3 | +0.0 | 50% | +0.2 | Healthcare | — | LEAD,peers↑,ind↑ |
-| LLY | +15 | +12 | +3 | +1.2 | 90% | +0.2 | Healthcare | — | LEAD,peers↑,ind↑ |
-| TEL | +15 | +12 | +3 | +0.2 | 56% | +0.8 | Technology | — | LEAD,peers↑,ind↑ |
-| AVNT | +15 | +14 | +1 | +1.8 | 70% | -0.6 | Basic Materials | — | LEAD,peers↑,ind↓ |
-| ALLE | +15 | +12 | +3 | +1.7 | 78% | +0.3 | Industrials | — | LEAD,peers↑,ind↑ |
-| NWBI | +14 | +15 | -1 | +0.3 | 70% | -1.4 | Financial | — | LEAD,peers↓,ind↓ |
-| PAYS | +14 | +15 | -1 | +1.9 | 80% | -4.2 | Technology | — | LEAD,peers↓,ind↓ |
-| COLM | +14 | +13 | +1 | +3.7 | 88% | +0.5 | Consumer Cyclical | — | LEAD,peers↓,ind↑ |
-| EMBC | +14 | +13 | +1 | +13.9 | 100% | +0.8 | Healthcare | — | LEAD,peers↓,ind↑ |
-| DG | +14 | +11 | +3 | +0.8 | 50% | +2.0 | Consumer Defensive | — | LEAD,peers↑,ind↑ |
-| NVST | +14 | +11 | +3 | +1.1 | 78% | +0.8 | Healthcare | — | LEAD,peers↑,ind↑ |
-| EPAM | +14 | +15 | -1 | +1.0 | 62% | -4.3 | Technology | — | LEAD,peers↓,ind↓ |
-| BJ | +14 | +11 | +3 | +3.9 | 88% | +2.0 | Consumer Defensive | — | LEAD,peers↑,ind↑ |
-| HHH | +14 | +15 | -1 | +12.5 | 100% | -2.8 | Real Estate | — | LEAD,peers↓,ind↓ |
-| PCRX | +13 | +12 | +1 | +3.7 | 89% | -0.7 | Healthcare | — | LEAD,peers↑,ind↓ |
-| RNW | +13 | +14 | -1 | +3.6 | 100% | -4.2 | Utilities | — | LEAD,peers↓,ind↓ |
-| UBSI | +13 | +14 | -1 | +2.0 | 100% | -1.4 | Financial | — | LEAD,peers↓,ind↓ |
-| CHH | +13 | +10 | +3 | +0.9 | 80% | +2.4 | Consumer Cyclical | — | LEAD,peers↑,ind↑ |
-| KBR | +13 | +14 | -1 | +1.0 | 60% | -2.9 | Industrials | — | LEAD,peers↓,ind↓ |
+| ZBRA | +17 | +16 | +1 | +1.6 | 56% | -1.5 | Technology | — | LEAD,peers↑,ind↓ |
+| BJ | +17 | +14 | +3 | +3.9 | 88% | +2.0 | Consumer Defensive | — | LEAD,peers↑,ind↑ |
+| TEL | +16 | +13 | +3 | +0.2 | 56% | +0.8 | Technology | — | LEAD,peers↑,ind↑ |
+| CP | +15 | +14 | +1 | -0.3 | 30% | +0.0 | Industrials | — | LAG,peers↑,ind↑ |
+| TPR | +15 | +14 | +1 | +1.2 | 50% | -1.5 | Consumer Cyclical | — | LEAD,peers↑,ind↓ |
+| WMG | +15 | +16 | -1 | -1.4 | 40% | -0.6 | Communication Serv | — | LAG,peers↑,ind↓ |
+| COLM | +15 | +14 | +1 | +3.7 | 88% | +0.5 | Consumer Cyclical | — | LEAD,peers↓,ind↑ |
+| CDNA | +15 | +12 | +3 | +11.2 | 100% | +2.5 | Healthcare | — | LEAD,peers↑,ind↑ |
+| ROST | +15 | +12 | +3 | +1.0 | 56% | +1.1 | Consumer Cyclical | — | LEAD,peers↑,ind↑ |
+| LEVI | +15 | +14 | +1 | -2.9 | 38% | +0.5 | Consumer Cyclical | — | LAG,peers↑,ind↑ |
+| PAYS | +15 | +16 | -1 | +1.9 | 80% | -4.2 | Technology | — | LEAD,peers↓,ind↓ |
+| CNK | +15 | +14 | +1 | +4.7 | 78% | -0.6 | Communication Serv | — | LEAD,peers↑,ind↓ |
+| HUM | +14 | +15 | -1 | +3.8 | 100% | -2.0 | Healthcare | — | LEAD,peers↓,ind↓ |
+| ICE | +14 | +15 | -1 | +1.7 | 78% | -2.4 | Financial | — | LEAD,peers↓,ind↓ |
+| TME | +14 | +15 | -1 | +2.5 | 80% | -4.0 | Communication Serv | — | LEAD,peers↓,ind↓ |
+| HLT | +14 | +11 | +3 | +0.7 | 56% | +2.4 | Consumer Cyclical | — | LEAD,peers↑,ind↑ |
+| GMED | +14 | +13 | +1 | +0.9 | 67% | -2.3 | Healthcare | — | LEAD,peers↑,ind↓ |
+| TLYS | +14 | +11 | +3 | +12.3 | 100% | +1.1 | Consumer Cyclical | — | LEAD,peers↑,ind↑ |
+| IDXX | +14 | +13 | +1 | +3.6 | 86% | +2.5 | Healthcare | — | LEAD,peers↓,ind↑ |
+| ABBV | +13 | +10 | +3 | +0.0 | 50% | +0.2 | Healthcare | — | LEAD,peers↑,ind↑ |
+| AS | +13 | +14 | -1 | -3.3 | 29% | +0.1 | Consumer Cyclical | — | LAG,peers↓,ind↑ |
+| V | +13 | +14 | -1 | +2.0 | 78% | -2.5 | Financial | — | LEAD,peers↓,ind↓ |
+| KO | +13 | +14 | -1 | +1.1 | 60% | -2.2 | Consumer Defensive | — | LEAD,peers↓,ind↓ |
+| SOLV | +13 | +10 | +3 | +0.6 | 50% | +0.8 | Healthcare | — | LEAD,peers↑,ind↑ |
+| COST | +13 | +12 | +1 | +3.3 | 90% | +2.0 | Consumer Defensive | — | LEAD,peers↓,ind↑ |
