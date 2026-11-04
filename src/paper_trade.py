@@ -1319,12 +1319,7 @@ def write_dashboard(curve: pd.DataFrame, stats: list[dict], st: dict,
 
     shell = Path(__file__).with_name("paper_dash.html").read_text(encoding="utf-8")
     html = shell.replace("__DATA__", json.dumps(payload))
-    page = DASH_DIR / "index.html"
-    page.write_text(html, encoding="utf-8")
-    # The shell has no missed-session line. Restore it from missed.json
-    # so a paper land does not wipe the note the Pages gate requires.
-    from src.pages_publish_gate import stamp_recorded_misses
-    stamp_recorded_misses(page, root=ROOT)
+    (DASH_DIR / "index.html").write_text(html, encoding="utf-8")
 
 
 def write_report(stats: list[dict], date: str, capital: float) -> None:
