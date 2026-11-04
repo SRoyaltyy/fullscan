@@ -34835,7 +34835,7 @@
           "status": "hit"
         }
       ],
-      "reflection_lesson_ref": null,
+      "reflection_lesson_ref": "02_lessons/candidate/2026-11-04_lesson.md",
       "sources_used": [
         {
           "url": "https://apnews.com/article/wall-street-stocks-dow-nasdaq-c0be7ca45b5875abe758e0570cb9a265",
@@ -34934,7 +34934,8 @@
       "key_interaction": "Amplification — midterm sweep + oil crash + bond rally compounded into a broad risk-on move, while the energy sector (-4.4%) offset at the sector level, masking extreme internal dispersion behind the +1.6% S&P headline.",
       "knowable_at_9am": "partially",
       "attribution_contested": "yes — outlets split between “gridlock is good” (AP/Bloomberg), “oil crash / peace dividend” (Geo.tv/XTB), and “earnings/AI” (tech coverage).",
-      "outlier_watch": "Energy sector -4.4% to -4.7% while the broad market rallied +1.6%; NDX lagged Dow by ~1.6pp; Apple reversed from -4% to +6%; Hormuz mine claims completely ignored by oil."
+      "outlier_watch": "Energy sector -4.4% to -4.7% while the broad market rallied +1.6%; NDX lagged Dow by ~1.6pp; Apple reversed from -4% to +6%; Hormuz mine claims completely ignored by oil.",
+      "lesson_schema_ok": true
     }
   ]
 }
