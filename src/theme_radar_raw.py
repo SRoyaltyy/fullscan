@@ -141,7 +141,14 @@ def load_prior_raw(morning: str, *, fetch=None, manifest: dict | None = None) ->
             f"theme-radar {prior}.raw.csv scrape_ts_utc={stamp or 'missing'} "
             f"is not before 09:30 ET on {day}"
         )
-    raw = getter(url)
+    try:
+        raw = getter(url)
+    except Exception as exc:
+        raise ValueError(
+            f"theme-radar {prior}.raw.csv is missing ({type(exc).__name__})"
+        ) from exc
+    if not raw:
+        raise ValueError(f"theme-radar {prior}.raw.csv is missing (empty)")
     frame = _rename(pd.read_csv(io.BytesIO(raw), low_memory=False))
     return {
         "source": SOURCE,
@@ -153,6 +160,35 @@ def load_prior_raw(morning: str, *, fetch=None, manifest: dict | None = None) ->
         "n_rows": int(len(frame)),
         "frame": frame,
     }
+
+
+def require_prior_raw(morning: str, *, fetch=None,
+                      manifest: dict | None = None) -> dict:
+    """Exact ``D-1.raw.csv`` or a loud stop.
+
+    A missing file, a late scrape, or a bad header does not search an
+    older session. The only snapshot URL this builds is that one file.
+    """
+    day = str(morning or "")[:10]
+    prior = previous_session(day)
+    exact = f"data/snapshots/{prior}.raw.csv"
+    try:
+        loaded = load_prior_raw(day, fetch=fetch, manifest=manifest)
+    except Exception as exc:
+        message = (
+            f"[finviz] FAIL {day} theme-radar {exact} is not usable "
+            f"({exc}). Stopping. Will not use an older snapshot."
+        )
+        print(message, flush=True)
+        raise SystemExit(message) from exc
+    if loaded.get("source_file") != exact or loaded.get("source_session") != prior:
+        message = (
+            f"[finviz] FAIL {day} refused a snapshot other than {exact}. "
+            f"Stopping. Will not use an older snapshot."
+        )
+        print(message, flush=True)
+        raise SystemExit(message)
+    return loaded
 
 
 def applies(morning: str) -> bool:

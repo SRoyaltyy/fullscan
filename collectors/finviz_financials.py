@@ -2,10 +2,12 @@
 """
 Finviz Elite Financial Data Collector
 
-Three modes (tried in order):
+Tried in order:
   1. GET elite.finviz.com/export.ashx with FINVIZ_EXPORT or FINVIZ_API_KEY
   1b. Login POST — needs FINVIZ_EMAIL + FINVIZ_PASSWORD (GitHub runners get HTTP 403)
-  2. Manual CSV drop — reads data/exports/finviz_latest.csv you saved from the browser
+  2. If that fetch fails, or its bytes match the previous session, morning D
+     reads theme-radar data/snapshots/<D-1>.raw.csv and stops if that exact
+     file is missing. It does not republish finviz_latest.csv.
 """
 
 import os
@@ -417,40 +419,37 @@ def main():
         print("\n--- Mode 1b: Elite login ---", flush=True)
         df = try_elite_export()
 
-    if df is None:
-        print("\n--- Mode 2: Manual CSV ---", flush=True)
-        from src.finviz_export_guard import (
-            export_path, previous_session, sha256_file,
+    own = None
+    if df is not None:
+        own = df.to_csv(index=False).encode("utf-8")
+    else:
+        print(
+            "\n  Own Finviz fetch failed. "
+            "Theme Radar's exact prior-session raw file is next.",
+            flush=True,
         )
-        manual_path = EXPORTS_DIR / "finviz_latest.csv"
-        prev = export_path(previous_session(snapshot_date))
-        # A stale latest.csv must not be archived under today's date.
-        manual_sha = sha256_file(manual_path)
-        prev_sha = sha256_file(prev)
-        if manual_sha and prev_sha and manual_sha == prev_sha:
-            raise SystemExit(
-                f"[finviz] FAIL {snapshot_date} manual export {manual_path.name} "
-                f"sha256={manual_sha} is byte-identical to {prev.name}. "
-                f"Stopping. Elite login did not return a fresh tape."
-            )
-        df = try_manual_csv()
 
+    from src.finviz_morning_tape import ensure_morning_export
+    saved = ensure_morning_export(snapshot_date, own_bytes=own)
+    if saved.get("fallback"):
+        df = saved["frame"]
+        print(
+            f"  Tagged rows source={saved['source']} "
+            f"sha256={saved['source_sha256']} "
+            f"file={saved['source_file']}",
+            flush=True,
+        )
+    elif df is None:
+        df = pd.read_csv(BytesIO(saved["raw"]))
     if df is None:
-        print("\nNo data source available. Options:", flush=True)
-        print("  1. Set FINVIZ_EMAIL + FINVIZ_PASSWORD env vars for automated export", flush=True)
-        print("  2. Save CSV from elite.finviz.com/screener → data/exports/finviz_latest.csv", flush=True)
+        print("\nNo data source available.", flush=True)
         print(f"\n  Finished in {time.time() - start_time:.1f}s (no data collected)", flush=True)
         return
 
     print(f"\n  Raw data: {len(df)} stocks, {len(df.columns)} columns", flush=True)
-
     archive_path = EXPORTS_DIR / f"finviz_{snapshot_date}.csv"
-    raw = df.to_csv(index=False).encode("utf-8")
-    from src.finviz_export_guard import publish_bytes
-    publish_bytes(snapshot_date, raw, archive_path)
     write_export_scraped_at(archive_path, now)
     latest_path = EXPORTS_DIR / "finviz_latest.csv"
-    publish_bytes(snapshot_date, raw, latest_path)
     write_export_scraped_at(latest_path, now)
     print(f"  Archived to {archive_path}", flush=True)
 
