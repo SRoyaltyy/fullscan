@@ -34759,16 +34759,62 @@
         "B7_OIL_DOLLAR": 1.0
       },
       "leading_sum": 1.0,
-      "actual_open": null,
-      "actual_close": null,
-      "actual_pct_change": null,
-      "actual_direction": null,
-      "actual_magnitude_band": null,
-      "direction_hit": null,
-      "magnitude_hit": null,
+      "actual_open": 7610.83,
+      "actual_close": 7541.4,
+      "actual_pct_change": -0.51,
+      "actual_direction": "down",
+      "actual_magnitude_band": "mild",
+      "direction_hit": false,
+      "magnitude_hit": true,
       "divergence_flagged": false,
       "divergence_verdict": null,
-      "per_factor_breakdown": [],
+      "per_factor_breakdown": [
+        {
+          "factor": "B0_ASIA",
+          "score": 0.5,
+          "status": "miss"
+        },
+        {
+          "factor": "B0_EUROPE",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B1_CATALYSTS",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B2_BONDS",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B3_FEDPATH",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B4_VIX",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B5_SENTIMENT",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B6_FUTURES",
+          "score": 0.5,
+          "status": "miss"
+        },
+        {
+          "factor": "B7_OIL_DOLLAR",
+          "score": 1.0,
+          "status": "miss"
+        }
+      ],
       "reflection_lesson_ref": null,
       "sources_used": [],
       "horizon_calls": {
@@ -34800,7 +34846,14 @@
       "news_judge_present": true,
       "engine": "v2",
       "anchor_score": 2.044,
-      "overlay_score": 1.0
+      "overlay_score": 1.0,
+      "ops_fail": false,
+      "path_shape": "reversal down (intraday spike faded, closed near low)",
+      "primary_driver": "AI capex debt-financing unwind (Marvell–Lumentum, Oracle, Microsoft, Meta) triggered a tech-led selloff that overwhelmed an oil-driven morning rally",
+      "key_interaction": "Hot ISM amplified the AI-debt selloff by pushing rates/hike odds higher, while the oil collapse kept breadth positive — a rotation masked as a mild index decline",
+      "knowable_at_9am": "partially — ingredients visible, but the magnitude and timing of the tech unwind were not fully foreseeable",
+      "attribution_contested": "yes — some outlets lead with oil/Iran, others with tech/AI debt; the afternoon belongs to tech",
+      "outlier_watch": "VIX +8.9% to 21.15 despite SPX only −0.5% and 69% breadth positive — tech-specific hedging, not broad panic"
     },
     {
       "date": "2026-11-03",
