@@ -1,6 +1,6 @@
 {
   "date": "2026-11-04",
-  "generated_at": "2026-11-04T16:34:30.127830-05:00",
+  "generated_at": "2026-11-04T16:38:46.415549-05:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -31,82 +31,94 @@
       "score": 0.7389164097213633
     },
     {
-      "ticker": "CNK",
-      "score": 0.6792769299712352
+      "ticker": "LAUR",
+      "score": 0.659884782245604
     },
     {
-      "ticker": "LAUR",
-      "score": 0.6345967195701772
+      "ticker": "CNK",
+      "score": 0.6753681310382919
     },
     {
       "ticker": "TRU",
-      "score": 0.48902682548239906
+      "score": 0.508811218194425
     },
     {
       "ticker": "CHEF",
-      "score": 0.5842238705022503
+      "score": 0.6285082053494221
+    },
+    {
+      "ticker": "AVO",
+      "score": 0.5415655401504464
+    },
+    {
+      "ticker": "PEB",
+      "score": 0.5750426305890313
+    },
+    {
+      "ticker": "ABX",
+      "score": 0.5204083726898243
     }
   ],
   "sell_1d": [
     {
       "ticker": "NEOV",
-      "score": -0.33771479926967946
+      "score": -0.3421932302043928
     },
     {
       "ticker": "BIDU",
       "score": -0.3189633812745775
     },
     {
-      "ticker": "NFLX",
-      "score": -0.307240785840622
-    },
-    {
       "ticker": "ROIV",
-      "score": -0.30006150486633615
-    },
-    {
-      "ticker": "GFL",
-      "score": -0.29783992384775715
+      "score": -0.3042068127888413
     },
     {
       "ticker": "BAK",
-      "score": -0.29206484559114104
+      "score": -0.2949945082610011
     },
     {
-      "ticker": "VNET",
-      "score": -0.2888522295969873
-    },
-    {
-      "ticker": "INTC",
-      "score": -0.28740655547071087
-    },
-    {
-      "ticker": "CMTG",
-      "score": -0.28695764000975116
+      "ticker": "GFL",
+      "score": -0.294129102220237
     },
     {
       "ticker": "PAL",
-      "score": -0.28422559422374594
+      "score": -0.28881322757671424
+    },
+    {
+      "ticker": "VNET",
+      "score": -0.28722599181355113
+    },
+    {
+      "ticker": "NFLX",
+      "score": -0.28109343468183645
+    },
+    {
+      "ticker": "NOK",
+      "score": -0.2760105980320211
     },
     {
       "ticker": "VSAT",
-      "score": -0.2809333619820443
+      "score": -0.27589109410468576
     },
     {
-      "ticker": "SSP",
-      "score": -0.2789413878458729
-    },
-    {
-      "ticker": "RC",
-      "score": -0.27420681426327737
+      "ticker": "CMTG",
+      "score": -0.27438294487648435
     },
     {
       "ticker": "HMY",
-      "score": -0.2708724245441825
+      "score": -0.27272877353062586
     },
     {
-      "ticker": "LILAK",
-      "score": -0.2707147069933107
+      "ticker": "NN",
+      "score": -0.26474611498248435
+    },
+    {
+      "ticker": "SSTK",
+      "score": -0.26447865908078233
+    },
+    {
+      "ticker": "AUR",
+      "score": -0.2637216902819246
     }
   ],
   "flatten": {
@@ -1152,67 +1164,6 @@
         }
       ],
       "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest (close) \u2014 2026-11-04\n**Generated:** 2026-11-04T16:29:15.198149-05:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks closed sharply higher as Democratic sweep eased election uncertainty and oil fell on expectations of a shift in Iran policy\n**Prior close:** SPX +1.80%  Nasdaq +1.70%  Dow +2.90%\n**SPX:** +1.80%  **Nasdaq:** +1.70%  **Dow:** +2.90%\n**Oil:** crude $88.71 down (fell)\n**CPI/Fed:** \u2014\n**Leaders:** AMZN, MSFT, MCD, FSLR, MMM, SWK, ZBH, CRCT, KD, DUOL, AMD, TSLA, DJT, ADP, QCOM, ARM, MELI\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** \u2014\n**Geo/grain:** geo\n**Clock legal for:** 2026-11-05\n**Clock use:** `next_open`"
-    },
-    {
-      "key": "weather",
-      "title": "Weather / regime",
-      "date": "2026-11-04",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-11-04T16:33:58.633044-05:00",
-      "files": [
-        {
-          "path": "01_daily/weather/2026-11-04_weather.json",
-          "ok": true,
-          "reason": "",
-          "size": 10368,
-          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
-        },
-        {
-          "path": "01_daily/weather/2026-11-04_weather.md",
-          "ok": true,
-          "reason": "",
-          "size": 5891,
-          "preview": "# Weather report \u2014 2026-11-04\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
-        }
-      ],
-      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-11-04\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
-    },
-    {
-      "key": "join",
-      "title": "Join / match rank",
-      "date": "2026-11-04",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-11-04T16:34:10.020235-05:00",
-      "files": [
-        {
-          "path": "data/join/2026-11-04_ranked.csv",
-          "ok": true,
-          "reason": "",
-          "size": 2296239,
-          "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 NUTX, OMER, RIGL, BLFS, FTK"
-        }
-      ],
-      "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 NUTX, OMER, RIGL, BLFS, FTK"
-    },
-    {
-      "key": "peer_rs",
-      "title": "Peer RS",
-      "date": "2026-11-04",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-11-04T16:34:17.494390-05:00",
-      "files": [
-        {
-          "path": "data/peers/2026-11-04_peer_rs.csv",
-          "ok": true,
-          "reason": "",
-          "size": 821534,
-          "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
-        }
-      ],
-      "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
     }
   ],
   "source": "publish_live_boards"
