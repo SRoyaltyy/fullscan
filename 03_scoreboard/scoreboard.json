@@ -35030,18 +35030,25 @@
       "multiplier": null,
       "components": {},
       "leading_sum": -5.0,
-      "actual_open": null,
-      "actual_close": null,
-      "actual_pct_change": null,
-      "actual_direction": null,
-      "actual_magnitude_band": null,
-      "direction_hit": null,
-      "magnitude_hit": null,
+      "actual_open": 7699.61,
+      "actual_close": 7720.39,
+      "actual_pct_change": -0.3,
+      "actual_direction": "down",
+      "actual_magnitude_band": "mild",
+      "direction_hit": true,
+      "magnitude_hit": true,
       "divergence_flagged": false,
       "divergence_verdict": null,
       "per_factor_breakdown": [],
       "reflection_lesson_ref": null,
-      "sources_used": []
+      "sources_used": [],
+      "ops_fail": false,
+      "path_shape": "V-shape (deep intraday drop, closed near high)",
+      "primary_driver": "Alphabet Q3 earnings miss and negative FCF, reigniting AI-capex sustainability fears and driving a record 12.6% single-day decline",
+      "key_interaction": "Alphabet-driven tech selloff was offset by a violent rotation into small caps (Russell 2000 +1%) and equal-weight S&P (+~1%), producing a V-shape in SPX/Dow while NDX stayed choppy",
+      "knowable_at_9am": "partially",
+      "attribution_contested": "no",
+      "outlier_watch": "Russell 2000 +1% and equal-weight S&P +~1% while Nasdaq −1.4% — first such divergence since July 2024; VIX fell intraday despite the tech selloff"
     }
   ]
 }
