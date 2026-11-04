@@ -1,8 +1,8 @@
 # Finviz homepage market digest — 2026-11-04
 
-**Generated:** 2026-11-04T04:27:30.198057-05:00 (America/New_York)
+**Generated:** 2026-11-04T04:43:21.110010-05:00 (America/New_York)
 **Source:** `live`
-**Banner:** US futures point to a higher open as traders face heavy earnings slate and key ADP and ISM services data
+**Banner:** US futures point higher on Democratic sweep and softer dollar ahead of key US data and heavy earnings slate
 **Prior close:** SPX —  Nasdaq —  Dow —
 **SPX:** —  **Nasdaq:** —  **Dow:** —
 **Oil:** —
@@ -27,18 +27,20 @@ Homepage `$MARKET` prose — **not** `YYYY-MM-DD_finviz_digest.md` (quote-page h
 - **CPI / Fed-odds:** —
 - **Named leaders:** MCD, UBER, CVS, EMR, DDOG, FISV, RVTY, ZBRA, SHOP, DT, IT
 - **Next-session calendar:** housing no · retail no · Fed no
-  - The US macro calendar features ADP Employment Change at 8:15 AM ET and ISM Services PMI at 10:00 AM ET, both flagged as potential volatility drivers.
+  - Today’s US macro calendar includes ADP employment change at 8:15 AM ET, trade balance at 8:30 AM ET, and ISM Services PMI at 10:00 AM ET, all seen as potential volatility drivers.
 - **Earnings slate:** MCD, UBER, CVS, EMR, DDOG
 - **Geo / grain:** —
 
 ## Narrative
 
-**US futures point to a higher open as traders face heavy earnings slate and key ADP and ISM services data**
+**US futures point higher on Democratic sweep and softer dollar ahead of key US data and heavy earnings slate**
 
-- S&P 500 Futures (@ES) +0.26%, Dow Jones Futures (@YM) +0.57%, Nasdaq 100 Futures (@NQ) +0.27%, and Russell 2000 Futures (@ER2) +0.77% indicate a modest gap up for US equities.
-- McDonald's (MCD), Uber (UBER), CVS Health (CVS), Emerson Electric (EMR), and Datadog (DDOG) are scheduled to report earnings before the bell in a busy pre-market lineup.
-- Recent earnings beats from Fiserv (FISV), Revvity (RVTY), Zebra Technologies (ZBRA), Shopify (SHOP), Dynatrace (DT), and Gartner (IT) have drawn mixed pre-market reactions, with Dynatrace (DT) down about 1% and the others trading roughly flat.
-- Overnight Asian sessions were volatile, with initial tech selling tied to US midterm election results showing Democratic gains in both chambers.
-- Partial relief rallies emerged later in parts of China and Europe following the early tech-led weakness.
-- Commodities traded mixed overnight, with oil (@CL) holding near recent levels.
-- The US macro calendar features ADP Employment Change at 8:15 AM ET and ISM Services PMI at 10:00 AM ET, both flagged as potential volatility drivers.
+- S&P 500 futures (@ES) are up about 0.4%, Dow Jones futures (@YM) roughly 1.0%, Nasdaq 100 futures (@NQ) around 0.2%, and Russell 2000 futures (@ER2) about 1.0% as early results show Democrats taking control of Congress.
+- The US dollar (@DX) dips as a Democratic midterm sweep and an agenda targeting healthcare and tariffs encourage rotation into small-cap and rate-sensitive names.
+- McDonald’s (MCD), Uber (UBER), CVS Health (CVS), Emerson Electric (EMR), and Datadog (DDOG) report earnings before the bell, with traders looking to these results to set sector tones at the open.
+- Recent earnings beats from Fiserv (FISV) and Revvity (RVTY) are being monitored for follow-through in today’s session, with both names slightly lower pre-market.
+- Earnings beats from Zebra Technologies (ZBRA), Shopify (SHOP), Dynatrace (DT), and Gartner (IT) are being watched for follow-through, with Dynatrace (DT) up about 1.6% and Shopify (SHOP) roughly 1% pre-market.
+- Nikkei (@NKD) and Kospi benchmarks declined in volatile Asian trade amid tech selling and uncertainty around the US midterm outcome.
+- Earlier weakness tied to Democratic gains in both chambers saw partial relief rallies in parts of China and Europe overnight.
+- Today’s US macro calendar includes ADP employment change at 8:15 AM ET, trade balance at 8:30 AM ET, and ISM Services PMI at 10:00 AM ET, all seen as potential volatility drivers.
+- Commodities traded mixed overnight, with oil (@CL) down about 1% and no major new geopolitical or commodity catalysts reported after 4 AM ET.
