@@ -1,21 +1,22 @@
 {
- "risk_tilt": null,
- "macros": [],
+ "risk_tilt": "off",
+ "macros": [
+  "hawkish",
+  "bearish",
+  "hawkish",
+  "bearish"
+ ],
  "sector_tilts": {
-  "Tech/Ai": "bearish",
-  "Mega-Cap": "bearish",
-  "Software/Ai": "bullish",
+  "Semis/Ai": "mixed",
+  "Healthcare": "bullish",
   "Industrials": "bearish",
-  "Healthcare": "bullish"
+  "Energy": "bullish"
  },
  "tickers": {
-  "AAPL": -7.0,
   "XLV": 4.0,
-  "META": -1.5,
-  "FT": -1.5,
-  "AEM": -1.5,
-  "AMGN": 1.5
+  "XLE": 9.5,
+  "XLK": -1.5
  },
- "b1_inject": "NEWS_JUDGE: n=8 rescued=6\nMACRO Rates/Fed: [hawkish] hawkish Fed comments lift Oct hike odds, gold -$100 (session/1d-1w)\nSECTOR Tech/AI: [bearish] AI capex concerns/AI selloff press NDX/SPX tech beta (NDX/IGV)\nSECTOR Semis: [mixed/bearish] NVDA tells data-center clients to trim China exposure (SMH)\nSECTOR Mega-cap: [bearish] Apple China miss/growth decel in focus (AAPL/NDX)\nSECTOR Software/AI: [bullish] Palantir raises 2026 revenue outlook on AI demand (IGV/AI software)\nSECTOR Industrials: [bearish] Boeing 737 MAX 10 FAA cert halt risks order book (ITA/BA)\nSECTOR Healthcare: [bullish] ABBV approval + AMGN Phase 3 positive support XLV sympathy (XLV)\nINTERACTION: Tech/AI capex + Apple China + NVDA China trim = one multiple-compression cluster; healthcare catalysts are basket-level, not SPX beta.\nWATCH: Mechanical usable is Powell-noise heavy; ranking leans on Finviz/noise rescue; futures B6 absent, so no direction gate applied.",
+ "b1_inject": "NEWS_JUDGE: n=8 rescued=5\nMACRO rates: [hawkish] strong JOLTS + hawkish Fed comments keep hike-risk alive; Treasury safety bid is risk-off, not dovish (session/1w)\nMACRO risk: [bearish] election stock sell-off and renewed AI-stock selling weigh SPX beta; UBS rally setup is contested (session)\nSECTOR semis/AI: [mixed] AMD data-center beat vs Apple memory warning, Palantir slowdown, APH/Fabrinet weakness (SMH/SOXX)\nSECTOR healthcare: [bullish] AMGN Phase 3 dazodalibep positive and ABBV Parkinson approval lift XLV sympathy (XLV)\nSECTOR industrials: [bearish] BA 737 MAX 10 FAA certification halt pressures BA/ITA (ITA/BA)\nSECTOR energy: [bullish] Marathon CVR refinery deal and Aramco refining boom support refiners/integrated (XLE)\nINTERACTION: AI-chip demand vs Apple/Palantir/APH weakness = tech mixed; AMGN Phase 3 + ABBV approval = Healthcare basket; strong JOLTS + hawkish Fed != weak-labor dovish; yields safety bid != risk-on breadth\nWATCH: No futures/Channel 1; election headline flow can dominate single-name signals",
  "date": "2026-11-04"
 }
