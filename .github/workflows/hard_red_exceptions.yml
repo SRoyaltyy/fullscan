@@ -36,9 +36,25 @@ jobs:
   test:
     if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    # A full checkout of this repo did not finish inside 20 minutes
+    # (run 41857836727 cancelled during git fetch). The tests only need src
+    # and a few dashboard pages.
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          filter: blob:none
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            src
+            .github/workflows/hard_red_exceptions.yml
+            dashboard/day-movers/index.html
+            dashboard/day-movers/index-core.js
+            dashboard/day-movers/days.json
+            dashboard/hard-red-exceptions/index.html
+            dashboard/day-board/index.html
+            dashboard/factor-mine/index.html
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"

@@ -37,9 +37,20 @@ jobs:
   test:
     if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    # Full-repo fetch of this checkout exceeded 20 minutes on the sibling
+    # hard-red test job. These tests read src plus the 2026 o2c bin.
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          filter: blob:none
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            src
+            .github/workflows/updown_o2c_daily.yml
+            dashboard/updown/data/index.json
+            dashboard/updown/data/y/2026.bin.gz
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -51,13 +62,21 @@ jobs:
   append:
     if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 30
     permissions:
       contents: write
     steps:
       - uses: actions/checkout@v4
         with:
           ref: main
+          fetch-depth: 1
+          filter: blob:none
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            src
+            scripts/safe_git_push.sh
+            dashboard/updown/data/index.json
+            dashboard/updown/data/y
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
