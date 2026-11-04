@@ -1,6 +1,6 @@
 {
   "date": "2026-11-04",
-  "generated_at": "2026-11-04T14:35:10.800165-05:00",
+  "generated_at": "2026-11-04T15:01:48.859978-05:00",
   "inputs": [
     {
       "name": "finviz_export",
@@ -98,7 +98,7 @@
       "family": "learn",
       "status": "ok",
       "n": null,
-      "detail": "last_date=2026-11-02"
+      "detail": "last_date=2026-11-03"
     }
   ],
   "family_status": {
