@@ -132,12 +132,75 @@ def test_report_fails_when_a_source_is_over_its_lag(tmp_path: Path) -> None:
     assert "404" in gone["sources"][0]["live_error"]
 
 
+def _tape(marker: bytes) -> bytes:
+    return b"Ticker,Change\nAAA,1.0\n" + marker + b"\n" + (b"x" * 220)
+
+
+def test_writer_refuses_a_byte_copy_and_keeps_a_fresh_tape(tmp_path: Path) -> None:
+    from src.finviz_export_guard import publish_bytes, refuse_copied_export
+
+    exports = tmp_path / "data" / "exports"
+    exports.mkdir(parents=True, exist_ok=True)
+    stale = _tape(b"STALE")
+    (exports / "finviz_2026-11-03.csv").write_bytes(stale)
+    dest = exports / "finviz_2026-11-04.csv"
+    try:
+        publish_bytes("2026-11-04", stale, dest, root=tmp_path)
+    except SystemExit as exc:
+        text = str(exc)
+        assert "FAIL" in text
+        assert "byte-identical" in text
+        assert "2026-11-03" in text
+        assert "sha256=" in text
+    else:
+        raise AssertionError("a copied export was published")
+    assert not dest.exists()
+    fresh = _tape(b"FRESH")
+    publish_bytes("2026-11-04", fresh, dest, root=tmp_path)
+    assert dest.read_bytes() == fresh
+    refuse_copied_export("2026-11-05", root=tmp_path)
+    dest.write_bytes(stale)
+    try:
+        refuse_copied_export("2026-11-04", root=tmp_path)
+    except SystemExit as exc:
+        assert "byte-identical to 2026-11-03" in str(exc)
+    else:
+        raise AssertionError("morning guard continued on a copied tape")
+
+
+def test_staleness_alarm_stops_on_a_copied_finviz_export(tmp_path: Path) -> None:
+    _fresh_tree(tmp_path)
+    exports = tmp_path / "data" / "exports"
+    exports.mkdir(parents=True, exist_ok=True)
+    body = _tape(b"SAME")
+    (exports / "finviz_2026-11-03.csv").write_bytes(body)
+    (exports / "finviz_2026-11-04.csv").write_bytes(body)
+    texts = {}
+    for rel, _kind, _limit in canary.SOURCES:
+        texts[rel] = (tmp_path / rel).read_text(encoding="utf-8")
+
+    def fetch(url: str) -> str:
+        rel = url.split("/fullscan/", 1)[1]
+        return texts[rel]
+
+    copied = canary.evaluate(root=tmp_path, now=NOW, fetch=fetch)
+    assert copied["ok"] is False
+    row = next(item for item in copied["sources"] if item["path"].endswith("finviz_2026-11-04.csv"))
+    assert row["ok"] is False
+    assert "byte-identical to 2026-11-03" in row["live_error"]
+    (exports / "finviz_2026-11-04.csv").write_bytes(_tape(b"OTHER"))
+    fresh = canary.evaluate(root=tmp_path, now=NOW, fetch=fetch)
+    assert fresh["ok"] is True
+
+
 def main() -> None:
     test_session_lag_counts_nyse_days()
     test_parsers_use_the_newest_data_date()
     import tempfile
     with tempfile.TemporaryDirectory() as tmp:
         test_report_fails_when_a_source_is_over_its_lag(Path(tmp))
+        test_writer_refuses_a_byte_copy_and_keeps_a_fresh_tape(Path(tmp))
+        test_staleness_alarm_stops_on_a_copied_finviz_export(Path(tmp))
     print("staleness canary ok")
 
 

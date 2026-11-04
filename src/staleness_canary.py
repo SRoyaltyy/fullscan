@@ -249,6 +249,30 @@ def evaluate(*, root: Path | None = None, now: datetime | None = None,
             "frozen": True,
             "manual": True,
         })
+    from src.finviz_export_guard import copied_from
+
+    copy = copied_from(session, root=root)
+    if copy:
+        prev, digest = copy
+        rows.append({
+            "path": f"data/exports/finviz_{session}.csv",
+            "lag_limit": 0,
+            "main_date": session,
+            "live_date": prev,
+            "main_lag": 0,
+            "live_lag": 0,
+            "live_error": (
+                f"sha256={digest} is byte-identical to {prev}. "
+                f"A copied Finviz tape is not a fresh session."
+            ),
+            "ok": False,
+            "frozen": False,
+        })
+        print(
+            f"[staleness] FAIL data/exports/finviz_{session}.csv "
+            f"sha256={digest} is byte-identical to {prev}. Stopping.",
+            flush=True,
+        )
     report = {
         "generated_at": datetime.now().astimezone().isoformat(),
         "session": session,

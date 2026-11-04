@@ -355,6 +355,20 @@ def main():
 
     if df is None:
         print("\n--- Mode 2: Manual CSV ---", flush=True)
+        from src.finviz_export_guard import (
+            export_path, previous_session, sha256_file,
+        )
+        manual_path = EXPORTS_DIR / "finviz_latest.csv"
+        prev = export_path(previous_session(snapshot_date))
+        # A stale latest.csv must not be archived under today's date.
+        manual_sha = sha256_file(manual_path)
+        prev_sha = sha256_file(prev)
+        if manual_sha and prev_sha and manual_sha == prev_sha:
+            raise SystemExit(
+                f"[finviz] FAIL {snapshot_date} manual export {manual_path.name} "
+                f"sha256={manual_sha} is byte-identical to {prev.name}. "
+                f"Stopping. Elite login did not return a fresh tape."
+            )
         df = try_manual_csv()
 
     if df is None:
@@ -367,10 +381,12 @@ def main():
     print(f"\n  Raw data: {len(df)} stocks, {len(df.columns)} columns", flush=True)
 
     archive_path = EXPORTS_DIR / f"finviz_{snapshot_date}.csv"
-    df.to_csv(archive_path, index=False)
+    raw = df.to_csv(index=False).encode("utf-8")
+    from src.finviz_export_guard import publish_bytes
+    publish_bytes(snapshot_date, raw, archive_path)
     write_export_scraped_at(archive_path, now)
     latest_path = EXPORTS_DIR / "finviz_latest.csv"
-    df.to_csv(latest_path, index=False)
+    publish_bytes(snapshot_date, raw, latest_path)
     write_export_scraped_at(latest_path, now)
     print(f"  Archived to {archive_path}", flush=True)
 

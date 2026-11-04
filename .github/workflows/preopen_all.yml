@@ -236,7 +236,7 @@ jobs:
           [ "${{ github.event.inputs.force }}" = "true" ] && ARGS+=(--force)
           python -m src.map_heat "${ARGS[@]}"
           echo "CMD: python -m collectors.finviz_financials (elite CSV for the book)"
-          FULLSCAN_DB_OPTIONAL=1 python -m collectors.finviz_financials || echo "[warn] elite export soft-failed"
+          FULLSCAN_DB_OPTIONAL=1 python -m collectors.finviz_financials
       - name: Commit scrape
         if: always() && env.skip != 'yes'
         run: |
