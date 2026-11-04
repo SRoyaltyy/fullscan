@@ -1,15 +1,13 @@
 {
   "date": "2026-11-04",
-  "generated_at": "2026-11-04T10:02:00.050118-05:00",
+  "generated_at": "2026-11-04T10:02:17.753811-05:00",
   "overall": "PARTIAL",
-  "ranker_ready": false,
-  "blockers": [
-    "MISSING AB checklist enriched `data/ab_checklist/2026-11-04_ab_checklist_enriched.csv` \u2014 missing"
-  ],
+  "ranker_ready": true,
+  "blockers": [],
   "counts": {
-    "ok": 3,
+    "ok": 4,
     "partial": 3,
-    "fail": 2,
+    "fail": 1,
     "n": 8
   },
   "processes": [
@@ -561,11 +559,11 @@
       "key": "ab",
       "name": "AB checklist",
       "yaml": "ab_checklist.yml",
-      "status": "FAIL",
+      "status": "OK",
       "inputs_ready": true,
-      "n_req_ok": 0,
+      "n_req_ok": 1,
       "n_req": 1,
-      "n_opt_ok": 0,
+      "n_opt_ok": 1,
       "n_opt": 1,
       "files": [
         {
@@ -573,26 +571,32 @@
           "name": "AB checklist raw",
           "path": "data/ab_checklist/2026-11-04_ab_checklist.csv",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "rows=2629",
+          "size": 7552478,
+          "said": "27 rows",
+          "bullets": [
+            "TRI, ELV, AUPH, HHH, EPAM, CDNA, DEO, YPF"
+          ]
         },
         {
           "key": "ab_enriched",
           "name": "AB checklist enriched",
           "path": "data/ab_checklist/2026-11-04_ab_checklist_enriched.csv",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "rows=2629",
+          "size": 8361702,
+          "said": "25 rows",
+          "bullets": [
+            "CDNA, FIGS, PFE, TLYS, TRI, DG, CXT, TEL"
+          ]
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "25 rows",
+      "bullets": [
+        "CDNA, FIGS, PFE, TLYS, TRI"
+      ]
     },
     {
       "key": "catalyst",
@@ -670,7 +674,7 @@
       "name": "Stock Book ALL",
       "yaml": "stock_book_all.yml",
       "status": "PARTIAL",
-      "inputs_ready": false,
+      "inputs_ready": true,
       "n_req_ok": 2,
       "n_req": 4,
       "n_opt_ok": 1,
@@ -768,11 +772,13 @@
           "name": "AB checklist enriched",
           "path": "data/ab_checklist/2026-11-04_ab_checklist_enriched.csv",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "rows=2629",
+          "size": 8361702,
+          "said": "25 rows",
+          "bullets": [
+            "CDNA, FIGS, PFE, TLYS, TRI, DG, CXT, TEL"
+          ]
         },
         {
           "key": "join",
@@ -1433,6 +1439,31 @@
         }
       ],
       "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "ab",
+      "title": "AB checklist",
+      "date": "2026-11-04",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-04T10:02:17.057744-05:00",
+      "files": [
+        {
+          "path": "data/ab_checklist/2026-11-04_ab_checklist.csv",
+          "ok": true,
+          "reason": "",
+          "size": 7552478,
+          "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 TRI, ELV, AUPH, HHH, EPAM"
+        },
+        {
+          "path": "data/ab_checklist/2026-11-04_ab_checklist_enriched.csv",
+          "ok": true,
+          "reason": "",
+          "size": 8361702,
+          "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CDNA, FIGS, PFE, TLYS, TRI"
+        }
+      ],
+      "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 TRI, ELV, AUPH, HHH, EPAM \u00b7 2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CDNA, FIGS, PFE, TLYS, TRI"
     }
   ],
   "href": {
@@ -1478,6 +1509,14 @@
       "path": "data/day_board/2026-11-04.json",
       "at": "2026-11-04T10:02:00-05:00",
       "commit_msg": "auto: land peer_rs [2026-11-04]",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "41849492081",
+      "manifest": "research/input_freeze/2026-11-04/manifest.json"
+    },
+    {
+      "path": "data/day_board/2026-11-04.json",
+      "at": "2026-11-04T10:02:18-05:00",
+      "commit_msg": "auto: land ab [2026-11-04]",
       "workflow": "Stock Book ALL (one-shot)",
       "run_id": "41849492081",
       "manifest": "research/input_freeze/2026-11-04/manifest.json"
