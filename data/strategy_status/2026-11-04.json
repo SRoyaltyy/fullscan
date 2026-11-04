@@ -21,13 +21,13 @@
    "SIT": 0
   },
   "h1": {
-   "MISSING": 1,
-   "OK": 0,
+   "MISSING": 0,
+   "OK": 1,
    "SIT": 0
   },
   "holdup": {
-   "MISSING": 1,
-   "OK": 0,
+   "MISSING": 0,
+   "OK": 1,
    "SIT": 0
   },
   "paper": {
@@ -47,7 +47,7 @@
   }
  },
  "date": "2026-11-04",
- "generated_at": "2026-11-04T07:04:20-05:00",
+ "generated_at": "2026-11-04T09:01:44-05:00",
  "strategies": [
   {
    "buys": [],
@@ -3270,22 +3270,42 @@
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "ADT",
+    "TDOC",
+    "GKOS",
+    "TEM"
+   ],
    "family": "h1",
    "name": "h1",
-   "note": "no sealed plan row",
-   "sells": [],
+   "note": "sealed 2026-11-04T13:29:57Z",
+   "sells": [
+    "CPRI 91",
+    "ECX 1786",
+    "IDXX 2",
+    "UPBD 79"
+   ],
    "source": "research/hot_n4_clean_v4/forward_h1/h1_log.jsonl",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "GDYN",
+    "TEM",
+    "UPBD",
+    "DNUT"
+   ],
    "family": "holdup",
    "name": "holdup",
-   "note": "no sealed plan row",
-   "sells": [],
+   "note": "sealed 2026-11-04T13:36:03Z",
+   "sells": [
+    "CDNA 20",
+    "CPRI 94",
+    "ECX 30",
+    "SLN 90"
+   ],
    "source": "research/hot_n4_clean_v4/forward/holdup_log.jsonl",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [],
