@@ -35000,18 +35000,25 @@
       "multiplier": null,
       "components": {},
       "leading_sum": 7.0,
-      "actual_open": null,
-      "actual_close": null,
-      "actual_pct_change": null,
-      "actual_direction": null,
-      "actual_magnitude_band": null,
-      "direction_hit": null,
-      "magnitude_hit": null,
+      "actual_open": 7735.56,
+      "actual_close": 7743.98,
+      "actual_pct_change": 0.28,
+      "actual_direction": "up",
+      "actual_magnitude_band": "flat",
+      "direction_hit": true,
+      "magnitude_hit": false,
       "divergence_flagged": false,
       "divergence_verdict": null,
       "per_factor_breakdown": [],
       "reflection_lesson_ref": null,
-      "sources_used": []
+      "sources_used": [],
+      "ops_fail": false,
+      "path_shape": "choppy / range-bound",
+      "primary_driver": "Hawkish FOMC hold (10–2, 10Y ~5.05%) capped the tape while the SK Hynix/AI-semis bid and an intraday oil reversal pulled against it, producing a narrow choppy hold",
+      "key_interaction": "Offsetting/masking — the hawkish hold and oil rebound (rate-negative) cancelled the AI/semis bid, so +0.28% understates a three-way tug; the calm tape was not calm underneath",
+      "knowable_at_9am": "partially — FOMC hold, SK Hynix, and flat futures were knowable; the oil reversal and hawkish presser tone were intraday, and the after-close MSFT/GOOGL split was unknowable",
+      "attribution_contested": "yes — AP leads Fed/bonds, Investing.com leads oil, Yahoo leads mixed breadth; no single driver dominates a +0.28% day",
+      "outlier_watch": "Equities rose despite the 10Y +5bp to ~5.05% (a GN=GN headwind), and energy rose while premarket oil was down — the oil reversal and equity-yield divergence are what don’t fit a simple risk-on story"
     }
   ]
 }
