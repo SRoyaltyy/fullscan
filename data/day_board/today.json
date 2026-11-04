@@ -1,6 +1,6 @@
 {
   "date": "2026-11-04",
-  "generated_at": "2026-11-04T14:02:35.012169-05:00",
+  "generated_at": "2026-11-04T14:03:11.234823-05:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -142,24 +142,6 @@
   },
   "sectors": {},
   "lands": [
-    {
-      "key": "join",
-      "title": "Join / match rank",
-      "date": "2026-11-04",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-11-04T13:16:07.061909-05:00",
-      "files": [
-        {
-          "path": "data/join/2026-11-04_ranked.csv",
-          "ok": true,
-          "reason": "",
-          "size": 2297694,
-          "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 FTK, RIGL, OMER, HALO, ETON"
-        }
-      ],
-      "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 FTK, RIGL, OMER, HALO, ETON"
-    },
     {
       "key": "peer_rs",
       "title": "Peer RS",
@@ -432,6 +414,59 @@
         }
       ],
       "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-11-04",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-04T14:03:10.049504-05:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-11-04_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1408758,
+          "preview": "1d BUY CDNA, BLFS, VEEV, ILMN, PRCH, LAUR, CNK, CHEF \u00b7 SELL NEOV, BIDU, ROIV, BAK, PAL, GFL, VNET, NOK"
+        },
+        {
+          "path": "data/stock_book/2026-11-04_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 1778,
+          "preview": "green 97 \u00b7 ETON, AMN, ARQT, AGEN, CDNA, CORT, INCY, BLFS, SGRY, VEEV"
+        },
+        {
+          "path": "data/stock_book/2026-11-04_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2503,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-11-04_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12500,
+          "preview": "2026-11-04 BUY CDNA, BLFS, VEEV, ILMN, PRCH, LAUR, CNK, CHEF \u00b7 SELL NEOV, BIDU, ROIV, BAK, PAL, GFL, VNET, NOK"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12500,
+          "preview": "2026-11-04 BUY CDNA, BLFS, VEEV, ILMN, PRCH, LAUR, CNK, CHEF \u00b7 SELL NEOV, BIDU, ROIV, BAK, PAL, GFL, VNET, NOK"
+        },
+        {
+          "path": "01_daily/2026-11-04_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 68425,
+          "preview": "# Stock book \u2014 2026-11-04\n_Generated 2026-11-04T14:02:43.821604-05:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY CDNA, BLFS, VEEV, ILMN, PRCH, LAUR, CNK, CHEF \u00b7 SELL NEOV, BIDU, ROIV, BAK, PAL, GFL, VNET, NOK \u00b7 green 97 \u00b7 ETON, AMN, ARQT, AGEN, CDNA, CORT, INCY, BLFS, SGRY, VEEV \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-11-04 BUY CDNA, BLFS, VEEV, ILMN, PRCH, LAUR, CNK, CHEF \u00b7 SELL NEOV, BIDU, ROIV, BAK, PAL, GFL, VNET, NOK \u00b7 2026-11-04 BUY CDNA, BLFS, VEEV, ILMN, PRCH, LAUR, CNK, CHEF \u00b7 SELL NEOV, BIDU, ROIV, BAK, PAL, GFL, VNET, NOK \u00b7 # Stock book \u2014 2026-11-04\n_Generated 2026-11-04T14:02:43.821604-05:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
