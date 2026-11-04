@@ -1,12 +1,12 @@
 {
   "date": "2026-11-04",
-  "generated_at": "2026-11-04T10:02:17.753811-05:00",
+  "generated_at": "2026-11-04T10:02:35.068813-05:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
   "counts": {
-    "ok": 4,
-    "partial": 3,
+    "ok": 6,
+    "partial": 1,
     "fail": 1,
     "n": 8
   },
@@ -673,11 +673,11 @@
       "key": "stock_book",
       "name": "Stock Book ALL",
       "yaml": "stock_book_all.yml",
-      "status": "PARTIAL",
+      "status": "OK",
       "inputs_ready": true,
-      "n_req_ok": 2,
+      "n_req_ok": 4,
       "n_req": 4,
-      "n_opt_ok": 1,
+      "n_opt_ok": 3,
       "n_opt": 4,
       "files": [
         {
@@ -811,10 +811,10 @@
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-11-04_stock_book.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "horizons=5 names=185",
+          "size": 1408758,
+          "said": "1d BUY CDNA, BLFS, VEEV, ILMN, PRCH, LAUR, CNK, CHEF \u00b7 SELL NEOV, BIDU, ROIV, BAK, PAL, GFL \u00b7 0.7224999999999999",
           "bullets": []
         },
         {
@@ -822,21 +822,24 @@
           "name": "Stock book MD",
           "path": "01_daily/2026-11-04_stock_book.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 67329,
+          "said": "Stock book \u2014 2026-11-04",
+          "bullets": [
+            "_Generated 2026-11-04T10:02:27.680449-05:00_",
+            "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
+          ]
         },
         {
           "key": "green",
           "name": "Green-pile JSON",
           "path": "data/stock_book/2026-11-04_green.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "",
+          "size": 1778,
+          "said": "97 green \u00b7 ETON, AMN, ARQT, AGEN, CDNA, CORT, INCY, BLFS, SGRY, VEEV",
           "bullets": []
         },
         {
@@ -858,10 +861,10 @@
           "name": "Dashboard HTML",
           "path": "dashboard/index.html",
           "role": "optional",
-          "status": "FAIL",
-          "reason": "session 2026-11-04 not in dashboard dates (last=2026-10-07)",
+          "status": "OK",
+          "reason": "live-book poller + today.json (2026-11-04)",
           "size": 10510589,
-          "said": "session 2026-11-04 not in dashboard dates (last=2026-10-07)",
+          "said": "live-book poller + today.json (2026-11-04)",
           "bullets": []
         }
       ],
@@ -874,9 +877,9 @@
       "key": "publish",
       "name": "Dashboard / .io",
       "yaml": "deploy-dashboard.yml",
-      "status": "PARTIAL",
-      "inputs_ready": false,
-      "n_req_ok": 1,
+      "status": "OK",
+      "inputs_ready": true,
+      "n_req_ok": 2,
       "n_req": 2,
       "n_opt_ok": 0,
       "n_opt": 1,
@@ -886,10 +889,10 @@
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-11-04_stock_book.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "horizons=5 names=185",
+          "size": 1408758,
+          "said": "1d BUY CDNA, BLFS, VEEV, ILMN, PRCH, LAUR, CNK, CHEF \u00b7 SELL NEOV, BIDU, ROIV, BAK, PAL, GFL \u00b7 0.7224999999999999",
           "bullets": []
         },
         {
@@ -897,10 +900,10 @@
           "name": "Dashboard HTML (repo)",
           "path": "dashboard/index.html",
           "role": "required",
-          "status": "FAIL",
-          "reason": "session 2026-11-04 not in dashboard dates (last=2026-10-07)",
+          "status": "OK",
+          "reason": "live-book poller + today.json (2026-11-04)",
           "size": 10510589,
-          "said": "session 2026-11-04 not in dashboard dates (last=2026-10-07)",
+          "said": "live-book poller + today.json (2026-11-04)",
           "bullets": []
         },
         {
@@ -936,8 +939,118 @@
   "news_mode": "on",
   "news_mode_reason": "",
   "selections": {
-    "buy_1d": [],
-    "sell_1d": [],
+    "buy_1d": [
+      {
+        "ticker": "CDNA",
+        "score": 0.9139860186956776
+      },
+      {
+        "ticker": "BLFS",
+        "score": 0.8556152993942336
+      },
+      {
+        "ticker": "VEEV",
+        "score": 0.4135263786294272
+      },
+      {
+        "ticker": "ILMN",
+        "score": 0.4505554479976306
+      },
+      {
+        "ticker": "PRCH",
+        "score": 0.7389164097213633
+      },
+      {
+        "ticker": "LAUR",
+        "score": 0.6704088476722929
+      },
+      {
+        "ticker": "CNK",
+        "score": 0.6890165319540886
+      },
+      {
+        "ticker": "CHEF",
+        "score": 0.6466544412958475
+      },
+      {
+        "ticker": "TRU",
+        "score": 0.5160039541015978
+      },
+      {
+        "ticker": "PEB",
+        "score": 0.6094003954602434
+      },
+      {
+        "ticker": "AVO",
+        "score": 0.5565699990116773
+      },
+      {
+        "ticker": "ABX",
+        "score": 0.519696343283465
+      }
+    ],
+    "sell_1d": [
+      {
+        "ticker": "NEOV",
+        "score": -0.34106065552262504
+      },
+      {
+        "ticker": "BIDU",
+        "score": -0.3189633812745775
+      },
+      {
+        "ticker": "ROIV",
+        "score": -0.3080817295910762
+      },
+      {
+        "ticker": "BAK",
+        "score": -0.3000159137683564
+      },
+      {
+        "ticker": "PAL",
+        "score": -0.2877258660105546
+      },
+      {
+        "ticker": "GFL",
+        "score": -0.28610727001780434
+      },
+      {
+        "ticker": "VNET",
+        "score": -0.28267493621912076
+      },
+      {
+        "ticker": "NOK",
+        "score": -0.2824046383160953
+      },
+      {
+        "ticker": "SSTK",
+        "score": -0.27052283682097084
+      },
+      {
+        "ticker": "VSAT",
+        "score": -0.27041351663524205
+      },
+      {
+        "ticker": "HMY",
+        "score": -0.26736171131943054
+      },
+      {
+        "ticker": "NN",
+        "score": -0.26526922146095666
+      },
+      {
+        "ticker": "NFLX",
+        "score": -0.2641335785155275
+      },
+      {
+        "ticker": "CMTG",
+        "score": -0.26312905243535173
+      },
+      {
+        "ticker": "AREC",
+        "score": -0.25800125813104285
+      }
+    ],
     "flatten": {},
     "general": {
       "said": "UP  10.848",
@@ -1464,6 +1577,59 @@
         }
       ],
       "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 TRI, ELV, AUPH, HHH, EPAM \u00b7 2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CDNA, FIGS, PFE, TLYS, TRI"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-11-04",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-04T10:02:34.353048-05:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-11-04_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1408758,
+          "preview": "1d BUY CDNA, BLFS, VEEV, ILMN, PRCH, LAUR, CNK, CHEF \u00b7 SELL NEOV, BIDU, ROIV, BAK, PAL, GFL, VNET, NOK"
+        },
+        {
+          "path": "data/stock_book/2026-11-04_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 1778,
+          "preview": "green 97 \u00b7 ETON, AMN, ARQT, AGEN, CDNA, CORT, INCY, BLFS, SGRY, VEEV"
+        },
+        {
+          "path": "data/stock_book/2026-11-04_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2503,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-11-04_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12500,
+          "preview": "2026-11-04 BUY CDNA, BLFS, VEEV, ILMN, PRCH, LAUR, CNK, CHEF \u00b7 SELL NEOV, BIDU, ROIV, BAK, PAL, GFL, VNET, NOK"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12500,
+          "preview": "2026-11-04 BUY CDNA, BLFS, VEEV, ILMN, PRCH, LAUR, CNK, CHEF \u00b7 SELL NEOV, BIDU, ROIV, BAK, PAL, GFL, VNET, NOK"
+        },
+        {
+          "path": "01_daily/2026-11-04_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 68425,
+          "preview": "# Stock book \u2014 2026-11-04\n_Generated 2026-11-04T10:02:27.680449-05:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY CDNA, BLFS, VEEV, ILMN, PRCH, LAUR, CNK, CHEF \u00b7 SELL NEOV, BIDU, ROIV, BAK, PAL, GFL, VNET, NOK \u00b7 green 97 \u00b7 ETON, AMN, ARQT, AGEN, CDNA, CORT, INCY, BLFS, SGRY, VEEV \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-11-04 BUY CDNA, BLFS, VEEV, ILMN, PRCH, LAUR, CNK, CHEF \u00b7 SELL NEOV, BIDU, ROIV, BAK, PAL, GFL, VNET, NOK \u00b7 2026-11-04 BUY CDNA, BLFS, VEEV, ILMN, PRCH, LAUR, CNK, CHEF \u00b7 SELL NEOV, BIDU, ROIV, BAK, PAL, GFL, VNET, NOK \u00b7 # Stock book \u2014 2026-11-04\n_Generated 2026-11-04T10:02:27.680449-05:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "href": {
@@ -1517,6 +1683,14 @@
       "path": "data/day_board/2026-11-04.json",
       "at": "2026-11-04T10:02:18-05:00",
       "commit_msg": "auto: land ab [2026-11-04]",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "41849492081",
+      "manifest": "research/input_freeze/2026-11-04/manifest.json"
+    },
+    {
+      "path": "data/day_board/2026-11-04.json",
+      "at": "2026-11-04T10:02:35-05:00",
+      "commit_msg": "auto: land stock_book [2026-11-04]",
       "workflow": "Stock Book ALL (one-shot)",
       "run_id": "41849492081",
       "manifest": "research/input_freeze/2026-11-04/manifest.json"
