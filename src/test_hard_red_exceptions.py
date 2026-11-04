@@ -300,3 +300,127 @@ def test_scan_open_camera_setups_splits_all_vs_hard_red(tmp_path):
     assert doc["all"]["short_all"]["h1"]["mean"] == -4.0
     assert doc["hard_red"]["long_all"]["n"] == 1
     assert doc["hard_red"]["short_all"]["n"] == 1
+
+
+def test_backfill_dates_skip_sealed_and_missing_source():
+    from src.hard_red_exceptions import backfill_dates
+    got = backfill_dates(
+        ["2026-10-29", "2026-10-30"],
+        ["2026-10-30", "2026-11-02"],
+        today="2026-11-04",
+    )
+    assert got == ["2026-11-02"]
+    assert "2026-11-03" not in got
+
+
+def test_sealed_buy_sell_rows_are_byte_identical(tmp_path, monkeypatch):
+    """A recompute that rewrites longs/shorts and ticker rows does not land."""
+    import json
+    from src import day_movers as dm
+    from src import hard_red_exceptions as hre
+
+    sealed_long = {"ticker": "AAA", "idio": 4, "side": "long"}
+    sealed_short = {"ticker": "BBB", "idio": -3, "side": "short"}
+    day_old = {
+        "date": "2026-10-30",
+        "longs": [sealed_long],
+        "shorts": [sealed_short],
+        "n_long_ok": 1,
+    }
+    row_old = {
+        "date": "2026-10-30",
+        "open": 10.0,
+        "close": 11.0,
+        "why": ["sealed buy"],
+    }
+    dash = tmp_path / "dash"
+    (dash / "t").mkdir(parents=True)
+    (dash / "t" / "AAA.json").write_text(json.dumps({
+        "ticker": "AAA",
+        "from_date": "2026-10-30",
+        "to_date": "2026-10-30",
+        "cam_order": ["join"],
+        "cam_short": {"join": "join"},
+        "rows": [row_old],
+    }), encoding="utf-8")
+    latest = {
+        "ok": True,
+        "from_date": "2026-10-30",
+        "to_date": "2026-10-30",
+        "n_days": 1,
+        "tickers": ["AAA"],
+        "days": [day_old],
+        "latest": day_old,
+    }
+    (dash / "latest.json").write_text(
+        json.dumps(latest, indent=2, default=str), encoding="utf-8",
+    )
+    before_row = json.dumps(row_old, default=str)
+    before_day = json.dumps(day_old, default=str)
+    monkeypatch.setattr(hre, "DASH_DIR", dash)
+    monkeypatch.setattr(hre, "OUT_DIR", tmp_path / "out")
+    monkeypatch.setattr(hre, "OUT_MD", tmp_path / "HARD.md")
+    monkeypatch.setattr(dm, "write_from_hre", lambda *a, **k: dash / "days.json")
+
+    mutated = {
+        "date": "2026-10-30",
+        "longs": [{"ticker": "ZZZ", "idio": 99, "side": "long"}],
+        "shorts": [{"ticker": "QQQ", "idio": -99, "side": "short"}],
+        "n_long_ok": 9,
+    }
+    new_day = {
+        "date": "2026-11-02",
+        "longs": [{"ticker": "CCC", "idio": 2, "side": "long"}],
+        "shorts": [],
+        "n_long_ok": 1,
+    }
+    doc = {
+        "ok": True,
+        "from_date": "2026-10-01",
+        "to_date": "2026-11-02",
+        "n_days": 2,
+        "tickers": ["AAA", "CCC"],
+        "cam_order": ["join"],
+        "cam_short": {"join": "join"},
+        "latest": new_day,
+        "days": [mutated, new_day],
+        "history": {
+            "AAA": [{
+                "date": "2026-10-30",
+                "open": 1.0,
+                "close": 2.0,
+                "why": ["rewritten"],
+            }, {
+                "date": "2026-11-02",
+                "open": 12.0,
+                "close": 13.0,
+                "why": ["new"],
+            }],
+        },
+    }
+    hre.write_json(doc, today="2026-11-04")
+    ticker = json.loads((dash / "t" / "AAA.json").read_text(encoding="utf-8"))
+    assert json.dumps(ticker["rows"][0], default=str) == before_row
+    assert before_row in (dash / "t" / "AAA.json").read_text(encoding="utf-8")
+    assert ticker["rows"][1]["date"] == "2026-11-02"
+    assert "rewritten" not in json.dumps(ticker["rows"][0])
+    saved = json.loads((dash / "latest.json").read_text(encoding="utf-8"))
+    assert json.dumps(saved["days"][0], default=str) == before_day
+    assert saved["days"][0]["longs"][0]["ticker"] == "AAA"
+    assert saved["days"][0]["shorts"][0]["ticker"] == "BBB"
+    assert saved["days"][1]["date"] == "2026-11-02"
+    assert saved["days"][1]["longs"][0]["ticker"] == "CCC"
+    assert "ZZZ" not in json.dumps(saved["days"][0])
+    assert saved["from_date"] == "2026-10-30"
+    assert saved["to_date"] == "2026-11-02"
+
+
+def test_hard_red_workflow_schedule_and_loud_skip():
+    from pathlib import Path
+    root = Path(__file__).resolve().parent.parent
+    text = (root / ".github" / "workflows" / "hard_red_exceptions.yml").read_text(
+        encoding="utf-8")
+    assert 'cron: "45 21 * * 1-5"' in text
+    assert "ubuntu-latest" in text
+    assert "A skipped hard-red run is a failure" in text
+    assert "cancel-in-progress: false" in text

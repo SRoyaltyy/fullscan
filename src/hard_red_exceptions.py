@@ -1190,49 +1190,232 @@ def write_md(doc: dict) -> Path:
     return OUT_MD
 
 
-def write_json(doc: dict) -> Path:
+def et_today() -> str:
+    return datetime.now(tl.ET).date().isoformat()
+
+
+def row_date(row: dict) -> str:
+    return str((row or {}).get("date") or "")[:10]
+
+
+def sealed_through(dates, *, today: str) -> str | None:
+    """Last day that must not change.
+
+    The newest on-disk day stays open only when it is still ``today``
+    (a same-session rerun). Every earlier day, and a newest day that is
+    already in the past, is sealed. A missing day is not filled in.
+    """
+    uniq = sorted({str(d)[:10] for d in dates if str(d or "")[:10]})
+    if not uniq:
+        return None
+    newest = uniq[-1]
+    if newest >= today:
+        return uniq[-2] if len(uniq) > 1 else None
+    return newest
+
+
+def sealed_row_blobs(rows, sealed: str | None) -> list[str]:
+    if not sealed:
+        return []
+    return [
+        json.dumps(row, default=str)
+        for row in rows
+        if row_date(row) and row_date(row) <= sealed
+    ]
+
+
+def assert_sealed_rows(old_rows, new_rows, sealed: str | None) -> None:
+    """Fail if a sealed row was edited, removed, or reordered."""
+    if not sealed:
+        return
+    from .past_day_lock import PastDayLockError
+
+    before = sealed_row_blobs(old_rows, sealed)
+    after = sealed_row_blobs(new_rows, sealed)
+    if before != after:
+        raise PastDayLockError(
+            "past-day lock: sealed rows changed or were removed "
+            f"(through {sealed})"
+        )
+
+
+def merge_dated_rows(old_rows, new_rows, sealed: str | None) -> list:
+    """Keep sealed rows as the same objects. Append only later source rows.
+
+    A date that is absent from both the sealed file and the new source
+    stays missing. A new source row dated on or before the sealed day
+    is ignored, so a recompute cannot rewrite or fill the sealed prefix.
+    """
+    old_rows = list(old_rows or [])
+    new_rows = list(new_rows or [])
+    if not sealed:
+        by_new = {}
+        for row in new_rows:
+            d = row_date(row)
+            if d:
+                by_new[d] = row
+        out = []
+        seen = set()
+        for row in old_rows:
+            d = row_date(row)
+            if not d:
+                continue
+            seen.add(d)
+            out.append(by_new.get(d, row))
+        for row in new_rows:
+            d = row_date(row)
+            if d and d not in seen:
+                out.append(row)
+                seen.add(d)
+        out.sort(key=row_date)
+        return out
+    sealed_part = [row for row in old_rows if row_date(row) and row_date(row) <= sealed]
+    rest_old = [row for row in old_rows if row_date(row) and row_date(row) > sealed]
+    new_after = [row for row in new_rows if row_date(row) and row_date(row) > sealed]
+    by_new = {}
+    for row in new_after:
+        by_new[row_date(row)] = row
+    tail = []
+    seen = set()
+    for row in rest_old:
+        d = row_date(row)
+        seen.add(d)
+        tail.append(by_new.get(d, row))
+    for row in new_after:
+        d = row_date(row)
+        if d not in seen:
+            tail.append(row)
+            seen.add(d)
+    tail.sort(key=row_date)
+    out = sealed_part + tail
+    assert_sealed_rows(old_rows, out, sealed)
+    return out
+
+
+def backfill_dates(existing_dates, source_dates, *, today: str) -> list[str]:
+    """Sessions the next write would append. No fabricated gaps."""
+    existing = sorted({str(d)[:10] for d in existing_dates if str(d or "")[:10]})
+    sealed = sealed_through(existing, today=today)
+    have = set(existing)
+    out = []
+    for raw in source_dates:
+        d = str(raw or "")[:10]
+        if not d or d in have:
+            continue
+        if sealed and d <= sealed:
+            continue
+        out.append(d)
+    return sorted(set(out))
+
+
+def _load_json(path: Path) -> dict | None:
+    if not path.is_file():
+        return None
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return None
+    return data if isinstance(data, dict) else None
+
+
+def write_json(doc: dict, *, today: str | None = None) -> Path:
+    """Write the investigator list. Sealed rows stay byte-identical.
+
+    Rows dated on or before the last sealed day are the objects already
+    on disk. The open tail (newest day, and only when it is still today)
+    may be replaced. Later sessions are appended only when this run's
+    source has them.
+    """
+    today = today or et_today()
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     DASH_DIR.mkdir(parents=True, exist_ok=True)
     hist = doc.get("history") or {}
     tick_dir = DASH_DIR / "t"
     tick_dir.mkdir(parents=True, exist_ok=True)
+    old_ticks: dict[str, dict] = {}
+    existing_dates: list[str] = []
+    for path in sorted(tick_dir.glob("*.json")):
+        prev = _load_json(path)
+        if not prev:
+            continue
+        old_ticks[path.stem] = prev
+        existing_dates.extend(row_date(row) for row in prev.get("rows") or [])
+    old_latest = _load_json(DASH_DIR / "latest.json")
+    if old_latest:
+        existing_dates.extend(row_date(row) for row in old_latest.get("days") or [])
+    sealed = sealed_through(existing_dates, today=today)
+
     for t, rows in hist.items():
+        prev = old_ticks.get(t) or {}
+        merged = merge_dated_rows(prev.get("rows") or [], rows, sealed)
+        if not merged and not prev:
+            continue
+        payload = {
+            "ticker": t,
+            "from_date": prev.get("from_date") or doc.get("from_date"),
+            "to_date": (row_date(merged[-1]) if merged else doc.get("to_date")),
+            "cam_order": prev.get("cam_order") or doc.get("cam_order") or list(CAM_ORDER),
+            "cam_short": prev.get("cam_short") or doc.get("cam_short") or dict(CAM_SHORT),
+            "rows": merged,
+        }
         (tick_dir / f"{t}.json").write_text(
-            json.dumps({
-                "ticker": t,
-                "from_date": doc.get("from_date"),
-                "to_date": doc.get("to_date"),
-                "cam_order": doc.get("cam_order") or list(CAM_ORDER),
-                "cam_short": doc.get("cam_short") or dict(CAM_SHORT),
-                "rows": rows,
-            }, default=str),
+            json.dumps(payload, default=str),
             encoding="utf-8",
         )
     slim = {k: v for k, v in doc.items() if k != "history"}
+    old_days = list((old_latest or {}).get("days") or [])
+    merged_days = merge_dated_rows(old_days, list(doc.get("days") or []), sealed)
+    latest_date = row_date(merged_days[-1]) if merged_days else ""
     days = []
-    latest_date = (doc.get("latest") or {}).get("date")
-    for d in doc.get("days") or []:
-        row = dict(d)
-        if d.get("date") != latest_date:
-            row.pop("all_top", None)
-        days.append(row)
+    for row in merged_days:
+        if sealed and row_date(row) and row_date(row) <= sealed:
+            days.append(row)
+            continue
+        fresh = dict(row)
+        if row_date(fresh) != latest_date:
+            fresh.pop("all_top", None)
+        days.append(fresh)
     slim["days"] = days
+    if old_latest and old_latest.get("from_date"):
+        slim["from_date"] = old_latest["from_date"]
+    if days:
+        slim["to_date"] = row_date(days[-1])
+        slim["n_days"] = len(days)
+    old_names = list((old_latest or {}).get("tickers") or [])
+    seen = set(old_names)
+    for name in doc.get("tickers") or []:
+        if name not in seen:
+            old_names.append(name)
+            seen.add(name)
+    if old_names:
+        slim["tickers"] = old_names
+    old_latest_card = (old_latest or {}).get("latest") or {}
+    if (
+        sealed
+        and row_date(old_latest_card)
+        and row_date(old_latest_card) <= sealed
+        and (not days or row_date(days[-1]) <= sealed)
+    ):
+        slim["latest"] = old_latest_card
     path = OUT_DIR / "latest.json"
     text = json.dumps(slim, indent=2, default=str)
     path.write_text(text, encoding="utf-8")
     (DASH_DIR / "latest.json").write_text(text, encoding="utf-8")
     (DASH_DIR / "tickers.json").write_text(json.dumps({
-        "tickers": doc.get("tickers") or [],
-        "from_date": doc.get("from_date"),
-        "to_date": doc.get("to_date"),
-        "n_days": doc.get("n_days"),
+        "tickers": slim.get("tickers") or [],
+        "from_date": slim.get("from_date"),
+        "to_date": slim.get("to_date"),
+        "n_days": slim.get("n_days"),
         "cam_order": doc.get("cam_order") or list(CAM_ORDER),
         "cam_short": doc.get("cam_short") or dict(CAM_SHORT),
     }), encoding="utf-8")
     try:
         from . import day_movers as dm
-        dm.write_from_hre(doc, tick_dir=tick_dir)
+        dm.write_from_hre(doc, tick_dir=tick_dir, today=today)
     except Exception as exc:
+        from .past_day_lock import PastDayLockError
+        if isinstance(exc, PastDayLockError):
+            raise
         print(f"[hard-red] WARN: day-movers emit: {exc}", flush=True)
     return path
 

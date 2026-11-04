@@ -13,8 +13,7 @@ information, there is no after-fee edge. Details are in the audit.
 - `data/y/YYYY.bin.gz`: one gzip-compressed binary per year (format in index.json `format`), decoded in the browser.
 - `LEAK_AUDIT.md`: the leak audit, with its verdict on the first line.
 
-Additive only. Nothing in the h1 / Factor Mine daily pipeline reads or writes this folder; only `data/expmove/` is appended to by the separate shadow workflow (below). It is regenerated offline. It is not part of
-h1, Factor Mine, or any ledger.
+Additive only. Nothing in the h1 / Factor Mine daily pipeline reads or writes this folder. `data/index.json` and `data/y/` were written by hand on 2026-10-06 (`cffac6ee16`, `b4b0b34922`). No workflow has committed those files since. `.github/workflows/updown_o2c_daily.yml` appends a later session only when `research/updown_o2c_v2/forward/YYYY-MM-DD.json` has p_up rows. Days with no source file stay missing. Sealed days are not rewritten. `data/expmove/` is still appended only by the shadow workflow (below). It is not part of h1, Factor Mine, or any ledger.
 
 ## Expected-move rank column (`updown_expmove_v1`), added 2026-10-07
 - **What it is.** A descriptive per-stock risk column with no trading claim. It shows the predicted size of the move from today's 09:30 open to the next session's 09:30 open (|open→next open|), ranked within the top 1,000 names by 20-day dollar volume (actual prior close ≥ $5). 100 = largest expected move.

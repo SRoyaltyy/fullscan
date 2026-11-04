@@ -510,24 +510,63 @@ def bake(*, tick_dir: Path | None = None, meta: dict | None = None,
     return doc
 
 
+def preserve_sealed_days(doc: dict, *, today: str | None = None) -> dict:
+    """Put the on-disk gainer/loser rows back for every sealed session.
+
+    ``bake`` rebuilds every day. Sessions on or before the last sealed
+    day keep the objects already in ``days.json``. A later session is
+    appended only when this bake has it. A day with no rows stays missing.
+    """
+    dest = DASH_DIR / "days.json"
+    if not dest.is_file():
+        return doc
+    try:
+        old = json.loads(dest.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return doc
+    if not isinstance(old, dict):
+        return doc
+    old_days = list(old.get("days") or [])
+    today = today or hre.et_today()
+    sealed = hre.sealed_through(
+        (hre.row_date(row) for row in old_days), today=today,
+    )
+    if not sealed:
+        return doc
+    merged = hre.merge_dated_rows(old_days, list(doc.get("days") or []), sealed)
+    out = dict(doc)
+    out["days"] = merged
+    out["dates"] = [hre.row_date(row) for row in merged if hre.row_date(row)]
+    out["n_days"] = len(out["dates"])
+    if old.get("from_date"):
+        out["from_date"] = old["from_date"]
+    if out["dates"]:
+        out["to_date"] = out["dates"][-1]
+    return out
+
+
 def write_days(doc: dict | None = None, *, tick_dir: Path | None = None,
-               meta: dict | None = None) -> Path:
+               meta: dict | None = None, today: str | None = None) -> Path:
     if doc is None:
         doc = bake(tick_dir=tick_dir, meta=meta)
+    doc = preserve_sealed_days(doc, today=today)
     DASH_DIR.mkdir(parents=True, exist_ok=True)
     dest = DASH_DIR / "days.json"
     dest.write_text(json.dumps(doc, default=str), encoding="utf-8")
     return dest
 
 
-def write_from_hre(hre_doc: dict, *, tick_dir: Path | None = None) -> Path:
+def write_from_hre(hre_doc: dict, *, tick_dir: Path | None = None,
+                   today: str | None = None) -> Path:
     """Small emitter hooked from the HRE bake. Reads t/*.json already written."""
     meta = {
         "from_date": hre_doc.get("from_date"),
         "to_date": hre_doc.get("to_date"),
         "generated_at": hre_doc.get("generated_at"),
     }
-    return write_days(tick_dir=tick_dir or (HRE_DASH / "t"), meta=meta)
+    return write_days(
+        tick_dir=tick_dir or (HRE_DASH / "t"), meta=meta, today=today,
+    )
 
 
 def write_html() -> Path:

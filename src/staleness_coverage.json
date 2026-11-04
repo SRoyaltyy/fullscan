@@ -1,0 +1,52 @@
+{
+  "depends_on_pr": 743,
+  "depends_on": "https://github.com/SRoyaltyy/fullscan/pull/743",
+  "note": "src/staleness_canary.py is not on main. PR #743 adds it and is still open. After that PR merges, extend SOURCES with src.staleness_coverage.sources_for_canary() and teach newest_date the kind updown_days (days[-1][0]). Do not fail the canary on pages marked manual and frozen. This file does not touch the #743 branch.",
+  "pages": [
+    {
+      "path": "dashboard/updown/data/index.json",
+      "kind": "updown_days",
+      "lag_limit": 0,
+      "manual": false,
+      "frozen": false,
+      "writer": ".github/workflows/updown_o2c_daily.yml",
+      "date_note": "Newest session is days[-1][0]. The file has no date object key, so kind json would miss it."
+    },
+    {
+      "path": "dashboard/hard-red-exceptions/latest.json",
+      "kind": "json",
+      "lag_limit": 0,
+      "manual": false,
+      "frozen": false,
+      "writer": ".github/workflows/hard_red_exceptions.yml",
+      "date_note": "Newest session is the max object key date. Hold fields are h1_date, not date."
+    },
+    {
+      "path": "dashboard/day-movers/days.json",
+      "kind": "json",
+      "lag_limit": 0,
+      "manual": false,
+      "frozen": false,
+      "writer": ".github/workflows/hard_red_exceptions.yml",
+      "date_note": "Same bake as hard-red exceptions. Newest session is the max object key date."
+    },
+    {
+      "path": "dashboard/scanner-backtest/index.html",
+      "kind": "html",
+      "lag_limit": null,
+      "manual": true,
+      "frozen": true,
+      "writer": null,
+      "date_note": "scanner-backtest-publish.yml, scanner-keyword-publish.yml, and publish-completed-parser.yml have no weekday cron. They publish when parser inputs change. Manual and frozen for the daily canary."
+    },
+    {
+      "path": "dashboard/jev-train/days.json",
+      "kind": "jev_days",
+      "lag_limit": null,
+      "manual": true,
+      "frozen": true,
+      "writer": null,
+      "date_note": "On main, jev_train.yml is workflow_dispatch only and says it has no schedule. jev_wired_draw.yml and jev_acceptance.yml also have no cron. PR #743 proposes a weekday cron that is not on main. Treat as manual and frozen until that schedule is on main."
+    }
+  ]
+}
