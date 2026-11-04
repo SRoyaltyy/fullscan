@@ -1,0 +1,71 @@
+{
+  "date": "2026-11-04",
+  "inputs": [
+    {
+      "commit": "bea6c58dbf27c312132803ea441117c60d402d1f",
+      "committed_at": "2026-11-04T07:03:18-05:00",
+      "ok": true,
+      "path": "01_daily/weather/2026-11-04_weather.json",
+      "reason": "",
+      "sha256": "fd14081b576c3beb5207f4402470f8be1fef3348aeee631f067b0dea3616a850"
+    },
+    {
+      "commit": null,
+      "committed_at": null,
+      "ok": false,
+      "path": "data/day_board/2026-11-04_strategy_tickets.json",
+      "reason": "never committed",
+      "sha256": null
+    },
+    {
+      "commit": null,
+      "committed_at": null,
+      "ok": false,
+      "path": "data/factor_mine/state/union_hot_n4_h1_preopen/2026-11-03.json",
+      "reason": "never committed",
+      "sha256": null
+    },
+    {
+      "commit": null,
+      "committed_at": null,
+      "ok": false,
+      "path": "data/factor_mine/state/union_hot_n4_holdup_preopen/2026-11-03.json",
+      "reason": "never committed",
+      "sha256": null
+    }
+  ],
+  "inputs_rule": "tickets look.source=look, weather general_score, prior state; last commit before 09:30 ET only",
+  "log": [
+    "tickets not used: never committed",
+    "weather commit bea6c58dbf27c312132803ea441117c60d402d1f at 2026-11-04T07:03:18-05:00 is before 09:30 ET"
+  ],
+  "open_cutoff_et": "2026-11-04T09:30:00-05:00",
+  "s": 10.848,
+  "s_source": "weather",
+  "sha256": "421b0e65a020f4dec561c3007014ebb7de12f762e2fb4a294fa206fd7ab26118",
+  "sleeves": {
+    "union_hot_n4_h1_preopen": {
+      "parent": "union_hot_n4_h1",
+      "pick_source": "none",
+      "picks": [],
+      "reasons": [
+        "prior state 2026-11-03 not committed before 09:30 ET: never committed",
+        "no pre-open candidate list"
+      ],
+      "sit": true,
+      "would_pick": []
+    },
+    "union_hot_n4_holdup_preopen": {
+      "parent": "union_hot_n4_holdup",
+      "pick_source": "none",
+      "picks": [],
+      "reasons": [
+        "prior state 2026-11-03 not committed before 09:30 ET: never committed",
+        "no pre-open candidate list"
+      ],
+      "sit": true,
+      "would_pick": []
+    }
+  },
+  "start": "2026-10-08"
+}
