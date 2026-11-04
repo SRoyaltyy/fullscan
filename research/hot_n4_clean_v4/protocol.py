@@ -118,7 +118,14 @@ ENGINE_SHA256 = {
     # after land_closed() returns: except Exception became
     # except (Exception, SystemExit), plus a two-line comment. That cannot
     # affect picks, fills, or P&L. See RESTATEMENTS.md.
-    "src/factor_mine.py": "b51eed634fb5ce213e3a2e1f85c83749e97ee42519b33d1d60ad7ad0c0047860",
+    #
+    # Re-pinned 2026-11-04. The previous sha256 was
+    # b51eed634fb5ce213e3a2e1f85c83749e97ee42519b33d1d60ad7ad0c0047860.
+    # Commit edd116196a holds an unlocked session when the new drop list is
+    # a partial Yahoo page (build_panel, frozen is None only). A frozen day
+    # never enters that branch. Sealed picks, fills, and P&L are unchanged.
+    # See RESTATEMENTS.md.
+    "src/factor_mine.py": "f904788699186111ad246dcc2a0ed9c8ebd2048ff096196ce8bc8a9d11872e0c",
     "src/factor_mine_book.py": "1fc16961b2680ea7fa2b4f6939402176b27f20c38d0ceda85826d674f4ecb76a",
     "src/ohlc_ripper.py": "7b3d674b2f4b5f5e7c52331543b7e0abf24219c3a3d0f2a178476842783bf641",
     "src/gainer_capture.py": "ee03ea4d5cfad51dddcf3dc24b434b63fd19169ad0aacf657d505f5c5da82af5",

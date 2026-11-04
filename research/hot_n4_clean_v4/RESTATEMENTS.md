@@ -56,3 +56,15 @@ The sealed 2026-09-28 open fills stay as written. A later `open_fill_correction`
 - rule: an `open_fill_correction` references the sealed open fill's sha256 and the plan's sha256. It records reason `stale_bar: previous-session bar used for SRFM, SECZ`, approved_by `Cyrus 2026-09-28 21:02 ET`, the corrected open fill, and the sealed-versus-corrected values for each leg that moved. Cash after the correction must be at least zero. A second identical run appends nothing. The close fill and the book's cash and positions read the latest correction. Sealed lines are not edited.
 - code: `HOLDUP_MODE=correct_open` with `CORRECT_OPEN_DATE` in `research/hot_n4_clean_v4/forward/forward.py`. Holdup and h1 share that entry point. The manual workflow is `.github/workflows/correct_open.yml`. It has no schedule.
 - sealed lines: unchanged. The 2026-09-28 correction was not written to either log or ledger.
+
+## Engine pin: hold a partial Yahoo page
+
+2026-11-04. The study name stays `hot_n4_clean_v4`. This re-pin is the partial-fill hold in commit `edd116196a`. No sealed row was rewritten or deleted, and no row on or before the last sealed day was filled in.
+
+- file: `src/factor_mine.py`
+- old sha256: `b51eed634fb5ce213e3a2e1f85c83749e97ee42519b33d1d60ad7ad0c0047860`
+- new sha256: `f904788699186111ad246dcc2a0ed9c8ebd2048ff096196ce8bc8a9d11872e0c`
+- commit: `edd116196a61df77b39739d9576ca81f5468fe5b`
+- reason: `build_panel` now counts new drops on an unlocked session and raises `HoldDay` (`incomplete session bars; refusing to bake a partial drop list`) when that count is above 40. The branch runs only when `fail_closed` is set and `frozen is None`. A frozen day never enters it. `pick_day`, `matches`, `should_exit`, and `lot_should_sell` are unchanged, so sealed picks, fills, and P&L are unchanged.
+- section 11 and `ENGINE_SHA256` now pin the new bytes. The other engine pins are unchanged. The covered prereg fingerprint moved from `5059366464a6fdd19571436296a759717d077a413cc0c693dbbb61f5dc295c5e` to `bac073d1a0e1f64c39ca1e817d5919dc46266ecfa407665aec34afabc6410f67` because section 11 is inside the covered body. The 2026-09-28 restatement above is unchanged.
+- sealed lines: unchanged. No `*.jsonl` ledger line, no locked-day file, and no buy/sell row on or before the last sealed day was edited or removed. `03_scoreboard/mover_lookback_action.json` moved its 97,558 `called_rows` into gzip shards; reassembled, those rows match the previous monolith.
