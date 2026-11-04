@@ -90,7 +90,6 @@ SPEC: list[tuple[str, str, str, dict]] = [
     ("stock_book", "fullscan", "data/stock_book/{date}_input_health.json", {}),
     ("stock_book", "fullscan", "01_daily/{date}_stock_book.md", {}),
     ("stock_book", "fullscan", "data/join/{date}_ranked.csv", {}),
-    ("stock_book", "fullscan", "data/peers/{date}_peer_rs.csv", {}),
     # Macro / free news intake
     ("macro_news", "fullscan", "01_daily/news/{date}_intake.md", {}),
     ("macro_news", "fullscan", "data/news_intake/{date}/headline_groups.json", {}),
@@ -104,7 +103,6 @@ SPEC: list[tuple[str, str, str, dict]] = [
     # AB scores + checklist
     ("ab", "fullscan", "data/ab_checklist/{date}_ab_checklist.json", {}),
     ("ab", "fullscan", "data/ab_checklist/{date}_ab_checklist.csv", {}),
-    ("ab", "fullscan", "data/ab_checklist/{date}_ab_checklist_enriched.csv", {}),
     ("ab", "fullscan", "data/checklist/{date}_checklist.json", {}),
     # Theme Radar (fullscan copy + theme-radar repo)
     ("theme_radar", "fullscan", "data/theme_radar_snapshots/{date}.csv.gz", {}),
@@ -139,9 +137,16 @@ SPEC: list[tuple[str, str, str, dict]] = [
     ("strategy_tickets", "fullscan", "data/day_board/{date}.json", {"max_lag": 0}),
     ("strategy_tickets", "fullscan", "data/factor_mine/send_inputs/{date}.json", {"max_lag": 0}),
     ("strategy_tickets", "fullscan", "data/day_board/today_strategies.json", {}),
-    # Decision-fingerprint-only inputs (C.10 replay coverage; added in v2)
+    # Decision-fingerprint-only inputs (C.10 replay coverage; input_freeze/v2).
+    # peer_rs and the enriched AB checklist are the same-day paths the ticket
+    # fingerprints. A previous session is not a row for this date: exact_day
+    # records this path as copied or missing, and does not substitute yesterday.
     ("factor_mine", "fullscan", "data/factor_mine/panel.json", {}),
     ("sleeve_merge", "fullscan", "data/sleeve_merge/today.json", {}),
+    ("stock_book", "fullscan", "data/peers/{date}_peer_rs.csv",
+     {"max_lag": 0, "exact_day": True}),
+    ("ab", "fullscan", "data/ab_checklist/{date}_ab_checklist_enriched.csv",
+     {"max_lag": 0, "exact_day": True}),
 ]
 
 
@@ -271,12 +276,26 @@ def build(day: str, freeze: dt.datetime, repos: dict[str, Path | None],
     blobs: dict[str, bytes] = {}
     for cat, repo, pat, opt in SPEC:
         base = {"category": cat, "repo": repo, "pattern": pat}
+        exact = ""
+        if opt.get("exact_day") and "{date}" in pat and "*" not in pat:
+            exact = pat.replace("{date}", day)
         if repo not in trees:
-            files.append({**base, "status": "missing",
-                          "why": "not in a git repo" if repo == "external" else f"{repo} not readable"})
+            row = {**base, "status": "missing",
+                   "why": "not in a git repo" if repo == "external" else f"{repo} not readable"}
+            if exact:
+                row.update(source_path=exact, as_of_date=day, lag_days=0)
+            files.append(row)
             continue
         asof, hits = pick(trees[repo], pat, day, bool(opt.get("before_day")))
-        if not hits:
+        if exact:
+            hits = [p for p in (hits or []) if p == exact]
+            if not hits:
+                files.append({**base, "source_path": exact, "as_of_date": day,
+                              "lag_days": 0, "status": "missing",
+                              "why": "same-day file was not committed before freeze"})
+                continue
+            asof = day
+        elif not hits:
             files.append({**base, "status": "missing", "why": "no version committed before freeze"})
             continue
         lag = lag_days(asof, day) if asof else None

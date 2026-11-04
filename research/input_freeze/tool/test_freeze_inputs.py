@@ -228,5 +228,37 @@ class CheckTests(unittest.TestCase):
         self.assertEqual(fi.only_new_day(self.repo, self.base, head, "2026-10-08"), ["README.md"])
 
 
+class ExactDayTests(unittest.TestCase):
+    def test_peer_and_ab_enriched_are_same_day_rows(self):
+        tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(tmp.cleanup)
+        repo = Path(tmp.name) / "fullscan"
+        repo.mkdir()
+        sh(repo, "init", "-q", "-b", "main")
+        day = "2026-11-04"
+        commit(repo, {
+            "data/peers/2026-11-03_peer_rs.csv": "yesterday-peers",
+            "data/ab_checklist/2026-11-03_ab_checklist_enriched.csv": "yesterday-ab",
+        }, "2026-11-03T15:00:00Z")
+        commit(repo, {
+            "data/peers/2026-11-04_peer_rs.csv": "today-peers",
+        }, "2026-11-04T14:00:00Z")
+        manifest, _blobs = fi.build(day, t("2026-11-04T14:20:00Z"),
+                                    {"fullscan": repo, "theme-radar": None})
+        peer = [r for r in manifest["files"]
+                if r["pattern"] == "data/peers/{date}_peer_rs.csv"]
+        ab = [r for r in manifest["files"]
+              if r["pattern"] == "data/ab_checklist/{date}_ab_checklist_enriched.csv"]
+        self.assertEqual(len(peer), 1)
+        self.assertEqual(peer[0]["source_path"], f"data/peers/{day}_peer_rs.csv")
+        self.assertEqual(peer[0]["status"], "copied")
+        self.assertEqual(peer[0]["sha256"], hashlib.sha256(b"today-peers").hexdigest())
+        self.assertEqual(len(ab), 1)
+        self.assertEqual(ab[0]["source_path"],
+                         f"data/ab_checklist/{day}_ab_checklist_enriched.csv")
+        self.assertEqual(ab[0]["status"], "missing")
+        self.assertNotIn("2026-11-03", ab[0]["source_path"])
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

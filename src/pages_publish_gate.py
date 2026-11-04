@@ -230,6 +230,31 @@ def stamp_missed_note(path: Path, day: str) -> None:
     path.write_text(text, encoding="utf-8")
 
 
+def stamp_recorded_misses(path: Path, root: Path | None = None) -> None:
+    """Put every recorded missed session back on a rewritten main page.
+
+    The paper dashboard is rendered from the equity curve. A missed session
+    is not a curve row, so a later paper land must restore the note from
+    ``data/paper/missed.json`` or the one-session gate cannot see it.
+    """
+    days = sorted(missed_sessions(root))
+    if not days or not path.is_file():
+        return
+    shown = " ".join(f"{day} missed" for day in days)
+    note = (
+        f'<p id="missed-note">{shown} — stock book was not on main before '
+        f"09:30 ET, so these sessions are not on the paper curve.</p>"
+    )
+    text = path.read_text(encoding="utf-8")
+    if _MISSED_NOTE.search(text):
+        text = _MISSED_NOTE.sub(note, text, count=1)
+    elif "<body>" in text:
+        text = text.replace("<body>", "<body>" + note, 1)
+    else:
+        text = note + "\n" + text
+    path.write_text(text, encoding="utf-8")
+
+
 def main_page_fresh(date: str, *, root: Path | None = None,
                     now: datetime | None = None) -> bool:
     """False when the main page data-asof is older than ``date``.

@@ -1,0 +1,1 @@
+{"date": "2026-11-04", "freeze": "research/input_freeze/2026-11-04/manifest.json", "reason": "sealed ticket hashed weather and join bytes rewritten after the 09:20 ET freeze, and same-day peer_rs and ab_checklist_enriched had no freeze row", "ticket": "data/day_board/2026-11-04_strategy_tickets.json"}
