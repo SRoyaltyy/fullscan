@@ -100,7 +100,7 @@ jobs:
         with:
           python-version: "3.12"
       - name: Install
-        run: pip install pandas pyarrow openpyxl requests
+        run: pip install pandas numpy pyarrow openpyxl requests yfinance
       - name: Required inputs, independent of previous outputs
         id: readiness
         env:
@@ -146,6 +146,13 @@ jobs:
           PY
           test -s data/day_board/today_strategies.json
           test -s dashboard/factor-mine/strategy_tickets.json
+      - name: Render main page from the paper curve
+        if: steps.readiness.outputs.ready == 'true'
+        run: |
+          set -euo pipefail
+          # Regenerates dashboard/index.html from the printed curve.
+          # Does not append buys, sells, or curve rows.
+          python3 -m src.paper_trade_append --render-only
       - name: Push tickets
         if: always() && steps.readiness.outputs.ready == 'true'
         env:

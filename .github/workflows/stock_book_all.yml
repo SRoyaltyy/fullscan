@@ -122,8 +122,18 @@ jobs:
           fi
           if [ "$ET_HM" -lt 535 ] && [ "$FORCE" != "true" ] \
              && [ "${{ github.event_name }}" != "workflow_dispatch" ]; then
-            echo "before 05:35 ET — ${{ github.event_name }} is not a book. 06:10 schedule + 05:40 scrape own the clock."
-            echo "go=no" >> "$GITHUB_OUTPUT"
+            # Run 41815073906: Pre-Open succeeded at 10:34Z (05:34 ET).
+            # `all` was skipped, so no paper render and no dashboard artifact.
+            # EST pre-open (09:55 UTC) finishes before 05:35 every winter.
+            # A successful Pre-Open is not the 01:00 hollow-book case.
+            if [ "${{ github.event_name }}" = "workflow_run" ] \
+               && [ "${{ github.event.workflow_run.conclusion }}" = "success" ]; then
+              echo "successful Pre-Open before 05:35 ET — book and paper dashboard still run"
+              echo "go=yes" >> "$GITHUB_OUTPUT"
+            else
+              echo "before 05:35 ET — ${{ github.event_name }} is not a book. 06:10 schedule + 05:40 scrape own the clock."
+              echo "go=no" >> "$GITHUB_OUTPUT"
+            fi
           else
             echo "go=yes" >> "$GITHUB_OUTPUT"
           fi
@@ -308,6 +318,14 @@ jobs:
             01_daily/catalyst/
             03_scoreboard/
             dashboard/
+          if-no-files-found: warn
+
+      - name: Upload dashboard artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: dashboard
+          path: dashboard/index.html
           if-no-files-found: warn
 
       - name: Commit everything (incl. dashboard + paper)

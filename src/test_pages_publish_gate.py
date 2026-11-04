@@ -48,6 +48,13 @@ def _fm_and_tickets(root: Path, date: str) -> None:
         "date": date, "session_open": date, "clock_legal_for": date,
         "strategies": {"a": {"family": "paper"}},
     })
+    page = root / "dashboard" / "index.html"
+    page.parent.mkdir(parents=True, exist_ok=True)
+    page.write_text(
+        "<html><head><meta charset=\"utf-8\"></head></html>",
+        encoding="utf-8",
+    )
+    gate.stamp_data_asof(page, date)
 
 
 def test_required_ok_partial_catalyst_ready() -> None:
@@ -117,6 +124,53 @@ def test_blocked_without_tickets() -> None:
         v = gate.evaluate(date, root=root)
         assert v["ready"] is False
         assert "tickets" in v["reason"]
+
+
+def test_main_page_fresh_blocks_a_stale_stamp() -> None:
+    """A page older than the session being published does not go out."""
+    with tempfile.TemporaryDirectory() as d:
+        root = Path(d)
+        date = "2026-10-07"
+        _board(root, date, [
+            _proc("stock_book", [_file("book_json", "required", "OK")]),
+            _proc("publish", [_file("dash_html", "required", "OK")]),
+        ])
+        _fm_and_tickets(root, date)
+        gate.stamp_data_asof(root / "dashboard" / "index.html", "2026-10-06")
+        stale = gate.evaluate(date, root=root)
+        assert stale["ready"] is False
+        assert stale["main_page_fresh"] is False
+        assert stale["main_page_asof"] == "2026-10-06"
+        assert "data-asof" in stale["reason"]
+        assert "older than 2026-10-07" in stale["reason"]
+        assert gate.main_page_fresh(date, root=root) is False
+        gate.stamp_data_asof(root / "dashboard" / "index.html", date)
+        fresh = gate.evaluate(date, root=root)
+        assert fresh["ready"] is True
+        assert fresh["main_page_fresh"] is True
+        assert gate.main_page_fresh(date, root=root) is True
+        assert gate.main_page_fresh("2026-10-08", root=root) is False
+        # Empty date uses the latest completed session, not the wall clock
+        # of the fixture. Before the 2026-10-07 bell the session is 10-06,
+        # and a 10-07 stamp still covers it.
+        preopen = datetime(2026, 10, 7, 8, 40, tzinfo=ET)
+        assert gate.main_page_fresh("", root=root, now=preopen) is True
+        assert gate.latest_completed_session(preopen) == "2026-10-06"
+
+
+def test_legacy_curve_dates_count_as_data_asof() -> None:
+    html = (
+        '<html><head><meta charset="utf-8"></head><script>const D = '
+        '{"generated":"2026-10-07T05:42:53","dates":["2026-08-13","2026-10-07"]};'
+        "</script></html>"
+    )
+    assert gate.data_asof_from_html(html) == "2026-10-07"
+    stamped = html.replace(
+        "<meta charset=\"utf-8\">",
+        '<meta charset="utf-8">\n<meta name="data-asof" content="2026-11-03">',
+        1,
+    )
+    assert gate.data_asof_from_html(stamped) == "2026-11-03"
 
 
 def test_blocked_when_today_json_is_yesterday() -> None:
@@ -509,6 +563,15 @@ def test_workflows_wire_the_gate() -> None:
     assert "gh-pages-deploy" in dep
     assert "src.pages_publish_gate" in book
     assert "gh workflow run deploy-dashboard.yml" in book
+    assert "name: dashboard" in book
+    pub = (root / "scripts" / "publish_dashboard.sh").read_text(encoding="utf-8")
+    assert "jev-train" in dep
+    assert "overlay jev-train" in dep
+    assert "jev-train" in pub
+    assert "newest successful Stock Book ALL" in dep
+    main_fallback = dep.index("Used dashboard/index.html from main")
+    artifact_fallback = dep.index("newest successful Stock Book ALL")
+    assert artifact_fallback < main_fallback
 
 
 def main() -> None:
@@ -517,6 +580,8 @@ def main() -> None:
         test_catalyst_fail_alone_does_not_block,
         test_fallback_when_book_required_missing,
         test_blocked_without_tickets,
+        test_main_page_fresh_blocks_a_stale_stamp,
+        test_legacy_curve_dates_count_as_data_asof,
         test_blocked_when_today_json_is_yesterday,
         test_live_2026_09_16_board_is_ready,
         test_dash_template_has_session_and_pack_stamp,

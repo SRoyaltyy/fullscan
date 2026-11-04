@@ -1,0 +1,40 @@
+name: Staleness canary
+
+# 22:00 UTC weekdays. Each source's newest date on main and on the live
+# Pages site is compared with the latest completed NYSE session.
+# Lag 0 except webull_sim days.jsonl and jev-train days.json (lag 1).
+# Writes data/health/staleness.json and fails when any source is over.
+
+on:
+  schedule:
+    - cron: "0 22 * * 1-5"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: staleness-canary
+  cancel-in-progress: false
+
+jobs:
+  canary:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Compare main and Pages with the latest session
+        run: python3 -m src.staleness_canary
+      - name: Upload staleness report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: staleness
+          path: data/health/staleness.json
+          if-no-files-found: warn

@@ -9,6 +9,7 @@ from pathlib import Path
 
 from .jev_day import (
     DAY_CAP,
+    append_new_days,
     list_parse_days,
     load_day_rows,
     run_day_draw,
@@ -115,6 +116,33 @@ def test_write_days_index_and_cap() -> None:
         assert len(rows) == DAY_CAP
 
 
+def test_days_index_appends_and_keeps_past_rows() -> None:
+    with tempfile.TemporaryDirectory() as tmp:
+        root = Path(tmp)
+        news = root / "01_daily" / "news"
+        _write(news / "2026-09-28_judge.json", {"top_items": ["old"]})
+        path = write_days_index(root=root, news_dir=news)
+        original = path.read_bytes()
+        stored = json.loads(original)
+        stored["days"][0]["parsed"] = False
+        stored["days"][0]["note"] = "sealed"
+        path.write_text(json.dumps(stored, indent=2) + "\n", encoding="utf-8")
+        sealed = path.read_bytes()
+        _write(news / "2026-09-28_parsed.json", {"all_items": []})
+        _write(news / "2026-09-29_parsed.json", {"all_items": []})
+        again = append_new_days(root=root, news_dir=news)
+        blob = json.loads(again.read_text(encoding="utf-8"))
+        assert blob["days"][0]["date"] == "2026-09-28"
+        assert blob["days"][0]["parsed"] is False
+        assert blob["days"][0]["note"] == "sealed"
+        assert blob["days"][1]["date"] == "2026-09-29"
+        assert blob["days"][1]["parsed"] is True
+        frozen = again.read_bytes()
+        append_new_days(root=root, news_dir=news)
+        assert again.read_bytes() == frozen
+        assert sealed != original
+
+
 def test_page_day_script_parses_repo_news() -> None:
     node = shutil.which("node")
     if not node:
@@ -154,6 +182,7 @@ def main() -> None:
         test_load_day_rows_falls_back_to_digest,
         test_run_day_draw_is_code_first_and_needs_no_key,
         test_write_days_index_and_cap,
+        test_days_index_appends_and_keeps_past_rows,
         test_page_day_script_parses_repo_news,
     ]
     failed = 0

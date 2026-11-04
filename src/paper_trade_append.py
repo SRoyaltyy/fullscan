@@ -12,6 +12,7 @@ a sealed buy/sell day that would change fails closed.
 from __future__ import annotations
 
 import argparse
+import ast
 import csv
 import io
 import json
@@ -297,7 +298,224 @@ def _write_fresh(curve_rows, trade_rows, skips) -> None:
     if skips:
         _commit_csv('paper_skipped', 'skipped.csv', _frame_csv(pd.DataFrame(skips)), 'date')
 
-def run(date: str | None=None, top_n: int=10, capital: float | None=None) -> None:
+def _csv_number(value, *, as_int: bool = False):
+    if value is None or value == '':
+        return None
+    if isinstance(value, bool):
+        return value
+    if isinstance(value, int):
+        return value
+    if isinstance(value, float):
+        return int(value) if as_int and value.is_integer() else value
+    text = str(value).strip()
+    if text == '':
+        return None
+    try:
+        if as_int or text.lstrip('-').isdigit():
+            return int(text)
+        return float(text)
+    except ValueError:
+        return value
+
+def _csv_struct(value):
+    if isinstance(value, str) and value[:1] in '[{':
+        try:
+            return ast.literal_eval(value)
+        except (ValueError, SyntaxError):
+            return value
+    return value
+
+def _typed_trade_rows(rows: list[dict]) -> list[dict]:
+    """CSV fills use the same types write_dashboard stored on 2026-10-07."""
+    out = []
+    for row in rows:
+        item = dict(row)
+        for key in ('shares', 'ab_score'):
+            if key in item:
+                item[key] = _csv_number(item.get(key), as_int=True)
+        for key in ('price', 'fees', 'amount', 'realized_pnl', 'cash_before', 'cash_after'):
+            if key in item:
+                item[key] = _csv_number(item.get(key))
+        if 'ab_trail' in item:
+            item['ab_trail'] = _csv_struct(item.get('ab_trail')) or []
+        out.append(item)
+    return out
+
+def _typed_roundtrip_rows(rows: list[dict]) -> list[dict]:
+    """Disk roundtrips match the live page: ab_score stays text, money is numeric."""
+    ints = {'shares', 'held_sessions', 'held_cal_days', 'sell_ab_score'}
+    floats = {'buy_px', 'sell_px', 'last', 'realized_pnl', 'unrealized_pnl', 'buy_fees', 'sell_fees'}
+    out = []
+    for row in rows:
+        item = dict(row)
+        for key in ints:
+            if key in item:
+                item[key] = _csv_number(item.get(key), as_int=True)
+        for key in floats:
+            if key in item:
+                item[key] = _csv_number(item.get(key))
+        for key in ('buy_trail', 'sell_trail'):
+            if key in item:
+                item[key] = _csv_struct(item.get(key))
+        if not str(item.get('sell_date') or '').strip():
+            item['sell_date'] = None
+            if item.get('sell_ab_context') in ('', None):
+                item['sell_ab_context'] = None
+            if 'ab_score' in item:
+                item['ab_score'] = _csv_number(item.get('ab_score'), as_int=True)
+        out.append(item)
+    return out
+
+def _stamp_dashboard(asof: str) -> None:
+    """Stamp the page write_dashboard just wrote. The engine file stays pinned."""
+    from src.pages_publish_gate import stamp_data_asof
+    stamp_data_asof(engine.DASH_DIR / 'index.html', asof)
+
+def _restore_bytes(path: Path, before: bytes | None) -> None:
+    if before is None:
+        if path.is_file():
+            path.unlink()
+        return
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_bytes(before)
+
+def _last_sealed_sell_day(text: str) -> str:
+    """Newest sell_date that must not change. The open tail is the newest day."""
+    from src import past_day_lock as pdl
+    rows = pdl.load_manifest()
+    seed = pdl._seed_row(rows, 'paper_roundtrips')
+    watermark = str((seed or {}).get('watermark') or '')
+    locked = [str(row.get('date') or '') for row in pdl._day_rows(rows, 'paper_roundtrips')]
+    locked = [day for day in locked if day]
+    if watermark:
+        locked.append(watermark)
+    if text.strip():
+        _header, days, _undated = pdl._split_csv(text, 'sell_date')
+        dates = sorted(days)
+        if len(dates) >= 2:
+            locked.extend(dates[:-1])
+        elif len(dates) == 1 and watermark and dates[0] <= watermark:
+            locked.append(dates[0])
+    return max(locked) if locked else ''
+
+def _dated_roundtrip_lines(text: str) -> dict[str, list[str]]:
+    if not text.strip():
+        return {}
+    from src import past_day_lock as pdl
+    _header, days, _undated = pdl._split_csv(text, 'sell_date')
+    return {day: list(lines) for day, lines in days.items()}
+
+def _sealed_roundtrip_rows_held(before: bytes | None, after: bytes) -> bool:
+    """True when no row dated on or before the last sealed day was edited or added."""
+    old = before.decode('utf-8') if before else ''
+    new = after.decode('utf-8')
+    limit = _last_sealed_sell_day(old)
+    if not limit:
+        return True
+    old_days = _dated_roundtrip_lines(old)
+    new_days = _dated_roundtrip_lines(new)
+    for day, lines in new_days.items():
+        if day <= limit and lines != old_days.get(day):
+            return False
+    for day, lines in old_days.items():
+        if day <= limit and new_days.get(day) != lines:
+            return False
+    return True
+
+def _commit_roundtrips(new_text: str) -> bool:
+    """Write roundtrips, or leave the file untouched when a sealed day would change.
+
+    A past-day lock refusal only re-renders the page. Rows dated on or
+    before the last sealed sell day are never modified or added.
+    """
+    from src import past_day_lock as pdl
+    path = engine.PAPER_DIR / 'roundtrips.csv'
+    before = path.read_bytes() if path.is_file() else None
+    try:
+        _commit_csv('paper_roundtrips', 'roundtrips.csv', new_text, 'sell_date')
+    except SystemExit as exc:
+        if 'past-day lock' not in str(exc) or 'paper_roundtrips' not in str(exc):
+            _restore_bytes(path, before)
+            raise
+        _restore_bytes(path, before)
+        print(f'[paper] {exc}; roundtrips file unchanged; refreshing the page', flush=True)
+        return False
+    if pdl.in_repo(path):
+        after = path.read_bytes() if path.is_file() else b''
+        if not _sealed_roundtrip_rows_held(before, after):
+            _restore_bytes(path, before)
+            print('[paper] refused roundtrip write: a row on or before the last sealed day would change', flush=True)
+            return False
+    return True
+
+def _sleeve_book(state: dict) -> dict:
+    out = {}
+    for key, sleeve in (state or {}).items():
+        if isinstance(sleeve, dict) and 'pos' in sleeve and 'cash' in sleeve:
+            out[str(key)] = sleeve
+    return out
+
+def _refresh_dashboard_from_disk(books: list[tuple[str, Path]], top_n: int, capital: float, fees: dict) -> None:
+    """Render the main page from the printed curve, state, and trades.
+
+    Read-only: equity, trades, roundtrips, and state are not written.
+    """
+    curve_rows = _read_csv_rows(engine.PAPER_DIR / 'equity_curve.csv')
+    if not curve_rows:
+        print('[paper] no curve on disk; dashboard not rendered', flush=True)
+        return
+    state_path = engine.PAPER_DIR / 'state.json'
+    if not state_path.is_file():
+        print('[paper] state.json missing; dashboard not rendered', flush=True)
+        return
+    try:
+        state = json.loads(state_path.read_text(encoding='utf-8'))
+    except json.JSONDecodeError:
+        print('[paper] state.json is unreadable; dashboard not rendered', flush=True)
+        return
+    st = _sleeve_book(state if isinstance(state, dict) else {})
+    if not st:
+        print('[paper] state.json has no sleeves; dashboard not rendered', flush=True)
+        return
+    trade_rows = _typed_trade_rows(_read_csv_rows(engine.PAPER_DIR / 'trades.csv'))
+    skips = _read_csv_rows(engine.PAPER_DIR / 'skipped.csv')
+    trips = _typed_roundtrip_rows(_read_csv_rows(engine.PAPER_DIR / 'roundtrips.csv'))
+    last = _max_date(curve_rows)
+    tickers = _open_tickers(st)
+    last_book = None
+    for session, path in books:
+        if session <= last:
+            last_book = (session, path)
+    if last_book is None and books:
+        last_book = books[-1]
+    if last_book:
+        book = json.loads(last_book[1].read_text(encoding='utf-8'))
+        for picks in engine.picks_from_book(book, top_n).values():
+            tickers.update(picks)
+    anchor = str(curve_rows[0].get('date') or '')[:10]
+    cache_path = engine.PRICE_CACHE
+    cache_before = cache_path.read_bytes() if cache_path.is_file() else None
+    try:
+        prices = engine.get_prices(sorted(tickers), anchor or last, last)
+    finally:
+        _restore_bytes(cache_path, cache_before)
+    curve = pd.DataFrame(curve_rows)
+    for col in ('equity', 'cash', 'invested', 'fees_cum', 'realized_cum'):
+        if col in curve.columns:
+            curve[col] = pd.to_numeric(curve[col], errors='coerce')
+    stats = [engine.sleeve_stats(s, st[s], prices, capital) for s in st]
+    last_picks = {}
+    if last_book:
+        last_picks = engine.picks_from_book(json.loads(last_book[1].read_text(encoding='utf-8')), top_n)
+    cal = [d for d, _ in books]
+    cal.extend((str(r.get('date') or '')[:10] for r in curve_rows))
+    sess_ix = engine.session_index(engine.trading_calendar(prices, cal))
+    engine.write_report(stats, last, capital)
+    engine.write_dashboard(curve, stats, st, prices, last, capital, fees, trade_rows, last_picks=last_picks, book_dates=[d for d, _ in books], roundtrips=trips, skipped=skips, session_ix=sess_ix)
+    _stamp_dashboard(last)
+    print(f'[paper] rendered dashboard through {last} from the curve on disk (no rows rewritten)', flush=True)
+
+def run(date: str | None=None, top_n: int=10, capital: float | None=None, render_only: bool=False) -> None:
     fees = engine.load_fees()
     capital = capital or float(fees['paper_account']['starting_capital_per_sleeve'])
     books = engine.list_books()
@@ -306,6 +524,9 @@ def run(date: str | None=None, top_n: int=10, capital: float | None=None) -> Non
     if not books:
         raise SystemExit('[paper] no stock books found — run stock_book first')
     engine.PAPER_DIR.mkdir(parents=True, exist_ok=True)
+    if render_only:
+        _refresh_dashboard_from_disk(books, top_n, capital, fees)
+        return
     curve_path = engine.PAPER_DIR / 'equity_curve.csv'
     trades_path = engine.PAPER_DIR / 'trades.csv'
     state_path = engine.PAPER_DIR / 'state.json'
@@ -330,6 +551,7 @@ def run(date: str | None=None, top_n: int=10, capital: float | None=None) -> Non
         books_to_sim = _eligible_append_books([(d, p) for d, p in books if d > last_printed])
         if not books_to_sim:
             print(f'[paper] curve already through {last_printed}; nothing eligible to append', flush=True)
+            _refresh_dashboard_from_disk(books, top_n, capital, fees)
             return
         print(f'[paper] resume after {last_printed}: {len(books_to_sim)} book session(s) to append', flush=True)
     else:
@@ -352,6 +574,7 @@ def run(date: str | None=None, top_n: int=10, capital: float | None=None) -> Non
     if not curve_rows:
         if resume:
             print('[paper] no new priced session to append', flush=True)
+            _refresh_dashboard_from_disk(books, top_n, capital, fees)
             return
         raise SystemExit(f'[paper] no price data on/before {books_to_sim[0][0]} — cannot simulate. Check yfinance connectivity.')
     if resume and any((str(r.get('date') or '')[:10] <= last_printed for r in curve_rows)):
@@ -374,7 +597,8 @@ def run(date: str | None=None, top_n: int=10, capital: float | None=None) -> Non
     else:
         _write_fresh(curve_rows, trade_rows, skips)
     if trips:
-        _commit_csv('paper_roundtrips', 'roundtrips.csv', _frame_csv(pd.DataFrame(trips)), 'sell_date')
+        if not _commit_roundtrips(_frame_csv(pd.DataFrame(trips))):
+            trips = _typed_roundtrip_rows(_read_csv_rows(engine.PAPER_DIR / 'roundtrips.csv'))
     (engine.PAPER_DIR / 'state.json').write_text(json.dumps(st, indent=2, default=str), encoding='utf-8')
     curve = pd.DataFrame(prior_curve + curve_rows)
     for col in ('equity', 'cash', 'invested', 'fees_cum', 'realized_cum'):
@@ -386,6 +610,7 @@ def run(date: str | None=None, top_n: int=10, capital: float | None=None) -> Non
     last_picks = engine.picks_from_book(json.loads(last_book[1].read_text(encoding='utf-8')), top_n)
     engine.write_report(stats, last, capital)
     engine.write_dashboard(curve, stats, st, prices, last, capital, fees, all_trades, last_picks=last_picks, book_dates=[d for d, _ in books], roundtrips=trips, skipped=skips, session_ix=sess_ix)
+    _stamp_dashboard(last)
     n_closed = sum((1 for t in trips if t['status'] == 'closed'))
     n_open = sum((1 for t in trips if t['status'] == 'open'))
     print(f'[paper] appended {len(curve_rows)} curve rows from {len(books_to_sim)} book(s), {len(trade_rows)} new trades ({n_closed} closed pairs, {n_open} open lots, {len(skips)} not taken), curves → dashboard/index.html, summary → 03_scoreboard/PAPER_TRADING.md')
@@ -396,8 +621,10 @@ def main() -> None:
     ap.add_argument("--date", default=None)
     ap.add_argument("--top", type=int, default=10)
     ap.add_argument("--capital", type=float, default=None)
+    ap.add_argument("--render-only", action="store_true",
+                    help="Rewrite dashboard/index.html from the curve on disk. Do not append.")
     args = ap.parse_args()
-    run(date=args.date, top_n=args.top, capital=args.capital)
+    run(date=args.date, top_n=args.top, capital=args.capital, render_only=args.render_only)
 
 
 if __name__ == "__main__":
