@@ -1,6 +1,6 @@
 {
  "date": "2026-11-04",
- "generated_at": "2026-11-04T07:03:13.363102-05:00",
+ "generated_at": "2026-11-04T10:01:41.920736-05:00",
  "stance_vocabulary": [
   "favorable",
   "neutral",
@@ -17,21 +17,23 @@
   "fed_score": 0.0,
   "dollar_oil_score": 1.0,
   "futures_score": 0.5,
-  "yields": "flat",
-  "yields_source": "llm_factor_fallback",
+  "yields": "falling",
+  "yields_source": "fred_dgs10",
+  "dgs10_delta_1d": -0.03,
+  "dgs10_current": 4.91,
   "dollar": "soft",
   "dollar_source": "dxy",
-  "dxy_pct_1d": -0.51,
-  "vix_ratio": 0.856,
-  "vix_spot": 18.2,
-  "vix_delta_1d": -2.63,
+  "dxy_pct_1d": -0.44,
+  "vix_ratio": 0.898,
+  "vix_spot": 17.24,
+  "vix_delta_1d": -3.59,
   "vix_ratio_source": "vix/vix3m",
   "vix": "falling",
-  "oil_pct_1d": -0.97,
-  "oil": "flat",
+  "oil_pct_1d": -2.97,
+  "oil": "falling",
   "fear_greed": null,
   "fear_greed_label": null,
-  "regime_corr": 0.796,
+  "regime_corr": 0.506,
   "sectors": {
    "Basic Materials": {
     "score": -4.97,
@@ -316,14 +318,14 @@
   },
   "lev": {
    "high": {
-    "stance": "neutral",
+    "stance": "favorable",
     "confidence": "low",
-    "why": "—"
+    "why": "easing + risk-on — leverage amplifies the upside [factors + general]"
    },
    "low": {
     "stance": "neutral",
     "confidence": "low",
-    "why": "—"
+    "why": "low leverage lags melt-ups"
    },
    "mid": {
     "stance": "neutral",
@@ -338,14 +340,14 @@
   },
   "style": {
    "growth": {
-    "stance": "neutral",
-    "confidence": "low",
-    "why": "yields flat/unknown"
+    "stance": "favorable",
+    "confidence": "medium",
+    "why": "yields falling — duration/growth re-rates [factor: Bond yields]"
    },
    "value": {
     "stance": "neutral",
     "confidence": "low",
-    "why": "yields flat/unknown"
+    "why": "value lags duration rallies"
    },
    "blend": {
     "stance": "neutral",
