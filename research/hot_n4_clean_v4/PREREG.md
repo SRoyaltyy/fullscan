@@ -2,9 +2,10 @@
 
 - status: locked before any score. This commit has no return, no win rate, and no trade outcome.
 - written: 2026-09-27
-- fingerprint_sha256: bac073d1a0e1f64c39ca1e817d5919dc46266ecfa407665aec34afabc6410f67
+- fingerprint_sha256: a45073dd2acd820b28d4a4a6d7cab5f3a9d3093ba67ec48332d8bc13885a186a
 - engine restatement: 2026-09-28 ET, Cyrus approved. `src/factor_mine.py` sha256 moved from `ce4f1954b0c5e97009dedf6c2d7604d8c225a5633c96090d6e2b20f9e04a9272` to `b51eed634fb5ce213e3a2e1f85c83749e97ee42519b33d1d60ad7ad0c0047860`. See RESTATEMENTS.md.
 - engine restatement: 2026-11-04. `src/factor_mine.py` sha256 moved from `b51eed634fb5ce213e3a2e1f85c83749e97ee42519b33d1d60ad7ad0c0047860` to `f904788699186111ad246dcc2a0ed9c8ebd2048ff096196ce8bc8a9d11872e0c`. The covered fingerprint moved from `5059366464a6fdd19571436296a759717d077a413cc0c693dbbb61f5dc295c5e` to `bac073d1a0e1f64c39ca1e817d5919dc46266ecfa407665aec34afabc6410f67` because section 11 records that pin. See RESTATEMENTS.md.
+- engine restatement: 2026-11-04. `src/ticker_lookback.py` sha256 moved from `1e08f2f42c732407f834847f2e347b0218d8a18b2612a2ee565f24bcc6a2731e` to `30d7b899d839367671b6969cf3527d2f7acae0e5d67e88ee97c27f4ae318b7ff`. The covered fingerprint moved from `bac073d1a0e1f64c39ca1e817d5919dc46266ecfa407665aec34afabc6410f67` to `a45073dd2acd820b28d4a4a6d7cab5f3a9d3093ba67ec48332d8bc13885a186a` because section 11 records that pin. See RESTATEMENTS.md.
 - fingerprint_scope: SHA-256 of the UTF-8 bytes after the line `<!-- BEGIN COVERED -->`, including the final newline. Line endings are LF. The header above the marker is not covered.
 - study: `research/hot_n4_clean_v4/`. New files only. No edit to an engine, to `src/`, to `forward_shadow`, to `hot_n4_clean_v1`, to `hot_n4_clean_v2`, to `hot_n4_clean_v3`, or to another study.
 - sessions: 2026-08-13 through 2026-09-25. The before window ends 2026-09-11. The after window starts 2026-09-14 and can only reject.
@@ -379,7 +380,7 @@ Engine files, content sha256. A later run whose bytes differ stops.
 | `src/gainer_capture.py` | `ee03ea4d5cfad51dddcf3dc24b434b63fd19169ad0aacf657d505f5c5da82af5` |
 | `src/gainer_asof.py` | `43b36e5a17b7ffb07ddbee6ecb7b047a03281513fd9670d1828abf427e27f51e` |
 | `src/paper_trade.py` | `54e70b314dc0b959b45573343a234f46bb396588ed7f65dff678d79c88d23f9d` |
-| `src/ticker_lookback.py` | `1e08f2f42c732407f834847f2e347b0218d8a18b2612a2ee565f24bcc6a2731e` |
+| `src/ticker_lookback.py` | `30d7b899d839367671b6969cf3527d2f7acae0e5d67e88ee97c27f4ae318b7ff` |
 
 ## 12. Rule 9 — Fills, slippage, and the liquidity cap
 

@@ -125,13 +125,19 @@ ENGINE_SHA256 = {
     # a partial Yahoo page (build_panel, frozen is None only). A frozen day
     # never enters that branch. Sealed picks, fills, and P&L are unchanged.
     # See RESTATEMENTS.md.
+    #
+    # Re-pinned 2026-11-04. ticker_lookback.py previous sha256 was
+    # 1e08f2f42c732407f834847f2e347b0218d8a18b2612a2ee565f24bcc6a2731e.
+    # Commit b1a86cd1d7 memoizes session_bar and the NYSE holiday year.
+    # The memo returns the same prints. Sealed picks, fills, and P&L
+    # are unchanged. See RESTATEMENTS.md.
     "src/factor_mine.py": "f904788699186111ad246dcc2a0ed9c8ebd2048ff096196ce8bc8a9d11872e0c",
     "src/factor_mine_book.py": "1fc16961b2680ea7fa2b4f6939402176b27f20c38d0ceda85826d674f4ecb76a",
     "src/ohlc_ripper.py": "7b3d674b2f4b5f5e7c52331543b7e0abf24219c3a3d0f2a178476842783bf641",
     "src/gainer_capture.py": "ee03ea4d5cfad51dddcf3dc24b434b63fd19169ad0aacf657d505f5c5da82af5",
     "src/gainer_asof.py": "43b36e5a17b7ffb07ddbee6ecb7b047a03281513fd9670d1828abf427e27f51e",
     "src/paper_trade.py": "54e70b314dc0b959b45573343a234f46bb396588ed7f65dff678d79c88d23f9d",
-    "src/ticker_lookback.py": "1e08f2f42c732407f834847f2e347b0218d8a18b2612a2ee565f24bcc6a2731e",
+    "src/ticker_lookback.py": "30d7b899d839367671b6969cf3527d2f7acae0e5d67e88ee97c27f4ae318b7ff",
 }
 
 # IRONCLAD jump check, src/breadth_rank_v1c_bars.py.
