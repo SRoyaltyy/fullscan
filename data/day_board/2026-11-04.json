@@ -1,6 +1,6 @@
 {
   "date": "2026-11-04",
-  "generated_at": "2026-11-04T16:38:46.415549-05:00",
+  "generated_at": "2026-11-04T18:51:38.080305-05:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -182,7 +182,7 @@
       "inputs_ready": true,
       "n_req_ok": 7,
       "n_req": 9,
-      "n_opt_ok": 2,
+      "n_opt_ok": 3,
       "n_opt": 14,
       "files": [
         {
@@ -334,11 +334,16 @@
           "name": "Sector board JSON",
           "path": "01_daily/sectors/2026-11-04/_board.json",
           "role": "optional",
-          "status": "SKIP",
-          "reason": "optional \u2014 sector board not required",
-          "size": 0,
-          "said": "optional \u2014 sector board not required",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 6085,
+          "said": "0 up / 0 down / 0 flat",
+          "bullets": [
+            "XLB missing",
+            "XLC missing",
+            "XLY missing",
+            "XLP missing"
+          ]
         },
         {
           "key": "qc",
@@ -502,13 +507,18 @@
           "bullets": []
         }
       ],
-      "said": "general UP  10.848",
+      "said": "general UP  10.848 \u00b7 sectors 0 up / 0 down / 0 flat",
       "bullets": [
         "bad: Apple holiday margin guide soft",
         "bad: Palantir sell-the-news -3%",
         "bad: four tankers mined in Hormuz",
         "good: AMD +7% Q3 beat",
-        "good: Palantir raised guidance"
+        "good: Palantir raised guidance",
+        "XLB missing",
+        "XLC missing",
+        "XLY missing",
+        "XLP missing",
+        "XLE missing"
       ]
     },
     {
@@ -681,7 +691,7 @@
       "n_req_ok": 4,
       "n_req": 4,
       "n_opt_ok": 3,
-      "n_opt": 4,
+      "n_opt": 3,
       "files": [
         {
           "key": "in_general",
@@ -703,12 +713,17 @@
           "key": "in_board",
           "name": "Sector board JSON",
           "path": "01_daily/sectors/2026-11-04/_board.json",
-          "role": "optional",
-          "status": "SKIP",
-          "reason": "optional \u2014 sector board not required",
-          "size": 0,
-          "said": "optional \u2014 sector board not required",
-          "bullets": []
+          "role": "input",
+          "status": "OK",
+          "reason": "",
+          "size": 6085,
+          "said": "0 up / 0 down / 0 flat",
+          "bullets": [
+            "XLB missing",
+            "XLC missing",
+            "XLY missing",
+            "XLP missing"
+          ]
         },
         {
           "key": "in_actions",
@@ -816,7 +831,7 @@
           "role": "required",
           "status": "OK",
           "reason": "horizons=5 names=185",
-          "size": 1407517,
+          "size": 1407515,
           "said": "1d BUY CDNA, BLFS, VEEV, ILMN, PRCH, LAUR, CNK, TRU \u00b7 SELL NEOV, BIDU, ROIV, BAK, GFL, PAL \u00b7 0.7224999999999999",
           "bullets": []
         },
@@ -827,10 +842,10 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 67278,
+          "size": 67242,
           "said": "Stock book \u2014 2026-11-04",
           "bullets": [
-            "_Generated 2026-11-04T16:38:44.509958-05:00_",
+            "_Generated 2026-11-04T18:21:18.870697-05:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -866,7 +881,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "live-book poller + today.json (2026-11-04)",
-          "size": 15651308,
+          "size": 15651316,
           "said": "live-book poller + today.json (2026-11-04)",
           "bullets": []
         }
@@ -894,7 +909,7 @@
           "role": "input",
           "status": "OK",
           "reason": "horizons=5 names=185",
-          "size": 1407517,
+          "size": 1407515,
           "said": "1d BUY CDNA, BLFS, VEEV, ILMN, PRCH, LAUR, CNK, TRU \u00b7 SELL NEOV, BIDU, ROIV, BAK, GFL, PAL \u00b7 0.7224999999999999",
           "bullets": []
         },
@@ -905,7 +920,7 @@
           "role": "required",
           "status": "OK",
           "reason": "live-book poller + today.json (2026-11-04)",
-          "size": 15651308,
+          "size": 15651316,
           "said": "live-book poller + today.json (2026-11-04)",
           "bullets": []
         },
@@ -1073,7 +1088,22 @@
       "score": "10.848",
       "direction": "up"
     },
-    "sectors": {},
+    "sectors": {
+      "said": "0 up / 0 down / 0 flat",
+      "bullets": [
+        "XLB missing",
+        "XLC missing",
+        "XLY missing",
+        "XLP missing",
+        "XLE missing",
+        "XLF missing",
+        "XLV missing",
+        "XLI missing",
+        "XLRE missing",
+        "XLK missing",
+        "XLU missing"
+      ]
+    },
     "news": {},
     "weather": {
       "said": "favorable 2 \u00b7 hostile 7 \u00b7 neutral 2",
@@ -2106,6 +2136,38 @@
         }
       ],
       "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest (close) \u2014 2026-11-04\n**Generated:** 2026-11-04T16:29:15.198149-05:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks closed sharply higher as Democratic sweep eased election uncertainty and oil fell on expectations of a shift in Iran policy\n**Prior close:** SPX +1.80%  Nasdaq +1.70%  Dow +2.90%\n**SPX:** +1.80%  **Nasdaq:** +1.70%  **Dow:** +2.90%\n**Oil:** crude $88.71 down (fell)\n**CPI/Fed:** \u2014\n**Leaders:** AMZN, MSFT, MCD, FSLR, MMM, SWK, ZBH, CRCT, KD, DUOL, AMD, TSLA, DJT, ADP, QCOM, ARM, MELI\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** \u2014\n**Geo/grain:** geo\n**Clock legal for:** 2026-11-05\n**Clock use:** `next_open`"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-11-04",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-04T18:51:36.707128-05:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-11-04_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 10102,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-11-04_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5891,
+          "preview": "# Weather report \u2014 2026-11-04\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        },
+        {
+          "path": "01_daily/weather/2026-11-04_weather.after-freeze-1.json",
+          "ok": true,
+          "reason": "",
+          "size": 10367,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-11-04\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade. \u00b7 weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62,"
     }
   ],
   "href": {
@@ -2305,6 +2367,14 @@
       "commit_msg": "auto: land finviz_market_digest_close [2026-11-04]",
       "workflow": "Finviz homepage market digest",
       "run_id": "41915749800",
+      "manifest": "research/input_freeze/2026-11-04/manifest.json"
+    },
+    {
+      "path": "data/day_board/2026-11-04.json",
+      "at": "2026-11-04T18:51:38-05:00",
+      "commit_msg": "auto: land weather [2026-11-04]",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "41934017092",
       "manifest": "research/input_freeze/2026-11-04/manifest.json"
     }
   ]
