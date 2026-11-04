@@ -68,3 +68,15 @@ The sealed 2026-09-28 open fills stay as written. A later `open_fill_correction`
 - reason: `build_panel` now counts new drops on an unlocked session and raises `HoldDay` (`incomplete session bars; refusing to bake a partial drop list`) when that count is above 40. The branch runs only when `fail_closed` is set and `frozen is None`. A frozen day never enters it. `pick_day`, `matches`, `should_exit`, and `lot_should_sell` are unchanged, so sealed picks, fills, and P&L are unchanged.
 - section 11 and `ENGINE_SHA256` now pin the new bytes. The other engine pins are unchanged. The covered prereg fingerprint moved from `5059366464a6fdd19571436296a759717d077a413cc0c693dbbb61f5dc295c5e` to `bac073d1a0e1f64c39ca1e817d5919dc46266ecfa407665aec34afabc6410f67` because section 11 is inside the covered body. The 2026-09-28 restatement above is unchanged.
 - sealed lines: unchanged. No `*.jsonl` ledger line, no locked-day file, and no buy/sell row on or before the last sealed day was edited or removed. `03_scoreboard/mover_lookback_action.json` moved its 97,558 `called_rows` into gzip shards; reassembled, those rows match the previous monolith.
+
+## Engine pin: memoize session bars
+
+2026-11-04. The study name stays `hot_n4_clean_v4`. This re-pin is the session-bar memo in commit `b1a86cd1d7`. No sealed row was rewritten or deleted, and no row on or before the last sealed day was filled in.
+
+- file: `src/ticker_lookback.py`
+- old sha256: `1e08f2f42c732407f834847f2e347b0218d8a18b2612a2ee565f24bcc6a2731e`
+- new sha256: `30d7b899d839367671b6969cf3527d2f7acae0e5d67e88ee97c27f4ae318b7ff`
+- commit: `b1a86cd1d7016ee41e00fb46fe4637f799a4ad08`
+- reason: combo replay called `session_bar` on every mark, and each call rebuilt the NYSE holiday year and looked the bar up again. The same `(ticker, date)` was asked for hundreds of times. The memo returns those same prints. `reset_price_caches` drops it when the store is replaced. `pick_day`, `matches`, `should_exit`, and `lot_should_sell` are unchanged. A full `replay_combo_starts` of `combo_se_5050_shared` on the 57-session panel was byte-identical to the uncached read (398,304 bytes).
+- section 11 and `ENGINE_SHA256` now pin the new bytes. The other engine pins are unchanged. The covered prereg fingerprint moved from `bac073d1a0e1f64c39ca1e817d5919dc46266ecfa407665aec34afabc6410f67` to `a45073dd2acd820b28d4a4a6d7cab5f3a9d3093ba67ec48332d8bc13885a186a` because section 11 is inside the covered body. The restatements above are unchanged.
+- sealed lines: unchanged. No `*.jsonl` ledger line, no locked-day file, and no buy/sell row on or before the last sealed day was edited or removed.

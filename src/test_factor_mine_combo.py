@@ -1,11 +1,16 @@
 """Leak-free factor-mine combination books — unit tests, no full remine."""
 from __future__ import annotations
 
+import json
+from datetime import datetime, timedelta
 from unittest import mock
+
+import pandas as pd
 
 from src import factor_mine as fm
 from src import factor_mine_book as fmb
 from src import factor_mine_combo as fmc
+from src import ticker_lookback as tl
 from src.price_store import _yf_bound
 
 DATES = [
@@ -502,6 +507,92 @@ def test_enrich_payload_legs_pins_long_led() -> None:
     assert out["featured"][0] in fmc.LONG_LED_PIN
 
 
+def _official_frame(rows: list[dict]) -> pd.DataFrame:
+    df = pd.DataFrame(rows)
+    df["date"] = df["date"].astype(str)
+    df["ticker"] = df["ticker"].astype(str).str.upper()
+    return df.set_index(["date", "ticker"])
+
+
+def _silence_finviz(dates: list[str]) -> None:
+    """Keep the miss path on the memo, not on a CSV read."""
+    for d in dates:
+        start = datetime.strptime(d, "%Y-%m-%d").date()
+        for i in range(0, 6):
+            tl._FINVIZ_BARS[(start + timedelta(days=i)).isoformat()] = {}
+
+
+def test_replay_combo_starts_memo_is_byte_identical() -> None:
+    """Cached session bars must not change a combo start-path replay."""
+    dates = list(DATES) + ["2026-09-07"]
+    rows = []
+    official = []
+    for i, d in enumerate(dates):
+        rows.append(_row(d, "INO", erd_days_since_E=0, erd_flag_E=1))
+        rows.append(_row(d, "ZZZ", news="bad"))
+        if d != "2026-09-07":
+            official.append({
+                "date": d, "ticker": "INO",
+                "open": 2.0 + i * 0.05, "high": 2.5, "low": 1.8,
+                "close": 2.2 + i * 0.05, "volume": 100,
+            })
+    frame = _official_frame(official)
+    bumped = _official_frame([{
+        "date": dates[0], "ticker": "INO",
+        "open": 9.0, "high": 9.5, "low": 8.5, "close": 9.2, "volume": 100,
+    }])
+    panel = _panel(rows, dates)
+    recs = [_rec("union_e_fresh_h3"), _rec("short_news_r_h3")]
+    regime = {d: {"predict_score": 1.0} for d in dates}
+
+    def replay():
+        tl.reset_price_caches()
+        tl._OHLC_BARS = frame
+        _silence_finviz(dates)
+        return fmc.replay_combo_starts(
+            panel, recs, [1, 1], fees=ZERO_FEES, regime=regime,
+            net="priority", name="t_memo")
+
+    saved = tl.session_bar
+    try:
+        tl.reset_price_caches()
+        tl._OHLC_BARS = frame
+        _silence_finviz(dates)
+        for ticker, day in (
+            ("INO", dates[0]), ("ZZZ", dates[0]),
+            ("INO", "2026-09-07"), ("", dates[0]),
+        ):
+            fresh = tl._session_bar_uncached(ticker, day)
+            cached = tl.session_bar(ticker, day)
+            assert fresh == cached
+            cached["open"] = 999
+            assert tl.session_bar(ticker, day) == fresh
+
+        tl.session_bar = tl._session_bar_uncached
+        before = replay()
+        tl.session_bar = saved
+        after = replay()
+    finally:
+        tl.session_bar = saved
+        tl.reset_price_caches()
+
+    before_b = json.dumps(before, ensure_ascii=False, separators=(",", ":"))
+    after_b = json.dumps(after, ensure_ascii=False, separators=(",", ":"))
+    assert before_b == after_b
+    assert before_b.encode("utf-8") == after_b.encode("utf-8")
+    buys = [b for path in before for b in (path.get("buys") or [])]
+    ino = [b for b in buys if b.get("ticker") == "INO"]
+    assert any(abs(float(b["price"]) - 2.0) < 1e-9 for b in ino), ino
+
+    tl.reset_price_caches()
+    try:
+        tl._OHLC_BARS = bumped
+        _silence_finviz(dates)
+        assert tl.session_bar("INO", dates[0])["open"] == 9.0
+    finally:
+        tl.reset_price_caches()
+
+
 if __name__ == "__main__":
     test_combo_specs_unique_and_members_known()
     test_choose_intents_priority_one_side()
@@ -521,4 +612,5 @@ if __name__ == "__main__":
     test_run_skips_combos_when_members_absent()
     test_leg_pnl_and_long_led_bar()
     test_enrich_payload_legs_pins_long_led()
-    print("18 factor-mine combo tests passed")
+    test_replay_combo_starts_memo_is_byte_identical()
+    print("19 factor-mine combo tests passed")

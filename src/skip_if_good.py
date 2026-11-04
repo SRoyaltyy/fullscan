@@ -85,22 +85,34 @@ def _observed_nyse(d: date) -> date:
     return d
 
 
+# Full-day closures are a pure function of the year. Combo replay used to
+# rebuild this set, including Easter, on every bar.
+_NYSE_HOLIDAYS: dict[int, frozenset] = {}
+
+
+def _nyse_holidays(year: int) -> frozenset:
+    holidays = _NYSE_HOLIDAYS.get(year)
+    if holidays is None:
+        y = year
+        holidays = frozenset({
+            _observed_nyse(date(y, 1, 1)),
+            _nth_weekday(y, 1, 0, 3),
+            _nth_weekday(y, 2, 0, 3),
+            _easter_gregorian(y) - timedelta(days=2),
+            _nth_weekday(y, 5, 0, -1),
+            _observed_nyse(date(y, 6, 19)),
+            _observed_nyse(date(y, 7, 4)),
+            _nth_weekday(y, 9, 0, 1),
+            _nth_weekday(y, 11, 3, 4),
+            _observed_nyse(date(y, 12, 25)),
+        })
+        _NYSE_HOLIDAYS[year] = holidays
+    return holidays
+
+
 def is_nyse_holiday(d: date) -> bool:
     """Full-day NYSE closures. No pandas — skip-if-good runs before pip."""
-    y = d.year
-    holidays = {
-        _observed_nyse(date(y, 1, 1)),
-        _nth_weekday(y, 1, 0, 3),
-        _nth_weekday(y, 2, 0, 3),
-        _easter_gregorian(y) - timedelta(days=2),
-        _nth_weekday(y, 5, 0, -1),
-        _observed_nyse(date(y, 6, 19)),
-        _observed_nyse(date(y, 7, 4)),
-        _nth_weekday(y, 9, 0, 1),
-        _nth_weekday(y, 11, 3, 4),
-        _observed_nyse(date(y, 12, 25)),
-    }
-    return d in holidays
+    return d in _nyse_holidays(d.year)
 
 
 def _session_date(d: date) -> bool:
