@@ -5,8 +5,8 @@
   "run_id": "41753022468",
   "model": "deepseek",
   "started_at": "2026-11-03T20:38:07-05:00",
-  "updated_at": "2026-11-03T20:39:14-05:00",
-  "heartbeat_at": "2026-11-03T20:39:14-05:00",
+  "updated_at": "2026-11-03T20:39:19-05:00",
+  "heartbeat_at": "2026-11-03T20:39:19-05:00",
   "stages": [
     {
       "name": "outcome",
@@ -54,11 +54,11 @@
     },
     {
       "name": "sector_reflect",
-      "state": "running",
+      "state": "ok",
       "started_at": "2026-11-03T20:39:14-05:00",
-      "ended_at": "",
-      "heartbeat_at": "2026-11-03T20:39:14-05:00",
-      "done": 0,
+      "ended_at": "2026-11-03T20:39:19-05:00",
+      "heartbeat_at": "2026-11-03T20:39:19-05:00",
+      "done": 1,
       "total": 1,
       "model": "deepseek",
       "error": ""
