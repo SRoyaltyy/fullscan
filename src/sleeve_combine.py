@@ -201,7 +201,8 @@ def _parse_ret(s) -> float | None:
 
 def load_regime(payload: dict | None = None) -> dict[str, dict]:
     if payload is None:
-        payload = json.loads(PAYLOAD.read_text(encoding="utf-8"))
+        from src.mover_lookback_action import load_action
+        payload = load_action(PAYLOAD)
     sweeps = ((payload.get("sweeps") or {}).get("featured") or {})
     params = ((sweeps.get("mover_days") or {}).get("params") or {})
     regime = params.get("_regime") or payload.get("regime") or {}
@@ -346,7 +347,8 @@ def ungated_mover_days(payload: dict, top_n: int = 10) -> dict[str, dict]:
 
 
 def analyze() -> dict:
-    payload = json.loads(PAYLOAD.read_text(encoding="utf-8"))
+    from src.mover_lookback_action import load_action
+    payload = load_action(PAYLOAD)
     regime = load_regime(payload)
     paper = load_paper_daily()
     mover_eq = _curve_daily(MOVER_EQ)
@@ -868,7 +870,8 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("--no-write", action="store_true")
     args = p.parse_args(argv)
     if args.date:
-        payload = json.loads(PAYLOAD.read_text(encoding="utf-8"))
+        from src.mover_lookback_action import load_action
+        payload = load_action(PAYLOAD)
         g = load_regime(payload).get(args.date) or {}
         card = route(g.get("predict_score"))
         card["date"] = args.date

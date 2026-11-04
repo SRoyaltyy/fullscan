@@ -39,6 +39,12 @@ _ACTION_CACHE: dict[str, list[dict]] | None = None
 _PENDING_ACTIONS: list[pd.DataFrame] = []
 
 CHUNK = 80
+# A wide threaded download often comes back with only a handful of the
+# requested session. Above this many holes, retry those names in small
+# serial batches before a lock treats the hole as a real drop list.
+RECOVERY_MISSING = 40
+RECOVERY_CHUNK = 20
+RECOVERY_PASSES = 3
 # The locked tape is the printed session. Adjusted history is never stored.
 AUTO_ADJUST = False
 
@@ -125,7 +131,7 @@ yahoo_day = _yf_bound
 
 
 def _yf_download(tickers: list[str], start: str, end: str, *,
-                strict: bool = False) -> pd.DataFrame:
+                strict: bool = False, threads: bool = True) -> pd.DataFrame:
     try:
         import yfinance as yf
     except ImportError as e:
@@ -142,7 +148,8 @@ def _yf_download(tickers: list[str], start: str, end: str, *,
         # (dividend-adjusted) is refused above. Not a live last-trade.
         raw = yf.download(
             tickers=tickers, start=start, end=end, group_by="ticker",
-            auto_adjust=AUTO_ADJUST, actions=True, threads=True, progress=False,
+            auto_adjust=AUTO_ADJUST, actions=True, threads=threads,
+            progress=False,
         )
     except Exception as e:
         print(f"[price_store] download failed ({len(tickers)}): {e}")
@@ -528,7 +535,8 @@ def update(lookback_days: int = 7) -> None:
 
 
 def fill_range(start: str, end: str, tickers: list[str] | None = None,
-               *, strict: bool = False) -> None:
+               *, strict: bool = False, chunk_size: int | None = None,
+               threads: bool = True) -> None:
     """Download official regular-session bars for every universe name in [start, end].
 
     ``update()`` keys off the store's max date, so a handful of seeded
@@ -540,35 +548,52 @@ def fill_range(start: str, end: str, tickers: list[str] | None = None,
     existing = _load_store()
     start = yahoo_day(start)
     end = yahoo_day(end)
+    size = int(chunk_size or CHUNK)
     print(f"[price_store] fill_range {start} → {end} for {len(names)} tickers")
     frames = [existing] if len(existing) else []
-    n_chunks = max(1, (len(names) - 1) // CHUNK + 1)
-    for i in range(0, len(names), CHUNK):
-        batch = names[i : i + CHUNK]
-        print(f"[price_store] fill chunk {i//CHUNK+1}/{n_chunks} ({batch[0]}…{batch[-1]})")
+    n_chunks = max(1, (len(names) - 1) // size + 1)
+    for i in range(0, len(names), size):
+        batch = names[i : i + size]
+        print(f"[price_store] fill chunk {i//size+1}/{n_chunks} ({batch[0]}…{batch[-1]})")
         try:
-            part = _yf_download(batch, start, end, strict=False)
+            part = _yf_download(batch, start, end, strict=False, threads=threads)
             if not len(part):
                 time.sleep(6)
-                part = _yf_download(batch, start, end, strict=strict)
+                part = _yf_download(batch, start, end, strict=strict, threads=threads)
         except Exception as e:
             print(f"[price_store] fill chunk failed: {e}")
             if not strict:
                 part = pd.DataFrame()
             else:
                 time.sleep(6)
-                part = _yf_download(batch, start, end, strict=True)
+                part = _yf_download(
+                    batch, start, end, strict=True, threads=threads)
         if strict and not len(part):
             raise RuntimeError(
                 f"price fill returned no bars for {batch[0]}…{batch[-1]}")
         if len(part):
             frames.append(part)
-            if (i // CHUNK) % 8 == 7:
+            if (i // size) % 8 == 7:
                 _save_store(pd.concat(frames, ignore_index=True))
                 frames = [_load_store()]
         time.sleep(1.5)
     if frames:
         _save_store(pd.concat(frames, ignore_index=True))
+
+
+def _session_tickers(df: pd.DataFrame, day: str) -> set[str]:
+    """Tickers that already have a row on ``day``."""
+    if df is None or not len(df):
+        return set()
+    on = df[df["date"] == pd.Timestamp(str(day)[:10])]
+    if not len(on):
+        return set()
+    return {str(t).upper() for t in on["ticker"].tolist()}
+
+
+def _missing_on_session(tickers: list[str], day: str) -> list[str]:
+    have = _session_tickers(_load_store(), day)
+    return [t for t in tickers if t not in have]
 
 
 def ensure_through(end: str | None = None,
@@ -612,15 +637,32 @@ def ensure_through(end: str | None = None,
     start = (datetime.strptime(target_s, "%Y-%m-%d").date() - timedelta(days=21)).isoformat()
     stop = (datetime.strptime(target_s, "%Y-%m-%d").date() + timedelta(days=1)).isoformat()
     fill_range(start, stop, want or None, strict=strict)
-    if strict and requested:
-        stored = _load_store()
-        have_now: set[str] = set()
-        if len(stored):
-            on_now = stored[stored["date"] == pd.Timestamp(target_s)]
-            if len(on_now):
-                have_now = {str(t).upper() for t in on_now["ticker"].tolist()}
-        missing = [t for t in requested if t not in have_now]
-        if missing:
+    if requested:
+        # A partial page (hundreds of liquid names with no 11-03 print)
+        # must be retried before the mine freezes those names as drops.
+        missing = _missing_on_session(requested, target_s)
+        passes = 0
+        while len(missing) > RECOVERY_MISSING and passes < RECOVERY_PASSES:
+            passes += 1
+            before = len(missing)
+            print(
+                f"[price_store] retry {passes} {before} tickers still "
+                f"missing {target_s}",
+                flush=True,
+            )
+            fill_range(
+                start, stop, missing, strict=False,
+                chunk_size=RECOVERY_CHUNK, threads=False,
+            )
+            missing = _missing_on_session(requested, target_s)
+            print(
+                f"[price_store] retry {passes} left {len(missing)} without "
+                f"{target_s}",
+                flush=True,
+            )
+            if len(missing) >= before:
+                break
+        if strict and missing:
             raise RuntimeError(
                 f"price store missing {target_s} bars for {len(missing)} "
                 f"names sample={missing[:12]}")

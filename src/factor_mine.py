@@ -2223,8 +2223,18 @@ def build_panel(from_date: str = START, to_date: str | None = None,
         by_date[date] = day_rows
         rows.extend(day_rows)
         if dropped_rows:
-            print(f"[factor-mine] {date} dropped {len(dropped_rows)}",
-                  flush=True)
+            suffix = ""
+            if fail_closed and frozen is None:
+                fresh = fmf.new_drop_tickers(date, dropped_rows)
+                suffix = f" new={len(fresh)}"
+            print(
+                f"[factor-mine] {date} dropped {len(dropped_rows)}{suffix}",
+                flush=True,
+            )
+            if fail_closed and frozen is None:
+                # Raises when the new holes are a partial Yahoo page.
+                # A frozen day never reaches this branch.
+                fmf.refuse_partial_drop(date, dropped_rows, frozen=False)
         print(f"[factor-mine] panel {date} names={len(day_rows)} "
               f"total={len(rows)}", flush=True)
     return {

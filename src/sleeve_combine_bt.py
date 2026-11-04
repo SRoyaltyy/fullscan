@@ -899,7 +899,8 @@ def run_dual(**kwargs) -> dict:
 
 def load_live(from_date: str | None = None,
               to_date: str | None = None) -> tuple[dict, list[str], dict, dict]:
-    payload = json.loads(PAYLOAD.read_text(encoding="utf-8"))
+    from src.mover_lookback_action import load_action
+    payload = load_action(PAYLOAD)
     cal = load_calendar(payload, from_date, to_date)
     regime = load_regime(payload)
     scores = {d: (g or {}).get("predict_score") for d, g in regime.items()}

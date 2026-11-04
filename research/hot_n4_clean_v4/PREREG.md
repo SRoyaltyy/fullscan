@@ -2,8 +2,9 @@
 
 - status: locked before any score. This commit has no return, no win rate, and no trade outcome.
 - written: 2026-09-27
-- fingerprint_sha256: 5059366464a6fdd19571436296a759717d077a413cc0c693dbbb61f5dc295c5e
+- fingerprint_sha256: bac073d1a0e1f64c39ca1e817d5919dc46266ecfa407665aec34afabc6410f67
 - engine restatement: 2026-09-28 ET, Cyrus approved. `src/factor_mine.py` sha256 moved from `ce4f1954b0c5e97009dedf6c2d7604d8c225a5633c96090d6e2b20f9e04a9272` to `b51eed634fb5ce213e3a2e1f85c83749e97ee42519b33d1d60ad7ad0c0047860`. See RESTATEMENTS.md.
+- engine restatement: 2026-11-04. `src/factor_mine.py` sha256 moved from `b51eed634fb5ce213e3a2e1f85c83749e97ee42519b33d1d60ad7ad0c0047860` to `f904788699186111ad246dcc2a0ed9c8ebd2048ff096196ce8bc8a9d11872e0c`. The covered fingerprint moved from `5059366464a6fdd19571436296a759717d077a413cc0c693dbbb61f5dc295c5e` to `bac073d1a0e1f64c39ca1e817d5919dc46266ecfa407665aec34afabc6410f67` because section 11 records that pin. See RESTATEMENTS.md.
 - fingerprint_scope: SHA-256 of the UTF-8 bytes after the line `<!-- BEGIN COVERED -->`, including the final newline. Line endings are LF. The header above the marker is not covered.
 - study: `research/hot_n4_clean_v4/`. New files only. No edit to an engine, to `src/`, to `forward_shadow`, to `hot_n4_clean_v1`, to `hot_n4_clean_v2`, to `hot_n4_clean_v3`, or to another study.
 - sessions: 2026-08-13 through 2026-09-25. The before window ends 2026-09-11. The after window starts 2026-09-14 and can only reject.
@@ -372,7 +373,7 @@ Engine files, content sha256. A later run whose bytes differ stops.
 
 | file | sha256 |
 | --- | --- |
-| `src/factor_mine.py` | `b51eed634fb5ce213e3a2e1f85c83749e97ee42519b33d1d60ad7ad0c0047860` |
+| `src/factor_mine.py` | `f904788699186111ad246dcc2a0ed9c8ebd2048ff096196ce8bc8a9d11872e0c` |
 | `src/factor_mine_book.py` | `1fc16961b2680ea7fa2b4f6939402176b27f20c38d0ceda85826d674f4ecb76a` |
 | `src/ohlc_ripper.py` | `7b3d674b2f4b5f5e7c52331543b7e0abf24219c3a3d0f2a178476842783bf641` |
 | `src/gainer_capture.py` | `ee03ea4d5cfad51dddcf3dc24b434b63fd19169ad0aacf657d505f5c5da82af5` |

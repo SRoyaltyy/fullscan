@@ -80,6 +80,7 @@ jobs:
             01_daily/mover_lookback_action.md \
             03_scoreboard/MOVER_LOOKBACK_ACTION.md \
             03_scoreboard/mover_lookback_action.json \
+            03_scoreboard/mover_lookback/ \
             03_scoreboard/MOVER_PAPER.md \
             03_scoreboard/BOOK_PAPER.md \
             03_scoreboard/BOOK_STRATEGY_SWEEP.md \

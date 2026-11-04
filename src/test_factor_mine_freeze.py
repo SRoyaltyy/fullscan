@@ -891,6 +891,151 @@ def test_save_report_does_not_overwrite_preopen_pin() -> None:
             fd.NEWS_DIR = orig
 
 
+def test_partial_fill_drop_list_is_not_baked() -> None:
+    """A partial Yahoo page must not freeze hundreds of new drops.
+
+    Names already dropped on the prior locked session stay allowed.
+    A handful of new misses still locks. The frozen day itself is not
+    reopened.
+    """
+    with tempfile.TemporaryDirectory() as d:
+        old = _use(Path(d))
+        try:
+            prior = {
+                "date": "2026-11-02",
+                "dropped": [{
+                    "ticker": "DBRG",
+                    "missing": ["missing yahoo bars"],
+                    "reason": "missing yahoo bars",
+                }],
+                "rows": [],
+            }
+            fmf.snapshot_path("2026-11-02").write_text(
+                json.dumps(prior), encoding="utf-8")
+            mass = [
+                {"ticker": f"N{i:03d}", "missing": ["missing yahoo bars"]}
+                for i in range(fmf.MAX_NEW_DROPS + 1)
+            ]
+            mass.append({"ticker": "DBRG", "missing": ["missing yahoo bars"]})
+            try:
+                fmf.refuse_partial_drop("2026-11-03", mass, frozen=False)
+                baked = False
+            except fmf.HoldDay as e:
+                baked = True
+                assert "incomplete session bars" in e.reason
+                assert "DBRG" not in e.missing
+                assert len(e.missing) == fmf.MAX_NEW_DROPS + 1
+            assert baked
+            few = [
+                {"ticker": "DBRG", "missing": ["missing yahoo bars"]},
+                {"ticker": "NEW", "missing": ["indicator bars 10/35"]},
+            ]
+            assert fmf.refuse_partial_drop("2026-11-03", few, frozen=False) == ["NEW"]
+            assert fmf.refuse_partial_drop("2026-11-03", mass, frozen=True) == []
+        finally:
+            _restore(old)
+
+
+def test_append_land_reraises_a_partial_drop() -> None:
+    """An incomplete fill fails the mine before a snapshot is written."""
+    with tempfile.TemporaryDirectory() as d:
+        old = _use(Path(d))
+        try:
+            boom = fmf.HoldDay(
+                "2026-11-03", ["AAA"],
+                "incomplete session bars; refusing to bake a partial drop list",
+            )
+            with mock.patch.object(fm, "build_panel", side_effect=boom), \
+                    mock.patch.object(fm, "session_has_closed", return_value=True), \
+                    mock.patch.object(fm, "panel_lookback_calendar",
+                                      return_value=["2026-11-03"]):
+                try:
+                    fmf.append_land(
+                        "2026-08-13", "2026-11-03", write=False,
+                        payload={"dates": [], "recipes": []},
+                        panel={"session_dates": [], "rows": []},
+                    )
+                    swallowed = False
+                except fmf.HoldDay as e:
+                    swallowed = True
+                    assert "incomplete session bars" in e.reason
+            assert swallowed
+            assert not fmf.snapshot_path("2026-11-03").is_file()
+        finally:
+            _restore(old)
+
+
+def test_ensure_through_retries_a_partial_session() -> None:
+    """Hundreds of missing session bars get a small-batch retry."""
+    import pandas as pd
+    from src import price_store as ps
+
+    day = "2026-11-03"
+    names = [f"T{i:03d}" for i in range(50)]
+    state = {"recovered": False}
+    calls = []
+
+    def load():
+        rows = [{
+            "date": "2026-11-02", "ticker": "T000",
+            "open": 1.0, "high": 1.0, "low": 1.0, "close": 1.0, "volume": 1,
+        }]
+        have = names if state["recovered"] else ["T000"]
+        for t in have:
+            rows.append({
+                "date": day, "ticker": t,
+                "open": 1.0, "high": 1.0, "low": 1.0, "close": 1.0, "volume": 1,
+            })
+        frame = pd.DataFrame(rows)
+        frame["date"] = pd.to_datetime(frame["date"])
+        return frame
+
+    def fill(start, end, tickers=None, *, strict=False, chunk_size=None,
+             threads=True):
+        calls.append({
+            "n": None if tickers is None else len(list(tickers)),
+            "chunk_size": chunk_size,
+            "threads": threads,
+        })
+        if chunk_size == ps.RECOVERY_CHUNK:
+            state["recovered"] = True
+
+    with mock.patch.object(ps, "_load_store", side_effect=load), \
+            mock.patch.object(ps, "fill_range", side_effect=fill), \
+            mock.patch("src.skip_if_good.last_closed_session", return_value=day):
+        ps.ensure_through(day, tickers=names, strict=False)
+    assert calls[0]["threads"] is True
+    assert calls[0]["chunk_size"] is None
+    assert any(
+        c["chunk_size"] == ps.RECOVERY_CHUNK and c["threads"] is False
+        and c["n"] == 49
+        for c in calls
+    )
+
+
+def test_ensure_through_skips_retry_for_a_handful_of_holes() -> None:
+    import pandas as pd
+    from src import price_store as ps
+
+    day = "2026-11-03"
+    names = ["AAA", "BBB", "CCC"]
+    frame = pd.DataFrame([{
+        "date": "2026-11-02", "ticker": "AAA",
+        "open": 1.0, "high": 1.0, "low": 1.0, "close": 1.0, "volume": 1,
+    }])
+    frame["date"] = pd.to_datetime(frame["date"])
+    calls = []
+
+    def fill(*_a, **_k):
+        calls.append(_k.get("chunk_size"))
+
+    with mock.patch.object(ps, "_load_store", return_value=frame), \
+            mock.patch.object(ps, "fill_range", side_effect=fill), \
+            mock.patch("src.skip_if_good.last_closed_session", return_value=day):
+        ps.ensure_through(day, tickers=names, strict=False)
+    assert calls == [None]
+
+
 def test_price_store_keeps_the_first_bar() -> None:
     import pandas as pd
     from src import price_store as ps
@@ -2462,6 +2607,10 @@ if __name__ == "__main__":
     test_published_0922_pin_beats_the_postclose_file()
     test_late_digest_does_not_replace_preopen_tones()
     test_save_report_does_not_overwrite_preopen_pin()
+    test_partial_fill_drop_list_is_not_baked()
+    test_append_land_reraises_a_partial_drop()
+    test_ensure_through_retries_a_partial_session()
+    test_ensure_through_skips_retry_for_a_handful_of_holes()
     test_price_store_keeps_the_first_bar()
     test_holdup_created_on_is_the_first_session_after_the_commit()
     test_prune_does_not_use_full_window_stats()

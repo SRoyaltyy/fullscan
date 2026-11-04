@@ -82,6 +82,11 @@ PRICE_CHECK = {
 # universe is empty or Yahoo has no bar for every name.
 UNRANKABLE_MAX_SHARE = 0.10
 MISSING_YAHOO_BARS = "missing yahoo bars"
+# A locked session keeps its drop list. Recent locks add only a handful of
+# new misses (a delist, a short indicator history). The 2026-11-03 runs
+# dropped 618 and 1384 names off a partial Yahoo page; baking that list
+# would freeze the hole. Hold the day instead of locking it.
+MAX_NEW_DROPS = 40
 SNAPSHOT_OPEN_FROM = "2026-09-25"
 # scrape_ts exists on the slim snapshot and in manifest.json from this day.
 SCRAPE_TS_FROM = "2026-09-24"
@@ -405,6 +410,70 @@ def yahoo_session_missing(ticker: str, date: str) -> bool:
     if official.get("open") is not None or official.get("close") is not None:
         return False
     return True
+
+
+def prior_drop_tickers(date: str) -> set[str]:
+    """Tickers already dropped on the latest locked session before ``date``.
+
+    An unlocked day is compared with this set. Names that were already
+    dropped stay allowed. A mass of new holes is a partial fill, not a
+    new universe.
+    """
+    day = str(date or "")[:10]
+    if len(day) != 10 or not SNAP_DIR.is_dir():
+        return set()
+    prior = None
+    for path in sorted(SNAP_DIR.glob("*.json")):
+        if path.stem < day:
+            prior = path
+        else:
+            break
+    if prior is None:
+        return set()
+    doc = read_json(prior) or {}
+    out: set[str] = set()
+    for gap in doc.get("dropped") or []:
+        if not isinstance(gap, dict):
+            continue
+        tick = str(gap.get("ticker") or "").strip().upper()
+        if tick:
+            out.add(tick)
+    return out
+
+
+def new_drop_tickers(date: str, dropped_rows: list | None) -> list[str]:
+    """Drop tickers that were not already dropped on the prior locked day."""
+    prior = prior_drop_tickers(date)
+    out: list[str] = []
+    seen: set[str] = set()
+    for gap in dropped_rows or []:
+        if not isinstance(gap, dict):
+            continue
+        tick = str(gap.get("ticker") or "").strip().upper()
+        if not tick or tick in prior or tick in seen:
+            continue
+        seen.add(tick)
+        out.append(tick)
+    return out
+
+
+def refuse_partial_drop(date: str, dropped_rows: list | None, *,
+                        frozen: bool) -> list[str]:
+    """Hold an unlocked day whose new drop list is a partial price fill.
+
+    A frozen day is not reconsidered. A handful of new misses still locks,
+    which is how a delist lands. Returns the new tickers either way.
+    """
+    if frozen:
+        return []
+    fresh = new_drop_tickers(date, dropped_rows)
+    if len(fresh) > MAX_NEW_DROPS:
+        raise HoldDay(
+            date, fresh,
+            "incomplete session bars; refusing to bake a partial drop list",
+            status="held_incomplete",
+        )
+    return fresh
 
 
 def _dropped_missing_tickers(gaps: list | None) -> list[str]:
@@ -2939,6 +3008,7 @@ def append_land(from_date: str, target: str, *, write: bool = False,
             if (
                 "entire universe" in (e.reason or "")
                 or "entire panel" in (e.reason or "")
+                or "incomplete session bars" in (e.reason or "")
             ):
                 raise
             break
