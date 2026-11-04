@@ -1,6 +1,6 @@
 {
  "date": "2026-11-04",
- "generated_at": "2026-11-04T14:02:18.638685-05:00",
+ "generated_at": "2026-11-04T16:33:58.513725-05:00",
  "stance_vocabulary": [
   "favorable",
   "neutral",
@@ -17,23 +17,23 @@
   "fed_score": 0.0,
   "dollar_oil_score": 1.0,
   "futures_score": 0.5,
-  "yields": "falling",
+  "yields": "rising",
   "yields_source": "fred_dgs10",
-  "dgs10_delta_1d": -0.03,
-  "dgs10_current": 4.91,
+  "dgs10_delta_1d": 0.04,
+  "dgs10_current": 4.95,
   "dollar": "soft",
   "dollar_source": "dxy",
-  "dxy_pct_1d": -0.27,
-  "vix_ratio": 0.891,
-  "vix_spot": 17.0,
-  "vix_delta_1d": -3.83,
+  "dxy_pct_1d": -0.36,
+  "vix_ratio": 0.884,
+  "vix_spot": 16.61,
+  "vix_delta_1d": -4.22,
   "vix_ratio_source": "vix/vix3m",
   "vix": "falling",
-  "oil_pct_1d": -8.28,
+  "oil_pct_1d": -7.94,
   "oil": "falling",
   "fear_greed": null,
   "fear_greed_label": null,
-  "regime_corr": 0.205,
+  "regime_corr": 0.21,
   "sectors": {
    "Basic Materials": {
     "score": -4.97,
@@ -318,14 +318,14 @@
   },
   "lev": {
    "high": {
-    "stance": "favorable",
-    "confidence": "low",
-    "why": "easing + risk-on — leverage amplifies the upside [factors + general]"
+    "stance": "hostile",
+    "confidence": "medium",
+    "why": "yields rising — leverage amplifies the downside [factors + general]"
    },
    "low": {
-    "stance": "neutral",
+    "stance": "favorable",
     "confidence": "low",
-    "why": "low leverage lags melt-ups"
+    "why": "balance-sheet strength preferred in stress"
    },
    "mid": {
     "stance": "neutral",
@@ -340,14 +340,14 @@
   },
   "style": {
    "growth": {
-    "stance": "favorable",
+    "stance": "hostile",
     "confidence": "medium",
-    "why": "yields falling — duration/growth re-rates [factor: Bond yields]"
+    "why": "yields rising — long-duration growth de-rates [factor: Bond yields]"
    },
    "value": {
-    "stance": "neutral",
-    "confidence": "low",
-    "why": "value lags duration rallies"
+    "stance": "favorable",
+    "confidence": "medium",
+    "why": "rising yields/reflation favors value & cyclicals [factor: Bond yields]"
    },
    "blend": {
     "stance": "neutral",
