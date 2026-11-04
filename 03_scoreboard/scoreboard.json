@@ -35201,7 +35201,7 @@
       "divergence_flagged": false,
       "divergence_verdict": null,
       "per_factor_breakdown": [],
-      "reflection_lesson_ref": null,
+      "reflection_lesson_ref": "02_lessons/candidate/2026-10-29_lesson.md",
       "sources_used": [],
       "ops_fail": false,
       "path_shape": "V-shape (deep intraday drop, closed near high)",
@@ -35209,7 +35209,8 @@
       "key_interaction": "Alphabet-driven tech selloff was offset by a violent rotation into small caps (Russell 2000 +1%) and equal-weight S&P (+~1%), producing a V-shape in SPX/Dow while NDX stayed choppy",
       "knowable_at_9am": "partially",
       "attribution_contested": "no",
-      "outlier_watch": "Russell 2000 +1% and equal-weight S&P +~1% while Nasdaq −1.4% — first such divergence since July 2024; VIX fell intraday despite the tech selloff"
+      "outlier_watch": "Russell 2000 +1% and equal-weight S&P +~1% while Nasdaq −1.4% — first such divergence since July 2024; VIX fell intraday despite the tech selloff",
+      "lesson_schema_ok": true
     }
   ]
 }
