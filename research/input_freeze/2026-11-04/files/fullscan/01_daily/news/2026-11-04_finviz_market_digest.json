@@ -1,0 +1,94 @@
+{
+  "date": "2026-11-04",
+  "generated_at": "2026-11-04T04:43:21.110010-05:00",
+  "timezone": "America/New_York",
+  "source": "live",
+  "source_url": "https://elite.finviz.com/",
+  "archive_snapshot_ts": null,
+  "archive_snapshot_at": null,
+  "archive_url": null,
+  "clock_legal": true,
+  "clock_same_morning": true,
+  "clock_use": "same_morning",
+  "clock_legal_for": "2026-11-04",
+  "clock_rule": "Live: Generated must be before 09:30 ET on this date or leave missing. Wayback: capture before 09:30 ET that day is legal for that morning's Pre-Open. Afternoon Wayback is legal for the NEXT session open only (prior-day close recap), marked by clock_legal_for. Gaps stay gaps. Capture only — not tape_anchor / predict / #210.",
+  "kind": "finviz_homepage_market_digest",
+  "represents": "Finviz homepage market-day prose. Same-morning Pre-Open when Generated is before 09:30 ET; afternoon Wayback is a prior-day close recap legal for the next session only. Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "US futures point higher on Democratic sweep and softer dollar ahead of key US data and heavy earnings slate",
+  "raw_text": "- S&P 500 futures (@ES) are up about 0.4%, Dow Jones futures (@YM) roughly 1.0%, Nasdaq 100 futures (@NQ) around 0.2%, and Russell 2000 futures (@ER2) about 1.0% as early results show Democrats taking control of Congress.\n- The US dollar (@DX) dips as a Democratic midterm sweep and an agenda targeting healthcare and tariffs encourage rotation into small-cap and rate-sensitive names.\n- McDonald’s (MCD), Uber (UBER), CVS Health (CVS), Emerson Electric (EMR), and Datadog (DDOG) report earnings before the bell, with traders looking to these results to set sector tones at the open.\n- Recent earnings beats from Fiserv (FISV) and Revvity (RVTY) are being monitored for follow-through in today’s session, with both names slightly lower pre-market.\n- Earnings beats from Zebra Technologies (ZBRA), Shopify (SHOP), Dynatrace (DT), and Gartner (IT) are being watched for follow-through, with Dynatrace (DT) up about 1.6% and Shopify (SHOP) roughly 1% pre-market.\n- Nikkei (@NKD) and Kospi benchmarks declined in volatile Asian trade amid tech selling and uncertainty around the US midterm outcome.\n- Earlier weakness tied to Democratic gains in both chambers saw partial relief rallies in parts of China and Europe overnight.\n- Today’s US macro calendar includes ADP employment change at 8:15 AM ET, trade balance at 8:30 AM ET, and ISM Services PMI at 10:00 AM ET, all seen as potential volatility drivers.\n- Commodities traded mixed overnight, with oil (@CL) down about 1% and no major new geopolitical or commodity catalysts reported after 4 AM ET.",
+  "raw_summary_md": "- **S&P 500 futures** ([@ES](https://finviz.com/futures_charts?t=ES)) are **up about 0.4%**, **Dow Jones futures** ([@YM](https://finviz.com/futures_charts?t=YM)) **roughly 1.0%**, **Nasdaq 100 futures** ([@NQ](https://finviz.com/futures_charts?t=NQ)) **around 0.2%**, and **Russell 2000 futures** ([@ER2](https://finviz.com/futures_charts?t=ER2)) **about 1.0%** as early results show **Democrats taking control of Congress**.\n- The **US dollar** ([@DX](https://finviz.com/futures_charts?t=DX)) **dips** as a **Democratic midterm sweep** and an agenda targeting **healthcare and tariffs** encourage rotation into **small-cap and rate-sensitive names**.\n- **McDonald’s** ([MCD](https://finviz.com/quote?t=MCD)), **Uber** ([UBER](https://finviz.com/quote?t=UBER)), **CVS Health** ([CVS](https://finviz.com/quote?t=CVS)), **Emerson Electric** ([EMR](https://finviz.com/quote?t=EMR)), and **Datadog** ([DDOG](https://finviz.com/quote?t=DDOG)) report **earnings before the bell**, with traders looking to these results to set **sector tones at the open**.\n- **Recent earnings beats** from **Fiserv** ([FISV](https://finviz.com/quote?t=FISV)) and **Revvity** ([RVTY](https://finviz.com/quote?t=RVTY)) are being monitored for **follow-through in today’s session**, with both names **slightly lower pre-market**.\n- **Earnings beats** from **Zebra Technologies** ([ZBRA](https://finviz.com/quote?t=ZBRA)), **Shopify** ([SHOP](https://finviz.com/quote?t=SHOP)), **Dynatrace** ([DT](https://finviz.com/quote?t=DT)), and **Gartner** ([IT](https://finviz.com/quote?t=IT)) are being watched for follow-through, with **Dynatrace** ([DT](https://finviz.com/quote?t=DT)) **up about 1.6%** and **Shopify** ([SHOP](https://finviz.com/quote?t=SHOP)) **roughly 1% pre-market**.\n- **Nikkei** ([@NKD](https://finviz.com/futures_charts?t=NKD)) and **Kospi** benchmarks **declined** in **volatile Asian trade** amid **tech selling** and **uncertainty around the US midterm outcome**.\n- Earlier **weakness tied to Democratic gains in both chambers** saw **partial relief rallies** in parts of **China and Europe overnight**.\n- Today’s **US macro calendar** includes **ADP employment change at 8:15 AM ET**, **trade balance at 8:30 AM ET**, and **ISM Services PMI at 10:00 AM ET**, all seen as potential **volatility drivers**.\n- **Commodities** traded **mixed** overnight, with **oil** ([@CL](https://finviz.com/futures_charts?t=CL)) **down about 1%** and **no major new geopolitical or commodity catalysts** reported after **4 AM ET**.",
+  "index_moves": [],
+  "oil": null,
+  "cpi": null,
+  "fed_odds": null,
+  "named_tickers": [
+    "MCD",
+    "UBER",
+    "CVS",
+    "EMR",
+    "DDOG",
+    "FISV",
+    "RVTY",
+    "ZBRA",
+    "SHOP",
+    "DT",
+    "IT"
+  ],
+  "named_leaders": [
+    "MCD",
+    "UBER",
+    "CVS",
+    "EMR",
+    "DDOG",
+    "FISV",
+    "RVTY",
+    "ZBRA",
+    "SHOP",
+    "DT",
+    "IT"
+  ],
+  "calendar": [
+    "Recent earnings beats from Fiserv (FISV) and Revvity (RVTY) are being monitored for follow-through in today’s session, with both names slightly lower pre-market.",
+    "Today’s US macro calendar includes ADP employment change at 8:15 AM ET, trade balance at 8:30 AM ET, and ISM Services PMI at 10:00 AM ET, all seen as potential volatility drivers."
+  ],
+  "prior_close": {
+    "spx": null,
+    "nasdaq": null,
+    "dow": null
+  },
+  "cpi_fed": {
+    "cpi": null,
+    "fed_odds": null
+  },
+  "next_session_calendar": {
+    "housing": false,
+    "retail": false,
+    "fed": false,
+    "bullets": [
+      "Today’s US macro calendar includes ADP employment change at 8:15 AM ET, trade balance at 8:30 AM ET, and ISM Services PMI at 10:00 AM ET, all seen as potential volatility drivers."
+    ],
+    "text": "Today’s US macro calendar includes ADP employment change at 8:15 AM ET, trade balance at 8:30 AM ET, and ISM Services PMI at 10:00 AM ET, all seen as potential volatility drivers."
+  },
+  "earnings_slate": {
+    "tickers": [
+      "MCD",
+      "UBER",
+      "CVS",
+      "EMR",
+      "DDOG"
+    ],
+    "text": "McDonald’s (MCD), Uber (UBER), CVS Health (CVS), Emerson Electric (EMR), and Datadog (DDOG) report earnings before the bell, with traders looking to these results to set sector tones at the open."
+  },
+  "geo_grain": {
+    "geo": false,
+    "grain": false,
+    "flags": [],
+    "text": ""
+  },
+  "finviz_id": 329485,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-11-04T04:37:23.217",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "good"
+}

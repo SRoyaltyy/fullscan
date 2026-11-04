@@ -1,0 +1,14 @@
+cell,signal_date,ticker,entry_date,hold_days,rules_sha256,source
+fresh_dcp_t1_ep_ge03_2d,2026-11-03,AESI,2026-11-04,2,187856c9db6143c2c4c2820cde8be1e3d87363478587558e296758cbf5369845,preopen_plan_2026-11-04
+fresh_dcp_t1_ep_ge03_2d,2026-11-03,FRMI,2026-11-04,2,187856c9db6143c2c4c2820cde8be1e3d87363478587558e296758cbf5369845,preopen_plan_2026-11-04
+fresh_dcp_t1_ep_ge03_2d,2026-11-03,QMLS,2026-11-04,2,187856c9db6143c2c4c2820cde8be1e3d87363478587558e296758cbf5369845,preopen_plan_2026-11-04
+fresh_dcp_t1_ep_ge03_2d,2026-11-03,VIVO,2026-11-04,2,187856c9db6143c2c4c2820cde8be1e3d87363478587558e296758cbf5369845,preopen_plan_2026-11-04
+fresh_dcp_t1_ep_ge03_2d,2026-11-03,WYFI,2026-11-04,2,187856c9db6143c2c4c2820cde8be1e3d87363478587558e296758cbf5369845,preopen_plan_2026-11-04
+fresh_dcp_t1_avoid_ah_3d,2026-11-03,AESI,2026-11-04,3,462719f77f2c36880f9c36d77c6591ca681e98c425c83697847463c4b3af7934,preopen_plan_2026-11-04
+fresh_dcp_t1_avoid_ah_3d,2026-11-03,FRMI,2026-11-04,3,462719f77f2c36880f9c36d77c6591ca681e98c425c83697847463c4b3af7934,preopen_plan_2026-11-04
+fresh_dcp_t1_avoid_ah_3d,2026-11-03,QMLS,2026-11-04,3,462719f77f2c36880f9c36d77c6591ca681e98c425c83697847463c4b3af7934,preopen_plan_2026-11-04
+fresh_dcp_t1_avoid_ah_3d,2026-11-03,VIVO,2026-11-04,3,462719f77f2c36880f9c36d77c6591ca681e98c425c83697847463c4b3af7934,preopen_plan_2026-11-04
+fresh_dcp_t1_avoid_ah_3d,2026-11-03,WYFI,2026-11-04,3,462719f77f2c36880f9c36d77c6591ca681e98c425c83697847463c4b3af7934,preopen_plan_2026-11-04
+# status=fires rows=10 fpe_delta_t3_earn_today_3d=0 fresh_dcp_t1_ep_ge03_2d=5 fresh_dcp_t1_avoid_ah_3d=5
+# built_at_utc=2026-11-04T10:23:18Z signal_date=2026-11-03 entry_date=2026-11-04 builder_sha256=9e70523ee355d655b125ffd46f8ccd08a25fe762fccfa6ee08c97eb3c5d52840
+# inputs: {"dcp_candidates":["AESI","AMRC","BE","BKH","CEG","CLFD","FRMI","MSFT","PEG","QMLS","VIVO","WYFI"],"dcp_prior_snapshot":"2026-11-02","earn_gate_n":0,"fails":"[]","features_T_sha256":"fefd487f2168f9f764b4ebcd053ff6714c6dba0f26e578ac4e32919a0db77ecd","fpe_prior_snapshot":"2026-10-29","fpe_signal_n":1304,"letters_log":"rows 12 skipped {'2026-11-04': 0} FAILS []","letters_rows":12,"letters_sha256":"5a685d4a76675feb09e2dc0df40c56d118d705f05edcb16b2e243e31aa676037","membership":"fullscan@50ca88bd5 (committed 2026-11-04T09:56:43Z) sha256=2cafec018941d7b8f688e033da0c1081345e5e75dc4fcd768caac9c2a0fbe398","skipped":"{'2026-11-04': 0}","snapshot_T_sha256":"d5a364d5217d1cbe97a2b5a9874ad29273019b5933105e4a3d0af06e8838b79c","snapshots_after_T_ignored":[],"tr_head":"2baacef83","universe_log":"2026-11-04 cand 12 in membership 12 liquid 9 universe 12 excluded []"}

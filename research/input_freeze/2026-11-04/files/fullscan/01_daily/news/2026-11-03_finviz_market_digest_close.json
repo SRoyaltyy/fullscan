@@ -1,0 +1,90 @@
+{
+  "date": "2026-11-03",
+  "generated_at": "2026-11-03T18:26:29.410173-05:00",
+  "timezone": "America/New_York",
+  "source": "live",
+  "source_url": "https://elite.finviz.com/",
+  "archive_snapshot_ts": null,
+  "archive_snapshot_at": null,
+  "archive_url": null,
+  "clock_legal": true,
+  "clock_same_morning": false,
+  "clock_use": "next_open",
+  "clock_legal_for": "2026-11-04",
+  "capture_slot": "close",
+  "clock_rule": "Live post-close answer-key (~16:05 ET). Always next_open for the NEXT session (2026-11-04) — never same_morning. Writes *_finviz_market_digest_close.* only. Capture only — not tape_anchor / predict / #210.",
+  "kind": "finviz_homepage_market_digest_close",
+  "represents": "Finviz homepage post-close answer-key. clock_use is always next_open; clock_legal_for is the next NYSE session. Lives at *_finviz_market_digest_close.*. Does not replace the same_morning warm-up file. Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "US stocks ended mixed on midterm Election Day as AI and chip names rebounded ahead of key earnings",
+  "raw_text": "- US indices finished mixed, with the S&P 500 ($SPX) up 0.36% to 7,568.92, the Nasdaq Composite ($COMP) up 0.83% to 25,372.01, the Russell 2000 (IWM) up 0.23% to 2,812.45, and the Dow Jones Industrial Average ($DJI) down 197 points, or 0.38%, to 51,786.72.\n- Information technology climbed 1.31% and industrials rose 0.96%, while seven of 11 S&P 500 ($SPX) sectors declined, led by materials down 1.93% and consumer staples off 1.76%.\n- AI-related leaders drove the tech rebound, with NVIDIA (NVDA) up about 2.3%, Microsoft (MSFT) up about 2.7%, and Amazon (AMZN) up 2.06%.\n- AMD (AMD) gained about 3.7% ahead of results, then reported Q3 adjusted EPS of $2.09 versus $1.95 expected on $13.38 billion in revenue, with data-center revenue up 97% year over year to a record $8.55 billion and Q4 revenue guidance near $17 billion topping consensus, pushing shares higher after hours.\n- Apple (AAPL) fell 1.9% after warning its gross margins would be pressured by rising memory chip costs.\n- Super Micro Computer (SMCI) advanced about 9.5% after hours after beating expectations with record Q1 revenue of $19.9 billion, nearly quadrupling from a year earlier, delivering adjusted EPS of $1.81 versus $1.23 expected, and guiding fiscal-year sales as high as $82 billion while raising its fiscal 2027 outlook to $72–82 billion on strong AI server demand.\n- Block (XYZ) beat third-quarter estimates and raised guidance, with shares up about 6.7% after hours, adding to a busy after-hours earnings slate.\n- Investors prepared for final US midterm election outcomes and another wave of earnings reports tomorrow.",
+  "raw_summary_md": "- US indices finished mixed, with the **S&P 500 ([$SPX](https://finviz.com/index/SPX?p=d)) up 0.36% to 7,568.92**, the **Nasdaq Composite ([$COMP](https://finviz.com/index/COMP?p=d)) up 0.83% to 25,372.01**, the **Russell 2000 ([IWM](https://finviz.com/quote?t=IWM)) up 0.23% to 2,812.45**, and the **Dow Jones Industrial Average ([$DJI](https://finviz.com/index/DJI?p=d)) down 197 points, or 0.38%, to 51,786.72**.\n- Information technology **climbed 1.31%** and industrials **rose 0.96%**, while **seven of 11 S&P 500 ([$SPX](https://finviz.com/index/SPX?p=d)) sectors declined**, led by **materials down 1.93%** and **consumer staples off 1.76%**.\n- **AI-related leaders** drove the tech rebound, with **NVIDIA ([NVDA](https://finviz.com/quote?t=NVDA)) up about 2.3%**, **Microsoft ([MSFT](https://finviz.com/quote?t=MSFT)) up about 2.7%**, and **Amazon ([AMZN](https://finviz.com/quote?t=AMZN)) up 2.06%**.\n- **AMD ([AMD](https://finviz.com/quote?t=AMD)) gained about 3.7% ahead of results**, then reported **Q3 adjusted EPS of $2.09 versus $1.95 expected** on **$13.38 billion in revenue**, with **data-center revenue up 97% year over year to a record $8.55 billion** and **Q4 revenue guidance near $17 billion topping consensus**, pushing shares higher after hours.\n- **Apple ([AAPL](https://finviz.com/quote?t=AAPL)) fell 1.9%** after warning its **gross margins would be pressured by rising memory chip costs**.\n- **Super Micro Computer ([SMCI](https://finviz.com/quote?t=SMCI)) advanced about 9.5% after hours** after **beating expectations with record Q1 revenue of $19.9 billion, nearly quadrupling from a year earlier**, delivering **adjusted EPS of $1.81 versus $1.23 expected**, and **guiding fiscal-year sales as high as $82 billion** while **raising its fiscal 2027 outlook to $72–82 billion** on **strong AI server demand**.\n- **Block ([XYZ](https://finviz.com/quote?t=XYZ)) beat third-quarter estimates and raised guidance**, with shares **up about 6.7% after hours**, adding to a busy after-hours earnings slate.\n- Investors prepared for **final US midterm election outcomes** and **another wave of earnings reports tomorrow**.",
+  "index_moves": [
+    {
+      "name": "S&P 500",
+      "code": "SPX",
+      "change_pct": -1.93,
+      "verb": "declined"
+    }
+  ],
+  "oil": null,
+  "cpi": null,
+  "fed_odds": null,
+  "named_tickers": [
+    "NVDA",
+    "MSFT",
+    "AMZN",
+    "AMD",
+    "AAPL",
+    "SMCI",
+    "XYZ"
+  ],
+  "named_leaders": [
+    "NVDA",
+    "MSFT",
+    "AMZN",
+    "AMD",
+    "AAPL",
+    "SMCI",
+    "XYZ"
+  ],
+  "calendar": [
+    "Block (XYZ) beat third-quarter estimates and raised guidance, with shares up about 6.7% after hours, adding to a busy after-hours earnings slate.",
+    "Investors prepared for final US midterm election outcomes and another wave of earnings reports tomorrow."
+  ],
+  "prior_close": {
+    "spx": -1.93,
+    "nasdaq": null,
+    "dow": null
+  },
+  "cpi_fed": {
+    "cpi": null,
+    "fed_odds": null
+  },
+  "next_session_calendar": {
+    "housing": false,
+    "retail": false,
+    "fed": false,
+    "bullets": [
+      "Investors prepared for final US midterm election outcomes and another wave of earnings reports tomorrow."
+    ],
+    "text": "Investors prepared for final US midterm election outcomes and another wave of earnings reports tomorrow."
+  },
+  "earnings_slate": {
+    "tickers": [
+      "XYZ"
+    ],
+    "text": "Block (XYZ) beat third-quarter estimates and raised guidance, with shares up about 6.7% after hours, adding to a busy after-hours earnings slate."
+  },
+  "geo_grain": {
+    "geo": false,
+    "grain": false,
+    "flags": [],
+    "text": ""
+  },
+  "finviz_id": 328734,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-11-03T18:07:27.847",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "good"
+}
