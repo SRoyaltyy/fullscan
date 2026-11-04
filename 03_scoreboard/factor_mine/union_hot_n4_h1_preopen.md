@@ -4,7 +4,7 @@ _starts 10-08 open, no past days. Parent recipe `union_hot_n4_h1` (same selectio
 
 _Factor Mine recipe union_hot_n4_h1, not the separate IRONCLAD h1 book (research/hot_n4_clean_v4/forward_h1)._
 
-Equity: 10000.04 | days: 19
+Equity: 10000.04 | days: 20
 
 | date | S | picks | buys | sells | cash | equity | mean% | sit / reason |
 |---|---|---|---|---|---|---|---|---|
@@ -27,3 +27,4 @@ Equity: 10000.04 | days: 19
 | 2026-10-30 | -12.921 | - | - | - | 9894.42 | 9894.42 | 0.0 | S=-12.92 <= -3: no buys |
 | 2026-11-02 | 3.044 | SLN, GEN, BC, BAH | SLN 125@19.75, GEN 85@29.05, BC 32@76.25, BAH 28@87.16 | - | 67.17 | 10071.98 | 1.7945 | - |
 | 2026-11-03 | -5.632 | - | - | BAH 28@85.95, BC 32@79.61, GEN 85@29.59, SLN 125@19.78 | 10000.04 | 10000.04 | -0.7143 | S=-5.63 <= -3: no buys |
+| 2026-11-04 | 10.848 | - | - | - | 10000.04 | 10000.04 | 0.0 | prior state 2026-11-03 not committed before 09:30 ET: never committed; no pre-open candidate list |
