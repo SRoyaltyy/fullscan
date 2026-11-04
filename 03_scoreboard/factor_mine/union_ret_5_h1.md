@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `ret_5` · size `leftover` · sell `list` · S-boost `none` · rank by ret_5
 
-Cash book **+15.41%** ($11,541) · signal-only (no cash/fees) was +36.33%. Starts YES **29/30**. Fills 478 · skips 100 · realized $+370.60.
+Cash book **+14.33%** ($11,433) · signal-only (no cash/fees) was +36.33%. Starts YES **29/30**. Fills 487 · skips 100 · realized $+370.60.
 
 ## How this sleeve decides (like you are 10)
 
@@ -665,6 +665,17 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-03 09:30 ET | **SELL** | `HLP` | 341 | $4.10 | $4.47 | $-19.10 | $5,739.44 | ▼ -19.10 after sell → book $11,361.95; vs 09:30 mark -4.46 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-03 09:30 ET | **SELL** | `WEN` | 195 | $7.16 | $2.62 | $-16.89 | $7,133.02 | ▼ -16.89 after sell → book $11,359.33; vs 09:30 mark -2.62 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-03 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,133.02 | ▲ close $11,541.01 vs 09:30 $11,376.22 (session +181.68) | 16:00 close · cash $7,133.02 · equity $11,541.01 vs 09:30 $11,376.22 (+164.79; session marks +181.68) · 3 name(s) marked open→close (per-name table). CMG×44 09:30 $32.89 → close $33.26 +16.28; GM×15 09:30 $89.89 → close $88.34 -23.25; JLHL×245 09:30 $5.84 → close $6.61 +188.65 | — |
+| 2026-11-04 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,133.02 | ▲ 09:30 equity $11,640.67 vs yday $11,541.01 (+99.66) | 09:30 open · cash $7,133.02 (unchanged overnight, no fees) · equity $11,640.67 vs prior close $11,541.01 (+99.66) · 3 name(s) re-marked at the open (per-name table). CMG×44 yday $33.26 → 09:30 $34.22 +42.24; GM×15 yday $88.34 → 09:30 $89.56 +18.23; JLHL×245 yday $6.61 → 09:30 $6.77 +39.20 | — |
+| 2026-11-04 09:30 ET | **SELL** | `CMG` | 44 | $34.22 | $2.14 | $+97.81 | $8,636.56 | ▲ +97.81 after sell → book $11,638.53; vs 09:30 mark -2.14 | dropped from list after 2 sess (min 1) | — |
+| 2026-11-04 09:30 ET | **SELL** | `GM` | 15 | $89.56 | $2.06 | $+11.73 | $9,977.83 | ▲ +11.73 after sell → book $11,636.48; vs 09:30 mark -2.05 | dropped from list after 2 sess (min 1) | — |
+| 2026-11-04 09:30 ET | **BUY** | `CDNA` | 16 | $89.00 | $2.04 | — | $8,551.79 | — | rank by ret_5; rank ret_5; list flatten; ret5=+25.4; leftover $1425.40 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `VFC` | 69 | $20.53 | $2.20 | — | $7,133.02 | — | rank by ret_5; rank ret_5; list ohlc_hot; 🔵; ret5=+17.7; leftover $1425.40 | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `RKT` | 99 | $14.30 | $2.29 | — | $5,715.03 | — | rank by ret_5; rank ret_5; list ohlc_hot; 🔵; ret5=+16.6; leftover $1425.40 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `JMKE` | 71 | $19.99 | $2.20 | — | $4,293.54 | — | rank by ret_5; rank ret_5; list ohlc_hot; ret5=+16.3; leftover $1425.40 | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `HWM` | 6 | $221.39 | $2.01 | — | $2,963.19 | — | rank by ret_5; rank ret_5; list ohlc_hot; ret5=+16.2; leftover $1425.40 | join🔴 sector🔴 gen🟢 news🟡 digest🟡 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `RUN` | 152 | $9.36 | $2.45 | — | $1,538.03 | — | rank by ret_5; rank ret_5; list ohlc_hot; 🔵; ret5=+15.3; leftover $1425.40 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 judge🟡 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `PRIM` | 16 | $84.45 | $2.04 | — | $184.79 | — | rank by ret_5; rank ret_5; list yday_gainer,yday_mover,ohlc_hot; ret5=+15.1; leftover $1425.40 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-04 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $184.79 | ▼ close $11,432.56 vs 09:30 $11,640.67 (session -188.70) | 16:00 close · cash $184.79 · equity $11,432.56 vs 09:30 $11,640.67 (-208.11; session marks -188.70) · 8 name(s) marked open→close (per-name table). JLHL×245 09:30 $6.77 → close $7.10 +80.85; CDNA×16 09:30 $89.00 → close $85.86 -50.24; VFC×69 09:30 $20.53 → close $20.93 +27.60; RKT×99 09:30 $14.30 → close $15.01 +70.29; JMKE×71 09:30 $19.99 → close $21.01 +72.42; HWM×6 09:30 $221.39 → close $213.56 -46.98; RUN×152 09:30 $9.36 → close $8.79 -86.64; PRIM×16 09:30 $84.45 → close $68.45 -256.00 | — |
 
 ## Not taken
 

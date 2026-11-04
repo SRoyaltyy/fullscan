@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · packet🟢 OR headline🟢 and camera net ≥ 3
 
-Cash book **-21.31%** ($7,869) · signal-only (no cash/fees) was -21.14%. Starts YES **1/30**. Fills 158 · skips 162 · realized $-2181.08.
+Cash book **-20.99%** ($7,901) · signal-only (no cash/fees) was -21.14%. Starts YES **1/30**. Fills 159 · skips 162 · realized $-2181.08.
 
 ## How this sleeve decides (like you are 10)
 
@@ -348,6 +348,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-03 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $601.91 | ▼ 09:30 equity $7,822.27 vs yday $7,879.52 (-57.25) | 09:30 open · cash $601.91 (unchanged overnight, no fees) · equity $7,822.27 vs prior close $7,879.52 (-57.25) · 2 name(s) re-marked at the open (per-name table). AMX×9 yday $24.74 → 09:30 $24.69 -0.45; LLY×5 yday $1410.99 → 09:30 $1399.63 -56.80 | — |
 | 2026-11-03 09:30 ET | **SELL** | `AMX` | 9 | $24.69 | $2.04 | $+1.53 | $822.08 | ▲ +1.53 after sell → book $7,820.23; vs 09:30 mark -2.04 | dropped from list after 4 sess (min 3) | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-11-03 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $822.08 | ▲ close $7,868.98 vs 09:30 $7,822.27 (session +48.75) | 16:00 close · cash $822.08 · equity $7,868.98 vs 09:30 $7,822.27 (+46.71; session marks +48.75) · 1 name(s) marked open→close (per-name table). LLY×5 09:30 $1399.63 → close $1409.38 +48.75 | — |
+| 2026-11-04 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $822.08 | ▲ 09:30 equity $8,022.08 vs yday $7,868.98 (+153.10) | 09:30 open · cash $822.08 (unchanged overnight, no fees) · equity $8,022.08 vs prior close $7,868.98 (+153.10) · 1 name(s) re-marked at the open (per-name table). LLY×5 yday $1409.38 → 09:30 $1440.00 +153.10 | — |
+| 2026-11-04 09:30 ET | **BUY** | `AMX` | 32 | $25.31 | $2.09 | — | $10.07 | — | packet🟢 OR headline🟢 and camera net ≥ 3; gate cam_net_min=3,news_or_headline=True; rank cond; list yday_gainer; 🔵; ret5=+2.9; leftover $822.08 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-04 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10.07 | ▼ close $7,900.98 vs 09:30 $8,022.08 (session -119.01) | 16:00 close · cash $10.07 · equity $7,900.98 vs 09:30 $8,022.08 (-121.10; session marks -119.01) · 2 name(s) marked open→close (per-name table). LLY×5 09:30 $1440.00 → close $1417.99 -110.05; AMX×32 09:30 $25.31 → close $25.03 -8.96 | — |
 
 ## Not taken
 

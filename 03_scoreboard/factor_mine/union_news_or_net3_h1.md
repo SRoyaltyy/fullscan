@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · packet🟢 OR headline🟢 and camera net ≥ 3
 
-Cash book **-38.86%** ($6,114) · signal-only (no cash/fees) was -9.17%. Starts YES **0/30**. Fills 206 · skips 40 · realized $-1690.89.
+Cash book **-39.57%** ($6,043) · signal-only (no cash/fees) was -9.17%. Starts YES **0/30**. Fills 207 · skips 40 · realized $-1690.89.
 
 ## How this sleeve decides (like you are 10)
 
@@ -396,6 +396,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-03 09:30 ET | **SELL** | `AMX` | 124 | $24.69 | $2.41 | $+10.11 | $3,316.70 | ▲ +10.11 after sell → book $6,115.96; vs 09:30 mark -2.41 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-11-03 09:30 ET | **SELL** | `LLY` | 2 | $1399.63 | $2.03 | $+8.94 | $6,113.93 | ▲ +8.94 after sell → book $6,113.93; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-03 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,113.93 | ▲ close $6,113.93 vs 09:30 $6,118.37 (session +0.00) | 16:00 close · cash $6,113.93 · no lots left · equity $6,113.93. | — |
+| 2026-11-04 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6,113.93 | ▲ 09:30 equity $6,113.93 vs yday $6,113.93 (+0.00) | 09:30 open · cash $6,113.93 · no holdings · equity $6,113.93 vs prior close $6,113.93 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-04 09:30 ET | **BUY** | `AMX` | 241 | $25.31 | $3.11 | — | $11.11 | — | packet🟢 OR headline🟢 and camera net ≥ 3; gate cam_net_min=3,news_or_headline=True; rank cond; list yday_gainer; 🔵; ret5=+2.9; leftover $6113.93 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-04 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $11.11 | ▼ close $6,043.34 vs 09:30 $6,113.93 (session -67.48) | 16:00 close · cash $11.11 · equity $6,043.34 vs 09:30 $6,113.93 (-70.59; session marks -67.48) · 1 name(s) marked open→close (per-name table). AMX×241 09:30 $25.31 → close $25.03 -67.48 | — |
 
 ## Not taken
 

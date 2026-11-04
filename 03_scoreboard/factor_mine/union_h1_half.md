@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `half` · sell `list` · S-boost `none` · deploy half leftover
 
-Cash book **-13.66%** ($8,634) · signal-only (no cash/fees) was -0.80%. Starts YES **0/30**. Fills 455 · skips 107 · realized $-342.82.
+Cash book **-13.70%** ($8,630) · signal-only (no cash/fees) was -0.80%. Starts YES **0/30**. Fills 463 · skips 107 · realized $-342.82.
 
 ## How this sleeve decides (like you are 10)
 
@@ -639,6 +639,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-03 09:30 ET | **SELL** | `VEEV` | 1 | $303.00 | $2.01 | $-17.21 | $7,704.07 | ▼ -17.21 after sell → book $8,605.52; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-03 09:30 ET | **SELL** | `VLO` | 1 | $378.90 | $2.01 | $-17.79 | $8,080.96 | ▼ -17.79 after sell → book $8,603.51; vs 09:30 mark -2.01 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-03 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,080.96 | ▲ close $8,633.96 vs 09:30 $8,617.75 (session +30.45) | 16:00 close · cash $8,080.96 · equity $8,633.96 vs 09:30 $8,617.75 (+16.21; session marks +30.45) · 1 name(s) marked open→close (per-name table). SMMT×35 09:30 $14.93 → close $15.80 +30.45 | — |
+| 2026-11-04 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,080.96 | ▲ 09:30 equity $8,646.21 vs yday $8,633.96 (+12.25) | 09:30 open · cash $8,080.96 (unchanged overnight, no fees) · equity $8,646.21 vs prior close $8,633.96 (+12.25) · 1 name(s) re-marked at the open (per-name table). SMMT×35 yday $15.80 → 09:30 $16.15 +12.25 | — |
+| 2026-11-04 09:30 ET | **SELL** | `SMMT` | 35 | $16.15 | $2.12 | $+29.39 | $8,644.09 | ▲ +29.39 after sell → book $8,644.09; vs 09:30 mark -2.12 | dropped from list after 5 sess (min 1) | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🔴 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `VEEV` | 1 | $306.62 | $1.99 | — | $8,335.48 | — | deploy half leftover; list flatten; ret5=-3.3; leftover $540.26 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `ILMN` | 2 | $241.00 | $2.00 | — | $7,851.49 | — | deploy half leftover; list flatten; 🔵; ret5=-14.8; leftover $540.26 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `RGEN` | 2 | $183.40 | $2.00 | — | $7,482.69 | — | deploy half leftover; list flatten; 🔵; ret5=+1.4; leftover $540.26 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `CDNA` | 6 | $89.00 | $2.01 | — | $6,946.69 | — | deploy half leftover; list flatten; ret5=+25.4; leftover $540.26 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `PACS` | 11 | $48.51 | $2.02 | — | $6,411.05 | — | deploy half leftover; list flatten; 🔵; ret5=-2.4; leftover $540.26 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `CON` | 13 | $40.90 | $2.03 | — | $5,877.39 | — | deploy half leftover; list flatten; 🔵; ret5=+0.4; leftover $540.26 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `PCRX` | 14 | $36.41 | $2.03 | — | $5,365.62 | — | deploy half leftover; list flatten; 🔵; ret5=-0.0; leftover $540.26 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-04 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5,365.62 | ▼ close $8,629.63 vs 09:30 $8,646.21 (session -0.40) | 16:00 close · cash $5,365.62 · equity $8,629.63 vs 09:30 $8,646.21 (-16.58; session marks -0.40) · 7 name(s) marked open→close (per-name table). VEEV×1 09:30 $306.62 → close $310.63 +4.01; ILMN×2 09:30 $241.00 → close $226.54 -28.92; RGEN×2 09:30 $183.40 → close $178.20 -10.40; CDNA×6 09:30 $89.00 → close $85.86 -18.84; PACS×11 09:30 $48.51 → close $50.26 +19.25; CON×13 09:30 $40.90 → close $43.56 +34.64; PCRX×14 09:30 $36.41 → close $36.40 -0.14 | — |
 
 ## Not taken
 

@@ -1,0 +1,212 @@
+{
+  "buys": [
+    {
+      "fill_rule": "open",
+      "price": 6.77,
+      "shares": 366,
+      "side": "BUY",
+      "ticker": "JLHL"
+    },
+    {
+      "fill_rule": "open",
+      "price": 24.0,
+      "shares": 103,
+      "side": "BUY",
+      "ticker": "BETA"
+    },
+    {
+      "fill_rule": "open",
+      "price": 179.68,
+      "shares": 13,
+      "side": "BUY",
+      "ticker": "RRX"
+    },
+    {
+      "fill_rule": "open",
+      "price": 20.53,
+      "shares": 120,
+      "side": "BUY",
+      "ticker": "VFC"
+    }
+  ],
+  "cash": 171.71,
+  "date": "2026-11-04",
+  "equity": 10142.78,
+  "fees": 19.9851,
+  "fills": [
+    {
+      "fees": 2.0996,
+      "fill_rule": "open",
+      "pnl": -27.66,
+      "price": 86.29,
+      "shares": 27,
+      "side": "SELL",
+      "ticker": "BAH"
+    },
+    {
+      "fees": 2.1129,
+      "fill_rule": "open",
+      "pnl": 114.53,
+      "price": 80.08,
+      "shares": 31,
+      "side": "SELL",
+      "ticker": "BC"
+    },
+    {
+      "fees": 2.1002,
+      "fill_rule": "open",
+      "pnl": 53.07,
+      "price": 89.0,
+      "shares": 27,
+      "side": "SELL",
+      "ticker": "CDNA"
+    },
+    {
+      "fees": 2.273,
+      "fill_rule": "open",
+      "pnl": 115.84,
+      "price": 30.5,
+      "shares": 83,
+      "side": "SELL",
+      "ticker": "GEN"
+    },
+    {
+      "fees": 4.7214,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 6.77,
+      "shares": 366,
+      "side": "BUY",
+      "ticker": "JLHL"
+    },
+    {
+      "fees": 2.299,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 24.0,
+      "shares": 103,
+      "side": "BUY",
+      "ticker": "BETA"
+    },
+    {
+      "fees": 2.029,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 179.68,
+      "shares": 13,
+      "side": "BUY",
+      "ticker": "RRX"
+    },
+    {
+      "fees": 2.35,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 20.53,
+      "shares": 120,
+      "side": "BUY",
+      "ticker": "VFC"
+    }
+  ],
+  "holdings": [
+    "BETA",
+    "JLHL",
+    "RRX",
+    "VFC"
+  ],
+  "mean": 3.2964,
+  "n_trades_today": 8,
+  "recipe": "oos0914_break10_h2_sx",
+  "sells": [
+    {
+      "fill_rule": "open",
+      "price": 86.29,
+      "shares": 27,
+      "side": "SELL",
+      "ticker": "BAH"
+    },
+    {
+      "fill_rule": "open",
+      "price": 80.08,
+      "shares": 31,
+      "side": "SELL",
+      "ticker": "BC"
+    },
+    {
+      "fill_rule": "open",
+      "price": 89.0,
+      "shares": 27,
+      "side": "SELL",
+      "ticker": "CDNA"
+    },
+    {
+      "fill_rule": "open",
+      "price": 30.5,
+      "shares": 83,
+      "side": "SELL",
+      "ticker": "GEN"
+    }
+  ],
+  "state": {
+    "after": "2026-11-04",
+    "cash": 171.71,
+    "pos": {
+      "BETA": {
+        "close_px": 25.31,
+        "cost": 2474.299,
+        "entry_date": "2026-11-04",
+        "entry_px": 24.0,
+        "fee_in": 2.299,
+        "last_px": 24.0,
+        "min_hold": 2,
+        "notional": 2472.0,
+        "peak_px": 24.0,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list ohlc_hot; ret5=+13.9; leftover $2483.09",
+        "shares": 103,
+        "ticker": "BETA"
+      },
+      "JLHL": {
+        "close_px": 7.1,
+        "cost": 2482.5413999999996,
+        "entry_date": "2026-11-04",
+        "entry_px": 6.77,
+        "fee_in": 4.7214,
+        "last_px": 6.77,
+        "min_hold": 2,
+        "notional": 2477.8199999999997,
+        "peak_px": 6.77,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list yday_mover; ret5=+19.3; leftover $2483.09",
+        "shares": 366,
+        "ticker": "JLHL"
+      },
+      "RRX": {
+        "close_px": 173.38,
+        "cost": 2337.869,
+        "entry_date": "2026-11-04",
+        "entry_px": 179.68,
+        "fee_in": 2.029,
+        "last_px": 179.68,
+        "min_hold": 2,
+        "notional": 2335.84,
+        "peak_px": 179.68,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list ohlc_hot; ret5=+13.7; leftover $2483.09",
+        "shares": 13,
+        "ticker": "RRX"
+      },
+      "VFC": {
+        "close_px": 20.93,
+        "cost": 2465.9500000000003,
+        "entry_date": "2026-11-04",
+        "entry_px": 20.53,
+        "fee_in": 2.35,
+        "last_px": 20.53,
+        "min_hold": 2,
+        "notional": 2463.6000000000004,
+        "peak_px": 20.53,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list ohlc_hot; \ud83d\udd35; ret5=+17.7; leftover $2483.09",
+        "shares": 120,
+        "ticker": "VFC"
+      }
+    },
+    "yday_equity": 10142.78
+  }
+}

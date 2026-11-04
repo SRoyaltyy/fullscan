@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `rsi` · size `leftover` · sell `list` · S-boost `none` · rank by rsi
 
-Cash book **+42.58%** ($14,258) · signal-only (no cash/fees) was -22.60%. Starts YES **0/30**. Fills 456 · skips 98 · realized $-2571.92.
+Cash book **+45.05%** ($14,505) · signal-only (no cash/fees) was -22.60%. Starts YES **0/30**. Fills 465 · skips 98 · realized $-2571.92.
 
 ## How this sleeve decides (like you are 10)
 
@@ -643,6 +643,17 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-03 09:30 ET | **SELL** | `GEN` | 60 | $29.59 | $2.19 | $+28.04 | $5,788.37 | ▲ +28.04 after sell → book $14,254.44; vs 09:30 mark -2.20 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-03 09:30 ET | **SELL** | `WEN` | 244 | $7.16 | $3.20 | $-20.99 | $7,532.21 | ▼ -20.99 after sell → book $14,251.24; vs 09:30 mark -3.20 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-03 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,532.21 | ▲ close $14,258.07 vs 09:30 $14,258.72 (session +6.83) | 16:00 close · cash $7,532.21 · equity $14,258.07 vs 09:30 $14,258.72 (-0.65; session marks +6.83) · 4 name(s) marked open→close (per-name table). DGX×7 09:30 $252.64 → close $247.06 -39.06; FRSH×120 09:30 $13.85 → close $14.15 +36.00; PENN×110 09:30 $17.03 → close $17.07 +4.40; ROP×3 09:30 $471.75 → close $473.58 +5.49 | — |
+| 2026-11-04 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,532.21 | ▼ 09:30 equity $14,171.45 vs yday $14,258.07 (-86.62) | 09:30 open · cash $7,532.21 (unchanged overnight, no fees) · equity $14,171.45 vs prior close $14,258.07 (-86.62) · 4 name(s) re-marked at the open (per-name table). DGX×7 yday $247.06 → 09:30 $250.61 +24.85; FRSH×120 yday $14.15 → 09:30 $12.87 -154.20; PENN×110 yday $17.07 → 09:30 $17.30 +25.30; ROP×3 yday $473.58 → 09:30 $479.39 +17.43 | — |
+| 2026-11-04 09:30 ET | **SELL** | `FRSH` | 120 | $12.87 | $2.38 | $-227.33 | $9,073.63 | ▼ -227.33 after sell → book $14,169.07; vs 09:30 mark -2.38 | dropped from list after 2 sess (min 1) | join🔴 sector🔴 gen🟢 news🟡 digest🟢 judge🟡 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **SELL** | `PENN` | 110 | $17.30 | $2.35 | $+138.33 | $10,974.27 | ▲ +138.33 after sell → book $14,166.71; vs 09:30 mark -2.36 | dropped from list after 2 sess (min 1) | — |
+| 2026-11-04 09:30 ET | **SELL** | `ROP` | 3 | $479.39 | $2.02 | $+36.45 | $12,410.42 | ▲ +36.45 after sell → book $14,164.69; vs 09:30 mark -2.02 | dropped from list after 2 sess (min 1) | — |
+| 2026-11-04 09:30 ET | **BUY** | `QNST` | 95 | $18.51 | $2.27 | — | $10,649.70 | — | rank by rsi; rank rsi; list ohlc_hot; 🔵; ret5=+14.2; leftover $1772.92 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `HRB` | 33 | $53.49 | $2.09 | — | $8,882.44 | — | rank by rsi; rank rsi; list ohlc_hot; ret5=+10.8; leftover $1772.92 | join🟢 sector🔴 gen🟢 news🔴 digest🟡 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `ROL` | 47 | $37.57 | $2.13 | — | $7,114.52 | — | rank by rsi; rank rsi; list ohlc_hot; ret5=+9.8; leftover $1772.92 | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `JMKE` | 88 | $19.99 | $2.25 | — | $5,353.14 | — | rank by rsi; rank rsi; list ohlc_hot; ret5=+16.3; leftover $1772.92 | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `CPNG` | 115 | $15.41 | $2.33 | — | $3,578.66 | — | rank by rsi; rank rsi; list ohlc_hot; ret5=+9.5; leftover $1772.92 | join🔴 sector🔴 gen🟢 news🟡 digest🟡 ab🔴 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `IVA` | 424 | $4.18 | $5.47 | — | $1,800.87 | — | rank by rsi; rank rsi; list ohlc_hot; 🔵; ret5=+9.4; leftover $1772.92 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-04 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,800.87 | ▲ close $14,505.21 vs 09:30 $14,171.45 (session +357.07) | 16:00 close · cash $1,800.87 · equity $14,505.21 vs 09:30 $14,171.45 (+333.76; session marks +357.07) · 7 name(s) marked open→close (per-name table). DGX×7 09:30 $250.61 → close $255.68 +35.49; QNST×95 09:30 $18.51 → close $19.26 +71.25; HRB×33 09:30 $53.49 → close $55.47 +65.34; ROL×47 09:30 $37.57 → close $38.38 +38.07; JMKE×88 09:30 $19.99 → close $21.01 +89.76; CPNG×115 09:30 $15.41 → close $17.05 +188.60; IVA×424 09:30 $4.18 → close $3.87 -131.44 | — |
 
 ## Not taken
 

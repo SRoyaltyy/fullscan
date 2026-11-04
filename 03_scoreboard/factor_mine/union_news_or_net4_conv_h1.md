@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 4 · rank `cond` · size `conviction` · sell `list` · S-boost `none` · OR news + net≥4; 70% leftover if #1 net ≥ 5
 
-Cash book **-33.27%** ($6,673) · signal-only (no cash/fees) was -7.44%. Starts YES **12/30**. Fills 140 · skips 31 · realized $+852.81.
+Cash book **-34.04%** ($6,596) · signal-only (no cash/fees) was -7.44%. Starts YES **12/30**. Fills 141 · skips 31 · realized $+852.81.
 
 ## How this sleeve decides (like you are 10)
 
@@ -330,6 +330,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-03 09:30 ET | **SELL** | `AMX` | 81 | $24.69 | $2.26 | $+5.22 | $2,476.18 | ▲ +5.22 after sell → book $6,675.07; vs 09:30 mark -2.26 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-11-03 09:30 ET | **SELL** | `LLY` | 3 | $1399.63 | $2.04 | $+15.40 | $6,673.03 | ▲ +15.40 after sell → book $6,673.03; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-03 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,673.03 | ▲ close $6,673.03 vs 09:30 $6,677.33 (session +0.00) | 16:00 close · cash $6,673.03 · no lots left · equity $6,673.03. | — |
+| 2026-11-04 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6,673.03 | ▲ 09:30 equity $6,673.03 vs yday $6,673.03 (+0.00) | 09:30 open · cash $6,673.03 · no holdings · equity $6,673.03 vs prior close $6,673.03 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-04 09:30 ET | **BUY** | `AMX` | 263 | $25.31 | $3.39 | — | $13.11 | — | OR news + net≥4; 70% leftover if #1 net ≥ 5; gate cam_net_min=4,news_or_headline=True; rank cond; list yday_gainer; 🔵; ret5=+2.9; leftover $6673.03 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-04 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $13.11 | ▼ close $6,596.00 vs 09:30 $6,673.03 (session -73.64) | 16:00 close · cash $13.11 · equity $6,596.00 vs 09:30 $6,673.03 (-77.03; session marks -73.64) · 1 name(s) marked open→close (per-name table). AMX×263 09:30 $25.31 → close $25.03 -73.64 | — |
 
 ## Not taken
 

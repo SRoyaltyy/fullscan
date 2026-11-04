@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-24.20%** ($7,580) · signal-only (no cash/fees) was -12.21%. Starts YES **0/30**. Fills 470 · skips 101 · realized $-768.45.
+Cash book **-22.86%** ($7,714) · signal-only (no cash/fees) was -12.21%. Starts YES **0/30**. Fills 478 · skips 101 · realized $-768.45.
 
 ## How this sleeve decides (like you are 10)
 
@@ -663,6 +663,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-03 09:30 ET | **SELL** | `RKT` | 73 | $13.77 | $2.23 | $+47.75 | $4,852.28 | ▲ +47.75 after sell → book $7,576.69; vs 09:30 mark -2.23 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-03 09:30 ET | **SELL** | `VAL` | 9 | $90.51 | $2.04 | $-102.06 | $5,664.83 | ▼ -102.06 after sell → book $7,574.65; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-03 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5,664.83 | ▲ close $7,579.72 vs 09:30 $7,585.45 (session +5.07) | 16:00 close · cash $5,664.83 · equity $7,579.72 vs 09:30 $7,585.45 (-5.73; session marks +5.07) · 2 name(s) marked open→close (per-name table). PRMB×47 09:30 $20.56 → close $20.59 +1.41; ROP×2 09:30 $471.75 → close $473.58 +3.66 | — |
+| 2026-11-04 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $5,664.83 | ▲ 09:30 equity $7,620.48 vs yday $7,579.72 (+40.76) | 09:30 open · cash $5,664.83 (unchanged overnight, no fees) · equity $7,620.48 vs prior close $7,579.72 (+40.76) · 2 name(s) re-marked at the open (per-name table). PRMB×47 yday $20.59 → 09:30 $21.21 +29.14; ROP×2 yday $473.58 → 09:30 $479.39 +11.62 | — |
+| 2026-11-04 09:30 ET | **SELL** | `ROP` | 2 | $479.39 | $2.02 | $+22.97 | $6,621.59 | ▲ +22.97 after sell → book $7,618.46; vs 09:30 mark -2.02 | dropped from list after 2 sess (min 1) | — |
+| 2026-11-04 09:30 ET | **BUY** | `RGEN` | 5 | $183.40 | $2.00 | — | $5,702.59 | — | combo gate; gate last_green=True,ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list flatten; 🔵; ret5=+1.4; leftover $945.94 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `CNMD` | 19 | $47.99 | $2.05 | — | $4,788.73 | — | combo gate; gate last_green=True,ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list flatten; 🔵; ret5=+0.1; leftover $945.94 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `SMMT` | 58 | $16.15 | $2.16 | — | $3,849.87 | — | combo gate; gate last_green=True,ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list probable,yday_gainer,yday_mover; ret5=+3.1; leftover $945.94 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🔴 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `EPR` | 15 | $60.00 | $2.04 | — | $2,947.83 | — | combo gate; gate last_green=True,ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list probable,yday_gainer,yday_mover; 🔵; ret5=+6.8; leftover $945.94 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `CXW` | 31 | $29.58 | $2.08 | — | $2,028.77 | — | combo gate; gate last_green=True,ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list probable,yday_gainer,yday_mover; 🔵; ret5=+0.6; leftover $945.94 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `CRS` | 3 | $297.00 | $2.00 | — | $1,135.77 | — | combo gate; gate last_green=True,ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list yday_gainer; ret5=+2.9; leftover $945.94 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `TRU` | 11 | $81.14 | $2.02 | — | $241.21 | — | combo gate; gate last_green=True,ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list yday_gainer; ret5=+4.2; leftover $945.94 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-04 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $241.21 | ▲ close $7,714.50 vs 09:30 $7,620.48 (session +110.39) | 16:00 close · cash $241.21 · equity $7,714.50 vs 09:30 $7,620.48 (+94.02; session marks +110.39) · 8 name(s) marked open→close (per-name table). PRMB×47 09:30 $21.21 → close $21.02 -8.93; RGEN×5 09:30 $183.40 → close $178.20 -26.00; CNMD×19 09:30 $47.99 → close $53.66 +107.73; SMMT×58 09:30 $16.15 → close $16.17 +1.16; EPR×15 09:30 $60.00 → close $60.74 +11.10; CXW×31 09:30 $29.58 → close $30.52 +29.14; CRS×3 09:30 $297.00 → close $292.10 -14.70; TRU×11 09:30 $81.14 → close $82.13 +10.89 | — |
 
 ## Not taken
 

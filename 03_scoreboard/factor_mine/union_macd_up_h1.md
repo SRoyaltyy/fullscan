@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ macd_up, no 🚨
 
-Cash book **-22.74%** ($7,726) · signal-only (no cash/fees) was +22.07%. Starts YES **11/30**. Fills 459 · skips 104 · realized $+158.57.
+Cash book **-22.79%** ($7,721) · signal-only (no cash/fees) was +22.07%. Starts YES **11/30**. Fills 466 · skips 104 · realized $+158.57.
 
 ## How this sleeve decides (like you are 10)
 
@@ -647,6 +647,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-03 09:30 ET | **SELL** | `NVTS` | 115 | $8.26 | $2.36 | $-39.20 | $5,808.14 | ▼ -39.20 after sell → book $7,726.31; vs 09:30 mark -2.36 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🟡 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-11-03 09:30 ET | **SELL** | `SMMT` | 61 | $14.93 | $2.19 | $-69.64 | $6,716.67 | ▼ -69.64 after sell → book $7,724.11; vs 09:30 mark -2.20 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-11-03 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,716.67 | ▲ close $7,725.58 vs 09:30 $7,739.01 (session +1.47) | 16:00 close · cash $6,716.67 · equity $7,725.58 vs 09:30 $7,739.01 (-13.43; session marks +1.47) · 1 name(s) marked open→close (per-name table). PRMB×49 09:30 $20.56 → close $20.59 +1.47 | — |
+| 2026-11-04 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6,716.67 | ▲ 09:30 equity $7,755.96 vs yday $7,725.58 (+30.38) | 09:30 open · cash $6,716.67 (unchanged overnight, no fees) · equity $7,755.96 vs prior close $7,725.58 (+30.38) · 1 name(s) re-marked at the open (per-name table). PRMB×49 yday $20.59 → 09:30 $21.21 +30.38 | — |
+| 2026-11-04 09:30 ET | **BUY** | `CDNA` | 10 | $89.00 | $2.02 | — | $5,824.65 | — | union ∩ macd_up, no 🚨; gate macd_up=True; list flatten; ret5=+25.4; leftover $959.52 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `CON` | 23 | $40.90 | $2.06 | — | $4,882.01 | — | union ∩ macd_up, no 🚨; gate macd_up=True; list flatten; 🔵; ret5=+0.4; leftover $959.52 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `NVTS` | 102 | $9.37 | $2.30 | — | $3,924.48 | — | union ∩ macd_up, no 🚨; gate macd_up=True; list probable,yday_gainer,yday_mover; ret5=-8.4; leftover $959.52 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 judge🟡 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `EPR` | 15 | $60.00 | $2.04 | — | $3,022.44 | — | union ∩ macd_up, no 🚨; gate macd_up=True; list probable,yday_gainer,yday_mover; 🔵; ret5=+6.8; leftover $959.52 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `CXW` | 32 | $29.58 | $2.09 | — | $2,073.80 | — | union ∩ macd_up, no 🚨; gate macd_up=True; list probable,yday_gainer,yday_mover; 🔵; ret5=+0.6; leftover $959.52 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `ACRS` | 251 | $3.81 | $3.24 | — | $1,114.25 | — | union ∩ macd_up, no 🚨; gate macd_up=True; list probable,yday_gainer,yday_mover; 🔵; ret5=-1.3; leftover $959.52 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🔴 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `MX` | 380 | $2.52 | $4.90 | — | $151.75 | — | union ∩ macd_up, no 🚨; gate macd_up=True; list yday_gainer,yday_mover; 🔵; ret5=+0.0; leftover $959.52 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 judge🟡 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-04 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $151.75 | ▼ close $7,721.09 vs 09:30 $7,755.96 (session -16.24) | 16:00 close · cash $151.75 · equity $7,721.09 vs 09:30 $7,755.96 (-34.87; session marks -16.24) · 8 name(s) marked open→close (per-name table). PRMB×49 09:30 $21.21 → close $21.02 -9.31; CDNA×10 09:30 $89.00 → close $85.86 -31.40; CON×23 09:30 $40.90 → close $43.56 +61.29; NVTS×102 09:30 $9.37 → close $9.33 -3.57; EPR×15 09:30 $60.00 → close $60.74 +11.10; CXW×32 09:30 $29.58 → close $30.52 +30.08; ACRS×251 09:30 $3.81 → close $3.68 -32.63; MX×380 09:30 $2.52 → close $2.41 -41.80 | — |
 
 ## Not taken
 

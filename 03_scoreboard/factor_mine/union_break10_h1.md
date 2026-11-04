@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ break10, no 🚨
 
-Cash book **-15.64%** ($8,436) · signal-only (no cash/fees) was +11.56%. Starts YES **14/30**. Fills 500 · skips 100 · realized $-529.03.
+Cash book **-16.52%** ($8,348) · signal-only (no cash/fees) was +11.56%. Starts YES **14/30**. Fills 509 · skips 100 · realized $-529.03.
 
 ## How this sleeve decides (like you are 10)
 
@@ -688,6 +688,17 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-03 09:30 ET | **SELL** | `GEN` | 36 | $29.59 | $2.12 | $+15.22 | $6,300.95 | ▲ +15.22 after sell → book $8,460.40; vs 09:30 mark -2.12 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-03 09:30 ET | **SELL** | `REAL` | 85 | $12.95 | $2.27 | $+49.89 | $7,399.43 | ▲ +49.89 after sell → book $8,458.13; vs 09:30 mark -2.27 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-03 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,399.43 | ▼ close $8,435.68 vs 09:30 $8,472.77 (session -22.45) | 16:00 close · cash $7,399.43 · equity $8,435.68 vs 09:30 $8,472.77 (-37.09; session marks -22.45) · 1 name(s) marked open→close (per-name table). POOL×5 09:30 $211.74 → close $207.25 -22.45 | — |
+| 2026-11-04 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,399.43 | ▲ 09:30 equity $8,468.93 vs yday $8,435.68 (+33.25) | 09:30 open · cash $7,399.43 (unchanged overnight, no fees) · equity $8,468.93 vs prior close $8,435.68 (+33.25) · 1 name(s) re-marked at the open (per-name table). POOL×5 yday $207.25 → 09:30 $213.90 +33.25 | — |
+| 2026-11-04 09:30 ET | **SELL** | `POOL` | 5 | $213.90 | $2.02 | $+21.12 | $8,466.91 | ▲ +21.12 after sell → book $8,466.91; vs 09:30 mark -2.02 | dropped from list after 2 sess (min 1) | join🔴 sector🔴 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `PRIM` | 12 | $84.45 | $2.03 | — | $7,451.48 | — | union ∩ break10, no 🚨; gate break_10=True; list yday_gainer,yday_mover,ohlc_hot; ret5=+15.1; leftover $1058.36 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `TBBB` | 16 | $63.74 | $2.04 | — | $6,429.60 | — | union ∩ break10, no 🚨; gate break_10=True; list yday_gainer; 🔵; ret5=+9.7; leftover $1058.36 | join🔴 sector🟡 gen🟢 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `JLHL` | 156 | $6.77 | $2.46 | — | $5,371.02 | — | union ∩ break10, no 🚨; gate break_10=True; list yday_mover; ret5=+19.3; leftover $1058.36 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 judge🔴 ab🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `BETA` | 44 | $24.00 | $2.12 | — | $4,312.90 | — | union ∩ break10, no 🚨; gate break_10=True; list ohlc_hot; ret5=+13.9; leftover $1058.36 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 judge🔴 ab🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `RRX` | 5 | $179.68 | $2.00 | — | $3,412.50 | — | union ∩ break10, no 🚨; gate break_10=True; list ohlc_hot; ret5=+13.7; leftover $1058.36 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `VFC` | 51 | $20.53 | $2.14 | — | $2,363.32 | — | union ∩ break10, no 🚨; gate break_10=True; list ohlc_hot; 🔵; ret5=+17.7; leftover $1058.36 | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `RUN` | 113 | $9.36 | $2.33 | — | $1,303.31 | — | union ∩ break10, no 🚨; gate break_10=True; list ohlc_hot; 🔵; ret5=+15.3; leftover $1058.36 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 judge🟡 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `SHLS` | 119 | $8.86 | $2.35 | — | $246.63 | — | union ∩ break10, no 🚨; gate break_10=True; list ohlc_hot; 🔵; ret5=+13.3; leftover $1058.36 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-04 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $246.63 | ▼ close $8,348.03 vs 09:30 $8,468.93 (session -101.41) | 16:00 close · cash $246.63 · equity $8,348.03 vs 09:30 $8,468.93 (-120.90; session marks -101.41) · 8 name(s) marked open→close (per-name table). PRIM×12 09:30 $84.45 → close $68.45 -192.00; TBBB×16 09:30 $63.74 → close $65.07 +21.28; JLHL×156 09:30 $6.77 → close $7.10 +51.48; BETA×44 09:30 $24.00 → close $25.31 +57.64; RRX×5 09:30 $179.68 → close $173.38 -31.50; VFC×51 09:30 $20.53 → close $20.93 +20.40; RUN×113 09:30 $9.36 → close $8.79 -64.41; SHLS×119 09:30 $8.86 → close $9.16 +35.70 | — |
 
 ## Not taken
 

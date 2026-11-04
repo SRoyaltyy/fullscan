@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-15.52%** ($8,448) · signal-only (no cash/fees) was -4.91%. Starts YES **5/30**. Fills 366 · skips 78 · realized $-2.02.
+Cash book **-9.68%** ($9,033) · signal-only (no cash/fees) was -4.91%. Starts YES **5/30**. Fills 367 · skips 78 · realized $-2.02.
 
 ## How this sleeve decides (like you are 10)
 
@@ -556,6 +556,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,447.66 | ▲ close $8,447.66 vs 09:30 $8,447.66 (session +0.00) | 16:00 close · cash $8,447.66 · no lots left · equity $8,447.66. | — |
 | 2026-11-03 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,447.66 | ▲ 09:30 equity $8,447.66 vs yday $8,447.66 (+0.00) | 09:30 open · cash $8,447.66 · no holdings · equity $8,447.66 vs prior close $8,447.66 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-11-03 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,447.66 | ▲ close $8,447.66 vs 09:30 $8,447.66 (session +0.00) | 16:00 close · cash $8,447.66 · no lots left · equity $8,447.66. | — |
+| 2026-11-04 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,447.66 | ▲ 09:30 equity $8,447.66 vs yday $8,447.66 (+0.00) | 09:30 open · cash $8,447.66 · no holdings · equity $8,447.66 vs prior close $8,447.66 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-04 09:30 ET | **BUY** | `EGG` | 1685 | $5.00 | $21.74 | — | $0.92 | — | combo gate; gate last_green=True,vol=good; list yday_gainer,yday_mover; ret5=-1.7; leftover $8447.66 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 judge🔴 ab🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-11-04 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $0.92 | ▲ close $9,032.52 vs 09:30 $8,447.66 (session +606.60) | 16:00 close · cash $0.92 · equity $9,032.52 vs 09:30 $8,447.66 (+584.86; session marks +606.60) · 1 name(s) marked open→close (per-name table). EGG×1685 09:30 $5.00 → close $5.36 +606.60 | — |
 
 ## Not taken
 

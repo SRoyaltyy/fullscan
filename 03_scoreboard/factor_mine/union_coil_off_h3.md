@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ coil_off, no 🚨
 
-Cash book **-31.13%** ($6,887) · signal-only (no cash/fees) was -24.98%. Starts YES **1/30**. Fills 359 · skips 306 · realized $-1766.84.
+Cash book **-29.84%** ($7,016) · signal-only (no cash/fees) was -24.98%. Starts YES **1/30**. Fills 363 · skips 306 · realized $-1766.84.
 
 ## How this sleeve decides (like you are 10)
 
@@ -550,6 +550,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-03 09:30 ET | **SELL** | `EPR` | 3 | $59.39 | $1.81 | $+7.12 | $225.29 | ▲ +7.12 after sell → book $6,805.34; vs 09:30 mark -1.81 | dropped from list after 4 sess (min 3) | join🔴 sector🟡 gen🔴 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-11-03 09:30 ET | **SELL** | `PDFS` | 4 | $39.80 | $1.62 | $-26.74 | $382.87 | ▼ -26.74 after sell → book $6,803.72; vs 09:30 mark -1.62 | dropped from list after 4 sess (min 3) | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-11-03 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $382.87 | ▲ close $6,886.64 vs 09:30 $6,807.15 (session +82.92) | 16:00 close · cash $382.87 · equity $6,886.64 vs 09:30 $6,807.15 (+79.49; session marks +82.92) · 6 name(s) marked open→close (per-name table). ARQT×34 09:30 $31.32 → close $32.00 +23.12; CXW×35 09:30 $30.35 → close $30.97 +21.70; ETON×20 09:30 $50.81 → close $50.95 +2.80; MX×442 09:30 $2.53 → close $2.52 -4.42; NVTS×127 09:30 $8.26 → close $8.56 +38.10; PRMB×54 09:30 $20.56 → close $20.59 +1.62 | — |
+| 2026-11-04 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $382.87 | ▲ 09:30 equity $7,019.99 vs yday $6,886.64 (+133.35) | 09:30 open · cash $382.87 (unchanged overnight, no fees) · equity $7,019.99 vs prior close $6,886.64 (+133.35) · 6 name(s) re-marked at the open (per-name table). ARQT×34 yday $32.00 → 09:30 $32.88 +30.09; CXW×35 yday $30.97 → 09:30 $29.58 -48.65; ETON×20 yday $50.95 → 09:30 $51.76 +16.20; MX×442 yday $2.52 → 09:30 $2.52 +0.00; NVTS×127 yday $8.56 → 09:30 $9.37 +102.23; PRMB×54 yday $20.59 → 09:30 $21.21 +33.48 | — |
+| 2026-11-04 09:30 ET | **BUY** | `CON` | 1 | $40.90 | $0.41 | — | $341.56 | — | union ∩ coil_off, no 🚨; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list flatten; 🔵; ret5=+0.4; leftover $63.81 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `CNMD` | 1 | $47.99 | $0.48 | — | $293.09 | — | union ∩ coil_off, no 🚨; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list flatten; 🔵; ret5=+0.1; leftover $63.81 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `SMMT` | 3 | $16.15 | $0.49 | — | $244.15 | — | union ∩ coil_off, no 🚨; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list probable,yday_gainer,yday_mover; ret5=+3.1; leftover $63.81 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🔴 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `EPR` | 1 | $60.00 | $0.60 | — | $183.54 | — | union ∩ coil_off, no 🚨; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list probable,yday_gainer,yday_mover; 🔵; ret5=+6.8; leftover $63.81 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-04 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $183.54 | ▼ close $7,015.52 vs 09:30 $7,019.99 (session -2.49) | 16:00 close · cash $183.54 · equity $7,015.52 vs 09:30 $7,019.99 (-4.47; session marks -2.49) · 10 name(s) marked open→close (per-name table). ARQT×34 09:30 $32.88 → close $34.05 +39.61; CXW×35 09:30 $29.58 → close $30.52 +32.90; ETON×20 09:30 $51.76 → close $50.72 -20.80; MX×442 09:30 $2.52 → close $2.41 -48.62; NVTS×127 09:30 $9.37 → close $9.33 -4.45; PRMB×54 09:30 $21.21 → close $21.02 -10.26; CON×1 09:30 $40.90 → close $43.56 +2.66; CNMD×1 09:30 $47.99 → close $53.66 +5.67; SMMT×3 09:30 $16.15 → close $16.17 +0.06; EPR×1 09:30 $60.00 → close $60.74 +0.74 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `hot_score` · size `leftover` · sell `list` · S-boost `none` · Clock-B #1 mom+breakout+peer/sector (research; not KEEP)
 
-Cash book **-15.12%** ($8,488) · signal-only (no cash/fees) was +1.42%. Starts YES **4/30**. Fills 445 · skips 96 · realized $-120.43.
+Cash book **-11.72%** ($8,828) · signal-only (no cash/fees) was +1.42%. Starts YES **4/30**. Fills 450 · skips 96 · realized $-120.43.
 
 ## How this sleeve decides (like you are 10)
 
@@ -635,6 +635,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-03 09:30 ET | **SELL** | `UWMC` | 785 | $1.59 | $10.27 | $-4.69 | $7,373.27 | ▼ -4.69 after sell → book $8,490.15; vs 09:30 mark -10.26 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-03 09:30 ET | **SELL** | `VRTX` | 2 | $558.44 | $2.02 | $-6.99 | $8,488.13 | ▼ -6.99 after sell → book $8,488.13; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-03 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,488.13 | ▲ close $8,488.13 vs 09:30 $8,511.67 (session +0.00) | 16:00 close · cash $8,488.13 · no lots left · equity $8,488.13. | — |
+| 2026-11-04 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,488.13 | ▲ 09:30 equity $8,488.13 vs yday $8,488.13 (+0.00) | 09:30 open · cash $8,488.13 · no holdings · equity $8,488.13 vs prior close $8,488.13 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-04 09:30 ET | **BUY** | `TBBB` | 26 | $63.74 | $2.07 | — | $6,828.82 | — | Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list yday_gainer; 🔵; ret5=+9.7; leftover $1697.63 | join🔴 sector🟡 gen🟢 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `AMC` | 510 | $3.33 | $6.58 | — | $5,126.49 | — | Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list ohlc_hot; 🔵; ret5=+9.7; leftover $1697.63 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `EPR` | 28 | $60.00 | $2.07 | — | $3,444.42 | — | Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list probable,yday_gainer,yday_mover; 🔵; ret5=+6.8; leftover $1697.63 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `SMMT` | 105 | $16.15 | $2.31 | — | $1,746.36 | — | Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list probable,yday_gainer,yday_mover; ret5=+3.1; leftover $1697.63 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🔴 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `CNMD` | 35 | $47.99 | $2.10 | — | $64.62 | — | Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list flatten; 🔵; ret5=+0.1; leftover $1697.63 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-04 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $64.62 | ▲ close $8,828.31 vs 09:30 $8,488.13 (session +355.30) | 16:00 close · cash $64.62 · equity $8,828.31 vs 09:30 $8,488.13 (+340.18; session marks +355.30) · 5 name(s) marked open→close (per-name table). TBBB×26 09:30 $63.74 → close $65.07 +34.58; AMC×510 09:30 $3.33 → close $3.52 +99.45; EPR×28 09:30 $60.00 → close $60.74 +20.72; SMMT×105 09:30 $16.15 → close $16.17 +2.10; CNMD×35 09:30 $47.99 → close $53.66 +198.45 | — |
 
 ## Not taken
 

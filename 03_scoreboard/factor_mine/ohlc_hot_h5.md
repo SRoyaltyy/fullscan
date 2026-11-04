@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `ohlc_hot` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · baseline list, no extra gate
 
-Cash book **-12.45%** ($8,755) · signal-only (no cash/fees) was +88.18%. Starts YES **4/30**. Fills 296 · skips 429 · realized $-1050.25.
+Cash book **-15.50%** ($8,450) · signal-only (no cash/fees) was +88.18%. Starts YES **4/30**. Fills 311 · skips 429 · realized $-1050.25.
 
 ## How this sleeve decides (like you are 10)
 
@@ -480,6 +480,23 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-03 09:30 ET | **SELL** | `RIG` | 166 | $6.00 | $2.53 | $-84.69 | $6,182.99 | ▼ -84.69 after sell → book $8,781.82; vs 09:30 mark -2.53 | dropped from list after 5 sess (min 5) | — |
 | 2026-11-03 09:30 ET | **SELL** | `SLN` | 54 | $19.78 | $2.17 | $-4.32 | $7,248.94 | ▼ -4.32 after sell → book $8,779.65; vs 09:30 mark -2.17 | dropped from list after 5 sess (min 5) | — |
 | 2026-11-03 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,248.94 | ▼ close $8,754.93 vs 09:30 $8,795.81 (session -24.73) | 16:00 close · cash $7,248.94 · equity $8,754.93 vs 09:30 $8,795.81 (-40.88; session marks -24.73) · 8 name(s) marked open→close (per-name table). ABSI×8 09:30 $10.03 → close $10.00 -0.20; IMSR×30 09:30 $2.96 → close $2.86 -3.00; MRVI×10 09:30 $7.33 → close $7.45 +1.20; POOL×5 09:30 $211.74 → close $207.25 -22.45; PRME×20 09:30 $4.50 → close $4.55 +1.00; REAL×1 09:30 $12.95 → close $12.70 -0.25; VCYT×1 09:30 $49.95 → close $50.29 +0.34; VRDN×3 09:30 $25.61 → close $25.15 -1.37 | — |
+| 2026-11-04 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,248.94 | ▲ 09:30 equity $8,807.75 vs yday $8,754.93 (+52.82) | 09:30 open · cash $7,248.94 (unchanged overnight, no fees) · equity $8,807.75 vs prior close $8,754.93 (+52.82) · 8 name(s) re-marked at the open (per-name table). ABSI×8 yday $10.00 → 09:30 $10.26 +2.08; IMSR×30 yday $2.86 → 09:30 $2.82 -1.20; MRVI×10 yday $7.45 → 09:30 $7.73 +2.80; POOL×5 yday $207.25 → 09:30 $213.90 +33.25; PRME×20 yday $4.55 → 09:30 $4.75 +4.00; REAL×1 yday $12.70 → 09:30 $13.19 +0.49; VCYT×1 yday $50.29 → 09:30 $52.35 +2.06; VRDN×3 yday $25.15 → 09:30 $28.27 +9.35 | — |
+| 2026-11-04 09:30 ET | **SELL** | `ABSI` | 8 | $10.26 | $0.86 | $-4.05 | $7,330.16 | ▼ -4.05 after sell → book $8,806.89; vs 09:30 mark -0.86 | dropped from list after 5 sess (min 5) | — |
+| 2026-11-04 09:30 ET | **SELL** | `IMSR` | 30 | $2.82 | $0.96 | $-5.83 | $7,413.80 | ▼ -5.83 after sell → book $8,805.93; vs 09:30 mark -0.96 | dropped from list after 5 sess (min 5) | — |
+| 2026-11-04 09:30 ET | **SELL** | `MRVI` | 10 | $7.73 | $0.82 | $-6.68 | $7,490.28 | ▼ -6.68 after sell → book $8,805.11; vs 09:30 mark -0.82 | dropped from list after 5 sess (min 5) | — |
+| 2026-11-04 09:30 ET | **SELL** | `POOL` | 5 | $213.90 | $2.02 | $+89.32 | $8,557.75 | ▲ +89.32 after sell → book $8,803.09; vs 09:30 mark -2.02 | dropped from list after 6 sess (min 5) | join🔴 sector🔴 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **SELL** | `PRME` | 20 | $4.75 | $1.03 | $+8.16 | $8,651.72 | ▲ +8.16 after sell → book $8,802.06; vs 09:30 mark -1.03 | dropped from list after 5 sess (min 5) | — |
+| 2026-11-04 09:30 ET | **SELL** | `VCYT` | 1 | $52.35 | $0.55 | $+1.30 | $8,703.52 | ▲ +1.30 after sell → book $8,801.51; vs 09:30 mark -0.55 | dropped from list after 5 sess (min 5) | — |
+| 2026-11-04 09:30 ET | **SELL** | `VRDN` | 3 | $28.27 | $0.88 | $+12.04 | $8,787.44 | ▲ +12.04 after sell → book $8,800.63; vs 09:30 mark -0.88 | dropped from list after 5 sess (min 5) | — |
+| 2026-11-04 09:30 ET | **BUY** | `PRIM` | 13 | $84.45 | $2.03 | — | $7,687.56 | — | baseline list, no extra gate; list yday_gainer,yday_mover,ohlc_hot; ret5=+15.1; leftover $1098.43 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `BETA` | 45 | $24.00 | $2.12 | — | $6,605.44 | — | baseline list, no extra gate; list ohlc_hot; ret5=+13.9; leftover $1098.43 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 judge🔴 ab🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `RRX` | 6 | $179.68 | $2.01 | — | $5,525.35 | — | baseline list, no extra gate; list ohlc_hot; ret5=+13.7; leftover $1098.43 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `VFC` | 53 | $20.53 | $2.15 | — | $4,435.11 | — | baseline list, no extra gate; list ohlc_hot; 🔵; ret5=+17.7; leftover $1098.43 | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `RUN` | 117 | $9.36 | $2.34 | — | $3,337.65 | — | baseline list, no extra gate; list ohlc_hot; 🔵; ret5=+15.3; leftover $1098.43 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 judge🟡 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `SHLS` | 123 | $8.86 | $2.36 | — | $2,245.51 | — | baseline list, no extra gate; list ohlc_hot; 🔵; ret5=+13.3; leftover $1098.43 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `APG` | 23 | $46.47 | $2.06 | — | $1,174.64 | — | baseline list, no extra gate; list ohlc_hot; ret5=+13.6; leftover $1098.43 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `IVA` | 262 | $4.18 | $3.38 | — | $76.10 | — | baseline list, no extra gate; list ohlc_hot; 🔵; ret5=+9.4; leftover $1098.43 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-04 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $76.10 | ▼ close $8,449.78 vs 09:30 $8,807.75 (session -332.40) | 16:00 close · cash $76.10 · equity $8,449.78 vs 09:30 $8,807.75 (-357.97; session marks -332.40) · 9 name(s) marked open→close (per-name table). REAL×1 09:30 $13.19 → close $13.57 +0.38; PRIM×13 09:30 $84.45 → close $68.45 -208.00; BETA×45 09:30 $24.00 → close $25.31 +58.95; RRX×6 09:30 $179.68 → close $173.38 -37.80; VFC×53 09:30 $20.53 → close $20.93 +21.20; RUN×117 09:30 $9.36 → close $8.79 -66.69; SHLS×123 09:30 $8.86 → close $9.16 +36.90; APG×23 09:30 $46.47 → close $44.03 -56.12; IVA×262 09:30 $4.18 → close $3.87 -81.22 | — |
 
 ## Not taken
 

@@ -255,6 +255,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-03 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $638.56 | ▼ 09:30 equity $7,636.71 vs yday $7,693.51 (-56.80) | 09:30 open · cash $638.56 (unchanged overnight, no fees) · equity $7,636.71 vs prior close $7,693.51 (-56.80) · 1 name(s) re-marked at the open (per-name table). LLY×5 yday $1410.99 → 09:30 $1399.63 -56.80 | — |
 | 2026-11-03 09:30 ET | **SELL** | `LLY` | 5 | $1399.63 | $2.07 | $+28.32 | $7,634.64 | ▲ +28.32 after sell → book $7,634.64; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-03 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,634.64 | ▲ close $7,634.64 vs 09:30 $7,636.71 (session +0.00) | 16:00 close · cash $7,634.64 · no lots left · equity $7,634.64. | — |
+| 2026-11-04 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,634.64 | ▲ 09:30 equity $7,634.64 vs yday $7,634.64 (+0.00) | 09:30 open · cash $7,634.64 · no holdings · equity $7,634.64 vs prior close $7,634.64 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-04 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,634.64 | ▲ close $7,634.64 vs 09:30 $7,634.64 (session +0.00) | 16:00 close · cash $7,634.64 · no lots left · equity $7,634.64. | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `macd_hist` · size `leftover` · sell `list` · S-boost `none` · rank by macd_hist
 
-Cash book **-11.37%** ($8,863) · signal-only (no cash/fees) was +3.37%. Starts YES **20/30**. Fills 450 · skips 94 · realized $-657.32.
+Cash book **-12.20%** ($8,780) · signal-only (no cash/fees) was +3.37%. Starts YES **20/30**. Fills 458 · skips 94 · realized $-657.32.
 
 ## How this sleeve decides (like you are 10)
 
@@ -637,6 +637,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-03 09:30 ET | **SELL** | `VAL` | 11 | $90.51 | $2.04 | $-123.86 | $4,776.85 | ▼ -123.86 after sell → book $8,906.49; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-03 09:30 ET | **SELL** | `VRTX` | 2 | $558.44 | $2.02 | $-6.99 | $5,891.71 | ▼ -6.99 after sell → book $8,904.47; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-03 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5,891.71 | ▼ close $8,863.36 vs 09:30 $8,912.58 (session -41.11) | 16:00 close · cash $5,891.71 · equity $8,863.36 vs 09:30 $8,912.58 (-49.22; session marks -41.11) · 3 name(s) marked open→close (per-name table). DGX×4 09:30 $252.64 → close $247.06 -22.32; POOL×5 09:30 $211.74 → close $207.25 -22.45; ROP×2 09:30 $471.75 → close $473.58 +3.66 | — |
+| 2026-11-04 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $5,891.71 | ▲ 09:30 equity $8,922.43 vs yday $8,863.36 (+59.07) | 09:30 open · cash $5,891.71 (unchanged overnight, no fees) · equity $8,922.43 vs prior close $8,863.36 (+59.07) · 3 name(s) re-marked at the open (per-name table). DGX×4 yday $247.06 → 09:30 $250.61 +14.20; POOL×5 yday $207.25 → 09:30 $213.90 +33.25; ROP×2 yday $473.58 → 09:30 $479.39 +11.62 | — |
+| 2026-11-04 09:30 ET | **SELL** | `DGX` | 4 | $250.61 | $2.02 | $-7.98 | $6,892.13 | ▼ -7.98 after sell → book $8,920.41; vs 09:30 mark -2.02 | dropped from list after 2 sess (min 1) | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **SELL** | `ROP` | 2 | $479.39 | $2.02 | $+22.97 | $7,848.89 | ▲ +22.97 after sell → book $8,918.39; vs 09:30 mark -2.02 | dropped from list after 2 sess (min 1) | — |
+| 2026-11-04 09:30 ET | **BUY** | `PWR` | 1 | $627.07 | $1.99 | — | $7,219.83 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; ret5=+13.5; leftover $1121.27 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `HWM` | 5 | $221.39 | $2.00 | — | $6,110.87 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; ret5=+16.2; leftover $1121.27 | join🔴 sector🔴 gen🟢 news🟡 digest🟡 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `JAZZ` | 4 | $233.23 | $2.00 | — | $5,175.95 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; 🔵; ret5=+11.1; leftover $1121.27 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `RRX` | 6 | $179.68 | $2.01 | — | $4,095.86 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; ret5=+13.7; leftover $1121.27 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `CDNA` | 12 | $89.00 | $2.03 | — | $3,025.84 | — | rank by macd_hist; rank macd_hist; list flatten; ret5=+25.4; leftover $1121.27 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `ITW` | 3 | $292.62 | $2.00 | — | $2,145.98 | — | rank by macd_hist; rank macd_hist; list yday_gainer; ret5=+3.9; leftover $1121.27 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-04 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2,145.98 | ▼ close $8,780.11 vs 09:30 $8,922.43 (session -126.25) | 16:00 close · cash $2,145.98 · equity $8,780.11 vs 09:30 $8,922.43 (-142.32; session marks -126.25) · 7 name(s) marked open→close (per-name table). POOL×5 09:30 $213.90 → close $219.26 +26.80; PWR×1 09:30 $627.07 → close $580.44 -46.63; HWM×5 09:30 $221.39 → close $213.56 -39.15; JAZZ×4 09:30 $233.23 → close $234.66 +5.72; RRX×6 09:30 $179.68 → close $173.38 -37.80; CDNA×12 09:30 $89.00 → close $85.86 -37.68; ITW×3 09:30 $292.62 → close $293.45 +2.49 | — |
 
 ## Not taken
 

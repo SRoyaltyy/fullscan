@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · packet🟢 OR headline🟢 and camera net ≥ 4
 
-Cash book **-22.52%** ($7,748) · signal-only (no cash/fees) was -11.70%. Starts YES **2/30**. Fills 130 · skips 143 · realized $-1899.45.
+Cash book **-21.91%** ($7,809) · signal-only (no cash/fees) was -11.70%. Starts YES **2/30**. Fills 130 · skips 143 · realized $-1899.45.
 
 ## How this sleeve decides (like you are 10)
 
@@ -320,6 +320,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,068.23 | ▲ close $7,749.65 vs 09:30 $7,691.90 (session +62.20) | 16:00 close · cash $1,068.23 · equity $7,749.65 vs 09:30 $7,691.90 (+57.75; session marks +62.20) · 2 name(s) marked open→close (per-name table). LLY×2 09:30 $1393.15 → close $1410.99 +35.68; AMX×156 09:30 $24.57 → close $24.74 +26.52 | — |
 | 2026-11-03 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $1,068.23 | ▼ 09:30 equity $7,719.13 vs yday $7,749.65 (-30.52) | 09:30 open · cash $1,068.23 (unchanged overnight, no fees) · equity $7,719.13 vs prior close $7,749.65 (-30.52) · 2 name(s) re-marked at the open (per-name table). AMX×156 yday $24.74 → 09:30 $24.69 -7.80; LLY×2 yday $1410.99 → 09:30 $1399.63 -22.72 | — |
 | 2026-11-03 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,068.23 | ▲ close $7,747.99 vs 09:30 $7,719.13 (session +28.86) | 16:00 close · cash $1,068.23 · equity $7,747.99 vs 09:30 $7,719.13 (+28.86; session marks +28.86) · 2 name(s) marked open→close (per-name table). AMX×156 09:30 $24.69 → close $24.75 +9.36; LLY×2 09:30 $1399.63 → close $1409.38 +19.50 | — |
+| 2026-11-04 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $1,068.23 | ▲ 09:30 equity $7,896.59 vs yday $7,747.99 (+148.60) | 09:30 open · cash $1,068.23 (unchanged overnight, no fees) · equity $7,896.59 vs prior close $7,747.99 (+148.60) · 2 name(s) re-marked at the open (per-name table). AMX×156 yday $24.75 → 09:30 $25.31 +87.36; LLY×2 yday $1409.38 → 09:30 $1440.00 +61.24 | — |
+| 2026-11-04 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,068.23 | ▼ close $7,808.89 vs 09:30 $7,896.59 (session -87.70) | 16:00 close · cash $1,068.23 · equity $7,808.89 vs 09:30 $7,896.59 (-87.70; session marks -87.70) · 2 name(s) marked open→close (per-name table). AMX×156 09:30 $25.31 → close $25.03 -43.68; LLY×2 09:30 $1440.00 → close $1417.99 -44.02 | — |
 
 ## Not taken
 

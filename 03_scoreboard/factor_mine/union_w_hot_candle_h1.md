@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `w_hot_candle` · size `leftover` · sell `list` · S-boost `none` · rank by w_hot_candle
 
-Cash book **+16.13%** ($11,613) · signal-only (no cash/fees) was +36.45%. Starts YES **29/30**. Fills 487 · skips 97 · realized $+14.68.
+Cash book **+16.61%** ($11,661) · signal-only (no cash/fees) was +36.45%. Starts YES **29/30**. Fills 495 · skips 97 · realized $+14.68.
 
 ## How this sleeve decides (like you are 10)
 
@@ -674,6 +674,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-03 09:30 ET | **SELL** | `SLN` | 72 | $19.78 | $2.23 | $-2.28 | $10,229.71 | ▼ -2.28 after sell → book $11,615.34; vs 09:30 mark -2.23 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-03 09:30 ET | **SELL** | `TGTX` | 23 | $60.24 | $2.08 | $-21.73 | $11,613.26 | ▼ -21.73 after sell → book $11,613.26; vs 09:30 mark -2.08 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-03 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $11,613.26 | ▲ close $11,613.26 vs 09:30 $11,630.31 (session +0.00) | 16:00 close · cash $11,613.26 · no lots left · equity $11,613.26. | — |
+| 2026-11-04 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $11,613.26 | ▲ 09:30 equity $11,613.26 vs yday $11,613.26 (+0.00) | 09:30 open · cash $11,613.26 · no holdings · equity $11,613.26 vs prior close $11,613.26 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-04 09:30 ET | **BUY** | `JLHL` | 214 | $6.77 | $2.76 | — | $10,161.72 | — | rank by w_hot_candle; rank w_hot_candle; list yday_mover; ret5=+19.3; leftover $1451.66 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 judge🔴 ab🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `BETA` | 60 | $24.00 | $2.17 | — | $8,719.55 | — | rank by w_hot_candle; rank w_hot_candle; list ohlc_hot; ret5=+13.9; leftover $1451.66 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 judge🔴 ab🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `RRX` | 8 | $179.68 | $2.01 | — | $7,280.10 | — | rank by w_hot_candle; rank w_hot_candle; list ohlc_hot; ret5=+13.7; leftover $1451.66 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `VFC` | 70 | $20.53 | $2.20 | — | $5,840.80 | — | rank by w_hot_candle; rank w_hot_candle; list ohlc_hot; 🔵; ret5=+17.7; leftover $1451.66 | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `RUN` | 155 | $9.36 | $2.46 | — | $4,387.54 | — | rank by w_hot_candle; rank w_hot_candle; list ohlc_hot; 🔵; ret5=+15.3; leftover $1451.66 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 judge🟡 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `SHLS` | 163 | $8.86 | $2.48 | — | $2,940.88 | — | rank by w_hot_candle; rank w_hot_candle; list ohlc_hot; 🔵; ret5=+13.3; leftover $1451.66 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `CDNA` | 16 | $89.00 | $2.04 | — | $1,514.84 | — | rank by w_hot_candle; rank w_hot_candle; list flatten; ret5=+25.4; leftover $1451.66 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `TBBB` | 22 | $63.74 | $2.06 | — | $110.51 | — | rank by w_hot_candle; rank w_hot_candle; list yday_gainer; 🔵; ret5=+9.7; leftover $1451.66 | join🔴 sector🟡 gen🟢 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-04 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $110.51 | ▲ close $11,661.48 vs 09:30 $11,613.26 (session +66.39) | 16:00 close · cash $110.51 · equity $11,661.48 vs 09:30 $11,613.26 (+48.22; session marks +66.39) · 8 name(s) marked open→close (per-name table). JLHL×214 09:30 $6.77 → close $7.10 +70.62; BETA×60 09:30 $24.00 → close $25.31 +78.60; RRX×8 09:30 $179.68 → close $173.38 -50.40; VFC×70 09:30 $20.53 → close $20.93 +28.00; RUN×155 09:30 $9.36 → close $8.79 -88.35; SHLS×163 09:30 $8.86 → close $9.16 +48.90; CDNA×16 09:30 $89.00 → close $85.86 -50.24; TBBB×22 09:30 $63.74 → close $65.07 +29.26 | — |
 
 ## Not taken
 

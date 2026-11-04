@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · Clock-B #6 stock holds while sector camera is red
 
-Cash book **-14.05%** ($8,595) · signal-only (no cash/fees) was -2.27%. Starts YES **25/30**. Fills 367 · skips 96 · realized $+387.41.
+Cash book **-11.97%** ($8,803) · signal-only (no cash/fees) was -2.27%. Starts YES **25/30**. Fills 375 · skips 96 · realized $+387.41.
 
 ## How this sleeve decides (like you are 10)
 
@@ -557,6 +557,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-03 09:30 ET | **SELL** | `POOL` | 5 | $211.74 | $2.02 | $+10.32 | $7,537.87 | ▲ +10.32 after sell → book $8,597.55; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-11-03 09:30 ET | **SELL** | `WEN` | 148 | $7.16 | $2.47 | $-13.78 | $8,595.08 | ▼ -13.78 after sell → book $8,595.08; vs 09:30 mark -2.47 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-03 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,595.08 | ▲ close $8,595.08 vs 09:30 $8,612.06 (session +0.00) | 16:00 close · cash $8,595.08 · no lots left · equity $8,595.08. | — |
+| 2026-11-04 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,595.08 | ▲ 09:30 equity $8,595.08 vs yday $8,595.08 (+0.00) | 09:30 open · cash $8,595.08 · no holdings · equity $8,595.08 vs prior close $8,595.08 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-04 09:30 ET | **BUY** | `ONON` | 28 | $37.43 | $2.07 | — | $7,544.97 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list ohlc_hot; ret5=+13.5; leftover $1074.38 | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `PDFS` | 25 | $42.19 | $2.06 | — | $6,488.15 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list probable,yday_gainer,yday_mover; 🔵; ret5=-4.6; leftover $1074.38 | join🟡 sector🔴 gen🟢 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `VFC` | 52 | $20.53 | $2.15 | — | $5,418.44 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list ohlc_hot; 🔵; ret5=+17.7; leftover $1074.38 | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `GRAB` | 333 | $3.22 | $4.30 | — | $4,341.89 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list ohlc_hot; ret5=+14.7; leftover $1074.38 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `SHLS` | 121 | $8.86 | $2.35 | — | $3,267.48 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list ohlc_hot; 🔵; ret5=+13.3; leftover $1074.38 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `CXW` | 36 | $29.58 | $2.10 | — | $2,200.50 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list probable,yday_gainer,yday_mover; 🔵; ret5=+0.6; leftover $1074.38 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `HRB` | 20 | $53.49 | $2.05 | — | $1,128.65 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list ohlc_hot; ret5=+10.8; leftover $1074.38 | join🟢 sector🔴 gen🟢 news🔴 digest🟡 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `EGG` | 214 | $5.00 | $2.76 | — | $55.89 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list yday_gainer,yday_mover; ret5=-1.7; leftover $1074.38 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 judge🔴 ab🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-11-04 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $55.89 | ▲ close $8,802.76 vs 09:30 $8,595.08 (session +227.52) | 16:00 close · cash $55.89 · equity $8,802.76 vs 09:30 $8,595.08 (+207.68; session marks +227.52) · 8 name(s) marked open→close (per-name table). ONON×28 09:30 $37.43 → close $38.62 +33.32; PDFS×25 09:30 $42.19 → close $39.79 -60.00; VFC×52 09:30 $20.53 → close $20.93 +20.80; GRAB×333 09:30 $3.22 → close $3.36 +46.62; SHLS×121 09:30 $8.86 → close $9.16 +36.30; CXW×36 09:30 $29.58 → close $30.52 +33.84; HRB×20 09:30 $53.49 → close $55.47 +39.60; EGG×214 09:30 $5.00 → close $5.36 +77.04 | — |
 
 ## Not taken
 

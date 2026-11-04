@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ ab_g, no 🚨
 
-Cash book **-24.17%** ($7,583) · signal-only (no cash/fees) was -11.54%. Starts YES **0/30**. Fills 415 · skips 92 · realized $-226.14.
+Cash book **-24.07%** ($7,593) · signal-only (no cash/fees) was -11.54%. Starts YES **0/30**. Fills 423 · skips 92 · realized $-226.14.
 
 ## How this sleeve decides (like you are 10)
 
@@ -603,6 +603,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-03 09:30 ET | **SELL** | `VEEV` | 3 | $303.00 | $2.02 | $-43.62 | $5,878.96 | ▼ -43.62 after sell → book $7,532.56; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-03 09:30 ET | **SELL** | `VLO` | 2 | $378.90 | $2.02 | $-31.57 | $6,634.74 | ▼ -31.57 after sell → book $7,530.54; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-03 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,634.74 | ▲ close $7,582.74 vs 09:30 $7,544.90 (session +52.20) | 16:00 close · cash $6,634.74 · equity $7,582.74 vs 09:30 $7,544.90 (+37.84; session marks +52.20) · 1 name(s) marked open→close (per-name table). SMMT×60 09:30 $14.93 → close $15.80 +52.20 | — |
+| 2026-11-04 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6,634.74 | ▲ 09:30 equity $7,603.74 vs yday $7,582.74 (+21.00) | 09:30 open · cash $6,634.74 (unchanged overnight, no fees) · equity $7,603.74 vs prior close $7,582.74 (+21.00) · 1 name(s) re-marked at the open (per-name table). SMMT×60 yday $15.80 → 09:30 $16.15 +21.00 | — |
+| 2026-11-04 09:30 ET | **SELL** | `SMMT` | 60 | $16.15 | $2.19 | $+4.64 | $7,601.55 | ▲ +4.64 after sell → book $7,601.55; vs 09:30 mark -2.19 | dropped from list after 2 sess (min 1) | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🔴 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `VEEV` | 3 | $306.62 | $2.00 | — | $6,679.69 | — | union ∩ ab_g, no 🚨; gate ab=good; list flatten; ret5=-3.3; leftover $950.19 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `ILMN` | 3 | $241.00 | $2.00 | — | $5,954.70 | — | union ∩ ab_g, no 🚨; gate ab=good; list flatten; 🔵; ret5=-14.8; leftover $950.19 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `RGEN` | 5 | $183.40 | $2.00 | — | $5,035.69 | — | union ∩ ab_g, no 🚨; gate ab=good; list flatten; 🔵; ret5=+1.4; leftover $950.19 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `CDNA` | 10 | $89.00 | $2.02 | — | $4,143.67 | — | union ∩ ab_g, no 🚨; gate ab=good; list flatten; ret5=+25.4; leftover $950.19 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `PACS` | 19 | $48.51 | $2.05 | — | $3,219.94 | — | union ∩ ab_g, no 🚨; gate ab=good; list flatten; 🔵; ret5=-2.4; leftover $950.19 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `CON` | 23 | $40.90 | $2.06 | — | $2,277.29 | — | union ∩ ab_g, no 🚨; gate ab=good; list flatten; 🔵; ret5=+0.4; leftover $950.19 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `PCRX` | 26 | $36.41 | $2.07 | — | $1,328.57 | — | union ∩ ab_g, no 🚨; gate ab=good; list flatten; 🔵; ret5=-0.0; leftover $950.19 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-04 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,328.57 | ▲ close $7,592.90 vs 09:30 $7,603.74 (session +5.54) | 16:00 close · cash $1,328.57 · equity $7,592.90 vs 09:30 $7,603.74 (-10.84; session marks +5.54) · 7 name(s) marked open→close (per-name table). VEEV×3 09:30 $306.62 → close $310.63 +12.03; ILMN×3 09:30 $241.00 → close $226.54 -43.37; RGEN×5 09:30 $183.40 → close $178.20 -26.00; CDNA×10 09:30 $89.00 → close $85.86 -31.40; PACS×19 09:30 $48.51 → close $50.26 +33.25; CON×23 09:30 $40.90 → close $43.56 +61.29; PCRX×26 09:30 $36.41 → close $36.40 -0.26 | — |
 
 ## Not taken
 

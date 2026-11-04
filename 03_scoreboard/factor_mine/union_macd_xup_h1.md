@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ macd_xup, no 🚨
 
-Cash book **-19.51%** ($8,049) · signal-only (no cash/fees) was -19.02%. Starts YES **0/30**. Fills 296 · skips 71 · realized $-1788.82.
+Cash book **-20.08%** ($7,992) · signal-only (no cash/fees) was -19.02%. Starts YES **0/30**. Fills 302 · skips 71 · realized $-1788.82.
 
 ## How this sleeve decides (like you are 10)
 
@@ -484,6 +484,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-03 09:30 ET | **SELL** | `BTSG` | 62 | $66.50 | $2.22 | $-66.40 | $4,140.43 | ▼ -66.40 after sell → book $8,052.09; vs 09:30 mark -2.22 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-03 09:30 ET | **SELL** | `SMMT` | 262 | $14.93 | $3.45 | $-287.17 | $8,048.64 | ▼ -287.17 after sell → book $8,048.64; vs 09:30 mark -3.45 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-11-03 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,048.64 | ▲ close $8,048.64 vs 09:30 $8,054.31 (session +0.00) | 16:00 close · cash $8,048.64 · no lots left · equity $8,048.64. | — |
+| 2026-11-04 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,048.64 | ▲ 09:30 equity $8,048.64 vs yday $8,048.64 (+0.00) | 09:30 open · cash $8,048.64 · no holdings · equity $8,048.64 vs prior close $8,048.64 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-04 09:30 ET | **BUY** | `NVTS` | 122 | $9.37 | $2.36 | — | $6,903.75 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list probable,yday_gainer,yday_mover; ret5=-8.4; leftover $1149.81 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 judge🟡 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `MX` | 456 | $2.52 | $5.88 | — | $5,748.75 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list yday_gainer,yday_mover; 🔵; ret5=+0.0; leftover $1149.81 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 judge🟡 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `DY` | 5 | $223.71 | $2.00 | — | $4,628.20 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list yday_gainer; ret5=-0.8; leftover $1149.81 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `TBBB` | 18 | $63.74 | $2.04 | — | $3,478.83 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list yday_gainer; 🔵; ret5=+9.7; leftover $1149.81 | join🔴 sector🟡 gen🟢 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `SHLS` | 129 | $8.86 | $2.38 | — | $2,333.52 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list ohlc_hot; 🔵; ret5=+13.3; leftover $1149.81 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `VFF` | 396 | $2.90 | $5.11 | — | $1,180.01 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list ohlc_hot; 🔵; ret5=+10.0; leftover $1149.81 | join🟡 sector🟡 gen🟢 news🟡 digest🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-04 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,180.01 | ▼ close $7,992.06 vs 09:30 $8,048.64 (session -36.81) | 16:00 close · cash $1,180.01 · equity $7,992.06 vs 09:30 $8,048.64 (-56.58; session marks -36.81) · 6 name(s) marked open→close (per-name table). NVTS×122 09:30 $9.37 → close $9.33 -4.27; MX×456 09:30 $2.52 → close $2.41 -50.16; DY×5 09:30 $223.71 → close $212.33 -56.90; TBBB×18 09:30 $63.74 → close $65.07 +23.94; SHLS×129 09:30 $8.86 → close $9.16 +38.70; VFF×396 09:30 $2.90 → close $2.93 +11.88 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `candle_score` · size `leftover` · sell `list` · S-boost `none` · rank by candle_score
 
-Cash book **-12.40%** ($8,760) · signal-only (no cash/fees) was +8.19%. Starts YES **0/30**. Fills 485 · skips 104 · realized $-563.45.
+Cash book **-12.19%** ($8,782) · signal-only (no cash/fees) was +8.19%. Starts YES **0/30**. Fills 493 · skips 104 · realized $-563.45.
 
 ## How this sleeve decides (like you are 10)
 
@@ -672,6 +672,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-03 09:30 ET | **SELL** | `ROP` | 2 | $471.75 | $2.02 | $+7.69 | $7,737.47 | ▲ +7.69 after sell → book $8,761.63; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-11-03 09:30 ET | **SELL** | `TGTX` | 17 | $60.24 | $2.06 | $-17.11 | $8,759.57 | ▼ -17.11 after sell → book $8,759.57; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-03 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,759.57 | ▲ close $8,759.57 vs 09:30 $8,776.53 (session +0.00) | 16:00 close · cash $8,759.57 · no lots left · equity $8,759.57. | — |
+| 2026-11-04 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,759.57 | ▲ 09:30 equity $8,759.57 vs yday $8,759.57 (+0.00) | 09:30 open · cash $8,759.57 · no holdings · equity $8,759.57 vs prior close $8,759.57 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-04 09:30 ET | **BUY** | `JLHL` | 161 | $6.77 | $2.47 | — | $7,667.13 | — | rank by candle_score; rank candle_score; list yday_mover; ret5=+19.3; leftover $1094.95 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 judge🔴 ab🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `RKT` | 76 | $14.30 | $2.22 | — | $6,578.11 | — | rank by candle_score; rank candle_score; list ohlc_hot; 🔵; ret5=+16.6; leftover $1094.95 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `RRX` | 6 | $179.68 | $2.01 | — | $5,498.02 | — | rank by candle_score; rank candle_score; list ohlc_hot; ret5=+13.7; leftover $1094.95 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `RUN` | 116 | $9.36 | $2.34 | — | $4,409.92 | — | rank by candle_score; rank candle_score; list ohlc_hot; 🔵; ret5=+15.3; leftover $1094.95 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 judge🟡 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `ONON` | 29 | $37.43 | $2.08 | — | $3,322.38 | — | rank by candle_score; rank candle_score; list ohlc_hot; ret5=+13.5; leftover $1094.95 | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `APG` | 23 | $46.47 | $2.06 | — | $2,251.51 | — | rank by candle_score; rank candle_score; list ohlc_hot; ret5=+13.6; leftover $1094.95 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `SHLS` | 123 | $8.86 | $2.36 | — | $1,159.37 | — | rank by candle_score; rank candle_score; list ohlc_hot; 🔵; ret5=+13.3; leftover $1094.95 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `VFC` | 53 | $20.53 | $2.15 | — | $69.13 | — | rank by candle_score; rank candle_score; list ohlc_hot; 🔵; ret5=+17.7; leftover $1094.95 | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-04 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $69.13 | ▲ close $8,781.55 vs 09:30 $8,759.57 (session +39.66) | 16:00 close · cash $69.13 · equity $8,781.55 vs 09:30 $8,759.57 (+21.98; session marks +39.66) · 8 name(s) marked open→close (per-name table). JLHL×161 09:30 $6.77 → close $7.10 +53.13; RKT×76 09:30 $14.30 → close $15.01 +53.96; RRX×6 09:30 $179.68 → close $173.38 -37.80; RUN×116 09:30 $9.36 → close $8.79 -66.12; ONON×29 09:30 $37.43 → close $38.62 +34.51; APG×23 09:30 $46.47 → close $44.03 -56.12; SHLS×123 09:30 $8.86 → close $9.16 +36.90; VFC×53 09:30 $20.53 → close $20.93 +21.20 | — |
 
 ## Not taken
 

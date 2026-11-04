@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ blue, no 🚨
 
-Cash book **-26.19%** ($7,381) · signal-only (no cash/fees) was -5.21%. Starts YES **0/30**. Fills 466 · skips 91 · realized $-561.25.
+Cash book **-24.92%** ($7,508) · signal-only (no cash/fees) was -5.21%. Starts YES **0/30**. Fills 473 · skips 91 · realized $-561.25.
 
 ## How this sleeve decides (like you are 10)
 
@@ -654,6 +654,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-03 09:30 ET | **SELL** | `VEEV` | 2 | $303.00 | $2.02 | $-30.41 | $6,624.98 | ▼ -30.41 after sell → book $7,382.78; vs 09:30 mark -2.01 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-03 09:30 ET | **SELL** | `VLO` | 2 | $378.90 | $2.02 | $-31.57 | $7,380.76 | ▼ -31.57 after sell → book $7,380.76; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-03 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,380.76 | ▲ close $7,380.76 vs 09:30 $7,397.25 (session +0.00) | 16:00 close · cash $7,380.76 · no lots left · equity $7,380.76. | — |
+| 2026-11-04 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,380.76 | ▲ 09:30 equity $7,380.76 vs yday $7,380.76 (+0.00) | 09:30 open · cash $7,380.76 · no holdings · equity $7,380.76 vs prior close $7,380.76 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-04 09:30 ET | **BUY** | `ILMN` | 3 | $241.00 | $2.00 | — | $6,655.77 | — | union ∩ blue, no 🚨; gate blue=True; list flatten; 🔵; ret5=-14.8; leftover $922.60 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `RGEN` | 5 | $183.40 | $2.00 | — | $5,736.76 | — | union ∩ blue, no 🚨; gate blue=True; list flatten; 🔵; ret5=+1.4; leftover $922.60 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `PACS` | 19 | $48.51 | $2.05 | — | $4,813.03 | — | union ∩ blue, no 🚨; gate blue=True; list flatten; 🔵; ret5=-2.4; leftover $922.60 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `CON` | 22 | $40.90 | $2.06 | — | $3,911.28 | — | union ∩ blue, no 🚨; gate blue=True; list flatten; 🔵; ret5=+0.4; leftover $922.60 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `PCRX` | 25 | $36.41 | $2.06 | — | $2,998.97 | — | union ∩ blue, no 🚨; gate blue=True; list flatten; 🔵; ret5=-0.0; leftover $922.60 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `CNMD` | 19 | $47.99 | $2.05 | — | $2,085.11 | — | union ∩ blue, no 🚨; gate blue=True; list flatten; 🔵; ret5=+0.1; leftover $922.60 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `EPR` | 15 | $60.00 | $2.04 | — | $1,183.07 | — | union ∩ blue, no 🚨; gate blue=True; list probable,yday_gainer,yday_mover; 🔵; ret5=+6.8; leftover $922.60 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-04 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,183.07 | ▲ close $7,507.59 vs 09:30 $7,380.76 (session +141.09) | 16:00 close · cash $1,183.07 · equity $7,507.59 vs 09:30 $7,380.76 (+126.83; session marks +141.09) · 7 name(s) marked open→close (per-name table). ILMN×3 09:30 $241.00 → close $226.54 -43.37; RGEN×5 09:30 $183.40 → close $178.20 -26.00; PACS×19 09:30 $48.51 → close $50.26 +33.25; CON×22 09:30 $40.90 → close $43.56 +58.63; PCRX×25 09:30 $36.41 → close $36.40 -0.25; CNMD×19 09:30 $47.99 → close $53.66 +107.73; EPR×15 09:30 $60.00 → close $60.74 +11.10 | — |
 
 ## Not taken
 

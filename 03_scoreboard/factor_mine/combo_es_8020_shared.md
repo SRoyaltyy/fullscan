@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared union_e_fresh_h3/short_news_r_h3 w=0.8,0.2 net=priority
 
-Cash book **-6.87%** ($9,313) · signal-only (no cash/fees) was —. Starts YES **25/30**. Fills 383 · skips 324 · realized $+4030.07.
+Cash book **-9.30%** ($9,070) · signal-only (no cash/fees) was —. Starts YES **25/30**. Fills 384 · skips 324 · realized $+4030.07.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $13,924.99.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $18,576.19.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -572,6 +572,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $13,924.99 | ▼ close $9,259.93 vs 09:30 $9,321.37 (session -45.58) | 16:00 close · cash $13,924.99 · equity $9,259.93 vs 09:30 $9,321.37 (-61.44; session marks -45.58) · 1 name(s) marked open→close (per-name table). BAH×53 09:30 $87.16 → close $88.02 -45.58 | — |
 | 2026-11-03 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $13,924.99 | ▲ 09:30 equity $9,369.64 vs yday $9,259.93 (+109.71) | 09:30 open · cash $13,924.99 (unchanged overnight, no fees) · equity $9,369.64 vs prior close $9,259.93 (+109.71) | — |
 | 2026-11-03 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $13,924.99 | ▼ close $9,312.93 vs 09:30 $9,369.64 (session -56.71) | 16:00 close · cash $13,924.99 · equity $9,312.93 vs 09:30 $9,369.64 (-56.71; session marks -56.71) · 1 name(s) marked open→close (per-name table). BAH×53 09:30 $85.95 → close $87.02 -56.71 | — |
+| 2026-11-04 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $13,924.99 | ▲ 09:30 equity $9,351.62 vs yday $9,312.93 (+38.69) | 09:30 open · cash $13,924.99 (unchanged overnight, no fees) · equity $9,351.62 vs prior close $9,312.93 (+38.69) | — |
+| 2026-11-04 09:30 ET | **SHORT** | `HRB` | 87 | $53.49 | $2.43 | — | $18,576.19 | — | news🔴; gate news=bad; list ohlc_hot; ret5=+10.8; combo leftover $4675.81; owner short_news_r_h3 | join🟢 sector🔴 gen🟢 news🔴 digest🟡 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-04 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $18,576.19 | ▼ close $9,070.40 vs 09:30 $9,351.62 (session -278.79) | 16:00 close · cash $18,576.19 · equity $9,070.40 vs 09:30 $9,351.62 (-281.22; session marks -278.79) · 2 name(s) marked open→close (per-name table). BAH×53 09:30 $86.29 → close $88.30 -106.53; HRB×87 09:30 $53.49 → close $55.47 -172.26 | — |
 
 ## Not taken
 
