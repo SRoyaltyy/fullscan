@@ -34875,16 +34875,62 @@
         "B7_OIL_DOLLAR": 0.0
       },
       "leading_sum": -4.0,
-      "actual_open": null,
-      "actual_close": null,
-      "actual_pct_change": null,
-      "actual_direction": null,
-      "actual_magnitude_band": null,
-      "direction_hit": null,
-      "magnitude_hit": null,
+      "actual_open": 7552.92,
+      "actual_close": 7568.92,
+      "actual_pct_change": 0.36,
+      "actual_direction": "up",
+      "actual_magnitude_band": "mild",
+      "direction_hit": false,
+      "magnitude_hit": true,
       "divergence_flagged": false,
       "divergence_verdict": null,
-      "per_factor_breakdown": [],
+      "per_factor_breakdown": [
+        {
+          "factor": "B0_ASIA",
+          "score": -0.5,
+          "status": "miss"
+        },
+        {
+          "factor": "B0_EUROPE",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B1_CATALYSTS",
+          "score": -1.0,
+          "status": "miss"
+        },
+        {
+          "factor": "B2_BONDS",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B3_FEDPATH",
+          "score": -0.5,
+          "status": "miss"
+        },
+        {
+          "factor": "B4_VIX",
+          "score": -0.5,
+          "status": "miss"
+        },
+        {
+          "factor": "B5_SENTIMENT",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B6_FUTURES",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B7_OIL_DOLLAR",
+          "score": 0.0,
+          "status": "neutral"
+        }
+      ],
       "reflection_lesson_ref": null,
       "sources_used": [],
       "horizon_calls": {
@@ -34916,7 +34962,14 @@
       "news_judge_present": true,
       "engine": "v2",
       "anchor_score": -0.544,
-      "overlay_score": -5.088
+      "overlay_score": -5.088,
+      "ops_fail": false,
+      "path_shape": "choppy / range-bound",
+      "primary_driver": "半导体板块在三日跌约 10% 后的超卖反弹（费半 +3.35%，Nvidia/AMD/Broadcom/Micron 同步大涨），拉动 NDX/SPX 收涨",
+      "key_interaction": "半导体反弹（正面）与 JOLTS 驱动的收益率熊陡 + Apple 拖累（负面）相互抵消/掩盖，导致 SPX 仅温和收涨而 Dow 收跌，表面平静、内部剧烈分化",
+      "knowable_at_9am": "partially — 半导体超卖反弹在概率上可预见，但 JOLTS 盘中冲击和油价方向反转不可知",
+      "attribution_contested": "yes — 收盘报道以“半导体反弹”为首要解释，IBKR 以“JOLTS→利率熊陡 + 选举仓位”为核心框架，Investing.com 以“油价外交 headline”为独立 driver",
+      "outlier_watch": "Dow 在“选举不确定性消退→risk-on”叙事下仍然收跌，揭示当天真正的分化机制是利率（JOLTS）而非选举；油价大跌而债券也下跌，债券在交易劳动力市场而非能源"
     },
     {
       "date": "2026-11-04",
