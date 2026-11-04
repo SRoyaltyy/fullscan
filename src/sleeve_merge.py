@@ -109,7 +109,8 @@ DEFAULT = {
 def load_payload(path: Path = PAYLOAD) -> dict:
     if not path.is_file():
         raise SystemExit(f"[sleeve-merge] missing payload: {path}")
-    return json.loads(path.read_text(encoding="utf-8"))
+    from . import mover_lookback_action as mla
+    return mla.load_action(path)
 
 
 def list_books(book_dir: Path = BOOK_DIR) -> list[tuple[str, Path]]:

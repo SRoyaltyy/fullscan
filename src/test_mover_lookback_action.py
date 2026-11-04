@@ -104,9 +104,68 @@ def test_mover_table_is_not_gainer_list() -> None:
     assert act.OPEN_CLOCK in md
 
 
+def test_called_rows_round_trip_through_gzip_shards() -> None:
+    """Shard order matches the inline list, and each file stays under the cap."""
+    import json
+    import tempfile
+    from pathlib import Path
+    from src.factor_mine import COMMIT_SOFT_LIMIT
+
+    rows = [
+        {"date": "2026-11-03", "ticker": "BBB", "action_call": "SELL"},
+        {"date": "2026-11-02", "ticker": "AAA", "action_call": "BUY"},
+        {"date": "2026-11-03", "ticker": "CCC", "action_call": "NO BUY"},
+    ]
+    with tempfile.TemporaryDirectory() as d:
+        dest = Path(d) / "mover_lookback_action.json"
+        rels = mla.write_called_shards(rows, dest)
+        index = {
+            "layout": mla.LAYOUT_CALLED_SHARDS,
+            "called_row_shards": rels,
+            "n_called": len(rows),
+            "to_date": "2026-11-03",
+        }
+        dest.write_text(json.dumps(index), encoding="utf-8")
+        loaded = mla.load_action(dest)
+        assert loaded["called_rows"] == rows
+        assert dest.stat().st_size < COMMIT_SOFT_LIMIT
+        for rel in rels:
+            shard = dest.parent / rel
+            assert shard.is_file()
+            assert shard.stat().st_size < COMMIT_SOFT_LIMIT
+    # A monolith still loads without looking for shards.
+    with tempfile.TemporaryDirectory() as d:
+        dest = Path(d) / "mover_lookback_action.json"
+        dest.write_text(json.dumps({"called_rows": rows, "n_called": 3}),
+                        encoding="utf-8")
+        assert mla.load_action(dest)["called_rows"] == rows
+
+
+def test_published_mover_json_stays_under_the_commit_budget() -> None:
+    """The checked-in scoreboard must pass the factor-mine publish scan."""
+    import json
+    from src.factor_mine import COMMIT_SOFT_LIMIT
+
+    path = mla.OUT_JSON
+    assert path.is_file()
+    assert path.stat().st_size < COMMIT_SOFT_LIMIT
+    doc = json.loads(path.read_text(encoding="utf-8"))
+    assert doc.get("layout") == mla.LAYOUT_CALLED_SHARDS
+    assert "called_rows" not in doc
+    loaded = mla.load_action(path)
+    assert len(loaded["called_rows"]) == doc["n_called"]
+    assert loaded["called_rows"]
+    for rel in doc["called_row_shards"]:
+        shard = path.parent / rel
+        assert shard.is_file()
+        assert shard.stat().st_size < COMMIT_SOFT_LIMIT
+
+
 if __name__ == "__main__":
     test_collect_movers_uses_prior_tape_not_gainers()
     test_first_session_falls_back_to_same_tape()
     test_collect_movers_keeps_cvs_when_it_still_moved()
     test_mover_table_is_not_gainer_list()
-    print("3 mover-lookback-action tests passed")
+    test_called_rows_round_trip_through_gzip_shards()
+    test_published_mover_json_stays_under_the_commit_budget()
+    print("mover-lookback-action tests passed")

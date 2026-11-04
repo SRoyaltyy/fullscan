@@ -17,6 +17,7 @@ CLI: python -m src.mover_lookback_action --write
 from __future__ import annotations
 
 import argparse
+import gzip
 import html
 import json
 from collections import Counter
@@ -35,6 +36,13 @@ OUT_MD = ROOT / "03_scoreboard" / "MOVER_LOOKBACK_ACTION.md"
 OUT_JSON = ROOT / "03_scoreboard" / "mover_lookback_action.json"
 OUT_HTML = ROOT / "dashboard" / "mover-lookback" / "index.html"
 DAILY_MD = ROOT / "01_daily" / "mover_lookback_action.md"
+# called_rows is the bulk of the scoreboard (~1 KB each, ~2k names a
+# session). The monolith crossed the factor-mine publish budget at 90 MB
+# and was days from GitHub's 100 MB reject. Shards keep every row; the
+# index stays small. Same order as the old list.
+LAYOUT_CALLED_SHARDS = "called-rows-gz-v1"
+CALLED_SHARD_ROWS = 20000
+SHARD_DIR_NAME = "mover_lookback/called_rows"
 
 START = ga.START
 HORIZONS = act.HORIZONS
@@ -717,6 +725,75 @@ Action is that date 09:30 ET. 🟢 up · 🟡 flat · 🔴 down. Hits = 1d/3d/1w
 </main></body></html>"""
 
 
+def called_shard_dir(dest_json: Path | None = None) -> Path:
+    dest = Path(dest_json or OUT_JSON)
+    return dest.parent / "mover_lookback" / "called_rows"
+
+
+def write_called_shards(rows: list[dict], dest_json: Path | None = None) -> list[str]:
+    """Gzip ``rows`` in order. Returns paths relative to the JSON's parent."""
+    dest = Path(dest_json or OUT_JSON)
+    folder = called_shard_dir(dest)
+    folder.mkdir(parents=True, exist_ok=True)
+    for old in folder.glob("called_rows-*.json.gz"):
+        old.unlink()
+    rels: list[str] = []
+    step = CALLED_SHARD_ROWS
+    for i in range(0, len(rows), step):
+        part = rows[i:i + step]
+        name = f"called_rows-{i:06d}.json.gz"
+        path = folder / name
+        raw = json.dumps(part, separators=(",", ":"), default=str).encode("utf-8")
+        with gzip.open(path, "wb", compresslevel=6) as fh:
+            fh.write(raw)
+        rels.append(f"{SHARD_DIR_NAME}/{name}")
+    return rels
+
+
+def load_called_shards(doc: dict, dest_json: Path) -> list[dict]:
+    rels = list(doc.get("called_row_shards") or [])
+    rows: list[dict] = []
+    root = Path(dest_json).parent
+    for rel in rels:
+        path = root / rel
+        with gzip.open(path, "rt", encoding="utf-8") as fh:
+            part = json.load(fh)
+        if isinstance(part, list):
+            rows.extend(part)
+    return rows
+
+
+def load_action(path: Path | None = None) -> dict:
+    """Scoreboard JSON. A sharded file is reassembled; a monolith is returned as stored."""
+    dest = Path(path or OUT_JSON)
+    if not dest.is_file():
+        raise SystemExit(f"[mover-lookback-action] missing payload: {dest}")
+    doc = json.loads(dest.read_text(encoding="utf-8"))
+    if not isinstance(doc, dict):
+        raise SystemExit(f"[mover-lookback-action] payload is not an object: {dest}")
+    if isinstance(doc.get("called_rows"), list):
+        return doc
+    if doc.get("layout") == LAYOUT_CALLED_SHARDS or doc.get("called_row_shards"):
+        loaded = dict(doc)
+        loaded["called_rows"] = load_called_shards(doc, dest)
+        return loaded
+    doc.setdefault("called_rows", [])
+    return doc
+
+
+def _assert_publish_files(paths: list[Path]) -> None:
+    """Same soft cap the factor-mine publish scan enforces."""
+    from .factor_mine import COMMIT_SOFT_LIMIT
+
+    over = [p for p in paths if p.is_file() and p.stat().st_size > COMMIT_SOFT_LIMIT]
+    if over:
+        detail = ", ".join(f"{p}={p.stat().st_size}" for p in over)
+        raise SystemExit(
+            f"[mover-lookback-action] publish file exceeds "
+            f"{COMMIT_SOFT_LIMIT} bytes: {detail}"
+        )
+
+
 def _slim_called(r: dict) -> dict:
     return {
         "date": r.get("date"),
@@ -746,36 +823,38 @@ def _slim_called(r: dict) -> dict:
 
 
 def write(payload: dict) -> dict:
-    """Write scoreboard + phone HTML. JSON stays under GitHub's 100 MB push
-    limit: compact encoding (no indent) and slim called_rows only. The live
-    mover-lookback page is self-contained HTML and does not fetch the JSON.
+    """Write scoreboard + phone HTML.
+
+    ``called_rows`` is gzip-sharded beside the index. The index itself
+    stays a small JSON object. The live mover-lookback page is
+    self-contained HTML and does not fetch the JSON. Row order matches
+    the list that used to sit inline.
     """
     OUT_MD.parent.mkdir(parents=True, exist_ok=True)
     DAILY_MD.parent.mkdir(parents=True, exist_ok=True)
     OUT_HTML.parent.mkdir(parents=True, exist_ok=True)
     # Drop duplicate full sweep under "chosen" — same object as sweeps[preset].
+    rows = [_slim_called(r) for r in payload.get("called_rows") or []]
+    rels = write_called_shards(rows, OUT_JSON)
     slim = {k: v for k, v in payload.items()
             if k not in ("called_rows", "chosen")}
-    slim["called_rows"] = [_slim_called(r) for r in payload.get("called_rows") or []]
+    slim["layout"] = LAYOUT_CALLED_SHARDS
+    slim["called_row_shards"] = rels
+    slim["n_called"] = len(rows)
     md = render_markdown(payload)
     OUT_MD.write_text(md, encoding="utf-8")
     DAILY_MD.write_text(md, encoding="utf-8")
-    # indent=2 blew this past 100 MB once the window reached late October.
     blob = json.dumps(slim, separators=(",", ":"), default=str)
     OUT_JSON.write_text(blob, encoding="utf-8")
     OUT_HTML.write_text(render_html(payload), encoding="utf-8")
     nbytes = OUT_JSON.stat().st_size
     print(f"[mover-lookback-action] wrote {OUT_MD}")
-    print(f"[mover-lookback-action] wrote {OUT_JSON} ({nbytes / 1e6:.1f} MB)")
+    print(f"[mover-lookback-action] wrote {OUT_JSON} ({nbytes / 1e6:.1f} MB, "
+          f"called_rows={len(rows)} shards={len(rels)})")
     print(f"[mover-lookback-action] phone {OUT_HTML}")
-    if nbytes > 80_000_000:
-        print(f"::warning::mover_lookback_action.json is {nbytes / 1e6:.1f} MB "
-              f"(keep under ~80 MB; GitHub hard-rejects over 100 MB)")
-    if nbytes > 100_000_000:
-        raise SystemExit(
-            f"[mover-lookback-action] FATAL: {OUT_JSON} is {nbytes / 1e6:.1f} MB; "
-            "GitHub rejects files over 100 MB. Slim called_rows further or split."
-        )
+    checked = [OUT_JSON]
+    checked.extend(OUT_JSON.parent / rel for rel in rels)
+    _assert_publish_files(checked)
     return payload
 
 

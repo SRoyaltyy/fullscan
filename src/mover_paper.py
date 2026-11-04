@@ -98,7 +98,8 @@ def _nyse_session(date: str) -> bool:
 def load_payload(path: Path = PAYLOAD) -> dict:
     if not path.is_file():
         raise SystemExit(f"[mover-paper] missing payload: {path}")
-    return json.loads(path.read_text(encoding="utf-8"))
+    from . import mover_lookback_action as mla
+    return mla.load_action(path)
 
 
 def _conviction(row: dict) -> float:
