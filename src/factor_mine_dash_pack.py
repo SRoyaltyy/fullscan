@@ -111,7 +111,9 @@ def load_baselines(path: Path | None = None) -> dict:
 def pack_from_rows(rows: list[dict], *,
                    created_on=None,
                    state_equity: dict | None = None,
-                   baselines: dict | None = None) -> dict:
+                   baselines: dict | None = None,
+                   rebuilt_days: dict | None = None,
+                   empty_input_dates: set | None = None) -> dict:
     """One scoreboard row per recipe. Real totals omit designed_after days."""
     created_on = created_on or (lambda name, rec=None: recipe_created_on(name, rec or {}))
     by_name: dict[str, list[dict]] = {}
@@ -140,14 +142,27 @@ def pack_from_rows(rows: list[dict], *,
             if not date:
                 continue
             label = "designed_after" if date < created else "real"
+            futu = _num(row.get("net_ret_futubull"))
+            flat = _num(row.get("net_ret_15bp"))
+            fires = _fires(row.get("fires"))
+            status = str(row.get("day_status") or "")
+            # Rebuilt numbers replace the frozen 0 only on days the sealed
+            # send file marks no_same_day_panel. Every other date stays.
+            if empty_input_dates and date in empty_input_dates:
+                overlay = (rebuilt_days or {}).get((name, date))
+                if isinstance(overlay, dict):
+                    futu = overlay.get("futu")
+                    flat = overlay.get("flat")
+                    fires = int(overlay.get("fires") or 0)
+                    status = str(overlay.get("status") or status)
             days.append({
                 "date": date,
                 "label": label,
                 "timing_clean": _flag(row.get("timing_clean")),
-                "futu": _num(row.get("net_ret_futubull")),
-                "flat": _num(row.get("net_ret_15bp")),
-                "fires": _fires(row.get("fires")),
-                "status": str(row.get("day_status") or ""),
+                "futu": futu,
+                "flat": flat,
+                "fires": fires,
+                "status": status,
             })
         real = [d for d in days if d["label"] == "real"]
         designed = [d for d in days if d["label"] == "designed_after"]
@@ -199,17 +214,69 @@ def pack_from_rows(rows: list[dict], *,
     }
 
 
+def rebuilt_preference(root: Path | None = None) -> tuple[set[str], dict]:
+    """Rebuilt day cells for sealed ``no_same_day_panel`` dates only."""
+    from .factor_mine_rebuild import (
+        LABEL_MISSED,
+        LABEL_REBUILT,
+        LABEL_RULE,
+        no_same_day_dates,
+        rebuilt_path,
+    )
+
+    base = root or ROOT
+    empty = set(no_same_day_dates(base))
+    overlay: dict[tuple[str, str], dict] = {}
+    for date in sorted(empty):
+        path = rebuilt_path(date, base)
+        if not path.is_file():
+            continue
+        try:
+            doc = json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            continue
+        if not isinstance(doc, dict):
+            continue
+        for name, strat in (doc.get("strategies") or {}).items():
+            if not isinstance(strat, dict):
+                continue
+            kind = str(strat.get("class") or "")
+            if kind == "still broken":
+                status = LABEL_MISSED
+                futu = None
+                fires = 0
+            elif kind == LABEL_RULE:
+                status = LABEL_RULE
+                futu = None
+                fires = 0
+            else:
+                status = LABEL_REBUILT
+                futu = strat.get("return_pct")
+                fires = len(strat.get("fills") or [])
+            overlay[(str(name), date)] = {
+                "futu": futu,
+                "flat": None,
+                "fires": fires,
+                "status": status,
+            }
+    return empty, overlay
+
+
 def build_pack(*, csv_path: Path | None = None,
                state_dir: Path | None = None,
-               report_json: Path | None = None) -> dict:
+               report_json: Path | None = None,
+               rebuilt_root: Path | None = None) -> dict:
     path = Path(csv_path or CSV_PATH)
     rows = []
     with path.open(newline="", encoding="utf-8") as handle:
         rows.extend(csv.DictReader(handle))
+    empty, overlay = rebuilt_preference(rebuilt_root)
     return pack_from_rows(
         rows,
         state_equity=load_state_equity(state_dir),
         baselines=load_baselines(report_json),
+        rebuilt_days=overlay,
+        empty_input_dates=empty,
     )
 
 
@@ -268,6 +335,7 @@ def render_sequential_html(pack: dict) -> str:
  tr.pick {{ cursor:pointer }}
  tr.pick:hover, tr.on {{ background:#121826 }}
  .pos {{ color:var(--pos) }} .neg {{ color:var(--neg) }}
+ .missed {{ color:#8b96ab }}
  input {{ background:var(--card); color:var(--fg); border:1px solid var(--line);
   border-radius:8px; padding:8px 10px; width:min(420px,100%); margin:0 0 8px }}
  .tbl {{ overflow-x:auto }}
@@ -298,6 +366,18 @@ function pct(v) {{
   const n = Number(v);
   if (!Number.isFinite(n)) return "";
   return n.toFixed(3);
+}}
+function labeled(status) {{
+  return status === "rebuilt" || status === "sat out (rule)" || status === "missed";
+}}
+function dayNum(v, status) {{
+  if (labeled(status) && (v === null || v === undefined || v === "" || Number(v) === 0))
+    return esc(status);
+  return pct(v);
+}}
+function dayFires(d) {{
+  if (labeled(d.status) && !Number(d.fires)) return esc(d.status);
+  return d.fires ?? "";
 }}
 function cls(v) {{
   if (v === null || v === undefined || v === "") return "";
@@ -397,9 +477,9 @@ function showDays(name) {{
   const body = (rec.days || []).map(d => `<tr>
     <td>${{esc(d.date)}}</td><td>${{esc(d.label)}}</td>
     <td>${{d.timing_clean ? "true" : "false"}}</td>
-    <td class="${{cls(d.futu)}}">${{pct(d.futu)}}</td>
-    <td class="${{cls(d.flat)}}">${{pct(d.flat)}}</td>
-    <td>${{d.fires}}</td><td>${{esc(d.status)}}</td></tr>`).join("");
+    <td class="${{labeled(d.status) && (d.futu === null || Number(d.futu) === 0) ? "missed" : cls(d.futu)}}">${{dayNum(d.futu, d.status)}}</td>
+    <td class="${{labeled(d.status) && (d.flat === null || Number(d.flat) === 0) ? "missed" : cls(d.flat)}}">${{dayNum(d.flat, d.status)}}</td>
+    <td>${{dayFires(d)}}</td><td class="${{d.status === "missed" ? "missed" : ""}}">${{esc(d.status)}}</td></tr>`).join("");
   document.getElementById("days").innerHTML =
     `<h2>${{esc(name)}}</h2><div class="tbl"><table>
      <thead><tr><th>date</th><th>label</th><th>timing_clean</th>

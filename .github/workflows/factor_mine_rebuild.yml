@@ -1,0 +1,49 @@
+name: Factor Mine rebuilt store
+
+# When a session's panel rows land after the 09:30 run, that run saved
+# source=no_same_day_panel and a 0-trade book. This job re-runs the live
+# strategies into data/factor_mine/rebuilt/DATE.json. It does not restate
+# a sealed ledger, snapshot, candidate file, or state file.
+#
+# The panel push is the trigger. The weekday crons are the fallback if
+# that push was missed. 14:45 UTC is 09:45 ET in November–March.
+# 16:15 UTC is 11:15 ET, after a late stock-book land.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - data/factor_mine/panel.json
+  schedule:
+    - cron: "45 14 * * 1-5"
+    - cron: "15 16 * * 1-5"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: factor-mine-rebuilt
+  cancel-in-progress: false
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install
+        run: pip install pandas pyarrow
+      - name: Rebuild empty-input days
+        run: python -m src.factor_mine_rebuild --write
+      - name: Publish rebuilt store
+        run: |
+          bash scripts/safe_git_push.sh \
+            "chore: factor mine rebuilt store" \
+            data/factor_mine/rebuilt/ \
+            dashboard/factor-mine/rebuilt_labels.json

@@ -121,8 +121,21 @@ def test_write_pack_does_not_touch_state(tmp_path=None) -> None:
 
 
 def test_locked_csv_keeps_hot4_and_splits_holdup() -> None:
-    from src.factor_mine_dash_pack import build_pack
-    pack = build_pack()
+    import csv
+    from src.factor_mine_dash_pack import (
+        CSV_PATH,
+        build_pack,
+        load_baselines,
+        load_state_equity,
+        pack_from_rows,
+    )
+    with CSV_PATH.open(newline="", encoding="utf-8") as handle:
+        raw_rows = list(csv.DictReader(handle))
+    pack = pack_from_rows(
+        raw_rows,
+        state_equity=load_state_equity(),
+        baselines=load_baselines(),
+    )
     by = {row["name"]: row for row in pack["recipes"]}
     hot = by["union_hot_n4_h1"]
     assert hot["n_designed_after"] == 0
@@ -142,6 +155,51 @@ def test_locked_csv_keeps_hot4_and_splits_holdup() -> None:
     bases = pack["baselines"]
     assert bases["random4"]["rows"]
     assert bases["iwm"]["rows"]
+    built = build_pack()
+    built_by = {row["name"]: row for row in built["recipes"]}
+    from src.factor_mine_rebuild import no_same_day_dates
+    empty = set(no_same_day_dates())
+    for name, raw in by.items():
+        over = built_by[name]
+        assert over["state_equity"] == raw["state_equity"]
+        assert over["book_pct"] == raw["book_pct"]
+        for left, right in zip(raw["days"], over["days"]):
+            if left["date"] in empty:
+                continue
+            assert left["futu"] == right["futu"]
+            assert left["fires"] == right["fires"]
+            assert left["status"] == right["status"]
+
+
+def test_rebuilt_overlay_is_only_the_empty_input_date() -> None:
+    rows = [
+        _row("union_hot_n4_h1", "2026-10-14", "0.0000", "0.0000", "0", "true",
+             created="2026-08-13"),
+        _row("union_hot_n4_h1", "2026-10-15", "1.5000", "1.2500", "2", "true",
+             created="2026-08-13"),
+    ]
+    overlay = {
+        ("union_hot_n4_h1", "2026-10-14"): {
+            "futu": 3.25, "flat": None, "fires": 2, "status": "rebuilt",
+        },
+        ("union_hot_n4_h1", "2026-10-15"): {
+            "futu": 9.0, "flat": None, "fires": 4, "status": "rebuilt",
+        },
+    }
+    pack = pack_from_rows(
+        rows,
+        created_on=lambda name, rec=None: "2026-08-13",
+        rebuilt_days=overlay,
+        empty_input_dates={"2026-10-14"},
+    )
+    days = {row["date"]: row for row in pack["recipes"][0]["days"]}
+    assert days["2026-10-14"]["futu"] == 3.25
+    assert days["2026-10-14"]["status"] == "rebuilt"
+    assert days["2026-10-15"]["futu"] == 1.5
+    assert days["2026-10-15"]["fires"] == 2
+    html = render_sequential_html(pack)
+    assert "sat out (rule)" in html or "rebuilt" in html
+    assert "dayNum" in html
 
 
 if __name__ == "__main__":
@@ -150,4 +208,7 @@ if __name__ == "__main__":
     test_baselines_and_changelog_page()
     test_write_pack_does_not_touch_state()
     test_locked_csv_keeps_hot4_and_splits_holdup()
+    test_rebuilt_overlay_is_only_the_empty_input_date()
+    from src.test_factor_mine_rebuild import main as rebuild_main
+    rebuild_main()
     print("factor-mine dash pack tests passed")
