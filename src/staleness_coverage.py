@@ -1,17 +1,9 @@
-"""Page list for the staleness canary after PR #743 merges.
+"""Page list loaded by ``src.staleness_canary`` (PR #743 is on main).
 
-``src/staleness_canary.py`` is not on main (open PR #743,
-branch cursor/stale-dashboard-refresh-59f8). This module does not
-import it and does not edit that branch. After #743 is on main, the
-canary can load these rows:
-
-    from src.staleness_coverage import sources_for_canary
-    SOURCES = SOURCES + sources_for_canary()
-
-``sources_for_canary`` returns only pages that have a daily writer.
-scanner-backtest and jev-train are manual/frozen: no weekday cron writes
-them on main, so they are left out of the fail-the-build list.
-``updown_days`` reads ``days[-1][0]`` in index.json.
+``sources_for_canary`` returns daily pages that are not already in the
+canary base list. Manual/frozen pages, and jev-train (already listed,
+lag 1, weekday cron from #743), are omitted so they are not appended
+twice and do not fail the canary. ``updown_days`` reads ``days[-1][0]``.
 """
 from __future__ import annotations
 
@@ -41,7 +33,7 @@ def sources_for_canary(path: Path | None = None) -> tuple[tuple[str, str, int], 
     """
     rows = []
     for page in pages(path):
-        if page.get("manual") or page.get("frozen"):
+        if page.get("manual") or page.get("frozen") or page.get("already_in_canary"):
             continue
         lag = page.get("lag_limit")
         if not isinstance(lag, int):

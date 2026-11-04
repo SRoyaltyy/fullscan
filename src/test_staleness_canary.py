@@ -51,6 +51,14 @@ def _fresh_tree(root: Path, *, html: str = "2026-11-04",
     }))
     _write(root, "dashboard/factor-mine/strategy_tickets.json",
            json.dumps({"date": curve, "strategies": {"a": {"date": "2026-10-01"}}}))
+    _write(root, "dashboard/updown/data/index.json",
+           json.dumps({"model": "updown_o2c_v2", "days": [
+               ["2026-10-05", "h"], [curve, "h", 1],
+           ]}))
+    _write(root, "dashboard/hard-red-exceptions/latest.json",
+           json.dumps({"to_date": curve, "days": [{"date": curve}]}))
+    _write(root, "dashboard/day-movers/days.json",
+           json.dumps({"to_date": curve, "days": [{"date": curve}]}))
 
 
 def test_session_lag_counts_nyse_days() -> None:
@@ -79,6 +87,9 @@ def test_parsers_use_the_newest_data_date() -> None:
     assert canary.newest_date(json.dumps({
         "days": [{"date": "2026-09-23"}, {"date": "2026-09-29"}],
     }), "jev_days") == "2026-09-29"
+    assert canary.newest_date(json.dumps({
+        "days": [["2026-10-02", "h"], ["2026-10-05", "h"]],
+    }), "updown_days") == "2026-10-05"
 
 
 def test_report_fails_when_a_source_is_over_its_lag(tmp_path: Path) -> None:
