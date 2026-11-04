@@ -35019,6 +35019,29 @@
       "knowable_at_9am": "partially — FOMC hold, SK Hynix, and flat futures were knowable; the oil reversal and hawkish presser tone were intraday, and the after-close MSFT/GOOGL split was unknowable",
       "attribution_contested": "yes — AP leads Fed/bonds, Investing.com leads oil, Yahoo leads mixed breadth; no single driver dominates a +0.28% day",
       "outlier_watch": "Equities rose despite the 10Y +5bp to ~5.05% (a GN=GN headwind), and energy rose while premarket oil was down — the oil reversal and equity-yield divergence are what don’t fit a simple risk-on story"
+    },
+    {
+      "date": "2026-10-29",
+      "topic": "general",
+      "predicted_direction": "down",
+      "predicted_magnitude_band": "mild",
+      "confidence_score": null,
+      "total_score": null,
+      "multiplier": null,
+      "components": {},
+      "leading_sum": -5.0,
+      "actual_open": null,
+      "actual_close": null,
+      "actual_pct_change": null,
+      "actual_direction": null,
+      "actual_magnitude_band": null,
+      "direction_hit": null,
+      "magnitude_hit": null,
+      "divergence_flagged": false,
+      "divergence_verdict": null,
+      "per_factor_breakdown": [],
+      "reflection_lesson_ref": null,
+      "sources_used": []
     }
   ]
 }
