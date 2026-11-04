@@ -1,22 +1,22 @@
-# Finviz homepage market digest — 2026-11-03
+# Finviz homepage market digest — 2026-11-04
 
-**Generated:** 2026-11-03T04:45:13.859964-05:00 (America/New_York)
+**Generated:** 2026-11-04T04:27:30.198057-05:00 (America/New_York)
 **Source:** `live`
-**Banner:** US stocks set for mixed open as traders digest Apple earnings, midterm elections and busy data and earnings slate
+**Banner:** US futures point to a higher open as traders face heavy earnings slate and key ADP and ISM services data
 **Prior close:** SPX —  Nasdaq —  Dow —
 **SPX:** —  **Nasdaq:** —  **Dow:** —
 **Oil:** —
 **CPI/Fed:** —
-**Leaders:** AAPL, ORCL, UBER, AMZN, CPB, SHOP, PFE, ETN, MPC, AMD, SMCI, AMGN, ANET
+**Leaders:** MCD, UBER, CVS, EMR, DDOG, FISV, RVTY, ZBRA, SHOP, DT, IT
 **Next session:** housing no · retail no · Fed no
-**Earnings slate:** —
-**Geo/grain:** geo
-**Clock legal for:** 2026-11-03
+**Earnings slate:** MCD, UBER, CVS, EMR, DDOG
+**Geo/grain:** —
+**Clock legal for:** 2026-11-04
 **Clock use:** `same_morning`
 
 ## Clock
 
-Capture is **before 09:30 ET on this date**, so it is legal for that morning's Pre-Open (`clock_legal_for` = 2026-11-03).
+Capture is **before 09:30 ET on this date**, so it is legal for that morning's Pre-Open (`clock_legal_for` = 2026-11-04).
 
 Homepage `$MARKET` prose — **not** `YYYY-MM-DD_finviz_digest.md` (quote-page headlines + ticker blurbs). Capture only. Not wired into tape_anchor / predict / #210.
 
@@ -25,23 +25,20 @@ Homepage `$MARKET` prose — **not** `YYYY-MM-DD_finviz_digest.md` (quote-page h
 - **Prior close:** SPX — · Nasdaq — · Dow —
 - **Oil:** —
 - **CPI / Fed-odds:** —
-- **Named leaders:** AAPL, ORCL, UBER, AMZN, CPB, SHOP, PFE, ETN, MPC, AMD, SMCI, AMGN, ANET
+- **Named leaders:** MCD, UBER, CVS, EMR, DDOG, FISV, RVTY, ZBRA, SHOP, DT, IT
 - **Next-session calendar:** housing no · retail no · Fed no
-  - Today’s earnings calendar features pre-bell reports from Shopify (SHOP), Pfizer (PFE), Eaton (ETN) and Marathon Petroleum (MPC), with Advanced Micro Devices (AMD), Super Micro Computer (SMCI), Amgen (AMGN) and Arista Networks (ANET) due after the close
-- **Earnings slate:** —
-- **Geo / grain:** geo
+  - The US macro calendar features ADP Employment Change at 8:15 AM ET and ISM Services PMI at 10:00 AM ET, both flagged as potential volatility drivers.
+- **Earnings slate:** MCD, UBER, CVS, EMR, DDOG
+- **Geo / grain:** —
 
 ## Narrative
 
-**US stocks set for mixed open as traders digest Apple earnings, midterm elections and busy data and earnings slate**
+**US futures point to a higher open as traders face heavy earnings slate and key ADP and ISM services data**
 
-- S&P 500 Futures (@ES) -0.10%, Dow Jones Futures (@YM) -0.53%, Nasdaq 100 Futures (@NQ) +0.23% and Russell 2000 Futures (@ER2) -0.04% indicate a mixed open, with the Dow showing relative weakness as traders weigh Apple’s results (AAPL) and looming U.S. midterm elections
-- Apple (AAPL) falls roughly 4.6% pre-market despite beating estimates with $114.5 billion in revenue (+12% y/y) and $2.10 EPS, as its December-quarter outlook for 7–10% revenue growth flags higher memory chip costs, AI cloud spending and slower services growth
-- Oracle (ORCL) trades slightly lower pre-market after pricing a $10 billion stock offering at $116 and $10 billion in senior notes as part of a $20 billion capital-raising plan to fund its AI cloud infrastructure buildout
-- Uber (UBER) trades roughly flat in early trading after announcing a robotaxi partnership deal with Amazon (AMZN)’s Zoox
-- Campbell Soup (CPB) declines pre-market on an EPS miss, soft sales and lowered full-year guidance, according to Investing.com
-- Asian shares trade mixed, with South Korean tech names under pressure and broader regional tech hardware sentiment weighed down by the reaction to Apple’s results (AAPL)
-- European markets trade mostly lower, with Germany’s DAX (@DY) down around 0.7%
-- Oil futures (@CL) rise about 1.8% as prices stabilize following recent Iran-related volatility, while gold (@GC) prices decline
-- Key U.S. data releases include durable goods orders at 8:30 AM ET and JOLTs job openings at 10:00 AM ET, both seen as potential drivers of intraday volatility
-- Today’s earnings calendar features pre-bell reports from Shopify (SHOP), Pfizer (PFE), Eaton (ETN) and Marathon Petroleum (MPC), with Advanced Micro Devices (AMD), Super Micro Computer (SMCI), Amgen (AMGN) and Arista Networks (ANET) due after the close
+- S&P 500 Futures (@ES) +0.26%, Dow Jones Futures (@YM) +0.57%, Nasdaq 100 Futures (@NQ) +0.27%, and Russell 2000 Futures (@ER2) +0.77% indicate a modest gap up for US equities.
+- McDonald's (MCD), Uber (UBER), CVS Health (CVS), Emerson Electric (EMR), and Datadog (DDOG) are scheduled to report earnings before the bell in a busy pre-market lineup.
+- Recent earnings beats from Fiserv (FISV), Revvity (RVTY), Zebra Technologies (ZBRA), Shopify (SHOP), Dynatrace (DT), and Gartner (IT) have drawn mixed pre-market reactions, with Dynatrace (DT) down about 1% and the others trading roughly flat.
+- Overnight Asian sessions were volatile, with initial tech selling tied to US midterm election results showing Democratic gains in both chambers.
+- Partial relief rallies emerged later in parts of China and Europe following the early tech-led weakness.
+- Commodities traded mixed overnight, with oil (@CL) holding near recent levels.
+- The US macro calendar features ADP Employment Change at 8:15 AM ET and ISM Services PMI at 10:00 AM ET, both flagged as potential volatility drivers.
