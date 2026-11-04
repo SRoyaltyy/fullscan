@@ -441,10 +441,6 @@ def main():
         )
     elif df is None:
         df = pd.read_csv(BytesIO(saved["raw"]))
-    if df is None:
-        print("\nNo data source available.", flush=True)
-        print(f"\n  Finished in {time.time() - start_time:.1f}s (no data collected)", flush=True)
-        return
 
     print(f"\n  Raw data: {len(df)} stocks, {len(df.columns)} columns", flush=True)
     archive_path = EXPORTS_DIR / f"finviz_{snapshot_date}.csv"
