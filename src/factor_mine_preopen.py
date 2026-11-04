@@ -38,7 +38,13 @@ Two steps, both append-only:
    from the prior state, written once to
    ``data/factor_mine/state/<sleeve>/<D>.json``, and its row is
    appended to ``03_scoreboard/factor_mine/<sleeve>.md`` under the
-   Factor Mine past-day lock (``src/past_day_lock.py``).
+   Factor Mine past-day lock (``src/past_day_lock.py``). The dashboard
+   file ``dashboard/factor-mine/preopen.json`` gains that day only.
+   Rows on or before the last day already in the file stay as written.
+   The book fetches 09:30/16:00 bars for the names that day actually
+   holds or buys. It does not wait on the factor-mine remine. If the
+   closed session is still missing when the step ends, the process
+   exits non-zero.
 
 Each sleeve starts with $10k at the 2026-10-08 open. There is no
 backfill and no day before START. A missed day is not re-filled from a
@@ -476,6 +482,142 @@ def render_md(name: str, records: list[dict]) -> str:
     return "\n".join(lines) + "\n"
 
 
+def _summary_days(records: list[dict]) -> list[dict]:
+    return [{
+        "date": r.get("date"), "s": r.get("s"), "picks": r.get("picks"),
+        "buys": [b.get("ticker") for b in r.get("buys") or []],
+        "sells": [b.get("ticker") for b in r.get("sells") or []],
+        "equity": r.get("equity"), "mean": r.get("mean"),
+        "sit": r.get("sit"), "reasons": r.get("reasons"),
+    } for r in records]
+
+
+def _day_rows(doc: dict | None, name: str) -> list[dict]:
+    sleeve = ((doc or {}).get("sleeves") or {}).get(name) or {}
+    rows = sleeve.get("days") or []
+    return [row for row in rows if isinstance(row, dict)]
+
+
+def fill_forward(previous: dict | None, fresh: dict) -> dict:
+    """Keep sealed day rows. Append only days after the last one on disk.
+
+    A rebuilt row whose date is on or before that day must match the
+    stored row. Anything else refuses, including a day inserted before
+    the last updated day.
+    """
+    if not previous:
+        return fresh
+    merged = json.loads(json.dumps(fresh))
+    prev_sleeves = previous.get("sleeves") or {}
+    for name in prev_sleeves:
+        if name not in (merged.get("sleeves") or {}):
+            raise PreopenRefused(
+                f"preopen: {name} dropped; sealed days are not rewritten")
+    for name, sleeve in (merged.get("sleeves") or {}).items():
+        prev_rows = _day_rows(previous, name)
+        if not prev_rows:
+            continue
+        last = str(prev_rows[-1].get("date") or "")
+        fresh_rows = _day_rows(merged, name)
+        sealed = [row for row in fresh_rows if str(row.get("date") or "") <= last]
+        added = [row for row in fresh_rows if str(row.get("date") or "") > last]
+        if sealed != prev_rows:
+            raise PreopenRefused(
+                f"preopen: {name} would rewrite a sealed day on or before {last}")
+        sleeve["days"] = list(prev_rows) + added
+    return merged
+
+
+def last_dashboard_day(doc: dict, name: str | None = None) -> str:
+    sleeves = doc.get("sleeves") or {}
+    chosen = [name] if name else list(sleeves)
+    found = []
+    for sleeve_name in chosen:
+        for row in _day_rows(doc, sleeve_name):
+            day = str(row.get("date") or "")
+            if day:
+                found.append(day)
+    return max(found) if found else ""
+
+
+def assert_current(end: str, path: Path) -> str:
+    """Fail when the dashboard does not include the closed session."""
+    if not path.is_file():
+        raise PreopenRefused(
+            f"preopen: {path} missing; closed session {end} was skipped")
+    try:
+        doc = json.loads(path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError as exc:
+        raise PreopenRefused(
+            f"preopen: {path} unreadable; closed session {end} was skipped"
+        ) from exc
+    sleeves = doc.get("sleeves") or {}
+    if not sleeves:
+        raise PreopenRefused(
+            f"preopen: {path} has no sleeves; closed session {end} was skipped")
+    behind = []
+    for name in sleeves:
+        got = last_dashboard_day(doc, name)
+        if got < end:
+            behind.append(f"{name} ends {got or 'empty'}")
+    if behind:
+        raise PreopenRefused(
+            "preopen: weekday book skipped closed session "
+            f"{end}: " + "; ".join(behind))
+    return last_dashboard_day(doc)
+
+
+def tape_tickers(days: list[str], *, clock: GitClock, state_dir: Path) -> list[str]:
+    """Names whose 09:30 and 16:00 prints the missing days will mark."""
+    from . import factor_mine_sequential as fms
+    names: list[str] = []
+    for day in days:
+        seal_doc, _why = seal_for_book(day, clock=clock)
+        for name in SLEEVES:
+            prev = prior_session(day)
+            prior = fms.read_state(name, prev, state_dir) if prev else None
+            held = ((prior or {}).get("state") or {}).get("pos") or {}
+            entry = ((seal_doc or {}).get("sleeves") or {}).get(name) or {}
+            names.extend(str(t) for t in held)
+            names.extend(str(t) for t in (entry.get("picks") or []))
+    return sorted({t.upper() for t in names if t})
+
+
+def ensure_session_tape(end: str, *, clock: GitClock, state_dir: Path) -> None:
+    """Append missing 09:30/16:00 bars for the open book. Keep stored bars.
+
+    The factor-mine remine is what normally commits ``ohlc.parquet``.
+    When that job fails, the book used to exit on an empty tape and the
+    dashboard stayed on the previous session. This fetches only the
+    names this book will mark. A still-missing print fails the run.
+    """
+    from . import factor_mine as fm
+    from . import factor_mine_sequential as fms
+    from . import price_store as ps
+    from . import ticker_lookback as tl
+    missing = []
+    for day in sessions(START, end):
+        if not fm.session_has_closed(day):
+            continue
+        if any(fms.read_state(name, day, state_dir) is None for name in SLEEVES):
+            missing.append(day)
+    if not missing:
+        return
+    tickers = tape_tickers(missing, clock=clock, state_dir=state_dir)
+    if not tickers:
+        return
+    try:
+        ps.ensure_through(missing[-1], tickers=tickers, strict=True)
+    except PreopenRefused:
+        raise
+    except Exception as exc:
+        raise PreopenRefused(
+            f"preopen: no 09:30/16:00 tape through {missing[-1]} "
+            f"for {tickers}; weekday session skipped: {exc}"
+        ) from exc
+    tl.reset_price_caches()
+
+
 def chain(name: str, end: str, state_dir: Path | None = None) -> list[dict]:
     from . import factor_mine_sequential as fms
     out = []
@@ -500,6 +642,8 @@ def book(end: str | None = None, *, bars=None, fees=None,
     state_dir = Path(state_dir or STATE_DIR)
     score_dir = Path(score_dir or SCORE_DIR)
     days = [d for d in sessions(START, end) if fm.session_has_closed(d)]
+    if bars is None:
+        ensure_session_tape(end, clock=clock or GitClock(), state_dir=state_dir)
     out: dict[str, list[dict]] = {}
     for name in SLEEVES:
         for day in days:
@@ -530,6 +674,7 @@ def book(end: str | None = None, *, bars=None, fees=None,
         if live:
             pdl.seal_factor_mine_dir(score_dir, [(name, text)], watermark=wm)
     write_summary(out, summary_path)
+    assert_current(end, Path(summary_path) if summary_path else DASH_JSON)
     return out
 
 
@@ -547,29 +692,43 @@ def write_summary(records: dict[str, list[dict]], path: Path | None = None) -> d
         doc["sleeves"][name] = {
             "parent": SLEEVES[name],
             "label": NEW_LABEL,
-            "days": [{
-                "date": r.get("date"), "s": r.get("s"), "picks": r.get("picks"),
-                "buys": [b.get("ticker") for b in r.get("buys") or []],
-                "sells": [b.get("ticker") for b in r.get("sells") or []],
-                "equity": r.get("equity"), "mean": r.get("mean"),
-                "sit": r.get("sit"), "reasons": r.get("reasons"),
-            } for r in recs],
+            "days": _summary_days(recs),
         }
-    text = _dumps(doc)
-    for p in ([path] if path else [SUMMARY_PATH, DASH_JSON]):
-        p.parent.mkdir(parents=True, exist_ok=True)
-        p.write_text(text, encoding="utf-8")
-    return doc
+    targets = [Path(path)] if path else [SUMMARY_PATH, DASH_JSON]
+    merged = doc
+    for dest in targets:
+        previous = None
+        if dest.is_file():
+            try:
+                previous = json.loads(dest.read_text(encoding="utf-8"))
+            except json.JSONDecodeError as exc:
+                raise PreopenRefused(
+                    f"preopen: {dest} is unreadable; sealed days were not rewritten"
+                ) from exc
+        merged = fill_forward(previous, doc)
+        text = _dumps(merged)
+        if dest.is_file() and dest.read_text(encoding="utf-8") == text:
+            continue
+        dest.parent.mkdir(parents=True, exist_ok=True)
+        dest.write_text(text, encoding="utf-8")
+    return merged
 
 
 def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
-    ap.add_argument("step", choices=["seal", "book"])
+    ap.add_argument("step", choices=["seal", "book", "check"])
     ap.add_argument("--date", default="")
     args = ap.parse_args(argv)
     if args.step == "seal":
         day = args.date or datetime.now(ET).date().isoformat()
         seal(day)
+        return 0
+    if args.step == "check":
+        from .skip_if_good import last_closed_session
+        end = args.date or last_closed_session()
+        got = assert_current(end, DASH_JSON)
+        print(f"[preopen] dashboard covers {got} through closed session {end}",
+              flush=True)
         return 0
     book(args.date or None)
     return 0

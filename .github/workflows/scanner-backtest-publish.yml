@@ -1,4 +1,7 @@
 name: Refresh scanner test page
+# Updated by hand. One run replaces the public snapshot and is limited
+# to 360 minutes, so this workflow has no weekday schedule.
+# src/staleness_coverage.json marks the page manual.
 on:
   push:
     branches: [main]

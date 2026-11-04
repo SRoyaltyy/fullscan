@@ -24,6 +24,7 @@ from src.skip_if_good import _session_date
 ROOT = Path(__file__).resolve().parent.parent
 PAGES = "https://sroyaltyy.github.io/fullscan"
 REPORT = Path("data/health/staleness.json")
+COVERAGE = Path(__file__).resolve().parent / "staleness_coverage.json"
 _MISSING_LAG = 10_000
 
 # path, kind, allowed session lag
@@ -175,6 +176,20 @@ def fetch_url(url: str, timeout: float = 30) -> str:
         return response.read().decode("utf-8", errors="replace")
 
 
+def manual_sources() -> list[dict]:
+    """Pages with no weekday cron. They stay in the report and do not fail it."""
+    if not COVERAGE.is_file():
+        return []
+    try:
+        doc = json.loads(COVERAGE.read_text(encoding="utf-8"))
+    except json.JSONDecodeError:
+        return []
+    rows = doc.get("sources") if isinstance(doc, dict) else None
+    if not isinstance(rows, list):
+        return []
+    return [row for row in rows if isinstance(row, dict) and row.get("mode") == "manual"]
+
+
 def evaluate(*, root: Path | None = None, now: datetime | None = None,
              fetch=None, pages_base: str = PAGES) -> dict:
     root = Path(root) if root is not None else ROOT
@@ -205,6 +220,20 @@ def evaluate(*, root: Path | None = None, now: datetime | None = None,
             "live_error": live_error,
             "ok": ok,
         })
+    for spec in manual_sources():
+        rows.append({
+            "path": spec.get("path") or spec.get("page") or "",
+            "page": spec.get("page") or "",
+            "lag_limit": None,
+            "mode": "manual",
+            "main_date": str(spec.get("last_run") or "")[:10],
+            "live_date": "",
+            "main_lag": 0,
+            "live_lag": 0,
+            "live_error": "",
+            "ok": True,
+            "note": spec.get("reason") or "updated by hand",
+        })
     report = {
         "generated_at": datetime.now().astimezone().isoformat(),
         "session": session,
@@ -225,6 +254,12 @@ def main() -> None:
     report = evaluate(root=root)
     print(f"[staleness] session {report['session']} ok={report['ok']}")
     for row in report["sources"]:
+        if row.get("mode") == "manual":
+            print(
+                f"[staleness] MANUAL {row['path']} "
+                f"last_run={row['main_date'] or 'missing'} updated by hand"
+            )
+            continue
         flag = "OK" if row["ok"] else "STALE"
         print(
             f"[staleness] {flag} {row['path']} "

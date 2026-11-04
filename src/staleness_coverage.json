@@ -1,0 +1,12 @@
+{
+  "sources": [
+    {
+      "id": "scanner-backtest",
+      "path": "dashboard/scanner-backtest/meta.json",
+      "page": "dashboard/scanner-backtest/index.html",
+      "mode": "manual",
+      "last_run": "2026-10-25",
+      "reason": "Refresh scanner test page has no weekday schedule. One run replaces the public snapshot and is limited to 360 minutes, so it is updated by hand."
+    }
+  ]
+}

@@ -121,12 +121,50 @@ def test_report_fails_when_a_source_is_over_its_lag(tmp_path: Path) -> None:
     assert "404" in gone["sources"][0]["live_error"]
 
 
+def test_scanner_backtest_is_manual() -> None:
+    root = Path(__file__).resolve().parents[1]
+    page = (root / "dashboard/scanner-backtest/index.html").read_text(encoding="utf-8")
+    assert "updated by hand, last run 2026-10-25" in page
+    workflow = (root / ".github/workflows/scanner-backtest-publish.yml").read_text(encoding="utf-8")
+    assert "cron:" not in workflow
+    coverage = json.loads((root / "src/staleness_coverage.json").read_text(encoding="utf-8"))
+    row = next(item for item in coverage["sources"] if item.get("id") == "scanner-backtest")
+    assert row["mode"] == "manual"
+    assert row["last_run"] == "2026-10-25"
+    assert row["page"] == "dashboard/scanner-backtest/index.html"
+
+
+def test_manual_source_does_not_fail_the_canary(tmp_path: Path) -> None:
+    _fresh_tree(tmp_path, curve="2026-11-02")
+    texts = {}
+    for rel, _kind, _limit in canary.SOURCES:
+        texts[rel] = (tmp_path / rel).read_text(encoding="utf-8")
+
+    def fetch(url: str) -> str:
+        rel = url.split("/fullscan/", 1)[1]
+        return texts[rel]
+
+    report = canary.evaluate(root=tmp_path, now=NOW, fetch=fetch)
+    manual = next(row for row in report["sources"] if row.get("mode") == "manual")
+    assert manual["path"] == "dashboard/scanner-backtest/meta.json"
+    assert manual["main_date"] == "2026-10-25"
+    assert manual["ok"] is True
+    assert report["ok"] is False
+    preopen = next(row for row in report["sources"]
+                   if row["path"] == "dashboard/factor-mine/preopen.json")
+    assert preopen["ok"] is False
+    assert preopen.get("mode") != "manual"
+
+
 def main() -> None:
     test_session_lag_counts_nyse_days()
     test_parsers_use_the_newest_data_date()
+    test_scanner_backtest_is_manual()
     import tempfile
     with tempfile.TemporaryDirectory() as tmp:
-        test_report_fails_when_a_source_is_over_its_lag(Path(tmp))
+        root = Path(tmp)
+        test_report_fails_when_a_source_is_over_its_lag(root)
+        test_manual_source_does_not_fail_the_canary(root)
     print("staleness canary ok")
 
 

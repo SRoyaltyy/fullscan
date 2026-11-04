@@ -171,12 +171,98 @@ def test_book_sequential_append_only() -> None:
         fm.session_has_closed = real
 
 
+def test_fill_forward_keeps_sealed_days() -> None:
+    name = "union_hot_n4_h1_preopen"
+    sealed = {"date": "2026-10-08", "equity": 10000.0, "sit": True}
+    previous = {"sleeves": {name: {"days": [sealed]}}}
+    changed = {"sleeves": {name: {"days": [
+        {"date": "2026-10-08", "equity": 9999.0, "sit": True},
+        {"date": "2026-10-09", "equity": 10010.0, "sit": False},
+    ]}}}
+    try:
+        fp.fill_forward(previous, changed)
+        raise AssertionError("sealed day rewrite was accepted")
+    except fp.PreopenRefused as exc:
+        assert "sealed" in str(exc)
+    earlier = {"sleeves": {name: {"days": [
+        {"date": "2026-10-07", "equity": 1, "sit": True},
+        dict(sealed),
+    ]}}}
+    try:
+        fp.fill_forward(previous, earlier)
+        raise AssertionError("a day before the last updated day was accepted")
+    except fp.PreopenRefused:
+        pass
+    fresh = {"sleeves": {name: {"days": [
+        dict(sealed),
+        {"date": "2026-10-09", "equity": 10010.0, "sit": False},
+    ]}}}
+    merged = fp.fill_forward(previous, fresh)
+    days = merged["sleeves"][name]["days"]
+    assert days[0] == sealed
+    assert [row["date"] for row in days] == ["2026-10-08", "2026-10-09"]
+
+
+def test_book_appends_without_rewriting_the_prior_day() -> None:
+    repo = _repo()
+    _commit(repo, fp.tickets_rel(D1), _tickets(D1, "look", ["AAA"]),
+            "2026-10-08T05:40:00-04:00")
+    _commit(repo, fp.weather_rel(D1), _weather(1.0), "2026-10-08T05:00:00-04:00")
+    clock = fp.GitClock(repo)
+    seal = fp.build_seal(D1, clock=clock)
+    _commit(repo, fp.seal_rel(D1), fp._dumps(seal), "2026-10-08T08:10:00-04:00")
+    _commit(repo, fp.seal_rel(D2), fp._dumps({**seal, "date": D2}),
+            "2026-10-09T09:40:00-04:00")
+    bars = {
+        ("AAA", D1): {"open": 10.0, "high": 11, "low": 9, "close": 10.5},
+        ("AAA", D2): {"open": 10.6, "high": 11, "low": 9, "close": 10.7},
+    }
+    real = fm.session_has_closed
+    fm.session_has_closed = lambda d, now=None: True
+    try:
+        st, sc = Path(tempfile.mkdtemp()), Path(tempfile.mkdtemp())
+        summary = st / "s.json"
+        first = fp.book(D1, bars=bars, clock=clock, state_dir=st, score_dir=sc,
+                        lock=False, summary_path=summary)
+        sealed = json.loads(summary.read_text())["sleeves"][NAMES[0]]["days"][0]
+        fp.book(D2, bars=bars, clock=clock, state_dir=st, score_dir=sc,
+                lock=False, summary_path=summary)
+        doc = json.loads(summary.read_text())
+        days = doc["sleeves"][NAMES[0]]["days"]
+        assert days[0] == sealed
+        assert [row["date"] for row in days] == [D1, D2]
+        assert days[1]["date"] == D2
+        assert first[NAMES[0]][0]["date"] == D1
+        stuck = st / "stuck.json"
+        stuck.write_text(json.dumps({"sleeves": {NAMES[0]: {"days": [sealed]}}}),
+                         encoding="utf-8")
+        try:
+            fp.assert_current(D2, stuck)
+            raise AssertionError("a dashboard stuck before the closed session passed")
+        except fp.PreopenRefused as exc:
+            assert "skipped" in str(exc)
+            assert D2 in str(exc)
+    finally:
+        fm.session_has_closed = real
+
+
+def test_weekday_book_crons_fail_when_the_session_is_skipped() -> None:
+    text = (Path(__file__).resolve().parents[1] / ".github/workflows/fm_preopen.yml").read_text()
+    for cron in ("40 21 * * 1-5", "40 22 * * 1-5", "40 23 * * 1-5", "40 1 * * 2-6"):
+        assert f'cron: "{cron}"' in text
+    assert "src.factor_mine_preopen check" in text
+    assert "skipped a closed session" in text
+
+
 def main() -> None:
     test_gate_uses_last_pre_open_commit()
     test_seal_fails_closed()
     test_candidates_and_predict_are_not_inputs()
     test_seal_refuses_after_open_and_before_start()
     test_book_sequential_append_only()
+    test_fill_forward_keeps_sealed_days()
+    test_book_appends_without_rewriting_the_prior_day()
+    test_weekday_book_crons_fail_when_the_session_is_skipped()
     print("ok factor_mine_preopen")
 
 
