@@ -1,12 +1,12 @@
 {
   "date": "2026-11-04",
-  "generated_at": "2026-11-04T05:10:24.852401-05:00",
+  "generated_at": "2026-11-04T05:11:18.479473-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
     "ok": 3,
-    "partial": 3,
-    "fail": 2,
+    "partial": 4,
+    "fail": 1,
     "n": 8
   },
   "buy_1d": [],
@@ -15,31 +15,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "finviz_digest",
-      "title": "Finviz digest",
-      "date": "2026-11-04",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-11-04T05:02:05.430194-05:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-11-04_finviz_digest.json",
-          "ok": true,
-          "reason": "",
-          "size": 97025,
-          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
-        },
-        {
-          "path": "01_daily/news/2026-11-04_finviz_digest.md",
-          "ok": true,
-          "reason": "",
-          "size": 11861,
-          "preview": "# Finviz Daily Digest \u2014 2026-11-04\n_Generated 2026-11-04T04:42:32.515988-05:00 \u00b7 export=data/exports/finviz_2026-11-04.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_"
-        }
-      ],
-      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-11-04\n_Generated 2026-11-04T04:42:32.515988-05:00 \u00b7 export=data/exports/finviz_2026-11-04.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_"
-    },
     {
       "key": "map_heat",
       "title": "Map heat tables",
@@ -185,6 +160,31 @@
         }
       ],
       "preview": "raw=8918 usable=620 single=571 \u00b7 AMD Forecast Exceeds Estimates After AI Chip Demand Soars - Bloomberg.com | Venezuela's oil exports unchanged amid stagnant output and high freight rates -  | Treasury yields fall as investors crowd into bonds for safety amid election stoc | Job openings posted big September gain in positive sign for labor market ahead o | Is Powell Industries Inc (POWL) Overvalued After 6.1% Rally? GF - GuruFocus \u00b7 # News Parse v2 \u2014 2026-11-04T05:09:00.982588-05:00\nWindow\u224848h | news_mode=on | raw=8918 | usable=620 | single_name=571 | noise_dropped=7459\nusable polarity={'+': 19, '-': 109, 'mixed': 2, 'neutral': 490}"
+    },
+    {
+      "key": "news_actions",
+      "title": "News actions",
+      "date": "2026-11-04",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-04T05:11:18.163500-05:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-11-04_actions.json",
+          "ok": true,
+          "reason": "",
+          "size": 72086,
+          "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers"
+        },
+        {
+          "path": "01_daily/news/2026-11-04_actions.md",
+          "ok": true,
+          "reason": "",
+          "size": 15663,
+          "preview": "# News \u2192 Actions v4 (full framework) \u2014 2026-11-04T05:11:18.153314-05:00\nraw=8915 unique_events=7 tickers=102"
+        }
+      ],
+      "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-11-04T05:11:18.153314-05:00\nraw=8915 unique_events=7 tickers=102"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
