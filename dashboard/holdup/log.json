@@ -8306,5 +8306,118 @@
       "status": "BEFORE_1330"
     },
     "sha256": "d26b79f2e7419423b4849e07f2c2c7a660fbb7a86917ead1adf200129edafbd0"
+  },
+  {
+    "buys": [
+      {
+        "fee": 2.092,
+        "fill": 78.964996,
+        "fill_basis": "open",
+        "liquidity_cap_shares": 69212,
+        "rank": 2,
+        "shares": 34,
+        "sources": [
+          "ohlc_hot"
+        ],
+        "ticker": "TEM"
+      },
+      {
+        "fee": 10.6167,
+        "fill": 3.33,
+        "fill_basis": "open",
+        "liquidity_cap_shares": 26464,
+        "rank": 4,
+        "shares": 823,
+        "sources": [
+          "ohlc_hot"
+        ],
+        "ticker": "DNUT"
+      }
+    ],
+    "cash_primary": 66.54162263837588,
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-11-04",
+    "excluded_on_fill": [],
+    "holdings": [
+      {
+        "cost_primary": 2764.90965,
+        "entry_date": "2026-11-04",
+        "entry_px": 3.33,
+        "last_px": 3.33,
+        "min_hold": 2,
+        "peak_px": 3.33,
+        "shares": 823,
+        "ticker": "DNUT"
+      },
+      {
+        "cost_primary": 1800.08875,
+        "entry_date": "2026-11-02",
+        "entry_px": 13.25,
+        "last_px": 13.58,
+        "min_hold": 2,
+        "peak_px": 13.58,
+        "shares": 135,
+        "ticker": "GDYN"
+      },
+      {
+        "cost_primary": 2700.3259133199995,
+        "entry_date": "2026-11-04",
+        "entry_px": 78.964996,
+        "last_px": 78.964996,
+        "min_hold": 2,
+        "peak_px": 78.964996,
+        "shares": 34,
+        "ticker": "TEM"
+      },
+      {
+        "cost_primary": 23.348,
+        "entry_date": "2026-11-03",
+        "entry_px": 23.0,
+        "last_px": 23.18,
+        "min_hold": 1,
+        "peak_px": 23.18,
+        "shares": 1,
+        "ticker": "UPBD"
+      }
+    ],
+    "holdup_on": true,
+    "kind": "open_fill",
+    "morning_s": 10.848,
+    "open_source": "yahoo_split_adjusted_daily_open",
+    "plan_sha256": "d26b79f2e7419423b4849e07f2c2c7a660fbb7a86917ead1adf200129edafbd0",
+    "pnl_status": "pending",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sells": [
+      {
+        "fee": 2.0743,
+        "fill": 89.599998,
+        "reason": "holdup extension",
+        "shares": 20,
+        "ticker": "CDNA"
+      },
+      {
+        "fee": 2.303,
+        "fill": 20.5,
+        "reason": "holdup extension",
+        "shares": 94,
+        "ticker": "CPRI"
+      },
+      {
+        "fee": 0.38,
+        "fill": 0.9,
+        "reason": "hold-expired",
+        "shares": 30,
+        "ticker": "ECX"
+      },
+      {
+        "fee": 2.2892,
+        "fill": 19.790001,
+        "reason": "holdup extension",
+        "shares": 90,
+        "ticker": "SLN"
+      }
+    ],
+    "sha256": "9e0bdaf5f50d338e5f3e4a10994f375a1a699900130217139eecc79202b45ad4",
+    "unfilled": []
   }
 ]
