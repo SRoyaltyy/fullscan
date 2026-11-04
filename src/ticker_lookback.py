@@ -91,6 +91,17 @@ _INDEX = None
 _PRICE_PANEL = None
 _OHLC_BARS = None
 _FINVIZ_BARS = {}
+# NYSE session answers are a pure function of the date string.
+_TRADING_DATE_CACHE: dict[str, bool] = {}
+# session_bar is on the combo-replay hot path. One (ticker, date) is
+# asked for hundreds of times; the tape is stable until reset_price_caches.
+_SESSION_BAR_FIELDS = (
+    "open", "high", "low", "close", "close_open_pct",
+    "open_clock", "close_clock",
+)
+_SESSION_BAR_CACHE: dict[tuple[str, str], tuple] = {}
+_SESSION_BAR_FRAME = None
+_SESSION_BAR_FINVIZ = None
 
 
 def _tick(s):
@@ -129,11 +140,22 @@ def price_tone(x, eps=PRICE_EPS):
 def is_trading_date(date_str) -> bool:
     """True for a NYSE session. Weekends and full-day holidays are not."""
     try:
-        d = datetime.strptime(str(date_str)[:10], "%Y-%m-%d").date()
+        key = str(date_str)[:10]
     except (TypeError, ValueError):
         return False
-    from .skip_if_good import is_nyse_holiday
-    return d.weekday() < 5 and not is_nyse_holiday(d)
+    try:
+        return _TRADING_DATE_CACHE[key]
+    except KeyError:
+        pass
+    try:
+        d = datetime.strptime(key, "%Y-%m-%d").date()
+    except (TypeError, ValueError):
+        ok = False
+    else:
+        from .skip_if_good import is_nyse_holiday
+        ok = d.weekday() < 5 and not is_nyse_holiday(d)
+    _TRADING_DATE_CACHE[key] = ok
+    return ok
 
 
 def _tone_rank(tone):
@@ -1017,11 +1039,15 @@ def horizon_dates(date: str, dates: list[str] | None = None) -> dict[str, str | 
 
 
 def reset_price_caches() -> None:
-    """Drop in-memory OHLC / Finviz bar caches (tests + after a store update)."""
+    """Drop in-memory OHLC / Finviz / session-bar caches (tests + after a store update)."""
     global _OHLC_BARS, _FINVIZ_BARS, _PRICE_PANEL
+    global _SESSION_BAR_FRAME, _SESSION_BAR_FINVIZ
     _OHLC_BARS = None
     _FINVIZ_BARS = {}
     _PRICE_PANEL = None
+    _SESSION_BAR_CACHE.clear()
+    _SESSION_BAR_FRAME = None
+    _SESSION_BAR_FINVIZ = None
 
 
 def _ohlc_bars():
@@ -1184,19 +1210,8 @@ def _finviz_completed_bar(ticker: str, date: str) -> dict:
     return empty
 
 
-def session_bar(ticker: str, date: str) -> dict:
-    """Regular-session OHLC on `date` (open = 09:30 ET, close = 16:00 ET).
-
-    Source order:
-
-    1. Official daily tape in ``data/prices/ohlc.parquet`` (Yahoo
-       regular-session Open / High / Low / Close, not split-adjusted
-       fiction and not a live last-trade).
-    2. A *later* Finviz export that is verifiably D's completed tape.
-    3. Empty — never the same-dated Finviz Price / Open.
-
-    NYSE holidays (Labor Day 2026-09-07) return empty.
-    """
+def _session_bar_uncached(ticker: str, date: str) -> dict:
+    """One tape read. ``session_bar`` memoizes this; do not call it in a loop."""
     t = _tick(ticker)
     empty = {
         "open": None, "high": None, "low": None, "close": None,
@@ -1232,6 +1247,46 @@ def session_bar(ticker: str, date: str) -> dict:
         "open_clock": "09:30 ET",
         "close_clock": "16:00 ET",
     }
+
+
+def _session_bar_cache_current() -> None:
+    """Drop memoized bars when the OHLC frame or Finviz map is replaced."""
+    global _SESSION_BAR_FRAME, _SESSION_BAR_FINVIZ
+    if (_OHLC_BARS is _SESSION_BAR_FRAME
+            and _FINVIZ_BARS is _SESSION_BAR_FINVIZ):
+        return
+    _SESSION_BAR_CACHE.clear()
+    _SESSION_BAR_FRAME = _OHLC_BARS
+    _SESSION_BAR_FINVIZ = _FINVIZ_BARS
+
+
+def session_bar(ticker: str, date: str) -> dict:
+    """Regular-session OHLC on `date` (open = 09:30 ET, close = 16:00 ET).
+
+    Source order:
+
+    1. Official daily tape in ``data/prices/ohlc.parquet`` (Yahoo
+       regular-session Open / High / Low / Close, not split-adjusted
+       fiction and not a live last-trade).
+    2. A *later* Finviz export that is verifiably D's completed tape.
+    3. Empty — never the same-dated Finviz Price / Open.
+
+    NYSE holidays (Labor Day 2026-09-07) return empty.
+
+    Repeated asks for the same name and session return the same prints.
+    ``reset_price_caches`` drops the memo after a store update.
+    """
+    _session_bar_cache_current()
+    t = _tick(ticker)
+    d = str(date or "")[:10]
+    hit = _SESSION_BAR_CACHE.get((t, d))
+    if hit is None:
+        bar = _session_bar_uncached(ticker, date)
+        # The first read may load the parquet and replace _OHLC_BARS.
+        _session_bar_cache_current()
+        hit = tuple(bar[k] for k in _SESSION_BAR_FIELDS)
+        _SESSION_BAR_CACHE[(t, d)] = hit
+    return {k: v for k, v in zip(_SESSION_BAR_FIELDS, hit)}
 
 
 def _price_panel():
