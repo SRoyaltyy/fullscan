@@ -1,8 +1,8 @@
 [
   {
-    "title": "Chromium Trioxide from India and Turkey Injures U.S. Industry, Says USITC",
-    "url": "https://www.usitc.gov/press_room/news_release/2026/er1103_69463.htm",
-    "native_id": "https://www.usitc.gov/press_room/news_release/2026/er1103_69463.htm",
+    "title": "USITC to Appoint Lisa Murray and Benjamin Richards as New Administrative Law Judges",
+    "url": "https://www.usitc.gov/press_room/news_release/2026/er1103_69464.htm",
+    "native_id": "https://www.usitc.gov/press_room/news_release/2026/er1103_69464.htm",
     "published_at": null,
     "published_raw": null,
     "summary": "",
@@ -16,17 +16,41 @@
       "family": "trade_and_judicial"
     },
     "primary_source_id": "us-itc-index",
-    "n": 8306,
-    "first_seen": "2026-11-03T20:18:37.164529+00:00",
-    "last_seen": "2026-11-03T20:18:37.164529+00:00",
+    "n": 8494,
+    "first_seen": "2026-11-04T07:30:45.022151+00:00",
+    "last_seen": "2026-11-04T07:30:45.022151+00:00",
     "source_ids": [
       "us-itc-index"
     ]
   },
   {
-    "title": "Office of the Secretary Reference Information Center Petition for Rulemaking Filed",
-    "url": "https://www.fcc.gov/edoc/426262",
-    "native_id": "426262",
+    "title": "Order Extending the 2026 IPCS Mandatory Data Collection Filing Deadline for Incarcerated People's Communications Service Providers",
+    "url": "https://www.fcc.gov/edoc/426413",
+    "native_id": "426413",
+    "published_at": null,
+    "published_raw": "",
+    "summary": "The Order grants in part a motion to extend the filing deadline for IPCS providers' Mandatory Data Collection submissions by 45 days to February 4, 2027.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Federal Communications Commission — Orders",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
+    },
+    "primary_source_id": "us-fcc-eeb7d739be",
+    "n": 8497,
+    "first_seen": "2026-11-04T07:30:45.022151+00:00",
+    "last_seen": "2026-11-04T07:30:45.022151+00:00",
+    "source_ids": [
+      "us-fcc-eeb7d739be"
+    ]
+  },
+  {
+    "title": "Comments Invited On Section 214 Application To Grandfather Domestic Non-Dominant Carrier Telecommunications Services",
+    "url": "https://www.fcc.gov/edoc/426458",
+    "native_id": "426458",
     "published_at": null,
     "published_raw": "",
     "summary": ".",
@@ -40,131 +64,11 @@
       "family": "telecom_rules_and_licences"
     },
     "primary_source_id": "us-fcc-e95ecda3bb",
-    "n": 8323,
-    "first_seen": "2026-11-03T20:18:37.164529+00:00",
-    "last_seen": "2026-11-03T20:18:37.164529+00:00",
+    "n": 8498,
+    "first_seen": "2026-11-04T07:30:45.022151+00:00",
+    "last_seen": "2026-11-04T07:30:45.022151+00:00",
     "source_ids": [
       "us-fcc-e95ecda3bb"
-    ]
-  },
-  {
-    "title": "Pleadings",
-    "url": "https://www.fcc.gov/edoc/426412",
-    "native_id": "426412",
-    "published_at": null,
-    "published_raw": "",
-    "summary": ".",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Public Notices",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
-    },
-    "primary_source_id": "us-fcc-e95ecda3bb",
-    "n": 8324,
-    "first_seen": "2026-11-03T20:18:37.164529+00:00",
-    "last_seen": "2026-11-03T20:18:37.164529+00:00",
-    "source_ids": [
-      "us-fcc-e95ecda3bb"
-    ]
-  },
-  {
-    "title": "Applications",
-    "url": "https://www.fcc.gov/edoc/426410",
-    "native_id": "426410",
-    "published_at": null,
-    "published_raw": "",
-    "summary": ".",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Public Notices",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
-    },
-    "primary_source_id": "us-fcc-e95ecda3bb",
-    "n": 8325,
-    "first_seen": "2026-11-03T20:18:37.164529+00:00",
-    "last_seen": "2026-11-03T20:18:37.164529+00:00",
-    "source_ids": [
-      "us-fcc-e95ecda3bb"
-    ]
-  },
-  {
-    "title": "Actions",
-    "url": "https://www.fcc.gov/edoc/426411",
-    "native_id": "426411",
-    "published_at": null,
-    "published_raw": "",
-    "summary": ".",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Public Notices",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
-    },
-    "primary_source_id": "us-fcc-e95ecda3bb",
-    "n": 8326,
-    "first_seen": "2026-11-03T20:18:37.164529+00:00",
-    "last_seen": "2026-11-03T20:18:37.164529+00:00",
-    "source_ids": [
-      "us-fcc-e95ecda3bb"
-    ]
-  },
-  {
-    "title": "New FCA rules bring ESG rating providers into UK regulation for the first time",
-    "url": "https://www.fca.org.uk/news/press-releases/new-fca-rules-bring-esg-rating-providers-uk-regulation-first-time",
-    "native_id": "177126",
-    "published_at": null,
-    "published_raw": "Tuesday, November 3, 2026 - 10:03",
-    "summary": "New UK rules for environmental, social and governance (ESG) rating providers will raise standards in the market, helping investors to make better informed decisions. The new framework brings ESG rating providers into FCA regulation for the first time, covering a market that plays an important role in investment decisions. The rules are designed to improve the transparency, reliability and comparability of ESG ratings, helping build confidence in the information investors rely on. The regime applies to firms or organisations providing ESG ratings and assessments to ensure reliability across the market. The FCA has published guidance to help firms understand whether they may be in scope. Laura Dawes, director of authorisations and sustainable finance at the FCA, said: 'Trusted information is essential for well-functioning markets. These rules will help improve transparency and raise standards across the ESG ratings market while supporting competition, innovation and growth. 'Firms should check now whether they are in scope and start preparing for authorisation. We'll continue to provide practical support to help them prepare.'The new framework introduces requirements covering transpa",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Financial Conduct Authority",
-      "jurisdiction": "UK",
-      "family": "financial_enforcement"
-    },
-    "primary_source_id": "uk-fca-7b9977ec8e",
-    "n": 8347,
-    "first_seen": "2026-11-03T20:18:37.164529+00:00",
-    "last_seen": "2026-11-03T20:18:37.164529+00:00",
-    "source_ids": [
-      "uk-fca-7b9977ec8e"
-    ]
-  },
-  {
-    "title": "FCA sets expectations for firms making car finance settlement offers",
-    "url": "https://www.fca.org.uk/news/press-releases/fca-sets-expectations-firms-making-car-finance-settlement-offers",
-    "native_id": "177176",
-    "published_at": null,
-    "published_raw": "Tuesday, November 3, 2026 - 09:00",
-    "summary": "Research shows consumers want the choice, rather than wait for the legal challenges to conclude. Almost 9 out of 10 (89%) car finance customers who have complained or are considering doing so want the choice of an offer of compensation now, rather than waiting for the legal challenges to the FCA's compensation scheme to conclude. 86% would be comfortable making the decision, and 61% say they’d accept an offer in line with the scheme. Timing matters for many: 77% say receiving compensation sooner would make a great deal or fair amount of difference to their financial situation.The survey findings are being released today alongside the FCA's expectations for lenders who want to make settlement offers to those owed compensation under its scheme, while legal challenges continue. This comes as Barclays Partner Finance confirms it will make settlement offers to some of its customers owed compensation.The regulator supports lenders making settlement offers, as long as customers are offered no less than they would receive through the scheme.Lenders will need to be clear with people about what accepting any offer means. This includes that they will keep any money received, even if the outco",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Financial Conduct Authority",
-      "jurisdiction": "UK",
-      "family": "financial_enforcement"
-    },
-    "primary_source_id": "uk-fca-7b9977ec8e",
-    "n": 8348,
-    "first_seen": "2026-11-03T20:18:37.164529+00:00",
-    "last_seen": "2026-11-03T20:18:37.164529+00:00",
-    "source_ids": [
-      "uk-fca-7b9977ec8e"
     ]
   }
 ]
