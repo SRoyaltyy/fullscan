@@ -2,39 +2,39 @@
   "counts": {
     "combo_oh_5050_shared": {
       "both_halves_0": 19,
-      "build": 11,
+      "build": 9,
       "lock": 0,
-      "rebuilt": 0,
+      "rebuilt": 1,
       "render": 0,
-      "sat out (rule)": 8,
-      "still broken": 11
+      "sat out (rule)": 9,
+      "still broken": 9
     },
     "combo_ps_7030_shared": {
       "both_halves_0": 15,
-      "build": 10,
+      "build": 9,
       "lock": 0,
-      "rebuilt": 1,
+      "rebuilt": 2,
       "render": 0,
       "sat out (rule)": 4,
-      "still broken": 10
+      "still broken": 9
     },
     "combo_sf_5050_shared": {
       "both_halves_0": 15,
-      "build": 9,
+      "build": 8,
       "lock": 1,
-      "rebuilt": 1,
+      "rebuilt": 2,
       "render": 0,
       "sat out (rule)": 4,
-      "still broken": 10
+      "still broken": 9
     },
     "combo_sf_7030_shared": {
       "both_halves_0": 15,
-      "build": 9,
+      "build": 8,
       "lock": 1,
-      "rebuilt": 1,
+      "rebuilt": 2,
       "render": 0,
       "sat out (rule)": 4,
-      "still broken": 10
+      "still broken": 9
     },
     "flatten_h5": {
       "both_halves_0": 14,
@@ -47,44 +47,44 @@
     },
     "overnight_h1": {
       "both_halves_0": 38,
-      "build": 17,
+      "build": 8,
       "lock": 1,
-      "rebuilt": 3,
+      "rebuilt": 9,
       "render": 0,
-      "sat out (rule)": 17,
-      "still broken": 18
+      "sat out (rule)": 20,
+      "still broken": 9
     },
     "overnight_mega_h1": {
       "both_halves_0": 53,
-      "build": 18,
+      "build": 7,
       "lock": 1,
-      "rebuilt": 4,
+      "rebuilt": 12,
       "render": 0,
-      "sat out (rule)": 30,
-      "still broken": 19
+      "sat out (rule)": 33,
+      "still broken": 8
     },
     "overnight_mega_h2": {
       "both_halves_0": 51,
-      "build": 17,
+      "build": 7,
       "lock": 1,
-      "rebuilt": 3,
+      "rebuilt": 11,
       "render": 0,
-      "sat out (rule)": 30,
-      "still broken": 18
+      "sat out (rule)": 32,
+      "still broken": 8
     },
     "short_alarm_h3": {
       "both_halves_0": 26,
-      "build": 15,
-      "lock": 1,
-      "rebuilt": 0,
+      "build": 12,
+      "lock": 2,
+      "rebuilt": 1,
       "render": 0,
-      "sat out (rule)": 10,
-      "still broken": 16
+      "sat out (rule)": 11,
+      "still broken": 14
     },
     "short_news_r_h3": {
       "both_halves_0": 15,
-      "build": 10,
-      "lock": 1,
+      "build": 9,
+      "lock": 2,
       "rebuilt": 0,
       "render": 0,
       "sat out (rule)": 4,
@@ -92,8 +92,8 @@
     },
     "short_news_r_macd_h3": {
       "both_halves_0": 15,
-      "build": 10,
-      "lock": 0,
+      "build": 9,
+      "lock": 1,
       "rebuilt": 1,
       "render": 0,
       "sat out (rule)": 4,
@@ -101,40 +101,40 @@
     },
     "union_flow_in_h1": {
       "both_halves_0": 32,
-      "build": 16,
-      "lock": 0,
-      "rebuilt": 3,
+      "build": 12,
+      "lock": 1,
+      "rebuilt": 5,
       "render": 0,
-      "sat out (rule)": 13,
-      "still broken": 16
+      "sat out (rule)": 14,
+      "still broken": 13
     },
     "union_hot_n4_h1": {
       "both_halves_0": 32,
-      "build": 17,
-      "lock": 4,
-      "rebuilt": 2,
+      "build": 9,
+      "lock": 6,
+      "rebuilt": 5,
       "render": 0,
-      "sat out (rule)": 9,
-      "still broken": 21
+      "sat out (rule)": 12,
+      "still broken": 15
     },
     "union_hot_n4_holdup": {
       "both_halves_0": 29,
-      "build": 17,
-      "lock": 4,
-      "rebuilt": 1,
+      "build": 9,
+      "lock": 7,
+      "rebuilt": 3,
       "render": 0,
-      "sat out (rule)": 7,
-      "still broken": 21
+      "sat out (rule)": 10,
+      "still broken": 16
     },
     "union_news_pack_h1": {
       "both_halves_0": 26,
-      "build": 12,
-      "lock": 1,
+      "build": 11,
+      "lock": 2,
       "rebuilt": 1,
       "render": 0,
       "sat out (rule)": 12,
       "still broken": 13
     }
   },
-  "table": "| strategy | both-halves-0 | rebuilt | sat out (rule) | still broken | build | lock | render |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| combo_oh_5050_shared | 19 | 0 | 8 | 11 | 11 | 0 | 0 |\n| combo_ps_7030_shared | 15 | 1 | 4 | 10 | 10 | 0 | 0 |\n| combo_sf_5050_shared | 15 | 1 | 4 | 10 | 9 | 1 | 0 |\n| combo_sf_7030_shared | 15 | 1 | 4 | 10 | 9 | 1 | 0 |\n| flatten_h5 | 14 | 0 | 4 | 10 | 8 | 2 | 0 |\n| overnight_h1 | 38 | 3 | 17 | 18 | 17 | 1 | 0 |\n| overnight_mega_h1 | 53 | 4 | 30 | 19 | 18 | 1 | 0 |\n| overnight_mega_h2 | 51 | 3 | 30 | 18 | 17 | 1 | 0 |\n| short_alarm_h3 | 26 | 0 | 10 | 16 | 15 | 1 | 0 |\n| short_news_r_h3 | 15 | 0 | 4 | 11 | 10 | 1 | 0 |\n| short_news_r_macd_h3 | 15 | 1 | 4 | 10 | 10 | 0 | 0 |\n| union_flow_in_h1 | 32 | 3 | 13 | 16 | 16 | 0 | 0 |\n| union_hot_n4_h1 | 32 | 2 | 9 | 21 | 17 | 4 | 0 |\n| union_hot_n4_holdup | 29 | 1 | 7 | 21 | 17 | 4 | 0 |\n| union_news_pack_h1 | 26 | 1 | 12 | 13 | 12 | 1 | 0 |\n| total | 395 | 21 | 160 | 214 | 196 | 18 | 0 |"
+  "table": "| strategy | both-halves-0 | rebuilt | sat out (rule) | still broken | build | lock | render |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| combo_oh_5050_shared | 19 | 1 | 9 | 9 | 9 | 0 | 0 |\n| combo_ps_7030_shared | 15 | 2 | 4 | 9 | 9 | 0 | 0 |\n| combo_sf_5050_shared | 15 | 2 | 4 | 9 | 8 | 1 | 0 |\n| combo_sf_7030_shared | 15 | 2 | 4 | 9 | 8 | 1 | 0 |\n| flatten_h5 | 14 | 0 | 4 | 10 | 8 | 2 | 0 |\n| overnight_h1 | 38 | 9 | 20 | 9 | 8 | 1 | 0 |\n| overnight_mega_h1 | 53 | 12 | 33 | 8 | 7 | 1 | 0 |\n| overnight_mega_h2 | 51 | 11 | 32 | 8 | 7 | 1 | 0 |\n| short_alarm_h3 | 26 | 1 | 11 | 14 | 12 | 2 | 0 |\n| short_news_r_h3 | 15 | 0 | 4 | 11 | 9 | 2 | 0 |\n| short_news_r_macd_h3 | 15 | 1 | 4 | 10 | 9 | 1 | 0 |\n| union_flow_in_h1 | 32 | 5 | 14 | 13 | 12 | 1 | 0 |\n| union_hot_n4_h1 | 32 | 5 | 12 | 15 | 9 | 6 | 0 |\n| union_hot_n4_holdup | 29 | 3 | 10 | 16 | 9 | 7 | 0 |\n| union_news_pack_h1 | 26 | 1 | 12 | 13 | 11 | 2 | 0 |\n| total | 395 | 55 | 177 | 163 | 135 | 28 | 0 |"
 }

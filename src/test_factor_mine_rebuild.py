@@ -146,6 +146,113 @@ def test_restate_still_refuses_a_past_day() -> None:
     raise AssertionError("past restate was allowed")
 
 
+def test_morning_reads_prior_raw_not_its_own_file() -> None:
+    from src.theme_radar_raw import (
+        before_morning_open,
+        load_prior_raw,
+        raw_url,
+    )
+
+    assert raw_url("2026-10-12").endswith("/2026-10-12.raw.csv")
+    assert not raw_url("2026-10-12").endswith("/2026-10-13.raw.csv")
+    assert before_morning_open("2026-10-12T20:51:39+00:00", "2026-10-13")
+    assert before_morning_open("2026-10-13T13:30:00+00:00", "2026-10-13") is False
+    seen = []
+
+    def fetch(url: str) -> bytes:
+        seen.append(url)
+        if url.endswith("manifest.json"):
+            return (
+                b'{"runs":[{"date":"2026-10-12",'
+                b'"scrape_ts_utc":"2026-10-12T20:51:39+00:00"}]}'
+            )
+        assert url.endswith("/2026-10-12.raw.csv"), url
+        assert "2026-10-13.raw.csv" not in url
+        return (
+            b"Ticker,Change,Volume,Average Volume,Market Cap,Industry,"
+            b"Earnings Date,News Title\n"
+            b"AAA,1.2%,1000,500,2000,Software,10/13/2026 8:00:00 AM,AAA rises\n"
+        )
+
+    loaded = load_prior_raw("2026-10-13", fetch=fetch)
+    assert loaded["source"] == "theme_radar_snapshot"
+    assert loaded["source_file"] == "data/snapshots/2026-10-12.raw.csv"
+    assert loaded["source_session"] == "2026-10-12"
+    assert len(loaded["source_sha256"]) == 64
+    assert list(loaded["frame"]["Ticker"]) == ["AAA"]
+    try:
+        load_prior_raw(
+            "2026-10-13",
+            fetch=fetch,
+            manifest={"runs": [{"date": "2026-10-12",
+                                "scrape_ts_utc": "2026-10-13T14:00:00+00:00"}]},
+        )
+    except ValueError as exc:
+        assert "09:30" in str(exc)
+    else:
+        raise AssertionError("a post-open snapshot was accepted")
+
+    def cleaned(url: str) -> bytes:
+        if url.endswith("manifest.json"):
+            return (
+                b'{"runs":[{"date":"2026-10-12",'
+                b'"scrape_ts_utc":"2026-10-12T20:51:39+00:00"}]}'
+            )
+        return b"Ticker,Volume,Average Volume,Market Cap,Industry,News Title\nAAA,1,1,1,Software,x\n"
+
+    try:
+        load_prior_raw("2026-10-13", fetch=cleaned)
+    except ValueError as exc:
+        assert "Earnings Date" in str(exc) and "Change" in str(exc)
+    else:
+        raise AssertionError("a file without Earnings Date and Change was accepted")
+
+
+def test_auth_export_is_tried_before_login() -> None:
+    import os
+    import sys
+    import types
+
+    sys.modules.setdefault("psycopg2", types.ModuleType("psycopg2"))
+    extras = sys.modules.setdefault("psycopg2.extras", types.ModuleType("psycopg2.extras"))
+    extras.execute_values = lambda *args, **kwargs: None
+    sys.modules.setdefault("db", types.ModuleType("db"))
+    connection = sys.modules.setdefault("db.connection", types.ModuleType("db.connection"))
+    connection.get_connection = lambda: None
+    from collectors import finviz_financials as ff
+
+    calls = []
+
+    class Response:
+        status_code = 200
+        content = b"Ticker,Change\nAAA,1%\n"
+
+    def fake_get(url, params=None, timeout=None, headers=None):
+        calls.append(url.split("?", 1)[0])
+        return Response()
+
+    old_export = os.environ.get("FINVIZ_EXPORT")
+    old_key = os.environ.get("FINVIZ_API_KEY")
+    os.environ["FINVIZ_EXPORT"] = "https://elite.finviz.com/export.ashx?v=152&auth=hidden"
+    os.environ.pop("FINVIZ_API_KEY", None)
+    try:
+        import requests
+        original = requests.get
+        requests.get = fake_get
+        frame = ff.try_auth_export()
+    finally:
+        requests.get = original
+        if old_export is None:
+            os.environ.pop("FINVIZ_EXPORT", None)
+        else:
+            os.environ["FINVIZ_EXPORT"] = old_export
+        if old_key is not None:
+            os.environ["FINVIZ_API_KEY"] = old_key
+    assert frame is not None and list(frame["Ticker"]) == ["AAA"]
+    assert calls == ["https://elite.finviz.com/export.ashx"]
+    assert "hidden" not in str(calls)
+
+
 def test_ovcal_names_rebuilt_rule_and_missed() -> None:
     html = (Path(__file__).resolve().parent / "factor_mine_ovcal.html").read_text(
         encoding="utf-8")
@@ -166,6 +273,8 @@ def main() -> None:
         test_classify_zero_days,
         test_rebuilt_file_is_write_once,
         test_restate_still_refuses_a_past_day,
+        test_morning_reads_prior_raw_not_its_own_file,
+        test_auth_export_is_tried_before_login,
         test_ovcal_names_rebuilt_rule_and_missed,
     ]
     for fn in tests:

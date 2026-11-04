@@ -99,16 +99,16 @@
         "step": null
       },
       "2026-10-23": {
-        "class": "still broken",
-        "label": "missed",
-        "reason": "prior export 2026-10-22 is a byte copy of 2026-10-12; that morning's candidate list was not reconstructed",
-        "step": "build"
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "hard-red sit S<=-3",
+        "step": null
       },
       "2026-10-26": {
-        "class": "still broken",
-        "label": "missed",
-        "reason": "prior export 2026-10-23 is a byte copy of 2026-10-12; that morning's candidate list was not reconstructed",
-        "step": "build"
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
       },
       "2026-10-30": {
         "class": "sat out (rule)",
@@ -203,10 +203,10 @@
         "step": null
       },
       "2026-10-26": {
-        "class": "still broken",
-        "label": "missed",
-        "reason": "prior export 2026-10-23 is a byte copy of 2026-10-12; that morning's candidate list was not reconstructed",
-        "step": "build"
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
       }
     },
     "combo_sf_5050_shared": {
@@ -295,10 +295,10 @@
         "step": null
       },
       "2026-10-26": {
-        "class": "still broken",
-        "label": "missed",
-        "reason": "prior export 2026-10-23 is a byte copy of 2026-10-12; that morning's candidate list was not reconstructed",
-        "step": "build"
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
       }
     },
     "combo_sf_7030_shared": {
@@ -387,10 +387,10 @@
         "step": null
       },
       "2026-10-26": {
-        "class": "still broken",
-        "label": "missed",
-        "reason": "prior export 2026-10-23 is a byte copy of 2026-10-12; that morning's candidate list was not reconstructed",
-        "step": "build"
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
       }
     },
     "flatten_h5": {
@@ -649,52 +649,52 @@
         "step": null
       },
       "2026-10-14": {
-        "class": "still broken",
-        "label": "missed",
-        "reason": "prior export 2026-10-13 is a byte copy of 2026-10-12; that morning's candidate list was not reconstructed",
-        "step": "build"
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "rebuilt from the prior day's state at the session open",
+        "step": null
       },
       "2026-10-19": {
-        "class": "still broken",
-        "label": "missed",
-        "reason": "prior export 2026-10-16 is a byte copy of 2026-10-12; that morning's candidate list was not reconstructed",
-        "step": "build"
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "rebuilt from the prior day's state at the session open",
+        "step": null
       },
       "2026-10-20": {
-        "class": "still broken",
-        "label": "missed",
-        "reason": "prior export 2026-10-19 is a byte copy of 2026-10-12; that morning's candidate list was not reconstructed",
-        "step": "build"
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "hard-red sit S<=-3",
+        "step": null
       },
       "2026-10-23": {
-        "class": "still broken",
-        "label": "missed",
-        "reason": "prior export 2026-10-22 is a byte copy of 2026-10-12; that morning's candidate list was not reconstructed",
-        "step": "build"
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "hard-red sit S<=-3",
+        "step": null
       },
       "2026-10-26": {
-        "class": "still broken",
-        "label": "missed",
-        "reason": "prior export 2026-10-23 is a byte copy of 2026-10-12; that morning's candidate list was not reconstructed",
-        "step": "build"
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
       },
       "2026-10-27": {
-        "class": "still broken",
-        "label": "missed",
-        "reason": "prior export 2026-10-26 is a byte copy of 2026-10-12; that morning's candidate list was not reconstructed",
-        "step": "build"
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "rebuilt from the prior day's state at the session open",
+        "step": null
       },
       "2026-10-28": {
-        "class": "still broken",
-        "label": "missed",
-        "reason": "prior export 2026-10-27 is a byte copy of 2026-10-12; that morning's candidate list was not reconstructed",
-        "step": "build"
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
       },
       "2026-10-29": {
-        "class": "still broken",
-        "label": "missed",
-        "reason": "prior export 2026-10-28 is a byte copy of 2026-10-12; that morning's candidate list was not reconstructed",
-        "step": "build"
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "hard-red sit S<=-3",
+        "step": null
       },
       "2026-10-30": {
         "class": "sat out (rule)",
@@ -703,10 +703,10 @@
         "step": null
       },
       "2026-11-02": {
-        "class": "still broken",
-        "label": "missed",
-        "reason": "prior export 2026-10-30 is a byte copy of 2026-10-12; that morning's candidate list was not reconstructed",
-        "step": "build"
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
       }
     },
     "overnight_mega_h1": {
@@ -957,64 +957,64 @@
         "step": null
       },
       "2026-10-14": {
-        "class": "still broken",
-        "label": "missed",
-        "reason": "prior export 2026-10-13 is a byte copy of 2026-10-12; that morning's candidate list was not reconstructed",
-        "step": "build"
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "rebuilt from the prior day's state at the session open",
+        "step": null
       },
       "2026-10-15": {
-        "class": "still broken",
-        "label": "missed",
-        "reason": "prior export 2026-10-14 is a byte copy of 2026-10-12; that morning's candidate list was not reconstructed",
-        "step": "build"
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
       },
       "2026-10-16": {
-        "class": "still broken",
-        "label": "missed",
-        "reason": "prior export 2026-10-15 is a byte copy of 2026-10-12; that morning's candidate list was not reconstructed",
-        "step": "build"
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "rebuilt from the prior day's state at the session open",
+        "step": null
       },
       "2026-10-19": {
-        "class": "still broken",
-        "label": "missed",
-        "reason": "prior export 2026-10-16 is a byte copy of 2026-10-12; that morning's candidate list was not reconstructed",
-        "step": "build"
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "rebuilt from the prior day's state at the session open",
+        "step": null
       },
       "2026-10-20": {
-        "class": "still broken",
-        "label": "missed",
-        "reason": "prior export 2026-10-19 is a byte copy of 2026-10-12; that morning's candidate list was not reconstructed",
-        "step": "build"
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "hard-red sit S<=-3",
+        "step": null
       },
       "2026-10-23": {
-        "class": "still broken",
-        "label": "missed",
-        "reason": "prior export 2026-10-22 is a byte copy of 2026-10-12; that morning's candidate list was not reconstructed",
-        "step": "build"
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "hard-red sit S<=-3",
+        "step": null
       },
       "2026-10-26": {
-        "class": "still broken",
-        "label": "missed",
-        "reason": "prior export 2026-10-23 is a byte copy of 2026-10-12; that morning's candidate list was not reconstructed",
-        "step": "build"
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
       },
       "2026-10-27": {
-        "class": "still broken",
-        "label": "missed",
-        "reason": "prior export 2026-10-26 is a byte copy of 2026-10-12; that morning's candidate list was not reconstructed",
-        "step": "build"
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "rebuilt from the prior day's state at the session open",
+        "step": null
       },
       "2026-10-28": {
-        "class": "still broken",
-        "label": "missed",
-        "reason": "prior export 2026-10-27 is a byte copy of 2026-10-12; that morning's candidate list was not reconstructed",
-        "step": "build"
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
       },
       "2026-10-29": {
-        "class": "still broken",
-        "label": "missed",
-        "reason": "prior export 2026-10-28 is a byte copy of 2026-10-12; that morning's candidate list was not reconstructed",
-        "step": "build"
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "hard-red sit S<=-3",
+        "step": null
       },
       "2026-10-30": {
         "class": "sat out (rule)",
@@ -1023,10 +1023,10 @@
         "step": null
       },
       "2026-11-02": {
-        "class": "still broken",
-        "label": "missed",
-        "reason": "prior export 2026-10-30 is a byte copy of 2026-10-12; that morning's candidate list was not reconstructed",
-        "step": "build"
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
       }
     },
     "overnight_mega_h2": {
@@ -1271,58 +1271,58 @@
         "step": null
       },
       "2026-10-14": {
-        "class": "still broken",
-        "label": "missed",
-        "reason": "prior export 2026-10-13 is a byte copy of 2026-10-12; that morning's candidate list was not reconstructed",
-        "step": "build"
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "rebuilt from the prior day's state at the session open",
+        "step": null
       },
       "2026-10-15": {
-        "class": "still broken",
-        "label": "missed",
-        "reason": "prior export 2026-10-14 is a byte copy of 2026-10-12; that morning's candidate list was not reconstructed",
-        "step": "build"
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
       },
       "2026-10-16": {
-        "class": "still broken",
-        "label": "missed",
-        "reason": "prior export 2026-10-15 is a byte copy of 2026-10-12; that morning's candidate list was not reconstructed",
-        "step": "build"
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "rebuilt from the prior day's state at the session open",
+        "step": null
       },
       "2026-10-19": {
-        "class": "still broken",
-        "label": "missed",
-        "reason": "prior export 2026-10-16 is a byte copy of 2026-10-12; that morning's candidate list was not reconstructed",
-        "step": "build"
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "rebuilt from the prior day's state at the session open",
+        "step": null
       },
       "2026-10-20": {
-        "class": "still broken",
-        "label": "missed",
-        "reason": "prior export 2026-10-19 is a byte copy of 2026-10-12; that morning's candidate list was not reconstructed",
-        "step": "build"
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "hard-red sit S<=-3",
+        "step": null
       },
       "2026-10-26": {
-        "class": "still broken",
-        "label": "missed",
-        "reason": "prior export 2026-10-23 is a byte copy of 2026-10-12; that morning's candidate list was not reconstructed",
-        "step": "build"
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
       },
       "2026-10-27": {
-        "class": "still broken",
-        "label": "missed",
-        "reason": "prior export 2026-10-26 is a byte copy of 2026-10-12; that morning's candidate list was not reconstructed",
-        "step": "build"
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "rebuilt from the prior day's state at the session open",
+        "step": null
       },
       "2026-10-28": {
-        "class": "still broken",
-        "label": "missed",
-        "reason": "prior export 2026-10-27 is a byte copy of 2026-10-12; that morning's candidate list was not reconstructed",
-        "step": "build"
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
       },
       "2026-10-29": {
-        "class": "still broken",
-        "label": "missed",
-        "reason": "prior export 2026-10-28 is a byte copy of 2026-10-12; that morning's candidate list was not reconstructed",
-        "step": "build"
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "hard-red sit S<=-3",
+        "step": null
       },
       "2026-10-30": {
         "class": "sat out (rule)",
@@ -1331,10 +1331,10 @@
         "step": null
       },
       "2026-11-02": {
-        "class": "still broken",
-        "label": "missed",
-        "reason": "prior export 2026-10-30 is a byte copy of 2026-10-12; that morning's candidate list was not reconstructed",
-        "step": "build"
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
       }
     },
     "short_alarm_h3": {
@@ -1477,22 +1477,22 @@
         "step": null
       },
       "2026-10-23": {
-        "class": "still broken",
-        "label": "missed",
-        "reason": "prior export 2026-10-22 is a byte copy of 2026-10-12; that morning's candidate list was not reconstructed",
-        "step": "build"
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "hard-red sit S<=-3",
+        "step": null
       },
       "2026-10-26": {
         "class": "still broken",
         "label": "missed",
-        "reason": "prior export 2026-10-23 is a byte copy of 2026-10-12; that morning's candidate list was not reconstructed",
-        "step": "build"
+        "reason": "picks had no 09:30 open",
+        "step": "lock"
       },
       "2026-10-27": {
-        "class": "still broken",
-        "label": "missed",
-        "reason": "prior export 2026-10-26 is a byte copy of 2026-10-12; that morning's candidate list was not reconstructed",
-        "step": "build"
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "rebuilt from the prior day's state at the session open",
+        "step": null
       }
     },
     "short_news_r_h3": {
@@ -1583,8 +1583,8 @@
       "2026-10-26": {
         "class": "still broken",
         "label": "missed",
-        "reason": "prior export 2026-10-23 is a byte copy of 2026-10-12; that morning's candidate list was not reconstructed",
-        "step": "build"
+        "reason": "picks had no 09:30 open",
+        "step": "lock"
       }
     },
     "short_news_r_macd_h3": {
@@ -1675,8 +1675,8 @@
       "2026-10-26": {
         "class": "still broken",
         "label": "missed",
-        "reason": "prior export 2026-10-23 is a byte copy of 2026-10-12; that morning's candidate list was not reconstructed",
-        "step": "build"
+        "reason": "picks had no 09:30 open",
+        "step": "lock"
       }
     },
     "union_flow_in_h1": {
@@ -1843,22 +1843,22 @@
         "step": null
       },
       "2026-10-23": {
-        "class": "still broken",
-        "label": "missed",
-        "reason": "prior export 2026-10-22 is a byte copy of 2026-10-12; that morning's candidate list was not reconstructed",
-        "step": "build"
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "hard-red sit S<=-3",
+        "step": null
       },
       "2026-10-26": {
         "class": "still broken",
         "label": "missed",
-        "reason": "prior export 2026-10-23 is a byte copy of 2026-10-12; that morning's candidate list was not reconstructed",
-        "step": "build"
+        "reason": "picks had no 09:30 open",
+        "step": "lock"
       },
       "2026-10-27": {
-        "class": "still broken",
-        "label": "missed",
-        "reason": "prior export 2026-10-26 is a byte copy of 2026-10-12; that morning's candidate list was not reconstructed",
-        "step": "build"
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "rebuilt from the prior day's state at the session open",
+        "step": null
       },
       "2026-10-30": {
         "class": "sat out (rule)",
@@ -1867,10 +1867,10 @@
         "step": null
       },
       "2026-11-02": {
-        "class": "still broken",
-        "label": "missed",
-        "reason": "prior export 2026-10-30 is a byte copy of 2026-10-12; that morning's candidate list was not reconstructed",
-        "step": "build"
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
       }
     },
     "union_hot_n4_h1": {
@@ -2015,50 +2015,50 @@
       "2026-10-14": {
         "class": "still broken",
         "label": "missed",
-        "reason": "prior export 2026-10-13 is a byte copy of 2026-10-12; that morning's candidate list was not reconstructed",
-        "step": "build"
+        "reason": "picks had no 09:30 open",
+        "step": "lock"
       },
       "2026-10-19": {
-        "class": "still broken",
-        "label": "missed",
-        "reason": "prior export 2026-10-16 is a byte copy of 2026-10-12; that morning's candidate list was not reconstructed",
-        "step": "build"
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "rebuilt from the prior day's state at the session open",
+        "step": null
       },
       "2026-10-20": {
-        "class": "still broken",
-        "label": "missed",
-        "reason": "prior export 2026-10-19 is a byte copy of 2026-10-12; that morning's candidate list was not reconstructed",
-        "step": "build"
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "hard-red sit S<=-3",
+        "step": null
       },
       "2026-10-21": {
-        "class": "still broken",
-        "label": "missed",
-        "reason": "prior export 2026-10-20 is a byte copy of 2026-10-12; that morning's candidate list was not reconstructed",
-        "step": "build"
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "rebuilt from the prior day's state at the session open",
+        "step": null
       },
       "2026-10-22": {
-        "class": "still broken",
-        "label": "missed",
-        "reason": "prior export 2026-10-21 is a byte copy of 2026-10-12; that morning's candidate list was not reconstructed",
-        "step": "build"
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "hard-red sit S<=-3",
+        "step": null
       },
       "2026-10-23": {
-        "class": "still broken",
-        "label": "missed",
-        "reason": "prior export 2026-10-22 is a byte copy of 2026-10-12; that morning's candidate list was not reconstructed",
-        "step": "build"
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "hard-red sit S<=-3",
+        "step": null
       },
       "2026-10-26": {
         "class": "still broken",
         "label": "missed",
-        "reason": "prior export 2026-10-23 is a byte copy of 2026-10-12; that morning's candidate list was not reconstructed",
-        "step": "build"
+        "reason": "picks had no 09:30 open",
+        "step": "lock"
       },
       "2026-10-27": {
-        "class": "still broken",
-        "label": "missed",
-        "reason": "prior export 2026-10-26 is a byte copy of 2026-10-12; that morning's candidate list was not reconstructed",
-        "step": "build"
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "rebuilt from the prior day's state at the session open",
+        "step": null
       },
       "2026-10-30": {
         "class": "sat out (rule)",
@@ -2197,50 +2197,50 @@
       "2026-10-14": {
         "class": "still broken",
         "label": "missed",
-        "reason": "prior export 2026-10-13 is a byte copy of 2026-10-12; that morning's candidate list was not reconstructed",
-        "step": "build"
+        "reason": "picks had no 09:30 open",
+        "step": "lock"
       },
       "2026-10-19": {
         "class": "still broken",
         "label": "missed",
-        "reason": "prior export 2026-10-16 is a byte copy of 2026-10-12; that morning's candidate list was not reconstructed",
-        "step": "build"
+        "reason": "picks had no 09:30 open",
+        "step": "lock"
       },
       "2026-10-20": {
-        "class": "still broken",
-        "label": "missed",
-        "reason": "prior export 2026-10-19 is a byte copy of 2026-10-12; that morning's candidate list was not reconstructed",
-        "step": "build"
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "hard-red sit S<=-3",
+        "step": null
       },
       "2026-10-21": {
-        "class": "still broken",
-        "label": "missed",
-        "reason": "prior export 2026-10-20 is a byte copy of 2026-10-12; that morning's candidate list was not reconstructed",
-        "step": "build"
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "rebuilt from the prior day's state at the session open",
+        "step": null
       },
       "2026-10-22": {
-        "class": "still broken",
-        "label": "missed",
-        "reason": "prior export 2026-10-21 is a byte copy of 2026-10-12; that morning's candidate list was not reconstructed",
-        "step": "build"
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "hard-red sit S<=-3",
+        "step": null
       },
       "2026-10-23": {
-        "class": "still broken",
-        "label": "missed",
-        "reason": "prior export 2026-10-22 is a byte copy of 2026-10-12; that morning's candidate list was not reconstructed",
-        "step": "build"
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "hard-red sit S<=-3",
+        "step": null
       },
       "2026-10-26": {
         "class": "still broken",
         "label": "missed",
-        "reason": "prior export 2026-10-23 is a byte copy of 2026-10-12; that morning's candidate list was not reconstructed",
-        "step": "build"
+        "reason": "picks had no 09:30 open",
+        "step": "lock"
       },
       "2026-10-27": {
-        "class": "still broken",
-        "label": "missed",
-        "reason": "prior export 2026-10-26 is a byte copy of 2026-10-12; that morning's candidate list was not reconstructed",
-        "step": "build"
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "rebuilt from the prior day's state at the session open",
+        "step": null
       }
     },
     "union_news_pack_h1": {
@@ -2391,8 +2391,8 @@
       "2026-10-26": {
         "class": "still broken",
         "label": "missed",
-        "reason": "prior export 2026-10-23 is a byte copy of 2026-10-12; that morning's candidate list was not reconstructed",
-        "step": "build"
+        "reason": "picks had no 09:30 open",
+        "step": "lock"
       },
       "2026-10-30": {
         "class": "sat out (rule)",

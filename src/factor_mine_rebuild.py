@@ -224,12 +224,86 @@ def _export_digests(cal: list[str]) -> dict[str, str]:
     return out
 
 
+def _candidates_from_frame(morning: str, prior: str, frame, cal: list[str]) -> list[str]:
+    """Same morning buckets as the frozen candidate file, from one frame."""
+    from . import gainer_asof as ga
+    from . import gainer_capture as gc
+    from .factor_mine_freeze import MORNING_SOURCES, _ranked_names
+
+    day = _day(morning)
+    look = gc.lookback_calendar(list(cal or []))
+    nxt = gc.next_session(look, day)
+    buckets = {name: [] for name in MORNING_SOURCES}
+    buckets["liquid_tape"] = _ranked_names(ga._liquid_tape(
+        frame, top_n=0, min_change=0.0, liquid=True,
+        min_mcap_m=None, side="up", skip_change=True,
+    ))
+    buckets["yday_gainer"] = _ranked_names(
+        ga.liquid_gainers(frame, top_n=25, min_change=0.0, liquid=True))
+    buckets["yday_mover"] = _ranked_names(ga.liquid_movers(frame, top_n=20, liquid=True))
+    buckets["earn_react"] = _ranked_names(gc.earnings_reaction(prior, day, df=frame))
+    buckets["overnight"] = _ranked_names(
+        gc.overnight_scheduled(prior, day, nxt, df=frame))
+    buckets["overnight_mega"] = _ranked_names(gc.overnight_scheduled(
+        prior, day, nxt, df=frame, min_mcap_m=gc.OVERNIGHT_MEGA_MCAP_M,
+    ))
+    names: list[str] = []
+    seen: set[str] = set()
+    for source in MORNING_SOURCES:
+        for tick in buckets.get(source) or []:
+            if tick and tick not in seen:
+                seen.add(tick)
+                names.append(tick)
+    return names
+
+
+def _radar_candidates(morning: str, cal: list[str]) -> dict:
+    """Prior session's theme-radar raw file. Never this morning's own file."""
+    from .theme_radar_raw import SOURCE, load_prior_raw
+
+    day = _day(morning)
+    try:
+        loaded = load_prior_raw(day)
+    except Exception as exc:  # noqa: BLE001 — a bad snapshot is a flagged morning
+        return {
+            "date": day,
+            "prior_export": None,
+            "n": 0,
+            "names": [],
+            "reconstructed": False,
+            "flag": f"theme-radar raw unusable: {exc}",
+            "stuck_list_reused": False,
+            "source": SOURCE,
+        }
+    prior = loaded["source_session"]
+    names = _candidates_from_frame(day, prior, loaded["frame"], cal)
+    flag = None if names else "theme-radar raw produced no names"
+    loaded.pop("frame", None)
+    return {
+        "date": day,
+        "prior_export": prior,
+        "n": len(names),
+        "names": names,
+        "reconstructed": flag is None,
+        "flag": flag,
+        "stuck_list_reused": False,
+        **loaded,
+    }
+
+
 def reconstruct_candidates(date: str, cal: list[str],
                            digests: dict[str, str] | None = None) -> dict:
-    """Morning names from the prior export. Never the frozen candidate file."""
+    """Morning names from the prior export. Never the frozen candidate file.
+
+    Frozen-copy mornings 2026-10-13 through 2026-11-03 read theme-radar's
+    previous-session ``.raw.csv`` instead of the copied local export.
+    """
     from .factor_mine_freeze import candidate_provenance
+    from .theme_radar_raw import applies
 
     day = _day(date)
+    if applies(day):
+        return _radar_candidates(day, cal)
     try:
         doc = candidate_provenance(day, list(cal or []))
     except Exception as exc:  # noqa: BLE001 — a failed export is a flagged day
@@ -406,10 +480,23 @@ def _universe_count(rows: list[dict], rec: dict | None) -> int:
     return sum(1 for row in rows or [] if uni in set(row.get("sources") or []))
 
 
-def _slim_fill(trade: dict) -> dict:
+def _radar_stamp(candidates: dict) -> dict:
+    if candidates.get("source") != "theme_radar_snapshot":
+        return {}
+    return {
+        "source": "theme_radar_snapshot",
+        "source_file": candidates.get("source_file"),
+        "source_sha256": candidates.get("source_sha256"),
+        "source_session": candidates.get("source_session"),
+        "source_scrape_ts_utc": candidates.get("source_scrape_ts_utc"),
+    }
+
+
+def _slim_fill(trade: dict, radar: dict | None = None) -> dict:
     keep = ("date", "ticker", "side", "shares", "price", "fees", "pnl", "reason")
     out = {key: trade.get(key) for key in keep if trade.get(key) is not None}
     out["tag"] = LABEL_REBUILT
+    out.update(radar or {})
     return out
 
 
@@ -607,6 +694,7 @@ def build_day(date: str, *, panel: dict, grouped: dict[str, list[dict]],
                 "reason": "live recipe is not in the catalog",
             }
             entry.update(verdict)
+            entry.update(_radar_stamp(candidates))
             strategies[name] = entry
             continue
         needs_export = _needs_export(rec, spec, singles)
@@ -617,6 +705,7 @@ def build_day(date: str, *, panel: dict, grouped: dict[str, list[dict]],
                 "reason": candidates.get("flag") or "morning candidates were not reconstructed",
             }
             entry.update(verdict)
+            entry.update(_radar_stamp(candidates))
             if resume:
                 entry["state"] = resume
             strategies[name] = entry
@@ -634,13 +723,15 @@ def build_day(date: str, *, panel: dict, grouped: dict[str, list[dict]],
                 sim_error=f"{type(exc).__name__}: {exc}",
             )
             entry.update(verdict)
+            entry.update(_radar_stamp(candidates))
             if resume:
                 entry["state"] = resume
             strategies[name] = entry
             continue
         daily = decision.get("daily") or {}
+        radar = _radar_stamp(candidates)
         fills = [
-            _slim_fill(trade)
+            _slim_fill(trade, radar)
             for trade in (decision.get("trades") or [])
             if trade.get("side") in ("BUY", "SELL", "SHORT", "COVER")
         ]
@@ -680,18 +771,21 @@ def build_day(date: str, *, panel: dict, grouped: dict[str, list[dict]],
             "fills": fills,
             "skips": [
                 {"ticker": row.get("ticker"), "kind": row.get("kind"),
-                 "reason": row.get("reason"), "tag": LABEL_REBUILT}
+                 "reason": row.get("reason"), "tag": LABEL_REBUILT, **radar}
                 for row in skips if isinstance(row, dict)
             ],
-            "daily": _slim_daily(daily),
+            "daily": {**_slim_daily(daily), **radar},
             "state": decision.get("state"),
             "return_pct": _pct(daily),
         })
         entry.update(verdict)
+        entry.update(_radar_stamp(candidates))
         strategies[name] = entry
+    radar_day = _radar_stamp(candidates)
     return {
         "date": day,
         "tag": LABEL_REBUILT,
+        **radar_day,
         "empty_input": empty,
         "sealed_source": "no_same_day_panel" if empty else "panel",
         "chain_from": prior,
@@ -704,6 +798,9 @@ def build_day(date: str, *, panel: dict, grouped: dict[str, list[dict]],
             "flag": candidates.get("flag"),
             "stuck_list_reused": False,
             "names": candidates.get("names") or [],
+            "source": candidates.get("source"),
+            "source_file": candidates.get("source_file"),
+            "source_sha256": candidates.get("source_sha256"),
         },
         "leak": {
             "kept": len(kept),
@@ -723,6 +820,15 @@ def calendar(panel: dict, empty: dict[str, dict], root: Path | None = None) -> l
         for path in ledger_dir.glob("*.json.gz"):
             days.add(path.name[:10])
     return sorted(day for day in days if len(day) == 10)
+
+
+def _replace_with_radar(day: str, doc: dict | None) -> bool:
+    """True when a frozen-copy morning still lacks a theme-radar rebuild."""
+    from .theme_radar_raw import applies
+
+    if not applies(day):
+        return False
+    return (doc or {}).get("source") != "theme_radar_snapshot"
 
 
 def run_rebuild(*, root: Path | None = None, write: bool = False,
@@ -754,12 +860,15 @@ def run_rebuild(*, root: Path | None = None, write: bool = False,
     skipped: list[str] = []
     for day in window:
         path = rebuilt_path(day, base)
+        replacing = False
         if path.is_file():
-            doc = _load_json(path)
-            if isinstance(doc, dict):
-                chain[day] = doc
-            skipped.append(day)
-            continue
+            have = _load_json(path)
+            if not _replace_with_radar(day, have if isinstance(have, dict) else None):
+                if isinstance(have, dict):
+                    chain[day] = have
+                skipped.append(day)
+                continue
+            replacing = True
         doc = build_day(
             day, panel=panel, grouped=grouped, cal=cal, names=names,
             singles=singles, combos=combos, chain=chain, empty_inputs=empty,
@@ -767,7 +876,13 @@ def run_rebuild(*, root: Path | None = None, write: bool = False,
         )
         chain[day] = doc
         if write:
-            if _write_once(path, doc):
+            if replacing:
+                path.write_text(
+                    json.dumps(doc, indent=2, sort_keys=True, default=str) + "\n",
+                    encoding="utf-8",
+                )
+                wrote.append(day)
+            elif _write_once(path, doc):
                 wrote.append(day)
         else:
             wrote.append(day)
@@ -994,7 +1109,7 @@ def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
         "--write", action="store_true",
-        help="Write missing rebuilt/DATE.json files. Existing files stay.",
+        help="Write rebuilt/DATE.json. Frozen-copy mornings 2026-10-13..2026-11-03 are replaced from theme-radar raw files. Other existing files stay.",
     )
     parser.add_argument(
         "--counts-only", action="store_true",
