@@ -7,6 +7,7 @@ from __future__ import annotations
 import base64
 import datetime as dt
 import json
+import os
 import random
 import tempfile
 from pathlib import Path
@@ -505,6 +506,7 @@ def test_draw_writes_page_json_and_leaves_holdout_bytes_alone():
 def test_replay_uses_posted_bit_answers():
     capita = "Capita Flags CSPS Costs but Touts Contract Wins, Savings and AI Growth"
     nasdaq = "Nasdaq to Buy Dark Pool Stock Venue LeveL for Equity Trading"
+    held_policy = os.environ.pop("JEV_GATE_POLICY", None)
 
     def poster(state, questions, key):
         assert "done" in questions
@@ -530,48 +532,54 @@ def test_replay_uses_posted_bit_answers():
             },
         }
 
-    with tempfile.TemporaryDirectory() as tmp:
-        root = Path(tmp)
-        dash = root / "dashboard" / "jev-train"
-        dash.mkdir(parents=True)
-        ground = root / "00_grounding"
-        ground.mkdir()
-        (dash / "draw.json").write_text(json.dumps({
-            "schema": "jev-train-draw-1",
-            "stamp": "20260930_0858",
-            "seed": 1,
-            "exam_source": "hard_miss",
-            "gate": "hop0-code-bits+jev",
-            "sample": {"parsed": 2, "rss": 0, "exam": 0},
-            "items": [
-                {
-                    "n": 1, "id": title_id(capita), "pool": "parsed",
-                    "title": capita, "source": "MarketBeat",
-                    "jev": "KEEP", "reason": "k_done",
-                },
-                {
-                    "n": 2, "id": title_id(nasdaq), "pool": "parsed",
-                    "title": nasdaq, "source": "Bloomberg",
-                    "jev": "DROP", "reason": "no_keep_bit",
-                },
-            ],
-        }), encoding="utf-8")
-        report = run_replay(
-            live=True, key="x", workers=1, stamp="20260930_0920",
-            poster=poster, now=NOW, root=root, ground=ground, write=True,
-        )
-        assert report["gate"] == "hop0-bits+jev"
-        assert report["replay_of"] == "20260930_0858"
-        assert report["model"] == "jev-test"
-        assert report["flips"] == 2
-        by_title = {item["title"]: item for item in report["items"]}
-        assert by_title[capita]["jev"] == "DROP"
-        assert by_title[nasdaq]["jev"] == "KEEP"
-        assert by_title[nasdaq]["reason"] == "done"
-        page = json.loads((dash / "draw.json").read_text(encoding="utf-8"))
-        assert page["stamp"] == "20260930_0920"
-        assert page["items"][0]["jev"] == "DROP"
-        assert not (root / "keep.json").exists()
+    try:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            dash = root / "dashboard" / "jev-train"
+            dash.mkdir(parents=True)
+            ground = root / "00_grounding"
+            ground.mkdir()
+            (dash / "draw.json").write_text(json.dumps({
+                "schema": "jev-train-draw-1",
+                "stamp": "20260930_0858",
+                "seed": 1,
+                "exam_source": "hard_miss",
+                "gate": "hop0-code-bits+jev",
+                "sample": {"parsed": 2, "rss": 0, "exam": 0},
+                "items": [
+                    {
+                        "n": 1, "id": title_id(capita), "pool": "parsed",
+                        "title": capita, "source": "MarketBeat",
+                        "jev": "KEEP", "reason": "k_done",
+                    },
+                    {
+                        "n": 2, "id": title_id(nasdaq), "pool": "parsed",
+                        "title": nasdaq, "source": "Bloomberg",
+                        "jev": "DROP", "reason": "no_keep_bit",
+                    },
+                ],
+            }), encoding="utf-8")
+            report = run_replay(
+                live=True, key="x", workers=1, stamp="20260930_0920",
+                poster=poster, now=NOW, root=root, ground=ground, write=True,
+            )
+            # The live sheet records JEV_GATE_POLICY. Unset is sixbit, the
+            # name that replaced the old hop0-bits+jev label.
+            assert report["gate"] == "sixbit"
+            assert report["replay_of"] == "20260930_0858"
+            assert report["model"] == "jev-test"
+            assert report["flips"] == 2
+            by_title = {item["title"]: item for item in report["items"]}
+            assert by_title[capita]["jev"] == "DROP"
+            assert by_title[nasdaq]["jev"] == "KEEP"
+            assert by_title[nasdaq]["reason"] == "done"
+            page = json.loads((dash / "draw.json").read_text(encoding="utf-8"))
+            assert page["stamp"] == "20260930_0920"
+            assert page["items"][0]["jev"] == "DROP"
+            assert not (root / "keep.json").exists()
+    finally:
+        if held_policy is not None:
+            os.environ["JEV_GATE_POLICY"] = held_policy
 
 
 def test_ensure_pool_files_does_not_rewrite_existing_holdout():
@@ -826,8 +834,14 @@ def test_commit_allowlist_and_workflow_and_page():
     assert not commit_allowed("src/jev_gate.py")
     yml = (ROOT / ".github" / "workflows" / "jev_train.yml").read_text(encoding="utf-8")
     assert "workflow_dispatch:" in yml
-    assert "schedule:" not in yml
-    assert "cron:" not in yml
+    # Weekday 21:30 UTC only appends new parse days. A dispatch still draws.
+    assert "schedule:" in yml
+    assert 'cron: "30 21 * * 1-5"' in yml
+    assert "github.event_name == 'schedule'" in yml
+    assert "src.jev_day append" in yml
+    assert "github.event.inputs.mode == 'draw'" in yml
+    quiet = yml.index('github.event_name }}" = "schedule"')
+    assert yml.index("exit 0", quiet) < yml.index("exit 1", quiet)
     assert "pull_request:" not in yml
     assert "secrets.JEV_API_KEY" in yml
     assert "keep.json" not in yml

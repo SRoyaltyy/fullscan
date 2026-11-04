@@ -233,6 +233,60 @@ def test_nothing_eligible_still_renders_the_dashboard(tmp_path, monkeypatch):
     assert 'name="data-asof" content="2026-10-06"' in html
 
 
+def _workflow_jobs(text: str) -> dict[str, str]:
+    """Split a workflow file into top-level job bodies."""
+    lines = text.splitlines()
+    start = next(i for i, line in enumerate(lines) if line == "jobs:")
+    jobs: dict[str, str] = {}
+    name = ""
+    buf: list[str] = []
+    for line in lines[start + 1:]:
+        if line and not line.startswith(" ") and not line.startswith("#"):
+            break
+        if (
+            line.startswith("  ")
+            and not line.startswith("   ")
+            and line.rstrip().endswith(":")
+            and not line.strip().startswith("#")
+        ):
+            if name:
+                jobs[name] = "\n".join(buf)
+            name = line.strip()[:-1]
+            buf = [line]
+        elif name:
+            buf.append(line)
+    if name:
+        jobs[name] = "\n".join(buf)
+    return jobs
+
+
+def test_no_publish_gate_still_renders_the_page() -> None:
+    """Run 41849547018 set publish=false and skipped the tickets job.
+
+    The main page render and deploy live on a job that still runs.
+    Ticket publishing stays behind the gate. The render step refuses
+    to continue when sealed paper rows change.
+    """
+    root = Path(__file__).resolve().parent.parent
+    text = (root / ".github/workflows/publish_strategy_tickets.yml").read_text(
+        encoding="utf-8")
+    jobs = _workflow_jobs(text)
+    tickets = jobs["tickets"]
+    page = jobs["page"]
+    assert "needs.gate.outputs.publish == 'true'" in tickets
+    assert "python3 -m src.paper_trade_append --render-only" not in tickets
+    assert "needs.gate.outputs.publish" not in page
+    assert "always()" in page
+    assert "needs.gate.result == 'success'" in page
+    assert "needs.tickets.result != 'cancelled'" in page
+    assert "python3 -m src.paper_trade_append --render-only" in page
+    assert "git diff --exit-code -- data/paper" in page
+    assert "name: dashboard" in page
+    assert "publish_dashboard.sh" in page
+    assert "gh workflow run deploy-dashboard.yml" in page
+    assert text.count("python3 -m src.paper_trade_append --render-only") == 1
+
+
 def test_render_only_does_not_append(tmp_path, monkeypatch):
     paper, _books, blob = _layout(tmp_path)
     _patch(monkeypatch, tmp_path, _prices())
@@ -370,6 +424,7 @@ if __name__ == "__main__":
     _run(test_resume_appends_later_books_and_keeps_printed_bytes)
     _run(test_missing_state_refuses_to_rewrite_the_curve)
     _run(test_nothing_eligible_still_renders_the_dashboard)
+    test_no_publish_gate_still_renders_the_page()
     _run(test_render_only_does_not_append)
     _run(test_sealed_roundtrips_still_refresh_the_dashboard)
     _run(test_roundtrip_lock_does_not_write_sealed_rows)
