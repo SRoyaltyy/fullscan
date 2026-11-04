@@ -35170,7 +35170,7 @@
       "divergence_flagged": false,
       "divergence_verdict": null,
       "per_factor_breakdown": [],
-      "reflection_lesson_ref": null,
+      "reflection_lesson_ref": "02_lessons/candidate/2026-10-28_lesson.md",
       "sources_used": [],
       "ops_fail": false,
       "path_shape": "choppy / range-bound",
@@ -35178,7 +35178,8 @@
       "key_interaction": "Offsetting/masking — the hawkish hold and oil rebound (rate-negative) cancelled the AI/semis bid, so +0.28% understates a three-way tug; the calm tape was not calm underneath",
       "knowable_at_9am": "partially — FOMC hold, SK Hynix, and flat futures were knowable; the oil reversal and hawkish presser tone were intraday, and the after-close MSFT/GOOGL split was unknowable",
       "attribution_contested": "yes — AP leads Fed/bonds, Investing.com leads oil, Yahoo leads mixed breadth; no single driver dominates a +0.28% day",
-      "outlier_watch": "Equities rose despite the 10Y +5bp to ~5.05% (a GN=GN headwind), and energy rose while premarket oil was down — the oil reversal and equity-yield divergence are what don’t fit a simple risk-on story"
+      "outlier_watch": "Equities rose despite the 10Y +5bp to ~5.05% (a GN=GN headwind), and energy rose while premarket oil was down — the oil reversal and equity-yield divergence are what don’t fit a simple risk-on story",
+      "lesson_schema_ok": true
     },
     {
       "date": "2026-10-29",
