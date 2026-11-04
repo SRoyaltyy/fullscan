@@ -253,6 +253,50 @@ def test_auth_export_is_tried_before_login() -> None:
     assert "hidden" not in str(calls)
 
 
+def test_2026_11_04_reads_2026_11_03_raw() -> None:
+    from src.theme_radar_raw import applies, before_morning_open, load_prior_raw, raw_url
+
+    assert applies("2026-11-04")
+    assert applies("2026-11-05") is False
+    assert before_morning_open("2026-11-03T22:06:10+00:00", "2026-11-04")
+    assert before_morning_open("2026-11-04T14:30:00+00:00", "2026-11-04") is False
+    seen = []
+
+    def fetch(url: str) -> bytes:
+        seen.append(url)
+        assert url == raw_url("2026-11-03"), url
+        assert not url.endswith("/2026-11-04.raw.csv")
+        return (
+            b"Ticker,Change,Volume,Average Volume,Market Cap,Industry,"
+            b"Earnings Date,News Title\n"
+            b"AAA,1.2%,1000,500,2000,Software,11/4/2026 8:00:00 AM,AAA rises\n"
+        )
+
+    loaded = load_prior_raw(
+        "2026-11-04",
+        fetch=fetch,
+        manifest={"runs": [{"date": "2026-11-03",
+                            "scrape_ts_utc": "2026-11-03T22:06:10+00:00"}]},
+    )
+    assert loaded["source"] == "theme_radar_snapshot"
+    assert loaded["source_file"] == "data/snapshots/2026-11-03.raw.csv"
+    assert loaded["source_session"] == "2026-11-03"
+    assert len(loaded["source_sha256"]) == 64
+    assert seen == [raw_url("2026-11-03")]
+    try:
+        load_prior_raw(
+            "2026-11-04",
+            fetch=fetch,
+            manifest={"runs": [{"date": "2026-11-03",
+                                "scrape_ts_utc": "2026-11-04T14:30:00+00:00"}]},
+        )
+    except ValueError as exc:
+        assert "09:30" in str(exc)
+        assert "2026-11-03.raw.csv" in str(exc)
+    else:
+        raise AssertionError("a scrape at 09:30 ET on 2026-11-04 was accepted")
+
+
 def test_ovcal_names_rebuilt_rule_and_missed() -> None:
     html = (Path(__file__).resolve().parent / "factor_mine_ovcal.html").read_text(
         encoding="utf-8")
@@ -274,6 +318,7 @@ def main() -> None:
         test_rebuilt_file_is_write_once,
         test_restate_still_refuses_a_past_day,
         test_morning_reads_prior_raw_not_its_own_file,
+        test_2026_11_04_reads_2026_11_03_raw,
         test_auth_export_is_tried_before_login,
         test_ovcal_names_rebuilt_rule_and_missed,
     ]

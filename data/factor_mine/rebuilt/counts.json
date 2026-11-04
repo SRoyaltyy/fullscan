@@ -9,24 +9,6 @@
       "sat out (rule)": 9,
       "still broken": 9
     },
-    "combo_ps_7030_shared": {
-      "both_halves_0": 15,
-      "build": 9,
-      "lock": 0,
-      "rebuilt": 2,
-      "render": 0,
-      "sat out (rule)": 4,
-      "still broken": 9
-    },
-    "combo_sf_5050_shared": {
-      "both_halves_0": 15,
-      "build": 8,
-      "lock": 1,
-      "rebuilt": 2,
-      "render": 0,
-      "sat out (rule)": 4,
-      "still broken": 9
-    },
     "combo_sf_7030_shared": {
       "both_halves_0": 15,
       "build": 8,
@@ -46,15 +28,24 @@
       "still broken": 10
     },
     "overnight_h1": {
-      "both_halves_0": 38,
+      "both_halves_0": 40,
       "build": 8,
       "lock": 1,
-      "rebuilt": 9,
+      "rebuilt": 10,
       "render": 0,
-      "sat out (rule)": 20,
+      "sat out (rule)": 21,
       "still broken": 9
     },
     "overnight_mega_h1": {
+      "both_halves_0": 55,
+      "build": 7,
+      "lock": 1,
+      "rebuilt": 13,
+      "render": 0,
+      "sat out (rule)": 34,
+      "still broken": 8
+    },
+    "overnight_mega_h2": {
       "both_halves_0": 53,
       "build": 7,
       "lock": 1,
@@ -63,23 +54,23 @@
       "sat out (rule)": 33,
       "still broken": 8
     },
-    "overnight_mega_h2": {
-      "both_halves_0": 51,
-      "build": 7,
-      "lock": 1,
-      "rebuilt": 11,
-      "render": 0,
-      "sat out (rule)": 32,
-      "still broken": 8
-    },
     "short_alarm_h3": {
-      "both_halves_0": 26,
+      "both_halves_0": 28,
       "build": 12,
       "lock": 2,
-      "rebuilt": 1,
+      "rebuilt": 2,
       "render": 0,
-      "sat out (rule)": 11,
+      "sat out (rule)": 12,
       "still broken": 14
+    },
+    "short_macd_dn_h3": {
+      "both_halves_0": 14,
+      "build": 9,
+      "lock": 2,
+      "rebuilt": 0,
+      "render": 0,
+      "sat out (rule)": 3,
+      "still broken": 11
     },
     "short_news_r_h3": {
       "both_halves_0": 15,
@@ -99,20 +90,11 @@
       "sat out (rule)": 4,
       "still broken": 10
     },
-    "union_flow_in_h1": {
-      "both_halves_0": 32,
-      "build": 12,
-      "lock": 1,
-      "rebuilt": 5,
-      "render": 0,
-      "sat out (rule)": 14,
-      "still broken": 13
-    },
     "union_hot_n4_h1": {
-      "both_halves_0": 32,
+      "both_halves_0": 33,
       "build": 9,
       "lock": 6,
-      "rebuilt": 5,
+      "rebuilt": 6,
       "render": 0,
       "sat out (rule)": 12,
       "still broken": 15
@@ -134,7 +116,16 @@
       "render": 0,
       "sat out (rule)": 12,
       "still broken": 13
+    },
+    "union_news_pack_net2_h1": {
+      "both_halves_0": 27,
+      "build": 11,
+      "lock": 2,
+      "rebuilt": 0,
+      "render": 0,
+      "sat out (rule)": 14,
+      "still broken": 13
     }
   },
-  "table": "| strategy | both-halves-0 | rebuilt | sat out (rule) | still broken | build | lock | render |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| combo_oh_5050_shared | 19 | 1 | 9 | 9 | 9 | 0 | 0 |\n| combo_ps_7030_shared | 15 | 2 | 4 | 9 | 9 | 0 | 0 |\n| combo_sf_5050_shared | 15 | 2 | 4 | 9 | 8 | 1 | 0 |\n| combo_sf_7030_shared | 15 | 2 | 4 | 9 | 8 | 1 | 0 |\n| flatten_h5 | 14 | 0 | 4 | 10 | 8 | 2 | 0 |\n| overnight_h1 | 38 | 9 | 20 | 9 | 8 | 1 | 0 |\n| overnight_mega_h1 | 53 | 12 | 33 | 8 | 7 | 1 | 0 |\n| overnight_mega_h2 | 51 | 11 | 32 | 8 | 7 | 1 | 0 |\n| short_alarm_h3 | 26 | 1 | 11 | 14 | 12 | 2 | 0 |\n| short_news_r_h3 | 15 | 0 | 4 | 11 | 9 | 2 | 0 |\n| short_news_r_macd_h3 | 15 | 1 | 4 | 10 | 9 | 1 | 0 |\n| union_flow_in_h1 | 32 | 5 | 14 | 13 | 12 | 1 | 0 |\n| union_hot_n4_h1 | 32 | 5 | 12 | 15 | 9 | 6 | 0 |\n| union_hot_n4_holdup | 29 | 3 | 10 | 16 | 9 | 7 | 0 |\n| union_news_pack_h1 | 26 | 1 | 12 | 13 | 11 | 2 | 0 |\n| total | 395 | 55 | 177 | 163 | 135 | 28 | 0 |"
+  "table": "| strategy | both-halves-0 | rebuilt | sat out (rule) | still broken | build | lock | render |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| combo_oh_5050_shared | 19 | 1 | 9 | 9 | 9 | 0 | 0 |\n| combo_sf_7030_shared | 15 | 2 | 4 | 9 | 8 | 1 | 0 |\n| flatten_h5 | 14 | 0 | 4 | 10 | 8 | 2 | 0 |\n| overnight_h1 | 40 | 10 | 21 | 9 | 8 | 1 | 0 |\n| overnight_mega_h1 | 55 | 13 | 34 | 8 | 7 | 1 | 0 |\n| overnight_mega_h2 | 53 | 12 | 33 | 8 | 7 | 1 | 0 |\n| short_alarm_h3 | 28 | 2 | 12 | 14 | 12 | 2 | 0 |\n| short_macd_dn_h3 | 14 | 0 | 3 | 11 | 9 | 2 | 0 |\n| short_news_r_h3 | 15 | 0 | 4 | 11 | 9 | 2 | 0 |\n| short_news_r_macd_h3 | 15 | 1 | 4 | 10 | 9 | 1 | 0 |\n| union_hot_n4_h1 | 33 | 6 | 12 | 15 | 9 | 6 | 0 |\n| union_hot_n4_holdup | 29 | 3 | 10 | 16 | 9 | 7 | 0 |\n| union_news_pack_h1 | 26 | 1 | 12 | 13 | 11 | 2 | 0 |\n| union_news_pack_net2_h1 | 27 | 0 | 14 | 13 | 11 | 2 | 0 |\n| total | 383 | 51 | 176 | 156 | 126 | 30 | 0 |"
 }
