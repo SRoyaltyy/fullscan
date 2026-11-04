@@ -5,8 +5,8 @@
   "run_id": "41806502355",
   "model": "",
   "started_at": "2026-11-04T04:27:29-05:00",
-  "updated_at": "2026-11-04T04:27:46-05:00",
-  "heartbeat_at": "2026-11-04T04:27:46-05:00",
+  "updated_at": "2026-11-04T16:29:14-05:00",
+  "heartbeat_at": "2026-11-04T16:29:14-05:00",
   "stages": [
     {
       "name": "morning",
@@ -21,10 +21,10 @@
     },
     {
       "name": "close",
-      "state": "pending",
-      "started_at": "",
+      "state": "running",
+      "started_at": "2026-11-04T16:29:14-05:00",
       "ended_at": "",
-      "heartbeat_at": "",
+      "heartbeat_at": "2026-11-04T16:29:14-05:00",
       "done": 0,
       "total": 1,
       "model": "",
