@@ -1,12 +1,12 @@
 # Sleeve combine backtest (matched hold, shared cash)
 
-_Generated 2026-11-03T07:24:18-05:00 — 2026-08-13 → 2026-11-03 · $100,000 · 10 names · 10% equity / fill · Futubull fees_
+_Generated 2026-11-03T22:42:53-05:00 — 2026-08-13 → 2026-11-03 · $100,000 · 10 names · 10% equity / fill · Futubull fees_
 
 This is the integrity backtest. Both sleeves use the **same hold** (1d / 3d / 1w). Mover still enters at 09:30, .io still enters at 16:00 — those clocks are data constraints, not a style choice. Open buys cannot spend the same day's close-sale cash. Missing mover calls and missing books are logged as gaps, not as a gate.
 
 **2w / 1m are not combined with mover.** Live .io `2w_size` is a follow-the-book product with a 10-session min-hold; pairing it with mover 1d locks cash in ways a curve-stitch cannot see. The 2w row below is an .io-only reference.
 
-Sessions in window: 58 · days with mover BUY calls: 55 · days with a stock book: 54
+Sessions in window: 58 · days with mover BUY calls: 56 · days with a stock book: 54
 
 ## Finding (this window)
 

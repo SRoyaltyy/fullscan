@@ -886,7 +886,7 @@
       "n_mover_calls": 2,
       "n_io_picks": 1,
       "has_book": true,
-      "gap": "3d cannot settle (end of calendar)"
+      "gap": ""
     },
     {
       "date": "2026-10-30",
@@ -917,6 +917,22 @@
       "exits": 4,
       "n_mover_calls": 407,
       "n_io_picks": 17,
+      "has_book": true,
+      "gap": "3d cannot settle (end of calendar)"
+    },
+    {
+      "date": "2026-11-03",
+      "score": -5.632,
+      "route": "io",
+      "why": "predict -5.63 < -3.0 \u2014 hard-red: no new 1d risk; hold existing .io size sleeves",
+      "cash": 130593.45,
+      "equity": 130593.45,
+      "open": 0,
+      "filled_am": 0,
+      "filled_pm": 0,
+      "exits": 0,
+      "n_mover_calls": 5,
+      "n_io_picks": 2,
       "has_book": true,
       "gap": "3d cannot settle (end of calendar)"
     }
@@ -987,22 +1003,6 @@
       "gap": "io source missing (no stock_book file)"
     },
     {
-      "date": "2026-10-29",
-      "score": -6.946,
-      "route": "io",
-      "why": "predict -6.95 < -3.0 \u2014 hard-red: no new 1d risk; hold existing .io size sleeves",
-      "cash": 387.35,
-      "equity": 128166.81,
-      "open": 5,
-      "filled_am": 0,
-      "filled_pm": 0,
-      "exits": 0,
-      "n_mover_calls": 2,
-      "n_io_picks": 1,
-      "has_book": true,
-      "gap": "3d cannot settle (end of calendar)"
-    },
-    {
       "date": "2026-10-30",
       "score": -12.921,
       "route": "io",
@@ -1033,10 +1033,26 @@
       "n_io_picks": 17,
       "has_book": true,
       "gap": "3d cannot settle (end of calendar)"
+    },
+    {
+      "date": "2026-11-03",
+      "score": -5.632,
+      "route": "io",
+      "why": "predict -5.63 < -3.0 \u2014 hard-red: no new 1d risk; hold existing .io size sleeves",
+      "cash": 130593.45,
+      "equity": 130593.45,
+      "open": 0,
+      "filled_am": 0,
+      "filled_pm": 0,
+      "exits": 0,
+      "n_mover_calls": 5,
+      "n_io_picks": 2,
+      "has_book": true,
+      "gap": "3d cannot settle (end of calendar)"
     }
   ],
   "n_trades": 106,
-  "n_skipped": 685,
+  "n_skipped": 687,
   "hit": 0.575,
   "final_equity": 130593.45,
   "total_ret_pct": 30.59,
@@ -1058,7 +1074,7 @@
   "n_gap_days": 7,
   "window": [
     "2026-08-13",
-    "2026-11-02"
+    "2026-11-03"
   ],
-  "generated_at": "2026-11-02T23:32:08-05:00"
+  "generated_at": "2026-11-03T22:42:56-05:00"
 }
