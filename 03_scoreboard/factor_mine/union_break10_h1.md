@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ break10, no 🚨
 
-Cash book **-14.72%** ($8,528) · signal-only (no cash/fees) was +11.56%. Starts YES **14/30**. Fills 493 · skips 100 · realized $-529.03.
+Cash book **-15.64%** ($8,436) · signal-only (no cash/fees) was +11.56%. Starts YES **14/30**. Fills 500 · skips 100 · realized $-529.03.
 
 ## How this sleeve decides (like you are 10)
 
@@ -679,6 +679,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-02 09:30 ET | **BUY** | `REAL` | 85 | $12.31 | $2.25 | — | $1,159.93 | — | union ∩ break10, no 🚨; gate break_10=True; list ohlc_hot; 🔵; ret5=+10.3; leftover $1047.07 | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🟡 peer🔴 heat🔴 vol🔴 buy🟡 |
 | 2026-11-02 09:30 ET | **BUY** | `BTSG` | 15 | $67.50 | $2.04 | — | $145.39 | — | union ∩ break10, no 🚨; gate break_10=True; list ohlc_hot; ret5=+11.3; leftover $1047.07 | join🟡 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-11-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $145.39 | ▲ close $8,527.58 vs 09:30 $8,376.57 (session +167.51) | 16:00 close · cash $145.39 · equity $8,527.58 vs 09:30 $8,376.57 (+151.01; session marks +167.51) · 8 name(s) marked open→close (per-name table). CDNA×12 09:30 $86.88 → close $85.88 -12.00; POOL×5 09:30 $208.87 → close $214.76 +29.45; GEN×36 09:30 $29.05 → close $29.89 +30.24; BC×13 09:30 $76.25 → close $79.05 +36.40; BAH×12 09:30 $87.16 → close $88.02 +10.32; BLDR×15 09:30 $65.73 → close $67.82 +31.35; REAL×85 09:30 $12.31 → close $13.02 +60.35; BTSG×15 09:30 $67.50 → close $66.26 -18.60 | — |
+| 2026-11-03 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $145.39 | ▼ 09:30 equity $8,472.77 vs yday $8,527.58 (-54.81) | 09:30 open · cash $145.39 (unchanged overnight, no fees) · equity $8,472.77 vs prior close $8,527.58 (-54.81) · 8 name(s) re-marked at the open (per-name table). BAH×12 yday $88.02 → 09:30 $85.95 -24.84; BC×13 yday $79.05 → 09:30 $79.61 +7.28; BLDR×15 yday $67.82 → 09:30 $67.42 -6.00; BTSG×15 yday $66.26 → 09:30 $66.50 +3.60; CDNA×12 yday $85.88 → 09:30 $85.63 -3.00; GEN×36 yday $29.89 → 09:30 $29.59 -10.80; POOL×5 yday $214.76 → 09:30 $211.74 -15.10; REAL×85 yday $13.02 → 09:30 $12.95 -5.95 | — |
+| 2026-11-03 09:30 ET | **SELL** | `BAH` | 12 | $85.95 | $2.05 | $-18.59 | $1,174.74 | ▼ -18.59 after sell → book $8,470.72; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-03 09:30 ET | **SELL** | `BC` | 13 | $79.61 | $2.05 | $+39.60 | $2,207.62 | ▲ +39.60 after sell → book $8,468.67; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-03 09:30 ET | **SELL** | `BLDR` | 15 | $67.42 | $2.06 | $+21.26 | $3,216.87 | ▲ +21.26 after sell → book $8,466.62; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-03 09:30 ET | **SELL** | `BTSG` | 15 | $66.50 | $2.06 | $-19.09 | $4,212.31 | ▼ -19.09 after sell → book $8,464.56; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-03 09:30 ET | **SELL** | `CDNA` | 12 | $85.63 | $2.05 | $-19.07 | $5,237.83 | ▼ -19.07 after sell → book $8,462.52; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-03 09:30 ET | **SELL** | `GEN` | 36 | $29.59 | $2.12 | $+15.22 | $6,300.95 | ▲ +15.22 after sell → book $8,460.40; vs 09:30 mark -2.12 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-03 09:30 ET | **SELL** | `REAL` | 85 | $12.95 | $2.27 | $+49.89 | $7,399.43 | ▲ +49.89 after sell → book $8,458.13; vs 09:30 mark -2.27 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-03 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,399.43 | ▼ close $8,435.68 vs 09:30 $8,472.77 (session -22.45) | 16:00 close · cash $7,399.43 · equity $8,435.68 vs 09:30 $8,472.77 (-37.09; session marks -22.45) · 1 name(s) marked open→close (per-name table). POOL×5 09:30 $211.74 → close $207.25 -22.45 | — |
 
 ## Not taken
 

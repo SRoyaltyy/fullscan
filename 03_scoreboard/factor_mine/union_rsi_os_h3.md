@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ rsi_os, no 🚨
 
-Cash book **-37.43%** ($6,257) · signal-only (no cash/fees) was -42.97%. Starts YES **6/30**. Fills 149 · skips 88 · realized $-2389.72.
+Cash book **-37.70%** ($6,230) · signal-only (no cash/fees) was -42.97%. Starts YES **6/30**. Fills 149 · skips 88 · realized $-2389.72.
 
 ## How this sleeve decides (like you are 10)
 
@@ -335,6 +335,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-02 09:30 ET | **BUY** | `GEN` | 52 | $29.05 | $2.15 | — | $3,103.65 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list ohlc_hot; 🔵; ret5=+17.1; leftover $1532.00 | join🟡 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-11-02 09:30 ET | **BUY** | `PENN` | 95 | $16.00 | $2.27 | — | $1,581.37 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list ohlc_hot; 🔵; ret5=+9.6; leftover $1532.00 | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🔴 peer🔴 heat🔴 vol🔴 buy🟡 |
 | 2026-11-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,581.37 | ▲ close $6,257.41 vs 09:30 $6,128.00 (session +135.84) | 16:00 close · cash $1,581.37 · equity $6,257.41 vs 09:30 $6,128.00 (+129.41; session marks +135.84) · 3 name(s) marked open→close (per-name table). DGX×6 09:30 $251.60 → close $250.81 -4.74; GEN×52 09:30 $29.05 → close $29.89 +43.68; PENN×95 09:30 $16.00 → close $17.02 +96.90 | — |
+| 2026-11-03 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $1,581.37 | ▼ 09:30 equity $6,253.74 vs yday $6,257.41 (-3.67) | 09:30 open · cash $1,581.37 (unchanged overnight, no fees) · equity $6,253.74 vs prior close $6,257.41 (-3.67) · 3 name(s) re-marked at the open (per-name table). DGX×6 yday $250.81 → 09:30 $252.64 +10.98; GEN×52 yday $29.89 → 09:30 $29.59 -15.60; PENN×95 yday $17.02 → 09:30 $17.03 +0.95 | — |
+| 2026-11-03 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,581.37 | ▼ close $6,230.30 vs 09:30 $6,253.74 (session -23.44) | 16:00 close · cash $1,581.37 · equity $6,230.30 vs 09:30 $6,253.74 (-23.44; session marks -23.44) · 3 name(s) marked open→close (per-name table). DGX×6 09:30 $252.64 → close $247.06 -33.48; GEN×52 09:30 $29.59 → close $29.71 +6.24; PENN×95 09:30 $17.03 → close $17.07 +3.80 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `macd_hist` · size `leftover` · sell `list` · S-boost `none` · rank by macd_hist
 
-Cash book **-14.38%** ($8,562) · signal-only (no cash/fees) was -17.17%. Starts YES **5/30**. Fills 327 · skips 257 · realized $-743.63.
+Cash book **-15.87%** ($8,414) · signal-only (no cash/fees) was -17.17%. Starts YES **5/30**. Fills 327 · skips 257 · realized $-743.63.
 
 ## How this sleeve decides (like you are 10)
 
@@ -512,6 +512,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-02 09:30 ET | **BUY** | `VAL` | 10 | $101.40 | $2.02 | — | $3,083.26 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; 🔵; ret5=+8.2; leftover $1079.69 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
 | 2026-11-02 09:30 ET | **BUY** | `AZN` | 5 | $184.59 | $2.00 | — | $2,158.30 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; ret5=+8.8; leftover $1079.69 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-11-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2,158.30 | ▼ close $8,562.38 vs 09:30 $8,615.86 (session -27.79) | 16:00 close · cash $2,158.30 · equity $8,562.38 vs 09:30 $8,615.86 (-53.48; session marks -27.79) · 7 name(s) marked open→close (per-name table). POOL×5 09:30 $208.87 → close $214.76 +29.45; ROP×2 09:30 $465.90 → close $479.54 +27.28; VRTX×1 09:30 $559.93 → close $553.15 -6.78; LNG×3 09:30 $317.48 → close $311.67 -17.43; DGX×4 09:30 $251.60 → close $250.81 -3.16; VAL×10 09:30 $101.40 → close $94.69 -67.10; AZN×5 09:30 $184.59 → close $186.58 +9.95 | — |
+| 2026-11-03 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $2,158.30 | ▼ 09:30 equity $8,475.92 vs yday $8,562.38 (-86.46) | 09:30 open · cash $2,158.30 (unchanged overnight, no fees) · equity $8,475.92 vs prior close $8,562.38 (-86.46) · 7 name(s) re-marked at the open (per-name table). AZN×5 yday $186.58 → 09:30 $186.11 -2.35; DGX×4 yday $250.81 → 09:30 $252.64 +7.32; LNG×3 yday $311.67 → 09:30 $303.59 -24.24; POOL×5 yday $214.76 → 09:30 $211.74 -15.10; ROP×2 yday $479.54 → 09:30 $471.75 -15.58; VAL×10 yday $94.69 → 09:30 $90.51 -41.80; VRTX×1 yday $553.15 → 09:30 $558.44 +5.29 | — |
+| 2026-11-03 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2,158.30 | ▼ close $8,413.52 vs 09:30 $8,475.92 (session -62.40) | 16:00 close · cash $2,158.30 · equity $8,413.52 vs 09:30 $8,475.92 (-62.40; session marks -62.40) · 7 name(s) marked open→close (per-name table). AZN×5 09:30 $186.11 → close $183.88 -11.15; DGX×4 09:30 $252.64 → close $247.06 -22.32; LNG×3 09:30 $303.59 → close $311.17 +22.74; POOL×5 09:30 $211.74 → close $207.25 -22.45; ROP×2 09:30 $471.75 → close $473.58 +3.66; VAL×10 09:30 $90.51 → close $89.99 -5.20; VRTX×1 09:30 $558.44 → close $530.76 -27.68 | — |
 
 ## Not taken
 

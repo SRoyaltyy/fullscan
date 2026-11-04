@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ last_green, no 🚨
 
-Cash book **-22.72%** ($7,728) · signal-only (no cash/fees) was +37.42%. Starts YES **3/30**. Fills 330 · skips 312 · realized $-335.16.
+Cash book **-21.84%** ($7,816) · signal-only (no cash/fees) was +37.42%. Starts YES **3/30**. Fills 331 · skips 312 · realized $-335.16.
 
 ## How this sleeve decides (like you are 10)
 
@@ -516,6 +516,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-02 09:30 ET | **BUY** | `PRIM` | 15 | $73.90 | $2.04 | — | $1,675.43 | — | union ∩ last_green, no 🚨; gate last_green=True; list yday_gainer,yday_mover; 🔵; ret5=+11.9; leftover $1109.45 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-11-02 09:30 ET | **BUY** | `TRU` | 14 | $77.74 | $2.03 | — | $585.04 | — | union ∩ last_green, no 🚨; gate last_green=True; list yday_gainer; 🔵; ret5=-5.8; leftover $1109.45 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-11-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $585.04 | ▼ close $7,728.07 vs 09:30 $7,791.25 (session -41.81) | 16:00 close · cash $585.04 · equity $7,728.07 vs 09:30 $7,791.25 (-63.18; session marks -41.81) · 8 name(s) marked open→close (per-name table). QTTB×2 09:30 $9.00 → close $8.71 -0.58; VEEV×3 09:30 $316.20 → close $307.00 -27.60; VLO×2 09:30 $392.68 → close $381.46 -22.44; CDNA×12 09:30 $86.88 → close $85.88 -12.00; AMN×23 09:30 $47.47 → close $45.77 -39.10; PRMB×55 09:30 $20.03 → close $20.77 +40.70; PRIM×15 09:30 $73.90 → close $73.79 -1.65; TRU×14 09:30 $77.74 → close $79.23 +20.86 | — |
+| 2026-11-03 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $585.04 | ▼ 09:30 equity $7,709.32 vs yday $7,728.07 (-18.75) | 09:30 open · cash $585.04 (unchanged overnight, no fees) · equity $7,709.32 vs prior close $7,728.07 (-18.75) · 8 name(s) re-marked at the open (per-name table). AMN×23 yday $45.77 → 09:30 $45.63 -3.22; CDNA×12 yday $85.88 → 09:30 $85.63 -3.00; PRIM×15 yday $73.79 → 09:30 $75.85 +30.90; PRMB×55 yday $20.77 → 09:30 $20.56 -11.55; QTTB×2 yday $8.71 → 09:30 $8.68 -0.06; TRU×14 yday $79.23 → 09:30 $78.18 -14.70; VEEV×3 yday $307.00 → 09:30 $303.00 -12.00; VLO×2 yday $381.46 → 09:30 $378.90 -5.12 | — |
+| 2026-11-03 09:30 ET | **SELL** | `QTTB` | 2 | $8.68 | $0.20 | $-0.32 | $602.20 | ▼ -0.32 after sell → book $7,709.12; vs 09:30 mark -0.20 | dropped from list after 4 sess (min 3) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 judge🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-03 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $602.20 | ▲ close $7,816.37 vs 09:30 $7,709.32 (session +107.25) | 16:00 close · cash $602.20 · equity $7,816.37 vs 09:30 $7,709.32 (+107.05; session marks +107.25) · 7 name(s) marked open→close (per-name table). AMN×23 09:30 $45.63 → close $45.30 -7.59; CDNA×12 09:30 $85.63 → close $88.47 +34.08; PRIM×15 09:30 $75.85 → close $79.57 +55.80; PRMB×55 09:30 $20.56 → close $20.59 +1.65; TRU×14 09:30 $78.18 → close $78.55 +5.18; VEEV×3 09:30 $303.00 → close $303.21 +0.63; VLO×2 09:30 $378.90 → close $387.65 +17.50 | — |
 
 ## Not taken
 

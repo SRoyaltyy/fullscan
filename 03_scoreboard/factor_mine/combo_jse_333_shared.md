@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared union_join_vol_green_h1/short_news_r_h3/union_e_fresh_h3 w=0.33,0.33,0.33 net=priority
 
-Cash book **-3.94%** ($9,606) · signal-only (no cash/fees) was —. Starts YES **7/30**. Fills 671 · skips 387 · realized $+3094.73.
+Cash book **-3.39%** ($9,661) · signal-only (no cash/fees) was —. Starts YES **7/30**. Fills 671 · skips 387 · realized $+3094.73.
 
 ## How this sleeve decides (like you are 10)
 
@@ -859,6 +859,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-02 09:30 ET | **COVER** | `VOYG` | 89 | $26.47 | $2.26 | $+73.71 | $9,656.04 | ▲ +73.71 after sell → book $9,656.04; vs 09:30 mark -2.26 | short_news_r_h3: dropped from list after 3 sess (min 3) | — |
 | 2026-11-02 09:30 ET | **SHORT** | `BAH` | 55 | $87.16 | $2.33 | — | $14,447.51 | — | news🔴; gate news=bad; list ohlc_hot; 🔵; ret5=+13.0; combo leftover $4828.02; owner short_news_r_h3 | join🔴 sector🔴 gen🟢 news🔴 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-11-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,447.51 | ▼ close $9,606.41 vs 09:30 $9,670.01 (session -47.30) | 16:00 close · cash $14,447.51 · equity $9,606.41 vs 09:30 $9,670.01 (-63.60; session marks -47.30) · 1 name(s) marked open→close (per-name table). BAH×55 09:30 $87.16 → close $88.02 -47.30 | — |
+| 2026-11-03 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $14,447.51 | ▲ 09:30 equity $9,720.26 vs yday $9,606.41 (+113.85) | 09:30 open · cash $14,447.51 (unchanged overnight, no fees) · equity $9,720.26 vs prior close $9,606.41 (+113.85) | — |
+| 2026-11-03 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,447.51 | ▼ close $9,661.41 vs 09:30 $9,720.26 (session -58.85) | 16:00 close · cash $14,447.51 · equity $9,661.41 vs 09:30 $9,720.26 (-58.85; session marks -58.85) · 1 name(s) marked open→close (per-name table). BAH×55 09:30 $85.95 → close $87.02 -58.85 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · ret_5>15
 
-Cash book **-3.95%** ($9,605) · signal-only (no cash/fees) was -19.86%. Starts YES **3/30**. Fills 418 · skips 88 · realized $-1484.16.
+Cash book **-3.69%** ($9,631) · signal-only (no cash/fees) was -19.86%. Starts YES **3/30**. Fills 423 · skips 88 · realized $-1484.16.
 
 ## How this sleeve decides (like you are 10)
 
@@ -602,6 +602,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-02 09:30 ET | **SHORT** | `GM` | 6 | $88.50 | $2.04 | — | $13,708.48 | — | ret_5>15; gate ret_5_min=15.0; list ohlc_hot; 🔵; ret5=+15.1; leftover $605.01 | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-11-02 09:30 ET | **SHORT** | `CMG` | 18 | $31.90 | $2.08 | — | $14,280.60 | — | ret_5>15; gate ret_5_min=15.0; list ohlc_hot; 🔵; ret5=+15.9; leftover $605.01 | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-11-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,280.60 | ▼ close $9,605.13 vs 09:30 $9,680.13 (session -57.05) | 16:00 close · cash $14,280.60 · equity $9,605.13 vs 09:30 $9,680.13 (-75.00; session marks -57.05) · 8 name(s) marked open→close (per-name table). CDNA×6 09:30 $86.88 → close $85.88 +6.00; JLHL×105 09:30 $5.76 → close $5.84 -8.40; GEN×20 09:30 $29.05 → close $29.89 -16.80; HLP×146 09:30 $4.13 → close $4.07 +8.76; DNUT×183 09:30 $3.30 → close $3.39 -16.47; WEN×83 09:30 $7.22 → close $7.26 -3.32; GM×6 09:30 $88.50 → close $89.94 -8.64; CMG×18 09:30 $31.90 → close $32.91 -18.18 | — |
+| 2026-11-03 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $14,280.60 | ▲ 09:30 equity $9,619.04 vs yday $9,605.13 (+13.91) | 09:30 open · cash $14,280.60 (unchanged overnight, no fees) · equity $9,619.04 vs prior close $9,605.13 (+13.91) · 8 name(s) re-marked at the open (per-name table). CDNA×6 yday $85.88 → 09:30 $85.63 +1.50; CMG×18 yday $32.91 → 09:30 $32.89 +0.36; DNUT×183 yday $3.39 → 09:30 $3.38 +1.83; GEN×20 yday $29.89 → 09:30 $29.59 +6.00; GM×6 yday $89.94 → 09:30 $89.89 +0.30; HLP×146 yday $4.07 → 09:30 $4.10 -4.38; JLHL×105 yday $5.84 → 09:30 $5.84 -0.00; WEN×83 yday $7.26 → 09:30 $7.16 +8.30 | — |
+| 2026-11-03 09:30 ET | **COVER** | `CDNA` | 6 | $85.63 | $2.01 | $+3.45 | $13,764.81 | ▲ +3.45 after sell → book $9,617.03; vs 09:30 mark -2.01 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-03 09:30 ET | **COVER** | `GEN` | 20 | $29.59 | $2.05 | $-14.94 | $13,170.96 | ▼ -14.94 after sell → book $9,614.98; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-03 09:30 ET | **COVER** | `HLP` | 146 | $4.10 | $2.43 | $-0.53 | $12,569.93 | ▼ -0.53 after sell → book $9,612.55; vs 09:30 mark -2.43 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-03 09:30 ET | **COVER** | `JLHL` | 105 | $5.84 | $2.31 | $-13.05 | $11,954.43 | ▼ -13.05 after sell → book $9,610.25; vs 09:30 mark -2.30 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟡 digest🟢 judge🔴 ab🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-03 09:30 ET | **COVER** | `WEN` | 83 | $7.16 | $2.24 | $+0.46 | $11,357.91 | ▲ +0.46 after sell → book $9,608.01; vs 09:30 mark -2.24 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-03 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $11,357.91 | ▲ close $9,630.78 vs 09:30 $9,619.04 (session +22.77) | 16:00 close · cash $11,357.91 · equity $9,630.78 vs 09:30 $9,619.04 (+11.74; session marks +22.77) · 3 name(s) marked open→close (per-name table). CMG×18 09:30 $32.89 → close $33.26 -6.66; DNUT×183 09:30 $3.38 → close $3.27 +20.13; GM×6 09:30 $89.89 → close $88.34 +9.30 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ macd_xup, no 🚨
 
-Cash book **-12.57%** ($8,743) · signal-only (no cash/fees) was -55.44%. Starts YES **5/30**. Fills 220 · skips 209 · realized $-2117.42.
+Cash book **-7.31%** ($9,269) · signal-only (no cash/fees) was -55.44%. Starts YES **5/30**. Fills 220 · skips 209 · realized $-2117.42.
 
 ## How this sleeve decides (like you are 10)
 
@@ -406,6 +406,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-02 09:30 ET | **BUY** | `SMMT` | 286 | $16.00 | $3.69 | — | $4,595.29 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list probable,yday_gainer,yday_mover; ret5=+3.6; leftover $4587.49 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-11-02 09:30 ET | **BUY** | `BTSG` | 67 | $67.50 | $2.19 | — | $70.60 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list ohlc_hot; ret5=+11.3; leftover $4587.49 | join🟡 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-11-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $70.60 | ▼ close $8,742.82 vs 09:30 $9,175.94 (session -426.28) | 16:00 close · cash $70.60 · equity $8,742.82 vs 09:30 $9,175.94 (-433.12; session marks -426.28) · 2 name(s) marked open→close (per-name table). SMMT×286 09:30 $16.00 → close $14.80 -343.20; BTSG×67 09:30 $67.50 → close $66.26 -83.08 | — |
+| 2026-11-03 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $70.60 | ▲ 09:30 equity $8,796.08 vs yday $8,742.82 (+53.26) | 09:30 open · cash $70.60 (unchanged overnight, no fees) · equity $8,796.08 vs prior close $8,742.82 (+53.26) · 2 name(s) re-marked at the open (per-name table). BTSG×67 yday $66.26 → 09:30 $66.50 +16.08; SMMT×286 yday $14.80 → 09:30 $14.93 +37.18 | — |
+| 2026-11-03 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $70.60 | ▲ close $9,268.68 vs 09:30 $8,796.08 (session +472.60) | 16:00 close · cash $70.60 · equity $9,268.68 vs 09:30 $8,796.08 (+472.60; session marks +472.60) · 2 name(s) marked open→close (per-name table). BTSG×67 09:30 $66.50 → close $69.84 +223.78; SMMT×286 09:30 $14.93 → close $15.80 +248.82 | — |
 
 ## Not taken
 

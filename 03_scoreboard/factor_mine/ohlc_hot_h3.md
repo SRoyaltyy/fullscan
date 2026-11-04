@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `ohlc_hot` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · baseline list, no extra gate
 
-Cash book **-10.80%** ($8,920) · signal-only (no cash/fees) was +107.52%. Starts YES **4/30**. Fills 373 · skips 271 · realized $-671.83.
+Cash book **-11.38%** ($8,862) · signal-only (no cash/fees) was +107.52%. Starts YES **4/30**. Fills 374 · skips 271 · realized $-671.83.
 
 ## How this sleeve decides (like you are 10)
 
@@ -555,6 +555,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-02 09:30 ET | **BUY** | `BTSG` | 16 | $67.50 | $2.04 | — | $1,297.42 | — | baseline list, no extra gate; list ohlc_hot; ret5=+11.3; leftover $1109.55 | join🟡 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-11-02 09:30 ET | **BUY** | `TGTX` | 18 | $61.01 | $2.04 | — | $197.19 | — | baseline list, no extra gate; list ohlc_hot; ret5=+12.9; leftover $1109.55 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-11-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $197.19 | ▲ close $8,919.65 vs 09:30 $8,799.17 (session +140.38) | 16:00 close · cash $197.19 · equity $8,919.65 vs 09:30 $8,799.17 (+120.48; session marks +140.38) · 8 name(s) marked open→close (per-name table). SLN×52 09:30 $19.75 → close $19.76 +0.52; GEN×38 09:30 $29.05 → close $29.89 +31.92; BC×14 09:30 $76.25 → close $79.05 +39.20; BAH×12 09:30 $87.16 → close $88.02 +10.32; BLDR×16 09:30 $65.73 → close $67.82 +33.44; REAL×90 09:30 $12.31 → close $13.02 +63.90; BTSG×16 09:30 $67.50 → close $66.26 -19.84; TGTX×18 09:30 $61.01 → close $59.95 -19.08 | — |
+| 2026-11-03 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $197.19 | ▼ 09:30 equity $8,888.74 vs yday $8,919.65 (-30.91) | 09:30 open · cash $197.19 (unchanged overnight, no fees) · equity $8,888.74 vs prior close $8,919.65 (-30.91) · 8 name(s) re-marked at the open (per-name table). BAH×12 yday $88.02 → 09:30 $85.95 -24.84; BC×14 yday $79.05 → 09:30 $79.61 +7.84; BLDR×16 yday $67.82 → 09:30 $67.42 -6.40; BTSG×16 yday $66.26 → 09:30 $66.50 +3.84; GEN×38 yday $29.89 → 09:30 $29.59 -11.40; REAL×90 yday $13.02 → 09:30 $12.95 -6.30; SLN×52 yday $19.76 → 09:30 $19.78 +1.04; TGTX×18 yday $59.95 → 09:30 $60.24 +5.31 | — |
+| 2026-11-03 09:30 ET | **SELL** | `SLN` | 52 | $19.78 | $2.17 | $-4.31 | $1,223.58 | ▼ -4.31 after sell → book $8,886.57; vs 09:30 mark -2.17 | dropped from list after 5 sess (min 3) | — |
+| 2026-11-03 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,223.58 | ▼ close $8,861.76 vs 09:30 $8,888.74 (session -24.81) | 16:00 close · cash $1,223.58 · equity $8,861.76 vs 09:30 $8,888.74 (-26.98; session marks -24.81) · 7 name(s) marked open→close (per-name table). BAH×12 09:30 $85.95 → close $87.02 +12.84; BC×14 09:30 $79.61 → close $78.09 -21.28; BLDR×16 09:30 $67.42 → close $63.61 -60.96; BTSG×16 09:30 $66.50 → close $69.84 +53.44; GEN×38 09:30 $29.59 → close $29.71 +4.56; REAL×90 09:30 $12.95 → close $12.70 -22.50; TGTX×18 09:30 $60.24 → close $60.75 +9.09 | — |
 
 ## Not taken
 

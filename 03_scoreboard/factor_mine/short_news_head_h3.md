@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · short prior-export headline🔴
 
-Cash book **-16.89%** ($8,311) · signal-only (no cash/fees) was +2.90%. Starts YES **2/30**. Fills 130 · skips 94 · realized $+602.64.
+Cash book **-16.42%** ($8,358) · signal-only (no cash/fees) was +2.90%. Starts YES **2/30**. Fills 130 · skips 94 · realized $+602.64.
 
 ## How this sleeve decides (like you are 10)
 
@@ -314,6 +314,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-02 09:30 ET | **COVER** | `VOYG` | 77 | $26.47 | $2.22 | $+63.23 | $8,353.70 | ▲ +63.23 after sell → book $8,353.70; vs 09:30 mark -2.22 | dropped from list after 3 sess (min 3) | — |
 | 2026-11-02 09:30 ET | **SHORT** | `BAH` | 47 | $87.16 | $2.29 | — | $12,447.94 | — | short prior-export headline🔴; gate headline=bad; list ohlc_hot; 🔵; ret5=+13.0; leftover $4176.85 | join🔴 sector🔴 gen🟢 news🔴 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-11-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $12,447.94 | ▼ close $8,311.00 vs 09:30 $8,366.05 (session -40.42) | 16:00 close · cash $12,447.94 · equity $8,311.00 vs 09:30 $8,366.05 (-55.05; session marks -40.42) · 1 name(s) marked open→close (per-name table). BAH×47 09:30 $87.16 → close $88.02 -40.42 | — |
+| 2026-11-03 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $12,447.94 | ▲ 09:30 equity $8,408.29 vs yday $8,311.00 (+97.29) | 09:30 open · cash $12,447.94 (unchanged overnight, no fees) · equity $8,408.29 vs prior close $8,311.00 (+97.29) · 1 name(s) re-marked at the open (per-name table). BAH×47 yday $88.02 → 09:30 $85.95 +97.29 | — |
+| 2026-11-03 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $12,447.94 | ▼ close $8,358.00 vs 09:30 $8,408.29 (session -50.29) | 16:00 close · cash $12,447.94 · equity $8,358.00 vs 09:30 $8,408.29 (-50.29; session marks -50.29) · 1 name(s) marked open→close (per-name table). BAH×47 09:30 $85.95 → close $87.02 -50.29 | — |
 
 ## Not taken
 

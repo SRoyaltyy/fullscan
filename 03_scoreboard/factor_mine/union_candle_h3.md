@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ candle, no 🚨
 
-Cash book **-21.78%** ($7,822) · signal-only (no cash/fees) was +24.03%. Starts YES **8/30**. Fills 356 · skips 304 · realized $-1035.82.
+Cash book **-20.25%** ($7,975) · signal-only (no cash/fees) was +24.03%. Starts YES **8/30**. Fills 356 · skips 304 · realized $-1035.82.
 
 ## How this sleeve decides (like you are 10)
 
@@ -542,6 +542,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-02 09:30 ET | **BUY** | `AMX` | 39 | $24.57 | $2.11 | — | $1,204.20 | — | union ∩ candle, no 🚨; gate candle_capture=True; list yday_gainer; 🔵; ret5=-0.4; leftover $981.99 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-11-02 09:30 ET | **BUY** | `TBBB` | 17 | $56.87 | $2.04 | — | $235.37 | — | union ∩ candle, no 🚨; gate candle_capture=True; list yday_gainer; 🔵; ret5=-3.2; leftover $981.99 | join🔴 sector🟡 gen🟢 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-11-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $235.37 | ▼ close $7,822.45 vs 09:30 $7,862.76 (session -16.71) | 16:00 close · cash $235.37 · equity $7,822.45 vs 09:30 $7,862.76 (-40.31; session marks -16.71) · 8 name(s) marked open→close (per-name table). CDNA×11 09:30 $86.88 → close $85.88 -11.00; AMN×20 09:30 $47.47 → close $45.77 -34.00; PRMB×49 09:30 $20.03 → close $20.77 +36.26; NVTS×114 09:30 $8.56 → close $7.93 -71.82; EPR×17 09:30 $57.70 → close $59.58 +31.96; POOL×4 09:30 $208.87 → close $214.76 +23.56; AMX×39 09:30 $24.57 → close $24.74 +6.63; TBBB×17 09:30 $56.87 → close $56.97 +1.70 | — |
+| 2026-11-03 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $235.37 | ▲ 09:30 equity $7,878.48 vs yday $7,822.45 (+56.03) | 09:30 open · cash $235.37 (unchanged overnight, no fees) · equity $7,878.48 vs prior close $7,822.45 (+56.03) · 8 name(s) re-marked at the open (per-name table). AMN×20 yday $45.77 → 09:30 $45.63 -2.80; AMX×39 yday $24.74 → 09:30 $24.69 -1.95; CDNA×11 yday $85.88 → 09:30 $85.63 -2.75; EPR×17 yday $59.58 → 09:30 $59.39 -3.23; NVTS×114 yday $7.93 → 09:30 $8.26 +37.62; POOL×4 yday $214.76 → 09:30 $211.74 -12.08; PRMB×49 yday $20.77 → 09:30 $20.56 -10.29; TBBB×17 yday $56.97 → 09:30 $60.00 +51.51 | — |
+| 2026-11-03 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $235.37 | ▲ close $7,975.36 vs 09:30 $7,878.48 (session +96.88) | 16:00 close · cash $235.37 · equity $7,975.36 vs 09:30 $7,878.48 (+96.88; session marks +96.88) · 8 name(s) marked open→close (per-name table). AMN×20 09:30 $45.63 → close $45.30 -6.60; AMX×39 09:30 $24.69 → close $24.75 +2.34; CDNA×11 09:30 $85.63 → close $88.47 +31.24; EPR×17 09:30 $59.39 → close $59.49 +1.70; NVTS×114 09:30 $8.26 → close $8.56 +34.20; POOL×4 09:30 $211.74 → close $207.25 -17.96; PRMB×49 09:30 $20.56 → close $20.59 +1.47; TBBB×17 09:30 $60.00 → close $62.97 +50.49 | — |
 
 ## Not taken
 

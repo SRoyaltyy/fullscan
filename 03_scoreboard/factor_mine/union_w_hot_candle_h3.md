@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `w_hot_candle` · size `leftover` · sell `list` · S-boost `none` · rank by w_hot_candle
 
-Cash book **+0.51%** ($10,051) · signal-only (no cash/fees) was +319.57%. Starts YES **29/30**. Fills 364 · skips 289 · realized $+901.34.
+Cash book **+0.21%** ($10,021) · signal-only (no cash/fees) was +319.57%. Starts YES **29/30**. Fills 365 · skips 289 · realized $+901.34.
 
 ## How this sleeve decides (like you are 10)
 
@@ -549,6 +549,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-02 09:30 ET | **BUY** | `GEN` | 42 | $29.05 | $2.12 | — | $1,344.57 | — | rank by w_hot_candle; rank w_hot_candle; list ohlc_hot; 🔵; ret5=+17.1; leftover $1240.71 | join🟡 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-11-02 09:30 ET | **BUY** | `ROP` | 2 | $465.90 | $2.00 | — | $410.77 | — | rank by w_hot_candle; rank w_hot_candle; list ohlc_hot; 🔵; ret5=+6.5; leftover $1240.71 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-11-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $410.77 | ▲ close $10,050.75 vs 09:30 $9,913.34 (session +155.82) | 16:00 close · cash $410.77 · equity $10,050.75 vs 09:30 $9,913.34 (+137.41; session marks +155.82) · 8 name(s) marked open→close (per-name table). SLN×62 09:30 $19.75 → close $19.76 +0.62; CDNA×14 09:30 $86.88 → close $85.88 -14.00; BAH×14 09:30 $87.16 → close $88.02 +12.04; BC×16 09:30 $76.25 → close $79.05 +44.80; TGTX×20 09:30 $61.01 → close $59.95 -21.20; REAL×100 09:30 $12.31 → close $13.02 +71.00; GEN×42 09:30 $29.05 → close $29.89 +35.28; ROP×2 09:30 $465.90 → close $479.54 +27.28 | — |
+| 2026-11-03 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $410.77 | ▼ 09:30 equity $9,999.19 vs yday $10,050.75 (-51.56) | 09:30 open · cash $410.77 (unchanged overnight, no fees) · equity $9,999.19 vs prior close $10,050.75 (-51.56) · 8 name(s) re-marked at the open (per-name table). BAH×14 yday $88.02 → 09:30 $85.95 -28.98; BC×16 yday $79.05 → 09:30 $79.61 +8.96; CDNA×14 yday $85.88 → 09:30 $85.63 -3.50; GEN×42 yday $29.89 → 09:30 $29.59 -12.60; REAL×100 yday $13.02 → 09:30 $12.95 -7.00; ROP×2 yday $479.54 → 09:30 $471.75 -15.58; SLN×62 yday $19.76 → 09:30 $19.78 +1.24; TGTX×20 yday $59.95 → 09:30 $60.24 +5.90 | — |
+| 2026-11-03 09:30 ET | **SELL** | `SLN` | 62 | $19.78 | $2.20 | $-4.37 | $1,634.93 | ▼ -4.37 after sell → book $9,996.99; vs 09:30 mark -2.20 | dropped from list after 5 sess (min 3) | — |
+| 2026-11-03 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,634.93 | ▲ close $10,021.21 vs 09:30 $9,999.19 (session +24.22) | 16:00 close · cash $1,634.93 · equity $10,021.21 vs 09:30 $9,999.19 (+22.02; session marks +24.22) · 7 name(s) marked open→close (per-name table). BAH×14 09:30 $85.95 → close $87.02 +14.98; BC×16 09:30 $79.61 → close $78.09 -24.32; CDNA×14 09:30 $85.63 → close $88.47 +39.76; GEN×42 09:30 $29.59 → close $29.71 +5.04; REAL×100 09:30 $12.95 → close $12.70 -25.00; ROP×2 09:30 $471.75 → close $473.58 +3.66; TGTX×20 09:30 $60.24 → close $60.75 +10.10 | — |
 
 ## Not taken
 

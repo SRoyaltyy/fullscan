@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ coil_off, no 🚨
 
-Cash book **-27.89%** ($7,211) · signal-only (no cash/fees) was -17.20%. Starts YES **0/30**. Fills 451 · skips 105 · realized $-1593.31.
+Cash book **-27.19%** ($7,281) · signal-only (no cash/fees) was -17.20%. Starts YES **0/30**. Fills 456 · skips 105 · realized $-1593.31.
 
 ## How this sleeve decides (like you are 10)
 
@@ -640,6 +640,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-02 09:30 ET | **BUY** | `CXW` | 29 | $30.94 | $2.08 | — | $1,081.18 | — | union ∩ coil_off, no 🚨; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list probable,yday_gainer,yday_mover; 🔵; ret5=+2.8; leftover $922.23 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-11-02 09:30 ET | **BUY** | `MX` | 373 | $2.47 | $4.81 | — | $155.06 | — | union ∩ coil_off, no 🚨; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list yday_gainer,yday_mover; 🔵; ret5=+0.0; leftover $922.23 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-11-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $155.06 | ▼ close $7,210.99 vs 09:30 $7,377.85 (session -147.33) | 16:00 close · cash $155.06 · equity $7,210.99 vs 09:30 $7,377.85 (-166.86; session marks -147.33) · 8 name(s) marked open→close (per-name table). ARQT×28 09:30 $32.08 → close $31.26 -22.87; ETON×17 09:30 $52.92 → close $50.81 -35.87; PRMB×46 09:30 $20.03 → close $20.77 +34.04; NVTS×107 09:30 $8.56 → close $7.93 -67.41; EPR×15 09:30 $57.70 → close $59.58 +28.20; PDFS×21 09:30 $42.10 → close $38.97 -65.73; CXW×29 09:30 $30.94 → close $30.33 -17.69; MX×373 09:30 $2.47 → close $2.47 +0.00 | — |
+| 2026-11-03 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $155.06 | ▲ 09:30 equity $7,275.86 vs yday $7,210.99 (+64.87) | 09:30 open · cash $155.06 (unchanged overnight, no fees) · equity $7,275.86 vs prior close $7,210.99 (+64.87) · 8 name(s) re-marked at the open (per-name table). ARQT×28 yday $31.26 → 09:30 $31.32 +1.68; CXW×29 yday $30.33 → 09:30 $30.35 +0.58; EPR×15 yday $59.58 → 09:30 $59.39 -2.85; ETON×17 yday $50.81 → 09:30 $50.81 +0.00; MX×373 yday $2.47 → 09:30 $2.53 +22.38; NVTS×107 yday $7.93 → 09:30 $8.26 +35.31; PDFS×21 yday $38.97 → 09:30 $39.80 +17.43; PRMB×46 yday $20.77 → 09:30 $20.56 -9.66 | — |
+| 2026-11-03 09:30 ET | **SELL** | `ARQT` | 28 | $31.32 | $2.09 | $-25.36 | $1,029.93 | ▼ -25.36 after sell → book $7,273.77; vs 09:30 mark -2.09 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-03 09:30 ET | **SELL** | `EPR` | 15 | $59.39 | $2.06 | $+21.26 | $1,918.72 | ▲ +21.26 after sell → book $7,271.71; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-03 09:30 ET | **SELL** | `ETON` | 17 | $50.81 | $2.06 | $-39.97 | $2,780.43 | ▼ -39.97 after sell → book $7,269.65; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-03 09:30 ET | **SELL** | `NVTS` | 107 | $8.26 | $2.34 | $-36.75 | $3,661.91 | ▼ -36.75 after sell → book $7,267.31; vs 09:30 mark -2.34 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🟡 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-03 09:30 ET | **SELL** | `PDFS` | 21 | $39.80 | $2.07 | $-52.43 | $4,495.64 | ▼ -52.43 after sell → book $7,265.24; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-03 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $4,495.64 | ▲ close $7,280.87 vs 09:30 $7,275.86 (session +15.63) | 16:00 close · cash $4,495.64 · equity $7,280.87 vs 09:30 $7,275.86 (+5.01; session marks +15.63) · 3 name(s) marked open→close (per-name table). CXW×29 09:30 $30.35 → close $30.97 +17.98; MX×373 09:30 $2.53 → close $2.52 -3.73; PRMB×46 09:30 $20.56 → close $20.59 +1.38 | — |
 
 ## Not taken
 

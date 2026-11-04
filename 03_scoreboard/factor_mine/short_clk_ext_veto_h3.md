@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · Clock-B #5 extreme ext + fade/fail-break as a short
 
-Cash book **-16.81%** ($8,319) · signal-only (no cash/fees) was -97.41%. Starts YES **0/30**. Fills 281 · skips 219 · realized $-964.15.
+Cash book **-16.41%** ($8,359) · signal-only (no cash/fees) was -97.41%. Starts YES **0/30**. Fills 281 · skips 219 · realized $-964.15.
 
 ## How this sleeve decides (like you are 10)
 
@@ -465,6 +465,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-02 09:30 ET | **COVER** | `IMSR` | 1602 | $3.24 | $20.67 | $-506.34 | $8,272.43 | ▼ -506.34 after sell → book $8,272.43; vs 09:30 mark -20.67 | dropped from list after 3 sess (min 3) | — |
 | 2026-11-02 09:30 ET | **SHORT** | `HLP` | 1001 | $4.13 | $13.23 | — | $12,393.34 | — | Clock-B #5 extreme ext + fade/fail-break as a short; gate clk_ext_veto=True; list ohlc_hot; 🔵; ret5=+15.7; leftover $4136.22 | join🔴 sector🟡 gen🟢 news🟡 digest🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-11-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $12,393.34 | ▲ close $8,319.27 vs 09:30 $8,293.10 (session +60.06) | 16:00 close · cash $12,393.34 · equity $8,319.27 vs 09:30 $8,293.10 (+26.17; session marks +60.06) · 1 name(s) marked open→close (per-name table). HLP×1001 09:30 $4.13 → close $4.07 +60.06 | — |
+| 2026-11-03 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $12,393.34 | ▼ 09:30 equity $8,289.24 vs yday $8,319.27 (-30.03) | 09:30 open · cash $12,393.34 (unchanged overnight, no fees) · equity $8,289.24 vs prior close $8,319.27 (-30.03) · 1 name(s) re-marked at the open (per-name table). HLP×1001 yday $4.07 → 09:30 $4.10 -30.03 | — |
+| 2026-11-03 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $12,393.34 | ▲ close $8,359.31 vs 09:30 $8,289.24 (session +70.07) | 16:00 close · cash $12,393.34 · equity $8,359.31 vs 09:30 $8,289.24 (+70.07; session marks +70.07) · 1 name(s) marked open→close (per-name table). HLP×1001 09:30 $4.10 → close $4.03 +70.07 | — |
 
 ## Not taken
 

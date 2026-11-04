@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `w_hot_cond` · size `leftover` · sell `list` · S-boost `none` · rank by w_hot_cond
 
-Cash book **+30.27%** ($13,027) · signal-only (no cash/fees) was +337.30%. Starts YES **29/30**. Fills 370 · skips 286 · realized $+834.44.
+Cash book **+31.17%** ($13,117) · signal-only (no cash/fees) was +337.30%. Starts YES **29/30**. Fills 371 · skips 286 · realized $+834.44.
 
 ## How this sleeve decides (like you are 10)
 
@@ -555,6 +555,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-02 09:30 ET | **BUY** | `UWMC` | 1059 | $1.57 | $13.66 | — | $2,586.84 | — | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; ret5=+8.3; leftover $1663.48 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-11-02 09:30 ET | **BUY** | `AMN` | 35 | $47.47 | $2.10 | — | $923.30 | — | rank by w_hot_cond; rank w_hot_cond; list flatten; 🔵; ret5=-1.9; leftover $1663.48 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟢 |
 | 2026-11-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $923.30 | ▼ close $13,026.76 vs 09:30 $13,186.36 (session -132.25) | 16:00 close · cash $923.30 · equity $13,026.76 vs 09:30 $13,186.36 (-159.60; session marks -132.25) · 8 name(s) marked open→close (per-name table). SLN×78 09:30 $19.75 → close $19.76 +0.78; CDNA×19 09:30 $86.88 → close $85.88 -19.00; LLY×1 09:30 $1393.15 → close $1410.99 +17.84; VRTX×2 09:30 $559.93 → close $553.15 -13.56; BTSG×24 09:30 $67.50 → close $66.26 -29.76; LNG×5 09:30 $317.48 → close $311.67 -29.05; UWMC×1059 09:30 $1.57 → close $1.57 +0.00; AMN×35 09:30 $47.47 → close $45.77 -59.50 | — |
+| 2026-11-03 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $923.30 | ▼ 09:30 equity $13,004.43 vs yday $13,026.76 (-22.33) | 09:30 open · cash $923.30 (unchanged overnight, no fees) · equity $13,004.43 vs prior close $13,026.76 (-22.33) · 8 name(s) re-marked at the open (per-name table). AMN×35 yday $45.77 → 09:30 $45.63 -4.90; BTSG×24 yday $66.26 → 09:30 $66.50 +5.76; CDNA×19 yday $85.88 → 09:30 $85.63 -4.75; LLY×1 yday $1410.99 → 09:30 $1399.63 -11.36; LNG×5 yday $311.67 → 09:30 $303.59 -40.40; SLN×78 yday $19.76 → 09:30 $19.78 +1.56; UWMC×1059 yday $1.57 → 09:30 $1.59 +21.18; VRTX×2 yday $553.15 → 09:30 $558.44 +10.58 | — |
+| 2026-11-03 09:30 ET | **SELL** | `SLN` | 78 | $19.78 | $2.25 | $-4.47 | $2,463.89 | ▼ -4.47 after sell → book $13,002.18; vs 09:30 mark -2.25 | dropped from list after 5 sess (min 3) | — |
+| 2026-11-03 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2,463.89 | ▲ close $13,117.04 vs 09:30 $13,004.43 (session +114.86) | 16:00 close · cash $2,463.89 · equity $13,117.04 vs 09:30 $13,004.43 (+112.61; session marks +114.86) · 7 name(s) marked open→close (per-name table). AMN×35 09:30 $45.63 → close $45.30 -11.55; BTSG×24 09:30 $66.50 → close $69.84 +80.16; CDNA×19 09:30 $85.63 → close $88.47 +53.96; LLY×1 09:30 $1399.63 → close $1409.38 +9.75; LNG×5 09:30 $303.59 → close $311.17 +37.90; UWMC×1059 09:30 $1.59 → close $1.59 +0.00; VRTX×2 09:30 $558.44 → close $530.76 -55.36 | — |
 
 ## Not taken
 

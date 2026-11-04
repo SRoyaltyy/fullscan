@@ -288,6 +288,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-02 09:30 ET | **SELL** | `CRS` | 15 | $285.91 | $2.08 | $-91.86 | $4,610.49 | ▼ -91.86 after sell → book $8,837.04; vs 09:30 mark -2.08 | dropped from list after 3 sess (min 3) | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-11-02 09:30 ET | **SELL** | `ITW` | 15 | $281.77 | $2.08 | $+71.19 | $8,834.96 | ▲ +71.19 after sell → book $8,834.96; vs 09:30 mark -2.08 | dropped from list after 3 sess (min 3) | join🔴 sector🔴 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-11-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,834.96 | ▲ close $8,834.96 vs 09:30 $8,839.12 (session +0.00) | 16:00 close · cash $8,834.96 · no lots left · equity $8,834.96. | — |
+| 2026-11-03 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,834.96 | ▲ 09:30 equity $8,834.96 vs yday $8,834.96 (+0.00) | 09:30 open · cash $8,834.96 · no holdings · equity $8,834.96 vs prior close $8,834.96 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-03 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,834.96 | ▲ close $8,834.96 vs 09:30 $8,834.96 (session +0.00) | 16:00 close · cash $8,834.96 · no lots left · equity $8,834.96. | — |
 
 ## Not taken
 

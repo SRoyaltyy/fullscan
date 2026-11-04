@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-28.38%** ($7,162) · signal-only (no cash/fees) was -21.07%. Starts YES **1/30**. Fills 363 · skips 304 · realized $-1242.34.
+Cash book **-29.52%** ($7,048) · signal-only (no cash/fees) was -21.07%. Starts YES **1/30**. Fills 363 · skips 304 · realized $-1242.34.
 
 ## How this sleeve decides (like you are 10)
 
@@ -554,6 +554,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-02 09:30 ET | **BUY** | `VAL` | 8 | $101.40 | $2.01 | — | $2,403.01 | — | combo gate; gate last_green=True,ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list ohlc_hot; 🔵; ret5=+8.2; leftover $898.05 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
 | 2026-11-02 09:30 ET | **BUY** | `AZN` | 4 | $184.59 | $2.00 | — | $1,662.65 | — | combo gate; gate last_green=True,ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list ohlc_hot; ret5=+8.8; leftover $898.05 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-11-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,662.65 | ▼ close $7,162.26 vs 09:30 $7,196.07 (session -7.43) | 16:00 close · cash $1,662.65 · equity $7,162.26 vs 09:30 $7,196.07 (-33.81; session marks -7.43) · 7 name(s) marked open→close (per-name table). PRMB×44 09:30 $20.03 → close $20.77 +32.56; ROP×1 09:30 $465.90 → close $479.54 +13.64; BBIO×11 09:30 $75.01 → close $75.00 -0.17; RKT×68 09:30 $13.05 → close $13.77 +48.96; RIG×135 09:30 $6.65 → close $6.23 -56.70; VAL×8 09:30 $101.40 → close $94.69 -53.68; AZN×4 09:30 $184.59 → close $186.58 +7.96 | — |
+| 2026-11-03 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $1,662.65 | ▼ 09:30 equity $7,083.86 vs yday $7,162.26 (-78.40) | 09:30 open · cash $1,662.65 (unchanged overnight, no fees) · equity $7,083.86 vs prior close $7,162.26 (-78.40) · 7 name(s) re-marked at the open (per-name table). AZN×4 yday $186.58 → 09:30 $186.11 -1.88; BBIO×11 yday $75.00 → 09:30 $75.48 +5.33; PRMB×44 yday $20.77 → 09:30 $20.56 -9.24; RIG×135 yday $6.23 → 09:30 $6.00 -31.05; RKT×68 yday $13.77 → 09:30 $13.77 -0.34; ROP×1 yday $479.54 → 09:30 $471.75 -7.79; VAL×8 yday $94.69 → 09:30 $90.51 -33.44 | — |
+| 2026-11-03 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,662.65 | ▼ close $7,047.54 vs 09:30 $7,083.86 (session -36.32) | 16:00 close · cash $1,662.65 · equity $7,047.54 vs 09:30 $7,083.86 (-36.32; session marks -36.32) · 7 name(s) marked open→close (per-name table). AZN×4 09:30 $186.11 → close $183.88 -8.92; BBIO×11 09:30 $75.48 → close $74.03 -15.95; PRMB×44 09:30 $20.56 → close $20.59 +1.32; RIG×135 09:30 $6.00 → close $5.90 -13.50; RKT×68 09:30 $13.77 → close $13.81 +3.06; ROP×1 09:30 $471.75 → close $473.58 +1.83; VAL×8 09:30 $90.51 → close $89.99 -4.16 | — |
 
 ## Not taken
 

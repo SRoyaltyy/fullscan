@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared short_news_r_h3/union_e_fresh_h1 w=0.5,0.5 net=priority
 
-Cash book **-18.55%** ($8,146) · signal-only (no cash/fees) was —. Starts YES **1/30**. Fills 402 · skips 162 · realized $+1198.48.
+Cash book **-18.09%** ($8,192) · signal-only (no cash/fees) was —. Starts YES **1/30**. Fills 402 · skips 162 · realized $+1198.48.
 
 ## How this sleeve decides (like you are 10)
 
@@ -589,6 +589,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-02 09:30 ET | **COVER** | `VOYG` | 75 | $26.47 | $2.21 | $+61.48 | $8,187.36 | ▲ +61.48 after sell → book $8,187.36; vs 09:30 mark -2.22 | short_news_r_h3: dropped from list after 3 sess (min 3) | — |
 | 2026-11-02 09:30 ET | **SHORT** | `BAH` | 46 | $87.16 | $2.28 | — | $12,194.44 | — | news🔴; gate news=bad; list ohlc_hot; 🔵; ret5=+13.0; combo leftover $4093.68; owner short_news_r_h3 | join🔴 sector🔴 gen🟢 news🔴 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-11-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $12,194.44 | ▼ close $8,145.52 vs 09:30 $8,199.51 (session -39.56) | 16:00 close · cash $12,194.44 · equity $8,145.52 vs 09:30 $8,199.51 (-53.99; session marks -39.56) · 1 name(s) marked open→close (per-name table). BAH×46 09:30 $87.16 → close $88.02 -39.56 | — |
+| 2026-11-03 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $12,194.44 | ▲ 09:30 equity $8,240.74 vs yday $8,145.52 (+95.22) | 09:30 open · cash $12,194.44 (unchanged overnight, no fees) · equity $8,240.74 vs prior close $8,145.52 (+95.22) | — |
+| 2026-11-03 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $12,194.44 | ▼ close $8,191.52 vs 09:30 $8,240.74 (session -49.22) | 16:00 close · cash $12,194.44 · equity $8,191.52 vs 09:30 $8,240.74 (-49.22; session marks -49.22) · 1 name(s) marked open→close (per-name table). BAH×46 09:30 $85.95 → close $87.02 -49.22 | — |
 
 ## Not taken
 

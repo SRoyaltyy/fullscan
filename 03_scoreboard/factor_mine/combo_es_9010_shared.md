@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared union_e_fresh_h3/short_news_r_h3 w=0.9,0.1 net=priority
 
-Cash book **-9.91%** ($9,009) · signal-only (no cash/fees) was —. Starts YES **25/30**. Fills 369 · skips 319 · realized $+4040.10.
+Cash book **-9.40%** ($9,060) · signal-only (no cash/fees) was —. Starts YES **25/30**. Fills 369 · skips 319 · realized $+4040.10.
 
 ## How this sleeve decides (like you are 10)
 
@@ -556,6 +556,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-02 09:30 ET | **COVER** | `VOYG` | 83 | $26.47 | $2.24 | $+68.47 | $9,055.56 | ▲ +68.47 after sell → book $9,055.56; vs 09:30 mark -2.24 | short_news_r_h3: dropped from list after 3 sess (min 3) | — |
 | 2026-11-02 09:30 ET | **SHORT** | `BAH` | 51 | $87.16 | $2.31 | — | $13,498.41 | — | news🔴; gate news=bad; list ohlc_hot; 🔵; ret5=+13.0; combo leftover $4527.78; owner short_news_r_h3 | join🔴 sector🔴 gen🟢 news🔴 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-11-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $13,498.41 | ▼ close $9,009.39 vs 09:30 $9,068.78 (session -43.86) | 16:00 close · cash $13,498.41 · equity $9,009.39 vs 09:30 $9,068.78 (-59.39; session marks -43.86) · 1 name(s) marked open→close (per-name table). BAH×51 09:30 $87.16 → close $88.02 -43.86 | — |
+| 2026-11-03 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $13,498.41 | ▲ 09:30 equity $9,114.96 vs yday $9,009.39 (+105.57) | 09:30 open · cash $13,498.41 (unchanged overnight, no fees) · equity $9,114.96 vs prior close $9,009.39 (+105.57) | — |
+| 2026-11-03 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $13,498.41 | ▼ close $9,060.39 vs 09:30 $9,114.96 (session -54.57) | 16:00 close · cash $13,498.41 · equity $9,060.39 vs 09:30 $9,114.96 (-54.57; session marks -54.57) · 1 name(s) marked open→close (per-name table). BAH×51 09:30 $85.95 → close $87.02 -54.57 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · split short_news_r_h3/union_e_fresh_h3 w=0.5,0.5 net=priority
 
-Cash book **-14.80%** ($8,520) · signal-only (no cash/fees) was —. Starts YES **21/30**. Fills 353 · skips 315 · realized $+2068.42.
+Cash book **-14.55%** ($8,545) · signal-only (no cash/fees) was —. Starts YES **21/30**. Fills 353 · skips 315 · realized $+2068.42.
 
 ## How this sleeve decides (like you are 10)
 
@@ -600,6 +600,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-02 09:30 ET | **COVER** | `VOYG` | 40 | $26.47 | $2.11 | $+30.93 | $4,385.50 | ▲ +30.93 after sell → book $4,385.50; vs 09:30 mark -2.11 | dropped from list after 3 sess (min 3) | — |
 | 2026-11-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6,531.16 | ▼ 09:30 equity $4,392.92 vs yday $4,411.00 (-18.08) | 09:30 open · cash $6,531.16 (unchanged overnight, no fees) · equity $4,392.92 vs prior close $4,411.00 (-18.08) · 2 name(s) re-marked at the open (per-name table). SPCE×412 yday $2.58 → 09:30 $2.62 -16.48; VOYG×40 yday $26.43 → 09:30 $26.47 -1.60 | — |
 | 2026-11-02 09:30 ET | **SHORT** | `BAH` | 25 | $87.16 | $2.15 | — | $6,562.34 | — | news🔴; gate news=bad; list ohlc_hot; 🔵; ret5=+13.0; leftover $2192.75 | join🔴 sector🔴 gen🟢 news🔴 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-03 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,562.34 | ▼ close $4,386.84 vs 09:30 $4,413.59 (session -26.75) | 16:00 close · cash $6,562.34 · equity $4,386.84 vs 09:30 $4,413.59 (-26.75; session marks -26.75) · 1 name(s) marked open→close (per-name table). BAH×25 09:30 $85.95 → close $87.02 -26.75 | — |
+| 2026-11-03 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6,562.34 | ▲ 09:30 equity $4,413.59 vs yday $4,361.84 (+51.75) | 09:30 open · cash $6,562.34 (unchanged overnight, no fees) · equity $4,413.59 vs prior close $4,361.84 (+51.75) · 1 name(s) re-marked at the open (per-name table). BAH×25 yday $88.02 → 09:30 $85.95 +51.75 | — |
 
 ## Not taken
 
