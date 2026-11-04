@@ -1,5 +1,198 @@
 [
   {
+    "title": "Public Law 117 - 7 - An act to prevent across-the-board direct spending cuts, and for other purposes.",
+    "url": "https://www.govinfo.gov/app/details/PLAW-117publ7",
+    "native_id": "PLAW-117publ7",
+    "published_at": "2026-11-04T16:04:00+00:00",
+    "published_raw": "Wed, 04 Nov 2026 16:04:00 +0000",
+    "summary": "Content Files PDF TEXT USLM Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "public_law",
+      "document_stage": "law_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Public and Private Laws",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-plaw",
+    "n": 8524,
+    "first_seen": "2026-11-04T20:26:55.940049+00:00",
+    "last_seen": "2026-11-04T20:26:55.940049+00:00",
+    "source_ids": [
+      "us-govinfo-plaw"
+    ]
+  },
+  {
+    "title": "Public Law 117 - 9 - An act to amend the Federal Food, Drug, and Cosmetic Act with respect to the scope of new chemical exclusivity.",
+    "url": "https://www.govinfo.gov/app/details/PLAW-117publ9",
+    "native_id": "PLAW-117publ9",
+    "published_at": "2026-11-04T16:04:00+00:00",
+    "published_raw": "Wed, 04 Nov 2026 16:04:00 +0000",
+    "summary": "Content Files PDF TEXT USLM Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "public_law",
+      "document_stage": "law_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Public and Private Laws",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-plaw",
+    "n": 8523,
+    "first_seen": "2026-11-04T20:26:55.940049+00:00",
+    "last_seen": "2026-11-04T20:26:55.940049+00:00",
+    "source_ids": [
+      "us-govinfo-plaw"
+    ]
+  },
+  {
+    "title": "Carlo Fountaine and Susan Jane Fountaine trading as Hall Farm Narford Partnership: decision on licence application",
+    "url": "https://www.gov.uk/government/publications/carlo-fountaine-and-susan-jane-fountaine-trading-as-hall-farm-narford-partnership-decision-on-licence-application",
+    "native_id": "/government/publications/carlo-fountaine-and-susan-jane-fountaine-trading-as-hall-farm-narford-partnership-decision-on-licence-application",
+    "published_at": "2026-11-04T15:33:43+00:00",
+    "published_raw": "2026-11-04T15:33:43Z",
+    "document_type": "decision",
+    "issuer": "Environment Agency",
+    "issuer_ids": [
+      "uk-gov:environment-agency"
+    ],
+    "summary": "The Environment Agency has made a decision on an application made by Carlo Fountaine and Susan Jane Fountaine trading as Hall Farm Narford Partnership for a licence to abstract (take) water",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Environment Agency",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 8508,
+    "first_seen": "2026-11-04T20:26:55.940049+00:00",
+    "last_seen": "2026-11-04T20:26:55.940049+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Teacher misconduct panel outcome: Mr Richard Hill",
+    "url": "https://www.gov.uk/government/publications/teacher-misconduct-panel-outcome-mr-richard-hill",
+    "native_id": "/government/publications/teacher-misconduct-panel-outcome-mr-richard-hill",
+    "published_at": "2026-11-04T14:36:30+00:00",
+    "published_raw": "2026-11-04T14:36:30Z",
+    "document_type": "decision",
+    "issuer": "Teaching Regulation Agency",
+    "issuer_ids": [
+      "uk-gov:teaching-regulation-agency"
+    ],
+    "summary": "Professional conduct panel outcome, including decision and reasons.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Teaching Regulation Agency",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 8509,
+    "first_seen": "2026-11-04T20:26:55.940049+00:00",
+    "last_seen": "2026-11-04T20:26:55.940049+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Advertising investigations: October 2026",
+    "url": "https://www.gov.uk/government/publications/advertising-investigations-october-2026",
+    "native_id": "/government/publications/advertising-investigations-october-2026",
+    "published_at": "2026-11-04T12:18:08+00:00",
+    "published_raw": "2026-11-04T12:18:08Z",
+    "document_type": "decision",
+    "issuer": "Medicines and Healthcare products Regulatory Agency",
+    "issuer_ids": [
+      "uk-gov:medicines-and-healthcare-products-regulatory-agency"
+    ],
+    "summary": "Decisions made by MHRA on adverts reported to have breached the legislation on advertising medicines.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Medicines and Healthcare products Regulatory Agency",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 8510,
+    "first_seen": "2026-11-04T20:26:55.940049+00:00",
+    "last_seen": "2026-11-04T20:26:55.940049+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Rentplus Homes Limited",
+    "url": "https://www.gov.uk/government/publications/rentplus-homes-limited",
+    "native_id": "/government/publications/rentplus-homes-limited",
+    "published_at": "2026-11-04T09:30:06+00:00",
+    "published_raw": "2026-11-04T09:30:06Z",
+    "document_type": "decision",
+    "issuer": "Regulator of Social Housing",
+    "issuer_ids": [
+      "uk-gov:regulator-of-social-housing"
+    ],
+    "summary": "The Regulator of Social Housing's view of how well Rentplus Homes Limited is meeting regulatory standards.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Regulator of Social Housing",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 8511,
+    "first_seen": "2026-11-04T20:26:55.940049+00:00",
+    "last_seen": "2026-11-04T20:26:55.940049+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Coastal access: Section 52 notices for Kimmeridge Bay to Highcliffe",
+    "url": "https://www.gov.uk/government/publications/coastal-access-section-52-notices-for-kimmeridge-bay-to-highcliffe",
+    "native_id": "/government/publications/coastal-access-section-52-notices-for-kimmeridge-bay-to-highcliffe",
+    "published_at": "2026-11-04T09:10:46+00:00",
+    "published_raw": "2026-11-04T09:10:46Z",
+    "document_type": "decision",
+    "issuer": "Department for Environment, Food & Rural Affairs",
+    "issuer_ids": [
+      "uk-gov:department-for-environment-food-rural-affairs"
+    ],
+    "summary": "These notices set out the Secretary of State’s decision to approve proposals for improving coastal access between Kimmeridge Bay and Highcliffe.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Department for Environment, Food & Rural Affairs",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 8512,
+    "first_seen": "2026-11-04T20:26:55.940049+00:00",
+    "last_seen": "2026-11-04T20:26:55.940049+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
     "title": "Nomenclature Change Related to Assistant General Counsel Titles",
     "url": "https://www.federalregister.gov/documents/2026/11/04/2026-22463/nomenclature-change-related-to-assistant-general-counsel-titles",
     "native_id": "2026-22463",
@@ -24,7 +217,7 @@
     "primary_source_id": "us-federal-register",
     "n": 8445,
     "first_seen": "2026-11-04T07:30:45.022151+00:00",
-    "last_seen": "2026-11-04T07:30:45.022151+00:00",
+    "last_seen": "2026-11-04T20:26:55.940049+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -55,7 +248,7 @@
     "primary_source_id": "us-federal-register",
     "n": 8440,
     "first_seen": "2026-11-04T07:30:45.022151+00:00",
-    "last_seen": "2026-11-04T07:30:45.022151+00:00",
+    "last_seen": "2026-11-04T20:26:55.940049+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -86,7 +279,7 @@
     "primary_source_id": "us-federal-register",
     "n": 8431,
     "first_seen": "2026-11-04T07:30:45.022151+00:00",
-    "last_seen": "2026-11-04T07:30:45.022151+00:00",
+    "last_seen": "2026-11-04T20:26:55.940049+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -117,7 +310,7 @@
     "primary_source_id": "us-federal-register",
     "n": 8427,
     "first_seen": "2026-11-04T07:30:45.022151+00:00",
-    "last_seen": "2026-11-04T07:30:45.022151+00:00",
+    "last_seen": "2026-11-04T20:26:55.940049+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -148,7 +341,7 @@
     "primary_source_id": "us-federal-register",
     "n": 8414,
     "first_seen": "2026-11-04T07:30:45.022151+00:00",
-    "last_seen": "2026-11-04T07:30:45.022151+00:00",
+    "last_seen": "2026-11-04T20:26:55.940049+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -178,7 +371,7 @@
     "primary_source_id": "us-federal-register",
     "n": 8413,
     "first_seen": "2026-11-04T07:30:45.022151+00:00",
-    "last_seen": "2026-11-04T07:30:45.022151+00:00",
+    "last_seen": "2026-11-04T20:26:55.940049+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -208,7 +401,7 @@
     "primary_source_id": "us-federal-register",
     "n": 8407,
     "first_seen": "2026-11-04T07:30:45.022151+00:00",
-    "last_seen": "2026-11-04T07:30:45.022151+00:00",
+    "last_seen": "2026-11-04T20:26:55.940049+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -238,7 +431,7 @@
     "primary_source_id": "us-federal-register",
     "n": 8377,
     "first_seen": "2026-11-04T07:30:45.022151+00:00",
-    "last_seen": "2026-11-04T07:30:45.022151+00:00",
+    "last_seen": "2026-11-04T20:26:55.940049+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -268,7 +461,7 @@
     "primary_source_id": "us-federal-register",
     "n": 8376,
     "first_seen": "2026-11-04T07:30:45.022151+00:00",
-    "last_seen": "2026-11-04T07:30:45.022151+00:00",
+    "last_seen": "2026-11-04T20:26:55.940049+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -298,7 +491,7 @@
     "primary_source_id": "us-federal-register",
     "n": 8375,
     "first_seen": "2026-11-04T07:30:45.022151+00:00",
-    "last_seen": "2026-11-04T07:30:45.022151+00:00",
+    "last_seen": "2026-11-04T20:26:55.940049+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -424,7 +617,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 8273,
     "first_seen": "2026-11-03T20:18:37.164529+00:00",
-    "last_seen": "2026-11-04T07:30:45.022151+00:00",
+    "last_seen": "2026-11-04T20:26:55.940049+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -453,7 +646,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 2103,
     "first_seen": "2026-10-15T12:16:32.997656+00:00",
-    "last_seen": "2026-11-04T07:30:45.022151+00:00",
+    "last_seen": "2026-11-04T20:26:55.940049+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -482,7 +675,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 8274,
     "first_seen": "2026-11-03T20:18:37.164529+00:00",
-    "last_seen": "2026-11-04T07:30:45.022151+00:00",
+    "last_seen": "2026-11-04T20:26:55.940049+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -511,7 +704,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 8275,
     "first_seen": "2026-11-03T20:18:37.164529+00:00",
-    "last_seen": "2026-11-04T07:30:45.022151+00:00",
+    "last_seen": "2026-11-04T20:26:55.940049+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -540,7 +733,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 8276,
     "first_seen": "2026-11-03T20:18:37.164529+00:00",
-    "last_seen": "2026-11-04T07:30:45.022151+00:00",
+    "last_seen": "2026-11-04T20:26:55.940049+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -569,7 +762,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 8277,
     "first_seen": "2026-11-03T20:18:37.164529+00:00",
-    "last_seen": "2026-11-04T07:30:45.022151+00:00",
+    "last_seen": "2026-11-04T20:26:55.940049+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -598,7 +791,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 8278,
     "first_seen": "2026-11-03T20:18:37.164529+00:00",
-    "last_seen": "2026-11-04T07:30:45.022151+00:00",
+    "last_seen": "2026-11-04T20:26:55.940049+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -627,7 +820,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 8279,
     "first_seen": "2026-11-03T20:18:37.164529+00:00",
-    "last_seen": "2026-11-04T07:30:45.022151+00:00",
+    "last_seen": "2026-11-04T20:26:55.940049+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -656,7 +849,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 8280,
     "first_seen": "2026-11-03T20:18:37.164529+00:00",
-    "last_seen": "2026-11-04T07:30:45.022151+00:00",
+    "last_seen": "2026-11-04T20:26:55.940049+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -686,7 +879,7 @@
     "primary_source_id": "us-federal-register",
     "n": 8214,
     "first_seen": "2026-11-03T07:57:02.713515+00:00",
-    "last_seen": "2026-11-04T07:30:45.022151+00:00",
+    "last_seen": "2026-11-04T20:26:55.940049+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -717,7 +910,7 @@
     "primary_source_id": "us-federal-register",
     "n": 8213,
     "first_seen": "2026-11-03T07:57:02.713515+00:00",
-    "last_seen": "2026-11-04T07:30:45.022151+00:00",
+    "last_seen": "2026-11-04T20:26:55.940049+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -747,7 +940,7 @@
     "primary_source_id": "us-federal-register",
     "n": 8194,
     "first_seen": "2026-11-03T07:57:02.713515+00:00",
-    "last_seen": "2026-11-04T07:30:45.022151+00:00",
+    "last_seen": "2026-11-04T20:26:55.940049+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -777,7 +970,7 @@
     "primary_source_id": "us-federal-register",
     "n": 8192,
     "first_seen": "2026-11-03T07:57:02.713515+00:00",
-    "last_seen": "2026-11-04T07:30:45.022151+00:00",
+    "last_seen": "2026-11-04T20:26:55.940049+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -807,7 +1000,7 @@
     "primary_source_id": "us-federal-register",
     "n": 8189,
     "first_seen": "2026-11-03T07:57:02.713515+00:00",
-    "last_seen": "2026-11-04T07:30:45.022151+00:00",
+    "last_seen": "2026-11-04T20:26:55.940049+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -837,7 +1030,7 @@
     "primary_source_id": "us-federal-register",
     "n": 8177,
     "first_seen": "2026-11-03T07:57:02.713515+00:00",
-    "last_seen": "2026-11-04T07:30:45.022151+00:00",
+    "last_seen": "2026-11-04T20:26:55.940049+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -867,7 +1060,7 @@
     "primary_source_id": "us-federal-register",
     "n": 8160,
     "first_seen": "2026-11-03T07:57:02.713515+00:00",
-    "last_seen": "2026-11-04T07:30:45.022151+00:00",
+    "last_seen": "2026-11-04T20:26:55.940049+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -968,7 +1161,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 8065,
     "first_seen": "2026-11-02T22:20:55.750782+00:00",
-    "last_seen": "2026-11-04T07:30:45.022151+00:00",
+    "last_seen": "2026-11-04T20:26:55.940049+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -997,7 +1190,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 8066,
     "first_seen": "2026-11-02T22:20:55.750782+00:00",
-    "last_seen": "2026-11-04T07:30:45.022151+00:00",
+    "last_seen": "2026-11-04T20:26:55.940049+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -1026,7 +1219,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 8067,
     "first_seen": "2026-11-02T22:20:55.750782+00:00",
-    "last_seen": "2026-11-04T07:30:45.022151+00:00",
+    "last_seen": "2026-11-04T20:26:55.940049+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -1055,7 +1248,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 7370,
     "first_seen": "2026-10-29T18:58:38.270102+00:00",
-    "last_seen": "2026-11-04T07:30:45.022151+00:00",
+    "last_seen": "2026-11-04T20:26:55.940049+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -1084,7 +1277,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 8068,
     "first_seen": "2026-11-02T22:20:55.750782+00:00",
-    "last_seen": "2026-11-04T07:30:45.022151+00:00",
+    "last_seen": "2026-11-04T20:26:55.940049+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -1113,7 +1306,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 4,
     "first_seen": "2026-10-15T10:17:11.133023+00:00",
-    "last_seen": "2026-11-04T07:30:45.022151+00:00",
+    "last_seen": "2026-11-04T20:26:55.940049+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -1142,7 +1335,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 8069,
     "first_seen": "2026-11-02T22:20:55.750782+00:00",
-    "last_seen": "2026-11-04T07:30:45.022151+00:00",
+    "last_seen": "2026-11-04T20:26:55.940049+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -1171,7 +1364,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 8070,
     "first_seen": "2026-11-02T22:20:55.750782+00:00",
-    "last_seen": "2026-11-04T07:30:45.022151+00:00",
+    "last_seen": "2026-11-04T20:26:55.940049+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -1200,7 +1393,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 8071,
     "first_seen": "2026-11-02T22:20:55.750782+00:00",
-    "last_seen": "2026-11-04T07:30:45.022151+00:00",
+    "last_seen": "2026-11-04T20:26:55.940049+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -1229,7 +1422,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 8072,
     "first_seen": "2026-11-02T22:20:55.750782+00:00",
-    "last_seen": "2026-11-04T07:30:45.022151+00:00",
+    "last_seen": "2026-11-04T20:26:55.940049+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -1258,7 +1451,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 8073,
     "first_seen": "2026-11-02T22:20:55.750782+00:00",
-    "last_seen": "2026-11-04T07:30:45.022151+00:00",
+    "last_seen": "2026-11-04T20:26:55.940049+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -1287,7 +1480,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 8074,
     "first_seen": "2026-11-02T22:20:55.750782+00:00",
-    "last_seen": "2026-11-04T07:30:45.022151+00:00",
+    "last_seen": "2026-11-04T20:26:55.940049+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -1318,7 +1511,7 @@
     "primary_source_id": "us-federal-register",
     "n": 8022,
     "first_seen": "2026-11-02T07:42:04.715422+00:00",
-    "last_seen": "2026-11-04T07:30:45.022151+00:00",
+    "last_seen": "2026-11-04T20:26:55.940049+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1349,7 +1542,7 @@
     "primary_source_id": "us-federal-register",
     "n": 8012,
     "first_seen": "2026-11-02T07:42:04.715422+00:00",
-    "last_seen": "2026-11-04T07:30:45.022151+00:00",
+    "last_seen": "2026-11-04T20:26:55.940049+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1380,7 +1573,7 @@
     "primary_source_id": "us-federal-register",
     "n": 8002,
     "first_seen": "2026-11-02T07:42:04.715422+00:00",
-    "last_seen": "2026-11-04T07:30:45.022151+00:00",
+    "last_seen": "2026-11-04T20:26:55.940049+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1411,7 +1604,7 @@
     "primary_source_id": "us-federal-register",
     "n": 8001,
     "first_seen": "2026-11-02T07:42:04.715422+00:00",
-    "last_seen": "2026-11-04T07:30:45.022151+00:00",
+    "last_seen": "2026-11-04T20:26:55.940049+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1442,7 +1635,7 @@
     "primary_source_id": "us-federal-register",
     "n": 7998,
     "first_seen": "2026-11-02T07:42:04.715422+00:00",
-    "last_seen": "2026-11-04T07:30:45.022151+00:00",
+    "last_seen": "2026-11-04T20:26:55.940049+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1473,7 +1666,7 @@
     "primary_source_id": "us-federal-register",
     "n": 7992,
     "first_seen": "2026-11-02T07:42:04.715422+00:00",
-    "last_seen": "2026-11-04T07:30:45.022151+00:00",
+    "last_seen": "2026-11-04T20:26:55.940049+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1504,7 +1697,7 @@
     "primary_source_id": "us-federal-register",
     "n": 7991,
     "first_seen": "2026-11-02T07:42:04.715422+00:00",
-    "last_seen": "2026-11-04T07:30:45.022151+00:00",
+    "last_seen": "2026-11-04T20:26:55.940049+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1534,7 +1727,7 @@
     "primary_source_id": "us-federal-register",
     "n": 7975,
     "first_seen": "2026-11-02T07:42:04.715422+00:00",
-    "last_seen": "2026-11-04T07:30:45.022151+00:00",
+    "last_seen": "2026-11-04T20:26:55.940049+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1564,7 +1757,7 @@
     "primary_source_id": "us-federal-register",
     "n": 7955,
     "first_seen": "2026-11-02T07:42:04.715422+00:00",
-    "last_seen": "2026-11-04T07:30:45.022151+00:00",
+    "last_seen": "2026-11-04T20:26:55.940049+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1594,7 +1787,7 @@
     "primary_source_id": "us-federal-register",
     "n": 7954,
     "first_seen": "2026-11-02T07:42:04.715422+00:00",
-    "last_seen": "2026-11-04T07:30:45.022151+00:00",
+    "last_seen": "2026-11-04T20:26:55.940049+00:00",
     "source_ids": [
       "us-federal-register"
     ]
