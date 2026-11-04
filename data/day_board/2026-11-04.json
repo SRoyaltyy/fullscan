@@ -1,17 +1,15 @@
 {
   "date": "2026-11-04",
-  "generated_at": "2026-11-04T05:28:04.348229-05:00",
+  "generated_at": "2026-11-04T10:01:42.536923-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
-    "MISSING General predict MD `01_daily/general/2026-11-04_predict.md` \u2014 missing",
-    "MISSING News judge MD `01_daily/news/2026-11-04_judge.md` \u2014 missing",
     "MISSING AB checklist enriched `data/ab_checklist/2026-11-04_ab_checklist_enriched.csv` \u2014 missing"
   ],
   "counts": {
     "ok": 3,
-    "partial": 4,
-    "fail": 1,
+    "partial": 3,
+    "fail": 2,
     "n": 8
   },
   "processes": [
@@ -181,7 +179,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 4,
+      "n_req_ok": 7,
       "n_req": 9,
       "n_opt_ok": 2,
       "n_opt": 14,
@@ -250,22 +248,31 @@
           "name": "Events JSON",
           "path": "01_daily/events/2026-11-04_events.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 21880,
+          "said": "33 events \u00b7 elevated uncertainty \u00b7 Markets enter the post-midterm period with a Democratic Congress, a hawkish Fed on hold, and critical inflation and mega-cap tech earnings i",
+          "bullets": [
+            "US midterm elections \u2014 Democrats win Congress",
+            "OPEC+ holds December oil production steady",
+            "South Korea top court upholds Broadcom antitrust fine",
+            "Supreme Court rejects Trump bid to set aside California ballots"
+          ]
         },
         {
           "key": "judge",
           "name": "News judge MD",
           "path": "01_daily/news/2026-11-04_judge.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 10596,
+          "said": "1. **Treasury yields fall as investors crowd into bonds for safety amid election stock sell-off** \u2014 Election risk-off plus a rates safety bid is the cleanest SP",
+          "bullets": [
+            "2. **UBS traders see a \u2018combustible setup\u2019 for an S&P 500 rally after the vote** \u2014 Post-election positioning could flip risk appetite, but it is contested against the safety bid. Provisional channel: **sentiment**.",
+            "3. **AMD forecast exceeds estimates after AI chip demand soars; data-center revenue hits record** \u2014 AI semis fundamental positive, but must be traded against broader AI-stock weakness. Provisional channel: **sector_fundamental**.",
+            "4. **Apple sales slow, China revenue misses, margins/memory costs pressure shares** \u2014 Mega-cap tech/consumer drag and a memory-cost read-through for hardware. Provisional channel: **sector_fundamental**."
+          ]
         },
         {
           "key": "research_json",
@@ -310,11 +317,16 @@
           "name": "General predict MD",
           "path": "01_daily/general/2026-11-04_predict.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 11049,
+          "said": "UP 10.848",
+          "bullets": [
+            "bad: Apple holiday margin guide soft",
+            "bad: Palantir sell-the-news -3%",
+            "bad: four tankers mined in Hormuz",
+            "good: AMD +7% Q3 beat"
+          ]
         },
         {
           "key": "board",
@@ -489,8 +501,14 @@
           "bullets": []
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "general UP  10.848",
+      "bullets": [
+        "bad: Apple holiday margin guide soft",
+        "bad: Palantir sell-the-news -3%",
+        "bad: four tankers mined in Hormuz",
+        "good: AMD +7% Q3 beat",
+        "good: Palantir raised guidance"
+      ]
     },
     {
       "key": "weather",
@@ -524,19 +542,19 @@
           "path": "01_daily/weather/2026-11-04_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=9447 vix=falling yields=falling",
-          "size": 9447,
-          "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
+          "reason": "sectors=11 bytes=10303 vix=falling yields=falling",
+          "size": 10303,
+          "said": "favorable 2 \u00b7 hostile 7 \u00b7 neutral 2",
           "bullets": [
-            "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Industrials, Real Estate, Technology, Utilities",
-            "events bull 0 / bear 2"
+            "hostile: Basic Materials, Communication Services, Consumer Defensive, Industrials, Real Estate, Technology, Utilities",
+            "events bull 0 / bear 3"
           ]
         }
       ],
-      "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
+      "said": "favorable 2 \u00b7 hostile 7 \u00b7 neutral 2",
       "bullets": [
-        "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Industrials, Real Estate, Technology, Utilities",
-        "events bull 0 / bear 2"
+        "hostile: Basic Materials, Communication Services, Consumer Defensive, Industrials, Real Estate, Technology, Utilities",
+        "events bull 0 / bear 3"
       ]
     },
     {
@@ -580,7 +598,7 @@
       "key": "catalyst",
       "name": "Catalyst dossiers",
       "yaml": "catalyst_daily.yml",
-      "status": "PARTIAL",
+      "status": "FAIL",
       "inputs_ready": true,
       "n_req_ok": 0,
       "n_req": 0,
@@ -623,11 +641,16 @@
           "name": "Catalyst dossiers JSON",
           "path": "01_daily/catalyst/2026-11-04_dossiers.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "FAIL",
+          "reason": "zero usable dossiers (n=6)",
+          "size": 2127,
+          "said": "zero usable dossiers (n=6) \u00b7 0/6 usable \u00b7 Grok \u2192 DeepSeek \u00b7 NVDA, UEC, UUUU, SLB, BKR, KGS",
+          "bullets": [
+            "NVDA: OpenClaw and DeepSeek both returned empty for CATALYST STEP1 NVDA",
+            "UEC: OpenClaw and DeepSeek both returned empty for CATALYST STEP1 UEC",
+            "UUUU: OpenClaw and DeepSeek both returned empty for CATALYST STEP1 UUUU",
+            "SLB: OpenClaw and DeepSeek both returned empty for CATALYST STEP1 SLB"
+          ]
         }
       ],
       "said": "102 ticker actions \u00b7 7 events \u00b7 8915 headlines \u00b7 DAL SELL, UAL SELL, AAL SELL, ALK SELL, RJET SELL, LUV SELL, SKYW SELL, ALGT SELL",
@@ -658,11 +681,16 @@
           "name": "General predict MD",
           "path": "01_daily/general/2026-11-04_predict.md",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 11049,
+          "said": "UP 10.848",
+          "bullets": [
+            "bad: Apple holiday margin guide soft",
+            "bad: Palantir sell-the-news -3%",
+            "bad: four tankers mined in Hormuz",
+            "good: AMD +7% Q3 beat"
+          ]
         },
         {
           "key": "in_board",
@@ -711,11 +739,15 @@
           "name": "News judge MD",
           "path": "01_daily/news/2026-11-04_judge.md",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 10596,
+          "said": "1. **Treasury yields fall as investors crowd into bonds for safety amid election stock sell-off** \u2014 Election risk-off plus a rates safety bid is the cleanest SP",
+          "bullets": [
+            "2. **UBS traders see a \u2018combustible setup\u2019 for an S&P 500 rally after the vote** \u2014 Post-election positioning could flip risk appetite, but it is contested against the safety bid. Provisional channel: **sentiment**.",
+            "3. **AMD forecast exceeds estimates after AI chip demand soars; data-center revenue hits record** \u2014 AI semis fundamental positive, but must be traded against broader AI-stock weakness. Provisional channel: **sector_fundamental**.",
+            "4. **Apple sales slow, China revenue misses, margins/memory costs pressure shares** \u2014 Mega-cap tech/consumer drag and a memory-cost read-through for hardware. Provisional channel: **sector_fundamental**."
+          ]
         },
         {
           "key": "in_weather",
@@ -723,12 +755,12 @@
           "path": "01_daily/weather/2026-11-04_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=9447 vix=falling yields=falling",
-          "size": 9447,
-          "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
+          "reason": "sectors=11 bytes=10303 vix=falling yields=falling",
+          "size": 10303,
+          "said": "favorable 2 \u00b7 hostile 7 \u00b7 neutral 2",
           "bullets": [
-            "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Industrials, Real Estate, Technology, Utilities",
-            "events bull 0 / bear 2"
+            "hostile: Basic Materials, Communication Services, Consumer Defensive, Industrials, Real Estate, Technology, Utilities",
+            "events bull 0 / bear 3"
           ]
         },
         {
@@ -749,10 +781,10 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=5901",
-          "size": 2240372,
-          "said": "204 rows",
+          "size": 2298059,
+          "said": "206 rows",
           "bullets": [
-            "HALO, ONC, LLY, HRMY, ETON, ARQT, AVAH, CORT"
+            "OMER, FTK, NUTX, RIGL, ETON, ARQT, HALO, AMN"
           ]
         },
         {
@@ -825,9 +857,9 @@
           "bullets": []
         }
       ],
-      "said": "204 rows",
+      "said": "206 rows",
       "bullets": [
-        "HALO, ONC, LLY, HRMY, ETON"
+        "OMER, FTK, NUTX, RIGL, ETON"
       ]
     },
     {
@@ -899,14 +931,25 @@
     "buy_1d": [],
     "sell_1d": [],
     "flatten": {},
-    "general": {},
+    "general": {
+      "said": "UP  10.848",
+      "bullets": [
+        "bad: Apple holiday margin guide soft",
+        "bad: Palantir sell-the-news -3%",
+        "bad: four tankers mined in Hormuz",
+        "good: AMD +7% Q3 beat",
+        "good: Palantir raised guidance"
+      ],
+      "score": "10.848",
+      "direction": "up"
+    },
     "sectors": {},
     "news": {},
     "weather": {
-      "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
+      "said": "favorable 2 \u00b7 hostile 7 \u00b7 neutral 2",
       "bullets": [
-        "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Industrials, Real Estate, Technology, Utilities",
-        "events bull 0 / bear 2"
+        "hostile: Basic Materials, Communication Services, Consumer Defensive, Industrials, Real Estate, Technology, Utilities",
+        "events bull 0 / bear 3"
       ]
     }
   },
@@ -1327,6 +1370,31 @@
         }
       ],
       "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, sectors_required, all_ok \u00b7 keys: date, generated_at, run_id, runner, all_ok, qc_all_ok, book_ok, grok_ok, grok_fails, missing_required, attempts, github_runs \u00b7 # Pre-open ALL status \u2014 2026-11-04\nall_ok=False  qc_all_ok=False  book_ok=False  grok_ok=False  news_mode=on  missing=['events', 'news_judge', 'map_heat_research', 'general_predict']\nPredictive modules + stock book (must land before 09:30 ET).\nOutcome / learn / tonight's captain research = Post-Close ALL.\n- Weather / regime: exit 0\n- News parse: exit 0\n- News actions (no LLM): exit 0"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-11-04",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-04T10:01:42.073929-05:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-11-04_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 10303,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-11-04_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5816,
+          "preview": "# Weather report \u2014 2026-11-04\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-11-04\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
     }
   ],
   "href": {
@@ -1334,5 +1402,23 @@
     "readiness_action": "https://github.com/SRoyaltyy/fullscan/actions/workflows/stock_book_diag.yml",
     "factor_mine": "https://sroyaltyy.github.io/fullscan/dashboard/factor-mine/",
     "paper": "https://sroyaltyy.github.io/fullscan/dashboard/"
-  }
+  },
+  "frozen_write_skips": [
+    {
+      "path": "01_daily/weather/2026-11-04_weather.json",
+      "at": "2026-11-04T10:01:44-05:00",
+      "commit_msg": "auto: land weather [2026-11-04]",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "41849492081",
+      "manifest": "research/input_freeze/2026-11-04/manifest.json"
+    },
+    {
+      "path": "data/day_board/2026-11-04.json",
+      "at": "2026-11-04T10:01:44-05:00",
+      "commit_msg": "auto: land weather [2026-11-04]",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "41849492081",
+      "manifest": "research/input_freeze/2026-11-04/manifest.json"
+    }
+  ]
 }
