@@ -5442,22 +5442,25 @@
       "tag": "rebuilt"
     },
     "short_alarm_h3": {
-      "class": "still broken",
+      "class": "rebuilt",
       "daily": {
         "bought": [],
-        "cash": 46801.77,
+        "cash": 44940.07,
         "date": "2026-10-27",
-        "equity": 11313.75,
+        "equity": 11231.31,
         "hard_red": false,
         "n": 0,
-        "open_equity": 11483.01,
+        "open_equity": 11407.22,
         "open_file": "data/prices/ohlc.parquet",
         "open_held": [
           "ACRS\u00d7189",
           "AEHL\u00d763",
+          "AMX\u00d759",
+          "ANGI\u00d7217",
           "AURA\u00d7102",
           "AVPT\u00d744",
           "BF-B\u00d733",
+          "BMBL\u00d7242",
           "BP\u00d716",
           "BRO\u00d712",
           "CDNA\u00d78",
@@ -5479,6 +5482,7 @@
           "MPC\u00d71",
           "MTDR\u00d711",
           "NOG\u00d730",
+          "NVTS\u00d7172",
           "PBR\u00d726",
           "PCVX\u00d79",
           "PRMB\u00d743",
@@ -5496,18 +5500,18 @@
           "VET\u00d762",
           "VIST\u00d711",
           "WYHG\u00d7210",
-          "ZIP\u00d7159",
-          "NVTS\u00d7172",
-          "AMX\u00d759",
-          "ANGI\u00d7217",
-          "BMBL\u00d7242"
+          "ZIP\u00d7159"
         ],
         "open_sha256": "b08379247ecdd3d1b0d90068fde9ae15afd32289737eb50545029ced06d93408",
         "open_source": "daily_bar",
-        "overnight_delta": -81.67,
+        "overnight_delta": -157.46,
         "s": 5.51,
         "session_delta": -169.26,
-        "sold": [],
+        "sold": [
+          "PCVX",
+          "SUJA",
+          "ZIP"
+        ],
         "source": "theme_radar_snapshot",
         "source_file": "data/snapshots/2026-10-26.raw.csv",
         "source_scrape_ts_utc": "2026-10-27T00:03:28+00:00",
@@ -5516,14 +5520,75 @@
         "tag": "rebuilt",
         "yday_equity": 11564.68
       },
-      "fills": [],
+      "fills": [
+        {
+          "date": "2026-10-27",
+          "fees": 2.017,
+          "open_0930": 59.92,
+          "open_file": "data/prices/ohlc.parquet",
+          "open_sha256": "86473989a9087e5b02cf9c54dccd4c618ef006b7b2d8275c360f799c44d310df",
+          "open_source": "stooq_bulk:pcvx.us.txt",
+          "pnl": 94.3,
+          "price": 59.92,
+          "reason": "exit unpriced hold on first bar after 0 sess",
+          "shares": 9,
+          "side": "COVER",
+          "source": "theme_radar_snapshot",
+          "source_file": "data/snapshots/2026-10-26.raw.csv",
+          "source_scrape_ts_utc": "2026-10-27T00:03:28+00:00",
+          "source_session": "2026-10-26",
+          "source_sha256": "262cf44cb26794fa46bebfb7dc29b0b0732859c66ac52dc15d940d8d3579df25",
+          "tag": "rebuilt",
+          "ticker": "PCVX"
+        },
+        {
+          "date": "2026-10-27",
+          "fees": 2.173,
+          "open_0930": 9.71,
+          "open_file": "data/prices/ohlc.parquet",
+          "open_sha256": "86473989a9087e5b02cf9c54dccd4c618ef006b7b2d8275c360f799c44d310df",
+          "open_source": "stooq_bulk:suja.us.txt",
+          "pnl": 67.6,
+          "price": 9.71,
+          "reason": "exit unpriced hold on first bar after 0 sess",
+          "shares": 61,
+          "side": "COVER",
+          "source": "theme_radar_snapshot",
+          "source_file": "data/snapshots/2026-10-26.raw.csv",
+          "source_scrape_ts_utc": "2026-10-27T00:03:28+00:00",
+          "source_session": "2026-10-26",
+          "source_sha256": "262cf44cb26794fa46bebfb7dc29b0b0732859c66ac52dc15d940d8d3579df25",
+          "tag": "rebuilt",
+          "ticker": "SUJA"
+        },
+        {
+          "date": "2026-10-27",
+          "fees": 2.467,
+          "open_0930": 4.55,
+          "open_file": "data/prices/ohlc.parquet",
+          "open_sha256": "86473989a9087e5b02cf9c54dccd4c618ef006b7b2d8275c360f799c44d310df",
+          "open_source": "stooq_bulk:zip.us.txt",
+          "pnl": -63.82,
+          "price": 4.55,
+          "reason": "exit unpriced hold on first bar after 0 sess",
+          "shares": 159,
+          "side": "COVER",
+          "source": "theme_radar_snapshot",
+          "source_file": "data/snapshots/2026-10-26.raw.csv",
+          "source_scrape_ts_utc": "2026-10-27T00:03:28+00:00",
+          "source_session": "2026-10-26",
+          "source_sha256": "262cf44cb26794fa46bebfb7dc29b0b0732859c66ac52dc15d940d8d3579df25",
+          "tag": "rebuilt",
+          "ticker": "ZIP"
+        }
+      ],
       "name": "short_alarm_h3",
       "open_file": "data/prices/ohlc.parquet",
       "open_sha256": "b08379247ecdd3d1b0d90068fde9ae15afd32289737eb50545029ced06d93408",
       "open_source": "daily_bar",
       "picks": [],
-      "reason": "no 09:30 open in daily bars",
-      "return_pct": -2.1698,
+      "reason": "rebuilt from the prior day's state at the session open",
+      "return_pct": -2.8827,
       "skips": [
         {
           "kind": "min_hold",
@@ -5552,6 +5617,34 @@
           "source_sha256": "262cf44cb26794fa46bebfb7dc29b0b0732859c66ac52dc15d940d8d3579df25",
           "tag": "rebuilt",
           "ticker": "AEHL"
+        },
+        {
+          "kind": "min_hold",
+          "open_file": "data/prices/ohlc.parquet",
+          "open_sha256": "b08379247ecdd3d1b0d90068fde9ae15afd32289737eb50545029ced06d93408",
+          "open_source": "daily_bar",
+          "reason": "dropped but min-hold 0/3 sess \u2014 no sell",
+          "source": "theme_radar_snapshot",
+          "source_file": "data/snapshots/2026-10-26.raw.csv",
+          "source_scrape_ts_utc": "2026-10-27T00:03:28+00:00",
+          "source_session": "2026-10-26",
+          "source_sha256": "262cf44cb26794fa46bebfb7dc29b0b0732859c66ac52dc15d940d8d3579df25",
+          "tag": "rebuilt",
+          "ticker": "AMX"
+        },
+        {
+          "kind": "min_hold",
+          "open_file": "data/prices/ohlc.parquet",
+          "open_sha256": "b08379247ecdd3d1b0d90068fde9ae15afd32289737eb50545029ced06d93408",
+          "open_source": "daily_bar",
+          "reason": "dropped but min-hold 0/3 sess \u2014 no sell",
+          "source": "theme_radar_snapshot",
+          "source_file": "data/snapshots/2026-10-26.raw.csv",
+          "source_scrape_ts_utc": "2026-10-27T00:03:28+00:00",
+          "source_session": "2026-10-26",
+          "source_sha256": "262cf44cb26794fa46bebfb7dc29b0b0732859c66ac52dc15d940d8d3579df25",
+          "tag": "rebuilt",
+          "ticker": "ANGI"
         },
         {
           "kind": "min_hold",
@@ -5594,6 +5687,20 @@
           "source_sha256": "262cf44cb26794fa46bebfb7dc29b0b0732859c66ac52dc15d940d8d3579df25",
           "tag": "rebuilt",
           "ticker": "BF-B"
+        },
+        {
+          "kind": "min_hold",
+          "open_file": "data/prices/ohlc.parquet",
+          "open_sha256": "b08379247ecdd3d1b0d90068fde9ae15afd32289737eb50545029ced06d93408",
+          "open_source": "daily_bar",
+          "reason": "dropped but min-hold 0/3 sess \u2014 no sell",
+          "source": "theme_radar_snapshot",
+          "source_file": "data/snapshots/2026-10-26.raw.csv",
+          "source_scrape_ts_utc": "2026-10-27T00:03:28+00:00",
+          "source_session": "2026-10-26",
+          "source_sha256": "262cf44cb26794fa46bebfb7dc29b0b0732859c66ac52dc15d940d8d3579df25",
+          "tag": "rebuilt",
+          "ticker": "BMBL"
         },
         {
           "kind": "min_hold",
@@ -5901,21 +6008,21 @@
           "source_session": "2026-10-26",
           "source_sha256": "262cf44cb26794fa46bebfb7dc29b0b0732859c66ac52dc15d940d8d3579df25",
           "tag": "rebuilt",
-          "ticker": "PBR"
+          "ticker": "NVTS"
         },
         {
-          "kind": "no_price",
+          "kind": "min_hold",
           "open_file": "data/prices/ohlc.parquet",
           "open_sha256": "b08379247ecdd3d1b0d90068fde9ae15afd32289737eb50545029ced06d93408",
           "open_source": "daily_bar",
-          "reason": "no 09:30 open \u2014 carry at last price",
+          "reason": "dropped but min-hold 0/3 sess \u2014 no sell",
           "source": "theme_radar_snapshot",
           "source_file": "data/snapshots/2026-10-26.raw.csv",
           "source_scrape_ts_utc": "2026-10-27T00:03:28+00:00",
           "source_session": "2026-10-26",
           "source_sha256": "262cf44cb26794fa46bebfb7dc29b0b0732859c66ac52dc15d940d8d3579df25",
           "tag": "rebuilt",
-          "ticker": "PCVX"
+          "ticker": "PBR"
         },
         {
           "kind": "min_hold",
@@ -6044,20 +6151,6 @@
           "ticker": "SONO"
         },
         {
-          "kind": "no_price",
-          "open_file": "data/prices/ohlc.parquet",
-          "open_sha256": "b08379247ecdd3d1b0d90068fde9ae15afd32289737eb50545029ced06d93408",
-          "open_source": "daily_bar",
-          "reason": "no 09:30 open \u2014 carry at last price",
-          "source": "theme_radar_snapshot",
-          "source_file": "data/snapshots/2026-10-26.raw.csv",
-          "source_scrape_ts_utc": "2026-10-27T00:03:28+00:00",
-          "source_session": "2026-10-26",
-          "source_sha256": "262cf44cb26794fa46bebfb7dc29b0b0732859c66ac52dc15d940d8d3579df25",
-          "tag": "rebuilt",
-          "ticker": "SUJA"
-        },
-        {
           "kind": "min_hold",
           "open_file": "data/prices/ohlc.parquet",
           "open_sha256": "b08379247ecdd3d1b0d90068fde9ae15afd32289737eb50545029ced06d93408",
@@ -6126,76 +6219,6 @@
           "source_sha256": "262cf44cb26794fa46bebfb7dc29b0b0732859c66ac52dc15d940d8d3579df25",
           "tag": "rebuilt",
           "ticker": "WYHG"
-        },
-        {
-          "kind": "no_price",
-          "open_file": "data/prices/ohlc.parquet",
-          "open_sha256": "b08379247ecdd3d1b0d90068fde9ae15afd32289737eb50545029ced06d93408",
-          "open_source": "daily_bar",
-          "reason": "no 09:30 open \u2014 carry at last price",
-          "source": "theme_radar_snapshot",
-          "source_file": "data/snapshots/2026-10-26.raw.csv",
-          "source_scrape_ts_utc": "2026-10-27T00:03:28+00:00",
-          "source_session": "2026-10-26",
-          "source_sha256": "262cf44cb26794fa46bebfb7dc29b0b0732859c66ac52dc15d940d8d3579df25",
-          "tag": "rebuilt",
-          "ticker": "ZIP"
-        },
-        {
-          "kind": "min_hold",
-          "open_file": "data/prices/ohlc.parquet",
-          "open_sha256": "b08379247ecdd3d1b0d90068fde9ae15afd32289737eb50545029ced06d93408",
-          "open_source": "daily_bar",
-          "reason": "dropped but min-hold 0/3 sess \u2014 no sell",
-          "source": "theme_radar_snapshot",
-          "source_file": "data/snapshots/2026-10-26.raw.csv",
-          "source_scrape_ts_utc": "2026-10-27T00:03:28+00:00",
-          "source_session": "2026-10-26",
-          "source_sha256": "262cf44cb26794fa46bebfb7dc29b0b0732859c66ac52dc15d940d8d3579df25",
-          "tag": "rebuilt",
-          "ticker": "NVTS"
-        },
-        {
-          "kind": "min_hold",
-          "open_file": "data/prices/ohlc.parquet",
-          "open_sha256": "b08379247ecdd3d1b0d90068fde9ae15afd32289737eb50545029ced06d93408",
-          "open_source": "daily_bar",
-          "reason": "dropped but min-hold 0/3 sess \u2014 no sell",
-          "source": "theme_radar_snapshot",
-          "source_file": "data/snapshots/2026-10-26.raw.csv",
-          "source_scrape_ts_utc": "2026-10-27T00:03:28+00:00",
-          "source_session": "2026-10-26",
-          "source_sha256": "262cf44cb26794fa46bebfb7dc29b0b0732859c66ac52dc15d940d8d3579df25",
-          "tag": "rebuilt",
-          "ticker": "AMX"
-        },
-        {
-          "kind": "min_hold",
-          "open_file": "data/prices/ohlc.parquet",
-          "open_sha256": "b08379247ecdd3d1b0d90068fde9ae15afd32289737eb50545029ced06d93408",
-          "open_source": "daily_bar",
-          "reason": "dropped but min-hold 0/3 sess \u2014 no sell",
-          "source": "theme_radar_snapshot",
-          "source_file": "data/snapshots/2026-10-26.raw.csv",
-          "source_scrape_ts_utc": "2026-10-27T00:03:28+00:00",
-          "source_session": "2026-10-26",
-          "source_sha256": "262cf44cb26794fa46bebfb7dc29b0b0732859c66ac52dc15d940d8d3579df25",
-          "tag": "rebuilt",
-          "ticker": "ANGI"
-        },
-        {
-          "kind": "min_hold",
-          "open_file": "data/prices/ohlc.parquet",
-          "open_sha256": "b08379247ecdd3d1b0d90068fde9ae15afd32289737eb50545029ced06d93408",
-          "open_source": "daily_bar",
-          "reason": "dropped but min-hold 0/3 sess \u2014 no sell",
-          "source": "theme_radar_snapshot",
-          "source_file": "data/snapshots/2026-10-26.raw.csv",
-          "source_scrape_ts_utc": "2026-10-27T00:03:28+00:00",
-          "source_session": "2026-10-26",
-          "source_sha256": "262cf44cb26794fa46bebfb7dc29b0b0732859c66ac52dc15d940d8d3579df25",
-          "tag": "rebuilt",
-          "ticker": "BMBL"
         }
       ],
       "source": "theme_radar_snapshot",
@@ -6205,7 +6228,7 @@
       "source_sha256": "262cf44cb26794fa46bebfb7dc29b0b0732859c66ac52dc15d940d8d3579df25",
       "state": {
         "after": "2026-10-27",
-        "cash": 46801.77,
+        "cash": 44940.07,
         "pos": {
           "ACRS": {
             "close_px": 3.79,
@@ -6610,20 +6633,6 @@
             "shares": 26,
             "ticker": "PBR"
           },
-          "PCVX": {
-            "close_px": 58.27,
-            "cost": 2.0544698630136984,
-            "entry_date": "2026-10-12",
-            "entry_px": 70.85,
-            "fee_in": 2.0544698630136984,
-            "last_px": 58.27,
-            "notional": 637.65,
-            "peak_px": 58.27,
-            "reason": "alarm; gate alarm=True; list yday_gainer; ret5=+26.4; leftover $668.30",
-            "shares": 9,
-            "ticker": "PCVX",
-            "unpriced_held": true
-          },
           "PRMB": {
             "close_px": 19.21,
             "cost": 2.161642739726027,
@@ -6741,20 +6750,6 @@
             "shares": 34,
             "ticker": "SONO"
           },
-          "SUJA": {
-            "close_px": 11.5,
-            "cost": 2.211299726027397,
-            "entry_date": "2026-10-12",
-            "entry_px": 10.89,
-            "fee_in": 2.211299726027397,
-            "last_px": 11.5,
-            "notional": 664.2900000000001,
-            "peak_px": 10.85,
-            "reason": "alarm; gate alarm=True; list ohlc_hot; ret5=+12.0; leftover $668.30",
-            "shares": 61,
-            "ticker": "SUJA",
-            "unpriced_held": true
-          },
           "TLSA": {
             "close_px": 0.872,
             "cost": 7.906311780821918,
@@ -6819,25 +6814,11 @@
             "reason": "alarm; gate alarm=True; list yday_mover; ret5=-16.5; leftover $668.30",
             "shares": 210,
             "ticker": "WYHG"
-          },
-          "ZIP": {
-            "close_px": 3.48,
-            "cost": 2.5216087671232876,
-            "entry_date": "2026-10-12",
-            "entry_px": 4.18,
-            "fee_in": 2.5216087671232876,
-            "last_px": 3.48,
-            "notional": 664.62,
-            "peak_px": 3.48,
-            "reason": "alarm; gate alarm=True; list ohlc_hot; ret5=+17.5; leftover $668.30",
-            "shares": 159,
-            "ticker": "ZIP",
-            "unpriced_held": true
           }
         },
-        "yday_equity": 11313.75
+        "yday_equity": 11231.31
       },
-      "step": "lock",
+      "step": null,
       "tag": "rebuilt"
     },
     "short_macd_dn_h3": {
@@ -9831,6 +9812,24 @@
       },
       "step": null,
       "tag": "rebuilt"
+    }
+  },
+  "supplied_open_sha": "86473989a9087e5b02cf9c54dccd4c618ef006b7b2d8275c360f799c44d310df",
+  "supplied_opens": {
+    "PCVX": {
+      "open_0930": 59.92,
+      "source": "stooq_bulk:pcvx.us.txt",
+      "source_sha256": "86473989a9087e5b02cf9c54dccd4c618ef006b7b2d8275c360f799c44d310df"
+    },
+    "SUJA": {
+      "open_0930": 9.71,
+      "source": "stooq_bulk:suja.us.txt",
+      "source_sha256": "86473989a9087e5b02cf9c54dccd4c618ef006b7b2d8275c360f799c44d310df"
+    },
+    "ZIP": {
+      "open_0930": 4.55,
+      "source": "stooq_bulk:zip.us.txt",
+      "source_sha256": "86473989a9087e5b02cf9c54dccd4c618ef006b7b2d8275c360f799c44d310df"
     }
   },
   "tag": "rebuilt"

@@ -687,9 +687,11 @@ def _resume_for(name: str, prior: str | None, chain: dict[str, dict],
 
 
 STOOQ_SHA = "86473989a9087e5b02cf9c54dccd4c618ef006b7b2d8275c360f799c44d310df"
-# Yahoo daily opens used as the independent check. A Stooq print farther
-# than 0.5% from these is not used.
+# Yahoo opens used as the independent check. A Stooq print farther
+# than 0.5% from these is not used. BRR has no dump file and no
+# 2026-09-16 Yahoo bar, so it is not in this table.
 YAHOO_OPEN = {
+    ("2026-09-16", "SMJF"): 1.05,
     ("2026-10-02", "GRML"): 8.79,
     ("2026-10-05", "GRML"): 8.655,
     ("2026-10-06", "GRML"): 7.49,
@@ -702,9 +704,19 @@ YAHOO_OPEN = {
     ("2026-10-26", "RRC"): 50.81,
     ("2026-10-26", "SUJA"): 9.89,
     ("2026-10-26", "ZIP"): 4.63,
+    ("2026-10-27", "PCVX"): 59.92,
+    ("2026-10-27", "SUJA"): 9.71,
+    ("2026-10-27", "ZIP"): 4.55,
 }
 SUJA_VOLUME = 58900
 RRC_PRIOR_CLOSE = 43.23
+# 2026-09-16 BRR is not priced. The dump has no brr.us.txt. Yahoo's BRR
+# daily chart has no bar that session, and pricehist's Yahoo open series
+# for BRR is only 2026-10-28.
+BRR_MISSING = (
+    "BRR on 2026-09-16 is missing (no brr.us.txt; "
+    "Yahoo has no 2026-09-16 bar; pricehist Yahoo open is only 2026-10-28)"
+)
 
 
 def opens_agree(stooq: float, yahoo: float) -> bool:
@@ -974,14 +986,24 @@ def build_day(date: str, *, panel: dict, grouped: dict[str, list[dict]],
                 **verdict,
                 "reason": "no 09:30 open in daily bars",
             }
+        unpriced = {
+            skip.get("ticker") for skip in skips
+            if isinstance(skip, dict) and skip.get("kind") == "no_price"
+        }
+        if day == "2026-09-16" and "BRR" in unpriced:
+            verdict = {
+                "class": "still broken",
+                "step": "lock",
+                "reason": BRR_MISSING,
+            }
         entry.update(verdict)
         entry.update(_row_stamp(candidates))
         strategies[name] = entry
     radar_day = _row_stamp(candidates)
     supplied_note = {}
     if used_supplied:
+        shas = {info["source_sha256"] for info in used_supplied.values()}
         supplied_note = {
-            "supplied_open_sha": STOOQ_SHA,
             "supplied_opens": {
                 ticker: {
                     "open_0930": info["open"],
@@ -991,6 +1013,8 @@ def build_day(date: str, *, panel: dict, grouped: dict[str, list[dict]],
                 for ticker, info in sorted(used_supplied.items())
             },
         }
+        if len(shas) == 1:
+            supplied_note["supplied_open_sha"] = next(iter(shas))
         if day == "2026-10-26" and "SUJA" in used_supplied:
             supplied_note["suja_thin_fill"] = {
                 "volume": SUJA_VOLUME,
@@ -1043,23 +1067,42 @@ def calendar(panel: dict, empty: dict[str, dict], root: Path | None = None) -> l
     return sorted(day for day in days if len(day) == 10)
 
 
+def _no_price_tickers(row: dict) -> set[str]:
+    return {
+        skip.get("ticker") for skip in (row.get("skips") or [])
+        if isinstance(skip, dict) and skip.get("kind") == "no_price" and skip.get("ticker")
+    }
+
+
 def _lock_needs_supplied(day: str, doc: dict) -> bool:
-    """True when a lock cell on this morning is still missing a checked Stooq open."""
-    if doc.get("supplied_open_sha") == STOOQ_SHA:
-        return False
+    """True when every unpriced name on a lock cell now has a checked open."""
     opens = {ticker for (when, ticker) in load_supplied_opens() if when == day}
-    if not opens:
+    already = set(doc.get("supplied_opens") or {})
+    pending = opens - already
+    if not pending:
         return False
     for row in (doc.get("strategies") or {}).values():
         if row.get("step") != "lock" or row.get("class") != "still broken":
             continue
-        blocked = {
-            skip.get("ticker") for skip in (row.get("skips") or [])
-            if skip.get("kind") == "no_price"
-        }
-        if blocked & opens:
+        blocked = _no_price_tickers(row)
+        if blocked and blocked <= (already | opens) and (blocked & pending):
             return True
     return False
+
+
+def _patch_lock_cells(old: dict, fresh: dict, names: set[str]) -> dict:
+    """Keep every cell except the lock books that just received an open."""
+    merged = dict(old)
+    strategies = dict(old.get("strategies") or {})
+    fresh_rows = fresh.get("strategies") or {}
+    for name in sorted(names):
+        if name in fresh_rows:
+            strategies[name] = fresh_rows[name]
+    merged["strategies"] = strategies
+    for key in ("supplied_open_sha", "supplied_opens", "suja_thin_fill", "rrc_gap"):
+        if key in fresh:
+            merged[key] = fresh[key]
+    return merged
 
 
 def _replace_with_radar(day: str, doc: dict | None) -> bool:
@@ -1122,6 +1165,7 @@ def run_rebuild(*, root: Path | None = None, write: bool = False,
                 continue
             replacing = True
         supplied_strategies: set[str] = set()
+        patch = False
         if replacing and isinstance(have, dict):
             day_tickers = {
                 ticker for (when, ticker) in load_supplied_opens(base) if when == day
@@ -1129,18 +1173,23 @@ def run_rebuild(*, root: Path | None = None, write: bool = False,
             for name, row in (have.get("strategies") or {}).items():
                 if row.get("step") != "lock":
                     continue
-                blocked = {
-                    skip.get("ticker") for skip in (row.get("skips") or [])
-                    if skip.get("kind") == "no_price"
-                }
-                if blocked & day_tickers:
+                blocked = _no_price_tickers(row)
+                if blocked and blocked <= day_tickers:
                     supplied_strategies.add(name)
+            patch = bool(
+                supplied_strategies
+                and have.get("open_source") == "daily_bar"
+                and have.get("source") == "theme_radar_snapshot"
+            )
         doc = build_day(
-            day, panel=panel, grouped=grouped, cal=cal, names=names,
+            day, panel=panel, grouped=grouped, cal=cal,
+            names=[name for name in names if name in supplied_strategies] if patch else names,
             singles=singles, combos=combos, chain=chain, empty_inputs=empty,
             fees=fees, regime=regime, digests=digests, root=base,
             supplied_strategies=supplied_strategies,
         )
+        if patch and isinstance(have, dict):
+            doc = _patch_lock_cells(have, doc, supplied_strategies)
         chain[day] = doc
         if write:
             if replacing:

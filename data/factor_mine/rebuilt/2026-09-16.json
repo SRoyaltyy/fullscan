@@ -6336,7 +6336,7 @@
       "open_sha256": "b08379247ecdd3d1b0d90068fde9ae15afd32289737eb50545029ced06d93408",
       "open_source": "daily_bar",
       "picks": [],
-      "reason": "no 09:30 open in daily bars",
+      "reason": "BRR on 2026-09-16 is missing (no brr.us.txt; Yahoo has no 2026-09-16 bar; pricehist Yahoo open is only 2026-10-28)",
       "return_pct": -1.264,
       "skips": [
         {
