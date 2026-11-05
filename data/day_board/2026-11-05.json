@@ -1,6 +1,6 @@
 {
   "date": "2026-11-05",
-  "generated_at": "2026-11-05T09:03:21.302949-05:00",
+  "generated_at": "2026-11-05T09:03:44.083330-05:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -812,9 +812,9 @@
           "path": "data/stock_book/2026-11-05_stock_book.json",
           "role": "required",
           "status": "OK",
-          "reason": "horizons=5 names=215",
-          "size": 1534272,
-          "said": "1d BUY AVAH, XYZ, EHC, CDW, GDDY, ACN, KD \u00b7 SELL ENVX, FCEL, NVT, HYLN, POWL, AMPX",
+          "reason": "horizons=5 names=216",
+          "size": 1600032,
+          "said": "1d BUY XYZ, CDW, KD, JKHY, APPN, VRSN, DBX, MSFT \u00b7 SELL ENVX, AMKR, FCEL, METC, AMPX, EAF \u00b7 -0.425",
           "bullets": []
         },
         {
@@ -824,10 +824,10 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 82321,
+          "size": 84199,
           "said": "Stock book \u2014 2026-11-05",
           "bullets": [
-            "_Generated 2026-11-05T07:04:48.447211-05:00_",
+            "_Generated 2026-11-05T09:03:31.761493-05:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -863,7 +863,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "live-book poller + today.json (2026-11-05)",
-          "size": 15651316,
+          "size": 15651332,
           "said": "live-book poller + today.json (2026-11-05)",
           "bullets": []
         }
@@ -890,9 +890,9 @@
           "path": "data/stock_book/2026-11-05_stock_book.json",
           "role": "input",
           "status": "OK",
-          "reason": "horizons=5 names=215",
-          "size": 1534272,
-          "said": "1d BUY AVAH, XYZ, EHC, CDW, GDDY, ACN, KD \u00b7 SELL ENVX, FCEL, NVT, HYLN, POWL, AMPX",
+          "reason": "horizons=5 names=216",
+          "size": 1600032,
+          "said": "1d BUY XYZ, CDW, KD, JKHY, APPN, VRSN, DBX, MSFT \u00b7 SELL ENVX, AMKR, FCEL, METC, AMPX, EAF \u00b7 -0.425",
           "bullets": []
         },
         {
@@ -902,7 +902,7 @@
           "role": "required",
           "status": "OK",
           "reason": "live-book poller + today.json (2026-11-05)",
-          "size": 15651316,
+          "size": 15651332,
           "said": "live-book poller + today.json (2026-11-05)",
           "bullets": []
         },
@@ -941,66 +941,70 @@
   "selections": {
     "buy_1d": [
       {
-        "ticker": "AVAH",
-        "score": 0.8037257219975276
-      },
-      {
         "ticker": "XYZ",
-        "score": 0.4367888737203524
-      },
-      {
-        "ticker": "EHC",
-        "score": 0.49838686341637084
+        "score": 0.3567288721519301
       },
       {
         "ticker": "CDW",
-        "score": 0.39055465405265516
-      },
-      {
-        "ticker": "GDDY",
-        "score": 0.36460734253606275
-      },
-      {
-        "ticker": "ACN",
-        "score": 0.24026241819064154
+        "score": 0.3326692868212943
       },
       {
         "ticker": "KD",
-        "score": 0.7465992511237036
+        "score": 0.6646564745922765
+      },
+      {
+        "ticker": "JKHY",
+        "score": 0.13462671544927884
+      },
+      {
+        "ticker": "APPN",
+        "score": 0.5065089831958443
+      },
+      {
+        "ticker": "VRSN",
+        "score": 0.1602340187982818
+      },
+      {
+        "ticker": "DBX",
+        "score": 0.5504904504573518
+      },
+      {
+        "ticker": "MSFT",
+        "score": 0.2378281037421257
       }
     ],
     "sell_1d": [
       {
         "ticker": "ENVX",
-        "score": -0.34127575494158496
+        "score": -0.2912006375211874
+      },
+      {
+        "ticker": "AMKR",
+        "score": -0.4001271368275508
       },
       {
         "ticker": "FCEL",
-        "score": -0.4391772083921112
+        "score": -0.3678718851523766
       },
       {
-        "ticker": "NVT",
-        "score": -0.45399181341910966
-      },
-      {
-        "ticker": "HYLN",
-        "score": -0.27919151455141844
-      },
-      {
-        "ticker": "POWL",
-        "score": -0.3981817424291512
+        "ticker": "METC",
+        "score": -0.3007959338100951
       },
       {
         "ticker": "AMPX",
-        "score": -0.36273632738421596
+        "score": -0.30604370304853484
       },
       {
         "ticker": "EAF",
-        "score": -0.4198059596316052
+        "score": -0.35853458906802593
       },
       {
-        "ticker": "VRT",
-        "score": -0.3947528866381545
+        "ticker": "HYLN",
+        "score": -0.20749158146292318
+      },
+      {
+        "ticker": "RGTI",
+        "score": -0.21999264683289504
       }
     ],
     "flatten": {
@@ -1870,6 +1874,59 @@
         }
       ],
       "preview": "5046 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-11-05",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-05T09:03:42.800006-05:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-11-05_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1600032,
+          "preview": "1d BUY XYZ, CDW, KD, JKHY, APPN, VRSN, DBX, MSFT \u00b7 SELL ENVX, AMKR, FCEL, METC, AMPX, EAF, HYLN, RGTI"
+        },
+        {
+          "path": "data/stock_book/2026-11-05_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-11-05_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2503,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-11-05_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12432,
+          "preview": "2026-11-05 BUY XYZ, CDW, KD, JKHY, APPN, VRSN, DBX, MSFT \u00b7 SELL ENVX, AMKR, FCEL, METC, AMPX, EAF, HYLN, RGTI"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12432,
+          "preview": "2026-11-05 BUY XYZ, CDW, KD, JKHY, APPN, VRSN, DBX, MSFT \u00b7 SELL ENVX, AMKR, FCEL, METC, AMPX, EAF, HYLN, RGTI"
+        },
+        {
+          "path": "01_daily/2026-11-05_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 85298,
+          "preview": "# Stock book \u2014 2026-11-05\n_Generated 2026-11-05T09:03:31.761493-05:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY XYZ, CDW, KD, JKHY, APPN, VRSN, DBX, MSFT \u00b7 SELL ENVX, AMKR, FCEL, METC, AMPX, EAF, HYLN, RGTI \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-11-05 BUY XYZ, CDW, KD, JKHY, APPN, VRSN, DBX, MSFT \u00b7 SELL ENVX, AMKR, FCEL, METC, AMPX, EAF, HYLN, RGTI \u00b7 2026-11-05 BUY XYZ, CDW, KD, JKHY, APPN, VRSN, DBX, MSFT \u00b7 SELL ENVX, AMKR, FCEL, METC, AMPX, EAF, HYLN, RGTI \u00b7 # Stock book \u2014 2026-11-05\n_Generated 2026-11-05T09:03:31.761493-05:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "href": {
