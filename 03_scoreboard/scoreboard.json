@@ -34909,7 +34909,7 @@
       "direction_hit": true,
       "magnitude_hit": false,
       "divergence_flagged": false,
-      "divergence_verdict": null,
+      "divergence_verdict": "none_flagged — leading_sum −9.0 and futures −0.25 agreed on sign; futures were right on direction but understated severity.",
       "per_factor_breakdown": [
         {
           "factor": "B0_ASIA",
@@ -34957,7 +34957,7 @@
           "status": "miss"
         }
       ],
-      "reflection_lesson_ref": null,
+      "reflection_lesson_ref": "02_lessons/candidate/2026-10-30_lesson.md",
       "sources_used": [],
       "horizon_calls": {
         "HORIZON_3D": {
@@ -35009,7 +35009,8 @@
           "predicted_magnitude_band": "mild",
           "confidence": 0.62
         }
-      }
+      },
+      "lesson_schema_ok": true
     },
     {
       "date": "2026-11-02",
