@@ -211,12 +211,27 @@ def _h1(records: list[dict]) -> None:
         raise SystemExit("h1 status does not record the 2026-09-28 plan")
 
 
+def _base_ref() -> str:
+    """The commit this checkout must extend.
+
+    A push is checked against the commit before it (``APPEND_BASE_REF``,
+    set by the workflow from ``github.event.before`` or ``HEAD^``), not
+    against ``origin/main``: main may already hold later seals by the time
+    a queued job fetches it, and an older checkout can never start with a
+    newer log. A pull request uses its merge base with main. Without the
+    variable the old ``origin/main`` comparison is kept.
+    """
+    import os
+
+    return os.environ.get("APPEND_BASE_REF", "").strip() or "origin/main"
+
+
 def main() -> None:
     _temp()
     records = load()
     _seed_shape(records)
     _page(records)
-    check_against("origin/main")
+    check_against(_base_ref())
     _replay(records)
     print("holdup append-only ok", len(records), "records")
     # h1 reads through the add-only fill-missing notes (#577), like every h1 step.
