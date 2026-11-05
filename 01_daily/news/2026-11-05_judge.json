@@ -1,22 +1,10 @@
 {
- "risk_tilt": "off",
- "macros": [
-  "hawkish",
-  "bearish",
-  "hawkish",
-  "bearish"
- ],
- "sector_tilts": {
-  "Semis/Ai": "mixed",
-  "Healthcare": "bullish",
-  "Industrials": "bearish",
-  "Energy": "bullish"
- },
+ "risk_tilt": null,
+ "macros": [],
+ "sector_tilts": {},
  "tickers": {
-  "XLV": 4.0,
-  "XLE": 9.5,
-  "XLK": -1.5
+  "ADBE": -1.5
  },
- "b1_inject": "NEWS_JUDGE: n=8 rescued=5\nMACRO rates: [hawkish] strong JOLTS + hawkish Fed comments keep hike-risk alive; Treasury safety bid is risk-off, not dovish (session/1w)\nMACRO risk: [bearish] election stock sell-off and renewed AI-stock selling weigh SPX beta; UBS rally setup is contested (session)\nSECTOR semis/AI: [mixed] AMD data-center beat vs Apple memory warning, Palantir slowdown, APH/Fabrinet weakness (SMH/SOXX)\nSECTOR healthcare: [bullish] AMGN Phase 3 dazodalibep positive and ABBV Parkinson approval lift XLV sympathy (XLV)\nSECTOR industrials: [bearish] BA 737 MAX 10 FAA certification halt pressures BA/ITA (ITA/BA)\nSECTOR energy: [bullish] Marathon CVR refinery deal and Aramco refining boom support refiners/integrated (XLE)\nINTERACTION: AI-chip demand vs Apple/Palantir/APH weakness = tech mixed; AMGN Phase 3 + ABBV approval = Healthcare basket; strong JOLTS + hawkish Fed != weak-labor dovish; yields safety bid != risk-on breadth\nWATCH: No futures/Channel 1; election headline flow can dominate single-name signals",
+ "b1_inject": "NEWS_JUDGE: n=7 rescued=5\nMACRO risk-on: [pol] Democratic Congress sweep drives broad rally, lower yields/oil (regime/1d-1w)\nMACRO rates: [pol] 10Y yield slides on midterm outcome and oil drop; duration relief (session/1d)\nMACRO labor: [pol] September job openings jump ahead of payrolls; growth positive, rate path two-sided (session/1d)\nSECTOR semis/AI: [pol] AMD data-center beat/forecast eases AI spend fears; chip ETF dip-buy inflows (SMH/SOX)\nSECTOR software: [pol] Citi cuts Adobe to Sell on growth reset/competition; SaaS multiple caution (IGV)\nSECTOR clean energy: [pol] Chinese renewables surge on expected US policy shift; TAN/ICLN sympathy (conditional)\nINTERACTION: Yields-down + midterm risk-on supports breadth; Adobe/AI-budget caution offsets blanket SaaS bid; AI infra mixed on regulatory risk vs chip demand.\nWATCH: Ranking hinges on Democratic-sweep policy interpretation; if rally fades, rates/oil and AMD become primary.",
  "date": "2026-11-05"
 }

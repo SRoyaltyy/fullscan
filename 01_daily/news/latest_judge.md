@@ -1,71 +1,64 @@
-# News Judge — 2026-11-04
+# News Judge — 2026-11-05
 
 ### IMPORTANT NEWS (my ranking)
-1. **Treasury yields fall as investors crowd into bonds for safety amid election stock sell-off** — Election risk-off plus a rates safety bid is the cleanest SPX-beta driver in the usable set. Provisional channel: **rates**.
-2. **UBS traders see a ‘combustible setup’ for an S&P 500 rally after the vote** — Post-election positioning could flip risk appetite, but it is contested against the safety bid. Provisional channel: **sentiment**.
-3. **AMD forecast exceeds estimates after AI chip demand soars; data-center revenue hits record** — AI semis fundamental positive, but must be traded against broader AI-stock weakness. Provisional channel: **sector_fundamental**.
-4. **Apple sales slow, China revenue misses, margins/memory costs pressure shares** — Mega-cap tech/consumer drag and a memory-cost read-through for hardware. Provisional channel: **sector_fundamental**.
-5. **Job openings posted a big September gain ahead of payrolls** — Strong labor keeps Fed/hike-risk repricing alive and argues against a weak-labor dovish read. Provisional channel: **rates**.
-6. **Agnico Eagle falls as spot gold drops more than $100 on hawkish Fed comments and October hike expectations** — Hawkish rates signal with gold-miner transmission; noisy gold peace-headline conflicts. Provisional channel: **rates**.
-7. **Boeing 737 MAX 10 certification halted by FAA over flight-software glitch** — Industrials/BA order-book risk with sector read-through. Provisional channel: **sector_fundamental**.
-8. **Marathon profit beats and strikes $4.2B CVR refinery deal; Aramco refining boom** — Refining-margin positive for energy, though crude-supply headlines are neutral. Provisional channel: **sector_fundamental**.
+1. Democrats win Congress; US stocks rally, yields slide, oil drops — broad risk-on/policy regime shift outranks single-name color — provisional channel: risk  
+2. 10-year Treasury yield slides as traders weigh Democratic midterm wins and oil drop — rates relief supports duration and breadth — provisional channel: rates  
+3. AMD forecast/data-center sales surge eases AI spending fears; shares rise — semis/AI demand is index-relevant — provisional channel: sector_fundamental  
+4. Citi downgrades Adobe to Sell on growth reset, leadership gaps, competition/macro — software/SaaS multiple-compression signal — provisional channel: sector_fundamental  
+5. Job openings post big September gain ahead of payrolls — labor growth positive but keeps rate path two-sided — provisional channel: rates  
+6. Investors buy the dip in chip ETFs; inflows top $44B — positioning/sentiment support for semis — provisional channel: sentiment  
+7. Chinese renewables/cleantech stocks surge after Democratic sweep on expected US policy shift — rescued policy-shift signal for clean energy — provisional channel: sector_policy  
 
-RULES_APPLIED: none cleanly fire — no Channel 1/futures or canonical predict context is injected; ops lessons are not applicable to news ranking. Macro-binary caution is noted for payrolls, but no direction gate can be applied without B6.
+RULES_APPLIED: none — no fresh kinetic oil shock, no pending CPI/NFP/FOMC futures-confirmation gate, no same-day Fed binary.
 
 ### STEP 1 — FRAMEWORK SCORE
-- **Treasury yields fall / election safety bid** — keep; us_relevance high (SPX risk appetite); channel rates; geography us_domestic; severity session; horizon 1d-1w; action_object spx:SPX beta/rates; polarity bearish; polarity_why safety bid confirms election de-risking; confidence 0.80.
-- **UBS combustible S&P rally setup** — conditional; us_relevance high (index sentiment); channel sentiment; geography us_domestic; severity session; horizon 1d-1w; action_object spx:SPX beta; polarity bullish; polarity_why contrarian post-vote rally setup, but contested; confidence 0.55.
-- **AMD AI chip beat / data-center record** — keep; us_relevance high (semis/AI beta); channel sector_fundamental; geography us_supply_chain; severity session; horizon 1d-1w; action_object sector_etf:SMH/SOXX; polarity bullish; polarity_why AI demand beat supports semis, but offset by AI selloff; confidence 0.75.
-- **Apple China miss / memory margins** — keep; us_relevance high (mega-cap tech/QQQ); channel sector_fundamental; geography us_supply_chain; severity session; horizon 1d-1w; action_object sector_etf:XLK/QQQ; polarity bearish; polarity_why China weakness and memory costs pressure hardware margins; confidence 0.80.
-- **Job openings strong ahead of payrolls** — conditional; us_relevance high (Fed path); channel rates; geography us_domestic; severity session; horizon 1d-1w; action_object spx:rates/hike odds; polarity hawkish; polarity_why strong labor keeps hike-risk alive; confidence 0.65.
-- **Gold drop / hawkish Fed comments** — conditional; us_relevance medium (rates/metals); channel rates; geography global_priced; severity session; horizon 1d-1w; action_object basket:GLD/GDX; polarity hawkish; polarity_why hawkish comments hit gold and miners; confidence 0.65.
-- **Boeing 737 MAX 10 FAA halt** — keep; us_relevance medium-high (industrials); channel sector_fundamental; geography us_domestic; severity session; horizon 1w-1m; action_object sector_etf:ITA/BA; polarity bearish; polarity_why certification halt risks order-book timing; confidence 0.80.
-- **Marathon / Aramco refining** — conditional; us_relevance medium (energy sector); channel sector_fundamental; geography us_domestic/global_priced; severity session; horizon 1d-1w; action_object sector_etf:XLE; polarity bullish; polarity_why refining margins/deal support energy; confidence 0.65.
+1. Democrats win Congress / US stocks rally — keep; us_relevance high (broad SPX beta and sector policy); channel risk; geography us_domestic; severity regime; horizon 1d-1w; action_object spx:SPX beta; polarity bullish; polarity_why broad risk-on and policy-change repricing; confidence 0.78  
+2. 10Y yield slides — keep; high (rates/duration transmission); channel rates; us_domestic; session; 1d; spx:SPX beta/duration; dovish; yield relief supports risk appetite; 0.74  
+3. AMD AI forecast/data-center strength — keep; high (semis/AI index weight); sector_fundamental; us_supply_chain; session; 1d-1w; sector_etf:SMH/SOX; bullish; eases AI capex fear; 0.75  
+4. Citi downgrades Adobe to Sell — keep; medium-high (software/SaaS basket force); sector_fundamental; us_domestic; session; 1d-1w; basket:IGV/software; bearish; growth reset/competition warning; 0.70  
+5. Job openings big September gain — keep; medium (macro/rates two-sided); rates; us_domestic; session; 1d; spx:SPX beta; mixed; growth positive but not disinflationary; 0.60  
+6. Chip ETF dip-buy inflows $44B — conditional; medium (positioning not fundamental); sentiment; us_domestic; session; 1d-1w; sector_etf:SMH/SOX; bullish; flow support but fades if AI news turns; 0.62  
+7. Chinese renewables surge on US policy shift — conditional; medium (policy sympathy, foreign-priced); sector_policy; global_priced; session; 1d-1w; sector_etf:TAN/ICLN; bullish; expected US clean-energy policy shift; 0.58  
 
 ### STEP 2 — INTERACTIONS
-- **Rates/risk cluster:** Treasury safety bid + election stock sell-off + UBS post-vote rally setup — do not read lower yields as dovish breadth support while election de-risking dominates.
-- **AI/tech mixed:** AMD AI-chip demand vs Apple memory/margin warning, Palantir slowdown, APH/Fabrinet weakness, copper/tin AI selloff — do not buy broad software/AI on AMD alone.
-- **Labor/Fed cluster:** strong JOLTS + hawkish Fed comments/gold drop — treat as one hawkish rates repricing, not weak-labor dovish.
-- **Healthcare sympathy:** AMGN Phase 3 dazodalibep positive + ABBV Parkinson’s approval — Healthcare basket read-through, not only single names.
-- **Energy refining:** Marathon CVR refinery deal + Aramco refining boom — XLE refining positive, but Venezuela unchanged exports are neutral crude noise.
+Yields down + midterm risk-on + chip inflows → breadth support, not only mega-cap; Adobe downgrade + Apple AI-budget caution → do not blanket-bid SaaS on rate relief; Democratic sweep + tighter AI/data-center regulatory risk vs AMD data-center strength → AI infra mixed; Chinese renewables surge on US policy shift → clean-energy sympathy but headline/foreign-priced.
 
 ### STEP 3 — RECLASSIFY AUDIT
-- **DROP from usable:** Powell election/local-news keyword cluster (Denise Powell, local boards, obituary) — false-positive keyword noise, no market force; Venezuela oil exports unchanged — neutral crude noise; Powell Industries valuation piece — stale single-name noise.
-- **RESCUE from noise:** UBS ‘combustible setup’ — post-vote sentiment matters for SPX beta; Copper/Tin fall on renewed AI selloff — confirms AI-risk transmission; Marathon refinery deal — real energy sector driver; Aramco refining boom — energy margin read-through; Gold jump on Iran peace hopes — conditional geopolitical/sentiment context, conflicting with hawkish gold drop.
+DROPPED_FROM_USABLE: Powell keyword false positives (Powell Industries, obituaries, sports/local-politics); Euro zone inflation 4% (foreign rates, not top US driver today); bank lending to non-bank financial intermediaries (low session relevance).  
+RESCUED_FROM_NOISE: US stocks rally after Democrats win Congress; data center stocks slide; Wall Street trading desks bet on US stock rally after midterms; Chinese renewables stocks extend surge after Democratic sweep; China cleantech stocks jump as investors bet on US policy shift.
 
 ### STEP 4 — B1 / SECTOR INJECT
-NEWS_JUDGE: n=8 rescued=5
-MACRO rates: [hawkish] strong JOLTS + hawkish Fed comments keep hike-risk alive; Treasury safety bid is risk-off, not dovish (session/1w)
-MACRO risk: [bearish] election stock sell-off and renewed AI-stock selling weigh SPX beta; UBS rally setup is contested (session)
-SECTOR semis/AI: [mixed] AMD data-center beat vs Apple memory warning, Palantir slowdown, APH/Fabrinet weakness (SMH/SOXX)
-SECTOR healthcare: [bullish] AMGN Phase 3 dazodalibep positive and ABBV Parkinson’s approval lift XLV sympathy (XLV)
-SECTOR industrials: [bearish] BA 737 MAX 10 FAA certification halt pressures BA/ITA (ITA/BA)
-SECTOR energy: [bullish] Marathon CVR refinery deal and Aramco refining boom support refiners/integrated (XLE)
-INTERACTION: AI-chip demand vs Apple/Palantir/APH weakness = tech mixed; AMGN Phase 3 + ABBV approval = Healthcare basket; strong JOLTS + hawkish Fed ≠ weak-labor dovish; yields safety bid ≠ risk-on breadth.
-WATCH: No futures/Channel 1; election headline flow can dominate single-name signals.
+NEWS_JUDGE: n=7 rescued=5  
+MACRO risk-on: [pol] Democratic Congress sweep drives broad rally, lower yields/oil (regime/1d-1w)  
+MACRO rates: [pol] 10Y yield slides on midterm outcome and oil drop; duration relief (session/1d)  
+MACRO labor: [pol] September job openings jump ahead of payrolls; growth positive, rate path two-sided (session/1d)  
+SECTOR semis/AI: [pol] AMD data-center beat/forecast eases AI spend fears; chip ETF dip-buy inflows (SMH/SOX)  
+SECTOR software: [pol] Citi cuts Adobe to Sell on growth reset/competition; SaaS multiple caution (IGV)  
+SECTOR clean energy: [pol] Chinese renewables surge on expected US policy shift; TAN/ICLN sympathy (conditional)  
+INTERACTION: Yields-down + midterm risk-on supports breadth; Adobe/AI-budget caution offsets blanket SaaS bid; AI infra mixed on regulatory risk vs chip demand.  
+WATCH: Ranking hinges on Democratic-sweep policy interpretation; if rally fades, rates/oil and AMD become primary.
 
 NEWS_PARSE_BEGIN
-IMPORTANT_COUNT: 8
+IMPORTANT_COUNT: 7
 TOP_ITEMS:
-- Treasury yields fall as investors crowd into bonds for safety amid election stock sell-off | keep=keep | channel=rates | severity=session | horizon=1d-1w | object=spx:SPX beta/rates | pol=bearish | conf=0.8
-- UBS traders see combustible S&P 500 rally setup after vote | keep=conditional | channel=sentiment | severity=session | horizon=1d-1w | object=spx:SPX beta | pol=bullish | conf=0.55
-- AMD forecast exceeds estimates after AI chip demand soars and data-center revenue hits record | keep=keep | channel=sector_fundamental | severity=session | horizon=1d-1w | object=sector_etf:SMH/SOXX | pol=bullish | conf=0.75
-- Apple sales slow China revenue misses and memory margins pressure shares | keep=keep | channel=sector_fundamental | severity=session | horizon=1d-1w | object=sector_etf:XLK/QQQ | pol=bearish | conf=0.8
-- Job openings posted big September gain ahead of payrolls | keep=conditional | channel=rates | severity=session | horizon=1d-1w | object=spx:rates/hike odds | pol=hawkish | conf=0.65
-- Agnico Eagle falls as spot gold drops more than 100 dollars on hawkish Fed comments | keep=conditional | channel=rates | severity=session | horizon=1d-1w | object=basket:GLD/GDX | pol=hawkish | conf=0.65
-- Boeing 737 MAX 10 certification halted by FAA over flight software glitch | keep=keep | channel=sector_fundamental | severity=session | horizon=1w-1m | object=sector_etf:ITA/BA | pol=bearish | conf=0.8
-- Marathon profit beat and 4.2B CVR refinery deal with Aramco refining boom | keep=conditional | channel=sector_fundamental | severity=session | horizon=1d-1w | object=sector_etf:XLE | pol=bullish | conf=0.65
-INTERACTIONS: yields safety bid + election sell-off = risk-off rates cluster; AMD AI demand vs Apple/Palantir/APH weakness = AI mixed; strong JOLTS + hawkish Fed/gold drop = rates cluster not dovish; AMGN Phase 3 + ABBV approval = Healthcare basket; Marathon/Aramco refining = XLE refining positive
-RESCUED_FROM_NOISE: UBS Traders See Combustible Setup for S&P 500 Rally After Vote; Copper, Tin Fall With Base Metals on Renewed AI Stocks Selloff; Marathon profit beat and CVR refinery deal; Aramco Profit Beats Estimates After Refining Boom Oil Surge; Gold Holds Biggest Jump in Two Months on Iran Peace-Deal Hopes
-DROPPED_FROM_USABLE: Powell election/local-news keyword cluster; Venezuela oil exports unchanged amid stagnant output and high freight rates; Is Powell Industries Inc Overvalued After 6.1% Rally
+- Democrats win Congress; US stocks rally, yields slide, oil drops | keep=keep | channel=risk | severity=regime | horizon=1d-1w | object=spx:SPX beta | pol=bullish | conf=0.78
+- 10-year Treasury yield slides as traders weigh Democratic midterm wins and oil drop | keep=keep | channel=rates | severity=session | horizon=1d | object=spx:SPX beta/duration | pol=dovish | conf=0.74
+- AMD forecast/data-center sales surge eases AI spending fears; shares rise | keep=keep | channel=sector_fundamental | severity=session | horizon=1d-1w | object=sector_etf:SMH/SOX | pol=bullish | conf=0.75
+- Citi downgrades Adobe to Sell on growth reset, leadership gaps, competition/macro | keep=keep | channel=sector_fundamental | severity=session | horizon=1d-1w | object=basket:IGV/software | pol=bearish | conf=0.70
+- Job openings post big September gain ahead of payrolls | keep=keep | channel=rates | severity=session | horizon=1d | object=spx:SPX beta | pol=mixed | conf=0.60
+- Investors buy the dip in chip ETFs; inflows top $44B | keep=conditional | channel=sentiment | severity=session | horizon=1d-1w | object=sector_etf:SMH/SOX | pol=bullish | conf=0.62
+- Chinese renewables/cleantech stocks surge after Democratic sweep on expected US policy shift | keep=conditional | channel=sector_policy | severity=session | horizon=1d-1w | object=sector_etf:TAN/ICLN | pol=bullish | conf=0.58
+INTERACTIONS: Yields down + midterm risk-on + chip inflows support breadth; Adobe downgrade + Apple AI-budget caution offset blanket SaaS bid; Democratic sweep regulatory risk vs AMD data-center strength leaves AI infra mixed; Chinese renewables surge on US policy shift is clean-energy sympathy but foreign-priced.
+RESCUED_FROM_NOISE: US stocks rally after Democrats win Congress; data center stocks slide; Wall Street trading desks bet on US stock rally after midterms; Chinese renewables stocks extend surge after Democratic sweep; China cleantech stocks jump as investors bet on US policy shift
+DROPPED_FROM_USABLE: Powell keyword false positives (Powell Industries, obituaries, sports/local-politics); Euro zone inflation hits 4%; Bank lending to non-bank financial intermediaries
 B1_INJECT:
-NEWS_JUDGE: n=8 rescued=5
-MACRO rates: [hawkish] strong JOLTS + hawkish Fed comments keep hike-risk alive; Treasury safety bid is risk-off, not dovish (session/1w)
-MACRO risk: [bearish] election stock sell-off and renewed AI-stock selling weigh SPX beta; UBS rally setup is contested (session)
-SECTOR semis/AI: [mixed] AMD data-center beat vs Apple memory warning, Palantir slowdown, APH/Fabrinet weakness (SMH/SOXX)
-SECTOR healthcare: [bullish] AMGN Phase 3 dazodalibep positive and ABBV Parkinson approval lift XLV sympathy (XLV)
-SECTOR industrials: [bearish] BA 737 MAX 10 FAA certification halt pressures BA/ITA (ITA/BA)
-SECTOR energy: [bullish] Marathon CVR refinery deal and Aramco refining boom support refiners/integrated (XLE)
-INTERACTION: AI-chip demand vs Apple/Palantir/APH weakness = tech mixed; AMGN Phase 3 + ABBV approval = Healthcare basket; strong JOLTS + hawkish Fed != weak-labor dovish; yields safety bid != risk-on breadth
-WATCH: No futures/Channel 1; election headline flow can dominate single-name signals
+NEWS_JUDGE: n=7 rescued=5
+MACRO risk-on: [pol] Democratic Congress sweep drives broad rally, lower yields/oil (regime/1d-1w)
+MACRO rates: [pol] 10Y yield slides on midterm outcome and oil drop; duration relief (session/1d)
+MACRO labor: [pol] September job openings jump ahead of payrolls; growth positive, rate path two-sided (session/1d)
+SECTOR semis/AI: [pol] AMD data-center beat/forecast eases AI spend fears; chip ETF dip-buy inflows (SMH/SOX)
+SECTOR software: [pol] Citi cuts Adobe to Sell on growth reset/competition; SaaS multiple caution (IGV)
+SECTOR clean energy: [pol] Chinese renewables surge on expected US policy shift; TAN/ICLN sympathy (conditional)
+INTERACTION: Yields-down + midterm risk-on supports breadth; Adobe/AI-budget caution offsets blanket SaaS bid; AI infra mixed on regulatory risk vs chip demand.
+WATCH: Ranking hinges on Democratic-sweep policy interpretation; if rally fades, rates/oil and AMD become primary.
 NEWS_PARSE_END
