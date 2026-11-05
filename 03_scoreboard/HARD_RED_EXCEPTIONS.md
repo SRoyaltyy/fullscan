@@ -2,33 +2,33 @@
 
 Live sleeves still SIT on S≤−3. Search a ticker for every session since 8/13: cameras (+N −N), 09:30 open, close, same-day % and hold-1/3/5 with actual prices.
 
-Generated 2026-11-05T15:38:32.158950-05:00 · 2026-08-13 → 2026-11-04 · live sit **untouched**.
+Generated 2026-11-05T18:09:12.335132-05:00 · 2026-08-13 → 2026-11-05 · live sit **untouched**.
 
 ## Latest morning
 
-- Date **2026-11-04** S=10.848 hard-red=False · 163 investigator cards · 46 long-ok · 8 short-ok
+- Date **2026-11-05** S=-2.495 hard-red=False · 67 investigator cards · 24 long-ok · 20 short-ok
 
 ### Longs weather sat on (top)
 
-- **GEHC** idio +23 · +7 −1 · E good · H1 0.07% H3 None%
-- **QNST** idio +22 · +6 −1 · E good · H1 11.99% H3 None%
-- **PACS** idio +21 · +7 −1 · E good · H1 3.17% H3 None%
-- **CON** idio +20 · +7 −1 · E good · H1 3.92% H3 None%
-- **CNMD** idio +19 · +7 −1 · E good · H1 8.92% H3 None%
-- **RGEN** idio +19 · +7 −1 · E good · H1 -2.84% H3 None%
-- **VEEV** idio +19 · +7 −1 · E good · H1 0.38% H3 None%
-- **ELAN** idio +19 · +6 −1 · E good · H1 -6.61% H3 None%
+- **TRU** idio +18 · +6 −2 · E good · H1 None% H3 None%
+- **ARHS** idio +17 · +5 −3 · E good · H1 None% H3 None%
+- **TBBB** idio +17 · +5 −2 · E good · H1 None% H3 None%
+- **PRMB** idio +15 · +4 −2 · E good · H1 None% H3 None%
+- **DLTR** idio +12 · +4 −2 · E good · H1 None% H3 None%
+- **COCO** idio +11 · +4 −3 · E good · H1 None% H3 None%
+- **DNUT** idio +11 · +4 −3 · E good · H1 None% H3 None%
+- **STUB** idio +11 · +3 −2 · E missing · H1 None% H3 None%
 
 ### Shorts weather sat on (top)
 
-- **CPNG** idio -12 · +1 −6 · H1 -6.2%
-- **ANGI** idio -9 · +3 −4 · H1 -8.25%
-- **BETA** idio -8 · +2 −6 · H1 0.21%
-- **ENHA** idio -6 · +2 −3 · H1 -1.72%
-- **JLHL** idio -6 · +2 −6 · H1 8.12%
-- **HLP** idio -3 · +3 −4 · H1 17.84%
-- **ROL** idio -3 · +3 −4 · H1 -2.66%
-- **CECO** idio -3 · +2 −6 · H1 25.87%
+- **EOSE** idio -17 · +1 −7 · H1 None%
+- **LDI** idio -15 · +2 −5 · H1 None%
+- **SWIM** idio -14 · +2 −6 · H1 None%
+- **MOS** idio -13 · +1 −6 · H1 None%
+- **AIP** idio -12 · +1 −6 · H1 None%
+- **GLND** idio -11 · +1 −6 · H1 None%
+- **MX** idio -11 · +1 −6 · H1 None%
+- **FRSH** idio -8 · +2 −5 · H1 None%
 
 ## If we had taken them on hard-red sits (research)
 
