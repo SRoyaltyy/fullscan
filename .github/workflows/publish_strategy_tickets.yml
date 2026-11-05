@@ -223,7 +223,12 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: dashboard
-          path: dashboard/index.html
+          # The Pages job treats this zip as the dashboard tree. index.html
+          # alone omitted updown, and /updown/ is not a root alias unless
+          # the publish script copies it.
+          path: |
+            dashboard/index.html
+            dashboard/updown/
           if-no-files-found: error
       - name: Push the rendered page
         env:

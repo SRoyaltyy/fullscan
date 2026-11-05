@@ -143,6 +143,37 @@ def test_days_index_appends_and_keeps_past_rows() -> None:
         assert sealed != original
 
 
+def test_append_stops_at_through_and_keeps_earlier_days() -> None:
+    with tempfile.TemporaryDirectory() as tmp:
+        root = Path(tmp)
+        news = root / "01_daily" / "news"
+        path = root / "dashboard" / "jev-train" / "days.json"
+        path.parent.mkdir(parents=True)
+        stored = {
+            "schema": "jev-train-days-1",
+            "days": [{
+                "date": "2026-09-29",
+                "parsed": True,
+                "digest": True,
+                "judge": True,
+                "note": "sealed",
+            }],
+        }
+        path.write_text(json.dumps(stored, indent=2) + "\n", encoding="utf-8")
+        before = json.loads(path.read_text(encoding="utf-8"))
+        _write(news / "2026-09-29_parsed.json", {"all_items": []})
+        _write(news / "2026-11-04_parsed.json", {"all_items": []})
+        _write(news / "2026-11-05_intake_parsed.json", {"all_items": []})
+        append_new_days(root=root, news_dir=news, through="2026-11-04")
+        blob = json.loads(path.read_text(encoding="utf-8"))
+        assert blob["days"][0] == before["days"][0]
+        assert [row["date"] for row in blob["days"]] == ["2026-09-29", "2026-11-04"]
+        assert blob["days"][1]["parsed"] is True
+        again = path.read_bytes()
+        append_new_days(root=root, news_dir=news, through="2026-11-04")
+        assert path.read_bytes() == again
+
+
 def test_page_day_script_parses_repo_news() -> None:
     node = shutil.which("node")
     if not node:
@@ -183,6 +214,7 @@ def main() -> None:
         test_run_day_draw_is_code_first_and_needs_no_key,
         test_write_days_index_and_cap,
         test_days_index_appends_and_keeps_past_rows,
+        test_append_stops_at_through_and_keeps_earlier_days,
         test_page_day_script_parses_repo_news,
     ]
     failed = 0

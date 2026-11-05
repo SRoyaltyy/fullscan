@@ -491,6 +491,30 @@ def test_publish_restores_h1_and_holdup_aliases() -> None:
         assert _blob(intake_bare, "dashboard/news-intake/index.html") == "intake-from-main"
 
 
+def test_publish_copies_updown_to_the_site_root() -> None:
+    """https://sroyaltyy.github.io/fullscan/updown/ is the root alias.
+
+    The stock-book dashboard artifact is only the main index, and the
+    publish script used to root-copy day-movers but not updown, so the
+    live root URL 404s while /dashboard/updown/ still loads.
+    """
+    with tempfile.TemporaryDirectory() as d:
+        base = Path(d)
+        ws = base / "ws"
+        bare = base / "origin.git"
+        ws.mkdir()
+        subprocess.check_call(["git", "init", "--bare", "-q", str(bare)])
+        _write_page(ws, "dashboard/index.html", "<html>main</html>")
+        _write_page(ws, "dashboard/updown/index.html", "updown-page")
+        _write_page(ws, "dashboard/updown/data/index.json", '{"model":"updown_o2c_v2"}')
+        result = _publish(ws, bare, None)
+        assert result.returncode == 0, result.stdout + result.stderr
+        assert _blob(bare, "updown/index.html") == "updown-page"
+        assert _blob(bare, "dashboard/updown/index.html") == "updown-page"
+        assert _blob(bare, "dashboard/updown/data/index.json") == '{"model":"updown_o2c_v2"}'
+        assert _blob(bare, "updown/data/index.json") == '{"model":"updown_o2c_v2"}'
+
+
 def test_preopen_2026_10_07_resolves_to_2026_10_06() -> None:
     """Before the bell, today ET is not the session the day board is for."""
     preopen = datetime(2026, 10, 7, 8, 40, tzinfo=ET)
@@ -728,6 +752,18 @@ def test_workflows_wire_the_gate() -> None:
     assert "jev-train" in dep
     assert "overlay jev-train" in dep
     assert "jev-train" in pub
+    root_lists = []
+    for block in dep.split("for sub in ")[1:]:
+        if "Root copy pages_out/${sub}" in block:
+            root_lists.append(block.split("; do", 1)[0])
+    assert root_lists and all("updown" in header for header in root_lists)
+    assert " updown " in f" {pub.split('SUBS=', 1)[1].split(chr(10), 1)[0]} "
+    book_art = book.split("name: dashboard", 1)[1].split("if-no-files-found", 1)[0]
+    assert "dashboard/updown/" in book_art
+    tickets = (root / ".github" / "workflows" / "publish_strategy_tickets.yml").read_text(
+        encoding="utf-8")
+    ticket_art = tickets.split("name: dashboard", 1)[1].split("if-no-files-found", 1)[0]
+    assert "dashboard/updown/" in ticket_art
     assert "newest successful Stock Book ALL" in dep
     main_fallback = dep.index("Used dashboard/index.html from main")
     artifact_fallback = dep.index("newest successful Stock Book ALL")
@@ -752,6 +788,7 @@ def main() -> None:
         test_dash_template_has_session_and_pack_stamp,
         test_paper_book_page_is_on_the_pages_deploy,
         test_publish_restores_h1_and_holdup_aliases,
+        test_publish_copies_updown_to_the_site_root,
         test_preopen_2026_10_07_resolves_to_2026_10_06,
         test_preopen_uses_today_when_today_files_ready,
         test_weekend_resolves_to_friday,

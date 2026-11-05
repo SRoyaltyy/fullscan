@@ -60,11 +60,14 @@ def list_parse_days(news_dir: Path | None = None) -> list[dict]:
 
 
 def write_days_index(*, root: Path | None = None,
-                     news_dir: Path | None = None) -> Path:
+                     news_dir: Path | None = None,
+                     through: str | None = None) -> Path:
     """Append parse days that are not already listed.
 
     An existing day row is left as stored, including its flags. A second
-    call with no new date does not rewrite the file.
+    call with no new date does not rewrite the file. ``through`` skips
+    news days after that YYYY-MM-DD; already stored days stay even if
+    they are later than ``through``.
     """
     root = root or ROOT
     news_dir = news_dir or (root / "01_daily" / "news")
@@ -88,6 +91,8 @@ def write_days_index(*, root: Path | None = None,
         day = str(row.get("date") or "")
         if not day or day in have:
             continue
+        if through and day > through:
+            continue
         added.append(dict(row))
         have.add(day)
     if path.is_file() and not added:
@@ -98,7 +103,8 @@ def write_days_index(*, root: Path | None = None,
 
 
 def append_new_days(*, root: Path | None = None,
-                    news_dir: Path | None = None) -> Path:
+                    news_dir: Path | None = None,
+                    through: str | None = None) -> Path:
     """Index new parse days. Does not draw or redraw any day."""
     root = root or ROOT
     path = dashboard_days_path(root)
@@ -110,7 +116,7 @@ def append_new_days(*, root: Path | None = None,
             for row in (blob.get("days") or [])
             if isinstance(row, dict)
         }
-    path = write_days_index(root=root, news_dir=news_dir)
+    path = write_days_index(root=root, news_dir=news_dir, through=through)
     blob = _load_json(path) or {}
     after = [
         str(row.get("date"))
@@ -266,10 +272,16 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("cmd", choices=["draw", "append"])
     parser.add_argument("--day", default="")
     parser.add_argument("--stamp", default="")
+    parser.add_argument("--through", default="",
+                        help="Last YYYY-MM-DD to index. Blank uses the latest completed NYSE session.")
     args = parser.parse_args(argv)
     try:
         if args.cmd == "append":
-            append_new_days()
+            through = (args.through or "").strip()
+            if not through:
+                from .pages_publish_gate import latest_completed_session
+                through = latest_completed_session()
+            append_new_days(through=through)
             return 0
         if not args.day:
             print("[jev_day] day must be YYYY-MM-DD")
