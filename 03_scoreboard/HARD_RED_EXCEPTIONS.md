@@ -2,7 +2,7 @@
 
 Live sleeves still SIT on S≤−3. Search a ticker for every session since 8/13: cameras (+N −N), 09:30 open, close, same-day % and hold-1/3/5 with actual prices.
 
-Generated 2026-11-05T11:49:29.459321-05:00 · 2026-08-13 → 2026-11-04 · live sit **untouched**.
+Generated 2026-11-05T15:38:32.158950-05:00 · 2026-08-13 → 2026-11-04 · live sit **untouched**.
 
 ## Latest morning
 
@@ -10,25 +10,25 @@ Generated 2026-11-05T11:49:29.459321-05:00 · 2026-08-13 → 2026-11-04 · live 
 
 ### Longs weather sat on (top)
 
-- **GEHC** idio +23 · +7 −1 · E good · H1 1.31% H3 None%
-- **QNST** idio +22 · +6 −1 · E good · H1 10.75% H3 None%
-- **PACS** idio +21 · +7 −1 · E good · H1 4.27% H3 None%
-- **CON** idio +20 · +7 −1 · E good · H1 5.49% H3 None%
-- **CNMD** idio +19 · +7 −1 · E good · H1 9.56% H3 None%
+- **GEHC** idio +23 · +7 −1 · E good · H1 0.07% H3 None%
+- **QNST** idio +22 · +6 −1 · E good · H1 11.99% H3 None%
+- **PACS** idio +21 · +7 −1 · E good · H1 3.17% H3 None%
+- **CON** idio +20 · +7 −1 · E good · H1 3.92% H3 None%
+- **CNMD** idio +19 · +7 −1 · E good · H1 8.92% H3 None%
 - **RGEN** idio +19 · +7 −1 · E good · H1 -2.84% H3 None%
-- **VEEV** idio +19 · +7 −1 · E good · H1 0.9% H3 None%
-- **ELAN** idio +19 · +6 −1 · E good · H1 -3.85% H3 None%
+- **VEEV** idio +19 · +7 −1 · E good · H1 0.38% H3 None%
+- **ELAN** idio +19 · +6 −1 · E good · H1 -6.61% H3 None%
 
 ### Shorts weather sat on (top)
 
-- **CPNG** idio -12 · +1 −6 · H1 -5.19%
-- **ANGI** idio -9 · +3 −4 · H1 0.68%
-- **BETA** idio -8 · +2 −6 · H1 -0.13%
+- **CPNG** idio -12 · +1 −6 · H1 -6.2%
+- **ANGI** idio -9 · +3 −4 · H1 -8.25%
+- **BETA** idio -8 · +2 −6 · H1 0.21%
 - **ENHA** idio -6 · +2 −3 · H1 -1.72%
-- **JLHL** idio -6 · +2 −6 · H1 0.89%
-- **HLP** idio -3 · +3 −4 · H1 17.71%
-- **ROL** idio -3 · +3 −4 · H1 -3.19%
-- **CECO** idio -3 · +2 −6 · H1 24.24%
+- **JLHL** idio -6 · +2 −6 · H1 8.12%
+- **HLP** idio -3 · +3 −4 · H1 17.84%
+- **ROL** idio -3 · +3 −4 · H1 -2.66%
+- **CECO** idio -3 · +2 −6 · H1 25.87%
 
 ## If we had taken them on hard-red sits (research)
 
