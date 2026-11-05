@@ -1,6 +1,12 @@
 {
-  "updated_at": "2026-11-05T16:49:49-05:00",
+  "updated_at": "2026-11-05T16:50:54-05:00",
   "runs": [
+    {
+      "date": "2026-10-28",
+      "workflow": "postclose",
+      "file": "2026-10-28_postclose.json",
+      "updated_at": "2026-10-28T20:39:51-04:00"
+    },
     {
       "date": "2026-10-28",
       "workflow": "factor_mine",
@@ -233,13 +239,7 @@
       "date": "2026-11-05",
       "workflow": "factor_mine",
       "file": "2026-11-05_factor_mine.json",
-      "updated_at": "2026-11-05T14:58:55-05:00"
-    },
-    {
-      "date": "2026-11-05",
-      "workflow": "webull_sim",
-      "file": "2026-11-05_webull_sim.json",
-      "updated_at": "2026-11-05T16:49:49-05:00"
+      "updated_at": "2026-11-05T16:50:54-05:00"
     }
   ]
 }
