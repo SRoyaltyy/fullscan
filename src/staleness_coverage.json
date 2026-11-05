@@ -6,7 +6,8 @@
       "page": "dashboard/scanner-backtest/index.html",
       "mode": "manual",
       "last_run": "2026-10-25",
-      "reason": "Refresh scanner test page has no weekday schedule. One run replaces the public snapshot and is limited to 360 minutes, so it is updated by hand."
+      "fill_forward": false,
+      "reason": "Refresh scanner test page has no weekday schedule. One run replaces the public snapshot and is limited to 360 minutes, so it is updated by hand. Fill-forward is out of scope. dashboard/scanner-backtest/meta.json generated_at remains 2026-10-25."
     }
   ]
 }

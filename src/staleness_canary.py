@@ -190,6 +190,41 @@ def manual_sources() -> list[dict]:
     return [row for row in rows if isinstance(row, dict) and row.get("mode") == "manual"]
 
 
+def manual_rows(root: Path) -> list[dict]:
+    """Report each manual page from the coverage record.
+
+    A missing page file keeps that record's last_run. The report uses
+    the coverage date, and it leaves the tree unchanged.
+    """
+    rows = []
+    root = Path(root)
+    for spec in manual_sources():
+        page = str(spec.get("page") or "")
+        last_run = str(spec.get("last_run") or "")[:10]
+        present = bool(page) and (root / page).is_file()
+        note = str(spec.get("reason") or "updated by hand")
+        if page and not present:
+            note = (
+                f"{note} The page file is absent from this tree. "
+                f"last_run stays the documented {last_run or 'undated'}."
+            )
+        rows.append({
+            "path": spec.get("path") or page or "",
+            "page": page,
+            "lag_limit": None,
+            "mode": "manual",
+            "main_date": last_run,
+            "live_date": "",
+            "main_lag": 0,
+            "live_lag": 0,
+            "live_error": "",
+            "ok": True,
+            "page_present": present,
+            "note": note,
+        })
+    return rows
+
+
 def evaluate(*, root: Path | None = None, now: datetime | None = None,
              fetch=None, pages_base: str = PAGES) -> dict:
     root = Path(root) if root is not None else ROOT
@@ -220,20 +255,7 @@ def evaluate(*, root: Path | None = None, now: datetime | None = None,
             "live_error": live_error,
             "ok": ok,
         })
-    for spec in manual_sources():
-        rows.append({
-            "path": spec.get("path") or spec.get("page") or "",
-            "page": spec.get("page") or "",
-            "lag_limit": None,
-            "mode": "manual",
-            "main_date": str(spec.get("last_run") or "")[:10],
-            "live_date": "",
-            "main_lag": 0,
-            "live_lag": 0,
-            "live_error": "",
-            "ok": True,
-            "note": spec.get("reason") or "updated by hand",
-        })
+    rows.extend(manual_rows(root))
     report = {
         "generated_at": datetime.now().astimezone().isoformat(),
         "session": session,
@@ -255,9 +277,10 @@ def main() -> None:
     print(f"[staleness] session {report['session']} ok={report['ok']}")
     for row in report["sources"]:
         if row.get("mode") == "manual":
+            state = "page present" if row.get("page_present") else "page absent"
             print(
                 f"[staleness] MANUAL {row['path']} "
-                f"last_run={row['main_date'] or 'missing'} updated by hand"
+                f"last_run={row['main_date'] or 'missing'} {state}"
             )
             continue
         flag = "OK" if row["ok"] else "STALE"

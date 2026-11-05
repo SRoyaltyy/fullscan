@@ -123,15 +123,42 @@ def test_report_fails_when_a_source_is_over_its_lag(tmp_path: Path) -> None:
 
 def test_scanner_backtest_is_manual() -> None:
     root = Path(__file__).resolve().parents[1]
-    page = (root / "dashboard/scanner-backtest/index.html").read_text(encoding="utf-8")
-    assert "updated by hand, last run 2026-10-25" in page
     workflow = (root / ".github/workflows/scanner-backtest-publish.yml").read_text(encoding="utf-8")
     assert "cron:" not in workflow
     coverage = json.loads((root / "src/staleness_coverage.json").read_text(encoding="utf-8"))
     row = next(item for item in coverage["sources"] if item.get("id") == "scanner-backtest")
     assert row["mode"] == "manual"
     assert row["last_run"] == "2026-10-25"
+    assert row["fill_forward"] is False
     assert row["page"] == "dashboard/scanner-backtest/index.html"
+    page_path = root / row["page"]
+    reported = next(
+        item for item in canary.manual_rows(root) if item["page"] == row["page"])
+    assert reported["ok"] is True
+    assert reported["mode"] == "manual"
+    assert reported["main_date"] == row["last_run"]
+    # Opening execution omits this page from its sparse checkout. The
+    # committed page is copied into that job when the blob exists. A
+    # tree without the file keeps the coverage date.
+    if page_path.is_file():
+        assert reported["page_present"] is True
+        text = page_path.read_text(encoding="utf-8")
+        assert f"updated by hand, last run {row['last_run']}" in text
+    else:
+        assert reported["page_present"] is False
+        assert row["last_run"] in reported["note"]
+
+
+def test_missing_scanner_page_keeps_the_documented_day(tmp_path: Path) -> None:
+    reported = next(
+        item for item in canary.manual_rows(tmp_path)
+        if item["page"] == "dashboard/scanner-backtest/index.html")
+    assert reported["page_present"] is False
+    assert reported["ok"] is True
+    assert reported["mode"] == "manual"
+    assert reported["main_date"] == "2026-10-25"
+    assert "2026-10-25" in reported["note"]
+    assert not (tmp_path / "dashboard/scanner-backtest/index.html").exists()
 
 
 def test_manual_source_does_not_fail_the_canary(tmp_path: Path) -> None:
@@ -148,6 +175,7 @@ def test_manual_source_does_not_fail_the_canary(tmp_path: Path) -> None:
     manual = next(row for row in report["sources"] if row.get("mode") == "manual")
     assert manual["path"] == "dashboard/scanner-backtest/meta.json"
     assert manual["main_date"] == "2026-10-25"
+    assert manual["page_present"] is False
     assert manual["ok"] is True
     assert report["ok"] is False
     preopen = next(row for row in report["sources"]
@@ -157,10 +185,11 @@ def test_manual_source_does_not_fail_the_canary(tmp_path: Path) -> None:
 
 
 def main() -> None:
+    import tempfile
     test_session_lag_counts_nyse_days()
     test_parsers_use_the_newest_data_date()
     test_scanner_backtest_is_manual()
-    import tempfile
+    test_missing_scanner_page_keeps_the_documented_day(Path(tempfile.mkdtemp()))
     with tempfile.TemporaryDirectory() as tmp:
         root = Path(tmp)
         test_report_fails_when_a_source_is_over_its_lag(root)
