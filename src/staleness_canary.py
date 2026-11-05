@@ -4,6 +4,13 @@ Each source is read on main (this checkout) and on the live Pages site.
 Allowed lag is 0 sessions except where a source says otherwise. A missing
 date is over the limit. The report is ``data/health/staleness.json``.
 
+Clock deadlines live in the ``sources`` list of ``src/staleness_coverage.json``.
+Those rows are due at ``expect_by_et`` America/New_York on a session day.
+Before that minute the previous session is the one that must already be
+present. They are not on Pages (``live`` false). The ``pages`` list from
+PR #743 is unchanged. This module only writes the report. It does not
+rewrite ledgers or ticket files.
+
 CLI: python -m src.staleness_canary
 Exit 0 when every source is inside its lag. Exit 1 otherwise.
 """
@@ -17,11 +24,13 @@ import urllib.error
 import urllib.request
 from datetime import date, datetime, timedelta
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 from src.pages_publish_gate import data_asof_from_html, latest_completed_session
 from src.skip_if_good import _session_date
 
 ROOT = Path(__file__).resolve().parent.parent
+ET = ZoneInfo("America/New_York")
 PAGES = "https://sroyaltyy.github.io/fullscan"
 REPORT = Path("data/health/staleness.json")
 COVERAGE = Path(__file__).resolve().parent / "staleness_coverage.json"
@@ -161,6 +170,33 @@ def _jev_days_max(text: str) -> str:
     return max(days) if days else ""
 
 
+def _open_fill_max_date(text: str) -> str:
+    days: list[str] = []
+    for line in text.splitlines():
+        line = line.strip()
+        if not line:
+            continue
+        try:
+            row = json.loads(line)
+        except json.JSONDecodeError:
+            continue
+        if isinstance(row, dict) and row.get("kind") == "open_fill":
+            day = _day(row.get("date"))
+            if day:
+                days.append(day)
+    return max(days) if days else ""
+
+
+def _top_level_date(text: str) -> str:
+    try:
+        data = json.loads(text)
+    except json.JSONDecodeError:
+        return ""
+    if isinstance(data, dict):
+        return _day(data.get("date"))
+    return ""
+
+
 def newest_date(text: str, kind: str) -> str:
     if not text:
         return ""
@@ -177,9 +213,72 @@ def newest_date(text: str, kind: str) -> str:
     if kind == "updown_days":
         from src.staleness_coverage import newest_updown_day
         return newest_updown_day(text)
+    if kind == "open_fill":
+        return _open_fill_max_date(text)
+    if kind == "dated_json":
+        return _top_level_date(text)
     if kind == "json":
         return _json_max_date(text)
     return ""
+
+
+def _clock(now: datetime | None) -> datetime:
+    if now is None:
+        return datetime.now(ET)
+    if now.tzinfo is None:
+        return now.replace(tzinfo=ET)
+    return now.astimezone(ET)
+
+
+def due_session(now: datetime | None, expect_by_et: str) -> str:
+    """Session that must already contain this artifact.
+
+    On a NYSE session at or after ``expect_by_et`` (``HH:MM``), that day.
+    Otherwise the previous session. Weekends and full-day holidays roll
+    back the same way, so a check at 10:30 ET on Thanksgiving still asks
+    for the prior session.
+    """
+    from src.skip_if_good import _prev_weekday
+
+    clock = _clock(now)
+    hour_s, minute_s = str(expect_by_et).split(":", 1)
+    deadline = int(hour_s) * 60 + int(minute_s)
+    minutes = clock.hour * 60 + clock.minute
+    if _session_date(clock.date()) and minutes >= deadline:
+        return clock.date().isoformat()
+    return _prev_weekday(clock.date().isoformat())
+
+
+def coverage_sources() -> list[dict]:
+    """Clock rows from ``sources`` in ``src/staleness_coverage.json``.
+
+    Read-only. The ``pages`` list is a separate daily-writer list and is
+    not returned here.
+    """
+    if not COVERAGE.is_file():
+        return []
+    try:
+        data = json.loads(COVERAGE.read_text(encoding="utf-8"))
+    except json.JSONDecodeError:
+        return []
+    if not isinstance(data, dict):
+        return []
+    rows = []
+    for row in data.get("sources") or []:
+        if not isinstance(row, dict) or "path" not in row:
+            continue
+        lag = row.get("lag_limit", 0)
+        if not isinstance(lag, int):
+            continue
+        rows.append({
+            "path": str(row["path"]),
+            "kind": str(row["kind"]),
+            "lag_limit": lag,
+            "expect_by_et": str(row.get("expect_by_et") or ""),
+            "live": bool(row.get("live", True)),
+            "note": str(row.get("note") or ""),
+        })
+    return rows
 
 
 def _read_text(path: Path) -> str:
@@ -270,6 +369,7 @@ def evaluate(*, root: Path | None = None, now: datetime | None = None,
     root = Path(root) if root is not None else ROOT
     fetch = fetch or fetch_url
     session = latest_completed_session(now)
+    clock = _clock(now)
     rows = []
     for path, kind, limit in SOURCES:
         main_text = _read_text(root / path)
@@ -288,6 +388,42 @@ def evaluate(*, root: Path | None = None, now: datetime | None = None,
         rows.append({
             "path": path,
             "lag_limit": limit,
+            "expect_by_et": "",
+            "due": session,
+            "live": True,
+            "main_date": main_date,
+            "live_date": live_date,
+            "main_lag": main_lag,
+            "live_lag": live_lag,
+            "live_error": live_error,
+            "ok": ok,
+            "frozen": False,
+        })
+    for entry in coverage_sources():
+        kind = entry["kind"]
+        limit = entry["lag_limit"]
+        due = due_session(clock, entry["expect_by_et"]) if entry["expect_by_et"] else session
+        path = entry["path"].replace("{date}", due)
+        main_text = _read_text(root / path)
+        live_text = ""
+        live_error = ""
+        if entry["live"]:
+            url = pages_base.rstrip("/") + "/" + path
+            try:
+                live_text = fetch(url)
+            except (OSError, urllib.error.URLError, TimeoutError, ValueError) as exc:
+                live_error = str(exc)
+        main_date = newest_date(main_text, kind)
+        live_date = newest_date(live_text, kind) if entry["live"] else ""
+        main_lag = sessions_behind(main_date, due)
+        live_lag = sessions_behind(live_date, due) if entry["live"] else 0
+        ok = main_lag <= limit and live_lag <= limit
+        rows.append({
+            "path": path,
+            "lag_limit": limit,
+            "expect_by_et": entry["expect_by_et"],
+            "due": due,
+            "live": entry["live"],
             "main_date": main_date,
             "live_date": live_date,
             "main_lag": main_lag,
@@ -352,11 +488,14 @@ def main() -> None:
             )
             continue
         flag = "OK" if row["ok"] else "STALE"
+        extra = ""
+        if row.get("expect_by_et"):
+            extra = f" due={row['due']} by={row['expect_by_et']}ET"
         print(
             f"[staleness] {flag} {row['path']} "
             f"main={row['main_date'] or 'missing'} lag={row['main_lag']} "
             f"live={row['live_date'] or 'missing'} lag={row['live_lag']} "
-            f"limit={row['lag_limit']}"
+            f"limit={row['lag_limit']}{extra}"
         )
     if not report["ok"]:
         raise SystemExit(1)

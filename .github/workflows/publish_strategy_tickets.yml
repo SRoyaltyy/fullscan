@@ -1,17 +1,17 @@
 name: Publish strategy tickets
 
-# workflow_run (successful main runs only) plus push plus dispatch.
-# The gate skips a run whose input hash already matches the landed
-# ticket, and that skip does not cancel an in-flight publish.
-# A newer hash still cancels the older publish job: latest inputs win.
-# The main dashboard page is not a ticket. A no-publish gate still
-# renders dashboard/index.html from the printed curve and deploys it.
-# Ticket writes stay on the tickets job.
+# workflow_run (successful main runs only) plus push plus dispatch
+# plus a weekday cron. The gate skips a run whose input hash already
+# matches the landed ticket, and that skip does not cancel an in-flight
+# publish. A running publish is left to finish. The session lock refuses
+# a sealed rewrite. The main dashboard page is not a ticket. A no-publish
+# gate still renders dashboard/index.html from the printed curve and
+# deploys it. Ticket writes stay on the tickets job.
 # This workflow never places a Webull order. A ticket republish and a
-# stock-book rebuild (workflow_run from Stock Book ALL or Pre-Open ALL)
-# only write tickets. The sealed h1 paper send is webull_paper.yml before
-# 09:30 ET, with the ECS backstop as the other sender. A missed send
-# stays missed.
+# stock-book rebuild (workflow_run from Stock Book ALL, Pre-Open ALL, or
+# the h1 seal) only write tickets. The sealed h1 paper send is
+# webull_paper.yml before 09:25 ET, with the ECS backstop as the other
+# sender. A missed send stays missed. This cron is not a catch-up order.
 #
 # Push paths must cover every file the decision fingerprint hashes
 # (src/decision_ready.py): stock-book inputs + factor-mine panel +
@@ -27,10 +27,19 @@ on:
   push:
     branches: [main]
     paths: ['01_daily/**', '!01_daily/_xai_reauth.json', 'data/join/**', 'data/peers/**', 'data/ab_checklist/**', 'data/factor_mine/panel.json', 'excel_bot/suggestions/suggestions.csv', 'data/sleeve_merge/today.json']
+  # 2026-11-04: Stock Book ALL ran late, so the dated tickets file landed
+  # at 15:02Z, after webull_paper's 09:25 ET cutoff, and h1 had no submit
+  # journal. Pre-Open and the h1 seal start this as soon as they succeed.
+  # */10 11-14 UTC (about 06:00-09:50 ET in EST) is the fallback when those
+  # events are dropped. The fingerprint gate makes a repeat a no-op. The
+  # dated-file lock refuses a sealed rewrite. No order is submitted.
+  schedule:
+    - cron: "*/10 11-14 * * 1-5"
   workflow_run:
     workflows:
       - "Stock Book ALL (one-shot)"
       - "Pre-Open ALL (predictive one-shot)"
+      - "h1 append-only forward"
     types: [completed]
     branches: [main]
 
@@ -47,8 +56,9 @@ concurrency:
 
 # Concurrency sits on the publish job, not the whole workflow. A duplicate
 # trigger whose input hash already matches the landed ticket never joins
-# the group, so it does not cancel the run that is writing that ticket.
-# A new hash still cancels the older publish: latest inputs win.
+# the group. cancel-in-progress is false: a later cron must not kill the
+# publish that is about to land the 09:20 ET file. The waiter re-reads
+# main and the session lock keeps a sealed body.
 jobs:
   gate:
     if: >
@@ -90,7 +100,7 @@ jobs:
     if: needs.gate.outputs.publish == 'true'
     concurrency:
       group: publish-strategy-tickets
-      cancel-in-progress: true
+      cancel-in-progress: false
     runs-on: ubuntu-latest
     timeout-minutes: 40
     steps:

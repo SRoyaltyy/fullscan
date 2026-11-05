@@ -55,11 +55,18 @@ on:
   schedule:
     - cron: "10 11 * * 1-5"   # ~06:10 ET — after 05:40 scrape
     - cron: "15 14 * * 1-5"   # ~09:15 ET — last chance before the bell
+    # Hosted cron dropped the two shots above and the book landed after
+    # webull_paper's 09:25 ET cutoff (2026-11-04 tickets at 15:02Z).
+    # Every 10 min 12:00-14:50 UTC. The gate no-ops this cron once today's
+    # book and tickets are on main, and at or after 09:25 ET. It does not
+    # submit an order. skip-if-good still guards the 11:10 and 14:15 runs.
+    - cron: "*/10 12-14 * * 1-5"
   # Merge of ranker/heal code must not wait for a newly-registered cron.
   # Do not match data/stock_book commits (GITHUB_TOKEN already will not
   # retrigger; a PAT still must not start a second rank). Pre-Open ALL
   # completion is covered by workflow_run. skip-if-good no-ops when
-  # 1d is already all-green.
+  # 1d is already all-green. h1 seal is the second event: it proves
+  # today's predict is on main, which is the input the book ranks from.
   push:
     branches: [main]
     paths:
@@ -70,7 +77,7 @@ on:
       - "src/weather.py"
       - ".github/workflows/stock_book_all.yml"
   workflow_run:
-    workflows: ["Pre-Open ALL (predictive one-shot)"]
+    workflows: ["Pre-Open ALL (predictive one-shot)", "h1 append-only forward"]
     types: [completed]
 
 permissions:
@@ -81,10 +88,12 @@ permissions:
 
 concurrency:
   # Ubuntu heal must not queue behind a 6h ECS Grok book.
-  # Ubuntu twins cancel each other (09-08 commit-race pile-up).
-  # ECS Grok stays uncanceled.
+  # 2026-11-04: cancel-in-progress on ubuntu killed the morning book when
+  # the next cron or workflow_run arrived, so the tickets missed 09:25 ET.
+  # Twins queue. skip-if-good makes the waiter a no-op once the book is
+  # green. ECS Grok stays in its own group and is not cancelled either.
   group: ${{ (github.event.inputs.runner != 'ecs') && 'stock-book-all-ubuntu' || 'stock-book-all-ecs' }}
-  cancel-in-progress: ${{ github.event.inputs.runner != 'ecs' }}
+  cancel-in-progress: false
 
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -119,6 +128,31 @@ jobs:
               exit 0
             fi
             echo "Pre-Open ${{ github.event.workflow_run.conclusion }} but ${D} predict is on main — build"
+          fi
+          # Frequent fallback only. The 11:10 and 14:15 crons still run the
+          # full skip-if-good check. This one must not checkout the tree
+          # once today's book and the dated tickets file are already on
+          # main, and it must not start a rank at or after 09:25 ET.
+          if [ "${{ github.event_name }}" = "schedule" ] \
+             && [ "${{ github.event.schedule }}" = "*/10 12-14 * * 1-5" ]; then
+            if [ "$ET_HM" -ge 925 ]; then
+              echo "frequent stock-book cron at or after 09:25 ET — no catch-up rank"
+              echo "go=no" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+            D=$(TZ=America/New_York date +%F)
+            book_code=$(curl -sI -L -o /dev/null -w '%{http_code}' --max-time 20 \
+              "https://raw.githubusercontent.com/${{ github.repository }}/main/data/stock_book/${D}_stock_book.json" || true)
+            ticket_code=$(curl -sI -L -o /dev/null -w '%{http_code}' --max-time 20 \
+              "https://raw.githubusercontent.com/${{ github.repository }}/main/data/day_board/${D}_strategy_tickets.json" || true)
+            book_code=${book_code:-000}
+            ticket_code=${ticket_code:-000}
+            echo "frequent cron book=$book_code tickets=$ticket_code"
+            if [ "$book_code" = "200" ] && [ "$ticket_code" = "200" ]; then
+              echo "book and tickets for ${D} already on main — frequent cron is a no-op"
+              echo "go=no" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
           fi
           if [ "$ET_HM" -lt 535 ] && [ "$FORCE" != "true" ] \
              && [ "${{ github.event_name }}" != "workflow_dispatch" ]; then

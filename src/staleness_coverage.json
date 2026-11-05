@@ -1,7 +1,7 @@
 {
   "depends_on_pr": 743,
   "depends_on": "https://github.com/SRoyaltyy/fullscan/pull/743",
-  "note": "PR #743 is on main. src/staleness_canary.py loads sources_for_canary() onto SOURCES and reports manual/frozen pages without failing. updown_days reads days[-1][0]. jev-train already has a weekday cron from that PR and is already in the canary base list (lag 1), so it is not appended twice and is not frozen.",
+  "note": "PR #743 is on main. src/staleness_canary.py loads sources_for_canary() onto SOURCES and reports manual/frozen pages without failing. updown_days reads days[-1][0]. jev-train already has a weekday cron from that PR and is already in the canary base list (lag 1), so it is not appended twice and is not frozen. Clock rows in sources are due at expect_by_et America/New_York. Before that minute the previous session is the one that must already be present. live false means the path is not on GitHub Pages, so only the main checkout is checked. The canary reads these rows and does not write the ledgers or the tickets file. {date} is the due session.",
   "pages": [
     {
       "path": "dashboard/updown/data/index.json",
@@ -50,6 +50,32 @@
       "already_in_canary": true,
       "writer": ".github/workflows/jev_train.yml",
       "date_note": "Weekday cron 30 21 * * 1-5 landed with PR #743. The canary base list already has this path at lag 1. Not frozen."
+    }
+  ],
+  "sources": [
+    {
+      "path": "research/hot_n4_clean_v4/forward_h1/h1_log.jsonl",
+      "kind": "open_fill",
+      "lag_limit": 0,
+      "expect_by_et": "10:00",
+      "live": false,
+      "note": "h1 open_fill row for the session, expected by about 10:00 ET"
+    },
+    {
+      "path": "research/hot_n4_clean_v4/forward/holdup_log.jsonl",
+      "kind": "open_fill",
+      "lag_limit": 0,
+      "expect_by_et": "10:00",
+      "live": false,
+      "note": "holdup open_fill row for the session, expected by about 10:00 ET"
+    },
+    {
+      "path": "data/day_board/{date}_strategy_tickets.json",
+      "kind": "dated_json",
+      "lag_limit": 0,
+      "expect_by_et": "09:20",
+      "live": false,
+      "note": "Dated strategy tickets file, expected by 09:20 ET"
     }
   ]
 }

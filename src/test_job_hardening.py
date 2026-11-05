@@ -106,7 +106,9 @@ def test_cancel_in_progress_off_on_grok_jobs() -> None:
         assert "cancel-in-progress: true" not in text, name
         assert "cancel-in-progress: false" in text, name
     book = (WF / "stock_book_all.yml").read_text(encoding="utf-8")
-    assert "cancel-in-progress: ${{ github.event.inputs.runner != 'ecs'" in book
+    # 2026-11-04: ubuntu cancel-in-progress killed the morning book.
+    assert "cancel-in-progress: false" in book
+    assert "cancel-in-progress: ${{" not in book
     # 2026-09-25: ECS and ubuntu share one Pre-Open group and queue.
     pre = (WF / "preopen_all.yml").read_text(encoding="utf-8")
     group_line = next(ln for ln in pre.splitlines() if ln.strip().startswith("group:"))
@@ -485,6 +487,9 @@ def test_ranker_inputs_before_llm_packet() -> None:
     assert "past 09:25 ET — skip LLM + extras" in book_yml
     assert 'cron: "10 11 * * 1-5"' in book_yml  # EST since #734; was 10 10 under EDT
     assert 'cron: "15 14 * * 1-5"' in book_yml  # EST since #734; was 15 13 under EDT
+    assert 'cron: "*/10 12-14 * * 1-5"' in book_yml
+    assert "frequent stock-book cron at or after 09:25 ET" in book_yml
+    assert "h1 append-only forward" in book_yml
     assert "ubuntu land-book" in book_yml
     assert "github.event.inputs.runner != 'ecs'" in book_yml  # 2026-10-27 hosted unless ecs
     assert "stock-book-all-ubuntu" in book_yml
@@ -1220,6 +1225,34 @@ def test_no_job_commits_workflow_files_from_actions() -> None:
     assert "gh workflow run deploy-dashboard.yml" in text
 
 
+def test_open_fill_is_not_cancelled_by_the_plan_seal() -> None:
+    """Open fill starts from the seal and the paper workflow, and a
+    pending run is not in the plan-seal concurrency group."""
+    for name, group in (
+        ("h1_open_fill.yml", "h1-open-fill"),
+        ("holdup_open_fill.yml", "holdup-open-fill"),
+    ):
+        text = (WF / name).read_text(encoding="utf-8")
+        assert f"group: {group}\n" in text
+        assert "cancel-in-progress: false" in text
+        assert "group: h1-forward" not in text
+        assert "group: holdup-forward" not in text
+        assert 'cron: "*/10 14-15 * * 1-5"' in text
+        assert "h1 append-only forward" in text
+        assert "Holdup append-only forward" in text
+        assert "Webull paper (OpenAPI sandbox)" in text
+        assert "open_fill_gate.py" in text
+        assert "python -m src.paper_open" not in text
+        assert "--submit" not in text
+    h1 = (WF / "h1_forward.yml").read_text(encoding="utf-8")
+    assert "for wf in h1_forward.yml h1_fill.yml;" in h1
+    assert "for wf in h1_forward.yml h1_open_fill.yml h1_fill.yml;" not in h1
+    paper = (WF / "webull_paper.yml").read_text(encoding="utf-8")
+    assert "cron: '*/10 11-14 * * 1-5'" in paper
+    assert "*/10 14-15" not in paper
+    assert "Do not add another delayed cron." in paper
+
+
 def main() -> None:
     tests = [
         test_sources_parse_on_python_310,
@@ -1249,6 +1282,7 @@ def main() -> None:
         test_preopen_lock_matches_postclose,
         test_heal_targets_all_jobs,
         test_preopen_does_not_skip_python_after_cutoff,
+        test_open_fill_is_not_cancelled_by_the_plan_seal,
         test_ranker_inputs_before_llm_packet,
         test_ecs_timers_stay_green_and_push,
         test_empty_futures_tape_not_ready,
