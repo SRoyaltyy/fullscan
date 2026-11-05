@@ -295,13 +295,26 @@ def reconstruct_candidates(date: str, cal: list[str],
                            digests: dict[str, str] | None = None) -> dict:
     """Morning names from the prior export. Never the frozen candidate file.
 
-    Frozen-copy mornings 2026-10-13 through 2026-11-04 read theme-radar's
-    previous-session ``.raw.csv`` instead of the copied local export.
+    Mornings from 2026-08-07 read theme-radar's exact previous-session
+    ``.raw.csv``. 2026-08-28 has no 2026-08-27 file, and mornings before
+    2026-08-07 have none either. Those two cases are not given another day.
     """
     from .factor_mine_freeze import candidate_provenance
-    from .theme_radar_raw import applies
+    from .theme_radar_raw import applies, prior_gap
 
     day = _day(date)
+    gap = prior_gap(day)
+    if gap:
+        return {
+            "date": day,
+            "prior_export": None,
+            "n": 0,
+            "names": [],
+            "reconstructed": False,
+            "flag": gap,
+            "stuck_list_reused": False,
+            "bars_only": True,
+        }
     if applies(day):
         return _radar_candidates(day, cal)
     try:
@@ -492,6 +505,61 @@ def _radar_stamp(candidates: dict) -> dict:
     }
 
 
+_OPEN_SHA: str | None = None
+
+
+def _open_store() -> dict:
+    """sha256 of the official daily bar file. One read per process."""
+    global _OPEN_SHA
+    if _OPEN_SHA is None:
+        import hashlib
+        from .ticker_lookback import PRICE_STORE
+        digest = hashlib.sha256()
+        with PRICE_STORE.open("rb") as handle:
+            for chunk in iter(lambda: handle.read(1 << 20), b""):
+                digest.update(chunk)
+        _OPEN_SHA = digest.hexdigest()
+    return {
+        "open_source": "daily_bar",
+        "open_file": "data/prices/ohlc.parquet",
+        "open_sha256": _OPEN_SHA,
+    }
+
+
+def _row_stamp(candidates: dict) -> dict:
+    out = _radar_stamp(candidates)
+    out.update(_open_store())
+    return out
+
+
+def _unmask_daily_opens(rows: list[dict], day: str, *, lookup=None) -> list[dict]:
+    """Use the official 09:30 open when the panel only flagged a missing bar.
+
+    The panel copy is not the sealed panel. A name with no daily open
+    keeps ``missing_yahoo_bar`` so the book still refuses that print.
+    """
+    if lookup is None:
+        from .ticker_lookback import session_bar
+        lookup = session_bar
+    out = []
+    for row in rows or []:
+        if not isinstance(row, dict):
+            continue
+        copied = dict(row)
+        ticker = str(copied.get("ticker") or "")
+        needs = copied.get("open") is None or bool(copied.get("missing_yahoo_bar"))
+        if ticker and needs:
+            bar = lookup(ticker, day) or {}
+            if bar.get("open") is not None:
+                copied["open"] = bar.get("open")
+                if bar.get("close") is not None:
+                    copied["close"] = bar.get("close")
+                copied["missing_yahoo_bar"] = False
+                copied["open_source"] = "daily_bar"
+        out.append(copied)
+    return out
+
+
 def _slim_fill(trade: dict, radar: dict | None = None) -> dict:
     keep = ("date", "ticker", "side", "shares", "price", "fees", "pnl", "reason")
     out = {key: trade.get(key) for key in keep if trade.get(key) is not None}
@@ -524,6 +592,21 @@ def _pct(daily: dict | None) -> float | None:
     if not base:
         return None
     return round(100.0 * (equity / base - 1.0), 4)
+
+
+def _names_for_rebuild(root: Path) -> list[str]:
+    """Live lineup plus any strategy the label index already tracks.
+
+    The 2026-11-04 lineup dropped three names that were still broken on
+    earlier mornings. Those mornings are still rebuilt.
+    """
+    names = live_names(root)
+    labels = Path(root) / "data" / "factor_mine" / "rebuilt" / "labels.json"
+    doc = _load_json(labels) if labels.is_file() else None
+    for name in ((doc or {}).get("strategies") or {}):
+        if name and name not in names:
+            names.append(str(name))
+    return names
 
 
 def live_names(root: Path | None = None) -> list[str]:
@@ -603,9 +686,95 @@ def _resume_for(name: str, prior: str | None, chain: dict[str, dict],
     return None
 
 
+STOOQ_SHA = "86473989a9087e5b02cf9c54dccd4c618ef006b7b2d8275c360f799c44d310df"
+# Yahoo daily opens used as the independent check. A Stooq print farther
+# than 0.5% from these is not used.
+YAHOO_OPEN = {
+    ("2026-10-02", "GRML"): 8.79,
+    ("2026-10-05", "GRML"): 8.655,
+    ("2026-10-06", "GRML"): 7.49,
+    ("2026-10-14", "GRML"): 7.515,
+    ("2026-10-19", "QTEX"): 1.5,
+    ("2026-10-26", "IOT"): 44.92,
+    ("2026-10-26", "PCVX"): 60.68,
+    ("2026-10-26", "QTEX"): 1.36,
+    ("2026-10-26", "RELY"): 24.85,
+    ("2026-10-26", "RRC"): 50.81,
+    ("2026-10-26", "SUJA"): 9.89,
+    ("2026-10-26", "ZIP"): 4.63,
+}
+SUJA_VOLUME = 58900
+RRC_PRIOR_CLOSE = 43.23
+
+
+def opens_agree(stooq: float, yahoo: float) -> bool:
+    if not stooq:
+        return False
+    return abs(float(stooq) - float(yahoo)) / abs(float(stooq)) <= 0.005
+
+
+def load_supplied_opens(root: Path | None = None) -> dict[tuple[str, str], dict]:
+    """Stooq opens that Yahoo agrees with. Disagreeing rows are left out."""
+    path = Path(root or ROOT) / "research" / "rebuild" / "opens_0930_supplied.csv"
+    if not path.is_file():
+        return {}
+    out = {}
+    lines = path.read_text(encoding="utf-8").splitlines()
+    for line in lines[1:]:
+        if not line.strip():
+            continue
+        day, ticker, raw_open, source, digest = line.split(",")
+        price = float(raw_open)
+        yahoo = YAHOO_OPEN.get((day, ticker))
+        if yahoo is None or not opens_agree(price, yahoo) or digest != STOOQ_SHA:
+            continue
+        out[(day, ticker)] = {
+            "open": price,
+            "source": source,
+            "source_sha256": digest,
+        }
+    return out
+
+
+class _OpenBars:
+    """Supplied 09:30 opens, then the official daily bar for every other name."""
+
+    def __init__(self, day: str, supplied: dict[str, float]):
+        self.day = day
+        self.supplied = supplied
+
+    def get(self, key, default=None):
+        if not (isinstance(key, tuple) and len(key) == 2):
+            return {} if default is None else default
+        first, second = key
+        if str(first)[:4].isdigit():
+            date, ticker = str(first)[:10], str(second)
+        else:
+            ticker, date = str(first), str(second)[:10]
+        if date == self.day and ticker in self.supplied:
+            return {"open": self.supplied[ticker]}
+        from .ticker_lookback import session_bar
+        bar = session_bar(ticker, date) or {}
+        if bar.get("open") is None and bar.get("close") is None:
+            return {}
+        return bar
+
+
+def _panel_with_supplied(panel: dict, day: str, supplied: dict[str, float]) -> dict:
+    rows = []
+    for row in panel.get("rows") or []:
+        copied = dict(row)
+        ticker = str(copied.get("ticker") or "")
+        if ticker in supplied:
+            copied["open"] = supplied[ticker]
+            copied["missing_yahoo_bar"] = False
+        rows.append(copied)
+    return _day_panel(day, rows, panel)
+
+
 def _simulate(name: str, rec: dict | None, spec: dict | None,
               panel: dict, resume: dict | None, singles: dict[str, dict],
-              *, fees: dict, regime: dict) -> dict:
+              *, fees: dict, regime: dict, bars=None) -> dict:
     from . import factor_mine_freeze as fmf
 
     saved = {"state": resume} if resume else None
@@ -617,12 +786,12 @@ def _simulate(name: str, rec: dict | None, spec: dict | None,
                 raise KeyError(f"missing member {member}")
             members.append(hit)
         book = fmf._simulate_combo(
-            panel, spec, members, start=None, bars=None, fees=fees,
+            panel, spec, members, start=None, bars=bars, fees=fees,
             regime=regime, saved=saved,
         )
     else:
         book = fmf._simulate_single(
-            panel, rec, start=None, bars=None, fees=fees,
+            panel, rec, start=None, bars=bars, fees=fees,
             regime=regime, saved=saved,
         )
     return fmf.decision_from_book(book, panel["session_dates"][-1])
@@ -659,7 +828,8 @@ def build_day(date: str, *, panel: dict, grouped: dict[str, list[dict]],
               combos: dict[str, dict], chain: dict[str, dict],
               empty_inputs: dict[str, dict], fees: dict, regime: dict,
               digests: dict[str, str] | None = None,
-              root: Path | None = None) -> dict:
+              root: Path | None = None,
+              supplied_strategies: set[str] | None = None) -> dict:
     """One rebuilt session. Does not read or write a sealed file."""
     day = _day(date)
     raw_rows = list(grouped.get(day) or [])
@@ -669,11 +839,12 @@ def build_day(date: str, *, panel: dict, grouped: dict[str, list[dict]],
         panel_leak=str(panel.get("leak") or ""),
     )
     candidates = reconstruct_candidates(day, cal, digests)
-    chosen_rows = select_rows(kept, candidates)
+    chosen_rows = _unmask_daily_opens(select_rows(kept, candidates), day)
     mini = _day_panel(day, chosen_rows, panel)
     prior = _prior_session(day, cal)
     empty = day in empty_inputs
     strategies: dict[str, dict] = {}
+    used_supplied: dict[str, dict] = {}
     for name in names:
         rec = singles.get(name)
         spec = None if rec else combos.get(name)
@@ -694,7 +865,7 @@ def build_day(date: str, *, panel: dict, grouped: dict[str, list[dict]],
                 "reason": "live recipe is not in the catalog",
             }
             entry.update(verdict)
-            entry.update(_radar_stamp(candidates))
+            entry.update(_row_stamp(candidates))
             strategies[name] = entry
             continue
         needs_export = _needs_export(rec, spec, singles)
@@ -705,15 +876,24 @@ def build_day(date: str, *, panel: dict, grouped: dict[str, list[dict]],
                 "reason": candidates.get("flag") or "morning candidates were not reconstructed",
             }
             entry.update(verdict)
-            entry.update(_radar_stamp(candidates))
+            entry.update(_row_stamp(candidates))
             if resume:
                 entry["state"] = resume
             strategies[name] = entry
             continue
+        use_supplied = name in (supplied_strategies or set())
+        day_opens = {
+            ticker: info for (when, ticker), info in load_supplied_opens(root).items()
+            if when == day
+        } if use_supplied else {}
+        if day_opens:
+            used_supplied.update(day_opens)
+        bars = _OpenBars(day, {ticker: info["open"] for ticker, info in day_opens.items()}) if day_opens else None
+        panel_for = _panel_with_supplied(mini, day, {ticker: info["open"] for ticker, info in day_opens.items()}) if day_opens else mini
         try:
             decision = _simulate(
-                name, rec, spec, mini, resume, singles,
-                fees=fees, regime=regime,
+                name, rec, spec, panel_for, resume, singles,
+                fees=fees, regime=regime, bars=bars,
             )
         except Exception as exc:  # noqa: BLE001 — record the step, do not touch sealed books
             verdict = classify_zero(
@@ -723,18 +903,29 @@ def build_day(date: str, *, panel: dict, grouped: dict[str, list[dict]],
                 sim_error=f"{type(exc).__name__}: {exc}",
             )
             entry.update(verdict)
-            entry.update(_radar_stamp(candidates))
+            entry.update(_row_stamp(candidates))
             if resume:
                 entry["state"] = resume
             strategies[name] = entry
             continue
         daily = decision.get("daily") or {}
-        radar = _radar_stamp(candidates)
+        radar = _row_stamp(candidates)
         fills = [
             _slim_fill(trade, radar)
             for trade in (decision.get("trades") or [])
             if trade.get("side") in ("BUY", "SELL", "SHORT", "COVER")
         ]
+        for fill in fills:
+            info = day_opens.get(str(fill.get("ticker") or ""))
+            if not info:
+                continue
+            fill["tag"] = LABEL_REBUILT
+            fill["open_source"] = info["source"]
+            fill["open_sha256"] = info["source_sha256"]
+            fill["open_0930"] = info["open"]
+            if fill.get("ticker") == "SUJA" and day == "2026-10-26":
+                fill["thin_fill"] = True
+                fill["volume"] = SUJA_VOLUME
         skips = list(decision.get("skips") or [])
         picks = [
             str(trade.get("ticker"))
@@ -778,14 +969,44 @@ def build_day(date: str, *, panel: dict, grouped: dict[str, list[dict]],
             "state": decision.get("state"),
             "return_pct": _pct(daily),
         })
+        if verdict.get("step") == "lock":
+            verdict = {
+                **verdict,
+                "reason": "no 09:30 open in daily bars",
+            }
         entry.update(verdict)
-        entry.update(_radar_stamp(candidates))
+        entry.update(_row_stamp(candidates))
         strategies[name] = entry
-    radar_day = _radar_stamp(candidates)
+    radar_day = _row_stamp(candidates)
+    supplied_note = {}
+    if used_supplied:
+        supplied_note = {
+            "supplied_open_sha": STOOQ_SHA,
+            "supplied_opens": {
+                ticker: {
+                    "open_0930": info["open"],
+                    "source": info["source"],
+                    "source_sha256": info["source_sha256"],
+                }
+                for ticker, info in sorted(used_supplied.items())
+            },
+        }
+        if day == "2026-10-26" and "SUJA" in used_supplied:
+            supplied_note["suja_thin_fill"] = {
+                "volume": SUJA_VOLUME,
+                "note": "about 59k shares",
+            }
+        if day == "2026-10-26" and "RRC" in used_supplied:
+            supplied_note["rrc_gap"] = {
+                "prior_close_2026_10_19": RRC_PRIOR_CLOSE,
+                "open_0930": used_supplied["RRC"]["open"],
+                "confirmed": True,
+            }
     return {
         "date": day,
         "tag": LABEL_REBUILT,
         **radar_day,
+        **supplied_note,
         "empty_input": empty,
         "sealed_source": "no_same_day_panel" if empty else "panel",
         "chain_from": prior,
@@ -822,13 +1043,43 @@ def calendar(panel: dict, empty: dict[str, dict], root: Path | None = None) -> l
     return sorted(day for day in days if len(day) == 10)
 
 
+def _lock_needs_supplied(day: str, doc: dict) -> bool:
+    """True when a lock cell on this morning is still missing a checked Stooq open."""
+    if doc.get("supplied_open_sha") == STOOQ_SHA:
+        return False
+    opens = {ticker for (when, ticker) in load_supplied_opens() if when == day}
+    if not opens:
+        return False
+    for row in (doc.get("strategies") or {}).values():
+        if row.get("step") != "lock" or row.get("class") != "still broken":
+            continue
+        blocked = {
+            skip.get("ticker") for skip in (row.get("skips") or [])
+            if skip.get("kind") == "no_price"
+        }
+        if blocked & opens:
+            return True
+    return False
+
+
 def _replace_with_radar(day: str, doc: dict | None) -> bool:
-    """True when a frozen-copy morning still lacks a theme-radar rebuild."""
+    """Undo the 10-12 cutoff, then leave a finished exact-D-1 file in place."""
     from .theme_radar_raw import applies
 
+    if not isinstance(doc, dict):
+        return False
+    if doc.get("d1_cutoff") == "2026-10-12":
+        return True
+    if _lock_needs_supplied(day, doc):
+        return True
     if not applies(day):
         return False
-    return (doc or {}).get("source") != "theme_radar_snapshot"
+    if doc.get("open_source") == "daily_bar" and doc.get("source") == "theme_radar_snapshot":
+        return False
+    return any(
+        (row or {}).get("class") == "still broken"
+        for row in (doc.get("strategies") or {}).values()
+    )
 
 
 def run_rebuild(*, root: Path | None = None, write: bool = False,
@@ -845,10 +1096,11 @@ def run_rebuild(*, root: Path | None = None, write: bool = False,
     cal = calendar(panel, empty, base)
     if not empty or not cal:
         return {"dates": [], "wrote": [], "skipped": []}
-    first = min(empty)
+    from .theme_radar_raw import REBUILD_FROM
+    first = min(min(empty), REBUILD_FROM)
     last = through or cal[-1]
     window = [day for day in cal if first <= day <= last]
-    names = live_names(base)
+    names = _names_for_rebuild(base)
     singles, combos = _recipe_index()
     from . import factor_mine as fm
     from . import factor_mine_book as fmb
@@ -869,10 +1121,25 @@ def run_rebuild(*, root: Path | None = None, write: bool = False,
                 skipped.append(day)
                 continue
             replacing = True
+        supplied_strategies: set[str] = set()
+        if replacing and isinstance(have, dict):
+            day_tickers = {
+                ticker for (when, ticker) in load_supplied_opens(base) if when == day
+            }
+            for name, row in (have.get("strategies") or {}).items():
+                if row.get("step") != "lock":
+                    continue
+                blocked = {
+                    skip.get("ticker") for skip in (row.get("skips") or [])
+                    if skip.get("kind") == "no_price"
+                }
+                if blocked & day_tickers:
+                    supplied_strategies.add(name)
         doc = build_day(
             day, panel=panel, grouped=grouped, cal=cal, names=names,
             singles=singles, combos=combos, chain=chain, empty_inputs=empty,
             fees=fees, regime=regime, digests=digests, root=base,
+            supplied_strategies=supplied_strategies,
         )
         chain[day] = doc
         if write:
@@ -1109,7 +1376,7 @@ def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
         "--write", action="store_true",
-        help="Write rebuilt/DATE.json. Frozen-copy mornings 2026-10-13..2026-11-04 are replaced from theme-radar raw files. Other existing files stay.",
+        help="Write rebuilt/DATE.json. Still-broken mornings from 2026-08-13 use theme-radar D-1 raw files and daily-bar opens. Finished files stay.",
     )
     parser.add_argument(
         "--counts-only", action="store_true",
