@@ -128,11 +128,13 @@ def test_boards_and_paper_share_the_bell() -> None:
     assert 'WEBULL_ACCOUNT_ID' not in yml
     assert 'data/paper_open/' not in yml
     assert 'webull_last.json' not in yml
-    assert 'cancel-in-progress: true' in yml
+    assert 'cancel-in-progress: true' not in yml
+    assert 'cancel-in-progress: false' in yml
     assert '3,18,33,48' not in yml
-    assert 'schedule:' not in yml
+    assert 'cron: "*/10 11-14 * * 1-5"' in yml
     assert 'Stock Book ALL (one-shot)' in yml
     assert 'Pre-Open ALL (predictive one-shot)' in yml
+    assert 'h1 append-only forward' in yml
     assert "github.event.workflow_run.conclusion == 'success'" in yml
     install = (WF / 'install_paper_open.yml').read_text()
     assert 'discover_and_persist_account_id' in install

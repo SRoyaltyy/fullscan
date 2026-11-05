@@ -59,6 +59,14 @@ def _fresh_tree(root: Path, *, html: str = "2026-11-04",
            json.dumps({"to_date": curve, "days": [{"date": curve}]}))
     _write(root, "dashboard/day-movers/days.json",
            json.dumps({"to_date": curve, "days": [{"date": curve}]}))
+    # Clock rows. NOW is 18:00 ET on 2026-11-04, after 09:20 and 10:00,
+    # so the due session is `curve` when that is today.
+    line = json.dumps({"date": curve, "kind": "open_fill"}) + "\n"
+    _write(root, "research/hot_n4_clean_v4/forward_h1/h1_log.jsonl",
+           json.dumps({"date": curve, "kind": "plan"}) + "\n" + line)
+    _write(root, "research/hot_n4_clean_v4/forward/holdup_log.jsonl", line)
+    _write(root, f"data/day_board/{curve}_strategy_tickets.json",
+           json.dumps({"date": curve, "nested": {"date": "2026-10-01"}}))
 
 
 def test_session_lag_counts_nyse_days() -> None:
@@ -90,6 +98,17 @@ def test_parsers_use_the_newest_data_date() -> None:
     assert canary.newest_date(json.dumps({
         "days": [["2026-10-02", "h"], ["2026-10-05", "h"]],
     }), "updown_days") == "2026-10-05"
+    log = (
+        '{"date":"2026-11-03","kind":"plan"}\n'
+        '{"date":"2026-11-03","kind":"open_fill_correction"}\n'
+        '{"date":"2026-11-02","kind":"open_fill"}\n'
+        '{"date":"2026-11-03","kind":"open_fill"}\n'
+    )
+    assert canary.newest_date(log, "open_fill") == "2026-11-03"
+    assert canary.newest_date(
+        '{"date":"2026-11-04","strategies":{"a":{"date":"2026-11-05"}}}',
+        "dated_json",
+    ) == "2026-11-04"
 
 
 def test_report_fails_when_a_source_is_over_its_lag(tmp_path: Path) -> None:
@@ -197,6 +216,82 @@ def test_manual_source_does_not_fail_the_canary(tmp_path: Path) -> None:
     assert preopen.get("mode") != "manual"
 
 
+def test_deadlines_follow_the_clock_and_do_not_rewrite(tmp_path: Path) -> None:
+    rows = canary.coverage_sources()
+    by_kind = {}
+    for row in rows:
+        by_kind.setdefault(row["kind"], []).append(row)
+    assert len(by_kind["open_fill"]) == 2
+    assert {row["expect_by_et"] for row in by_kind["open_fill"]} == {"10:00"}
+    assert all(row["live"] is False for row in by_kind["open_fill"])
+    tickets = by_kind["dated_json"]
+    assert len(tickets) == 1
+    assert tickets[0]["expect_by_et"] == "09:20"
+    assert tickets[0]["path"] == "data/day_board/{date}_strategy_tickets.json"
+    assert tickets[0]["live"] is False
+    wf = Path(__file__).resolve().parent.parent / ".github/workflows/staleness_canary.yml"
+    text = wf.read_text(encoding="utf-8")
+    assert 'cron: "15 15 * * 1-5"' in text
+    assert 'cron: "0 22 * * 1-5"' in text
+    assert "src/staleness_coverage.json" in text
+    assert "contents: read" in text
+
+    wed_morning = datetime(2026, 11, 4, 9, 19, tzinfo=ET)
+    assert canary.due_session(wed_morning, "09:20") == "2026-11-03"
+    assert canary.due_session(wed_morning.replace(hour=9, minute=20), "09:20") == "2026-11-04"
+    assert canary.due_session(wed_morning.replace(hour=9, minute=59), "10:00") == "2026-11-03"
+    assert canary.due_session(wed_morning.replace(hour=10, minute=0), "10:00") == "2026-11-04"
+    # Thanksgiving 2026-11-26. The prior session is Wednesday 11-25.
+    holiday = datetime(2026, 11, 26, 10, 30, tzinfo=ET)
+    assert canary.due_session(holiday, "10:00") == "2026-11-25"
+    saturday = datetime(2026, 11, 7, 12, 0, tzinfo=ET)
+    assert canary.due_session(saturday, "10:00") == "2026-11-06"
+
+    def fetch(_url: str) -> str:
+        return ""
+
+    h1 = tmp_path / "research/hot_n4_clean_v4/forward_h1/h1_log.jsonl"
+    hold = tmp_path / "research/hot_n4_clean_v4/forward/holdup_log.jsonl"
+    h1.parent.mkdir(parents=True, exist_ok=True)
+    hold.parent.mkdir(parents=True, exist_ok=True)
+    body = (
+        '{"date":"2026-11-03","kind":"plan"}\n'
+        '{"date":"2026-11-03","kind":"open_fill"}\n'
+    )
+    h1.write_text(body, encoding="utf-8")
+    hold.write_text(body, encoding="utf-8")
+    (tmp_path / "data/day_board").mkdir(parents=True)
+    (tmp_path / "data/day_board/2026-11-03_strategy_tickets.json").write_text(
+        '{"date":"2026-11-03"}\n', encoding="utf-8")
+    before = {h1: h1.read_bytes(), hold: hold.read_bytes()}
+
+    early = canary.evaluate(root=tmp_path, now=wed_morning, fetch=fetch)
+    h1_row = next(row for row in early["sources"] if row["path"].endswith("h1_log.jsonl"))
+    hold_row = next(row for row in early["sources"] if "holdup_log.jsonl" in row["path"])
+    ticket_row = next(row for row in early["sources"] if row["expect_by_et"] == "09:20")
+    assert h1_row["due"] == "2026-11-03" and h1_row["ok"] is True
+    assert hold_row["due"] == "2026-11-03" and hold_row["ok"] is True
+    assert ticket_row["path"].endswith("2026-11-03_strategy_tickets.json")
+    assert ticket_row["ok"] is True
+
+    at_ticket = canary.evaluate(
+        root=tmp_path, now=wed_morning.replace(minute=20), fetch=fetch)
+    tickets_due = next(row for row in at_ticket["sources"] if row["expect_by_et"] == "09:20")
+    h1_still = next(row for row in at_ticket["sources"] if row["path"].endswith("h1_log.jsonl"))
+    assert tickets_due["due"] == "2026-11-04" and tickets_due["ok"] is False
+    assert h1_still["due"] == "2026-11-03" and h1_still["ok"] is True
+
+    late = canary.evaluate(root=tmp_path, now=wed_morning.replace(hour=10, minute=0), fetch=fetch)
+    h1_late = next(row for row in late["sources"] if row["path"].endswith("h1_log.jsonl"))
+    tickets_late = next(row for row in late["sources"] if "strategy_tickets.json" in row["path"]
+                        and row["expect_by_et"] == "09:20")
+    assert h1_late["due"] == "2026-11-04" and h1_late["ok"] is False
+    assert tickets_late["due"] == "2026-11-04" and tickets_late["ok"] is False
+    assert h1.read_bytes() == before[h1]
+    assert hold.read_bytes() == before[hold]
+    assert not (tmp_path / "data/day_board/2026-11-04_strategy_tickets.json").exists()
+
+
 def _tape(marker: bytes) -> bytes:
     return b"Ticker,Change\nAAA,1.0\n" + marker + b"\n" + (b"x" * 220)
 
@@ -270,6 +365,8 @@ def main() -> None:
         test_manual_source_does_not_fail_the_canary(root)
         test_writer_refuses_a_byte_copy_and_keeps_a_fresh_tape(root)
         test_staleness_alarm_stops_on_a_copied_finviz_export(root)
+    with tempfile.TemporaryDirectory() as tmp:
+        test_deadlines_follow_the_clock_and_do_not_rewrite(Path(tmp))
     print("staleness canary ok")
 
 

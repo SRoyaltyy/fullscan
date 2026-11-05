@@ -22,13 +22,34 @@ on:
     # 09:35 New York time, so the off-season pair is a no-op.
     - cron: "35 14 * * 1-5"
     - cron: "45 14 * * 1-5"
+    # 2026-11-04: no scheduled run was created at all. 11-02 and 11-03 fired
+    # hours late or were cancelled while pending in the shared h1-forward
+    # group. Every 10 minutes 14:00-15:50 UTC is the fallback. The gate
+    # makes a repeat a no-op and refuses anything before 09:35 ET.
+    - cron: "*/10 14-15 * * 1-5"
+  # Plan seal and the paper workflow are the punctual start. A repeat is
+  # a no-op (same gate). This does not place an order. webull_paper.yml
+  # is the only sender and it refuses at 09:25 ET.
+  workflow_run:
+    workflows:
+      - "h1 append-only forward"
+      - "Holdup append-only forward"
+      - "Webull paper (OpenAPI sandbox)"
+    types: [completed]
+    branches: [main]
   workflow_dispatch:
 
 permissions:
   contents: write
 
+# Own group. Sharing h1-forward let a later plan-seal or post-close fill
+# cancel the pending open fill (GitHub drops the previous pending run in
+# a group even when cancel-in-progress is false). cancel-in-progress stays
+# false so the running attempt is kept. A newer open-fill run may replace
+# an older one that is still only pending; the survivor is still an open
+# fill, and the gate no-ops it once today's row exists.
 concurrency:
-  group: h1-forward
+  group: h1-open-fill
   cancel-in-progress: false
 
 jobs:
@@ -64,7 +85,9 @@ jobs:
 
   open-fill:
     needs: gate
-    # A manual dispatch always runs; a scheduled run only when the gate says so.
+    # A manual dispatch always runs. schedule and workflow_run run only
+    # when the gate says so: before 09:35 ET, or once today's open_fill
+    # row exists, this writes nothing. No Webull order.
     if: github.event_name == 'workflow_dispatch' || needs.gate.outputs.run == 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 45

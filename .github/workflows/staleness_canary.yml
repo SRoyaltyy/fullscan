@@ -1,12 +1,18 @@
 name: Staleness canary
 
-# 22:00 UTC weekdays. Each source's newest date on main and on the live
-# Pages site is compared with the latest completed NYSE session.
-# Lag 0 except webull_sim days.jsonl and jev-train days.json (lag 1).
+# 15:15 UTC weekdays is 10:15 ET during EST and 11:15 ET during EDT, after
+# the 09:20 tickets deadline and the 10:00 open_fill deadline.
+# 22:00 UTC is the end-of-day pass. Each source's newest date on main and,
+# when the source is published, on the live Pages site is compared with
+# the session it is due for. Lag 0 except webull_sim days.jsonl and
+# jev-train days.json (lag 1). Clock rows are src/staleness_coverage.json
+# (h1 and holdup open_fill by 10:00 ET, dated tickets by 09:20 ET).
 # Writes data/health/staleness.json and fails when any source is over.
+# Read-only. It does not rewrite a ledger or a sealed ticket.
 
 on:
   schedule:
+    - cron: "15 15 * * 1-5"
     - cron: "0 22 * * 1-5"
   workflow_dispatch:
 

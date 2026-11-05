@@ -43,16 +43,54 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
+      # 2026-11-04 runs 41857307250 and 41866271908: checkout of the merge
+      # ref died at 20 min, before any sealed-log test. Same sparse pattern
+      # as the updown o2c test job. The tests read these paths and git-show
+      # the tip of origin/main. They do not walk history. No ledger is written.
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 0
+          fetch-depth: 1
+          filter: blob:none
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            src
+            .github/workflows
+            research/__init__.py
+            research/concentration_cap_v1/protocol.py
+            research/concentration_cap_v2/protocol.py
+            research/concentration_cap_v3/protocol.py
+            research/factor_mine_recipe_search_v4/protocol.py
+            research/hot_n4_clean_v1/protocol.py
+            research/hot_n4_clean_v2/protocol.py
+            research/hot_n4_clean_v3/protocol.py
+            research/hot_n4_clean_v4/protocol.py
+            research/hot_n4_clean_v4/run_study.py
+            research/hot_n4_clean_v4/forward
+            research/hot_n4_clean_v4/forward_h1
+            research/hot_n4_clean_v4/days
+            research/hot_n4_clean_v4/returns
+            dashboard/index.html
+            dashboard/h1
+            dashboard/holdup
+            data/prices/ohlc.parquet
+            data/past_day_lock/manifest.jsonl
+            00_grounding/futubull_fees.json
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
       - name: Install bar dependencies
         run: pip install numpy pandas pyarrow
-      - name: Fetch the base branch
-        run: git fetch --no-tags origin main
+      - name: Fetch the base ref
+        run: |
+          set -euo pipefail
+          # Sealed-log tests call git show origin/main:<path>. One commit,
+          # no blobs yet; each compared path is fetched when the test reads it.
+          BASE="${{ github.base_ref }}"
+          BASE="${BASE:-main}"
+          git fetch --no-tags --depth 1 --filter=blob:none origin "$BASE"
+          if [ "$BASE" != "main" ]; then
+            git fetch --no-tags --depth 1 --filter=blob:none origin main
+          fi
       - name: Sealed log, seed match, and prefix
         run: |
           PYTHONHASHSEED=0 python3 research/hot_n4_clean_v4/forward/test_append_only.py

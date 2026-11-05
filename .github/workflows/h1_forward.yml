@@ -26,13 +26,15 @@ name: h1 append-only forward
 # predict / weather file, and its morning run ends before 09:30 ET. The
 # chain job never touches the ledger. On a weekday it waits until 08:00 ET
 # (America/New_York, so EDT and EST are both handled), waits for any
-# queued or running h1 forward / open-fill / fill run, and then dispatches
+# queued or running h1 forward / fill run, and then dispatches
 # this workflow with session_date=<today ET> and chain=true, the same
 # dispatch a person runs at 08:40 ET. It never dispatches at or after
 # 09:20 ET, and a completion at or after 09:20 ET exits success with
 # nothing done. The chain uses its own concurrency group so a late
 # Pre-Open ALL completion cannot queue in h1-forward and cancel a pending
-# h1 open-fill or fill.
+# fill. Open fill uses h1-open-fill, not this group, and its gate writes
+# nothing before 09:35 ET, so a fallback open-fill cron must not hold
+# the seal. The chain stops at 09:20, before that gate can append.
 # A chain=true run re-checks 08:00-09:25 ET on session_date before the plan
 # step and never commits a missing line, so it cannot seal after the open.
 # Every run first checks the ledger. A plan or missing line already on the
@@ -146,7 +148,7 @@ jobs:
           late() { [ "$((10#$(TZ=America/New_York date +%H%M)))" -ge 920 ]; }
           busy() {
             local total=0 wf count
-            for wf in h1_forward.yml h1_open_fill.yml h1_fill.yml; do
+            for wf in h1_forward.yml h1_fill.yml; do
               count=$(gh api "repos/${REPO}/actions/workflows/${wf}/runs?per_page=30" \
                 --jq '[.workflow_runs[] | select(.status != "completed" and .event != "workflow_run")] | length')
               total=$((total + count))
@@ -158,7 +160,7 @@ jobs:
               echo "an h1 run is still queued or running at 09:20 ET; leaving ${SESSION} to the fallbacks"
               exit 0
             fi
-            echo "an h1 forward / open-fill / fill run is queued or running; waiting 30s"
+            echo "an h1 forward / fill run is queued or running; waiting 30s"
             sleep 30
           done
           git fetch --no-tags --depth=1 origin main
