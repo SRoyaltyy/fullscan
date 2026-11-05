@@ -9,6 +9,15 @@ spec = importlib.util.spec_from_file_location('lane_public_articles', Path(__fil
 worker = importlib.util.module_from_spec(spec); spec.loader.exec_module(worker)
 
 class PublicInputs(unittest.TestCase):
+    def test_title_mode_accepts_feed_and_strips_body_and_context(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root=Path(folder);day=worker.datetime.now(worker.timezone.utc).date().isoformat()
+            path=root/'data/news_intake'/day/'documents.json';path.parent.mkdir(parents=True)
+            path.write_text(json.dumps([{'id':'title','title':'Agency announces review','body':'Extra facts','context_documents':[{'text':'Private'}],'extraction_status':'feed_text'}]))
+            rows=worker.pending(root,{},input_scope='title_only')
+            self.assertEqual(len(rows),1)
+            self.assertEqual(rows[0][1][0]['body'],'')
+            self.assertNotIn('context_documents',rows[0][1][0])
     def test_private_context_is_excluded_from_payload_and_hash(self):
         doc = {'id': 'one', 'title': 'Synthetic public news', 'body': 'Public body', 'url': 'https://example.com'}
         private = {**doc, 'context_documents': [{'text': 'Private context'}]}
@@ -85,7 +94,7 @@ class PublicInputs(unittest.TestCase):
             with tempfile.TemporaryDirectory() as folder:
                 root = Path(folder); day = worker.datetime.now(worker.timezone.utc).date().isoformat()
                 path = root / 'data/news_intake' / day / 'documents.json'; path.parent.mkdir(parents=True)
-                docs = [{'id': str(i), 'body': 'Public reporting ' * 100, 'extraction_status': 'page_text'} for i in range(3)]
+                docs = [{'id': str(i), 'title':'Synthetic public title '+str(i), 'body': 'Public reporting ' * 100, 'extraction_status': 'page_text'} for i in range(3)]
                 path.write_text(json.dumps(docs))
                 with patch('src.lane_one_shot.LiveLane', FakeLive), \
                      patch('src.news_impact.one_shot_stack.process_article', side_effect=process) as analyze, \

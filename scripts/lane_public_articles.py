@@ -47,7 +47,7 @@ def audit_acceptance(stage, accept, rejected):
     return check
 
 
-def pending(root, completed, limit=3, days=8, requested=None, source_sha256=None):
+def pending(root, completed, limit=3, days=8, requested=None, source_sha256=None, input_scope='article_text'):
     now = datetime.now(timezone.utc).date()
     cutoff = (now - timedelta(days=days)).isoformat()
     rows = {}
@@ -57,12 +57,14 @@ def pending(root, completed, limit=3, days=8, requested=None, source_sha256=None
         for document in json.loads(path.read_text()):
             if not isinstance(document, dict) or not document.get('id'):
                 continue
-            # Explicitly preserve the public source text. Feed-only inputs are
-            # excluded; downstream source equivalence still needs review.
-            if len(str(document.get('body') or '')) < 500:
-                continue
-            if document.get('extraction_status') in {'feed_text', 'headline_only', 'failed', 'unresolved'}:
-                continue
+            # The title benchmark strips body/context; body mode keeps its
+            # substantive-source requirements.
+            if input_scope=='title_only':
+                if not isinstance(document.get('title'),str) or not document['title'].strip():continue
+                document={**public_input(document),'body':''}
+            else:
+                if len(str(document.get('body') or '')) < 500:continue
+                if document.get('extraction_status') in {'feed_text', 'headline_only', 'failed', 'unresolved'}:continue
             key = input_key(document)
             previous = completed.get(key)
             previous_source = (previous or {}).get('producer_source')
@@ -75,7 +77,7 @@ def pending(root, completed, limit=3, days=8, requested=None, source_sha256=None
         candidates.sort(key=lambda item: item[1][0]['id'] != requested)
     return candidates[:limit]
 
-def run(root, output, limit=3, requested=None):
+def run(root, output, limit=3, requested=None, input_scope='title_only'):
     from src import lane_route
     from src.lane_one_shot import LiveLane
     from src.news_impact.one_shot_stack import process_article
@@ -88,6 +90,8 @@ def run(root, output, limit=3, requested=None):
     state = json.loads(path.read_text()) if path.exists() else {'records': {}, 'schema_version': 1}
     if not 1 <= limit <= 3:
         raise ValueError('One to three public articles per run')
+    if input_scope not in ('title_only','article_text'):raise ValueError('Unknown news input scope')
+    state['input_scope']=input_scope
     producer_source = source_identity(root)
     environment = {'python': sys.version.split()[0], 'packages': {}}
     for package in ('requests', 'urllib3', 'certifi', 'charset-normalizer', 'idna'):
@@ -110,7 +114,7 @@ def run(root, output, limit=3, requested=None):
     if not live.ctx['keys']:
         chosen = []
     else:
-        chosen = pending(root, state['records'], limit, requested=requested, source_sha256=producer_source['sha256'])
+        chosen = pending(root, state['records'], limit, requested=requested, source_sha256=producer_source['sha256'],input_scope=input_scope)
     index = get_index(root)
     if not index.rows:
         state['runtime_status'] = 'company_index_missing'
@@ -123,6 +127,8 @@ def run(root, output, limit=3, requested=None):
         stages = []
         rejected = []
         def audited(stage, prompt, system, accept=None):
+            if input_scope=='title_only':
+                system+='\nNews input is title only. Do not infer omitted article details, product identity, quantities, dates, ownership or implementation. Business facts can support conditional research candidates; report unresolved relationships explicitly.'
             parsed, provider, model = live(stage, prompt, system, accept=audit_acceptance(stage, accept, rejected))
             stages.append({'stage': stage, 'provider': provider, 'model': model, 'returned_json': parsed is not None, 'response_json': parsed})
             return parsed, provider, model
@@ -131,7 +137,7 @@ def run(root, output, limit=3, requested=None):
         article = {**document, 'article_id': document['id'], 'known_at': document['published_at'],
                    'source_file': source, 'harvest_source': document['url']}
         try:
-            analysis = process_article(article, audited, axioms=load_axioms(), root=root, index_names=index.title_names)
+            analysis = process_article(article, audited, axioms=load_axioms(), root=root, index_names=index.title_names,use_pack=input_scope!='title_only')
             # Full prompts can be reconstructed from the public source input
             # and runtime; retain their hashes without duplicating article text.
             analysis['prompt_log'] = [{k: item.get(k) for k in ('stage', 'sha256', 'bytes', 'lines')}
@@ -150,6 +156,7 @@ def run(root, output, limit=3, requested=None):
             status = 'blocked_free_daily_quota'
             state['runtime_status'] = 'free_model_daily_quota_exhausted'
         row = {'public_input': document, 'source_file': source, 'input_sha256': key,
+            'input_scope':input_scope,
             'started_at': started, 'completed_at': datetime.now(timezone.utc).isoformat(),
             'status': status, 'model_stages': stages, 'analysis': analysis, 'rejected_model_json': rejected,
             'execution_error': execution_error,
@@ -176,5 +183,6 @@ if __name__ == '__main__':
     parser.add_argument('--output', type=Path, default=ROOT / 'data/lane_public_analysis/results.json')
     parser.add_argument('--limit', type=int, default=3)
     parser.add_argument('--document-id')
+    parser.add_argument('--input-scope',choices=('title_only','article_text'),default='title_only')
     args = parser.parse_args()
-    run(args.root, args.output, args.limit, args.document_id)
+    run(args.root, args.output, args.limit, args.document_id,args.input_scope)
