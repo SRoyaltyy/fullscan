@@ -1,6 +1,6 @@
 {
   "date": "2026-11-04",
-  "generated_at": "2026-11-04T21:15:28.206748-05:00",
+  "generated_at": "2026-11-04T21:16:04.686970-05:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -845,7 +845,7 @@
           "size": 67242,
           "said": "Stock book \u2014 2026-11-04",
           "bullets": [
-            "_Generated 2026-11-04T18:52:05.269751-05:00_",
+            "_Generated 2026-11-04T21:15:36.871173-05:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -881,7 +881,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "live-book poller + today.json (2026-11-04)",
-          "size": 15651316,
+          "size": 15651332,
           "said": "live-book poller + today.json (2026-11-04)",
           "bullets": []
         }
@@ -920,7 +920,7 @@
           "role": "required",
           "status": "OK",
           "reason": "live-book poller + today.json (2026-11-04)",
-          "size": 15651316,
+          "size": 15651332,
           "said": "live-book poller + today.json (2026-11-04)",
           "bullets": []
         },
@@ -1753,6 +1753,59 @@
         }
       ],
       "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-11-04",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-04T21:16:03.543801-05:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-11-04_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1407516,
+          "preview": "1d BUY CDNA, BLFS, VEEV, ILMN, PRCH, LAUR, CNK, TRU \u00b7 SELL NEOV, BIDU, ROIV, BAK, GFL, PAL, VNET, NFLX"
+        },
+        {
+          "path": "data/stock_book/2026-11-04_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 1766,
+          "preview": "green 96 \u00b7 ETON, ARQT, AMN, BLFS, AGEN, CDNA, CORT, INCY, SGRY, VEEV"
+        },
+        {
+          "path": "data/stock_book/2026-11-04_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2503,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-11-04_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12501,
+          "preview": "2026-11-04 BUY CDNA, BLFS, VEEV, ILMN, PRCH, LAUR, CNK, TRU \u00b7 SELL NEOV, BIDU, ROIV, BAK, GFL, PAL, VNET, NFLX"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12501,
+          "preview": "2026-11-04 BUY CDNA, BLFS, VEEV, ILMN, PRCH, LAUR, CNK, TRU \u00b7 SELL NEOV, BIDU, ROIV, BAK, GFL, PAL, VNET, NFLX"
+        },
+        {
+          "path": "01_daily/2026-11-04_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 68336,
+          "preview": "# Stock book \u2014 2026-11-04\n_Generated 2026-11-04T21:15:36.871173-05:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY CDNA, BLFS, VEEV, ILMN, PRCH, LAUR, CNK, TRU \u00b7 SELL NEOV, BIDU, ROIV, BAK, GFL, PAL, VNET, NFLX \u00b7 green 96 \u00b7 ETON, ARQT, AMN, BLFS, AGEN, CDNA, CORT, INCY, SGRY, VEEV \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-11-04 BUY CDNA, BLFS, VEEV, ILMN, PRCH, LAUR, CNK, TRU \u00b7 SELL NEOV, BIDU, ROIV, BAK, GFL, PAL, VNET, NFLX \u00b7 2026-11-04 BUY CDNA, BLFS, VEEV, ILMN, PRCH, LAUR, CNK, TRU \u00b7 SELL NEOV, BIDU, ROIV, BAK, GFL, PAL, VNET, NFLX \u00b7 # Stock book \u2014 2026-11-04\n_Generated 2026-11-04T21:15:36.871173-05:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "href": {
@@ -1806,6 +1859,14 @@
       "path": "data/day_board/2026-11-04.json",
       "at": "2026-11-04T21:15:28-05:00",
       "commit_msg": "auto: land peer_rs [2026-11-04]",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "41951797059",
+      "manifest": "research/input_freeze/2026-11-04/manifest.json"
+    },
+    {
+      "path": "data/day_board/2026-11-04.json",
+      "at": "2026-11-04T21:16:05-05:00",
+      "commit_msg": "auto: land stock_book [2026-11-04]",
       "workflow": "Stock Book ALL (one-shot)",
       "run_id": "41951797059",
       "manifest": "research/input_freeze/2026-11-04/manifest.json"
