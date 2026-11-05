@@ -1,6 +1,6 @@
 {
   "date": "2026-11-05",
-  "generated_at": "2026-11-05T09:03:03.615687-05:00",
+  "generated_at": "2026-11-05T09:03:12.666839-05:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -787,10 +787,10 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=5900",
-          "size": 2309213,
-          "said": "197 rows",
+          "size": 2283725,
+          "said": "198 rows",
           "bullets": [
-            "GLBE, ANF, NUTX, COP, REGN, CORT, STNG, PR"
+            "GLBE, ANF, FOXA, FOX, CHA, LQDT, CARG, DECK"
           ]
         },
         {
@@ -868,9 +868,9 @@
           "bullets": []
         }
       ],
-      "said": "197 rows",
+      "said": "198 rows",
       "bullets": [
-        "GLBE, ANF, NUTX, COP, REGN"
+        "GLBE, ANF, FOXA, FOX, CHA"
       ]
     },
     {
@@ -1834,6 +1834,24 @@
         }
       ],
       "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -1.5750000000000002, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': 3.3049999999999997, 'dir': 'up', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': 5.96, 'dir': 'up', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': 2.5, 'dir': 'up', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -9.985, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': 0.1, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -0.845, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -0.18, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-11-05\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-11-05",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-05T09:03:11.386856-05:00",
+      "files": [
+        {
+          "path": "data/join/2026-11-05_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2283725,
+          "preview": "5900 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 GLBE, ANF, FOXA, FOX, CHA"
+        }
+      ],
+      "preview": "5900 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 GLBE, ANF, FOXA, FOX, CHA"
     }
   ],
   "href": {
