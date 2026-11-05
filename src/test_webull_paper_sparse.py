@@ -133,7 +133,34 @@ def test_path_constants_inside_sparse():
     assert not missing, missing
 
 
-def _latest_sealed_day_with_tickets() -> str | None:
+def _preopen_clock(day: str, completed_at: str) -> datetime | None:
+    """08:50 ET, or the readiness stamp when that stamp is still before 09:30.
+
+    ``validate_payload`` refuses a clock earlier than ``completed_at``.
+    2026-11-05 was ready at 09:23 ET, so a fixed 08:50 clock is not a
+    valid pre-open time for that day. A readiness at or after the bell
+    is not used.
+    """
+    et = ZoneInfo('America/New_York')
+    try:
+        completed = datetime.fromisoformat(completed_at)
+    except ValueError:
+        return None
+    if completed.tzinfo is None:
+        return None
+    completed = completed.astimezone(et)
+    if completed.date().isoformat() != day:
+        return None
+    bell = completed.replace(hour=9, minute=30, second=0, microsecond=0)
+    preferred = completed.replace(hour=8, minute=50, second=0, microsecond=0)
+    if completed >= bell:
+        return None
+    if completed <= preferred:
+        return preferred
+    return completed
+
+
+def _latest_sealed_day_with_tickets() -> tuple[str, datetime] | None:
     import json
     log = ROOT / 'research/hot_n4_clean_v4/forward_h1/h1_log.jsonl'
     if not log.is_file():
@@ -152,20 +179,36 @@ def _latest_sealed_day_with_tickets() -> str | None:
             continue
         # A sealed day whose ticket never went ready (e.g. 2026-11-02:
         # actions.json missing) is correctly refused by validate_payload;
-        # it is not a sparse-read fixture. Pick the latest *ready* day.
+        # it is not a sparse-read fixture. Pick the latest *ready* day
+        # whose readiness finished before 09:30 ET.
         try:
             proof = json.loads(f.read_text()).get('decision_readiness') or {}
         except ValueError:
             continue
-        if proof.get('ready') is True and proof.get('fingerprint'):
-            return d
+        if proof.get('ready') is not True or not proof.get('fingerprint'):
+            continue
+        clock = _preopen_clock(d, str(proof.get('completed_at') or ''))
+        if clock is None:
+            continue
+        return d, clock
     return None
 
 
+def test_preopen_clock_follows_readiness_and_stays_before_the_bell():
+    early = _preopen_clock('2026-11-03', '2026-11-03T07:49:11.540756-05:00')
+    late = _preopen_clock('2026-11-05', '2026-11-05T09:23:12.457005-05:00')
+    after = _preopen_clock('2026-11-04', '2026-11-04T10:02:33.153095-05:00')
+    assert early is not None and (early.hour, early.minute) == (8, 50)
+    assert late is not None and late.hour == 9 and late.minute == 23
+    assert late < late.replace(hour=9, minute=30, second=0, microsecond=0)
+    assert after is None
+
+
 def test_sealed_plan_build_reads_only_sparse_files():
-    day = _latest_sealed_day_with_tickets()
-    if day is None:
+    picked = _latest_sealed_day_with_tickets()
+    if picked is None:
         pytest.skip('no sealed h1 day with tickets in this checkout')
+    day, now = picked
     sys.path.insert(0, str(ROOT))
     from src import paper_open as po, webull_seal_gate as gate
     from src.futubull_exec import BrokerSnap
@@ -197,8 +240,7 @@ def test_sealed_plan_build_reads_only_sparse_files():
 
     os.stat = stat
     try:
-        now = datetime.fromisoformat(f'{day}T08:50:00').replace(
-            tzinfo=ZoneInfo('America/New_York'))
+        assert now < now.replace(hour=9, minute=30, second=0, microsecond=0)
         assert gate.sealed_plan_today(day)
         body = po.load_local(day)
         plan = po.make_plan(body, BrokerSnap(env='paper', cash=1e7, positions={}),
