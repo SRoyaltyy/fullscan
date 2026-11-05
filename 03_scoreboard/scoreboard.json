@@ -35206,7 +35206,7 @@
           "status": "neutral"
         }
       ],
-      "reflection_lesson_ref": null,
+      "reflection_lesson_ref": "02_lessons/candidate/2026-11-03_lesson.md",
       "sources_used": [],
       "horizon_calls": {
         "HORIZON_3D": {
@@ -35245,7 +35245,8 @@
       "knowable_at_9am": "partially — 半导体超卖反弹在概率上可预见，但 JOLTS 盘中冲击和油价方向反转不可知",
       "attribution_contested": "yes — 收盘报道以“半导体反弹”为首要解释，IBKR 以“JOLTS→利率熊陡 + 选举仓位”为核心框架，Investing.com 以“油价外交 headline”为独立 driver",
       "outlier_watch": "Dow 在“选举不确定性消退→risk-on”叙事下仍然收跌，揭示当天真正的分化机制是利率（JOLTS）而非选举；油价大跌而债券也下跌，债券在交易劳动力市场而非能源",
-      "horizon_grades": {}
+      "horizon_grades": {},
+      "lesson_schema_ok": true
     },
     {
       "date": "2026-11-04",
