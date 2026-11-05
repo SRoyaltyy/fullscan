@@ -1,6 +1,6 @@
 {
   "date": "2026-11-05",
-  "generated_at": "2026-11-05T06:21:01.814982-05:00",
+  "generated_at": "2026-11-05T06:21:25.128046-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -9,8 +9,8 @@
     "MISSING News judge MD `01_daily/news/2026-11-05_judge.md` \u2014 missing"
   ],
   "counts": {
-    "ok": 4,
-    "partial": 3,
+    "ok": 6,
+    "partial": 1,
     "fail": 1,
     "n": 8
   },
@@ -638,11 +638,11 @@
       "key": "stock_book",
       "name": "Stock Book ALL",
       "yaml": "stock_book_all.yml",
-      "status": "PARTIAL",
+      "status": "OK",
       "inputs_ready": false,
-      "n_req_ok": 2,
+      "n_req_ok": 4,
       "n_req": 4,
-      "n_opt_ok": 1,
+      "n_opt_ok": 3,
       "n_opt": 4,
       "files": [
         {
@@ -762,10 +762,10 @@
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-11-05_stock_book.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "horizons=5 names=215",
+          "size": 1534272,
+          "said": "1d BUY AVAH, XYZ, EHC, CDW, GDDY, ACN, KD \u00b7 SELL ENVX, FCEL, NVT, HYLN, POWL, AMPX",
           "bullets": []
         },
         {
@@ -773,21 +773,24 @@
           "name": "Stock book MD",
           "path": "01_daily/2026-11-05_stock_book.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 82321,
+          "said": "Stock book \u2014 2026-11-05",
+          "bullets": [
+            "_Generated 2026-11-05T06:21:14.074320-05:00_",
+            "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
+          ]
         },
         {
           "key": "green",
           "name": "Green-pile JSON",
           "path": "data/stock_book/2026-11-05_green.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "",
+          "size": 585,
+          "said": "0 green \u00b7",
           "bullets": []
         },
         {
@@ -809,10 +812,10 @@
           "name": "Dashboard HTML",
           "path": "dashboard/index.html",
           "role": "optional",
-          "status": "FAIL",
-          "reason": "session 2026-11-05 not in dashboard dates (last=2026-11-03)",
-          "size": 15651316,
-          "said": "session 2026-11-05 not in dashboard dates (last=2026-11-03)",
+          "status": "OK",
+          "reason": "live-book poller + today.json (2026-11-05)",
+          "size": 15651332,
+          "said": "live-book poller + today.json (2026-11-05)",
           "bullets": []
         }
       ],
@@ -825,9 +828,9 @@
       "key": "publish",
       "name": "Dashboard / .io",
       "yaml": "deploy-dashboard.yml",
-      "status": "PARTIAL",
-      "inputs_ready": false,
-      "n_req_ok": 1,
+      "status": "OK",
+      "inputs_ready": true,
+      "n_req_ok": 2,
       "n_req": 2,
       "n_opt_ok": 0,
       "n_opt": 1,
@@ -837,10 +840,10 @@
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-11-05_stock_book.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "horizons=5 names=215",
+          "size": 1534272,
+          "said": "1d BUY AVAH, XYZ, EHC, CDW, GDDY, ACN, KD \u00b7 SELL ENVX, FCEL, NVT, HYLN, POWL, AMPX",
           "bullets": []
         },
         {
@@ -848,10 +851,10 @@
           "name": "Dashboard HTML (repo)",
           "path": "dashboard/index.html",
           "role": "required",
-          "status": "FAIL",
-          "reason": "session 2026-11-05 not in dashboard dates (last=2026-11-03)",
-          "size": 15651316,
-          "said": "session 2026-11-05 not in dashboard dates (last=2026-11-03)",
+          "status": "OK",
+          "reason": "live-book poller + today.json (2026-11-05)",
+          "size": 15651332,
+          "said": "live-book poller + today.json (2026-11-05)",
           "bullets": []
         },
         {
@@ -887,8 +890,70 @@
   "news_mode": "on",
   "news_mode_reason": "",
   "selections": {
-    "buy_1d": [],
-    "sell_1d": [],
+    "buy_1d": [
+      {
+        "ticker": "AVAH",
+        "score": 0.8037257219975276
+      },
+      {
+        "ticker": "XYZ",
+        "score": 0.4367888737203524
+      },
+      {
+        "ticker": "EHC",
+        "score": 0.49838686341637084
+      },
+      {
+        "ticker": "CDW",
+        "score": 0.39055465405265516
+      },
+      {
+        "ticker": "GDDY",
+        "score": 0.36460734253606275
+      },
+      {
+        "ticker": "ACN",
+        "score": 0.24026241819064154
+      },
+      {
+        "ticker": "KD",
+        "score": 0.7465992511237036
+      }
+    ],
+    "sell_1d": [
+      {
+        "ticker": "ENVX",
+        "score": -0.34127575494158496
+      },
+      {
+        "ticker": "FCEL",
+        "score": -0.4391772083921112
+      },
+      {
+        "ticker": "NVT",
+        "score": -0.45399181341910966
+      },
+      {
+        "ticker": "HYLN",
+        "score": -0.27919151455141844
+      },
+      {
+        "ticker": "POWL",
+        "score": -0.3981817424291512
+      },
+      {
+        "ticker": "AMPX",
+        "score": -0.36273632738421596
+      },
+      {
+        "ticker": "EAF",
+        "score": -0.4198059596316052
+      },
+      {
+        "ticker": "VRT",
+        "score": -0.3947528866381545
+      }
+    ],
     "flatten": {},
     "general": {},
     "sectors": {},
@@ -1108,6 +1173,59 @@
         }
       ],
       "preview": "2615 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 IFF, MNTK, ZBRA, MSFT, GLOB \u00b7 2615 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 MNTK, IFF, PRCH, CNC, V"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-11-05",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-05T06:21:24.147229-05:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-11-05_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1534272,
+          "preview": "1d BUY AVAH, XYZ, EHC, CDW, GDDY, ACN, KD \u00b7 SELL ENVX, FCEL, NVT, HYLN, POWL, AMPX, EAF, VRT"
+        },
+        {
+          "path": "data/stock_book/2026-11-05_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-11-05_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2594,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-11-05_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12342,
+          "preview": "2026-11-05 BUY AVAH, XYZ, EHC, CDW, GDDY, ACN, KD \u00b7 SELL ENVX, FCEL, NVT, HYLN, POWL, AMPX, EAF, VRT"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12342,
+          "preview": "2026-11-05 BUY AVAH, XYZ, EHC, CDW, GDDY, ACN, KD \u00b7 SELL ENVX, FCEL, NVT, HYLN, POWL, AMPX, EAF, VRT"
+        },
+        {
+          "path": "01_daily/2026-11-05_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 83424,
+          "preview": "# Stock book \u2014 2026-11-05\n_Generated 2026-11-05T06:21:14.074320-05:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY AVAH, XYZ, EHC, CDW, GDDY, ACN, KD \u00b7 SELL ENVX, FCEL, NVT, HYLN, POWL, AMPX, EAF, VRT \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-11-05 BUY AVAH, XYZ, EHC, CDW, GDDY, ACN, KD \u00b7 SELL ENVX, FCEL, NVT, HYLN, POWL, AMPX, EAF, VRT \u00b7 2026-11-05 BUY AVAH, XYZ, EHC, CDW, GDDY, ACN, KD \u00b7 SELL ENVX, FCEL, NVT, HYLN, POWL, AMPX, EAF, VRT \u00b7 # Stock book \u2014 2026-11-05\n_Generated 2026-11-05T06:21:14.074320-05:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "href": {
