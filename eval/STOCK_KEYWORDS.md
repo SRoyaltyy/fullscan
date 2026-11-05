@@ -96,7 +96,12 @@ in the pasted article. If the rest of the published site leaves insufficient
 Pages space, the page loads these compact assets from the exact repository
 snapshot commit at `raw.githubusercontent.com`; SHA-256 checks still apply.
 The complete compact assets remain committed and archived. Page bootstrap files
-remain on Pages. This avoids requiring a new storage account to test keywords.
+(`articles.json`, `results.jsonl`, `profiles.json`, `ticker-index.json`,
+`meta.json`) stay on Pages while they fit the 950 MB site budget. Root copies
+of dashboard pages are redirects to `dashboard/<name>/`, not a second full
+tree. If the bootstrap itself would still cross that budget, those four JSON
+files are left on the snapshot commit and loaded from the same asset URL,
+with SHA-256 checks. This avoids requiring a new storage account to test keywords.
 
 Until recovery completes, a real Backblaze development sample may be published.
 It is explicitly labelled `development_sample`, never whole-archive coverage.

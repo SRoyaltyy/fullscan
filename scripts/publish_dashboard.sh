@@ -57,15 +57,14 @@ for sub in $SUBS; do
     cp -a "dashboard/${sub}/." "$TMP/dashboard/${sub}/"
     echo "[pages] overlay dashboard/${sub} from main"
   fi
-  if [ -d "$TMP/dashboard/${sub}" ]; then
-    mkdir -p "$TMP/${sub}"
-    cp -a "$TMP/dashboard/${sub}/." "$TMP/${sub}/"
-  fi
+  # Root /<sub>/ is written later as a redirect to /dashboard/<sub>/.
+  # A second full copy of every dashboard is what crossed the Pages budget.
 done
 # The overlay above copies dashboard/factor-mine from main, which drops
 # the deploy-time patches (cash-start replay, ovcal, pre-open labels and
-# replay panel). Re-apply them to both published copies. Each patch is
-# idempotent and add-only.
+# replay panel). Re-apply them to the canonical page. /factor-mine/ redirects
+# there. Each patch is idempotent and add-only. The root path is patched
+# only when an older tree still has that file.
 for page in "$TMP/dashboard/factor-mine/index.html" "$TMP/factor-mine/index.html"; do
   if [ -f "$page" ]; then
     python3 scripts/patch_fm_ovcal.py "$page" || true
@@ -109,6 +108,10 @@ for n in $(seq 1 "$ATTEMPTS"); do
       echo "[pages] ERROR: cannot preserve scanner publication; retaining the published site"
       exit 1
     fi
+  fi
+  if ! python3 -c 'import sys; from scripts.publish_scanner_snapshot import slim_duplicate_root_aliases; print("[pages] collapsed duplicate root aliases, bytes removed", slim_duplicate_root_aliases(sys.argv[1]))' "$TMP"; then
+    echo "[pages] ERROR: could not collapse duplicate root aliases; retaining the published site"
+    exit 1
   fi
   git -C "$TMP" add -A
   if ! git -C "$TMP" diff --cached --quiet; then

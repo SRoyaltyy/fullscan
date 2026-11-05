@@ -46,6 +46,134 @@ def artifact_names(directory):
     return names
 
 
+# GitHub Pages: published sites may be no larger than 1 GB. 950 MB leaves
+# headroom for the rest of this site. Duplicate root aliases are collapsed
+# before this budget is applied; the dashboard/ copy is the canonical page.
+PAGES_SITE_LIMIT = 950_000_000
+# These snapshot files stay on main. Pages fetches them from the snapshot
+# commit only when keeping a local copy would cross PAGES_SITE_LIMIT.
+LAZY_BOOTSTRAP = ('articles.json', 'results.jsonl', 'profiles.json', 'ticker-index.json')
+EXTERNAL_BOOTSTRAP_MARKER = 'external-bootstrap-v1'
+
+
+def root_alias_redirect(name):
+    """Browser redirect from /<name>/ to the canonical /dashboard/<name>/ page."""
+    import re
+    if not re.fullmatch(r'[a-z0-9][a-z0-9-]{0,80}', name):
+        raise ValueError('unsafe dashboard alias')
+    return ('<!doctype html><meta charset="utf-8">'
+            '<meta http-equiv="refresh" content="0;url=../dashboard/'+name+'/">'
+            '<link rel="canonical" href="../dashboard/'+name+'/">'
+            '<a href="../dashboard/'+name+'/">Open '+name+'</a>\n')
+
+
+def _sha256(path):
+    import hashlib
+    digest = hashlib.sha256()
+    with path.open('rb') as stream:
+        for chunk in iter(lambda: stream.read(1024 * 1024), b''):
+            digest.update(chunk)
+    return digest.hexdigest()
+
+
+def _manifest(root):
+    files = {}
+    for path in sorted(root.rglob('*')):
+        if path.is_symlink():
+            raise ValueError('refusing to treat a symlinked dashboard tree as a duplicate')
+        if path.is_file():
+            files[path.relative_to(root).as_posix()] = _sha256(path)
+    return files
+
+
+def _is_root_redirect(alias, name):
+    index = alias/'index.html'
+    if not index.is_file() or index.is_symlink():
+        return False
+    extras = [path for path in alias.rglob('*') if path.is_file() and path != index]
+    if extras:
+        return False
+    text = index.read_text(encoding='utf-8', errors='replace')
+    return 'url=../dashboard/'+name+'/' in text and 'http-equiv="refresh"' in text
+
+
+def slim_duplicate_root_aliases(site):
+    """Publish /<name>/ as a redirect to /dashboard/<name>/.
+
+    An exact root copy is replaced. A missing alias is created. A root folder
+    that is not an exact copy is left alone, so unique pages are not deleted.
+    The dashboard copy is never modified. Returns how many bytes left the site.
+    """
+    import shutil
+    site = Path(site)
+    dashboard = site/'dashboard'
+    if not dashboard.is_dir():
+        return 0
+    removed = 0
+    for child in sorted(p for p in dashboard.iterdir() if p.is_dir() and not p.is_symlink()):
+        alias = site/child.name
+        if alias.is_symlink() or (alias.exists() and alias.resolve() == child.resolve()):
+            continue
+        try:
+            page = root_alias_redirect(child.name)
+        except ValueError:
+            continue
+        if not alias.exists():
+            alias.mkdir()
+            (alias/'index.html').write_text(page, encoding='utf-8')
+            removed -= (alias/'index.html').stat().st_size
+            continue
+        if not alias.is_dir():
+            continue
+        if _is_root_redirect(alias, child.name):
+            continue
+        try:
+            duplicate = _manifest(child) == _manifest(alias)
+        except ValueError:
+            continue
+        if not duplicate:
+            continue
+        before = sum(p.stat().st_size for p in alias.rglob('*') if p.is_file() and not p.is_symlink())
+        shutil.rmtree(alias)
+        alias.mkdir()
+        (alias/'index.html').write_text(page, encoding='utf-8')
+        removed += before - (alias/'index.html').stat().st_size
+    return removed
+
+
+def pages_outside_bytes(site):
+    """Bytes that will remain outside the scanner page directory being replaced."""
+    site = Path(site)
+    excluded = site/'dashboard'/'scanner-backtest'
+    total = 0
+    for path in site.rglob('*'):
+        if not path.is_file() or path.is_symlink() or '.git' in path.parts:
+            continue
+        if excluded.exists() and path.is_relative_to(excluded):
+            continue
+        total += path.stat().st_size
+    return total
+
+
+def _projected_page_bytes(source, destination, names, omit):
+    """Size of the scanner directory after this publish writes `names`.
+
+    `omit` files are removed, so an old copy does not stay in the budget.
+    Every other file already in the destination still counts.
+    """
+    staged = set(names)
+    total = sum((source/name).stat().st_size for name in names)
+    if Path(destination).exists():
+        for path in Path(destination).rglob('*'):
+            if not path.is_file() or path.is_symlink():
+                continue
+            rel = path.relative_to(destination).as_posix()
+            if rel in staged or rel in omit:
+                continue
+            total += path.stat().st_size
+    return total
+
+
 def validate_budget(directory, *, total_limit=1_800_000_000, file_limit=99_000_000):
     """Bound the immutable snapshot; stage_page separately enforces Pages space."""
     total = 0
@@ -62,28 +190,46 @@ def validate_budget(directory, *, total_limit=1_800_000_000, file_limit=99_000_0
     return total
 
 
-def stage_page(source, destination, *, snapshot_commit, outside_bytes, site_limit=950_000_000):
-    """Use immutable repository assets if the complete page exceeds Pages space."""
+def stage_page(source, destination, *, snapshot_commit, outside_bytes, site_limit=PAGES_SITE_LIMIT):
+    """Use immutable repository assets if the complete page exceeds Pages space.
+
+    Callers must run slim_duplicate_root_aliases and pass pages_outside_bytes
+    measured after that slim. Large bootstrap JSON stays in the snapshot commit
+    and is loaded from there only when a local copy would still cross the budget.
+    """
     import re,shutil
     if not re.fullmatch(r'[a-f0-9]{40}',snapshot_commit):
         raise ValueError('immutable snapshot commit is required')
-    names = artifact_names(source)+['index.html']
-    incoming = sum((source/name).stat().st_size for name in names)
-    external = outside_bytes+incoming >= site_limit
+    full = artifact_names(source)+['index.html']
+    external = outside_bytes+_projected_page_bytes(source, destination, full, ()) >= site_limit
+    names = list(full)
+    lazy = []
     if external:
-        names = list(ARTIFACTS)+['index.html']
-    if outside_bytes+sum((source/name).stat().st_size for name in names) >= site_limit:
-        raise ValueError('page bootstrap exceeds safe Pages budget')
+        names = [name for name in names if name in ARTIFACTS or name == 'index.html']
+    if outside_bytes+_projected_page_bytes(source, destination, names, ()) >= site_limit:
+        index = (source/'index.html').read_text(encoding='utf-8', errors='replace') if (source/'index.html').is_file() else ''
+        if EXTERNAL_BOOTSTRAP_MARKER not in index:
+            raise ValueError('page bootstrap exceeds safe Pages budget')
+        lazy = [name for name in LAZY_BOOTSTRAP if name in names and (source/name).is_file()]
+        names = [name for name in names if name not in lazy]
+        if outside_bytes+_projected_page_bytes(source, destination, names, lazy) >= site_limit:
+            raise ValueError('page bootstrap exceeds safe Pages budget')
     for name in names:
         target = destination/name
         target.parent.mkdir(parents=True,exist_ok=True)
         shutil.copyfile(source/name,target)
+    for name in lazy:
+        target = destination/name
+        if target.is_file() and not target.is_symlink():
+            target.unlink()
     meta_path = destination/'meta.json'
     meta = json.loads(meta_path.read_text())
-    if external:
+    if external or lazy:
         meta['asset_base_url'] = 'https://raw.githubusercontent.com/SRoyaltyy/fullscan/'+snapshot_commit+'/dashboard/scanner-backtest/'
+    if lazy:
+        meta['external_bootstrap'] = {name: {'sha256': _sha256(source/name), 'bytes': (source/name).stat().st_size} for name in lazy}
     meta_path.write_text(json.dumps(meta,indent=2)+'\n')
-    return {'external_assets':external,'snapshot_commit':snapshot_commit}
+    return {'external_assets': bool(external or lazy), 'external_bootstrap': lazy, 'snapshot_commit': snapshot_commit}
 
 
 def git(*args, env=None):

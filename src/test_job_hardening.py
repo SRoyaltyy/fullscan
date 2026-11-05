@@ -155,7 +155,8 @@ def test_deploy_dashboard_follows_preopen_and_book() -> None:
     assert "src.pages_publish_gate" in text
     assert "dashboard/**" in text
     assert "github.event_name == 'push'" in text
-    assert "Root copy pages_out/${sub}" in text
+    assert 'cp -a "pages_out/dashboard/${sub}/."' not in text
+    assert "redirects are written by scripts/publish_dashboard.sh" in text
     assert "sleeve-merge" in text
     assert "scripts/patch_fm_ovcal.py pages_out/dashboard/factor-mine/index.html" in text
     assert "scripts/patch_fm_holdup.py pages_out/dashboard/factor-mine/index.html" in text

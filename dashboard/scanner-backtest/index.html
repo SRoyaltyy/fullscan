@@ -384,21 +384,45 @@ async function runTest() {
   }
 }
 
+// external-bootstrap-v1: articles, results, profiles and the ticker index stay
+// on the snapshot commit and are fetched from meta.asset_base_url when a local
+// copy would cross the Pages budget. SHA-256 is of the exact file bytes.
+const ASSET_ORIGIN = /^https:\/\/raw\.githubusercontent\.com\/SRoyaltyy\/fullscan\/[a-f0-9]{40}\/dashboard\/scanner-backtest\/$/;
+
+async function sha256Hex(bytes) {
+  const digest = await crypto.subtle.digest("SHA-256", bytes);
+  return Array.from(new Uint8Array(digest), (n) => n.toString(16).padStart(2, "0")).join("");
+}
+
+async function fetchSnapshotFile(name, query) {
+  const external = staticMeta.external_bootstrap && staticMeta.external_bootstrap[name];
+  let url = "./" + name + query;
+  if (external) {
+    const base = staticMeta.asset_base_url || "";
+    if (!ASSET_ORIGIN.test(base)) throw new Error("Invalid snapshot asset origin");
+    url = base + name + query;
+  }
+  const response = await fetch(url, {credentials: "omit"});
+  if (!response.ok) throw new Error(name + " missing");
+  const bytes = await response.arrayBuffer();
+  if (external && await sha256Hex(bytes) !== external.sha256) throw new Error(name + " does not match this snapshot");
+  return new TextDecoder().decode(bytes);
+}
+
 async function loadStatic() {
   const metaRes = await fetch("./meta.json?refresh=" + Date.now(), {cache: "no-store"});
   staticMeta = metaRes.ok ? await metaRes.json() : {};
   const version = (staticMeta.snapshot || {}).snapshot_id || staticMeta.generated_at || "historical";
   const query = "?snapshot=" + encodeURIComponent(version);
-  const [artsRes, resultsRes] = await Promise.all([
-    fetch("./articles.json" + query),
-    fetch("./results.jsonl" + query),
+  const [articlesText, resultsText] = await Promise.all([
+    fetchSnapshotFile("articles.json", query),
+    fetchSnapshotFile("results.jsonl", query),
   ]);
   const [spacyRes, clusterRes] = staticMeta.snapshot ? [{ok: false}, {ok: false}] : await Promise.all([
     fetch("./spacy.jsonl" + query), fetch("./spacy-clusters.json" + query),
   ]);
-  if (!artsRes.ok || !resultsRes.ok) throw new Error("static artifacts missing");
-  staticArticles = await artsRes.json();
-  const raw = await resultsRes.text();
+  staticArticles = JSON.parse(articlesText);
+  const raw = resultsText;
   for (const line of raw.split("\n")) {
     const trimmed = line.trim();
     if (!trimmed) continue;
@@ -504,16 +528,18 @@ async function loadProfiles() {
   const hint = document.getElementById("ticker-hint");
   hint.textContent = "loading stock profiles…";
   const query = staticMeta && staticMeta.snapshot ? "?snapshot=" + encodeURIComponent(staticMeta.snapshot.snapshot_id) : "";
-  const [pRes, iRes] = await Promise.all([
-    fetch("./profiles.json" + query),
-    fetch("./ticker-index.json" + query),
-  ]);
-  if (!pRes.ok || !iRes.ok) {
+  let profilesText, indexText;
+  try {
+    [profilesText, indexText] = await Promise.all([
+      fetchSnapshotFile("profiles.json", query),
+      fetchSnapshotFile("ticker-index.json", query),
+    ]);
+  } catch (err) {
     hint.textContent = "profile artifacts missing";
     return false;
   }
-  staticProfiles = await pRes.json();
-  tickerIndex = await iRes.json();
+  staticProfiles = JSON.parse(profilesText);
+  tickerIndex = JSON.parse(indexText);
   const list = document.getElementById("tickerlist");
   for (const t of Object.keys(staticProfiles).sort()) {
     const opt = document.createElement("option");
@@ -562,7 +588,7 @@ async function loadPackedProfile(path, expectedHash) {
     throw new Error("Invalid profile asset path");
   const query = staticMeta.snapshot ? "?snapshot=" + encodeURIComponent(staticMeta.snapshot.snapshot_id) : "";
   const base = staticMeta.asset_base_url || "./";
-  if (base !== "./" && !/^https:\/\/raw\.githubusercontent\.com\/SRoyaltyy\/fullscan\/[a-f0-9]{40}\/dashboard\/scanner-backtest\/$/.test(base))
+  if (base !== "./" && !ASSET_ORIGIN.test(base))
     throw new Error("Invalid keyword asset origin");
   const response = await fetch(base + path + query,{credentials:"omit"});
   if (!response.ok) throw new Error("Filing profile could not be loaded");

@@ -299,16 +299,17 @@ jobs:
           from pathlib import Path
           import os,runpy
           source=Path(os.environ['SNAPSHOT_DIRECTORY'])
-          outside=sum(p.stat().st_size for p in Path('.').rglob('*') if p.is_file()
-              and '.git' not in p.parts and not p.is_relative_to(Path('dashboard/scanner-backtest'))
-              and not p.is_relative_to(Path('scanner-backtest')))
-          stage=runpy.run_path(str(source/'publication-helper.py'))['stage_page']
-          print(stage(source,Path('dashboard/scanner-backtest'),snapshot_commit=os.environ['SNAPSHOT_COMMIT'],outside_bytes=outside))
+          helper=runpy.run_path(str(source/'publication-helper.py'))
+          site=Path('.')
+          print('slimmed_bytes', helper['slim_duplicate_root_aliases'](site))
+          outside=helper['pages_outside_bytes'](site)
+          print('outside_bytes', outside)
+          print(helper['stage_page'](source,site/'dashboard/scanner-backtest',snapshot_commit=os.environ['SNAPSHOT_COMMIT'],outside_bytes=outside))
           PY
           printf '%s\n' '<!doctype html><meta charset="utf-8"><meta http-equiv="refresh" content="0;url=../dashboard/scanner-backtest/"><a href="../dashboard/scanner-backtest/">Open the SEC parser test page</a>' > scanner-backtest/index.html
           git config user.name 'Scanner page publisher'
           git config user.email 'bot@users.noreply.github.com'
-          git add dashboard/scanner-backtest scanner-backtest
+          git add -A
           if ! git diff --cached --quiet; then
             git commit -m "Publish scanner test page for $GITHUB_SHA"
             git push origin HEAD:gh-pages

@@ -86,7 +86,7 @@ class PreserveCompletedView(unittest.TestCase):
             (scanner/'stale-only.json').write_text('must not mix with the published snapshot')
             scripts = work/'scripts'; scripts.mkdir()
             source = Path(__file__).parent
-            for name in ('publish_dashboard.sh', 'preserve_completed_parser_view.py'):
+            for name in ('publish_dashboard.sh', 'preserve_completed_parser_view.py', 'publish_scanner_snapshot.py'):
                 (scripts/name).write_bytes((source/name).read_bytes())
             env = {**os.environ, 'GITHUB_WORKSPACE': str(work), 'GITHUB_TOKEN': 'local-test-only',
                    'GITHUB_REPOSITORY': 'test/fixture', 'PAGES_PUSH_ATTEMPTS': '1',
@@ -97,14 +97,17 @@ class PreserveCompletedView(unittest.TestCase):
             self.assertIn('[pages] published', result.stdout)
             git('fetch', str(remote), 'gh-pages')
             self.assertEqual(git('show', 'FETCH_HEAD:'+PREFIX+'manifest.json').encode(), original)
-            for prefix in ('dashboard/scanner-backtest', 'scanner-backtest'):
-                page = git('show', 'FETCH_HEAD:'+prefix+'/index.html')
-                self.assertIn('published keyword model', page)
-                self.assertNotIn('latest article model', page)
-                self.assertIn('id="completed-stock-results"', page)
-                self.assertEqual(git('show', 'FETCH_HEAD:'+prefix+'/meta.json'), snapshot)
-                self.assertEqual(git('show', 'FETCH_HEAD:'+prefix+'/profiles.json'), 'published profile hashes')
-                self.assertNotIn(prefix+'/stale-only.json', git('ls-tree', '-r', '--name-only', 'FETCH_HEAD'))
+            page = git('show', 'FETCH_HEAD:dashboard/scanner-backtest/index.html')
+            self.assertIn('published keyword model', page)
+            self.assertNotIn('latest article model', page)
+            self.assertIn('id="completed-stock-results"', page)
+            self.assertEqual(git('show', 'FETCH_HEAD:dashboard/scanner-backtest/meta.json'), snapshot)
+            self.assertEqual(git('show', 'FETCH_HEAD:dashboard/scanner-backtest/profiles.json'), 'published profile hashes')
+            self.assertNotIn('dashboard/scanner-backtest/stale-only.json', git('ls-tree', '-r', '--name-only', 'FETCH_HEAD'))
+            alias = git('show', 'FETCH_HEAD:scanner-backtest/index.html')
+            self.assertIn('../dashboard/scanner-backtest/', alias)
+            self.assertNotIn('published profile hashes', alias)
+            self.assertEqual(git('ls-tree', '-r', '--name-only', 'FETCH_HEAD', 'scanner-backtest'), 'scanner-backtest/index.html')
 
     def test_keeps_local_scanner_when_published_index_is_not_a_scanner_page(self):
         """gh-pages once had a stock-comparison page at scanner-backtest/index.html.
@@ -151,7 +154,7 @@ class PreserveCompletedView(unittest.TestCase):
             (scanner/'profiles.json').unlink()
             scripts = work/'scripts'; scripts.mkdir()
             source = Path(__file__).parent
-            for name in ('publish_dashboard.sh', 'preserve_completed_parser_view.py'):
+            for name in ('publish_dashboard.sh', 'preserve_completed_parser_view.py', 'publish_scanner_snapshot.py'):
                 (scripts/name).write_bytes((source/name).read_bytes())
             env = {**os.environ, 'GITHUB_WORKSPACE': str(work), 'GITHUB_TOKEN': 'local-test-only',
                    'GITHUB_REPOSITORY': 'test/fixture', 'PAGES_PUSH_ATTEMPTS': '1',
@@ -162,14 +165,17 @@ class PreserveCompletedView(unittest.TestCase):
             self.assertIn('[pages] published', result.stdout)
             git('fetch', str(remote), 'gh-pages')
             self.assertEqual(git('show', 'FETCH_HEAD:'+PREFIX+'manifest.json').encode(), original)
-            for prefix in ('dashboard/scanner-backtest', 'scanner-backtest'):
-                page = git('show', 'FETCH_HEAD:'+prefix+'/index.html')
-                self.assertIn('Scanner backtest', page)
-                self.assertIn('latest article model', page)
-                self.assertNotIn('Stock extraction', page)
-                self.assertIn('id="completed-stock-results"', page)
-                self.assertEqual(git('show', 'FETCH_HEAD:'+prefix+'/meta.json'), snapshot)
-                self.assertEqual(git('show', 'FETCH_HEAD:'+prefix+'/profiles.json'), 'published profile hashes')
+            page = git('show', 'FETCH_HEAD:dashboard/scanner-backtest/index.html')
+            self.assertIn('Scanner backtest', page)
+            self.assertIn('latest article model', page)
+            self.assertNotIn('Stock extraction', page)
+            self.assertIn('id="completed-stock-results"', page)
+            self.assertEqual(git('show', 'FETCH_HEAD:dashboard/scanner-backtest/meta.json'), snapshot)
+            self.assertEqual(git('show', 'FETCH_HEAD:dashboard/scanner-backtest/profiles.json'), 'published profile hashes')
+            alias = git('show', 'FETCH_HEAD:scanner-backtest/index.html')
+            self.assertIn('../dashboard/scanner-backtest/', alias)
+            self.assertNotIn('Stock extraction', alias)
+            self.assertEqual(git('ls-tree', '-r', '--name-only', 'FETCH_HEAD', 'scanner-backtest'), 'scanner-backtest/index.html')
 
 
 
