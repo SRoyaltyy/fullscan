@@ -1,47 +1,47 @@
-# Finviz homepage market digest (close) — 2026-11-04
+# Finviz homepage market digest (close) — 2026-11-05
 
-**Generated:** 2026-11-04T16:29:15.198149-05:00 (America/New_York)
+**Generated:** 2026-11-05T16:33:17.318707-05:00 (America/New_York)
 **Source:** `live`
-**Banner:** US stocks closed sharply higher as Democratic sweep eased election uncertainty and oil fell on expectations of a shift in Iran policy
-**Prior close:** SPX +1.80%  Nasdaq +1.70%  Dow +2.90%
-**SPX:** +1.80%  **Nasdaq:** +1.70%  **Dow:** +2.90%
-**Oil:** crude $88.71 down (fell)
+**Banner:** US stocks closed sharply lower as AI and chip names sank on post-Democratic sweep regulatory fears and data-center moratorium calls
+**Prior close:** SPX -4.40%  Nasdaq -5.50%  Dow -3.40%
+**SPX:** -4.40%  **Nasdaq:** -5.50%  **Dow:** -3.40%
+**Oil:** —
 **CPI/Fed:** —
-**Leaders:** AMZN, MSFT, MCD, FSLR, MMM, SWK, ZBH, CRCT, KD, DUOL, AMD, TSLA, DJT, ADP, QCOM, ARM, MELI
+**Leaders:** NVDA, MU, AMD, QCOM, TSLA, SPCX, APP, ADP, NET, DKNG, ABNB, SOUN, IONQ
 **Next session:** housing no · retail no · Fed no
-**Earnings slate:** —
-**Geo/grain:** geo
-**Clock legal for:** 2026-11-05
+**Earnings slate:** NET, DKNG, ABNB, SOUN, IONQ
+**Geo/grain:** —
+**Clock legal for:** 2026-11-06
 **Clock use:** `next_open`
 
 ## Clock
 
-Live post-close answer-key (~16:05 ET). **Legal for the NEXT session open only** (`clock_legal_for` = 2026-11-05) — **NOT** the same morning. `clock_use` is always `next_open`. File is `*_finviz_market_digest_close.*`; the same_morning warm-up file is left untouched.
+Live post-close answer-key (~16:05 ET). **Legal for the NEXT session open only** (`clock_legal_for` = 2026-11-06) — **NOT** the same morning. `clock_use` is always `next_open`. File is `*_finviz_market_digest_close.*`; the same_morning warm-up file is left untouched.
 
 Homepage `$MARKET` prose — **not** `YYYY-MM-DD_finviz_digest.md` (quote-page headlines + ticker blurbs). Capture only. Not wired into tape_anchor / predict / #210.
 
 ## Theme Radar
 
-- **Prior close:** SPX +1.80% · Nasdaq +1.70% · Dow +2.90%
-- **Oil:** crude $88.71 down (fell)
+- **Prior close:** SPX -4.40% · Nasdaq -5.50% · Dow -3.40%
+- **Oil:** —
 - **CPI / Fed-odds:** —
-- **Named leaders:** AMZN, MSFT, MCD, FSLR, MMM, SWK, ZBH, CRCT, KD, DUOL, AMD, TSLA, DJT, ADP, QCOM, ARM, MELI
+- **Named leaders:** NVDA, MU, AMD, QCOM, TSLA, SPCX, APP, ADP, NET, DKNG, ABNB, SOUN, IONQ
 - **Next-session calendar:** housing no · retail no · Fed no
-  - ADP (ADP) reported that private payrolls added 86,000 jobs in October, while Qualcomm (QCOM) struck a multi-year deal for SpaceX Starlink Mobile to use its Dragonwing platforms, Arm Holdings (ARM) is scheduled to report after the close, and MercadoLibre (MELI) posted Q3 revenue of $10.8 billion that beat estimates, with mixed after-hours reactions ahead of Thursday’s initial jobless claims and additional corporate results.
-- **Earnings slate:** —
-- **Geo / grain:** geo
+  - The S&P 500 ($SPX) fell about 4.4% to 7,353.73, the Dow Jones Industrial Average ($DJI) lost about 3.4% to 51,523.06, the Nasdaq Composite ($COMP) dropped about 5.5% to 24,315, the Nasdaq 100 ($NDX) slid about 6.4%, and the Russell 2000 (IWM) declined about 4.6%, erasing most of Wednesday’s post-election rally and marking the Nasdaq’s largest daily drop in 19 months
+- **Earnings slate:** NET, DKNG, ABNB, SOUN, IONQ
+- **Geo / grain:** —
 
 ## Narrative
 
-**US stocks closed sharply higher as Democratic sweep eased election uncertainty and oil fell on expectations of a shift in Iran policy**
+**US stocks closed sharply lower as AI and chip names sank on post-Democratic sweep regulatory fears and data-center moratorium calls**
 
-- The Dow Jones Industrial Average ($DJI) jumped 2.9% to 53,302 for its best day since April 2025, the S&P 500 ($SPX) climbed 1.8% to 7,701, the Nasdaq ($COMP) gained 1.7% and the Russell 2000 (IWM) rose about 1.35% after Democrats secured both the House and Senate and President Trump accepted the results.
-- Nine of 11 S&P 500 ($SPX) sectors advanced, led by Consumer Discretionary with a gain of more than 4% as Amazon (AMZN) rose about 6% on expectations that tighter AI and data-center rules could curb capex and improve free cash flow, while Microsoft (MSFT) gained about 6.7% amid investor concerns about tougher AI regulation.
-- Energy was the clear laggard, with the sector sliding 5.3% as West Texas Intermediate crude (@CL) fell more than 7% to about $88.71 on expectations that Democratic control would rewrite the Iran policy playbook and pressure oil prices.
-- McDonald’s (MCD) added about 6.5% after reporting adjusted EPS of $3.57, topping consensus estimates of $3.38.
-- First Solar (FSLR) advanced after Mizuho raised its price target to $328 from $324 and reiterated its Outperform rating, while 3M (MMM) climbed after announcing a $7.35 billion settlement related to forever-chemicals.
-- Stanley Black & Decker (SWK) surged about 13% after beating third-quarter EPS estimates and lifting 2024 and 2026 guidance on tariff refunds and productivity gains.
-- Zimmer Biomet (ZBH) gained about 13.5% after beating third-quarter estimates with adjusted EPS of $1.90 and raising full-year organic growth and EPS guidance.
-- Cricut (CRCT) jumped about 49% after Q3 revenue grew 11% to $188.6 million and EPS of $0.13 beat estimates alongside a $0.70 special dividend, while Kyndryl (KD) rallied about 30% on an earnings beat and Duolingo (DUOL) rose about 26% after a revenue beat and raised guidance, and AMD (AMD) advanced following a record quarter and a higher 2027 growth outlook.
-- Tesla (TSLA) fell about 3% as Texas’s flip to Democratic control raised political and regulatory risks for Musk’s companies, and Trump Media & Technology Group (DJT) dropped about 25%, while several defense stocks declined on speculation of tighter Pentagon budgets.
-- ADP (ADP) reported that private payrolls added 86,000 jobs in October, while Qualcomm (QCOM) struck a multi-year deal for SpaceX Starlink Mobile to use its Dragonwing platforms, Arm Holdings (ARM) is scheduled to report after the close, and MercadoLibre (MELI) posted Q3 revenue of $10.8 billion that beat estimates, with mixed after-hours reactions ahead of Thursday’s initial jobless claims and additional corporate results.
+- The S&P 500 ($SPX) fell about 4.4% to 7,353.73, the Dow Jones Industrial Average ($DJI) lost about 3.4% to 51,523.06, the Nasdaq Composite ($COMP) dropped about 5.5% to 24,315, the Nasdaq 100 ($NDX) slid about 6.4%, and the Russell 2000 (IWM) declined about 4.6%, erasing most of Wednesday’s post-election rally and marking the Nasdaq’s largest daily drop in 19 months
+- AI and semiconductor stocks sold off on regulatory concerns following a Democratic midterm sweep and calls for a potential national data-center moratorium
+- Nvidia (NVDA) fell about 9.3% and led chipmakers lower amid the regulatory and data-center policy concerns
+- Micron Technology (MU) declined about 17% after pausing plans for a Taiwanese memory plant due to labor disputes, while AMD (AMD) dropped around 17% as Democratic wins heightened worries about an overextended AI trade and slower data-center buildouts
+- Qualcomm (QCOM) sank about 9.5% even as Q4 results hit the high end of guidance and it unveiled a long-term AWS AI silicon deal, with handset softness and margin concerns around a data-center ramp weighing on shares
+- Tesla (TSLA) fell about 11% and SpaceX (SPCX) dropped about 9% in a "Musk selloff" tied to intensified scrutiny of Elon Musk after the Democratic sweep and clouded merger and expansion outlooks that have erased roughly $450 billion in value
+- AppLovin (APP) jumped about 31% after a Q3 beat and new ad model spurred analyst price-target hikes, a notable gainer despite the broader technology and AI sector rout
+- Consumer staples was the only positive sector, up about 0.7%, while communication services lagged with a 6.11% decline and 15 of 16 sectors finished lower
+- The ADP (ADP) report showed private-sector payrolls rose 86,000 in October, topping expectations
+- Cloudflare (NET), DraftKings (DKNG), Airbnb (ABNB), SoundHound AI (SOUN), and IonQ (IONQ) are scheduled to report earnings after the bell, with after-hours trading mixed
