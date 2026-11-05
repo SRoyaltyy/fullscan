@@ -117,190 +117,6 @@
         "step": null
       }
     },
-    "combo_ps_7030_shared": {
-      "2026-08-13": {
-        "class": "still broken",
-        "label": "missed",
-        "reason": "sealed day picked nobody while leak-safe names existed",
-        "step": "build"
-      },
-      "2026-08-14": {
-        "class": "still broken",
-        "label": "missed",
-        "reason": "sealed day picked nobody while leak-safe names existed",
-        "step": "build"
-      },
-      "2026-08-17": {
-        "class": "still broken",
-        "label": "missed",
-        "reason": "sealed day picked nobody while leak-safe names existed",
-        "step": "build"
-      },
-      "2026-08-18": {
-        "class": "sat out (rule)",
-        "label": "sat out (rule)",
-        "reason": "hard-red sit S<=-3",
-        "step": null
-      },
-      "2026-08-19": {
-        "class": "sat out (rule)",
-        "label": "sat out (rule)",
-        "reason": "hard-red sit S<=-3",
-        "step": null
-      },
-      "2026-08-20": {
-        "class": "still broken",
-        "label": "missed",
-        "reason": "sealed day picked nobody while leak-safe names existed",
-        "step": "build"
-      },
-      "2026-08-21": {
-        "class": "still broken",
-        "label": "missed",
-        "reason": "sealed day picked nobody while leak-safe names existed",
-        "step": "build"
-      },
-      "2026-08-24": {
-        "class": "sat out (rule)",
-        "label": "sat out (rule)",
-        "reason": "hard-red sit S<=-3",
-        "step": null
-      },
-      "2026-08-25": {
-        "class": "still broken",
-        "label": "missed",
-        "reason": "sealed day picked nobody while leak-safe names existed",
-        "step": "build"
-      },
-      "2026-08-26": {
-        "class": "still broken",
-        "label": "missed",
-        "reason": "sealed day picked nobody while leak-safe names existed",
-        "step": "build"
-      },
-      "2026-08-27": {
-        "class": "still broken",
-        "label": "missed",
-        "reason": "sealed day picked nobody while leak-safe names existed",
-        "step": "build"
-      },
-      "2026-09-03": {
-        "class": "still broken",
-        "label": "missed",
-        "reason": "sealed day picked nobody while leak-safe names existed",
-        "step": "build"
-      },
-      "2026-09-30": {
-        "class": "rebuilt",
-        "label": "rebuilt",
-        "reason": "rebuilt from the prior day's state at the session open",
-        "step": null
-      },
-      "2026-10-08": {
-        "class": "sat out (rule)",
-        "label": "sat out (rule)",
-        "reason": "hard-red sit S<=-3",
-        "step": null
-      },
-      "2026-10-26": {
-        "class": "rebuilt",
-        "label": "rebuilt",
-        "reason": "chained forward from the rebuilt state",
-        "step": null
-      }
-    },
-    "combo_sf_5050_shared": {
-      "2026-08-13": {
-        "class": "still broken",
-        "label": "missed",
-        "reason": "sealed day picked nobody while leak-safe names existed",
-        "step": "build"
-      },
-      "2026-08-14": {
-        "class": "still broken",
-        "label": "missed",
-        "reason": "sealed day picked nobody while leak-safe names existed",
-        "step": "build"
-      },
-      "2026-08-17": {
-        "class": "still broken",
-        "label": "missed",
-        "reason": "sealed day picked nobody while leak-safe names existed",
-        "step": "build"
-      },
-      "2026-08-18": {
-        "class": "sat out (rule)",
-        "label": "sat out (rule)",
-        "reason": "hard-red sit S<=-3",
-        "step": null
-      },
-      "2026-08-19": {
-        "class": "sat out (rule)",
-        "label": "sat out (rule)",
-        "reason": "hard-red sit S<=-3",
-        "step": null
-      },
-      "2026-08-20": {
-        "class": "still broken",
-        "label": "missed",
-        "reason": "sealed day picked nobody while leak-safe names existed",
-        "step": "build"
-      },
-      "2026-08-21": {
-        "class": "still broken",
-        "label": "missed",
-        "reason": "sealed day picked nobody while leak-safe names existed",
-        "step": "build"
-      },
-      "2026-08-24": {
-        "class": "sat out (rule)",
-        "label": "sat out (rule)",
-        "reason": "hard-red sit S<=-3",
-        "step": null
-      },
-      "2026-08-25": {
-        "class": "still broken",
-        "label": "missed",
-        "reason": "sealed day picked nobody while leak-safe names existed",
-        "step": "build"
-      },
-      "2026-08-26": {
-        "class": "still broken",
-        "label": "missed",
-        "reason": "sealed day picked nobody while leak-safe names existed",
-        "step": "build"
-      },
-      "2026-08-27": {
-        "class": "still broken",
-        "label": "missed",
-        "reason": "sealed day picked nobody while leak-safe names existed",
-        "step": "build"
-      },
-      "2026-09-25": {
-        "class": "still broken",
-        "label": "missed",
-        "reason": "picks had no 09:30 open",
-        "step": "lock"
-      },
-      "2026-09-30": {
-        "class": "rebuilt",
-        "label": "rebuilt",
-        "reason": "rebuilt from the prior day's state at the session open",
-        "step": null
-      },
-      "2026-10-08": {
-        "class": "sat out (rule)",
-        "label": "sat out (rule)",
-        "reason": "hard-red sit S<=-3",
-        "step": null
-      },
-      "2026-10-26": {
-        "class": "rebuilt",
-        "label": "rebuilt",
-        "reason": "chained forward from the rebuilt state",
-        "step": null
-      }
-    },
     "combo_sf_7030_shared": {
       "2026-08-13": {
         "class": "still broken",
@@ -707,6 +523,18 @@
         "label": "rebuilt",
         "reason": "chained forward from the rebuilt state",
         "step": null
+      },
+      "2026-11-03": {
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "hard-red sit S<=-3",
+        "step": null
+      },
+      "2026-11-04": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "rebuilt from the prior day's state at the session open",
+        "step": null
       }
     },
     "overnight_mega_h1": {
@@ -1027,6 +855,18 @@
         "label": "rebuilt",
         "reason": "chained forward from the rebuilt state",
         "step": null
+      },
+      "2026-11-03": {
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "hard-red sit S<=-3",
+        "step": null
+      },
+      "2026-11-04": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "rebuilt from the prior day's state at the session open",
+        "step": null
       }
     },
     "overnight_mega_h2": {
@@ -1335,6 +1175,18 @@
         "label": "rebuilt",
         "reason": "chained forward from the rebuilt state",
         "step": null
+      },
+      "2026-11-03": {
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "hard-red sit S<=-3",
+        "step": null
+      },
+      "2026-11-04": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "rebuilt from the prior day's state at the session open",
+        "step": null
       }
     },
     "short_alarm_h3": {
@@ -1493,6 +1345,104 @@
         "label": "rebuilt",
         "reason": "rebuilt from the prior day's state at the session open",
         "step": null
+      },
+      "2026-11-03": {
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "hard-red sit S<=-3",
+        "step": null
+      },
+      "2026-11-04": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "rebuilt from the prior day's state at the session open",
+        "step": null
+      }
+    },
+    "short_macd_dn_h3": {
+      "2026-08-13": {
+        "class": "still broken",
+        "label": "missed",
+        "reason": "sealed day picked nobody while leak-safe names existed",
+        "step": "build"
+      },
+      "2026-08-14": {
+        "class": "still broken",
+        "label": "missed",
+        "reason": "sealed day picked nobody while leak-safe names existed",
+        "step": "build"
+      },
+      "2026-08-17": {
+        "class": "still broken",
+        "label": "missed",
+        "reason": "sealed day picked nobody while leak-safe names existed",
+        "step": "build"
+      },
+      "2026-08-18": {
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "hard-red sit S<=-3",
+        "step": null
+      },
+      "2026-08-19": {
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "hard-red sit S<=-3",
+        "step": null
+      },
+      "2026-08-20": {
+        "class": "still broken",
+        "label": "missed",
+        "reason": "sealed day picked nobody while leak-safe names existed",
+        "step": "build"
+      },
+      "2026-08-21": {
+        "class": "still broken",
+        "label": "missed",
+        "reason": "sealed day picked nobody while leak-safe names existed",
+        "step": "build"
+      },
+      "2026-08-24": {
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "hard-red sit S<=-3",
+        "step": null
+      },
+      "2026-08-25": {
+        "class": "still broken",
+        "label": "missed",
+        "reason": "sealed day picked nobody while leak-safe names existed",
+        "step": "build"
+      },
+      "2026-08-26": {
+        "class": "still broken",
+        "label": "missed",
+        "reason": "sealed day picked nobody while leak-safe names existed",
+        "step": "build"
+      },
+      "2026-08-27": {
+        "class": "still broken",
+        "label": "missed",
+        "reason": "sealed day picked nobody while leak-safe names existed",
+        "step": "build"
+      },
+      "2026-09-03": {
+        "class": "still broken",
+        "label": "missed",
+        "reason": "sealed day picked nobody while leak-safe names existed",
+        "step": "build"
+      },
+      "2026-09-30": {
+        "class": "still broken",
+        "label": "missed",
+        "reason": "picks had no 09:30 open",
+        "step": "lock"
+      },
+      "2026-10-26": {
+        "class": "still broken",
+        "label": "missed",
+        "reason": "picks had no 09:30 open",
+        "step": "lock"
       }
     },
     "short_news_r_h3": {
@@ -1677,200 +1627,6 @@
         "label": "missed",
         "reason": "picks had no 09:30 open",
         "step": "lock"
-      }
-    },
-    "union_flow_in_h1": {
-      "2026-08-13": {
-        "class": "still broken",
-        "label": "missed",
-        "reason": "sealed day picked nobody while leak-safe names existed",
-        "step": "build"
-      },
-      "2026-08-14": {
-        "class": "still broken",
-        "label": "missed",
-        "reason": "sealed day picked nobody while leak-safe names existed",
-        "step": "build"
-      },
-      "2026-08-17": {
-        "class": "still broken",
-        "label": "missed",
-        "reason": "sealed day picked nobody while leak-safe names existed",
-        "step": "build"
-      },
-      "2026-08-18": {
-        "class": "sat out (rule)",
-        "label": "sat out (rule)",
-        "reason": "hard-red sit S<=-3",
-        "step": null
-      },
-      "2026-08-19": {
-        "class": "sat out (rule)",
-        "label": "sat out (rule)",
-        "reason": "hard-red sit S<=-3",
-        "step": null
-      },
-      "2026-08-20": {
-        "class": "still broken",
-        "label": "missed",
-        "reason": "sealed day picked nobody while leak-safe names existed",
-        "step": "build"
-      },
-      "2026-08-21": {
-        "class": "still broken",
-        "label": "missed",
-        "reason": "sealed day picked nobody while leak-safe names existed",
-        "step": "build"
-      },
-      "2026-08-24": {
-        "class": "sat out (rule)",
-        "label": "sat out (rule)",
-        "reason": "hard-red sit S<=-3",
-        "step": null
-      },
-      "2026-08-25": {
-        "class": "still broken",
-        "label": "missed",
-        "reason": "sealed day picked nobody while leak-safe names existed",
-        "step": "build"
-      },
-      "2026-08-26": {
-        "class": "still broken",
-        "label": "missed",
-        "reason": "sealed day picked nobody while leak-safe names existed",
-        "step": "build"
-      },
-      "2026-08-27": {
-        "class": "still broken",
-        "label": "missed",
-        "reason": "sealed day picked nobody while leak-safe names existed",
-        "step": "build"
-      },
-      "2026-09-01": {
-        "class": "sat out (rule)",
-        "label": "sat out (rule)",
-        "reason": "hard-red sit S<=-3",
-        "step": null
-      },
-      "2026-09-02": {
-        "class": "sat out (rule)",
-        "label": "sat out (rule)",
-        "reason": "hard-red sit S<=-3",
-        "step": null
-      },
-      "2026-09-03": {
-        "class": "still broken",
-        "label": "missed",
-        "reason": "sealed day picked nobody while leak-safe names existed",
-        "step": "build"
-      },
-      "2026-09-09": {
-        "class": "sat out (rule)",
-        "label": "sat out (rule)",
-        "reason": "hard-red sit S<=-3",
-        "step": null
-      },
-      "2026-09-10": {
-        "class": "sat out (rule)",
-        "label": "sat out (rule)",
-        "reason": "hard-red sit S<=-3",
-        "step": null
-      },
-      "2026-09-11": {
-        "class": "still broken",
-        "label": "missed",
-        "reason": "sealed day picked nobody while leak-safe names existed",
-        "step": "build"
-      },
-      "2026-09-14": {
-        "class": "sat out (rule)",
-        "label": "sat out (rule)",
-        "reason": "hard-red sit S<=-3",
-        "step": null
-      },
-      "2026-09-15": {
-        "class": "sat out (rule)",
-        "label": "sat out (rule)",
-        "reason": "hard-red sit S<=-3",
-        "step": null
-      },
-      "2026-09-18": {
-        "class": "still broken",
-        "label": "missed",
-        "reason": "sealed day picked nobody while leak-safe names existed",
-        "step": "build"
-      },
-      "2026-09-25": {
-        "class": "still broken",
-        "label": "missed",
-        "reason": "sealed day picked nobody while leak-safe names existed",
-        "step": "build"
-      },
-      "2026-09-28": {
-        "class": "sat out (rule)",
-        "label": "sat out (rule)",
-        "reason": "hard-red sit S<=-3",
-        "step": null
-      },
-      "2026-09-30": {
-        "class": "rebuilt",
-        "label": "rebuilt",
-        "reason": "rebuilt from the prior day's state at the session open",
-        "step": null
-      },
-      "2026-10-08": {
-        "class": "sat out (rule)",
-        "label": "sat out (rule)",
-        "reason": "hard-red sit S<=-3",
-        "step": null
-      },
-      "2026-10-09": {
-        "class": "rebuilt",
-        "label": "rebuilt",
-        "reason": "chained forward from the rebuilt state",
-        "step": null
-      },
-      "2026-10-12": {
-        "class": "rebuilt",
-        "label": "rebuilt",
-        "reason": "chained forward from the rebuilt state",
-        "step": null
-      },
-      "2026-10-13": {
-        "class": "sat out (rule)",
-        "label": "sat out (rule)",
-        "reason": "hard-red sit S<=-3",
-        "step": null
-      },
-      "2026-10-23": {
-        "class": "sat out (rule)",
-        "label": "sat out (rule)",
-        "reason": "hard-red sit S<=-3",
-        "step": null
-      },
-      "2026-10-26": {
-        "class": "still broken",
-        "label": "missed",
-        "reason": "picks had no 09:30 open",
-        "step": "lock"
-      },
-      "2026-10-27": {
-        "class": "rebuilt",
-        "label": "rebuilt",
-        "reason": "rebuilt from the prior day's state at the session open",
-        "step": null
-      },
-      "2026-10-30": {
-        "class": "sat out (rule)",
-        "label": "sat out (rule)",
-        "reason": "hard-red sit S<=-3",
-        "step": null
-      },
-      "2026-11-02": {
-        "class": "rebuilt",
-        "label": "rebuilt",
-        "reason": "chained forward from the rebuilt state",
-        "step": null
       }
     },
     "union_hot_n4_h1": {
@@ -2064,6 +1820,12 @@
         "class": "sat out (rule)",
         "label": "sat out (rule)",
         "reason": "hard-red sit S<=-3",
+        "step": null
+      },
+      "2026-11-04": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "rebuilt from the prior day's state at the session open",
         "step": null
       }
     },
@@ -2383,6 +2145,170 @@
         "step": null
       },
       "2026-10-08": {
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "hard-red sit S<=-3",
+        "step": null
+      },
+      "2026-10-26": {
+        "class": "still broken",
+        "label": "missed",
+        "reason": "picks had no 09:30 open",
+        "step": "lock"
+      },
+      "2026-10-30": {
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "hard-red sit S<=-3",
+        "step": null
+      }
+    },
+    "union_news_pack_net2_h1": {
+      "2026-08-13": {
+        "class": "still broken",
+        "label": "missed",
+        "reason": "sealed day picked nobody while leak-safe names existed",
+        "step": "build"
+      },
+      "2026-08-14": {
+        "class": "still broken",
+        "label": "missed",
+        "reason": "sealed day picked nobody while leak-safe names existed",
+        "step": "build"
+      },
+      "2026-08-17": {
+        "class": "still broken",
+        "label": "missed",
+        "reason": "sealed day picked nobody while leak-safe names existed",
+        "step": "build"
+      },
+      "2026-08-18": {
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "hard-red sit S<=-3",
+        "step": null
+      },
+      "2026-08-19": {
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "hard-red sit S<=-3",
+        "step": null
+      },
+      "2026-08-20": {
+        "class": "still broken",
+        "label": "missed",
+        "reason": "sealed day picked nobody while leak-safe names existed",
+        "step": "build"
+      },
+      "2026-08-21": {
+        "class": "still broken",
+        "label": "missed",
+        "reason": "sealed day picked nobody while leak-safe names existed",
+        "step": "build"
+      },
+      "2026-08-24": {
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "hard-red sit S<=-3",
+        "step": null
+      },
+      "2026-08-25": {
+        "class": "still broken",
+        "label": "missed",
+        "reason": "sealed day picked nobody while leak-safe names existed",
+        "step": "build"
+      },
+      "2026-08-26": {
+        "class": "still broken",
+        "label": "missed",
+        "reason": "sealed day picked nobody while leak-safe names existed",
+        "step": "build"
+      },
+      "2026-08-27": {
+        "class": "still broken",
+        "label": "missed",
+        "reason": "sealed day picked nobody while leak-safe names existed",
+        "step": "build"
+      },
+      "2026-09-01": {
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "hard-red sit S<=-3",
+        "step": null
+      },
+      "2026-09-02": {
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "hard-red sit S<=-3",
+        "step": null
+      },
+      "2026-09-03": {
+        "class": "still broken",
+        "label": "missed",
+        "reason": "sealed day picked nobody while leak-safe names existed",
+        "step": "build"
+      },
+      "2026-09-09": {
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "hard-red sit S<=-3",
+        "step": null
+      },
+      "2026-09-10": {
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "hard-red sit S<=-3",
+        "step": null
+      },
+      "2026-09-15": {
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "hard-red sit S<=-3",
+        "step": null
+      },
+      "2026-09-22": {
+        "class": "still broken",
+        "label": "missed",
+        "reason": "sealed day picked nobody while leak-safe names existed",
+        "step": "build"
+      },
+      "2026-09-23": {
+        "class": "still broken",
+        "label": "missed",
+        "reason": "sealed day picked nobody while leak-safe names existed",
+        "step": "build"
+      },
+      "2026-09-24": {
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "hard-red sit S<=-3",
+        "step": null
+      },
+      "2026-09-29": {
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "strategy no-trade rule",
+        "step": null
+      },
+      "2026-09-30": {
+        "class": "still broken",
+        "label": "missed",
+        "reason": "picks had no 09:30 open",
+        "step": "lock"
+      },
+      "2026-10-07": {
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "hard-red sit S<=-3",
+        "step": null
+      },
+      "2026-10-08": {
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "hard-red sit S<=-3",
+        "step": null
+      },
+      "2026-10-13": {
         "class": "sat out (rule)",
         "label": "sat out (rule)",
         "reason": "hard-red sit S<=-3",

@@ -295,7 +295,7 @@ def reconstruct_candidates(date: str, cal: list[str],
                            digests: dict[str, str] | None = None) -> dict:
     """Morning names from the prior export. Never the frozen candidate file.
 
-    Frozen-copy mornings 2026-10-13 through 2026-11-03 read theme-radar's
+    Frozen-copy mornings 2026-10-13 through 2026-11-04 read theme-radar's
     previous-session ``.raw.csv`` instead of the copied local export.
     """
     from .factor_mine_freeze import candidate_provenance
@@ -1109,7 +1109,7 @@ def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
         "--write", action="store_true",
-        help="Write rebuilt/DATE.json. Frozen-copy mornings 2026-10-13..2026-11-03 are replaced from theme-radar raw files. Other existing files stay.",
+        help="Write rebuilt/DATE.json. Frozen-copy mornings 2026-10-13..2026-11-04 are replaced from theme-radar raw files. Other existing files stay.",
     )
     parser.add_argument(
         "--counts-only", action="store_true",

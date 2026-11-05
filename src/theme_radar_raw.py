@@ -23,9 +23,10 @@ MANIFEST_URL = (
     "https://raw.githubusercontent.com/SRoyaltyy/theme-radar/"
     "main/data/snapshots/manifest.json"
 )
-# Frozen fullscan copies. These mornings are rebuilt from theme-radar.
+# Frozen fullscan copies, including the 2026-11-04 morning. These mornings
+# are rebuilt from theme-radar's previous-session raw file.
 FROZEN_FROM = "2026-10-13"
-FROZEN_TO = "2026-11-03"
+FROZEN_TO = "2026-11-04"
 SOURCE = "theme_radar_snapshot"
 REQUIRED = (
     "Ticker",
