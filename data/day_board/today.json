@@ -1,6 +1,6 @@
 {
   "date": "2026-11-04",
-  "generated_at": "2026-11-04T21:15:22.667707-05:00",
+  "generated_at": "2026-11-04T21:15:28.206748-05:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -157,31 +157,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "news_actions",
-      "title": "News actions (no LLM)",
-      "date": "2026-11-04",
-      "ok": true,
-      "pushed": false,
-      "at": "2026-11-04T05:12:56.457078-05:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-11-04_actions.json",
-          "ok": true,
-          "reason": "",
-          "size": 72086,
-          "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers"
-        },
-        {
-          "path": "01_daily/news/2026-11-04_actions.md",
-          "ok": true,
-          "reason": "",
-          "size": 15663,
-          "preview": "# News \u2192 Actions v4 (full framework) \u2014 2026-11-04T05:11:18.153314-05:00\nraw=8915 unique_events=7 tickers=102"
-        }
-      ],
-      "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-11-04T05:11:18.153314-05:00\nraw=8915 unique_events=7 tickers=102"
-    },
     {
       "key": "finviz",
       "title": "Finviz universe export",
@@ -468,6 +443,24 @@
         }
       ],
       "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 OMER, FTK, NUTX, RIGL, ETON \u00b7 5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 OMER, FTK, NUTX, RIGL, ETON"
+    },
+    {
+      "key": "peer_rs",
+      "title": "Peer RS",
+      "date": "2026-11-04",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-04T21:15:27.102636-05:00",
+      "files": [
+        {
+          "path": "data/peers/2026-11-04_peer_rs.csv",
+          "ok": true,
+          "reason": "",
+          "size": 821534,
+          "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+        }
+      ],
+      "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
