@@ -1,6 +1,6 @@
 {
  "date": "2026-11-05",
- "generated_at": "2026-11-05T09:58:08.371631-05:00",
+ "generated_at": "2026-11-05T13:26:19.891426-05:00",
  "stance_vocabulary": [
   "favorable",
   "neutral",
@@ -17,21 +17,23 @@
   "fed_score": 0.0,
   "dollar_oil_score": 0.5,
   "futures_score": -0.5,
-  "yields": "flat",
-  "yields_source": "llm_factor_fallback",
+  "yields": "rising",
+  "yields_source": "fred_dgs10",
+  "dgs10_delta_1d": 0.04,
+  "dgs10_current": 4.95,
   "dollar": "flat",
   "dollar_source": "dxy",
-  "dxy_pct_1d": 0.14,
-  "vix_ratio": 0.935,
-  "vix_spot": 18.71,
-  "vix_delta_1d": 2.1,
+  "dxy_pct_1d": -0.08,
+  "vix_ratio": 1.062,
+  "vix_spot": 26.41,
+  "vix_delta_1d": 9.8,
   "vix_ratio_source": "vix/vix3m",
   "vix": "spiking",
-  "oil_pct_1d": 2.03,
+  "oil_pct_1d": 2.91,
   "oil": "rising",
   "fear_greed": null,
   "fear_greed_label": null,
-  "regime_corr": 0.082,
+  "regime_corr": 0.362,
   "sectors": {
    "Basic Materials": {
     "score": -1.5750000000000002,
@@ -316,14 +318,14 @@
   },
   "lev": {
    "high": {
-    "stance": "neutral",
-    "confidence": "low",
-    "why": "—"
+    "stance": "hostile",
+    "confidence": "medium",
+    "why": "yields rising — leverage amplifies the downside [factors + general]"
    },
    "low": {
-    "stance": "neutral",
+    "stance": "favorable",
     "confidence": "low",
-    "why": "—"
+    "why": "balance-sheet strength preferred in stress"
    },
    "mid": {
     "stance": "neutral",
@@ -338,14 +340,14 @@
   },
   "style": {
    "growth": {
-    "stance": "neutral",
-    "confidence": "low",
-    "why": "yields flat/unknown"
+    "stance": "hostile",
+    "confidence": "medium",
+    "why": "yields rising — long-duration growth de-rates [factor: Bond yields]"
    },
    "value": {
-    "stance": "neutral",
-    "confidence": "low",
-    "why": "yields flat/unknown"
+    "stance": "favorable",
+    "confidence": "medium",
+    "why": "rising yields/reflation favors value & cyclicals [factor: Bond yields]"
    },
    "blend": {
     "stance": "neutral",
