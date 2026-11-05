@@ -5,8 +5,8 @@
   "run_id": "41948535244",
   "model": "deepseek",
   "started_at": "2026-11-04T20:48:42-05:00",
-  "updated_at": "2026-11-04T20:50:34-05:00",
-  "heartbeat_at": "2026-11-04T20:50:34-05:00",
+  "updated_at": "2026-11-04T20:50:40-05:00",
+  "heartbeat_at": "2026-11-04T20:50:40-05:00",
   "stages": [
     {
       "name": "outcome",
@@ -21,9 +21,9 @@
     },
     {
       "name": "horizon",
-      "state": "running",
+      "state": "ok",
       "started_at": "2026-11-04T20:49:31-05:00",
-      "ended_at": "",
+      "ended_at": "2026-11-04T20:50:40-05:00",
       "heartbeat_at": "2026-11-04T20:50:34-05:00",
       "done": 1,
       "total": 1,
