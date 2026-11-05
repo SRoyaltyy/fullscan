@@ -8530,5 +8530,84 @@
     "sha256": "0640d6cccb74ac576c70cc6902fa3afc35d04a06229130ebf2b6a06d31ee83f0",
     "shares": 90,
     "ticker": "SLN"
+  },
+  {
+    "bar_cutoff": "2026-11-04",
+    "cash_before": 66.54162263837588,
+    "committed_at": "2026-11-05T14:07:34Z",
+    "date": "2026-11-05",
+    "excluded_unexplained_legs": [],
+    "finviz_source": {
+      "commit": "f34f7abc75085c8df21f88b712d29cad82b66a6d",
+      "commit_time": "2026-11-04T21:48:15Z",
+      "file_sha256": "7fe6a09e1ffa10a857ec8503169038d863567f668d36ce33baa07ffd4099dd82",
+      "path": "data/snapshots/2026-11-04.csv",
+      "snapshot_date": "2026-11-04",
+      "status": "BEFORE_OPEN"
+    },
+    "holdup_on": false,
+    "kind": "plan",
+    "morning_s": null,
+    "picks": [
+      {
+        "fv_avg_volume": 7088.16,
+        "fv_price": 5.33,
+        "rank": 1,
+        "sources": [
+          "yday_gainer"
+        ],
+        "ticker": "ARRY"
+      },
+      {
+        "fv_avg_volume": 771.84,
+        "fv_price": 3.09,
+        "rank": 2,
+        "sources": [
+          "yday_gainer"
+        ],
+        "ticker": "ZJYL"
+      },
+      {
+        "fv_avg_volume": 771.62,
+        "fv_price": 8.88,
+        "rank": 3,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "CRCT"
+      },
+      {
+        "fv_avg_volume": 1807.26,
+        "fv_price": 3.98,
+        "rank": 4,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "WYHG"
+      }
+    ],
+    "planned_sells": [
+      {
+        "reason": "hold-expired",
+        "shares": 135,
+        "ticker": "GDYN"
+      },
+      {
+        "reason": "hold-expired",
+        "shares": 1,
+        "ticker": "UPBD"
+      }
+    ],
+    "recipe": "union_hot_n4_holdup__w0",
+    "s_source": {
+      "blob_sha": "5abb22e26772298b47aa02fb92d0e781381d4485",
+      "kind": "weather",
+      "path": "01_daily/weather/2026-11-05_weather.json",
+      "server_time_utc": "2026-11-05T12:04:27Z",
+      "status": "BEFORE_1330"
+    },
+    "sha256": "ca4be137f4c24313f28aa3729eed40dd014c7993638cb9d8474bdf860710292e"
   }
 ]
