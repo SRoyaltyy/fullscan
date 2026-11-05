@@ -1,11 +1,323 @@
 [
   {
-    "title": "Consultation for Tribal Nations Regarding the Section 106 Process of the National Historic Preservation Act",
-    "url": "https://www.fcc.gov/edoc/426497",
-    "native_id": "426497",
+    "title": "Arlopu Recalls Slide Playsets Due to Risk of Serious Injury and Death from Head and Neck Entrapment Hazards",
+    "url": "https://www.cpsc.gov/Recalls/2027/Arlopu-Recalls-Slide-Playsets-Due-to-Risk-of-Serious-Injury-and-Death-from-Head-and-Neck-Entrapment-Hazards",
+    "native_id": "https://www.cpsc.gov/_4e132cc3-f84c-45c7-962b-aaad33bdcb40",
+    "published_at": null,
+    "published_raw": "November 05, 2026",
+    "summary": "The recalled products contain multiple openings where a child’s torso can fit through the opening, but a child’s head cannot, posing a risk of serious injury and death due to head and neck entrapment hazards. Additionally, the basketball nets on the recalled products with model number KT-CS17 can come unhooked from the rim, forming a loop large enough for a child’s head, posing entanglement and strangulation hazards.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Consumer Product Safety Commission",
+      "jurisdiction": "US",
+      "family": "product_safety"
+    },
+    "primary_source_id": "us-cpsc-99343b5112",
+    "n": 8817,
+    "first_seen": "2026-11-05T20:41:39.999913+00:00",
+    "last_seen": "2026-11-05T20:41:39.999913+00:00",
+    "source_ids": [
+      "us-cpsc-99343b5112"
+    ]
+  },
+  {
+    "title": "Vanderhall North America Recalls All Model Year 2024-2026 Brawley Electric Recreational Off-road Vehicles Due to Injury and Crash Hazards",
+    "url": "https://www.cpsc.gov/Recalls/2027/Vanderhall-North-America-Recalls-All-Model-Year-2024-2026-Brawley-Electric-Recreational-Off-road-Vehicles-Due-to-Injury-and-Crash-Hazards",
+    "native_id": "https://www.cpsc.gov/_0c6e03e0-250d-463a-9086-face77cdab26",
+    "published_at": null,
+    "published_raw": "November 05, 2026",
+    "summary": "The seat belts in Brawley ROVs can permanently lockup in the fully retracted position. If this occurs, consumers would be unable to reset the seat belt and put it on when the vehicle is operating, posing injury and crash hazards to consumers.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Consumer Product Safety Commission",
+      "jurisdiction": "US",
+      "family": "product_safety"
+    },
+    "primary_source_id": "us-cpsc-99343b5112",
+    "n": 8818,
+    "first_seen": "2026-11-05T20:41:39.999913+00:00",
+    "last_seen": "2026-11-05T20:41:39.999913+00:00",
+    "source_ids": [
+      "us-cpsc-99343b5112"
+    ]
+  },
+  {
+    "title": "Bose Recalls Lithium-Ion Battery Packs for S1 Pro and S1 Pro+ Bluetooth Speaker Systems Due to Risk of Injury from Fire and Overheating Hazards",
+    "url": "https://www.cpsc.gov/Recalls/2027/Bose-Recalls-Lithium-Ion-Battery-Packs-for-S1-Pro-and-S1-Pro-Bluetooth-Speaker-Systems-Due-to-Risk-of-Injury-from-Fire-and-Overheating-Hazards-0",
+    "native_id": "https://www.cpsc.gov/_421f4a57-83c1-4c01-ab6f-7afc53ad20a2",
+    "published_at": null,
+    "published_raw": "November 05, 2026",
+    "summary": "The recalled lithium-ion battery packs can overheat and ignite, posing a risk of injury from fire and overheating hazards.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Consumer Product Safety Commission",
+      "jurisdiction": "US",
+      "family": "product_safety"
+    },
+    "primary_source_id": "us-cpsc-99343b5112",
+    "n": 8819,
+    "first_seen": "2026-11-05T20:41:39.999913+00:00",
+    "last_seen": "2026-11-05T20:41:39.999913+00:00",
+    "source_ids": [
+      "us-cpsc-99343b5112"
+    ]
+  },
+  {
+    "title": "Little Giant Recalls Ladders with Rapid Locks Due to Risk of Serious Injury from Fall Hazard",
+    "url": "https://www.cpsc.gov/Recalls/2027/Little-Giant-Recalls-Ladders-with-Rapid-Locks-Due-to-Risk-of-Serious-Injury-from-Fall-Hazard",
+    "native_id": "https://www.cpsc.gov/_70f134a1-01bc-4c09-98e4-db1279f6acc4",
+    "published_at": null,
+    "published_raw": "November 05, 2026",
+    "summary": "The ladders can suddenly retract if the Rapid Locks are not fully engaged, posing a fall hazard to consumers.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Consumer Product Safety Commission",
+      "jurisdiction": "US",
+      "family": "product_safety"
+    },
+    "primary_source_id": "us-cpsc-99343b5112",
+    "n": 8820,
+    "first_seen": "2026-11-05T20:41:39.999913+00:00",
+    "last_seen": "2026-11-05T20:41:39.999913+00:00",
+    "source_ids": [
+      "us-cpsc-99343b5112"
+    ]
+  },
+  {
+    "title": "Jiastfeng Recalls HAUOMS Eight-drawer Dressers Due to Risk of Serious Injury or Death from Tip-Over and Entrapment Hazards; Violate Mandatory Standard for Clothing Storage Units",
+    "url": "https://www.cpsc.gov/Recalls/2027/Jiastfeng-Recalls-HAUOMS-Eight-drawer-Dressers-Due-to-Risk-of-Serious-Injury-or-Death-from-Tip-Over-and-Entrapment-Hazards-Violate-Mandatory-Standard-for-Clothing-Storage-Units",
+    "native_id": "https://www.cpsc.gov/_01951df4-fd60-4357-a414-8c91da54eaf9",
+    "published_at": null,
+    "published_raw": "November 05, 2026",
+    "summary": "The recalled dressers are unstable if they are not anchored to the wall, posing tip-over and entrapment hazards that can result in risks of serious injuries or death to children. The dressers violate the mandatory safety standards as required by the STURDY Act .",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Consumer Product Safety Commission",
+      "jurisdiction": "US",
+      "family": "product_safety"
+    },
+    "primary_source_id": "us-cpsc-99343b5112",
+    "n": 8821,
+    "first_seen": "2026-11-05T20:41:39.999913+00:00",
+    "last_seen": "2026-11-05T20:41:39.999913+00:00",
+    "source_ids": [
+      "us-cpsc-99343b5112"
+    ]
+  },
+  {
+    "title": "Gourmia Recalls 9-Slice Digital Air Fryer Ovens Due to Burn Hazard",
+    "url": "https://www.cpsc.gov/Recalls/2027/Gourmia-Recalls-9-Slice-Digital-Air-Fryer-Ovens-Due-to-Burn-Hazard",
+    "native_id": "https://www.cpsc.gov/_cf02b6d4-5f12-4773-a061-1ef6c406785d",
+    "published_at": null,
+    "published_raw": "November 05, 2026",
+    "summary": "The oven’s doors can unexpectedly close when bumped, posing a burn hazard to consumers retrieving hot food.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Consumer Product Safety Commission",
+      "jurisdiction": "US",
+      "family": "product_safety"
+    },
+    "primary_source_id": "us-cpsc-99343b5112",
+    "n": 8822,
+    "first_seen": "2026-11-05T20:41:39.999913+00:00",
+    "last_seen": "2026-11-05T20:41:39.999913+00:00",
+    "source_ids": [
+      "us-cpsc-99343b5112"
+    ]
+  },
+  {
+    "title": "C.A.M.P. Recalls Mountain Ice Axes Due to Risk of Serious Injury or Death from Fall Hazard",
+    "url": "https://www.cpsc.gov/Recalls/2027/CAMP-Recalls-Mountain-Ice-Axes-Due-to-Risk-of-Serious-Injury-or-Death-from-Fall-Hazard",
+    "native_id": "https://www.cpsc.gov/_ac157df3-46db-4edc-94aa-5c971961af09",
+    "published_at": null,
+    "published_raw": "November 05, 2026",
+    "summary": "A screw on the recalled mountain ice axes can loosen during use, causing the handle or pick to detach, posing a risk of serious injury or death from fall hazard.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Consumer Product Safety Commission",
+      "jurisdiction": "US",
+      "family": "product_safety"
+    },
+    "primary_source_id": "us-cpsc-99343b5112",
+    "n": 8823,
+    "first_seen": "2026-11-05T20:41:39.999913+00:00",
+    "last_seen": "2026-11-05T20:41:39.999913+00:00",
+    "source_ids": [
+      "us-cpsc-99343b5112"
+    ]
+  },
+  {
+    "title": "Kikea Store Recalls X-VESOLJE Nursing Pillows Due to Risk of Serious Injury or Death from Suffocation; Violate Mandatory Standards for Nursing Pillows",
+    "url": "https://www.cpsc.gov/Recalls/2027/Kikea-Store-Recalls-X-VESOLJE-Nursing-Pillows-Due-to-Risk-of-Serious-Injury-or-Death-from-Suffocation-Violate-Mandatory-Standards-for-Nursing-Pillows",
+    "native_id": "https://www.cpsc.gov/_819996b2-9336-4585-a492-31c4faea3e0c",
+    "published_at": null,
+    "published_raw": "November 05, 2026",
+    "summary": "The recalled nursing pillows violate the mandatory safety standards for nursing pillows because they can obstruct an infant’s breathing, posing a serious risk of injury or death from suffocation.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Consumer Product Safety Commission",
+      "jurisdiction": "US",
+      "family": "product_safety"
+    },
+    "primary_source_id": "us-cpsc-99343b5112",
+    "n": 8824,
+    "first_seen": "2026-11-05T20:41:39.999913+00:00",
+    "last_seen": "2026-11-05T20:41:39.999913+00:00",
+    "source_ids": [
+      "us-cpsc-99343b5112"
+    ]
+  },
+  {
+    "title": "Baby Brezza Enterprises Recalls SuperFast Sterilizer Dryers Due to Overheating and Burn Hazards",
+    "url": "https://www.cpsc.gov/Recalls/2027/Baby-Brezza-Enterprises-Recalls-SuperFast-Sterilizer-Dryers-Due-to-Overheating-and-Burn-Hazards",
+    "native_id": "https://www.cpsc.gov/_df2825e8-1bbb-454f-8dd7-d55e74f0afb7",
+    "published_at": null,
+    "published_raw": "November 05, 2026",
+    "summary": "The recalled sterilizer dryers can overheat when plugged in and operating, posing a risk of injury from a burn hazard if the surface is handled.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Consumer Product Safety Commission",
+      "jurisdiction": "US",
+      "family": "product_safety"
+    },
+    "primary_source_id": "us-cpsc-99343b5112",
+    "n": 8825,
+    "first_seen": "2026-11-05T20:41:39.999913+00:00",
+    "last_seen": "2026-11-05T20:41:39.999913+00:00",
+    "source_ids": [
+      "us-cpsc-99343b5112"
+    ]
+  },
+  {
+    "title": "Sanven Technology Recalls Vevor BMX Bicycles Due to Risk of Serious Injury or Death from Crash Hazard; Violate Federal Requirements for Bicycles",
+    "url": "https://www.cpsc.gov/Recalls/2027/Sanven-Technology-Recalls-Vevor-BMX-Bicycles-Due-to-Risk-of-Serious-Injury-or-Death-from-Crash-Hazard-Violate-Federal-Requirements-for-Bicycles",
+    "native_id": "https://www.cpsc.gov/_7dce173b-0dcf-48c0-b16e-6eeda0a69c26",
+    "published_at": null,
+    "published_raw": "November 05, 2026",
+    "summary": "The bicycles violate the mandatory safety regulation for bicycles , because they are not equipped with a chain guard. Loose clothing can get entrapped in the chain drive, posing a risk of serious injury or deadly crash hazard. In addition, the bicycles do not comply with the labeling requirements.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Consumer Product Safety Commission",
+      "jurisdiction": "US",
+      "family": "product_safety"
+    },
+    "primary_source_id": "us-cpsc-99343b5112",
+    "n": 8826,
+    "first_seen": "2026-11-05T20:41:39.999913+00:00",
+    "last_seen": "2026-11-05T20:41:39.999913+00:00",
+    "source_ids": [
+      "us-cpsc-99343b5112"
+    ]
+  },
+  {
+    "title": "U.S. Titan Recalls X-Pro Youth All-Terrain Vehicles (ATVs) Due to Risk of Serious Injury or Death from Crash Hazard; Violate Mandatory Standard for ATVs",
+    "url": "https://www.cpsc.gov/Recalls/2027/U-S-Titan-Recalls-X-Pro-Youth-All-Terrain-Vehicles-ATVs-Due-to-Risk-of-Serious-Injury-or-Death-from-Crash-Hazard-Violate-Mandatory-Standard-for-ATVs",
+    "native_id": "https://www.cpsc.gov/_4598141e-044f-45dc-ac0b-bf82b104a2bd",
+    "published_at": null,
+    "published_raw": "November 05, 2026",
+    "summary": "The recalled ATVs violate the mandatory ATV safety standard because the speed-adjusting module included with the vehicle allows for the ATV’s speed to be adjusted in excess of the maximum speed for vehicles intended for children 6 years old and older, posing a risk of serious injury or death from a crash.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Consumer Product Safety Commission",
+      "jurisdiction": "US",
+      "family": "product_safety"
+    },
+    "primary_source_id": "us-cpsc-99343b5112",
+    "n": 8827,
+    "first_seen": "2026-11-05T20:41:39.999913+00:00",
+    "last_seen": "2026-11-05T20:41:39.999913+00:00",
+    "source_ids": [
+      "us-cpsc-99343b5112"
+    ]
+  },
+  {
+    "title": "Magnetopia Recalls Magnetic Building Cubes and Blocks Due to Risk of Serious Injury or Death from Magnet Ingestion Hazard",
+    "url": "https://www.cpsc.gov/Recalls/2027/Magnetopia-Recalls-Magnetic-Building-Cubes-and-Blocks-Due-to-Risk-of-Serious-Injury-or-Death-from-Magnet-Ingestion-Hazard",
+    "native_id": "https://www.cpsc.gov/_378974a6-111c-48bf-8068-2a8c18990df5",
+    "published_at": null,
+    "published_raw": "November 05, 2026",
+    "summary": "The recalled magnetic building cubes contain magnets that can become loose if the cubes break or open, posing a magnet ingestion hazard to children. When high-powered magnets are swallowed, the ingested magnets can attract each other, or other metal objects, and become lodged in the digestive system. This can result in perforations, twisting, and/or blockage of the intestines, blood poisoning and death.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Consumer Product Safety Commission",
+      "jurisdiction": "US",
+      "family": "product_safety"
+    },
+    "primary_source_id": "us-cpsc-99343b5112",
+    "n": 8828,
+    "first_seen": "2026-11-05T20:41:39.999913+00:00",
+    "last_seen": "2026-11-05T20:41:39.999913+00:00",
+    "source_ids": [
+      "us-cpsc-99343b5112"
+    ]
+  },
+  {
+    "title": "Enforcement Bureau Announces 2026 MVPD EEO Audits",
+    "url": "https://www.fcc.gov/edoc/426261",
+    "native_id": "426261",
     "published_at": null,
     "published_raw": "",
-    "summary": "Announces upcoming opportunities for federally recognized Tribal Nations and Native Hawaiian Organizations to consult with Commission staff regarding the Section 106 process of the National Historic Preservation Act.",
+    "summary": "Enforcement Bureau announces its annual MVPD EEO audits for 2026.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Federal Communications Commission — Notices",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
+    },
+    "primary_source_id": "us-fcc-60691b9c1e",
+    "n": 8829,
+    "first_seen": "2026-11-05T20:41:39.999913+00:00",
+    "last_seen": "2026-11-05T20:41:39.999913+00:00",
+    "source_ids": [
+      "us-fcc-60691b9c1e"
+    ]
+  },
+  {
+    "title": "Pleadings",
+    "url": "https://www.fcc.gov/edoc/426502",
+    "native_id": "426502",
+    "published_at": null,
+    "published_raw": "",
+    "summary": ".",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
@@ -16,89 +328,185 @@
       "family": "telecom_rules_and_licences"
     },
     "primary_source_id": "us-fcc-e95ecda3bb",
-    "n": 8745,
-    "first_seen": "2026-11-05T07:56:00.555392+00:00",
-    "last_seen": "2026-11-05T07:56:00.555392+00:00",
+    "n": 8830,
+    "first_seen": "2026-11-05T20:41:39.999913+00:00",
+    "last_seen": "2026-11-05T20:41:39.999913+00:00",
     "source_ids": [
       "us-fcc-e95ecda3bb"
     ]
   },
   {
-    "title": "Jerry Lee Seehaas -- Oceanside, California",
-    "url": "https://www.fcc.gov/edoc/426058",
-    "native_id": "426058",
+    "title": "Wireline Competition Bureau and Office of Economics and Analytics Announce Office of Management and Budget Approval of the 2026 IPCS Mandatory Data Collection",
+    "url": "https://www.fcc.gov/edoc/426503",
+    "native_id": "426503",
     "published_at": null,
     "published_raw": "",
-    "summary": "NOHI/NOUO for interference to GMRS frequencies",
+    "summary": ".",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Enforcement Bureau",
+      "issuer": "Federal Communications Commission — Public Notices",
       "jurisdiction": "US",
       "family": "telecom_rules_and_licences"
     },
-    "primary_source_id": "us-fcc-364d1b4932",
-    "n": 8746,
-    "first_seen": "2026-11-05T07:56:00.555392+00:00",
-    "last_seen": "2026-11-05T07:56:00.555392+00:00",
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 8831,
+    "first_seen": "2026-11-05T20:41:39.999913+00:00",
+    "last_seen": "2026-11-05T20:41:39.999913+00:00",
     "source_ids": [
-      "us-fcc-364d1b4932"
+      "us-fcc-e95ecda3bb"
     ]
   },
   {
-    "title": "Roy Grant -- Marietta, Georgia",
-    "url": "https://www.fcc.gov/edoc/426163",
-    "native_id": "426163",
+    "title": "Actions",
+    "url": "https://www.fcc.gov/edoc/426501",
+    "native_id": "426501",
     "published_at": null,
     "published_raw": "",
-    "summary": "NOUO for operating overpowered CB Radio Service station",
+    "summary": ".",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Enforcement Bureau",
+      "issuer": "Federal Communications Commission — Public Notices",
       "jurisdiction": "US",
       "family": "telecom_rules_and_licences"
     },
-    "primary_source_id": "us-fcc-364d1b4932",
-    "n": 8747,
-    "first_seen": "2026-11-05T07:56:00.555392+00:00",
-    "last_seen": "2026-11-05T07:56:00.555392+00:00",
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 8832,
+    "first_seen": "2026-11-05T20:41:39.999913+00:00",
+    "last_seen": "2026-11-05T20:41:39.999913+00:00",
     "source_ids": [
-      "us-fcc-364d1b4932"
+      "us-fcc-e95ecda3bb"
     ]
   },
   {
-    "title": "In the Matter of Wireless Community Partners, LLC -- Tampa, Florida",
-    "url": "https://www.fcc.gov/edoc/426149",
-    "native_id": "426149",
+    "title": "Applications",
+    "url": "https://www.fcc.gov/edoc/426500",
+    "native_id": "426500",
     "published_at": null,
     "published_raw": "",
-    "summary": "Notice of Violation issued for violation(s) as noted in the attached.",
+    "summary": ".",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Enforcement Bureau",
+      "issuer": "Federal Communications Commission — Public Notices",
       "jurisdiction": "US",
       "family": "telecom_rules_and_licences"
     },
-    "primary_source_id": "us-fcc-364d1b4932",
-    "n": 8748,
-    "first_seen": "2026-11-05T07:56:00.555392+00:00",
-    "last_seen": "2026-11-05T07:56:00.555392+00:00",
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 8833,
+    "first_seen": "2026-11-05T20:41:39.999913+00:00",
+    "last_seen": "2026-11-05T20:41:39.999913+00:00",
     "source_ids": [
-      "us-fcc-364d1b4932"
+      "us-fcc-e95ecda3bb"
     ]
   },
   {
-    "title": "The IAEA Published Reports on the Analytical Results of Additional Measures under the IAEA Framework",
-    "url": "https://www.meti.go.jp/english/press/2026/11/20261105001.html",
-    "native_id": "https://www.meti.go.jp/english/press/2026/11/20261105001.html",
+    "title": "FCA acts to protect consumers facing demands for disguised remuneration scheme loan repayments",
+    "url": "https://www.fca.org.uk/news/statements/fca-acts-protect-consumers-demands-disguised-remuneration-scheme-loan-repayments",
+    "native_id": "177311",
+    "published_at": null,
+    "published_raw": "Thursday, November 5, 2026 - 13:46",
+    "summary": "We've intervened and Ethica Resolve Limited (Ethica), an FCA authorised firm that services and collects debt on behalf of creditors, has agreed to restrictions. These follow demands it made for people to repay loans, or purported loans, provided as part of disguised remuneration schemes. Ethica is acting on behalf of West 28th Street Limited (West 28), which bought disguised remuneration loans from a third party. West 28 is not authorised or regulated by the FCA.Disguised remuneration schemes saw people – often contractors, consultants and agency workers – paid for their work through loans instead of regular salaries. HMRC has published guidance for those affected.Some of those affected dispute liability for the amounts being claimed and challenge whether the debts can be legally enforced. If they're unenforceable, borrowers cannot be forced to pay the money back or have any of their assets seized against the debt without a specific order.Under the requirements we’ve agreed, Ethica:Will write to affected consumers, explaining that they do not have an enforceable obligation to make payment at this stage. (This means they do not need to pay now while regulatory and legal issues relat",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Financial Conduct Authority",
+      "jurisdiction": "UK",
+      "family": "financial_enforcement"
+    },
+    "primary_source_id": "uk-fca-7b9977ec8e",
+    "n": 8855,
+    "first_seen": "2026-11-05T20:41:39.999913+00:00",
+    "last_seen": "2026-11-05T20:41:39.999913+00:00",
+    "source_ids": [
+      "uk-fca-7b9977ec8e"
+    ]
+  },
+  {
+    "title": "Looking back to move forward: why reviewing our rules matters",
+    "url": "https://www.fca.org.uk/news/blogs/looking-back-move-forward-why-reviewing-our-rules-matters",
+    "native_id": "177246",
+    "published_at": null,
+    "published_raw": "Thursday, November 5, 2026 - 10:32",
+    "summary": "Markets evolve. Consumer behaviour changes. Technology creates new opportunities and risks. Rules that were appropriate when they were introduced may need to be updated, simplified or, in some cases, removed altogether.That is why the FCA regularly reviews its rules.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Financial Conduct Authority",
+      "jurisdiction": "UK",
+      "family": "financial_enforcement"
+    },
+    "primary_source_id": "uk-fca-7b9977ec8e",
+    "n": 8856,
+    "first_seen": "2026-11-05T20:41:39.999913+00:00",
+    "last_seen": "2026-11-05T20:41:39.999913+00:00",
+    "source_ids": [
+      "uk-fca-7b9977ec8e"
+    ]
+  },
+  {
+    "title": "FCA to explore quantum computing to tackle financial crime",
+    "url": "https://www.fca.org.uk/news/press-releases/fca-explore-quantum-computing-tackle-financial-crime",
+    "native_id": "177261",
+    "published_at": null,
+    "published_raw": "Thursday, November 5, 2026 - 09:03",
+    "summary": "A new initiative will bring together firms, quantum technology providers, and national research labs to explore practical applications of quantum computing. The FCA will bring together financial services firms, quantum technology providers and national research laboratories to explore how quantum computing could help tackle financial crime.The Quantum Experimentation Group, the first of its kind for a regulator, will initially explore how quantum machine learning could help detect money laundering and fraud. It will launch in the first quarter of 2027.Participants will use an FCA synthetic dataset – artificially generated data – to help overcome a key barrier to testing: access to suitable data.The group will help firms explore practical uses of quantum computing in financial services and share findings to guide future testing. It will also help the FCA understand the technology’s opportunities and limitations, barriers to experimentation and what these could mean for regulation.Jessica Rusu, chief data, information and intelligence officer at the FCA, said: 'We want to help firms explore where quantum could make a meaningful difference, and early experimentation is essential to un",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Financial Conduct Authority",
+      "jurisdiction": "UK",
+      "family": "financial_enforcement"
+    },
+    "primary_source_id": "uk-fca-7b9977ec8e",
+    "n": 8857,
+    "first_seen": "2026-11-05T20:41:39.999913+00:00",
+    "last_seen": "2026-11-05T20:41:39.999913+00:00",
+    "source_ids": [
+      "uk-fca-7b9977ec8e"
+    ]
+  },
+  {
+    "title": "Chinese premier signs decree to revise, repeal certain administrative regulations",
+    "url": "https://english.www.gov.cn/policies/latestreleases/202611/05/content_WS6aec55b5c6d00ca5f9a0e1c1.html",
+    "native_id": "https://english.www.gov.cn/policies/latestreleases/202611/05/content_WS6aec55b5c6d00ca5f9a0e1c1.html",
+    "published_at": null,
+    "published_raw": null,
+    "summary": "",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "State Council of China policies",
+      "jurisdiction": "CN",
+      "family": "executive_instruments"
+    },
+    "primary_source_id": "cn-state-council-index",
+    "n": 8868,
+    "first_seen": "2026-11-05T20:41:39.999913+00:00",
+    "last_seen": "2026-11-05T20:41:39.999913+00:00",
+    "source_ids": [
+      "cn-state-council-index"
+    ]
+  },
+  {
+    "title": "Japan and Kuwait Discuss Bilateral Energy Cooperation and Energy Security",
+    "url": "https://www.meti.go.jp/english/press/2026/11/20261105002.html",
+    "native_id": "https://www.meti.go.jp/english/press/2026/11/20261105002.html",
     "published_at": null,
     "published_raw": null,
     "summary": "",
@@ -112,11 +520,59 @@
       "family": "trade_and_industry_policy"
     },
     "primary_source_id": "jp-meti-index",
-    "n": 8760,
-    "first_seen": "2026-11-05T07:56:00.555392+00:00",
-    "last_seen": "2026-11-05T07:56:00.555392+00:00",
+    "n": 8869,
+    "first_seen": "2026-11-05T20:41:39.999913+00:00",
+    "last_seen": "2026-11-05T20:41:39.999913+00:00",
     "source_ids": [
       "jp-meti-index"
+    ]
+  },
+  {
+    "title": "Miscellaneous Order",
+    "url": "https://www.supremecourt.gov/orders/courtorders/110526zr1_ebfj.pdf",
+    "native_id": "https://www.supremecourt.gov/orders/courtorders/110526zr1_ebfj.pdf",
+    "published_at": null,
+    "published_raw": null,
+    "summary": "",
+    "source_metadata": {
+      "document_type": "court_order",
+      "document_stage": "judicial_order_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Supreme Court orders of the Court",
+      "jurisdiction": "US",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "us-supreme-court-orders-index",
+    "n": 8876,
+    "first_seen": "2026-11-05T20:41:39.999913+00:00",
+    "last_seen": "2026-11-05T20:41:39.999913+00:00",
+    "source_ids": [
+      "us-supreme-court-orders-index"
+    ]
+  },
+  {
+    "title": "Miscellaneous Order",
+    "url": "https://www.supremecourt.gov/orders/courtorders/110526zr_4f14.pdf",
+    "native_id": "https://www.supremecourt.gov/orders/courtorders/110526zr_4f14.pdf",
+    "published_at": null,
+    "published_raw": null,
+    "summary": "",
+    "source_metadata": {
+      "document_type": "court_order",
+      "document_stage": "judicial_order_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Supreme Court orders of the Court",
+      "jurisdiction": "US",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "us-supreme-court-orders-index",
+    "n": 8877,
+    "first_seen": "2026-11-05T20:41:39.999913+00:00",
+    "last_seen": "2026-11-05T20:41:39.999913+00:00",
+    "source_ids": [
+      "us-supreme-court-orders-index"
     ]
   }
 ]

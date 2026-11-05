@@ -1,59 +1,40 @@
 [
   {
-    "title": "DCPD-2026CHECKLIST - Checklist of White House Press Releases",
-    "url": "https://www.govinfo.gov/app/details/DCPD-2026CHECKLIST",
-    "native_id": "DCPD-2026CHECKLIST",
-    "published_at": "2026-11-04T21:52:00+00:00",
-    "published_raw": "Wed, 04 Nov 2026 21:52:00 +0000",
-    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "title": "Orphan registered medicinal products",
+    "url": "https://www.gov.uk/government/publications/orphan-registered-medicinal-products",
+    "native_id": "/government/publications/orphan-registered-medicinal-products",
+    "published_at": "2026-11-05T16:24:58+00:00",
+    "published_raw": "2026-11-05T16:24:58Z",
+    "document_type": "decision",
+    "issuer": "Medicines and Healthcare products Regulatory Agency",
+    "issuer_ids": [
+      "uk-gov:medicines-and-healthcare-products-regulatory-agency"
+    ],
+    "summary": "A list of authorised orphan medicinal products registered by the UK licensing authority.",
     "source_metadata": {
-      "document_type": "presidential_document",
-      "document_stage": "presidential_document_published",
+      "document_type": "decision",
+      "document_stage": "decision_published",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Compilation of Presidential Documents",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
+      "issuer": "Medicines and Healthcare products Regulatory Agency",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
     },
-    "primary_source_id": "us-govinfo-dcpd",
-    "n": 2477,
-    "first_seen": "2026-10-16T05:53:15.995133+00:00",
-    "last_seen": "2026-11-05T07:56:00.555392+00:00",
+    "primary_source_id": "uk-govuk-decision",
+    "n": 4,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-11-05T20:41:39.999913+00:00",
     "source_ids": [
-      "us-govinfo-dcpd"
+      "uk-govuk-decision"
     ]
   },
   {
-    "title": "DCPD-2026DIGEST - Digest of Other White House Announcements",
-    "url": "https://www.govinfo.gov/app/details/DCPD-2026DIGEST",
-    "native_id": "DCPD-2026DIGEST",
-    "published_at": "2026-11-04T21:52:00+00:00",
-    "published_raw": "Wed, 04 Nov 2026 21:52:00 +0000",
-    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "presidential_document",
-      "document_stage": "presidential_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Compilation of Presidential Documents",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-dcpd",
-    "n": 2481,
-    "first_seen": "2026-10-16T05:53:15.995133+00:00",
-    "last_seen": "2026-11-05T07:56:00.555392+00:00",
-    "source_ids": [
-      "us-govinfo-dcpd"
-    ]
-  },
-  {
-    "title": "Advancing Generic Drug Development: Modernizing Bioequivalence Approaches for Topical & Transdermal Products - 09/10/2026",
-    "url": "http://www.fda.gov/drugs/news-events-human-drugs/advancing-generic-drug-development-modernizing-bioequivalence-approaches-topical-transdermal",
-    "native_id": "http://www.fda.gov/drugs/news-events-human-drugs/advancing-generic-drug-development-modernizing-bioequivalence-approaches-topical-transdermal",
-    "published_at": "2026-11-04T20:24:12+00:00",
-    "published_raw": "Wed, 04 Nov 2026 15:24:12 EST",
-    "summary": "This half-day virtual workshop features FDA expert presentations and audience Q&A on bioequivalence (BE) approaches for topical and transdermal generic drug products.",
+    "title": "GDUFA Paid Facilities List",
+    "url": "http://www.fda.gov/industry/generic-drug-user-fee-amendments/gdufa-paid-facilities-list",
+    "native_id": "http://www.fda.gov/industry/generic-drug-user-fee-amendments/gdufa-paid-facilities-list",
+    "published_at": "2026-11-05T19:25:30+00:00",
+    "published_raw": "Thu, 05 Nov 2026 14:25:30 EST",
+    "summary": "This list contains GDUFA facility payments received by the Agency. Data are extract from the User Fee System and GDUFA Facility User Fee Coversheets. The following table explains the terms used in the list:",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
@@ -64,11 +45,114 @@
       "family": "product_permissions_and_safety"
     },
     "primary_source_id": "us-fda-5696b24295",
-    "n": 3281,
-    "first_seen": "2026-10-16T05:53:15.995133+00:00",
-    "last_seen": "2026-11-05T07:56:00.555392+00:00",
+    "n": 1388,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-11-05T20:41:39.999913+00:00",
     "source_ids": [
       "us-fda-5696b24295"
+    ]
+  },
+  {
+    "title": "Rare Disease Framework",
+    "url": "http://www.fda.gov/industry/fda-rare-disease-innovation-hub/rare-disease-framework",
+    "native_id": "http://www.fda.gov/industry/fda-rare-disease-innovation-hub/rare-disease-framework",
+    "published_at": "2026-11-05T18:31:55+00:00",
+    "published_raw": "Thu, 05 Nov 2026 13:31:55 EST",
+    "summary": "Through the Rare Disease Framework Initiative, FDA will develop a framework for rare disease drug development and review where advice and decision-making are consistently tailored to what evidence is reasonably attainable ...",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Food and Drug Administration — What's New: Drugs",
+      "jurisdiction": "US",
+      "family": "product_permissions_and_safety"
+    },
+    "primary_source_id": "us-fda-5696b24295",
+    "n": 1391,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-11-05T20:41:39.999913+00:00",
+    "source_ids": [
+      "us-fda-03f7703006",
+      "us-fda-5696b24295"
+    ]
+  },
+  {
+    "title": "FDA Rare Disease Framework Initiative Public Meeting - 10/28/2026",
+    "url": "http://www.fda.gov/news-events/fda-meetings-conferences-and-workshops/fda-rare-disease-framework-initiative-public-meeting-10282026",
+    "native_id": "http://www.fda.gov/news-events/fda-meetings-conferences-and-workshops/fda-rare-disease-framework-initiative-public-meeting-10282026",
+    "published_at": "2026-11-05T18:32:28+00:00",
+    "published_raw": "Thu, 05 Nov 2026 13:32:28 EST",
+    "summary": "FDA, in partnership with the Reagan-Udall Foundation for the FDA, convened a hybrid public meeting on 10/28/2026 to seek input related to the FDA’s Rare Disease Framework Initiative to reimagine the agency’s approach to rare disease development.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Food and Drug Administration — What's New: Drugs",
+      "jurisdiction": "US",
+      "family": "product_permissions_and_safety"
+    },
+    "primary_source_id": "us-fda-5696b24295",
+    "n": 1392,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-11-05T20:41:39.999913+00:00",
+    "source_ids": [
+      "us-fda-5696b24295"
+    ]
+  },
+  {
+    "title": "Drugs@FDA Data Files",
+    "url": "http://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+    "native_id": "http://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+    "published_at": "2026-11-05T15:58:50+00:00",
+    "published_raw": "Thu, 05 Nov 2026 10:58:50 EST",
+    "summary": "Drugs@FDA Downloadable Data File in ZIP format, Data Definitions, and Entity Relationship Diagram (ERD)",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Food and Drug Administration — What's New: Drugs",
+      "jurisdiction": "US",
+      "family": "product_permissions_and_safety"
+    },
+    "primary_source_id": "us-fda-5696b24295",
+    "n": 1398,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-11-05T20:41:39.999913+00:00",
+    "source_ids": [
+      "us-fda-03f7703006",
+      "us-fda-5696b24295"
+    ]
+  },
+  {
+    "title": "Deep Drilling Screening Directions – 2026",
+    "url": "https://www.gov.uk/government/publications/deep-drilling-screening-directions-2026",
+    "native_id": "/government/publications/deep-drilling-screening-directions-2026",
+    "published_at": "2026-11-05T10:31:18+00:00",
+    "published_raw": "2026-11-05T10:31:18Z",
+    "document_type": "decision",
+    "issuer": "Offshore Petroleum Regulator for Environment and Decommissioning",
+    "issuer_ids": [
+      "uk-gov:offshore-petroleum-regulator-for-environment-and-decommissioning"
+    ],
+    "summary": "Screening Directions",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Offshore Petroleum Regulator for Environment and Decommissioning",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 3303,
+    "first_seen": "2026-10-16T10:36:18.842579+00:00",
+    "last_seen": "2026-11-05T20:41:39.999913+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
     ]
   },
   {
@@ -90,7 +174,7 @@
     "primary_source_id": "us-cpsc-08fe06e2e6",
     "n": 3537,
     "first_seen": "2026-10-16T10:36:18.842579+00:00",
-    "last_seen": "2026-11-05T07:56:00.555392+00:00",
+    "last_seen": "2026-11-05T20:41:39.999913+00:00",
     "source_ids": [
       "us-cpsc-08fe06e2e6"
     ]
@@ -114,7 +198,7 @@
     "primary_source_id": "us-cpsc-08fe06e2e6",
     "n": 3538,
     "first_seen": "2026-10-16T10:36:18.842579+00:00",
-    "last_seen": "2026-11-05T07:56:00.555392+00:00",
+    "last_seen": "2026-11-05T20:41:39.999913+00:00",
     "source_ids": [
       "us-cpsc-08fe06e2e6"
     ]
@@ -138,9 +222,260 @@
     "primary_source_id": "us-cpsc-08fe06e2e6",
     "n": 3540,
     "first_seen": "2026-10-16T10:36:18.842579+00:00",
-    "last_seen": "2026-11-05T07:56:00.555392+00:00",
+    "last_seen": "2026-11-05T20:41:39.999913+00:00",
     "source_ids": [
       "us-cpsc-08fe06e2e6"
+    ]
+  },
+  {
+    "title": "2026 Meeting Materials, Pediatric Advisory Committee",
+    "url": "http://www.fda.gov/advisory-committees/pediatric-advisory-committee/2026-meeting-materials-pediatric-advisory-committee",
+    "native_id": "http://www.fda.gov/advisory-committees/pediatric-advisory-committee/2026-meeting-materials-pediatric-advisory-committee",
+    "published_at": "2026-11-05T17:03:41+00:00",
+    "published_raw": "Thu, 05 Nov 2026 12:03:41 EST",
+    "summary": "Meeting announcements, agendas, briefing materials, and presentations for the 2026 meetings of the FDA's Pediatric Advisory Committee",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Food and Drug Administration — What's New: Drugs",
+      "jurisdiction": "US",
+      "family": "product_permissions_and_safety"
+    },
+    "primary_source_id": "us-fda-5696b24295",
+    "n": 5435,
+    "first_seen": "2026-10-19T19:21:25.980956+00:00",
+    "last_seen": "2026-11-05T20:41:39.999913+00:00",
+    "source_ids": [
+      "us-fda-03f7703006",
+      "us-fda-5696b24295"
+    ]
+  },
+  {
+    "title": "Over-The-Counter Monograph Drug User Fee Program (OMUFA)",
+    "url": "http://www.fda.gov/industry/fda-user-fee-programs/over-counter-monograph-drug-user-fee-program-omufa",
+    "native_id": "http://www.fda.gov/industry/fda-user-fee-programs/over-counter-monograph-drug-user-fee-program-omufa",
+    "published_at": "2026-11-05T16:40:22+00:00",
+    "published_raw": "Thu, 05 Nov 2026 11:40:22 EST",
+    "summary": "A user fee program for nonprescription (over-the-counter or OTC) monograph drugs would be a potential funding mechanism to supplement congressional non user-fee appropriations.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Food and Drug Administration — What's New: Drugs",
+      "jurisdiction": "US",
+      "family": "product_permissions_and_safety"
+    },
+    "primary_source_id": "us-fda-5696b24295",
+    "n": 5867,
+    "first_seen": "2026-10-21T18:05:07.789957+00:00",
+    "last_seen": "2026-11-05T20:41:39.999913+00:00",
+    "source_ids": [
+      "us-fda-5696b24295"
+    ]
+  },
+  {
+    "title": "Product Recall: Wednesday Addams Costume sold via eBay (2609-0105)",
+    "url": "https://www.gov.uk/product-safety-alerts-reports-recalls/product-safety-report-wednesday-addams-costume-sold-via-ebay-2609-0105",
+    "native_id": "/product-safety-alerts-reports-recalls/product-safety-report-wednesday-addams-costume-sold-via-ebay-2609-0105",
+    "published_at": "2026-11-05T16:55:38+00:00",
+    "published_raw": "2026-11-05T16:55:38Z",
+    "document_type": "product_safety_alert_report_recall",
+    "issuer": "Office for Product Safety and Standards",
+    "issuer_ids": [
+      "uk-gov:office-for-product-safety-and-standards"
+    ],
+    "summary": "Product Recall for Wednesday Addams Costume sold via eBay presenting a serious risk of burns.",
+    "source_metadata": {
+      "document_type": "product_safety_alert_report_recall",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Office for Product Safety and Standards",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-product_safety_alert_report_recall",
+    "n": 6087,
+    "first_seen": "2026-10-22T17:59:58.860252+00:00",
+    "last_seen": "2026-11-05T20:41:39.999913+00:00",
+    "source_ids": [
+      "uk-govuk-product_safety_alert_report_recall"
+    ]
+  },
+  {
+    "title": "2026 Safety and Availability Communications",
+    "url": "http://www.fda.gov/vaccines-blood-biologics/safety-availability-biologics/2026-safety-and-availability-communications",
+    "native_id": "http://www.fda.gov/vaccines-blood-biologics/safety-availability-biologics/2026-safety-and-availability-communications",
+    "published_at": "2026-11-05T14:54:41+00:00",
+    "published_raw": "Thu, 05 Nov 2026 09:54:41 EST",
+    "summary": "Listing of 2026 Safety and Availability Communications",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Food and Drug Administration — What's New: Vaccines, Blood and Biologics",
+      "jurisdiction": "US",
+      "family": "product_permissions_and_safety"
+    },
+    "primary_source_id": "us-fda-03f7703006",
+    "n": 6129,
+    "first_seen": "2026-10-22T17:59:58.860252+00:00",
+    "last_seen": "2026-11-05T20:41:39.999913+00:00",
+    "source_ids": [
+      "us-fda-03f7703006"
+    ]
+  },
+  {
+    "title": "Generic Drug Facilities, Sites and Organization Lists",
+    "url": "http://www.fda.gov/industry/generic-drug-user-fee-amendments/generic-drug-facilities-sites-and-organization-lists",
+    "native_id": "http://www.fda.gov/industry/generic-drug-user-fee-amendments/generic-drug-facilities-sites-and-organization-lists",
+    "published_at": "2026-11-05T19:29:27+00:00",
+    "published_raw": "Thu, 05 Nov 2026 14:29:27 EST",
+    "summary": "Generic Drug Facilities, Sites and Organization Lists",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Food and Drug Administration — What's New: Drugs",
+      "jurisdiction": "US",
+      "family": "product_permissions_and_safety"
+    },
+    "primary_source_id": "us-fda-5696b24295",
+    "n": 6652,
+    "first_seen": "2026-10-26T19:21:36.282284+00:00",
+    "last_seen": "2026-11-05T20:41:39.999913+00:00",
+    "source_ids": [
+      "us-fda-5696b24295"
+    ]
+  },
+  {
+    "title": "Medical devices given exceptional use authorisations",
+    "url": "https://www.gov.uk/government/publications/medical-devices-given-exceptional-use-authorisations",
+    "native_id": "/government/publications/medical-devices-given-exceptional-use-authorisations",
+    "published_at": "2026-11-05T16:50:33+00:00",
+    "published_raw": "2026-11-05T16:50:33Z",
+    "document_type": "decision",
+    "issuer": "Medicines and Healthcare products Regulatory Agency",
+    "issuer_ids": [
+      "uk-gov:medicines-and-healthcare-products-regulatory-agency"
+    ],
+    "summary": "List of manufacturers and their medical devices granted an exemption by MHRA. The list also includes manufacturers whose exemption expired or was cancelled.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Medicines and Healthcare products Regulatory Agency",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 6834,
+    "first_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-11-05T20:41:39.999913+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Public Law 119 - 111 - Lindsey O. Graham Sanctioning Russia and Iran Act of 2026",
+    "url": "https://www.govinfo.gov/app/details/PLAW-119publ111",
+    "native_id": "PLAW-119publ111",
+    "published_at": "2026-11-05T17:11:00+00:00",
+    "published_raw": "Thu, 05 Nov 2026 17:11:00 +0000",
+    "summary": "Content Files PDF TEXT USLM Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "public_law",
+      "document_stage": "law_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Public and Private Laws",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-plaw",
+    "n": 7712,
+    "first_seen": "2026-10-30T18:57:21.617502+00:00",
+    "last_seen": "2026-11-05T20:41:39.999913+00:00",
+    "source_ids": [
+      "us-govinfo-plaw"
+    ]
+  },
+  {
+    "title": "Minocycline Oral, Injection Products",
+    "url": "http://www.fda.gov/drugs/development-resources/minocycline-oral-injection-products",
+    "native_id": "http://www.fda.gov/drugs/development-resources/minocycline-oral-injection-products",
+    "published_at": "2026-11-05T19:40:47+00:00",
+    "published_raw": "Thu, 05 Nov 2026 14:40:47 EST",
+    "summary": "Minocycline Oral, Injection Products",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Food and Drug Administration — What's New: Drugs",
+      "jurisdiction": "US",
+      "family": "product_permissions_and_safety"
+    },
+    "primary_source_id": "us-fda-5696b24295",
+    "n": 7829,
+    "first_seen": "2026-10-30T18:57:21.617502+00:00",
+    "last_seen": "2026-11-05T20:41:39.999913+00:00",
+    "source_ids": [
+      "us-fda-5696b24295"
+    ]
+  },
+  {
+    "title": "FDA Rationale for Breakpoints Recognition Decision: Minocycline for Stenotrophomonas maltophilia",
+    "url": "http://www.fda.gov/drugs/development-resources/fda-rationale-breakpoints-recognition-decision-minocycline-stenotrophomonas-maltophilia",
+    "native_id": "http://www.fda.gov/drugs/development-resources/fda-rationale-breakpoints-recognition-decision-minocycline-stenotrophomonas-maltophilia",
+    "published_at": "2026-11-05T19:40:08+00:00",
+    "published_raw": "Thu, 05 Nov 2026 14:40:08 EST",
+    "summary": "FDA Rationale for Breakpoints Recognition Decision: Minocycline for Stenotrophomonas maltophilia",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Food and Drug Administration — What's New: Drugs",
+      "jurisdiction": "US",
+      "family": "product_permissions_and_safety"
+    },
+    "primary_source_id": "us-fda-5696b24295",
+    "n": 7830,
+    "first_seen": "2026-10-30T18:57:21.617502+00:00",
+    "last_seen": "2026-11-05T20:41:39.999913+00:00",
+    "source_ids": [
+      "us-fda-5696b24295"
+    ]
+  },
+  {
+    "title": "Generic Drug User Fee Amendments",
+    "url": "http://www.fda.gov/industry/fda-user-fee-programs/generic-drug-user-fee-amendments",
+    "native_id": "http://www.fda.gov/industry/fda-user-fee-programs/generic-drug-user-fee-amendments",
+    "published_at": "2026-11-05T14:10:36+00:00",
+    "published_raw": "Thu, 05 Nov 2026 09:10:36 EST",
+    "summary": "This page features news and information for industry and stakeholders about GDUFA, its fee structure, payment methods, and related information.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Food and Drug Administration — What's New: Drugs",
+      "jurisdiction": "US",
+      "family": "product_permissions_and_safety"
+    },
+    "primary_source_id": "us-fda-5696b24295",
+    "n": 7920,
+    "first_seen": "2026-10-31T07:20:30.145427+00:00",
+    "last_seen": "2026-11-05T20:41:39.999913+00:00",
+    "source_ids": [
+      "us-fda-5696b24295"
     ]
   },
   {
@@ -162,10 +497,34 @@
     "primary_source_id": "eu-council-9d9e9444da",
     "n": 8340,
     "first_seen": "2026-11-03T20:18:37.164529+00:00",
-    "last_seen": "2026-11-05T07:56:00.555392+00:00",
+    "last_seen": "2026-11-05T20:41:39.999913+00:00",
     "source_ids": [
       "eu-council-9d9e9444da",
       "eu-council-9d9e9444da"
+    ]
+  },
+  {
+    "title": "Reviews of Pediatric Studies Conducted under BPCA and Pediatric Assessments Conducted Under PREA from 2012 – Present",
+    "url": "http://www.fda.gov/drugs/development-resources/reviews-pediatric-studies-conducted-under-bpca-and-pediatric-assessments-conducted-under-prea-2012",
+    "native_id": "http://www.fda.gov/drugs/development-resources/reviews-pediatric-studies-conducted-under-bpca-and-pediatric-assessments-conducted-under-prea-2012",
+    "published_at": "2026-11-05T17:44:09+00:00",
+    "published_raw": "Thu, 05 Nov 2026 12:44:09 EST",
+    "summary": "The following are the medical, statistical, and clinical pharmacology reviews of pediatric studies conducted in response to a Written Request issued under the BPCA and pediatric assessments conducted under PREA.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Food and Drug Administration — What's New: Drugs",
+      "jurisdiction": "US",
+      "family": "product_permissions_and_safety"
+    },
+    "primary_source_id": "us-fda-5696b24295",
+    "n": 8552,
+    "first_seen": "2026-11-04T20:26:55.940049+00:00",
+    "last_seen": "2026-11-05T20:41:39.999913+00:00",
+    "source_ids": [
+      "us-fda-5696b24295"
     ]
   }
 ]
