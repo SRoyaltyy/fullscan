@@ -1,0 +1,123 @@
+{
+  "date": "2026-11-05",
+  "generated_at": "2026-11-05T16:33:17.318707-05:00",
+  "timezone": "America/New_York",
+  "source": "live",
+  "source_url": "https://elite.finviz.com/",
+  "archive_snapshot_ts": null,
+  "archive_snapshot_at": null,
+  "archive_url": null,
+  "clock_legal": true,
+  "clock_same_morning": false,
+  "clock_use": "next_open",
+  "clock_legal_for": "2026-11-06",
+  "capture_slot": "close",
+  "clock_rule": "Live post-close answer-key (~16:05 ET). Always next_open for the NEXT session (2026-11-06) — never same_morning. Writes *_finviz_market_digest_close.* only. Capture only — not tape_anchor / predict / #210.",
+  "kind": "finviz_homepage_market_digest_close",
+  "represents": "Finviz homepage post-close answer-key. clock_use is always next_open; clock_legal_for is the next NYSE session. Lives at *_finviz_market_digest_close.*. Does not replace the same_morning warm-up file. Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "US stocks closed sharply lower as AI and chip names sank on post-Democratic sweep regulatory fears and data-center moratorium calls",
+  "raw_text": "- The S&P 500 ($SPX) fell about 4.4% to 7,353.73, the Dow Jones Industrial Average ($DJI) lost about 3.4% to 51,523.06, the Nasdaq Composite ($COMP) dropped about 5.5% to 24,315, the Nasdaq 100 ($NDX) slid about 6.4%, and the Russell 2000 (IWM) declined about 4.6%, erasing most of Wednesday’s post-election rally and marking the Nasdaq’s largest daily drop in 19 months\n- AI and semiconductor stocks sold off on regulatory concerns following a Democratic midterm sweep and calls for a potential national data-center moratorium\n- Nvidia (NVDA) fell about 9.3% and led chipmakers lower amid the regulatory and data-center policy concerns\n- Micron Technology (MU) declined about 17% after pausing plans for a Taiwanese memory plant due to labor disputes, while AMD (AMD) dropped around 17% as Democratic wins heightened worries about an overextended AI trade and slower data-center buildouts\n- Qualcomm (QCOM) sank about 9.5% even as Q4 results hit the high end of guidance and it unveiled a long-term AWS AI silicon deal, with handset softness and margin concerns around a data-center ramp weighing on shares\n- Tesla (TSLA) fell about 11% and SpaceX (SPCX) dropped about 9% in a \"Musk selloff\" tied to intensified scrutiny of Elon Musk after the Democratic sweep and clouded merger and expansion outlooks that have erased roughly $450 billion in value\n- AppLovin (APP) jumped about 31% after a Q3 beat and new ad model spurred analyst price-target hikes, a notable gainer despite the broader technology and AI sector rout\n- Consumer staples was the only positive sector, up about 0.7%, while communication services lagged with a 6.11% decline and 15 of 16 sectors finished lower\n- The ADP (ADP) report showed private-sector payrolls rose 86,000 in October, topping expectations\n- Cloudflare (NET), DraftKings (DKNG), Airbnb (ABNB), SoundHound AI (SOUN), and IonQ (IONQ) are scheduled to report earnings after the bell, with after-hours trading mixed",
+  "raw_summary_md": "- The S&P 500 ([$SPX](https://finviz.com/index/SPX?p=d)) fell about **4.4%** to 7,353.73, the Dow Jones Industrial Average ([$DJI](https://finviz.com/index/DJI?p=d)) lost about 3.4% to 51,523.06, the Nasdaq Composite ([$COMP](https://finviz.com/index/COMP?p=d)) dropped about **5.5%** to 24,315, the Nasdaq 100 ([$NDX](https://finviz.com/index/NDX?p=d)) slid about 6.4%, and the Russell 2000 ([IWM](https://finviz.com/quote?t=IWM)) declined about 4.6%, erasing most of Wednesday’s post-election rally and marking the Nasdaq’s **largest daily drop** in 19 months\n- AI and semiconductor stocks sold off on **regulatory concerns** following a Democratic midterm sweep and calls for a potential national **data-center moratorium**\n- Nvidia ([NVDA](https://finviz.com/quote?t=NVDA)) **fell about 9.3%** and led chipmakers lower amid the regulatory and data-center policy concerns\n- Micron Technology ([MU](https://finviz.com/quote?t=MU)) declined **about 17%** after pausing plans for a Taiwanese memory plant due to labor disputes, while AMD ([AMD](https://finviz.com/quote?t=AMD)) dropped **around 17%** as Democratic wins heightened worries about an overextended AI trade and slower data-center buildouts\n- Qualcomm ([QCOM](https://finviz.com/quote?t=QCOM)) **sank about 9.5%** even as Q4 results hit the high end of guidance and it unveiled a long-term **AWS AI silicon deal**, with handset softness and margin concerns around a data-center ramp weighing on shares\n- Tesla ([TSLA](https://finviz.com/quote?t=TSLA)) **fell about 11%** and SpaceX ([SPCX](https://finviz.com/quote?t=SPCX)) dropped about 9% in a **\"Musk selloff\"** tied to intensified scrutiny of Elon Musk after the Democratic sweep and clouded merger and expansion outlooks that have erased roughly **$450 billion** in value\n- AppLovin ([APP](https://finviz.com/quote?t=APP)) **jumped about 31%** after a **Q3 beat** and new ad model spurred analyst price-target hikes, a notable gainer despite the broader technology and AI sector rout\n- Consumer staples was the **only positive sector**, up about 0.7%, while communication services lagged with a **6.11% decline** and 15 of 16 sectors finished lower\n- The ADP ([ADP](https://finviz.com/quote?t=ADP)) report showed private-sector payrolls rose **86,000** in October, topping expectations\n- Cloudflare ([NET](https://finviz.com/quote?t=NET)), DraftKings ([DKNG](https://finviz.com/quote?t=DKNG)), Airbnb ([ABNB](https://finviz.com/quote?t=ABNB)), SoundHound AI ([SOUN](https://finviz.com/quote?t=SOUN)), and IonQ ([IONQ](https://finviz.com/quote?t=IONQ)) are scheduled to report earnings **after the bell**, with after-hours trading **mixed**",
+  "index_moves": [
+    {
+      "name": "S&P 500",
+      "code": "SPX",
+      "change_pct": -4.4,
+      "verb": "fell"
+    },
+    {
+      "name": "Dow Jones Industrial Average",
+      "code": "DJI",
+      "change_pct": -3.4,
+      "verb": "lost"
+    },
+    {
+      "name": "Nasdaq Composite",
+      "code": "COMP",
+      "change_pct": -5.5,
+      "verb": "dropped"
+    },
+    {
+      "name": "Russell 2000",
+      "code": "RUT",
+      "change_pct": -4.6,
+      "verb": "declined"
+    }
+  ],
+  "oil": null,
+  "cpi": null,
+  "fed_odds": null,
+  "named_tickers": [
+    "NVDA",
+    "MU",
+    "AMD",
+    "QCOM",
+    "TSLA",
+    "SPCX",
+    "APP",
+    "ADP",
+    "NET",
+    "DKNG",
+    "ABNB",
+    "SOUN",
+    "IONQ"
+  ],
+  "named_leaders": [
+    "NVDA",
+    "MU",
+    "AMD",
+    "QCOM",
+    "TSLA",
+    "SPCX",
+    "APP",
+    "ADP",
+    "NET",
+    "DKNG",
+    "ABNB",
+    "SOUN",
+    "IONQ"
+  ],
+  "calendar": [
+    "The S&P 500 ($SPX) fell about 4.4% to 7,353.73, the Dow Jones Industrial Average ($DJI) lost about 3.4% to 51,523.06, the Nasdaq Composite ($COMP) dropped about 5.5% to 24,315, the Nasdaq 100 ($NDX) slid about 6.4%, and the Russell 2000 (IWM) declined about 4.6%, erasing most of Wednesday’s post-election rally and marking the Nasdaq’s largest daily drop in 19 months"
+  ],
+  "prior_close": {
+    "spx": -4.4,
+    "nasdaq": -5.5,
+    "dow": -3.4
+  },
+  "cpi_fed": {
+    "cpi": null,
+    "fed_odds": null
+  },
+  "next_session_calendar": {
+    "housing": false,
+    "retail": false,
+    "fed": false,
+    "bullets": [
+      "The S&P 500 ($SPX) fell about 4.4% to 7,353.73, the Dow Jones Industrial Average ($DJI) lost about 3.4% to 51,523.06, the Nasdaq Composite ($COMP) dropped about 5.5% to 24,315, the Nasdaq 100 ($NDX) slid about 6.4%, and the Russell 2000 (IWM) declined about 4.6%, erasing most of Wednesday’s post-election rally and marking the Nasdaq’s largest daily drop in 19 months"
+    ],
+    "text": "The S&P 500 ($SPX) fell about 4.4% to 7,353.73, the Dow Jones Industrial Average ($DJI) lost about 3.4% to 51,523.06, the Nasdaq Composite ($COMP) dropped about 5.5% to 24,315, the Nasdaq 100 ($NDX) slid about 6.4%, and the Russell 2000 (IWM) declined about 4.6%, erasing most of Wednesday’s post-election rally and marking the Nasdaq’s largest daily drop in 19 months"
+  },
+  "earnings_slate": {
+    "tickers": [
+      "NET",
+      "DKNG",
+      "ABNB",
+      "SOUN",
+      "IONQ"
+    ],
+    "text": "Cloudflare (NET), DraftKings (DKNG), Airbnb (ABNB), SoundHound AI (SOUN), and IonQ (IONQ) are scheduled to report earnings after the bell, with after-hours trading mixed"
+  },
+  "geo_grain": {
+    "geo": false,
+    "grain": false,
+    "flags": [],
+    "text": ""
+  },
+  "finviz_id": 334081,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-11-05T16:07:37.023",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "bad"
+}

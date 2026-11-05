@@ -1,6 +1,6 @@
 {
   "date": "2026-11-05",
-  "generated_at": "2026-11-05T16:16:08.926055-05:00",
+  "generated_at": "2026-11-05T16:33:18.770022-05:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -84,7 +84,7 @@
       "inputs_ready": true,
       "n_req_ok": 1,
       "n_req": 1,
-      "n_opt_ok": 3,
+      "n_opt_ok": 5,
       "n_opt": 5,
       "files": [
         {
@@ -146,10 +146,10 @@
           "name": "Close answer-key JSON (*_finviz_market_digest_close)",
           "path": "01_daily/news/2026-11-05_finviz_market_digest_close.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "",
+          "size": 8656,
+          "said": "US stocks closed sharply lower as AI and chip names sank on post-Democratic sweep regulatory fears and data-center moratorium calls \u00b7 leaders NVDA, MU, AMD, QCOM, TSLA, SPCX \u00b7 bad",
           "bullets": []
         },
         {
@@ -157,11 +157,14 @@
           "name": "Close answer-key MD (*_finviz_market_digest_close)",
           "path": "01_daily/news/2026-11-05_finviz_market_digest_close.md",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 3963,
+          "said": "Finviz homepage market digest (close) \u2014 2026-11-05",
+          "bullets": [
+            "Generated:** 2026-11-05T16:33:17.318707-05:00 (America/New_York)",
+            "Source:** `live`"
+          ]
         }
       ],
       "said": "1805 tickers \u00b7 877 signals \u00b7 top ADBE, ADI, AFL, ALL, AME, AMGN, AMZN, ANET",
@@ -2296,6 +2299,31 @@
         }
       ],
       "preview": "# Paper trading \u2014 Futubull-fee simulation\nAs of **2026-11-05** \u00b7 $10,000 starting capital per sleeve \u00b7 fees per `00_grounding/futubull_fees.json`\nLatest book **2026-11-05** ranker: **weighted** (green pile liquid=0, need 8).\nSleeves: `{horizon}_top` = top-N overall buys, `{horizon}_size` = top 3 per size bucket. Fill at signal-day close. Sell only after min-hold (1d=1, 3d=3, 1w=5, 2w=10, 1m=21 **trading sessions** \u2014 weekends and NYSE holidays do not count) AND the name has left the book.\n| Sleeve | Equity | Return | Cash | Open pos | Trades | Fees paid | Realized P/L | Unrealized P/L | Closed win | Open win |\n|--------|--------|--------|------|----------|--------|-----------|--------------|----------------|------------|----------|\n| 1d_top | $9,529.81 | -4.70% | $605.04 | 8 | 520 | $1,101.17 | $-453.79 | $-16.40 | 33.2% | 0.0% |\n| 1d_size | $10,213.60 | +2.14% | $272.01 | 6 | 474 | $1,10 \u00b7 <!DOCTYPE html>\n<html lang=\"en\"><head><meta charset=\"utf-8\">\n<meta name=\"data-asof\" content=\"2026-11-05\">\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n<title>Paper Trading \u2014 Stock Book Simulation</title>\n<style>\n:root{\n--bg:#0f1420; --card:#171e2e; --line:#262f45; --line2:#"
+    },
+    {
+      "key": "finviz_market_digest_close",
+      "title": "Finviz homepage market digest (close)",
+      "date": "2026-11-05",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-05T16:33:17.355101-05:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-11-05_finviz_market_digest_close.json",
+          "ok": true,
+          "reason": "",
+          "size": 8656,
+          "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for"
+        },
+        {
+          "path": "01_daily/news/2026-11-05_finviz_market_digest_close.md",
+          "ok": true,
+          "reason": "",
+          "size": 3963,
+          "preview": "# Finviz homepage market digest (close) \u2014 2026-11-05\n**Generated:** 2026-11-05T16:33:17.318707-05:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks closed sharply lower as AI and chip names sank on post-Democratic sweep regulatory fears and data-center moratorium calls\n**Prior close:** SPX -4.40%  Nasdaq -5.50%  Dow -3.40%\n**SPX:** -4.40%  **Nasdaq:** -5.50%  **Dow:** -3.40%\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** NVDA, MU, AMD, QCOM, TSLA, SPCX, APP, ADP, NET, DKNG, ABNB, SOUN, IONQ\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** NET, DKNG, ABNB, SOUN, IONQ\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-11-06\n**Clock use:** `next_open`"
+        }
+      ],
+      "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest (close) \u2014 2026-11-05\n**Generated:** 2026-11-05T16:33:17.318707-05:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks closed sharply lower as AI and chip names sank on post-Democratic sweep regulatory fears and data-center moratorium calls\n**Prior close:** SPX -4.40%  Nasdaq -5.50%  Dow -3.40%\n**SPX:** -4.40%  **Nasdaq:** -5.50%  **Dow:** -3.40%\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** NVDA, MU, AMD, QCOM, TSLA, SPCX, APP, ADP, NET, DKNG, ABNB, SOUN, IONQ\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** NET, DKNG, ABNB, SOUN, IONQ\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-11-06\n**Clock use:** `next_open`"
     }
   ],
   "href": {
@@ -2327,6 +2355,14 @@
       "commit_msg": "auto: stock book leftover sweep",
       "workflow": "Stock Book ALL (one-shot)",
       "run_id": "42106973110",
+      "manifest": "research/input_freeze/2026-11-05/manifest.json"
+    },
+    {
+      "path": "data/day_board/2026-11-05.json",
+      "at": "2026-11-05T16:33:19-05:00",
+      "commit_msg": "auto: land finviz_market_digest_close [2026-11-05]",
+      "workflow": "Finviz homepage market digest",
+      "run_id": "42112536609",
       "manifest": "research/input_freeze/2026-11-05/manifest.json"
     }
   ]
