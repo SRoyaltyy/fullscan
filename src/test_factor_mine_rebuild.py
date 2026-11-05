@@ -253,48 +253,123 @@ def test_auth_export_is_tried_before_login() -> None:
     assert "hidden" not in str(calls)
 
 
-def test_2026_11_04_reads_2026_11_03_raw() -> None:
-    from src.theme_radar_raw import applies, before_morning_open, load_prior_raw, raw_url
+def test_exact_prior_raw_except_the_missing_08_27_file() -> None:
+    from src.factor_mine_rebuild import _replace_with_radar, reconstruct_candidates
+    from src.theme_radar_raw import (
+        EARLIEST_RAW, MISSING_RAW, applies, load_prior_raw, prior_gap, raw_url,
+    )
 
-    assert applies("2026-11-04")
-    assert applies("2026-11-05") is False
-    assert before_morning_open("2026-11-03T22:06:10+00:00", "2026-11-04")
-    assert before_morning_open("2026-11-04T14:30:00+00:00", "2026-11-04") is False
+    assert EARLIEST_RAW == "2026-08-06"
+    assert MISSING_RAW == frozenset({"2026-08-27"})
+    assert applies("2026-08-07") is True
+    assert applies("2026-08-13") is True
+    assert applies("2026-08-28") is False
+    assert applies("2026-08-06") is False
+    assert applies("2026-11-04") is False
+    assert prior_gap("2026-08-28") == "no D-1 snapshot (2026-08-27.raw.csv is missing)"
+    assert prior_gap("2026-08-06") == "no D-1 snapshot before 08-06"
+    assert prior_gap("2026-08-13") is None
+    early = reconstruct_candidates("2026-08-06", ["2026-08-05", "2026-08-06"])
+    assert early["flag"] == "no D-1 snapshot before 08-06"
+    assert early["names"] == []
+    gap = reconstruct_candidates("2026-08-28", ["2026-08-27", "2026-08-28"])
+    assert gap["flag"] == "no D-1 snapshot (2026-08-27.raw.csv is missing)"
+    assert "2026-08-26" not in str(gap)
     seen = []
 
     def fetch(url: str) -> bytes:
         seen.append(url)
-        assert url == raw_url("2026-11-03"), url
-        assert not url.endswith("/2026-11-04.raw.csv")
+        assert url == raw_url("2026-08-12"), url
         return (
             b"Ticker,Change,Volume,Average Volume,Market Cap,Industry,"
             b"Earnings Date,News Title\n"
-            b"AAA,1.2%,1000,500,2000,Software,11/4/2026 8:00:00 AM,AAA rises\n"
+            b"AAA,1.2%,1000,500,2000,Software,8/13/2026 8:00:00 AM,AAA rises\n"
         )
 
     loaded = load_prior_raw(
-        "2026-11-04",
-        fetch=fetch,
-        manifest={"runs": [{"date": "2026-11-03",
-                            "scrape_ts_utc": "2026-11-03T22:06:10+00:00"}]},
+        "2026-08-13", fetch=fetch,
+        manifest={"runs": [{"date": "2026-08-12",
+                            "scrape_ts_utc": "2026-08-12T21:22:36Z"}]},
     )
-    assert loaded["source"] == "theme_radar_snapshot"
-    assert loaded["source_file"] == "data/snapshots/2026-11-03.raw.csv"
-    assert loaded["source_session"] == "2026-11-03"
-    assert len(loaded["source_sha256"]) == 64
-    assert seen == [raw_url("2026-11-03")]
-    try:
-        load_prior_raw(
-            "2026-11-04",
-            fetch=fetch,
-            manifest={"runs": [{"date": "2026-11-03",
-                                "scrape_ts_utc": "2026-11-04T14:30:00+00:00"}]},
-        )
-    except ValueError as exc:
-        assert "09:30" in str(exc)
-        assert "2026-11-03.raw.csv" in str(exc)
-    else:
-        raise AssertionError("a scrape at 09:30 ET on 2026-11-04 was accepted")
+    assert loaded["source_file"] == "data/snapshots/2026-08-12.raw.csv"
+    assert seen == [raw_url("2026-08-12")]
+    undone = {
+        "d1_cutoff": "2026-10-12",
+        "strategies": {"overnight_h1": {"class": "still broken"}},
+    }
+    assert _replace_with_radar("2026-08-13", undone) is True
+    kept = {
+        "source": "theme_radar_snapshot",
+        "open_source": "daily_bar",
+        "source_file": "data/snapshots/2026-08-12.raw.csv",
+        "strategies": {"overnight_h1": {"class": "rebuilt"}},
+    }
+    assert _replace_with_radar("2026-08-13", kept) is False
+
+
+def test_daily_bar_open_clears_a_missing_bar_flag() -> None:
+    from src.factor_mine_rebuild import _replace_with_radar, _unmask_daily_opens
+
+    rows = [{
+        "ticker": "TRU", "date": "2026-10-26", "open": None,
+        "missing_yahoo_bar": True,
+    }]
+    filled = _unmask_daily_opens(
+        rows, "2026-10-26",
+        lookup=lambda ticker, day: {"open": 78.12, "close": 79.62},
+    )
+    assert filled[0]["open"] == 78.12
+    assert filled[0]["missing_yahoo_bar"] is False
+    assert filled[0]["open_source"] == "daily_bar"
+    missed = _unmask_daily_opens(
+        rows, "2026-10-26", lookup=lambda ticker, day: {"open": None},
+    )
+    assert missed[0]["missing_yahoo_bar"] is True
+    assert missed[0]["open"] is None
+    broken = {
+        "source": "theme_radar_snapshot",
+        "strategies": {"union_hot_n4_holdup": {"class": "still broken", "step": "lock"}},
+    }
+    assert _replace_with_radar("2026-10-26", broken) is True
+    done = {
+        "source": "theme_radar_snapshot",
+        "open_source": "daily_bar",
+        "strategies": {"union_hot_n4_holdup": {"class": "still broken", "step": "lock"}},
+    }
+    assert _replace_with_radar("2026-10-26", done) is False
+    finished = {"strategies": {"flatten_h5": {"class": "rebuilt"}}}
+    assert _replace_with_radar("2026-09-28", finished) is False
+    assert _replace_with_radar("2026-11-04", broken) is False
+
+
+def test_supplied_stooq_opens_agree_with_yahoo() -> None:
+    from src.factor_mine_rebuild import (
+        STOOQ_SHA, YAHOO_OPEN, load_supplied_opens, opens_agree,
+    )
+
+    assert opens_agree(50.805, 50.81)
+    assert opens_agree(8.79, 8.79 * 1.006) is False
+    loaded = load_supplied_opens()
+    assert len(loaded) == 12
+    assert loaded[("2026-10-26", "SUJA")]["open"] == 9.89
+    assert loaded[("2026-10-26", "RRC")]["open"] == 50.805
+    assert loaded[("2026-10-02", "GRML")]["source"] == "stooq_bulk:GRML.us.txt"
+    assert loaded[("2026-10-26", "QTEX")]["source_sha256"] == STOOQ_SHA
+    for key, info in loaded.items():
+        assert opens_agree(info["open"], YAHOO_OPEN[key])
+
+
+def test_needs_open_list_is_the_lock_gap() -> None:
+    text = (Path(__file__).resolve().parent.parent / "research" / "rebuild" / "needs_open_0930.csv").read_text(encoding="utf-8")
+    lines = [line for line in text.splitlines() if line.strip()]
+    assert lines[0] == "date,ticker"
+    rows = [tuple(line.split(",")) for line in lines[1:]]
+    assert ("2026-10-26", "QTEX") in rows
+    assert ("2026-10-02", "GRML") in rows
+    assert all(len(row) == 2 and len(row[0]) == 10 for row in rows)
+    # These lock names already have a daily open, so they are not a request.
+    assert ("2026-10-26", "TRU") not in rows
+    assert ("2026-09-25", "DELL") not in rows
 
 
 def test_ovcal_names_rebuilt_rule_and_missed() -> None:
@@ -318,7 +393,10 @@ def main() -> None:
         test_rebuilt_file_is_write_once,
         test_restate_still_refuses_a_past_day,
         test_morning_reads_prior_raw_not_its_own_file,
-        test_2026_11_04_reads_2026_11_03_raw,
+        test_exact_prior_raw_except_the_missing_08_27_file,
+        test_daily_bar_open_clears_a_missing_bar_flag,
+        test_needs_open_list_is_the_lock_gap,
+        test_supplied_stooq_opens_agree_with_yahoo,
         test_auth_export_is_tried_before_login,
         test_ovcal_names_rebuilt_rule_and_missed,
     ]

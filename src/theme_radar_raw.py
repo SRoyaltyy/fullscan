@@ -23,10 +23,18 @@ MANIFEST_URL = (
     "https://raw.githubusercontent.com/SRoyaltyy/theme-radar/"
     "main/data/snapshots/manifest.json"
 )
-# Frozen fullscan copies, including the 2026-11-04 morning. These mornings
-# are rebuilt from theme-radar's previous-session raw file.
+# First raw snapshot. Every trading day from this date through 2026-11-04
+# has a .raw.csv except 2026-08-27. Morning D reads that exact D-1 file.
+EARLIEST_RAW = "2026-08-06"
+MISSING_RAW = frozenset({"2026-08-27"})
+NO_PRIOR_BEFORE = "no D-1 snapshot before 08-06"
+NO_PRIOR_0827 = "no D-1 snapshot (2026-08-27.raw.csv is missing)"
+# Still-broken mornings start here. 2026-08-07 is the first morning with a D-1 file.
+REBUILD_FROM = "2026-08-13"
+# Local exports from this morning onward were byte copies. 2026-11-04
+# is a separate rebuilt day and stays outside this window.
 FROZEN_FROM = "2026-10-13"
-FROZEN_TO = "2026-11-04"
+FROZEN_TO = "2026-11-03"
 SOURCE = "theme_radar_snapshot"
 REQUIRED = (
     "Ticker",
@@ -121,7 +129,36 @@ def _rename(frame: pd.DataFrame) -> pd.DataFrame:
     return frame
 
 
-def load_prior_raw(morning: str, *, fetch=None, manifest: dict | None = None) -> dict:
+def _commit_times(day: str) -> list[str]:
+    """Commit times that touched this exact raw file. Read-only."""
+    import json
+    url = (
+        "https://api.github.com/repos/SRoyaltyy/theme-radar/commits"
+        f"?path=data/snapshots/{day}.raw.csv&sha=main&per_page=20"
+    )
+    try:
+        raw = _fetch(url)
+    except Exception:
+        return []
+    try:
+        rows = json.loads(raw.decode("utf-8"))
+    except (UnicodeDecodeError, json.JSONDecodeError):
+        return []
+    times = []
+    if not isinstance(rows, list):
+        return times
+    for row in rows:
+        if not isinstance(row, dict):
+            continue
+        commit = row.get("commit") or {}
+        when = str(((commit.get("committer") or {}).get("date")) or "").strip()
+        if when:
+            times.append(when)
+    return times
+
+
+def load_prior_raw(morning: str, *, fetch=None, manifest: dict | None = None,
+                   commit_times: list[str] | None = None) -> dict:
     """Bytes, sha256, and frame of D-1.raw.csv for morning D.
 
     Refuses D's own file and a scrape that is not before 09:30 ET on D.
@@ -137,9 +174,19 @@ def load_prior_raw(morning: str, *, fetch=None, manifest: dict | None = None) ->
     if manifest is None:
         manifest = _manifest(getter)
     stamp = scrape_ts_utc(prior, manifest)
-    if not before_morning_open(stamp, day):
+    if not stamp:
+        times = list(commit_times) if commit_times is not None else _commit_times(prior)
+        late = [item for item in times if not before_morning_open(item, day)]
+        if late:
+            raise ValueError(
+                f"theme-radar {prior}.raw.csv commit {late[0]} "
+                f"is not before 09:30 ET on {day}"
+            )
+        if times:
+            stamp = min(times)
+    if stamp and not before_morning_open(stamp, day):
         raise ValueError(
-            f"theme-radar {prior}.raw.csv scrape_ts_utc={stamp or 'missing'} "
+            f"theme-radar {prior}.raw.csv scrape_ts_utc={stamp} "
             f"is not before 09:30 ET on {day}"
         )
     try:
@@ -150,6 +197,10 @@ def load_prior_raw(morning: str, *, fetch=None, manifest: dict | None = None) ->
         ) from exc
     if not raw:
         raise ValueError(f"theme-radar {prior}.raw.csv is missing (empty)")
+    if not stamp:
+        raise ValueError(
+            f"theme-radar {prior}.raw.csv has no scrape time and no commit"
+        )
     frame = _rename(pd.read_csv(io.BytesIO(raw), low_memory=False))
     return {
         "source": SOURCE,
@@ -192,6 +243,28 @@ def require_prior_raw(morning: str, *, fetch=None,
     return loaded
 
 
+def prior_gap(morning: str) -> str | None:
+    """Why morning D has no exact prior raw file, or None when D-1 exists.
+
+    2026-08-28 is the session after the missing 2026-08-27 file. Mornings
+    before 2026-08-07 have no earlier snapshot. Neither case borrows
+    another day.
+    """
+    prior = previous_session(str(morning or "")[:10])
+    if prior < EARLIEST_RAW:
+        return NO_PRIOR_BEFORE
+    if prior in MISSING_RAW:
+        return NO_PRIOR_0827
+    return None
+
+
 def applies(morning: str) -> bool:
+    """True when morning D should read its exact prior raw snapshot.
+
+    2026-11-04 stays outside this window. A missing D-1 file does not
+    fall through to an older snapshot.
+    """
     day = str(morning or "")[:10]
-    return FROZEN_FROM <= day <= FROZEN_TO
+    if day > FROZEN_TO:
+        return False
+    return prior_gap(day) is None
