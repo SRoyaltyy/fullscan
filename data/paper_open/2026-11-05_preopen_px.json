@@ -1,0 +1,17 @@
+{
+ "date": "2026-11-05",
+ "missing": [],
+ "prices": {
+  "CPRI": 21.35,
+  "ECX": 0.75,
+  "IDXX": 672.04,
+  "UPBD": 24.82
+ },
+ "sources": {
+  "CPRI": "yahoo_premarket",
+  "ECX": "yahoo_premarket",
+  "IDXX": "yahoo_prior_close",
+  "UPBD": "yahoo_premarket"
+ },
+ "written_at": "2026-11-05T14:04:55+00:00"
+}
