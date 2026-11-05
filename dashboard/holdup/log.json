@@ -8609,5 +8609,150 @@
       "status": "BEFORE_1330"
     },
     "sha256": "ca4be137f4c24313f28aa3729eed40dd014c7993638cb9d8474bdf860710292e"
+  },
+  {
+    "buys": [
+      {
+        "fee": 2.257,
+        "fill": 5.34,
+        "fill_basis": "open",
+        "liquidity_cap_shares": 70748,
+        "rank": 1,
+        "shares": 89,
+        "sources": [
+          "yday_gainer"
+        ],
+        "ticker": "ARRY"
+      },
+      {
+        "fee": 2.467,
+        "fill": 2.98,
+        "fill_basis": "open",
+        "liquidity_cap_shares": 8003,
+        "rank": 2,
+        "shares": 159,
+        "sources": [
+          "yday_gainer"
+        ],
+        "ticker": "ZJYL"
+      },
+      {
+        "fee": 2.149,
+        "fill": 8.88,
+        "fill_basis": "open",
+        "liquidity_cap_shares": 7716,
+        "rank": 3,
+        "shares": 53,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "CRCT"
+      },
+      {
+        "fee": 2.416,
+        "fill": 3.35,
+        "fill_basis": "open",
+        "liquidity_cap_shares": 21471,
+        "rank": 4,
+        "shares": 142,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "WYHG"
+      }
+    ],
+    "cash_primary": 12.199673633376108,
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-11-05",
+    "excluded_on_fill": [],
+    "holdings": [
+      {
+        "cost_primary": 479.89329999999995,
+        "entry_date": "2026-11-05",
+        "entry_px": 5.34,
+        "last_px": 5.34,
+        "min_hold": 1,
+        "peak_px": 5.34,
+        "shares": 89,
+        "ticker": "ARRY"
+      },
+      {
+        "cost_primary": 475.1422,
+        "entry_date": "2026-11-05",
+        "entry_px": 8.88,
+        "last_px": 8.88,
+        "min_hold": 1,
+        "peak_px": 8.88,
+        "shares": 53,
+        "ticker": "CRCT"
+      },
+      {
+        "cost_primary": 2764.90965,
+        "entry_date": "2026-11-04",
+        "entry_px": 3.33,
+        "last_px": 3.58,
+        "min_hold": 2,
+        "peak_px": 3.58,
+        "shares": 823,
+        "ticker": "DNUT"
+      },
+      {
+        "cost_primary": 2700.3259133199995,
+        "entry_date": "2026-11-04",
+        "entry_px": 78.964996,
+        "last_px": 72.349998,
+        "min_hold": 2,
+        "peak_px": 78.964996,
+        "shares": 34,
+        "ticker": "TEM"
+      },
+      {
+        "cost_primary": 480.49449999999996,
+        "entry_date": "2026-11-05",
+        "entry_px": 3.35,
+        "last_px": 3.35,
+        "min_hold": 1,
+        "peak_px": 3.35,
+        "shares": 142,
+        "ticker": "WYHG"
+      },
+      {
+        "cost_primary": 478.6560999999999,
+        "entry_date": "2026-11-05",
+        "entry_px": 2.98,
+        "last_px": 2.98,
+        "min_hold": 1,
+        "peak_px": 2.98,
+        "shares": 159,
+        "ticker": "ZJYL"
+      }
+    ],
+    "holdup_on": false,
+    "kind": "open_fill",
+    "morning_s": null,
+    "open_source": "yahoo_split_adjusted_daily_open",
+    "plan_sha256": "ca4be137f4c24313f28aa3729eed40dd014c7993638cb9d8474bdf860710292e",
+    "pnl_status": "pending",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sells": [
+      {
+        "fee": 2.4322,
+        "fill": 13.68,
+        "reason": "hold-expired",
+        "shares": 135,
+        "ticker": "GDYN"
+      },
+      {
+        "fee": 0.2741,
+        "fill": 25.110001,
+        "reason": "hold-expired",
+        "shares": 1,
+        "ticker": "UPBD"
+      }
+    ],
+    "sha256": "eb5491f0b650faa2518b65e37d0b7319e63347b9179311aadbdc3ad9f83484e5",
+    "unfilled": []
   }
 ]
