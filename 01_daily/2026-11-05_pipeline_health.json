@@ -4,14 +4,12 @@
   "source_date": "2026-11-05",
   "target_date": "2026-11-05",
   "book_date": "2026-11-05",
-  "generated_at": "2026-11-05T17:26:35.463183-05:00",
+  "generated_at": "2026-11-05T17:51:02.208942-05:00",
   "ok": false,
   "n_fail": 2,
   "n_warn": 10,
   "round": 1,
-  "fix_actions": [
-    "systemctl start fullscan-map-postclose.service \u2192 inactive Failed to start fullscan-map-postclose.service: Access denied as the requested operation requires interactive authentication. However, interactive authentication has not been enabled by the calling program.\nSee system logs and 'systemctl status fullscan-map-postclose.service' for details."
-  ],
+  "fix_actions": null,
   "checks": [
     {
       "step": "clock.map_heat_postclose.yml",
@@ -262,7 +260,7 @@
       "group": "book",
       "status": "OK",
       "required": true,
-      "detail": "16019886 bytes",
+      "detail": "16019872 bytes",
       "path": "/home/runner/work/fullscan/fullscan/dashboard/index.html"
     },
     {

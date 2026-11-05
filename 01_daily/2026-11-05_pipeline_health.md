@@ -1,7 +1,7 @@
 # Pipeline health — postclose
 
 pre-open date=2026-11-05  post-close source=2026-11-05  post-close target=2026-11-05  book=2026-11-05
-generated 2026-11-05T17:26:35.463183-05:00  round=1
+generated 2026-11-05T17:51:02.208942-05:00  round=1
 **result=FAIL**  required_fails=2  warns=10
 
 Heal loop: audit → fix OpenClaw door / timers on this box → start systemd or spawn the owning ECS job (ubuntu workflows are GH-dispatched with force=true) → wait for files → re-audit. Finviz HTML is never scraped on ECS. xAI OAuth dies ~6h and cannot be refreshed (Cloudflare). Permanent auth is XAI_API_KEY in `~/.openclaw/.env`. An expiring token does not block Grok jobs.
@@ -35,7 +35,7 @@ Heal loop: audit → fix OpenClaw door / timers on this box → start systemd or
 | OK | Stock book MD | book | yes | 85298 bytes | `/home/runner/work/fullscan/fullscan/01_daily/2026-11-05_stock_book.md` |
 | OK | Stock book backtest (repo-level) | book | yes | 10508 bytes | `/home/runner/work/fullscan/fullscan/03_scoreboard/STOCK_BOOK_BACKTEST.md` |
 | OK | Paper trading summary | book | yes | 1799 bytes | `/home/runner/work/fullscan/fullscan/03_scoreboard/PAPER_TRADING.md` |
-| OK | Dashboard HTML (Pages source) | book | yes | 16019886 bytes | `/home/runner/work/fullscan/fullscan/dashboard/index.html` |
+| OK | Dashboard HTML (Pages source) | book | yes | 16019872 bytes | `/home/runner/work/fullscan/fullscan/dashboard/index.html` |
 | OK | HIT_BOARD | book | no | 12116 bytes | `/home/runner/work/fullscan/fullscan/03_scoreboard/HIT_BOARD.md` |
 | FAIL | General outcome (graded call) | outcome | yes | DID NOT RUN — file missing | `/home/runner/work/fullscan/fullscan/01_daily/general/2026-11-05_outcome.md` |
 | WARN | General reflect MD | outcome | no | DID NOT RUN — file missing | `/home/runner/work/fullscan/fullscan/01_daily/general/2026-11-05_reflect.md` |
@@ -49,6 +49,5 @@ Heal loop: audit → fix OpenClaw door / timers on this box → start systemd or
 
 ## Fix actions
 
-- systemctl start fullscan-map-postclose.service → inactive Failed to start fullscan-map-postclose.service: Access denied as the requested operation requires interactive authentication. However, interactive authentication has not been enabled by the calling program.
-See system logs and 'systemctl status fullscan-map-postclose.service' for details.
+_none this run_
 
