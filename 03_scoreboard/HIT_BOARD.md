@@ -1,6 +1,6 @@
 # HIT Board — general + sectors (all dates)
 
-Generated: **2026-11-04T16:44:14.368755-05:00**
+Generated: **2026-11-04T19:23:28.964240-05:00**
 
 Source: `03_scoreboard/scoreboard.json`.
 
@@ -10,14 +10,14 @@ Source: `03_scoreboard/scoreboard.json`.
 
 | Book | Direction HIT% | hits / graded | Mag HIT% | n mag |
 |------|----------------|---------------|----------|-------|
-| **General (SPX-style)** | **54.0%** | 27/50 | 52.0% | 50 |
+| **General (SPX-style)** | **56.1%** | 32/57 | 54.4% | 57 |
 | **All sector calls** | **43.2%** | 145/336 | 35.7% | 336 |
 
 ### Pipeline blanks (general) — excluded from HIT%
 
 - No `predicted_direction`: **2026-08-02, 2026-08-08, 2026-08-09, 2026-08-15, 2026-08-16, 2026-08-22, 2026-08-25, 2026-08-27, 2026-08-29, 2026-08-30, 2026-09-30, 2026-10-06, 2026-10-07, 2026-10-12, 2026-10-15** (n=15)
 - Of those, legacy scoreboard still marked direction_hit=false: **2026-08-02, 2026-08-08, 2026-08-09** — ops failure, not model error
-- If blanks were counted as MISS (old method): **50.9%** (27/53)
+- If blanks were counted as MISS (old method): **53.3%** (32/60)
 
 ## General market — by date
 
@@ -92,11 +92,13 @@ Source: `03_scoreboard/scoreboard.json`.
 | 2026-10-22 | down | notable | -14.314 | -1.21 | down | HIT | HIT |
 | 2026-10-23 | down | mild | -7.538 | — | — | — | — |
 | 2026-10-26 | down | mild | -2.128 | 0.7 | up | MISS | HIT |
-| 2026-10-27 | up | mild | 5.515 | — | — | — | — |
-| 2026-10-30 | down | mild | -12.921 | — | — | — | — |
-| 2026-11-02 | up | mild | 3.044 | — | — | — | — |
-| 2026-11-03 | down | mild | -5.632 | — | — | — | — |
-| 2026-11-04 | up | notable | 10.848 | — | — | — | — |
+| 2026-10-27 | up | mild | 5.515 | 0.6 | up | HIT | HIT |
+| 2026-10-28 | up | mild | — | 0.28 | up | HIT | MISS |
+| 2026-10-29 | down | mild | — | -0.3 | down | HIT | HIT |
+| 2026-10-30 | down | mild | -12.921 | -1.82 | down | HIT | MISS |
+| 2026-11-02 | up | mild | 3.044 | -0.51 | down | MISS | HIT |
+| 2026-11-03 | down | mild | -5.632 | 0.36 | up | MISS | HIT |
+| 2026-11-04 | up | notable | 10.848 | 1.58 | up | HIT | HIT |
 
 ## Sectors — HIT% by date (model calls only)
 
@@ -172,6 +174,8 @@ Source: `03_scoreboard/scoreboard.json`.
 | 2026-10-23 | 0 | **—** | 0/0 | — |
 | 2026-10-26 | 0 | **—** | 0/0 | — |
 | 2026-10-27 | 0 | **—** | 0/0 | — |
+| 2026-10-28 | 0 | **—** | 0/0 | — |
+| 2026-10-29 | 0 | **—** | 0/0 | — |
 | 2026-10-30 | 0 | **—** | 0/0 | — |
 | 2026-11-02 | 0 | **—** | 0/0 | — |
 | 2026-11-03 | 0 | **—** | 0/0 | — |
@@ -197,7 +201,7 @@ Source: `03_scoreboard/scoreboard.json`.
 
 HIT / MISS / NO_PRED / — . Actual % when graded.
 
-| Sector | 2026-10-20 | 2026-10-21 | 2026-10-22 | 2026-10-23 | 2026-10-26 | 2026-10-27 | 2026-10-30 | 2026-11-02 | 2026-11-03 | 2026-11-04 |
+| Sector | 2026-10-22 | 2026-10-23 | 2026-10-26 | 2026-10-27 | 2026-10-28 | 2026-10-29 | 2026-10-30 | 2026-11-02 | 2026-11-03 | 2026-11-04 |
 |--------|------|------|------|------|------|------|------|------|------|------|
 | Basic Materials | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED |
 | Communication Services | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED |

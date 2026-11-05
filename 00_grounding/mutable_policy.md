@@ -13,7 +13,7 @@ Last learn_cycle: **2026-11-04**. Promoted: 0. Retired: 10. Active lessons: 211.
 
 ## Accuracy by topic (graded window)
 
-- **general**: 53% (8/15)
+- **general**: 60% (9/15)
 - **sector:Basic Materials**: 20% (3/15)
 - **sector:Communication Services**: 13% (2/15)
 - **sector:Consumer Cyclical**: 27% (4/15)
@@ -29,15 +29,15 @@ Last learn_cycle: **2026-11-04**. Promoted: 0. Retired: 10. Active lessons: 211.
 ## Numeric factor weights in force (engine_policy.json — applied by code, not by you)
 
 General (B0–B7 LLM components; multiplier applied by compute_scores):
-- B0_ASIA: n=28 sign-hit=0.57 → ×1.0
-- B0_EUROPE: n=20 sign-hit=0.70 → ×1.25
-- B1_CATALYSTS: n=34 sign-hit=0.71 → ×1.25
+- B0_ASIA: n=32 sign-hit=0.56 → ×1.0
+- B0_EUROPE: n=22 sign-hit=0.73 → ×1.25
+- B1_CATALYSTS: n=38 sign-hit=0.71 → ×1.25
 - B2_BONDS: n=42 sign-hit=0.38 → ×0.0
-- B3_FEDPATH: n=31 sign-hit=0.45 → ×0.5
-- B4_VIX: n=13 sign-hit=0.54 → ×0.5
+- B3_FEDPATH: n=33 sign-hit=0.46 → ×0.5
+- B4_VIX: n=14 sign-hit=0.50 → ×0.5
 - B5_SENTIMENT: n=24 sign-hit=0.33 → ×0.0
-- B6_FUTURES: n=30 sign-hit=0.77 → ×1.25
-- B7_OIL_DOLLAR: n=43 sign-hit=0.58 → ×1.0
+- B6_FUTURES: n=33 sign-hit=0.76 → ×1.25
+- B7_OIL_DOLLAR: n=47 sign-hit=0.57 → ×1.0
 Sectors (pooled S0–S4; per-sector overrides in engine_policy.json):
 - S0_SHARED_MACRO: n=204 sign-hit=0.58 → ×1.0
 - S1_SECTOR_FACTORS: n=226 sign-hit=0.54 → ×0.5
@@ -139,10 +139,10 @@ _(+196 older active lessons not excerpted; each predict receives only its own to
 
 ## Per-scope DO-INSTEAD
 
-### scope `general` — wins=8 losses=7
-- **win 2026-10-21:** [general] Keep direction; shrink confidence on modest |score| when magnitude historically misses.
-- **win 2026-10-22:** [general] Keep direction; shrink confidence on modest |score| when magnitude historically misses.
-- **loss 2026-10-26:** [general] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
+### scope `general` — wins=9 losses=6
+- **loss 2026-11-02:** [general] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
+- **loss 2026-11-03:** [general] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
+- **win 2026-11-04:** [general] Keep direction; shrink confidence on modest |score| when magnitude historically misses.
 
 ### scope `news` — wins=0 losses=1
 - **loss news:** [news] Only emit actions with |net| above a higher floor.

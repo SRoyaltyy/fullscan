@@ -1,18 +1,18 @@
-# Improvement tracker — 2026-11-04T16:44:26-05:00
+# Improvement tracker — 2026-11-04T19:23:36-05:00
 
 Rolling direction/magnitude hit of the *shipped* prediction vs three naive baselines computed on the same graded runs (always up, always down, same direction as the previous graded session of that topic). `edge` = engine direction hit minus the best baseline over the same window. Sessions are dated by the predicted session; sectors are pooled (11 per day).
 
-## General market (SPX) — 50 graded runs over 50 sessions
+## General market (SPX) — 57 graded runs over 57 sessions
 
-**Read:** steady; not beating best baseline by +0% (last 10 sessions)
+**Read:** improving; beating best baseline by +10% (last 10 sessions)
 
 ### Eras
 
 | Era | n | engine dir | engine mag | always up | always down | same as yesterday | edge vs best baseline |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| all graded | 50 | **54%** | 52% | 46% | 46% | 45% | **+8%** |
-| legacy engine era | 26 | **54%** | 46% | 46% | 50% | 48% | **+4%** |
-| v2 engine live (since 2026-09-14) | 24 | **54%** | 58% | 46% | 42% | 42% | **+8%** |
+| all graded | 57 | **56%** | 54% | 47% | 46% | 48% | **+8%** |
+| legacy engine era | 28 | **57%** | 46% | 46% | 50% | 48% | **+7%** |
+| v2 engine live (since 2026-09-14) | 29 | **55%** | 62% | 48% | 41% | 48% | **+7%** |
 
 Walk-forward replay estimate for v2 on the same history: **71%** direction / 57% magnitude (n=28, `REPLAY_HARNESS.md` 2026-09-12). The live v2 curve above should converge toward this as sessions accumulate; if it sits well below it for 20+ sessions, the anchor inputs or the LLM components changed.
 
@@ -44,18 +44,16 @@ Walk-forward replay estimate for v2 on the same history: **71%** direction / 57%
 | 22 | 2026-10-21 | general | 55% | 55% |
 | 23 | 2026-10-22 | general | 56% | 56% |
 | 24 | 2026-10-26 | general | 54% | 58% |
+| 25 | 2026-10-27 | general | 56% | 60% |
+| 26 | 2026-10-30 | general | 58% | 58% |
+| 27 | 2026-11-02 | general | 56% | 59% |
+| 28 | 2026-11-03 | general | 54% | 61% |
+| 29 | 2026-11-04 | general | 55% | 62% |
 
 ### Session curve (last 30 sessions)
 
 | Session | engine | n | session dir | dir (10) | mag (10) | up (10) | down (10) | yest (10) | edge (10) | dir (20) | edge (20) |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| 2026-09-03 | legacy | 1 | 0% | **30%** | 50% | 50% | 50% | 50% | -20% | 55% | +5% |
-| 2026-09-04 | legacy | 1 | 0% | **30%** | 50% | 50% | 50% | 40% | -20% | 50% | +0% |
-| 2026-09-08 | legacy | 1 | 100% | **30%** | 50% | 50% | 50% | 40% | -20% | 50% | -5% |
-| 2026-09-09 | legacy | 1 | 100% | **40%** | 60% | 40% | 60% | 50% | -20% | 50% | -5% |
-| 2026-09-10 | legacy | 1 | 100% | **50%** | 60% | 40% | 60% | 60% | -10% | 50% | -5% |
-| 2026-09-11 | legacy | 1 | 0% | **40%** | 50% | 40% | 60% | 60% | -20% | 45% | -10% |
-| 2026-09-14 | v2 | 1 | 100% | **50%** | 60% | 30% | 70% | 50% | -20% | 50% | -10% |
 | 2026-09-15 | v2 | 1 | 100% | **60%** | 60% | 30% | 70% | 60% | -10% | 50% | -10% |
 | 2026-09-16 | v2 | 1 | 0% | **50%** | 60% | 30% | 70% | 60% | -20% | 45% | -20% |
 | 2026-09-17 | v2 | 1 | 100% | **60%** | 60% | 30% | 70% | 60% | -10% | 45% | -20% |
@@ -79,6 +77,13 @@ Walk-forward replay estimate for v2 on the same history: **71%** direction / 57%
 | 2026-10-21 | v2 | 1 | 100% | **50%** | 40% | 60% | 30% | 50% | -10% | 50% | +0% |
 | 2026-10-22 | v2 | 1 | 100% | **60%** | 50% | 50% | 40% | 50% | +10% | 55% | +5% |
 | 2026-10-26 | v2 | 1 | 0% | **50%** | 50% | 50% | 40% | 40% | +0% | 50% | +0% |
+| 2026-10-27 | v2 | 1 | 100% | **60%** | 60% | 50% | 40% | 40% | +10% | 50% | +0% |
+| 2026-10-28 | legacy | 1 | 100% | **60%** | 50% | 60% | 30% | 50% | +0% | 50% | +0% |
+| 2026-10-29 | legacy | 1 | 100% | **70%** | 60% | 60% | 40% | 50% | +10% | 55% | +5% |
+| 2026-10-30 | v2 | 1 | 100% | **70%** | 60% | 60% | 40% | 60% | +10% | 60% | +10% |
+| 2026-11-02 | v2 | 1 | 0% | **70%** | 70% | 60% | 40% | 60% | +10% | 60% | +10% |
+| 2026-11-03 | v2 | 1 | 0% | **60%** | 70% | 60% | 40% | 60% | +0% | 55% | +5% |
+| 2026-11-04 | v2 | 1 | 100% | **70%** | 80% | 60% | 40% | 60% | +10% | 55% | +0% |
 
 ## Sectors (11 ETFs pooled) — 336 graded runs over 34 sessions
 
