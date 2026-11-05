@@ -1,10 +1,10 @@
 # flatten_robust card — 2026-11-05
 
-_Generated 2026-11-05T12:07:24 — live `flatten_robust`._
+_Generated 2026-11-05T14:06:12 — live `flatten_robust`._
 
-**morning S missing; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**
+**S=-2.50; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**
 
-- Score **—** (—) · route **io**
+- Score **-2.50** (DOWN) · route **io**
 - Cash leftover **$7.66** (after 09:30 $7.66 · after 16:00 $115,675.49)
 - Prior close **$115,822.15** · 09:30 **$115,822.15** · overnight **$+0.00** · session **$-146.65** · 16:00 **$115,675.49**
 - Overnight lots **11** · priced mover BUYs **0** · prior book yes
@@ -70,11 +70,11 @@ Sized from marked equity **$115,822.15** as if the book were flat. `io 3d_size (
 
 | Clock | Ticker | Sleeve | Shares | Px | $ | Blocked live by |
 |---|---|---|---:|---:|---:|---|
-| 16:00 ET | IDXX | io_core | 27 | $698.55 | $18,860.85 | cash tied |
 | 16:00 ET | CSGP | io_core | 592 | $32.58 | $19,287.36 | cash tied |
-| 16:00 ET | TSCO | io_core | 527 | $36.58 | $19,277.66 | cash tied |
-| 16:00 ET | CROX | io_core | 120 | $159.97 | $19,195.80 | cash tied |
-| 16:00 ET | CPRI | io_core | 909 | $21.23 | $19,298.07 | cash tied |
+| 16:00 ET | CMCSA | io_core | 776 | $24.85 | $19,283.60 | cash tied |
+| 16:00 ET | CLX | io_core | 194 | $99.16 | $19,237.04 | cash tied |
 | 16:00 ET | COCO | io_core | 294 | $65.47 | $19,248.18 | cash tied |
+| 16:00 ET | CROX | io_core | 120 | $159.97 | $19,195.80 | cash tied |
+| 16:00 ET | GPK | io_core | 1642 | $11.75 | $19,293.50 | cash tied |
 
 Dashboard: https://sroyaltyy.github.io/fullscan/dashboard/sleeve-merge/
