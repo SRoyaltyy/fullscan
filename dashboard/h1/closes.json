@@ -1657,5 +1657,47 @@
       "open": 23.0,
       "prior_close": 22.84
     }
+  },
+  "2026-11-05": {
+    "ARRY": {
+      "close": 5.3,
+      "open": 5.335,
+      "prior_close": 5.33
+    },
+    "CPRI": {
+      "close": 21.129999,
+      "open": 21.459999,
+      "prior_close": 21.23
+    },
+    "CRCT": {
+      "close": 9.25,
+      "open": 8.88,
+      "prior_close": 8.88
+    },
+    "ECX": {
+      "close": 0.7997,
+      "open": 0.768,
+      "prior_close": 0.7033
+    },
+    "IDXX": {
+      "close": 670.710022,
+      "open": 702.0,
+      "prior_close": 698.549988
+    },
+    "UPBD": {
+      "close": 24.879999,
+      "open": 24.889999,
+      "prior_close": 24.139999
+    },
+    "WYHG": {
+      "close": 3.37,
+      "open": 3.59,
+      "prior_close": 3.98
+    },
+    "ZJYL": {
+      "close": 3.22,
+      "open": 2.99,
+      "prior_close": 3.09
+    }
   }
 }
