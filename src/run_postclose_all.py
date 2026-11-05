@@ -15,6 +15,10 @@ Does NOT scrape Finviz (ECS 403). Clones today's heat onto the next
 session date, then researches. Does NOT rewrite the morning packet
 or the stock book.
 
+A session with no general outcome (empty LLM reply, DeepSeek 402)
+or no general reflect still persists the other stages, then exits 1.
+The log lines are ``OUTCOME MISSING <date>`` and ``REFLECT MISSING <date>``.
+
 CLI:
   python -m src.run_postclose_all [--date YYYY-MM-DD] [--force]
                                   [--llm-backend auto]
@@ -127,14 +131,19 @@ def _exists_gt(rel: str, n: int) -> bool:
 
 
 def run(date: str | None = None, force: bool = False,
-        llm_backend: str | None = None) -> None:
+        llm_backend: str | None = None) -> int:
+    """Run every closed session in the pack. Non-zero if any lacks outcome/reflect."""
     config.apply_llm_backend(llm_backend)
     if date:
         dates = [date]
     else:
         dates = night_pack_dates()
+    code = 0
     for one in dates:
-        _run_one(one, force=force)
+        one_code = _run_one(one, force=force)
+        if one_code:
+            code = one_code
+    return code
 
 
 _TRACKER = None
@@ -180,15 +189,41 @@ def _note(title: str, status: str, error: str = "") -> None:
         print(f"[postclose-all] WARN: progress {title}: {exc}", flush=True)
 
 
-def _run_one(date: str, force: bool = False) -> None:
+def _run_one(date: str, force: bool = False) -> int:
     _progress_begin(date)
     try:
-        _run_one_body(date, force=force)
+        return _run_one_body(date, force=force)
     finally:
         _progress_end()
 
 
-def _run_one_body(date: str, force: bool = False) -> None:
+def _close_pack(date: str) -> int:
+    """Persist whatever landed. Missing outcome or reflect fails the run.
+
+    ``run_outcome`` writes nothing and exits 0 on an empty LLM reply or a
+    DeepSeek 402. The other stages have already run. Exiting 0 here left
+    the night pack green.
+    """
+    outcome_ok = skip_if_good.check_daily_pipeline_outcome(date)
+    reflect_ok = skip_if_good.check_general_reflect(date)
+    if skip_if_good.check_postclose_all(date):
+        print(f"[postclose-all] PASS {date} — grades/learn/next-session research done")
+    else:
+        print(f"[postclose-all] DEGRADED {date}: outcome/reflect/sectors/"
+              "learn/next-session still missing — wrote whatever landed; "
+              "persist then continue")
+    _push_pack(date)
+    code = 0
+    if not outcome_ok:
+        print(f"[postclose-all] OUTCOME MISSING {date}", flush=True)
+        code = 1
+    if not reflect_ok:
+        print(f"[postclose-all] REFLECT MISSING {date}", flush=True)
+        code = 1
+    return code
+
+
+def _run_one_body(date: str, force: bool = False) -> int:
     target = next_weekday(date)
     py = sys.executable
     print("")
@@ -201,7 +236,7 @@ def _run_one_body(date: str, force: bool = False) -> None:
     if (not force) and skip_if_good.check_postclose_all(date):
         print(f"[postclose-all] {date}: outcome + next baseline + learnings "
               f"already on disk — nothing to do")
-        return
+        return 0
 
     def step(title: str, cmd: list[str], done: bool,
              timeout_s: int | None = None,
@@ -329,14 +364,7 @@ def _run_one_body(date: str, force: bool = False) -> None:
          skip_if_good.check_map_heat_postclose(date),
          timeout_s=7200, llm_timeout_s=captain_to)
 
-    if not skip_if_good.check_postclose_all(date):
-        print(f"[postclose-all] DEGRADED {date}: outcome/reflect/sectors/"
-              "learn/next-session still missing — wrote whatever landed; "
-              "persist then continue")
-        _push_pack(date)
-        return
-    print(f"[postclose-all] PASS {date} — grades/learn/next-session research done")
-    _push_pack(date)
+    return _close_pack(date)
 
 
 def main() -> None:
@@ -347,7 +375,8 @@ def main() -> None:
     ap.add_argument("--llm-backend", default=None,
                     choices=["auto", "grok", "deepseek"])
     args = ap.parse_args()
-    run(date=args.date, force=args.force, llm_backend=args.llm_backend)
+    raise SystemExit(run(date=args.date, force=args.force,
+                         llm_backend=args.llm_backend))
 
 
 if __name__ == "__main__":

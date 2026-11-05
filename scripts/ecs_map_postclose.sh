@@ -130,5 +130,7 @@ bash scripts/safe_git_push.sh \
   00_grounding/mutable_policy.md \
   00_grounding/book_policy.json \
   00_grounding/weather_rules_proposals.json
-echo "[map-postclose] complete $(TZ=America/New_York date '+%F %H:%M %Z')"
-exit 0
+echo "[map-postclose] complete $(TZ=America/New_York date '+%F %H:%M %Z') (python exit=$code)"
+# Snapshot and git push already ran. Report the python status.
+# Early skips above stay exit 0. A missing outcome must not look green.
+exit "$code"
