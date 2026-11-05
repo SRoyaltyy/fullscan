@@ -837,7 +837,13 @@ def test_commit_allowlist_and_workflow_and_page():
     # Weekday 21:30 UTC only appends new parse days. A dispatch still draws.
     assert "schedule:" in yml
     assert 'cron: "30 21 * * 1-5"' in yml
+    # 21:30 UTC is in the dropped evening cluster. Morning catch-up and
+    # the post-close workflow_run are what actually append.
+    assert 'cron: "20 13 * * 1-5"' in yml
+    assert "workflow_run:" in yml
+    assert "Post-Close last-closed (ubuntu/DeepSeek sidecar)" in yml
     assert "github.event_name == 'schedule'" in yml
+    assert "github.event_name == 'workflow_run'" in yml
     assert "src.jev_day append" in yml
     assert "github.event.inputs.mode == 'draw'" in yml
     quiet = yml.index('github.event_name }}" = "schedule"')
@@ -889,6 +895,10 @@ def test_commit_allowlist_and_workflow_and_page():
     assert "01_daily/news" in day_js
     assert "JEV_API_KEY" not in day_js
     assert "ghp_" not in day_js
+    assert day_js.index("/main/dashboard/jev-train/days.json") < day_js.index(
+        "codex/jev-lane-hop0/dashboard/jev-train/days.json")
+    load = day_js.split("async function loadDays", 1)[1].split("function dayInfo", 1)[0]
+    assert load.index('"days.json?t="') < load.index("RAW_MAIN_DAYS") < load.index("RAW_BRANCH_DAYS")
 
 
 def test_repo_holdout_and_hard_miss_bank_are_disjoint_from_gold():

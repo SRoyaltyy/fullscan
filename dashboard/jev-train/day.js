@@ -10,7 +10,8 @@
 })(typeof globalThis !== "undefined" ? globalThis : this, function () {
   var REPO = "SRoyaltyy/fullscan";
   var WORKFLOW = "jev_train.yml";
-  var RAW_DAYS = "https://raw.githubusercontent.com/" + REPO + "/codex/jev-lane-hop0/dashboard/jev-train/days.json";
+  var RAW_MAIN_DAYS = "https://raw.githubusercontent.com/" + REPO + "/main/dashboard/jev-train/days.json";
+  var RAW_BRANCH_DAYS = "https://raw.githubusercontent.com/" + REPO + "/codex/jev-lane-hop0/dashboard/jev-train/days.json";
   var RAW_NEWS = "https://raw.githubusercontent.com/" + REPO + "/main/01_daily/news/";
   var DAY_CAP = 500;
   var daysCache = [];
@@ -167,7 +168,13 @@
   }
 
   async function loadDays() {
-    var urls = [RAW_DAYS + "?t=" + Date.now(), "days.json?t=" + Date.now()];
+    // Published days.json first. The writer commits to main; the
+    // codex branch stopped updating, so it must not win the fetch.
+    var urls = [
+      "days.json?t=" + Date.now(),
+      RAW_MAIN_DAYS + "?t=" + Date.now(),
+      RAW_BRANCH_DAYS + "?t=" + Date.now()
+    ];
     for (var i = 0; i < urls.length; i++) {
       try {
         var res = await fetch(urls[i], { cache: "no-store" });
