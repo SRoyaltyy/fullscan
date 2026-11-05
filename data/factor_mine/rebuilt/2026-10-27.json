@@ -5526,8 +5526,8 @@
           "fees": 2.017,
           "open_0930": 59.92,
           "open_file": "data/prices/ohlc.parquet",
-          "open_sha256": "8ffc6e0eb761fbf3bca7569796c713d3b1c6896af74399921c1cd25e863aa269",
-          "open_source": "stooq_hist:PCVX.us",
+          "open_sha256": "86473989a9087e5b02cf9c54dccd4c618ef006b7b2d8275c360f799c44d310df",
+          "open_source": "stooq_bulk:pcvx.us.txt",
           "pnl": 94.3,
           "price": 59.92,
           "reason": "exit unpriced hold on first bar after 0 sess",
@@ -5546,8 +5546,8 @@
           "fees": 2.173,
           "open_0930": 9.71,
           "open_file": "data/prices/ohlc.parquet",
-          "open_sha256": "7126571f0e40c82d248b39dfa4b5a9cf35b8f74f250f80aa31522b6bbb5ab142",
-          "open_source": "stooq_hist:SUJA.us",
+          "open_sha256": "86473989a9087e5b02cf9c54dccd4c618ef006b7b2d8275c360f799c44d310df",
+          "open_source": "stooq_bulk:suja.us.txt",
           "pnl": 67.6,
           "price": 9.71,
           "reason": "exit unpriced hold on first bar after 0 sess",
@@ -5566,8 +5566,8 @@
           "fees": 2.467,
           "open_0930": 4.55,
           "open_file": "data/prices/ohlc.parquet",
-          "open_sha256": "c1e19b15148632d2839eb5ae8e9568ccbcebfcf84c8e9b217e050a6f3fc8ae71",
-          "open_source": "stooq_hist:ZIP.us",
+          "open_sha256": "86473989a9087e5b02cf9c54dccd4c618ef006b7b2d8275c360f799c44d310df",
+          "open_source": "stooq_bulk:zip.us.txt",
           "pnl": -63.82,
           "price": 4.55,
           "reason": "exit unpriced hold on first bar after 0 sess",
@@ -9814,21 +9814,22 @@
       "tag": "rebuilt"
     }
   },
+  "supplied_open_sha": "86473989a9087e5b02cf9c54dccd4c618ef006b7b2d8275c360f799c44d310df",
   "supplied_opens": {
     "PCVX": {
       "open_0930": 59.92,
-      "source": "stooq_hist:PCVX.us",
-      "source_sha256": "8ffc6e0eb761fbf3bca7569796c713d3b1c6896af74399921c1cd25e863aa269"
+      "source": "stooq_bulk:pcvx.us.txt",
+      "source_sha256": "86473989a9087e5b02cf9c54dccd4c618ef006b7b2d8275c360f799c44d310df"
     },
     "SUJA": {
       "open_0930": 9.71,
-      "source": "stooq_hist:SUJA.us",
-      "source_sha256": "7126571f0e40c82d248b39dfa4b5a9cf35b8f74f250f80aa31522b6bbb5ab142"
+      "source": "stooq_bulk:suja.us.txt",
+      "source_sha256": "86473989a9087e5b02cf9c54dccd4c618ef006b7b2d8275c360f799c44d310df"
     },
     "ZIP": {
       "open_0930": 4.55,
-      "source": "stooq_hist:ZIP.us",
-      "source_sha256": "c1e19b15148632d2839eb5ae8e9568ccbcebfcf84c8e9b217e050a6f3fc8ae71"
+      "source": "stooq_bulk:zip.us.txt",
+      "source_sha256": "86473989a9087e5b02cf9c54dccd4c618ef006b7b2d8275c360f799c44d310df"
     }
   },
   "tag": "rebuilt"

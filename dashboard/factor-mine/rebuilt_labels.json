@@ -1305,10 +1305,10 @@
         "step": null
       },
       "2026-09-16": {
-        "class": "rebuilt",
-        "label": "rebuilt",
-        "reason": "chained forward from the rebuilt state",
-        "step": null
+        "class": "still broken",
+        "label": "missed",
+        "reason": "BRR on 2026-09-16 is missing (no brr.us.txt; Yahoo has no 2026-09-16 bar; pricehist Yahoo open is only 2026-10-28)",
+        "step": "lock"
       },
       "2026-09-29": {
         "class": "sat out (rule)",

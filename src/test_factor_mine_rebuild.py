@@ -350,17 +350,22 @@ def test_supplied_stooq_opens_agree_with_yahoo() -> None:
     assert opens_agree(50.805, 50.81)
     assert opens_agree(8.79, 8.79 * 1.006) is False
     loaded = load_supplied_opens()
-    assert len(loaded) == 17
+    assert len(loaded) == 16
     assert loaded[("2026-10-26", "SUJA")]["open"] == 9.89
     assert loaded[("2026-10-26", "RRC")]["open"] == 50.805
     assert loaded[("2026-10-02", "GRML")]["source"] == "stooq_bulk:GRML.us.txt"
     assert loaded[("2026-10-26", "QTEX")]["source_sha256"] == STOOQ_SHA
+    assert ("2026-09-16", "BRR") not in loaded
     assert loaded[("2026-09-16", "SMJF")]["open"] == 1.05
-    assert loaded[("2026-09-16", "BRR")]["open"] == 3.08
-    assert loaded[("2026-09-16", "BRR")]["source"] == "stooq_hist:SVIA.us"
-    assert loaded[("2026-10-27", "PCVX")]["open"] == 59.92
+    assert loaded[("2026-09-16", "SMJF")]["source"] == "stooq_bulk:smjf.us.txt"
+    assert loaded[("2026-09-16", "SMJF")]["source_sha256"] == STOOQ_SHA
+    assert loaded[("2026-10-27", "PCVX")] == {
+        "open": 59.92, "source": "stooq_bulk:pcvx.us.txt", "source_sha256": STOOQ_SHA,
+    }
     assert loaded[("2026-10-27", "SUJA")]["open"] == 9.71
+    assert loaded[("2026-10-27", "SUJA")]["source"] == "stooq_bulk:suja.us.txt"
     assert loaded[("2026-10-27", "ZIP")]["open"] == 4.55
+    assert loaded[("2026-10-27", "ZIP")]["source"] == "stooq_bulk:zip.us.txt"
     for key, info in loaded.items():
         assert opens_agree(info["open"], YAHOO_OPEN[key])
 
@@ -402,6 +407,19 @@ def test_lock_days_replace_only_until_the_open_is_applied() -> None:
         "strategies": gap["strategies"],
     }
     assert _lock_needs_supplied("2026-09-16", covered) is False
+    partial = {
+        "strategies": {
+            "short_alarm_h3": {
+                "class": "still broken",
+                "step": "lock",
+                "skips": [
+                    {"kind": "no_price", "ticker": "SMJF"},
+                    {"kind": "no_price", "ticker": "BRR"},
+                ],
+            }
+        }
+    }
+    assert _lock_needs_supplied("2026-09-16", partial) is False
     root = Path(__file__).resolve().parent.parent / "data" / "factor_mine" / "rebuilt"
     done = json.loads((root / "2026-10-26.json").read_text(encoding="utf-8"))
     assert _lock_needs_supplied("2026-10-26", done) is False
@@ -423,6 +441,35 @@ def test_lock_days_replace_only_until_the_open_is_applied() -> None:
     assert merged["strategies"]["short_alarm_h3"]["class"] == "rebuilt"
     assert merged["strategies"]["overnight_h1"]["picks"] == ["AAA"]
     assert merged["supplied_opens"]["SMJF"]["open_0930"] == 1.05
+
+
+def test_brr_gap_stays_missed_without_a_price() -> None:
+    import json
+    from src.factor_mine_rebuild import BRR_MISSING
+
+    root = Path(__file__).resolve().parent.parent
+    supplied = (root / "research" / "rebuild" / "opens_0930_supplied.csv").read_text(encoding="utf-8")
+    assert "BRR," not in supplied
+    assert "stooq_hist:" not in supplied
+    doc = json.loads((root / "data" / "factor_mine" / "rebuilt" / "2026-09-16.json").read_text(encoding="utf-8"))
+    row = doc["strategies"]["short_alarm_h3"]
+    assert row["class"] == "still broken"
+    assert row["step"] == "lock"
+    assert row["reason"] == BRR_MISSING
+    assert row["picks"] == []
+    assert all(fill.get("ticker") != "BRR" for fill in row.get("fills") or [])
+    labels = json.loads((root / "data" / "factor_mine" / "rebuilt" / "labels.json").read_text(encoding="utf-8"))
+    cell = labels["strategies"]["short_alarm_h3"]["2026-09-16"]
+    assert cell["label"] == "missed"
+    assert cell["reason"] == BRR_MISSING
+    later = json.loads((root / "data" / "factor_mine" / "rebuilt" / "2026-10-27.json").read_text(encoding="utf-8"))
+    alarm = later["strategies"]["short_alarm_h3"]
+    assert alarm["class"] == "rebuilt"
+    tagged = {fill["ticker"]: fill for fill in alarm["fills"] if fill.get("ticker") in ("PCVX", "SUJA", "ZIP")}
+    assert set(tagged) == {"PCVX", "SUJA", "ZIP"}
+    assert tagged["PCVX"]["open_0930"] == 59.92
+    assert tagged["PCVX"]["open_source"] == "stooq_bulk:pcvx.us.txt"
+    assert "BRR" not in (later.get("supplied_opens") or {})
 
 
 def test_build_misses_keep_the_known_reason() -> None:
@@ -474,6 +521,7 @@ def main() -> None:
         test_needs_open_list_is_the_lock_gap,
         test_supplied_stooq_opens_agree_with_yahoo,
         test_lock_days_replace_only_until_the_open_is_applied,
+        test_brr_gap_stays_missed_without_a_price,
         test_build_misses_keep_the_known_reason,
         test_auth_export_is_tried_before_login,
         test_ovcal_names_rebuilt_rule_and_missed,

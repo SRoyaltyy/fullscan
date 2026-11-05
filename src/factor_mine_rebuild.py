@@ -687,21 +687,10 @@ def _resume_for(name: str, prior: str | None, chain: dict[str, dict],
 
 
 STOOQ_SHA = "86473989a9087e5b02cf9c54dccd4c618ef006b7b2d8275c360f799c44d310df"
-# sha256 of each Stooq history page used for the later lock opens.
-# BRR.US was renamed to SVIA.US; that page is the 2026-09-16 BRR print.
-HIST_SHA = frozenset({
-    "fc7b4bd0b08bbb2157b09153c533596c9230b111b375b0c05b0a0faf009bbc7d",
-    "4aa60373d0132456d7d529e594d719c05900df2640ca4c7f22c9378bb71a4de9",
-    "8ffc6e0eb761fbf3bca7569796c713d3b1c6896af74399921c1cd25e863aa269",
-    "7126571f0e40c82d248b39dfa4b5a9cf35b8f74f250f80aa31522b6bbb5ab142",
-    "c1e19b15148632d2839eb5ae8e9568ccbcebfcf84c8e9b217e050a6f3fc8ae71",
-})
-ALLOWED_OPEN_SHA = frozenset({STOOQ_SHA}) | HIST_SHA
 # Yahoo opens used as the independent check. A Stooq print farther
-# than 0.5% from these is not used. BRR is Yahoo's 09:30 ET bar on the
-# same tape Stooq now lists as SVIA.US.
+# than 0.5% from these is not used. BRR has no dump file and no
+# 2026-09-16 Yahoo bar, so it is not in this table.
 YAHOO_OPEN = {
-    ("2026-09-16", "BRR"): 3.08,
     ("2026-09-16", "SMJF"): 1.05,
     ("2026-10-02", "GRML"): 8.79,
     ("2026-10-05", "GRML"): 8.655,
@@ -721,6 +710,13 @@ YAHOO_OPEN = {
 }
 SUJA_VOLUME = 58900
 RRC_PRIOR_CLOSE = 43.23
+# 2026-09-16 BRR is not priced. The dump has no brr.us.txt. Yahoo's BRR
+# daily chart has no bar that session, and pricehist's Yahoo open series
+# for BRR is only 2026-10-28.
+BRR_MISSING = (
+    "BRR on 2026-09-16 is missing (no brr.us.txt; "
+    "Yahoo has no 2026-09-16 bar; pricehist Yahoo open is only 2026-10-28)"
+)
 
 
 def opens_agree(stooq: float, yahoo: float) -> bool:
@@ -742,7 +738,7 @@ def load_supplied_opens(root: Path | None = None) -> dict[tuple[str, str], dict]
         day, ticker, raw_open, source, digest = line.split(",")
         price = float(raw_open)
         yahoo = YAHOO_OPEN.get((day, ticker))
-        if yahoo is None or not opens_agree(price, yahoo) or digest not in ALLOWED_OPEN_SHA:
+        if yahoo is None or not opens_agree(price, yahoo) or digest != STOOQ_SHA:
             continue
         out[(day, ticker)] = {
             "open": price,
@@ -990,6 +986,16 @@ def build_day(date: str, *, panel: dict, grouped: dict[str, list[dict]],
                 **verdict,
                 "reason": "no 09:30 open in daily bars",
             }
+        unpriced = {
+            skip.get("ticker") for skip in skips
+            if isinstance(skip, dict) and skip.get("kind") == "no_price"
+        }
+        if day == "2026-09-16" and "BRR" in unpriced:
+            verdict = {
+                "class": "still broken",
+                "step": "lock",
+                "reason": BRR_MISSING,
+            }
         entry.update(verdict)
         entry.update(_row_stamp(candidates))
         strategies[name] = entry
@@ -1061,8 +1067,15 @@ def calendar(panel: dict, empty: dict[str, dict], root: Path | None = None) -> l
     return sorted(day for day in days if len(day) == 10)
 
 
+def _no_price_tickers(row: dict) -> set[str]:
+    return {
+        skip.get("ticker") for skip in (row.get("skips") or [])
+        if isinstance(skip, dict) and skip.get("kind") == "no_price" and skip.get("ticker")
+    }
+
+
 def _lock_needs_supplied(day: str, doc: dict) -> bool:
-    """True when a lock cell is still missing a checked open we now have."""
+    """True when every unpriced name on a lock cell now has a checked open."""
     opens = {ticker for (when, ticker) in load_supplied_opens() if when == day}
     already = set(doc.get("supplied_opens") or {})
     pending = opens - already
@@ -1071,11 +1084,8 @@ def _lock_needs_supplied(day: str, doc: dict) -> bool:
     for row in (doc.get("strategies") or {}).values():
         if row.get("step") != "lock" or row.get("class") != "still broken":
             continue
-        blocked = {
-            skip.get("ticker") for skip in (row.get("skips") or [])
-            if skip.get("kind") == "no_price"
-        }
-        if blocked & pending:
+        blocked = _no_price_tickers(row)
+        if blocked and blocked <= (already | opens) and (blocked & pending):
             return True
     return False
 
@@ -1163,11 +1173,8 @@ def run_rebuild(*, root: Path | None = None, write: bool = False,
             for name, row in (have.get("strategies") or {}).items():
                 if row.get("step") != "lock":
                     continue
-                blocked = {
-                    skip.get("ticker") for skip in (row.get("skips") or [])
-                    if skip.get("kind") == "no_price"
-                }
-                if blocked & day_tickers:
+                blocked = _no_price_tickers(row)
+                if blocked and blocked <= day_tickers:
                     supplied_strategies.add(name)
             patch = bool(
                 supplied_strategies
