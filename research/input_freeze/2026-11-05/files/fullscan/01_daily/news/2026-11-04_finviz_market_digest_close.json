@@ -1,0 +1,132 @@
+{
+  "date": "2026-11-04",
+  "generated_at": "2026-11-04T16:29:15.198149-05:00",
+  "timezone": "America/New_York",
+  "source": "live",
+  "source_url": "https://elite.finviz.com/",
+  "archive_snapshot_ts": null,
+  "archive_snapshot_at": null,
+  "archive_url": null,
+  "clock_legal": true,
+  "clock_same_morning": false,
+  "clock_use": "next_open",
+  "clock_legal_for": "2026-11-05",
+  "capture_slot": "close",
+  "clock_rule": "Live post-close answer-key (~16:05 ET). Always next_open for the NEXT session (2026-11-05) — never same_morning. Writes *_finviz_market_digest_close.* only. Capture only — not tape_anchor / predict / #210.",
+  "kind": "finviz_homepage_market_digest_close",
+  "represents": "Finviz homepage post-close answer-key. clock_use is always next_open; clock_legal_for is the next NYSE session. Lives at *_finviz_market_digest_close.*. Does not replace the same_morning warm-up file. Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "US stocks closed sharply higher as Democratic sweep eased election uncertainty and oil fell on expectations of a shift in Iran policy",
+  "raw_text": "- The Dow Jones Industrial Average ($DJI) jumped 2.9% to 53,302 for its best day since April 2025, the S&P 500 ($SPX) climbed 1.8% to 7,701, the Nasdaq ($COMP) gained 1.7% and the Russell 2000 (IWM) rose about 1.35% after Democrats secured both the House and Senate and President Trump accepted the results.\n- Nine of 11 S&P 500 ($SPX) sectors advanced, led by Consumer Discretionary with a gain of more than 4% as Amazon (AMZN) rose about 6% on expectations that tighter AI and data-center rules could curb capex and improve free cash flow, while Microsoft (MSFT) gained about 6.7% amid investor concerns about tougher AI regulation.\n- Energy was the clear laggard, with the sector sliding 5.3% as West Texas Intermediate crude (@CL) fell more than 7% to about $88.71 on expectations that Democratic control would rewrite the Iran policy playbook and pressure oil prices.\n- McDonald’s (MCD) added about 6.5% after reporting adjusted EPS of $3.57, topping consensus estimates of $3.38.\n- First Solar (FSLR) advanced after Mizuho raised its price target to $328 from $324 and reiterated its Outperform rating, while 3M (MMM) climbed after announcing a $7.35 billion settlement related to forever-chemicals.\n- Stanley Black & Decker (SWK) surged about 13% after beating third-quarter EPS estimates and lifting 2024 and 2026 guidance on tariff refunds and productivity gains.\n- Zimmer Biomet (ZBH) gained about 13.5% after beating third-quarter estimates with adjusted EPS of $1.90 and raising full-year organic growth and EPS guidance.\n- Cricut (CRCT) jumped about 49% after Q3 revenue grew 11% to $188.6 million and EPS of $0.13 beat estimates alongside a $0.70 special dividend, while Kyndryl (KD) rallied about 30% on an earnings beat and Duolingo (DUOL) rose about 26% after a revenue beat and raised guidance, and AMD (AMD) advanced following a record quarter and a higher 2027 growth outlook.\n- Tesla (TSLA) fell about 3% as Texas’s flip to Democratic control raised political and regulatory risks for Musk’s companies, and Trump Media & Technology Group (DJT) dropped about 25%, while several defense stocks declined on speculation of tighter Pentagon budgets.\n- ADP (ADP) reported that private payrolls added 86,000 jobs in October, while Qualcomm (QCOM) struck a multi-year deal for SpaceX Starlink Mobile to use its Dragonwing platforms, Arm Holdings (ARM) is scheduled to report after the close, and MercadoLibre (MELI) posted Q3 revenue of $10.8 billion that beat estimates, with mixed after-hours reactions ahead of Thursday’s initial jobless claims and additional corporate results.",
+  "raw_summary_md": "- The Dow Jones Industrial Average ([$DJI](https://finviz.com/index/DJI?p=d)) **jumped 2.9%** to 53,302 for its best day since April 2025, the S&P 500 ([$SPX](https://finviz.com/index/SPX?p=d)) climbed 1.8% to 7,701, the Nasdaq ([$COMP](https://finviz.com/index/COMP?p=d)) gained 1.7% and the Russell 2000 ([IWM](https://finviz.com/quote?t=IWM)) rose about 1.35% after Democrats secured both the House and Senate and President Trump accepted the results.\n- **Nine of 11** S&P 500 ([$SPX](https://finviz.com/index/SPX?p=d)) sectors advanced, led by Consumer Discretionary with a gain of **more than 4%** as Amazon ([AMZN](https://finviz.com/quote?t=AMZN)) rose about 6% on expectations that tighter AI and data-center rules could curb capex and improve free cash flow, while Microsoft ([MSFT](https://finviz.com/quote?t=MSFT)) gained about 6.7% amid investor concerns about tougher AI regulation.\n- **Energy was the clear laggard**, with the sector sliding **5.3%** as West Texas Intermediate crude ([@CL](https://finviz.com/futures_charts?t=CL)) fell more than 7% to about $88.71 on expectations that Democratic control would rewrite the Iran policy playbook and pressure oil prices.\n- McDonald’s ([MCD](https://finviz.com/quote?t=MCD)) **added about 6.5%** after reporting adjusted EPS of $3.57, topping consensus estimates of $3.38.\n- First Solar ([FSLR](https://finviz.com/quote?t=FSLR)) advanced after Mizuho raised its price target to $328 from $324 and reiterated its Outperform rating, while 3M ([MMM](https://finviz.com/quote?t=MMM)) climbed after announcing a **$7.35 billion settlement** related to forever-chemicals.\n- Stanley Black & Decker ([SWK](https://finviz.com/quote?t=SWK)) **surged about 13%** after beating third-quarter EPS estimates and lifting 2024 and 2026 guidance on tariff refunds and productivity gains.\n- Zimmer Biomet ([ZBH](https://finviz.com/quote?t=ZBH)) **gained about 13.5%** after beating third-quarter estimates with adjusted EPS of $1.90 and raising full-year organic growth and EPS guidance.\n- Cricut ([CRCT](https://finviz.com/quote?t=CRCT)) **jumped about 49%** after Q3 revenue grew 11% to $188.6 million and EPS of $0.13 beat estimates alongside a $0.70 special dividend, while Kyndryl ([KD](https://finviz.com/quote?t=KD)) rallied about 30% on an earnings beat and Duolingo ([DUOL](https://finviz.com/quote?t=DUOL)) rose about 26% after a revenue beat and raised guidance, and AMD ([AMD](https://finviz.com/quote?t=AMD)) advanced following a record quarter and a higher 2027 growth outlook.\n- Tesla ([TSLA](https://finviz.com/quote?t=TSLA)) **fell about 3%** as Texas’s flip to Democratic control raised political and regulatory risks for Musk’s companies, and Trump Media & Technology Group ([DJT](https://finviz.com/quote?t=DJT)) **dropped about 25%**, while several defense stocks declined on speculation of tighter Pentagon budgets.\n- ADP ([ADP](https://finviz.com/quote?t=ADP)) reported that private payrolls added 86,000 jobs in October, while Qualcomm ([QCOM](https://finviz.com/quote?t=QCOM)) struck a multi-year deal for SpaceX Starlink Mobile to use its Dragonwing platforms, Arm Holdings ([ARM](https://finviz.com/quote?t=ARM)) is scheduled to report after the close, and MercadoLibre ([MELI](https://finviz.com/quote?t=MELI)) posted Q3 revenue of $10.8 billion that beat estimates, with mixed after-hours reactions ahead of Thursday’s initial jobless claims and additional corporate results.",
+  "index_moves": [
+    {
+      "name": "Dow Jones Industrial Average",
+      "code": "DJI",
+      "change_pct": 2.9,
+      "verb": "jumped"
+    },
+    {
+      "name": "S&P 500",
+      "code": "SPX",
+      "change_pct": 1.8,
+      "verb": "climbed"
+    },
+    {
+      "name": "Nasdaq",
+      "code": "COMP",
+      "change_pct": 1.7,
+      "verb": "gained"
+    },
+    {
+      "name": "Russell 2000",
+      "code": "RUT",
+      "change_pct": 1.35,
+      "verb": "rose"
+    }
+  ],
+  "oil": {
+    "name": "crude",
+    "price": 88.71,
+    "verb": "fell",
+    "direction": "down"
+  },
+  "cpi": null,
+  "fed_odds": null,
+  "named_tickers": [
+    "AMZN",
+    "MSFT",
+    "MCD",
+    "FSLR",
+    "MMM",
+    "SWK",
+    "ZBH",
+    "CRCT",
+    "KD",
+    "DUOL",
+    "AMD",
+    "TSLA",
+    "DJT",
+    "ADP",
+    "QCOM",
+    "ARM",
+    "MELI"
+  ],
+  "named_leaders": [
+    "AMZN",
+    "MSFT",
+    "MCD",
+    "FSLR",
+    "MMM",
+    "SWK",
+    "ZBH",
+    "CRCT",
+    "KD",
+    "DUOL",
+    "AMD",
+    "TSLA",
+    "DJT",
+    "ADP",
+    "QCOM",
+    "ARM",
+    "MELI"
+  ],
+  "calendar": [
+    "ADP (ADP) reported that private payrolls added 86,000 jobs in October, while Qualcomm (QCOM) struck a multi-year deal for SpaceX Starlink Mobile to use its Dragonwing platforms, Arm Holdings (ARM) is scheduled to report after the close, and MercadoLibre (MELI) posted Q3 revenue of $10.8 billion that beat estimates, with mixed after-hours reactions ahead of Thursday’s initial jobless claims and additional corporate results."
+  ],
+  "prior_close": {
+    "spx": 1.8,
+    "nasdaq": 1.7,
+    "dow": 2.9
+  },
+  "cpi_fed": {
+    "cpi": null,
+    "fed_odds": null
+  },
+  "next_session_calendar": {
+    "housing": false,
+    "retail": false,
+    "fed": false,
+    "bullets": [
+      "ADP (ADP) reported that private payrolls added 86,000 jobs in October, while Qualcomm (QCOM) struck a multi-year deal for SpaceX Starlink Mobile to use its Dragonwing platforms, Arm Holdings (ARM) is scheduled to report after the close, and MercadoLibre (MELI) posted Q3 revenue of $10.8 billion that beat estimates, with mixed after-hours reactions ahead of Thursday’s initial jobless claims and additional corporate results."
+    ],
+    "text": "ADP (ADP) reported that private payrolls added 86,000 jobs in October, while Qualcomm (QCOM) struck a multi-year deal for SpaceX Starlink Mobile to use its Dragonwing platforms, Arm Holdings (ARM) is scheduled to report after the close, and MercadoLibre (MELI) posted Q3 revenue of $10.8 billion that beat estimates, with mixed after-hours reactions ahead of Thursday’s initial jobless claims and additional corporate results."
+  },
+  "earnings_slate": {
+    "tickers": [],
+    "text": ""
+  },
+  "geo_grain": {
+    "geo": true,
+    "grain": false,
+    "flags": [
+      "geo"
+    ],
+    "text": "Energy was the clear laggard, with the sector sliding 5.3% as West Texas Intermediate crude (@CL) fell more than 7% to about $88.71 on expectations that Democratic control would rewrite the Iran policy playbook and pressure oil prices."
+  },
+  "finviz_id": 330765,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-11-04T16:08:31.143",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "good"
+}

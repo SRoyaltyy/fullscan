@@ -1,0 +1,10 @@
+{
+ "risk_tilt": null,
+ "macros": [],
+ "sector_tilts": {},
+ "tickers": {
+  "ADBE": -1.5
+ },
+ "b1_inject": "NEWS_JUDGE: n=7 rescued=5\nMACRO risk-on: [pol] Democratic Congress sweep drives broad rally, lower yields/oil (regime/1d-1w)\nMACRO rates: [pol] 10Y yield slides on midterm outcome and oil drop; duration relief (session/1d)\nMACRO labor: [pol] September job openings jump ahead of payrolls; growth positive, rate path two-sided (session/1d)\nSECTOR semis/AI: [pol] AMD data-center beat/forecast eases AI spend fears; chip ETF dip-buy inflows (SMH/SOX)\nSECTOR software: [pol] Citi cuts Adobe to Sell on growth reset/competition; SaaS multiple caution (IGV)\nSECTOR clean energy: [pol] Chinese renewables surge on expected US policy shift; TAN/ICLN sympathy (conditional)\nINTERACTION: Yields-down + midterm risk-on supports breadth; Adobe/AI-budget caution offsets blanket SaaS bid; AI infra mixed on regulatory risk vs chip demand.\nWATCH: Ranking hinges on Democratic-sweep policy interpretation; if rally fades, rates/oil and AMD become primary.",
+ "date": "2026-11-05"
+}
