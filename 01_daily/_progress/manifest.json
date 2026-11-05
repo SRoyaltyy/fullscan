@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-05T04:26:26-05:00",
+  "updated_at": "2026-11-05T04:39:53-05:00",
   "runs": [
     {
       "date": "2026-10-28",
@@ -237,9 +237,9 @@
     },
     {
       "date": "2026-11-05",
-      "workflow": "homepage_digest",
-      "file": "2026-11-05_homepage_digest.json",
-      "updated_at": "2026-11-05T04:26:26-05:00"
+      "workflow": "finviz_scrape",
+      "file": "2026-11-05_finviz_scrape.json",
+      "updated_at": "2026-11-05T04:39:53-05:00"
     }
   ]
 }
