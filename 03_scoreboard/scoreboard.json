@@ -35517,7 +35517,7 @@
       "direction_hit": true,
       "magnitude_hit": false,
       "divergence_flagged": true,
-      "divergence_verdict": null,
+      "divergence_verdict": "leading_right",
       "per_factor_breakdown": [
         {
           "factor": "B0_ASIA",
@@ -35565,7 +35565,7 @@
           "status": "miss"
         }
       ],
-      "reflection_lesson_ref": null,
+      "reflection_lesson_ref": "02_lessons/candidate/2026-11-05_lesson.md",
       "sources_used": [],
       "horizon_calls": {
         "HORIZON_3D": {
@@ -35603,7 +35603,8 @@
       "key_interaction": "The Democratic sweep changed the meaning of the AI capex trade from a bipartisan growth theme to a regulatory target, while Qualcomm provided the earnings trigger and the Fed provided the rates headwind — one root cause (AI sustainability) with multiple symptoms, amplified by mechanical liquidation",
       "knowable_at_9am": "partially",
       "attribution_contested": "yes",
-      "outlier_watch": "Energy equities diverged from crude’s collapse, and bonds rallied while stocks crashed — a growth-scare signal rather than a simple risk-off move; defensives held up while tech was liquidated"
+      "outlier_watch": "Energy equities diverged from crude’s collapse, and bonds rallied while stocks crashed — a growth-scare signal rather than a simple risk-off move; defensives held up while tech was liquidated",
+      "lesson_schema_ok": true
     }
   ]
 }
