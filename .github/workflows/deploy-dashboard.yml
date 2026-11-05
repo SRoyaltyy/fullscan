@@ -209,6 +209,15 @@ jobs:
           # Root /<sub>/ redirects are written by scripts/publish_dashboard.sh.
           # Do not copy these trees to the site root; that duplicate is what
           # made scanner-backtest publication exceed the Pages budget.
+          # holdup h1 stay required root aliases (redirects, not a second tree).
+          python3 - <<'PY'
+          from pathlib import Path
+          subs = Path("scripts/publish_dashboard.sh").read_text().split('SUBS="', 1)[1].split('"', 1)[0].split()
+          missing = [name for name in ("holdup", "h1", "updown") if name not in subs]
+          if missing:
+              raise SystemExit("Pages root alias gate missing " + " ".join(missing))
+          print("root alias gate includes holdup h1")
+          PY
 
           if [ ! -f pages_out/dashboard/index.html ]; then
             echo "ERROR: no dashboard index.html to publish"

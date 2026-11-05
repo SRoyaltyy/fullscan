@@ -109,7 +109,11 @@ for n in $(seq 1 "$ATTEMPTS"); do
       exit 1
     fi
   fi
-  if ! python3 -c 'import sys; from scripts.publish_scanner_snapshot import slim_duplicate_root_aliases; print("[pages] collapsed duplicate root aliases, bytes removed", slim_duplicate_root_aliases(sys.argv[1]))' "$TMP"; then
+  # The publish script is often started with cwd outside the checkout
+  # (the pages-gate tests do this). Repo root has to be on PYTHONPATH
+  # or `import scripts...` cannot see this tree.
+  REPO_ROOT="$(cd "$PUBLISH_SCRIPT_DIR/.." && pwd)"
+  if ! PYTHONPATH="${REPO_ROOT}${PYTHONPATH:+:$PYTHONPATH}" python3 -c 'import sys; from scripts.publish_scanner_snapshot import slim_duplicate_root_aliases; print("[pages] collapsed duplicate root aliases, bytes removed", slim_duplicate_root_aliases(sys.argv[1]))' "$TMP"; then
     echo "[pages] ERROR: could not collapse duplicate root aliases; retaining the published site"
     exit 1
   fi
