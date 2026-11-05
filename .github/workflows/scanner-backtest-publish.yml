@@ -1,9 +1,12 @@
 name: Refresh scanner test page
-# Updated by hand. One run replaces the public snapshot and is limited
-# to 360 minutes, so this workflow has no weekday schedule.
-# src/staleness_coverage.json marks the page manual.
-# Fill-forward is out of scope. meta.json generated_at remains 2026-10-25.
+# Weekday schedule appends articles published after the sealed snapshot.
+# Sealed results.jsonl lines stay byte-identical. A dispatch without
+# fill_forward still replaces the snapshot from the pinned intake.
+# One run is limited to 360 minutes.
 on:
+  schedule:
+    # 17:30 ET, after the cash close. Weekdays only.
+    - cron: "30 22 * * 1-5"
   push:
     branches: [main]
     paths:
@@ -36,6 +39,7 @@ on:
       - 'src/data/**'
       - 'scripts/*backtest*'
       - 'scripts/publish_scanner_snapshot.py'
+      - 'scripts/scanner_fill_forward.py'
       - 'scripts/materialize_filing_texts.py'
       - 'scripts/bootstrap_semantics.py'
       - 'scripts/build_semantic_resources.py'
@@ -50,6 +54,10 @@ on:
     inputs:
       allow_development_sample:
         description: Explicitly publish a one-issuer development sample
+        type: boolean
+        default: false
+      fill_forward:
+        description: Append articles after the sealed snapshot. Do not rescore sealed rows.
         type: boolean
         default: false
 permissions:
@@ -100,6 +108,8 @@ jobs:
     timeout-minutes: 360
     outputs:
       commit: ${{ steps.retain.outputs.commit }}
+    env:
+      FILL_FORWARD: ${{ github.event_name == 'schedule' || github.event.inputs.fill_forward == 'true' }}
     permissions:
       contents: write
       actions: read
@@ -114,7 +124,7 @@ jobs:
             requirements-filing-parser.txt
             dashboard/scanner-backtest
             excel_bot/data/finviz_with_descriptions.csv
-            data/news_intake/2026-10-17/documents.json
+            data/news_intake
           sparse-checkout-cone-mode: false
       - uses: actions/setup-python@v5
         with:
@@ -175,15 +185,43 @@ jobs:
           scripts.test_publish_scanner_snapshot
           scripts.test_select_parser_profiles
           scripts.test_materialize_completed_profiles src.test_completed_profile_store
+      - name: Prepare fill-forward news from the sealed snapshot
+        if: env.FILL_FORWARD == 'true'
+        run: |
+          set -euo pipefail
+          THROUGH=$(python - <<'PY'
+          from datetime import datetime
+          from zoneinfo import ZoneInfo
+          print(datetime.now(ZoneInfo("America/New_York")).date().isoformat())
+          PY
+          )
+          python scripts/scanner_fill_forward.py prepare \
+            --base data/news_intake/2026-10-17/documents.json \
+            --intake-root data/news_intake \
+            --sealed dashboard/scanner-backtest/results.jsonl \
+            --after 2026-10-17 \
+            --through "$THROUGH" \
+            --out fill-news.json
+          mkdir -p generated-scanner
+          cp dashboard/scanner-backtest/results.jsonl generated-scanner/results.jsonl
+          cp dashboard/scanner-backtest/meta.json generated-scanner/meta.json
+          echo "NEWS_PATH=fill-news.json" >> "$GITHUB_ENV"
+          echo "FILL_FLAG=--fill-forward" >> "$GITHUB_ENV"
+      - name: Use the pinned intake when this is not a fill-forward
+        if: env.FILL_FORWARD != 'true'
+        run: |
+          echo "NEWS_PATH=data/news_intake/2026-10-17/documents.json" >> "$GITHUB_ENV"
+          echo "FILL_FLAG=" >> "$GITHUB_ENV"
       - name: Parse the exact article headlines with the pinned grammar engine
         run: |
           python -m pip install --only-binary=:all: --index-url https://pypi.org/simple -r requirements-filing-parser.txt
-          python -m scripts.annotate_article_entities --news data/news_intake/2026-10-17/documents.json --out article-entities.json
+          python -m scripts.annotate_article_entities --news "$NEWS_PATH" --out article-entities.json
       - name: Score full intake through the current headline evidence engine
         env:
           SCANNER_SOURCE_SHA: ${{ github.sha }}
         run: >-
           python -I -S scripts/offline_evidence_checks.py --backtest-export
+          --news "$NEWS_PATH" $FILL_FLAG
           --filing-profiles filing-profiles --as-of "$FILING_AS_OF"
           --article-entities article-entities.json --keyword-comparisons browser_preview
           --profile-assets "${{ needs.source.outputs.profile_assets }}"
@@ -191,6 +229,12 @@ jobs:
           --profile-archive-url "https://github.com/$GITHUB_REPOSITORY/actions/runs/${{ needs.source.outputs.run }}"
           --profile-base-url "${PROFILE_PUBLIC_BASE_URL:-}"
           --workers 1 --shard-size 200 --out-dir generated-scanner
+      - name: Sealed result lines are unchanged
+        if: env.FILL_FORWARD == 'true'
+        run: >-
+          python scripts/scanner_fill_forward.py check-prefix
+          --sealed dashboard/scanner-backtest/results.jsonl
+          --current generated-scanner/results.jsonl
       - name: Check the complete snapshot budget before touching the public page
         run: |
           python - <<'PY'

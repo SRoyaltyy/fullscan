@@ -167,7 +167,9 @@ def validate(directory, source_sha):
         raise ValueError('missing, duplicate, or inconsistent results')
     if len(articles) != len(ids) or {str(a['id']) for a in articles} != set(ids):
         raise ValueError('display articles do not match scored results')
-    if any(row.get('snapshot_id') != snapshot['snapshot_id'] for row in rows):
+    allowed = {snapshot['snapshot_id']}
+    allowed.update(str(item) for item in (meta.get('sealed_snapshot_ids') or []) if item)
+    if any(row.get('snapshot_id') not in allowed for row in rows):
         raise ValueError('mixed result snapshots')
     if snapshot.get('keyword_comparison_mode')=='browser_preview' and any(
             row.get('keyword_comparison_mode')!='browser_preview' or 'keyword_comparison' in row for row in rows):

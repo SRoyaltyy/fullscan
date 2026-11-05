@@ -185,6 +185,69 @@ def test_late_book_stays_missing_and_the_next_session_appends(tmp_path, monkeypa
     assert "missing: book not on main before 09:30 ET 2026-10-06" not in lines
 
 
+def test_unproven_commit_does_not_record_a_miss(tmp_path, monkeypatch):
+    paper, _books, blob = _layout(tmp_path)
+    _patch(monkeypatch, tmp_path, _prices())
+    monkeypatch.setattr(pa, "first_main_commit_at", lambda rel: None)
+    logged = io.StringIO()
+    with redirect_stdout(logged):
+        pa.run(date="2026-10-06", top_n=10, capital=10000)
+    assert (paper / "equity_curve.csv").read_bytes() == blob
+    assert not (paper / "missed.json").exists()
+    assert "unproven:" in logged.getvalue()
+
+
+def test_false_miss_clears_and_a_late_miss_stays(tmp_path, monkeypatch):
+    paper, _books, blob = _layout(tmp_path)
+    _patch(monkeypatch, tmp_path, _prices())
+    (paper / "missed.json").write_text(json.dumps({
+        "sessions": {
+            "2026-10-02": {
+                "status": "missed",
+                "reason": "stock book was not on main before 09:30 ET",
+            },
+            "2026-10-06": {
+                "status": "missed",
+                "reason": "stock book was not on main before 09:30 ET",
+            },
+        }
+    }), encoding="utf-8")
+
+    def landed(rel: str) -> datetime:
+        session = Path(rel).name[:10]
+        if session == "2026-10-02":
+            return _stamp(session, 10, 2)
+        return _stamp(session, 9, 23)
+
+    monkeypatch.setattr(pa, "first_main_commit_at", landed)
+    pa.run(date="2026-10-06", top_n=10, capital=10000)
+    text = (paper / "equity_curve.csv").read_text(encoding="utf-8")
+    assert text.encode("utf-8").startswith(blob)
+    assert "2026-10-02" not in text
+    assert "2026-10-06,1d_top," in text
+    missed = json.loads((paper / "missed.json").read_text(encoding="utf-8"))
+    assert missed["sessions"]["2026-10-02"]["status"] == "missed"
+    assert "2026-10-06" not in missed["sessions"]
+
+
+def test_open_session_waits_for_the_close(tmp_path, monkeypatch):
+    paper, _books, blob = _layout(tmp_path)
+    _patch(monkeypatch, tmp_path, _prices())
+    (paper / "missed.json").write_text(json.dumps({
+        "sessions": {
+            "2026-10-06": {
+                "status": "missed",
+                "reason": "stock book was not on main before 09:30 ET",
+            },
+        }
+    }), encoding="utf-8")
+    monkeypatch.setattr(pa, "session_close_printed", lambda session, now=None: False)
+    pa.run(date="2026-10-06", top_n=10, capital=10000)
+    assert (paper / "equity_curve.csv").read_bytes() == blob
+    missed = json.loads((paper / "missed.json").read_text(encoding="utf-8"))
+    assert "2026-10-06" not in missed["sessions"]
+
+
 def test_open_cutoff_is_strict_and_reads_the_oldest_main_commit(tmp_path, monkeypatch):
     assert pa.committed_before_session_open(_stamp("2026-10-02", 9, 29), "2026-10-02")
     assert not pa.committed_before_session_open(_stamp("2026-10-02", 9, 30), "2026-10-02")
@@ -431,5 +494,8 @@ if __name__ == "__main__":
     _run(test_unpriced_resume_does_not_skip_ahead)
     _run(test_book_committed_before_0930_is_appended)
     _run(test_late_book_stays_missing_and_the_next_session_appends)
+    _run(test_unproven_commit_does_not_record_a_miss)
+    _run(test_false_miss_clears_and_a_late_miss_stays)
+    _run(test_open_session_waits_for_the_close)
     _run(test_open_cutoff_is_strict_and_reads_the_oldest_main_commit)
     print("paper append ok")

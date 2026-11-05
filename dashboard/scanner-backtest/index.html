@@ -351,7 +351,10 @@ async function runTest() {
     if (mode === "static") {
       const result = staticResults.get(String(testedArticle.id));
       if (!result) throw new Error("no precomputed result for this article id");
-      if (staticMeta.snapshot && result.snapshot_id !== staticMeta.snapshot.snapshot_id)
+      const sealedIds = (staticMeta && staticMeta.sealed_snapshot_ids) || [];
+      const sameSnapshot = staticMeta.snapshot && result.snapshot_id === staticMeta.snapshot.snapshot_id;
+      const sealedSnapshot = sealedIds.indexOf(result.snapshot_id) >= 0;
+      if (staticMeta.snapshot && !sameSnapshot && !sealedSnapshot)
         throw new Error("Cached result does not match this snapshot; regenerate artifacts.");
       if(result.keyword_comparison_mode==="browser_preview" && !result.keyword_comparison) {
         const index=await keywordIndexForText(testedArticle.text || "");
@@ -416,7 +419,7 @@ async function loadStatic() {
   const m = staticMeta || {};
   const runDay = String(m.generated_at || "2026-10-25").slice(0, 10);
   const manual = document.getElementById("manual-stamp");
-  if (manual) manual.textContent = "updated by hand, last run " + runDay;
+  if (manual) manual.textContent = (m.fill_forward ? "fill-forward through " : "updated by hand, last run ") + runDay;
   renderSnapshot(m.snapshot);
   const fullN = staticArticles.filter((a) => a.full_text).length;
   text("status",

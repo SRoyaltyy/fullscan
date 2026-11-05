@@ -172,6 +172,16 @@ class SnapshotPublishTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, 'filing identity'):
                 validate(root, 'source')
 
+    def test_sealed_prior_snapshot_is_not_a_mixed_result(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            self.fixture(root)
+            (root/'results.jsonl').write_text(json.dumps({'id': 'one', 'snapshot_id': 'older'}) + '\n')
+            meta = json.loads((root/'meta.json').read_text())
+            meta['sealed_snapshot_ids'] = ['older']
+            (root/'meta.json').write_text(json.dumps(meta))
+            self.assertEqual(validate(root, 'source')['articles'], 1)
+
     def test_mixed_results_are_rejected(self):
         with tempfile.TemporaryDirectory() as directory:
             root=Path(directory)

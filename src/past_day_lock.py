@@ -40,6 +40,7 @@ import io
 import json
 import re
 import subprocess
+from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -238,6 +239,10 @@ def _seal(rows: list[dict], record: str, date: str, digest: str,
         "record": record,
         "sha256": digest,
     }
+    # Going forward only. A row already in the manifest is returned above
+    # and is not rewritten, so historical seals do not gain a timestamp.
+    if record == "flatten_robust":
+        row["sealed_at"] = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
     _append_lines([row], path)
     rows.append(row)
     return rows

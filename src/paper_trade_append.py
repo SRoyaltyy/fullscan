@@ -199,15 +199,23 @@ def _repo_is_shallow() -> bool:
         return True
     return (out.stdout or '').strip() == 'true'
 
-def first_main_commit_at(rel: str) -> datetime | None:
-    """Committer time of the oldest commit on main that touches ``rel``.
+def _github_repo() -> str:
+    """``owner/name`` from origin, or empty when the remote is not GitHub."""
+    try:
+        proc = subprocess.run(['git', 'remote', 'get-url', 'origin'], cwd=str(engine.ROOT), capture_output=True, text=True, timeout=15, check=False)
+    except (OSError, subprocess.TimeoutExpired):
+        return ''
+    url = (proc.stdout or '').strip()
+    if url.endswith('.git'):
+        url = url[:-4]
+    for marker in ('github.com/', 'github.com:'):
+        if marker in url:
+            return url.split(marker, 1)[1].strip('/')
+    return ''
 
-    A shallow clone cannot prove that commit, so this returns None
-    rather than treating the tip as the first landing.
-    """
-    rel = str(rel or '').replace('\\', '/').lstrip('/')
-    if not rel or _repo_is_shallow():
-        return None
+
+def _local_first_commit_at(rel: str) -> datetime | None:
+    """Oldest committer time on a full main checkout. None when unproven."""
     for ref in ('origin/main', 'main'):
         try:
             verify = subprocess.run(['git', 'rev-parse', '--verify', ref], cwd=str(engine.ROOT), capture_output=True, timeout=15, check=False)
@@ -237,6 +245,48 @@ def first_main_commit_at(rel: str) -> datetime | None:
             return None
     return None
 
+
+def _remote_first_commit_at(rel: str) -> datetime | None:
+    """Oldest committer time via the commits API.
+
+    A shallow checkout cannot see the adding commit. The tip is not
+    treated as that commit. An API miss stays unproven (None).
+    """
+    repo = _github_repo()
+    if not repo or not rel:
+        return None
+    try:
+        proc = subprocess.run(
+            ['gh', 'api', '--paginate', f'/repos/{repo}/commits?path={rel}&sha=main&per_page=100', '--jq', '.[-1].commit.committer.date'],
+            cwd=str(engine.ROOT), capture_output=True, text=True, timeout=90, check=False,
+        )
+    except (OSError, subprocess.TimeoutExpired):
+        return None
+    if proc.returncode != 0:
+        return None
+    lines = [line.strip().strip('"') for line in (proc.stdout or '').splitlines() if line.strip() and line.strip() != 'null']
+    if not lines:
+        return None
+    stamp = lines[-1].replace('Z', '+00:00')
+    try:
+        return datetime.fromisoformat(stamp)
+    except ValueError:
+        return None
+
+
+def first_main_commit_at(rel: str) -> datetime | None:
+    """Committer time of the oldest commit on main that touches ``rel``.
+
+    A shallow clone asks GitHub for that commit instead of treating the
+    tip as the first landing. None means the time is unproven.
+    """
+    rel = str(rel or '').replace('\\', '/').lstrip('/')
+    if not rel:
+        return None
+    if _repo_is_shallow():
+        return _remote_first_commit_at(rel)
+    return _local_first_commit_at(rel)
+
 def book_on_main_before_open(session: str) -> bool:
     """The dated stock book was first committed on main before 09:30 ET that day."""
     rel = f'data/stock_book/{str(session)[:10]}_stock_book.json'
@@ -245,19 +295,47 @@ def book_on_main_before_open(session: str) -> bool:
         return False
     return committed_before_session_open(when, session)
 
+def session_close_printed(session: str, now: datetime | None=None) -> bool:
+    """True once 16:00 ET on ``session`` has passed.
+
+    An intraday Yahoo bar is not the session close. The curve row waits.
+    """
+    et = ZoneInfo('America/New_York')
+    now = now or datetime.now(et)
+    if now.tzinfo is None:
+        now = now.replace(tzinfo=et)
+    else:
+        now = now.astimezone(et)
+    year, month, day = (int(part) for part in str(session)[:10].split('-'))
+    close = datetime(year, month, day, 16, 0, tzinfo=et)
+    return now >= close
+
+
 def _eligible_append_books(books: list[tuple[str, Path]]) -> list[tuple[str, Path]]:
     """Drop sessions whose book was not on main before that day's 09:30 ET.
 
     Later eligible sessions stay in order. No curve row is invented for
     a dropped day; the sim carries the last printed state forward.
+    An unproven commit time (shallow clone, API down) does not record a
+    miss. A proven-early book clears a false miss. The curve row itself
+    waits until that session's 16:00 ET close.
     """
     kept: list[tuple[str, Path]] = []
     for session, path in books:
-        if book_on_main_before_open(session):
-            kept.append((session, path))
+        day = str(session)[:10]
+        when = first_main_commit_at(f'data/stock_book/{day}_stock_book.json')
+        if when is None:
+            print(f'unproven: first main commit for {day} stock book is not visible; not a miss', flush=True)
             continue
-        print(f'missing: book not on main before 09:30 ET {str(session)[:10]}', flush=True)
-        record_missed_session(session)
+        if not committed_before_session_open(when, day):
+            print(f'missing: book not on main before 09:30 ET {day}', flush=True)
+            record_missed_session(day)
+            continue
+        clear_false_miss(day)
+        if not session_close_printed(day):
+            print(f'open: {day} close is not printed; curve row waits', flush=True)
+            continue
+        kept.append((session, path))
     return kept
 
 
@@ -291,8 +369,38 @@ def record_missed_session(session: str) -> None:
     path.write_text(json.dumps(current, indent=2, sort_keys=True) + '\n', encoding='utf-8')
     page = engine.DASH_DIR / 'index.html'
     if page.is_file():
-        from src.pages_publish_gate import stamp_missed_note
-        stamp_missed_note(page, day)
+        from src.pages_publish_gate import stamp_recorded_misses
+        stamp_recorded_misses(page, root=engine.ROOT)
+
+
+def clear_false_miss(session: str) -> bool:
+    """Drop a missed mark once the stock book is proven before 09:30 ET.
+
+    A proven-late miss is left alone. This does not append a curve row.
+    """
+    day = str(session or '')[:10]
+    if len(day) != 10 or not book_on_main_before_open(day):
+        return False
+    path = engine.PAPER_DIR / 'missed.json'
+    if not path.is_file():
+        return False
+    try:
+        current = json.loads(path.read_text(encoding='utf-8'))
+    except (OSError, json.JSONDecodeError):
+        return False
+    if not isinstance(current, dict):
+        return False
+    sessions = current.get('sessions')
+    if not isinstance(sessions, dict) or day not in sessions:
+        return False
+    row = sessions.get(day)
+    if not isinstance(row, dict) or row.get('status') != 'missed':
+        return False
+    sessions.pop(day, None)
+    current['sessions'] = sessions
+    path.write_text(json.dumps(current, indent=2, sort_keys=True) + '\n', encoding='utf-8')
+    print(f'[paper] cleared false miss {day}; stock book was on main before 09:30 ET', flush=True)
+    return True
 
 def _open_tickers(state: dict) -> set[str]:
     names = {'SPY'}

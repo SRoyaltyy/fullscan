@@ -192,8 +192,15 @@ def test_flatten_append_and_edit(tmp: Path) -> None:
     assert prepare_flatten_card("2026-10-06", clock, path, manifest=manifest) == clock
     next_day = rerun.replace("2026-10-06", "2026-10-07")
     _write_flatten(day_dir, manifest, "2026-10-07", next_day)
-    sealed_dates = [row.get("date") for row in load_manifest(manifest) if row["kind"] == "day"]
+    sealed = [row for row in load_manifest(manifest) if row["kind"] == "day"]
+    sealed_dates = [row.get("date") for row in sealed]
     assert sealed_dates == ["2026-10-06"]
+    stamp = str(sealed[0].get("sealed_at") or "")
+    assert len(stamp) == 20 and stamp.endswith("Z") and stamp[10] == "T"
+    later = next_day.replace("2026-10-07", "2026-10-08")
+    _write_flatten(day_dir, manifest, "2026-10-08", later)
+    again = [row for row in load_manifest(manifest) if row.get("date") == "2026-10-06"]
+    assert len(again) == 1 and again[0].get("sealed_at") == stamp
     edited = rerun.replace("BBB", "ZZZ")
 
     def check() -> None:
