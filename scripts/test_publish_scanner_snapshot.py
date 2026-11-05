@@ -221,6 +221,130 @@ class SnapshotPublishTests(unittest.TestCase):
                 os.chdir(old)
 
 
+    def test_duplicate_root_alias_becomes_a_redirect_without_touching_the_dashboard_copy(self):
+        import shutil
+        from scripts.publish_scanner_snapshot import slim_duplicate_root_aliases, root_alias_redirect
+        with tempfile.TemporaryDirectory() as directory:
+            site = Path(directory)
+            dash = site/'dashboard'/'hard-red-exceptions'
+            (dash/'t').mkdir(parents=True)
+            payload = b'{"ticker":"AAA"}'*1000
+            (dash/'t'/'AAA.json').write_bytes(payload)
+            (dash/'index.html').write_text('investigator history')
+            shutil.copytree(dash, site/'hard-red-exceptions')
+            unique = site/'notes'
+            unique.mkdir()
+            (unique/'only.txt').write_text('keep this root page')
+            (site/'dashboard'/'holdup').mkdir(parents=True)
+            (site/'dashboard'/'holdup'/'index.html').write_text('holdup')
+            removed = slim_duplicate_root_aliases(site)
+            self.assertGreater(removed, len(payload) - 500)
+            self.assertEqual((dash/'t'/'AAA.json').read_bytes(), payload)
+            alias = (site/'hard-red-exceptions'/'index.html').read_text()
+            self.assertEqual(alias, root_alias_redirect('hard-red-exceptions'))
+            self.assertFalse((site/'hard-red-exceptions'/'t').exists())
+            self.assertEqual((site/'notes'/'only.txt').read_text(), 'keep this root page')
+            self.assertIn('../dashboard/holdup/', (site/'holdup'/'index.html').read_text())
+            self.assertEqual(slim_duplicate_root_aliases(site), 0)
+
+    def test_divergent_root_alias_is_not_deleted(self):
+        from scripts.publish_scanner_snapshot import slim_duplicate_root_aliases
+        with tempfile.TemporaryDirectory() as directory:
+            site = Path(directory)
+            dash = site/'dashboard'/'jev-train'
+            dash.mkdir(parents=True)
+            (dash/'index.html').write_text('dashboard copy')
+            alias = site/'jev-train'
+            alias.mkdir()
+            (alias/'index.html').write_text('dashboard copy')
+            (alias/'extra.json').write_text('{"only":"root"}')
+            self.assertEqual(slim_duplicate_root_aliases(site), 0)
+            self.assertEqual((alias/'extra.json').read_text(), '{"only":"root"}')
+            self.assertEqual((dash/'index.html').read_text(), 'dashboard copy')
+
+    def test_page_bootstrap_is_fetched_from_the_snapshot_when_it_still_exceeds_pages(self):
+        import hashlib
+        from scripts.publish_scanner_snapshot import stage_page, EXTERNAL_BOOTSTRAP_MARKER
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            source = root/'snapshot'
+            self.fixture(source)
+            body = b'['+(b'{"id":"one","text":"headline"},'*40)+b'{"id":"one"}]'
+            (source/'articles.json').write_bytes(body)
+            (source/'index.html').write_text('<h1>Scanner backtest</h1>\n'+EXTERNAL_BOOTSTRAP_MARKER)
+            (source/'results.jsonl').write_bytes(b'{"id":"one","snapshot_id":"snapshot"}\n'*30)
+            before = (source/'articles.json').read_bytes()
+            commit = 'b'*40
+            kept = (source/'meta.json').stat().st_size+(source/'index.html').stat().st_size
+            bare = source/'index.html'
+            bare.write_text('<h1>Scanner backtest</h1>\n')
+            with self.assertRaisesRegex(ValueError, 'page bootstrap exceeds safe Pages budget'):
+                stage_page(source, root/'unsafe', snapshot_commit=commit, outside_bytes=0, site_limit=kept+10)
+            self.assertFalse((root/'unsafe').exists())
+            bare.write_text('<h1>Scanner backtest</h1>\n'+EXTERNAL_BOOTSTRAP_MARKER)
+            result = stage_page(source, root/'page', snapshot_commit=commit, outside_bytes=0, site_limit=kept+10)
+            self.assertTrue(result['external_assets'])
+            self.assertIn('articles.json', result['external_bootstrap'])
+            self.assertFalse((root/'page'/'articles.json').exists())
+            self.assertFalse((root/'page'/'results.jsonl').exists())
+            self.assertEqual(before, (source/'articles.json').read_bytes())
+            meta = json.loads((root/'page'/'meta.json').read_text())
+            self.assertIn('/'+commit+'/', meta['asset_base_url'])
+            self.assertEqual(meta['external_bootstrap']['articles.json']['sha256'], hashlib.sha256(before).hexdigest())
+            self.assertEqual(meta['external_bootstrap']['articles.json']['bytes'], len(before))
+
+    def test_unrelated_scanner_page_files_still_count_and_are_kept(self):
+        from scripts.publish_scanner_snapshot import stage_page, EXTERNAL_BOOTSTRAP_MARKER
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            source = root/'snapshot'
+            self.fixture(source)
+            (source/'articles.json').write_bytes(b'x'*5000)
+            (source/'index.html').write_text(EXTERNAL_BOOTSTRAP_MARKER)
+            dest = root/'dashboard'/'scanner-backtest'
+            catalog = dest/'compare'/'catalog.json'
+            catalog.parent.mkdir(parents=True)
+            catalog.write_text('{"catalog":true}')
+            kept = (source/'meta.json').stat().st_size+(source/'index.html').stat().st_size+catalog.stat().st_size
+            commit = 'c'*40
+            with self.assertRaisesRegex(ValueError, 'page bootstrap exceeds safe Pages budget'):
+                stage_page(source, dest, snapshot_commit=commit, outside_bytes=0, site_limit=kept-1)
+            self.assertEqual(catalog.read_text(), '{"catalog":true}')
+            stage_page(source, dest, snapshot_commit=commit, outside_bytes=0, site_limit=kept+10)
+            self.assertEqual((dest/'compare'/'catalog.json').read_text(), '{"catalog":true}')
+            self.assertFalse((dest/'articles.json').exists())
+
+    def test_publish_workflows_collapse_root_aliases_before_the_pages_budget(self):
+        root = Path(__file__).resolve().parents[1]
+        # Identify publishers by workflow name, not filename. Refresh, recover,
+        # and keyword publication all call stage_page and must slim exact-copy
+        # root aliases before they measure the Pages budget.
+        wanted = {
+            'Refresh scanner test page',
+            'Recover scanner page publication',
+            'Publish concrete scanner keywords',
+        }
+        workflow_dir = root/'.github'/'workflows'
+        self.assertTrue(workflow_dir.is_dir(), 'publish workflows are not in this checkout')
+        found = {}
+        for path in sorted(workflow_dir.glob('*.yml')):
+            text = path.read_text(encoding='utf-8')
+            title = next((line.split(':', 1)[1].strip() for line in text.splitlines() if line.startswith('name:')), '')
+            if title in wanted:
+                found[title] = (path, text)
+        self.assertEqual(set(found), wanted, sorted(p.name for p in workflow_dir.glob('*.yml')))
+        for title, (path, text) in found.items():
+            slim = text.find('slim_duplicate_root_aliases')
+            outside = text.find('pages_outside_bytes')
+            stage = text.find('stage_page')
+            self.assertGreater(slim, -1, path.name+' does not collapse root aliases')
+            self.assertGreater(outside, slim, title+' must collapse aliases before measuring the Pages budget')
+            self.assertGreater(stage, outside, title+' must measure the Pages budget before staging the page')
+        script = (root/'scripts/publish_dashboard.sh').read_text(encoding='utf-8')
+        self.assertIn('slim_duplicate_root_aliases', script)
+        self.assertNotIn('cp -a "$TMP/dashboard/${sub}/."', script)
+
+
 if __name__=='__main__':
     unittest.main()
 

@@ -280,7 +280,7 @@ def test_live_curve_keeps_2026_11_04_recorded_as_missed() -> None:
     """11-04 stays off the sealed paper curve. The page shows the miss."""
     root = Path(__file__).resolve().parent.parent
     page = (root / "dashboard" / "index.html").read_text(encoding="utf-8")
-    assert gate.data_asof_from_html(page) == "2026-11-03"
+    assert gate.data_asof_from_html(page) == "2026-11-05"
     assert gate.page_shows_missed_note("2026-11-04", text=page)
     match = gate._DATES_ARRAY.search(page)
     assert match is not None
@@ -441,12 +441,26 @@ def _blob(bare: Path, rel: str) -> str:
     )
 
 
+def _published_paths(bare: Path) -> set[str]:
+    listing = subprocess.check_output(
+        ["git", "--git-dir", str(bare), "ls-tree", "-r", "--name-only", "gh-pages"],
+        text=True,
+    )
+    return set(listing.splitlines())
+
+
+def _assert_root_redirect(bare: Path, name: str) -> None:
+    html = _blob(bare, f"{name}/index.html")
+    assert 'http-equiv="refresh"' in html
+    assert f"url=../dashboard/{name}/" in html
+
+
 def test_publish_restores_h1_and_holdup_aliases() -> None:
     """A news-intake-style force publish must keep /h1/ and /holdup/.
 
     The prebuilt tree is the partial case: stale dashboard/h1, no holdup,
-    and no root aliases. The checkout is main. The published branch has
-    to overlay both folders and copy them to the site root.
+    and no root aliases. The checkout is main. The published branch overlays
+    both folders under dashboard/ and publishes the root URLs as redirects.
     """
     with tempfile.TemporaryDirectory() as d:
         base = Path(d)
@@ -469,14 +483,16 @@ def test_publish_restores_h1_and_holdup_aliases() -> None:
         partial = _publish(ws, bare, out)
         assert partial.returncode == 0, partial.stdout + partial.stderr
         assert "[pages] published" in partial.stdout, partial.stdout + partial.stderr
-        assert _blob(bare, "h1/index.html") == "h1-from-main"
+        _assert_root_redirect(bare, "h1")
         assert _blob(bare, "dashboard/h1/index.html") == "h1-from-main"
         assert _blob(bare, "dashboard/h1/log.json") == '{"book":"h1"}'
-        assert _blob(bare, "holdup/index.html") == "holdup-from-main"
+        _assert_root_redirect(bare, "holdup")
         assert _blob(bare, "dashboard/holdup/index.html") == "holdup-from-main"
         assert _blob(bare, "dashboard/holdup/status.json") == '{"book":"holdup"}'
         assert _blob(bare, "dashboard/news-intake/index.html") == "intake-from-main"
         assert _blob(bare, ".nojekyll") == ""
+        assert "h1/log.json" not in _published_paths(bare)
+        assert "holdup/status.json" not in _published_paths(bare)
 
         # Same checkout, no prebuilt tree: the free-news-intake call.
         intake_bare = base / "intake.git"
@@ -484,19 +500,19 @@ def test_publish_restores_h1_and_holdup_aliases() -> None:
         intake = _publish(ws, intake_bare, None)
         assert intake.returncode == 0, intake.stdout + intake.stderr
         assert "[pages] published" in intake.stdout, intake.stdout + intake.stderr
-        assert _blob(intake_bare, "h1/index.html") == "h1-from-main"
-        assert _blob(intake_bare, "holdup/index.html") == "holdup-from-main"
+        _assert_root_redirect(intake_bare, "h1")
+        _assert_root_redirect(intake_bare, "holdup")
         assert _blob(intake_bare, "dashboard/h1/index.html") == "h1-from-main"
         assert _blob(intake_bare, "dashboard/holdup/index.html") == "holdup-from-main"
         assert _blob(intake_bare, "dashboard/news-intake/index.html") == "intake-from-main"
 
 
 def test_publish_copies_updown_to_the_site_root() -> None:
-    """https://sroyaltyy.github.io/fullscan/updown/ is the root alias.
+    """https://sroyaltyy.github.io/fullscan/updown/ stays a root URL.
 
-    The stock-book dashboard artifact is only the main index, and the
-    publish script used to root-copy day-movers but not updown, so the
-    live root URL 404s while /dashboard/updown/ still loads.
+    The stock-book dashboard artifact is only the main index. The root
+    URL is a redirect to /dashboard/updown/, where the page and its data
+    file live. A second full tree is not published.
     """
     with tempfile.TemporaryDirectory() as d:
         base = Path(d)
@@ -509,10 +525,10 @@ def test_publish_copies_updown_to_the_site_root() -> None:
         _write_page(ws, "dashboard/updown/data/index.json", '{"model":"updown_o2c_v2"}')
         result = _publish(ws, bare, None)
         assert result.returncode == 0, result.stdout + result.stderr
-        assert _blob(bare, "updown/index.html") == "updown-page"
+        _assert_root_redirect(bare, "updown")
         assert _blob(bare, "dashboard/updown/index.html") == "updown-page"
         assert _blob(bare, "dashboard/updown/data/index.json") == '{"model":"updown_o2c_v2"}'
-        assert _blob(bare, "updown/data/index.json") == '{"model":"updown_o2c_v2"}'
+        assert "updown/data/index.json" not in _published_paths(bare)
 
 
 def test_preopen_2026_10_07_resolves_to_2026_10_06() -> None:
@@ -752,12 +768,26 @@ def test_workflows_wire_the_gate() -> None:
     assert "jev-train" in dep
     assert "overlay jev-train" in dep
     assert "jev-train" in pub
-    root_lists = []
-    for block in dep.split("for sub in ")[1:]:
-        if "Root copy pages_out/${sub}" in block:
-            root_lists.append(block.split("; do", 1)[0])
-    assert root_lists and all("updown" in header for header in root_lists)
-    assert " updown " in f" {pub.split('SUBS=', 1)[1].split(chr(10), 1)[0]} "
+    assert "Root copy pages_out/${sub}" not in dep
+    assert 'cp -a "pages_out/dashboard/${sub}/."' not in dep
+    assert "slim_duplicate_root_aliases" in pub
+    assert "PYTHONPATH" in pub
+    subs = pub.split('SUBS="', 1)[1].split('"', 1)[0].split()
+    for name in ("updown", "holdup", "h1"):
+        assert name in subs
+    with tempfile.TemporaryDirectory() as d:
+        site = Path(d)
+        dash = site / "dashboard" / "notes"
+        dash.mkdir(parents=True)
+        (dash / "index.html").write_text("canonical", encoding="utf-8")
+        alias = site / "notes"
+        alias.mkdir()
+        (alias / "index.html").write_text("canonical", encoding="utf-8")
+        (alias / "extra.json").write_text('{"only":"root"}', encoding="utf-8")
+        from scripts.publish_scanner_snapshot import slim_duplicate_root_aliases
+        assert slim_duplicate_root_aliases(site) == 0
+        assert (alias / "extra.json").read_text(encoding="utf-8") == '{"only":"root"}'
+        assert (dash / "index.html").read_text(encoding="utf-8") == "canonical"
     book_art = book.split("name: dashboard", 1)[1].split("if-no-files-found", 1)[0]
     assert "dashboard/updown/" in book_art
     tickets = (root / ".github" / "workflows" / "publish_strategy_tickets.yml").read_text(

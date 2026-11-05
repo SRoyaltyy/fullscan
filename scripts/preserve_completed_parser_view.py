@@ -76,10 +76,18 @@ def preserve(site, ref='FETCH_HEAD'):
             # still come from the published archive above.
             published_index.parent.mkdir(parents=True, exist_ok=True)
             published_index.write_text(keep_local_index, encoding='utf-8')
+        # The canonical scanner page is dashboard/scanner-backtest. A second
+        # full copy at /scanner-backtest/ is what pushed GitHub Pages over its
+        # budget. Keep a redirect so the short URL still opens the same page.
         alias = site/'scanner-backtest'
         if alias.exists():
             shutil.rmtree(alias)
-        shutil.copytree(target, alias)
+        alias.mkdir(parents=True)
+        try:
+            from scripts.publish_scanner_snapshot import root_alias_redirect
+        except ImportError:
+            from publish_scanner_snapshot import root_alias_redirect
+        (alias/'index.html').write_text(root_alias_redirect('scanner-backtest'), encoding='utf-8')
         restored = True
     names = git('ls-tree', '-r', '--name-only', ref, '--', PREFIX).decode().splitlines()
     if PREFIX+'manifest.json' not in names:
@@ -95,11 +103,14 @@ def preserve(site, ref='FETCH_HEAD'):
         page = site/parent/'index.html'
         if not page.is_file():
             continue
+        html = page.read_text()
+        # A root redirect has no scanner title. The canonical page carries the link.
+        if 'http-equiv="refresh"' in html and '../dashboard/scanner-backtest/' in html:
+            continue
         target = page.parent/'completed'
         target.mkdir(parents=True, exist_ok=True)
         (target/'manifest.json').write_bytes(manifest)
         (target/'index.html').write_bytes(viewer)
-        html = page.read_text()
         if 'id="completed-stock-results"' not in html:
             title = '<h1>Scanner backtest</h1>'
             if title not in html:
