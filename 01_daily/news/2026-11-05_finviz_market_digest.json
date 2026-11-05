@@ -1,0 +1,100 @@
+{
+  "date": "2026-11-05",
+  "generated_at": "2026-11-05T04:26:09.561380-05:00",
+  "timezone": "America/New_York",
+  "source": "live",
+  "source_url": "https://elite.finviz.com/",
+  "archive_snapshot_ts": null,
+  "archive_snapshot_at": null,
+  "archive_url": null,
+  "clock_legal": true,
+  "clock_same_morning": true,
+  "clock_use": "same_morning",
+  "clock_legal_for": "2026-11-05",
+  "clock_rule": "Live: Generated must be before 09:30 ET on this date or leave missing. Wayback: capture before 09:30 ET that day is legal for that morning's Pre-Open. Afternoon Wayback is legal for the NEXT session open only (prior-day close recap), marked by clock_legal_for. Gaps stay gaps. Capture only — not tape_anchor / predict / #210.",
+  "kind": "finviz_homepage_market_digest",
+  "represents": "Finviz homepage market-day prose. Same-morning Pre-Open when Generated is before 09:30 ET; afternoon Wayback is a prior-day close recap legal for the next session only. Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "US futures point to a mixed open as tech lags ahead of heavy earnings, key labor data and Fed speeches",
+  "raw_text": "- S&P 500 futures (@ES) fall 0.11%, Dow Jones futures (@YM) climb 0.45%, Nasdaq 100 futures (@NQ) drop 0.76%, and Russell 2000 futures (@ER2) rise 0.28%, signaling a mixed open with relative weakness in technology\n- Fidelity National Information Services (FIS) trades roughly flat pre-market after cutting 2026 guidance and warning of a 2027 EPS decline despite a Q3 beat\n- Amdocs (DOX) trades roughly flat in early trading after cutting its FY27 outlook on a contractual T-Mobile dispute, as Oppenheimer downgrades the shares\n- Nurix Therapeutics (NRIX) rises about 3.5% pre-market after Sanofi terminates its STAT6 degrader program and analysts cut price targets\n- Estee Lauder (EL) trades roughly flat in pre-market after analysts raise price targets following a fiscal Q1 beat and new 2030 financial goals, while Rivian (RIVN) slips modestly\n- Parker-Hannifin (PH), Cigna (CI), Cummins (CMI), Duke Energy (DUK), Zoetis (ZTS), and Rockwell Automation (ROK) report earnings before the opening bell, with initial share price reactions already visible\n- At 8:30 AM ET, investors will receive initial jobless claims, continuing claims, nonfarm productivity, and unit labor costs data\n- Federal Reserve officials Hammack and Barkin are scheduled to deliver speeches later in the morning\n- European equities edge higher while major Asian indexes trade mixed overnight\n- Oil (@CL) holds near recent lower levels while gold (@GC) prices move higher in early trading",
+  "raw_summary_md": "- S&P 500 futures ([@ES](https://finviz.com/futures_charts?t=ES)) **fall 0.11%**, Dow Jones futures ([@YM](https://finviz.com/futures_charts?t=YM)) **climb 0.45%**, Nasdaq 100 futures ([@NQ](https://finviz.com/futures_charts?t=NQ)) **drop 0.76%**, and Russell 2000 futures ([@ER2](https://finviz.com/futures_charts?t=ER2)) rise 0.28%, signaling a mixed open with relative weakness in technology\n- Fidelity National Information Services ([FIS](https://finviz.com/quote?t=FIS)) trades roughly flat pre-market after **cutting 2026 guidance** and warning of a 2027 EPS decline despite a Q3 beat\n- Amdocs ([DOX](https://finviz.com/quote?t=DOX)) trades roughly flat in early trading after **cutting its FY27 outlook** on a contractual T-Mobile dispute, as Oppenheimer downgrades the shares\n- Nurix Therapeutics ([NRIX](https://finviz.com/quote?t=NRIX)) **rises about 3.5%** pre-market after Sanofi terminates its STAT6 degrader program and analysts cut price targets\n- Estee Lauder ([EL](https://finviz.com/quote?t=EL)) trades roughly flat in pre-market after analysts raise price targets following a fiscal Q1 beat and new 2030 financial goals, while Rivian ([RIVN](https://finviz.com/quote?t=RIVN)) slips modestly\n- Parker-Hannifin ([PH](https://finviz.com/quote?t=PH)), Cigna ([CI](https://finviz.com/quote?t=CI)), Cummins ([CMI](https://finviz.com/quote?t=CMI)), Duke Energy ([DUK](https://finviz.com/quote?t=DUK)), Zoetis ([ZTS](https://finviz.com/quote?t=ZTS)), and Rockwell Automation ([ROK](https://finviz.com/quote?t=ROK)) **report earnings before the opening bell**, with initial share price reactions already visible\n- At 8:30 AM ET, investors will receive **initial jobless claims**, continuing claims, nonfarm productivity, and unit labor costs data\n- Federal Reserve officials Hammack and Barkin are scheduled to deliver **speeches later in the morning**\n- European equities **edge higher** while major Asian indexes trade mixed overnight\n- Oil ([@CL](https://finviz.com/futures_charts?t=CL)) holds near recent lower levels while gold ([@GC](https://finviz.com/futures_charts?t=GC)) **prices move higher** in early trading",
+  "index_moves": [],
+  "oil": null,
+  "cpi": null,
+  "fed_odds": {
+    "pct": 3.5,
+    "action": "cut",
+    "text": "about 3.5% pre-market after Sanofi terminates its STAT6 degrader program and analysts cut"
+  },
+  "named_tickers": [
+    "FIS",
+    "DOX",
+    "NRIX",
+    "EL",
+    "RIVN",
+    "PH",
+    "CI",
+    "CMI",
+    "DUK",
+    "ZTS",
+    "ROK"
+  ],
+  "named_leaders": [
+    "FIS",
+    "DOX",
+    "NRIX",
+    "EL",
+    "RIVN",
+    "PH",
+    "CI",
+    "CMI",
+    "DUK",
+    "ZTS",
+    "ROK"
+  ],
+  "calendar": [],
+  "prior_close": {
+    "spx": null,
+    "nasdaq": null,
+    "dow": null
+  },
+  "cpi_fed": {
+    "cpi": null,
+    "fed_odds": {
+      "pct": 3.5,
+      "action": "cut",
+      "text": "about 3.5% pre-market after Sanofi terminates its STAT6 degrader program and analysts cut"
+    }
+  },
+  "next_session_calendar": {
+    "housing": false,
+    "retail": false,
+    "fed": true,
+    "bullets": [
+      "Federal Reserve officials Hammack and Barkin are scheduled to deliver speeches later in the morning"
+    ],
+    "text": "Federal Reserve officials Hammack and Barkin are scheduled to deliver speeches later in the morning"
+  },
+  "earnings_slate": {
+    "tickers": [
+      "PH",
+      "CI",
+      "CMI",
+      "DUK",
+      "ZTS",
+      "ROK"
+    ],
+    "text": "Parker-Hannifin (PH), Cigna (CI), Cummins (CMI), Duke Energy (DUK), Zoetis (ZTS), and Rockwell Automation (ROK) report earnings before the opening bell, with initial share price reactions already visible"
+  },
+  "geo_grain": {
+    "geo": false,
+    "grain": false,
+    "flags": [],
+    "text": ""
+  },
+  "finviz_id": 332474,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-11-05T04:08:38.263",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "neutral"
+}
