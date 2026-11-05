@@ -34,12 +34,12 @@
       "path": "dashboard/scanner-backtest/index.html",
       "kind": "html",
       "lag_limit": null,
-      "manual": true,
-      "frozen": true,
-      "writer": null,
-      "last_run": "2026-10-25",
-      "fill_forward": false,
-      "date_note": "scanner-backtest-publish.yml, scanner-keyword-publish.yml, and publish-completed-parser.yml have no weekday cron. They publish when parser inputs change. Manual and frozen for the daily canary. Fill-forward is out of scope. dashboard/scanner-backtest/meta.json generated_at remains 2026-10-25."
+      "manual": false,
+      "frozen": false,
+      "writer": ".github/workflows/scanner-backtest-publish.yml",
+      "last_run": "2026-10-17",
+      "fill_forward": true,
+      "date_note": "Weekday cron 30 22 * * 1-5 on scanner-backtest-publish.yml appends the earliest unsealed published day after 2026-10-17. One day per run stays inside the 99MB snapshot file budget. Sealed results.jsonl lines stay byte-identical. lag_limit is null so the html page is not a numeric canary row. The committed article span still ends 2026-10-17 until a fill-forward run lands."
     },
     {
       "path": "dashboard/jev-train/days.json",

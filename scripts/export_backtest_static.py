@@ -187,6 +187,8 @@ def main(argv=None):
     p.add_argument('--shard-size', type=int, default=100)
     p.add_argument('--text-limit', type=int, default=3000)
     p.add_argument('--out-dir', type=Path, default=OUT_DIR)
+    p.add_argument('--fill-forward', action='store_true',
+                   help='Score only articles that are not already in results.jsonl. Sealed lines stay byte-identical.')
     a = p.parse_args(argv)
     if min(a.workers, a.shard_size, a.text_limit) < 1 or min(a.limit, a.offset) < 0:
         p.error('workers/shard-size/text-limit must be positive; limit/offset nonnegative')
@@ -205,7 +207,17 @@ def main(argv=None):
     snapshot['news_sha256'] = hashlib.sha256(a.news.read_bytes()).hexdigest()
     if a.article_entities:snapshot['article_entities_sha256']=hashlib.sha256(a.article_entities.read_bytes()).hexdigest()
     snapshot['snapshot_id'] = hashlib.sha256(json.dumps(snapshot, sort_keys=True).encode()).hexdigest()
-    rows = validate_resume(a.out_dir, snapshot)
+    sealed_text = ''
+    sealed_ids: list[str] = []
+    results_path = a.out_dir / 'results.jsonl'
+    if a.fill_forward and results_path.is_file():
+        sealed_text = results_path.read_text(encoding='utf-8')
+        if sealed_text and not sealed_text.endswith('\n'):
+            raise ValueError('sealed results.jsonl has no trailing newline; refusing to append')
+        rows = [json.loads(line) for line in sealed_text.splitlines() if line.strip()]
+        sealed_ids = sorted({str(row.get('snapshot_id') or '') for row in rows if row.get('snapshot_id')})
+    else:
+        rows = validate_resume(a.out_dir, snapshot)
     articles = load_test_articles(a.news)
     if a.article_entities:
         annotations=json.loads(a.article_entities.read_text())
@@ -268,6 +280,13 @@ def main(argv=None):
     meta.update(articles=len(rows), articles_with_passes=sum(bool(r['pass_count']) for r in rows),
                 keyword_index=keyword_index,
                 generated_at=time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime()))
+    if a.fill_forward:
+        meta['fill_forward'] = True
+        if sealed_ids:
+            meta['sealed_snapshot_ids'] = sealed_ids
+        if sealed_text:
+            from scripts.scanner_fill_forward import assert_sealed_prefix
+            assert_sealed_prefix(sealed_text, results_path.read_text(encoding='utf-8'))
     (a.out_dir / 'meta.json').write_text(json.dumps(meta, indent=2) + '\n', encoding='utf-8')
     return 0
 

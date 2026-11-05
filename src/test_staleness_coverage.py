@@ -35,8 +35,10 @@ def test_scanner_is_frozen_and_jev_has_a_daily_writer():
     by_path = {page["path"]: page for page in pages()}
     scanner = by_path["dashboard/scanner-backtest/index.html"]
     jev = by_path["dashboard/jev-train/days.json"]
-    assert scanner["manual"] is True and scanner["frozen"] is True
-    assert scanner["writer"] is None
+    assert scanner["manual"] is False and scanner["frozen"] is False
+    assert scanner["fill_forward"] is True
+    assert scanner["lag_limit"] is None
+    assert "scanner-backtest-publish.yml" in scanner["writer"]
     assert jev["manual"] is False and jev["frozen"] is False
     assert jev["already_in_canary"] is True
     assert jev["lag_limit"] == 1

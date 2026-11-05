@@ -192,8 +192,15 @@ def test_flatten_append_and_edit(tmp: Path) -> None:
     assert prepare_flatten_card("2026-10-06", clock, path, manifest=manifest) == clock
     next_day = rerun.replace("2026-10-06", "2026-10-07")
     _write_flatten(day_dir, manifest, "2026-10-07", next_day)
-    sealed_dates = [row.get("date") for row in load_manifest(manifest) if row["kind"] == "day"]
+    sealed = [row for row in load_manifest(manifest) if row["kind"] == "day"]
+    sealed_dates = [row.get("date") for row in sealed]
     assert sealed_dates == ["2026-10-06"]
+    stamp = str(sealed[0].get("sealed_at") or "")
+    assert len(stamp) == 20 and stamp.endswith("Z") and stamp[10] == "T"
+    later = next_day.replace("2026-10-07", "2026-10-08")
+    _write_flatten(day_dir, manifest, "2026-10-08", later)
+    again = [row for row in load_manifest(manifest) if row.get("date") == "2026-10-06"]
+    assert len(again) == 1 and again[0].get("sealed_at") == stamp
     edited = rerun.replace("BBB", "ZZZ")
 
     def check() -> None:
@@ -401,6 +408,22 @@ def test_manifest_prefix() -> None:
     _expect_fail("manifest line changed", changed)
 
 
+def test_baseline_match_is_not_a_rescore() -> None:
+    """2026-11-05 tickets stay the bytes on main. The seal hash is older.
+
+    A bare manifest check still reports that stale seal. The against-main
+    check does not, because this branch did not change the file.
+    """
+    from src.past_day_lock import PastDayLockError, check_against, check_manifest
+    try:
+        check_manifest()
+    except PastDayLockError as exc:
+        assert "strategy_tickets 2026-11-05" in str(exc)
+    else:
+        raise AssertionError("11-05 seal does not match the file; bare check must say so")
+    check_against("origin/main")
+
+
 def test_workflow_runs_the_check() -> None:
     text = (ROOT / ".github" / "workflows" / "past_day_lock.yml").read_text(encoding="utf-8")
     assert "ubuntu-latest" in text
@@ -569,6 +592,7 @@ def main() -> None:
         test_csv_append_and_past_edit,
         test_morning_chain_replay,
         test_manifest_prefix,
+        test_baseline_match_is_not_a_rescore,
         test_workflow_runs_the_check,
         test_sha_stable,
     ]
