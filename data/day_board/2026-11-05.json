@@ -2566,6 +2566,22 @@
       "workflow": "Stock Book ALL (one-shot)",
       "run_id": "42041017234",
       "manifest": "research/input_freeze/2026-11-05/manifest.json"
+    },
+    {
+      "path": "01_daily/_channel1/2026-11-05_predict.json",
+      "at": "2026-11-05T09:58:11-05:00",
+      "commit_msg": "auto: universe labels + weather + match [2026-11-05]",
+      "workflow": "Label + Weather (daily)",
+      "run_id": "42046466058",
+      "manifest": "research/input_freeze/2026-11-05/manifest.json"
+    },
+    {
+      "path": "data/exports/finviz_2026-11-05.scraped_at",
+      "at": "2026-11-05T09:58:11-05:00",
+      "commit_msg": "auto: universe labels + weather + match [2026-11-05]",
+      "workflow": "Label + Weather (daily)",
+      "run_id": "42046466058",
+      "manifest": "research/input_freeze/2026-11-05/manifest.json"
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
  "date": "2026-11-05",
- "generated_at": "2026-11-05T09:33:42.274273-05:00",
+ "generated_at": "2026-11-05T09:58:08.371631-05:00",
  "stance_vocabulary": [
   "favorable",
   "neutral",
@@ -17,23 +17,21 @@
   "fed_score": 0.0,
   "dollar_oil_score": 0.5,
   "futures_score": -0.5,
-  "yields": "rising",
-  "yields_source": "fred_dgs10",
-  "dgs10_delta_1d": 0.04,
-  "dgs10_current": 4.95,
+  "yields": "flat",
+  "yields_source": "llm_factor_fallback",
   "dollar": "flat",
   "dollar_source": "dxy",
-  "dxy_pct_1d": 0.13,
-  "vix_ratio": 0.899,
-  "vix_spot": 16.9,
-  "vix_delta_1d": 0.29,
+  "dxy_pct_1d": 0.14,
+  "vix_ratio": 0.935,
+  "vix_spot": 18.71,
+  "vix_delta_1d": 2.1,
   "vix_ratio_source": "vix/vix3m",
-  "vix": "falling",
-  "oil_pct_1d": 1.92,
+  "vix": "spiking",
+  "oil_pct_1d": 2.03,
   "oil": "rising",
   "fear_greed": null,
   "fear_greed_label": null,
-  "regime_corr": 0.141,
+  "regime_corr": 0.082,
   "sectors": {
    "Basic Materials": {
     "score": -1.5750000000000002,
@@ -245,14 +243,14 @@
   },
   "beta": {
    "high": {
-    "stance": "neutral",
-    "confidence": "low",
-    "why": "risk-mixed, VIX falling"
+    "stance": "hostile",
+    "confidence": "high",
+    "why": "VIX spiking — high beta is the exit door [channel1 + general]"
    },
    "low": {
-    "stance": "neutral",
-    "confidence": "low",
-    "why": "risk-mixed, VIX falling"
+    "stance": "favorable",
+    "confidence": "medium",
+    "why": "defensive ballast bid in stress [general + channel1]"
    },
    "mid": {
     "stance": "neutral",
@@ -284,14 +282,14 @@
   },
   "vol": {
    "high": {
-    "stance": "neutral",
-    "confidence": "low",
-    "why": "calm tape — vol regime not decisive [general + channel1]"
+    "stance": "hostile",
+    "confidence": "medium",
+    "why": "stress market — high-vol names de-rate fast [general + channel1]"
    },
    "low": {
-    "stance": "neutral",
+    "stance": "favorable",
     "confidence": "low",
-    "why": "calm tape"
+    "why": "low-vol preferred in stress"
    },
    "mid": {
     "stance": "neutral",
@@ -318,14 +316,14 @@
   },
   "lev": {
    "high": {
-    "stance": "hostile",
-    "confidence": "medium",
-    "why": "yields rising — leverage amplifies the downside [factors + general]"
+    "stance": "neutral",
+    "confidence": "low",
+    "why": "—"
    },
    "low": {
-    "stance": "favorable",
+    "stance": "neutral",
     "confidence": "low",
-    "why": "balance-sheet strength preferred in stress"
+    "why": "—"
    },
    "mid": {
     "stance": "neutral",
@@ -340,14 +338,14 @@
   },
   "style": {
    "growth": {
-    "stance": "hostile",
-    "confidence": "medium",
-    "why": "yields rising — long-duration growth de-rates [factor: Bond yields]"
+    "stance": "neutral",
+    "confidence": "low",
+    "why": "yields flat/unknown"
    },
    "value": {
-    "stance": "favorable",
-    "confidence": "medium",
-    "why": "rising yields/reflation favors value & cyclicals [factor: Bond yields]"
+    "stance": "neutral",
+    "confidence": "low",
+    "why": "yields flat/unknown"
    },
    "blend": {
     "stance": "neutral",
