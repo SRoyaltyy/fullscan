@@ -201,6 +201,7 @@ jobs:
             --sealed dashboard/scanner-backtest/results.jsonl \
             --after 2026-10-17 \
             --through "$THROUGH" \
+            --one-day \
             --out fill-news.json
           mkdir -p generated-scanner
           cp dashboard/scanner-backtest/results.jsonl generated-scanner/results.jsonl

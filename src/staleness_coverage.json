@@ -39,7 +39,7 @@
       "writer": ".github/workflows/scanner-backtest-publish.yml",
       "last_run": "2026-10-17",
       "fill_forward": true,
-      "date_note": "Weekday cron 30 22 * * 1-5 on scanner-backtest-publish.yml appends articles published after 2026-10-17. Sealed results.jsonl lines stay byte-identical. lag_limit is null so the html page is not a numeric canary row. The committed article span still ends 2026-10-17 until a fill-forward run lands."
+      "date_note": "Weekday cron 30 22 * * 1-5 on scanner-backtest-publish.yml appends the earliest unsealed published day after 2026-10-17. One day per run stays inside the 99MB snapshot file budget. Sealed results.jsonl lines stay byte-identical. lag_limit is null so the html page is not a numeric canary row. The committed article span still ends 2026-10-17 until a fill-forward run lands."
     },
     {
       "path": "dashboard/jev-train/days.json",

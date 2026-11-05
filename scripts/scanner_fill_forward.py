@@ -79,18 +79,35 @@ def prepare_forward_news(base_docs: list[dict], later: list[tuple[str, list[dict
     return out + added
 
 
+def earliest_published_day(docs: list[dict], base_count: int) -> list[dict]:
+    """Keep the sealed base plus the earliest new published day only.
+
+    One run must not dump every later intake into one snapshot. The
+    publication budget is 99MB per file, and a three-week pool does not fit.
+    """
+    added = docs[base_count:]
+    if not added:
+        return docs
+    first = _day(added[0].get('published_at') or added[0].get('date'))
+    kept = [doc for doc in added if _day(doc.get('published_at') or doc.get('date')) == first]
+    return docs[:base_count] + kept
+
+
 def prepare_file(base: Path, intake_root: Path, results: Path, *,
-                 after: str, through: str, out: Path) -> int:
+                 after: str, through: str, out: Path, one_day: bool = False) -> int:
     later = []
     if intake_root.is_dir():
         for path in sorted(intake_root.glob('*/documents.json')):
             if path.resolve() == base.resolve():
                 continue
             later.append((path.parent.name, _docs(path)))
-    docs = prepare_forward_news(_docs(base), later, sealed_ids(results), after=after, through=through)
+    base_docs = _docs(base)
+    docs = prepare_forward_news(base_docs, later, sealed_ids(results), after=after, through=through)
+    if one_day:
+        docs = earliest_published_day(docs, len(base_docs))
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(json.dumps(docs, ensure_ascii=False), encoding='utf-8')
-    added = len(docs) - len(_docs(base))
+    added = len(docs) - len(base_docs)
     print(f'fill-forward news {len(docs)} articles ({added} new) -> {out}')
     return added
 
@@ -105,12 +122,13 @@ def main(argv: list[str] | None = None) -> int:
     prep.add_argument('--after', required=True)
     prep.add_argument('--through', required=True)
     prep.add_argument('--out', type=Path, required=True)
+    prep.add_argument('--one-day', action='store_true')
     check = sub.add_parser('check-prefix')
     check.add_argument('--sealed', type=Path, required=True)
     check.add_argument('--current', type=Path, required=True)
     args = parser.parse_args(argv)
     if args.cmd == 'prepare':
-        prepare_file(args.base, args.intake_root, args.sealed, after=args.after, through=args.through, out=args.out)
+        prepare_file(args.base, args.intake_root, args.sealed, after=args.after, through=args.through, out=args.out, one_day=args.one_day)
         return 0
     assert_sealed_prefix(args.sealed.read_text(encoding='utf-8'), args.current.read_text(encoding='utf-8'))
     print('sealed results prefix held')

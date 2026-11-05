@@ -28,6 +28,10 @@ class FillForwardTests(unittest.TestCase):
         out = prepare_forward_news(base, later, {'old'}, after='2026-10-17', through='2026-11-05')
         self.assertEqual(out[0], base[0])
         self.assertEqual([row['id'] for row in out], ['old', 'new'])
+        from scripts.scanner_fill_forward import earliest_published_day
+        two = out + [{'id': 'later', 'published_at': '2026-10-27T12:00:00Z', 'title': 'next'}]
+        one = earliest_published_day(two, 1)
+        self.assertEqual([row['id'] for row in one], ['old', 'new'])
 
     def test_prepare_file_roundtrip(self):
         from scripts.scanner_fill_forward import prepare_file
