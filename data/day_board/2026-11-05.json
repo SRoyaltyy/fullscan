@@ -1,6 +1,6 @@
 {
   "date": "2026-11-05",
-  "generated_at": "2026-11-05T16:14:44.295835-05:00",
+  "generated_at": "2026-11-05T16:14:51.419090-05:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -2356,6 +2356,38 @@
         }
       ],
       "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -1.5750000000000002, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': 3.3049999999999997, 'dir': 'up', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': 5.96, 'dir': 'up', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': 2.5, 'dir': 'up', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -9.985, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': 0.1, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -0.845, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -0.18, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-11-05\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade. \u00b7 weather sectors 11 \u00b7 Basic Materials={'score': -1.5750000000000002, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': 3.3049999999999997, 'dir': 'up', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': 5.96, 'dir': 'up', 'conf': 0.4, 'source': 'finviz_we"
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-11-05",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-05T16:14:50.406708-05:00",
+      "files": [
+        {
+          "path": "data/join/2026-11-05_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2283725,
+          "preview": "5900 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 GLBE, ANF, FOXA, FOX, CHA"
+        },
+        {
+          "path": "data/join/2026-11-05_ranked.after-freeze-1.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2283725,
+          "preview": "5900 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 GLBE, ANF, FOXA, FOX, CHA"
+        },
+        {
+          "path": "data/join/2026-11-05_ranked.after-freeze-2.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2283725,
+          "preview": "5900 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 GLBE, ANF, FOXA, FOX, CHA"
+        }
+      ],
+      "preview": "5900 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 GLBE, ANF, FOXA, FOX, CHA \u00b7 5900 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 GLBE, ANF, FOXA, FOX, CHA \u00b7 5900 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 GLBE, ANF, FOXA, FOX, CHA"
     }
   ],
   "href": {
@@ -2393,6 +2425,14 @@
       "path": "data/day_board/2026-11-05.json",
       "at": "2026-11-05T16:14:44-05:00",
       "commit_msg": "auto: land weather [2026-11-05]",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "42106973110",
+      "manifest": "research/input_freeze/2026-11-05/manifest.json"
+    },
+    {
+      "path": "data/day_board/2026-11-05.json",
+      "at": "2026-11-05T16:14:52-05:00",
+      "commit_msg": "auto: land join [2026-11-05]",
       "workflow": "Stock Book ALL (one-shot)",
       "run_id": "42106973110",
       "manifest": "research/input_freeze/2026-11-05/manifest.json"
