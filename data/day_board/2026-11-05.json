@@ -1,6 +1,6 @@
 {
   "date": "2026-11-05",
-  "generated_at": "2026-11-05T07:04:59.980257-05:00",
+  "generated_at": "2026-11-05T07:05:06.505051-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -1541,6 +1541,129 @@
         }
       ],
       "preview": "1d BUY AVAH, XYZ, EHC, CDW, GDDY, ACN, KD \u00b7 SELL ENVX, FCEL, NVT, HYLN, POWL, AMPX, EAF, VRT \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-11-05 BUY AVAH, XYZ, EHC, CDW, GDDY, ACN, KD \u00b7 SELL ENVX, FCEL, NVT, HYLN, POWL, AMPX, EAF, VRT \u00b7 2026-11-05 BUY AVAH, XYZ, EHC, CDW, GDDY, ACN, KD \u00b7 SELL ENVX, FCEL, NVT, HYLN, POWL, AMPX, EAF, VRT \u00b7 # Stock book \u2014 2026-11-05\n_Generated 2026-11-05T07:04:48.447211-05:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+    },
+    {
+      "key": "live_boards",
+      "title": "Live 1d BUY/SELL strip",
+      "date": "2026-11-05",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-05T07:05:05.553415-05:00",
+      "files": [
+        {
+          "path": "data/day_board/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 25621,
+          "preview": "2026-11-05 BUY AVAH, XYZ, EHC, CDW, GDDY, ACN, KD \u00b7 SELL ENVX, FCEL, NVT, HYLN, POWL, AMPX, EAF, VRT"
+        },
+        {
+          "path": "data/day_board/latest.json",
+          "ok": true,
+          "reason": "",
+          "size": 1116,
+          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
+        },
+        {
+          "path": "data/day_board/2026-11-05.json",
+          "ok": true,
+          "reason": "",
+          "size": 70122,
+          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href"
+        },
+        {
+          "path": "data/day_board/2026-11-05_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 37051,
+          "preview": "2026-11-05 BUY AVAH, XYZ, EHC, CDW, GDDY, ACN, KD \u00b7 SELL ENVX, FCEL, NVT, HYLN, POWL, AMPX, EAF, VRT"
+        },
+        {
+          "path": "data/day_board/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 291800,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/2026-11-05_strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 291800,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 261618,
+          "preview": "2026-11-05 BUY AVAH, XYZ, EHC, CDW, GDDY, ACN, KD \u00b7 SELL ENVX, FCEL, NVT, HYLN, POWL, AMPX, EAF, VRT"
+        },
+        {
+          "path": "data/factor_mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 291800,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 37051,
+          "preview": "2026-11-05 BUY AVAH, XYZ, EHC, CDW, GDDY, ACN, KD \u00b7 SELL ENVX, FCEL, NVT, HYLN, POWL, AMPX, EAF, VRT"
+        },
+        {
+          "path": "dashboard/factor-mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 291800,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 291800,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 261618,
+          "preview": "2026-11-05 BUY AVAH, XYZ, EHC, CDW, GDDY, ACN, KD \u00b7 SELL ENVX, FCEL, NVT, HYLN, POWL, AMPX, EAF, VRT"
+        },
+        {
+          "path": "data/day_board/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 1671,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        },
+        {
+          "path": "dashboard/factor-mine/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 1671,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        },
+        {
+          "path": "data/day_board/today_strategies.after-freeze-1.json",
+          "ok": true,
+          "reason": "",
+          "size": 281364,
+          "preview": "2026-11-04 BUY CDNA, BLFS, VEEV, ILMN, PRCH, LAUR, CNK, CHEF \u00b7 SELL NEOV, BIDU, ROIV, BAK, PAL, GFL, VNET, NOK"
+        },
+        {
+          "path": "data/day_board/today_strategies.after-freeze-2.json",
+          "ok": true,
+          "reason": "",
+          "size": 1165723,
+          "preview": "2026-11-04 BUY CDNA, BLFS, VEEV, ILMN, PRCH, LAUR, CNK, TRU \u00b7 SELL NEOV, BIDU, ROIV, BAK, GFL, PAL, VNET, NFLX"
+        }
+      ],
+      "preview": "2026-11-05 BUY AVAH, XYZ, EHC, CDW, GDDY, ACN, KD \u00b7 SELL ENVX, FCEL, NVT, HYLN, POWL, AMPX, EAF, VRT \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href \u00b7 2026-11-05 BUY AVAH, XYZ, EHC, CDW, GDDY, ACN, KD \u00b7 SELL ENVX, FCEL, NVT, HYLN, POWL, AMPX, EAF, VRT \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-11-05 BUY AVAH, XYZ, EHC, CDW, GDDY, ACN, KD \u00b7 SELL ENVX, FCEL, NVT, HYLN, POWL, AMPX, EAF, VRT \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-11-05 BUY AVAH, XYZ, EHC, CDW, GDDY, ACN, KD \u00b7 SELL ENVX, FCEL, NVT, HYLN, POWL, AMPX, EAF, VRT \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, cloc"
     }
   ],
   "href": {
