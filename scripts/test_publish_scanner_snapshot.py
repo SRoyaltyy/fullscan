@@ -316,11 +316,31 @@ class SnapshotPublishTests(unittest.TestCase):
 
     def test_publish_workflows_collapse_root_aliases_before_the_pages_budget(self):
         root = Path(__file__).resolve().parents[1]
-        for name in ('scanner-backtest-publish.yml', 'scanner-publication-recover.yml', 'scanner-keyword-publish.yml'):
-            text = (root/'.github/workflows'/name).read_text()
-            self.assertIn('slim_duplicate_root_aliases', text)
-            self.assertIn('pages_outside_bytes', text)
-        script = (root/'scripts/publish_dashboard.sh').read_text()
+        # Identify publishers by workflow name, not filename. Refresh, recover,
+        # and keyword publication all call stage_page and must slim exact-copy
+        # root aliases before they measure the Pages budget.
+        wanted = {
+            'Refresh scanner test page',
+            'Recover scanner page publication',
+            'Publish concrete scanner keywords',
+        }
+        workflow_dir = root/'.github'/'workflows'
+        self.assertTrue(workflow_dir.is_dir(), 'publish workflows are not in this checkout')
+        found = {}
+        for path in sorted(workflow_dir.glob('*.yml')):
+            text = path.read_text(encoding='utf-8')
+            title = next((line.split(':', 1)[1].strip() for line in text.splitlines() if line.startswith('name:')), '')
+            if title in wanted:
+                found[title] = (path, text)
+        self.assertEqual(set(found), wanted, sorted(p.name for p in workflow_dir.glob('*.yml')))
+        for title, (path, text) in found.items():
+            slim = text.find('slim_duplicate_root_aliases')
+            outside = text.find('pages_outside_bytes')
+            stage = text.find('stage_page')
+            self.assertGreater(slim, -1, path.name+' does not collapse root aliases')
+            self.assertGreater(outside, slim, title+' must collapse aliases before measuring the Pages budget')
+            self.assertGreater(stage, outside, title+' must measure the Pages budget before staging the page')
+        script = (root/'scripts/publish_dashboard.sh').read_text(encoding='utf-8')
         self.assertIn('slim_duplicate_root_aliases', script)
         self.assertNotIn('cp -a "$TMP/dashboard/${sub}/."', script)
 

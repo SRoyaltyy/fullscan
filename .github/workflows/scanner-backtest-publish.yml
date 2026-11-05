@@ -125,6 +125,9 @@ jobs:
             dashboard/scanner-backtest
             excel_bot/data/finviz_with_descriptions.csv
             data/news_intake
+            .github/workflows/scanner-backtest-publish.yml
+            .github/workflows/scanner-publication-recover.yml
+            .github/workflows/scanner-keyword-publish.yml
           sparse-checkout-cone-mode: false
       - uses: actions/setup-python@v5
         with:
