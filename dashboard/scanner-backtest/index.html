@@ -46,6 +46,7 @@ textarea{width:100%;min-height:110px;background:#0f172a;color:var(--text);border
 <h1>Scanner backtest</h1>
 <p id="completed-stock-results"><a href="completed/">Browse the archived stock universe: specific disclosures and exact source paragraphs</a></p>
 <p class="muted" id="status">Loading…</p>
+<p class="muted" id="manual-stamp">updated by hand, last run 2026-10-25</p>
 <p class="muted" id="snapshot">Checking scoring snapshot…</p>
 <p class="muted">Experimental classifier, not a validated accuracy result. The static page looks up an offline run; only live mode reruns Python. Filing identities cover only the issuers listed for that run.</p>
 <div class="row">
@@ -413,6 +414,9 @@ async function loadStatic() {
   spacyClusters = clusterRes.ok ? (await clusterRes.json()).clusters || {} : {};
   if (!staticArticles.length) throw new Error("static article pool is empty");
   const m = staticMeta || {};
+  const runDay = String(m.generated_at || "2026-10-25").slice(0, 10);
+  const manual = document.getElementById("manual-stamp");
+  if (manual) manual.textContent = "updated by hand, last run " + runDay;
   renderSnapshot(m.snapshot);
   const fullN = staticArticles.filter((a) => a.full_text).length;
   text("status",

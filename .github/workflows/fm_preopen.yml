@@ -12,11 +12,18 @@ name: Factor Mine pre-open sleeves
 #   the push lands before the open. A seal committed at or after 09:30 ET
 #   is treated as a sit by the book. The window is 09:00-09:25 ET so the
 #   morning tickets (about 05:40 ET) are already on main; a seal is write-once.
-# book: after the close (and after "Factor strategy mine"). Steps each
-#   closed session from 10-08 with no state yet, in order, writes
+# book: after the close, every weekday. Steps each closed session from
+#   10-08 with no state yet, in order, writes
 #   data/factor_mine/state/<sleeve>/<D>.json once and appends the day to
-#   03_scoreboard/factor_mine/<sleeve>.md under the past-day lock, then
-#   restamps Pages (deploy-dashboard.yml).
+#   03_scoreboard/factor_mine/<sleeve>.md under the past-day lock and to
+#   dashboard/factor-mine/preopen.json. Days already in that file are
+#   left as written. The book fetches 09:30/16:00 bars for the names it
+#   holds or buys, so a failed factor-mine remine does not freeze the
+#   file. A run that does not include the closed session fails.
+#   2026-11-03: the only book cron is 21:40 UTC (16:40 EST after the
+#   clocks changed). The tape was not on main, the job exited on the
+#   missing bars, and nothing retried, so preopen.json stayed on 11-02.
+#   Later crons are the same book step. Then restamp Pages.
 
 on:
   schedule:
@@ -29,7 +36,12 @@ on:
     - cron: "7 14 * * 1-5"    # 09:07 EST seal backup
     - cron: "15 14 * * 1-5"   # 09:15 EST seal fallback
     - cron: "19 14 * * 1-5"   # 09:19 EST seal backup
-    - cron: "40 21 * * 1-5"   # 17:40 EDT book
+    # After 16:00 ET in both EST and EDT. The later rows retry when the
+    # first shot finds no 09:30/16:00 tape. Each miss fails the job.
+    - cron: "40 21 * * 1-5"   # 17:40 EDT / 16:40 EST book
+    - cron: "40 22 * * 1-5"   # 18:40 EDT / 17:40 EST book retry
+    - cron: "40 23 * * 1-5"   # 19:40 EDT / 18:40 EST book retry
+    - cron: "40 1 * * 2-6"    # 21:40 EDT / 20:40 EST book retry
   workflow_run:
     workflows:
       - "Pre-Open ALL (predictive one-shot)"
@@ -166,7 +178,15 @@ jobs:
           python3 -m src.workflow_progress beat --workflow fm_preopen --date "$DATE" --stages seal,book --stage book >> /tmp/progress_beat.log 2>&1 &
           echo $! > /tmp/progress_beat.pid
           trap 'kill "$(cat /tmp/progress_beat.pid)" 2>/dev/null || true' EXIT
-          python3 -m src.factor_mine_preopen book ${D:+--date "$D"}
+          if ! python3 -m src.factor_mine_preopen book ${D:+--date "$D"}; then
+            echo "::error::Factor Mine preopen book skipped a closed session; dashboard/factor-mine/preopen.json was not advanced"
+            python3 -m src.workflow_progress touch --workflow fm_preopen --date "$DATE" --stage book --state failed --error "weekday book skipped the closed session" || true
+            exit 1
+          fi
+          if ! python3 -m src.factor_mine_preopen check ${D:+--date "$D"}; then
+            echo "::error::Factor Mine preopen dashboard does not include the closed session"
+            exit 1
+          fi
           python3 -m src.past_day_lock --check
           bash scripts/safe_git_push.sh "auto: factor mine pre-open sleeves book" \
             data/factor_mine/state/union_hot_n4_h1_preopen/ \

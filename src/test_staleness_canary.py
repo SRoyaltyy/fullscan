@@ -132,6 +132,71 @@ def test_report_fails_when_a_source_is_over_its_lag(tmp_path: Path) -> None:
     assert "404" in gone["sources"][0]["live_error"]
 
 
+def test_scanner_backtest_is_manual() -> None:
+    root = Path(__file__).resolve().parents[1]
+    workflow = (root / ".github/workflows/scanner-backtest-publish.yml").read_text(encoding="utf-8")
+    assert "cron:" not in workflow
+    coverage = json.loads((root / "src/staleness_coverage.json").read_text(encoding="utf-8"))
+    row = next(
+        item for item in coverage["pages"]
+        if item.get("path") == "dashboard/scanner-backtest/index.html")
+    assert row["manual"] is True
+    assert row["frozen"] is True
+    assert row["last_run"] == "2026-10-25"
+    assert row["fill_forward"] is False
+    page_path = root / row["path"]
+    reported = next(
+        item for item in canary.manual_rows(root) if item["page"] == row["path"])
+    assert reported["ok"] is True
+    assert reported["mode"] == "manual"
+    assert reported["main_date"] == row["last_run"]
+    # Opening execution omits this page from its sparse checkout. The
+    # committed page is copied into that job when the blob exists. A
+    # tree without the file keeps the coverage date.
+    if page_path.is_file():
+        assert reported["page_present"] is True
+        text = page_path.read_text(encoding="utf-8")
+        assert f"updated by hand, last run {row['last_run']}" in text
+    else:
+        assert reported["page_present"] is False
+        assert row["last_run"] in reported["note"]
+
+
+def test_missing_scanner_page_keeps_the_documented_day(tmp_path: Path) -> None:
+    reported = next(
+        item for item in canary.manual_rows(tmp_path)
+        if item["page"] == "dashboard/scanner-backtest/index.html")
+    assert reported["page_present"] is False
+    assert reported["ok"] is True
+    assert reported["mode"] == "manual"
+    assert reported["main_date"] == "2026-10-25"
+    assert "2026-10-25" in reported["note"]
+    assert not (tmp_path / "dashboard/scanner-backtest/index.html").exists()
+
+
+def test_manual_source_does_not_fail_the_canary(tmp_path: Path) -> None:
+    _fresh_tree(tmp_path, curve="2026-11-02")
+    texts = {}
+    for rel, _kind, _limit in canary.SOURCES:
+        texts[rel] = (tmp_path / rel).read_text(encoding="utf-8")
+
+    def fetch(url: str) -> str:
+        rel = url.split("/fullscan/", 1)[1]
+        return texts[rel]
+
+    report = canary.evaluate(root=tmp_path, now=NOW, fetch=fetch)
+    manual = next(row for row in report["sources"] if row.get("mode") == "manual")
+    assert manual["path"] == "dashboard/scanner-backtest/index.html"
+    assert manual["main_date"] == "2026-10-25"
+    assert manual["page_present"] is False
+    assert manual["ok"] is True
+    assert report["ok"] is False
+    preopen = next(row for row in report["sources"]
+                   if row["path"] == "dashboard/factor-mine/preopen.json")
+    assert preopen["ok"] is False
+    assert preopen.get("mode") != "manual"
+
+
 def _tape(marker: bytes) -> bytes:
     return b"Ticker,Change\nAAA,1.0\n" + marker + b"\n" + (b"x" * 220)
 
@@ -194,13 +259,17 @@ def test_staleness_alarm_stops_on_a_copied_finviz_export(tmp_path: Path) -> None
 
 
 def main() -> None:
+    import tempfile
     test_session_lag_counts_nyse_days()
     test_parsers_use_the_newest_data_date()
-    import tempfile
+    test_scanner_backtest_is_manual()
+    test_missing_scanner_page_keeps_the_documented_day(Path(tempfile.mkdtemp()))
     with tempfile.TemporaryDirectory() as tmp:
-        test_report_fails_when_a_source_is_over_its_lag(Path(tmp))
-        test_writer_refuses_a_byte_copy_and_keeps_a_fresh_tape(Path(tmp))
-        test_staleness_alarm_stops_on_a_copied_finviz_export(Path(tmp))
+        root = Path(tmp)
+        test_report_fails_when_a_source_is_over_its_lag(root)
+        test_manual_source_does_not_fail_the_canary(root)
+        test_writer_refuses_a_byte_copy_and_keeps_a_fresh_tape(root)
+        test_staleness_alarm_stops_on_a_copied_finviz_export(root)
     print("staleness canary ok")
 
 

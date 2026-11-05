@@ -24,6 +24,7 @@ from src.skip_if_good import _session_date
 ROOT = Path(__file__).resolve().parent.parent
 PAGES = "https://sroyaltyy.github.io/fullscan"
 REPORT = Path("data/health/staleness.json")
+COVERAGE = Path(__file__).resolve().parent / "staleness_coverage.json"
 _MISSING_LAG = 10_000
 
 # path, kind, allowed session lag
@@ -195,6 +196,75 @@ def fetch_url(url: str, timeout: float = 30) -> str:
         return response.read().decode("utf-8", errors="replace")
 
 
+def manual_sources() -> list[dict]:
+    """Manual or frozen pages. They stay in the report and do not fail it."""
+    if not COVERAGE.is_file():
+        return []
+    try:
+        doc = json.loads(COVERAGE.read_text(encoding="utf-8"))
+    except json.JSONDecodeError:
+        return []
+    if not isinstance(doc, dict):
+        return []
+    pages = doc.get("pages")
+    if isinstance(pages, list):
+        return [
+            row for row in pages
+            if isinstance(row, dict) and (row.get("manual") or row.get("frozen"))
+        ]
+    rows = doc.get("sources")
+    if isinstance(rows, list):
+        return [
+            row for row in rows
+            if isinstance(row, dict) and row.get("mode") == "manual"
+        ]
+    return []
+
+
+def manual_rows(root: Path) -> list[dict]:
+    """Report each manual page from the coverage record.
+
+    A missing page file keeps that record's last_run. The report uses
+    the coverage date, and it leaves the tree unchanged.
+    """
+    rows = []
+    root = Path(root)
+    for spec in manual_sources():
+        page = str(spec.get("page") or spec.get("path") or "")
+        last_run = str(spec.get("last_run") or "")[:10]
+        present = bool(page) and (root / page).is_file()
+        note = str(spec.get("date_note") or spec.get("reason") or "updated by hand")
+        if page and not present:
+            note = (
+                f"{note} The page file is absent from this tree. "
+                f"last_run stays the documented {last_run or 'undated'}."
+            )
+        if last_run:
+            main_date = last_run
+        elif present:
+            kind = str(spec.get("kind") or "json")
+            main_date = newest_date((root / page).read_text(encoding="utf-8"), kind)
+        else:
+            main_date = ""
+        rows.append({
+            "path": spec.get("path") or page or "",
+            "page": page,
+            "lag_limit": None,
+            "mode": "manual" if spec.get("manual") or spec.get("mode") == "manual" else "",
+            "main_date": main_date,
+            "live_date": "",
+            "main_lag": None,
+            "live_lag": None,
+            "live_error": "",
+            "ok": True,
+            "frozen": bool(spec.get("frozen") or spec.get("manual")),
+            "manual": bool(spec.get("manual") or spec.get("mode") == "manual"),
+            "page_present": present,
+            "note": note,
+        })
+    return rows
+
+
 def evaluate(*, root: Path | None = None, now: datetime | None = None,
              fetch=None, pages_base: str = PAGES) -> dict:
     root = Path(root) if root is not None else ROOT
@@ -226,29 +296,10 @@ def evaluate(*, root: Path | None = None, now: datetime | None = None,
             "ok": ok,
             "frozen": False,
         })
-    from src.staleness_coverage import pages as coverage_pages
-
     listed = {row["path"] for row in rows}
-    for page in coverage_pages():
-        if not (page.get("manual") or page.get("frozen")):
-            continue
-        path = str(page.get("path") or "")
-        if not path or path in listed:
-            continue
-        kind = str(page.get("kind") or "json")
-        main_text = _read_text(root / path)
-        rows.append({
-            "path": path,
-            "lag_limit": None,
-            "main_date": newest_date(main_text, kind),
-            "live_date": "",
-            "main_lag": None,
-            "live_lag": None,
-            "live_error": "",
-            "ok": True,
-            "frozen": True,
-            "manual": True,
-        })
+    for spec_row in manual_rows(root):
+        if spec_row["path"] not in listed:
+            rows.append(spec_row)
     from src.finviz_export_guard import copied_from
 
     copy = copied_from(session, root=root)
@@ -293,6 +344,13 @@ def main() -> None:
     report = evaluate(root=root)
     print(f"[staleness] session {report['session']} ok={report['ok']}")
     for row in report["sources"]:
+        if row.get("mode") == "manual":
+            state = "page present" if row.get("page_present") else "page absent"
+            print(
+                f"[staleness] MANUAL {row['path']} "
+                f"last_run={row['main_date'] or 'missing'} {state}"
+            )
+            continue
         flag = "OK" if row["ok"] else "STALE"
         print(
             f"[staleness] {flag} {row['path']} "

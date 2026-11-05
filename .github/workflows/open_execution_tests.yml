@@ -26,6 +26,19 @@ jobs:
             db
             data/sleeve_merge
             01_daily/_progress
+      - name: Include the committed scanner backtest page
+        run: |
+          # Cone sparse-checkout cannot add one file, and the rest of
+          # dashboard/scanner-backtest is the keyword index. Copy only
+          # the committed page the canary reads. A missing blob stays
+          # missing; the canary then keeps the documented manual last_run.
+          if git cat-file -e "HEAD:dashboard/scanner-backtest/index.html" 2>/dev/null; then
+            mkdir -p dashboard/scanner-backtest
+            git show "HEAD:dashboard/scanner-backtest/index.html" > dashboard/scanner-backtest/index.html
+            echo "included the committed scanner backtest page"
+          else
+            echo "scanner backtest page is absent from this commit; documented manual last_run stays"
+          fi
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'

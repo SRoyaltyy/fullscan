@@ -37,7 +37,9 @@
       "manual": true,
       "frozen": true,
       "writer": null,
-      "date_note": "scanner-backtest-publish.yml, scanner-keyword-publish.yml, and publish-completed-parser.yml have no weekday cron. They publish when parser inputs change. Manual and frozen for the daily canary."
+      "last_run": "2026-10-25",
+      "fill_forward": false,
+      "date_note": "scanner-backtest-publish.yml, scanner-keyword-publish.yml, and publish-completed-parser.yml have no weekday cron. They publish when parser inputs change. Manual and frozen for the daily canary. Fill-forward is out of scope. dashboard/scanner-backtest/meta.json generated_at remains 2026-10-25."
     },
     {
       "path": "dashboard/jev-train/days.json",
