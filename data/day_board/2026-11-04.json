@@ -1703,6 +1703,14 @@
       "workflow": "Stock Book ALL (one-shot)",
       "run_id": "41951797059",
       "manifest": "research/input_freeze/2026-11-04/manifest.json"
+    },
+    {
+      "path": "data/exports/finviz_2026-11-04.csv",
+      "at": "2026-11-05T03:00:33-05:00",
+      "commit_msg": "auto: land finviz export [2026-11-04]",
+      "workflow": "Finviz ALL (GH-hosted Elite)",
+      "run_id": "41990178738",
+      "manifest": "research/input_freeze/2026-11-04/manifest.json"
     }
   ]
 }
