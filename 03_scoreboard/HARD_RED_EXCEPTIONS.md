@@ -2,7 +2,7 @@
 
 Live sleeves still SIT on S≤−3. Search a ticker for every session since 8/13: cameras (+N −N), 09:30 open, close, same-day % and hold-1/3/5 with actual prices.
 
-Generated 2026-11-04T21:12:44.540314-05:00 · 2026-08-13 → 2026-11-04 · live sit **untouched**.
+Generated 2026-11-04T21:48:57.874151-05:00 · 2026-08-13 → 2026-11-04 · live sit **untouched**.
 
 ## Latest morning
 
@@ -34,7 +34,7 @@ Generated 2026-11-04T21:12:44.540314-05:00 · 2026-08-13 → 2026-11-04 · live 
 
 - Hard-red mornings in window: 22
 - long hold-1: n=176 win=51.7% mean -0.087%
-- long hold-3: n=167 win=50.9% mean -0.457%
+- long hold-3: n=168 win=51.2% mean -0.387%
 - short hold-1: n=176 win=51.7% mean 0.194%
 - short hold-3: n=168 win=53.6% mean 0.109%
 
