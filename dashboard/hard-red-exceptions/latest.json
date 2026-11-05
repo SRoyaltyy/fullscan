@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "generated_at": "2026-11-04T21:12:44.540314-05:00",
+  "generated_at": "2026-11-05T05:54:42.401041-05:00",
   "from_date": "2026-08-13",
   "to_date": "2026-11-04",
   "n_days": 59,
@@ -2113,30 +2113,39 @@
     "CLX",
     "ELAN",
     "HWM",
-    "JAZZ"
+    "JAZZ",
+    "ADC",
+    "DIS",
+    "ECAT",
+    "GOF",
+    "JD",
+    "OGN",
+    "PDI",
+    "SNDL",
+    "WELL"
   ],
   "live_sit_untouched": true,
   "backtest": {
     "n_hard_red": 22,
     "long_h1": {
       "n": 176,
-      "win": 0.517,
-      "mean": -0.087
+      "win": 0.5227,
+      "mean": -0.035
     },
     "long_h3": {
-      "n": 167,
-      "win": 0.509,
-      "mean": -0.457
+      "n": 168,
+      "win": 0.5119,
+      "mean": -0.3
     },
     "short_h1": {
       "n": 176,
-      "win": 0.517,
-      "mean": 0.194
+      "win": 0.5114,
+      "mean": -0.184
     },
     "short_h3": {
-      "n": 168,
-      "win": 0.5357,
-      "mean": 0.109
+      "n": 167,
+      "win": 0.5449,
+      "mean": -0.027
     }
   },
   "latest": {
