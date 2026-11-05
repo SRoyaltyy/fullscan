@@ -1,12 +1,12 @@
 {
   "date": "2026-11-05",
-  "generated_at": "2026-11-05T06:20:34.456162-05:00",
+  "generated_at": "2026-11-05T06:21:01.814982-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
-    "ok": 3,
+    "ok": 4,
     "partial": 3,
-    "fail": 2,
+    "fail": 1,
     "n": 8
   },
   "buy_1d": [],
@@ -196,6 +196,31 @@
         }
       ],
       "preview": "5046 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "ab",
+      "title": "AB checklist",
+      "date": "2026-11-05",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-05T06:21:00.906937-05:00",
+      "files": [
+        {
+          "path": "data/ab_checklist/2026-11-05_ab_checklist.csv",
+          "ok": true,
+          "reason": "",
+          "size": 7548768,
+          "preview": "2615 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 IFF, MNTK, ZBRA, MSFT, GLOB"
+        },
+        {
+          "path": "data/ab_checklist/2026-11-05_ab_checklist_enriched.csv",
+          "ok": true,
+          "reason": "",
+          "size": 8341720,
+          "preview": "2615 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 MNTK, IFF, PRCH, CNC, V"
+        }
+      ],
+      "preview": "2615 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 IFF, MNTK, ZBRA, MSFT, GLOB \u00b7 2615 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 MNTK, IFF, PRCH, CNC, V"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
