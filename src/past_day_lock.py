@@ -931,8 +931,51 @@ def _digest_for_row(row: dict) -> str | None:
     raise PastDayLockError(f"past-day lock: unknown record {record}")
 
 
+def sealed_rel(row: dict) -> str | None:
+    """Repo path whose bytes this seal hashes. None if the record is unknown."""
+    record = str(row.get("record") or "")
+    date = str(row.get("date") or "")
+    name = str(row.get("name") or "")
+    if record == "flatten_robust":
+        return f"01_daily/{date}_flatten_card.md"
+    if record == "strategy_tickets":
+        return f"data/day_board/{date}_strategy_tickets.json"
+    if record == "factor_mine" and name:
+        return f"03_scoreboard/factor_mine/{name}.md"
+    if record == "webull_sim":
+        return "data/webull_sim/days.jsonl"
+    spec = _CSV_RECORDS.get(record)
+    if spec is None:
+        return None
+    directory, filename, _column = spec
+    try:
+        parent = directory.relative_to(ROOT).as_posix()
+    except ValueError:
+        return None
+    return f"{parent}/{filename}"
+
+
+def _unchanged_from_baseline(rev: str, row: dict) -> bool:
+    """True when this checkout's sealed file is byte-identical to ``rev``.
+
+    A seal/file mismatch that is already on the baseline was not introduced
+    by this branch. 2026-11-05 strategy tickets are that case: the seal
+    records ``8b7628fa`` (the 07:05 ET file) but ``fd1652cedd`` bytes have
+    been on main since before that seal line was written.
+    """
+    rel = sealed_rel(row)
+    if not rel or not rev:
+        return False
+    base = _git_bytes(rev, rel)
+    path = ROOT / rel
+    if base is None or not path.is_file():
+        return False
+    return path.read_bytes() == base
+
+
 def check_manifest(rows: list[dict] | None = None, *,
-                   path: Path | None = None) -> None:
+                   path: Path | None = None,
+                   baseline: str | None = None) -> None:
     rows = load_manifest(path) if rows is None else rows
     watermarks: dict[str, str] = {}
     for row in rows:
@@ -958,6 +1001,8 @@ def check_manifest(rows: list[dict] | None = None, *,
                 f"past-day lock: {label} is sealed but the day text is missing."
             )
         if digest != prev:
+            if baseline and _unchanged_from_baseline(baseline, row):
+                continue
             raise PastDayLockError(
                 f"past-day lock: {label} changed "
                 f"(sha256 {prev} -> {digest}). Not rescoring a sealed day."
@@ -970,7 +1015,7 @@ def check_against(rev: str, *, manifest: Path | None = None) -> None:
     base = _git_bytes(rev, rel)
     head = dest.read_text(encoding="utf-8") if dest.is_file() else ""
     assert_manifest_prefix((base or b"").decode("utf-8"), head)
-    check_manifest(path=dest)
+    check_manifest(path=dest, baseline=rev)
 
 
 def skip_flatten_card_after_open(date: str, now=None,
