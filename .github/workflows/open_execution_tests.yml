@@ -34,6 +34,7 @@ jobs:
           if git cat-file -e "HEAD:dashboard/scanner-backtest/index.html" 2>/dev/null; then
             mkdir -p dashboard/scanner-backtest
             git show "HEAD:dashboard/scanner-backtest/index.html" > dashboard/scanner-backtest/index.html
+            echo "included the committed scanner backtest page"
           else
             echo "scanner backtest page is absent from this commit; documented manual last_run stays"
           fi
