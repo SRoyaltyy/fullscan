@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-04T21:55:29.162360-05:00",
+  "generated": "2026-11-05T10:22:28.183735-05:00",
   "capital": 10000.0,
   "dates": [
     "2026-08-13",
@@ -64,7 +64,8 @@
     "2026-10-30",
     "2026-11-02",
     "2026-11-03",
-    "2026-11-04"
+    "2026-11-04",
+    "2026-11-05"
   ],
   "scenarios": [
     {
@@ -321,7 +322,8 @@
       -0.02,
       -0.02,
       -0.02,
-      -0.02
+      -0.02,
+      1.65
     ],
     "equity": [
       10046.0,
@@ -386,7 +388,8 @@
       10219.0,
       10216.96,
       10214.92,
-      10212.88
+      10212.88,
+      10381.39
     ]
   },
   "sleeves": {
@@ -402,15 +405,15 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 63,
+        "n_days": 64,
         "n_win_days": 13,
-        "n_loss_days": 48,
-        "p_loss_day": 0.7619,
-        "p_win_day": 0.2063,
-        "mean_day": -4.955,
+        "n_loss_days": 49,
+        "p_loss_day": 0.7656,
+        "p_win_day": 0.2031,
+        "mean_day": -5.114,
         "avg_win_day": 0.955,
-        "avg_loss_day": -6.762,
-        "cum_sum": -312.137
+        "avg_loss_day": -6.933,
+        "cum_sum": -327.292
       },
       "equity": [
         9953.57,
@@ -475,9 +478,10 @@
         259.68,
         259.07,
         257.59,
-        136.98
+        136.98,
+        116.22
       ],
-      "final": 136.98,
+      "final": 116.22,
       "orig_window": {
         "start": "2026-08-13",
         "end": "2026-08-21",
@@ -11040,6 +11044,47 @@
           "cash": 116.22,
           "invested": 20.76,
           "fees_cum": 713.29
+        },
+        {
+          "date": "2026-11-05",
+          "day_pnl": -15.155,
+          "equity": 116.22,
+          "n_held": 8,
+          "n_buy": 0,
+          "n_sell": 2,
+          "n_skip": 8,
+          "n_cand": 8,
+          "hard_red": false,
+          "bought": [],
+          "sold": [
+            "AVO",
+            "ABX"
+          ],
+          "held": [],
+          "buys": [],
+          "sells": [
+            {
+              "ticker": "AVO",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 11.710000038146973,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "ABX",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 9.050000190734863,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            }
+          ],
+          "cash": 116.22,
+          "invested": 0.0,
+          "fees_cum": 713.29
         }
       ]
     },
@@ -11055,15 +11100,15 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 63,
+        "n_days": 64,
         "n_win_days": 8,
-        "n_loss_days": 53,
-        "p_loss_day": 0.8413,
-        "p_win_day": 0.127,
-        "mean_day": -4.711,
+        "n_loss_days": 54,
+        "p_loss_day": 0.8438,
+        "p_win_day": 0.125,
+        "mean_day": -4.795,
         "avg_win_day": 0.799,
-        "avg_loss_day": -5.72,
-        "cum_sum": -296.786
+        "avg_loss_day": -5.801,
+        "cum_sum": -306.849
       },
       "equity": [
         9955.38,
@@ -11128,9 +11173,10 @@
         294.88,
         294.47,
         293.1,
-        206.3
+        206.3,
+        185.54
       ],
-      "final": 206.3,
+      "final": 185.54,
       "orig_window": {
         "start": "2026-08-13",
         "end": "2026-08-21",
@@ -23544,6 +23590,47 @@
           "cash": 185.54,
           "invested": 20.76,
           "fees_cum": 819.38
+        },
+        {
+          "date": "2026-11-05",
+          "day_pnl": -10.063,
+          "equity": 185.54,
+          "n_held": 13,
+          "n_buy": 0,
+          "n_sell": 2,
+          "n_skip": 13,
+          "n_cand": 13,
+          "hard_red": false,
+          "bought": [],
+          "sold": [
+            "AVO",
+            "ABX"
+          ],
+          "held": [],
+          "buys": [],
+          "sells": [
+            {
+              "ticker": "AVO",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 11.710000038146973,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "ABX",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 9.050000190734863,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            }
+          ],
+          "cash": 185.54,
+          "invested": 0.0,
+          "fees_cum": 819.38
         }
       ]
     },
@@ -23559,15 +23646,15 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 63,
+        "n_days": 64,
         "n_win_days": 10,
-        "n_loss_days": 52,
-        "p_loss_day": 0.8254,
-        "p_win_day": 0.1587,
-        "mean_day": 4.386,
+        "n_loss_days": 53,
+        "p_loss_day": 0.8281,
+        "p_win_day": 0.1562,
+        "mean_day": 4.012,
         "avg_win_day": 66.759,
-        "avg_loss_day": -7.525,
-        "cum_sum": 276.287
+        "avg_loss_day": -7.751,
+        "cum_sum": 256.792
       },
       "equity": [
         9880.7,
@@ -23632,9 +23719,10 @@
         413.37,
         405.52,
         403.79,
-        368.14
+        368.14,
+        296.37
       ],
-      "final": 368.14,
+      "final": 296.37,
       "orig_window": {
         "start": "2026-08-13",
         "end": "2026-08-21",
@@ -48873,6 +48961,89 @@
           "cash": 287.32,
           "invested": 80.82,
           "fees_cum": 2722.14
+        },
+        {
+          "date": "2026-11-05",
+          "day_pnl": -19.495,
+          "equity": 296.37,
+          "n_held": 25,
+          "n_buy": 0,
+          "n_sell": 6,
+          "n_skip": 24,
+          "n_cand": 25,
+          "hard_red": false,
+          "bought": [],
+          "sold": [
+            "KOS",
+            "IOVA",
+            "NVAX",
+            "RIVN",
+            "AVO",
+            "ARHS"
+          ],
+          "held": [
+            "ABX"
+          ],
+          "buys": [],
+          "sells": [
+            {
+              "ticker": "KOS",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 2.5899999141693115,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "IOVA",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 8.699999809265137,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "NVAX",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 10.649999618530273,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "RIVN",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 14.0600004196167,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "AVO",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 11.710000038146973,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "ARHS",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 13.149999618530273,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            }
+          ],
+          "cash": 287.32,
+          "invested": 9.05,
+          "fees_cum": 2722.14
         }
       ]
     },
@@ -48888,15 +49059,15 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 63,
+        "n_days": 64,
         "n_win_days": 8,
-        "n_loss_days": 53,
-        "p_loss_day": 0.8413,
-        "p_win_day": 0.127,
-        "mean_day": -5.033,
+        "n_loss_days": 54,
+        "p_loss_day": 0.8438,
+        "p_win_day": 0.125,
+        "mean_day": -5.178,
         "avg_win_day": 0.791,
-        "avg_loss_day": -6.102,
-        "cum_sum": -317.087
+        "avg_loss_day": -6.255,
+        "cum_sum": -331.414
       },
       "equity": [
         9918.74,
@@ -48961,9 +49132,10 @@
         211.08,
         210.42,
         209.49,
-        144.9
+        144.9,
+        124.14
       ],
-      "final": 144.9,
+      "final": 124.14,
       "orig_window": {
         "start": "2026-08-13",
         "end": "2026-08-21",
@@ -58223,6 +58395,47 @@
           "cash": 124.14,
           "invested": 20.76,
           "fees_cum": 717.33
+        },
+        {
+          "date": "2026-11-05",
+          "day_pnl": -14.327,
+          "equity": 124.14,
+          "n_held": 10,
+          "n_buy": 0,
+          "n_sell": 2,
+          "n_skip": 10,
+          "n_cand": 10,
+          "hard_red": false,
+          "bought": [],
+          "sold": [
+            "AVO",
+            "ABX"
+          ],
+          "held": [],
+          "buys": [],
+          "sells": [
+            {
+              "ticker": "AVO",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 11.710000038146973,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "ABX",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 9.050000190734863,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            }
+          ],
+          "cash": 124.14,
+          "invested": 0.0,
+          "fees_cum": 717.33
         }
       ]
     },
@@ -58238,15 +58451,15 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 63,
+        "n_days": 64,
         "n_win_days": 9,
-        "n_loss_days": 52,
-        "p_loss_day": 0.8254,
-        "p_win_day": 0.1429,
-        "mean_day": -4.537,
+        "n_loss_days": 53,
+        "p_loss_day": 0.8281,
+        "p_win_day": 0.1406,
+        "mean_day": -4.602,
         "avg_win_day": 0.628,
-        "avg_loss_day": -5.606,
-        "cum_sum": -285.85
+        "avg_loss_day": -5.664,
+        "cum_sum": -294.547
       },
       "equity": [
         9955.38,
@@ -58311,9 +58524,10 @@
         313.29,
         312.34,
         311.37,
-        238.7
+        238.7,
+        217.94
       ],
-      "final": 238.7,
+      "final": 217.94,
       "orig_window": {
         "start": "2026-08-13",
         "end": "2026-08-21",
@@ -71795,6 +72009,47 @@
           "cash": 217.94,
           "invested": 20.76,
           "fees_cum": 856.41
+        },
+        {
+          "date": "2026-11-05",
+          "day_pnl": -8.697,
+          "equity": 217.94,
+          "n_held": 18,
+          "n_buy": 0,
+          "n_sell": 2,
+          "n_skip": 18,
+          "n_cand": 18,
+          "hard_red": false,
+          "bought": [],
+          "sold": [
+            "AVO",
+            "ABX"
+          ],
+          "held": [],
+          "buys": [],
+          "sells": [
+            {
+              "ticker": "AVO",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 11.710000038146973,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "ABX",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 9.050000190734863,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            }
+          ],
+          "cash": 217.94,
+          "invested": 0.0,
+          "fees_cum": 856.41
         }
       ]
     },
@@ -71810,15 +72065,15 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 63,
+        "n_days": 64,
         "n_win_days": 16,
-        "n_loss_days": 47,
-        "p_loss_day": 0.746,
-        "p_win_day": 0.254,
-        "mean_day": -4.654,
+        "n_loss_days": 48,
+        "p_loss_day": 0.75,
+        "p_win_day": 0.25,
+        "mean_day": -5.39,
         "avg_win_day": 0.619,
-        "avg_loss_day": -6.449,
-        "cum_sum": -293.202
+        "avg_loss_day": -7.393,
+        "cum_sum": -344.966
       },
       "equity": [
         9955.38,
@@ -71883,9 +72138,10 @@
         262.38,
         261.19,
         259.85,
-        245.42
+        245.42,
+        118.38
       ],
-      "final": 245.42,
+      "final": 118.38,
       "orig_window": {
         "start": "2026-08-13",
         "end": "2026-08-21",
@@ -81874,6 +82130,87 @@
           "cash": 118.38,
           "invested": 127.04,
           "fees_cum": 620.11
+        },
+        {
+          "date": "2026-11-05",
+          "day_pnl": -51.764,
+          "equity": 118.38,
+          "n_held": 13,
+          "n_buy": 0,
+          "n_sell": 6,
+          "n_skip": 13,
+          "n_cand": 13,
+          "hard_red": false,
+          "bought": [],
+          "sold": [
+            "AVO",
+            "ABX",
+            "REPL",
+            "MXCT",
+            "SY",
+            "CERS"
+          ],
+          "held": [],
+          "buys": [],
+          "sells": [
+            {
+              "ticker": "AVO",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 11.470000267028809,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "ABX",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 8.640000343322754,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "REPL",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 20.649999618530273,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "MXCT",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 1.4600000381469727,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "SY",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 1.9900000095367432,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "CERS",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 2.3399999141693115,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            }
+          ],
+          "cash": 118.38,
+          "invested": 0.0,
+          "fees_cum": 620.11
         }
       ]
     },
@@ -81889,15 +82226,15 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 63,
+        "n_days": 64,
         "n_win_days": 17,
-        "n_loss_days": 45,
-        "p_loss_day": 0.7143,
-        "p_win_day": 0.2698,
-        "mean_day": -2.998,
+        "n_loss_days": 46,
+        "p_loss_day": 0.7188,
+        "p_win_day": 0.2656,
+        "mean_day": -3.051,
         "avg_win_day": 1.12,
-        "avg_loss_day": -4.621,
-        "cum_sum": -188.882
+        "avg_loss_day": -4.659,
+        "cum_sum": -195.249
       },
       "equity": [
         9955.38,
@@ -81962,9 +82299,10 @@
         1397.29,
         1387.33,
         1365.51,
-        1275.87
+        1275.87,
+        1194.63
       ],
-      "final": 1275.87,
+      "final": 1194.63,
       "orig_window": {
         "start": "2026-08-13",
         "end": "2026-08-21",
@@ -95274,6 +95612,66 @@
           "cash": 443.84,
           "invested": 832.04,
           "fees_cum": 888.09
+        },
+        {
+          "date": "2026-11-05",
+          "day_pnl": -6.367,
+          "equity": 1194.63,
+          "n_held": 21,
+          "n_buy": 0,
+          "n_sell": 3,
+          "n_skip": 13,
+          "n_cand": 13,
+          "hard_red": false,
+          "bought": [],
+          "sold": [
+            "PRCH",
+            "AVO",
+            "ABX"
+          ],
+          "held": [
+            "REPL",
+            "MXCT",
+            "SY",
+            "CERS",
+            "GOLD",
+            "CNK",
+            "LAUR",
+            "PEB"
+          ],
+          "buys": [],
+          "sells": [
+            {
+              "ticker": "PRCH",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 20.559999465942383,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "AVO",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 11.470000267028809,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "ABX",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 8.640000343322754,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            }
+          ],
+          "cash": 443.84,
+          "invested": 750.79,
+          "fees_cum": 888.09
         }
       ]
     },
@@ -95289,15 +95687,15 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 63,
+        "n_days": 64,
         "n_win_days": 21,
-        "n_loss_days": 42,
-        "p_loss_day": 0.6667,
-        "p_win_day": 0.3333,
-        "mean_day": -3.162,
+        "n_loss_days": 43,
+        "p_loss_day": 0.6719,
+        "p_win_day": 0.3281,
+        "mean_day": -3.752,
         "avg_win_day": 0.838,
-        "avg_loss_day": -5.162,
-        "cum_sum": -199.186
+        "avg_loss_day": -5.994,
+        "cum_sum": -240.124
       },
       "equity": [
         9955.38,
@@ -95362,9 +95760,10 @@
         1090.64,
         1071.65,
         979.44,
-        940.54
+        940.54,
+        555.5
       ],
-      "final": 940.54,
+      "final": 555.5,
       "orig_window": {
         "start": "2026-08-13",
         "end": "2026-08-21",
@@ -105325,6 +105724,79 @@
           "cash": 194.26,
           "invested": 746.29,
           "fees_cum": 551.83
+        },
+        {
+          "date": "2026-11-05",
+          "day_pnl": -40.938,
+          "equity": 555.5,
+          "n_held": 24,
+          "n_buy": 0,
+          "n_sell": 4,
+          "n_skip": 13,
+          "n_cand": 13,
+          "hard_red": false,
+          "bought": [],
+          "sold": [
+            "CNK",
+            "FIS",
+            "DEC",
+            "CBRL"
+          ],
+          "held": [
+            "PRCH",
+            "GDYN",
+            "SGRY",
+            "AVO",
+            "ABX",
+            "REPL",
+            "MXCT",
+            "SY",
+            "CERS",
+            "HITI",
+            "PEB"
+          ],
+          "buys": [],
+          "sells": [
+            {
+              "ticker": "CNK",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 39.02000045776367,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "FIS",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 37.279998779296875,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "DEC",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 14.609999656677246,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "CBRL",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 72.44999694824219,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            }
+          ],
+          "cash": 194.26,
+          "invested": 361.24,
+          "fees_cum": 551.83
         }
       ]
     },
@@ -105340,15 +105812,15 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 63,
+        "n_days": 64,
         "n_win_days": 28,
-        "n_loss_days": 34,
-        "p_loss_day": 0.5397,
-        "p_win_day": 0.4444,
-        "mean_day": -1.377,
+        "n_loss_days": 35,
+        "p_loss_day": 0.5469,
+        "p_win_day": 0.4375,
+        "mean_day": -1.678,
         "avg_win_day": 1.969,
-        "avg_loss_day": -4.173,
-        "cum_sum": -86.748
+        "avg_loss_day": -4.643,
+        "cum_sum": -107.386
       },
       "equity": [
         9953.57,
@@ -105413,9 +105885,10 @@
         3855.02,
         3866.52,
         3835.11,
-        3535.54
+        3535.54,
+        2805.89
       ],
-      "final": 3535.54,
+      "final": 2805.89,
       "orig_window": {
         "start": "2026-08-13",
         "end": "2026-08-21",
@@ -116970,6 +117443,126 @@
           "cash": 572.47,
           "invested": 2963.07,
           "fees_cum": 1005.84
+        },
+        {
+          "date": "2026-11-05",
+          "day_pnl": -20.638,
+          "equity": 2805.89,
+          "n_held": 16,
+          "n_buy": 0,
+          "n_sell": 9,
+          "n_skip": 8,
+          "n_cand": 8,
+          "hard_red": false,
+          "bought": [],
+          "sold": [
+            "PRCH",
+            "CDNA",
+            "ETON",
+            "LAUR",
+            "TRU",
+            "ABX",
+            "EZPW",
+            "AVO",
+            "EDU"
+          ],
+          "held": [
+            "MXCT",
+            "REPL",
+            "SY",
+            "CERS",
+            "ILMN",
+            "CNK",
+            "CHEF",
+            "PEB"
+          ],
+          "buys": [],
+          "sells": [
+            {
+              "ticker": "PRCH",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 20.559999465942383,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "CDNA",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 85.87999725341797,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "ETON",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 50.810001373291016,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "LAUR",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 34.810001373291016,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "TRU",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 79.2300033569336,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "ABX",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 8.640000343322754,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "EZPW",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 28.739999771118164,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "AVO",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 11.470000267028809,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "EDU",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 49.380001068115234,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            }
+          ],
+          "cash": 572.47,
+          "invested": 2233.42,
+          "fees_cum": 1005.84
         }
       ]
     },
@@ -116985,15 +117578,15 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 63,
+        "n_days": 64,
         "n_win_days": 26,
-        "n_loss_days": 36,
-        "p_loss_day": 0.5714,
-        "p_win_day": 0.4127,
-        "mean_day": -2.78,
+        "n_loss_days": 37,
+        "p_loss_day": 0.5781,
+        "p_win_day": 0.4062,
+        "mean_day": -3.158,
         "avg_win_day": 1.098,
-        "avg_loss_day": -5.657,
-        "cum_sum": -175.114
+        "avg_loss_day": -6.235,
+        "cum_sum": -202.139
       },
       "equity": [
         9918.74,
@@ -117058,9 +117651,10 @@
         1308.22,
         1289.76,
         1283.38,
-        1282.68
+        1282.68,
+        936.03
       ],
-      "final": 1282.68,
+      "final": 936.03,
       "orig_window": {
         "start": "2026-08-13",
         "end": "2026-08-21",
@@ -124677,6 +125271,55 @@
           "cash": 226.45,
           "invested": 1056.23,
           "fees_cum": 765.94
+        },
+        {
+          "date": "2026-11-05",
+          "day_pnl": -27.025,
+          "equity": 936.03,
+          "n_held": 10,
+          "n_buy": 0,
+          "n_sell": 2,
+          "n_skip": 10,
+          "n_cand": 10,
+          "hard_red": false,
+          "bought": [],
+          "sold": [
+            "PRCH",
+            "CDNA"
+          ],
+          "held": [
+            "REPL",
+            "MXCT",
+            "SY",
+            "CERS",
+            "HITI",
+            "CNK",
+            "LAUR"
+          ],
+          "buys": [],
+          "sells": [
+            {
+              "ticker": "PRCH",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 20.559999465942383,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "CDNA",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 85.87999725341797,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            }
+          ],
+          "cash": 226.45,
+          "invested": 709.58,
+          "fees_cum": 765.94
         }
       ]
     },
@@ -124692,15 +125335,15 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 63,
+        "n_days": 64,
         "n_win_days": 10,
-        "n_loss_days": 50,
-        "p_loss_day": 0.7937,
-        "p_win_day": 0.1587,
-        "mean_day": -4.675,
+        "n_loss_days": 51,
+        "p_loss_day": 0.7969,
+        "p_win_day": 0.1562,
+        "mean_day": -4.794,
         "avg_win_day": 1.333,
-        "avg_loss_day": -6.158,
-        "cum_sum": -294.551
+        "avg_loss_day": -6.277,
+        "cum_sum": -306.799
       },
       "equity": [
         10000.0,
@@ -124765,9 +125408,10 @@
         233.78,
         233.48,
         234.33,
-        169.5
+        169.5,
+        148.74
       ],
-      "final": 169.5,
+      "final": 148.74,
       "orig_window": {
         "start": "2026-08-13",
         "end": "2026-08-21",
@@ -133542,6 +134186,47 @@
           "cash": 148.74,
           "invested": 20.76,
           "fees_cum": 502.76
+        },
+        {
+          "date": "2026-11-05",
+          "day_pnl": -12.248,
+          "equity": 148.74,
+          "n_held": 12,
+          "n_buy": 0,
+          "n_sell": 2,
+          "n_skip": 12,
+          "n_cand": 12,
+          "hard_red": false,
+          "bought": [],
+          "sold": [
+            "AVO",
+            "ABX"
+          ],
+          "held": [],
+          "buys": [],
+          "sells": [
+            {
+              "ticker": "AVO",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 11.710000038146973,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "ABX",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 9.050000190734863,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            }
+          ],
+          "cash": 148.74,
+          "invested": 0.0,
+          "fees_cum": 502.76
         }
       ]
     },
@@ -133557,15 +134242,15 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 63,
+        "n_days": 64,
         "n_win_days": 10,
-        "n_loss_days": 50,
-        "p_loss_day": 0.7937,
-        "p_win_day": 0.1587,
-        "mean_day": -4.845,
+        "n_loss_days": 51,
+        "p_loss_day": 0.7969,
+        "p_win_day": 0.1562,
+        "mean_day": -4.973,
         "avg_win_day": 0.902,
-        "avg_loss_day": -6.285,
-        "cum_sum": -305.259
+        "avg_loss_day": -6.417,
+        "cum_sum": -318.243
       },
       "equity": [
         9955.38,
@@ -133630,9 +134315,10 @@
         226.19,
         225.24,
         224.26,
-        159.89
+        159.89,
+        139.13
       ],
-      "final": 159.89,
+      "final": 139.13,
       "orig_window": {
         "start": "2026-08-13",
         "end": "2026-08-21",
@@ -144350,6 +145036,47 @@
           "cash": 139.13,
           "invested": 20.76,
           "fees_cum": 727.38
+        },
+        {
+          "date": "2026-11-05",
+          "day_pnl": -12.984,
+          "equity": 139.13,
+          "n_held": 13,
+          "n_buy": 0,
+          "n_sell": 2,
+          "n_skip": 13,
+          "n_cand": 13,
+          "hard_red": false,
+          "bought": [],
+          "sold": [
+            "AVO",
+            "ABX"
+          ],
+          "held": [],
+          "buys": [],
+          "sells": [
+            {
+              "ticker": "AVO",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 11.710000038146973,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "ABX",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 9.050000190734863,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            }
+          ],
+          "cash": 139.13,
+          "invested": 0.0,
+          "fees_cum": 727.38
         }
       ]
     },
@@ -144365,15 +145092,15 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 63,
+        "n_days": 64,
         "n_win_days": 9,
-        "n_loss_days": 52,
-        "p_loss_day": 0.8254,
-        "p_win_day": 0.1429,
-        "mean_day": -4.973,
+        "n_loss_days": 53,
+        "p_loss_day": 0.8281,
+        "p_win_day": 0.1406,
+        "mean_day": -5.129,
         "avg_win_day": 1.239,
-        "avg_loss_day": -6.24,
-        "cum_sum": -313.311
+        "avg_loss_day": -6.404,
+        "cum_sum": -328.245
       },
       "equity": [
         9918.74,
@@ -144438,9 +145165,10 @@
         205.65,
         204.59,
         203.21,
-        139.01
+        139.01,
+        118.25
       ],
-      "final": 139.01,
+      "final": 118.25,
       "orig_window": {
         "start": "2026-08-13",
         "end": "2026-08-21",
@@ -152492,6 +153220,47 @@
           "cash": 118.25,
           "invested": 20.76,
           "fees_cum": 634.11
+        },
+        {
+          "date": "2026-11-05",
+          "day_pnl": -14.934,
+          "equity": 118.25,
+          "n_held": 10,
+          "n_buy": 0,
+          "n_sell": 2,
+          "n_skip": 10,
+          "n_cand": 10,
+          "hard_red": false,
+          "bought": [],
+          "sold": [
+            "AVO",
+            "ABX"
+          ],
+          "held": [],
+          "buys": [],
+          "sells": [
+            {
+              "ticker": "AVO",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 11.710000038146973,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "ABX",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 9.050000190734863,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            }
+          ],
+          "cash": 118.25,
+          "invested": 0.0,
+          "fees_cum": 634.11
         }
       ]
     },
@@ -152507,15 +153276,15 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 63,
+        "n_days": 64,
         "n_win_days": 18,
-        "n_loss_days": 44,
-        "p_loss_day": 0.6984,
-        "p_win_day": 0.2857,
-        "mean_day": -2.62,
+        "n_loss_days": 45,
+        "p_loss_day": 0.7031,
+        "p_win_day": 0.2812,
+        "mean_day": -2.591,
         "avg_win_day": 1.247,
-        "avg_loss_day": -4.261,
-        "cum_sum": -165.045
+        "avg_loss_day": -4.183,
+        "cum_sum": -165.795
       },
       "equity": [
         10000.0,
@@ -152580,9 +153349,10 @@
         1738.53,
         1707.29,
         1682.45,
-        1692.87
+        1692.87,
+        1680.17
       ],
-      "final": 1692.87,
+      "final": 1680.17,
       "orig_window": {
         "start": "2026-08-13",
         "end": "2026-08-21",
@@ -163203,6 +163973,37 @@
           "cash": 473.14,
           "invested": 1219.73,
           "fees_cum": 647.26
+        },
+        {
+          "date": "2026-11-05",
+          "day_pnl": -0.75,
+          "equity": 1680.17,
+          "n_held": 23,
+          "n_buy": 0,
+          "n_sell": 0,
+          "n_skip": 12,
+          "n_cand": 12,
+          "hard_red": false,
+          "bought": [],
+          "sold": [],
+          "held": [
+            "REPL",
+            "MXCT",
+            "SY",
+            "CERS",
+            "GOLD",
+            "PRCH",
+            "CNK",
+            "LAUR",
+            "AVO",
+            "ABX",
+            "PEB"
+          ],
+          "buys": [],
+          "sells": [],
+          "cash": 473.14,
+          "invested": 1207.03,
+          "fees_cum": 647.26
         }
       ]
     },
@@ -163218,15 +164019,15 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 63,
+        "n_days": 64,
         "n_win_days": 10,
-        "n_loss_days": 42,
-        "p_loss_day": 0.6667,
-        "p_win_day": 0.1587,
-        "mean_day": -4.211,
+        "n_loss_days": 43,
+        "p_loss_day": 0.6719,
+        "p_win_day": 0.1562,
+        "mean_day": -4.412,
         "avg_win_day": 0.256,
-        "avg_loss_day": -6.378,
-        "cum_sum": -265.315
+        "avg_loss_day": -6.625,
+        "cum_sum": -282.336
       },
       "equity": [
         9955.38,
@@ -163291,9 +164092,10 @@
         303.29,
         303.08,
         302.33,
-        301.81
+        301.81,
+        250.44
       ],
-      "final": 301.81,
+      "final": 250.44,
       "orig_window": {
         "start": "2026-08-13",
         "end": "2026-08-21",
@@ -173111,6 +173913,57 @@
           "cash": 250.44,
           "invested": 51.37,
           "fees_cum": 627.88
+        },
+        {
+          "date": "2026-11-05",
+          "day_pnl": -17.021,
+          "equity": 250.44,
+          "n_held": 13,
+          "n_buy": 0,
+          "n_sell": 3,
+          "n_skip": 13,
+          "n_cand": 13,
+          "hard_red": false,
+          "bought": [],
+          "sold": [
+            "PRCH",
+            "AVO",
+            "ABX"
+          ],
+          "held": [],
+          "buys": [],
+          "sells": [
+            {
+              "ticker": "PRCH",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 21.559999465942383,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "AVO",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 11.710000038146973,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "ABX",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 9.050000190734863,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            }
+          ],
+          "cash": 250.44,
+          "invested": 0.0,
+          "fees_cum": 627.88
         }
       ]
     },
@@ -173126,15 +173979,15 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 63,
+        "n_days": 64,
         "n_win_days": 8,
-        "n_loss_days": 53,
-        "p_loss_day": 0.8413,
-        "p_win_day": 0.127,
-        "mean_day": -4.723,
+        "n_loss_days": 54,
+        "p_loss_day": 0.8438,
+        "p_win_day": 0.125,
+        "mean_day": -4.807,
         "avg_win_day": 0.808,
-        "avg_loss_day": -5.736,
-        "cum_sum": -297.543
+        "avg_loss_day": -5.817,
+        "cum_sum": -307.679
       },
       "equity": [
         9955.38,
@@ -173199,9 +174052,10 @@
         294.24,
         293.82,
         293.08,
-        204.82
+        204.82,
+        184.06
       ],
-      "final": 204.82,
+      "final": 184.06,
       "orig_window": {
         "start": "2026-08-13",
         "end": "2026-08-21",
@@ -185551,6 +186405,47 @@
           "cash": 184.06,
           "invested": 20.76,
           "fees_cum": 815.12
+        },
+        {
+          "date": "2026-11-05",
+          "day_pnl": -10.136,
+          "equity": 184.06,
+          "n_held": 13,
+          "n_buy": 0,
+          "n_sell": 2,
+          "n_skip": 13,
+          "n_cand": 13,
+          "hard_red": false,
+          "bought": [],
+          "sold": [
+            "AVO",
+            "ABX"
+          ],
+          "held": [],
+          "buys": [],
+          "sells": [
+            {
+              "ticker": "AVO",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 11.710000038146973,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "ABX",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 9.050000190734863,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            }
+          ],
+          "cash": 184.06,
+          "invested": 0.0,
+          "fees_cum": 815.12
         }
       ]
     },
@@ -185566,12 +186461,12 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 63,
+        "n_days": 64,
         "n_win_days": 11,
         "n_loss_days": 45,
-        "p_loss_day": 0.7143,
-        "p_win_day": 0.1746,
-        "mean_day": -5.805,
+        "p_loss_day": 0.7031,
+        "p_win_day": 0.1719,
+        "mean_day": -5.714,
         "avg_win_day": 0.484,
         "avg_loss_day": -8.245,
         "cum_sum": -365.703
@@ -185639,6 +186534,7 @@
         302.6,
         302.39,
         304.26,
+        0.58,
         0.58
       ],
       "final": 0.58,
@@ -195659,6 +196555,25 @@
           "cash": 0.58,
           "invested": 0.0,
           "fees_cum": 654.86
+        },
+        {
+          "date": "2026-11-05",
+          "day_pnl": 0.0,
+          "equity": 0.58,
+          "n_held": 13,
+          "n_buy": 0,
+          "n_sell": 0,
+          "n_skip": 13,
+          "n_cand": 13,
+          "hard_red": false,
+          "bought": [],
+          "sold": [],
+          "held": [],
+          "buys": [],
+          "sells": [],
+          "cash": 0.58,
+          "invested": 0.0,
+          "fees_cum": 654.86
         }
       ]
     },
@@ -195674,15 +196589,15 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 63,
+        "n_days": 64,
         "n_win_days": 9,
-        "n_loss_days": 52,
-        "p_loss_day": 0.8254,
-        "p_win_day": 0.1429,
-        "mean_day": -4.586,
+        "n_loss_days": 53,
+        "p_loss_day": 0.8281,
+        "p_win_day": 0.1406,
+        "mean_day": -4.656,
         "avg_win_day": 0.65,
-        "avg_loss_day": -5.669,
-        "cum_sum": -288.913
+        "avg_loss_day": -5.732,
+        "cum_sum": -297.963
       },
       "equity": [
         9955.38,
@@ -195747,9 +196662,10 @@
         301.15,
         300.54,
         300.11,
-        229.39
+        229.39,
+        208.63
       ],
-      "final": 229.39,
+      "final": 208.63,
       "orig_window": {
         "start": "2026-08-13",
         "end": "2026-08-21",
@@ -209166,6 +210082,47 @@
           ],
           "cash": 208.63,
           "invested": 20.76,
+          "fees_cum": 855.91
+        },
+        {
+          "date": "2026-11-05",
+          "day_pnl": -9.05,
+          "equity": 208.63,
+          "n_held": 18,
+          "n_buy": 0,
+          "n_sell": 2,
+          "n_skip": 18,
+          "n_cand": 18,
+          "hard_red": false,
+          "bought": [],
+          "sold": [
+            "AVO",
+            "ABX"
+          ],
+          "held": [],
+          "buys": [],
+          "sells": [
+            {
+              "ticker": "AVO",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 11.710000038146973,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "ABX",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 9.050000190734863,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            }
+          ],
+          "cash": 208.63,
+          "invested": 0.0,
           "fees_cum": 855.91
         }
       ]
