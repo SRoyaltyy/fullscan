@@ -1,0 +1,81 @@
+{
+  "buys": [],
+  "cash": 194.15,
+  "date": "2026-11-03",
+  "equity": 9819.1,
+  "fees": 0,
+  "fills": [],
+  "holdings": [
+    "BAH",
+    "BC",
+    "CDNA",
+    "GEN"
+  ],
+  "mean": -0.018,
+  "n_trades_today": 0,
+  "recipe": "oos0914_break10_h2_sx",
+  "sells": [],
+  "state": {
+    "after": "2026-11-03",
+    "cash": 194.15,
+    "pos": {
+      "BAH": {
+        "close_px": 87.0199966430664,
+        "cost": 2355.3909999999996,
+        "entry_date": "2026-11-02",
+        "entry_px": 87.16,
+        "fee_in": 2.071,
+        "last_px": 85.94999694824219,
+        "min_hold": 2,
+        "notional": 2353.3199999999997,
+        "peak_px": 87.16,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list ohlc_hot; \ud83d\udd35; ret5=+13.0; leftover $2419.15",
+        "shares": 27,
+        "ticker": "BAH"
+      },
+      "BC": {
+        "close_px": 78.08999633789062,
+        "cost": 2365.833,
+        "entry_date": "2026-11-02",
+        "entry_px": 76.25,
+        "fee_in": 2.083,
+        "last_px": 79.61000061035156,
+        "min_hold": 2,
+        "notional": 2363.75,
+        "peak_px": 79.61000061035156,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list ohlc_hot; \ud83d\udd35; ret5=+14.4; leftover $2419.15",
+        "shares": 31,
+        "ticker": "BC"
+      },
+      "CDNA": {
+        "close_px": 88.47000122070312,
+        "cost": 2347.8309999999997,
+        "entry_date": "2026-11-02",
+        "entry_px": 86.88,
+        "fee_in": 2.071,
+        "last_px": 85.62999725341797,
+        "min_hold": 2,
+        "notional": 2345.7599999999998,
+        "peak_px": 86.88,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list flatten; \ud83d\udd35; ret5=+26.3; leftover $2419.15",
+        "shares": 27,
+        "ticker": "CDNA"
+      },
+      "GEN": {
+        "close_px": 29.709999084472656,
+        "cost": 2413.389,
+        "entry_date": "2026-11-02",
+        "entry_px": 29.05,
+        "fee_in": 2.239,
+        "last_px": 29.59000015258789,
+        "min_hold": 2,
+        "notional": 2411.15,
+        "peak_px": 29.59000015258789,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list ohlc_hot; \ud83d\udd35; ret5=+17.1; leftover $2419.15",
+        "shares": 83,
+        "ticker": "GEN"
+      }
+    },
+    "yday_equity": 9819.1
+  }
+}

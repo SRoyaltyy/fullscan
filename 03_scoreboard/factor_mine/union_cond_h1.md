@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · rank by cond
 
-Cash book **-8.92%** ($9,108) · signal-only (no cash/fees) was -4.88%. Starts YES **0/30**. Fills 483 · skips 105 · realized $-723.91.
+Cash book **-7.20%** ($9,280) · signal-only (no cash/fees) was -4.88%. Starts YES **0/30**. Fills 497 · skips 105 · realized $-723.91.
 
 ## How this sleeve decides (like you are 10)
 
@@ -668,6 +668,24 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-02 09:30 ET | **BUY** | `TRU` | 14 | $77.74 | $2.03 | — | $2,494.71 | — | rank by cond; rank cond; list yday_gainer; 🔵; ret5=-5.8; leftover $1157.90 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-11-02 09:30 ET | **BUY** | `VEEV` | 3 | $316.20 | $2.00 | — | $1,544.11 | — | rank by cond; rank cond; list flatten; 🔵; ret5=-3.1; leftover $1157.90 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-11-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,544.11 | ▼ close $9,108.06 vs 09:30 $9,263.20 (session -140.83) | 16:00 close · cash $1,544.11 · equity $9,108.06 vs 09:30 $9,263.20 (-155.14; session marks -140.83) · 7 name(s) marked open→close (per-name table). AMN×24 09:30 $47.47 → close $45.77 -40.80; ARQT×36 09:30 $32.08 → close $31.26 -29.40; CDNA×13 09:30 $86.88 → close $85.88 -13.00; CORT×14 09:30 $80.93 → close $80.46 -6.58; ETON×21 09:30 $52.92 → close $50.81 -44.31; TRU×14 09:30 $77.74 → close $79.23 +20.86; VEEV×3 09:30 $316.20 → close $307.00 -27.60 | — |
+| 2026-11-03 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $1,544.11 | ▼ 09:30 equity $9,083.35 vs yday $9,108.06 (-24.71) | 09:30 open · cash $1,544.11 (unchanged overnight, no fees) · equity $9,083.35 vs prior close $9,108.06 (-24.71) · 7 name(s) re-marked at the open (per-name table). AMN×24 yday $45.77 → 09:30 $45.63 -3.36; ARQT×36 yday $31.26 → 09:30 $31.32 +2.16; CDNA×13 yday $85.88 → 09:30 $85.63 -3.25; CORT×14 yday $80.46 → 09:30 $80.92 +6.44; ETON×21 yday $50.81 → 09:30 $50.81 +0.00; TRU×14 yday $79.23 → 09:30 $78.18 -14.70; VEEV×3 yday $307.00 → 09:30 $303.00 -12.00 | — |
+| 2026-11-03 09:30 ET | **SELL** | `AMN` | 24 | $45.63 | $2.08 | $-48.30 | $2,637.15 | ▼ -48.30 after sell → book $9,081.27; vs 09:30 mark -2.08 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-03 09:30 ET | **SELL** | `ARQT` | 36 | $31.32 | $2.12 | $-31.46 | $3,762.55 | ▼ -31.46 after sell → book $9,079.15; vs 09:30 mark -2.12 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-03 09:30 ET | **SELL** | `CDNA` | 13 | $85.63 | $2.05 | $-20.33 | $4,873.69 | ▼ -20.33 after sell → book $9,077.10; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-03 09:30 ET | **SELL** | `CORT` | 14 | $80.92 | $2.05 | $-4.22 | $6,004.52 | ▼ -4.22 after sell → book $9,075.05; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-03 09:30 ET | **SELL** | `ETON` | 21 | $50.81 | $2.07 | $-48.44 | $7,069.46 | ▼ -48.44 after sell → book $9,072.98; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-03 09:30 ET | **SELL** | `VEEV` | 3 | $303.00 | $2.02 | $-43.62 | $7,976.44 | ▼ -43.62 after sell → book $9,070.96; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-03 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,976.44 | ▲ close $9,076.14 vs 09:30 $9,083.35 (session +5.18) | 16:00 close · cash $7,976.44 · equity $9,076.14 vs 09:30 $9,083.35 (-7.21; session marks +5.18) · 1 name(s) marked open→close (per-name table). TRU×14 09:30 $78.18 → close $78.55 +5.18 | — |
+| 2026-11-04 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,976.44 | ▲ 09:30 equity $9,112.40 vs yday $9,076.14 (+36.26) | 09:30 open · cash $7,976.44 (unchanged overnight, no fees) · equity $9,112.40 vs prior close $9,076.14 (+36.26) · 1 name(s) re-marked at the open (per-name table). TRU×14 yday $78.55 → 09:30 $81.14 +36.26 | — |
+| 2026-11-04 09:30 ET | **SELL** | `TRU` | 14 | $81.14 | $2.05 | $+43.52 | $9,110.35 | ▲ +43.52 after sell → book $9,110.35; vs 09:30 mark -2.05 | dropped from list after 2 sess (min 1) | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `CDNA` | 12 | $89.00 | $2.03 | — | $8,040.32 | — | rank by cond; rank cond; list flatten; ret5=+25.4; leftover $1138.79 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `CNMD` | 23 | $47.99 | $2.06 | — | $6,934.49 | — | rank by cond; rank cond; list flatten; 🔵; ret5=+0.1; leftover $1138.79 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `CON` | 27 | $40.90 | $2.07 | — | $5,828.26 | — | rank by cond; rank cond; list flatten; 🔵; ret5=+0.4; leftover $1138.79 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `GEHC` | 13 | $82.97 | $2.03 | — | $4,747.62 | — | rank by cond; rank cond; list ohlc_hot; 🔵; ret5=+13.4; leftover $1138.79 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `ILMN` | 4 | $241.00 | $2.00 | — | $3,781.63 | — | rank by cond; rank cond; list flatten; 🔵; ret5=-14.8; leftover $1138.79 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `PACS` | 23 | $48.51 | $2.06 | — | $2,663.84 | — | rank by cond; rank cond; list flatten; 🔵; ret5=-2.4; leftover $1138.79 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `PCRX` | 31 | $36.41 | $2.08 | — | $1,533.04 | — | rank by cond; rank cond; list flatten; 🔵; ret5=-0.0; leftover $1138.79 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-04 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,533.04 | ▲ close $9,279.73 vs 09:30 $9,112.40 (session +183.71) | 16:00 close · cash $1,533.04 · equity $9,279.73 vs 09:30 $9,112.40 (+167.33; session marks +183.71) · 7 name(s) marked open→close (per-name table). CDNA×12 09:30 $89.00 → close $85.86 -37.68; CNMD×23 09:30 $47.99 → close $53.66 +130.41; CON×27 09:30 $40.90 → close $43.56 +71.95; GEHC×13 09:30 $82.97 → close $85.81 +36.92; ILMN×4 09:30 $241.00 → close $226.54 -57.83; PACS×23 09:30 $48.51 → close $50.26 +40.25; PCRX×31 09:30 $36.41 → close $36.40 -0.31 | — |
 
 ## Not taken
 

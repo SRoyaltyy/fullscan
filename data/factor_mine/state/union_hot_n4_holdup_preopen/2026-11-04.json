@@ -1,0 +1,95 @@
+{
+  "buys": [],
+  "cash": 8908.37,
+  "date": "2026-11-04",
+  "equity": 8908.37,
+  "fees": 8.7956,
+  "fills": [
+    {
+      "fees": 2.0923,
+      "fill_rule": "open",
+      "pnl": -25.91,
+      "price": 86.29,
+      "shares": 25,
+      "side": "SELL",
+      "ticker": "BAH"
+    },
+    {
+      "fees": 2.1019,
+      "fill_rule": "open",
+      "pnl": 103.06,
+      "price": 80.08,
+      "shares": 28,
+      "side": "SELL",
+      "ticker": "BC"
+    },
+    {
+      "fees": 2.2457,
+      "fill_rule": "open",
+      "pnl": 104.29,
+      "price": 30.5,
+      "shares": 75,
+      "side": "SELL",
+      "ticker": "GEN"
+    },
+    {
+      "fees": 2.3557,
+      "fill_rule": "open",
+      "pnl": -1.38,
+      "price": 19.78,
+      "shares": 110,
+      "side": "SELL",
+      "ticker": "SLN"
+    }
+  ],
+  "holdings": [],
+  "label": "starts 10-08 open, no past days",
+  "mean": 0.9968,
+  "n_trades_today": 4,
+  "parent": "union_hot_n4_holdup",
+  "picks": [],
+  "reasons": [
+    "prior state 2026-11-03 not committed before 09:30 ET: never committed",
+    "no pre-open candidate list"
+  ],
+  "recipe": "union_hot_n4_holdup_preopen",
+  "s": 10.848,
+  "seal_sha256": "421b0e65a020f4dec561c3007014ebb7de12f762e2fb4a294fa206fd7ab26118",
+  "sells": [
+    {
+      "fill_rule": "open",
+      "price": 86.29,
+      "shares": 25,
+      "side": "SELL",
+      "ticker": "BAH"
+    },
+    {
+      "fill_rule": "open",
+      "price": 80.08,
+      "shares": 28,
+      "side": "SELL",
+      "ticker": "BC"
+    },
+    {
+      "fill_rule": "open",
+      "price": 30.5,
+      "shares": 75,
+      "side": "SELL",
+      "ticker": "GEN"
+    },
+    {
+      "fill_rule": "open",
+      "price": 19.78,
+      "shares": 110,
+      "side": "SELL",
+      "ticker": "SLN"
+    }
+  ],
+  "sit": true,
+  "state": {
+    "after": "2026-11-04",
+    "cash": 8908.37,
+    "pos": {},
+    "yday_equity": 8908.37
+  }
+}

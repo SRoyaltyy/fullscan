@@ -501,6 +501,11 @@ def _land_body(date: str, key: str, title: str,
                commit_msg: str = "") -> dict:
     paths = [p for p in (step_paths(date, key) + list(extra_paths or []))
              if p.exists()]
+    # A freeze for this date already pinned some of these files. Keep those
+    # bytes. A later landing is a new version file, never an overwrite of
+    # the copy the ticket reads.
+    from . import freeze_guard
+    paths = freeze_guard.divert_frozen_lands(paths, date, root=ROOT)
     checks: list[dict] = []
     ok_paths: list[Path] = []
     for p in paths:

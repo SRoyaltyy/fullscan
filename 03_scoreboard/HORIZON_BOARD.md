@@ -1,15 +1,15 @@
 # Horizon board — multi-timeframe prediction grades
 
-Updated: 2026-11-03. Calls are graded at T+h trading days using the scoreboard's own close history. Magnitude bands scale by √h (a 'mild' month ≈ ±1.4%, a 'severe' month ≈ ±9.2%).
+Updated: 2026-11-04. Calls are graded at T+h trading days using the scoreboard's own close history. Magnitude bands scale by √h (a 'mild' month ≈ ±1.4%, a 'severe' month ≈ ±9.2%).
 
 ## Hit rates by topic × horizon
 
 | Topic | Horizon | Graded | Dir hit | Mag hit | Avg actual % |
 |---|---|---|---|---|---|
-| general | 3d | 38 | 26% (10/38) | 45% (17/38) | -0.06% |
-| general | 1w | 36 | 28% (10/36) | 64% (23/36) | +0.07% |
-| general | 2w | 33 | 27% (9/33) | 36% (12/33) | +0.23% |
-| general | 1m | 25 | 8% (2/25) | 36% (9/25) | +0.30% |
+| general | 3d | 43 | 23% (10/43) | 44% (19/43) | -0.03% |
+| general | 1w | 42 | 26% (11/42) | 62% (26/42) | -0.04% |
+| general | 2w | 38 | 26% (10/38) | 37% (14/38) | +0.09% |
+| general | 1m | 31 | 13% (4/31) | 29% (9/31) | +0.17% |
 | sector:Basic Materials | 3d | 11 | 36% (4/11) | 18% (2/11) | -0.61% |
 | sector:Basic Materials | 1w | 11 | 18% (2/11) | 27% (3/11) | -1.18% |
 | sector:Basic Materials | 2w | 11 | 18% (2/11) | 36% (4/11) | -3.43% |
@@ -59,31 +59,31 @@ Updated: 2026-11-03. Calls are graded at T+h trading days using the scoreboard's
 
 | Date | Topic | Horizon | Call | Actual | Dir | Mag |
 |---|---|---|---|---|---|---|
+| 2026-10-30 | general | 3d | down/mild | +1.43% (up/mild) | ❌ | ✅ |
+| 2026-10-20 | general | 2w | flat/mild | -0.31% (down/flat) | ❌ | ❌ |
+| 2026-10-02 | general | 1m | flat/mild | -0.44% (down/flat) | ❌ | ❌ |
+| 2026-10-27 | general | 1w | up/mild | -1.99% (down/mild) | ❌ | ✅ |
+| 2026-10-19 | general | 2w | down/mild | -1.58% (down/mild) | ✅ | ✅ |
+| 2026-10-01 | general | 1m | down/mild | -1.27% (down/flat) | ✅ | ❌ |
+| 2026-10-26 | general | 1w | up/mild | -1.76% (down/mild) | ❌ | ✅ |
+| 2026-10-16 | general | 2w | flat/mild | -1.54% (down/mild) | ❌ | ✅ |
+| 2026-10-27 | general | 3d | up/mild | -1.85% (down/notable) | ❌ | ❌ |
+| 2026-10-22 | general | 1w | down/mild | -1.09% (down/mild) | ✅ | ✅ |
+| 2026-09-29 | general | 1m | down/mild | -1.18% (down/flat) | ✅ | ❌ |
+| 2026-10-26 | general | 3d | flat/mild | +0.57% (up/mild) | ❌ | ✅ |
+| 2026-10-21 | general | 1w | flat/mild | -0.47% (down/flat) | ❌ | ❌ |
+| 2026-10-14 | general | 2w | down/mild | +0.02% (flat/flat) | ❌ | ❌ |
+| 2026-09-28 | general | 1m | down/mild | +0.48% (up/flat) | ❌ | ❌ |
+| 2026-10-22 | general | 3d | down/notable | +1.05% (up/mild) | ❌ | ❌ |
+| 2026-10-20 | general | 1w | down/mild | +0.41% (up/flat) | ❌ | ❌ |
+| 2026-10-13 | general | 2w | flat/mild | -0.79% (down/flat) | ❌ | ❌ |
+| 2026-09-25 | general | 1m | down/mild | +0.01% (flat/flat) | ❌ | ❌ |
+| 2026-10-21 | general | 3d | up/mild | -0.45% (down/flat) | ❌ | ❌ |
+| 2026-10-19 | general | 1w | flat/mild | +0.41% (up/flat) | ❌ | ❌ |
+| 2026-09-24 | general | 1m | up/mild | +0.24% (flat/flat) | ❌ | ❌ |
 | 2026-10-20 | general | 3d | down/mild | -0.46% (down/flat) | ✅ | ❌ |
 | 2026-10-16 | general | 1w | up/mild | +0.23% (flat/flat) | ❌ | ❌ |
 | 2026-10-08 | general | 2w | flat/mild | -1.14% (down/mild) | ❌ | ✅ |
-| 2026-09-23 | general | 1m | flat/mild | -0.38% (down/flat) | ❌ | ❌ |
-| 2026-10-19 | general | 3d | up/mild | -0.35% (down/flat) | ❌ | ❌ |
-| 2026-09-22 | general | 1m | down/mild | -1.30% (down/flat) | ✅ | ❌ |
-| 2026-10-16 | general | 3d | up/mild | +1.28% (up/mild) | ✅ | ✅ |
-| 2026-10-14 | general | 1w | flat/mild | +0.50% (up/flat) | ❌ | ❌ |
-| 2026-09-21 | general | 1m | down/mild | -0.10% (flat/flat) | ❌ | ❌ |
-| 2026-10-13 | general | 1w | down/mild | -1.19% (down/mild) | ✅ | ✅ |
-| 2026-10-05 | general | 2w | down/mild | -0.79% (down/flat) | ✅ | ❌ |
-| 2026-09-18 | general | 1m | down/mild | +0.81% (up/flat) | ❌ | ❌ |
-| 2026-10-14 | general | 3d | flat/flat | -0.37% (down/flat) | ❌ | ✅ |
-| 2026-10-02 | general | 2w | down/mild | -0.41% (down/flat) | ✅ | ❌ |
-| 2026-09-17 | general | 1m | down/mild | +0.69% (up/flat) | ❌ | ❌ |
-| 2026-10-13 | general | 3d | down/mild | -1.87% (down/notable) | ✅ | ❌ |
-| 2026-10-08 | general | 1w | down/mild | -1.36% (down/mild) | ✅ | ✅ |
-| 2026-10-01 | general | 2w | down/mild | -0.09% (flat/flat) | ❌ | ❌ |
-| 2026-09-16 | general | 1m | down/mild | +1.43% (up/mild) | ❌ | ✅ |
-| 2026-09-15 | general | 1m | flat/mild | +2.09% (up/mild) | ❌ | ✅ |
-| 2026-10-08 | general | 3d | down/mild | -0.60% (down/mild) | ✅ | ✅ |
-| 2026-09-29 | general | 2w | down/mild | +0.63% (up/flat) | ❌ | ❌ |
-| 2026-09-14 | general | 1m | flat/mild | +1.30% (up/flat) | ❌ | ❌ |
-| 2026-09-03 | sector:Consumer Cyclical | 1m | flat/mild | -4.26% (down/mild) | ❌ | ✅ |
-| 2026-09-03 | sector:Basic Materials | 1m | flat/mild | -5.61% (down/notable) | ❌ | ❌ |
 
-*273 calls still maturing (T+h close not recorded yet).*
+*255 calls still maturing (T+h close not recorded yet).*
 

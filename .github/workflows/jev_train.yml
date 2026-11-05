@@ -1,8 +1,17 @@
 name: Jev train
 
-# Homework for the hop-0 gate. Weekday 21:30 UTC appends new parse days
-# onto dashboard/jev-train/days.json. Past days stay as stored.
-# A dispatch can still draw or grade. The weekday harvest workflow stays as it is.
+# Homework for the hop-0 gate. Weekday appends add new parse days onto
+# dashboard/jev-train/days.json and stop at the latest completed NYSE
+# session. Past days stay as stored.
+# The 21:30 UTC cron has never produced a schedule run (the 2026-11-04
+# dispatch skipped Append new days). Post-close last-closed's 21:15
+# cron did run that day, so a successful completion of that workflow
+# appends too. 13:20 UTC (08:20 ET) is the morning catch-up, before
+# the 09:30 ET page deadline.
+# A dispatch can still draw or grade. append=true on that dispatch
+# appends new parse days only, from the last stored day, and does not
+# draw or grade. That is the hand run after merge; it does not wait
+# for the delayed 21:30 UTC cron. The weekday harvest workflow stays as it is.
 # The page has no API key. JEV_API_KEY is read here, on mixed draw only.
 # A day draw asks live Jev when the secret is present; else regex fallback.
 # Chips read 01_daily/news on the page.
@@ -14,6 +23,11 @@ name: Jev train
 on:
   schedule:
     - cron: "30 21 * * 1-5"
+    - cron: "20 13 * * 1-5"
+  workflow_run:
+    workflows:
+      - "Post-Close last-closed (ubuntu/DeepSeek sidecar)"
+    types: [completed]
   workflow_dispatch:
     inputs:
       mode:
@@ -44,6 +58,11 @@ on:
         required: false
         default: ""
         type: string
+      append:
+        description: "true = append new parse days only, after the last stored day. No draw or grade."
+        required: false
+        default: false
+        type: boolean
 
 permissions:
   contents: write
@@ -55,6 +74,7 @@ concurrency:
 
 jobs:
   train:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     timeout-minutes: 35
     steps:
@@ -75,20 +95,26 @@ jobs:
           python-version: "3.12"
 
       - name: Unit tests (no key)
+        if: github.event_name == 'workflow_dispatch' && github.event.inputs.append != 'true'
         run: |
           PYTHONPATH=. python3 -m src.test_jev_train
           PYTHONPATH=. python3 -m src.test_jev_day
           PYTHONPATH=. python3 -m src.test_jev_candidate
 
+      - name: Append-only tests
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_run' || github.event.inputs.append == 'true'
+        run: |
+          PYTHONPATH=. python3 -m src.test_jev_day
+
       - name: Append new days
-        if: github.event_name == 'schedule'
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_run' || (github.event_name == 'workflow_dispatch' && github.event.inputs.append == 'true')
         run: |
           set -euo pipefail
           PYTHONPATH=. python3 -m src.jev_day append
 
       - name: Draw
         id: draw
-        if: github.event.inputs.mode == 'draw'
+        if: github.event.inputs.mode == 'draw' && github.event.inputs.append != 'true'
         env:
           JEV_API_KEY: ${{ secrets.JEV_API_KEY }}
           JEV_GATE_POLICY: candidate-v2
@@ -110,7 +136,7 @@ jobs:
 
       - name: Grade
         id: grade
-        if: github.event.inputs.mode == 'grade'
+        if: github.event.inputs.mode == 'grade' && github.event.inputs.append != 'true'
         env:
           GRADES_JSON: ${{ github.event.inputs.grades_json }}
           STAMP: ${{ github.event.inputs.stamp }}
@@ -146,7 +172,7 @@ jobs:
           fi
           if git diff --cached --quiet; then
             echo "no trainer output to commit"
-            if [ "${{ github.event_name }}" = "schedule" ]; then
+            if [ "${{ github.event_name }}" = "schedule" ] || [ "${{ github.event_name }}" = "workflow_run" ] || [ "${{ github.event.inputs.append }}" = "true" ]; then
               exit 0
             fi
             exit 1
@@ -156,7 +182,7 @@ jobs:
             echo "refusing to commit secret-like material"
             exit 1
           fi
-          git commit -m "jev train: ${{ github.event_name == 'schedule' && 'append' || github.event.inputs.mode }} [skip ci]"
+          git commit -m "jev train: ${{ (github.event_name == 'schedule' || github.event_name == 'workflow_run' || github.event.inputs.append == 'true') && 'append' || github.event.inputs.mode }} [skip ci]"
           n=0
           while [ "$n" -lt 6 ]; do
             if git push origin HEAD:main; then
@@ -182,14 +208,14 @@ jobs:
             tree=$(GIT_INDEX_FILE="$tmp" git write-tree)
             rm -f "$tmp"
             new=$(git commit-tree "$tree" -p "$parent" \
-              -m "jev train: ${{ github.event_name == 'schedule' && 'append' || github.event.inputs.mode }} [skip ci]")
+              -m "jev train: ${{ (github.event_name == 'schedule' || github.event_name == 'workflow_run' || github.event.inputs.append == 'true') && 'append' || github.event.inputs.mode }} [skip ci]")
             git update-ref HEAD "$new"
           done
           echo "could not push trainer sheet after ${n} attempts"
           exit 1
 
       - name: Open or update the jev-train issue
-        if: github.event.inputs.mode == 'grade'
+        if: github.event.inputs.mode == 'grade' && github.event.inputs.append != 'true'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_REPOSITORY: ${{ github.repository }}

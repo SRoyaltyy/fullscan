@@ -1,0 +1,85 @@
+{
+  "buys": [],
+  "cash": 7428.71,
+  "date": "2026-11-03",
+  "equity": 7428.71,
+  "fees": 8.4465,
+  "fills": [
+    {
+      "fees": 2.0774,
+      "fill_rule": "open",
+      "pnl": -29.54,
+      "price": 85.95,
+      "shares": 21,
+      "side": "SELL",
+      "ticker": "BAH"
+    },
+    {
+      "fees": 2.0873,
+      "fill_rule": "open",
+      "pnl": 76.49,
+      "price": 79.61,
+      "shares": 24,
+      "side": "SELL",
+      "ticker": "BC"
+    },
+    {
+      "fees": 2.0774,
+      "fill_rule": "open",
+      "pnl": -30.38,
+      "price": 85.63,
+      "shares": 21,
+      "side": "SELL",
+      "ticker": "CDNA"
+    },
+    {
+      "fees": 2.2044,
+      "fill_rule": "open",
+      "pnl": 29.64,
+      "price": 29.59,
+      "shares": 63,
+      "side": "SELL",
+      "ticker": "GEN"
+    }
+  ],
+  "holdings": [],
+  "mean": -0.836,
+  "n_trades_today": 4,
+  "recipe": "oos0914_break10_h1_sx",
+  "sells": [
+    {
+      "fill_rule": "open",
+      "price": 85.95,
+      "shares": 21,
+      "side": "SELL",
+      "ticker": "BAH"
+    },
+    {
+      "fill_rule": "open",
+      "price": 79.61,
+      "shares": 24,
+      "side": "SELL",
+      "ticker": "BC"
+    },
+    {
+      "fill_rule": "open",
+      "price": 85.63,
+      "shares": 21,
+      "side": "SELL",
+      "ticker": "CDNA"
+    },
+    {
+      "fill_rule": "open",
+      "price": 29.59,
+      "shares": 63,
+      "side": "SELL",
+      "ticker": "GEN"
+    }
+  ],
+  "state": {
+    "after": "2026-11-03",
+    "cash": 7428.71,
+    "pos": {},
+    "yday_equity": 7428.71
+  }
+}

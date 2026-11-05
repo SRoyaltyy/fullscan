@@ -1,0 +1,147 @@
+{
+  "buys": [
+    {
+      "fill_rule": "open",
+      "price": 24.0,
+      "shares": 112,
+      "side": "BUY",
+      "ticker": "BETA"
+    },
+    {
+      "fill_rule": "open",
+      "price": 179.68,
+      "shares": 15,
+      "side": "BUY",
+      "ticker": "RRX"
+    },
+    {
+      "fill_rule": "open",
+      "price": 8.86,
+      "shares": 305,
+      "side": "BUY",
+      "ticker": "SHLS"
+    },
+    {
+      "fill_rule": "open",
+      "price": 63.74,
+      "shares": 42,
+      "side": "BUY",
+      "ticker": "TBBB"
+    }
+  ],
+  "cash": 61.08,
+  "date": "2026-11-04",
+  "equity": 11023.24,
+  "fees": 10.4115,
+  "fills": [
+    {
+      "fees": 2.326,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 24.0,
+      "shares": 112,
+      "side": "BUY",
+      "ticker": "BETA"
+    },
+    {
+      "fees": 2.035,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 179.68,
+      "shares": 15,
+      "side": "BUY",
+      "ticker": "RRX"
+    },
+    {
+      "fees": 3.9345,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 8.86,
+      "shares": 305,
+      "side": "BUY",
+      "ticker": "SHLS"
+    },
+    {
+      "fees": 2.116,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 63.74,
+      "shares": 42,
+      "side": "BUY",
+      "ticker": "TBBB"
+    }
+  ],
+  "holdings": [
+    "BETA",
+    "RRX",
+    "SHLS",
+    "TBBB"
+  ],
+  "mean": 1.7461,
+  "n_trades_today": 4,
+  "recipe": "oos0914_rvol_lg_h1_sx",
+  "sells": [],
+  "state": {
+    "after": "2026-11-04",
+    "cash": 61.08,
+    "pos": {
+      "BETA": {
+        "close_px": 25.31,
+        "cost": 2690.326,
+        "entry_date": "2026-11-04",
+        "entry_px": 24.0,
+        "fee_in": 2.326,
+        "last_px": 24.0,
+        "min_hold": 1,
+        "notional": 2688.0,
+        "peak_px": 24.0,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate last_green=True,rvol_min=1.5; rank hot_score; list ohlc_hot; ret5=+13.9; leftover $2708.52",
+        "shares": 112,
+        "ticker": "BETA"
+      },
+      "RRX": {
+        "close_px": 173.38,
+        "cost": 2697.235,
+        "entry_date": "2026-11-04",
+        "entry_px": 179.68,
+        "fee_in": 2.035,
+        "last_px": 179.68,
+        "min_hold": 1,
+        "notional": 2695.2000000000003,
+        "peak_px": 179.68,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate last_green=True,rvol_min=1.5; rank hot_score; list ohlc_hot; ret5=+13.7; leftover $2708.52",
+        "shares": 15,
+        "ticker": "RRX"
+      },
+      "SHLS": {
+        "close_px": 9.16,
+        "cost": 2706.2344999999996,
+        "entry_date": "2026-11-04",
+        "entry_px": 8.86,
+        "fee_in": 3.9345,
+        "last_px": 8.86,
+        "min_hold": 1,
+        "notional": 2702.2999999999997,
+        "peak_px": 8.86,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate last_green=True,rvol_min=1.5; rank hot_score; list ohlc_hot; \ud83d\udd35; ret5=+13.3; leftover $2708.52",
+        "shares": 305,
+        "ticker": "SHLS"
+      },
+      "TBBB": {
+        "close_px": 65.07,
+        "cost": 2679.196,
+        "entry_date": "2026-11-04",
+        "entry_px": 63.74,
+        "fee_in": 2.116,
+        "last_px": 63.74,
+        "min_hold": 1,
+        "notional": 2677.08,
+        "peak_px": 63.74,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate last_green=True,rvol_min=1.5; rank hot_score; list yday_gainer; \ud83d\udd35; ret5=+9.7; leftover $2708.52",
+        "shares": 42,
+        "ticker": "TBBB"
+      }
+    },
+    "yday_equity": 11023.24
+  }
+}

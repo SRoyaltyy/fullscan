@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared union_news_pack_net2_h1/short_news_r_h3 w=0.5,0.5 net=priority
 
-Cash book **-6.00%** ($9,400) · signal-only (no cash/fees) was —. Starts YES **2/30**. Fills 274 · skips 145 · realized $+1088.80.
+Cash book **-8.94%** ($9,106) · signal-only (no cash/fees) was —. Starts YES **2/30**. Fills 278 · skips 145 · realized $+1088.80.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $10,391.56.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $11,772.02.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -461,6 +461,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-02 09:30 ET | **BUY** | `AMX` | 95 | $24.57 | $2.27 | — | $5,687.25 | — | packet🟢 and camera net ≥ 2; gate cam_net_min=2,news_box=good; rank cond; list yday_gainer; 🔵; ret5=-0.4; combo leftover $2354.70; owner union_news_pack_net2_h1 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-11-02 09:30 ET | **SHORT** | `BAH` | 54 | $87.16 | $2.33 | — | $10,391.56 | — | news🔴; gate news=bad; list ohlc_hot; 🔵; ret5=+13.0; combo leftover $4707.27; owner short_news_r_h3 | join🔴 sector🔴 gen🟢 news🔴 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-11-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,391.56 | ▼ close $9,399.77 vs 09:30 $9,432.44 (session -12.45) | 16:00 close · cash $10,391.56 · equity $9,399.77 vs 09:30 $9,432.44 (-32.67; session marks -12.45) · 3 name(s) marked open→close (per-name table). LLY×1 09:30 $1393.15 → close $1410.99 +17.84; AMX×95 09:30 $24.57 → close $24.74 +16.15; BAH×54 09:30 $87.16 → close $88.02 -46.44 | — |
+| 2026-11-03 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,391.56 | ▲ 09:30 equity $9,495.44 vs yday $9,399.77 (+95.67) | 09:30 open · cash $10,391.56 (unchanged overnight, no fees) · equity $9,495.44 vs prior close $9,399.77 (+95.67) | — |
+| 2026-11-03 09:30 ET | **SELL** | `AMX` | 95 | $24.69 | $2.31 | $+6.82 | $12,734.80 | ▲ +6.82 after sell → book $9,493.13; vs 09:30 mark -2.31 | union_news_pack_net2_h1: dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-03 09:30 ET | **SELL** | `LLY` | 1 | $1399.63 | $2.01 | $+2.47 | $14,132.42 | ▲ +2.47 after sell → book $9,491.12; vs 09:30 mark -2.01 | union_news_pack_net2_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-11-03 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,132.42 | ▼ close $9,433.34 vs 09:30 $9,495.44 (session -57.78) | 16:00 close · cash $14,132.42 · equity $9,433.34 vs 09:30 $9,495.44 (-62.10; session marks -57.78) · 1 name(s) marked open→close (per-name table). BAH×54 09:30 $85.95 → close $87.02 -57.78 | — |
+| 2026-11-04 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $14,132.42 | ▲ 09:30 equity $9,472.76 vs yday $9,433.34 (+39.42) | 09:30 open · cash $14,132.42 (unchanged overnight, no fees) · equity $9,472.76 vs prior close $9,433.34 (+39.42) | — |
+| 2026-11-04 09:30 ET | **BUY** | `AMX` | 279 | $25.31 | $3.60 | — | $7,067.33 | — | packet🟢 and camera net ≥ 2; gate cam_net_min=2,news_box=good; rank cond; list yday_gainer; 🔵; ret5=+2.9; combo leftover $7066.21; owner union_news_pack_net2_h1 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **SHORT** | `HRB` | 88 | $53.49 | $2.44 | — | $11,772.02 | — | news🔴; gate news=bad; list ohlc_hot; ret5=+10.8; combo leftover $4734.58; owner short_news_r_h3 | join🟢 sector🔴 gen🟢 news🔴 digest🟡 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-04 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $11,772.02 | ▼ close $9,105.83 vs 09:30 $9,472.76 (session -360.90) | 16:00 close · cash $11,772.02 · equity $9,105.83 vs 09:30 $9,472.76 (-366.93; session marks -360.90) · 3 name(s) marked open→close (per-name table). BAH×54 09:30 $86.29 → close $88.30 -108.54; AMX×279 09:30 $25.31 → close $25.03 -78.12; HRB×88 09:30 $53.49 → close $55.47 -174.24 | — |
 
 ## Not taken
 

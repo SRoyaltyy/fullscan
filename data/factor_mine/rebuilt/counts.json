@@ -1,0 +1,131 @@
+{
+  "counts": {
+    "combo_oh_5050_shared": {
+      "both_halves_0": 19,
+      "build": 0,
+      "lock": 0,
+      "rebuilt": 16,
+      "render": 0,
+      "sat out (rule)": 3,
+      "still broken": 0
+    },
+    "combo_sf_7030_shared": {
+      "both_halves_0": 15,
+      "build": 0,
+      "lock": 0,
+      "rebuilt": 14,
+      "render": 0,
+      "sat out (rule)": 1,
+      "still broken": 0
+    },
+    "flatten_h5": {
+      "both_halves_0": 14,
+      "build": 0,
+      "lock": 0,
+      "rebuilt": 13,
+      "render": 0,
+      "sat out (rule)": 1,
+      "still broken": 0
+    },
+    "overnight_h1": {
+      "both_halves_0": 40,
+      "build": 0,
+      "lock": 0,
+      "rebuilt": 31,
+      "render": 0,
+      "sat out (rule)": 9,
+      "still broken": 0
+    },
+    "overnight_mega_h1": {
+      "both_halves_0": 55,
+      "build": 2,
+      "lock": 0,
+      "rebuilt": 39,
+      "render": 0,
+      "sat out (rule)": 14,
+      "still broken": 2
+    },
+    "overnight_mega_h2": {
+      "both_halves_0": 53,
+      "build": 2,
+      "lock": 0,
+      "rebuilt": 38,
+      "render": 0,
+      "sat out (rule)": 13,
+      "still broken": 2
+    },
+    "short_alarm_h3": {
+      "both_halves_0": 28,
+      "build": 1,
+      "lock": 2,
+      "rebuilt": 21,
+      "render": 0,
+      "sat out (rule)": 4,
+      "still broken": 3
+    },
+    "short_macd_dn_h3": {
+      "both_halves_0": 14,
+      "build": 0,
+      "lock": 0,
+      "rebuilt": 14,
+      "render": 0,
+      "sat out (rule)": 0,
+      "still broken": 0
+    },
+    "short_news_r_h3": {
+      "both_halves_0": 15,
+      "build": 1,
+      "lock": 0,
+      "rebuilt": 13,
+      "render": 0,
+      "sat out (rule)": 1,
+      "still broken": 1
+    },
+    "short_news_r_macd_h3": {
+      "both_halves_0": 15,
+      "build": 1,
+      "lock": 0,
+      "rebuilt": 13,
+      "render": 0,
+      "sat out (rule)": 1,
+      "still broken": 1
+    },
+    "union_hot_n4_h1": {
+      "both_halves_0": 33,
+      "build": 0,
+      "lock": 0,
+      "rebuilt": 27,
+      "render": 0,
+      "sat out (rule)": 6,
+      "still broken": 0
+    },
+    "union_hot_n4_holdup": {
+      "both_halves_0": 29,
+      "build": 0,
+      "lock": 0,
+      "rebuilt": 24,
+      "render": 0,
+      "sat out (rule)": 5,
+      "still broken": 0
+    },
+    "union_news_pack_h1": {
+      "both_halves_0": 26,
+      "build": 1,
+      "lock": 0,
+      "rebuilt": 22,
+      "render": 0,
+      "sat out (rule)": 3,
+      "still broken": 1
+    },
+    "union_news_pack_net2_h1": {
+      "both_halves_0": 27,
+      "build": 1,
+      "lock": 0,
+      "rebuilt": 21,
+      "render": 0,
+      "sat out (rule)": 5,
+      "still broken": 1
+    }
+  },
+  "table": "| strategy | both-halves-0 | rebuilt | sat out (rule) | still broken | build | lock | render |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| combo_oh_5050_shared | 19 | 16 | 3 | 0 | 0 | 0 | 0 |\n| combo_sf_7030_shared | 15 | 14 | 1 | 0 | 0 | 0 | 0 |\n| flatten_h5 | 14 | 13 | 1 | 0 | 0 | 0 | 0 |\n| overnight_h1 | 40 | 31 | 9 | 0 | 0 | 0 | 0 |\n| overnight_mega_h1 | 55 | 39 | 14 | 2 | 2 | 0 | 0 |\n| overnight_mega_h2 | 53 | 38 | 13 | 2 | 2 | 0 | 0 |\n| short_alarm_h3 | 28 | 21 | 4 | 3 | 1 | 2 | 0 |\n| short_macd_dn_h3 | 14 | 14 | 0 | 0 | 0 | 0 | 0 |\n| short_news_r_h3 | 15 | 13 | 1 | 1 | 1 | 0 | 0 |\n| short_news_r_macd_h3 | 15 | 13 | 1 | 1 | 1 | 0 | 0 |\n| union_hot_n4_h1 | 33 | 27 | 6 | 0 | 0 | 0 | 0 |\n| union_hot_n4_holdup | 29 | 24 | 5 | 0 | 0 | 0 | 0 |\n| union_news_pack_h1 | 26 | 22 | 3 | 1 | 1 | 0 | 0 |\n| union_news_pack_net2_h1 | 27 | 21 | 5 | 1 | 1 | 0 | 0 |\n| total | 383 | 306 | 66 | 11 | 9 | 2 | 0 |"
+}

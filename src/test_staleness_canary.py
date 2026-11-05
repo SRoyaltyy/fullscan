@@ -51,6 +51,14 @@ def _fresh_tree(root: Path, *, html: str = "2026-11-04",
     }))
     _write(root, "dashboard/factor-mine/strategy_tickets.json",
            json.dumps({"date": curve, "strategies": {"a": {"date": "2026-10-01"}}}))
+    _write(root, "dashboard/updown/data/index.json",
+           json.dumps({"model": "updown_o2c_v2", "days": [
+               ["2026-10-05", "h"], [curve, "h", 1],
+           ]}))
+    _write(root, "dashboard/hard-red-exceptions/latest.json",
+           json.dumps({"to_date": curve, "days": [{"date": curve}]}))
+    _write(root, "dashboard/day-movers/days.json",
+           json.dumps({"to_date": curve, "days": [{"date": curve}]}))
 
 
 def test_session_lag_counts_nyse_days() -> None:
@@ -79,6 +87,9 @@ def test_parsers_use_the_newest_data_date() -> None:
     assert canary.newest_date(json.dumps({
         "days": [{"date": "2026-09-23"}, {"date": "2026-09-29"}],
     }), "jev_days") == "2026-09-29"
+    assert canary.newest_date(json.dumps({
+        "days": [["2026-10-02", "h"], ["2026-10-05", "h"]],
+    }), "updown_days") == "2026-10-05"
 
 
 def test_report_fails_when_a_source_is_over_its_lag(tmp_path: Path) -> None:
@@ -126,14 +137,16 @@ def test_scanner_backtest_is_manual() -> None:
     workflow = (root / ".github/workflows/scanner-backtest-publish.yml").read_text(encoding="utf-8")
     assert "cron:" not in workflow
     coverage = json.loads((root / "src/staleness_coverage.json").read_text(encoding="utf-8"))
-    row = next(item for item in coverage["sources"] if item.get("id") == "scanner-backtest")
-    assert row["mode"] == "manual"
+    row = next(
+        item for item in coverage["pages"]
+        if item.get("path") == "dashboard/scanner-backtest/index.html")
+    assert row["manual"] is True
+    assert row["frozen"] is True
     assert row["last_run"] == "2026-10-25"
     assert row["fill_forward"] is False
-    assert row["page"] == "dashboard/scanner-backtest/index.html"
-    page_path = root / row["page"]
+    page_path = root / row["path"]
     reported = next(
-        item for item in canary.manual_rows(root) if item["page"] == row["page"])
+        item for item in canary.manual_rows(root) if item["page"] == row["path"])
     assert reported["ok"] is True
     assert reported["mode"] == "manual"
     assert reported["main_date"] == row["last_run"]
@@ -173,7 +186,7 @@ def test_manual_source_does_not_fail_the_canary(tmp_path: Path) -> None:
 
     report = canary.evaluate(root=tmp_path, now=NOW, fetch=fetch)
     manual = next(row for row in report["sources"] if row.get("mode") == "manual")
-    assert manual["path"] == "dashboard/scanner-backtest/meta.json"
+    assert manual["path"] == "dashboard/scanner-backtest/index.html"
     assert manual["main_date"] == "2026-10-25"
     assert manual["page_present"] is False
     assert manual["ok"] is True
@@ -182,6 +195,67 @@ def test_manual_source_does_not_fail_the_canary(tmp_path: Path) -> None:
                    if row["path"] == "dashboard/factor-mine/preopen.json")
     assert preopen["ok"] is False
     assert preopen.get("mode") != "manual"
+
+
+def _tape(marker: bytes) -> bytes:
+    return b"Ticker,Change\nAAA,1.0\n" + marker + b"\n" + (b"x" * 220)
+
+
+def test_writer_refuses_a_byte_copy_and_keeps_a_fresh_tape(tmp_path: Path) -> None:
+    from src.finviz_export_guard import publish_bytes, refuse_copied_export
+
+    exports = tmp_path / "data" / "exports"
+    exports.mkdir(parents=True, exist_ok=True)
+    stale = _tape(b"STALE")
+    (exports / "finviz_2026-11-03.csv").write_bytes(stale)
+    dest = exports / "finviz_2026-11-04.csv"
+    try:
+        publish_bytes("2026-11-04", stale, dest, root=tmp_path)
+    except SystemExit as exc:
+        text = str(exc)
+        assert "FAIL" in text
+        assert "byte-identical" in text
+        assert "2026-11-03" in text
+        assert "sha256=" in text
+    else:
+        raise AssertionError("a copied export was published")
+    assert not dest.exists()
+    fresh = _tape(b"FRESH")
+    publish_bytes("2026-11-04", fresh, dest, root=tmp_path)
+    assert dest.read_bytes() == fresh
+    refuse_copied_export("2026-11-05", root=tmp_path)
+    dest.write_bytes(stale)
+    try:
+        refuse_copied_export("2026-11-04", root=tmp_path)
+    except SystemExit as exc:
+        assert "byte-identical to 2026-11-03" in str(exc)
+    else:
+        raise AssertionError("morning guard continued on a copied tape")
+
+
+def test_staleness_alarm_stops_on_a_copied_finviz_export(tmp_path: Path) -> None:
+    _fresh_tree(tmp_path)
+    exports = tmp_path / "data" / "exports"
+    exports.mkdir(parents=True, exist_ok=True)
+    body = _tape(b"SAME")
+    (exports / "finviz_2026-11-03.csv").write_bytes(body)
+    (exports / "finviz_2026-11-04.csv").write_bytes(body)
+    texts = {}
+    for rel, _kind, _limit in canary.SOURCES:
+        texts[rel] = (tmp_path / rel).read_text(encoding="utf-8")
+
+    def fetch(url: str) -> str:
+        rel = url.split("/fullscan/", 1)[1]
+        return texts[rel]
+
+    copied = canary.evaluate(root=tmp_path, now=NOW, fetch=fetch)
+    assert copied["ok"] is False
+    row = next(item for item in copied["sources"] if item["path"].endswith("finviz_2026-11-04.csv"))
+    assert row["ok"] is False
+    assert "byte-identical to 2026-11-03" in row["live_error"]
+    (exports / "finviz_2026-11-04.csv").write_bytes(_tape(b"OTHER"))
+    fresh = canary.evaluate(root=tmp_path, now=NOW, fetch=fetch)
+    assert fresh["ok"] is True
 
 
 def main() -> None:
@@ -194,6 +268,8 @@ def main() -> None:
         root = Path(tmp)
         test_report_fails_when_a_source_is_over_its_lag(root)
         test_manual_source_does_not_fail_the_canary(root)
+        test_writer_refuses_a_byte_copy_and_keeps_a_fresh_tape(root)
+        test_staleness_alarm_stops_on_a_copied_finviz_export(root)
     print("staleness canary ok")
 
 

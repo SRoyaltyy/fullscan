@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · Clock-B #7 insider/Form-4 + inst Tx + stabilize (if data)
 
-Cash book **+8.42%** ($10,842) · signal-only (no cash/fees) was -5.54%. Starts YES **0/30**. Fills 13 · skips 7 · realized $-603.63.
+Cash book **+9.01%** ($10,901) · signal-only (no cash/fees) was -5.54%. Starts YES **0/30**. Fills 13 · skips 7 · realized $-603.63.
 
 ## How this sleeve decides (like you are 10)
 
@@ -201,6 +201,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,555.88 | ▲ 09:30 equity $10,555.88 vs yday $10,555.88 (+0.00) | 09:30 open · cash $10,555.88 · no holdings · equity $10,555.88 vs prior close $10,555.88 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-11-02 09:30 ET | **BUY** | `GLOB` | 226 | $46.50 | $2.92 | — | $43.96 | — | Clock-B #7 insider/Form-4 + inst Tx + stabilize (if data); gate clk_insider_cash_stab=True; rank cond; list ohlc_hot; 🔵; ret5=+3.8; leftover $10555.88 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-11-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $43.96 | ▲ close $10,842.24 vs 09:30 $10,555.88 (session +289.28) | 16:00 close · cash $43.96 · equity $10,842.24 vs 09:30 $10,555.88 (+286.36; session marks +289.28) · 1 name(s) marked open→close (per-name table). GLOB×226 09:30 $46.50 → close $47.78 +289.28 | — |
+| 2026-11-03 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $43.96 | ▼ 09:30 equity $10,552.96 vs yday $10,842.24 (-289.28) | 09:30 open · cash $43.96 (unchanged overnight, no fees) · equity $10,552.96 vs prior close $10,842.24 (-289.28) · 1 name(s) re-marked at the open (per-name table). GLOB×226 yday $47.78 → 09:30 $46.50 -289.28 | — |
+| 2026-11-03 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $43.96 | ▼ close $10,387.98 vs 09:30 $10,552.96 (session -164.98) | 16:00 close · cash $43.96 · equity $10,387.98 vs 09:30 $10,552.96 (-164.98; session marks -164.98) · 1 name(s) marked open→close (per-name table). GLOB×226 09:30 $46.50 → close $45.77 -164.98 | — |
+| 2026-11-04 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $43.96 | ▲ 09:30 equity $10,659.18 vs yday $10,387.98 (+271.20) | 09:30 open · cash $43.96 (unchanged overnight, no fees) · equity $10,659.18 vs prior close $10,387.98 (+271.20) · 1 name(s) re-marked at the open (per-name table). GLOB×226 yday $45.77 → 09:30 $46.97 +271.20 | — |
+| 2026-11-04 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $43.96 | ▲ close $10,901.00 vs 09:30 $10,659.18 (session +241.82) | 16:00 close · cash $43.96 · equity $10,901.00 vs 09:30 $10,659.18 (+241.82; session marks +241.82) · 1 name(s) marked open→close (per-name table). GLOB×226 09:30 $46.97 → close $48.04 +241.82 | — |
 
 ## Not taken
 

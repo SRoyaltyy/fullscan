@@ -158,6 +158,140 @@ def test_main_page_fresh_blocks_a_stale_stamp() -> None:
         assert gate.latest_completed_session(preopen) == "2026-10-06"
 
 
+def test_stale_page_allows_only_a_recorded_miss_that_the_page_shows() -> None:
+    """One session behind is fresh only for a recorded miss printed on the page.
+
+    Every other reason the page is behind still blocks: a wider gap, a
+    missing record, a status other than missed, or a note that does not
+    name that session.
+    """
+    with tempfile.TemporaryDirectory() as raw:
+        root = Path(raw)
+        date = "2026-11-04"
+        _board(root, date, [
+            _proc("stock_book", [_file("book_json", "required", "OK")]),
+            _proc("publish", [_file("dash_html", "required", "OK")]),
+        ])
+        _fm_and_tickets(root, date)
+        page = root / "dashboard" / "index.html"
+        gate.stamp_data_asof(page, "2026-11-03")
+        blocked = gate.evaluate(date, root=root)
+        assert blocked["ready"] is False
+        assert blocked["main_page_fresh"] is False
+        assert "older than 2026-11-04" in blocked["reason"]
+
+        _write(root, "data/paper/missed.json", {
+            "sessions": {"2026-11-04": {"status": "late", "reason": "something else"}},
+        })
+        late = gate.evaluate(date, root=root)
+        assert late["ready"] is False
+        assert late["main_page_fresh"] is False
+
+        _write(root, "data/paper/missed.json", {
+            "sessions": {
+                "2026-11-04": {
+                    "status": "missed",
+                    "reason": "stock book was not on main before 09:30 ET",
+                },
+            },
+        })
+        unshown = gate.evaluate(date, root=root)
+        assert unshown["ready"] is False
+        assert unshown["main_page_fresh"] is False
+        assert gate.page_shows_missed_note(date, root=root) is False
+
+        gate.stamp_missed_note(page, "2026-11-02")
+        wrong_day = gate.evaluate(date, root=root)
+        assert wrong_day["ready"] is False
+        assert gate.page_shows_missed_note("2026-11-02", root=root) is True
+        assert gate.page_shows_missed_note(date, root=root) is False
+
+        gate.stamp_data_asof(page, "2026-11-02")
+        gate.stamp_missed_note(page, date)
+        two_behind = gate.evaluate(date, root=root)
+        assert two_behind["ready"] is False
+        assert two_behind["main_page_asof"] == "2026-11-02"
+        assert gate.recorded_miss_covers("2026-11-02", date, root=root) is False
+
+        gate.stamp_data_asof(page, "2026-11-03")
+        gate.stamp_missed_note(page, date)
+        allowed = gate.evaluate(date, root=root)
+        assert allowed["ready"] is True
+        assert allowed["main_page_fresh"] is True
+        assert allowed["main_page_asof"] == "2026-11-03"
+        assert "recorded missed" in allowed["reason"]
+        text = page.read_text(encoding="utf-8")
+        assert 'id="missed-note"' in text
+        assert "2026-11-04 missed" in text
+        assert '"dates"' not in text or "2026-11-04" not in (
+            gate._DATES_ARRAY.search(text).group(1)
+            if gate._DATES_ARRAY.search(text) else ""
+        )
+
+
+def test_page_rewrite_restores_the_recorded_miss_note() -> None:
+    """A paper render replaces the HTML. The missed note has to come back.
+
+    The two-session gap, a missing note, and a wrong-day note still fail.
+    Restoring the note does not add a curve row.
+    """
+    with tempfile.TemporaryDirectory() as raw:
+        root = Path(raw)
+        date = "2026-11-04"
+        _board(root, date, [
+            _proc("stock_book", [_file("book_json", "required", "OK")]),
+            _proc("publish", [_file("dash_html", "required", "OK")]),
+        ])
+        _fm_and_tickets(root, date)
+        page = root / "dashboard" / "index.html"
+        gate.stamp_data_asof(page, "2026-11-03")
+        _write(root, "data/paper/missed.json", {
+            "sessions": {
+                "2026-11-04": {"status": "missed", "reason": "not on main"},
+            },
+        })
+        curve = root / "data" / "paper" / "equity_curve.csv"
+        curve.write_text("date,equity\n2026-11-03,1\n", encoding="utf-8")
+        gate.stamp_missed_note(page, date)
+        assert gate.evaluate(date, root=root)["ready"] is True
+
+        page.write_text(
+            '<html><head></head><body><div>rewritten curve</div></body></html>',
+            encoding="utf-8")
+        gate.stamp_data_asof(page, "2026-11-03")
+        wiped = gate.evaluate(date, root=root)
+        assert wiped["ready"] is False
+        assert wiped["main_page_fresh"] is False
+
+        gate.stamp_recorded_misses(page, root=root)
+        restored = gate.evaluate(date, root=root)
+        assert restored["ready"] is True
+        assert "2026-11-04 missed" in page.read_text(encoding="utf-8")
+        assert "2026-11-04" not in curve.read_text(encoding="utf-8")
+
+        gate.stamp_data_asof(page, "2026-11-02")
+        assert gate.evaluate(date, root=root)["ready"] is False
+        gate.stamp_data_asof(page, "2026-11-03")
+        gate.stamp_missed_note(page, "2026-11-02")
+        assert gate.evaluate(date, root=root)["ready"] is False
+
+
+def test_live_curve_keeps_2026_11_04_recorded_as_missed() -> None:
+    """11-04 stays off the sealed paper curve. The page shows the miss."""
+    root = Path(__file__).resolve().parent.parent
+    page = (root / "dashboard" / "index.html").read_text(encoding="utf-8")
+    assert gate.data_asof_from_html(page) == "2026-11-03"
+    assert gate.page_shows_missed_note("2026-11-04", text=page)
+    match = gate._DATES_ARRAY.search(page)
+    assert match is not None
+    assert "2026-11-04" not in match.group(1)
+    missed = json.loads((root / "data" / "paper" / "missed.json").read_text(
+        encoding="utf-8"))
+    assert missed["sessions"]["2026-11-04"]["status"] == "missed"
+    curve = (root / "data" / "paper" / "equity_curve.csv").read_text(encoding="utf-8")
+    assert "2026-11-04" not in curve
+
+
 def test_legacy_curve_dates_count_as_data_asof() -> None:
     html = (
         '<html><head><meta charset="utf-8"></head><script>const D = '
@@ -355,6 +489,30 @@ def test_publish_restores_h1_and_holdup_aliases() -> None:
         assert _blob(intake_bare, "dashboard/h1/index.html") == "h1-from-main"
         assert _blob(intake_bare, "dashboard/holdup/index.html") == "holdup-from-main"
         assert _blob(intake_bare, "dashboard/news-intake/index.html") == "intake-from-main"
+
+
+def test_publish_copies_updown_to_the_site_root() -> None:
+    """https://sroyaltyy.github.io/fullscan/updown/ is the root alias.
+
+    The stock-book dashboard artifact is only the main index, and the
+    publish script used to root-copy day-movers but not updown, so the
+    live root URL 404s while /dashboard/updown/ still loads.
+    """
+    with tempfile.TemporaryDirectory() as d:
+        base = Path(d)
+        ws = base / "ws"
+        bare = base / "origin.git"
+        ws.mkdir()
+        subprocess.check_call(["git", "init", "--bare", "-q", str(bare)])
+        _write_page(ws, "dashboard/index.html", "<html>main</html>")
+        _write_page(ws, "dashboard/updown/index.html", "updown-page")
+        _write_page(ws, "dashboard/updown/data/index.json", '{"model":"updown_o2c_v2"}')
+        result = _publish(ws, bare, None)
+        assert result.returncode == 0, result.stdout + result.stderr
+        assert _blob(bare, "updown/index.html") == "updown-page"
+        assert _blob(bare, "dashboard/updown/index.html") == "updown-page"
+        assert _blob(bare, "dashboard/updown/data/index.json") == '{"model":"updown_o2c_v2"}'
+        assert _blob(bare, "updown/data/index.json") == '{"model":"updown_o2c_v2"}'
 
 
 def test_preopen_2026_10_07_resolves_to_2026_10_06() -> None:
@@ -594,6 +752,18 @@ def test_workflows_wire_the_gate() -> None:
     assert "jev-train" in dep
     assert "overlay jev-train" in dep
     assert "jev-train" in pub
+    root_lists = []
+    for block in dep.split("for sub in ")[1:]:
+        if "Root copy pages_out/${sub}" in block:
+            root_lists.append(block.split("; do", 1)[0])
+    assert root_lists and all("updown" in header for header in root_lists)
+    assert " updown " in f" {pub.split('SUBS=', 1)[1].split(chr(10), 1)[0]} "
+    book_art = book.split("name: dashboard", 1)[1].split("if-no-files-found", 1)[0]
+    assert "dashboard/updown/" in book_art
+    tickets = (root / ".github" / "workflows" / "publish_strategy_tickets.yml").read_text(
+        encoding="utf-8")
+    ticket_art = tickets.split("name: dashboard", 1)[1].split("if-no-files-found", 1)[0]
+    assert "dashboard/updown/" in ticket_art
     assert "newest successful Stock Book ALL" in dep
     main_fallback = dep.index("Used dashboard/index.html from main")
     artifact_fallback = dep.index("newest successful Stock Book ALL")
@@ -608,6 +778,9 @@ def main() -> None:
         test_fallback_when_book_required_missing,
         test_blocked_without_tickets,
         test_main_page_fresh_blocks_a_stale_stamp,
+        test_stale_page_allows_only_a_recorded_miss_that_the_page_shows,
+        test_page_rewrite_restores_the_recorded_miss_note,
+        test_live_curve_keeps_2026_11_04_recorded_as_missed,
         test_newer_main_page_replaces_an_older_artifact,
         test_legacy_curve_dates_count_as_data_asof,
         test_blocked_when_today_json_is_yesterday,
@@ -615,6 +788,7 @@ def main() -> None:
         test_dash_template_has_session_and_pack_stamp,
         test_paper_book_page_is_on_the_pages_deploy,
         test_publish_restores_h1_and_holdup_aliases,
+        test_publish_copies_updown_to_the_site_root,
         test_preopen_2026_10_07_resolves_to_2026_10_06,
         test_preopen_uses_today_when_today_files_ready,
         test_weekend_resolves_to_friday,

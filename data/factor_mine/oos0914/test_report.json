@@ -35,7 +35,9 @@
     "2026-10-28",
     "2026-10-29",
     "2026-10-30",
-    "2026-11-02"
+    "2026-11-02",
+    "2026-11-03",
+    "2026-11-04"
   ],
   "rules": [
     {
@@ -1264,14 +1266,92 @@
           "equity": 9820.87,
           "mean": 1.491,
           "mean_flat_15bp": 1.4383
+        },
+        {
+          "date": "2026-11-03",
+          "buys": [],
+          "sells": [],
+          "fees": 0,
+          "cash": 194.15,
+          "equity": 9819.1,
+          "mean": -0.018,
+          "mean_flat_15bp": -0.0172
+        },
+        {
+          "date": "2026-11-04",
+          "buys": [
+            {
+              "fill_rule": "open",
+              "price": 6.77,
+              "shares": 366,
+              "side": "BUY",
+              "ticker": "JLHL"
+            },
+            {
+              "fill_rule": "open",
+              "price": 24.0,
+              "shares": 103,
+              "side": "BUY",
+              "ticker": "BETA"
+            },
+            {
+              "fill_rule": "open",
+              "price": 179.68,
+              "shares": 13,
+              "side": "BUY",
+              "ticker": "RRX"
+            },
+            {
+              "fill_rule": "open",
+              "price": 20.53,
+              "shares": 120,
+              "side": "BUY",
+              "ticker": "VFC"
+            }
+          ],
+          "sells": [
+            {
+              "fill_rule": "open",
+              "price": 86.29,
+              "shares": 27,
+              "side": "SELL",
+              "ticker": "BAH"
+            },
+            {
+              "fill_rule": "open",
+              "price": 80.08,
+              "shares": 31,
+              "side": "SELL",
+              "ticker": "BC"
+            },
+            {
+              "fill_rule": "open",
+              "price": 89.0,
+              "shares": 27,
+              "side": "SELL",
+              "ticker": "CDNA"
+            },
+            {
+              "fill_rule": "open",
+              "price": 30.5,
+              "shares": 83,
+              "side": "SELL",
+              "ticker": "GEN"
+            }
+          ],
+          "fees": 19.9851,
+          "cash": 171.71,
+          "equity": 10142.78,
+          "mean": 3.2964,
+          "mean_flat_15bp": 3.204
         }
       ],
       "keep_bar_met": false,
       "keep_bar_note": "12 train fires against the 30-fire bar. Excel's luck test p=0.87.",
-      "after_fees_return": -1.791,
-      "start_day_win_rate": 0.6944,
+      "after_fees_return": 1.428,
+      "start_day_win_rate": 0.8684,
       "best_stock": "SDGR",
-      "without_best_stock_return": -5.427
+      "without_best_stock_return": -2.36
     },
     {
       "name": "oos0914_rvol_lg_h1_sx",
@@ -2884,14 +2964,92 @@
           "equity": 10908.56,
           "mean": 1.574,
           "mean_flat_15bp": 1.4429
+        },
+        {
+          "date": "2026-11-03",
+          "buys": [],
+          "sells": [
+            {
+              "fill_rule": "open",
+              "price": 85.95,
+              "shares": 30,
+              "side": "SELL",
+              "ticker": "BAH"
+            },
+            {
+              "fill_rule": "open",
+              "price": 79.61,
+              "shares": 35,
+              "side": "SELL",
+              "ticker": "BC"
+            },
+            {
+              "fill_rule": "open",
+              "price": 67.42,
+              "shares": 40,
+              "side": "SELL",
+              "ticker": "BLDR"
+            },
+            {
+              "fill_rule": "open",
+              "price": 85.63,
+              "shares": 30,
+              "side": "SELL",
+              "ticker": "CDNA"
+            }
+          ],
+          "fees": 8.4901,
+          "cash": 10834.07,
+          "equity": 10834.07,
+          "mean": -0.6829,
+          "mean_flat_15bp": -0.6207
+        },
+        {
+          "date": "2026-11-04",
+          "buys": [
+            {
+              "fill_rule": "open",
+              "price": 24.0,
+              "shares": 112,
+              "side": "BUY",
+              "ticker": "BETA"
+            },
+            {
+              "fill_rule": "open",
+              "price": 179.68,
+              "shares": 15,
+              "side": "BUY",
+              "ticker": "RRX"
+            },
+            {
+              "fill_rule": "open",
+              "price": 8.86,
+              "shares": 305,
+              "side": "BUY",
+              "ticker": "SHLS"
+            },
+            {
+              "fill_rule": "open",
+              "price": 63.74,
+              "shares": 42,
+              "side": "BUY",
+              "ticker": "TBBB"
+            }
+          ],
+          "sells": [],
+          "fees": 10.4115,
+          "cash": 61.08,
+          "equity": 11023.24,
+          "mean": 1.7461,
+          "mean_flat_15bp": 1.617
         }
       ],
       "keep_bar_met": false,
       "keep_bar_note": "12 train fires against the 30-fire bar. Excel's luck test p=0.87.",
-      "after_fees_return": 9.086,
-      "start_day_win_rate": 0.5278,
+      "after_fees_return": 10.232,
+      "start_day_win_rate": 0.7368,
       "best_stock": "SDEV",
-      "without_best_stock_return": -9.746
+      "without_best_stock_return": -8.792
     },
     {
       "name": "oos0914_break10_h1_sx",
@@ -4503,14 +4661,92 @@
           "equity": 7491.34,
           "mean": 1.4742,
           "mean_flat_15bp": 1.3727
+        },
+        {
+          "date": "2026-11-03",
+          "buys": [],
+          "sells": [
+            {
+              "fill_rule": "open",
+              "price": 85.95,
+              "shares": 21,
+              "side": "SELL",
+              "ticker": "BAH"
+            },
+            {
+              "fill_rule": "open",
+              "price": 79.61,
+              "shares": 24,
+              "side": "SELL",
+              "ticker": "BC"
+            },
+            {
+              "fill_rule": "open",
+              "price": 85.63,
+              "shares": 21,
+              "side": "SELL",
+              "ticker": "CDNA"
+            },
+            {
+              "fill_rule": "open",
+              "price": 29.59,
+              "shares": 63,
+              "side": "SELL",
+              "ticker": "GEN"
+            }
+          ],
+          "fees": 8.4465,
+          "cash": 7428.71,
+          "equity": 7428.71,
+          "mean": -0.836,
+          "mean_flat_15bp": -0.724
+        },
+        {
+          "date": "2026-11-04",
+          "buys": [
+            {
+              "fill_rule": "open",
+              "price": 6.77,
+              "shares": 274,
+              "side": "BUY",
+              "ticker": "JLHL"
+            },
+            {
+              "fill_rule": "open",
+              "price": 24.0,
+              "shares": 77,
+              "side": "BUY",
+              "ticker": "BETA"
+            },
+            {
+              "fill_rule": "open",
+              "price": 179.68,
+              "shares": 10,
+              "side": "BUY",
+              "ticker": "RRX"
+            },
+            {
+              "fill_rule": "open",
+              "price": 20.53,
+              "shares": 90,
+              "side": "BUY",
+              "ticker": "VFC"
+            }
+          ],
+          "sells": [],
+          "fees": 10.0356,
+          "cash": 71.19,
+          "equity": 7582.96,
+          "mean": 2.0764,
+          "mean_flat_15bp": 1.939
         }
       ],
       "keep_bar_met": false,
       "keep_bar_note": "12 train fires against the 30-fire bar. Excel's luck test p=0.87.",
-      "after_fees_return": -25.087,
-      "start_day_win_rate": 0.3889,
+      "after_fees_return": -24.17,
+      "start_day_win_rate": 0.4737,
       "best_stock": "QSI",
-      "without_best_stock_return": -28.509
+      "without_best_stock_return": -27.612
     },
     {
       "name": "oos0914_zero_candle_h2_sx",
@@ -5313,12 +5549,32 @@
           "equity": 10269.61,
           "mean": 0.0,
           "mean_flat_15bp": 0.0
+        },
+        {
+          "date": "2026-11-03",
+          "buys": [],
+          "sells": [],
+          "fees": 0,
+          "cash": 10269.61,
+          "equity": 10269.61,
+          "mean": 0.0,
+          "mean_flat_15bp": 0.0
+        },
+        {
+          "date": "2026-11-04",
+          "buys": [],
+          "sells": [],
+          "fees": 0,
+          "cash": 10269.61,
+          "equity": 10269.61,
+          "mean": 0.0,
+          "mean_flat_15bp": 0.0
         }
       ],
       "keep_bar_met": false,
       "keep_bar_note": "12 train fires against the 30-fire bar. Excel's luck test p=0.87.",
       "after_fees_return": 2.696,
-      "start_day_win_rate": 0.25,
+      "start_day_win_rate": 0.2368,
       "best_stock": "NAUT",
       "without_best_stock_return": -0.241
     }

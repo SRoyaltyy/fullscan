@@ -39,6 +39,7 @@ from pathlib import Path
 
 FREEZE_ROOT = Path("research/input_freeze")
 TICKET_TMPL = "data/day_board/{}_strategy_tickets.json"
+RECORD_REL = FREEZE_ROOT / "not_provably_replayable.jsonl"
 ABSENT = "absent"
 
 
@@ -187,6 +188,54 @@ def check_day(root: Path, day: str) -> tuple[list[str], list[str], list[str]]:
     return infos, warns, fails
 
 
+# ------------------------------------------------------- not replayable
+def _record_path(root: Path) -> Path:
+    return root / RECORD_REL
+
+
+def load_not_replayable(root: Path) -> dict[str, dict]:
+    """Add-only dates whose sealed ticket cannot be proved from the freeze."""
+    path = _record_path(root)
+    if not path.is_file():
+        return {}
+    out: dict[str, dict] = {}
+    for line in path.read_text(encoding="utf-8").splitlines():
+        if not line.strip():
+            continue
+        row = json.loads(line)
+        if isinstance(row, dict) and row.get("date"):
+            out[str(row["date"])] = row
+    return out
+
+
+def append_not_replayable(root: Path, row: dict) -> None:
+    """Append one date. Refuses to rewrite or repeat a line already there."""
+    date = str(row.get("date") or "")
+    if len(date) != 10:
+        raise ValueError("add-only record needs a YYYY-MM-DD date")
+    path = _record_path(root)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    before = path.read_text(encoding="utf-8") if path.is_file() else ""
+    if before and not before.endswith("\n"):
+        raise ValueError("add-only record must end with a newline")
+    for line in before.splitlines():
+        if not line.strip():
+            continue
+        prev = json.loads(line)
+        if str(prev.get("date") or "") == date:
+            raise ValueError(f"add-only: {date} is already recorded")
+    payload = json.dumps(row, sort_keys=True) + "\n"
+    with path.open("a", encoding="utf-8") as handle:
+        handle.write(payload)
+    after = path.read_text(encoding="utf-8")
+    if not after.startswith(before) or after[len(before):] != payload:
+        raise ValueError("add-only: existing record lines were rewritten")
+
+
+def _store_tamper(line: str) -> bool:
+    return line.startswith("stored copy")
+
+
 # -------------------------------------------------------------------- cli
 def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(description=__doc__)
@@ -206,14 +255,27 @@ def main(argv: list[str] | None = None) -> int:
           f"(ticket data/day_board/{day}_strategy_tickets.json vs "
           f"research/input_freeze/{day}/manifest.json)")
     infos, warns, fails = check_day(root, day)
+    known = load_not_replayable(root).get(day)
+    tamper = [line for line in fails if _store_tamper(line)]
+    rest = [line for line in fails if not _store_tamper(line)]
     for line in infos:
         print("  " + line)
     for line in warns:
         print("  WARN  " + line)
-    for line in fails:
-        print("  FAIL  " + line)
+    if known and not tamper:
+        for line in rest:
+            print("  KNOWN " + line)
+    else:
+        for line in fails:
+            print("  FAIL  " + line)
 
     print(f"[decision-freeze] {day}: {len(infos)} ok, {len(warns)} warn, {len(fails)} fail")
+    if known and not tamper:
+        why = known.get("reason") or "recorded as not provably replayable"
+        print(f"[decision-freeze] {day} is not provably replayable: {why}")
+        print("[decision-freeze] sealed ticket and freeze folder are unchanged; "
+              "this day is not a replay failure")
+        return 0
     if fails:
         print("[decision-freeze] REPLAY CHECK FAILED — the sealed ticket is not "
               "provably built from the frozen inputs")

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `probable` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-24.10%** ($7,590) · signal-only (no cash/fees) was -9.22%. Starts YES **0/30**. Fills 329 · skips 53 · realized $-864.75.
+Cash book **-23.19%** ($7,681) · signal-only (no cash/fees) was -9.22%. Starts YES **0/30**. Fills 329 · skips 53 · realized $-864.75.
 
 ## How this sleeve decides (like you are 10)
 
@@ -517,6 +517,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,324.30 | ▲ 09:30 equity $7,324.30 vs yday $7,324.30 (+0.00) | 09:30 open · cash $7,324.30 · no holdings · equity $7,324.30 vs prior close $7,324.30 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-11-02 09:30 ET | **BUY** | `PRMB` | 365 | $20.03 | $4.71 | — | $8.64 | — | combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer,yday_mover; 🔵; ret5=+0.3; leftover $7324.30 | join🟡 sector🟡 gen🟢 news🟡 digest🔴 ab🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-11-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8.64 | ▲ close $7,589.69 vs 09:30 $7,324.30 (session +270.10) | 16:00 close · cash $8.64 · equity $7,589.69 vs 09:30 $7,324.30 (+265.39; session marks +270.10) · 1 name(s) marked open→close (per-name table). PRMB×365 09:30 $20.03 → close $20.77 +270.10 | — |
+| 2026-11-03 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8.64 | ▼ 09:30 equity $7,513.04 vs yday $7,589.69 (-76.65) | 09:30 open · cash $8.64 (unchanged overnight, no fees) · equity $7,513.04 vs prior close $7,589.69 (-76.65) · 1 name(s) re-marked at the open (per-name table). PRMB×365 yday $20.77 → 09:30 $20.56 -76.65 | — |
+| 2026-11-03 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8.64 | ▲ close $7,523.99 vs 09:30 $7,513.04 (session +10.95) | 16:00 close · cash $8.64 · equity $7,523.99 vs 09:30 $7,513.04 (+10.95; session marks +10.95) · 1 name(s) marked open→close (per-name table). PRMB×365 09:30 $20.56 → close $20.59 +10.95 | — |
+| 2026-11-04 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8.64 | ▲ 09:30 equity $7,750.29 vs yday $7,523.99 (+226.30) | 09:30 open · cash $8.64 (unchanged overnight, no fees) · equity $7,750.29 vs prior close $7,523.99 (+226.30) · 1 name(s) re-marked at the open (per-name table). PRMB×365 yday $20.59 → 09:30 $21.21 +226.30 | — |
+| 2026-11-04 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8.64 | ▼ close $7,680.94 vs 09:30 $7,750.29 (session -69.35) | 16:00 close · cash $8.64 · equity $7,680.94 vs 09:30 $7,750.29 (-69.35; session marks -69.35) · 1 name(s) marked open→close (per-name table). PRMB×365 09:30 $21.21 → close $21.02 -69.35 | — |
 
 ## Not taken
 

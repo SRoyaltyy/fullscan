@@ -1,0 +1,2332 @@
+{
+  "fill": "forward",
+  "strategies": {
+    "combo_oh_5050_shared": {
+      "2026-08-13": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-14": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-17": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-18": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-19": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-20": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-21": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-24": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-25": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-26": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-27": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-09-02": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-09-03": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-09-09": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-09-10": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-10-08": {
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "hard-red sit S<=-3",
+        "step": null
+      },
+      "2026-10-23": {
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "hard-red sit S<=-3",
+        "step": null
+      },
+      "2026-10-26": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-10-30": {
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "hard-red sit S<=-3",
+        "step": null
+      }
+    },
+    "combo_sf_7030_shared": {
+      "2026-08-13": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-14": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-17": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-18": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-19": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-20": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-21": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-24": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-25": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-26": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-27": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-09-25": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-09-30": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "rebuilt from the prior day's state at the session open",
+        "step": null
+      },
+      "2026-10-08": {
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "hard-red sit S<=-3",
+        "step": null
+      },
+      "2026-10-26": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      }
+    },
+    "flatten_h5": {
+      "2026-08-13": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-14": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-17": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-18": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-19": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-20": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-21": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-24": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-25": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-26": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-27": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-09-30": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "rebuilt from the prior day's state at the session open",
+        "step": null
+      },
+      "2026-10-08": {
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "hard-red sit S<=-3",
+        "step": null
+      },
+      "2026-10-26": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      }
+    },
+    "overnight_h1": {
+      "2026-08-13": {
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "strategy no-trade rule",
+        "step": null
+      },
+      "2026-08-14": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-17": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-18": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-19": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-20": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-21": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-24": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-25": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-26": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-27": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-09-01": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-09-02": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-09-03": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-09-09": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-09-10": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-09-11": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-09-14": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-09-15": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-09-18": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-09-25": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-09-28": {
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "hard-red sit S<=-3",
+        "step": null
+      },
+      "2026-09-30": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "rebuilt from the prior day's state at the session open",
+        "step": null
+      },
+      "2026-10-05": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "rebuilt from the prior day's state at the session open",
+        "step": null
+      },
+      "2026-10-08": {
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "hard-red sit S<=-3",
+        "step": null
+      },
+      "2026-10-09": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-10-12": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-10-13": {
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "hard-red sit S<=-3",
+        "step": null
+      },
+      "2026-10-14": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "rebuilt from the prior day's state at the session open",
+        "step": null
+      },
+      "2026-10-19": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "rebuilt from the prior day's state at the session open",
+        "step": null
+      },
+      "2026-10-20": {
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "hard-red sit S<=-3",
+        "step": null
+      },
+      "2026-10-23": {
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "hard-red sit S<=-3",
+        "step": null
+      },
+      "2026-10-26": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-10-27": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "rebuilt from the prior day's state at the session open",
+        "step": null
+      },
+      "2026-10-28": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-10-29": {
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "hard-red sit S<=-3",
+        "step": null
+      },
+      "2026-10-30": {
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "hard-red sit S<=-3",
+        "step": null
+      },
+      "2026-11-02": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-11-03": {
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "hard-red sit S<=-3",
+        "step": null
+      },
+      "2026-11-04": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "rebuilt from the prior day's state at the session open",
+        "step": null
+      }
+    },
+    "overnight_mega_h1": {
+      "2026-08-13": {
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "strategy no-trade rule",
+        "step": null
+      },
+      "2026-08-14": {
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "strategy no-trade rule",
+        "step": null
+      },
+      "2026-08-17": {
+        "class": "still broken",
+        "label": "missed",
+        "reason": "sealed day picked nobody while leak-safe names existed",
+        "step": "build"
+      },
+      "2026-08-18": {
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "hard-red sit S<=-3",
+        "step": null
+      },
+      "2026-08-19": {
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "hard-red sit S<=-3",
+        "step": null
+      },
+      "2026-08-20": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-21": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-24": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-25": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-26": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-27": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-28": {
+        "class": "still broken",
+        "label": "missed",
+        "reason": "no D-1 snapshot (2026-08-27.raw.csv is missing)",
+        "step": "build"
+      },
+      "2026-08-31": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-09-01": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-09-02": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-09-03": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-09-04": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-09-08": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-09-09": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-09-10": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-09-11": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-09-14": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-09-15": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-09-16": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-09-17": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-09-18": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-09-21": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-09-22": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-09-23": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-09-24": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-09-25": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-09-28": {
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "hard-red sit S<=-3",
+        "step": null
+      },
+      "2026-09-29": {
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "strategy no-trade rule",
+        "step": null
+      },
+      "2026-09-30": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "rebuilt from the prior day's state at the session open",
+        "step": null
+      },
+      "2026-10-05": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "rebuilt from the prior day's state at the session open",
+        "step": null
+      },
+      "2026-10-06": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "rebuilt from the prior day's state at the session open",
+        "step": null
+      },
+      "2026-10-07": {
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "hard-red sit S<=-3",
+        "step": null
+      },
+      "2026-10-08": {
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "hard-red sit S<=-3",
+        "step": null
+      },
+      "2026-10-09": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-10-12": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-10-13": {
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "hard-red sit S<=-3",
+        "step": null
+      },
+      "2026-10-14": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "rebuilt from the prior day's state at the session open",
+        "step": null
+      },
+      "2026-10-15": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-10-16": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "rebuilt from the prior day's state at the session open",
+        "step": null
+      },
+      "2026-10-19": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "rebuilt from the prior day's state at the session open",
+        "step": null
+      },
+      "2026-10-20": {
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "hard-red sit S<=-3",
+        "step": null
+      },
+      "2026-10-23": {
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "hard-red sit S<=-3",
+        "step": null
+      },
+      "2026-10-26": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-10-27": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "rebuilt from the prior day's state at the session open",
+        "step": null
+      },
+      "2026-10-28": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-10-29": {
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "hard-red sit S<=-3",
+        "step": null
+      },
+      "2026-10-30": {
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "hard-red sit S<=-3",
+        "step": null
+      },
+      "2026-11-02": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-11-03": {
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "hard-red sit S<=-3",
+        "step": null
+      },
+      "2026-11-04": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "rebuilt from the prior day's state at the session open",
+        "step": null
+      }
+    },
+    "overnight_mega_h2": {
+      "2026-08-13": {
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "strategy no-trade rule",
+        "step": null
+      },
+      "2026-08-14": {
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "strategy no-trade rule",
+        "step": null
+      },
+      "2026-08-17": {
+        "class": "still broken",
+        "label": "missed",
+        "reason": "sealed day picked nobody while leak-safe names existed",
+        "step": "build"
+      },
+      "2026-08-18": {
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "hard-red sit S<=-3",
+        "step": null
+      },
+      "2026-08-19": {
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "hard-red sit S<=-3",
+        "step": null
+      },
+      "2026-08-20": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-21": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-24": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-25": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-26": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-27": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-28": {
+        "class": "still broken",
+        "label": "missed",
+        "reason": "no D-1 snapshot (2026-08-27.raw.csv is missing)",
+        "step": "build"
+      },
+      "2026-08-31": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-09-01": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-09-02": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-09-03": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-09-04": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-09-08": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-09-09": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-09-10": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-09-11": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-09-14": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-09-15": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-09-16": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-09-17": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-09-18": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-09-21": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-09-22": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-09-23": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-09-24": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-09-25": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-09-28": {
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "hard-red sit S<=-3",
+        "step": null
+      },
+      "2026-09-29": {
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "strategy no-trade rule",
+        "step": null
+      },
+      "2026-09-30": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "rebuilt from the prior day's state at the session open",
+        "step": null
+      },
+      "2026-10-06": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "rebuilt from the prior day's state at the session open",
+        "step": null
+      },
+      "2026-10-07": {
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "hard-red sit S<=-3",
+        "step": null
+      },
+      "2026-10-08": {
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "hard-red sit S<=-3",
+        "step": null
+      },
+      "2026-10-09": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-10-12": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-10-13": {
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "hard-red sit S<=-3",
+        "step": null
+      },
+      "2026-10-14": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "rebuilt from the prior day's state at the session open",
+        "step": null
+      },
+      "2026-10-15": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-10-16": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "rebuilt from the prior day's state at the session open",
+        "step": null
+      },
+      "2026-10-19": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "rebuilt from the prior day's state at the session open",
+        "step": null
+      },
+      "2026-10-20": {
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "hard-red sit S<=-3",
+        "step": null
+      },
+      "2026-10-26": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-10-27": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "rebuilt from the prior day's state at the session open",
+        "step": null
+      },
+      "2026-10-28": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-10-29": {
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "hard-red sit S<=-3",
+        "step": null
+      },
+      "2026-10-30": {
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "hard-red sit S<=-3",
+        "step": null
+      },
+      "2026-11-02": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-11-03": {
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "hard-red sit S<=-3",
+        "step": null
+      },
+      "2026-11-04": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "rebuilt from the prior day's state at the session open",
+        "step": null
+      }
+    },
+    "short_alarm_h3": {
+      "2026-08-13": {
+        "class": "still broken",
+        "label": "missed",
+        "reason": "sealed day picked nobody while leak-safe names existed",
+        "step": "build"
+      },
+      "2026-08-14": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-17": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-18": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-19": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-20": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-21": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-24": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-25": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-26": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-27": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-09-03": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-09-04": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-09-08": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-09-09": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-09-10": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-09-11": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-09-14": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-09-15": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-09-16": {
+        "class": "still broken",
+        "label": "missed",
+        "reason": "no 09:30 open in daily bars",
+        "step": "lock"
+      },
+      "2026-09-29": {
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "strategy no-trade rule",
+        "step": null
+      },
+      "2026-09-30": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "rebuilt from the prior day's state at the session open",
+        "step": null
+      },
+      "2026-10-08": {
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "hard-red sit S<=-3",
+        "step": null
+      },
+      "2026-10-23": {
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "hard-red sit S<=-3",
+        "step": null
+      },
+      "2026-10-26": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-10-27": {
+        "class": "still broken",
+        "label": "missed",
+        "reason": "no 09:30 open in daily bars",
+        "step": "lock"
+      },
+      "2026-11-03": {
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "hard-red sit S<=-3",
+        "step": null
+      },
+      "2026-11-04": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "rebuilt from the prior day's state at the session open",
+        "step": null
+      }
+    },
+    "short_macd_dn_h3": {
+      "2026-08-13": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-14": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-17": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-18": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-19": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-20": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-21": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-24": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-25": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-26": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-27": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-09-03": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-09-30": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "rebuilt from the prior day's state at the session open",
+        "step": null
+      },
+      "2026-10-26": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      }
+    },
+    "short_news_r_h3": {
+      "2026-08-13": {
+        "class": "still broken",
+        "label": "missed",
+        "reason": "sealed day picked nobody while leak-safe names existed",
+        "step": "build"
+      },
+      "2026-08-14": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-17": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-18": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-19": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-20": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-21": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-24": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-25": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-26": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-27": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-09-03": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-09-30": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "rebuilt from the prior day's state at the session open",
+        "step": null
+      },
+      "2026-10-08": {
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "hard-red sit S<=-3",
+        "step": null
+      },
+      "2026-10-26": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      }
+    },
+    "short_news_r_macd_h3": {
+      "2026-08-13": {
+        "class": "still broken",
+        "label": "missed",
+        "reason": "sealed day picked nobody while leak-safe names existed",
+        "step": "build"
+      },
+      "2026-08-14": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-17": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-18": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-19": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-20": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-21": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-24": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-25": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-26": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-27": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-09-03": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-09-30": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "rebuilt from the prior day's state at the session open",
+        "step": null
+      },
+      "2026-10-08": {
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "hard-red sit S<=-3",
+        "step": null
+      },
+      "2026-10-26": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      }
+    },
+    "union_hot_n4_h1": {
+      "2026-08-13": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-14": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-17": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-18": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-19": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-20": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-21": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-24": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-25": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-26": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-27": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-09-02": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-09-03": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-09-09": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-09-10": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-09-29": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "rebuilt from the prior day's state at the session open",
+        "step": null
+      },
+      "2026-09-30": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "rebuilt from the prior day's state at the session open",
+        "step": null
+      },
+      "2026-10-01": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "rebuilt from the prior day's state at the session open",
+        "step": null
+      },
+      "2026-10-02": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "rebuilt from the prior day's state at the session open",
+        "step": null
+      },
+      "2026-10-05": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "rebuilt from the prior day's state at the session open",
+        "step": null
+      },
+      "2026-10-06": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "rebuilt from the prior day's state at the session open",
+        "step": null
+      },
+      "2026-10-07": {
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "hard-red sit S<=-3",
+        "step": null
+      },
+      "2026-10-08": {
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "hard-red sit S<=-3",
+        "step": null
+      },
+      "2026-10-14": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "rebuilt from the prior day's state at the session open",
+        "step": null
+      },
+      "2026-10-19": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "rebuilt from the prior day's state at the session open",
+        "step": null
+      },
+      "2026-10-20": {
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "hard-red sit S<=-3",
+        "step": null
+      },
+      "2026-10-21": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "rebuilt from the prior day's state at the session open",
+        "step": null
+      },
+      "2026-10-22": {
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "hard-red sit S<=-3",
+        "step": null
+      },
+      "2026-10-23": {
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "hard-red sit S<=-3",
+        "step": null
+      },
+      "2026-10-26": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-10-27": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "rebuilt from the prior day's state at the session open",
+        "step": null
+      },
+      "2026-10-30": {
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "hard-red sit S<=-3",
+        "step": null
+      },
+      "2026-11-04": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "rebuilt from the prior day's state at the session open",
+        "step": null
+      }
+    },
+    "union_hot_n4_holdup": {
+      "2026-08-13": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-14": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-17": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-18": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-19": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-20": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-21": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-24": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-25": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-26": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-27": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-09-02": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-09-03": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-09-10": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-09-30": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "rebuilt from the prior day's state at the session open",
+        "step": null
+      },
+      "2026-10-01": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "rebuilt from the prior day's state at the session open",
+        "step": null
+      },
+      "2026-10-02": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "rebuilt from the prior day's state at the session open",
+        "step": null
+      },
+      "2026-10-05": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "rebuilt from the prior day's state at the session open",
+        "step": null
+      },
+      "2026-10-06": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "rebuilt from the prior day's state at the session open",
+        "step": null
+      },
+      "2026-10-07": {
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "hard-red sit S<=-3",
+        "step": null
+      },
+      "2026-10-08": {
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "hard-red sit S<=-3",
+        "step": null
+      },
+      "2026-10-14": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "rebuilt from the prior day's state at the session open",
+        "step": null
+      },
+      "2026-10-19": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "rebuilt from the prior day's state at the session open",
+        "step": null
+      },
+      "2026-10-20": {
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "hard-red sit S<=-3",
+        "step": null
+      },
+      "2026-10-21": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "rebuilt from the prior day's state at the session open",
+        "step": null
+      },
+      "2026-10-22": {
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "hard-red sit S<=-3",
+        "step": null
+      },
+      "2026-10-23": {
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "hard-red sit S<=-3",
+        "step": null
+      },
+      "2026-10-26": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-10-27": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "rebuilt from the prior day's state at the session open",
+        "step": null
+      }
+    },
+    "union_news_pack_h1": {
+      "2026-08-13": {
+        "class": "still broken",
+        "label": "missed",
+        "reason": "sealed day picked nobody while leak-safe names existed",
+        "step": "build"
+      },
+      "2026-08-14": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-17": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-18": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-19": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-20": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-21": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-24": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-25": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-26": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-27": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-09-01": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-09-02": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-09-03": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-09-09": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-09-10": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-09-15": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-09-22": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-09-23": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-09-24": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-09-29": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "rebuilt from the prior day's state at the session open",
+        "step": null
+      },
+      "2026-09-30": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "rebuilt from the prior day's state at the session open",
+        "step": null
+      },
+      "2026-10-07": {
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "hard-red sit S<=-3",
+        "step": null
+      },
+      "2026-10-08": {
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "hard-red sit S<=-3",
+        "step": null
+      },
+      "2026-10-26": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-10-30": {
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "hard-red sit S<=-3",
+        "step": null
+      }
+    },
+    "union_news_pack_net2_h1": {
+      "2026-08-13": {
+        "class": "still broken",
+        "label": "missed",
+        "reason": "sealed day picked nobody while leak-safe names existed",
+        "step": "build"
+      },
+      "2026-08-14": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-17": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-18": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-19": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-20": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-21": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-24": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-25": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-26": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-08-27": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-09-01": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-09-02": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-09-03": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-09-09": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-09-10": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-09-15": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-09-22": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-09-23": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-09-24": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-09-29": {
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "strategy no-trade rule",
+        "step": null
+      },
+      "2026-09-30": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "rebuilt from the prior day's state at the session open",
+        "step": null
+      },
+      "2026-10-07": {
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "hard-red sit S<=-3",
+        "step": null
+      },
+      "2026-10-08": {
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "hard-red sit S<=-3",
+        "step": null
+      },
+      "2026-10-13": {
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "hard-red sit S<=-3",
+        "step": null
+      },
+      "2026-10-26": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
+      },
+      "2026-10-30": {
+        "class": "sat out (rule)",
+        "label": "sat out (rule)",
+        "reason": "hard-red sit S<=-3",
+        "step": null
+      }
+    }
+  },
+  "tag": "rebuilt"
+}

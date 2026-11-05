@@ -8419,5 +8419,116 @@
     ],
     "sha256": "9e0bdaf5f50d338e5f3e4a10994f375a1a699900130217139eecc79202b45ad4",
     "unfilled": []
+  },
+  {
+    "added_buys": [],
+    "added_sells": [],
+    "cash_primary": 66.54162263837588,
+    "date": "2026-11-04",
+    "equity_primary": 7414.631655638375,
+    "holdings": [
+      {
+        "cost_primary": 2764.90965,
+        "entry_date": "2026-11-04",
+        "entry_px": 3.33,
+        "last_px": 3.33,
+        "min_hold": 2,
+        "peak_px": 3.33,
+        "shares": 823,
+        "ticker": "DNUT"
+      },
+      {
+        "cost_primary": 1800.08875,
+        "entry_date": "2026-11-02",
+        "entry_px": 13.25,
+        "last_px": 13.58,
+        "min_hold": 2,
+        "peak_px": 13.58,
+        "shares": 135,
+        "ticker": "GDYN"
+      },
+      {
+        "cost_primary": 2700.3259133199995,
+        "entry_date": "2026-11-04",
+        "entry_px": 78.964996,
+        "last_px": 78.964996,
+        "min_hold": 2,
+        "peak_px": 78.964996,
+        "shares": 34,
+        "ticker": "TEM"
+      },
+      {
+        "cost_primary": 23.348,
+        "entry_date": "2026-11-03",
+        "entry_px": 23.0,
+        "last_px": 23.120001,
+        "min_hold": 1,
+        "peak_px": 23.120001,
+        "shares": 1,
+        "ticker": "UPBD"
+      }
+    ],
+    "kind": "mark",
+    "open_fill_sha256": "9e0bdaf5f50d338e5f3e4a10994f375a1a699900130217139eecc79202b45ad4",
+    "plan_sha256": "d26b79f2e7419423b4849e07f2c2c7a660fbb7a86917ead1adf200129edafbd0",
+    "pnl_status": "marked",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "29a292da2d6d8eb2bb4e0870e4c5f9c62e7a91b6b0dcdf8d1efe8701ab65da11"
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-11-04",
+    "entry_date": "2026-11-02",
+    "entry_px": 86.879997,
+    "fill": 89.599998,
+    "kind": "close",
+    "pnl_primary": 32.62772050000012,
+    "reason": "holdup extension",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "b2736e7afa0f14969061c1422c5563dea64cd58c83eaed7e6cb80b6af1e75d0e",
+    "shares": 20,
+    "ticker": "CDNA"
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-11-04",
+    "entry_date": "2026-11-02",
+    "entry_px": 18.934999,
+    "fill": 20.5,
+    "kind": "close",
+    "pnl_primary": 124.00064447,
+    "reason": "holdup extension",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "87f6faa3d1da9bed131178fa8688b961610cdcd9da018ca16b3a574342c8f3ea",
+    "shares": 94,
+    "ticker": "CPRI"
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-11-04",
+    "entry_date": "2026-11-03",
+    "entry_px": 0.9934,
+    "fill": 0.9,
+    "kind": "close",
+    "pnl_primary": -3.854009999999999,
+    "reason": "hold-expired",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "c512456f2d8d3a11151cbb6abb92ac5fc21e6e4254d7e63d1a9843d83a4ea8f9",
+    "shares": 30,
+    "ticker": "ECX"
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-11-04",
+    "entry_date": "2026-11-02",
+    "entry_px": 19.75,
+    "fill": 19.790001,
+    "kind": "close",
+    "pnl_primary": -18.742110449999927,
+    "reason": "holdup extension",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "0640d6cccb74ac576c70cc6902fa3afc35d04a06229130ebf2b6a06d31ee83f0",
+    "shares": 90,
+    "ticker": "SLN"
   }
 ]

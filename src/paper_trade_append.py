@@ -257,7 +257,42 @@ def _eligible_append_books(books: list[tuple[str, Path]]) -> list[tuple[str, Pat
             kept.append((session, path))
             continue
         print(f'missing: book not on main before 09:30 ET {str(session)[:10]}', flush=True)
+        record_missed_session(session)
     return kept
+
+
+def record_missed_session(session: str) -> None:
+    """Remember a correctly refused session. Does not append a curve row.
+
+    The record is ``status=missed``. A later append does not change a
+    session that is already missed, and it does not write the equity curve.
+    """
+    day = str(session or '')[:10]
+    if len(day) != 10:
+        return
+    path = engine.PAPER_DIR / 'missed.json'
+    try:
+        current = json.loads(path.read_text(encoding='utf-8')) if path.is_file() else {}
+    except (OSError, json.JSONDecodeError):
+        current = {}
+    if not isinstance(current, dict):
+        current = {}
+    sessions = current.get('sessions')
+    if not isinstance(sessions, dict):
+        sessions = {}
+    row = sessions.get(day)
+    if not isinstance(row, dict) or row.get('status') != 'missed':
+        sessions[day] = {
+            'status': 'missed',
+            'reason': 'stock book was not on main before 09:30 ET',
+        }
+    current['sessions'] = sessions
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(current, indent=2, sort_keys=True) + '\n', encoding='utf-8')
+    page = engine.DASH_DIR / 'index.html'
+    if page.is_file():
+        from src.pages_publish_gate import stamp_missed_note
+        stamp_missed_note(page, day)
 
 def _open_tickers(state: dict) -> set[str]:
     names = {'SPY'}
@@ -368,8 +403,10 @@ def _typed_roundtrip_rows(rows: list[dict]) -> list[dict]:
 
 def _stamp_dashboard(asof: str) -> None:
     """Stamp the page write_dashboard just wrote. The engine file stays pinned."""
-    from src.pages_publish_gate import stamp_data_asof
-    stamp_data_asof(engine.DASH_DIR / 'index.html', asof)
+    from src.pages_publish_gate import stamp_data_asof, stamp_recorded_misses
+    page = engine.DASH_DIR / 'index.html'
+    stamp_data_asof(page, asof)
+    stamp_recorded_misses(page, root=engine.ROOT)
 
 def _restore_bytes(path: Path, before: bytes | None) -> None:
     if before is None:

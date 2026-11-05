@@ -146,6 +146,115 @@ def main_page_asof(root: Path | None = None) -> str:
         return data_asof_from_html(handle.read(262144))
 
 
+_MISSED_NOTE = re.compile(
+    r'<p\s+id="missed-note"[^>]*>(.*?)</p>',
+    re.I | re.S,
+)
+
+
+def missed_sessions(root: Path | None = None) -> dict:
+    """Sessions explicitly recorded as missed. Other statuses are ignored."""
+    path = (root or ROOT) / "data" / "paper" / "missed.json"
+    data = _load_json(path)
+    raw = data.get("sessions") if isinstance(data.get("sessions"), dict) else {}
+    out = {}
+    for day, row in raw.items():
+        if not isinstance(row, dict):
+            continue
+        if str(row.get("status") or "") != "missed":
+            continue
+        stamp = str(day)[:10]
+        if _DAY.fullmatch(stamp):
+            out[stamp] = row
+    return out
+
+
+def page_shows_missed_note(day: str, *, root: Path | None = None,
+                           text: str | None = None) -> bool:
+    """True when the rendered main page shows a missed note for ``day``."""
+    if text is None:
+        path = (root or ROOT) / "dashboard" / "index.html"
+        if not path.is_file():
+            return False
+        text = path.read_text(encoding="utf-8", errors="replace")
+    session = str(day or "")[:10]
+    if not _DAY.fullmatch(session):
+        return False
+    match = _MISSED_NOTE.search(text or "")
+    if not match:
+        return False
+    note = match.group(1)
+    return session in note and "missed" in note.lower()
+
+
+def recorded_miss_covers(asof: str, need: str, *,
+                         root: Path | None = None,
+                         text: str | None = None) -> bool:
+    """One session behind, and only when that session is a recorded miss.
+
+    ``asof`` must be the previous NYSE session before ``need``. The miss
+    has to be ``status=missed`` in ``data/paper/missed.json``, and the
+    rendered page has to show that note. Any other gap stays stale.
+    """
+    from .skip_if_good import _prev_weekday
+
+    have = str(asof or "")[:10]
+    want = str(need or "")[:10]
+    if not _DAY.fullmatch(have) or not _DAY.fullmatch(want):
+        return False
+    if have >= want:
+        return False
+    if _prev_weekday(want) != have:
+        return False
+    if want not in missed_sessions(root):
+        return False
+    return page_shows_missed_note(want, root=root, text=text)
+
+
+def stamp_missed_note(path: Path, day: str) -> None:
+    """Show ``day missed`` on the main page. Does not add a curve row."""
+    session = str(day or "")[:10]
+    if not _DAY.fullmatch(session):
+        raise ValueError(f"missed note must be YYYY-MM-DD, got {day!r}")
+    text = path.read_text(encoding="utf-8")
+    note = (
+        f'<p id="missed-note">{session} missed — stock book was not on '
+        f"main before 09:30 ET, so this session is not on the paper curve.</p>"
+    )
+    if _MISSED_NOTE.search(text):
+        text = _MISSED_NOTE.sub(note, text, count=1)
+    elif "<body>" in text:
+        text = text.replace("<body>", "<body>" + note, 1)
+    else:
+        text = note + "\n" + text
+    path.write_text(text, encoding="utf-8")
+
+
+def stamp_recorded_misses(path: Path, root: Path | None = None) -> None:
+    """Put every recorded missed session back on a rewritten main page.
+
+    The paper dashboard is rendered from the equity curve. A missed session
+    is not a curve row, so a later paper land must restore the note from
+    ``data/paper/missed.json`` or the one-session gate cannot see it.
+    """
+    days = sorted(missed_sessions(root))
+    if not days or not path.is_file():
+        return
+    shown = " ".join(f"{day} missed" for day in days)
+    note = (
+        f'<p id="missed-note">{shown} — stock book was not on main before '
+        f"09:30 ET, so these sessions are not on the paper curve.</p>"
+    )
+    text = path.read_text(encoding="utf-8")
+    if _MISSED_NOTE.search(text):
+        text = _MISSED_NOTE.sub(note, text, count=1)
+    elif "<body>" in text:
+        text = text.replace("<body>", "<body>" + note, 1)
+    else:
+        text = note + "\n" + text
+    path.write_text(text, encoding="utf-8")
+
+
 def main_page_fresh(date: str, *, root: Path | None = None,
                     now: datetime | None = None) -> bool:
     """False when the main page data-asof is older than ``date``.
@@ -153,12 +262,19 @@ def main_page_fresh(date: str, *, root: Path | None = None,
     Deploy omits ``--date``, so ``date`` is ``latest_completed_session()``.
     A stamp older than that session fails the publish. An explicit older
     ``--date`` is fresh when the page already covers that session.
+
+    The one exception is a page exactly one session behind, when that
+    missing session is recorded ``status=missed`` and the rendered page
+    shows the missed note. A wider gap, a missing record, a non-missed
+    status, or a page that does not show the note still fails.
     """
     asof = main_page_asof(root)
     need = str(date or "").strip()[:10] or latest_completed_session(now)
     if not asof or not need:
         return False
-    return asof >= need
+    if asof >= need:
+        return True
+    return recorded_miss_covers(asof, need, root=root)
 
 
 def resolve_date(date: str = "", *, root: Path | None = None,
@@ -325,6 +441,12 @@ def _evaluate_date(date: str, *, root: Path) -> dict:
         reason.append(
             f"main page data-asof {page_asof or 'missing'} is older than {date} "
             "(latest completed session when --date is empty)"
+        )
+    elif page_asof and page_asof < date and recorded_miss_covers(
+            page_asof, date, root=root):
+        reason.append(
+            f"main page is one session behind; {date} is recorded missed "
+            "and the page shows that note"
         )
     return {
         "date": date,

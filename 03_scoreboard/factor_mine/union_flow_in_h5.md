@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ flow_in hold 5, no 🚨
 
-Cash book **-4.46%** ($9,554) · signal-only (no cash/fees) was -2.74%. Starts YES **16/30**. Fills 76 · skips 144 · realized $+404.42.
+Cash book **-13.67%** ($8,633) · signal-only (no cash/fees) was -2.74%. Starts YES **16/30**. Fills 80 · skips 144 · realized $+404.42.
 
 ## How this sleeve decides (like you are 10)
 
@@ -262,6 +262,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $257.60 | ▼ close $9,243.68 vs 09:30 $9,424.32 (session -180.64) | 16:00 close · cash $257.60 · equity $9,243.68 vs 09:30 $9,424.32 (-180.64; session marks -180.64) · 2 name(s) marked open→close (per-name table). CRS×16 09:30 $289.32 → close $283.08 -99.84; ITW×16 09:30 $283.60 → close $278.55 -80.80 | — |
 | 2026-11-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $257.60 | ▲ 09:30 equity $9,340.48 vs yday $9,243.68 (+96.80) | 09:30 open · cash $257.60 (unchanged overnight, no fees) · equity $9,340.48 vs prior close $9,243.68 (+96.80) · 2 name(s) re-marked at the open (per-name table). CRS×16 yday $283.08 → 09:30 $285.91 +45.28; ITW×16 yday $278.55 → 09:30 $281.77 +51.52 | — |
 | 2026-11-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $257.60 | ▲ close $9,553.76 vs 09:30 $9,340.48 (session +213.28) | 16:00 close · cash $257.60 · equity $9,553.76 vs 09:30 $9,340.48 (+213.28; session marks +213.28) · 2 name(s) marked open→close (per-name table). CRS×16 09:30 $285.91 → close $290.96 +80.80; ITW×16 09:30 $281.77 → close $290.05 +132.48 | — |
+| 2026-11-03 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $257.60 | ▲ 09:30 equity $9,623.36 vs yday $9,553.76 (+69.60) | 09:30 open · cash $257.60 (unchanged overnight, no fees) · equity $9,623.36 vs prior close $9,553.76 (+69.60) · 2 name(s) re-marked at the open (per-name table). CRS×16 yday $290.96 → 09:30 $295.36 +70.40; ITW×16 yday $290.05 → 09:30 $290.00 -0.80 | — |
+| 2026-11-03 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $257.60 | ▼ close $9,591.36 vs 09:30 $9,623.36 (session -32.00) | 16:00 close · cash $257.60 · equity $9,591.36 vs 09:30 $9,623.36 (-32.00; session marks -32.00) · 2 name(s) marked open→close (per-name table). CRS×16 09:30 $295.36 → close $296.72 +21.76; ITW×16 09:30 $290.00 → close $286.64 -53.76 | — |
+| 2026-11-04 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $257.60 | ▲ 09:30 equity $9,691.52 vs yday $9,591.36 (+100.16) | 09:30 open · cash $257.60 (unchanged overnight, no fees) · equity $9,691.52 vs prior close $9,591.36 (+100.16) · 2 name(s) re-marked at the open (per-name table). CRS×16 yday $296.72 → 09:30 $297.00 +4.48; ITW×16 yday $286.64 → 09:30 $292.62 +95.68 | — |
+| 2026-11-04 09:30 ET | **SELL** | `CRS` | 16 | $297.00 | $2.09 | $+79.72 | $5,007.51 | ▲ +79.72 after sell → book $9,689.43; vs 09:30 mark -2.09 | dropped from list after 5 sess (min 5) | join🔴 sector🔴 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **SELL** | `ITW` | 16 | $292.62 | $2.09 | $+249.80 | $9,687.35 | ▲ +249.80 after sell → book $9,687.35; vs 09:30 mark -2.08 | dropped from list after 5 sess (min 5) | join🔴 sector🔴 gen🟢 news🟢 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `RKT` | 338 | $14.30 | $4.36 | — | $4,849.59 | — | union ∩ flow_in hold 5, no 🚨; gate flow_in=True; list ohlc_hot; 🔵; ret5=+16.6; leftover $4843.67 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `HLP` | 1214 | $3.98 | $15.66 | — | $2.21 | — | union ∩ flow_in hold 5, no 🚨; gate flow_in=True; list ohlc_hot; 🔵; ret5=+10.7; leftover $4843.67 | join🔴 sector🟡 gen🟢 news🟡 digest🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-04 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2.21 | ▼ close $8,632.61 vs 09:30 $9,691.52 (session -1,034.72) | 16:00 close · cash $2.21 · equity $8,632.61 vs 09:30 $9,691.52 (-1058.91; session marks -1034.72) · 2 name(s) marked open→close (per-name table). RKT×338 09:30 $14.30 → close $15.01 +239.98; HLP×1214 09:30 $3.98 → close $2.93 -1274.70 | — |
 
 ## Not taken
 

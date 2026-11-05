@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 4 · rank `hot_score` · size `leftover` · sell `list` · S-boost `none` · top 4 by hot
 
-Cash book **+26.03%** ($12,603) · signal-only (no cash/fees) was +89.81%. Starts YES **29/30**. Fills 153 · skips 47 · realized $+2978.17.
+Cash book **+25.79%** ($12,579) · signal-only (no cash/fees) was +89.81%. Starts YES **29/30**. Fills 157 · skips 47 · realized $+2978.17.
 
 ## How this sleeve decides (like you are 10)
 
@@ -338,6 +338,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-02 09:30 ET | **BUY** | `GEN` | 107 | $29.05 | $2.31 | — | $3,186.77 | — | top 4 by hot; rank hot_score; list ohlc_hot; 🔵; ret5=+17.1; leftover $3110.89 | join🟡 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-11-02 09:30 ET | **BUY** | `BC` | 40 | $76.25 | $2.11 | — | $134.66 | — | top 4 by hot; rank hot_score; list ohlc_hot; 🔵; ret5=+14.4; leftover $3110.89 | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
 | 2026-11-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $134.66 | ▲ close $12,603.01 vs 09:30 $12,443.54 (session +168.45) | 16:00 close · cash $134.66 · equity $12,603.01 vs 09:30 $12,443.54 (+159.47; session marks +168.45) · 4 name(s) marked open→close (per-name table). CDNA×35 09:30 $86.88 → close $85.88 -35.00; SLN×157 09:30 $19.75 → close $19.76 +1.57; GEN×107 09:30 $29.05 → close $29.89 +89.88; BC×40 09:30 $76.25 → close $79.05 +112.00 | — |
+| 2026-11-03 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $134.66 | ▼ 09:30 equity $12,587.70 vs yday $12,603.01 (-15.31) | 09:30 open · cash $134.66 (unchanged overnight, no fees) · equity $12,587.70 vs prior close $12,603.01 (-15.31) · 4 name(s) re-marked at the open (per-name table). BC×40 yday $79.05 → 09:30 $79.61 +22.40; CDNA×35 yday $85.88 → 09:30 $85.63 -8.75; GEN×107 yday $29.89 → 09:30 $29.59 -32.10; SLN×157 yday $19.76 → 09:30 $19.78 +3.14 | — |
+| 2026-11-03 09:30 ET | **SELL** | `BC` | 40 | $79.61 | $2.15 | $+130.14 | $3,316.91 | ▲ +130.14 after sell → book $12,585.55; vs 09:30 mark -2.15 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-03 09:30 ET | **SELL** | `CDNA` | 35 | $85.63 | $2.13 | $-47.97 | $6,311.84 | ▼ -47.97 after sell → book $12,583.43; vs 09:30 mark -2.12 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-03 09:30 ET | **SELL** | `GEN` | 107 | $29.59 | $2.35 | $+53.11 | $9,475.61 | ▲ +53.11 after sell → book $12,581.07; vs 09:30 mark -2.36 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-03 09:30 ET | **SELL** | `SLN` | 157 | $19.78 | $2.51 | $-0.26 | $12,578.56 | ▼ -0.26 after sell → book $12,578.56; vs 09:30 mark -2.51 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-03 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $12,578.56 | ▲ close $12,578.56 vs 09:30 $12,587.70 (session +0.00) | 16:00 close · cash $12,578.56 · no lots left · equity $12,578.56. | — |
+| 2026-11-04 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $12,578.56 | ▲ 09:30 equity $12,578.56 vs yday $12,578.56 (+0.00) | 09:30 open · cash $12,578.56 · no holdings · equity $12,578.56 vs prior close $12,578.56 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-04 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $12,578.56 | ▲ close $12,578.56 vs 09:30 $12,578.56 (session +0.00) | 16:00 close · cash $12,578.56 · no lots left · equity $12,578.56. | — |
 
 ## Not taken
 

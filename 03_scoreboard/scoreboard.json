@@ -28486,6 +28486,18 @@
           "predicted_direction": "flat",
           "predicted_magnitude_band": "mild",
           "confidence": 0.4
+        },
+        "HORIZON_1M": {
+          "label": "1m",
+          "target_date": "2026-10-27",
+          "actual_pct": 0.24,
+          "actual_direction": "flat",
+          "actual_magnitude_band": "flat",
+          "direction_hit": false,
+          "magnitude_hit": false,
+          "predicted_direction": "up",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.4
         }
       },
       "lesson_schema_ok": true
@@ -29086,6 +29098,18 @@
           "predicted_direction": "down",
           "predicted_magnitude_band": "mild",
           "confidence": 0.52
+        },
+        "HORIZON_1M": {
+          "label": "1m",
+          "target_date": "2026-10-28",
+          "actual_pct": 0.01,
+          "actual_direction": "flat",
+          "actual_magnitude_band": "flat",
+          "direction_hit": false,
+          "magnitude_hit": false,
+          "predicted_direction": "down",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.55
         }
       },
       "lesson_schema_ok": true
@@ -29719,6 +29743,18 @@
           "predicted_direction": "flat",
           "predicted_magnitude_band": "mild",
           "confidence": 0.45
+        },
+        "HORIZON_1M": {
+          "label": "1m",
+          "target_date": "2026-10-29",
+          "actual_pct": 0.48,
+          "actual_direction": "up",
+          "actual_magnitude_band": "flat",
+          "direction_hit": false,
+          "magnitude_hit": false,
+          "predicted_direction": "down",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.52
         }
       },
       "lesson_schema_ok": true
@@ -30157,6 +30193,18 @@
           "predicted_direction": "down",
           "predicted_magnitude_band": "mild",
           "confidence": 0.55
+        },
+        "HORIZON_1M": {
+          "label": "1m",
+          "target_date": "2026-10-30",
+          "actual_pct": -1.18,
+          "actual_direction": "down",
+          "actual_magnitude_band": "flat",
+          "direction_hit": true,
+          "magnitude_hit": false,
+          "predicted_direction": "down",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.52
         }
       },
       "lesson_schema_ok": true
@@ -30441,6 +30489,18 @@
           "predicted_direction": "down",
           "predicted_magnitude_band": "mild",
           "confidence": 0.45
+        },
+        "HORIZON_1M": {
+          "label": "1m",
+          "target_date": "2026-11-03",
+          "actual_pct": -1.27,
+          "actual_direction": "down",
+          "actual_magnitude_band": "flat",
+          "direction_hit": true,
+          "magnitude_hit": false,
+          "predicted_direction": "down",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.4
         }
       },
       "lesson_schema_ok": true
@@ -31074,6 +31134,18 @@
           "predicted_direction": "down",
           "predicted_magnitude_band": "mild",
           "confidence": 0.55
+        },
+        "HORIZON_1M": {
+          "label": "1m",
+          "target_date": "2026-11-04",
+          "actual_pct": -0.44,
+          "actual_direction": "down",
+          "actual_magnitude_band": "flat",
+          "direction_hit": false,
+          "magnitude_hit": false,
+          "predicted_direction": "flat",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.5
         }
       },
       "lesson_schema_ok": true
@@ -32682,6 +32754,18 @@
           "predicted_direction": "down",
           "predicted_magnitude_band": "mild",
           "confidence": 0.5
+        },
+        "HORIZON_2W": {
+          "label": "2w",
+          "target_date": "2026-10-28",
+          "actual_pct": -0.79,
+          "actual_direction": "down",
+          "actual_magnitude_band": "flat",
+          "direction_hit": false,
+          "magnitude_hit": false,
+          "predicted_direction": "flat",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.45
         }
       },
       "lesson_schema_ok": true
@@ -33264,6 +33348,18 @@
           "predicted_direction": "flat",
           "predicted_magnitude_band": "mild",
           "confidence": 0.45
+        },
+        "HORIZON_2W": {
+          "label": "2w",
+          "target_date": "2026-10-29",
+          "actual_pct": 0.02,
+          "actual_direction": "flat",
+          "actual_magnitude_band": "flat",
+          "direction_hit": false,
+          "magnitude_hit": false,
+          "predicted_direction": "down",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.5
         }
       },
       "lesson_schema_ok": true
@@ -33659,6 +33755,18 @@
           "predicted_direction": "up",
           "predicted_magnitude_band": "mild",
           "confidence": 0.5
+        },
+        "HORIZON_2W": {
+          "label": "2w",
+          "target_date": "2026-11-02",
+          "actual_pct": -1.54,
+          "actual_direction": "down",
+          "actual_magnitude_band": "mild",
+          "direction_hit": false,
+          "magnitude_hit": true,
+          "predicted_direction": "flat",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.45
         }
       },
       "lesson_schema_ok": true
@@ -33833,6 +33941,30 @@
           "predicted_direction": "up",
           "predicted_magnitude_band": "mild",
           "confidence": 0.55
+        },
+        "HORIZON_1W": {
+          "label": "1w",
+          "target_date": "2026-10-27",
+          "actual_pct": 0.41,
+          "actual_direction": "up",
+          "actual_magnitude_band": "flat",
+          "direction_hit": false,
+          "magnitude_hit": false,
+          "predicted_direction": "flat",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.48
+        },
+        "HORIZON_2W": {
+          "label": "2w",
+          "target_date": "2026-11-03",
+          "actual_pct": -1.58,
+          "actual_direction": "down",
+          "actual_magnitude_band": "mild",
+          "direction_hit": true,
+          "magnitude_hit": true,
+          "predicted_direction": "down",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.5
         }
       },
       "lesson_schema_ok": true
@@ -33964,6 +34096,30 @@
           "predicted_direction": "down",
           "predicted_magnitude_band": "mild",
           "confidence": 0.55
+        },
+        "HORIZON_1W": {
+          "label": "1w",
+          "target_date": "2026-10-28",
+          "actual_pct": 0.41,
+          "actual_direction": "up",
+          "actual_magnitude_band": "flat",
+          "direction_hit": false,
+          "magnitude_hit": false,
+          "predicted_direction": "down",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.5
+        },
+        "HORIZON_2W": {
+          "label": "2w",
+          "target_date": "2026-11-04",
+          "actual_pct": -0.31,
+          "actual_direction": "down",
+          "actual_magnitude_band": "flat",
+          "direction_hit": false,
+          "magnitude_hit": false,
+          "predicted_direction": "flat",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.45
         }
       },
       "lesson_schema_ok": true
@@ -34138,7 +34294,32 @@
       "knowable_at_9am": null,
       "attribution_contested": null,
       "outlier_watch": null,
-      "horizon_grades": {},
+      "horizon_grades": {
+        "HORIZON_3D": {
+          "label": "3d",
+          "target_date": "2026-10-27",
+          "actual_pct": -0.45,
+          "actual_direction": "down",
+          "actual_magnitude_band": "flat",
+          "direction_hit": false,
+          "magnitude_hit": false,
+          "predicted_direction": "up",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.5
+        },
+        "HORIZON_1W": {
+          "label": "1w",
+          "target_date": "2026-10-29",
+          "actual_pct": -0.47,
+          "actual_direction": "down",
+          "actual_magnitude_band": "flat",
+          "direction_hit": false,
+          "magnitude_hit": false,
+          "predicted_direction": "flat",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.4
+        }
+      },
       "lesson_schema_ok": true
     },
     {
@@ -34293,7 +34474,32 @@
       "knowable_at_9am": "yes — the AI earnings disappointments and Hormuz oil spike were fully in the premarket tape; no major driver emerged after 9:00 AM ET",
       "attribution_contested": "yes — WSJ leads with AI earnings + French bonds; Chosun Biz emphasizes AI capex burden + Middle East war risk; Business Insider gives oil co-equal headline weight; Trading Economics frames OAT as a standalone European story",
       "outlier_watch": "XLE fell -2.01% despite Brent >$112, showing the oil shock did not transmit as a clean energy-equity bid; gold also fell ~2.7% despite risk-off",
-      "horizon_grades": {}
+      "horizon_grades": {
+        "HORIZON_3D": {
+          "label": "3d",
+          "target_date": "2026-10-28",
+          "actual_pct": 1.05,
+          "actual_direction": "up",
+          "actual_magnitude_band": "mild",
+          "direction_hit": false,
+          "magnitude_hit": false,
+          "predicted_direction": "down",
+          "predicted_magnitude_band": "notable",
+          "confidence": 0.68
+        },
+        "HORIZON_1W": {
+          "label": "1w",
+          "target_date": "2026-10-30",
+          "actual_pct": -1.09,
+          "actual_direction": "down",
+          "actual_magnitude_band": "mild",
+          "direction_hit": true,
+          "magnitude_hit": true,
+          "predicted_direction": "down",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.55
+        }
+      }
     },
     {
       "date": "2026-10-23",
@@ -34505,7 +34711,32 @@
       "attribution_contested": "yes",
       "outlier_watch": "Dow reversal down vs. SPX/NDX choppy——防御/能源尾盘拖累；半导体单日+2.8%但10月仍−12.2%，是轧空而非趋势反转；债市几乎未动，不背书权益反弹",
       "lesson_schema_ok": true,
-      "horizon_grades": {}
+      "horizon_grades": {
+        "HORIZON_3D": {
+          "label": "3d",
+          "target_date": "2026-10-29",
+          "actual_pct": 0.57,
+          "actual_direction": "up",
+          "actual_magnitude_band": "mild",
+          "direction_hit": false,
+          "magnitude_hit": true,
+          "predicted_direction": "flat",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.45
+        },
+        "HORIZON_1W": {
+          "label": "1w",
+          "target_date": "2026-11-02",
+          "actual_pct": -1.76,
+          "actual_direction": "down",
+          "actual_magnitude_band": "mild",
+          "direction_hit": false,
+          "magnitude_hit": true,
+          "predicted_direction": "up",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.5
+        }
+      }
     },
     {
       "date": "2026-10-27",
@@ -34527,17 +34758,63 @@
         "B7_OIL_DOLLAR": 0.5
       },
       "leading_sum": 4.0,
-      "actual_open": null,
-      "actual_close": null,
-      "actual_pct_change": null,
-      "actual_direction": null,
-      "actual_magnitude_band": null,
-      "direction_hit": null,
-      "magnitude_hit": null,
+      "actual_open": 7699.47,
+      "actual_close": 7722.6,
+      "actual_pct_change": 0.6,
+      "actual_direction": "up",
+      "actual_magnitude_band": "mild",
+      "direction_hit": true,
+      "magnitude_hit": true,
       "divergence_flagged": false,
-      "divergence_verdict": null,
-      "per_factor_breakdown": [],
-      "reflection_lesson_ref": null,
+      "divergence_verdict": "futures_right",
+      "per_factor_breakdown": [
+        {
+          "factor": "B0_ASIA",
+          "score": 0.5,
+          "status": "hit"
+        },
+        {
+          "factor": "B0_EUROPE",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B1_CATALYSTS",
+          "score": 1.0,
+          "status": "hit"
+        },
+        {
+          "factor": "B2_BONDS",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B3_FEDPATH",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B4_VIX",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B5_SENTIMENT",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B6_FUTURES",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B7_OIL_DOLLAR",
+          "score": 0.5,
+          "status": "hit"
+        }
+      ],
+      "reflection_lesson_ref": "02_lessons/candidate/2026-10-27_lesson.md",
       "sources_used": [],
       "horizon_calls": {
         "HORIZON_3D": {
@@ -34568,7 +34845,41 @@
       "news_judge_present": true,
       "engine": "v2",
       "anchor_score": 1.265,
-      "overlay_score": 4.25
+      "overlay_score": 4.25,
+      "ops_fail": false,
+      "path_shape": "choppy / range-bound",
+      "primary_driver": "AI/semiconductor financing and IPO narrative (Anthropic S-1, Broadcom +4.0%, SOX +3.60%), with oil decline as secondary",
+      "key_interaction": "Boeing -10.7% masked broad chip strength in the Dow, while energy weakness offset tech gains in the SPX — headline +0.60% understated extreme cross-sectional dispersion",
+      "knowable_at_9am": "partially — AI/oil direction was knowable from Asia and overnight tape, but the magnitude of the economic-data surprise and Boeing's reaction function were intraday increments",
+      "attribution_contested": "yes — sources lead with either chip rally (HDFC), economic data (Yonhap), or FOMC-eve caution (dpa-AFX); no single driver fully explains both the cross-section and the rates/dollar move",
+      "outlier_watch": "consumer confidence blowout produced only a 0.50bp rise in 10Y and 0.30% dollar gain — bond market refused to validate the strength signal ahead of FOMC",
+      "lesson_schema_ok": true,
+      "horizon_grades": {
+        "HORIZON_3D": {
+          "label": "3d",
+          "target_date": "2026-10-30",
+          "actual_pct": -1.85,
+          "actual_direction": "down",
+          "actual_magnitude_band": "notable",
+          "direction_hit": false,
+          "magnitude_hit": false,
+          "predicted_direction": "up",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.5
+        },
+        "HORIZON_1W": {
+          "label": "1w",
+          "target_date": "2026-11-03",
+          "actual_pct": -1.99,
+          "actual_direction": "down",
+          "actual_magnitude_band": "mild",
+          "direction_hit": false,
+          "magnitude_hit": true,
+          "predicted_direction": "up",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.45
+        }
+      }
     },
     {
       "date": "2026-10-30",
@@ -34590,17 +34901,63 @@
         "B7_OIL_DOLLAR": 0.5
       },
       "leading_sum": -9.0,
-      "actual_open": null,
-      "actual_close": null,
-      "actual_pct_change": null,
-      "actual_direction": null,
-      "actual_magnitude_band": null,
-      "direction_hit": null,
-      "magnitude_hit": null,
+      "actual_open": 7631.07,
+      "actual_close": 7580.07,
+      "actual_pct_change": -1.82,
+      "actual_direction": "down",
+      "actual_magnitude_band": "notable",
+      "direction_hit": true,
+      "magnitude_hit": false,
       "divergence_flagged": false,
-      "divergence_verdict": null,
-      "per_factor_breakdown": [],
-      "reflection_lesson_ref": null,
+      "divergence_verdict": "none_flagged — leading_sum −9.0 and futures −0.25 agreed on sign; futures were right on direction but understated severity.",
+      "per_factor_breakdown": [
+        {
+          "factor": "B0_ASIA",
+          "score": -1.0,
+          "status": "hit"
+        },
+        {
+          "factor": "B0_EUROPE",
+          "score": -0.5,
+          "status": "hit"
+        },
+        {
+          "factor": "B1_CATALYSTS",
+          "score": -2.0,
+          "status": "hit"
+        },
+        {
+          "factor": "B2_BONDS",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B3_FEDPATH",
+          "score": -1.0,
+          "status": "hit"
+        },
+        {
+          "factor": "B4_VIX",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B5_SENTIMENT",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B6_FUTURES",
+          "score": -0.5,
+          "status": "hit"
+        },
+        {
+          "factor": "B7_OIL_DOLLAR",
+          "score": 0.5,
+          "status": "miss"
+        }
+      ],
+      "reflection_lesson_ref": "02_lessons/candidate/2026-10-30_lesson.md",
       "sources_used": [],
       "horizon_calls": {
         "HORIZON_3D": {
@@ -34631,7 +34988,29 @@
       "news_judge_present": true,
       "engine": "v2",
       "anchor_score": -6.921,
-      "overlay_score": -6.0
+      "overlay_score": -6.0,
+      "ops_fail": false,
+      "path_shape": "choppy / range-bound",
+      "primary_driver": "AI-capex/tech earnings shock (Amazon, Intel, Alphabet, semiconductor rout)",
+      "key_interaction": "Treasury yields fell sharply (positive discount-rate force) but were more than offset by the tech earnings shock — a masking/offsetting interaction",
+      "knowable_at_9am": "partially — main catalyst known, but magnitude and bond rally not fully anticipated",
+      "attribution_contested": "yes — outlets disagree on whether Alphabet/inflation, Amazon/Intel, or the bond rally was the lead story",
+      "outlier_watch": "Bonds rallied while equities fell; defensives (staples/healthcare) rose sharply — a growth-scare rotation, not a uniform risk-off",
+      "horizon_grades": {
+        "HORIZON_3D": {
+          "label": "3d",
+          "target_date": "2026-11-04",
+          "actual_pct": 1.43,
+          "actual_direction": "up",
+          "actual_magnitude_band": "mild",
+          "direction_hit": false,
+          "magnitude_hit": true,
+          "predicted_direction": "down",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.62
+        }
+      },
+      "lesson_schema_ok": true
     },
     {
       "date": "2026-11-02",
@@ -34653,17 +35032,63 @@
         "B7_OIL_DOLLAR": 1.0
       },
       "leading_sum": 1.0,
-      "actual_open": null,
-      "actual_close": null,
-      "actual_pct_change": null,
-      "actual_direction": null,
-      "actual_magnitude_band": null,
-      "direction_hit": null,
-      "magnitude_hit": null,
+      "actual_open": 7610.83,
+      "actual_close": 7541.4,
+      "actual_pct_change": -0.51,
+      "actual_direction": "down",
+      "actual_magnitude_band": "mild",
+      "direction_hit": false,
+      "magnitude_hit": true,
       "divergence_flagged": false,
       "divergence_verdict": null,
-      "per_factor_breakdown": [],
-      "reflection_lesson_ref": null,
+      "per_factor_breakdown": [
+        {
+          "factor": "B0_ASIA",
+          "score": 0.5,
+          "status": "miss"
+        },
+        {
+          "factor": "B0_EUROPE",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B1_CATALYSTS",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B2_BONDS",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B3_FEDPATH",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B4_VIX",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B5_SENTIMENT",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B6_FUTURES",
+          "score": 0.5,
+          "status": "miss"
+        },
+        {
+          "factor": "B7_OIL_DOLLAR",
+          "score": 1.0,
+          "status": "miss"
+        }
+      ],
+      "reflection_lesson_ref": "02_lessons/candidate/2026-11-02_lesson.md",
       "sources_used": [],
       "horizon_calls": {
         "HORIZON_3D": {
@@ -34694,7 +35119,16 @@
       "news_judge_present": true,
       "engine": "v2",
       "anchor_score": 2.044,
-      "overlay_score": 1.0
+      "overlay_score": 1.0,
+      "ops_fail": false,
+      "path_shape": "reversal down (intraday spike faded, closed near low)",
+      "primary_driver": "AI capex debt-financing unwind (Marvell–Lumentum, Oracle, Microsoft, Meta) triggered a tech-led selloff that overwhelmed an oil-driven morning rally",
+      "key_interaction": "Hot ISM amplified the AI-debt selloff by pushing rates/hike odds higher, while the oil collapse kept breadth positive — a rotation masked as a mild index decline",
+      "knowable_at_9am": "partially — ingredients visible, but the magnitude and timing of the tech unwind were not fully foreseeable",
+      "attribution_contested": "yes — some outlets lead with oil/Iran, others with tech/AI debt; the afternoon belongs to tech",
+      "outlier_watch": "VIX +8.9% to 21.15 despite SPX only −0.5% and 69% breadth positive — tech-specific hedging, not broad panic",
+      "horizon_grades": {},
+      "lesson_schema_ok": true
     },
     {
       "date": "2026-11-03",
@@ -34716,17 +35150,63 @@
         "B7_OIL_DOLLAR": 0.0
       },
       "leading_sum": -4.0,
-      "actual_open": null,
-      "actual_close": null,
-      "actual_pct_change": null,
-      "actual_direction": null,
-      "actual_magnitude_band": null,
-      "direction_hit": null,
-      "magnitude_hit": null,
+      "actual_open": 7552.92,
+      "actual_close": 7568.92,
+      "actual_pct_change": 0.36,
+      "actual_direction": "up",
+      "actual_magnitude_band": "mild",
+      "direction_hit": false,
+      "magnitude_hit": true,
       "divergence_flagged": false,
       "divergence_verdict": null,
-      "per_factor_breakdown": [],
-      "reflection_lesson_ref": null,
+      "per_factor_breakdown": [
+        {
+          "factor": "B0_ASIA",
+          "score": -0.5,
+          "status": "miss"
+        },
+        {
+          "factor": "B0_EUROPE",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B1_CATALYSTS",
+          "score": -1.0,
+          "status": "miss"
+        },
+        {
+          "factor": "B2_BONDS",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B3_FEDPATH",
+          "score": -0.5,
+          "status": "miss"
+        },
+        {
+          "factor": "B4_VIX",
+          "score": -0.5,
+          "status": "miss"
+        },
+        {
+          "factor": "B5_SENTIMENT",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B6_FUTURES",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B7_OIL_DOLLAR",
+          "score": 0.0,
+          "status": "neutral"
+        }
+      ],
+      "reflection_lesson_ref": "02_lessons/candidate/2026-11-03_lesson.md",
       "sources_used": [],
       "horizon_calls": {
         "HORIZON_3D": {
@@ -34757,7 +35237,16 @@
       "news_judge_present": true,
       "engine": "v2",
       "anchor_score": -0.544,
-      "overlay_score": -5.088
+      "overlay_score": -5.088,
+      "ops_fail": false,
+      "path_shape": "choppy / range-bound",
+      "primary_driver": "半导体板块在三日跌约 10% 后的超卖反弹（费半 +3.35%，Nvidia/AMD/Broadcom/Micron 同步大涨），拉动 NDX/SPX 收涨",
+      "key_interaction": "半导体反弹（正面）与 JOLTS 驱动的收益率熊陡 + Apple 拖累（负面）相互抵消/掩盖，导致 SPX 仅温和收涨而 Dow 收跌，表面平静、内部剧烈分化",
+      "knowable_at_9am": "partially — 半导体超卖反弹在概率上可预见，但 JOLTS 盘中冲击和油价方向反转不可知",
+      "attribution_contested": "yes — 收盘报道以“半导体反弹”为首要解释，IBKR 以“JOLTS→利率熊陡 + 选举仓位”为核心框架，Investing.com 以“油价外交 headline”为独立 driver",
+      "outlier_watch": "Dow 在“选举不确定性消退→risk-on”叙事下仍然收跌，揭示当天真正的分化机制是利率（JOLTS）而非选举；油价大跌而债券也下跌，债券在交易劳动力市场而非能源",
+      "horizon_grades": {},
+      "lesson_schema_ok": true
     },
     {
       "date": "2026-11-04",
@@ -34779,18 +35268,125 @@
         "B7_OIL_DOLLAR": 1.0
       },
       "leading_sum": 4.0,
-      "actual_open": null,
-      "actual_close": null,
-      "actual_pct_change": null,
-      "actual_direction": null,
-      "actual_magnitude_band": null,
-      "direction_hit": null,
-      "magnitude_hit": null,
+      "actual_open": 7635.81,
+      "actual_close": 7688.62,
+      "actual_pct_change": 1.58,
+      "actual_direction": "up",
+      "actual_magnitude_band": "notable",
+      "direction_hit": true,
+      "magnitude_hit": true,
       "divergence_flagged": false,
       "divergence_verdict": null,
-      "per_factor_breakdown": [],
-      "reflection_lesson_ref": null,
-      "sources_used": [],
+      "per_factor_breakdown": [
+        {
+          "factor": "B0_ASIA",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B0_EUROPE",
+          "score": 0.5,
+          "status": "hit"
+        },
+        {
+          "factor": "B1_CATALYSTS",
+          "score": 1.0,
+          "status": "hit"
+        },
+        {
+          "factor": "B2_BONDS",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B3_FEDPATH",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B4_VIX",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B5_SENTIMENT",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B6_FUTURES",
+          "score": 0.5,
+          "status": "hit"
+        },
+        {
+          "factor": "B7_OIL_DOLLAR",
+          "score": 1.0,
+          "status": "hit"
+        }
+      ],
+      "reflection_lesson_ref": "02_lessons/candidate/2026-11-04_lesson.md",
+      "sources_used": [
+        {
+          "url": "https://apnews.com/article/wall-street-stocks-dow-nasdaq-c0be7ca45b5875abe758e0570cb9a265",
+          "date_accessed": "2026-11-04",
+          "summary": "AP confirms the closing numbers and frames the rally as a post-midterm relief move.",
+          "verification": "http_403"
+        },
+        {
+          "url": "https://www.geo.tv/latest/689772-oil-prices-crash-nearly-9-after-democrats-sweep-us-midterms",
+          "date_accessed": "2026-11-04",
+          "summary": "Geo.tv establishes the oil crash as a direct consequence of the midterm result and war-de-escalation hopes.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://en.infomaxai.com/news/articleView.html?idxno=146736",
+          "date_accessed": "2026-11-04",
+          "summary": "Yonhap Infomax details AMD’s clean beat and strong guidance, confirming the AI-hardware catalyst.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://finance.yahoo.com/markets/stocks/articles/apple-soars-6-bernstein-lifts-152924266.html",
+          "date_accessed": "2026-11-04",
+          "summary": "Yahoo Finance documents Apple’s intraday sentiment reversal, a key contributor to the afternoon tech stabilisation.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.barrons.com/articles/palantir-earnings-stock-price-d18e9a00",
+          "date_accessed": "2026-11-04",
+          "summary": "Barron’s confirms the sell-the-news reaction despite a fundamental beat.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.hsbc.com.cn/en-cn/wealth/insights/fx-insights/fx-viewpoint/strong-usd-view-intact-after-fomc-hold/",
+          "date_accessed": "2026-11-04",
+          "summary": "HSBC confirms the hawkish hold and the December hike option, establishing the Fed as a known background factor.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.thehindu.com/news/international/iran-says-tankers-destroyed-after-hitting-mines-in-hormuz/article70243456.ece",
+          "date_accessed": "2026-11-04",
+          "summary": "The Hindu confirms the IRGC claim, which is notable precisely because the market ignored it — a key “what doesn’t fit” data point.",
+          "verification": "http_404"
+        },
+        {
+          "url": "https://www.benzinga.com/markets/equities/26/11/stock-market-today-dow-up-2-9-oil-sinks-7-after-midterms",
+          "date_accessed": "2026-11-04",
+          "summary": "Benzinga documents the cross-asset bond rally, reinforcing the “oil crash → inflation relief” channel.",
+          "verification": "http_403"
+        },
+        {
+          "url": "https://www.tipranks.com/news/sp-500-top-stock-gainers-today-11-4-26",
+          "date_accessed": "2026-11-04",
+          "summary": "TipRanks quantifies the sector rotation that the headline index number masks.",
+          "verification": "http_403"
+        },
+        {
+          "url": "https://www.swissinfo.ch/eng/stocks%2c-bonds-climb-after-us-election-as-oil-sinks%3a-markets-wrap/92323391",
+          "date_accessed": "2026-11-04",
+          "summary": "Bloomberg/Swissinfo captures the dominant “gridlock = good” attribution, which coexists with the oil-crash attribution in a contested narrative.",
+          "verification": "quote_not_found"
+        }
+      ],
       "horizon_calls": {
         "HORIZON_3D": {
           "trading_days": 3,
@@ -34820,7 +35416,78 @@
       "news_judge_present": true,
       "engine": "v2",
       "anchor_score": 6.098,
-      "overlay_score": 4.75
+      "overlay_score": 4.75,
+      "ops_fail": false,
+      "path_shape": "choppy / range-bound",
+      "primary_driver": "Democratic midterm sweep → oil crash (~8-9%) on Iran war de-escalation hopes → broad equity relief rally, amplified by gridlock optimism and bond rally.",
+      "key_interaction": "Amplification — midterm sweep + oil crash + bond rally compounded into a broad risk-on move, while the energy sector (-4.4%) offset at the sector level, masking extreme internal dispersion behind the +1.6% S&P headline.",
+      "knowable_at_9am": "partially",
+      "attribution_contested": "yes — outlets split between “gridlock is good” (AP/Bloomberg), “oil crash / peace dividend” (Geo.tv/XTB), and “earnings/AI” (tech coverage).",
+      "outlier_watch": "Energy sector -4.4% to -4.7% while the broad market rallied +1.6%; NDX lagged Dow by ~1.6pp; Apple reversed from -4% to +6%; Hormuz mine claims completely ignored by oil.",
+      "lesson_schema_ok": true,
+      "horizon_grades": {}
+    },
+    {
+      "date": "2026-10-28",
+      "topic": "general",
+      "predicted_direction": "up",
+      "predicted_magnitude_band": "mild",
+      "confidence_score": null,
+      "total_score": null,
+      "multiplier": null,
+      "components": {},
+      "leading_sum": 7.0,
+      "actual_open": 7735.56,
+      "actual_close": 7743.98,
+      "actual_pct_change": 0.28,
+      "actual_direction": "up",
+      "actual_magnitude_band": "flat",
+      "direction_hit": true,
+      "magnitude_hit": false,
+      "divergence_flagged": false,
+      "divergence_verdict": null,
+      "per_factor_breakdown": [],
+      "reflection_lesson_ref": "02_lessons/candidate/2026-10-28_lesson.md",
+      "sources_used": [],
+      "ops_fail": false,
+      "path_shape": "choppy / range-bound",
+      "primary_driver": "Hawkish FOMC hold (10–2, 10Y ~5.05%) capped the tape while the SK Hynix/AI-semis bid and an intraday oil reversal pulled against it, producing a narrow choppy hold",
+      "key_interaction": "Offsetting/masking — the hawkish hold and oil rebound (rate-negative) cancelled the AI/semis bid, so +0.28% understates a three-way tug; the calm tape was not calm underneath",
+      "knowable_at_9am": "partially — FOMC hold, SK Hynix, and flat futures were knowable; the oil reversal and hawkish presser tone were intraday, and the after-close MSFT/GOOGL split was unknowable",
+      "attribution_contested": "yes — AP leads Fed/bonds, Investing.com leads oil, Yahoo leads mixed breadth; no single driver dominates a +0.28% day",
+      "outlier_watch": "Equities rose despite the 10Y +5bp to ~5.05% (a GN=GN headwind), and energy rose while premarket oil was down — the oil reversal and equity-yield divergence are what don’t fit a simple risk-on story",
+      "lesson_schema_ok": true
+    },
+    {
+      "date": "2026-10-29",
+      "topic": "general",
+      "predicted_direction": "down",
+      "predicted_magnitude_band": "mild",
+      "confidence_score": null,
+      "total_score": null,
+      "multiplier": null,
+      "components": {},
+      "leading_sum": -5.0,
+      "actual_open": 7699.61,
+      "actual_close": 7720.39,
+      "actual_pct_change": -0.3,
+      "actual_direction": "down",
+      "actual_magnitude_band": "mild",
+      "direction_hit": true,
+      "magnitude_hit": true,
+      "divergence_flagged": false,
+      "divergence_verdict": null,
+      "per_factor_breakdown": [],
+      "reflection_lesson_ref": "02_lessons/candidate/2026-10-29_lesson.md",
+      "sources_used": [],
+      "ops_fail": false,
+      "path_shape": "V-shape (deep intraday drop, closed near high)",
+      "primary_driver": "Alphabet Q3 earnings miss and negative FCF, reigniting AI-capex sustainability fears and driving a record 12.6% single-day decline",
+      "key_interaction": "Alphabet-driven tech selloff was offset by a violent rotation into small caps (Russell 2000 +1%) and equal-weight S&P (+~1%), producing a V-shape in SPX/Dow while NDX stayed choppy",
+      "knowable_at_9am": "partially",
+      "attribution_contested": "no",
+      "outlier_watch": "Russell 2000 +1% and equal-weight S&P +~1% while Nasdaq −1.4% — first such divergence since July 2024; VIX fell intraday despite the tech selloff",
+      "lesson_schema_ok": true
     }
   ]
 }

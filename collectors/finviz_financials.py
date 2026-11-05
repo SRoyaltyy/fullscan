@@ -2,9 +2,12 @@
 """
 Finviz Elite Financial Data Collector
 
-Two modes (tried in order):
-  1. Authenticated CSV export — fast bulk download (needs FINVIZ_EMAIL + FINVIZ_PASSWORD)
-  2. Manual CSV drop — reads data/exports/finviz_latest.csv you saved from the browser
+Tried in order:
+  1. GET elite.finviz.com/export.ashx with FINVIZ_EXPORT or FINVIZ_API_KEY
+  1b. Login POST — needs FINVIZ_EMAIL + FINVIZ_PASSWORD (GitHub runners get HTTP 403)
+  2. If that fetch fails, or its bytes match the previous session, morning D
+     reads theme-radar data/snapshots/<D-1>.raw.csv and stops if that exact
+     file is missing. It does not republish finviz_latest.csv.
 """
 
 import os
@@ -12,7 +15,7 @@ import sys
 import time
 import re
 from datetime import datetime
-from io import StringIO
+from io import BytesIO, StringIO
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
@@ -30,6 +33,13 @@ FINVIZ_PASSWORD = os.environ.get("FINVIZ_PASSWORD", "")
 
 FINVIZ_LOGIN_URL = "https://finviz.com/login_submit.ashx"
 FINVIZ_EXPORT_URL = "https://elite.finviz.com/export.ashx"
+# Same column ids Theme Radar sends when it has a key and no full URL.
+# 86 is the day open.
+AUTH_EXPORT_COLS = (
+    "0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,"
+    "26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,"
+    "49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,86"
+)
 
 REQUEST_TIMEOUT = 30   # seconds
 
@@ -175,6 +185,58 @@ def parse_value(val, col_name):
 def _normalize_key(s: str) -> str:
     """Remove everything except alphanumeric + underscore, then lowercase."""
     return re.sub(r"[^a-zA-Z0-9_]", "", s.replace(" ", "_")).lower()
+
+
+def try_auth_export():
+    """GET elite.finviz.com/export.ashx with an auth key.
+
+    Theme Radar uses this. A login POST to finviz.com returns 403 from
+    GitHub-hosted runners. The URL is not printed; it carries the key.
+    """
+    full = (
+        os.environ.get("FINVIZ_EXPORT", "")
+        or os.environ.get("FINVIZ_EXPORT_URL", "")
+    ).strip()
+    key = (
+        os.environ.get("FINVIZ_API_KEY", "")
+        or os.environ.get("FINVIZ_AUTH", "")
+    ).strip()
+    if not full and not key:
+        print("  No FINVIZ_EXPORT or FINVIZ_API_KEY — skipping auth export.", flush=True)
+        return None
+    if full:
+        url = full
+        if key and "auth=" not in url:
+            url = f"{url}{'&' if '?' in url else '?'}auth={key}"
+        params = None
+    else:
+        url = FINVIZ_EXPORT_URL
+        params = {
+            "v": os.environ.get("FINVIZ_VIEW", "152"),
+            "c": os.environ.get("FINVIZ_COLS", AUTH_EXPORT_COLS),
+            "auth": key,
+        }
+    try:
+        response = requests.get(
+            url, params=params, timeout=180,
+            headers={"User-Agent": "Mozilla/5.0 (compatible; fullscan/finviz)"},
+        )
+    except requests.exceptions.RequestException:
+        print("  Auth export request failed (URL not logged).", flush=True)
+        return None
+    head = response.content[:200].lstrip()
+    if response.status_code != 200 or head.startswith(b"<!") or b"Ticker" not in response.content[:800]:
+        print(
+            f"  Auth export status={response.status_code} "
+            f"bytes={len(response.content)} (not a Ticker CSV).",
+            flush=True,
+        )
+        return None
+    frame = pd.read_csv(BytesIO(response.content))
+    if "No." in frame.columns:
+        frame = frame.drop(columns=["No."])
+    print(f"  Auth export OK: {len(frame)} rows, {len(frame.columns)} cols", flush=True)
+    return frame
 
 
 # ── Mode 1: Authenticated CSV export ───────────────────────────────
@@ -350,27 +412,40 @@ def main():
     snapshot_date = now.strftime("%Y-%m-%d")
     df = None
 
-    print("\n--- Mode 1: Elite CSV Export ---", flush=True)
-    df = try_elite_export()
+    print("\n--- Mode 1: Auth export URL (no login) ---", flush=True)
+    df = try_auth_export()
 
     if df is None:
-        print("\n--- Mode 2: Manual CSV ---", flush=True)
-        df = try_manual_csv()
+        print("\n--- Mode 1b: Elite login ---", flush=True)
+        df = try_elite_export()
 
-    if df is None:
-        print("\nNo data source available. Options:", flush=True)
-        print("  1. Set FINVIZ_EMAIL + FINVIZ_PASSWORD env vars for automated export", flush=True)
-        print("  2. Save CSV from elite.finviz.com/screener → data/exports/finviz_latest.csv", flush=True)
-        print(f"\n  Finished in {time.time() - start_time:.1f}s (no data collected)", flush=True)
-        return
+    own = None
+    if df is not None:
+        own = df.to_csv(index=False).encode("utf-8")
+    else:
+        print(
+            "\n  Own Finviz fetch failed. "
+            "Theme Radar's exact prior-session raw file is next.",
+            flush=True,
+        )
+
+    from src.finviz_morning_tape import ensure_morning_export
+    saved = ensure_morning_export(snapshot_date, own_bytes=own)
+    if saved.get("fallback"):
+        df = saved["frame"]
+        print(
+            f"  Tagged rows source={saved['source']} "
+            f"sha256={saved['source_sha256']} "
+            f"file={saved['source_file']}",
+            flush=True,
+        )
+    elif df is None:
+        df = pd.read_csv(BytesIO(saved["raw"]))
 
     print(f"\n  Raw data: {len(df)} stocks, {len(df.columns)} columns", flush=True)
-
     archive_path = EXPORTS_DIR / f"finviz_{snapshot_date}.csv"
-    df.to_csv(archive_path, index=False)
     write_export_scraped_at(archive_path, now)
     latest_path = EXPORTS_DIR / "finviz_latest.csv"
-    df.to_csv(latest_path, index=False)
     write_export_scraped_at(latest_path, now)
     print(f"  Archived to {archive_path}", flush=True)
 

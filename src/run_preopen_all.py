@@ -708,6 +708,8 @@ def _run_preopen_body(date: str | None = None, force: bool = False,
                       with_book: bool = True, llm_backend: str | None = None,
                       bypass_cutoff: bool = False, skip_sectors: bool = False) -> None:
     date = date or _today()
+    from .finviz_morning_tape import ensure_morning_export
+    ensure_morning_export(date)
     if bypass_cutoff:
         os.environ["PREOPEN_BYPASS_CUTOFF"] = "1"
     config.apply_llm_backend(llm_backend)

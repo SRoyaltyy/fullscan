@@ -171500,11 +171500,11 @@
       "n_keep": 12,
       "n_add": 1,
       "n_drop": 0,
-      "n_pool": 200,
+      "n_pool": 198,
       "n_seats": 13,
       "n_short": 0,
       "n_mine": 25,
-      "n_blue": 1743,
+      "n_blue": 1736,
       "n_ab_good": 1180,
       "n_peer_good": 655,
       "market_state": "green",
@@ -171626,10 +171626,10 @@
           "PRCH",
           "LAUR",
           "CNK",
-          "CHEF",
           "TRU",
-          "PEB",
+          "CHEF",
           "AVO",
+          "PEB",
           "ABX"
         ],
         "book": {
@@ -171954,7 +171954,7 @@
           "action": "buy",
           "rule": "blue_white",
           "src": "book",
-          "book_score": 0.6890165319540886,
+          "book_score": 0.6753681310382919,
           "marks": {
             "blue": true,
             "alarm": false,
@@ -172042,7 +172042,7 @@
           "action": "buy",
           "rule": "blue_white",
           "src": "book",
-          "book_score": 0.6704088476722929,
+          "book_score": 0.659884782245604,
           "marks": {
             "blue": true,
             "alarm": false,
@@ -172130,7 +172130,7 @@
           "action": "buy",
           "rule": "blue_white",
           "src": "book",
-          "book_score": 0.6466544412958475,
+          "book_score": 0.6285082053494221,
           "marks": {
             "blue": true,
             "alarm": false,
@@ -172218,7 +172218,7 @@
           "action": "buy",
           "rule": "blue_white",
           "src": "book",
-          "book_score": 0.5565699990116773,
+          "book_score": 0.5415655401504464,
           "marks": {
             "blue": true,
             "alarm": false,
@@ -172306,7 +172306,7 @@
           "action": "buy",
           "rule": "blue_white",
           "src": "book",
-          "book_score": 0.519696343283465,
+          "book_score": 0.5204083726898243,
           "marks": {
             "blue": true,
             "alarm": false,
@@ -172394,7 +172394,7 @@
           "action": "buy",
           "rule": "blue_white",
           "src": "book",
-          "book_score": 0.5160039541015978,
+          "book_score": 0.508811218194425,
           "marks": {
             "blue": true,
             "alarm": false,
@@ -172658,7 +172658,7 @@
           "action": "buy",
           "rule": "blue",
           "src": "book",
-          "book_score": 0.6094003954602434,
+          "book_score": 0.5750426305890313,
           "marks": {
             "blue": true,
             "alarm": false,
@@ -172746,7 +172746,7 @@
           "action": "buy",
           "rule": "blue_white",
           "src": "extra",
-          "book_score": 0.8279723815881108,
+          "book_score": 0.8242191868893773,
           "marks": {
             "blue": true,
             "alarm": false,

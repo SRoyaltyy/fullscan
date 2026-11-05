@@ -1,0 +1,29 @@
+{
+  "buys": [],
+  "cash": 10000.04,
+  "date": "2026-11-04",
+  "equity": 10000.04,
+  "fees": 0,
+  "fills": [],
+  "holdings": [],
+  "label": "starts 10-08 open, no past days",
+  "mean": 0.0,
+  "n_trades_today": 0,
+  "parent": "union_hot_n4_h1",
+  "picks": [],
+  "reasons": [
+    "prior state 2026-11-03 not committed before 09:30 ET: never committed",
+    "no pre-open candidate list"
+  ],
+  "recipe": "union_hot_n4_h1_preopen",
+  "s": 10.848,
+  "seal_sha256": "421b0e65a020f4dec561c3007014ebb7de12f762e2fb4a294fa206fd7ab26118",
+  "sells": [],
+  "sit": true,
+  "state": {
+    "after": "2026-11-04",
+    "cash": 10000.04,
+    "pos": {},
+    "yday_equity": 10000.04
+  }
+}

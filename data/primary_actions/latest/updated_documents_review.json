@@ -1,5 +1,404 @@
 [
   {
+    "title": "Notice of proposed amendments (NPA) reference table",
+    "url": "https://www.gov.uk/government/publications/notice-of-proposed-amendments-npa-reference-table",
+    "native_id": "/government/publications/notice-of-proposed-amendments-npa-reference-table",
+    "published_at": "2026-11-04T10:15:44+00:00",
+    "published_raw": "2026-11-04T10:15:44Z",
+    "document_type": "regulation",
+    "issuer": "Ministry of Defence; Military Aviation Authority",
+    "issuer_ids": [
+      "uk-gov:ministry-of-defence",
+      "uk-gov:military-aviation-authority"
+    ],
+    "summary": "The Military Aviation Authority (MAA) NPA table provides information of proposed changes in regulations and release date.",
+    "source_metadata": {
+      "document_type": "regulation",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Ministry of Defence; Military Aviation Authority",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-regulation",
+    "n": 22,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-11-04T20:26:55.940049+00:00",
+    "source_ids": [
+      "uk-govuk-regulation"
+    ]
+  },
+  {
+    "title": "Notice of proposed amendments (NPA) documents",
+    "url": "https://www.gov.uk/government/publications/notice-of-proposed-amendments-npa-2014-documents",
+    "native_id": "/government/publications/notice-of-proposed-amendments-npa-2014-documents",
+    "published_at": "2026-11-04T10:15:18+00:00",
+    "published_raw": "2026-11-04T10:15:18Z",
+    "document_type": "regulation",
+    "issuer": "Ministry of Defence; Military Aviation Authority",
+    "issuer_ids": [
+      "uk-gov:ministry-of-defence",
+      "uk-gov:military-aviation-authority"
+    ],
+    "summary": "MAA issuing of an NPA allows a consultation period to be undertaken on a proposed amendment or the implementation of new regulation.",
+    "source_metadata": {
+      "document_type": "regulation",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Ministry of Defence; Military Aviation Authority",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-regulation",
+    "n": 23,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-11-04T20:26:55.940049+00:00",
+    "source_ids": [
+      "uk-govuk-regulation"
+    ]
+  },
+  {
+    "title": "Drugs@FDA Data Files",
+    "url": "http://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+    "native_id": "http://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+    "published_at": "2026-11-04T13:24:19+00:00",
+    "published_raw": "Wed, 04 Nov 2026 08:24:19 EST",
+    "summary": "Drugs@FDA Downloadable Data File in ZIP format, Data Definitions, and Entity Relationship Diagram (ERD)",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Food and Drug Administration — What's New: Drugs",
+      "jurisdiction": "US",
+      "family": "product_permissions_and_safety"
+    },
+    "primary_source_id": "us-fda-5696b24295",
+    "n": 1398,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-11-04T20:26:55.940049+00:00",
+    "source_ids": [
+      "us-fda-03f7703006",
+      "us-fda-5696b24295"
+    ]
+  },
+  {
+    "title": "Advancing Generic Drug Development: Leveraging Model-Integrated Evidence (MIE) in the Development & Approval of Generic Drugs - 08/27/2026",
+    "url": "http://www.fda.gov/drugs/news-events-human-drugs/advancing-generic-drug-development-leveraging-model-integrated-evidence-mie-development-approval",
+    "native_id": "http://www.fda.gov/drugs/news-events-human-drugs/advancing-generic-drug-development-leveraging-model-integrated-evidence-mie-development-approval",
+    "published_at": "2026-11-04T18:02:36+00:00",
+    "published_raw": "Wed, 04 Nov 2026 13:02:36 EST",
+    "summary": "This half-day workshop includes a series of expert-lead presentations and audience Q&A sessions focused on the latest advancements and regulatory considerations in the evolving field of Model-Integrated Evidence (MIE)-supported generic drug development and approval.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Food and Drug Administration — What's New: Drugs",
+      "jurisdiction": "US",
+      "family": "product_permissions_and_safety"
+    },
+    "primary_source_id": "us-fda-5696b24295",
+    "n": 3280,
+    "first_seen": "2026-10-16T05:53:15.995133+00:00",
+    "last_seen": "2026-11-04T20:26:55.940049+00:00",
+    "source_ids": [
+      "us-fda-5696b24295"
+    ]
+  },
+  {
+    "title": "Que no lo dejen colgado esta temporada festiva con regalos inseguros: Compre de fuentes confiables",
+    "url": "https://www.cpsc.gov/es/Newsroom/News-Releases/2026/Dont-Be-Left-Out-in-the-Cold-This-Holiday-Season-with-Unsafe-Presents-Buy-from-Trusted-Sources",
+    "native_id": "https://www.cpsc.gov/_6d039050-7fba-4cdf-8361-f7db2f5e3963",
+    "published_at": null,
+    "published_raw": "Tue, 12/09/2025 - 12:00",
+    "summary": "La CPSC les recuerda a los consumidores comprar de manera segura esta temporada festiva",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Consumer Product Safety Commission",
+      "jurisdiction": "US",
+      "family": "product_safety"
+    },
+    "primary_source_id": "us-cpsc-08fe06e2e6",
+    "n": 3537,
+    "first_seen": "2026-10-16T10:36:18.842579+00:00",
+    "last_seen": "2026-11-04T20:26:55.940049+00:00",
+    "source_ids": [
+      "us-cpsc-08fe06e2e6"
+    ]
+  },
+  {
+    "title": "Ponga la seguridad en el menú para unas felices fiestas: la Comisión de Seguridad de Productos del Consumidor ofrece consejos para cocinar con seguridad",
+    "url": "https://www.cpsc.gov/es/Newsroom/News-Releases/2026/Put-Safety-on-the-Menu-Consumer-Product-Safety-Commission-Offers-Safe-Cooking-Tips-for-a-Joyful-Holiday-Season",
+    "native_id": "https://www.cpsc.gov/_59de4207-4ace-44ca-ace0-3cde0cfb8ddb",
+    "published_at": null,
+    "published_raw": "Wed, 11/19/2025 - 12:00",
+    "summary": "WASHINGTON, D.C. – A medida que las familias de todo Estados Unidos se preparan para reunirse en Acción de Gracias, la Comisión de Seguridad de Productos del Consumidor de Estados Unidos (CPSC, por sus siglas en inglés) emite un recordatorio urgente: la",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Consumer Product Safety Commission",
+      "jurisdiction": "US",
+      "family": "product_safety"
+    },
+    "primary_source_id": "us-cpsc-08fe06e2e6",
+    "n": 3538,
+    "first_seen": "2026-10-16T10:36:18.842579+00:00",
+    "last_seen": "2026-11-04T20:26:55.940049+00:00",
+    "source_ids": [
+      "us-cpsc-08fe06e2e6"
+    ]
+  },
+  {
+    "title": "CPSC Approves New Federal Safety Standard for Water Beads to Reduce the Risk of Injury and Death to Young Children",
+    "url": "https://www.cpsc.gov/Newsroom/News-Releases/2025/CPSC-Approves-New-Federal-Safety-Standard-for-Water-Beads-to-Reduce-the-Risk-of-Injury-and-Death-to-Young-Children",
+    "native_id": "https://www.cpsc.gov/_51cc46a0-5dc1-4f70-8cc1-c6b5b0f0a782",
+    "published_at": null,
+    "published_raw": "Thu, 08/21/2025 - 12:00",
+    "summary": "The U.S. Consumer Product Safety Commission (CPSC) has approved a consumer product safety standard for water bead toys, reflecting the agency’s ongoing commitment to protecting vulnerable consumers and preventing avoidable tragedies in American homes.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Consumer Product Safety Commission",
+      "jurisdiction": "US",
+      "family": "product_safety"
+    },
+    "primary_source_id": "us-cpsc-08fe06e2e6",
+    "n": 3539,
+    "first_seen": "2026-10-16T10:36:18.842579+00:00",
+    "last_seen": "2026-11-04T20:26:55.940049+00:00",
+    "source_ids": [
+      "us-cpsc-08fe06e2e6"
+    ]
+  },
+  {
+    "title": "CPSC Approves New Federal Safety Standard for Neck Floats to Prevent Infant Deaths and Serious Injuries",
+    "url": "https://www.cpsc.gov/Newsroom/News-Releases/2025/CPSC-Approves-New-Federal-Safety-Standard-for-Neck-Floats-to-Prevent-Infant-Deaths-and-Serious-Injuries",
+    "native_id": "https://www.cpsc.gov/_4014aab3-f30e-41aa-ad48-dd7587119b4c",
+    "published_at": null,
+    "published_raw": "Thu, 08/21/2025 - 12:00",
+    "summary": "The U.S. Consumer Product Safety Commission (CPSC) has approved a consumer product safety standard to improve the safety of neck floats, an aquatic toy intended for use by children up to and including four years of age.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Consumer Product Safety Commission",
+      "jurisdiction": "US",
+      "family": "product_safety"
+    },
+    "primary_source_id": "us-cpsc-08fe06e2e6",
+    "n": 3540,
+    "first_seen": "2026-10-16T10:36:18.842579+00:00",
+    "last_seen": "2026-11-04T20:26:55.940049+00:00",
+    "source_ids": [
+      "us-cpsc-08fe06e2e6"
+    ]
+  },
+  {
+    "title": "Expedited IND Rolling Submission Process and Program Structure",
+    "url": "http://www.fda.gov/industry/fda-expedited-investigational-new-drug-ind-pilot-program/expedited-ind-rolling-submission-process-and-program-structure",
+    "native_id": "http://www.fda.gov/industry/fda-expedited-investigational-new-drug-ind-pilot-program/expedited-ind-rolling-submission-process-and-program-structure",
+    "published_at": "2026-11-04T20:12:42+00:00",
+    "published_raw": "Wed, 04 Nov 2026 15:12:42 EST",
+    "summary": "A majority of the Expedited IND Pilot will take place during the “Pre-IND” phase – the period of nonclinical development before the sponsor submits their official 30-day IND application.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Food and Drug Administration — What's New: Vaccines, Blood and Biologics",
+      "jurisdiction": "US",
+      "family": "product_permissions_and_safety"
+    },
+    "primary_source_id": "us-fda-03f7703006",
+    "n": 5135,
+    "first_seen": "2026-10-17T05:37:40.086992+00:00",
+    "last_seen": "2026-11-04T20:26:55.940049+00:00",
+    "source_ids": [
+      "us-fda-03f7703006",
+      "us-fda-5696b24295"
+    ]
+  },
+  {
+    "title": "FDA Expedited Investigational New Drug (IND) Pilot Program",
+    "url": "http://www.fda.gov/industry/fda-actions-accelerate-and-modernize-early-and-late-stage-clinical-development/fda-expedited-investigational-new-drug-ind-pilot-program",
+    "native_id": "http://www.fda.gov/industry/fda-actions-accelerate-and-modernize-early-and-late-stage-clinical-development/fda-expedited-investigational-new-drug-ind-pilot-program",
+    "published_at": "2026-11-04T20:11:58+00:00",
+    "published_raw": "Wed, 04 Nov 2026 15:11:58 EST",
+    "summary": "The FDA Expedited IND Pilot Program is an initiative under HHS Operation TrialBlazer designed to evaluate new approaches for accelerating first-in-human (FIH) clinical trials in the United States while maintaining FDA's rigorous standards for participant safety and scientific oversight.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Food and Drug Administration — What's New: Vaccines, Blood and Biologics",
+      "jurisdiction": "US",
+      "family": "product_permissions_and_safety"
+    },
+    "primary_source_id": "us-fda-03f7703006",
+    "n": 5137,
+    "first_seen": "2026-10-17T05:37:40.086992+00:00",
+    "last_seen": "2026-11-04T20:26:55.940049+00:00",
+    "source_ids": [
+      "us-fda-03f7703006",
+      "us-fda-5696b24295"
+    ]
+  },
+  {
+    "title": "Untitled Letters",
+    "url": "http://www.fda.gov/drugs/warning-letters-and-notice-violation-letters-pharmaceutical-companies/untitled-letters",
+    "native_id": "http://www.fda.gov/drugs/warning-letters-and-notice-violation-letters-pharmaceutical-companies/untitled-letters",
+    "published_at": "2026-11-04T13:41:44+00:00",
+    "published_raw": "Wed, 04 Nov 2026 08:41:44 EST",
+    "summary": "These letters are supplied by the CDER Freedom of Information Office and only cover Office of Prescription Drug Promotion's untitled letters. FDA may have redacted or edited some of the letters to remove confidential information.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Food and Drug Administration — What's New: Drugs",
+      "jurisdiction": "US",
+      "family": "product_permissions_and_safety"
+    },
+    "primary_source_id": "us-fda-5696b24295",
+    "n": 5191,
+    "first_seen": "2026-10-17T11:48:15.567792+00:00",
+    "last_seen": "2026-11-04T20:26:55.940049+00:00",
+    "source_ids": [
+      "us-fda-5696b24295"
+    ]
+  },
+  {
+    "title": "Search List of Extended Use Dates to Assist with Drug Shortages",
+    "url": "http://www.fda.gov/drugs/drug-shortages/search-list-extended-use-dates-assist-drug-shortages",
+    "native_id": "http://www.fda.gov/drugs/drug-shortages/search-list-extended-use-dates-assist-drug-shortages",
+    "published_at": "2026-11-04T19:14:56+00:00",
+    "published_raw": "Wed, 04 Nov 2026 14:14:56 EST",
+    "summary": "This is to update and consolidate the extended use date information posted previously to assist with drug shortage (6/15/17 to present).",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Food and Drug Administration — What's New: Drugs",
+      "jurisdiction": "US",
+      "family": "product_permissions_and_safety"
+    },
+    "primary_source_id": "us-fda-5696b24295",
+    "n": 5674,
+    "first_seen": "2026-10-20T18:00:04.951908+00:00",
+    "last_seen": "2026-11-04T20:26:55.940049+00:00",
+    "source_ids": [
+      "us-fda-5696b24295"
+    ]
+  },
+  {
+    "title": "Recommendations for Reducing the Risk of Transfusion-Transmitted Hepatitis B Virus",
+    "url": "http://www.fda.gov/regulatory-information/search-fda-guidance-documents/recommendations-reducing-risk-transfusion-transmitted-hepatitis-b-virus",
+    "native_id": "http://www.fda.gov/regulatory-information/search-fda-guidance-documents/recommendations-reducing-risk-transfusion-transmitted-hepatitis-b-virus",
+    "published_at": "2026-11-04T15:17:14+00:00",
+    "published_raw": "Wed, 04 Nov 2026 10:17:14 EST",
+    "summary": "This is the final guidance Recommendations for Testing Blood Donations for Hepatitis B Surface Antigen",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Food and Drug Administration — What's New: Vaccines, Blood and Biologics",
+      "jurisdiction": "US",
+      "family": "product_permissions_and_safety"
+    },
+    "primary_source_id": "us-fda-03f7703006",
+    "n": 8114,
+    "first_seen": "2026-11-02T22:20:55.750782+00:00",
+    "last_seen": "2026-11-04T20:26:55.940049+00:00",
+    "source_ids": [
+      "us-fda-03f7703006"
+    ]
+  },
+  {
+    "title": "Bank of Canada launches consultation on draft supervisory guidelines related to accreditation for consumer-driven banking",
+    "url": "https://www.bankofcanada.ca/2026/11/bank-of-canada-launches-consultation-on-draft-supervisory-guidelines-related-to-accreditation/",
+    "native_id": "https://www.bankofcanada.ca/2026/11/bank-of-canada-launches-consultation-on-draft-supervisory-guidelines-related-to-accreditation/",
+    "published_at": "2026-11-02T11:00:34+00:00",
+    "published_raw": "2026-11-02T11:00:34+00:00",
+    "summary": "The Bank of Canada is inviting feedback on draft supervisory guidelines related to accreditation that will support its supervision of participants in Canada’s Consumer-Driven Banking Framework.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Bank of Canada — Subscribe to Regulatory news",
+      "jurisdiction": "CA",
+      "family": "monetary_operations"
+    },
+    "primary_source_id": "ca-boc-1f26bb2971",
+    "n": 8137,
+    "first_seen": "2026-11-02T22:20:55.750782+00:00",
+    "last_seen": "2026-11-04T20:26:55.940049+00:00",
+    "source_ids": [
+      "ca-boc-1f26bb2971"
+    ]
+  },
+  {
+    "title": "Drug Shortages | Additional News and Information",
+    "url": "http://www.fda.gov/drugs/drug-shortages/drug-shortages-additional-news-and-information",
+    "native_id": "http://www.fda.gov/drugs/drug-shortages/drug-shortages-additional-news-and-information",
+    "published_at": "2026-11-04T17:24:16+00:00",
+    "published_raw": "Wed, 04 Nov 2026 12:24:16 EST",
+    "summary": "Drug Shortages: Additional News and Information",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Food and Drug Administration — What's New: Drugs",
+      "jurisdiction": "US",
+      "family": "product_permissions_and_safety"
+    },
+    "primary_source_id": "us-fda-5696b24295",
+    "n": 8310,
+    "first_seen": "2026-11-03T20:18:37.164529+00:00",
+    "last_seen": "2026-11-04T20:26:55.940049+00:00",
+    "source_ids": [
+      "us-fda-5696b24295"
+    ]
+  },
+  {
+    "title": "Pritam International Private Limited - 738079 - 10/27/2026",
+    "url": "http://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/pritam-international-private-limited-738079-10272026",
+    "native_id": "http://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/pritam-international-private-limited-738079-10272026",
+    "published_at": "2026-11-04T15:21:21+00:00",
+    "published_raw": "Wed, 04 Nov 2026 10:21:21 EST",
+    "summary": "CGMP/Finished Pharmaceuticals/Adulterated",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Food and Drug Administration — What's New: Drugs",
+      "jurisdiction": "US",
+      "family": "product_permissions_and_safety"
+    },
+    "primary_source_id": "us-fda-5696b24295",
+    "n": 8321,
+    "first_seen": "2026-11-03T20:18:37.164529+00:00",
+    "last_seen": "2026-11-04T20:26:55.940049+00:00",
+    "source_ids": [
+      "us-fda-5696b24295"
+    ]
+  },
+  {
     "title": "Statement by the HR on behalf of the EU on the alignment of certain countries concerning restrictive measures in respect of actions undermining or threatening the territorial integrity, sovereignty and independence of Ukraine",
     "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/11/03/hr-statement-on-behalf-of-eu-alignment-of-certain-countries-concerning-restrictive-measures-in-respect-of-actions-undermining-or-threatening-the-territorial-integrity-sovereignty-and-independence-of-ukraine/",
     "native_id": "151946",
@@ -18,10 +417,58 @@
     "primary_source_id": "eu-council-9d9e9444da",
     "n": 8340,
     "first_seen": "2026-11-03T20:18:37.164529+00:00",
-    "last_seen": "2026-11-04T07:30:45.022151+00:00",
+    "last_seen": "2026-11-04T20:26:55.940049+00:00",
     "source_ids": [
       "eu-council-9d9e9444da",
       "eu-council-9d9e9444da"
+    ]
+  },
+  {
+    "title": "Statement by President António Costa in the context of the Euronews EU Enlargement Summit 2026",
+    "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/11/03/statement-by-president-costa-in-the-context-of-the-euronews-eu-enlargement-summit-2026/",
+    "native_id": "151975",
+    "published_at": "2026-11-03T20:00:00+00:00",
+    "published_raw": "2026-11-03T21:00:00+01:00",
+    "summary": "President of the European Council António Costa made a statement in the context of the Euronews EU Enlargement Summit 2026 that took place in Brussels on 3 November 2026.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Council of the European Union",
+      "jurisdiction": "EU",
+      "family": "sanctions_and_legislation"
+    },
+    "primary_source_id": "eu-council-9d9e9444da",
+    "n": 8499,
+    "first_seen": "2026-11-04T07:30:45.022151+00:00",
+    "last_seen": "2026-11-04T20:26:55.940049+00:00",
+    "source_ids": [
+      "eu-council-9d9e9444da"
+    ]
+  },
+  {
+    "title": "KI-Trading in Finanzmärkten – Podiumsdiskussion mit Itay Goldstein und Fritzi Köhler-Geib",
+    "url": "https://www.bundesbank.de/de/aufgaben/themen/ki-trading-in-finanzmaerkten-podiumsdiskussion-mit-itay-goldstein-und-fritzi-koehler-geib-1013844",
+    "native_id": "https://www.bundesbank.de/de/aufgaben/themen/ki-trading-in-finanzmaerkten-podiumsdiskussion-mit-itay-goldstein-und-fritzi-koehler-geib-1013844",
+    "published_at": "2026-11-03T15:00:00+00:00",
+    "published_raw": "Tue, 03 Nov 2026 15:00:00 GMT",
+    "summary": "Im Rahmen der „Bundesbank Invited Speaker Series“ diskutierten Bundesbankvorständin Fritzi Köhler-Geib und der Ökonomieprofessor Itay Goldstein über die Chancen und Risiken von KI-gestütztem Trading. Falko Fecht, Leiter des Forschungszentrums der Bundesbank, moderierte die Veranstaltung.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Deutsche Bundesbank — Topics",
+      "jurisdiction": "DE",
+      "family": "monetary_and_supervisory"
+    },
+    "primary_source_id": "de-bundesbank-fe89ad3ac9",
+    "n": 8506,
+    "first_seen": "2026-11-04T07:30:45.022151+00:00",
+    "last_seen": "2026-11-04T20:26:55.940049+00:00",
+    "source_ids": [
+      "de-bundesbank-fe89ad3ac9"
     ]
   }
 ]

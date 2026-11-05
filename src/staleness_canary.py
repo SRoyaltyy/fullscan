@@ -28,7 +28,7 @@ COVERAGE = Path(__file__).resolve().parent / "staleness_coverage.json"
 _MISSING_LAG = 10_000
 
 # path, kind, allowed session lag
-SOURCES = (
+_BASE_SOURCES = (
     ("dashboard/index.html", "html", 0),
     ("data/webull_sim/days.jsonl", "jsonl", 1),
     ("dashboard/h1/closes.json", "closes", 0),
@@ -39,6 +39,23 @@ SOURCES = (
     ("dashboard/jev-train/days.json", "jev_days", 1),
     ("dashboard/factor-mine/strategy_tickets.json", "json", 0),
 )
+
+
+def _sources() -> tuple[tuple[str, str, int], ...]:
+    """Base list plus daily pages from staleness_coverage.json.
+
+    Manual/frozen pages stay out of this tuple. They are reported by
+    ``evaluate`` and do not fail the canary. A path already in the base
+    list (jev-train) is not added twice.
+    """
+    from src.staleness_coverage import sources_for_canary
+
+    have = {row[0] for row in _BASE_SOURCES}
+    extra = tuple(row for row in sources_for_canary() if row[0] not in have)
+    return _BASE_SOURCES + extra
+
+
+SOURCES = _sources()
 
 
 def sessions_behind(asof: str, session: str) -> int:
@@ -157,6 +174,9 @@ def newest_date(text: str, kind: str) -> str:
         return _closes_max_date(text)
     if kind == "jev_days":
         return _jev_days_max(text)
+    if kind == "updown_days":
+        from src.staleness_coverage import newest_updown_day
+        return newest_updown_day(text)
     if kind == "json":
         return _json_max_date(text)
     return ""
@@ -177,17 +197,28 @@ def fetch_url(url: str, timeout: float = 30) -> str:
 
 
 def manual_sources() -> list[dict]:
-    """Pages with no weekday cron. They stay in the report and do not fail it."""
+    """Manual or frozen pages. They stay in the report and do not fail it."""
     if not COVERAGE.is_file():
         return []
     try:
         doc = json.loads(COVERAGE.read_text(encoding="utf-8"))
     except json.JSONDecodeError:
         return []
-    rows = doc.get("sources") if isinstance(doc, dict) else None
-    if not isinstance(rows, list):
+    if not isinstance(doc, dict):
         return []
-    return [row for row in rows if isinstance(row, dict) and row.get("mode") == "manual"]
+    pages = doc.get("pages")
+    if isinstance(pages, list):
+        return [
+            row for row in pages
+            if isinstance(row, dict) and (row.get("manual") or row.get("frozen"))
+        ]
+    rows = doc.get("sources")
+    if isinstance(rows, list):
+        return [
+            row for row in rows
+            if isinstance(row, dict) and row.get("mode") == "manual"
+        ]
+    return []
 
 
 def manual_rows(root: Path) -> list[dict]:
@@ -199,26 +230,35 @@ def manual_rows(root: Path) -> list[dict]:
     rows = []
     root = Path(root)
     for spec in manual_sources():
-        page = str(spec.get("page") or "")
+        page = str(spec.get("page") or spec.get("path") or "")
         last_run = str(spec.get("last_run") or "")[:10]
         present = bool(page) and (root / page).is_file()
-        note = str(spec.get("reason") or "updated by hand")
+        note = str(spec.get("date_note") or spec.get("reason") or "updated by hand")
         if page and not present:
             note = (
                 f"{note} The page file is absent from this tree. "
                 f"last_run stays the documented {last_run or 'undated'}."
             )
+        if last_run:
+            main_date = last_run
+        elif present:
+            kind = str(spec.get("kind") or "json")
+            main_date = newest_date((root / page).read_text(encoding="utf-8"), kind)
+        else:
+            main_date = ""
         rows.append({
             "path": spec.get("path") or page or "",
             "page": page,
             "lag_limit": None,
-            "mode": "manual",
-            "main_date": last_run,
+            "mode": "manual" if spec.get("manual") or spec.get("mode") == "manual" else "",
+            "main_date": main_date,
             "live_date": "",
-            "main_lag": 0,
-            "live_lag": 0,
+            "main_lag": None,
+            "live_lag": None,
             "live_error": "",
             "ok": True,
+            "frozen": bool(spec.get("frozen") or spec.get("manual")),
+            "manual": bool(spec.get("manual") or spec.get("mode") == "manual"),
             "page_present": present,
             "note": note,
         })
@@ -254,8 +294,36 @@ def evaluate(*, root: Path | None = None, now: datetime | None = None,
             "live_lag": live_lag,
             "live_error": live_error,
             "ok": ok,
+            "frozen": False,
         })
-    rows.extend(manual_rows(root))
+    listed = {row["path"] for row in rows}
+    for spec_row in manual_rows(root):
+        if spec_row["path"] not in listed:
+            rows.append(spec_row)
+    from src.finviz_export_guard import copied_from
+
+    copy = copied_from(session, root=root)
+    if copy:
+        prev, digest = copy
+        rows.append({
+            "path": f"data/exports/finviz_{session}.csv",
+            "lag_limit": 0,
+            "main_date": session,
+            "live_date": prev,
+            "main_lag": 0,
+            "live_lag": 0,
+            "live_error": (
+                f"sha256={digest} is byte-identical to {prev}. "
+                f"A copied Finviz tape is not a fresh session."
+            ),
+            "ok": False,
+            "frozen": False,
+        })
+        print(
+            f"[staleness] FAIL data/exports/finviz_{session}.csv "
+            f"sha256={digest} is byte-identical to {prev}. Stopping.",
+            flush=True,
+        )
     report = {
         "generated_at": datetime.now().astimezone().isoformat(),
         "session": session,

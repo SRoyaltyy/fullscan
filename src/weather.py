@@ -648,7 +648,9 @@ def write_outputs(date_str: str, sig: dict, stances: dict,
         payload["incomplete"] = True
         payload["incomplete_reason"] = "no general_score (general predict not on disk when weather ran)"
     js = OUT_DIR / f"{date_str}_weather.json"
-    js.write_text(json.dumps(payload, indent=1, ensure_ascii=False), encoding="utf-8")
+    blob = json.dumps(payload, indent=1, ensure_ascii=False).encode("utf-8")
+    from src.freeze_guard import place_bytes
+    written = place_bytes(js, blob, date=date_str, root=ROOT)
 
     L = [f"# Weather report — {date_str}", "",
          "Is today good for each *kind* of stock? Labels come from "
@@ -706,10 +708,10 @@ def write_outputs(date_str: str, sig: dict, stances: dict,
     md = OUT_DIR / f"{date_str}_weather.md"
     md.write_text("\n".join(L) + "\n", encoding="utf-8")
 
-    for src, name in ((js, "latest.json"), (md, "latest.md")):
+    for src, name in ((written, "latest.json"), (md, "latest.md")):
         (OUT_DIR / name).write_text(src.read_text(encoding="utf-8"),
                                     encoding="utf-8")
-    return js, md
+    return written, md
 
 
 def main() -> None:

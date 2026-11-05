@@ -22,6 +22,10 @@
  .cell{border-radius:4px;overflow:hidden;background:#121826;border:1px solid #1f2937;min-height:28px}
  .cell.empty{opacity:.25}
  .cell .d{display:block;font:700 9px/1.1 ui-monospace,Menlo,monospace;text-align:center;padding:1px 0 0;color:#cbd5e1}
+ .cell .lab{display:block;font:700 8px/1.15 ui-monospace,Menlo,monospace;text-align:center;padding:1px 1px 2px;color:#fbbf24}
+ .cell.rule .lab{color:#93c5fd}
+ .cell.missed{background:#2a3142}
+ .cell.missed .d,.cell.missed .lab{color:#8b96ab}
  .half{height:8px}
  .pos{color:var(--pos)}.neg{color:var(--neg)}
  .tip{margin:8px 0 0;font:12px/1.35 ui-monospace,Menlo,monospace;min-height:1.3em}
@@ -52,6 +56,15 @@ function b64ToBytes(s){
 }
 function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));}
 function fmt(v){ if(v==null||!isFinite(v)) return '—'; return (v>0?'+':'')+v.toFixed(0); }
+let LABELS={};
+function dayLabel(name, date){
+  const row = (LABELS[name]||{})[date];
+  return row && row.label ? row.label : '';
+}
+function labelText(cell){
+  if(cell.label==='rebuilt' || cell.label==='sat out (rule)' || cell.label==='missed') return cell.label;
+  return '';
+}
 function heat(v, scale){
   if(v==null || !isFinite(v) || Math.abs(v)<0.5) return 'rgba(148,163,184,.12)';
   const a = Math.min(1, Math.abs(v)/scale);
@@ -63,7 +76,7 @@ function splitDays(days){
   const rows=[]; let prev=null;
   for(const d of (days||[]).slice().sort((a,b)=>String(a.date).localeCompare(String(b.date)))){
     const oe=Number(d.open_equity), eq=Number(d.equity);
-    rows.push({date:d.date, ov: prev==null?null:oe-prev, sess:eq-oe, bought:d.bought||[], sold:d.sold||[]});
+    rows.push({date:d.date, ov: prev==null?null:oe-prev, sess:eq-oe, bought:d.bought||[], sold:d.sold||[], label:d.label||''});
     prev=eq;
   }
   return rows;
@@ -97,7 +110,7 @@ function weeksOf(rows){
 }
 let D=null, pick='all';
 function cardHtml(name){
-  const rows=splitDays((D.daily||{})[name]);
+  const rows=splitDays((D.daily||{})[name]).map(r=>({...r, label:r.label||dayLabel(name, r.date)}));
   if(!rows.length) return '<div class="card"><div class="nm">'+esc(name)+'</div><div class="sub">no daily book</div></div>';
   const scale=scaleOf(rows);
   let ovS=0,seS=0,ovN=0,ovG=0,seG=0;
@@ -113,11 +126,20 @@ function cardHtml(name){
     for(const cell of w){
       if(cell.empty){ h+='<div class="cell empty"></div>'; continue; }
       const dayn=String(cell.date).slice(8,10).replace(/^0/,'');
-      const tip=cell.date+'  ov '+fmt(cell.ov)+'  sess '+fmt(cell.sess)+(cell.bought&&cell.bought.length?'  B '+cell.bought.join(','):'');
-      h+='<div class="cell" data-tip="'+esc(tip)+'" title="'+esc(tip)+'">';
+      const words=labelText(cell);
+      const tip = words
+        ? cell.date+'  '+words
+        : cell.date+'  ov '+fmt(cell.ov)+'  sess '+fmt(cell.sess)+(cell.bought&&cell.bought.length?'  B '+cell.bought.join(','):'');
+      const kind = words==='missed' ? ' missed' : (words==='sat out (rule)' ? ' rule' : (words==='rebuilt' ? ' rebuilt' : ''));
+      h+='<div class="cell'+kind+'" data-tip="'+esc(tip)+'" title="'+esc(tip)+'">';
       h+='<span class="d">'+esc(dayn)+'</span>';
-      h+='<div class="half" style="background:'+heat(cell.ov,scale)+'"></div>';
-      h+='<div class="half" style="background:'+heat(cell.sess,scale)+'"></div></div>';
+      if(words){
+        h+='<span class="lab">'+esc(words)+'</span>';
+      }else{
+        h+='<div class="half" style="background:'+heat(cell.ov,scale)+'"></div>';
+        h+='<div class="half" style="background:'+heat(cell.sess,scale)+'"></div>';
+      }
+      h+='</div>';
     }
   }
   return h+'</div></div>';
@@ -150,6 +172,17 @@ document.getElementById('bar').onclick=function(ev){
   const bytes = b64ToBytes(m[1]);
   const json = new TextDecoder().decode(pako.ungzip(bytes));
   D = JSON.parse(json);
+  LABELS = {};
+  const labelUrls = ['rebuilt_labels.json','../dashboard/factor-mine/rebuilt_labels.json','../../data/factor_mine/rebuilt/labels.json'];
+  for(const url of labelUrls){
+    try{
+      const lr = await fetch(url, {cache:'no-store'});
+      if(!lr.ok) continue;
+      const pack = await lr.json();
+      LABELS = pack.strategies || {};
+      break;
+    }catch(err){}
+  }
   document.getElementById('stamp').textContent =
     (D.n_recipes||'?')+' sleeves · '+(D.n_sessions||'?')+' sessions '+
     (D.from_date||'')+' → '+(D.to_date||'')+' · pack '+String(D.generated_at||'').slice(0,16).replace('T',' ');

@@ -443,6 +443,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-02 09:30 ET | **COVER** | `SMMT` | 41 | $16.00 | $2.11 | $-37.47 | $10,821.08 | ▼ -37.47 after sell → book $10,203.40; vs 09:30 mark -2.11 | dropped from list after 3 sess (min 3) | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-11-02 09:30 ET | **COVER** | `SRRK` | 14 | $44.12 | $2.03 | $-8.30 | $10,201.37 | ▼ -8.30 after sell → book $10,201.37; vs 09:30 mark -2.03 | dropped from list after 3 sess (min 3) | — |
 | 2026-11-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,201.37 | ▲ close $10,201.37 vs 09:30 $10,222.74 (session +0.00) | 16:00 close · cash $10,201.37 · no lots left · equity $10,201.37. | — |
+| 2026-11-03 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,201.37 | ▲ 09:30 equity $10,201.37 vs yday $10,201.37 (+0.00) | 09:30 open · cash $10,201.37 · no holdings · equity $10,201.37 vs prior close $10,201.37 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-03 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,201.37 | ▲ close $10,201.37 vs 09:30 $10,201.37 (session +0.00) | 16:00 close · cash $10,201.37 · no lots left · equity $10,201.37. | — |
+| 2026-11-04 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,201.37 | ▲ 09:30 equity $10,201.37 vs yday $10,201.37 (+0.00) | 09:30 open · cash $10,201.37 · no holdings · equity $10,201.37 vs prior close $10,201.37 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-04 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,201.37 | ▲ close $10,201.37 vs 09:30 $10,201.37 (session +0.00) | 16:00 close · cash $10,201.37 · no lots left · equity $10,201.37. | — |
 
 ## Not taken
 

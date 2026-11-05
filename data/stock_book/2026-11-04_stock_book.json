@@ -1,13 +1,13 @@
 {
   "meta": {
     "date": "2026-11-04",
-    "generated_at": "2026-11-04T11:14:26.490945-05:00",
+    "generated_at": "2026-11-04T21:15:36.871173-05:00",
     "general_bias": 0.7224999999999999,
     "sector_bias": {},
     "accuracy_gates": {
       "general": {
-        "hit_rate": 0.509,
-        "n": 53,
+        "hit_rate": 0.533,
+        "n": 60,
         "gate": 0.85
       },
       "sector:Basic Materials": {
@@ -196,7 +196,7 @@
       },
       {
         "name": "Sector LLM essays",
-        "found": false,
+        "found": true,
         "used_as": "s_sector (0 if essays missing)"
       },
       {
@@ -246,7 +246,7 @@
       },
       {
         "name": "Learnings / mutable policy",
-        "found": false,
+        "found": true,
         "used_as": "next predict prompt, not a ticker score"
       }
     ],
@@ -289,7 +289,7 @@
     "pile_used": true,
     "green_min": 8,
     "ranker": "decision_lattice",
-    "as_of": true,
+    "as_of": false,
     "general_direction": "up",
     "market_decision": {
       "date": "2026-11-04",

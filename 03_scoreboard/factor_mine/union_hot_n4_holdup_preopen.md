@@ -2,7 +2,7 @@
 
 _starts 10-08 open, no past days. Parent recipe `union_hot_n4_holdup` (same selection and exits); candidates only from inputs committed before 09:30 ET._
 
-Equity: 8883.63 | days: 18
+Equity: 8908.37 | days: 20
 
 | date | S | picks | buys | sells | cash | equity | mean% | sit / reason |
 |---|---|---|---|---|---|---|---|---|
@@ -24,3 +24,5 @@ Equity: 8883.63 | days: 18
 | 2026-10-29 | -6.946 | - | - | BMBL 384@5.96, CHKP 14@148.02, HUBS 8@234.89, TTAN 27@78.88 | 8462.86 | 8736.7 | -3.1128 | S=-6.95 <= -3: no buys |
 | 2026-10-30 | -12.921 | - | - | MRVI 10@8.37, PRME 21@5.03, SLN 4@19.74 | 8728.3 | 8728.3 | -0.0961 | S=-12.92 <= -3: no buys |
 | 2026-11-02 | 3.044 | SLN, GEN, BC, BAH | SLN 110@19.75, GEN 75@29.05, BC 28@76.25, BAH 25@87.16 | - | 54.38 | 8883.63 | 1.7796 | - |
+| 2026-11-03 | -5.632 | - | - | - | 54.38 | 8820.45 | -0.7112 | S=-5.63 <= -3: no buys |
+| 2026-11-04 | 10.848 | - | - | BAH 25@86.29, BC 28@80.08, GEN 75@30.5, SLN 110@19.78 | 8908.37 | 8908.37 | 0.9968 | prior state 2026-11-03 not committed before 09:30 ET: never committed; no pre-open candidate list |

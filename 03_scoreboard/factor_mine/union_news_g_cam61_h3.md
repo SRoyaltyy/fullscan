@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · merged news🟢 and cameras +6 −≤1
 
-Cash book **-25.50%** ($7,449) · signal-only (no cash/fees) was -22.84%. Starts YES **1/30**. Fills 83 · skips 85 · realized $-2058.05.
+Cash book **-25.16%** ($7,484) · signal-only (no cash/fees) was -22.84%. Starts YES **1/30**. Fills 83 · skips 85 · realized $-2058.05.
 
 ## How this sleeve decides (like you are 10)
 
@@ -272,6 +272,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,362.29 | ▲ 09:30 equity $7,362.29 vs yday $7,362.29 (+0.00) | 09:30 open · cash $7,362.29 · no holdings · equity $7,362.29 vs prior close $7,362.29 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-11-02 09:30 ET | **BUY** | `LLY` | 5 | $1393.15 | $2.00 | — | $394.53 | — | merged news🟢 and cameras +6 −≤1; gate cam_bad_max=1,n_pos_min=6,news=good; rank cond; list ohlc_hot; 🔵; ret5=+11.3; leftover $7362.29 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-11-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $394.53 | ▲ close $7,449.48 vs 09:30 $7,362.29 (session +89.20) | 16:00 close · cash $394.53 · equity $7,449.48 vs 09:30 $7,362.29 (+87.19; session marks +89.20) · 1 name(s) marked open→close (per-name table). LLY×5 09:30 $1393.15 → close $1410.99 +89.20 | — |
+| 2026-11-03 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $394.53 | ▼ 09:30 equity $7,392.68 vs yday $7,449.48 (-56.80) | 09:30 open · cash $394.53 (unchanged overnight, no fees) · equity $7,392.68 vs prior close $7,449.48 (-56.80) · 1 name(s) re-marked at the open (per-name table). LLY×5 yday $1410.99 → 09:30 $1399.63 -56.80 | — |
+| 2026-11-03 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $394.53 | ▲ close $7,441.43 vs 09:30 $7,392.68 (session +48.75) | 16:00 close · cash $394.53 · equity $7,441.43 vs 09:30 $7,392.68 (+48.75; session marks +48.75) · 1 name(s) marked open→close (per-name table). LLY×5 09:30 $1399.63 → close $1409.38 +48.75 | — |
+| 2026-11-04 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $394.53 | ▲ 09:30 equity $7,594.53 vs yday $7,441.43 (+153.10) | 09:30 open · cash $394.53 (unchanged overnight, no fees) · equity $7,594.53 vs prior close $7,441.43 (+153.10) · 1 name(s) re-marked at the open (per-name table). LLY×5 yday $1409.38 → 09:30 $1440.00 +153.10 | — |
+| 2026-11-04 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $394.53 | ▼ close $7,484.48 vs 09:30 $7,594.53 (session -110.05) | 16:00 close · cash $394.53 · equity $7,484.48 vs 09:30 $7,594.53 (-110.05; session marks -110.05) · 1 name(s) marked open→close (per-name table). LLY×5 09:30 $1440.00 → close $1417.99 -110.05 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 4 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · top 4 by cond
 
-Cash book **-3.81%** ($9,619) · signal-only (no cash/fees) was -7.67%. Starts YES **1/30**. Fills 161 · skips 159 · realized $-515.67.
+Cash book **-0.05%** ($9,995) · signal-only (no cash/fees) was -7.67%. Starts YES **1/30**. Fills 163 · skips 159 · realized $-515.67.
 
 ## How this sleeve decides (like you are 10)
 
@@ -346,6 +346,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-02 09:30 ET | **BUY** | `ARQT` | 76 | $32.08 | $2.22 | — | $3,528.06 | — | top 4 by cond; rank cond; list flatten; 🔵; ret5=+2.8; leftover $2446.59 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-11-02 09:30 ET | **BUY** | `CDNA` | 28 | $86.88 | $2.07 | — | $1,093.35 | — | top 4 by cond; rank cond; list flatten; 🔵; ret5=+26.3; leftover $2446.59 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-11-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,093.35 | ▼ close $9,619.01 vs 09:30 $9,789.05 (session -158.94) | 16:00 close · cash $1,093.35 · equity $9,619.01 vs 09:30 $9,789.05 (-170.04; session marks -158.94) · 4 name(s) marked open→close (per-name table). AMN×51 09:30 $47.47 → close $45.77 -86.70; LLY×1 09:30 $1393.15 → close $1410.99 +17.84; ARQT×76 09:30 $32.08 → close $31.26 -62.08; CDNA×28 09:30 $86.88 → close $85.88 -28.00 | — |
+| 2026-11-03 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $1,093.35 | ▼ 09:30 equity $9,598.07 vs yday $9,619.01 (-20.94) | 09:30 open · cash $1,093.35 (unchanged overnight, no fees) · equity $9,598.07 vs prior close $9,619.01 (-20.94) · 4 name(s) re-marked at the open (per-name table). AMN×51 yday $45.77 → 09:30 $45.63 -7.14; ARQT×76 yday $31.26 → 09:30 $31.32 +4.56; CDNA×28 yday $85.88 → 09:30 $85.63 -7.00; LLY×1 yday $1410.99 → 09:30 $1399.63 -11.36 | — |
+| 2026-11-03 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,093.35 | ▲ close $9,722.19 vs 09:30 $9,598.07 (session +124.12) | 16:00 close · cash $1,093.35 · equity $9,722.19 vs 09:30 $9,598.07 (+124.12; session marks +124.12) · 4 name(s) marked open→close (per-name table). AMN×51 09:30 $45.63 → close $45.30 -16.83; ARQT×76 09:30 $31.32 → close $32.00 +51.68; CDNA×28 09:30 $85.63 → close $88.47 +79.52; LLY×1 09:30 $1399.63 → close $1409.38 +9.75 | — |
+| 2026-11-04 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $1,093.35 | ▲ 09:30 equity $9,887.44 vs yday $9,722.19 (+165.25) | 09:30 open · cash $1,093.35 (unchanged overnight, no fees) · equity $9,887.44 vs prior close $9,722.19 (+165.25) · 4 name(s) re-marked at the open (per-name table). AMN×51 yday $45.30 → 09:30 $46.33 +52.53; ARQT×76 yday $32.00 → 09:30 $32.88 +67.26; CDNA×28 yday $88.47 → 09:30 $89.00 +14.84; LLY×1 yday $1409.38 → 09:30 $1440.00 +30.62 | — |
+| 2026-11-04 09:30 ET | **BUY** | `CNMD` | 7 | $47.99 | $2.01 | — | $755.41 | — | top 4 by cond; rank cond; list flatten; 🔵; ret5=+0.1; leftover $364.45 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `CON` | 8 | $40.90 | $2.01 | — | $426.23 | — | top 4 by cond; rank cond; list flatten; 🔵; ret5=+0.4; leftover $364.45 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-04 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $426.23 | ▲ close $9,994.95 vs 09:30 $9,887.44 (session +111.53) | 16:00 close · cash $426.23 · equity $9,994.95 vs 09:30 $9,887.44 (+107.51; session marks +111.53) · 6 name(s) marked open→close (per-name table). AMN×51 09:30 $46.33 → close $47.74 +71.91; ARQT×76 09:30 $32.88 → close $34.05 +88.54; CDNA×28 09:30 $89.00 → close $85.86 -87.92; LLY×1 09:30 $1440.00 → close $1417.99 -22.01; CNMD×7 09:30 $47.99 → close $53.66 +39.69; CON×8 09:30 $40.90 → close $43.56 +21.32 | — |
 
 ## Not taken
 

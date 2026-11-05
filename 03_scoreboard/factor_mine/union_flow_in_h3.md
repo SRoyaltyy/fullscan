@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ flow_in, no 🚨
 
-Cash book **-11.65%** ($8,835) · signal-only (no cash/fees) was +15.53%. Starts YES **3/30**. Fills 102 · skips 105 · realized $-281.48.
+Cash book **-21.28%** ($7,872) · signal-only (no cash/fees) was +15.53%. Starts YES **3/30**. Fills 104 · skips 105 · realized $-281.48.
 
 ## How this sleeve decides (like you are 10)
 
@@ -288,6 +288,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-02 09:30 ET | **SELL** | `CRS` | 15 | $285.91 | $2.08 | $-91.86 | $4,610.49 | ▼ -91.86 after sell → book $8,837.04; vs 09:30 mark -2.08 | dropped from list after 3 sess (min 3) | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-11-02 09:30 ET | **SELL** | `ITW` | 15 | $281.77 | $2.08 | $+71.19 | $8,834.96 | ▲ +71.19 after sell → book $8,834.96; vs 09:30 mark -2.08 | dropped from list after 3 sess (min 3) | join🔴 sector🔴 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-11-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,834.96 | ▲ close $8,834.96 vs 09:30 $8,839.12 (session +0.00) | 16:00 close · cash $8,834.96 · no lots left · equity $8,834.96. | — |
+| 2026-11-03 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,834.96 | ▲ 09:30 equity $8,834.96 vs yday $8,834.96 (+0.00) | 09:30 open · cash $8,834.96 · no holdings · equity $8,834.96 vs prior close $8,834.96 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-03 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,834.96 | ▲ close $8,834.96 vs 09:30 $8,834.96 (session +0.00) | 16:00 close · cash $8,834.96 · no lots left · equity $8,834.96. | — |
+| 2026-11-04 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,834.96 | ▲ 09:30 equity $8,834.96 vs yday $8,834.96 (+0.00) | 09:30 open · cash $8,834.96 · no holdings · equity $8,834.96 vs prior close $8,834.96 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-04 09:30 ET | **BUY** | `RKT` | 308 | $14.30 | $3.97 | — | $4,426.59 | — | union ∩ flow_in, no 🚨; gate flow_in=True; list ohlc_hot; 🔵; ret5=+16.6; leftover $4417.48 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `HLP` | 1108 | $3.98 | $14.29 | — | $2.45 | — | union ∩ flow_in, no 🚨; gate flow_in=True; list ohlc_hot; 🔵; ret5=+10.7; leftover $4417.48 | join🔴 sector🟡 gen🟢 news🟡 digest🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-04 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2.45 | ▼ close $7,871.97 vs 09:30 $8,834.96 (session -944.72) | 16:00 close · cash $2.45 · equity $7,871.97 vs 09:30 $8,834.96 (-962.99; session marks -944.72) · 2 name(s) marked open→close (per-name table). RKT×308 09:30 $14.30 → close $15.01 +218.68; HLP×1108 09:30 $3.98 → close $2.93 -1163.40 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `ohlc_hot` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · baseline list, no extra gate
 
-Cash book **-17.62%** ($8,238) · signal-only (no cash/fees) was +6.95%. Starts YES **0/30**. Fills 448 · skips 93 · realized $-1456.67.
+Cash book **-21.32%** ($7,869) · signal-only (no cash/fees) was +6.95%. Starts YES **0/30**. Fills 464 · skips 93 · realized $-1456.67.
 
 ## How this sleeve decides (like you are 10)
 
@@ -630,6 +630,26 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-02 09:30 ET | **BUY** | `BTSG` | 15 | $67.50 | $2.04 | — | $1,174.46 | — | baseline list, no extra gate; list ohlc_hot; ret5=+11.3; leftover $1024.84 | join🟡 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-11-02 09:30 ET | **BUY** | `TGTX` | 16 | $61.01 | $2.04 | — | $196.27 | — | baseline list, no extra gate; list ohlc_hot; ret5=+12.9; leftover $1024.84 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-11-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $196.27 | ▲ close $8,237.83 vs 09:30 $8,121.86 (session +130.46) | 16:00 close · cash $196.27 · equity $8,237.83 vs 09:30 $8,121.86 (+115.97; session marks +130.46) · 8 name(s) marked open→close (per-name table). SLN×48 09:30 $19.75 → close $19.76 +0.48; GEN×35 09:30 $29.05 → close $29.89 +29.40; BC×13 09:30 $76.25 → close $79.05 +36.40; BAH×11 09:30 $87.16 → close $88.02 +9.46; BLDR×15 09:30 $65.73 → close $67.82 +31.35; REAL×83 09:30 $12.31 → close $13.02 +58.93; BTSG×15 09:30 $67.50 → close $66.26 -18.60; TGTX×16 09:30 $61.01 → close $59.95 -16.96 | — |
+| 2026-11-03 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $196.27 | ▼ 09:30 equity $8,209.31 vs yday $8,237.83 (-28.52) | 09:30 open · cash $196.27 (unchanged overnight, no fees) · equity $8,209.31 vs prior close $8,237.83 (-28.52) · 8 name(s) re-marked at the open (per-name table). BAH×11 yday $88.02 → 09:30 $85.95 -22.77; BC×13 yday $79.05 → 09:30 $79.61 +7.28; BLDR×15 yday $67.82 → 09:30 $67.42 -6.00; BTSG×15 yday $66.26 → 09:30 $66.50 +3.60; GEN×35 yday $29.89 → 09:30 $29.59 -10.50; REAL×83 yday $13.02 → 09:30 $12.95 -5.81; SLN×48 yday $19.76 → 09:30 $19.78 +0.96; TGTX×16 yday $59.95 → 09:30 $60.24 +4.72 | — |
+| 2026-11-03 09:30 ET | **SELL** | `BAH` | 11 | $85.95 | $2.04 | $-17.38 | $1,139.68 | ▼ -17.38 after sell → book $8,207.27; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-03 09:30 ET | **SELL** | `BC` | 13 | $79.61 | $2.05 | $+39.60 | $2,172.56 | ▲ +39.60 after sell → book $8,205.22; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-03 09:30 ET | **SELL** | `BLDR` | 15 | $67.42 | $2.06 | $+21.26 | $3,181.80 | ▲ +21.26 after sell → book $8,203.16; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-03 09:30 ET | **SELL** | `BTSG` | 15 | $66.50 | $2.06 | $-19.09 | $4,177.25 | ▼ -19.09 after sell → book $8,201.11; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-03 09:30 ET | **SELL** | `GEN` | 35 | $29.59 | $2.12 | $+14.69 | $5,210.78 | ▲ +14.69 after sell → book $8,198.99; vs 09:30 mark -2.12 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-03 09:30 ET | **SELL** | `REAL` | 83 | $12.95 | $2.26 | $+48.62 | $6,283.37 | ▲ +48.62 after sell → book $8,196.73; vs 09:30 mark -2.26 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-03 09:30 ET | **SELL** | `SLN` | 48 | $19.78 | $2.15 | $-4.29 | $7,230.66 | ▼ -4.29 after sell → book $8,194.58; vs 09:30 mark -2.15 | dropped from list after 5 sess (min 1) | — |
+| 2026-11-03 09:30 ET | **SELL** | `TGTX` | 16 | $60.24 | $2.06 | $-16.34 | $8,192.52 | ▼ -16.34 after sell → book $8,192.52; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-03 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,192.52 | ▲ close $8,192.52 vs 09:30 $8,209.31 (session +0.00) | 16:00 close · cash $8,192.52 · no lots left · equity $8,192.52. | — |
+| 2026-11-04 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,192.52 | ▲ 09:30 equity $8,192.52 vs yday $8,192.52 (+0.00) | 09:30 open · cash $8,192.52 · no holdings · equity $8,192.52 vs prior close $8,192.52 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-04 09:30 ET | **BUY** | `PRIM` | 12 | $84.45 | $2.03 | — | $7,177.09 | — | baseline list, no extra gate; list yday_gainer,yday_mover,ohlc_hot; ret5=+15.1; leftover $1024.07 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `BETA` | 42 | $24.00 | $2.12 | — | $6,166.98 | — | baseline list, no extra gate; list ohlc_hot; ret5=+13.9; leftover $1024.07 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 judge🔴 ab🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `RRX` | 5 | $179.68 | $2.00 | — | $5,266.57 | — | baseline list, no extra gate; list ohlc_hot; ret5=+13.7; leftover $1024.07 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `VFC` | 49 | $20.53 | $2.14 | — | $4,258.47 | — | baseline list, no extra gate; list ohlc_hot; 🔵; ret5=+17.7; leftover $1024.07 | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `RUN` | 109 | $9.36 | $2.32 | — | $3,235.91 | — | baseline list, no extra gate; list ohlc_hot; 🔵; ret5=+15.3; leftover $1024.07 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 judge🟡 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `SHLS` | 115 | $8.86 | $2.33 | — | $2,214.67 | — | baseline list, no extra gate; list ohlc_hot; 🔵; ret5=+13.3; leftover $1024.07 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `APG` | 22 | $46.47 | $2.06 | — | $1,190.28 | — | baseline list, no extra gate; list ohlc_hot; ret5=+13.6; leftover $1024.07 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-04 09:30 ET | **BUY** | `IVA` | 244 | $4.18 | $3.15 | — | $167.21 | — | baseline list, no extra gate; list ohlc_hot; 🔵; ret5=+9.4; leftover $1024.07 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-04 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $167.21 | ▼ close $7,868.55 vs 09:30 $8,192.52 (session -305.83) | 16:00 close · cash $167.21 · equity $7,868.55 vs 09:30 $8,192.52 (-323.97; session marks -305.83) · 8 name(s) marked open→close (per-name table). PRIM×12 09:30 $84.45 → close $68.45 -192.00; BETA×42 09:30 $24.00 → close $25.31 +55.02; RRX×5 09:30 $179.68 → close $173.38 -31.50; VFC×49 09:30 $20.53 → close $20.93 +19.60; RUN×109 09:30 $9.36 → close $8.79 -62.13; SHLS×115 09:30 $8.86 → close $9.16 +34.50; APG×22 09:30 $46.47 → close $44.03 -53.68; IVA×244 09:30 $4.18 → close $3.87 -75.64 | — |
 
 ## Not taken
 

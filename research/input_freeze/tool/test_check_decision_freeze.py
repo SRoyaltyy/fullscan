@@ -184,5 +184,52 @@ class ParseTsTests(unittest.TestCase):
         self.assertIsNone(cdc.parse_ts(None))
 
 
+class NotReplayableTests(unittest.TestCase):
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        self.root = Path(self.tmp.name)
+
+    def tearDown(self):
+        self.tmp.cleanup()
+
+    def _mismatch(self):
+        write_day(self.root,
+                  inputs={"a/file.json": sha(b"rewritten")},
+                  rows=[make_row("a/file.json", b"frozen")],
+                  completed_at="2026-10-07T10:00:00-04:00")
+
+    def test_recorded_day_does_not_fail_and_record_is_add_only(self):
+        self._mismatch()
+        self.assertEqual(cdc.main(["--root", str(self.root), "--date", DAY]), 1)
+        cdc.append_not_replayable(self.root, {
+            "date": DAY,
+            "reason": "ticket hashed bytes rewritten after the freeze",
+            "ticket": f"data/day_board/{DAY}_strategy_tickets.json",
+        })
+        self.assertEqual(cdc.main(["--root", str(self.root), "--date", DAY]), 0)
+        with self.assertRaises(ValueError):
+            cdc.append_not_replayable(self.root, {"date": DAY, "reason": "again"})
+        path = self.root / cdc.RECORD_REL
+        before = path.read_text(encoding="utf-8")
+        cdc.append_not_replayable(self.root, {
+            "date": "2026-11-05", "reason": "a later day",
+        })
+        after = path.read_text(encoding="utf-8")
+        self.assertTrue(after.startswith(before))
+        self.assertIn("2026-11-05", after[len(before):])
+        self.assertEqual(before, after[:len(before)])
+
+    def test_recorded_day_still_fails_when_the_stored_copy_is_tampered(self):
+        data = b"genuine"
+        write_day(self.root,
+                  inputs={"a/file.json": sha(data)},
+                  rows=[make_row("a/file.json", data)],
+                  completed_at="2026-10-07T06:27:11-04:00")
+        cdc.append_not_replayable(self.root, {"date": DAY, "reason": "known"})
+        stored = self.root / "research/input_freeze" / DAY / "files/fullscan/a/file.json.gz"
+        stored.write_bytes(gzip.compress(b"TAMPERED", compresslevel=9, mtime=0))
+        self.assertEqual(cdc.main(["--root", str(self.root), "--date", DAY]), 1)
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=1)

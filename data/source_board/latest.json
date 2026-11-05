@@ -1,6 +1,6 @@
 {
  "date": "2026-11-04",
- "generated_at": "2026-11-04T07:31:23.402757+00:00",
+ "generated_at": "2026-11-04T20:27:15.071826+00:00",
  "catalog": {
   "generated_at": "2026-10-31T17:46:18.945180+00:00",
   "channels": 365,
@@ -34,55 +34,77 @@
   }
  },
  "collect": {
-  "generated_at": "2026-11-04T07:30:45.022151+00:00",
+  "generated_at": "2026-11-04T20:26:55.940049+00:00",
   "enabled_sources": 119,
-  "sources_ok": 118,
-  "sources_failed": 1,
+  "sources_ok": 119,
+  "sources_failed": 0,
   "coverage_status": "degraded",
   "counts": {
-   "observed": 1905,
-   "old": 1145,
-   "future": 11,
-   "undated": 255,
-   "new": 132,
-   "duplicates": 617
+   "observed": 2312,
+   "old": 1468,
+   "future": 10,
+   "undated": 310,
+   "new": 106,
+   "duplicates": 728
   },
-  "current_dated_documents": 549
+  "current_dated_documents": 634
  },
  "new_today": {
-  "count": 132,
+  "count": 106,
   "by_source": {
-   "us-federal-register": 92,
+   "us-fcc-e95ecda3bb": 23,
    "us-doj-b3d27e1dc3": 15,
-   "us-govinfo-bills": 4,
-   "us-govinfo-dcpd": 4,
+   "eu-commission-07d4f58ccf": 10,
+   "uk-govuk-decision": 5,
+   "uk-govuk-product_safety_alert_report_recall": 5,
+   "us-govinfo-crpt": 5,
+   "uk-govuk-consultation_outcome": 4,
+   "us-fda-5696b24295": 4,
    "in-rbi-cc71120b98": 4,
-   "us-white-house-0691096d16": 2,
-   "us-doj-e05071794d": 2,
-   "us-fda-5696b24295": 2,
+   "us-govinfo-plaw": 2,
+   "us-fda-03f7703006": 2,
+   "eu-council-9d9e9444da": 2,
    "jp-boj-d488538690": 2,
+   "se-riksbank-8ea6f8481e": 2,
+   "de-bundesbank-027ac4024f": 2,
+   "hk-hkma-public-press": 1,
+   "uk-govuk-medical_safety_alert": 1,
+   "us-sec-8940dd7737": 1,
+   "us-ofac-index": 1,
    "us-itc-index": 1,
+   "us-cftc-fda5c3631d": 1,
+   "us-fcc-685c5e7dd2": 1,
    "us-fcc-eeb7d739be": 1,
-   "us-fcc-e95ecda3bb": 1,
-   "eu-council-9d9e9444da": 1,
-   "de-bundesbank-fe89ad3ac9": 1
+   "eu-court-1433471e58": 1,
+   "eu-ecb-991c113079": 1,
+   "uk-boe-4feb372611": 1,
+   "uk-fca-7b9977ec8e": 1,
+   "ca-gazette-2d47daa483": 1,
+   "ca-boc-30d6d14378": 1,
+   "ch-snb-b0f42db828": 1,
+   "de-bundesbank-e5b1c4a067": 1,
+   "de-bundesbank-fe89ad3ac9": 1,
+   "io-wto-497f28e20d": 1,
+   "io-bis-b3dfd5b7aa": 1
   },
   "by_class": {
-   "routine": 93,
-   "high": 16,
-   "docket": 8,
-   "watch": 15
+   "watch": 51,
+   "routine": 38,
+   "high": 10,
+   "docket": 6,
+   "noise": 1
   }
  },
  "parsed_today": {
-  "count": 20,
+  "count": 96,
   "by_class": {
-   "high": 11,
-   "routine": 4,
-   "watch": 5
+   "high": 19,
+   "watch": 41,
+   "routine": 39,
+   "noise": 1
   }
  },
- "n_failures": 1,
+ "n_failures": 0,
  "dates": [
   "2026-11-04"
  ],

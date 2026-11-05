@@ -325,7 +325,12 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: dashboard
-          path: dashboard/index.html
+          # index.html alone left updown out of the artifact. Deploy then
+          # published /dashboard/updown/ from the main overlay and never
+          # copied the site-root alias, so /updown/ stayed 404.
+          path: |
+            dashboard/index.html
+            dashboard/updown/
           if-no-files-found: warn
 
       - name: Commit everything (incl. dashboard + paper)

@@ -76,6 +76,49 @@ def test_extra_decision_inputs_join_the_fingerprint(tmp_path):
         assert changed['ready']
 
 
+def test_frozen_session_hashes_the_stored_copy_not_the_live_file(tmp_path):
+    """Once the day is frozen, the ticket digest is the stored copy."""
+    import gzip
+    import hashlib
+    day = "2026-11-04"
+    rel = "01_daily/weather/2026-11-04_weather.json"
+    frozen = b'{"v":"frozen"}'
+    live = b'{"v":"rewritten after freeze"}'
+    stored = f"files/fullscan/{rel}.gz"
+    folder = tmp_path / "research" / "input_freeze" / day
+    blob = gzip.compress(frozen, mtime=0)
+    (folder / stored).parent.mkdir(parents=True)
+    (folder / stored).write_bytes(blob)
+    manifest = {
+        "schema": "input_freeze/v2", "date": day, "status": "frozen",
+        "files": [{
+            "repo": "fullscan", "source_path": rel, "status": "copied",
+            "gzip": True, "stored_path": stored,
+            "sha256": hashlib.sha256(frozen).hexdigest(),
+        }],
+    }
+    (folder / "manifest.json").write_text(json.dumps(manifest), encoding="utf-8")
+    live_path = tmp_path / rel
+    live_path.parent.mkdir(parents=True)
+    live_path.write_bytes(live)
+    specs = [{'key': 'stock_book', 'files': [
+        {'key': 'in_weather', 'role': 'input', 'rel': rel},
+    ]}]
+    panel = tmp_path / 'data/factor_mine/panel.json'
+    panel.parent.mkdir(parents=True)
+    panel.write_text('{}')
+
+    def check(item, date):
+        return SimpleNamespace(status='OK', reason='', role=item['role'])
+
+    with patch.object(dr, 'ROOT', tmp_path), \
+         patch.object(diag, 'workflow_specs', return_value=specs), \
+         patch.object(diag, '_check_file', side_effect=check):
+        got = dr.evaluate(day)
+    assert got['inputs'][rel] == hashlib.sha256(frozen).hexdigest()
+    assert got['inputs'][rel] != hashlib.sha256(live).hexdigest()
+
+
 def test_main_gate_ignores_absent_inputs_but_enforces_present_ones():
     proof = {
         'ready': True,
