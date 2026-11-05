@@ -846,6 +846,17 @@ def test_commit_allowlist_and_workflow_and_page():
     assert "github.event_name == 'workflow_run'" in yml
     assert "src.jev_day append" in yml
     assert "github.event.inputs.mode == 'draw'" in yml
+    # Hand dispatch after merge: append=true runs Append new days and
+    # does not draw. The 21:30 schedule assertion above stays.
+    assert "append:" in yml
+    assert "type: boolean" in yml
+    append_step = yml.split("- name: Append new days", 1)[1].split("- name:", 1)[0]
+    assert "github.event_name == 'schedule'" in append_step
+    assert "github.event_name == 'workflow_dispatch'" in append_step
+    assert "github.event.inputs.append == 'true'" in append_step
+    draw_step = yml.split("- name: Draw", 1)[1].split("- name:", 1)[0]
+    assert "github.event.inputs.mode == 'draw'" in draw_step
+    assert "github.event.inputs.append != 'true'" in draw_step
     quiet = yml.index('github.event_name }}" = "schedule"')
     assert yml.index("exit 0", quiet) < yml.index("exit 1", quiet)
     assert "pull_request:" not in yml
