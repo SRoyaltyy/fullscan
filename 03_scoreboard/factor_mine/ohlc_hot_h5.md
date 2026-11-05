@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `ohlc_hot` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · baseline list, no extra gate
 
-Cash book **-15.50%** ($8,450) · signal-only (no cash/fees) was +88.18%. Starts YES **4/30**. Fills 311 · skips 429 · realized $-1050.25.
+Cash book **-18.77%** ($8,124) · signal-only (no cash/fees) was +88.18%. Starts YES **4/30**. Fills 313 · skips 429 · realized $-1050.25.
 
 ## How this sleeve decides (like you are 10)
 
@@ -497,6 +497,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-04 09:30 ET | **BUY** | `APG` | 23 | $46.47 | $2.06 | — | $1,174.64 | — | baseline list, no extra gate; list ohlc_hot; ret5=+13.6; leftover $1098.43 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-11-04 09:30 ET | **BUY** | `IVA` | 262 | $4.18 | $3.38 | — | $76.10 | — | baseline list, no extra gate; list ohlc_hot; 🔵; ret5=+9.4; leftover $1098.43 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-11-04 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $76.10 | ▼ close $8,449.78 vs 09:30 $8,807.75 (session -332.40) | 16:00 close · cash $76.10 · equity $8,449.78 vs 09:30 $8,807.75 (-357.97; session marks -332.40) · 9 name(s) marked open→close (per-name table). REAL×1 09:30 $13.19 → close $13.57 +0.38; PRIM×13 09:30 $84.45 → close $68.45 -208.00; BETA×45 09:30 $24.00 → close $25.31 +58.95; RRX×6 09:30 $179.68 → close $173.38 -37.80; VFC×53 09:30 $20.53 → close $20.93 +21.20; RUN×117 09:30 $9.36 → close $8.79 -66.69; SHLS×123 09:30 $8.86 → close $9.16 +36.90; APG×23 09:30 $46.47 → close $44.03 -56.12; IVA×262 09:30 $4.18 → close $3.87 -81.22 | — |
+| 2026-11-05 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $76.10 | ▲ 09:30 equity $8,552.01 vs yday $8,449.78 (+102.23) | 09:30 open · cash $76.10 (unchanged overnight, no fees) · equity $8,552.01 vs prior close $8,449.78 (+102.23) · 9 name(s) re-marked at the open (per-name table). APG×23 yday $44.03 → 09:30 $43.12 -20.93; BETA×45 yday $25.31 → 09:30 $25.00 -13.95; IVA×262 yday $3.87 → 09:30 $3.96 +23.58; PRIM×13 yday $68.45 → 09:30 $65.93 -32.76; REAL×1 yday $13.57 → 09:30 $13.94 +0.37; RRX×6 yday $173.38 → 09:30 $167.31 -36.42; RUN×117 yday $8.79 → 09:30 $10.48 +198.32; SHLS×123 yday $9.16 → 09:30 $9.00 -19.68; VFC×53 yday $20.93 → 09:30 $21.00 +3.71 | — |
+| 2026-11-05 09:30 ET | **BUY** | `SWIM` | 1 | $8.15 | $0.08 | — | $67.87 | — | baseline list, no extra gate; list ohlc_hot; ret5=+16.0; leftover $9.51 | join🔴 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **BUY** | `UWMC` | 5 | $1.69 | $0.10 | — | $59.33 | — | baseline list, no extra gate; list ohlc_hot; ret5=+12.7; leftover $9.51 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $59.33 | ▼ close $8,123.52 vs 09:30 $8,552.01 (session -428.33) | 16:00 close · cash $59.33 · equity $8,123.52 vs 09:30 $8,552.01 (-428.49; session marks -428.33) · 11 name(s) marked open→close (per-name table). APG×23 09:30 $43.12 → close $40.33 -64.17; BETA×45 09:30 $25.00 → close $24.05 -42.75; IVA×262 09:30 $3.96 → close $3.63 -86.46; PRIM×13 09:30 $65.93 → close $59.56 -82.81; REAL×1 09:30 $13.94 → close $13.00 -0.94; RRX×6 09:30 $167.31 → close $160.30 -42.06; RUN×117 09:30 $10.48 → close $9.87 -71.96; SHLS×123 09:30 $9.00 → close $8.99 -0.62; VFC×53 09:30 $21.00 → close $20.32 -36.04; SWIM×1 09:30 $8.15 → close $7.92 -0.23; UWMC×5 09:30 $1.69 → close $1.63 -0.29 | — |
 
 ## Not taken
 

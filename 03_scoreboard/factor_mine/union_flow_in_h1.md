@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ flow_in, no 🚨
 
-Cash book **+0.82%** ($10,082) · signal-only (no cash/fees) was +17.31%. Starts YES **6/30**. Fills 130 · skips 27 · realized $+766.09.
+Cash book **+14.56%** ($11,456) · signal-only (no cash/fees) was +17.31%. Starts YES **6/30**. Fills 133 · skips 27 · realized $+766.09.
 
 ## How this sleeve decides (like you are 10)
 
@@ -320,6 +320,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-04 09:30 ET | **BUY** | `RKT` | 395 | $14.30 | $5.10 | — | $5,659.27 | — | union ∩ flow_in, no 🚨; gate flow_in=True; list ohlc_hot; 🔵; ret5=+16.6; leftover $5656.44 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-11-04 09:30 ET | **BUY** | `HLP` | 1417 | $3.98 | $18.28 | — | $1.34 | — | union ∩ flow_in, no 🚨; gate flow_in=True; list ohlc_hot; 🔵; ret5=+10.7; leftover $5656.44 | join🔴 sector🟡 gen🟢 news🟡 digest🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-11-04 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1.34 | ▼ close $10,082.10 vs 09:30 $11,312.87 (session -1,207.40) | 16:00 close · cash $1.34 · equity $10,082.10 vs 09:30 $11,312.87 (-1230.77; session marks -1207.40) · 2 name(s) marked open→close (per-name table). RKT×395 09:30 $14.30 → close $15.01 +280.45; HLP×1417 09:30 $3.98 → close $2.93 -1487.85 | — |
+| 2026-11-05 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $1.34 | ▼ 09:30 equity $9,983.26 vs yday $10,082.10 (-98.84) | 09:30 open · cash $1.34 (unchanged overnight, no fees) · equity $9,983.26 vs prior close $10,082.10 (-98.84) · 2 name(s) re-marked at the open (per-name table). HLP×1417 yday $2.93 → 09:30 $2.87 -85.02; RKT×395 yday $15.01 → 09:30 $14.97 -13.83 | — |
+| 2026-11-05 09:30 ET | **SELL** | `HLP` | 1417 | $2.87 | $18.55 | $-1609.70 | $4,049.58 | ▼ -1,609.70 after sell → book $9,964.71; vs 09:30 mark -18.55 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-05 09:30 ET | **SELL** | `RKT` | 395 | $14.97 | $5.21 | $+256.32 | $9,959.50 | ▲ +256.32 after sell → book $9,959.50; vs 09:30 mark -5.21 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-05 09:30 ET | **BUY** | `ENHA` | 1402 | $7.09 | $18.09 | — | $1.23 | — | union ∩ flow_in, no 🚨; gate flow_in=True; list yday_mover; ret5=-38.7; leftover $9959.50 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-11-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1.23 | ▲ close $11,455.57 vs 09:30 $9,983.26 (session +1,514.16) | 16:00 close · cash $1.23 · equity $11,455.57 vs 09:30 $9,983.26 (+1472.31; session marks +1514.16) · 1 name(s) marked open→close (per-name table). ENHA×1402 09:30 $7.09 → close $8.17 +1514.16 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared short_news_r_h3/flatten_h5 w=0.3,0.7 net=priority
 
-Cash book **-7.09%** ($9,291) · signal-only (no cash/fees) was —. Starts YES **3/30**. Fills 393 · skips 450 · realized $+692.72.
+Cash book **-11.38%** ($8,862) · signal-only (no cash/fees) was —. Starts YES **3/30**. Fills 400 · skips 450 · realized $+692.72.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $9,009.08.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $280.82.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -584,6 +584,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-04 09:30 ET | **BUY** | `PCRX` | 23 | $36.41 | $2.06 | — | $4,518.33 | — | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ret5=-0.0; combo leftover $868.37; owner flatten_h5 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-11-04 09:30 ET | **SHORT** | `HRB` | 84 | $53.49 | $2.42 | — | $9,009.08 | — | news🔴; gate news=bad; list ohlc_hot; ret5=+10.8; combo leftover $4518.33; owner short_news_r_h3 | join🟢 sector🔴 gen🟢 news🔴 digest🟡 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-11-04 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,009.08 | ▼ close $9,290.86 vs 09:30 $9,504.26 (session -176.62) | 16:00 close · cash $9,009.08 · equity $9,290.86 vs 09:30 $9,504.26 (-213.40; session marks -176.62) · 12 name(s) marked open→close (per-name table). AMN×1 09:30 $46.33 → close $47.74 +1.41; ARQT×2 09:30 $32.88 → close $34.05 +2.33; BAH×7 09:30 $86.29 → close $88.30 -14.07; ETON×1 09:30 $51.76 → close $50.72 -1.04; VEEV×2 09:30 $306.62 → close $310.63 +8.02; ILMN×3 09:30 $241.00 → close $226.54 -43.37; RGEN×4 09:30 $183.40 → close $178.20 -20.80; CDNA×9 09:30 $89.00 → close $85.86 -28.26; PACS×17 09:30 $48.51 → close $50.26 +29.75; CON×21 09:30 $40.90 → close $43.56 +55.96; PCRX×23 09:30 $36.41 → close $36.40 -0.23; HRB×84 09:30 $53.49 → close $55.47 -166.32 | — |
+| 2026-11-05 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,009.08 | ▼ 09:30 equity $9,205.49 vs yday $9,290.86 (-85.37) | 09:30 open · cash $9,009.08 (unchanged overnight, no fees) · equity $9,205.49 vs prior close $9,290.86 (-85.37) | — |
+| 2026-11-05 09:30 ET | **COVER** | `BAH` | 7 | $89.46 | $2.01 | $-20.16 | $8,380.85 | ▼ -20.16 after sell → book $9,203.48; vs 09:30 mark -2.01 | short_news_r_h3: dropped from list after 3 sess (min 3) | — |
+| 2026-11-05 09:30 ET | **BUY** | `CSGP` | 42 | $33.11 | $2.12 | — | $6,988.11 | — | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); ret5=+18.3; combo leftover $1396.81; owner flatten_h5 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟡 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **BUY** | `CMCSA` | 55 | $25.10 | $2.15 | — | $5,605.46 | — | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); ret5=+15.2; combo leftover $1396.81; owner flatten_h5 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **BUY** | `CLX` | 13 | $99.88 | $2.03 | — | $4,304.99 | — | baseline list, no extra gate; list flatten,ohlc_hot; wish-list (live io HOLD — not a ticket); ret5=+14.2; combo leftover $1396.81; owner flatten_h5 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **BUY** | `COCO` | 20 | $67.15 | $2.05 | — | $2,959.94 | — | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); ret5=+16.1; combo leftover $1396.81; owner flatten_h5 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **BUY** | `CROX` | 8 | $160.00 | $2.01 | — | $1,677.93 | — | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); ret5=+33.5; combo leftover $1396.81; owner flatten_h5 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **BUY** | `GPK` | 118 | $11.82 | $2.34 | — | $280.82 | — | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); ret5=+37.6; combo leftover $1396.81; owner flatten_h5 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🟡 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $280.82 | ▼ close $8,862.06 vs 09:30 $9,205.49 (session -328.71) | 16:00 close · cash $280.82 · equity $8,862.06 vs 09:30 $9,205.49 (-343.43; session marks -328.71) · 17 name(s) marked open→close (per-name table). AMN×1 09:30 $47.89 → close $47.42 -0.47; ARQT×2 09:30 $29.00 → close $27.00 -4.00; CDNA×9 09:30 $83.60 → close $76.33 -65.43; CON×21 09:30 $43.57 → close $42.15 -29.82; ETON×1 09:30 $51.15 → close $47.15 -4.00; HRB×84 09:30 $55.85 → close $55.01 +70.56; ILMN×3 09:30 $220.25 → close $208.00 -36.75; PACS×17 09:30 $50.78 → close $50.20 -9.86; PCRX×23 09:30 $36.41 → close $36.42 +0.23; RGEN×4 09:30 $175.60 → close $168.48 -28.48; VEEV×2 09:30 $312.89 → close $310.10 -5.58; CSGP×42 09:30 $33.11 → close $32.05 -44.52; CMCSA×55 09:30 $25.10 → close $24.95 -8.25; CLX×13 09:30 $99.88 → close $99.70 -2.34; COCO×20 09:30 $67.15 → close $63.63 -70.40; CROX×8 09:30 $160.00 → close $152.93 -56.56; GPK×118 09:30 $11.82 → close $11.54 -33.04 | — |
 
 ## Not taken
 

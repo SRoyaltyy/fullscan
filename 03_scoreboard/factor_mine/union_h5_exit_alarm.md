@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · hold 5d, sell next 09:30 if 🚨
 
-Cash book **-17.16%** ($8,284) · signal-only (no cash/fees) was +17.52%. Starts YES **6/30**. Fills 361 · skips 456 · realized $+341.96.
+Cash book **-20.26%** ($7,974) · signal-only (no cash/fees) was +17.52%. Starts YES **6/30**. Fills 368 · skips 456 · realized $+341.96.
 
 ## How this sleeve decides (like you are 10)
 
@@ -549,6 +549,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-04 09:30 ET | **BUY** | `CON` | 28 | $40.90 | $2.07 | — | $1,782.47 | — | hold 5d, sell next 09:30 if 🚨; list flatten; 🔵; ret5=+0.4; leftover $1177.89 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-11-04 09:30 ET | **BUY** | `PCRX` | 32 | $36.41 | $2.09 | — | $615.27 | — | hold 5d, sell next 09:30 if 🚨; list flatten; 🔵; ret5=-0.0; leftover $1177.89 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-11-04 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $615.27 | ▼ close $8,284.20 vs 09:30 $8,300.30 (session -1.50) | 16:00 close · cash $615.27 · equity $8,284.20 vs 09:30 $8,300.30 (-16.10; session marks -1.50) · 9 name(s) marked open→close (per-name table). BLFS×1 09:30 $38.61 → close $38.61 +0.00; SMMT×1 09:30 $16.15 → close $16.17 +0.02; VEEV×3 09:30 $306.62 → close $310.63 +12.03; ILMN×4 09:30 $241.00 → close $226.54 -57.83; RGEN×6 09:30 $183.40 → close $178.20 -31.20; CDNA×13 09:30 $89.00 → close $85.86 -40.82; PACS×24 09:30 $48.51 → close $50.26 +42.00; CON×28 09:30 $40.90 → close $43.56 +74.62; PCRX×32 09:30 $36.41 → close $36.40 -0.32 | — |
+| 2026-11-05 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $615.27 | ▼ 09:30 equity $8,233.85 vs yday $8,284.20 (-50.35) | 09:30 open · cash $615.27 (unchanged overnight, no fees) · equity $8,233.85 vs prior close $8,284.20 (-50.35) · 9 name(s) re-marked at the open (per-name table). BLFS×1 yday $38.61 → 09:30 $38.61 +0.00; CDNA×13 yday $85.86 → 09:30 $83.60 -29.38; CON×28 yday $43.56 → 09:30 $43.57 +0.28; ILMN×4 yday $226.54 → 09:30 $220.25 -25.16; PACS×24 yday $50.26 → 09:30 $50.78 +12.48; PCRX×32 yday $36.40 → 09:30 $36.41 +0.32; RGEN×6 yday $178.20 → 09:30 $175.60 -15.60; SMMT×1 yday $16.17 → 09:30 $16.10 -0.07; VEEV×3 yday $310.63 → 09:30 $312.89 +6.78 | — |
+| 2026-11-05 09:30 ET | **SELL** | `SMMT` | 1 | $16.10 | $0.18 | $-0.25 | $631.19 | ▼ -0.25 after sell → book $8,233.67; vs 09:30 mark -0.18 | exit 🚨 after 3 sess | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-05 09:30 ET | **BUY** | `CSGP` | 2 | $33.11 | $0.67 | — | $564.30 | — | hold 5d, sell next 09:30 if 🚨; list flatten; ret5=+18.3; leftover $78.90 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟡 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **BUY** | `CMCSA` | 3 | $25.10 | $0.76 | — | $488.24 | — | hold 5d, sell next 09:30 if 🚨; list flatten; ret5=+15.2; leftover $78.90 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **BUY** | `COCO` | 1 | $67.15 | $0.67 | — | $420.41 | — | hold 5d, sell next 09:30 if 🚨; list flatten; ret5=+16.1; leftover $78.90 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **BUY** | `GPK` | 6 | $11.82 | $0.73 | — | $348.76 | — | hold 5d, sell next 09:30 if 🚨; list flatten; ret5=+37.6; leftover $78.90 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🟡 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **BUY** | `PRMB` | 3 | $21.55 | $0.66 | — | $283.46 | — | hold 5d, sell next 09:30 if 🚨; list probable,yday_gainer,yday_mover; ret5=+8.8; leftover $78.90 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **BUY** | `EPR` | 1 | $61.10 | $0.61 | — | $221.74 | — | hold 5d, sell next 09:30 if 🚨; list yday_gainer,yday_mover; ret5=+10.0; leftover $78.90 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $221.74 | ▼ close $7,974.32 vs 09:30 $8,233.85 (session -255.24) | 16:00 close · cash $221.74 · equity $7,974.32 vs 09:30 $8,233.85 (-259.53; session marks -255.24) · 14 name(s) marked open→close (per-name table). BLFS×1 09:30 $38.61 → close $38.61 +0.00; CDNA×13 09:30 $83.60 → close $76.33 -94.51; CON×28 09:30 $43.57 → close $42.15 -39.76; ILMN×4 09:30 $220.25 → close $208.00 -49.00; PACS×24 09:30 $50.78 → close $50.20 -13.92; PCRX×32 09:30 $36.41 → close $36.42 +0.32; RGEN×6 09:30 $175.60 → close $168.48 -42.72; VEEV×3 09:30 $312.89 → close $310.10 -8.37; CSGP×2 09:30 $33.11 → close $32.05 -2.12; CMCSA×3 09:30 $25.10 → close $24.95 -0.45; COCO×1 09:30 $67.15 → close $63.63 -3.52; GPK×6 09:30 $11.82 → close $11.54 -1.68; PRMB×3 09:30 $21.55 → close $22.15 +1.80; EPR×1 09:30 $61.10 → close $59.79 -1.31 | — |
 
 ## Not taken
 

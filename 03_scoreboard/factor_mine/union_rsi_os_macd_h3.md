@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-0.85%** ($9,915) · signal-only (no cash/fees) was +8.48%. Starts YES **1/30**. Fills 48 · skips 9 · realized $-574.52.
+Cash book **-2.69%** ($9,731) · signal-only (no cash/fees) was +8.48%. Starts YES **1/30**. Fills 54 · skips 9 · realized $-574.52.
 
 ## How this sleeve decides (like you are 10)
 
@@ -240,6 +240,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-04 09:30 ET | **BUY** | `QNST` | 33 | $18.51 | $2.09 | — | $1,250.24 | — | combo gate; gate macd_up=True,rsi_os=True; list ohlc_hot; 🔵; ret5=+14.2; leftover $621.23 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-11-04 09:30 ET | **BUY** | `ROL` | 16 | $37.57 | $2.04 | — | $647.08 | — | combo gate; gate macd_up=True,rsi_os=True; list ohlc_hot; ret5=+9.8; leftover $621.23 | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-11-04 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $647.08 | ▲ close $9,914.94 vs 09:30 $9,754.02 (session +167.13) | 16:00 close · cash $647.08 · equity $9,914.94 vs 09:30 $9,754.02 (+160.92; session marks +167.13) · 6 name(s) marked open→close (per-name table). DGX×9 09:30 $250.61 → close $255.68 +45.63; GEN×81 09:30 $30.50 → close $30.89 +31.59; PENN×147 09:30 $17.30 → close $17.44 +20.58; JMKE×31 09:30 $19.99 → close $21.01 +31.62; QNST×33 09:30 $18.51 → close $19.26 +24.75; ROL×16 09:30 $37.57 → close $38.38 +12.96 | — |
+| 2026-11-05 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $647.08 | ▲ 09:30 equity $9,922.20 vs yday $9,914.94 (+7.26) | 09:30 open · cash $647.08 (unchanged overnight, no fees) · equity $9,922.20 vs prior close $9,914.94 (+7.26) · 6 name(s) re-marked at the open (per-name table). DGX×9 yday $255.68 → 09:30 $258.74 +27.54; GEN×81 yday $30.89 → 09:30 $31.12 +19.03; JMKE×31 yday $21.01 → 09:30 $20.66 -10.85; PENN×147 yday $17.44 → 09:30 $17.03 -60.27; QNST×33 yday $19.26 → 09:30 $20.03 +25.41; ROL×16 yday $38.38 → 09:30 $38.78 +6.40 | — |
+| 2026-11-05 09:30 ET | **SELL** | `DGX` | 9 | $258.74 | $2.05 | $+60.20 | $2,973.69 | ▲ +60.20 after sell → book $9,920.16; vs 09:30 mark -2.05 | dropped from list after 3 sess (min 3) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **SELL** | `GEN` | 81 | $31.12 | $2.27 | $+163.58 | $5,492.55 | ▲ +163.58 after sell → book $9,917.89; vs 09:30 mark -2.27 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-05 09:30 ET | **SELL** | `PENN` | 147 | $17.03 | $2.48 | $+146.50 | $7,993.49 | ▲ +146.50 after sell → book $9,915.42; vs 09:30 mark -2.47 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-05 09:30 ET | **BUY** | `CMCSA` | 106 | $25.10 | $2.31 | — | $5,330.58 | — | combo gate; gate macd_up=True,rsi_os=True; list flatten; ret5=+15.2; leftover $2664.50 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **BUY** | `FLO` | 371 | $7.17 | $4.79 | — | $2,665.72 | — | combo gate; gate macd_up=True,rsi_os=True; list ohlc_hot; ret5=+15.6; leftover $2664.50 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟡 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **BUY** | `STUB` | 405 | $6.56 | $5.22 | — | $3.70 | — | combo gate; gate macd_up=True,rsi_os=True; list ohlc_hot; ret5=+17.7; leftover $2664.50 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟡 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $3.70 | ▼ close $9,730.73 vs 09:30 $9,922.20 (session -172.37) | 16:00 close · cash $3.70 · equity $9,730.73 vs 09:30 $9,922.20 (-191.47; session marks -172.37) · 6 name(s) marked open→close (per-name table). JMKE×31 09:30 $20.66 → close $19.81 -26.35; QNST×33 09:30 $20.03 → close $20.32 +9.57; ROL×16 09:30 $38.78 → close $38.76 -0.32; CMCSA×106 09:30 $25.10 → close $24.95 -15.90; FLO×371 09:30 $7.17 → close $7.10 -25.97; STUB×405 09:30 $6.56 → close $6.28 -113.40 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ ab_g, no 🚨
 
-Cash book **-24.07%** ($7,593) · signal-only (no cash/fees) was -11.54%. Starts YES **0/30**. Fills 423 · skips 92 · realized $-226.14.
+Cash book **-26.13%** ($7,387) · signal-only (no cash/fees) was -11.54%. Starts YES **0/30**. Fills 438 · skips 92 · realized $-226.14.
 
 ## How this sleeve decides (like you are 10)
 
@@ -613,6 +613,23 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-04 09:30 ET | **BUY** | `CON` | 23 | $40.90 | $2.06 | — | $2,277.29 | — | union ∩ ab_g, no 🚨; gate ab=good; list flatten; 🔵; ret5=+0.4; leftover $950.19 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-11-04 09:30 ET | **BUY** | `PCRX` | 26 | $36.41 | $2.07 | — | $1,328.57 | — | union ∩ ab_g, no 🚨; gate ab=good; list flatten; 🔵; ret5=-0.0; leftover $950.19 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-11-04 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,328.57 | ▲ close $7,592.90 vs 09:30 $7,603.74 (session +5.54) | 16:00 close · cash $1,328.57 · equity $7,592.90 vs 09:30 $7,603.74 (-10.84; session marks +5.54) · 7 name(s) marked open→close (per-name table). VEEV×3 09:30 $306.62 → close $310.63 +12.03; ILMN×3 09:30 $241.00 → close $226.54 -43.37; RGEN×5 09:30 $183.40 → close $178.20 -26.00; CDNA×10 09:30 $89.00 → close $85.86 -31.40; PACS×19 09:30 $48.51 → close $50.26 +33.25; CON×23 09:30 $40.90 → close $43.56 +61.29; PCRX×26 09:30 $36.41 → close $36.40 -0.26 | — |
+| 2026-11-05 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $1,328.57 | ▼ 09:30 equity $7,555.58 vs yday $7,592.90 (-37.32) | 09:30 open · cash $1,328.57 (unchanged overnight, no fees) · equity $7,555.58 vs prior close $7,592.90 (-37.32) · 7 name(s) re-marked at the open (per-name table). CDNA×10 yday $85.86 → 09:30 $83.60 -22.60; CON×23 yday $43.56 → 09:30 $43.57 +0.23; ILMN×3 yday $226.54 → 09:30 $220.25 -18.87; PACS×19 yday $50.26 → 09:30 $50.78 +9.88; PCRX×26 yday $36.40 → 09:30 $36.41 +0.26; RGEN×5 yday $178.20 → 09:30 $175.60 -13.00; VEEV×3 yday $310.63 → 09:30 $312.89 +6.78 | — |
+| 2026-11-05 09:30 ET | **SELL** | `CDNA` | 10 | $83.60 | $2.04 | $-58.06 | $2,162.53 | ▼ -58.06 after sell → book $7,553.54; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-05 09:30 ET | **SELL** | `CON` | 23 | $43.57 | $2.08 | $+57.39 | $3,162.56 | ▲ +57.39 after sell → book $7,551.46; vs 09:30 mark -2.08 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-05 09:30 ET | **SELL** | `ILMN` | 3 | $220.25 | $2.02 | $-66.26 | $3,821.29 | ▼ -66.26 after sell → book $7,549.44; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-05 09:30 ET | **SELL** | `PACS` | 19 | $50.78 | $2.07 | $+39.02 | $4,784.04 | ▲ +39.02 after sell → book $7,547.37; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-05 09:30 ET | **SELL** | `PCRX` | 26 | $36.41 | $2.09 | $-4.16 | $5,728.62 | ▼ -4.16 after sell → book $7,545.29; vs 09:30 mark -2.08 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-05 09:30 ET | **SELL** | `RGEN` | 5 | $175.60 | $2.02 | $-43.03 | $6,604.59 | ▼ -43.03 after sell → book $7,543.26; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-05 09:30 ET | **SELL** | `VEEV` | 3 | $312.89 | $2.02 | $+14.79 | $7,541.24 | ▲ +14.79 after sell → book $7,541.24; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-05 09:30 ET | **BUY** | `CSGP` | 28 | $33.11 | $2.07 | — | $6,612.09 | — | union ∩ ab_g, no 🚨; gate ab=good; list flatten; ret5=+18.3; leftover $942.66 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟡 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **BUY** | `CMCSA` | 37 | $25.10 | $2.10 | — | $5,681.29 | — | union ∩ ab_g, no 🚨; gate ab=good; list flatten; ret5=+15.2; leftover $942.66 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **BUY** | `CLX` | 9 | $99.88 | $2.02 | — | $4,780.35 | — | union ∩ ab_g, no 🚨; gate ab=good; list flatten,ohlc_hot; ret5=+14.2; leftover $942.66 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **BUY** | `COCO` | 14 | $67.15 | $2.03 | — | $3,838.22 | — | union ∩ ab_g, no 🚨; gate ab=good; list flatten; ret5=+16.1; leftover $942.66 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **BUY** | `CROX` | 5 | $160.00 | $2.00 | — | $3,036.21 | — | union ∩ ab_g, no 🚨; gate ab=good; list flatten; ret5=+33.5; leftover $942.66 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **BUY** | `GPK` | 79 | $11.82 | $2.23 | — | $2,100.21 | — | union ∩ ab_g, no 🚨; gate ab=good; list flatten; ret5=+37.6; leftover $942.66 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🟡 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **BUY** | `PRMB` | 43 | $21.55 | $2.12 | — | $1,171.44 | — | union ∩ ab_g, no 🚨; gate ab=good; list probable,yday_gainer,yday_mover; ret5=+8.8; leftover $942.66 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **BUY** | `EPR` | 15 | $61.10 | $2.04 | — | $252.90 | — | union ∩ ab_g, no 🚨; gate ab=good; list yday_gainer,yday_mover; ret5=+10.0; leftover $942.66 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $252.90 | ▼ close $7,387.18 vs 09:30 $7,555.58 (session -137.45) | 16:00 close · cash $252.90 · equity $7,387.18 vs 09:30 $7,555.58 (-168.40; session marks -137.45) · 8 name(s) marked open→close (per-name table). CSGP×28 09:30 $33.11 → close $32.05 -29.68; CMCSA×37 09:30 $25.10 → close $24.95 -5.55; CLX×9 09:30 $99.88 → close $99.70 -1.62; COCO×14 09:30 $67.15 → close $63.63 -49.28; CROX×5 09:30 $160.00 → close $152.93 -35.35; GPK×79 09:30 $11.82 → close $11.54 -22.12; PRMB×43 09:30 $21.55 → close $22.15 +25.80; EPR×15 09:30 $61.10 → close $59.79 -19.65 | — |
 
 ## Not taken
 

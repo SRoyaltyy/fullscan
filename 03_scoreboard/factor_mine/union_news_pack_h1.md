@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · morning packet news🟢 only (not the merged box)
 
-Cash book **+6.61%** ($10,660) · signal-only (no cash/fees) was +6.91%. Starts YES **21/30**. Fills 129 · skips 29 · realized $+1396.12.
+Cash book **+6.93%** ($10,693) · signal-only (no cash/fees) was +6.91%. Starts YES **21/30**. Fills 130 · skips 29 · realized $+1396.12.
 
 ## How this sleeve decides (like you are 10)
 
@@ -320,6 +320,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-04 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,784.95 | ▲ 09:30 equity $10,784.95 vs yday $10,784.95 (+0.00) | 09:30 open · cash $10,784.95 · no holdings · equity $10,784.95 vs prior close $10,784.95 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-11-04 09:30 ET | **BUY** | `AMX` | 425 | $25.31 | $5.48 | — | $22.72 | — | morning packet news🟢 only (not the merged box); gate news_box=good; rank cond; list yday_gainer; 🔵; ret5=+2.9; leftover $10784.95 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-11-04 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $22.72 | ▼ close $10,660.47 vs 09:30 $10,784.95 (session -119.00) | 16:00 close · cash $22.72 · equity $10,660.47 vs 09:30 $10,784.95 (-124.48; session marks -119.00) · 1 name(s) marked open→close (per-name table). AMX×425 09:30 $25.31 → close $25.03 -119.00 | — |
+| 2026-11-05 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $22.72 | ▲ 09:30 equity $10,698.72 vs yday $10,660.47 (+38.25) | 09:30 open · cash $22.72 (unchanged overnight, no fees) · equity $10,698.72 vs prior close $10,660.47 (+38.25) · 1 name(s) re-marked at the open (per-name table). AMX×425 yday $25.03 → 09:30 $25.12 +38.25 | — |
+| 2026-11-05 09:30 ET | **SELL** | `AMX` | 425 | $25.12 | $5.64 | $-91.87 | $10,693.08 | ▼ -91.87 after sell → book $10,693.08; vs 09:30 mark -5.64 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,693.08 | ▲ close $10,693.08 vs 09:30 $10,698.72 (session +0.00) | 16:00 close · cash $10,693.08 · no lots left · equity $10,693.08. | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Buys the flatten **wish-list** even on io/HOLD mornings — live `flatten_robust
 
 Side **long** · universe `flatten` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · baseline list, no extra gate
 
-Cash book **-17.46%** ($8,254) · signal-only (no cash/fees) was -9.51%. Starts YES **0/30**. Fills 369 · skips 78 · realized $-357.09.
+Cash book **-20.31%** ($7,969) · signal-only (no cash/fees) was -9.51%. Starts YES **0/30**. Fills 382 · skips 78 · realized $-357.09.
 
 ## How this sleeve decides (like you are 10)
 
@@ -555,6 +555,21 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-04 09:30 ET | **BUY** | `CON` | 25 | $40.90 | $2.06 | — | $2,438.70 | — | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ret5=+0.4; leftover $1033.97 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-11-04 09:30 ET | **BUY** | `PCRX` | 28 | $36.41 | $2.07 | — | $1,417.14 | — | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ret5=-0.0; leftover $1033.97 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-11-04 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,417.14 | ▼ close $8,254.31 vs 09:30 $8,271.78 (session -3.25) | 16:00 close · cash $1,417.14 · equity $8,254.31 vs 09:30 $8,271.78 (-17.47; session marks -3.25) · 7 name(s) marked open→close (per-name table). VEEV×3 09:30 $306.62 → close $310.63 +12.03; ILMN×4 09:30 $241.00 → close $226.54 -57.83; RGEN×5 09:30 $183.40 → close $178.20 -26.00; CDNA×11 09:30 $89.00 → close $85.86 -34.54; PACS×21 09:30 $48.51 → close $50.26 +36.75; CON×25 09:30 $40.90 → close $43.56 +66.62; PCRX×28 09:30 $36.41 → close $36.40 -0.28 | — |
+| 2026-11-05 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $1,417.14 | ▼ 09:30 equity $8,209.52 vs yday $8,254.31 (-44.79) | 09:30 open · cash $1,417.14 (unchanged overnight, no fees) · equity $8,209.52 vs prior close $8,254.31 (-44.79) · 7 name(s) re-marked at the open (per-name table). CDNA×11 yday $85.86 → 09:30 $83.60 -24.86; CON×25 yday $43.56 → 09:30 $43.57 +0.25; ILMN×4 yday $226.54 → 09:30 $220.25 -25.16; PACS×21 yday $50.26 → 09:30 $50.78 +10.92; PCRX×28 yday $36.40 → 09:30 $36.41 +0.28; RGEN×5 yday $178.20 → 09:30 $175.60 -13.00; VEEV×3 yday $310.63 → 09:30 $312.89 +6.78 | — |
+| 2026-11-05 09:30 ET | **SELL** | `CDNA` | 11 | $83.60 | $2.04 | $-63.47 | $2,334.70 | ▼ -63.47 after sell → book $8,207.48; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-05 09:30 ET | **SELL** | `CON` | 25 | $43.57 | $2.08 | $+62.72 | $3,421.86 | ▲ +62.72 after sell → book $8,205.39; vs 09:30 mark -2.09 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-05 09:30 ET | **SELL** | `ILMN` | 4 | $220.25 | $2.02 | $-87.01 | $4,300.84 | ▼ -87.01 after sell → book $8,203.37; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-05 09:30 ET | **SELL** | `PACS` | 21 | $50.78 | $2.07 | $+43.54 | $5,365.15 | ▲ +43.54 after sell → book $8,201.30; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-05 09:30 ET | **SELL** | `PCRX` | 28 | $36.41 | $2.09 | $-4.17 | $6,382.53 | ▼ -4.17 after sell → book $8,199.20; vs 09:30 mark -2.10 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-05 09:30 ET | **SELL** | `RGEN` | 5 | $175.60 | $2.02 | $-43.03 | $7,258.51 | ▼ -43.03 after sell → book $8,197.18; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-05 09:30 ET | **SELL** | `VEEV` | 3 | $312.89 | $2.02 | $+14.79 | $8,195.16 | ▲ +14.79 after sell → book $8,195.16; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-05 09:30 ET | **BUY** | `CSGP` | 41 | $33.11 | $2.11 | — | $6,835.54 | — | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); ret5=+18.3; leftover $1365.86 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟡 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **BUY** | `CMCSA` | 54 | $25.10 | $2.15 | — | $5,477.98 | — | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); ret5=+15.2; leftover $1365.86 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **BUY** | `CLX` | 13 | $99.88 | $2.03 | — | $4,177.52 | — | baseline list, no extra gate; list flatten,ohlc_hot; wish-list (live io HOLD — not a ticket); ret5=+14.2; leftover $1365.86 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **BUY** | `COCO` | 20 | $67.15 | $2.05 | — | $2,832.47 | — | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); ret5=+16.1; leftover $1365.86 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **BUY** | `CROX` | 8 | $160.00 | $2.01 | — | $1,550.45 | — | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); ret5=+33.5; leftover $1365.86 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **BUY** | `GPK` | 115 | $11.82 | $2.33 | — | $188.82 | — | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); ret5=+37.6; leftover $1365.86 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🟡 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $188.82 | ▼ close $7,969.41 vs 09:30 $8,209.52 (session -213.06) | 16:00 close · cash $188.82 · equity $7,969.41 vs 09:30 $8,209.52 (-240.11; session marks -213.06) · 6 name(s) marked open→close (per-name table). CSGP×41 09:30 $33.11 → close $32.05 -43.46; CMCSA×54 09:30 $25.10 → close $24.95 -8.10; CLX×13 09:30 $99.88 → close $99.70 -2.34; COCO×20 09:30 $67.15 → close $63.63 -70.40; CROX×8 09:30 $160.00 → close $152.93 -56.56; GPK×115 09:30 $11.82 → close $11.54 -32.20 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-22.86%** ($7,714) · signal-only (no cash/fees) was -12.21%. Starts YES **0/30**. Fills 478 · skips 101 · realized $-768.45.
+Cash book **-34.89%** ($6,511) · signal-only (no cash/fees) was -12.21%. Starts YES **0/30**. Fills 487 · skips 101 · realized $-768.45.
 
 ## How this sleeve decides (like you are 10)
 
@@ -673,6 +673,17 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-04 09:30 ET | **BUY** | `CRS` | 3 | $297.00 | $2.00 | — | $1,135.77 | — | combo gate; gate last_green=True,ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list yday_gainer; ret5=+2.9; leftover $945.94 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-11-04 09:30 ET | **BUY** | `TRU` | 11 | $81.14 | $2.02 | — | $241.21 | — | combo gate; gate last_green=True,ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list yday_gainer; ret5=+4.2; leftover $945.94 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-11-04 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $241.21 | ▲ close $7,714.50 vs 09:30 $7,620.48 (session +110.39) | 16:00 close · cash $241.21 · equity $7,714.50 vs 09:30 $7,620.48 (+94.02; session marks +110.39) · 8 name(s) marked open→close (per-name table). PRMB×47 09:30 $21.21 → close $21.02 -8.93; RGEN×5 09:30 $183.40 → close $178.20 -26.00; CNMD×19 09:30 $47.99 → close $53.66 +107.73; SMMT×58 09:30 $16.15 → close $16.17 +1.16; EPR×15 09:30 $60.00 → close $60.74 +11.10; CXW×31 09:30 $29.58 → close $30.52 +29.14; CRS×3 09:30 $297.00 → close $292.10 -14.70; TRU×11 09:30 $81.14 → close $82.13 +10.89 | — |
+| 2026-11-05 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $241.21 | ▲ 09:30 equity $7,722.19 vs yday $7,714.50 (+7.69) | 09:30 open · cash $241.21 (unchanged overnight, no fees) · equity $7,722.19 vs prior close $7,714.50 (+7.69) · 8 name(s) re-marked at the open (per-name table). CNMD×19 yday $53.66 → 09:30 $54.40 +14.06; CRS×3 yday $292.10 → 09:30 $285.50 -19.80; CXW×31 yday $30.52 → 09:30 $30.23 -8.84; EPR×15 yday $60.74 → 09:30 $61.10 +5.40; PRMB×47 yday $21.02 → 09:30 $21.55 +24.91; RGEN×5 yday $178.20 → 09:30 $175.60 -13.00; SMMT×58 yday $16.17 → 09:30 $16.10 -4.06; TRU×11 yday $82.13 → 09:30 $82.95 +9.02 | — |
+| 2026-11-05 09:30 ET | **SELL** | `CNMD` | 19 | $54.40 | $2.07 | $+117.68 | $1,272.74 | ▲ +117.68 after sell → book $7,720.13; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-05 09:30 ET | **SELL** | `CRS` | 3 | $285.50 | $2.02 | $-38.52 | $2,127.22 | ▼ -38.52 after sell → book $7,718.11; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **SELL** | `CXW` | 31 | $30.23 | $2.10 | $+16.12 | $3,062.41 | ▲ +16.12 after sell → book $7,716.01; vs 09:30 mark -2.10 | dropped from list after 1 sess (min 1) | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **SELL** | `EPR` | 15 | $61.10 | $2.06 | $+12.41 | $3,976.85 | ▲ +12.41 after sell → book $7,713.95; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **SELL** | `PRMB` | 47 | $21.55 | $2.15 | $+67.16 | $4,987.55 | ▲ +67.16 after sell → book $7,711.80; vs 09:30 mark -2.15 | dropped from list after 3 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **SELL** | `RGEN` | 5 | $175.60 | $2.02 | $-43.03 | $5,863.53 | ▼ -43.03 after sell → book $7,709.78; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-05 09:30 ET | **SELL** | `SMMT` | 58 | $16.10 | $2.18 | $-7.25 | $6,795.14 | ▼ -7.25 after sell → book $7,707.59; vs 09:30 mark -2.19 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-05 09:30 ET | **SELL** | `TRU` | 11 | $82.95 | $2.04 | $+15.84 | $7,705.55 | ▲ +15.84 after sell → book $7,705.55; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟢 |
+| 2026-11-05 09:30 ET | **BUY** | `MVST` | 11334 | $0.67 | $109.94 | — | $1.83 | — | combo gate; gate last_green=True,ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list ohlc_hot; ret5=+7.2; leftover $7705.55 | join🟢 sector🔴 gen🔴 news🟢 digest🟢 ab🔴 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-11-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1.83 | ▼ close $6,510.94 vs 09:30 $7,722.19 (session -1,084.66) | 16:00 close · cash $1.83 · equity $6,510.94 vs 09:30 $7,722.19 (-1211.25; session marks -1084.66) · 1 name(s) marked open→close (per-name table). MVST×11334 09:30 $0.67 → close $0.57 -1084.66 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `macd_hist` · size `leftover` · sell `list` · S-boost `none` · rank by macd_hist
 
-Cash book **-12.20%** ($8,780) · signal-only (no cash/fees) was +3.37%. Starts YES **20/30**. Fills 458 · skips 94 · realized $-657.32.
+Cash book **-16.68%** ($8,332) · signal-only (no cash/fees) was +3.37%. Starts YES **20/30**. Fills 473 · skips 94 · realized $-657.32.
 
 ## How this sleeve decides (like you are 10)
 
@@ -647,6 +647,23 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-04 09:30 ET | **BUY** | `CDNA` | 12 | $89.00 | $2.03 | — | $3,025.84 | — | rank by macd_hist; rank macd_hist; list flatten; ret5=+25.4; leftover $1121.27 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-11-04 09:30 ET | **BUY** | `ITW` | 3 | $292.62 | $2.00 | — | $2,145.98 | — | rank by macd_hist; rank macd_hist; list yday_gainer; ret5=+3.9; leftover $1121.27 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-11-04 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2,145.98 | ▼ close $8,780.11 vs 09:30 $8,922.43 (session -126.25) | 16:00 close · cash $2,145.98 · equity $8,780.11 vs 09:30 $8,922.43 (-142.32; session marks -126.25) · 7 name(s) marked open→close (per-name table). POOL×5 09:30 $213.90 → close $219.26 +26.80; PWR×1 09:30 $627.07 → close $580.44 -46.63; HWM×5 09:30 $221.39 → close $213.56 -39.15; JAZZ×4 09:30 $233.23 → close $234.66 +5.72; RRX×6 09:30 $179.68 → close $173.38 -37.80; CDNA×12 09:30 $89.00 → close $85.86 -37.68; ITW×3 09:30 $292.62 → close $293.45 +2.49 | — |
+| 2026-11-05 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $2,145.98 | ▼ 09:30 equity $8,671.89 vs yday $8,780.11 (-108.22) | 09:30 open · cash $2,145.98 (unchanged overnight, no fees) · equity $8,671.89 vs prior close $8,780.11 (-108.22) · 7 name(s) re-marked at the open (per-name table). CDNA×12 yday $85.86 → 09:30 $83.60 -27.12; HWM×5 yday $213.56 → 09:30 $209.74 -19.10; ITW×3 yday $293.45 → 09:30 $296.15 +8.10; JAZZ×4 yday $234.66 → 09:30 $233.20 -5.84; POOL×5 yday $219.26 → 09:30 $219.38 +0.60; PWR×1 yday $580.44 → 09:30 $552.00 -28.44; RRX×6 yday $173.38 → 09:30 $167.31 -36.42 | — |
+| 2026-11-05 09:30 ET | **SELL** | `CDNA` | 12 | $83.60 | $2.05 | $-68.87 | $3,147.13 | ▼ -68.87 after sell → book $8,669.84; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-05 09:30 ET | **SELL** | `HWM` | 5 | $209.74 | $2.02 | $-62.28 | $4,193.81 | ▼ -62.28 after sell → book $8,667.82; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-05 09:30 ET | **SELL** | `ITW` | 3 | $296.15 | $2.02 | $+6.57 | $5,080.24 | ▲ +6.57 after sell → book $8,665.80; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | join🔴 sector🔴 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **SELL** | `JAZZ` | 4 | $233.20 | $2.02 | $-4.14 | $6,011.02 | ▼ -4.14 after sell → book $8,663.78; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-05 09:30 ET | **SELL** | `POOL` | 5 | $219.38 | $2.02 | $+48.52 | $7,105.89 | ▲ +48.52 after sell → book $8,661.75; vs 09:30 mark -2.03 | dropped from list after 3 sess (min 1) | join🔴 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **SELL** | `PWR` | 1 | $552.00 | $2.01 | $-79.08 | $7,655.88 | ▼ -79.08 after sell → book $8,659.74; vs 09:30 mark -2.01 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-05 09:30 ET | **SELL** | `RRX` | 6 | $167.31 | $2.03 | $-78.26 | $8,657.71 | ▼ -78.26 after sell → book $8,657.71; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-05 09:30 ET | **BUY** | `SPOT` | 1 | $635.00 | $1.99 | — | $8,020.72 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; ret5=+16.6; leftover $1082.21 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **BUY** | `CROX` | 6 | $160.00 | $2.01 | — | $7,058.71 | — | rank by macd_hist; rank macd_hist; list flatten; ret5=+33.5; leftover $1082.21 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **BUY** | `LOW` | 4 | $233.51 | $2.00 | — | $6,122.67 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; ret5=+15.6; leftover $1082.21 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **BUY** | `EXPE` | 3 | $287.31 | $2.00 | — | $5,258.73 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; ret5=+14.6; leftover $1082.21 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **BUY** | `ROAD` | 12 | $86.63 | $2.03 | — | $4,217.14 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; ret5=+17.6; leftover $1082.21 | join🟡 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **BUY** | `PHM` | 7 | $138.00 | $2.01 | — | $3,249.13 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; ret5=+13.6; leftover $1082.21 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **BUY** | `DLTR` | 7 | $144.57 | $2.01 | — | $2,235.13 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; ret5=+15.6; leftover $1082.21 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟡 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **BUY** | `CLX` | 10 | $99.88 | $2.02 | — | $1,234.31 | — | rank by macd_hist; rank macd_hist; list flatten,ohlc_hot; ret5=+14.2; leftover $1082.21 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,234.31 | ▼ close $8,331.69 vs 09:30 $8,671.89 (session -309.95) | 16:00 close · cash $1,234.31 · equity $8,331.69 vs 09:30 $8,671.89 (-340.20; session marks -309.95) · 8 name(s) marked open→close (per-name table). SPOT×1 09:30 $635.00 → close $614.41 -20.59; CROX×6 09:30 $160.00 → close $152.93 -42.42; LOW×4 09:30 $233.51 → close $227.24 -25.08; EXPE×3 09:30 $287.31 → close $272.48 -44.50; ROAD×12 09:30 $86.63 → close $77.53 -109.20; PHM×7 09:30 $138.00 → close $135.15 -19.95; DLTR×7 09:30 $144.57 → close $137.94 -46.41; CLX×10 09:30 $99.88 → close $99.70 -1.80 | — |
 
 ## Not taken
 

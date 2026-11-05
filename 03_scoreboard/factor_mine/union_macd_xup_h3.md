@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ macd_xup, no 🚨
 
-Cash book **-6.29%** ($9,371) · signal-only (no cash/fees) was -55.44%. Starts YES **5/30**. Fills 224 · skips 209 · realized $-2117.42.
+Cash book **-6.61%** ($9,339) · signal-only (no cash/fees) was -55.44%. Starts YES **5/30**. Fills 226 · skips 209 · realized $-2117.42.
 
 ## How this sleeve decides (like you are 10)
 
@@ -414,6 +414,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-04 09:30 ET | **BUY** | `SHLS` | 1 | $8.86 | $0.09 | — | $41.99 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list ohlc_hot; 🔵; ret5=+13.3; leftover $10.09 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-11-04 09:30 ET | **BUY** | `VFF` | 3 | $2.90 | $0.10 | — | $33.20 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list ohlc_hot; 🔵; ret5=+10.0; leftover $10.09 | join🟡 sector🟡 gen🟢 news🟡 digest🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-11-04 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $33.20 | ▼ close $9,371.34 vs 09:30 $9,416.35 (session -44.62) | 16:00 close · cash $33.20 · equity $9,371.34 vs 09:30 $9,416.35 (-45.01; session marks -44.62) · 6 name(s) marked open→close (per-name table). BTSG×67 09:30 $70.55 → close $69.80 -50.25; SMMT×286 09:30 $16.15 → close $16.17 +5.72; NVTS×1 09:30 $9.37 → close $9.33 -0.04; MX×4 09:30 $2.52 → close $2.41 -0.44; SHLS×1 09:30 $8.86 → close $9.16 +0.30; VFF×3 09:30 $2.90 → close $2.93 +0.09 | — |
+| 2026-11-05 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $33.20 | ▼ 09:30 equity $9,347.50 vs yday $9,371.34 (-23.84) | 09:30 open · cash $33.20 (unchanged overnight, no fees) · equity $9,347.50 vs prior close $9,371.34 (-23.84) · 6 name(s) re-marked at the open (per-name table). BTSG×67 yday $69.80 → 09:30 $69.76 -2.68; MX×4 yday $2.41 → 09:30 $2.31 -0.40; NVTS×1 yday $9.33 → 09:30 $8.75 -0.58; SHLS×1 yday $9.16 → 09:30 $9.00 -0.16; SMMT×286 yday $16.17 → 09:30 $16.10 -20.02; VFF×3 yday $2.93 → 09:30 $2.93 +0.00 | — |
+| 2026-11-05 09:30 ET | **SELL** | `BTSG` | 67 | $69.76 | $2.24 | $+146.99 | $4,704.88 | ▲ +146.99 after sell → book $9,345.26; vs 09:30 mark -2.24 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-05 09:30 ET | **SELL** | `SMMT` | 286 | $16.10 | $3.77 | $+21.14 | $9,305.71 | ▲ +21.14 after sell → book $9,341.49; vs 09:30 mark -3.77 | dropped from list after 3 sess (min 3) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,305.71 | ▼ close $9,339.13 vs 09:30 $9,347.50 (session -2.36) | 16:00 close · cash $9,305.71 · equity $9,339.13 vs 09:30 $9,347.50 (-8.37; session marks -2.36) · 4 name(s) marked open→close (per-name table). MX×4 09:30 $2.31 → close $2.05 -1.04; NVTS×1 09:30 $8.75 → close $7.86 -0.89; SHLS×1 09:30 $9.00 → close $8.99 -0.01; VFF×3 09:30 $2.93 → close $2.79 -0.42 | — |
 
 ## Not taken
 

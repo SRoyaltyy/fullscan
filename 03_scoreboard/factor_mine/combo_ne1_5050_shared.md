@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared union_news_g_h1/union_e_fresh_h1 w=0.5,0.5 net=priority
 
-Cash book **-29.92%** ($7,008) · signal-only (no cash/fees) was —. Starts YES **1/30**. Fills 541 · skips 135 · realized $+513.04.
+Cash book **-33.81%** ($6,619) · signal-only (no cash/fees) was —. Starts YES **1/30**. Fills 554 · skips 135 · realized $+513.04.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $330.94.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $0.43.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -732,6 +732,21 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-04 09:30 ET | **BUY** | `GRAB` | 287 | $3.22 | $3.70 | — | $960.00 | — | union ∩ news_g, no 🚨; gate news=good; list ohlc_hot; ret5=+14.7; combo leftover $924.52; owner union_news_g_h1 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-11-04 09:30 ET | **BUY** | `PWR` | 1 | $627.07 | $1.99 | — | $330.94 | — | union ∩ news_g, no 🚨; gate news=good; list ohlc_hot; ret5=+13.5; combo leftover $924.52; owner union_news_g_h1 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-11-04 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $330.94 | ▼ close $7,007.70 vs 09:30 $7,141.63 (session -119.68) | 16:00 close · cash $330.94 · equity $7,007.70 vs 09:30 $7,141.63 (-133.93; session marks -119.68) · 7 name(s) marked open→close (per-name table). ITW×4 09:30 $292.62 → close $293.45 +3.32; NVTS×144 09:30 $9.37 → close $9.33 -5.04; AMX×36 09:30 $25.31 → close $25.03 -10.08; TBBB×14 09:30 $63.74 → close $65.07 +18.62; GLND×343 09:30 $2.69 → close $2.34 -120.05; GRAB×287 09:30 $3.22 → close $3.36 +40.18; PWR×1 09:30 $627.07 → close $580.44 -46.63 | — |
+| 2026-11-05 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $330.94 | ▼ 09:30 equity $6,885.63 vs yday $7,007.70 (-122.07) | 09:30 open · cash $330.94 (unchanged overnight, no fees) · equity $6,885.63 vs prior close $7,007.70 (-122.07) | — |
+| 2026-11-05 09:30 ET | **SELL** | `AMX` | 36 | $25.12 | $2.12 | $-11.06 | $1,233.14 | ▼ -11.06 after sell → book $6,883.51; vs 09:30 mark -2.12 | union_news_g_h1: dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **SELL** | `GLND` | 343 | $2.28 | $4.49 | $-149.55 | $2,010.69 | ▼ -149.55 after sell → book $6,879.02; vs 09:30 mark -4.49 | union_news_g_h1: dropped from list after 1 sess (min 1) | join🔴 sector🔴 gen🔴 news🟢 digest🟢 ab🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **SELL** | `GRAB` | 287 | $3.35 | $3.76 | $+29.85 | $2,968.38 | ▲ +29.85 after sell → book $6,875.26; vs 09:30 mark -3.76 | union_news_g_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-11-05 09:30 ET | **SELL** | `ITW` | 4 | $296.15 | $2.02 | $+53.50 | $4,150.96 | ▲ +53.50 after sell → book $6,873.24; vs 09:30 mark -2.02 | union_news_g_h1: dropped from list after 3 sess (min 1) | join🔴 sector🔴 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **SELL** | `NVTS` | 144 | $8.75 | $2.46 | $+22.48 | $5,408.50 | ▲ +22.48 after sell → book $6,870.78; vs 09:30 mark -2.46 | union_news_g_h1: dropped from list after 3 sess (min 1) | join🔴 sector🔴 gen🔴 news🟢 digest🟡 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **SELL** | `PWR` | 1 | $552.00 | $2.01 | $-79.08 | $5,958.49 | ▼ -79.08 after sell → book $6,868.77; vs 09:30 mark -2.01 | union_news_g_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-11-05 09:30 ET | **BUY** | `PRMB` | 27 | $21.55 | $2.07 | — | $5,374.57 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list probable,yday_gainer,yday_mover; ret5=+8.8; combo leftover $595.85; owner union_e_fresh_h1 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **BUY** | `AMC` | 164 | $3.62 | $2.48 | — | $4,777.59 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list ohlc_hot; ret5=+17.7; combo leftover $595.85; owner union_e_fresh_h1 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **BUY** | `DNUT` | 166 | $3.58 | $2.49 | — | $4,181.65 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list ohlc_hot; ret5=+15.4; combo leftover $595.85; owner union_e_fresh_h1 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **BUY** | `EXPE` | 2 | $287.31 | $2.00 | — | $3,605.02 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list ohlc_hot; ret5=+14.6; combo leftover $595.85; owner union_e_fresh_h1 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **BUY** | `ARHS` | 46 | $12.79 | $2.13 | — | $3,014.55 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list ohlc_hot; ret5=+14.1; combo leftover $595.85; owner union_e_fresh_h1 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **BUY** | `STUB` | 229 | $6.56 | $2.95 | — | $1,509.36 | — | union ∩ news_g, no 🚨; gate news=good; list ohlc_hot; ret5=+17.7; combo leftover $1507.28; owner union_news_g_h1 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟡 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **BUY** | `MVST` | 2220 | $0.67 | $21.53 | — | $0.43 | — | union ∩ news_g, no 🚨; gate news=good; list ohlc_hot; ret5=+7.2; combo leftover $1507.28; owner union_news_g_h1 | join🟢 sector🔴 gen🔴 news🟢 digest🟢 ab🔴 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-11-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $0.43 | ▼ close $6,619.40 vs 09:30 $6,885.63 (session -213.71) | 16:00 close · cash $0.43 · equity $6,619.40 vs 09:30 $6,885.63 (-266.23; session marks -213.71) · 8 name(s) marked open→close (per-name table). TBBB×14 09:30 $65.02 → close $64.21 -11.34; PRMB×27 09:30 $21.55 → close $22.15 +16.20; AMC×164 09:30 $3.62 → close $3.08 -89.38; DNUT×166 09:30 $3.58 → close $4.60 +170.15; EXPE×2 09:30 $287.31 → close $272.48 -29.67; ARHS×46 09:30 $12.79 → close $12.94 +6.90; STUB×229 09:30 $6.56 → close $6.28 -64.12; MVST×2220 09:30 $0.67 → close $0.57 -212.45 | — |
 
 ## Not taken
 

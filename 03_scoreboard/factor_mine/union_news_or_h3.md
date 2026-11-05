@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · packet🟢 OR headline🟢
 
-Cash book **-34.20%** ($6,580) · signal-only (no cash/fees) was +179.67%. Starts YES **1/30**. Fills 278 · skips 244 · realized $-1770.27.
+Cash book **-40.33%** ($5,967) · signal-only (no cash/fees) was +179.67%. Starts YES **1/30**. Fills 283 · skips 244 · realized $-1770.27.
 
 ## How this sleeve decides (like you are 10)
 
@@ -469,6 +469,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-04 09:30 ET | **BUY** | `TBBB` | 5 | $63.74 | $2.00 | — | $821.04 | — | packet🟢 OR headline🟢; gate news_or_headline=True; rank cond; list yday_gainer; 🔵; ret5=+9.7; leftover $381.15 | join🔴 sector🟡 gen🟢 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-11-04 09:30 ET | **BUY** | `GLND` | 141 | $2.69 | $2.41 | — | $439.33 | — | packet🟢 OR headline🟢; gate news_or_headline=True; rank cond; list yday_mover; 🔵; ret5=-16.8; leftover $381.15 | join🟢 sector🔴 gen🟢 news🟢 digest🟢 judge🟢 ab🔴 heat🔴 vol🔴 buy🟡 |
 | 2026-11-04 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $439.33 | ▼ close $6,580.47 vs 09:30 $6,644.37 (session -55.10) | 16:00 close · cash $439.33 · equity $6,580.47 vs 09:30 $6,644.37 (-63.90; session marks -55.10) · 7 name(s) marked open→close (per-name table). ITW×5 09:30 $292.62 → close $293.45 +4.15; LLY×1 09:30 $1440.00 → close $1417.99 -22.01; NVTS×196 09:30 $9.37 → close $9.33 -6.86; AMX×15 09:30 $25.31 → close $25.03 -4.20; GRAB×118 09:30 $3.22 → close $3.36 +16.52; TBBB×5 09:30 $63.74 → close $65.07 +6.65; GLND×141 09:30 $2.69 → close $2.34 -49.35 | — |
+| 2026-11-05 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $439.33 | ▼ 09:30 equity $6,487.76 vs yday $6,580.47 (-92.71) | 09:30 open · cash $439.33 (unchanged overnight, no fees) · equity $6,487.76 vs prior close $6,580.47 (-92.71) · 7 name(s) re-marked at the open (per-name table). AMX×15 yday $25.03 → 09:30 $25.12 +1.35; GLND×141 yday $2.34 → 09:30 $2.28 -8.46; GRAB×118 yday $3.36 → 09:30 $3.35 -1.18; ITW×5 yday $293.45 → 09:30 $296.15 +13.50; LLY×1 yday $1417.99 → 09:30 $1434.00 +16.01; NVTS×196 yday $9.33 → 09:30 $8.75 -113.68; TBBB×5 yday $65.07 → 09:30 $65.02 -0.25 | — |
+| 2026-11-05 09:30 ET | **SELL** | `ITW` | 5 | $296.15 | $2.03 | $+67.87 | $1,918.05 | ▲ +67.87 after sell → book $6,485.73; vs 09:30 mark -2.03 | dropped from list after 3 sess (min 3) | join🔴 sector🔴 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **SELL** | `LLY` | 1 | $1434.00 | $2.01 | $+36.84 | $3,350.04 | ▲ +36.84 after sell → book $6,483.72; vs 09:30 mark -2.01 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-05 09:30 ET | **SELL** | `NVTS` | 196 | $8.75 | $2.62 | $+32.04 | $5,062.41 | ▲ +32.04 after sell → book $6,481.09; vs 09:30 mark -2.63 | dropped from list after 3 sess (min 3) | join🔴 sector🔴 gen🔴 news🟢 digest🟡 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **BUY** | `STUB` | 385 | $6.56 | $4.97 | — | $2,531.85 | — | packet🟢 OR headline🟢; gate news_or_headline=True; rank cond; list ohlc_hot; ret5=+17.7; leftover $2531.21 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟡 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **BUY** | `MVST` | 3724 | $0.67 | $36.12 | — | $0.65 | — | packet🟢 OR headline🟢; gate news_or_headline=True; rank cond; list ohlc_hot; ret5=+7.2; leftover $2531.21 | join🟢 sector🔴 gen🔴 news🟢 digest🟢 ab🔴 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-11-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $0.65 | ▼ close $5,967.22 vs 09:30 $6,487.76 (session -472.79) | 16:00 close · cash $0.65 · equity $5,967.22 vs 09:30 $6,487.76 (-520.54; session marks -472.79) · 6 name(s) marked open→close (per-name table). AMX×15 09:30 $25.12 → close $25.11 -0.15; GLND×141 09:30 $2.28 → close $2.14 -19.74; GRAB×118 09:30 $3.35 → close $3.48 +15.34; TBBB×5 09:30 $65.02 → close $64.21 -4.05; STUB×385 09:30 $6.56 → close $6.28 -107.80; MVST×3724 09:30 $0.67 → close $0.57 -356.39 | — |
 
 ## Not taken
 

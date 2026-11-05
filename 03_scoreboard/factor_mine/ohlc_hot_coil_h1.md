@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `ohlc_hot` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · hot list ∩ not exploded
 
-Cash book **-23.91%** ($7,609) · signal-only (no cash/fees) was -11.86%. Starts YES **9/30**. Fills 344 · skips 74 · realized $-1849.08.
+Cash book **-35.45%** ($6,455) · signal-only (no cash/fees) was -11.86%. Starts YES **9/30**. Fills 352 · skips 74 · realized $-1849.08.
 
 ## How this sleeve decides (like you are 10)
 
@@ -536,6 +536,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-04 09:30 ET | **BUY** | `ZYME` | 30 | $30.79 | $2.08 | — | $1,997.95 | — | hot list ∩ not exploded; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list ohlc_hot; 🔵; ret5=+4.4; leftover $943.69 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-11-04 09:30 ET | **BUY** | `AMC` | 283 | $3.33 | $3.65 | — | $1,053.33 | — | hot list ∩ not exploded; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list ohlc_hot; 🔵; ret5=+9.7; leftover $943.69 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-11-04 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,053.33 | ▲ close $7,609.48 vs 09:30 $7,551.55 (session +77.01) | 16:00 close · cash $1,053.33 · equity $7,609.48 vs 09:30 $7,551.55 (+57.93; session marks +77.01) · 7 name(s) marked open→close (per-name table). IVA×225 09:30 $4.18 → close $3.87 -69.75; HAWK×65 09:30 $14.45 → close $13.37 -70.20; ROL×25 09:30 $37.57 → close $38.38 +20.25; CPNG×61 09:30 $15.41 → close $17.05 +100.04; CLX×9 09:30 $95.05 → close $99.16 +36.99; ZYME×30 09:30 $30.79 → close $30.94 +4.50; AMC×283 09:30 $3.33 → close $3.52 +55.18 | — |
+| 2026-11-05 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $1,053.33 | ▲ 09:30 equity $7,656.68 vs yday $7,609.48 (+47.20) | 09:30 open · cash $1,053.33 (unchanged overnight, no fees) · equity $7,656.68 vs prior close $7,609.48 (+47.20) · 7 name(s) re-marked at the open (per-name table). AMC×283 yday $3.52 → 09:30 $3.62 +29.71; CLX×9 yday $99.16 → 09:30 $99.88 +6.48; CPNG×61 yday $17.05 → 09:30 $16.96 -5.49; HAWK×65 yday $13.37 → 09:30 $13.20 -11.05; IVA×225 yday $3.87 → 09:30 $3.96 +20.25; ROL×25 yday $38.38 → 09:30 $38.78 +10.00; ZYME×30 yday $30.94 → 09:30 $30.85 -2.70 | — |
+| 2026-11-05 09:30 ET | **SELL** | `AMC` | 283 | $3.62 | $3.71 | $+77.54 | $2,075.50 | ▲ +77.54 after sell → book $7,652.98; vs 09:30 mark -3.70 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **SELL** | `CLX` | 9 | $99.88 | $2.04 | $+39.42 | $2,972.38 | ▲ +39.42 after sell → book $7,650.94; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **SELL** | `CPNG` | 61 | $16.96 | $2.19 | $+90.18 | $4,004.75 | ▲ +90.18 after sell → book $7,648.75; vs 09:30 mark -2.19 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-05 09:30 ET | **SELL** | `HAWK` | 65 | $13.20 | $2.21 | $-85.64 | $4,860.54 | ▼ -85.64 after sell → book $7,646.54; vs 09:30 mark -2.21 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-05 09:30 ET | **SELL** | `IVA` | 225 | $3.96 | $2.95 | $-55.35 | $5,748.59 | ▼ -55.35 after sell → book $7,643.59; vs 09:30 mark -2.95 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-05 09:30 ET | **SELL** | `ROL` | 25 | $38.78 | $2.08 | $+26.10 | $6,716.01 | ▲ +26.10 after sell → book $7,641.51; vs 09:30 mark -2.08 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-05 09:30 ET | **SELL** | `ZYME` | 30 | $30.85 | $2.10 | $-2.38 | $7,639.41 | ▼ -2.38 after sell → book $7,639.41; vs 09:30 mark -2.10 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-05 09:30 ET | **BUY** | `MVST` | 11237 | $0.67 | $109.00 | — | $1.62 | — | hot list ∩ not exploded; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list ohlc_hot; ret5=+7.2; leftover $7639.41 | join🟢 sector🔴 gen🔴 news🟢 digest🟢 ab🔴 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-11-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1.62 | ▼ close $6,455.03 vs 09:30 $7,656.68 (session -1,075.38) | 16:00 close · cash $1.62 · equity $6,455.03 vs 09:30 $7,656.68 (-1201.65; session marks -1075.38) · 1 name(s) marked open→close (per-name table). MVST×11237 09:30 $0.67 → close $0.57 -1075.38 | — |
 
 ## Not taken
 

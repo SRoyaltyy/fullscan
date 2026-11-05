@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `rsi` · size `leftover` · sell `list` · S-boost `none` · rank by rsi
 
-Cash book **+45.05%** ($14,505) · signal-only (no cash/fees) was -22.60%. Starts YES **0/30**. Fills 465 · skips 98 · realized $-2571.92.
+Cash book **+39.90%** ($13,990) · signal-only (no cash/fees) was -22.60%. Starts YES **0/30**. Fills 480 · skips 98 · realized $-2571.92.
 
 ## How this sleeve decides (like you are 10)
 
@@ -654,6 +654,23 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-04 09:30 ET | **BUY** | `CPNG` | 115 | $15.41 | $2.33 | — | $3,578.66 | — | rank by rsi; rank rsi; list ohlc_hot; ret5=+9.5; leftover $1772.92 | join🔴 sector🔴 gen🟢 news🟡 digest🟡 ab🔴 peer🔴 heat🔴 vol🔴 buy🟡 |
 | 2026-11-04 09:30 ET | **BUY** | `IVA` | 424 | $4.18 | $5.47 | — | $1,800.87 | — | rank by rsi; rank rsi; list ohlc_hot; 🔵; ret5=+9.4; leftover $1772.92 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-11-04 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,800.87 | ▲ close $14,505.21 vs 09:30 $14,171.45 (session +357.07) | 16:00 close · cash $1,800.87 · equity $14,505.21 vs 09:30 $14,171.45 (+333.76; session marks +357.07) · 7 name(s) marked open→close (per-name table). DGX×7 09:30 $250.61 → close $255.68 +35.49; QNST×95 09:30 $18.51 → close $19.26 +71.25; HRB×33 09:30 $53.49 → close $55.47 +65.34; ROL×47 09:30 $37.57 → close $38.38 +38.07; JMKE×88 09:30 $19.99 → close $21.01 +89.76; CPNG×115 09:30 $15.41 → close $17.05 +188.60; IVA×424 09:30 $4.18 → close $3.87 -131.44 | — |
+| 2026-11-05 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $1,800.87 | ▲ 09:30 equity $14,628.13 vs yday $14,505.21 (+122.92) | 09:30 open · cash $1,800.87 (unchanged overnight, no fees) · equity $14,628.13 vs prior close $14,505.21 (+122.92) · 7 name(s) re-marked at the open (per-name table). CPNG×115 yday $17.05 → 09:30 $16.96 -10.35; DGX×7 yday $255.68 → 09:30 $258.74 +21.42; HRB×33 yday $55.47 → 09:30 $55.85 +12.54; IVA×424 yday $3.87 → 09:30 $3.96 +38.16; JMKE×88 yday $21.01 → 09:30 $20.66 -30.80; QNST×95 yday $19.26 → 09:30 $20.03 +73.15; ROL×47 yday $38.38 → 09:30 $38.78 +18.80 | — |
+| 2026-11-05 09:30 ET | **SELL** | `CPNG` | 115 | $16.96 | $2.37 | $+173.55 | $3,748.90 | ▲ +173.55 after sell → book $14,625.76; vs 09:30 mark -2.37 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-05 09:30 ET | **SELL** | `DGX` | 7 | $258.74 | $2.04 | $+45.93 | $5,558.04 | ▲ +45.93 after sell → book $14,623.72; vs 09:30 mark -2.04 | dropped from list after 3 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **SELL** | `HRB` | 33 | $55.85 | $2.11 | $+73.68 | $7,398.98 | ▲ +73.68 after sell → book $14,621.61; vs 09:30 mark -2.11 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-05 09:30 ET | **SELL** | `IVA` | 424 | $3.96 | $5.55 | $-104.30 | $9,072.47 | ▼ -104.30 after sell → book $14,616.06; vs 09:30 mark -5.55 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-05 09:30 ET | **SELL** | `JMKE` | 88 | $20.66 | $2.28 | $+54.42 | $10,888.26 | ▲ +54.42 after sell → book $14,613.77; vs 09:30 mark -2.29 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-05 09:30 ET | **SELL** | `QNST` | 95 | $20.03 | $2.31 | $+139.82 | $12,788.81 | ▲ +139.82 after sell → book $14,611.47; vs 09:30 mark -2.30 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **SELL** | `ROL` | 47 | $38.78 | $2.16 | $+52.58 | $14,609.31 | ▲ +52.58 after sell → book $14,609.31; vs 09:30 mark -2.16 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-05 09:30 ET | **BUY** | `STUB` | 278 | $6.56 | $3.59 | — | $12,782.05 | — | rank by rsi; rank rsi; list ohlc_hot; ret5=+17.7; leftover $1826.16 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟡 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **BUY** | `FLO` | 254 | $7.17 | $3.28 | — | $10,957.59 | — | rank by rsi; rank rsi; list ohlc_hot; ret5=+15.6; leftover $1826.16 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟡 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **BUY** | `CMCSA` | 72 | $25.10 | $2.21 | — | $9,148.18 | — | rank by rsi; rank rsi; list flatten; ret5=+15.2; leftover $1826.16 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **BUY** | `CLX` | 18 | $99.88 | $2.04 | — | $7,348.30 | — | rank by rsi; rank rsi; list flatten,ohlc_hot; ret5=+14.2; leftover $1826.16 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **BUY** | `LOW` | 7 | $233.51 | $2.01 | — | $5,711.72 | — | rank by rsi; rank rsi; list ohlc_hot; ret5=+15.6; leftover $1826.16 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **BUY** | `CSGP` | 55 | $33.11 | $2.15 | — | $3,888.51 | — | rank by rsi; rank rsi; list flatten; ret5=+18.3; leftover $1826.16 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟡 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **BUY** | `NCLH` | 98 | $18.50 | $2.28 | — | $2,073.23 | — | rank by rsi; rank rsi; list ohlc_hot; ret5=+15.8; leftover $1826.16 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **BUY** | `JLHL` | 228 | $8.00 | $2.94 | — | $246.29 | — | rank by rsi; rank rsi; list yday_mover; ret5=+25.7; leftover $1826.16 | join🟡 sector🔴 gen🔴 news🟡 digest🟢 ab🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-11-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $246.29 | ▼ close $13,989.80 vs 09:30 $14,628.13 (session -599.01) | 16:00 close · cash $246.29 · equity $13,989.80 vs 09:30 $14,628.13 (-638.33; session marks -599.01) · 8 name(s) marked open→close (per-name table). STUB×278 09:30 $6.56 → close $6.28 -77.84; FLO×254 09:30 $7.17 → close $7.10 -17.78; CMCSA×72 09:30 $25.10 → close $24.95 -10.80; CLX×18 09:30 $99.88 → close $99.70 -3.24; LOW×7 09:30 $233.51 → close $227.24 -43.89; CSGP×55 09:30 $33.11 → close $32.05 -58.30; NCLH×98 09:30 $18.50 → close $17.76 -72.52; JLHL×228 09:30 $8.00 → close $6.62 -314.64 | — |
 
 ## Not taken
 

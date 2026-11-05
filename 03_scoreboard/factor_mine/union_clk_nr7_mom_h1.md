@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `hot_score` · size `leftover` · sell `list` · S-boost `none` · Clock-B #10 NR7 + moderate momentum
 
-Cash book **-0.68%** ($9,932) · signal-only (no cash/fees) was +27.44%. Starts YES **25/30**. Fills 111 · skips 16 · realized $+1589.64.
+Cash book **-1.41%** ($9,859) · signal-only (no cash/fees) was +27.44%. Starts YES **25/30**. Fills 116 · skips 16 · realized $+1589.64.
 
 ## How this sleeve decides (like you are 10)
 
@@ -303,6 +303,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-04 09:30 ET | **BUY** | `QTTB` | 187 | $8.87 | $2.55 | — | $3,418.58 | — | Clock-B #10 NR7 + moderate momentum; gate clk_nr7_mom=True; rank hot_score; list yday_gainer; 🔵; ret5=+0.6; leftover $1665.15 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-11-04 09:30 ET | **BUY** | `MX` | 660 | $2.52 | $8.51 | — | $1,746.87 | — | Clock-B #10 NR7 + moderate momentum; gate clk_nr7_mom=True; rank hot_score; list yday_gainer,yday_mover; 🔵; ret5=+0.0; leftover $1665.15 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 judge🟡 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-11-04 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,746.87 | ▼ close $9,932.08 vs 09:30 $9,990.88 (session -41.48) | 16:00 close · cash $1,746.87 · equity $9,932.08 vs 09:30 $9,990.88 (-58.80; session marks -41.48) · 5 name(s) marked open→close (per-name table). EPR×27 09:30 $60.00 → close $60.74 +19.98; CNMD×34 09:30 $47.99 → close $53.66 +192.78; CECO×32 09:30 $51.69 → close $45.40 -201.28; QTTB×187 09:30 $8.87 → close $8.97 +19.64; MX×660 09:30 $2.52 → close $2.41 -72.60 | — |
+| 2026-11-05 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $1,746.87 | ▼ 09:30 equity $9,876.94 vs yday $9,932.08 (-55.14) | 09:30 open · cash $1,746.87 (unchanged overnight, no fees) · equity $9,876.94 vs prior close $9,932.08 (-55.14) · 5 name(s) re-marked at the open (per-name table). CECO×32 yday $45.40 → 09:30 $45.00 -12.80; CNMD×34 yday $53.66 → 09:30 $54.40 +25.16; EPR×27 yday $60.74 → 09:30 $61.10 +9.72; MX×660 yday $2.41 → 09:30 $2.31 -66.00; QTTB×187 yday $8.97 → 09:30 $8.91 -11.22 | — |
+| 2026-11-05 09:30 ET | **SELL** | `CECO` | 32 | $45.00 | $2.11 | $-218.27 | $3,184.76 | ▼ -218.27 after sell → book $9,874.83; vs 09:30 mark -2.11 | dropped from list after 1 sess (min 1) | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🔴 peer🔴 heat🟡 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **SELL** | `CNMD` | 34 | $54.40 | $2.12 | $+213.73 | $5,032.25 | ▲ +213.73 after sell → book $9,872.72; vs 09:30 mark -2.11 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-05 09:30 ET | **SELL** | `EPR` | 27 | $61.10 | $2.09 | $+25.53 | $6,679.85 | ▲ +25.53 after sell → book $9,870.62; vs 09:30 mark -2.10 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **SELL** | `MX` | 660 | $2.31 | $8.64 | $-155.75 | $8,195.82 | ▼ -155.75 after sell → book $9,861.99; vs 09:30 mark -8.63 | dropped from list after 1 sess (min 1) | join🔴 sector🔴 gen🔴 news🟡 digest🟡 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **SELL** | `QTTB` | 187 | $8.91 | $2.60 | $+3.27 | $9,859.39 | ▲ +3.27 after sell → book $9,859.39; vs 09:30 mark -2.60 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,859.39 | ▲ close $9,859.39 vs 09:30 $9,876.94 (session +0.00) | 16:00 close · cash $9,859.39 · no lots left · equity $9,859.39. | — |
 
 ## Not taken
 

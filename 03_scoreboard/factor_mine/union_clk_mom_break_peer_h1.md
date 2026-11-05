@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `hot_score` · size `leftover` · sell `list` · S-boost `none` · Clock-B #1 mom+breakout+peer/sector (research; not KEEP)
 
-Cash book **-11.72%** ($8,828) · signal-only (no cash/fees) was +1.42%. Starts YES **4/30**. Fills 450 · skips 96 · realized $-120.43.
+Cash book **-11.06%** ($8,894) · signal-only (no cash/fees) was +1.42%. Starts YES **4/30**. Fills 455 · skips 96 · realized $-120.43.
 
 ## How this sleeve decides (like you are 10)
 
@@ -642,6 +642,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-04 09:30 ET | **BUY** | `SMMT` | 105 | $16.15 | $2.31 | — | $1,746.36 | — | Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list probable,yday_gainer,yday_mover; ret5=+3.1; leftover $1697.63 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🔴 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-11-04 09:30 ET | **BUY** | `CNMD` | 35 | $47.99 | $2.10 | — | $64.62 | — | Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list flatten; 🔵; ret5=+0.1; leftover $1697.63 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-11-04 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $64.62 | ▲ close $8,828.31 vs 09:30 $8,488.13 (session +355.30) | 16:00 close · cash $64.62 · equity $8,828.31 vs 09:30 $8,488.13 (+340.18; session marks +355.30) · 5 name(s) marked open→close (per-name table). TBBB×26 09:30 $63.74 → close $65.07 +34.58; AMC×510 09:30 $3.33 → close $3.52 +99.45; EPR×28 09:30 $60.00 → close $60.74 +20.72; SMMT×105 09:30 $16.15 → close $16.17 +2.10; CNMD×35 09:30 $47.99 → close $53.66 +198.45 | — |
+| 2026-11-05 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $64.62 | ▲ 09:30 equity $8,909.19 vs yday $8,828.31 (+80.88) | 09:30 open · cash $64.62 (unchanged overnight, no fees) · equity $8,909.19 vs prior close $8,828.31 (+80.88) · 5 name(s) re-marked at the open (per-name table). AMC×510 yday $3.52 → 09:30 $3.62 +53.55; CNMD×35 yday $53.66 → 09:30 $54.40 +25.90; EPR×28 yday $60.74 → 09:30 $61.10 +10.08; SMMT×105 yday $16.17 → 09:30 $16.10 -7.35; TBBB×26 yday $65.07 → 09:30 $65.02 -1.30 | — |
+| 2026-11-05 09:30 ET | **SELL** | `AMC` | 510 | $3.62 | $6.68 | $+139.74 | $1,906.69 | ▲ +139.74 after sell → book $8,902.51; vs 09:30 mark -6.68 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **SELL** | `CNMD` | 35 | $54.40 | $2.12 | $+220.13 | $3,808.57 | ▲ +220.13 after sell → book $8,900.39; vs 09:30 mark -2.12 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-05 09:30 ET | **SELL** | `EPR` | 28 | $61.10 | $2.10 | $+26.63 | $5,517.27 | ▲ +26.63 after sell → book $8,898.29; vs 09:30 mark -2.10 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **SELL** | `SMMT` | 105 | $16.10 | $2.34 | $-9.89 | $7,205.44 | ▼ -9.89 after sell → book $8,895.96; vs 09:30 mark -2.33 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-05 09:30 ET | **SELL** | `TBBB` | 26 | $65.02 | $2.09 | $+29.12 | $8,893.87 | ▲ +29.12 after sell → book $8,893.87; vs 09:30 mark -2.09 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,893.87 | ▲ close $8,893.87 vs 09:30 $8,909.19 (session +0.00) | 16:00 close · cash $8,893.87 · no lots left · equity $8,893.87. | — |
 
 ## Not taken
 

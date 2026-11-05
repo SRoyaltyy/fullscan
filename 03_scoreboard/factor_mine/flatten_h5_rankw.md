@@ -6,7 +6,7 @@ Buys the flatten **wish-list** even on io/HOLD mornings — live `flatten_robust
 
 Side **long** · universe `flatten` · top 8 · rank `list` · size `rank_w` · sell `list` · S-boost `none` · rank-weighted leftover
 
-Cash book **-18.57%** ($8,143) · signal-only (no cash/fees) was +4.47%. Starts YES **4/30**. Fills 223 · skips 337 · realized $+263.83.
+Cash book **-22.14%** ($7,786) · signal-only (no cash/fees) was +4.47%. Starts YES **4/30**. Fills 227 · skips 337 · realized $+263.83.
 
 ## How this sleeve decides (like you are 10)
 
@@ -409,6 +409,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-04 09:30 ET | **BUY** | `CON` | 14 | $40.90 | $2.03 | — | $752.27 | — | rank-weighted leftover; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ret5=+0.4; leftover $580.65 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-11-04 09:30 ET | **BUY** | `PCRX` | 7 | $36.41 | $2.01 | — | $495.39 | — | rank-weighted leftover; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ret5=-0.0; leftover $290.33 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-11-04 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $495.39 | ▼ close $8,143.42 vs 09:30 $8,246.97 (session -87.37) | 16:00 close · cash $495.39 · equity $8,143.42 vs 09:30 $8,246.97 (-103.55; session marks -87.37) · 8 name(s) marked open→close (per-name table). BLFS×3 09:30 $38.61 → close $38.61 +0.00; VEEV×6 09:30 $306.62 → close $310.63 +24.06; ILMN×7 09:30 $241.00 → close $226.54 -101.20; RGEN×7 09:30 $183.40 → close $178.20 -36.40; CDNA×13 09:30 $89.00 → close $85.86 -40.82; PACS×17 09:30 $48.51 → close $50.26 +29.75; CON×14 09:30 $40.90 → close $43.56 +37.31; PCRX×7 09:30 $36.41 → close $36.40 -0.07 | — |
+| 2026-11-05 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $495.39 | ▼ 09:30 equity $8,074.42 vs yday $8,143.42 (-69.00) | 09:30 open · cash $495.39 (unchanged overnight, no fees) · equity $8,074.42 vs prior close $8,143.42 (-69.00) · 8 name(s) re-marked at the open (per-name table). BLFS×3 yday $38.61 → 09:30 $38.61 +0.00; CDNA×13 yday $85.86 → 09:30 $83.60 -29.38; CON×14 yday $43.56 → 09:30 $43.57 +0.14; ILMN×7 yday $226.54 → 09:30 $220.25 -44.03; PACS×17 yday $50.26 → 09:30 $50.78 +8.84; PCRX×7 yday $36.40 → 09:30 $36.41 +0.07; RGEN×7 yday $178.20 → 09:30 $175.60 -18.20; VEEV×6 yday $310.63 → 09:30 $312.89 +13.56 | — |
+| 2026-11-05 09:30 ET | **BUY** | `CSGP` | 4 | $33.11 | $1.34 | — | $361.61 | — | rank-weighted leftover; list flatten; wish-list (live io HOLD — not a ticket); ret5=+18.3; leftover $141.54 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟡 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **BUY** | `CMCSA` | 4 | $25.10 | $1.02 | — | $260.20 | — | rank-weighted leftover; list flatten; wish-list (live io HOLD — not a ticket); ret5=+15.2; leftover $117.95 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **BUY** | `COCO` | 1 | $67.15 | $0.67 | — | $192.37 | — | rank-weighted leftover; list flatten; wish-list (live io HOLD — not a ticket); ret5=+16.1; leftover $70.77 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **BUY** | `GPK` | 1 | $11.82 | $0.12 | — | $180.43 | — | rank-weighted leftover; list flatten; wish-list (live io HOLD — not a ticket); ret5=+37.6; leftover $23.59 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🟡 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $180.43 | ▼ close $7,786.12 vs 09:30 $8,074.42 (session -285.15) | 16:00 close · cash $180.43 · equity $7,786.12 vs 09:30 $8,074.42 (-288.30; session marks -285.15) · 12 name(s) marked open→close (per-name table). BLFS×3 09:30 $38.61 → close $38.61 +0.00; CDNA×13 09:30 $83.60 → close $76.33 -94.51; CON×14 09:30 $43.57 → close $42.15 -19.88; ILMN×7 09:30 $220.25 → close $208.00 -85.75; PACS×17 09:30 $50.78 → close $50.20 -9.86; PCRX×7 09:30 $36.41 → close $36.42 +0.07; RGEN×7 09:30 $175.60 → close $168.48 -49.84; VEEV×6 09:30 $312.89 → close $310.10 -16.74; CSGP×4 09:30 $33.11 → close $32.05 -4.24; CMCSA×4 09:30 $25.10 → close $24.95 -0.60; COCO×1 09:30 $67.15 → close $63.63 -3.52; GPK×1 09:30 $11.82 → close $11.54 -0.28 | — |
 
 ## Not taken
 

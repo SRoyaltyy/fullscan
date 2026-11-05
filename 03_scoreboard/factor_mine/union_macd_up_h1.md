@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ macd_up, no 🚨
 
-Cash book **-22.79%** ($7,721) · signal-only (no cash/fees) was +22.07%. Starts YES **11/30**. Fills 466 · skips 104 · realized $+158.57.
+Cash book **-25.02%** ($7,498) · signal-only (no cash/fees) was +22.07%. Starts YES **11/30**. Fills 478 · skips 104 · realized $+158.57.
 
 ## How this sleeve decides (like you are 10)
 
@@ -656,6 +656,20 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-04 09:30 ET | **BUY** | `ACRS` | 251 | $3.81 | $3.24 | — | $1,114.25 | — | union ∩ macd_up, no 🚨; gate macd_up=True; list probable,yday_gainer,yday_mover; 🔵; ret5=-1.3; leftover $959.52 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🔴 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-11-04 09:30 ET | **BUY** | `MX` | 380 | $2.52 | $4.90 | — | $151.75 | — | union ∩ macd_up, no 🚨; gate macd_up=True; list yday_gainer,yday_mover; 🔵; ret5=+0.0; leftover $959.52 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 judge🟡 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-11-04 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $151.75 | ▼ close $7,721.09 vs 09:30 $7,755.96 (session -16.24) | 16:00 close · cash $151.75 · equity $7,721.09 vs 09:30 $7,755.96 (-34.87; session marks -16.24) · 8 name(s) marked open→close (per-name table). PRMB×49 09:30 $21.21 → close $21.02 -9.31; CDNA×10 09:30 $89.00 → close $85.86 -31.40; CON×23 09:30 $40.90 → close $43.56 +61.29; NVTS×102 09:30 $9.37 → close $9.33 -3.57; EPR×15 09:30 $60.00 → close $60.74 +11.10; CXW×32 09:30 $29.58 → close $30.52 +30.08; ACRS×251 09:30 $3.81 → close $3.68 -32.63; MX×380 09:30 $2.52 → close $2.41 -41.80 | — |
+| 2026-11-05 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $151.75 | ▼ 09:30 equity $7,631.34 vs yday $7,721.09 (-89.75) | 09:30 open · cash $151.75 (unchanged overnight, no fees) · equity $7,631.34 vs prior close $7,721.09 (-89.75) · 8 name(s) re-marked at the open (per-name table). ACRS×251 yday $3.68 → 09:30 $3.71 +7.53; CDNA×10 yday $85.86 → 09:30 $83.60 -22.60; CON×23 yday $43.56 → 09:30 $43.57 +0.23; CXW×32 yday $30.52 → 09:30 $30.23 -9.12; EPR×15 yday $60.74 → 09:30 $61.10 +5.40; MX×380 yday $2.41 → 09:30 $2.31 -38.00; NVTS×102 yday $9.33 → 09:30 $8.75 -59.16; PRMB×49 yday $21.02 → 09:30 $21.55 +25.97 | — |
+| 2026-11-05 09:30 ET | **SELL** | `ACRS` | 251 | $3.71 | $3.29 | $-31.63 | $1,079.67 | ▼ -31.63 after sell → book $7,628.05; vs 09:30 mark -3.29 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **SELL** | `CDNA` | 10 | $83.60 | $2.04 | $-58.06 | $1,913.63 | ▼ -58.06 after sell → book $7,626.01; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-05 09:30 ET | **SELL** | `CON` | 23 | $43.57 | $2.08 | $+57.39 | $2,913.66 | ▲ +57.39 after sell → book $7,623.93; vs 09:30 mark -2.08 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-05 09:30 ET | **SELL** | `CXW` | 32 | $30.23 | $2.11 | $+16.77 | $3,879.08 | ▲ +16.77 after sell → book $7,621.83; vs 09:30 mark -2.10 | dropped from list after 1 sess (min 1) | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **SELL** | `MX` | 380 | $2.31 | $4.98 | $-89.68 | $4,751.90 | ▼ -89.68 after sell → book $7,616.85; vs 09:30 mark -4.98 | dropped from list after 1 sess (min 1) | join🔴 sector🔴 gen🔴 news🟡 digest🟡 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **SELL** | `NVTS` | 102 | $8.75 | $2.32 | $-67.35 | $5,642.08 | ▼ -67.35 after sell → book $7,614.53; vs 09:30 mark -2.32 | dropped from list after 1 sess (min 1) | join🔴 sector🔴 gen🔴 news🟢 digest🟡 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **BUY** | `CMCSA` | 37 | $25.10 | $2.10 | — | $4,711.28 | — | union ∩ macd_up, no 🚨; gate macd_up=True; list flatten; ret5=+15.2; leftover $940.35 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **BUY** | `CLX` | 9 | $99.88 | $2.02 | — | $3,810.34 | — | union ∩ macd_up, no 🚨; gate macd_up=True; list flatten,ohlc_hot; ret5=+14.2; leftover $940.35 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **BUY** | `COCO` | 14 | $67.15 | $2.03 | — | $2,868.21 | — | union ∩ macd_up, no 🚨; gate macd_up=True; list flatten; ret5=+16.1; leftover $940.35 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **BUY** | `CROX` | 5 | $160.00 | $2.00 | — | $2,066.20 | — | union ∩ macd_up, no 🚨; gate macd_up=True; list flatten; ret5=+33.5; leftover $940.35 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **BUY** | `GPK` | 79 | $11.82 | $2.23 | — | $1,130.20 | — | union ∩ macd_up, no 🚨; gate macd_up=True; list flatten; ret5=+37.6; leftover $940.35 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🟡 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **BUY** | `TRU` | 11 | $82.95 | $2.02 | — | $215.72 | — | union ∩ macd_up, no 🚨; gate macd_up=True; list yday_gainer; ret5=+10.5; leftover $940.35 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟢 |
+| 2026-11-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $215.72 | ▼ close $7,497.51 vs 09:30 $7,631.34 (session -104.61) | 16:00 close · cash $215.72 · equity $7,497.51 vs 09:30 $7,631.34 (-133.83; session marks -104.61) · 8 name(s) marked open→close (per-name table). EPR×15 09:30 $61.10 → close $59.79 -19.65; PRMB×49 09:30 $21.55 → close $22.15 +29.40; CMCSA×37 09:30 $25.10 → close $24.95 -5.55; CLX×9 09:30 $99.88 → close $99.70 -1.62; COCO×14 09:30 $67.15 → close $63.63 -49.28; CROX×5 09:30 $160.00 → close $152.93 -35.35; GPK×79 09:30 $11.82 → close $11.54 -22.12; TRU×11 09:30 $82.95 → close $82.91 -0.44 | — |
 
 ## Not taken
 

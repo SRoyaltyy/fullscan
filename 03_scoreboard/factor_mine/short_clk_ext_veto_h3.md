@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · Clock-B #5 extreme ext + fade/fail-break as a short
 
-Cash book **-7.62%** ($9,238) · signal-only (no cash/fees) was -97.41%. Starts YES **0/30**. Fills 283 · skips 219 · realized $-964.15.
+Cash book **-4.05%** ($9,595) · signal-only (no cash/fees) was -97.41%. Starts YES **0/30**. Fills 285 · skips 219 · realized $-964.15.
 
 ## How this sleeve decides (like you are 10)
 
@@ -471,6 +471,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-04 09:30 ET | **SHORT** | `JLHL` | 310 | $6.77 | $4.12 | — | $14,487.92 | — | Clock-B #5 extreme ext + fade/fail-break as a short; gate clk_ext_veto=True; list yday_mover; ret5=+19.3; leftover $2102.34 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 judge🔴 ab🔴 heat🔴 vol🔴 buy🟡 |
 | 2026-11-04 09:30 ET | **SHORT** | `BETA` | 87 | $24.00 | $2.34 | — | $16,573.58 | — | Clock-B #5 extreme ext + fade/fail-break as a short; gate clk_ext_veto=True; list ohlc_hot; ret5=+13.9; leftover $2102.34 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 judge🔴 ab🔴 heat🔴 vol🔴 buy🟡 |
 | 2026-11-04 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $16,573.58 | ▲ close $9,237.68 vs 09:30 $8,409.36 (session +834.78) | 16:00 close · cash $16,573.58 · equity $9,237.68 vs 09:30 $8,409.36 (+828.32; session marks +834.78) · 3 name(s) marked open→close (per-name table). HLP×1001 09:30 $3.98 → close $2.93 +1051.05; JLHL×310 09:30 $6.77 → close $7.10 -102.30; BETA×87 09:30 $24.00 → close $25.31 -113.97 | — |
+| 2026-11-05 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $16,573.58 | ▼ 09:30 equity $9,045.71 vs yday $9,237.68 (-191.97) | 09:30 open · cash $16,573.58 (unchanged overnight, no fees) · equity $9,045.71 vs prior close $9,237.68 (-191.97) · 3 name(s) re-marked at the open (per-name table). BETA×87 yday $25.31 → 09:30 $25.00 +26.97; HLP×1001 yday $2.93 → 09:30 $2.87 +60.06; JLHL×310 yday $7.10 → 09:30 $8.00 -279.00 | — |
+| 2026-11-05 09:30 ET | **COVER** | `HLP` | 1001 | $2.87 | $12.91 | $+1235.12 | $13,687.80 | ▲ +1,235.12 after sell → book $9,032.80; vs 09:30 mark -12.91 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-05 09:30 ET | **SHORT** | `POOL` | 20 | $219.38 | $2.22 | — | $18,073.18 | — | Clock-B #5 extreme ext + fade/fail-break as a short; gate clk_ext_veto=True; list yday_gainer,ohlc_hot; ret5=+12.1; leftover $4516.40 | join🔴 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $18,073.18 | ▲ close $9,595.43 vs 09:30 $9,045.71 (session +564.85) | 16:00 close · cash $18,073.18 · equity $9,595.43 vs 09:30 $9,045.71 (+549.72; session marks +564.85) · 3 name(s) marked open→close (per-name table). BETA×87 09:30 $25.00 → close $24.05 +82.65; JLHL×310 09:30 $8.00 → close $6.62 +427.80; POOL×20 09:30 $219.38 → close $216.66 +54.40 | — |
 
 ## Not taken
 

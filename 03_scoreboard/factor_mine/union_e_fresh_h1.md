@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ e_fresh, no 🚨
 
-Cash book **-8.19%** ($9,181) · signal-only (no cash/fees) was +4.74%. Starts YES **24/30**. Fills 262 · skips 56 · realized $+1231.21.
+Cash book **-6.06%** ($9,394) · signal-only (no cash/fees) was +4.74%. Starts YES **24/30**. Fills 267 · skips 56 · realized $+1231.21.
 
 ## How this sleeve decides (like you are 10)
 
@@ -453,6 +453,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-03 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,180.75 | ▲ close $9,180.75 vs 09:30 $9,180.75 (session +0.00) | 16:00 close · cash $9,180.75 · no lots left · equity $9,180.75. | — |
 | 2026-11-04 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,180.75 | ▲ 09:30 equity $9,180.75 vs yday $9,180.75 (+0.00) | 09:30 open · cash $9,180.75 · no holdings · equity $9,180.75 vs prior close $9,180.75 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-11-04 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,180.75 | ▲ close $9,180.75 vs 09:30 $9,180.75 (session +0.00) | 16:00 close · cash $9,180.75 · no lots left · equity $9,180.75. | — |
+| 2026-11-05 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,180.75 | ▲ 09:30 equity $9,180.75 vs yday $9,180.75 (+0.00) | 09:30 open · cash $9,180.75 · no holdings · equity $9,180.75 vs prior close $9,180.75 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-05 09:30 ET | **BUY** | `PRMB` | 85 | $21.55 | $2.25 | — | $7,346.76 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list probable,yday_gainer,yday_mover; ret5=+8.8; leftover $1836.15 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **BUY** | `AMC` | 506 | $3.62 | $6.53 | — | $5,505.98 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list ohlc_hot; ret5=+17.7; leftover $1836.15 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **BUY** | `DNUT` | 513 | $3.58 | $6.62 | — | $3,665.38 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list ohlc_hot; ret5=+15.4; leftover $1836.15 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **BUY** | `EXPE` | 6 | $287.31 | $2.01 | — | $1,939.49 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list ohlc_hot; ret5=+14.6; leftover $1836.15 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **BUY** | `ARHS` | 143 | $12.79 | $2.42 | — | $108.10 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list ohlc_hot; ret5=+14.1; leftover $1836.15 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $108.10 | ▲ close $9,394.43 vs 09:30 $9,180.75 (session +233.49) | 16:00 close · cash $108.10 · equity $9,394.43 vs 09:30 $9,180.75 (+213.68; session marks +233.49) · 5 name(s) marked open→close (per-name table). PRMB×85 09:30 $21.55 → close $22.15 +51.00; AMC×506 09:30 $3.62 → close $3.08 -275.77; DNUT×513 09:30 $3.58 → close $4.60 +525.82; EXPE×6 09:30 $287.31 → close $272.48 -89.01; ARHS×143 09:30 $12.79 → close $12.94 +21.45 | — |
 
 ## Not taken
 

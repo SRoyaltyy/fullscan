@@ -1,0 +1,212 @@
+{
+  "buys": [
+    {
+      "fill_rule": "open",
+      "price": 11.82,
+      "shares": 229,
+      "side": "BUY",
+      "ticker": "GPK"
+    },
+    {
+      "fill_rule": "open",
+      "price": 21.545,
+      "shares": 125,
+      "side": "BUY",
+      "ticker": "MOS"
+    },
+    {
+      "fill_rule": "open",
+      "price": 3.625,
+      "shares": 747,
+      "side": "BUY",
+      "ticker": "AMC"
+    },
+    {
+      "fill_rule": "open",
+      "price": 6.9,
+      "shares": 392,
+      "side": "BUY",
+      "ticker": "ANGI"
+    }
+  ],
+  "cash": 3.39,
+  "date": "2026-11-05",
+  "equity": 10607.5,
+  "fees": 30.5992,
+  "fills": [
+    {
+      "fees": 2.367,
+      "fill_rule": "open",
+      "pnl": 107.31,
+      "price": 25.0,
+      "shares": 112,
+      "side": "SELL",
+      "ticker": "BETA"
+    },
+    {
+      "fees": 2.0651,
+      "fill_rule": "open",
+      "pnl": -189.65,
+      "price": 167.31,
+      "shares": 15,
+      "side": "SELL",
+      "ticker": "RRX"
+    },
+    {
+      "fees": 4.0071,
+      "fill_rule": "open",
+      "pnl": 34.76,
+      "price": 9.0,
+      "shares": 305,
+      "side": "SELL",
+      "ticker": "SHLS"
+    },
+    {
+      "fees": 2.1478,
+      "fill_rule": "open",
+      "pnl": 49.5,
+      "price": 65.02,
+      "shares": 42,
+      "side": "SELL",
+      "ticker": "TBBB"
+    },
+    {
+      "fees": 2.9541,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 11.82,
+      "shares": 229,
+      "side": "BUY",
+      "ticker": "GPK"
+    },
+    {
+      "fees": 2.365,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 21.545,
+      "shares": 125,
+      "side": "BUY",
+      "ticker": "MOS"
+    },
+    {
+      "fees": 9.6363,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 3.625,
+      "shares": 747,
+      "side": "BUY",
+      "ticker": "AMC"
+    },
+    {
+      "fees": 5.0568,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 6.9,
+      "shares": 392,
+      "side": "BUY",
+      "ticker": "ANGI"
+    }
+  ],
+  "holdings": [
+    "AMC",
+    "ANGI",
+    "GPK",
+    "MOS"
+  ],
+  "mean": -3.7715,
+  "n_trades_today": 8,
+  "recipe": "oos0914_rvol_lg_h1_sx",
+  "sells": [
+    {
+      "fill_rule": "open",
+      "price": 25.0,
+      "shares": 112,
+      "side": "SELL",
+      "ticker": "BETA"
+    },
+    {
+      "fill_rule": "open",
+      "price": 167.31,
+      "shares": 15,
+      "side": "SELL",
+      "ticker": "RRX"
+    },
+    {
+      "fill_rule": "open",
+      "price": 9.0,
+      "shares": 305,
+      "side": "SELL",
+      "ticker": "SHLS"
+    },
+    {
+      "fill_rule": "open",
+      "price": 65.02,
+      "shares": 42,
+      "side": "SELL",
+      "ticker": "TBBB"
+    }
+  ],
+  "state": {
+    "after": "2026-11-05",
+    "cash": 3.39,
+    "pos": {
+      "AMC": {
+        "close_px": 3.08,
+        "cost": 2717.5113,
+        "entry_date": "2026-11-05",
+        "entry_px": 3.625,
+        "fee_in": 9.6363,
+        "last_px": 3.625,
+        "min_hold": 1,
+        "notional": 2707.875,
+        "peak_px": 3.625,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate last_green=True,rvol_min=1.5; rank hot_score; list ohlc_hot; ret5=+17.7; leftover $2709.00",
+        "shares": 747,
+        "ticker": "AMC"
+      },
+      "ANGI": {
+        "close_px": 7.32,
+        "cost": 2709.8568,
+        "entry_date": "2026-11-05",
+        "entry_px": 6.9,
+        "fee_in": 5.0568,
+        "last_px": 6.9,
+        "min_hold": 1,
+        "notional": 2704.8,
+        "peak_px": 6.9,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate last_green=True,rvol_min=1.5; rank hot_score; list yday_mover; ret5=+14.8; leftover $2709.00",
+        "shares": 392,
+        "ticker": "ANGI"
+      },
+      "GPK": {
+        "close_px": 11.54,
+        "cost": 2709.7341,
+        "entry_date": "2026-11-05",
+        "entry_px": 11.82,
+        "fee_in": 2.9541,
+        "last_px": 11.82,
+        "min_hold": 1,
+        "notional": 2706.78,
+        "peak_px": 11.82,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate last_green=True,rvol_min=1.5; rank hot_score; list flatten; ret5=+37.6; leftover $2709.00",
+        "shares": 229,
+        "ticker": "GPK"
+      },
+      "MOS": {
+        "close_px": 22.33,
+        "cost": 2695.49,
+        "entry_date": "2026-11-05",
+        "entry_px": 21.545,
+        "fee_in": 2.365,
+        "last_px": 21.545,
+        "min_hold": 1,
+        "notional": 2693.125,
+        "peak_px": 21.545,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate last_green=True,rvol_min=1.5; rank hot_score; list ohlc_hot; ret5=+17.9; leftover $2709.00",
+        "shares": 125,
+        "ticker": "MOS"
+      }
+    },
+    "yday_equity": 10607.5
+  }
+}

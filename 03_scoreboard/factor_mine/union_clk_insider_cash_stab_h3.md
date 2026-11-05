@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · Clock-B #7 insider/Form-4 + inst Tx + stabilize (if data)
 
-Cash book **+9.01%** ($10,901) · signal-only (no cash/fees) was -5.54%. Starts YES **0/30**. Fills 13 · skips 7 · realized $-603.63.
+Cash book **+11.15%** ($11,115) · signal-only (no cash/fees) was -5.54%. Starts YES **0/30**. Fills 14 · skips 7 · realized $-603.63.
 
 ## How this sleeve decides (like you are 10)
 
@@ -205,6 +205,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-03 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $43.96 | ▼ close $10,387.98 vs 09:30 $10,552.96 (session -164.98) | 16:00 close · cash $43.96 · equity $10,387.98 vs 09:30 $10,552.96 (-164.98; session marks -164.98) · 1 name(s) marked open→close (per-name table). GLOB×226 09:30 $46.50 → close $45.77 -164.98 | — |
 | 2026-11-04 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $43.96 | ▲ 09:30 equity $10,659.18 vs yday $10,387.98 (+271.20) | 09:30 open · cash $43.96 (unchanged overnight, no fees) · equity $10,659.18 vs prior close $10,387.98 (+271.20) · 1 name(s) re-marked at the open (per-name table). GLOB×226 yday $45.77 → 09:30 $46.97 +271.20 | — |
 | 2026-11-04 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $43.96 | ▲ close $10,901.00 vs 09:30 $10,659.18 (session +241.82) | 16:00 close · cash $43.96 · equity $10,901.00 vs 09:30 $10,659.18 (+241.82; session marks +241.82) · 1 name(s) marked open→close (per-name table). GLOB×226 09:30 $46.97 → close $48.04 +241.82 | — |
+| 2026-11-05 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $43.96 | ▲ 09:30 equity $11,117.96 vs yday $10,901.00 (+216.96) | 09:30 open · cash $43.96 (unchanged overnight, no fees) · equity $11,117.96 vs prior close $10,901.00 (+216.96) · 1 name(s) re-marked at the open (per-name table). GLOB×226 yday $48.04 → 09:30 $49.00 +216.96 | — |
+| 2026-11-05 09:30 ET | **SELL** | `GLOB` | 226 | $49.00 | $3.04 | $+559.04 | $11,114.92 | ▲ +559.04 after sell → book $11,114.92; vs 09:30 mark -3.04 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $11,114.92 | ▲ close $11,114.92 vs 09:30 $11,117.96 (session +0.00) | 16:00 close · cash $11,114.92 · no lots left · equity $11,114.92. | — |
 
 ## Not taken
 

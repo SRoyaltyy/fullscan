@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · last bar red
 
-Cash book **-3.61%** ($9,639) · signal-only (no cash/fees) was -2.93%. Starts YES **19/30**. Fills 494 · skips 107 · realized $-717.78.
+Cash book **+0.23%** ($10,022) · signal-only (no cash/fees) was -2.93%. Starts YES **19/30**. Fills 506 · skips 107 · realized $-717.78.
 
 ## How this sleeve decides (like you are 10)
 
@@ -682,6 +682,20 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-04 09:30 ET | **SHORT** | `NBP` | 580 | $1.04 | $7.60 | — | $13,612.28 | — | last bar red; gate last_red=True; list yday_gainer; 🔵; ret5=-19.5; leftover $603.63 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-11-04 09:30 ET | **SHORT** | `DGX` | 2 | $250.61 | $2.03 | — | $14,111.47 | — | last bar red; gate last_red=True; list yday_mover; 🔵; ret5=+1.9; leftover $603.63 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-11-04 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,111.47 | ▲ close $9,639.22 vs 09:30 $9,666.52 (session +4.56) | 16:00 close · cash $14,111.47 · equity $9,639.22 vs 09:30 $9,666.52 (-27.30; session marks +4.56) · 8 name(s) marked open→close (per-name table). CON×14 09:30 $40.90 → close $43.56 -37.31; PCRX×16 09:30 $36.41 → close $36.40 +0.16; ACRS×158 09:30 $3.81 → close $3.68 +20.54; MX×239 09:30 $2.52 → close $2.41 +26.29; ITW×2 09:30 $292.62 → close $293.45 -1.66; POOL×2 09:30 $213.90 → close $219.26 -10.72; NBP×580 09:30 $1.04 → close $1.01 +17.40; DGX×2 09:30 $250.61 → close $255.68 -10.14 | — |
+| 2026-11-05 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $14,111.47 | ▲ 09:30 equity $9,646.32 vs yday $9,639.22 (+7.10) | 09:30 open · cash $14,111.47 (unchanged overnight, no fees) · equity $9,646.32 vs prior close $9,639.22 (+7.10) · 8 name(s) re-marked at the open (per-name table). ACRS×158 yday $3.68 → 09:30 $3.71 -4.74; CON×14 yday $43.56 → 09:30 $43.57 -0.14; DGX×2 yday $255.68 → 09:30 $258.74 -6.12; ITW×2 yday $293.45 → 09:30 $296.15 -5.40; MX×239 yday $2.41 → 09:30 $2.31 +23.90; NBP×580 yday $1.01 → 09:30 $1.01 -0.00; PCRX×16 yday $36.40 → 09:30 $36.41 -0.16; POOL×2 yday $219.26 → 09:30 $219.38 -0.24 | — |
+| 2026-11-05 09:30 ET | **COVER** | `CON` | 14 | $43.57 | $2.03 | $-41.55 | $13,499.46 | ▼ -41.55 after sell → book $9,644.29; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-05 09:30 ET | **COVER** | `DGX` | 2 | $258.74 | $2.00 | $-20.29 | $12,979.98 | ▼ -20.29 after sell → book $9,642.29; vs 09:30 mark -2.00 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **COVER** | `ITW` | 2 | $296.15 | $2.00 | $-11.09 | $12,385.69 | ▼ -11.09 after sell → book $9,640.30; vs 09:30 mark -1.99 | dropped from list after 1 sess (min 1) | join🔴 sector🔴 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **COVER** | `NBP` | 580 | $1.01 | $7.48 | $+2.31 | $11,792.40 | ▲ +2.31 after sell → book $9,632.81; vs 09:30 mark -7.49 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **COVER** | `PCRX` | 16 | $36.41 | $2.04 | $-4.11 | $11,207.81 | ▼ -4.11 after sell → book $9,630.78; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-05 09:30 ET | **COVER** | `POOL` | 2 | $219.38 | $2.00 | $-14.98 | $10,767.05 | ▼ -14.98 after sell → book $9,628.78; vs 09:30 mark -2.00 | dropped from list after 1 sess (min 1) | join🔴 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **SHORT** | `PRMB` | 37 | $21.55 | $2.14 | — | $11,562.26 | — | last bar red; gate last_red=True; list probable,yday_gainer,yday_mover; ret5=+8.8; leftover $802.40 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **SHORT** | `NVTS` | 91 | $8.75 | $2.31 | — | $12,356.20 | — | last bar red; gate last_red=True; list probable,yday_gainer,yday_mover; ret5=-0.3; leftover $802.40 | join🔴 sector🔴 gen🔴 news🟢 digest🟡 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **SHORT** | `PDFS` | 21 | $36.98 | $2.09 | — | $13,130.68 | — | last bar red; gate last_red=True; list probable,yday_gainer,yday_mover; ret5=-12.5; leftover $802.40 | join🔴 sector🔴 gen🔴 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **SHORT** | `AIP` | 46 | $17.26 | $2.17 | — | $13,922.47 | — | last bar red; gate last_red=True; list probable,yday_gainer,yday_mover; ret5=-15.5; leftover $802.40 | join🔴 sector🔴 gen🔴 news🟡 digest🟡 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **SHORT** | `KURA` | 105 | $7.57 | $2.35 | — | $14,714.97 | — | last bar red; gate last_red=True; list yday_gainer,yday_mover; ret5=-29.0; leftover $802.40 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **SHORT** | `PRIM` | 12 | $65.93 | $2.07 | — | $15,504.06 | — | last bar red; gate last_red=True; list yday_gainer,yday_mover; ret5=-7.2; leftover $802.40 | join🔴 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $15,504.06 | ▲ close $10,022.50 vs 09:30 $9,646.32 (session +406.86) | 16:00 close · cash $15,504.06 · equity $10,022.50 vs 09:30 $9,646.32 (+376.18; session marks +406.86) · 8 name(s) marked open→close (per-name table). ACRS×158 09:30 $3.71 → close $3.61 +15.80; MX×239 09:30 $2.31 → close $2.05 +62.14; PRMB×37 09:30 $21.55 → close $22.15 -22.20; NVTS×91 09:30 $8.75 → close $7.86 +80.99; PDFS×21 09:30 $36.98 → close $34.52 +51.66; AIP×46 09:30 $17.26 → close $15.93 +61.18; KURA×105 09:30 $7.57 → close $6.80 +80.85; PRIM×12 09:30 $65.93 → close $59.56 +76.44 | — |
 
 ## Not taken
 

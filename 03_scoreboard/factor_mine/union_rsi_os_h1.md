@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ rsi_os, no 🚨
 
-Cash book **-28.23%** ($7,177) · signal-only (no cash/fees) was -7.54%. Starts YES **0/30**. Fills 193 · skips 20 · realized $-3180.18.
+Cash book **-29.21%** ($7,079) · signal-only (no cash/fees) was -7.54%. Starts YES **0/30**. Fills 201 · skips 20 · realized $-3180.18.
 
 ## How this sleeve decides (like you are 10)
 
@@ -383,6 +383,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-04 09:30 ET | **BUY** | `ROL` | 29 | $37.57 | $2.08 | — | $2,221.43 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list ohlc_hot; ret5=+9.8; leftover $1097.78 | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-11-04 09:30 ET | **BUY** | `HRB` | 20 | $53.49 | $2.05 | — | $1,149.58 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list ohlc_hot; ret5=+10.8; leftover $1097.78 | join🟢 sector🔴 gen🟢 news🔴 digest🟡 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-11-04 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,149.58 | ▲ close $7,176.96 vs 09:30 $6,994.91 (session +192.84) | 16:00 close · cash $1,149.58 · equity $7,176.96 vs 09:30 $6,994.91 (+182.05; session marks +192.84) · 5 name(s) marked open→close (per-name table). DGX×6 09:30 $250.61 → close $255.68 +30.42; JMKE×54 09:30 $19.99 → close $21.01 +55.08; QNST×59 09:30 $18.51 → close $19.26 +44.25; ROL×29 09:30 $37.57 → close $38.38 +23.49; HRB×20 09:30 $53.49 → close $55.47 +39.60 | — |
+| 2026-11-05 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $1,149.58 | ▲ 09:30 equity $7,241.05 vs yday $7,176.96 (+64.09) | 09:30 open · cash $1,149.58 (unchanged overnight, no fees) · equity $7,241.05 vs prior close $7,176.96 (+64.09) · 5 name(s) re-marked at the open (per-name table). DGX×6 yday $255.68 → 09:30 $258.74 +18.36; HRB×20 yday $55.47 → 09:30 $55.85 +7.60; JMKE×54 yday $21.01 → 09:30 $20.66 -18.90; QNST×59 yday $19.26 → 09:30 $20.03 +45.43; ROL×29 yday $38.38 → 09:30 $38.78 +11.60 | — |
+| 2026-11-05 09:30 ET | **SELL** | `DGX` | 6 | $258.74 | $2.03 | $+38.80 | $2,699.99 | ▲ +38.80 after sell → book $7,239.02; vs 09:30 mark -2.03 | dropped from list after 3 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **SELL** | `HRB` | 20 | $55.85 | $2.07 | $+43.08 | $3,814.92 | ▲ +43.08 after sell → book $7,236.95; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-05 09:30 ET | **SELL** | `JMKE` | 54 | $20.66 | $2.17 | $+31.86 | $4,928.39 | ▲ +31.86 after sell → book $7,234.78; vs 09:30 mark -2.17 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-05 09:30 ET | **SELL** | `QNST` | 59 | $20.03 | $2.19 | $+85.33 | $6,107.97 | ▲ +85.33 after sell → book $7,232.59; vs 09:30 mark -2.19 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **SELL** | `ROL` | 29 | $38.78 | $2.10 | $+30.92 | $7,230.49 | ▲ +30.92 after sell → book $7,230.49; vs 09:30 mark -2.10 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-05 09:30 ET | **BUY** | `CMCSA` | 96 | $25.10 | $2.28 | — | $4,818.62 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list flatten; ret5=+15.2; leftover $2410.16 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **BUY** | `FLO` | 336 | $7.17 | $4.33 | — | $2,405.16 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list ohlc_hot; ret5=+15.6; leftover $2410.16 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟡 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **BUY** | `STUB` | 365 | $6.56 | $4.71 | — | $6.05 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list ohlc_hot; ret5=+17.7; leftover $2410.16 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟡 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6.05 | ▼ close $7,079.05 vs 09:30 $7,241.05 (session -140.12) | 16:00 close · cash $6.05 · equity $7,079.05 vs 09:30 $7,241.05 (-162.00; session marks -140.12) · 3 name(s) marked open→close (per-name table). CMCSA×96 09:30 $25.10 → close $24.95 -14.40; FLO×336 09:30 $7.17 → close $7.10 -23.52; STUB×365 09:30 $6.56 → close $6.28 -102.20 | — |
 
 ## Not taken
 

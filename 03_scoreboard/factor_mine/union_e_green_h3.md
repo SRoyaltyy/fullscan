@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-8.47%** ($9,153) · signal-only (no cash/fees) was -18.73%. Starts YES **20/30**. Fills 96 · skips 104 · realized $-87.73.
+Cash book **-6.33%** ($9,367) · signal-only (no cash/fees) was -18.73%. Starts YES **20/30**. Fills 100 · skips 104 · realized $-87.73.
 
 ## How this sleeve decides (like you are 10)
 
@@ -288,6 +288,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-03 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,153.28 | ▲ close $9,153.28 vs 09:30 $9,153.28 (session +0.00) | 16:00 close · cash $9,153.28 · no lots left · equity $9,153.28. | — |
 | 2026-11-04 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,153.28 | ▲ 09:30 equity $9,153.28 vs yday $9,153.28 (+0.00) | 09:30 open · cash $9,153.28 · no holdings · equity $9,153.28 vs prior close $9,153.28 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-11-04 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,153.28 | ▲ close $9,153.28 vs 09:30 $9,153.28 (session +0.00) | 16:00 close · cash $9,153.28 · no lots left · equity $9,153.28. | — |
+| 2026-11-05 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,153.28 | ▲ 09:30 equity $9,153.28 vs yday $9,153.28 (+0.00) | 09:30 open · cash $9,153.28 · no holdings · equity $9,153.28 vs prior close $9,153.28 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-05 09:30 ET | **BUY** | `AMC` | 631 | $3.62 | $8.14 | — | $6,857.77 | — | combo gate; gate earn_react=True,last_green=True; list ohlc_hot; ret5=+17.7; leftover $2288.32 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **BUY** | `DNUT` | 640 | $3.58 | $8.26 | — | $4,561.51 | — | combo gate; gate earn_react=True,last_green=True; list ohlc_hot; ret5=+15.4; leftover $2288.32 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **BUY** | `EXPE` | 7 | $287.31 | $2.01 | — | $2,548.29 | — | combo gate; gate earn_react=True,last_green=True; list ohlc_hot; ret5=+14.6; leftover $2288.32 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **BUY** | `ARHS` | 178 | $12.79 | $2.52 | — | $269.15 | — | combo gate; gate earn_react=True,last_green=True; list ohlc_hot; ret5=+14.1; leftover $2288.32 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $269.15 | ▲ close $9,367.31 vs 09:30 $9,153.28 (session +234.97) | 16:00 close · cash $269.15 · equity $9,367.31 vs 09:30 $9,153.28 (+214.03; session marks +234.97) · 4 name(s) marked open→close (per-name table). AMC×631 09:30 $3.62 → close $3.08 -343.89; DNUT×640 09:30 $3.58 → close $4.60 +656.00; EXPE×7 09:30 $287.31 → close $272.48 -103.84; ARHS×178 09:30 $12.79 → close $12.94 +26.70 | — |
 
 ## Not taken
 

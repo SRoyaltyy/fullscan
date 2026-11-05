@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 4 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · top 4 by cond
 
-Cash book **-0.05%** ($9,995) · signal-only (no cash/fees) was -7.67%. Starts YES **1/30**. Fills 163 · skips 159 · realized $-515.67.
+Cash book **-8.64%** ($9,136) · signal-only (no cash/fees) was -7.67%. Starts YES **1/30**. Fills 171 · skips 159 · realized $-515.67.
 
 ## How this sleeve decides (like you are 10)
 
@@ -352,6 +352,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-04 09:30 ET | **BUY** | `CNMD` | 7 | $47.99 | $2.01 | — | $755.41 | — | top 4 by cond; rank cond; list flatten; 🔵; ret5=+0.1; leftover $364.45 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-11-04 09:30 ET | **BUY** | `CON` | 8 | $40.90 | $2.01 | — | $426.23 | — | top 4 by cond; rank cond; list flatten; 🔵; ret5=+0.4; leftover $364.45 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-11-04 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $426.23 | ▲ close $9,994.95 vs 09:30 $9,887.44 (session +111.53) | 16:00 close · cash $426.23 · equity $9,994.95 vs 09:30 $9,887.44 (+107.51; session marks +111.53) · 6 name(s) marked open→close (per-name table). AMN×51 09:30 $46.33 → close $47.74 +71.91; ARQT×76 09:30 $32.88 → close $34.05 +88.54; CDNA×28 09:30 $89.00 → close $85.86 -87.92; LLY×1 09:30 $1440.00 → close $1417.99 -22.01; CNMD×7 09:30 $47.99 → close $53.66 +39.69; CON×8 09:30 $40.90 → close $43.56 +21.32 | — |
+| 2026-11-05 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $426.23 | ▼ 09:30 equity $9,576.78 vs yday $9,994.95 (-418.17) | 09:30 open · cash $426.23 (unchanged overnight, no fees) · equity $9,576.78 vs prior close $9,994.95 (-418.17) · 6 name(s) re-marked at the open (per-name table). AMN×51 yday $47.74 → 09:30 $47.89 +7.65; ARQT×76 yday $34.05 → 09:30 $29.00 -383.80; CDNA×28 yday $85.86 → 09:30 $83.60 -63.28; CNMD×7 yday $53.66 → 09:30 $54.40 +5.18; CON×8 yday $43.56 → 09:30 $43.57 +0.08; LLY×1 yday $1417.99 → 09:30 $1434.00 +16.01 | — |
+| 2026-11-05 09:30 ET | **SELL** | `AMN` | 51 | $47.89 | $2.17 | $+17.10 | $2,866.45 | ▲ +17.10 after sell → book $9,574.61; vs 09:30 mark -2.17 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-05 09:30 ET | **SELL** | `ARQT` | 76 | $29.00 | $2.25 | $-238.30 | $5,068.20 | ▼ -238.30 after sell → book $9,572.36; vs 09:30 mark -2.25 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-05 09:30 ET | **SELL** | `CDNA` | 28 | $83.60 | $2.10 | $-96.02 | $7,406.90 | ▼ -96.02 after sell → book $9,570.26; vs 09:30 mark -2.10 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-05 09:30 ET | **SELL** | `LLY` | 1 | $1434.00 | $2.01 | $+36.84 | $8,838.88 | ▲ +36.84 after sell → book $9,568.24; vs 09:30 mark -2.02 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-05 09:30 ET | **BUY** | `TRU` | 26 | $82.95 | $2.07 | — | $6,680.11 | — | top 4 by cond; rank cond; list yday_gainer; ret5=+10.5; leftover $2209.72 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟢 |
+| 2026-11-05 09:30 ET | **BUY** | `AMC` | 609 | $3.62 | $7.86 | — | $4,464.63 | — | top 4 by cond; rank cond; list ohlc_hot; ret5=+17.7; leftover $2209.72 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **BUY** | `AMX` | 87 | $25.12 | $2.25 | — | $2,276.94 | — | top 4 by cond; rank cond; list yday_gainer; ret5=+4.6; leftover $2209.72 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **BUY** | `SPOT` | 3 | $635.00 | $2.00 | — | $369.94 | — | top 4 by cond; rank cond; list ohlc_hot; ret5=+16.6; leftover $2209.72 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $369.94 | ▼ close $9,136.13 vs 09:30 $9,576.78 (session -417.93) | 16:00 close · cash $369.94 · equity $9,136.13 vs 09:30 $9,576.78 (-440.65; session marks -417.93) · 6 name(s) marked open→close (per-name table). CNMD×7 09:30 $54.40 → close $52.83 -10.99; CON×8 09:30 $43.57 → close $42.15 -11.36; TRU×26 09:30 $82.95 → close $82.91 -1.04; AMC×609 09:30 $3.62 → close $3.08 -331.90; AMX×87 09:30 $25.12 → close $25.11 -0.87; SPOT×3 09:30 $635.00 → close $614.41 -61.77 | — |
 
 ## Not taken
 

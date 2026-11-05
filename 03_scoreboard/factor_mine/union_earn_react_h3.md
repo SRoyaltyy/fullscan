@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ earn_react, no 🚨
 
-Cash book **-25.13%** ($7,487) · signal-only (no cash/fees) was -14.12%. Starts YES **25/30**. Fills 193 · skips 198 · realized $+2100.34.
+Cash book **-23.42%** ($7,658) · signal-only (no cash/fees) was -14.12%. Starts YES **25/30**. Fills 198 · skips 198 · realized $+2100.34.
 
 ## How this sleeve decides (like you are 10)
 
@@ -383,6 +383,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-03 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,486.76 | ▲ close $7,486.76 vs 09:30 $7,486.76 (session +0.00) | 16:00 close · cash $7,486.76 · no lots left · equity $7,486.76. | — |
 | 2026-11-04 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,486.76 | ▲ 09:30 equity $7,486.76 vs yday $7,486.76 (+0.00) | 09:30 open · cash $7,486.76 · no holdings · equity $7,486.76 vs prior close $7,486.76 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-11-04 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,486.76 | ▲ close $7,486.76 vs 09:30 $7,486.76 (session +0.00) | 16:00 close · cash $7,486.76 · no lots left · equity $7,486.76. | — |
+| 2026-11-05 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,486.76 | ▲ 09:30 equity $7,486.76 vs yday $7,486.76 (+0.00) | 09:30 open · cash $7,486.76 · no holdings · equity $7,486.76 vs prior close $7,486.76 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-05 09:30 ET | **BUY** | `PRMB` | 69 | $21.55 | $2.20 | — | $5,997.61 | — | union ∩ earn_react, no 🚨; gate earn_react=True; list probable,yday_gainer,yday_mover; ret5=+8.8; leftover $1497.35 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **BUY** | `AMC` | 413 | $3.62 | $5.33 | — | $4,495.16 | — | union ∩ earn_react, no 🚨; gate earn_react=True; list ohlc_hot; ret5=+17.7; leftover $1497.35 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **BUY** | `DNUT` | 418 | $3.58 | $5.39 | — | $2,995.42 | — | union ∩ earn_react, no 🚨; gate earn_react=True; list ohlc_hot; ret5=+15.4; leftover $1497.35 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **BUY** | `EXPE` | 5 | $287.31 | $2.00 | — | $1,556.84 | — | union ∩ earn_react, no 🚨; gate earn_react=True; list ohlc_hot; ret5=+14.6; leftover $1497.35 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **BUY** | `ARHS` | 117 | $12.79 | $2.34 | — | $58.07 | — | union ∩ earn_react, no 🚨; gate earn_react=True; list ohlc_hot; ret5=+14.1; leftover $1497.35 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $58.07 | ▲ close $7,657.64 vs 09:30 $7,486.76 (session +188.15) | 16:00 close · cash $58.07 · equity $7,657.64 vs 09:30 $7,486.76 (+170.88; session marks +188.15) · 5 name(s) marked open→close (per-name table). PRMB×69 09:30 $21.55 → close $22.15 +41.40; AMC×413 09:30 $3.62 → close $3.08 -225.08; DNUT×418 09:30 $3.58 → close $4.60 +428.45; EXPE×5 09:30 $287.31 → close $272.48 -74.17; ARHS×117 09:30 $12.79 → close $12.94 +17.55 | — |
 
 ## Not taken
 

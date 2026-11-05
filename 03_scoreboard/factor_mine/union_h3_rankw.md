@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `rank_w` · sell `list` · S-boost `none` · rank-weighted leftover
 
-Cash book **-20.95%** ($7,905) · signal-only (no cash/fees) was -4.92%. Starts YES **0/30**. Fills 326 · skips 290 · realized $-875.40.
+Cash book **-25.05%** ($7,495) · signal-only (no cash/fees) was -4.92%. Starts YES **0/30**. Fills 341 · skips 290 · realized $-875.40.
 
 ## How this sleeve decides (like you are 10)
 
@@ -512,6 +512,23 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-04 09:30 ET | **BUY** | `PACS` | 1 | $48.51 | $0.49 | — | $434.07 | — | rank-weighted leftover; list flatten; 🔵; ret5=-2.4; leftover $92.01 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-11-04 09:30 ET | **BUY** | `CON` | 1 | $40.90 | $0.41 | — | $392.77 | — | rank-weighted leftover; list flatten; 🔵; ret5=+0.4; leftover $69.01 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-11-04 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $392.77 | ▼ close $7,905.13 vs 09:30 $8,050.54 (session -143.84) | 16:00 close · cash $392.77 · equity $7,905.13 vs 09:30 $8,050.54 (-145.41; session marks -143.84) · 9 name(s) marked open→close (per-name table). AMN×6 09:30 $46.33 → close $47.74 +8.46; ARQT×26 09:30 $32.88 → close $34.05 +30.29; CDNA×13 09:30 $89.00 → close $85.86 -40.82; CORT×21 09:30 $84.98 → close $79.22 -120.96; ETON×10 09:30 $51.76 → close $50.72 -10.40; VEEV×6 09:30 $306.62 → close $310.63 +24.06; VLO×3 09:30 $378.30 → close $365.34 -38.88; PACS×1 09:30 $48.51 → close $50.26 +1.75; CON×1 09:30 $40.90 → close $43.56 +2.66 | — |
+| 2026-11-05 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $392.77 | ▼ 09:30 equity $7,740.61 vs yday $7,905.13 (-164.52) | 09:30 open · cash $392.77 (unchanged overnight, no fees) · equity $7,740.61 vs prior close $7,905.13 (-164.52) · 9 name(s) re-marked at the open (per-name table). AMN×6 yday $47.74 → 09:30 $47.89 +0.90; ARQT×26 yday $34.05 → 09:30 $29.00 -131.30; CDNA×13 yday $85.86 → 09:30 $83.60 -29.38; CON×1 yday $43.56 → 09:30 $43.57 +0.01; CORT×21 yday $79.22 → 09:30 $77.88 -28.14; ETON×10 yday $50.72 → 09:30 $51.15 +4.30; PACS×1 yday $50.26 → 09:30 $50.78 +0.52; VEEV×6 yday $310.63 → 09:30 $312.89 +13.56; VLO×3 yday $365.34 → 09:30 $367.01 +5.01 | — |
+| 2026-11-05 09:30 ET | **SELL** | `AMN` | 6 | $47.89 | $2.03 | $-1.52 | $678.08 | ▼ -1.52 after sell → book $7,738.58; vs 09:30 mark -2.03 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-05 09:30 ET | **SELL** | `ARQT` | 26 | $29.00 | $2.09 | $-84.15 | $1,429.99 | ▼ -84.15 after sell → book $7,736.49; vs 09:30 mark -2.09 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-05 09:30 ET | **SELL** | `CDNA` | 13 | $83.60 | $2.05 | $-46.72 | $2,514.74 | ▼ -46.72 after sell → book $7,734.44; vs 09:30 mark -2.05 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-05 09:30 ET | **SELL** | `CORT` | 21 | $77.88 | $2.08 | $-68.18 | $4,148.15 | ▼ -68.18 after sell → book $7,732.37; vs 09:30 mark -2.07 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-05 09:30 ET | **SELL** | `ETON` | 10 | $51.15 | $2.04 | $-21.76 | $4,657.61 | ▼ -21.76 after sell → book $7,730.33; vs 09:30 mark -2.04 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-05 09:30 ET | **SELL** | `VEEV` | 6 | $312.89 | $2.03 | $-23.90 | $6,532.92 | ▼ -23.90 after sell → book $7,728.30; vs 09:30 mark -2.03 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-05 09:30 ET | **SELL** | `VLO` | 3 | $367.01 | $2.02 | $-81.03 | $7,631.93 | ▼ -81.03 after sell → book $7,726.28; vs 09:30 mark -2.02 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-05 09:30 ET | **BUY** | `CSGP` | 51 | $33.11 | $2.14 | — | $5,941.17 | — | rank-weighted leftover; list flatten; ret5=+18.3; leftover $1695.98 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟡 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **BUY** | `CMCSA` | 59 | $25.10 | $2.17 | — | $4,458.11 | — | rank-weighted leftover; list flatten; ret5=+15.2; leftover $1483.99 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **BUY** | `CLX` | 12 | $99.88 | $2.03 | — | $3,257.52 | — | rank-weighted leftover; list flatten,ohlc_hot; ret5=+14.2; leftover $1271.99 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **BUY** | `COCO` | 15 | $67.15 | $2.04 | — | $2,248.24 | — | rank-weighted leftover; list flatten; ret5=+16.1; leftover $1059.99 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **BUY** | `CROX` | 5 | $160.00 | $2.00 | — | $1,446.23 | — | rank-weighted leftover; list flatten; ret5=+33.5; leftover $847.99 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **BUY** | `GPK` | 53 | $11.82 | $2.15 | — | $817.62 | — | rank-weighted leftover; list flatten; ret5=+37.6; leftover $635.99 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🟡 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **BUY** | `SMMT` | 26 | $16.10 | $2.07 | — | $396.95 | — | rank-weighted leftover; list probable,yday_gainer,yday_mover; ret5=+2.5; leftover $424.00 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-05 09:30 ET | **BUY** | `PRMB` | 9 | $21.55 | $1.97 | — | $201.04 | — | rank-weighted leftover; list probable,yday_gainer,yday_mover; ret5=+8.8; leftover $212.00 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $201.04 | ▼ close $7,495.40 vs 09:30 $7,740.61 (session -214.32) | 16:00 close · cash $201.04 · equity $7,495.40 vs 09:30 $7,740.61 (-245.21; session marks -214.32) · 10 name(s) marked open→close (per-name table). CON×1 09:30 $43.57 → close $42.15 -1.42; PACS×1 09:30 $50.78 → close $50.20 -0.58; CSGP×51 09:30 $33.11 → close $32.05 -54.06; CMCSA×59 09:30 $25.10 → close $24.95 -8.85; CLX×12 09:30 $99.88 → close $99.70 -2.16; COCO×15 09:30 $67.15 → close $63.63 -52.80; CROX×5 09:30 $160.00 → close $152.93 -35.35; GPK×53 09:30 $11.82 → close $11.54 -14.84; SMMT×26 09:30 $16.10 → close $14.19 -49.66; PRMB×9 09:30 $21.55 → close $22.15 +5.40 | — |
 
 ## Not taken
 

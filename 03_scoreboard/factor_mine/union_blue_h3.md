@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ blue, no 🚨
 
-Cash book **-25.61%** ($7,439) · signal-only (no cash/fees) was -3.24%. Starts YES **2/30**. Fills 353 · skips 296 · realized $-1559.94.
+Cash book **-27.67%** ($7,233) · signal-only (no cash/fees) was -3.24%. Starts YES **2/30**. Fills 360 · skips 296 · realized $-1559.94.
 
 ## How this sleeve decides (like you are 10)
 
@@ -543,6 +543,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-04 09:30 ET | **BUY** | `CNMD` | 1 | $47.99 | $0.48 | — | $344.27 | — | union ∩ blue, no 🚨; gate blue=True; list flatten; 🔵; ret5=+0.1; leftover $64.98 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-11-04 09:30 ET | **BUY** | `EPR` | 1 | $60.00 | $0.60 | — | $283.67 | — | union ∩ blue, no 🚨; gate blue=True; list probable,yday_gainer,yday_mover; 🔵; ret5=+6.8; leftover $64.98 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-11-04 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $283.67 | ▼ close $7,439.37 vs 09:30 $7,508.69 (session -66.98) | 16:00 close · cash $283.67 · equity $7,439.37 vs 09:30 $7,508.69 (-69.32; session marks -66.98) · 12 name(s) marked open→close (per-name table). AMN×22 09:30 $46.33 → close $47.74 +31.02; ARQT×33 09:30 $32.88 → close $34.05 +38.44; CDNA×12 09:30 $89.00 → close $85.86 -37.68; CORT×13 09:30 $84.98 → close $79.22 -74.88; ETON×20 09:30 $51.76 → close $50.72 -20.80; VEEV×3 09:30 $306.62 → close $310.63 +12.03; VLO×2 09:30 $378.30 → close $365.34 -25.92; PACS×1 09:30 $48.51 → close $50.26 +1.75; CON×1 09:30 $40.90 → close $43.56 +2.66; PCRX×1 09:30 $36.41 → close $36.40 -0.01; CNMD×1 09:30 $47.99 → close $53.66 +5.67; EPR×1 09:30 $60.00 → close $60.74 +0.74 | — |
+| 2026-11-05 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $283.67 | ▼ 09:30 equity $7,251.84 vs yday $7,439.37 (-187.53) | 09:30 open · cash $283.67 (unchanged overnight, no fees) · equity $7,251.84 vs prior close $7,439.37 (-187.53) · 12 name(s) re-marked at the open (per-name table). AMN×22 yday $47.74 → 09:30 $47.89 +3.30; ARQT×33 yday $34.05 → 09:30 $29.00 -166.65; CDNA×12 yday $85.86 → 09:30 $83.60 -27.12; CNMD×1 yday $53.66 → 09:30 $54.40 +0.74; CON×1 yday $43.56 → 09:30 $43.57 +0.01; CORT×13 yday $79.22 → 09:30 $77.88 -17.42; EPR×1 yday $60.74 → 09:30 $61.10 +0.36; ETON×20 yday $50.72 → 09:30 $51.15 +8.60; PACS×1 yday $50.26 → 09:30 $50.78 +0.52; PCRX×1 yday $36.40 → 09:30 $36.41 +0.01; VEEV×3 yday $310.63 → 09:30 $312.89 +6.78; VLO×2 yday $365.34 → 09:30 $367.01 +3.34 | — |
+| 2026-11-05 09:30 ET | **SELL** | `AMN` | 22 | $47.89 | $2.08 | $+5.11 | $1,335.17 | ▲ +5.11 after sell → book $7,249.76; vs 09:30 mark -2.08 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-05 09:30 ET | **SELL** | `ARQT` | 33 | $29.00 | $2.11 | $-105.73 | $2,290.07 | ▼ -105.73 after sell → book $7,247.66; vs 09:30 mark -2.10 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-05 09:30 ET | **SELL** | `CDNA` | 12 | $83.60 | $2.05 | $-43.43 | $3,291.22 | ▼ -43.43 after sell → book $7,245.61; vs 09:30 mark -2.05 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-05 09:30 ET | **SELL** | `CORT` | 13 | $77.88 | $2.05 | $-43.73 | $4,301.61 | ▼ -43.73 after sell → book $7,243.56; vs 09:30 mark -2.05 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-05 09:30 ET | **SELL** | `ETON` | 20 | $51.15 | $2.07 | $-39.52 | $5,322.54 | ▼ -39.52 after sell → book $7,241.49; vs 09:30 mark -2.07 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-05 09:30 ET | **SELL** | `VEEV` | 3 | $312.89 | $2.02 | $-13.95 | $6,259.19 | ▼ -13.95 after sell → book $7,239.47; vs 09:30 mark -2.02 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-05 09:30 ET | **SELL** | `VLO` | 2 | $367.01 | $2.02 | $-55.35 | $6,991.19 | ▼ -55.35 after sell → book $7,237.45; vs 09:30 mark -2.02 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,991.19 | ▼ close $7,232.59 vs 09:30 $7,251.84 (session -4.87) | 16:00 close · cash $6,991.19 · equity $7,232.59 vs 09:30 $7,251.84 (-19.26; session marks -4.87) · 5 name(s) marked open→close (per-name table). CNMD×1 09:30 $54.40 → close $52.83 -1.57; CON×1 09:30 $43.57 → close $42.15 -1.42; EPR×1 09:30 $61.10 → close $59.79 -1.31; PACS×1 09:30 $50.78 → close $50.20 -0.58; PCRX×1 09:30 $36.41 → close $36.42 +0.01 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `ohlc_hot` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · baseline list, no extra gate
 
-Cash book **-21.32%** ($7,869) · signal-only (no cash/fees) was +6.95%. Starts YES **0/30**. Fills 464 · skips 93 · realized $-1456.67.
+Cash book **-21.52%** ($7,848) · signal-only (no cash/fees) was +6.95%. Starts YES **0/30**. Fills 480 · skips 93 · realized $-1456.67.
 
 ## How this sleeve decides (like you are 10)
 
@@ -650,6 +650,24 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-04 09:30 ET | **BUY** | `APG` | 22 | $46.47 | $2.06 | — | $1,190.28 | — | baseline list, no extra gate; list ohlc_hot; ret5=+13.6; leftover $1024.07 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-11-04 09:30 ET | **BUY** | `IVA` | 244 | $4.18 | $3.15 | — | $167.21 | — | baseline list, no extra gate; list ohlc_hot; 🔵; ret5=+9.4; leftover $1024.07 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-11-04 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $167.21 | ▼ close $7,868.55 vs 09:30 $8,192.52 (session -305.83) | 16:00 close · cash $167.21 · equity $7,868.55 vs 09:30 $8,192.52 (-323.97; session marks -305.83) · 8 name(s) marked open→close (per-name table). PRIM×12 09:30 $84.45 → close $68.45 -192.00; BETA×42 09:30 $24.00 → close $25.31 +55.02; RRX×5 09:30 $179.68 → close $173.38 -31.50; VFC×49 09:30 $20.53 → close $20.93 +19.60; RUN×109 09:30 $9.36 → close $8.79 -62.13; SHLS×115 09:30 $8.86 → close $9.16 +34.50; APG×22 09:30 $46.47 → close $44.03 -53.68; IVA×244 09:30 $4.18 → close $3.87 -75.64 | — |
+| 2026-11-05 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $167.21 | ▲ 09:30 equity $7,966.66 vs yday $7,868.55 (+98.11) | 09:30 open · cash $167.21 (unchanged overnight, no fees) · equity $7,966.66 vs prior close $7,868.55 (+98.11) · 8 name(s) re-marked at the open (per-name table). APG×22 yday $44.03 → 09:30 $43.12 -20.02; BETA×42 yday $25.31 → 09:30 $25.00 -13.02; IVA×244 yday $3.87 → 09:30 $3.96 +21.96; PRIM×12 yday $68.45 → 09:30 $65.93 -30.24; RRX×5 yday $173.38 → 09:30 $167.31 -30.35; RUN×109 yday $8.79 → 09:30 $10.48 +184.76; SHLS×115 yday $9.16 → 09:30 $9.00 -18.40; VFC×49 yday $20.93 → 09:30 $21.00 +3.43 | — |
+| 2026-11-05 09:30 ET | **SELL** | `APG` | 22 | $43.12 | $2.08 | $-77.83 | $1,113.77 | ▼ -77.83 after sell → book $7,964.59; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-05 09:30 ET | **SELL** | `BETA` | 42 | $25.00 | $2.14 | $+37.75 | $2,161.64 | ▲ +37.75 after sell → book $7,962.45; vs 09:30 mark -2.14 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-05 09:30 ET | **SELL** | `IVA` | 244 | $3.96 | $3.20 | $-60.03 | $3,124.68 | ▼ -60.03 after sell → book $7,959.25; vs 09:30 mark -3.20 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-05 09:30 ET | **SELL** | `PRIM` | 12 | $65.93 | $2.05 | $-226.31 | $3,913.79 | ▼ -226.31 after sell → book $7,957.21; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | join🔴 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **SELL** | `RRX` | 5 | $167.31 | $2.02 | $-65.88 | $4,748.32 | ▼ -65.88 after sell → book $7,955.18; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-05 09:30 ET | **SELL** | `RUN` | 109 | $10.48 | $2.35 | $+117.96 | $5,888.84 | ▲ +117.96 after sell → book $7,952.84; vs 09:30 mark -2.34 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-05 09:30 ET | **SELL** | `SHLS` | 115 | $9.00 | $2.36 | $+11.40 | $6,921.47 | ▲ +11.40 after sell → book $7,950.47; vs 09:30 mark -2.37 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-05 09:30 ET | **SELL** | `VFC` | 49 | $21.00 | $2.16 | $+18.74 | $7,948.32 | ▲ +18.74 after sell → book $7,948.32; vs 09:30 mark -2.15 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-05 09:30 ET | **BUY** | `CLX` | 9 | $99.88 | $2.02 | — | $7,047.38 | — | baseline list, no extra gate; list flatten,ohlc_hot; ret5=+14.2; leftover $993.54 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **BUY** | `POOL` | 4 | $219.38 | $2.00 | — | $6,167.86 | — | baseline list, no extra gate; list yday_gainer,ohlc_hot; ret5=+12.1; leftover $993.54 | join🔴 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **BUY** | `SWIM` | 121 | $8.15 | $2.35 | — | $5,179.36 | — | baseline list, no extra gate; list ohlc_hot; ret5=+16.0; leftover $993.54 | join🔴 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **BUY** | `UWMC` | 588 | $1.69 | $7.59 | — | $4,179.81 | — | baseline list, no extra gate; list ohlc_hot; ret5=+12.7; leftover $993.54 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **BUY** | `MOS` | 46 | $21.55 | $2.13 | — | $3,186.62 | — | baseline list, no extra gate; list ohlc_hot; ret5=+17.9; leftover $993.54 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **BUY** | `SIBN` | 39 | $24.95 | $2.11 | — | $2,211.46 | — | baseline list, no extra gate; list ohlc_hot; ret5=+14.3; leftover $993.54 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **BUY** | `GEHC` | 11 | $86.25 | $2.02 | — | $1,260.69 | — | baseline list, no extra gate; list ohlc_hot; ret5=+13.2; leftover $993.54 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **BUY** | `QNST` | 49 | $20.03 | $2.14 | — | $277.08 | — | baseline list, no extra gate; list ohlc_hot; ret5=+17.8; leftover $993.54 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $277.08 | ▼ close $7,848.42 vs 09:30 $7,966.66 (session -77.55) | 16:00 close · cash $277.08 · equity $7,848.42 vs 09:30 $7,966.66 (-118.24; session marks -77.55) · 8 name(s) marked open→close (per-name table). CLX×9 09:30 $99.88 → close $99.70 -1.62; POOL×4 09:30 $219.38 → close $216.66 -10.88; SWIM×121 09:30 $8.15 → close $7.92 -27.83; UWMC×588 09:30 $1.69 → close $1.63 -33.52; MOS×46 09:30 $21.55 → close $22.33 +36.11; SIBN×39 09:30 $24.95 → close $24.27 -26.52; GEHC×11 09:30 $86.25 → close $83.75 -27.50; QNST×49 09:30 $20.03 → close $20.32 +14.21 | — |
 
 ## Not taken
 

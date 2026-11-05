@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · alarm
 
-Cash book **+2.01%** ($10,201) · signal-only (no cash/fees) was -2.80%. Starts YES **2/30**. Fills 259 · skips 221 · realized $+639.78.
+Cash book **+5.37%** ($10,537) · signal-only (no cash/fees) was -2.80%. Starts YES **2/30**. Fills 267 · skips 221 · realized $+639.78.
 
 ## How this sleeve decides (like you are 10)
 
@@ -447,6 +447,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-03 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,201.37 | ▲ close $10,201.37 vs 09:30 $10,201.37 (session +0.00) | 16:00 close · cash $10,201.37 · no lots left · equity $10,201.37. | — |
 | 2026-11-04 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,201.37 | ▲ 09:30 equity $10,201.37 vs yday $10,201.37 (+0.00) | 09:30 open · cash $10,201.37 · no holdings · equity $10,201.37 vs prior close $10,201.37 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-11-04 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,201.37 | ▲ close $10,201.37 vs 09:30 $10,201.37 (session +0.00) | 16:00 close · cash $10,201.37 · no lots left · equity $10,201.37. | — |
+| 2026-11-05 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,201.37 | ▲ 09:30 equity $10,201.37 vs yday $10,201.37 (+0.00) | 09:30 open · cash $10,201.37 · no holdings · equity $10,201.37 vs prior close $10,201.37 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-05 09:30 ET | **SHORT** | `SMMT` | 39 | $16.10 | $2.14 | — | $10,827.13 | — | alarm; gate alarm=True; list probable,yday_gainer,yday_mover; ret5=+2.5; leftover $637.59 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-05 09:30 ET | **SHORT** | `NVTS` | 72 | $8.75 | $2.25 | — | $11,454.88 | — | alarm; gate alarm=True; list probable,yday_gainer,yday_mover; ret5=-0.3; leftover $637.59 | join🔴 sector🔴 gen🔴 news🟢 digest🟡 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **SHORT** | `PDFS` | 17 | $36.98 | $2.08 | — | $12,081.46 | — | alarm; gate alarm=True; list probable,yday_gainer,yday_mover; ret5=-12.5; leftover $637.59 | join🔴 sector🔴 gen🔴 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **SHORT** | `AIP` | 36 | $17.26 | $2.14 | — | $12,700.69 | — | alarm; gate alarm=True; list probable,yday_gainer,yday_mover; ret5=-15.5; leftover $637.59 | join🔴 sector🔴 gen🔴 news🟡 digest🟡 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **SHORT** | `CXW` | 21 | $30.23 | $2.09 | — | $13,333.53 | — | alarm; gate alarm=True; list probable,yday_gainer,yday_mover; ret5=-0.4; leftover $637.59 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **SHORT** | `ACRS` | 171 | $3.71 | $2.56 | — | $13,965.38 | — | alarm; gate alarm=True; list probable,yday_gainer,yday_mover; ret5=-7.1; leftover $637.59 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **SHORT** | `MX` | 276 | $2.31 | $3.63 | — | $14,599.31 | — | alarm; gate alarm=True; list probable,yday_gainer,yday_mover; ret5=-8.4; leftover $637.59 | join🔴 sector🔴 gen🔴 news🟡 digest🟡 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **SHORT** | `EGG` | 125 | $5.10 | $2.41 | — | $15,234.40 | — | alarm; gate alarm=True; list yday_gainer,yday_mover; ret5=+10.7; leftover $637.59 | join🔴 sector🔴 gen🔴 news🟡 digest🟢 ab🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-11-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $15,234.40 | ▲ close $10,536.93 vs 09:30 $10,201.37 (session +354.85) | 16:00 close · cash $15,234.40 · equity $10,536.93 vs 09:30 $10,201.37 (+335.56; session marks +354.85) · 8 name(s) marked open→close (per-name table). SMMT×39 09:30 $16.10 → close $14.19 +74.49; NVTS×72 09:30 $8.75 → close $7.86 +64.08; PDFS×17 09:30 $36.98 → close $34.52 +41.82; AIP×36 09:30 $17.26 → close $15.93 +47.88; CXW×21 09:30 $30.23 → close $28.23 +42.10; ACRS×171 09:30 $3.71 → close $3.61 +17.10; MX×276 09:30 $2.31 → close $2.05 +71.76; EGG×125 09:30 $5.10 → close $5.13 -4.38 | — |
 
 ## Not taken
 

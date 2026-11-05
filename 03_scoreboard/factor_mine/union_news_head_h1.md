@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · prior-export headline🟢 only
 
-Cash book **-54.31%** ($4,569) · signal-only (no cash/fees) was +13.09%. Starts YES **0/30**. Fills 268 · skips 65 · realized $-814.48.
+Cash book **-58.71%** ($4,129) · signal-only (no cash/fees) was +13.09%. Starts YES **0/30**. Fills 275 · skips 65 · realized $-814.48.
 
 ## How this sleeve decides (like you are 10)
 
@@ -459,6 +459,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-04 09:30 ET | **BUY** | `ITW` | 3 | $292.62 | $2.00 | — | $907.45 | — | prior-export headline🟢 only; gate headline=good; rank cond; list yday_gainer; ret5=+3.9; leftover $896.10 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-11-04 09:30 ET | **BUY** | `PWR` | 1 | $627.07 | $1.99 | — | $278.38 | — | prior-export headline🟢 only; gate headline=good; rank cond; list ohlc_hot; ret5=+13.5; leftover $896.10 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-11-04 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $278.38 | ▼ close $4,568.71 vs 09:30 $4,686.54 (session -103.92) | 16:00 close · cash $278.38 · equity $4,568.71 vs 09:30 $4,686.54 (-117.83; session marks -103.92) · 6 name(s) marked open→close (per-name table). NVTS×22 09:30 $9.37 → close $9.33 -0.77; GRAB×278 09:30 $3.22 → close $3.36 +38.92; TBBB×14 09:30 $63.74 → close $65.07 +18.62; GLND×333 09:30 $2.69 → close $2.34 -116.55; ITW×3 09:30 $292.62 → close $293.45 +2.49; PWR×1 09:30 $627.07 → close $580.44 -46.63 | — |
+| 2026-11-05 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $278.38 | ▼ 09:30 equity $4,512.15 vs yday $4,568.71 (-56.56) | 09:30 open · cash $278.38 (unchanged overnight, no fees) · equity $4,512.15 vs prior close $4,568.71 (-56.56) · 6 name(s) re-marked at the open (per-name table). GLND×333 yday $2.34 → 09:30 $2.28 -19.98; GRAB×278 yday $3.36 → 09:30 $3.35 -2.78; ITW×3 yday $293.45 → 09:30 $296.15 +8.10; NVTS×22 yday $9.33 → 09:30 $8.75 -12.76; PWR×1 yday $580.44 → 09:30 $552.00 -28.44; TBBB×14 yday $65.07 → 09:30 $65.02 -0.70 | — |
+| 2026-11-05 09:30 ET | **SELL** | `GLND` | 333 | $2.28 | $4.36 | $-145.19 | $1,033.26 | ▼ -145.19 after sell → book $4,507.79; vs 09:30 mark -4.36 | dropped from list after 1 sess (min 1) | join🔴 sector🔴 gen🔴 news🟢 digest🟢 ab🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **SELL** | `GRAB` | 278 | $3.35 | $3.64 | $+28.91 | $1,960.92 | ▲ +28.91 after sell → book $4,504.15; vs 09:30 mark -3.64 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-05 09:30 ET | **SELL** | `ITW` | 3 | $296.15 | $2.02 | $+6.57 | $2,847.35 | ▲ +6.57 after sell → book $4,502.13; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | join🔴 sector🔴 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **SELL** | `NVTS` | 22 | $8.75 | $2.01 | $+0.22 | $3,037.84 | ▲ +0.22 after sell → book $4,500.12; vs 09:30 mark -2.01 | dropped from list after 3 sess (min 1) | join🔴 sector🔴 gen🔴 news🟢 digest🟡 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **SELL** | `PWR` | 1 | $552.00 | $2.01 | $-79.08 | $3,587.82 | ▼ -79.08 after sell → book $4,498.10; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-05 09:30 ET | **BUY** | `STUB` | 273 | $6.56 | $3.52 | — | $1,793.42 | — | prior-export headline🟢 only; gate headline=good; rank cond; list ohlc_hot; ret5=+17.7; leftover $1793.91 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟡 heat🟢 vol🔴 buy🟡 |
+| 2026-11-05 09:30 ET | **BUY** | `MVST` | 2637 | $0.67 | $25.58 | — | $1.05 | — | prior-export headline🟢 only; gate headline=good; rank cond; list ohlc_hot; ret5=+7.2; leftover $1793.91 | join🟢 sector🔴 gen🔴 news🟢 digest🟢 ab🔴 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-11-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1.05 | ▼ close $4,128.86 vs 09:30 $4,512.15 (session -340.14) | 16:00 close · cash $1.05 · equity $4,128.86 vs 09:30 $4,512.15 (-383.29; session marks -340.14) · 3 name(s) marked open→close (per-name table). TBBB×14 09:30 $65.02 → close $64.21 -11.34; STUB×273 09:30 $6.56 → close $6.28 -76.44; MVST×2637 09:30 $0.67 → close $0.57 -252.36 | — |
 
 ## Not taken
 

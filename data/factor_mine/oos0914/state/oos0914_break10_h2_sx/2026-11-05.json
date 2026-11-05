@@ -1,0 +1,176 @@
+{
+  "buys": [
+    {
+      "fill_rule": "open",
+      "price": 11.82,
+      "shares": 3,
+      "side": "BUY",
+      "ticker": "GPK"
+    },
+    {
+      "fill_rule": "open",
+      "price": 21.545,
+      "shares": 1,
+      "side": "BUY",
+      "ticker": "MOS"
+    },
+    {
+      "fill_rule": "open",
+      "price": 3.625,
+      "shares": 11,
+      "side": "BUY",
+      "ticker": "AMC"
+    }
+  ],
+  "cash": 73.82,
+  "date": "2026-11-05",
+  "equity": 9587.02,
+  "fees": 1.0138,
+  "fills": [
+    {
+      "fees": 0.3636,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 11.82,
+      "shares": 3,
+      "side": "BUY",
+      "ticker": "GPK"
+    },
+    {
+      "fees": 0.2185,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 21.545,
+      "shares": 1,
+      "side": "BUY",
+      "ticker": "MOS"
+    },
+    {
+      "fees": 0.4317,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 3.625,
+      "shares": 11,
+      "side": "BUY",
+      "ticker": "AMC"
+    }
+  ],
+  "holdings": [
+    "AMC",
+    "BETA",
+    "GPK",
+    "JLHL",
+    "MOS",
+    "RRX",
+    "VFC"
+  ],
+  "mean": -5.4794,
+  "n_trades_today": 3,
+  "recipe": "oos0914_break10_h2_sx",
+  "sells": [],
+  "state": {
+    "after": "2026-11-05",
+    "cash": 73.82,
+    "pos": {
+      "AMC": {
+        "close_px": 3.08,
+        "cost": 40.3067,
+        "entry_date": "2026-11-05",
+        "entry_px": 3.625,
+        "fee_in": 0.4317,
+        "last_px": 3.625,
+        "min_hold": 2,
+        "notional": 39.875,
+        "peak_px": 3.625,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list ohlc_hot; ret5=+17.7; leftover $42.93",
+        "shares": 11,
+        "ticker": "AMC"
+      },
+      "BETA": {
+        "close_px": 24.049999237060547,
+        "cost": 2474.299,
+        "entry_date": "2026-11-04",
+        "entry_px": 24.0,
+        "fee_in": 2.299,
+        "last_px": 25.0,
+        "min_hold": 2,
+        "notional": 2472.0,
+        "peak_px": 25.0,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list ohlc_hot; ret5=+13.9; leftover $2483.09",
+        "shares": 103,
+        "ticker": "BETA"
+      },
+      "GPK": {
+        "close_px": 11.54,
+        "cost": 35.8236,
+        "entry_date": "2026-11-05",
+        "entry_px": 11.82,
+        "fee_in": 0.3636,
+        "last_px": 11.82,
+        "min_hold": 2,
+        "notional": 35.46,
+        "peak_px": 11.82,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list flatten; ret5=+37.6; leftover $42.93",
+        "shares": 3,
+        "ticker": "GPK"
+      },
+      "JLHL": {
+        "close_px": 6.62,
+        "cost": 2482.5413999999996,
+        "entry_date": "2026-11-04",
+        "entry_px": 6.77,
+        "fee_in": 4.7214,
+        "last_px": 8.0,
+        "min_hold": 2,
+        "notional": 2477.8199999999997,
+        "peak_px": 8.0,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list yday_mover; ret5=+19.3; leftover $2483.09",
+        "shares": 366,
+        "ticker": "JLHL"
+      },
+      "MOS": {
+        "close_px": 22.33,
+        "cost": 21.7635,
+        "entry_date": "2026-11-05",
+        "entry_px": 21.545,
+        "fee_in": 0.2185,
+        "last_px": 21.545,
+        "min_hold": 2,
+        "notional": 21.545,
+        "peak_px": 21.545,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list ohlc_hot; ret5=+17.9; leftover $42.93",
+        "shares": 1,
+        "ticker": "MOS"
+      },
+      "RRX": {
+        "close_px": 160.3000030517578,
+        "cost": 2337.869,
+        "entry_date": "2026-11-04",
+        "entry_px": 179.68,
+        "fee_in": 2.029,
+        "last_px": 167.30999755859375,
+        "min_hold": 2,
+        "notional": 2335.84,
+        "peak_px": 179.68,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list ohlc_hot; ret5=+13.7; leftover $2483.09",
+        "shares": 13,
+        "ticker": "RRX"
+      },
+      "VFC": {
+        "close_px": 20.31999969482422,
+        "cost": 2465.9500000000003,
+        "entry_date": "2026-11-04",
+        "entry_px": 20.53,
+        "fee_in": 2.35,
+        "last_px": 21.0,
+        "min_hold": 2,
+        "notional": 2463.6000000000004,
+        "peak_px": 21.0,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list ohlc_hot; \ud83d\udd35; ret5=+17.7; leftover $2483.09",
+        "shares": 120,
+        "ticker": "VFC"
+      }
+    },
+    "yday_equity": 9587.02
+  }
+}
