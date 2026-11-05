@@ -35088,7 +35088,7 @@
           "status": "miss"
         }
       ],
-      "reflection_lesson_ref": null,
+      "reflection_lesson_ref": "02_lessons/candidate/2026-11-02_lesson.md",
       "sources_used": [],
       "horizon_calls": {
         "HORIZON_3D": {
@@ -35127,7 +35127,8 @@
       "knowable_at_9am": "partially — ingredients visible, but the magnitude and timing of the tech unwind were not fully foreseeable",
       "attribution_contested": "yes — some outlets lead with oil/Iran, others with tech/AI debt; the afternoon belongs to tech",
       "outlier_watch": "VIX +8.9% to 21.15 despite SPX only −0.5% and 69% breadth positive — tech-specific hedging, not broad panic",
-      "horizon_grades": {}
+      "horizon_grades": {},
+      "lesson_schema_ok": true
     },
     {
       "date": "2026-11-03",
