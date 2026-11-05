@@ -1305,10 +1305,10 @@
         "step": null
       },
       "2026-09-16": {
-        "class": "still broken",
-        "label": "missed",
-        "reason": "no 09:30 open in daily bars",
-        "step": "lock"
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
       },
       "2026-09-29": {
         "class": "sat out (rule)",
@@ -1341,10 +1341,10 @@
         "step": null
       },
       "2026-10-27": {
-        "class": "still broken",
-        "label": "missed",
-        "reason": "no 09:30 open in daily bars",
-        "step": "lock"
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "rebuilt from the prior day's state at the session open",
+        "step": null
       },
       "2026-11-03": {
         "class": "sat out (rule)",

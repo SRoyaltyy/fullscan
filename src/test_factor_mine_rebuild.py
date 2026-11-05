@@ -350,11 +350,17 @@ def test_supplied_stooq_opens_agree_with_yahoo() -> None:
     assert opens_agree(50.805, 50.81)
     assert opens_agree(8.79, 8.79 * 1.006) is False
     loaded = load_supplied_opens()
-    assert len(loaded) == 12
+    assert len(loaded) == 17
     assert loaded[("2026-10-26", "SUJA")]["open"] == 9.89
     assert loaded[("2026-10-26", "RRC")]["open"] == 50.805
     assert loaded[("2026-10-02", "GRML")]["source"] == "stooq_bulk:GRML.us.txt"
     assert loaded[("2026-10-26", "QTEX")]["source_sha256"] == STOOQ_SHA
+    assert loaded[("2026-09-16", "SMJF")]["open"] == 1.05
+    assert loaded[("2026-09-16", "BRR")]["open"] == 3.08
+    assert loaded[("2026-09-16", "BRR")]["source"] == "stooq_hist:SVIA.us"
+    assert loaded[("2026-10-27", "PCVX")]["open"] == 59.92
+    assert loaded[("2026-10-27", "SUJA")]["open"] == 9.71
+    assert loaded[("2026-10-27", "ZIP")]["open"] == 4.55
     for key, info in loaded.items():
         assert opens_agree(info["open"], YAHOO_OPEN[key])
 
@@ -366,10 +372,80 @@ def test_needs_open_list_is_the_lock_gap() -> None:
     rows = [tuple(line.split(",")) for line in lines[1:]]
     assert ("2026-10-26", "QTEX") in rows
     assert ("2026-10-02", "GRML") in rows
+    assert ("2026-09-16", "SMJF") in rows
+    assert ("2026-09-16", "BRR") in rows
+    assert ("2026-10-27", "PCVX") in rows
+    assert ("2026-10-27", "SUJA") in rows
+    assert ("2026-10-27", "ZIP") in rows
     assert all(len(row) == 2 and len(row[0]) == 10 for row in rows)
     # These lock names already have a daily open, so they are not a request.
     assert ("2026-10-26", "TRU") not in rows
     assert ("2026-09-25", "DELL") not in rows
+
+
+def test_lock_days_replace_only_until_the_open_is_applied() -> None:
+    import json
+    from src.factor_mine_rebuild import _lock_needs_supplied, _patch_lock_cells
+
+    gap = {
+        "strategies": {
+            "short_alarm_h3": {
+                "class": "still broken",
+                "step": "lock",
+                "skips": [{"kind": "no_price", "ticker": "SMJF"}],
+            }
+        }
+    }
+    assert _lock_needs_supplied("2026-09-16", gap) is True
+    covered = {
+        "supplied_opens": {"SMJF": {}, "BRR": {}},
+        "strategies": gap["strategies"],
+    }
+    assert _lock_needs_supplied("2026-09-16", covered) is False
+    root = Path(__file__).resolve().parent.parent / "data" / "factor_mine" / "rebuilt"
+    done = json.loads((root / "2026-10-26.json").read_text(encoding="utf-8"))
+    assert _lock_needs_supplied("2026-10-26", done) is False
+    old = {
+        "source": "theme_radar_snapshot",
+        "strategies": {
+            "short_alarm_h3": {"class": "still broken"},
+            "overnight_h1": {"class": "rebuilt", "picks": ["AAA"]},
+        },
+    }
+    fresh = {
+        "supplied_opens": {"SMJF": {"open_0930": 1.05}},
+        "strategies": {
+            "short_alarm_h3": {"class": "rebuilt", "picks": ["SMJF"]},
+            "overnight_h1": {"class": "rebuilt", "picks": ["ZZZ"]},
+        },
+    }
+    merged = _patch_lock_cells(old, fresh, {"short_alarm_h3"})
+    assert merged["strategies"]["short_alarm_h3"]["class"] == "rebuilt"
+    assert merged["strategies"]["overnight_h1"]["picks"] == ["AAA"]
+    assert merged["supplied_opens"]["SMJF"]["open_0930"] == 1.05
+
+
+def test_build_misses_keep_the_known_reason() -> None:
+    import json
+    root = Path(__file__).resolve().parent.parent / "data" / "factor_mine" / "rebuilt"
+    expect = {
+        ("2026-08-13", "short_alarm_h3"): "sealed day picked nobody while leak-safe names existed",
+        ("2026-08-13", "short_news_r_h3"): "sealed day picked nobody while leak-safe names existed",
+        ("2026-08-13", "short_news_r_macd_h3"): "sealed day picked nobody while leak-safe names existed",
+        ("2026-08-13", "union_news_pack_h1"): "sealed day picked nobody while leak-safe names existed",
+        ("2026-08-13", "union_news_pack_net2_h1"): "sealed day picked nobody while leak-safe names existed",
+        ("2026-08-17", "overnight_mega_h1"): "sealed day picked nobody while leak-safe names existed",
+        ("2026-08-17", "overnight_mega_h2"): "sealed day picked nobody while leak-safe names existed",
+        ("2026-08-28", "overnight_mega_h1"): "no D-1 snapshot (2026-08-27.raw.csv is missing)",
+        ("2026-08-28", "overnight_mega_h2"): "no D-1 snapshot (2026-08-27.raw.csv is missing)",
+    }
+    for (day, name), reason in expect.items():
+        doc = json.loads((root / f"{day}.json").read_text(encoding="utf-8"))
+        row = doc["strategies"][name]
+        assert row["class"] == "still broken", (day, name, row.get("class"))
+        assert row["step"] == "build", (day, name, row.get("step"))
+        assert row["reason"] == reason
+        assert row["picks"] == []
 
 
 def test_ovcal_names_rebuilt_rule_and_missed() -> None:
@@ -397,6 +473,8 @@ def main() -> None:
         test_daily_bar_open_clears_a_missing_bar_flag,
         test_needs_open_list_is_the_lock_gap,
         test_supplied_stooq_opens_agree_with_yahoo,
+        test_lock_days_replace_only_until_the_open_is_applied,
+        test_build_misses_keep_the_known_reason,
         test_auth_export_is_tried_before_login,
         test_ovcal_names_rebuilt_rule_and_missed,
     ]

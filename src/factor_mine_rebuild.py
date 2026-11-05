@@ -687,9 +687,22 @@ def _resume_for(name: str, prior: str | None, chain: dict[str, dict],
 
 
 STOOQ_SHA = "86473989a9087e5b02cf9c54dccd4c618ef006b7b2d8275c360f799c44d310df"
-# Yahoo daily opens used as the independent check. A Stooq print farther
-# than 0.5% from these is not used.
+# sha256 of each Stooq history page used for the later lock opens.
+# BRR.US was renamed to SVIA.US; that page is the 2026-09-16 BRR print.
+HIST_SHA = frozenset({
+    "fc7b4bd0b08bbb2157b09153c533596c9230b111b375b0c05b0a0faf009bbc7d",
+    "4aa60373d0132456d7d529e594d719c05900df2640ca4c7f22c9378bb71a4de9",
+    "8ffc6e0eb761fbf3bca7569796c713d3b1c6896af74399921c1cd25e863aa269",
+    "7126571f0e40c82d248b39dfa4b5a9cf35b8f74f250f80aa31522b6bbb5ab142",
+    "c1e19b15148632d2839eb5ae8e9568ccbcebfcf84c8e9b217e050a6f3fc8ae71",
+})
+ALLOWED_OPEN_SHA = frozenset({STOOQ_SHA}) | HIST_SHA
+# Yahoo opens used as the independent check. A Stooq print farther
+# than 0.5% from these is not used. BRR is Yahoo's 09:30 ET bar on the
+# same tape Stooq now lists as SVIA.US.
 YAHOO_OPEN = {
+    ("2026-09-16", "BRR"): 3.08,
+    ("2026-09-16", "SMJF"): 1.05,
     ("2026-10-02", "GRML"): 8.79,
     ("2026-10-05", "GRML"): 8.655,
     ("2026-10-06", "GRML"): 7.49,
@@ -702,6 +715,9 @@ YAHOO_OPEN = {
     ("2026-10-26", "RRC"): 50.81,
     ("2026-10-26", "SUJA"): 9.89,
     ("2026-10-26", "ZIP"): 4.63,
+    ("2026-10-27", "PCVX"): 59.92,
+    ("2026-10-27", "SUJA"): 9.71,
+    ("2026-10-27", "ZIP"): 4.55,
 }
 SUJA_VOLUME = 58900
 RRC_PRIOR_CLOSE = 43.23
@@ -726,7 +742,7 @@ def load_supplied_opens(root: Path | None = None) -> dict[tuple[str, str], dict]
         day, ticker, raw_open, source, digest = line.split(",")
         price = float(raw_open)
         yahoo = YAHOO_OPEN.get((day, ticker))
-        if yahoo is None or not opens_agree(price, yahoo) or digest != STOOQ_SHA:
+        if yahoo is None or not opens_agree(price, yahoo) or digest not in ALLOWED_OPEN_SHA:
             continue
         out[(day, ticker)] = {
             "open": price,
@@ -980,8 +996,8 @@ def build_day(date: str, *, panel: dict, grouped: dict[str, list[dict]],
     radar_day = _row_stamp(candidates)
     supplied_note = {}
     if used_supplied:
+        shas = {info["source_sha256"] for info in used_supplied.values()}
         supplied_note = {
-            "supplied_open_sha": STOOQ_SHA,
             "supplied_opens": {
                 ticker: {
                     "open_0930": info["open"],
@@ -991,6 +1007,8 @@ def build_day(date: str, *, panel: dict, grouped: dict[str, list[dict]],
                 for ticker, info in sorted(used_supplied.items())
             },
         }
+        if len(shas) == 1:
+            supplied_note["supplied_open_sha"] = next(iter(shas))
         if day == "2026-10-26" and "SUJA" in used_supplied:
             supplied_note["suja_thin_fill"] = {
                 "volume": SUJA_VOLUME,
@@ -1044,11 +1062,11 @@ def calendar(panel: dict, empty: dict[str, dict], root: Path | None = None) -> l
 
 
 def _lock_needs_supplied(day: str, doc: dict) -> bool:
-    """True when a lock cell on this morning is still missing a checked Stooq open."""
-    if doc.get("supplied_open_sha") == STOOQ_SHA:
-        return False
+    """True when a lock cell is still missing a checked open we now have."""
     opens = {ticker for (when, ticker) in load_supplied_opens() if when == day}
-    if not opens:
+    already = set(doc.get("supplied_opens") or {})
+    pending = opens - already
+    if not pending:
         return False
     for row in (doc.get("strategies") or {}).values():
         if row.get("step") != "lock" or row.get("class") != "still broken":
@@ -1057,9 +1075,24 @@ def _lock_needs_supplied(day: str, doc: dict) -> bool:
             skip.get("ticker") for skip in (row.get("skips") or [])
             if skip.get("kind") == "no_price"
         }
-        if blocked & opens:
+        if blocked & pending:
             return True
     return False
+
+
+def _patch_lock_cells(old: dict, fresh: dict, names: set[str]) -> dict:
+    """Keep every cell except the lock books that just received an open."""
+    merged = dict(old)
+    strategies = dict(old.get("strategies") or {})
+    fresh_rows = fresh.get("strategies") or {}
+    for name in sorted(names):
+        if name in fresh_rows:
+            strategies[name] = fresh_rows[name]
+    merged["strategies"] = strategies
+    for key in ("supplied_open_sha", "supplied_opens", "suja_thin_fill", "rrc_gap"):
+        if key in fresh:
+            merged[key] = fresh[key]
+    return merged
 
 
 def _replace_with_radar(day: str, doc: dict | None) -> bool:
@@ -1122,6 +1155,7 @@ def run_rebuild(*, root: Path | None = None, write: bool = False,
                 continue
             replacing = True
         supplied_strategies: set[str] = set()
+        patch = False
         if replacing and isinstance(have, dict):
             day_tickers = {
                 ticker for (when, ticker) in load_supplied_opens(base) if when == day
@@ -1135,12 +1169,20 @@ def run_rebuild(*, root: Path | None = None, write: bool = False,
                 }
                 if blocked & day_tickers:
                     supplied_strategies.add(name)
+            patch = bool(
+                supplied_strategies
+                and have.get("open_source") == "daily_bar"
+                and have.get("source") == "theme_radar_snapshot"
+            )
         doc = build_day(
-            day, panel=panel, grouped=grouped, cal=cal, names=names,
+            day, panel=panel, grouped=grouped, cal=cal,
+            names=[name for name in names if name in supplied_strategies] if patch else names,
             singles=singles, combos=combos, chain=chain, empty_inputs=empty,
             fees=fees, regime=regime, digests=digests, root=base,
             supplied_strategies=supplied_strategies,
         )
+        if patch and isinstance(have, dict):
+            doc = _patch_lock_cells(have, doc, supplied_strategies)
         chain[day] = doc
         if write:
             if replacing:
