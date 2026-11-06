@@ -1,0 +1,52 @@
+name: Entity alignment challenge evaluation
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - 'eval/entity-alignment-stress-v1.json'
+      - 'scripts/evaluate_entity_alignment*'
+      - 'src/entity_resolution.py'
+      - 'src/stock_keywords.py'
+      - 'src/stock_evidence.py'
+      - 'src/filing_relationships.py'
+      - '.github/workflows/entity-alignment-evaluate.yml'
+permissions:
+  contents: read
+jobs:
+  evaluate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          persist-credentials: false
+          sparse-checkout: |
+            src
+            scripts
+            eval/entity-alignment-stress-v1.json
+            requirements-filing-parser.txt
+            dashboard/scanner-backtest/index.html
+          sparse-checkout-cone-mode: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install pinned parser and dictionaries before evaluation
+        run: |
+          python -m pip install --only-binary=:all: --index-url https://pypi.org/simple -r requirements-filing-parser.txt PyYAML==6.0.3
+          python -m scripts.bootstrap_semantics
+      - name: Report both precision and recall on the frozen challenge set
+        env:
+          SOURCE_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
+        run: >-
+          python -m scripts.evaluate_entity_alignment --spacy
+          --source-revision "$SOURCE_SHA"
+          --out "$RUNNER_TEMP/entity-alignment-results.json"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: entity-alignment-results
+          path: ${{ runner.temp }}/entity-alignment-results.json
+          retention-days: 30
