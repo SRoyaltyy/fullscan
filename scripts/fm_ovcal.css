@@ -19,6 +19,8 @@
  .ovcal-cell.hard{border-color:#ef4444;box-shadow:inset 0 0 0 2px #ef4444}
  .ovcal-cell.hard .d{background:#7f1d1d;color:#fecaca}
  .ovcal-cell.pick{outline:2px solid #fbbf24}
+ .ovcal-cell .half.sit{background:#1e293b;color:#93c5fd}
+ .ovcal-cell.missed .half{background:#2a3142;color:#8b96ab}
  .ovcal-card.big{cursor:default;padding:12px}
  .ovcal-wk.big{gap:6px}
  .ovcal-detail{margin:10px 0 0;padding:10px;border:1px solid var(--line);border-radius:8px;background:#0b1220;font:12.5px/1.45 ui-sans-serif,system-ui;min-height:7em}
