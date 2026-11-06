@@ -2,7 +2,7 @@
 
 Live sleeves still SIT on S≤−3. Search a ticker for every session since 8/13: cameras (+N −N), 09:30 open, close, same-day % and hold-1/3/5 with actual prices.
 
-Generated 2026-11-05T21:16:56.574422-05:00 · 2026-08-13 → 2026-11-05 · live sit **untouched**.
+Generated 2026-11-05T21:45:04.936093-05:00 · 2026-08-13 → 2026-11-05 · live sit **untouched**.
 
 ## Latest morning
 
