@@ -1,6 +1,6 @@
 ---
 status: living_policy
-updated: 2026-11-05
+updated: 2026-11-04
 source: src/learn_cycle.py
 covers: general, sectors, news
 note: Injected into general + sector PREDICT. Core output formats unchanged.
@@ -9,11 +9,11 @@ see_also: 03_scoreboard/LEARNINGS.md
 
 # Mutable policy (all workflows)
 
-Last learn_cycle: **2026-11-05**. Promoted: 0. Retired: 10. Active lessons: 211. Human digest: `03_scoreboard/LEARNINGS.md`.
+Last learn_cycle: **2026-11-04**. Promoted: 1. Retired: 10. Active lessons: 212. Human digest: `03_scoreboard/LEARNINGS.md`.
 
 ## Accuracy by topic (graded window)
 
-- **general**: 60% (9/15)
+- **general**: 67% (10/15)
 - **sector:Basic Materials**: 20% (3/15)
 - **sector:Communication Services**: 13% (2/15)
 - **sector:Consumer Cyclical**: 27% (4/15)
@@ -30,14 +30,14 @@ Last learn_cycle: **2026-11-05**. Promoted: 0. Retired: 10. Active lessons: 211.
 
 General (B0–B7 LLM components; multiplier applied by compute_scores):
 - B0_ASIA: n=32 sign-hit=0.56 → ×1.0
-- B0_EUROPE: n=22 sign-hit=0.73 → ×1.25
-- B1_CATALYSTS: n=38 sign-hit=0.71 → ×1.25
+- B0_EUROPE: n=23 sign-hit=0.70 → ×1.25
+- B1_CATALYSTS: n=39 sign-hit=0.72 → ×1.25
 - B2_BONDS: n=42 sign-hit=0.38 → ×0.0
 - B3_FEDPATH: n=33 sign-hit=0.46 → ×0.5
 - B4_VIX: n=14 sign-hit=0.50 → ×0.5
 - B5_SENTIMENT: n=24 sign-hit=0.33 → ×0.0
-- B6_FUTURES: n=33 sign-hit=0.76 → ×1.25
-- B7_OIL_DOLLAR: n=47 sign-hit=0.57 → ×1.0
+- B6_FUTURES: n=34 sign-hit=0.77 → ×1.25
+- B7_OIL_DOLLAR: n=48 sign-hit=0.56 → ×1.0
 Sectors (pooled S0–S4; per-sector overrides in engine_policy.json):
 - S0_SHARED_MACRO: n=204 sign-hit=0.58 → ×1.0
 - S1_SECTOR_FACTORS: n=226 sign-hit=0.54 → ×0.5
@@ -47,6 +47,16 @@ Sectors (pooled S0–S4; per-sector overrides in engine_policy.json):
 Last change: hold
 
 ## Active adjustments (newest promoted lessons, truncated)
+
+### before-the-open-a-fresh-same-morning-mega-cap-ai-hardware-ea.md
+## RULE
+When this trigger matches, set B1_CATALYSTS = −3, keep B6 = −0.5 as confirmation-only, and force predicted_magnitude_band = notable with multiplier ≥1.2; do not let Apple/Meta green prints, offered oil (B7 +0.5), or a missing B2 bond print cap the band below notable.
+
+## WHEN IT FIRES
+Before the open, a fresh same-morning mega-cap/AI-hardware earnings miss is present while NQ confirms ≤ −2% and ES confirms ≥0.5% down, with no unsigned CPI/NFP/FOMC binary.
+
+## WRONG IF
+If this trigger rec …
 
 ### scheduled-us-cash-session-where-canonical-premarket-yyyy-mm.md
 ## RULE
@@ -131,18 +141,14 @@ No signed-call change. Keep flat/flat on an unsigned post-event industrials card
 ## WHEN IT FIRES
 A cyclical industrials ETF (XLI-like) posts an all-zero S0–S4 card on the session AFTER a paid FOMC/SEP, with 1w/1m relative lag fo …
 
-### a-sector-etf-posts-an-all-zero-or-net-zero-s0-s4-leading-car.md
-## RULE
-When S0–S3 net to zero BUT (a) the index backdrop is strongly positive (ES/NQ ≥ +0.5% and ideally ≥ +1%), (b) yields are falling / duration-relief is live, and (c) the sector's own PM is green, the residual should be MILD UP with relative lag — not flat. Condition the 8/28 "residual-is-flat" rule on a NEUTRAL index tape; it must not bind when the broad tape is up >1%. Treat the 8/27 S4-cap as a cap on CONVICTION (cannot emit confirmed-up), not on LEVEL (a capped-up call is still an up ca …
-
-_(+196 older active lessons not excerpted; each predict receives only its own topic's lessons via lesson_select)_
+_(+197 older active lessons not excerpted; each predict receives only its own topic's lessons via lesson_select)_
 
 ## Per-scope DO-INSTEAD
 
-### scope `general` — wins=9 losses=6
-- **loss 2026-11-02:** [general] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
+### scope `general` — wins=10 losses=5
 - **loss 2026-11-03:** [general] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
 - **win 2026-11-04:** [general] Keep direction; shrink confidence on modest |score| when magnitude historically misses.
+- **win 2026-11-05:** [general] Keep direction; shrink confidence on modest |score| when magnitude historically misses.
 
 ### scope `news` — wins=0 losses=1
 - **loss news:** [news] Only emit actions with |net| above a higher floor.
@@ -227,13 +233,13 @@ _(+196 older active lessons not excerpted; each predict receives only its own to
 
 ## Retired / falsified (efficacy-gated, automatic)
 
-- 2026-11-05: `a-utilities-xlu-call-is-built-after-a-stretch-of-risk-on-gro.md` (sector:Utilities) — topic hit 80% → 14% after activation; retired.
-- 2026-11-05: `a-sector-call-has-a-scheduled-8-30-et-macro-release-pending.md` (sector:Financial) — topic hit 75% → 14% after activation; retired.
-- 2026-11-05: `in-a-utilities-xlu-call-a-second-soft-inflation-print-has-al.md` (sector:Utilities) — topic hit 75% → 14% after activation; retired.
-- 2026-11-05: `a-consumer-cyclical-down-call-is-driven-by-a-genuinely-negat.md` (sector:Consumer Cyclical) — topic hit 86% → 29% after activation; retired.
-- 2026-11-05: `a-mega-cap-duration-heavy-consumer-cyclical-etf-xly-like-amz.md` (sector:Consumer Cyclical) — topic hit 71% → 14% after activation; retired.
-- 2026-11-05: `when-the-pre-fetched-commodity-tape-conflicts-with-live-sour.md` (sector:Energy) — topic hit 71% → 14% after activation; retired.
-- 2026-11-05: `a-sector-call-has-a-decisively-negative-fundamental-spine-fr.md` (sector:Consumer Cyclical) — topic hit 83% → 29% after activation; retired.
-- 2026-11-05: `a-utility-defensive-sector-call-is-built-on-a-carried-defens.md` (sector:Utilities) — topic hit 67% → 14% after activation; retired.
-- 2026-11-05: `sector-prediction-made-when-the-sector-s-dominant-commodity.md` (sector:Energy) — topic hit 67% → 14% after activation; retired.
-- 2026-11-05: `a-sector-call-has-a-scheduled-8-30-et-high-impact-macro-rele.md` (sector:Financial) — topic hit 60% → 14% after activation; retired.
+- 2026-11-04: `a-utilities-xlu-call-is-built-after-a-stretch-of-risk-on-gro.md` (sector:Utilities) — topic hit 80% → 14% after activation; retired.
+- 2026-11-04: `a-sector-call-has-a-scheduled-8-30-et-macro-release-pending.md` (sector:Financial) — topic hit 75% → 14% after activation; retired.
+- 2026-11-04: `in-a-utilities-xlu-call-a-second-soft-inflation-print-has-al.md` (sector:Utilities) — topic hit 75% → 14% after activation; retired.
+- 2026-11-04: `a-consumer-cyclical-down-call-is-driven-by-a-genuinely-negat.md` (sector:Consumer Cyclical) — topic hit 86% → 29% after activation; retired.
+- 2026-11-04: `a-mega-cap-duration-heavy-consumer-cyclical-etf-xly-like-amz.md` (sector:Consumer Cyclical) — topic hit 71% → 14% after activation; retired.
+- 2026-11-04: `when-the-pre-fetched-commodity-tape-conflicts-with-live-sour.md` (sector:Energy) — topic hit 71% → 14% after activation; retired.
+- 2026-11-04: `a-sector-call-has-a-decisively-negative-fundamental-spine-fr.md` (sector:Consumer Cyclical) — topic hit 83% → 29% after activation; retired.
+- 2026-11-04: `a-utility-defensive-sector-call-is-built-on-a-carried-defens.md` (sector:Utilities) — topic hit 67% → 14% after activation; retired.
+- 2026-11-04: `sector-prediction-made-when-the-sector-s-dominant-commodity.md` (sector:Energy) — topic hit 67% → 14% after activation; retired.
+- 2026-11-04: `a-sector-call-has-a-scheduled-8-30-et-high-impact-macro-rele.md` (sector:Financial) — topic hit 60% → 14% after activation; retired.

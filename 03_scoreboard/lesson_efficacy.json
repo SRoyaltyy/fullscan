@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-11-05T16:55:44.146591-05:00",
+  "generated_at": "2026-11-05T20:50:21.477925-05:00",
   "window": 7,
   "summary": {
-    "n_active": 221,
+    "n_active": 222,
     "n_judged": 178,
     "improved": 67,
     "flat": 30,
@@ -1952,6 +1952,21 @@
       "verdict": "WORSE"
     },
     {
+      "lesson": "before-the-open-a-fresh-same-morning-mega-cap-ai-hardware-ea.md",
+      "topic": "general",
+      "active_since": "2026-11-05",
+      "error_category": "B",
+      "before": {
+        "hit": 0.714,
+        "n": 7
+      },
+      "after": {
+        "hit": null,
+        "n": 0
+      },
+      "verdict": "insufficient"
+    },
+    {
       "lesson": "before-the-open-channel-1-es-nq-is-locked-from-an-early-snap.md",
       "topic": null,
       "active_since": "2026-10-05",
@@ -3368,7 +3383,7 @@
         "n": 10
       },
       "prev10": {
-        "hit": 0.4,
+        "hit": 0.5,
         "n": 10
       }
     },
