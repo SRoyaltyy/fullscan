@@ -276,6 +276,36 @@ def test_past_day_lock_rejects_a_sealed_edit(tmp_path: Path, monkeypatch) -> Non
     assert days == [FIRST_LOCKED]
 
 
+def test_missed_day_does_not_block_a_later_seal(tmp_path: Path, monkeypatch) -> None:
+    """A hole before the last seal stays missing. The next session still locks."""
+    monkeypatch.setattr(past_day_lock, "WEBULL_DIR", tmp_path)
+    manifest = tmp_path / "manifest.jsonl"
+    path = tmp_path / "days.jsonl"
+
+    def row(day: str) -> dict:
+        return make_row(
+            name="toy_webull_sim", day=day, source="p", commit="abc",
+            commit_et=f"{day}T08:00:00-04:00", reason="sat out, 0 picks",
+            note="", section="not_a_locked_trade", locked_trade=False, final=True,
+            cash=START_CASH, fees=Decimal("0"), equity=START_CASH, fills=[],
+            positions=[], picks=0,
+        )
+
+    later = row("2026-10-08")
+    write_books([later], seal=True, path=path, manifest=manifest)
+    missed = row("2026-10-07")
+    nxt = row("2026-10-09")
+    write_books([missed, later, nxt], seal=True, path=path, manifest=manifest)
+    sealed = [
+        item.get("date") for item in past_day_lock.load_manifest(manifest)
+        if item.get("kind") == "day"
+    ]
+    assert "2026-10-07" not in sealed
+    assert sealed == ["2026-10-08", "2026-10-09"]
+    saved = path.read_text(encoding="utf-8")
+    assert '"date": "2026-10-07"' in saved or '"date":"2026-10-07"' in saved
+
+
 def test_missed_day_stays_missing(tmp_path: Path, monkeypatch) -> None:
     monkeypatch.setattr(past_day_lock, "WEBULL_DIR", tmp_path)
     manifest = tmp_path / "manifest.jsonl"

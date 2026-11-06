@@ -189,6 +189,7 @@
 <div class="bar" id="sleeveBar"></div>
 <details class="curve-box" open>
 <summary id="curveTitle">Equity curves ($10k / recipe)</summary>
+<p class="mut">Sealed days stay on the sealed equity. An empty no-same-day morning moves that point by the rebuilt session return. A missed morning that still held names is a gap, not a flat mark.</p>
 <div class="curve-row"><div><canvas id="chart" height="560"></canvas>
 <div class="legend" id="legend"></div></div><div id="ovCalSleeve"></div></div>
 </details>
@@ -536,7 +537,7 @@ function draw(){
     ctx.strokeStyle=colorOf(k);
     ctx.lineWidth=sleeveFilter===k?3.2:1.7;
     ctx.beginPath(); let started=false;
-    seriesOf(k).forEach((v,j)=>{if(v==null)return; const x=X(Math.max(0,j-off)); started?ctx.lineTo(x,Y(v)):ctx.moveTo(x,Y(v)); started=true;});
+    seriesOf(k).forEach((v,j)=>{const x=X(Math.max(0,j-off)); if(v==null){started=false; return;} started?ctx.lineTo(x,Y(v)):ctx.moveTo(x,Y(v)); started=true;});
     ctx.stroke();
   });
 }
@@ -856,7 +857,9 @@ function seriesOf(name){
   }
   if(bracketOn() && _liveCache && _liveCache.series && _liveCache.series[name])
     return _liveCache.series[name];
-  return (D.series||{})[name]||[];
+  const base=(D.series||{})[name]||[];
+  if(typeof ovDisplaySeries==='function') return ovDisplaySeries(name, base);
+  return base;
 }
 function boughtTickers(name){
   const seen=new Set();
@@ -2061,6 +2064,44 @@ function ovSimBook(name){
   try{ _ovBookCache[name]=FMSim.simulateBook(D.sim, rec, start, D.mornings||{}); }
   catch(e){ _ovBookCache[name]=null; }
   return _ovBookCache[name];
+}
+function ovDisplaySeries(name, base){
+  // Sealed non-empty points stay. An empty no_same_day morning uses the
+  // rebuilt session return. A missed morning that still held names is a
+  // gap: the line does not invent a flat mark.
+  const doc=ovCalDoc();
+  const cells=doc && (doc.strategies||{})[name];
+  const dates=D.dates||[];
+  if(!cells || !dates.length || !base || base.length!==dates.length) return base||[];
+  const allow={};
+  (doc.empty_dates||[]).forEach(function(d){ allow[d]=true; });
+  const by={};
+  (((D.daily||{})[name])||[]).forEach(function(d){ if(d&&d.date) by[d.date]=d; });
+  const out=base.slice();
+  let prevHeld=false;
+  dates.forEach(function(date, i){
+    const cell=cells[date];
+    const sealed=by[date];
+    const empty=!!(sealed && ovSealedEmpty(sealed, []));
+    const heldNow=!!(cell && cell.daily && (cell.daily.open_held||[]).length);
+    if(!cell || !allow[date] || !empty){
+      prevHeld=heldNow;
+      return;
+    }
+    if(cell.label==='missed'){
+      if(prevHeld) out[i]=null;
+      prevHeld=false;
+      return;
+    }
+    const daily=cell.daily||{};
+    const eq=Number(daily.equity), yday=Number(daily.yday_equity);
+    const prev=i>0 ? out[i-1] : null;
+    if(Number.isFinite(eq) && Number.isFinite(yday) && yday && prev!=null && Number.isFinite(Number(prev))){
+      out[i]=Number(prev) * (eq / yday);
+    }
+    prevHeld=heldNow;
+  });
+  return out;
 }
 function ovDaysAndTrades(name){
   let days=((D.daily||{})[name]||[]).slice();

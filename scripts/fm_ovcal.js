@@ -96,6 +96,44 @@ function ovSimBook(name){
   catch(e){ _ovBookCache[name]=null; }
   return _ovBookCache[name];
 }
+function ovDisplaySeries(name, base){
+  // Sealed non-empty points stay. An empty no_same_day morning uses the
+  // rebuilt session return. A missed morning that still held names is a
+  // gap: the line does not invent a flat mark.
+  const doc=ovCalDoc();
+  const cells=doc && (doc.strategies||{})[name];
+  const dates=D.dates||[];
+  if(!cells || !dates.length || !base || base.length!==dates.length) return base||[];
+  const allow={};
+  (doc.empty_dates||[]).forEach(function(d){ allow[d]=true; });
+  const by={};
+  (((D.daily||{})[name])||[]).forEach(function(d){ if(d&&d.date) by[d.date]=d; });
+  const out=base.slice();
+  let prevHeld=false;
+  dates.forEach(function(date, i){
+    const cell=cells[date];
+    const sealed=by[date];
+    const empty=!!(sealed && ovSealedEmpty(sealed, []));
+    const heldNow=!!(cell && cell.daily && (cell.daily.open_held||[]).length);
+    if(!cell || !allow[date] || !empty){
+      prevHeld=heldNow;
+      return;
+    }
+    if(cell.label==='missed'){
+      if(prevHeld) out[i]=null;
+      prevHeld=false;
+      return;
+    }
+    const daily=cell.daily||{};
+    const eq=Number(daily.equity), yday=Number(daily.yday_equity);
+    const prev=i>0 ? out[i-1] : null;
+    if(Number.isFinite(eq) && Number.isFinite(yday) && yday && prev!=null && Number.isFinite(Number(prev))){
+      out[i]=Number(prev) * (eq / yday);
+    }
+    prevHeld=heldNow;
+  });
+  return out;
+}
 function ovDaysAndTrades(name){
   let days=((D.daily||{})[name]||[]).slice();
   let trades=(((D.books||{})[name]||{}).trades||[]).filter(function(t){return (t.side==='BUY'||t.side==='SHORT') && t.ticker;});

@@ -239,9 +239,24 @@ def block(replay: dict | None, pre: dict | None = None) -> str:
 """
 
 
+def refresh_embed(page: str, pre: dict | None) -> str:
+    """Replace the baked pre-open series. Earlier sealed days stay in the JSON."""
+    marker = "var EMBED="
+    start = page.find(marker)
+    if start < 0:
+        return page
+    end = page.find(";\n", start)
+    if end < 0:
+        return page
+    embed = json.dumps(pre or {}, sort_keys=True).replace("<", "\\u003c")
+    return page[:start] + marker + embed + page[end:]
+
+
 def patch_html(page: str, doc: dict | None, pre: dict | None = None) -> str:
     if MARK in page:
-        return page
+        if pre is None:
+            return page
+        return refresh_embed(page, pre)
     chunk = "\n" + block(doc, pre)
     needle = '<div class="wrap">'
     i = page.find(needle)

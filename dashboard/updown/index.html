@@ -29,6 +29,7 @@ button,input,select{font:inherit}#status{color:#8a1c1c}
   <select id="filt"><option value="all">all</option><option value="UP">calls UP</option><option value="DOWN">calls DOWN</option><option value="top">top decile</option><option value="bot">bottom decile</option></select></div>
  <div class="row" id="daysum" style="margin-top:8px"></div>
  <div id="tablewrap"><table id="tbl"><thead><tr><th data-k="t">Ticker</th><th data-k="p">p_up</th><th data-k="c">Call</th><th data-k="dec">Decile (10 = most up)</th><th data-k="r">Realized o2c</th><th data-k="u">Realized dir</th><th data-k="h">Hit</th><th data-k="em" title="updown_expmove_v1: predicted |open-&gt;next open| rank within top-1000 by dollar volume; 100 = largest">Exp. move rank</th></tr></thead><tbody></tbody></table></div>
+<small>The open-to-close chart ends 2026-10-05. Later sessions, including 2026-10-07, have no <code>research/updown_o2c_v2/forward</code> file, so those days stay missing. No return is invented.</small><br>
 <small>Exp. move rank: blank = not in the top-1,000 liquid set or not scored (2026-10-05/06 not scored).</small><br> <small>Horizon: today's official open &rarr; today's close (Yahoo split-adjusted). Call = UP if p_up &gt; 0.5. Hit = call matches realized direction (0.00% counts as not-up).</small>
 </div>
 <div class="card" id="hist" style="display:none"><div class="row"><b id="htitle"></b><span id="hsum"></span><button id="hall">load full history</button><button id="hclose">close</button></div>

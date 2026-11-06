@@ -108,9 +108,12 @@ def patch_html(html: str) -> str:
         html = html.replace(old_draw, new_draw, 1)
 
     old_line = "    seriesOf(k).forEach((v,j)=>{if(v==null)return; started?ctx.lineTo(X(j),Y(v)):ctx.moveTo(X(j),Y(v)); started=true;});"
-    new_line = "    seriesOf(k).forEach((v,j)=>{if(v==null)return; const x=X(Math.max(0,j-off)); started?ctx.lineTo(x,Y(v)):ctx.moveTo(x,Y(v)); started=true;});"
+    bridged = "    seriesOf(k).forEach((v,j)=>{if(v==null)return; const x=X(Math.max(0,j-off)); started?ctx.lineTo(x,Y(v)):ctx.moveTo(x,Y(v)); started=true;});"
+    new_line = "    seriesOf(k).forEach((v,j)=>{const x=X(Math.max(0,j-off)); if(v==null){started=false; return;} started?ctx.lineTo(x,Y(v)):ctx.moveTo(x,Y(v)); started=true;});"
     if old_line in html:
         html = html.replace(old_line, new_line, 1)
+    elif bridged in html:
+        html = html.replace(bridged, new_line, 1)
 
     old = ' · <a href="../flatten-lookback/" style="color:#93c5fd">flatten lookback</a>'
     new = ' · <a href="#ovCalBox" style="color:#fbbf24">new vs held</a>' + old
