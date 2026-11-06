@@ -473,7 +473,7 @@ date,ticker,side,conviction,reason
 2026-10-28,BLFS,BUY,0.7510809320601484,no session bar (price data missing)
 2026-10-28,ARQT,BUY,0.746225212091296,"insufficient cash ($10,509 > $943)"
 2026-10-28,FIGS,BUY,0.7094221001057945,no session bar (price data missing)
-2026-10-28,CAKE,BUY,0.6999743690728588,no exit price (unsettleable)
+2026-10-28,CAKE,BUY,0.6999743690728588,"insufficient cash ($10,470 > $943)"
 2026-10-28,CNK,BUY,0.6838302344474319,"insufficient cash ($10,500 > $943)"
 2026-10-28,CTOS,BUY,0.6535125412818537,no session bar (price data missing)
 2026-10-28,CHEF,BUY,0.6101706982331981,"insufficient cash ($10,527 > $943)"
@@ -525,3 +525,11 @@ date,ticker,side,conviction,reason
 2026-11-04,TRU,BUY,0.508811218194425,no exit price (unsettleable)
 2026-11-04,ILMN,BUY,0.4505554479976306,no exit price (unsettleable)
 2026-11-04,VEEV,BUY,0.4135263786294272,no exit price (unsettleable)
+2026-11-05,XYZ,BUY,0.3567288721519301,day gate CLOSED: predict DOWN score -2.50 < +1.00
+2026-11-05,CDW,BUY,0.3326692868212943,day gate CLOSED: predict DOWN score -2.50 < +1.00
+2026-11-05,KD,BUY,0.6646564745922765,day gate CLOSED: predict DOWN score -2.50 < +1.00
+2026-11-05,JKHY,BUY,0.13462671544927884,day gate CLOSED: predict DOWN score -2.50 < +1.00
+2026-11-05,APPN,BUY,0.5065089831958443,day gate CLOSED: predict DOWN score -2.50 < +1.00
+2026-11-05,VRSN,BUY,0.1602340187982818,day gate CLOSED: predict DOWN score -2.50 < +1.00
+2026-11-05,DBX,BUY,0.5504904504573518,day gate CLOSED: predict DOWN score -2.50 < +1.00
+2026-11-05,MSFT,BUY,0.2378281037421257,day gate CLOSED: predict DOWN score -2.50 < +1.00
