@@ -1,11 +1,11 @@
 {
   "date": "2026-11-06",
-  "generated_at": "2026-11-06T04:43:56.322028-05:00",
+  "generated_at": "2026-11-06T04:46:07.486436-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
-    "ok": 1,
-    "partial": 3,
+    "ok": 2,
+    "partial": 2,
     "fail": 4,
     "n": 8
   },
@@ -110,6 +110,31 @@
         }
       ],
       "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest \u2014 2026-11-06\n**Generated:** 2026-11-06T04:43:56.016032-05:00 (America/New_York)\n**Source:** `live`\n**Banner:** US futures trade mixed as Nasdaq 100 rebounds from tech-led rout ahead of October jobs report and global AI-regulation worries\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** AMD, EL, RIVN, UBS, CHKP, MRNA, HUM, VST, BAM, CHTR\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** MRNA, HUM, VST, BAM, CHTR\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-11-06\n**Clock use:** `same_morning`"
+    },
+    {
+      "key": "map_heat",
+      "title": "Map heat morning overlay",
+      "date": "2026-11-06",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-06T04:46:07.202920-05:00",
+      "files": [
+        {
+          "path": "01_daily/map_heat/2026-11-06_map_heat.json",
+          "ok": true,
+          "reason": "",
+          "size": 276550,
+          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
+        },
+        {
+          "path": "01_daily/map_heat/2026-11-06_map_heat.md",
+          "ok": true,
+          "reason": "",
+          "size": 18656,
+          "preview": "# MAP HEAT \u2014 2026-11-06\nExport `finviz_2026-11-06.csv` \u00b7 11616 names \u00b7 generated 2026-11-06T04:46:07.135411-05:00"
+        }
+      ],
+      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-11-06\nExport `finviz_2026-11-06.csv` \u00b7 11616 names \u00b7 generated 2026-11-06T04:46:07.135411-05:00"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
