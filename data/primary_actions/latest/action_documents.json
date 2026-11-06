@@ -1,5 +1,101 @@
 [
   {
+    "title": "DCPD-202600672 - Remarks and an Exchange With Reporters Prior to Departure for Vandalia, Ohio",
+    "url": "https://www.govinfo.gov/app/details/DCPD-202600672",
+    "native_id": "DCPD-202600672",
+    "published_at": "2026-11-05T23:09:00+00:00",
+    "published_raw": "Thu, 05 Nov 2026 23:09:00 +0000",
+    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "presidential_document",
+      "document_stage": "presidential_document_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Compilation of Presidential Documents",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-dcpd",
+    "n": 8890,
+    "first_seen": "2026-11-06T07:57:02.134140+00:00",
+    "last_seen": "2026-11-06T07:57:02.134140+00:00",
+    "source_ids": [
+      "us-govinfo-dcpd"
+    ]
+  },
+  {
+    "title": "DCPD-202600673 - Remarks at a Campaign Rally for Ohio Republican Candidates in Vandalia, Ohio",
+    "url": "https://www.govinfo.gov/app/details/DCPD-202600673",
+    "native_id": "DCPD-202600673",
+    "published_at": "2026-11-05T23:09:00+00:00",
+    "published_raw": "Thu, 05 Nov 2026 23:09:00 +0000",
+    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "presidential_document",
+      "document_stage": "presidential_document_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Compilation of Presidential Documents",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-dcpd",
+    "n": 8889,
+    "first_seen": "2026-11-06T07:57:02.134140+00:00",
+    "last_seen": "2026-11-06T07:57:02.134140+00:00",
+    "source_ids": [
+      "us-govinfo-dcpd"
+    ]
+  },
+  {
+    "title": "DCPD-202600671 - Remarks at a Campaign Rally for Alabama Republican Candidates in Mobile, Alabama",
+    "url": "https://www.govinfo.gov/app/details/DCPD-202600671",
+    "native_id": "DCPD-202600671",
+    "published_at": "2026-11-05T23:09:00+00:00",
+    "published_raw": "Thu, 05 Nov 2026 23:09:00 +0000",
+    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "presidential_document",
+      "document_stage": "presidential_document_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Compilation of Presidential Documents",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-dcpd",
+    "n": 8888,
+    "first_seen": "2026-11-06T07:57:02.134140+00:00",
+    "last_seen": "2026-11-06T07:57:02.134140+00:00",
+    "source_ids": [
+      "us-govinfo-dcpd"
+    ]
+  },
+  {
+    "title": "DCPD-202600670 - Proclamation 11071-National Manufacturing Day, 2026",
+    "url": "https://www.govinfo.gov/app/details/DCPD-202600670",
+    "native_id": "DCPD-202600670",
+    "published_at": "2026-11-05T23:09:00+00:00",
+    "published_raw": "Thu, 05 Nov 2026 23:09:00 +0000",
+    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "presidential_document",
+      "document_stage": "presidential_document_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Compilation of Presidential Documents",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-dcpd",
+    "n": 8887,
+    "first_seen": "2026-11-06T07:57:02.134140+00:00",
+    "last_seen": "2026-11-06T07:57:02.134140+00:00",
+    "source_ids": [
+      "us-govinfo-dcpd"
+    ]
+  },
+  {
     "title": "Teacher misconduct panel outcome: Mr Sam Piggott",
     "url": "https://www.gov.uk/government/publications/teacher-misconduct-panel-outcome-mr-sam-piggott",
     "native_id": "/government/publications/teacher-misconduct-panel-outcome-mr-sam-piggott",
@@ -23,7 +119,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 8763,
     "first_seen": "2026-11-05T20:41:39.999913+00:00",
-    "last_seen": "2026-11-05T20:41:39.999913+00:00",
+    "last_seen": "2026-11-06T07:57:02.134140+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -76,7 +172,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 6834,
     "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-11-05T20:41:39.999913+00:00",
+    "last_seen": "2026-11-06T07:57:02.134140+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -105,7 +201,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 4,
     "first_seen": "2026-10-15T10:17:11.133023+00:00",
-    "last_seen": "2026-11-05T20:41:39.999913+00:00",
+    "last_seen": "2026-11-06T07:57:02.134140+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -134,7 +230,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 8764,
     "first_seen": "2026-11-05T20:41:39.999913+00:00",
-    "last_seen": "2026-11-05T20:41:39.999913+00:00",
+    "last_seen": "2026-11-06T07:57:02.134140+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -163,7 +259,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 3303,
     "first_seen": "2026-10-16T10:36:18.842579+00:00",
-    "last_seen": "2026-11-05T20:41:39.999913+00:00",
+    "last_seen": "2026-11-06T07:57:02.134140+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -193,7 +289,7 @@
     "primary_source_id": "us-federal-register",
     "n": 8688,
     "first_seen": "2026-11-05T07:56:00.555392+00:00",
-    "last_seen": "2026-11-05T20:41:39.999913+00:00",
+    "last_seen": "2026-11-06T07:57:02.134140+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -223,7 +319,7 @@
     "primary_source_id": "us-federal-register",
     "n": 8680,
     "first_seen": "2026-11-05T07:56:00.555392+00:00",
-    "last_seen": "2026-11-05T20:41:39.999913+00:00",
+    "last_seen": "2026-11-06T07:57:02.134140+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -254,7 +350,7 @@
     "primary_source_id": "us-federal-register",
     "n": 8675,
     "first_seen": "2026-11-05T07:56:00.555392+00:00",
-    "last_seen": "2026-11-05T20:41:39.999913+00:00",
+    "last_seen": "2026-11-06T07:57:02.134140+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -285,7 +381,7 @@
     "primary_source_id": "us-federal-register",
     "n": 8674,
     "first_seen": "2026-11-05T07:56:00.555392+00:00",
-    "last_seen": "2026-11-05T20:41:39.999913+00:00",
+    "last_seen": "2026-11-06T07:57:02.134140+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -316,7 +412,7 @@
     "primary_source_id": "us-federal-register",
     "n": 8671,
     "first_seen": "2026-11-05T07:56:00.555392+00:00",
-    "last_seen": "2026-11-05T20:41:39.999913+00:00",
+    "last_seen": "2026-11-06T07:57:02.134140+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -346,7 +442,7 @@
     "primary_source_id": "us-federal-register",
     "n": 8664,
     "first_seen": "2026-11-05T07:56:00.555392+00:00",
-    "last_seen": "2026-11-05T20:41:39.999913+00:00",
+    "last_seen": "2026-11-06T07:57:02.134140+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -376,7 +472,7 @@
     "primary_source_id": "us-federal-register",
     "n": 8663,
     "first_seen": "2026-11-05T07:56:00.555392+00:00",
-    "last_seen": "2026-11-05T20:41:39.999913+00:00",
+    "last_seen": "2026-11-06T07:57:02.134140+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -407,7 +503,7 @@
     "primary_source_id": "us-federal-register",
     "n": 8622,
     "first_seen": "2026-11-05T07:56:00.555392+00:00",
-    "last_seen": "2026-11-05T20:41:39.999913+00:00",
+    "last_seen": "2026-11-06T07:57:02.134140+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -437,7 +533,7 @@
     "primary_source_id": "us-federal-register",
     "n": 8619,
     "first_seen": "2026-11-05T07:56:00.555392+00:00",
-    "last_seen": "2026-11-05T20:41:39.999913+00:00",
+    "last_seen": "2026-11-06T07:57:02.134140+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -467,7 +563,7 @@
     "primary_source_id": "us-federal-register",
     "n": 8618,
     "first_seen": "2026-11-05T07:56:00.555392+00:00",
-    "last_seen": "2026-11-05T20:41:39.999913+00:00",
+    "last_seen": "2026-11-06T07:57:02.134140+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -497,7 +593,7 @@
     "primary_source_id": "us-federal-register",
     "n": 8616,
     "first_seen": "2026-11-05T07:56:00.555392+00:00",
-    "last_seen": "2026-11-05T20:41:39.999913+00:00",
+    "last_seen": "2026-11-06T07:57:02.134140+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -527,7 +623,7 @@
     "primary_source_id": "us-federal-register",
     "n": 8615,
     "first_seen": "2026-11-05T07:56:00.555392+00:00",
-    "last_seen": "2026-11-05T20:41:39.999913+00:00",
+    "last_seen": "2026-11-06T07:57:02.134140+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -557,7 +653,7 @@
     "primary_source_id": "us-federal-register",
     "n": 8614,
     "first_seen": "2026-11-05T07:56:00.555392+00:00",
-    "last_seen": "2026-11-05T20:41:39.999913+00:00",
+    "last_seen": "2026-11-06T07:57:02.134140+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -587,7 +683,7 @@
     "primary_source_id": "us-federal-register",
     "n": 8613,
     "first_seen": "2026-11-05T07:56:00.555392+00:00",
-    "last_seen": "2026-11-05T20:41:39.999913+00:00",
+    "last_seen": "2026-11-06T07:57:02.134140+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -611,7 +707,7 @@
     "primary_source_id": "us-govinfo-dcpd",
     "n": 8728,
     "first_seen": "2026-11-05T07:56:00.555392+00:00",
-    "last_seen": "2026-11-05T20:41:39.999913+00:00",
+    "last_seen": "2026-11-06T07:57:02.134140+00:00",
     "source_ids": [
       "us-govinfo-dcpd"
     ]
@@ -635,7 +731,7 @@
     "primary_source_id": "us-govinfo-dcpd",
     "n": 8727,
     "first_seen": "2026-11-05T07:56:00.555392+00:00",
-    "last_seen": "2026-11-05T20:41:39.999913+00:00",
+    "last_seen": "2026-11-06T07:57:02.134140+00:00",
     "source_ids": [
       "us-govinfo-dcpd"
     ]
@@ -659,7 +755,7 @@
     "primary_source_id": "us-govinfo-dcpd",
     "n": 8726,
     "first_seen": "2026-11-05T07:56:00.555392+00:00",
-    "last_seen": "2026-11-05T20:41:39.999913+00:00",
+    "last_seen": "2026-11-06T07:57:02.134140+00:00",
     "source_ids": [
       "us-govinfo-dcpd"
     ]
@@ -683,7 +779,7 @@
     "primary_source_id": "us-govinfo-dcpd",
     "n": 8725,
     "first_seen": "2026-11-05T07:56:00.555392+00:00",
-    "last_seen": "2026-11-05T20:41:39.999913+00:00",
+    "last_seen": "2026-11-06T07:57:02.134140+00:00",
     "source_ids": [
       "us-govinfo-dcpd"
     ]
@@ -707,7 +803,7 @@
     "primary_source_id": "us-govinfo-dcpd",
     "n": 2481,
     "first_seen": "2026-10-16T05:53:15.995133+00:00",
-    "last_seen": "2026-11-05T20:41:39.999913+00:00",
+    "last_seen": "2026-11-06T07:57:02.134140+00:00",
     "source_ids": [
       "us-govinfo-dcpd"
     ]
@@ -731,7 +827,7 @@
     "primary_source_id": "us-govinfo-dcpd",
     "n": 2477,
     "first_seen": "2026-10-16T05:53:15.995133+00:00",
-    "last_seen": "2026-11-05T20:41:39.999913+00:00",
+    "last_seen": "2026-11-06T07:57:02.134140+00:00",
     "source_ids": [
       "us-govinfo-dcpd"
     ]
@@ -808,7 +904,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 8508,
     "first_seen": "2026-11-04T20:26:55.940049+00:00",
-    "last_seen": "2026-11-05T20:41:39.999913+00:00",
+    "last_seen": "2026-11-06T07:57:02.134140+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -837,7 +933,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 8509,
     "first_seen": "2026-11-04T20:26:55.940049+00:00",
-    "last_seen": "2026-11-05T20:41:39.999913+00:00",
+    "last_seen": "2026-11-06T07:57:02.134140+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -866,7 +962,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 8510,
     "first_seen": "2026-11-04T20:26:55.940049+00:00",
-    "last_seen": "2026-11-05T20:41:39.999913+00:00",
+    "last_seen": "2026-11-06T07:57:02.134140+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -895,7 +991,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 8511,
     "first_seen": "2026-11-04T20:26:55.940049+00:00",
-    "last_seen": "2026-11-05T20:41:39.999913+00:00",
+    "last_seen": "2026-11-06T07:57:02.134140+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -924,7 +1020,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 8512,
     "first_seen": "2026-11-04T20:26:55.940049+00:00",
-    "last_seen": "2026-11-05T20:41:39.999913+00:00",
+    "last_seen": "2026-11-06T07:57:02.134140+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -954,7 +1050,7 @@
     "primary_source_id": "us-federal-register",
     "n": 8445,
     "first_seen": "2026-11-04T07:30:45.022151+00:00",
-    "last_seen": "2026-11-05T20:41:39.999913+00:00",
+    "last_seen": "2026-11-06T07:57:02.134140+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -985,7 +1081,7 @@
     "primary_source_id": "us-federal-register",
     "n": 8440,
     "first_seen": "2026-11-04T07:30:45.022151+00:00",
-    "last_seen": "2026-11-05T20:41:39.999913+00:00",
+    "last_seen": "2026-11-06T07:57:02.134140+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1016,7 +1112,7 @@
     "primary_source_id": "us-federal-register",
     "n": 8431,
     "first_seen": "2026-11-04T07:30:45.022151+00:00",
-    "last_seen": "2026-11-05T20:41:39.999913+00:00",
+    "last_seen": "2026-11-06T07:57:02.134140+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1047,7 +1143,7 @@
     "primary_source_id": "us-federal-register",
     "n": 8427,
     "first_seen": "2026-11-04T07:30:45.022151+00:00",
-    "last_seen": "2026-11-05T20:41:39.999913+00:00",
+    "last_seen": "2026-11-06T07:57:02.134140+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1078,7 +1174,7 @@
     "primary_source_id": "us-federal-register",
     "n": 8414,
     "first_seen": "2026-11-04T07:30:45.022151+00:00",
-    "last_seen": "2026-11-05T20:41:39.999913+00:00",
+    "last_seen": "2026-11-06T07:57:02.134140+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1108,7 +1204,7 @@
     "primary_source_id": "us-federal-register",
     "n": 8413,
     "first_seen": "2026-11-04T07:30:45.022151+00:00",
-    "last_seen": "2026-11-05T20:41:39.999913+00:00",
+    "last_seen": "2026-11-06T07:57:02.134140+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1138,7 +1234,7 @@
     "primary_source_id": "us-federal-register",
     "n": 8407,
     "first_seen": "2026-11-04T07:30:45.022151+00:00",
-    "last_seen": "2026-11-05T20:41:39.999913+00:00",
+    "last_seen": "2026-11-06T07:57:02.134140+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1168,7 +1264,7 @@
     "primary_source_id": "us-federal-register",
     "n": 8377,
     "first_seen": "2026-11-04T07:30:45.022151+00:00",
-    "last_seen": "2026-11-05T20:41:39.999913+00:00",
+    "last_seen": "2026-11-06T07:57:02.134140+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1198,7 +1294,7 @@
     "primary_source_id": "us-federal-register",
     "n": 8376,
     "first_seen": "2026-11-04T07:30:45.022151+00:00",
-    "last_seen": "2026-11-05T20:41:39.999913+00:00",
+    "last_seen": "2026-11-06T07:57:02.134140+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1228,7 +1324,7 @@
     "primary_source_id": "us-federal-register",
     "n": 8375,
     "first_seen": "2026-11-04T07:30:45.022151+00:00",
-    "last_seen": "2026-11-05T20:41:39.999913+00:00",
+    "last_seen": "2026-11-06T07:57:02.134140+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1252,7 +1348,7 @@
     "primary_source_id": "us-govinfo-dcpd",
     "n": 8474,
     "first_seen": "2026-11-04T07:30:45.022151+00:00",
-    "last_seen": "2026-11-05T20:41:39.999913+00:00",
+    "last_seen": "2026-11-06T07:57:02.134140+00:00",
     "source_ids": [
       "us-govinfo-dcpd"
     ]
@@ -1276,7 +1372,7 @@
     "primary_source_id": "us-govinfo-dcpd",
     "n": 8473,
     "first_seen": "2026-11-04T07:30:45.022151+00:00",
-    "last_seen": "2026-11-05T20:41:39.999913+00:00",
+    "last_seen": "2026-11-06T07:57:02.134140+00:00",
     "source_ids": [
       "us-govinfo-dcpd"
     ]
@@ -1300,7 +1396,7 @@
     "primary_source_id": "us-govinfo-dcpd",
     "n": 8472,
     "first_seen": "2026-11-04T07:30:45.022151+00:00",
-    "last_seen": "2026-11-05T20:41:39.999913+00:00",
+    "last_seen": "2026-11-06T07:57:02.134140+00:00",
     "source_ids": [
       "us-govinfo-dcpd"
     ]
@@ -1324,7 +1420,7 @@
     "primary_source_id": "us-govinfo-dcpd",
     "n": 8471,
     "first_seen": "2026-11-04T07:30:45.022151+00:00",
-    "last_seen": "2026-11-05T20:41:39.999913+00:00",
+    "last_seen": "2026-11-06T07:57:02.134140+00:00",
     "source_ids": [
       "us-govinfo-dcpd"
     ]
@@ -1354,7 +1450,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 8273,
     "first_seen": "2026-11-03T20:18:37.164529+00:00",
-    "last_seen": "2026-11-05T20:41:39.999913+00:00",
+    "last_seen": "2026-11-06T07:57:02.134140+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -1383,7 +1479,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 2103,
     "first_seen": "2026-10-15T12:16:32.997656+00:00",
-    "last_seen": "2026-11-05T20:41:39.999913+00:00",
+    "last_seen": "2026-11-06T07:57:02.134140+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -1412,7 +1508,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 8274,
     "first_seen": "2026-11-03T20:18:37.164529+00:00",
-    "last_seen": "2026-11-05T20:41:39.999913+00:00",
+    "last_seen": "2026-11-06T07:57:02.134140+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -1441,7 +1537,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 8275,
     "first_seen": "2026-11-03T20:18:37.164529+00:00",
-    "last_seen": "2026-11-05T20:41:39.999913+00:00",
+    "last_seen": "2026-11-06T07:57:02.134140+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -1470,7 +1566,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 8276,
     "first_seen": "2026-11-03T20:18:37.164529+00:00",
-    "last_seen": "2026-11-05T20:41:39.999913+00:00",
+    "last_seen": "2026-11-06T07:57:02.134140+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -1499,7 +1595,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 8277,
     "first_seen": "2026-11-03T20:18:37.164529+00:00",
-    "last_seen": "2026-11-05T20:41:39.999913+00:00",
+    "last_seen": "2026-11-06T07:57:02.134140+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -1528,7 +1624,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 8278,
     "first_seen": "2026-11-03T20:18:37.164529+00:00",
-    "last_seen": "2026-11-05T20:41:39.999913+00:00",
+    "last_seen": "2026-11-06T07:57:02.134140+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -1557,7 +1653,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 8279,
     "first_seen": "2026-11-03T20:18:37.164529+00:00",
-    "last_seen": "2026-11-05T20:41:39.999913+00:00",
+    "last_seen": "2026-11-06T07:57:02.134140+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -1586,292 +1682,9 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 8280,
     "first_seen": "2026-11-03T20:18:37.164529+00:00",
-    "last_seen": "2026-11-05T20:41:39.999913+00:00",
+    "last_seen": "2026-11-06T07:57:02.134140+00:00",
     "source_ids": [
       "uk-govuk-decision"
-    ]
-  },
-  {
-    "title": "Nondiscrimination on the Basis of Disability in Programs or Activities Receiving Federal Financial Assistance",
-    "url": "https://www.federalregister.gov/documents/2026/11/03/2026-22380/nondiscrimination-on-the-basis-of-disability-in-programs-or-activities-receiving-federal-financial",
-    "native_id": "2026-22380",
-    "published_at": "2026-11-03T00:00:00+00:00",
-    "published_raw": "2026-11-03",
-    "document_type": "Rule",
-    "issuer": "Health and Human Services Department; Office of the Secretary",
-    "issuer_ids": [
-      "us-fr:221"
-    ],
-    "summary": "The Department of Health and Human Services (HHS or Department) issues this rule to revise the regulation implementing section 504 of the Rehabilitation Act of 1973 (section 504) as it applies to recipients of HHS funding (entitled \"Nondiscrimination on the Basis of Disability in Programs or Activities Receiving Federal Financial Assistance,\" (\"2024 Final Rule\")), published on May 9, 2024. This rule clarifies that the Department interprets the statutory exclusion of \"gender identity disorders not resulting from physical impairments\" from the terms \"individual with a disability\" and \"disability\" set forth in our regulations to encompass \"gender dysphoria not resulting from a physical impairment\" for purposes of the regulation. This clarification is necessary to resolve ambiguity introduced in the preamble to the 2024 Final Rule and to ensure compliance with the best reading of the governing statute.",
-    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-11-03/pdf/2026-22380.pdf",
-    "source_metadata": {
-      "document_type": "Rule",
-      "document_stage": "final_rule_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Health and Human Services Department; Office of the Secretary",
-      "jurisdiction": "US",
-      "family": "rules_notices_and_presidential_documents"
-    },
-    "primary_source_id": "us-federal-register",
-    "n": 8214,
-    "first_seen": "2026-11-03T07:57:02.713515+00:00",
-    "last_seen": "2026-11-05T20:41:39.999913+00:00",
-    "source_ids": [
-      "us-federal-register"
-    ]
-  },
-  {
-    "title": "Medicare and Medicaid Programs; Organ Procurement Organizations Conditions for Coverage: Revisions to the Conditions for Coverage",
-    "url": "https://www.federalregister.gov/documents/2026/11/03/2026-22381/medicare-and-medicaid-programs-organ-procurement-organizations-conditions-for-coverage-revisions-to",
-    "native_id": "2026-22381",
-    "published_at": "2026-11-03T00:00:00+00:00",
-    "published_raw": "2026-11-03",
-    "document_type": "Rule",
-    "issuer": "Health and Human Services Department; Centers for Medicare & Medicaid Services",
-    "issuer_ids": [
-      "us-fr:221",
-      "us-fr:45"
-    ],
-    "summary": "This final rule revises the Conditions for Coverage for Organ Procurement Organizations (OPOs) to clarify outstanding procedural questions and provide additional operational flexibility for OPOs to achieve high performance resulting in the successful procurement, distribution, and transplantation of more life-saving organs. This rule revises definitions, revises the designation requirements for OPOs, clarifies when an OPO's service area is open for competition, and updates the process for appeals. We are committed to holding all OPOs accountable for their performance and this final rule does not revise the focus on improving the volume of donors and transplants assessed in the outcome measures or the tier structure used for re-certification and de-certification of OPOs.",
-    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-11-03/pdf/2026-22381.pdf",
-    "source_metadata": {
-      "document_type": "Rule",
-      "document_stage": "final_rule_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Health and Human Services Department; Centers for Medicare & Medicaid Services",
-      "jurisdiction": "US",
-      "family": "rules_notices_and_presidential_documents"
-    },
-    "primary_source_id": "us-federal-register",
-    "n": 8213,
-    "first_seen": "2026-11-03T07:57:02.713515+00:00",
-    "last_seen": "2026-11-05T20:41:39.999913+00:00",
-    "source_ids": [
-      "us-federal-register"
-    ]
-  },
-  {
-    "title": "Compliance Procedure (52 U.S.C. 30109, 30107(a))",
-    "url": "https://www.federalregister.gov/documents/2026/11/03/2026-22402/compliance-procedure-52-usc-30109-30107a",
-    "native_id": "2026-22402",
-    "published_at": "2026-11-03T00:00:00+00:00",
-    "published_raw": "2026-11-03",
-    "document_type": "Rule",
-    "issuer": "Federal Election Commission",
-    "issuer_ids": [
-      "us-fr:165"
-    ],
-    "summary": "",
-    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-11-03/pdf/2026-22402.pdf",
-    "source_metadata": {
-      "document_type": "Rule",
-      "document_stage": "final_rule_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Election Commission",
-      "jurisdiction": "US",
-      "family": "rules_notices_and_presidential_documents"
-    },
-    "primary_source_id": "us-federal-register",
-    "n": 8194,
-    "first_seen": "2026-11-03T07:57:02.713515+00:00",
-    "last_seen": "2026-11-05T20:41:39.999913+00:00",
-    "source_ids": [
-      "us-federal-register"
-    ]
-  },
-  {
-    "title": "National Emission Standards for Hazardous Air Pollutants: Lime Manufacturing Plants Technology Review; Correction",
-    "url": "https://www.federalregister.gov/documents/2026/11/03/2026-22404/national-emission-standards-for-hazardous-air-pollutants-lime-manufacturing-plants-technology-review",
-    "native_id": "2026-22404",
-    "published_at": "2026-11-03T00:00:00+00:00",
-    "published_raw": "2026-11-03",
-    "document_type": "Rule",
-    "issuer": "Environmental Protection Agency",
-    "issuer_ids": [
-      "us-fr:145"
-    ],
-    "summary": "The Environmental Protection Agency (EPA) is making a correction to the National Emission Standards for Hazardous Air Pollutants for Lime Manufacturing Plants (Lime Manufacturing NESHAP) technology review final rule that appeared in the Federal Register on July 16, 2024. Following publication of this final rule, the EPA discovered an inadvertent error in the regulatory text and is correcting the error in this action.",
-    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-11-03/pdf/2026-22404.pdf",
-    "source_metadata": {
-      "document_type": "Rule",
-      "document_stage": "final_rule_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Environmental Protection Agency",
-      "jurisdiction": "US",
-      "family": "rules_notices_and_presidential_documents"
-    },
-    "primary_source_id": "us-federal-register",
-    "n": 8192,
-    "first_seen": "2026-11-03T07:57:02.713515+00:00",
-    "last_seen": "2026-11-05T20:41:39.999913+00:00",
-    "source_ids": [
-      "us-federal-register"
-    ]
-  },
-  {
-    "title": "Review of the Commission's Broadcast and Cable Equal Employment Opportunity Rules and Policies; Delete, Delete, Delete",
-    "url": "https://www.federalregister.gov/documents/2026/11/03/2026-22408/review-of-the-commissions-broadcast-and-cable-equal-employment-opportunity-rules-and-policies-delete",
-    "native_id": "2026-22408",
-    "published_at": "2026-11-03T00:00:00+00:00",
-    "published_raw": "2026-11-03",
-    "document_type": "Rule",
-    "issuer": "Federal Communications Commission",
-    "issuer_ids": [
-      "us-fr:161"
-    ],
-    "summary": "In this document, the Media Bureau of the Federal Communications Commission (Commission) adopts an Order that removes a section of the Commission's Rules and references to that section to conform the Commission's Rules to the decision of the Fifth Circuit Court of Appeals in National Religious Broadcasters v. FCC.",
-    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-11-03/pdf/2026-22408.pdf",
-    "source_metadata": {
-      "document_type": "Rule",
-      "document_stage": "final_rule_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission",
-      "jurisdiction": "US",
-      "family": "rules_notices_and_presidential_documents"
-    },
-    "primary_source_id": "us-federal-register",
-    "n": 8189,
-    "first_seen": "2026-11-03T07:57:02.713515+00:00",
-    "last_seen": "2026-11-05T20:41:39.999913+00:00",
-    "source_ids": [
-      "us-federal-register"
-    ]
-  },
-  {
-    "title": "List of Approved Spent Fuel Storage Casks: TN Americas, LLC: Standardized NUHOMS® Horizontal Modular Storage System for Irradiated Nuclear Fuel, Certificate of Compliance No. 1004, Renewed Amendment No. 19",
-    "url": "https://www.federalregister.gov/documents/2026/11/03/2026-22421/list-of-approved-spent-fuel-storage-casks-tn-americas-llc-standardized-nuhoms-horizontal-modular",
-    "native_id": "2026-22421",
-    "published_at": "2026-11-03T00:00:00+00:00",
-    "published_raw": "2026-11-03",
-    "document_type": "Rule",
-    "issuer": "Nuclear Regulatory Commission",
-    "issuer_ids": [
-      "us-fr:383"
-    ],
-    "summary": "The U.S. Nuclear Regulatory Commission (NRC) is confirming the effective date of November 9, 2026, for the direct final rule that was published in the Federal Register on August 26, 2026. This direct final rule amended the TN Americas, LLC Standardized NUHOMS[supreg] Horizontal Modular Storage System for Irradiated Nuclear Fuel listing within the \"List of approved spent fuel storage casks\" to include Amendment No. 19 to Certificate of Compliance No. 1004. Amendment No. 19 revises the certificate of compliance to provide for a 61BTH improved basket design using staggered plates similar the 24PTH Type 3 basket approved in CoC 1004 Amendment 18 and similar to the EOS 37PTH and 89BTH baskets approved in CoC 1042. This will simplify construction, reduce weight and improve fabricability. Additional changes are proposed to address editorial corrections, consistency, and terminology clarifications.",
-    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-11-03/pdf/2026-22421.pdf",
-    "source_metadata": {
-      "document_type": "Rule",
-      "document_stage": "final_rule_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Nuclear Regulatory Commission",
-      "jurisdiction": "US",
-      "family": "rules_notices_and_presidential_documents"
-    },
-    "primary_source_id": "us-federal-register",
-    "n": 8177,
-    "first_seen": "2026-11-03T07:57:02.713515+00:00",
-    "last_seen": "2026-11-05T20:41:39.999913+00:00",
-    "source_ids": [
-      "us-federal-register"
-    ]
-  },
-  {
-    "title": "Streamlining Contested Adjudications in Licensing Proceedings",
-    "url": "https://www.federalregister.gov/documents/2026/11/03/2026-22443/streamlining-contested-adjudications-in-licensing-proceedings",
-    "native_id": "2026-22443",
-    "published_at": "2026-11-03T00:00:00+00:00",
-    "published_raw": "2026-11-03",
-    "document_type": "Rule",
-    "issuer": "Nuclear Regulatory Commission",
-    "issuer_ids": [
-      "us-fr:383"
-    ],
-    "summary": "The U.S. Nuclear Regulatory Commission (NRC, agency, or Commission) is revising the agency's rules of practice and procedure to streamline contested adjudications in NRC licensing proceedings in response to the Accelerating Deployment of Versatile, Advanced Nuclear for Clean Energy Act of 2024 (ADVANCE Act) and Executive Order 14300, Ordering the Reform of the Nuclear Regulatory Commission.",
-    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-11-03/pdf/2026-22443.pdf",
-    "source_metadata": {
-      "document_type": "Rule",
-      "document_stage": "final_rule_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Nuclear Regulatory Commission",
-      "jurisdiction": "US",
-      "family": "rules_notices_and_presidential_documents"
-    },
-    "primary_source_id": "us-federal-register",
-    "n": 8160,
-    "first_seen": "2026-11-03T07:57:02.713515+00:00",
-    "last_seen": "2026-11-05T20:41:39.999913+00:00",
-    "source_ids": [
-      "us-federal-register"
-    ]
-  },
-  {
-    "title": "DCPD-202600574 - Remarks During a Rose Garden Club Dinner",
-    "url": "https://www.govinfo.gov/app/details/DCPD-202600574",
-    "native_id": "DCPD-202600574",
-    "published_at": "2026-11-02T22:09:00+00:00",
-    "published_raw": "Mon, 02 Nov 2026 22:09:00 +0000",
-    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "presidential_document",
-      "document_stage": "presidential_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Compilation of Presidential Documents",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-dcpd",
-    "n": 8084,
-    "first_seen": "2026-11-02T22:20:55.750782+00:00",
-    "last_seen": "2026-11-05T20:41:39.999913+00:00",
-    "source_ids": [
-      "us-govinfo-dcpd"
-    ]
-  },
-  {
-    "title": "DCPD-202600663 - Remarks in an Exchange With Reporters During a Tour of Peterbilt Motors Company in Denton, Texas",
-    "url": "https://www.govinfo.gov/app/details/DCPD-202600663",
-    "native_id": "DCPD-202600663",
-    "published_at": "2026-11-02T22:09:00+00:00",
-    "published_raw": "Mon, 02 Nov 2026 22:09:00 +0000",
-    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "presidential_document",
-      "document_stage": "presidential_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Compilation of Presidential Documents",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-dcpd",
-    "n": 8083,
-    "first_seen": "2026-11-02T22:20:55.750782+00:00",
-    "last_seen": "2026-11-05T20:41:39.999913+00:00",
-    "source_ids": [
-      "us-govinfo-dcpd"
-    ]
-  },
-  {
-    "title": "DCPD-202600662 - Remarks and an Exchange With Reporters Upon Arrival in Dallas, Texas",
-    "url": "https://www.govinfo.gov/app/details/DCPD-202600662",
-    "native_id": "DCPD-202600662",
-    "published_at": "2026-11-02T22:09:00+00:00",
-    "published_raw": "Mon, 02 Nov 2026 22:09:00 +0000",
-    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "presidential_document",
-      "document_stage": "presidential_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Compilation of Presidential Documents",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-dcpd",
-    "n": 8082,
-    "first_seen": "2026-11-02T22:20:55.750782+00:00",
-    "last_seen": "2026-11-05T20:41:39.999913+00:00",
-    "source_ids": [
-      "us-govinfo-dcpd"
     ]
   }
 ]
