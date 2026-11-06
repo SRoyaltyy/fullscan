@@ -1815,6 +1815,38 @@
       "workflow": "Stock Book ALL (one-shot)",
       "run_id": "42230272001",
       "manifest": "research/input_freeze/2026-11-06/manifest.json"
+    },
+    {
+      "path": "data/news_intake/2026-11-06/headline_groups.json",
+      "at": "2026-11-06T11:02:48-05:00",
+      "commit_msg": "auto: free news intake [skip ci]",
+      "workflow": "Free news intake",
+      "run_id": "42242738301",
+      "manifest": "research/input_freeze/2026-11-06/manifest.json"
+    },
+    {
+      "path": "data/news_intake/2026-11-06/lane_queue.json",
+      "at": "2026-11-06T11:02:48-05:00",
+      "commit_msg": "auto: free news intake [skip ci]",
+      "workflow": "Free news intake",
+      "run_id": "42242738301",
+      "manifest": "research/input_freeze/2026-11-06/manifest.json"
+    },
+    {
+      "path": "data/news_intake/2026-11-06/parsed.json",
+      "at": "2026-11-06T11:02:48-05:00",
+      "commit_msg": "auto: free news intake [skip ci]",
+      "workflow": "Free news intake",
+      "run_id": "42242738301",
+      "manifest": "research/input_freeze/2026-11-06/manifest.json"
+    },
+    {
+      "path": "data/news_intake/2026-11-06/review_queue.json",
+      "at": "2026-11-06T11:02:48-05:00",
+      "commit_msg": "auto: free news intake [skip ci]",
+      "workflow": "Free news intake",
+      "run_id": "42242738301",
+      "manifest": "research/input_freeze/2026-11-06/manifest.json"
     }
   ]
 }
