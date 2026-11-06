@@ -35664,7 +35664,7 @@
       "divergence_flagged": false,
       "divergence_verdict": null,
       "per_factor_breakdown": [],
-      "reflection_lesson_ref": null,
+      "reflection_lesson_ref": "02_lessons/candidate/2026-11-06_lesson.md",
       "sources_used": [],
       "ops_fail": true,
       "path_shape": "reversal down (intraday spike faded, closed near low)",
@@ -35672,7 +35672,8 @@
       "key_interaction": "Offsetting forces — NFP strength supported growth confidence but the hawkish rate repricing capped the rebound, producing a dead-cat bounce",
       "knowable_at_9am": "yes",
       "attribution_contested": "yes",
-      "outlier_watch": "Dow -0.46% vs NDX +1.09%; 10Y yield rose 6bp to 4.9% even as stocks rebounded; VIX fell despite the intraday fade"
+      "outlier_watch": "Dow -0.46% vs NDX +1.09%; 10Y yield rose 6bp to 4.9% even as stocks rebounded; VIX fell despite the intraday fade",
+      "lesson_schema_ok": true
     }
   ]
 }
