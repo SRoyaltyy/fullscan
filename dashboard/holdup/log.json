@@ -8857,5 +8857,13 @@
     "sha256": "73133829af997bf36730f43d7f0811ac213109d03c316125faeafcc092e63f1d",
     "shares": 1,
     "ticker": "UPBD"
+  },
+  {
+    "committed_at": "2026-11-06T14:39:52Z",
+    "date": "2026-11-06",
+    "kind": "missing",
+    "reason": "missing: plan not sealed before open",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "a733e2c89d628fc37c2b2aab992eed2e76986776834fb9e9839f2f7e8772ca23"
   }
 ]

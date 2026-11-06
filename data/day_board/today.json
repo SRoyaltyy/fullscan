@@ -1,181 +1,93 @@
 {
   "date": "2026-11-06",
-  "generated_at": "2026-11-06T05:05:56.622063-05:00",
+  "generated_at": "2026-11-06T09:26:42.413424-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
-    "ok": 4,
-    "partial": 4,
-    "fail": 0,
+    "ok": 6,
+    "partial": 1,
+    "fail": 1,
     "n": 8
   },
-  "buy_1d": [],
-  "sell_1d": [],
-  "flatten": {},
+  "buy_1d": [
+    {
+      "ticker": "THC",
+      "score": 0.3367292991110205
+    },
+    {
+      "ticker": "MD",
+      "score": 0.6043185338685368
+    },
+    {
+      "ticker": "EHC",
+      "score": 0.2544424457048477
+    },
+    {
+      "ticker": "UHS",
+      "score": 0.44261355874770125
+    },
+    {
+      "ticker": "KDP",
+      "score": 0.45461977270668286
+    },
+    {
+      "ticker": "APP",
+      "score": 0.855276198175768
+    },
+    {
+      "ticker": "AVAH",
+      "score": 0.731684947074667
+    },
+    {
+      "ticker": "ACHC",
+      "score": 0.5596524971583579
+    }
+  ],
+  "sell_1d": [
+    {
+      "ticker": "ENVX",
+      "score": -0.2604141011801022
+    },
+    {
+      "ticker": "FCEL",
+      "score": -0.39504457968404727
+    },
+    {
+      "ticker": "TE",
+      "score": -0.4438152788056568
+    },
+    {
+      "ticker": "QBTS",
+      "score": -0.3516621641674593
+    },
+    {
+      "ticker": "DDD",
+      "score": -0.3944375611667623
+    },
+    {
+      "ticker": "AMPX",
+      "score": -0.33165812015674834
+    },
+    {
+      "ticker": "METC",
+      "score": -0.3345051888033622
+    },
+    {
+      "ticker": "LTBR",
+      "score": -0.3917862182253779
+    }
+  ],
+  "flatten": {
+    "said": "0 priced buys \u00b7 cash $116,007.02 \u00b7 morning S missing",
+    "bullets": [
+      "0 priced buys",
+      "cash $116,007.02",
+      "morning S missing"
+    ]
+  },
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "universe",
-      "title": "Universe labels",
-      "date": "2026-11-06",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-11-06T05:02:26.960065-05:00",
-      "files": [
-        {
-          "path": "data/universe/2026-11-06_membership.csv",
-          "ok": true,
-          "reason": "",
-          "size": 1129272,
-          "preview": "5899 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
-        }
-      ],
-      "preview": "5899 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
-    },
-    {
-      "key": "weather",
-      "title": "Weather / regime (offline retry)",
-      "date": "2026-11-06",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-11-06T05:02:46.697137-05:00",
-      "files": [
-        {
-          "path": "01_daily/weather/2026-11-06_weather.json",
-          "ok": true,
-          "reason": "",
-          "size": 9445,
-          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -2.47, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -0.53, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': 0.5, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -0.05, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -13.61, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.67, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -6.29, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -6.27, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
-        },
-        {
-          "path": "01_daily/weather/2026-11-06_weather.md",
-          "ok": true,
-          "reason": "",
-          "size": 5067,
-          "preview": "# Weather report \u2014 2026-11-06\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
-        }
-      ],
-      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -2.47, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -0.53, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': 0.5, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -0.05, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -13.61, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.67, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -6.29, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -6.27, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-11-06\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
-    },
-    {
-      "key": "join",
-      "title": "Join / match rank",
-      "date": "2026-11-06",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-11-06T05:02:53.019693-05:00",
-      "files": [
-        {
-          "path": "data/join/2026-11-06_ranked.csv",
-          "ok": true,
-          "reason": "",
-          "size": 2288157,
-          "preview": "5899 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 COCO, HHH, GLBE, FIVE, LTC"
-        }
-      ],
-      "preview": "5899 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 COCO, HHH, GLBE, FIVE, LTC"
-    },
-    {
-      "key": "ab",
-      "title": "AB checklist",
-      "date": "2026-11-06",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-11-06T05:03:16.097455-05:00",
-      "files": [
-        {
-          "path": "data/ab_checklist/2026-11-06_ab_checklist.csv",
-          "ok": true,
-          "reason": "",
-          "size": 7509526,
-          "preview": "2610 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 IFF, SWBI, MNTK, EPAM, AUPH"
-        },
-        {
-          "path": "data/ab_checklist/2026-11-06_ab_checklist_enriched.csv",
-          "ok": true,
-          "reason": "",
-          "size": 8290260,
-          "preview": "2610 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 HCA, POOL, YUM, NEM, EPAM"
-        }
-      ],
-      "preview": "2610 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 IFF, SWBI, MNTK, EPAM, AUPH \u00b7 2610 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 HCA, POOL, YUM, NEM, EPAM"
-    },
-    {
-      "key": "news_parse",
-      "title": "News parse",
-      "date": "2026-11-06",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-11-06T05:03:55.286543-05:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-11-06_parsed.json",
-          "ok": true,
-          "reason": "",
-          "size": 6861364,
-          "preview": "raw=9474 usable=640 single=553 \u00b7 Japan Bonds Rally as Global Risk-Off Move Boosts Haven Demand - Bloomberg.com | Bitcoin Sinks to Seven-Week Low as Risk-Off Mood Deepens - Bloomberg.com | China Bank Funding Costs Hit Record Low on PBOC Rate Shift - Bloomberg.com | Brazil Puts Rare Earths, Copper Atop Critical Minerals List - Bloomberg.com | Trump-Backed Critical Minerals Deals Face Growing Pressure After Blue Wave - Blo"
-        },
-        {
-          "path": "01_daily/news/2026-11-06_parsed.md",
-          "ok": true,
-          "reason": "",
-          "size": 12718,
-          "preview": "# News Parse v2 \u2014 2026-11-06T05:03:46.585471-05:00\nWindow\u224848h | news_mode=on | raw=9474 | usable=640 | single_name=553 | noise_dropped=8095\nusable polarity={'+': 27, '-': 129, 'mixed': 5, 'neutral': 479}"
-        }
-      ],
-      "preview": "raw=9474 usable=640 single=553 \u00b7 Japan Bonds Rally as Global Risk-Off Move Boosts Haven Demand - Bloomberg.com | Bitcoin Sinks to Seven-Week Low as Risk-Off Mood Deepens - Bloomberg.com | China Bank Funding Costs Hit Record Low on PBOC Rate Shift - Bloomberg.com | Brazil Puts Rare Earths, Copper Atop Critical Minerals List - Bloomberg.com | Trump-Backed Critical Minerals Deals Face Growing Pressure After Blue Wave - Blo \u00b7 # News Parse v2 \u2014 2026-11-06T05:03:46.585471-05:00\nWindow\u224848h | news_mode=on | raw=9474 | usable=640 | single_name=553 | noise_dropped=8095\nusable polarity={'+': 27, '-': 129, 'mixed': 5, 'neutral': 479}"
-    },
-    {
-      "key": "news_actions",
-      "title": "News actions (no LLM)",
-      "date": "2026-11-06",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-11-06T05:04:20.651156-05:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-11-06_actions.json",
-          "ok": true,
-          "reason": "",
-          "size": 63099,
-          "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers"
-        },
-        {
-          "path": "01_daily/news/2026-11-06_actions.md",
-          "ok": true,
-          "reason": "",
-          "size": 13660,
-          "preview": "# News \u2192 Actions v4 (full framework) \u2014 2026-11-06T05:04:14.101837-05:00\nraw=9473 unique_events=6 tickers=75"
-        }
-      ],
-      "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-11-06T05:04:14.101837-05:00\nraw=9473 unique_events=6 tickers=75"
-    },
-    {
-      "key": "paper",
-      "title": "Paper dashboard",
-      "date": "2026-11-06",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-11-06T05:05:28.579662-05:00",
-      "files": [
-        {
-          "path": "03_scoreboard/PAPER_TRADING.md",
-          "ok": true,
-          "reason": "",
-          "size": 1799,
-          "preview": "# Paper trading \u2014 Futubull-fee simulation\nAs of **2026-11-05** \u00b7 $10,000 starting capital per sleeve \u00b7 fees per `00_grounding/futubull_fees.json`\nLatest book **2026-11-05** ranker: **weighted** (green pile liquid=0, need 8).\nSleeves: `{horizon}_top` = top-N overall buys, `{horizon}_size` = top 3 per size bucket. Fill at signal-day close. Sell only after min-hold (1d=1, 3d=3, 1w=5, 2w=10, 1m=21 **trading sessions** \u2014 weekends and NYSE holidays do not count) AND the name has left the book.\n| Sleeve | Equity | Return | Cash | Open pos | Trades | Fees paid | Realized P/L | Unrealized P/L | Closed win | Open win |\n|--------|--------|--------|------|----------|--------|-----------|--------------|----------------|------------|----------|\n| 1d_top | $9,529.81 | -4.70% | $605.04 | 8 | 520 | $1,101.17 | $-453.79 | $-16.40 | 33.2% | 0.0% |\n| 1d_size | $10,213.60 | +2.14% | $272.01 | 6 | 474 | $1,10"
-        },
-        {
-          "path": "dashboard/index.html",
-          "ok": true,
-          "reason": "",
-          "size": 16019872,
-          "preview": "<!DOCTYPE html>\n<html lang=\"en\"><head><meta charset=\"utf-8\">\n<meta name=\"data-asof\" content=\"2026-11-05\">\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n<title>Paper Trading \u2014 Stock Book Simulation</title>\n<style>\n:root{\n--bg:#0f1420; --card:#171e2e; --line:#262f45; --line2:#232c42;\n--fg:#dfe6f2; --mut:#8b96ab; --dim:#66708a; --pos:#4ade80; --neg:#f87171;\n--chip:#2a3450; --day:#121826; --gold:#fbbf24;\n}\n*{box-sizing:border-box}\nhtml,body{overflow-x:hidden}\nbody{margin:0;background:var(--bg);color:var(--fg);font:14px/1.5 -apple-system,Segoe UI,Roboto,sans-serif}\n.wrap{max-width:1180px;margin:0 auto;padding:16px 16px 48px;width:100%}\nh1{font-size:20px;margin:0 0 4px}\n.sub{color:var(--mut);font-size:12px;margin:0 0 12px}\n.merge-hero{display:block;margin:0 0 14px;padding:14px 16px;border-radius:12px;\nbackground:linear-gradient(180deg,#1a2744,#171e2e);border:1px solid #3b"
-        }
-      ],
-      "preview": "# Paper trading \u2014 Futubull-fee simulation\nAs of **2026-11-05** \u00b7 $10,000 starting capital per sleeve \u00b7 fees per `00_grounding/futubull_fees.json`\nLatest book **2026-11-05** ranker: **weighted** (green pile liquid=0, need 8).\nSleeves: `{horizon}_top` = top-N overall buys, `{horizon}_size` = top 3 per size bucket. Fill at signal-day close. Sell only after min-hold (1d=1, 3d=3, 1w=5, 2w=10, 1m=21 **trading sessions** \u2014 weekends and NYSE holidays do not count) AND the name has left the book.\n| Sleeve | Equity | Return | Cash | Open pos | Trades | Fees paid | Realized P/L | Unrealized P/L | Closed win | Open win |\n|--------|--------|--------|------|----------|--------|-----------|--------------|----------------|------------|----------|\n| 1d_top | $9,529.81 | -4.70% | $605.04 | 8 | 520 | $1,101.17 | $-453.79 | $-16.40 | 33.2% | 0.0% |\n| 1d_size | $10,213.60 | +2.14% | $272.01 | 6 | 474 | $1,10 \u00b7 <!DOCTYPE html>\n<html lang=\"en\"><head><meta charset=\"utf-8\">\n<meta name=\"data-asof\" content=\"2026-11-05\">\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n<title>Paper Trading \u2014 Stock Book Simulation</title>\n<style>\n:root{\n--bg:#0f1420; --card:#171e2e; --line:#262f45; --line2:#"
-    },
     {
       "key": "status",
       "title": "Pre-open status packet",
@@ -207,6 +119,328 @@
         }
       ],
       "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, sectors_required, all_ok \u00b7 keys: date, generated_at, run_id, runner, all_ok, qc_all_ok, book_ok, grok_ok, grok_fails, missing_required, attempts, github_runs \u00b7 # Pre-open ALL status \u2014 2026-11-06\nall_ok=False  qc_all_ok=False  book_ok=False  grok_ok=False  news_mode=on  missing=['events', 'news_judge', 'map_heat_research', 'general_predict']\nPredictive modules + stock book (must land before 09:30 ET).\nOutcome / learn / tonight's captain research = Post-Close ALL.\n- Weather / regime: exit 0\n- News parse: exit 0\n- News actions (no LLM): exit 0"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-11-06",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-06T09:23:17.884261-05:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-11-06_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 9543,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -2.47, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -0.53, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': 0.5, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -0.05, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -13.61, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.67, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -6.29, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -6.27, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-11-06_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5144,
+          "preview": "# Weather report \u2014 2026-11-06\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -2.47, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -0.53, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': 0.5, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -0.05, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -13.61, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.67, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -6.29, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -6.27, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-11-06\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-11-06",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-06T09:23:27.584491-05:00",
+      "files": [
+        {
+          "path": "data/join/2026-11-06_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2314981,
+          "preview": "5899 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 LTC, COCO, ATAT, ETR, HHH"
+        }
+      ],
+      "preview": "5899 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 LTC, COCO, ATAT, ETR, HHH"
+    },
+    {
+      "key": "peer_rs",
+      "title": "Peer RS",
+      "date": "2026-11-06",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-06T09:23:34.560381-05:00",
+      "files": [
+        {
+          "path": "data/peers/2026-11-06_peer_rs.csv",
+          "ok": true,
+          "reason": "",
+          "size": 819643,
+          "preview": "5046 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+        }
+      ],
+      "preview": "5046 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-11-06",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-06T09:23:53.860673-05:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-11-06_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1485323,
+          "preview": "1d BUY THC, MD, EHC, UHS, KDP, APP, AVAH, ACHC \u00b7 SELL ENVX, FCEL, TE, QBTS, DDD, AMPX, METC, LTBR"
+        },
+        {
+          "path": "data/stock_book/2026-11-06_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-11-06_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2590,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-11-06_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12412,
+          "preview": "2026-11-06 BUY THC, MD, EHC, UHS, KDP, APP, AVAH, ACHC \u00b7 SELL ENVX, FCEL, TE, QBTS, DDD, AMPX, METC, LTBR"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12412,
+          "preview": "2026-11-06 BUY THC, MD, EHC, UHS, KDP, APP, AVAH, ACHC \u00b7 SELL ENVX, FCEL, TE, QBTS, DDD, AMPX, METC, LTBR"
+        },
+        {
+          "path": "01_daily/2026-11-06_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 85540,
+          "preview": "# Stock book \u2014 2026-11-06\n_Generated 2026-11-06T09:23:44.643355-05:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY THC, MD, EHC, UHS, KDP, APP, AVAH, ACHC \u00b7 SELL ENVX, FCEL, TE, QBTS, DDD, AMPX, METC, LTBR \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-11-06 BUY THC, MD, EHC, UHS, KDP, APP, AVAH, ACHC \u00b7 SELL ENVX, FCEL, TE, QBTS, DDD, AMPX, METC, LTBR \u00b7 2026-11-06 BUY THC, MD, EHC, UHS, KDP, APP, AVAH, ACHC \u00b7 SELL ENVX, FCEL, TE, QBTS, DDD, AMPX, METC, LTBR \u00b7 # Stock book \u2014 2026-11-06\n_Generated 2026-11-06T09:23:44.643355-05:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+    },
+    {
+      "key": "live_boards",
+      "title": "Live 1d BUY/SELL strip",
+      "date": "2026-11-06",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-06T09:24:01.099257-05:00",
+      "files": [
+        {
+          "path": "data/day_board/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 16602,
+          "preview": "2026-11-06 BUY THC, MD, EHC, UHS, KDP, APP, AVAH, ACHC \u00b7 SELL ENVX, FCEL, TE, QBTS, DDD, AMPX, METC, LTBR"
+        },
+        {
+          "path": "data/day_board/latest.json",
+          "ok": true,
+          "reason": "",
+          "size": 1116,
+          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
+        },
+        {
+          "path": "data/day_board/2026-11-06.json",
+          "ok": true,
+          "reason": "",
+          "size": 67817,
+          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href"
+        },
+        {
+          "path": "data/day_board/2026-11-06_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 31334,
+          "preview": "2026-11-06 BUY THC, MD, EHC, UHS, KDP, APP, AVAH, ACHC \u00b7 SELL ENVX, FCEL, TE, QBTS, DDD, AMPX, METC, LTBR"
+        },
+        {
+          "path": "data/day_board/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 301816,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/2026-11-06_strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 301816,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 273891,
+          "preview": "2026-11-06 BUY THC, MD, EHC, UHS, KDP, APP, AVAH, ACHC \u00b7 SELL ENVX, FCEL, TE, QBTS, DDD, AMPX, METC, LTBR"
+        },
+        {
+          "path": "data/factor_mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 301816,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 31334,
+          "preview": "2026-11-06 BUY THC, MD, EHC, UHS, KDP, APP, AVAH, ACHC \u00b7 SELL ENVX, FCEL, TE, QBTS, DDD, AMPX, METC, LTBR"
+        },
+        {
+          "path": "dashboard/factor-mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 301816,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 301816,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 273891,
+          "preview": "2026-11-06 BUY THC, MD, EHC, UHS, KDP, APP, AVAH, ACHC \u00b7 SELL ENVX, FCEL, TE, QBTS, DDD, AMPX, METC, LTBR"
+        },
+        {
+          "path": "data/day_board/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 1551,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        },
+        {
+          "path": "dashboard/factor-mine/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 1551,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        },
+        {
+          "path": "data/day_board/today_strategies.after-freeze-1.json",
+          "ok": true,
+          "reason": "",
+          "size": 281364,
+          "preview": "2026-11-04 BUY CDNA, BLFS, VEEV, ILMN, PRCH, LAUR, CNK, CHEF \u00b7 SELL NEOV, BIDU, ROIV, BAK, PAL, GFL, VNET, NOK"
+        },
+        {
+          "path": "data/day_board/today_strategies.after-freeze-2.json",
+          "ok": true,
+          "reason": "",
+          "size": 1165723,
+          "preview": "2026-11-04 BUY CDNA, BLFS, VEEV, ILMN, PRCH, LAUR, CNK, TRU \u00b7 SELL NEOV, BIDU, ROIV, BAK, GFL, PAL, VNET, NFLX"
+        },
+        {
+          "path": "data/day_board/today_strategies.after-freeze-3.json",
+          "ok": true,
+          "reason": "",
+          "size": 885881,
+          "preview": "2026-11-05 BUY XYZ, CDW, KD, JKHY, APPN, VRSN, DBX, MSFT \u00b7 SELL ENVX, AMKR, FCEL, METC, AMPX, EAF, HYLN, RGTI"
+        }
+      ],
+      "preview": "2026-11-06 BUY THC, MD, EHC, UHS, KDP, APP, AVAH, ACHC \u00b7 SELL ENVX, FCEL, TE, QBTS, DDD, AMPX, METC, LTBR \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href \u00b7 2026-11-06 BUY THC, MD, EHC, UHS, KDP, APP, AVAH, ACHC \u00b7 SELL ENVX, FCEL, TE, QBTS, DDD, AMPX, METC, LTBR \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-11-06 BUY THC, MD, EHC, UHS, KDP, APP, AVAH, ACHC \u00b7 SELL ENVX, FCEL, TE, QBTS, DDD, AMPX, METC, LTBR \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-11-06 BUY THC, MD, EHC, UHS, KDP, APP, AVAH, ACHC \u00b7 SELL ENVX, FCEL, TE, QBTS, DDD, AMPX, METC, LTBR \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, l"
+    },
+    {
+      "key": "paper",
+      "title": "Paper dashboard",
+      "date": "2026-11-06",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-06T09:24:13.484745-05:00",
+      "files": [
+        {
+          "path": "03_scoreboard/PAPER_TRADING.md",
+          "ok": true,
+          "reason": "",
+          "size": 1799,
+          "preview": "# Paper trading \u2014 Futubull-fee simulation\nAs of **2026-11-05** \u00b7 $10,000 starting capital per sleeve \u00b7 fees per `00_grounding/futubull_fees.json`\nLatest book **2026-11-05** ranker: **weighted** (green pile liquid=0, need 8).\nSleeves: `{horizon}_top` = top-N overall buys, `{horizon}_size` = top 3 per size bucket. Fill at signal-day close. Sell only after min-hold (1d=1, 3d=3, 1w=5, 2w=10, 1m=21 **trading sessions** \u2014 weekends and NYSE holidays do not count) AND the name has left the book.\n| Sleeve | Equity | Return | Cash | Open pos | Trades | Fees paid | Realized P/L | Unrealized P/L | Closed win | Open win |\n|--------|--------|--------|------|----------|--------|-----------|--------------|----------------|------------|----------|\n| 1d_top | $9,529.81 | -4.70% | $605.04 | 8 | 520 | $1,101.17 | $-453.79 | $-16.40 | 33.2% | 0.0% |\n| 1d_size | $10,213.60 | +2.14% | $272.01 | 6 | 474 | $1,10"
+        },
+        {
+          "path": "dashboard/index.html",
+          "ok": true,
+          "reason": "",
+          "size": 16019872,
+          "preview": "<!DOCTYPE html>\n<html lang=\"en\"><head><meta charset=\"utf-8\">\n<meta name=\"data-asof\" content=\"2026-11-05\">\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n<title>Paper Trading \u2014 Stock Book Simulation</title>\n<style>\n:root{\n--bg:#0f1420; --card:#171e2e; --line:#262f45; --line2:#232c42;\n--fg:#dfe6f2; --mut:#8b96ab; --dim:#66708a; --pos:#4ade80; --neg:#f87171;\n--chip:#2a3450; --day:#121826; --gold:#fbbf24;\n}\n*{box-sizing:border-box}\nhtml,body{overflow-x:hidden}\nbody{margin:0;background:var(--bg);color:var(--fg);font:14px/1.5 -apple-system,Segoe UI,Roboto,sans-serif}\n.wrap{max-width:1180px;margin:0 auto;padding:16px 16px 48px;width:100%}\nh1{font-size:20px;margin:0 0 4px}\n.sub{color:var(--mut);font-size:12px;margin:0 0 12px}\n.merge-hero{display:block;margin:0 0 14px;padding:14px 16px;border-radius:12px;\nbackground:linear-gradient(180deg,#1a2744,#171e2e);border:1px solid #3b"
+        }
+      ],
+      "preview": "# Paper trading \u2014 Futubull-fee simulation\nAs of **2026-11-05** \u00b7 $10,000 starting capital per sleeve \u00b7 fees per `00_grounding/futubull_fees.json`\nLatest book **2026-11-05** ranker: **weighted** (green pile liquid=0, need 8).\nSleeves: `{horizon}_top` = top-N overall buys, `{horizon}_size` = top 3 per size bucket. Fill at signal-day close. Sell only after min-hold (1d=1, 3d=3, 1w=5, 2w=10, 1m=21 **trading sessions** \u2014 weekends and NYSE holidays do not count) AND the name has left the book.\n| Sleeve | Equity | Return | Cash | Open pos | Trades | Fees paid | Realized P/L | Unrealized P/L | Closed win | Open win |\n|--------|--------|--------|------|----------|--------|-----------|--------------|----------------|------------|----------|\n| 1d_top | $9,529.81 | -4.70% | $605.04 | 8 | 520 | $1,101.17 | $-453.79 | $-16.40 | 33.2% | 0.0% |\n| 1d_size | $10,213.60 | +2.14% | $272.01 | 6 | 474 | $1,10 \u00b7 <!DOCTYPE html>\n<html lang=\"en\"><head><meta charset=\"utf-8\">\n<meta name=\"data-asof\" content=\"2026-11-05\">\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n<title>Paper Trading \u2014 Stock Book Simulation</title>\n<style>\n:root{\n--bg:#0f1420; --card:#171e2e; --line:#262f45; --line2:#"
+    },
+    {
+      "key": "flatten",
+      "title": "Flatten live card",
+      "date": "2026-11-06",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-06T09:26:41.351443-05:00",
+      "files": [
+        {
+          "path": "01_daily/2026-11-06_flatten_card.md",
+          "ok": true,
+          "reason": "",
+          "size": 2019,
+          "preview": "# flatten_robust card \u2014 2026-11-06\n_Generated 2026-11-06T14:26:40 \u2014 live `flatten_robust`._\n**morning S missing; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**\n- Score **\u2014** (\u2014) \u00b7 route **io**\n- Cash leftover **$116,007.02** (after 09:30 $116,007.02 \u00b7 after 16:00 $116,007.02)\n- Prior close **$116,007.02** \u00b7 09:30 **$116,007.02** \u00b7 overnight **$+0.00** \u00b7 session **$+0.00** \u00b7 16:00 **$116,007.02**\n- Overnight lots **0** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$0.00** \u2264 leftover after sells **$116,007.02**"
+        },
+        {
+          "path": "data/sleeve_merge/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 5992,
+          "preview": "2026-11-04 BUY \u2014 \u00b7 SELL \u2014"
+        },
+        {
+          "path": "data/sleeve_merge/today_live.json",
+          "ok": true,
+          "reason": "",
+          "size": 4797,
+          "preview": "keys: date, policy, generated, score, predict, hard_red, flatten_ok, n_priced_buys, prior_book, route, cash_open, cash_after_0930"
+        },
+        {
+          "path": "data/sleeve_merge/daily_marks.json",
+          "ok": true,
+          "reason": "",
+          "size": 161757,
+          "preview": "[{\"date\": \"2026-08-13\", \"route\": \"io\", \"score\": 8.525, \"predict\": \"UP\", \"yday_equity\": 100000.0, \"open_cash\": 100000.0, \"open_held\": 0, \"open_equity\": 100000.0, \"overnight_delta\": 0.0, \"session_delta\": -169.94, \"equity\": 99830.06, \"cash\": 9917.52, \"overnight_names\": \"\", \"overnight\": [], \"marks\": [{\"ticker\": \"BTSG\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 166, \"shares\": 166, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 59.8, \"close_px\": 60.23, \"entry_px\": 60.23, \"entry_date\": \"2026-08-13\", \"overnight\": 0.0, \"session\": 71.38, \"day\": 71.38, \"pct_overnight\": null, \"pct_session\": 0.719, \"held\": \"bought\"}, {\"ticker\": \"IREN\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 223, \"shares\": 223, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 45.98, \"close_px\": 44.76, \"entry_px\": 44.76, \"entry_date\": \"2026-08-13\", \"overnight\": 0.0, \"session\": -272.06, \"day\": -272.06, \"pct_overnight\""
+        },
+        {
+          "path": "data/sleeve_merge/equity_curve.csv",
+          "ok": true,
+          "reason": "",
+          "size": 4033,
+          "preview": "25 rows \u00b7 date,equity,cash,core_n,tac_io_n,tac_n,core_mv,tac_mv,route,score,predict,open_held,open_cash,open_equity,yday_equity,ov \u00b7 2026-08-13, 2026-08-14, 2026-08-17, 2026-08-18, 2026-08-19"
+        },
+        {
+          "path": "dashboard/sleeve-merge/index.html",
+          "ok": true,
+          "reason": "",
+          "size": 51958,
+          "preview": "<!doctype html>\n<html><head><meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n<title>Combined sleeve \u2014 .io \u00d7 mover</title>\n<style>\n:root{--bg:#0b1020;--card:#131b31;--line:#2b3552;--text:#edf2ff;--muted:#9cabc9}\n*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:15px/1.45 system-ui}\nmain{max-width:1240px;margin:auto;padding:16px}h1,h2{margin:.4em 0}\n.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin:14px 0}\n.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px}\n.card b{display:block;font-size:22px;margin-top:4px}\n.muted{color:var(--muted)}a{color:#93c5fd}\n.sheet{overflow-x:auto;border:1px solid var(--line);border-radius:12px;margin:14px 0}\ntable{border-collapse:separate;border-spacing:0;width:100%;background:var(--card)}\nth,td{padding:7px 8"
+        }
+      ],
+      "preview": "# flatten_robust card \u2014 2026-11-06\n_Generated 2026-11-06T14:26:40 \u2014 live `flatten_robust`._\n**morning S missing; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**\n- Score **\u2014** (\u2014) \u00b7 route **io**\n- Cash leftover **$116,007.02** (after 09:30 $116,007.02 \u00b7 after 16:00 $116,007.02)\n- Prior close **$116,007.02** \u00b7 09:30 **$116,007.02** \u00b7 overnight **$+0.00** \u00b7 session **$+0.00** \u00b7 16:00 **$116,007.02**\n- Overnight lots **0** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$0.00** \u2264 leftover after sells **$116,007.02** \u00b7 2026-11-04 BUY \u2014 \u00b7 SELL \u2014 \u00b7 keys: date, policy, generated, score, predict, hard_red, flatten_ok, n_priced_buys, prior_book, route, cash_open, cash_after_0930 \u00b7 [{\"date\": \"2026-08-13\", \"route\": \"io\", \"score\": 8.525, \"predict\": \"UP\", \"yday_equity\": 100000.0, \"open_cash\": 100000.0, \"open_held\": 0, \"open_equity\": 100000.0, \"overnight_delta\": 0.0, \"session_delta\": -169.94, \"equity\": 99830.06, \"cash\": 9917.52, \"overnight_names\": \"\", \"overnight\": [], \"marks\": [{\"ticker\": \"BTSG\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 166, \"shares\": 166, \"side\": \"BUY\", \"yday_px\": null, \"open_px\":"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
