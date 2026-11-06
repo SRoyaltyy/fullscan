@@ -1,0 +1,113 @@
+{
+  "date": "2026-11-06",
+  "generated_at": "2026-11-06T16:31:38.066394-05:00",
+  "timezone": "America/New_York",
+  "source": "live",
+  "source_url": "https://elite.finviz.com/",
+  "archive_snapshot_ts": null,
+  "archive_snapshot_at": null,
+  "archive_url": null,
+  "clock_legal": true,
+  "clock_same_morning": false,
+  "clock_use": "next_open",
+  "clock_legal_for": "2026-11-09",
+  "capture_slot": "close",
+  "clock_rule": "Live post-close answer-key (~16:05 ET). Always next_open for the NEXT session (2026-11-09) — never same_morning. Writes *_finviz_market_digest_close.* only. Capture only — not tape_anchor / predict / #210.",
+  "kind": "finviz_homepage_market_digest_close",
+  "represents": "Finviz homepage post-close answer-key. clock_use is always next_open; clock_legal_for is the next NYSE session. Lives at *_finviz_market_digest_close.*. Does not replace the same_morning warm-up file. Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "US stocks ended mostly higher as a chip-led rebound followed Thursday’s AI selloff despite a stronger jobs report lifting Fed rate-hike odds",
+  "raw_text": "- The S&P 500 ($SPX) rose about 0.3%, the Nasdaq Composite ($COMP) gained about 1.1%, the Dow Jones Industrial Average ($DJI) finished slightly lower near 51,286, and the Russell 2000 (IWM) added around 1% as buyers returned to technology shares after Thursday’s AI-driven wipeout.\n- Chip names led the rebound, with Nvidia (NVDA) climbing about 3%, AMD (AMD) rising about 11%, Micron Technology (MU) advancing about 5%, and the PHLX Semiconductor Index up roughly 4%–6%.\n- The October jobs report showed nonfarm payrolls up 165,000 versus roughly 65,000 expected, the unemployment rate dipping to 4.1%, and average hourly earnings rising 0.4% to $38.00, pushing December Fed rate-hike odds to about 78% and aligning with San Francisco Fed President Mary Daly’s guidance for higher rates.\n- Airbnb (ABNB) jumped more than 10% after CEO Brian Chesky highlighted the company’s fastest revenue growth in three years, raised full-year 2026 revenue growth guidance to the high teens, lifted its adjusted EBITDA margin outlook to 36%, and authorized an additional $12 billion in share buybacks.\n- DraftKings (DKNG) sank over 20% after posting a larger-than-expected adjusted EBITDA loss and issuing fiscal 2026 revenue guidance below consensus.\n- Atlassian (TEAM) slid about 16% after beating first-quarter estimates but guiding to slower cloud and subscription ARR growth.\n- Monster Beverage (MNST) declined after reporting a third-quarter gross margin miss.\n- Tesla (TSLA) said it plans to wind down Cybertruck production around mid-2027 at its Giga Texas plant as sales run at roughly 10% of planned capacity, ultimately ending production to refocus on the Cybercab robotaxi program.\n- Humana (HUM) gained after boosting its forecast.\n- Supplemental commentary noted that no major after-hours earnings reactions exceeded 2% in notable names, with traders turning attention to next week’s inflation data, additional Federal Reserve speakers, and another wave of corporate earnings slated for the week of November 10.",
+  "raw_summary_md": "- The S&P 500 ([$SPX](https://finviz.com/index/SPX?p=d)) rose about **0.3%**, the Nasdaq Composite ([$COMP](https://finviz.com/index/COMP?p=d)) gained about **1.1%**, the Dow Jones Industrial Average ([$DJI](https://finviz.com/index/DJI?p=d)) finished slightly lower near 51,286, and the Russell 2000 ([IWM](https://finviz.com/quote?t=IWM)) added around 1% as buyers returned to technology shares after Thursday’s **AI-driven wipeout**.\n- Chip names led the rebound, with Nvidia ([NVDA](https://finviz.com/quote?t=NVDA)) climbing about **3%**, AMD ([AMD](https://finviz.com/quote?t=AMD)) rising about **11%**, Micron Technology ([MU](https://finviz.com/quote?t=MU)) advancing about 5%, and the PHLX Semiconductor Index up roughly **4%–6%**.\n- The October jobs report showed nonfarm payrolls up **165,000** versus roughly 65,000 expected, the unemployment rate dipping to **4.1%**, and average hourly earnings rising 0.4% to $38.00, pushing December Fed rate-hike odds to about **78%** and aligning with San Francisco Fed President Mary Daly’s guidance for higher rates.\n- Airbnb ([ABNB](https://finviz.com/quote?t=ABNB)) jumped **more than 10%** after CEO Brian Chesky highlighted the company’s fastest revenue growth in three years, raised full-year 2026 revenue growth guidance to the high teens, lifted its adjusted EBITDA margin outlook to **36%**, and authorized an additional **$12 billion** in share buybacks.\n- DraftKings ([DKNG](https://finviz.com/quote?t=DKNG)) sank **over 20%** after posting a **larger-than-expected adjusted EBITDA loss** and issuing fiscal 2026 revenue guidance below consensus.\n- Atlassian ([TEAM](https://finviz.com/quote?t=TEAM)) slid about **16%** after beating first-quarter estimates but guiding to **slower cloud** and subscription ARR growth.\n- Monster Beverage ([MNST](https://finviz.com/quote?t=MNST)) declined after reporting a third-quarter **gross margin miss**.\n- Tesla ([TSLA](https://finviz.com/quote?t=TSLA)) said it plans to wind down Cybertruck production around **mid-2027** at its Giga Texas plant as sales run at roughly **10% of planned capacity**, ultimately ending production to refocus on the **Cybercab robotaxi program**.\n- Humana ([HUM](https://finviz.com/quote?t=HUM)) gained after **boosting its forecast**.\n- Supplemental commentary noted that no major after-hours earnings reactions **exceeded 2%** in notable names, with traders turning attention to next week’s **inflation data**, additional Federal Reserve speakers, and another wave of corporate earnings slated for the week of **November 10**.",
+  "index_moves": [
+    {
+      "name": "S&P 500",
+      "code": "SPX",
+      "change_pct": 0.3,
+      "verb": "rose"
+    },
+    {
+      "name": "Nasdaq Composite",
+      "code": "COMP",
+      "change_pct": 1.1,
+      "verb": "gained"
+    },
+    {
+      "name": "Dow Jones Industrial Average",
+      "code": "DJI",
+      "change_pct": 1.0,
+      "verb": "added"
+    }
+  ],
+  "oil": null,
+  "cpi": null,
+  "fed_odds": {
+    "pct": 78.0,
+    "action": "hike",
+    "text": "hike odds to about 78%"
+  },
+  "named_tickers": [
+    "NVDA",
+    "AMD",
+    "MU",
+    "ABNB",
+    "DKNG",
+    "TEAM",
+    "MNST",
+    "TSLA",
+    "HUM"
+  ],
+  "named_leaders": [
+    "NVDA",
+    "AMD",
+    "MU",
+    "ABNB",
+    "DKNG",
+    "TEAM",
+    "MNST",
+    "TSLA",
+    "HUM"
+  ],
+  "calendar": [
+    "The S&P 500 ($SPX) rose about 0.3%, the Nasdaq Composite ($COMP) gained about 1.1%, the Dow Jones Industrial Average ($DJI) finished slightly lower near 51,286, and the Russell 2000 (IWM) added around 1% as buyers returned to technology shares after Thursday’s AI-driven wipeout.",
+    "Supplemental commentary noted that no major after-hours earnings reactions exceeded 2% in notable names, with traders turning attention to next week’s inflation data, additional Federal Reserve speakers, and another wave of corporate earnings slated for the week of November 10."
+  ],
+  "prior_close": {
+    "spx": 0.3,
+    "nasdaq": 1.1,
+    "dow": 1.0
+  },
+  "cpi_fed": {
+    "cpi": null,
+    "fed_odds": {
+      "pct": 78.0,
+      "action": "hike",
+      "text": "hike odds to about 78%"
+    }
+  },
+  "next_session_calendar": {
+    "housing": false,
+    "retail": false,
+    "fed": true,
+    "bullets": [
+      "The S&P 500 ($SPX) rose about 0.3%, the Nasdaq Composite ($COMP) gained about 1.1%, the Dow Jones Industrial Average ($DJI) finished slightly lower near 51,286, and the Russell 2000 (IWM) added around 1% as buyers returned to technology shares after Thursday’s AI-driven wipeout.",
+      "Supplemental commentary noted that no major after-hours earnings reactions exceeded 2% in notable names, with traders turning attention to next week’s inflation data, additional Federal Reserve speakers, and another wave of corporate earnings slated for the week of November 10."
+    ],
+    "text": "The S&P 500 ($SPX) rose about 0.3%, the Nasdaq Composite ($COMP) gained about 1.1%, the Dow Jones Industrial Average ($DJI) finished slightly lower near 51,286, and the Russell 2000 (IWM) added around 1% as buyers returned to technology shares after Thursday’s AI-driven wipeout. Supplemental commentary noted that no major after-hours earnings reactions exceeded 2% in notable names, with traders turning attention to next week’s inflation data, additional Federal Reserve speakers, and another wave of corporate earnings slated for the week of November 10."
+  },
+  "earnings_slate": {
+    "tickers": [],
+    "text": ""
+  },
+  "geo_grain": {
+    "geo": false,
+    "grain": false,
+    "flags": [],
+    "text": ""
+  },
+  "finviz_id": 336352,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-11-06T16:07:55.363",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "good"
+}

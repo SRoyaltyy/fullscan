@@ -1,6 +1,6 @@
 {
   "date": "2026-11-06",
-  "generated_at": "2026-11-06T09:26:42.413424-05:00",
+  "generated_at": "2026-11-06T16:31:39.518135-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -86,40 +86,23 @@
     ]
   },
   "general": {},
-  "sectors": {},
+  "sectors": {
+    "said": "0 up / 0 down / 0 flat",
+    "bullets": [
+      "XLB missing",
+      "XLC missing",
+      "XLY missing",
+      "XLP missing",
+      "XLE missing",
+      "XLF missing",
+      "XLV missing",
+      "XLI missing",
+      "XLRE missing",
+      "XLK missing",
+      "XLU missing"
+    ]
+  },
   "lands": [
-    {
-      "key": "status",
-      "title": "Pre-open status packet",
-      "date": "2026-11-06",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-11-06T05:05:55.627852-05:00",
-      "files": [
-        {
-          "path": "01_daily/2026-11-06_preopen_qc.json",
-          "ok": true,
-          "reason": "",
-          "size": 7572,
-          "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, sectors_required, all_ok"
-        },
-        {
-          "path": "01_daily/2026-11-06_preopen_status.json",
-          "ok": true,
-          "reason": "",
-          "size": 6641,
-          "preview": "keys: date, generated_at, run_id, runner, all_ok, qc_all_ok, book_ok, grok_ok, grok_fails, missing_required, attempts, github_runs"
-        },
-        {
-          "path": "01_daily/2026-11-06_preopen_status.md",
-          "ok": true,
-          "reason": "",
-          "size": 392,
-          "preview": "# Pre-open ALL status \u2014 2026-11-06\nall_ok=False  qc_all_ok=False  book_ok=False  grok_ok=False  news_mode=on  missing=['events', 'news_judge', 'map_heat_research', 'general_predict']\nPredictive modules + stock book (must land before 09:30 ET).\nOutcome / learn / tonight's captain research = Post-Close ALL.\n- Weather / regime: exit 0\n- News parse: exit 0\n- News actions (no LLM): exit 0"
-        }
-      ],
-      "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, sectors_required, all_ok \u00b7 keys: date, generated_at, run_id, runner, all_ok, qc_all_ok, book_ok, grok_ok, grok_fails, missing_required, attempts, github_runs \u00b7 # Pre-open ALL status \u2014 2026-11-06\nall_ok=False  qc_all_ok=False  book_ok=False  grok_ok=False  news_mode=on  missing=['events', 'news_judge', 'map_heat_research', 'general_predict']\nPredictive modules + stock book (must land before 09:30 ET).\nOutcome / learn / tonight's captain research = Post-Close ALL.\n- Weather / regime: exit 0\n- News parse: exit 0\n- News actions (no LLM): exit 0"
-    },
     {
       "key": "weather",
       "title": "Weather / regime",
@@ -441,6 +424,31 @@
         }
       ],
       "preview": "# flatten_robust card \u2014 2026-11-06\n_Generated 2026-11-06T14:26:40 \u2014 live `flatten_robust`._\n**morning S missing; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**\n- Score **\u2014** (\u2014) \u00b7 route **io**\n- Cash leftover **$116,007.02** (after 09:30 $116,007.02 \u00b7 after 16:00 $116,007.02)\n- Prior close **$116,007.02** \u00b7 09:30 **$116,007.02** \u00b7 overnight **$+0.00** \u00b7 session **$+0.00** \u00b7 16:00 **$116,007.02**\n- Overnight lots **0** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$0.00** \u2264 leftover after sells **$116,007.02** \u00b7 2026-11-04 BUY \u2014 \u00b7 SELL \u2014 \u00b7 keys: date, policy, generated, score, predict, hard_red, flatten_ok, n_priced_buys, prior_book, route, cash_open, cash_after_0930 \u00b7 [{\"date\": \"2026-08-13\", \"route\": \"io\", \"score\": 8.525, \"predict\": \"UP\", \"yday_equity\": 100000.0, \"open_cash\": 100000.0, \"open_held\": 0, \"open_equity\": 100000.0, \"overnight_delta\": 0.0, \"session_delta\": -169.94, \"equity\": 99830.06, \"cash\": 9917.52, \"overnight_names\": \"\", \"overnight\": [], \"marks\": [{\"ticker\": \"BTSG\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 166, \"shares\": 166, \"side\": \"BUY\", \"yday_px\": null, \"open_px\":"
+    },
+    {
+      "key": "finviz_market_digest_close",
+      "title": "Finviz homepage market digest (close)",
+      "date": "2026-11-06",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-06T16:31:38.121774-05:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-11-06_finviz_market_digest_close.json",
+          "ok": true,
+          "reason": "",
+          "size": 8938,
+          "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for"
+        },
+        {
+          "path": "01_daily/news/2026-11-06_finviz_market_digest_close.md",
+          "ok": true,
+          "reason": "",
+          "size": 4223,
+          "preview": "# Finviz homepage market digest (close) \u2014 2026-11-06\n**Generated:** 2026-11-06T16:31:38.066394-05:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks ended mostly higher as a chip-led rebound followed Thursday\u2019s AI selloff despite a stronger jobs report lifting Fed rate-hike odds\n**Prior close:** SPX +0.30%  Nasdaq +1.10%  Dow +1.00%\n**SPX:** +0.30%  **Nasdaq:** +1.10%  **Dow:** +1.00%\n**Oil:** \u2014\n**CPI/Fed:** 78.0% hike (hike odds to about 78%)\n**Leaders:** NVDA, AMD, MU, ABNB, DKNG, TEAM, MNST, TSLA, HUM\n**Next session:** housing no \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** \u2014\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-11-09\n**Clock use:** `next_open`"
+        }
+      ],
+      "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest (close) \u2014 2026-11-06\n**Generated:** 2026-11-06T16:31:38.066394-05:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks ended mostly higher as a chip-led rebound followed Thursday\u2019s AI selloff despite a stronger jobs report lifting Fed rate-hike odds\n**Prior close:** SPX +0.30%  Nasdaq +1.10%  Dow +1.00%\n**SPX:** +0.30%  **Nasdaq:** +1.10%  **Dow:** +1.00%\n**Oil:** \u2014\n**CPI/Fed:** 78.0% hike (hike odds to about 78%)\n**Leaders:** NVDA, AMD, MU, ABNB, DKNG, TEAM, MNST, TSLA, HUM\n**Next session:** housing no \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** \u2014\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-11-09\n**Clock use:** `next_open`"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
