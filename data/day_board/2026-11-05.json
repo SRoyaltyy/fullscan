@@ -1,6 +1,6 @@
 {
   "date": "2026-11-05",
-  "generated_at": "2026-11-05T16:45:44.902390-05:00",
+  "generated_at": "2026-11-06T02:59:49.116901-05:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -182,7 +182,7 @@
       "inputs_ready": true,
       "n_req_ok": 6,
       "n_req": 9,
-      "n_opt_ok": 2,
+      "n_opt_ok": 3,
       "n_opt": 14,
       "files": [
         {
@@ -334,11 +334,16 @@
           "name": "Sector board JSON",
           "path": "01_daily/sectors/2026-11-05/_board.json",
           "role": "optional",
-          "status": "SKIP",
-          "reason": "optional \u2014 sector board not required",
-          "size": 0,
-          "said": "optional \u2014 sector board not required",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 6085,
+          "said": "0 up / 0 down / 0 flat",
+          "bullets": [
+            "XLB missing",
+            "XLC missing",
+            "XLY missing",
+            "XLP missing"
+          ]
         },
         {
           "key": "qc",
@@ -346,14 +351,14 @@
           "path": "01_daily/2026-11-05_preopen_qc.json",
           "role": "required",
           "status": "OK",
-          "reason": "all_ok=False",
-          "size": 7575,
-          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 18 fail",
+          "reason": "all_ok=True",
+          "size": 7556,
+          "said": "all_ok=True \u00b7 sectors 0/11 \u00b7 12 fail",
           "bullets": [
-            "general_predict:missing",
-            "events:missing",
-            "news_judge:missing",
-            "news_parse:missing"
+            "map_heat_research:missing",
+            "sector_predict:missing",
+            "sector_predict:missing",
+            "sector_predict:missing"
           ]
         },
         {
@@ -374,7 +379,7 @@
           "role": "required",
           "status": "OK",
           "reason": "ok=False Grok returned an empty review",
-          "size": 308,
+          "size": 309,
           "said": "ok=False \u00b7 empty_review_reply (review)",
           "bullets": [
             "Grok returned an empty review"
@@ -502,13 +507,18 @@
           "bullets": []
         }
       ],
-      "said": "general DOWN  -2.495",
+      "said": "general DOWN  -2.495 \u00b7 sectors 0 up / 0 down / 0 flat",
       "bullets": [
         "bad: QCOM -10% on weak guidance",
         "bad: semiconductor complex rout (SK Hynix -4%, AMD -3%)",
         "bad: Kospi -5.28%",
         "good: mega-cap platforms green premarket",
-        "good: oil extends collapse (WTI -1.6%, Brent -1.0%)"
+        "good: oil extends collapse (WTI -1.6%, Brent -1.0%)",
+        "XLB missing",
+        "XLC missing",
+        "XLY missing",
+        "XLP missing",
+        "XLE missing"
       ]
     },
     {
@@ -681,7 +691,7 @@
       "n_req_ok": 4,
       "n_req": 4,
       "n_opt_ok": 3,
-      "n_opt": 4,
+      "n_opt": 3,
       "files": [
         {
           "key": "in_general",
@@ -703,12 +713,17 @@
           "key": "in_board",
           "name": "Sector board JSON",
           "path": "01_daily/sectors/2026-11-05/_board.json",
-          "role": "optional",
-          "status": "SKIP",
-          "reason": "optional \u2014 sector board not required",
-          "size": 0,
-          "said": "optional \u2014 sector board not required",
-          "bullets": []
+          "role": "input",
+          "status": "OK",
+          "reason": "",
+          "size": 6085,
+          "said": "0 up / 0 down / 0 flat",
+          "bullets": [
+            "XLB missing",
+            "XLC missing",
+            "XLY missing",
+            "XLP missing"
+          ]
         },
         {
           "key": "in_actions",
@@ -866,7 +881,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "live-book poller + today.json (2026-11-05)",
-          "size": 16062152,
+          "size": 16019642,
           "said": "live-book poller + today.json (2026-11-05)",
           "bullets": []
         }
@@ -905,7 +920,7 @@
           "role": "required",
           "status": "OK",
           "reason": "live-book poller + today.json (2026-11-05)",
-          "size": 16062152,
+          "size": 16019642,
           "said": "live-book poller + today.json (2026-11-05)",
           "bullets": []
         },
@@ -1029,7 +1044,22 @@
       "score": "-2.495",
       "direction": "down"
     },
-    "sectors": {},
+    "sectors": {
+      "said": "0 up / 0 down / 0 flat",
+      "bullets": [
+        "XLB missing",
+        "XLC missing",
+        "XLY missing",
+        "XLP missing",
+        "XLE missing",
+        "XLF missing",
+        "XLV missing",
+        "XLI missing",
+        "XLRE missing",
+        "XLK missing",
+        "XLU missing"
+      ]
+    },
     "news": {},
     "weather": {
       "said": "favorable 5 \u00b7 hostile 3 \u00b7 neutral 3",
@@ -2299,6 +2329,52 @@
         }
       ],
       "preview": "# Paper trading \u2014 Futubull-fee simulation\nAs of **2026-11-05** \u00b7 $10,000 starting capital per sleeve \u00b7 fees per `00_grounding/futubull_fees.json`\nLatest book **2026-11-05** ranker: **weighted** (green pile liquid=0, need 8).\nSleeves: `{horizon}_top` = top-N overall buys, `{horizon}_size` = top 3 per size bucket. Fill at signal-day close. Sell only after min-hold (1d=1, 3d=3, 1w=5, 2w=10, 1m=21 **trading sessions** \u2014 weekends and NYSE holidays do not count) AND the name has left the book.\n| Sleeve | Equity | Return | Cash | Open pos | Trades | Fees paid | Realized P/L | Unrealized P/L | Closed win | Open win |\n|--------|--------|--------|------|----------|--------|-----------|--------------|----------------|------------|----------|\n| 1d_top | $9,529.81 | -4.70% | $605.04 | 8 | 520 | $1,101.17 | $-453.79 | $-16.40 | 33.2% | 0.0% |\n| 1d_size | $10,213.60 | +2.14% | $272.01 | 6 | 474 | $1,10 \u00b7 <!DOCTYPE html>\n<html lang=\"en\"><head><meta charset=\"utf-8\">\n<meta name=\"data-asof\" content=\"2026-11-05\">\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n<title>Paper Trading \u2014 Stock Book Simulation</title>\n<style>\n:root{\n--bg:#0f1420; --card:#171e2e; --line:#262f45; --line2:#"
+    },
+    {
+      "key": "finviz_digest",
+      "title": "Finviz digest",
+      "date": "2026-11-05",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-06T02:59:47.764128-05:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-11-05_finviz_digest.after-freeze-1.json",
+          "ok": true,
+          "reason": "",
+          "size": 102026,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        },
+        {
+          "path": "01_daily/news/2026-11-05_finviz_digest.after-freeze-1.md",
+          "ok": true,
+          "reason": "",
+          "size": 11848,
+          "preview": "# Finviz Daily Digest \u2014 2026-11-05\n_Generated 2026-11-06T02:59:47.182574-05:00 \u00b7 export=data/exports/finviz_2026-11-05.csv \u00b7 ticker digests=1909 \u00b7 high-signal=1061_"
+        },
+        {
+          "path": "data/exports/finviz_2026-11-05.after-freeze-1.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11195307,
+          "preview": "11758 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAB\""
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11195307,
+          "preview": "11758 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAB\""
+        },
+        {
+          "path": "01_daily/news/2026-11-05_finviz_digest_preopen.json",
+          "ok": true,
+          "reason": "",
+          "size": 99674,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        }
+      ],
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-11-05\n_Generated 2026-11-06T02:59:47.182574-05:00 \u00b7 export=data/exports/finviz_2026-11-05.csv \u00b7 ticker digests=1909 \u00b7 high-signal=1061_ \u00b7 11758 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAB\" \u00b7 11758 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAB\" \u00b7 keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
     }
   ],
   "href": {
@@ -2336,6 +2412,30 @@
       "path": "data/exports/finviz_2026-11-05.csv",
       "at": "2026-11-06T02:59:22-05:00",
       "commit_msg": "auto: land finviz export [2026-11-05]",
+      "workflow": "Finviz ALL (GH-hosted Elite)",
+      "run_id": "42183649493",
+      "manifest": "research/input_freeze/2026-11-05/manifest.json"
+    },
+    {
+      "path": "01_daily/2026-11-05_grok_review.json",
+      "at": "2026-11-06T02:59:49-05:00",
+      "commit_msg": "auto: land finviz_digest [2026-11-05]",
+      "workflow": "Finviz ALL (GH-hosted Elite)",
+      "run_id": "42183649493",
+      "manifest": "research/input_freeze/2026-11-05/manifest.json"
+    },
+    {
+      "path": "01_daily/2026-11-05_preopen_qc.json",
+      "at": "2026-11-06T02:59:49-05:00",
+      "commit_msg": "auto: land finviz_digest [2026-11-05]",
+      "workflow": "Finviz ALL (GH-hosted Elite)",
+      "run_id": "42183649493",
+      "manifest": "research/input_freeze/2026-11-05/manifest.json"
+    },
+    {
+      "path": "data/day_board/2026-11-05.json",
+      "at": "2026-11-06T02:59:49-05:00",
+      "commit_msg": "auto: land finviz_digest [2026-11-05]",
       "workflow": "Finviz ALL (GH-hosted Elite)",
       "run_id": "42183649493",
       "manifest": "research/input_freeze/2026-11-05/manifest.json"
