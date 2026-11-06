@@ -1,8 +1,8 @@
 {
  "strategy": "updown_rel1_hv_v1",
  "label": "paper only \u2014 failed multiple-testing haircut (t 2.02 vs 3.37)",
- "days_locked": 22,
- "days_realized": 20,
+ "days_locked": 23,
+ "days_realized": 21,
  "days_missed": 0,
  "missed_dates": [],
  "rule": {
@@ -11,29 +11,29 @@
   "missed": "Missed days (not frozen before 09:25 ET) are recorded in MISSED.jsonl, never back-filled, and earn nothing."
  },
  "gross": {
-  "cum": 0.0587169209,
-  "mean_bp": 33.117095569,
-  "t_nw": 0.9099539422
+  "cum": 0.0390953619,
+  "mean_bp": 22.7146917918,
+  "t_nw": 0.5746485239
  },
  "net5": {
-  "cum": 0.0315681888,
-  "mean_bp": 20.147095569,
-  "t_nw": 0.5494904217
+  "cum": 0.0107855373,
+  "mean_bp": 9.590882268,
+  "t_nw": 0.2409604505
  },
  "net10": {
-  "cum": 0.0050800359,
-  "mean_bp": 7.177095569,
-  "t_nw": 0.1942839058
+  "cum": -0.0167904662,
+  "mean_bp": -3.5329272558,
+  "t_nw": -0.0881425209
  },
  "net15": {
-  "cum": -0.0207627468,
-  "mean_bp": -5.792904431,
-  "t_nw": -0.1556278315
+  "cum": -0.0436507004,
+  "mean_bp": -16.6567367796,
+  "t_nw": -0.4126461575
  },
  "hedged_net10": {
-  "cum": -0.0884518306,
-  "mean_bp": -42.236882971,
-  "t_nw": -0.8486899664
+  "cum": -0.0742778037,
+  "mean_bp": -32.7762678924,
+  "t_nw": -0.71645311
  },
  "iwm_oo1": {
   "cum": null,
@@ -41,14 +41,14 @@
   "t_nw": null
  },
  "rand_med_net10": {
-  "cum": -0.0682018407,
-  "mean_bp": -35.2561855495,
-  "t_nw": -42.6644186887
+  "cum": -0.0712770714,
+  "mean_bp": -35.1488998284,
+  "t_nw": -46.7606525302
  },
  "best_stock": "TTMI",
- "best_stock_contrib": 0.0123006279,
- "net10_ex_best_cum": -0.0067765577,
- "mean_turnover": 2.594,
- "status": "collecting (20 realized days; kill check from day 20/60, promotion review not before day 120)",
+ "best_stock_contrib": 0.0126897626,
+ "net10_ex_best_cum": -0.0287752795,
+ "mean_turnover": 2.6247619048,
+ "status": "collecting (21 realized days; kill check from day 20/60, promotion review not before day 120)",
  "killed": false
 }

@@ -11945,8 +11945,8 @@
  "summary": {
   "strategy": "updown_rel1_hv_v1",
   "label": "paper only \u2014 failed multiple-testing haircut (t 2.02 vs 3.37)",
-  "days_locked": 22,
-  "days_realized": 20,
+  "days_locked": 23,
+  "days_realized": 21,
   "days_missed": 0,
   "missed_dates": [],
   "rule": {
@@ -11955,29 +11955,29 @@
    "missed": "Missed days (not frozen before 09:25 ET) are recorded in MISSED.jsonl, never back-filled, and earn nothing."
   },
   "gross": {
-   "cum": 0.0587169209,
-   "mean_bp": 33.117095569,
-   "t_nw": 0.9099539422
+   "cum": 0.0390953619,
+   "mean_bp": 22.7146917918,
+   "t_nw": 0.5746485239
   },
   "net5": {
-   "cum": 0.0315681888,
-   "mean_bp": 20.147095569,
-   "t_nw": 0.5494904217
+   "cum": 0.0107855373,
+   "mean_bp": 9.590882268,
+   "t_nw": 0.2409604505
   },
   "net10": {
-   "cum": 0.0050800359,
-   "mean_bp": 7.177095569,
-   "t_nw": 0.1942839058
+   "cum": -0.0167904662,
+   "mean_bp": -3.5329272558,
+   "t_nw": -0.0881425209
   },
   "net15": {
-   "cum": -0.0207627468,
-   "mean_bp": -5.792904431,
-   "t_nw": -0.1556278315
+   "cum": -0.0436507004,
+   "mean_bp": -16.6567367796,
+   "t_nw": -0.4126461575
   },
   "hedged_net10": {
-   "cum": -0.0884518306,
-   "mean_bp": -42.236882971,
-   "t_nw": -0.8486899664
+   "cum": -0.0742778037,
+   "mean_bp": -32.7762678924,
+   "t_nw": -0.71645311
   },
   "iwm_oo1": {
    "cum": null,
@@ -11985,15 +11985,15 @@
    "t_nw": null
   },
   "rand_med_net10": {
-   "cum": -0.0682018407,
-   "mean_bp": -35.2561855495,
-   "t_nw": -42.6644186887
+   "cum": -0.0712770714,
+   "mean_bp": -35.1488998284,
+   "t_nw": -46.7606525302
   },
   "best_stock": "TTMI",
-  "best_stock_contrib": 0.0123006279,
-  "net10_ex_best_cum": -0.0067765577,
-  "mean_turnover": 2.594,
-  "status": "collecting (20 realized days; kill check from day 20/60, promotion review not before day 120)",
+  "best_stock_contrib": 0.0126897626,
+  "net10_ex_best_cum": -0.0287752795,
+  "mean_turnover": 2.6247619048,
+  "status": "collecting (21 realized days; kill check from day 20/60, promotion review not before day 120)",
   "killed": false
  },
  "realized_cols": [
@@ -12602,30 +12602,60 @@
    "2026-11-04",
    50,
    50,
-   0.0,
+   -0.018533338,
    2.52,
    1.0088368,
-   0.029028345,
-   -0.029284862,
+   0.012491243,
+   -0.031134964,
+   0.013630399,
+   0.015473189,
    null,
    null,
-   "AAOI;ACN;AEHR;AKAM;ALAB;AMD;AMKR;ARES;ARM;AVAV;AXTI;BB;BLDR;BMRN;CBRS;CHDN;CIEN;CLS;CMG;COHR;COIN;CRCL;CRDO;CRS;CVNA;DDOG;DELL;DINO;DK;ENPH;EPAM;EW;FDXF;FSLY;FTAI;GDDY;GEN;GKOS;GLXY;GPN;GRAL;HBM;HIMS;HPE;IESC;INTC;INTU;IONQ;IOVA;LFUS;LITE;LKQ;LPLA;LSCC;MPC;MPWR;MRNA;MRVL;MSTR;MXL;NBIS;NBIX;NTSK;NVTS;NXPI;NXT;OKTA;ON;ONTO;OSK;OWL;PBF;PFGC;PURR;QBTS;RACE;RDDT;RIG;RIVN;RKT;SBAC;SFM;SITM;SNDK;STRL;STX;SYY;TEM;TPG;TSEM;TTMI;TWST;TXG;TYL;VIAV;VICR;VRTX;WHR;WING;WOLF",
+   -0.019793338,
+   -0.032394964,
+   -0.021053338,
+   -0.033654964,
+   -0.022313338,
+   -0.034914964,
+   -0.034804186,
+   -0.0014808716,
+   0.013091348,
+   -0.0033003185,
+   0.011266198,
+   -0.0051443338,
+   0.0093880502,
+   0.017,
+   -0.021442473
+  ],
+  [
+   "2026-11-04",
+   "2026-11-05",
+   50,
+   50,
+   0.0,
+   3.24,
+   -0.673211,
+   0.030798228,
+   0.020733706,
    null,
-   -0.00126,
-   -0.030544862,
-   -0.00252,
-   -0.031804862,
-   -0.00378,
-   -0.033064862,
+   null,
+   "ABNB;AEHR;ALB;ANET;ANF;APA;APLD;APP;ASST;ASX;AXSM;AXTI;BE;CAKE;CBRS;CDE;CIEN;COIN;COP;CORZ;CRL;CRS;CRWD;CVE;CVNA;DDOG;DKNG;DOCN;DT;DY;EAT;ECHO;EGO;EPAM;FFIV;FICO;FIS;FISV;FLUT;FND;FRO;GEV;GFS;GKOS;GLXY;HALO;HIMS;HL;HPE;HRI;HUBS;HUT;HWM;INIO;INTC;IRON;LITE;MKSI;MOD;MPC;MRVL;MTZ;MU;NOW;NTRA;NXT;ORCL;OSCR;PAYC;PBR;PBR-A;PCTY;PCVX;PENG;PFGC;PL;PURR;RBLX;RDDT;RIVN;RKLB;RKT;SFM;SITM;SMCI;SMR;SYRE;TEX;TPR;TWST;TXRH;UPST;USAR;VIAV;VRT;VSAT;WDAY;WING;WOLF;ZBRA",
+   null,
+   -0.00162,
+   0.019113706,
+   -0.00324,
+   0.017493706,
+   -0.00486,
+   0.015873706,
    null,
    -0.00182,
-   -0.0010622377,
+   -0.0012454919,
    -0.00364,
-   -0.0028822377,
+   -0.0030654919,
    -0.00546,
-   -0.0047022377,
-   1.0,
-   -0.00252
+   -0.0048854919,
+   0.904,
+   -0.00324
   ]
  ]
 }
