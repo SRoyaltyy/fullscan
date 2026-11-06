@@ -35643,6 +35643,36 @@
       "outlier_watch": "Energy equities diverged from crude’s collapse, and bonds rallied while stocks crashed — a growth-scare signal rather than a simple risk-off move; defensives held up while tech was liquidated",
       "lesson_schema_ok": true,
       "horizon_grades": {}
+    },
+    {
+      "date": "2026-11-06",
+      "topic": "general",
+      "predicted_direction": null,
+      "predicted_magnitude_band": null,
+      "confidence_score": null,
+      "total_score": null,
+      "multiplier": null,
+      "components": {},
+      "leading_sum": null,
+      "actual_open": 7377.65,
+      "actual_close": 7376.86,
+      "actual_pct_change": 0.31,
+      "actual_direction": "up",
+      "actual_magnitude_band": "mild",
+      "direction_hit": null,
+      "magnitude_hit": null,
+      "divergence_flagged": false,
+      "divergence_verdict": null,
+      "per_factor_breakdown": [],
+      "reflection_lesson_ref": null,
+      "sources_used": [],
+      "ops_fail": true,
+      "path_shape": "reversal down (intraday spike faded, closed near low)",
+      "primary_driver": "Strong October jobs report (165k vs 65k) repriced Fed hikes, lifted yields, and capped the AI-led rebound",
+      "key_interaction": "Offsetting forces — NFP strength supported growth confidence but the hawkish rate repricing capped the rebound, producing a dead-cat bounce",
+      "knowable_at_9am": "yes",
+      "attribution_contested": "yes",
+      "outlier_watch": "Dow -0.46% vs NDX +1.09%; 10Y yield rose 6bp to 4.9% even as stocks rebounded; VIX fell despite the intraday fade"
     }
   ]
 }
