@@ -1,45 +1,86 @@
 {
   "date": "2026-11-06",
-  "generated_at": "2026-11-06T09:23:35.588947-05:00",
+  "generated_at": "2026-11-06T09:23:54.929922-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
-    "ok": 4,
-    "partial": 3,
+    "ok": 6,
+    "partial": 1,
     "fail": 1,
     "n": 8
   },
-  "buy_1d": [],
-  "sell_1d": [],
+  "buy_1d": [
+    {
+      "ticker": "THC",
+      "score": 0.3367292991110205
+    },
+    {
+      "ticker": "MD",
+      "score": 0.6043185338685368
+    },
+    {
+      "ticker": "EHC",
+      "score": 0.2544424457048477
+    },
+    {
+      "ticker": "UHS",
+      "score": 0.44261355874770125
+    },
+    {
+      "ticker": "KDP",
+      "score": 0.45461977270668286
+    },
+    {
+      "ticker": "APP",
+      "score": 0.855276198175768
+    },
+    {
+      "ticker": "AVAH",
+      "score": 0.731684947074667
+    },
+    {
+      "ticker": "ACHC",
+      "score": 0.5596524971583579
+    }
+  ],
+  "sell_1d": [
+    {
+      "ticker": "ENVX",
+      "score": -0.2604141011801022
+    },
+    {
+      "ticker": "FCEL",
+      "score": -0.39504457968404727
+    },
+    {
+      "ticker": "TE",
+      "score": -0.4438152788056568
+    },
+    {
+      "ticker": "QBTS",
+      "score": -0.3516621641674593
+    },
+    {
+      "ticker": "DDD",
+      "score": -0.3944375611667623
+    },
+    {
+      "ticker": "AMPX",
+      "score": -0.33165812015674834
+    },
+    {
+      "ticker": "METC",
+      "score": -0.3345051888033622
+    },
+    {
+      "ticker": "LTBR",
+      "score": -0.3917862182253779
+    }
+  ],
   "flatten": {},
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "ab",
-      "title": "AB checklist",
-      "date": "2026-11-06",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-11-06T05:03:16.097455-05:00",
-      "files": [
-        {
-          "path": "data/ab_checklist/2026-11-06_ab_checklist.csv",
-          "ok": true,
-          "reason": "",
-          "size": 7509526,
-          "preview": "2610 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 IFF, SWBI, MNTK, EPAM, AUPH"
-        },
-        {
-          "path": "data/ab_checklist/2026-11-06_ab_checklist_enriched.csv",
-          "ok": true,
-          "reason": "",
-          "size": 8290260,
-          "preview": "2610 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 HCA, POOL, YUM, NEM, EPAM"
-        }
-      ],
-      "preview": "2610 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 IFF, SWBI, MNTK, EPAM, AUPH \u00b7 2610 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 HCA, POOL, YUM, NEM, EPAM"
-    },
     {
       "key": "news_parse",
       "title": "News parse",
@@ -207,6 +248,59 @@
         }
       ],
       "preview": "5046 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-11-06",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-06T09:23:53.860673-05:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-11-06_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1485323,
+          "preview": "1d BUY THC, MD, EHC, UHS, KDP, APP, AVAH, ACHC \u00b7 SELL ENVX, FCEL, TE, QBTS, DDD, AMPX, METC, LTBR"
+        },
+        {
+          "path": "data/stock_book/2026-11-06_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-11-06_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2590,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-11-06_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12412,
+          "preview": "2026-11-06 BUY THC, MD, EHC, UHS, KDP, APP, AVAH, ACHC \u00b7 SELL ENVX, FCEL, TE, QBTS, DDD, AMPX, METC, LTBR"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12412,
+          "preview": "2026-11-06 BUY THC, MD, EHC, UHS, KDP, APP, AVAH, ACHC \u00b7 SELL ENVX, FCEL, TE, QBTS, DDD, AMPX, METC, LTBR"
+        },
+        {
+          "path": "01_daily/2026-11-06_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 85540,
+          "preview": "# Stock book \u2014 2026-11-06\n_Generated 2026-11-06T09:23:44.643355-05:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY THC, MD, EHC, UHS, KDP, APP, AVAH, ACHC \u00b7 SELL ENVX, FCEL, TE, QBTS, DDD, AMPX, METC, LTBR \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-11-06 BUY THC, MD, EHC, UHS, KDP, APP, AVAH, ACHC \u00b7 SELL ENVX, FCEL, TE, QBTS, DDD, AMPX, METC, LTBR \u00b7 2026-11-06 BUY THC, MD, EHC, UHS, KDP, APP, AVAH, ACHC \u00b7 SELL ENVX, FCEL, TE, QBTS, DDD, AMPX, METC, LTBR \u00b7 # Stock book \u2014 2026-11-06\n_Generated 2026-11-06T09:23:44.643355-05:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"

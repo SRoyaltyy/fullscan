@@ -1,6 +1,6 @@
 {
   "date": "2026-11-06",
-  "generated_at": "2026-11-06T09:23:35.588947-05:00",
+  "generated_at": "2026-11-06T09:23:54.929922-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -8,8 +8,8 @@
     "MISSING News judge MD `01_daily/news/2026-11-06_judge.md` \u2014 missing"
   ],
   "counts": {
-    "ok": 4,
-    "partial": 3,
+    "ok": 6,
+    "partial": 1,
     "fail": 1,
     "n": 8
   },
@@ -656,11 +656,11 @@
       "key": "stock_book",
       "name": "Stock Book ALL",
       "yaml": "stock_book_all.yml",
-      "status": "PARTIAL",
+      "status": "OK",
       "inputs_ready": false,
-      "n_req_ok": 2,
+      "n_req_ok": 4,
       "n_req": 4,
-      "n_opt_ok": 1,
+      "n_opt_ok": 3,
       "n_opt": 4,
       "files": [
         {
@@ -785,10 +785,10 @@
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-11-06_stock_book.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "horizons=5 names=216",
+          "size": 1485323,
+          "said": "1d BUY THC, MD, EHC, UHS, KDP, APP, AVAH, ACHC \u00b7 SELL ENVX, FCEL, TE, QBTS, DDD, AMPX",
           "bullets": []
         },
         {
@@ -796,21 +796,24 @@
           "name": "Stock book MD",
           "path": "01_daily/2026-11-06_stock_book.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 84412,
+          "said": "Stock book \u2014 2026-11-06",
+          "bullets": [
+            "_Generated 2026-11-06T09:23:44.643355-05:00_",
+            "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
+          ]
         },
         {
           "key": "green",
           "name": "Green-pile JSON",
           "path": "data/stock_book/2026-11-06_green.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "",
+          "size": 585,
+          "said": "0 green \u00b7",
           "bullets": []
         },
         {
@@ -832,10 +835,10 @@
           "name": "Dashboard HTML",
           "path": "dashboard/index.html",
           "role": "optional",
-          "status": "FAIL",
-          "reason": "session 2026-11-06 not in dashboard dates (last=2026-11-05)",
-          "size": 16019642,
-          "said": "session 2026-11-06 not in dashboard dates (last=2026-11-05)",
+          "status": "OK",
+          "reason": "live-book poller + today.json (2026-11-06)",
+          "size": 16019658,
+          "said": "live-book poller + today.json (2026-11-06)",
           "bullets": []
         }
       ],
@@ -848,9 +851,9 @@
       "key": "publish",
       "name": "Dashboard / .io",
       "yaml": "deploy-dashboard.yml",
-      "status": "PARTIAL",
-      "inputs_ready": false,
-      "n_req_ok": 1,
+      "status": "OK",
+      "inputs_ready": true,
+      "n_req_ok": 2,
       "n_req": 2,
       "n_opt_ok": 0,
       "n_opt": 1,
@@ -860,10 +863,10 @@
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-11-06_stock_book.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "horizons=5 names=216",
+          "size": 1485323,
+          "said": "1d BUY THC, MD, EHC, UHS, KDP, APP, AVAH, ACHC \u00b7 SELL ENVX, FCEL, TE, QBTS, DDD, AMPX",
           "bullets": []
         },
         {
@@ -871,10 +874,10 @@
           "name": "Dashboard HTML (repo)",
           "path": "dashboard/index.html",
           "role": "required",
-          "status": "FAIL",
-          "reason": "session 2026-11-06 not in dashboard dates (last=2026-11-05)",
-          "size": 16019642,
-          "said": "session 2026-11-06 not in dashboard dates (last=2026-11-05)",
+          "status": "OK",
+          "reason": "live-book poller + today.json (2026-11-06)",
+          "size": 16019658,
+          "said": "live-book poller + today.json (2026-11-06)",
           "bullets": []
         },
         {
@@ -910,8 +913,74 @@
   "news_mode": "on",
   "news_mode_reason": "",
   "selections": {
-    "buy_1d": [],
-    "sell_1d": [],
+    "buy_1d": [
+      {
+        "ticker": "THC",
+        "score": 0.3367292991110205
+      },
+      {
+        "ticker": "MD",
+        "score": 0.6043185338685368
+      },
+      {
+        "ticker": "EHC",
+        "score": 0.2544424457048477
+      },
+      {
+        "ticker": "UHS",
+        "score": 0.44261355874770125
+      },
+      {
+        "ticker": "KDP",
+        "score": 0.45461977270668286
+      },
+      {
+        "ticker": "APP",
+        "score": 0.855276198175768
+      },
+      {
+        "ticker": "AVAH",
+        "score": 0.731684947074667
+      },
+      {
+        "ticker": "ACHC",
+        "score": 0.5596524971583579
+      }
+    ],
+    "sell_1d": [
+      {
+        "ticker": "ENVX",
+        "score": -0.2604141011801022
+      },
+      {
+        "ticker": "FCEL",
+        "score": -0.39504457968404727
+      },
+      {
+        "ticker": "TE",
+        "score": -0.4438152788056568
+      },
+      {
+        "ticker": "QBTS",
+        "score": -0.3516621641674593
+      },
+      {
+        "ticker": "DDD",
+        "score": -0.3944375611667623
+      },
+      {
+        "ticker": "AMPX",
+        "score": -0.33165812015674834
+      },
+      {
+        "ticker": "METC",
+        "score": -0.3345051888033622
+      },
+      {
+        "ticker": "LTBR",
+        "score": -0.3917862182253779
+      }
+    ],
     "flatten": {},
     "general": {},
     "sectors": {},
@@ -1374,6 +1443,59 @@
         }
       ],
       "preview": "5046 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-11-06",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-06T09:23:53.860673-05:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-11-06_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1485323,
+          "preview": "1d BUY THC, MD, EHC, UHS, KDP, APP, AVAH, ACHC \u00b7 SELL ENVX, FCEL, TE, QBTS, DDD, AMPX, METC, LTBR"
+        },
+        {
+          "path": "data/stock_book/2026-11-06_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-11-06_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2590,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-11-06_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12412,
+          "preview": "2026-11-06 BUY THC, MD, EHC, UHS, KDP, APP, AVAH, ACHC \u00b7 SELL ENVX, FCEL, TE, QBTS, DDD, AMPX, METC, LTBR"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12412,
+          "preview": "2026-11-06 BUY THC, MD, EHC, UHS, KDP, APP, AVAH, ACHC \u00b7 SELL ENVX, FCEL, TE, QBTS, DDD, AMPX, METC, LTBR"
+        },
+        {
+          "path": "01_daily/2026-11-06_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 85540,
+          "preview": "# Stock book \u2014 2026-11-06\n_Generated 2026-11-06T09:23:44.643355-05:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY THC, MD, EHC, UHS, KDP, APP, AVAH, ACHC \u00b7 SELL ENVX, FCEL, TE, QBTS, DDD, AMPX, METC, LTBR \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-11-06 BUY THC, MD, EHC, UHS, KDP, APP, AVAH, ACHC \u00b7 SELL ENVX, FCEL, TE, QBTS, DDD, AMPX, METC, LTBR \u00b7 2026-11-06 BUY THC, MD, EHC, UHS, KDP, APP, AVAH, ACHC \u00b7 SELL ENVX, FCEL, TE, QBTS, DDD, AMPX, METC, LTBR \u00b7 # Stock book \u2014 2026-11-06\n_Generated 2026-11-06T09:23:44.643355-05:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "href": {
@@ -1419,6 +1541,14 @@
       "path": "data/day_board/2026-11-06.json",
       "at": "2026-11-06T09:23:36-05:00",
       "commit_msg": "auto: land peer_rs [2026-11-06]",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "42230272001",
+      "manifest": "research/input_freeze/2026-11-06/manifest.json"
+    },
+    {
+      "path": "data/day_board/2026-11-06.json",
+      "at": "2026-11-06T09:23:55-05:00",
+      "commit_msg": "auto: land stock_book [2026-11-06]",
       "workflow": "Stock Book ALL (one-shot)",
       "run_id": "42230272001",
       "manifest": "research/input_freeze/2026-11-06/manifest.json"
