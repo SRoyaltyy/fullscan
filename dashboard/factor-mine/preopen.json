@@ -347,21 +347,6 @@
           "s": 10.848,
           "sells": [],
           "sit": true
-        },
-        {
-          "buys": [],
-          "date": "2026-11-05",
-          "equity": 10000.04,
-          "mean": 0.0,
-          "picks": [],
-          "reasons": [
-            "tickets look.source=no_same_day_panel (need look)",
-            "no pre-open weather S: no buys",
-            "no pre-open candidate list"
-          ],
-          "s": null,
-          "sells": [],
-          "sit": true
         }
       ],
       "label": "starts 10-08 open, no past days",
@@ -704,21 +689,6 @@
             "GEN",
             "SLN"
           ],
-          "sit": true
-        },
-        {
-          "buys": [],
-          "date": "2026-11-05",
-          "equity": 8908.37,
-          "mean": 0.0,
-          "picks": [],
-          "reasons": [
-            "tickets look.source=no_same_day_panel (need look)",
-            "no pre-open weather S: no buys",
-            "no pre-open candidate list"
-          ],
-          "s": null,
-          "sells": [],
           "sit": true
         }
       ],
