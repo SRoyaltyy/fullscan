@@ -1,6 +1,6 @@
 {
   "engine": "evidence",
-  "intake": "2026-10-17",
+  "intake": "",
   "snapshot": {
     "engine": "evidence",
     "compiler_version": "stock-evidence-2.7",
@@ -2177,18 +2177,22 @@
     },
     "keyword_comparison_mode": "browser_preview",
     "engine_snapshot_id": "0b55227c7348684f95009151764af554cd0784dd5320388b7a1da03018a763cf",
-    "source_revision": "e1169f06dd700744baf3bc02133ed690ca886220",
-    "news_sha256": "c178bcd3b7265f9de3d1186beee0ee1199c1aa28526da27133e8cd245a8630eb",
-    "article_entities_sha256": "c39c8e9628225be941719adfabf549835bec1bf3431aebeea9faf227c40bec60",
-    "snapshot_id": "635ed486ab96fe0988a99c663331049172532c1cd1f8561dd0375ce3bedf0673"
+    "source_revision": "2677ed8625aebd20efb021826d3ba9e5d9910d2b",
+    "news_sha256": "ace5f4729e178a9c13aa4316317a4d5d5666f57f270cdf71eecc468513201ddf",
+    "article_entities_sha256": "abadc4d7242edf466cbfc60c76db248d1c017fa2a37ec5e7c4afdae8f24c26bb",
+    "snapshot_id": "b4cd25eb1133b654a4e61c2e7e13189aa1a87f96211062358bd4705ccbd2c267"
   },
-  "articles": 11255,
-  "articles_with_passes": 2574,
+  "articles": 14409,
+  "articles_with_passes": 3153,
   "keyword_index": {
     "path": "keyword-index.json.gz",
-    "sha256": "e8951a5d8a813ccf1edca65637cfd719f442e20a6d52a06aa1fc54b908a93385",
+    "sha256": "6c967c607b4ba8ff1a4b1800deea352d60196a8b1bff648448794765226ebb3a",
     "schema": "stock-keywords-1.1",
     "phrases": 277423
   },
-  "generated_at": "2026-11-05T23:48:46Z"
+  "generated_at": "2026-11-06T03:09:13Z",
+  "fill_forward": true,
+  "sealed_snapshot_ids": [
+    "635ed486ab96fe0988a99c663331049172532c1cd1f8561dd0375ce3bedf0673"
+  ]
 }
