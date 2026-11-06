@@ -1,6 +1,6 @@
 {
   "date": "2026-11-06",
-  "generated_at": "2026-11-06T05:01:58.732673-05:00",
+  "generated_at": "2026-11-06T05:03:47.128157-05:00",
   "items": [
     {
       "ok": false,
@@ -36,14 +36,14 @@
       "missing_markers": []
     },
     {
-      "ok": false,
+      "ok": true,
       "kind": "news_parse",
       "path": "01_daily/news/2026-11-06_parsed.json",
-      "reason": "missing",
-      "size": 0,
+      "reason": "",
+      "size": 6861364,
       "carried": false,
       "timeout": false,
-      "empty": true,
+      "empty": false,
       "missing_markers": []
     },
     {

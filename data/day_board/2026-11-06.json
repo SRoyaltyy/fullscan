@@ -1,6 +1,6 @@
 {
   "date": "2026-11-06",
-  "generated_at": "2026-11-06T05:03:16.810606-05:00",
+  "generated_at": "2026-11-06T05:03:48.194991-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -181,7 +181,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 1,
+      "n_req_ok": 2,
       "n_req": 9,
       "n_opt_ok": 1,
       "n_opt": 14,
@@ -239,10 +239,10 @@
           "name": "News parse JSON",
           "path": "01_daily/news/2026-11-06_parsed.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "",
+          "size": 6861364,
+          "said": "6861364B on disk",
           "bullets": []
         },
         {
@@ -329,13 +329,13 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7576,
-          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 18 fail",
+          "size": 7575,
+          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 17 fail",
           "bullets": [
             "general_predict:missing",
             "events:missing",
             "news_judge:missing",
-            "news_parse:missing"
+            "news_actions:missing"
           ]
         },
         {
@@ -1176,6 +1176,31 @@
         }
       ],
       "preview": "2610 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 IFF, SWBI, MNTK, EPAM, AUPH \u00b7 2610 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 HCA, POOL, YUM, NEM, EPAM"
+    },
+    {
+      "key": "news_parse",
+      "title": "News parse",
+      "date": "2026-11-06",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-06T05:03:47.230626-05:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-11-06_parsed.json",
+          "ok": true,
+          "reason": "",
+          "size": 6861364,
+          "preview": "raw=9474 usable=640 single=553 \u00b7 Japan Bonds Rally as Global Risk-Off Move Boosts Haven Demand - Bloomberg.com | Bitcoin Sinks to Seven-Week Low as Risk-Off Mood Deepens - Bloomberg.com | China Bank Funding Costs Hit Record Low on PBOC Rate Shift - Bloomberg.com | Brazil Puts Rare Earths, Copper Atop Critical Minerals List - Bloomberg.com | Trump-Backed Critical Minerals Deals Face Growing Pressure After Blue Wave - Blo"
+        },
+        {
+          "path": "01_daily/news/2026-11-06_parsed.md",
+          "ok": true,
+          "reason": "",
+          "size": 12718,
+          "preview": "# News Parse v2 \u2014 2026-11-06T05:03:46.585471-05:00\nWindow\u224848h | news_mode=on | raw=9474 | usable=640 | single_name=553 | noise_dropped=8095\nusable polarity={'+': 27, '-': 129, 'mixed': 5, 'neutral': 479}"
+        }
+      ],
+      "preview": "raw=9474 usable=640 single=553 \u00b7 Japan Bonds Rally as Global Risk-Off Move Boosts Haven Demand - Bloomberg.com | Bitcoin Sinks to Seven-Week Low as Risk-Off Mood Deepens - Bloomberg.com | China Bank Funding Costs Hit Record Low on PBOC Rate Shift - Bloomberg.com | Brazil Puts Rare Earths, Copper Atop Critical Minerals List - Bloomberg.com | Trump-Backed Critical Minerals Deals Face Growing Pressure After Blue Wave - Blo \u00b7 # News Parse v2 \u2014 2026-11-06T05:03:46.585471-05:00\nWindow\u224848h | news_mode=on | raw=9474 | usable=640 | single_name=553 | noise_dropped=8095\nusable polarity={'+': 27, '-': 129, 'mixed': 5, 'neutral': 479}"
     }
   ],
   "href": {
