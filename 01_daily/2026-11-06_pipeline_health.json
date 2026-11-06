@@ -1,0 +1,357 @@
+{
+  "job": "postclose",
+  "date": "2026-11-06",
+  "source_date": "2026-11-05",
+  "target_date": "2026-11-06",
+  "book_date": "2026-11-06",
+  "generated_at": "2026-11-06T17:28:09.912966-05:00",
+  "ok": false,
+  "n_fail": 1,
+  "n_warn": 6,
+  "round": 1,
+  "fix_actions": null,
+  "checks": [
+    {
+      "step": "clock.map_heat_postclose.yml",
+      "name": "Map heat captain research (post-close) ran on 2026-11-05",
+      "group": "clock",
+      "status": "WARN",
+      "required": false,
+      "detail": "n=0 on 2026-11-05 \u2014 file checks below decide",
+      "path": ""
+    },
+    {
+      "step": "clock.postclose_all.yml",
+      "name": "Post-Close ALL ran on 2026-11-05",
+      "group": "clock",
+      "status": "OK",
+      "required": false,
+      "detail": "n=3 latest=success event=schedule",
+      "path": "https://github.com/SRoyaltyy/fullscan/actions/runs/42144243373"
+    },
+    {
+      "step": "clock.label_weather.yml",
+      "name": "Label + Weather ran on 2026-11-06",
+      "group": "clock",
+      "status": "OK",
+      "required": false,
+      "detail": "n=1 latest=success event=workflow_dispatch",
+      "path": "https://github.com/SRoyaltyy/fullscan/actions/runs/42196486689"
+    },
+    {
+      "step": "clock.ab_checklist.yml",
+      "name": "A+B1 Checklist ran on 2026-11-06",
+      "group": "clock",
+      "status": "OK",
+      "required": false,
+      "detail": "n=1 latest=success event=workflow_dispatch",
+      "path": "https://github.com/SRoyaltyy/fullscan/actions/runs/42196492117"
+    },
+    {
+      "step": "clock.daily_pipeline.yml",
+      "name": "Daily pipeline outcome+reflect ran on 2026-11-06",
+      "group": "clock",
+      "status": "WARN",
+      "required": false,
+      "detail": "n=0 on 2026-11-06 \u2014 file checks below decide",
+      "path": ""
+    },
+    {
+      "step": "clock.sector_daily.yml",
+      "name": "Sector Daily outcome+reflect ran on 2026-11-06",
+      "group": "clock",
+      "status": "WARN",
+      "required": false,
+      "detail": "n=0 on 2026-11-06 \u2014 file checks below decide",
+      "path": ""
+    },
+    {
+      "step": "clock.learn_cycle.yml",
+      "name": "Learn Cycle ran on 2026-11-06",
+      "group": "clock",
+      "status": "WARN",
+      "required": false,
+      "detail": "n=0 on 2026-11-06 \u2014 file checks below decide",
+      "path": ""
+    },
+    {
+      "step": "clock.stock_book_all.yml",
+      "name": "Stock Book ALL ran on 2026-11-06",
+      "group": "clock",
+      "status": "WARN",
+      "required": false,
+      "detail": "n=10 latest=in_progress event=workflow_dispatch",
+      "path": "https://github.com/SRoyaltyy/fullscan/actions/runs/42302259530"
+    },
+    {
+      "step": "postclose.map_heat_json",
+      "name": "2026-11-06_map_heat.json (industry groups + captains)",
+      "group": "postclose",
+      "status": "FAIL",
+      "required": true,
+      "detail": "PASS-OVER from date=2026-11-06 (want 2026-11-05)",
+      "path": "/home/runner/work/fullscan/fullscan/01_daily/map_heat/2026-11-06_map_heat.json"
+    },
+    {
+      "step": "postclose.map_heat_md",
+      "name": "2026-11-06_map_heat.md",
+      "group": "postclose",
+      "status": "OK",
+      "required": false,
+      "detail": "18656 bytes",
+      "path": "/home/runner/work/fullscan/fullscan/01_daily/map_heat/2026-11-06_map_heat.md"
+    },
+    {
+      "step": "postclose.baseline_json",
+      "name": "2026-11-06_research_baseline.json (captain cards)",
+      "group": "postclose",
+      "status": "OK",
+      "required": true,
+      "detail": "phase=postclose_baseline 187526 bytes",
+      "path": "/home/runner/work/fullscan/fullscan/01_daily/map_heat/2026-11-06_research_baseline.json"
+    },
+    {
+      "step": "postclose.baseline_md",
+      "name": "2026-11-06_research_baseline.md",
+      "group": "postclose",
+      "status": "OK",
+      "required": true,
+      "detail": "25855 bytes",
+      "path": "/home/runner/work/fullscan/fullscan/01_daily/map_heat/2026-11-06_research_baseline.md"
+    },
+    {
+      "step": "postclose.coverage",
+      "name": "Captain coverage \u2265 90%",
+      "group": "postclose",
+      "status": "OK",
+      "required": true,
+      "detail": "cards=142 coverage=1.0",
+      "path": ""
+    },
+    {
+      "step": "postclose.transcripts",
+      "name": "Post-close LLM transcripts",
+      "group": "postclose",
+      "status": "WARN",
+      "required": false,
+      "detail": "n=0",
+      "path": ""
+    },
+    {
+      "step": "book.finviz",
+      "name": "INPUT: Finviz Elite export",
+      "group": "book",
+      "status": "OK",
+      "required": true,
+      "detail": "12452889 bytes",
+      "path": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-11-06.csv"
+    },
+    {
+      "step": "book.membership",
+      "name": "Universe labels (segments)",
+      "group": "book",
+      "status": "OK",
+      "required": true,
+      "detail": "1129272 bytes",
+      "path": "/home/runner/work/fullscan/fullscan/data/universe/2026-11-06_membership.csv"
+    },
+    {
+      "step": "book.weather",
+      "name": "Weather / regime JSON",
+      "group": "book",
+      "status": "OK",
+      "required": true,
+      "detail": "9446 bytes",
+      "path": "/home/runner/work/fullscan/fullscan/01_daily/weather/2026-11-06_weather.json"
+    },
+    {
+      "step": "book.weather_sectors",
+      "name": "Weather signals.sectors \u2265 5",
+      "group": "book",
+      "status": "OK",
+      "required": true,
+      "detail": "n=11",
+      "path": ""
+    },
+    {
+      "step": "book.join",
+      "name": "Join ranked CSV",
+      "group": "book",
+      "status": "OK",
+      "required": true,
+      "detail": "2288157 bytes",
+      "path": "/home/runner/work/fullscan/fullscan/data/join/2026-11-06_ranked.csv"
+    },
+    {
+      "step": "book.ab_raw",
+      "name": "AB checklist (raw)",
+      "group": "book",
+      "status": "OK",
+      "required": false,
+      "detail": "7509526 bytes",
+      "path": "/home/runner/work/fullscan/fullscan/data/ab_checklist/2026-11-06_ab_checklist.csv"
+    },
+    {
+      "step": "book.ab",
+      "name": "AB checklist (enriched) \u2014 s_ab",
+      "group": "book",
+      "status": "OK",
+      "required": true,
+      "detail": "8290260 bytes",
+      "path": "/home/runner/work/fullscan/fullscan/data/ab_checklist/2026-11-06_ab_checklist_enriched.csv"
+    },
+    {
+      "step": "book.peers",
+      "name": "Peer relative strength \u2014 s_peer",
+      "group": "book",
+      "status": "OK",
+      "required": true,
+      "detail": "819643 bytes",
+      "path": "/home/runner/work/fullscan/fullscan/data/peers/2026-11-06_peer_rs.csv"
+    },
+    {
+      "step": "book.book_json",
+      "name": "Stock book JSON (5 horizons)",
+      "group": "book",
+      "status": "OK",
+      "required": true,
+      "detail": "1485323 bytes",
+      "path": "/home/runner/work/fullscan/fullscan/data/stock_book/2026-11-06_stock_book.json"
+    },
+    {
+      "step": "book.green_json",
+      "name": "Green pile grades (all-green BUY)",
+      "group": "book",
+      "status": "OK",
+      "required": true,
+      "detail": "585 bytes",
+      "path": "/home/runner/work/fullscan/fullscan/data/stock_book/2026-11-06_green.json"
+    },
+    {
+      "step": "book.book_md",
+      "name": "Stock book MD",
+      "group": "book",
+      "status": "OK",
+      "required": true,
+      "detail": "85540 bytes",
+      "path": "/home/runner/work/fullscan/fullscan/01_daily/2026-11-06_stock_book.md"
+    },
+    {
+      "step": "book.backtest",
+      "name": "Stock book backtest (repo-level)",
+      "group": "book",
+      "status": "OK",
+      "required": true,
+      "detail": "10508 bytes",
+      "path": "/home/runner/work/fullscan/fullscan/03_scoreboard/STOCK_BOOK_BACKTEST.md"
+    },
+    {
+      "step": "book.paper_md",
+      "name": "Paper trading summary",
+      "group": "book",
+      "status": "OK",
+      "required": true,
+      "detail": "1799 bytes",
+      "path": "/home/runner/work/fullscan/fullscan/03_scoreboard/PAPER_TRADING.md"
+    },
+    {
+      "step": "book.dashboard",
+      "name": "Dashboard HTML (Pages source)",
+      "group": "book",
+      "status": "OK",
+      "required": true,
+      "detail": "16019872 bytes",
+      "path": "/home/runner/work/fullscan/fullscan/dashboard/index.html"
+    },
+    {
+      "step": "book.hit_board",
+      "name": "HIT_BOARD",
+      "group": "book",
+      "status": "OK",
+      "required": false,
+      "detail": "12120 bytes",
+      "path": "/home/runner/work/fullscan/fullscan/03_scoreboard/HIT_BOARD.md"
+    },
+    {
+      "step": "outcome.general",
+      "name": "General outcome (graded call)",
+      "group": "outcome",
+      "status": "OK",
+      "required": true,
+      "detail": "24565 bytes",
+      "path": "/home/runner/work/fullscan/fullscan/01_daily/general/2026-11-06_outcome.md"
+    },
+    {
+      "step": "outcome.reflect",
+      "name": "General reflect MD",
+      "group": "outcome",
+      "status": "OK",
+      "required": false,
+      "detail": "4492 bytes",
+      "path": "/home/runner/work/fullscan/fullscan/01_daily/general/2026-11-06_reflect.md"
+    },
+    {
+      "step": "outcome.candidate",
+      "name": "Candidate lesson filed today",
+      "group": "outcome",
+      "status": "OK",
+      "required": false,
+      "detail": "n=1",
+      "path": ""
+    },
+    {
+      "step": "outcome.sector_count",
+      "name": "Sector outcomes graded (>=8/11)",
+      "group": "outcome",
+      "status": "OK",
+      "required": false,
+      "detail": "SKIPPED \u2014 no sector predict files that day (sectors optional)",
+      "path": ""
+    },
+    {
+      "step": "learn.dated",
+      "name": "2026-11-06_learnings.md (session copy)",
+      "group": "learn",
+      "status": "OK",
+      "required": true,
+      "detail": "47562 bytes",
+      "path": "/home/runner/work/fullscan/fullscan/01_daily/2026-11-06_learnings.md"
+    },
+    {
+      "step": "learn.learnings",
+      "name": "LEARNINGS.md digest",
+      "group": "learn",
+      "status": "OK",
+      "required": true,
+      "detail": "47562 bytes",
+      "path": "/home/runner/work/fullscan/fullscan/03_scoreboard/LEARNINGS.md"
+    },
+    {
+      "step": "learn.mutable_policy",
+      "name": "mutable_policy.md (machine injection)",
+      "group": "learn",
+      "status": "OK",
+      "required": true,
+      "detail": "20175 bytes",
+      "path": "/home/runner/work/fullscan/fullscan/00_grounding/mutable_policy.md"
+    },
+    {
+      "step": "learn.book_policy",
+      "name": "book_policy.json (learned ranker weights)",
+      "group": "learn",
+      "status": "FAIL",
+      "required": false,
+      "detail": "PASS-OVER from asof=2026-11-03 (want 2026-11-06)",
+      "path": "/home/runner/work/fullscan/fullscan/00_grounding/book_policy.json"
+    },
+    {
+      "step": "pages.dashboard",
+      "name": "Live dashboard reachable + data injected",
+      "group": "pages",
+      "status": "OK",
+      "required": true,
+      "detail": "HTTP 200, data_injected=True",
+      "path": "https://sroyaltyy.github.io/fullscan/dashboard/"
+    }
+  ]
+}
