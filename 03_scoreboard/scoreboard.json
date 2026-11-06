@@ -31779,6 +31779,18 @@
           "predicted_direction": "down",
           "predicted_magnitude_band": "mild",
           "confidence": 0.4
+        },
+        "HORIZON_1M": {
+          "label": "1m",
+          "target_date": "2026-11-05",
+          "actual_pct": -5.41,
+          "actual_direction": "down",
+          "actual_magnitude_band": "notable",
+          "direction_hit": false,
+          "magnitude_hit": false,
+          "predicted_direction": "flat",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.38
         }
       },
       "lesson_schema_ok": true
@@ -34318,6 +34330,18 @@
           "predicted_direction": "flat",
           "predicted_magnitude_band": "mild",
           "confidence": 0.4
+        },
+        "HORIZON_2W": {
+          "label": "2w",
+          "target_date": "2026-11-05",
+          "actual_pct": -5.2,
+          "actual_direction": "down",
+          "actual_magnitude_band": "notable",
+          "direction_hit": true,
+          "magnitude_hit": false,
+          "predicted_direction": "down",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.5
         }
       },
       "lesson_schema_ok": true
@@ -35127,7 +35151,20 @@
       "knowable_at_9am": "partially — ingredients visible, but the magnitude and timing of the tech unwind were not fully foreseeable",
       "attribution_contested": "yes — some outlets lead with oil/Iran, others with tech/AI debt; the afternoon belongs to tech",
       "outlier_watch": "VIX +8.9% to 21.15 despite SPX only −0.5% and 69% breadth positive — tech-specific hedging, not broad panic",
-      "horizon_grades": {},
+      "horizon_grades": {
+        "HORIZON_3D": {
+          "label": "3d",
+          "target_date": "2026-11-05",
+          "actual_pct": -2.49,
+          "actual_direction": "down",
+          "actual_magnitude_band": "notable",
+          "direction_hit": false,
+          "magnitude_hit": false,
+          "predicted_direction": "up",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.55
+        }
+      },
       "lesson_schema_ok": true
     },
     {
@@ -35604,7 +35641,8 @@
       "knowable_at_9am": "partially",
       "attribution_contested": "yes",
       "outlier_watch": "Energy equities diverged from crude’s collapse, and bonds rallied while stocks crashed — a growth-scare signal rather than a simple risk-off move; defensives held up while tech was liquidated",
-      "lesson_schema_ok": true
+      "lesson_schema_ok": true,
+      "horizon_grades": {}
     }
   ]
 }
