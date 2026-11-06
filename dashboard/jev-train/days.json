@@ -546,6 +546,12 @@
       "parsed": true,
       "digest": false,
       "judge": false
+    },
+    {
+      "date": "2026-11-06",
+      "parsed": true,
+      "digest": true,
+      "judge": true
     }
   ]
 }
