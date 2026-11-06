@@ -848,17 +848,26 @@ function navButtons(id, date){
   </div>`;
 }
 function seriesOf(name){
+  // Selected "equity only" draws the browser sim (or a full cash-start),
+  // not D.series. The rebuilt overlay has to run on that array too.
+  let base=null;
   if(name===pickedName()){
     const full=(D.dates||[]).length;
     const sp=startPath();
-    if(sp && sp.equity && sp.equity.some(v=>v!=null) && sp.equity.length>=full) return ovAlignSeries(sp.equity, sp.start);
-    const b=typeof simBook==='function' ? simBook() : null;
-    if(b && (b.daily||[]).length>=full) return ovSeriesFromDaily(b.daily, sp && sp.start);
+    if(sp && sp.equity && sp.equity.some(v=>v!=null) && sp.equity.length>=full)
+      base=ovAlignSeries(sp.equity, sp.start);
+    else {
+      const b=typeof simBook==='function' ? simBook() : null;
+      if(b && (b.daily||[]).length>=full) base=ovSeriesFromDaily(b.daily, sp && sp.start);
+    }
   }
-  if(bracketOn() && _liveCache && _liveCache.series && _liveCache.series[name])
-    return _liveCache.series[name];
-  const base=(D.series||{})[name]||[];
-  if(typeof ovDisplaySeries==='function') return ovDisplaySeries(name, base);
+  if(base==null){
+    if(bracketOn() && _liveCache && _liveCache.series && _liveCache.series[name])
+      return _liveCache.series[name];
+    base=(D.series||{})[name]||[];
+  }
+  const equityOnly = sleeveFilter==='all' || (typeof isCanon==='function' && isCanon());
+  if(equityOnly && typeof ovDisplaySeries==='function') return ovDisplaySeries(name, base);
   return base;
 }
 function boughtTickers(name){

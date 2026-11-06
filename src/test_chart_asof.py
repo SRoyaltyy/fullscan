@@ -21,6 +21,21 @@ def test_chart_coverage_names_real_blockers() -> None:
     assert paper["chart"] == paper["source"]
     assert mover["chart"] == mover["source"]
     assert book["chart"] == book["source"]
+    # Republish may append after the last sealed point. Overlapping dates stay.
+    page = (ROOT / "dashboard/strategy-board/index.html").read_text(encoding="utf-8")
+    start = page.find("const D = ")
+    payload, _ = json.JSONDecoder().raw_decode(page[start + len("const D = "):])
+    pts = {row["id"]: {p["date"]: p["equity"] for p in row["pts"]} for row in payload["series"]}
+    assert pts["book_paper_1w"]["2026-10-27"] == 104540.19
+    assert pts["book_paper_1w"]["2026-11-02"] == 104540.19
+    assert pts["mover_paper_live"]["2026-11-02"] == 119053.35
+    assert "2026-11-05" in pts["book_paper_1w"]
+    assert "2026-11-05" in pts["mover_paper_live"]
+    cat = json.loads((ROOT / "data/strategy_board/catalog.json").read_text(encoding="utf-8"))
+    hold = next(row for row in cat["rows"] if row.get("id") == "fm_union_hot_n4_holdup")
+    assert hold["final_equity"] == 14827.77
+    board_md = (ROOT / "03_scoreboard/STRATEGY_BOARD.md").read_text(encoding="utf-8")
+    assert "+53.96%" in board_md
     assert paper["source"] >= "2026-11-05"
     assert rows["holdup"]["chart"] >= "2026-11-05"
     assert rows["h1"]["chart"] >= "2026-11-05"
@@ -86,6 +101,19 @@ const moved = context.ovDisplaySeries('cash', [10000, 10000].map((v,i)=>({v})) )
     )
     if proc.returncode != 0:
         raise AssertionError(proc.stderr or proc.stdout)
+
+
+def test_selected_equity_only_line_runs_the_overlay() -> None:
+    """The chip's purple line is seriesOf, which must overlay the sim book."""
+    text = (ROOT / "src/factor_mine_dash.html").read_text(encoding="utf-8")
+    fn = text.split("function seriesOf", 1)[1].split("function boughtTickers", 1)[0]
+    assert "FMSim" not in fn
+    assert "simulateBook" not in fn or "ovSeriesFromDaily" in fn
+    assert "ovSeriesFromDaily" in fn
+    assert "ovDisplaySeries" in fn
+    assert fn.index("ovSeriesFromDaily") < fn.index("ovDisplaySeries")
+    baked = (ROOT / "dashboard/factor-mine/index.html").read_text(encoding="utf-8")
+    assert "ovDisplaySeries(name, base)" in baked
 
 
 def test_engine_file_is_still_the_pinned_bytes() -> None:

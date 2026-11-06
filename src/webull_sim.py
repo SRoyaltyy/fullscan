@@ -2285,14 +2285,7 @@ def write_books(rows: list[dict], *, seal: bool, path: Path | None = None,
     if seal:
         for row in written:
             if row.get("final") and row["date"] >= FIRST_LOCKED:
-                try:
-                    seal_row(row, manifest=manifest)
-                except past_day_lock.PastDayLockError as exc:
-                    # A gap before the last sealed day stays missing. Later
-                    # sessions still seal; one missed morning must not stop
-                    # the forward append.
-                    if "before the last sealed day" not in str(exc):
-                        raise
+                seal_row(row, manifest=manifest)
     return written
 
 
