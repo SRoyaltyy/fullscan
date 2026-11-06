@@ -1,6 +1,6 @@
 {
   "date": "2026-11-06",
-  "generated_at": "2026-11-06T05:05:56.622063-05:00",
+  "generated_at": "2026-11-06T09:23:19.176777-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -9,8 +9,8 @@
   ],
   "counts": {
     "ok": 4,
-    "partial": 4,
-    "fail": 0,
+    "partial": 3,
+    "fail": 1,
     "n": 8
   },
   "processes": [
@@ -523,8 +523,8 @@
           "path": "01_daily/weather/2026-11-06_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=9446 vix=falling yields=falling",
-          "size": 9446,
+          "reason": "sectors=11 bytes=9543 vix=spiking yields=falling",
+          "size": 9543,
           "said": "hostile 6 \u00b7 neutral 5",
           "bullets": [
             "hostile: Basic Materials, Energy, Financial, Healthcare, Industrials, Technology",
@@ -585,7 +585,7 @@
       "key": "catalyst",
       "name": "Catalyst dossiers",
       "yaml": "catalyst_daily.yml",
-      "status": "PARTIAL",
+      "status": "FAIL",
       "inputs_ready": true,
       "n_req_ok": 0,
       "n_req": 0,
@@ -628,11 +628,16 @@
           "name": "Catalyst dossiers JSON",
           "path": "01_daily/catalyst/2026-11-06_dossiers.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "FAIL",
+          "reason": "zero usable dossiers (n=5)",
+          "size": 1861,
+          "said": "zero usable dossiers (n=5) \u00b7 0/5 usable \u00b7 Grok \u2192 DeepSeek \u00b7 UEC, UUUU, SLB, BKR, KGS",
+          "bullets": [
+            "UEC: OpenClaw and DeepSeek both returned empty for CATALYST STEP1 UEC",
+            "UUUU: OpenClaw and DeepSeek both returned empty for CATALYST STEP1 UUUU",
+            "SLB: OpenClaw and DeepSeek both returned empty for CATALYST STEP1 SLB",
+            "BKR: OpenClaw and DeepSeek both returned empty for CATALYST STEP1 BKR"
+          ]
         }
       ],
       "said": "75 ticker actions \u00b7 6 events \u00b7 9473 headlines \u00b7 COP BUY, EOG BUY, CHRD BUY, SM BUY, HPK BUY, REPX BUY, OXY BUY, FANG BUY",
@@ -728,8 +733,8 @@
           "path": "01_daily/weather/2026-11-06_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=9446 vix=falling yields=falling",
-          "size": 9446,
+          "reason": "sectors=11 bytes=9543 vix=spiking yields=falling",
+          "size": 9543,
           "said": "hostile 6 \u00b7 neutral 5",
           "bullets": [
             "hostile: Basic Materials, Energy, Financial, Healthcare, Industrials, Technology",
@@ -1308,6 +1313,31 @@
         }
       ],
       "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, sectors_required, all_ok \u00b7 keys: date, generated_at, run_id, runner, all_ok, qc_all_ok, book_ok, grok_ok, grok_fails, missing_required, attempts, github_runs \u00b7 # Pre-open ALL status \u2014 2026-11-06\nall_ok=False  qc_all_ok=False  book_ok=False  grok_ok=False  news_mode=on  missing=['events', 'news_judge', 'map_heat_research', 'general_predict']\nPredictive modules + stock book (must land before 09:30 ET).\nOutcome / learn / tonight's captain research = Post-Close ALL.\n- Weather / regime: exit 0\n- News parse: exit 0\n- News actions (no LLM): exit 0"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-11-06",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-06T09:23:17.884261-05:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-11-06_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 9543,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -2.47, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -0.53, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': 0.5, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -0.05, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -13.61, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.67, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -6.29, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -6.27, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-11-06_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5144,
+          "preview": "# Weather report \u2014 2026-11-06\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -2.47, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -0.53, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': 0.5, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -0.05, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -13.61, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.67, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -6.29, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -6.27, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-11-06\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
     }
   ],
   "href": {
@@ -1315,5 +1345,23 @@
     "readiness_action": "https://github.com/SRoyaltyy/fullscan/actions/workflows/stock_book_diag.yml",
     "factor_mine": "https://sroyaltyy.github.io/fullscan/dashboard/factor-mine/",
     "paper": "https://sroyaltyy.github.io/fullscan/dashboard/"
-  }
+  },
+  "frozen_write_skips": [
+    {
+      "path": "01_daily/weather/2026-11-06_weather.json",
+      "at": "2026-11-06T09:23:19-05:00",
+      "commit_msg": "auto: land weather [2026-11-06]",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "42230272001",
+      "manifest": "research/input_freeze/2026-11-06/manifest.json"
+    },
+    {
+      "path": "data/day_board/2026-11-06.json",
+      "at": "2026-11-06T09:23:19-05:00",
+      "commit_msg": "auto: land weather [2026-11-06]",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "42230272001",
+      "manifest": "research/input_freeze/2026-11-06/manifest.json"
+    }
+  ]
 }
