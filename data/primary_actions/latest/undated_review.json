@@ -1,32 +1,56 @@
 [
   {
-    "title": "CPSC and ASTM International Announce Stronger Safety Standard for Above-Ground Pool Ladders",
-    "url": "https://www.cpsc.gov/Newsroom/News-Releases/2027/CPSC-and-ASTM-International-Announce-Stronger-Safety-Standard-for-Above-Ground-Pool-Ladders",
-    "native_id": "https://www.cpsc.gov/_ae1c107d-97f7-4841-991e-ac305ea4b08a",
+    "title": "H.R.7730",
+    "url": "https://www.congress.gov/bill/119th-congress/house-bill/7730",
+    "native_id": "H.R.7730",
     "published_at": null,
-    "published_raw": "Thu, 11/05/2026 - 12:00",
-    "summary": "Washington, D.C. – The U.S. Consumer Product Safety Commission (CPSC) today announced, alongside ASTM International, a strengthened voluntary safety standard for above-ground portable pools that establishes specific performance requirements and test metho",
+    "published_raw": "",
+    "summary": "Bankruptcy Threshold Adjustment Act",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Consumer Product Safety Commission",
+      "issuer": "Congress.gov legislative status",
       "jurisdiction": "US",
-      "family": "product_safety"
+      "family": "legislative_procedure"
     },
-    "primary_source_id": "us-cpsc-08fe06e2e6",
-    "n": 8910,
-    "first_seen": "2026-11-06T07:57:02.134140+00:00",
-    "last_seen": "2026-11-06T07:57:02.134140+00:00",
+    "primary_source_id": "us-congress-76128ee9ff",
+    "n": 9022,
+    "first_seen": "2026-11-06T19:58:09.481952+00:00",
+    "last_seen": "2026-11-06T19:58:09.481952+00:00",
     "source_ids": [
-      "us-cpsc-08fe06e2e6"
+      "us-congress-76128ee9ff"
     ]
   },
   {
-    "title": "China's public holidays",
-    "url": "https://english.www.gov.cn/policies/latestreleases/202611/06/content_WS6aed74dcc6d00ca5f9a0e22e.html",
-    "native_id": "https://english.www.gov.cn/policies/latestreleases/202611/06/content_WS6aed74dcc6d00ca5f9a0e22e.html",
+    "title": "H.R.1945",
+    "url": "https://www.congress.gov/bill/119th-congress/house-bill/1945",
+    "native_id": "H.R.1945",
+    "published_at": null,
+    "published_raw": "",
+    "summary": "America's National Churchill Museum National Historic Landmark Act",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Congress.gov legislative status",
+      "jurisdiction": "US",
+      "family": "legislative_procedure"
+    },
+    "primary_source_id": "us-congress-76128ee9ff",
+    "n": 9023,
+    "first_seen": "2026-11-06T19:58:09.481952+00:00",
+    "last_seen": "2026-11-06T19:58:09.481952+00:00",
+    "source_ids": [
+      "us-congress-76128ee9ff"
+    ]
+  },
+  {
+    "title": "High Purity Dissolving Pulp From Brazil and Norway Does Not Injure U.S. Industry, Says USITC",
+    "url": "https://www.usitc.gov/press_room/news_release/2026/er1106_69477.htm",
+    "native_id": "https://www.usitc.gov/press_room/news_release/2026/er1106_69477.htm",
     "published_at": null,
     "published_raw": null,
     "summary": "",
@@ -35,22 +59,286 @@
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "State Council of China policies",
-      "jurisdiction": "CN",
-      "family": "executive_instruments"
+      "issuer": "United States International Trade Commission",
+      "jurisdiction": "US",
+      "family": "trade_and_judicial"
     },
-    "primary_source_id": "cn-state-council-index",
-    "n": 8918,
-    "first_seen": "2026-11-06T07:57:02.134140+00:00",
-    "last_seen": "2026-11-06T07:57:02.134140+00:00",
+    "primary_source_id": "us-itc-index",
+    "n": 9059,
+    "first_seen": "2026-11-06T19:58:09.481952+00:00",
+    "last_seen": "2026-11-06T19:58:09.481952+00:00",
     "source_ids": [
-      "cn-state-council-index"
+      "us-itc-index"
     ]
   },
   {
-    "title": "Minister AKAZAWA Attends APEC Ministerial Meeting",
-    "url": "https://www.meti.go.jp/english/press/2026/11/20261104004.html",
-    "native_id": "https://www.meti.go.jp/english/press/2026/11/20261104004.html",
+    "title": "Satellite Licensing Division and Satellite Programs and Policy Division Information - SAT - Actions Taken",
+    "url": "https://www.fcc.gov/edoc/426542",
+    "native_id": "426542",
+    "published_at": null,
+    "published_raw": "",
+    "summary": ".",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Federal Communications Commission — Public Notices",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
+    },
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 9067,
+    "first_seen": "2026-11-06T19:58:09.481952+00:00",
+    "last_seen": "2026-11-06T19:58:09.481952+00:00",
+    "source_ids": [
+      "us-fcc-e95ecda3bb"
+    ]
+  },
+  {
+    "title": "Pleadings",
+    "url": "https://www.fcc.gov/edoc/426536",
+    "native_id": "426536",
+    "published_at": null,
+    "published_raw": "",
+    "summary": ".",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Federal Communications Commission — Public Notices",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
+    },
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 9068,
+    "first_seen": "2026-11-06T19:58:09.481952+00:00",
+    "last_seen": "2026-11-06T19:58:09.481952+00:00",
+    "source_ids": [
+      "us-fcc-e95ecda3bb"
+    ]
+  },
+  {
+    "title": "Media Bureau Extends the Filing Window for New Noncommercial Educational Reserved Band FM Translator Station Applications",
+    "url": "https://www.fcc.gov/edoc/426538",
+    "native_id": "426538",
+    "published_at": null,
+    "published_raw": "",
+    "summary": ".",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Federal Communications Commission — Public Notices",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
+    },
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 9069,
+    "first_seen": "2026-11-06T19:58:09.481952+00:00",
+    "last_seen": "2026-11-06T19:58:09.481952+00:00",
+    "source_ids": [
+      "us-fcc-e95ecda3bb"
+    ]
+  },
+  {
+    "title": "Effective Dates for Telecommunications Relay Services Rules Requiring OMB Approval",
+    "url": "https://www.fcc.gov/edoc/426537",
+    "native_id": "426537",
+    "published_at": null,
+    "published_raw": "",
+    "summary": "Announcing the effective date of certain TRS rules after OMB approval and publication in the Federal Register.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Federal Communications Commission — Public Notices",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
+    },
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 9070,
+    "first_seen": "2026-11-06T19:58:09.481952+00:00",
+    "last_seen": "2026-11-06T19:58:09.481952+00:00",
+    "source_ids": [
+      "us-fcc-e95ecda3bb"
+    ]
+  },
+  {
+    "title": "Actions",
+    "url": "https://www.fcc.gov/edoc/426535",
+    "native_id": "426535",
+    "published_at": null,
+    "published_raw": "",
+    "summary": ".",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Federal Communications Commission — Public Notices",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
+    },
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 9071,
+    "first_seen": "2026-11-06T19:58:09.481952+00:00",
+    "last_seen": "2026-11-06T19:58:09.481952+00:00",
+    "source_ids": [
+      "us-fcc-e95ecda3bb"
+    ]
+  },
+  {
+    "title": "Applications",
+    "url": "https://www.fcc.gov/edoc/426534",
+    "native_id": "426534",
+    "published_at": null,
+    "published_raw": "",
+    "summary": ".",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Federal Communications Commission — Public Notices",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
+    },
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 9072,
+    "first_seen": "2026-11-06T19:58:09.481952+00:00",
+    "last_seen": "2026-11-06T19:58:09.481952+00:00",
+    "source_ids": [
+      "us-fcc-e95ecda3bb"
+    ]
+  },
+  {
+    "title": "Satellite Licensing Division and Satellite Programs and Policy Division Information - SAT - Accepted for Filing",
+    "url": "https://www.fcc.gov/edoc/426541",
+    "native_id": "426541",
+    "published_at": null,
+    "published_raw": "",
+    "summary": ".",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Federal Communications Commission — Public Notices",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
+    },
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 9073,
+    "first_seen": "2026-11-06T19:58:09.481952+00:00",
+    "last_seen": "2026-11-06T19:58:09.481952+00:00",
+    "source_ids": [
+      "us-fcc-e95ecda3bb"
+    ]
+  },
+  {
+    "title": "Non-Streamlined Submarine Cable Landing License Applications - SCL",
+    "url": "https://www.fcc.gov/edoc/426546",
+    "native_id": "426546",
+    "published_at": null,
+    "published_raw": "",
+    "summary": ".",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Federal Communications Commission — Public Notices",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
+    },
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 9074,
+    "first_seen": "2026-11-06T19:58:09.481952+00:00",
+    "last_seen": "2026-11-06T19:58:09.481952+00:00",
+    "source_ids": [
+      "us-fcc-e95ecda3bb"
+    ]
+  },
+  {
+    "title": "Streamlined International Applications Accepted For Filing - ITC",
+    "url": "https://www.fcc.gov/edoc/426548",
+    "native_id": "426548",
+    "published_at": null,
+    "published_raw": "",
+    "summary": ".",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Federal Communications Commission — Public Notices",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
+    },
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 9075,
+    "first_seen": "2026-11-06T19:58:09.481952+00:00",
+    "last_seen": "2026-11-06T19:58:09.481952+00:00",
+    "source_ids": [
+      "us-fcc-e95ecda3bb"
+    ]
+  },
+  {
+    "title": "Non Streamlined International Applications/Petitions Accepted For Filing - ITC",
+    "url": "https://www.fcc.gov/edoc/426550",
+    "native_id": "426550",
+    "published_at": null,
+    "published_raw": "",
+    "summary": ".",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Federal Communications Commission — Public Notices",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
+    },
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 9076,
+    "first_seen": "2026-11-06T19:58:09.481952+00:00",
+    "last_seen": "2026-11-06T19:58:09.481952+00:00",
+    "source_ids": [
+      "us-fcc-e95ecda3bb"
+    ]
+  },
+  {
+    "title": "The not-so-fine print: making consumer contracts fair",
+    "url": "https://www.fca.org.uk/news/blogs/not-so-fine-print-making-consumer-contracts-fair",
+    "native_id": "177216",
+    "published_at": null,
+    "published_raw": "Friday, November 6, 2026 - 10:02",
+    "summary": "How many of us read the terms and conditions of a contract before buying a financial product?Contracts hold the detail that shapes everyone's financial life, whether you're taking out a loan, insuring your holiday, or signing up for a crypto wallet.All firms are responsible for making sure that terms in their consumer contracts comply with the fairness and transparency requirements of the Consumer Rights Act (CRA) 2015. When those terms don’t comply, our Consumer Contracts team has powers to challenge firms directly.This work shows how we use the full range of powers Parliament has given us, not only those in financial services legislation, to tackle harm.Here's why it matters: if a term is found to be unfair, it's not just unenforceable – consumers may be due redress too. That's why it pays for firms to get this right from the start.We review contract terms identified through our supervision of firms, information on social media, and referrals from consumers and other external stakeholders. When we take action We consider our rules and guidance, including the Consumer Duty, when deciding whether to act and which of our regulatory tools to use. Where we raise concerns about the fai",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Financial Conduct Authority",
+      "jurisdiction": "UK",
+      "family": "financial_enforcement"
+    },
+    "primary_source_id": "uk-fca-7b9977ec8e",
+    "n": 9100,
+    "first_seen": "2026-11-06T19:58:09.481952+00:00",
+    "last_seen": "2026-11-06T19:58:09.481952+00:00",
+    "source_ids": [
+      "uk-fca-7b9977ec8e"
+    ]
+  },
+  {
+    "title": "Minister AKAZAWA Holds Online Meeting with H.E. Dr. Sultan Ahmed Al Jaber, Group CEO of Abu Dhabi National Oil Company (ADNOC), UAE Minister of Industry and Advanced Technology, and UAE Special Envoy to Japan",
+    "url": "https://www.meti.go.jp/english/press/2026/11/20261106001.html",
+    "native_id": "https://www.meti.go.jp/english/press/2026/11/20261106001.html",
     "published_at": null,
     "published_raw": null,
     "summary": "",
@@ -64,83 +352,35 @@
       "family": "trade_and_industry_policy"
     },
     "primary_source_id": "jp-meti-index",
-    "n": 8921,
-    "first_seen": "2026-11-06T07:57:02.134140+00:00",
-    "last_seen": "2026-11-06T07:57:02.134140+00:00",
+    "n": 9111,
+    "first_seen": "2026-11-06T19:58:09.481952+00:00",
+    "last_seen": "2026-11-06T19:58:09.481952+00:00",
     "source_ids": [
       "jp-meti-index"
     ]
   },
   {
-    "title": "GGX Finance Summit 2026",
-    "url": "https://www.meti.go.jp/english/press/2026/11/20261102001.html",
-    "native_id": "https://www.meti.go.jp/english/press/2026/11/20261102001.html",
+    "title": "Miscellaneous Order",
+    "url": "https://www.supremecourt.gov/orders/courtorders/110626zr_q8l1.pdf",
+    "native_id": "https://www.supremecourt.gov/orders/courtorders/110626zr_q8l1.pdf",
     "published_at": null,
     "published_raw": null,
     "summary": "",
     "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
+      "document_type": "court_order",
+      "document_stage": "judicial_order_published",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Japan Ministry of Economy Trade and Industry",
-      "jurisdiction": "JP",
-      "family": "trade_and_industry_policy"
+      "issuer": "Supreme Court orders of the Court",
+      "jurisdiction": "US",
+      "family": "judicial_decisions"
     },
-    "primary_source_id": "jp-meti-index",
-    "n": 8922,
-    "first_seen": "2026-11-06T07:57:02.134140+00:00",
-    "last_seen": "2026-11-06T07:57:02.134140+00:00",
+    "primary_source_id": "us-supreme-court-orders-index",
+    "n": 9118,
+    "first_seen": "2026-11-06T19:58:09.481952+00:00",
+    "last_seen": "2026-11-06T19:58:09.481952+00:00",
     "source_ids": [
-      "jp-meti-index"
-    ]
-  },
-  {
-    "title": "Minister AKAZAWA Receives the ABAC 2026 Report to APEC Economic Leaders",
-    "url": "https://www.meti.go.jp/english/press/2026/10/20261028001.html",
-    "native_id": "https://www.meti.go.jp/english/press/2026/10/20261028001.html",
-    "published_at": null,
-    "published_raw": null,
-    "summary": "",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Japan Ministry of Economy Trade and Industry",
-      "jurisdiction": "JP",
-      "family": "trade_and_industry_policy"
-    },
-    "primary_source_id": "jp-meti-index",
-    "n": 8923,
-    "first_seen": "2026-11-06T07:57:02.134140+00:00",
-    "last_seen": "2026-11-06T07:57:02.134140+00:00",
-    "source_ids": [
-      "jp-meti-index"
-    ]
-  },
-  {
-    "title": "Establishment of the Japan Atomic Human Resources Consortium (J-AHRC) to Strengthen the Foundation of the Nuclear Industry through Human Resource Development",
-    "url": "https://www.meti.go.jp/english/press/2026/10/20261007005.html",
-    "native_id": "https://www.meti.go.jp/english/press/2026/10/20261007005.html",
-    "published_at": null,
-    "published_raw": null,
-    "summary": "",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Japan Ministry of Economy Trade and Industry",
-      "jurisdiction": "JP",
-      "family": "trade_and_industry_policy"
-    },
-    "primary_source_id": "jp-meti-index",
-    "n": 8924,
-    "first_seen": "2026-11-06T07:57:02.134140+00:00",
-    "last_seen": "2026-11-06T07:57:02.134140+00:00",
-    "source_ids": [
-      "jp-meti-index"
+      "us-supreme-court-orders-index"
     ]
   }
 ]
