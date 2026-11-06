@@ -4843,21 +4843,21 @@ run_date,signal_date,ticker,side,strategy,exit_rule,ref_close,first_open,current
 2026-11-04,2026-11-04,WTS,LONG,L1_long_green_tp8_lowvol,tp8,353.3000,348.8500,347.4600,-1.65%,-0.40%,1,light green|white|orange|purple|white|deep green|orange|pink|purple|red|white|pink|white|deep green|pink
 2026-11-04,2026-11-04,WTS,LONG,L2_long_green_tp3_lowvol,tp3,353.3000,348.8500,347.4600,-1.65%,-0.40%,1,light green|white|orange|purple|white|deep green|orange|pink|purple|red|white|pink|white|deep green|pink
 2026-11-05,2026-11-05,ACT,LONG,L3_long_green_hold2_midcap,hold2,47.7700,,47.7700,+0.00%,,0,white|white|white|white|white|light green|orange|light green|purple|blue|white|white|white|deep green|pink
-2026-11-05,2026-11-05,AGL,LONG,L3_long_green_hold2_midcap,hold2,113.7700,,113.7700,+0.00%,,0,white|white|white|white|white|light green|deep green|light green|light green|green|deep green|deep green|white|deep green|light green
+2026-11-05,2026-11-05,AGL,LONG,L3_long_green_hold2_midcap,hold2,113.7700,,113.7700,-0.00%,,0,white|white|white|white|white|light green|deep green|light green|light green|green|deep green|deep green|white|deep green|light green
 2026-11-05,2026-11-05,ALKT,LONG,L3_long_green_hold2_midcap,hold2,13.3500,,13.3500,+0.00%,,0,white|white|white|white|white|red|white|light green|purple|green|green|light green|white|white|light green
-2026-11-05,2026-11-05,ARCB,LONG,L3_long_green_hold2_midcap,hold2,133.5900,,133.5900,+0.00%,,0,white|white|orange|white|white|light green|orange|pink|pink|green|white|white|white|deep green|pink
+2026-11-05,2026-11-05,ARCB,LONG,L3_long_green_hold2_midcap,hold2,133.5900,,133.5900,-0.00%,,0,white|white|orange|white|white|light green|orange|pink|pink|green|white|white|white|deep green|pink
 2026-11-05,2026-11-05,BCO,LONG,L3_long_green_hold2_midcap,hold2,109.9800,,109.9800,+0.00%,,0,white|white|white|white|white|light green|deep green|red|purple|green|deep green|deep green|white|deep green|light green
 2026-11-05,2026-11-05,CBT,LONG,L1_long_green_tp8_lowvol,tp8,72.9700,,72.9700,+0.00%,,0,white|white|orange|white|white|light green|orange|pink|purple|green|green|white|white|deep green|pink
 2026-11-05,2026-11-05,CBT,LONG,L2_long_green_tp3_lowvol,tp3,72.9700,,72.9700,+0.00%,,0,white|white|orange|white|white|light green|orange|pink|purple|green|green|white|white|deep green|pink
 2026-11-05,2026-11-05,CGON,LONG,L3_long_green_hold2_midcap,hold2,64.8000,,64.8000,+0.00%,,0,white|white|white|white|white|light green|deep green|pink|pink|green|deep green|light green|white|deep green|light green
-2026-11-05,2026-11-05,CLVT,LONG,L3_long_green_hold2_midcap,hold2,2.3300,,2.3300,+0.00%,,0,white|white|white|white|white|light green|deep green|green|light green|green|deep green|deep green|white|deep green|light green
-2026-11-05,2026-11-05,COR,LONG,L1_long_green_tp8_lowvol,tp8,339.6800,,339.6800,+0.00%,,0,white|white|white|white|white|light green|orange|pink|pink|green|green|white|white|deep green|pink
-2026-11-05,2026-11-05,COR,LONG,L2_long_green_tp3_lowvol,tp3,339.6800,,339.6800,+0.00%,,0,white|white|white|white|white|light green|orange|pink|pink|green|green|white|white|deep green|pink
+2026-11-05,2026-11-05,CLVT,LONG,L3_long_green_hold2_midcap,hold2,2.3300,,2.3300,-0.00%,,0,white|white|white|white|white|light green|deep green|green|light green|green|deep green|deep green|white|deep green|light green
+2026-11-05,2026-11-05,COR,LONG,L1_long_green_tp8_lowvol,tp8,339.6800,,339.6800,-0.00%,,0,white|white|white|white|white|light green|orange|pink|pink|green|green|white|white|deep green|pink
+2026-11-05,2026-11-05,COR,LONG,L2_long_green_tp3_lowvol,tp3,339.6800,,339.6800,-0.00%,,0,white|white|white|white|white|light green|orange|pink|pink|green|green|white|white|deep green|pink
 2026-11-05,2026-11-05,CZR,LONG,L3_long_green_hold2_midcap,hold2,29.1800,,29.1800,+0.00%,,0,white|white|white|white|white|white|deep green|red|purple|blue|white|white|white|deep green|pink
-2026-11-05,2026-11-05,EBC,LONG,L3_long_green_hold2_midcap,hold2,22.7300,,22.7300,+0.00%,,0,white|white|white|white|white|light green|deep green|red|purple|green|green|white|white|deep green|pink
-2026-11-05,2026-11-05,ENVA,LONG,L3_long_green_hold2_midcap,hold2,174.2800,,174.2800,+0.00%,,0,white|white|orange|white|white|light green|orange|pink|pink|green|white|white|white|deep green|pink
-2026-11-05,2026-11-05,EQIX,LONG,L1_long_green_tp8_lowvol,tp8,997.3500,,997.3500,+0.00%,,0,white|white|white|white|white|white|deep green|pink|pink|green|green|white|white|deep green|light green
-2026-11-05,2026-11-05,EQIX,LONG,L2_long_green_tp3_lowvol,tp3,997.3500,,997.3500,+0.00%,,0,white|white|white|white|white|white|deep green|pink|pink|green|green|white|white|deep green|light green
+2026-11-05,2026-11-05,EBC,LONG,L3_long_green_hold2_midcap,hold2,22.7300,,22.7300,-0.00%,,0,white|white|white|white|white|light green|deep green|red|purple|green|green|white|white|deep green|pink
+2026-11-05,2026-11-05,ENVA,LONG,L3_long_green_hold2_midcap,hold2,174.2800,,174.2800,-0.00%,,0,white|white|orange|white|white|light green|orange|pink|pink|green|white|white|white|deep green|pink
+2026-11-05,2026-11-05,EQIX,LONG,L1_long_green_tp8_lowvol,tp8,997.3500,,997.3500,-0.00%,,0,white|white|white|white|white|white|deep green|pink|pink|green|green|white|white|deep green|light green
+2026-11-05,2026-11-05,EQIX,LONG,L2_long_green_tp3_lowvol,tp3,997.3500,,997.3500,-0.00%,,0,white|white|white|white|white|white|deep green|pink|pink|green|green|white|white|deep green|light green
 2026-11-05,2026-11-05,ETD,LONG,L1_long_green_tp8_lowvol,tp8,20.7000,,20.7000,+0.00%,,0,white|white|white|white|white|light green|deep green|pink|pink|green|green|white|white|deep green|pink
 2026-11-05,2026-11-05,ETD,LONG,L2_long_green_tp3_lowvol,tp3,20.7000,,20.7000,+0.00%,,0,white|white|white|white|white|light green|deep green|pink|pink|green|green|white|white|deep green|pink
 2026-11-05,2026-11-05,EYE,LONG,L3_long_green_hold2_midcap,hold2,17.8500,,17.8500,+0.00%,,0,white|white|white|white|white|light green|deep green|red|purple|green|deep green|white|white|deep green|light green
@@ -4865,26 +4865,26 @@ run_date,signal_date,ticker,side,strategy,exit_rule,ref_close,first_open,current
 2026-11-05,2026-11-05,FOX,LONG,L1_long_green_tp8_lowvol,tp8,59.9900,,59.9900,+0.00%,,0,white|white|white|white|white|light green|deep green|pink|purple|blue|white|pink|white|deep green|light green
 2026-11-05,2026-11-05,FOX,LONG,L2_long_green_tp3_lowvol,tp3,59.9900,,59.9900,+0.00%,,0,white|white|white|white|white|light green|deep green|pink|purple|blue|white|pink|white|deep green|light green
 2026-11-05,2026-11-05,FUL,LONG,L3_long_green_hold2_midcap,hold2,50.2200,,50.2200,+0.00%,,0,white|white|white|white|white|light green|orange|pink|pink|green|green|white|white|deep green|pink
-2026-11-05,2026-11-05,GDOT,LONG,L1_long_green_tp8_lowvol,tp8,12.4400,,12.4400,+0.00%,,0,white|white|orange|white|white|light green|orange|red|purple|green|green|white|white|deep green|pink
-2026-11-05,2026-11-05,GDOT,LONG,L2_long_green_tp3_lowvol,tp3,12.4400,,12.4400,+0.00%,,0,white|white|orange|white|white|light green|orange|red|purple|green|green|white|white|deep green|pink
-2026-11-05,2026-11-05,GHC,LONG,L3_long_green_hold2_midcap,hold2,1217.8600,,1217.8600,+0.00%,,0,white|white|white|white|white|light green|orange|pink|purple|green|green|white|white|deep green|pink
-2026-11-05,2026-11-05,GPGI,LONG,L3_long_green_hold2_midcap,hold2,13.6200,,13.6200,+0.00%,,0,white|white|white|white|white|white|deep green|green|light green|green|deep green|white|white|deep green|pink
-2026-11-05,2026-11-05,HG,LONG,L3_long_green_hold2_midcap,hold2,36.9800,,36.9800,+0.00%,,0,white|white|white|white|white|light green|deep green|red|purple|green|green|white|white|deep green|light green
-2026-11-05,2026-11-05,HLF,LONG,L3_long_green_hold2_midcap,hold2,14.9000,,14.9000,+0.00%,,0,white|white|white|white|white|light green|deep green|pink|purple|green|deep green|deep green|white|deep green|light green
-2026-11-05,2026-11-05,HLNE,LONG,L3_long_green_hold2_midcap,hold2,90.1300,,90.1300,+0.00%,,0,white|white|white|white|white|light green|deep green|pink|pink|green|deep green|deep green|white|deep green|light green
-2026-11-05,2026-11-05,HTZ,LONG,L3_long_green_hold2_midcap,hold2,1.7900,,1.7900,+0.00%,,0,white|white|white|white|white|light green|deep green|pink|pink|green|deep green|deep green|white|deep green|light green
+2026-11-05,2026-11-05,GDOT,LONG,L1_long_green_tp8_lowvol,tp8,12.4400,,12.4400,-0.00%,,0,white|white|orange|white|white|light green|orange|red|purple|green|green|white|white|deep green|pink
+2026-11-05,2026-11-05,GDOT,LONG,L2_long_green_tp3_lowvol,tp3,12.4400,,12.4400,-0.00%,,0,white|white|orange|white|white|light green|orange|red|purple|green|green|white|white|deep green|pink
+2026-11-05,2026-11-05,GHC,LONG,L3_long_green_hold2_midcap,hold2,1217.8600,,1217.8600,-0.00%,,0,white|white|white|white|white|light green|orange|pink|purple|green|green|white|white|deep green|pink
+2026-11-05,2026-11-05,GPGI,LONG,L3_long_green_hold2_midcap,hold2,13.6200,,13.6200,-0.00%,,0,white|white|white|white|white|white|deep green|green|light green|green|deep green|white|white|deep green|pink
+2026-11-05,2026-11-05,HG,LONG,L3_long_green_hold2_midcap,hold2,36.9800,,36.9800,-0.00%,,0,white|white|white|white|white|light green|deep green|red|purple|green|green|white|white|deep green|light green
+2026-11-05,2026-11-05,HLF,LONG,L3_long_green_hold2_midcap,hold2,14.9000,,14.9000,-0.00%,,0,white|white|white|white|white|light green|deep green|pink|purple|green|deep green|deep green|white|deep green|light green
+2026-11-05,2026-11-05,HLNE,LONG,L3_long_green_hold2_midcap,hold2,90.1300,,90.1300,-0.00%,,0,white|white|white|white|white|light green|deep green|pink|pink|green|deep green|deep green|white|deep green|light green
+2026-11-05,2026-11-05,HTZ,LONG,L3_long_green_hold2_midcap,hold2,1.7900,,1.7900,-0.00%,,0,white|white|white|white|white|light green|deep green|pink|pink|green|deep green|deep green|white|deep green|light green
 2026-11-05,2026-11-05,JAN,LONG,L3_long_green_hold2_midcap,hold2,30.7500,,30.7500,+0.00%,,0,white|white|orange|white|white|light green|orange|green|purple|green|green|white|white|deep green|white
 2026-11-05,2026-11-05,LBTYA,LONG,L3_long_green_hold2_midcap,hold2,9.7100,,9.7100,+0.00%,,0,white|white|white|white|white|light green|deep green|light green|purple|green|deep green|deep green|white|deep green|light green
 2026-11-05,2026-11-05,LBTYK,LONG,L3_long_green_hold2_midcap,hold2,9.5150,,9.5150,+0.00%,,0,white|white|white|white|white|light green|deep green|light green|purple|green|deep green|deep green|white|deep green|light green
 2026-11-05,2026-11-05,MGF,LONG,L1_long_green_tp8_lowvol,tp8,13.8000,,13.8000,+0.00%,,0,white|white|white|white|white|light green|deep green|red|purple|green|green|white|white|deep green|pink
 2026-11-05,2026-11-05,MGF,LONG,L2_long_green_tp3_lowvol,tp3,13.8000,,13.8000,+0.00%,,0,white|white|white|white|white|light green|deep green|red|purple|green|green|white|white|deep green|pink
-2026-11-05,2026-11-05,MMYT,LONG,L3_long_green_hold2_midcap,hold2,51.2800,,51.2800,+0.00%,,0,white|white|white|white|white|light green|deep green|light green|purple|green|deep green|deep green|white|deep green|light green
+2026-11-05,2026-11-05,MMYT,LONG,L3_long_green_hold2_midcap,hold2,51.2800,,51.2800,-0.00%,,0,white|white|white|white|white|light green|deep green|light green|purple|green|deep green|deep green|white|deep green|light green
 2026-11-05,2026-11-05,MS,LONG,L1_long_green_tp8_lowvol,tp8,182.4400,,182.4400,+0.00%,,0,white|white|white|white|white|light green|orange|pink|pink|green|green|white|white|deep green|pink
 2026-11-05,2026-11-05,MS,LONG,L2_long_green_tp3_lowvol,tp3,182.4400,,182.4400,+0.00%,,0,white|white|white|white|white|light green|orange|pink|pink|green|green|white|white|deep green|pink
-2026-11-05,2026-11-05,NTR,LONG,L1_long_green_tp8_lowvol,tp8,72.2100,,72.2100,+0.00%,,0,white|white|white|white|white|light green|orange|light green|purple|red|white|pink|white|deep green|pink
-2026-11-05,2026-11-05,NTR,LONG,L2_long_green_tp3_lowvol,tp3,72.2100,,72.2100,+0.00%,,0,white|white|white|white|white|light green|orange|light green|purple|red|white|pink|white|deep green|pink
-2026-11-05,2026-11-05,PKBK,LONG,L1_long_green_tp8_lowvol,tp8,32.4800,,32.4800,+0.00%,,0,white|white|orange|white|white|light green|orange|pink|purple|green|white|white|white|deep green|pink
-2026-11-05,2026-11-05,PKBK,LONG,L2_long_green_tp3_lowvol,tp3,32.4800,,32.4800,+0.00%,,0,white|white|orange|white|white|light green|orange|pink|purple|green|white|white|white|deep green|pink
+2026-11-05,2026-11-05,NTR,LONG,L1_long_green_tp8_lowvol,tp8,72.2100,,72.2100,-0.00%,,0,white|white|white|white|white|light green|orange|light green|purple|red|white|pink|white|deep green|pink
+2026-11-05,2026-11-05,NTR,LONG,L2_long_green_tp3_lowvol,tp3,72.2100,,72.2100,-0.00%,,0,white|white|white|white|white|light green|orange|light green|purple|red|white|pink|white|deep green|pink
+2026-11-05,2026-11-05,PKBK,LONG,L1_long_green_tp8_lowvol,tp8,32.4800,,32.4800,-0.00%,,0,white|white|orange|white|white|light green|orange|pink|purple|green|white|white|white|deep green|pink
+2026-11-05,2026-11-05,PKBK,LONG,L2_long_green_tp3_lowvol,tp3,32.4800,,32.4800,-0.00%,,0,white|white|orange|white|white|light green|orange|pink|purple|green|white|white|white|deep green|pink
 2026-11-05,2026-11-05,PSNY,LONG,L3_long_green_hold2_midcap,hold2,4.0700,,4.0700,+0.00%,,0,white|white|white|white|white|white|deep green|pink|pink|green|deep green|deep green|white|deep green|light green
 2026-11-05,2026-11-05,QS,LONG,L3_long_green_hold2_midcap,hold2,4.1100,,4.1100,+0.00%,,0,white|white|white|white|white|white|deep green|pink|pink|green|deep green|deep green|white|deep green|light green
 2026-11-05,2026-11-05,RGR,LONG,L1_long_green_tp8_lowvol,tp8,49.5000,,49.5000,+0.00%,,0,white|white|white|white|white|light green|deep green|red|purple|green|deep green|deep green|white|deep green|light green
@@ -4893,7 +4893,7 @@ run_date,signal_date,ticker,side,strategy,exit_rule,ref_close,first_open,current
 2026-11-05,2026-11-05,SFD,LONG,L1_long_green_tp8_lowvol,tp8,19.6000,,19.6000,+0.00%,,0,white|white|white|white|white|light green|deep green|red|purple|blue|white|deep green|white|deep green|light green
 2026-11-05,2026-11-05,SFD,LONG,L2_long_green_tp3_lowvol,tp3,19.6000,,19.6000,+0.00%,,0,white|white|white|white|white|light green|deep green|red|purple|blue|white|deep green|white|deep green|light green
 2026-11-05,2026-11-05,SGHC,LONG,L3_long_green_hold2_midcap,hold2,11.5600,,11.5600,+0.00%,,0,white|white|white|white|white|light green|orange|red|purple|green|white|pink|white|deep green|pink
-2026-11-05,2026-11-05,SHLS,LONG,L3_long_green_hold2_midcap,hold2,8.9950,,8.9950,+0.00%,,0,white|white|white|white|white|light green|deep green|red|purple|green|deep green|deep green|white|deep green|light green
+2026-11-05,2026-11-05,SHLS,LONG,L3_long_green_hold2_midcap,hold2,8.9950,,8.9950,-0.00%,,0,white|white|white|white|white|light green|deep green|red|purple|green|deep green|deep green|white|deep green|light green
 2026-11-05,2026-11-05,SVV,LONG,L3_long_green_hold2_midcap,hold2,9.1000,,9.1000,+0.00%,,0,white|white|white|white|white|light green|deep green|pink|pink|green|green|white|white|deep green|pink
 2026-11-05,2026-11-05,TDS,LONG,L3_long_green_hold2_midcap,hold2,32.3600,,32.3600,+0.00%,,0,white|white|white|white|white|light green|deep green|pink|pink|green|deep green|white|white|deep green|light green
 2026-11-05,2026-11-05,VSEC,LONG,L3_long_green_hold2_midcap,hold2,164.7100,,164.7100,+0.00%,,0,white|white|white|white|white|light green|deep green|pink|purple|green|green|light green|white|white|light green
