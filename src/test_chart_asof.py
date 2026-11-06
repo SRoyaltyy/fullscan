@@ -47,7 +47,8 @@ def test_chart_coverage_names_real_blockers() -> None:
     assert rows["webull-sim"]["chart"] == "2026-10-28"
     assert "not backfilled" in rows["webull-sim"]["blocker"]
     for name in ("factor-mine preopen holdup", "factor-mine preopen h1"):
-        assert rows[name]["chart"] >= "2026-11-05", rows[name]
+        assert rows[name]["chart"] == "2026-11-04", rows[name]
+        assert "stays missing" in rows[name]["blocker"]
 
 
 def test_rebuilt_missed_with_holdings_is_a_chart_gap() -> None:

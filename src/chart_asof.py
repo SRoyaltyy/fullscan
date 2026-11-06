@@ -158,14 +158,20 @@ def coverage() -> list[dict]:
         {
             "strategy": "factor-mine preopen holdup",
             "chart": pre.get("union_hot_n4_holdup_preopen", ""),
-            "source": "2026-11-05",
-            "blocker": "",
+            "source": pre.get("union_hot_n4_holdup_preopen", ""),
+            "blocker": (
+                "2026-11-05 pre-open book is not sealed; that morning stays missing"
+                if pre.get("union_hot_n4_holdup_preopen", "") < "2026-11-05" else ""
+            ),
         },
         {
             "strategy": "factor-mine preopen h1",
             "chart": pre.get("union_hot_n4_h1_preopen", ""),
-            "source": "2026-11-05",
-            "blocker": "",
+            "source": pre.get("union_hot_n4_h1_preopen", ""),
+            "blocker": (
+                "2026-11-05 pre-open book is not sealed; that morning stays missing"
+                if pre.get("union_hot_n4_h1_preopen", "") < "2026-11-05" else ""
+            ),
         },
         {
             "strategy": "holdup",
