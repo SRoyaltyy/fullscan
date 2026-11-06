@@ -138,6 +138,7 @@
 <div class="bar" id="sleeveBar"></div>
 <details class="curve-box" open>
 <summary id="curveTitle">Equity curve ($10k)</summary>
+<p class="mut">Nov 2 and Nov 4 are plan-only: no close mark, so the line breaks there. No equity is filled in.</p>
 <div class="curve-row"><div><canvas id="chart" width="1000" height="560"></canvas>
 <div class="legend" id="legend"></div></div><div id="ovCalSleeve"></div></div>
 </details>
@@ -262,7 +263,14 @@ function draw(sessions, canvasId){
   ctx.strokeStyle = "#4ade80";
   ctx.lineWidth = 2;
   ctx.beginPath();
-  eq.forEach((v, i) => { if (i === 0) ctx.moveTo(X(i), Y(v)); else ctx.lineTo(X(i), Y(v)); });
+  let drawing = false;
+  eq.forEach((v, i) => {
+    const gap = i > 0 && sessions[i].date && sessions[i - 1].date
+      && (Date.parse(sessions[i].date) - Date.parse(sessions[i - 1].date)) > 3 * 86400000;
+    if (v == null || !Number.isFinite(v) || gap){ drawing = false; if (v == null || !Number.isFinite(v)) return; }
+    if (!drawing) ctx.moveTo(X(i), Y(v)); else ctx.lineTo(X(i), Y(v));
+    drawing = true;
+  });
   ctx.stroke();
   ctx.fillStyle = "#dfe6f2";
   eq.forEach((v, i) => {
