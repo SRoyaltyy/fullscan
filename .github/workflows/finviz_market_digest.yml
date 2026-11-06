@@ -25,6 +25,9 @@ on:
     # Post-close answer-key. timezone field (Mar 2026+) follows ET DST.
     - cron: "5 16 * * 1-5"
       timezone: "America/New_York"
+    # Backstop: GH schedules drift/drop; close-ok skip makes a 2nd fire a no-op.
+    - cron: "40 16 * * 1-5"
+      timezone: "America/New_York"
   workflow_dispatch:
     inputs:
       run_date:
@@ -62,13 +65,24 @@ env:
 jobs:
   capture:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    # Full-history checkout alone takes ~15-20 min; 20 timed out 41698790717.
+    timeout-minutes: 45
     env:
       FULLSCAN_LAND: "1"
     steps:
+      # Same as #730: free runner disk, then shallow checkout. The ~6.9 GB
+      # full-history clone took 15-20 min and timed out 41698790717.
+      - name: Free runner disk (github-hosted only)
+        if: runner.environment == 'github-hosted'
+        run: |
+          df -h / | tail -1
+          sudo rm -rf /usr/share/dotnet /opt/ghc /usr/local/.ghcup /usr/local/lib/android \
+            /opt/hostedtoolcache/CodeQL /usr/share/swift /usr/local/share/powershell || true
+          sudo docker system prune -af >/dev/null 2>&1 || true
+          df -h / | tail -1
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 0
+          fetch-depth: 1  # land_file -> safe_git_push fetches origin/main and commit-trees on it; no history needed
           persist-credentials: true
           token: ${{ secrets.GITHUB_TOKEN }}
 
