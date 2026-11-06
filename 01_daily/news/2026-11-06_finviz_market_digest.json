@@ -1,6 +1,6 @@
 {
   "date": "2026-11-06",
-  "generated_at": "2026-11-06T04:26:52.605226-05:00",
+  "generated_at": "2026-11-06T04:43:56.016032-05:00",
   "timezone": "America/New_York",
   "source": "live",
   "source_url": "https://elite.finviz.com/",
@@ -15,28 +15,38 @@
   "kind": "finviz_homepage_market_digest",
   "represents": "Finviz homepage market-day prose. Same-morning Pre-Open when Generated is before 09:30 ET; afternoon Wayback is a prior-day close recap legal for the next session only. Not quote-page ticker blurbs.",
   "error": null,
-  "headline": "US futures trade mixed as tech attempts rebound from AI regulation-driven rout and Asian markets slide ahead October jobs report",
-  "raw_text": "- S&P 500 futures (@ES) rise 0.24%, Dow Jones futures (@YM) fall 0.80%, Nasdaq 100 futures (@NQ) climb 1.18%, and Russell 2000 futures (@ER2) dip about 0.04% in early trade.\n- Thursday's heavy tech losses that erased trillions in market value prompt a rebound in Nasdaq 100 futures (@NQ) amid concerns over potential tighter AI and data-center regulations following the midterms.\n- Japan's Nikkei (@NKD) falls nearly 6% and South Korea's Kospi drops over 8%, triggering a circuit breaker, with semiconductor and tech names leading declines on fears of slowed AI investment.\n- The US October employment situation report is due at 8:30 AM ET, including nonfarm payrolls, the unemployment rate, and average hourly earnings, and is expected to drive intraday volatility.\n- Moderna (MRNA), Humana (HUM), Vistra (VST), and Brookfield Asset Management (BAM) are scheduled to report earnings before the bell, with Moderna (MRNA) down about 1.6% after Health Canada authorized its flu and flu/COVID vaccines and Vistra (VST) up roughly 2.8% pre-market.\n- Oil (@CL) prices fall about 0.6% overnight while gold (@GC) slips roughly 0.8% following the global equity selloff.\n- Value and small-cap exposures lag in early positioning, with Russell 2000 futures (@ER2) off about 0.04% versus gains in S&P 500 and Nasdaq 100 futures (@NQ).",
-  "raw_summary_md": "- S&P 500 futures ([@ES](https://finviz.com/futures_charts?t=ES)) **rise 0.24%**, Dow Jones futures ([@YM](https://finviz.com/futures_charts?t=YM)) **fall 0.80%**, Nasdaq 100 futures ([@NQ](https://finviz.com/futures_charts?t=NQ)) climb 1.18%, and Russell 2000 futures ([@ER2](https://finviz.com/futures_charts?t=ER2)) dip about 0.04% in early trade.\n- Thursday's heavy tech losses that erased trillions in market value prompt a **rebound in Nasdaq 100 futures** ([@NQ](https://finviz.com/futures_charts?t=NQ)) amid concerns over potential tighter AI and data-center regulations following the midterms.\n- Japan's Nikkei ([@NKD](https://finviz.com/futures_charts?t=NKD)) **falls nearly 6%** and South Korea's Kospi **drops over 8%**, triggering a circuit breaker, with semiconductor and tech names leading declines on fears of slowed AI investment.\n- The US October employment situation report is due at **8:30 AM ET**, including nonfarm payrolls, the unemployment rate, and average hourly earnings, and is expected to drive intraday volatility.\n- Moderna ([MRNA](https://finviz.com/quote?t=MRNA)), Humana ([HUM](https://finviz.com/quote?t=HUM)), Vistra ([VST](https://finviz.com/quote?t=VST)), and Brookfield Asset Management ([BAM](https://finviz.com/quote?t=BAM)) are scheduled to report earnings before the bell, with Moderna ([MRNA](https://finviz.com/quote?t=MRNA)) down about 1.6% after Health Canada authorized its flu and flu/COVID vaccines and Vistra ([VST](https://finviz.com/quote?t=VST)) up roughly 2.8% pre-market.\n- Oil ([@CL](https://finviz.com/futures_charts?t=CL)) prices **fall about 0.6% overnight** while gold ([@GC](https://finviz.com/futures_charts?t=GC)) slips roughly 0.8% following the global equity selloff.\n- Value and small-cap exposures lag in early positioning, with Russell 2000 futures ([@ER2](https://finviz.com/futures_charts?t=ER2)) off about 0.04% versus gains in S&P 500 and Nasdaq 100 futures ([@NQ](https://finviz.com/futures_charts?t=NQ)).",
+  "headline": "US futures trade mixed as Nasdaq 100 rebounds from tech-led rout ahead of October jobs report and global AI-regulation worries",
+  "raw_text": "- S&P 500 futures (@ES) are up 0.35%, Dow Jones futures (@YM) are down 0.72%, Nasdaq 100 futures (@NQ) are up 1.53%, and Russell 2000 futures (@ER2) are up 0.09% in early trade.\n- AMD (AMD) rises about 8% pre-market as Nasdaq 100 futures (@NQ) rebound from yesterday’s heavy tech selloff tied to potential tighter AI and data-center regulations after the midterms.\n- Estee Lauder (EL) declines about 0.8% pre-market after raising full-year sales and profit guidance on resilient premium demand.\n- Rivian (RIVN) adds roughly 0.4% in pre-market trading after UBS (UBS) upgraded the stock to Buy.\n- Check Point Software (CHKP) is roughly flat pre-market after issuing a weaker-than-expected Q4 revenue outlook.\n- Moderna (MRNA), Humana (HUM), Vistra (VST), Brookfield Asset Management (BAM), and Charter Communications (CHTR) are scheduled to report earnings before the bell.\n- The October employment situation report, including nonfarm payrolls, the unemployment rate, and average hourly earnings, is due at 8:30 AM ET and is expected to drive significant intraday volatility.\n- Japan’s Nikkei (@NKD) fell nearly 6% and South Korea’s Kospi dropped over 8%, triggering a circuit breaker and brief trading halts, as the tech-led selloff spread across Asia and into weaker European trade, while oil (@CL) prices fell about 1.5%, gold (@GC) edged lower, and global equity funds saw another week of inflows.",
+  "raw_summary_md": "- S&P 500 futures ([@ES](https://finviz.com/futures_charts?t=ES)) are **up 0.35%**, Dow Jones futures ([@YM](https://finviz.com/futures_charts?t=YM)) are **down 0.72%**, Nasdaq 100 futures ([@NQ](https://finviz.com/futures_charts?t=NQ)) are **up 1.53%**, and Russell 2000 futures ([@ER2](https://finviz.com/futures_charts?t=ER2)) are up 0.09% in early trade.\n- AMD ([AMD](https://finviz.com/quote?t=AMD)) **rises about 8%** pre-market as Nasdaq 100 futures ([@NQ](https://finviz.com/futures_charts?t=NQ)) rebound from yesterday’s **heavy tech selloff** tied to potential tighter AI and data-center regulations after the midterms.\n- Estee Lauder ([EL](https://finviz.com/quote?t=EL)) **declines about 0.8%** pre-market after raising **full-year sales** and profit guidance on resilient premium demand.\n- Rivian ([RIVN](https://finviz.com/quote?t=RIVN)) **adds roughly 0.4%** in pre-market trading after UBS ([UBS](https://finviz.com/quote?t=UBS)) upgraded the stock **to Buy**.\n- Check Point Software ([CHKP](https://finviz.com/quote?t=CHKP)) is roughly flat pre-market after issuing a **weaker-than-expected Q4** revenue outlook.\n- Moderna ([MRNA](https://finviz.com/quote?t=MRNA)), Humana ([HUM](https://finviz.com/quote?t=HUM)), Vistra ([VST](https://finviz.com/quote?t=VST)), Brookfield Asset Management ([BAM](https://finviz.com/quote?t=BAM)), and Charter Communications ([CHTR](https://finviz.com/quote?t=CHTR)) are **scheduled to report earnings** before the bell.\n- The **October employment situation report**, including nonfarm payrolls, the unemployment rate, and average hourly earnings, is due at **8:30 AM ET** and is expected to drive **significant intraday volatility**.\n- Japan’s Nikkei ([@NKD](https://finviz.com/futures_charts?t=NKD)) fell **nearly 6%** and South Korea’s Kospi dropped **over 8%**, triggering a circuit breaker and brief trading halts, as the tech-led selloff spread across Asia and into weaker European trade, while oil ([@CL](https://finviz.com/futures_charts?t=CL)) prices fell **about 1.5%**, gold ([@GC](https://finviz.com/futures_charts?t=GC)) edged lower, and global equity funds saw another week of inflows.",
   "index_moves": [],
   "oil": null,
   "cpi": null,
   "fed_odds": null,
   "named_tickers": [
+    "AMD",
+    "EL",
+    "RIVN",
+    "UBS",
+    "CHKP",
     "MRNA",
     "HUM",
     "VST",
-    "BAM"
+    "BAM",
+    "CHTR"
   ],
   "named_leaders": [
+    "AMD",
+    "EL",
+    "RIVN",
+    "UBS",
+    "CHKP",
     "MRNA",
     "HUM",
     "VST",
-    "BAM"
+    "BAM",
+    "CHTR"
   ],
-  "calendar": [
-    "Thursday's heavy tech losses that erased trillions in market value prompt a rebound in Nasdaq 100 futures (@NQ) amid concerns over potential tighter AI and data-center regulations following the midterms."
-  ],
+  "calendar": [],
   "prior_close": {
     "spx": null,
     "nasdaq": null,
@@ -50,19 +60,18 @@
     "housing": false,
     "retail": false,
     "fed": false,
-    "bullets": [
-      "Thursday's heavy tech losses that erased trillions in market value prompt a rebound in Nasdaq 100 futures (@NQ) amid concerns over potential tighter AI and data-center regulations following the midterms."
-    ],
-    "text": "Thursday's heavy tech losses that erased trillions in market value prompt a rebound in Nasdaq 100 futures (@NQ) amid concerns over potential tighter AI and data-center regulations following the midterms."
+    "bullets": [],
+    "text": ""
   },
   "earnings_slate": {
     "tickers": [
       "MRNA",
       "HUM",
       "VST",
-      "BAM"
+      "BAM",
+      "CHTR"
     ],
-    "text": "Moderna (MRNA), Humana (HUM), Vistra (VST), and Brookfield Asset Management (BAM) are scheduled to report earnings before the bell, with Moderna (MRNA) down about 1.6% after Health Canada authorized its flu and flu/COVID vaccines and Vistra (VST) up roughly 2.8% pre-market."
+    "text": "Moderna (MRNA), Humana (HUM), Vistra (VST), Brookfield Asset Management (BAM), and Charter Communications (CHTR) are scheduled to report earnings before the bell."
   },
   "geo_grain": {
     "geo": false,
@@ -70,9 +79,9 @@
     "flags": [],
     "text": ""
   },
-  "finviz_id": 335484,
+  "finviz_id": 335513,
   "finviz_ticker": "$MARKET",
-  "finviz_published_at": "2026-11-06T04:07:12.577",
+  "finviz_published_at": "2026-11-06T04:37:08.51",
   "finviz_source": "market_summary",
   "finviz_sentiment": "good"
 }
