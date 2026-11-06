@@ -1,12 +1,12 @@
 {
   "date": "2026-11-06",
-  "generated_at": "2026-11-06T05:03:56.262151-05:00",
+  "generated_at": "2026-11-06T05:04:14.991353-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
     "ok": 4,
-    "partial": 3,
-    "fail": 1,
+    "partial": 4,
+    "fail": 0,
     "n": 8
   },
   "buy_1d": [],
@@ -15,31 +15,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "finviz_digest",
-      "title": "Finviz digest",
-      "date": "2026-11-06",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-11-06T05:01:52.450780-05:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-11-06_finviz_digest.json",
-          "ok": true,
-          "reason": "",
-          "size": 102272,
-          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
-        },
-        {
-          "path": "01_daily/news/2026-11-06_finviz_digest.md",
-          "ok": true,
-          "reason": "",
-          "size": 11916,
-          "preview": "# Finviz Daily Digest \u2014 2026-11-06\n_Generated 2026-11-06T04:43:45.410422-05:00 \u00b7 export=data/exports/finviz_2026-11-06.csv \u00b7 ticker digests=2277 \u00b7 high-signal=1258_"
-        }
-      ],
-      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-11-06\n_Generated 2026-11-06T04:43:45.410422-05:00 \u00b7 export=data/exports/finviz_2026-11-06.csv \u00b7 ticker digests=2277 \u00b7 high-signal=1258_"
-    },
     {
       "key": "map_heat",
       "title": "Map heat tables",
@@ -200,6 +175,31 @@
         }
       ],
       "preview": "raw=9474 usable=640 single=553 \u00b7 Japan Bonds Rally as Global Risk-Off Move Boosts Haven Demand - Bloomberg.com | Bitcoin Sinks to Seven-Week Low as Risk-Off Mood Deepens - Bloomberg.com | China Bank Funding Costs Hit Record Low on PBOC Rate Shift - Bloomberg.com | Brazil Puts Rare Earths, Copper Atop Critical Minerals List - Bloomberg.com | Trump-Backed Critical Minerals Deals Face Growing Pressure After Blue Wave - Blo \u00b7 # News Parse v2 \u2014 2026-11-06T05:03:46.585471-05:00\nWindow\u224848h | news_mode=on | raw=9474 | usable=640 | single_name=553 | noise_dropped=8095\nusable polarity={'+': 27, '-': 129, 'mixed': 5, 'neutral': 479}"
+    },
+    {
+      "key": "news_actions",
+      "title": "News actions",
+      "date": "2026-11-06",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-06T05:04:14.118468-05:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-11-06_actions.json",
+          "ok": true,
+          "reason": "",
+          "size": 63099,
+          "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers"
+        },
+        {
+          "path": "01_daily/news/2026-11-06_actions.md",
+          "ok": true,
+          "reason": "",
+          "size": 13660,
+          "preview": "# News \u2192 Actions v4 (full framework) \u2014 2026-11-06T05:04:14.101837-05:00\nraw=9473 unique_events=6 tickers=75"
+        }
+      ],
+      "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-11-06T05:04:14.101837-05:00\nraw=9473 unique_events=6 tickers=75"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"

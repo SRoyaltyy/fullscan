@@ -1,17 +1,16 @@
 {
   "date": "2026-11-06",
-  "generated_at": "2026-11-06T05:03:56.262151-05:00",
+  "generated_at": "2026-11-06T05:04:14.991353-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
     "MISSING General predict MD `01_daily/general/2026-11-06_predict.md` \u2014 missing",
-    "MISSING News actions JSON `01_daily/news/2026-11-06_actions.json` \u2014 missing",
     "MISSING News judge MD `01_daily/news/2026-11-06_judge.md` \u2014 missing"
   ],
   "counts": {
     "ok": 4,
-    "partial": 3,
-    "fail": 1,
+    "partial": 4,
+    "fail": 0,
     "n": 8
   },
   "processes": [
@@ -183,7 +182,7 @@
       "inputs_ready": true,
       "n_req_ok": 2,
       "n_req": 9,
-      "n_opt_ok": 1,
+      "n_opt_ok": 2,
       "n_opt": 14,
       "files": [
         {
@@ -294,11 +293,16 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-11-06_actions.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 63099,
+          "said": "75 ticker actions \u00b7 6 events \u00b7 9473 headlines \u00b7 COP BUY, EOG BUY, CHRD BUY, SM BUY, HPK BUY, REPX BUY, OXY BUY, FANG BUY",
+          "bullets": [
+            "BUY COP",
+            "BUY EOG",
+            "BUY CHRD",
+            "BUY SM"
+          ]
         },
         {
           "key": "general",
@@ -579,8 +583,8 @@
       "key": "catalyst",
       "name": "Catalyst dossiers",
       "yaml": "catalyst_daily.yml",
-      "status": "FAIL",
-      "inputs_ready": false,
+      "status": "PARTIAL",
+      "inputs_ready": true,
       "n_req_ok": 0,
       "n_req": 0,
       "n_opt_ok": 0,
@@ -591,11 +595,16 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-11-06_actions.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 63099,
+          "said": "75 ticker actions \u00b7 6 events \u00b7 9473 headlines \u00b7 COP BUY, EOG BUY, CHRD BUY, SM BUY, HPK BUY, REPX BUY, OXY BUY, FANG BUY",
+          "bullets": [
+            "BUY COP",
+            "BUY EOG",
+            "BUY CHRD",
+            "BUY SM"
+          ]
         },
         {
           "key": "in_digest",
@@ -624,8 +633,17 @@
           "bullets": []
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "75 ticker actions \u00b7 6 events \u00b7 9473 headlines \u00b7 COP BUY, EOG BUY, CHRD BUY, SM BUY, HPK BUY, REPX BUY, OXY BUY, FANG BUY",
+      "bullets": [
+        "BUY COP",
+        "BUY EOG",
+        "BUY CHRD",
+        "BUY SM",
+        "BUY HPK",
+        "BUY REPX",
+        "BUY OXY",
+        "BUY FANG"
+      ]
     },
     {
       "key": "stock_book",
@@ -665,11 +683,16 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-11-06_actions.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 63099,
+          "said": "75 ticker actions \u00b7 6 events \u00b7 9473 headlines \u00b7 COP BUY, EOG BUY, CHRD BUY, SM BUY, HPK BUY, REPX BUY, OXY BUY, FANG BUY",
+          "bullets": [
+            "BUY COP",
+            "BUY EOG",
+            "BUY CHRD",
+            "BUY SM"
+          ]
         },
         {
           "key": "in_digest",
@@ -1201,6 +1224,31 @@
         }
       ],
       "preview": "raw=9474 usable=640 single=553 \u00b7 Japan Bonds Rally as Global Risk-Off Move Boosts Haven Demand - Bloomberg.com | Bitcoin Sinks to Seven-Week Low as Risk-Off Mood Deepens - Bloomberg.com | China Bank Funding Costs Hit Record Low on PBOC Rate Shift - Bloomberg.com | Brazil Puts Rare Earths, Copper Atop Critical Minerals List - Bloomberg.com | Trump-Backed Critical Minerals Deals Face Growing Pressure After Blue Wave - Blo \u00b7 # News Parse v2 \u2014 2026-11-06T05:03:46.585471-05:00\nWindow\u224848h | news_mode=on | raw=9474 | usable=640 | single_name=553 | noise_dropped=8095\nusable polarity={'+': 27, '-': 129, 'mixed': 5, 'neutral': 479}"
+    },
+    {
+      "key": "news_actions",
+      "title": "News actions",
+      "date": "2026-11-06",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-06T05:04:14.118468-05:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-11-06_actions.json",
+          "ok": true,
+          "reason": "",
+          "size": 63099,
+          "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers"
+        },
+        {
+          "path": "01_daily/news/2026-11-06_actions.md",
+          "ok": true,
+          "reason": "",
+          "size": 13660,
+          "preview": "# News \u2192 Actions v4 (full framework) \u2014 2026-11-06T05:04:14.101837-05:00\nraw=9473 unique_events=6 tickers=75"
+        }
+      ],
+      "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-11-06T05:04:14.101837-05:00\nraw=9473 unique_events=6 tickers=75"
     }
   ],
   "href": {
