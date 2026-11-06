@@ -10,7 +10,12 @@ import gzip
 import hashlib
 import json
 import subprocess
+import sys
 from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent.parent
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
 
 from src.factor_mine_dash_pack import (
     calendar_overlay_document,
@@ -18,7 +23,6 @@ from src.factor_mine_dash_pack import (
     write_calendar_overlay,
 )
 
-ROOT = Path(__file__).resolve().parent.parent
 JS = ROOT / "scripts" / "fm_ovcal.js"
 NODE = "node"
 

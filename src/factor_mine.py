@@ -2826,10 +2826,6 @@ def run(from_date: str = START, to_date: str | None = None,
         "stats": [{k: v for k, v in s.items()
                    if k not in ("daily", "equity", "starts")} for s in stats],
         "series": series,
-        # Held/new calendar for sealed no_same_day_panel empties is a
-        # display overlay (factor_mine_dash_pack.calendar_overlay_document
-        # and scripts/fm_ovcal.js). Rebuilt fills stay out of these books:
-        # a locked day refuses a pick, fill, or P&L rewrite.
         "daily": {s["name"]: _slim_dash_daily(s["daily"]) for s in stats},
         "starts": {s["name"]: s["starts"] for s in stats},
         "books": {n: _slim_dash_book(bk) for n, bk in books.items()},
@@ -3709,11 +3705,6 @@ def write_dash_html(payload: dict, dash_dir: Path | None = None,
     html = html.replace("__DATA__", encode_payload(payload))
     dest.write_text(html, encoding="utf-8")
     apply_factor_mine_page_patches(dest)
-    try:
-        from .factor_mine_dash_pack import write_calendar_overlay
-        write_calendar_overlay(dest_dir)
-    except Exception as exc:
-        print(f"[factor-mine] calendar overlay skip: {exc}", flush=True)
     return dest
 
 
