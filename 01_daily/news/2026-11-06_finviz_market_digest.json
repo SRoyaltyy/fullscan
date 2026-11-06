@@ -1,0 +1,78 @@
+{
+  "date": "2026-11-06",
+  "generated_at": "2026-11-06T04:26:52.605226-05:00",
+  "timezone": "America/New_York",
+  "source": "live",
+  "source_url": "https://elite.finviz.com/",
+  "archive_snapshot_ts": null,
+  "archive_snapshot_at": null,
+  "archive_url": null,
+  "clock_legal": true,
+  "clock_same_morning": true,
+  "clock_use": "same_morning",
+  "clock_legal_for": "2026-11-06",
+  "clock_rule": "Live: Generated must be before 09:30 ET on this date or leave missing. Wayback: capture before 09:30 ET that day is legal for that morning's Pre-Open. Afternoon Wayback is legal for the NEXT session open only (prior-day close recap), marked by clock_legal_for. Gaps stay gaps. Capture only — not tape_anchor / predict / #210.",
+  "kind": "finviz_homepage_market_digest",
+  "represents": "Finviz homepage market-day prose. Same-morning Pre-Open when Generated is before 09:30 ET; afternoon Wayback is a prior-day close recap legal for the next session only. Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "US futures trade mixed as tech attempts rebound from AI regulation-driven rout and Asian markets slide ahead October jobs report",
+  "raw_text": "- S&P 500 futures (@ES) rise 0.24%, Dow Jones futures (@YM) fall 0.80%, Nasdaq 100 futures (@NQ) climb 1.18%, and Russell 2000 futures (@ER2) dip about 0.04% in early trade.\n- Thursday's heavy tech losses that erased trillions in market value prompt a rebound in Nasdaq 100 futures (@NQ) amid concerns over potential tighter AI and data-center regulations following the midterms.\n- Japan's Nikkei (@NKD) falls nearly 6% and South Korea's Kospi drops over 8%, triggering a circuit breaker, with semiconductor and tech names leading declines on fears of slowed AI investment.\n- The US October employment situation report is due at 8:30 AM ET, including nonfarm payrolls, the unemployment rate, and average hourly earnings, and is expected to drive intraday volatility.\n- Moderna (MRNA), Humana (HUM), Vistra (VST), and Brookfield Asset Management (BAM) are scheduled to report earnings before the bell, with Moderna (MRNA) down about 1.6% after Health Canada authorized its flu and flu/COVID vaccines and Vistra (VST) up roughly 2.8% pre-market.\n- Oil (@CL) prices fall about 0.6% overnight while gold (@GC) slips roughly 0.8% following the global equity selloff.\n- Value and small-cap exposures lag in early positioning, with Russell 2000 futures (@ER2) off about 0.04% versus gains in S&P 500 and Nasdaq 100 futures (@NQ).",
+  "raw_summary_md": "- S&P 500 futures ([@ES](https://finviz.com/futures_charts?t=ES)) **rise 0.24%**, Dow Jones futures ([@YM](https://finviz.com/futures_charts?t=YM)) **fall 0.80%**, Nasdaq 100 futures ([@NQ](https://finviz.com/futures_charts?t=NQ)) climb 1.18%, and Russell 2000 futures ([@ER2](https://finviz.com/futures_charts?t=ER2)) dip about 0.04% in early trade.\n- Thursday's heavy tech losses that erased trillions in market value prompt a **rebound in Nasdaq 100 futures** ([@NQ](https://finviz.com/futures_charts?t=NQ)) amid concerns over potential tighter AI and data-center regulations following the midterms.\n- Japan's Nikkei ([@NKD](https://finviz.com/futures_charts?t=NKD)) **falls nearly 6%** and South Korea's Kospi **drops over 8%**, triggering a circuit breaker, with semiconductor and tech names leading declines on fears of slowed AI investment.\n- The US October employment situation report is due at **8:30 AM ET**, including nonfarm payrolls, the unemployment rate, and average hourly earnings, and is expected to drive intraday volatility.\n- Moderna ([MRNA](https://finviz.com/quote?t=MRNA)), Humana ([HUM](https://finviz.com/quote?t=HUM)), Vistra ([VST](https://finviz.com/quote?t=VST)), and Brookfield Asset Management ([BAM](https://finviz.com/quote?t=BAM)) are scheduled to report earnings before the bell, with Moderna ([MRNA](https://finviz.com/quote?t=MRNA)) down about 1.6% after Health Canada authorized its flu and flu/COVID vaccines and Vistra ([VST](https://finviz.com/quote?t=VST)) up roughly 2.8% pre-market.\n- Oil ([@CL](https://finviz.com/futures_charts?t=CL)) prices **fall about 0.6% overnight** while gold ([@GC](https://finviz.com/futures_charts?t=GC)) slips roughly 0.8% following the global equity selloff.\n- Value and small-cap exposures lag in early positioning, with Russell 2000 futures ([@ER2](https://finviz.com/futures_charts?t=ER2)) off about 0.04% versus gains in S&P 500 and Nasdaq 100 futures ([@NQ](https://finviz.com/futures_charts?t=NQ)).",
+  "index_moves": [],
+  "oil": null,
+  "cpi": null,
+  "fed_odds": null,
+  "named_tickers": [
+    "MRNA",
+    "HUM",
+    "VST",
+    "BAM"
+  ],
+  "named_leaders": [
+    "MRNA",
+    "HUM",
+    "VST",
+    "BAM"
+  ],
+  "calendar": [
+    "Thursday's heavy tech losses that erased trillions in market value prompt a rebound in Nasdaq 100 futures (@NQ) amid concerns over potential tighter AI and data-center regulations following the midterms."
+  ],
+  "prior_close": {
+    "spx": null,
+    "nasdaq": null,
+    "dow": null
+  },
+  "cpi_fed": {
+    "cpi": null,
+    "fed_odds": null
+  },
+  "next_session_calendar": {
+    "housing": false,
+    "retail": false,
+    "fed": false,
+    "bullets": [
+      "Thursday's heavy tech losses that erased trillions in market value prompt a rebound in Nasdaq 100 futures (@NQ) amid concerns over potential tighter AI and data-center regulations following the midterms."
+    ],
+    "text": "Thursday's heavy tech losses that erased trillions in market value prompt a rebound in Nasdaq 100 futures (@NQ) amid concerns over potential tighter AI and data-center regulations following the midterms."
+  },
+  "earnings_slate": {
+    "tickers": [
+      "MRNA",
+      "HUM",
+      "VST",
+      "BAM"
+    ],
+    "text": "Moderna (MRNA), Humana (HUM), Vistra (VST), and Brookfield Asset Management (BAM) are scheduled to report earnings before the bell, with Moderna (MRNA) down about 1.6% after Health Canada authorized its flu and flu/COVID vaccines and Vistra (VST) up roughly 2.8% pre-market."
+  },
+  "geo_grain": {
+    "geo": false,
+    "grain": false,
+    "flags": [],
+    "text": ""
+  },
+  "finviz_id": 335484,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-11-06T04:07:12.577",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "good"
+}
