@@ -1,6 +1,6 @@
 {
   "date": "2026-11-06",
-  "generated_at": "2026-11-06T09:23:54.929922-05:00",
+  "generated_at": "2026-11-06T09:24:02.169489-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -81,31 +81,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "news_parse",
-      "title": "News parse",
-      "date": "2026-11-06",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-11-06T05:03:55.286543-05:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-11-06_parsed.json",
-          "ok": true,
-          "reason": "",
-          "size": 6861364,
-          "preview": "raw=9474 usable=640 single=553 \u00b7 Japan Bonds Rally as Global Risk-Off Move Boosts Haven Demand - Bloomberg.com | Bitcoin Sinks to Seven-Week Low as Risk-Off Mood Deepens - Bloomberg.com | China Bank Funding Costs Hit Record Low on PBOC Rate Shift - Bloomberg.com | Brazil Puts Rare Earths, Copper Atop Critical Minerals List - Bloomberg.com | Trump-Backed Critical Minerals Deals Face Growing Pressure After Blue Wave - Blo"
-        },
-        {
-          "path": "01_daily/news/2026-11-06_parsed.md",
-          "ok": true,
-          "reason": "",
-          "size": 12718,
-          "preview": "# News Parse v2 \u2014 2026-11-06T05:03:46.585471-05:00\nWindow\u224848h | news_mode=on | raw=9474 | usable=640 | single_name=553 | noise_dropped=8095\nusable polarity={'+': 27, '-': 129, 'mixed': 5, 'neutral': 479}"
-        }
-      ],
-      "preview": "raw=9474 usable=640 single=553 \u00b7 Japan Bonds Rally as Global Risk-Off Move Boosts Haven Demand - Bloomberg.com | Bitcoin Sinks to Seven-Week Low as Risk-Off Mood Deepens - Bloomberg.com | China Bank Funding Costs Hit Record Low on PBOC Rate Shift - Bloomberg.com | Brazil Puts Rare Earths, Copper Atop Critical Minerals List - Bloomberg.com | Trump-Backed Critical Minerals Deals Face Growing Pressure After Blue Wave - Blo \u00b7 # News Parse v2 \u2014 2026-11-06T05:03:46.585471-05:00\nWindow\u224848h | news_mode=on | raw=9474 | usable=640 | single_name=553 | noise_dropped=8095\nusable polarity={'+': 27, '-': 129, 'mixed': 5, 'neutral': 479}"
-    },
     {
       "key": "news_actions",
       "title": "News actions (no LLM)",
@@ -301,6 +276,136 @@
         }
       ],
       "preview": "1d BUY THC, MD, EHC, UHS, KDP, APP, AVAH, ACHC \u00b7 SELL ENVX, FCEL, TE, QBTS, DDD, AMPX, METC, LTBR \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-11-06 BUY THC, MD, EHC, UHS, KDP, APP, AVAH, ACHC \u00b7 SELL ENVX, FCEL, TE, QBTS, DDD, AMPX, METC, LTBR \u00b7 2026-11-06 BUY THC, MD, EHC, UHS, KDP, APP, AVAH, ACHC \u00b7 SELL ENVX, FCEL, TE, QBTS, DDD, AMPX, METC, LTBR \u00b7 # Stock book \u2014 2026-11-06\n_Generated 2026-11-06T09:23:44.643355-05:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+    },
+    {
+      "key": "live_boards",
+      "title": "Live 1d BUY/SELL strip",
+      "date": "2026-11-06",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-06T09:24:01.099257-05:00",
+      "files": [
+        {
+          "path": "data/day_board/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 16602,
+          "preview": "2026-11-06 BUY THC, MD, EHC, UHS, KDP, APP, AVAH, ACHC \u00b7 SELL ENVX, FCEL, TE, QBTS, DDD, AMPX, METC, LTBR"
+        },
+        {
+          "path": "data/day_board/latest.json",
+          "ok": true,
+          "reason": "",
+          "size": 1116,
+          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
+        },
+        {
+          "path": "data/day_board/2026-11-06.json",
+          "ok": true,
+          "reason": "",
+          "size": 67817,
+          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href"
+        },
+        {
+          "path": "data/day_board/2026-11-06_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 31334,
+          "preview": "2026-11-06 BUY THC, MD, EHC, UHS, KDP, APP, AVAH, ACHC \u00b7 SELL ENVX, FCEL, TE, QBTS, DDD, AMPX, METC, LTBR"
+        },
+        {
+          "path": "data/day_board/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 301816,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/2026-11-06_strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 301816,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 273891,
+          "preview": "2026-11-06 BUY THC, MD, EHC, UHS, KDP, APP, AVAH, ACHC \u00b7 SELL ENVX, FCEL, TE, QBTS, DDD, AMPX, METC, LTBR"
+        },
+        {
+          "path": "data/factor_mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 301816,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 31334,
+          "preview": "2026-11-06 BUY THC, MD, EHC, UHS, KDP, APP, AVAH, ACHC \u00b7 SELL ENVX, FCEL, TE, QBTS, DDD, AMPX, METC, LTBR"
+        },
+        {
+          "path": "dashboard/factor-mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 301816,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 301816,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 273891,
+          "preview": "2026-11-06 BUY THC, MD, EHC, UHS, KDP, APP, AVAH, ACHC \u00b7 SELL ENVX, FCEL, TE, QBTS, DDD, AMPX, METC, LTBR"
+        },
+        {
+          "path": "data/day_board/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 1551,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        },
+        {
+          "path": "dashboard/factor-mine/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 1551,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        },
+        {
+          "path": "data/day_board/today_strategies.after-freeze-1.json",
+          "ok": true,
+          "reason": "",
+          "size": 281364,
+          "preview": "2026-11-04 BUY CDNA, BLFS, VEEV, ILMN, PRCH, LAUR, CNK, CHEF \u00b7 SELL NEOV, BIDU, ROIV, BAK, PAL, GFL, VNET, NOK"
+        },
+        {
+          "path": "data/day_board/today_strategies.after-freeze-2.json",
+          "ok": true,
+          "reason": "",
+          "size": 1165723,
+          "preview": "2026-11-04 BUY CDNA, BLFS, VEEV, ILMN, PRCH, LAUR, CNK, TRU \u00b7 SELL NEOV, BIDU, ROIV, BAK, GFL, PAL, VNET, NFLX"
+        },
+        {
+          "path": "data/day_board/today_strategies.after-freeze-3.json",
+          "ok": true,
+          "reason": "",
+          "size": 885881,
+          "preview": "2026-11-05 BUY XYZ, CDW, KD, JKHY, APPN, VRSN, DBX, MSFT \u00b7 SELL ENVX, AMKR, FCEL, METC, AMPX, EAF, HYLN, RGTI"
+        }
+      ],
+      "preview": "2026-11-06 BUY THC, MD, EHC, UHS, KDP, APP, AVAH, ACHC \u00b7 SELL ENVX, FCEL, TE, QBTS, DDD, AMPX, METC, LTBR \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href \u00b7 2026-11-06 BUY THC, MD, EHC, UHS, KDP, APP, AVAH, ACHC \u00b7 SELL ENVX, FCEL, TE, QBTS, DDD, AMPX, METC, LTBR \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-11-06 BUY THC, MD, EHC, UHS, KDP, APP, AVAH, ACHC \u00b7 SELL ENVX, FCEL, TE, QBTS, DDD, AMPX, METC, LTBR \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-11-06 BUY THC, MD, EHC, UHS, KDP, APP, AVAH, ACHC \u00b7 SELL ENVX, FCEL, TE, QBTS, DDD, AMPX, METC, LTBR \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, l"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
