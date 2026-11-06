@@ -134,6 +134,8 @@
  .ovcal-cell.hard{border-color:#ef4444;box-shadow:inset 0 0 0 2px #ef4444}
  .ovcal-cell.hard .d{background:#7f1d1d;color:#fecaca}
  .ovcal-cell.pick{outline:2px solid #fbbf24}
+ .ovcal-cell .half.sit{background:#1e293b;color:#93c5fd}
+ .ovcal-cell.missed .half{background:#2a3142;color:#8b96ab}
  .ovcal-card.big{cursor:default;padding:12px}
  .ovcal-wk.big{gap:6px}
  .ovcal-detail{margin:10px 0 0;padding:10px;border:1px solid var(--line);border-radius:8px;background:#0b1220;font:12.5px/1.45 ui-sans-serif,system-ui;min-height:7em}
@@ -171,7 +173,7 @@
 <div class="cards" id="cards"></div>
 <details class="ovcal-wrap" id="ovCalBox" open>
 <summary>New buys vs already held — each sleeve</summary>
-<p class="mut">Each day is two stacked bars. <b>Top = already held</b> (overnight + leftover names). <b>Bottom = bought today</b> (09:30 → close). Number is dollars. Bright green = bigger gain, bright red = bigger loss, grey = flat. A red frame + R is a hard-red sit morning. Click a day for the names and to start the equity curve on that morning.</p>
+<p class="mut">Each day is two stacked bars. <b>Top = already held</b> (overnight + leftover names). <b>Bottom = bought today</b> (09:30 → close). Number is dollars. Bright green = bigger gain, bright red = bigger loss, grey = flat. A red frame + R is a hard-red sit morning. An empty no-same-day morning uses the rebuilt book: <b>sit</b> is a rule day with no new buy, <b>missed</b> was not rebuilt and has no picks. Click a day for the names and to start the equity curve on that morning.</p>
 <div class="ovcal-leg">
  <span><i style="background:#16a34a"></i>gain</span>
  <span><i style="background:#94a3b8"></i>flat</span>
@@ -1973,12 +1975,75 @@ function ovParseHeld(xs){
   });
   return out;
 }
-function ovPx(ticker, date){
-  const row=(((D.sim||{}).tape||{})[ticker]||{})[date];
-  if(row==null) return null;
-  if(Array.isArray(row) && row.length>=2) return {o:Number(row[0]), c:Number(row[1])};
-  if(typeof row==='object') return {o:Number(row.open||row.o), c:Number(row.close||row.c)};
+function ovCalDoc(){
+  const baked = (typeof D!=='undefined' && D && D.calendar_overlay) || null;
+  if(baked && baked.strategies) return baked;
+  const live = (typeof window!=='undefined' && window.__FM_CAL_DOC) || null;
+  if(live && live.strategies) return live;
   return null;
+}
+function ovPx(ticker, date, useOverlay){
+  const row=(((D.sim||{}).tape||{})[ticker]||{})[date];
+  if(row!=null){
+    if(Array.isArray(row) && row.length>=2) return {o:Number(row[0]), c:Number(row[1])};
+    if(typeof row==='object') return {o:Number(row.open||row.o), c:Number(row.close||row.c)};
+  }
+  if(!useOverlay) return null;
+  const extra=((ovCalDoc()||{}).tape||{})[ticker];
+  const bar=extra && extra[date];
+  if(Array.isArray(bar) && bar.length>=2) return {o:Number(bar[0]), c:Number(bar[1])};
+  return null;
+}
+function ovSealedEmpty(d, trades){
+  const ov=Number(d && d.overnight_delta || 0);
+  const se=Number(d && d.session_delta || 0);
+  if(Math.abs(ov)>1e-9 || Math.abs(se)>1e-9) return false;
+  if((d && d.bought && d.bought.length) || (d && d.sold && d.sold.length) || (d && d.open_held && d.open_held.length)) return false;
+  const hit=(trades||[]).some(function(t){
+    return t && t.date===d.date && (t.side==='BUY'||t.side==='SELL'||t.side==='SHORT'||t.side==='COVER');
+  });
+  return !hit;
+}
+function ovApplyRebuild(days, trades, cells, emptyDates){
+  const allow={};
+  (emptyDates||[]).forEach(function(d){ allow[d]=true; });
+  const useAllow = !!(emptyDates && emptyDates.length);
+  const by={};
+  days.forEach(function(d,i){ by[d.date]=i; });
+  const outDays=days.slice();
+  const replaced={};
+  Object.keys(cells||{}).forEach(function(date){
+    if(useAllow && !allow[date]) return;
+    const i=by[date];
+    if(i==null) return;
+    const sealed=days[i];
+    if(!ovSealedEmpty(sealed, trades)) return;
+    const cell=cells[date]||{};
+    const label=cell.label||'';
+    if(label==='missed'){
+      outDays[i]=Object.assign({}, sealed, {calendar_label:'missed', bought:[], sold:[], open_held:[]});
+      replaced[date]=true;
+      return;
+    }
+    if(label==='sat out (rule)'){
+      outDays[i]=Object.assign({}, cell.daily||{}, {date:date, calendar_label:'sat out (rule)', bought:[]});
+      replaced[date]=true;
+      return;
+    }
+    if(label==='rebuilt' && cell.daily){
+      outDays[i]=Object.assign({}, cell.daily, {date:date, calendar_label:'rebuilt'});
+      replaced[date]=true;
+    }
+  });
+  const outTrades=trades.filter(function(t){ return !replaced[t.date]; });
+  Object.keys(replaced).forEach(function(date){
+    const cell=(cells||{})[date]||{};
+    if(cell.label!=='rebuilt') return;
+    (cell.fills||[]).forEach(function(t){
+      if((t.side==='BUY'||t.side==='SHORT') && t.ticker) outTrades.push(t);
+    });
+  });
+  return {days:outDays, trades:outTrades};
 }
 function ovPrevDate(date, dates){
   const i=(dates||[]).indexOf(date);
@@ -2007,6 +2072,13 @@ function ovDaysAndTrades(name){
       if(!trades.length) trades=(b.trades||[]).filter(function(t){return (t.side==='BUY'||t.side==='SHORT') && t.ticker;});
     }
   }
+  const doc=ovCalDoc();
+  const cells=doc && (doc.strategies||{})[name];
+  if(cells){
+    const merged=ovApplyRebuild(days, trades, cells, doc.empty_dates);
+    days=merged.days;
+    trades=merged.trades;
+  }
   days=days.slice().sort(function(a,b){return String(a.date).localeCompare(String(b.date));});
   return {days:days, trades:trades};
 }
@@ -2015,13 +2087,20 @@ function ovSplitDays(name){
   const days=pack.days, trades=pack.trades;
   const dates=days.map(function(d){return d.date;});
   return days.map(function(d){
+    if(d.calendar_label==='missed'){
+      return {
+        date:d.date, held:null, neu:null, bought:[], sold:[],
+        hard_red:false, s:d.s, buyLots:[], heldLots:[], calendar_label:'missed'
+      };
+    }
+    const useOverlay = d.calendar_label==='rebuilt' || d.calendar_label==='sat out (rule)';
     const bought={}; (d.bought||[]).forEach(function(t){ bought[String(t).split('×')[0]]=true; });
     const sold={}; (d.sold||[]).forEach(function(t){ sold[String(t).split('×')[0]]=true; });
     let neu=0, held=0, sawPx=false;
     const buyLots=[];
     trades.forEach(function(t){
       if(t.date!==d.date) return;
-      const p=ovPx(t.ticker, d.date);
+      const p=ovPx(t.ticker, d.date, useOverlay);
       let pnl=null;
       if(p && isFinite(p.c) && isFinite(t.price)){
         const sh=Number(t.shares||0), px=Number(t.price);
@@ -2039,8 +2118,8 @@ function ovSplitDays(name){
       if(bought[ticker]) return;
       const sh=openHeld[ticker];
       let gap=0, sess=0;
-      const p=ovPx(ticker, d.date);
-      const y=prev ? ovPx(ticker, prev) : null;
+      const p=ovPx(ticker, d.date, useOverlay);
+      const y=prev ? ovPx(ticker, prev, useOverlay) : null;
       if(sh!=null && isFinite(sh)){
         if(y && p && isFinite(y.c) && isFinite(p.o)){ gap = sh*(p.o-y.c); sawPx = true; }
         if(!sold[ticker] && p && isFinite(p.o) && isFinite(p.c)){ sess = sh*(p.c-p.o); sawPx = true; }
@@ -2058,7 +2137,8 @@ function ovSplitDays(name){
     const hard = !!d.hard_red || (d.s!=null && Number(d.s)<=-3);
     return {
       date:d.date, held:held, neu:neu, bought:d.bought||[], sold:d.sold||[],
-      hard_red:hard, s:d.s, buyLots:buyLots, heldLots:heldLots
+      hard_red:hard, s:d.s, buyLots:buyLots, heldLots:heldLots,
+      calendar_label:d.calendar_label||''
     };
   });
 }
@@ -2110,13 +2190,27 @@ function ovNameList(arr){
     return '<code>'+esc(x.ticker)+sh+tag+'</code>'+pnl;
   }).join(' · ');
 }
+function ovHalfHtml(cell, which, scale){
+  const label=cell.calendar_label||'';
+  if(label==='missed') return '<div class="half sit"><span>missed</span></div>';
+  if(which==='neu' && label==='sat out (rule)') return '<div class="half sit"><span>sit</span></div>';
+  const v = which==='held' ? cell.held : cell.neu;
+  if(which==='held' && label==='sat out (rule)' && (v==null || !isFinite(v) || Math.abs(v)<0.5))
+    return '<div class="half sit"><span>sit</span></div>';
+  return '<div class="half" style="background:'+ovHeat(v,scale)+'"><span>'+ovFmt(v)+'</span></div>';
+}
 function ovDetailHtml(row){
   if(!row) return '<div class="mut">Tap a day for names bought today vs already held.</div>';
+  if(row.calendar_label==='missed')
+    return '<div class="ovcal-detail-h">'+esc(row.date)+' missed</div><div class="mut">no picks — the rebuild did not invent a book</div>';
   const s=row.s==null?'':(' S='+(Number(row.s)>=0?'+':'')+Number(row.s).toFixed(2));
   const hard=row.hard_red?' · HARD RED':'';
-  return '<div class="ovcal-detail-h">'+esc(row.date)+s+hard+'</div>'
+  const tag=row.calendar_label==='rebuilt'?' · rebuilt':(row.calendar_label==='sat out (rule)'?' · sat out (rule)':'');
+  const neu = row.calendar_label==='sat out (rule)' ? 'sit' : ovFmt(row.neu);
+  const neuCls = row.calendar_label==='sat out (rule)' ? '' : (row.neu>=0?'pos':'neg');
+  return '<div class="ovcal-detail-h">'+esc(row.date)+s+hard+tag+'</div>'
     +'<div><b>Held overnight</b> <span class="'+(row.held>=0?'pos':'neg')+'">'+ovFmt(row.held)+'</span><div class="ovcal-names">'+ovNameList(row.heldLots)+'</div></div>'
-    +'<div><b>Bought today</b> <span class="'+(row.neu>=0?'pos':'neg')+'">'+ovFmt(row.neu)+'</span><div class="ovcal-names">'+ovNameList(row.buyLots)+'</div></div>';
+    +'<div><b>Bought today</b> <span class="'+neuCls+'">'+neu+'</span><div class="ovcal-names">'+ovNameList(row.buyLots)+'</div></div>';
 }
 function ovCalHtml(name, mode){
   const big=mode==='big';
@@ -2141,12 +2235,17 @@ function ovCalHtml(name, mode){
     w.forEach(function(cell){
       if(cell.empty){ h+='<div class="ovcal-cell empty"></div>'; return; }
       const dayn=String(cell.date).slice(8,10).replace(/^0/,'');
-      const cls=['ovcal-cell', big?'big':'', cell.hard_red?'hard':'', _ovPickedDate===cell.date?'pick':''].filter(Boolean).join(' ');
-      const tip=cell.date+'  held '+ovFmt(cell.held)+'  new '+ovFmt(cell.neu)+(cell.hard_red?'  HARD RED':'');
+      const label=cell.calendar_label||'';
+      const cls=['ovcal-cell', big?'big':'', cell.hard_red?'hard':'', label==='missed'?'missed':'', label==='sat out (rule)'?'sit':'', _ovPickedDate===cell.date?'pick':''].filter(Boolean).join(' ');
+      const tip = label==='missed'
+        ? cell.date+'  missed'
+        : (label==='sat out (rule)'
+          ? cell.date+'  sat out (rule)  held '+ovFmt(cell.held)
+          : cell.date+'  held '+ovFmt(cell.held)+'  new '+ovFmt(cell.neu)+(cell.hard_red?'  HARD RED':'')+(label==='rebuilt'?'  rebuilt':''));
       h+='<div class="'+cls+'" data-date="'+esc(cell.date)+'" data-tip="'+esc(tip)+'" title="'+esc(tip)+'">';
       h+='<span class="d">'+esc(dayn)+(cell.hard_red?' R':'')+'</span>';
-      h+='<div class="half" style="background:'+ovHeat(cell.held,scale)+'"><span>'+ovFmt(cell.held)+'</span></div>';
-      h+='<div class="half" style="background:'+ovHeat(cell.neu,scale)+'"><span>'+ovFmt(cell.neu)+'</span></div>';
+      h+=ovHalfHtml(cell, 'held', scale);
+      h+=ovHalfHtml(cell, 'neu', scale);
       h+='</div>';
     });
   });
@@ -2205,7 +2304,27 @@ function ovSeriesFromDaily(days, start){
     return by[d]==null?null:by[d];
   });
 }
+function ovLoadCalendarOverlay(){
+  if(window.__FM_CAL_DOC || window.__FM_CAL_LOADING) return;
+  if(D && D.calendar_overlay && D.calendar_overlay.strategies){
+    window.__FM_CAL_DOC = D.calendar_overlay;
+    return;
+  }
+  window.__FM_CAL_LOADING = true;
+  const urls=['rebuilt_calendar.json','../dashboard/factor-mine/rebuilt_calendar.json','../../dashboard/factor-mine/rebuilt_calendar.json'];
+  (function next(i){
+    if(i>=urls.length){ window.__FM_CAL_LOADING=false; return; }
+    fetch(urls[i], {cache:'no-store'}).then(function(r){
+      if(!r.ok) throw new Error('miss');
+      return r.json();
+    }).then(function(doc){
+      window.__FM_CAL_DOC = doc || {};
+      if(typeof renderOvCal==='function') renderOvCal();
+    }).catch(function(){ next(i+1); });
+  })(0);
+}
 function renderOvCal(){
+  ovLoadCalendarOverlay();
   const box=document.getElementById('ovCal');
   const tip=document.getElementById('ovCalTip');
   const side=document.getElementById('ovCalSleeve');

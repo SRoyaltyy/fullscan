@@ -262,6 +262,169 @@ def rebuilt_preference(root: Path | None = None) -> tuple[set[str], dict]:
     return empty, overlay
 
 
+_CAL_DAILY = (
+    "date", "s", "hard_red", "open_held", "open_equity", "yday_equity",
+    "overnight_delta", "session_delta", "equity", "bought", "sold",
+)
+_CAL_FILL = ("date", "ticker", "side", "shares", "price", "fees")
+
+
+def _held_ticker(token) -> str:
+    text = str(token or "")
+    for sep in ("×", "x"):
+        cut = text.find(sep)
+        if cut > 0:
+            return text[:cut]
+    return text
+
+
+def sealed_calendar_empty(daily: dict | None, trades: list | None = None) -> bool:
+    """True when a sealed day has nothing for the held/new calendar to paint.
+
+    OPEN and CLOSE marks are bookkeeping. A buy, sell, short, cover, a
+    holding, or a non-zero half keeps the sealed row.
+    """
+    from .factor_mine_rebuild import both_halves_zero
+
+    if not isinstance(daily, dict):
+        return False
+    if not both_halves_zero(daily):
+        return False
+    if daily.get("bought") or daily.get("sold") or daily.get("open_held"):
+        return False
+    for trade in trades or []:
+        if str((trade or {}).get("side") or "") in ("BUY", "SELL", "SHORT", "COVER"):
+            return False
+    return True
+
+
+def calendar_overlay_document(root: Path | None = None, *, bars=None) -> dict:
+    """Display pack for the held/new calendar. Read-only.
+
+    Same preference as :func:`rebuilt_preference`: a cell exists only for a
+    sealed ``no_same_day_panel`` date. Sat-out cells carry no buys. Missed
+    cells carry no picks. This does not write a ledger, a state file, or
+    the scoreboard.
+    """
+    from .factor_mine_rebuild import (
+        LABEL_MISSED,
+        LABEL_REBUILT,
+        LABEL_RULE,
+        no_same_day_dates,
+        rebuilt_path,
+    )
+
+    base = Path(root or ROOT)
+    empty = sorted(no_same_day_dates(base))
+    strategies: dict[str, dict] = {}
+    pairs: set[tuple[str, str]] = set()
+    for date in empty:
+        path = rebuilt_path(date, base)
+        if not path.is_file():
+            continue
+        try:
+            doc = json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            continue
+        if not isinstance(doc, dict):
+            continue
+        prior = str(doc.get("chain_from") or "")[:10]
+        for name, strat in (doc.get("strategies") or {}).items():
+            if not isinstance(strat, dict):
+                continue
+            kind = str(strat.get("class") or "")
+            if not kind:
+                continue
+            if kind == "still broken":
+                label = LABEL_MISSED
+            elif kind == LABEL_RULE:
+                label = LABEL_RULE
+            else:
+                label = LABEL_REBUILT
+            if label == LABEL_MISSED:
+                daily = {"date": date}
+                fills: list[dict] = []
+            else:
+                source = strat.get("daily") if isinstance(strat.get("daily"), dict) else {}
+                daily = {key: source.get(key) for key in _CAL_DAILY if key in source}
+                daily["date"] = date
+                fills = []
+                if label == LABEL_REBUILT:
+                    for trade in strat.get("fills") or []:
+                        if not isinstance(trade, dict):
+                            continue
+                        if trade.get("side") not in ("BUY", "SHORT"):
+                            continue
+                        if not trade.get("ticker"):
+                            continue
+                        fills.append({
+                            key: trade.get(key) for key in _CAL_FILL
+                            if trade.get(key) is not None
+                        })
+                else:
+                    daily["bought"] = []
+            strategies.setdefault(str(name), {})[date] = {
+                "label": label,
+                "daily": daily,
+                "fills": fills,
+            }
+            if label == LABEL_MISSED:
+                continue
+            names = {_held_ticker(token) for token in (daily.get("open_held") or [])}
+            names.update(_held_ticker(token) for token in (daily.get("sold") or []))
+            names.update(str(fill.get("ticker") or "") for fill in fills)
+            names.discard("")
+            for ticker in names:
+                pairs.add((ticker, date))
+                if len(prior) == 10:
+                    pairs.add((ticker, prior))
+    return {
+        "fill": "forward",
+        "preference": "no_same_day_panel",
+        "empty_dates": empty,
+        "strategies": strategies,
+        "tape": _calendar_tape(pairs, bars=bars),
+    }
+
+
+def _calendar_tape(pairs: set[tuple[str, str]], *, bars=None) -> dict:
+    if not pairs:
+        return {}
+    lookup = bars
+    if lookup is None:
+        from .ticker_lookback import session_bar
+        lookup = session_bar
+    tape: dict[str, dict] = {}
+    for ticker, date in sorted(pairs):
+        bar = lookup(ticker, date) or {}
+        open_px = bar.get("open")
+        close_px = bar.get("close")
+        if open_px is None or close_px is None:
+            continue
+        try:
+            tape.setdefault(ticker, {})[date] = [
+                round(float(open_px), 4), round(float(close_px), 4),
+            ]
+        except (TypeError, ValueError):
+            continue
+    return tape
+
+
+def write_calendar_overlay(dest: Path | None = None,
+                           root: Path | None = None, *,
+                           bars=None) -> Path:
+    """Write the display pack next to the mine page. Ledgers stay put."""
+    folder = Path(dest or DASH_DIR)
+    folder.mkdir(parents=True, exist_ok=True)
+    path = folder / "rebuilt_calendar.json"
+    doc = calendar_overlay_document(root, bars=bars)
+    path.write_text(
+        json.dumps(doc, indent=2, sort_keys=True) + "\n",
+        encoding="utf-8",
+    )
+    return path
+
+
 def build_pack(*, csv_path: Path | None = None,
                state_dir: Path | None = None,
                report_json: Path | None = None,
@@ -347,7 +510,7 @@ def render_sequential_html(pack: dict) -> str:
 Book equity is the last file under <code>data/factor_mine/state/&lt;recipe&gt;/</code>.
 A day before <code>created_on</code> is <b>designed_after</b> and is not in the real total.
 <code>timing_clean</code> is the pit_rebuilt flag. The chain multiplies the published
-session percents. The calendar is not rebuilt. A recipe with zero fills is
+session percents. This page does not repaint the held/new calendar. A recipe with zero fills is
 untestable: its return cells stay blank.</p>
 <p class="mut"><a href="index.html">mine</a> · <a href="changelog.html">change log</a></p>
 <div class="cards" id="cards"></div>
