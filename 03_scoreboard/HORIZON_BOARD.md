@@ -6,9 +6,9 @@ Updated: 2026-11-06. Calls are graded at T+h trading days using the scoreboard's
 
 | Topic | Horizon | Graded | Dir hit | Mag hit | Avg actual % |
 |---|---|---|---|---|---|
-| general | 3d | 44 | 23% (10/44) | 43% (19/44) | -0.09% |
-| general | 1w | 42 | 26% (11/42) | 62% (26/42) | -0.04% |
-| general | 2w | 39 | 28% (11/39) | 36% (14/39) | -0.05% |
+| general | 3d | 45 | 22% (10/45) | 42% (19/45) | -0.14% |
+| general | 1w | 43 | 28% (12/43) | 60% (26/43) | -0.11% |
+| general | 2w | 40 | 28% (11/40) | 35% (14/40) | -0.14% |
 | general | 1m | 32 | 12% (4/32) | 28% (9/32) | -0.00% |
 | sector:Basic Materials | 3d | 11 | 36% (4/11) | 18% (2/11) | -0.61% |
 | sector:Basic Materials | 1w | 11 | 18% (2/11) | 27% (3/11) | -1.18% |
@@ -59,6 +59,9 @@ Updated: 2026-11-06. Calls are graded at T+h trading days using the scoreboard's
 
 | Date | Topic | Horizon | Call | Actual | Dir | Mag |
 |---|---|---|---|---|---|---|
+| 2026-11-03 | general | 3d | flat/mild | -2.54% (down/notable) | ❌ | ❌ |
+| 2026-10-30 | general | 1w | down/mild | -2.68% (down/notable) | ✅ | ❌ |
+| 2026-10-22 | general | 2w | flat/mild | -3.74% (down/notable) | ❌ | ❌ |
 | 2026-11-02 | general | 3d | up/mild | -2.49% (down/notable) | ❌ | ❌ |
 | 2026-10-21 | general | 2w | down/mild | -5.20% (down/notable) | ✅ | ❌ |
 | 2026-10-05 | general | 1m | flat/mild | -5.41% (down/notable) | ❌ | ❌ |
@@ -81,9 +84,6 @@ Updated: 2026-11-06. Calls are graded at T+h trading days using the scoreboard's
 | 2026-10-20 | general | 1w | down/mild | +0.41% (up/flat) | ❌ | ❌ |
 | 2026-10-13 | general | 2w | flat/mild | -0.79% (down/flat) | ❌ | ❌ |
 | 2026-09-25 | general | 1m | down/mild | +0.01% (flat/flat) | ❌ | ❌ |
-| 2026-10-21 | general | 3d | up/mild | -0.45% (down/flat) | ❌ | ❌ |
-| 2026-10-19 | general | 1w | flat/mild | +0.41% (up/flat) | ❌ | ❌ |
-| 2026-09-24 | general | 1m | up/mild | +0.24% (flat/flat) | ❌ | ❌ |
 
-*256 calls still maturing (T+h close not recorded yet).*
+*253 calls still maturing (T+h close not recorded yet).*
 

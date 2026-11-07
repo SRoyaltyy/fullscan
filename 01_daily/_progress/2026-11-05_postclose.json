@@ -2,88 +2,88 @@
   "schema": 1,
   "workflow": "postclose",
   "date": "2026-11-05",
-  "run_id": "42209925572",
+  "run_id": "42320867395",
   "model": "deepseek",
-  "started_at": "2026-11-06T06:45:19-05:00",
-  "updated_at": "2026-11-06T06:45:51-05:00",
-  "heartbeat_at": "2026-11-06T06:45:51-05:00",
+  "started_at": "2026-11-06T20:11:36-05:00",
+  "updated_at": "2026-11-06T20:14:16-05:00",
+  "heartbeat_at": "2026-11-06T20:14:16-05:00",
   "stages": [
     {
       "name": "outcome",
-      "state": "skipped",
-      "started_at": "2026-11-06T06:45:19-05:00",
-      "ended_at": "2026-11-06T06:45:24-05:00",
-      "heartbeat_at": "2026-11-06T06:45:19-05:00",
+      "state": "ok",
+      "started_at": "2026-11-06T20:11:36-05:00",
+      "ended_at": "2026-11-06T20:11:40-05:00",
+      "heartbeat_at": "2026-11-06T20:11:36-05:00",
       "done": 1,
       "total": 1,
       "model": "deepseek",
-      "error": "morning window"
+      "error": ""
     },
     {
       "name": "horizon",
-      "state": "skipped",
-      "started_at": "2026-11-06T06:45:28-05:00",
-      "ended_at": "2026-11-06T06:45:28-05:00",
-      "heartbeat_at": "2026-11-06T06:45:28-05:00",
+      "state": "ok",
+      "started_at": "2026-11-06T20:11:45-05:00",
+      "ended_at": "2026-11-06T20:11:49-05:00",
+      "heartbeat_at": "2026-11-06T20:11:49-05:00",
       "done": 1,
       "total": 1,
       "model": "deepseek",
-      "error": "morning window"
+      "error": ""
     },
     {
       "name": "reflect",
-      "state": "skipped",
-      "started_at": "2026-11-06T06:45:33-05:00",
-      "ended_at": "2026-11-06T06:45:33-05:00",
-      "heartbeat_at": "2026-11-06T06:45:33-05:00",
+      "state": "ok",
+      "started_at": "2026-11-06T20:11:53-05:00",
+      "ended_at": "2026-11-06T20:11:53-05:00",
+      "heartbeat_at": "2026-11-06T20:11:53-05:00",
       "done": 1,
       "total": 1,
       "model": "deepseek",
-      "error": "morning window"
+      "error": ""
     },
     {
       "name": "sector_outcomes",
-      "state": "skipped",
-      "started_at": "2026-11-06T06:45:37-05:00",
-      "ended_at": "2026-11-06T06:45:37-05:00",
-      "heartbeat_at": "2026-11-06T06:45:37-05:00",
+      "state": "ok",
+      "started_at": "2026-11-06T20:12:02-05:00",
+      "ended_at": "2026-11-06T20:12:07-05:00",
+      "heartbeat_at": "2026-11-06T20:12:07-05:00",
       "done": 1,
       "total": 1,
       "model": "deepseek",
-      "error": "morning window"
+      "error": ""
     },
     {
       "name": "sector_reflect",
-      "state": "skipped",
-      "started_at": "2026-11-06T06:45:42-05:00",
-      "ended_at": "2026-11-06T06:45:42-05:00",
-      "heartbeat_at": "2026-11-06T06:45:42-05:00",
+      "state": "ok",
+      "started_at": "2026-11-06T20:12:11-05:00",
+      "ended_at": "2026-11-06T20:12:52-05:00",
+      "heartbeat_at": "2026-11-06T20:12:52-05:00",
       "done": 1,
       "total": 1,
       "model": "deepseek",
-      "error": "morning window"
+      "error": ""
     },
     {
       "name": "learn",
-      "state": "skipped",
-      "started_at": "2026-11-06T06:45:47-05:00",
-      "ended_at": "2026-11-06T06:45:47-05:00",
-      "heartbeat_at": "2026-11-06T06:45:47-05:00",
+      "state": "ok",
+      "started_at": "2026-11-06T20:12:56-05:00",
+      "ended_at": "2026-11-06T20:14:07-05:00",
+      "heartbeat_at": "2026-11-06T20:14:07-05:00",
       "done": 4,
       "total": 4,
       "model": "deepseek",
-      "error": "morning window; morning window; morning window; morning window"
+      "error": ""
     },
     {
       "name": "captains",
-      "state": "skipped",
-      "started_at": "2026-11-06T06:45:51-05:00",
-      "ended_at": "2026-11-06T06:45:51-05:00",
-      "heartbeat_at": "2026-11-06T06:45:51-05:00",
+      "state": "ok",
+      "started_at": "2026-11-06T20:14:16-05:00",
+      "ended_at": "2026-11-06T20:14:16-05:00",
+      "heartbeat_at": "2026-11-06T20:14:16-05:00",
       "done": 1,
       "total": 1,
       "model": "deepseek",
-      "error": "morning window"
+      "error": ""
     }
   ]
 }
