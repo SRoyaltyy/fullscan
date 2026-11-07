@@ -1,6 +1,6 @@
-# Learnings report — 2026-11-05
+# Learnings report — 2026-11-06
 
-Generated: **2026-11-06T20:14:03.004688-05:00** by `src/learn_cycle.py`.
+Generated: **2026-11-06T20:15:07.270276-05:00** by `src/learn_cycle.py`.
 
 This is the human-readable digest of what the bot **actually learned** this cycle: graded evidence, hypotheses (wins and losses), promoted standing rules, and **how that changes every daily workflow**.
 
@@ -585,7 +585,7 @@ Progress vs baselines: `03_scoreboard/IMPROVEMENT_TRACKER.md`.
 | File | Role |
 |------|------|
 | `03_scoreboard/LEARNINGS.md` | This digest (latest) |
-| `01_daily/2026-11-05_learnings.md` | Dated copy |
+| `01_daily/2026-11-06_learnings.md` | Dated copy |
 | `00_grounding/mutable_policy.md` | Injected into general + sector predict |
 | `02_lessons/hypotheses/*` | Per-event experiments |
 | `02_lessons/active/*` | Standing rules |
