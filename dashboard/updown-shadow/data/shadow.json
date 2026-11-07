@@ -12464,8 +12464,8 @@
  "summary": {
   "strategy": "updown_rel1_hv_v1",
   "label": "paper only \u2014 failed multiple-testing haircut (t 2.02 vs 3.37)",
-  "days_locked": 23,
-  "days_realized": 21,
+  "days_locked": 24,
+  "days_realized": 22,
   "days_missed": 0,
   "missed_dates": [],
   "rule": {
@@ -12474,29 +12474,29 @@
    "missed": "Missed days (not frozen before 09:25 ET) are recorded in MISSED.jsonl, never back-filled, and earn nothing."
   },
   "gross": {
-   "cum": 0.0390953619,
-   "mean_bp": 22.7146917918,
-   "t_nw": 0.5746485239
+   "cum": 0.0461041585,
+   "mean_bp": 24.748157924,
+   "t_nw": 0.6705423431
   },
   "net5": {
-   "cum": 0.0107855373,
-   "mean_bp": 9.590882268,
-   "t_nw": 0.2409604505
+   "cum": 0.0161694318,
+   "mean_bp": 11.5754306513,
+   "t_nw": 0.3112677262
   },
   "net10": {
-   "cum": -0.0167904662,
-   "mean_bp": -3.5329272558,
-   "t_nw": -0.0881425209
+   "cum": -0.0129482785,
+   "mean_bp": -1.5972966214,
+   "t_nw": -0.0426254335
   },
   "net15": {
-   "cum": -0.0436507004,
-   "mean_bp": -16.6567367796,
-   "t_nw": -0.4126461575
+   "cum": -0.0412701926,
+   "mean_bp": -14.7700238942,
+   "t_nw": -0.3911338502
   },
   "hedged_net10": {
-   "cum": -0.0742778037,
-   "mean_bp": -32.7762678924,
-   "t_nw": -0.71645311
+   "cum": -0.1125106227,
+   "mean_bp": -50.3592805797,
+   "t_nw": -1.047002971
   },
   "iwm_oo1": {
    "cum": null,
@@ -12504,15 +12504,15 @@
    "t_nw": null
   },
   "rand_med_net10": {
-   "cum": -0.0712770714,
-   "mean_bp": -35.1488998284,
-   "t_nw": -46.7606525302
+   "cum": -0.0738218361,
+   "mean_bp": -34.7967083701,
+   "t_nw": -47.4629422533
   },
   "best_stock": "TTMI",
   "best_stock_contrib": 0.0126897626,
-  "net10_ex_best_cum": -0.0287752795,
-  "mean_turnover": 2.6247619048,
-  "status": "collecting (21 realized days; kill check from day 20/60, promotion review not before day 120)",
+  "net10_ex_best_cum": -0.0249799261,
+  "mean_turnover": 2.6345454545,
+  "status": "collecting (22 realized days; kill check from day 20/60, promotion review not before day 120)",
   "killed": false
  },
  "realized_cols": [
@@ -13151,30 +13151,60 @@
    "2026-11-05",
    50,
    50,
-   0.0,
+   0.0067450947,
    3.24,
    -0.673211,
-   0.030798228,
-   0.020733706,
+   -0.001728147,
+   0.0055816871,
+   0.0032503447,
+   -0.0014780357,
    null,
    null,
-   "ABNB;AEHR;ALB;ANET;ANF;APA;APLD;APP;ASST;ASX;AXSM;AXTI;BE;CAKE;CBRS;CDE;CIEN;COIN;COP;CORZ;CRL;CRS;CRWD;CVE;CVNA;DDOG;DKNG;DOCN;DT;DY;EAT;ECHO;EGO;EPAM;FFIV;FICO;FIS;FISV;FLUT;FND;FRO;GEV;GFS;GKOS;GLXY;HALO;HIMS;HL;HPE;HRI;HUBS;HUT;HWM;INIO;INTC;IRON;LITE;MKSI;MOD;MPC;MRVL;MTZ;MU;NOW;NTRA;NXT;ORCL;OSCR;PAYC;PBR;PBR-A;PCTY;PCVX;PENG;PFGC;PL;PURR;RBLX;RDDT;RIVN;RKLB;RKT;SFM;SITM;SMCI;SMR;SYRE;TEX;TPR;TWST;TXRH;UPST;USAR;VIAV;VRT;VSAT;WDAY;WING;WOLF;ZBRA",
+   0.0051250947,
+   0.0039616871,
+   0.0035050947,
+   0.0023416871,
+   0.0018850947,
+   0.0007216871,
+   0.0056932625,
+   -0.0009059941,
+   0.022267097,
+   -0.0027400688,
+   0.020468097,
+   -0.0045291603,
+   0.018669097,
+   0.687,
+   0.0035050947
+  ],
+  [
+   "2026-11-05",
+   "2026-11-06",
+   50,
+   50,
+   0.0,
+   2.84,
+   -0.80882642,
+   -0.029633349,
+   -0.023968236,
    null,
-   -0.00162,
-   0.019113706,
-   -0.00324,
-   0.017493706,
-   -0.00486,
-   0.015873706,
+   null,
+   "AAOI;AEHR;AGX;APLD;ARM;ASST;ASTS;AU;AVAV;B;BAM;BE;CBRS;CDNA;CDW;CGNX;CHWY;CLSK;CNC;COIN;COMP;CORZ;DDOG;DINO;DLTR;DOCN;ECHO;ETSY;FICO;FIGR;FN;FPS;FRO;FSLY;GEN;GFI;GKOS;GLXY;GMAB;GMED;GNRC;GWRE;HIMS;HPQ;HRI;HUT;IONQ;IRON;JHX;KRMN;KTOS;LITE;LOGI;LYFT;MARA;MDGL;MKSI;MOD;MOG-A;MOH;MRVL;MTZ;NEM;NVTS;OKLO;OSCR;PCOR;PL;PODD;PRIM;PURR;QXO;RGTI;RIOT;RKLB;ROIV;SANM;SEI;SIMO;SMCI;SMR;SNDK;STRL;SWK;TEAM;TFX;TNGX;TPL;TREX;TWST;TXG;TXRH;VICR;VRT;VSXY;WCC;WOLF;WULF;XYZ;ZBH",
+   null,
+   -0.00142,
+   -0.025388236,
+   -0.00284,
+   -0.026808236,
+   -0.00426,
+   -0.028228236,
    null,
    -0.00182,
-   -0.0012454919,
+   -0.0011684568,
    -0.00364,
-   -0.0030654919,
+   -0.0029884568,
    -0.00546,
-   -0.0048854919,
-   0.904,
-   -0.00324
+   -0.0048084568,
+   0.985,
+   -0.00284
   ]
  ]
 }
