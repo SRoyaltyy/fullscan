@@ -991,11 +991,12 @@ def test_ensure_through_retries_a_partial_session() -> None:
         return frame
 
     def fill(start, end, tickers=None, *, strict=False, chunk_size=None,
-             threads=True):
+             threads=True, session=None):
         calls.append({
             "n": None if tickers is None else len(list(tickers)),
             "chunk_size": chunk_size,
             "threads": threads,
+            "session": session,
         })
         if chunk_size == ps.RECOVERY_CHUNK:
             state["recovered"] = True
@@ -1004,13 +1005,137 @@ def test_ensure_through_retries_a_partial_session() -> None:
             mock.patch.object(ps, "fill_range", side_effect=fill), \
             mock.patch("src.skip_if_good.last_closed_session", return_value=day):
         ps.ensure_through(day, tickers=names, strict=False)
-    assert calls[0]["threads"] is True
+    assert calls[0]["threads"] == ps.SESSION_THREADS
     assert calls[0]["chunk_size"] is None
+    assert calls[0]["session"] == day
     assert any(
         c["chunk_size"] == ps.RECOVERY_CHUNK and c["threads"] is False
         and c["n"] == 49
         for c in calls
     )
+
+
+def test_ensure_through_narrows_after_a_wide_retry_adds_nothing() -> None:
+    """A 21-day retry that adds no session bars must ask for that day alone.
+
+    2026-11-06 stopped after one wide pass: the same window came back
+    without the print, and the remaining passes never ran.
+    """
+    import pandas as pd
+    from src import price_store as ps
+
+    day = "2026-11-06"
+    names = [f"T{i:03d}" for i in range(50)]
+    state = {"recovered": False}
+    calls = []
+
+    def load():
+        rows = [{
+            "date": "2026-11-05", "ticker": t,
+            "open": 1.0, "high": 1.0, "low": 1.0, "close": 1.0, "volume": 1,
+        } for t in names]
+        if state["recovered"]:
+            for t in names:
+                rows.append({
+                    "date": day, "ticker": t,
+                    "open": 1.0, "high": 1.0, "low": 1.0, "close": 1.0, "volume": 1,
+                })
+        frame = pd.DataFrame(rows)
+        frame["date"] = pd.to_datetime(frame["date"])
+        return frame
+
+    def fill(start, end, tickers=None, *, strict=False, chunk_size=None,
+             threads=True, session=None):
+        calls.append({
+            "start": start,
+            "chunk_size": chunk_size,
+            "threads": threads,
+            "session": session,
+            "n": None if tickers is None else len(list(tickers)),
+        })
+        if start == day:
+            state["recovered"] = True
+
+    with mock.patch.object(ps, "_load_store", side_effect=load), \
+            mock.patch.object(ps, "fill_range", side_effect=fill), \
+            mock.patch("src.skip_if_good.last_closed_session", return_value=day), \
+            mock.patch("time.sleep", return_value=None):
+        ps.ensure_through(day, tickers=names, strict=False)
+    wide = [c for c in calls if c["chunk_size"] == ps.RECOVERY_CHUNK]
+    narrow = [c for c in calls if c["start"] == day]
+    assert wide and wide[0]["session"] == day and wide[0]["threads"] is False
+    assert narrow and narrow[0]["chunk_size"] == ps.RECOVERY_NARROW
+    assert narrow[0]["threads"] is False
+    assert calls.index(narrow[0]) > calls.index(wide[0])
+
+
+def test_fill_range_refetches_a_chunk_missing_the_session() -> None:
+    """A wide page without the session day is followed by a one-day refetch."""
+    import pandas as pd
+    from src import price_store as ps
+
+    day = "2026-11-06"
+    calls = []
+
+    def download(tickers, start, end, *, strict=False, threads=True,
+                 timeout=None):
+        calls.append({
+            "tickers": list(tickers),
+            "start": start,
+            "end": end,
+            "threads": threads,
+            "timeout": timeout,
+        })
+        if start == day:
+            rows = [{
+                "date": day, "ticker": t,
+                "open": 2.0, "high": 2.0, "low": 2.0, "close": 2.5, "volume": 5,
+            } for t in tickers]
+        else:
+            rows = [{
+                "date": "2026-11-05", "ticker": t,
+                "open": 1.0, "high": 1.0, "low": 1.0, "close": 1.0, "volume": 1,
+            } for t in tickers]
+        return pd.DataFrame(rows)
+
+    with tempfile.TemporaryDirectory() as d:
+        orig = (ps.PRICE_DIR, ps.STORE_PATH, ps.META_PATH, ps.ACTIONS_PATH)
+        root = Path(d)
+        ps.PRICE_DIR = root
+        ps.STORE_PATH = root / "ohlc.parquet"
+        ps.META_PATH = root / "meta.json"
+        ps.ACTIONS_PATH = root / "actions.parquet"
+        ps._PENDING_ACTIONS = []
+        try:
+            prior = pd.DataFrame([{
+                "date": "2026-11-05", "ticker": "AAA",
+                "open": 9.0, "high": 9.0, "low": 9.0, "close": 9.0, "volume": 9,
+            }])
+            ps._save_store(prior)
+            with mock.patch.object(ps, "_yf_download", side_effect=download), \
+                    mock.patch("time.sleep", return_value=None):
+                ps.fill_range(
+                    "2026-10-16", "2026-11-07",
+                    tickers=["AAA", "BBB", "CCC", "DDD", "EEE"],
+                    session=day, threads=True, chunk_size=5,
+                )
+            stored = ps._load_store()
+            stored["day"] = pd.to_datetime(stored["date"]).dt.strftime("%Y-%m-%d")
+            got = set(stored.loc[stored["day"] == day, "ticker"])
+            assert got == {"AAA", "BBB", "CCC", "DDD", "EEE"}
+            # The prior print stays. A later download must not replace it.
+            prior_close = stored.loc[
+                (stored["ticker"] == "AAA") & (stored["day"] == "2026-11-05"),
+                "close",
+            ].iloc[0]
+            assert float(prior_close) == 9.0
+        finally:
+            ps.PRICE_DIR, ps.STORE_PATH, ps.META_PATH, ps.ACTIONS_PATH = orig
+            ps._PENDING_ACTIONS = []
+    assert calls[0]["start"] == "2026-10-16"
+    assert calls[0]["threads"] is True
+    assert any(c["start"] == day and c["threads"] is False and c["timeout"] == 30
+               for c in calls[1:])
 
 
 def test_ensure_through_skips_retry_for_a_handful_of_holes() -> None:
@@ -2610,6 +2735,8 @@ if __name__ == "__main__":
     test_partial_fill_drop_list_is_not_baked()
     test_append_land_reraises_a_partial_drop()
     test_ensure_through_retries_a_partial_session()
+    test_ensure_through_narrows_after_a_wide_retry_adds_nothing()
+    test_fill_range_refetches_a_chunk_missing_the_session()
     test_ensure_through_skips_retry_for_a_handful_of_holes()
     test_price_store_keeps_the_first_bar()
     test_holdup_created_on_is_the_first_session_after_the_commit()

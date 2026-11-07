@@ -42,9 +42,17 @@ CHUNK = 80
 # A wide threaded download often comes back with only a handful of the
 # requested session. Above this many holes, retry those names in small
 # serial batches before a lock treats the hole as a real drop list.
+# 2026-11-06: the wide retry repeated the same 21-day window, Yahoo returned
+# only bars already stored, and the pass aborted on zero progress — so the
+# two later passes never ran. A no-progress wide pass must fall through to
+# a one-session refetch. threads=True uses every CPU on one shared curl
+# session and dropped about half of that tape; the first fill stays at 2.
 RECOVERY_MISSING = 40
 RECOVERY_CHUNK = 20
 RECOVERY_PASSES = 3
+RECOVERY_NARROW = 5
+RECOVERY_BACKOFF_S = 12
+SESSION_THREADS = 2
 # The locked tape is the printed session. Adjusted history is never stored.
 AUTO_ADJUST = False
 
@@ -131,7 +139,8 @@ yahoo_day = _yf_bound
 
 
 def _yf_download(tickers: list[str], start: str, end: str, *,
-                strict: bool = False, threads: bool = True) -> pd.DataFrame:
+                strict: bool = False, threads: bool = True,
+                timeout: float | None = None) -> pd.DataFrame:
     try:
         import yfinance as yf
     except ImportError as e:
@@ -146,10 +155,13 @@ def _yf_download(tickers: list[str], start: str, end: str, *,
         # Yahoo daily bars with auto_adjust=False: split-adjusted, dividends
         # not applied. That is the tape Factor Mine locks. auto_adjust=True
         # (dividend-adjusted) is refused above. Not a live last-trade.
+        kwargs = {}
+        if timeout is not None:
+            kwargs["timeout"] = timeout
         raw = yf.download(
             tickers=tickers, start=start, end=end, group_by="ticker",
             auto_adjust=AUTO_ADJUST, actions=True, threads=threads,
-            progress=False,
+            progress=False, **kwargs,
         )
     except Exception as e:
         print(f"[price_store] download failed ({len(tickers)}): {e}")
@@ -534,23 +546,104 @@ def update(lookback_days: int = 7) -> None:
     _save_store(pd.concat(frames, ignore_index=True))
 
 
+def _next_day(day: str) -> str:
+    return (datetime.strptime(str(day)[:10], "%Y-%m-%d").date()
+            + timedelta(days=1)).isoformat()
+
+
+def _tickers_on_day(df: pd.DataFrame | None, day: str) -> set[str]:
+    """Tickers in ``df`` whose bar normalizes onto ``day``."""
+    if df is None or not len(df) or "date" not in df.columns:
+        return set()
+    dates = pd.to_datetime(df["date"], errors="coerce")
+    tz = getattr(dates.dt, "tz", None)
+    if tz is not None:
+        dates = dates.dt.tz_localize(None)
+    on = df.loc[dates.dt.normalize() == pd.Timestamp(str(day)[:10])]
+    if not len(on):
+        return set()
+    return {str(t).upper() for t in on["ticker"].tolist()}
+
+
+def _repair_missing_session(batch: list[str], part: pd.DataFrame,
+                            session: str) -> pd.DataFrame:
+    """Refetch names whose wide download did not include ``session``.
+
+    A 21-day page can come back with only bars the store already has.
+    Asking again for that same window does not add the session. A
+    one-day request is a different Yahoo URL and is the refill.
+    A handful of misses (a delist) stays a real hole.
+    """
+    import time
+    if part is None:
+        part = pd.DataFrame()
+    missed = [t for t in batch if str(t).upper() not in _tickers_on_day(part, session)]
+    if len(missed) <= max(3, len(batch) // 5):
+        return part
+    print(
+        f"[price_store] session {session} chunk missed {len(missed)}/{len(batch)}; "
+        f"narrow refetch",
+        flush=True,
+    )
+    stop = _next_day(session)
+    extra = []
+    gained_names: set[str] = set()
+    for i in range(0, len(missed), RECOVERY_NARROW):
+        group = missed[i:i + RECOVERY_NARROW]
+        try:
+            bit = _yf_download(
+                group, session, stop, strict=False, threads=False, timeout=30)
+        except Exception as e:
+            print(f"[price_store] narrow refetch failed: {e}", flush=True)
+            bit = pd.DataFrame()
+        if bit is not None and len(bit):
+            extra.append(bit)
+            gained_names |= _tickers_on_day(bit, session)
+        time.sleep(0.5)
+    print(
+        f"[price_store] narrow refetch gained {len(gained_names)} {session} "
+        f"bars ({len(missed)} asked)",
+        flush=True,
+    )
+    if not extra:
+        return part
+    frames = [part] if len(part) else []
+    frames.extend(extra)
+    return pd.concat(frames, ignore_index=True)
+
+
 def fill_range(start: str, end: str, tickers: list[str] | None = None,
                *, strict: bool = False, chunk_size: int | None = None,
-               threads: bool = True) -> None:
+               threads: bool = True, session: str | None = None) -> None:
     """Download official regular-session bars for every universe name in [start, end].
 
     ``update()`` keys off the store's max date, so a handful of seeded
     tickers through Friday would skip everyone else. Factor-mine marks
     every name; this fills the hole.
+
+    ``session`` is the locked print. A chunk that comes back without that
+    day is refetched over that day only. New bars are merged on flush;
+    the full store is not held in memory for the whole download.
     """
     import time
     names = tickers or _universe_tickers()
-    existing = _load_store()
     start = yahoo_day(start)
     end = yahoo_day(end)
     size = int(chunk_size or CHUNK)
+    session_day = yahoo_day(session) if session else ""
     print(f"[price_store] fill_range {start} → {end} for {len(names)} tickers")
-    frames = [existing] if len(existing) else []
+    fresh: list[pd.DataFrame] = []
+
+    def _flush() -> None:
+        nonlocal fresh
+        if not fresh:
+            return
+        part = pd.concat(fresh, ignore_index=True)
+        fresh = []
+        existing = _load_store()
+        frames = [existing, part] if len(existing) else [part]
+        _save_store(pd.concat(frames, ignore_index=True))
+
     n_chunks = max(1, (len(names) - 1) // size + 1)
     for i in range(0, len(names), size):
         batch = names[i : i + size]
@@ -568,17 +661,17 @@ def fill_range(start: str, end: str, tickers: list[str] | None = None,
                 time.sleep(6)
                 part = _yf_download(
                     batch, start, end, strict=True, threads=threads)
+        if session_day:
+            part = _repair_missing_session(batch, part, session_day)
         if strict and not len(part):
             raise RuntimeError(
                 f"price fill returned no bars for {batch[0]}…{batch[-1]}")
         if len(part):
-            frames.append(part)
+            fresh.append(part)
             if (i // size) % 8 == 7:
-                _save_store(pd.concat(frames, ignore_index=True))
-                frames = [_load_store()]
+                _flush()
         time.sleep(1.5)
-    if frames:
-        _save_store(pd.concat(frames, ignore_index=True))
+    _flush()
 
 
 def _session_tickers(df: pd.DataFrame, day: str) -> set[str]:
@@ -636,31 +729,54 @@ def ensure_through(end: str | None = None,
           f"(have {n_on} bars; fetch {len(want) if want else 'universe'})")
     start = (datetime.strptime(target_s, "%Y-%m-%d").date() - timedelta(days=21)).isoformat()
     stop = (datetime.strptime(target_s, "%Y-%m-%d").date() + timedelta(days=1)).isoformat()
-    fill_range(start, stop, want or None, strict=strict)
+    # Cap the shared curl session. threads=True follows CPU count and, on
+    # the land runner, left 1273 of 2604 names without 2026-11-06.
+    fill_range(
+        start, stop, want or None, strict=strict,
+        threads=SESSION_THREADS, session=target_s,
+    )
     if requested:
         # A partial page (hundreds of liquid names with no 11-03 print)
         # must be retried before the mine freezes those names as drops.
+        import time
         missing = _missing_on_session(requested, target_s)
         passes = 0
         while len(missing) > RECOVERY_MISSING and passes < RECOVERY_PASSES:
             passes += 1
             before = len(missing)
+            narrow = passes > 1
+            if narrow:
+                # The wide window already returned no new session bars.
+                # Pause, then ask Yahoo for that session alone.
+                time.sleep(RECOVERY_BACKOFF_S)
+                win_start, win_end = target_s, stop
+                chunk = RECOVERY_NARROW
+                session = None
+                label = "narrow"
+            else:
+                win_start, win_end = start, stop
+                chunk = RECOVERY_CHUNK
+                session = target_s
+                label = "wide"
             print(
-                f"[price_store] retry {passes} {before} tickers still "
+                f"[price_store] retry {passes} {label} {before} tickers still "
                 f"missing {target_s}",
                 flush=True,
             )
             fill_range(
-                start, stop, missing, strict=False,
-                chunk_size=RECOVERY_CHUNK, threads=False,
+                win_start, win_end, missing, strict=False,
+                chunk_size=chunk, threads=False, session=session,
             )
             missing = _missing_on_session(requested, target_s)
             print(
-                f"[price_store] retry {passes} left {len(missing)} without "
-                f"{target_s}",
+                f"[price_store] retry {passes} {label} left {len(missing)} "
+                f"without {target_s}",
                 flush=True,
             )
-            if len(missing) >= before:
+            # A wide page that adds nothing is how 2026-11-06 died: the
+            # same URL, then break, with two passes left unused. Only a
+            # one-session pass that still adds nothing is a real hole.
+            if narrow and len(missing) >= before:
                 break
         if strict and missing:
             raise RuntimeError(
