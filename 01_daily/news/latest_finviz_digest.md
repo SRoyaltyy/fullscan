@@ -1,116 +1,120 @@
 # Finviz Daily Digest — 2026-11-06
 
-_Generated 2026-11-06T04:43:45.410422-05:00 · export=data/exports/finviz_2026-11-06.csv · ticker digests=2277 · high-signal=1258_
+_Generated 2026-11-07T02:09:07.449699-05:00 · export=data/exports/finviz_2026-11-06.csv · ticker digests=1576 · high-signal=794_
 
 ## Major indices (live quote page)
 
-- **S&P 500 (SPY)**: Stock Market: Will S&P 500 Open Up or Down Today?
-- **Nasdaq-100 (QQQ)**: AI Selloff Deepens as Chip ETFs Suffer Worst Day Since 2020
+- **S&P 500 (SPY)**: ETF Zoo: How the Election Splits Big Tech
+- **Nasdaq-100 (QQQ)**: ETF Zoo: How the Election Splits Big Tech
 - **Dow Jones (DIA)**: 5 of this year's biggest stock losers that are good bets in 2027
 - **Russell 2000 (IWM)**: Investors Buy the Dip in Chip ETFs as Inflows Top $44B
 
 ## High-signal ticker digests (ranked)
 
-- **ABNB** [Consumer Cyclical]: Airbnb beats Q3 2026 estimates with EPS $3.16 on $4.87B revenue, raises financial outlook despite global conflicts
-- **ADBE** [Technology]: Citi downgrades Adobe to Sell, cuts price target to $207 from $250 on growth reset concerns, leadership gaps and rising competitive and macro pressure
-- **ADI** [Technology]: Analog Devices completes acquisition of Alif Semiconductor, expanding AI-native microcontroller and fusion processor capabilities
-- **AFL** [Financial]: Aflac Q3 2026 non-GAAP EPS $2.43 (-2% YoY) beats estimates, revenue $3.3B, declares $0.61 Q4 dividend, 44th straight annual increase
-- **ALL** [Financial]: Allstate Corp reports fiscal Q3 2026 results with non-GAAP EPS $9.76 (-13% YoY) and revenue $17.3B (+11% YoY), beats EPS and revenue estimates
-- **AMAT** [Technology]: Qualcomm and Arm earnings concerns pull Applied Materials 5% lower with global chip stocks
-- **AME** [Industrials]: AMETEK posts record Q3 2026 with EPS $2.21, revenue $2.22B, beats estimates and raises 2026 EPS guidance to $8.53–$8.57
+- **ABNB** [Consumer Cyclical]: Airbnb beats Q3 2026 estimates with EPS $3.16 (+43% YoY), revenue $4.9B, raises outlook as at least 13 brokerages lift targets
+- **AFL** [Financial]: Aflac raises 2026 margin outlook as assumption unlocks, reinsurance and investment actions boost profitability
+- **ALL** [Financial]: Allstate posts strong Q3 margins and EPS while accelerating growth and AI investments
 - **AMGN** [Healthcare]: Amgen announces large real-world outcomes study showing Repatha cut fatal or nonfatal heart attack risk by 20% versus ezetimibe in more than 500,000 adults with ASCVD
-- **ANET** [Technology]: Overnight AI-sector selloff erases Arista’s earnings bounce, opening shares more than 6% lower
-- **APD** [Basic Materials]: Air Products & Chemicals beats fiscal Q4 adjusted EPS estimates with $3.61 on $3.56B revenue, guides December-quarter EPS to $3.35–$3.45
-- **APP** [Communication Serv]: AppLovin’s Q3 beat and new ad model spur analyst price target hikes, top target now $540
+- **ANET** [Technology]: AI-sector rebound lifts Arista 6% premarket after Thursday’s technology rout and 11% plunge
+- **APD** [Basic Materials]: Air Products & Chemicals FY26 EPS rises 12% to $13.45 as capex falls $1.8B, guides FY27 EPS $14.15–$14.50, up 5–8%
+- **APP** [Communication Serv]: Q3 beat, strong guidance and expanded buyback extend AppLovin's rally another 8% by midday
 - **ARM** [Technology]: Arm posts 27% fiscal Q2 2027 revenue growth, beats estimates and doubles AGI CPU revenue ambition to up to $2B FY27–28
+- **BAM** [Financial]: Brookfield Asset Management posts double-digit fee-related earnings growth on record infrastructure fundraising, tempers 2026 earnings outlook to long-term targets
 - **BCS** [Financial]: Barclays starts £500 million buyback, lifting its ADR 3.6% as sterling strengthens
 - **BDX** [Healthcare]: Becton Dickinson posts strong Q4 beat and issues cautious FY27 guidance amid Alaris and tariff headwinds
-- **BKNG** [Consumer Cyclical]: Cantor Fitzgerald cuts Booking target to $150 from $170, keeps Neutral on macro headwinds after mixed Q3 and soft Q4 outlook
 - **BP** [Energy]: BP raises $1.06 billion from 5% Aker BP stake sale and lifts 2026 divestment proceeds guidance to about $9 billion
+- **BSX** [Healthcare]: S&P Global cuts Boston Scientific outlook to negative, affirms ‘A-’ rating on leverage and franchise pressures
+- **BX** [Financial]: Blackstone commits $1B structured equity to Shield AI in $2.5B funding for $5.3B Echodyne acquisition
 - **CAH** [Healthcare]: Cardinal Health beats Q1 2027 estimates with EPS $3.26, revenue $67.5B, raises FY27 EPS and pharma profit growth guidance
-- **CCEP** [Consumer Defensive]: Coca-Cola Europacific Partners beats Q3 organic revenue and volume forecasts as Europe and Asia Pacific outpace estimates
 - **CI** [Healthcare]: Cigna lifts 2026 EPS outlook to at least $30.60 and affirms 2027+ growth despite Evernorth PBM headwinds
 - **CMI** [Industrials]: Cummins posts record Q3 margins, cuts 2026 revenue growth outlook to ~10% on weaker pickup engines
 - **COP** [Energy]: ConocoPhillips posts strong Q3 2026, raises dividend, reiterates 2029 $7B free cash flow inflection at $70 WTI
-- **COR** [Healthcare]: Cencora beats Q4 2026 estimates and guides FY27 EPS up 8–10% on specialty-led growth
-- **CRH** [Basic Materials]: Post-earnings analyst support extends CRH’s buyback-led rally 6.6% during Monday’s regular trading
 - **CSCO** [Technology]: Morgan Stanley cuts Cisco Systems to Equal-weight from Overweight, lowers price target to $120
-- **CVE** [Energy]: Cenovus Energy Inc reports fiscal Q3 2026 results with non-GAAP EPS $1.31 (+155% YoY) and revenue $13.7B (+27% YoY), beats EPS and revenue estimates, declares $0.22 dividend, plans renewed buyback
-- **CVS** [Healthcare]: CVS raises 2026-2027 EPS outlook after $1.3B favorable reserve revisions, Q3 beat and plans split into CVS Health and CVS Pharmacy
-- **DDOG** [Technology]: Datadog beats Q3 with accelerating core growth as BTIG cuts price target to $260 from $289, reiterates Buy after results
 - **DEO** [Consumer Defensive]: Diageo plc reported fiscal first-quarter revenue and organic net sales ahead of expectations and reaffirmed its full-year and 2027 guidance.
 - **DUK** [Utilities]: Duke Energy narrows 2026 EPS guidance to $6.70–$6.80, expects high end on accelerating large‑load growth
-- **EMR** [Industrials]: Emerson beats FY26 EPS with $6.59, guides FY27 EPS up 10% to $7.25 and targets $3.8–$3.9B free cash flow to fund $3.8B capital returns
-- **EOG** [Energy]: EOG Resources beats Q3 2026 estimates with non-GAAP EPS $4.87 (+80% YoY), revenue $8.5B (+46% YoY), raises regular quarterly dividend 8% to $1.10
-- **ET** [Energy]: Energy Transfer raises 2026 adjusted EBITDA guidance to $19.7–$19.9B, leans into gas growth and power demand
-- **ETN** [Industrials]: Eaton posts record Q3 2026 with adjusted EPS $3.68, revenue $8.9B, beating estimates and raising 2026 guidance on surging electrical demand
+- **ENB** [Energy]: Enbridge beats Q3 2026 EPS estimates with GAAP $0.39 and non-GAAP $0.49 (+50% YoY), reaffirms 2026 adjusted EBITDA and DCF per-share guidance
+- **EOG** [Energy]: EOG Resources beats Q3 2026 estimates with EPS $4.87 on record volumes, raises dividend 8%, signs Engie JKM-linked LNG deal above 1 Bcf/d by 2030
 - **EW** [Healthcare]: Edwards beats Q3 2026 estimates with EPS $0.80 on $1.72B sales, raises 2026 outlook as TAVR, TMTT accelerate
-- **F** [Consumer Cyclical]: S&P Global Ratings raises outlook on Ford and its finance arm to stable from negative
-- **FANG** [Energy]: Diamondback beats Q3 2026 estimates with EPS $5.86 and highlights Barnett outperformance, ultra-low reinvestment, LNG and data-center gas upside
-- **GWW** [Industrials]: W.W. Grainger beats Q3 2026 revenue estimates with $5.2B (+11% YoY), adjusted EPS $12.54, raises 2026 EPS and margin guidance
+- **HUM** [Healthcare]: Humana beats Q3 2026 estimates, raises 2026 EPS outlook, locks in 2028 Stars tailwind and 2027 Medicare Advantage margin rebound
+- **JNJ** [Healthcare]: U.S. FDA grants accelerated approval to Johnson & Johnson's RYBREVANT FASPRO as first dual‑targeted therapy for head and neck squamous cell carcinoma
 - **JPM** [Financial]: JPMorgan Chase & Co. shares fall as congressional Democrats move to launch a formal investigation into the bank’s past ties to Jeffrey Epstein.
-- **KDP** [Consumer Defensive]: Keurig Dr Pepper beats Q3 estimates with EPS $0.66, revenue $7.3B, maintains EPS outlook as beverages, JDE Peet’s offset U.S. coffee weakness
 - **KMB** [Consumer Defensive]: Kimberly-Clark closes Kenvue deal, reiterates $1.9B cost synergies and 2027 EPS dilution
+- **MET** [Financial]: MetLife posts record adjusted EPS $2.85 and ROE 19.6%, beats internal targets and boosts capital returns
+- **MNST** [Consumer Defensive]: Monster Beverage beats Q3 2026 estimates with 16.7% sales growth as international expansion boosts revenue but pressures margins
+- **MRNA** [Healthcare]: Moderna posts surprise Q3 2026 profit on $1.3B revenue, raises 2026 growth outlook to 15–25% after melanoma trial win
+- **MSI** [Technology]: Axon’s counter-drone guidance cut sends Motorola Solutions down 6% after-hours after earnings rally
+- **NEM** [Basic Materials]: Post-election gold surge lifts Newmont 5.2% premarket as dollar and Treasury yields fall
+- **NET** [Technology]: Cloudflare posts record Q3 growth, pulls forward GAAP profitability target to Q4 2026 as RBC, Scotiabank cut targets on valuation
+- **NSC** [Industrials]: STB retaliation ruling raises merger scrutiny, knocking Norfolk Southern 4.2% lower at Thursday’s open
+- **PH** [Industrials]: Parker-Hannifin posts record Q1 with EPS $8.90, revenue $6.0B beating estimates, raises FY27 organic growth and EPS guidance after Filtration deal
+- **QCOM** [Technology]: Susquehanna cuts Qualcomm price target to $165 from $185 on concern lower-margin AI ASICs will pressure gross margins
+- **RTX** [Industrials]: Democratic congressional sweep raises defense-budget scrutiny, sending RTX down 3.7% in premarket trading
+- **SO** [Utilities]: Southern beats Q3 2026 EPS estimates, raises 2026 EPS guidance to ~$4.70, outlines five-year capital plan nearing $100B
+- **SONY** [Technology]: Sony Group beats Q2 estimates with EPS $0.48, revenue $21.6B, raises full-year net profit forecast to ¥1.3T from ¥1.2T
 
 ## By sector (top signal)
-
-### Technology (n=8)
-- ADBE: Citi downgrades Adobe to Sell, cuts price target to $207 from $250 on growth reset concerns, leadership gaps and rising competitive and macro pressure
-- ADI: Analog Devices completes acquisition of Alif Semiconductor, expanding AI-native microcontroller and fusion processor capabilities
-- AMAT: Qualcomm and Arm earnings concerns pull Applied Materials 5% lower with global chip stocks
-- ANET: Overnight AI-sector selloff erases Arista’s earnings bounce, opening shares more than 6% lower
-- ARM: Arm posts 27% fiscal Q2 2027 revenue growth, beats estimates and doubles AGI CPU revenue ambition to up to $2B FY27–28
 
 ### Healthcare (n=8)
 - AMGN: Amgen announces large real-world outcomes study showing Repatha cut fatal or nonfatal heart attack risk by 20% versus ezetimibe in more than 500,000 adults with ASCVD
 - BDX: Becton Dickinson posts strong Q4 beat and issues cautious FY27 guidance amid Alaris and tariff headwinds
+- BSX: S&P Global cuts Boston Scientific outlook to negative, affirms ‘A-’ rating on leverage and franchise pressures
 - CAH: Cardinal Health beats Q1 2027 estimates with EPS $3.26, revenue $67.5B, raises FY27 EPS and pharma profit growth guidance
 - CI: Cigna lifts 2026 EPS outlook to at least $30.60 and affirms 2027+ growth despite Evernorth PBM headwinds
-- COR: Cencora beats Q4 2026 estimates and guides FY27 EPS up 8–10% on specialty-led growth
+
+### Technology (n=8)
+- ANET: AI-sector rebound lifts Arista 6% premarket after Thursday’s technology rout and 11% plunge
+- ARM: Arm posts 27% fiscal Q2 2027 revenue growth, beats estimates and doubles AGI CPU revenue ambition to up to $2B FY27–28
+- CSCO: Morgan Stanley cuts Cisco Systems to Equal-weight from Overweight, lowers price target to $120
+- MSI: Axon’s counter-drone guidance cut sends Motorola Solutions down 6% after-hours after earnings rally
+- NET: Cloudflare posts record Q3 growth, pulls forward GAAP profitability target to Q4 2026 as RBC, Scotiabank cut targets on valuation
+
+### Financial (n=8)
+- AFL: Aflac raises 2026 margin outlook as assumption unlocks, reinsurance and investment actions boost profitability
+- ALL: Allstate posts strong Q3 margins and EPS while accelerating growth and AI investments
+- BAM: Brookfield Asset Management posts double-digit fee-related earnings growth on record infrastructure fundraising, tempers 2026 earnings outlook to long-term targets
+- BCS: Barclays starts £500 million buyback, lifting its ADR 3.6% as sterling strengthens
+- BX: Blackstone commits $1B structured equity to Shield AI in $2.5B funding for $5.3B Echodyne acquisition
 
 ### Energy (n=8)
 - BP: BP raises $1.06 billion from 5% Aker BP stake sale and lifts 2026 divestment proceeds guidance to about $9 billion
 - COP: ConocoPhillips posts strong Q3 2026, raises dividend, reiterates 2029 $7B free cash flow inflection at $70 WTI
-- CVE: Cenovus Energy Inc reports fiscal Q3 2026 results with non-GAAP EPS $1.31 (+155% YoY) and revenue $13.7B (+27% YoY), beats EPS and revenue estimates, declares $0.22 dividend, plans renewed buyback
-- EOG: EOG Resources beats Q3 2026 estimates with non-GAAP EPS $4.87 (+80% YoY), revenue $8.5B (+46% YoY), raises regular quarterly dividend 8% to $1.10
-- ET: Energy Transfer raises 2026 adjusted EBITDA guidance to $19.7–$19.9B, leans into gas growth and power demand
+- ENB: Enbridge beats Q3 2026 EPS estimates with GAAP $0.39 and non-GAAP $0.49 (+50% YoY), reaffirms 2026 adjusted EBITDA and DCF per-share guidance
+- EOG: EOG Resources beats Q3 2026 estimates with EPS $4.87 on record volumes, raises dividend 8%, signs Engie JKM-linked LNG deal above 1 Bcf/d by 2030
+- TRGP: Targa Resources reports Q3 2026 EPS $3.04 vs $2.81 consensus, raises 2026 adjusted EBITDA outlook to at least $6B on record Permian growth
 
-### Financial (n=7)
-- AFL: Aflac Q3 2026 non-GAAP EPS $2.43 (-2% YoY) beats estimates, revenue $3.3B, declares $0.61 Q4 dividend, 44th straight annual increase
-- ALL: Allstate Corp reports fiscal Q3 2026 results with non-GAAP EPS $9.76 (-13% YoY) and revenue $17.3B (+11% YoY), beats EPS and revenue estimates
-- BCS: Barclays starts £500 million buyback, lifting its ADR 3.6% as sterling strengthens
-- JPM: JPMorgan Chase & Co. shares fall as congressional Democrats move to launch a formal investigation into the bank’s past ties to Jeffrey Epstein.
-- MET: MetLife Q3 2026 non-GAAP EPS $2.78 and revenue $20.5B beat estimates
-
-### Industrials (n=7)
-- AME: AMETEK posts record Q3 2026 with EPS $2.21, revenue $2.22B, beats estimates and raises 2026 EPS guidance to $8.53–$8.57
-- CMI: Cummins posts record Q3 margins, cuts 2026 revenue growth outlook to ~10% on weaker pickup engines
-- EMR: Emerson beats FY26 EPS with $6.59, guides FY27 EPS up 10% to $7.25 and targets $3.8–$3.9B free cash flow to fund $3.8B capital returns
-- ETN: Eaton posts record Q3 2026 with adjusted EPS $3.68, revenue $8.9B, beating estimates and raising 2026 guidance on surging electrical demand
-- GWW: W.W. Grainger beats Q3 2026 revenue estimates with $5.2B (+11% YoY), adjusted EPS $12.54, raises 2026 EPS and margin guidance
-
-### Consumer Cyclical (n=5)
-- ABNB: Airbnb beats Q3 2026 estimates with EPS $3.16 on $4.87B revenue, raises financial outlook despite global conflicts
-- BKNG: Cantor Fitzgerald cuts Booking target to $150 from $170, keeps Neutral on macro headwinds after mixed Q3 and soft Q4 outlook
-- F: S&P Global Ratings raises outlook on Ford and its finance arm to stable from negative
-- MCD: McDonald's Q3 2026 EPS beats, revenue misses as it flags mid-single-digit 2027 food and paper cost inflation
-- MELI: MercadoLibre Q3 2026 revenue jumps 45% to $10.75B, beats estimates while EPS misses and margins are pressured by logistics expansion and affiliate marketing
-
-### Consumer Defensive (n=5)
-- CCEP: Coca-Cola Europacific Partners beats Q3 organic revenue and volume forecasts as Europe and Asia Pacific outpace estimates
-- DEO: Diageo plc reported fiscal first-quarter revenue and organic net sales ahead of expectations and reaffirmed its full-year and 2027 guidance.
-- KDP: Keurig Dr Pepper beats Q3 estimates with EPS $0.66, revenue $7.3B, maintains EPS outlook as beverages, JDE Peet’s offset U.S. coffee weakness
-- KMB: Kimberly-Clark closes Kenvue deal, reiterates $1.9B cost synergies and 2027 EPS dilution
-- MNST: Monster Beverage beats Q3 2026 estimates with non-GAAP EPS $0.30 (+7% YoY) and net sales up 16.7% to $2.56 billion
-
-### Basic Materials (n=3)
-- APD: Air Products & Chemicals beats fiscal Q4 adjusted EPS estimates with $3.61 on $3.56B revenue, guides December-quarter EPS to $3.35–$3.45
-- CRH: Post-earnings analyst support extends CRH’s buyback-led rally 6.6% during Monday’s regular trading
+### Basic Materials (n=5)
+- APD: Air Products & Chemicals FY26 EPS rises 12% to $13.45 as capex falls $1.8B, guides FY27 EPS $14.15–$14.50, up 5–8%
 - NEM: Post-election gold surge lifts Newmont 5.2% premarket as dollar and Treasury yields fall
+- WPM: Wheaton Precious Metals reports Q3 2026 results with EPS $0.90 (+46% YoY) and revenue $771.7M (+62% YoY), beats EPS but misses revenue estimates
+- ALB: Albemarle posts strong Q3 rebound, raises Specialties outlook, cuts 2026 capex
+- AU: AngloGold Ashanti Q3 2026 EPS $1.54 (+17% YoY), revenue $2.6B (+8% YoY), both miss estimates
 
-### Utilities (n=2)
+### Industrials (n=4)
+- CMI: Cummins posts record Q3 margins, cuts 2026 revenue growth outlook to ~10% on weaker pickup engines
+- NSC: STB retaliation ruling raises merger scrutiny, knocking Norfolk Southern 4.2% lower at Thursday’s open
+- PH: Parker-Hannifin posts record Q1 with EPS $8.90, revenue $6.0B beating estimates, raises FY27 organic growth and EPS guidance after Filtration deal
+- RTX: Democratic congressional sweep raises defense-budget scrutiny, sending RTX down 3.7% in premarket trading
+
+### Utilities (n=4)
 - DUK: Duke Energy narrows 2026 EPS guidance to $6.70–$6.80, expects high end on accelerating large‑load growth
-- NGG: National Grid posts fiscal Q2 2027 EPS beat with $2.46 non-GAAP EPS, raises 2026/27 underlying EPS growth guidance to 15–16%
+- SO: Southern beats Q3 2026 EPS estimates, raises 2026 EPS guidance to ~$4.70, outlines five-year capital plan nearing $100B
+- SRE: Sempra Q3 adjusted EPS $1.40 beats $1.20 consensus as it guides 2026 EPS to high end and plans Oncor 2027–2031 base capital plan about 20% above $47.5B
+- AEE: Ameren beats Q3 estimates, raises 2026 EPS guidance to $5.35–$5.55 and sets 8–10% long-term EPS growth outlook on hyperscale demand
 
-### Communication Services (n=1)
-- APP: AppLovin’s Q3 beat and new ad model spur analyst price target hikes, top target now $540
+### Consumer Defensive (n=3)
+- DEO: Diageo plc reported fiscal first-quarter revenue and organic net sales ahead of expectations and reaffirmed its full-year and 2027 guidance.
+- KMB: Kimberly-Clark closes Kenvue deal, reiterates $1.9B cost synergies and 2027 EPS dilution
+- MNST: Monster Beverage beats Q3 2026 estimates with 16.7% sales growth as international expansion boosts revenue but pressures margins
+
+### Real Estate (n=3)
+- SPG: Simon Property trims 2026 GAAP net income per share guidance on TRG depreciation, lifts real estate FFO outlook amid strong leasing
+- AHR: AHR posts eleventh straight double-digit NOI gain, raises 2026 NFFO guidance above 30%
+- AMH: AMH raises 2026 core FFO guidance to $1.97 midpoint on lower property taxes and solid leasing
+
+### Consumer Cyclical (n=2)
+- ABNB: Airbnb beats Q3 2026 estimates with EPS $3.16 (+43% YoY), revenue $4.9B, raises outlook as at least 13 brokerages lift targets
+- TM: Toyota raises full-year operating income forecast to ¥3.9T from ¥3.4T and expands share buyback authorization to ¥1.3T
+
+### Communication Services (n=2)
+- APP: Q3 beat, strong guidance and expanded buyback extend AppLovin's rally another 8% by midday
+- VZ: Verizon boosts caps on five-note cash tender offers, to repurchase about $664 million of notes after Nov. 4 expiration
