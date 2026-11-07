@@ -277,19 +277,26 @@ def test_page_rewrite_restores_the_recorded_miss_note() -> None:
 
 
 def test_live_curve_keeps_2026_11_04_recorded_as_missed() -> None:
-    """11-04 stays off the sealed paper curve. The page shows the miss."""
+    """11-04 stays off the sealed paper curve. The page shows the miss.
+
+    2026-11-06 is a PARTIAL day board (predict and judge essays are
+    absent). The stock book was on main before 09:30 ET and the close
+    has printed, so the paper curve and data-asof include that session.
+    """
     root = Path(__file__).resolve().parent.parent
     page = (root / "dashboard" / "index.html").read_text(encoding="utf-8")
-    assert gate.data_asof_from_html(page) == "2026-11-05"
+    assert gate.data_asof_from_html(page) == "2026-11-06"
     assert gate.page_shows_missed_note("2026-11-04", text=page)
     match = gate._DATES_ARRAY.search(page)
     assert match is not None
     assert "2026-11-04" not in match.group(1)
+    assert "2026-11-06" in match.group(1)
     missed = json.loads((root / "data" / "paper" / "missed.json").read_text(
         encoding="utf-8"))
     assert missed["sessions"]["2026-11-04"]["status"] == "missed"
     curve = (root / "data" / "paper" / "equity_curve.csv").read_text(encoding="utf-8")
     assert "2026-11-04" not in curve
+    assert "2026-11-06" in curve
 
 
 def test_legacy_curve_dates_count_as_data_asof() -> None:
