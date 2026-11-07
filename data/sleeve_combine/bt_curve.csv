@@ -56,6 +56,7 @@ date,score,route,cash,equity,open,filled_am,filled_pm,exits,gap
 2026-10-29,-6.946,io,387.35,128166.81,5,0,0,0,
 2026-10-30,-12.921,io,308.03,132472.03,5,0,1,1,
 2026-11-02,3.044,io,25365.91,131675.12,4,0,3,4,
-2026-11-03,-5.632,io,25365.91,131463.85,4,0,0,0,3d cannot settle (end of calendar)
+2026-11-03,-5.632,io,25365.91,131463.85,4,0,0,0,
 2026-11-04,10.848,io,45801.89,123318.84,3,0,0,1,3d cannot settle (end of calendar)
 2026-11-05,-2.495,io,119808.94,119808.94,0,0,0,3,3d cannot settle (end of calendar)
+2026-11-06,,io,119808.94,119808.94,0,0,0,0,3d cannot settle (end of calendar)

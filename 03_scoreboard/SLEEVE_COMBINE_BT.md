@@ -1,43 +1,43 @@
 # Sleeve combine backtest (matched hold, shared cash)
 
-_Generated 2026-11-05T22:47:47-05:00 — 2026-08-13 → 2026-11-05 · $100,000 · 10 names · 10% equity / fill · Futubull fees_
+_Generated 2026-11-06T22:27:47-05:00 — 2026-08-13 → 2026-11-06 · $100,000 · 10 names · 10% equity / fill · Futubull fees_
 
 This is the integrity backtest. Both sleeves use the **same hold** (1d / 3d / 1w). Mover still enters at 09:30, .io still enters at 16:00 — those clocks are data constraints, not a style choice. Open buys cannot spend the same day's close-sale cash. Missing mover calls and missing books are logged as gaps, not as a gate.
 
 **2w / 1m are not combined with mover.** Live .io `2w_size` is a follow-the-book product with a 10-session min-hold; pairing it with mover 1d locks cash in ways a curve-stitch cannot see. The 2w row below is an .io-only reference.
 
-Sessions in window: 60 · days with mover BUY calls: 58 · days with a stock book: 56
+Sessions in window: 61 · days with mover BUY calls: 59 · days with a stock book: 57
 
 ## Finding (this window)
 
-The 1d **switch** is **+3.30%**. That is worse than mover-only 1d (-3.17%) and worse than .io-only 1d size (+18.29%). Copying .io green-pile / join-good / sector-not-red onto mover names also fails on down days. Fifty-fifty dual is a blend, not an upgrade — it cannot beat the stronger sleeve. 1d dual (two wallets) is **+7.24%** / 8.19% DD. Best book this window: **1w io_boost +28.20%**. Overlay / boost **beats** raw .io size (+7.44%) by keeping the size book at full capital and using mover only as idle-cash + close-print size-up.
+The 1d **switch** is **+3.26%**. That is worse than mover-only 1d (-3.17%) and worse than .io-only 1d size (+18.24%). Copying .io green-pile / join-good / sector-not-red onto mover names also fails on down days. Fifty-fifty dual is a blend, not an upgrade — it cannot beat the stronger sleeve. 1d dual (two wallets) is **+7.21%** / 8.19% DD. Best book this window: **1d overlay_boost +27.80%**. Overlay / boost **beats** raw .io size (+6.48%) by keeping the size book at full capital and using mover only as idle-cash + close-print size-up.
 
 ## Sweep (size-sleeve .io picks)
 
 | Hold | Mode | Ret | Max DD | Win | Trades | Mover P&L | .io P&L | Gaps |
 |---|---|---:|---:|---:|---:|---:|---:|---:|
-| 1d | combine | +3.30% | 8.32% | 55.2% | 194 | $5,710 | $-2,410 | 26 |
-| 1d | mover_only | -3.17% | 10.01% | 50.3% | 177 | $-3,167 | $0 | 33 |
-| 1d | io_only | +18.29% | 9.28% | 52.1% | 357 | $0 | $18,291 | 5 |
-| 1d | dual | +7.24% | 8.19% | 51.6% | 535 | $-1,454 | $8,695 | 7 |
-| 1d | overlay | +22.91% | 9.17% | 53.5% | 372 | $2,048 | $20,865 | 7 |
-| 1d | overlay_boost | +27.88% | 9.08% | 53.2% | 284 | $-882 | $28,758 | 7 |
-| 1d | io_boost | +26.55% | 8.74% | 52.9% | 280 | $0 | $26,553 | 5 |
-| 3d | combine | +9.32% | 14.89% | 53.2% | 126 | $9,284 | $38 | 27 |
-| 3d | mover_only | -8.10% | 20.16% | 42.2% | 109 | $-8,096 | $0 | 34 |
-| 3d | io_only | +7.44% | 14.55% | 52.2% | 182 | $0 | $7,444 | 7 |
-| 3d | dual | -0.50% | 14.06% | 48.0% | 294 | $-3,652 | $3,157 | 9 |
-| 3d | overlay | +7.71% | 15.49% | 53.5% | 185 | $-1,216 | $8,922 | 9 |
+| 1d | combine | +3.26% | 8.32% | 53.5% | 200 | $5,710 | $-2,453 | 26 |
+| 1d | mover_only | -3.17% | 10.01% | 50.3% | 177 | $-3,167 | $0 | 34 |
+| 1d | io_only | +18.24% | 9.28% | 51.2% | 363 | $0 | $18,243 | 5 |
+| 1d | dual | +7.21% | 8.19% | 51.0% | 541 | $-1,454 | $8,663 | 7 |
+| 1d | overlay | +22.86% | 9.17% | 52.6% | 378 | $2,048 | $20,816 | 7 |
+| 1d | overlay_boost | +27.80% | 9.08% | 52.2% | 289 | $-882 | $28,686 | 7 |
+| 1d | io_boost | +26.48% | 8.74% | 51.9% | 285 | $0 | $26,482 | 5 |
+| 3d | combine | +8.93% | 14.89% | 53.2% | 126 | $8,891 | $38 | 28 |
+| 3d | mover_only | -8.43% | 20.16% | 42.2% | 109 | $-8,426 | $0 | 35 |
+| 3d | io_only | +6.48% | 14.55% | 51.4% | 183 | $0 | $6,480 | 7 |
+| 3d | dual | -1.39% | 14.06% | 47.6% | 296 | $-3,819 | $2,425 | 9 |
+| 3d | overlay | +6.74% | 15.49% | 52.7% | 186 | $-1,216 | $7,952 | 9 |
 | 3d | overlay_boost | +12.10% | 12.00% | 53.5% | 114 | $-1,355 | $13,458 | 9 |
 | **3d** | **io_boost** | +19.81% | 10.07% | 56.4% | 110 | $0 | $19,809 | 7 |
-| 1w | combine | +11.36% | 11.70% | 54.5% | 88 | $5,330 | $6,034 | 28 |
-| 1w | mover_only | -8.70% | 19.52% | 38.6% | 70 | $-8,696 | $0 | 35 |
-| 1w | io_only | +25.41% | 10.34% | 57.4% | 108 | $0 | $25,414 | 9 |
-| 1w | dual | +6.60% | 11.22% | 48.9% | 180 | $-4,261 | $10,856 | 11 |
-| 1w | overlay | +25.76% | 10.34% | 57.1% | 112 | $-1,168 | $26,924 | 11 |
-| 1w | overlay_boost | +22.94% | 11.15% | 58.9% | 73 | $-1,168 | $24,105 | 11 |
-| 1w | io_boost | +28.20% | 7.49% | 61.5% | 65 | $0 | $28,203 | 9 |
-| 2w | io_only | +12.56% | 10.41% | 57.1% | 49 | $0 | $12,561 | 14 |
+| 1w | combine | +11.36% | 11.70% | 54.5% | 88 | $5,330 | $6,034 | 29 |
+| 1w | mover_only | -8.70% | 19.52% | 38.6% | 70 | $-8,696 | $0 | 36 |
+| 1w | io_only | +26.24% | 10.34% | 58.3% | 115 | $0 | $26,244 | 9 |
+| 1w | dual | +5.52% | 11.22% | 49.2% | 187 | $-4,261 | $9,776 | 11 |
+| 1w | overlay | +27.10% | 10.34% | 58.1% | 117 | $-582 | $27,684 | 11 |
+| 1w | overlay_boost | +21.66% | 11.15% | 61.0% | 77 | $-469 | $22,124 | 11 |
+| 1w | io_boost | +26.16% | 7.49% | 62.3% | 69 | $0 | $26,160 | 9 |
+| 2w | io_only | +13.18% | 10.41% | 57.1% | 56 | $0 | $13,182 | 14 |
 
 ## What beats the raw size book
 
@@ -109,15 +109,15 @@ Cash-accounted .io-only 1d (same $100k / 10% / Futubull). Filtering the size boo
 
 | Filter | Ret | Max DD | Win | Trades |
 |---|---:|---:|---:|---:|
-| `all` | +18.29% | 9.28% | 52.1% | 357 |
-| `large+` | +1.62% | 2.85% | 54.1% | 122 |
-| `mid` | +0.76% | 3.57% | 48.8% | 121 |
+| `all` | +18.24% | 9.28% | 51.2% | 363 |
+| `large+` | +1.60% | 2.85% | 52.8% | 125 |
+| `mid` | +0.73% | 3.57% | 47.6% | 124 |
 | `small` | +15.77% | 3.49% | 53.5% | 114 |
 | `rebound` | +5.36% | 1.27% | 60.0% | 20 |
-| `event` | -0.53% | 1.73% | 57.1% | 35 |
+| `event` | -0.54% | 1.73% | 55.6% | 36 |
 | `energy` | +2.52% | 0.82% | 62.5% | 40 |
 | `sector_good` | +7.00% | 0.75% | 55.8% | 43 |
-| `large+_on_down` | +6.88% | 7.75% | 51.6% | 273 |
+| `large+_on_down` | +6.86% | 7.75% | 51.1% | 276 |
 
 The size book itself was *better* on S < +1 than on green mornings. Extra gates mostly do not improve the cash book: large+ / Energy / event / join>0 all lose to the raw 3-bucket sleeve. `sector_good` is the one filter that beat `all` this window — slightly, on half the names, with less DD. Treat that as a size-up tilt, not a new sleeve; thirteen book days is too thin to replace the 3-bucket rule. Rebound is already how the book stays long when gen is red. The down-day attribute that survives is still **stay in the size book**.
 
@@ -125,7 +125,7 @@ The size book itself was *better* on S < +1 than on green mornings. Extra gates 
 
 | Start | Final | Return | Max DD | Trades | Win | Skipped |
 |---:|---:|---:|---:|---:|---:|---:|
-| $100,000 | $119,808.94 | **+19.81%** | 10.07% | 110 | 56.4% | 725 |
+| $100,000 | $119,808.94 | **+19.81%** | 10.07% | 110 | 56.4% | 750 |
 
 ### Session blotter
 
@@ -188,9 +188,10 @@ The size book itself was *better* on S < +1 than on green mornings. Extra gates 
 | 2026-10-29 | -6.946 | io | 0 | 0 | 0 | 5 | $128,167 | — |
 | 2026-10-30 | -12.921 | io | 0 | 1 | 1 | 5 | $132,472 | — |
 | 2026-11-02 | 3.044 | io | 0 | 3 | 4 | 4 | $131,675 | — |
-| 2026-11-03 | -5.632 | io | 0 | 0 | 0 | 4 | $131,464 | 3d cannot settle (end of calendar) |
+| 2026-11-03 | -5.632 | io | 0 | 0 | 0 | 4 | $131,464 | — |
 | 2026-11-04 | 10.848 | io | 0 | 0 | 1 | 3 | $123,319 | 3d cannot settle (end of calendar) |
 | 2026-11-05 | -2.495 | io | 0 | 0 | 3 | 0 | $119,809 | 3d cannot settle (end of calendar) |
+| 2026-11-06 | — | io | 0 | 0 | 0 | 0 | $119,809 | 3d cannot settle (end of calendar) |
 
 ### Last 20 round-trips
 
