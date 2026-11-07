@@ -533,3 +533,11 @@ date,ticker,side,conviction,reason
 2026-11-05,VRSN,BUY,0.1602340187982818,day gate CLOSED: predict DOWN score -2.50 < +1.00
 2026-11-05,DBX,BUY,0.5504904504573518,day gate CLOSED: predict DOWN score -2.50 < +1.00
 2026-11-05,MSFT,BUY,0.2378281037421257,day gate CLOSED: predict DOWN score -2.50 < +1.00
+2026-11-06,APP,BUY,0.855276198175768,no session bar (price data missing)
+2026-11-06,AVAH,BUY,0.731684947074667,no session bar (price data missing)
+2026-11-06,MD,BUY,0.6043185338685368,no session bar (price data missing)
+2026-11-06,ACHC,BUY,0.5596524971583579,no session bar (price data missing)
+2026-11-06,KDP,BUY,0.45461977270668286,no session bar (price data missing)
+2026-11-06,UHS,BUY,0.44261355874770125,no session bar (price data missing)
+2026-11-06,THC,BUY,0.3367292991110205,no session bar (price data missing)
+2026-11-06,EHC,BUY,0.2544424457048477,no session bar (price data missing)
