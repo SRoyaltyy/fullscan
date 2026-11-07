@@ -1095,7 +1095,8 @@ def test_land_workflow_splits_freeze_and_ledger() -> None:
            / ".github" / "workflows" / "factor_mine.yml").read_text(encoding="utf-8")
     assert "--land-phase freeze" in yml
     assert "--land-phase finish" in yml
-    assert "PYTHONMALLOC: malloc" in yml
+    assert "python -u -m src.factor_mine_past_lock" in yml
+    assert "PYTHONMALLOC" not in yml
     assert '[ -n "${TO_DATE:-}" ] && ARGS+=(--to-date "$TO_DATE")' in yml
 
 

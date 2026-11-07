@@ -189,10 +189,6 @@ jobs:
       - name: Mine recipes (cash book)
         timeout-minutes: 120
         env:
-          # System malloc so release_memory()'s malloc_trim can return
-          # sleeve pages. Pymalloc keeps them, and the first combo then
-          # SIGKILLs the 16GB runner after the snapshot is frozen.
-          PYTHONMALLOC: malloc
           FROM_DATE: ${{ inputs.from_date }}
           TO_DATE: ${{ inputs.to_date }}
           UNIVERSE: ${{ inputs.universe }}
@@ -246,12 +242,17 @@ jobs:
             # Freeze the snapshot, exit, then build ledgers in a new
             # interpreter. One process did both and was Killed (exit 143)
             # on the first combo after 2026-11-06 was already frozen.
+            # Forcing the system allocator on this step killed the freeze
+            # download at about 4 minutes, before any snapshot. Leave the
+            # default allocator. python -u so a kill is visible in the log.
             # A restate stays one process so the correction is atomic.
             if [ -z "${RESTATE:-}" ]; then
-              python -m src.factor_mine_past_lock "${ARGS[@]}" --land-phase freeze 2>&1 | tee -a "$LAND_LOG"
-              python -m src.factor_mine_past_lock "${ARGS[@]}" --land-phase finish 2>&1 | tee -a "$LAND_LOG"
+              echo "[factor-mine] starting freeze phase"
+              python -u -m src.factor_mine_past_lock "${ARGS[@]}" --land-phase freeze 2>&1 | tee -a "$LAND_LOG"
+              echo "[factor-mine] starting finish phase"
+              python -u -m src.factor_mine_past_lock "${ARGS[@]}" --land-phase finish 2>&1 | tee -a "$LAND_LOG"
             else
-              python -m src.factor_mine_past_lock "${ARGS[@]}" 2>&1 | tee -a "$LAND_LOG"
+              python -u -m src.factor_mine_past_lock "${ARGS[@]}" 2>&1 | tee -a "$LAND_LOG"
             fi
           else
             ARGS=(--from-date "${FROM_DATE:-2026-08-13}" --write
