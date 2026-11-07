@@ -409,18 +409,23 @@ def test_manifest_prefix() -> None:
 
 
 def test_baseline_match_is_not_a_rescore() -> None:
-    """2026-11-05 tickets stay the bytes on main. The seal hash is older.
+    """2026-11-05 tickets are the past_day_lock first seal.
 
-    A bare manifest check still reports that stale seal. The against-main
-    check does not, because this branch did not change the file.
+    Restoring those sealed bytes is not a rescore. A bare manifest check
+    accepts the file, and check-against origin/main does too.
     """
-    from src.past_day_lock import PastDayLockError, check_against, check_manifest
-    try:
-        check_manifest()
-    except PastDayLockError as exc:
-        assert "strategy_tickets 2026-11-05" in str(exc)
-    else:
-        raise AssertionError("11-05 seal does not match the file; bare check must say so")
+    from src.past_day_lock import check_against, check_manifest
+
+    rows = [
+        row for row in load_manifest()
+        if row.get("kind") == "day"
+        and row.get("record") == "strategy_tickets"
+        and row.get("date") == "2026-11-05"
+    ]
+    assert len(rows) == 1
+    text = (ROOT / "data/day_board/2026-11-05_strategy_tickets.json").read_text(encoding="utf-8")
+    assert sha256_text(text) == rows[0]["sha256"]
+    check_manifest()
     check_against("origin/main")
 
 
