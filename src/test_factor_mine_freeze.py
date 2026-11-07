@@ -936,6 +936,169 @@ def test_partial_fill_drop_list_is_not_baked() -> None:
             _restore(old)
 
 
+def _day_row(date: str, ticker: str = "AAA") -> dict:
+    return {
+        "date": date, "ticker": ticker, "src_rank": 0,
+        "open": 10.0, "close": 11.0, "sources": ["union"],
+    }
+
+
+def test_freeze_phase_stops_before_the_ledger() -> None:
+    """The snapshot lands, then the process can exit before sleeve books."""
+    day = "2026-11-06"
+    row = _day_row(day)
+    extra = {
+        "session_dates": [day],
+        "rows": [row],
+        "by_date": {day: [row]},
+        "dropped": [],
+    }
+    ledgers = []
+    with tempfile.TemporaryDirectory() as d:
+        old = _use(Path(d))
+        try:
+            with mock.patch.object(fm, "session_has_closed", return_value=True), \
+                    mock.patch.object(fm, "panel_lookback_calendar", return_value=[day]), \
+                    mock.patch.object(fm, "build_panel", return_value=extra), \
+                    mock.patch.object(fmf, "prepare_lock", return_value={
+                        "n": 1, "names": [], "excluded": [], "prior_export": None,
+                    }), \
+                    mock.patch.object(fmf, "pin_prices", return_value={
+                        "date": day, "names": {"AAA": {"open": 10.0, "close": 11.0}},
+                    }), \
+                    mock.patch.object(fmf, "heat_record", return_value={
+                        "vintage": day, "phase": "morning_overlay",
+                    }), \
+                    mock.patch.object(fmf, "build_ledger",
+                                      side_effect=lambda *a, **k: ledgers.append("ledger")):
+                fmf.append_land(
+                    "2026-08-13", day, write=False,
+                    recipes=[{"name": "union_h1", "universe": "union", "hold": 1}],
+                    payload={"dates": ["2026-11-05"], "recipes": []},
+                    panel={"session_dates": ["2026-11-05"], "rows": [], "by_date": {}},
+                    phase="freeze",
+                )
+            assert fmf.snapshot_path(day).is_file()
+            assert not fmf.ledger_path(day).is_file()
+            assert ledgers == []
+            frozen = json.loads(fmf.snapshot_path(day).read_text(encoding="utf-8"))
+            assert frozen["rows"][0]["ticker"] == "AAA"
+        finally:
+            _restore(old)
+
+
+def test_finish_phase_does_not_fetch_prices_again() -> None:
+    """A frozen snapshot is ledgered without build_panel."""
+    day = "2026-11-06"
+    calls = {"panel": 0, "ledger": 0}
+    row = _day_row(day)
+    extra = {
+        "session_dates": [day],
+        "rows": [row],
+        "by_date": {day: [row]},
+        "dropped": [],
+    }
+
+    def panel(*_a, **_k):
+        calls["panel"] += 1
+        if calls["panel"] > 1:
+            raise AssertionError("finish must not rebuild the panel")
+        return extra
+
+    def ledger(*_a, **_k):
+        calls["ledger"] += 1
+        return {
+            "date": day,
+            "recipes": {"union_h1": {
+                "primary": {
+                    "buys": [], "sells": [], "skips": [], "trades": [],
+                    "daily": {
+                        "date": day, "cash": 10000.0, "equity": 10000.0,
+                        "yday_equity": 10000.0, "bought": [], "sold": [],
+                        "open_cash": 10000.0, "made_money": False,
+                    },
+                    "state": {"cash": 10000.0, "after": day, "pos": {}},
+                },
+                "starts": {},
+            }},
+        }
+
+    with tempfile.TemporaryDirectory() as d:
+        old = _use(Path(d))
+        try:
+            with mock.patch.object(fm, "session_has_closed", return_value=True), \
+                    mock.patch.object(fm, "panel_lookback_calendar", return_value=[day]), \
+                    mock.patch.object(fm, "build_panel", side_effect=panel), \
+                    mock.patch.object(fmf, "prepare_lock", return_value={
+                        "n": 1, "names": [], "excluded": [], "prior_export": None,
+                    }), \
+                    mock.patch.object(fmf, "pin_prices", return_value={
+                        "date": day, "names": {"AAA": {"open": 10.0, "close": 11.0}},
+                    }), \
+                    mock.patch.object(fmf, "heat_record", return_value={
+                        "vintage": day,
+                    }), \
+                    mock.patch.object(fmf, "build_ledger", side_effect=ledger):
+                fmf.append_land(
+                    "2026-08-13", day, write=False,
+                    recipes=[{"name": "union_h1", "universe": "union", "hold": 1}],
+                    payload={"dates": ["2026-11-05"], "recipes": []},
+                    panel={"session_dates": ["2026-11-05"], "rows": [], "by_date": {}},
+                    phase="freeze",
+                )
+                prior_bytes = fmf.snapshot_path(day).read_bytes()
+                fmf.append_land(
+                    "2026-08-13", day, write=False,
+                    recipes=[{"name": "union_h1", "universe": "union", "hold": 1}],
+                    payload={"dates": ["2026-11-05"], "recipes": []},
+                    panel={"session_dates": ["2026-11-05"], "rows": [], "by_date": {}},
+                    phase="finish",
+                )
+            assert calls["panel"] == 1
+            assert calls["ledger"] == 1
+            assert fmf.snapshot_path(day).read_bytes() == prior_bytes
+        finally:
+            _restore(old)
+
+
+def test_ledger_releases_memory_before_combos() -> None:
+    calls = []
+
+    def single(*_a, **_k):
+        calls.append("single")
+        return {"trades": [], "daily": [], "cash": 1.0, "pos": {}}
+
+    def combo(*_a, **_k):
+        calls.append("combo")
+        return {"trades": [], "daily": [], "cash": 1.0, "pos": {}}
+
+    def release():
+        calls.append("release")
+
+    day = "2026-08-17"
+    panel = {"session_dates": [day], "rows": [], "by_date": {day: []}}
+    recipes = [
+        {"name": "union_h1", "universe": "union", "hold": 1},
+        {"name": "combo_sh", "universe": "combo", "members": ["union_h1"],
+         "weights": [1], "net": "priority", "pool": "shared"},
+    ]
+    with mock.patch.object(fmf, "_simulate_single", side_effect=single), \
+            mock.patch.object(fmf, "_simulate_combo", side_effect=combo), \
+            mock.patch("src.price_store.release_memory", side_effect=release), \
+            mock.patch("src.factor_mine_book.load_regime", return_value={}):
+        fmf.build_ledger(panel, {}, recipes, day, {})
+    assert calls.index("release") < calls.index("combo")
+
+
+def test_land_workflow_splits_freeze_and_ledger() -> None:
+    yml = (Path(__file__).resolve().parent.parent
+           / ".github" / "workflows" / "factor_mine.yml").read_text(encoding="utf-8")
+    assert "--land-phase freeze" in yml
+    assert "--land-phase finish" in yml
+    assert "PYTHONMALLOC: malloc" in yml
+    assert '[ -n "${TO_DATE:-}" ] && ARGS+=(--to-date "$TO_DATE")' in yml
+
+
 def test_append_land_reraises_a_partial_drop() -> None:
     """An incomplete fill fails the mine before a snapshot is written."""
     with tempfile.TemporaryDirectory() as d:
@@ -2733,6 +2896,10 @@ if __name__ == "__main__":
     test_late_digest_does_not_replace_preopen_tones()
     test_save_report_does_not_overwrite_preopen_pin()
     test_partial_fill_drop_list_is_not_baked()
+    test_freeze_phase_stops_before_the_ledger()
+    test_finish_phase_does_not_fetch_prices_again()
+    test_ledger_releases_memory_before_combos()
+    test_land_workflow_splits_freeze_and_ledger()
     test_append_land_reraises_a_partial_drop()
     test_ensure_through_retries_a_partial_session()
     test_ensure_through_narrows_after_a_wide_retry_adds_nothing()

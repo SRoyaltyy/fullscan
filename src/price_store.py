@@ -116,6 +116,25 @@ def _save_store(df: pd.DataFrame) -> None:
     _flush_actions()
 
 
+def release_memory() -> None:
+    """Return freed heap pages before the next ledger sleeve.
+
+    Land-closed keeps the high-water mark of the price fill and of
+    hundreds of sleeve simulations. The first combo then allocates on
+    top and the 16GB runner SIGKILLs the step (exit 143) after the
+    snapshot is already frozen. ``gc`` plus ``malloc_trim`` is what
+    the OS can reclaim; the mine step also sets ``PYTHONMALLOC=malloc``
+    so those pages are not stuck in pymalloc arenas.
+    """
+    import gc
+    gc.collect()
+    try:
+        import ctypes
+        ctypes.CDLL("libc.so.6").malloc_trim(0)
+    except Exception:
+        return
+
+
 def status() -> None:
     if META_PATH.exists():
         print(META_PATH.read_text())
@@ -643,6 +662,7 @@ def fill_range(start: str, end: str, tickers: list[str] | None = None,
         existing = _load_store()
         frames = [existing, part] if len(existing) else [part]
         _save_store(pd.concat(frames, ignore_index=True))
+        release_memory()
 
     n_chunks = max(1, (len(names) - 1) // size + 1)
     for i in range(0, len(names), size):
@@ -782,6 +802,7 @@ def ensure_through(end: str | None = None,
             raise RuntimeError(
                 f"price store missing {target_s} bars for {len(missing)} "
                 f"names sample={missing[:12]}")
+    release_memory()
 
 
 def candle_bias(ohlc: pd.DataFrame, lookback: int = 10) -> dict:

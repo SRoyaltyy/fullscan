@@ -4286,7 +4286,8 @@ def refresh_panel_window(from_date: str, to_date: str | None = None,
 def land_closed(from_date: str = START, write: bool = False,
                 rebuild_panel: bool = False,
                 to_date: str | None = None,
-                restate: list[str] | None = None) -> dict:
+                restate: list[str] | None = None,
+                phase: str = "all") -> dict:
     """Roll the existing recipe set through the last closed session.
 
     Does not rediscover the cartesian grid. Morning Pre-Open / Stock Book
@@ -4340,7 +4341,7 @@ def land_closed(from_date: str = START, write: bool = False,
     # run() would rescore locked days.
     return fmf.append_land(
         from_date, target, write=write, restate=sorted(restate_set),
-        recipes=recs, payload=payload,
+        recipes=recs, payload=payload, phase=phase,
     )
 
 
@@ -4508,6 +4509,10 @@ def main(argv=None) -> int:
                     help="tag/add prior-calendar AMC-today / BMO-next names on the panel")
     ap.add_argument("--land-closed", action="store_true",
                     help="reuse existing recipes; mine through last closed session")
+    ap.add_argument("--land-phase", default="all",
+                    choices=["all", "freeze", "finish"],
+                    help="freeze writes the snapshot and exits; finish "
+                         "builds the ledger in a fresh process")
     ap.add_argument("--universe", default="auto", choices=fmb.UNIVERSES)
     ap.add_argument("--hold", default="auto", choices=fmb.HOLDS)
     ap.add_argument("--gate", default="auto", choices=fmb.GATES)
@@ -4635,17 +4640,21 @@ def main(argv=None) -> int:
             rebuild_panel=args.rebuild_panel,
             to_date=args.to_date or None,
             restate=list(args.restate or []),
+            phase=args.land_phase,
         )
         # Research track only. A failure here must not fail the nightly
         # lock (HOT4 / holdup already written above).
         # AppendDrift subclasses SystemExit, which `except Exception` misses,
         # so a locked-day refusal was exiting 1 and skipping Publish.
+        # The freeze phase exits before the ledger so its pages can be
+        # reclaimed. OOS appends with the finish process, not the fetch.
         try:
             from . import factor_mine_oos0914 as oos0914
-            oos0914.append_nightly(
-                through=str((payload or {}).get("to_date") or args.to_date or "")[:10],
-                write=bool(args.write),
-            )
+            if args.land_phase != "freeze":
+                oos0914.append_nightly(
+                    through=str((payload or {}).get("to_date") or args.to_date or "")[:10],
+                    write=bool(args.write),
+                )
         except (Exception, SystemExit):
             import logging
             import traceback
