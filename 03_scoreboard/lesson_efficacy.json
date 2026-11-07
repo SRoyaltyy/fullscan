@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-11-06T16:19:38.876242-05:00",
+  "generated_at": "2026-11-06T20:14:02.970928-05:00",
   "window": 7,
   "summary": {
-    "n_active": 222,
+    "n_active": 223,
     "n_judged": 178,
     "improved": 67,
     "flat": 30,
@@ -2589,6 +2589,13 @@
       "lesson": "scheduled-us-cash-equities-session-including-bond-holiday-eq.md",
       "topic": null,
       "active_since": "2026-10-12",
+      "error_category": "D",
+      "verdict": "not market-graded"
+    },
+    {
+      "lesson": "scheduled-us-cash-session-where-canonical-premarket-predict.md",
+      "topic": null,
+      "active_since": "2026-11-06",
       "error_category": "D",
       "verdict": "not market-graded"
     },

@@ -1,6 +1,6 @@
-# Learnings report — 2026-11-06
+# Learnings report — 2026-11-05
 
-Generated: **2026-11-06T16:19:38.915473-05:00** by `src/learn_cycle.py`.
+Generated: **2026-11-06T20:14:03.004688-05:00** by `src/learn_cycle.py`.
 
 This is the human-readable digest of what the bot **actually learned** this cycle: graded evidence, hypotheses (wins and losses), promoted standing rules, and **how that changes every daily workflow**.
 
@@ -15,10 +15,10 @@ Machine policy file (injected into predicts): `00_grounding/mutable_policy.md`.
 | Graded runs mined | 180 |
 | Hypotheses written | 181 (wins=79, losses=102) |
 | News hypotheses | 1 |
-| Lessons promoted to active | 0 |
+| Lessons promoted to active | 1 |
 | Lessons retired (efficacy-gated) | 10 |
-| Active lesson files now | 212 |
-| Engine policy version | 157 |
+| Active lesson files now | 213 |
+| Engine policy version | 158 |
 
 ## 2. Accuracy by topic (evidence this cycle learned from)
 
@@ -81,7 +81,7 @@ Each scope lists recent win and loss hypotheses: the **counterfactual ask**, the
 ### `news` — 0 wins, 1 losses
 
 #### LOSS — news
-- **When:** [news] Global 1d close win rate 50.7% (n=4088).
+- **When:** [news] Global 1d close win rate 51.1% (n=3963).
 - **Ask:** Entry timing, side mix, or event taxonomy noise?
 - **Experiment:** [news] Raise min net weight to map a ticker; drop weak edges.
 - **Do instead:** [news] Only emit actions with |net| above a higher floor.
@@ -496,7 +496,7 @@ Each scope lists recent win and loss hypotheses: the **counterfactual ask**, the
 
 ## 4. Promoted standing rules (this cycle)
 
-_No new promotions this cycle (candidates incomplete, not yet recurring, or already active)._
+- `scheduled-us-cash-session-where-canonical-premarket-predict.md`
 
 Full text lives in `02_lessons/active/`. Summaries also feed `mutable_policy.md`.
 
@@ -585,7 +585,7 @@ Progress vs baselines: `03_scoreboard/IMPROVEMENT_TRACKER.md`.
 | File | Role |
 |------|------|
 | `03_scoreboard/LEARNINGS.md` | This digest (latest) |
-| `01_daily/2026-11-06_learnings.md` | Dated copy |
+| `01_daily/2026-11-05_learnings.md` | Dated copy |
 | `00_grounding/mutable_policy.md` | Injected into general + sector predict |
 | `02_lessons/hypotheses/*` | Per-event experiments |
 | `02_lessons/active/*` | Standing rules |

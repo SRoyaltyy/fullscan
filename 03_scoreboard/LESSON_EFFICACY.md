@@ -1,10 +1,10 @@
 # Lesson efficacy — did promoted lessons change outcomes?
 
-_Generated 2026-11-06T16:19:38.876242-05:00_ · window: 7 graded runs each side of activation · deltas within ±5pp count as flat.
+_Generated 2026-11-06T20:14:02.970928-05:00_ · window: 7 graded runs each side of activation · deltas within ±5pp count as flat.
 
 This is correlation, not proof — but a lesson whose topic got WORSE after promotion has no evidence of working and is a retirement candidate for the monthly distill.
 
-**Active lessons: 222 · judged (enough data both sides): 178 · improved: 67 · flat: 30 · worse: 81 · mean delta: -0.022**
+**Active lessons: 223 · judged (enough data both sides): 178 · improved: 67 · flat: 30 · worse: 81 · mean delta: -0.022**
 
 ## Retirement candidates (topic got worse after activation)
 
@@ -264,6 +264,7 @@ This is correlation, not proof — but a lesson whose topic got WORSE after prom
 | `scheduled-trading-day-opens-with-the-premarket-p` | — | 2026-08-13 | — | — | — | not market-graded |
 | `scheduled-trading-day-where-the-premarket-predic` | — | 2026-08-27 | — | — | — | not market-graded |
 | `scheduled-us-cash-equities-session-including-bon` | — | 2026-10-12 | — | — | — | not market-graded |
+| `scheduled-us-cash-session-where-canonical-premar` | — | 2026-11-06 | — | — | — | not market-graded |
 | `scheduled-us-cash-session-where-canonical-premar` | — | 2026-10-15 | — | — | — | not market-graded |
 | `scheduled-us-cash-session-where-premarket-yyyy-m` | — | 2026-08-28 | — | — | — | not market-graded |
 | `sector-etf-prediction-where-a-1-relative-reversa` | sector:Basic Materials | 2026-09-04 | 57% (n=7) | 43% (n=7) | -14% | WORSE |
