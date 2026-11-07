@@ -170,6 +170,20 @@ def test_new_day_appends_and_seals(tmp: Path) -> None:
         pdl.MANIFEST_PATH = saved_manifest
 
 
+def test_land_phase_is_stripped_before_the_pinned_parser() -> None:
+    from src.factor_mine_past_lock import split_land_phase
+    argv, phase = split_land_phase(
+        ["--from-date", "2026-08-13", "--write", "--land-closed",
+         "--land-phase", "freeze", "--to-date", "2026-11-06"])
+    assert phase == "freeze"
+    assert argv == [
+        "--from-date", "2026-08-13", "--write", "--land-closed",
+        "--to-date", "2026-11-06",
+    ]
+    bare, default = split_land_phase(["--land-closed"])
+    assert default == "all" and bare == ["--land-closed"]
+
+
 def test_workflow_calls_the_wrapper() -> None:
     yml = (ROOT / ".github" / "workflows" / "factor_mine.yml").read_text(encoding="utf-8")
     assert "src.factor_mine_past_lock" in yml
@@ -183,6 +197,7 @@ def main() -> None:
         test_rendered_text_matches_pinned_writer,
         test_changed_past_day_is_not_written,
         test_new_day_appends_and_seals,
+        test_land_phase_is_stripped_before_the_pinned_parser,
         test_workflow_calls_the_wrapper,
     ]
     failed = 0
