@@ -2620,6 +2620,11 @@ def build_ledger(panel: dict, payload: dict, recipes: list[dict],
     prev_ledger = latest_ledger_before(date)
     fees = fees if fees is not None else fm.pt_fees()
     regime = regime if regime is not None else fmb.load_regime()
+    # Session bars are already in ``bars``. Drop the full OHLC frame
+    # before hundreds of sleeve simulations allocate on top of it.
+    reset_price_memory()
+    from . import price_store as ps
+    ps.release_memory()
     by_name = {r.get("name"): r for r in recipes if r.get("name")}
     from . import factor_mine_send_inputs as fsi
     send_doc = fsi.load(date) if fsi.applies(date) else None
@@ -2648,7 +2653,7 @@ def build_ledger(panel: dict, payload: dict, recipes: list[dict],
         r for r in recipes
         if r.get("name") and r.get("universe") != "combo" and not r.get("members")
     ]
-    for rec in singles:
+    for i, rec in enumerate(singles):
         name = rec["name"]
         try:
             saved = _saved(prev_ledger, name, "primary")
@@ -2664,6 +2669,7 @@ def build_ledger(panel: dict, payload: dict, recipes: list[dict],
                 regime=regime, saved=saved,
             )
             primary = decision_from_book(book, date)
+            del book
             starts = {}
             origin = cal[0] if cal else date
             if origin:
@@ -2681,13 +2687,20 @@ def build_ledger(panel: dict, payload: dict, recipes: list[dict],
                     regime=regime, saved=saved_s,
                 )
                 starts[start] = decision_from_book(book_s, date)
+                del book_s
             out_recipes[name] = {"primary": primary, "starts": starts}
+            if (i + 1) % 25 == 0:
+                ps.release_memory()
             print(f"[factor-mine] ledger {name} {date} "
                   f"buys={len(primary.get('buys') or [])} "
                   f"starts={len(starts)}", flush=True)
         except Exception as e:  # noqa: BLE001
             failed.append(name)
             print(f"[factor-mine] ledger failed {name}: {e}", flush=True)
+    # Singles finished under the cap on 2026-11-06. The first combo then
+    # ran on top of unreclaimed sleeve pages and the kernel killed the
+    # process. Hand those pages back before the combo books start.
+    ps.release_memory()
 
     for rec in recipes:
         if rec.get("universe") != "combo" and not rec.get("members"):
@@ -2723,6 +2736,7 @@ def build_ledger(panel: dict, payload: dict, recipes: list[dict],
                 regime=regime, saved=saved,
             )
             primary = decision_from_book(book, date)
+            del book
             starts = {}
             origin = cal[0] if cal else None
             if origin:
@@ -2739,7 +2753,9 @@ def build_ledger(panel: dict, payload: dict, recipes: list[dict],
                     regime=regime, saved=saved_s,
                 )
                 starts[start] = decision_from_book(book_s, date)
+                del book_s
             out_recipes[name] = {"primary": primary, "starts": starts}
+            ps.release_memory()
         except Exception as e:  # noqa: BLE001
             failed.append(name)
             print(f"[factor-mine] ledger failed combo {name}: {e}", flush=True)
@@ -2946,9 +2962,19 @@ def append_land(from_date: str, target: str, *, write: bool = False,
                 restate: list[str] | None = None,
                 recipes: list[dict] | None = None,
                 payload: dict | None = None,
-                panel: dict | None = None) -> dict:
-    """Land ``target`` from frozen history. Hold the day if bars are missing."""
+                panel: dict | None = None,
+                phase: str = "all") -> dict:
+    """Land ``target`` from frozen history. Hold the day if bars are missing.
+
+    ``phase`` splits the 16GB land runner. ``freeze`` writes the snapshot
+    and exits. ``finish`` builds the ledger in a new process and does not
+    fetch prices again. ``all`` is the single-process path tests use.
+    """
     from . import factor_mine as fm
+
+    phase = str(phase or "all")
+    if phase not in {"all", "freeze", "finish"}:
+        raise ValueError(f"unknown land phase {phase}")
 
     restate_set = {str(d)[:10] for d in (restate or []) if d}
     refuse_past_restate(restate_set)
@@ -2972,6 +2998,7 @@ def append_land(from_date: str, target: str, *, write: bool = False,
     # 16:25 ET lock.
     published_dates = set(payload.get("dates") or [])
     snaps = set((load_manifest().get("snapshots") or {}))
+    ledgers = set((load_manifest().get("ledgers") or {}))
     want = fm.panel_lookback_calendar(from_date, target)
     new_dates = [
         d for d in want
@@ -2987,8 +3014,25 @@ def append_land(from_date: str, target: str, *, write: bool = False,
         and (not want or target <= want[-1])
     ):
         new_dates.append(target)
+    # Freeze already wrote the snapshot, then the ledger process was
+    # killed. The day is on the panel via that snapshot, so it is not a
+    # "new" panel date, but the ledger is still missing.
+    if (
+        phase == "finish"
+        and target >= from_date
+        and target in snaps
+        and target not in ledgers
+        and target not in new_dates
+        and target not in restate_set
+    ):
+        new_dates.append(target)
     new_dates = sorted(set(new_dates))
-    if not new_dates and target in snaps and target not in restate_set:
+    if (
+        not new_dates
+        and target in snaps
+        and target in ledgers
+        and target not in restate_set
+    ):
         print(f"[factor-mine] freeze: {target} already frozen — no rewrite",
               flush=True)
         return label_payload(payload)
@@ -2998,53 +3042,80 @@ def append_land(from_date: str, target: str, *, write: bool = False,
         if not fm.session_has_closed(date) and date not in restate_set:
             print(f"[factor-mine] freeze: {date} not closed — hold", flush=True)
             continue
-        try:
-            extra = fm.build_panel(date, date, fail_closed=True)
-        except SkipDay as e:
-            print(f"[factor-mine] {e}", flush=True)
-            continue
-        except HoldDay as e:
-            print(f"[factor-mine] {e}", flush=True)
-            if (
-                "entire universe" in (e.reason or "")
-                or "entire panel" in (e.reason or "")
-                or "incomplete session bars" in (e.reason or "")
-            ):
-                raise
-            break
-        try:
-            candidates = prepare_lock(date)
-        except HoldDay as e:
-            print(f"[factor-mine] {e}", flush=True)
-            break
-        panel = fm.merge_panel_days(panel, extra)
-        rows = [
-            r for r in (panel.get("rows") or []) if r.get("date") == date
-        ]
-        prior = _prior(list(panel.get("session_dates") or []), date)
-        pinned = pin_prices(date, [r.get("ticker") for r in rows])
-        try:
-            write_candidates(date, candidates, restate=date in restate_set)
-        except FrozenHistory as e:
-            print(f"[factor-mine] {e}", flush=True)
-            candidates = read_json(candidate_path(date)) or candidates
-        try:
-            prices_sha = write_price_pin(date, pinned, restate=date in restate_set)
-        except FrozenHistory as e:
-            print(f"[factor-mine] {e}", flush=True)
-            prices_sha = (load_manifest().get("prices") or {}).get(date, {}).get("sha256")
-            pinned = read_json(price_path(date)) or pinned
-        dropped = list(extra.get("dropped") or [])
-        snap = make_snapshot(
-            date, rows, prior, prices_sha, candidates,
-            dropped=dropped,
-            unpriced_held=unpriced_held_tickers(date, dropped),
-        )
-        try:
-            write_snapshot(date, snap, restate=date in restate_set)
-        except FrozenHistory as e:
-            print(f"[factor-mine] {e}", flush=True)
-        panel = apply_frozen_snapshots(panel, through=date)
+        manifest_snaps = set((load_manifest().get("snapshots") or {}))
+        snap_exists = date in manifest_snaps and date not in restate_set
+        if phase == "finish" and not snap_exists:
+            raise HoldDay(
+                date, [],
+                "finish phase requires a frozen snapshot",
+                status="held_incomplete",
+            )
+        if phase == "finish":
+            # The snapshot, price pin, and candidate file are already on
+            # disk. Do not call build_panel: that re-downloads the tape in
+            # the same process that then builds every sleeve.
+            panel = apply_frozen_snapshots(panel, through=date)
+            pinned = read_json(price_path(date)) or {}
+            print(
+                f"[factor-mine] finish phase {date}: ledger without a new price fetch",
+                flush=True,
+            )
+        else:
+            try:
+                extra = fm.build_panel(date, date, fail_closed=True)
+            except SkipDay as e:
+                print(f"[factor-mine] {e}", flush=True)
+                continue
+            except HoldDay as e:
+                print(f"[factor-mine] {e}", flush=True)
+                if (
+                    "entire universe" in (e.reason or "")
+                    or "entire panel" in (e.reason or "")
+                    or "incomplete session bars" in (e.reason or "")
+                ):
+                    raise
+                break
+            try:
+                candidates = prepare_lock(date)
+            except HoldDay as e:
+                print(f"[factor-mine] {e}", flush=True)
+                break
+            panel = fm.merge_panel_days(panel, extra)
+            rows = [
+                r for r in (panel.get("rows") or []) if r.get("date") == date
+            ]
+            prior = _prior(list(panel.get("session_dates") or []), date)
+            pinned = pin_prices(date, [r.get("ticker") for r in rows])
+            try:
+                write_candidates(date, candidates, restate=date in restate_set)
+            except FrozenHistory as e:
+                print(f"[factor-mine] {e}", flush=True)
+                candidates = read_json(candidate_path(date)) or candidates
+            try:
+                prices_sha = write_price_pin(date, pinned, restate=date in restate_set)
+            except FrozenHistory as e:
+                print(f"[factor-mine] {e}", flush=True)
+                prices_sha = (load_manifest().get("prices") or {}).get(date, {}).get("sha256")
+                pinned = read_json(price_path(date)) or pinned
+            dropped = list(extra.get("dropped") or [])
+            snap = make_snapshot(
+                date, rows, prior, prices_sha, candidates,
+                dropped=dropped,
+                unpriced_held=unpriced_held_tickers(date, dropped),
+            )
+            try:
+                write_snapshot(date, snap, restate=date in restate_set)
+            except FrozenHistory as e:
+                print(f"[factor-mine] {e}", flush=True)
+            panel = apply_frozen_snapshots(panel, through=date)
+            if phase == "freeze":
+                print(
+                    f"[factor-mine] freeze phase {date}: snapshot frozen, "
+                    "ledger deferred",
+                    flush=True,
+                )
+                frozen_dates.append(date)
+                continue
         bars = bars_for_decisions(panel, date, pinned)
         recs = list(recipes or payload.get("recipes") or [])
         existing = read_ledger(date)
@@ -3072,7 +3143,13 @@ def append_land(from_date: str, target: str, *, write: bool = False,
         recs = list(recipes or []) or list((payload or {}).get("recipes") or [])
         if recs:
             fmr.lock_recipe_rules(recs, write=True)
-    if write and frozen_dates:
+    if write and phase == "freeze":
+        print(
+            "[factor-mine] freeze phase: snapshot is on disk; "
+            "ledger runs in a new process",
+            flush=True,
+        )
+    elif write and frozen_dates:
         write_panel_file(panel)
         fm.write_outputs(payload, stats=payload.get("stats") or [], books=payload.get("books"))
     elif write:

@@ -7,10 +7,14 @@ calls the pinned writer and seals the new day.
 """
 from __future__ import annotations
 
+import os
+import sys
 from pathlib import Path
 
 from . import factor_mine_book as fmb
 from . import past_day_lock as pdl
+
+LAND_PHASES = ("all", "freeze", "finish")
 
 
 def render_recipe_texts(payload: dict, stats: list[dict], books: dict,
@@ -83,10 +87,46 @@ def install() -> None:
     fmb.write_action_mds = locked_write_action_mds(current)
 
 
+def split_land_phase(argv: list[str]) -> tuple[list[str], str]:
+    """Pull ``--land-phase`` off argv before the pinned parser sees it.
+
+    ``src/factor_mine.py`` is byte-pinned. The phase still has to reach
+    ``append_land`` so the snapshot process can exit before the ledger.
+    """
+    argv = list(argv)
+    phase = "all"
+    if "--land-phase" not in argv:
+        return argv, phase
+    i = argv.index("--land-phase")
+    if i + 1 >= len(argv):
+        raise SystemExit("--land-phase needs all, freeze, or finish")
+    phase = argv[i + 1]
+    if phase not in LAND_PHASES:
+        raise SystemExit(f"unknown land phase {phase}")
+    del argv[i:i + 2]
+    return argv, phase
+
+
 def main(argv: list[str] | None = None) -> int:
     install()
+    raw = list(sys.argv[1:] if argv is None else argv)
+    raw, phase = split_land_phase(raw)
+    os.environ["FULLSCAN_LAND_PHASE"] = phase
+    from . import factor_mine_freeze as fmf
+    original = fmf.append_land
+
+    def append_land(*args, **kwargs):
+        kwargs.setdefault("phase", phase)
+        return original(*args, **kwargs)
+
+    fmf.append_land = append_land
+    if phase == "freeze":
+        # OOS append stays with the ledger process. The pinned main()
+        # always calls it; a no-op here keeps that file unchanged.
+        from . import factor_mine_oos0914 as oos
+        oos.append_nightly = lambda *a, **k: None
     from .factor_mine import main as mine_main
-    return mine_main(argv)
+    return mine_main(raw)
 
 
 if __name__ == "__main__":
