@@ -2,41 +2,41 @@
 
 Live sleeves still SIT on S≤−3. Search a ticker for every session since 8/13: cameras (+N −N), 09:30 open, close, same-day % and hold-1/3/5 with actual prices.
 
-Generated 2026-11-06T20:40:27.476532-05:00 · 2026-08-13 → 2026-11-05 · live sit **untouched**.
+Generated 2026-11-07T03:30:06.010445-05:00 · 2026-08-13 → 2026-11-06 · live sit **untouched**.
 
 ## Latest morning
 
-- Date **2026-11-05** S=-2.495 hard-red=False · 193 investigator cards · 27 long-ok · 23 short-ok
+- Date **2026-11-06** S=None hard-red=False · 399 investigator cards · 164 long-ok · 46 short-ok
 
 ### Longs weather sat on (top)
 
-- **ARHS** idio +17 · +5 −3 · E good · H1 None% H3 None%
-- **TBBB** idio +17 · +5 −2 · E good · H1 None% H3 None%
-- **PRMB** idio +15 · +4 −2 · E good · H1 3.9% H3 None%
-- **DLTR** idio +12 · +4 −2 · E good · H1 -9.29% H3 None%
-- **COCO** idio +11 · +4 −3 · E good · H1 None% H3 None%
-- **DNUT** idio +11 · +4 −3 · E good · H1 None% H3 None%
-- **STUB** idio +11 · +3 −2 · E missing · H1 None% H3 None%
-- **CMCSA** idio +10 · +4 −3 · E good · H1 -2.83% H3 None%
+- **APP** idio +25 · +7 −1 · E good · H1 None% H3 None%
+- **YELP** idio +20 · +7 −1 · E good · H1 None% H3 None%
+- **MNST** idio +20 · +6 −1 · E good · H1 None% H3 None%
+- **NTRA** idio +19 · +6 −1 · E good · H1 None% H3 None%
+- **CHTR** idio +19 · +5 −1 · E good · H1 None% H3 None%
+- **ENOV** idio +19 · +5 −1 · E good · H1 None% H3 None%
+- **FNF** idio +19 · +5 −1 · E good · H1 None% H3 None%
+- **CARG** idio +18 · +6 −1 · E good · H1 None% H3 None%
 
 ### Shorts weather sat on (top)
 
-- **EOSE** idio -17 · +1 −7 · H1 None%
-- **LDI** idio -15 · +2 −5 · H1 None%
-- **SWIM** idio -14 · +2 −6 · H1 None%
-- **MOS** idio -13 · +1 −6 · H1 -3.78%
-- **UGP** idio -13 · +2 −6 · H1 4.75%
-- **AIP** idio -12 · +1 −6 · H1 None%
-- **GLND** idio -11 · +1 −6 · H1 None%
-- **MX** idio -11 · +1 −6 · H1 -2.16%
+- **GSM** idio -12 · +2 −5 · H1 None%
+- **HRZN** idio -12 · +1 −5 · H1 None%
+- **IONQ** idio -12 · +0 −5 · H1 None%
+- **VSAT** idio -12 · +1 −6 · H1 None%
+- **IREN** idio -11 · +2 −5 · H1 None%
+- **VNET** idio -11 · +2 −5 · H1 None%
+- **AIP** idio -11 · +1 −6 · H1 None%
+- **OPEN** idio -10 · +1 −4 · H1 None%
 
 ## If we had taken them on hard-red sits (research)
 
 - Hard-red mornings in window: 22
 - long hold-1: n=176 win=52.3% mean -0.035%
-- long hold-3: n=172 win=52.3% mean -0.188%
+- long hold-3: n=176 win=52.3% mean -0.33%
 - short hold-1: n=176 win=51.1% mean -0.184%
-- short hold-3: n=171 win=54.4% mean -0.134%
+- short hold-3: n=175 win=53.7% mean -0.2%
 
 KEEP still wants >55% after fees and n≥30. Thin n is not a wire.
 
