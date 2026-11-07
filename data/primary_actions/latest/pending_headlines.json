@@ -1,436 +1,266 @@
 [
   {
-    "n": 9119,
-    "title": "H.R. 10960 (IH) - Keep Federal Tech Talent Act",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr10960ih",
-    "published_at": "2026-11-07T03:58:01+00:00",
-    "official_issuer": "Congressional Bills",
-    "document_type": "bill",
-    "document_stage": "legislative_document_published",
-    "source_ids": [
-      "us-govinfo-bills"
-    ]
-  },
-  {
-    "n": 9120,
-    "title": "H.R. 10954 (IH) - Don’t Flush Babies Act",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr10954ih",
-    "published_at": "2026-11-07T03:58:01+00:00",
-    "official_issuer": "Congressional Bills",
-    "document_type": "bill",
-    "document_stage": "legislative_document_published",
-    "source_ids": [
-      "us-govinfo-bills"
-    ]
-  },
-  {
-    "n": 9121,
-    "title": "H.R. 10959 (IH) - Right to Re-Enroll Act of 2026",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr10959ih",
-    "published_at": "2026-11-07T03:58:01+00:00",
-    "official_issuer": "Congressional Bills",
-    "document_type": "bill",
-    "document_stage": "legislative_document_published",
-    "source_ids": [
-      "us-govinfo-bills"
-    ]
-  },
-  {
-    "n": 9122,
-    "title": "H.R. 10955 (IH) - EITC Age Parity Act of 2026",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr10955ih",
-    "published_at": "2026-11-07T03:58:02+00:00",
-    "official_issuer": "Congressional Bills",
-    "document_type": "bill",
-    "document_stage": "legislative_document_published",
-    "source_ids": [
-      "us-govinfo-bills"
-    ]
-  },
-  {
-    "n": 9123,
-    "title": "H.R. 10956 (IH) - IHS Workforce Parity Act of 2026",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr10956ih",
-    "published_at": "2026-11-07T03:58:02+00:00",
-    "official_issuer": "Congressional Bills",
-    "document_type": "bill",
-    "document_stage": "legislative_document_published",
-    "source_ids": [
-      "us-govinfo-bills"
-    ]
-  },
-  {
-    "n": 9124,
-    "title": "H.R. 10957 (IH) - Plastics Understanding and Removal through Government Evaluation Act",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr10957ih",
-    "published_at": "2026-11-07T03:58:02+00:00",
-    "official_issuer": "Congressional Bills",
-    "document_type": "bill",
-    "document_stage": "legislative_document_published",
-    "source_ids": [
-      "us-govinfo-bills"
-    ]
-  },
-  {
-    "n": 9125,
-    "title": "H.R. 10958 (IH) - Clothing Microplastic Transparency Act of 2026",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr10958ih",
-    "published_at": "2026-11-07T03:58:02+00:00",
-    "official_issuer": "Congressional Bills",
-    "document_type": "bill",
-    "document_stage": "legislative_document_published",
-    "source_ids": [
-      "us-govinfo-bills"
-    ]
-  },
-  {
-    "n": 9126,
-    "title": "DCPD-202600675 - Message on Child Health Day",
-    "url": "https://www.govinfo.gov/app/details/DCPD-202600675",
-    "published_at": "2026-11-06T21:32:00+00:00",
-    "official_issuer": "Compilation of Presidential Documents",
-    "document_type": "presidential_document",
-    "document_stage": "presidential_document_published",
-    "source_ids": [
-      "us-govinfo-dcpd"
-    ]
-  },
-  {
-    "n": 9127,
-    "title": "DCPD-202600665 - Remarks in Durant, Oklahoma",
-    "url": "https://www.govinfo.gov/app/details/DCPD-202600665",
-    "published_at": "2026-11-06T21:32:00+00:00",
-    "official_issuer": "Compilation of Presidential Documents",
-    "document_type": "presidential_document",
-    "document_stage": "presidential_document_published",
-    "source_ids": [
-      "us-govinfo-dcpd"
-    ]
-  },
-  {
-    "n": 9128,
-    "title": "DCPD-202600679 - Remarks and an Exchange With Reporters Prior to Departure for Sparrows Point, Maryland",
-    "url": "https://www.govinfo.gov/app/details/DCPD-202600679",
-    "published_at": "2026-11-06T21:32:00+00:00",
-    "official_issuer": "Compilation of Presidential Documents",
-    "document_type": "presidential_document",
-    "document_stage": "presidential_document_published",
-    "source_ids": [
-      "us-govinfo-dcpd"
-    ]
-  },
-  {
-    "n": 9129,
-    "title": "DCPD-202600392 - Remarks on Signing a Proclamation To Restore United States Commercial Fishing in the Pacific and an Exchange With Reporters",
-    "url": "https://www.govinfo.gov/app/details/DCPD-202600392",
-    "published_at": "2026-11-06T21:34:00+00:00",
-    "official_issuer": "Compilation of Presidential Documents",
-    "document_type": "presidential_document",
-    "document_stage": "presidential_document_published",
-    "source_ids": [
-      "us-govinfo-dcpd"
-    ]
-  },
-  {
-    "n": 9130,
-    "title": "DCPD-202600676 - Message on Fire Prevention Week",
-    "url": "https://www.govinfo.gov/app/details/DCPD-202600676",
-    "published_at": "2026-11-06T21:34:00+00:00",
-    "official_issuer": "Compilation of Presidential Documents",
-    "document_type": "presidential_document",
-    "document_stage": "presidential_document_published",
-    "source_ids": [
-      "us-govinfo-dcpd"
-    ]
-  },
-  {
-    "n": 9131,
-    "title": "DCPD-202600674 - Remarks and an Exchange With Reporters Prior to Departure for Grand Island, Nebraska",
-    "url": "https://www.govinfo.gov/app/details/DCPD-202600674",
-    "published_at": "2026-11-06T21:34:00+00:00",
-    "official_issuer": "Compilation of Presidential Documents",
-    "document_type": "presidential_document",
-    "document_stage": "presidential_document_published",
-    "source_ids": [
-      "us-govinfo-dcpd"
-    ]
-  },
-  {
-    "n": 9132,
-    "title": "DCPD-202600677 - Executive Order 14435-Emergency Tax Relief on Diesel Fuel",
-    "url": "https://www.govinfo.gov/app/details/DCPD-202600677",
-    "published_at": "2026-11-06T21:34:00+00:00",
-    "official_issuer": "Compilation of Presidential Documents",
-    "document_type": "presidential_document",
-    "document_stage": "presidential_document_published",
-    "source_ids": [
-      "us-govinfo-dcpd"
-    ]
-  },
-  {
-    "n": 9133,
-    "title": "Progress Residential and Owner Pretium Partners to Pay $49.75 Million to Settle FTC and States’ Charges Over Deceptive Rental Pricing Practices and Other Unlawful Conduct",
-    "url": "https://www.ftc.gov/news-events/news/press-releases/2026/11/progress-residential-owner-pretium-partners-pay-4975-million-settle-ftc-states-charges-over",
-    "published_at": "2026-11-06T12:00:00+00:00",
-    "official_issuer": "Federal Trade Commission — Press Releases",
+    "n": 9156,
+    "title": "Federal Bank Regulatory Agencies Release 2025 Small Business, Small Farm, and Community Development Lending Data",
+    "url": "https://www.occ.gov/news-issuances/news-releases/2026/nr-ia-2026-98.html",
+    "published_at": "2026-11-05T16:00:00+00:00",
+    "official_issuer": "Office of the Comptroller of the Currency",
     "document_type": "official_announcement",
     "document_stage": "requires_semantic_review",
     "source_ids": [
-      "us-ftc-58b0383166",
-      "us-ftc-62f72b4a5d"
+      "us-occ-6f63126133"
     ]
   },
   {
-    "n": 9134,
-    "title": "Blue Ash man who placed hidden cameras in minor victims’ home sentenced to more than 16 years in prison for sexual exploitation of a child",
-    "url": "https://www.justice.gov/usao-sdoh/pr/blue-ash-man-who-placed-hidden-cameras-minor-victims-home-sentenced-more-16-years",
-    "published_at": "2026-11-06T12:00:00+00:00",
-    "official_issuer": "Department of Justice",
+    "n": 9157,
+    "title": "FDA approves gemcitabine intravesical system for non-muscle invasive bladder cancer",
+    "url": "http://www.fda.gov/drugs/cancer-approvals/fda-approves-gemcitabine-intravesical-system-non-muscle-invasive-bladder-cancer",
+    "published_at": "2026-11-07T00:18:33+00:00",
+    "official_issuer": "Food and Drug Administration — What's New: Drugs",
     "document_type": "official_announcement",
     "document_stage": "requires_semantic_review",
     "source_ids": [
-      "us-doj-b3d27e1dc3"
+      "us-fda-5696b24295"
     ]
   },
   {
-    "n": 9135,
-    "title": "U.S. Attorney’s Office Filed 93 Border-Related Cases This Week",
-    "url": "https://www.justice.gov/usao-sdca/pr/us-attorneys-office-filed-93-border-related-cases-week",
-    "published_at": "2026-11-06T12:00:00+00:00",
-    "official_issuer": "Department of Justice",
+    "n": 9158,
+    "title": "FDA approves niraparib and abiraterone acetate plus prednisone for BRCA2-mutated metastatic castration-sensitive prostate cancer",
+    "url": "http://www.fda.gov/drugs/cancer-approvals/fda-approves-niraparib-and-abiraterone-acetate-plus-prednisone-brca2-mutated-metastatic-castration",
+    "published_at": "2026-11-07T00:18:32+00:00",
+    "official_issuer": "Food and Drug Administration — What's New: Drugs",
     "document_type": "official_announcement",
     "document_stage": "requires_semantic_review",
     "source_ids": [
-      "us-doj-b3d27e1dc3"
+      "us-fda-5696b24295"
     ]
   },
   {
-    "n": 9136,
-    "title": "Maryland Brothers Sentenced for Tax Evasion",
-    "url": "https://www.justice.gov/usao-md/pr/maryland-brothers-sentenced-tax-evasion",
-    "published_at": "2026-11-06T12:00:00+00:00",
-    "official_issuer": "Department of Justice",
+    "n": 9159,
+    "title": "FDA approves alectinib as adjuvant treatment for ALK-positive non-small cell lung cancer",
+    "url": "http://www.fda.gov/drugs/cancer-approvals/fda-approves-alectinib-adjuvant-treatment-alk-positive-non-small-cell-lung-cancer",
+    "published_at": "2026-11-07T00:18:31+00:00",
+    "official_issuer": "Food and Drug Administration — What's New: Drugs",
     "document_type": "official_announcement",
     "document_stage": "requires_semantic_review",
     "source_ids": [
-      "us-doj-b3d27e1dc3"
+      "us-fda-5696b24295"
     ]
   },
   {
-    "n": 9137,
-    "title": "Justice Department Awards Jacksonville More Than $73M to Combat Violent Crime and Restore Law and Order Through Model Cities Initiative",
-    "url": "https://www.justice.gov/opa/pr/justice-department-awards-jacksonville-more-73m-combat-violent-crime-and-restore-law-and",
-    "published_at": "2026-11-06T12:00:00+00:00",
-    "official_issuer": "Department of Justice",
+    "n": 9160,
+    "title": "FDA approves amivantamab-vmjw with carboplatin and pemetrexed for non-small cell lung cancer with EGFR exon 19 deletions or L858R mutations",
+    "url": "http://www.fda.gov/drugs/cancer-approvals/fda-approves-amivantamab-vmjw-carboplatin-and-pemetrexed-non-small-cell-lung-cancer-egfr-exon-19",
+    "published_at": "2026-11-07T00:18:30+00:00",
+    "official_issuer": "Food and Drug Administration — What's New: Drugs",
     "document_type": "official_announcement",
     "document_stage": "requires_semantic_review",
     "source_ids": [
-      "us-doj-b3d27e1dc3",
-      "us-doj-e05071794d"
+      "us-fda-5696b24295"
     ]
   },
   {
-    "n": 9138,
-    "title": "Folsom man sentenced to 15 years in prison for sexual exploitation of a child",
-    "url": "https://www.justice.gov/usao-edca/pr/folsom-man-sentenced-15-years-prison-sexual-exploitation-child",
-    "published_at": "2026-11-06T12:00:00+00:00",
-    "official_issuer": "Department of Justice",
+    "n": 9161,
+    "title": "FDA approves amivantamab-vmjw for EGFR exon 20 insertion-mutated non-small cell lung cancer indications",
+    "url": "http://www.fda.gov/drugs/cancer-approvals/fda-approves-amivantamab-vmjw-egfr-exon-20-insertion-mutated-non-small-cell-lung-cancer-indications",
+    "published_at": "2026-11-07T00:18:29+00:00",
+    "official_issuer": "Food and Drug Administration — What's New: Drugs",
     "document_type": "official_announcement",
     "document_stage": "requires_semantic_review",
     "source_ids": [
-      "us-doj-b3d27e1dc3"
+      "us-fda-5696b24295"
     ]
   },
   {
-    "n": 9139,
-    "title": "Downtown Seattle drug dealer sentenced to five years in prison for having a gun while dealing crack cocaine",
-    "url": "https://www.justice.gov/usao-wdwa/pr/downtown-seattle-drug-dealer-sentenced-five-years-prison-having-gun-while-dealing",
-    "published_at": "2026-11-06T12:00:00+00:00",
-    "official_issuer": "Department of Justice",
+    "n": 9162,
+    "title": "FDA approves atezolizumab and hyaluronidase-tqjs for subcutaneous injection",
+    "url": "http://www.fda.gov/drugs/cancer-approvals/fda-approves-atezolizumab-and-hyaluronidase-tqjs-subcutaneous-injection",
+    "published_at": "2026-11-07T00:18:28+00:00",
+    "official_issuer": "Food and Drug Administration — What's New: Drugs",
     "document_type": "official_announcement",
     "document_stage": "requires_semantic_review",
     "source_ids": [
-      "us-doj-b3d27e1dc3"
+      "us-fda-5696b24295"
     ]
   },
   {
-    "n": 9140,
-    "title": "Omaha Man Sentenced to 50 Years for Production and Possession of Child Pornography",
-    "url": "https://www.justice.gov/usao-ne/pr/omaha-man-sentenced-50-years-production-and-possession-child-pornography",
-    "published_at": "2026-11-06T12:00:00+00:00",
-    "official_issuer": "Department of Justice",
+    "n": 9163,
+    "title": "FDA approves axatilimab-csfr for chronic graft-versus-host disease",
+    "url": "http://www.fda.gov/drugs/cancer-approvals/fda-approves-axatilimab-csfr-chronic-graft-versus-host-disease",
+    "published_at": "2026-11-07T00:18:27+00:00",
+    "official_issuer": "Food and Drug Administration — What's New: Drugs",
     "document_type": "official_announcement",
     "document_stage": "requires_semantic_review",
     "source_ids": [
-      "us-doj-b3d27e1dc3"
+      "us-fda-5696b24295"
     ]
   },
   {
-    "n": 9141,
-    "title": "Ferndale man sentenced to 121 months for distributing child pornography",
-    "url": "https://www.justice.gov/usao-edmi/pr/ferndale-man-sentenced-121-months-distributing-child-pornography",
-    "published_at": "2026-11-06T12:00:00+00:00",
-    "official_issuer": "Department of Justice",
+    "n": 9164,
+    "title": "FDA approves cosibelimab-ipdl for metastatic or locally advanced cutaneous squamous cell carcinoma",
+    "url": "http://www.fda.gov/drugs/cancer-approvals/fda-approves-cosibelimab-ipdl-metastatic-or-locally-advanced-cutaneous-squamous-cell-carcinoma",
+    "published_at": "2026-11-07T00:18:26+00:00",
+    "official_issuer": "Food and Drug Administration — What's New: Drugs",
     "document_type": "official_announcement",
     "document_stage": "requires_semantic_review",
     "source_ids": [
-      "us-doj-b3d27e1dc3"
+      "us-fda-5696b24295"
     ]
   },
   {
-    "n": 9142,
-    "title": "Illegal Immigrant Sentenced for Attempting to Have Sex with a Minor",
-    "url": "https://www.justice.gov/usao-ndny/pr/illegal-immigrant-sentenced-attempting-have-sex-minor",
-    "published_at": "2026-11-06T12:00:00+00:00",
-    "official_issuer": "Department of Justice",
+    "n": 9165,
+    "title": "FDA approves durvalumab for limited-stage small cell lung cancer",
+    "url": "http://www.fda.gov/drugs/cancer-approvals/fda-approves-durvalumab-limited-stage-small-cell-lung-cancer",
+    "published_at": "2026-11-07T00:18:25+00:00",
+    "official_issuer": "Food and Drug Administration — What's New: Drugs",
     "document_type": "official_announcement",
     "document_stage": "requires_semantic_review",
     "source_ids": [
-      "us-doj-b3d27e1dc3"
+      "us-fda-5696b24295"
     ]
   },
   {
-    "n": 9143,
-    "title": "Lincoln Man Sentenced to 70 Months for Being a Felon in Possession of a Firearm",
-    "url": "https://www.justice.gov/usao-ne/pr/lincoln-man-sentenced-70-months-being-felon-possession-firearm",
-    "published_at": "2026-11-06T12:00:00+00:00",
-    "official_issuer": "Department of Justice",
+    "n": 9166,
+    "title": "FDA approves ensartinib for ALK-positive locally advanced or metastatic non-small cell lung cancer",
+    "url": "http://www.fda.gov/drugs/cancer-approvals/fda-approves-ensartinib-alk-positive-locally-advanced-or-metastatic-non-small-cell-lung-cancer",
+    "published_at": "2026-11-07T00:18:24+00:00",
+    "official_issuer": "Food and Drug Administration — What's New: Drugs",
     "document_type": "official_announcement",
     "document_stage": "requires_semantic_review",
     "source_ids": [
-      "us-doj-b3d27e1dc3"
+      "us-fda-5696b24295"
     ]
   },
   {
-    "n": 9144,
-    "title": "Omaha Man Sentenced to 18 Years in Prison for Conspiring to Distribute Methamphetamine",
-    "url": "https://www.justice.gov/usao-ne/pr/omaha-man-sentenced-18-years-prison-conspiring-distribute-methamphetamine",
-    "published_at": "2026-11-06T12:00:00+00:00",
-    "official_issuer": "Department of Justice",
+    "n": 9167,
+    "title": "FDA approves erdafitinib for locally advanced or metastatic urothelial carcinoma",
+    "url": "http://www.fda.gov/drugs/cancer-approvals/fda-approves-erdafitinib-locally-advanced-or-metastatic-urothelial-carcinoma",
+    "published_at": "2026-11-07T00:18:23+00:00",
+    "official_issuer": "Food and Drug Administration — What's New: Drugs",
     "document_type": "official_announcement",
     "document_stage": "requires_semantic_review",
     "source_ids": [
-      "us-doj-b3d27e1dc3"
+      "us-fda-5696b24295"
     ]
   },
   {
-    "n": 9145,
-    "title": "Two Columbia Men Charged with Possession of Ammunition After Saturday Morning Shooting",
-    "url": "https://www.justice.gov/usao-wdmo/pr/two-columbia-men-charged-possession-ammunition-after-saturday-morning-shooting",
-    "published_at": "2026-11-06T12:00:00+00:00",
-    "official_issuer": "Department of Justice",
+    "n": 9168,
+    "title": "FDA approves inavolisib with palbociclib and fulvestrant for endocrine-resistant, PIK3CA-mutated, HR-positive, HER2-negative, advanced breast cancer",
+    "url": "http://www.fda.gov/drugs/cancer-approvals/fda-approves-inavolisib-palbociclib-and-fulvestrant-endocrine-resistant-pik3ca-mutated-hr-positive",
+    "published_at": "2026-11-07T00:18:22+00:00",
+    "official_issuer": "Food and Drug Administration — What's New: Drugs",
     "document_type": "official_announcement",
     "document_stage": "requires_semantic_review",
     "source_ids": [
-      "us-doj-b3d27e1dc3"
+      "us-fda-5696b24295"
     ]
   },
   {
-    "n": 9146,
-    "title": "Políticos, Empresarios Y Narcotraficantes Ecuatorianos Detenidos Por Delitos De Importación De Estupefacientes Y Armas",
-    "url": "https://www.justice.gov/usao-sdny/pr/politicos-empresarios-y-narcotraficantes-ecuatorianos-detenidos-por-delitos-de",
-    "published_at": "2026-11-06T12:00:00+00:00",
-    "official_issuer": "Department of Justice",
+    "n": 9169,
+    "title": "FDA approves inotuzumab ozogamicin for pediatric patients with acute lymphoblastic leukemia",
+    "url": "http://www.fda.gov/drugs/cancer-approvals/fda-approves-inotuzumab-ozogamicin-pediatric-patients-acute-lymphoblastic-leukemia",
+    "published_at": "2026-11-07T00:18:21+00:00",
+    "official_issuer": "Food and Drug Administration — What's New: Drugs",
     "document_type": "official_announcement",
     "document_stage": "requires_semantic_review",
     "source_ids": [
-      "us-doj-b3d27e1dc3"
+      "us-fda-5696b24295"
     ]
   },
   {
-    "n": 9147,
-    "title": "Peoria Man Sentenced to 42 Months in Prison for Possession of a Firearm",
-    "url": "https://www.justice.gov/usao-cdil/pr/peoria-man-sentenced-42-months-prison-possession-firearm",
-    "published_at": "2026-11-06T12:00:00+00:00",
-    "official_issuer": "Department of Justice",
+    "n": 9170,
+    "title": "FDA approves irinotecan liposome for first-line treatment of metastatic pancreatic adenocarcinoma",
+    "url": "http://www.fda.gov/drugs/cancer-approvals/fda-approves-irinotecan-liposome-first-line-treatment-metastatic-pancreatic-adenocarcinoma",
+    "published_at": "2026-11-07T00:18:20+00:00",
+    "official_issuer": "Food and Drug Administration — What's New: Drugs",
     "document_type": "official_announcement",
     "document_stage": "requires_semantic_review",
     "source_ids": [
-      "us-doj-b3d27e1dc3"
+      "us-fda-5696b24295"
     ]
   },
   {
-    "n": 9148,
-    "title": "Boise Man Sentenced To 15 Years in Federal Prison for Producing Child Sexual Abuse Material",
-    "url": "https://www.justice.gov/usao-id/pr/boise-man-sentenced-15-years-federal-prison-producing-child-sexual-abuse-material",
-    "published_at": "2026-11-06T12:00:00+00:00",
-    "official_issuer": "Department of Justice",
+    "n": 9171,
+    "title": "FDA approves isatuximab-irfc with bortezomib, lenalidomide, and dexamethasone for newly diagnosed multiple myeloma",
+    "url": "http://www.fda.gov/drugs/cancer-approvals/fda-approves-isatuximab-irfc-bortezomib-lenalidomide-and-dexamethasone-newly-diagnosed-multiple",
+    "published_at": "2026-11-07T00:18:19+00:00",
+    "official_issuer": "Food and Drug Administration — What's New: Drugs",
     "document_type": "official_announcement",
     "document_stage": "requires_semantic_review",
     "source_ids": [
-      "us-doj-b3d27e1dc3"
+      "us-fda-5696b24295"
     ]
   },
   {
-    "n": 9149,
-    "title": "AG Blanche and Florida Officials Announce Jacksonville as Winner of the Model Cities Initiative",
-    "url": "https://www.justice.gov/opa/video/ag-blanche-and-florida-officials-announce-jacksonville-winner-model-cities-initiative",
-    "published_at": "2026-11-06T12:00:00+00:00",
-    "official_issuer": "Department of Justice — RSS Feed",
+    "n": 9172,
+    "title": "FDA approves lazertinib with amivantamab-vmjw for non-small lung cancer",
+    "url": "http://www.fda.gov/drugs/cancer-approvals/fda-approves-lazertinib-amivantamab-vmjw-non-small-lung-cancer",
+    "published_at": "2026-11-07T00:18:18+00:00",
+    "official_issuer": "Food and Drug Administration — What's New: Drugs",
     "document_type": "official_announcement",
     "document_stage": "requires_semantic_review",
     "source_ids": [
-      "us-doj-e05071794d"
+      "us-fda-5696b24295"
     ]
   },
   {
-    "n": 9150,
-    "title": "Statement of the Department of Justice Antitrust Division on the Closing of Its Investigation of the Merger of FOX and Roku",
-    "url": "https://www.justice.gov/opa/pr/statement-department-justice-antitrust-division-closing-its-investigation-merger-fox-and",
-    "published_at": "2026-11-06T12:00:00+00:00",
-    "official_issuer": "Department of Justice — RSS Feed",
+    "n": 9173,
+    "title": "FDA approves lutetium Lu 177 dotatate for pediatric patients 12 years and older with GEP-NETS",
+    "url": "http://www.fda.gov/drugs/cancer-approvals/fda-approves-lutetium-lu-177-dotatate-pediatric-patients-12-years-and-older-gep-nets",
+    "published_at": "2026-11-07T00:18:17+00:00",
+    "official_issuer": "Food and Drug Administration — What's New: Drugs",
     "document_type": "official_announcement",
     "document_stage": "requires_semantic_review",
     "source_ids": [
-      "us-doj-e05071794d"
+      "us-fda-5696b24295"
     ]
   },
   {
-    "n": 9151,
-    "title": "ITVISMA",
-    "url": "http://www.fda.gov/vaccines-blood-biologics/cellular-gene-therapy-products/itvisma",
-    "published_at": "2026-11-07T01:19:01+00:00",
-    "official_issuer": "Food and Drug Administration — What's New: Vaccines, Blood and Biologics",
+    "n": 9174,
+    "title": "FDA approves acalabrutinib with bendamustine and rituximab for previously untreated mantle cell lymphoma",
+    "url": "http://www.fda.gov/drugs/cancer-approvals/fda-approves-acalabrutinib-bendamustine-and-rituximab-previously-untreated-mantle-cell-lymphoma",
+    "published_at": "2026-11-07T00:02:45+00:00",
+    "official_issuer": "Food and Drug Administration — What's New: Drugs",
     "document_type": "official_announcement",
     "document_stage": "requires_semantic_review",
     "source_ids": [
-      "us-fda-03f7703006"
+      "us-fda-5696b24295"
     ]
   },
   {
-    "n": 9152,
-    "title": "ZOLGENSMA",
-    "url": "http://www.fda.gov/vaccines-blood-biologics/zolgensma",
-    "published_at": "2026-11-07T01:17:48+00:00",
-    "official_issuer": "Food and Drug Administration — What's New: Vaccines, Blood and Biologics",
+    "n": 9175,
+    "title": "FDA approves amivantamab and hyaluronidase-lpuj for subcutaneous injection",
+    "url": "http://www.fda.gov/drugs/cancer-approvals/fda-approves-amivantamab-and-hyaluronidase-lpuj-subcutaneous-injection",
+    "published_at": "2026-11-07T00:02:44+00:00",
+    "official_issuer": "Food and Drug Administration — What's New: Drugs",
     "document_type": "official_announcement",
     "document_stage": "requires_semantic_review",
     "source_ids": [
-      "us-fda-03f7703006"
+      "us-fda-5696b24295"
     ]
   },
   {
-    "n": 9153,
-    "title": "FDA Investigating Serious Risk of Malignancy Linked to Zolgensma Gene Therapy",
-    "url": "http://www.fda.gov/vaccines-blood-biologics/safety-availability-biologics/fda-investigating-serious-risk-malignancy-linked-zolgensma-gene-therapy",
-    "published_at": "2026-11-07T01:02:22+00:00",
-    "official_issuer": "Food and Drug Administration — What's New: Vaccines, Blood and Biologics",
+    "n": 9176,
+    "title": "FDA approves belantamab mafodotin-blmf for relapsed or refractory multiple myeloma",
+    "url": "http://www.fda.gov/drugs/cancer-approvals/fda-approves-belantamab-mafodotin-blmf-relapsed-or-refractory-multiple-myeloma",
+    "published_at": "2026-11-07T00:02:43+00:00",
+    "official_issuer": "Food and Drug Administration — What's New: Drugs",
     "document_type": "official_announcement",
     "document_stage": "requires_semantic_review",
     "source_ids": [
-      "us-fda-03f7703006"
+      "us-fda-5696b24295"
     ]
   },
   {
-    "n": 9155,
-    "title": "Senior Manager Product Development and Management PD 2025 - Reserve Bank of New Zealand",
-    "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNbk5mRzVqdjh6WUctUmJHV2h0Zm9xc1YxZnBJSjNHZHRXNGhFZzN3dGt2ZkstQ1RUM0FTR2JFVUtodW02NFBReWdzajFTUmZZdmhnMWY3c3hCVzNRbXpKZWFmOU03VUNyeHN0VmpHOVh3VUJZMWFVSFRETUgzTUpOd1M4b0RfLUdteGgxTVhwTktoYzczSHdQb0lFVG1kdGw4MlN2VHNQOVNMZl9DRG5UUFJYSjk2RTY4SXpnS2JrYk1WSHY1",
-    "published_at": "2026-11-06T06:59:40+00:00",
-    "official_issuer": "Reserve Bank of New Zealand (official-site news mirror)",
+    "n": 9177,
+    "title": "Christine Lagarde: Interview with Yomiuri Shimbun",
+    "url": "https://www.ecb.europa.eu//press/inter/date/2026/html/ecb.in261107~e7b86fc4ce.en.html",
+    "published_at": "2026-11-07T14:00:00+00:00",
+    "official_issuer": "European Central Bank",
     "document_type": "official_announcement",
     "document_stage": "requires_semantic_review",
     "source_ids": [
-      "nz-rbnz-gnews"
+      "eu-ecb-991c113079"
     ]
   }
 ]

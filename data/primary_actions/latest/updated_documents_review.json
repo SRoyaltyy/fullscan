@@ -1,98 +1,26 @@
 [
   {
-    "title": "What’s New for Biologics",
-    "url": "http://www.fda.gov/vaccines-blood-biologics/news-events-biologics/whats-new-biologics",
-    "native_id": "http://www.fda.gov/vaccines-blood-biologics/news-events-biologics/whats-new-biologics",
-    "published_at": "2026-11-07T01:15:31+00:00",
-    "published_raw": "Fri, 06 Nov 2026 20:15:31 EST",
-    "summary": "Latest news from the Center for Biologics Evaluation and Research",
+    "title": "Master Directions on Cyber Resilience and Digital Payment Security Controls for non-bank Payment System Operators",
+    "url": "https://www.rbi.org.in/scripts/NotificationUser.aspx?Id=13751&Mode=0",
+    "native_id": "https://www.rbi.org.in/scripts/NotificationUser.aspx?Id=13751&Mode=0",
+    "published_at": "2026-11-05T18:20:00+00:00",
+    "published_raw": "Thu, 05 Nov 2026 18:20:00",
+    "summary": "RBI/DPSS/2026-27/475 CO.DPSS.CSD.No.S825/01-01-078/2026-2027 November 05, 2026 The Chairman / Managing Director / Chief Executive Officer Authorised Non-bank Payment System Operators Madam / Dear Sir, Master Directions on Cyber Resilience and Digital Payment Security Controls for non-bank Payment System Operators The safety and security of payment systems is a key objective of the Reserve Bank of India (RBI). To ensure that the authorised non-bank Payment System Operators (PSOs) are resilient to existing and emerging information systems and cyber security risks, RBI issued Master Directions on Cyber Resilience and Digital Payment Security Controls for non-bank Payment System Operators on July 30, 2024 . In order to provide a single reference point for the entities, it has been decided to consolidate the directions listed below, issued from time to time on the subject, into a single Master Direction on Cyber Resilience and Digital Payment Security Controls for non-bank Payment System Operators. 2. The following guidelines have been consolidated under the revised Master Directions: a) Cyber Security controls for Third party ATM Switch Application Service Providers, RBI/2019-20/130/Do",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Food and Drug Administration — What's New: Vaccines, Blood and Biologics",
-      "jurisdiction": "US",
-      "family": "product_permissions_and_safety"
+      "issuer": "Reserve Bank of India",
+      "jurisdiction": "IN",
+      "family": "monetary_and_supervisory"
     },
-    "primary_source_id": "us-fda-03f7703006",
-    "n": 1413,
-    "first_seen": "2026-10-15T10:17:11.133023+00:00",
-    "last_seen": "2026-11-07T07:13:47.398646+00:00",
+    "primary_source_id": "in-rbi-738b09bded",
+    "n": 8867,
+    "first_seen": "2026-11-05T20:41:39.999913+00:00",
+    "last_seen": "2026-11-07T18:05:37.591369+00:00",
     "source_ids": [
-      "us-fda-03f7703006"
-    ]
-  },
-  {
-    "title": "2026 Safety and Availability Communications",
-    "url": "http://www.fda.gov/vaccines-blood-biologics/safety-availability-biologics/2026-safety-and-availability-communications",
-    "native_id": "http://www.fda.gov/vaccines-blood-biologics/safety-availability-biologics/2026-safety-and-availability-communications",
-    "published_at": "2026-11-07T01:16:27+00:00",
-    "published_raw": "Fri, 06 Nov 2026 20:16:27 EST",
-    "summary": "Listing of 2026 Safety and Availability Communications",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Food and Drug Administration — What's New: Vaccines, Blood and Biologics",
-      "jurisdiction": "US",
-      "family": "product_permissions_and_safety"
-    },
-    "primary_source_id": "us-fda-03f7703006",
-    "n": 6129,
-    "first_seen": "2026-10-22T17:59:58.860252+00:00",
-    "last_seen": "2026-11-07T07:13:47.398646+00:00",
-    "source_ids": [
-      "us-fda-03f7703006"
-    ]
-  },
-  {
-    "title": "DCPD-202600671 - Remarks at a Campaign Rally for Alabama Republican Candidates in Mobile, Alabama",
-    "url": "https://www.govinfo.gov/app/details/DCPD-202600671",
-    "native_id": "DCPD-202600671",
-    "published_at": "2026-11-06T21:37:00+00:00",
-    "published_raw": "Fri, 06 Nov 2026 21:37:00 +0000",
-    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "presidential_document",
-      "document_stage": "presidential_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Compilation of Presidential Documents",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-dcpd",
-    "n": 8888,
-    "first_seen": "2026-11-06T07:57:02.134140+00:00",
-    "last_seen": "2026-11-07T07:13:47.398646+00:00",
-    "source_ids": [
-      "us-govinfo-dcpd"
-    ]
-  },
-  {
-    "title": "DCPD-202600673 - Remarks at a Campaign Rally for Ohio Republican Candidates in Vandalia, Ohio",
-    "url": "https://www.govinfo.gov/app/details/DCPD-202600673",
-    "native_id": "DCPD-202600673",
-    "published_at": "2026-11-06T21:34:00+00:00",
-    "published_raw": "Fri, 06 Nov 2026 21:34:00 +0000",
-    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "presidential_document",
-      "document_stage": "presidential_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Compilation of Presidential Documents",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-dcpd",
-    "n": 8889,
-    "first_seen": "2026-11-06T07:57:02.134140+00:00",
-    "last_seen": "2026-11-07T07:13:47.398646+00:00",
-    "source_ids": [
-      "us-govinfo-dcpd"
+      "in-rbi-738b09bded"
     ]
   }
 ]

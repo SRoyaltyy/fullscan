@@ -1,21 +1,21 @@
 {
  "date": "2026-11-07",
- "generated_at": "2026-11-07T07:14:25.298501+00:00",
+ "generated_at": "2026-11-07T18:05:58.278766+00:00",
  "catalog": {
-  "generated_at": "2026-10-31T17:46:18.945180+00:00",
+  "generated_at": "2026-11-07T18:03:52.345238+00:00",
   "channels": 365,
-  "enabled": 119,
+  "enabled": 117,
   "verified_ok": 109,
   "by_adapter": {
    "federal_register": 1,
    "hkma_press": 1,
    "govuk_search": 9,
-   "rss": 95,
+   "rss": 93,
    "html_index": 11,
    "google_news_rss": 2
   },
   "by_jurisdiction": {
-   "US": 66,
+   "US": 64,
    "UK": 11,
    "CA": 11,
    "EU": 7,
@@ -34,48 +34,43 @@
   }
  },
  "collect": {
-  "generated_at": "2026-11-07T07:13:47.398646+00:00",
-  "enabled_sources": 119,
+  "generated_at": "2026-11-07T18:05:37.591369+00:00",
+  "enabled_sources": 117,
   "sources_ok": 117,
-  "sources_failed": 2,
+  "sources_failed": 0,
   "coverage_status": "degraded",
   "counts": {
-   "observed": 1904,
-   "old": 1199,
-   "future": 11,
-   "undated": 269,
-   "new": 37,
-   "duplicates": 657
+   "observed": 1691,
+   "old": 1129,
+   "future": 1,
+   "undated": 207,
+   "new": 22,
+   "duplicates": 539
   },
-  "current_dated_documents": 596
+  "current_dated_documents": 528
  },
  "new_today": {
-  "count": 37,
+  "count": 22,
   "by_source": {
-   "us-doj-b3d27e1dc3": 15,
-   "us-govinfo-bills": 7,
-   "us-govinfo-dcpd": 7,
-   "us-fda-03f7703006": 3,
-   "us-doj-e05071794d": 2,
-   "us-ftc-58b0383166": 1,
-   "us-fcc-e95ecda3bb": 1,
-   "nz-rbnz-gnews": 1
+   "us-fda-5696b24295": 20,
+   "us-occ-6f63126133": 1,
+   "eu-ecb-991c113079": 1
   },
   "by_class": {
-   "routine": 14,
-   "high": 3,
-   "docket": 9,
-   "watch": 11
+   "routine": 1,
+   "high": 20,
+   "watch": 1
   }
  },
  "parsed_today": {
-  "count": 12,
+  "count": 33,
   "by_class": {
    "routine": 7,
-   "watch": 5
+   "high": 20,
+   "watch": 6
   }
  },
- "n_failures": 2,
+ "n_failures": 0,
  "dates": [
   "2026-11-07"
  ],
