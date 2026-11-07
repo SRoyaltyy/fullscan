@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 4 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · top 4 by cond
 
-Cash book **-8.64%** ($9,136) · signal-only (no cash/fees) was -7.67%. Starts YES **1/30**. Fills 171 · skips 159 · realized $-515.67.
+Cash book **-8.65%** ($9,135) · signal-only (no cash/fees) was -7.67%. Starts YES **1/30**. Fills 174 · skips 159 · realized $-515.67.
 
 ## How this sleeve decides (like you are 10)
 
@@ -362,6 +362,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-05 09:30 ET | **BUY** | `AMX` | 87 | $25.12 | $2.25 | — | $2,276.94 | — | top 4 by cond; rank cond; list yday_gainer; ret5=+4.6; leftover $2209.72 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-11-05 09:30 ET | **BUY** | `SPOT` | 3 | $635.00 | $2.00 | — | $369.94 | — | top 4 by cond; rank cond; list ohlc_hot; ret5=+16.6; leftover $2209.72 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-11-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $369.94 | ▼ close $9,136.13 vs 09:30 $9,576.78 (session -417.93) | 16:00 close · cash $369.94 · equity $9,136.13 vs 09:30 $9,576.78 (-440.65; session marks -417.93) · 6 name(s) marked open→close (per-name table). CNMD×7 09:30 $54.40 → close $52.83 -10.99; CON×8 09:30 $43.57 → close $42.15 -11.36; TRU×26 09:30 $82.95 → close $82.91 -1.04; AMC×609 09:30 $3.62 → close $3.08 -331.90; AMX×87 09:30 $25.12 → close $25.11 -0.87; SPOT×3 09:30 $635.00 → close $614.41 -61.77 | — |
+| 2026-11-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $369.94 | ▼ 09:30 equity $8,977.19 vs yday $9,136.13 (-158.94) | 09:30 open · cash $369.94 (unchanged overnight, no fees) · equity $8,977.19 vs prior close $9,136.13 (-158.94) · 6 name(s) re-marked at the open (per-name table). AMC×609 yday $3.08 → 09:30 $3.13 +30.45; AMX×87 yday $25.11 → 09:30 $24.90 -18.27; CNMD×7 yday $52.83 → 09:30 $51.11 -12.04; CON×8 yday $42.15 → 09:30 $41.60 -4.40; SPOT×3 yday $614.41 → 09:30 $592.23 -66.54; TRU×26 yday $82.91 → 09:30 $79.52 -88.14 | — |
+| 2026-11-06 09:30 ET | **BUY** | `GPK` | 8 | $11.30 | $0.93 | — | $278.61 | — | top 4 by cond; rank cond; list flatten; 🔵; ret5=+31.0; leftover $92.48 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-06 09:30 ET | **BUY** | `YELP` | 4 | $18.50 | $0.75 | — | $203.86 | — | top 4 by cond; rank cond; list earn_react; 🔵; ret5=+8.2; leftover $92.48 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-06 09:30 ET | **BUY** | `ANGI` | 12 | $7.20 | $0.90 | — | $116.56 | — | top 4 by cond; rank cond; list yday_gainer; 🔵; ret5=+21.6; leftover $92.48 | join🟢 sector🟡 gen🔴 news🔴 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $116.56 | ▲ close $9,134.83 vs 09:30 $8,977.19 (session +160.22) | 16:00 close · cash $116.56 · equity $9,134.83 vs 09:30 $8,977.19 (+157.64; session marks +160.22) · 9 name(s) marked open→close (per-name table). AMC×609 09:30 $3.13 → close $3.14 +6.09; AMX×87 09:30 $24.90 → close $25.72 +71.34; CNMD×7 09:30 $51.11 → close $51.50 +2.73; CON×8 09:30 $41.60 → close $42.22 +4.96; SPOT×3 09:30 $592.23 → close $603.01 +32.34; TRU×26 09:30 $79.52 → close $81.18 +43.16; GPK×8 09:30 $11.30 → close $11.19 -0.88; YELP×4 09:30 $18.50 → close $19.46 +3.84; ANGI×12 09:30 $7.20 → close $6.92 -3.36 | — |
 
 ## Not taken
 

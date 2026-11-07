@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ flow_in, no 🚨
 
-Cash book **+14.56%** ($11,456) · signal-only (no cash/fees) was +17.31%. Starts YES **6/30**. Fills 133 · skips 27 · realized $+766.09.
+Cash book **+15.54%** ($11,554) · signal-only (no cash/fees) was +17.31%. Starts YES **6/30**. Fills 142 · skips 27 · realized $+766.09.
 
 ## How this sleeve decides (like you are 10)
 
@@ -325,6 +325,17 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-05 09:30 ET | **SELL** | `RKT` | 395 | $14.97 | $5.21 | $+256.32 | $9,959.50 | ▲ +256.32 after sell → book $9,959.50; vs 09:30 mark -5.21 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-05 09:30 ET | **BUY** | `ENHA` | 1402 | $7.09 | $18.09 | — | $1.23 | — | union ∩ flow_in, no 🚨; gate flow_in=True; list yday_mover; ret5=-38.7; leftover $9959.50 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 heat🟢 vol🟡 buy🟡 |
 | 2026-11-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1.23 | ▲ close $11,455.57 vs 09:30 $9,983.26 (session +1,514.16) | 16:00 close · cash $1.23 · equity $11,455.57 vs 09:30 $9,983.26 (+1472.31; session marks +1514.16) · 1 name(s) marked open→close (per-name table). ENHA×1402 09:30 $7.09 → close $8.17 +1514.16 | — |
+| 2026-11-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $1.23 | ▼ 09:30 equity $11,413.51 vs yday $11,455.57 (-42.06) | 09:30 open · cash $1.23 (unchanged overnight, no fees) · equity $11,413.51 vs prior close $11,455.57 (-42.06) · 1 name(s) re-marked at the open (per-name table). ENHA×1402 yday $8.17 → 09:30 $8.14 -42.06 | — |
+| 2026-11-06 09:30 ET | **SELL** | `ENHA` | 1402 | $8.14 | $18.41 | $+1435.60 | $11,395.10 | ▲ +1,435.60 after sell → book $11,395.10; vs 09:30 mark -18.41 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-06 09:30 ET | **BUY** | `PCOR` | 19 | $73.99 | $2.05 | — | $9,987.24 | — | union ∩ flow_in, no 🚨; gate flow_in=True; list yday_gainer; 🔵; ret5=+23.7; leftover $1424.39 | join🔴 sector🟡 gen🔴 news🟢 digest🔴 ab🟡 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `SMRT` | 895 | $1.59 | $11.55 | — | $8,552.65 | — | union ∩ flow_in, no 🚨; gate flow_in=True; list yday_gainer; 🔵; ret5=+17.5; leftover $1424.39 | join🔴 sector🟡 gen🔴 news🟡 digest🔴 ab🟡 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `SRTA` | 272 | $5.23 | $3.51 | — | $7,126.58 | — | union ∩ flow_in, no 🚨; gate flow_in=True; list yday_gainer; ret5=+10.7; leftover $1424.39 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `DOX` | 33 | $42.62 | $2.09 | — | $5,718.03 | — | union ∩ flow_in, no 🚨; gate flow_in=True; list yday_mover; ret5=-29.6; leftover $1424.39 | join🔴 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `JBTM` | 11 | $125.60 | $2.02 | — | $4,334.41 | — | union ∩ flow_in, no 🚨; gate flow_in=True; list ohlc_hot; 🔵; ret5=+14.8; leftover $1424.39 | join🟡 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `AEE` | 12 | $112.14 | $2.03 | — | $2,986.70 | — | union ∩ flow_in, no 🚨; gate flow_in=True; list earn_react; 🔵; ret5=+2.4; leftover $1424.39 | join🟢 sector🟡 gen🔴 news🔴 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `AQN` | 257 | $5.54 | $3.32 | — | $1,559.61 | — | union ∩ flow_in, no 🚨; gate flow_in=True; list earn_react; 🔵; ret5=+3.9; leftover $1424.39 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `BIP` | 37 | $37.92 | $2.10 | — | $154.46 | — | union ∩ flow_in, no 🚨; gate flow_in=True; list earn_react; ret5=+1.3; leftover $1424.39 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟡 heat🔴 vol🟢 buy🟡 |
+| 2026-11-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $154.46 | ▲ close $11,554.41 vs 09:30 $11,413.51 (session +187.97) | 16:00 close · cash $154.46 · equity $11,554.41 vs 09:30 $11,413.51 (+140.90; session marks +187.97) · 8 name(s) marked open→close (per-name table). PCOR×19 09:30 $73.99 → close $75.33 +25.46; SMRT×895 09:30 $1.59 → close $1.59 +0.00; SRTA×272 09:30 $5.23 → close $5.56 +89.76; DOX×33 09:30 $42.62 → close $42.09 -17.49; JBTM×11 09:30 $125.60 → close $128.35 +30.25; AEE×12 09:30 $112.14 → close $112.85 +8.52; AQN×257 09:30 $5.54 → close $5.52 -5.14; BIP×37 09:30 $37.92 → close $39.45 +56.61 | — |
 
 ## Not taken
 

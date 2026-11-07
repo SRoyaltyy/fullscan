@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 4 · rank `cond` · size `conviction` · sell `list` · S-boost `none` · merged news🟢 rank cameras; 70% leftover if #1 net ≥ 5
 
-Cash book **-37.40%** ($6,260) · signal-only (no cash/fees) was +13.54%. Starts YES **26/30**. Fills 217 · skips 51 · realized $+1398.96.
+Cash book **-32.72%** ($6,728) · signal-only (no cash/fees) was +13.54%. Starts YES **26/30**. Fills 224 · skips 51 · realized $+1398.96.
 
 ## How this sleeve decides (like you are 10)
 
@@ -410,6 +410,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-05 09:30 ET | **BUY** | `STUB` | 543 | $6.56 | $7.00 | — | $1,777.28 | — | merged news🟢 rank cameras; 70% leftover if #1 net ≥ 5; gate news=good; rank cond; list ohlc_hot; ret5=+17.7; leftover $3564.25 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟡 heat🟢 vol🔴 buy🟡 |
 | 2026-11-05 09:30 ET | **BUY** | `MVST` | 2614 | $0.67 | $25.36 | — | $0.55 | — | merged news🟢 rank cameras; 70% leftover if #1 net ≥ 5; gate news=good; rank cond; list ohlc_hot; ret5=+7.2; leftover $1782.12 | join🟢 sector🔴 gen🔴 news🟢 digest🟢 ab🔴 peer🔴 heat🔴 vol🔴 buy🟡 |
 | 2026-11-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $0.55 | ▼ close $6,260.22 vs 09:30 $6,725.66 (session -419.21) | 16:00 close · cash $0.55 · equity $6,260.22 vs 09:30 $6,725.66 (-465.44; session marks -419.21) · 3 name(s) marked open→close (per-name table). TBBB×21 09:30 $65.02 → close $64.21 -17.01; STUB×543 09:30 $6.56 → close $6.28 -152.04; MVST×2614 09:30 $0.67 → close $0.57 -250.16 | — |
+| 2026-11-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $0.55 | ▲ 09:30 equity $6,280.97 vs yday $6,260.22 (+20.75) | 09:30 open · cash $0.55 (unchanged overnight, no fees) · equity $6,280.97 vs prior close $6,260.22 (+20.75) · 3 name(s) re-marked at the open (per-name table). MVST×2614 yday $0.57 → 09:30 $0.60 +67.18; STUB×543 yday $6.28 → 09:30 $6.18 -54.30; TBBB×21 yday $64.21 → 09:30 $64.58 +7.88 | — |
+| 2026-11-06 09:30 ET | **SELL** | `MVST` | 2614 | $0.60 | $23.97 | $-232.31 | $1,544.98 | ▼ -232.31 after sell → book $6,257.00; vs 09:30 mark -23.97 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-06 09:30 ET | **SELL** | `STUB` | 543 | $6.18 | $7.12 | $-220.47 | $4,893.60 | ▼ -220.47 after sell → book $6,249.88; vs 09:30 mark -7.12 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-06 09:30 ET | **SELL** | `TBBB` | 21 | $64.58 | $2.07 | $+13.62 | $6,247.81 | ▲ +13.62 after sell → book $6,247.81; vs 09:30 mark -2.07 | dropped from list after 2 sess (min 1) | — |
+| 2026-11-06 09:30 ET | **BUY** | `APP` | 12 | $355.95 | $2.03 | — | $1,974.38 | — | merged news🟢 rank cameras; 70% leftover if #1 net ≥ 5; gate news=good; rank cond; list flatten; 🔵; ret5=+39.7; leftover $4373.46 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `LIVN` | 6 | $90.08 | $2.01 | — | $1,431.86 | — | merged news🟢 rank cameras; 70% leftover if #1 net ≥ 5; gate news=good; rank cond; list yday_gainer; 🔵; ret5=+12.2; leftover $624.78 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `MNST` | 14 | $44.04 | $2.03 | — | $813.27 | — | merged news🟢 rank cameras; 70% leftover if #1 net ≥ 5; gate news=good; rank cond; list earn_react; 🔵; ret5=+3.2; leftover $624.78 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `REPL` | 30 | $20.20 | $2.08 | — | $205.19 | — | merged news🟢 rank cameras; 70% leftover if #1 net ≥ 5; gate news=good; rank cond; list ohlc_hot; 🔵; ret5=+15.1; leftover $624.78 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $205.19 | ▲ close $6,728.45 vs 09:30 $6,280.97 (session +488.79) | 16:00 close · cash $205.19 · equity $6,728.45 vs 09:30 $6,280.97 (+447.48; session marks +488.79) · 4 name(s) marked open→close (per-name table). APP×12 09:30 $355.95 → close $391.22 +423.24; LIVN×6 09:30 $90.08 → close $89.99 -0.57; MNST×14 09:30 $44.04 → close $45.72 +23.52; REPL×30 09:30 $20.20 → close $21.62 +42.60 | — |
 
 ## Not taken
 

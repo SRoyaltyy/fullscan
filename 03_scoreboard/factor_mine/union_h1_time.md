@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `time` · S-boost `none` · sell at min-hold even if still listed
 
-Cash book **-23.26%** ($7,674) · signal-only (no cash/fees) was -0.80%. Starts YES **0/30**. Fills 548 · skips 108 · realized $-163.09.
+Cash book **-24.81%** ($7,519) · signal-only (no cash/fees) was -0.80%. Starts YES **0/30**. Fills 564 · skips 108 · realized $-163.09.
 
 ## How this sleeve decides (like you are 10)
 
@@ -736,6 +736,24 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-05 09:30 ET | **BUY** | `SMMT` | 61 | $16.10 | $2.17 | — | $1,217.14 | — | sell at min-hold even if still listed; list probable,yday_gainer,yday_mover; ret5=+2.5; leftover $991.63 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-11-05 09:30 ET | **BUY** | `PRMB` | 46 | $21.55 | $2.13 | — | $223.72 | — | sell at min-hold even if still listed; list probable,yday_gainer,yday_mover; ret5=+8.8; leftover $991.63 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-11-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $223.72 | ▼ close $7,674.23 vs 09:30 $7,947.42 (session -242.06) | 16:00 close · cash $223.72 · equity $7,674.23 vs 09:30 $7,947.42 (-273.19; session marks -242.06) · 8 name(s) marked open→close (per-name table). CSGP×29 09:30 $33.11 → close $32.05 -30.74; CMCSA×39 09:30 $25.10 → close $24.95 -5.85; CLX×9 09:30 $99.88 → close $99.70 -1.62; COCO×14 09:30 $67.15 → close $63.63 -49.28; CROX×6 09:30 $160.00 → close $152.93 -42.42; GPK×83 09:30 $11.82 → close $11.54 -23.24; SMMT×61 09:30 $16.10 → close $14.19 -116.51; PRMB×46 09:30 $21.55 → close $22.15 +27.60 | — |
+| 2026-11-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $223.72 | ▼ 09:30 equity $7,546.18 vs yday $7,674.23 (-128.05) | 09:30 open · cash $223.72 (unchanged overnight, no fees) · equity $7,546.18 vs prior close $7,674.23 (-128.05) · 8 name(s) re-marked at the open (per-name table). CLX×9 yday $99.70 → 09:30 $96.74 -26.64; CMCSA×39 yday $24.95 → 09:30 $24.21 -28.86; COCO×14 yday $63.63 → 09:30 $62.29 -18.76; CROX×6 yday $152.93 → 09:30 $150.37 -15.36; CSGP×29 yday $32.05 → 09:30 $30.80 -36.25; GPK×83 yday $11.54 → 09:30 $11.30 -19.92; PRMB×46 yday $22.15 → 09:30 $21.74 -18.86; SMMT×61 yday $14.19 → 09:30 $14.79 +36.60 | — |
+| 2026-11-06 09:30 ET | **SELL** | `CLX` | 9 | $96.74 | $2.04 | $-32.31 | $1,092.34 | ▼ -32.31 after sell → book $7,544.14; vs 09:30 mark -2.04 | time-stop after 1 sess (min 1) | — |
+| 2026-11-06 09:30 ET | **SELL** | `CMCSA` | 39 | $24.21 | $2.13 | $-38.94 | $2,034.41 | ▼ -38.94 after sell → book $7,542.02; vs 09:30 mark -2.12 | time-stop after 1 sess (min 1) | — |
+| 2026-11-06 09:30 ET | **SELL** | `COCO` | 14 | $62.29 | $2.05 | $-72.12 | $2,904.41 | ▼ -72.12 after sell → book $7,539.96; vs 09:30 mark -2.06 | time-stop after 1 sess (min 1) | — |
+| 2026-11-06 09:30 ET | **SELL** | `CROX` | 6 | $150.37 | $2.03 | $-61.82 | $3,804.61 | ▼ -61.82 after sell → book $7,537.94; vs 09:30 mark -2.02 | time-stop after 1 sess (min 1) | — |
+| 2026-11-06 09:30 ET | **SELL** | `CSGP` | 29 | $30.80 | $2.10 | $-71.16 | $4,695.71 | ▼ -71.16 after sell → book $7,535.84; vs 09:30 mark -2.10 | time-stop after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟢 |
+| 2026-11-06 09:30 ET | **SELL** | `GPK` | 83 | $11.30 | $2.26 | $-47.66 | $5,631.35 | ▼ -47.66 after sell → book $7,533.58; vs 09:30 mark -2.26 | time-stop after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-06 09:30 ET | **SELL** | `PRMB` | 46 | $21.74 | $2.15 | $+4.46 | $6,629.24 | ▲ +4.46 after sell → book $7,531.43; vs 09:30 mark -2.15 | time-stop after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **SELL** | `SMMT` | 61 | $14.79 | $2.19 | $-84.28 | $7,529.24 | ▼ -84.28 after sell → book $7,529.24; vs 09:30 mark -2.19 | time-stop after 1 sess (min 1) | — |
+| 2026-11-06 09:30 ET | **BUY** | `APP` | 2 | $355.95 | $2.00 | — | $6,815.34 | — | sell at min-hold even if still listed; list flatten; 🔵; ret5=+39.7; leftover $941.15 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `CSGP` | 30 | $30.80 | $2.08 | — | $5,889.26 | — | sell at min-hold even if still listed; list flatten; 🔵; ret5=+13.9; leftover $941.15 | join🟢 sector🟡 gen🔴 news🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟢 |
+| 2026-11-06 09:30 ET | **BUY** | `TMUS` | 6 | $155.61 | $2.01 | — | $4,953.59 | — | sell at min-hold even if still listed; list flatten; 🔵; ret5=+9.0; leftover $941.15 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `MGNI` | 34 | $27.25 | $2.09 | — | $4,025.00 | — | sell at min-hold even if still listed; list flatten; 🔵; ret5=+22.7; leftover $941.15 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `CPRI` | 44 | $20.93 | $2.12 | — | $3,101.96 | — | sell at min-hold even if still listed; list flatten; 🔵; ret5=+31.6; leftover $941.15 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `GPK` | 83 | $11.30 | $2.24 | — | $2,161.82 | — | sell at min-hold even if still listed; list flatten; 🔵; ret5=+31.0; leftover $941.15 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-06 09:30 ET | **BUY** | `XMAX` | 185 | $5.07 | $2.54 | — | $1,221.32 | — | sell at min-hold even if still listed; list probable,yday_gainer,yday_mover; 🔵; ret5=-38.2; leftover $941.15 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `STIM` | 382 | $2.46 | $4.93 | — | $276.68 | — | sell at min-hold even if still listed; list probable,yday_gainer; 🔵; ret5=+2.1; leftover $941.15 | join🟡 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $276.68 | ▲ close $7,518.82 vs 09:30 $7,546.18 (session +9.59) | 16:00 close · cash $276.68 · equity $7,518.82 vs 09:30 $7,546.18 (-27.36; session marks +9.59) · 8 name(s) marked open→close (per-name table). CSGP×30 09:30 $30.80 → close $30.55 -7.50; GPK×83 09:30 $11.30 → close $11.19 -9.13; APP×2 09:30 $355.95 → close $391.22 +70.54; TMUS×6 09:30 $155.61 → close $162.01 +38.40; MGNI×34 09:30 $27.25 → close $27.39 +4.76; CPRI×44 09:30 $20.93 → close $20.54 -17.16; XMAX×185 09:30 $5.07 → close $5.33 +48.10; STIM×382 09:30 $2.46 → close $2.15 -118.42 | — |
 
 ## Not taken
 

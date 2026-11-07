@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `ohlc_hot` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · hot list ∩ not exploded
 
-Cash book **-35.45%** ($6,455) · signal-only (no cash/fees) was -11.86%. Starts YES **9/30**. Fills 352 · skips 74 · realized $-1849.08.
+Cash book **-32.44%** ($6,756) · signal-only (no cash/fees) was -11.86%. Starts YES **9/30**. Fills 357 · skips 74 · realized $-1849.08.
 
 ## How this sleeve decides (like you are 10)
 
@@ -546,6 +546,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-05 09:30 ET | **SELL** | `ZYME` | 30 | $30.85 | $2.10 | $-2.38 | $7,639.41 | ▼ -2.38 after sell → book $7,639.41; vs 09:30 mark -2.10 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-05 09:30 ET | **BUY** | `MVST` | 11237 | $0.67 | $109.00 | — | $1.62 | — | hot list ∩ not exploded; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list ohlc_hot; ret5=+7.2; leftover $7639.41 | join🟢 sector🔴 gen🔴 news🟢 digest🟢 ab🔴 peer🔴 heat🔴 vol🔴 buy🟡 |
 | 2026-11-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1.62 | ▼ close $6,455.03 vs 09:30 $7,656.68 (session -1,075.38) | 16:00 close · cash $1.62 · equity $6,455.03 vs 09:30 $7,656.68 (-1201.65; session marks -1075.38) · 1 name(s) marked open→close (per-name table). MVST×11237 09:30 $0.67 → close $0.57 -1075.38 | — |
+| 2026-11-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $1.62 | ▲ 09:30 equity $6,743.82 vs yday $6,455.03 (+288.79) | 09:30 open · cash $1.62 (unchanged overnight, no fees) · equity $6,743.82 vs prior close $6,455.03 (+288.79) · 1 name(s) re-marked at the open (per-name table). MVST×11237 yday $0.57 → 09:30 $0.60 +288.79 | — |
+| 2026-11-06 09:30 ET | **SELL** | `MVST` | 11237 | $0.60 | $103.05 | $-998.64 | $6,640.77 | ▼ -998.64 after sell → book $6,640.77; vs 09:30 mark -103.05 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-06 09:30 ET | **BUY** | `FER` | 29 | $56.90 | $2.08 | — | $4,988.59 | — | hot list ∩ not exploded; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list ohlc_hot; 🔵; ret5=+5.7; leftover $1660.19 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🔴 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `CERT` | 138 | $12.03 | $2.40 | — | $3,326.05 | — | hot list ∩ not exploded; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list ohlc_hot; ret5=+8.8; leftover $1660.19 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🟡 heat🟢 vol🟡 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `FTDR` | 17 | $94.54 | $2.04 | — | $1,716.83 | — | hot list ∩ not exploded; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list ohlc_hot; 🔵; ret5=+9.9; leftover $1660.19 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `STE` | 6 | $248.03 | $2.01 | — | $226.64 | — | hot list ∩ not exploded; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list ohlc_hot; ret5=+9.5; leftover $1660.19 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟡 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $226.64 | ▲ close $6,756.46 vs 09:30 $6,743.82 (session +124.22) | 16:00 close · cash $226.64 · equity $6,756.46 vs 09:30 $6,743.82 (+12.64; session marks +124.22) · 4 name(s) marked open→close (per-name table). FER×29 09:30 $56.90 → close $58.71 +52.49; CERT×138 09:30 $12.03 → close $12.05 +2.76; FTDR×17 09:30 $94.54 → close $97.09 +43.35; STE×6 09:30 $248.03 → close $252.30 +25.62 | — |
 
 ## Not taken
 

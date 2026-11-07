@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ rsi_os, no 🚨
 
-Cash book **-29.21%** ($7,079) · signal-only (no cash/fees) was -7.54%. Starts YES **0/30**. Fills 201 · skips 20 · realized $-3180.18.
+Cash book **-31.83%** ($6,817) · signal-only (no cash/fees) was -7.54%. Starts YES **0/30**. Fills 212 · skips 20 · realized $-3180.18.
 
 ## How this sleeve decides (like you are 10)
 
@@ -393,6 +393,19 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-05 09:30 ET | **BUY** | `FLO` | 336 | $7.17 | $4.33 | — | $2,405.16 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list ohlc_hot; ret5=+15.6; leftover $2410.16 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟡 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-11-05 09:30 ET | **BUY** | `STUB` | 365 | $6.56 | $4.71 | — | $6.05 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list ohlc_hot; ret5=+17.7; leftover $2410.16 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟡 heat🟢 vol🔴 buy🟡 |
 | 2026-11-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6.05 | ▼ close $7,079.05 vs 09:30 $7,241.05 (session -140.12) | 16:00 close · cash $6.05 · equity $7,079.05 vs 09:30 $7,241.05 (-162.00; session marks -140.12) · 3 name(s) marked open→close (per-name table). CMCSA×96 09:30 $25.10 → close $24.95 -14.40; FLO×336 09:30 $7.17 → close $7.10 -23.52; STUB×365 09:30 $6.56 → close $6.28 -102.20 | — |
+| 2026-11-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6.05 | ▼ 09:30 equity $6,904.31 vs yday $7,079.05 (-174.74) | 09:30 open · cash $6.05 (unchanged overnight, no fees) · equity $6,904.31 vs prior close $7,079.05 (-174.74) · 3 name(s) re-marked at the open (per-name table). CMCSA×96 yday $24.95 → 09:30 $24.21 -71.04; FLO×336 yday $7.10 → 09:30 $6.90 -67.20; STUB×365 yday $6.28 → 09:30 $6.18 -36.50 | — |
+| 2026-11-06 09:30 ET | **SELL** | `CMCSA` | 96 | $24.21 | $2.31 | $-90.03 | $2,327.90 | ▼ -90.03 after sell → book $6,902.00; vs 09:30 mark -2.31 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-06 09:30 ET | **SELL** | `FLO` | 336 | $6.90 | $4.41 | $-99.46 | $4,641.89 | ▼ -99.46 after sell → book $6,897.59; vs 09:30 mark -4.41 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-06 09:30 ET | **SELL** | `STUB` | 365 | $6.18 | $4.79 | $-148.20 | $6,892.80 | ▼ -148.20 after sell → book $6,892.80; vs 09:30 mark -4.79 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-06 09:30 ET | **BUY** | `XMAX` | 169 | $5.07 | $2.50 | — | $6,033.47 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list probable,yday_gainer,yday_mover; 🔵; ret5=-38.2; leftover $861.60 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `NRIX` | 57 | $15.10 | $2.16 | — | $5,170.61 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list yday_mover; ret5=-45.3; leftover $861.60 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟡 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `DOX` | 20 | $42.62 | $2.05 | — | $4,316.16 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list yday_mover; ret5=-29.6; leftover $861.60 | join🔴 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `SNDX` | 89 | $9.59 | $2.26 | — | $3,460.40 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list yday_mover; 🔵; ret5=-33.8; leftover $861.60 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `DJT` | 211 | $4.07 | $2.72 | — | $2,598.90 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list yday_mover; ret5=-30.4; leftover $861.60 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `GSM` | 328 | $2.62 | $4.23 | — | $1,735.31 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list yday_mover; 🔵; ret5=-36.9; leftover $861.60 | join🔴 sector🟡 gen🔴 news🔴 digest🟢 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `KURA` | 124 | $6.91 | $2.36 | — | $876.11 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list yday_mover; ret5=-35.6; leftover $861.60 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `CLMT` | 18 | $45.43 | $2.04 | — | $56.33 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list earn_react; 🔵; ret5=-10.7; leftover $861.60 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-11-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $56.33 | ▼ close $6,816.63 vs 09:30 $6,904.31 (session -55.85) | 16:00 close · cash $56.33 · equity $6,816.63 vs 09:30 $6,904.31 (-87.68; session marks -55.85) · 8 name(s) marked open→close (per-name table). XMAX×169 09:30 $5.07 → close $5.33 +43.94; NRIX×57 09:30 $15.10 → close $15.30 +11.40; DOX×20 09:30 $42.62 → close $42.09 -10.60; SNDX×89 09:30 $9.59 → close $9.54 -4.45; DJT×211 09:30 $4.07 → close $3.99 -16.88; GSM×328 09:30 $2.62 → close $2.56 -19.68; KURA×124 09:30 $6.91 → close $7.27 +44.64; CLMT×18 09:30 $45.43 → close $39.64 -104.22 | — |
 
 ## Not taken
 

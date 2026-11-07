@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ blue, no 🚨
 
-Cash book **-27.67%** ($7,233) · signal-only (no cash/fees) was -3.24%. Starts YES **2/30**. Fills 360 · skips 296 · realized $-1559.94.
+Cash book **-27.79%** ($7,221) · signal-only (no cash/fees) was -3.24%. Starts YES **2/30**. Fills 368 · skips 296 · realized $-1559.94.
 
 ## How this sleeve decides (like you are 10)
 
@@ -552,6 +552,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-05 09:30 ET | **SELL** | `VEEV` | 3 | $312.89 | $2.02 | $-13.95 | $6,259.19 | ▼ -13.95 after sell → book $7,239.47; vs 09:30 mark -2.02 | dropped from list after 3 sess (min 3) | — |
 | 2026-11-05 09:30 ET | **SELL** | `VLO` | 2 | $367.01 | $2.02 | $-55.35 | $6,991.19 | ▼ -55.35 after sell → book $7,237.45; vs 09:30 mark -2.02 | dropped from list after 3 sess (min 3) | — |
 | 2026-11-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,991.19 | ▼ close $7,232.59 vs 09:30 $7,251.84 (session -4.87) | 16:00 close · cash $6,991.19 · equity $7,232.59 vs 09:30 $7,251.84 (-19.26; session marks -4.87) · 5 name(s) marked open→close (per-name table). CNMD×1 09:30 $54.40 → close $52.83 -1.57; CON×1 09:30 $43.57 → close $42.15 -1.42; EPR×1 09:30 $61.10 → close $59.79 -1.31; PACS×1 09:30 $50.78 → close $50.20 -0.58; PCRX×1 09:30 $36.41 → close $36.42 +0.01 | — |
+| 2026-11-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6,991.19 | ▼ 09:30 equity $7,230.36 vs yday $7,232.59 (-2.23) | 09:30 open · cash $6,991.19 (unchanged overnight, no fees) · equity $7,230.36 vs prior close $7,232.59 (-2.23) · 5 name(s) re-marked at the open (per-name table). CNMD×1 yday $52.83 → 09:30 $51.11 -1.72; CON×1 yday $42.15 → 09:30 $41.60 -0.55; EPR×1 yday $59.79 → 09:30 $59.10 -0.69; PACS×1 yday $50.20 → 09:30 $50.94 +0.74; PCRX×1 yday $36.42 → 09:30 $36.42 +0.00 | — |
+| 2026-11-06 09:30 ET | **BUY** | `APP` | 2 | $355.95 | $2.00 | — | $6,277.29 | — | union ∩ blue, no 🚨; gate blue=True; list flatten; 🔵; ret5=+39.7; leftover $873.90 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `CSGP` | 28 | $30.80 | $2.07 | — | $5,412.82 | — | union ∩ blue, no 🚨; gate blue=True; list flatten; 🔵; ret5=+13.9; leftover $873.90 | join🟢 sector🟡 gen🔴 news🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟢 |
+| 2026-11-06 09:30 ET | **BUY** | `TMUS` | 5 | $155.61 | $2.00 | — | $4,632.76 | — | union ∩ blue, no 🚨; gate blue=True; list flatten; 🔵; ret5=+9.0; leftover $873.90 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `MGNI` | 32 | $27.25 | $2.09 | — | $3,758.68 | — | union ∩ blue, no 🚨; gate blue=True; list flatten; 🔵; ret5=+22.7; leftover $873.90 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `CPRI` | 41 | $20.93 | $2.11 | — | $2,898.44 | — | union ∩ blue, no 🚨; gate blue=True; list flatten; 🔵; ret5=+31.6; leftover $873.90 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `GPK` | 77 | $11.30 | $2.22 | — | $2,026.11 | — | union ∩ blue, no 🚨; gate blue=True; list flatten; 🔵; ret5=+31.0; leftover $873.90 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-06 09:30 ET | **BUY** | `XMAX` | 172 | $5.07 | $2.51 | — | $1,151.57 | — | union ∩ blue, no 🚨; gate blue=True; list probable,yday_gainer,yday_mover; 🔵; ret5=-38.2; leftover $873.90 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `STIM` | 355 | $2.46 | $4.58 | — | $273.69 | — | union ∩ blue, no 🚨; gate blue=True; list probable,yday_gainer; 🔵; ret5=+2.1; leftover $873.90 | join🟡 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $273.69 | ▲ close $7,221.10 vs 09:30 $7,230.36 (session +10.32) | 16:00 close · cash $273.69 · equity $7,221.10 vs 09:30 $7,230.36 (-9.26; session marks +10.32) · 13 name(s) marked open→close (per-name table). CNMD×1 09:30 $51.11 → close $51.50 +0.39; CON×1 09:30 $41.60 → close $42.22 +0.62; EPR×1 09:30 $59.10 → close $59.51 +0.41; PACS×1 09:30 $50.94 → close $49.60 -1.34; PCRX×1 09:30 $36.42 → close $36.43 +0.01; APP×2 09:30 $355.95 → close $391.22 +70.54; CSGP×28 09:30 $30.80 → close $30.55 -7.00; TMUS×5 09:30 $155.61 → close $162.01 +32.00; MGNI×32 09:30 $27.25 → close $27.39 +4.48; CPRI×41 09:30 $20.93 → close $20.54 -15.99; GPK×77 09:30 $11.30 → close $11.19 -8.47; XMAX×172 09:30 $5.07 → close $5.33 +44.72; STIM×355 09:30 $2.46 → close $2.15 -110.05 | — |
 
 ## Not taken
 

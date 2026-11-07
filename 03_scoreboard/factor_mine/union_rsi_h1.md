@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `rsi` · size `leftover` · sell `list` · S-boost `none` · rank by rsi
 
-Cash book **+39.90%** ($13,990) · signal-only (no cash/fees) was -22.60%. Starts YES **0/30**. Fills 480 · skips 98 · realized $-2571.92.
+Cash book **+39.09%** ($13,909) · signal-only (no cash/fees) was -22.60%. Starts YES **0/30**. Fills 496 · skips 98 · realized $-2571.92.
 
 ## How this sleeve decides (like you are 10)
 
@@ -671,6 +671,24 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-05 09:30 ET | **BUY** | `NCLH` | 98 | $18.50 | $2.28 | — | $2,073.23 | — | rank by rsi; rank rsi; list ohlc_hot; ret5=+15.8; leftover $1826.16 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-11-05 09:30 ET | **BUY** | `JLHL` | 228 | $8.00 | $2.94 | — | $246.29 | — | rank by rsi; rank rsi; list yday_mover; ret5=+25.7; leftover $1826.16 | join🟡 sector🔴 gen🔴 news🟡 digest🟢 ab🔴 heat🔴 vol🔴 buy🟡 |
 | 2026-11-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $246.29 | ▼ close $13,989.80 vs 09:30 $14,628.13 (session -599.01) | 16:00 close · cash $246.29 · equity $13,989.80 vs 09:30 $14,628.13 (-638.33; session marks -599.01) · 8 name(s) marked open→close (per-name table). STUB×278 09:30 $6.56 → close $6.28 -77.84; FLO×254 09:30 $7.17 → close $7.10 -17.78; CMCSA×72 09:30 $25.10 → close $24.95 -10.80; CLX×18 09:30 $99.88 → close $99.70 -3.24; LOW×7 09:30 $233.51 → close $227.24 -43.89; CSGP×55 09:30 $33.11 → close $32.05 -58.30; NCLH×98 09:30 $18.50 → close $17.76 -72.52; JLHL×228 09:30 $8.00 → close $6.62 -314.64 | — |
+| 2026-11-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $246.29 | ▼ 09:30 equity $13,585.91 vs yday $13,989.80 (-403.89) | 09:30 open · cash $246.29 (unchanged overnight, no fees) · equity $13,585.91 vs prior close $13,989.80 (-403.89) · 8 name(s) re-marked at the open (per-name table). CLX×18 yday $99.70 → 09:30 $96.74 -53.28; CMCSA×72 yday $24.95 → 09:30 $24.21 -53.28; CSGP×55 yday $32.05 → 09:30 $30.80 -68.75; FLO×254 yday $7.10 → 09:30 $6.90 -50.80; JLHL×228 yday $6.62 → 09:30 $6.26 -82.08; LOW×7 yday $227.24 → 09:30 $220.34 -48.30; NCLH×98 yday $17.76 → 09:30 $17.56 -19.60; STUB×278 yday $6.28 → 09:30 $6.18 -27.80 | — |
+| 2026-11-06 09:30 ET | **SELL** | `CLX` | 18 | $96.74 | $2.07 | $-60.63 | $1,985.54 | ▼ -60.63 after sell → book $13,583.84; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-06 09:30 ET | **SELL** | `CMCSA` | 72 | $24.21 | $2.23 | $-68.52 | $3,726.43 | ▼ -68.52 after sell → book $13,581.61; vs 09:30 mark -2.23 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-06 09:30 ET | **SELL** | `CSGP` | 55 | $30.80 | $2.18 | $-131.38 | $5,418.25 | ▼ -131.38 after sell → book $13,579.43; vs 09:30 mark -2.18 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟢 |
+| 2026-11-06 09:30 ET | **SELL** | `FLO` | 254 | $6.90 | $3.33 | $-75.19 | $7,167.52 | ▼ -75.19 after sell → book $13,576.10; vs 09:30 mark -3.33 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-06 09:30 ET | **SELL** | `JLHL` | 228 | $6.26 | $2.99 | $-402.65 | $8,591.81 | ▼ -402.65 after sell → book $13,573.11; vs 09:30 mark -2.99 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-06 09:30 ET | **SELL** | `LOW` | 7 | $220.34 | $2.03 | $-96.23 | $10,132.16 | ▼ -96.23 after sell → book $13,571.08; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-06 09:30 ET | **SELL** | `NCLH` | 98 | $17.56 | $2.31 | $-96.72 | $11,850.72 | ▼ -96.72 after sell → book $13,568.76; vs 09:30 mark -2.32 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-06 09:30 ET | **SELL** | `STUB` | 278 | $6.18 | $3.65 | $-112.87 | $13,565.11 | ▼ -112.87 after sell → book $13,565.11; vs 09:30 mark -3.65 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-06 09:30 ET | **BUY** | `DOX` | 39 | $42.62 | $2.11 | — | $11,900.83 | — | rank by rsi; rank rsi; list yday_mover; ret5=-29.6; leftover $1695.64 | join🔴 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `DJT` | 416 | $4.07 | $5.37 | — | $10,202.34 | — | rank by rsi; rank rsi; list yday_mover; ret5=-30.4; leftover $1695.64 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `NRIX` | 112 | $15.10 | $2.33 | — | $8,508.82 | — | rank by rsi; rank rsi; list yday_mover; ret5=-45.3; leftover $1695.64 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟡 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `OKLO` | 79 | $21.22 | $2.23 | — | $6,830.21 | — | rank by rsi; rank rsi; list earn_react; 🔵; ret5=-28.4; leftover $1695.64 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `GSM` | 647 | $2.62 | $8.35 | — | $5,126.72 | — | rank by rsi; rank rsi; list yday_mover; 🔵; ret5=-36.9; leftover $1695.64 | join🔴 sector🟡 gen🔴 news🔴 digest🟢 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `SPRY` | 637 | $2.66 | $8.22 | — | $3,424.08 | — | rank by rsi; rank rsi; list earn_react; 🔵; ret5=-27.6; leftover $1695.64 | join🔴 sector🟡 gen🔴 news🔴 digest🟢 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `KURA` | 245 | $6.91 | $3.16 | — | $1,727.97 | — | rank by rsi; rank rsi; list yday_mover; ret5=-35.6; leftover $1695.64 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `UMAC` | 150 | $11.28 | $2.44 | — | $33.53 | — | rank by rsi; rank rsi; list earn_react; ret5=-37.8; leftover $1695.64 | join🔴 sector🟡 gen🔴 news🟡 digest🔴 ab🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-11-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $33.53 | ▲ close $13,908.63 vs 09:30 $13,585.91 (session +377.71) | 16:00 close · cash $33.53 · equity $13,908.63 vs 09:30 $13,585.91 (+322.72; session marks +377.71) · 8 name(s) marked open→close (per-name table). DOX×39 09:30 $42.62 → close $42.09 -20.67; DJT×416 09:30 $4.07 → close $3.99 -33.28; NRIX×112 09:30 $15.10 → close $15.30 +22.40; OKLO×79 09:30 $21.22 → close $23.55 +184.07; GSM×647 09:30 $2.62 → close $2.56 -38.82; SPRY×637 09:30 $2.66 → close $2.79 +82.81; KURA×245 09:30 $6.91 → close $7.27 +88.20; UMAC×150 09:30 $11.28 → close $11.90 +93.00 | — |
 
 ## Not taken
 

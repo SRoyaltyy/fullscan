@@ -6,7 +6,7 @@ Buys the flatten **wish-list** even on io/HOLD mornings — live `flatten_robust
 
 Side **long** · universe `flatten` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · flatten wish-list ∩ vol🟢
 
-Cash book **-30.75%** ($6,925) · signal-only (no cash/fees) was -19.12%. Starts YES **6/30**. Fills 62 · skips 71 · realized $-2440.55.
+Cash book **-27.98%** ($7,202) · signal-only (no cash/fees) was -19.12%. Starts YES **6/30**. Fills 64 · skips 71 · realized $-2440.55.
 
 ## How this sleeve decides (like you are 10)
 
@@ -254,6 +254,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-04 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,924.65 | ▲ close $6,924.65 vs 09:30 $6,924.65 (session +0.00) | 16:00 close · cash $6,924.65 · no lots left · equity $6,924.65. | — |
 | 2026-11-05 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6,924.65 | ▲ 09:30 equity $6,924.65 vs yday $6,924.65 (+0.00) | 09:30 open · cash $6,924.65 · no holdings · equity $6,924.65 vs prior close $6,924.65 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-11-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,924.65 | ▲ close $6,924.65 vs 09:30 $6,924.65 (session +0.00) | 16:00 close · cash $6,924.65 · no lots left · equity $6,924.65. | — |
+| 2026-11-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6,924.65 | ▲ 09:30 equity $6,924.65 vs yday $6,924.65 (+0.00) | 09:30 open · cash $6,924.65 · no holdings · equity $6,924.65 vs prior close $6,924.65 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-06 09:30 ET | **BUY** | `APP` | 9 | $355.95 | $2.02 | — | $3,719.08 | — | flatten wish-list ∩ vol🟢; gate vol=good; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ret5=+39.7; leftover $3462.32 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `GPK` | 306 | $11.30 | $3.95 | — | $257.34 | — | flatten wish-list ∩ vol🟢; gate vol=good; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ret5=+31.0; leftover $3462.32 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $257.34 | ▲ close $7,202.46 vs 09:30 $6,924.65 (session +283.77) | 16:00 close · cash $257.34 · equity $7,202.46 vs 09:30 $6,924.65 (+277.81; session marks +283.77) · 2 name(s) marked open→close (per-name table). APP×9 09:30 $355.95 → close $391.22 +317.43; GPK×306 09:30 $11.30 → close $11.19 -33.66 | — |
 
 ## Not taken
 

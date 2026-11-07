@@ -310,6 +310,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-05 09:30 ET | **SELL** | `MX` | 660 | $2.31 | $8.64 | $-155.75 | $8,195.82 | ▼ -155.75 after sell → book $9,861.99; vs 09:30 mark -8.63 | dropped from list after 1 sess (min 1) | join🔴 sector🔴 gen🔴 news🟡 digest🟡 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-11-05 09:30 ET | **SELL** | `QTTB` | 187 | $8.91 | $2.60 | $+3.27 | $9,859.39 | ▲ +3.27 after sell → book $9,859.39; vs 09:30 mark -2.60 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-11-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,859.39 | ▲ close $9,859.39 vs 09:30 $9,876.94 (session +0.00) | 16:00 close · cash $9,859.39 · no lots left · equity $9,859.39. | — |
+| 2026-11-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,859.39 | ▲ 09:30 equity $9,859.39 vs yday $9,859.39 (+0.00) | 09:30 open · cash $9,859.39 · no holdings · equity $9,859.39 vs prior close $9,859.39 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,859.39 | ▲ close $9,859.39 vs 09:30 $9,859.39 (session +0.00) | 16:00 close · cash $9,859.39 · no lots left · equity $9,859.39. | — |
 
 ## Not taken
 

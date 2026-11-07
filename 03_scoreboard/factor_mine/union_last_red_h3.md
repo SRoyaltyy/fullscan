@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ last_red, no 🚨
 
-Cash book **-43.88%** ($5,612) · signal-only (no cash/fees) was +0.15%. Starts YES **10/30**. Fills 362 · skips 295 · realized $+93.52.
+Cash book **-41.23%** ($5,877) · signal-only (no cash/fees) was +0.15%. Starts YES **10/30**. Fills 368 · skips 295 · realized $+93.52.
 
 ## How this sleeve decides (like you are 10)
 
@@ -554,6 +554,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-05 09:30 ET | **BUY** | `AMX` | 46 | $25.12 | $2.13 | — | $1,322.10 | — | union ∩ last_red, no 🚨; gate last_red=True; list yday_gainer; ret5=+4.6; leftover $1164.25 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-11-05 09:30 ET | **BUY** | `CECO` | 25 | $45.00 | $2.06 | — | $195.03 | — | union ∩ last_red, no 🚨; gate last_red=True; list yday_mover; ret5=-17.2; leftover $1164.25 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🔴 peer🔴 heat🟡 vol🔴 buy🟡 |
 | 2026-11-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $195.03 | ▼ close $5,612.30 vs 09:30 $5,887.22 (session -247.79) | 16:00 close · cash $195.03 · equity $5,612.30 vs 09:30 $5,887.22 (-274.92; session marks -247.79) · 8 name(s) marked open→close (per-name table). ACRS×4 09:30 $3.71 → close $3.61 -0.40; MX×7 09:30 $2.31 → close $2.05 -1.82; NBP×18 09:30 $1.01 → close $0.91 -1.83; PRMB×54 09:30 $21.55 → close $22.15 +32.40; CRS×4 09:30 $285.50 → close $278.88 -26.48; DY×5 09:30 $205.93 → close $192.79 -65.70; AMX×46 09:30 $25.12 → close $25.11 -0.46; CECO×25 09:30 $45.00 → close $37.66 -183.50 | — |
+| 2026-11-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $195.03 | ▲ 09:30 equity $5,688.99 vs yday $5,612.30 (+76.69) | 09:30 open · cash $195.03 (unchanged overnight, no fees) · equity $5,688.99 vs prior close $5,612.30 (+76.69) · 8 name(s) re-marked at the open (per-name table). ACRS×4 yday $3.61 → 09:30 $3.62 +0.04; AMX×46 yday $25.11 → 09:30 $24.90 -9.66; CECO×25 yday $37.66 → 09:30 $39.52 +46.50; CRS×4 yday $278.88 → 09:30 $281.42 +10.16; DY×5 yday $192.79 → 09:30 $203.01 +51.10; MX×7 yday $2.05 → 09:30 $2.16 +0.77; NBP×18 yday $0.91 → 09:30 $0.90 -0.07; PRMB×54 yday $22.15 → 09:30 $21.74 -22.14 | — |
+| 2026-11-06 09:30 ET | **BUY** | `CPRI` | 1 | $20.93 | $0.21 | — | $173.89 | — | union ∩ last_red, no 🚨; gate last_red=True; list flatten; 🔵; ret5=+31.6; leftover $24.38 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `GPK` | 2 | $11.30 | $0.23 | — | $151.06 | — | union ∩ last_red, no 🚨; gate last_red=True; list flatten; 🔵; ret5=+31.0; leftover $24.38 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-06 09:30 ET | **BUY** | `XMAX` | 4 | $5.07 | $0.21 | — | $130.56 | — | union ∩ last_red, no 🚨; gate last_red=True; list probable,yday_gainer,yday_mover; 🔵; ret5=-38.2; leftover $24.38 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `STIM` | 9 | $2.46 | $0.25 | — | $108.17 | — | union ∩ last_red, no 🚨; gate last_red=True; list probable,yday_gainer; 🔵; ret5=+2.1; leftover $24.38 | join🟡 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `VNET` | 7 | $3.28 | $0.25 | — | $84.96 | — | union ∩ last_red, no 🚨; gate last_red=True; list probable,yday_gainer; ret5=-6.5; leftover $24.38 | join🔴 sector🟡 gen🔴 news🟡 digest🔴 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `OCGN` | 29 | $0.83 | $0.33 | — | $60.56 | — | union ∩ last_red, no 🚨; gate last_red=True; list probable,yday_gainer; 🔵; ret5=+9.7; leftover $24.38 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $60.56 | ▲ close $5,877.37 vs 09:30 $5,688.99 (session +189.87) | 16:00 close · cash $60.56 · equity $5,877.37 vs 09:30 $5,688.99 (+188.38; session marks +189.87) · 14 name(s) marked open→close (per-name table). ACRS×4 09:30 $3.62 → close $3.90 +1.12; AMX×46 09:30 $24.90 → close $25.72 +37.72; CECO×25 09:30 $39.52 → close $43.71 +104.75; CRS×4 09:30 $281.42 → close $278.31 -12.44; DY×5 09:30 $203.01 → close $207.52 +22.55; MX×7 09:30 $2.16 → close $2.36 +1.40; NBP×18 09:30 $0.90 → close $0.91 +0.11; PRMB×54 09:30 $21.74 → close $22.39 +35.10; CPRI×1 09:30 $20.93 → close $20.54 -0.39; GPK×2 09:30 $11.30 → close $11.19 -0.22; XMAX×4 09:30 $5.07 → close $5.33 +1.04; STIM×9 09:30 $2.46 → close $2.15 -2.79; VNET×7 09:30 $3.28 → close $3.16 -0.84; OCGN×29 09:30 $0.83 → close $0.93 +2.76 | — |
 
 ## Not taken
 

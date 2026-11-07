@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · MACD histogram < 0
 
-Cash book **+0.95%** ($10,095) · signal-only (no cash/fees) was +6.85%. Starts YES **5/30**. Fills 466 · skips 108 · realized $-743.47.
+Cash book **-0.40%** ($9,960) · signal-only (no cash/fees) was +6.85%. Starts YES **5/30**. Fills 480 · skips 108 · realized $-743.47.
 
 ## How this sleeve decides (like you are 10)
 
@@ -656,6 +656,22 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-05 09:30 ET | **SHORT** | `DY` | 2 | $205.93 | $2.03 | — | $13,873.46 | — | MACD histogram < 0; gate macd_down=True; list yday_gainer; ret5=-9.3; leftover $617.72 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-11-05 09:30 ET | **SHORT** | `TLSA` | 943 | $0.66 | $9.19 | — | $14,481.94 | — | MACD histogram < 0; gate macd_down=True; list yday_gainer; ret5=-32.8; leftover $617.72 | join🟡 sector🟡 gen🔴 news🟡 digest🟢 ab🟡 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-11-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,481.94 | ▲ close $10,094.66 vs 09:30 $9,897.78 (session +235.27) | 16:00 close · cash $14,481.94 · equity $10,094.66 vs 09:30 $9,897.78 (+196.88; session marks +235.27) · 8 name(s) marked open→close (per-name table). CSGP×18 09:30 $33.11 → close $32.05 +19.08; PDFS×16 09:30 $36.98 → close $34.52 +39.36; AIP×35 09:30 $17.26 → close $15.93 +46.55; EGG×121 09:30 $5.10 → close $5.13 -4.24; KURA×81 09:30 $7.57 → close $6.80 +62.37; CRS×2 09:30 $285.50 → close $278.88 +13.24; DY×2 09:30 $205.93 → close $192.79 +26.28; TLSA×943 09:30 $0.66 → close $0.62 +32.63 | — |
+| 2026-11-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $14,481.94 | ▼ 09:30 equity $10,033.80 vs yday $10,094.66 (-60.86) | 09:30 open · cash $14,481.94 (unchanged overnight, no fees) · equity $10,033.80 vs prior close $10,094.66 (-60.86) · 8 name(s) re-marked at the open (per-name table). AIP×35 yday $15.93 → 09:30 $17.06 -39.55; CRS×2 yday $278.88 → 09:30 $281.42 -5.08; CSGP×18 yday $32.05 → 09:30 $30.80 +22.50; DY×2 yday $192.79 → 09:30 $203.01 -20.44; EGG×121 yday $5.13 → 09:30 $5.13 -0.00; KURA×81 yday $6.80 → 09:30 $6.91 -8.91; PDFS×16 yday $34.52 → 09:30 $35.13 -9.76; TLSA×943 yday $0.62 → 09:30 $0.62 +0.38 | — |
+| 2026-11-06 09:30 ET | **COVER** | `AIP` | 35 | $17.06 | $2.10 | $+2.77 | $13,882.75 | ▲ +2.77 after sell → book $10,031.70; vs 09:30 mark -2.09 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟢 digest🔴 ab🔴 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-11-06 09:30 ET | **COVER** | `CRS` | 2 | $281.42 | $2.00 | $+4.13 | $13,317.91 | ▲ +4.13 after sell → book $10,029.70; vs 09:30 mark -2.00 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-06 09:30 ET | **COVER** | `DY` | 2 | $203.01 | $2.00 | $+1.82 | $12,909.89 | ▲ +1.82 after sell → book $10,027.71; vs 09:30 mark -1.99 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-06 09:30 ET | **COVER** | `EGG` | 121 | $5.13 | $2.35 | $-8.99 | $12,286.21 | ▼ -8.99 after sell → book $10,025.36; vs 09:30 mark -2.35 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-06 09:30 ET | **COVER** | `KURA` | 81 | $6.91 | $2.23 | $+48.95 | $11,724.26 | ▲ +48.95 after sell → book $10,023.12; vs 09:30 mark -2.24 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **COVER** | `PDFS` | 16 | $35.13 | $2.04 | $+25.49 | $11,160.14 | ▲ +25.49 after sell → book $10,021.08; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-11-06 09:30 ET | **COVER** | `TLSA` | 943 | $0.62 | $8.68 | $+15.14 | $10,566.81 | ▲ +15.14 after sell → book $10,012.41; vs 09:30 mark -8.67 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-06 09:30 ET | **SHORT** | `XMAX` | 141 | $5.07 | $2.47 | — | $11,279.21 | — | MACD histogram < 0; gate macd_down=True; list probable,yday_gainer,yday_mover; 🔵; ret5=-38.2; leftover $715.17 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **SHORT** | `VNET` | 218 | $3.28 | $2.88 | — | $11,991.37 | — | MACD histogram < 0; gate macd_down=True; list probable,yday_gainer; ret5=-6.5; leftover $715.17 | join🔴 sector🟡 gen🔴 news🟡 digest🔴 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **SHORT** | `GERN` | 752 | $0.95 | $9.55 | — | $12,696.22 | — | MACD histogram < 0; gate macd_down=True; list probable,yday_gainer; 🔵; ret5=+0.4; leftover $715.17 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **SHORT** | `CYH` | 320 | $2.23 | $4.21 | — | $13,405.61 | — | MACD histogram < 0; gate macd_down=True; list probable; 🔵; ret5=-5.4; leftover $715.17 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **SHORT** | `NRIX` | 47 | $15.10 | $2.17 | — | $14,113.14 | — | MACD histogram < 0; gate macd_down=True; list yday_mover; ret5=-45.3; leftover $715.17 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟡 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **SHORT** | `DOX` | 16 | $42.62 | $2.08 | — | $14,792.98 | — | MACD histogram < 0; gate macd_down=True; list yday_mover; ret5=-29.6; leftover $715.17 | join🔴 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **SHORT** | `ECG` | 9 | $77.00 | $2.06 | — | $15,483.93 | — | MACD histogram < 0; gate macd_down=True; list yday_mover; 🔵; ret5=-33.0; leftover $715.17 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $15,483.93 | ▼ close $9,960.00 vs 09:30 $10,033.80 (session -27.00) | 16:00 close · cash $15,483.93 · equity $9,960.00 vs 09:30 $10,033.80 (-73.80; session marks -27.00) · 8 name(s) marked open→close (per-name table). CSGP×18 09:30 $30.80 → close $30.55 +4.50; XMAX×141 09:30 $5.07 → close $5.33 -36.66; VNET×218 09:30 $3.28 → close $3.16 +26.16; GERN×752 09:30 $0.95 → close $0.99 -30.08; CYH×320 09:30 $2.23 → close $2.21 +6.40; NRIX×47 09:30 $15.10 → close $15.30 -9.40; DOX×16 09:30 $42.62 → close $42.09 +8.48; ECG×9 09:30 $77.00 → close $76.60 +3.60 | — |
 
 ## Not taken
 

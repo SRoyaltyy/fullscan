@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-7.74%** ($9,226) · signal-only (no cash/fees) was -17.92%. Starts YES **5/30**. Fills 148 · skips 17 · realized $-2405.95.
+Cash book **-1.90%** ($9,810) · signal-only (no cash/fees) was -17.92%. Starts YES **5/30**. Fills 160 · skips 17 · realized $-2405.95.
 
 ## How this sleeve decides (like you are 10)
 
@@ -342,6 +342,20 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-05 09:30 ET | **BUY** | `EXPE` | 7 | $287.31 | $2.01 | — | $2,484.43 | — | combo gate; gate earn_react=True,last_green=True; list ohlc_hot; ret5=+14.6; leftover $2254.29 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-11-05 09:30 ET | **BUY** | `ARHS` | 176 | $12.79 | $2.52 | — | $230.87 | — | combo gate; gate earn_react=True,last_green=True; list ohlc_hot; ret5=+14.1; leftover $2254.29 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-11-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $230.87 | ▲ close $9,226.35 vs 09:30 $9,017.16 (session +229.87) | 16:00 close · cash $230.87 · equity $9,226.35 vs 09:30 $9,017.16 (+209.19; session marks +229.87) · 4 name(s) marked open→close (per-name table). AMC×621 09:30 $3.62 → close $3.08 -338.44; DNUT×630 09:30 $3.58 → close $4.60 +645.75; EXPE×7 09:30 $287.31 → close $272.48 -103.84; ARHS×176 09:30 $12.79 → close $12.94 +26.40 | — |
+| 2026-11-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $230.87 | ▼ 09:30 equity $9,165.13 vs yday $9,226.35 (-61.22) | 09:30 open · cash $230.87 (unchanged overnight, no fees) · equity $9,165.13 vs prior close $9,226.35 (-61.22) · 4 name(s) re-marked at the open (per-name table). AMC×621 yday $3.08 → 09:30 $3.13 +31.05; ARHS×176 yday $12.94 → 09:30 $13.00 +10.56; DNUT×630 yday $4.60 → 09:30 $4.44 -100.80; EXPE×7 yday $272.48 → 09:30 $272.19 -2.03 | — |
+| 2026-11-06 09:30 ET | **SELL** | `AMC` | 621 | $3.13 | $8.13 | $-323.54 | $2,166.47 | ▼ -323.54 after sell → book $9,157.00; vs 09:30 mark -8.13 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-06 09:30 ET | **SELL** | `ARHS` | 176 | $13.00 | $2.57 | $+31.88 | $4,451.90 | ▲ +31.88 after sell → book $9,154.44; vs 09:30 mark -2.56 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-06 09:30 ET | **SELL** | `DNUT` | 630 | $4.44 | $8.25 | $+528.57 | $7,240.85 | ▲ +528.57 after sell → book $9,146.18; vs 09:30 mark -8.26 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-06 09:30 ET | **SELL** | `EXPE` | 7 | $272.19 | $2.04 | $-109.92 | $9,144.14 | ▼ -109.92 after sell → book $9,144.14; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-06 09:30 ET | **BUY** | `SSP` | 381 | $3.00 | $4.91 | — | $7,996.23 | — | combo gate; gate earn_react=True,last_green=True; list ohlc_hot,earn_react; 🔵; ret5=+17.1; leftover $1143.02 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `CHTR` | 9 | $115.74 | $2.02 | — | $6,952.55 | — | combo gate; gate earn_react=True,last_green=True; list ohlc_hot,earn_react; 🔵; ret5=+15.5; leftover $1143.02 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `DKNG` | 65 | $17.34 | $2.19 | — | $5,823.27 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; 🔵; ret5=+13.5; leftover $1143.02 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `EMA` | 22 | $49.98 | $2.06 | — | $4,721.65 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; 🔵; ret5=+4.8; leftover $1143.02 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `EVC` | 164 | $6.94 | $2.48 | — | $3,581.01 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; 🔵; ret5=+19.6; leftover $1143.02 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `FIP` | 357 | $3.20 | $4.61 | — | $2,434.00 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; 🔵; ret5=+2.4; leftover $1143.02 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `PAR` | 57 | $19.72 | $2.16 | — | $1,307.80 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; 🔵; ret5=+7.8; leftover $1143.02 | join🔴 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `SG` | 101 | $11.25 | $2.29 | — | $169.26 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; ret5=+1.2; leftover $1143.02 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-11-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $169.26 | ▲ close $9,809.78 vs 09:30 $9,165.13 (session +688.35) | 16:00 close · cash $169.26 · equity $9,809.78 vs 09:30 $9,165.13 (+644.65; session marks +688.35) · 8 name(s) marked open→close (per-name table). SSP×381 09:30 $3.00 → close $3.05 +19.05; CHTR×9 09:30 $115.74 → close $118.07 +20.97; DKNG×65 09:30 $17.34 → close $18.51 +76.05; EMA×22 09:30 $49.98 → close $50.69 +15.62; EVC×164 09:30 $6.94 → close $8.99 +336.20; FIP×357 09:30 $3.20 → close $3.47 +96.39; PAR×57 09:30 $19.72 → close $20.55 +47.31; SG×101 09:30 $11.25 → close $12.01 +76.76 | — |
 
 ## Not taken
 

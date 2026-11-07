@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `candle_score` · size `leftover` · sell `list` · S-boost `none` · rank by candle_score
 
-Cash book **-13.32%** ($8,668) · signal-only (no cash/fees) was +8.19%. Starts YES **0/30**. Fills 507 · skips 104 · realized $-563.45.
+Cash book **-8.98%** ($9,102) · signal-only (no cash/fees) was +8.19%. Starts YES **0/30**. Fills 523 · skips 104 · realized $-563.45.
 
 ## How this sleeve decides (like you are 10)
 
@@ -698,6 +698,24 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-05 09:30 ET | **BUY** | `CLX` | 11 | $99.88 | $2.02 | — | $1,110.03 | — | rank by candle_score; rank candle_score; list flatten,ohlc_hot; ret5=+14.2; leftover $1105.44 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-11-05 09:30 ET | **BUY** | `MVST` | 1632 | $0.67 | $15.83 | — | $0.76 | — | rank by candle_score; rank candle_score; list ohlc_hot; ret5=+7.2; leftover $1105.44 | join🟢 sector🔴 gen🔴 news🟢 digest🟢 ab🔴 peer🔴 heat🔴 vol🔴 buy🟡 |
 | 2026-11-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $0.76 | ▼ close $8,667.55 vs 09:30 $9,041.43 (session -326.01) | 16:00 close · cash $0.76 · equity $8,667.55 vs 09:30 $9,041.43 (-373.88; session marks -326.01) · 8 name(s) marked open→close (per-name table). JLHL×161 09:30 $8.00 → close $6.62 -222.18; FLO×154 09:30 $7.17 → close $7.10 -10.78; AMC×304 09:30 $3.62 → close $3.08 -165.68; QXO×88 09:30 $12.46 → close $11.64 -72.16; DNUT×309 09:30 $3.58 → close $4.60 +316.72; TBBB×17 09:30 $65.02 → close $64.21 -13.77; CLX×11 09:30 $99.88 → close $99.70 -1.98; MVST×1632 09:30 $0.67 → close $0.57 -156.18 | — |
+| 2026-11-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $0.76 | ▼ 09:30 equity $8,561.18 vs yday $8,667.55 (-106.36) | 09:30 open · cash $0.76 (unchanged overnight, no fees) · equity $8,561.18 vs prior close $8,667.55 (-106.36) · 8 name(s) re-marked at the open (per-name table). AMC×304 yday $3.08 → 09:30 $3.13 +15.20; CLX×11 yday $99.70 → 09:30 $96.74 -32.56; DNUT×309 yday $4.60 → 09:30 $4.44 -49.44; FLO×154 yday $7.10 → 09:30 $6.90 -30.80; JLHL×161 yday $6.62 → 09:30 $6.26 -57.96; MVST×1632 yday $0.57 → 09:30 $0.60 +41.94; QXO×88 yday $11.64 → 09:30 $11.65 +0.88; TBBB×17 yday $64.21 → 09:30 $64.58 +6.38 | — |
+| 2026-11-06 09:30 ET | **SELL** | `AMC` | 304 | $3.13 | $3.98 | $-158.38 | $948.30 | ▼ -158.38 after sell → book $8,557.20; vs 09:30 mark -3.98 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-06 09:30 ET | **SELL** | `CLX` | 11 | $96.74 | $2.04 | $-38.61 | $2,010.39 | ▼ -38.61 after sell → book $8,555.16; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-06 09:30 ET | **SELL** | `DNUT` | 309 | $4.44 | $4.05 | $+259.25 | $3,378.31 | ▲ +259.25 after sell → book $8,551.11; vs 09:30 mark -4.05 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-06 09:30 ET | **SELL** | `FLO` | 154 | $6.90 | $2.49 | $-46.52 | $4,438.42 | ▼ -46.52 after sell → book $8,548.62; vs 09:30 mark -2.49 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-06 09:30 ET | **SELL** | `JLHL` | 161 | $6.26 | $2.51 | $-87.09 | $5,443.77 | ▼ -87.09 after sell → book $8,546.11; vs 09:30 mark -2.51 | dropped from list after 2 sess (min 1) | — |
+| 2026-11-06 09:30 ET | **SELL** | `MVST` | 1632 | $0.60 | $14.97 | $-145.04 | $6,408.00 | ▼ -145.04 after sell → book $8,531.15; vs 09:30 mark -14.96 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-06 09:30 ET | **SELL** | `QXO` | 88 | $11.65 | $2.28 | $-75.81 | $7,430.92 | ▼ -75.81 after sell → book $8,528.87; vs 09:30 mark -2.28 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-06 09:30 ET | **SELL** | `TBBB` | 17 | $64.58 | $2.06 | $-11.50 | $8,526.81 | ▼ -11.50 after sell → book $8,526.81; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-06 09:30 ET | **BUY** | `GPGI` | 78 | $13.52 | $2.22 | — | $7,470.02 | — | rank by candle_score; rank candle_score; list ohlc_hot; 🔵; ret5=+17.4; leftover $1065.85 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `PAR` | 54 | $19.72 | $2.15 | — | $6,402.99 | — | rank by candle_score; rank candle_score; list earn_react; 🔵; ret5=+7.8; leftover $1065.85 | join🔴 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `CMG` | 30 | $34.75 | $2.08 | — | $5,358.41 | — | rank by candle_score; rank candle_score; list ohlc_hot; 🔵; ret5=+13.2; leftover $1065.85 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `EVC` | 153 | $6.94 | $2.45 | — | $4,294.14 | — | rank by candle_score; rank candle_score; list earn_react; 🔵; ret5=+19.6; leftover $1065.85 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `QTWO` | 14 | $73.44 | $2.03 | — | $3,263.95 | — | rank by candle_score; rank candle_score; list ohlc_hot; 🔵; ret5=+15.8; leftover $1065.85 | join🔴 sector🟡 gen🔴 news🔴 digest🔴 ab🟢 peer🟡 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `SG` | 94 | $11.25 | $2.27 | — | $2,204.18 | — | rank by candle_score; rank candle_score; list earn_react; ret5=+1.2; leftover $1065.85 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `WEN` | 135 | $7.85 | $2.40 | — | $1,142.03 | — | rank by candle_score; rank candle_score; list ohlc_hot; 🔵; ret5=+10.8; leftover $1065.85 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `DKNG` | 61 | $17.34 | $2.17 | — | $82.12 | — | rank by candle_score; rank candle_score; list earn_react; 🔵; ret5=+13.5; leftover $1065.85 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $82.12 | ▲ close $9,101.75 vs 09:30 $8,561.18 (session +592.72) | 16:00 close · cash $82.12 · equity $9,101.75 vs 09:30 $8,561.18 (+540.57; session marks +592.72) · 8 name(s) marked open→close (per-name table). GPGI×78 09:30 $13.52 → close $14.21 +53.82; PAR×54 09:30 $19.72 → close $20.55 +44.82; CMG×30 09:30 $34.75 → close $34.43 -9.60; EVC×153 09:30 $6.94 → close $8.99 +313.65; QTWO×14 09:30 $73.44 → close $73.92 +6.72; SG×94 09:30 $11.25 → close $12.01 +71.44; WEN×135 09:30 $7.85 → close $8.15 +40.50; DKNG×61 09:30 $17.34 → close $18.51 +71.37 | — |
 
 ## Not taken
 

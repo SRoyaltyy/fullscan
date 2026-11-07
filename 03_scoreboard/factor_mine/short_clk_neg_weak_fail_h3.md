@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · Clock-B #4 neg catalyst + weakness + failed recovery
 
-Cash book **+4.12%** ($10,412) · signal-only (no cash/fees) was -21.45%. Starts YES **8/30**. Fills 237 · skips 270 · realized $-967.53.
+Cash book **+2.26%** ($10,226) · signal-only (no cash/fees) was -21.45%. Starts YES **8/30**. Fills 245 · skips 270 · realized $-967.53.
 
 ## How this sleeve decides (like you are 10)
 
@@ -427,6 +427,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-04 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,411.90 | ▲ close $10,411.90 vs 09:30 $10,411.90 (session +0.00) | 16:00 close · cash $10,411.90 · no lots left · equity $10,411.90. | — |
 | 2026-11-05 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,411.90 | ▲ 09:30 equity $10,411.90 vs yday $10,411.90 (+0.00) | 09:30 open · cash $10,411.90 · no holdings · equity $10,411.90 vs prior close $10,411.90 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-11-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,411.90 | ▲ close $10,411.90 vs 09:30 $10,411.90 (session +0.00) | 16:00 close · cash $10,411.90 · no lots left · equity $10,411.90. | — |
+| 2026-11-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,411.90 | ▲ 09:30 equity $10,411.90 vs yday $10,411.90 (+0.00) | 09:30 open · cash $10,411.90 · no holdings · equity $10,411.90 vs prior close $10,411.90 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-06 09:30 ET | **SHORT** | `GSM` | 248 | $2.62 | $3.27 | — | $11,058.39 | — | Clock-B #4 neg catalyst + weakness + failed recovery; gate clk_neg_weak_fail=True; list yday_mover; 🔵; ret5=-36.9; leftover $650.74 | join🔴 sector🟡 gen🔴 news🔴 digest🟢 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **SHORT** | `HUT` | 12 | $50.56 | $2.06 | — | $11,663.05 | — | Clock-B #4 neg catalyst + weakness + failed recovery; gate clk_neg_weak_fail=True; list yday_mover; 🔵; ret5=-30.8; leftover $650.74 | join🔴 sector🟡 gen🔴 news🔴 digest🟢 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **SHORT** | `AKAM` | 7 | $83.37 | $2.05 | — | $12,244.59 | — | Clock-B #4 neg catalyst + weakness + failed recovery; gate clk_neg_weak_fail=True; list earn_react; ret5=-21.7; leftover $650.74 | join🔴 sector🟡 gen🔴 news🔴 digest🔴 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-11-06 09:30 ET | **SHORT** | `BLMN` | 65 | $9.93 | $2.22 | — | $12,887.82 | — | Clock-B #4 neg catalyst + weakness + failed recovery; gate clk_neg_weak_fail=True; list earn_react; 🔵; ret5=-2.1; leftover $650.74 | join🟢 sector🟡 gen🔴 news🔴 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-06 09:30 ET | **SHORT** | `FROG` | 6 | $94.99 | $2.04 | — | $13,455.72 | — | Clock-B #4 neg catalyst + weakness + failed recovery; gate clk_neg_weak_fail=True; list earn_react; 🔵; ret5=-24.5; leftover $650.74 | join🔴 sector🟡 gen🔴 news🔴 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-06 09:30 ET | **SHORT** | `IREN` | 30 | $21.15 | $2.12 | — | $14,088.10 | — | Clock-B #4 neg catalyst + weakness + failed recovery; gate clk_neg_weak_fail=True; list earn_react; 🔵; ret5=-31.3; leftover $650.74 | join🔴 sector🟡 gen🔴 news🔴 digest🟢 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **SHORT** | `QSI` | 551 | $1.18 | $7.23 | — | $14,731.05 | — | Clock-B #4 neg catalyst + weakness + failed recovery; gate clk_neg_weak_fail=True; list earn_react; 🔵; ret5=-33.1; leftover $650.74 | join🟡 sector🟡 gen🔴 news🔴 digest🟢 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-11-06 09:30 ET | **SHORT** | `SPRY` | 244 | $2.66 | $3.22 | — | $15,376.87 | — | Clock-B #4 neg catalyst + weakness + failed recovery; gate clk_neg_weak_fail=True; list earn_react; 🔵; ret5=-27.6; leftover $650.74 | join🔴 sector🟡 gen🔴 news🔴 digest🟢 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $15,376.87 | ▼ close $10,226.14 vs 09:30 $10,411.90 (session -161.55) | 16:00 close · cash $15,376.87 · equity $10,226.14 vs 09:30 $10,411.90 (-185.76; session marks -161.55) · 8 name(s) marked open→close (per-name table). GSM×248 09:30 $2.62 → close $2.56 +14.88; HUT×12 09:30 $50.56 → close $52.65 -25.08; AKAM×7 09:30 $83.37 → close $83.09 +1.96; BLMN×65 09:30 $9.93 → close $9.75 +11.70; FROG×6 09:30 $94.99 → close $100.98 -35.94; IREN×30 09:30 $21.15 → close $21.64 -14.70; QSI×551 09:30 $1.18 → close $1.33 -82.65; SPRY×244 09:30 $2.66 → close $2.79 -31.72 | — |
 
 ## Not taken
 

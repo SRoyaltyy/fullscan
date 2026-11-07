@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · prior-export headline🟢 only
 
-Cash book **-58.71%** ($4,129) · signal-only (no cash/fees) was +13.09%. Starts YES **0/30**. Fills 275 · skips 65 · realized $-814.48.
+Cash book **-58.33%** ($4,167) · signal-only (no cash/fees) was +13.09%. Starts YES **0/30**. Fills 286 · skips 65 · realized $-814.48.
 
 ## How this sleeve decides (like you are 10)
 
@@ -468,6 +468,19 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-05 09:30 ET | **BUY** | `STUB` | 273 | $6.56 | $3.52 | — | $1,793.42 | — | prior-export headline🟢 only; gate headline=good; rank cond; list ohlc_hot; ret5=+17.7; leftover $1793.91 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟡 heat🟢 vol🔴 buy🟡 |
 | 2026-11-05 09:30 ET | **BUY** | `MVST` | 2637 | $0.67 | $25.58 | — | $1.05 | — | prior-export headline🟢 only; gate headline=good; rank cond; list ohlc_hot; ret5=+7.2; leftover $1793.91 | join🟢 sector🔴 gen🔴 news🟢 digest🟢 ab🔴 peer🔴 heat🔴 vol🔴 buy🟡 |
 | 2026-11-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1.05 | ▼ close $4,128.86 vs 09:30 $4,512.15 (session -340.14) | 16:00 close · cash $1.05 · equity $4,128.86 vs 09:30 $4,512.15 (-383.29; session marks -340.14) · 3 name(s) marked open→close (per-name table). TBBB×14 09:30 $65.02 → close $64.21 -11.34; STUB×273 09:30 $6.56 → close $6.28 -76.44; MVST×2637 09:30 $0.67 → close $0.57 -252.36 | — |
+| 2026-11-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $1.05 | ▲ 09:30 equity $4,174.58 vs yday $4,128.86 (+45.72) | 09:30 open · cash $1.05 (unchanged overnight, no fees) · equity $4,174.58 vs prior close $4,128.86 (+45.72) · 3 name(s) re-marked at the open (per-name table). MVST×2637 yday $0.57 → 09:30 $0.60 +67.77; STUB×273 yday $6.28 → 09:30 $6.18 -27.30; TBBB×14 yday $64.21 → 09:30 $64.58 +5.25 | — |
+| 2026-11-06 09:30 ET | **SELL** | `MVST` | 2637 | $0.60 | $24.18 | $-234.35 | $1,559.07 | ▼ -234.35 after sell → book $4,150.40; vs 09:30 mark -24.18 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-06 09:30 ET | **SELL** | `STUB` | 273 | $6.18 | $3.58 | $-110.84 | $3,242.63 | ▼ -110.84 after sell → book $4,146.82; vs 09:30 mark -3.58 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-06 09:30 ET | **SELL** | `TBBB` | 14 | $64.58 | $2.05 | $+7.75 | $4,144.76 | ▲ +7.75 after sell → book $4,144.76; vs 09:30 mark -2.06 | dropped from list after 2 sess (min 1) | — |
+| 2026-11-06 09:30 ET | **BUY** | `LIVN` | 5 | $90.08 | $2.00 | — | $3,692.33 | — | prior-export headline🟢 only; gate headline=good; rank cond; list yday_gainer; 🔵; ret5=+12.2; leftover $518.10 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `MNST` | 11 | $44.04 | $2.02 | — | $3,205.87 | — | prior-export headline🟢 only; gate headline=good; rank cond; list earn_react; 🔵; ret5=+3.2; leftover $518.10 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `REPL` | 25 | $20.20 | $2.06 | — | $2,698.81 | — | prior-export headline🟢 only; gate headline=good; rank cond; list ohlc_hot; 🔵; ret5=+15.1; leftover $518.10 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `AHCO` | 71 | $7.27 | $2.20 | — | $2,180.43 | — | prior-export headline🟢 only; gate headline=good; rank cond; list yday_gainer; 🔵; ret5=+25.0; leftover $518.10 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `GMED` | 6 | $74.10 | $2.01 | — | $1,733.83 | — | prior-export headline🟢 only; gate headline=good; rank cond; list earn_react; ret5=-1.8; leftover $518.10 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `OPRT` | 44 | $11.60 | $2.12 | — | $1,221.30 | — | prior-export headline🟢 only; gate headline=good; rank cond; list yday_gainer,yday_mover; 🔵; ret5=+16.2; leftover $518.10 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `KD` | 32 | $15.83 | $2.09 | — | $712.66 | — | prior-export headline🟢 only; gate headline=good; rank cond; list yday_gainer,yday_mover; 🔵; ret5=+16.1; leftover $518.10 | join🔴 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-06 09:30 ET | **BUY** | `ECG` | 6 | $77.00 | $2.01 | — | $248.65 | — | prior-export headline🟢 only; gate headline=good; rank cond; list yday_mover; 🔵; ret5=-33.0; leftover $518.10 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $248.65 | ▲ close $4,167.27 vs 09:30 $4,174.58 (session +39.03) | 16:00 close · cash $248.65 · equity $4,167.27 vs 09:30 $4,174.58 (-7.31; session marks +39.03) · 8 name(s) marked open→close (per-name table). LIVN×5 09:30 $90.08 → close $89.99 -0.47; MNST×11 09:30 $44.04 → close $45.72 +18.48; REPL×25 09:30 $20.20 → close $21.62 +35.50; AHCO×71 09:30 $7.27 → close $7.33 +4.26; GMED×6 09:30 $74.10 → close $71.05 -18.30; OPRT×44 09:30 $11.60 → close $11.31 -12.76; KD×32 09:30 $15.83 → close $16.29 +14.72; ECG×6 09:30 $77.00 → close $76.60 -2.40 | — |
 
 ## Not taken
 

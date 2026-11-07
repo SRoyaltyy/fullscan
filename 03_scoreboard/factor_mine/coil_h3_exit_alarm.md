@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · coil, exit on 🚨
 
-Cash book **-35.02%** ($6,497) · signal-only (no cash/fees) was -18.91%. Starts YES **1/30**. Fills 384 · skips 290 · realized $-1290.13.
+Cash book **-32.93%** ($6,707) · signal-only (no cash/fees) was -18.91%. Starts YES **1/30**. Fills 388 · skips 290 · realized $-1290.13.
 
 ## How this sleeve decides (like you are 10)
 
@@ -578,6 +578,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-05 09:30 ET | **BUY** | `AMX` | 80 | $25.12 | $2.23 | — | $2,086.36 | — | coil, exit on 🚨; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list yday_gainer; ret5=+4.6; leftover $2032.90 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-11-05 09:30 ET | **BUY** | `MVST` | 3034 | $0.67 | $29.43 | — | $24.15 | — | coil, exit on 🚨; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list ohlc_hot; ret5=+7.2; leftover $2032.90 | join🟢 sector🔴 gen🔴 news🟢 digest🟢 ab🔴 peer🔴 heat🔴 vol🔴 buy🟡 |
 | 2026-11-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $24.15 | ▼ close $6,497.46 vs 09:30 $6,910.14 (session -361.92) | 16:00 close · cash $24.15 · equity $6,497.46 vs 09:30 $6,910.14 (-412.68; session marks -361.92) · 7 name(s) marked open→close (per-name table). CNMD×4 09:30 $54.40 → close $52.83 -6.28; CON×5 09:30 $43.57 → close $42.15 -7.10; EPR×3 09:30 $61.10 → close $59.79 -3.93; RGEN×1 09:30 $175.60 → close $168.48 -7.12; CRS×7 09:30 $285.50 → close $278.88 -46.34; AMX×80 09:30 $25.12 → close $25.11 -0.80; MVST×3034 09:30 $0.67 → close $0.57 -290.35 | — |
+| 2026-11-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $24.15 | ▲ 09:30 equity $6,565.58 vs yday $6,497.46 (+68.12) | 09:30 open · cash $24.15 (unchanged overnight, no fees) · equity $6,565.58 vs prior close $6,497.46 (+68.12) · 7 name(s) re-marked at the open (per-name table). AMX×80 yday $25.11 → 09:30 $24.90 -16.80; CNMD×4 yday $52.83 → 09:30 $51.11 -6.88; CON×5 yday $42.15 → 09:30 $41.60 -2.75; CRS×7 yday $278.88 → 09:30 $281.42 +17.78; EPR×3 yday $59.79 → 09:30 $59.10 -2.07; MVST×3034 yday $0.57 → 09:30 $0.60 +77.97; RGEN×1 yday $168.48 → 09:30 $169.35 +0.87 | — |
+| 2026-11-06 09:30 ET | **BUY** | `STIM` | 1 | $2.46 | $0.03 | — | $21.66 | — | coil, exit on 🚨; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list probable,yday_gainer; 🔵; ret5=+2.1; leftover $3.02 | join🟡 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `OCGN` | 3 | $0.83 | $0.03 | — | $19.14 | — | coil, exit on 🚨; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list probable,yday_gainer; 🔵; ret5=+9.7; leftover $3.02 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `GERN` | 3 | $0.95 | $0.04 | — | $16.25 | — | coil, exit on 🚨; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list probable,yday_gainer; 🔵; ret5=+0.4; leftover $3.02 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `LDI` | 4 | $0.64 | $0.04 | — | $13.67 | — | coil, exit on 🚨; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list probable; 🔵; ret5=+4.5; leftover $3.02 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $13.67 | ▲ close $6,707.40 vs 09:30 $6,565.58 (session +141.96) | 16:00 close · cash $13.67 · equity $6,707.40 vs 09:30 $6,565.58 (+141.82; session marks +141.96) · 11 name(s) marked open→close (per-name table). AMX×80 09:30 $24.90 → close $25.72 +65.60; CNMD×4 09:30 $51.11 → close $51.50 +1.56; CON×5 09:30 $41.60 → close $42.22 +3.10; CRS×7 09:30 $281.42 → close $278.31 -21.77; EPR×3 09:30 $59.10 → close $59.51 +1.23; MVST×3034 09:30 $0.60 → close $0.63 +87.99; RGEN×1 09:30 $169.35 → close $173.49 +4.14; STIM×1 09:30 $2.46 → close $2.15 -0.31; OCGN×3 09:30 $0.83 → close $0.93 +0.29; GERN×3 09:30 $0.95 → close $0.99 +0.12; LDI×4 09:30 $0.64 → close $0.64 +0.01 | — |
 
 ## Not taken
 

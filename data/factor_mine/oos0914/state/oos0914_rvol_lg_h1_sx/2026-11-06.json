@@ -1,0 +1,212 @@
+{
+  "buys": [
+    {
+      "fill_rule": "open",
+      "price": 9.0,
+      "shares": 291,
+      "side": "BUY",
+      "ticker": "CRCT"
+    },
+    {
+      "fill_rule": "open",
+      "price": 355.95,
+      "shares": 7,
+      "side": "BUY",
+      "ticker": "APP"
+    },
+    {
+      "fill_rule": "open",
+      "price": 27.24,
+      "shares": 96,
+      "side": "BUY",
+      "ticker": "ENOV"
+    },
+    {
+      "fill_rule": "open",
+      "price": 27.25,
+      "shares": 96,
+      "side": "BUY",
+      "ticker": "MGNI"
+    }
+  ],
+  "cash": 129.25,
+  "date": "2026-11-06",
+  "equity": 10659.57,
+  "fees": 30.665,
+  "fills": [
+    {
+      "fees": 9.779,
+      "fill_rule": "open",
+      "pnl": -389.18,
+      "price": 3.13,
+      "shares": 747,
+      "side": "SELL",
+      "ticker": "AMC"
+    },
+    {
+      "fees": 5.1445,
+      "fill_rule": "open",
+      "pnl": 107.4,
+      "price": 7.2,
+      "shares": 392,
+      "side": "SELL",
+      "ticker": "ANGI"
+    },
+    {
+      "fees": 3.0128,
+      "fill_rule": "open",
+      "pnl": -125.05,
+      "price": 11.3,
+      "shares": 229,
+      "side": "SELL",
+      "ticker": "GPK"
+    },
+    {
+      "fees": 2.4078,
+      "fill_rule": "open",
+      "pnl": 52.1,
+      "price": 22.0,
+      "shares": 125,
+      "side": "SELL",
+      "ticker": "MOS"
+    },
+    {
+      "fees": 3.7539,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 9.0,
+      "shares": 291,
+      "side": "BUY",
+      "ticker": "CRCT"
+    },
+    {
+      "fees": 2.011,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 355.95,
+      "shares": 7,
+      "side": "BUY",
+      "ticker": "APP"
+    },
+    {
+      "fees": 2.278,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 27.24,
+      "shares": 96,
+      "side": "BUY",
+      "ticker": "ENOV"
+    },
+    {
+      "fees": 2.278,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 27.25,
+      "shares": 96,
+      "side": "BUY",
+      "ticker": "MGNI"
+    }
+  ],
+  "holdings": [
+    "APP",
+    "CRCT",
+    "ENOV",
+    "MGNI"
+  ],
+  "mean": 0.4909,
+  "n_trades_today": 8,
+  "recipe": "oos0914_rvol_lg_h1_sx",
+  "sells": [
+    {
+      "fill_rule": "open",
+      "price": 3.13,
+      "shares": 747,
+      "side": "SELL",
+      "ticker": "AMC"
+    },
+    {
+      "fill_rule": "open",
+      "price": 7.2,
+      "shares": 392,
+      "side": "SELL",
+      "ticker": "ANGI"
+    },
+    {
+      "fill_rule": "open",
+      "price": 11.3,
+      "shares": 229,
+      "side": "SELL",
+      "ticker": "GPK"
+    },
+    {
+      "fill_rule": "open",
+      "price": 22.0,
+      "shares": 125,
+      "side": "SELL",
+      "ticker": "MOS"
+    }
+  ],
+  "state": {
+    "after": "2026-11-06",
+    "cash": 129.25,
+    "pos": {
+      "APP": {
+        "close_px": 391.22,
+        "cost": 2493.661,
+        "entry_date": "2026-11-06",
+        "entry_px": 355.95,
+        "fee_in": 2.011,
+        "last_px": 355.95,
+        "min_hold": 1,
+        "notional": 2491.65,
+        "peak_px": 355.95,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate last_green=True,rvol_min=1.5; rank hot_score; list flatten; \ud83d\udd35; ret5=+39.7; leftover $2620.31",
+        "shares": 7,
+        "ticker": "APP"
+      },
+      "CRCT": {
+        "close_px": 8.78,
+        "cost": 2622.7539,
+        "entry_date": "2026-11-06",
+        "entry_px": 9.0,
+        "fee_in": 3.7539,
+        "last_px": 9.0,
+        "min_hold": 1,
+        "notional": 2619.0,
+        "peak_px": 9.0,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate last_green=True,rvol_min=1.5; rank hot_score; list yday_gainer,yday_mover; ret5=+49.7; leftover $2620.31",
+        "shares": 291,
+        "ticker": "CRCT"
+      },
+      "ENOV": {
+        "close_px": 27.16,
+        "cost": 2617.3179999999998,
+        "entry_date": "2026-11-06",
+        "entry_px": 27.24,
+        "fee_in": 2.278,
+        "last_px": 27.24,
+        "min_hold": 1,
+        "notional": 2615.04,
+        "peak_px": 27.24,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate last_green=True,rvol_min=1.5; rank hot_score; list yday_gainer; \ud83d\udd35; ret5=+25.5; leftover $2620.31",
+        "shares": 96,
+        "ticker": "ENOV"
+      },
+      "MGNI": {
+        "close_px": 27.39,
+        "cost": 2618.278,
+        "entry_date": "2026-11-06",
+        "entry_px": 27.25,
+        "fee_in": 2.278,
+        "last_px": 27.25,
+        "min_hold": 1,
+        "notional": 2616.0,
+        "peak_px": 27.25,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate last_green=True,rvol_min=1.5; rank hot_score; list flatten; \ud83d\udd35; ret5=+22.7; leftover $2620.31",
+        "shares": 96,
+        "ticker": "MGNI"
+      }
+    },
+    "yday_equity": 10659.57
+  }
+}

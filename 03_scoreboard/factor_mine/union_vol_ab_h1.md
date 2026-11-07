@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-20.87%** ($7,913) · signal-only (no cash/fees) was +53.27%. Starts YES **26/30**. Fills 322 · skips 65 · realized $+1139.59.
+Cash book **-19.40%** ($8,060) · signal-only (no cash/fees) was +53.27%. Starts YES **26/30**. Fills 330 · skips 65 · realized $+1139.59.
 
 ## How this sleeve decides (like you are 10)
 
@@ -516,6 +516,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-04 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,912.91 | ▲ close $7,912.91 vs 09:30 $7,912.91 (session +0.00) | 16:00 close · cash $7,912.91 · no lots left · equity $7,912.91. | — |
 | 2026-11-05 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,912.91 | ▲ 09:30 equity $7,912.91 vs yday $7,912.91 (+0.00) | 09:30 open · cash $7,912.91 · no holdings · equity $7,912.91 vs prior close $7,912.91 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-11-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,912.91 | ▲ close $7,912.91 vs 09:30 $7,912.91 (session +0.00) | 16:00 close · cash $7,912.91 · no lots left · equity $7,912.91. | — |
+| 2026-11-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,912.91 | ▲ 09:30 equity $7,912.91 vs yday $7,912.91 (+0.00) | 09:30 open · cash $7,912.91 · no holdings · equity $7,912.91 vs prior close $7,912.91 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-06 09:30 ET | **BUY** | `APP` | 2 | $355.95 | $2.00 | — | $7,199.01 | — | combo gate; gate ab=good,vol=good; list flatten; 🔵; ret5=+39.7; leftover $989.11 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `GPK` | 87 | $11.30 | $2.25 | — | $6,213.66 | — | combo gate; gate ab=good,vol=good; list flatten; 🔵; ret5=+31.0; leftover $989.11 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-06 09:30 ET | **BUY** | `XMAX` | 195 | $5.07 | $2.58 | — | $5,222.44 | — | combo gate; gate ab=good,vol=good; list probable,yday_gainer,yday_mover; 🔵; ret5=-38.2; leftover $989.11 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `CYH` | 443 | $2.23 | $5.71 | — | $4,228.83 | — | combo gate; gate ab=good,vol=good; list probable; 🔵; ret5=-5.4; leftover $989.11 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `OUST` | 30 | $31.95 | $2.08 | — | $3,268.40 | — | combo gate; gate ab=good,vol=good; list probable; 🔵; ret5=-5.0; leftover $989.11 | join🔴 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `CRCT` | 109 | $9.00 | $2.32 | — | $2,285.09 | — | combo gate; gate ab=good,vol=good; list yday_gainer,yday_mover; ret5=+49.7; leftover $989.11 | join🔴 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `KD` | 62 | $15.83 | $2.18 | — | $1,301.45 | — | combo gate; gate ab=good,vol=good; list yday_gainer,yday_mover; 🔵; ret5=+16.1; leftover $989.11 | join🔴 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-06 09:30 ET | **BUY** | `OPRT` | 85 | $11.60 | $2.25 | — | $313.21 | — | combo gate; gate ab=good,vol=good; list yday_gainer,yday_mover; 🔵; ret5=+16.2; leftover $989.11 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $313.21 | ▲ close $8,059.76 vs 09:30 $7,912.91 (session +168.20) | 16:00 close · cash $313.21 · equity $8,059.76 vs 09:30 $7,912.91 (+146.85; session marks +168.20) · 8 name(s) marked open→close (per-name table). APP×2 09:30 $355.95 → close $391.22 +70.54; GPK×87 09:30 $11.30 → close $11.19 -9.57; XMAX×195 09:30 $5.07 → close $5.33 +50.70; CYH×443 09:30 $2.23 → close $2.21 -8.86; OUST×30 09:30 $31.95 → close $34.80 +85.50; CRCT×109 09:30 $9.00 → close $8.78 -23.98; KD×62 09:30 $15.83 → close $16.29 +28.52; OPRT×85 09:30 $11.60 → close $11.31 -24.65 | — |
 
 ## Not taken
 

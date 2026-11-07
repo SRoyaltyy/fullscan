@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared union_join_vol_green_h1/short_news_r_h3/union_e_fresh_h3 w=0.33,0.33,0.33 net=priority
 
-Cash book **-2.71%** ($9,729) · signal-only (no cash/fees) was —. Starts YES **7/30**. Fills 678 · skips 387 · realized $+3094.73.
+Cash book **-1.65%** ($9,835) · signal-only (no cash/fees) was —. Starts YES **7/30**. Fills 683 · skips 387 · realized $+3094.73.
 
 ## How this sleeve decides (like you are 10)
 
@@ -56,7 +56,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $261.03.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $291.81.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -872,6 +872,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-05 09:30 ET | **BUY** | `EXPE` | 9 | $287.31 | $2.02 | — | $3,128.88 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list ohlc_hot; ret5=+14.6; combo leftover $2867.34; owner union_e_fresh_h3 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-11-05 09:30 ET | **BUY** | `ARHS` | 224 | $12.79 | $2.89 | — | $261.03 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list ohlc_hot; ret5=+14.1; combo leftover $2867.34; owner union_e_fresh_h3 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-11-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $261.03 | ▲ close $9,729.36 vs 09:30 $9,312.36 (session +446.99) | 16:00 close · cash $261.03 · equity $9,729.36 vs 09:30 $9,312.36 (+417.00; session marks +446.99) · 6 name(s) marked open→close (per-name table). HRB×90 09:30 $55.85 → close $55.01 +75.60; PRMB×133 09:30 $21.55 → close $22.15 +79.80; AMC×790 09:30 $3.62 → close $3.08 -430.55; DNUT×802 09:30 $3.58 → close $4.60 +822.05; EXPE×9 09:30 $287.31 → close $272.48 -133.51; ARHS×224 09:30 $12.79 → close $12.94 +33.60 | — |
+| 2026-11-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $261.03 | ▼ 09:30 equity $9,727.34 vs yday $9,729.36 (-2.02) | 09:30 open · cash $261.03 (unchanged overnight, no fees) · equity $9,727.34 vs prior close $9,729.36 (-2.02) | — |
+| 2026-11-06 09:30 ET | **BUY** | `SSP` | 3 | $3.00 | $0.10 | — | $251.93 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list ohlc_hot,earn_react; 🔵; ret5=+17.1; combo leftover $10.88; owner union_e_fresh_h3 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `PLTK` | 4 | $2.26 | $0.10 | — | $242.79 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list ohlc_hot; 🔵; ret5=+17.3; combo leftover $10.88; owner union_e_fresh_h3 | join🟡 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `WEN` | 1 | $7.85 | $0.08 | — | $234.86 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list ohlc_hot; 🔵; ret5=+10.8; combo leftover $10.88; owner union_e_fresh_h3 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-11-06 09:30 ET | **SHORT** | `ANGI` | 4 | $7.20 | $0.32 | — | $263.34 | — | news🔴; gate news=bad; list yday_gainer; 🔵; ret5=+21.6; combo leftover $29.36; owner short_news_r_h3 | join🟢 sector🟡 gen🔴 news🔴 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **SHORT** | `GSM` | 11 | $2.62 | $0.34 | — | $291.81 | — | news🔴; gate news=bad; list yday_mover; 🔵; ret5=-36.9; combo leftover $29.36; owner short_news_r_h3 | join🔴 sector🟡 gen🔴 news🔴 digest🟢 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-11-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $291.81 | ▲ close $9,835.46 vs 09:30 $9,727.34 (session +109.07) | 16:00 close · cash $291.81 · equity $9,835.46 vs 09:30 $9,727.34 (+108.12; session marks +109.07) · 11 name(s) marked open→close (per-name table). AMC×790 09:30 $3.13 → close $3.14 +7.90; ARHS×224 09:30 $13.00 → close $14.19 +266.56; DNUT×802 09:30 $4.44 → close $4.17 -216.54; EXPE×9 09:30 $272.19 → close $259.24 -116.55; HRB×90 09:30 $53.56 → close $52.69 +78.30; PRMB×133 09:30 $21.74 → close $22.39 +86.45; SSP×3 09:30 $3.00 → close $3.05 +0.15; PLTK×4 09:30 $2.26 → close $2.44 +0.72; WEN×1 09:30 $7.85 → close $8.15 +0.30; ANGI×4 09:30 $7.20 → close $6.92 +1.12; GSM×11 09:30 $2.62 → close $2.56 +0.66 | — |
 
 ## Not taken
 

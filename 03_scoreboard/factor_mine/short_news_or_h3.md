@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · short packet🔴 OR headline🔴
 
-Cash book **-13.41%** ($8,659) · signal-only (no cash/fees) was -1.39%. Starts YES **0/30**. Fills 172 · skips 120 · realized $+434.23.
+Cash book **-11.59%** ($8,841) · signal-only (no cash/fees) was -1.39%. Starts YES **0/30**. Fills 180 · skips 120 · realized $+434.23.
 
 ## How this sleeve decides (like you are 10)
 
@@ -362,6 +362,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-05 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $17,789.37 | ▼ 09:30 equity $8,591.36 vs yday $8,682.06 (-90.70) | 09:30 open · cash $17,789.37 (unchanged overnight, no fees) · equity $8,591.36 vs prior close $8,682.06 (-90.70) · 2 name(s) re-marked at the open (per-name table). BAH×51 yday $88.30 → 09:30 $89.46 -59.16; HRB×83 yday $55.47 → 09:30 $55.85 -31.54 | — |
 | 2026-11-05 09:30 ET | **COVER** | `BAH` | 51 | $89.46 | $2.14 | $-121.75 | $13,224.77 | ▼ -121.75 after sell → book $8,589.22; vs 09:30 mark -2.14 | dropped from list after 3 sess (min 3) | — |
 | 2026-11-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $13,224.77 | ▲ close $8,658.94 vs 09:30 $8,591.36 (session +69.72) | 16:00 close · cash $13,224.77 · equity $8,658.94 vs 09:30 $8,591.36 (+67.58; session marks +69.72) · 1 name(s) marked open→close (per-name table). HRB×83 09:30 $55.85 → close $55.01 +69.72 | — |
+| 2026-11-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $13,224.77 | ▲ 09:30 equity $8,779.29 vs yday $8,658.94 (+120.35) | 09:30 open · cash $13,224.77 (unchanged overnight, no fees) · equity $8,779.29 vs prior close $8,658.94 (+120.35) · 1 name(s) re-marked at the open (per-name table). HRB×83 yday $55.01 → 09:30 $53.56 +120.35 | — |
+| 2026-11-06 09:30 ET | **SHORT** | `YOU` | 9 | $55.83 | $2.05 | — | $13,725.19 | — | short packet🔴 OR headline🔴; gate news_or_red=True; list yday_gainer,yday_mover; ret5=+22.3; leftover $548.71 | join🔴 sector🟡 gen🔴 news🔴 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **SHORT** | `ANGI` | 76 | $7.20 | $2.26 | — | $14,270.13 | — | short packet🔴 OR headline🔴; gate news_or_red=True; list yday_gainer; 🔵; ret5=+21.6; leftover $548.71 | join🟢 sector🟡 gen🔴 news🔴 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **SHORT** | `MDLN` | 13 | $39.53 | $2.06 | — | $14,781.96 | — | short packet🔴 OR headline🔴; gate news_or_red=True; list yday_gainer; ret5=+24.2; leftover $548.71 | join🟢 sector🟡 gen🔴 news🔴 digest🔴 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **SHORT** | `GSM` | 209 | $2.62 | $2.76 | — | $15,326.78 | — | short packet🔴 OR headline🔴; gate news_or_red=True; list yday_mover; 🔵; ret5=-36.9; leftover $548.71 | join🔴 sector🟡 gen🔴 news🔴 digest🟢 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **SHORT** | `HUT` | 10 | $50.56 | $2.05 | — | $15,830.33 | — | short packet🔴 OR headline🔴; gate news_or_red=True; list yday_mover; 🔵; ret5=-30.8; leftover $548.71 | join🔴 sector🟡 gen🔴 news🔴 digest🟢 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **SHORT** | `QTWO` | 7 | $73.44 | $2.05 | — | $16,342.37 | — | short packet🔴 OR headline🔴; gate news_or_red=True; list ohlc_hot; 🔵; ret5=+15.8; leftover $548.71 | join🔴 sector🟡 gen🔴 news🔴 digest🔴 ab🟢 peer🟡 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **SHORT** | `AEE` | 4 | $112.14 | $2.03 | — | $16,788.89 | — | short packet🔴 OR headline🔴; gate news_or_red=True; list earn_react; 🔵; ret5=+2.4; leftover $548.71 | join🟢 sector🟡 gen🔴 news🔴 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **SHORT** | `AKAM` | 6 | $83.37 | $2.04 | — | $17,287.07 | — | short packet🔴 OR headline🔴; gate news_or_red=True; list earn_react; ret5=-21.7; leftover $548.71 | join🔴 sector🟡 gen🔴 news🔴 digest🔴 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-11-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $17,287.07 | ▲ close $8,841.35 vs 09:30 $8,779.29 (session +79.36) | 16:00 close · cash $17,287.07 · equity $8,841.35 vs 09:30 $8,779.29 (+62.06; session marks +79.36) · 9 name(s) marked open→close (per-name table). HRB×83 09:30 $53.56 → close $52.69 +72.21; YOU×9 09:30 $55.83 → close $55.81 +0.18; ANGI×76 09:30 $7.20 → close $6.92 +21.28; MDLN×13 09:30 $39.53 → close $39.64 -1.43; GSM×209 09:30 $2.62 → close $2.56 +12.54; HUT×10 09:30 $50.56 → close $52.65 -20.90; QTWO×7 09:30 $73.44 → close $73.92 -3.36; AEE×4 09:30 $112.14 → close $112.85 -2.84; AKAM×6 09:30 $83.37 → close $83.09 +1.68 | — |
 
 ## Not taken
 

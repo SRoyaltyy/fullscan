@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `probable` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · baseline list, no extra gate
 
-Cash book **-29.88%** ($7,012) · signal-only (no cash/fees) was -1.12%. Starts YES **3/30**. Fills 385 · skips 107 · realized $-305.80.
+Cash book **-29.38%** ($7,062) · signal-only (no cash/fees) was -1.12%. Starts YES **3/30**. Fills 394 · skips 107 · realized $-305.80.
 
 ## How this sleeve decides (like you are 10)
 
@@ -573,6 +573,17 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-04 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $0.95 | ▼ close $7,147.51 vs 09:30 $7,399.97 (session -252.46) | 16:00 close · cash $0.95 · equity $7,147.51 vs 09:30 $7,399.97 (-252.46; session marks -252.46) · 1 name(s) marked open→close (per-name table). ACRS×1942 09:30 $3.81 → close $3.68 -252.46 | — |
 | 2026-11-05 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $0.95 | ▲ 09:30 equity $7,205.77 vs yday $7,147.51 (+58.26) | 09:30 open · cash $0.95 (unchanged overnight, no fees) · equity $7,205.77 vs prior close $7,147.51 (+58.26) · 1 name(s) re-marked at the open (per-name table). ACRS×1942 yday $3.68 → 09:30 $3.71 +58.26 | — |
 | 2026-11-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $0.95 | ▼ close $7,011.57 vs 09:30 $7,205.77 (session -194.20) | 16:00 close · cash $0.95 · equity $7,011.57 vs 09:30 $7,205.77 (-194.20; session marks -194.20) · 1 name(s) marked open→close (per-name table). ACRS×1942 09:30 $3.71 → close $3.61 -194.20 | — |
+| 2026-11-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $0.95 | ▲ 09:30 equity $7,030.99 vs yday $7,011.57 (+19.42) | 09:30 open · cash $0.95 (unchanged overnight, no fees) · equity $7,030.99 vs prior close $7,011.57 (+19.42) · 1 name(s) re-marked at the open (per-name table). ACRS×1942 yday $3.61 → 09:30 $3.62 +19.42 | — |
+| 2026-11-06 09:30 ET | **SELL** | `ACRS` | 1942 | $3.62 | $25.43 | $-749.60 | $7,005.56 | ▼ -749.60 after sell → book $7,005.56; vs 09:30 mark -25.43 | dropped from list after 8 sess (min 1) | — |
+| 2026-11-06 09:30 ET | **BUY** | `XMAX` | 172 | $5.07 | $2.51 | — | $6,131.01 | — | baseline list, no extra gate; list probable,yday_gainer,yday_mover; 🔵; ret5=-38.2; leftover $875.69 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `STIM` | 355 | $2.46 | $4.58 | — | $5,253.13 | — | baseline list, no extra gate; list probable,yday_gainer; 🔵; ret5=+2.1; leftover $875.69 | join🟡 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `VNET` | 266 | $3.28 | $3.43 | — | $4,377.22 | — | baseline list, no extra gate; list probable,yday_gainer; ret5=-6.5; leftover $875.69 | join🔴 sector🟡 gen🔴 news🟡 digest🔴 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `OCGN` | 1055 | $0.83 | $11.92 | — | $3,489.65 | — | baseline list, no extra gate; list probable,yday_gainer; 🔵; ret5=+9.7; leftover $875.69 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `GERN` | 921 | $0.95 | $11.51 | — | $2,603.19 | — | baseline list, no extra gate; list probable,yday_gainer; 🔵; ret5=+0.4; leftover $875.69 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `CYH` | 392 | $2.23 | $5.06 | — | $1,723.97 | — | baseline list, no extra gate; list probable; 🔵; ret5=-5.4; leftover $875.69 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `LDI` | 1374 | $0.64 | $12.87 | — | $835.86 | — | baseline list, no extra gate; list probable; 🔵; ret5=+4.5; leftover $875.69 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `OUST` | 26 | $31.95 | $2.07 | — | $3.22 | — | baseline list, no extra gate; list probable; 🔵; ret5=-5.0; leftover $875.69 | join🔴 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $3.22 | ▲ close $7,061.81 vs 09:30 $7,030.99 (session +110.20) | 16:00 close · cash $3.22 · equity $7,061.81 vs 09:30 $7,030.99 (+30.82; session marks +110.20) · 8 name(s) marked open→close (per-name table). XMAX×172 09:30 $5.07 → close $5.33 +44.72; STIM×355 09:30 $2.46 → close $2.15 -110.05; VNET×266 09:30 $3.28 → close $3.16 -31.92; OCGN×1055 09:30 $0.83 → close $0.93 +100.23; GERN×921 09:30 $0.95 → close $0.99 +36.84; CYH×392 09:30 $2.23 → close $2.21 -7.84; LDI×1374 09:30 $0.64 → close $0.64 +4.12; OUST×26 09:30 $31.95 → close $34.80 +74.10 | — |
 
 ## Not taken
 

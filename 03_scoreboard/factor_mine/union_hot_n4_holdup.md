@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 4 · rank `hot_score` · size `leftover` · sell `list` · S-boost `holdup` · hot4; S>0 lots stay through the next 09:30 so the overnight gap is in the book
 
-Cash book **+56.54%** ($15,654) · signal-only (no cash/fees) was +89.81%. Starts YES **29/30**. Fills 136 · skips 79 · realized $+4974.44.
+Cash book **+57.20%** ($15,720) · signal-only (no cash/fees) was +89.81%. Starts YES **29/30**. Fills 140 · skips 79 · realized $+4974.44.
 
 ## How this sleeve decides (like you are 10)
 
@@ -328,6 +328,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-04 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $15,654.10 | ▲ close $15,654.10 vs 09:30 $15,663.50 (session +0.00) | 16:00 close · cash $15,654.10 · no lots left · equity $15,654.10. | — |
 | 2026-11-05 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $15,654.10 | ▲ 09:30 equity $15,654.10 vs yday $15,654.10 (+0.00) | 09:30 open · cash $15,654.10 · no holdings · equity $15,654.10 vs prior close $15,654.10 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-11-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $15,654.10 | ▲ close $15,654.10 vs 09:30 $15,654.10 (session +0.00) | 16:00 close · cash $15,654.10 · no lots left · equity $15,654.10. | — |
+| 2026-11-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $15,654.10 | ▲ 09:30 equity $15,654.10 vs yday $15,654.10 (+0.00) | 09:30 open · cash $15,654.10 · no holdings · equity $15,654.10 vs prior close $15,654.10 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-06 09:30 ET | **BUY** | `BUUU` | 734 | $5.33 | $9.47 | — | $11,732.41 | — | hot4; S>0 lots stay through the next 09:30 so the overnight gap is in the book; rank hot_score; list ohlc_hot; 🔵; ret5=-9.4; leftover $3913.53 | join🟡 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `CRCT` | 434 | $9.00 | $5.60 | — | $7,820.81 | — | hot4; S>0 lots stay through the next 09:30 so the overnight gap is in the book; rank hot_score; list yday_gainer,yday_mover; ret5=+49.7; leftover $3913.53 | join🔴 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `APP` | 10 | $355.95 | $2.02 | — | $4,259.29 | — | hot4; S>0 lots stay through the next 09:30 so the overnight gap is in the book; rank hot_score; list flatten; 🔵; ret5=+39.7; leftover $3913.53 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `CMTG` | 2329 | $1.68 | $30.04 | — | $316.53 | — | hot4; S>0 lots stay through the next 09:30 so the overnight gap is in the book; rank hot_score; list yday_gainer,yday_mover; 🔵; ret5=+44.9; leftover $3913.53 | join🟢 sector🟡 gen🔴 news🟡 ab🔴 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $316.53 | ▲ close $15,719.65 vs 09:30 $15,654.10 (session +112.68) | 16:00 close · cash $316.53 · equity $15,719.65 vs 09:30 $15,654.10 (+65.55; session marks +112.68) · 4 name(s) marked open→close (per-name table). BUUU×734 09:30 $5.33 → close $5.26 -51.38; CRCT×434 09:30 $9.00 → close $8.78 -95.48; APP×10 09:30 $355.95 → close $391.22 +352.70; CMTG×2329 09:30 $1.68 → close $1.64 -93.16 | — |
 
 ## Not taken
 

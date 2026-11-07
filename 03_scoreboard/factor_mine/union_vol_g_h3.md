@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ vol_g, no 🚨
 
-Cash book **-2.99%** ($9,701) · signal-only (no cash/fees) was -14.17%. Starts YES **21/30**. Fills 309 · skips 286 · realized $-156.04.
+Cash book **-2.38%** ($9,762) · signal-only (no cash/fees) was -14.17%. Starts YES **21/30**. Fills 317 · skips 286 · realized $-156.04.
 
 ## How this sleeve decides (like you are 10)
 
@@ -501,6 +501,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-05 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $0.33 | ▼ 09:30 equity $9,726.03 vs yday $10,221.85 (-495.82) | 09:30 open · cash $0.33 (unchanged overnight, no fees) · equity $9,726.03 vs prior close $10,221.85 (-495.82) · 1 name(s) re-marked at the open (per-name table). EGG×1907 yday $5.36 → 09:30 $5.10 -495.82 | — |
 | 2026-11-05 09:30 ET | **SELL** | `EGG` | 1907 | $5.10 | $24.99 | $-125.88 | $9,701.04 | ▼ -125.88 after sell → book $9,701.04; vs 09:30 mark -24.99 | dropped from list after 6 sess (min 3) | join🔴 sector🔴 gen🔴 news🟡 digest🟢 ab🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-11-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,701.04 | ▲ close $9,701.04 vs 09:30 $9,726.03 (session +0.00) | 16:00 close · cash $9,701.04 · no lots left · equity $9,701.04. | — |
+| 2026-11-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,701.04 | ▲ 09:30 equity $9,701.04 vs yday $9,701.04 (+0.00) | 09:30 open · cash $9,701.04 · no holdings · equity $9,701.04 vs prior close $9,701.04 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-06 09:30 ET | **BUY** | `APP` | 3 | $355.95 | $2.00 | — | $8,631.19 | — | union ∩ vol_g, no 🚨; gate vol=good; list flatten; 🔵; ret5=+39.7; leftover $1212.63 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `GPK` | 107 | $11.30 | $2.31 | — | $7,419.78 | — | union ∩ vol_g, no 🚨; gate vol=good; list flatten; 🔵; ret5=+31.0; leftover $1212.63 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-06 09:30 ET | **BUY** | `XMAX` | 239 | $5.07 | $3.08 | — | $6,204.97 | — | union ∩ vol_g, no 🚨; gate vol=good; list probable,yday_gainer,yday_mover; 🔵; ret5=-38.2; leftover $1212.63 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `STIM` | 492 | $2.46 | $6.35 | — | $4,988.30 | — | union ∩ vol_g, no 🚨; gate vol=good; list probable,yday_gainer; 🔵; ret5=+2.1; leftover $1212.63 | join🟡 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `VNET` | 369 | $3.28 | $4.76 | — | $3,773.22 | — | union ∩ vol_g, no 🚨; gate vol=good; list probable,yday_gainer; ret5=-6.5; leftover $1212.63 | join🔴 sector🟡 gen🔴 news🟡 digest🔴 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `GERN` | 1276 | $0.95 | $15.95 | — | $2,545.07 | — | union ∩ vol_g, no 🚨; gate vol=good; list probable,yday_gainer; 🔵; ret5=+0.4; leftover $1212.63 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `CYH` | 543 | $2.23 | $7.00 | — | $1,327.18 | — | union ∩ vol_g, no 🚨; gate vol=good; list probable; 🔵; ret5=-5.4; leftover $1212.63 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `OUST` | 37 | $31.95 | $2.10 | — | $143.11 | — | union ∩ vol_g, no 🚨; gate vol=good; list probable; 🔵; ret5=-5.0; leftover $1212.63 | join🔴 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $143.11 | ▲ close $9,762.49 vs 09:30 $9,701.04 (session +105.01) | 16:00 close · cash $143.11 · equity $9,762.49 vs 09:30 $9,701.04 (+61.45; session marks +105.01) · 8 name(s) marked open→close (per-name table). APP×3 09:30 $355.95 → close $391.22 +105.81; GPK×107 09:30 $11.30 → close $11.19 -11.77; XMAX×239 09:30 $5.07 → close $5.33 +62.14; STIM×492 09:30 $2.46 → close $2.15 -152.52; VNET×369 09:30 $3.28 → close $3.16 -44.28; GERN×1276 09:30 $0.95 → close $0.99 +51.04; CYH×543 09:30 $2.23 → close $2.21 -10.86; OUST×37 09:30 $31.95 → close $34.80 +105.45 | — |
 
 ## Not taken
 

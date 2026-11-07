@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `trail` · S-boost `none` · after min-hold, trail 5% off peak
 
-Cash book **-22.22%** ($7,778) · signal-only (no cash/fees) was -0.80%. Starts YES **0/30**. Fills 480 · skips 107 · realized $-106.46.
+Cash book **-23.80%** ($7,620) · signal-only (no cash/fees) was -0.80%. Starts YES **0/30**. Fills 494 · skips 107 · realized $-106.46.
 
 ## How this sleeve decides (like you are 10)
 
@@ -668,6 +668,22 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-05 09:30 ET | **BUY** | `SMMT` | 62 | $16.10 | $2.18 | — | $1,126.56 | — | after min-hold, trail 5% off peak; list probable,yday_gainer,yday_mover; ret5=+2.5; leftover $1005.04 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-11-05 09:30 ET | **BUY** | `PRMB` | 46 | $21.55 | $2.13 | — | $133.13 | — | after min-hold, trail 5% off peak; list probable,yday_gainer,yday_mover; ret5=+8.8; leftover $1005.04 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-11-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $133.13 | ▼ close $7,777.61 vs 09:30 $8,054.68 (session -245.92) | 16:00 close · cash $133.13 · equity $7,777.61 vs 09:30 $8,054.68 (-277.07; session marks -245.92) · 8 name(s) marked open→close (per-name table). CSGP×30 09:30 $33.11 → close $32.05 -31.80; CMCSA×40 09:30 $25.10 → close $24.95 -6.00; CLX×10 09:30 $99.88 → close $99.70 -1.80; COCO×14 09:30 $67.15 → close $63.63 -49.28; CROX×6 09:30 $160.00 → close $152.93 -42.42; GPK×85 09:30 $11.82 → close $11.54 -23.80; SMMT×62 09:30 $16.10 → close $14.19 -118.42; PRMB×46 09:30 $21.55 → close $22.15 +27.60 | — |
+| 2026-11-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $133.13 | ▼ 09:30 equity $7,644.73 vs yday $7,777.61 (-132.88) | 09:30 open · cash $133.13 (unchanged overnight, no fees) · equity $7,644.73 vs prior close $7,777.61 (-132.88) · 8 name(s) re-marked at the open (per-name table). CLX×10 yday $99.70 → 09:30 $96.74 -29.60; CMCSA×40 yday $24.95 → 09:30 $24.21 -29.60; COCO×14 yday $63.63 → 09:30 $62.29 -18.76; CROX×6 yday $152.93 → 09:30 $150.37 -15.36; CSGP×30 yday $32.05 → 09:30 $30.80 -37.50; GPK×85 yday $11.54 → 09:30 $11.30 -20.40; PRMB×46 yday $22.15 → 09:30 $21.74 -18.86; SMMT×62 yday $14.19 → 09:30 $14.79 +37.20 | — |
+| 2026-11-06 09:30 ET | **SELL** | `CLX` | 10 | $96.74 | $2.04 | $-35.46 | $1,098.49 | ▼ -35.46 after sell → book $7,642.69; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-06 09:30 ET | **SELL** | `CMCSA` | 40 | $24.21 | $2.13 | $-39.84 | $2,064.76 | ▼ -39.84 after sell → book $7,640.56; vs 09:30 mark -2.13 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-06 09:30 ET | **SELL** | `COCO` | 14 | $62.29 | $2.05 | $-72.12 | $2,934.77 | ▼ -72.12 after sell → book $7,638.51; vs 09:30 mark -2.05 | trail off peak after 1 sess (−5%) | — |
+| 2026-11-06 09:30 ET | **SELL** | `CROX` | 6 | $150.37 | $2.03 | $-61.82 | $3,834.96 | ▼ -61.82 after sell → book $7,636.48; vs 09:30 mark -2.03 | trail off peak after 1 sess (−5%) | — |
+| 2026-11-06 09:30 ET | **SELL** | `CSGP` | 30 | $30.80 | $2.10 | $-73.48 | $4,756.86 | ▼ -73.48 after sell → book $7,634.38; vs 09:30 mark -2.10 | trail off peak after 1 sess (−5%) | join🟢 sector🟡 gen🔴 news🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟢 |
+| 2026-11-06 09:30 ET | **SELL** | `PRMB` | 46 | $21.74 | $2.15 | $+4.46 | $5,754.75 | ▲ +4.46 after sell → book $7,632.23; vs 09:30 mark -2.15 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **SELL** | `SMMT` | 62 | $14.79 | $2.20 | $-85.59 | $6,669.54 | ▼ -85.59 after sell → book $7,630.04; vs 09:30 mark -2.19 | trail off peak after 1 sess (−5%) | — |
+| 2026-11-06 09:30 ET | **BUY** | `APP` | 2 | $355.95 | $2.00 | — | $5,955.64 | — | after min-hold, trail 5% off peak; list flatten; 🔵; ret5=+39.7; leftover $952.79 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `CSGP` | 30 | $30.80 | $2.08 | — | $5,029.56 | — | after min-hold, trail 5% off peak; list flatten; 🔵; ret5=+13.9; leftover $952.79 | join🟢 sector🟡 gen🔴 news🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟢 |
+| 2026-11-06 09:30 ET | **BUY** | `TMUS` | 6 | $155.61 | $2.01 | — | $4,093.89 | — | after min-hold, trail 5% off peak; list flatten; 🔵; ret5=+9.0; leftover $952.79 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `MGNI` | 34 | $27.25 | $2.09 | — | $3,165.30 | — | after min-hold, trail 5% off peak; list flatten; 🔵; ret5=+22.7; leftover $952.79 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `CPRI` | 45 | $20.93 | $2.12 | — | $2,221.32 | — | after min-hold, trail 5% off peak; list flatten; 🔵; ret5=+31.6; leftover $952.79 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `XMAX` | 187 | $5.07 | $2.55 | — | $1,270.68 | — | after min-hold, trail 5% off peak; list probable,yday_gainer,yday_mover; 🔵; ret5=-38.2; leftover $952.79 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `STIM` | 387 | $2.46 | $4.99 | — | $313.67 | — | after min-hold, trail 5% off peak; list probable,yday_gainer; 🔵; ret5=+2.1; leftover $952.79 | join🟡 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $313.67 | ▲ close $7,620.14 vs 09:30 $7,644.73 (session +7.95) | 16:00 close · cash $313.67 · equity $7,620.14 vs 09:30 $7,644.73 (-24.59; session marks +7.95) · 8 name(s) marked open→close (per-name table). CSGP×30 09:30 $30.80 → close $30.55 -7.50; GPK×85 09:30 $11.30 → close $11.19 -9.35; APP×2 09:30 $355.95 → close $391.22 +70.54; TMUS×6 09:30 $155.61 → close $162.01 +38.40; MGNI×34 09:30 $27.25 → close $27.39 +4.76; CPRI×45 09:30 $20.93 → close $20.54 -17.55; XMAX×187 09:30 $5.07 → close $5.33 +48.62; STIM×387 09:30 $2.46 → close $2.15 -119.97 | — |
 
 ## Not taken
 

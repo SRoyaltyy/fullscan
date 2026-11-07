@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 4 · rank `cond` · size `conviction` · sell `list` · S-boost `none` · news🟢 +7 −≤1; 70% leftover if #1 net ≥ 5
 
-Cash book **-24.76%** ($7,524) · signal-only (no cash/fees) was -13.48%. Starts YES **6/30**. Fills 78 · skips 10 · realized $-54.32.
+Cash book **-17.38%** ($8,263) · signal-only (no cash/fees) was -13.48%. Starts YES **6/30**. Fills 79 · skips 10 · realized $-54.32.
 
 ## How this sleeve decides (like you are 10)
 
@@ -273,6 +273,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-04 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,523.92 | ▲ close $7,523.92 vs 09:30 $7,523.92 (session +0.00) | 16:00 close · cash $7,523.92 · no lots left · equity $7,523.92. | — |
 | 2026-11-05 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,523.92 | ▲ 09:30 equity $7,523.92 vs yday $7,523.92 (+0.00) | 09:30 open · cash $7,523.92 · no holdings · equity $7,523.92 vs prior close $7,523.92 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-11-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,523.92 | ▲ close $7,523.92 vs 09:30 $7,523.92 (session +0.00) | 16:00 close · cash $7,523.92 · no lots left · equity $7,523.92. | — |
+| 2026-11-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,523.92 | ▲ 09:30 equity $7,523.92 vs yday $7,523.92 (+0.00) | 09:30 open · cash $7,523.92 · no holdings · equity $7,523.92 vs prior close $7,523.92 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-06 09:30 ET | **BUY** | `APP` | 21 | $355.95 | $2.05 | — | $46.92 | — | news🟢 +7 −≤1; 70% leftover if #1 net ≥ 5; gate cam_bad_max=1,n_pos_min=7,news=good; rank cond; list flatten; 🔵; ret5=+39.7; leftover $7523.92 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $46.92 | ▲ close $8,262.54 vs 09:30 $7,523.92 (session +740.67) | 16:00 close · cash $46.92 · equity $8,262.54 vs 09:30 $7,523.92 (+738.62; session marks +740.67) · 1 name(s) marked open→close (per-name table). APP×21 09:30 $355.95 → close $391.22 +740.67 | — |
 
 ## Not taken
 

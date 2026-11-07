@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared union_hot_n4_h1/union_news_g_h1 w=0.5,0.5 net=priority
 
-Cash book **-6.39%** ($9,361) · signal-only (no cash/fees) was —. Starts YES **29/30**. Fills 540 · skips 124 · realized $+1265.29.
+Cash book **-7.09%** ($9,291) · signal-only (no cash/fees) was —. Starts YES **29/30**. Fills 557 · skips 124 · realized $+1265.29.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $0.83.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $118.57.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -733,6 +733,25 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-05 09:30 ET | **BUY** | `STUB` | 308 | $6.56 | $3.97 | — | $2,029.05 | — | union ∩ news_g, no 🚨; gate news=good; list ohlc_hot; ret5=+17.7; combo leftover $2026.75; owner union_news_g_h1 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟡 heat🟢 vol🔴 buy🟡 |
 | 2026-11-05 09:30 ET | **BUY** | `MVST` | 2984 | $0.67 | $28.94 | — | $0.83 | — | union ∩ news_g, no 🚨; gate news=good; list ohlc_hot; ret5=+7.2; combo leftover $2026.75; owner union_news_g_h1 | join🟢 sector🔴 gen🔴 news🟢 digest🟢 ab🔴 peer🔴 heat🔴 vol🔴 buy🟡 |
 | 2026-11-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $0.83 | ▼ close $9,361.18 vs 09:30 $10,053.74 (session -630.76) | 16:00 close · cash $0.83 · equity $9,361.18 vs 09:30 $10,053.74 (-692.56; session marks -630.76) · 7 name(s) marked open→close (per-name table). JLHL×151 09:30 $8.00 → close $6.62 -208.38; TBBB×13 09:30 $65.02 → close $64.21 -10.53; GPK×112 09:30 $11.82 → close $11.54 -31.36; CROX×8 09:30 $160.00 → close $152.93 -56.56; MOS×61 09:30 $21.55 → close $22.33 +47.88; STUB×308 09:30 $6.56 → close $6.28 -86.24; MVST×2984 09:30 $0.67 → close $0.57 -285.57 | — |
+| 2026-11-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $0.83 | ▼ 09:30 equity $9,290.09 vs yday $9,361.18 (-71.09) | 09:30 open · cash $0.83 (unchanged overnight, no fees) · equity $9,290.09 vs prior close $9,361.18 (-71.09) | — |
+| 2026-11-06 09:30 ET | **SELL** | `CROX` | 8 | $150.37 | $2.03 | $-81.09 | $1,201.76 | ▼ -81.09 after sell → book $9,288.06; vs 09:30 mark -2.03 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-11-06 09:30 ET | **SELL** | `GPK` | 112 | $11.30 | $2.35 | $-62.92 | $2,465.00 | ▼ -62.92 after sell → book $9,285.71; vs 09:30 mark -2.35 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-06 09:30 ET | **SELL** | `JLHL` | 151 | $6.26 | $2.48 | $-81.93 | $3,407.78 | ▼ -81.93 after sell → book $9,283.23; vs 09:30 mark -2.48 | union_hot_n4_h1: dropped from list after 2 sess (min 1) | — |
+| 2026-11-06 09:30 ET | **SELL** | `MOS` | 61 | $22.00 | $2.19 | $+23.39 | $4,747.59 | ▲ +23.39 after sell → book $9,281.03; vs 09:30 mark -2.20 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟡 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **SELL** | `MVST` | 2984 | $0.60 | $27.37 | $-265.19 | $6,510.62 | ▼ -265.19 after sell → book $9,253.67; vs 09:30 mark -27.36 | union_news_g_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-11-06 09:30 ET | **SELL** | `STUB` | 308 | $6.18 | $4.04 | $-125.05 | $8,410.02 | ▼ -125.05 after sell → book $9,249.63; vs 09:30 mark -4.04 | union_news_g_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-11-06 09:30 ET | **SELL** | `TBBB` | 13 | $64.58 | $2.05 | $+6.91 | $9,247.58 | ▲ +6.91 after sell → book $9,247.58; vs 09:30 mark -2.05 | union_news_g_h1: dropped from list after 2 sess (min 1) | — |
+| 2026-11-06 09:30 ET | **BUY** | `BUUU` | 216 | $5.33 | $2.79 | — | $8,093.51 | — | top 4 by hot; rank hot_score; list ohlc_hot; 🔵; ret5=-9.4; combo leftover $1155.95; owner union_hot_n4_h1 | join🟡 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `CRCT` | 128 | $9.00 | $2.37 | — | $6,939.14 | — | top 4 by hot; rank hot_score; list yday_gainer,yday_mover; ret5=+49.7; combo leftover $1155.95; owner union_hot_n4_h1 | join🔴 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `APP` | 3 | $355.95 | $2.00 | — | $5,869.29 | — | top 4 by hot; rank hot_score; list flatten; 🔵; ret5=+39.7; combo leftover $1155.95; owner union_hot_n4_h1 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `CMTG` | 688 | $1.68 | $8.88 | — | $4,704.58 | — | top 4 by hot; rank hot_score; list yday_gainer,yday_mover; 🔵; ret5=+44.9; combo leftover $1155.95; owner union_hot_n4_h1 | join🟢 sector🟡 gen🔴 news🟡 ab🔴 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `KD` | 49 | $15.83 | $2.14 | — | $3,926.77 | — | union ∩ news_g, no 🚨; gate news=good; list yday_gainer,yday_mover; 🔵; ret5=+16.1; combo leftover $784.10; owner union_news_g_h1 | join🔴 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-06 09:30 ET | **BUY** | `OPRT` | 67 | $11.60 | $2.19 | — | $3,147.38 | — | union ∩ news_g, no 🚨; gate news=good; list yday_gainer,yday_mover; 🔵; ret5=+16.2; combo leftover $784.10; owner union_news_g_h1 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `ALIT` | 62 | $12.61 | $2.18 | — | $2,363.38 | — | union ∩ news_g, no 🚨; gate news=good; list yday_gainer,yday_mover; 🔵; ret5=+39.8; combo leftover $784.10; owner union_news_g_h1 | join🔴 sector🟡 gen🔴 news🟢 digest🔴 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `PCOR` | 10 | $73.99 | $2.02 | — | $1,621.46 | — | union ∩ news_g, no 🚨; gate news=good; list yday_gainer; 🔵; ret5=+23.7; combo leftover $784.10; owner union_news_g_h1 | join🔴 sector🟡 gen🔴 news🟢 digest🔴 ab🟡 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `LIVN` | 8 | $90.08 | $2.01 | — | $898.77 | — | union ∩ news_g, no 🚨; gate news=good; list yday_gainer; 🔵; ret5=+12.2; combo leftover $784.10; owner union_news_g_h1 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `AHCO` | 107 | $7.27 | $2.31 | — | $118.57 | — | union ∩ news_g, no 🚨; gate news=good; list yday_gainer; 🔵; ret5=+25.0; combo leftover $784.10; owner union_news_g_h1 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $118.57 | ▲ close $9,291.38 vs 09:30 $9,290.09 (session +72.68) | 16:00 close · cash $118.57 · equity $9,291.38 vs 09:30 $9,290.09 (+1.29; session marks +72.68) · 10 name(s) marked open→close (per-name table). BUUU×216 09:30 $5.33 → close $5.26 -15.12; CRCT×128 09:30 $9.00 → close $8.78 -28.16; APP×3 09:30 $355.95 → close $391.22 +105.81; CMTG×688 09:30 $1.68 → close $1.64 -27.52; KD×49 09:30 $15.83 → close $16.29 +22.54; OPRT×67 09:30 $11.60 → close $11.31 -19.43; ALIT×62 09:30 $12.61 → close $12.86 +15.50; PCOR×10 09:30 $73.99 → close $75.33 +13.40; LIVN×8 09:30 $90.08 → close $89.99 -0.76; AHCO×107 09:30 $7.27 → close $7.33 +6.42 | — |
 
 ## Not taken
 

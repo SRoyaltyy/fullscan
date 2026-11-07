@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ coil_off, no 🚨
 
-Cash book **-31.36%** ($6,864) · signal-only (no cash/fees) was -17.20%. Starts YES **0/30**. Fills 472 · skips 105 · realized $-1593.31.
+Cash book **-30.15%** ($6,985) · signal-only (no cash/fees) was -17.20%. Starts YES **0/30**. Fills 483 · skips 105 · realized $-1593.31.
 
 ## How this sleeve decides (like you are 10)
 
@@ -667,6 +667,19 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-05 09:30 ET | **BUY** | `AMX` | 130 | $25.12 | $2.38 | — | $3,269.65 | — | union ∩ coil_off, no 🚨; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list yday_gainer; ret5=+4.6; leftover $3268.81 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-11-05 09:30 ET | **BUY** | `MVST` | 4809 | $0.67 | $46.65 | — | $0.97 | — | union ∩ coil_off, no 🚨; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list ohlc_hot; ret5=+7.2; leftover $3268.81 | join🟢 sector🔴 gen🔴 news🟢 digest🟢 ab🔴 peer🔴 heat🔴 vol🔴 buy🟡 |
 | 2026-11-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $0.97 | ▼ close $6,863.72 vs 09:30 $7,408.77 (session -481.38) | 16:00 close · cash $0.97 · equity $6,863.72 vs 09:30 $7,408.77 (-545.05; session marks -481.38) · 3 name(s) marked open→close (per-name table). CRS×3 09:30 $285.50 → close $278.88 -19.86; AMX×130 09:30 $25.12 → close $25.11 -1.30; MVST×4809 09:30 $0.67 → close $0.57 -460.22 | — |
+| 2026-11-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $0.97 | ▲ 09:30 equity $6,967.63 vs yday $6,863.72 (+103.91) | 09:30 open · cash $0.97 (unchanged overnight, no fees) · equity $6,967.63 vs prior close $6,863.72 (+103.91) · 3 name(s) re-marked at the open (per-name table). AMX×130 yday $25.11 → 09:30 $24.90 -27.30; CRS×3 yday $278.88 → 09:30 $281.42 +7.62; MVST×4809 yday $0.57 → 09:30 $0.60 +123.59 | — |
+| 2026-11-06 09:30 ET | **SELL** | `AMX` | 130 | $24.90 | $2.43 | $-33.41 | $3,235.54 | ▼ -33.41 after sell → book $6,965.20; vs 09:30 mark -2.43 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-06 09:30 ET | **SELL** | `CRS` | 3 | $281.42 | $2.02 | $-50.76 | $4,077.78 | ▼ -50.76 after sell → book $6,963.18; vs 09:30 mark -2.02 | dropped from list after 2 sess (min 1) | — |
+| 2026-11-06 09:30 ET | **SELL** | `MVST` | 4809 | $0.60 | $44.10 | $-427.38 | $6,919.08 | ▼ -427.38 after sell → book $6,919.08; vs 09:30 mark -44.10 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-06 09:30 ET | **BUY** | `TMUS` | 5 | $155.61 | $2.00 | — | $6,139.03 | — | union ∩ coil_off, no 🚨; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list flatten; 🔵; ret5=+9.0; leftover $864.89 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `STIM` | 351 | $2.46 | $4.53 | — | $5,271.04 | — | union ∩ coil_off, no 🚨; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list probable,yday_gainer; 🔵; ret5=+2.1; leftover $864.89 | join🟡 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `OCGN` | 1042 | $0.83 | $11.77 | — | $4,394.40 | — | union ∩ coil_off, no 🚨; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list probable,yday_gainer; 🔵; ret5=+9.7; leftover $864.89 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `GERN` | 910 | $0.95 | $11.38 | — | $3,518.53 | — | union ∩ coil_off, no 🚨; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list probable,yday_gainer; 🔵; ret5=+0.4; leftover $864.89 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `LDI` | 1357 | $0.64 | $12.72 | — | $2,641.40 | — | union ∩ coil_off, no 🚨; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list probable; 🔵; ret5=+4.5; leftover $864.89 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `FER` | 15 | $56.90 | $2.04 | — | $1,785.87 | — | union ∩ coil_off, no 🚨; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list ohlc_hot; 🔵; ret5=+5.7; leftover $864.89 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🔴 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `CERT` | 71 | $12.03 | $2.20 | — | $929.54 | — | union ∩ coil_off, no 🚨; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list ohlc_hot; ret5=+8.8; leftover $864.89 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🟡 heat🟢 vol🟡 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `FTDR` | 9 | $94.54 | $2.02 | — | $76.66 | — | union ∩ coil_off, no 🚨; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list ohlc_hot; 🔵; ret5=+9.9; leftover $864.89 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $76.66 | ▲ close $6,984.60 vs 09:30 $6,967.63 (session +114.17) | 16:00 close · cash $76.66 · equity $6,984.60 vs 09:30 $6,967.63 (+16.97; session marks +114.17) · 8 name(s) marked open→close (per-name table). TMUS×5 09:30 $155.61 → close $162.01 +32.00; STIM×351 09:30 $2.46 → close $2.15 -108.81; OCGN×1042 09:30 $0.83 → close $0.93 +98.99; GERN×910 09:30 $0.95 → close $0.99 +36.40; LDI×1357 09:30 $0.64 → close $0.64 +4.07; FER×15 09:30 $56.90 → close $58.71 +27.15; CERT×71 09:30 $12.03 → close $12.05 +1.42; FTDR×9 09:30 $94.54 → close $97.09 +22.95 | — |
 
 ## Not taken
 

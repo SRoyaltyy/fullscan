@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 4 · rank `hot_score` · size `leftover` · sell `list` · S-boost `none` · top 4 by hot
 
-Cash book **+25.79%** ($12,579) · signal-only (no cash/fees) was +89.81%. Starts YES **29/30**. Fills 157 · skips 47 · realized $+2978.17.
+Cash book **+26.30%** ($12,630) · signal-only (no cash/fees) was +89.81%. Starts YES **29/30**. Fills 161 · skips 47 · realized $+2978.17.
 
 ## How this sleeve decides (like you are 10)
 
@@ -348,6 +348,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-04 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $12,578.56 | ▲ close $12,578.56 vs 09:30 $12,578.56 (session +0.00) | 16:00 close · cash $12,578.56 · no lots left · equity $12,578.56. | — |
 | 2026-11-05 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $12,578.56 | ▲ 09:30 equity $12,578.56 vs yday $12,578.56 (+0.00) | 09:30 open · cash $12,578.56 · no holdings · equity $12,578.56 vs prior close $12,578.56 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-11-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $12,578.56 | ▲ close $12,578.56 vs 09:30 $12,578.56 (session +0.00) | 16:00 close · cash $12,578.56 · no lots left · equity $12,578.56. | — |
+| 2026-11-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $12,578.56 | ▲ 09:30 equity $12,578.56 vs yday $12,578.56 (+0.00) | 09:30 open · cash $12,578.56 · no holdings · equity $12,578.56 vs prior close $12,578.56 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-06 09:30 ET | **BUY** | `BUUU` | 589 | $5.33 | $7.60 | — | $9,431.59 | — | top 4 by hot; rank hot_score; list ohlc_hot; 🔵; ret5=-9.4; leftover $3144.64 | join🟡 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `CRCT` | 349 | $9.00 | $4.50 | — | $6,286.09 | — | top 4 by hot; rank hot_score; list yday_gainer,yday_mover; ret5=+49.7; leftover $3144.64 | join🔴 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `APP` | 8 | $355.95 | $2.01 | — | $3,436.48 | — | top 4 by hot; rank hot_score; list flatten; 🔵; ret5=+39.7; leftover $3144.64 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `CMTG` | 1871 | $1.68 | $24.14 | — | $269.06 | — | top 4 by hot; rank hot_score; list yday_gainer,yday_mover; 🔵; ret5=+44.9; leftover $3144.64 | join🟢 sector🟡 gen🔴 news🟡 ab🔴 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $269.06 | ▲ close $12,629.62 vs 09:30 $12,578.56 (session +89.31) | 16:00 close · cash $269.06 · equity $12,629.62 vs 09:30 $12,578.56 (+51.06; session marks +89.31) · 4 name(s) marked open→close (per-name table). BUUU×589 09:30 $5.33 → close $5.26 -41.23; CRCT×349 09:30 $9.00 → close $8.78 -76.78; APP×8 09:30 $355.95 → close $391.22 +282.16; CMTG×1871 09:30 $1.68 → close $1.64 -74.84 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared overnight_mega_h1/union_hot_n4_holdup w=0.5,0.5 net=priority
 
-Cash book **+41.93%** ($14,193) · signal-only (no cash/fees) was —. Starts YES **29/30**. Fills 269 · skips 62 · realized $+1377.50.
+Cash book **+38.66%** ($13,866) · signal-only (no cash/fees) was —. Starts YES **29/30**. Fills 277 · skips 62 · realized $+1377.50.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $91.97.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $212.13.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -462,6 +462,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-05 09:30 ET | **BUY** | `CROX` | 22 | $160.00 | $2.06 | — | $3,670.93 | — | hot4; S>0 lots stay through the next 09:30 so the overnight gap is in the book; rank hot_score; list flatten; ret5=+33.5; combo leftover $3596.73; owner union_hot_n4_holdup | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-11-05 09:30 ET | **BUY** | `MOS` | 166 | $21.55 | $2.49 | — | $91.97 | — | hot4; S>0 lots stay through the next 09:30 so the overnight gap is in the book; rank hot_score; list ohlc_hot; ret5=+17.9; combo leftover $3596.73; owner union_hot_n4_holdup | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🔴 heat🔴 vol🔴 buy🟡 |
 | 2026-11-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $91.97 | ▼ close $14,193.21 vs 09:30 $15,053.34 (session -844.51) | 16:00 close · cash $91.97 · equity $14,193.21 vs 09:30 $15,053.34 (-860.13; session marks -844.51) · 4 name(s) marked open→close (per-name table). JLHL×532 09:30 $8.00 → close $6.62 -734.16; GPK×304 09:30 $11.82 → close $11.54 -85.12; CROX×22 09:30 $160.00 → close $152.93 -155.54; MOS×166 09:30 $21.55 → close $22.33 +130.31 | — |
+| 2026-11-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $91.97 | ▼ 09:30 equity $13,817.63 vs yday $14,193.21 (-375.58) | 09:30 open · cash $91.97 (unchanged overnight, no fees) · equity $13,817.63 vs prior close $14,193.21 (-375.58) | — |
+| 2026-11-06 09:30 ET | **SELL** | `CROX` | 22 | $150.37 | $2.09 | $-216.01 | $3,398.02 | ▼ -216.01 after sell → book $13,815.54; vs 09:30 mark -2.09 | union_hot_n4_holdup: dropped from list after 1 sess (min 1) | — |
+| 2026-11-06 09:30 ET | **SELL** | `GPK` | 304 | $11.30 | $4.00 | $-166.00 | $6,829.22 | ▼ -166.00 after sell → book $13,811.54; vs 09:30 mark -4.00 | union_hot_n4_holdup: dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-06 09:30 ET | **SELL** | `JLHL` | 532 | $6.26 | $6.98 | $-285.16 | $10,152.56 | ▼ -285.16 after sell → book $13,804.56; vs 09:30 mark -6.98 | union_hot_n4_holdup: dropped from list after 2 sess (min 1) | — |
+| 2026-11-06 09:30 ET | **SELL** | `MOS` | 166 | $22.00 | $2.54 | $+70.50 | $13,802.02 | ▲ +70.50 after sell → book $13,802.02; vs 09:30 mark -2.54 | union_hot_n4_holdup: dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟡 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `BUUU` | 647 | $5.33 | $8.35 | — | $10,345.16 | — | hot4; S>0 lots stay through the next 09:30 so the overnight gap is in the book; rank hot_score; list ohlc_hot; 🔵; ret5=-9.4; combo leftover $3450.50; owner union_hot_n4_holdup | join🟡 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `CRCT` | 383 | $9.00 | $4.94 | — | $6,893.22 | — | hot4; S>0 lots stay through the next 09:30 so the overnight gap is in the book; rank hot_score; list yday_gainer,yday_mover; ret5=+49.7; combo leftover $3450.50; owner union_hot_n4_holdup | join🔴 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `APP` | 9 | $355.95 | $2.02 | — | $3,687.65 | — | hot4; S>0 lots stay through the next 09:30 so the overnight gap is in the book; rank hot_score; list flatten; 🔵; ret5=+39.7; combo leftover $3450.50; owner union_hot_n4_holdup | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `CMTG` | 2053 | $1.68 | $26.48 | — | $212.13 | — | hot4; S>0 lots stay through the next 09:30 so the overnight gap is in the book; rank hot_score; list yday_gainer,yday_mover; 🔵; ret5=+44.9; combo leftover $3450.50; owner union_hot_n4_holdup | join🟢 sector🟡 gen🔴 news🟡 ab🔴 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $212.13 | ▲ close $13,865.99 vs 09:30 $13,817.63 (session +105.76) | 16:00 close · cash $212.13 · equity $13,865.99 vs 09:30 $13,817.63 (+48.36; session marks +105.76) · 4 name(s) marked open→close (per-name table). BUUU×647 09:30 $5.33 → close $5.26 -45.29; CRCT×383 09:30 $9.00 → close $8.78 -84.26; APP×9 09:30 $355.95 → close $391.22 +317.43; CMTG×2053 09:30 $1.68 → close $1.64 -82.12 | — |
 
 ## Not taken
 

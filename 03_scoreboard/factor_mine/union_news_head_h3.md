@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · prior-export headline🟢 only
 
-Cash book **-43.51%** ($5,649) · signal-only (no cash/fees) was +184.18%. Starts YES **1/30**. Fills 225 · skips 192 · realized $-2398.84.
+Cash book **-41.66%** ($5,834) · signal-only (no cash/fees) was +184.18%. Starts YES **1/30**. Fills 225 · skips 192 · realized $-2398.84.
 
 ## How this sleeve decides (like you are 10)
 
@@ -418,6 +418,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-05 09:30 ET | **BUY** | `STUB` | 408 | $6.56 | $5.26 | — | $2,672.04 | — | prior-export headline🟢 only; gate headline=good; rank cond; list ohlc_hot; ret5=+17.7; leftover $2676.89 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟡 heat🟢 vol🔴 buy🟡 |
 | 2026-11-05 09:30 ET | **BUY** | `MVST` | 3930 | $0.67 | $38.12 | — | $0.82 | — | prior-export headline🟢 only; gate headline=good; rank cond; list ohlc_hot; ret5=+7.2; leftover $2676.89 | join🟢 sector🔴 gen🔴 news🟢 digest🟢 ab🔴 peer🔴 heat🔴 vol🔴 buy🟡 |
 | 2026-11-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $0.82 | ▼ close $5,649.32 vs 09:30 $6,194.14 (session -497.05) | 16:00 close · cash $0.82 · equity $5,649.32 vs 09:30 $6,194.14 (-544.82; session marks -497.05) · 5 name(s) marked open→close (per-name table). GLND×113 09:30 $2.28 → close $2.14 -15.82; GRAB×95 09:30 $3.35 → close $3.48 +12.35; TBBB×4 09:30 $65.02 → close $64.21 -3.24; STUB×408 09:30 $6.56 → close $6.28 -114.24; MVST×3930 09:30 $0.67 → close $0.57 -376.10 | — |
+| 2026-11-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $0.82 | ▲ 09:30 equity $5,714.48 vs yday $5,649.32 (+65.16) | 09:30 open · cash $0.82 (unchanged overnight, no fees) · equity $5,714.48 vs prior close $5,649.32 (+65.16) · 5 name(s) re-marked at the open (per-name table). GLND×113 yday $2.14 → 09:30 $2.20 +6.78; GRAB×95 yday $3.48 → 09:30 $3.44 -3.33; MVST×3930 yday $0.57 → 09:30 $0.60 +101.00; STUB×408 yday $6.28 → 09:30 $6.18 -40.80; TBBB×4 yday $64.21 → 09:30 $64.58 +1.50 | — |
+| 2026-11-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $0.82 | ▲ close $5,834.41 vs 09:30 $5,714.48 (session +119.94) | 16:00 close · cash $0.82 · equity $5,834.41 vs 09:30 $5,714.48 (+119.93; session marks +119.94) · 5 name(s) marked open→close (per-name table). GLND×113 09:30 $2.20 → close $2.39 +21.47; GRAB×95 09:30 $3.44 → close $3.41 -3.32; MVST×3930 09:30 $0.60 → close $0.63 +113.97; STUB×408 09:30 $6.18 → close $6.14 -16.32; TBBB×4 09:30 $64.58 → close $65.62 +4.14 | — |
 
 ## Not taken
 

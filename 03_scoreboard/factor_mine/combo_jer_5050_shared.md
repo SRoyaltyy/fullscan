@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared union_join_vol_green_h1/union_earn_react_h3 w=0.5,0.5 net=priority
 
-Cash book **-6.63%** ($9,337) · signal-only (no cash/fees) was —. Starts YES **22/30**. Fills 517 · skips 286 · realized $+2954.01.
+Cash book **-7.34%** ($9,266) · signal-only (no cash/fees) was —. Starts YES **22/30**. Fills 519 · skips 286 · realized $+2954.01.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $108.52.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $98.57.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -710,6 +710,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-05 09:30 ET | **BUY** | `EXPE` | 6 | $287.31 | $2.01 | — | $1,927.12 | — | union ∩ earn_react, no 🚨; gate earn_react=True; list ohlc_hot; ret5=+14.6; combo leftover $1825.03; owner union_earn_react_h3 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-11-05 09:30 ET | **BUY** | `ARHS` | 142 | $12.79 | $2.42 | — | $108.52 | — | union ∩ earn_react, no 🚨; gate earn_react=True; list ohlc_hot; ret5=+14.1; combo leftover $1825.03; owner union_earn_react_h3 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-11-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $108.52 | ▲ close $9,336.72 vs 09:30 $9,125.15 (session +231.31) | 16:00 close · cash $108.52 · equity $9,336.72 vs 09:30 $9,125.15 (+211.57; session marks +231.31) · 5 name(s) marked open→close (per-name table). PRMB×84 09:30 $21.55 → close $22.15 +50.40; AMC×503 09:30 $3.62 → close $3.08 -274.13; DNUT×510 09:30 $3.58 → close $4.60 +522.75; EXPE×6 09:30 $287.31 → close $272.48 -89.01; ARHS×142 09:30 $12.79 → close $12.94 +21.30 | — |
+| 2026-11-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $108.52 | ▼ 09:30 equity $9,252.61 vs yday $9,336.72 (-84.11) | 09:30 open · cash $108.52 (unchanged overnight, no fees) · equity $9,252.61 vs prior close $9,336.72 (-84.11) | — |
+| 2026-11-06 09:30 ET | **BUY** | `SSP` | 2 | $3.00 | $0.07 | — | $102.45 | — | union ∩ earn_react, no 🚨; gate earn_react=True; list ohlc_hot,earn_react; 🔵; ret5=+17.1; combo leftover $6.78; owner union_earn_react_h3 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `ACRE` | 1 | $3.84 | $0.04 | — | $98.57 | — | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; 🔵; ret5=-0.6; combo leftover $6.78; owner union_earn_react_h3 | join🟢 sector🟡 gen🔴 news🟡 ab🟢 peer🟡 heat🔴 vol🟡 buy🟡 |
+| 2026-11-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $98.57 | ▲ close $9,265.62 vs 09:30 $9,252.61 (session +13.12) | 16:00 close · cash $98.57 · equity $9,265.62 vs 09:30 $9,252.61 (+13.01; session marks +13.12) · 7 name(s) marked open→close (per-name table). AMC×503 09:30 $3.13 → close $3.14 +5.03; ARHS×142 09:30 $13.00 → close $14.19 +168.98; DNUT×510 09:30 $4.44 → close $4.17 -137.70; EXPE×6 09:30 $272.19 → close $259.24 -77.70; PRMB×84 09:30 $21.74 → close $22.39 +54.60; SSP×2 09:30 $3.00 → close $3.05 +0.10; ACRE×1 09:30 $3.84 → close $3.65 -0.19 | — |
 
 ## Not taken
 

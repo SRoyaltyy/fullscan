@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-19.80%** ($8,020) · signal-only (no cash/fees) was -23.64%. Starts YES **0/30**. Fills 466 · skips 79 · realized $-1931.95.
+Cash book **-18.34%** ($8,166) · signal-only (no cash/fees) was -23.64%. Starts YES **0/30**. Fills 474 · skips 79 · realized $-1931.95.
 
 ## How this sleeve decides (like you are 10)
 
@@ -660,6 +660,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-05 09:30 ET | **SELL** | `PCRX` | 27 | $36.41 | $2.09 | $-4.16 | $7,144.49 | ▼ -4.16 after sell → book $8,022.49; vs 09:30 mark -2.09 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-05 09:30 ET | **SELL** | `RGEN` | 5 | $175.60 | $2.02 | $-43.03 | $8,020.46 | ▼ -43.03 after sell → book $8,020.46; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,020.46 | ▲ close $8,020.46 vs 09:30 $8,034.88 (session +0.00) | 16:00 close · cash $8,020.46 · no lots left · equity $8,020.46. | — |
+| 2026-11-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,020.46 | ▲ 09:30 equity $8,020.46 vs yday $8,020.46 (+0.00) | 09:30 open · cash $8,020.46 · no holdings · equity $8,020.46 vs prior close $8,020.46 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-06 09:30 ET | **BUY** | `TMUS` | 6 | $155.61 | $2.01 | — | $7,084.79 | — | combo gate; gate blue=True,ret_5_max=10.0; list flatten; 🔵; ret5=+9.0; leftover $1002.56 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `XMAX` | 197 | $5.07 | $2.58 | — | $6,083.42 | — | combo gate; gate blue=True,ret_5_max=10.0; list probable,yday_gainer,yday_mover; 🔵; ret5=-38.2; leftover $1002.56 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `STIM` | 407 | $2.46 | $5.25 | — | $5,076.95 | — | combo gate; gate blue=True,ret_5_max=10.0; list probable,yday_gainer; 🔵; ret5=+2.1; leftover $1002.56 | join🟡 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `OCGN` | 1207 | $0.83 | $13.64 | — | $4,061.50 | — | combo gate; gate blue=True,ret_5_max=10.0; list probable,yday_gainer; 🔵; ret5=+9.7; leftover $1002.56 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `GERN` | 1055 | $0.95 | $13.19 | — | $3,046.06 | — | combo gate; gate blue=True,ret_5_max=10.0; list probable,yday_gainer; 🔵; ret5=+0.4; leftover $1002.56 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `CYH` | 449 | $2.23 | $5.79 | — | $2,039.00 | — | combo gate; gate blue=True,ret_5_max=10.0; list probable; 🔵; ret5=-5.4; leftover $1002.56 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `LDI` | 1573 | $0.64 | $14.74 | — | $1,022.26 | — | combo gate; gate blue=True,ret_5_max=10.0; list probable; 🔵; ret5=+4.5; leftover $1002.56 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `OUST` | 31 | $31.95 | $2.08 | — | $29.88 | — | combo gate; gate blue=True,ret_5_max=10.0; list probable; 🔵; ret5=-5.0; leftover $1002.56 | join🔴 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $29.88 | ▲ close $8,165.58 vs 09:30 $8,020.46 (session +204.41) | 16:00 close · cash $29.88 · equity $8,165.58 vs 09:30 $8,020.46 (+145.12; session marks +204.41) · 8 name(s) marked open→close (per-name table). TMUS×6 09:30 $155.61 → close $162.01 +38.40; XMAX×197 09:30 $5.07 → close $5.33 +51.22; STIM×407 09:30 $2.46 → close $2.15 -126.17; OCGN×1207 09:30 $0.83 → close $0.93 +114.67; GERN×1055 09:30 $0.95 → close $0.99 +42.20; CYH×449 09:30 $2.23 → close $2.21 -8.98; LDI×1573 09:30 $0.64 → close $0.64 +4.72; OUST×31 09:30 $31.95 → close $34.80 +88.35 | — |
 
 ## Not taken
 

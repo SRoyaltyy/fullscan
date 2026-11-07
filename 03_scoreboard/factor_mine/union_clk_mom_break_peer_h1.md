@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `hot_score` · size `leftover` · sell `list` · S-boost `none` · Clock-B #1 mom+breakout+peer/sector (research; not KEEP)
 
-Cash book **-11.06%** ($8,894) · signal-only (no cash/fees) was +1.42%. Starts YES **4/30**. Fills 455 · skips 96 · realized $-120.43.
+Cash book **-9.53%** ($9,047) · signal-only (no cash/fees) was +1.42%. Starts YES **4/30**. Fills 463 · skips 96 · realized $-120.43.
 
 ## How this sleeve decides (like you are 10)
 
@@ -649,6 +649,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-05 09:30 ET | **SELL** | `SMMT` | 105 | $16.10 | $2.34 | $-9.89 | $7,205.44 | ▼ -9.89 after sell → book $8,895.96; vs 09:30 mark -2.33 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-11-05 09:30 ET | **SELL** | `TBBB` | 26 | $65.02 | $2.09 | $+29.12 | $8,893.87 | ▲ +29.12 after sell → book $8,893.87; vs 09:30 mark -2.09 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-11-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,893.87 | ▲ close $8,893.87 vs 09:30 $8,909.19 (session +0.00) | 16:00 close · cash $8,893.87 · no lots left · equity $8,893.87. | — |
+| 2026-11-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,893.87 | ▲ 09:30 equity $8,893.87 vs yday $8,893.87 (+0.00) | 09:30 open · cash $8,893.87 · no holdings · equity $8,893.87 vs prior close $8,893.87 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-06 09:30 ET | **BUY** | `AVA` | 27 | $40.30 | $2.07 | — | $7,803.70 | — | Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list ohlc_hot; 🔵; ret5=+9.2; leftover $1111.73 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `CERT` | 92 | $12.03 | $2.27 | — | $6,694.67 | — | Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list ohlc_hot; ret5=+8.8; leftover $1111.73 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🟡 heat🟢 vol🟡 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `FTDR` | 11 | $94.54 | $2.02 | — | $5,652.71 | — | Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list ohlc_hot; 🔵; ret5=+9.9; leftover $1111.73 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `STE` | 4 | $248.03 | $2.00 | — | $4,658.59 | — | Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list ohlc_hot; ret5=+9.5; leftover $1111.73 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟡 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `TU` | 125 | $8.83 | $2.37 | — | $3,552.47 | — | Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list earn_react; 🔵; ret5=+8.7; leftover $1111.73 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `WPM` | 8 | $129.97 | $2.01 | — | $2,510.70 | — | Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list earn_react; 🔵; ret5=+7.5; leftover $1111.73 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `PAR` | 56 | $19.72 | $2.16 | — | $1,404.22 | — | Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list earn_react; 🔵; ret5=+7.8; leftover $1111.73 | join🔴 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `HASI` | 28 | $39.15 | $2.07 | — | $305.95 | — | Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list earn_react; 🔵; ret5=+5.8; leftover $1111.73 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $305.95 | ▲ close $9,047.18 vs 09:30 $8,893.87 (session +170.28) | 16:00 close · cash $305.95 · equity $9,047.18 vs 09:30 $8,893.87 (+153.31; session marks +170.28) · 8 name(s) marked open→close (per-name table). AVA×27 09:30 $40.30 → close $40.23 -1.89; CERT×92 09:30 $12.03 → close $12.05 +1.84; FTDR×11 09:30 $94.54 → close $97.09 +28.05; STE×4 09:30 $248.03 → close $252.30 +17.08; TU×125 09:30 $8.83 → close $9.11 +35.00; WPM×8 09:30 $129.97 → close $136.31 +50.72; PAR×56 09:30 $19.72 → close $20.55 +46.48; HASI×28 09:30 $39.15 → close $38.90 -7.00 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · short news🔴 ∩ prior MACD histogram > 0
 
-Cash book **+6.01%** ($10,601) · signal-only (no cash/fees) was +37.55%. Starts YES **29/30**. Fills 133 · skips 81 · realized $+1277.69.
+Cash book **+8.96%** ($10,896) · signal-only (no cash/fees) was +37.55%. Starts YES **29/30**. Fills 141 · skips 81 · realized $+1277.69.
 
 ## How this sleeve decides (like you are 10)
 
@@ -324,6 +324,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-05 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $21,760.39 | ▼ 09:30 equity $10,517.17 vs yday $10,627.85 (-110.68) | 09:30 open · cash $21,760.39 (unchanged overnight, no fees) · equity $10,517.17 vs prior close $10,627.85 (-110.68) · 2 name(s) re-marked at the open (per-name table). BAH×62 yday $88.30 → 09:30 $89.46 -71.92; HRB×102 yday $55.47 → 09:30 $55.85 -38.76 | — |
 | 2026-11-05 09:30 ET | **COVER** | `BAH` | 62 | $89.46 | $2.18 | $-147.15 | $16,211.69 | ▼ -147.15 after sell → book $10,514.99; vs 09:30 mark -2.18 | dropped from list after 3 sess (min 3) | — |
 | 2026-11-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $16,211.69 | ▲ close $10,600.67 vs 09:30 $10,517.17 (session +85.68) | 16:00 close · cash $16,211.69 · equity $10,600.67 vs 09:30 $10,517.17 (+83.50; session marks +85.68) · 1 name(s) marked open→close (per-name table). HRB×102 09:30 $55.85 → close $55.01 +85.68 | — |
+| 2026-11-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $16,211.69 | ▲ 09:30 equity $10,748.57 vs yday $10,600.67 (+147.90) | 09:30 open · cash $16,211.69 (unchanged overnight, no fees) · equity $10,748.57 vs prior close $10,600.67 (+147.90) · 1 name(s) re-marked at the open (per-name table). HRB×102 yday $55.01 → 09:30 $53.56 +147.90 | — |
+| 2026-11-06 09:30 ET | **SHORT** | `YOU` | 12 | $55.83 | $2.06 | — | $16,879.59 | — | short news🔴 ∩ prior MACD histogram > 0; gate macd_up=True,news=bad; list yday_gainer,yday_mover; ret5=+22.3; leftover $671.79 | join🔴 sector🟡 gen🔴 news🔴 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **SHORT** | `ANGI` | 93 | $7.20 | $2.31 | — | $17,546.87 | — | short news🔴 ∩ prior MACD histogram > 0; gate macd_up=True,news=bad; list yday_gainer; 🔵; ret5=+21.6; leftover $671.79 | join🟢 sector🟡 gen🔴 news🔴 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **SHORT** | `MDLN` | 16 | $39.53 | $2.08 | — | $18,177.28 | — | short news🔴 ∩ prior MACD histogram > 0; gate macd_up=True,news=bad; list yday_gainer; ret5=+24.2; leftover $671.79 | join🟢 sector🟡 gen🔴 news🔴 digest🔴 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **SHORT** | `QTWO` | 9 | $73.44 | $2.06 | — | $18,836.18 | — | short news🔴 ∩ prior MACD histogram > 0; gate macd_up=True,news=bad; list ohlc_hot; 🔵; ret5=+15.8; leftover $671.79 | join🔴 sector🟡 gen🔴 news🔴 digest🔴 ab🟢 peer🟡 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **SHORT** | `AEE` | 5 | $112.14 | $2.04 | — | $19,394.84 | — | short news🔴 ∩ prior MACD histogram > 0; gate macd_up=True,news=bad; list earn_react; 🔵; ret5=+2.4; leftover $671.79 | join🟢 sector🟡 gen🔴 news🔴 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **SHORT** | `BLMN` | 67 | $9.93 | $2.23 | — | $20,057.92 | — | short news🔴 ∩ prior MACD histogram > 0; gate macd_up=True,news=bad; list earn_react; 🔵; ret5=-2.1; leftover $671.79 | join🟢 sector🟡 gen🔴 news🔴 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-06 09:30 ET | **SHORT** | `ESNT` | 10 | $66.54 | $2.06 | — | $20,721.26 | — | short news🔴 ∩ prior MACD histogram > 0; gate macd_up=True,news=bad; list earn_react; 🔵; ret5=+1.5; leftover $671.79 | join🟢 sector🟡 gen🔴 news🔴 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-06 09:30 ET | **SHORT** | `NMIH` | 16 | $40.01 | $2.08 | — | $21,359.35 | — | short news🔴 ∩ prior MACD histogram > 0; gate macd_up=True,news=bad; list earn_react; 🔵; ret5=+2.5; leftover $671.79 | join🟢 sector🟡 gen🔴 news🔴 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $21,359.35 | ▲ close $10,896.09 vs 09:30 $10,748.57 (session +164.43) | 16:00 close · cash $21,359.35 · equity $10,896.09 vs 09:30 $10,748.57 (+147.52; session marks +164.43) · 9 name(s) marked open→close (per-name table). HRB×102 09:30 $53.56 → close $52.69 +88.74; YOU×12 09:30 $55.83 → close $55.81 +0.24; ANGI×93 09:30 $7.20 → close $6.92 +26.04; MDLN×16 09:30 $39.53 → close $39.64 -1.76; QTWO×9 09:30 $73.44 → close $73.92 -4.32; AEE×5 09:30 $112.14 → close $112.85 -3.55; BLMN×67 09:30 $9.93 → close $9.75 +12.06; ESNT×10 09:30 $66.54 → close $63.41 +31.30; NMIH×16 09:30 $40.01 → close $39.03 +15.68 | — |
 
 ## Not taken
 

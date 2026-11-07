@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · morning packet news🟢 only (not the merged box)
 
-Cash book **-0.95%** ($9,905) · signal-only (no cash/fees) was -16.54%. Starts YES **11/30**. Fills 76 · skips 85 · realized $-1342.35.
+Cash book **+1.36%** ($10,136) · signal-only (no cash/fees) was -16.54%. Starts YES **11/30**. Fills 84 · skips 85 · realized $-1342.35.
 
 ## How this sleeve decides (like you are 10)
 
@@ -269,6 +269,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-05 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $22.80 | ▲ 09:30 equity $9,907.92 vs yday $9,807.27 (+100.65) | 09:30 open · cash $22.80 (unchanged overnight, no fees) · equity $9,907.92 vs prior close $9,807.27 (+100.65) · 2 name(s) re-marked at the open (per-name table). AMX×51 yday $25.03 → 09:30 $25.12 +4.59; LLY×6 yday $1417.99 → 09:30 $1434.00 +96.06 | — |
 | 2026-11-05 09:30 ET | **SELL** | `LLY` | 6 | $1434.00 | $2.09 | $+241.01 | $8,624.71 | ▲ +241.01 after sell → book $9,905.83; vs 09:30 mark -2.09 | dropped from list after 3 sess (min 3) | — |
 | 2026-11-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,624.71 | ▼ close $9,905.32 vs 09:30 $9,907.92 (session -0.51) | 16:00 close · cash $8,624.71 · equity $9,905.32 vs 09:30 $9,907.92 (-2.60; session marks -0.51) · 1 name(s) marked open→close (per-name table). AMX×51 09:30 $25.12 → close $25.11 -0.51 | — |
+| 2026-11-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,624.71 | ▼ 09:30 equity $9,894.61 vs yday $9,905.32 (-10.71) | 09:30 open · cash $8,624.71 (unchanged overnight, no fees) · equity $9,894.61 vs prior close $9,905.32 (-10.71) · 1 name(s) re-marked at the open (per-name table). AMX×51 yday $25.11 → 09:30 $24.90 -10.71 | — |
+| 2026-11-06 09:30 ET | **BUY** | `APP` | 3 | $355.95 | $2.00 | — | $7,554.86 | — | morning packet news🟢 only (not the merged box); gate news_box=good; rank cond; list flatten; 🔵; ret5=+39.7; leftover $1078.09 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `MNST` | 24 | $44.04 | $2.06 | — | $6,495.84 | — | morning packet news🟢 only (not the merged box); gate news_box=good; rank cond; list earn_react; 🔵; ret5=+3.2; leftover $1078.09 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `ABNB` | 5 | $191.15 | $2.00 | — | $5,538.11 | — | morning packet news🟢 only (not the merged box); gate news_box=good; rank cond; list earn_react; 🔵; ret5=+2.2; leftover $1078.09 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `SPG` | 4 | $222.28 | $2.00 | — | $4,646.99 | — | morning packet news🟢 only (not the merged box); gate news_box=good; rank cond; list earn_react; 🔵; ret5=+5.0; leftover $1078.09 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `EOG` | 7 | $145.47 | $2.01 | — | $3,626.69 | — | morning packet news🟢 only (not the merged box); gate news_box=good; rank cond; list earn_react; 🔵; ret5=-10.7; leftover $1078.09 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `NET` | 3 | $286.97 | $2.00 | — | $2,763.78 | — | morning packet news🟢 only (not the merged box); gate news_box=good; rank cond; list earn_react; 🔵; ret5=-21.2; leftover $1078.09 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `VST` | 9 | $119.57 | $2.02 | — | $1,685.63 | — | morning packet news🟢 only (not the merged box); gate news_box=good; rank cond; list earn_react; ret5=-19.9; leftover $1078.09 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `AIP` | 63 | $17.06 | $2.18 | — | $608.67 | — | morning packet news🟢 only (not the merged box); gate news_box=good; rank cond; list earn_react; ret5=-22.6; leftover $1078.09 | join🔴 sector🟡 gen🔴 news🟢 digest🔴 ab🔴 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-11-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $608.67 | ▲ close $10,135.72 vs 09:30 $9,894.61 (session +257.38) | 16:00 close · cash $608.67 · equity $10,135.72 vs 09:30 $9,894.61 (+241.11; session marks +257.38) · 9 name(s) marked open→close (per-name table). AMX×51 09:30 $24.90 → close $25.72 +41.82; APP×3 09:30 $355.95 → close $391.22 +105.81; MNST×24 09:30 $44.04 → close $45.72 +40.32; ABNB×5 09:30 $191.15 → close $189.99 -5.78; SPG×4 09:30 $222.28 → close $228.42 +24.56; EOG×7 09:30 $145.47 → close $147.13 +11.62; NET×3 09:30 $286.97 → close $268.75 -54.66; VST×9 09:30 $119.57 → close $124.80 +47.07; AIP×63 09:30 $17.06 → close $17.80 +46.62 | — |
 
 ## Not taken
 

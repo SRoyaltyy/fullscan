@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 4 · rank `cond` · size `conviction` · sell `list` · S-boost `none` · merged news🟢 rank cameras; 70% leftover if #1 net ≥ 5
 
-Cash book **-23.15%** ($7,685) · signal-only (no cash/fees) was +282.84%. Starts YES **10/30**. Fills 164 · skips 137 · realized $-233.27.
+Cash book **-21.35%** ($7,865) · signal-only (no cash/fees) was +282.84%. Starts YES **10/30**. Fills 169 · skips 137 · realized $-233.27.
 
 ## How this sleeve decides (like you are 10)
 
@@ -357,6 +357,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-05 09:30 ET | **BUY** | `STUB` | 557 | $6.56 | $7.19 | — | $1,828.85 | — | merged news🟢 rank cameras; 70% leftover if #1 net ≥ 5; gate news=good; rank cond; list ohlc_hot; ret5=+17.7; leftover $3659.97 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟡 heat🟢 vol🔴 buy🟡 |
 | 2026-11-05 09:30 ET | **BUY** | `MVST` | 2690 | $0.67 | $26.09 | — | $0.46 | — | merged news🟢 rank cameras; 70% leftover if #1 net ≥ 5; gate news=good; rank cond; list ohlc_hot; ret5=+7.2; leftover $1829.98 | join🟢 sector🔴 gen🔴 news🟢 digest🟢 ab🔴 peer🔴 heat🔴 vol🔴 buy🟡 |
 | 2026-11-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $0.46 | ▼ close $7,684.99 vs 09:30 $8,145.51 (session -423.17) | 16:00 close · cash $0.46 · equity $7,684.99 vs 09:30 $8,145.51 (-460.52; session marks -423.17) · 6 name(s) marked open→close (per-name table). AMX×27 09:30 $25.12 → close $25.11 -0.27; GLND×85 09:30 $2.28 → close $2.14 -11.90; GRAB×143 09:30 $3.35 → close $3.48 +18.59; TBBB×20 09:30 $65.02 → close $64.21 -16.20; STUB×557 09:30 $6.56 → close $6.28 -155.96; MVST×2690 09:30 $0.67 → close $0.57 -257.43 | — |
+| 2026-11-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $0.46 | ▲ 09:30 equity $7,700.35 vs yday $7,684.99 (+15.36) | 09:30 open · cash $0.46 (unchanged overnight, no fees) · equity $7,700.35 vs prior close $7,684.99 (+15.36) · 6 name(s) re-marked at the open (per-name table). AMX×27 yday $25.11 → 09:30 $24.90 -5.67; GLND×85 yday $2.14 → 09:30 $2.20 +5.10; GRAB×143 yday $3.48 → 09:30 $3.44 -5.01; MVST×2690 yday $0.57 → 09:30 $0.60 +69.13; STUB×557 yday $6.28 → 09:30 $6.18 -55.70; TBBB×20 yday $64.21 → 09:30 $64.58 +7.50 | — |
+| 2026-11-06 09:30 ET | **SELL** | `TBBB` | 20 | $64.58 | $2.07 | $+150.18 | $1,290.09 | ▲ +150.18 after sell → book $7,698.28; vs 09:30 mark -2.07 | dropped from list after 4 sess (min 3) | — |
+| 2026-11-06 09:30 ET | **BUY** | `APP` | 2 | $355.95 | $2.00 | — | $576.19 | — | merged news🟢 rank cameras; 70% leftover if #1 net ≥ 5; gate news=good; rank cond; list flatten; 🔵; ret5=+39.7; leftover $903.06 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `LIVN` | 1 | $90.08 | $0.90 | — | $485.20 | — | merged news🟢 rank cameras; 70% leftover if #1 net ≥ 5; gate news=good; rank cond; list yday_gainer; 🔵; ret5=+12.2; leftover $129.01 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `MNST` | 2 | $44.04 | $0.89 | — | $396.24 | — | merged news🟢 rank cameras; 70% leftover if #1 net ≥ 5; gate news=good; rank cond; list earn_react; 🔵; ret5=+3.2; leftover $129.01 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `REPL` | 6 | $20.20 | $1.23 | — | $273.81 | — | merged news🟢 rank cameras; 70% leftover if #1 net ≥ 5; gate news=good; rank cond; list ohlc_hot; 🔵; ret5=+15.1; leftover $129.01 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $273.81 | ▲ close $7,864.61 vs 09:30 $7,700.35 (session +171.35) | 16:00 close · cash $273.81 · equity $7,864.61 vs 09:30 $7,700.35 (+164.26; session marks +171.35) · 9 name(s) marked open→close (per-name table). AMX×27 09:30 $24.90 → close $25.72 +22.14; GLND×85 09:30 $2.20 → close $2.39 +16.15; GRAB×143 09:30 $3.44 → close $3.41 -5.00; MVST×2690 09:30 $0.60 → close $0.63 +78.01; STUB×557 09:30 $6.18 → close $6.14 -22.28; APP×2 09:30 $355.95 → close $391.22 +70.54; LIVN×1 09:30 $90.08 → close $89.99 -0.09; MNST×2 09:30 $44.04 → close $45.72 +3.36; REPL×6 09:30 $20.20 → close $21.62 +8.52 | — |
 
 ## Not taken
 

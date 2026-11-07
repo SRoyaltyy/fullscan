@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · packet🟢 OR headline🟢 and camera net ≥ 2
 
-Cash book **-29.94%** ($7,006) · signal-only (no cash/fees) was -9.69%. Starts YES **1/30**. Fills 200 · skips 190 · realized $-1348.46.
+Cash book **-28.69%** ($7,131) · signal-only (no cash/fees) was -9.69%. Starts YES **1/30**. Fills 200 · skips 190 · realized $-1348.46.
 
 ## How this sleeve decides (like you are 10)
 
@@ -394,6 +394,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-05 09:30 ET | **SELL** | `LLY` | 4 | $1434.00 | $2.06 | $+159.34 | $5,748.90 | ▲ +159.34 after sell → book $7,053.60; vs 09:30 mark -2.06 | dropped from list after 3 sess (min 3) | — |
 | 2026-11-05 09:30 ET | **BUY** | `TBBB` | 88 | $65.02 | $2.25 | — | $24.89 | — | packet🟢 OR headline🟢 and camera net ≥ 2; gate cam_net_min=2,news_or_headline=True; rank cond; list yday_gainer; ret5=+15.4; leftover $5748.90 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-11-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $24.89 | ▼ close $7,006.08 vs 09:30 $7,055.66 (session -45.27) | 16:00 close · cash $24.89 · equity $7,006.08 vs 09:30 $7,055.66 (-49.58; session marks -45.27) · 3 name(s) marked open→close (per-name table). AMX×25 09:30 $25.12 → close $25.11 -0.25; GRAB×202 09:30 $3.35 → close $3.48 +26.26; TBBB×88 09:30 $65.02 → close $64.21 -71.28 | — |
+| 2026-11-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $24.89 | ▲ 09:30 equity $7,026.76 vs yday $7,006.08 (+20.68) | 09:30 open · cash $24.89 (unchanged overnight, no fees) · equity $7,026.76 vs prior close $7,006.08 (+20.68) · 3 name(s) re-marked at the open (per-name table). AMX×25 yday $25.11 → 09:30 $24.90 -5.25; GRAB×202 yday $3.48 → 09:30 $3.44 -7.07; TBBB×88 yday $64.21 → 09:30 $64.58 +33.00 | — |
+| 2026-11-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $24.89 | ▲ close $7,131.27 vs 09:30 $7,026.76 (session +104.51) | 16:00 close · cash $24.89 · equity $7,131.27 vs 09:30 $7,026.76 (+104.51; session marks +104.51) · 3 name(s) marked open→close (per-name table). AMX×25 09:30 $24.90 → close $25.72 +20.50; GRAB×202 09:30 $3.44 → close $3.41 -7.07; TBBB×88 09:30 $64.58 → close $65.62 +91.08 | — |
 
 ## Not taken
 

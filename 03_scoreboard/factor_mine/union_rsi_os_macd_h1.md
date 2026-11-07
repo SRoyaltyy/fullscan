@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **+20.31%** ($12,031) · signal-only (no cash/fees) was -3.93%. Starts YES **1/30**. Fills 63 · skips 0 · realized $-826.45.
+Cash book **+30.02%** ($13,002) · signal-only (no cash/fees) was -3.93%. Starts YES **1/30**. Fills 68 · skips 0 · realized $-826.45.
 
 ## How this sleeve decides (like you are 10)
 
@@ -257,3 +257,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-05 09:30 ET | **BUY** | `FLO` | 571 | $7.17 | $7.37 | — | $4,091.91 | — | combo gate; gate macd_up=True,rsi_os=True; list ohlc_hot; ret5=+15.6; leftover $4095.71 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟡 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-11-05 09:30 ET | **BUY** | `STUB` | 622 | $6.56 | $8.02 | — | $3.57 | — | combo gate; gate macd_up=True,rsi_os=True; list ohlc_hot; ret5=+17.7; leftover $4095.71 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟡 heat🟢 vol🔴 buy🟡 |
 | 2026-11-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $3.57 | ▼ close $12,030.68 vs 09:30 $12,296.15 (session -238.58) | 16:00 close · cash $3.57 · equity $12,030.68 vs 09:30 $12,296.15 (-265.47; session marks -238.58) · 3 name(s) marked open→close (per-name table). CMCSA×163 09:30 $25.10 → close $24.95 -24.45; FLO×571 09:30 $7.17 → close $7.10 -39.97; STUB×622 09:30 $6.56 → close $6.28 -174.16 | — |
+| 2026-11-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $3.57 | ▼ 09:30 equity $11,733.66 vs yday $12,030.68 (-297.02) | 09:30 open · cash $3.57 (unchanged overnight, no fees) · equity $11,733.66 vs prior close $12,030.68 (-297.02) · 3 name(s) re-marked at the open (per-name table). CMCSA×163 yday $24.95 → 09:30 $24.21 -120.62; FLO×571 yday $7.10 → 09:30 $6.90 -114.20; STUB×622 yday $6.28 → 09:30 $6.18 -62.20 | — |
+| 2026-11-06 09:30 ET | **SELL** | `CMCSA` | 163 | $24.21 | $2.54 | $-150.09 | $3,947.26 | ▼ -150.09 after sell → book $11,731.12; vs 09:30 mark -2.54 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-06 09:30 ET | **SELL** | `FLO` | 571 | $6.90 | $7.49 | $-169.03 | $7,879.67 | ▼ -169.03 after sell → book $11,723.63; vs 09:30 mark -7.49 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-06 09:30 ET | **SELL** | `STUB` | 622 | $6.18 | $8.16 | $-252.54 | $11,715.47 | ▼ -252.54 after sell → book $11,715.47; vs 09:30 mark -8.16 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-06 09:30 ET | **BUY** | `INDI` | 3455 | $1.70 | $44.57 | — | $5,814.68 | — | combo gate; gate macd_up=True,rsi_os=True; list earn_react; 🔵; ret5=-23.9; leftover $5857.74 | join🔴 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `KDK` | 5270 | $1.09 | $67.98 | — | $2.39 | — | combo gate; gate macd_up=True,rsi_os=True; list earn_react; ret5=-25.7; leftover $5857.74 | join🔴 sector🟡 gen🔴 news🟡 digest🔴 ab🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-11-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2.39 | ▲ close $13,001.54 vs 09:30 $11,733.66 (session +1,398.62) | 16:00 close · cash $2.39 · equity $13,001.54 vs 09:30 $11,733.66 (+1267.88; session marks +1398.62) · 2 name(s) marked open→close (per-name table). INDI×3455 09:30 $1.70 → close $1.81 +397.32; KDK×5270 09:30 $1.09 → close $1.28 +1001.30 | — |

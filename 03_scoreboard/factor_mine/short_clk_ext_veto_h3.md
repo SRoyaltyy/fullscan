@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · Clock-B #5 extreme ext + fade/fail-break as a short
 
-Cash book **-4.05%** ($9,595) · signal-only (no cash/fees) was -97.41%. Starts YES **0/30**. Fills 285 · skips 219 · realized $-964.15.
+Cash book **-4.50%** ($9,550) · signal-only (no cash/fees) was -97.41%. Starts YES **0/30**. Fills 293 · skips 219 · realized $-964.15.
 
 ## How this sleeve decides (like you are 10)
 
@@ -475,6 +475,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-05 09:30 ET | **COVER** | `HLP` | 1001 | $2.87 | $12.91 | $+1235.12 | $13,687.80 | ▲ +1,235.12 after sell → book $9,032.80; vs 09:30 mark -12.91 | dropped from list after 3 sess (min 3) | — |
 | 2026-11-05 09:30 ET | **SHORT** | `POOL` | 20 | $219.38 | $2.22 | — | $18,073.18 | — | Clock-B #5 extreme ext + fade/fail-break as a short; gate clk_ext_veto=True; list yday_gainer,ohlc_hot; ret5=+12.1; leftover $4516.40 | join🔴 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-11-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $18,073.18 | ▲ close $9,595.43 vs 09:30 $9,045.71 (session +564.85) | 16:00 close · cash $18,073.18 · equity $9,595.43 vs 09:30 $9,045.71 (+549.72; session marks +564.85) · 3 name(s) marked open→close (per-name table). BETA×87 09:30 $25.00 → close $24.05 +82.65; JLHL×310 09:30 $8.00 → close $6.62 +427.80; POOL×20 09:30 $219.38 → close $216.66 +54.40 | — |
+| 2026-11-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $18,073.18 | ▲ 09:30 equity $9,789.85 vs yday $9,595.43 (+194.42) | 09:30 open · cash $18,073.18 (unchanged overnight, no fees) · equity $9,789.85 vs prior close $9,595.43 (+194.42) · 3 name(s) re-marked at the open (per-name table). BETA×87 yday $24.05 → 09:30 $24.79 -64.38; JLHL×310 yday $6.62 → 09:30 $6.26 +111.60; POOL×20 yday $216.66 → 09:30 $209.30 +147.20 | — |
+| 2026-11-06 09:30 ET | **SHORT** | `REPL` | 30 | $20.20 | $2.12 | — | $18,677.06 | — | Clock-B #5 extreme ext + fade/fail-break as a short; gate clk_ext_veto=True; list ohlc_hot; 🔵; ret5=+15.1; leftover $611.87 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-06 09:30 ET | **SHORT** | `PLTK` | 270 | $2.26 | $3.55 | — | $19,283.71 | — | Clock-B #5 extreme ext + fade/fail-break as a short; gate clk_ext_veto=True; list ohlc_hot; 🔵; ret5=+17.3; leftover $611.87 | join🟡 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-11-06 09:30 ET | **SHORT** | `VNT` | 15 | $39.65 | $2.07 | — | $19,876.39 | — | Clock-B #5 extreme ext + fade/fail-break as a short; gate clk_ext_veto=True; list ohlc_hot; 🔵; ret5=+11.2; leftover $611.87 | join🔴 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-06 09:30 ET | **SHORT** | `FER` | 10 | $56.90 | $2.06 | — | $20,443.33 | — | Clock-B #5 extreme ext + fade/fail-break as a short; gate clk_ext_veto=True; list ohlc_hot; 🔵; ret5=+5.7; leftover $611.87 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🔴 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-06 09:30 ET | **SHORT** | `CALY` | 35 | $17.42 | $2.13 | — | $21,050.90 | — | Clock-B #5 extreme ext + fade/fail-break as a short; gate clk_ext_veto=True; list earn_react; 🔵; ret5=+4.8; leftover $611.87 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-06 09:30 ET | **SHORT** | `ED` | 5 | $119.93 | $2.04 | — | $21,648.51 | — | Clock-B #5 extreme ext + fade/fail-break as a short; gate clk_ext_veto=True; list earn_react; 🔵; ret5=+5.2; leftover $611.87 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-06 09:30 ET | **SHORT** | `IRTC` | 5 | $110.36 | $2.04 | — | $22,198.24 | — | Clock-B #5 extreme ext + fade/fail-break as a short; gate clk_ext_veto=True; list earn_react; ret5=+1.9; leftover $611.87 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟡 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **SHORT** | `PLBY` | 454 | $1.34 | $5.96 | — | $22,802.92 | — | Clock-B #5 extreme ext + fade/fail-break as a short; gate clk_ext_veto=True; list earn_react; 🔵; ret5=+6.0; leftover $611.87 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $22,802.92 | ▼ close $9,550.22 vs 09:30 $9,789.85 (session -217.66) | 16:00 close · cash $22,802.92 · equity $9,550.22 vs 09:30 $9,789.85 (-239.63; session marks -217.66) · 11 name(s) marked open→close (per-name table). BETA×87 09:30 $24.79 → close $27.12 -202.71; JLHL×310 09:30 $6.26 → close $6.17 +27.90; POOL×20 09:30 $209.30 → close $211.70 -48.00; REPL×30 09:30 $20.20 → close $21.62 -42.60; PLTK×270 09:30 $2.26 → close $2.44 -48.60; VNT×15 09:30 $39.65 → close $42.23 -38.70; FER×10 09:30 $56.90 → close $58.71 -18.10; CALY×35 09:30 $17.42 → close $16.83 +20.65; ED×5 09:30 $119.93 → close $118.56 +6.85; IRTC×5 09:30 $110.36 → close $90.22 +100.68; PLBY×454 09:30 $1.34 → close $1.29 +24.97 | — |
 
 ## Not taken
 

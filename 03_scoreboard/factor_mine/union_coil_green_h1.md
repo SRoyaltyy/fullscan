@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-34.89%** ($6,511) · signal-only (no cash/fees) was -12.21%. Starts YES **0/30**. Fills 487 · skips 101 · realized $-768.45.
+Cash book **-31.21%** ($6,878) · signal-only (no cash/fees) was -12.21%. Starts YES **0/30**. Fills 496 · skips 101 · realized $-768.45.
 
 ## How this sleeve decides (like you are 10)
 
@@ -684,6 +684,17 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-05 09:30 ET | **SELL** | `TRU` | 11 | $82.95 | $2.04 | $+15.84 | $7,705.55 | ▲ +15.84 after sell → book $7,705.55; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟢 |
 | 2026-11-05 09:30 ET | **BUY** | `MVST` | 11334 | $0.67 | $109.94 | — | $1.83 | — | combo gate; gate last_green=True,ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list ohlc_hot; ret5=+7.2; leftover $7705.55 | join🟢 sector🔴 gen🔴 news🟢 digest🟢 ab🔴 peer🔴 heat🔴 vol🔴 buy🟡 |
 | 2026-11-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1.83 | ▼ close $6,510.94 vs 09:30 $7,722.19 (session -1,084.66) | 16:00 close · cash $1.83 · equity $6,510.94 vs 09:30 $7,722.19 (-1211.25; session marks -1084.66) · 1 name(s) marked open→close (per-name table). MVST×11334 09:30 $0.67 → close $0.57 -1084.66 | — |
+| 2026-11-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $1.83 | ▲ 09:30 equity $6,802.23 vs yday $6,510.94 (+291.29) | 09:30 open · cash $1.83 (unchanged overnight, no fees) · equity $6,802.23 vs prior close $6,510.94 (+291.29) · 1 name(s) re-marked at the open (per-name table). MVST×11334 yday $0.57 → 09:30 $0.60 +291.28 | — |
+| 2026-11-06 09:30 ET | **SELL** | `MVST` | 11334 | $0.60 | $103.94 | $-1007.26 | $6,698.29 | ▼ -1,007.26 after sell → book $6,698.29; vs 09:30 mark -103.94 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-06 09:30 ET | **BUY** | `FER` | 14 | $56.90 | $2.03 | — | $5,899.66 | — | combo gate; gate last_green=True,ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list ohlc_hot; 🔵; ret5=+5.7; leftover $837.29 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🔴 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `CERT` | 69 | $12.03 | $2.20 | — | $5,067.39 | — | combo gate; gate last_green=True,ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list ohlc_hot; ret5=+8.8; leftover $837.29 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🟡 heat🟢 vol🟡 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `FTDR` | 8 | $94.54 | $2.01 | — | $4,309.06 | — | combo gate; gate last_green=True,ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list ohlc_hot; 🔵; ret5=+9.9; leftover $837.29 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `STE` | 3 | $248.03 | $2.00 | — | $3,562.97 | — | combo gate; gate last_green=True,ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list ohlc_hot; ret5=+9.5; leftover $837.29 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟡 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `FIP` | 261 | $3.20 | $3.37 | — | $2,724.40 | — | combo gate; gate last_green=True,ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list earn_react; 🔵; ret5=+2.4; leftover $837.29 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `SG` | 74 | $11.25 | $2.21 | — | $1,889.69 | — | combo gate; gate last_green=True,ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list earn_react; ret5=+1.2; leftover $837.29 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `SPNT` | 31 | $26.80 | $2.08 | — | $1,056.80 | — | combo gate; gate last_green=True,ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list earn_react; ret5=+1.2; leftover $837.29 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `TU` | 94 | $8.83 | $2.27 | — | $224.51 | — | combo gate; gate last_green=True,ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list earn_react; 🔵; ret5=+8.7; leftover $837.29 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $224.51 | ▲ close $6,878.50 vs 09:30 $6,802.23 (session +198.39) | 16:00 close · cash $224.51 · equity $6,878.50 vs 09:30 $6,802.23 (+76.27; session marks +198.39) · 8 name(s) marked open→close (per-name table). FER×14 09:30 $56.90 → close $58.71 +25.34; CERT×69 09:30 $12.03 → close $12.05 +1.38; FTDR×8 09:30 $94.54 → close $97.09 +20.40; STE×3 09:30 $248.03 → close $252.30 +12.81; FIP×261 09:30 $3.20 → close $3.47 +70.47; SG×74 09:30 $11.25 → close $12.01 +56.24; SPNT×31 09:30 $26.80 → close $26.33 -14.57; TU×94 09:30 $8.83 → close $9.11 +26.32 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared union_e_fresh_h3/union_earn_react_h3 w=0.5,0.5 net=priority
 
-Cash book **-14.43%** ($8,557) · signal-only (no cash/fees) was —. Starts YES **28/30**. Fills 210 · skips 272 · realized $+2411.05.
+Cash book **-15.00%** ($8,500) · signal-only (no cash/fees) was —. Starts YES **28/30**. Fills 216 · skips 272 · realized $+2411.05.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $239.00.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $135.66.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -403,6 +403,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-05 09:30 ET | **BUY** | `EXPE` | 5 | $287.31 | $2.00 | — | $1,904.08 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list ohlc_hot; ret5=+14.6; combo leftover $1671.37; owner union_e_fresh_h3 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-11-05 09:30 ET | **BUY** | `ARHS` | 130 | $12.79 | $2.38 | — | $239.00 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list ohlc_hot; ret5=+14.1; combo leftover $1671.37; owner union_e_fresh_h3 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-11-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $239.00 | ▲ close $8,557.23 vs 09:30 $8,356.85 (session +218.96) | 16:00 close · cash $239.00 · equity $8,557.23 vs 09:30 $8,356.85 (+200.38; session marks +218.96) · 5 name(s) marked open→close (per-name table). PRMB×77 09:30 $21.55 → close $22.15 +46.20; AMC×461 09:30 $3.62 → close $3.08 -251.24; DNUT×467 09:30 $3.58 → close $4.60 +478.67; EXPE×5 09:30 $287.31 → close $272.48 -74.17; ARHS×130 09:30 $12.79 → close $12.94 +19.50 | — |
+| 2026-11-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $239.00 | ▼ 09:30 equity $8,480.34 vs yday $8,557.23 (-76.89) | 09:30 open · cash $239.00 (unchanged overnight, no fees) · equity $8,480.34 vs prior close $8,557.23 (-76.89) | — |
+| 2026-11-06 09:30 ET | **BUY** | `SSP` | 4 | $3.00 | $0.13 | — | $226.87 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list ohlc_hot,earn_react; 🔵; ret5=+17.1; combo leftover $14.94; owner union_e_fresh_h3 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `PLTK` | 6 | $2.26 | $0.15 | — | $213.15 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list ohlc_hot; 🔵; ret5=+17.3; combo leftover $14.94; owner union_e_fresh_h3 | join🟡 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `GPGI` | 1 | $13.52 | $0.14 | — | $199.50 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list ohlc_hot; 🔵; ret5=+17.4; combo leftover $14.94; owner union_e_fresh_h3 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `WEN` | 1 | $7.85 | $0.08 | — | $191.56 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list ohlc_hot; 🔵; ret5=+10.8; combo leftover $14.94; owner union_e_fresh_h3 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `ABX` | 3 | $8.20 | $0.26 | — | $166.71 | — | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; ret5=+1.6; combo leftover $31.93; owner union_earn_react_h3 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `ACRE` | 8 | $3.84 | $0.33 | — | $135.66 | — | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; 🔵; ret5=-0.6; combo leftover $31.93; owner union_earn_react_h3 | join🟢 sector🟡 gen🔴 news🟡 ab🟢 peer🟡 heat🔴 vol🟡 buy🟡 |
+| 2026-11-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $135.66 | ▲ close $8,500.26 vs 09:30 $8,480.34 (session +21.01) | 16:00 close · cash $135.66 · equity $8,500.26 vs 09:30 $8,480.34 (+19.92; session marks +21.01) · 11 name(s) marked open→close (per-name table). AMC×461 09:30 $3.13 → close $3.14 +4.61; ARHS×130 09:30 $13.00 → close $14.19 +154.70; DNUT×467 09:30 $4.44 → close $4.17 -126.09; EXPE×5 09:30 $272.19 → close $259.24 -64.75; PRMB×77 09:30 $21.74 → close $22.39 +50.05; SSP×4 09:30 $3.00 → close $3.05 +0.20; PLTK×6 09:30 $2.26 → close $2.44 +1.08; GPGI×1 09:30 $13.52 → close $14.21 +0.69; WEN×1 09:30 $7.85 → close $8.15 +0.30; ABX×3 09:30 $8.20 → close $8.78 +1.74; ACRE×8 09:30 $3.84 → close $3.65 -1.52 | — |
 
 ## Not taken
 

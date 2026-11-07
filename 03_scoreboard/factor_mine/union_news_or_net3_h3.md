@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · packet🟢 OR headline🟢 and camera net ≥ 3
 
-Cash book **-21.10%** ($7,890) · signal-only (no cash/fees) was -21.14%. Starts YES **1/30**. Fills 161 · skips 162 · realized $-2181.08.
+Cash book **-19.35%** ($8,065) · signal-only (no cash/fees) was -21.14%. Starts YES **1/30**. Fills 161 · skips 162 · realized $-2181.08.
 
 ## How this sleeve decides (like you are 10)
 
@@ -355,6 +355,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-05 09:30 ET | **SELL** | `LLY` | 5 | $1434.00 | $2.07 | $+200.17 | $7,178.00 | ▲ +200.17 after sell → book $7,981.84; vs 09:30 mark -2.07 | dropped from list after 3 sess (min 3) | — |
 | 2026-11-05 09:30 ET | **BUY** | `TBBB` | 110 | $65.02 | $2.32 | — | $23.48 | — | packet🟢 OR headline🟢 and camera net ≥ 3; gate cam_net_min=3,news_or_headline=True; rank cond; list yday_gainer; ret5=+15.4; leftover $7178.00 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-11-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $23.48 | ▼ close $7,890.10 vs 09:30 $7,983.91 (session -89.42) | 16:00 close · cash $23.48 · equity $7,890.10 vs 09:30 $7,983.91 (-93.81; session marks -89.42) · 2 name(s) marked open→close (per-name table). AMX×32 09:30 $25.12 → close $25.11 -0.32; TBBB×110 09:30 $65.02 → close $64.21 -89.10 | — |
+| 2026-11-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $23.48 | ▲ 09:30 equity $7,924.63 vs yday $7,890.10 (+34.53) | 09:30 open · cash $23.48 (unchanged overnight, no fees) · equity $7,924.63 vs prior close $7,890.10 (+34.53) · 2 name(s) re-marked at the open (per-name table). AMX×32 yday $25.11 → 09:30 $24.90 -6.72; TBBB×110 yday $64.21 → 09:30 $64.58 +41.25 | — |
+| 2026-11-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $23.48 | ▲ close $8,064.72 vs 09:30 $7,924.63 (session +140.09) | 16:00 close · cash $23.48 · equity $8,064.72 vs 09:30 $7,924.63 (+140.09; session marks +140.09) · 2 name(s) marked open→close (per-name table). AMX×32 09:30 $24.90 → close $25.72 +26.24; TBBB×110 09:30 $64.58 → close $65.62 +113.85 | — |
 
 ## Not taken
 

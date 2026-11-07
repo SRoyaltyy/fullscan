@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ e_fresh, no 🚨
 
-Cash book **-12.42%** ($8,758) · signal-only (no cash/fees) was +7.74%. Starts YES **29/30**. Fills 200 · skips 198 · realized $+4004.41.
+Cash book **-12.96%** ($8,704) · signal-only (no cash/fees) was +7.74%. Starts YES **29/30**. Fills 205 · skips 198 · realized $+4004.41.
 
 ## How this sleeve decides (like you are 10)
 
@@ -393,6 +393,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-05 09:30 ET | **BUY** | `EXPE` | 5 | $287.31 | $2.00 | — | $1,978.76 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list ohlc_hot; ret5=+14.6; leftover $1710.10 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-11-05 09:30 ET | **BUY** | `ARHS` | 133 | $12.79 | $2.39 | — | $275.30 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list ohlc_hot; ret5=+14.1; leftover $1710.10 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-11-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $275.30 | ▲ close $8,758.05 vs 09:30 $8,550.48 (session +226.44) | 16:00 close · cash $275.30 · equity $8,758.05 vs 09:30 $8,550.48 (+207.57; session marks +226.44) · 5 name(s) marked open→close (per-name table). PRMB×79 09:30 $21.55 → close $22.15 +47.40; AMC×471 09:30 $3.62 → close $3.08 -256.69; DNUT×478 09:30 $3.58 → close $4.60 +489.95; EXPE×5 09:30 $287.31 → close $272.48 -74.17; ARHS×133 09:30 $12.79 → close $12.94 +19.95 | — |
+| 2026-11-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $275.30 | ▼ 09:30 equity $8,679.26 vs yday $8,758.05 (-78.79) | 09:30 open · cash $275.30 (unchanged overnight, no fees) · equity $8,679.26 vs prior close $8,758.05 (-78.79) · 5 name(s) re-marked at the open (per-name table). AMC×471 yday $3.08 → 09:30 $3.13 +23.55; ARHS×133 yday $12.94 → 09:30 $13.00 +7.98; DNUT×478 yday $4.60 → 09:30 $4.44 -76.48; EXPE×5 yday $272.48 → 09:30 $272.19 -1.45; PRMB×79 yday $22.15 → 09:30 $21.74 -32.39 | — |
+| 2026-11-06 09:30 ET | **BUY** | `ENOV` | 1 | $27.24 | $0.28 | — | $247.78 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list yday_gainer; 🔵; ret5=+25.5; leftover $34.41 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟡 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `SSP` | 11 | $3.00 | $0.36 | — | $214.42 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list ohlc_hot,earn_react; 🔵; ret5=+17.1; leftover $34.41 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `PLTK` | 15 | $2.26 | $0.38 | — | $180.14 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list ohlc_hot; 🔵; ret5=+17.3; leftover $34.41 | join🟡 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `GPGI` | 2 | $13.52 | $0.28 | — | $152.82 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list ohlc_hot; 🔵; ret5=+17.4; leftover $34.41 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `WEN` | 4 | $7.85 | $0.33 | — | $121.10 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list ohlc_hot; 🔵; ret5=+10.8; leftover $34.41 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-11-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $121.10 | ▲ close $8,703.91 vs 09:30 $8,679.26 (session +26.27) | 16:00 close · cash $121.10 · equity $8,703.91 vs 09:30 $8,679.26 (+24.65; session marks +26.27) · 10 name(s) marked open→close (per-name table). AMC×471 09:30 $3.13 → close $3.14 +4.71; ARHS×133 09:30 $13.00 → close $14.19 +158.27; DNUT×478 09:30 $4.44 → close $4.17 -129.06; EXPE×5 09:30 $272.19 → close $259.24 -64.75; PRMB×79 09:30 $21.74 → close $22.39 +51.35; ENOV×1 09:30 $27.24 → close $27.16 -0.08; SSP×11 09:30 $3.00 → close $3.05 +0.55; PLTK×15 09:30 $2.26 → close $2.44 +2.70; GPGI×2 09:30 $13.52 → close $14.21 +1.38; WEN×4 09:30 $7.85 → close $8.15 +1.20 | — |
 
 ## Not taken
 

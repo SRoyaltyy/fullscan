@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · Clock-B #2 fresh catalyst + limited extension (research; not KEEP)
 
-Cash book **-33.18%** ($6,682) · signal-only (no cash/fees) was -4.91%. Starts YES **13/30**. Fills 395 · skips 106 · realized $-137.13.
+Cash book **-30.24%** ($6,976) · signal-only (no cash/fees) was -4.91%. Starts YES **13/30**. Fills 404 · skips 106 · realized $-137.13.
 
 ## How this sleeve decides (like you are 10)
 
@@ -589,6 +589,17 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-05 09:30 ET | **SELL** | `NVTS` | 207 | $8.75 | $2.72 | $+33.94 | $7,907.91 | ▲ +33.94 after sell → book $7,907.91; vs 09:30 mark -2.72 | dropped from list after 3 sess (min 1) | join🔴 sector🔴 gen🔴 news🟢 digest🟡 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-11-05 09:30 ET | **BUY** | `MVST` | 11631 | $0.67 | $112.82 | — | $2.32 | — | Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list ohlc_hot; ret5=+7.2; leftover $7907.91 | join🟢 sector🔴 gen🔴 news🟢 digest🟢 ab🔴 peer🔴 heat🔴 vol🔴 buy🟡 |
 | 2026-11-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2.32 | ▼ close $6,682.00 vs 09:30 $7,926.44 (session -1,113.09) | 16:00 close · cash $2.32 · equity $6,682.00 vs 09:30 $7,926.44 (-1244.44; session marks -1113.09) · 1 name(s) marked open→close (per-name table). MVST×11631 09:30 $0.67 → close $0.57 -1113.09 | — |
+| 2026-11-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $2.32 | ▲ 09:30 equity $6,980.92 vs yday $6,682.00 (+298.92) | 09:30 open · cash $2.32 (unchanged overnight, no fees) · equity $6,980.92 vs prior close $6,682.00 (+298.92) · 1 name(s) re-marked at the open (per-name table). MVST×11631 yday $0.57 → 09:30 $0.60 +298.92 | — |
+| 2026-11-06 09:30 ET | **SELL** | `MVST` | 11631 | $0.60 | $106.67 | $-1033.66 | $6,874.25 | ▼ -1,033.66 after sell → book $6,874.25; vs 09:30 mark -106.67 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-06 09:30 ET | **BUY** | `MNST` | 19 | $44.04 | $2.05 | — | $6,035.45 | — | Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list earn_react; 🔵; ret5=+3.2; leftover $859.28 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `NRDS` | 108 | $7.91 | $2.31 | — | $5,178.85 | — | Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list earn_react; 🔵; ret5=+0.7; leftover $859.28 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `NTRA` | 2 | $319.99 | $2.00 | — | $4,536.88 | — | Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list earn_react; 🔵; ret5=-16.6; leftover $859.28 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `SOLV` | 9 | $86.45 | $2.02 | — | $3,756.81 | — | Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list earn_react; 🔵; ret5=+4.3; leftover $859.28 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `UA` | 171 | $5.00 | $2.50 | — | $2,899.31 | — | Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list earn_react; 🔵; ret5=+9.8; leftover $859.28 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `ABX` | 104 | $8.20 | $2.30 | — | $2,044.21 | — | Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list earn_react; ret5=+1.6; leftover $859.28 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `BLMN` | 86 | $9.93 | $2.25 | — | $1,187.98 | — | Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list earn_react; 🔵; ret5=-2.1; leftover $859.28 | join🟢 sector🟡 gen🔴 news🔴 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `CON` | 20 | $41.60 | $2.05 | — | $353.93 | — | Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list earn_react; ret5=+2.2; leftover $859.28 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟡 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $353.93 | ▲ close $6,975.90 vs 09:30 $6,980.92 (session +119.12) | 16:00 close · cash $353.93 · equity $6,975.90 vs 09:30 $6,980.92 (-5.02; session marks +119.12) · 8 name(s) marked open→close (per-name table). MNST×19 09:30 $44.04 → close $45.72 +31.92; NRDS×108 09:30 $7.91 → close $7.89 -2.16; NTRA×2 09:30 $319.99 → close $310.67 -18.64; SOLV×9 09:30 $86.45 → close $90.38 +35.37; UA×171 09:30 $5.00 → close $5.09 +15.39; ABX×104 09:30 $8.20 → close $8.78 +60.32; BLMN×86 09:30 $9.93 → close $9.75 -15.48; CON×20 09:30 $41.60 → close $42.22 +12.40 | — |
 
 ## Not taken
 

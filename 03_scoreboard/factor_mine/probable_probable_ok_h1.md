@@ -524,6 +524,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-05 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8.64 | ▲ 09:30 equity $7,874.39 vs yday $7,680.94 (+193.45) | 09:30 open · cash $8.64 (unchanged overnight, no fees) · equity $7,874.39 vs prior close $7,680.94 (+193.45) · 1 name(s) re-marked at the open (per-name table). PRMB×365 yday $21.02 → 09:30 $21.55 +193.45 | — |
 | 2026-11-05 09:30 ET | **SELL** | `PRMB` | 365 | $21.55 | $4.83 | $+545.26 | $7,869.56 | ▲ +545.26 after sell → book $7,869.56; vs 09:30 mark -4.83 | dropped from list after 3 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-11-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,869.56 | ▲ close $7,869.56 vs 09:30 $7,874.39 (session +0.00) | 16:00 close · cash $7,869.56 · no lots left · equity $7,869.56. | — |
+| 2026-11-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,869.56 | ▲ 09:30 equity $7,869.56 vs yday $7,869.56 (+0.00) | 09:30 open · cash $7,869.56 · no holdings · equity $7,869.56 vs prior close $7,869.56 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,869.56 | ▲ close $7,869.56 vs 09:30 $7,869.56 (session +0.00) | 16:00 close · cash $7,869.56 · no lots left · equity $7,869.56. | — |
 
 ## Not taken
 

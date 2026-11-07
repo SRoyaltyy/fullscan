@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `hot_score` · size `leftover` · sell `list` · S-boost `none` · rank by hot_score
 
-Cash book **+21.26%** ($12,126) · signal-only (no cash/fees) was +50.67%. Starts YES **29/30**. Fills 504 · skips 90 · realized $+477.92.
+Cash book **+23.29%** ($12,329) · signal-only (no cash/fees) was +50.67%. Starts YES **29/30**. Fills 518 · skips 90 · realized $+477.92.
 
 ## How this sleeve decides (like you are 10)
 
@@ -695,6 +695,22 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-05 09:30 ET | **BUY** | `DNUT` | 420 | $3.58 | $5.42 | — | $1,566.34 | — | rank by hot_score; rank hot_score; list ohlc_hot; ret5=+15.4; leftover $1501.97 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-11-05 09:30 ET | **BUY** | `DLTR` | 10 | $144.57 | $2.02 | — | $118.62 | — | rank by hot_score; rank hot_score; list ohlc_hot; ret5=+15.6; leftover $1501.97 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟡 heat🟢 vol🔴 buy🟡 |
 | 2026-11-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $118.62 | ▼ close $12,126.08 vs 09:30 $12,281.41 (session -117.54) | 16:00 close · cash $118.62 · equity $12,126.08 vs 09:30 $12,281.41 (-155.33; session marks -117.54) · 8 name(s) marked open→close (per-name table). JLHL×219 09:30 $8.00 → close $6.62 -302.22; GPK×127 09:30 $11.82 → close $11.54 -35.56; CROX×9 09:30 $160.00 → close $152.93 -63.63; MOS×69 09:30 $21.55 → close $22.33 +54.16; AMC×414 09:30 $3.62 → close $3.08 -225.63; ANGI×217 09:30 $6.90 → close $7.32 +91.14; DNUT×420 09:30 $3.58 → close $4.60 +430.50; DLTR×10 09:30 $144.57 → close $137.94 -66.30 | — |
+| 2026-11-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $118.62 | ▼ 09:30 equity $11,865.21 vs yday $12,126.08 (-260.87) | 09:30 open · cash $118.62 (unchanged overnight, no fees) · equity $11,865.21 vs prior close $12,126.08 (-260.87) · 8 name(s) re-marked at the open (per-name table). AMC×414 yday $3.08 → 09:30 $3.13 +20.70; ANGI×217 yday $7.32 → 09:30 $7.20 -26.04; CROX×9 yday $152.93 → 09:30 $150.37 -23.04; DLTR×10 yday $137.94 → 09:30 $134.62 -33.20; DNUT×420 yday $4.60 → 09:30 $4.44 -67.20; GPK×127 yday $11.54 → 09:30 $11.30 -30.48; JLHL×219 yday $6.62 → 09:30 $6.26 -78.84; MOS×69 yday $22.33 → 09:30 $22.00 -22.77 | — |
+| 2026-11-06 09:30 ET | **SELL** | `AMC` | 414 | $3.13 | $5.42 | $-215.69 | $1,409.02 | ▼ -215.69 after sell → book $11,859.79; vs 09:30 mark -5.42 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-06 09:30 ET | **SELL** | `ANGI` | 217 | $7.20 | $2.85 | $+59.45 | $2,968.57 | ▲ +59.45 after sell → book $11,856.94; vs 09:30 mark -2.85 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🔴 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **SELL** | `CROX` | 9 | $150.37 | $2.04 | $-90.72 | $4,319.86 | ▼ -90.72 after sell → book $11,854.90; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-06 09:30 ET | **SELL** | `DLTR` | 10 | $134.62 | $2.04 | $-103.56 | $5,664.02 | ▼ -103.56 after sell → book $11,852.86; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-06 09:30 ET | **SELL** | `DNUT` | 420 | $4.44 | $5.50 | $+352.38 | $7,523.32 | ▲ +352.38 after sell → book $11,847.36; vs 09:30 mark -5.50 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-06 09:30 ET | **SELL** | `GPK` | 127 | $11.30 | $2.40 | $-70.81 | $8,956.02 | ▼ -70.81 after sell → book $11,844.96; vs 09:30 mark -2.40 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-06 09:30 ET | **SELL** | `JLHL` | 219 | $6.26 | $2.87 | $-117.39 | $10,324.09 | ▼ -117.39 after sell → book $11,842.09; vs 09:30 mark -2.87 | dropped from list after 2 sess (min 1) | — |
+| 2026-11-06 09:30 ET | **BUY** | `BUUU` | 276 | $5.33 | $3.56 | — | $8,849.44 | — | rank by hot_score; rank hot_score; list ohlc_hot; 🔵; ret5=-9.4; leftover $1474.87 | join🟡 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `CRCT` | 163 | $9.00 | $2.48 | — | $7,379.97 | — | rank by hot_score; rank hot_score; list yday_gainer,yday_mover; ret5=+49.7; leftover $1474.87 | join🔴 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `APP` | 4 | $355.95 | $2.00 | — | $5,954.16 | — | rank by hot_score; rank hot_score; list flatten; 🔵; ret5=+39.7; leftover $1474.87 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `CMTG` | 877 | $1.68 | $11.31 | — | $4,469.49 | — | rank by hot_score; rank hot_score; list yday_gainer,yday_mover; 🔵; ret5=+44.9; leftover $1474.87 | join🟢 sector🟡 gen🔴 news🟡 ab🔴 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `ENOV` | 54 | $27.24 | $2.15 | — | $2,996.38 | — | rank by hot_score; rank hot_score; list yday_gainer; 🔵; ret5=+25.5; leftover $1474.87 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟡 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `MGNI` | 54 | $27.25 | $2.15 | — | $1,522.73 | — | rank by hot_score; rank hot_score; list flatten; 🔵; ret5=+22.7; leftover $1474.87 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `EVC` | 212 | $6.94 | $2.73 | — | $48.71 | — | rank by hot_score; rank hot_score; list earn_react; 🔵; ret5=+19.6; leftover $1474.87 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $48.71 | ▲ close $12,329.19 vs 09:30 $11,865.21 (session +513.50) | 16:00 close · cash $48.71 · equity $12,329.19 vs 09:30 $11,865.21 (+463.98; session marks +513.50) · 8 name(s) marked open→close (per-name table). MOS×69 09:30 $22.00 → close $22.36 +24.84; BUUU×276 09:30 $5.33 → close $5.26 -19.32; CRCT×163 09:30 $9.00 → close $8.78 -35.86; APP×4 09:30 $355.95 → close $391.22 +141.08; CMTG×877 09:30 $1.68 → close $1.64 -35.08; ENOV×54 09:30 $27.24 → close $27.16 -4.32; MGNI×54 09:30 $27.25 → close $27.39 +7.56; EVC×212 09:30 $6.94 → close $8.99 +434.60 | — |
 
 ## Not taken
 

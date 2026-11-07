@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-38.20%** ($6,181) · signal-only (no cash/fees) was -21.07%. Starts YES **1/30**. Fills 377 · skips 304 · realized $-1242.34.
+Cash book **-33.12%** ($6,688) · signal-only (no cash/fees) was -21.07%. Starts YES **1/30**. Fills 377 · skips 304 · realized $-1242.34.
 
 ## How this sleeve decides (like you are 10)
 
@@ -574,6 +574,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-05 09:30 ET | **SELL** | `VAL` | 8 | $84.02 | $2.03 | $-143.09 | $5,954.13 | ▼ -143.09 after sell → book $7,163.81; vs 09:30 mark -2.03 | dropped from list after 3 sess (min 3) | — |
 | 2026-11-05 09:30 ET | **BUY** | `MVST` | 8758 | $0.67 | $84.95 | — | $1.32 | — | combo gate; gate last_green=True,ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list ohlc_hot; ret5=+7.2; leftover $5954.13 | join🟢 sector🔴 gen🔴 news🟢 digest🟢 ab🔴 peer🔴 heat🔴 vol🔴 buy🟡 |
 | 2026-11-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1.32 | ▼ close $6,180.53 vs 09:30 $7,178.70 (session -898.33) | 16:00 close · cash $1.32 · equity $6,180.53 vs 09:30 $7,178.70 (-998.17; session marks -898.33) · 7 name(s) marked open→close (per-name table). CNMD×4 09:30 $54.40 → close $52.83 -6.28; CXW×8 09:30 $30.23 → close $28.23 -16.04; EPR×3 09:30 $61.10 → close $59.79 -3.93; RGEN×1 09:30 $175.60 → close $168.48 -7.12; SMMT×14 09:30 $16.10 → close $14.19 -26.74; TRU×2 09:30 $82.95 → close $82.91 -0.08; MVST×8758 09:30 $0.67 → close $0.57 -838.14 | — |
+| 2026-11-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $1.32 | ▲ 09:30 equity $6,397.47 vs yday $6,180.53 (+216.94) | 09:30 open · cash $1.32 (unchanged overnight, no fees) · equity $6,397.47 vs prior close $6,180.53 (+216.94) · 7 name(s) re-marked at the open (per-name table). CNMD×4 yday $52.83 → 09:30 $51.11 -6.88; CXW×8 yday $28.23 → 09:30 $28.02 -1.68; EPR×3 yday $59.79 → 09:30 $59.10 -2.07; MVST×8758 yday $0.57 → 09:30 $0.60 +225.08; RGEN×1 yday $168.48 → 09:30 $169.35 +0.87; SMMT×14 yday $14.19 → 09:30 $14.79 +8.40; TRU×2 yday $82.91 → 09:30 $79.52 -6.78 | — |
+| 2026-11-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1.32 | ▲ close $6,688.46 vs 09:30 $6,397.47 (session +290.99) | 16:00 close · cash $1.32 · equity $6,688.46 vs 09:30 $6,397.47 (+290.99; session marks +290.99) · 7 name(s) marked open→close (per-name table). CNMD×4 09:30 $51.11 → close $51.50 +1.56; CXW×8 09:30 $28.02 → close $28.67 +5.20; EPR×3 09:30 $59.10 → close $59.51 +1.23; MVST×8758 09:30 $0.60 → close $0.63 +253.98; RGEN×1 09:30 $169.35 → close $173.49 +4.14; SMMT×14 09:30 $14.79 → close $16.33 +21.56; TRU×2 09:30 $79.52 → close $81.18 +3.32 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ coil_off, no 🚨
 
-Cash book **-36.66%** ($6,334) · signal-only (no cash/fees) was -24.98%. Starts YES **1/30**. Fills 372 · skips 306 · realized $-1766.84.
+Cash book **-34.36%** ($6,564) · signal-only (no cash/fees) was -24.98%. Starts YES **1/30**. Fills 377 · skips 306 · realized $-1766.84.
 
 ## How this sleeve decides (like you are 10)
 
@@ -567,6 +567,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-05 09:30 ET | **BUY** | `AMX` | 86 | $25.12 | $2.25 | — | $2,367.00 | — | union ∩ coil_off, no 🚨; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list yday_gainer; ret5=+4.6; leftover $2176.69 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-11-05 09:30 ET | **BUY** | `MVST` | 3248 | $0.67 | $31.51 | — | $159.33 | — | union ∩ coil_off, no 🚨; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list ohlc_hot; ret5=+7.2; leftover $2176.69 | join🟢 sector🔴 gen🔴 news🟢 digest🟢 ab🔴 peer🔴 heat🔴 vol🔴 buy🟡 |
 | 2026-11-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $159.33 | ▼ close $6,333.62 vs 09:30 $6,754.10 (session -368.06) | 16:00 close · cash $159.33 · equity $6,333.62 vs 09:30 $6,754.10 (-420.48; session marks -368.06) · 7 name(s) marked open→close (per-name table). CNMD×1 09:30 $54.40 → close $52.83 -1.57; CON×1 09:30 $43.57 → close $42.15 -1.42; EPR×1 09:30 $61.10 → close $59.79 -1.31; SMMT×3 09:30 $16.10 → close $14.19 -5.73; CRS×7 09:30 $285.50 → close $278.88 -46.34; AMX×86 09:30 $25.12 → close $25.11 -0.86; MVST×3248 09:30 $0.67 → close $0.57 -310.83 | — |
+| 2026-11-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $159.33 | ▲ 09:30 equity $6,415.65 vs yday $6,333.62 (+82.03) | 09:30 open · cash $159.33 (unchanged overnight, no fees) · equity $6,415.65 vs prior close $6,333.62 (+82.03) · 7 name(s) re-marked at the open (per-name table). AMX×86 yday $25.11 → 09:30 $24.90 -18.06; CNMD×1 yday $52.83 → 09:30 $51.11 -1.72; CON×1 yday $42.15 → 09:30 $41.60 -0.55; CRS×7 yday $278.88 → 09:30 $281.42 +17.78; EPR×1 yday $59.79 → 09:30 $59.10 -0.69; MVST×3248 yday $0.57 → 09:30 $0.60 +83.47; SMMT×3 yday $14.19 → 09:30 $14.79 +1.80 | — |
+| 2026-11-06 09:30 ET | **BUY** | `STIM` | 8 | $2.46 | $0.22 | — | $139.43 | — | union ∩ coil_off, no 🚨; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list probable,yday_gainer; 🔵; ret5=+2.1; leftover $19.92 | join🟡 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `OCGN` | 23 | $0.83 | $0.26 | — | $120.08 | — | union ∩ coil_off, no 🚨; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list probable,yday_gainer; 🔵; ret5=+9.7; leftover $19.92 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `GERN` | 20 | $0.95 | $0.25 | — | $100.83 | — | union ∩ coil_off, no 🚨; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list probable,yday_gainer; 🔵; ret5=+0.4; leftover $19.92 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `LDI` | 31 | $0.64 | $0.29 | — | $80.79 | — | union ∩ coil_off, no 🚨; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list probable; 🔵; ret5=+4.5; leftover $19.92 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `CERT` | 1 | $12.03 | $0.12 | — | $68.64 | — | union ∩ coil_off, no 🚨; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list ohlc_hot; ret5=+8.8; leftover $19.92 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🟡 heat🟢 vol🟡 buy🟡 |
+| 2026-11-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $68.64 | ▲ close $6,564.11 vs 09:30 $6,415.65 (session +149.60) | 16:00 close · cash $68.64 · equity $6,564.11 vs 09:30 $6,415.65 (+148.46; session marks +149.60) · 12 name(s) marked open→close (per-name table). AMX×86 09:30 $24.90 → close $25.72 +70.52; CNMD×1 09:30 $51.11 → close $51.50 +0.39; CON×1 09:30 $41.60 → close $42.22 +0.62; CRS×7 09:30 $281.42 → close $278.31 -21.77; EPR×1 09:30 $59.10 → close $59.51 +0.41; MVST×3248 09:30 $0.60 → close $0.63 +94.19; SMMT×3 09:30 $14.79 → close $16.33 +4.62; STIM×8 09:30 $2.46 → close $2.15 -2.48; OCGN×23 09:30 $0.83 → close $0.93 +2.19; GERN×20 09:30 $0.95 → close $0.99 +0.80; LDI×31 09:30 $0.64 → close $0.64 +0.09; CERT×1 09:30 $12.03 → close $12.05 +0.02 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ last_red, no 🚨
 
-Cash book **+53.83%** ($15,383) · signal-only (no cash/fees) was +1.25%. Starts YES **0/30**. Fills 505 · skips 105 · realized $-1315.32.
+Cash book **+55.51%** ($15,551) · signal-only (no cash/fees) was +1.25%. Starts YES **0/30**. Fills 518 · skips 105 · realized $-1315.32.
 
 ## How this sleeve decides (like you are 10)
 
@@ -697,6 +697,21 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-05 09:30 ET | **BUY** | `AMX` | 128 | $25.12 | $2.37 | — | $3,432.26 | — | union ∩ last_red, no 🚨; gate last_red=True; list yday_gainer; ret5=+4.6; leftover $3219.38 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-11-05 09:30 ET | **BUY** | `CECO` | 71 | $45.00 | $2.20 | — | $235.06 | — | union ∩ last_red, no 🚨; gate last_red=True; list yday_mover; ret5=-17.2; leftover $3219.38 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🔴 peer🔴 heat🟡 vol🔴 buy🟡 |
 | 2026-11-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $235.06 | ▼ close $15,382.88 vs 09:30 $16,150.32 (session -702.94) | 16:00 close · cash $235.06 · equity $15,382.88 vs 09:30 $16,150.32 (-767.44; session marks -702.94) · 5 name(s) marked open→close (per-name table). PRMB×149 09:30 $21.55 → close $22.15 +89.40; CRS×11 09:30 $285.50 → close $278.88 -72.82; DY×15 09:30 $205.93 → close $192.79 -197.10; AMX×128 09:30 $25.12 → close $25.11 -1.28; CECO×71 09:30 $45.00 → close $37.66 -521.14 | — |
+| 2026-11-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $235.06 | ▲ 09:30 equity $15,608.21 vs yday $15,382.88 (+225.33) | 09:30 open · cash $235.06 (unchanged overnight, no fees) · equity $15,608.21 vs prior close $15,382.88 (+225.33) · 5 name(s) re-marked at the open (per-name table). AMX×128 yday $25.11 → 09:30 $24.90 -26.88; CECO×71 yday $37.66 → 09:30 $39.52 +132.06; CRS×11 yday $278.88 → 09:30 $281.42 +27.94; DY×15 yday $192.79 → 09:30 $203.01 +153.30; PRMB×149 yday $22.15 → 09:30 $21.74 -61.09 | — |
+| 2026-11-06 09:30 ET | **SELL** | `AMX` | 128 | $24.90 | $2.42 | $-32.95 | $3,419.84 | ▼ -32.95 after sell → book $15,605.79; vs 09:30 mark -2.42 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-06 09:30 ET | **SELL** | `CECO` | 71 | $39.52 | $2.24 | $-393.52 | $6,223.52 | ▼ -393.52 after sell → book $15,603.55; vs 09:30 mark -2.24 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-06 09:30 ET | **SELL** | `CRS` | 11 | $281.42 | $2.06 | $-48.96 | $9,317.08 | ▼ -48.96 after sell → book $15,601.49; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-06 09:30 ET | **SELL** | `DY` | 15 | $203.01 | $2.07 | $-47.90 | $12,360.16 | ▼ -47.90 after sell → book $15,599.42; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-06 09:30 ET | **SELL** | `PRMB` | 149 | $21.74 | $2.49 | $+23.39 | $15,596.94 | ▲ +23.39 after sell → book $15,596.94; vs 09:30 mark -2.48 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `CSGP` | 63 | $30.80 | $2.18 | — | $13,654.36 | — | union ∩ last_red, no 🚨; gate last_red=True; list flatten; 🔵; ret5=+13.9; leftover $1949.62 | join🟢 sector🟡 gen🔴 news🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟢 |
+| 2026-11-06 09:30 ET | **BUY** | `TMUS` | 12 | $155.61 | $2.03 | — | $11,785.01 | — | union ∩ last_red, no 🚨; gate last_red=True; list flatten; 🔵; ret5=+9.0; leftover $1949.62 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `CPRI` | 93 | $20.93 | $2.27 | — | $9,836.25 | — | union ∩ last_red, no 🚨; gate last_red=True; list flatten; 🔵; ret5=+31.6; leftover $1949.62 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `GPK` | 172 | $11.30 | $2.51 | — | $7,890.15 | — | union ∩ last_red, no 🚨; gate last_red=True; list flatten; 🔵; ret5=+31.0; leftover $1949.62 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-06 09:30 ET | **BUY** | `XMAX` | 384 | $5.07 | $4.95 | — | $5,938.31 | — | union ∩ last_red, no 🚨; gate last_red=True; list probable,yday_gainer,yday_mover; 🔵; ret5=-38.2; leftover $1949.62 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `STIM` | 792 | $2.46 | $10.22 | — | $3,979.78 | — | union ∩ last_red, no 🚨; gate last_red=True; list probable,yday_gainer; 🔵; ret5=+2.1; leftover $1949.62 | join🟡 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `VNET` | 594 | $3.28 | $7.66 | — | $2,023.79 | — | union ∩ last_red, no 🚨; gate last_red=True; list probable,yday_gainer; ret5=-6.5; leftover $1949.62 | join🔴 sector🟡 gen🔴 news🟡 digest🔴 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `OCGN` | 2348 | $0.83 | $26.53 | — | $48.42 | — | union ∩ last_red, no 🚨; gate last_red=True; list probable,yday_gainer; 🔵; ret5=+9.7; leftover $1949.62 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $48.42 | ▲ close $15,550.55 vs 09:30 $15,608.21 (session +11.96) | 16:00 close · cash $48.42 · equity $15,550.55 vs 09:30 $15,608.21 (-57.66; session marks +11.96) · 8 name(s) marked open→close (per-name table). CSGP×63 09:30 $30.80 → close $30.55 -15.75; TMUS×12 09:30 $155.61 → close $162.01 +76.80; CPRI×93 09:30 $20.93 → close $20.54 -36.27; GPK×172 09:30 $11.30 → close $11.19 -18.92; XMAX×384 09:30 $5.07 → close $5.33 +99.84; STIM×792 09:30 $2.46 → close $2.15 -245.52; VNET×594 09:30 $3.28 → close $3.16 -71.28; OCGN×2348 09:30 $0.83 → close $0.93 +223.06 | — |
 
 ## Not taken
 

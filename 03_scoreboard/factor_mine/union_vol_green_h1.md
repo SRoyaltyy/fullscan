@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-14.28%** ($8,572) · signal-only (no cash/fees) was -4.91%. Starts YES **5/30**. Fills 368 · skips 78 · realized $-2.02.
+Cash book **-12.53%** ($8,747) · signal-only (no cash/fees) was -4.91%. Starts YES **5/30**. Fills 376 · skips 78 · realized $-2.02.
 
 ## How this sleeve decides (like you are 10)
 
@@ -562,6 +562,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-05 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $0.92 | ▼ 09:30 equity $8,594.42 vs yday $9,032.52 (-438.10) | 09:30 open · cash $0.92 (unchanged overnight, no fees) · equity $8,594.42 vs prior close $9,032.52 (-438.10) · 1 name(s) re-marked at the open (per-name table). EGG×1685 yday $5.36 → 09:30 $5.10 -438.10 | — |
 | 2026-11-05 09:30 ET | **SELL** | `EGG` | 1685 | $5.10 | $22.09 | $+124.68 | $8,572.34 | ▲ +124.68 after sell → book $8,572.34; vs 09:30 mark -22.08 | dropped from list after 1 sess (min 1) | join🔴 sector🔴 gen🔴 news🟡 digest🟢 ab🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-11-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,572.34 | ▲ close $8,572.34 vs 09:30 $8,594.42 (session +0.00) | 16:00 close · cash $8,572.34 · no lots left · equity $8,572.34. | — |
+| 2026-11-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,572.34 | ▲ 09:30 equity $8,572.34 vs yday $8,572.34 (+0.00) | 09:30 open · cash $8,572.34 · no holdings · equity $8,572.34 vs prior close $8,572.34 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-06 09:30 ET | **BUY** | `APP` | 3 | $355.95 | $2.00 | — | $7,502.49 | — | combo gate; gate last_green=True,vol=good; list flatten; 🔵; ret5=+39.7; leftover $1071.54 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `CRCT` | 119 | $9.00 | $2.35 | — | $6,429.14 | — | combo gate; gate last_green=True,vol=good; list yday_gainer,yday_mover; ret5=+49.7; leftover $1071.54 | join🔴 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `SRTA` | 204 | $5.23 | $2.63 | — | $5,359.59 | — | combo gate; gate last_green=True,vol=good; list yday_gainer; ret5=+10.7; leftover $1071.54 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `MOS` | 48 | $22.00 | $2.13 | — | $4,301.46 | — | combo gate; gate last_green=True,vol=good; list yday_gainer; 🔵; ret5=+22.5; leftover $1071.54 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟡 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `ENOV` | 39 | $27.24 | $2.11 | — | $3,236.99 | — | combo gate; gate last_green=True,vol=good; list yday_gainer; 🔵; ret5=+25.5; leftover $1071.54 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟡 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `AHCO` | 147 | $7.27 | $2.43 | — | $2,165.87 | — | combo gate; gate last_green=True,vol=good; list yday_gainer; 🔵; ret5=+25.0; leftover $1071.54 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `WD` | 27 | $39.02 | $2.07 | — | $1,110.26 | — | combo gate; gate last_green=True,vol=good; list ohlc_hot; 🔵; ret5=+14.8; leftover $1071.54 | join🟡 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `JBTM` | 8 | $125.60 | $2.01 | — | $103.45 | — | combo gate; gate last_green=True,vol=good; list ohlc_hot; 🔵; ret5=+14.8; leftover $1071.54 | join🟡 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $103.45 | ▲ close $8,747.35 vs 09:30 $8,572.34 (session +192.74) | 16:00 close · cash $103.45 · equity $8,747.35 vs 09:30 $8,572.34 (+175.01; session marks +192.74) · 8 name(s) marked open→close (per-name table). APP×3 09:30 $355.95 → close $391.22 +105.81; CRCT×119 09:30 $9.00 → close $8.78 -26.18; SRTA×204 09:30 $5.23 → close $5.56 +67.32; MOS×48 09:30 $22.00 → close $22.36 +17.28; ENOV×39 09:30 $27.24 → close $27.16 -3.12; AHCO×147 09:30 $7.27 → close $7.33 +8.82; WD×27 09:30 $39.02 → close $39.05 +0.81; JBTM×8 09:30 $125.60 → close $128.35 +22.00 | — |
 
 ## Not taken
 

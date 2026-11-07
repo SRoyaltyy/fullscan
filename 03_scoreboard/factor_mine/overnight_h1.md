@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `overnight` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · baseline list, no extra gate
 
-Cash book **-24.35%** ($7,565) · signal-only (no cash/fees) was -22.61%. Starts YES **0/30**. Fills 162 · skips 80 · realized $-2514.32.
+Cash book **-23.38%** ($7,662) · signal-only (no cash/fees) was -22.61%. Starts YES **0/30**. Fills 163 · skips 80 · realized $-2514.32.
 
 ## How this sleeve decides (like you are 10)
 
@@ -350,6 +350,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-04 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,564.94 | ▲ close $7,564.94 vs 09:30 $7,564.94 (session +0.00) | 16:00 close · cash $7,564.94 · no lots left · equity $7,564.94. | — |
 | 2026-11-05 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,564.94 | ▲ 09:30 equity $7,564.94 vs yday $7,564.94 (+0.00) | 09:30 open · cash $7,564.94 · no holdings · equity $7,564.94 vs prior close $7,564.94 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-11-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,564.94 | ▲ close $7,564.94 vs 09:30 $7,564.94 (session +0.00) | 16:00 close · cash $7,564.94 · no lots left · equity $7,564.94. | — |
+| 2026-11-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,564.94 | ▲ 09:30 equity $7,564.94 vs yday $7,564.94 (+0.00) | 09:30 open · cash $7,564.94 · no holdings · equity $7,564.94 vs prior close $7,564.94 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-06 09:30 ET | **BUY** | `HE` | 910 | $8.30 | $11.74 | — | $0.20 | — | baseline list, no extra gate; list overnight; 🔵; ret5=-1.3; leftover $7564.94 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-11-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $0.20 | ▲ close $7,662.40 vs 09:30 $7,564.94 (session +109.20) | 16:00 close · cash $0.20 · equity $7,662.40 vs 09:30 $7,564.94 (+97.46; session marks +109.20) · 1 name(s) marked open→close (per-name table). HE×910 09:30 $8.30 → close $8.42 +109.20 | — |
 
 ## Not taken
 

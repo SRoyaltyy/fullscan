@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · packet🟢 and camera net ≥ 2
 
-Cash book **+3.22%** ($10,322) · signal-only (no cash/fees) was +7.99%. Starts YES **21/30**. Fills 112 · skips 28 · realized $+1837.87.
+Cash book **+6.32%** ($10,632) · signal-only (no cash/fees) was +7.99%. Starts YES **21/30**. Fills 117 · skips 28 · realized $+1837.87.
 
 ## How this sleeve decides (like you are 10)
 
@@ -306,6 +306,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-05 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $2.72 | ▲ 09:30 equity $10,327.04 vs yday $10,290.05 (+36.99) | 09:30 open · cash $2.72 (unchanged overnight, no fees) · equity $10,327.04 vs prior close $10,290.05 (+36.99) · 1 name(s) re-marked at the open (per-name table). AMX×411 yday $25.03 → 09:30 $25.12 +36.99 | — |
 | 2026-11-05 09:30 ET | **SELL** | `AMX` | 411 | $25.12 | $5.45 | $-88.84 | $10,321.59 | ▼ -88.84 after sell → book $10,321.59; vs 09:30 mark -5.45 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-11-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,321.59 | ▲ close $10,321.59 vs 09:30 $10,327.04 (session +0.00) | 16:00 close · cash $10,321.59 · no lots left · equity $10,321.59. | — |
+| 2026-11-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,321.59 | ▲ 09:30 equity $10,321.59 vs yday $10,321.59 (+0.00) | 09:30 open · cash $10,321.59 · no holdings · equity $10,321.59 vs prior close $10,321.59 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-06 09:30 ET | **BUY** | `APP` | 5 | $355.95 | $2.00 | — | $8,539.83 | — | packet🟢 and camera net ≥ 2; gate cam_net_min=2,news_box=good; rank cond; list flatten; 🔵; ret5=+39.7; leftover $2064.32 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `MNST` | 46 | $44.04 | $2.13 | — | $6,511.87 | — | packet🟢 and camera net ≥ 2; gate cam_net_min=2,news_box=good; rank cond; list earn_react; 🔵; ret5=+3.2; leftover $2064.32 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `ABNB` | 10 | $191.15 | $2.02 | — | $4,598.40 | — | packet🟢 and camera net ≥ 2; gate cam_net_min=2,news_box=good; rank cond; list earn_react; 🔵; ret5=+2.2; leftover $2064.32 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `SPG` | 9 | $222.28 | $2.02 | — | $2,595.86 | — | packet🟢 and camera net ≥ 2; gate cam_net_min=2,news_box=good; rank cond; list earn_react; 🔵; ret5=+5.0; leftover $2064.32 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `EOG` | 14 | $145.47 | $2.03 | — | $557.25 | — | packet🟢 and camera net ≥ 2; gate cam_net_min=2,news_box=good; rank cond; list earn_react; 🔵; ret5=-10.7; leftover $2064.32 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $557.25 | ▲ close $10,631.97 vs 09:30 $10,321.59 (session +320.58) | 16:00 close · cash $557.25 · equity $10,631.97 vs 09:30 $10,321.59 (+310.38; session marks +320.58) · 5 name(s) marked open→close (per-name table). APP×5 09:30 $355.95 → close $391.22 +176.35; MNST×46 09:30 $44.04 → close $45.72 +77.28; ABNB×10 09:30 $191.15 → close $189.99 -11.55; SPG×9 09:30 $222.28 → close $228.42 +55.26; EOG×14 09:30 $145.47 → close $147.13 +23.24 | — |
 
 ## Not taken
 

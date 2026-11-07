@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ rsi_os, no 🚨
 
-Cash book **-37.08%** ($6,292) · signal-only (no cash/fees) was -42.97%. Starts YES **6/30**. Fills 159 · skips 88 · realized $-2389.72.
+Cash book **-39.01%** ($6,099) · signal-only (no cash/fees) was -42.97%. Starts YES **6/30**. Fills 159 · skips 88 · realized $-2389.72.
 
 ## How this sleeve decides (like you are 10)
 
@@ -351,6 +351,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-05 09:30 ET | **BUY** | `FLO` | 240 | $7.17 | $3.10 | — | $1,740.14 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list ohlc_hot; ret5=+15.6; leftover $1724.34 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟡 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-11-05 09:30 ET | **BUY** | `STUB` | 262 | $6.56 | $3.38 | — | $18.04 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list ohlc_hot; ret5=+17.7; leftover $1724.34 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟡 heat🟢 vol🔴 buy🟡 |
 | 2026-11-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $18.04 | ▼ close $6,291.72 vs 09:30 $6,419.43 (session -112.54) | 16:00 close · cash $18.04 · equity $6,291.72 vs 09:30 $6,419.43 (-127.71; session marks -112.54) · 7 name(s) marked open→close (per-name table). HRB×5 09:30 $55.85 → close $55.01 -4.20; JMKE×15 09:30 $20.66 → close $19.81 -12.75; QNST×17 09:30 $20.03 → close $20.32 +4.93; ROL×8 09:30 $38.78 → close $38.76 -0.16; CMCSA×68 09:30 $25.10 → close $24.95 -10.20; FLO×240 09:30 $7.17 → close $7.10 -16.80; STUB×262 09:30 $6.56 → close $6.28 -73.36 | — |
+| 2026-11-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $18.04 | ▼ 09:30 equity $6,135.22 vs yday $6,291.72 (-156.50) | 09:30 open · cash $18.04 (unchanged overnight, no fees) · equity $6,135.22 vs prior close $6,291.72 (-156.50) · 7 name(s) re-marked at the open (per-name table). CMCSA×68 yday $24.95 → 09:30 $24.21 -50.32; FLO×240 yday $7.10 → 09:30 $6.90 -48.00; HRB×5 yday $55.01 → 09:30 $53.56 -7.25; JMKE×15 yday $19.81 → 09:30 $19.56 -3.75; QNST×17 yday $20.32 → 09:30 $19.74 -9.86; ROL×8 yday $38.76 → 09:30 $37.37 -11.12; STUB×262 yday $6.28 → 09:30 $6.18 -26.20 | — |
+| 2026-11-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $18.04 | ▼ close $6,099.06 vs 09:30 $6,135.22 (session -36.16) | 16:00 close · cash $18.04 · equity $6,099.06 vs 09:30 $6,135.22 (-36.16; session marks -36.16) · 7 name(s) marked open→close (per-name table). CMCSA×68 09:30 $24.21 → close $24.39 +12.24; FLO×240 09:30 $6.90 → close $6.71 -45.60; HRB×5 09:30 $53.56 → close $52.69 -4.35; JMKE×15 09:30 $19.56 → close $19.01 -8.25; QNST×17 09:30 $19.74 → close $20.66 +15.64; ROL×8 09:30 $37.37 → close $37.95 +4.64; STUB×262 09:30 $6.18 → close $6.14 -10.48 | — |
 
 ## Not taken
 

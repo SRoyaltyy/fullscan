@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · Clock-B #6 stock holds while sector camera is red
 
-Cash book **-15.95%** ($8,405) · signal-only (no cash/fees) was -2.27%. Starts YES **25/30**. Fills 391 · skips 96 · realized $+387.41.
+Cash book **-17.07%** ($8,293) · signal-only (no cash/fees) was -2.27%. Starts YES **25/30**. Fills 399 · skips 96 · realized $+387.41.
 
 ## How this sleeve decides (like you are 10)
 
@@ -585,6 +585,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-05 09:30 ET | **BUY** | `PHM` | 7 | $138.00 | $2.01 | — | $1,669.96 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list ohlc_hot; ret5=+13.6; leftover $1078.70 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-11-05 09:30 ET | **BUY** | `VSXY` | 9 | $108.51 | $2.02 | — | $691.36 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list ohlc_hot; ret5=+14.2; leftover $1078.70 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-11-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $691.36 | ▼ close $8,405.36 vs 09:30 $8,649.70 (session -207.55) | 16:00 close · cash $691.36 · equity $8,405.36 vs 09:30 $8,649.70 (-244.34; session marks -207.55) · 8 name(s) marked open→close (per-name table). ARHS×84 09:30 $12.79 → close $12.94 +12.60; GPK×91 09:30 $11.82 → close $11.54 -25.48; CROX×6 09:30 $160.00 → close $152.93 -42.42; EXPE×3 09:30 $287.31 → close $272.48 -44.50; LOW×4 09:30 $233.51 → close $227.24 -25.08; NCLH×58 09:30 $18.50 → close $17.76 -42.92; PHM×7 09:30 $138.00 → close $135.15 -19.95; VSXY×9 09:30 $108.51 → close $106.31 -19.80 | — |
+| 2026-11-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $691.36 | ▼ 09:30 equity $8,309.55 vs yday $8,405.36 (-95.81) | 09:30 open · cash $691.36 (unchanged overnight, no fees) · equity $8,309.55 vs prior close $8,405.36 (-95.81) · 8 name(s) re-marked at the open (per-name table). ARHS×84 yday $12.94 → 09:30 $13.00 +5.04; CROX×6 yday $152.93 → 09:30 $150.37 -15.36; EXPE×3 yday $272.48 → 09:30 $272.19 -0.87; GPK×91 yday $11.54 → 09:30 $11.30 -21.84; LOW×4 yday $227.24 → 09:30 $220.34 -27.60; NCLH×58 yday $17.76 → 09:30 $17.56 -11.60; PHM×7 yday $135.15 → 09:30 $132.18 -20.79; VSXY×9 yday $106.31 → 09:30 $106.00 -2.79 | — |
+| 2026-11-06 09:30 ET | **SELL** | `ARHS` | 84 | $13.00 | $2.27 | $+13.13 | $1,781.09 | ▲ +13.13 after sell → book $8,307.28; vs 09:30 mark -2.27 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-06 09:30 ET | **SELL** | `CROX` | 6 | $150.37 | $2.03 | $-61.82 | $2,681.29 | ▼ -61.82 after sell → book $8,305.26; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-06 09:30 ET | **SELL** | `EXPE` | 3 | $272.19 | $2.02 | $-49.39 | $3,495.84 | ▼ -49.39 after sell → book $8,303.24; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-06 09:30 ET | **SELL** | `GPK` | 91 | $11.30 | $2.29 | $-51.87 | $4,521.85 | ▼ -51.87 after sell → book $8,300.95; vs 09:30 mark -2.29 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-06 09:30 ET | **SELL** | `LOW` | 4 | $220.34 | $2.02 | $-56.70 | $5,401.19 | ▼ -56.70 after sell → book $8,298.93; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-06 09:30 ET | **SELL** | `NCLH` | 58 | $17.56 | $2.18 | $-58.87 | $6,417.48 | ▼ -58.87 after sell → book $8,296.74; vs 09:30 mark -2.19 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-06 09:30 ET | **SELL** | `PHM` | 7 | $132.18 | $2.03 | $-44.78 | $7,340.71 | ▼ -44.78 after sell → book $8,294.71; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-06 09:30 ET | **SELL** | `VSXY` | 9 | $106.00 | $2.04 | $-26.64 | $8,292.68 | ▼ -26.64 after sell → book $8,292.68; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,292.68 | ▲ close $8,292.68 vs 09:30 $8,309.55 (session +0.00) | 16:00 close · cash $8,292.68 · no lots left · equity $8,292.68. | — |
 
 ## Not taken
 

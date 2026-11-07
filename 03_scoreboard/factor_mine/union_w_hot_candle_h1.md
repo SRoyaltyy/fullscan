@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `w_hot_candle` · size `leftover` · sell `list` · S-boost `none` · rank by w_hot_candle
 
-Cash book **+17.03%** ($11,703) · signal-only (no cash/fees) was +36.45%. Starts YES **29/30**. Fills 509 · skips 97 · realized $+14.68.
+Cash book **+19.77%** ($11,977) · signal-only (no cash/fees) was +36.45%. Starts YES **29/30**. Fills 523 · skips 97 · realized $+14.68.
 
 ## How this sleeve decides (like you are 10)
 
@@ -700,6 +700,22 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-05 09:30 ET | **BUY** | `DNUT` | 410 | $3.58 | $5.29 | — | $1,487.33 | — | rank by w_hot_candle; rank w_hot_candle; list ohlc_hot; ret5=+15.4; leftover $1466.23 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-11-05 09:30 ET | **BUY** | `MOS` | 68 | $21.55 | $2.19 | — | $20.07 | — | rank by w_hot_candle; rank w_hot_candle; list ohlc_hot; ret5=+17.9; leftover $1466.23 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🔴 heat🔴 vol🔴 buy🟡 |
 | 2026-11-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $20.07 | ▼ close $11,703.12 vs 09:30 $11,991.21 (session -250.44) | 16:00 close · cash $20.07 · equity $11,703.12 vs 09:30 $11,991.21 (-288.09; session marks -250.44) · 8 name(s) marked open→close (per-name table). JLHL×214 09:30 $8.00 → close $6.62 -295.32; GPK×124 09:30 $11.82 → close $11.54 -34.72; CROX×9 09:30 $160.00 → close $152.93 -63.63; FLO×204 09:30 $7.17 → close $7.10 -14.28; AMC×404 09:30 $3.62 → close $3.08 -220.18; QXO×117 09:30 $12.46 → close $11.64 -95.94; DNUT×410 09:30 $3.58 → close $4.60 +420.25; MOS×68 09:30 $21.55 → close $22.33 +53.38 | — |
+| 2026-11-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $20.07 | ▼ 09:30 equity $11,465.81 vs yday $11,703.12 (-237.31) | 09:30 open · cash $20.07 (unchanged overnight, no fees) · equity $11,465.81 vs prior close $11,703.12 (-237.31) · 8 name(s) re-marked at the open (per-name table). AMC×404 yday $3.08 → 09:30 $3.13 +20.20; CROX×9 yday $152.93 → 09:30 $150.37 -23.04; DNUT×410 yday $4.60 → 09:30 $4.44 -65.60; FLO×204 yday $7.10 → 09:30 $6.90 -40.80; GPK×124 yday $11.54 → 09:30 $11.30 -29.76; JLHL×214 yday $6.62 → 09:30 $6.26 -77.04; MOS×68 yday $22.33 → 09:30 $22.00 -22.44; QXO×117 yday $11.64 → 09:30 $11.65 +1.17 | — |
+| 2026-11-06 09:30 ET | **SELL** | `AMC` | 404 | $3.13 | $5.29 | $-210.48 | $1,279.30 | ▼ -210.48 after sell → book $11,460.52; vs 09:30 mark -5.29 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-06 09:30 ET | **SELL** | `CROX` | 9 | $150.37 | $2.04 | $-90.72 | $2,630.59 | ▼ -90.72 after sell → book $11,458.48; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-06 09:30 ET | **SELL** | `DNUT` | 410 | $4.44 | $5.37 | $+343.99 | $4,445.62 | ▲ +343.99 after sell → book $11,453.11; vs 09:30 mark -5.37 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-06 09:30 ET | **SELL** | `FLO` | 204 | $6.90 | $2.68 | $-60.39 | $5,850.55 | ▼ -60.39 after sell → book $11,450.44; vs 09:30 mark -2.67 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-06 09:30 ET | **SELL** | `GPK` | 124 | $11.30 | $2.39 | $-69.24 | $7,249.35 | ▼ -69.24 after sell → book $11,448.04; vs 09:30 mark -2.40 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-06 09:30 ET | **SELL** | `JLHL` | 214 | $6.26 | $2.81 | $-114.71 | $8,586.18 | ▼ -114.71 after sell → book $11,445.23; vs 09:30 mark -2.81 | dropped from list after 2 sess (min 1) | — |
+| 2026-11-06 09:30 ET | **SELL** | `QXO` | 117 | $11.65 | $2.37 | $-99.48 | $9,946.86 | ▼ -99.48 after sell → book $11,442.86; vs 09:30 mark -2.37 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-06 09:30 ET | **BUY** | `BUUU` | 266 | $5.33 | $3.43 | — | $8,525.65 | — | rank by w_hot_candle; rank w_hot_candle; list ohlc_hot; 🔵; ret5=-9.4; leftover $1420.98 | join🟡 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `CRCT` | 157 | $9.00 | $2.46 | — | $7,110.19 | — | rank by w_hot_candle; rank w_hot_candle; list yday_gainer,yday_mover; ret5=+49.7; leftover $1420.98 | join🔴 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `EVC` | 204 | $6.94 | $2.63 | — | $5,691.80 | — | rank by w_hot_candle; rank w_hot_candle; list earn_react; 🔵; ret5=+19.6; leftover $1420.98 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `APP` | 3 | $355.95 | $2.00 | — | $4,621.95 | — | rank by w_hot_candle; rank w_hot_candle; list flatten; 🔵; ret5=+39.7; leftover $1420.98 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `ENOV` | 52 | $27.24 | $2.15 | — | $3,203.32 | — | rank by w_hot_candle; rank w_hot_candle; list yday_gainer; 🔵; ret5=+25.5; leftover $1420.98 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟡 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `GPGI` | 105 | $13.52 | $2.31 | — | $1,781.42 | — | rank by w_hot_candle; rank w_hot_candle; list ohlc_hot; 🔵; ret5=+17.4; leftover $1420.98 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-06 09:30 ET | **BUY** | `CMG` | 40 | $34.75 | $2.11 | — | $389.31 | — | rank by w_hot_candle; rank w_hot_candle; list ohlc_hot; 🔵; ret5=+13.2; leftover $1420.98 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $389.31 | ▲ close $11,976.60 vs 09:30 $11,465.81 (session +550.82) | 16:00 close · cash $389.31 · equity $11,976.60 vs 09:30 $11,465.81 (+510.79; session marks +550.82) · 8 name(s) marked open→close (per-name table). MOS×68 09:30 $22.00 → close $22.36 +24.48; BUUU×266 09:30 $5.33 → close $5.26 -18.62; CRCT×157 09:30 $9.00 → close $8.78 -34.54; EVC×204 09:30 $6.94 → close $8.99 +418.20; APP×3 09:30 $355.95 → close $391.22 +105.81; ENOV×52 09:30 $27.24 → close $27.16 -4.16; GPGI×105 09:30 $13.52 → close $14.21 +72.45; CMG×40 09:30 $34.75 → close $34.43 -12.80 | — |
 
 ## Not taken
 
