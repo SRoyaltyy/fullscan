@@ -1,5 +1,221 @@
 [
   {
+    "title": "DCPD-202600671 - Remarks at a Campaign Rally for Alabama Republican Candidates in Mobile, Alabama",
+    "url": "https://www.govinfo.gov/app/details/DCPD-202600671",
+    "native_id": "DCPD-202600671",
+    "published_at": "2026-11-06T21:37:00+00:00",
+    "published_raw": "Fri, 06 Nov 2026 21:37:00 +0000",
+    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "presidential_document",
+      "document_stage": "presidential_document_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Compilation of Presidential Documents",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-dcpd",
+    "n": 8888,
+    "first_seen": "2026-11-06T07:57:02.134140+00:00",
+    "last_seen": "2026-11-07T07:13:47.398646+00:00",
+    "source_ids": [
+      "us-govinfo-dcpd"
+    ]
+  },
+  {
+    "title": "DCPD-202600677 - Executive Order 14435-Emergency Tax Relief on Diesel Fuel",
+    "url": "https://www.govinfo.gov/app/details/DCPD-202600677",
+    "native_id": "DCPD-202600677",
+    "published_at": "2026-11-06T21:34:00+00:00",
+    "published_raw": "Fri, 06 Nov 2026 21:34:00 +0000",
+    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "presidential_document",
+      "document_stage": "presidential_document_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Compilation of Presidential Documents",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-dcpd",
+    "n": 9132,
+    "first_seen": "2026-11-07T07:13:47.398646+00:00",
+    "last_seen": "2026-11-07T07:13:47.398646+00:00",
+    "source_ids": [
+      "us-govinfo-dcpd"
+    ]
+  },
+  {
+    "title": "DCPD-202600674 - Remarks and an Exchange With Reporters Prior to Departure for Grand Island, Nebraska",
+    "url": "https://www.govinfo.gov/app/details/DCPD-202600674",
+    "native_id": "DCPD-202600674",
+    "published_at": "2026-11-06T21:34:00+00:00",
+    "published_raw": "Fri, 06 Nov 2026 21:34:00 +0000",
+    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "presidential_document",
+      "document_stage": "presidential_document_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Compilation of Presidential Documents",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-dcpd",
+    "n": 9131,
+    "first_seen": "2026-11-07T07:13:47.398646+00:00",
+    "last_seen": "2026-11-07T07:13:47.398646+00:00",
+    "source_ids": [
+      "us-govinfo-dcpd"
+    ]
+  },
+  {
+    "title": "DCPD-202600676 - Message on Fire Prevention Week",
+    "url": "https://www.govinfo.gov/app/details/DCPD-202600676",
+    "native_id": "DCPD-202600676",
+    "published_at": "2026-11-06T21:34:00+00:00",
+    "published_raw": "Fri, 06 Nov 2026 21:34:00 +0000",
+    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "presidential_document",
+      "document_stage": "presidential_document_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Compilation of Presidential Documents",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-dcpd",
+    "n": 9130,
+    "first_seen": "2026-11-07T07:13:47.398646+00:00",
+    "last_seen": "2026-11-07T07:13:47.398646+00:00",
+    "source_ids": [
+      "us-govinfo-dcpd"
+    ]
+  },
+  {
+    "title": "DCPD-202600392 - Remarks on Signing a Proclamation To Restore United States Commercial Fishing in the Pacific and an Exchange With Reporters",
+    "url": "https://www.govinfo.gov/app/details/DCPD-202600392",
+    "native_id": "DCPD-202600392",
+    "published_at": "2026-11-06T21:34:00+00:00",
+    "published_raw": "Fri, 06 Nov 2026 21:34:00 +0000",
+    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "presidential_document",
+      "document_stage": "presidential_document_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Compilation of Presidential Documents",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-dcpd",
+    "n": 9129,
+    "first_seen": "2026-11-07T07:13:47.398646+00:00",
+    "last_seen": "2026-11-07T07:13:47.398646+00:00",
+    "source_ids": [
+      "us-govinfo-dcpd"
+    ]
+  },
+  {
+    "title": "DCPD-202600673 - Remarks at a Campaign Rally for Ohio Republican Candidates in Vandalia, Ohio",
+    "url": "https://www.govinfo.gov/app/details/DCPD-202600673",
+    "native_id": "DCPD-202600673",
+    "published_at": "2026-11-06T21:34:00+00:00",
+    "published_raw": "Fri, 06 Nov 2026 21:34:00 +0000",
+    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "presidential_document",
+      "document_stage": "presidential_document_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Compilation of Presidential Documents",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-dcpd",
+    "n": 8889,
+    "first_seen": "2026-11-06T07:57:02.134140+00:00",
+    "last_seen": "2026-11-07T07:13:47.398646+00:00",
+    "source_ids": [
+      "us-govinfo-dcpd"
+    ]
+  },
+  {
+    "title": "DCPD-202600679 - Remarks and an Exchange With Reporters Prior to Departure for Sparrows Point, Maryland",
+    "url": "https://www.govinfo.gov/app/details/DCPD-202600679",
+    "native_id": "DCPD-202600679",
+    "published_at": "2026-11-06T21:32:00+00:00",
+    "published_raw": "Fri, 06 Nov 2026 21:32:00 +0000",
+    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "presidential_document",
+      "document_stage": "presidential_document_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Compilation of Presidential Documents",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-dcpd",
+    "n": 9128,
+    "first_seen": "2026-11-07T07:13:47.398646+00:00",
+    "last_seen": "2026-11-07T07:13:47.398646+00:00",
+    "source_ids": [
+      "us-govinfo-dcpd"
+    ]
+  },
+  {
+    "title": "DCPD-202600665 - Remarks in Durant, Oklahoma",
+    "url": "https://www.govinfo.gov/app/details/DCPD-202600665",
+    "native_id": "DCPD-202600665",
+    "published_at": "2026-11-06T21:32:00+00:00",
+    "published_raw": "Fri, 06 Nov 2026 21:32:00 +0000",
+    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "presidential_document",
+      "document_stage": "presidential_document_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Compilation of Presidential Documents",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-dcpd",
+    "n": 9127,
+    "first_seen": "2026-11-07T07:13:47.398646+00:00",
+    "last_seen": "2026-11-07T07:13:47.398646+00:00",
+    "source_ids": [
+      "us-govinfo-dcpd"
+    ]
+  },
+  {
+    "title": "DCPD-202600675 - Message on Child Health Day",
+    "url": "https://www.govinfo.gov/app/details/DCPD-202600675",
+    "native_id": "DCPD-202600675",
+    "published_at": "2026-11-06T21:32:00+00:00",
+    "published_raw": "Fri, 06 Nov 2026 21:32:00 +0000",
+    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "presidential_document",
+      "document_stage": "presidential_document_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Compilation of Presidential Documents",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-dcpd",
+    "n": 9126,
+    "first_seen": "2026-11-07T07:13:47.398646+00:00",
+    "last_seen": "2026-11-07T07:13:47.398646+00:00",
+    "source_ids": [
+      "us-govinfo-dcpd"
+    ]
+  },
+  {
     "title": "Medical devices given exceptional use authorisations",
     "url": "https://www.gov.uk/government/publications/medical-devices-given-exceptional-use-authorisations",
     "native_id": "/government/publications/medical-devices-given-exceptional-use-authorisations",
@@ -23,7 +239,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 6834,
     "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-11-06T19:58:09.481952+00:00",
+    "last_seen": "2026-11-07T07:13:47.398646+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -52,7 +268,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 9010,
     "first_seen": "2026-11-06T19:58:09.481952+00:00",
-    "last_seen": "2026-11-06T19:58:09.481952+00:00",
+    "last_seen": "2026-11-07T07:13:47.398646+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -81,7 +297,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 4,
     "first_seen": "2026-10-15T10:17:11.133023+00:00",
-    "last_seen": "2026-11-06T19:58:09.481952+00:00",
+    "last_seen": "2026-11-07T07:13:47.398646+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -110,7 +326,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 9011,
     "first_seen": "2026-11-06T19:58:09.481952+00:00",
-    "last_seen": "2026-11-06T19:58:09.481952+00:00",
+    "last_seen": "2026-11-07T07:13:47.398646+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -139,7 +355,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 9012,
     "first_seen": "2026-11-06T19:58:09.481952+00:00",
-    "last_seen": "2026-11-06T19:58:09.481952+00:00",
+    "last_seen": "2026-11-07T07:13:47.398646+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -170,7 +386,7 @@
     "primary_source_id": "us-federal-register",
     "n": 8995,
     "first_seen": "2026-11-06T19:58:09.481952+00:00",
-    "last_seen": "2026-11-06T19:58:09.481952+00:00",
+    "last_seen": "2026-11-07T07:13:47.398646+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -201,7 +417,7 @@
     "primary_source_id": "us-federal-register",
     "n": 8989,
     "first_seen": "2026-11-06T19:58:09.481952+00:00",
-    "last_seen": "2026-11-06T19:58:09.481952+00:00",
+    "last_seen": "2026-11-07T07:13:47.398646+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -231,7 +447,7 @@
     "primary_source_id": "us-federal-register",
     "n": 8981,
     "first_seen": "2026-11-06T19:58:09.481952+00:00",
-    "last_seen": "2026-11-06T19:58:09.481952+00:00",
+    "last_seen": "2026-11-07T07:13:47.398646+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -262,7 +478,7 @@
     "primary_source_id": "us-federal-register",
     "n": 8975,
     "first_seen": "2026-11-06T19:58:09.481952+00:00",
-    "last_seen": "2026-11-06T19:58:09.481952+00:00",
+    "last_seen": "2026-11-07T07:13:47.398646+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -293,7 +509,7 @@
     "primary_source_id": "us-federal-register",
     "n": 8973,
     "first_seen": "2026-11-06T19:58:09.481952+00:00",
-    "last_seen": "2026-11-06T19:58:09.481952+00:00",
+    "last_seen": "2026-11-07T07:13:47.398646+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -323,7 +539,7 @@
     "primary_source_id": "us-federal-register",
     "n": 8972,
     "first_seen": "2026-11-06T19:58:09.481952+00:00",
-    "last_seen": "2026-11-06T19:58:09.481952+00:00",
+    "last_seen": "2026-11-07T07:13:47.398646+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -354,7 +570,7 @@
     "primary_source_id": "us-federal-register",
     "n": 8970,
     "first_seen": "2026-11-06T19:58:09.481952+00:00",
-    "last_seen": "2026-11-06T19:58:09.481952+00:00",
+    "last_seen": "2026-11-07T07:13:47.398646+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -385,7 +601,7 @@
     "primary_source_id": "us-federal-register",
     "n": 8941,
     "first_seen": "2026-11-06T19:58:09.481952+00:00",
-    "last_seen": "2026-11-06T19:58:09.481952+00:00",
+    "last_seen": "2026-11-07T07:13:47.398646+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -416,7 +632,7 @@
     "primary_source_id": "us-federal-register",
     "n": 8929,
     "first_seen": "2026-11-06T19:58:09.481952+00:00",
-    "last_seen": "2026-11-06T19:58:09.481952+00:00",
+    "last_seen": "2026-11-07T07:13:47.398646+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -447,7 +663,7 @@
     "primary_source_id": "us-federal-register",
     "n": 8928,
     "first_seen": "2026-11-06T19:58:09.481952+00:00",
-    "last_seen": "2026-11-06T19:58:09.481952+00:00",
+    "last_seen": "2026-11-07T07:13:47.398646+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -477,7 +693,7 @@
     "primary_source_id": "us-federal-register",
     "n": 8927,
     "first_seen": "2026-11-06T19:58:09.481952+00:00",
-    "last_seen": "2026-11-06T19:58:09.481952+00:00",
+    "last_seen": "2026-11-07T07:13:47.398646+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -507,7 +723,7 @@
     "primary_source_id": "us-federal-register",
     "n": 8926,
     "first_seen": "2026-11-06T19:58:09.481952+00:00",
-    "last_seen": "2026-11-06T19:58:09.481952+00:00",
+    "last_seen": "2026-11-07T07:13:47.398646+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -537,7 +753,7 @@
     "primary_source_id": "us-federal-register",
     "n": 8925,
     "first_seen": "2026-11-06T19:58:09.481952+00:00",
-    "last_seen": "2026-11-06T19:58:09.481952+00:00",
+    "last_seen": "2026-11-07T07:13:47.398646+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -561,55 +777,7 @@
     "primary_source_id": "us-govinfo-dcpd",
     "n": 8890,
     "first_seen": "2026-11-06T07:57:02.134140+00:00",
-    "last_seen": "2026-11-06T07:57:02.134140+00:00",
-    "source_ids": [
-      "us-govinfo-dcpd"
-    ]
-  },
-  {
-    "title": "DCPD-202600673 - Remarks at a Campaign Rally for Ohio Republican Candidates in Vandalia, Ohio",
-    "url": "https://www.govinfo.gov/app/details/DCPD-202600673",
-    "native_id": "DCPD-202600673",
-    "published_at": "2026-11-05T23:09:00+00:00",
-    "published_raw": "Thu, 05 Nov 2026 23:09:00 +0000",
-    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "presidential_document",
-      "document_stage": "presidential_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Compilation of Presidential Documents",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-dcpd",
-    "n": 8889,
-    "first_seen": "2026-11-06T07:57:02.134140+00:00",
-    "last_seen": "2026-11-06T07:57:02.134140+00:00",
-    "source_ids": [
-      "us-govinfo-dcpd"
-    ]
-  },
-  {
-    "title": "DCPD-202600671 - Remarks at a Campaign Rally for Alabama Republican Candidates in Mobile, Alabama",
-    "url": "https://www.govinfo.gov/app/details/DCPD-202600671",
-    "native_id": "DCPD-202600671",
-    "published_at": "2026-11-05T23:09:00+00:00",
-    "published_raw": "Thu, 05 Nov 2026 23:09:00 +0000",
-    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "presidential_document",
-      "document_stage": "presidential_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Compilation of Presidential Documents",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-dcpd",
-    "n": 8888,
-    "first_seen": "2026-11-06T07:57:02.134140+00:00",
-    "last_seen": "2026-11-06T07:57:02.134140+00:00",
+    "last_seen": "2026-11-07T07:13:47.398646+00:00",
     "source_ids": [
       "us-govinfo-dcpd"
     ]
@@ -633,7 +801,7 @@
     "primary_source_id": "us-govinfo-dcpd",
     "n": 8887,
     "first_seen": "2026-11-06T07:57:02.134140+00:00",
-    "last_seen": "2026-11-06T07:57:02.134140+00:00",
+    "last_seen": "2026-11-07T07:13:47.398646+00:00",
     "source_ids": [
       "us-govinfo-dcpd"
     ]
@@ -662,7 +830,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 8763,
     "first_seen": "2026-11-05T20:41:39.999913+00:00",
-    "last_seen": "2026-11-06T19:58:09.481952+00:00",
+    "last_seen": "2026-11-07T07:13:47.398646+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -715,7 +883,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 8764,
     "first_seen": "2026-11-05T20:41:39.999913+00:00",
-    "last_seen": "2026-11-06T19:58:09.481952+00:00",
+    "last_seen": "2026-11-07T07:13:47.398646+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -744,7 +912,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 3303,
     "first_seen": "2026-10-16T10:36:18.842579+00:00",
-    "last_seen": "2026-11-06T19:58:09.481952+00:00",
+    "last_seen": "2026-11-07T07:13:47.398646+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -773,7 +941,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 9013,
     "first_seen": "2026-11-06T19:58:09.481952+00:00",
-    "last_seen": "2026-11-06T19:58:09.481952+00:00",
+    "last_seen": "2026-11-07T07:13:47.398646+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -803,7 +971,7 @@
     "primary_source_id": "us-federal-register",
     "n": 8688,
     "first_seen": "2026-11-05T07:56:00.555392+00:00",
-    "last_seen": "2026-11-06T19:58:09.481952+00:00",
+    "last_seen": "2026-11-07T07:13:47.398646+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -833,7 +1001,7 @@
     "primary_source_id": "us-federal-register",
     "n": 8680,
     "first_seen": "2026-11-05T07:56:00.555392+00:00",
-    "last_seen": "2026-11-06T19:58:09.481952+00:00",
+    "last_seen": "2026-11-07T07:13:47.398646+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -864,7 +1032,7 @@
     "primary_source_id": "us-federal-register",
     "n": 8675,
     "first_seen": "2026-11-05T07:56:00.555392+00:00",
-    "last_seen": "2026-11-06T19:58:09.481952+00:00",
+    "last_seen": "2026-11-07T07:13:47.398646+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -895,7 +1063,7 @@
     "primary_source_id": "us-federal-register",
     "n": 8674,
     "first_seen": "2026-11-05T07:56:00.555392+00:00",
-    "last_seen": "2026-11-06T19:58:09.481952+00:00",
+    "last_seen": "2026-11-07T07:13:47.398646+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -926,7 +1094,7 @@
     "primary_source_id": "us-federal-register",
     "n": 8671,
     "first_seen": "2026-11-05T07:56:00.555392+00:00",
-    "last_seen": "2026-11-06T19:58:09.481952+00:00",
+    "last_seen": "2026-11-07T07:13:47.398646+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -956,7 +1124,7 @@
     "primary_source_id": "us-federal-register",
     "n": 8664,
     "first_seen": "2026-11-05T07:56:00.555392+00:00",
-    "last_seen": "2026-11-06T19:58:09.481952+00:00",
+    "last_seen": "2026-11-07T07:13:47.398646+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -986,7 +1154,7 @@
     "primary_source_id": "us-federal-register",
     "n": 8663,
     "first_seen": "2026-11-05T07:56:00.555392+00:00",
-    "last_seen": "2026-11-06T19:58:09.481952+00:00",
+    "last_seen": "2026-11-07T07:13:47.398646+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1017,7 +1185,7 @@
     "primary_source_id": "us-federal-register",
     "n": 8622,
     "first_seen": "2026-11-05T07:56:00.555392+00:00",
-    "last_seen": "2026-11-06T19:58:09.481952+00:00",
+    "last_seen": "2026-11-07T07:13:47.398646+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1047,7 +1215,7 @@
     "primary_source_id": "us-federal-register",
     "n": 8619,
     "first_seen": "2026-11-05T07:56:00.555392+00:00",
-    "last_seen": "2026-11-06T19:58:09.481952+00:00",
+    "last_seen": "2026-11-07T07:13:47.398646+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1077,7 +1245,7 @@
     "primary_source_id": "us-federal-register",
     "n": 8618,
     "first_seen": "2026-11-05T07:56:00.555392+00:00",
-    "last_seen": "2026-11-06T19:58:09.481952+00:00",
+    "last_seen": "2026-11-07T07:13:47.398646+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1107,7 +1275,7 @@
     "primary_source_id": "us-federal-register",
     "n": 8616,
     "first_seen": "2026-11-05T07:56:00.555392+00:00",
-    "last_seen": "2026-11-06T19:58:09.481952+00:00",
+    "last_seen": "2026-11-07T07:13:47.398646+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1137,7 +1305,7 @@
     "primary_source_id": "us-federal-register",
     "n": 8615,
     "first_seen": "2026-11-05T07:56:00.555392+00:00",
-    "last_seen": "2026-11-06T19:58:09.481952+00:00",
+    "last_seen": "2026-11-07T07:13:47.398646+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1167,7 +1335,7 @@
     "primary_source_id": "us-federal-register",
     "n": 8614,
     "first_seen": "2026-11-05T07:56:00.555392+00:00",
-    "last_seen": "2026-11-06T19:58:09.481952+00:00",
+    "last_seen": "2026-11-07T07:13:47.398646+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1197,7 +1365,7 @@
     "primary_source_id": "us-federal-register",
     "n": 8613,
     "first_seen": "2026-11-05T07:56:00.555392+00:00",
-    "last_seen": "2026-11-06T19:58:09.481952+00:00",
+    "last_seen": "2026-11-07T07:13:47.398646+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1221,7 +1389,7 @@
     "primary_source_id": "us-govinfo-dcpd",
     "n": 8728,
     "first_seen": "2026-11-05T07:56:00.555392+00:00",
-    "last_seen": "2026-11-06T07:57:02.134140+00:00",
+    "last_seen": "2026-11-07T07:13:47.398646+00:00",
     "source_ids": [
       "us-govinfo-dcpd"
     ]
@@ -1245,7 +1413,7 @@
     "primary_source_id": "us-govinfo-dcpd",
     "n": 8727,
     "first_seen": "2026-11-05T07:56:00.555392+00:00",
-    "last_seen": "2026-11-06T07:57:02.134140+00:00",
+    "last_seen": "2026-11-07T07:13:47.398646+00:00",
     "source_ids": [
       "us-govinfo-dcpd"
     ]
@@ -1269,7 +1437,7 @@
     "primary_source_id": "us-govinfo-dcpd",
     "n": 8726,
     "first_seen": "2026-11-05T07:56:00.555392+00:00",
-    "last_seen": "2026-11-06T07:57:02.134140+00:00",
+    "last_seen": "2026-11-07T07:13:47.398646+00:00",
     "source_ids": [
       "us-govinfo-dcpd"
     ]
@@ -1293,7 +1461,7 @@
     "primary_source_id": "us-govinfo-dcpd",
     "n": 8725,
     "first_seen": "2026-11-05T07:56:00.555392+00:00",
-    "last_seen": "2026-11-06T07:57:02.134140+00:00",
+    "last_seen": "2026-11-07T07:13:47.398646+00:00",
     "source_ids": [
       "us-govinfo-dcpd"
     ]
@@ -1317,7 +1485,7 @@
     "primary_source_id": "us-govinfo-dcpd",
     "n": 2481,
     "first_seen": "2026-10-16T05:53:15.995133+00:00",
-    "last_seen": "2026-11-06T07:57:02.134140+00:00",
+    "last_seen": "2026-11-07T07:13:47.398646+00:00",
     "source_ids": [
       "us-govinfo-dcpd"
     ]
@@ -1341,7 +1509,7 @@
     "primary_source_id": "us-govinfo-dcpd",
     "n": 2477,
     "first_seen": "2026-10-16T05:53:15.995133+00:00",
-    "last_seen": "2026-11-06T07:57:02.134140+00:00",
+    "last_seen": "2026-11-07T07:13:47.398646+00:00",
     "source_ids": [
       "us-govinfo-dcpd"
     ]
@@ -1418,7 +1586,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 8508,
     "first_seen": "2026-11-04T20:26:55.940049+00:00",
-    "last_seen": "2026-11-06T19:58:09.481952+00:00",
+    "last_seen": "2026-11-07T07:13:47.398646+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -1447,7 +1615,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 8509,
     "first_seen": "2026-11-04T20:26:55.940049+00:00",
-    "last_seen": "2026-11-06T19:58:09.481952+00:00",
+    "last_seen": "2026-11-07T07:13:47.398646+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -1476,7 +1644,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 8510,
     "first_seen": "2026-11-04T20:26:55.940049+00:00",
-    "last_seen": "2026-11-06T19:58:09.481952+00:00",
+    "last_seen": "2026-11-07T07:13:47.398646+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -1505,7 +1673,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 8511,
     "first_seen": "2026-11-04T20:26:55.940049+00:00",
-    "last_seen": "2026-11-06T19:58:09.481952+00:00",
+    "last_seen": "2026-11-07T07:13:47.398646+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -1534,409 +1702,9 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 8512,
     "first_seen": "2026-11-04T20:26:55.940049+00:00",
-    "last_seen": "2026-11-06T19:58:09.481952+00:00",
+    "last_seen": "2026-11-07T07:13:47.398646+00:00",
     "source_ids": [
       "uk-govuk-decision"
-    ]
-  },
-  {
-    "title": "Nomenclature Change Related to Assistant General Counsel Titles",
-    "url": "https://www.federalregister.gov/documents/2026/11/04/2026-22463/nomenclature-change-related-to-assistant-general-counsel-titles",
-    "native_id": "2026-22463",
-    "published_at": "2026-11-04T00:00:00+00:00",
-    "published_raw": "2026-11-04",
-    "document_type": "Rule",
-    "issuer": "Commerce Department",
-    "issuer_ids": [
-      "us-fr:54"
-    ],
-    "summary": "The Department is effectuating nomenclature changes throughout Title 15 of the Code of Federal Regulations to remove all references to an outdated official title (\"Assistant General Counsel for Employment, Litigation and Information\") and replace them with updated references to the appropriate official (the \"Assistant General Counsel for Litigation and Strategic Support\" or the \"Assistant General Counsel for Information Security and Emerging Technologies\"). This action is necessary to reflect the current structure and roles within the Department and to ensure that the regulations at Title 15 remain up to date and refer the public to the appropriate officials. This action is intended to promote clarity and efficiency without making any substantive changes to any regulations.",
-    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-11-04/pdf/2026-22463.pdf",
-    "source_metadata": {
-      "document_type": "Rule",
-      "document_stage": "final_rule_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Commerce Department",
-      "jurisdiction": "US",
-      "family": "rules_notices_and_presidential_documents"
-    },
-    "primary_source_id": "us-federal-register",
-    "n": 8445,
-    "first_seen": "2026-11-04T07:30:45.022151+00:00",
-    "last_seen": "2026-11-06T19:58:09.481952+00:00",
-    "source_ids": [
-      "us-federal-register"
-    ]
-  },
-  {
-    "title": "Special Local Regulation; Atlantic Ocean, Key West, FL",
-    "url": "https://www.federalregister.gov/documents/2026/11/04/2026-22468/special-local-regulation-atlantic-ocean-key-west-fl",
-    "native_id": "2026-22468",
-    "published_at": "2026-11-04T00:00:00+00:00",
-    "published_raw": "2026-11-04",
-    "document_type": "Rule",
-    "issuer": "Homeland Security Department; Coast Guard",
-    "issuer_ids": [
-      "us-fr:227",
-      "us-fr:53"
-    ],
-    "summary": "The Coast Guard is establishing a temporary special local regulation (SLR) for the navigable waters of the Atlantic Ocean surrounding the Key West Main Shipping Channel and the waters between Sunset Key and Wisteria Island. This action is necessary to provide for the safety of life on these navigable waters near Key West, FL during the Race World Offshore World Championship 2026 event beginning on November 4, 2026, and ending on November 8, 2026. This regulation prohibits persons and vessels from entering the regulated area unless specifically authorized by the Captain of the Port Key West or their designated representative.",
-    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-11-04/pdf/2026-22468.pdf",
-    "source_metadata": {
-      "document_type": "Rule",
-      "document_stage": "final_rule_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Homeland Security Department; Coast Guard",
-      "jurisdiction": "US",
-      "family": "rules_notices_and_presidential_documents"
-    },
-    "primary_source_id": "us-federal-register",
-    "n": 8440,
-    "first_seen": "2026-11-04T07:30:45.022151+00:00",
-    "last_seen": "2026-11-06T19:58:09.481952+00:00",
-    "source_ids": [
-      "us-federal-register"
-    ]
-  },
-  {
-    "title": "Safety Zone; Lake Michigan, Chicago, IL",
-    "url": "https://www.federalregister.gov/documents/2026/11/04/2026-22478/safety-zone-lake-michigan-chicago-il",
-    "native_id": "2026-22478",
-    "published_at": "2026-11-04T00:00:00+00:00",
-    "published_raw": "2026-11-04",
-    "document_type": "Rule",
-    "issuer": "Homeland Security Department; Coast Guard",
-    "issuer_ids": [
-      "us-fr:227",
-      "us-fr:53"
-    ],
-    "summary": "The Coast Guard is establishing a temporary safety zone for navigable waters within an area of Lake Michigan in Chicago, IL. The safety zone is needed to protect personnel, vessels, and the marine environment from potential hazards created by a Fiber Optics Conduit installation. Entry of vessels or persons into this zone is prohibited unless specifically authorized by the Captain of the Port, Sector Lake Michigan or their designated representative.",
-    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-11-04/pdf/2026-22478.pdf",
-    "source_metadata": {
-      "document_type": "Rule",
-      "document_stage": "final_rule_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Homeland Security Department; Coast Guard",
-      "jurisdiction": "US",
-      "family": "rules_notices_and_presidential_documents"
-    },
-    "primary_source_id": "us-federal-register",
-    "n": 8431,
-    "first_seen": "2026-11-04T07:30:45.022151+00:00",
-    "last_seen": "2026-11-06T19:58:09.481952+00:00",
-    "source_ids": [
-      "us-federal-register"
-    ]
-  },
-  {
-    "title": "Technical Amendment to the Regulation Regarding Amendments to Applications",
-    "url": "https://www.federalregister.gov/documents/2026/11/04/2026-22484/technical-amendment-to-the-regulation-regarding-amendments-to-applications",
-    "native_id": "2026-22484",
-    "published_at": "2026-11-04T00:00:00+00:00",
-    "published_raw": "2026-11-04",
-    "document_type": "Rule",
-    "issuer": "Justice Department; Drug Enforcement Administration",
-    "issuer_ids": [
-      "us-fr:268",
-      "us-fr:116"
-    ],
-    "summary": "This final rule updates a Drug Enforcement Administration regulation to clarify that the provision regarding amendments to and withdrawal of registration applications also applies to applications for registration renewal. This action makes no substantive changes to this regulation.",
-    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-11-04/pdf/2026-22484.pdf",
-    "source_metadata": {
-      "document_type": "Rule",
-      "document_stage": "final_rule_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Justice Department; Drug Enforcement Administration",
-      "jurisdiction": "US",
-      "family": "rules_notices_and_presidential_documents"
-    },
-    "primary_source_id": "us-federal-register",
-    "n": 8427,
-    "first_seen": "2026-11-04T07:30:45.022151+00:00",
-    "last_seen": "2026-11-06T19:58:09.481952+00:00",
-    "source_ids": [
-      "us-federal-register"
-    ]
-  },
-  {
-    "title": "Amendment of Domestic Very High Frequency Omnidirectional Range (VOR) Federal Airways V-16, V-35, V-37, V-53, V-133, V-136, V-143, V-259, V-310, V-364, V-409, V-415, V-454, and V-605; Eastern United States",
-    "url": "https://www.federalregister.gov/documents/2026/11/04/2026-22497/amendment-of-domestic-very-high-frequency-omnidirectional-range-vor-federal-airways-v-16-v-35-v-37",
-    "native_id": "2026-22497",
-    "published_at": "2026-11-04T00:00:00+00:00",
-    "published_raw": "2026-11-04",
-    "document_type": "Rule",
-    "issuer": "Transportation Department; Federal Aviation Administration",
-    "issuer_ids": [
-      "us-fr:492",
-      "us-fr:159"
-    ],
-    "summary": "This action corrects a final rule published by the FAA in the Federal Register on October 14, 2026, amending domestic Very High Frequency Omnidirectional Range (VOR) Federal Airways V-16, V-35, V-37, V-53, V-133, V-136, V-143, V-259, V-310, V-364, V-409, V-415, V-454, and V-605. Specifically, this action administratively corrects an error in the preamble of the rule within the description of V-37.",
-    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-11-04/pdf/2026-22497.pdf",
-    "source_metadata": {
-      "document_type": "Rule",
-      "document_stage": "final_rule_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Transportation Department; Federal Aviation Administration",
-      "jurisdiction": "US",
-      "family": "rules_notices_and_presidential_documents"
-    },
-    "primary_source_id": "us-federal-register",
-    "n": 8414,
-    "first_seen": "2026-11-04T07:30:45.022151+00:00",
-    "last_seen": "2026-11-06T19:58:09.481952+00:00",
-    "source_ids": [
-      "us-federal-register"
-    ]
-  },
-  {
-    "title": "Domestic Mail Manual; Incorporation by Reference",
-    "url": "https://www.federalregister.gov/documents/2026/11/04/2026-22498/domestic-mail-manual-incorporation-by-reference",
-    "native_id": "2026-22498",
-    "published_at": "2026-11-04T00:00:00+00:00",
-    "published_raw": "2026-11-04",
-    "document_type": "Rule",
-    "issuer": "Postal Service",
-    "issuer_ids": [
-      "us-fr:410"
-    ],
-    "summary": "The Postal Service announces the issuance of the Mailing Standards of the United States Postal Service, Domestic Mail Manual (DMM[supreg]), updated November 2, 2026, and its incorporation by reference in the Code of Federal Regulations.",
-    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-11-04/pdf/2026-22498.pdf",
-    "source_metadata": {
-      "document_type": "Rule",
-      "document_stage": "final_rule_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Postal Service",
-      "jurisdiction": "US",
-      "family": "rules_notices_and_presidential_documents"
-    },
-    "primary_source_id": "us-federal-register",
-    "n": 8413,
-    "first_seen": "2026-11-04T07:30:45.022151+00:00",
-    "last_seen": "2026-11-06T19:58:09.481952+00:00",
-    "source_ids": [
-      "us-federal-register"
-    ]
-  },
-  {
-    "title": "International Mail Manual; Incorporation by Reference",
-    "url": "https://www.federalregister.gov/documents/2026/11/04/2026-22505/international-mail-manual-incorporation-by-reference",
-    "native_id": "2026-22505",
-    "published_at": "2026-11-04T00:00:00+00:00",
-    "published_raw": "2026-11-04",
-    "document_type": "Rule",
-    "issuer": "Postal Service",
-    "issuer_ids": [
-      "us-fr:410"
-    ],
-    "summary": "The Postal Service announces the issuance of the Mailing Standards of the United States Postal Service, International Mail Manual (IMM[supreg]), issued November 2, 2026, and its incorporation by reference in the Code of Federal Regulations.",
-    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-11-04/pdf/2026-22505.pdf",
-    "source_metadata": {
-      "document_type": "Rule",
-      "document_stage": "final_rule_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Postal Service",
-      "jurisdiction": "US",
-      "family": "rules_notices_and_presidential_documents"
-    },
-    "primary_source_id": "us-federal-register",
-    "n": 8407,
-    "first_seen": "2026-11-04T07:30:45.022151+00:00",
-    "last_seen": "2026-11-06T19:58:09.481952+00:00",
-    "source_ids": [
-      "us-federal-register"
-    ]
-  },
-  {
-    "title": "Statutory Lien",
-    "url": "https://www.federalregister.gov/documents/2026/11/04/2026-22536/statutory-lien",
-    "native_id": "2026-22536",
-    "published_at": "2026-11-04T00:00:00+00:00",
-    "published_raw": "2026-11-04",
-    "document_type": "Rule",
-    "issuer": "National Credit Union Administration",
-    "issuer_ids": [
-      "us-fr:335"
-    ],
-    "summary": "On February 25, 2026, NCUA (or `agency') published a proposed rule to solicit comments on the removal of a provision of NCUA regulations regarding federal credit unions' (FCUs) statutory lien authority. Upon further consideration, and based on the comments received, the Board is issuing this final rule, as proposed, to remove the term, \"except as otherwise provided by law or except as otherwise provided by federal law.\" This language does not provide any assistance to FCUs in determining whether such statutory or case law exists, therefore it has no material value.",
-    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-11-04/pdf/2026-22536.pdf",
-    "source_metadata": {
-      "document_type": "Rule",
-      "document_stage": "final_rule_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "National Credit Union Administration",
-      "jurisdiction": "US",
-      "family": "rules_notices_and_presidential_documents"
-    },
-    "primary_source_id": "us-federal-register",
-    "n": 8377,
-    "first_seen": "2026-11-04T07:30:45.022151+00:00",
-    "last_seen": "2026-11-06T19:58:09.481952+00:00",
-    "source_ids": [
-      "us-federal-register"
-    ]
-  },
-  {
-    "title": "Member Business Loans; Commercial Lending",
-    "url": "https://www.federalregister.gov/documents/2026/11/04/2026-22537/member-business-loans-commercial-lending",
-    "native_id": "2026-22537",
-    "published_at": "2026-11-04T00:00:00+00:00",
-    "published_raw": "2026-11-04",
-    "document_type": "Rule",
-    "issuer": "National Credit Union Administration",
-    "issuer_ids": [
-      "us-fr:335"
-    ],
-    "summary": "The NCUA Board (Board) is amending its regulations governing member business loans and commercial lending. This interim final rule eliminates an outdated, transitional provision that is no longer necessary. This action is necessary to reduce regulatory complexity and improve the clarity of the NCUA's regulations. The intended effect is to enhance clarity and simplify compliance for federally insured credit unions (FICUs).",
-    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-11-04/pdf/2026-22537.pdf",
-    "source_metadata": {
-      "document_type": "Rule",
-      "document_stage": "final_rule_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "National Credit Union Administration",
-      "jurisdiction": "US",
-      "family": "rules_notices_and_presidential_documents"
-    },
-    "primary_source_id": "us-federal-register",
-    "n": 8376,
-    "first_seen": "2026-11-04T07:30:45.022151+00:00",
-    "last_seen": "2026-11-06T19:58:09.481952+00:00",
-    "source_ids": [
-      "us-federal-register"
-    ]
-  },
-  {
-    "title": "Treatment of Emergency Amendments: Paycheck Protection Program Liquidity Facility and Paycheck Protection Program Loans",
-    "url": "https://www.federalregister.gov/documents/2026/11/04/2026-22538/treatment-of-emergency-amendments-paycheck-protection-program-liquidity-facility-and-paycheck",
-    "native_id": "2026-22538",
-    "published_at": "2026-11-04T00:00:00+00:00",
-    "published_raw": "2026-11-04",
-    "document_type": "Rule",
-    "issuer": "National Credit Union Administration",
-    "issuer_ids": [
-      "us-fr:335"
-    ],
-    "summary": "The NCUA Board (Board) is issuing a final rule adopting as final the revisions to the capital adequacy rule and the member business lending rule made under an interim final rule (IFR) published in the Federal Register on April 27, 2020.",
-    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-11-04/pdf/2026-22538.pdf",
-    "source_metadata": {
-      "document_type": "Rule",
-      "document_stage": "final_rule_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "National Credit Union Administration",
-      "jurisdiction": "US",
-      "family": "rules_notices_and_presidential_documents"
-    },
-    "primary_source_id": "us-federal-register",
-    "n": 8375,
-    "first_seen": "2026-11-04T07:30:45.022151+00:00",
-    "last_seen": "2026-11-06T19:58:09.481952+00:00",
-    "source_ids": [
-      "us-federal-register"
-    ]
-  },
-  {
-    "title": "DCPD-202600199 - Remarks at a Swearing-in Ceremony for Markwayne Mullin as Secretary of Homeland Security and an Exchange With Reporters",
-    "url": "https://www.govinfo.gov/app/details/DCPD-202600199",
-    "native_id": "DCPD-202600199",
-    "published_at": "2026-11-03T22:13:01+00:00",
-    "published_raw": "Tue, 03 Nov 2026 22:13:01 +0000",
-    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "presidential_document",
-      "document_stage": "presidential_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Compilation of Presidential Documents",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-dcpd",
-    "n": 8474,
-    "first_seen": "2026-11-04T07:30:45.022151+00:00",
-    "last_seen": "2026-11-06T07:57:02.134140+00:00",
-    "source_ids": [
-      "us-govinfo-dcpd"
-    ]
-  },
-  {
-    "title": "DCPD-202600658 - Remarks on Domestic Energy Production",
-    "url": "https://www.govinfo.gov/app/details/DCPD-202600658",
-    "native_id": "DCPD-202600658",
-    "published_at": "2026-11-03T22:12:00+00:00",
-    "published_raw": "Tue, 03 Nov 2026 22:12:00 +0000",
-    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "presidential_document",
-      "document_stage": "presidential_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Compilation of Presidential Documents",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-dcpd",
-    "n": 8473,
-    "first_seen": "2026-11-04T07:30:45.022151+00:00",
-    "last_seen": "2026-11-06T07:57:02.134140+00:00",
-    "source_ids": [
-      "us-govinfo-dcpd"
-    ]
-  },
-  {
-    "title": "DCPD-202600664 - Remarks on the National Economy in Denton, Texas",
-    "url": "https://www.govinfo.gov/app/details/DCPD-202600664",
-    "native_id": "DCPD-202600664",
-    "published_at": "2026-11-03T22:12:00+00:00",
-    "published_raw": "Tue, 03 Nov 2026 22:12:00 +0000",
-    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "presidential_document",
-      "document_stage": "presidential_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Compilation of Presidential Documents",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-dcpd",
-    "n": 8472,
-    "first_seen": "2026-11-04T07:30:45.022151+00:00",
-    "last_seen": "2026-11-06T07:57:02.134140+00:00",
-    "source_ids": [
-      "us-govinfo-dcpd"
-    ]
-  },
-  {
-    "title": "DCPD-202600661 - Remarks in an Exchange With Reporters Prior Departure for Dallas, Texas",
-    "url": "https://www.govinfo.gov/app/details/DCPD-202600661",
-    "native_id": "DCPD-202600661",
-    "published_at": "2026-11-03T22:12:00+00:00",
-    "published_raw": "Tue, 03 Nov 2026 22:12:00 +0000",
-    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "presidential_document",
-      "document_stage": "presidential_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Compilation of Presidential Documents",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-dcpd",
-    "n": 8471,
-    "first_seen": "2026-11-04T07:30:45.022151+00:00",
-    "last_seen": "2026-11-06T07:57:02.134140+00:00",
-    "source_ids": [
-      "us-govinfo-dcpd"
     ]
   }
 ]
