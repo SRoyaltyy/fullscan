@@ -1,0 +1,23 @@
+{
+  "ticker": "OLLI",
+  "name": "Ollie's Bargain Outlet Holdings, Inc.",
+  "source_sha": "629279628434865e8e8958f31c648822d67f7055",
+  "method": "stock-evidence-graph-2",
+  "source_receipt": {
+    "source": "PR642-full-text",
+    "companies": 1,
+    "filings": 7,
+    "documents": 253,
+    "characters": 10049945,
+    "errors": [],
+    "as_of": null,
+    "full_source_archive": true,
+    "complete": true
+  },
+  "elapsed_seconds": 171.12,
+  "entities": 864,
+  "assertions": 442,
+  "asset": "OLLI.json.gz",
+  "sha256": "dfd332cbef2ad5ea2c091594cd6d61cbd515c2f6877f5890e49542ddb32f1e54",
+  "bytes": 784827
+}

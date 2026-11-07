@@ -1,0 +1,23 @@
+{
+  "ticker": "UNIT",
+  "name": "Uniti Group Inc.",
+  "source_sha": "629279628434865e8e8958f31c648822d67f7055",
+  "method": "stock-evidence-graph-2",
+  "source_receipt": {
+    "source": "PR642-full-text",
+    "companies": 1,
+    "filings": 14,
+    "documents": 473,
+    "characters": 24998791,
+    "errors": [],
+    "as_of": null,
+    "full_source_archive": true,
+    "complete": true
+  },
+  "elapsed_seconds": 617.44,
+  "entities": 2678,
+  "assertions": 993,
+  "asset": "UNIT.json.gz",
+  "sha256": "96bb7f4c9abd972530773f87e35b19965e81261e560008665cdab4d623508e63",
+  "bytes": 3037500
+}
