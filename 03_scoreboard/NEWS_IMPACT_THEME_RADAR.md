@@ -21,12 +21,12 @@ Rubric hit rates count a call only when q5=impulse, direction in {up, down}, tra
 | non-weather | 31111 |
 | reaction-in-title (killed by the router) | 1203 |
 | impulse + up/down + listed | 16462 |
-| graded articles 0-1d | 1767 |
-| graded articles 2d | 1723 |
-| graded articles 3d | 1703 |
-| graded articles 4d | 1679 |
-| graded articles 5d | 1649 |
-| graded articles 1-4w | 7720 |
+| graded articles 0-1d | 1793 |
+| graded articles 2d | 1740 |
+| graded articles 3d | 1720 |
+| graded articles 4d | 1698 |
+| graded articles 5d | 1671 |
+| graded articles 1-4w | 7744 |
 
 ## Hit rates
 
@@ -34,12 +34,12 @@ Rubric column skips long-horizon classes on 0-1d and 2-5d. Broad column keeps th
 
 | horizon | rubric hits | rubric n | rubric rate | broad hits | broad n | broad rate |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| 0-1d | 1622 | 3208 | 1622/3208 = 50.6% | 8356 | 17146 | 8356/17146 = 48.7% |
-| 2d | 1562 | 3152 | 1562/3152 = 49.6% | 8062 | 16305 | 8062/16305 = 49.4% |
-| 3d | 1485 | 3077 | 1485/3077 = 48.3% | 7856 | 16026 | 7856/16026 = 49.0% |
-| 4d | 1473 | 3045 | 1473/3045 = 48.4% | 7782 | 15783 | 7782/15783 = 49.3% |
-| 5d | 1470 | 2980 | 1470/2980 = 49.3% | 7477 | 15300 | 7477/15300 = 48.9% |
-| 1-4w | 5633 | 11952 | 5633/11952 = 47.1% | — | — | — |
+| 0-1d | 1636 | 3246 | 1636/3246 = 50.4% | 8719 | 17817 | 8719/17817 = 48.9% |
+| 2d | 1571 | 3172 | 1571/3172 = 49.5% | 8206 | 16637 | 8206/16637 = 49.3% |
+| 3d | 1496 | 3149 | 1496/3149 = 47.5% | 7994 | 16291 | 7994/16291 = 49.1% |
+| 4d | 1482 | 3072 | 1482/3072 = 48.2% | 7862 | 16010 | 7862/16010 = 49.1% |
+| 5d | 1481 | 3036 | 1481/3036 = 48.8% | 7668 | 15755 | 7668/15755 = 48.7% |
+| 1-4w | 5670 | 11988 | 5670/11988 = 47.3% | — | — | — |
 
 ## Convergence / clash ledger
 
@@ -59,9 +59,9 @@ Hit rates grade the entity once per session. Converge uses that side. Clash uses
 
 | bucket | 0-1d | 2d | 3d | 4d | 5d |
 | --- | --- | --- | --- | --- | --- |
-| singleton | 808/1681 = 48.1% | 821/1651 = 49.7% | 796/1632 = 48.8% | 798/1605 = 49.7% | 799/1577 = 50.7% |
-| converge | 92/168 = 54.8% | 75/160 = 46.9% | 76/154 = 49.4% | 72/154 = 46.8% | 74/150 = 49.3% |
-| clash | 5/14 = 35.7% | 7/13 = 53.8% | 10/13 = 76.9% | 5/12 = 41.7% | 5/12 = 41.7% |
+| singleton | 817/1698 = 48.1% | 825/1659 = 49.7% | 799/1645 = 48.6% | 800/1624 = 49.3% | 804/1595 = 50.4% |
+| converge | 93/174 = 53.4% | 75/162 = 46.3% | 77/159 = 48.4% | 71/153 = 46.4% | 73/153 = 47.7% |
+| clash | 5/14 = 35.7% | 7/13 = 53.8% | 10/13 = 76.9% | 6/13 = 46.2% | 5/12 = 41.7% |
 
 ### Top converge names
 
@@ -99,8 +99,8 @@ Same direction as the call and |forward return| at the threshold. 5% rows are �
 
 ### 0-1d
 
-- ≥5% and <10%: **814**
-- ≥10%: **428**
+- ≥5% and <10%: **894**
+- ≥10%: **481**
 
 | threshold | ticker | date | ret | class | title |
 | --- | --- | --- | ---: | --- | --- |
@@ -110,31 +110,31 @@ Same direction as the call and |forward return| at the threshold. 5% rows are �
 | ≥10% | DKI | 2026-10-09 | -44.84% | dilution | DarkIris Prices $6 Million Public Offering at $1.44 Per Unit With Potential for Significant Share Dilution |
 | ≥10% | OLB | 2026-10-07 | +44.19% | capital_return | The OLB Group Launches Share Buyback; Suspends ATM Program |
 | ≥10% | SPAI | 2026-08-14 | +43.49% | print_vs_priced | Safe Pro Reports Record 1,336% Revenue Growth in Q2 2026 Driven by Multiple Government Contracts for AI-Powere |
+| ≥10% | STLN | 2026-11-06 | -40.26% | print_vs_priced | Starling Oncology Misses On GAAP EPS, Beats On EBITDA, But A Capitation Guidance Cut Undercuts The Growth Stor |
 | ≥10% | FGI | 2026-08-13 | +38.37% | print_vs_priced | FGI Industries Ltd. Q2 2026 Earnings Call Summary |
 | ≥10% | SUJA | 2026-08-05 | -36.64% | print_vs_priced | Suja Life Inc (SUJA) (Q2 2026) Earnings Call Highlights: Strong Profit Growth Amid Grocery Softness |
+| ≥10% | SKIN | 2026-11-06 | +36.37% | print_vs_priced | SkinHealth Systems Reports Third Quarter 2026 Financial Results |
+| ≥10% | SKIN | 2026-11-06 | +36.37% | guidance | SkinHealth Systems (SKIN) Beats On Cost Discipline And A Consumables Recovery, But Device Weakness And A Narro |
 | ≥10% | BSEM | 2026-08-13 | +34.78% | guidance | BioStem Technologies Inc (BSEM) (Q2 2026) Earnings Call Highlights: Revenue Surges to $7. ... |
 | ≥10% | QMCO | 2026-08-11 | +33.61% | print_vs_priced | Quantum Corp (QMCO) (Q1 2027) Earnings Call Highlights: Debt-Free Turnaround with Record ... |
 | ≥10% | QMCO | 2026-08-11 | +33.61% | print_vs_priced | Quantum Corporation Q1 2027 Earnings Call Summary |
 | ≥10% | MDXH | 2026-08-14 | +32.89% | print_vs_priced | MDxHealth SA (MDXH) (Q2 2026) Earnings Call Highlights: Record Sequential Growth and Strategic ... |
 | ≥10% | MDXH | 2026-08-14 | +32.89% | print_vs_priced | MDxHealth S.A. Q2 2026 Earnings Call Summary |
 | ≥10% | ALGS | 2026-08-06 | +31.82% | print_vs_priced | Aligos Therapeutics Reports Recent Business Progress and Second Quarter 2026 Financial Results |
+| ≥10% | BDSX | 2026-11-06 | -31.32% | print_vs_priced | Biodesix Announces Third Quarter 2026 Results and Highlights |
+| ≥10% | BDSX | 2026-11-06 | -31.32% | print_vs_priced | Biodesix Breaks Its Beat-And-Raise Streak As Growth Slows To 10% And Guidance Falls Below The Original Outlook |
+| ≥10% | CVRX | 2026-11-06 | -30.48% | print_vs_priced | CVRx Reports Third Quarter 2026 Financial and Operating Results |
+| ≥10% | CVRX | 2026-11-06 | -30.48% | guidance | CVRx Cuts Guidance Again As Payer Friction Pushes Growth Into Reverse And Implied Q4 Plunges |
 | ≥10% | OABI | 2026-08-07 | +29.96% | guidance | VERAXA Biotech (VRXA) Advances VXA-222 Cancer Program While Expanding Patent Portfolio for Next-Generation Ant |
 | ≥10% | OABI | 2026-08-07 | +29.96% | guidance | VERAXA Biotech (VRXA) Advances VXA-222 Cancer Program While Expanding Patent Portfolio for Next-Generation Ant |
 | ≥10% | BODI | 2026-08-11 | -29.56% | guidance | The Beachbody Company, Inc. Q2 2026 Earnings Call Summary |
 | ≥10% | DOCS | 2026-08-07 | -29.50% | print_vs_priced | Doximity: Fiscal Q1 Earnings Snapshot |
-| ≥10% | RCEL | 2026-08-07 | +29.28% | guidance | AVITA Medical Reports Second Quarter Results, Raises 2026 Revenue Guidance, and Expects Fourth Quarter Cash Fl |
-| ≥10% | RCEL | 2026-08-07 | +29.28% | print_vs_priced | AVITA Medical Announces Participation at Canaccord Genuity Growth Conference |
-| ≥10% | ULH | 2026-08-03 | +29.15% | print_vs_priced | Universal Truckload: Q2 Earnings Snapshot |
-| ≥10% | AEYE | 2026-08-14 | +29.08% | print_vs_priced | AudioEye: Q2 Earnings Snapshot |
-| ≥10% | AEYE | 2026-08-14 | +29.08% | guidance | AudioEye Inc (AEYE) (Q2 2026) Earnings Call Highlights: Record Adjusted EBITDA and Raised ... |
-| ≥10% | AEYE | 2026-08-14 | +29.08% | guidance | AudioEye, Inc. Q2 2026 Earnings Call Summary |
-| ≥10% | OPRX | 2026-08-13 | +28.74% | print_vs_priced | OptimizeRx Corp (OPRX) (Q2 2026) Earnings Call Highlights: Navigating Revenue Headwinds with ... |
-| … | | | | | 1217 more in the JSON |
+| … | | | | | 1350 more in the JSON |
 
 ### 2d
 
-- ≥5% and <10%: **1465**
-- ≥10%: **787**
+- ≥5% and <10%: **1498**
+- ≥10%: **805**
 
 | threshold | ticker | date | ret | class | title |
 | --- | --- | --- | ---: | --- | --- |
@@ -154,6 +154,7 @@ Same direction as the call and |forward return| at the threshold. 5% rows are �
 | ≥10% | QMCO | 2026-08-11 | +69.97% | print_vs_priced | Quantum Corp (QMCO) (Q1 2027) Earnings Call Highlights: Debt-Free Turnaround with Record ... |
 | ≥10% | QMCO | 2026-08-11 | +69.97% | print_vs_priced | Quantum Corporation Q1 2027 Earnings Call Summary |
 | ≥10% | ULH | 2026-10-30 | +65.98% | print_vs_priced | Universal Truckload: Q3 Earnings Snapshot |
+| ≥10% | PARA | 2026-11-04 | -64.06% | dilution | Parabolic Technologies, Inc. Announces Pricing of $13.5 Million Underwritten Public Offering |
 | ≥10% | YQ | 2026-09-03 | +61.97% | capital_return | 17 Education & Technology Group Inc. Announces New Share Repurchase Program of Up to US$10 Million |
 | ≥10% | ABCL | 2026-08-06 | +61.31% | guidance | AbCellera Biologics Inc (ABCL) (Q2 2026) Earnings Call Highlights: Strong Pipeline Progress and ... |
 | ≥10% | ABCL | 2026-08-06 | +61.31% | guidance | AbCellera Biologics Inc (ABCL) (Q2 2026) Earnings Call Highlights: Strong Pipeline Progress and ... |
@@ -162,13 +163,12 @@ Same direction as the call and |forward return| at the threshold. 5% rows are �
 | ≥10% | BWMN | 2026-08-07 | +55.03% | gate | Earnings To Watch: Bowman Consulting Group Ltd (BWMN) Q2 2026 -- GF Value Sees 64% Upside |
 | ≥10% | APH | 2026-08-19 | -51.54% | print_vs_priced | Amphenol Corp. Cl A stock underperforms Tuesday when compared to competitors |
 | ≥10% | LUNG | 2026-07-30 | +51.43% | print_vs_priced | Pulmonx Corporation Q2 2026 Earnings Call Summary |
-| ≥10% | CYCU | 2026-09-30 | +45.80% | gate | Cycurion Discusses Record Contract Win, Public Safety Expansion and Growth Strategy in New Interview |
-| … | | | | | 2227 more in the JSON |
+| … | | | | | 2278 more in the JSON |
 
 ### 3d
 
-- ≥5% and <10%: **1625**
-- ≥10%: **948**
+- ≥5% and <10%: **1643**
+- ≥10%: **960**
 
 | threshold | ticker | date | ret | class | title |
 | --- | --- | --- | ---: | --- | --- |
@@ -197,12 +197,12 @@ Same direction as the call and |forward return| at the threshold. 5% rows are �
 | ≥10% | GCTK | 2026-09-02 | +67.91% | capacity | Lokahi Therapeutics Expands ai² Futures Lab Asset Origination Network Through Collaboration with San Diego Sta |
 | ≥10% | AEYE | 2026-10-27 | +60.86% | guidance | AudioEye Beats As AI Efficiencies Drive Margins And First GAAP Profit, But Revenue Growth Slows To 7% |
 | ≥10% | RCT | 2026-10-28 | -54.55% | dilution | RedCloud Announces Issuance of Shares to Insiders in Private Placement at Price per Share of $0.25 for Aggrega |
-| … | | | | | 2548 more in the JSON |
+| … | | | | | 2578 more in the JSON |
 
 ### 4d
 
-- ≥5% and <10%: **1709**
-- ≥10%: **1140**
+- ≥5% and <10%: **1732**
+- ≥10%: **1166**
 
 | threshold | ticker | date | ret | class | title |
 | --- | --- | --- | ---: | --- | --- |
@@ -231,12 +231,12 @@ Same direction as the call and |forward return| at the threshold. 5% rows are �
 | ≥10% | SECZ | 2026-09-18 | +77.36% | market_structure | Securitize Surges After SEC Clears Path for Tokenized Stock Trading |
 | ≥10% | SECZ | 2026-09-18 | +77.36% | market_structure | Polymarket Hires Coinbase's Failed Social-Coin Architect |
 | ≥10% | SECZ | 2026-09-18 | +77.36% | market_structure | SEC Sends Strong Signal to Robinhood, Coinbase Investors |
-| … | | | | | 2824 more in the JSON |
+| … | | | | | 2873 more in the JSON |
 
 ### 5d
 
-- ≥5% and <10%: **1772**
-- ≥10%: **1253**
+- ≥5% and <10%: **1815**
+- ≥10%: **1303**
 
 | threshold | ticker | date | ret | class | title |
 | --- | --- | --- | ---: | --- | --- |
@@ -260,12 +260,12 @@ Same direction as the call and |forward return| at the threshold. 5% rows are �
 | ≥10% | PMI | 2026-08-24 | +86.75% | print_vs_priced | Picard Medical Shares Soar After Quarterly Revenue Beats Forecasts |
 | ≥10% | NUWE | 2026-10-27 | +85.27% | gate | Nuwellis Announces Acceptance of Multicenter Pediatric Aquadex Study in Pediatric Nephrology |
 | ≥10% | GCTK | 2026-09-02 | +85.10% | capacity | Lokahi Therapeutics Expands ai² Futures Lab Asset Origination Network Through Collaboration with San Diego Sta |
+| ≥10% | BETR | 2026-10-12 | +72.89% | capital_return | Grant Cardone Says He Never Tells Fannie Mae About The Bitcoin In His Real Estate Deals: Its Just Too Much |
 | ≥10% | SECZ | 2026-09-18 | +71.24% | market_structure | Robinhood Rises as the SEC Clears Tokenized Stocks |
 | ≥10% | SECZ | 2026-09-18 | +71.24% | market_structure | Securitize Surges After SEC Clears Path for Tokenized Stock Trading |
 | ≥10% | SECZ | 2026-09-18 | +71.24% | market_structure | Polymarket Hires Coinbase's Failed Social-Coin Architect |
 | ≥10% | SECZ | 2026-09-18 | +71.24% | market_structure | SEC Sends Strong Signal to Robinhood, Coinbase Investors |
-| ≥10% | SECZ | 2026-09-18 | +71.24% | market_structure | SEC Allows Tokenized Stocks After Clarity Act Falters |
-| … | | | | | 3000 more in the JSON |
+| … | | | | | 3093 more in the JSON |
 
 ## AMRX
 
@@ -285,7 +285,7 @@ Same direction as the call and |forward return| at the threshold. 5% rows are �
 | 4d | +4.27% agree=True |
 | 5d | +8.12% agree=True |
 | 1-4w | +2.11% agree=True |
-| note | window open (1-6m not elapsed; through 2026-11-05) |
+| note | window open (1-6m not elapsed; through 2026-11-06) |
 
 Friday 2026-09-18 16:01 is after the cash close. Entry is Monday 2026-09-21 open→close for 0-1d, never Friday cash. Published at/after 09:30 ET (09:30+30m included) waits for the next RTH.
 
