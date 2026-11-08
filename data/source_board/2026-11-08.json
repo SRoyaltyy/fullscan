@@ -1,6 +1,6 @@
 {
  "date": "2026-11-08",
- "generated_at": "2026-11-08T07:24:42.344698+00:00",
+ "generated_at": "2026-11-08T18:23:35.727742+00:00",
  "catalog": {
   "generated_at": "2026-11-07T18:03:52.345238+00:00",
   "channels": 365,
@@ -34,20 +34,20 @@
   }
  },
  "collect": {
-  "generated_at": "2026-11-08T07:24:22.395731+00:00",
+  "generated_at": "2026-11-08T18:22:54.805890+00:00",
   "enabled_sources": 117,
   "sources_ok": 117,
   "sources_failed": 0,
   "coverage_status": "degraded",
   "counts": {
-   "observed": 1667,
-   "old": 1131,
-   "future": 0,
-   "undated": 297,
+   "observed": 1638,
+   "old": 1192,
+   "future": 1,
+   "undated": 257,
    "new": 0,
-   "duplicates": 536
+   "duplicates": 445
   },
-  "current_dated_documents": 388
+  "current_dated_documents": 276
  },
  "failures": [],
  "channels": [
@@ -438,7 +438,7 @@
    "checked_at": "2026-11-07T18:03:52.345238+00:00",
    "parsed": {
     "today": 0,
-    "window": 8,
+    "window": 5,
     "by_class": {},
     "items": [
      {
@@ -481,33 +481,6 @@
       "title": "Keir Starmer - former Prime Minister - advice under the government's Business Appointment Rules",
       "url": "https://www.gov.uk/government/publications/keir-starmer-former-prime-minister-advice-under-the-governments-business-appointment-rules",
       "published_at": "2026-11-06T10:36:13+00:00",
-      "document_type": "decision",
-      "stage": "decision_published",
-      "new": false,
-      "cls": "routine"
-     },
-     {
-      "title": "Teacher misconduct panel outcome: Mr Sam Piggott",
-      "url": "https://www.gov.uk/government/publications/teacher-misconduct-panel-outcome-mr-sam-piggott",
-      "published_at": "2026-11-05T17:13:16+00:00",
-      "document_type": "decision",
-      "stage": "decision_published",
-      "new": false,
-      "cls": "routine"
-     },
-     {
-      "title": "Rosebank Field Development",
-      "url": "https://www.gov.uk/government/publications/rosebank-field-development",
-      "published_at": "2026-11-05T14:15:41+00:00",
-      "document_type": "decision",
-      "stage": "decision_published",
-      "new": false,
-      "cls": "routine"
-     },
-     {
-      "title": "Deep Drilling Screening Directions – 2026",
-      "url": "https://www.gov.uk/government/publications/deep-drilling-screening-directions-2026",
-      "published_at": "2026-11-05T10:31:18+00:00",
       "document_type": "decision",
       "stage": "decision_published",
       "new": false,
@@ -580,40 +553,13 @@
    "checked_at": "2026-11-07T18:03:52.345238+00:00",
    "parsed": {
     "today": 0,
-    "window": 4,
+    "window": 1,
     "by_class": {},
     "items": [
      {
       "title": "Amendments to licensing restrictions: bus, coach and heavy goods vehicles",
       "url": "https://www.gov.uk/government/consultations/amendments-to-licensing-restrictions-bus-coach-and-heavy-goods-vehicles",
       "published_at": "2026-11-06T09:00:00+00:00",
-      "document_type": "consultation_outcome",
-      "stage": "consultation_response_published",
-      "new": false,
-      "cls": "routine"
-     },
-     {
-      "title": "Capacity Market: new technologies 2026",
-      "url": "https://www.gov.uk/government/consultations/capacity-market-new-technologies-2026",
-      "published_at": "2026-11-05T11:45:15+00:00",
-      "document_type": "consultation_outcome",
-      "stage": "consultation_response_published",
-      "new": false,
-      "cls": "routine"
-     },
-     {
-      "title": "Changes to Ofsted inspection fees for independent schools",
-      "url": "https://www.gov.uk/government/consultations/changes-to-ofsted-inspection-fees-for-independent-schools",
-      "published_at": "2026-11-05T10:00:06+00:00",
-      "document_type": "consultation_outcome",
-      "stage": "consultation_response_published",
-      "new": false,
-      "cls": "routine"
-     },
-     {
-      "title": "Space requirements in early years childcare settings in England",
-      "url": "https://www.gov.uk/government/consultations/space-requirements-in-early-years-childcare-settings-in-england",
-      "published_at": "2026-11-05T09:30:01+00:00",
       "document_type": "consultation_outcome",
       "stage": "consultation_response_published",
       "new": false,
@@ -664,28 +610,9 @@
    "checked_at": "2026-11-07T18:03:52.345238+00:00",
    "parsed": {
     "today": 0,
-    "window": 2,
+    "window": 0,
     "by_class": {},
-    "items": [
-     {
-      "title": "Class 3 Medicines Recall: Aspire Pharma Limited, Tropicamide 1% Eye Drops, solution in single dose containers 20 x 0.5ml , EL(26)A/47",
-      "url": "https://www.gov.uk/drug-device-alerts/class-3-medicines-recall-aspire-pharma-limited-tropicamide-1-percent-eye-drops-solution-in-single-dose-containers-20-x-0-dot-5ml-el-26-a-slash-47",
-      "published_at": "2026-11-05T11:00:55+00:00",
-      "document_type": "medical_safety_alert",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "high"
-     },
-     {
-      "title": "Class 4 Medicines Defect Notification: Sandoz Limited, Co-Amoxiclav powder for oral suspension 250/62.5 mg/5mL, EL(26)A/46",
-      "url": "https://www.gov.uk/drug-device-alerts/class-4-medicines-defect-notification-sandoz-limited-co-amoxiclav-powder-for-oral-suspension-250-slash-62-dot-5-mg-slash-ml-el-26-a-slash-46",
-      "published_at": "2026-11-05T12:03:40+00:00",
-      "document_type": "medical_safety_alert",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "routine"
-     }
-    ]
+    "items": []
    }
   },
   {
@@ -707,19 +634,9 @@
    "checked_at": "2026-11-07T18:03:52.345238+00:00",
    "parsed": {
     "today": 0,
-    "window": 1,
+    "window": 0,
     "by_class": {},
-    "items": [
-     {
-      "title": "Duvyzat®▼ (givinostat): interim advice on risk mitigation measures following reports of deaths in patients while taking givinostat",
-      "url": "https://www.gov.uk/drug-safety-update/duvyzat-r-v-givinostat-interim-advice-on-risk-mitigation-measures-following-reports-of-deaths-in-patients-while-taking-givinostat",
-      "published_at": "2026-11-05T12:00:11+00:00",
-      "document_type": "drug_safety_update",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "routine"
-     }
-    ]
+    "items": []
    }
   },
   {
@@ -742,7 +659,7 @@
    "checked_at": "2026-11-07T18:03:52.345238+00:00",
    "parsed": {
     "today": 0,
-    "window": 7,
+    "window": 6,
     "by_class": {},
     "items": [
      {
@@ -758,15 +675,6 @@
       "title": "Product Recall: Petite Amélie Wooden Mobile Holder (2611-0018)",
       "url": "https://www.gov.uk/product-safety-alerts-reports-recalls/product-recall-petite-amelie-wooden-mobile-holder-2611-0018",
       "published_at": "2026-11-06T14:19:05+00:00",
-      "document_type": "product_safety_alert_report_recall",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "high"
-     },
-     {
-      "title": "Product Recall: Wednesday Addams Costume sold via eBay (2609-0105)",
-      "url": "https://www.gov.uk/product-safety-alerts-reports-recalls/product-safety-report-wednesday-addams-costume-sold-via-ebay-2609-0105",
-      "published_at": "2026-11-05T16:55:38+00:00",
       "document_type": "product_safety_alert_report_recall",
       "stage": "requires_semantic_review",
       "new": false,
@@ -1050,19 +958,9 @@
    "checked_at": "2026-11-07T18:03:52.345238+00:00",
    "parsed": {
     "today": 0,
-    "window": 1,
+    "window": 0,
     "by_class": {},
-    "items": [
-     {
-      "title": "Public Law 119 - 111 - Lindsey O. Graham Sanctioning Russia and Iran Act of 2026",
-      "url": "https://www.govinfo.gov/app/details/PLAW-119publ111",
-      "published_at": "2026-11-05T17:11:00+00:00",
-      "document_type": "public_law",
-      "stage": "law_published",
-      "new": false,
-      "cls": "high"
-     }
-    ]
+    "items": []
    }
   },
   {
@@ -1235,7 +1133,7 @@
    "checked_at": "2026-11-07T18:03:52.345238+00:00",
    "parsed": {
     "today": 0,
-    "window": 5,
+    "window": 2,
     "by_class": {},
     "items": [
      {
@@ -1251,33 +1149,6 @@
       "title": "H. Rept. 119-853",
       "url": "https://www.govinfo.gov/app/details/CRPT-119hrpt853",
       "published_at": "2026-11-06T10:24:00+00:00",
-      "document_type": "committee_report",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "routine"
-     },
-     {
-      "title": "H. Rept. 119-864",
-      "url": "https://www.govinfo.gov/app/details/CRPT-119hrpt864",
-      "published_at": "2026-11-05T13:32:00+00:00",
-      "document_type": "committee_report",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "routine"
-     },
-     {
-      "title": "H. Rept. 119-868",
-      "url": "https://www.govinfo.gov/app/details/CRPT-119hrpt868",
-      "published_at": "2026-11-05T11:11:00+00:00",
-      "document_type": "committee_report",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "routine"
-     },
-     {
-      "title": "H. Rept. 119-855",
-      "url": "https://www.govinfo.gov/app/details/CRPT-119hrpt855",
-      "published_at": "2026-11-05T08:54:00+00:00",
       "document_type": "committee_report",
       "stage": "requires_semantic_review",
       "new": false,
@@ -1490,7 +1361,7 @@
    "checked_at": "2026-11-07T18:03:52.345238+00:00",
    "parsed": {
     "today": 0,
-    "window": 2,
+    "window": 1,
     "by_class": {},
     "items": [
      {
@@ -1501,15 +1372,6 @@
       "stage": "requires_semantic_review",
       "new": false,
       "cls": "high"
-     },
-     {
-      "title": "New Details Emerge in Amazon Ads Auction-Rigging Case",
-      "url": "https://www.ftc.gov/news-events/news/press-releases/2026/11/new-details-emerge-amazon-ads-auction-rigging-case",
-      "published_at": "2026-11-05T12:00:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "watch"
      }
     ]
    }
@@ -1561,7 +1423,7 @@
    "checked_at": "2026-11-07T18:03:52.345238+00:00",
    "parsed": {
     "today": 0,
-    "window": 2,
+    "window": 1,
     "by_class": {},
     "items": [
      {
@@ -1572,15 +1434,6 @@
       "stage": "requires_semantic_review",
       "new": false,
       "cls": "high"
-     },
-     {
-      "title": "New Details Emerge in Amazon Ads Auction-Rigging Case",
-      "url": "https://www.ftc.gov/news-events/news/press-releases/2026/11/new-details-emerge-amazon-ads-auction-rigging-case",
-      "published_at": "2026-11-05T12:00:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "watch"
      }
     ]
    }
@@ -1822,7 +1675,7 @@
    "checked_at": "2026-11-07T18:03:52.345238+00:00",
    "parsed": {
     "today": 0,
-    "window": 80,
+    "window": 40,
     "by_class": {},
     "items": [
      {
@@ -1916,69 +1769,6 @@
       "cls": "high"
      },
      {
-      "title": "Former FBI agent pleads guilty to Cryptocurrency theft",
-      "url": "https://www.justice.gov/usao-edva/pr/former-fbi-agent-pleads-guilty-cryptocurrency-theft",
-      "published_at": "2026-11-05T12:00:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "high"
-     },
-     {
-      "title": "Reward Offers Up to $50M for Information Leading to Arrests and/or Convictions of Foreign Terrorist Organization Tren de Aragua (TdA) Leaders Following Homeland Security Task Force Investigation",
-      "url": "https://www.justice.gov/opa/pr/reward-offers-50m-information-leading-arrests-andor-convictions-foreign-terrorist",
-      "published_at": "2026-11-05T12:00:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "high"
-     },
-     {
-      "title": "Three Foreign Nationals Arrested And Charged With Scheme To Use Super Intelligence To Defraud Companies Of $129 Million",
-      "url": "https://www.justice.gov/usao-sdny/pr/three-foreign-nationals-arrested-and-charged-scheme-use-super-intelligence-defraud",
-      "published_at": "2026-11-05T12:00:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "high"
-     },
-     {
-      "title": "Fayette County Man Sentenced to Federal Prison for Car Loan Scheme and COVID-Related Fraud",
-      "url": "https://www.justice.gov/usao-ndga/pr/fayette-county-man-sentenced-federal-prison-car-loan-scheme-and-covid-related-fraud",
-      "published_at": "2026-11-05T12:00:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "high"
-     },
-     {
-      "title": "U.S. Attorney's Office Entered Settlements Exceeding $133 Million; Collected Over $164 Million in Civil and Criminal Actions in Fiscal Year 2026",
-      "url": "https://www.justice.gov/usao-ma/pr/us-attorneys-office-entered-settlements-exceeding-133-million-collected-over-164-million",
-      "published_at": "2026-11-05T12:00:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "high"
-     },
-     {
-      "title": "Texas Man Indicted for Sex Trafficking and Obstruction Offenses",
-      "url": "https://www.justice.gov/opa/pr/texas-man-indicted-sex-trafficking-and-obstruction-offenses",
-      "published_at": "2026-11-05T12:00:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "high"
-     },
-     {
-      "title": "Illegal Alien from India Sentenced for Fraud Scheme Targeting Elderly Victims",
-      "url": "https://www.justice.gov/usao-me/pr/illegal-alien-india-sentenced-fraud-scheme-targeting-elderly-victims",
-      "published_at": "2026-11-05T12:00:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "high"
-     },
-     {
       "title": "Políticos, Empresarios Y Narcotraficantes Ecuatorianos Detenidos Por Delitos De Importación De Estupefacientes Y Armas",
       "url": "https://www.justice.gov/usao-sdny/pr/politicos-empresarios-y-narcotraficantes-ecuatorianos-detenidos-por-delitos-de",
       "published_at": "2026-11-06T12:00:00+00:00",
@@ -2051,49 +1841,112 @@
       "cls": "watch"
      },
      {
-      "title": "Federal judge sentences Wichita man to prison for setting fire to apartment",
-      "url": "https://www.justice.gov/usao-ks/pr/federal-judge-sentences-wichita-man-prison-setting-fire-apartment",
-      "published_at": "2026-11-05T12:00:00+00:00",
+      "title": "Boise Man Sentenced To 15 Years in Federal Prison for Producing Child Sexual Abuse Material",
+      "url": "https://www.justice.gov/usao-id/pr/boise-man-sentenced-15-years-federal-prison-producing-child-sexual-abuse-material",
+      "published_at": "2026-11-06T12:00:00+00:00",
       "document_type": "official_announcement",
       "stage": "requires_semantic_review",
       "new": false,
-      "cls": "watch"
+      "cls": "docket"
      },
      {
-      "title": "Justice Department Says Federal Education Aid Cannot Be Tied to Unconstitutional Race-Based Criteria",
-      "url": "https://www.justice.gov/opa/pr/justice-department-says-federal-education-aid-cannot-be-tied-unconstitutional-race-based",
-      "published_at": "2026-11-05T12:00:00+00:00",
+      "title": "Peoria Man Sentenced to 42 Months in Prison for Possession of a Firearm",
+      "url": "https://www.justice.gov/usao-cdil/pr/peoria-man-sentenced-42-months-prison-possession-firearm",
+      "published_at": "2026-11-06T12:00:00+00:00",
       "document_type": "official_announcement",
       "stage": "requires_semantic_review",
       "new": false,
-      "cls": "watch"
+      "cls": "docket"
      },
      {
-      "title": "Rewards up to combined $50M for three Tren de Aragua leaders following Homeland Security Task Force investigation",
-      "url": "https://www.justice.gov/usao-sdtx/pr/rewards-combined-50m-three-tren-de-aragua-leaders-following-homeland-security-task",
-      "published_at": "2026-11-05T12:00:00+00:00",
+      "title": "Omaha Man Sentenced to 18 Years in Prison for Conspiring to Distribute Methamphetamine",
+      "url": "https://www.justice.gov/usao-ne/pr/omaha-man-sentenced-18-years-prison-conspiring-distribute-methamphetamine",
+      "published_at": "2026-11-06T12:00:00+00:00",
       "document_type": "official_announcement",
       "stage": "requires_semantic_review",
       "new": false,
-      "cls": "watch"
+      "cls": "docket"
      },
      {
-      "title": "Attorney General Todd Blanche Honors 10 District of Hawaii Assistant U.S. Attorneys, Staff, and Agents at 2026 Director’s Awards",
-      "url": "https://www.justice.gov/usao-hi/pr/attorney-general-todd-blanche-honors-10-district-hawaii-assistant-us-attorneys-staff-and",
-      "published_at": "2026-11-05T12:00:00+00:00",
+      "title": "Lincoln Man Sentenced to 70 Months for Being a Felon in Possession of a Firearm",
+      "url": "https://www.justice.gov/usao-ne/pr/lincoln-man-sentenced-70-months-being-felon-possession-firearm",
+      "published_at": "2026-11-06T12:00:00+00:00",
       "document_type": "official_announcement",
       "stage": "requires_semantic_review",
       "new": false,
-      "cls": "watch"
+      "cls": "docket"
      },
      {
-      "title": "Former FBI Special Agent Charged with Federal Civil Rights Violation and Making False Statements",
-      "url": "https://www.justice.gov/usao-edny/pr/former-fbi-special-agent-charged-federal-civil-rights-violation-and-making-false",
-      "published_at": "2026-11-05T12:00:00+00:00",
+      "title": "Ferndale man sentenced to 121 months for distributing child pornography",
+      "url": "https://www.justice.gov/usao-edmi/pr/ferndale-man-sentenced-121-months-distributing-child-pornography",
+      "published_at": "2026-11-06T12:00:00+00:00",
       "document_type": "official_announcement",
       "stage": "requires_semantic_review",
       "new": false,
-      "cls": "watch"
+      "cls": "docket"
+     },
+     {
+      "title": "Omaha Man Sentenced to 50 Years for Production and Possession of Child Pornography",
+      "url": "https://www.justice.gov/usao-ne/pr/omaha-man-sentenced-50-years-production-and-possession-child-pornography",
+      "published_at": "2026-11-06T12:00:00+00:00",
+      "document_type": "official_announcement",
+      "stage": "requires_semantic_review",
+      "new": false,
+      "cls": "docket"
+     },
+     {
+      "title": "Downtown Seattle drug dealer sentenced to five years in prison for having a gun while dealing crack cocaine",
+      "url": "https://www.justice.gov/usao-wdwa/pr/downtown-seattle-drug-dealer-sentenced-five-years-prison-having-gun-while-dealing",
+      "published_at": "2026-11-06T12:00:00+00:00",
+      "document_type": "official_announcement",
+      "stage": "requires_semantic_review",
+      "new": false,
+      "cls": "docket"
+     },
+     {
+      "title": "Folsom man sentenced to 15 years in prison for sexual exploitation of a child",
+      "url": "https://www.justice.gov/usao-edca/pr/folsom-man-sentenced-15-years-prison-sexual-exploitation-child",
+      "published_at": "2026-11-06T12:00:00+00:00",
+      "document_type": "official_announcement",
+      "stage": "requires_semantic_review",
+      "new": false,
+      "cls": "docket"
+     },
+     {
+      "title": "Blue Ash man who placed hidden cameras in minor victims’ home sentenced to more than 16 years in prison for sexual exploitation of a child",
+      "url": "https://www.justice.gov/usao-sdoh/pr/blue-ash-man-who-placed-hidden-cameras-minor-victims-home-sentenced-more-16-years",
+      "published_at": "2026-11-06T12:00:00+00:00",
+      "document_type": "official_announcement",
+      "stage": "requires_semantic_review",
+      "new": false,
+      "cls": "docket"
+     },
+     {
+      "title": "Brooklyn Park Man Sentenced to 71 Months’ Imprisonment for Being a Felon in Possession of a Firearm",
+      "url": "https://www.justice.gov/usao-mn/pr/brooklyn-park-man-sentenced-71-months-imprisonment-being-felon-possession-firearm",
+      "published_at": "2026-11-06T12:00:00+00:00",
+      "document_type": "official_announcement",
+      "stage": "requires_semantic_review",
+      "new": false,
+      "cls": "docket"
+     },
+     {
+      "title": "Warm Springs Man Charged with Aggravated Sexual Abuse of Two Young Children",
+      "url": "https://www.justice.gov/usao-or/pr/warm-springs-man-charged-aggravated-sexual-abuse-two-young-children",
+      "published_at": "2026-11-06T12:00:00+00:00",
+      "document_type": "official_announcement",
+      "stage": "requires_semantic_review",
+      "new": false,
+      "cls": "docket"
+     },
+     {
+      "title": "Sacramento resident charged with receiving and distributing child sexual abuse material",
+      "url": "https://www.justice.gov/usao-edca/pr/sacramento-resident-charged-receiving-and-distributing-child-sexual-abuse-material",
+      "published_at": "2026-11-06T12:00:00+00:00",
+      "document_type": "official_announcement",
+      "stage": "requires_semantic_review",
+      "new": false,
+      "cls": "docket"
      }
     ]
    }
@@ -2118,7 +1971,7 @@
    "checked_at": "2026-11-07T18:03:52.345238+00:00",
    "parsed": {
     "today": 0,
-    "window": 15,
+    "window": 4,
     "by_class": {},
     "items": [
      {
@@ -2134,24 +1987,6 @@
       "title": "California Laboratory and Its Owner Pay $1.25M to Settle Allegations of Kickbacks to Marketers",
       "url": "https://www.justice.gov/opa/pr/california-laboratory-and-its-owner-pay-125m-settle-allegations-kickbacks-marketers",
       "published_at": "2026-11-06T12:00:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "high"
-     },
-     {
-      "title": "Reward Offers Up to $50M for Information Leading to Arrests and/or Convictions of Foreign Terrorist Organization Tren de Aragua (TdA) Leaders Following Homeland Security Task Force Investigation",
-      "url": "https://www.justice.gov/opa/pr/reward-offers-50m-information-leading-arrests-andor-convictions-foreign-terrorist",
-      "published_at": "2026-11-05T12:00:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "high"
-     },
-     {
-      "title": "Texas Man Indicted for Sex Trafficking and Obstruction Offenses",
-      "url": "https://www.justice.gov/opa/pr/texas-man-indicted-sex-trafficking-and-obstruction-offenses",
-      "published_at": "2026-11-05T12:00:00+00:00",
       "document_type": "official_announcement",
       "stage": "requires_semantic_review",
       "new": false,
@@ -2174,87 +2009,6 @@
       "stage": "requires_semantic_review",
       "new": false,
       "cls": "watch"
-     },
-     {
-      "title": "Justice Department Says Federal Education Aid Cannot Be Tied to Unconstitutional Race-Based Criteria",
-      "url": "https://www.justice.gov/opa/pr/justice-department-says-federal-education-aid-cannot-be-tied-unconstitutional-race-based",
-      "published_at": "2026-11-05T12:00:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "watch"
-     },
-     {
-      "title": "Department of Justice Launches Super Intelligence Task Force",
-      "url": "https://www.justice.gov/opa/pr/department-justice-launches-super-intelligence-task-force",
-      "published_at": "2026-11-05T12:00:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "watch"
-     },
-     {
-      "title": "The Department of Justice Files Complaint Against the Pennsylvania State University Challenging Its Policy that Provide In-State Tuition to Illegal Aliens",
-      "url": "https://www.justice.gov/opa/pr/department-justice-files-complaint-against-pennsylvania-state-university-challenging-its",
-      "published_at": "2026-11-05T12:00:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "watch"
-     },
-     {
-      "title": "Homeland Security Task Force Investigation Leads to Mexican Federal Judge’s Arrest on U.S. Charges of Accepting $2 Million Bribe to Free Canadian Drug Trafficker Charged with Ryan Wedding",
-      "url": "https://www.justice.gov/opa/pr/homeland-security-task-force-investigation-leads-mexican-federal-judges-arrest-us-charges",
-      "published_at": "2026-11-05T12:00:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "watch"
-     },
-     {
-      "title": "Justice Department Awards East Baton Rouge Parish More Than $63.5M to Combat Violent Crime and Restore Law and Order Through Model Cities Initiative",
-      "url": "https://www.justice.gov/opa/pr/justice-department-awards-east-baton-rouge-parish-more-635m-combat-violent-crime-and-restore",
-      "published_at": "2026-11-05T12:00:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "watch"
-     },
-     {
-      "title": "U.S. Trustee Program Prevails at Trial to Revoke $3.9M Discharge from Seattle Man Who Concealed Inheritance Rights and Business Interest",
-      "url": "https://www.justice.gov/opa/pr/us-trustee-program-prevails-trial-revoke-39m-discharge-seattle-man-who-concealed-inheritance",
-      "published_at": "2026-11-05T12:00:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "watch"
-     },
-     {
-      "title": "CEO and VA Employee Sentenced for Paying and Receiving Illegal Health Care Kickbacks and Bribes",
-      "url": "https://www.justice.gov/opa/pr/ceo-and-va-employee-sentenced-paying-and-receiving-illegal-health-care-kickbacks-and-bribes",
-      "published_at": "2026-11-05T12:00:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "watch"
-     },
-     {
-      "title": "Cleveland Gang Members Convicted of Racketeering, Murder, Kidnapping, Drug Trafficking, and Firearms Offenses",
-      "url": "https://www.justice.gov/opa/pr/cleveland-gang-members-convicted-racketeering-murder-kidnapping-drug-trafficking-and",
-      "published_at": "2026-11-05T12:00:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "docket"
-     },
-     {
-      "title": "Former Kokomo Police Department Officer Sentenced to 40 Years in Prison for Sexually Assaulting Minor, Lying to Investigators, and Destruction of Records",
-      "url": "https://www.justice.gov/opa/pr/former-kokomo-police-department-officer-sentenced-40-years-prison-sexually-assaulting-minor",
-      "published_at": "2026-11-05T12:00:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "docket"
      }
     ]
    }
@@ -2453,19 +2207,9 @@
    "checked_at": "2026-11-07T18:03:52.345238+00:00",
    "parsed": {
     "today": 0,
-    "window": 1,
+    "window": 0,
     "by_class": {},
-    "items": [
-     {
-      "title": "Federal Reserve Board announces termination of enforcement action with Allegiant United Holdings, LLC, Nano Financial Holdings, Inc., and Nano Banc",
-      "url": "https://www.federalreserve.gov/newsevents/pressreleases/enforcement20261105a.htm",
-      "published_at": "2026-11-05T16:00:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "high"
-     }
-    ]
+    "items": []
    }
   },
   {
@@ -2515,19 +2259,9 @@
    "checked_at": "2026-11-07T18:03:52.345238+00:00",
    "parsed": {
     "today": 0,
-    "window": 1,
+    "window": 0,
     "by_class": {},
-    "items": [
-     {
-      "title": "Federal Reserve Board announces termination of enforcement action with Allegiant United Holdings, LLC, Nano Financial Holdings, Inc., and Nano Banc",
-      "url": "https://www.federalreserve.gov/newsevents/pressreleases/enforcement20261105a.htm",
-      "published_at": "2026-11-05T16:00:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "high"
-     }
-    ]
+    "items": []
    }
   },
   {
@@ -3638,19 +3372,9 @@
    "checked_at": "2026-11-07T18:03:52.345238+00:00",
    "parsed": {
     "today": 0,
-    "window": 1,
+    "window": 0,
     "by_class": {},
-    "items": [
-     {
-      "title": "Federal Bank Regulatory Agencies Release 2025 Small Business, Small Farm, and Community Development Lending Data",
-      "url": "https://www.occ.gov/news-issuances/news-releases/2026/nr-ia-2026-98.html",
-      "published_at": "2026-11-05T16:00:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "routine"
-     }
-    ]
+    "items": []
    }
   },
   {
@@ -3749,18 +3473,9 @@
    "checked_at": "2026-11-07T18:03:52.345238+00:00",
    "parsed": {
     "today": 0,
-    "window": 2,
+    "window": 1,
     "by_class": {},
     "items": [
-     {
-      "title": "CFTC Staff Addresses Use of Trust Companies for Daily Settlements",
-      "url": "https://www.cftc.gov/PressRoom/PressReleases/9322-26",
-      "published_at": "2026-11-05T18:13:46+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "high"
-     },
      {
       "title": "CFTC Issues Impartial Access Requirements Interpretation",
       "url": "https://www.cftc.gov/PressRoom/PressReleases/9323-26",
@@ -4145,7 +3860,7 @@
    "checked_at": "2026-11-07T18:03:52.345238+00:00",
    "parsed": {
     "today": 0,
-    "window": 47,
+    "window": 39,
     "by_class": {},
     "items": [
      {
@@ -4441,7 +4156,7 @@
    "checked_at": "2026-11-07T18:03:52.345238+00:00",
    "parsed": {
     "today": 0,
-    "window": 14,
+    "window": 10,
     "by_class": {},
     "items": [
      {
@@ -4529,42 +4244,6 @@
       "title": "Rare Disease Framework",
       "url": "http://www.fda.gov/industry/fda-rare-disease-innovation-hub/rare-disease-framework",
       "published_at": "2026-11-05T18:31:55+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "watch"
-     },
-     {
-      "title": "Biologics Electronic Reading Room (eFOIA)",
-      "url": "http://www.fda.gov/about-fda/center-biologics-evaluation-and-research-cber/biologics-electronic-reading-room-efoia",
-      "published_at": "2026-11-05T17:37:24+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "watch"
-     },
-     {
-      "title": "2026 Meeting Materials, Pediatric Advisory Committee",
-      "url": "http://www.fda.gov/advisory-committees/pediatric-advisory-committee/2026-meeting-materials-pediatric-advisory-committee",
-      "published_at": "2026-11-05T17:03:41+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "watch"
-     },
-     {
-      "title": "OTP Guidance Webinar: Potency Assurance for Cellular and Gene Therapy Products - 12/10/2026",
-      "url": "http://www.fda.gov/vaccines-blood-biologics/office-therapeutic-products-otp-events-meetings-and-workshops/otp-guidance-webinar-potency-assurance-cellular-and-gene-therapy-products-12102026",
-      "published_at": "2026-11-05T14:32:17+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "watch"
-     },
-     {
-      "title": "Delivering Answers and Hope for Rare Disease Families",
-      "url": "http://www.fda.gov/news-events/fda-voices/delivering-answers-and-hope-rare-disease-families",
-      "published_at": "2026-11-05T14:03:28+00:00",
       "document_type": "official_announcement",
       "stage": "requires_semantic_review",
       "new": false,
@@ -6025,7 +5704,7 @@
    "checked_at": "2026-11-07T18:03:52.345238+00:00",
    "parsed": {
     "today": 0,
-    "window": 3,
+    "window": 2,
     "by_class": {},
     "items": [
      {
@@ -6041,15 +5720,6 @@
       "title": "US secures labor victory in Alimentos Grole case in Mexico, advancing fair competition for American workers",
       "url": "http://www.dol.gov/newsroom/releases/ilab/ilab20261106",
       "published_at": "2026-11-06T12:00:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "routine"
-     },
-     {
-      "title": "Unemployment Insurance Weekly Claims Report",
-      "url": "http://www.dol.gov/newsroom/releases/eta/eta20261105",
-      "published_at": "2026-11-05T12:00:00+00:00",
       "document_type": "official_announcement",
       "stage": "requires_semantic_review",
       "new": false,
@@ -6640,18 +6310,9 @@
    "checked_at": "2026-11-07T18:03:52.345238+00:00",
    "parsed": {
     "today": 0,
-    "window": 19,
+    "window": 10,
     "by_class": {},
     "items": [
-     {
-      "title": "Speech by Commissioner Dombrovskis presenting report on Simplification, Implementation and Enforcement at CEPS",
-      "url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2357",
-      "published_at": "2026-11-05T12:04:35+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "high"
-     },
      {
       "title": "Speech by Commissioner Hoekstra at the 22nd Athens Tax Forum",
       "url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2370",
@@ -6741,78 +6402,6 @@
       "stage": "requires_semantic_review",
       "new": false,
       "cls": "routine"
-     },
-     {
-      "title": "Remarks by Commissioner Serafin during the Budget Committee meeting at the European Parliament",
-      "url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2358",
-      "published_at": "2026-11-05T12:11:35+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "routine"
-     },
-     {
-      "title": "Daily News 05 / 11 / 2026",
-      "url": "https://ec.europa.eu/commission/presscorner/detail/en/mex_26_2355",
-      "published_at": "2026-11-05T10:32:53+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "routine"
-     },
-     {
-      "title": "Questions and Answers on the 2027 fishing opportunities in the Atlantic, Kattegat and Skagerrak",
-      "url": "https://ec.europa.eu/commission/presscorner/detail/en/qanda_26_2354",
-      "published_at": "2026-11-05T10:28:43+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "routine"
-     },
-     {
-      "title": "Commission proposes 2027 fishing opportunities for fish stocks in the Atlantic, Kattegat and Skagerrak",
-      "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2353",
-      "published_at": "2026-11-05T09:47:10+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "routine"
-     },
-     {
-      "title": "European Innovation Council launches €1.8 billion in funding for 2027",
-      "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2352",
-      "published_at": "2026-11-05T09:45:37+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "routine"
-     },
-     {
-      "title": "Remarks by Executive Vice-President Mînzatu on the Education and Skills package",
-      "url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2351",
-      "published_at": "2026-11-05T09:43:57+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "routine"
-     },
-     {
-      "title": "Keynote address by Commissioner Kubilius at the Konrad Adenauer Stiftung's Global Security Forum",
-      "url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2350",
-      "published_at": "2026-11-05T09:05:13+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "routine"
-     },
-     {
-      "title": "Commission disburses €4.36 billion to Ukraine under the €90 billion Ukraine Support Loan",
-      "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2349",
-      "published_at": "2026-11-05T08:01:16+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "routine"
      }
     ]
    }
@@ -6837,7 +6426,7 @@
    "checked_at": "2026-11-07T18:03:52.345238+00:00",
    "parsed": {
     "today": 0,
-    "window": 10,
+    "window": 9,
     "by_class": {},
     "items": [
      {
@@ -6913,15 +6502,6 @@
       "cls": "routine"
      },
      {
-      "title": "Joint press release: EU – Western Balkans Ministerial Forum on Justice and Home Affairs (Budva, Montenegro, 5-6 November 2026)",
-      "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/11/05/joint-press-release-eu-western-balkans-ministerial-forum-on-justice-and-home-affairs-budva-montenegro-5-6-november-2026/",
-      "published_at": "2026-11-05T17:33:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "routine"
-     },
-     {
       "title": "Weekly schedule of President António Costa",
       "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/11/06/weekly-schedule-of-president-antonio-costa/",
       "published_at": "2026-11-06T15:10:00+00:00",
@@ -6953,55 +6533,9 @@
    "checked_at": "2026-11-07T18:03:52.345238+00:00",
    "parsed": {
     "today": 0,
-    "window": 5,
+    "window": 0,
     "by_class": {},
-    "items": [
-     {
-      "title": "161/2026 : 5 November 2026 - Judgment of the Court in Case C-395/25",
-      "url": "https://curia.europa.eu/site/jcms/p1_1000088940",
-      "published_at": "2026-11-05T09:08:21+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "watch"
-     },
-     {
-      "title": "160/2026 : 5 November 2026 - Judgment of the Court in Case C-118/25 P",
-      "url": "https://curia.europa.eu/site/jcms/p1_1000088930",
-      "published_at": "2026-11-05T08:57:32+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "watch"
-     },
-     {
-      "title": "157/2026 : 5 November 2026 - Judgment of the Court in Joined Cases",
-      "url": "https://curia.europa.eu/site/jcms/p1_1000088916",
-      "published_at": "2026-11-05T08:46:54+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "watch"
-     },
-     {
-      "title": "158/2026 : 5 November 2026 - Judgment of the Court in Case C-505/24 P",
-      "url": "https://curia.europa.eu/site/jcms/p1_1000088915",
-      "published_at": "2026-11-05T08:46:54+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "watch"
-     },
-     {
-      "title": "159/2026 : 5 November 2026 - Judgment of the Court of Justice in Case C-495/25",
-      "url": "https://curia.europa.eu/site/jcms/p1_1000088914",
-      "published_at": "2026-11-05T08:46:53+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "watch"
-     }
-    ]
+    "items": []
    }
   },
   {
@@ -7552,18 +7086,9 @@
    "checked_at": "2026-11-07T18:03:52.345238+00:00",
    "parsed": {
     "today": 0,
-    "window": 4,
+    "window": 2,
     "by_class": {},
     "items": [
-     {
-      "title": "Isabel Schnabel: Navigating stormy waters: reflections on monetary policy",
-      "url": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261105_1~5e97d9d5a0.en.html",
-      "published_at": "2026-11-05T08:00:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "high"
-     },
      {
       "title": "Christine Lagarde: Interview with Yomiuri Shimbun",
       "url": "https://www.ecb.europa.eu//press/inter/date/2026/html/ecb.in261107~e7b86fc4ce.en.html",
@@ -7577,15 +7102,6 @@
       "title": "ECB publishes consolidated banking data for end-June 2026",
       "url": "https://www.ecb.europa.eu//press/pr/date/2026/html/ecb.pr261106~356f2fc73a.en.html",
       "published_at": "2026-11-06T09:00:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "watch"
-     },
-     {
-      "title": "Piero Cipollone: Shaping the future of money",
-      "url": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261105~6495a0df6f.en.html",
-      "published_at": "2026-11-05T07:30:00+00:00",
       "document_type": "official_announcement",
       "stage": "requires_semantic_review",
       "new": false,
@@ -8708,22 +8224,13 @@
    "checked_at": "2026-11-07T18:03:52.345238+00:00",
    "parsed": {
     "today": 0,
-    "window": 2,
+    "window": 1,
     "by_class": {},
     "items": [
      {
       "title": "The EBA outlines next steps on supervisory reporting simplification and extends implementation timelines following consultation feedback on the ITS",
       "url": "https://www.eba.europa.eu/publications-and-media/press-releases/eba-outlines-next-steps-supervisory-reporting-simplification-and-extends-implementation-timelines",
       "published_at": "2026-11-06T12:14:56+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "routine"
-     },
-     {
-      "title": "The EBA publishes revised Guidelines on internal governance, delivering greater proportionality and simplification for banks",
-      "url": "https://www.eba.europa.eu/publications-and-media/press-releases/eba-publishes-revised-guidelines-internal-governance-delivering-greater-proportionality-and",
-      "published_at": "2026-11-05T12:22:03+00:00",
       "document_type": "official_announcement",
       "stage": "requires_semantic_review",
       "new": false,
@@ -8877,19 +8384,9 @@
    "checked_at": "2026-11-07T18:03:52.345238+00:00",
    "parsed": {
     "today": 0,
-    "window": 1,
+    "window": 0,
     "by_class": {},
-    "items": [
-     {
-      "title": "Bank rate increased to 4% - November 2026 Monetary Policy Summary and Minutes",
-      "url": "https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2026/november-2026",
-      "published_at": "2026-11-05T12:00:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "high"
-     }
-    ]
+    "items": []
    }
   },
   {
@@ -9143,37 +8640,9 @@
    "checked_at": "2026-11-07T18:03:52.345238+00:00",
    "parsed": {
     "today": 0,
-    "window": 3,
+    "window": 0,
     "by_class": {},
-    "items": [
-     {
-      "title": "Joint Statement of the Government of Canada and the Bank of Canada on the Renewal of the Monetary Policy Framework",
-      "url": "https://www.bankofcanada.ca/2026/11/joint-statement-of-the-government-of-canada-and-the-bank-of-canada-on-the-renewal-of-the-monetary-policy-framework-2026/",
-      "published_at": "2026-11-05T16:00:19+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "high"
-     },
-     {
-      "title": "Opening Statement to the Standing Senate Committee on Banking, Commerce and the Economy",
-      "url": "https://www.bankofcanada.ca/2026/11/opening-statement-standing-senate-committee-banking-commerce-and-economy-2026-11-05/",
-      "published_at": "2026-11-05T10:30:59+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "watch"
-     },
-     {
-      "title": "Parliamentary Appearance by the Governor and the Senior Deputy Governor of the Bank of Canada",
-      "url": "https://www.bankofcanada.ca/2026/11/parliamentary-appearance-governor-senior-deputy-governor-bank-canada-2026-11-5/",
-      "published_at": "2026-11-05T10:30:36+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "watch"
-     }
-    ]
+    "items": []
    }
   },
   {
@@ -9327,19 +8796,9 @@
    "checked_at": "2026-11-07T18:03:52.345238+00:00",
    "parsed": {
     "today": 0,
-    "window": 1,
+    "window": 0,
     "by_class": {},
-    "items": [
-     {
-      "title": "Joint Statement of the Government of Canada and the Bank of Canada on the Renewal of the Monetary Policy Framework",
-      "url": "https://www.bankofcanada.ca/2026/11/joint-statement-of-the-government-of-canada-and-the-bank-of-canada-on-the-renewal-of-the-monetary-policy-framework-2026/",
-      "published_at": "2026-11-05T16:00:19+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "high"
-     }
-    ]
+    "items": []
    }
   },
   {
@@ -10342,7 +9801,7 @@
    "checked_at": "2026-11-07T18:03:52.345238+00:00",
    "parsed": {
     "today": 0,
-    "window": 3,
+    "window": 2,
     "by_class": {},
     "items": [
      {
@@ -10358,15 +9817,6 @@
       "title": "Reserve Bank files DCS disclosure charge against Westpac New Zealand Limited - Reserve Bank of New Zealand",
       "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOR1VmcEJuX21sWTZVNGNidVRUVFI2OUxsdG5WQzFlbmtQb0tHMFpsNE9EQk9sTlB4Z0w1enluNUw3Q2hnOV9jdU5SXzAzZ2J6VGk4N0t0Nk1HQkVNM2hRMTJDSi03Y0FobTFYdUVxMTVwY2dxSEtjeEZkOF83WWJ6MVhlS3ZFZDN4VFpkdkFqT0QyajExcWpTSGxpU3htWlI5U3gwU3Y1dW81amdCN0JxWUgtWnpyVXo4S3ZmN2VKcFl5VHBrQWNkeGN3",
       "published_at": "2026-11-06T01:07:02+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "watch"
-     },
-     {
-      "title": "NCF key notes - Reserve Bank of New Zealand",
-      "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxPZFRhVkFVODhoS2czaTJYb2RhcHp3UEs4cmU5UnRmSW5TbjdIdGkzWWF6ZXJPdVBETUlpT2dVbHlaeXA5TGd4SFNjQWh2UGwxc3I5d0xzcFRXZ0JOQWEwcUxnenZhWjI3ODlsb2hhNUlXZkxDVUN3REE4TGJCLUZRUThtOVFZYnl3Qy15dFA4X3QyLUd0bHVlUDVGd1hpZGk2YktBUDZnQkVkZGxrMzNRa0s5RHdhbUhrSzRHeFNINjJEekl3OWVJTVpCZ2xza2JUak9wdXFYRVMzQQ",
-      "published_at": "2026-11-05T18:18:03+00:00",
       "document_type": "official_announcement",
       "stage": "requires_semantic_review",
       "new": false,
@@ -10497,7 +9947,7 @@
    "checked_at": "2026-11-07T18:03:52.345238+00:00",
    "parsed": {
     "today": 0,
-    "window": 24,
+    "window": 13,
     "by_class": {},
     "items": [
      {
@@ -10616,105 +10066,6 @@
       "stage": "requires_semantic_review",
       "new": false,
       "cls": "watch"
-     },
-     {
-      "title": "Foreign Exchange Turnover Data: October 26, 2026 – October 30, 2026",
-      "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63930",
-      "published_at": "2026-11-05T17:30:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "watch"
-     },
-     {
-      "title": "Foreign Exchange Turnover Data: October 19, 2026 – October 23, 2026",
-      "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63929",
-      "published_at": "2026-11-05T17:25:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "watch"
-     },
-     {
-      "title": "Foreign Exchange Turnover Data: October 12, 2026 – October 16, 2026",
-      "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63928",
-      "published_at": "2026-11-05T17:20:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "watch"
-     },
-     {
-      "title": "Foreign Exchange Turnover Data: October 05, 2026 – October 09, 2026",
-      "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63927",
-      "published_at": "2026-11-05T17:15:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "watch"
-     },
-     {
-      "title": "Foreign Exchange Turnover Data: September 28, 2026 – October 01, 2026",
-      "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63926",
-      "published_at": "2026-11-05T17:10:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "watch"
-     },
-     {
-      "title": "Consolidation of Instructions Related to Priority Sector Lending – Drafts for Comments",
-      "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63925",
-      "published_at": "2026-11-05T17:05:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "watch"
-     },
-     {
-      "title": "Directions under Section 35A read with Section 56 of the Banking Regulation Act, 1949 – The Pusad Urban Co-operative Bank Ltd., Pusad, Dist. Yavatmal, Maharashtra – Extension of Period",
-      "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63924",
-      "published_at": "2026-11-05T12:45:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "watch"
-     },
-     {
-      "title": "Underwriting Auction for sale of Government Securities for ₹36,000 crore on November 06, 2026",
-      "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63923",
-      "published_at": "2026-11-05T11:35:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "watch"
-     },
-     {
-      "title": "Directions under Section 35A read with Section 56 of the Banking Regulation Act, 1949 – Urban Co-operative Bank Limited, Dehradun - Extension of Period",
-      "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63922",
-      "published_at": "2026-11-05T10:45:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "watch"
-     },
-     {
-      "title": "Result of the Overnight Variable Rate Reverse Repo (VRRR) auction held on November 05, 2026",
-      "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63921",
-      "published_at": "2026-11-05T10:30:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "watch"
-     },
-     {
-      "title": "Money Market Operations as on November 04, 2026",
-      "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63920",
-      "published_at": "2026-11-05T09:00:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "watch"
      }
     ]
    }
@@ -10739,19 +10090,9 @@
    "checked_at": "2026-11-07T18:03:52.345238+00:00",
    "parsed": {
     "today": 0,
-    "window": 1,
+    "window": 0,
     "by_class": {},
-    "items": [
-     {
-      "title": "Master Directions on Cyber Resilience and Digital Payment Security Controls for non-bank Payment System Operators",
-      "url": "https://www.rbi.org.in/scripts/NotificationUser.aspx?Id=13751&Mode=0",
-      "published_at": "2026-11-05T18:20:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "watch"
-     }
-    ]
+    "items": []
    }
   },
   {
@@ -11339,18 +10680,9 @@
    "checked_at": "2026-11-07T18:03:52.345238+00:00",
    "parsed": {
     "today": 0,
-    "window": 4,
+    "window": 3,
     "by_class": {},
     "items": [
-     {
-      "title": "2026-11-05 - Martin Schlegel: Transmission and conduct of monetary policy in Switzerland",
-      "url": "https://www.snb.ch/en/publications/communication/speeches/2026/ref_20261105_msl",
-      "published_at": "2026-11-05T12:40:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "high"
-     },
      {
       "title": "2026-11-06 - Interview - Interview with Martin Schlegel - Handelszeitung",
       "url": "https://www.snb.ch/en/publications/communication/interviews/int_20261105_msl",
@@ -11428,19 +10760,9 @@
    "checked_at": "2026-11-07T18:03:52.345238+00:00",
    "parsed": {
     "today": 0,
-    "window": 1,
+    "window": 0,
     "by_class": {},
-    "items": [
-     {
-      "title": "Policy rate kept unchanged at 4.5 percent",
-      "url": "https://www.norges-bank.no/en/news-events/news/Press-releases/2026/2026-11-05-rate/",
-      "published_at": "2026-11-05T09:00:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "watch"
-     }
-    ]
+    "items": []
    }
   },
   {
@@ -11485,22 +10807,13 @@
    "checked_at": "2026-11-07T18:03:52.345238+00:00",
    "parsed": {
     "today": 0,
-    "window": 2,
+    "window": 1,
     "by_class": {},
     "items": [
      {
       "title": "Invitation to bid – Federal Treasury discount paper (Bubills)",
       "url": "https://www.bundesbank.de/en/press/press-releases/federal-securities/invitation-to-bid-federal-treasury-discount-paper-bubills--1014348",
       "published_at": "2026-11-06T08:30:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "watch"
-     },
-     {
-      "title": "Announcement of a multi-ISIN auction – Reopening of two Federal bonds",
-      "url": "https://www.bundesbank.de/en/press/press-releases/federal-securities/announcement-of-a-multi-isin-auction-reopening-of-two-federal-bonds-993480",
-      "published_at": "2026-11-05T09:00:00+00:00",
       "document_type": "official_announcement",
       "stage": "requires_semantic_review",
       "new": false,
