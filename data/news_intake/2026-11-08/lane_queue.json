@@ -1,5 +1,846 @@
 [
   {
+    "document_id": "195ad23fe98b7f642893dff9",
+    "title": "Geely Launches Methanol Hybrid Technology and World’s First Production Methanol Hybrid Sedan - Hydrogen Central",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOT2Jpa1YwMTYxOGZsUHJsZ0NmYTNGNE15SzBGRWExdF9YSnZMVnZ3YkNCMUR4UmVBc3RlV1c0SVlyWTBtcWZKQU9yMDZPRlJkdjNpZEJvbTM3NS1NQjI4aWxPR0NzVXdDaTZJZHhhMjh0aFBac2tZMDZ0OXZiREkweGVuWTdTV19RY1ptdFhkQnk3Z2xPWWRId29vcHBCdnZrUHdsc2dvNHpsc2ZmQ3ROMTdqNWUtUnZLT09udWlB?oc=5",
+    "published_at": "2026-11-08T02:55:29+00:00",
+    "known_at": "2026-11-08T02:55:29+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: Geely Launches Methanol Hybrid Technology and World’s First Production Methanol Hybrid Sedan - Hydrogen Central",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-11-06.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
+    "document_id": "86620aa35e7c21fc3855b0dc",
+    "title": "What Mettler-Toledo International (MTD) Said on Its Q3 Earnings Call - Yahoo Finance",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQNThJY1F4UFZ1RjBPWXdacVhvaEI1ZHVac0dzYWFBWVpXS1FzaGFZOUNkM2RYdUctYjI0U0NDTXVJZnp2LU14Y1VtdVk3UXJ2MnBsUXAyWDlFb2dwdldqcEw0TGdKeHVyTUFBM0JzOHhIWHBfd1lZSjNsM0UzZXVENmhXVnpJZ3JzVFZrNUJQYnlXU3dqbkhSYjZyMVc3UGJQT2xRZA?oc=5",
+    "published_at": "2026-11-08T02:51:16+00:00",
+    "known_at": "2026-11-08T02:51:16+00:00",
+    "candidate_classes": [
+      "print_vs_priced"
+    ],
+    "state": "candidate",
+    "status": "pending_analysis",
+    "analyst_family": "print",
+    "routing_class": "print_vs_priced",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "print_vs_priced",
+      "sign": null,
+      "q5": "impulse",
+      "constraint": "print_vs_priced: What Mettler-Toledo International (MTD) Said on Its Q3 Earnings Call - Yahoo Finance",
+      "split": false,
+      "split_facts": [],
+      "why": "named print, no other class matched",
+      "family": "print",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "identified",
+      "matches": [
+        {
+          "sector": "Healthcare",
+          "activity": "Diagnostics & Research",
+          "basis": "company_catalog",
+          "evidence": {
+            "quote": "(MTD)",
+            "start": 34,
+            "end": 39
+          },
+          "exposure_verified": false,
+          "ticker": "MTD",
+          "company": "Mettler-Toledo International Inc"
+        }
+      ],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-11-06.csv",
+      "catalog_available": true,
+      "market_sectors": [
+        "Healthcare"
+      ],
+      "market_activities": [
+        "Diagnostics & Research"
+      ],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
+    "document_id": "9ec786637d6e024d880b17a8",
+    "title": "Creative Pass Studio Launches Unlimited Design Monthly Pass, Giving Agencies and Growing Businesses a Senior Creative Team Without Adding Headcount - The Globe and Mail",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMiywJBVV95cUxOZlJ5ak9WTW82TlNsMElhcTZLQVg2OHBJU1lFbkozc3JLWFFKYUlrMXNXYXJJSlNyQzl5Z0ZESFFyMkpwOWpmdzFaM3lHMkNKd19YMjhjZmNWajVUaHFhRDJUcy1CT3NSWUhWZGxDVlMzVU13R3laQUlmZFRDaDVTQXpjQ0hwS1BUcUN4TTItYjVLRTdRekEwSFR2OEMxZkdYdE9uU3lfWFN1Y25DalBqSHdGWHpSX2FEUEx6SmVGMWdHcWhfNFNNQW1TSkh3VnB6dzV3R2VscEs3akRjUElZeGNLZVR3MUdVcmdsd3ZvMTB6LWVHZmhtRVJOc1NicmtWam03TVM0NHJmcUZtVExEbzR4V0NqSnNrOF9zWGkzcmdXb2VvUzkxbVNlUUVTMGxvTHdEYVdiakVYU2c0aXdTYVpsNk9kZ3U3eklN?oc=5",
+    "published_at": "2026-11-08T02:51:05+00:00",
+    "known_at": "2026-11-08T02:51:05+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: Creative Pass Studio Launches Unlimited Design Monthly Pass, Giving Agencies and Growing Businesses a Senior Creative Team Without Adding Headcount - The Globe ",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-11-06.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
+    "document_id": "6711483ecb0e2438d7ad1813",
+    "title": "Powell Industries (POWL) Reaffirms Its Dividend, Is The 60% Undervalued View Credible? - Yahoo Finance",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOaUJtbUNzbjVWVHllSFpJbUktQUJaSnpzeEZpX0RibEhNaW9pU0dYRUFnQTZVWGNLdndlckgwdmdZUW16Y3BlR0oxN3pjRWJRQ3JrczhNZDJoY3RyclNSdEJUS2JXT0QyQjRFR2VFWTJ6NkZwUXdNTWhpUml1QTJGcmVNVi1tM1RYQXdkdzRLalEwcEhpUFpDYXBSOVRrOG5kTTBSMU5xZWRIZw?oc=5",
+    "published_at": "2026-11-08T02:48:45+00:00",
+    "known_at": "2026-11-08T02:48:45+00:00",
+    "candidate_classes": [
+      "print_vs_priced"
+    ],
+    "state": "candidate",
+    "status": "pending_analysis",
+    "analyst_family": "print",
+    "routing_class": "print_vs_priced",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "print_vs_priced",
+      "sign": null,
+      "q5": "impulse",
+      "constraint": "print_vs_priced: Powell Industries (POWL) Reaffirms Its Dividend, Is The 60% Undervalued View Credible? - Yahoo Finance",
+      "split": false,
+      "split_facts": [],
+      "why": "named print, no other class matched",
+      "family": "print",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "identified",
+      "matches": [
+        {
+          "sector": "Industrials",
+          "activity": "Electrical Equipment & Parts",
+          "basis": "company_catalog",
+          "evidence": {
+            "quote": "Powell Industries",
+            "start": 0,
+            "end": 17
+          },
+          "exposure_verified": false,
+          "ticker": "POWL",
+          "company": "Powell Industries Inc"
+        }
+      ],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-11-06.csv",
+      "catalog_available": true,
+      "market_sectors": [
+        "Industrials"
+      ],
+      "market_activities": [
+        "Electrical Equipment & Parts"
+      ],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
+    "document_id": "d81fc078b85cdff023aad7ec",
+    "title": "Atlassian (TEAM) Could Be 33% Undervalued After Earnings Guidance Shock - Yahoo Finance",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPeXJ1dS1jTHg5VmxnM3ZLRWV6Rlcyc3g1N2p2UVY0NC0zcWtSODdyLU9GcnMwUEpKRWhFaURaVjBhV3FyeVdXU3ZsUTZQXy12UG9OMEl1OTVHWEZiaEpJd3FMTVMtR0VFX1JGVGtRZVR4cGZwbjBYd2RWSXRRMWNsT1pPek1hS2wyMlVuVUNuSjd1Vk5aUXdqM0xWc0xXSXdQN2c?oc=5",
+    "published_at": "2026-11-08T02:46:22+00:00",
+    "known_at": "2026-11-08T02:46:22+00:00",
+    "candidate_classes": [
+      "print_vs_priced"
+    ],
+    "state": "candidate",
+    "status": "pending_analysis",
+    "analyst_family": "print",
+    "routing_class": "print_vs_priced",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "print_vs_priced",
+      "sign": null,
+      "q5": "impulse",
+      "constraint": "print_vs_priced: Atlassian (TEAM) Could Be 33% Undervalued After Earnings Guidance Shock - Yahoo Finance",
+      "split": false,
+      "split_facts": [],
+      "why": "named print, no other class matched",
+      "family": "print",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "identified",
+      "matches": [
+        {
+          "sector": "Technology",
+          "activity": "Software - Application",
+          "basis": "company_catalog",
+          "evidence": {
+            "quote": "Atlassian",
+            "start": 0,
+            "end": 9
+          },
+          "exposure_verified": false,
+          "ticker": "TEAM",
+          "company": "Atlassian Corp"
+        }
+      ],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-11-06.csv",
+      "catalog_available": true,
+      "market_sectors": [
+        "Technology"
+      ],
+      "market_activities": [
+        "Software - Application"
+      ],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
+    "document_id": "46acf80087b437f342fe395e",
+    "title": "Earnings Beat Could Be A Game Changer For Sunrun Stock (RUN) - Yahoo Finance",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNS05PbnJEVDNjemNsSk5BTHQ4eEZEam90M1ZRNl93bExCWGpjamNjTFFxU25ld1JlNlZTX2Z4RVFJLVJqVGQ3RlJJY1Q5ejgzV2RHM0lXT2VlSkFOeUtJWkptbjItTG1PNmZhZzFGaFFEZzFvekNRaUVZd21Oc2tFNUFDeFN4VG1ZcWMzak9ScTRvOGRDVUpaNktkZmRyZw?oc=5",
+    "published_at": "2026-11-08T02:46:22+00:00",
+    "known_at": "2026-11-08T02:46:22+00:00",
+    "candidate_classes": [
+      "print_vs_priced"
+    ],
+    "state": "candidate",
+    "status": "pending_analysis",
+    "analyst_family": "print",
+    "routing_class": "print_vs_priced",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "print_vs_priced",
+      "sign": null,
+      "q5": "impulse",
+      "constraint": "print_vs_priced: Earnings Beat Could Be A Game Changer For Sunrun Stock (RUN) - Yahoo Finance",
+      "split": false,
+      "split_facts": [],
+      "why": "named print, no other class matched",
+      "family": "print",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "identified",
+      "matches": [
+        {
+          "sector": "Technology",
+          "activity": "Solar",
+          "basis": "company_catalog",
+          "evidence": {
+            "quote": "Sunrun",
+            "start": 42,
+            "end": 48
+          },
+          "exposure_verified": false,
+          "ticker": "RUN",
+          "company": "Sunrun Inc"
+        }
+      ],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-11-06.csv",
+      "catalog_available": true,
+      "market_sectors": [
+        "Technology"
+      ],
+      "market_activities": [
+        "Solar"
+      ],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
+    "document_id": "1f3d65a13a2caa43f4e78545",
+    "title": "ArcelorMittal Q3 Earnings Call Highlights - Yahoo Finance",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPZWRVdzZkcU83WGpPNkFkT05acXMyLW9yanFaV01EcWE5LUlnZ1BJZkQycTFZQ3REQWZuWXNfQk5BRGY4YTBPWjVPSDUwbjVmRmx4aEhsRW1UQUU1TmRZZy13QXpUc2dOSFVUaHhaZ1JfSE5TblJLbGVQZWV3WkY3NV9DMEJ1UmtSaXV0WmZWTVd1ZlFhLXNRbVBqZjJZNVZQd0NlT19MQ0R3QQ?oc=5",
+    "published_at": "2026-11-08T02:44:48+00:00",
+    "known_at": "2026-11-08T02:44:48+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: ArcelorMittal Q3 Earnings Call Highlights - Yahoo Finance",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "identified",
+      "matches": [
+        {
+          "sector": "Basic Materials",
+          "activity": "Steel",
+          "basis": "company_catalog",
+          "evidence": {
+            "quote": "ArcelorMittal",
+            "start": 0,
+            "end": 13
+          },
+          "exposure_verified": false,
+          "ticker": "MT",
+          "company": "ArcelorMittal SA"
+        }
+      ],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-11-06.csv",
+      "catalog_available": true,
+      "market_sectors": [
+        "Basic Materials"
+      ],
+      "market_activities": [
+        "Steel"
+      ],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
+    "document_id": "14ef9fb263e9ad2119003763",
+    "title": "LIVE.wATCHING: BC Lions vs Edmonton Elks live Free - The Albertan",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxObWFsUG4xWW5JS3M3MUNIOUlBamctMUoxLTJjT25DMkg4V083QlZSeXdobzJ5SXFPRHFielhWSHZrRExpY3lycXVjV2FfT3NOakVPQzdTbTNtZTh4U0NuMlIxQWxya2FGQUVla0U2bmxNSnc0ZDY1UlF2aEw0OU1PT1Y1Y0FyM3VrZk9ZRWFSM0p6Wmc?oc=5",
+    "published_at": "2026-11-08T02:40:45+00:00",
+    "known_at": "2026-11-08T02:40:45+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: LIVE.wATCHING: BC Lions vs Edmonton Elks live Free - The Albertan",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-11-06.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
+    "document_id": "0efbebc7d14e6fcd6e0cfa07",
+    "title": "LIVE.wATCHING: BC Lions vs Edmonton Elks live Free - Grice Connect",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOa0kwMmJDaks3NGNsTmMzTnoyU01qRTNHTlJqR1ZxMWFYejdOOWduTmtySEVVUGswd0EwOEpTZTQ3aFptMExId0M5a25Ga1dQdm9yUTJ0ZDlKaDJOOEI5WHUwemE5SDVyUlJLS0pkUnlPTGJJWGdnNEZUSHpldjV6TlctY29KaEp2d1pjMlBMLU5UcjZQ?oc=5",
+    "published_at": "2026-11-08T02:40:45+00:00",
+    "known_at": "2026-11-08T02:40:45+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: LIVE.wATCHING: BC Lions vs Edmonton Elks live Free - Grice Connect",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-11-06.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
+    "document_id": "991a5818aaa62797b0ec9742",
+    "title": "Bulls Notes: Claxton, Smith, Buzelis, Powell, Trade Season - Hoops Rumors",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOeURyd0NPcUlCalk1aVpCSTdlTVlJRjN4RFUzZVRxZExmUGwxdXlWb2RvWWwwamhSMVZudnZjWllKd3I4Z3FrSEMwN3JKT3QxaWh1ZlpfREhMMVFGNG0yVkRPRnRRLW1FM3BpcU5QeWU3b2xIYlhFcE0tYWYyMW5SUmRFZVVFSFdXZHcyQjJ3SkVvUGNVeWNheGh3?oc=5",
+    "published_at": "2026-11-08T02:39:27+00:00",
+    "known_at": "2026-11-08T02:39:27+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: Bulls Notes: Claxton, Smith, Buzelis, Powell, Trade Season - Hoops Rumors",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-11-06.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
+    "document_id": "452146ade83eaf80da6daeb0",
+    "title": "US launches task force to disrupt Iran’s land-based supply routes - Al Jazeera",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQUzlZRHNHOEx4NlhrUzJkZmM1UUhPdlBKLXp5OEJYYkpTamRaRUVsUjVZd1pCX01JZXNlYTBKNm9fRkxKQ3VFQmlsdTU4dVN3enpRLVdxZUx0WVM3ZkstRkI3YllCeE9la0QzQW5kYjZ5R0tvbDJjVzk3WFdqczNqVDFiSEN4MXlSd0lBN09DZ0lIV1NYV2thbEt4MDIwTEh0d3BvZ21XZmjSAa4BQVVfeXFMTXB1eGlRQ3JfcXB1cWJLRG1kRFZ0bGdvYWJiNFpLX0ZESXZnbmZ4YnZPYm1fVlRGcmtiU19qUjhid1NaSDhwRnRMUUFVeUswbkNxX19LTDJKU24xX1laZ2V0U21XelNxZWVNemZjLU9MSGVidDdTZHI3bXVGdDR1T1hGV1hHazZjZTRNUllBdUQ1c0RGMXlDOFJQbVB4QUgwU1VhUGpyVF9MbUpuanhR?oc=5",
+    "published_at": "2026-11-08T02:38:09+00:00",
+    "known_at": "2026-11-08T02:38:09+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: US launches task force to disrupt Iran’s land-based supply routes - Al Jazeera",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-11-06.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
+    "document_id": "ed90c52c2376a66ee76fd3a9",
+    "title": "ED Is Not A Super Cop, Karnataka High Court Rules While Quashing Money Laundering Case - The 420.in",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQRjRLQU0xSmhjMnBfelA2UXVxVmpVLXNyeEt0NTdwMHJDUTFacEZZVXY1dkdkZTVOZmZXeGluQWFfNEpNdV9wWlpEZ1g1V0JJX2JkR3c1dU9zX0lNZkhxelBEaUk0dXJJTkpDRmV2eENpdXpEVzktRC16NnBkTHBpQ2dvN09FMm5NaHUxOGJhQXUzZVFxaldHcnRiVHdOUXBHVlRCYmVodw?oc=5",
+    "published_at": "2026-11-08T02:38:04+00:00",
+    "known_at": "2026-11-08T02:38:04+00:00",
+    "candidate_classes": [
+      "blast_legal"
+    ],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "unconfirmed_coverage_hints",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: ED Is Not A Super Cop, Karnataka High Court Rules While Quashing Money Laundering Case - The 420.in",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-11-06.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
+    "document_id": "c550fb300b2c9c39d9aecabf",
+    "title": "Spectroscopic Technology Advances Agricultural Product Quality and Food Safety Detection Systems - Bioengineer.org",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNeW1HekFDeG8tMGtNaG56dDhBajVjNVhYN2hfYUlJdWZYN1hESERXSUdkcjFQZHdQUVRZVGxsZnNHaTZKbENJd1pIRFNyeXQ3UUxROEg0QVh6T01vMm16WWx4TWJBOWtUMDFnVHpDM3hHaHhHNVpzSlNNbDczVjg1X0RySEZjOHBpbk9URkdta2VQaDVkYjRMRFVEdERMNHRJbmhyWnJacVhWWnd1LUpfOWljWEFJUTQ2VTlQdEdB?oc=5",
+    "published_at": "2026-11-08T02:36:33+00:00",
+    "known_at": "2026-11-08T02:36:33+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: Spectroscopic Technology Advances Agricultural Product Quality and Food Safety Detection Systems - Bioengineer.org",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-11-06.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
     "document_id": "3da0473a5f57932a55ffc25d",
     "title": "New AI Model Predicts Molecular Toxicity Using 3D Geometry - Bioengineer.org",
     "evidence_file": "documents.json",
@@ -875,6 +1716,63 @@
     }
   },
   {
+    "document_id": "63d373a1c5976040a401f204",
+    "title": "Ben James extends lead to 4 at World Wide Technology Championship - San Luis Obispo Tribune",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE13Y0h5NXZuZnFvREtEcnpILXc1NG9fTzlfQUlZd0VjdkltTEpla1B5bVpycmFBMHNjV2ptTlVUNUFPdmJkcG5peUFBSHlhc1RGOHhvcHdQeEh2aHdlbE5ieTlHVjEyUl9EVmFxRDN5Tkc?oc=5",
+    "published_at": "2026-11-08T02:20:08+00:00",
+    "known_at": "2026-11-08T02:20:08+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: Ben James extends lead to 4 at World Wide Technology Championship - San Luis Obispo Tribune",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-11-06.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
     "document_id": "041b866bea9b50b18bccd3a4",
     "title": "CNet IDs Disabled Following Cyberattack on Computer Science Department - Chicago Maroon",
     "evidence_file": "documents.json",
@@ -1044,6 +1942,213 @@
       "catalog_available": true,
       "market_sectors": [],
       "market_activities": [],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
+    "document_id": "98727508ab800d349a57bcd7",
+    "title": "Ex-military chief Gadi Eisenkot, opponent of Netanyahu, tapped to form government - The Washington Post",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPNkNJbUh4ZFl6NzBHZjJZVU85UGhmUnIzSnBXZUhrczJyNldvUWNHYndxc293NGFwOG1Yb2JaeEdmVW1nYWU1dmdrYVJXU2NVdFZERGN6TjZSUFk3WmhzTjdHd2RZdWx5OFZQOEx6V3lOeVY5dTlwV0pidXZ6RWN3MVlPU20xQWJmcjlPdzJtSlZWMld0QkpESFVkbEpfa3k4ZzJhc2Z1QzR2OGdEdlFfQ3VBWjZvZWtDSXhuN0taZFNFU1E4?oc=5",
+    "published_at": "2026-11-08T02:14:44+00:00",
+    "known_at": "2026-11-08T02:14:44+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: Ex-military chief Gadi Eisenkot, opponent of Netanyahu, tapped to form government - The Washington Post",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-11-06.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
+    "document_id": "5254b2b0db971fa76f7e113c",
+    "title": "Rayonier Q3 Earnings Call Highlights - Yahoo Finance",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQTUlaYllMcXJ1azM4S1ZYd0JUWXctZEVZd3o3R0dkZzVJblpoX2k1VWRwNm9QSHNnLUhSS3ZzdlFpdmJjakxvMlV6ekJlemFURU9QRE5STjR2S2xvUFNtenFWVUd3Z2oyZ04xZ0tXR3VETU1HM25FY1dxOV9kc3lobE8tbzJIVzFCNEhRVjFadDNsUXdUV1JTMmxtaVZUeWNLY1pB?oc=5",
+    "published_at": "2026-11-08T02:14:00+00:00",
+    "known_at": "2026-11-08T02:14:00+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: Rayonier Q3 Earnings Call Highlights - Yahoo Finance",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "identified",
+      "matches": [
+        {
+          "sector": "Real Estate",
+          "activity": "REIT - Specialty",
+          "basis": "company_catalog",
+          "evidence": {
+            "quote": "Rayonier",
+            "start": 0,
+            "end": 8
+          },
+          "exposure_verified": false,
+          "ticker": "RYN",
+          "company": "Rayonier Inc"
+        }
+      ],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-11-06.csv",
+      "catalog_available": true,
+      "market_sectors": [
+        "Real Estate"
+      ],
+      "market_activities": [
+        "REIT - Specialty"
+      ],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
+    "document_id": "47de7edf27f953a65acb3c1e",
+    "title": "LCI Industries Q3 Earnings Call Highlights - Yahoo Finance",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPbzJWdURuVkpMYjY4b25XbUs0WnRQYWdTNWhlbThZeDIzcjFYSExQWEw2QmJ6Y1o5ZFZXQ3Y4ZWszNC1kZG5VMHFvdVVtQWVUSnVvSjNQNW90b0JWUk5Wc25pcHlVZ0Y4MUJYZ0RYT3c4Y05ZQXFFcVBlVnV4VUFEMXBYY19BUHlvMDgtRHc3V2JJdjlvVEt3d3FYRzk?oc=5",
+    "published_at": "2026-11-08T02:14:00+00:00",
+    "known_at": "2026-11-08T02:14:00+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: LCI Industries Q3 Earnings Call Highlights - Yahoo Finance",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "identified",
+      "matches": [
+        {
+          "sector": "Consumer Cyclical",
+          "activity": "Recreational Vehicles",
+          "basis": "company_catalog",
+          "evidence": {
+            "quote": "LCI Industries",
+            "start": 0,
+            "end": 14
+          },
+          "exposure_verified": false,
+          "ticker": "LCII",
+          "company": "LCI Industries"
+        }
+      ],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-11-06.csv",
+      "catalog_available": true,
+      "market_sectors": [
+        "Consumer Cyclical"
+      ],
+      "market_activities": [
+        "Recreational Vehicles"
+      ],
       "unknowns": [
         "Sector relevance does not establish material exposure, winners, losers or price direction"
       ]
@@ -1299,6 +2404,151 @@
       "sign": null,
       "q5": "regime",
       "constraint": "discard: Magnitude 5.7 quake strikes central Japan, leaving at least 20 injured - Newswav",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-11-06.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
+    "document_id": "e246834c44a870b07f51d295",
+    "title": "Berkshire Hathaway (BRK.A) Formalizes Greg Abel Succession After Earnings Slip And $9.6 Billion Repurchase - Yahoo Finance",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOb28zSUxaNTBMVXp0WS1UZ0JtTUU1REZtWUNhUHVnaElEMXpNOVZ4a2lqRk9nVWZwblRjeFduS2NPTnU4ZWRHQXVSY2hnNnFxbXUzZzZhSF9jYjhkOXhLTE41SzdkNlotNmstVko2RFJvY1lHbUM4TUxTcEtmUkQ2UzA5NWJxSVlwMjVJOHlXM2pVeXFSX1dIUGJKOEl6cEI2N3lxN3Fn?oc=5",
+    "published_at": "2026-11-08T02:11:00+00:00",
+    "known_at": "2026-11-08T02:11:00+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: Berkshire Hathaway (BRK.A) Formalizes Greg Abel Succession After Earnings Slip And $9.6 Billion Repurchase - Yahoo Finance",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "identified",
+      "matches": [
+        {
+          "sector": "Financial",
+          "activity": "Insurance - Diversified",
+          "basis": "company_catalog",
+          "evidence": {
+            "quote": "Berkshire Hathaway",
+            "start": 0,
+            "end": 18
+          },
+          "exposure_verified": false,
+          "ticker": "BRK-A",
+          "company": "Berkshire Hathaway Inc"
+        },
+        {
+          "sector": "Financial",
+          "activity": "Insurance - Diversified",
+          "basis": "company_catalog",
+          "evidence": {
+            "quote": "Berkshire Hathaway",
+            "start": 0,
+            "end": 18
+          },
+          "exposure_verified": false,
+          "ticker": "BRK-B",
+          "company": "Berkshire Hathaway Inc"
+        }
+      ],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-11-06.csv",
+      "catalog_available": true,
+      "market_sectors": [
+        "Financial"
+      ],
+      "market_activities": [
+        "Insurance - Diversified"
+      ],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
+    "document_id": "97e1ff690697cc2aec93afdb",
+    "title": "Ex-LSU Football Player Launches Brutal Attack on Lane Kiffin Over Alabama Blunder: “Narcissist” - Yahoo Sports",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOQWgzZGJyWXVBa3pSank4THVIcUpZRjBIeVFGTmJwYk1FcWs3a3ZQd0RCdXdCVnBMRGIwQmJ4YzZaMkIwV2hfTGRFRUZ2dXBpdDI2UFBJR2dCSlV5ZzduYUhYcnVPWGRrN2F2dVp3eTlrVlVQWDNFMkkzMDd3NlNySDZrYjNDSk0?oc=5",
+    "published_at": "2026-11-08T02:11:00+00:00",
+    "known_at": "2026-11-08T02:11:00+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: Ex-LSU Football Player Launches Brutal Attack on Lane Kiffin Over Alabama Blunder: “Narcissist” - Yahoo Sports",
       "split": false,
       "split_facts": [],
       "why": "no constraint identified",
@@ -2606,6 +3856,120 @@
       "sign": null,
       "q5": "regime",
       "constraint": "discard: SpaceX Lockup Expiration Nears, but ‘Biggest Ever’ Claim Unverified - Financial-News.co.uk",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-11-06.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
+    "document_id": "533dc8416796de6b2a39436c",
+    "title": "Live - US hits vessel off Iran, launches task force to disrupt land supply routes - Iran International",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE95U0ZtQmdNa0ZLb1ZDczdBNHVhcXJEdTRNLThfVWpPZW1WSjRwY0RERFEwTzFlOVJyb09UZ1h0aUh5OG1PNWI0YVFQeXhzbkdxOU0yX25yaDVwUFlHVWc?oc=5",
+    "published_at": "2026-11-08T01:47:38+00:00",
+    "known_at": "2026-11-08T01:47:38+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: Live - US hits vessel off Iran, launches task force to disrupt land supply routes - Iran International",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-11-06.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
+    "document_id": "ad26429d4727268a72989515",
+    "title": "Trump says he offered White House press secretary role to UFC’s Dana White - The Washington Post",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOWDk3dmNRMjFNZWFHWWtoOWFCeDVLXzB1WnlKVEljUk01NXhRX20zcllRMjJETzMzZElwYVE5ZXN5QVpfTWJELXlkMFk3SktkX1NmNjFqYkgxbFhNM2xzVVQtODAyaUstRGlGamNqbmtJOG42bU5WVFpVTC1Kd3FQV3VrVGRmQWlKVWR6UnJ4Y2ZCTDJTYzVpRDJLbElpVEVuQzlPUm9ndkp6RGxZNWlaTjlweTcyVm5odHc?oc=5",
+    "published_at": "2026-11-08T01:46:15+00:00",
+    "known_at": "2026-11-08T01:46:15+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: Trump says he offered White House press secretary role to UFC’s Dana White - The Washington Post",
       "split": false,
       "split_facts": [],
       "why": "no constraint identified",
@@ -4989,6 +6353,99 @@
     }
   },
   {
+    "document_id": "7af9d47bca726208fa003d41",
+    "title": "Trump threatens Democrats over their plans to investigate his team - The Seattle Times",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPcE9wSUJoYUp0emUxX2hDS2VJdUREb3F3elk0dmRxMkFjakExbmptTUVxZTBiOWxmc3Z6SFpZUW9FTnhOQjh0NmtiR2R3YkFudGNiSGpTSVRZcHNmdjU3NUlxTzFGZGt2a0E5QjJxX2RpS1M4c1VUaEdYLVlaUFY2ZFlCX1M0S3R0dnRyc2t3cTlFamQ4YS1ITktGVGdjQVQ5VXhsMVY5RHVWeERHWUhaWXRIVzNYdWQwOUE3ZEtiZzlVd3M?oc=5",
+    "published_at": "2026-11-08T01:16:20+00:00",
+    "known_at": "2026-11-08T01:16:20+00:00",
+    "candidate_classes": [
+      "regulatory_probe"
+    ],
+    "state": "candidate",
+    "status": "pending_analysis",
+    "analyst_family": "firm",
+    "routing_class": "regulatory_probe",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "regulatory_probe",
+      "sign": null,
+      "q5": "impulse",
+      "constraint": "regulatory_probe: Trump threatens Democrats over their plans to investigate his team - The Seattle Times",
+      "split": false,
+      "split_facts": [],
+      "why": "overhang, nothing filed as a finding",
+      "family": "firm",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [
+        {
+          "authority": "Trump",
+          "authority_type": "executive",
+          "jurisdiction": "US",
+          "us_scope": true,
+          "authority_level": "federal",
+          "action_category": "policy_proposal",
+          "action": "threatens",
+          "subject": "Democrats over their plans to investigate his team",
+          "stage": "proposed_or_uncertain",
+          "concrete_reported_action": false,
+          "authority_evidence": {
+            "quote": "Trump",
+            "start": 0,
+            "end": 5
+          },
+          "action_evidence": {
+            "quote": "threatens",
+            "start": 6,
+            "end": 15
+          },
+          "verification": "headline_reported_not_primary_verified",
+          "effective_date": null,
+          "implementation_verified": false,
+          "lane_classification": null,
+          "market_sectors": [],
+          "unknowns": [
+            "Legal scope, effective date and implementation require source terms",
+            "Institution recognition alone does not establish companies or market direction"
+          ],
+          "market_activities": [],
+          "sector_scope": "same_headline_segment_relevance_not_verified_exposure"
+        }
+      ],
+      "status": "identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": true
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-11-06.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
     "document_id": "75b1490018e5b85f7786b2c1",
     "title": "Japan earthquake: 5.7-magnitude tremor hits central region, at least 22 injured - Moneycontrol.com",
     "evidence_file": "documents.json",
@@ -6088,6 +7545,63 @@
       "market_activities": [
         "Marine transport"
       ],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
+    "document_id": "52c64b4567711f4e1f17ca3d",
+    "title": "Arrest made in killing of Katie Suarez, jogger fatally stabbed in Brooklyn - CBS News",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPUnBZRnhGREFzVHJ4cTBTRTdyenpIOG5NOVJkMmo3djlLRFF6cUw0em16T0lSV01ldWVsZnJ1dlNOZzZ3UkViYVdjV2ZXM19tYnFNaUt2NE9UdTFWMnBSX1Z5cjdLV2lVaEFXS05ranNYajRTSGowQ2NsV2ZEQmk1YUlkdjVlX2Z1cnRhWVdR?oc=5",
+    "published_at": "2026-11-08T01:08:18+00:00",
+    "known_at": "2026-11-08T01:08:18+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: Arrest made in killing of Katie Suarez, jogger fatally stabbed in Brooklyn - CBS News",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-11-06.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
       "unknowns": [
         "Sector relevance does not establish material exposure, winners, losers or price direction"
       ]
@@ -7694,6 +9208,63 @@
       "why": "macro color without a print or a decision",
       "family": "time",
       "factor": "labor"
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-11-06.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
+    "document_id": "789a8d467d9c72ce26d85bf1",
+    "title": "Wisconsin state trooper released from ICE custody after ‘dramatic’ arrest - The Hill",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQdzRsNkJ0Zk91Q3FuNTZyaXBWVk5ScnBYZUxVdmk0MXU5VFRLa2ptejF6TnZuTExwWW9JSUhPWlY4bnNnTVlmWVdta3F1aUlkYjlTVGRueHdzWS1rWmxGWFpkeUpjbFpwRjkwN2FzWTRna1lYRE1iWnZGem1jUjY2ZFU5YkrSAYoBQVVfeXFMUGVKaG5aaXluQXNEQUJkV19XZGNYaHhHZkdfaWlBZG0yQlMxWEp1OTgzS3B6TWJSeGVrX2t0bDQ0ZWhpVk5lS3E3OG5GMFl6U0c0Z1BGZ0owS0h0ZUIzQ1dvQ1RYYUJIZ2pnc2E1ZW9EaUxRVVRuaWhBM19DZW5waXFlcEd5WUk2Yjhn?oc=5",
+    "published_at": "2026-11-08T00:58:00+00:00",
+    "known_at": "2026-11-08T00:58:00+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: Wisconsin state trooper released from ICE custody after ‘dramatic’ arrest - The Hill",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
     },
     "institutional_actions": {
       "version": "institutional-actions-v2",
@@ -13511,6 +15082,63 @@
     }
   },
   {
+    "document_id": "d663ffe94def6bec198b0ce9",
+    "title": "Aurora, Illinois woman Levi Pimentel among 2 licensed skydivers killed in Lake Elsinore, California after parachutes entangled - ABC7 Chicago",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxObXpfcnV4Z09aUGZCMG1PY0Y3NHl2eFQ3bXVpMDBCdEJjOUVIbmpiWld6ZzRFeVlXUjBNdHdpQ3g5aDZkVEhGYmZhUnN6dUp5SnBNa19GMW9TRFdZUFZFVFNLLWtxQlRqOHdCOW82bEk2Q1NvN2VSeVdiMC0yaERmSHJKV3NVcTJoU0tteHJ4NF85MUl4bWNoZDBRdDJ5YkNfWkh5M3hOS3ZqM1hnRlJlVkpuTHFJdld0aEp3RmdRVlladlRMcEpkM252U0hzWmhzNk1fMHZhcHlSd1pEMWdCbF9NdF9zMVhwLXfSAe8BQVVfeXFMT1NicUs1N3hjY2dodTBZZGFndmFwYkl4UjRYeE05QVEzN0JhWnIxRElPYlp1NmpISlU2UkY5YkVMZk1yTUNQcWVmMHNXczl5RHE2UXRSSlo4VTRmOTV4OWdsZzVQc0RfUU1GRm1XWDZGUEYtVjBoV1Z1US1LaEpac2JPZWdFeVNUTmRsUXlKODZ6MXBfbHVjbVpjR29kelB5Q1lvRkJvaDZUV0MyU2VQanhLajBGc3ppWE9JakdIV0N2VTZYVEVpbmdtSDNOWHVnTnpKa0xUMjA0RU5qdmQ0VU9GeGNzeXZuQlVqVUlzUms?oc=5",
+    "published_at": "2026-11-07T23:38:18+00:00",
+    "known_at": "2026-11-07T23:38:18+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: Aurora, Illinois woman Levi Pimentel among 2 licensed skydivers killed in Lake Elsinore, California after parachutes entangled - ABC7 Chicago",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-11-06.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
     "document_id": "9dbef0c3c5c3431a22c2226b",
     "title": "How Generative Artificial Intelligence Is Transforming Spatial-Temporal Data Mining - Bioengineer.org",
     "evidence_file": "documents.json",
@@ -15821,6 +17449,63 @@
       "sign": null,
       "q5": "regime",
       "constraint": "discard: A strong earthquake with a preliminary magnitude of 5.7 strikes central Japan, meteorological agency says - Daily Sitka Sentinel",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-11-06.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
+    "document_id": "a7413cb20e364590ed4217de",
+    "title": "Lake Powell rises more than 21 feet since historic low in mid-September - WEAR TV",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPYjNiQ0FkTWRyMjdGa2QxQTAwckQ1TVRPSEhDbWlnMUpOS196S0hnU0s4b2s4djliNXl0elpJNkxndGhfQlVlaGpSTmFaZHBHajM4enJwOXp1Y3IzckFYcGFmNHVfQ2JBZFFSTzRlX1UxRzdFWUlrTk1UU1prWmlyLW9IM2xlV0R1dWtBeEdJaWpVZEd0b2lzc3ZSa0dsRWZURzNuVlQzSHVob0Zq?oc=5",
+    "published_at": "2026-11-07T23:24:35+00:00",
+    "known_at": "2026-11-07T23:24:35+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: Lake Powell rises more than 21 feet since historic low in mid-September - WEAR TV",
       "split": false,
       "split_facts": [],
       "why": "no constraint identified",
@@ -18402,6 +20087,63 @@
     }
   },
   {
+    "document_id": "694c46d4871e5495d6b20be4",
+    "title": "Judge taps ex-prosecutor to probe lawyer conduct in Trump golf course fight - The Washington Post",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNOXZ3RUQtVVByaU1ZMmVSb3UzZzJVbC1hZ0tvMDlmbnlKRE9QVWdHYkItb1llakhaUk5uV0ExTF9kUDVmZmRiS1BlaTdCZUJuTEdZa0VjaGRBVzZiN2Q0ck1UUm1ILVU3V1E3WmsyN1M1NDJ4b1EyT0FKX3MyT0dqZWU2QUJSOTNvaFIzTHJvVnRad1VtTEJ4Y2V0SnhmNUl1S1d3UGRPWEl1QjFXRzB2NmYtcWZha1NDUzhGbXNB?oc=5",
+    "published_at": "2026-11-07T23:09:45+00:00",
+    "known_at": "2026-11-07T23:09:45+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: Judge taps ex-prosecutor to probe lawyer conduct in Trump golf course fight - The Washington Post",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-11-06.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
     "document_id": "9e04ecf10b9ef9bd1314b506",
     "title": "Wrestling places ninth at Ned McGinley Invitational - Rochester Institute of Technology Athletics",
     "evidence_file": "documents.json",
@@ -18751,6 +20493,63 @@
         "end": 36
       },
       "verification": "headline_reported_not_primary_verified"
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-11-06.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
+    "document_id": "f8e6bd0d619340f524fd2385",
+    "title": "Temperatures stay a touch milder with high cloud tonight, but winds pick up tomorrow - Cloquet Pine Journal",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1zVnFRbUFhS2xjZ1VjdGFGdThBbmxsWjZ1QWVyMUFxbnVtdEVVaFRZcWZ3ZUZGQ2FNT1dORFd0OXJTMnFrbktUazlDTm5OSlplUERqSw?oc=5",
+    "published_at": "2026-11-07T23:02:53+00:00",
+    "known_at": "2026-11-07T23:02:53+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: Temperatures stay a touch milder with high cloud tonight, but winds pick up tomorrow - Cloquet Pine Journal",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
     },
     "sector_classification": {
       "version": "headline-sectors-v1",
@@ -22551,6 +24350,81 @@
     }
   },
   {
+    "document_id": "c9fe4881f7efde6859ca8798",
+    "title": "Devon Energy Stock And Other Oil Producers Facing Inflation Pressure - Yahoo Finance",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOQWFqNXdwQUJnT1Qxa3hMVWZjSWZOUzVYanRxeGsyUUF1TFk1Q0ZVV1p5RUx1OHM3WGUzSGwzYUxCbnBNTFVtNW1Qa3c3OGxRYWI4ckt2ZHp0T0dqVVgxRTc0SEtJaWh6VGhOZ004d2MxWG5hVFVhcHdGX3Q5ZVRtZzdHOHpvT045RnVLU1BR?oc=5",
+    "published_at": "2026-11-07T22:14:13+00:00",
+    "known_at": "2026-11-07T22:14:13+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: Devon Energy Stock And Other Oil Producers Facing Inflation Pressure - Yahoo Finance",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "identified",
+      "matches": [
+        {
+          "sector": "Energy",
+          "activity": "Oil & Gas E&P",
+          "basis": "company_catalog",
+          "evidence": {
+            "quote": "Devon Energy",
+            "start": 0,
+            "end": 12
+          },
+          "exposure_verified": false,
+          "ticker": "DVN",
+          "company": "Devon Energy Corp"
+        }
+      ],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-11-06.csv",
+      "catalog_available": true,
+      "market_sectors": [
+        "Energy"
+      ],
+      "market_activities": [
+        "Oil & Gas E&P"
+      ],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
     "document_id": "0504488369c69411adb11e9c",
     "title": "Seagate Technology Holdings plc (STX) Seasonal returns chart - Yahoo Finance Australia",
     "evidence_file": "documents.json",
@@ -22781,6 +24655,63 @@
       "split_facts": [],
       "why": "ops/cyber hit on a named firm",
       "family": "blast",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-11-06.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
+    "document_id": "c41e25cfc50729f34b8aa907",
+    "title": "Texas's 'Blue Tsunami' has former Texas congressman Beto O'Rourke 'over the moon' - NPR",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPbGVqcmRyZ21SMHBEa2xETkkwcmdlN2R3LUY4Mk9RQ3pJRmVKWmFQR2MtUFEwR3RxUkhYQ1QxT21MQXVvV1J5LXJVOEp5aFg0ZFZQVGtSVlh4THJiVzlkM3FERFdnOWpjaTc2U25UWDRtTk1oem83MU1GaUw5MkZOLWtOZTRtR1g4THFTSGZLU201eVIwZkJGZ2x1TW9rTGVBM21ldWVCamhvRVFUZWlMQVFnb0pxM0ROLUZqZA?oc=5",
+    "published_at": "2026-11-07T22:12:08+00:00",
+    "known_at": "2026-11-07T22:12:08+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: Texas's 'Blue Tsunami' has former Texas congressman Beto O'Rourke 'over the moon' - NPR",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
       "factor": ""
     },
     "institutional_actions": {
@@ -25594,6 +27525,63 @@
       "market_activities": [
         "Specialty Chemicals"
       ],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
+    "document_id": "05713b795d6363518e4c6a69",
+    "title": "Three Billy Edwards TD passes lift UNC to 38-21 win over UConn in Belichick's return to New England - AP News",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOc1RjLVdGTUJsRHBEcEg2azJPeElzNGFPOGtnS2RGTnFOVU9QTnVXTG8xZTVUVVhnbWJvdWxXaFlGd2VoQk9aU01nZ2F0XzJFbVF0VHB5NkdOTFBxeFktMGRlMlBwTVpVWXk2M2gzT2RBQ2gwOE5LWEQxWU9wZW9tVUVRV19vYnVHbFhRU3ZPRU9PS1V1Z3RVaVNsWQ?oc=5",
+    "published_at": "2026-11-07T21:31:00+00:00",
+    "known_at": "2026-11-07T21:31:00+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: Three Billy Edwards TD passes lift UNC to 38-21 win over UConn in Belichick's return to New England - AP News",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-11-06.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
       "unknowns": [
         "Sector relevance does not establish material exposure, winners, losers or price direction"
       ]
@@ -29120,6 +31108,63 @@
     }
   },
   {
+    "document_id": "02aab1ce7d80fcc8a5e27e34",
+    "title": "Petition Calling for House Speaker Other Than Hakeem Jeffries Hits 1 Million Signatures - Common Dreams",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNLUVHdlNmamlXa0xWR1JVTHlYZ0FvcHhqNVBZb3JUODJQRVJmTEVkOFJLR29iWU1TWXZaX0tHcmUxRkg3bTR4V1pHcnoteWZTRGpDSnVrU2dQTFlrM2ZXMl9tR0QyeDcyQXd0SktQempqTmtZM2tvN0hjZ2o3bE5Oc3pXR3Nldw?oc=5",
+    "published_at": "2026-11-07T20:51:12+00:00",
+    "known_at": "2026-11-07T20:51:12+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: Petition Calling for House Speaker Other Than Hakeem Jeffries Hits 1 Million Signatures - Common Dreams",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-11-06.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
     "document_id": "b780cd92216ed0e177b691a2",
     "title": "Senator-elect Abdul El-Sayed launches ‘Habibi PAC’ days after historic Michigan win - Türkiye Today",
     "evidence_file": "documents.json",
@@ -32494,6 +34539,63 @@
       "market_activities": [
         "Marine transport"
       ],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
+    "document_id": "5e7b09f76aef4eef422db3d4",
+    "title": "IMO 8-K & SEC Filings - Yahoo Finance - Yahoo! Finance Canada",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE9zVEJsYUtCRzltMDRrQ0lqanhyRFA1ejZ2RnJ3czhTdTVMN1ltMTdXRVBpOGNIczNzU0FiRk0tU1E0TWVXMkI1VklvRDdNNnRmV1ZVTjE1Nlp6MnhZQ015b09pTVlxeV9WTGF3U2Z5NE5SQkJWOHN3UldB?oc=5",
+    "published_at": "2026-11-07T20:17:20+00:00",
+    "known_at": "2026-11-07T20:17:20+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: IMO 8-K & SEC Filings - Yahoo Finance - Yahoo! Finance Canada",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-11-06.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
       "unknowns": [
         "Sector relevance does not establish material exposure, winners, losers or price direction"
       ]
@@ -36263,6 +38365,97 @@
     }
   },
   {
+    "document_id": "f3cb8ae8a2af8dbd1bfd066e",
+    "title": "Senate passes bipartisan Protect College Sports Act: How it impacts Boise State athletes - KBOI",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNOWwtZnlnTWdDTXAySU1aWjVPbVlQMjJ4N3Z4ZDA5MVRZQ2NIY21nS0RWMHhSNllYMFJ2RmhFajRUV1pzZnpfZEhzbmp0U21BMzZhamlWWmktMk5xMWN2UTVOVUpEOGVETk1CSW1fdjVZVW9HYzFoQUtEaWVIcHpjd0c1QVJMUWszZjgzYy1ScE45MUE2ODluU2ZnYndlZllhNE5NUHhydS16VzgwTDBGS3ExOXlmaEpjTkU0TUdRd2tDTEtRVTU1ZGpFc2xmandmdjR4djRzRVlkV3Qz?oc=5",
+    "published_at": "2026-11-07T19:41:53+00:00",
+    "known_at": "2026-11-07T19:41:53+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: Senate passes bipartisan Protect College Sports Act: How it impacts Boise State athletes - KBOI",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [
+        {
+          "authority": "Senate",
+          "authority_type": "legislature",
+          "jurisdiction": null,
+          "us_scope": false,
+          "authority_level": null,
+          "action_category": "legislation",
+          "action": "passes bipartisan Protect College Sports Act",
+          "subject": "How it impacts Boise State athletes",
+          "stage": "chamber_approval_reported",
+          "concrete_reported_action": true,
+          "authority_evidence": {
+            "quote": "Senate",
+            "start": 0,
+            "end": 6
+          },
+          "action_evidence": {
+            "quote": "passes bipartisan Protect College Sports Act",
+            "start": 7,
+            "end": 51
+          },
+          "verification": "headline_reported_not_primary_verified",
+          "effective_date": null,
+          "implementation_verified": false,
+          "lane_classification": null,
+          "market_sectors": [],
+          "unknowns": [
+            "Legal scope, effective date and implementation require source terms",
+            "Institution recognition alone does not establish companies or market direction"
+          ],
+          "market_activities": [],
+          "sector_scope": "same_headline_segment_relevance_not_verified_exposure"
+        }
+      ],
+      "status": "identified",
+      "has_concrete_reported_action": true,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-11-06.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
     "document_id": "ff6902fd57f5eb6ea21140f4",
     "title": "WWE Crown Jewel results: Powell's review of Roman Reigns vs. Sami Zayn for the Crown Jewel Championship, Chelsea Green vs. Liv Morgan for the Women's Crown Jewel Championship - Pro Wrestling Dot Net",
     "evidence_file": "documents.json",
@@ -38720,6 +40913,63 @@
     }
   },
   {
+    "document_id": "2b9fea3f5cea6f6e3325c981",
+    "title": "South Africa's ANC facing worst-ever performance in local elections - DW.com",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOa2s2SDZWT3FaYXpQYmc3MDk3R1JuajMyYkMteGNJNTVvdVRFY1Nmc1QxMFVZU0lBTU50RmdQRkdrYnBWcTZGRmpIN3BHREhsUndpVHRuSEppYjdMdXkzUnJ3ajJlOGdqcjZtZnZmN1J0LTJpSHlEM1BXeGoyRUxSdWFyRmRxdnU2cFZhdmRrdElxVUNuT3M2eFpSakFVbG4t0gGgAUFVX3lxTE9hWUEyWDh0TTFSWlUtRXRBZWV5S0ZBdnU1bUdvYVlzTGtXOGV6YmFOTDk0TUpYclU5ZWY2VzU5WmtuRVlUWGFOMFUtWkZ2RTdJR29NVk9GVUt3TVJNc1RDeFBGaW9YMENHLVJlRTZ0VXpQVVlYTmFPVVBOa1pET0l5V1dzeWNOdjE0R2gwTGFybHJwSnl0aXZxX0gteHpBVzU?oc=5",
+    "published_at": "2026-11-07T19:18:33+00:00",
+    "known_at": "2026-11-07T19:18:33+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: South Africa's ANC facing worst-ever performance in local elections - DW.com",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-11-06.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
     "document_id": "5fc47cae17e2c98bf55e4ec2",
     "title": "Voters appear to reject measure for Arvada Fire funding - Denver7",
     "evidence_file": "documents.json",
@@ -40947,6 +43197,63 @@
     }
   },
   {
+    "document_id": "ff319709e6ed814613447161",
+    "title": "Scientists Discover Two Enormous Tears in a Tectonic Plate Beneath Iran - ScienceAlert",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQeGwyZnYtMl91UmxiWDAxT2hwNDIwYzFwd25CRzJnVHJuZFNmQXFzQTRPaVhRUXVqUE5RT3JQeUdwWXZoNlZrQlFuemppRTduWnhhQVYyTGluWnU0SXFtX01Bb2hSX3J0UGJsXzhoLVhmYWY4MldEdUZXVVNIRGM3dXBnd3cyWGlmNFhHU0lYN1lJbWJBaElRbWg3VTh5bTI1cVE?oc=5",
+    "published_at": "2026-11-07T19:04:12+00:00",
+    "known_at": "2026-11-07T19:04:12+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: Scientists Discover Two Enormous Tears in a Tectonic Plate Beneath Iran - ScienceAlert",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-11-06.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
     "document_id": "8a06793b24287d1bf12c5e28",
     "title": "Minor mag. 1.5 earthquake - 23 mi west of Paso Robles, San Luis Obispo County, California, United States, on Saturday, Nov 7, 2026, at 10:49 am (GMT -8) - Volcano Discovery",
     "evidence_file": "documents.json",
@@ -41244,6 +43551,63 @@
       "sign": null,
       "q5": "regime",
       "constraint": "discard: New Zealand’s election results are too close to call - The Washington Post",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-11-06.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
+    "document_id": "ff31f2c3ea114f6cff0e9b3c",
+    "title": "China - AP News",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMiQkFVX3lxTE14cmpvQUJHVjlsSjVVdzJUM0J1eXhnTU1ZLVRkS1IzOGRsOGRwaG5ER2ZITExjOTJ2MjI3Qk94V3J5QQ?oc=5",
+    "published_at": "2026-11-07T19:01:46+00:00",
+    "known_at": "2026-11-07T19:01:46+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: China - AP News",
       "split": false,
       "split_facts": [],
       "why": "no constraint identified",
@@ -62991,6 +65355,63 @@
     }
   },
   {
+    "document_id": "2e2fd752c742fa858ab4d692",
+    "title": "Good Riddance to the Cybertruck, the Chariot of the Dumbest Gods - Rolling Stone",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQZllPOEhTRGVQVzRaYURMdlZQSUpqcTEzZnBXajRkZ25RUEdzNFJXVkU5Z2Y5VzN0dUpQNV9CQmV1X3BPbHVyRHBUaTdGNFNmSjh2cG5VUjVFd3ZQQnZzVVlSVWRUQUMtUVBqM3EtT2VhZnQ3cUphVmJ4dmxPYzdnNWs3M2F2OUNpRnVQX0wyVV9Nc3FtQTdFUFlRcFFFeVdKMkhkNA?oc=5",
+    "published_at": "2026-11-07T16:33:15+00:00",
+    "known_at": "2026-11-07T16:33:15+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: Good Riddance to the Cybertruck, the Chariot of the Dumbest Gods - Rolling Stone",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-11-06.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
     "document_id": "3198633a63a1107b3ca664e7",
     "title": "Gilroy hotel tax increase will generate thousands of dollars - San José Spotlight",
     "evidence_file": "documents.json",
@@ -67573,6 +69994,63 @@
       "sign": null,
       "q5": "regime",
       "constraint": "discard: State offers $27 million for alternative fuel technology projects - Mid Hudson News",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-11-06.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
+    "document_id": "72a475a060fa459a0371c211",
+    "title": "US Senator-elect Abdul El-Sayed launches 'Habibi PAC' days after historic election win - Devdiscourse",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxOd0xMc1VSZERRVlVtdnlMWWFzc2xGYXlNdWFvRGNyODVoRW9GVTA0RDU3VXJ0U2VpTnB5X3l6N0tUdER4MGZxMGxVNkkzNzhjV3FQNVdnNTRNNUtYSDVkRnpMYjhPSGtWQnVEOG5DWWhyWktuZndmZVh0MzlUNFlTbFMtMmdsMy1sdFRFOThPeGxvZjVoZkFZejNlVWlZSi14Z0drV1gtV3pXRVo3UGpMMGEtMVpZbXFaUjN0bU9QWnJpRlhydWF1SV9CT0NhdUdmTHl4UlBPVW5CVknSAeABQVVfeXFMTlhfZmRLNjBjNlV1OWxyNDlBdkpldHEySWhNYmtmb0VPWmhlWUNpNXpSQ0RJMWdrbVRjRTJSNlRIbVdEcWVFMG9DMWVjQ3hFTlJOVlBhTXpFUEZsa05sZW9NM096M2JaMHNxS195WDhnM0IzaHVQUVBlTHJXUmloYlRzVmtPOWhSSkxqUHZjUmZSdlhGMk52cHlvZy1EMXptSDlBWWJZMGVOem9pNXZRQ2JWcmZXV21yQTA1SFFpWEJ0TVJCUmhlTmdmbHY4N1RfN2VSTFRneG5jVkVXQU1DV2w?oc=5",
+    "published_at": "2026-11-07T16:02:48+00:00",
+    "known_at": "2026-11-07T16:02:48+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: US Senator-elect Abdul El-Sayed launches 'Habibi PAC' days after historic election win - Devdiscourse",
       "split": false,
       "split_facts": [],
       "why": "no constraint identified",
@@ -113629,6 +116107,81 @@
     }
   },
   {
+    "document_id": "21ca70144025f8f586ebec58",
+    "title": "Nasdaq's XRP Treasury Crashed Nearly 50% In a Month - BeInCrypto",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBRanhQQ05YODlsaXRYRUNtLVpORWZoVTlZZDE0UDZjX3BEbjRTN2w0Z3pyZ2FaVnpTY2FTa0Z6ZUdsckgxa2xRTW5rd195SjI2MGxFWnA5MzVZQ0pMdVA5clRXT3dnUF91MXNj?oc=5",
+    "published_at": "2026-11-07T09:59:44+00:00",
+    "known_at": "2026-11-07T09:59:44+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: Nasdaq's XRP Treasury Crashed Nearly 50% In a Month - BeInCrypto",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "identified",
+      "matches": [
+        {
+          "sector": "Financial",
+          "activity": "Financial Data & Stock Exchanges",
+          "basis": "company_catalog",
+          "evidence": {
+            "quote": "Nasdaq",
+            "start": 0,
+            "end": 6
+          },
+          "exposure_verified": false,
+          "ticker": "NDAQ",
+          "company": "Nasdaq Inc"
+        }
+      ],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-11-06.csv",
+      "catalog_available": true,
+      "market_sectors": [
+        "Financial"
+      ],
+      "market_activities": [
+        "Financial Data & Stock Exchanges"
+      ],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
     "document_id": "468299b826b33d077016cb32",
     "title": "AHR: American Healthcare REIT Inc. filed SEC Form 8-K: Entry into a... - Quantisnow",
     "evidence_file": "documents.json",
@@ -116861,6 +119414,63 @@
     }
   },
   {
+    "document_id": "7adb33adb8ae493def9d1847",
+    "title": "COPR 8-K & SEC Filings - Yahoo Finance - Yahoo! Finance Canada",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1zSDMxUHUyVlY4VHFySk5pODl0SVF1dDBZZ09PNllQUWdhSFRWMWlubmtEdWJSZWpxUTJNRnYwWlNRcnl5STloXzg0T1V1dzFZem9Fb18yUC1maDF6SHBVRkg4b055ZmxYeGg0RGZLQ0lod3JjN0ZwU1p5S3N4dw?oc=5",
+    "published_at": "2026-11-07T09:16:56+00:00",
+    "known_at": "2026-11-07T09:16:56+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: COPR 8-K & SEC Filings - Yahoo Finance - Yahoo! Finance Canada",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-11-06.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
     "document_id": "097d752dd45f7fc3bc0f2205",
     "title": "AIIMS Bibinagar Swasthya App Brings OPD Booking, UPI Billing - eHealth Magazine",
     "evidence_file": "documents.json",
@@ -117762,6 +120372,63 @@
       "why": "macro color without a print or a decision",
       "family": "time",
       "factor": "inflation"
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-11-06.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
+    "document_id": "5d97e4c6e53c0b49cb27d46f",
+    "title": "\"I Had To Fulfil My Granddaughter's Wish\": DMK Leader On Vedic Wedding Row - NDTV",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNNmJsQWUtWW4ycHNiZ3JCTGlUVGY2clFXdXRKUHhQX21VMmFSMXZ0aHBtVTdrckxobjJDc2xMTlMyX1JRZE1jekdycUFNbFd4UjVoNkR1ajdNNi1GX3NDYTFDdjVUR0ZvWGJxY0JBdHN6c2lPU1ZzcUtkZlA4a09FNTJJTWE4OGp5ZVhSUjc1MW14cWNoQWF6SkZ1MG1FMHIyazQ2TF81RDVJUzB4QWlEMTc3N20yVVdFN0cwbE1raE5zUzFOMWJYQ2ZMelpTZEtXR2ptaTRwOA?oc=5",
+    "published_at": "2026-11-07T09:05:06+00:00",
+    "known_at": "2026-11-07T09:05:06+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: \"I Had To Fulfil My Granddaughter's Wish\": DMK Leader On Vedic Wedding Row - NDTV",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
     },
     "institutional_actions": {
       "version": "institutional-actions-v2",
@@ -118926,6 +121593,81 @@
       "catalog_available": true,
       "market_sectors": [],
       "market_activities": [],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
+    "document_id": "bf22a42bbf002758b5e980c3",
+    "title": "Medical Device Recalls - U.S. Food and Drug Administration (.gov)",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNNmFvY2g2WXNfRks4VGhhcll1aXcxSlB3OHJ2dEFvWVJvNURmaTIxYzY0d29CSUNqb09TM2NZOGlDR3dseWxqSEpJWExUb0hvR29YTHhxMkE5OXVyTWNNaVZteXExMmVXRWNxbmFLWnc3SE5BcEpRbmRzNTBzU3ozTkYtRmtDNGpzZEVnM2FYajZ1S3hEd1pGTnNtUQ?oc=5",
+    "published_at": "2026-11-07T08:36:38+00:00",
+    "known_at": "2026-11-07T08:36:38+00:00",
+    "candidate_classes": [
+      "product_harm"
+    ],
+    "state": "candidate",
+    "status": "pending_analysis",
+    "analyst_family": "blast",
+    "routing_class": "product_harm",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "product_harm",
+      "sign": null,
+      "q5": "impulse",
+      "constraint": "product_harm: Medical Device Recalls - U.S. Food and Drug Administration (.gov)",
+      "split": false,
+      "split_facts": [],
+      "why": "product harm / recall",
+      "family": "blast",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "identified",
+      "matches": [
+        {
+          "sector": "Healthcare",
+          "activity": "Medical devices",
+          "basis": "title_activity",
+          "evidence": {
+            "quote": "Medical Device",
+            "start": 0,
+            "end": 14
+          },
+          "exposure_verified": false
+        }
+      ],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-11-06.csv",
+      "catalog_available": true,
+      "market_sectors": [
+        "Healthcare"
+      ],
+      "market_activities": [
+        "Medical devices"
+      ],
       "unknowns": [
         "Sector relevance does not establish material exposure, winners, losers or price direction"
       ]
@@ -156725,6 +159467,63 @@
       "sign": null,
       "q5": "regime",
       "constraint": "discard: Volcano Earthquake Report for Saturday, 7 November 2026 - Volcano Discovery",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-11-06.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
+    "document_id": "8ad9c1ef41f4f851e8b1aec3",
+    "title": "California’s ‘billionaire tax’ is still undecided. Here’s where Proposition 40 stands - Los Angeles Times",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNRDNpOFFLeGFhSFZNbVVtWEgxNmdCQm1RSjV0dzNVbkFCQUhtZjFSTGpUbjNTeWoxbVpoLTAxYzd5bWc3cTVrcjN1RWRXdTBIQjFHemN0S042bldOeEJWMDdGY3Z1eWhUR1loRFhtZTFBcTNJdHlyQ1Bvb2JtU2wwWnlvRW1KLVhNOGZIM0FxNkJvRzhMdVh1YnNCTXRobmFHN1JWTkJoYk9FTFY4b0dLeGxfQUwxUXU0RlJEQ0lmUQ?oc=5",
+    "published_at": "2026-11-07T00:56:00+00:00",
+    "known_at": "2026-11-07T00:56:00+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: California’s ‘billionaire tax’ is still undecided. Here’s where Proposition 40 stands - Los Angeles Times",
       "split": false,
       "split_facts": [],
       "why": "no constraint identified",
@@ -205103,6 +207902,63 @@
     }
   },
   {
+    "document_id": "7d24a9664895dad2bc163604",
+    "title": "AI stocks bounce back after trillions wiped from market values - BBC",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5kNlQ2MXB3TldBa2dOdXBzUXpYUlNBenNaZTlFX3E1ZUE1V040UnpKQlVZSjNpWm1TVEx2NnRfWUowVmsydV85TEJHbjJKSVVUNTF1d1Y0YU5RYjQ?oc=5",
+    "published_at": "2026-11-06T21:06:25+00:00",
+    "known_at": "2026-11-06T21:06:25+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: AI stocks bounce back after trillions wiped from market values - BBC",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-11-06.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
     "document_id": "a5fb05b9b4276ebc64fb08dc",
     "title": "Nvidia, AMD, and Micron stocks lead chip sector higher following worst sell-off since 2020 - Yahoo Finance",
     "evidence_file": "documents.json",
@@ -238648,6 +241504,63 @@
     }
   },
   {
+    "document_id": "ab3dd43b0dea258e579bc1ac",
+    "title": "New data suggests Peltola likely to win Alaska, voters not confused by 2 Dan Sullivans - Democracy Docket",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQaEdJMW9VMW9GejJTZTFMUjNDMWdfR2ltNzRSS0Rrek1LemFvcmxJOUd0UE16R0o2QjdOeER2RUhvOUg0dmdKdWVzenJWOUFDYUJtVVZieVZ5V0NvLXNTUUsyNzNsZFQ0bjJyWVotNGY4Qng0UUhicWI0b0VkVUo5a2xtemo3SDRHc21vaWlYV0JuUFZzbUU3LWppdkMyZGJWMnJLZkE3ZXE1UTk2MGdiSkRYS1ZrWnN5Sm1qSGQyVEFRWFFONlN3SFVR?oc=5",
+    "published_at": "2026-11-06T18:28:03+00:00",
+    "known_at": "2026-11-06T18:28:03+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: New data suggests Peltola likely to win Alaska, voters not confused by 2 Dan Sullivans - Democracy Docket",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-11-06.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
     "document_id": "df56043f15fb4db4a28b480f",
     "title": "United States Court of Appeals for the Federal Circuit - U.S. Court of Appeals for the Federal Circuit (.gov)",
     "evidence_file": "documents.json",
@@ -256437,6 +259350,81 @@
     }
   },
   {
+    "document_id": "df6eb8db66b8a54b685347c7",
+    "title": "With U.S. revenue up 23%, Senstar (SNT) posted a larger Q3 sales gain overall. - Stock Titan",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPNjJHTXhwbWEzQUNocUVfaDlvai1fQ1F4RXNSMkpzWkhyaTloQWVEbGhwMzJIRXhSMDdHMjQ3aVNWeWxfamNJZjFNSG5lWlNwM19pX0ZSWVVEX3NpaUNTNERSNjNLRUF3aDdCdExKTGNCQ3JUVEs3MndMUHd3QkRvQnhBeUdoZGlnR2E1RW5mb1luM1cycUhwOV9xbVZXVnhDZnZvbFlpRHNJNGpJTGdOR1Npb3JFU00wQ0g2VA?oc=5",
+    "published_at": "2026-11-06T17:01:33+00:00",
+    "known_at": "2026-11-06T17:01:33+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: With U.S. revenue up 23%, Senstar (SNT) posted a larger Q3 sales gain overall. - Stock Titan",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "identified",
+      "matches": [
+        {
+          "sector": "Industrials",
+          "activity": "Security & Protection Services",
+          "basis": "company_catalog",
+          "evidence": {
+            "quote": "(SNT)",
+            "start": 34,
+            "end": 39
+          },
+          "exposure_verified": false,
+          "ticker": "SNT",
+          "company": "Senstar Technologies Corp"
+        }
+      ],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-11-06.csv",
+      "catalog_available": true,
+      "market_sectors": [
+        "Industrials"
+      ],
+      "market_activities": [
+        "Security & Protection Services"
+      ],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
     "document_id": "dd4ca3b3bd2086dd07f1839f",
     "title": "US Special Situations: Mercer International unveils comprehensive restructuring, $1.1bn senior notes to be equitised and $400mn of new money; implemented via prepack chapter 11 - CreditSights",
     "evidence_file": "documents.json",
@@ -265740,6 +268728,63 @@
       "sign": null,
       "q5": "regime",
       "constraint": "discard: Why Wildfire Evacuation Planning Matters - National Fire Protection Association (NFPA)",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-11-06.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
+    "document_id": "9ab5f0cb7575b7b8ee98b6aa",
+    "title": "OpenAI investing in AI data centers despite election results, CFO says - CNBC",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE54bWpvVi13alRsTVY0VGFfT0dUS3JtMG4yYVZtNDhkN2lIUndZeFVvVEdwZExsNjNPeXR1aEVVZzNSZjlBS1lSdUdoeUg4RmpWc3VqcDREUzA0RGlxZ2kzaC1KYVNzX3pxTlBLSGJtUlA0LUVq?oc=5",
+    "published_at": "2026-11-06T16:22:49+00:00",
+    "known_at": "2026-11-06T16:22:49+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: OpenAI investing in AI data centers despite election results, CFO says - CNBC",
       "split": false,
       "split_facts": [],
       "why": "no constraint identified",
@@ -279552,6 +282597,79 @@
       "catalog_available": true,
       "market_sectors": [],
       "market_activities": [],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
+    "document_id": "755320d3e6402ce8db92d518",
+    "title": "New wave of bomb threats hit European airlines - BBC",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1HRkQ1WHllSEFiSE1KdkJGWFkyaVQ0MW5KOWZsWHVuVXg4OEYwUTM5a3FEZjBZdmRzZEdPU1NFazYzR2ZST3pBc3J1alVnU2hwNTFvclhFZmxoMUk?oc=5",
+    "published_at": "2026-11-06T15:25:35+00:00",
+    "known_at": "2026-11-06T15:25:35+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: New wave of bomb threats hit European airlines - BBC",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "identified",
+      "matches": [
+        {
+          "sector": "Industrials",
+          "activity": "Airlines",
+          "basis": "title_activity",
+          "evidence": {
+            "quote": "airlines",
+            "start": 38,
+            "end": 46
+          },
+          "exposure_verified": false
+        }
+      ],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-11-06.csv",
+      "catalog_available": true,
+      "market_sectors": [
+        "Industrials"
+      ],
+      "market_activities": [
+        "Airlines"
+      ],
       "unknowns": [
         "Sector relevance does not establish material exposure, winners, losers or price direction"
       ]
@@ -317682,6 +320800,63 @@
     }
   },
   {
+    "document_id": "fbfded01a0d0b92a8a6966c1",
+    "title": "JSGCL Company Announcements - JS Global Capital Ltd - Investify",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9lRzlwX0VqeHdGWlQwdDNXYnJ1UEdCRnFBcFBqc1JnNzl0X0p0X0l6SnNqbXNiVU44SHJDS1VUYTA0aWdOMzFpM2U1eEdELW1XNVBjemZHVFJxejJyMDVfQlhR?oc=5",
+    "published_at": "2026-11-06T12:31:57+00:00",
+    "known_at": "2026-11-06T12:31:57+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: JSGCL Company Announcements - JS Global Capital Ltd - Investify",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-11-06.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
     "document_id": "3762726bc4c6b819af958750",
     "title": "Republicans ran away from Trump's Canadian tariffs, but not far enough - CBC",
     "evidence_file": "documents.json",
@@ -321952,6 +325127,63 @@
     }
   },
   {
+    "document_id": "de8ffe2ed2b6865815288fe1",
+    "title": "Over 235 New Federal Immigration Cases Filed in Western District of Texas",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://www.justice.gov/usao-wdtx/pr/over-235-new-federal-immigration-cases-filed-western-district-texas",
+    "published_at": "2026-11-06T12:00:00+00:00",
+    "known_at": "2026-11-06T12:00:00+00:00",
+    "candidate_classes": [],
+    "state": "candidate",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: Over 235 New Federal Immigration Cases Filed in Western District of Texas",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-11-06.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
     "document_id": "dd3517c9585f489f5b3b7310",
     "title": "Omaha Man Sentenced to 18 Years in Prison for Conspiring to Distribute Methamphetamine",
     "evidence_file": "documents.json",
@@ -322117,6 +325349,81 @@
       "catalog_available": true,
       "market_sectors": [],
       "market_activities": [],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
+    "document_id": "c558a8182120a4bff4a62b06",
+    "title": "Noble Man Pleads Guilty to Using Sham Farm Stand to Process More Than $212,000 in Fraudulent SNAP Benefits",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://www.justice.gov/usao-wdok/pr/noble-man-pleads-guilty-using-sham-farm-stand-process-more-212000-fraudulent-snap",
+    "published_at": "2026-11-06T12:00:00+00:00",
+    "known_at": "2026-11-06T12:00:00+00:00",
+    "candidate_classes": [],
+    "state": "candidate",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: Noble Man Pleads Guilty to Using Sham Farm Stand to Process More Than $212,000 in Fraudulent SNAP Benefits",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "identified",
+      "matches": [
+        {
+          "sector": "Energy",
+          "activity": "Oil & Gas Drilling",
+          "basis": "company_catalog",
+          "evidence": {
+            "quote": "Noble",
+            "start": 0,
+            "end": 5
+          },
+          "exposure_verified": false,
+          "ticker": "NE",
+          "company": "Noble Corp Plc"
+        }
+      ],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-11-06.csv",
+      "catalog_available": true,
+      "market_sectors": [
+        "Energy"
+      ],
+      "market_activities": [
+        "Oil & Gas Drilling"
+      ],
       "unknowns": [
         "Sector relevance does not establish material exposure, winners, losers or price direction"
       ]
@@ -322586,6 +325893,70 @@
     }
   },
   {
+    "document_id": "554a90683f2d3cff97866938",
+    "title": "Santa Clara Man Indicted for Making False Statements to Acquire Firearms After Prior Commitment to Mental Institution Related to School Shooting Plans",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://www.justice.gov/usao-ndca/pr/santa-clara-man-indicted-making-false-statements-acquire-firearms-after-prior",
+    "published_at": "2026-11-06T12:00:00+00:00",
+    "known_at": "2026-11-06T12:00:00+00:00",
+    "candidate_classes": [
+      "corporate_action_mna"
+    ],
+    "state": "candidate",
+    "status": "pending_analysis",
+    "analyst_family": "firm",
+    "routing_class": "corporate_action_mna",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "corporate_action_mna",
+      "sign": null,
+      "q5": "impulse",
+      "constraint": "corporate_action_mna: Santa Clara Man Indicted for Making False Statements to Acquire Firearms After Prior Commitment to Mental Institution Related to School Shooting Plans",
+      "split": false,
+      "split_facts": [],
+      "why": "headline acquisition; stage=reported; evidence=to Acquire",
+      "family": "firm",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "identified",
+      "lane_class": "corporate_action_mna",
+      "event_type": "acquisition",
+      "stage": "reported",
+      "sign": null,
+      "evidence": {
+        "quote": "to Acquire",
+        "start": 53,
+        "end": 63
+      },
+      "verification": "headline_reported_not_primary_verified"
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-11-06.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
     "document_id": "4467bc63349e2fdb1d4a22b5",
     "title": "Downtown Seattle drug dealer sentenced to five years in prison for having a gun while dealing crack cocaine",
     "evidence_file": "documents.json",
@@ -322605,6 +325976,63 @@
       "sign": null,
       "q5": "regime",
       "constraint": "discard: Downtown Seattle drug dealer sentenced to five years in prison for having a gun while dealing crack cocaine",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-11-06.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
+    "document_id": "38a7dc5daa848076d89bb77c",
+    "title": "Sacramento parolee charged with sexual exploitation of a minor",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://www.justice.gov/usao-edca/pr/sacramento-parolee-charged-sexual-exploitation-minor",
+    "published_at": "2026-11-06T12:00:00+00:00",
+    "known_at": "2026-11-06T12:00:00+00:00",
+    "candidate_classes": [],
+    "state": "candidate",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: Sacramento parolee charged with sexual exploitation of a minor",
       "split": false,
       "split_facts": [],
       "why": "no constraint identified",
@@ -322757,6 +326185,63 @@
     }
   },
   {
+    "document_id": "249f34a227055cc167591318",
+    "title": "Man Sentenced to 21 Years for Recruiting, Prostituting and Repeatedly Beating and Whipping 18-Year-Old Girl",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://www.justice.gov/usao-sdca/pr/man-sentenced-21-years-recruiting-prostituting-and-repeatedly-beating-and-whipping-18",
+    "published_at": "2026-11-06T12:00:00+00:00",
+    "known_at": "2026-11-06T12:00:00+00:00",
+    "candidate_classes": [],
+    "state": "candidate",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: Man Sentenced to 21 Years for Recruiting, Prostituting and Repeatedly Beating and Whipping 18-Year-Old Girl",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-11-06.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
     "document_id": "207a9c68cdcf8c2023bfc01b",
     "title": "Robo.ai CEO Issues Letter to Shareholders - Nasdaq",
     "evidence_file": "documents.json",
@@ -322776,6 +326261,63 @@
       "sign": null,
       "q5": "regime",
       "constraint": "discard: Robo.ai CEO Issues Letter to Shareholders - Nasdaq",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-11-06.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
+    "document_id": "090a9d4ad387d2a9739793f3",
+    "title": "Attorney General Todd Blanche Honors Southern District of Florida Senior Litigation Counsel Christopher J. Clark at 2026 Director’s Awards",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://www.justice.gov/usao-sdfl/pr/attorney-general-todd-blanche-honors-southern-district-florida-senior-litigation",
+    "published_at": "2026-11-06T12:00:00+00:00",
+    "known_at": "2026-11-06T12:00:00+00:00",
+    "candidate_classes": [],
+    "state": "candidate",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: Attorney General Todd Blanche Honors Southern District of Florida Senior Litigation Counsel Christopher J. Clark at 2026 Director’s Awards",
       "split": false,
       "split_facts": [],
       "why": "no constraint identified",
@@ -348430,6 +351972,63 @@
       "sign": null,
       "q5": "regime",
       "constraint": "discard: Two tankers change course while Moscow defends US supply agreement - The New Voice of Ukraine",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-11-06.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
+    "document_id": "0771f9e90f064c02be12f8f8",
+    "title": "Tech Mahindra: PFH targets 92.59% Pininfarina stake in tender - Multibagg AI",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQYXJvRHZtTldyUXE1eGZzcUJ0WFN6ZjBrdlJhT09ZM1lTRlpkZGNETDJCTkpHLVc2NE9DUjRFdVpvSm9mUk9wWGREbk1nbDBxRVdBOXhKLXdiVE53R2RKbXhvdEhTY2VtUHhlX1o2THF1b29pWVlVTE1pMTlSbFFrUGJFLUd4VDZlU0tmZWlaMTBKSWtjVV9hT0h3ekxJQmI4NjdmWWJIR091QU9JSGxYeTBqTmRwa0FYRW84VGV3?oc=5",
+    "published_at": "2026-11-06T08:25:37+00:00",
+    "known_at": "2026-11-06T08:25:37+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: Tech Mahindra: PFH targets 92.59% Pininfarina stake in tender - Multibagg AI",
       "split": false,
       "split_facts": [],
       "why": "no constraint identified",
@@ -376489,7 +380088,7 @@
     "candidate_classes": [
       "subsidy"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "structure",
     "routing_class": "subsidy",
@@ -376569,7 +380168,7 @@
     "candidate_classes": [
       "blast_ops"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "blast",
     "routing_class": "blast_ops",
@@ -376881,7 +380480,7 @@
     "candidate_classes": [
       "labor_stop"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "blast",
     "routing_class": "labor_stop",
@@ -376940,7 +380539,7 @@
     "candidate_classes": [
       "labor_stop"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "blast",
     "routing_class": "labor_stop",
@@ -377115,7 +380714,7 @@
     "candidate_classes": [
       "listing_flow"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "flow",
     "routing_class": "listing_flow",
@@ -377577,7 +381176,7 @@
     "candidate_classes": [
       "subsidy"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "structure",
     "routing_class": "subsidy",
@@ -377757,7 +381356,7 @@
     "candidate_classes": [
       "distress_restruct"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "distress_restruct",
@@ -377821,7 +381420,7 @@
     "candidate_classes": [
       "corporate_action_mna"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "corporate_action_mna",
@@ -377960,7 +381559,7 @@
     "candidate_classes": [
       "activist_campaign"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "activist_campaign",
@@ -378078,7 +381677,7 @@
     "candidate_classes": [
       "blast_cyber"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "blast",
     "routing_class": "blast_cyber",
