@@ -35825,7 +35825,7 @@
           "status": "hit"
         }
       ],
-      "reflection_lesson_ref": null,
+      "reflection_lesson_ref": "02_lessons/candidate/2026-11-09_lesson.md",
       "sources_used": [],
       "horizon_calls": {
         "HORIZON_3D": {
@@ -35864,7 +35864,8 @@
       "knowable_at_9am": "yes",
       "attribution_contested": "yes",
       "outlier_watch": "Nvidia -5% while SOX +6.6% (largest underperformance since Jan 2019); energy sector green despite Brent -5.8%",
-      "horizon_grades": {}
+      "horizon_grades": {},
+      "lesson_schema_ok": true
     }
   ]
 }
