@@ -1,6 +1,6 @@
 # flatten_robust card — 2026-11-09
 
-_Generated 2026-11-09T13:18:07 — live `flatten_robust`._
+_Generated 2026-11-09T13:48:21 — live `flatten_robust`._
 
 **morning S missing; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**
 
@@ -40,11 +40,11 @@ Sized from marked equity **$116,701.52** as if the book were flat. `io 3d_size (
 
 | Clock | Ticker | Sleeve | Shares | Px | $ | Blocked live by |
 |---|---|---|---:|---:|---:|---|
+| 16:00 ET | ALGN | io_core | 117 | $166.00 | $19,422.00 | cash tied |
+| 16:00 ET | TMDX | io_core | 220 | $88.24 | $19,412.80 | cash tied |
+| 16:00 ET | CGON | io_core | 255 | $75.99 | $19,377.45 | cash tied |
 | 16:00 ET | CLOV | io_core | 4035 | $4.82 | $19,448.70 | cash tied |
-| 16:00 ET | APP | io_core | 49 | $391.22 | $19,169.78 | cash tied |
-| 16:00 ET | RBLX | io_core | 394 | $49.30 | $19,424.20 | cash tied |
-| 16:00 ET | TMUS | io_core | 120 | $162.01 | $19,441.20 | cash tied |
-| 16:00 ET | STGW | io_core | 1670 | $11.64 | $19,438.80 | cash tied |
-| 16:00 ET | COMP | io_core | 1905 | $10.21 | $19,450.05 | cash tied |
+| 16:00 ET | ZVRA | io_core | 1678 | $11.59 | $19,448.02 | cash tied |
+| 16:00 ET | ETON | io_core | 344 | $56.46 | $19,422.24 | cash tied |
 
 Dashboard: https://sroyaltyy.github.io/fullscan/dashboard/sleeve-merge/
