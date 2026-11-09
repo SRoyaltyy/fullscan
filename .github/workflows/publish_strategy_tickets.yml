@@ -66,15 +66,16 @@ jobs:
       (github.event.workflow_run.conclusion == 'success' &&
        github.event.workflow_run.head_branch == 'main')
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 50  # was 25; full-fetch checkout (up to 30 min) + work
     outputs:
       publish: ${{ steps.fingerprint.outputs.publish }}
       fingerprint: ${{ steps.fingerprint.outputs.fingerprint }}
     steps:
       - uses: actions/checkout@v4
+        timeout-minutes: 30
         with:
           ref: main
-          fetch-depth: 1
+          fetch-depth: 0  # 2026-11-09: depth 1 stalls >20 min on the ~12.6 GB tree (#765)
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -102,9 +103,10 @@ jobs:
       group: publish-strategy-tickets
       cancel-in-progress: false
     runs-on: ubuntu-latest
-    timeout-minutes: 40
+    timeout-minutes: 65  # was 40; full-fetch checkout (up to 30 min) + work
     steps:
       - uses: actions/checkout@v4
+        timeout-minutes: 30
         with:
           ref: main
           # morning_look proves commit times; a shallow clone refuses.
@@ -208,12 +210,13 @@ jobs:
       needs.gate.result == 'success' &&
       needs.tickets.result != 'cancelled'
     runs-on: ubuntu-latest
-    timeout-minutes: 40
+    timeout-minutes: 65  # was 40; full-fetch checkout (up to 30 min) + work
     steps:
       - uses: actions/checkout@v4
+        timeout-minutes: 30
         with:
           ref: main
-          fetch-depth: 1
+          fetch-depth: 0  # 2026-11-09: depth 1 stalls >20 min on the ~12.6 GB tree (#765)
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"

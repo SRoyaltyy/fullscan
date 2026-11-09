@@ -72,7 +72,7 @@ jobs:
   run:
     if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 50  # was 30; full-fetch checkout (up to 30 min) + work
     steps:
       - name: Pick the step
         id: pick
@@ -97,6 +97,7 @@ jobs:
           echo "step=$step" >> "$GITHUB_OUTPUT"
           echo "go=$go" >> "$GITHUB_OUTPUT"
       - uses: actions/checkout@v4
+        timeout-minutes: 30
         if: steps.pick.outputs.go == 'true'
         with:
           ref: main

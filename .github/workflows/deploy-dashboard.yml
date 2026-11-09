@@ -53,9 +53,10 @@ jobs:
   deploy:
     if: ${{ github.event_name == 'workflow_dispatch' || github.event_name == 'push' || github.event.workflow_run.conclusion == 'success' || github.event.workflow_run.conclusion == 'failure' }}
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 40  # was 20; full-fetch checkout (up to 30 min) + work
     steps:
       - uses: actions/checkout@v4
+        timeout-minutes: 30
         with:
           ref: main
           fetch-depth: 0

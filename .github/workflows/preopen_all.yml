@@ -741,12 +741,28 @@ jobs:
           if [ -z "$GW" ] || printf '%s' "$GW" | grep -Eq '127\.0\.0\.1|localhost|\[::1\]'; then
             GW_LOOP=1
           fi
+          # >>> backend gate (src/test_preopen_backend_gate.py runs this block)
           if [ "$ON_UBUNTU" = 1 ] && [ "$BACKEND" != "deepseek" ] && [ "$GW_LOOP" = 1 ]; then
-            # Fail closed (10-15 run 38714326944 skipped Grok 108 times and
-            # fell to DeepSeek/GLM). No free-model general_predict here.
-            echo "::error::predict needs Grok: no reachable OpenClaw gateway on this runner (use runner=ecs)"
-            exit 1
+            # No reachable OpenClaw gateway on this runner (ECS retired
+            # 2026-10-27). 2026-11-09 run 42619500477: auto failed closed
+            # here in 0s and no predict landed until the deepseek-web relay.
+            # auto = "Grok then the free model", so skip Grok and fall
+            # through. Schedule/push carry no input (the 'grok' default is
+            # not an operator choice) and fall through the same way.
+            # An explicit llm_backend=grok dispatch still fails closed
+            # (10-15 run 38714326944 skipped Grok 108 times on a loopback URL).
+            if [ "$BACKEND" = "auto" ] || [ "$EVENT" != "workflow_dispatch" ]; then
+              echo "::warning::no reachable OpenClaw gateway on this runner — llm_backend=$BACKEND skips Grok and falls through to the configured free model"
+              unset OPENCLAW_GATEWAY_URL OPENCLAW_TOKEN
+              BACKEND=auto
+              export LLM_BACKEND=auto
+              ARGS=(--llm-backend "$BACKEND")
+            else
+              echo "::error::predict needs Grok: no reachable OpenClaw gateway on this runner (use runner=ecs)"
+              exit 1
+            fi
           fi
+          # <<< backend gate
           if [ "$ON_UBUNTU" = 1 ]; then
             unset OPENCLAW_RESTART_ON_TIMEOUT
             echo "ubuntu runner: no gateway restart (OpenClaw is on the ECS box)"

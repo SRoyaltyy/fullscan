@@ -29,11 +29,13 @@ concurrency:
 jobs:
   rebuild:
     runs-on: ubuntu-latest
-    timeout-minutes: 90
+    timeout-minutes: 120  # was 90; full-fetch checkout (up to 30 min) + work
     steps:
       - uses: actions/checkout@v4
+        timeout-minutes: 30
         with:
           ref: main
+          fetch-depth: 0  # 2026-11-09: depth 1 stalls >20 min on the ~12.6 GB tree (#765)
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"

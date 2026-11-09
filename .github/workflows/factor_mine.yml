@@ -151,14 +151,16 @@ jobs:
     runs-on: ubuntu-latest
     # 10-12 and 10-13 post-close lands stalled after 'panel <D>' and hit 90.
     # Normal land is 10-20 min; 150 leaves room, the mine step is capped at 120.
-    timeout-minutes: 150
+    timeout-minutes: 180  # was 150; full-fetch checkout (up to 30 min) + work
     steps:
       # workflow_run/queued runs otherwise check out the sha from trigger
       # time; on 10-12 a queued land built from b070934c, before the
       # first run's seal. Always build from the latest main.
       - uses: actions/checkout@v4
+        timeout-minutes: 30
         with:
           ref: main
+          fetch-depth: 0  # 2026-11-09: depth 1 stalls >20 min on the ~12.6 GB tree (#765)
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
