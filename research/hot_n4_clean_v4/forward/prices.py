@@ -289,11 +289,38 @@ def _same_print(stored, exact) -> bool:
     return round(abs(left - right), 6) <= 1e-4
 
 
+def _insert_bar(blob: dict, dates: list, row: dict, fields: tuple, ticker: str) -> None:
+    """Insert one post-pin jsonl bar into a date gap of the parquet series.
+
+    Refuses when the gap is not post-pin or when the blob carries another
+    per-date array this overlay does not fill (it would fall out of step).
+    """
+    import bisect
+
+    import numpy as np
+
+    day = row["date"]
+    at = bisect.bisect_left(dates, day)
+    if at > 0 and dates[at - 1] <= PIN_END and at < len(dates) and dates[at] <= PIN_END:
+        raise RuntimeError(f"forward bar out of order {ticker} {day}")
+    for key, value in blob.items():
+        if key in ("date", "adjusted") or key in fields:
+            continue
+        if hasattr(value, "__len__") and len(value) == len(dates):
+            raise RuntimeError(f"forward bar out of order {ticker} {day}")
+    dates.insert(at, day)
+    for field in fields:
+        arr = np.asarray(blob[field], dtype=float)
+        blob[field] = np.insert(arr, at, float(row[field]))
+
+
 def overlay_rows(bars: dict, rows: list[dict]) -> dict:
     """Return bars with forward sessions appended. Does not mutate ``bars``.
 
     A post-pin date already in the pinned parquet is replaced in memory
-    by the jsonl bar. The jsonl line is the stored print.
+    by the jsonl bar. The jsonl line is the stored print. A post-pin jsonl
+    bar that falls in a gap of the parquet's post-pin sessions is inserted
+    in date order (``_insert_bar``).
     """
     import numpy as np
 
@@ -334,7 +361,16 @@ def overlay_rows(bars: dict, rows: list[dict]) -> dict:
                         for field in fields:
                             blob[field][index] = float(row[field])
                         continue
-                    raise RuntimeError(f"forward bar out of order {ticker} {row['date']}")
+                    # 2026-11-09: the shared data/prices/ohlc.parquet is no
+                    # longer pinned at PIN_END. Factor-mine commits add
+                    # post-pin sessions for the names they need and can skip
+                    # days (01e8260507 carried XP 2026-10-12 then 2026-10-16,
+                    # while prices.jsonl stored 10-13..10-15). A post-pin
+                    # jsonl bar that falls in such a gap is the stored print;
+                    # place it in date order, in memory only. Neither file is
+                    # rewritten.
+                    _insert_bar(blob, dates, row, fields, ticker)
+                    continue
                 dates.append(row["date"])
                 for field in fields:
                     blob[field] = np.concatenate([
