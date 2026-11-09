@@ -216,6 +216,16 @@ async function loadIndex(){
 async function loadByTerm(q){
   const idx = await loadIndex();
   if (idx && Array.isArray(idx.rows) && idx.rows.length) return {out: matchTerm(idx.rows, q), missing: []};
+  if (idx && Array.isArray(idx.shards) && idx.shards.length){
+    const out = [];
+    const chunk = 8;
+    for (let i = 0; i < idx.shards.length; i += chunk){
+      $("status").textContent = "Looking " + Math.min(i + chunk, idx.shards.length) + "/" + idx.shards.length + " days";
+      const part = await Promise.all(idx.shards.slice(i, i + chunk).map(s => getJson([s.path, RAW + "dashboard/news-dir/" + s.path])));
+      for (const doc of part) if (doc && Array.isArray(doc.rows)) out.push(...doc.rows);
+    }
+    return {out: matchTerm(out, q), missing: []};
+  }
   const days = await loadDays();
   const missing = [];
   const out = [];
