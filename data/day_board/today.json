@@ -1,135 +1,82 @@
 {
   "date": "2026-11-09",
-  "generated_at": "2026-11-09T08:45:47.145267-05:00",
+  "generated_at": "2026-11-09T08:46:06.156400-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
-    "ok": 5,
-    "partial": 2,
+    "ok": 6,
+    "partial": 1,
     "fail": 1,
     "n": 8
   },
   "buy_1d": [
     {
-      "ticker": "XYZ",
-      "score": 0.4554353305760862
+      "ticker": "ACHC",
+      "score": 0.7539873518212743
+    },
+    {
+      "ticker": "GRDN",
+      "score": 0.6980223991432414
     },
     {
       "ticker": "LFST",
-      "score": 0.551982471638937
+      "score": 0.6054566694381858
+    },
+    {
+      "ticker": "CON",
+      "score": 0.6672023530601418
+    },
+    {
+      "ticker": "PACS",
+      "score": 0.762670111968275
     },
     {
       "ticker": "UIS",
-      "score": 0.5240125128174291
-    },
-    {
-      "ticker": "FOUR",
-      "score": 0.7109117855437621
+      "score": 0.4607902709153013
     },
     {
       "ticker": "DLO",
       "score": 0.5871454533442197
-    },
-    {
-      "ticker": "ATEN",
-      "score": 0.5971168719592088
-    },
-    {
-      "ticker": "AVPT",
-      "score": 0.6466124023771138
     }
   ],
   "sell_1d": [
     {
       "ticker": "XIFR",
-      "score": -0.23451567352541125
+      "score": -0.3066571208447801
     },
     {
       "ticker": "ENPH",
-      "score": -0.3198922171067549
+      "score": -0.31947823154849825
     },
     {
       "ticker": "TRMB",
-      "score": -0.26553057721675444
+      "score": -0.26524649784544874
     },
     {
       "ticker": "TE",
-      "score": -0.37559754572792553
-    },
-    {
-      "ticker": "FCEL",
-      "score": -0.415579382915554
+      "score": -0.3750864429743665
     },
     {
       "ticker": "ABR",
-      "score": -0.43033347971908364
-    },
-    {
-      "ticker": "ENVX",
-      "score": -0.1839598823114061
+      "score": -0.4383787646955407
     },
     {
       "ticker": "DDD",
-      "score": -0.4146963725348254
+      "score": -0.43071161466643804
+    },
+    {
+      "ticker": "FCEL",
+      "score": -0.4141326394027404
+    },
+    {
+      "ticker": "ENVX",
+      "score": -0.18380453106058064
     }
   ],
   "flatten": {},
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "flatten",
-      "title": "Flatten live card",
-      "date": "2026-11-09",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-11-09T08:13:58.007511-05:00",
-      "files": [
-        {
-          "path": "01_daily/2026-11-09_flatten_card.md",
-          "ok": true,
-          "reason": "",
-          "size": 2021,
-          "preview": "# flatten_robust card \u2014 2026-11-09\n_Generated 2026-11-09T13:13:56 \u2014 live `flatten_robust`._\n**morning S missing; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**\n- Score **\u2014** (\u2014) \u00b7 route **io**\n- Cash leftover **$116,701.52** (after 09:30 $116,701.52 \u00b7 after 16:00 $116,701.52)\n- Prior close **$116,701.52** \u00b7 09:30 **$116,701.52** \u00b7 overnight **$+0.00** \u00b7 session **$+0.00** \u00b7 16:00 **$116,701.52**\n- Overnight lots **0** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$0.00** \u2264 leftover after sells **$116,701.52**"
-        },
-        {
-          "path": "data/sleeve_merge/today.json",
-          "ok": true,
-          "reason": "",
-          "size": 5992,
-          "preview": "2026-11-04 BUY \u2014 \u00b7 SELL \u2014"
-        },
-        {
-          "path": "data/sleeve_merge/today_live.json",
-          "ok": true,
-          "reason": "",
-          "size": 4819,
-          "preview": "keys: date, policy, generated, score, predict, hard_red, flatten_ok, n_priced_buys, prior_book, route, cash_open, cash_after_0930"
-        },
-        {
-          "path": "data/sleeve_merge/daily_marks.json",
-          "ok": true,
-          "reason": "",
-          "size": 161757,
-          "preview": "[{\"date\": \"2026-08-13\", \"route\": \"io\", \"score\": 8.525, \"predict\": \"UP\", \"yday_equity\": 100000.0, \"open_cash\": 100000.0, \"open_held\": 0, \"open_equity\": 100000.0, \"overnight_delta\": 0.0, \"session_delta\": -169.94, \"equity\": 99830.06, \"cash\": 9917.52, \"overnight_names\": \"\", \"overnight\": [], \"marks\": [{\"ticker\": \"BTSG\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 166, \"shares\": 166, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 59.8, \"close_px\": 60.23, \"entry_px\": 60.23, \"entry_date\": \"2026-08-13\", \"overnight\": 0.0, \"session\": 71.38, \"day\": 71.38, \"pct_overnight\": null, \"pct_session\": 0.719, \"held\": \"bought\"}, {\"ticker\": \"IREN\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 223, \"shares\": 223, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 45.98, \"close_px\": 44.76, \"entry_px\": 44.76, \"entry_date\": \"2026-08-13\", \"overnight\": 0.0, \"session\": -272.06, \"day\": -272.06, \"pct_overnight\""
-        },
-        {
-          "path": "data/sleeve_merge/equity_curve.csv",
-          "ok": true,
-          "reason": "",
-          "size": 4033,
-          "preview": "25 rows \u00b7 date,equity,cash,core_n,tac_io_n,tac_n,core_mv,tac_mv,route,score,predict,open_held,open_cash,open_equity,yday_equity,ov \u00b7 2026-08-13, 2026-08-14, 2026-08-17, 2026-08-18, 2026-08-19"
-        },
-        {
-          "path": "dashboard/sleeve-merge/index.html",
-          "ok": true,
-          "reason": "",
-          "size": 51960,
-          "preview": "<!doctype html>\n<html><head><meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n<title>Combined sleeve \u2014 .io \u00d7 mover</title>\n<style>\n:root{--bg:#0b1020;--card:#131b31;--line:#2b3552;--text:#edf2ff;--muted:#9cabc9}\n*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:15px/1.45 system-ui}\nmain{max-width:1240px;margin:auto;padding:16px}h1,h2{margin:.4em 0}\n.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin:14px 0}\n.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px}\n.card b{display:block;font-size:22px;margin-top:4px}\n.muted{color:var(--muted)}a{color:#93c5fd}\n.sheet{overflow-x:auto;border:1px solid var(--line);border-radius:12px;margin:14px 0}\ntable{border-collapse:separate;border-spacing:0;width:100%;background:var(--card)}\nth,td{padding:7px 8"
-        }
-      ],
-      "preview": "# flatten_robust card \u2014 2026-11-09\n_Generated 2026-11-09T13:13:56 \u2014 live `flatten_robust`._\n**morning S missing; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**\n- Score **\u2014** (\u2014) \u00b7 route **io**\n- Cash leftover **$116,701.52** (after 09:30 $116,701.52 \u00b7 after 16:00 $116,701.52)\n- Prior close **$116,701.52** \u00b7 09:30 **$116,701.52** \u00b7 overnight **$+0.00** \u00b7 session **$+0.00** \u00b7 16:00 **$116,701.52**\n- Overnight lots **0** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$0.00** \u2264 leftover after sells **$116,701.52** \u00b7 2026-11-04 BUY \u2014 \u00b7 SELL \u2014 \u00b7 keys: date, policy, generated, score, predict, hard_red, flatten_ok, n_priced_buys, prior_book, route, cash_open, cash_after_0930 \u00b7 [{\"date\": \"2026-08-13\", \"route\": \"io\", \"score\": 8.525, \"predict\": \"UP\", \"yday_equity\": 100000.0, \"open_cash\": 100000.0, \"open_held\": 0, \"open_equity\": 100000.0, \"overnight_delta\": 0.0, \"session_delta\": -169.94, \"equity\": 99830.06, \"cash\": 9917.52, \"overnight_names\": \"\", \"overnight\": [], \"marks\": [{\"ticker\": \"BTSG\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 166, \"shares\": 166, \"side\": \"BUY\", \"yday_px\": null, \"open_px\":"
-    },
     {
       "key": "stock_book",
       "title": "Stock book + green",
@@ -458,6 +405,59 @@
         }
       ],
       "preview": "5046 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-11-09",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-09T08:46:05.330506-05:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-11-09_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1499826,
+          "preview": "1d BUY ACHC, GRDN, LFST, CON, PACS, UIS, DLO \u00b7 SELL XIFR, ENPH, TRMB, TE, ABR, DDD, FCEL, ENVX"
+        },
+        {
+          "path": "data/stock_book/2026-11-09_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-11-09_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2587,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-11-09_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12315,
+          "preview": "2026-11-09 BUY ACHC, GRDN, LFST, CON, PACS, UIS, DLO \u00b7 SELL XIFR, ENPH, TRMB, TE, ABR, DDD, FCEL, ENVX"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12315,
+          "preview": "2026-11-09 BUY ACHC, GRDN, LFST, CON, PACS, UIS, DLO \u00b7 SELL XIFR, ENPH, TRMB, TE, ABR, DDD, FCEL, ENVX"
+        },
+        {
+          "path": "01_daily/2026-11-09_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 83531,
+          "preview": "# Stock book \u2014 2026-11-09\n_Generated 2026-11-09T08:45:56.476064-05:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY ACHC, GRDN, LFST, CON, PACS, UIS, DLO \u00b7 SELL XIFR, ENPH, TRMB, TE, ABR, DDD, FCEL, ENVX \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-11-09 BUY ACHC, GRDN, LFST, CON, PACS, UIS, DLO \u00b7 SELL XIFR, ENPH, TRMB, TE, ABR, DDD, FCEL, ENVX \u00b7 2026-11-09 BUY ACHC, GRDN, LFST, CON, PACS, UIS, DLO \u00b7 SELL XIFR, ENPH, TRMB, TE, ABR, DDD, FCEL, ENVX \u00b7 # Stock book \u2014 2026-11-09\n_Generated 2026-11-09T08:45:56.476064-05:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"

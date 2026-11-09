@@ -1,6 +1,6 @@
 {
   "date": "2026-11-09",
-  "generated_at": "2026-11-09T08:45:47.145267-05:00",
+  "generated_at": "2026-11-09T08:46:06.156400-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -8,8 +8,8 @@
     "MISSING News actions JSON `01_daily/news/2026-11-09_actions.json` \u2014 missing"
   ],
   "counts": {
-    "ok": 5,
-    "partial": 2,
+    "ok": 6,
+    "partial": 1,
     "fail": 1,
     "n": 8
   },
@@ -639,9 +639,9 @@
       "key": "stock_book",
       "name": "Stock Book ALL",
       "yaml": "stock_book_all.yml",
-      "status": "PARTIAL",
+      "status": "OK",
       "inputs_ready": false,
-      "n_req_ok": 3,
+      "n_req_ok": 4,
       "n_req": 4,
       "n_opt_ok": 3,
       "n_opt": 4,
@@ -768,8 +768,8 @@
           "role": "required",
           "status": "OK",
           "reason": "horizons=5 names=215",
-          "size": 1479534,
-          "said": "1d BUY XYZ, LFST, UIS, FOUR, DLO, ATEN, AVPT \u00b7 SELL XIFR, ENPH, TRMB, TE, FCEL, ABR",
+          "size": 1499826,
+          "said": "1d BUY ACHC, GRDN, LFST, CON, PACS, UIS, DLO \u00b7 SELL XIFR, ENPH, TRMB, TE, ABR, DDD",
           "bullets": []
         },
         {
@@ -777,11 +777,14 @@
           "name": "Stock book MD",
           "path": "01_daily/2026-11-09_stock_book.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 82418,
+          "said": "Stock book \u2014 2026-11-09",
+          "bullets": [
+            "_Generated 2026-11-09T08:45:56.476064-05:00_",
+            "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
+          ]
         },
         {
           "key": "green",
@@ -815,7 +818,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "live-book poller + today.json (2026-11-09)",
-          "size": 16158593,
+          "size": 16158609,
           "said": "live-book poller + today.json (2026-11-09)",
           "bullets": []
         }
@@ -843,8 +846,8 @@
           "role": "input",
           "status": "OK",
           "reason": "horizons=5 names=215",
-          "size": 1479534,
-          "said": "1d BUY XYZ, LFST, UIS, FOUR, DLO, ATEN, AVPT \u00b7 SELL XIFR, ENPH, TRMB, TE, FCEL, ABR",
+          "size": 1499826,
+          "said": "1d BUY ACHC, GRDN, LFST, CON, PACS, UIS, DLO \u00b7 SELL XIFR, ENPH, TRMB, TE, ABR, DDD",
           "bullets": []
         },
         {
@@ -854,7 +857,7 @@
           "role": "required",
           "status": "OK",
           "reason": "live-book poller + today.json (2026-11-09)",
-          "size": 16158593,
+          "size": 16158609,
           "said": "live-book poller + today.json (2026-11-09)",
           "bullets": []
         },
@@ -893,66 +896,66 @@
   "selections": {
     "buy_1d": [
       {
-        "ticker": "XYZ",
-        "score": 0.4554353305760862
+        "ticker": "ACHC",
+        "score": 0.7539873518212743
+      },
+      {
+        "ticker": "GRDN",
+        "score": 0.6980223991432414
       },
       {
         "ticker": "LFST",
-        "score": 0.551982471638937
+        "score": 0.6054566694381858
+      },
+      {
+        "ticker": "CON",
+        "score": 0.6672023530601418
+      },
+      {
+        "ticker": "PACS",
+        "score": 0.762670111968275
       },
       {
         "ticker": "UIS",
-        "score": 0.5240125128174291
-      },
-      {
-        "ticker": "FOUR",
-        "score": 0.7109117855437621
+        "score": 0.4607902709153013
       },
       {
         "ticker": "DLO",
         "score": 0.5871454533442197
-      },
-      {
-        "ticker": "ATEN",
-        "score": 0.5971168719592088
-      },
-      {
-        "ticker": "AVPT",
-        "score": 0.6466124023771138
       }
     ],
     "sell_1d": [
       {
         "ticker": "XIFR",
-        "score": -0.23451567352541125
+        "score": -0.3066571208447801
       },
       {
         "ticker": "ENPH",
-        "score": -0.3198922171067549
+        "score": -0.31947823154849825
       },
       {
         "ticker": "TRMB",
-        "score": -0.26553057721675444
+        "score": -0.26524649784544874
       },
       {
         "ticker": "TE",
-        "score": -0.37559754572792553
-      },
-      {
-        "ticker": "FCEL",
-        "score": -0.415579382915554
+        "score": -0.3750864429743665
       },
       {
         "ticker": "ABR",
-        "score": -0.43033347971908364
-      },
-      {
-        "ticker": "ENVX",
-        "score": -0.1839598823114061
+        "score": -0.4383787646955407
       },
       {
         "ticker": "DDD",
-        "score": -0.4146963725348254
+        "score": -0.43071161466643804
+      },
+      {
+        "ticker": "FCEL",
+        "score": -0.4141326394027404
+      },
+      {
+        "ticker": "ENVX",
+        "score": -0.18380453106058064
       }
     ],
     "flatten": {},
@@ -1849,6 +1852,59 @@
         }
       ],
       "preview": "5046 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-11-09",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-09T08:46:05.330506-05:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-11-09_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1499826,
+          "preview": "1d BUY ACHC, GRDN, LFST, CON, PACS, UIS, DLO \u00b7 SELL XIFR, ENPH, TRMB, TE, ABR, DDD, FCEL, ENVX"
+        },
+        {
+          "path": "data/stock_book/2026-11-09_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-11-09_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2587,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-11-09_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12315,
+          "preview": "2026-11-09 BUY ACHC, GRDN, LFST, CON, PACS, UIS, DLO \u00b7 SELL XIFR, ENPH, TRMB, TE, ABR, DDD, FCEL, ENVX"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12315,
+          "preview": "2026-11-09 BUY ACHC, GRDN, LFST, CON, PACS, UIS, DLO \u00b7 SELL XIFR, ENPH, TRMB, TE, ABR, DDD, FCEL, ENVX"
+        },
+        {
+          "path": "01_daily/2026-11-09_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 83531,
+          "preview": "# Stock book \u2014 2026-11-09\n_Generated 2026-11-09T08:45:56.476064-05:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY ACHC, GRDN, LFST, CON, PACS, UIS, DLO \u00b7 SELL XIFR, ENPH, TRMB, TE, ABR, DDD, FCEL, ENVX \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-11-09 BUY ACHC, GRDN, LFST, CON, PACS, UIS, DLO \u00b7 SELL XIFR, ENPH, TRMB, TE, ABR, DDD, FCEL, ENVX \u00b7 2026-11-09 BUY ACHC, GRDN, LFST, CON, PACS, UIS, DLO \u00b7 SELL XIFR, ENPH, TRMB, TE, ABR, DDD, FCEL, ENVX \u00b7 # Stock book \u2014 2026-11-09\n_Generated 2026-11-09T08:45:56.476064-05:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "href": {
