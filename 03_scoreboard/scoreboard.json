@@ -35732,16 +35732,62 @@
         "B7_OIL_DOLLAR": 1.0
       },
       "leading_sum": 4.0,
-      "actual_open": null,
-      "actual_close": null,
-      "actual_pct_change": null,
-      "actual_direction": null,
-      "actual_magnitude_band": null,
-      "direction_hit": null,
-      "magnitude_hit": null,
+      "actual_open": 7422.24,
+      "actual_close": 7549.94,
+      "actual_pct_change": 2.35,
+      "actual_direction": "up",
+      "actual_magnitude_band": "severe",
+      "direction_hit": true,
+      "magnitude_hit": false,
       "divergence_flagged": false,
       "divergence_verdict": null,
-      "per_factor_breakdown": [],
+      "per_factor_breakdown": [
+        {
+          "factor": "B0_ASIA",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B0_EUROPE",
+          "score": 0.5,
+          "status": "hit"
+        },
+        {
+          "factor": "B1_CATALYSTS",
+          "score": 1.0,
+          "status": "hit"
+        },
+        {
+          "factor": "B2_BONDS",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B3_FEDPATH",
+          "score": -1.0,
+          "status": "miss"
+        },
+        {
+          "factor": "B4_VIX",
+          "score": -0.5,
+          "status": "miss"
+        },
+        {
+          "factor": "B5_SENTIMENT",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B6_FUTURES",
+          "score": 0.5,
+          "status": "hit"
+        },
+        {
+          "factor": "B7_OIL_DOLLAR",
+          "score": 1.0,
+          "status": "hit"
+        }
+      ],
       "reflection_lesson_ref": null,
       "sources_used": [],
       "horizon_calls": {
@@ -35773,7 +35819,14 @@
       "news_judge_present": true,
       "engine": "v2",
       "anchor_score": 6.074,
-      "overlay_score": 3.375
+      "overlay_score": 3.375,
+      "ops_fail": false,
+      "path_shape": "trend up (closed near day high)",
+      "primary_driver": "Oil collapse on Iran de-escalation hopes (Trump weekend comments + unconfirmed Hormuz report) plus tech dip-buying/AMD upgrade",
+      "key_interaction": "Offsetting/masking — Nvidia -5% drag and hawkish Fed were masked by oil collapse + broad dip-buying; oil collapse amplified semis short-covering",
+      "knowable_at_9am": "yes",
+      "attribution_contested": "yes",
+      "outlier_watch": "Nvidia -5% while SOX +6.6% (largest underperformance since Jan 2019); energy sector green despite Brent -5.8%"
     }
   ]
 }
