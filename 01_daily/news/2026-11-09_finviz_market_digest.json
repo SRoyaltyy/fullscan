@@ -1,6 +1,6 @@
 {
   "date": "2026-11-09",
-  "generated_at": "2026-11-09T04:34:15.307216-05:00",
+  "generated_at": "2026-11-09T04:54:41.802486-05:00",
   "timezone": "America/New_York",
   "source": "live",
   "source_url": "https://elite.finviz.com/",
@@ -15,14 +15,15 @@
   "kind": "finviz_homepage_market_digest",
   "represents": "Finviz homepage market-day prose. Same-morning Pre-Open when Generated is before 09:30 ET; afternoon Wayback is a prior-day close recap legal for the next session only. Not quote-page ticker blurbs.",
   "error": null,
-  "headline": "US futures point to a higher open with small caps leading as Nvidia probe headlines and wholesale inventories data loom",
-  "raw_text": "- S&P 500 Futures (@ES) +0.41%, Dow Jones Futures (@YM) +0.71%, Nasdaq 100 Futures (@NQ) +0.08%, and Russell 2000 Futures (@ER2) +1.01% indicate a gap-up open with small caps outperforming and the Nasdaq 100 lagging.\n- FROG (FROG) trades roughly flat pre-market after beating Q3 revenue estimates with 31% growth.\n- DKNG (DKNG) trades notably lower pre-market following its earnings results, while NRDS (NRDS) and FIVN (FIVN) are roughly unchanged.\n- Estee Lauder (EL) trades roughly flat pre-market after raising its guidance.\n- Rivian (RIVN) trades roughly flat in pre-market trading after receiving an analyst upgrade.\n- Check Point (CHKP) trades roughly flat pre-market after issuing a weak Q4 outlook.\n- A MarketWatch note at 4:01 AM ET on an investigation into spy-claims involving Nvidia (NVDA) CEO Jensen Huang adds near-term caution around Nvidia (NVDA) and AI-related stocks.\n- Earnings before the bell from CEG (CEG), KKR (KKR), FERG (FERG), MNDY (MNDY), and NRG (NRG) are in focus for initial reactions at the open.\n- US wholesale inventories data are scheduled for release at 10:00 AM ET amid an otherwise light economic calendar.",
-  "raw_summary_md": "- S&P 500 Futures ([@ES](https://finviz.com/futures_charts?t=ES)) +0.41%, Dow Jones Futures ([@YM](https://finviz.com/futures_charts?t=YM)) +0.71%, Nasdaq 100 Futures ([@NQ](https://finviz.com/futures_charts?t=NQ)) +0.08%, and Russell 2000 Futures ([@ER2](https://finviz.com/futures_charts?t=ER2)) **+1.01%** indicate a **gap-up open** with **small caps outperforming** and the Nasdaq 100 lagging.\n- FROG ([FROG](https://finviz.com/quote?t=FROG)) trades **roughly flat pre-market** after beating Q3 revenue estimates with **31% growth**.\n- DKNG ([DKNG](https://finviz.com/quote?t=DKNG)) trades **notably lower pre-market** following its earnings results, while NRDS ([NRDS](https://finviz.com/quote?t=NRDS)) and FIVN ([FIVN](https://finviz.com/quote?t=FIVN)) are roughly unchanged.\n- Estee Lauder ([EL](https://finviz.com/quote?t=EL)) trades roughly flat pre-market after **raising its guidance**.\n- Rivian ([RIVN](https://finviz.com/quote?t=RIVN)) trades roughly flat in pre-market trading after receiving an **analyst upgrade**.\n- Check Point ([CHKP](https://finviz.com/quote?t=CHKP)) trades roughly flat pre-market after issuing a **weak Q4 outlook**.\n- A MarketWatch note at 4:01 AM ET on an investigation into spy-claims involving Nvidia ([NVDA](https://finviz.com/quote?t=NVDA)) CEO Jensen Huang adds **near-term caution** around Nvidia ([NVDA](https://finviz.com/quote?t=NVDA)) and AI-related stocks.\n- Earnings before the bell from CEG ([CEG](https://finviz.com/quote?t=CEG)), KKR ([KKR](https://finviz.com/quote?t=KKR)), FERG ([FERG](https://finviz.com/quote?t=FERG)), MNDY ([MNDY](https://finviz.com/quote?t=MNDY)), and NRG ([NRG](https://finviz.com/quote?t=NRG)) are in focus for **initial reactions at the open**.\n- US wholesale inventories data are scheduled for release at **10:00 AM ET** amid an otherwise light economic calendar.",
+  "headline": "US futures point to a mixed, modestly higher open as Nvidia probe pressures AI trade while small caps outperform ahead of inventories data and Fed speakers",
+  "raw_text": "- Nvidia (NVDA) trades roughly 5% lower pre-market after its board launched an independent probe into reports that foreign intelligence targeted CEO Jensen Huang, pressuring the broader AI complex and Nasdaq 100 futures (@NQ).\n- US index futures indicate a mixed but generally higher open, with S&P 500 futures (@ES) +0.20%, Dow Jones futures (@YM) +0.54%, Nasdaq 100 futures (@NQ) -0.15%, and Russell 2000 futures (@ER2) +0.92% as small caps lead.\n- Friday’s partial equity rebound left the S&P 500 near 7,377 after an AI-driven rout, setting the backdrop for today’s trade and ongoing AI-sector rotation.\n- JFrog (FROG) is roughly unchanged pre-market after beating Q3 revenue estimates with 31% growth.\n- DraftKings (DKNG) trades lower in pre-market action following its earnings release, while NerdWallet (NRDS) and Five9 (FIVN) are roughly unchanged.\n- Estee Lauder (EL) is roughly unchanged pre-market after the company raised its guidance, while Rivian (RIVN) is little changed after an analyst upgrade.\n- Check Point Software (CHKP) is roughly unchanged pre-market after issuing a weak Q4 outlook.\n- Key earnings on today’s docket include CEG (CEG), KKR (KKR), FERG (FERG), MNDY (MNDY), and NRG (NRG) before the bell, with OXY (OXY), TTWO (TTWO), RKLB (RKLB), and HIMS (HIMS) reporting after the close and expected to drive stock-specific volatility.\n- Wholesale inventories data are due at 10:00 AM ET alongside additional Federal Reserve speakers and Treasury auctions, keeping rate and liquidity volatility in focus as the broader data calendar remains light.\n- Asian equities broadly rebound as AI and Mideast concerns ease, with the Nikkei (@NKD) up roughly 2.5–3.5% and Taiwan gaining about 3–6%, while European trade is more mixed amid commodity moves and post-earnings rotations.",
+  "raw_summary_md": "- **Nvidia** ([NVDA](https://finviz.com/quote?t=NVDA)) trades roughly **5% lower pre-market** after its board launched an independent probe into reports that foreign intelligence targeted CEO Jensen Huang, pressuring the broader AI complex and Nasdaq 100 futures ([@NQ](https://finviz.com/futures_charts?t=NQ)).\n- US index futures indicate a **mixed but generally higher open**, with S&P 500 futures ([@ES](https://finviz.com/futures_charts?t=ES)) +0.20%, Dow Jones futures ([@YM](https://finviz.com/futures_charts?t=YM)) +0.54%, Nasdaq 100 futures ([@NQ](https://finviz.com/futures_charts?t=NQ)) -0.15%, and Russell 2000 futures ([@ER2](https://finviz.com/futures_charts?t=ER2)) **+0.92% as small caps lead**.\n- Friday’s partial equity rebound left the S&P 500 near **7,377** after an AI-driven rout, setting the backdrop for today’s trade and ongoing AI-sector rotation.\n- JFrog ([FROG](https://finviz.com/quote?t=FROG)) is roughly unchanged pre-market after **beating Q3 revenue estimates** with **31% growth**.\n- DraftKings ([DKNG](https://finviz.com/quote?t=DKNG)) trades lower in pre-market action following its earnings release, while NerdWallet ([NRDS](https://finviz.com/quote?t=NRDS)) and Five9 ([FIVN](https://finviz.com/quote?t=FIVN)) are roughly unchanged.\n- Estee Lauder ([EL](https://finviz.com/quote?t=EL)) is roughly unchanged pre-market after the company **raised its guidance**, while Rivian ([RIVN](https://finviz.com/quote?t=RIVN)) is little changed after an analyst upgrade.\n- Check Point Software ([CHKP](https://finviz.com/quote?t=CHKP)) is roughly unchanged pre-market after issuing a **weak Q4 outlook**.\n- Key earnings on today’s docket include CEG ([CEG](https://finviz.com/quote?t=CEG)), KKR ([KKR](https://finviz.com/quote?t=KKR)), FERG ([FERG](https://finviz.com/quote?t=FERG)), MNDY ([MNDY](https://finviz.com/quote?t=MNDY)), and NRG ([NRG](https://finviz.com/quote?t=NRG)) before the bell, with OXY ([OXY](https://finviz.com/quote?t=OXY)), TTWO ([TTWO](https://finviz.com/quote?t=TTWO)), RKLB ([RKLB](https://finviz.com/quote?t=RKLB)), and HIMS ([HIMS](https://finviz.com/quote?t=HIMS)) reporting after the close and expected to drive **stock-specific volatility**.\n- Wholesale inventories data are due at **10:00 AM ET** alongside additional Federal Reserve speakers and Treasury auctions, keeping rate and liquidity volatility in focus as the broader data calendar remains light.\n- Asian equities broadly rebound as **AI and Mideast concerns ease**, with the Nikkei ([@NKD](https://finviz.com/futures_charts?t=NKD)) up roughly **2.5–3.5%** and Taiwan gaining about 3–6%, while European trade is more mixed amid commodity moves and post-earnings rotations.",
   "index_moves": [],
   "oil": null,
   "cpi": null,
   "fed_odds": null,
   "named_tickers": [
+    "NVDA",
     "FROG",
     "DKNG",
     "NRDS",
@@ -30,14 +31,18 @@
     "EL",
     "RIVN",
     "CHKP",
-    "NVDA",
     "CEG",
     "KKR",
     "FERG",
     "MNDY",
-    "NRG"
+    "NRG",
+    "OXY",
+    "TTWO",
+    "RKLB",
+    "HIMS"
   ],
   "named_leaders": [
+    "NVDA",
     "FROG",
     "DKNG",
     "NRDS",
@@ -45,15 +50,20 @@
     "EL",
     "RIVN",
     "CHKP",
-    "NVDA",
     "CEG",
     "KKR",
     "FERG",
     "MNDY",
-    "NRG"
+    "NRG",
+    "OXY",
+    "TTWO",
+    "RKLB",
+    "HIMS"
   ],
   "calendar": [
-    "US wholesale inventories data are scheduled for release at 10:00 AM ET amid an otherwise light economic calendar."
+    "Friday’s partial equity rebound left the S&P 500 near 7,377 after an AI-driven rout, setting the backdrop for today’s trade and ongoing AI-sector rotation.",
+    "Key earnings on today’s docket include CEG (CEG), KKR (KKR), FERG (FERG), MNDY (MNDY), and NRG (NRG) before the bell, with OXY (OXY), TTWO (TTWO), RKLB (RKLB), and HIMS (HIMS) reporting after the close and expected to drive stock-specific volatility.",
+    "Wholesale inventories data are due at 10:00 AM ET alongside additional Federal Reserve speakers and Treasury auctions, keeping rate and liquidity volatility in focus as the broader data calendar remains light."
   ],
   "prior_close": {
     "spx": null,
@@ -67,21 +77,15 @@
   "next_session_calendar": {
     "housing": false,
     "retail": false,
-    "fed": false,
+    "fed": true,
     "bullets": [
-      "US wholesale inventories data are scheduled for release at 10:00 AM ET amid an otherwise light economic calendar."
+      "Wholesale inventories data are due at 10:00 AM ET alongside additional Federal Reserve speakers and Treasury auctions, keeping rate and liquidity volatility in focus as the broader data calendar remains light."
     ],
-    "text": "US wholesale inventories data are scheduled for release at 10:00 AM ET amid an otherwise light economic calendar."
+    "text": "Wholesale inventories data are due at 10:00 AM ET alongside additional Federal Reserve speakers and Treasury auctions, keeping rate and liquidity volatility in focus as the broader data calendar remains light."
   },
   "earnings_slate": {
-    "tickers": [
-      "CEG",
-      "KKR",
-      "FERG",
-      "MNDY",
-      "NRG"
-    ],
-    "text": "Earnings before the bell from CEG (CEG), KKR (KKR), FERG (FERG), MNDY (MNDY), and NRG (NRG) are in focus for initial reactions at the open."
+    "tickers": [],
+    "text": ""
   },
   "geo_grain": {
     "geo": false,
@@ -89,9 +93,9 @@
     "flags": [],
     "text": ""
   },
-  "finviz_id": 337002,
+  "finviz_id": 337049,
   "finviz_ticker": "$MARKET",
-  "finviz_published_at": "2026-11-09T04:07:10.78",
+  "finviz_published_at": "2026-11-09T04:38:02.363",
   "finviz_source": "market_summary",
   "finviz_sentiment": "good"
 }
