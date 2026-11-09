@@ -1,5 +1,611 @@
 [
   {
+    "title": "DCPD-202600678 - Remarks at a Campaign Rally for Nebraska Republican Candidates in Grand Island, Nebraska",
+    "url": "https://www.govinfo.gov/app/details/DCPD-202600678",
+    "native_id": "DCPD-202600678",
+    "published_at": "2026-11-09T21:59:00+00:00",
+    "published_raw": "Mon, 09 Nov 2026 21:59:00 +0000",
+    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "presidential_document",
+      "document_stage": "presidential_document_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Compilation of Presidential Documents",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-dcpd",
+    "n": 9309,
+    "first_seen": "2026-11-09T23:08:47.577478+00:00",
+    "last_seen": "2026-11-09T23:08:47.577478+00:00",
+    "source_ids": [
+      "us-govinfo-dcpd"
+    ]
+  },
+  {
+    "title": "DCPD-202600681 - Message on German American Day",
+    "url": "https://www.govinfo.gov/app/details/DCPD-202600681",
+    "native_id": "DCPD-202600681",
+    "published_at": "2026-11-09T21:59:00+00:00",
+    "published_raw": "Mon, 09 Nov 2026 21:59:00 +0000",
+    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "presidential_document",
+      "document_stage": "presidential_document_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Compilation of Presidential Documents",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-dcpd",
+    "n": 9308,
+    "first_seen": "2026-11-09T23:08:47.577478+00:00",
+    "last_seen": "2026-11-09T23:08:47.577478+00:00",
+    "source_ids": [
+      "us-govinfo-dcpd"
+    ]
+  },
+  {
+    "title": "DCPD-202600683 - Remarks on the Trump Accounts Children's Savings Program and an Exchange With Reporters",
+    "url": "https://www.govinfo.gov/app/details/DCPD-202600683",
+    "native_id": "DCPD-202600683",
+    "published_at": "2026-11-09T21:59:00+00:00",
+    "published_raw": "Mon, 09 Nov 2026 21:59:00 +0000",
+    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "presidential_document",
+      "document_stage": "presidential_document_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Compilation of Presidential Documents",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-dcpd",
+    "n": 9307,
+    "first_seen": "2026-11-09T23:08:47.577478+00:00",
+    "last_seen": "2026-11-09T23:08:47.577478+00:00",
+    "source_ids": [
+      "us-govinfo-dcpd"
+    ]
+  },
+  {
+    "title": "DCPD-202600680 - Remarks on Maritime Policy in Sparrows Point, Maryland",
+    "url": "https://www.govinfo.gov/app/details/DCPD-202600680",
+    "native_id": "DCPD-202600680",
+    "published_at": "2026-11-09T21:59:00+00:00",
+    "published_raw": "Mon, 09 Nov 2026 21:59:00 +0000",
+    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "presidential_document",
+      "document_stage": "presidential_document_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Compilation of Presidential Documents",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-dcpd",
+    "n": 9306,
+    "first_seen": "2026-11-09T23:08:47.577478+00:00",
+    "last_seen": "2026-11-09T23:08:47.577478+00:00",
+    "source_ids": [
+      "us-govinfo-dcpd"
+    ]
+  },
+  {
+    "title": "DCPD-202600682 - Remarks in an Exchange With Reporters Upon Arrival From Sparrows Point, Maryland",
+    "url": "https://www.govinfo.gov/app/details/DCPD-202600682",
+    "native_id": "DCPD-202600682",
+    "published_at": "2026-11-09T21:59:00+00:00",
+    "published_raw": "Mon, 09 Nov 2026 21:59:00 +0000",
+    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "presidential_document",
+      "document_stage": "presidential_document_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Compilation of Presidential Documents",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-dcpd",
+    "n": 9305,
+    "first_seen": "2026-11-09T23:08:47.577478+00:00",
+    "last_seen": "2026-11-09T23:08:47.577478+00:00",
+    "source_ids": [
+      "us-govinfo-dcpd"
+    ]
+  },
+  {
+    "title": "CAC Outcome: Unite the Union & Konectbus Limited",
+    "url": "https://www.gov.uk/government/publications/cac-outcome-unite-the-union-konectbus-limited",
+    "native_id": "/government/publications/cac-outcome-unite-the-union-konectbus-limited",
+    "published_at": "2026-11-09T17:02:58+00:00",
+    "published_raw": "2026-11-09T17:02:58Z",
+    "document_type": "decision",
+    "issuer": "Central Arbitration Committee",
+    "issuer_ids": [
+      "uk-gov:central-arbitration-committee"
+    ],
+    "summary": "Outcome(s) by the Central Arbitration Committee on an Application from Unite the Union",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Central Arbitration Committee",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 5822,
+    "first_seen": "2026-10-21T18:05:07.789957+00:00",
+    "last_seen": "2026-11-09T23:08:47.577478+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Public Law 119 - 137 - United States Commission on International Religious Freedom Reauthorization Act of 2026",
+    "url": "https://www.govinfo.gov/app/details/PLAW-119publ137",
+    "native_id": "PLAW-119publ137",
+    "published_at": "2026-11-09T15:11:00+00:00",
+    "published_raw": "Mon, 09 Nov 2026 15:11:00 +0000",
+    "summary": "Content Files PDF TEXT USLM Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "public_law",
+      "document_stage": "law_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Public and Private Laws",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-plaw",
+    "n": 9304,
+    "first_seen": "2026-11-09T23:08:47.577478+00:00",
+    "last_seen": "2026-11-09T23:08:47.577478+00:00",
+    "source_ids": [
+      "us-govinfo-plaw"
+    ]
+  },
+  {
+    "title": "Public Law 119 - 138 - Accelerating Access to Critical Therapies for ALS Reauthorization Act of 2026",
+    "url": "https://www.govinfo.gov/app/details/PLAW-119publ138",
+    "native_id": "PLAW-119publ138",
+    "published_at": "2026-11-09T15:10:00+00:00",
+    "published_raw": "Mon, 09 Nov 2026 15:10:00 +0000",
+    "summary": "Content Files PDF TEXT USLM Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "public_law",
+      "document_stage": "law_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Public and Private Laws",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-plaw",
+    "n": 9303,
+    "first_seen": "2026-11-09T23:08:47.577478+00:00",
+    "last_seen": "2026-11-09T23:08:47.577478+00:00",
+    "source_ids": [
+      "us-govinfo-plaw"
+    ]
+  },
+  {
+    "title": "Human medicines: register of electronic export certificates",
+    "url": "https://www.gov.uk/government/publications/human-medicines-register-of-electronic-export-certificates",
+    "native_id": "/government/publications/human-medicines-register-of-electronic-export-certificates",
+    "published_at": "2026-11-09T15:08:31+00:00",
+    "published_raw": "2026-11-09T15:08:31Z",
+    "document_type": "decision",
+    "issuer": "Medicines and Healthcare products Regulatory Agency",
+    "issuer_ids": [
+      "uk-gov:medicines-and-healthcare-products-regulatory-agency"
+    ],
+    "summary": "Department of Health and Social Care and MHRA register of electronic export certificates (human).",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Medicines and Healthcare products Regulatory Agency",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 9289,
+    "first_seen": "2026-11-09T23:08:47.577478+00:00",
+    "last_seen": "2026-11-09T23:08:47.577478+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "CAC Outcome: Unite the Union & Blank Street Coffee Shop",
+    "url": "https://www.gov.uk/government/publications/cac-outcome-unite-the-union-blank-street-coffee-shop",
+    "native_id": "/government/publications/cac-outcome-unite-the-union-blank-street-coffee-shop",
+    "published_at": "2026-11-09T13:52:40+00:00",
+    "published_raw": "2026-11-09T13:52:40Z",
+    "document_type": "decision",
+    "issuer": "Central Arbitration Committee",
+    "issuer_ids": [
+      "uk-gov:central-arbitration-committee"
+    ],
+    "summary": "Outcome(s) by the Central Arbitration Committee on an application from Unite the Union.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Central Arbitration Committee",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 9290,
+    "first_seen": "2026-11-09T23:08:47.577478+00:00",
+    "last_seen": "2026-11-09T23:08:47.577478+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "UK REACH authorisation for AB Connectors Limited, 19 October 2026",
+    "url": "https://www.gov.uk/government/publications/uk-reach-authorisation-for-ab-connectors-limited-19-october-2026",
+    "native_id": "/government/publications/uk-reach-authorisation-for-ab-connectors-limited-19-october-2026",
+    "published_at": "2026-11-09T11:15:14+00:00",
+    "published_raw": "2026-11-09T11:15:14Z",
+    "document_type": "decision",
+    "issuer": "Department for Environment, Food & Rural Affairs",
+    "issuer_ids": [
+      "uk-gov:department-for-environment-food-rural-affairs"
+    ],
+    "summary": "Decision on an application for authorisation under UK REACH.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Department for Environment, Food & Rural Affairs",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 9291,
+    "first_seen": "2026-11-09T23:08:47.577478+00:00",
+    "last_seen": "2026-11-09T23:08:47.577478+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Gangmasters Licensing Appeals results and judgements",
+    "url": "https://www.gov.uk/government/publications/gangmasters-licensing-appeals-results-and-judgements",
+    "native_id": "/government/publications/gangmasters-licensing-appeals-results-and-judgements",
+    "published_at": "2026-11-09T10:44:00+00:00",
+    "published_raw": "2026-11-09T10:44:00Z",
+    "document_type": "decision",
+    "issuer": "Fair Work Agency; HM Courts & Tribunals Service; Department for Business, Innovation, Science and Trade; Department for Business and Trade",
+    "issuer_ids": [
+      "uk-gov:fair-work-agency",
+      "uk-gov:hm-courts-and-tribunals-service",
+      "uk-gov:department-for-business-innovation-science-and-trade",
+      "uk-gov:department-for-business-and-trade"
+    ],
+    "summary": "Appeal results and judgements from the Gangmasters Licensing Appeals.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Fair Work Agency; HM Courts & Tribunals Service; Department for Business, Innovation, Science and Trade; Department for Business and Trade",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 21,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-11-09T23:08:47.577478+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "SG1 2NY, Glaxosmithkline Research & Development Limited: environmental permit surrender and variation – EPR/YP3236SA/S008 and EPR/YP3236SA/V009",
+    "url": "https://www.gov.uk/government/publications/sg1-2ny-glaxosmithkline-research-development-limited-environmental-permit-surrender-and-variation-epryp3236sas008-and-epryp3236sav009",
+    "native_id": "/government/publications/sg1-2ny-glaxosmithkline-research-development-limited-environmental-permit-surrender-and-variation-epryp3236sas008-and-epryp3236sav009",
+    "published_at": "2026-11-09T10:13:54+00:00",
+    "published_raw": "2026-11-09T10:13:54Z",
+    "document_type": "decision",
+    "issuer": "Environment Agency",
+    "issuer_ids": [
+      "uk-gov:environment-agency"
+    ],
+    "summary": "View the permit surrender and variation for Stevenage Energy Centre, Gunnels Wood under the Industrial Emissions Directive.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Environment Agency",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 9292,
+    "first_seen": "2026-11-09T23:08:47.577478+00:00",
+    "last_seen": "2026-11-09T23:08:47.577478+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Company Names Tribunal undefended decisions and orders",
+    "url": "https://www.gov.uk/government/publications/company-names-tribunal-undefended-decisions-and-orders",
+    "native_id": "/government/publications/company-names-tribunal-undefended-decisions-and-orders",
+    "published_at": "2026-11-09T09:40:42+00:00",
+    "published_raw": "2026-11-09T09:40:42Z",
+    "document_type": "decision",
+    "issuer": "Company Names Tribunal",
+    "issuer_ids": [
+      "uk-gov:company-names-tribunal"
+    ],
+    "summary": "Decisions and orders of the Company Names Tribunal - undefended.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Company Names Tribunal",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 2103,
+    "first_seen": "2026-10-15T12:16:32.997656+00:00",
+    "last_seen": "2026-11-09T23:08:47.577478+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Company Names Tribunal decision: Arab Society for Paediatric Endocrinology and Diabetes",
+    "url": "https://www.gov.uk/government/publications/company-names-tribunal-decision-arab-society-for-paediatric-endocrinology-and-diabetes",
+    "native_id": "/government/publications/company-names-tribunal-decision-arab-society-for-paediatric-endocrinology-and-diabetes",
+    "published_at": "2026-11-09T09:38:22+00:00",
+    "published_raw": "2026-11-09T09:38:22Z",
+    "document_type": "decision",
+    "issuer": "Company Names Tribunal",
+    "issuer_ids": [
+      "uk-gov:company-names-tribunal"
+    ],
+    "summary": "Decision for applicant Middle East and North Africa Society for Pediatric Endocrinology and Diabetes registration number 17047349 applicant successful.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Company Names Tribunal",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 9293,
+    "first_seen": "2026-11-09T23:08:47.577478+00:00",
+    "last_seen": "2026-11-09T23:08:47.577478+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Company Names Tribunal decision: Temuland Limited",
+    "url": "https://www.gov.uk/government/publications/company-names-tribunal-decision-temuland-limited",
+    "native_id": "/government/publications/company-names-tribunal-decision-temuland-limited",
+    "published_at": "2026-11-09T09:34:33+00:00",
+    "published_raw": "2026-11-09T09:34:33Z",
+    "document_type": "decision",
+    "issuer": "Company Names Tribunal",
+    "issuer_ids": [
+      "uk-gov:company-names-tribunal"
+    ],
+    "summary": "Decision for applicant Five Bells Limited and Whaleco UK Limited registration number 17010774 applicant successful.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Company Names Tribunal",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 9294,
+    "first_seen": "2026-11-09T23:08:47.577478+00:00",
+    "last_seen": "2026-11-09T23:08:47.577478+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Company Names Tribunal decision: Aviva Recruitment Limited",
+    "url": "https://www.gov.uk/government/publications/company-names-tribunal-decision-aviva-recruitment-limited",
+    "native_id": "/government/publications/company-names-tribunal-decision-aviva-recruitment-limited",
+    "published_at": "2026-11-09T09:34:03+00:00",
+    "published_raw": "2026-11-09T09:34:03Z",
+    "document_type": "decision",
+    "issuer": "Company Names Tribunal",
+    "issuer_ids": [
+      "uk-gov:company-names-tribunal"
+    ],
+    "summary": "Decision for applicant Aviva Brands Limited registration number 16067920 applicant successful.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Company Names Tribunal",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 9295,
+    "first_seen": "2026-11-09T23:08:47.577478+00:00",
+    "last_seen": "2026-11-09T23:08:47.577478+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Company Names Tribunal decision: HCA Healthcare Services (UK) Limited",
+    "url": "https://www.gov.uk/government/publications/company-names-tribunal-decision-hca-healthcare-services-uk-limited",
+    "native_id": "/government/publications/company-names-tribunal-decision-hca-healthcare-services-uk-limited",
+    "published_at": "2026-11-09T09:33:00+00:00",
+    "published_raw": "2026-11-09T09:33:00Z",
+    "document_type": "decision",
+    "issuer": "Company Names Tribunal",
+    "issuer_ids": [
+      "uk-gov:company-names-tribunal"
+    ],
+    "summary": "Decision for applicant HCA International Limited (T/A HCA Healthcare UK) registration number 14603826 applicant successful.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Company Names Tribunal",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 9296,
+    "first_seen": "2026-11-09T23:08:47.577478+00:00",
+    "last_seen": "2026-11-09T23:08:47.577478+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Company Names Tribunal decision: FxPro & Saxo & Plus Investment Brokers UK Ltd",
+    "url": "https://www.gov.uk/government/publications/company-names-tribunal-decision-fxpro-saxo-plus-investment-brokers-uk-ltd",
+    "native_id": "/government/publications/company-names-tribunal-decision-fxpro-saxo-plus-investment-brokers-uk-ltd",
+    "published_at": "2026-11-09T09:32:00+00:00",
+    "published_raw": "2026-11-09T09:32:00Z",
+    "document_type": "decision",
+    "issuer": "Company Names Tribunal",
+    "issuer_ids": [
+      "uk-gov:company-names-tribunal"
+    ],
+    "summary": "Decision for applicant FxPro Markets Ltd., registration number 16591655 applicant successful.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Company Names Tribunal",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 9297,
+    "first_seen": "2026-11-09T23:08:47.577478+00:00",
+    "last_seen": "2026-11-09T23:08:47.577478+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Company Names Tribunal decision: Oracle Group Investment Ltd",
+    "url": "https://www.gov.uk/government/publications/company-names-tribunal-decision-oracle-group-investment-ltd",
+    "native_id": "/government/publications/company-names-tribunal-decision-oracle-group-investment-ltd",
+    "published_at": "2026-11-09T09:30:44+00:00",
+    "published_raw": "2026-11-09T09:30:44Z",
+    "document_type": "decision",
+    "issuer": "Company Names Tribunal",
+    "issuer_ids": [
+      "uk-gov:company-names-tribunal"
+    ],
+    "summary": "Decision for applicant Oracle International Corporation registration number 17009974 applicant successful.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Company Names Tribunal",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 9298,
+    "first_seen": "2026-11-09T23:08:47.577478+00:00",
+    "last_seen": "2026-11-09T23:08:47.577478+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "CAC Outcome: RMT & Land Sheriffs Limited",
+    "url": "https://www.gov.uk/government/publications/cac-outcome-rmt-land-sheriffs-limited",
+    "native_id": "/government/publications/cac-outcome-rmt-land-sheriffs-limited",
+    "published_at": "2026-11-09T08:29:38+00:00",
+    "published_raw": "2026-11-09T08:29:38Z",
+    "document_type": "decision",
+    "issuer": "Central Arbitration Committee",
+    "issuer_ids": [
+      "uk-gov:central-arbitration-committee"
+    ],
+    "summary": "Outcome(s) by the Central Arbitration Committee on an application from RMT.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Central Arbitration Committee",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 9299,
+    "first_seen": "2026-11-09T23:08:47.577478+00:00",
+    "last_seen": "2026-11-09T23:08:47.577478+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "CAC Outcome: RMT & Belmond (UK) Limited",
+    "url": "https://www.gov.uk/government/publications/cac-outcome-rmt-belmond-uk-limited",
+    "native_id": "/government/publications/cac-outcome-rmt-belmond-uk-limited",
+    "published_at": "2026-11-09T08:29:08+00:00",
+    "published_raw": "2026-11-09T08:29:08Z",
+    "document_type": "decision",
+    "issuer": "Central Arbitration Committee",
+    "issuer_ids": [
+      "uk-gov:central-arbitration-committee"
+    ],
+    "summary": "Outcome(s) by the Central Arbitration Committee on an application from RMT.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Central Arbitration Committee",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 9300,
+    "first_seen": "2026-11-09T23:08:47.577478+00:00",
+    "last_seen": "2026-11-09T23:08:47.577478+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
     "title": "Medicare and Medicaid Programs; CY 2027 Payment Policies Under the Physician Fee Schedule and Other Changes to Part B Payment and Coverage Policies; Medicare Shared Savings Program Requirements; and Medicare Prescription Drug Inflation Rebate Program",
     "url": "https://www.federalregister.gov/documents/2026/11/09/2026-22743/medicare-and-medicaid-programs-cy-2027-payment-policies-under-the-physician-fee-schedule-and-other",
     "native_id": "2026-22743",
@@ -25,7 +631,7 @@
     "primary_source_id": "us-federal-register",
     "n": 9268,
     "first_seen": "2026-11-09T08:00:48.097881+00:00",
-    "last_seen": "2026-11-09T08:00:48.097881+00:00",
+    "last_seen": "2026-11-09T23:08:47.577478+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -56,7 +662,7 @@
     "primary_source_id": "us-federal-register",
     "n": 9263,
     "first_seen": "2026-11-09T08:00:48.097881+00:00",
-    "last_seen": "2026-11-09T08:00:48.097881+00:00",
+    "last_seen": "2026-11-09T23:08:47.577478+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -86,7 +692,7 @@
     "primary_source_id": "us-federal-register",
     "n": 9252,
     "first_seen": "2026-11-09T08:00:48.097881+00:00",
-    "last_seen": "2026-11-09T08:00:48.097881+00:00",
+    "last_seen": "2026-11-09T23:08:47.577478+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -117,7 +723,7 @@
     "primary_source_id": "us-federal-register",
     "n": 9241,
     "first_seen": "2026-11-09T08:00:48.097881+00:00",
-    "last_seen": "2026-11-09T08:00:48.097881+00:00",
+    "last_seen": "2026-11-09T23:08:47.577478+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -148,7 +754,7 @@
     "primary_source_id": "us-federal-register",
     "n": 9239,
     "first_seen": "2026-11-09T08:00:48.097881+00:00",
-    "last_seen": "2026-11-09T08:00:48.097881+00:00",
+    "last_seen": "2026-11-09T23:08:47.577478+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -179,7 +785,7 @@
     "primary_source_id": "us-federal-register",
     "n": 9237,
     "first_seen": "2026-11-09T08:00:48.097881+00:00",
-    "last_seen": "2026-11-09T08:00:48.097881+00:00",
+    "last_seen": "2026-11-09T23:08:47.577478+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -210,7 +816,7 @@
     "primary_source_id": "us-federal-register",
     "n": 9233,
     "first_seen": "2026-11-09T08:00:48.097881+00:00",
-    "last_seen": "2026-11-09T08:00:48.097881+00:00",
+    "last_seen": "2026-11-09T23:08:47.577478+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -241,7 +847,7 @@
     "primary_source_id": "us-federal-register",
     "n": 9232,
     "first_seen": "2026-11-09T08:00:48.097881+00:00",
-    "last_seen": "2026-11-09T08:00:48.097881+00:00",
+    "last_seen": "2026-11-09T23:08:47.577478+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -272,7 +878,7 @@
     "primary_source_id": "us-federal-register",
     "n": 9228,
     "first_seen": "2026-11-09T08:00:48.097881+00:00",
-    "last_seen": "2026-11-09T08:00:48.097881+00:00",
+    "last_seen": "2026-11-09T23:08:47.577478+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -302,7 +908,7 @@
     "primary_source_id": "us-federal-register",
     "n": 9226,
     "first_seen": "2026-11-09T08:00:48.097881+00:00",
-    "last_seen": "2026-11-09T08:00:48.097881+00:00",
+    "last_seen": "2026-11-09T23:08:47.577478+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -333,7 +939,7 @@
     "primary_source_id": "us-federal-register",
     "n": 9223,
     "first_seen": "2026-11-09T08:00:48.097881+00:00",
-    "last_seen": "2026-11-09T08:00:48.097881+00:00",
+    "last_seen": "2026-11-09T23:08:47.577478+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -364,7 +970,7 @@
     "primary_source_id": "us-federal-register",
     "n": 9222,
     "first_seen": "2026-11-09T08:00:48.097881+00:00",
-    "last_seen": "2026-11-09T08:00:48.097881+00:00",
+    "last_seen": "2026-11-09T23:08:47.577478+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -395,7 +1001,7 @@
     "primary_source_id": "us-federal-register",
     "n": 9199,
     "first_seen": "2026-11-09T08:00:48.097881+00:00",
-    "last_seen": "2026-11-09T08:00:48.097881+00:00",
+    "last_seen": "2026-11-09T23:08:47.577478+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -426,7 +1032,7 @@
     "primary_source_id": "us-federal-register",
     "n": 9187,
     "first_seen": "2026-11-09T08:00:48.097881+00:00",
-    "last_seen": "2026-11-09T08:00:48.097881+00:00",
+    "last_seen": "2026-11-09T23:08:47.577478+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -457,370 +1063,9 @@
     "primary_source_id": "us-federal-register",
     "n": 9186,
     "first_seen": "2026-11-09T08:00:48.097881+00:00",
-    "last_seen": "2026-11-09T08:00:48.097881+00:00",
+    "last_seen": "2026-11-09T23:08:47.577478+00:00",
     "source_ids": [
       "us-federal-register"
-    ]
-  },
-  {
-    "title": "DCPD-202600671 - Remarks at a Campaign Rally for Alabama Republican Candidates in Mobile, Alabama",
-    "url": "https://www.govinfo.gov/app/details/DCPD-202600671",
-    "native_id": "DCPD-202600671",
-    "published_at": "2026-11-06T21:37:00+00:00",
-    "published_raw": "Fri, 06 Nov 2026 21:37:00 +0000",
-    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "presidential_document",
-      "document_stage": "presidential_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Compilation of Presidential Documents",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-dcpd",
-    "n": 8888,
-    "first_seen": "2026-11-06T07:57:02.134140+00:00",
-    "last_seen": "2026-11-07T07:13:47.398646+00:00",
-    "source_ids": [
-      "us-govinfo-dcpd"
-    ]
-  },
-  {
-    "title": "DCPD-202600677 - Executive Order 14435-Emergency Tax Relief on Diesel Fuel",
-    "url": "https://www.govinfo.gov/app/details/DCPD-202600677",
-    "native_id": "DCPD-202600677",
-    "published_at": "2026-11-06T21:34:00+00:00",
-    "published_raw": "Fri, 06 Nov 2026 21:34:00 +0000",
-    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "presidential_document",
-      "document_stage": "presidential_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Compilation of Presidential Documents",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-dcpd",
-    "n": 9132,
-    "first_seen": "2026-11-07T07:13:47.398646+00:00",
-    "last_seen": "2026-11-07T07:13:47.398646+00:00",
-    "source_ids": [
-      "us-govinfo-dcpd"
-    ]
-  },
-  {
-    "title": "DCPD-202600674 - Remarks and an Exchange With Reporters Prior to Departure for Grand Island, Nebraska",
-    "url": "https://www.govinfo.gov/app/details/DCPD-202600674",
-    "native_id": "DCPD-202600674",
-    "published_at": "2026-11-06T21:34:00+00:00",
-    "published_raw": "Fri, 06 Nov 2026 21:34:00 +0000",
-    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "presidential_document",
-      "document_stage": "presidential_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Compilation of Presidential Documents",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-dcpd",
-    "n": 9131,
-    "first_seen": "2026-11-07T07:13:47.398646+00:00",
-    "last_seen": "2026-11-07T07:13:47.398646+00:00",
-    "source_ids": [
-      "us-govinfo-dcpd"
-    ]
-  },
-  {
-    "title": "DCPD-202600676 - Message on Fire Prevention Week",
-    "url": "https://www.govinfo.gov/app/details/DCPD-202600676",
-    "native_id": "DCPD-202600676",
-    "published_at": "2026-11-06T21:34:00+00:00",
-    "published_raw": "Fri, 06 Nov 2026 21:34:00 +0000",
-    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "presidential_document",
-      "document_stage": "presidential_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Compilation of Presidential Documents",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-dcpd",
-    "n": 9130,
-    "first_seen": "2026-11-07T07:13:47.398646+00:00",
-    "last_seen": "2026-11-07T07:13:47.398646+00:00",
-    "source_ids": [
-      "us-govinfo-dcpd"
-    ]
-  },
-  {
-    "title": "DCPD-202600392 - Remarks on Signing a Proclamation To Restore United States Commercial Fishing in the Pacific and an Exchange With Reporters",
-    "url": "https://www.govinfo.gov/app/details/DCPD-202600392",
-    "native_id": "DCPD-202600392",
-    "published_at": "2026-11-06T21:34:00+00:00",
-    "published_raw": "Fri, 06 Nov 2026 21:34:00 +0000",
-    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "presidential_document",
-      "document_stage": "presidential_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Compilation of Presidential Documents",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-dcpd",
-    "n": 9129,
-    "first_seen": "2026-11-07T07:13:47.398646+00:00",
-    "last_seen": "2026-11-07T07:13:47.398646+00:00",
-    "source_ids": [
-      "us-govinfo-dcpd"
-    ]
-  },
-  {
-    "title": "DCPD-202600673 - Remarks at a Campaign Rally for Ohio Republican Candidates in Vandalia, Ohio",
-    "url": "https://www.govinfo.gov/app/details/DCPD-202600673",
-    "native_id": "DCPD-202600673",
-    "published_at": "2026-11-06T21:34:00+00:00",
-    "published_raw": "Fri, 06 Nov 2026 21:34:00 +0000",
-    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "presidential_document",
-      "document_stage": "presidential_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Compilation of Presidential Documents",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-dcpd",
-    "n": 8889,
-    "first_seen": "2026-11-06T07:57:02.134140+00:00",
-    "last_seen": "2026-11-07T07:13:47.398646+00:00",
-    "source_ids": [
-      "us-govinfo-dcpd"
-    ]
-  },
-  {
-    "title": "DCPD-202600679 - Remarks and an Exchange With Reporters Prior to Departure for Sparrows Point, Maryland",
-    "url": "https://www.govinfo.gov/app/details/DCPD-202600679",
-    "native_id": "DCPD-202600679",
-    "published_at": "2026-11-06T21:32:00+00:00",
-    "published_raw": "Fri, 06 Nov 2026 21:32:00 +0000",
-    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "presidential_document",
-      "document_stage": "presidential_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Compilation of Presidential Documents",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-dcpd",
-    "n": 9128,
-    "first_seen": "2026-11-07T07:13:47.398646+00:00",
-    "last_seen": "2026-11-07T07:13:47.398646+00:00",
-    "source_ids": [
-      "us-govinfo-dcpd"
-    ]
-  },
-  {
-    "title": "DCPD-202600665 - Remarks in Durant, Oklahoma",
-    "url": "https://www.govinfo.gov/app/details/DCPD-202600665",
-    "native_id": "DCPD-202600665",
-    "published_at": "2026-11-06T21:32:00+00:00",
-    "published_raw": "Fri, 06 Nov 2026 21:32:00 +0000",
-    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "presidential_document",
-      "document_stage": "presidential_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Compilation of Presidential Documents",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-dcpd",
-    "n": 9127,
-    "first_seen": "2026-11-07T07:13:47.398646+00:00",
-    "last_seen": "2026-11-07T07:13:47.398646+00:00",
-    "source_ids": [
-      "us-govinfo-dcpd"
-    ]
-  },
-  {
-    "title": "DCPD-202600675 - Message on Child Health Day",
-    "url": "https://www.govinfo.gov/app/details/DCPD-202600675",
-    "native_id": "DCPD-202600675",
-    "published_at": "2026-11-06T21:32:00+00:00",
-    "published_raw": "Fri, 06 Nov 2026 21:32:00 +0000",
-    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "presidential_document",
-      "document_stage": "presidential_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Compilation of Presidential Documents",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-dcpd",
-    "n": 9126,
-    "first_seen": "2026-11-07T07:13:47.398646+00:00",
-    "last_seen": "2026-11-07T07:13:47.398646+00:00",
-    "source_ids": [
-      "us-govinfo-dcpd"
-    ]
-  },
-  {
-    "title": "Medical devices given exceptional use authorisations",
-    "url": "https://www.gov.uk/government/publications/medical-devices-given-exceptional-use-authorisations",
-    "native_id": "/government/publications/medical-devices-given-exceptional-use-authorisations",
-    "published_at": "2026-11-06T17:15:46+00:00",
-    "published_raw": "2026-11-06T17:15:46Z",
-    "document_type": "decision",
-    "issuer": "Medicines and Healthcare products Regulatory Agency",
-    "issuer_ids": [
-      "uk-gov:medicines-and-healthcare-products-regulatory-agency"
-    ],
-    "summary": "List of manufacturers and their medical devices granted an exemption by MHRA. The list also includes manufacturers whose exemption expired or was cancelled.",
-    "source_metadata": {
-      "document_type": "decision",
-      "document_stage": "decision_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Medicines and Healthcare products Regulatory Agency",
-      "jurisdiction": "UK",
-      "family": "typed_government_documents"
-    },
-    "primary_source_id": "uk-govuk-decision",
-    "n": 6834,
-    "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-11-09T08:00:48.097881+00:00",
-    "source_ids": [
-      "uk-govuk-decision"
-    ]
-  },
-  {
-    "title": "CAC Outcome: Prospect & Quantinuum",
-    "url": "https://www.gov.uk/government/publications/cac-outcome-prospect-quantinuum",
-    "native_id": "/government/publications/cac-outcome-prospect-quantinuum",
-    "published_at": "2026-11-06T17:11:30+00:00",
-    "published_raw": "2026-11-06T17:11:30Z",
-    "document_type": "decision",
-    "issuer": "Central Arbitration Committee",
-    "issuer_ids": [
-      "uk-gov:central-arbitration-committee"
-    ],
-    "summary": "Outcome(s) by the Central Arbitration Committee on an application from Prospect.",
-    "source_metadata": {
-      "document_type": "decision",
-      "document_stage": "decision_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Central Arbitration Committee",
-      "jurisdiction": "UK",
-      "family": "typed_government_documents"
-    },
-    "primary_source_id": "uk-govuk-decision",
-    "n": 9010,
-    "first_seen": "2026-11-06T19:58:09.481952+00:00",
-    "last_seen": "2026-11-09T08:00:48.097881+00:00",
-    "source_ids": [
-      "uk-govuk-decision"
-    ]
-  },
-  {
-    "title": "Orphan registered medicinal products",
-    "url": "https://www.gov.uk/government/publications/orphan-registered-medicinal-products",
-    "native_id": "/government/publications/orphan-registered-medicinal-products",
-    "published_at": "2026-11-06T13:55:29+00:00",
-    "published_raw": "2026-11-06T13:55:29Z",
-    "document_type": "decision",
-    "issuer": "Medicines and Healthcare products Regulatory Agency",
-    "issuer_ids": [
-      "uk-gov:medicines-and-healthcare-products-regulatory-agency"
-    ],
-    "summary": "A list of authorised orphan medicinal products registered by the UK licensing authority.",
-    "source_metadata": {
-      "document_type": "decision",
-      "document_stage": "decision_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Medicines and Healthcare products Regulatory Agency",
-      "jurisdiction": "UK",
-      "family": "typed_government_documents"
-    },
-    "primary_source_id": "uk-govuk-decision",
-    "n": 4,
-    "first_seen": "2026-10-15T10:17:11.133023+00:00",
-    "last_seen": "2026-11-09T08:00:48.097881+00:00",
-    "source_ids": [
-      "uk-govuk-decision"
-    ]
-  },
-  {
-    "title": "Teacher misconduct panel outcome: Ms Fiona Simpson",
-    "url": "https://www.gov.uk/government/publications/teacher-misconduct-panel-outcome-ms-fiona-simpson",
-    "native_id": "/government/publications/teacher-misconduct-panel-outcome-ms-fiona-simpson",
-    "published_at": "2026-11-06T12:34:55+00:00",
-    "published_raw": "2026-11-06T12:34:55Z",
-    "document_type": "decision",
-    "issuer": "Teaching Regulation Agency",
-    "issuer_ids": [
-      "uk-gov:teaching-regulation-agency"
-    ],
-    "summary": "Professional conduct panel outcome, including decision and reasons.",
-    "source_metadata": {
-      "document_type": "decision",
-      "document_stage": "decision_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Teaching Regulation Agency",
-      "jurisdiction": "UK",
-      "family": "typed_government_documents"
-    },
-    "primary_source_id": "uk-govuk-decision",
-    "n": 9011,
-    "first_seen": "2026-11-06T19:58:09.481952+00:00",
-    "last_seen": "2026-11-09T08:00:48.097881+00:00",
-    "source_ids": [
-      "uk-govuk-decision"
-    ]
-  },
-  {
-    "title": "Keir Starmer - former Prime Minister - advice under the government's Business Appointment Rules",
-    "url": "https://www.gov.uk/government/publications/keir-starmer-former-prime-minister-advice-under-the-governments-business-appointment-rules",
-    "native_id": "/government/publications/keir-starmer-former-prime-minister-advice-under-the-governments-business-appointment-rules",
-    "published_at": "2026-11-06T10:36:13+00:00",
-    "published_raw": "2026-11-06T10:36:13Z",
-    "document_type": "decision",
-    "issuer": "Independent Adviser on Ministerial Standards",
-    "issuer_ids": [
-      "uk-gov:independent-adviser-on-ministers-interests"
-    ],
-    "summary": "Advice provided to the Rt Hon Sir Keir Starmer KCB KC, former Prime Minister, on appointments and employment taken up within two years of leaving office",
-    "source_metadata": {
-      "document_type": "decision",
-      "document_stage": "decision_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Independent Adviser on Ministerial Standards",
-      "jurisdiction": "UK",
-      "family": "typed_government_documents"
-    },
-    "primary_source_id": "uk-govuk-decision",
-    "n": 9012,
-    "first_seen": "2026-11-06T19:58:09.481952+00:00",
-    "last_seen": "2026-11-09T08:00:48.097881+00:00",
-    "source_ids": [
-      "uk-govuk-decision"
     ]
   }
 ]

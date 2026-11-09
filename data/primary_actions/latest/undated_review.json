@@ -1,8 +1,176 @@
 [
   {
-    "title": "Japan Participates in European Hydrogen Week 2026 as Country Partner",
-    "url": "https://www.meti.go.jp/english/press/2026/10/20261030001.html",
-    "native_id": "https://www.meti.go.jp/english/press/2026/10/20261030001.html",
+    "title": "Chairman Carr Announces New Legal Advisor",
+    "url": "https://www.fcc.gov/edoc/426658",
+    "native_id": "426658",
+    "published_at": null,
+    "published_raw": "",
+    "summary": ".",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Federal Communications Commission — News Releases",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
+    },
+    "primary_source_id": "us-fcc-685c5e7dd2",
+    "n": 9375,
+    "first_seen": "2026-11-09T23:08:47.577478+00:00",
+    "last_seen": "2026-11-09T23:08:47.577478+00:00",
+    "source_ids": [
+      "us-fcc-685c5e7dd2"
+    ]
+  },
+  {
+    "title": "Actions",
+    "url": "https://www.fcc.gov/edoc/426655",
+    "native_id": "426655",
+    "published_at": null,
+    "published_raw": "",
+    "summary": ".",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Federal Communications Commission — Public Notices",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
+    },
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 9376,
+    "first_seen": "2026-11-09T23:08:47.577478+00:00",
+    "last_seen": "2026-11-09T23:08:47.577478+00:00",
+    "source_ids": [
+      "us-fcc-e95ecda3bb"
+    ]
+  },
+  {
+    "title": "Applications",
+    "url": "https://www.fcc.gov/edoc/426654",
+    "native_id": "426654",
+    "published_at": null,
+    "published_raw": "",
+    "summary": ".",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Federal Communications Commission — Public Notices",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
+    },
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 9377,
+    "first_seen": "2026-11-09T23:08:47.577478+00:00",
+    "last_seen": "2026-11-09T23:08:47.577478+00:00",
+    "source_ids": [
+      "us-fcc-e95ecda3bb"
+    ]
+  },
+  {
+    "title": "Pleadings",
+    "url": "https://www.fcc.gov/edoc/426656",
+    "native_id": "426656",
+    "published_at": null,
+    "published_raw": "",
+    "summary": ".",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Federal Communications Commission — Public Notices",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
+    },
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 9378,
+    "first_seen": "2026-11-09T23:08:47.577478+00:00",
+    "last_seen": "2026-11-09T23:08:47.577478+00:00",
+    "source_ids": [
+      "us-fcc-e95ecda3bb"
+    ]
+  },
+  {
+    "title": "PSHSB Announces Region 17 (Kentucky) RPCs to Hold 700 MHZ and 800 MHZ Meetings",
+    "url": "https://www.fcc.gov/edoc/426662",
+    "native_id": "426662",
+    "published_at": null,
+    "published_raw": "",
+    "summary": "Announces Region 17 (Kentucky) RPC Meetings for 700 MHZ and 800 MHZ",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Federal Communications Commission — Public Notices",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
+    },
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 9379,
+    "first_seen": "2026-11-09T23:08:47.577478+00:00",
+    "last_seen": "2026-11-09T23:08:47.577478+00:00",
+    "source_ids": [
+      "us-fcc-e95ecda3bb"
+    ]
+  },
+  {
+    "title": "Domestic Section 214 Application Filed for the Transfer of Control of Citizens Telephone Company of Kecksburg, Citizens Telecom Solutions, LLC, and Citizens Telecommunications Technologies, Inc. to Omni Fiber, LLC",
+    "url": "https://www.fcc.gov/edoc/426667",
+    "native_id": "426667",
+    "published_at": null,
+    "published_raw": "",
+    "summary": ".",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Federal Communications Commission — Public Notices",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
+    },
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 9380,
+    "first_seen": "2026-11-09T23:08:47.577478+00:00",
+    "last_seen": "2026-11-09T23:08:47.577478+00:00",
+    "source_ids": [
+      "us-fcc-e95ecda3bb"
+    ]
+  },
+  {
+    "title": "EU seeks nominations for stakeholder group on tokenisation standards in finance",
+    "url": "https://www.esma.europa.eu/press-news/esma-news/eu-seeks-nominations-stakeholder-group-tokenisation-standards-finance",
+    "native_id": "https://www.esma.europa.eu/press-news/esma-news/eu-seeks-nominations-stakeholder-group-tokenisation-standards-finance",
+    "published_at": null,
+    "published_raw": "",
+    "summary": "EU seeks nominations for stakeholder group on tokenisation standards in finance 09 November 2026 Digital Finance and Innovation The European Central Bank (ECB), together with the European Commission and the European Securities and Markets Authority (ESMA), is calling upon wholesale financial industry stakeholders to express their interest in joining the European Tokenisation Standards Group (ETSG). The group will bring together industry stakeholders to develop common standards for an interconnected tokenised financial ecosystem. The group aims to establish a framework for monitoring compliance with the agreed standards and may formulate recommendations for EU authorities on how to incentivise compliance with those standards. Its work will be market-driven and shaped by the contributions and consensus of industry stakeholders. To this end, the ETSG will be chaired by participants from the industry, with the ECB, the Commission and ESMA acting as observers. Participation in the ETSG is open to a wide range of stakeholders, including EU associations, private entities, global institutions, fintech companies and technical providers working on tokenisation or DLT-based financial services",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "European Securities and Markets Authority",
+      "jurisdiction": "EU",
+      "family": "market_rules_and_enforcement"
+    },
+    "primary_source_id": "eu-esma-73e01d4013",
+    "n": 9391,
+    "first_seen": "2026-11-09T23:08:47.577478+00:00",
+    "last_seen": "2026-11-09T23:08:47.577478+00:00",
+    "source_ids": [
+      "eu-esma-73e01d4013"
+    ]
+  },
+  {
+    "title": "Minister AKAZAWA Holds Online Meeting with HRH Prince Abdulaziz bin Salman, Minister of Energy of the Kingdom of Saudi Arabia",
+    "url": "https://www.meti.go.jp/english/press/2026/11/20261109001.html",
+    "native_id": "https://www.meti.go.jp/english/press/2026/11/20261109001.html",
     "published_at": null,
     "published_raw": null,
     "summary": "",
@@ -16,9 +184,9 @@
       "family": "trade_and_industry_policy"
     },
     "primary_source_id": "jp-meti-index",
-    "n": 9288,
-    "first_seen": "2026-11-09T08:00:48.097881+00:00",
-    "last_seen": "2026-11-09T08:00:48.097881+00:00",
+    "n": 9401,
+    "first_seen": "2026-11-09T23:08:47.577478+00:00",
+    "last_seen": "2026-11-09T23:08:47.577478+00:00",
     "source_ids": [
       "jp-meti-index"
     ]
