@@ -1,10 +1,21 @@
 {
- "risk_tilt": null,
- "macros": [],
- "sector_tilts": {},
- "tickers": {
-  "ADBE": -1.5
+ "risk_tilt": "off",
+ "macros": [
+  "hawkish",
+  "bearish",
+  "hawkish",
+  "bearish"
+ ],
+ "sector_tilts": {
+  "Technology": "bearish",
+  "Healthcare": "bullish",
+  "Consumer Cyclical": "bullish"
  },
- "b1_inject": "NEWS_JUDGE: n=7 rescued=5\nMACRO risk-on: [pol] Democratic Congress sweep drives broad rally, lower yields/oil (regime/1d-1w)\nMACRO rates: [pol] 10Y yield slides on midterm outcome and oil drop; duration relief (session/1d)\nMACRO labor: [pol] September job openings jump ahead of payrolls; growth positive, rate path two-sided (session/1d)\nSECTOR semis/AI: [pol] AMD data-center beat/forecast eases AI spend fears; chip ETF dip-buy inflows (SMH/SOX)\nSECTOR software: [pol] Citi cuts Adobe to Sell on growth reset/competition; SaaS multiple caution (IGV)\nSECTOR clean energy: [pol] Chinese renewables surge on expected US policy shift; TAN/ICLN sympathy (conditional)\nINTERACTION: Yields-down + midterm risk-on supports breadth; Adobe/AI-budget caution offsets blanket SaaS bid; AI infra mixed on regulatory risk vs chip demand.\nWATCH: Ranking hinges on Democratic-sweep policy interpretation; if rally fades, rates/oil and AMD become primary.",
+ "tickers": {
+  "IGV": -4.0,
+  "ADBE": -5.5,
+  "AMGN": 11.0
+ },
+ "b1_inject": "NEWS_JUDGE: n=8 rescued=3\nMACRO rates: [hawkish] pending US inflation report tests Fed after 165k jobs (session/1d-1w)\nMACRO risk: [bearish] AI/tech selloff broadens; Nvidia probe adds mega-cap overhang (session/1d-1w)\nSECTOR semis: [mixed] Arm growth and chip ETF dip-buying vs Nvidia probe/tech rout (SOX)\nSECTOR software: [bearish] Adobe downgrade flags SaaS multiple compression (IGV)\nSECTOR healthcare: [bullish] biotech leadership plus Amgen Repatha outcomes (XBI/healthcare)\nSECTOR consumer: [bullish] Airbnb beat/raise lifts travel-discretionary sympathy (consumer disc/travel)\nINTERACTION: AI chip demand + Nvidia probe/tech selloff \u2192 semis mixed; Adobe downgrade + tech rout \u2192 avoid software on rates hope; biotech/Amgen \u2192 healthcare basket\nWATCH: hard US macro confirmation thin; pending CPI headline low-quality, verify date/tape.",
  "date": "2026-11-09"
 }
