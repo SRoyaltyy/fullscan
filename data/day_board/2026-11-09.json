@@ -2735,6 +2735,22 @@
       "workflow": "Stock Book ALL (one-shot)",
       "run_id": "42702119169",
       "manifest": "research/input_freeze/2026-11-09/manifest.json"
+    },
+    {
+      "path": "01_daily/_channel1/2026-11-09_predict.json",
+      "at": "2026-11-09T18:41:57-05:00",
+      "commit_msg": "auto: stock book leftover sweep",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "42719029522",
+      "manifest": "research/input_freeze/2026-11-09/manifest.json"
+    },
+    {
+      "path": "01_daily/weather/2026-11-09_weather.json",
+      "at": "2026-11-09T18:41:57-05:00",
+      "commit_msg": "auto: stock book leftover sweep",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "42719029522",
+      "manifest": "research/input_freeze/2026-11-09/manifest.json"
     }
   ]
 }
