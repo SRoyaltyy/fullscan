@@ -1,6 +1,6 @@
 # HIT Board — general + sectors (all dates)
 
-Generated: **2026-11-06T20:16:44.403209-05:00**
+Generated: **2026-11-09T16:49:52.268831-05:00**
 
 Source: `03_scoreboard/scoreboard.json`.
 
@@ -10,14 +10,14 @@ Source: `03_scoreboard/scoreboard.json`.
 
 | Book | Direction HIT% | hits / graded | Mag HIT% | n mag |
 |------|----------------|---------------|----------|-------|
-| **General (SPX-style)** | **56.9%** | 33/58 | 53.4% | 58 |
+| **General (SPX-style)** | **57.6%** | 34/59 | 52.5% | 59 |
 | **All sector calls** | **43.2%** | 145/336 | 35.7% | 336 |
 
 ### Pipeline blanks (general) — excluded from HIT%
 
 - No `predicted_direction`: **2026-08-02, 2026-08-08, 2026-08-09, 2026-08-15, 2026-08-16, 2026-08-22, 2026-08-25, 2026-08-27, 2026-08-29, 2026-08-30, 2026-09-30, 2026-10-06, 2026-10-07, 2026-10-12, 2026-10-15, 2026-11-06** (n=16)
 - Of those, legacy scoreboard still marked direction_hit=false: **2026-08-02, 2026-08-08, 2026-08-09** — ops failure, not model error
-- If blanks were counted as MISS (old method): **54.1%** (33/61)
+- If blanks were counted as MISS (old method): **54.8%** (34/62)
 
 ## General market — by date
 
@@ -101,6 +101,7 @@ Source: `03_scoreboard/scoreboard.json`.
 | 2026-11-04 | up | notable | 10.848 | 1.58 | up | HIT | HIT |
 | 2026-11-05 | down | mild | -2.495 | -4.36 | down | HIT | MISS |
 | 2026-11-06 | — | — | — | 0.31 | up | NO_PRED | NO_PRED |
+| 2026-11-09 | up | notable | 9.449 | 2.35 | up | HIT | MISS |
 
 ## Sectors — HIT% by date (model calls only)
 
@@ -184,6 +185,7 @@ Source: `03_scoreboard/scoreboard.json`.
 | 2026-11-04 | 0 | **—** | 0/0 | — |
 | 2026-11-05 | 0 | **—** | 0/0 | — |
 | 2026-11-06 | 0 | **—** | 0/0 | — |
+| 2026-11-09 | 0 | **—** | 0/0 | — |
 
 ## Sectors — HIT% by sector (across dates)
 
@@ -205,7 +207,7 @@ Source: `03_scoreboard/scoreboard.json`.
 
 HIT / MISS / NO_PRED / — . Actual % when graded.
 
-| Sector | 2026-10-26 | 2026-10-27 | 2026-10-28 | 2026-10-29 | 2026-10-30 | 2026-11-02 | 2026-11-03 | 2026-11-04 | 2026-11-05 | 2026-11-06 |
+| Sector | 2026-10-27 | 2026-10-28 | 2026-10-29 | 2026-10-30 | 2026-11-02 | 2026-11-03 | 2026-11-04 | 2026-11-05 | 2026-11-06 | 2026-11-09 |
 |--------|------|------|------|------|------|------|------|------|------|------|
 | Basic Materials | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED |
 | Communication Services | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED |
