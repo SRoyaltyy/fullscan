@@ -1,0 +1,21 @@
+{
+ "risk_tilt": "off",
+ "macros": [
+  "hawkish",
+  "bearish",
+  "hawkish",
+  "bearish"
+ ],
+ "sector_tilts": {
+  "Technology": "bearish",
+  "Healthcare": "bullish",
+  "Consumer Cyclical": "bullish"
+ },
+ "tickers": {
+  "IGV": -4.0,
+  "ADBE": -5.5,
+  "AMGN": 11.0
+ },
+ "b1_inject": "NEWS_JUDGE: n=8 rescued=3\nMACRO rates: [hawkish] pending US inflation report tests Fed after 165k jobs (session/1d-1w)\nMACRO risk: [bearish] AI/tech selloff broadens; Nvidia probe adds mega-cap overhang (session/1d-1w)\nSECTOR semis: [mixed] Arm growth and chip ETF dip-buying vs Nvidia probe/tech rout (SOX)\nSECTOR software: [bearish] Adobe downgrade flags SaaS multiple compression (IGV)\nSECTOR healthcare: [bullish] biotech leadership plus Amgen Repatha outcomes (XBI/healthcare)\nSECTOR consumer: [bullish] Airbnb beat/raise lifts travel-discretionary sympathy (consumer disc/travel)\nINTERACTION: AI chip demand + Nvidia probe/tech selloff \u2192 semis mixed; Adobe downgrade + tech rout \u2192 avoid software on rates hope; biotech/Amgen \u2192 healthcare basket\nWATCH: hard US macro confirmation thin; pending CPI headline low-quality, verify date/tape.",
+ "date": "2026-11-09"
+}
