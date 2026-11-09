@@ -34771,6 +34771,18 @@
           "predicted_direction": "up",
           "predicted_magnitude_band": "mild",
           "confidence": 0.5
+        },
+        "HORIZON_2W": {
+          "label": "2w",
+          "target_date": "2026-11-09",
+          "actual_pct": -1.65,
+          "actual_direction": "down",
+          "actual_magnitude_band": "mild",
+          "direction_hit": false,
+          "magnitude_hit": true,
+          "predicted_direction": "up",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.55
         }
       }
     },
@@ -35187,6 +35199,18 @@
           "predicted_direction": "up",
           "predicted_magnitude_band": "mild",
           "confidence": 0.55
+        },
+        "HORIZON_1W": {
+          "label": "1w",
+          "target_date": "2026-11-09",
+          "actual_pct": 0.11,
+          "actual_direction": "flat",
+          "actual_magnitude_band": "flat",
+          "direction_hit": false,
+          "magnitude_hit": false,
+          "predicted_direction": "up",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.5
         }
       },
       "lesson_schema_ok": true
@@ -35499,7 +35523,20 @@
       "attribution_contested": "yes — outlets split between “gridlock is good” (AP/Bloomberg), “oil crash / peace dividend” (Geo.tv/XTB), and “earnings/AI” (tech coverage).",
       "outlier_watch": "Energy sector -4.4% to -4.7% while the broad market rallied +1.6%; NDX lagged Dow by ~1.6pp; Apple reversed from -4% to +6%; Hormuz mine claims completely ignored by oil.",
       "lesson_schema_ok": true,
-      "horizon_grades": {}
+      "horizon_grades": {
+        "HORIZON_3D": {
+          "label": "3d",
+          "target_date": "2026-11-09",
+          "actual_pct": -1.8,
+          "actual_direction": "down",
+          "actual_magnitude_band": "notable",
+          "direction_hit": false,
+          "magnitude_hit": false,
+          "predicted_direction": "up",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.65
+        }
+      }
     },
     {
       "date": "2026-10-28",
@@ -35826,7 +35863,8 @@
       "key_interaction": "Offsetting/masking — Nvidia -5% drag and hawkish Fed were masked by oil collapse + broad dip-buying; oil collapse amplified semis short-covering",
       "knowable_at_9am": "yes",
       "attribution_contested": "yes",
-      "outlier_watch": "Nvidia -5% while SOX +6.6% (largest underperformance since Jan 2019); energy sector green despite Brent -5.8%"
+      "outlier_watch": "Nvidia -5% while SOX +6.6% (largest underperformance since Jan 2019); energy sector green despite Brent -5.8%",
+      "horizon_grades": {}
     }
   ]
 }
