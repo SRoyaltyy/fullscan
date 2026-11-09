@@ -1,6 +1,6 @@
 {
   "date": "2026-11-09",
-  "generated_at": "2026-11-09T09:21:28.686728-05:00",
+  "generated_at": "2026-11-09T09:21:35.423861-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -2329,6 +2329,143 @@
         }
       ],
       "preview": "1d BUY MGNI, TMDX, PGNY, ZVRA, CGON, APP, DNUT, QNST \u00b7 SELL EXFY, CBAT, SUPX, INTC, XPRO, EQNR, LYB, BLND \u00b7 green 224 \u00b7 ETON, BTSG, ADPT, CLOV, JANX, TEM, ZVRA, RLAY, RYTM, WRBY \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-11-09 BUY MGNI, TMDX, PGNY, ZVRA, CGON, APP, DNUT, QNST \u00b7 SELL EXFY, CBAT, SUPX, INTC, XPRO, EQNR, LYB, BLND \u00b7 2026-11-09 BUY MGNI, TMDX, PGNY, ZVRA, CGON, APP, DNUT, QNST \u00b7 SELL EXFY, CBAT, SUPX, INTC, XPRO, EQNR, LYB, BLND \u00b7 # Stock book \u2014 2026-11-09\n_Generated 2026-11-09T09:20:58.318017-05:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+    },
+    {
+      "key": "live_boards",
+      "title": "Live 1d BUY/SELL strip",
+      "date": "2026-11-09",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-09T09:21:34.365089-05:00",
+      "files": [
+        {
+          "path": "data/day_board/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 27697,
+          "preview": "2026-11-09 BUY MGNI, TMDX, PGNY, ZVRA, CGON, APP, DNUT, QNST \u00b7 SELL EXFY, CBAT, SUPX, INTC, XPRO, EQNR, LYB, BLND"
+        },
+        {
+          "path": "data/day_board/latest.json",
+          "ok": true,
+          "reason": "",
+          "size": 1116,
+          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
+        },
+        {
+          "path": "data/day_board/2026-11-09.json",
+          "ok": true,
+          "reason": "",
+          "size": 123247,
+          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href"
+        },
+        {
+          "path": "data/day_board/2026-11-09_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 84397,
+          "preview": "2026-11-09 BUY MGNI, TMDX, PGNY, ZVRA, CGON, APP, DNUT, QNST \u00b7 SELL EXFY, CBAT, SUPX, INTC, XPRO, EQNR, LYB, BLND"
+        },
+        {
+          "path": "data/day_board/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 955109,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/2026-11-09_strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 955109,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/factor_mine/morning_look/2026-11-09.json",
+          "ok": true,
+          "reason": "",
+          "size": 428412,
+          "preview": "keys: asof_commit, asof_committed_at, cutoff_et, date, n, read_from, rows"
+        },
+        {
+          "path": "data/day_board/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 1369264,
+          "preview": "2026-11-09 BUY MGNI, TMDX, PGNY, ZVRA, CGON, APP, DNUT, QNST \u00b7 SELL EXFY, CBAT, SUPX, INTC, XPRO, EQNR, LYB, BLND"
+        },
+        {
+          "path": "data/factor_mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 955109,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 84397,
+          "preview": "2026-11-09 BUY MGNI, TMDX, PGNY, ZVRA, CGON, APP, DNUT, QNST \u00b7 SELL EXFY, CBAT, SUPX, INTC, XPRO, EQNR, LYB, BLND"
+        },
+        {
+          "path": "dashboard/factor-mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 955109,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 955109,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 1369264,
+          "preview": "2026-11-09 BUY MGNI, TMDX, PGNY, ZVRA, CGON, APP, DNUT, QNST \u00b7 SELL EXFY, CBAT, SUPX, INTC, XPRO, EQNR, LYB, BLND"
+        },
+        {
+          "path": "data/day_board/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 1671,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        },
+        {
+          "path": "dashboard/factor-mine/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 1671,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        },
+        {
+          "path": "data/day_board/today_strategies.after-freeze-1.json",
+          "ok": true,
+          "reason": "",
+          "size": 281364,
+          "preview": "2026-11-04 BUY CDNA, BLFS, VEEV, ILMN, PRCH, LAUR, CNK, CHEF \u00b7 SELL NEOV, BIDU, ROIV, BAK, PAL, GFL, VNET, NOK"
+        },
+        {
+          "path": "data/day_board/today_strategies.after-freeze-2.json",
+          "ok": true,
+          "reason": "",
+          "size": 1165723,
+          "preview": "2026-11-04 BUY CDNA, BLFS, VEEV, ILMN, PRCH, LAUR, CNK, TRU \u00b7 SELL NEOV, BIDU, ROIV, BAK, GFL, PAL, VNET, NFLX"
+        },
+        {
+          "path": "data/day_board/today_strategies.after-freeze-3.json",
+          "ok": true,
+          "reason": "",
+          "size": 885881,
+          "preview": "2026-11-05 BUY XYZ, CDW, KD, JKHY, APPN, VRSN, DBX, MSFT \u00b7 SELL ENVX, AMKR, FCEL, METC, AMPX, EAF, HYLN, RGTI"
+        }
+      ],
+      "preview": "2026-11-09 BUY MGNI, TMDX, PGNY, ZVRA, CGON, APP, DNUT, QNST \u00b7 SELL EXFY, CBAT, SUPX, INTC, XPRO, EQNR, LYB, BLND \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href \u00b7 2026-11-09 BUY MGNI, TMDX, PGNY, ZVRA, CGON, APP, DNUT, QNST \u00b7 SELL EXFY, CBAT, SUPX, INTC, XPRO, EQNR, LYB, BLND \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: asof_commit, asof_committed_at, cutoff_et, date, n, read_from, rows \u00b7 2026-11-09 BUY MGNI, TMDX, PGNY, ZVRA, CGON, APP, DNUT, QNST \u00b7 SELL EXFY, CBAT, SUPX, INTC, XPRO, EQNR, LYB, BLND \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-11-09 BUY MGNI, TMDX, PGNY, ZVRA, CGON, APP, DNUT, QNST \u00b7 SELL EXFY, CBAT, SUPX, INTC, XPRO, EQNR, LYB, BLND \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_us"
     }
   ],
   "href": {
@@ -2390,6 +2527,14 @@
       "path": "data/stock_book/2026-11-09_suggestions.json",
       "at": "2026-11-09T09:21:29-05:00",
       "commit_msg": "auto: land stock_book [2026-11-09]",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "42624328112",
+      "manifest": "research/input_freeze/2026-11-09/manifest.json"
+    },
+    {
+      "path": "data/day_board/2026-11-09.json",
+      "at": "2026-11-09T09:21:36-05:00",
+      "commit_msg": "auto: land live_boards [2026-11-09]",
       "workflow": "Stock Book ALL (one-shot)",
       "run_id": "42624328112",
       "manifest": "research/input_freeze/2026-11-09/manifest.json"
