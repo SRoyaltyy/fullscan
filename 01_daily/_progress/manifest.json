@@ -1,12 +1,6 @@
 {
-  "updated_at": "2026-11-09T10:43:59-05:00",
+  "updated_at": "2026-11-09T15:30:37-05:00",
   "runs": [
-    {
-      "date": "2026-10-30",
-      "workflow": "fm_preopen",
-      "file": "2026-10-30_fm_preopen.json",
-      "updated_at": "2026-10-30T21:35:18-04:00"
-    },
     {
       "date": "2026-10-29",
       "workflow": "postclose",
@@ -240,6 +234,12 @@
       "workflow": "factor_mine",
       "file": "2026-11-09_factor_mine.json",
       "updated_at": "2026-11-09T10:43:59-05:00"
+    },
+    {
+      "date": "2026-11-09",
+      "workflow": "preopen",
+      "file": "2026-11-09_preopen.json",
+      "updated_at": "2026-11-09T15:30:37-05:00"
     }
   ]
 }
