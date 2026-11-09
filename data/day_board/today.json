@@ -1,12 +1,12 @@
 {
   "date": "2026-11-09",
-  "generated_at": "2026-11-09T08:09:24.881876-05:00",
+  "generated_at": "2026-11-09T08:09:53.698793-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
-    "ok": 3,
+    "ok": 4,
     "partial": 3,
-    "fail": 2,
+    "fail": 1,
     "n": 8
   },
   "buy_1d": [],
@@ -196,6 +196,31 @@
         }
       ],
       "preview": "5046 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "ab",
+      "title": "AB checklist",
+      "date": "2026-11-09",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-09T08:09:52.818935-05:00",
+      "files": [
+        {
+          "path": "data/ab_checklist/2026-11-09_ab_checklist.csv",
+          "ok": true,
+          "reason": "",
+          "size": 7551872,
+          "preview": "2618 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 PCTY, EPAM, HUM, CLOV, G"
+        },
+        {
+          "path": "data/ab_checklist/2026-11-09_ab_checklist_enriched.csv",
+          "ok": true,
+          "reason": "",
+          "size": 8347327,
+          "preview": "2618 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 HUM, CLOV, TSCO, WCN, KDP"
+        }
+      ],
+      "preview": "2618 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 PCTY, EPAM, HUM, CLOV, G \u00b7 2618 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 HUM, CLOV, TSCO, WCN, KDP"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
