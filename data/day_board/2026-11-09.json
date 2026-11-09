@@ -1,6 +1,6 @@
 {
   "date": "2026-11-09",
-  "generated_at": "2026-11-09T09:20:31.314485-05:00",
+  "generated_at": "2026-11-09T09:20:47.878293-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -2198,6 +2198,24 @@
         }
       ],
       "preview": "5900 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 AVAH, CDNA, ETON, BTSG, NRIX"
+    },
+    {
+      "key": "peer_rs",
+      "title": "Peer RS",
+      "date": "2026-11-09",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-09T09:20:46.834579-05:00",
+      "files": [
+        {
+          "path": "data/peers/2026-11-09_peer_rs.csv",
+          "ok": true,
+          "reason": "",
+          "size": 810923,
+          "preview": "5046 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+        }
+      ],
+      "preview": "5046 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
     }
   ],
   "href": {
@@ -2205,5 +2223,15 @@
     "readiness_action": "https://github.com/SRoyaltyy/fullscan/actions/workflows/stock_book_diag.yml",
     "factor_mine": "https://sroyaltyy.github.io/fullscan/dashboard/factor-mine/",
     "paper": "https://sroyaltyy.github.io/fullscan/dashboard/"
-  }
+  },
+  "frozen_write_skips": [
+    {
+      "path": "data/day_board/2026-11-09.json",
+      "at": "2026-11-09T09:20:48-05:00",
+      "commit_msg": "auto: land peer_rs [2026-11-09]",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "42624328112",
+      "manifest": "research/input_freeze/2026-11-09/manifest.json"
+    }
+  ]
 }
