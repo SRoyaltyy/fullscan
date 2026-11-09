@@ -51,6 +51,7 @@ from src.news_impact.prompts import (
     pack_complete_prompt,
 )
 from src.lane_route import is_classify_banned
+from src.news_impact.lane_batch import vertical_packet
 from src.news_impact.schema import EVENT_CLASSES, family_of
 from src.news_impact.scratch import article_id
 
@@ -1772,6 +1773,7 @@ def _process_article(
             "reject_reason": "no_instrument_candidates",
             "listed_exposure_status": "unresolved_by_current_linker",
             "required_next_step": "Research legal ownership and exposures outside the current candidate index",
+            "vertical_packet": vertical_packet(title, body, event_class, q5, sign, constraint),
             "finviz_file": linked.get("finviz_file") or "",
         })
         return _attach_prompt_log(_stamp_extra(base))
