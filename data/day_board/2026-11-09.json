@@ -2631,6 +2631,54 @@
       "workflow": "Stock Book ALL (one-shot)",
       "run_id": "42624328112",
       "manifest": "research/input_freeze/2026-11-09/manifest.json"
+    },
+    {
+      "path": "01_daily/2026-11-09_stock_book.md",
+      "at": "2026-11-09T09:25:06-05:00",
+      "commit_msg": "auto: stock book leftover sweep",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "42624328112",
+      "manifest": "research/input_freeze/2026-11-09/manifest.json"
+    },
+    {
+      "path": "01_daily/_channel1/2026-11-09_predict.json",
+      "at": "2026-11-09T09:25:06-05:00",
+      "commit_msg": "auto: stock book leftover sweep",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "42624328112",
+      "manifest": "research/input_freeze/2026-11-09/manifest.json"
+    },
+    {
+      "path": "data/stock_book/2026-11-09_green.json",
+      "at": "2026-11-09T09:25:06-05:00",
+      "commit_msg": "auto: stock book leftover sweep",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "42624328112",
+      "manifest": "research/input_freeze/2026-11-09/manifest.json"
+    },
+    {
+      "path": "data/stock_book/2026-11-09_input_health.json",
+      "at": "2026-11-09T09:25:06-05:00",
+      "commit_msg": "auto: stock book leftover sweep",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "42624328112",
+      "manifest": "research/input_freeze/2026-11-09/manifest.json"
+    },
+    {
+      "path": "data/stock_book/2026-11-09_stock_book.json",
+      "at": "2026-11-09T09:25:06-05:00",
+      "commit_msg": "auto: stock book leftover sweep",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "42624328112",
+      "manifest": "research/input_freeze/2026-11-09/manifest.json"
+    },
+    {
+      "path": "data/stock_book/2026-11-09_suggestions.json",
+      "at": "2026-11-09T09:25:06-05:00",
+      "commit_msg": "auto: stock book leftover sweep",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "42624328112",
+      "manifest": "research/input_freeze/2026-11-09/manifest.json"
     }
   ]
 }

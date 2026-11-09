@@ -2925,6 +2925,42 @@
         "short_only": [],
         "dip_scoop": [
           {
+            "ticker": "CLOV",
+            "side": "long",
+            "open": null,
+            "px": 4.82,
+            "px_src": "session_export",
+            "low": null,
+            "scoops": {
+              "0.5": {
+                "kind": "no_open",
+                "x": 0.5,
+                "fill": null
+              },
+              "1.0": {
+                "kind": "no_open",
+                "x": 1.0,
+                "fill": null
+              },
+              "1.5": {
+                "kind": "no_open",
+                "x": 1.5,
+                "fill": null
+              },
+              "2.0": {
+                "kind": "no_open",
+                "x": 2.0,
+                "fill": null
+              },
+              "3.0": {
+                "kind": "no_open",
+                "x": 3.0,
+                "fill": null
+              }
+            },
+            "tag": "RESEARCH"
+          },
+          {
             "ticker": "APP",
             "side": "long",
             "open": null,
@@ -2961,10 +2997,10 @@
             "tag": "RESEARCH"
           },
           {
-            "ticker": "CSGP",
+            "ticker": "RBLX",
             "side": "long",
             "open": null,
-            "px": 30.55,
+            "px": 49.3,
             "px_src": "session_export",
             "low": null,
             "scoops": {
@@ -3033,10 +3069,10 @@
             "tag": "RESEARCH"
           },
           {
-            "ticker": "MGNI",
+            "ticker": "STGW",
             "side": "long",
             "open": null,
-            "px": 27.39,
+            "px": 11.64,
             "px_src": "session_export",
             "low": null,
             "scoops": {
@@ -3069,46 +3105,10 @@
             "tag": "RESEARCH"
           },
           {
-            "ticker": "CPRI",
+            "ticker": "COMP",
             "side": "long",
             "open": null,
-            "px": 20.54,
-            "px_src": "session_export",
-            "low": null,
-            "scoops": {
-              "0.5": {
-                "kind": "no_open",
-                "x": 0.5,
-                "fill": null
-              },
-              "1.0": {
-                "kind": "no_open",
-                "x": 1.0,
-                "fill": null
-              },
-              "1.5": {
-                "kind": "no_open",
-                "x": 1.5,
-                "fill": null
-              },
-              "2.0": {
-                "kind": "no_open",
-                "x": 2.0,
-                "fill": null
-              },
-              "3.0": {
-                "kind": "no_open",
-                "x": 3.0,
-                "fill": null
-              }
-            },
-            "tag": "RESEARCH"
-          },
-          {
-            "ticker": "GPK",
-            "side": "long",
-            "open": null,
-            "px": 11.19,
+            "px": 10.21,
             "px_src": "session_export",
             "low": null,
             "scoops": {
