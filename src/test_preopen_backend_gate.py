@@ -4,7 +4,9 @@
 in 0s with "predict needs Grok: no reachable OpenClaw gateway" and no
 predict landed until the deepseek-web relay. auto means "Grok then the
 free model", so with no gateway it must skip Grok and fall through.
-An explicit llm_backend=grok dispatch still fails closed.
+Only an explicit llm_backend=auto dispatch falls through; an explicit
+llm_backend=grok dispatch and schedule/push/workflow_run (default grok,
+#608) still fail closed.
 
 This runs the real gate block out of .github/workflows/preopen_all.yml.
 """
@@ -66,12 +68,21 @@ def test_auto_with_loopback_gateway_falls_through():
     assert "GW=unset" in r.stdout
 
 
-def test_schedule_default_grok_falls_through():
-    # Schedule/push carry no input; LLM_BACKEND defaults to 'grok'.
+def test_schedule_default_grok_stays_fail_closed():
+    # Schedule/push/workflow_run carry no input; LLM_BACKEND defaults to
+    # 'grok' (#608) and must still fail closed with no gateway.
     for event in ("schedule", "push", "workflow_run"):
         r = _run("grok", event, "", gw="")
-        assert r.returncode == 0, (event, r.stdout + r.stderr)
-        assert "ARGS=--llm-backend auto LLM_BACKEND=auto" in r.stdout
+        assert r.returncode == 1, (event, r.stdout + r.stderr)
+        assert "predict needs Grok: no reachable OpenClaw gateway" in r.stdout
+        assert "falls through" not in r.stdout
+
+
+def test_auto_only_falls_through_on_explicit_dispatch():
+    # auto without a dispatch (not reachable today, but guard the rule).
+    for event in ("schedule", "push", "workflow_run"):
+        r = _run("auto", event, "", gw="")
+        assert r.returncode == 1, (event, r.stdout + r.stderr)
 
 
 def test_explicit_grok_dispatch_still_fails_closed():
