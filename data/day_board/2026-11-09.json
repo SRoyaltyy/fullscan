@@ -1,6 +1,6 @@
 {
   "date": "2026-11-09",
-  "generated_at": "2026-11-09T08:08:53.027784-05:00",
+  "generated_at": "2026-11-09T08:09:11.001455-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -728,10 +728,10 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=5900",
-          "size": 2202741,
-          "said": "221 rows",
+          "size": 2226065,
+          "said": "214 rows",
           "bullets": [
-            "COCO, MEOH, BTG, SEZL, GLBE, SPNT, ECPG, NEM"
+            "COCO, MEOH, SEZL, BTG, GLBE, NEM, SPNT, ECPG"
           ]
         },
         {
@@ -804,9 +804,9 @@
           "bullets": []
         }
       ],
-      "said": "221 rows",
+      "said": "214 rows",
       "bullets": [
-        "COCO, MEOH, BTG, SEZL, GLBE"
+        "COCO, MEOH, SEZL, BTG, GLBE"
       ]
     },
     {
@@ -1034,6 +1034,24 @@
         }
       ],
       "preview": "weather sectors 11 \u00b7 Basic Materials={'score': 0.48, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': 0.77, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': 0.84, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -0.32, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -12.23, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -0.93, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -1.565, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -2.95, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-11-09\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-11-09",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-09T08:09:10.653123-05:00",
+      "files": [
+        {
+          "path": "data/join/2026-11-09_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2226065,
+          "preview": "5900 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 COCO, MEOH, SEZL, BTG, GLBE"
+        }
+      ],
+      "preview": "5900 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 COCO, MEOH, SEZL, BTG, GLBE"
     }
   ],
   "href": {
