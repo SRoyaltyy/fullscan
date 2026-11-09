@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "workflow": "preopen",
+  "date": "2026-11-09",
+  "run_id": "42619500477",
+  "model": "",
+  "started_at": "2026-11-09T08:09:45-05:00",
+  "updated_at": "2026-11-09T08:09:45-05:00",
+  "heartbeat_at": "2026-11-09T08:09:45-05:00",
+  "stages": [
+    {
+      "name": "deploy",
+      "state": "running",
+      "started_at": "2026-11-09T08:09:45-05:00",
+      "ended_at": "",
+      "heartbeat_at": "2026-11-09T08:09:45-05:00",
+      "done": 0,
+      "total": 1,
+      "model": "",
+      "error": ""
+    }
+  ]
+}
