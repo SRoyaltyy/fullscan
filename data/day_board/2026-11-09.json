@@ -1,6 +1,6 @@
 {
   "date": "2026-11-09",
-  "generated_at": "2026-11-09T09:20:20.847525-05:00",
+  "generated_at": "2026-11-09T09:20:31.314485-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -765,10 +765,10 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=5900",
-          "size": 2238988,
-          "said": "202 rows",
+          "size": 2292796,
+          "said": "205 rows",
           "bullets": [
-            "REGN, ONC, CDNA, ETON, LLY, BLLN, KNSA, AVAH"
+            "AVAH, CDNA, ETON, BTSG, NRIX, LLY, TGTX, ADPT"
           ]
         },
         {
@@ -846,9 +846,9 @@
           "bullets": []
         }
       ],
-      "said": "202 rows",
+      "said": "205 rows",
       "bullets": [
-        "REGN, ONC, CDNA, ETON, LLY"
+        "AVAH, CDNA, ETON, BTSG, NRIX"
       ]
     },
     {
@@ -2180,6 +2180,24 @@
         }
       ],
       "preview": "weather sectors 11 \u00b7 Basic Materials={'score': 0.48, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': 0.77, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': 0.84, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -0.32, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -12.23, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -0.93, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -1.565, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -2.95, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-11-09\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-11-09",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-09T09:20:30.270372-05:00",
+      "files": [
+        {
+          "path": "data/join/2026-11-09_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2292796,
+          "preview": "5900 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 AVAH, CDNA, ETON, BTSG, NRIX"
+        }
+      ],
+      "preview": "5900 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 AVAH, CDNA, ETON, BTSG, NRIX"
     }
   ],
   "href": {
