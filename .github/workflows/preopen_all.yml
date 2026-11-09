@@ -184,8 +184,9 @@ jobs:
           sudo docker system prune -af >/dev/null 2>&1 || true
           df -h / | tail -1
       - uses: actions/checkout@v4
+        timeout-minutes: 30
         with:
-          fetch-depth: 1  # safe_git_push builds from origin/main's tree; no history needed
+          fetch-depth: 0  # 2026-11-09: depth-1 fetch of the ~12.6 GB tree stalls >20 min on hosted runners (no pack reuse); full fetch finished in ~8 min (ab_checklist run 42594866744)
       - name: Twin guard (completed Pre-Open pass already landed)
         if: github.event.inputs.force != 'true'
         run: |
@@ -267,8 +268,9 @@ jobs:
           sudo docker system prune -af >/dev/null 2>&1 || true
           df -h / | tail -1
       - uses: actions/checkout@v4
+        timeout-minutes: 30
         with:
-          fetch-depth: 1  # safe_git_push builds from origin/main's tree; no history needed
+          fetch-depth: 0  # 2026-11-09: depth-1 fetch of the ~12.6 GB tree stalls >20 min on hosted runners (no pack reuse); full fetch finished in ~8 min (ab_checklist run 42594866744)
       - name: Pull scrape + export from main (this run's SHA predates the scrape commit)
         run: |
           git fetch origin main
@@ -440,10 +442,10 @@ jobs:
           fi
       - uses: actions/checkout@v4
         if: runner.environment != 'github-hosted'
-        timeout-minutes: 20
+        timeout-minutes: 30
         with:
           ref: main
-          fetch-depth: 1
+          fetch-depth: 0  # 2026-11-09: depth 1 stalls on the ~12.6 GB tree
           clean: false
       - name: Full tree after leftover sparse-checkout
         if: runner.environment != 'github-hosted'
@@ -546,10 +548,13 @@ jobs:
           fi
       - uses: actions/checkout@v4
         if: env.skip != 'yes'
-        timeout-minutes: 20
+        timeout-minutes: 30
         with:
           clean: false
-          fetch-depth: 1
+          # 2026-11-09: depth 1 stalls >20 min on the ~12.6 GB tree (runs
+          # 42593514138, 42609067739); a full fetch reuses GitHub's packs and
+          # landed in ~8 min on ubuntu (ab_checklist run 42594866744).
+          fetch-depth: 0
           persist-credentials: true
           token: ${{ secrets.GITHUB_TOKEN }}
 
