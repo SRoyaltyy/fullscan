@@ -1,45 +1,82 @@
 {
   "date": "2026-11-09",
-  "generated_at": "2026-11-09T08:11:01.491306-05:00",
+  "generated_at": "2026-11-09T08:11:22.601302-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
-    "ok": 4,
-    "partial": 3,
+    "ok": 6,
+    "partial": 1,
     "fail": 1,
     "n": 8
   },
-  "buy_1d": [],
-  "sell_1d": [],
+  "buy_1d": [
+    {
+      "ticker": "XYZ",
+      "score": 0.4554353305760862
+    },
+    {
+      "ticker": "LFST",
+      "score": 0.551982471638937
+    },
+    {
+      "ticker": "UIS",
+      "score": 0.5240125128174291
+    },
+    {
+      "ticker": "FOUR",
+      "score": 0.7109117855437621
+    },
+    {
+      "ticker": "DLO",
+      "score": 0.5871454533442197
+    },
+    {
+      "ticker": "ATEN",
+      "score": 0.5971168719592088
+    },
+    {
+      "ticker": "AVPT",
+      "score": 0.6466124023771138
+    }
+  ],
+  "sell_1d": [
+    {
+      "ticker": "XIFR",
+      "score": -0.23451567352541125
+    },
+    {
+      "ticker": "ENPH",
+      "score": -0.3198922171067549
+    },
+    {
+      "ticker": "TRMB",
+      "score": -0.26553057721675444
+    },
+    {
+      "ticker": "TE",
+      "score": -0.37559754572792553
+    },
+    {
+      "ticker": "FCEL",
+      "score": -0.415579382915554
+    },
+    {
+      "ticker": "ABR",
+      "score": -0.43033347971908364
+    },
+    {
+      "ticker": "ENVX",
+      "score": -0.1839598823114061
+    },
+    {
+      "ticker": "DDD",
+      "score": -0.4146963725348254
+    }
+  ],
   "flatten": {},
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "weather",
-      "title": "Weather / regime",
-      "date": "2026-11-09",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-11-09T08:08:52.560192-05:00",
-      "files": [
-        {
-          "path": "01_daily/weather/2026-11-09_weather.json",
-          "ok": true,
-          "reason": "",
-          "size": 9469,
-          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': 0.48, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': 0.77, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': 0.84, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -0.32, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -12.23, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -0.93, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -1.565, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -2.95, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
-        },
-        {
-          "path": "01_daily/weather/2026-11-09_weather.md",
-          "ok": true,
-          "reason": "",
-          "size": 5079,
-          "preview": "# Weather report \u2014 2026-11-09\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
-        }
-      ],
-      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': 0.48, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': 0.77, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': 0.84, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -0.32, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -12.23, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -0.93, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -1.565, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -2.95, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-11-09\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
-    },
     {
       "key": "join",
       "title": "Join / match rank",
@@ -186,6 +223,59 @@
         }
       ],
       "preview": "2618 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 PCTY, EPAM, HUM, CLOV, G \u00b7 2618 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 HUM, CLOV, TSCO, WCN, KDP"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-11-09",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-09T08:11:21.673441-05:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-11-09_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1479534,
+          "preview": "1d BUY XYZ, LFST, UIS, FOUR, DLO, ATEN, AVPT \u00b7 SELL XIFR, ENPH, TRMB, TE, FCEL, ABR, ENVX, DDD"
+        },
+        {
+          "path": "data/stock_book/2026-11-09_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-11-09_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2615,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-11-09_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12322,
+          "preview": "2026-11-09 BUY XYZ, LFST, UIS, FOUR, DLO, ATEN, AVPT \u00b7 SELL XIFR, ENPH, TRMB, TE, FCEL, ABR, ENVX, DDD"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12322,
+          "preview": "2026-11-09 BUY XYZ, LFST, UIS, FOUR, DLO, ATEN, AVPT \u00b7 SELL XIFR, ENPH, TRMB, TE, FCEL, ABR, ENVX, DDD"
+        },
+        {
+          "path": "01_daily/2026-11-09_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 83620,
+          "preview": "# Stock book \u2014 2026-11-09\n_Generated 2026-11-09T08:11:11.473368-05:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY XYZ, LFST, UIS, FOUR, DLO, ATEN, AVPT \u00b7 SELL XIFR, ENPH, TRMB, TE, FCEL, ABR, ENVX, DDD \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-11-09 BUY XYZ, LFST, UIS, FOUR, DLO, ATEN, AVPT \u00b7 SELL XIFR, ENPH, TRMB, TE, FCEL, ABR, ENVX, DDD \u00b7 2026-11-09 BUY XYZ, LFST, UIS, FOUR, DLO, ATEN, AVPT \u00b7 SELL XIFR, ENPH, TRMB, TE, FCEL, ABR, ENVX, DDD \u00b7 # Stock book \u2014 2026-11-09\n_Generated 2026-11-09T08:11:11.473368-05:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"

@@ -1,6 +1,6 @@
 {
   "date": "2026-11-09",
-  "generated_at": "2026-11-09T08:11:01.491306-05:00",
+  "generated_at": "2026-11-09T08:11:22.601302-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -9,8 +9,8 @@
     "MISSING News judge MD `01_daily/news/2026-11-09_judge.md` \u2014 missing"
   ],
   "counts": {
-    "ok": 4,
-    "partial": 3,
+    "ok": 6,
+    "partial": 1,
     "fail": 1,
     "n": 8
   },
@@ -636,11 +636,11 @@
       "key": "stock_book",
       "name": "Stock Book ALL",
       "yaml": "stock_book_all.yml",
-      "status": "PARTIAL",
+      "status": "OK",
       "inputs_ready": false,
-      "n_req_ok": 2,
+      "n_req_ok": 4,
       "n_req": 4,
-      "n_opt_ok": 1,
+      "n_opt_ok": 3,
       "n_opt": 4,
       "files": [
         {
@@ -759,10 +759,10 @@
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-11-09_stock_book.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "horizons=5 names=215",
+          "size": 1479534,
+          "said": "1d BUY XYZ, LFST, UIS, FOUR, DLO, ATEN, AVPT \u00b7 SELL XIFR, ENPH, TRMB, TE, FCEL, ABR",
           "bullets": []
         },
         {
@@ -770,21 +770,24 @@
           "name": "Stock book MD",
           "path": "01_daily/2026-11-09_stock_book.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 82511,
+          "said": "Stock book \u2014 2026-11-09",
+          "bullets": [
+            "_Generated 2026-11-09T08:11:11.473368-05:00_",
+            "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
+          ]
         },
         {
           "key": "green",
           "name": "Green-pile JSON",
           "path": "data/stock_book/2026-11-09_green.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "",
+          "size": 585,
+          "said": "0 green \u00b7",
           "bullets": []
         },
         {
@@ -806,10 +809,10 @@
           "name": "Dashboard HTML",
           "path": "dashboard/index.html",
           "role": "optional",
-          "status": "FAIL",
-          "reason": "session 2026-11-09 not in dashboard dates (last=2026-11-06)",
-          "size": 16158593,
-          "said": "session 2026-11-09 not in dashboard dates (last=2026-11-06)",
+          "status": "OK",
+          "reason": "live-book poller + today.json (2026-11-09)",
+          "size": 16158609,
+          "said": "live-book poller + today.json (2026-11-09)",
           "bullets": []
         }
       ],
@@ -822,9 +825,9 @@
       "key": "publish",
       "name": "Dashboard / .io",
       "yaml": "deploy-dashboard.yml",
-      "status": "PARTIAL",
-      "inputs_ready": false,
-      "n_req_ok": 1,
+      "status": "OK",
+      "inputs_ready": true,
+      "n_req_ok": 2,
       "n_req": 2,
       "n_opt_ok": 0,
       "n_opt": 1,
@@ -834,10 +837,10 @@
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-11-09_stock_book.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "horizons=5 names=215",
+          "size": 1479534,
+          "said": "1d BUY XYZ, LFST, UIS, FOUR, DLO, ATEN, AVPT \u00b7 SELL XIFR, ENPH, TRMB, TE, FCEL, ABR",
           "bullets": []
         },
         {
@@ -845,10 +848,10 @@
           "name": "Dashboard HTML (repo)",
           "path": "dashboard/index.html",
           "role": "required",
-          "status": "FAIL",
-          "reason": "session 2026-11-09 not in dashboard dates (last=2026-11-06)",
-          "size": 16158593,
-          "said": "session 2026-11-09 not in dashboard dates (last=2026-11-06)",
+          "status": "OK",
+          "reason": "live-book poller + today.json (2026-11-09)",
+          "size": 16158609,
+          "said": "live-book poller + today.json (2026-11-09)",
           "bullets": []
         },
         {
@@ -884,8 +887,70 @@
   "news_mode": "on",
   "news_mode_reason": "",
   "selections": {
-    "buy_1d": [],
-    "sell_1d": [],
+    "buy_1d": [
+      {
+        "ticker": "XYZ",
+        "score": 0.4554353305760862
+      },
+      {
+        "ticker": "LFST",
+        "score": 0.551982471638937
+      },
+      {
+        "ticker": "UIS",
+        "score": 0.5240125128174291
+      },
+      {
+        "ticker": "FOUR",
+        "score": 0.7109117855437621
+      },
+      {
+        "ticker": "DLO",
+        "score": 0.5871454533442197
+      },
+      {
+        "ticker": "ATEN",
+        "score": 0.5971168719592088
+      },
+      {
+        "ticker": "AVPT",
+        "score": 0.6466124023771138
+      }
+    ],
+    "sell_1d": [
+      {
+        "ticker": "XIFR",
+        "score": -0.23451567352541125
+      },
+      {
+        "ticker": "ENPH",
+        "score": -0.3198922171067549
+      },
+      {
+        "ticker": "TRMB",
+        "score": -0.26553057721675444
+      },
+      {
+        "ticker": "TE",
+        "score": -0.37559754572792553
+      },
+      {
+        "ticker": "FCEL",
+        "score": -0.415579382915554
+      },
+      {
+        "ticker": "ABR",
+        "score": -0.43033347971908364
+      },
+      {
+        "ticker": "ENVX",
+        "score": -0.1839598823114061
+      },
+      {
+        "ticker": "DDD",
+        "score": -0.4146963725348254
+      }
+    ],
     "flatten": {},
     "general": {},
     "sectors": {},
@@ -1190,6 +1255,59 @@
         }
       ],
       "preview": "2618 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 PCTY, EPAM, HUM, CLOV, G \u00b7 2618 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 HUM, CLOV, TSCO, WCN, KDP"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-11-09",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-09T08:11:21.673441-05:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-11-09_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1479534,
+          "preview": "1d BUY XYZ, LFST, UIS, FOUR, DLO, ATEN, AVPT \u00b7 SELL XIFR, ENPH, TRMB, TE, FCEL, ABR, ENVX, DDD"
+        },
+        {
+          "path": "data/stock_book/2026-11-09_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-11-09_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2615,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-11-09_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12322,
+          "preview": "2026-11-09 BUY XYZ, LFST, UIS, FOUR, DLO, ATEN, AVPT \u00b7 SELL XIFR, ENPH, TRMB, TE, FCEL, ABR, ENVX, DDD"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12322,
+          "preview": "2026-11-09 BUY XYZ, LFST, UIS, FOUR, DLO, ATEN, AVPT \u00b7 SELL XIFR, ENPH, TRMB, TE, FCEL, ABR, ENVX, DDD"
+        },
+        {
+          "path": "01_daily/2026-11-09_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 83620,
+          "preview": "# Stock book \u2014 2026-11-09\n_Generated 2026-11-09T08:11:11.473368-05:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY XYZ, LFST, UIS, FOUR, DLO, ATEN, AVPT \u00b7 SELL XIFR, ENPH, TRMB, TE, FCEL, ABR, ENVX, DDD \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-11-09 BUY XYZ, LFST, UIS, FOUR, DLO, ATEN, AVPT \u00b7 SELL XIFR, ENPH, TRMB, TE, FCEL, ABR, ENVX, DDD \u00b7 2026-11-09 BUY XYZ, LFST, UIS, FOUR, DLO, ATEN, AVPT \u00b7 SELL XIFR, ENPH, TRMB, TE, FCEL, ABR, ENVX, DDD \u00b7 # Stock book \u2014 2026-11-09\n_Generated 2026-11-09T08:11:11.473368-05:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "href": {
