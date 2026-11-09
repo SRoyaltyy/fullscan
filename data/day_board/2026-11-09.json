@@ -1,17 +1,18 @@
 {
   "date": "2026-11-09",
-  "generated_at": "2026-11-09T08:09:53.698793-05:00",
+  "generated_at": "2026-11-09T08:10:14.306405-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
     "MISSING General predict MD `01_daily/general/2026-11-09_predict.md` \u2014 missing",
     "MISSING News actions JSON `01_daily/news/2026-11-09_actions.json` \u2014 missing",
-    "MISSING News judge MD `01_daily/news/2026-11-09_judge.md` \u2014 missing"
+    "MISSING News judge MD `01_daily/news/2026-11-09_judge.md` \u2014 missing",
+    "MISSING AB checklist enriched `data/ab_checklist/2026-11-09_ab_checklist_enriched.csv` \u2014 missing"
   ],
   "counts": {
-    "ok": 4,
+    "ok": 3,
     "partial": 3,
-    "fail": 1,
+    "fail": 2,
     "n": 8
   },
   "processes": [
@@ -519,8 +520,8 @@
           "path": "01_daily/weather/2026-11-09_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=9469 vix=falling yields=falling",
-          "size": 9469,
+          "reason": "sectors=11 bytes=9468 vix=falling yields=falling",
+          "size": 9468,
           "said": "hostile 4 \u00b7 neutral 7",
           "bullets": [
             "hostile: Energy, Healthcare, Industrials, Technology"
@@ -536,11 +537,11 @@
       "key": "ab",
       "name": "AB checklist",
       "yaml": "ab_checklist.yml",
-      "status": "OK",
+      "status": "FAIL",
       "inputs_ready": true,
-      "n_req_ok": 1,
+      "n_req_ok": 0,
       "n_req": 1,
-      "n_opt_ok": 1,
+      "n_opt_ok": 0,
       "n_opt": 1,
       "files": [
         {
@@ -548,32 +549,26 @@
           "name": "AB checklist raw",
           "path": "data/ab_checklist/2026-11-09_ab_checklist.csv",
           "role": "optional",
-          "status": "OK",
-          "reason": "rows=2618",
-          "size": 7551872,
-          "said": "27 rows",
-          "bullets": [
-            "PCTY, EPAM, HUM, CLOV, G, APLE, GRDN, CAE"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "ab_enriched",
           "name": "AB checklist enriched",
           "path": "data/ab_checklist/2026-11-09_ab_checklist_enriched.csv",
           "role": "required",
-          "status": "OK",
-          "reason": "rows=2618",
-          "size": 8347327,
-          "said": "25 rows",
-          "bullets": [
-            "HUM, CLOV, TSCO, WCN, KDP, EVRG, IAG, ELF"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         }
       ],
-      "said": "25 rows",
-      "bullets": [
-        "HUM, CLOV, TSCO, WCN, KDP"
-      ]
+      "said": "",
+      "bullets": []
     },
     {
       "key": "catalyst",
@@ -638,7 +633,7 @@
       "yaml": "stock_book_all.yml",
       "status": "PARTIAL",
       "inputs_ready": false,
-      "n_req_ok": 2,
+      "n_req_ok": 1,
       "n_req": 4,
       "n_opt_ok": 1,
       "n_opt": 4,
@@ -708,8 +703,8 @@
           "path": "01_daily/weather/2026-11-09_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=9469 vix=falling yields=falling",
-          "size": 9469,
+          "reason": "sectors=11 bytes=9468 vix=falling yields=falling",
+          "size": 9468,
           "said": "hostile 4 \u00b7 neutral 7",
           "bullets": [
             "hostile: Energy, Healthcare, Industrials, Technology"
@@ -720,13 +715,11 @@
           "name": "AB checklist enriched",
           "path": "data/ab_checklist/2026-11-09_ab_checklist_enriched.csv",
           "role": "input",
-          "status": "OK",
-          "reason": "rows=2618",
-          "size": 8347327,
-          "said": "25 rows",
-          "bullets": [
-            "HUM, CLOV, TSCO, WCN, KDP, EVRG, IAG, ELF"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "join",
@@ -746,13 +739,11 @@
           "name": "Peer RS CSV",
           "path": "data/peers/2026-11-09_peer_rs.csv",
           "role": "required",
-          "status": "OK",
-          "reason": "rows=5046",
-          "size": 810923,
-          "said": "493 rows",
-          "bullets": [
-            "A, AA, AACG, AAL, AAME, AAMI, AAOI, AAON"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "book_json",
@@ -1104,6 +1095,31 @@
         }
       ],
       "preview": "2618 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 PCTY, EPAM, HUM, CLOV, G \u00b7 2618 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 HUM, CLOV, TSCO, WCN, KDP"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-11-09",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-09T08:10:13.830445-05:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-11-09_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 9468,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': 0.48, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': 0.77, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': 0.84, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -0.32, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -12.23, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -0.93, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -1.565, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -2.95, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-11-09_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5079,
+          "preview": "# Weather report \u2014 2026-11-09\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': 0.48, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': 0.77, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': 0.84, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -0.32, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -12.23, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -0.93, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -1.565, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -2.95, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-11-09\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
     }
   ],
   "href": {
