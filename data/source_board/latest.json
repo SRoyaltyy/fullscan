@@ -1,6 +1,6 @@
 {
- "date": "2026-11-08",
- "generated_at": "2026-11-08T18:23:35.727742+00:00",
+ "date": "2026-11-09",
+ "generated_at": "2026-11-09T08:02:10.813289+00:00",
  "catalog": {
   "generated_at": "2026-11-07T18:03:52.345238+00:00",
   "channels": 365,
@@ -34,34 +34,51 @@
   }
  },
  "collect": {
-  "generated_at": "2026-11-08T18:22:54.805890+00:00",
+  "generated_at": "2026-11-09T08:00:48.097881+00:00",
   "enabled_sources": 117,
-  "sources_ok": 117,
-  "sources_failed": 0,
+  "sources_ok": 115,
+  "sources_failed": 2,
   "coverage_status": "degraded",
   "counts": {
-   "observed": 1638,
-   "old": 1192,
-   "future": 1,
-   "undated": 257,
-   "new": 0,
-   "duplicates": 445
+   "observed": 1479,
+   "old": 1043,
+   "future": 0,
+   "undated": 248,
+   "new": 111,
+   "duplicates": 325
   },
-  "current_dated_documents": 276
+  "current_dated_documents": 271
  },
  "new_today": {
-  "count": 0,
-  "by_source": {},
-  "by_class": {}
+  "count": 111,
+  "by_source": {
+   "us-federal-register": 98,
+   "jp-boj-d488538690": 5,
+   "in-rbi-cc71120b98": 4,
+   "us-fda-5696b24295": 1,
+   "us-nlrb-7c63020d7d": 1,
+   "eu-council-9d9e9444da": 1,
+   "jp-meti-index": 1
+  },
+  "by_class": {
+   "high": 13,
+   "routine": 86,
+   "noise": 1,
+   "watch": 11
+  }
  },
  "parsed_today": {
-  "count": 0,
-  "by_class": {}
+  "count": 38,
+  "by_class": {
+   "high": 13,
+   "routine": 19,
+   "watch": 6
+  }
  },
- "n_failures": 0,
+ "n_failures": 2,
  "dates": [
-  "2026-11-08"
+  "2026-11-09"
  ],
- "href": "https://raw.githubusercontent.com/SRoyaltyy/fullscan/main/data/source_board/2026-11-08.json",
+ "href": "https://raw.githubusercontent.com/SRoyaltyy/fullscan/main/data/source_board/2026-11-09.json",
  "pages": "https://sroyaltyy.github.io/fullscan/dashboard/source-board/"
 }

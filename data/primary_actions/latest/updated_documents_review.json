@@ -1,98 +1,172 @@
 [
   {
-    "title": "Que no lo dejen colgado esta temporada festiva con regalos inseguros: Compre de fuentes confiables",
-    "url": "https://www.cpsc.gov/es/Newsroom/News-Releases/2026/Dont-Be-Left-Out-in-the-Cold-This-Holiday-Season-with-Unsafe-Presents-Buy-from-Trusted-Sources",
-    "native_id": "https://www.cpsc.gov/_6d039050-7fba-4cdf-8361-f7db2f5e3963",
-    "published_at": null,
-    "published_raw": "Tue, 12/09/2025 - 12:00",
-    "summary": "La CPSC les recuerda a los consumidores comprar de manera segura esta temporada festiva",
+    "title": "FDA Expedited Investigational New Drug (IND) Pilot Program",
+    "url": "http://www.fda.gov/industry/fda-actions-accelerate-and-modernize-early-and-late-stage-clinical-development/fda-expedited-investigational-new-drug-ind-pilot-program",
+    "native_id": "http://www.fda.gov/industry/fda-actions-accelerate-and-modernize-early-and-late-stage-clinical-development/fda-expedited-investigational-new-drug-ind-pilot-program",
+    "published_at": "2026-11-08T20:02:58+00:00",
+    "published_raw": "Sun, 08 Nov 2026 15:02:58 EST",
+    "summary": "The FDA Expedited IND Pilot Program is an initiative under HHS Operation TrialBlazer designed to evaluate new approaches for accelerating first-in-human (FIH) clinical trials in the United States while maintaining FDA's rigorous standards for participant safety and scientific oversight.",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Consumer Product Safety Commission",
+      "issuer": "Food and Drug Administration — What's New: Vaccines, Blood and Biologics",
       "jurisdiction": "US",
-      "family": "product_safety"
+      "family": "product_permissions_and_safety"
     },
-    "primary_source_id": "us-cpsc-08fe06e2e6",
-    "n": 3537,
-    "first_seen": "2026-10-16T10:36:18.842579+00:00",
-    "last_seen": "2026-11-08T18:22:54.805890+00:00",
+    "primary_source_id": "us-fda-03f7703006",
+    "n": 5137,
+    "first_seen": "2026-10-17T05:37:40.086992+00:00",
+    "last_seen": "2026-11-09T08:00:48.097881+00:00",
     "source_ids": [
-      "us-cpsc-08fe06e2e6"
+      "us-fda-03f7703006",
+      "us-fda-5696b24295"
     ]
   },
   {
-    "title": "Put Safety on the Menu: Consumer Product Safety Commission Offers Safe Cooking Tips for a Joyful Holiday Season",
-    "url": "https://www.cpsc.gov/Newsroom/News-Releases/2026/Put-Safety-on-the-Menu-Consumer-Product-Safety-Commission-Offers-Safe-Cooking-Tips-for-a-Joyful-Holiday-Season",
-    "native_id": "https://www.cpsc.gov/_59de4207-4ace-44ca-ace0-3cde0cfb8ddb",
-    "published_at": null,
-    "published_raw": "Wed, 11/19/2025 - 12:00",
-    "summary": "WASHINGTON, D.C. – As families across America prepare to gather for Thanksgiving, the U.S. Consumer Product Safety Commission (CPSC) is issuing an urgent reminder that the holiday season marks the most dangerous time of year for cooking-related fires and",
+    "title": "2026 Meeting Materials | Pediatric Advisory Committee",
+    "url": "http://www.fda.gov/advisory-committees/pediatric-advisory-committee/2026-meeting-materials-pediatric-advisory-committee",
+    "native_id": "http://www.fda.gov/advisory-committees/pediatric-advisory-committee/2026-meeting-materials-pediatric-advisory-committee",
+    "published_at": "2026-11-08T19:46:03+00:00",
+    "published_raw": "Sun, 08 Nov 2026 14:46:03 EST",
+    "summary": "Meeting announcements, agendas, briefing materials, and presentations for the 2026 meetings of the FDA's Pediatric Advisory Committee",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Consumer Product Safety Commission",
+      "issuer": "Food and Drug Administration — What's New: Drugs",
       "jurisdiction": "US",
-      "family": "product_safety"
+      "family": "product_permissions_and_safety"
     },
-    "primary_source_id": "us-cpsc-08fe06e2e6",
-    "n": 3538,
-    "first_seen": "2026-10-16T10:36:18.842579+00:00",
-    "last_seen": "2026-11-08T18:22:54.805890+00:00",
+    "primary_source_id": "us-fda-5696b24295",
+    "n": 5435,
+    "first_seen": "2026-10-19T19:21:25.980956+00:00",
+    "last_seen": "2026-11-09T08:00:48.097881+00:00",
     "source_ids": [
-      "us-cpsc-08fe06e2e6"
+      "us-fda-03f7703006",
+      "us-fda-5696b24295"
     ]
   },
   {
-    "title": "La CPSC aprueba nueva norma federal de seguridad para las bolas de gel con el fin de reducir el riesgo de lesiones y muerte niños pequeños",
-    "url": "https://www.cpsc.gov/es/Newsroom/News-Releases/2025/CPSC-Approves-New-Federal-Safety-Standard-for-Water-Beads-to-Reduce-the-Risk-of-Injury-and-Death-to-Young-Children",
-    "native_id": "https://www.cpsc.gov/_51cc46a0-5dc1-4f70-8cc1-c6b5b0f0a782",
-    "published_at": null,
-    "published_raw": "Thu, 08/21/2025 - 12:00",
-    "summary": "WASHINGTON D. C. – La Comisión de Seguridad de Productos del Consumidor (CPSC, por sus iniciales en inglés) aprobó una norma de seguridad de productos de consumo para juguetes tipo bolas de gel, lo que refleja el compromiso constante de la entidad con la",
+    "title": "Minocycline Oral | Injection Products",
+    "url": "http://www.fda.gov/drugs/development-resources/minocycline-oral-injection-products",
+    "native_id": "http://www.fda.gov/drugs/development-resources/minocycline-oral-injection-products",
+    "published_at": "2026-11-08T19:57:38+00:00",
+    "published_raw": "Sun, 08 Nov 2026 14:57:38 EST",
+    "summary": "Minocycline Oral, Injection Products",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Consumer Product Safety Commission",
+      "issuer": "Food and Drug Administration — What's New: Drugs",
       "jurisdiction": "US",
-      "family": "product_safety"
+      "family": "product_permissions_and_safety"
     },
-    "primary_source_id": "us-cpsc-08fe06e2e6",
-    "n": 3539,
-    "first_seen": "2026-10-16T10:36:18.842579+00:00",
-    "last_seen": "2026-11-08T18:22:54.805890+00:00",
+    "primary_source_id": "us-fda-5696b24295",
+    "n": 7829,
+    "first_seen": "2026-10-30T18:57:21.617502+00:00",
+    "last_seen": "2026-11-09T08:00:48.097881+00:00",
     "source_ids": [
-      "us-cpsc-08fe06e2e6"
+      "us-fda-5696b24295"
     ]
   },
   {
-    "title": "CPSC Approves New Federal Safety Standard for Neck Floats to Prevent Infant Deaths and Serious Injuries",
-    "url": "https://www.cpsc.gov/Newsroom/News-Releases/2025/CPSC-Approves-New-Federal-Safety-Standard-for-Neck-Floats-to-Prevent-Infant-Deaths-and-Serious-Injuries",
-    "native_id": "https://www.cpsc.gov/_4014aab3-f30e-41aa-ad48-dd7587119b4c",
-    "published_at": null,
-    "published_raw": "Thu, 08/21/2025 - 12:00",
-    "summary": "The U.S. Consumer Product Safety Commission (CPSC) has approved a consumer product safety standard to improve the safety of neck floats, an aquatic toy intended for use by children up to and including four years of age.",
+    "title": "PDUFA and BsUFA Quarterly Hiring Updates",
+    "url": "http://www.fda.gov/industry/prescription-drug-user-fee-amendments/pdufa-and-bsufa-quarterly-hiring-updates",
+    "native_id": "http://www.fda.gov/industry/prescription-drug-user-fee-amendments/pdufa-and-bsufa-quarterly-hiring-updates",
+    "published_at": "2026-11-08T19:40:58+00:00",
+    "published_raw": "Sun, 08 Nov 2026 14:40:58 EST",
+    "summary": "PDUFA and BsUFA Quarterly Hiring Updates",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Consumer Product Safety Commission",
+      "issuer": "Food and Drug Administration — What's New: Drugs",
       "jurisdiction": "US",
-      "family": "product_safety"
+      "family": "product_permissions_and_safety"
     },
-    "primary_source_id": "us-cpsc-08fe06e2e6",
-    "n": 3540,
-    "first_seen": "2026-10-16T10:36:18.842579+00:00",
-    "last_seen": "2026-11-08T18:22:54.805890+00:00",
+    "primary_source_id": "us-fda-5696b24295",
+    "n": 8811,
+    "first_seen": "2026-11-05T20:41:39.999913+00:00",
+    "last_seen": "2026-11-09T08:00:48.097881+00:00",
     "source_ids": [
-      "us-cpsc-08fe06e2e6"
+      "us-fda-5696b24295"
+    ]
+  },
+  {
+    "title": "Biologics Electronic Reading Room (eFOIA)",
+    "url": "http://www.fda.gov/about-fda/center-biologics-evaluation-and-research-cber/biologics-electronic-reading-room-efoia",
+    "native_id": "http://www.fda.gov/about-fda/center-biologics-evaluation-and-research-cber/biologics-electronic-reading-room-efoia",
+    "published_at": "2026-11-08T19:51:15+00:00",
+    "published_raw": "Sun, 08 Nov 2026 14:51:15 EST",
+    "summary": "The Biologics eFOI Reading Room provides access to documents posted throughout the \"Vaccines, Blood & Biologics\" and other sections related to the Center for Biologics Evaluation and Research on the FDA.gov Web site.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Food and Drug Administration — What's New: Vaccines, Blood and Biologics",
+      "jurisdiction": "US",
+      "family": "product_permissions_and_safety"
+    },
+    "primary_source_id": "us-fda-03f7703006",
+    "n": 8815,
+    "first_seen": "2026-11-05T20:41:39.999913+00:00",
+    "last_seen": "2026-11-09T08:00:48.097881+00:00",
+    "source_ids": [
+      "us-fda-03f7703006"
+    ]
+  },
+  {
+    "title": "OTP Guidance Webinar: Potency Assurance for Cellular and Gene Therapy Products - 12/10/2026",
+    "url": "http://www.fda.gov/vaccines-blood-biologics/office-therapeutic-products-otp-events-meetings-and-workshops/otp-guidance-webinar-potency-assurance-cellular-and-gene-therapy-products-12102026",
+    "native_id": "http://www.fda.gov/vaccines-blood-biologics/office-therapeutic-products-otp-events-meetings-and-workshops/otp-guidance-webinar-potency-assurance-cellular-and-gene-therapy-products-12102026",
+    "published_at": "2026-11-08T19:43:59+00:00",
+    "published_raw": "Sun, 08 Nov 2026 14:43:59 EST",
+    "summary": "The FDA Center for Biologics Evaluation and Research (CBER), Office of Therapeutic Products (OTP) will host a virtual public webinar on Thursday, December 3, 2026 at 1:00 p.m. ET to discuss the recently finalized guidance document, “Potency Assurance for Cellular and Gene Therapy Products",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Food and Drug Administration — What's New: Vaccines, Blood and Biologics",
+      "jurisdiction": "US",
+      "family": "product_permissions_and_safety"
+    },
+    "primary_source_id": "us-fda-03f7703006",
+    "n": 8816,
+    "first_seen": "2026-11-05T20:41:39.999913+00:00",
+    "last_seen": "2026-11-09T08:00:48.097881+00:00",
+    "source_ids": [
+      "us-fda-03f7703006"
+    ]
+  },
+  {
+    "title": "FDA Investigating Serious Risk of Malignancy Linked to Zolgensma Gene Therapy",
+    "url": "http://www.fda.gov/vaccines-blood-biologics/safety-availability-biologics/fda-investigating-serious-risk-malignancy-linked-zolgensma-gene-therapy",
+    "native_id": "http://www.fda.gov/vaccines-blood-biologics/safety-availability-biologics/fda-investigating-serious-risk-malignancy-linked-zolgensma-gene-therapy",
+    "published_at": "2026-11-08T19:23:44+00:00",
+    "published_raw": "Sun, 08 Nov 2026 14:23:44 EST",
+    "summary": "FDA has received postmarketing adverse event reports of malignancies in patients treated with Zolgensma, an adeno-associated virus (AAV) vector-based gene therapy, for spinal muscular atrophy (SMA)",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Food and Drug Administration — What's New: Vaccines, Blood and Biologics",
+      "jurisdiction": "US",
+      "family": "product_permissions_and_safety"
+    },
+    "primary_source_id": "us-fda-03f7703006",
+    "n": 9153,
+    "first_seen": "2026-11-07T07:13:47.398646+00:00",
+    "last_seen": "2026-11-09T08:00:48.097881+00:00",
+    "source_ids": [
+      "us-fda-03f7703006"
     ]
   }
 ]
