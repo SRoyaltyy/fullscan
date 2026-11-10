@@ -33,7 +33,7 @@ jobs:
   shadow:
     if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 55  # was 30; full-fetch checkout (up to 30 min) + work
     steps:
       # 2026-11-03: checkout of the ~6.9 GB tree timed out / was cancelled.
       # Same lighter checkout as #730/#738: free unused toolchains, then depth 1.
@@ -46,9 +46,10 @@ jobs:
           sudo docker system prune -af >/dev/null 2>&1 || true
           df -h / | tail -1
       - uses: actions/checkout@v4
+        timeout-minutes: 30
         with:
           ref: main
-          fetch-depth: 1  # safe_git_push builds from origin/main's tree; no history needed
+          fetch-depth: 0  # 2026-11-09: depth 1 stalls >20 min on the ~12.6 GB tree (#765)
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"

@@ -53,7 +53,7 @@ env:
 jobs:
   actions:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 45  # was 20; full-fetch checkout (up to 30 min) + work
     env:
       FULLSCAN_LAND: "1"
     steps:
@@ -68,8 +68,9 @@ jobs:
           sudo docker system prune -af >/dev/null 2>&1 || true
           df -h / | tail -1
       - uses: actions/checkout@v4
+        timeout-minutes: 30
         with:
-          fetch-depth: 1  # safe_git_push builds from origin/main's tree; no history needed
+          fetch-depth: 0  # 2026-11-09: depth 1 stalls >20 min on the ~12.6 GB tree (#765)
           persist-credentials: true
           token: ${{ secrets.GITHUB_TOKEN }}
       - uses: actions/setup-python@v5

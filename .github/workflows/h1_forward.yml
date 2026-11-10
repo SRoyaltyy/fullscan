@@ -133,10 +133,11 @@ jobs:
           out(True, day.isoformat(), f"{shown}: inside the window for {day}")
           PY
       - uses: actions/checkout@v4
+        timeout-minutes: 30
         if: steps.clock.outputs.go == 'true'
         with:
           ref: main
-          fetch-depth: 1
+          fetch-depth: 0  # 2026-11-09: depth 1 stalls >20 min on the ~12.6 GB tree (#765)
       - name: Dispatch today's seal once the h1 group is idle
         if: steps.clock.outputs.go == 'true'
         env:
