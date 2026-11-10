@@ -1,6 +1,6 @@
 {
   "date": "2026-11-10",
-  "generated_at": "2026-11-10T13:48:19.291605-05:00",
+  "generated_at": "2026-11-10T15:43:57.798311-05:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -489,13 +489,13 @@
       "date": "2026-11-10",
       "ok": true,
       "pushed": true,
-      "at": "2026-11-10T13:48:18.188477-05:00",
+      "at": "2026-11-10T15:43:56.566587-05:00",
       "files": [
         {
           "path": "data/day_board/today.json",
           "ok": true,
           "reason": "",
-          "size": 37602,
+          "size": 32536,
           "preview": "2026-11-10 BUY MGNI, TMDX, ETON, WRBY, ADPT, RBLX, SG, SEZL \u00b7 SELL XPRO, KOS, ACDC, BTU, VET, AESI, IEP, SOC"
         },
         {
@@ -506,17 +506,17 @@
           "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
         },
         {
-          "path": "data/day_board/2026-11-10.after-freeze-3.json",
+          "path": "data/day_board/2026-11-10.after-freeze-4.json",
           "ok": true,
           "reason": "",
-          "size": 108372,
+          "size": 100768,
           "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href"
         },
         {
-          "path": "data/day_board/2026-11-10_tickets.after-freeze-3.json",
+          "path": "data/day_board/2026-11-10_tickets.after-freeze-4.json",
           "ok": true,
           "reason": "",
-          "size": 73187,
+          "size": 65889,
           "preview": "2026-11-10 BUY MGNI, TMDX, ETON, WRBY, ADPT, RBLX, SG, SEZL \u00b7 SELL XPRO, KOS, ACDC, BTU, VET, AESI, IEP, SOC"
         },
         {
@@ -558,7 +558,7 @@
           "path": "dashboard/factor-mine/today.json",
           "ok": true,
           "reason": "",
-          "size": 73187,
+          "size": 65889,
           "preview": "2026-11-10 BUY MGNI, TMDX, ETON, WRBY, ADPT, RBLX, SG, SEZL \u00b7 SELL XPRO, KOS, ACDC, BTU, VET, AESI, IEP, SOC"
         },
         {
