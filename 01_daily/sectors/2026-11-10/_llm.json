@@ -1,0 +1,12 @@
+{
+  "date": "2026-11-10",
+  "summary": "",
+  "sectors": [
+    {
+      "sector": "Utilities",
+      "status": "OK",
+      "provider": "deepseek-web",
+      "fallback_reason": ""
+    }
+  ]
+}
