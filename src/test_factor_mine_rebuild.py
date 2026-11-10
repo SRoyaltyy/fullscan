@@ -443,6 +443,39 @@ def test_lock_days_replace_only_until_the_open_is_applied() -> None:
     assert merged["supplied_opens"]["SMJF"]["open_0930"] == 1.05
 
 
+
+def test_names_for_rebuild_keeps_day_file_strategies(tmp_path: Path) -> None:
+    import json
+    from src.factor_mine_rebuild import _names_for_rebuild
+
+    rebuilt = tmp_path / "data" / "factor_mine" / "rebuilt"
+    rebuilt.mkdir(parents=True)
+    lineup = tmp_path / "data" / "factor_mine" / "lineups"
+    lineup.mkdir(parents=True)
+    (lineup / "2026-11-06.json").write_text(json.dumps({
+        "recipes": [{"name": "overnight_h1"}],
+    }), encoding="utf-8")
+    (rebuilt / "labels.json").write_text(json.dumps({
+        "strategies": {"overnight_h1": {}},
+    }), encoding="utf-8")
+    (rebuilt / "2026-09-16.json").write_text(json.dumps({
+        "date": "2026-09-16",
+        "strategies": {"short_alarm_h3": {"class": "still broken"}},
+    }), encoding="utf-8")
+    names = _names_for_rebuild(tmp_path)
+    assert "overnight_h1" in names
+    assert "short_alarm_h3" in names
+
+
+def test_label_index_uses_rebuild_names() -> None:
+    text = Path(__file__).with_name("factor_mine_rebuild.py").read_text(encoding="utf-8")
+    start = text.index("def _sealed_zero_rows")
+    end = text.index("\ndef classify_books")
+    chunk = text[start:end]
+    assert "_names_for_rebuild" in chunk
+    assert "names = live_names" not in chunk
+
+
 def test_brr_gap_stays_missed_without_a_price() -> None:
     import json
     from src.factor_mine_rebuild import BRR_MISSING
@@ -521,6 +554,8 @@ def main() -> None:
         test_needs_open_list_is_the_lock_gap,
         test_supplied_stooq_opens_agree_with_yahoo,
         test_lock_days_replace_only_until_the_open_is_applied,
+        test_names_for_rebuild_keeps_day_file_strategies,
+        test_label_index_uses_rebuild_names,
         test_brr_gap_stays_missed_without_a_price,
         test_build_misses_keep_the_known_reason,
         test_auth_export_is_tried_before_login,

@@ -606,6 +606,15 @@ def _names_for_rebuild(root: Path) -> list[str]:
     for name in ((doc or {}).get("strategies") or {}):
         if name and name not in names:
             names.append(str(name))
+    rebuilt_root = Path(root) / "data" / "factor_mine" / "rebuilt"
+    if rebuilt_root.is_dir():
+        for path in rebuilt_root.glob("*.json"):
+            if path.stem in ("labels", "counts"):
+                continue
+            day = _load_json(path)
+            for name in ((day or {}).get("strategies") or {}):
+                if name and name not in names:
+                    names.append(str(name))
     return names
 
 
@@ -1213,10 +1222,10 @@ def run_rebuild(*, root: Path | None = None, write: bool = False,
 
 
 def _sealed_zero_rows(root: Path) -> list[dict]:
-    """Both-halves-0 primary days on the live lineup. Read-only."""
+    """Both-halves-0 primary days on the live lineup plus tracked history."""
     import gzip
 
-    names = live_names(root)
+    names = _names_for_rebuild(root)
     singles, combos = _recipe_index()
     ledger_dir = root / "data" / "factor_mine" / "ledgers"
     rows = []

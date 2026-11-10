@@ -3061,6 +3061,11 @@ def append_land(from_date: str, target: str, *, write: bool = False,
                 flush=True,
             )
         else:
+            print(f"[factor-mine] freeze phase {date}: building panel",
+                  flush=True)
+            reset_price_memory()
+            from . import price_store as ps
+            ps.release_memory()
             try:
                 extra = fm.build_panel(date, date, fail_closed=True)
             except SkipDay as e:
