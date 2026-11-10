@@ -600,6 +600,28 @@ def test_preopen_uses_today_when_today_files_ready() -> None:
     assert gate.preopen_today(datetime(2026, 10, 7, 9, 30, tzinfo=ET)) == ""
 
 
+def test_preopen_today_ready_when_page_asof_is_last_completed() -> None:
+    """Live morning case: FM/tickets/board rolled to today, page data-asof
+    still the last completed session (no printed close yet). Publish today
+    instead of falling back — that fallback then fails because today.json
+    is already today.
+    """
+    preopen = datetime(2026, 11, 10, 7, 10, tzinfo=ET)
+    procs = [
+        _proc("stock_book", [_file("book_json", "required", "OK")]),
+        _proc("publish", [_file("dash_html", "required", "OK")]),
+    ]
+    with tempfile.TemporaryDirectory() as d:
+        root = Path(d)
+        _board(root, "2026-11-09", procs)
+        _board(root, "2026-11-10", procs)
+        _fm_and_tickets(root, "2026-11-10")
+        gate.stamp_data_asof(root / "dashboard" / "index.html", "2026-11-09")
+        v = gate.evaluate("", root=root, now=preopen)
+        assert v["date"] == "2026-11-10" and v["ready"] is True, v
+        assert v["reason"].startswith("pre-open: today")
+
+
 def test_weekend_resolves_to_friday() -> None:
     """Saturday, Sunday, and Monday before the open stay on Friday."""
     assert gate.latest_completed_session(
@@ -831,6 +853,7 @@ def main() -> None:
         test_publish_copies_updown_to_the_site_root,
         test_preopen_2026_10_07_resolves_to_2026_10_06,
         test_preopen_uses_today_when_today_files_ready,
+        test_preopen_today_ready_when_page_asof_is_last_completed,
         test_weekend_resolves_to_friday,
         test_gate_block_fails_the_workflow,
         test_workflows_wire_the_gate,
