@@ -1,6 +1,6 @@
-# MAP HEAT — 2026-11-09
+# MAP HEAT — 2026-11-10
 
-Export `finviz_2026-11-09.csv` · 11758 names · generated 2026-11-10T03:29:49.711797-05:00
+Export `finviz_2026-11-09.csv` · 11616 names · generated 2026-11-10T04:24:00.861706-05:00
 
 ## TAPE (live futures)
 | Contract | Last | Change |
@@ -69,12 +69,6 @@ Export `finviz_2026-11-09.csv` · 11758 names · generated 2026-11-10T03:29:49.7
 **SIZE GATE on** — high-impact print and/or mega-cap earnings today.
 
 Econ (importance ≥ 2):
-- 08:40 ET  Fed Bowman Speech  actual —  cons —  surprise —  prev —
-- 10:00 ET  Fed Goolsbee Speech  actual —  cons —  surprise —  prev —
-- 11:00 ET  Atlanta Fed GDPNow  actual —  cons —  surprise —  prev 3.4%
-- 12:15 ET  Fed Barkin Speech  actual —  cons —  surprise —  prev —
-- 12:15 ET  Fed Bowman Speech  actual —  cons —  surprise —  prev —
-- 15:00 ET  Fed Goolsbee Speech  actual —  cons —  surprise —  prev —
 - 04:00 ET  Fed Waller Speech  actual —  cons —  surprise —  prev —
 - 08:15 ET  ADP Employment Change Weekly  actual —  cons —  surprise —  prev 16.75K
 - 08:30 ET  Core Inflation Rate MoM  actual —  cons 0.2%  surprise —  prev 0.3%
@@ -109,6 +103,12 @@ Econ (importance ≥ 2):
 - 08:30 ET  NY Empire State Manufacturing Index  actual —  cons —  surprise —  prev 25.50
 - 08:15 ET  ADP Employment Change Weekly  actual —  cons —  surprise —  prev —
 - 08:30 ET  Retail Sales MoM  actual —  cons —  surprise —  prev 0.8%
+- 08:30 ET  Export Prices MoM  actual —  cons —  surprise —  prev 2.2%
+- 08:30 ET  Import Prices MoM  actual —  cons —  surprise —  prev 1.1%
+- 08:30 ET  Retail Sales Control Group MoM  actual —  cons —  surprise —  prev 0.1%
+- 08:30 ET  Retail Sales Ex Autos MoM  actual —  cons —  surprise —  prev 0.9%
+- 09:15 ET  Industrial Production MoM  actual —  cons —  surprise —  prev 0.7%
+- 10:00 ET  Business Inventories MoM  actual —  cons —  surprise —  prev 0.4%
 
 Mega-cap earnings:
 - AMC **NVDA**  EPS est 2.4735  (NVIDIA Corp)
@@ -125,32 +125,32 @@ Mega-cap earnings:
 - BMO **LOW**  EPS est 2.8841  (Lowe\u0027s Cos. Inc)
 - BMO **PDD**  EPS est 2.7345  (PDD Holdings Inc ADR)
 - BMO **BN**  EPS est 0.6911  (Brookfield Corp)
-- BMO **CEG**  EPS est 3.897  (Constellation Energy Corp)
 - AMC **INTU**  EPS est 2.4621  (Intuit Inc)
-- BMO **KKR**  EPS est 1.577  (KKR \u0026 Co Inc)
 - BMO **NTES**  EPS est 2.4544  (NetEase Inc ADR)
 - AMC **ROST**  EPS est 1.8575  (Ross Stores Inc)
 - BMO **TGT**  EPS est 2.0605  (Target Corp)
-- BMO **B**  EPS est 0.7868  (Barrick Mining Corp)
 - BMO **TDG**  EPS est 12.2086  (Transdigm Group Incorporated)
 - AMC **HPE**  EPS est 1.2711  (Hewlett Packard Enterprise Co)
 - AMC **ADSK**  EPS est 3.068  (Autodesk Inc)
-- AMC **FNV**  EPS est 1.7362  (Franco-Nevada Corp)
 - AMC **A**  EPS est 1.7271  (Agilent Technologies Inc)
-- BMO **FERG**  EPS est 3.3072  (Ferguson Enterprises Inc)
+- AMC **FNV**  EPS est 1.7362  (Franco-Nevada Corp)
 - AMC **KEYS**  EPS est 3.3713  (Keysight Technologies Inc)
-- BMO **HMC**  EPS est 0.9544  (Honda Motor ADR)
 - AMC **WDAY**  EPS est 2.7452  (Workday Inc)
+- BMO **HMC**  EPS est 0.9544  (Honda Motor ADR)
 - BMO **SE**  EPS est 0.9911  (Sea Ltd ADR)
 - BMO **HEI**  EPS est 1.5216  (Heico Corp)
 - BMO **HEI-A**  EPS est 1.5202  (Heico Corp)
 - BMO **VIK**  EPS est 1.269  (Viking Holdings Ltd)
 - BMO **VOD**  EPS est 0.3168  (Vodafone Group plc ADR)
-- AMC **P**  EPS est 0.7701  (Everpure Inc)
 - BMO **JD**  EPS est 0.8907  (JD.com Inc ADR)
+- AMC **P**  EPS est 0.7701  (Everpure Inc)
 - BMO **ESLT**  EPS est 3.6321  (Elbit Systems Ltd)
 - BMO **VG**  EPS est 0.4983  (Venture Global Inc)
 - BMO **BSP**  EPS est 0.3211  (Bending Spoons S.p.A)
+- AMC **ZM**  EPS est 1.4855  (Zoom Communications Inc)
+- BMO **DLTR**  EPS est 0.9308  (Dollar Tree Inc)
+- AMC **HPQ**  EPS est 0.752  (HP Inc)
+- AMC **SYM**  EPS est 0.075  (Symbotic Inc)
 
 Options event-vol flags (NOT direction):
 - **NVDA** exp 2026-11-11 ATM IV 0.0156 implied move +0.1% put/call OI —
@@ -165,146 +165,146 @@ Options event-vol flags (NOT direction):
 ## SECTOR RS (live groups, else export median)
 | Sector | 1d | 1w | rvol |
 |---|---:|---:|---:|
-| Basic Materials | +3.5% | +4.0% | 1.16 |
-| Communication Services | +2.0% | +4.7% | 1.25 |
-| Consumer Cyclical | +2.6% | +3.0% | 1.07 |
-| Consumer Defensive | +0.6% | -0.1% | 1.03 |
-| Energy | +0.4% | -7.4% | 1.14 |
-| Financial | +1.7% | +1.4% | 0.97 |
-| Healthcare | +2.1% | +2.4% | 1.3 |
-| Industrials | +4.2% | +0.4% | 1.2 |
-| Real Estate | +1.6% | +2.3% | 1.18 |
-| Technology | +3.2% | -1.7% | 1.24 |
-| Utilities | +1.6% | +0.8% | 1.2 |
+| Basic Materials | -2.1% | -4.8% | 0.86 |
+| Communication Services | +2.7% | +3.5% | 0.96 |
+| Consumer Cyclical | -0.4% | -2.0% | 0.87 |
+| Consumer Defensive | +1.4% | +0.5% | 0.9 |
+| Energy | -0.8% | +1.0% | 1.08 |
+| Financial | -0.4% | -1.8% | 0.93 |
+| Healthcare | +1.4% | -2.5% | 0.91 |
+| Industrials | -1.6% | -2.7% | 0.82 |
+| Real Estate | -0.6% | -2.1% | 0.94 |
+| Technology | -2.0% | -2.1% | 0.96 |
+| Utilities | -1.5% | -3.2% | 1.03 |
 
 ## INDUSTRY_HEAT
 HOT (1w):
-- **Advertising Agencies** (Communication Services)  +4.4% 1d  +48.7% 1w  vs parent +44.0%
-  SPX: APP +9.9% pos, OMC -0.8% none · RUT: MGNI -0.5% pos, LFTO +5.7% none
-- **Gold** (Basic Materials)  +4.6% 1d  +16.6% 1w  vs parent +12.6%
-  SPX: NEM +1.0% pos · RUT: SSRM +1.6% none, NG +5.4% pos
-- **Silver** (Basic Materials)  +6.1% 1d  +14.1% 1w  vs parent +10.0%
-  SPX: — · RUT: —
-- **Other Precious Metals & Mining** (Basic Materials)  +4.5% 1d  +13.4% 1w  vs parent +9.3%
-  SPX: — · RUT: PPTA +16.6% pos, MUX +4.1% none
-- **Electronic Gaming & Multimedia** (Communication Services)  +0.3% 1d  +12.8% 1w  vs parent +8.0%
-  SPX: TTWO +0.7% pos · RUT: —
-- **Broadcasting** (Communication Services)  +6.0% 1d  +11.3% 1w  vs parent +6.6%
-  SPX: — · RUT: SBGI -3.5% none, NMAX -1.1% none
-- **Airlines** (Industrials)  +5.5% 1d  +10.1% 1w  vs parent +9.8%
-  SPX: DAL +2.2% none, UAL +2.0% none · RUT: SKYW -0.7% neg, ALGT +5.0% none
-- **Luxury Goods** (Consumer Cyclical)  +2.9% 1d  +9.8% 1w  vs parent +6.8%
-  SPX: TPR -1.0% pos · RUT: SIG -3.8% none, CPRI -2.8% none
+- **Tobacco** (Consumer Defensive)  +2.4% 1d  +5.0% 1w  vs parent +4.5%
+  SPX: PM +2.0% none, MO +2.4% none · RUT: TPB +0.9% pos, UVV -0.1% none
+- **Internet Content & Information** (Communication Services)  +3.0% 1d  +4.2% 1w  vs parent +0.8%
+  SPX: GOOGL +3.2% none, GOOG +3.1% none · RUT: RUM +11.6% pos, CARG +1.5% none
+- **Electronic Gaming & Multimedia** (Communication Services)  +4.6% 1d  +4.1% 1w  vs parent +0.6%
+  SPX: TTWO +3.5% none · RUT: —
+- **Consumer Electronics** (Technology)  +0.3% 1d  +4.0% 1w  vs parent +6.0%
+  SPX: AAPL +0.2% neg · RUT: SONO +3.0% none, GPRO -2.2% none
+- **Oil & Gas Integrated** (Energy)  -0.5% 1d  +3.3% 1w  vs parent +2.3%
+  SPX: XOM -0.6% pos, CVX -0.9% pos · RUT: DEC +0.5% none
+- **Medical Care Facilities** (Healthcare)  +0.6% 1d  +3.1% 1w  vs parent +5.6%
+  SPX: HCA -0.3% none, DVA +4.3% none · RUT: PACS -0.5% none, LFST +3.2% none
+- **Advertising Agencies** (Communication Services)  +2.9% 1d  +2.7% 1w  vs parent -0.8%
+  SPX: APP +3.2% none, OMC +2.6% none · RUT: MGNI +0.3% none, STGW +2.3% none
+- **Publishing** (Communication Services)  +3.8% 1d  +2.5% 1w  vs parent -1.0%
+  SPX: — · RUT: WLY +3.0% pos, TDAY +3.6% none
 
 COLD (1w):
-- **Oil & Gas Drilling** (Energy)  -0.1% 1d  -13.2% 1w  vs parent -5.8%
-  SPX: — · RUT: NE +2.5% neg, RIG +2.8% mixed
-- **Oil & Gas E&P** (Energy)  -0.3% 1d  -9.4% 1w  vs parent -2.0%
-  SPX: COP +0.6% none, EOG +1.6% pos · RUT: SM +1.0% neg, MGY +0.6% pos
-- **Oil & Gas Refining & Marketing** (Energy)  +3.3% 1d  -8.2% 1w  vs parent -0.8%
-  SPX: MPC -1.2% none, VLO -1.4% none · RUT: PBF -1.6% pos, DK +2.3% pos
-- **Oil & Gas Integrated** (Energy)  -0.6% 1d  -7.7% 1w  vs parent -0.3%
-  SPX: XOM +0.3% none, CVX -0.1% none · RUT: DEC -0.8% mixed
-- **Semiconductors** (Technology)  +2.7% 1d  -6.2% 1w  vs parent -4.6%
-  SPX: NVDA +2.8% none, AVGO +0.7% none · RUT: SLAB +0.1% none, PI +6.2% none
-- **Computer Hardware** (Technology)  +7.4% 1d  -6.0% 1w  vs parent -4.3%
-  SPX: ANET +7.3% neg, DELL +3.7% none · RUT: QBTS +18.0% pos, RGTI +19.3% none
-- **Marine Shipping** (Industrials)  +0.4% 1d  -6.0% 1w  vs parent -6.3%
-  SPX: — · RUT: MATX -0.9% pos, SFL -0.2% none
-- **Thermal Coal** (Energy)  +3.3% 1d  -5.9% 1w  vs parent +1.5%
-  SPX: — · RUT: CNR +5.5% pos, BTU +0.1% neg
+- **Coking Coal** (Basic Materials)  -3.9% 1d  -10.5% 1w  vs parent -5.7%
+  SPX: — · RUT: HCC -2.4% pos, AMR -5.5% pos
+- **Utilities - Independent Power Producers** (Utilities)  -6.0% 1d  -9.5% 1w  vs parent -6.3%
+  SPX: CEG -7.1% none, VST -5.2% none · RUT: HNRG -5.6% none
+- **Metal Fabrication** (Industrials)  -4.1% 1d  -9.4% 1w  vs parent -6.7%
+  SPX: — · RUT: CMC -3.2% none, GPGI -2.4% pos
+- **Uranium** (Energy)  -3.5% 1d  -9.4% 1w  vs parent -10.3%
+  SPX: — · RUT: UEC -1.8% none, UUUU -4.7% none
+- **Silver** (Basic Materials)  -3.6% 1d  -9.3% 1w  vs parent -4.5%
+  SPX: — · RUT: —
+- **Semiconductor Equipment & Materials** (Technology)  -7.6% 1d  -8.4% 1w  vs parent -6.3%
+  SPX: LRCX -8.3% none, AMAT -7.1% none · RUT: ACMR -7.1% pos, KLIC -7.8% none
+- **Aluminum** (Basic Materials)  -3.6% 1d  -7.5% 1w  vs parent -2.7%
+  SPX: — · RUT: CENX -5.7% none, CSTM -3.4% none
+- **Recreational Vehicles** (Consumer Cyclical)  -0.2% 1d  -7.4% 1w  vs parent -5.5%
+  SPX: — · RUT: PII +0.7% none, HOG -1.0% pos
 
 ## OVERRIDES (industry 1w residual vs parent ≥ 3pp)
-- **SPLIT** Advertising Agencies +48.7% vs Communication Services +4.7%  (gap +44.0%)  SPX APP,OMC · RUT MGNI,LFTO
-- **SPLIT** Gold +16.6% vs Basic Materials +4.0%  (gap +12.6%)  SPX NEM · RUT SSRM,NG
-- **OVERRIDE** Uranium +4.3% vs Energy -7.4%  (gap +11.7%)  SPX — · RUT UEC,LEU
-- **OVERRIDE** Solar +9.3% vs Technology -1.7%  (gap +11.0%)  SPX FSLR · RUT RUN,SHLS
-- **SPLIT** Silver +14.1% vs Basic Materials +4.0%  (gap +10.0%)  SPX — · RUT —
-- **OVERRIDE** Chemicals -5.9% vs Basic Materials +4.0%  (gap -10.0%)  SPX DOW · RUT HUN,REX
-- **SPLIT** Airlines +10.1% vs Industrials +0.4%  (gap +9.8%)  SPX DAL,UAL · RUT SKYW,ALGT
-- **OVERRIDE** Steel -5.3% vs Basic Materials +4.0%  (gap -9.4%)  SPX NUE,STLD · RUT WS,NWPX
-- **SPLIT** Other Precious Metals & Mining +13.4% vs Basic Materials +4.0%  (gap +9.3%)  SPX — · RUT PPTA,MUX
-- **SPLIT** Electronic Gaming & Multimedia +12.8% vs Communication Services +4.7%  (gap +8.0%)  SPX TTWO · RUT —
-- **SPLIT** Mortgage Finance +9.1% vs Financial +1.4%  (gap +7.8%)  SPX — · RUT PFSI,WD
-- **OVERRIDE** Gambling -4.6% vs Consumer Cyclical +3.0%  (gap -7.5%)  SPX — · RUT SGHC,RSI
-- **OVERRIDE** Textile Manufacturing -4.5% vs Consumer Cyclical +3.0%  (gap -7.4%)  SPX — · RUT AIN
-- **SPLIT** Luxury Goods +9.8% vs Consumer Cyclical +3.0%  (gap +6.8%)  SPX TPR · RUT SIG,CPRI
-- **SPLIT** Broadcasting +11.3% vs Communication Services +4.7%  (gap +6.6%)  SPX — · RUT SBGI,NMAX
+- **OVERRIDE** Uranium -9.4% vs Energy +1.0%  (gap -10.3%)  SPX — · RUT UEC,UUUU
+- **OVERRIDE** Oil & Gas Equipment & Services -6.8% vs Energy +1.0%  (gap -7.7%)  SPX SLB,BKR · RUT KGS,WHD
+- **SPLIT** Metal Fabrication -9.4% vs Industrials -2.7%  (gap -6.7%)  SPX — · RUT CMC,GPGI
+- **SPLIT** Semiconductor Equipment & Materials -8.4% vs Technology -2.1%  (gap -6.3%)  SPX LRCX,AMAT · RUT ACMR,KLIC
+- **SPLIT** Utilities - Independent Power Producers -9.5% vs Utilities -3.2%  (gap -6.3%)  SPX CEG,VST · RUT HNRG
+- **OVERRIDE** Consumer Electronics +4.0% vs Technology -2.1%  (gap +6.0%)  SPX AAPL · RUT SONO,GPRO
+- **SPLIT** Coking Coal -10.5% vs Basic Materials -4.8%  (gap -5.7%)  SPX — · RUT HCC,AMR
+- **OVERRIDE** Medical Care Facilities +3.1% vs Healthcare -2.5%  (gap +5.6%)  SPX HCA,DVA · RUT PACS,LFST
+- **SPLIT** Recreational Vehicles -7.4% vs Consumer Cyclical -2.0%  (gap -5.5%)  SPX — · RUT PII,HOG
+- **OVERRIDE** Oil & Gas Drilling -4.4% vs Energy +1.0%  (gap -5.4%)  SPX — · RUT NE,RIG
+- **SPLIT** Electrical Equipment & Parts -7.4% vs Industrials -2.7%  (gap -4.7%)  SPX VRT,HUBB · RUT ENS,ATKR
+- **SPLIT** Silver -9.3% vs Basic Materials -4.8%  (gap -4.5%)  SPX — · RUT —
+- **SPLIT** Tobacco +5.0% vs Consumer Defensive +0.5%  (gap +4.5%)  SPX PM,MO · RUT TPB,UVV
+- **OVERRIDE** Thermal Coal -3.4% vs Energy +1.0%  (gap -4.4%)  SPX — · RUT CNR,BTU
+- **SPLIT** Utilities - Renewable -7.3% vs Utilities -3.2%  (gap -4.1%)  SPX — · RUT ORA,FLNC
 
 ## THEME JOIN
 **Energy Traditional** (GICS Energy)
-- Oil / Majors: -6.7% 1w vs parent -7.4% → **AGREE**
-- Oil E&P: -9.4% 1w vs parent -7.4% → **AGREE**
-- Oil Services: -5.0% 1w vs parent -7.4% → **AGREE**
-- Nuclear: +4.6% 1w vs parent -7.4% → **DIVERGE**
+- Oil / Majors: +0.9% 1w vs parent +1.0% → **AGREE**
+- Oil E&P: +1.5% 1w vs parent +1.0% → **AGREE**
+- Oil Services: -6.8% 1w vs parent +1.0% → **DIVERGE**
+- Nuclear: -9.4% 1w vs parent +1.0% → **DIVERGE**
 **Commodities Energy** (GICS Energy, Basic Materials)
-- Uranium: +4.3% 1w vs parent -1.7% → **DIVERGE**
-- Oil (commodity): -8.6% 1w vs parent -1.7% → **AGREE**
+- Uranium: -9.4% 1w vs parent -1.9% → **AGREE**
+- Oil (commodity): +2.4% 1w vs parent -1.9% → **DIVERGE**
 **Energy Renewable** (GICS Energy, Utilities, Technology)
-- Solar: +9.3% 1w vs parent -2.8% → **DIVERGE**
-- Renewable utilities: +5.6% 1w vs parent -2.8% → **DIVERGE**
+- Solar: -0.4% 1w vs parent -1.4% → **AGREE**
+- Renewable utilities: -7.3% 1w vs parent -1.4% → **AGREE**
 **Commodities Metals** (GICS Basic Materials)
-- Gold: +16.6% 1w vs parent +4.0% → **AGREE**
-- Silver: +14.1% 1w vs parent +4.0% → **AGREE**
-- Copper: -0.1% 1w vs parent +4.0% → **DIVERGE**
-- Other precious: +13.4% 1w vs parent +4.0% → **AGREE**
+- Gold: -5.0% 1w vs parent -4.8% → **AGREE**
+- Silver: -9.3% 1w vs parent -4.8% → **AGREE**
+- Copper: -5.0% 1w vs parent -4.8% → **AGREE**
+- Other precious: -6.6% 1w vs parent -4.8% → **AGREE**
 **Semiconductors** (GICS Technology)
-- Semis: -6.2% 1w vs parent -1.7% → **AGREE**
-- Semi equipment: -1.3% 1w vs parent -1.7% → **AGREE**
+- Semis: -4.8% 1w vs parent -2.1% → **AGREE**
+- Semi equipment: -8.4% 1w vs parent -2.1% → **AGREE**
 **Artificial Intelligence** (GICS Technology)
-- AI compute / semis: -6.2% 1w vs parent -1.7% → **AGREE**
-- Software infra: +3.9% 1w vs parent -1.7% → **DIVERGE**
+- AI compute / semis: -4.8% 1w vs parent -2.1% → **AGREE**
+- Software infra: +1.4% 1w vs parent -2.1% → **DIVERGE**
 **Defense & Aerospace** (GICS Industrials)
-- Aero / defense: +1.6% 1w vs parent +0.4% → **AGREE**
+- Aero / defense: -2.0% 1w vs parent -2.7% → **AGREE**
 
 ## FINVIZ THEME ETF TAPE
-- **Energy** 0.0% 1d -11.1% 1w · XLE, AMLP, VDE
-- **Technology** +2.8% 1d -10.5% 1w · VGT, XLK, SMH
-- **Cannabis Based Businesses** +2.5% 1d +9.3% 1w · MSOS, MJ, CNBS
-- **Robotics & Automation** +2.1% 1d -7.1% 1w · BAI, AIQ, QTUM
-- **Industrials** +1.3% 1d -4.9% 1w · XLI, ITA, AIRR
-- **Innovation / Patent Based** +1.5% 1d -4.7% 1w · ARKK, XT, FWD
-- **Space Exploration & Technology** +8.6% 1d -4.1% 1w · NASA, ARKX, UFO
-- **Fintech** +2.8% 1d -3.8% 1w · BLOK, ARKF, BITQ
-- **Sector Rotation / Combinations** +0.6% 1d -3.5% 1w · GRNY, FV, SECT
-- **Demographic & Lifestyle Trends** -0.1% 1d -3.3% 1w · FFOX, AGNG, MILN
-- **Economic Environment Themed** +0.5% 1d -3.2% 1w · THRO, SAMT, MSSS
-- **Consumer Discretionary** -0.0% 1d +3.0% 1w · XLY, VCR, TSLL
-- **Faith & Religion** +0.3% 1d -2.6% 1w · SPUS, CATH, HLAL
-- **Metaverse and Web3** +1.0% 1d +2.5% 1w · METV, FMET, GAMR
-- **Real Assets** -0.1% 1d -2.4% 1w · CSRA, VRAI, ABLD
-- **Communication Services** +0.7% 1d +2.3% 1w · XLC, VOX, FCOM
-- **Lobbying & Regulatory Policy** +0.2% 1d -2.2% 1w · OPPE, SAGP, DEMZ
-- **Battery and Energy Storage** +1.4% 1d -2.1% 1w · LIT, BATT, IBAT
-- **Natural Resources** -0.1% 1d -2.1% 1w · GUNR, GNR, PHO
-- **Corporate Governance** +0.1% 1d -1.9% 1w · ESGU, ESGV, ESGD
+- **Materials** -2.9% 1d -6.5% 1w · GDX, GDXJ, XLB
+- **Battery and Energy Storage** -2.4% 1d -4.4% 1w · LIT, BATT, IBAT
+- **Future Mobility Production & Tech** -1.6% 1d -3.5% 1w · DRIV, ROKT, IDRV
+- **Technology** -2.9% 1d -3.4% 1w · VGT, XLK, SMH
+- **Robotics & Automation** -2.1% 1d -3.3% 1w · BAI, AIQ, QTUM
+- **Industrials** -1.5% 1d -3.0% 1w · XLI, ITA, AIRR
+- **Communication Services** +2.4% 1d +3.0% 1w · XLC, VOX, FCOM
+- **Utilities** -1.4% 1d -3.0% 1w · XLU, VPU, FUTY
+- **Fintech** +0.2% 1d -2.8% 1w · BLOK, ARKF, BITQ
+- **Healthcare** +1.4% 1d -2.5% 1w · XLV, VHT, XBI
+- **Agri-business** -0.1% 1d -2.4% 1w · MOO, VEGI, KROP
+- **Green Investing** -1.5% 1d -2.3% 1w · NLR, USCL, SPYX
+- **Infrastructure** -0.8% 1d -2.3% 1w · PAVE, GRID, IGF
+- **Innovation / Patent Based** -1.1% 1d -2.3% 1w · ARKK, XT, BULZ
+- **Natural Resources** -1.1% 1d -2.2% 1w · GUNR, GNR, PHO
+- **Financials** +0.4% 1d -2.0% 1w · XLF, VFH, KBWB
+- **Faith & Religion** -0.6% 1d -2.0% 1w · SPUS, CATH, HLAL
+- **Economic Environment Themed** -0.7% 1d -2.0% 1w · THRO, SAMT, MSSS
+- **Demographic & Lifestyle Trends** -0.4% 1d -1.9% 1w · FFOX, BUZZ, FFND
+- **Real Estate** -0.5% 1d -1.9% 1w · VNQ, SCHH, XLRE
 
 ## TICKER-TAGGED NEWS (Finviz v=3)
-- 13 min **TSLA** SPCX Stock Climbs Overnight: Tesla Influencer Presses Texas Governor-Elect  Analyst Sees 10,000 AI Racks In Space By 2028 (Stocktwits)
-- 16 min **TTWO** GTA VI Preorders Far In Excess Of ExpectationsNumbers Will Speak Soon  CEO Boosts Expectations As TTWO Lifts Annual Forecasts (Stocktwits)
-- 29 min **TXN** TI redefines embedded development with agentic AI in its CCStudio ecosystem, empowering engineers to accelerate innovation (PR Newswire)
-- 29 min **ON** onsemi's EliteSiC M4 Pushes Power Density Higher as Energy Demands Grow (GlobeNewswire)
-- 32 min **VOD** Vodafone raises profit, cash flow guidance despite 3.6 billion H1 loss (Investing.com)
-- 43 min **AAON** AAON Crushes Estimates And Raises Guidance A Third Time, But A Restatement And Material Weakness Muddy The Margin Recovery (Earnings Whispers)
-- 47 min **SKYD** SKYD Stock In Focus: Skydance CEO Ellison Maps Out Streaming Merger As DC Studios Gets New Leadership (Stocktwits)
-- 1 hour **CVX** Sintana Energy: Qatar Energy farms into Namibia project in deal with Chevron (Proactive)
-- 1 hour **HMC** Honda: Fiscal Q2 Earnings Snapshot (Associated Press)
-- 1 hour **VCRE** Vicore Pharma to Participate in the Jefferies Global Healthcare Conference (ACCESSWIRE)
-- 1 hour **HIMS** HIMS Stock Slides Overnight: Retail Bets On Peptides Comeback As Stanford Neuroscientist Joins Board (Stocktwits)
-- 1 hour **AAPL,AMZN,MSFT,NVDA** Tech leads Asian stock rally as traders track Wall St rebound (AFP)
-- 1 hour **AAPL,ASX,NVDA,TSM** Why Is TSM Stock Rising Overnight? (Stocktwits)
-- 1 hour **SWKS** Skyworks Introduces Scalable Multi-Core Audio DSP Family for Automotive Platforms from Entry-Level to Premium Vehicles (GlobeNewswire)
-- 1 hour **IHG** InterContinental Hotels Group PLC Announces Transaction in Own Shares - November 10 (ACCESSWIRE)
-- 1 hour **QNT** Quantinuum and RIKEN Expand Partnership to Accelerate the Commercialization of Quantum-AI Hybrid Supercomputing in Japan (PR Newswire)
-- 1 hour **ASX** ASE Technology Holding Co., Ltd. Announces Monthly Net Revenues* (PR Newswire)
+- 13 min **LCO** FTSE 100 climbs as sinking crude boosts broader market but drags on energy majors (Investing.com)
+- 14 min **NVDA** Beyond Nvidia: 6 stocks winning the AI infrastructure buildout (Investing.com)
+- 17 min **NVDA** Stock market today: Dow, S&P 500, Nasdaq trade mixed ahead of key inflation data (Yahoo Finance)
+- 18 min **MRP** Kaplan Fox Encourages Millrose Properties, Inc. (MRP) Investors Seeking Recovery to Contact the Firm Before December 8, 2026 (Newsfile)
+- 20 min **ZH** Zhihu Inc. to Report Third Quarter 2026 Financial Results on November 24, 2026 (GlobeNewswire)
+- 29 min **AAUC** Allied Gold pours first gold at Ethiopias Kurmuk Mine (Mining Technology)
+- 29 min **NRG** NRG to sell six natural gas assets to LS Power for $4bn (Power Technology)
+- 34 min **DKNG,TFC** DKNG Stock Faces Wall Street Pressure As Confidence In DraftKings Earnings Outlook Dims (Stocktwits)
+- 34 min **CL** European shares inch toward record highs as sinking oil eases inflation anxiety (Investing.com)
+- 34 min **NVDA,SMCI** Nvidias China Spy Fallout Deepens: Report Says Moonshot AI Accessed NVDAs Advanced Chips Despite Export Controls (Stocktwits)
+- 50 min **SHEL** Transaction in Own Shares (GlobeNewswire)
+- 52 min **NVDA,CRWV** Stock Market Today: Dow, S&P 500 and Nasdaq set for mixed start following rally; Nvidia shares rise; inflation data and CoreWeave results on tap: live updates (MarketWatch)
+- 52 min **NVDA,CRWV** Dow set to extend gains as traders await October's CPI (MarketWatch)
+- 53 min **LI** Li Auto Inc. to Report Third Quarter 2026 Financial Results on November 25, 2026 (GlobeNewswire)
+- 53 min **HSAI** Hesai Group Reports Third Quarter 2026 Unaudited Financial Results (GlobeNewswire)
+- 57 min **TSLA,UBER** Elon Musk Ally Jason Calacanis Bets Another $1M On Uber  Says Waymo Team-Up Could Steal Teslas Driverless Crown (Stocktwits)
+- 58 min **NVDA,TSLA** Musk expected to join Trump at APEC; Huang's participation in doubt, SCMP reports (Reuters)
+- 1 hour **NVDA,MSFT,AAPL,AMZN** Tech leads stock rally as traders track Wall St rebound (AFP)
+- 1 hour **TSLA,SPCX** SPCX Stock Climbs Overnight: Tesla Influencer Presses Texas Governor-Elect  Analyst Sees 10,000 AI Racks In Space By 2028 (Stocktwits)
+- 1 hour **TTWO** GTA VI Preorders Far In Excess Of ExpectationsNumbers Will Speak Soon  CEO Boosts Expectations As TTWO Lifts Annual Forecasts (Stocktwits)
+- 1 hour **NTAP** NetApp Hosts Second Quarter of Fiscal Year 2027 Financial Results Webcast (Business Wire)
+- 1 hour **TXN** TI redefines embedded development with agentic AI in its CCStudio ecosystem, empowering engineers to accelerate innovation (PR Newswire)
+- 1 hour **ON** onsemi's EliteSiC M4 Pushes Power Density Higher as Energy Demands Grow (GlobeNewswire)
+- 1 hour **NAVN** Wise Selects Navan to Modernize Global Travel Program (Business Wire)
 - 1 hour **DIOD** Intelligent High-Side Switches from Diodes Incorporated Deliver Combined Protection and Diagnostics to Safely Drive 12V Automotive Loads (Business Wire)
-- 1 hour **LLY** London biotech Oyster harvests $60M for tau-targeting brain drugs (BioPharma Dive)
-- 1 hour **ARKK,SOFI** Cathie Wood's ARK Investment Buys $6.8M Worth Of SOFI: Retail Calls It Dead Stock (Stocktwits)
-- 1 hour **LIF** Life360 Accelerates To 40% Growth As Subscription Engine Carries The Quarter And Advertising Resets Lower (Earnings Whispers)
-- 1 hour **DSP** Viant Misses Badly On EPS And Guides Revenue Growth Down To ~20%, Even As Ex-TAC And Margin Targets Move Higher (Earnings Whispers)
-- 1 hour **BW** Babcock & Wilcox Misses On Normalized EPS As Warrant Gain Flatters GAAP Results And The Data Center Award Slips Into 2027 (Earnings Whispers)
-- 1 hour **PUBM** PubMatic's Third Straight Revenue Acceleration And A Doubling Of EBITDA Beat Estimates, But Q4 Guidance Implies A Slight Growth Slowdown (Earnings Whispers)
-- 1 hour **OXBR** Oxbridge Re Matches On A Loss As Reinsurance Revenue Shrinks And The AI GridWorks Pivot Remains Pre-Revenue (Earnings Whispers)
 
 ## NOTES
 - Captains = top 2 by market cap. RUT needs ≥ $5m 20-day dollar volume.
