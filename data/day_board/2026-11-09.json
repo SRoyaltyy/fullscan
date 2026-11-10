@@ -1,8 +1,8 @@
 {
   "date": "2026-11-09",
-  "generated_at": "2026-11-09T16:30:06.627682-05:00",
+  "generated_at": "2026-11-10T03:27:24.615451-05:00",
   "overall": "PARTIAL",
-  "ranker_ready": false,
+  "ranker_ready": true,
   "blockers": [
     "MISSING News actions JSON `01_daily/news/2026-11-09_actions.json` \u2014 missing"
   ],
@@ -184,7 +184,7 @@
       "inputs_ready": true,
       "n_req_ok": 6,
       "n_req": 9,
-      "n_opt_ok": 1,
+      "n_opt_ok": 2,
       "n_opt": 14,
       "files": [
         {
@@ -331,11 +331,16 @@
           "name": "Sector board JSON",
           "path": "01_daily/sectors/2026-11-09/_board.json",
           "role": "optional",
-          "status": "SKIP",
-          "reason": "optional \u2014 sector board not required",
-          "size": 0,
-          "said": "optional \u2014 sector board not required",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 6085,
+          "said": "0 up / 0 down / 0 flat",
+          "bullets": [
+            "XLB missing",
+            "XLC missing",
+            "XLY missing",
+            "XLP missing"
+          ]
         },
         {
           "key": "qc",
@@ -344,13 +349,13 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7576,
-          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 18 fail",
+          "size": 7562,
+          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 13 fail",
           "bullets": [
-            "general_predict:missing",
-            "events:missing",
-            "news_judge:missing",
-            "news_parse:missing"
+            "news_actions:missing",
+            "map_heat_research:missing",
+            "sector_predict:missing",
+            "sector_predict:missing"
           ]
         },
         {
@@ -499,13 +504,18 @@
           "bullets": []
         }
       ],
-      "said": "general UP  9.449",
+      "said": "general UP  9.449 \u00b7 sectors 0 up / 0 down / 0 flat",
       "bullets": [
         "bad: Nvidia -5.3% premarket",
         "bad: Daly/Williams hawkish further tightening",
         "bad: 78% Dec hike odds",
         "good: oil collapse on Iran de-escalation",
-        "good: dip-buying after worst week since Apr 2025"
+        "good: dip-buying after worst week since Apr 2025",
+        "XLB missing",
+        "XLC missing",
+        "XLY missing",
+        "XLP missing",
+        "XLE missing"
       ]
     },
     {
@@ -664,7 +674,7 @@
       "n_req_ok": 4,
       "n_req": 4,
       "n_opt_ok": 3,
-      "n_opt": 4,
+      "n_opt": 3,
       "files": [
         {
           "key": "in_general",
@@ -686,12 +696,17 @@
           "key": "in_board",
           "name": "Sector board JSON",
           "path": "01_daily/sectors/2026-11-09/_board.json",
-          "role": "optional",
-          "status": "SKIP",
-          "reason": "optional \u2014 sector board not required",
-          "size": 0,
-          "said": "optional \u2014 sector board not required",
-          "bullets": []
+          "role": "input",
+          "status": "OK",
+          "reason": "",
+          "size": 6085,
+          "said": "0 up / 0 down / 0 flat",
+          "bullets": [
+            "XLB missing",
+            "XLC missing",
+            "XLY missing",
+            "XLP missing"
+          ]
         },
         {
           "key": "in_actions",
@@ -830,11 +845,11 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 1808,
+          "size": 1802,
           "said": "Paper trading \u2014 Futubull-fee simulation",
           "bullets": [
-            "As of **2026-11-06** \u00b7 $10,000 starting capital per sleeve \u00b7 fees per `00_grounding/futubull_fees.json`",
-            "Latest book **2026-11-06** ranker: **weighted** (green pile liquid=0, need 8)."
+            "As of **2026-11-09** \u00b7 $10,000 starting capital per sleeve \u00b7 fees per `00_grounding/futubull_fees.json`",
+            "Latest book **2026-11-09** ranker: **weighted** (green pile liquid=0, need 8)."
           ]
         },
         {
@@ -844,7 +859,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "live-book poller + today.json (2026-11-09)",
-          "size": 16158593,
+          "size": 16224380,
           "said": "live-book poller + today.json (2026-11-09)",
           "bullets": []
         }
@@ -883,7 +898,7 @@
           "role": "required",
           "status": "OK",
           "reason": "live-book poller + today.json (2026-11-09)",
-          "size": 16158593,
+          "size": 16224380,
           "said": "live-book poller + today.json (2026-11-09)",
           "bullets": []
         },
@@ -894,11 +909,11 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 1808,
+          "size": 1802,
           "said": "Paper trading \u2014 Futubull-fee simulation",
           "bullets": [
-            "As of **2026-11-06** \u00b7 $10,000 starting capital per sleeve \u00b7 fees per `00_grounding/futubull_fees.json`",
-            "Latest book **2026-11-06** ranker: **weighted** (green pile liquid=0, need 8)."
+            "As of **2026-11-09** \u00b7 $10,000 starting capital per sleeve \u00b7 fees per `00_grounding/futubull_fees.json`",
+            "Latest book **2026-11-09** ranker: **weighted** (green pile liquid=0, need 8)."
           ]
         },
         {
@@ -1003,7 +1018,22 @@
       "score": "9.449",
       "direction": "up"
     },
-    "sectors": {},
+    "sectors": {
+      "said": "0 up / 0 down / 0 flat",
+      "bullets": [
+        "XLB missing",
+        "XLC missing",
+        "XLY missing",
+        "XLP missing",
+        "XLE missing",
+        "XLF missing",
+        "XLV missing",
+        "XLI missing",
+        "XLRE missing",
+        "XLK missing",
+        "XLU missing"
+      ]
+    },
     "news": {},
     "weather": {
       "said": "favorable 2 \u00b7 hostile 3 \u00b7 neutral 6",
@@ -2511,6 +2541,52 @@
         }
       ],
       "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest (close) \u2014 2026-11-09\n**Generated:** 2026-11-09T16:30:05.469328-05:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks closed sharply higher, rebounding from postelection selloff as Brent crude slipped toward $94 on Trump\u2019s Iran comments ahead of Tuesday\u2019s CPI data\n**Prior close:** SPX \u2014  Nasdaq +2.70%  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** +2.70%  **Dow:** \u2014\n**Oil:** Brent crude $94.0 down (fell)\n**CPI/Fed:** s CPI release; 5.0% cut (cut 5%)\n**Leaders:** AMD, OPY, AVGO, MRVL, INTC, QCOM, NVDA, CEG, KKR, BA, TTWO, HIMS, RKLB\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** \u2014\n**Geo/grain:** geo\n**Clock legal for:** 2026-11-10\n**Clock use:** `next_open`"
+    },
+    {
+      "key": "finviz_digest",
+      "title": "Finviz digest",
+      "date": "2026-11-09",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-10T03:27:23.465680-05:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-11-09_finviz_digest.after-freeze-1.json",
+          "ok": true,
+          "reason": "",
+          "size": 96702,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        },
+        {
+          "path": "01_daily/news/2026-11-09_finviz_digest.after-freeze-1.md",
+          "ok": true,
+          "reason": "",
+          "size": 10731,
+          "preview": "# Finviz Daily Digest \u2014 2026-11-09\n_Generated 2026-11-10T03:27:23.049221-05:00 \u00b7 export=data/exports/finviz_2026-11-09.csv \u00b7 ticker digests=775 \u00b7 high-signal=290_"
+        },
+        {
+          "path": "data/exports/finviz_2026-11-09.after-freeze-1.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11009161,
+          "preview": "11743 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAB\""
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11009161,
+          "preview": "11743 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAB\""
+        },
+        {
+          "path": "01_daily/news/2026-11-09_finviz_digest_preopen.json",
+          "ok": true,
+          "reason": "",
+          "size": 102881,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        }
+      ],
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-11-09\n_Generated 2026-11-10T03:27:23.049221-05:00 \u00b7 export=data/exports/finviz_2026-11-09.csv \u00b7 ticker digests=775 \u00b7 high-signal=290_ \u00b7 11743 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAB\" \u00b7 11743 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAB\" \u00b7 keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
     }
   ],
   "href": {
@@ -2804,6 +2880,30 @@
       "path": "data/exports/finviz_2026-11-09.csv",
       "at": "2026-11-10T03:26:57-05:00",
       "commit_msg": "auto: land finviz export [2026-11-09]",
+      "workflow": "Finviz ALL (GH-hosted Elite)",
+      "run_id": "42781679837",
+      "manifest": "research/input_freeze/2026-11-09/manifest.json"
+    },
+    {
+      "path": "01_daily/2026-11-09_grok_review.json",
+      "at": "2026-11-10T03:27:25-05:00",
+      "commit_msg": "auto: land finviz_digest [2026-11-09]",
+      "workflow": "Finviz ALL (GH-hosted Elite)",
+      "run_id": "42781679837",
+      "manifest": "research/input_freeze/2026-11-09/manifest.json"
+    },
+    {
+      "path": "01_daily/2026-11-09_preopen_qc.json",
+      "at": "2026-11-10T03:27:25-05:00",
+      "commit_msg": "auto: land finviz_digest [2026-11-09]",
+      "workflow": "Finviz ALL (GH-hosted Elite)",
+      "run_id": "42781679837",
+      "manifest": "research/input_freeze/2026-11-09/manifest.json"
+    },
+    {
+      "path": "data/day_board/2026-11-09.json",
+      "at": "2026-11-10T03:27:25-05:00",
+      "commit_msg": "auto: land finviz_digest [2026-11-09]",
       "workflow": "Finviz ALL (GH-hosted Elite)",
       "run_id": "42781679837",
       "manifest": "research/input_freeze/2026-11-09/manifest.json"
