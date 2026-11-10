@@ -2118,3 +2118,26 @@ if __name__ == "__main__":
     with tempfile.TemporaryDirectory() as tmp:
         test_same_day_rerun_matches(Path(tmp))
     print("ok")
+
+
+def test_write_books_skips_missed_unsealed_day(tmp_path):
+    """An unsealed final row before the book's last sealed day stays as-is
+    and is never sealed late (no past-day lock crash)."""
+    import json as _json
+    from src import webull_sim as ws
+    from src import past_day_lock as pdl
+    books = tmp_path / "days.jsonl"
+    manifest = tmp_path / "manifest.jsonl"
+    base = {"name": "bk", "final": True}
+    late = dict(base, date="2026-10-27", v=1)
+    ws.write_books([late], seal=True, path=books, manifest=manifest)
+    old = dict(base, date="2026-10-07", v=0)
+    books.write_text(books.read_text() + ws.canon(old) + "\n")
+    new = dict(base, date="2026-10-28", v=2)
+    out = ws.write_books([dict(old, v=9), late, new], seal=True,
+                         path=books, manifest=manifest)
+    by_date = {r["date"]: r for r in out}
+    assert by_date["2026-10-07"]["v"] == 0
+    sealed = {r.get("date") for r in pdl.load_manifest(manifest)
+              if r.get("kind") == "day" and r.get("name") == "bk"}
+    assert "2026-10-28" in sealed and "2026-10-07" not in sealed

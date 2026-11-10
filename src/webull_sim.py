@@ -2262,11 +2262,23 @@ def write_books(rows: list[dict], *, seal: bool, path: Path | None = None,
         for manifest_row in past_day_lock.load_manifest(manifest):
             if manifest_row.get("kind") == "day" and manifest_row.get("record") == RECORD:
                 sealed.add((str(manifest_row.get("name")), str(manifest_row.get("date"))))
+    last_sealed: dict[str, str] = {}
+    for name, day in sealed:
+        if day > last_sealed.get(name, ""):
+            last_sealed[name] = day
+
+    def missed(key: tuple[str, str]) -> bool:
+        # Unsealed day before that book's last sealed day: a missed day
+        # stays missing. Never rewrite or seal it later.
+        return key not in sealed and key[1] < last_sealed.get(key[0], "")
+
     kept = dict(existing)
     for row in rows:
         key = (row["name"], row["date"])
         line = canon(row)
         prev = existing.get(key)
+        if missed(key):
+            continue
         if row["date"] < FIRST_LOCKED and prev:
             old = json.loads(prev)
             if old.get("final"):
@@ -2284,6 +2296,8 @@ def write_books(rows: list[dict], *, seal: bool, path: Path | None = None,
     written = [json.loads(line) for _key, line in ordered]
     if seal:
         for row in written:
+            if missed((row["name"], row["date"])):
+                continue
             if row.get("final") and row["date"] >= FIRST_LOCKED:
                 seal_row(row, manifest=manifest)
     return written
