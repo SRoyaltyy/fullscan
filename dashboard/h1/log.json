@@ -10741,5 +10741,102 @@
     ],
     "sha256": "fa488986a2441046e89266ba9ab7e89b4e540464a84192b4238da5c9a46fc953",
     "unfilled": []
+  },
+  {
+    "added_buys": [],
+    "added_sells": [],
+    "cash_primary": 430.20280295878274,
+    "date": "2026-11-10",
+    "equity_primary": 8060.672875958782,
+    "holdings": [
+      {
+        "cost_primary": 1727.0201499999998,
+        "entry_date": "2026-11-10",
+        "entry_px": 23.51,
+        "last_px": 23.51,
+        "min_hold": 1,
+        "peak_px": 23.51,
+        "shares": 73,
+        "ticker": "FLY"
+      },
+      {
+        "cost_primary": 1806.7324749999998,
+        "entry_date": "2026-11-10",
+        "entry_px": 11.435,
+        "last_px": 11.435,
+        "min_hold": 1,
+        "peak_px": 11.435,
+        "shares": 157,
+        "ticker": "FRVO"
+      },
+      {
+        "cost_primary": 1746.2871749999997,
+        "entry_date": "2026-11-10",
+        "entry_px": 2.135,
+        "last_px": 2.135,
+        "min_hold": 1,
+        "peak_px": 2.135,
+        "shares": 809,
+        "ticker": "INDI"
+      },
+      {
+        "cost_primary": 1621.2042,
+        "entry_date": "2026-11-05",
+        "entry_px": 2.98,
+        "last_px": 3.84,
+        "min_hold": 1,
+        "peak_px": 3.84,
+        "shares": 539,
+        "ticker": "ZJYL"
+      }
+    ],
+    "kind": "mark",
+    "open_fill_sha256": "fa488986a2441046e89266ba9ab7e89b4e540464a84192b4238da5c9a46fc953",
+    "plan_sha256": "71defe5806687c74ac04079abc38bc012b19f63a206101cb67731ba8f7db4d03",
+    "pnl_status": "marked",
+    "recipe": "union_hot_n4_h1__w0",
+    "sha256": "b45c88d2dfe6d336d01ddfe57603186786b88969c61bd52c2fa9a3c487ee7c98"
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-11-10",
+    "entry_date": "2026-11-05",
+    "entry_px": 5.34,
+    "fill": 5.09,
+    "kind": "close",
+    "pnl_primary": -102.71304999999984,
+    "reason": "hold-expired",
+    "recipe": "union_hot_n4_h1__w0",
+    "sha256": "f26a63fd1ac1cec73c615405f603135e95a31c51c553793814e1abc169215620",
+    "shares": 313,
+    "ticker": "ARRY"
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-11-10",
+    "entry_date": "2026-11-05",
+    "entry_px": 8.88,
+    "fill": 8.75,
+    "kind": "close",
+    "pnl_primary": -46.164600000000064,
+    "reason": "hold-expired",
+    "recipe": "union_hot_n4_h1__w0",
+    "sha256": "c339282081788284bf47ba2b804d252afa241b8029d76be4a45b9e1d3f70e56d",
+    "shares": 188,
+    "ticker": "CRCT"
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-11-10",
+    "entry_date": "2026-11-05",
+    "entry_px": 3.35,
+    "fill": 4.0,
+    "kind": "close",
+    "pnl_primary": 246.05854999999997,
+    "reason": "hold-expired",
+    "recipe": "union_hot_n4_h1__w0",
+    "sha256": "b53fc6a03fa1f24f8bdf8ea289ffdd316b9906cbe84dfcb1dcdec8f3a6e3fadc",
+    "shares": 419,
+    "ticker": "WYHG"
   }
 ]
