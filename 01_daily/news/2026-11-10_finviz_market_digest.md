@@ -1,6 +1,6 @@
 # Finviz homepage market digest — 2026-11-10
 
-**Generated:** 2026-11-10T04:21:51.378143-05:00 (America/New_York)
+**Generated:** 2026-11-10T04:37:38.809487-05:00 (America/New_York)
 **Source:** `live`
 **Banner:** US futures point to a modestly higher open as traders await October CPI data and react to earnings-driven stock moves
 **Prior close:** SPX —  Nasdaq —  Dow —
