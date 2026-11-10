@@ -1,6 +1,6 @@
 {
   "date": "2026-11-10",
-  "generated_at": "2026-11-10T12:38:48.099958-05:00",
+  "generated_at": "2026-11-10T12:49:57.051976-05:00",
   "featured": [
     "combo_sh_5050_shared",
     "union_news_pack_net2_h1",
@@ -15,13 +15,13 @@
   ],
   "quote": {
     "src": "session_export+finviz_session: No module named 'requests'",
-    "at": "2026-11-10T12:38:46.868208-05:00",
+    "at": "2026-11-10T12:49:56.088471-05:00",
     "after_open": true,
     "n": 11729,
     "error": "finviz_session: No module named 'requests'",
     "live": false
   },
-  "banner": "Elite export as of 12:38 ET (not live)",
+  "banner": "Elite export as of 12:49 ET (not live)",
   "clock_rule": "px is Finviz Elite Price from a fresh post-09:30 Overview export when live is allowed. Theme Radar close dump and yesterday Price are never live.",
   "sleeves": {
     "combo_sh_5050_shared": {
