@@ -796,6 +796,21 @@ def test_load_or_build_does_not_rebuild_landed_dates() -> None:
             _restore(old)
 
 
+
+def test_session_date_window_keeps_a_short_prior_walk() -> None:
+    """One-day freeze indexes LAST_KNOWN_STEPS+2 priors, not the full calendar."""
+    dates = [f"2026-08-{d:02d}" for d in range(13, 32)]
+    orig = tl.session_dates
+    tl.session_dates = lambda: list(dates)
+    try:
+        got = fmf.session_date_window("2026-08-28")
+        assert got[0] == "2026-08-18"
+        assert got[-1] == "2026-08-28"
+        assert len(got) == tl.LAST_KNOWN_STEPS + 3
+    finally:
+        tl.session_dates = orig
+
+
 def test_published_0922_pin_beats_the_postclose_file() -> None:
     """The 09-22 post-close land must not be the 09:30 digest input."""
     pin = tl._preopen_digest_path("2026-09-22")
@@ -2893,6 +2908,7 @@ if __name__ == "__main__":
     test_resume_appends_one_day_and_keeps_prior_trades()
     test_reconstructed_label_and_append_does_not_rebuild_old_rows()
     test_load_or_build_does_not_rebuild_landed_dates()
+    test_session_date_window_keeps_a_short_prior_walk()
     test_published_0922_pin_beats_the_postclose_file()
     test_late_digest_does_not_replace_preopen_tones()
     test_save_report_does_not_overwrite_preopen_pin()

@@ -285,6 +285,52 @@ def slot_path(slot: str, date: str) -> Path:
     return snapshot_path(date)
 
 
+def log_mem(label: str) -> None:
+    """RSS breadcrumb for the freeze path. Does not change data."""
+    rss = vms = avail = ""
+    try:
+        for line in Path("/proc/self/status").read_text().splitlines():
+            if line.startswith("VmRSS:"):
+                rss = line.split()[1]
+            elif line.startswith("VmSize:"):
+                vms = line.split()[1]
+    except OSError:
+        pass
+    try:
+        for line in Path("/proc/meminfo").read_text().splitlines():
+            if line.startswith("MemAvailable:"):
+                avail = line.split()[1]
+                break
+    except OSError:
+        pass
+    print(
+        f"[factor-mine] mem {label} rss_kb={rss} vm_kb={vms} avail_kb={avail}",
+        flush=True,
+    )
+
+
+def session_date_window(land: str, span: int | None = None) -> list[str]:
+    """Trading dates ``build_index`` needs to attach cameras on ``land``.
+
+    ``walk_prior`` reads at most ``LAST_KNOWN_STEPS`` earlier sessions.
+    One-day ``build_panel(D, D)`` used to call ``build_index()`` across
+    every date since 2026-08-13 (via lookback_calendar), loading each
+    day's Finviz + AB CSV. That is what OOM'd the 11-09 freeze (exit 143)
+    ~3 min after "building panel". Restricting ``session_dates`` to this
+    window during ``build_panel`` keeps the same per-day files for D and
+    its priors without changing sealed row math.
+    """
+    width = tl.LAST_KNOWN_STEPS + 2 if span is None else span
+    dates = tl.session_dates()
+    if land in dates:
+        i = dates.index(land)
+        return dates[max(0, i - width): i + 1]
+    clipped = [d for d in dates if d <= land]
+    if not clipped:
+        return dates
+    return clipped[max(0, len(clipped) - width - 1):]
+
+
 def reset_price_memory() -> None:
     """Drop OHLC caches so a fetch just landed is visible to features()."""
     from . import candle_factor as cf
@@ -3063,15 +3109,30 @@ def append_land(from_date: str, target: str, *, write: bool = False,
         else:
             print(f"[factor-mine] freeze phase {date}: building panel",
                   flush=True)
+            log_mem(f"freeze {date} before reset")
             reset_price_memory()
             from . import price_store as ps
             ps.release_memory()
+            log_mem(f"freeze {date} after reset, before build_panel")
+            window = session_date_window(date)
+            print(
+                f"[factor-mine] freeze phase {date}: session-index window "
+                f"{window[0] if window else '?'}→{window[-1] if window else '?'} "
+                f"n={len(window)}",
+                flush=True,
+            )
+            saved_sd = tl.session_dates
+            saved_idx = tl._INDEX
+            tl._INDEX = None
+            tl.session_dates = lambda window=list(window): list(window)
             try:
                 extra = fm.build_panel(date, date, fail_closed=True)
             except SkipDay as e:
+                tl.session_dates = saved_sd
                 print(f"[factor-mine] {e}", flush=True)
                 continue
             except HoldDay as e:
+                tl.session_dates = saved_sd
                 print(f"[factor-mine] {e}", flush=True)
                 if (
                     "entire universe" in (e.reason or "")
@@ -3080,6 +3141,16 @@ def append_land(from_date: str, target: str, *, write: bool = False,
                 ):
                     raise
                 break
+            finally:
+                tl.session_dates = saved_sd
+                # Keep the windowed index so later attach/lock on this
+                # day does not rebuild the full calendar.
+                if tl._INDEX is None:
+                    tl._INDEX = saved_idx
+            log_mem(
+                f"freeze {date} after build_panel rows="
+                f"{len(extra.get('rows') or [])}"
+            )
             try:
                 candidates = prepare_lock(date)
             except HoldDay as e:
