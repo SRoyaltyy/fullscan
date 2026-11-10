@@ -5,7 +5,7 @@ Is today good for each *kind* of stock? Labels come from `data/universe/`; this 
 ## Snapshot
 
 - **Risk state:** ON (general predict up score +6.9, conf 0.775)
-- **Yields:** flat (fred_dgs10) | **Dollar:** flat (dxy) | **Oil:** falling | **VIX:** calm (ratio 0.95 via vix/vix3m) spot 19.92
+- **Yields:** flat (fred_dgs10) | **Dollar:** strong (dxy) | **Oil:** falling | **VIX:** calm (ratio 1.02 via vix/vix3m) spot 21.23
 - **Fear & Greed:** n/a | **Yield/SPX 5d corr:** +0.37
 - **High-impact events:** 2 bullish vs 3 bearish | China: bull
 
@@ -13,24 +13,24 @@ Is today good for each *kind* of stock? Labels come from `data/universe/`; this 
 
 | Label | Weather | Conf | Why |
 |---|---|---|---|
-| sector:Basic Materials | 🌤️ favorable | medium | finviz sector median week +4.44% [tape] |
-| sector:Communication Services | 🌤️ favorable | medium | finviz sector median week +2.17% [tape] |
-| sector:Consumer Cyclical | ⛅ neutral | medium | finviz sector median week +0.62% [tape] |
-| sector:Consumer Defensive | ⛅ neutral | medium | finviz sector median week +0.89% [tape] |
-| sector:Energy | 🌧️ hostile | medium | finviz sector median week -7.16% [tape] |
+| sector:Basic Materials | ⛅ neutral | high | sector predict score +1.5 dir up conf 0.558 [sector board] |
+| sector:Communication Services | 🌤️ favorable | high | sector predict score +3.8 dir up conf 0.651 [sector board] |
+| sector:Consumer Cyclical | 🌤️ favorable | high | sector predict score +6.4 dir up conf 0.755 [sector board] |
+| sector:Consumer Defensive | ⛅ neutral | high | sector predict score -2.8 dir down conf 0.512 [sector board] |
+| sector:Energy | 🌧️ hostile | high | sector predict score -9.1 dir down conf 0.85 [sector board] |
 | sector:Financial | 🌤️ favorable | medium | news_judge SECTOR Financial [bullish] |
-| sector:Healthcare | 🌤️ favorable | medium | finviz sector median week +2.28% [tape] |
-| sector:Industrials | ⛅ neutral | medium | finviz sector median week -0.14% [tape] |
-| sector:Real Estate | ⛅ neutral | medium | finviz sector median week +0.69% [tape] |
-| sector:Technology | ⛅ neutral | medium | finviz sector median week -1.18% [tape] |
-| sector:Utilities | ⛅ neutral | medium | finviz sector median week +0.96% [tape] |
+| sector:Healthcare | 🌤️ favorable | high | sector predict score +6.4 dir up conf 0.756 [sector board] |
+| sector:Industrials | 🌤️ favorable | high | sector predict score +4.3 dir up conf 0.571 [sector board] |
+| sector:Real Estate | 🌤️ favorable | high | sector predict score +7.5 dir up conf 0.798 [sector board] |
+| sector:Technology | 🌧️ hostile | high | sector predict score -6.4 dir down conf 0.756 [sector board] |
+| sector:Utilities | ⛅ neutral | high | sector predict score +0.5 dir up conf 0.421 [sector board] |
 
 ## Size
 
 | Label | Weather | Conf | Why |
 |---|---|---|---|
-| size:micro | ⛅ neutral | low | risk-on, dollar flat [general predict + factors] |
-| size:small | ⛅ neutral | low | risk-on, dollar flat [general predict + factors] |
+| size:micro | 🌧️ hostile | medium | strong dollar — small caps de-rate first; risk-on, dollar strong [general predict + factors] |
+| size:small | 🌧️ hostile | medium | strong dollar — small caps de-rate first; risk-on, dollar strong [general predict + factors] |
 | size:large | ⛅ neutral | low | risk-on — mega leads less in broad rallies [general predict] |
 | size:mega | ⛅ neutral | low | risk-on — mega leads less in broad rallies [general predict] |
 | size:mid | ⛅ neutral | low | no dedicated mid-cap signal in v1 |

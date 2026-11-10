@@ -1,6 +1,6 @@
 {
   "date": "2026-11-10",
-  "generated_at": "2026-11-10T07:11:38.692929-05:00",
+  "generated_at": "2026-11-10T09:12:40.390776-05:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -179,7 +179,7 @@
       "inputs_ready": true,
       "n_req_ok": 7,
       "n_req": 9,
-      "n_opt_ok": 2,
+      "n_opt_ok": 13,
       "n_opt": 14,
       "files": [
         {
@@ -382,121 +382,143 @@
           "name": "Sector predict \u2014 basic_materials",
           "path": "01_daily/sectors/2026-11-10/basic_materials_predict.md",
           "role": "optional",
-          "status": "SKIP",
-          "reason": "optional \u2014 sector predict not required",
-          "size": 0,
-          "said": "optional \u2014 sector predict not required",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 7585,
+          "said": "UP mild 1.452",
+          "bullets": [
+            "- news_mode: **on"
+          ]
         },
         {
           "key": "sector_communication_services",
           "name": "Sector predict \u2014 communication_services",
           "path": "01_daily/sectors/2026-11-10/communication_services_predict.md",
           "role": "optional",
-          "status": "SKIP",
-          "reason": "optional \u2014 sector predict not required",
-          "size": 0,
-          "said": "optional \u2014 sector predict not required",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 9361,
+          "said": "UP mild 3.77",
+          "bullets": [
+            "- news_mode: **on"
+          ]
         },
         {
           "key": "sector_consumer_cyclical",
           "name": "Sector predict \u2014 consumer_cyclical",
           "path": "01_daily/sectors/2026-11-10/consumer_cyclical_predict.md",
           "role": "optional",
-          "status": "SKIP",
-          "reason": "optional \u2014 sector predict not required",
-          "size": 0,
-          "said": "optional \u2014 sector predict not required",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 8484,
+          "said": "UP mild 6.369",
+          "bullets": [
+            "- news_mode: **on"
+          ]
         },
         {
           "key": "sector_consumer_defensive",
           "name": "Sector predict \u2014 consumer_defensive",
           "path": "01_daily/sectors/2026-11-10/consumer_defensive_predict.md",
           "role": "optional",
-          "status": "SKIP",
-          "reason": "optional \u2014 sector predict not required",
-          "size": 0,
-          "said": "optional \u2014 sector predict not required",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 7196,
+          "said": "DOWN mild -2.789",
+          "bullets": [
+            "- news_mode: **on"
+          ]
         },
         {
           "key": "sector_energy",
           "name": "Sector predict \u2014 energy",
           "path": "01_daily/sectors/2026-11-10/energy_predict.md",
           "role": "optional",
-          "status": "SKIP",
-          "reason": "optional \u2014 sector predict not required",
-          "size": 0,
-          "said": "optional \u2014 sector predict not required",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 6854,
+          "said": "DOWN mild -9.084",
+          "bullets": [
+            "- news_mode: **on"
+          ]
         },
         {
           "key": "sector_financial",
           "name": "Sector predict \u2014 financial",
           "path": "01_daily/sectors/2026-11-10/financial_predict.md",
           "role": "optional",
-          "status": "SKIP",
-          "reason": "optional \u2014 sector predict not required",
-          "size": 0,
-          "said": "optional \u2014 sector predict not required",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 10283,
+          "said": "UP mild 5.692",
+          "bullets": [
+            "- news_mode: **on"
+          ]
         },
         {
           "key": "sector_healthcare",
           "name": "Sector predict \u2014 healthcare",
           "path": "01_daily/sectors/2026-11-10/healthcare_predict.md",
           "role": "optional",
-          "status": "SKIP",
-          "reason": "optional \u2014 sector predict not required",
-          "size": 0,
-          "said": "optional \u2014 sector predict not required",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 6212,
+          "said": "UP mild 6.41",
+          "bullets": [
+            "- news_mode: **on"
+          ]
         },
         {
           "key": "sector_industrials",
           "name": "Sector predict \u2014 industrials",
           "path": "01_daily/sectors/2026-11-10/industrials_predict.md",
           "role": "optional",
-          "status": "SKIP",
-          "reason": "optional \u2014 sector predict not required",
-          "size": 0,
-          "said": "optional \u2014 sector predict not required",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 6889,
+          "said": "UP mild 4.267",
+          "bullets": [
+            "- news_mode: **on"
+          ]
         },
         {
           "key": "sector_real_estate",
           "name": "Sector predict \u2014 real_estate",
           "path": "01_daily/sectors/2026-11-10/real_estate_predict.md",
           "role": "optional",
-          "status": "SKIP",
-          "reason": "optional \u2014 sector predict not required",
-          "size": 0,
-          "said": "optional \u2014 sector predict not required",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 7824,
+          "said": "UP mild 7.461",
+          "bullets": [
+            "- news_mode: **on"
+          ]
         },
         {
           "key": "sector_technology",
           "name": "Sector predict \u2014 technology",
           "path": "01_daily/sectors/2026-11-10/technology_predict.md",
           "role": "optional",
-          "status": "SKIP",
-          "reason": "optional \u2014 sector predict not required",
-          "size": 0,
-          "said": "optional \u2014 sector predict not required",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 8415,
+          "said": "DOWN mild -6.396",
+          "bullets": [
+            "- news_mode: **on"
+          ]
         },
         {
           "key": "sector_utilities",
           "name": "Sector predict \u2014 utilities",
           "path": "01_daily/sectors/2026-11-10/utilities_predict.md",
           "role": "optional",
-          "status": "SKIP",
-          "reason": "optional \u2014 sector predict not required",
-          "size": 0,
-          "said": "optional \u2014 sector predict not required",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 10140,
+          "said": "UP mild 0.531",
+          "bullets": [
+            "- news_mode: **on"
+          ]
         }
       ],
       "said": "general UP  6.883",
@@ -540,18 +562,18 @@
           "path": "01_daily/weather/2026-11-10_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=9827 vix=calm yields=flat",
-          "size": 9827,
-          "said": "favorable 4 \u00b7 hostile 1 \u00b7 neutral 6",
+          "reason": "sectors=11 bytes=10058 vix=calm yields=flat",
+          "size": 10058,
+          "said": "favorable 6 \u00b7 hostile 2 \u00b7 neutral 3",
           "bullets": [
-            "hostile: Energy",
+            "hostile: Energy, Technology",
             "events bull 2 / bear 3"
           ]
         }
       ],
-      "said": "favorable 4 \u00b7 hostile 1 \u00b7 neutral 6",
+      "said": "favorable 6 \u00b7 hostile 2 \u00b7 neutral 3",
       "bullets": [
-        "hostile: Energy",
+        "hostile: Energy, Technology",
         "events bull 2 / bear 3"
       ]
     },
@@ -759,11 +781,11 @@
           "path": "01_daily/weather/2026-11-10_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=9827 vix=calm yields=flat",
-          "size": 9827,
-          "said": "favorable 4 \u00b7 hostile 1 \u00b7 neutral 6",
+          "reason": "sectors=11 bytes=10058 vix=calm yields=flat",
+          "size": 10058,
+          "said": "favorable 6 \u00b7 hostile 2 \u00b7 neutral 3",
           "bullets": [
-            "hostile: Energy",
+            "hostile: Energy, Technology",
             "events bull 2 / bear 3"
           ]
         },
@@ -1079,9 +1101,9 @@
     "sectors": {},
     "news": {},
     "weather": {
-      "said": "favorable 4 \u00b7 hostile 1 \u00b7 neutral 6",
+      "said": "favorable 6 \u00b7 hostile 2 \u00b7 neutral 3",
       "bullets": [
-        "hostile: Energy",
+        "hostile: Energy, Technology",
         "events bull 2 / bear 3"
       ]
     }
@@ -1589,6 +1611,31 @@
         }
       ],
       "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-11-10\nExport `finviz_2026-11-10.csv` \u00b7 11616 names \u00b7 generated 2026-11-10T04:39:58.802207-05:00"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-11-10",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-10T09:12:39.286610-05:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-11-10_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 10058,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': 1.452, 'dir': 'up', 'conf': 0.558, 'source': 'llm'}, Communication Services={'score': 3.77, 'dir': 'up', 'conf': 0.651, 'source': 'llm'}, Consumer Cyclical={'score': 6.369, 'dir': 'up', 'conf': 0.755, 'source': 'llm'}, Consumer Defensive={'score': -2.789, 'dir': 'down', 'conf': 0.512, 'source': 'llm'}, Energy={'score': -9.084, 'dir': 'down', 'conf': 0.85, 'source': 'llm'}, Financial={'score': 5.692, 'dir': 'up', 'conf': 0.728, 'source': 'llm'}, Healthcare={'score': 6.41, 'dir': 'up', 'conf': 0.756, 'source': 'llm'}, Industrials={'score': 4.267, 'dir': 'up', 'conf': 0.571, 'source': 'llm'}"
+        },
+        {
+          "path": "01_daily/weather/2026-11-10_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5612,
+          "preview": "# Weather report \u2014 2026-11-10\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': 1.452, 'dir': 'up', 'conf': 0.558, 'source': 'llm'}, Communication Services={'score': 3.77, 'dir': 'up', 'conf': 0.651, 'source': 'llm'}, Consumer Cyclical={'score': 6.369, 'dir': 'up', 'conf': 0.755, 'source': 'llm'}, Consumer Defensive={'score': -2.789, 'dir': 'down', 'conf': 0.512, 'source': 'llm'}, Energy={'score': -9.084, 'dir': 'down', 'conf': 0.85, 'source': 'llm'}, Financial={'score': 5.692, 'dir': 'up', 'conf': 0.728, 'source': 'llm'}, Healthcare={'score': 6.41, 'dir': 'up', 'conf': 0.756, 'source': 'llm'}, Industrials={'score': 4.267, 'dir': 'up', 'conf': 0.571, 'source': 'llm'} \u00b7 # Weather report \u2014 2026-11-10\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
     }
   ],
   "href": {

@@ -1,6 +1,6 @@
 {
   "date": "2026-11-10",
-  "generated_at": "2026-11-10T07:11:38.692929-05:00",
+  "generated_at": "2026-11-10T09:12:40.390776-05:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -148,31 +148,6 @@
   },
   "sectors": {},
   "lands": [
-    {
-      "key": "news_parse",
-      "title": "News parse",
-      "date": "2026-11-10",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-11-10T04:35:47.800940-05:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-11-10_parsed.json",
-          "ok": true,
-          "reason": "",
-          "size": 6260139,
-          "preview": "raw=8706 usable=721 single=610 \u00b7 Faltering Philippine Growth Spurs Calls for Rate Hold, State Aid - Bloomberg.com | China's factory-gate inflation at fastest in nearly 4-1/2 years in October, whil | RBA\u2019s Hunter Says AI Boom Will Put Near-Term Pressure on CPI - Bloomberg.com | China's October crude oil imports rise to highest level since March - Reuters | The stock-market rally keeps spreading beyond Big Tech. October inflation data c"
-        },
-        {
-          "path": "01_daily/news/2026-11-10_parsed.md",
-          "ok": true,
-          "reason": "",
-          "size": 12355,
-          "preview": "# News Parse v2 \u2014 2026-11-10T04:35:30.756862-05:00\nWindow\u224848h | news_mode=on | raw=8706 | usable=721 | single_name=610 | noise_dropped=7178\nusable polarity={'+': 47, '-': 103, 'mixed': 3, 'neutral': 568}"
-        }
-      ],
-      "preview": "raw=8706 usable=721 single=610 \u00b7 Faltering Philippine Growth Spurs Calls for Rate Hold, State Aid - Bloomberg.com | China's factory-gate inflation at fastest in nearly 4-1/2 years in October, whil | RBA\u2019s Hunter Says AI Boom Will Put Near-Term Pressure on CPI - Bloomberg.com | China's October crude oil imports rise to highest level since March - Reuters | The stock-market rally keeps spreading beyond Big Tech. October inflation data c \u00b7 # News Parse v2 \u2014 2026-11-10T04:35:30.756862-05:00\nWindow\u224848h | news_mode=on | raw=8706 | usable=721 | single_name=610 | noise_dropped=7178\nusable polarity={'+': 47, '-': 103, 'mixed': 3, 'neutral': 568}"
-    },
     {
       "key": "news_actions",
       "title": "News actions",
@@ -375,6 +350,31 @@
         }
       ],
       "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-11-10\nExport `finviz_2026-11-10.csv` \u00b7 11616 names \u00b7 generated 2026-11-10T04:39:58.802207-05:00"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-11-10",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-10T09:12:39.286610-05:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-11-10_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 10058,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': 1.452, 'dir': 'up', 'conf': 0.558, 'source': 'llm'}, Communication Services={'score': 3.77, 'dir': 'up', 'conf': 0.651, 'source': 'llm'}, Consumer Cyclical={'score': 6.369, 'dir': 'up', 'conf': 0.755, 'source': 'llm'}, Consumer Defensive={'score': -2.789, 'dir': 'down', 'conf': 0.512, 'source': 'llm'}, Energy={'score': -9.084, 'dir': 'down', 'conf': 0.85, 'source': 'llm'}, Financial={'score': 5.692, 'dir': 'up', 'conf': 0.728, 'source': 'llm'}, Healthcare={'score': 6.41, 'dir': 'up', 'conf': 0.756, 'source': 'llm'}, Industrials={'score': 4.267, 'dir': 'up', 'conf': 0.571, 'source': 'llm'}"
+        },
+        {
+          "path": "01_daily/weather/2026-11-10_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5612,
+          "preview": "# Weather report \u2014 2026-11-10\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': 1.452, 'dir': 'up', 'conf': 0.558, 'source': 'llm'}, Communication Services={'score': 3.77, 'dir': 'up', 'conf': 0.651, 'source': 'llm'}, Consumer Cyclical={'score': 6.369, 'dir': 'up', 'conf': 0.755, 'source': 'llm'}, Consumer Defensive={'score': -2.789, 'dir': 'down', 'conf': 0.512, 'source': 'llm'}, Energy={'score': -9.084, 'dir': 'down', 'conf': 0.85, 'source': 'llm'}, Financial={'score': 5.692, 'dir': 'up', 'conf': 0.728, 'source': 'llm'}, Healthcare={'score': 6.41, 'dir': 'up', 'conf': 0.756, 'source': 'llm'}, Industrials={'score': 4.267, 'dir': 'up', 'conf': 0.571, 'source': 'llm'} \u00b7 # Weather report \u2014 2026-11-10\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
