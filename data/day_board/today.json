@@ -1,6 +1,6 @@
 {
   "date": "2026-11-10",
-  "generated_at": "2026-11-10T16:11:13.698238-05:00",
+  "generated_at": "2026-11-10T16:32:30.182686-05:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -154,24 +154,6 @@
   },
   "sectors": {},
   "lands": [
-    {
-      "key": "join",
-      "title": "Join / match rank",
-      "date": "2026-11-10",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-11-10T09:12:49.765747-05:00",
-      "files": [
-        {
-          "path": "data/join/2026-11-10_ranked.csv",
-          "ok": true,
-          "reason": "",
-          "size": 2314913,
-          "preview": "5894 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 SEZL, CDNA, AVAH, STRL, PRCH"
-        }
-      ],
-      "preview": "5894 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 SEZL, CDNA, AVAH, STRL, PRCH"
-    },
     {
       "key": "peer_rs",
       "title": "Peer RS",
@@ -759,6 +741,31 @@
         }
       ],
       "preview": "2026-11-10 BUY MGNI, TMDX, ETON, WRBY, ADPT, RBLX, SG, SEZL \u00b7 SELL XPRO, KOS, ACDC, BTU, VET, AESI, IEP, SOC \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href \u00b7 2026-11-10 BUY MGNI, TMDX, ETON, WRBY, ADPT, RBLX, SG, SEZL \u00b7 SELL XPRO, KOS, ACDC, BTU, VET, AESI, IEP, SOC \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: asof_commit, asof_committed_at, cutoff_et, date, n, read_from, rows \u00b7 2026-11-10 BUY MGNI, TMDX, ETON, WRBY, ADPT, RBLX, SG, SEZL \u00b7 SELL XPRO, KOS, ACDC, BTU, VET, AESI, IEP, SOC \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-11-10 BUY MGNI, TMDX, ETON, WRBY, ADPT, RBLX, SG, SEZL \u00b7 SELL XPRO, KOS, ACDC, BTU, VET, AESI, IEP, SOC \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, "
+    },
+    {
+      "key": "finviz_market_digest_close",
+      "title": "Finviz homepage market digest (close)",
+      "date": "2026-11-10",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-10T16:32:28.788850-05:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-11-10_finviz_market_digest_close.json",
+          "ok": true,
+          "reason": "",
+          "size": 8766,
+          "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for"
+        },
+        {
+          "path": "01_daily/news/2026-11-10_finviz_market_digest_close.md",
+          "ok": true,
+          "reason": "",
+          "size": 3977,
+          "preview": "# Finviz homepage market digest (close) \u2014 2026-11-10\n**Generated:** 2026-11-10T16:32:28.744966-05:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks closed lower as hotter October CPI pushed the 10-year yield back near 5% and December Fed hike odds toward 99%\n**Prior close:** SPX -0.40%  Nasdaq -0.74%  Dow -0.30%\n**SPX:** -0.40%  **Nasdaq:** -0.74%  **Dow:** -0.30%\n**Oil:** \u2014\n**CPI/Fed:** October CPI rose 0; 99.0% hike (hike odds climbing to 99%)\n**Leaders:** CME, DB, NVDA, MSFT, PEPG, SANM, SBH, ONON, GFL, PBR, ALC, CRWV\n**Next session:** housing no \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** \u2014\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-11-11\n**Clock use:** `next_open`"
+        }
+      ],
+      "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest (close) \u2014 2026-11-10\n**Generated:** 2026-11-10T16:32:28.744966-05:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks closed lower as hotter October CPI pushed the 10-year yield back near 5% and December Fed hike odds toward 99%\n**Prior close:** SPX -0.40%  Nasdaq -0.74%  Dow -0.30%\n**SPX:** -0.40%  **Nasdaq:** -0.74%  **Dow:** -0.30%\n**Oil:** \u2014\n**CPI/Fed:** October CPI rose 0; 99.0% hike (hike odds climbing to 99%)\n**Leaders:** CME, DB, NVDA, MSFT, PEPG, SANM, SBH, ONON, GFL, PBR, ALC, CRWV\n**Next session:** housing no \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** \u2014\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-11-11\n**Clock use:** `next_open`"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"

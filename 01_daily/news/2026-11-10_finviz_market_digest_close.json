@@ -1,0 +1,130 @@
+{
+  "date": "2026-11-10",
+  "generated_at": "2026-11-10T16:32:28.744966-05:00",
+  "timezone": "America/New_York",
+  "source": "live",
+  "source_url": "https://elite.finviz.com/",
+  "archive_snapshot_ts": null,
+  "archive_snapshot_at": null,
+  "archive_url": null,
+  "clock_legal": true,
+  "clock_same_morning": false,
+  "clock_use": "next_open",
+  "clock_legal_for": "2026-11-11",
+  "capture_slot": "close",
+  "clock_rule": "Live post-close answer-key (~16:05 ET). Always next_open for the NEXT session (2026-11-11) — never same_morning. Writes *_finviz_market_digest_close.* only. Capture only — not tape_anchor / predict / #210.",
+  "kind": "finviz_homepage_market_digest_close",
+  "represents": "Finviz homepage post-close answer-key. clock_use is always next_open; clock_legal_for is the next NYSE session. Lives at *_finviz_market_digest_close.*. Does not replace the same_morning warm-up file. Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "US stocks closed lower as hotter October CPI pushed the 10-year yield back near 5% and December Fed hike odds toward 99%",
+  "raw_text": "- The S&P 500 ($SPX) fell about 0.4% to 7,521, the Dow Jones Industrial Average ($DJI) lost about 0.3% to 52,232, the Nasdaq Composite ($COMP) declined 0.74% to 25,066, and the Russell 2000 (IWM) slipped 0.62%.\n- October CPI rose 0.4% month-over-month versus the 0.3% consensus, with core CPI up 0.3% and beating forecasts for a third straight month after the 8:30 a.m. ET release, lifting the 10-year Treasury yield (@10Y) back near 5%.\n- CME (CME) FedWatch showed December Fed hike odds climbing to 99%, Deutsche Bank (DB) flagged potential hikes at the next three meetings, and some traders priced in a 50-basis-point move after comments from Fed Governor Chris Waller.\n- Nine of 11 S&P 500 ($SPX) sectors finished lower, led by utilities and real estate, while financials eked out a gain of about 0.15%.\n- Nvidia (NVDA) fell roughly 5.5% as CEO Jensen Huang faces a subpoena threat from congressional Republicans over his reported relationship with alleged Chinese intelligence operative Alice Huang, amid concerns over about $7.5 billion in chip shipments to China and an independent board investigation.\n- Microsoft (MSFT) dropped about 2% after Anthropic announced competing Claude workplace tools such as Sheets and Whiteboards, ahead of Anthropic’s amended S-1 targeting roughly a $1 trillion IPO valuation.\n- PepGen (PEPG) surged roughly 93% after reporting fiscal third-quarter results that missed EPS estimates but beat revenue forecasts.\n- Sanmina (SANM) rose nearly 4% after issuing strong fiscal 2027 guidance that topped expectations, while Sally Beauty (SBH) advanced following a fourth-quarter earnings beat.\n- On Holding (ONON) sank 8% despite posting record third-quarter revenue and margins and raising its 2026 margin outlook, and GFL Environmental (GFL) fell about 8% after rejecting takeover bids and opting to remain public.\n- After the bell, Petrobras (PBR), Alcon (ALC), and CoreWeave (CRWV) were scheduled to report earnings, while index futures traded little changed as investors looked ahead to more Fed speakers and additional earnings on Wednesday.",
+  "raw_summary_md": "- The **S&P 500** ([$SPX](https://finviz.com/index/SPX?p=d)) fell about 0.4% to 7,521, the **Dow Jones Industrial Average** ([$DJI](https://finviz.com/index/DJI?p=d)) lost about 0.3% to 52,232, the **Nasdaq Composite** ([$COMP](https://finviz.com/index/COMP?p=d)) declined 0.74% to 25,066, and the **Russell 2000** ([IWM](https://finviz.com/quote?t=IWM)) slipped 0.62%.\n- October CPI rose **0.4% month-over-month** versus the 0.3% consensus, with core CPI up 0.3% and beating forecasts for a third straight month after the 8:30 a.m. ET release, lifting the **10-year Treasury yield** ([@10Y](https://finviz.com/futures_charts?t=10Y)) back near 5%.\n- **CME** ([CME](https://finviz.com/quote?t=CME)) FedWatch showed December Fed hike odds climbing to **99%**, **Deutsche Bank** ([DB](https://finviz.com/quote?t=DB)) flagged potential hikes at the next three meetings, and some traders priced in a 50-basis-point move after comments from Fed Governor Chris Waller.\n- **Nine of 11** **S&P 500** ([$SPX](https://finviz.com/index/SPX?p=d)) sectors finished lower, led by **utilities and real estate**, while financials eked out a gain of about 0.15%.\n- **Nvidia** ([NVDA](https://finviz.com/quote?t=NVDA)) **fell roughly 5.5%** as CEO Jensen Huang faces a **subpoena threat** from congressional Republicans over his reported relationship with alleged Chinese intelligence operative Alice Huang, amid concerns over about $7.5 billion in chip shipments to China and an independent board investigation.\n- **Microsoft** ([MSFT](https://finviz.com/quote?t=MSFT)) dropped about 2% after Anthropic announced **competing Claude workplace tools** such as Sheets and Whiteboards, ahead of Anthropic’s amended S-1 targeting roughly a $1 trillion IPO valuation.\n- **PepGen** ([PEPG](https://finviz.com/quote?t=PEPG)) **surged roughly 93%** after reporting fiscal third-quarter results that missed EPS estimates but beat revenue forecasts.\n- **Sanmina** ([SANM](https://finviz.com/quote?t=SANM)) rose nearly 4% after issuing **strong fiscal 2027 guidance** that topped expectations, while **Sally Beauty** ([SBH](https://finviz.com/quote?t=SBH)) advanced following a fourth-quarter earnings beat.\n- **On Holding** ([ONON](https://finviz.com/quote?t=ONON)) **sank 8%** despite posting record third-quarter revenue and margins and raising its 2026 margin outlook, and **GFL Environmental** ([GFL](https://finviz.com/quote?t=GFL)) **fell about 8%** after rejecting takeover bids and opting to remain public.\n- After the bell, **Petrobras** ([PBR](https://finviz.com/quote?t=PBR)), **Alcon** ([ALC](https://finviz.com/quote?t=ALC)), and **CoreWeave** ([CRWV](https://finviz.com/quote?t=CRWV)) were scheduled to report earnings, while **index futures traded little changed** as investors looked ahead to more Fed speakers and additional earnings on Wednesday.",
+  "index_moves": [
+    {
+      "name": "S&P 500",
+      "code": "SPX",
+      "change_pct": -0.4,
+      "verb": "fell"
+    },
+    {
+      "name": "Dow Jones Industrial Average",
+      "code": "DJI",
+      "change_pct": -0.3,
+      "verb": "lost"
+    },
+    {
+      "name": "Nasdaq Composite",
+      "code": "COMP",
+      "change_pct": -0.74,
+      "verb": "declined"
+    },
+    {
+      "name": "Russell 2000",
+      "code": "RUT",
+      "change_pct": -0.62,
+      "verb": "slipped"
+    }
+  ],
+  "oil": null,
+  "cpi": {
+    "text": "October CPI rose 0",
+    "hotter": false
+  },
+  "fed_odds": {
+    "pct": 99.0,
+    "action": "hike",
+    "text": "hike odds climbing to 99%"
+  },
+  "named_tickers": [
+    "CME",
+    "DB",
+    "NVDA",
+    "MSFT",
+    "PEPG",
+    "SANM",
+    "SBH",
+    "ONON",
+    "GFL",
+    "PBR",
+    "ALC",
+    "CRWV"
+  ],
+  "named_leaders": [
+    "CME",
+    "DB",
+    "NVDA",
+    "MSFT",
+    "PEPG",
+    "SANM",
+    "SBH",
+    "ONON",
+    "GFL",
+    "PBR",
+    "ALC",
+    "CRWV"
+  ],
+  "calendar": [
+    "October CPI rose 0.4% month-over-month versus the 0.3% consensus, with core CPI up 0.3% and beating forecasts for a third straight month after the 8:30 a.m. ET release, lifting the 10-year Treasury yield (@10Y) back near 5%.",
+    "After the bell, Petrobras (PBR), Alcon (ALC), and CoreWeave (CRWV) were scheduled to report earnings, while index futures traded little changed as investors looked ahead to more Fed speakers and additional earnings on Wednesday."
+  ],
+  "prior_close": {
+    "spx": -0.4,
+    "nasdaq": -0.74,
+    "dow": -0.3
+  },
+  "cpi_fed": {
+    "cpi": {
+      "text": "October CPI rose 0",
+      "hotter": false
+    },
+    "fed_odds": {
+      "pct": 99.0,
+      "action": "hike",
+      "text": "hike odds climbing to 99%"
+    }
+  },
+  "next_session_calendar": {
+    "housing": false,
+    "retail": false,
+    "fed": true,
+    "bullets": [
+      "After the bell, Petrobras (PBR), Alcon (ALC), and CoreWeave (CRWV) were scheduled to report earnings, while index futures traded little changed as investors looked ahead to more Fed speakers and additional earnings on Wednesday."
+    ],
+    "text": "After the bell, Petrobras (PBR), Alcon (ALC), and CoreWeave (CRWV) were scheduled to report earnings, while index futures traded little changed as investors looked ahead to more Fed speakers and additional earnings on Wednesday."
+  },
+  "earnings_slate": {
+    "tickers": [],
+    "text": ""
+  },
+  "geo_grain": {
+    "geo": false,
+    "grain": false,
+    "flags": [],
+    "text": ""
+  },
+  "finviz_id": 339823,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-11-10T16:08:35.623",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "bad"
+}
