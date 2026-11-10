@@ -1,6 +1,6 @@
 # Stock-book paper trading
 
-_Generated 2026-11-07T03:06:08 — calls 2026-08-13 → 2026-11-06_
+_Generated 2026-11-10T05:04:33 — calls 2026-08-13 → 2026-11-09_
 
 **Strategy:** LONG-only · top 10/day by book · entry close (16:00 ET) · hold 1w (exit 16:00 ET) · 10% of equity per trade · Futubull fees · cash-accounted (unfittable trades skipped and logged). Selection: `1d` stock-book buy list (prints ~13:00-15:45 ET, hence close entry).
 
@@ -10,11 +10,11 @@ _Generated 2026-11-07T03:06:08 — calls 2026-08-13 → 2026-11-06_
 
 | Start capital | Final equity | Return | Max DD | Trades | Skipped | Win rate |
 |---:|---:|---:|---:|---:|---:|---:|
-| $100,000 | $105,957.80 | **5.96%** | 9.9% | 97 | 542 | 56.7% |
+| $100,000 | $106,755.14 | **6.76%** | 9.9% | 97 | 549 | 57.7% |
 
 | Side | Trades | Win rate | P&L |
 |---:|---:|---:|---:|
-| BUY (long) | 97 | 56.7% | $5,957.82 |
+| BUY (long) | 97 | 57.7% | $6,755.16 |
 | SELL (short) | 0 | 0% | $0.00 |
 
 ## Day gate (per session)
@@ -82,6 +82,7 @@ _Generated 2026-11-07T03:06:08 — calls 2026-08-13 → 2026-11-06_
 | 2026-11-04 | UP | 10.848 | 1 | **OPEN** — predict score +10.85 >= +1.00 | — |
 | 2026-11-05 | DOWN | -2.495 | 1 | **CLOSED** — predict DOWN score -2.50 < +1.00 | — |
 | 2026-11-06 | — | — | 1 | **OPEN** — no predict on file — allowed | — |
+| 2026-11-09 | UP | 9.449 | 1 | **OPEN** — predict score +9.45 >= +1.00 | — |
 
 ## Last 25 filled trades
 
@@ -105,13 +106,13 @@ _Generated 2026-11-07T03:06:08 — calls 2026-08-13 → 2026-11-06_
 | 2026-10-27 16:00 ET | `CDNA` | BUY | 148 | $70.53 | 2026-11-03 16:00 ET | $88.47 | $2,650.13 | 25.39% | mid |
 | 2026-10-27 16:00 ET | `PACS` | BUY | 218 | $47.85 | 2026-11-03 16:00 ET | $46.68 | $-260.80 | -2.5% | mid |
 | 2026-10-27 16:00 ET | `CBRL` | BUY | 153 | $68.19 | 2026-11-03 16:00 ET | $68.33 | $16.41 | 0.16% | small |
+| 2026-10-27 16:00 ET | `SHOO` | BUY | 244 | $42.78 | 2026-11-03 16:00 ET | $44.03 | $298.58 | 2.86% | mid |
+| 2026-10-27 16:00 ET | `FIGS` | BUY | 510 | $20.48 | 2026-11-03 16:00 ET | $20.82 | $160.07 | 1.53% | mid |
 | 2026-10-27 16:00 ET | `LAUR` | BUY | 277 | $37.64 | 2026-11-03 16:00 ET | $35.49 | $-602.82 | -5.78% | mid |
 | 2026-10-27 16:00 ET | `COP` | BUY | 70 | $147.96 | 2026-11-03 16:00 ET | $144.40 | $-253.69 | -2.45% | large |
 | 2026-10-27 16:00 ET | `PEB` | BUY | 490 | $21.31 | 2026-11-03 16:00 ET | $21.95 | $300.79 | 2.88% | mid |
 | 2026-10-27 16:00 ET | `CHEF` | BUY | 95 | $108.99 | 2026-11-03 16:00 ET | $100.95 | $-768.44 | -7.42% | mid |
 | 2026-10-27 16:00 ET | `SN` | BUY | 52 | $197.53 | 2026-11-03 16:00 ET | $210.59 | $674.73 | 6.57% | large |
-| 2026-10-27 16:00 ET | `VEEV` | BUY | 33 | $313.46 | 2026-11-03 16:00 ET | $303.21 | $-342.52 | -3.31% | large |
-| 2026-10-27 16:00 ET | `VLO` | BUY | 26 | $387.34 | 2026-11-03 16:00 ET | $387.65 | $3.83 | 0.04% | large |
 
 Full records: `data/book_paper/trades.csv` (every fill with ET timestamps, prices, fees), `skipped.csv`, `equity_curve.csv`. Lever sweep: `BOOK_STRATEGY_SWEEP.md`. Dashboard: `dashboard/book-paper/index.html`.
 

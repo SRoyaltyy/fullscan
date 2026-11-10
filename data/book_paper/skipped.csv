@@ -381,10 +381,10 @@ date,ticker,side,conviction,reason
 2026-10-08,SPOT,BUY,0.39771278187036607,day gate CLOSED: predict DOWN score -6.79 < +1.00
 2026-10-08,TMUS,BUY,0.41073181358788863,day gate CLOSED: predict DOWN score -6.79 < +1.00
 2026-10-08,TDS,BUY,0.5242625600205468,day gate CLOSED: predict DOWN score -6.79 < +1.00
-2026-10-12,PRGS,BUY,0.5812704940764608,no exit price (unsettleable)
+2026-10-12,PRGS,BUY,0.5812704940764608,"insufficient cash ($10,141 > $307)"
 2026-10-12,FIS,BUY,0.4698654821938251,"insufficient cash ($10,145 > $307)"
 2026-10-12,SGRY,BUY,0.4278799023745674,"insufficient cash ($10,162 > $307)"
-2026-10-12,KSPI,BUY,0.33809160034308045,no exit price (unsettleable)
+2026-10-12,KSPI,BUY,0.33809160034308045,"insufficient cash ($10,108 > $307)"
 2026-10-12,NET,BUY,0.03810872213428017,"insufficient cash ($9,826 > $307)"
 2026-10-13,SGRY,BUY,0.5760336740768061,day gate CLOSED: predict DOWN score -6.77 < +1.00
 2026-10-13,CON,BUY,0.6882241245758329,day gate CLOSED: predict DOWN score -6.77 < +1.00
@@ -422,9 +422,9 @@ date,ticker,side,conviction,reason
 2026-10-19,AVPT,BUY,0.6750450194399089,"insufficient cash ($10,460 > $9,711)"
 2026-10-19,CHEF,BUY,0.5889410184728924,"insufficient cash ($10,351 > $9,711)"
 2026-10-19,LAUR,BUY,0.5871377898646308,"insufficient cash ($10,457 > $9,711)"
-2026-10-19,RELY,BUY,0.5591741948914406,no exit price (unsettleable)
-2026-10-19,JXN,BUY,0.5213734503919559,no exit price (unsettleable)
-2026-10-19,PAYS,BUY,0.5029541747594095,no exit price (unsettleable)
+2026-10-19,RELY,BUY,0.5591741948914406,"insufficient cash ($10,456 > $9,711)"
+2026-10-19,JXN,BUY,0.5213734503919559,"insufficient cash ($10,420 > $9,711)"
+2026-10-19,PAYS,BUY,0.5029541747594095,"insufficient cash ($10,455 > $9,711)"
 2026-10-19,ABX,BUY,0.4888540105672492,"insufficient cash ($10,473 > $9,711)"
 2026-10-19,TRU,BUY,0.44103282054223053,"insufficient cash ($10,459 > $9,711)"
 2026-10-19,VEEV,BUY,0.440722832336436,"insufficient cash ($10,456 > $9,711)"
@@ -438,9 +438,9 @@ date,ticker,side,conviction,reason
 2026-10-21,SONO,BUY,0.7393501502154107,"insufficient cash ($10,682 > $9,711)"
 2026-10-21,CNK,BUY,0.6834163757139815,"insufficient cash ($10,662 > $9,711)"
 2026-10-21,ABX,BUY,0.659986200076544,"insufficient cash ($10,701 > $9,711)"
-2026-10-21,PAYS,BUY,0.6549498116886701,no exit price (unsettleable)
+2026-10-21,PAYS,BUY,0.6549498116886701,"insufficient cash ($10,693 > $9,711)"
 2026-10-21,LAUR,BUY,0.6437080147216908,"insufficient cash ($10,692 > $9,711)"
-2026-10-21,IMAX,BUY,0.6413513483471072,no exit price (unsettleable)
+2026-10-21,IMAX,BUY,0.6413513483471072,"insufficient cash ($10,674 > $9,711)"
 2026-10-21,CHEF,BUY,0.6016659334882688,"insufficient cash ($10,682 > $9,711)"
 2026-10-21,EDU,BUY,0.5941820908100854,"insufficient cash ($10,653 > $9,711)"
 2026-10-21,EZPW,BUY,0.5711134990796938,"insufficient cash ($10,661 > $9,711)"
@@ -466,23 +466,23 @@ date,ticker,side,conviction,reason
 2026-10-26,NTAP,BUY,0.3935820048123788,day gate CLOSED: predict DOWN score -2.13 < +1.00
 2026-10-26,MQ,BUY,0.7773147187519314,day gate CLOSED: predict DOWN score -2.13 < +1.00
 2026-10-27,BLFS,BUY,0.8458674143942335,no session bar (price data missing)
-2026-10-27,SHOO,BUY,0.7678252989703935,no exit price (unsettleable)
-2026-10-27,FIGS,BUY,0.7424185570707151,no exit price (unsettleable)
-2026-10-28,CDNA,BUY,0.8361889797148239,"insufficient cash ($10,461 > $943)"
-2026-10-28,CBRL,BUY,0.8285662537871061,"insufficient cash ($10,491 > $943)"
+2026-10-27,VEEV,BUY,0.46786125233643583,outside top-N conviction cut
+2026-10-27,VLO,BUY,0.1814231585646559,outside top-N conviction cut
+2026-10-28,CDNA,BUY,0.8361889797148239,"insufficient cash ($10,461 > $469)"
+2026-10-28,CBRL,BUY,0.8285662537871061,"insufficient cash ($10,491 > $469)"
 2026-10-28,BLFS,BUY,0.7510809320601484,no session bar (price data missing)
-2026-10-28,ARQT,BUY,0.746225212091296,"insufficient cash ($10,509 > $943)"
-2026-10-28,FIGS,BUY,0.7094221001057945,no session bar (price data missing)
-2026-10-28,CAKE,BUY,0.6999743690728588,"insufficient cash ($10,470 > $943)"
-2026-10-28,CNK,BUY,0.6838302344474319,"insufficient cash ($10,500 > $943)"
-2026-10-28,CTOS,BUY,0.6535125412818537,no session bar (price data missing)
-2026-10-28,CHEF,BUY,0.6101706982331981,"insufficient cash ($10,527 > $943)"
-2026-10-28,LAUR,BUY,0.5735167957103717,"insufficient cash ($10,512 > $943)"
-2026-10-28,LRN,BUY,0.5217829424626285,no session bar (price data missing)
-2026-10-28,SN,BUY,0.4190876418755131,"insufficient cash ($10,505 > $943)"
-2026-10-28,VEEV,BUY,0.3691028321645527,"insufficient cash ($10,490 > $943)"
-2026-10-28,COP,BUY,0.25036080383102366,"insufficient cash ($10,436 > $943)"
-2026-10-28,VLO,BUY,0.12131264496880217,"insufficient cash ($10,491 > $943)"
+2026-10-28,ARQT,BUY,0.746225212091296,"insufficient cash ($10,509 > $469)"
+2026-10-28,FIGS,BUY,0.7094221001057945,"insufficient cash ($10,523 > $469)"
+2026-10-28,CAKE,BUY,0.6999743690728588,"insufficient cash ($10,470 > $469)"
+2026-10-28,CNK,BUY,0.6838302344474319,"insufficient cash ($10,500 > $469)"
+2026-10-28,CTOS,BUY,0.6535125412818537,"insufficient cash ($10,524 > $469)"
+2026-10-28,CHEF,BUY,0.6101706982331981,"insufficient cash ($10,419 > $469)"
+2026-10-28,LAUR,BUY,0.5735167957103717,"insufficient cash ($10,512 > $469)"
+2026-10-28,LRN,BUY,0.5217829424626285,"insufficient cash ($10,495 > $469)"
+2026-10-28,SN,BUY,0.4190876418755131,"insufficient cash ($10,505 > $469)"
+2026-10-28,VEEV,BUY,0.3691028321645527,"insufficient cash ($10,490 > $469)"
+2026-10-28,COP,BUY,0.25036080383102366,"insufficient cash ($10,436 > $469)"
+2026-10-28,VLO,BUY,0.12131264496880217,"insufficient cash ($10,491 > $469)"
 2026-10-29,FIS,BUY,0.18517061586446382,day gate CLOSED: predict DOWN score -6.95 < +1.00
 2026-10-30,PRCH,BUY,0.6012300282358349,day gate CLOSED: predict DOWN score -12.92 < +1.00
 2026-10-30,GDYN,BUY,0.5210692406605829,day gate CLOSED: predict DOWN score -12.92 < +1.00
@@ -533,11 +533,18 @@ date,ticker,side,conviction,reason
 2026-11-05,VRSN,BUY,0.1602340187982818,day gate CLOSED: predict DOWN score -2.50 < +1.00
 2026-11-05,DBX,BUY,0.5504904504573518,day gate CLOSED: predict DOWN score -2.50 < +1.00
 2026-11-05,MSFT,BUY,0.2378281037421257,day gate CLOSED: predict DOWN score -2.50 < +1.00
-2026-11-06,APP,BUY,0.855276198175768,no session bar (price data missing)
-2026-11-06,AVAH,BUY,0.731684947074667,no session bar (price data missing)
-2026-11-06,MD,BUY,0.6043185338685368,no session bar (price data missing)
-2026-11-06,ACHC,BUY,0.5596524971583579,no session bar (price data missing)
-2026-11-06,KDP,BUY,0.45461977270668286,no session bar (price data missing)
-2026-11-06,UHS,BUY,0.44261355874770125,no session bar (price data missing)
-2026-11-06,THC,BUY,0.3367292991110205,no session bar (price data missing)
-2026-11-06,EHC,BUY,0.2544424457048477,no session bar (price data missing)
+2026-11-06,APP,BUY,0.855276198175768,no exit price (unsettleable)
+2026-11-06,AVAH,BUY,0.731684947074667,no exit price (unsettleable)
+2026-11-06,MD,BUY,0.6043185338685368,no exit price (unsettleable)
+2026-11-06,ACHC,BUY,0.5596524971583579,no exit price (unsettleable)
+2026-11-06,KDP,BUY,0.45461977270668286,no exit price (unsettleable)
+2026-11-06,UHS,BUY,0.44261355874770125,no exit price (unsettleable)
+2026-11-06,THC,BUY,0.3367292991110205,no exit price (unsettleable)
+2026-11-06,EHC,BUY,0.2544424457048477,no exit price (unsettleable)
+2026-11-09,PACS,BUY,0.762670111968275,no session bar (price data missing)
+2026-11-09,ACHC,BUY,0.7539873518212743,no session bar (price data missing)
+2026-11-09,GRDN,BUY,0.6980223991432414,no session bar (price data missing)
+2026-11-09,CON,BUY,0.6672023530601418,no session bar (price data missing)
+2026-11-09,LFST,BUY,0.6054566694381858,no session bar (price data missing)
+2026-11-09,DLO,BUY,0.5871454533442197,no session bar (price data missing)
+2026-11-09,UIS,BUY,0.4607902709153013,no session bar (price data missing)
