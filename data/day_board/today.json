@@ -1,12 +1,12 @@
 {
   "date": "2026-11-10",
-  "generated_at": "2026-11-10T04:34:34.854902-05:00",
+  "generated_at": "2026-11-10T04:34:58.890718-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
-    "ok": 3,
+    "ok": 4,
     "partial": 3,
-    "fail": 2,
+    "fail": 1,
     "n": 8
   },
   "buy_1d": [],
@@ -15,31 +15,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "finviz_market_digest",
-      "title": "Finviz homepage market digest",
-      "date": "2026-11-10",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-11-10T04:21:51.388141-05:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-11-10_finviz_market_digest.json",
-          "ok": true,
-          "reason": "",
-          "size": 4816,
-          "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for"
-        },
-        {
-          "path": "01_daily/news/2026-11-10_finviz_market_digest.md",
-          "ok": true,
-          "reason": "",
-          "size": 2398,
-          "preview": "# Finviz homepage market digest \u2014 2026-11-10\n**Generated:** 2026-11-10T04:21:51.378143-05:00 (America/New_York)\n**Source:** `live`\n**Banner:** US futures point to a modestly higher open as traders await October CPI data and react to earnings-driven stock moves\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** October CPI is due at 8:30 AM ET and is expected to be the primary catalyst for intraday volatility\n**Leaders:** EL, RIVN, UBS, CHKP, TDG, ONON\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** TDG, ONON\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-11-10\n**Clock use:** `same_morning`"
-        }
-      ],
-      "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest \u2014 2026-11-10\n**Generated:** 2026-11-10T04:21:51.378143-05:00 (America/New_York)\n**Source:** `live`\n**Banner:** US futures point to a modestly higher open as traders await October CPI data and react to earnings-driven stock moves\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** October CPI is due at 8:30 AM ET and is expected to be the primary catalyst for intraday volatility\n**Leaders:** EL, RIVN, UBS, CHKP, TDG, ONON\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** TDG, ONON\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-11-10\n**Clock use:** `same_morning`"
-    },
     {
       "key": "map_heat",
       "title": "Map heat morning overlay",
@@ -200,6 +175,31 @@
         }
       ],
       "preview": "5894 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 KNSA, ONC, CDNA, BLLN, AVAH"
+    },
+    {
+      "key": "ab",
+      "title": "AB checklist",
+      "date": "2026-11-10",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-10T04:34:58.170821-05:00",
+      "files": [
+        {
+          "path": "data/ab_checklist/2026-11-10_ab_checklist.csv",
+          "ok": true,
+          "reason": "",
+          "size": 7533042,
+          "preview": "2615 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CNM, TEL, WCN, SOLS, GPN"
+        },
+        {
+          "path": "data/ab_checklist/2026-11-10_ab_checklist_enriched.csv",
+          "ok": true,
+          "reason": "",
+          "size": 8310264,
+          "preview": "2615 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 WCN, CNM, TSCO, TEVA, HUM"
+        }
+      ],
+      "preview": "2615 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CNM, TEL, WCN, SOLS, GPN \u00b7 2615 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 WCN, CNM, TSCO, TEVA, HUM"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
