@@ -383,11 +383,47 @@ def evaluate(date: str = "", *, root: Path | None = None,
         today = preopen_today(now)
         if today and (_board_dir(root) / f"{today}.json").is_file():
             v = _evaluate_date(today, root=root)
-            if v["ready"]:
+            if _preopen_today_ready(v, now):
+                if not v["ready"]:
+                    # Page data-asof stays on the last completed session
+                    # until a printed close. FM/tickets/board have already
+                    # rolled to today, so falling back would then fail
+                    # because today.json date == today != previous session.
+                    reason = "; ".join(
+                        part.strip() for part in (v.get("reason") or "").split(";")
+                        if part.strip() and "data-asof" not in part
+                    )
+                    asof = v.get("main_page_asof") or "missing"
+                    v = dict(v)
+                    v["ready"] = True
+                    v["reason"] = reason
+                    if asof:
+                        v["reason"] = (
+                            f"{v['reason']}; main page data-asof {asof} "
+                            "is last completed session"
+                        ).lstrip("; ")
                 v["reason"] = "pre-open: today's session ready; " + v["reason"]
                 return v
     date = resolve_date(date, root=root, now=now)
     return _evaluate_date(date, root=root)
+
+
+def _preopen_today_ready(v: dict, now: datetime | None = None) -> bool:
+    """True when today's rolled files should publish before the bell.
+
+    Content is ready when factor-mine today.json and tickets match the
+    session (required stock_book/publish rows, or the tickets+FM fallback).
+    That is already ``fm_ok and tk_ok``. The main page may still show the
+    previous session's data-asof; treat that one-session lag as ready so
+    Deploy does not fall back and then refuse the rolled today.json.
+    """
+    if not (v.get("factor_mine_today") and v.get("tickets")):
+        return False
+    if v.get("ready"):
+        return True
+    asof = str(v.get("main_page_asof") or "")
+    prev = latest_completed_session(now)
+    return (not v.get("main_page_fresh")) and asof == prev
 
 
 def _evaluate_date(date: str, *, root: Path) -> dict:
