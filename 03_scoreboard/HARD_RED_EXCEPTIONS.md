@@ -2,7 +2,7 @@
 
 Live sleeves still SIT on S≤−3. Search a ticker for every session since 8/13: cameras (+N −N), 09:30 open, close, same-day % and hold-1/3/5 with actual prices.
 
-Generated 2026-11-09T19:47:54.634211-05:00 · 2026-08-13 → 2026-11-06 · live sit **untouched**.
+Generated 2026-11-09T23:17:10.530028-05:00 · 2026-08-13 → 2026-11-06 · live sit **untouched**.
 
 ## Latest morning
 
@@ -26,7 +26,7 @@ Generated 2026-11-09T19:47:54.634211-05:00 · 2026-08-13 → 2026-11-06 · live 
 - **IONQ** idio -12 · +0 −5 · H1 -26.17%
 - **VSAT** idio -12 · +1 −6 · H1 -21.34%
 - **IREN** idio -11 · +2 −5 · H1 -1.23%
-- **VNET** idio -11 · +2 −5 · H1 0.15%
+- **VNET** idio -11 · +2 −5 · H1 -0.0%
 - **AIP** idio -11 · +1 −6 · H1 -12.54%
 - **OPEN** idio -10 · +1 −4 · H1 21.67%
 
