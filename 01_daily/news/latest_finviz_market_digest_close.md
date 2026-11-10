@@ -1,47 +1,47 @@
-# Finviz homepage market digest (close) — 2026-11-09
+# Finviz homepage market digest (close) — 2026-11-10
 
-**Generated:** 2026-11-09T16:30:05.469328-05:00 (America/New_York)
+**Generated:** 2026-11-10T16:32:28.744966-05:00 (America/New_York)
 **Source:** `live`
-**Banner:** US stocks closed sharply higher, rebounding from postelection selloff as Brent crude slipped toward $94 on Trump’s Iran comments ahead of Tuesday’s CPI data
-**Prior close:** SPX —  Nasdaq +2.70%  Dow —
-**SPX:** —  **Nasdaq:** +2.70%  **Dow:** —
-**Oil:** Brent crude $94.0 down (fell)
-**CPI/Fed:** s CPI release; 5.0% cut (cut 5%)
-**Leaders:** AMD, OPY, AVGO, MRVL, INTC, QCOM, NVDA, CEG, KKR, BA, TTWO, HIMS, RKLB
-**Next session:** housing no · retail no · Fed no
+**Banner:** US stocks closed lower as hotter October CPI pushed the 10-year yield back near 5% and December Fed hike odds toward 99%
+**Prior close:** SPX -0.40%  Nasdaq -0.74%  Dow -0.30%
+**SPX:** -0.40%  **Nasdaq:** -0.74%  **Dow:** -0.30%
+**Oil:** —
+**CPI/Fed:** October CPI rose 0; 99.0% hike (hike odds climbing to 99%)
+**Leaders:** CME, DB, NVDA, MSFT, PEPG, SANM, SBH, ONON, GFL, PBR, ALC, CRWV
+**Next session:** housing no · retail no · Fed yes
 **Earnings slate:** —
-**Geo/grain:** geo
-**Clock legal for:** 2026-11-10
+**Geo/grain:** —
+**Clock legal for:** 2026-11-11
 **Clock use:** `next_open`
 
 ## Clock
 
-Live post-close answer-key (~16:05 ET). **Legal for the NEXT session open only** (`clock_legal_for` = 2026-11-10) — **NOT** the same morning. `clock_use` is always `next_open`. File is `*_finviz_market_digest_close.*`; the same_morning warm-up file is left untouched.
+Live post-close answer-key (~16:05 ET). **Legal for the NEXT session open only** (`clock_legal_for` = 2026-11-11) — **NOT** the same morning. `clock_use` is always `next_open`. File is `*_finviz_market_digest_close.*`; the same_morning warm-up file is left untouched.
 
 Homepage `$MARKET` prose — **not** `YYYY-MM-DD_finviz_digest.md` (quote-page headlines + ticker blurbs). Capture only. Not wired into tape_anchor / predict / #210.
 
 ## Theme Radar
 
-- **Prior close:** SPX — · Nasdaq +2.70% · Dow —
-- **Oil:** Brent crude $94.0 down (fell)
-- **CPI / Fed-odds:** s CPI release; 5.0% cut (cut 5%)
-- **Named leaders:** AMD, OPY, AVGO, MRVL, INTC, QCOM, NVDA, CEG, KKR, BA, TTWO, HIMS, RKLB
-- **Next-session calendar:** housing no · retail no · Fed no
-  - After the bell, Take-Two Interactive (TTWO), Hims & Hers Health (HIMS), and Rocket Lab (RKLB) were scheduled to report earnings, with stock reactions in extended trading still developing ahead of Tuesday’s CPI release
+- **Prior close:** SPX -0.40% · Nasdaq -0.74% · Dow -0.30%
+- **Oil:** —
+- **CPI / Fed-odds:** October CPI rose 0; 99.0% hike (hike odds climbing to 99%)
+- **Named leaders:** CME, DB, NVDA, MSFT, PEPG, SANM, SBH, ONON, GFL, PBR, ALC, CRWV
+- **Next-session calendar:** housing no · retail no · Fed yes
+  - After the bell, Petrobras (PBR), Alcon (ALC), and CoreWeave (CRWV) were scheduled to report earnings, while index futures traded little changed as investors looked ahead to more Fed speakers and additional earnings on Wednesday.
 - **Earnings slate:** —
-- **Geo / grain:** geo
+- **Geo / grain:** —
 
 ## Narrative
 
-**US stocks closed sharply higher, rebounding from postelection selloff as Brent crude slipped toward $94 on Trump’s Iran comments ahead of Tuesday’s CPI data**
+**US stocks closed lower as hotter October CPI pushed the 10-year yield back near 5% and December Fed hike odds toward 99%**
 
-- The S&P 500 ($SPX) finished at about 7,550, up roughly 2.4% from 7,377, the Dow Jones Industrial Average ($DJI) closed at about 52,390, up about 1,100 points or 2.2% from 51,286, and the Nasdaq Composite ($COMP) rose about 2.7% to roughly 25,253, marking the biggest one-day gain for major indexes since April
-- Brent crude (@QA) fell to near $94 per barrel after President Trump signaled restraint toward Iran, easing inflation concerns and supporting industrial shares
-- All 11 S&P 500 ($SPX) sectors advanced on the day, led by industrials and consumer discretionary
-- Advanced Micro Devices (AMD) jumped about 13% after Oppenheimer (OPY) upgraded the stock to Outperform with a $600 price target, citing server and data center strength and favorable AI chip pricing
-- Broadcom (AVGO) gained about 9% after its VM API project joined the CNCF Sandbox and it unveiled VMware Kubernetes AI solutions, Marvell Technology (MRVL) rose about 9.5% in a broad semiconductor rebound, and Intel (INTC) and Qualcomm (QCOM) added about 5.5% and 4% as investors rotated into chipmakers
-- Nvidia (NVDA) fell about 4.3% to $178.67 after its board opened an independent probe into reports that foreign intelligence targeted CEO Jensen Huang following an affair admission
-- Constellation Energy (CEG) advanced about 10.5% after reporting Q3 adjusted EPS of $5.06 and raising 2024 EPS guidance on expanded long-term nuclear deals with Amazon and Google
-- KKR (KKR) rose about 1.6% after reporting record quarterly profit
-- Boeing (BA) said it will cut 5% of its commercial airplane division workforce
-- After the bell, Take-Two Interactive (TTWO), Hims & Hers Health (HIMS), and Rocket Lab (RKLB) were scheduled to report earnings, with stock reactions in extended trading still developing ahead of Tuesday’s CPI release
+- The S&P 500 ($SPX) fell about 0.4% to 7,521, the Dow Jones Industrial Average ($DJI) lost about 0.3% to 52,232, the Nasdaq Composite ($COMP) declined 0.74% to 25,066, and the Russell 2000 (IWM) slipped 0.62%.
+- October CPI rose 0.4% month-over-month versus the 0.3% consensus, with core CPI up 0.3% and beating forecasts for a third straight month after the 8:30 a.m. ET release, lifting the 10-year Treasury yield (@10Y) back near 5%.
+- CME (CME) FedWatch showed December Fed hike odds climbing to 99%, Deutsche Bank (DB) flagged potential hikes at the next three meetings, and some traders priced in a 50-basis-point move after comments from Fed Governor Chris Waller.
+- Nine of 11 S&P 500 ($SPX) sectors finished lower, led by utilities and real estate, while financials eked out a gain of about 0.15%.
+- Nvidia (NVDA) fell roughly 5.5% as CEO Jensen Huang faces a subpoena threat from congressional Republicans over his reported relationship with alleged Chinese intelligence operative Alice Huang, amid concerns over about $7.5 billion in chip shipments to China and an independent board investigation.
+- Microsoft (MSFT) dropped about 2% after Anthropic announced competing Claude workplace tools such as Sheets and Whiteboards, ahead of Anthropic’s amended S-1 targeting roughly a $1 trillion IPO valuation.
+- PepGen (PEPG) surged roughly 93% after reporting fiscal third-quarter results that missed EPS estimates but beat revenue forecasts.
+- Sanmina (SANM) rose nearly 4% after issuing strong fiscal 2027 guidance that topped expectations, while Sally Beauty (SBH) advanced following a fourth-quarter earnings beat.
+- On Holding (ONON) sank 8% despite posting record third-quarter revenue and margins and raising its 2026 margin outlook, and GFL Environmental (GFL) fell about 8% after rejecting takeover bids and opting to remain public.
+- After the bell, Petrobras (PBR), Alcon (ALC), and CoreWeave (CRWV) were scheduled to report earnings, while index futures traded little changed as investors looked ahead to more Fed speakers and additional earnings on Wednesday.
