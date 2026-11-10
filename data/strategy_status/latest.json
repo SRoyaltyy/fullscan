@@ -21,13 +21,13 @@
    "SIT": 0
   },
   "h1": {
-   "MISSING": 1,
-   "OK": 0,
+   "MISSING": 0,
+   "OK": 1,
    "SIT": 0
   },
   "holdup": {
-   "MISSING": 1,
-   "OK": 0,
+   "MISSING": 0,
+   "OK": 1,
    "SIT": 0
   },
   "paper": {
@@ -52,7 +52,7 @@
   }
  },
  "date": "2026-11-10",
- "generated_at": "2026-11-10T07:58:57-05:00",
+ "generated_at": "2026-11-10T09:01:46-05:00",
  "strategies": [
   {
    "buys": [
@@ -6616,22 +6616,42 @@
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "ZJYL",
+    "FLY",
+    "INDI",
+    "FRVO"
+   ],
    "family": "h1",
    "name": "h1",
-   "note": "no sealed plan row",
-   "sells": [],
+   "note": "sealed 2026-11-10T13:12:25Z",
+   "sells": [
+    "ARRY 313",
+    "CRCT 188",
+    "WYHG 419"
+   ],
    "source": "research/hot_n4_clean_v4/forward_h1/h1_log.jsonl",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "ZJYL",
+    "FLY",
+    "INDI",
+    "FRVO"
+   ],
    "family": "holdup",
    "name": "holdup",
-   "note": "no sealed plan row",
-   "sells": [],
+   "note": "sealed 2026-11-10T13:07:50Z",
+   "sells": [
+    "ARRY 89",
+    "CRCT 53",
+    "DNUT 823",
+    "TEM 34",
+    "WYHG 142"
+   ],
    "source": "research/hot_n4_clean_v4/forward/holdup_log.jsonl",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [],
