@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-10T17:43:50-05:00",
+  "updated_at": "2026-11-10T18:29:55-05:00",
   "runs": [
     {
       "date": "2026-11-03",
@@ -195,12 +195,6 @@
     },
     {
       "date": "2026-11-10",
-      "workflow": "factor_mine",
-      "file": "2026-11-10_factor_mine.json",
-      "updated_at": "2026-11-10T02:13:54-05:00"
-    },
-    {
-      "date": "2026-11-10",
       "workflow": "preopen",
       "file": "2026-11-10_preopen.json",
       "updated_at": "2026-11-10T04:41:23-05:00"
@@ -240,6 +234,12 @@
       "workflow": "pipeline_health",
       "file": "2026-11-10_pipeline_health.json",
       "updated_at": "2026-11-10T17:43:50-05:00"
+    },
+    {
+      "date": "2026-11-10",
+      "workflow": "factor_mine",
+      "file": "2026-11-10_factor_mine.json",
+      "updated_at": "2026-11-10T18:29:55-05:00"
     }
   ]
 }
