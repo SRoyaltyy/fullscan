@@ -1,7 +1,7 @@
 # Primary-origin action documents
 
-Updated 2026-11-09T23:08:47.577478+00:00. 271 dated documents in the configured 3-day window; 123 newly retained; 437 repeat observations.
-Source health: 116/117 checked successfully. Collection uses zero LLM calls.
+Updated 2026-11-10T08:27:24.121930+00:00. 261 dated documents in the configured 3-day window; 21 newly retained; 485 repeat observations.
+Source health: 117/117 checked successfully. Collection uses zero LLM calls.
 
 Document stage comes from publisher metadata. Proposed rules, bills and announcements are not automatically labelled enacted policy or concrete public actions.
 
@@ -45,16 +45,6 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 
 - [Public Law 119 - 137 - United States Commission on International Religious Freedom Reauthorization Act of 2026](https://www.govinfo.gov/app/details/PLAW-119publ137) — Public and Private Laws; 2026-11-09T15:11:00+00:00
 - [Public Law 119 - 138 - Accelerating Access to Critical Therapies for ALS Reauthorization Act of 2026](https://www.govinfo.gov/app/details/PLAW-119publ138) — Public and Private Laws; 2026-11-09T15:10:00+00:00
-
-## legislative_document_published
-
-- [H.R. 10958 (IH) - Clothing Microplastic Transparency Act of 2026](https://www.govinfo.gov/app/details/BILLS-119hr10958ih) — Congressional Bills; 2026-11-07T03:58:02+00:00
-- [H.R. 10957 (IH) - Plastics Understanding and Removal through Government Evaluation Act](https://www.govinfo.gov/app/details/BILLS-119hr10957ih) — Congressional Bills; 2026-11-07T03:58:02+00:00
-- [H.R. 10956 (IH) - IHS Workforce Parity Act of 2026](https://www.govinfo.gov/app/details/BILLS-119hr10956ih) — Congressional Bills; 2026-11-07T03:58:02+00:00
-- [H.R. 10955 (IH) - EITC Age Parity Act of 2026](https://www.govinfo.gov/app/details/BILLS-119hr10955ih) — Congressional Bills; 2026-11-07T03:58:02+00:00
-- [H.R. 10959 (IH) - Right to Re-Enroll Act of 2026](https://www.govinfo.gov/app/details/BILLS-119hr10959ih) — Congressional Bills; 2026-11-07T03:58:01+00:00
-- [H.R. 10954 (IH) - Don’t Flush Babies Act](https://www.govinfo.gov/app/details/BILLS-119hr10954ih) — Congressional Bills; 2026-11-07T03:58:01+00:00
-- [H.R. 10960 (IH) - Keep Federal Tech Talent Act](https://www.govinfo.gov/app/details/BILLS-119hr10960ih) — Congressional Bills; 2026-11-07T03:58:01+00:00
 
 ## notice_published
 
@@ -156,6 +146,10 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 ## requires_semantic_review
 
 - [Release of the Bank of Canada’s summary of deliberations](https://www.bankofcanada.ca/2026/11/release-bank-canadas-summary-deliberations-2026-10-28/) — Bank of Canada — Press; 2026-11-10T13:30:35+00:00
+- [FX Liquidity providing operation – Announcement | Tender-ID: 20260100 | Reverse transaction | USD](https://www.bundesbank.de/en/tasks/monetary-policy/open-market-operations/outstanding-open-market-operations/fx-liquidity-providing-operation-announcement-1014704) — Deutsche Bundesbank — Outstanding open market operations; 2026-11-10T08:15:30+00:00
+- [Summary of Opinions at the Monetary Policy Meeting on October 29 and 30, 2026](http://www.boj.or.jp/en/mopo/mpmsche_minu/opinion_2026/opi261030.pdf) — Bank of Japan; 2026-11-09T23:50:00+00:00
+- [Principal Figures of Financial Institutions (Oct.)](http://www.boj.or.jp/en/statistics/dl/depo/kashi/kasi2610.pdf) — Bank of Japan; 2026-11-09T23:50:00+00:00
+- [Newly Added Guidance Documents | Drugs](http://www.fda.gov/drugs/guidances-drugs/newly-added-guidance-documents-drugs) — Food and Drug Administration — What's New: Drugs; 2026-11-09T23:03:07+00:00
 - [Nominations and Withdrawals Sent to the Senate](https://www.whitehouse.gov/presidential-actions/2026/11/nominations-and-withdrawals-sent-to-the-senate-ba2b/) — White House presidential actions; 2026-11-09T22:53:29+00:00
 - [What's New Related to Drugs](http://www.fda.gov/drugs/news-events-human-drugs/whats-new-related-drugs) — Food and Drug Administration — What's New: Drugs; 2026-11-09T22:27:38+00:00
 - [Novel Drug Approvals for 2026](http://www.fda.gov/drugs/novel-drug-approvals-fda/novel-drug-approvals-2026) — Food and Drug Administration — What's New: Drugs; 2026-11-09T22:26:36+00:00
@@ -180,10 +174,12 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [FDA grants accelerated approval to epcoritamab-bysp for relapsed or refractory follicular lymphoma](http://www.fda.gov/drugs/cancer-approvals/fda-grants-accelerated-approval-epcoritamab-bysp-relapsed-or-refractory-follicular-lymphoma) — Food and Drug Administration — What's New: Drugs; 2026-11-09T21:43:43+00:00
 - [HHS Expands TOPx Prize Pool to $3.8 Million, Announces $3.7 Million in TOPx prizes for AI Tools Addressing Lyme Disease and Invisible Illnesses](https://www.hhs.gov/press-room/hhs-awards-3-million-topx-ai-prizes-lyme-disease-invisible-illnesses.html) — Health and Human Services; 2026-11-09T21:10:48+00:00
 - [Federal Reserve Board announces approval of two applications by Mutual Federal Bancorp, MHC, and MFB Bancorp, Inc.](https://www.federalreserve.gov/newsevents/pressreleases/orders20261109a.htm) — Federal Reserve Board — All Press Releases; 2026-11-09T21:00:00+00:00
+- [Media advisory - Economic and Financial Affairs Council (Budget) of 10 November 2026](https://www.consilium.europa.eu/en/press/press-releases/2026/11/09/media-advisory-economic-and-financial-affairs-council-budget-of-10-november-2026/) — Council of the European Union; 2026-11-09T20:35:00+00:00
 - [20262301: LW Acquisition Holdings, LP; Peak Rock Capital Fund III LP](https://www.ftc.gov/legal-library/browse/early-termination-notices/20262301) — Federal Trade Commission — HSR Early Termination Notices; 2026-11-09T19:21:10+00:00
 - [FDA Roundup: June 4, 2024](http://www.fda.gov/news-events/press-announcements/fda-roundup-june-4-2024) — Food and Drug Administration — What's New: Vaccines, Blood and Biologics; 2026-11-09T19:19:09+00:00
 - [Auction of Government of India Dated Security](https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63952) — Reserve Bank of India; 2026-11-09T18:55:00+00:00
 - [Supersession of Board of Directors of Abhyudaya Co-operative Bank Ltd., Mumbai - Extension of period](https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63951) — Reserve Bank of India; 2026-11-09T18:50:00+00:00
+- [Ukraine: Council extends EU Military Assistance Mission mandate for two years](https://www.consilium.europa.eu/en/press/press-releases/2026/11/09/ukraine-council-extends-eu-military-assistance-mission-mandate-for-two-years/) — Council of the European Union; 2026-11-09T17:01:00+00:00
 - [Approved Cellular and Gene Therapy Products](http://www.fda.gov/vaccines-blood-biologics/cellular-gene-therapy-products/approved-cellular-and-gene-therapy-products) — Food and Drug Administration — What's New: Vaccines, Blood and Biologics; 2026-11-09T16:52:49+00:00
 - [State Government Securities - Full Auction Result](https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63950) — Reserve Bank of India; 2026-11-09T16:25:00+00:00
 - [HHS Invests $9.7 Million to Prevent Elder Abuse and Exploitation](https://www.hhs.gov/press-room/hhs-invests-9-million-prevent-elder-abuse-financial-exploitation.html) — Health and Human Services; 2026-11-09T16:15:00+00:00
@@ -199,6 +195,7 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [POSTPONED- Vaccines and Related Biological Products Advisory Committee February 15, 2022 Meeting Announcement - 02/15/2022](http://www.fda.gov/advisory-committees/advisory-committee-calendar/postponed-vaccines-and-related-biological-products-advisory-committee-february-15-2022-meeting) — Food and Drug Administration — What's New: Vaccines, Blood and Biologics; 2026-11-09T15:30:45+00:00
 - [Vaccines and Related Biological Products Advisory Committee June 7, 2022 Meeting Announcement - 06/07/2022](http://www.fda.gov/advisory-committees/advisory-committee-calendar/vaccines-and-related-biological-products-advisory-committee-june-7-2022-meeting-announcement) — Food and Drug Administration — What's New: Vaccines, Blood and Biologics; 2026-11-09T15:24:08+00:00
 - [Vaccines and Related Biological Products Advisory Committee June 14-15, 2022 Meeting Announcement - 06/14/2022](http://www.fda.gov/advisory-committees/advisory-committee-calendar/vaccines-and-related-biological-products-advisory-committee-june-14-15-2022-meeting-announcement) — Food and Drug Administration — What's New: Vaccines, Blood and Biologics; 2026-11-09T15:23:17+00:00
+- [Humanitarian aid: Council approves conclusions on strengthening EU action amid global challenges](https://www.consilium.europa.eu/en/press/press-releases/2026/11/09/humanitarian-aid-council-approves-conclusions-on-strengthening-eu-action-amid-global-challenges/) — Council of the European Union; 2026-11-09T15:20:00+00:00
 - [MedWatch Alert: FDA Investigating Serious Risk of Malignancy Linked to Zolgensma Gene Therapy](http://www.fda.gov/safety/medical-product-safety-information/medwatch-alert-fda-investigating-serious-risk-malignancy-linked-zolgensma-gene-therapy) — Food and Drug Administration — What's New: Vaccines, Blood and Biologics; 2026-11-09T15:14:55+00:00
 - [Trump Administration Announces $10 Billion in Second Year of Rural Health Transformation Awards to All 50 States](https://www.hhs.gov/press-room/trump-administration-awards-10-billion-rural-health-transformation-program-year-two.html) — Health and Human Services; 2026-11-09T15:10:30+00:00
 - [Vaccines and Related Biological Products Advisory Committee June 28, 2022 Meeting Announcement - 06/28/2022](http://www.fda.gov/advisory-committees/advisory-committee-calendar/vaccines-and-related-biological-products-advisory-committee-june-28-2022-meeting-announcement) — Food and Drug Administration — What's New: Vaccines, Blood and Biologics; 2026-11-09T15:10:27+00:00
@@ -207,12 +204,26 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [The EBA streamlines the 2027 EU-wide stress test with more than 55% reduction in requested data](https://www.eba.europa.eu/publications-and-media/press-releases/eba-streamlines-2027-eu-wide-stress-test-more-55-reduction-requested-data) — European Banking Authority; 2026-11-09T15:08:44+00:00
 - [Result of Yield/Price Based Auction of State Government Securities](https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63948) — Reserve Bank of India; 2026-11-09T14:55:00+00:00
 - [Main refinancing operation – Announcement | Tender-ID: 20260099 | Reverse transaction](https://www.bundesbank.de/en/tasks/monetary-policy/open-market-operations/outstanding-open-market-operations/main-refinancing-operation-announcement-1014580) — Deutsche Bundesbank — Outstanding open market operations; 2026-11-09T14:40:53+00:00
+- [Remarks by Kyriakos Pierrakakis following the Eurogroup meeting of 9 November 2026](https://www.consilium.europa.eu/en/press/press-releases/2026/11/09/remarks-by-kyriakos-pierrakakis-following-the-eurogroup-meeting-of-9-november-2026/) — Council of the European Union; 2026-11-09T14:40:00+00:00
 - [Speech by Commissioner Kos at the Plenary Session of the Parliament of the Republic of Moldova](https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2383) — European Commission press and decisions; 2026-11-09T14:35:48+00:00
+- [Taxation: Council approves further VAT simplification rules for online sales](https://www.consilium.europa.eu/en/press/press-releases/2026/11/09/taxation-council-approves-further-vat-simplification-rules-for-online-sales/) — Council of the European Union; 2026-11-09T14:32:00+00:00
 - [UK/Korea: Agreement on the Protection of Classified Military Information (TS No.44/2026)](https://www.gov.uk/government/publications/ukkorea-agreement-on-the-protection-of-classified-military-information-ts-no442026) — Foreign, Commonwealth & Development Office; 2026-11-09T14:00:00+00:00
 - [Hong Kong International Convention for the Safe and Environmentally Sound Recycling of Ships, 2009 (MS No.12/2026)](https://www.gov.uk/government/publications/hong-kong-international-convention-for-the-safe-and-environmentally-sound-recycling-of-ships-2009-ms-no122026) — Foreign, Commonwealth & Development Office; 2026-11-09T14:00:00+00:00
 - [Remarks by Commissioner Dombrovskis at the ECOFIN press conference](https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2382) — European Commission press and decisions; 2026-11-09T13:35:40+00:00
 - [Statement by President von der Leyen with Romanian President Dan](https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2381) — European Commission press and decisions; 2026-11-09T13:01:03+00:00
 - [Speech by Commissioner Kos at the first High-Level Connectivity Platform Meeting on Digital](https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2380) — European Commission press and decisions; 2026-11-09T12:56:19+00:00
+- [Press briefing - Meeting of the European Political Community of 12 November 2026 and the Informal meeting of Heads of State or Government of 13 November 2026](https://www.consilium.europa.eu/en/press/press-releases/2026/11/09/press-briefing-meeting-of-the-european-political-community-of-12-november-2026-and-the-informal-meeting-of-heads-of-state-or-government-of-13-november-2026/) — Council of the European Union; 2026-11-09T12:00:00+00:00
+- [Justice Department Sues the City of Glendale, California for Violating Citizens’ Second Amendment Rights Through Unreasonable Fees and Processes for Legal Firearm Permitting](https://www.justice.gov/opa/pr/justice-department-sues-city-glendale-california-violating-citizens-second-amendment-rights) — Department of Justice; 2026-11-09T12:00:00+00:00
+- [North Carolina Man Indicted for Mailing Antisemitic Threats to Jewish Organizations and Secret Service Protectees in South Florida](https://www.justice.gov/usao-sdfl/pr/north-carolina-man-indicted-mailing-antisemitic-threats-jewish-organizations-and) — Department of Justice; 2026-11-09T12:00:00+00:00
+- [Merced County teacher indicted for distribution of child sexual abuse material (CSAM)](https://www.justice.gov/usao-edca/pr/merced-county-teacher-indicted-distribution-child-sexual-abuse-material-csam) — Department of Justice; 2026-11-09T12:00:00+00:00
+- [Homeland Security Task Force Investigation Leads to Indictment of Multiple Defendants in Fentanyl-Related Death Case](https://www.justice.gov/usao-ut/pr/homeland-security-task-force-investigation-leads-indictment-multiple-defendants-fentanyl) — Department of Justice; 2026-11-09T12:00:00+00:00
+- [Conesus man pleads guilty to production of child pornography](https://www.justice.gov/usao-wdny/pr/conesus-man-pleads-guilty-production-child-pornography) — Department of Justice; 2026-11-09T12:00:00+00:00
+- [Buffalo man sentenced for gun possession](https://www.justice.gov/usao-wdny/pr/buffalo-man-sentenced-gun-possession) — Department of Justice; 2026-11-09T12:00:00+00:00
+- [Las Vegas Man Sentenced to Seven Years in Prison for Trafficking Methamphetamine and Fentanyl, and Money Laundering](https://www.justice.gov/usao-nv/pr/las-vegas-man-sentenced-seven-years-prison-trafficking-methamphetamine-and-fentanyl-and) — Department of Justice; 2026-11-09T12:00:00+00:00
+- [Geneva man pleads guilty to possession of child pornography](https://www.justice.gov/usao-wdny/pr/geneva-man-pleads-guilty-possession-child-pornography) — Department of Justice; 2026-11-09T12:00:00+00:00
+- [Rice Lake Man Sentenced to 5 Years for Distributing Child Pornography](https://www.justice.gov/usao-wdwi/pr/rice-lake-man-sentenced-5-years-distributing-child-pornography) — Department of Justice; 2026-11-09T12:00:00+00:00
+- [New Orleans Man Indicted for Violating Federal Controlled Substances Act](https://www.justice.gov/usao-edla/pr/new-orleans-man-indicted-violating-federal-controlled-substances-act-2) — Department of Justice; 2026-11-09T12:00:00+00:00
+- [Justice Department Sues Lyft for Denying Rides to Passengers with Service Dogs, Wheelchairs](https://www.justice.gov/opa/pr/justice-department-sues-lyft-denying-rides-passengers-service-dogs-wheelchairs) — Department of Justice; 2026-11-09T12:00:00+00:00
 - [US Department of Labor publishes proposed rule setting national minimum weekly work search requirement for unemployment insurance](http://www.dol.gov/newsroom/releases/eta/eta20261109) — Department of Labor; 2026-11-09T12:00:00+00:00
 - [14 Charged in Deadly Human Smuggling Scheme That Killed 7 Aliens Earlier This Year](https://www.justice.gov/opa/pr/14-charged-deadly-human-smuggling-scheme-killed-7-aliens-earlier-year) — Department of Justice — RSS Feed; 2026-11-09T12:00:00+00:00
 - [AG Blanche and Missouri Officials Announce St. Louis as Winner of the Model Cities Initiative](https://www.justice.gov/opa/video/ag-blanche-and-missouri-officials-announce-st-louis-winner-model-cities-initiative) — Department of Justice — RSS Feed; 2026-11-09T12:00:00+00:00
@@ -275,34 +286,11 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [Science & Research | Generic Drugs](http://www.fda.gov/drugs/generic-drugs/science-research-generic-drugs) — Food and Drug Administration — What's New: Drugs; 2026-11-08T19:12:15+00:00
 - [Fresh & Ready Foods LLC Recalls Fresh To You Brand Sausage, Egg & Cheese Biscuit Sandwich due to Possible Health Risk](http://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/fresh-ready-foods-llc-recalls-fresh-you-brand-sausage-egg-cheese-biscuit-sandwich-due-possible) — Food and Drug Administration — Food Safety Recalls; 2026-11-08T05:00:00+00:00
 - [Christine Lagarde: Interview with Yomiuri Shimbun](https://www.ecb.europa.eu//press/inter/date/2026/html/ecb.in261107~e7b86fc4ce.en.html) — European Central Bank; 2026-11-07T14:00:00+00:00
-- [ITVISMA](http://www.fda.gov/vaccines-blood-biologics/cellular-gene-therapy-products/itvisma) — Food and Drug Administration — What's New: Vaccines, Blood and Biologics; 2026-11-07T01:19:01+00:00
-- [ZOLGENSMA](http://www.fda.gov/vaccines-blood-biologics/zolgensma) — Food and Drug Administration — What's New: Vaccines, Blood and Biologics; 2026-11-07T01:17:48+00:00
-- [2026 Safety and Availability Communications](http://www.fda.gov/vaccines-blood-biologics/safety-availability-biologics/2026-safety-and-availability-communications) — Food and Drug Administration — What's New: Vaccines, Blood and Biologics; 2026-11-07T01:16:27+00:00
-- [What’s New for Biologics](http://www.fda.gov/vaccines-blood-biologics/news-events-biologics/whats-new-biologics) — Food and Drug Administration — What's New: Vaccines, Blood and Biologics; 2026-11-07T01:15:31+00:00
-- [FDA approves gemcitabine intravesical system for non-muscle invasive bladder cancer](http://www.fda.gov/drugs/cancer-approvals/fda-approves-gemcitabine-intravesical-system-non-muscle-invasive-bladder-cancer) — Food and Drug Administration — What's New: Drugs; 2026-11-07T00:18:33+00:00
-- [FDA approves niraparib and abiraterone acetate plus prednisone for BRCA2-mutated metastatic castration-sensitive prostate cancer](http://www.fda.gov/drugs/cancer-approvals/fda-approves-niraparib-and-abiraterone-acetate-plus-prednisone-brca2-mutated-metastatic-castration) — Food and Drug Administration — What's New: Drugs; 2026-11-07T00:18:32+00:00
-- [FDA approves alectinib as adjuvant treatment for ALK-positive non-small cell lung cancer](http://www.fda.gov/drugs/cancer-approvals/fda-approves-alectinib-adjuvant-treatment-alk-positive-non-small-cell-lung-cancer) — Food and Drug Administration — What's New: Drugs; 2026-11-07T00:18:31+00:00
-- [FDA approves amivantamab-vmjw with carboplatin and pemetrexed for non-small cell lung cancer with EGFR exon 19 deletions or L858R mutations](http://www.fda.gov/drugs/cancer-approvals/fda-approves-amivantamab-vmjw-carboplatin-and-pemetrexed-non-small-cell-lung-cancer-egfr-exon-19) — Food and Drug Administration — What's New: Drugs; 2026-11-07T00:18:30+00:00
-- [FDA approves amivantamab-vmjw for EGFR exon 20 insertion-mutated non-small cell lung cancer indications](http://www.fda.gov/drugs/cancer-approvals/fda-approves-amivantamab-vmjw-egfr-exon-20-insertion-mutated-non-small-cell-lung-cancer-indications) — Food and Drug Administration — What's New: Drugs; 2026-11-07T00:18:29+00:00
-- [FDA approves atezolizumab and hyaluronidase-tqjs for subcutaneous injection](http://www.fda.gov/drugs/cancer-approvals/fda-approves-atezolizumab-and-hyaluronidase-tqjs-subcutaneous-injection) — Food and Drug Administration — What's New: Drugs; 2026-11-07T00:18:28+00:00
-- [FDA approves axatilimab-csfr for chronic graft-versus-host disease](http://www.fda.gov/drugs/cancer-approvals/fda-approves-axatilimab-csfr-chronic-graft-versus-host-disease) — Food and Drug Administration — What's New: Drugs; 2026-11-07T00:18:27+00:00
-- [FDA approves cosibelimab-ipdl for metastatic or locally advanced cutaneous squamous cell carcinoma](http://www.fda.gov/drugs/cancer-approvals/fda-approves-cosibelimab-ipdl-metastatic-or-locally-advanced-cutaneous-squamous-cell-carcinoma) — Food and Drug Administration — What's New: Drugs; 2026-11-07T00:18:26+00:00
-- [FDA approves durvalumab for limited-stage small cell lung cancer](http://www.fda.gov/drugs/cancer-approvals/fda-approves-durvalumab-limited-stage-small-cell-lung-cancer) — Food and Drug Administration — What's New: Drugs; 2026-11-07T00:18:25+00:00
-- [FDA approves ensartinib for ALK-positive locally advanced or metastatic non-small cell lung cancer](http://www.fda.gov/drugs/cancer-approvals/fda-approves-ensartinib-alk-positive-locally-advanced-or-metastatic-non-small-cell-lung-cancer) — Food and Drug Administration — What's New: Drugs; 2026-11-07T00:18:24+00:00
-- [FDA approves erdafitinib for locally advanced or metastatic urothelial carcinoma](http://www.fda.gov/drugs/cancer-approvals/fda-approves-erdafitinib-locally-advanced-or-metastatic-urothelial-carcinoma) — Food and Drug Administration — What's New: Drugs; 2026-11-07T00:18:23+00:00
-- [FDA approves inavolisib with palbociclib and fulvestrant for endocrine-resistant, PIK3CA-mutated, HR-positive, HER2-negative, advanced breast cancer](http://www.fda.gov/drugs/cancer-approvals/fda-approves-inavolisib-palbociclib-and-fulvestrant-endocrine-resistant-pik3ca-mutated-hr-positive) — Food and Drug Administration — What's New: Drugs; 2026-11-07T00:18:22+00:00
-- [FDA approves inotuzumab ozogamicin for pediatric patients with acute lymphoblastic leukemia](http://www.fda.gov/drugs/cancer-approvals/fda-approves-inotuzumab-ozogamicin-pediatric-patients-acute-lymphoblastic-leukemia) — Food and Drug Administration — What's New: Drugs; 2026-11-07T00:18:21+00:00
-- [FDA approves irinotecan liposome for first-line treatment of metastatic pancreatic adenocarcinoma](http://www.fda.gov/drugs/cancer-approvals/fda-approves-irinotecan-liposome-first-line-treatment-metastatic-pancreatic-adenocarcinoma) — Food and Drug Administration — What's New: Drugs; 2026-11-07T00:18:20+00:00
-- [FDA approves isatuximab-irfc with bortezomib, lenalidomide, and dexamethasone for newly diagnosed multiple myeloma](http://www.fda.gov/drugs/cancer-approvals/fda-approves-isatuximab-irfc-bortezomib-lenalidomide-and-dexamethasone-newly-diagnosed-multiple) — Food and Drug Administration — What's New: Drugs; 2026-11-07T00:18:19+00:00
-- [FDA approves lazertinib with amivantamab-vmjw for non-small lung cancer](http://www.fda.gov/drugs/cancer-approvals/fda-approves-lazertinib-amivantamab-vmjw-non-small-lung-cancer) — Food and Drug Administration — What's New: Drugs; 2026-11-07T00:18:18+00:00
-- [FDA approves lutetium Lu 177 dotatate for pediatric patients 12 years and older with GEP-NETS](http://www.fda.gov/drugs/cancer-approvals/fda-approves-lutetium-lu-177-dotatate-pediatric-patients-12-years-and-older-gep-nets) — Food and Drug Administration — What's New: Drugs; 2026-11-07T00:18:17+00:00
-- [FDA approves acalabrutinib with bendamustine and rituximab for previously untreated mantle cell lymphoma](http://www.fda.gov/drugs/cancer-approvals/fda-approves-acalabrutinib-bendamustine-and-rituximab-previously-untreated-mantle-cell-lymphoma) — Food and Drug Administration — What's New: Drugs; 2026-11-07T00:02:45+00:00
-- [FDA approves amivantamab and hyaluronidase-lpuj for subcutaneous injection](http://www.fda.gov/drugs/cancer-approvals/fda-approves-amivantamab-and-hyaluronidase-lpuj-subcutaneous-injection) — Food and Drug Administration — What's New: Drugs; 2026-11-07T00:02:44+00:00
-- [FDA approves belantamab mafodotin-blmf for relapsed or refractory multiple myeloma](http://www.fda.gov/drugs/cancer-approvals/fda-approves-belantamab-mafodotin-blmf-relapsed-or-refractory-multiple-myeloma) — Food and Drug Administration — What's New: Drugs; 2026-11-07T00:02:43+00:00
 
 ## Source failures and coverage warnings
 
 - hk-hkma-public-press: ok; stale_feed_outside_requested_window
+- us-govinfo-bills: ok; stale_feed_outside_requested_window
 - us-govinfo-bills-enr: unchanged; stale_feed_outside_requested_window
 - us-sec-8940dd7737: ok; stale_feed_outside_requested_window
 - us-sec-2476f14c28: ok; stale_feed_outside_requested_window
@@ -324,25 +312,23 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - us-fda-1a1096082f: ok; stale_feed_outside_requested_window
 - us-fda-2d9c4fc2f9: ok; stale_feed_outside_requested_window
 - us-fda-3eaddf14de: ok; stale_feed_outside_requested_window
-- us-fda-00e9311ef2: ok; stale_feed_outside_requested_window
 - us-fcc-1ad902e468: unchanged; stale_feed_outside_requested_window
 - us-osha-d8e445af0b: ok; stale_feed_outside_requested_window
 - us-nlrb-3db5e72bf9: ok; stale_feed_outside_requested_window
-- us-fmc-fe8f0538ae: ok; stale_feed_outside_requested_window
-- us-fhfa-index: ok; stale_feed_outside_requested_window
+- us-fmc-fe8f0538ae: unchanged; stale_feed_outside_requested_window
+- us-fhfa-index: unchanged; stale_feed_outside_requested_window
 - us-ca-oal-c1209cfd66: unchanged; stale_feed_outside_requested_window
-- eu-council-9d9e9444da: parse_or_network_error; 
 - eu-court-1433471e58: ok; stale_feed_outside_requested_window
 - eu-ecb-fb5fd59aed: ok; stale_feed_outside_requested_window
 - uk-boe-4feb372611: ok; stale_feed_outside_requested_window
 - ca-boc-4aa19b2183: ok; stale_feed_outside_requested_window
-- ca-boc-4192a605ae: ok; stale_feed_outside_requested_window
-- ca-boc-5cc0603f1f: ok; stale_feed_outside_requested_window
-- ca-boc-1c9979e6ac: ok; stale_feed_outside_requested_window
-- ca-boc-e24c58f2d0: ok; stale_feed_outside_requested_window
+- ca-boc-4192a605ae: unchanged; stale_feed_outside_requested_window
+- ca-boc-5cc0603f1f: unchanged; stale_feed_outside_requested_window
+- ca-boc-1c9979e6ac: unchanged; stale_feed_outside_requested_window
+- ca-boc-e24c58f2d0: unchanged; stale_feed_outside_requested_window
 - ca-boc-cffefa81f7: ok; stale_feed_outside_requested_window
 - ca-boc-49364b93d8: ok; stale_feed_outside_requested_window
-- ca-boc-a5cb9e38c1: ok; stale_feed_outside_requested_window
+- ca-boc-a5cb9e38c1: unchanged; stale_feed_outside_requested_window
 - au-rba-9e35f5f8d1: unchanged; stale_feed_outside_requested_window
 - nz-rbnz-gnews: ok; stale_feed_outside_requested_window
 - in-rbi-738b09bded: ok; stale_feed_outside_requested_window

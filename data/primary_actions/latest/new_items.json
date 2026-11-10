@@ -1,707 +1,11 @@
 [
   {
-    "title": "Human medicines: register of electronic export certificates",
-    "url": "https://www.gov.uk/government/publications/human-medicines-register-of-electronic-export-certificates",
-    "native_id": "/government/publications/human-medicines-register-of-electronic-export-certificates",
-    "published_at": "2026-11-09T15:08:31+00:00",
-    "published_raw": "2026-11-09T15:08:31Z",
-    "document_type": "decision",
-    "issuer": "Medicines and Healthcare products Regulatory Agency",
-    "issuer_ids": [
-      "uk-gov:medicines-and-healthcare-products-regulatory-agency"
-    ],
-    "summary": "Department of Health and Social Care and MHRA register of electronic export certificates (human).",
-    "source_metadata": {
-      "document_type": "decision",
-      "document_stage": "decision_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Medicines and Healthcare products Regulatory Agency",
-      "jurisdiction": "UK",
-      "family": "typed_government_documents"
-    },
-    "primary_source_id": "uk-govuk-decision",
-    "n": 9289,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "uk-govuk-decision"
-    ]
-  },
-  {
-    "title": "CAC Outcome: Unite the Union & Blank Street Coffee Shop",
-    "url": "https://www.gov.uk/government/publications/cac-outcome-unite-the-union-blank-street-coffee-shop",
-    "native_id": "/government/publications/cac-outcome-unite-the-union-blank-street-coffee-shop",
-    "published_at": "2026-11-09T13:52:40+00:00",
-    "published_raw": "2026-11-09T13:52:40Z",
-    "document_type": "decision",
-    "issuer": "Central Arbitration Committee",
-    "issuer_ids": [
-      "uk-gov:central-arbitration-committee"
-    ],
-    "summary": "Outcome(s) by the Central Arbitration Committee on an application from Unite the Union.",
-    "source_metadata": {
-      "document_type": "decision",
-      "document_stage": "decision_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Central Arbitration Committee",
-      "jurisdiction": "UK",
-      "family": "typed_government_documents"
-    },
-    "primary_source_id": "uk-govuk-decision",
-    "n": 9290,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "uk-govuk-decision"
-    ]
-  },
-  {
-    "title": "UK REACH authorisation for AB Connectors Limited, 19 October 2026",
-    "url": "https://www.gov.uk/government/publications/uk-reach-authorisation-for-ab-connectors-limited-19-october-2026",
-    "native_id": "/government/publications/uk-reach-authorisation-for-ab-connectors-limited-19-october-2026",
-    "published_at": "2026-11-09T11:15:14+00:00",
-    "published_raw": "2026-11-09T11:15:14Z",
-    "document_type": "decision",
-    "issuer": "Department for Environment, Food & Rural Affairs",
-    "issuer_ids": [
-      "uk-gov:department-for-environment-food-rural-affairs"
-    ],
-    "summary": "Decision on an application for authorisation under UK REACH.",
-    "source_metadata": {
-      "document_type": "decision",
-      "document_stage": "decision_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Department for Environment, Food & Rural Affairs",
-      "jurisdiction": "UK",
-      "family": "typed_government_documents"
-    },
-    "primary_source_id": "uk-govuk-decision",
-    "n": 9291,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "uk-govuk-decision"
-    ]
-  },
-  {
-    "title": "SG1 2NY, Glaxosmithkline Research & Development Limited: environmental permit surrender and variation – EPR/YP3236SA/S008 and EPR/YP3236SA/V009",
-    "url": "https://www.gov.uk/government/publications/sg1-2ny-glaxosmithkline-research-development-limited-environmental-permit-surrender-and-variation-epryp3236sas008-and-epryp3236sav009",
-    "native_id": "/government/publications/sg1-2ny-glaxosmithkline-research-development-limited-environmental-permit-surrender-and-variation-epryp3236sas008-and-epryp3236sav009",
-    "published_at": "2026-11-09T10:13:54+00:00",
-    "published_raw": "2026-11-09T10:13:54Z",
-    "document_type": "decision",
-    "issuer": "Environment Agency",
-    "issuer_ids": [
-      "uk-gov:environment-agency"
-    ],
-    "summary": "View the permit surrender and variation for Stevenage Energy Centre, Gunnels Wood under the Industrial Emissions Directive.",
-    "source_metadata": {
-      "document_type": "decision",
-      "document_stage": "decision_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Environment Agency",
-      "jurisdiction": "UK",
-      "family": "typed_government_documents"
-    },
-    "primary_source_id": "uk-govuk-decision",
-    "n": 9292,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "uk-govuk-decision"
-    ]
-  },
-  {
-    "title": "Company Names Tribunal decision: Arab Society for Paediatric Endocrinology and Diabetes",
-    "url": "https://www.gov.uk/government/publications/company-names-tribunal-decision-arab-society-for-paediatric-endocrinology-and-diabetes",
-    "native_id": "/government/publications/company-names-tribunal-decision-arab-society-for-paediatric-endocrinology-and-diabetes",
-    "published_at": "2026-11-09T09:38:22+00:00",
-    "published_raw": "2026-11-09T09:38:22Z",
-    "document_type": "decision",
-    "issuer": "Company Names Tribunal",
-    "issuer_ids": [
-      "uk-gov:company-names-tribunal"
-    ],
-    "summary": "Decision for applicant Middle East and North Africa Society for Pediatric Endocrinology and Diabetes registration number 17047349 applicant successful.",
-    "source_metadata": {
-      "document_type": "decision",
-      "document_stage": "decision_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Company Names Tribunal",
-      "jurisdiction": "UK",
-      "family": "typed_government_documents"
-    },
-    "primary_source_id": "uk-govuk-decision",
-    "n": 9293,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "uk-govuk-decision"
-    ]
-  },
-  {
-    "title": "Company Names Tribunal decision: Temuland Limited",
-    "url": "https://www.gov.uk/government/publications/company-names-tribunal-decision-temuland-limited",
-    "native_id": "/government/publications/company-names-tribunal-decision-temuland-limited",
-    "published_at": "2026-11-09T09:34:33+00:00",
-    "published_raw": "2026-11-09T09:34:33Z",
-    "document_type": "decision",
-    "issuer": "Company Names Tribunal",
-    "issuer_ids": [
-      "uk-gov:company-names-tribunal"
-    ],
-    "summary": "Decision for applicant Five Bells Limited and Whaleco UK Limited registration number 17010774 applicant successful.",
-    "source_metadata": {
-      "document_type": "decision",
-      "document_stage": "decision_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Company Names Tribunal",
-      "jurisdiction": "UK",
-      "family": "typed_government_documents"
-    },
-    "primary_source_id": "uk-govuk-decision",
-    "n": 9294,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "uk-govuk-decision"
-    ]
-  },
-  {
-    "title": "Company Names Tribunal decision: Aviva Recruitment Limited",
-    "url": "https://www.gov.uk/government/publications/company-names-tribunal-decision-aviva-recruitment-limited",
-    "native_id": "/government/publications/company-names-tribunal-decision-aviva-recruitment-limited",
-    "published_at": "2026-11-09T09:34:03+00:00",
-    "published_raw": "2026-11-09T09:34:03Z",
-    "document_type": "decision",
-    "issuer": "Company Names Tribunal",
-    "issuer_ids": [
-      "uk-gov:company-names-tribunal"
-    ],
-    "summary": "Decision for applicant Aviva Brands Limited registration number 16067920 applicant successful.",
-    "source_metadata": {
-      "document_type": "decision",
-      "document_stage": "decision_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Company Names Tribunal",
-      "jurisdiction": "UK",
-      "family": "typed_government_documents"
-    },
-    "primary_source_id": "uk-govuk-decision",
-    "n": 9295,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "uk-govuk-decision"
-    ]
-  },
-  {
-    "title": "Company Names Tribunal decision: HCA Healthcare Services (UK) Limited",
-    "url": "https://www.gov.uk/government/publications/company-names-tribunal-decision-hca-healthcare-services-uk-limited",
-    "native_id": "/government/publications/company-names-tribunal-decision-hca-healthcare-services-uk-limited",
-    "published_at": "2026-11-09T09:33:00+00:00",
-    "published_raw": "2026-11-09T09:33:00Z",
-    "document_type": "decision",
-    "issuer": "Company Names Tribunal",
-    "issuer_ids": [
-      "uk-gov:company-names-tribunal"
-    ],
-    "summary": "Decision for applicant HCA International Limited (T/A HCA Healthcare UK) registration number 14603826 applicant successful.",
-    "source_metadata": {
-      "document_type": "decision",
-      "document_stage": "decision_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Company Names Tribunal",
-      "jurisdiction": "UK",
-      "family": "typed_government_documents"
-    },
-    "primary_source_id": "uk-govuk-decision",
-    "n": 9296,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "uk-govuk-decision"
-    ]
-  },
-  {
-    "title": "Company Names Tribunal decision: FxPro & Saxo & Plus Investment Brokers UK Ltd",
-    "url": "https://www.gov.uk/government/publications/company-names-tribunal-decision-fxpro-saxo-plus-investment-brokers-uk-ltd",
-    "native_id": "/government/publications/company-names-tribunal-decision-fxpro-saxo-plus-investment-brokers-uk-ltd",
-    "published_at": "2026-11-09T09:32:00+00:00",
-    "published_raw": "2026-11-09T09:32:00Z",
-    "document_type": "decision",
-    "issuer": "Company Names Tribunal",
-    "issuer_ids": [
-      "uk-gov:company-names-tribunal"
-    ],
-    "summary": "Decision for applicant FxPro Markets Ltd., registration number 16591655 applicant successful.",
-    "source_metadata": {
-      "document_type": "decision",
-      "document_stage": "decision_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Company Names Tribunal",
-      "jurisdiction": "UK",
-      "family": "typed_government_documents"
-    },
-    "primary_source_id": "uk-govuk-decision",
-    "n": 9297,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "uk-govuk-decision"
-    ]
-  },
-  {
-    "title": "Company Names Tribunal decision: Oracle Group Investment Ltd",
-    "url": "https://www.gov.uk/government/publications/company-names-tribunal-decision-oracle-group-investment-ltd",
-    "native_id": "/government/publications/company-names-tribunal-decision-oracle-group-investment-ltd",
-    "published_at": "2026-11-09T09:30:44+00:00",
-    "published_raw": "2026-11-09T09:30:44Z",
-    "document_type": "decision",
-    "issuer": "Company Names Tribunal",
-    "issuer_ids": [
-      "uk-gov:company-names-tribunal"
-    ],
-    "summary": "Decision for applicant Oracle International Corporation registration number 17009974 applicant successful.",
-    "source_metadata": {
-      "document_type": "decision",
-      "document_stage": "decision_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Company Names Tribunal",
-      "jurisdiction": "UK",
-      "family": "typed_government_documents"
-    },
-    "primary_source_id": "uk-govuk-decision",
-    "n": 9298,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "uk-govuk-decision"
-    ]
-  },
-  {
-    "title": "CAC Outcome: RMT & Land Sheriffs Limited",
-    "url": "https://www.gov.uk/government/publications/cac-outcome-rmt-land-sheriffs-limited",
-    "native_id": "/government/publications/cac-outcome-rmt-land-sheriffs-limited",
-    "published_at": "2026-11-09T08:29:38+00:00",
-    "published_raw": "2026-11-09T08:29:38Z",
-    "document_type": "decision",
-    "issuer": "Central Arbitration Committee",
-    "issuer_ids": [
-      "uk-gov:central-arbitration-committee"
-    ],
-    "summary": "Outcome(s) by the Central Arbitration Committee on an application from RMT.",
-    "source_metadata": {
-      "document_type": "decision",
-      "document_stage": "decision_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Central Arbitration Committee",
-      "jurisdiction": "UK",
-      "family": "typed_government_documents"
-    },
-    "primary_source_id": "uk-govuk-decision",
-    "n": 9299,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "uk-govuk-decision"
-    ]
-  },
-  {
-    "title": "CAC Outcome: RMT & Belmond (UK) Limited",
-    "url": "https://www.gov.uk/government/publications/cac-outcome-rmt-belmond-uk-limited",
-    "native_id": "/government/publications/cac-outcome-rmt-belmond-uk-limited",
-    "published_at": "2026-11-09T08:29:08+00:00",
-    "published_raw": "2026-11-09T08:29:08Z",
-    "document_type": "decision",
-    "issuer": "Central Arbitration Committee",
-    "issuer_ids": [
-      "uk-gov:central-arbitration-committee"
-    ],
-    "summary": "Outcome(s) by the Central Arbitration Committee on an application from RMT.",
-    "source_metadata": {
-      "document_type": "decision",
-      "document_stage": "decision_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Central Arbitration Committee",
-      "jurisdiction": "UK",
-      "family": "typed_government_documents"
-    },
-    "primary_source_id": "uk-govuk-decision",
-    "n": 9300,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "uk-govuk-decision"
-    ]
-  },
-  {
-    "title": "Hong Kong International Convention for the Safe and Environmentally Sound Recycling of Ships, 2009 [MS No.12/2026]",
-    "url": "https://www.gov.uk/government/publications/hong-kong-international-convention-for-the-safe-and-environmentally-sound-recycling-of-ships-2009-ms-no122026",
-    "native_id": "/government/publications/hong-kong-international-convention-for-the-safe-and-environmentally-sound-recycling-of-ships-2009-ms-no122026",
-    "published_at": "2026-11-09T14:00:00+00:00",
-    "published_raw": "2026-11-09T14:00:00Z",
-    "document_type": "international_treaty",
-    "issuer": "Foreign, Commonwealth & Development Office",
-    "issuer_ids": [
-      "uk-gov:foreign-commonwealth-development-office"
-    ],
-    "summary": "This treaty was presented to Parliament in November 2026.",
-    "source_metadata": {
-      "document_type": "international_treaty",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Foreign, Commonwealth & Development Office",
-      "jurisdiction": "UK",
-      "family": "typed_government_documents"
-    },
-    "primary_source_id": "uk-govuk-international_treaty",
-    "n": 9301,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "uk-govuk-international_treaty"
-    ]
-  },
-  {
-    "title": "UK/Korea: Agreement on the Protection of Classified Military Information [TS No.44/2026]",
-    "url": "https://www.gov.uk/government/publications/ukkorea-agreement-on-the-protection-of-classified-military-information-ts-no442026",
-    "native_id": "/government/publications/ukkorea-agreement-on-the-protection-of-classified-military-information-ts-no442026",
-    "published_at": "2026-11-09T14:00:00+00:00",
-    "published_raw": "2026-11-09T14:00:00Z",
-    "document_type": "international_treaty",
-    "issuer": "Foreign, Commonwealth & Development Office",
-    "issuer_ids": [
-      "uk-gov:foreign-commonwealth-development-office"
-    ],
-    "summary": "This treaty was presented to Parliament in November 2026.",
-    "source_metadata": {
-      "document_type": "international_treaty",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Foreign, Commonwealth & Development Office",
-      "jurisdiction": "UK",
-      "family": "typed_government_documents"
-    },
-    "primary_source_id": "uk-govuk-international_treaty",
-    "n": 9302,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "uk-govuk-international_treaty"
-    ]
-  },
-  {
-    "title": "Public Law 119 - 138 - Accelerating Access to Critical Therapies for ALS Reauthorization Act of 2026",
-    "url": "https://www.govinfo.gov/app/details/PLAW-119publ138",
-    "native_id": "PLAW-119publ138",
-    "published_at": "2026-11-09T15:10:00+00:00",
-    "published_raw": "Mon, 09 Nov 2026 15:10:00 +0000",
-    "summary": "Content Files PDF TEXT USLM Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "public_law",
-      "document_stage": "law_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Public and Private Laws",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-plaw",
-    "n": 9303,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "us-govinfo-plaw"
-    ]
-  },
-  {
-    "title": "Public Law 119 - 137 - United States Commission on International Religious Freedom Reauthorization Act of 2026",
-    "url": "https://www.govinfo.gov/app/details/PLAW-119publ137",
-    "native_id": "PLAW-119publ137",
-    "published_at": "2026-11-09T15:11:00+00:00",
-    "published_raw": "Mon, 09 Nov 2026 15:11:00 +0000",
-    "summary": "Content Files PDF TEXT USLM Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "public_law",
-      "document_stage": "law_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Public and Private Laws",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-plaw",
-    "n": 9304,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "us-govinfo-plaw"
-    ]
-  },
-  {
-    "title": "DCPD-202600682 - Remarks in an Exchange With Reporters Upon Arrival From Sparrows Point, Maryland",
-    "url": "https://www.govinfo.gov/app/details/DCPD-202600682",
-    "native_id": "DCPD-202600682",
-    "published_at": "2026-11-09T21:59:00+00:00",
-    "published_raw": "Mon, 09 Nov 2026 21:59:00 +0000",
-    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "presidential_document",
-      "document_stage": "presidential_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Compilation of Presidential Documents",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-dcpd",
-    "n": 9305,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "us-govinfo-dcpd"
-    ]
-  },
-  {
-    "title": "DCPD-202600680 - Remarks on Maritime Policy in Sparrows Point, Maryland",
-    "url": "https://www.govinfo.gov/app/details/DCPD-202600680",
-    "native_id": "DCPD-202600680",
-    "published_at": "2026-11-09T21:59:00+00:00",
-    "published_raw": "Mon, 09 Nov 2026 21:59:00 +0000",
-    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "presidential_document",
-      "document_stage": "presidential_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Compilation of Presidential Documents",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-dcpd",
-    "n": 9306,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "us-govinfo-dcpd"
-    ]
-  },
-  {
-    "title": "DCPD-202600683 - Remarks on the Trump Accounts Children's Savings Program and an Exchange With Reporters",
-    "url": "https://www.govinfo.gov/app/details/DCPD-202600683",
-    "native_id": "DCPD-202600683",
-    "published_at": "2026-11-09T21:59:00+00:00",
-    "published_raw": "Mon, 09 Nov 2026 21:59:00 +0000",
-    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "presidential_document",
-      "document_stage": "presidential_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Compilation of Presidential Documents",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-dcpd",
-    "n": 9307,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "us-govinfo-dcpd"
-    ]
-  },
-  {
-    "title": "DCPD-202600681 - Message on German American Day",
-    "url": "https://www.govinfo.gov/app/details/DCPD-202600681",
-    "native_id": "DCPD-202600681",
-    "published_at": "2026-11-09T21:59:00+00:00",
-    "published_raw": "Mon, 09 Nov 2026 21:59:00 +0000",
-    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "presidential_document",
-      "document_stage": "presidential_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Compilation of Presidential Documents",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-dcpd",
-    "n": 9308,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "us-govinfo-dcpd"
-    ]
-  },
-  {
-    "title": "DCPD-202600678 - Remarks at a Campaign Rally for Nebraska Republican Candidates in Grand Island, Nebraska",
-    "url": "https://www.govinfo.gov/app/details/DCPD-202600678",
-    "native_id": "DCPD-202600678",
-    "published_at": "2026-11-09T21:59:00+00:00",
-    "published_raw": "Mon, 09 Nov 2026 21:59:00 +0000",
-    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "presidential_document",
-      "document_stage": "presidential_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Compilation of Presidential Documents",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-dcpd",
-    "n": 9309,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "us-govinfo-dcpd"
-    ]
-  },
-  {
-    "title": "Nominations and Withdrawals Sent to the Senate",
-    "url": "https://www.whitehouse.gov/presidential-actions/2026/11/nominations-and-withdrawals-sent-to-the-senate-ba2b/",
-    "native_id": "https://www.whitehouse.gov/?p=54318",
-    "published_at": "2026-11-09T22:53:29+00:00",
-    "published_raw": "Mon, 09 Nov 2026 22:53:29 +0000",
-    "summary": "NOMINATIONS SENT TO THE SENATE: Philip Lawrence Aubart, of North Carolina, to be United States District Judge for the Middle District of North Carolina, vice William Lindsay Osteen, Jr., retiring. Natalie Baker, of Texas, a Career Member of the Senior Foreign Service, Class of Minister-Counselor, to be Ambassador Extraordinary and Plenipotentiary of the United States […] The post Nominations and Withdrawals Sent to the Senate appeared first on The White House .",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "White House presidential actions",
-      "jurisdiction": "US",
-      "family": "executive_instruments"
-    },
-    "primary_source_id": "us-white-house-0691096d16",
-    "n": 9310,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "us-white-house-0691096d16"
-    ]
-  },
-  {
-    "title": "Mullin v. Friends of the Ruidosa Church",
-    "url": "https://www.supremecourt.gov/opinions/26pdf/26a560_onkq.pdf",
-    "native_id": "https://www.supremecourt.gov/opinions/26pdf/26a560_onkq.pdf",
-    "published_at": "2026-11-09T00:00:00+00:00",
-    "published_raw": "2026-11-09T00:00:00+00:00",
-    "summary": "",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Supreme Court opinions and orders",
-      "jurisdiction": "US",
-      "family": "judicial_decisions"
-    },
-    "primary_source_id": "us-supreme-court-index",
-    "n": 9311,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "us-supreme-court-index"
-    ]
-  },
-  {
-    "title": "FTC Action Results in Court Issuing Temporary Restraining Order Halting Phantom Debt Collection Operation",
-    "url": "https://www.ftc.gov/news-events/news/press-releases/2026/11/ftc-action-results-court-issuing-temporary-restraining-order-halting-phantom-debt-collection",
-    "native_id": "338931",
-    "published_at": "2026-11-09T12:00:00+00:00",
-    "published_raw": "Mon, 09 Nov 2026 07:00:00 -0500",
-    "summary": "Complaint alleges scheme operators used false threats to collect over $20 million in often-fictitious debts from consumers At the Federal Trade Commission’s request, a federal court has temporarily halted and frozen the assets of a debt collection operation that allegedly used deceptive and unlawful tactics to pressure consumers into paying debts that they frequently did not owe. View Press Release",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Trade Commission — Press Releases",
-      "jurisdiction": "US",
-      "family": "competition_and_enforcement"
-    },
-    "primary_source_id": "us-ftc-58b0383166",
-    "n": 9312,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "us-ftc-58b0383166",
-      "us-ftc-62f72b4a5d"
-    ]
-  },
-  {
-    "title": "FTC Secures Settlement with Stream Auto Outlet, Advancing Price Transparency for Auto-Buying Consumers",
-    "url": "https://www.ftc.gov/news-events/news/press-releases/2026/11/ftc-secures-settlement-stream-auto-outlet-advancing-price-transparency-auto-buying-consumers",
-    "native_id": "338934",
-    "published_at": "2026-11-09T12:00:00+00:00",
-    "published_raw": "Mon, 09 Nov 2026 07:00:00 -0500",
-    "summary": "The Federal Trade Commission announced an agreement today with Stream Auto Outlet, resolving claims that the Long Island, New York-based dealership group deceived consumers by advertising prices far lower than what consumers ultimately had to pay. View Press Release",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Trade Commission — Press Releases",
-      "jurisdiction": "US",
-      "family": "competition_and_enforcement"
-    },
-    "primary_source_id": "us-ftc-58b0383166",
-    "n": 9313,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "us-ftc-58b0383166",
-      "us-ftc-62f72b4a5d"
-    ]
-  },
-  {
-    "title": "20262301: LW Acquisition Holdings, LP; Peak Rock Capital Fund III LP",
-    "url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20262301",
-    "native_id": "338935 at https://www.ftc.gov",
-    "published_at": "2026-11-09T19:21:10+00:00",
-    "published_raw": "Mon, 09 Nov 2026 19:21:10 +0000",
-    "summary": "20262301: LW Acquisition Holdings, LP; Peak Rock Capital Fund III LP Date November 6, 2026 bacree November 9, 2026 | 2:21PM Transaction Number 20262301 Acquiring Party LW Acquisition Holdings, LP Acquired Party Peak Rock Capital Fund III LP Granting Status Granted Acquired Entities Sigma Blocker LLC Sigma Guarantor LLC",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Trade Commission — HSR Early Termination Notices",
-      "jurisdiction": "US",
-      "family": "competition_and_enforcement"
-    },
-    "primary_source_id": "us-ftc-df73e297e1",
-    "n": 9314,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "us-ftc-df73e297e1"
-    ]
-  },
-  {
-    "title": "Justice Department Awards Jackson, Mississippi, more than $63M to Combat Violent Crime and Restore Law and Order Through Model Cities Initiative",
-    "url": "https://www.justice.gov/opa/pr/justice-department-awards-jackson-mississippi-more-63m-combat-violent-crime-and-restore-law",
-    "native_id": "https://www.justice.gov/opa/pr/justice-department-awards-jackson-mississippi-more-63m-combat-violent-crime-and-restore-law",
+    "title": "Justice Department Sues Lyft for Denying Rides to Passengers with Service Dogs, Wheelchairs",
+    "url": "https://www.justice.gov/opa/pr/justice-department-sues-lyft-denying-rides-passengers-service-dogs-wheelchairs",
+    "native_id": "https://www.justice.gov/opa/pr/justice-department-sues-lyft-denying-rides-passengers-service-dogs-wheelchairs",
     "published_at": "2026-11-09T12:00:00+00:00",
     "published_raw": "Mon, 09 Nov 2026 12:00:00 +0000",
-    "summary": "Today, the Justice Department awarded Jackson, Mississippi, more than $63 million through its Model Cities Initiative (MCI), a flagship effort to reduce violent crime, restore law and order, and strengthen public safety in communities across the country.",
+    "summary": "Today, the Justice Department (Department) filed a lawsuit against Lyft Inc., for discriminating against passengers with disabilities, including those who use service animals and mobility devices such as stowable wheelchairs. Lyft provides an important transportation option for millions of people throughout the United States. The lawsuit seeks $53 million for individuals with disabilities who Lyft has discriminated against, and who have submitted complaints to Lyft or the Department.",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
@@ -712,21 +16,21 @@
       "family": "judicial_and_enforcement"
     },
     "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 9315,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
+    "n": 9412,
+    "first_seen": "2026-11-10T08:27:24.121930+00:00",
+    "last_seen": "2026-11-10T08:27:24.121930+00:00",
     "source_ids": [
       "us-doj-b3d27e1dc3",
       "us-doj-e05071794d"
     ]
   },
   {
-    "title": "United States Attorney's Office Files Civil Forfeiture Action to Recover Cryptocurrency Involved in Romance Fraud Schemes",
-    "url": "https://www.justice.gov/usao-ma/pr/united-states-attorneys-office-files-civil-forfeiture-action-recover-cryptocurrency-1",
-    "native_id": "https://www.justice.gov/usao-ma/pr/united-states-attorneys-office-files-civil-forfeiture-action-recover-cryptocurrency-1",
+    "title": "New Orleans Man Indicted for Violating Federal Controlled Substances Act",
+    "url": "https://www.justice.gov/usao-edla/pr/new-orleans-man-indicted-violating-federal-controlled-substances-act-2",
+    "native_id": "https://www.justice.gov/usao-edla/pr/new-orleans-man-indicted-violating-federal-controlled-substances-act-2",
     "published_at": "2026-11-09T12:00:00+00:00",
     "published_raw": "Mon, 09 Nov 2026 12:00:00 +0000",
-    "summary": "BOSTON – The United States Attorney’s Office has filed a civil forfeiture action to recover 456,602 USDT (Tether), alleged to be proceeds of romance fraud schemes targeting individuals in Massachusetts and elsewhere on online dating sites and Facebook. The cryptocurrency currently has an estimated value of approximately $456,602.",
+    "summary": "NEW ORLEANS, LA – On October 16, 2026, DOMINICK CURRY (\"CURRY\") , age 41, of New Orleans, was charged in a recently unsealed indictment with possession with intent to distribute controlled substances, in violation of Title 21, United States Code, Sections 841(a)(1), 841(b)(1)(A), and 841(b)(1)(B), announced United States Attorney David I. Courcelle.",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
@@ -737,65 +41,17 @@
       "family": "judicial_and_enforcement"
     },
     "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 9316,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
+    "n": 9413,
+    "first_seen": "2026-11-10T08:27:24.121930+00:00",
+    "last_seen": "2026-11-10T08:27:24.121930+00:00",
     "source_ids": [
       "us-doj-b3d27e1dc3"
     ]
   },
   {
-    "title": "Man Sentenced to 14 Years for Attempting to Coerce a 15-year-old to Engage in Prostitution",
-    "url": "https://www.justice.gov/usao-sdca/pr/man-sentenced-14-years-attempting-coerce-15-year-old-engage-prostitution",
-    "native_id": "https://www.justice.gov/usao-sdca/pr/man-sentenced-14-years-attempting-coerce-15-year-old-engage-prostitution",
-    "published_at": "2026-11-09T12:00:00+00:00",
-    "published_raw": "Mon, 09 Nov 2026 12:00:00 +0000",
-    "summary": "SAN DIEGO – K’John Henry Sands II of Los Angeles was sentenced in federal court today to 168 months in prison for attempting to coerce a 15-year-old minor to engage in prostitution. Sands pleaded guilty on August 25, 2026, to one count of Attempted Coercion and Enticement of a Minor. According to his plea agreement, Sands also admitted to video recording the minor performing oral sex on him.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Department of Justice",
-      "jurisdiction": "US",
-      "family": "judicial_and_enforcement"
-    },
-    "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 9317,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "us-doj-b3d27e1dc3"
-    ]
-  },
-  {
-    "title": "Denver Man Sentenced To 89 Months After Pleading Guilty to Drug and Firearms Charges",
-    "url": "https://www.justice.gov/usao-co/pr/denver-man-sentenced-89-months-after-pleading-guilty-drug-and-firearms-charges",
-    "native_id": "https://www.justice.gov/usao-co/pr/denver-man-sentenced-89-months-after-pleading-guilty-drug-and-firearms-charges",
-    "published_at": "2026-11-09T12:00:00+00:00",
-    "published_raw": "Mon, 09 Nov 2026 12:00:00 +0000",
-    "summary": "DENVER – The United States Attorney’s Office for the District of Colorado announces that Christopher Epperson, 56, of Denver, was sentenced to 89 months in prison after pleading guilty to one count of possession with intent to distribute methamphetamine and one count of being a felon in possession of a firearm and ammunition.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Department of Justice",
-      "jurisdiction": "US",
-      "family": "judicial_and_enforcement"
-    },
-    "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 9318,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "us-doj-b3d27e1dc3"
-    ]
-  },
-  {
-    "title": "Martin, KY Man Sentenced for Trafficking in Methamphetamine and Possession of a Firearm in Furtherance of Drug Trafficking",
-    "url": "https://www.justice.gov/usao-edky/pr/martin-ky-man-sentenced-trafficking-methamphetamine-and-possession-firearm-furtherance",
-    "native_id": "https://www.justice.gov/usao-edky/pr/martin-ky-man-sentenced-trafficking-methamphetamine-and-possession-firearm-furtherance",
+    "title": "Rice Lake Man Sentenced to 5 Years for Distributing Child Pornography",
+    "url": "https://www.justice.gov/usao-wdwi/pr/rice-lake-man-sentenced-5-years-distributing-child-pornography",
+    "native_id": "https://www.justice.gov/usao-wdwi/pr/rice-lake-man-sentenced-5-years-distributing-child-pornography",
     "published_at": "2026-11-09T12:00:00+00:00",
     "published_raw": "Mon, 09 Nov 2026 12:00:00 +0000",
     "summary": "",
@@ -809,20 +65,20 @@
       "family": "judicial_and_enforcement"
     },
     "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 9319,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
+    "n": 9414,
+    "first_seen": "2026-11-10T08:27:24.121930+00:00",
+    "last_seen": "2026-11-10T08:27:24.121930+00:00",
     "source_ids": [
       "us-doj-b3d27e1dc3"
     ]
   },
   {
-    "title": "Panga Boat Pilots Sentenced in Maritime Smuggling Event that Killed Four in Homeland Security Task Force Case",
-    "url": "https://www.justice.gov/usao-sdca/pr/panga-boat-pilots-sentenced-maritime-smuggling-event-killed-four-homeland-security",
-    "native_id": "https://www.justice.gov/usao-sdca/pr/panga-boat-pilots-sentenced-maritime-smuggling-event-killed-four-homeland-security",
+    "title": "Geneva man pleads guilty to possession of child pornography",
+    "url": "https://www.justice.gov/usao-wdny/pr/geneva-man-pleads-guilty-possession-child-pornography",
+    "native_id": "https://www.justice.gov/usao-wdny/pr/geneva-man-pleads-guilty-possession-child-pornography",
     "published_at": "2026-11-09T12:00:00+00:00",
     "published_raw": "Mon, 09 Nov 2026 12:00:00 +0000",
-    "summary": "SAN DIEGO – Jesus Ivan Rodriguez Leyva and Julio Cesar Zuniga Luna, both Mexican nationals, were sentenced in federal court today to 70 months in prison for piloting a panga which overturned near Del Mar, California in May 2025, resulting in the deaths of two Mexican national adults and two minors, ages 14 and 10, from India. Rodriguez and Zuniga pleaded guilty on April 14, 2026, to two counts of attempted bringing in illegal aliens resulting in death as well as two counts of attempted bringing in illegal aliens for financial gain.",
+    "summary": "U.S. Attorney Michael DiGiacomo announced today that Rafael Arroyo-Ubiles, 28, of Geneva, NY, pleaded guilty to possession of child pornography before U.S. District Judge Meredith A. Vacca. The charge carries a minimum penalty of 15 years in prison, a maximum of 20 years, a lifetime period of supervised release, and a $250,000 fine.",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
@@ -833,20 +89,20 @@
       "family": "judicial_and_enforcement"
     },
     "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 9320,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
+    "n": 9415,
+    "first_seen": "2026-11-10T08:27:24.121930+00:00",
+    "last_seen": "2026-11-10T08:27:24.121930+00:00",
     "source_ids": [
       "us-doj-b3d27e1dc3"
     ]
   },
   {
-    "title": "Sex Offender Sentenced to Prison for Violating the Federal Sex Offender Registration and Notification Act",
-    "url": "https://www.justice.gov/usao-sdwv/pr/sex-offender-sentenced-prison-violating-federal-sex-offender-registration-and-0",
-    "native_id": "https://www.justice.gov/usao-sdwv/pr/sex-offender-sentenced-prison-violating-federal-sex-offender-registration-and-0",
+    "title": "Las Vegas Man Sentenced to Seven Years in Prison for Trafficking Methamphetamine and Fentanyl, and Money Laundering",
+    "url": "https://www.justice.gov/usao-nv/pr/las-vegas-man-sentenced-seven-years-prison-trafficking-methamphetamine-and-fentanyl-and",
+    "native_id": "https://www.justice.gov/usao-nv/pr/las-vegas-man-sentenced-seven-years-prison-trafficking-methamphetamine-and-fentanyl-and",
     "published_at": "2026-11-09T12:00:00+00:00",
     "published_raw": "Mon, 09 Nov 2026 12:00:00 +0000",
-    "summary": "",
+    "summary": "LAS VEGAS – A Las Vegas man was sentenced today by United States District Judge Cristina D. Silva to 84 months in prison to be followed by three years of supervised release for his role in a conspiracy to distribute methamphetamine and fentanyl, and to launder thousands of dollars of drug proceeds to Mexico. The government recommended a sentence of 84 months in prison.",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
@@ -857,20 +113,20 @@
       "family": "judicial_and_enforcement"
     },
     "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 9321,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
+    "n": 9416,
+    "first_seen": "2026-11-10T08:27:24.121930+00:00",
+    "last_seen": "2026-11-10T08:27:24.121930+00:00",
     "source_ids": [
       "us-doj-b3d27e1dc3"
     ]
   },
   {
-    "title": "Department of Justice Recognizes Three U.S. Attorney's Office Employees With Director's Award",
-    "url": "https://www.justice.gov/usao-ma/pr/department-justice-recognizes-three-us-attorneys-office-employees-directors-award",
-    "native_id": "https://www.justice.gov/usao-ma/pr/department-justice-recognizes-three-us-attorneys-office-employees-directors-award",
+    "title": "Buffalo man sentenced for gun possession",
+    "url": "https://www.justice.gov/usao-wdny/pr/buffalo-man-sentenced-gun-possession",
+    "native_id": "https://www.justice.gov/usao-wdny/pr/buffalo-man-sentenced-gun-possession",
     "published_at": "2026-11-09T12:00:00+00:00",
     "published_raw": "Mon, 09 Nov 2026 12:00:00 +0000",
-    "summary": "BOSTON – United States Attorney Leah B. Foley announced that three employees of the U.S. Attorney’s Office were selected as recipients of the 2026 Executive Office for United States Attorneys (EOUSA) Director’s Award. The Director’s Award recognizes excellence across the U.S. Attorney community and honors the exceptional contributions to the Justice Department’s mission by attorneys and support personnel, serving in the nation’s 94 federal districts. The following individuals were recognized at the award ceremony in Washington, D.C. on Oct. 28, 2026:",
+    "summary": "U.S. Attorney Michael DiGiacomo announced today that Nazir Binhuguley, 24, of Cheektowaga, NY, who was convicted of possession of a firearm in furtherance of drug trafficking, was sentenced to serve 60 months in prison by U.S. District Judge Richard J. Arcara.",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
@@ -881,20 +137,20 @@
       "family": "judicial_and_enforcement"
     },
     "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 9322,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
+    "n": 9417,
+    "first_seen": "2026-11-10T08:27:24.121930+00:00",
+    "last_seen": "2026-11-10T08:27:24.121930+00:00",
     "source_ids": [
       "us-doj-b3d27e1dc3"
     ]
   },
   {
-    "title": "Chinese National Charged with Attempted Sex Trafficking of a 15-Year-Old Girl",
-    "url": "https://www.justice.gov/usao-sdfl/pr/chinese-national-charged-attempted-sex-trafficking-15-year-old-girl",
-    "native_id": "https://www.justice.gov/usao-sdfl/pr/chinese-national-charged-attempted-sex-trafficking-15-year-old-girl",
+    "title": "Conesus man pleads guilty to production of child pornography",
+    "url": "https://www.justice.gov/usao-wdny/pr/conesus-man-pleads-guilty-production-child-pornography",
+    "native_id": "https://www.justice.gov/usao-wdny/pr/conesus-man-pleads-guilty-production-child-pornography",
     "published_at": "2026-11-09T12:00:00+00:00",
     "published_raw": "Mon, 09 Nov 2026 12:00:00 +0000",
-    "summary": "A Chinese national has been charged with attempting to sex traffic a 15-year-old girl.",
+    "summary": "U.S. Attorney Michael DiGiacomo announced today that Donald Coty, 40, of Conesus, NY, pleaded guilty before U.S. District Judge Meredith A. Vacca to production and possession of child pornography. The charges carry a mandatory minimum penalty of 15 years in prison and a maximum of 30 years.",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
@@ -905,20 +161,20 @@
       "family": "judicial_and_enforcement"
     },
     "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 9323,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
+    "n": 9418,
+    "first_seen": "2026-11-10T08:27:24.121930+00:00",
+    "last_seen": "2026-11-10T08:27:24.121930+00:00",
     "source_ids": [
       "us-doj-b3d27e1dc3"
     ]
   },
   {
-    "title": "Justice Department Awards St. Louis more than $68M to Combat Violent Crime and Restore Law and Order Through Model Cities Initiative",
-    "url": "https://www.justice.gov/opa/pr/justice-department-awards-st-louis-more-68m-combat-violent-crime-and-restore-law-and-order",
-    "native_id": "https://www.justice.gov/opa/pr/justice-department-awards-st-louis-more-68m-combat-violent-crime-and-restore-law-and-order",
+    "title": "Homeland Security Task Force Investigation Leads to Indictment of Multiple Defendants in Fentanyl-Related Death Case",
+    "url": "https://www.justice.gov/usao-ut/pr/homeland-security-task-force-investigation-leads-indictment-multiple-defendants-fentanyl",
+    "native_id": "https://www.justice.gov/usao-ut/pr/homeland-security-task-force-investigation-leads-indictment-multiple-defendants-fentanyl",
     "published_at": "2026-11-09T12:00:00+00:00",
     "published_raw": "Mon, 09 Nov 2026 12:00:00 +0000",
-    "summary": "Today, the Justice Department awarded St. Louis, Missouri, more than $68 million through its Model Cities Initiative (MCI), a flagship effort to reduce violent crime, restore law and order, and strengthen public safety in communities across the country.",
+    "summary": "SALT LAKE CITY, Utah – A 15-count indictment has been unsealed charging multiple individuals for their alleged roles in an organized criminal enterprise involving several drug-trafficking offenses, including the distribution of fentanyl that resulted in the death of another person.",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
@@ -929,1918 +185,309 @@
       "family": "judicial_and_enforcement"
     },
     "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 9324,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
+    "n": 9419,
+    "first_seen": "2026-11-10T08:27:24.121930+00:00",
+    "last_seen": "2026-11-10T08:27:24.121930+00:00",
+    "source_ids": [
+      "us-doj-b3d27e1dc3"
+    ]
+  },
+  {
+    "title": "Merced County teacher indicted for distribution of child sexual abuse material (CSAM)",
+    "url": "https://www.justice.gov/usao-edca/pr/merced-county-teacher-indicted-distribution-child-sexual-abuse-material-csam",
+    "native_id": "https://www.justice.gov/usao-edca/pr/merced-county-teacher-indicted-distribution-child-sexual-abuse-material-csam",
+    "published_at": "2026-11-09T12:00:00+00:00",
+    "published_raw": "Mon, 09 Nov 2026 12:00:00 +0000",
+    "summary": "A federal grand jury returned a two-count indictment against Patrick Silva, 38, of Hilmar, charging him with distribution and possession of child sexual abuse material (CSAM).",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Department of Justice",
+      "jurisdiction": "US",
+      "family": "judicial_and_enforcement"
+    },
+    "primary_source_id": "us-doj-b3d27e1dc3",
+    "n": 9420,
+    "first_seen": "2026-11-10T08:27:24.121930+00:00",
+    "last_seen": "2026-11-10T08:27:24.121930+00:00",
+    "source_ids": [
+      "us-doj-b3d27e1dc3"
+    ]
+  },
+  {
+    "title": "North Carolina Man Indicted for Mailing Antisemitic Threats to Jewish Organizations and Secret Service Protectees in South Florida",
+    "url": "https://www.justice.gov/usao-sdfl/pr/north-carolina-man-indicted-mailing-antisemitic-threats-jewish-organizations-and",
+    "native_id": "https://www.justice.gov/usao-sdfl/pr/north-carolina-man-indicted-mailing-antisemitic-threats-jewish-organizations-and",
+    "published_at": "2026-11-09T12:00:00+00:00",
+    "published_raw": "Mon, 09 Nov 2026 12:00:00 +0000",
+    "summary": "A federal grand jury in the Southern District of Florida has returned an indictment against Brian Charles, 58, for allegedly mailing antisemitic letters threatening violence against Jewish organizations and individuals protected by the U.S. Secret Service.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Department of Justice",
+      "jurisdiction": "US",
+      "family": "judicial_and_enforcement"
+    },
+    "primary_source_id": "us-doj-b3d27e1dc3",
+    "n": 9421,
+    "first_seen": "2026-11-10T08:27:24.121930+00:00",
+    "last_seen": "2026-11-10T08:27:24.121930+00:00",
+    "source_ids": [
+      "us-doj-b3d27e1dc3"
+    ]
+  },
+  {
+    "title": "Justice Department Sues the City of Glendale, California for Violating Citizens’ Second Amendment Rights Through Unreasonable Fees and Processes for Legal Firearm Permitting",
+    "url": "https://www.justice.gov/opa/pr/justice-department-sues-city-glendale-california-violating-citizens-second-amendment-rights",
+    "native_id": "https://www.justice.gov/opa/pr/justice-department-sues-city-glendale-california-violating-citizens-second-amendment-rights",
+    "published_at": "2026-11-09T12:00:00+00:00",
+    "published_raw": "Mon, 09 Nov 2026 12:00:00 +0000",
+    "summary": "Today, the United States Department of Justice sued the City of Glendale, California, for violating citizens’ fundamental rights under the Second Amendment by requiring unreasonable fees to obtain concealed carry permits.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Department of Justice",
+      "jurisdiction": "US",
+      "family": "judicial_and_enforcement"
+    },
+    "primary_source_id": "us-doj-b3d27e1dc3",
+    "n": 9422,
+    "first_seen": "2026-11-10T08:27:24.121930+00:00",
+    "last_seen": "2026-11-10T08:27:24.121930+00:00",
     "source_ids": [
       "us-doj-b3d27e1dc3",
       "us-doj-e05071794d"
     ]
   },
   {
-    "title": "Pecos Woman Pleads Guilty to IRS Fraud Scheme",
-    "url": "https://www.justice.gov/usao-nm/pr/pecos-woman-pleads-guilty-irs-fraud-scheme",
-    "native_id": "https://www.justice.gov/usao-nm/pr/pecos-woman-pleads-guilty-irs-fraud-scheme",
-    "published_at": "2026-11-09T12:00:00+00:00",
-    "published_raw": "Mon, 09 Nov 2026 12:00:00 +0000",
-    "summary": "Sandra Vega pleaded guilty to impersonating an IRS agent in order to defraud a victim out of more than $150,000.",
+    "title": "Newly Added Guidance Documents | Drugs",
+    "url": "http://www.fda.gov/drugs/guidances-drugs/newly-added-guidance-documents-drugs",
+    "native_id": "http://www.fda.gov/drugs/guidances-drugs/newly-added-guidance-documents-drugs",
+    "published_at": "2026-11-09T23:03:07+00:00",
+    "published_raw": "Mon, 09 Nov 2026 18:03:07 EST",
+    "summary": "Guidance documents represent the FDA's current thinking on a particular subject. New guidance documents are listed here for three months.",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Department of Justice",
+      "issuer": "Food and Drug Administration — What's New: Drugs",
       "jurisdiction": "US",
-      "family": "judicial_and_enforcement"
+      "family": "product_permissions_and_safety"
     },
-    "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 9325,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
+    "primary_source_id": "us-fda-5696b24295",
+    "n": 9423,
+    "first_seen": "2026-11-10T08:27:24.121930+00:00",
+    "last_seen": "2026-11-10T08:27:24.121930+00:00",
     "source_ids": [
-      "us-doj-b3d27e1dc3"
+      "us-fda-5696b24295"
     ]
   },
   {
-    "title": "Wood County Man Sentenced to Prison for $510,465.19 Fraud Scheme",
-    "url": "https://www.justice.gov/usao-sdwv/pr/wood-county-man-sentenced-prison-51046519-fraud-scheme",
-    "native_id": "https://www.justice.gov/usao-sdwv/pr/wood-county-man-sentenced-prison-51046519-fraud-scheme",
+    "title": "Media advisory - Economic and Financial Affairs Council (Budget) of 10 November 2026",
+    "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/11/09/media-advisory-economic-and-financial-affairs-council-budget-of-10-november-2026/",
+    "native_id": "152074",
+    "published_at": "2026-11-09T20:35:00+00:00",
+    "published_raw": "2026-11-09T21:35:00+01:00",
+    "summary": "Main agenda items, approximate timing and press opportunities.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Council of the European Union",
+      "jurisdiction": "EU",
+      "family": "sanctions_and_legislation"
+    },
+    "primary_source_id": "eu-council-9d9e9444da",
+    "n": 9424,
+    "first_seen": "2026-11-10T08:27:24.121930+00:00",
+    "last_seen": "2026-11-10T08:27:24.121930+00:00",
+    "source_ids": [
+      "eu-council-9d9e9444da"
+    ]
+  },
+  {
+    "title": "Ukraine: Council extends EU Military Assistance Mission mandate for two years",
+    "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/11/09/ukraine-council-extends-eu-military-assistance-mission-mandate-for-two-years/",
+    "native_id": "152097",
+    "published_at": "2026-11-09T17:01:00+00:00",
+    "published_raw": "2026-11-09T18:01:00+01:00",
+    "summary": "The Council extended the mandate of the EU Military Assistance Mission in support of Ukraine until 15 November 2028.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Council of the European Union",
+      "jurisdiction": "EU",
+      "family": "sanctions_and_legislation"
+    },
+    "primary_source_id": "eu-council-9d9e9444da",
+    "n": 9425,
+    "first_seen": "2026-11-10T08:27:24.121930+00:00",
+    "last_seen": "2026-11-10T08:27:24.121930+00:00",
+    "source_ids": [
+      "eu-council-9d9e9444da"
+    ]
+  },
+  {
+    "title": "Humanitarian aid: Council approves conclusions on strengthening EU action amid global challenges",
+    "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/11/09/humanitarian-aid-council-approves-conclusions-on-strengthening-eu-action-amid-global-challenges/",
+    "native_id": "152068",
+    "published_at": "2026-11-09T15:20:00+00:00",
+    "published_raw": "2026-11-09T16:20:00+01:00",
+    "summary": "The Council approved conclusions reaffirming the EU’s commitment to principled humanitarian action, stronger protection of civilians and more effective action amid growing global humanitarian needs.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Council of the European Union",
+      "jurisdiction": "EU",
+      "family": "sanctions_and_legislation"
+    },
+    "primary_source_id": "eu-council-9d9e9444da",
+    "n": 9426,
+    "first_seen": "2026-11-10T08:27:24.121930+00:00",
+    "last_seen": "2026-11-10T08:27:24.121930+00:00",
+    "source_ids": [
+      "eu-council-9d9e9444da"
+    ]
+  },
+  {
+    "title": "Remarks by Kyriakos Pierrakakis following the Eurogroup meeting of 9 November 2026",
+    "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/11/09/remarks-by-kyriakos-pierrakakis-following-the-eurogroup-meeting-of-9-november-2026/",
+    "native_id": "152081",
+    "published_at": "2026-11-09T14:40:00+00:00",
+    "published_raw": "2026-11-09T15:40:00+01:00",
+    "summary": "Remarks by Eurogroup President Kyriakos Pierrakakis on the economic outlook in the euro area, defence financing and joint procurement, progress made on the digital euro and on the outlook for the banking sector, as well as the nomination process for three vacancies on the ECB Executive Board.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Council of the European Union",
+      "jurisdiction": "EU",
+      "family": "sanctions_and_legislation"
+    },
+    "primary_source_id": "eu-council-9d9e9444da",
+    "n": 9427,
+    "first_seen": "2026-11-10T08:27:24.121930+00:00",
+    "last_seen": "2026-11-10T08:27:24.121930+00:00",
+    "source_ids": [
+      "eu-council-9d9e9444da"
+    ]
+  },
+  {
+    "title": "Taxation: Council approves further VAT simplification rules for online sales",
+    "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/11/09/taxation-council-approves-further-vat-simplification-rules-for-online-sales/",
+    "native_id": "152060",
+    "published_at": "2026-11-09T14:32:00+00:00",
+    "published_raw": "2026-11-09T15:32:00+01:00",
+    "summary": "The Council today agreed further measures to improve value-added tax collection on e-commerce sales into the EU. This is the final building block of the broader overhaul of the EU customs framework.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Council of the European Union",
+      "jurisdiction": "EU",
+      "family": "sanctions_and_legislation"
+    },
+    "primary_source_id": "eu-council-9d9e9444da",
+    "n": 9428,
+    "first_seen": "2026-11-10T08:27:24.121930+00:00",
+    "last_seen": "2026-11-10T08:27:24.121930+00:00",
+    "source_ids": [
+      "eu-council-9d9e9444da"
+    ]
+  },
+  {
+    "title": "Press briefing - Meeting of the European Political Community of 12 November 2026 and the Informal meeting of Heads of State or Government of 13 November 2026",
+    "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/11/09/press-briefing-meeting-of-the-european-political-community-of-12-november-2026-and-the-informal-meeting-of-heads-of-state-or-government-of-13-november-2026/",
+    "native_id": "151990",
     "published_at": "2026-11-09T12:00:00+00:00",
-    "published_raw": "Mon, 09 Nov 2026 12:00:00 +0000",
+    "published_raw": "2026-11-09T13:00:00+01:00",
+    "summary": "The press briefing will take place on Wednesday 11 November 2026 at 10.00.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Council of the European Union",
+      "jurisdiction": "EU",
+      "family": "sanctions_and_legislation"
+    },
+    "primary_source_id": "eu-council-9d9e9444da",
+    "n": 9429,
+    "first_seen": "2026-11-10T08:27:24.121930+00:00",
+    "last_seen": "2026-11-10T08:27:24.121930+00:00",
+    "source_ids": [
+      "eu-council-9d9e9444da"
+    ]
+  },
+  {
+    "title": "Principal Figures of Financial Institutions (Oct.)",
+    "url": "http://www.boj.or.jp/en/statistics/dl/depo/kashi/kasi2610.pdf",
+    "native_id": "http://www.boj.or.jp/en/statistics/dl/depo/kashi/kasi2610.pdf",
+    "published_at": "2026-11-09T23:50:00+00:00",
+    "published_raw": "Tue, 10 Nov 2026 08:50:00 +0900",
     "summary": "",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Department of Justice",
-      "jurisdiction": "US",
-      "family": "judicial_and_enforcement"
-    },
-    "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 9326,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "us-doj-b3d27e1dc3"
-    ]
-  },
-  {
-    "title": "OPERATION TAKE BACK AMERICA: Previously Removed Illegal Alien Sentenced to Prison for Immigration and Firearm Offenses",
-    "url": "https://www.justice.gov/usao-ndal/pr/operation-take-back-america-previously-removed-illegal-alien-sentenced-prison",
-    "native_id": "https://www.justice.gov/usao-ndal/pr/operation-take-back-america-previously-removed-illegal-alien-sentenced-prison",
-    "published_at": "2026-11-09T12:00:00+00:00",
-    "published_raw": "Mon, 09 Nov 2026 12:00:00 +0000",
-    "summary": "",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Department of Justice",
-      "jurisdiction": "US",
-      "family": "judicial_and_enforcement"
-    },
-    "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 9327,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "us-doj-b3d27e1dc3"
-    ]
-  },
-  {
-    "title": "Convicted Double-Murderer Sentenced to Prison for Federal Gun Crime",
-    "url": "https://www.justice.gov/usao-sdwv/pr/convicted-double-murderer-sentenced-prison-federal-gun-crime",
-    "native_id": "https://www.justice.gov/usao-sdwv/pr/convicted-double-murderer-sentenced-prison-federal-gun-crime",
-    "published_at": "2026-11-09T12:00:00+00:00",
-    "published_raw": "Mon, 09 Nov 2026 12:00:00 +0000",
-    "summary": "",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Department of Justice",
-      "jurisdiction": "US",
-      "family": "judicial_and_enforcement"
-    },
-    "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 9328,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "us-doj-b3d27e1dc3"
-    ]
-  },
-  {
-    "title": "Mescalero Man Sentenced for Assaulting Federal Officer",
-    "url": "https://www.justice.gov/usao-nm/pr/mescalero-man-sentenced-assaulting-federal-officer",
-    "native_id": "https://www.justice.gov/usao-nm/pr/mescalero-man-sentenced-assaulting-federal-officer",
-    "published_at": "2026-11-09T12:00:00+00:00",
-    "published_raw": "Mon, 09 Nov 2026 12:00:00 +0000",
-    "summary": "Dominic James Isaac Sandoval Peralta was sentenced to 18 months in prison for assaulting a federal officer after striking a Bureau of Indian Affairs officer multiple times during an arrest.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Department of Justice",
-      "jurisdiction": "US",
-      "family": "judicial_and_enforcement"
-    },
-    "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 9329,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "us-doj-b3d27e1dc3"
-    ]
-  },
-  {
-    "title": "AG Blanche and Mississippi Officials Announce Jackson as Winner of the Model Cities Initiative",
-    "url": "https://www.justice.gov/opa/video/ag-blanche-and-mississippi-officials-announce-jackson-winner-model-cities-initiative",
-    "native_id": "https://www.justice.gov/opa/video/ag-blanche-and-mississippi-officials-announce-jackson-winner-model-cities-initiative",
-    "published_at": "2026-11-09T12:00:00+00:00",
-    "published_raw": "Mon, 09 Nov 2026 12:00:00 +0000",
-    "summary": "",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Department of Justice — RSS Feed",
-      "jurisdiction": "US",
-      "family": "judicial_and_enforcement"
-    },
-    "primary_source_id": "us-doj-e05071794d",
-    "n": 9330,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "us-doj-e05071794d"
-    ]
-  },
-  {
-    "title": "Prolific Human Smuggler Extradited from Brazil Pleads Guilty to Smuggling Aliens into the United States",
-    "url": "https://www.justice.gov/opa/pr/prolific-human-smuggler-extradited-brazil-pleads-guilty-smuggling-aliens-united-states",
-    "native_id": "https://www.justice.gov/opa/pr/prolific-human-smuggler-extradited-brazil-pleads-guilty-smuggling-aliens-united-states",
-    "published_at": "2026-11-09T12:00:00+00:00",
-    "published_raw": "Mon, 09 Nov 2026 12:00:00 +0000",
-    "summary": "Saiful Islam, 39, a Bangladeshi national, pleaded guilty today to charges related to his role in a conspiracy that smuggled numerous aliens through South America, Central America, and Mexico to the United States.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Department of Justice — RSS Feed",
-      "jurisdiction": "US",
-      "family": "judicial_and_enforcement"
-    },
-    "primary_source_id": "us-doj-e05071794d",
-    "n": 9331,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "us-doj-e05071794d"
-    ]
-  },
-  {
-    "title": "AG Blanche and Missouri Officials Announce St. Louis as Winner of the Model Cities Initiative",
-    "url": "https://www.justice.gov/opa/video/ag-blanche-and-missouri-officials-announce-st-louis-winner-model-cities-initiative",
-    "native_id": "https://www.justice.gov/opa/video/ag-blanche-and-missouri-officials-announce-st-louis-winner-model-cities-initiative",
-    "published_at": "2026-11-09T12:00:00+00:00",
-    "published_raw": "Mon, 09 Nov 2026 12:00:00 +0000",
-    "summary": "",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Department of Justice — RSS Feed",
-      "jurisdiction": "US",
-      "family": "judicial_and_enforcement"
-    },
-    "primary_source_id": "us-doj-e05071794d",
-    "n": 9332,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "us-doj-e05071794d"
-    ]
-  },
-  {
-    "title": "14 Charged in Deadly Human Smuggling Scheme That Killed 7 Aliens Earlier This Year",
-    "url": "https://www.justice.gov/opa/pr/14-charged-deadly-human-smuggling-scheme-killed-7-aliens-earlier-year",
-    "native_id": "https://www.justice.gov/opa/pr/14-charged-deadly-human-smuggling-scheme-killed-7-aliens-earlier-year",
-    "published_at": "2026-11-09T12:00:00+00:00",
-    "published_raw": "Mon, 09 Nov 2026 12:00:00 +0000",
-    "summary": "A federal grand jury in the Western District of Texas returned a superseding indictment charging a total of 14 individuals, including seven illegal aliens, three non-citizens, and four U.S. citizens, for their roles in a conspiracy to smuggle aliens into the United States for profit. This included a failed human smuggling event that resulted in the deaths of seven people, including one child, who died after being loaded into a poorly ventilated shipping container.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Department of Justice — RSS Feed",
-      "jurisdiction": "US",
-      "family": "judicial_and_enforcement"
-    },
-    "primary_source_id": "us-doj-e05071794d",
-    "n": 9333,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "us-doj-e05071794d"
-    ]
-  },
-  {
-    "title": "Iran Designation Update",
-    "url": "https://ofac.treasury.gov/recent-actions/20261109",
-    "native_id": "https://ofac.treasury.gov/recent-actions/20261109",
-    "published_at": "2026-11-09T00:00:00+00:00",
-    "published_raw": "date in publication URL",
-    "summary": "",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Treasury Office of Foreign Assets Control",
-      "jurisdiction": "US",
-      "family": "sanctions_and_access"
-    },
-    "primary_source_id": "us-ofac-index",
-    "n": 9334,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "us-ofac-index"
-    ]
-  },
-  {
-    "title": "Federal Reserve Board announces approval of two applications by Mutual Federal Bancorp, MHC, and MFB Bancorp, Inc.",
-    "url": "https://www.federalreserve.gov/newsevents/pressreleases/orders20261109a.htm",
-    "native_id": "https://www.federalreserve.gov/newsevents/pressreleases/orders20261109a.htm",
-    "published_at": "2026-11-09T21:00:00+00:00",
-    "published_raw": "Mon, 9 Nov 2026 21:00:00 GMT",
-    "summary": "Federal Reserve Board announces approval of two applications by Mutual Federal Bancorp, MHC, and MFB Bancorp, Inc.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Reserve Board — All Press Releases",
-      "jurisdiction": "US",
-      "family": "monetary_operations"
-    },
-    "primary_source_id": "us-fed-97656cefc7",
-    "n": 9335,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "us-fed-1401ff4ff2",
-      "us-fed-97656cefc7"
-    ]
-  },
-  {
-    "title": "Fresh & Ready Foods LLC Recalls Fresh To You Brand Sausage, Egg & Cheese Biscuit Sandwich due to Possible Health Risk",
-    "url": "http://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/fresh-ready-foods-llc-recalls-fresh-you-brand-sausage-egg-cheese-biscuit-sandwich-due-possible",
-    "native_id": "http://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/fresh-ready-foods-llc-recalls-fresh-you-brand-sausage-egg-cheese-biscuit-sandwich-due-possible",
-    "published_at": "2026-11-08T05:00:00+00:00",
-    "published_raw": "Sun, 08 Nov 2026 00:00:00 EST",
-    "summary": "November 7, 2026, Fresh & Ready Foods LLC of Renton, WA is recalling 2,414 of Fresh To You Sausage, Egg & Cheese Biscuit Sandwiches (4.6 oz) because it has the potential to be contaminated with Listeria monocytogenes, an organism which can cause serious and sometimes fatal infections in young childr",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Food and Drug Administration — Food Safety Recalls",
-      "jurisdiction": "US",
-      "family": "product_permissions_and_safety"
-    },
-    "primary_source_id": "us-fda-2cdcdcca63",
-    "n": 9336,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "us-fda-2cdcdcca63"
-    ]
-  },
-  {
-    "title": "FDA Approves First Factor Xla Inhibitor to Help Prevent Stroke in Certain Adults at High Risk",
-    "url": "http://www.fda.gov/news-events/press-announcements/fda-approves-first-factor-xla-inhibitor-help-prevent-stroke-certain-adults-high-risk",
-    "native_id": "http://www.fda.gov/news-events/press-announcements/fda-approves-first-factor-xla-inhibitor-help-prevent-stroke-certain-adults-high-risk",
-    "published_at": "2026-11-09T22:15:46+00:00",
-    "published_raw": "Mon, 09 Nov 2026 17:15:46 EST",
-    "summary": "FDA today approved Sunharbo (asundexian) 50 mg tablets, the first factor XIa (FXIa) inhibitor for use in combination with antiplatelet therapy to reduce the risk of stroke in adults following a recent mild-to-moderate non-cardioembolic ischemic stroke or a high-risk transient ischemic attack.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Food and Drug Administration — What's New: Drugs",
-      "jurisdiction": "US",
-      "family": "product_permissions_and_safety"
-    },
-    "primary_source_id": "us-fda-5696b24295",
-    "n": 9337,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "us-fda-5696b24295"
-    ]
-  },
-  {
-    "title": "FDA grants accelerated approval to pirtobrutinib for relapsed or refractory mantle cell lymphoma",
-    "url": "http://www.fda.gov/drugs/cancer-approvals/fda-grants-accelerated-approval-pirtobrutinib-relapsed-or-refractory-mantle-cell-lymphoma",
-    "native_id": "http://www.fda.gov/drugs/cancer-approvals/fda-grants-accelerated-approval-pirtobrutinib-relapsed-or-refractory-mantle-cell-lymphoma",
-    "published_at": "2026-11-09T21:58:13+00:00",
-    "published_raw": "Mon, 09 Nov 2026 16:58:13 EST",
-    "summary": "FDA grants accelerated approval to pirtobrutinib for relapsed or refractory mantle cell lymphoma",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Food and Drug Administration — What's New: Drugs",
-      "jurisdiction": "US",
-      "family": "product_permissions_and_safety"
-    },
-    "primary_source_id": "us-fda-5696b24295",
-    "n": 9338,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "us-fda-5696b24295"
-    ]
-  },
-  {
-    "title": "FDA grants accelerated approval to pirtobrutinib for chronic lymphocytic leukemia and small lymphocytic lymphoma",
-    "url": "http://www.fda.gov/drugs/cancer-approvals/fda-grants-accelerated-approval-pirtobrutinib-chronic-lymphocytic-leukemia-and-small-lymphocytic",
-    "native_id": "http://www.fda.gov/drugs/cancer-approvals/fda-grants-accelerated-approval-pirtobrutinib-chronic-lymphocytic-leukemia-and-small-lymphocytic",
-    "published_at": "2026-11-09T21:55:59+00:00",
-    "published_raw": "Mon, 09 Nov 2026 16:55:59 EST",
-    "summary": "On December 1, 2023, the Food and Drug Administration granted accelerated approval to pirtobrutinib (Jaypirca, Eli Lilly and Company) for adults with chronic lymphocytic leukemia or small lymphocytic lymphoma (CLL/SLL) who have received at least two prior lines of therapy, including a BTK inhibitor.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Food and Drug Administration — What's New: Drugs",
-      "jurisdiction": "US",
-      "family": "product_permissions_and_safety"
-    },
-    "primary_source_id": "us-fda-5696b24295",
-    "n": 9339,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "us-fda-5696b24295"
-    ]
-  },
-  {
-    "title": "FDA grants accelerated approval to mirvetuximab soravtansine-gynx for FRα positive, platinum-resistant epithelial ovarian, fallopian tube, or peritoneal cancer",
-    "url": "http://www.fda.gov/drugs/cancer-approvals/fda-grants-accelerated-approval-mirvetuximab-soravtansine-gynx-fra-positive-platinum-resistant",
-    "native_id": "http://www.fda.gov/drugs/cancer-approvals/fda-grants-accelerated-approval-mirvetuximab-soravtansine-gynx-fra-positive-platinum-resistant",
-    "published_at": "2026-11-09T21:53:52+00:00",
-    "published_raw": "Mon, 09 Nov 2026 16:53:52 EST",
-    "summary": "FDA grants accelerated approval to mirvetuximab soravtansine-gynx for FRα positive, platinum-resistant epithelial ovarian, fallopian tube, or peritoneal cancer",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Food and Drug Administration — What's New: Drugs",
-      "jurisdiction": "US",
-      "family": "product_permissions_and_safety"
-    },
-    "primary_source_id": "us-fda-5696b24295",
-    "n": 9340,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "us-fda-5696b24295"
-    ]
-  },
-  {
-    "title": "FDA grants accelerated approval to lisocabtagene maraleucel for follicular lymphoma",
-    "url": "http://www.fda.gov/drugs/cancer-approvals/fda-grants-accelerated-approval-lisocabtagene-maraleucel-follicular-lymphoma",
-    "native_id": "http://www.fda.gov/drugs/cancer-approvals/fda-grants-accelerated-approval-lisocabtagene-maraleucel-follicular-lymphoma",
-    "published_at": "2026-11-09T21:52:03+00:00",
-    "published_raw": "Mon, 09 Nov 2026 16:52:03 EST",
-    "summary": "On May 15, 2024, the Food and Drug Administration granted accelerated approval to lisocabtagene maraleucel (Breyanzi, Juno Therapeutics, Inc.) for adults with relapsed or refractory follicular lymphoma (FL) who have received two or more prior lines of systemic therapy.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Food and Drug Administration — What's New: Drugs",
-      "jurisdiction": "US",
-      "family": "product_permissions_and_safety"
-    },
-    "primary_source_id": "us-fda-5696b24295",
-    "n": 9341,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "us-fda-5696b24295"
-    ]
-  },
-  {
-    "title": "FDA grants accelerated approval to lifileucel for unresectable or metastatic melanoma",
-    "url": "http://www.fda.gov/drugs/cancer-approvals/fda-grants-accelerated-approval-lifileucel-unresectable-or-metastatic-melanoma",
-    "native_id": "http://www.fda.gov/drugs/cancer-approvals/fda-grants-accelerated-approval-lifileucel-unresectable-or-metastatic-melanoma",
-    "published_at": "2026-11-09T21:50:41+00:00",
-    "published_raw": "Mon, 09 Nov 2026 16:50:41 EST",
-    "summary": "FDA grants accelerated approval to lifileucel for unresectable or metastatic melanoma",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Food and Drug Administration — What's New: Drugs",
-      "jurisdiction": "US",
-      "family": "product_permissions_and_safety"
-    },
-    "primary_source_id": "us-fda-5696b24295",
-    "n": 9342,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "us-fda-5696b24295"
-    ]
-  },
-  {
-    "title": "FDA approves voxelotor for sickle cell disease",
-    "url": "http://www.fda.gov/drugs/cancer-approvals/fda-approves-voxelotor-sickle-cell-disease",
-    "native_id": "http://www.fda.gov/drugs/cancer-approvals/fda-approves-voxelotor-sickle-cell-disease",
-    "published_at": "2026-11-09T21:50:20+00:00",
-    "published_raw": "Mon, 09 Nov 2026 16:50:20 EST",
-    "summary": "Oncology News burst",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Food and Drug Administration — What's New: Drugs",
-      "jurisdiction": "US",
-      "family": "product_permissions_and_safety"
-    },
-    "primary_source_id": "us-fda-5696b24295",
-    "n": 9343,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "us-fda-5696b24295"
-    ]
-  },
-  {
-    "title": "FDA approves vorasidenib for Grade 2 astrocytoma or oligodendroglioma with a susceptible IDH1 or IDH2 mutation",
-    "url": "http://www.fda.gov/drugs/cancer-approvals/fda-approves-vorasidenib-grade-2-astrocytoma-or-oligodendroglioma-susceptible-idh1-or-idh2-mutation",
-    "native_id": "http://www.fda.gov/drugs/cancer-approvals/fda-approves-vorasidenib-grade-2-astrocytoma-or-oligodendroglioma-susceptible-idh1-or-idh2-mutation",
-    "published_at": "2026-11-09T21:50:17+00:00",
-    "published_raw": "Mon, 09 Nov 2026 16:50:17 EST",
-    "summary": "On August 6, 2024, the Food and Drug Administration approved vorasidenib (Voranigo, Servier Pharmaceuticals LLC), an isocitrate dehydrogenase-1 (IDH1) and isocitrate dehydrogenase-2 (IDH2) inhibitor, for adult and pediatric patients 12 years and older. Learn more.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Food and Drug Administration — What's New: Drugs",
-      "jurisdiction": "US",
-      "family": "product_permissions_and_safety"
-    },
-    "primary_source_id": "us-fda-5696b24295",
-    "n": 9344,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "us-fda-5696b24295"
-    ]
-  },
-  {
-    "title": "FDA approves updated drug labeling including new indications and dosing regimens for capecitabine tablets under Project Renewal",
-    "url": "http://www.fda.gov/drugs/cancer-approvals/fda-approves-updated-drug-labeling-including-new-indications-and-dosing-regimens-capecitabine",
-    "native_id": "http://www.fda.gov/drugs/cancer-approvals/fda-approves-updated-drug-labeling-including-new-indications-and-dosing-regimens-capecitabine",
-    "published_at": "2026-11-09T21:49:51+00:00",
-    "published_raw": "Mon, 09 Nov 2026 16:49:51 EST",
-    "summary": "FDA approves updated drug labeling including new indications and dosing regimens for capecitabine tablets under Project Renewal",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Food and Drug Administration — What's New: Drugs",
-      "jurisdiction": "US",
-      "family": "product_permissions_and_safety"
-    },
-    "primary_source_id": "us-fda-5696b24295",
-    "n": 9345,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "us-fda-5696b24295"
-    ]
-  },
-  {
-    "title": "FDA approves updated drug labeling for fludarabine phosphate under Project Renewal",
-    "url": "http://www.fda.gov/drugs/cancer-approvals/fda-approves-updated-drug-labeling-fludarabine-phosphate-under-project-renewal",
-    "native_id": "http://www.fda.gov/drugs/cancer-approvals/fda-approves-updated-drug-labeling-fludarabine-phosphate-under-project-renewal",
-    "published_at": "2026-11-09T21:49:30+00:00",
-    "published_raw": "Mon, 09 Nov 2026 16:49:30 EST",
-    "summary": "On November 19, 2024, the FDA approved updated drug labeling for fludarabine phosphate (Fludarabine Phosphate Injection, Sandoz) under Project Renewal, an Oncology Center of Excellence (OCE) initiative aimed at updating labeling information for certain older oncology drugs.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Food and Drug Administration — What's New: Drugs",
-      "jurisdiction": "US",
-      "family": "product_permissions_and_safety"
-    },
-    "primary_source_id": "us-fda-5696b24295",
-    "n": 9346,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "us-fda-5696b24295"
-    ]
-  },
-  {
-    "title": "FDA approves toripalimab-tpzi for nasopharyngeal carcinoma",
-    "url": "http://www.fda.gov/drugs/cancer-approvals/fda-approves-toripalimab-tpzi-nasopharyngeal-carcinoma",
-    "native_id": "http://www.fda.gov/drugs/cancer-approvals/fda-approves-toripalimab-tpzi-nasopharyngeal-carcinoma",
-    "published_at": "2026-11-09T21:49:10+00:00",
-    "published_raw": "Mon, 09 Nov 2026 16:49:10 EST",
-    "summary": "FDA approves toripalimab-tpzi for nasopharyngeal carcinoma",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Food and Drug Administration — What's New: Drugs",
-      "jurisdiction": "US",
-      "family": "product_permissions_and_safety"
-    },
-    "primary_source_id": "us-fda-5696b24295",
-    "n": 9347,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "us-fda-5696b24295"
-    ]
-  },
-  {
-    "title": "FDA approves tisotumab vedotin-tftv for recurrent or metastatic cervical cancer",
-    "url": "http://www.fda.gov/drugs/cancer-approvals/fda-approves-tisotumab-vedotin-tftv-recurrent-or-metastatic-cervical-cancer",
-    "native_id": "http://www.fda.gov/drugs/cancer-approvals/fda-approves-tisotumab-vedotin-tftv-recurrent-or-metastatic-cervical-cancer",
-    "published_at": "2026-11-09T21:48:49+00:00",
-    "published_raw": "Mon, 09 Nov 2026 16:48:49 EST",
-    "summary": "On April 29, 2024, the Food and Drug Administration granted traditional approval to tisotumab vedotin-tftv (Tivdak, Seagen Inc. [now a part of Pfizer Inc.]) for recurrent or metastatic cervical cancer with disease progression on or after chemotherapy. Tisotumab vedotin-tftv previously received acce",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Food and Drug Administration — What's New: Drugs",
-      "jurisdiction": "US",
-      "family": "product_permissions_and_safety"
-    },
-    "primary_source_id": "us-fda-5696b24295",
-    "n": 9348,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "us-fda-5696b24295"
-    ]
-  },
-  {
-    "title": "FDA approves tepotinib for metastatic non-small cell lung cancer",
-    "url": "http://www.fda.gov/drugs/cancer-approvals/fda-approves-tepotinib-metastatic-non-small-cell-lung-cancer",
-    "native_id": "http://www.fda.gov/drugs/cancer-approvals/fda-approves-tepotinib-metastatic-non-small-cell-lung-cancer",
-    "published_at": "2026-11-09T21:48:28+00:00",
-    "published_raw": "Mon, 09 Nov 2026 16:48:28 EST",
-    "summary": "On February 15, 2024, the Food and Drug Administration granted traditional approval to tepotinib (Tepmetko, EMD Serono, Inc.) for adult patients with metastatic non-small cell lung cancer (NSCLC) harboring mesenchymal-epithelial transition (MET) exon 14 skipping alterations.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Food and Drug Administration — What's New: Drugs",
-      "jurisdiction": "US",
-      "family": "product_permissions_and_safety"
-    },
-    "primary_source_id": "us-fda-5696b24295",
-    "n": 9349,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "us-fda-5696b24295"
-    ]
-  },
-  {
-    "title": "FDA approves selpercatinib for RET fusion-positive thyroid cancer",
-    "url": "http://www.fda.gov/drugs/cancer-approvals/fda-approves-selpercatinib-ret-fusion-positive-thyroid-cancer",
-    "native_id": "http://www.fda.gov/drugs/cancer-approvals/fda-approves-selpercatinib-ret-fusion-positive-thyroid-cancer",
-    "published_at": "2026-11-09T21:48:06+00:00",
-    "published_raw": "Mon, 09 Nov 2026 16:48:06 EST",
-    "summary": "On June 12, 2024, the FDA granted traditional approval to selpercatinib (Retevmo, Eli Lilly and Company) for adult and pediatric patients 2 years of age and older with advanced or metastatic RET fusion-positive thyroid cancer who require systemic therapy and who are radioactive iodine-refractory.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Food and Drug Administration — What's New: Drugs",
-      "jurisdiction": "US",
-      "family": "product_permissions_and_safety"
-    },
-    "primary_source_id": "us-fda-5696b24295",
-    "n": 9350,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "us-fda-5696b24295"
-    ]
-  },
-  {
-    "title": "FDA approves selpercatinib for medullary thyroid cancer with a RET mutation",
-    "url": "http://www.fda.gov/drugs/cancer-approvals/fda-approves-selpercatinib-medullary-thyroid-cancer-ret-mutation",
-    "native_id": "http://www.fda.gov/drugs/cancer-approvals/fda-approves-selpercatinib-medullary-thyroid-cancer-ret-mutation",
-    "published_at": "2026-11-09T21:47:37+00:00",
-    "published_raw": "Mon, 09 Nov 2026 16:47:37 EST",
-    "summary": "On September 27, 2024, the FDA granted traditional approval to selpercatinib (Retevmo, Eli Lilly and Company) for adult and pediatric patients 2 years of age and older with advanced or metastatic medullary thyroid cancer (MTC) with a RET mutation, as detected by an FDA-approved test.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Food and Drug Administration — What's New: Drugs",
-      "jurisdiction": "US",
-      "family": "product_permissions_and_safety"
-    },
-    "primary_source_id": "us-fda-5696b24295",
-    "n": 9351,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "us-fda-5696b24295"
-    ]
-  },
-  {
-    "title": "FDA approves selpercatinib for locally advanced or metastatic RET fusion-positive solid tumors",
-    "url": "http://www.fda.gov/drugs/cancer-approvals/fda-approves-selpercatinib-locally-advanced-or-metastatic-ret-fusion-positive-solid-tumors",
-    "native_id": "http://www.fda.gov/drugs/cancer-approvals/fda-approves-selpercatinib-locally-advanced-or-metastatic-ret-fusion-positive-solid-tumors",
-    "published_at": "2026-11-09T21:47:15+00:00",
-    "published_raw": "Mon, 09 Nov 2026 16:47:15 EST",
-    "summary": "FDA approves selpercatinib for locally advanced or metastatic RET fusion-positive solid tumors",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Food and Drug Administration — What's New: Drugs",
-      "jurisdiction": "US",
-      "family": "product_permissions_and_safety"
-    },
-    "primary_source_id": "us-fda-5696b24295",
-    "n": 9352,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "us-fda-5696b24295"
-    ]
-  },
-  {
-    "title": "FDA grants accelerated approval to fam-trastuzumab deruxtecan-nxki for unresectable or metastatic HER2-positive solid tumors",
-    "url": "http://www.fda.gov/drugs/cancer-approvals/fda-grants-accelerated-approval-fam-trastuzumab-deruxtecan-nxki-unresectable-or-metastatic-her2",
-    "native_id": "http://www.fda.gov/drugs/cancer-approvals/fda-grants-accelerated-approval-fam-trastuzumab-deruxtecan-nxki-unresectable-or-metastatic-her2",
-    "published_at": "2026-11-09T21:45:57+00:00",
-    "published_raw": "Mon, 09 Nov 2026 16:45:57 EST",
-    "summary": "On April 5, 2024, the Food and Drug Administration granted accelerated approval to fam-trastuzumab deruxtecan-nxki (Enhertu, Daiichi Sankyo, Inc.) for adult patients with unresectable or metastatic HER2-positive (IHC3+) solid tumors who have received prior systemic treatment and have no satisfactory",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Food and Drug Administration — What's New: Drugs",
-      "jurisdiction": "US",
-      "family": "product_permissions_and_safety"
-    },
-    "primary_source_id": "us-fda-5696b24295",
-    "n": 9353,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "us-fda-5696b24295"
-    ]
-  },
-  {
-    "title": "FDA grants accelerated approval to epcoritamab-bysp for relapsed or refractory follicular lymphoma",
-    "url": "http://www.fda.gov/drugs/cancer-approvals/fda-grants-accelerated-approval-epcoritamab-bysp-relapsed-or-refractory-follicular-lymphoma",
-    "native_id": "http://www.fda.gov/drugs/cancer-approvals/fda-grants-accelerated-approval-epcoritamab-bysp-relapsed-or-refractory-follicular-lymphoma",
-    "published_at": "2026-11-09T21:43:43+00:00",
-    "published_raw": "Mon, 09 Nov 2026 16:43:43 EST",
-    "summary": "On June 26, 2024, the Food and Drug Administration granted accelerated approval to epcoritamab-bysp (Epkinly, Genmab US, Inc.), a bispecific CD20-directed CD3 T-cell engager, for adult patients with relapsed or refractory follicular lymphoma (FL) after two or more lines of systemic therapy.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Food and Drug Administration — What's New: Drugs",
-      "jurisdiction": "US",
-      "family": "product_permissions_and_safety"
-    },
-    "primary_source_id": "us-fda-5696b24295",
-    "n": 9354,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "us-fda-5696b24295"
-    ]
-  },
-  {
-    "title": "Vaccine and Related Biological Product Guidances",
-    "url": "http://www.fda.gov/vaccines-blood-biologics/biologics-guidances/vaccine-and-related-biological-product-guidances",
-    "native_id": "http://www.fda.gov/vaccines-blood-biologics/biologics-guidances/vaccine-and-related-biological-product-guidances",
-    "published_at": "2026-11-09T22:16:15+00:00",
-    "published_raw": "Mon, 09 Nov 2026 17:16:15 EST",
-    "summary": "This page contains a listing of vaccine and related biological product guidances",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Food and Drug Administration — What's New: Vaccines, Blood and Biologics",
-      "jurisdiction": "US",
-      "family": "product_permissions_and_safety"
-    },
-    "primary_source_id": "us-fda-03f7703006",
-    "n": 9355,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "us-fda-03f7703006"
-    ]
-  },
-  {
-    "title": "FDA Roundup: June 4, 2024",
-    "url": "http://www.fda.gov/news-events/press-announcements/fda-roundup-june-4-2024",
-    "native_id": "http://www.fda.gov/news-events/press-announcements/fda-roundup-june-4-2024",
-    "published_at": "2026-11-09T19:19:09+00:00",
-    "published_raw": "Mon, 09 Nov 2026 14:19:09 EST",
-    "summary": "The U.S. Food and Drug Administration is providing an at-a-glance summary of news from around the agency.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Food and Drug Administration — What's New: Vaccines, Blood and Biologics",
-      "jurisdiction": "US",
-      "family": "product_permissions_and_safety"
-    },
-    "primary_source_id": "us-fda-03f7703006",
-    "n": 9356,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "us-fda-03f7703006"
-    ]
-  },
-  {
-    "title": "Vaccines and Related Biological Products Advisory Committee October 22, 2020 Meeting Announcement - 10/22/2020",
-    "url": "http://www.fda.gov/advisory-committees/advisory-committee-calendar/vaccines-and-related-biological-products-advisory-committee-october-22-2020-meeting-announcement",
-    "native_id": "http://www.fda.gov/advisory-committees/advisory-committee-calendar/vaccines-and-related-biological-products-advisory-committee-october-22-2020-meeting-announcement",
-    "published_at": "2026-11-09T15:44:09+00:00",
-    "published_raw": "Mon, 09 Nov 2026 10:44:09 EST",
-    "summary": "This is the CBER Vaccines and Related Biological Products Advisory Committee October 22, 2020 Meeting Announcement.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Food and Drug Administration — What's New: Vaccines, Blood and Biologics",
-      "jurisdiction": "US",
-      "family": "product_permissions_and_safety"
-    },
-    "primary_source_id": "us-fda-03f7703006",
-    "n": 9357,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "us-fda-03f7703006"
-    ]
-  },
-  {
-    "title": "Vaccines and Related Biological Products Advisory Committee December 10, 2020 Meeting Announcement - 12/10/2020",
-    "url": "http://www.fda.gov/advisory-committees/advisory-committee-calendar/vaccines-and-related-biological-products-advisory-committee-december-10-2020-meeting-announcement",
-    "native_id": "http://www.fda.gov/advisory-committees/advisory-committee-calendar/vaccines-and-related-biological-products-advisory-committee-december-10-2020-meeting-announcement",
-    "published_at": "2026-11-09T15:43:06+00:00",
-    "published_raw": "Mon, 09 Nov 2026 10:43:06 EST",
-    "summary": "This is the CBER Vaccines and Related Biological Products Advisory Committee December 10, 2020 Meeting Announcement.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Food and Drug Administration — What's New: Vaccines, Blood and Biologics",
-      "jurisdiction": "US",
-      "family": "product_permissions_and_safety"
-    },
-    "primary_source_id": "us-fda-03f7703006",
-    "n": 9358,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "us-fda-03f7703006"
-    ]
-  },
-  {
-    "title": "Vaccines and Related Biological Products Advisory Committee December 17, 2020 Meeting Announcement - 12/17/2020",
-    "url": "http://www.fda.gov/advisory-committees/advisory-committee-calendar/vaccines-and-related-biological-products-advisory-committee-december-17-2020-meeting-announcement",
-    "native_id": "http://www.fda.gov/advisory-committees/advisory-committee-calendar/vaccines-and-related-biological-products-advisory-committee-december-17-2020-meeting-announcement",
-    "published_at": "2026-11-09T15:42:08+00:00",
-    "published_raw": "Mon, 09 Nov 2026 10:42:08 EST",
-    "summary": "This is the CBER Vaccines and Related Biological Products Advisory Committee December 17, 2020 Meeting Announcement.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Food and Drug Administration — What's New: Vaccines, Blood and Biologics",
-      "jurisdiction": "US",
-      "family": "product_permissions_and_safety"
-    },
-    "primary_source_id": "us-fda-03f7703006",
-    "n": 9359,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "us-fda-03f7703006"
-    ]
-  },
-  {
-    "title": "Vaccines and Related Biological Products Advisory Committee February 26, 2021 Meeting Announcement - 02/26/2021",
-    "url": "http://www.fda.gov/advisory-committees/advisory-committee-calendar/vaccines-and-related-biological-products-advisory-committee-february-26-2021-meeting-announcement",
-    "native_id": "http://www.fda.gov/advisory-committees/advisory-committee-calendar/vaccines-and-related-biological-products-advisory-committee-february-26-2021-meeting-announcement",
-    "published_at": "2026-11-09T15:41:13+00:00",
-    "published_raw": "Mon, 09 Nov 2026 10:41:13 EST",
-    "summary": "This is the CBER Vaccines and Related Biological Products Advisory Committee February 26, 2021 Meeting Announcement.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Food and Drug Administration — What's New: Vaccines, Blood and Biologics",
-      "jurisdiction": "US",
-      "family": "product_permissions_and_safety"
-    },
-    "primary_source_id": "us-fda-03f7703006",
-    "n": 9360,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "us-fda-03f7703006"
-    ]
-  },
-  {
-    "title": "Vaccines and Related Biological Products Advisory Committee June 10, 2021 Meeting Announcement - 06/10/2021",
-    "url": "http://www.fda.gov/advisory-committees/advisory-committee-calendar/vaccines-and-related-biological-products-advisory-committee-june-10-2021-meeting-announcement",
-    "native_id": "http://www.fda.gov/advisory-committees/advisory-committee-calendar/vaccines-and-related-biological-products-advisory-committee-june-10-2021-meeting-announcement",
-    "published_at": "2026-11-09T15:40:33+00:00",
-    "published_raw": "Mon, 09 Nov 2026 10:40:33 EST",
-    "summary": "This is the CBER Vaccines and Related Biological Products Advisory Committee June 10, 2021 Meeting Announcement.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Food and Drug Administration — What's New: Vaccines, Blood and Biologics",
-      "jurisdiction": "US",
-      "family": "product_permissions_and_safety"
-    },
-    "primary_source_id": "us-fda-03f7703006",
-    "n": 9361,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "us-fda-03f7703006"
-    ]
-  },
-  {
-    "title": "Vaccines and Related Biological Products Advisory Committee September 17, 2021 Meeting Announcement - 09/17/2021",
-    "url": "http://www.fda.gov/advisory-committees/advisory-committee-calendar/vaccines-and-related-biological-products-advisory-committee-september-17-2021-meeting-announcement",
-    "native_id": "http://www.fda.gov/advisory-committees/advisory-committee-calendar/vaccines-and-related-biological-products-advisory-committee-september-17-2021-meeting-announcement",
-    "published_at": "2026-11-09T15:33:11+00:00",
-    "published_raw": "Mon, 09 Nov 2026 10:33:11 EST",
-    "summary": "This is the CBER Vaccines and Related Biological Products Advisory Committee September 17, 2021 Meeting Announcement.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Food and Drug Administration — What's New: Vaccines, Blood and Biologics",
-      "jurisdiction": "US",
-      "family": "product_permissions_and_safety"
-    },
-    "primary_source_id": "us-fda-03f7703006",
-    "n": 9362,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "us-fda-03f7703006"
-    ]
-  },
-  {
-    "title": "Vaccines and Related Biological Products Advisory Committee October 14-15, 2021 Meeting Announcement - 10/14/2021",
-    "url": "http://www.fda.gov/advisory-committees/advisory-committee-calendar/vaccines-and-related-biological-products-advisory-committee-october-14-15-2021-meeting-announcement",
-    "native_id": "http://www.fda.gov/advisory-committees/advisory-committee-calendar/vaccines-and-related-biological-products-advisory-committee-october-14-15-2021-meeting-announcement",
-    "published_at": "2026-11-09T15:32:10+00:00",
-    "published_raw": "Mon, 09 Nov 2026 10:32:10 EST",
-    "summary": "This is the CBER Vaccines and Related Biological Products Advisory Committee October 14-15, 2021 Meeting Announcement.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Food and Drug Administration — What's New: Vaccines, Blood and Biologics",
-      "jurisdiction": "US",
-      "family": "product_permissions_and_safety"
-    },
-    "primary_source_id": "us-fda-03f7703006",
-    "n": 9363,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "us-fda-03f7703006"
-    ]
-  },
-  {
-    "title": "Vaccines and Related Biological Products Advisory Committee October 26, 2021 Meeting Announcement - 10/26/2021",
-    "url": "http://www.fda.gov/advisory-committees/advisory-committee-calendar/vaccines-and-related-biological-products-advisory-committee-october-26-2021-meeting-announcement",
-    "native_id": "http://www.fda.gov/advisory-committees/advisory-committee-calendar/vaccines-and-related-biological-products-advisory-committee-october-26-2021-meeting-announcement",
-    "published_at": "2026-11-09T15:31:28+00:00",
-    "published_raw": "Mon, 09 Nov 2026 10:31:28 EST",
-    "summary": "This is the CBER Vaccines and Related Biological Products Advisory Committee October 26, 2021 Meeting Announcement.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Food and Drug Administration — What's New: Vaccines, Blood and Biologics",
-      "jurisdiction": "US",
-      "family": "product_permissions_and_safety"
-    },
-    "primary_source_id": "us-fda-03f7703006",
-    "n": 9364,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "us-fda-03f7703006"
-    ]
-  },
-  {
-    "title": "POSTPONED- Vaccines and Related Biological Products Advisory Committee February 15, 2022 Meeting Announcement - 02/15/2022",
-    "url": "http://www.fda.gov/advisory-committees/advisory-committee-calendar/postponed-vaccines-and-related-biological-products-advisory-committee-february-15-2022-meeting",
-    "native_id": "http://www.fda.gov/advisory-committees/advisory-committee-calendar/postponed-vaccines-and-related-biological-products-advisory-committee-february-15-2022-meeting",
-    "published_at": "2026-11-09T15:30:45+00:00",
-    "published_raw": "Mon, 09 Nov 2026 10:30:45 EST",
-    "summary": "This the CBER Vaccines and Related Biological Products Advisory Committee February 15, 2022 Meeting Announcement",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Food and Drug Administration — What's New: Vaccines, Blood and Biologics",
-      "jurisdiction": "US",
-      "family": "product_permissions_and_safety"
-    },
-    "primary_source_id": "us-fda-03f7703006",
-    "n": 9365,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "us-fda-03f7703006"
-    ]
-  },
-  {
-    "title": "Vaccines and Related Biological Products Advisory Committee June 7, 2022 Meeting Announcement - 06/07/2022",
-    "url": "http://www.fda.gov/advisory-committees/advisory-committee-calendar/vaccines-and-related-biological-products-advisory-committee-june-7-2022-meeting-announcement",
-    "native_id": "http://www.fda.gov/advisory-committees/advisory-committee-calendar/vaccines-and-related-biological-products-advisory-committee-june-7-2022-meeting-announcement",
-    "published_at": "2026-11-09T15:24:08+00:00",
-    "published_raw": "Mon, 09 Nov 2026 10:24:08 EST",
-    "summary": "This is the main page for the CBER Vaccines and Related Biological Products Advisory Committee June 7, 2022 Meeting Announcement and meeting materials.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Food and Drug Administration — What's New: Vaccines, Blood and Biologics",
-      "jurisdiction": "US",
-      "family": "product_permissions_and_safety"
-    },
-    "primary_source_id": "us-fda-03f7703006",
-    "n": 9366,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "us-fda-03f7703006"
-    ]
-  },
-  {
-    "title": "Vaccines and Related Biological Products Advisory Committee June 14-15, 2022 Meeting Announcement - 06/14/2022",
-    "url": "http://www.fda.gov/advisory-committees/advisory-committee-calendar/vaccines-and-related-biological-products-advisory-committee-june-14-15-2022-meeting-announcement",
-    "native_id": "http://www.fda.gov/advisory-committees/advisory-committee-calendar/vaccines-and-related-biological-products-advisory-committee-june-14-15-2022-meeting-announcement",
-    "published_at": "2026-11-09T15:23:17+00:00",
-    "published_raw": "Mon, 09 Nov 2026 10:23:17 EST",
-    "summary": "This is the CBER Vaccines and Related Biological Products Advisory Committee June 14-15, 2022 Meeting Announcement.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Food and Drug Administration — What's New: Vaccines, Blood and Biologics",
-      "jurisdiction": "US",
-      "family": "product_permissions_and_safety"
-    },
-    "primary_source_id": "us-fda-03f7703006",
-    "n": 9367,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "us-fda-03f7703006"
-    ]
-  },
-  {
-    "title": "MedWatch Alert: FDA Investigating Serious Risk of Malignancy Linked to Zolgensma Gene Therapy",
-    "url": "http://www.fda.gov/safety/medical-product-safety-information/medwatch-alert-fda-investigating-serious-risk-malignancy-linked-zolgensma-gene-therapy",
-    "native_id": "http://www.fda.gov/safety/medical-product-safety-information/medwatch-alert-fda-investigating-serious-risk-malignancy-linked-zolgensma-gene-therapy",
-    "published_at": "2026-11-09T15:14:55+00:00",
-    "published_raw": "Mon, 09 Nov 2026 10:14:55 EST",
-    "summary": "FDA Investigating Serious Risk of Malignancy Linked to Zolgensma Gene Therapy: FDA Safety Communication",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Food and Drug Administration — What's New: Vaccines, Blood and Biologics",
-      "jurisdiction": "US",
-      "family": "product_permissions_and_safety"
-    },
-    "primary_source_id": "us-fda-03f7703006",
-    "n": 9368,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "us-fda-03f7703006"
-    ]
-  },
-  {
-    "title": "Vaccines and Related Biological Products Advisory Committee June 28, 2022 Meeting Announcement - 06/28/2022",
-    "url": "http://www.fda.gov/advisory-committees/advisory-committee-calendar/vaccines-and-related-biological-products-advisory-committee-june-28-2022-meeting-announcement",
-    "native_id": "http://www.fda.gov/advisory-committees/advisory-committee-calendar/vaccines-and-related-biological-products-advisory-committee-june-28-2022-meeting-announcement",
-    "published_at": "2026-11-09T15:10:27+00:00",
-    "published_raw": "Mon, 09 Nov 2026 10:10:27 EST",
-    "summary": "This is the main page for the CBER Vaccines and Related Biological Products Advisory Committee June 28, 2022 Meeting Announcement.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Food and Drug Administration — What's New: Vaccines, Blood and Biologics",
-      "jurisdiction": "US",
-      "family": "product_permissions_and_safety"
-    },
-    "primary_source_id": "us-fda-03f7703006",
-    "n": 9369,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "us-fda-03f7703006"
-    ]
-  },
-  {
-    "title": "Vaccines and Related Biological Products Advisory Committee January 26, 2023 Meeting Announcement - 01/26/2023",
-    "url": "http://www.fda.gov/advisory-committees/advisory-committee-calendar/vaccines-and-related-biological-products-advisory-committee-january-26-2023-meeting-announcement",
-    "native_id": "http://www.fda.gov/advisory-committees/advisory-committee-calendar/vaccines-and-related-biological-products-advisory-committee-january-26-2023-meeting-announcement",
-    "published_at": "2026-11-09T15:09:43+00:00",
-    "published_raw": "Mon, 09 Nov 2026 10:09:43 EST",
-    "summary": "This is the main page for the CBER Vaccines and Related Biological Products Advisory Committee (VRBPAC) January 26, 2023 Meeting Announcement and meeting materials.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Food and Drug Administration — What's New: Vaccines, Blood and Biologics",
-      "jurisdiction": "US",
-      "family": "product_permissions_and_safety"
-    },
-    "primary_source_id": "us-fda-03f7703006",
-    "n": 9370,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "us-fda-03f7703006"
-    ]
-  },
-  {
-    "title": "Vaccines and Related Biological Products Advisory Committee June 15, 2023 Meeting Announcement - 06/15/2023",
-    "url": "http://www.fda.gov/advisory-committees/advisory-committee-calendar/vaccines-and-related-biological-products-advisory-committee-june-15-2023-meeting-announcement",
-    "native_id": "http://www.fda.gov/advisory-committees/advisory-committee-calendar/vaccines-and-related-biological-products-advisory-committee-june-15-2023-meeting-announcement",
-    "published_at": "2026-11-09T15:08:54+00:00",
-    "published_raw": "Mon, 09 Nov 2026 10:08:54 EST",
-    "summary": "This is the main page for the CBER Vaccines and Related Biological Products Advisory Committee (VRBPAC) meeting June 15, 2023 announcement and meeting materials.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Food and Drug Administration — What's New: Vaccines, Blood and Biologics",
-      "jurisdiction": "US",
-      "family": "product_permissions_and_safety"
-    },
-    "primary_source_id": "us-fda-03f7703006",
-    "n": 9371,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "us-fda-03f7703006"
-    ]
-  },
-  {
-    "title": "HHS Expands TOPx Prize Pool to $3.8 Million, Announces $3.7 Million in TOPx prizes for AI Tools Addressing Lyme Disease and Invisible Illnesses",
-    "url": "https://www.hhs.gov/press-room/hhs-awards-3-million-topx-ai-prizes-lyme-disease-invisible-illnesses.html",
-    "native_id": "https://www.hhs.gov/press-room/hhs-awards-3-million-topx-ai-prizes-lyme-disease-invisible-illnesses.html",
-    "published_at": "2026-11-09T21:10:48+00:00",
-    "published_raw": "Mon, 09 Nov 2026 16:10:48 -0500",
-    "summary": "HHS announced an expansion of the TOPx HHS Tech Sprint for AI and Invisible Illness prize pool from $2 million to $3.8 million.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Health and Human Services",
-      "jurisdiction": "US",
-      "family": "health_administration"
-    },
-    "primary_source_id": "us-hhs-6f995a5754",
-    "n": 9372,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "us-hhs-6f995a5754"
-    ]
-  },
-  {
-    "title": "HHS Invests $9.7 Million to Prevent Elder Abuse and Exploitation",
-    "url": "https://www.hhs.gov/press-room/hhs-invests-9-million-prevent-elder-abuse-financial-exploitation.html",
-    "native_id": "https://www.hhs.gov/press-room/hhs-invests-9-million-prevent-elder-abuse-financial-exploitation.html",
-    "published_at": "2026-11-09T16:15:00+00:00",
-    "published_raw": "Mon, 09 Nov 2026 11:15:00 -0500",
-    "summary": "HHS, through the Administration for Community Living announced more than $9.7 million in new awards to help older adults stay safe.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Health and Human Services",
-      "jurisdiction": "US",
-      "family": "health_administration"
-    },
-    "primary_source_id": "us-hhs-6f995a5754",
-    "n": 9373,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "us-hhs-6f995a5754"
-    ]
-  },
-  {
-    "title": "Trump Administration Announces $10 Billion in Second Year of Rural Health Transformation Awards to All 50 States",
-    "url": "https://www.hhs.gov/press-room/trump-administration-awards-10-billion-rural-health-transformation-program-year-two.html",
-    "native_id": "https://www.hhs.gov/press-room/trump-administration-awards-10-billion-rural-health-transformation-program-year-two.html",
-    "published_at": "2026-11-09T15:10:30+00:00",
-    "published_raw": "Mon, 09 Nov 2026 10:10:30 -0500",
-    "summary": "HHS, through the CMS announced $10 billion in awards to all 50 states for the second year of the Rural Health Transformation Program",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Health and Human Services",
-      "jurisdiction": "US",
-      "family": "health_administration"
-    },
-    "primary_source_id": "us-hhs-6f995a5754",
-    "n": 9374,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "us-hhs-6f995a5754"
-    ]
-  },
-  {
-    "title": "Chairman Carr Announces New Legal Advisor",
-    "url": "https://www.fcc.gov/edoc/426658",
-    "native_id": "426658",
-    "published_at": null,
-    "published_raw": "",
-    "summary": ".",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — News Releases",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
-    },
-    "primary_source_id": "us-fcc-685c5e7dd2",
-    "n": 9375,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "us-fcc-685c5e7dd2"
-    ]
-  },
-  {
-    "title": "Actions",
-    "url": "https://www.fcc.gov/edoc/426655",
-    "native_id": "426655",
-    "published_at": null,
-    "published_raw": "",
-    "summary": ".",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Public Notices",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
-    },
-    "primary_source_id": "us-fcc-e95ecda3bb",
-    "n": 9376,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "us-fcc-e95ecda3bb"
-    ]
-  },
-  {
-    "title": "Applications",
-    "url": "https://www.fcc.gov/edoc/426654",
-    "native_id": "426654",
-    "published_at": null,
-    "published_raw": "",
-    "summary": ".",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Public Notices",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
-    },
-    "primary_source_id": "us-fcc-e95ecda3bb",
-    "n": 9377,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "us-fcc-e95ecda3bb"
-    ]
-  },
-  {
-    "title": "Pleadings",
-    "url": "https://www.fcc.gov/edoc/426656",
-    "native_id": "426656",
-    "published_at": null,
-    "published_raw": "",
-    "summary": ".",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Public Notices",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
-    },
-    "primary_source_id": "us-fcc-e95ecda3bb",
-    "n": 9378,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "us-fcc-e95ecda3bb"
-    ]
-  },
-  {
-    "title": "PSHSB Announces Region 17 (Kentucky) RPCs to Hold 700 MHZ and 800 MHZ Meetings",
-    "url": "https://www.fcc.gov/edoc/426662",
-    "native_id": "426662",
-    "published_at": null,
-    "published_raw": "",
-    "summary": "Announces Region 17 (Kentucky) RPC Meetings for 700 MHZ and 800 MHZ",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Public Notices",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
-    },
-    "primary_source_id": "us-fcc-e95ecda3bb",
-    "n": 9379,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "us-fcc-e95ecda3bb"
-    ]
-  },
-  {
-    "title": "Domestic Section 214 Application Filed for the Transfer of Control of Citizens Telephone Company of Kecksburg, Citizens Telecom Solutions, LLC, and Citizens Telecommunications Technologies, Inc. to Omni Fiber, LLC",
-    "url": "https://www.fcc.gov/edoc/426667",
-    "native_id": "426667",
-    "published_at": null,
-    "published_raw": "",
-    "summary": ".",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Public Notices",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
-    },
-    "primary_source_id": "us-fcc-e95ecda3bb",
-    "n": 9380,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "us-fcc-e95ecda3bb"
-    ]
-  },
-  {
-    "title": "US Department of Labor publishes proposed rule setting national minimum weekly work search requirement for unemployment insurance",
-    "url": "http://www.dol.gov/newsroom/releases/eta/eta20261109",
-    "native_id": "http://www.dol.gov/newsroom/releases/eta/eta20261109",
-    "published_at": "2026-11-09T12:00:00+00:00",
-    "published_raw": "Mon, 09 Nov 26 12:00:00 +0000",
-    "summary": "WASHINGTON – The U.S. Department of Labor’s Employment and Training Administration today announced a proposed rule designed to improve the integrity and accountability of the Federal-State Unemployment Insurance Program by establishing a national minimum weekly work search standard for individuals claiming unemployment insurance benefits. Under the proposed rule, individuals claiming unemployment insurance benefits would be required to complete at least five qualifying work-search activities each week and to report those activities before payment is issued. “The purpose of unemployment insurance is to provide temporary support while people proactively search for a new job or upskill to meet the needs of employers restoring critical supply chains,” said U.S. Secretary of Labor Keith Sonderling. “This proposed rule helps jobseekers find work faster and ensures efficient use of taxpayer resources while improving the overall integrity of our unemployment system.”The proposal would also identify a range of modern job search activities beyond employer contacts, including registration and ongoing contact with placement agencies and unions that are specific, identifiable, and reasonably ca",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Department of Labor",
-      "jurisdiction": "US",
-      "family": "labour_enforcement"
-    },
-    "primary_source_id": "us-dol-99f477805a",
-    "n": 9381,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "us-dol-99f477805a"
-    ]
-  },
-  {
-    "title": "Speech by Commissioner Kos at the Plenary Session of the Parliament of the Republic of Moldova",
-    "url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2383",
-    "native_id": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2383",
-    "published_at": "2026-11-09T14:35:48+00:00",
-    "published_raw": "Mon, 09 Nov 2026 14:35:48 GMT",
-    "summary": "European Commission Speech Chișinău, 09 Nov 2026 Dear Chairman, Honourable Members of Parliament, Dear citizens of Moldova, When I receive visitors in my office in Brussels, there is something special that ne...",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "European Commission press and decisions",
-      "jurisdiction": "EU",
-      "family": "executive_and_regulatory"
-    },
-    "primary_source_id": "eu-commission-07d4f58ccf",
-    "n": 9382,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "eu-commission-07d4f58ccf"
-    ]
-  },
-  {
-    "title": "Remarks by Commissioner Dombrovskis at the ECOFIN press conference",
-    "url": "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2382",
-    "native_id": "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2382",
-    "published_at": "2026-11-09T13:35:40+00:00",
-    "published_raw": "Mon, 09 Nov 2026 13:35:40 GMT",
-    "summary": "European Commission Statement Brussels, 09 Nov 2026 Let me begin with some positive news. The Council has reached an agreement on the VAT proposal. This is an important step in supporting the agreed Customs Refor...",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "European Commission press and decisions",
-      "jurisdiction": "EU",
-      "family": "executive_and_regulatory"
-    },
-    "primary_source_id": "eu-commission-07d4f58ccf",
-    "n": 9383,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "eu-commission-07d4f58ccf"
-    ]
-  },
-  {
-    "title": "Statement by President von der Leyen with Romanian President Dan",
-    "url": "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2381",
-    "native_id": "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2381",
-    "published_at": "2026-11-09T13:01:03+00:00",
-    "published_raw": "Mon, 09 Nov 2026 13:01:03 GMT",
-    "summary": "European Commission Statement Bucharest, 09 Nov 2026 Dear President, dear Nicușor, Thank you for welcoming me to Bucharest today. And thank you, on behalf of our Union, for helping keep Europe's eastern flank safe...",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "European Commission press and decisions",
-      "jurisdiction": "EU",
-      "family": "executive_and_regulatory"
-    },
-    "primary_source_id": "eu-commission-07d4f58ccf",
-    "n": 9384,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "eu-commission-07d4f58ccf"
-    ]
-  },
-  {
-    "title": "Speech by Commissioner Kos at the first High-Level Connectivity Platform Meeting on Digital",
-    "url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2380",
-    "native_id": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2380",
-    "published_at": "2026-11-09T12:56:19+00:00",
-    "published_raw": "Mon, 09 Nov 2026 12:56:19 GMT",
-    "summary": "European Commission Speech Chișinău, 09 Nov 2026 Speech by Commissioner Kos at the first High-Level Connectivity Platform Meeting on Digital to advances digital connectivity along the Middle Corridor",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "European Commission press and decisions",
-      "jurisdiction": "EU",
-      "family": "executive_and_regulatory"
-    },
-    "primary_source_id": "eu-commission-07d4f58ccf",
-    "n": 9385,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "eu-commission-07d4f58ccf"
-    ]
-  },
-  {
-    "title": "Daily News 09 / 11 / 2026",
-    "url": "https://ec.europa.eu/commission/presscorner/detail/en/mex_26_2378",
-    "native_id": "https://ec.europa.eu/commission/presscorner/detail/en/mex_26_2378",
-    "published_at": "2026-11-09T10:50:56+00:00",
-    "published_raw": "Mon, 09 Nov 2026 10:50:56 GMT",
-    "summary": "European Commission Daily news Brussels, 09 Nov 2026 Annual renewal 2027 for EU-accredited media professionals The renewal of the annual accreditations is open. All media representatives who are based in Belgium a...",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "European Commission press and decisions",
-      "jurisdiction": "EU",
-      "family": "executive_and_regulatory"
-    },
-    "primary_source_id": "eu-commission-07d4f58ccf",
-    "n": 9386,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "eu-commission-07d4f58ccf"
-    ]
-  },
-  {
-    "title": "Remarks by Commissioner Dombrovskis at Eurogroup press conference",
-    "url": "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2375",
-    "native_id": "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2375",
-    "published_at": "2026-11-09T07:49:03+00:00",
-    "published_raw": "Mon, 09 Nov 2026 07:49:03 GMT",
-    "summary": "European Commission Statement Brussels, 09 Nov 2026 Thank you, Kyriakos. Good afternoon, everyone. Let me begin on the economic outlook. While growth data has been more positive this year than previously expected...",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "European Commission press and decisions",
-      "jurisdiction": "EU",
-      "family": "executive_and_regulatory"
-    },
-    "primary_source_id": "eu-commission-07d4f58ccf",
-    "n": 9387,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "eu-commission-07d4f58ccf"
-    ]
-  },
-  {
-    "title": "Statement by President von der Leyen following her call with President Zelenskyy and ahead of her visit to the Black Sea Region, in Romania and Bulgaria",
-    "url": "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2374",
-    "native_id": "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2374",
-    "published_at": "2026-11-09T07:27:59+00:00",
-    "published_raw": "Mon, 09 Nov 2026 07:27:59 GMT",
-    "summary": "European Commission Statement Brussels, 09 Nov 2026 Today, I begin a visit to the Black Sea region, where security threats are escalating, attacks are increasing, and innocent lives have been lost. In Romania and...",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "European Commission press and decisions",
-      "jurisdiction": "EU",
-      "family": "executive_and_regulatory"
-    },
-    "primary_source_id": "eu-commission-07d4f58ccf",
-    "n": 9388,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "eu-commission-07d4f58ccf"
-    ]
-  },
-  {
-    "title": "EU emissions continue to fall as clean energy gains ground",
-    "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2343",
-    "native_id": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2343",
-    "published_at": "2026-11-08T23:00:00+00:00",
-    "published_raw": "Sun, 08 Nov 2026 23:00:00 GMT",
-    "summary": "European Commission Press release Brussels, 09 Nov 2026 The European Commission has today published the 2026 EU Climate Action Progress Report and Carbon Market Report, showing that EU greenhouse gas (GHG) emissions continue to fall, clean technologies are expanding, and an increasing amount of ETS revenues are available to EU Member States for investments in decarbonisation.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "European Commission press and decisions",
-      "jurisdiction": "EU",
-      "family": "executive_and_regulatory"
-    },
-    "primary_source_id": "eu-commission-07d4f58ccf",
-    "n": 9389,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "eu-commission-07d4f58ccf"
-    ]
-  },
-  {
-    "title": "High-Level Platform meets in Moldova to strengthen digital connectivity between the EU, the Black Sea region, South-Caucasus and Central Asia*",
-    "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2371",
-    "native_id": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2371",
-    "published_at": "2026-11-08T23:00:00+00:00",
-    "published_raw": "Sun, 08 Nov 2026 23:00:00 GMT",
-    "summary": "European Commission Press release Chișinău, 09 Nov 2026 Today, the first High-Level Connectivity Platform Meeting on Digital takes place in Chișinău, Moldova, jointly hosted by the European Commission and the Moldovan Ministry of Economic Development and Digitalisation. The meeting sets the groundwork for stronger digital connectivity between Europe and Centra Asia, via Moldova, in the form of an Integrated EU Secure Connectivity Offer.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "European Commission press and decisions",
-      "jurisdiction": "EU",
-      "family": "executive_and_regulatory"
-    },
-    "primary_source_id": "eu-commission-07d4f58ccf",
-    "n": 9390,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "eu-commission-07d4f58ccf"
-    ]
-  },
-  {
-    "title": "EU seeks nominations for stakeholder group on tokenisation standards in finance",
-    "url": "https://www.esma.europa.eu/press-news/esma-news/eu-seeks-nominations-stakeholder-group-tokenisation-standards-finance",
-    "native_id": "https://www.esma.europa.eu/press-news/esma-news/eu-seeks-nominations-stakeholder-group-tokenisation-standards-finance",
-    "published_at": null,
-    "published_raw": "",
-    "summary": "EU seeks nominations for stakeholder group on tokenisation standards in finance 09 November 2026 Digital Finance and Innovation The European Central Bank (ECB), together with the European Commission and the European Securities and Markets Authority (ESMA), is calling upon wholesale financial industry stakeholders to express their interest in joining the European Tokenisation Standards Group (ETSG). The group will bring together industry stakeholders to develop common standards for an interconnected tokenised financial ecosystem. The group aims to establish a framework for monitoring compliance with the agreed standards and may formulate recommendations for EU authorities on how to incentivise compliance with those standards. Its work will be market-driven and shaped by the contributions and consensus of industry stakeholders. To this end, the ETSG will be chaired by participants from the industry, with the ECB, the Commission and ESMA acting as observers. Participation in the ETSG is open to a wide range of stakeholders, including EU associations, private entities, global institutions, fintech companies and technical providers working on tokenisation or DLT-based financial services",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "European Securities and Markets Authority",
-      "jurisdiction": "EU",
-      "family": "market_rules_and_enforcement"
-    },
-    "primary_source_id": "eu-esma-73e01d4013",
-    "n": 9391,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "eu-esma-73e01d4013"
-    ]
-  },
-  {
-    "title": "The EBA streamlines the 2027 EU-wide stress test with more than 55% reduction in requested data",
-    "url": "https://www.eba.europa.eu/publications-and-media/press-releases/eba-streamlines-2027-eu-wide-stress-test-more-55-reduction-requested-data",
-    "native_id": "https://www.eba.europa.eu/publications-and-media/press-releases/eba-streamlines-2027-eu-wide-stress-test-more-55-reduction-requested-data",
-    "published_at": "2026-11-09T15:08:44+00:00",
-    "published_raw": "Mon, 09 Nov 2026 16:08:44 +0100",
-    "summary": "The European Banking Authority (EBA) today released the final methodology, draft templates, and template guidance for its 2027 EU-wide stress test, together with the key milestones for the exercise. Following extensive engagement with industry participants, the EBA has significantly streamlined the exercise, reducing the number of required data points by 55% through the simplification of reporting templates and closer alignment with supervisory reporting. These changes will reduce operational burden and improve efficiency while preserving the robustness, risk-sensitivity and comparability of stress test results. The 2027 exercise will also include, for the first time, a dedicated module assessing climate-related risks. The 2027 EU-wide stress test will formally start in January 2027, following the release of the macroeconomic and climate scenarios, with the results scheduled for publication by the end of July 2027.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "European Banking Authority",
-      "jurisdiction": "EU",
-      "family": "financial_supervision"
-    },
-    "primary_source_id": "eu-eba-60bdc59843",
-    "n": 9392,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "eu-eba-60bdc59843"
-    ]
-  },
-  {
-    "title": "The EBA publishes consumer factsheet on white-labelled financial products and services",
-    "url": "https://www.eba.europa.eu/publications-and-media/press-releases/eba-publishes-consumer-factsheet-white-labelled-financial-products-and-services",
-    "native_id": "https://www.eba.europa.eu/publications-and-media/press-releases/eba-publishes-consumer-factsheet-white-labelled-financial-products-and-services",
-    "published_at": "2026-11-09T09:56:42+00:00",
-    "published_raw": "Mon, 09 Nov 2026 10:56:42 +0100",
-    "summary": "The European Banking Authority (EBA) published today a factsheet to help consumers identify when a banking or payment product or service is white labelled, i.e. marketed under one brand but provided by another company. As consumers increasingly access financial products and services through online platforms, retailers and other non-financial brands, it may be sometimes unclear which company is responsible for providing the product or service. Understanding this distinction can help consumers make informed decisions, know who they are dealing with and reduce risks. For this reason, the factsheet also guides consumers on the key things to know and check before getting that product or service.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "European Banking Authority",
-      "jurisdiction": "EU",
-      "family": "financial_supervision"
-    },
-    "primary_source_id": "eu-eba-60bdc59843",
-    "n": 9393,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "eu-eba-60bdc59843"
-    ]
-  },
-  {
-    "title": "Bank of Canada designates RTR as a prominent payment system",
-    "url": "https://www.bankofcanada.ca/2026/11/bank-of-canada-designates-rtr-as-a-prominent-payment-system/",
-    "native_id": "https://www.bankofcanada.ca/2026/11/bank-of-canada-designates-rtr-as-a-prominent-payment-system/",
-    "published_at": "2026-11-09T09:00:31+00:00",
-    "published_raw": "2026-11-09T09:00:31+00:00",
-    "summary": "Bank of Canada Governor Tiff Macklem has designated the Real-Time Rail (RTR), operated by Payments Canada, as a prominent payment system under the Payment Clearing and Settlement Act, effective November 9, 2026.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Bank of Canada — Subscribe to Regulatory news",
-      "jurisdiction": "CA",
-      "family": "monetary_operations"
-    },
-    "primary_source_id": "ca-boc-1f26bb2971",
-    "n": 9394,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "ca-boc-1f26bb2971"
-    ]
-  },
-  {
-    "title": "Release of the Bank of Canada’s summary of deliberations",
-    "url": "https://www.bankofcanada.ca/2026/11/release-bank-canadas-summary-deliberations-2026-10-28/",
-    "native_id": "https://www.bankofcanada.ca/2026/11/release-bank-canadas-summary-deliberations-2026-10-28/",
-    "published_at": "2026-11-10T13:30:35+00:00",
-    "published_raw": "2026-11-10T13:30:35+00:00",
-    "summary": "On Tuesday, November 10, 2026, the Bank of Canada will publish a summary of the deliberations that took place ahead of its interest rate decision on October 28, 2026.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Bank of Canada — Press",
-      "jurisdiction": "CA",
-      "family": "monetary_operations"
-    },
-    "primary_source_id": "ca-boc-30d6d14378",
-    "n": 9395,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "ca-boc-30d6d14378"
-    ]
-  },
-  {
-    "title": "Auction of Government of India Dated Security",
-    "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63952",
-    "native_id": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63952",
-    "published_at": "2026-11-09T18:55:00+00:00",
-    "published_raw": "Mon, 09 Nov 2026 18:55:00",
-    "summary": "Government of India (GoI) has announced the sale (re-issue) of one dated security for a notified amount of ₹34,000 crore as per the following details: Sr No Security Date of Repayment Notified Amount (₹ Crore) GoI specific Notification Auction Date Settlement Date 1 6.94% GS 2036 May 11, 2036 34,000 F.No.4(1)-B(W&M)/2026 dated November 09, 2026 November 13, 2026 (Friday) November 16, 2026 (Monday) Total 34,000 2. GoI will have the option to retain additional subscription up to ₹2,000 crore against the security mentioned above. 3. The security will be sold through Reserve Bank of India Mumbai Office, Fort, Mumbai – 400001. The sale will be subject to the terms and conditions spelt out in the ‘Specific Notification’ mentioned above and the General Notification F.No.4(2)–B(W&M)/2018, dated March 26, 2025 . 4. The auction will be conducted using multiple price method . Both competitive and non-competitive bids for the auction should be submitted in electronic format on the Reserve Bank of India Core Banking Solution (e-Kuber system) on November 13, 2026 (Friday) . The non-competitive bids should be submitted between 10:30 a.m. and 11:00 a.m. and the competitive bids should be submitted",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Reserve Bank of India",
-      "jurisdiction": "IN",
-      "family": "monetary_and_supervisory"
-    },
-    "primary_source_id": "in-rbi-cc71120b98",
-    "n": 9396,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "in-rbi-cc71120b98"
-    ]
-  },
-  {
-    "title": "Supersession of Board of Directors of Abhyudaya Co-operative Bank Ltd., Mumbai - Extension of period",
-    "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63951",
-    "native_id": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63951",
-    "published_at": "2026-11-09T18:50:00+00:00",
-    "published_raw": "Mon, 09 Nov 2026 18:50:00",
-    "summary": "The Reserve Bank of India, in exercise of its powers under Section 36AAA read with Section 56 of the Banking Regulation Act, 1949, had superseded the Board of Directors of Abhyudaya Co-operative Bank Ltd., Mumbai (the bank) for one year on November 24, 2023 , due to material concerns arising from poor governance standards observed within the bank . The period of supersession was extended for a period of one-year, effective November 24, 2024 and further extended for a period of one year, effective November 24, 2025 . 2. Upon a review, the Reserve Bank of India is satisfied that, in the public interest, it is necessary to further extend the period of supersession beyond the close of business of the bank as on November 23, 2026. 3. Accordingly, the Reserve Bank of India (RBI), in exercise of its powers under sub-Section (1) of Section 36AAA read with Section 56 of the Banking Regulation Act, 1949, has extended the period of supersession for a further period of one-year, effective from November 24, 2026. Consequently, Shri Satya Prakash Pathak shall continue as the Administrator of the bank and shall be assisted by the present Committee of Advisors comprising of Shri Venkatesh Hegde, S",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Reserve Bank of India",
-      "jurisdiction": "IN",
-      "family": "monetary_and_supervisory"
-    },
-    "primary_source_id": "in-rbi-cc71120b98",
-    "n": 9397,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "in-rbi-cc71120b98"
-    ]
-  },
-  {
-    "title": "State Government Securities - Full Auction Result",
-    "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63950",
-    "native_id": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63950",
-    "published_at": "2026-11-09T16:25:00+00:00",
-    "published_raw": "Mon, 09 Nov 2026 16:25:00",
-    "summary": "The result of the auction of State Government Securities held on November 09, 2026 is as under: (Amount in ₹ Crore) ASSAM SGS 2046 BIHAR SGS 2044* BIHAR SGS 2051 CHHATTISGARH SGS 2036 # Notified Amount 1000 2000 2000 900 Tenor Re-issue of 7.83% ASSAM SGS 2046 issued on 29-APR-2026 18 -Years Re-issue of 7.76% BIHAR SGS 2051 issued on 02-SEP-2026 Re-issue of 7.68% CHHATTISGARH SGS 2036 issued on 29-APR-2026 Competitive Bids Received (i) No. 69 64 43 73 (ii) Amount 2295 2970 4540 3980 Cut-off Yield (%) 8.0814 8.10 8.0816 - Cut off Price (₹) 97.55 100 96.56 - Competitive Bids Accepted (i) No. 29 30 14 - (ii) Amount 989.940 1385 1964.242 - Partial Allotment Percentage of Competitive Bids (i) Percentage 69.7457 - 38.8047 - (ii) No. 2 - 1 - Non - Competitive Bids Received (i) No. 3 8 4 4 (ii) Amount 10.060 148.882 35.758 11.028 Non-Competitive Price (₹) 97.67 100.30 96.63 - Non-Competitive Bids Accepted (i) No. 3 8 4 - (ii) Amount 10.060 148.882 35.758 - Partial Allotment Percentage of Non-Competitive Bids Percentage Weighted Average Yield (%) 8.0688 8.0682 8.0748 - Total Allotment Amount 1000 1533.882 2000 0 CHHATTISGARH SGS 2042 # GUJARAT SGS 2036 GUJARAT SGS 2039 HARYANA SGS 2030 Notif",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Reserve Bank of India",
-      "jurisdiction": "IN",
-      "family": "monetary_and_supervisory"
-    },
-    "primary_source_id": "in-rbi-cc71120b98",
-    "n": 9398,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "in-rbi-cc71120b98"
-    ]
-  },
-  {
-    "title": "Reserve Bank cancels Certificate of Registration of Gandhinagar Leasing and Finance Ltd.",
-    "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63949",
-    "native_id": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63949",
-    "published_at": "2026-11-09T16:10:00+00:00",
-    "published_raw": "Mon, 09 Nov 2026 16:10:00",
-    "summary": "In exercise of the powers conferred under Section 45-IA (6) of the Reserve Bank of India Act, 1934, the Reserve Bank has cancelled the Certificate of Registration (CoR) issued to the following Non-Banking Financial Company (NBFC): Name of the NBFC Registered Office Address CoR No. Date of Cancellation Gandhinagar Leasing and Finance Ltd. 420, Times Square Arcade, Opposite Rambaug, Thaltej-Shilaj Road, Ahmedabad, Gujarat – 380059 01.00279 dated December 08, 1998 October 29, 2026 As such, the above company shall not, hereinafter, transact the business of a Non-Banking Financial Institution (NBFI), as defined in clause (a) of Section 45-I of the RBI Act, 1934. (Brij Raj) Chief General Manager Press Release: 2026-2027/1471",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Reserve Bank of India",
-      "jurisdiction": "IN",
-      "family": "monetary_and_supervisory"
-    },
-    "primary_source_id": "in-rbi-cc71120b98",
-    "n": 9399,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "in-rbi-cc71120b98"
-    ]
-  },
-  {
-    "title": "Result of Yield/Price Based Auction of State Government Securities",
-    "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63948",
-    "native_id": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63948",
-    "published_at": "2026-11-09T14:55:00+00:00",
-    "published_raw": "Mon, 09 Nov 2026 14:55:00",
-    "summary": "Sr. No State/UT Amount to be raised (₹ Crore) Amount Accepted (₹ Crore) Cut off Price (₹)/ Yield (%) Tenor (Year) 1. Assam 1000 1000 97.55/8.0814 Re-issue of 7.83% Assam SGS 2046, issued on April 29, 2026 2. Bihar* 2000 1533.882 8.10 18 2000 2000 96.56/8.0816 Re-issue of 7.76% Bihar SGS 2051, issued on September 02, 2026 3. Chhattisgarh # 900 - - Re-issue of 7.68% Chhattisgarh SGS 2036, issued on April 29, 2026 600 - - Re-issue of 7.64% Chhattisgarh SGS 2042, issued on July 08, 2026 4. Gujarat 1000 1000 7.82 10 1500 1500 7.97 13 5. Haryana 500 500 7.61 04 1500 1500 98.99/8.0201 Re-issue of 7.90% Haryana SGS 2040, issued on September 16, 2026 2000 2000 95.35/8.1476 Re-issue of 7.69% Haryana SGS 2048, issued on August 27, 2026 6. Jammu and Kashmir 1000 1000 8.09 23 7. Keralam 1000 1000 100.50/7.8109 Re-issue of 7.92% Kerala SGS 2032, issued on October 14, 2026 8. Mizoram 100 100 96.15/8.0788 Re-issue of 7.63% Mizoram SGS 2041, issued on August 19, 2026 9. Nagaland 450 450 8.07 15 10. Odisha 500 500 97.20/7.9770 Re-issue of 7.64% Odisha SGS 2040, issued on August 05, 2026 11. Tamil Nadu 2000 2000 97.96/8.0393 Re-issue of 7.80% Tamil Nadu SGS 2041, issued on June 03, 2026 2500 2500 100",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Reserve Bank of India",
-      "jurisdiction": "IN",
-      "family": "monetary_and_supervisory"
-    },
-    "primary_source_id": "in-rbi-cc71120b98",
-    "n": 9400,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "in-rbi-cc71120b98"
-    ]
-  },
-  {
-    "title": "Minister AKAZAWA Holds Online Meeting with HRH Prince Abdulaziz bin Salman, Minister of Energy of the Kingdom of Saudi Arabia",
-    "url": "https://www.meti.go.jp/english/press/2026/11/20261109001.html",
-    "native_id": "https://www.meti.go.jp/english/press/2026/11/20261109001.html",
-    "published_at": null,
-    "published_raw": null,
-    "summary": "",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Japan Ministry of Economy Trade and Industry",
+      "issuer": "Bank of Japan",
       "jurisdiction": "JP",
-      "family": "trade_and_industry_policy"
-    },
-    "primary_source_id": "jp-meti-index",
-    "n": 9401,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "jp-meti-index"
-    ]
-  },
-  {
-    "title": "2026-11-09 - Data portal - Important monetary policy data, 9 November 2026",
-    "url": "https://www.snb.ch/en/publications/statistical-publications/data-portal/2026/11/statpub_news_20261109_gwd",
-    "native_id": "https://www.snb.ch/en/publications/statistical-publications/data-portal/2026/11/statpub_news_20261109_gwd",
-    "published_at": "2026-11-09T09:00:00+00:00",
-    "published_raw": "2026-11-09T09:00:00Z",
-    "summary": "",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Swiss National Bank",
-      "jurisdiction": "CH",
       "family": "monetary_operations"
     },
-    "primary_source_id": "ch-snb-b0f42db828",
-    "n": 9402,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
+    "primary_source_id": "jp-boj-d488538690",
+    "n": 9430,
+    "first_seen": "2026-11-10T08:27:24.121930+00:00",
+    "last_seen": "2026-11-10T08:27:24.121930+00:00",
     "source_ids": [
-      "ch-snb-b0f42db828"
+      "jp-boj-d488538690"
     ]
   },
   {
-    "title": "Auction result – Federal Treasury discount paper (Bubills)",
-    "url": "https://www.bundesbank.de/en/press/press-releases/federal-securities/auction-result-federal-treasury-discount-paper-bubills--1014496",
-    "native_id": "https://www.bundesbank.de/en/press/press-releases/federal-securities/auction-result-federal-treasury-discount-paper-bubills--1014496",
-    "published_at": "2026-11-09T11:00:00+00:00",
-    "published_raw": "Mon, 09 Nov 2026 11:00:00 GMT",
+    "title": "Summary of Opinions at the Monetary Policy Meeting on October 29 and 30, 2026",
+    "url": "http://www.boj.or.jp/en/mopo/mpmsche_minu/opinion_2026/opi261030.pdf",
+    "native_id": "http://www.boj.or.jp/en/mopo/mpmsche_minu/opinion_2026/opi261030.pdf",
+    "published_at": "2026-11-09T23:50:00+00:00",
+    "published_raw": "Tue, 10 Nov 2026 08:50:00 +0900",
     "summary": "",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Deutsche Bundesbank",
-      "jurisdiction": "DE",
-      "family": "monetary_and_supervisory"
+      "issuer": "Bank of Japan",
+      "jurisdiction": "JP",
+      "family": "monetary_operations"
     },
-    "primary_source_id": "de-bundesbank-027ac4024f",
-    "n": 9403,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
+    "primary_source_id": "jp-boj-d488538690",
+    "n": 9431,
+    "first_seen": "2026-11-10T08:27:24.121930+00:00",
+    "last_seen": "2026-11-10T08:27:24.121930+00:00",
     "source_ids": [
-      "de-bundesbank-027ac4024f"
+      "jp-boj-d488538690"
     ]
   },
   {
-    "title": "Main refinancing operation – Announcement | Tender-ID: 20260099 | Reverse transaction",
-    "url": "https://www.bundesbank.de/en/tasks/monetary-policy/open-market-operations/outstanding-open-market-operations/main-refinancing-operation-announcement-1014580",
-    "native_id": "https://www.bundesbank.de/en/tasks/monetary-policy/open-market-operations/outstanding-open-market-operations/main-refinancing-operation-announcement-1014580",
-    "published_at": "2026-11-09T14:40:53+00:00",
-    "published_raw": "Mon, 09 Nov 2026 14:40:53 GMT",
-    "summary": "Value Date: 11.11.2026 | Duration: 7 day(s) | Maturity date: 18.11.2026",
+    "title": "FX Liquidity providing operation – Announcement | Tender-ID: 20260100 | Reverse transaction | USD",
+    "url": "https://www.bundesbank.de/en/tasks/monetary-policy/open-market-operations/outstanding-open-market-operations/fx-liquidity-providing-operation-announcement-1014704",
+    "native_id": "https://www.bundesbank.de/en/tasks/monetary-policy/open-market-operations/outstanding-open-market-operations/fx-liquidity-providing-operation-announcement-1014704",
+    "published_at": "2026-11-10T08:15:30+00:00",
+    "published_raw": "Tue, 10 Nov 2026 08:15:30 GMT",
+    "summary": "Value Date: 12.11.2026 | Duration: 7 day(s) | Maturity date: 19.11.2026",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
@@ -2851,179 +498,11 @@
       "family": "monetary_and_supervisory"
     },
     "primary_source_id": "de-bundesbank-e5b1c4a067",
-    "n": 9404,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
+    "n": 9432,
+    "first_seen": "2026-11-10T08:27:24.121930+00:00",
+    "last_seen": "2026-11-10T08:27:24.121930+00:00",
     "source_ids": [
       "de-bundesbank-e5b1c4a067"
-    ]
-  },
-  {
-    "title": "Germany contributes EUR 500,000 to strengthen developing economies' trade capacity",
-    "url": "https://www.wto.org/english/news_e/news26_e/tech_09nov26_543_e.htm",
-    "native_id": "https://www.wto.org/english/news_e/news26_e/tech_09nov26_543_e.htm",
-    "published_at": "2026-11-09T00:00:00+00:00",
-    "published_raw": "Mon, 09 Nov 2026 00:00:00 GMT",
-    "summary": "Germany is contributing EUR 500,000 (approximately CHF 460,000) to the WTO's Global Trust Fund (GTF) to help developing economies and least developed countries (LDCs) enhance their participation in the multilateral trading system. Carmen Heidecke, Ambassador of Germany to the WTO, signed the Memorandum of Understanding on behalf of the German Federal Government at the WTO headquarters in Geneva on 9 November 2026.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "World Trade Organization disputes and decisions",
-      "jurisdiction": "INT",
-      "family": "trade_and_dispute_decisions"
-    },
-    "primary_source_id": "io-wto-497f28e20d",
-    "n": 9405,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "io-wto-497f28e20d"
-    ]
-  },
-  {
-    "title": "Leading today, building for tomorrow",
-    "url": "https://www.bis.org/speeches/20261109-leading-today-building-tomorrow",
-    "native_id": "https://www.bis.org/speeches/20261109-leading-today-building-tomorrow",
-    "published_at": "2026-11-09T00:00:00+00:00",
-    "published_raw": "2026-11-09T00:00:00Z",
-    "summary": "Special address by Mr Swaminathan J, Deputy Governor of the Reserve Bank of India, at the Leadership Conference of Indian Bank, Chennai, 23 October 2026.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Bank for International Settlements — View feed",
-      "jurisdiction": "INT",
-      "family": "supervisory_standards"
-    },
-    "primary_source_id": "io-bis-140216a5b6",
-    "n": 9406,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "io-bis-140216a5b6"
-    ]
-  },
-  {
-    "title": "Safeguarding trust and monetary sovereignty in a digital payments era",
-    "url": "https://www.bis.org/speeches/20261109-safeguarding-trust-and-monetary-sovereignty-digital-payments-era",
-    "native_id": "https://www.bis.org/speeches/20261109-safeguarding-trust-and-monetary-sovereignty-digital-payments-era",
-    "published_at": "2026-11-09T00:00:00+00:00",
-    "published_raw": "2026-11-09T00:00:00Z",
-    "summary": "Speech by Mr Denis Beau, First Deputy Governor of the Bank of France, at the Hong Kong FinTech Week 2026, Hong Kong, 3 November 2026.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Bank for International Settlements — View feed",
-      "jurisdiction": "INT",
-      "family": "supervisory_standards"
-    },
-    "primary_source_id": "io-bis-140216a5b6",
-    "n": 9407,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "io-bis-140216a5b6"
-    ]
-  },
-  {
-    "title": "Opening remarks - 2026 Market Practitioners Group Conference",
-    "url": "https://www.bis.org/speeches/20261109-opening-remarks-2026-market-practitioners-group-conference",
-    "native_id": "https://www.bis.org/speeches/20261109-opening-remarks-2026-market-practitioners-group-conference",
-    "published_at": "2026-11-09T00:00:00+00:00",
-    "published_raw": "2026-11-09T00:00:00Z",
-    "summary": "Opening remarks by Mr Rashad Cassim, Deputy Governor of the South African Reserve Bank, at the 2026 Market Practitioners Group Conference, Johannesburg, 3 November 2026.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Bank for International Settlements — View feed",
-      "jurisdiction": "INT",
-      "family": "supervisory_standards"
-    },
-    "primary_source_id": "io-bis-140216a5b6",
-    "n": 9408,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "io-bis-140216a5b6"
-    ]
-  },
-  {
-    "title": "Making AI-driven finance work for consumers",
-    "url": "https://www.bis.org/speeches/20261109-making-ai-driven-finance-work-consumers",
-    "native_id": "https://www.bis.org/speeches/20261109-making-ai-driven-finance-work-consumers",
-    "published_at": "2026-11-09T00:00:00+00:00",
-    "published_raw": "2026-11-09T00:00:00Z",
-    "summary": "Welcome address by Mr Sergio Nicoletti Altimari, Deputy Governor of the Bank of Italy, at the 13th Joint ESA’s Consumer Protection Day, Rome, 4 November 2026.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Bank for International Settlements — View feed",
-      "jurisdiction": "INT",
-      "family": "supervisory_standards"
-    },
-    "primary_source_id": "io-bis-140216a5b6",
-    "n": 9409,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "io-bis-140216a5b6"
-    ]
-  },
-  {
-    "title": "Message for the SEACEN masterclass - central bank communication",
-    "url": "https://www.bis.org/speeches/20261109-message-seacen-masterclass-central-bank-communication",
-    "native_id": "https://www.bis.org/speeches/20261109-message-seacen-masterclass-central-bank-communication",
-    "published_at": "2026-11-09T00:00:00+00:00",
-    "published_raw": "2026-11-09T00:00:00Z",
-    "summary": "Message by Mr Eli M Remolona, Jr, Governor of Bangko Sentral ng Pilipinas (BSP, the central bank of the Philippines), for the SEACEN Masterclass “Central bank communication”, Makati City, 20 October 2026.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Bank for International Settlements — View feed",
-      "jurisdiction": "INT",
-      "family": "supervisory_standards"
-    },
-    "primary_source_id": "io-bis-140216a5b6",
-    "n": 9410,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "io-bis-140216a5b6"
-    ]
-  },
-  {
-    "title": "Integrated, open and resilient - Europe’s strengths in a fragmenting world",
-    "url": "https://www.bis.org/speeches/20261109-integrated-open-and-resilient-europes-strengths-fragmenting-world",
-    "native_id": "https://www.bis.org/speeches/20261109-integrated-open-and-resilient-europes-strengths-fragmenting-world",
-    "published_at": "2026-11-09T00:00:00+00:00",
-    "published_raw": "2026-11-09T00:00:00Z",
-    "summary": "Speech by Mr Boris Vujčić, Vice-President of the European Central Bank, at the 5th Financial System Conference, organised by the Central Bank of Ireland, Dublin, 2 November 2026.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Bank for International Settlements — View feed",
-      "jurisdiction": "INT",
-      "family": "supervisory_standards"
-    },
-    "primary_source_id": "io-bis-140216a5b6",
-    "n": 9411,
-    "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-09T23:08:47.577478+00:00",
-    "source_ids": [
-      "io-bis-140216a5b6"
     ]
   }
 ]
