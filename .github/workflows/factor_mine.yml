@@ -158,10 +158,18 @@ jobs:
       # sealed snapshot bytes.
       - name: Add swap (16G freeze safety net)
         run: |
-          sudo fallocate -l 16G /swapfile || sudo dd if=/dev/zero of=/swapfile bs=1M count=16384
-          sudo chmod 600 /swapfile
-          sudo mkswap /swapfile
-          sudo swapon /swapfile
+          # GitHub-hosted runners already swap on /swapfile. Writing that
+          # path fails with "Text file busy" (run 42767247525, 8s, never
+          # reached freeze). Use a separate file and never fail the job:
+          # windowed session-index is the real fix; swap is a safety net.
+          SWAPFILE=/mnt/fm-swapfile
+          if ! grep -F "$SWAPFILE" /proc/swaps >/dev/null 2>&1; then
+            sudo rm -f "$SWAPFILE" || true
+            sudo fallocate -l 16G "$SWAPFILE" || sudo dd if=/dev/zero of="$SWAPFILE" bs=1M count=16384
+            sudo chmod 600 "$SWAPFILE"
+            sudo mkswap "$SWAPFILE"
+            sudo swapon "$SWAPFILE" || true
+          fi
           sudo swapon --show || true
           free -m
       # workflow_run/queued runs otherwise check out the sha from trigger
