@@ -1,6 +1,6 @@
 {
   "date": "2026-11-10",
-  "generated_at": "2026-11-10T09:13:01.148269-05:00",
+  "generated_at": "2026-11-10T09:13:37.315860-05:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -12,125 +12,125 @@
   "buy_1d": [
     {
       "ticker": "MGNI",
-      "score": 0.9235470307118834
-    },
-    {
-      "ticker": "ETON",
-      "score": 0.8439676248633239
-    },
-    {
-      "ticker": "ZVRA",
-      "score": 0.8376141242664461
+      "score": 0.8886529060864412
     },
     {
       "ticker": "TMDX",
-      "score": 0.8636644762723429
+      "score": 0.9115829308241439
+    },
+    {
+      "ticker": "ETON",
+      "score": 0.8892771448553412
     },
     {
       "ticker": "WRBY",
-      "score": 0.862646231728154
+      "score": 0.9098059383662727
+    },
+    {
+      "ticker": "ADPT",
+      "score": 0.8583515792529985
     },
     {
       "ticker": "RBLX",
-      "score": 0.7191844400847339
+      "score": 0.6853378027293181
+    },
+    {
+      "ticker": "SG",
+      "score": 0.8266397103243084
+    },
+    {
+      "ticker": "SEZL",
+      "score": 0.8569440188712472
+    },
+    {
+      "ticker": "ASO",
+      "score": 0.8347546483513613
+    },
+    {
+      "ticker": "ABNB",
+      "score": 0.49577715754465584
     },
     {
       "ticker": "EVER",
-      "score": 0.7048521193402596
+      "score": 0.6711157345037787
     },
     {
-      "ticker": "EVC",
-      "score": 0.8218954883922791
+      "ticker": "VVV",
+      "score": 0.8319510343168142
     },
     {
-      "ticker": "HNST",
-      "score": 0.830185802332142
+      "ticker": "RDDT",
+      "score": 0.6910730726787347
     },
     {
-      "ticker": "COCO",
-      "score": 0.7521837294885718
+      "ticker": "RKT",
+      "score": 0.7095690237128689
     },
     {
-      "ticker": "XYZ",
-      "score": 0.5763501549535271
-    },
-    {
-      "ticker": "CELH",
-      "score": 0.7827684547710014
-    },
-    {
-      "ticker": "KD",
-      "score": 0.8021495466387734
-    },
-    {
-      "ticker": "VYX",
-      "score": 0.7789622156741081
-    },
-    {
-      "ticker": "MSFT",
-      "score": 0.22544474874262233
+      "ticker": "COMP",
+      "score": 0.8310466394118461
     }
   ],
   "sell_1d": [
     {
-      "ticker": "FLUT",
-      "score": -0.41168152327787666
-    },
-    {
-      "ticker": "ECX",
-      "score": -0.4056848181639672
-    },
-    {
-      "ticker": "CGC",
-      "score": -0.36843763261852003
-    },
-    {
-      "ticker": "CNDT",
-      "score": -0.3621473596480284
-    },
-    {
-      "ticker": "TRIP",
-      "score": -0.34871305006886427
-    },
-    {
-      "ticker": "REAX",
-      "score": -0.33868621500359647
-    },
-    {
-      "ticker": "ZS",
-      "score": -0.33779205043605987
-    },
-    {
-      "ticker": "HTZ",
-      "score": -0.33571370549641016
-    },
-    {
-      "ticker": "NXRT",
-      "score": -0.334703919363243
+      "ticker": "XPRO",
+      "score": -0.5624092496024705
     },
     {
       "ticker": "KOS",
-      "score": -0.32577946319939227
+      "score": -0.5534808871954002
     },
     {
-      "ticker": "ABR",
-      "score": -0.3250996769749578
+      "ticker": "ACDC",
+      "score": -0.5275234367725375
     },
     {
-      "ticker": "PAA",
-      "score": -0.3229090790933832
+      "ticker": "BTU",
+      "score": -0.5247520187050312
     },
     {
-      "ticker": "JELD",
-      "score": -0.3206037445021246
+      "ticker": "VET",
+      "score": -0.5157964753064037
     },
     {
-      "ticker": "BLND",
-      "score": -0.319975062908219
+      "ticker": "AESI",
+      "score": -0.5055518643084188
     },
     {
-      "ticker": "MNRO",
-      "score": -0.3090398958146889
+      "ticker": "IEP",
+      "score": -0.4955669613225215
+    },
+    {
+      "ticker": "SOC",
+      "score": -0.48791366001772896
+    },
+    {
+      "ticker": "RES",
+      "score": -0.4572647598272214
+    },
+    {
+      "ticker": "BORR",
+      "score": -0.45127182810650474
+    },
+    {
+      "ticker": "SFM",
+      "score": -0.4437124346412189
+    },
+    {
+      "ticker": "NUS",
+      "score": -0.4347432945649758
+    },
+    {
+      "ticker": "INGR",
+      "score": -0.38501767561239797
+    },
+    {
+      "ticker": "ZS",
+      "score": -0.38269193140646474
+    },
+    {
+      "ticker": "VSAT",
+      "score": -0.3825122228106179
     }
   ],
   "flatten": {},
@@ -148,52 +148,6 @@
   },
   "sectors": {},
   "lands": [
-    {
-      "key": "finviz_digest",
-      "title": "Finviz digest",
-      "date": "2026-11-10",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-11-10T04:36:33.631964-05:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-11-10_finviz_digest.json",
-          "ok": true,
-          "reason": "",
-          "size": 102637,
-          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
-        },
-        {
-          "path": "01_daily/news/2026-11-10_finviz_digest.md",
-          "ok": true,
-          "reason": "",
-          "size": 11526,
-          "preview": "# Finviz Daily Digest \u2014 2026-11-10\n_Generated 2026-11-10T04:36:33.445882-05:00 \u00b7 export=data/exports/finviz_2026-11-10.csv \u00b7 ticker digests=2008 \u00b7 high-signal=950_"
-        },
-        {
-          "path": "data/exports/finviz_2026-11-10.csv",
-          "ok": true,
-          "reason": "",
-          "size": 12367040,
-          "preview": "11743 rows \u00b7 Ticker,Company,Industry,Market Cap,Forward P/E,P/S,P/B,P/Cash,P/Free Cash Flow,EPS (ttm),Sales Year Over Year TTM,EPS Su \u00b7 A, AA, AAA, AAAA, AAAB"
-        },
-        {
-          "path": "data/finviz/latest.csv",
-          "ok": true,
-          "reason": "",
-          "size": 11009161,
-          "preview": "11743 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAB\""
-        },
-        {
-          "path": "01_daily/news/2026-11-10_finviz_digest_preopen.json",
-          "ok": true,
-          "reason": "",
-          "size": 102637,
-          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
-        }
-      ],
-      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-11-10\n_Generated 2026-11-10T04:36:33.445882-05:00 \u00b7 export=data/exports/finviz_2026-11-10.csv \u00b7 ticker digests=2008 \u00b7 high-signal=950_ \u00b7 11743 rows \u00b7 Ticker,Company,Industry,Market Cap,Forward P/E,P/S,P/B,P/Cash,P/Free Cash Flow,EPS (ttm),Sales Year Over Year TTM,EPS Su \u00b7 A, AA, AAA, AAAA, AAAB \u00b7 11743 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAB\" \u00b7 keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
-    },
     {
       "key": "paper",
       "title": "Paper dashboard",
@@ -361,6 +315,59 @@
         }
       ],
       "preview": "5040 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-11-10",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-10T09:13:36.382625-05:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-11-10_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1642248,
+          "preview": "1d BUY MGNI, TMDX, ETON, WRBY, ADPT, RBLX, SG, SEZL \u00b7 SELL XPRO, KOS, ACDC, BTU, VET, AESI, IEP, SOC"
+        },
+        {
+          "path": "data/stock_book/2026-11-10_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 6313,
+          "preview": "green 491 \u00b7 SEZL, TMDX, BTSG, TGTX, RDDT, CLOV, MGNI, ISRG, GE, EMBJ"
+        },
+        {
+          "path": "data/stock_book/2026-11-10_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2491,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-11-10_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 13807,
+          "preview": "2026-11-10 BUY MGNI, TMDX, ETON, WRBY, ADPT, RBLX, SG, SEZL \u00b7 SELL XPRO, KOS, ACDC, BTU, VET, AESI, IEP, SOC"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 13807,
+          "preview": "2026-11-10 BUY MGNI, TMDX, ETON, WRBY, ADPT, RBLX, SG, SEZL \u00b7 SELL XPRO, KOS, ACDC, BTU, VET, AESI, IEP, SOC"
+        },
+        {
+          "path": "01_daily/2026-11-10_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 107577,
+          "preview": "# Stock book \u2014 2026-11-10\n_Generated 2026-11-10T09:13:10.817916-05:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY MGNI, TMDX, ETON, WRBY, ADPT, RBLX, SG, SEZL \u00b7 SELL XPRO, KOS, ACDC, BTU, VET, AESI, IEP, SOC \u00b7 green 491 \u00b7 SEZL, TMDX, BTSG, TGTX, RDDT, CLOV, MGNI, ISRG, GE, EMBJ \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-11-10 BUY MGNI, TMDX, ETON, WRBY, ADPT, RBLX, SG, SEZL \u00b7 SELL XPRO, KOS, ACDC, BTU, VET, AESI, IEP, SOC \u00b7 2026-11-10 BUY MGNI, TMDX, ETON, WRBY, ADPT, RBLX, SG, SEZL \u00b7 SELL XPRO, KOS, ACDC, BTU, VET, AESI, IEP, SOC \u00b7 # Stock book \u2014 2026-11-10\n_Generated 2026-11-10T09:13:10.817916-05:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
