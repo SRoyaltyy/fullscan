@@ -1,0 +1,15 @@
+{
+ "date": "2026-11-10",
+ "missing": [],
+ "prices": {
+  "ARRY": 5.01,
+  "CRCT": 8.67,
+  "WYHG": 3.91
+ },
+ "sources": {
+  "ARRY": "yahoo_premarket",
+  "CRCT": "yahoo_premarket",
+  "WYHG": "yahoo_premarket"
+ },
+ "written_at": "2026-11-10T14:01:45+00:00"
+}
