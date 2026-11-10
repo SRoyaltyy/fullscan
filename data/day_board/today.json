@@ -1,12 +1,12 @@
 {
   "date": "2026-11-10",
-  "generated_at": "2026-11-10T04:36:20.826083-05:00",
+  "generated_at": "2026-11-10T04:36:33.960426-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
-    "ok": 4,
-    "partial": 4,
-    "fail": 0,
+    "ok": 1,
+    "partial": 3,
+    "fail": 4,
     "n": 8
   },
   "buy_1d": [],
@@ -15,56 +15,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "map_heat",
-      "title": "Map heat tables",
-      "date": "2026-11-10",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-11-10T04:33:46.123854-05:00",
-      "files": [
-        {
-          "path": "01_daily/map_heat/2026-11-10_map_heat.json",
-          "ok": true,
-          "reason": "",
-          "size": 275724,
-          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
-        },
-        {
-          "path": "01_daily/map_heat/2026-11-10_map_heat.md",
-          "ok": true,
-          "reason": "",
-          "size": 18486,
-          "preview": "# MAP HEAT \u2014 2026-11-10\nExport `finviz_2026-11-09.csv` \u00b7 11616 names \u00b7 generated 2026-11-10T04:24:00.861706-05:00"
-        }
-      ],
-      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-11-10\nExport `finviz_2026-11-09.csv` \u00b7 11616 names \u00b7 generated 2026-11-10T04:24:00.861706-05:00"
-    },
-    {
-      "key": "map_heat_baseline",
-      "title": "Map heat night baseline",
-      "date": "2026-11-10",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-11-10T04:33:52.171502-05:00",
-      "files": [
-        {
-          "path": "01_daily/map_heat/2026-11-10_research_baseline.json",
-          "ok": true,
-          "reason": "",
-          "size": 187512,
-          "preview": "keys: date, source_heat_date, phase, generated_at, n_targets, n_cards, coverage, validation_errors, source_calendar_results, source_market_reaction_pct, cards, size_gate"
-        },
-        {
-          "path": "01_daily/map_heat/2026-11-10_research_baseline.md",
-          "ok": true,
-          "reason": "",
-          "size": 25855,
-          "preview": "# MAP HEAT RESEARCH \u2014 2026-11-10\n142 captain cards \u00b7 size_gate=False set by pre-open refresh"
-        }
-      ],
-      "preview": "keys: date, source_heat_date, phase, generated_at, n_targets, n_cards, coverage, validation_errors, source_calendar_results, source_market_reaction_pct, cards, size_gate \u00b7 # MAP HEAT RESEARCH \u2014 2026-11-10\n142 captain cards \u00b7 size_gate=False set by pre-open refresh"
-    },
     {
       "key": "universe",
       "title": "Universe labels",
@@ -178,6 +128,31 @@
     },
     {
       "key": "news_actions",
+      "title": "News actions",
+      "date": "2026-11-10",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-10T04:36:12.866450-05:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-11-10_actions.json",
+          "ok": true,
+          "reason": "",
+          "size": 73005,
+          "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers"
+        },
+        {
+          "path": "01_daily/news/2026-11-10_actions.md",
+          "ok": true,
+          "reason": "",
+          "size": 15718,
+          "preview": "# News \u2192 Actions v4 (full framework) \u2014 2026-11-10T04:36:12.850422-05:00\nraw=8706 unique_events=7 tickers=83"
+        }
+      ],
+      "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-11-10T04:36:12.850422-05:00\nraw=8706 unique_events=7 tickers=83"
+    },
+    {
+      "key": "news_actions",
       "title": "News actions (no LLM)",
       "date": "2026-11-10",
       "ok": true,
@@ -200,6 +175,52 @@
         }
       ],
       "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-11-10T04:36:12.850422-05:00\nraw=8706 unique_events=7 tickers=83"
+    },
+    {
+      "key": "finviz_digest",
+      "title": "Finviz digest",
+      "date": "2026-11-10",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-10T04:36:33.631964-05:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-11-10_finviz_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 102637,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        },
+        {
+          "path": "01_daily/news/2026-11-10_finviz_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 11526,
+          "preview": "# Finviz Daily Digest \u2014 2026-11-10\n_Generated 2026-11-10T04:36:33.445882-05:00 \u00b7 export=data/exports/finviz_2026-11-10.csv \u00b7 ticker digests=2008 \u00b7 high-signal=950_"
+        },
+        {
+          "path": "data/exports/finviz_2026-11-10.csv",
+          "ok": true,
+          "reason": "",
+          "size": 12367040,
+          "preview": "11743 rows \u00b7 Ticker,Company,Industry,Market Cap,Forward P/E,P/S,P/B,P/Cash,P/Free Cash Flow,EPS (ttm),Sales Year Over Year TTM,EPS Su \u00b7 A, AA, AAA, AAAA, AAAB"
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11009161,
+          "preview": "11743 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAB\""
+        },
+        {
+          "path": "01_daily/news/2026-11-10_finviz_digest_preopen.json",
+          "ok": true,
+          "reason": "",
+          "size": 102637,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        }
+      ],
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-11-10\n_Generated 2026-11-10T04:36:33.445882-05:00 \u00b7 export=data/exports/finviz_2026-11-10.csv \u00b7 ticker digests=2008 \u00b7 high-signal=950_ \u00b7 11743 rows \u00b7 Ticker,Company,Industry,Market Cap,Forward P/E,P/S,P/B,P/Cash,P/Free Cash Flow,EPS (ttm),Sales Year Over Year TTM,EPS Su \u00b7 A, AA, AAA, AAAA, AAAB \u00b7 11743 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAB\" \u00b7 keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"

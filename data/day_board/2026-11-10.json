@@ -1,16 +1,19 @@
 {
   "date": "2026-11-10",
-  "generated_at": "2026-11-10T04:36:20.826083-05:00",
+  "generated_at": "2026-11-10T04:36:33.960426-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
     "MISSING General predict MD `01_daily/general/2026-11-10_predict.md` \u2014 missing",
-    "MISSING News judge MD `01_daily/news/2026-11-10_judge.md` \u2014 missing"
+    "MISSING News actions JSON `01_daily/news/2026-11-10_actions.json` \u2014 missing",
+    "MISSING News judge MD `01_daily/news/2026-11-10_judge.md` \u2014 missing",
+    "MISSING Weather JSON `01_daily/weather/2026-11-10_weather.json` \u2014 missing",
+    "MISSING AB checklist enriched `data/ab_checklist/2026-11-10_ab_checklist_enriched.csv` \u2014 missing"
   ],
   "counts": {
-    "ok": 4,
-    "partial": 4,
-    "fail": 0,
+    "ok": 1,
+    "partial": 3,
+    "fail": 4,
     "n": 8
   },
   "processes": [
@@ -18,9 +21,9 @@
       "key": "postclose",
       "name": "Post-close research",
       "yaml": "map_heat_postclose.yml",
-      "status": "OK",
+      "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 2,
+      "n_req_ok": 1,
       "n_req": 2,
       "n_opt_ok": 2,
       "n_opt": 2,
@@ -55,10 +58,10 @@
           "name": "Map heat tables JSON",
           "path": "01_daily/map_heat/2026-11-10_map_heat.json",
           "role": "required",
-          "status": "OK",
-          "reason": "",
-          "size": 275724,
-          "said": "morning_overlay \u00b7 11616 names \u00b7 hot Tobacco, Internet Content & Information, Electronic Gaming & Multimedia, Consumer Electronics \u00b7 cold Coking Coal, Utilities - Independent Power Producers, Metal Fabrication \u00b7 macro_gate",
+          "status": "FAIL",
+          "reason": "stale_map_heat_md",
+          "size": 0,
+          "said": "stale_map_heat_md \u00b7 morning_overlay \u00b7 11616 names \u00b7 hot Tobacco, Internet Content & Information, Electronic Gaming & Multimedia, Consumer Electronics \u00b7 cold Coking Coal, Utilities - Independent Power Producers, Metal Fabrication \u00b7 macro_gate",
           "bullets": []
         },
         {
@@ -68,10 +71,10 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 18085,
-          "said": "MAP HEAT \u2014 2026-11-10",
+          "size": 18009,
+          "said": "MAP HEAT \u2014 2026-11-09",
           "bullets": [
-            "Export `finviz_2026-11-09.csv` \u00b7 11616 names \u00b7 generated 2026-11-10T04:24:00.861706-05:00",
+            "Export `finviz_2026-11-09.csv` \u00b7 11616 names \u00b7 generated 2026-11-09T04:57:03.852164-05:00",
             "TAPE (live futures)"
           ]
         }
@@ -87,7 +90,7 @@
       "inputs_ready": true,
       "n_req_ok": 1,
       "n_req": 1,
-      "n_opt_ok": 3,
+      "n_opt_ok": 1,
       "n_opt": 5,
       "files": [
         {
@@ -97,12 +100,12 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 102828,
-          "said": "2098 tickers \u00b7 1111 signals \u00b7 top ABNB, ADBE, AFL, ALL, AMGN, ANET, APD, APP",
+          "size": 102637,
+          "said": "2008 tickers \u00b7 950 signals \u00b7 top ABNB, AFL, ALL, APD, APP, ARM, AU, B",
           "bullets": [
-            "Airbnb Inc. Cl A stock rises Friday, outperforms market",
-            "Palantir and CrowdStrike stocks tumble as Wall Street dumps software's AI winners",
-            "Aflac's 36.5% Beat Leans On A $0.71 Assumption Unlock As Margin Guidance Rises But Japan Sales And Capital Buffers Soften"
+            "Mizuho Says This Top Pick Can Leverage AI to Expand its Dominance",
+            "Aflac's 36.5% Beat Leans On A $0.71 Assumption Unlock As Margin Guidance Rises But Japan Sales And Capital Buffers Soften",
+            "Insurers race to capture value from agentic AI"
           ]
         },
         {
@@ -112,10 +115,10 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 11986,
+          "size": 11472,
           "said": "Finviz Daily Digest \u2014 2026-11-10",
           "bullets": [
-            "_Generated 2026-11-10T04:21:41.257147-05:00 \u00b7 export=data/exports/finviz_2026-11-09.csv \u00b7 ticker digests=2098 \u00b7 high-signal=1111_",
+            "_Generated 2026-11-10T04:36:33.445882-05:00 \u00b7 export=data/exports/finviz_2026-11-10.csv \u00b7 ticker digests=2008 \u00b7 high-signal=950_",
             "Major indices (live quote page)"
           ]
         },
@@ -124,10 +127,10 @@
           "name": "Homepage warm-up JSON (*_finviz_market_digest)",
           "path": "01_daily/news/2026-11-10_finviz_market_digest.json",
           "role": "optional",
-          "status": "OK",
-          "reason": "",
-          "size": 4816,
-          "said": "US futures point to a modestly higher open as traders await October CPI data and react to earnings-driven stock moves \u00b7 leaders EL, RIVN, UBS, CHKP, TDG, ONON \u00b7 good",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
           "bullets": []
         },
         {
@@ -135,14 +138,11 @@
           "name": "Homepage warm-up MD (*_finviz_market_digest)",
           "path": "01_daily/news/2026-11-10_finviz_market_digest.md",
           "role": "optional",
-          "status": "OK",
-          "reason": "",
-          "size": 2398,
-          "said": "Finviz homepage market digest \u2014 2026-11-10",
-          "bullets": [
-            "Generated:** 2026-11-10T04:21:51.378143-05:00 (America/New_York)",
-            "Source:** `live`"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "market_digest_close_json",
@@ -167,11 +167,11 @@
           "bullets": []
         }
       ],
-      "said": "2098 tickers \u00b7 1111 signals \u00b7 top ABNB, ADBE, AFL, ALL, AMGN, ANET, APD, APP",
+      "said": "2008 tickers \u00b7 950 signals \u00b7 top ABNB, AFL, ALL, APD, APP, ARM, AU, B",
       "bullets": [
-        "Airbnb Inc. Cl A stock rises Friday, outperforms market",
-        "Palantir and CrowdStrike stocks tumble as Wall Street dumps software's AI winners",
-        "Aflac's 36.5% Beat Leans On A $0.71 Assumption Unlock As Margin Guidance Rises But Japan Sales And Capital Buffers Soften"
+        "Mizuho Says This Top Pick Can Leverage AI to Expand its Dominance",
+        "Aflac's 36.5% Beat Leans On A $0.71 Assumption Unlock As Margin Guidance Rises But Japan Sales And Capital Buffers Soften",
+        "Insurers race to capture value from agentic AI"
       ]
     },
     {
@@ -179,10 +179,10 @@
       "name": "Pre-Open ALL",
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
-      "inputs_ready": true,
+      "inputs_ready": false,
       "n_req_ok": 2,
       "n_req": 9,
-      "n_opt_ok": 2,
+      "n_opt_ok": 0,
       "n_opt": 14,
       "files": [
         {
@@ -192,12 +192,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 102828,
-          "said": "2098 tickers \u00b7 1111 signals \u00b7 top ABNB, ADBE, AFL, ALL, AMGN, ANET, APD, APP",
+          "size": 102637,
+          "said": "2008 tickers \u00b7 950 signals \u00b7 top ABNB, AFL, ALL, APD, APP, ARM, AU, B",
           "bullets": [
-            "Airbnb Inc. Cl A stock rises Friday, outperforms market",
-            "Palantir and CrowdStrike stocks tumble as Wall Street dumps software's AI winners",
-            "Aflac's 36.5% Beat Leans On A $0.71 Assumption Unlock As Margin Guidance Rises But Japan Sales And Capital Buffers Soften"
+            "Mizuho Says This Top Pick Can Leverage AI to Expand its Dominance",
+            "Aflac's 36.5% Beat Leans On A $0.71 Assumption Unlock As Margin Guidance Rises But Japan Sales And Capital Buffers Soften",
+            "Insurers race to capture value from agentic AI"
           ]
         },
         {
@@ -205,10 +205,10 @@
           "name": "Homepage warm-up JSON (*_finviz_market_digest)",
           "path": "01_daily/news/2026-11-10_finviz_market_digest.json",
           "role": "optional",
-          "status": "OK",
-          "reason": "",
-          "size": 4816,
-          "said": "US futures point to a modestly higher open as traders await October CPI data and react to earnings-driven stock moves \u00b7 leaders EL, RIVN, UBS, CHKP, TDG, ONON \u00b7 good",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
           "bullets": []
         },
         {
@@ -227,10 +227,10 @@
           "name": "Map heat tables JSON",
           "path": "01_daily/map_heat/2026-11-10_map_heat.json",
           "role": "input",
-          "status": "OK",
-          "reason": "",
-          "size": 275724,
-          "said": "morning_overlay \u00b7 11616 names \u00b7 hot Tobacco, Internet Content & Information, Electronic Gaming & Multimedia, Consumer Electronics \u00b7 cold Coking Coal, Utilities - Independent Power Producers, Metal Fabrication \u00b7 macro_gate",
+          "status": "FAIL",
+          "reason": "stale_map_heat_md",
+          "size": 0,
+          "said": "stale_map_heat_md \u00b7 morning_overlay \u00b7 11616 names \u00b7 hot Tobacco, Internet Content & Information, Electronic Gaming & Multimedia, Consumer Electronics \u00b7 cold Coking Coal, Utilities - Independent Power Producers, Metal Fabrication \u00b7 macro_gate",
           "bullets": []
         },
         {
@@ -238,10 +238,10 @@
           "name": "News parse JSON",
           "path": "01_daily/news/2026-11-10_parsed.json",
           "role": "required",
-          "status": "OK",
-          "reason": "",
-          "size": 6260139,
-          "said": "6260139B on disk",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
           "bullets": []
         },
         {
@@ -293,16 +293,11 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-11-10_actions.json",
           "role": "optional",
-          "status": "OK",
-          "reason": "",
-          "size": 73005,
-          "said": "83 ticker actions \u00b7 7 events \u00b7 8706 headlines \u00b7 AMGN BUY, CRM SELL, NOW SELL, UBER SELL, ESTC SELL, PCTY SELL, DSP SELL, DJCO SELL",
-          "bullets": [
-            "BUY AMGN",
-            "SELL CRM",
-            "SELL NOW",
-            "SELL UBER"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "general",
@@ -333,13 +328,13 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7575,
-          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 17 fail",
+          "size": 7593,
+          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 20 fail",
           "bullets": [
             "general_predict:missing",
             "events:missing",
             "news_judge:missing",
-            "news_actions:missing"
+            "news_parse:missing"
           ]
         },
         {
@@ -358,11 +353,13 @@
           "name": "Grok review JSON",
           "path": "01_daily/2026-11-10_grok_review.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "ok=False Grok returned an empty review",
+          "size": 308,
+          "said": "ok=False \u00b7 empty_review_reply (review)",
+          "bullets": [
+            "Grok returned an empty review"
+          ]
         },
         {
           "key": "sector_basic_materials",
@@ -493,9 +490,9 @@
       "key": "weather",
       "name": "Label + weather",
       "yaml": "label_weather.yml",
-      "status": "OK",
+      "status": "FAIL",
       "inputs_ready": true,
-      "n_req_ok": 1,
+      "n_req_ok": 0,
       "n_req": 1,
       "n_opt_ok": 0,
       "n_opt": 0,
@@ -507,12 +504,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 102828,
-          "said": "2098 tickers \u00b7 1111 signals \u00b7 top ABNB, ADBE, AFL, ALL, AMGN, ANET, APD, APP",
+          "size": 102637,
+          "said": "2008 tickers \u00b7 950 signals \u00b7 top ABNB, AFL, ALL, APD, APP, ARM, AU, B",
           "bullets": [
-            "Airbnb Inc. Cl A stock rises Friday, outperforms market",
-            "Palantir and CrowdStrike stocks tumble as Wall Street dumps software's AI winners",
-            "Aflac's 36.5% Beat Leans On A $0.71 Assumption Unlock As Margin Guidance Rises But Japan Sales And Capital Buffers Soften"
+            "Mizuho Says This Top Pick Can Leverage AI to Expand its Dominance",
+            "Aflac's 36.5% Beat Leans On A $0.71 Assumption Unlock As Margin Guidance Rises But Japan Sales And Capital Buffers Soften",
+            "Insurers race to capture value from agentic AI"
           ]
         },
         {
@@ -520,31 +517,25 @@
           "name": "Weather JSON",
           "path": "01_daily/weather/2026-11-10_weather.json",
           "role": "required",
-          "status": "OK",
-          "reason": "sectors=11 bytes=9426 vix=calm yields=flat",
-          "size": 9426,
-          "said": "favorable 4 \u00b7 hostile 2 \u00b7 neutral 5",
-          "bullets": [
-            "hostile: Energy, Technology",
-            "events bull 1 / bear 3"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         }
       ],
-      "said": "favorable 4 \u00b7 hostile 2 \u00b7 neutral 5",
-      "bullets": [
-        "hostile: Energy, Technology",
-        "events bull 1 / bear 3"
-      ]
+      "said": "",
+      "bullets": []
     },
     {
       "key": "ab",
       "name": "AB checklist",
       "yaml": "ab_checklist.yml",
-      "status": "OK",
+      "status": "FAIL",
       "inputs_ready": true,
-      "n_req_ok": 1,
+      "n_req_ok": 0,
       "n_req": 1,
-      "n_opt_ok": 1,
+      "n_opt_ok": 0,
       "n_opt": 1,
       "files": [
         {
@@ -552,39 +543,33 @@
           "name": "AB checklist raw",
           "path": "data/ab_checklist/2026-11-10_ab_checklist.csv",
           "role": "optional",
-          "status": "OK",
-          "reason": "rows=2615",
-          "size": 7533042,
-          "said": "27 rows",
-          "bullets": [
-            "CNM, TEL, WCN, SOLS, GPN, TAK, V, TXN"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "ab_enriched",
           "name": "AB checklist enriched",
           "path": "data/ab_checklist/2026-11-10_ab_checklist_enriched.csv",
           "role": "required",
-          "status": "OK",
-          "reason": "rows=2615",
-          "size": 8310264,
-          "said": "25 rows",
-          "bullets": [
-            "WCN, CNM, TSCO, TEVA, HUM, AAPL, HSY, SOLS"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         }
       ],
-      "said": "25 rows",
-      "bullets": [
-        "WCN, CNM, TSCO, TEVA, HUM"
-      ]
+      "said": "",
+      "bullets": []
     },
     {
       "key": "catalyst",
       "name": "Catalyst dossiers",
       "yaml": "catalyst_daily.yml",
-      "status": "PARTIAL",
-      "inputs_ready": true,
+      "status": "FAIL",
+      "inputs_ready": false,
       "n_req_ok": 0,
       "n_req": 0,
       "n_opt_ok": 0,
@@ -595,16 +580,11 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-11-10_actions.json",
           "role": "input",
-          "status": "OK",
-          "reason": "",
-          "size": 73005,
-          "said": "83 ticker actions \u00b7 7 events \u00b7 8706 headlines \u00b7 AMGN BUY, CRM SELL, NOW SELL, UBER SELL, ESTC SELL, PCTY SELL, DSP SELL, DJCO SELL",
-          "bullets": [
-            "BUY AMGN",
-            "SELL CRM",
-            "SELL NOW",
-            "SELL UBER"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "in_digest",
@@ -613,12 +593,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 102828,
-          "said": "2098 tickers \u00b7 1111 signals \u00b7 top ABNB, ADBE, AFL, ALL, AMGN, ANET, APD, APP",
+          "size": 102637,
+          "said": "2008 tickers \u00b7 950 signals \u00b7 top ABNB, AFL, ALL, APD, APP, ARM, AU, B",
           "bullets": [
-            "Airbnb Inc. Cl A stock rises Friday, outperforms market",
-            "Palantir and CrowdStrike stocks tumble as Wall Street dumps software's AI winners",
-            "Aflac's 36.5% Beat Leans On A $0.71 Assumption Unlock As Margin Guidance Rises But Japan Sales And Capital Buffers Soften"
+            "Mizuho Says This Top Pick Can Leverage AI to Expand its Dominance",
+            "Aflac's 36.5% Beat Leans On A $0.71 Assumption Unlock As Margin Guidance Rises But Japan Sales And Capital Buffers Soften",
+            "Insurers race to capture value from agentic AI"
           ]
         },
         {
@@ -633,25 +613,16 @@
           "bullets": []
         }
       ],
-      "said": "83 ticker actions \u00b7 7 events \u00b7 8706 headlines \u00b7 AMGN BUY, CRM SELL, NOW SELL, UBER SELL, ESTC SELL, PCTY SELL, DSP SELL, DJCO SELL",
-      "bullets": [
-        "BUY AMGN",
-        "SELL CRM",
-        "SELL NOW",
-        "SELL UBER",
-        "SELL ESTC",
-        "SELL PCTY",
-        "SELL DSP",
-        "SELL DJCO"
-      ]
+      "said": "",
+      "bullets": []
     },
     {
       "key": "stock_book",
       "name": "Stock Book ALL",
       "yaml": "stock_book_all.yml",
-      "status": "PARTIAL",
+      "status": "FAIL",
       "inputs_ready": false,
-      "n_req_ok": 2,
+      "n_req_ok": 0,
       "n_req": 4,
       "n_opt_ok": 1,
       "n_opt": 4,
@@ -683,16 +654,11 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-11-10_actions.json",
           "role": "input",
-          "status": "OK",
-          "reason": "",
-          "size": 73005,
-          "said": "83 ticker actions \u00b7 7 events \u00b7 8706 headlines \u00b7 AMGN BUY, CRM SELL, NOW SELL, UBER SELL, ESTC SELL, PCTY SELL, DSP SELL, DJCO SELL",
-          "bullets": [
-            "BUY AMGN",
-            "SELL CRM",
-            "SELL NOW",
-            "SELL UBER"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "in_digest",
@@ -701,12 +667,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 102828,
-          "said": "2098 tickers \u00b7 1111 signals \u00b7 top ABNB, ADBE, AFL, ALL, AMGN, ANET, APD, APP",
+          "size": 102637,
+          "said": "2008 tickers \u00b7 950 signals \u00b7 top ABNB, AFL, ALL, APD, APP, ARM, AU, B",
           "bullets": [
-            "Airbnb Inc. Cl A stock rises Friday, outperforms market",
-            "Palantir and CrowdStrike stocks tumble as Wall Street dumps software's AI winners",
-            "Aflac's 36.5% Beat Leans On A $0.71 Assumption Unlock As Margin Guidance Rises But Japan Sales And Capital Buffers Soften"
+            "Mizuho Says This Top Pick Can Leverage AI to Expand its Dominance",
+            "Aflac's 36.5% Beat Leans On A $0.71 Assumption Unlock As Margin Guidance Rises But Japan Sales And Capital Buffers Soften",
+            "Insurers race to capture value from agentic AI"
           ]
         },
         {
@@ -725,53 +691,44 @@
           "name": "Weather JSON",
           "path": "01_daily/weather/2026-11-10_weather.json",
           "role": "input",
-          "status": "OK",
-          "reason": "sectors=11 bytes=9426 vix=calm yields=flat",
-          "size": 9426,
-          "said": "favorable 4 \u00b7 hostile 2 \u00b7 neutral 5",
-          "bullets": [
-            "hostile: Energy, Technology",
-            "events bull 1 / bear 3"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "in_ab",
           "name": "AB checklist enriched",
           "path": "data/ab_checklist/2026-11-10_ab_checklist_enriched.csv",
           "role": "input",
-          "status": "OK",
-          "reason": "rows=2615",
-          "size": 8310264,
-          "said": "25 rows",
-          "bullets": [
-            "WCN, CNM, TSCO, TEVA, HUM, AAPL, HSY, SOLS"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "join",
           "name": "Join ranked CSV",
           "path": "data/join/2026-11-10_ranked.csv",
           "role": "required",
-          "status": "OK",
-          "reason": "rows=5894",
-          "size": 2206160,
-          "said": "202 rows",
-          "bullets": [
-            "KNSA, ONC, CDNA, BLLN, AVAH, REGN, IAG, ZVRA"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "peers",
           "name": "Peer RS CSV",
           "path": "data/peers/2026-11-10_peer_rs.csv",
           "role": "required",
-          "status": "OK",
-          "reason": "rows=5040",
-          "size": 808484,
-          "said": "496 rows",
-          "bullets": [
-            "A, AA, AACG, AAL, AAME, AAMI, AAOI, AAON"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "book_json",
@@ -832,10 +789,8 @@
           "bullets": []
         }
       ],
-      "said": "202 rows",
-      "bullets": [
-        "KNSA, ONC, CDNA, BLLN, AVAH"
-      ]
+      "said": "",
+      "bullets": []
     },
     {
       "key": "publish",
@@ -909,13 +864,7 @@
     "general": {},
     "sectors": {},
     "news": {},
-    "weather": {
-      "said": "favorable 4 \u00b7 hostile 2 \u00b7 neutral 5",
-      "bullets": [
-        "hostile: Energy, Technology",
-        "events bull 1 / bear 3"
-      ]
-    }
+    "weather": {}
   },
   "lands": [
     {
@@ -1220,6 +1169,31 @@
     },
     {
       "key": "news_actions",
+      "title": "News actions",
+      "date": "2026-11-10",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-10T04:36:12.866450-05:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-11-10_actions.json",
+          "ok": true,
+          "reason": "",
+          "size": 73005,
+          "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers"
+        },
+        {
+          "path": "01_daily/news/2026-11-10_actions.md",
+          "ok": true,
+          "reason": "",
+          "size": 15718,
+          "preview": "# News \u2192 Actions v4 (full framework) \u2014 2026-11-10T04:36:12.850422-05:00\nraw=8706 unique_events=7 tickers=83"
+        }
+      ],
+      "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-11-10T04:36:12.850422-05:00\nraw=8706 unique_events=7 tickers=83"
+    },
+    {
+      "key": "news_actions",
       "title": "News actions (no LLM)",
       "date": "2026-11-10",
       "ok": true,
@@ -1242,6 +1216,52 @@
         }
       ],
       "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-11-10T04:36:12.850422-05:00\nraw=8706 unique_events=7 tickers=83"
+    },
+    {
+      "key": "finviz_digest",
+      "title": "Finviz digest",
+      "date": "2026-11-10",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-10T04:36:33.631964-05:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-11-10_finviz_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 102637,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        },
+        {
+          "path": "01_daily/news/2026-11-10_finviz_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 11526,
+          "preview": "# Finviz Daily Digest \u2014 2026-11-10\n_Generated 2026-11-10T04:36:33.445882-05:00 \u00b7 export=data/exports/finviz_2026-11-10.csv \u00b7 ticker digests=2008 \u00b7 high-signal=950_"
+        },
+        {
+          "path": "data/exports/finviz_2026-11-10.csv",
+          "ok": true,
+          "reason": "",
+          "size": 12367040,
+          "preview": "11743 rows \u00b7 Ticker,Company,Industry,Market Cap,Forward P/E,P/S,P/B,P/Cash,P/Free Cash Flow,EPS (ttm),Sales Year Over Year TTM,EPS Su \u00b7 A, AA, AAA, AAAA, AAAB"
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11009161,
+          "preview": "11743 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAB\""
+        },
+        {
+          "path": "01_daily/news/2026-11-10_finviz_digest_preopen.json",
+          "ok": true,
+          "reason": "",
+          "size": 102637,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        }
+      ],
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-11-10\n_Generated 2026-11-10T04:36:33.445882-05:00 \u00b7 export=data/exports/finviz_2026-11-10.csv \u00b7 ticker digests=2008 \u00b7 high-signal=950_ \u00b7 11743 rows \u00b7 Ticker,Company,Industry,Market Cap,Forward P/E,P/S,P/B,P/Cash,P/Free Cash Flow,EPS (ttm),Sales Year Over Year TTM,EPS Su \u00b7 A, AA, AAA, AAAA, AAAB \u00b7 11743 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAB\" \u00b7 keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
     }
   ],
   "href": {
