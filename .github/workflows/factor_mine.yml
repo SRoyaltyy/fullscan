@@ -178,6 +178,8 @@ jobs:
             !/eval/
             !/01_daily/
             /01_daily/factor_mine_action.md
+            /01_daily/general/
+            /01_daily/weather/
             !/research/
             /research/rebuild/
             !/dashboard/
