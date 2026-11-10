@@ -2,7 +2,7 @@
 
 Live sleeves still SIT on S≤−3. Search a ticker for every session since 8/13: cameras (+N −N), 09:30 open, close, same-day % and hold-1/3/5 with actual prices.
 
-Generated 2026-11-10T14:48:39.482091-05:00 · 2026-08-13 → 2026-11-09 · live sit **untouched**.
+Generated 2026-11-10T15:21:48.093732-05:00 · 2026-08-13 → 2026-11-09 · live sit **untouched**.
 
 ## Latest morning
 
@@ -10,25 +10,25 @@ Generated 2026-11-10T14:48:39.482091-05:00 · 2026-08-13 → 2026-11-09 · live 
 
 ### Longs weather sat on (top)
 
-- **APP** idio +31 · +9 −0 · E good · H1 -0.36% H3 None%
-- **ZVRA** idio +31 · +8 −1 · E good · H1 0.82% H3 None%
-- **ALGN** idio +30 · +9 −1 · E good · H1 4.6% H3 None%
-- **PRVA** idio +29 · +8 −0 · E good · H1 -0.78% H3 None%
-- **VCEL** idio +29 · +8 −0 · E good · H1 5.82% H3 None%
-- **XERS** idio +29 · +8 −0 · E good · H1 0.98% H3 None%
-- **ADMA** idio +28 · +9 −0 · E good · H1 -2.36% H3 None%
-- **COLL** idio +28 · +8 −0 · E good · H1 0.16% H3 None%
+- **APP** idio +31 · +9 −0 · E good · H1 1.42% H3 None%
+- **ZVRA** idio +31 · +8 −1 · E good · H1 0.52% H3 None%
+- **ALGN** idio +30 · +9 −1 · E good · H1 4.08% H3 None%
+- **PRVA** idio +29 · +8 −0 · E good · H1 -0.9% H3 None%
+- **VCEL** idio +29 · +8 −0 · E good · H1 5.02% H3 None%
+- **XERS** idio +29 · +8 −0 · E good · H1 1.66% H3 None%
+- **ADMA** idio +28 · +9 −0 · E good · H1 -2.44% H3 None%
+- **COLL** idio +28 · +8 −0 · E good · H1 -0.66% H3 None%
 
 ### Shorts weather sat on (top)
 
-- **TROX** idio -14 · +2 −5 · H1 -11.03%
-- **DDD** idio -14 · +2 −6 · H1 -2.81%
-- **ASPN** idio -11 · +2 −5 · H1 -13.87%
-- **HE** idio -10 · +3 −4 · H1 0.49%
-- **DQ** idio -9 · +2 −5 · H1 8.83%
-- **ASTS** idio -8 · +2 −6 · H1 2.14%
-- **LTRX** idio -7 · +1 −5 · H1 14.15%
-- **PPTA** idio -7 · +2 −5 · H1 4.32%
+- **TROX** idio -14 · +2 −5 · H1 -10.08%
+- **DDD** idio -14 · +2 −6 · H1 -3.93%
+- **ASPN** idio -11 · +2 −5 · H1 -14.67%
+- **HE** idio -10 · +3 −4 · H1 1.31%
+- **DQ** idio -9 · +2 −5 · H1 8.59%
+- **ASTS** idio -8 · +2 −6 · H1 -0.49%
+- **LTRX** idio -7 · +1 −5 · H1 11.85%
+- **PPTA** idio -7 · +2 −5 · H1 4.47%
 
 ## If we had taken them on hard-red sits (research)
 
