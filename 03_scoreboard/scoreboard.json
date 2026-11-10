@@ -35943,7 +35943,7 @@
           "status": "miss"
         }
       ],
-      "reflection_lesson_ref": null,
+      "reflection_lesson_ref": "02_lessons/candidate/2026-11-10_lesson.md",
       "sources_used": [
         {
           "url": "https://www.investing.com/analysis/us-stocks-slip-on-hot-cpi-as-nvidia-falls-amd-rallies-200691312",
@@ -36018,7 +36018,8 @@
       "key_interaction": "Waller’s 50bp condition and the CPI print were an amplification pair — the CPI did not merely surprise on its own; it activated a pre-existing hawkish reaction function, producing a nonlinear tightening shock",
       "knowable_at_9am": "yes",
       "attribution_contested": "no",
-      "outlier_watch": "Dow’s V-shaped recovery vs NDX’s failed intraday reversal, and Nvidia falling while AMD rose — the shock was concentrated in rate-sensitive/long-duration tech and one idiosyncratic name, not a uniform risk-off"
+      "outlier_watch": "Dow’s V-shaped recovery vs NDX’s failed intraday reversal, and Nvidia falling while AMD rose — the shock was concentrated in rate-sensitive/long-duration tech and one idiosyncratic name, not a uniform risk-off",
+      "lesson_schema_ok": true
     },
     {
       "date": "2026-11-10",
