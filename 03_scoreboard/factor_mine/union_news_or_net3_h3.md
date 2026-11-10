@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · packet🟢 OR headline🟢 and camera net ≥ 3
 
-Cash book **-19.35%** ($8,065) · signal-only (no cash/fees) was -21.14%. Starts YES **1/30**. Fills 161 · skips 162 · realized $-2181.08.
+Cash book **-17.14%** ($8,286) · signal-only (no cash/fees) was -21.14%. Starts YES **1/30**. Fills 168 · skips 162 · realized $-2181.08.
 
 ## How this sleeve decides (like you are 10)
 
@@ -357,6 +357,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $23.48 | ▼ close $7,890.10 vs 09:30 $7,983.91 (session -89.42) | 16:00 close · cash $23.48 · equity $7,890.10 vs 09:30 $7,983.91 (-93.81; session marks -89.42) · 2 name(s) marked open→close (per-name table). AMX×32 09:30 $25.12 → close $25.11 -0.32; TBBB×110 09:30 $65.02 → close $64.21 -89.10 | — |
 | 2026-11-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $23.48 | ▲ 09:30 equity $7,924.63 vs yday $7,890.10 (+34.53) | 09:30 open · cash $23.48 (unchanged overnight, no fees) · equity $7,924.63 vs prior close $7,890.10 (+34.53) · 2 name(s) re-marked at the open (per-name table). AMX×32 yday $25.11 → 09:30 $24.90 -6.72; TBBB×110 yday $64.21 → 09:30 $64.58 +41.25 | — |
 | 2026-11-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $23.48 | ▲ close $8,064.72 vs 09:30 $7,924.63 (session +140.09) | 16:00 close · cash $23.48 · equity $8,064.72 vs 09:30 $7,924.63 (+140.09; session marks +140.09) · 2 name(s) marked open→close (per-name table). AMX×32 09:30 $24.90 → close $25.72 +26.24; TBBB×110 09:30 $64.58 → close $65.62 +113.85 | — |
+| 2026-11-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $23.48 | ▲ 09:30 equity $8,128.14 vs yday $8,064.72 (+63.42) | 09:30 open · cash $23.48 (unchanged overnight, no fees) · equity $8,128.14 vs prior close $8,064.72 (+63.42) · 2 name(s) re-marked at the open (per-name table). AMX×32 yday $25.72 → 09:30 $25.88 +5.12; TBBB×110 yday $65.62 → 09:30 $66.15 +58.30 | — |
+| 2026-11-09 09:30 ET | **SELL** | `AMX` | 32 | $25.88 | $2.11 | $+14.05 | $849.53 | ▲ +14.05 after sell → book $8,126.03; vs 09:30 mark -2.11 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-09 09:30 ET | **BUY** | `ADMA` | 8 | $12.90 | $1.06 | — | $745.28 | — | packet🟢 OR headline🟢 and camera net ≥ 3; gate cam_net_min=3,news_or_headline=True; rank cond; list yday_gainer; 🔵; ⚪; ret5=+11.6; leftover $106.19 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-09 09:30 ET | **BUY** | `COLL` | 4 | $24.41 | $0.99 | — | $646.65 | — | packet🟢 OR headline🟢 and camera net ≥ 3; gate cam_net_min=3,news_or_headline=True; rank cond; list probable; 🔵; ⚪; ret5=+1.7; leftover $106.19 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `COTY` | 25 | $4.14 | $1.11 | — | $542.04 | — | packet🟢 OR headline🟢 and camera net ≥ 3; gate cam_net_min=3,news_or_headline=True; rank cond; list yday_gainer; 🔵; ⚪; ret5=+19.1; leftover $106.19 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-09 09:30 ET | **BUY** | `ENOV` | 3 | $27.59 | $0.84 | — | $458.43 | — | packet🟢 OR headline🟢 and camera net ≥ 3; gate cam_net_min=3,news_or_headline=True; rank cond; list yday_gainer; 🔵; ⚪; ret5=+36.4; leftover $106.19 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `MGNI` | 3 | $27.92 | $0.85 | — | $373.83 | — | packet🟢 OR headline🟢 and camera net ≥ 3; gate cam_net_min=3,news_or_headline=True; rank cond; list yday_gainer; 🔵; ⚪; ret5=+27.5; leftover $106.19 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-09 09:30 ET | **BUY** | `PRVA` | 4 | $24.45 | $0.99 | — | $275.04 | — | packet🟢 OR headline🟢 and camera net ≥ 3; gate cam_net_min=3,news_or_headline=True; rank cond; list ohlc_hot; 🔵; ⚪; ret5=+13.7; leftover $106.19 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $275.04 | ▲ close $8,286.40 vs 09:30 $8,128.14 (session +166.19) | 16:00 close · cash $275.04 · equity $8,286.40 vs 09:30 $8,128.14 (+158.26; session marks +166.19) · 7 name(s) marked open→close (per-name table). TBBB×110 09:30 $66.15 → close $67.58 +157.30; ADMA×8 09:30 $12.90 → close $12.79 -0.88; COLL×4 09:30 $24.41 → close $24.71 +1.20; COTY×25 09:30 $4.14 → close $4.22 +2.00; ENOV×3 09:30 $27.59 → close $28.54 +2.85; MGNI×3 09:30 $27.92 → close $29.04 +3.36; PRVA×4 09:30 $24.45 → close $24.54 +0.36 | — |
 
 ## Not taken
 

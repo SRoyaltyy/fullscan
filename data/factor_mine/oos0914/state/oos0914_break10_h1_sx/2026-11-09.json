@@ -1,0 +1,212 @@
+{
+  "buys": [
+    {
+      "fill_rule": "open",
+      "price": 387.71,
+      "shares": 4,
+      "side": "BUY",
+      "ticker": "APP"
+    },
+    {
+      "fill_rule": "open",
+      "price": 15.36,
+      "shares": 121,
+      "side": "BUY",
+      "ticker": "XERS"
+    },
+    {
+      "fill_rule": "open",
+      "price": 22.1,
+      "shares": 84,
+      "side": "BUY",
+      "ticker": "ONT"
+    },
+    {
+      "fill_rule": "open",
+      "price": 10.0,
+      "shares": 186,
+      "side": "BUY",
+      "ticker": "FUN"
+    }
+  ],
+  "cash": 326.69,
+  "date": "2026-11-09",
+  "equity": 7868.67,
+  "fees": 18.2565,
+  "fills": [
+    {
+      "fees": 2.0305,
+      "fill_rule": "open",
+      "pnl": 154.76,
+      "price": 387.71,
+      "shares": 5,
+      "side": "SELL",
+      "ticker": "APP"
+    },
+    {
+      "fees": 2.6538,
+      "fill_rule": "open",
+      "pnl": -41.62,
+      "price": 8.82,
+      "shares": 202,
+      "side": "SELL",
+      "ticker": "CRCT"
+    },
+    {
+      "fees": 2.2135,
+      "fill_rule": "open",
+      "pnl": 18.7,
+      "price": 27.59,
+      "shares": 66,
+      "side": "SELL",
+      "ticker": "ENOV"
+    },
+    {
+      "fees": 2.2137,
+      "fill_rule": "open",
+      "pnl": 39.82,
+      "price": 27.92,
+      "shares": 66,
+      "side": "SELL",
+      "ticker": "MGNI"
+    },
+    {
+      "fees": 2.002,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 387.71,
+      "shares": 4,
+      "side": "BUY",
+      "ticker": "APP"
+    },
+    {
+      "fees": 2.353,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 15.36,
+      "shares": 121,
+      "side": "BUY",
+      "ticker": "XERS"
+    },
+    {
+      "fees": 2.242,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 22.1,
+      "shares": 84,
+      "side": "BUY",
+      "ticker": "ONT"
+    },
+    {
+      "fees": 2.548,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 10.0,
+      "shares": 186,
+      "side": "BUY",
+      "ticker": "FUN"
+    }
+  ],
+  "holdings": [
+    "APP",
+    "FUN",
+    "ONT",
+    "XERS"
+  ],
+  "mean": 6.0917,
+  "n_trades_today": 8,
+  "recipe": "oos0914_break10_h1_sx",
+  "sells": [
+    {
+      "fill_rule": "open",
+      "price": 387.71,
+      "shares": 5,
+      "side": "SELL",
+      "ticker": "APP"
+    },
+    {
+      "fill_rule": "open",
+      "price": 8.82,
+      "shares": 202,
+      "side": "SELL",
+      "ticker": "CRCT"
+    },
+    {
+      "fill_rule": "open",
+      "price": 27.59,
+      "shares": 66,
+      "side": "SELL",
+      "ticker": "ENOV"
+    },
+    {
+      "fill_rule": "open",
+      "price": 27.92,
+      "shares": 66,
+      "side": "SELL",
+      "ticker": "MGNI"
+    }
+  ],
+  "state": {
+    "after": "2026-11-09",
+    "cash": 326.69,
+    "pos": {
+      "APP": {
+        "close_px": 410.0,
+        "cost": 1552.8419999999999,
+        "entry_date": "2026-11-09",
+        "entry_px": 387.71,
+        "fee_in": 2.002,
+        "last_px": 387.71,
+        "min_hold": 1,
+        "notional": 1550.84,
+        "peak_px": 387.71,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; \u26aa; ret5=+71.2; leftover $1865.41",
+        "shares": 4,
+        "ticker": "APP"
+      },
+      "FUN": {
+        "close_px": 10.76,
+        "cost": 1862.548,
+        "entry_date": "2026-11-09",
+        "entry_px": 10.0,
+        "fee_in": 2.548,
+        "last_px": 10.0,
+        "min_hold": 1,
+        "notional": 1860.0,
+        "peak_px": 10.0,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list yday_gainer; \ud83d\udd35; ret5=+33.7; leftover $1865.41",
+        "shares": 186,
+        "ticker": "FUN"
+      },
+      "ONT": {
+        "close_px": 23.59,
+        "cost": 1858.642,
+        "entry_date": "2026-11-09",
+        "entry_px": 22.1,
+        "fee_in": 2.242,
+        "last_px": 22.1,
+        "min_hold": 1,
+        "notional": 1856.4,
+        "peak_px": 22.1,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list yday_gainer; \ud83d\udd35; ret5=+46.9; leftover $1865.41",
+        "shares": 84,
+        "ticker": "ONT"
+      },
+      "XERS": {
+        "close_px": 15.86,
+        "cost": 1860.913,
+        "entry_date": "2026-11-09",
+        "entry_px": 15.36,
+        "fee_in": 2.353,
+        "last_px": 15.36,
+        "min_hold": 1,
+        "notional": 1858.56,
+        "peak_px": 15.36,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list yday_gainer; \ud83d\udd35; \u26aa; ret5=+41.9; leftover $1865.41",
+        "shares": 121,
+        "ticker": "XERS"
+      }
+    },
+    "yday_equity": 7868.67
+  }
+}

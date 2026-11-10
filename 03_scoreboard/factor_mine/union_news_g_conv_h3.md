@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 4 · rank `cond` · size `conviction` · sell `list` · S-boost `none` · merged news🟢 rank cameras; 70% leftover if #1 net ≥ 5
 
-Cash book **-21.35%** ($7,865) · signal-only (no cash/fees) was +282.84%. Starts YES **10/30**. Fills 169 · skips 137 · realized $-233.27.
+Cash book **-22.85%** ($7,715) · signal-only (no cash/fees) was +282.84%. Starts YES **10/30**. Fills 175 · skips 137 · realized $-233.27.
 
 ## How this sleeve decides (like you are 10)
 
@@ -364,6 +364,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-06 09:30 ET | **BUY** | `MNST` | 2 | $44.04 | $0.89 | — | $396.24 | — | merged news🟢 rank cameras; 70% leftover if #1 net ≥ 5; gate news=good; rank cond; list earn_react; 🔵; ret5=+3.2; leftover $129.01 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-11-06 09:30 ET | **BUY** | `REPL` | 6 | $20.20 | $1.23 | — | $273.81 | — | merged news🟢 rank cameras; 70% leftover if #1 net ≥ 5; gate news=good; rank cond; list ohlc_hot; 🔵; ret5=+15.1; leftover $129.01 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-11-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $273.81 | ▲ close $7,864.61 vs 09:30 $7,700.35 (session +171.35) | 16:00 close · cash $273.81 · equity $7,864.61 vs 09:30 $7,700.35 (+164.26; session marks +171.35) · 9 name(s) marked open→close (per-name table). AMX×27 09:30 $24.90 → close $25.72 +22.14; GLND×85 09:30 $2.20 → close $2.39 +16.15; GRAB×143 09:30 $3.44 → close $3.41 -5.00; MVST×2690 09:30 $0.60 → close $0.63 +78.01; STUB×557 09:30 $6.18 → close $6.14 -22.28; APP×2 09:30 $355.95 → close $391.22 +70.54; LIVN×1 09:30 $90.08 → close $89.99 -0.09; MNST×2 09:30 $44.04 → close $45.72 +3.36; REPL×6 09:30 $20.20 → close $21.62 +8.52 | — |
+| 2026-11-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $273.81 | ▲ 09:30 equity $7,955.46 vs yday $7,864.61 (+90.85) | 09:30 open · cash $273.81 (unchanged overnight, no fees) · equity $7,955.46 vs prior close $7,864.61 (+90.85) · 9 name(s) re-marked at the open (per-name table). AMX×27 yday $25.72 → 09:30 $25.88 +4.32; APP×2 yday $391.22 → 09:30 $387.71 -7.02; GLND×85 yday $2.39 → 09:30 $2.38 -0.85; GRAB×143 yday $3.41 → 09:30 $3.46 +7.15; LIVN×1 yday $89.99 → 09:30 $92.31 +2.32; MNST×2 yday $45.72 → 09:30 $45.57 -0.30; MVST×2690 yday $0.63 → 09:30 $0.63 +0.00; REPL×6 yday $21.62 → 09:30 $21.90 +1.68; STUB×557 yday $6.14 → 09:30 $6.29 +83.55 | — |
+| 2026-11-09 09:30 ET | **SELL** | `AMX` | 27 | $25.88 | $2.09 | $+11.23 | $970.48 | ▲ +11.23 after sell → book $7,953.37; vs 09:30 mark -2.09 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-09 09:30 ET | **SELL** | `GLND` | 85 | $2.38 | $2.27 | $-30.86 | $1,170.51 | ▼ -30.86 after sell → book $7,951.10; vs 09:30 mark -2.27 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-09 09:30 ET | **SELL** | `GRAB` | 143 | $3.46 | $2.45 | $+29.45 | $1,662.84 | ▲ +29.45 after sell → book $7,948.65; vs 09:30 mark -2.45 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-09 09:30 ET | **BUY** | `ADMA` | 90 | $12.90 | $2.26 | — | $499.58 | — | merged news🟢 rank cameras; 70% leftover if #1 net ≥ 5; gate news=good; rank cond; list yday_gainer; 🔵; ⚪; ret5=+11.6; leftover $1163.99 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-09 09:30 ET | **BUY** | `ALGN` | 1 | $167.90 | $1.68 | — | $330.00 | — | merged news🟢 rank cameras; 70% leftover if #1 net ≥ 5; gate news=good; rank cond; list flatten; 🔵; ⚪; ret5=+10.7; leftover $249.43 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `COLL` | 10 | $24.41 | $2.02 | — | $83.88 | — | merged news🟢 rank cameras; 70% leftover if #1 net ≥ 5; gate news=good; rank cond; list probable; 🔵; ⚪; ret5=+1.7; leftover $249.43 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $83.88 | ▼ close $7,714.66 vs 09:30 $7,955.46 (session -228.03) | 16:00 close · cash $83.88 · equity $7,714.66 vs 09:30 $7,955.46 (-240.80; session marks -228.03) · 9 name(s) marked open→close (per-name table). APP×2 09:30 $387.71 → close $410.00 +44.58; LIVN×1 09:30 $92.31 → close $92.61 +0.30; MNST×2 09:30 $45.57 → close $45.64 +0.14; MVST×2690 09:30 $0.63 → close $0.62 -29.59; REPL×6 09:30 $21.90 → close $22.26 +2.16; STUB×557 09:30 $6.29 → close $5.85 -245.08; ADMA×90 09:30 $12.90 → close $12.79 -9.90; ALGN×1 09:30 $167.90 → close $174.26 +6.36; COLL×10 09:30 $24.41 → close $24.71 +3.00 | — |
 
 ## Not taken
 

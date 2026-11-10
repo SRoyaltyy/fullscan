@@ -1,0 +1,147 @@
+{
+  "buys": [
+    {
+      "fill_rule": "open",
+      "price": 11.73,
+      "shares": 218,
+      "side": "BUY",
+      "ticker": "STGW"
+    },
+    {
+      "fill_rule": "open",
+      "price": 34.99,
+      "shares": 73,
+      "side": "BUY",
+      "ticker": "PGNY"
+    },
+    {
+      "fill_rule": "open",
+      "price": 32.04,
+      "shares": 80,
+      "side": "BUY",
+      "ticker": "JAN"
+    },
+    {
+      "fill_rule": "open",
+      "price": 16.08,
+      "shares": 159,
+      "side": "BUY",
+      "ticker": "COLD"
+    }
+  ],
+  "cash": 28.56,
+  "date": "2026-11-09",
+  "equity": 10275.05,
+  "fees": 9.7182,
+  "fills": [
+    {
+      "fees": 2.8122,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 11.73,
+      "shares": 218,
+      "side": "BUY",
+      "ticker": "STGW"
+    },
+    {
+      "fees": 2.209,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 34.99,
+      "shares": 73,
+      "side": "BUY",
+      "ticker": "PGNY"
+    },
+    {
+      "fees": 2.23,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 32.04,
+      "shares": 80,
+      "side": "BUY",
+      "ticker": "JAN"
+    },
+    {
+      "fees": 2.467,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 16.08,
+      "shares": 159,
+      "side": "BUY",
+      "ticker": "COLD"
+    }
+  ],
+  "holdings": [
+    "COLD",
+    "JAN",
+    "PGNY",
+    "STGW"
+  ],
+  "mean": 0.053,
+  "n_trades_today": 4,
+  "recipe": "oos0914_zero_candle_h2_sx",
+  "sells": [],
+  "state": {
+    "after": "2026-11-09",
+    "cash": 28.56,
+    "pos": {
+      "COLD": {
+        "close_px": 16.06,
+        "cost": 2559.187,
+        "entry_date": "2026-11-09",
+        "entry_px": 16.08,
+        "fee_in": 2.467,
+        "last_px": 16.08,
+        "min_hold": 2,
+        "notional": 2556.72,
+        "peak_px": 16.08,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate zero_red=True,last_green=True; rank candle_score; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+11.4; leftover $2567.40",
+        "shares": 159,
+        "ticker": "COLD"
+      },
+      "JAN": {
+        "close_px": 32.02,
+        "cost": 2565.43,
+        "entry_date": "2026-11-09",
+        "entry_px": 32.04,
+        "fee_in": 2.23,
+        "last_px": 32.04,
+        "min_hold": 2,
+        "notional": 2563.2,
+        "peak_px": 32.04,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate zero_red=True,last_green=True; rank candle_score; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+12.2; leftover $2567.40",
+        "shares": 80,
+        "ticker": "JAN"
+      },
+      "PGNY": {
+        "close_px": 35.95,
+        "cost": 2556.479,
+        "entry_date": "2026-11-09",
+        "entry_px": 34.99,
+        "fee_in": 2.209,
+        "last_px": 34.99,
+        "min_hold": 2,
+        "notional": 2554.27,
+        "peak_px": 34.99,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate zero_red=True,last_green=True; rank candle_score; list yday_gainer; \ud83d\udd35; \u26aa; ret5=+19.4; leftover $2567.40",
+        "shares": 73,
+        "ticker": "PGNY"
+      },
+      "STGW": {
+        "close_px": 11.5,
+        "cost": 2559.9521999999997,
+        "entry_date": "2026-11-09",
+        "entry_px": 11.73,
+        "fee_in": 2.8122,
+        "last_px": 11.73,
+        "min_hold": 2,
+        "notional": 2557.14,
+        "peak_px": 11.73,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate zero_red=True,last_green=True; rank candle_score; list ohlc_hot; \u26aa; ret5=+11.2; leftover $2567.40",
+        "shares": 218,
+        "ticker": "STGW"
+      }
+    },
+    "yday_equity": 10275.05
+  }
+}

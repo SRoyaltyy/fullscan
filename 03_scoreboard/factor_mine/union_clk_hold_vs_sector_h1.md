@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · Clock-B #6 stock holds while sector camera is red
 
-Cash book **-17.07%** ($8,293) · signal-only (no cash/fees) was -2.27%. Starts YES **25/30**. Fills 399 · skips 96 · realized $+387.41.
+Cash book **-13.98%** ($8,602) · signal-only (no cash/fees) was -2.27%. Starts YES **25/30**. Fills 407 · skips 96 · realized $+387.41.
 
 ## How this sleeve decides (like you are 10)
 
@@ -595,6 +595,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-06 09:30 ET | **SELL** | `PHM` | 7 | $132.18 | $2.03 | $-44.78 | $7,340.71 | ▼ -44.78 after sell → book $8,294.71; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-06 09:30 ET | **SELL** | `VSXY` | 9 | $106.00 | $2.04 | $-26.64 | $8,292.68 | ▼ -26.64 after sell → book $8,292.68; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,292.68 | ▲ close $8,292.68 vs 09:30 $8,309.55 (session +0.00) | 16:00 close · cash $8,292.68 · no lots left · equity $8,292.68. | — |
+| 2026-11-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,292.68 | ▲ 09:30 equity $8,292.68 vs yday $8,292.68 (+0.00) | 09:30 open · cash $8,292.68 · no holdings · equity $8,292.68 vs prior close $8,292.68 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-09 09:30 ET | **BUY** | `ARHS` | 71 | $14.41 | $2.20 | — | $7,267.01 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list ohlc_hot; 🔵; ret5=+14.0; leftover $1036.59 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `BKSY` | 47 | $21.75 | $2.13 | — | $6,242.63 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list yday_gainer; 🔵; ret5=+19.4; leftover $1036.59 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `CWST` | 10 | $98.80 | $2.02 | — | $5,252.61 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list overnight; ret5=+5.2; leftover $1036.59 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-09 09:30 ET | **BUY** | `EVGO` | 566 | $1.83 | $7.30 | — | $4,209.53 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list earn_react; 🔵; ret5=+45.2; leftover $1036.59 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 judge🟢 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `FUN` | 103 | $10.00 | $2.30 | — | $3,177.23 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list yday_gainer; 🔵; ret5=+33.7; leftover $1036.59 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `IBN` | 30 | $34.25 | $2.08 | — | $2,147.65 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list ohlc_hot; ret5=+15.1; leftover $1036.59 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `SG` | 86 | $12.01 | $2.25 | — | $1,112.54 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list ohlc_hot; 🔵; ret5=+8.5; leftover $1036.59 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `VRSK` | 5 | $204.66 | $2.00 | — | $87.24 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list probable; ret5=+4.2; leftover $1036.59 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $87.24 | ▲ close $8,602.34 vs 09:30 $8,292.68 (session +331.95) | 16:00 close · cash $87.24 · equity $8,602.34 vs 09:30 $8,292.68 (+309.66; session marks +331.95) · 8 name(s) marked open→close (per-name table). ARHS×71 09:30 $14.41 → close $15.02 +42.96; BKSY×47 09:30 $21.75 → close $23.90 +101.05; CWST×10 09:30 $98.80 → close $99.02 +2.20; EVGO×566 09:30 $1.83 → close $1.84 +5.66; FUN×103 09:30 $10.00 → close $10.76 +78.28; IBN×30 09:30 $34.25 → close $34.45 +6.00; SG×86 09:30 $12.01 → close $13.36 +116.10; VRSK×5 09:30 $204.66 → close $200.60 -20.30 | — |
 
 ## Not taken
 

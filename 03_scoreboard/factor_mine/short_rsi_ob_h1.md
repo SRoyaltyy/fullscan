@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · RSI overbought
 
-Cash book **-0.57%** ($9,943) · signal-only (no cash/fees) was -20.71%. Starts YES **6/30**. Fills 402 · skips 95 · realized $-976.57.
+Cash book **-1.55%** ($9,845) · signal-only (no cash/fees) was -20.71%. Starts YES **6/30**. Fills 418 · skips 95 · realized $-976.57.
 
 ## How this sleeve decides (like you are 10)
 
@@ -594,6 +594,24 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-06 09:30 ET | **SHORT** | `YOU` | 11 | $55.83 | $2.06 | — | $14,206.06 | — | RSI overbought; gate rsi_ob=True; list yday_gainer,yday_mover; ret5=+22.3; leftover $620.53 | join🔴 sector🟡 gen🔴 news🔴 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-06 09:30 ET | **SHORT** | `PCOR` | 8 | $73.99 | $2.05 | — | $14,795.93 | — | RSI overbought; gate rsi_ob=True; list yday_gainer; 🔵; ret5=+23.7; leftover $620.53 | join🔴 sector🟡 gen🔴 news🟢 digest🔴 ab🟡 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,795.93 | ▲ close $9,942.52 vs 09:30 $9,950.27 (session +33.90) | 16:00 close · cash $14,795.93 · equity $9,942.52 vs 09:30 $9,950.27 (-7.75; session marks +33.90) · 8 name(s) marked open→close (per-name table). CPRI×29 09:30 $20.93 → close $20.54 +11.31; GPK×54 09:30 $11.30 → close $11.19 +5.94; CMTG×369 09:30 $1.68 → close $1.64 +14.76; CRCT×68 09:30 $9.00 → close $8.78 +14.96; KD×39 09:30 $15.83 → close $16.29 -17.94; OPRT×53 09:30 $11.60 → close $11.31 +15.37; YOU×11 09:30 $55.83 → close $55.81 +0.22; PCOR×8 09:30 $73.99 → close $75.33 -10.72 | — |
+| 2026-11-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $14,795.93 | ▼ 09:30 equity $9,878.92 vs yday $9,942.52 (-63.60) | 09:30 open · cash $14,795.93 (unchanged overnight, no fees) · equity $9,878.92 vs prior close $9,942.52 (-63.60) · 8 name(s) re-marked at the open (per-name table). CMTG×369 yday $1.64 → 09:30 $1.66 -7.38; CPRI×29 yday $20.54 → 09:30 $20.84 -8.70; CRCT×68 yday $8.78 → 09:30 $8.82 -2.72; GPK×54 yday $11.19 → 09:30 $11.46 -14.58; KD×39 yday $16.29 → 09:30 $16.29 -0.00; OPRT×53 yday $11.31 → 09:30 $11.68 -19.35; PCOR×8 yday $75.33 → 09:30 $75.81 -3.84; YOU×11 yday $55.81 → 09:30 $56.45 -7.04 | — |
+| 2026-11-09 09:30 ET | **COVER** | `CMTG` | 369 | $1.66 | $4.76 | $-2.23 | $14,178.63 | ▼ -2.23 after sell → book $9,874.15; vs 09:30 mark -4.77 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-09 09:30 ET | **COVER** | `CPRI` | 29 | $20.84 | $2.08 | $-1.58 | $13,572.19 | ▼ -1.58 after sell → book $9,872.08; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-09 09:30 ET | **COVER** | `CRCT` | 68 | $8.82 | $2.19 | $+7.81 | $12,970.24 | ▲ +7.81 after sell → book $9,869.88; vs 09:30 mark -2.20 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-09 09:30 ET | **COVER** | `GPK` | 54 | $11.46 | $2.15 | $-12.98 | $12,349.25 | ▼ -12.98 after sell → book $9,867.73; vs 09:30 mark -2.15 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-09 09:30 ET | **COVER** | `KD` | 39 | $16.29 | $2.11 | $-22.19 | $11,711.83 | ▼ -22.19 after sell → book $9,865.62; vs 09:30 mark -2.11 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-09 09:30 ET | **COVER** | `OPRT` | 53 | $11.68 | $2.15 | $-8.31 | $11,090.91 | ▼ -8.31 after sell → book $9,863.48; vs 09:30 mark -2.14 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-09 09:30 ET | **COVER** | `PCOR` | 8 | $75.81 | $2.01 | $-18.62 | $10,482.41 | ▼ -18.62 after sell → book $9,861.46; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-09 09:30 ET | **COVER** | `YOU` | 11 | $56.45 | $2.02 | $-10.90 | $9,859.44 | ▼ -10.90 after sell → book $9,859.44; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-09 09:30 ET | **SHORT** | `CERT` | 51 | $12.06 | $2.18 | — | $10,472.32 | — | RSI overbought; gate rsi_ob=True; list probable; 🔵; ⚪; ret5=+9.3; leftover $616.21 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-09 09:30 ET | **SHORT** | `AEHL` | 47 | $13.10 | $2.17 | — | $11,085.85 | — | RSI overbought; gate rsi_ob=True; list yday_gainer,yday_mover; 🔵; ret5=+71.0; leftover $616.21 | join🔴 sector🔴 gen🟢 news🔴 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-09 09:30 ET | **SHORT** | `APP` | 1 | $387.71 | $2.02 | — | $11,471.54 | — | RSI overbought; gate rsi_ob=True; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+71.2; leftover $616.21 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-09 09:30 ET | **SHORT** | `DNUT` | 149 | $4.12 | $2.49 | — | $12,082.18 | — | RSI overbought; gate rsi_ob=True; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+27.3; leftover $616.21 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-09 09:30 ET | **SHORT** | `PTLO` | 91 | $6.73 | $2.30 | — | $12,692.31 | — | RSI overbought; gate rsi_ob=True; list yday_gainer,yday_mover; 🔵; ret5=+36.3; leftover $616.21 | join🟢 sector🔴 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-09 09:30 ET | **SHORT** | `ADMA` | 47 | $12.90 | $2.17 | — | $13,296.44 | — | RSI overbought; gate rsi_ob=True; list yday_gainer; 🔵; ⚪; ret5=+11.6; leftover $616.21 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-09 09:30 ET | **SHORT** | `XERS` | 40 | $15.36 | $2.15 | — | $13,908.69 | — | RSI overbought; gate rsi_ob=True; list yday_gainer; 🔵; ⚪; ret5=+41.9; leftover $616.21 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-09 09:30 ET | **SHORT** | `EPAM` | 3 | $156.46 | $2.03 | — | $14,376.04 | — | RSI overbought; gate rsi_ob=True; list yday_gainer; 🔵; ret5=+13.4; leftover $616.21 | join🔴 sector🟡 gen🟢 news🟢 digest🔴 judge🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,376.04 | ▲ close $9,845.37 vs 09:30 $9,878.92 (session +3.44) | 16:00 close · cash $14,376.04 · equity $9,845.37 vs 09:30 $9,878.92 (-33.55; session marks +3.44) · 8 name(s) marked open→close (per-name table). CERT×51 09:30 $12.06 → close $12.22 -8.16; AEHL×47 09:30 $13.10 → close $12.00 +51.70; APP×1 09:30 $387.71 → close $410.00 -22.29; DNUT×149 09:30 $4.12 → close $4.03 +12.66; PTLO×91 09:30 $6.73 → close $6.89 -14.56; ADMA×47 09:30 $12.90 → close $12.79 +5.17; XERS×40 09:30 $15.36 → close $15.86 -20.00; EPAM×3 09:30 $156.46 → close $156.82 -1.08 | — |
 
 ## Not taken
 

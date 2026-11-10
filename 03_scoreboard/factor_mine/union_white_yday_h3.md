@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · union looker hold 3: 0 red + yesterday up
 
-Cash book **-11.50%** ($8,850) · signal-only (no cash/fees) was -11.78%. Starts YES **2/30**. Fills 161 · skips 140 · realized $-1313.49.
+Cash book **-9.03%** ($9,097) · signal-only (no cash/fees) was -11.78%. Starts YES **2/30**. Fills 169 · skips 140 · realized $-1313.49.
 
 ## How this sleeve decides (like you are 10)
 
@@ -357,6 +357,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,850.24 | ▲ close $8,850.24 vs 09:30 $8,850.24 (session +0.00) | 16:00 close · cash $8,850.24 · no lots left · equity $8,850.24. | — |
 | 2026-11-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,850.24 | ▲ 09:30 equity $8,850.24 vs yday $8,850.24 (+0.00) | 09:30 open · cash $8,850.24 · no holdings · equity $8,850.24 vs prior close $8,850.24 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-11-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,850.24 | ▲ close $8,850.24 vs 09:30 $8,850.24 (session +0.00) | 16:00 close · cash $8,850.24 · no lots left · equity $8,850.24. | — |
+| 2026-11-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,850.24 | ▲ 09:30 equity $8,850.24 vs yday $8,850.24 (+0.00) | 09:30 open · cash $8,850.24 · no holdings · equity $8,850.24 vs prior close $8,850.24 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-09 09:30 ET | **BUY** | `ALGN` | 6 | $167.90 | $2.01 | — | $7,840.83 | — | union looker hold 3: 0 red + yesterday up; gate yday_up=True,zero_red=True; rank cond; list flatten; 🔵; ⚪; ret5=+10.7; leftover $1106.28 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `APP` | 2 | $387.71 | $2.00 | — | $7,063.42 | — | union looker hold 3: 0 red + yesterday up; gate yday_up=True,zero_red=True; rank cond; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+71.2; leftover $1106.28 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-09 09:30 ET | **BUY** | `PGNY` | 31 | $34.99 | $2.08 | — | $5,976.64 | — | union looker hold 3: 0 red + yesterday up; gate yday_up=True,zero_red=True; rank cond; list yday_gainer; 🔵; ⚪; ret5=+19.4; leftover $1106.28 | join🟢 sector🟡 gen🟢 news🔴 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-09 09:30 ET | **BUY** | `COTY` | 267 | $4.14 | $3.44 | — | $4,867.82 | — | union looker hold 3: 0 red + yesterday up; gate yday_up=True,zero_red=True; rank cond; list yday_gainer; 🔵; ⚪; ret5=+19.1; leftover $1106.28 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-09 09:30 ET | **BUY** | `PRVA` | 45 | $24.45 | $2.12 | — | $3,765.44 | — | union looker hold 3: 0 red + yesterday up; gate yday_up=True,zero_red=True; rank cond; list ohlc_hot; 🔵; ⚪; ret5=+13.7; leftover $1106.28 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `VCEL` | 19 | $56.00 | $2.05 | — | $2,699.40 | — | union looker hold 3: 0 red + yesterday up; gate yday_up=True,zero_red=True; rank cond; list yday_gainer; 🔵; ⚪; ret5=+35.7; leftover $1106.28 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `XERS` | 72 | $15.36 | $2.21 | — | $1,591.27 | — | union looker hold 3: 0 red + yesterday up; gate yday_up=True,zero_red=True; rank cond; list yday_gainer; 🔵; ⚪; ret5=+41.9; leftover $1106.28 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `ZVRA` | 94 | $11.65 | $2.27 | — | $493.90 | — | union looker hold 3: 0 red + yesterday up; gate yday_up=True,zero_red=True; rank cond; list flatten,ohlc_hot; 🔵; ⚪; ret5=+12.7; leftover $1106.28 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $493.90 | ▲ close $9,097.44 vs 09:30 $8,850.24 (session +265.38) | 16:00 close · cash $493.90 · equity $9,097.44 vs 09:30 $8,850.24 (+247.20; session marks +265.38) · 8 name(s) marked open→close (per-name table). ALGN×6 09:30 $167.90 → close $174.26 +38.16; APP×2 09:30 $387.71 → close $410.00 +44.58; PGNY×31 09:30 $34.99 → close $35.95 +29.76; COTY×267 09:30 $4.14 → close $4.22 +21.36; PRVA×45 09:30 $24.45 → close $24.54 +4.05; VCEL×19 09:30 $56.00 → close $58.39 +45.41; XERS×72 09:30 $15.36 → close $15.86 +36.00; ZVRA×94 09:30 $11.65 → close $12.14 +46.06 | — |
 
 ## Not taken
 

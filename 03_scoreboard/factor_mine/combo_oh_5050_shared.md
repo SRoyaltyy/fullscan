@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared overnight_mega_h1/union_hot_n4_holdup w=0.5,0.5 net=priority
 
-Cash book **+38.66%** ($13,866) · signal-only (no cash/fees) was —. Starts YES **29/30**. Fills 277 · skips 62 · realized $+1377.50.
+Cash book **+37.63%** ($13,763) · signal-only (no cash/fees) was —. Starts YES **29/30**. Fills 282 · skips 62 · realized $+1377.50.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $212.13.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $50.42.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -472,6 +472,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-06 09:30 ET | **BUY** | `APP` | 9 | $355.95 | $2.02 | — | $3,687.65 | — | hot4; S>0 lots stay through the next 09:30 so the overnight gap is in the book; rank hot_score; list flatten; 🔵; ret5=+39.7; combo leftover $3450.50; owner union_hot_n4_holdup | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-06 09:30 ET | **BUY** | `CMTG` | 2053 | $1.68 | $26.48 | — | $212.13 | — | hot4; S>0 lots stay through the next 09:30 so the overnight gap is in the book; rank hot_score; list yday_gainer,yday_mover; 🔵; ret5=+44.9; combo leftover $3450.50; owner union_hot_n4_holdup | join🟢 sector🟡 gen🔴 news🟡 ab🔴 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-11-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $212.13 | ▲ close $13,865.99 vs 09:30 $13,817.63 (session +105.76) | 16:00 close · cash $212.13 · equity $13,865.99 vs 09:30 $13,817.63 (+48.36; session marks +105.76) · 4 name(s) marked open→close (per-name table). BUUU×647 09:30 $5.33 → close $5.26 -45.29; CRCT×383 09:30 $9.00 → close $8.78 -84.26; APP×9 09:30 $355.95 → close $391.22 +317.43; CMTG×2053 09:30 $1.68 → close $1.64 -82.12 | — |
+| 2026-11-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $212.13 | ▲ 09:30 equity $13,916.66 vs yday $13,865.99 (+50.67) | 09:30 open · cash $212.13 (unchanged overnight, no fees) · equity $13,916.66 vs prior close $13,865.99 (+50.67) | — |
+| 2026-11-09 09:30 ET | **SELL** | `CMTG` | 2053 | $1.66 | $26.85 | $-94.40 | $3,593.26 | ▼ -94.40 after sell → book $13,889.81; vs 09:30 mark -26.85 | union_hot_n4_holdup: dropped from list after 1 sess (min 1) | — |
+| 2026-11-09 09:30 ET | **SELL** | `CRCT` | 383 | $8.82 | $5.03 | $-78.91 | $6,966.29 | ▼ -78.91 after sell → book $13,884.78; vs 09:30 mark -5.03 | union_hot_n4_holdup: dropped from list after 1 sess (min 1) | — |
+| 2026-11-09 09:30 ET | **BUY** | `AEHL` | 132 | $13.10 | $2.39 | — | $5,234.70 | — | hot4; S>0 lots stay through the next 09:30 so the overnight gap is in the book; rank hot_score; list yday_gainer,yday_mover; 🔵; ret5=+71.0; combo leftover $1741.57; owner union_hot_n4_holdup | join🔴 sector🔴 gen🟢 news🔴 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `XERS` | 113 | $15.36 | $2.33 | — | $3,496.69 | — | hot4; S>0 lots stay through the next 09:30 so the overnight gap is in the book; rank hot_score; list yday_gainer; 🔵; ⚪; ret5=+41.9; combo leftover $1741.57; owner union_hot_n4_holdup | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `OXY` | 62 | $55.55 | $2.18 | — | $50.42 | — | prior-calendar AMC-today / BMO-next, mcap≥$50B; hold 1 sells at next 09:30 so the print gap is in the book; list overnight,overnight_mega; 🔵; ret5=-11.9; combo leftover $3496.69; owner overnight_mega_h1 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟡 heat🔴 vol🟢 buy🟡 |
+| 2026-11-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $50.42 | ▼ close $13,763.43 vs 09:30 $13,916.66 (session -114.46) | 16:00 close · cash $50.42 · equity $13,763.43 vs 09:30 $13,916.66 (-153.23; session marks -114.46) · 5 name(s) marked open→close (per-name table). APP×9 09:30 $387.71 → close $410.00 +200.61; BUUU×647 09:30 $5.30 → close $4.93 -239.39; AEHL×132 09:30 $13.10 → close $12.00 -145.20; XERS×113 09:30 $15.36 → close $15.86 +56.50; OXY×62 09:30 $55.55 → close $55.76 +13.02 | — |
 
 ## Not taken
 

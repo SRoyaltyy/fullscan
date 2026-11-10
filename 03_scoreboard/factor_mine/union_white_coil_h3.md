@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-18.62%** ($8,138) · signal-only (no cash/fees) was -22.27%. Starts YES **0/30**. Fills 173 · skips 128 · realized $-1374.07.
+Cash book **-15.02%** ($8,498) · signal-only (no cash/fees) was -22.27%. Starts YES **0/30**. Fills 180 · skips 128 · realized $-1374.07.
 
 ## How this sleeve decides (like you are 10)
 
@@ -370,6 +370,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,133.81 | ▲ close $8,137.67 vs 09:30 $8,137.67 (session +0.00) | 16:00 close · cash $7,133.81 · equity $8,137.67 vs 09:30 $8,137.67 (+0.00; session marks +0.00) · 1 name(s) marked open→close (per-name table). BLFS×26 09:30 $38.61 → close $38.61 +0.00 | — |
 | 2026-11-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,133.81 | ▲ 09:30 equity $8,137.67 vs yday $8,137.67 (+0.00) | 09:30 open · cash $7,133.81 (unchanged overnight, no fees) · equity $8,137.67 vs prior close $8,137.67 (+0.00) · 1 name(s) re-marked at the open (per-name table). BLFS×26 yday $38.61 → 09:30 $38.61 +0.00 | — |
 | 2026-11-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,133.81 | ▲ close $8,137.67 vs 09:30 $8,137.67 (session +0.00) | 16:00 close · cash $7,133.81 · equity $8,137.67 vs 09:30 $8,137.67 (+0.00; session marks +0.00) · 1 name(s) marked open→close (per-name table). BLFS×26 09:30 $38.61 → close $38.61 +0.00 | — |
+| 2026-11-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,133.81 | ▲ 09:30 equity $8,137.67 vs yday $8,137.67 (+0.00) | 09:30 open · cash $7,133.81 (unchanged overnight, no fees) · equity $8,137.67 vs prior close $8,137.67 (+0.00) · 1 name(s) re-marked at the open (per-name table). BLFS×26 yday $38.61 → 09:30 $38.61 +0.00 | — |
+| 2026-11-09 09:30 ET | **BUY** | `WRBY` | 39 | $25.91 | $2.11 | — | $6,121.21 | — | combo gate; gate ret_5_max=10.0,rvol_max=2.2,zero_red=True; list probable,yday_gainer; 🔵; ⚪; ret5=+3.5; leftover $1019.12 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `CERT` | 84 | $12.06 | $2.24 | — | $5,105.93 | — | combo gate; gate ret_5_max=10.0,rvol_max=2.2,zero_red=True; list probable; 🔵; ⚪; ret5=+9.3; leftover $1019.12 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `COLL` | 41 | $24.41 | $2.11 | — | $4,103.01 | — | combo gate; gate ret_5_max=10.0,rvol_max=2.2,zero_red=True; list probable; 🔵; ⚪; ret5=+1.7; leftover $1019.12 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `ADCT` | 617 | $1.65 | $7.96 | — | $3,077.00 | — | combo gate; gate ret_5_max=10.0,rvol_max=2.2,zero_red=True; list earn_react; 🔵; ⚪; ret5=+3.3; leftover $1019.12 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `TGTX` | 17 | $58.00 | $2.04 | — | $2,088.96 | — | combo gate; gate ret_5_max=10.0,rvol_max=2.2,zero_red=True; list earn_react; 🔵; ⚪; ret5=-2.2; leftover $1019.12 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `LINE` | 25 | $39.44 | $2.06 | — | $1,100.89 | — | combo gate; gate ret_5_max=10.0,rvol_max=2.2,zero_red=True; list overnight; 🔵; ⚪; ret5=+8.7; leftover $1019.12 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟡 peer🟢 heat🟡 vol🟢 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `SKYD` | 126 | $8.08 | $2.37 | — | $80.44 | — | combo gate; gate ret_5_max=10.0,rvol_max=2.2,zero_red=True; list overnight; 🔵; ⚪; ret5=+0.8; leftover $1019.12 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $80.44 | ▲ close $8,497.63 vs 09:30 $8,137.67 (session +380.86) | 16:00 close · cash $80.44 · equity $8,497.63 vs 09:30 $8,137.67 (+359.96; session marks +380.86) · 8 name(s) marked open→close (per-name table). BLFS×26 09:30 $38.61 → close $38.61 +0.00; WRBY×39 09:30 $25.91 → close $30.21 +167.70; CERT×84 09:30 $12.06 → close $12.22 +13.44; COLL×41 09:30 $24.41 → close $24.71 +12.30; ADCT×617 09:30 $1.65 → close $1.67 +12.34; TGTX×17 09:30 $58.00 → close $63.38 +91.46; LINE×25 09:30 $39.44 → close $39.66 +5.50; SKYD×126 09:30 $8.08 → close $8.70 +78.12 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 1 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · all leftover on the rare news🟢 +9 −≤1 name (KILL example)
 
-Cash book **-22.39%** ($7,761) · signal-only (no cash/fees) was -2.85%. Starts YES **27/30**. Fills 8 · skips 1 · realized $+1232.62.
+Cash book **-23.13%** ($7,687) · signal-only (no cash/fees) was -2.85%. Starts YES **27/30**. Fills 9 · skips 1 · realized $+1232.62.
 
 ## How this sleeve decides (like you are 10)
 
@@ -205,6 +205,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,760.71 | ▲ close $7,760.71 vs 09:30 $7,760.71 (session +0.00) | 16:00 close · cash $7,760.71 · no lots left · equity $7,760.71. | — |
 | 2026-11-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,760.71 | ▲ 09:30 equity $7,760.71 vs yday $7,760.71 (+0.00) | 09:30 open · cash $7,760.71 · no holdings · equity $7,760.71 vs prior close $7,760.71 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-11-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,760.71 | ▲ close $7,760.71 vs 09:30 $7,760.71 (session +0.00) | 16:00 close · cash $7,760.71 · no lots left · equity $7,760.71. | — |
+| 2026-11-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,760.71 | ▲ 09:30 equity $7,760.71 vs yday $7,760.71 (+0.00) | 09:30 open · cash $7,760.71 · no holdings · equity $7,760.71 vs prior close $7,760.71 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-09 09:30 ET | **BUY** | `ADMA` | 601 | $12.90 | $7.75 | — | $0.06 | — | all leftover on the rare news🟢 +9 −≤1 name (KILL example); gate cam_bad_max=1,n_pos_min=9,news=good; rank cond; list yday_gainer; 🔵; ⚪; ret5=+11.6; leftover $7760.71 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $0.06 | ▼ close $7,686.85 vs 09:30 $7,760.71 (session -66.11) | 16:00 close · cash $0.06 · equity $7,686.85 vs 09:30 $7,760.71 (-73.86; session marks -66.11) · 1 name(s) marked open→close (per-name table). ADMA×601 09:30 $12.90 → close $12.79 -66.11 | — |
 
 ## Not taken
 

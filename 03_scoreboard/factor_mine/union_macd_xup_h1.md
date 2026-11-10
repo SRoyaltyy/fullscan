@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ macd_xup, no 🚨
 
-Cash book **-27.43%** ($7,257) · signal-only (no cash/fees) was -19.02%. Starts YES **0/30**. Fills 313 · skips 71 · realized $-1788.82.
+Cash book **-22.43%** ($7,757) · signal-only (no cash/fees) was -19.02%. Starts YES **0/30**. Fills 326 · skips 71 · realized $-1788.82.
 
 ## How this sleeve decides (like you are 10)
 
@@ -507,6 +507,21 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-06 09:30 ET | **BUY** | `ORGO` | 2013 | $0.78 | $21.64 | — | $1,541.25 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list earn_react; ret5=+2.6; leftover $1560.42 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🟡 buy🟡 |
 | 2026-11-06 09:30 ET | **BUY** | `STLN` | 253 | $6.06 | $3.26 | — | $4.81 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list earn_react; 🔵; ret5=+0.8; leftover $1560.42 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-11-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $4.81 | ▼ close $7,256.59 vs 09:30 $7,802.12 (session -510.33) | 16:00 close · cash $4.81 · equity $7,256.59 vs 09:30 $7,802.12 (-545.53; session marks -510.33) · 5 name(s) marked open→close (per-name table). MGNI×57 09:30 $27.25 → close $27.39 +7.98; ANGI×216 09:30 $7.20 → close $6.92 -60.48; HRZN×415 09:30 $3.76 → close $3.96 +83.00; ORGO×2013 09:30 $0.78 → close $0.81 +76.49; STLN×253 09:30 $6.06 → close $3.62 -617.32 | — |
+| 2026-11-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $4.81 | ▲ 09:30 equity $7,448.83 vs yday $7,256.59 (+192.24) | 09:30 open · cash $4.81 (unchanged overnight, no fees) · equity $7,448.83 vs prior close $7,256.59 (+192.24) · 5 name(s) re-marked at the open (per-name table). ANGI×216 yday $6.92 → 09:30 $6.92 +0.00; HRZN×415 yday $3.96 → 09:30 $4.00 +16.60; MGNI×57 yday $27.39 → 09:30 $27.92 +30.21; ORGO×2013 yday $0.81 → 09:30 $0.84 +54.35; STLN×253 yday $3.62 → 09:30 $3.98 +91.08 | — |
+| 2026-11-09 09:30 ET | **SELL** | `ANGI` | 216 | $6.92 | $2.83 | $-66.10 | $1,496.70 | ▼ -66.10 after sell → book $7,446.00; vs 09:30 mark -2.83 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-09 09:30 ET | **SELL** | `HRZN` | 415 | $4.00 | $5.44 | $+88.81 | $3,151.26 | ▲ +88.81 after sell → book $7,440.56; vs 09:30 mark -5.44 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-09 09:30 ET | **SELL** | `MGNI` | 57 | $27.92 | $2.18 | $+33.85 | $4,740.52 | ▲ +33.85 after sell → book $7,438.38; vs 09:30 mark -2.18 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-09 09:30 ET | **SELL** | `ORGO` | 2013 | $0.84 | $23.30 | $+85.91 | $6,408.14 | ▲ +85.91 after sell → book $7,415.08; vs 09:30 mark -23.30 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-09 09:30 ET | **SELL** | `STLN` | 253 | $3.98 | $3.32 | $-532.82 | $7,411.76 | ▼ -532.82 after sell → book $7,411.76; vs 09:30 mark -3.32 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-09 09:30 ET | **BUY** | `ETON` | 15 | $58.10 | $2.04 | — | $6,538.23 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list flatten; 🔵; ret5=+8.2; leftover $926.47 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `ZLAB` | 34 | $27.15 | $2.09 | — | $5,613.04 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list ohlc_hot; 🔵; ret5=+15.5; leftover $926.47 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🔴 peer🟡 heat🟢 vol🟡 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `SKE` | 28 | $32.00 | $2.07 | — | $4,714.96 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list ohlc_hot; ret5=+15.4; leftover $926.47 | join🟡 sector🟡 gen🟢 news🟡 digest🔴 ab🔴 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `APPS` | 87 | $10.53 | $2.25 | — | $3,796.60 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list overnight; 🔵; ret5=+17.0; leftover $926.47 | join🟡 sector🟡 gen🟢 news🟡 digest🔴 judge🔴 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `HIVE` | 523 | $1.77 | $6.75 | — | $2,864.15 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list overnight; 🔵; ret5=-6.8; leftover $926.47 | join🟢 sector🔴 gen🟢 news🔴 digest🟢 ab🔴 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `MARA` | 146 | $6.31 | $2.43 | — | $1,940.46 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list overnight; 🔵; ret5=-6.2; leftover $926.47 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `PUBM` | 51 | $17.97 | $2.14 | — | $1,021.85 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list overnight; 🔵; ret5=+12.1; leftover $926.47 | join🟢 sector🟡 gen🟢 news🟡 digest🔴 judge🔴 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `QUBT` | 145 | $6.36 | $2.42 | — | $97.95 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list overnight; ret5=-4.1; leftover $926.47 | join🔴 sector🟡 gen🟢 news🟡 digest🔴 judge🔴 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-11-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $97.95 | ▲ close $7,756.72 vs 09:30 $7,448.83 (session +367.14) | 16:00 close · cash $97.95 · equity $7,756.72 vs 09:30 $7,448.83 (+307.89; session marks +367.14) · 8 name(s) marked open→close (per-name table). ETON×15 09:30 $58.10 → close $64.35 +93.75; ZLAB×34 09:30 $27.15 → close $26.86 -9.86; SKE×28 09:30 $32.00 → close $32.71 +19.88; APPS×87 09:30 $10.53 → close $11.30 +66.99; HIVE×523 09:30 $1.77 → close $1.81 +20.92; MARA×146 09:30 $6.31 → close $6.64 +48.18; PUBM×51 09:30 $17.97 → close $19.03 +54.06; QUBT×145 09:30 $6.36 → close $6.86 +73.22 | — |
 
 ## Not taken
 

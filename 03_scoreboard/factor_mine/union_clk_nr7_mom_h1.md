@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `hot_score` · size `leftover` · sell `list` · S-boost `none` · Clock-B #10 NR7 + moderate momentum
 
-Cash book **-1.41%** ($9,859) · signal-only (no cash/fees) was +27.44%. Starts YES **25/30**. Fills 116 · skips 16 · realized $+1589.64.
+Cash book **-9.47%** ($9,052) · signal-only (no cash/fees) was +27.44%. Starts YES **25/30**. Fills 118 · skips 16 · realized $+1589.64.
 
 ## How this sleeve decides (like you are 10)
 
@@ -312,6 +312,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,859.39 | ▲ close $9,859.39 vs 09:30 $9,876.94 (session +0.00) | 16:00 close · cash $9,859.39 · no lots left · equity $9,859.39. | — |
 | 2026-11-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,859.39 | ▲ 09:30 equity $9,859.39 vs yday $9,859.39 (+0.00) | 09:30 open · cash $9,859.39 · no holdings · equity $9,859.39 vs prior close $9,859.39 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-11-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,859.39 | ▲ close $9,859.39 vs 09:30 $9,859.39 (session +0.00) | 16:00 close · cash $9,859.39 · no lots left · equity $9,859.39. | — |
+| 2026-11-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,859.39 | ▲ 09:30 equity $9,859.39 vs yday $9,859.39 (+0.00) | 09:30 open · cash $9,859.39 · no holdings · equity $9,859.39 vs prior close $9,859.39 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-09 09:30 ET | **BUY** | `PAYS` | 330 | $14.93 | $4.26 | — | $4,928.23 | — | Clock-B #10 NR7 + moderate momentum; gate clk_nr7_mom=True; rank hot_score; list overnight; 🔵; ret5=+5.5; leftover $4929.69 | join🟢 sector🟡 gen🟢 news🟡 digest🔴 judge🔴 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `KSPI` | 55 | $89.50 | $2.15 | — | $3.58 | — | Clock-B #10 NR7 + moderate momentum; gate clk_nr7_mom=True; rank hot_score; list earn_react; 🔵; ret5=+0.4; leftover $4929.69 | join🔴 sector🟡 gen🟢 news🟡 digest🔴 judge🔴 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-11-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $3.58 | ▼ close $9,052.45 vs 09:30 $9,859.39 (session -800.52) | 16:00 close · cash $3.58 · equity $9,052.45 vs 09:30 $9,859.39 (-806.94; session marks -800.52) · 2 name(s) marked open→close (per-name table). PAYS×330 09:30 $14.93 → close $12.51 -798.60; KSPI×55 09:30 $89.50 → close $89.47 -1.92 | — |
 
 ## Not taken
 

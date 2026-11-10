@@ -304,6 +304,11 @@
       "bytes": 179112,
       "sha256": "0df12826a00f8075af3636579c1af3a72e5cb7feb6dc5fd419feefc7ada50a9f",
       "written_at": "2026-11-07T02:52:12.906682-05:00"
+    },
+    "2026-11-09": {
+      "bytes": 175913,
+      "sha256": "fab1d68e2dfe3f73ab98faa7c9bcacd589da4b9592513658754a418bbd1420c9",
+      "written_at": "2026-11-10T02:04:05.192764-05:00"
     }
   },
   "excel_signals": {
@@ -1677,6 +1682,12 @@
       "encoding": "gzip",
       "sha256": "03d5ba9f71d92ba52d451e02bb725fed66d43f4faddb6149bd7c6a183dc8212b",
       "written_at": "2026-11-07T02:57:57.729073-05:00"
+    },
+    "2026-11-09": {
+      "bytes": 53284647,
+      "encoding": "gzip",
+      "sha256": "a886683a25f7276f89d735c04b0e0a8923d3d692d556a656ea9b1a6b05e5b0eb",
+      "written_at": "2026-11-10T02:09:36.341877-05:00"
     }
   },
   "lineups": {
@@ -1984,6 +1995,11 @@
       "bytes": 804,
       "sha256": "c748a3473b8cec25b3220cc4230d81a6710660c479cea73f042760a7a63de9b4",
       "written_at": "2026-11-07T02:58:40.027814-05:00"
+    },
+    "2026-11-09": {
+      "bytes": 750,
+      "sha256": "9176e40ec4761eb5ba63c0634201828ae95edf249f448263defce1b190f0e7de",
+      "written_at": "2026-11-10T02:10:24.448846-05:00"
     }
   },
   "prices": {
@@ -2141,6 +2157,11 @@
       "bytes": 2235894,
       "sha256": "a48154cdcb7b4b408c17cb17d9e855d25f65514e78eb9bb907cad8f071b961b5",
       "written_at": "2026-11-07T02:52:12.957317-05:00"
+    },
+    "2026-11-09": {
+      "bytes": 1598266,
+      "sha256": "9422fa2928fc9cb7d4bd1f2fa22c4748a6d7195c04641599ea62fb405f113762",
+      "written_at": "2026-11-10T02:04:05.235023-05:00"
     }
   },
   "recipe_rules": {
@@ -15184,6 +15205,20 @@
         "BLFS"
       ],
       "written_at": "2026-11-07T02:52:19.595174-05:00"
+    },
+    "2026-11-09": {
+      "bytes": 483336,
+      "dropped_missing_bars": [
+        "PORT-U",
+        "TCBI"
+      ],
+      "heat_vintage": "2026-11-09",
+      "n_rows": 190,
+      "sha256": "331cb3e7c790b9dbfc1cad10e8d5147f08719b28db9287976c0ec5d9f2dd74d6",
+      "unpriced_held": [
+        "BLFS"
+      ],
+      "written_at": "2026-11-10T02:04:14.550653-05:00"
     }
   },
   "version": 1

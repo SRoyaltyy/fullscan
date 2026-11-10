@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ flow_in, no 🚨
 
-Cash book **+15.54%** ($11,554) · signal-only (no cash/fees) was +17.31%. Starts YES **6/30**. Fills 142 · skips 27 · realized $+766.09.
+Cash book **+20.36%** ($12,036) · signal-only (no cash/fees) was +17.31%. Starts YES **6/30**. Fills 153 · skips 27 · realized $+766.09.
 
 ## How this sleeve decides (like you are 10)
 
@@ -336,6 +336,19 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-06 09:30 ET | **BUY** | `AQN` | 257 | $5.54 | $3.32 | — | $1,559.61 | — | union ∩ flow_in, no 🚨; gate flow_in=True; list earn_react; 🔵; ret5=+3.9; leftover $1424.39 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
 | 2026-11-06 09:30 ET | **BUY** | `BIP` | 37 | $37.92 | $2.10 | — | $154.46 | — | union ∩ flow_in, no 🚨; gate flow_in=True; list earn_react; ret5=+1.3; leftover $1424.39 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟡 heat🔴 vol🟢 buy🟡 |
 | 2026-11-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $154.46 | ▲ close $11,554.41 vs 09:30 $11,413.51 (session +187.97) | 16:00 close · cash $154.46 · equity $11,554.41 vs 09:30 $11,413.51 (+140.90; session marks +187.97) · 8 name(s) marked open→close (per-name table). PCOR×19 09:30 $73.99 → close $75.33 +25.46; SMRT×895 09:30 $1.59 → close $1.59 +0.00; SRTA×272 09:30 $5.23 → close $5.56 +89.76; DOX×33 09:30 $42.62 → close $42.09 -17.49; JBTM×11 09:30 $125.60 → close $128.35 +30.25; AEE×12 09:30 $112.14 → close $112.85 +8.52; AQN×257 09:30 $5.54 → close $5.52 -5.14; BIP×37 09:30 $37.92 → close $39.45 +56.61 | — |
+| 2026-11-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $154.46 | ▲ 09:30 equity $11,658.24 vs yday $11,554.41 (+103.83) | 09:30 open · cash $154.46 (unchanged overnight, no fees) · equity $11,658.24 vs prior close $11,554.41 (+103.83) · 8 name(s) re-marked at the open (per-name table). AEE×12 yday $112.85 → 09:30 $113.66 +9.72; AQN×257 yday $5.52 → 09:30 $5.53 +2.57; BIP×37 yday $39.45 → 09:30 $39.28 -6.29; DOX×33 yday $42.09 → 09:30 $42.00 -2.97; JBTM×11 yday $128.35 → 09:30 $130.00 +18.15; PCOR×19 yday $75.33 → 09:30 $75.81 +9.12; SMRT×895 yday $1.59 → 09:30 $1.66 +62.65; SRTA×272 yday $5.56 → 09:30 $5.60 +10.88 | — |
+| 2026-11-09 09:30 ET | **SELL** | `AEE` | 12 | $113.66 | $2.05 | $+14.17 | $1,516.33 | ▲ +14.17 after sell → book $11,656.19; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-09 09:30 ET | **SELL** | `AQN` | 257 | $5.53 | $3.37 | $-9.25 | $2,934.17 | ▼ -9.25 after sell → book $11,652.82; vs 09:30 mark -3.37 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-09 09:30 ET | **SELL** | `BIP` | 37 | $39.28 | $2.12 | $+46.10 | $4,385.41 | ▲ +46.10 after sell → book $11,650.70; vs 09:30 mark -2.12 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-09 09:30 ET | **SELL** | `DOX` | 33 | $42.00 | $2.11 | $-24.66 | $5,769.30 | ▼ -24.66 after sell → book $11,648.59; vs 09:30 mark -2.11 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-09 09:30 ET | **SELL** | `JBTM` | 11 | $130.00 | $2.04 | $+44.33 | $7,197.26 | ▲ +44.33 after sell → book $11,646.55; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-09 09:30 ET | **SELL** | `PCOR` | 19 | $75.81 | $2.07 | $+30.46 | $8,635.58 | ▲ +30.46 after sell → book $11,644.48; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-09 09:30 ET | **SELL** | `SMRT` | 895 | $1.66 | $11.71 | $+39.40 | $10,109.57 | ▲ +39.40 after sell → book $11,632.77; vs 09:30 mark -11.71 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-09 09:30 ET | **SELL** | `SRTA` | 272 | $5.60 | $3.57 | $+93.57 | $11,629.21 | ▲ +93.57 after sell → book $11,629.21; vs 09:30 mark -3.56 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-09 09:30 ET | **BUY** | `CERT` | 321 | $12.06 | $4.14 | — | $7,753.81 | — | union ∩ flow_in, no 🚨; gate flow_in=True; list probable; 🔵; ⚪; ret5=+9.3; leftover $3876.40 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `VCYT` | 158 | $24.40 | $2.46 | — | $3,896.14 | — | union ∩ flow_in, no 🚨; gate flow_in=True; list yday_mover; 🔵; ret5=-51.7; leftover $3876.40 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟡 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `FERG` | 15 | $251.68 | $2.04 | — | $118.91 | — | union ∩ flow_in, no 🚨; gate flow_in=True; list earn_react; ret5=-2.1; leftover $3876.40 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-11-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $118.91 | ▲ close $12,035.84 vs 09:30 $11,658.24 (session +415.27) | 16:00 close · cash $118.91 · equity $12,035.84 vs 09:30 $11,658.24 (+377.60; session marks +415.27) · 3 name(s) marked open→close (per-name table). CERT×321 09:30 $12.06 → close $12.22 +51.36; VCYT×158 09:30 $24.40 → close $25.92 +240.16; FERG×15 09:30 $251.68 → close $259.93 +123.75 | — |
 
 ## Not taken
 

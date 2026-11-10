@@ -6,7 +6,7 @@ Buys the flatten **wish-list** even on io/HOLD mornings — live `flatten_robust
 
 Side **long** · universe `flatten` · top 8 · rank `list` · size `leftover` · sell `time` · S-boost `none` · sell at min-hold even if still listed
 
-Cash book **-24.64%** ($7,536) · signal-only (no cash/fees) was -10.41%. Starts YES **2/30**. Fills 280 · skips 219 · realized $-788.42.
+Cash book **-22.95%** ($7,705) · signal-only (no cash/fees) was -10.41%. Starts YES **2/30**. Fills 285 · skips 219 · realized $-788.42.
 
 ## How this sleeve decides (like you are 10)
 
@@ -470,6 +470,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-06 09:30 ET | **BUY** | `MGNI` | 1 | $27.25 | $0.28 | — | $124.48 | — | sell at min-hold even if still listed; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ret5=+22.7; leftover $38.00 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
 | 2026-11-06 09:30 ET | **BUY** | `CPRI` | 1 | $20.93 | $0.21 | — | $103.34 | — | sell at min-hold even if still listed; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ret5=+31.6; leftover $38.00 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
 | 2026-11-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $103.34 | ▲ close $7,535.52 vs 09:30 $7,495.93 (session +40.08) | 16:00 close · cash $103.34 · equity $7,535.52 vs 09:30 $7,495.93 (+39.59; session marks +40.08) · 11 name(s) marked open→close (per-name table). CLX×12 09:30 $96.74 → close $99.96 +38.64; CMCSA×51 09:30 $24.21 → close $24.39 +9.18; COCO×19 09:30 $62.29 → close $62.45 +3.04; CON×1 09:30 $41.60 → close $42.22 +0.62; CROX×8 09:30 $150.37 → close $151.86 +11.92; CSGP×39 09:30 $30.80 → close $30.55 -9.75; GPK×109 09:30 $11.30 → close $11.19 -11.99; PACS×1 09:30 $50.94 → close $49.60 -1.34; PCRX×1 09:30 $36.42 → close $36.43 +0.01; MGNI×1 09:30 $27.25 → close $27.39 +0.14; CPRI×1 09:30 $20.93 → close $20.54 -0.39 | — |
+| 2026-11-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $103.34 | ▲ 09:30 equity $7,597.09 vs yday $7,535.52 (+61.56) | 09:30 open · cash $103.34 (unchanged overnight, no fees) · equity $7,597.09 vs prior close $7,535.52 (+61.56) · 11 name(s) re-marked at the open (per-name table). CLX×12 yday $99.96 → 09:30 $100.49 +6.36; CMCSA×51 yday $24.39 → 09:30 $24.16 -11.73; COCO×19 yday $62.45 → 09:30 $62.62 +3.23; CON×1 yday $42.22 → 09:30 $42.60 +0.38; CPRI×1 yday $20.54 → 09:30 $20.84 +0.30; CROX×8 yday $151.86 → 09:30 $155.54 +29.44; CSGP×39 yday $30.55 → 09:30 $30.63 +3.12; GPK×109 yday $11.19 → 09:30 $11.46 +29.43; MGNI×1 yday $27.39 → 09:30 $27.92 +0.53; PACS×1 yday $49.60 → 09:30 $50.09 +0.49; PCRX×1 yday $36.43 → 09:30 $36.44 +0.01 | — |
+| 2026-11-09 09:30 ET | **SELL** | `CON` | 1 | $42.60 | $0.45 | $+0.85 | $145.50 | ▲ +0.85 after sell → book $7,596.64; vs 09:30 mark -0.44 | time-stop after 3 sess (min 3) | — |
+| 2026-11-09 09:30 ET | **SELL** | `PACS` | 1 | $50.09 | $0.52 | $+0.57 | $195.06 | ▲ +0.57 after sell → book $7,596.11; vs 09:30 mark -0.53 | time-stop after 3 sess (min 3) | — |
+| 2026-11-09 09:30 ET | **SELL** | `PCRX` | 1 | $36.44 | $0.39 | $-0.72 | $231.11 | ▼ -0.72 after sell → book $7,595.72; vs 09:30 mark -0.39 | time-stop after 3 sess (min 3) | — |
+| 2026-11-09 09:30 ET | **BUY** | `CLOV` | 7 | $4.88 | $0.36 | — | $196.59 | — | sell at min-hold even if still listed; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ret5=+8.1; leftover $38.52 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `ZVRA` | 3 | $11.65 | $0.36 | — | $161.28 | — | sell at min-hold even if still listed; list flatten,ohlc_hot; wish-list (live io HOLD — not a ticket); 🔵; ⚪; ret5=+12.7; leftover $38.52 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $161.28 | ▲ close $7,705.37 vs 09:30 $7,597.09 (session +110.37) | 16:00 close · cash $161.28 · equity $7,705.37 vs 09:30 $7,597.09 (+108.28; session marks +110.37) · 10 name(s) marked open→close (per-name table). CLX×12 09:30 $100.49 → close $105.53 +60.48; CMCSA×51 09:30 $24.16 → close $24.51 +17.85; COCO×19 09:30 $62.62 → close $64.49 +35.53; CPRI×1 09:30 $20.84 → close $21.38 +0.54; CROX×8 09:30 $155.54 → close $160.23 +37.52; CSGP×39 09:30 $30.63 → close $31.24 +23.79; GPK×109 09:30 $11.46 → close $10.84 -67.58; MGNI×1 09:30 $27.92 → close $29.04 +1.12; CLOV×7 09:30 $4.88 → close $4.83 -0.35; ZVRA×3 09:30 $11.65 → close $12.14 +1.47 | — |
 
 ## Not taken
 

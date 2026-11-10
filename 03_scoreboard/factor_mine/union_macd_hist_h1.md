@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `macd_hist` · size `leftover` · sell `list` · S-boost `none` · rank by macd_hist
 
-Cash book **-15.94%** ($8,406) · signal-only (no cash/fees) was +3.37%. Starts YES **20/30**. Fills 489 · skips 94 · realized $-657.32.
+Cash book **-15.06%** ($8,494) · signal-only (no cash/fees) was +3.37%. Starts YES **20/30**. Fills 501 · skips 94 · realized $-657.32.
 
 ## How this sleeve decides (like you are 10)
 
@@ -682,6 +682,20 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-06 09:30 ET | **BUY** | `RYTM` | 9 | $107.10 | $2.02 | — | $1,849.79 | — | rank by macd_hist; rank macd_hist; list yday_gainer,yday_mover; 🔵; ret5=+12.8; leftover $1026.51 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-06 09:30 ET | **BUY** | `SPG` | 4 | $222.28 | $2.00 | — | $958.66 | — | rank by macd_hist; rank macd_hist; list earn_react; 🔵; ret5=+5.0; leftover $1026.51 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
 | 2026-11-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $958.66 | ▲ close $8,406.38 vs 09:30 $8,228.29 (session +210.37) | 16:00 close · cash $958.66 · equity $8,406.38 vs 09:30 $8,228.29 (+178.09; session marks +210.37) · 8 name(s) marked open→close (per-name table). APP×2 09:30 $355.95 → close $391.22 +70.54; TYL×2 09:30 $415.77 → close $420.56 +9.58; TXRH×5 09:30 $183.61 → close $183.88 +1.35; CHTR×8 09:30 $115.74 → close $118.07 +18.64; STE×4 09:30 $248.03 → close $252.30 +17.08; JBTM×8 09:30 $125.60 → close $128.35 +22.00; RYTM×9 09:30 $107.10 → close $112.28 +46.62; SPG×4 09:30 $222.28 → close $228.42 +24.56 | — |
+| 2026-11-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $958.66 | ▲ 09:30 equity $8,454.65 vs yday $8,406.38 (+48.27) | 09:30 open · cash $958.66 (unchanged overnight, no fees) · equity $8,454.65 vs prior close $8,406.38 (+48.27) · 8 name(s) re-marked at the open (per-name table). APP×2 yday $391.22 → 09:30 $387.71 -7.02; CHTR×8 yday $118.07 → 09:30 $119.82 +14.00; JBTM×8 yday $128.35 → 09:30 $130.00 +13.20; RYTM×9 yday $112.28 → 09:30 $112.31 +0.27; SPG×4 yday $228.42 → 09:30 $231.00 +10.32; STE×4 yday $252.30 → 09:30 $253.59 +5.16; TXRH×5 yday $183.88 → 09:30 $187.00 +15.60; TYL×2 yday $420.56 → 09:30 $418.93 -3.26 | — |
+| 2026-11-09 09:30 ET | **SELL** | `CHTR` | 8 | $119.82 | $2.03 | $+28.59 | $1,915.19 | ▲ +28.59 after sell → book $8,452.62; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-09 09:30 ET | **SELL** | `RYTM` | 9 | $112.31 | $2.04 | $+42.84 | $2,923.94 | ▲ +42.84 after sell → book $8,450.58; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-09 09:30 ET | **SELL** | `SPG` | 4 | $231.00 | $2.02 | $+30.86 | $3,845.92 | ▲ +30.86 after sell → book $8,448.56; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-09 09:30 ET | **SELL** | `STE` | 4 | $253.59 | $2.02 | $+18.22 | $4,858.26 | ▲ +18.22 after sell → book $8,446.53; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-09 09:30 ET | **SELL** | `TXRH` | 5 | $187.00 | $2.02 | $+12.92 | $5,791.23 | ▲ +12.92 after sell → book $8,444.51; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-09 09:30 ET | **SELL** | `TYL` | 2 | $418.93 | $2.02 | $+2.31 | $6,627.07 | ▲ +2.31 after sell → book $8,442.49; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-09 09:30 ET | **BUY** | `RGLD` | 4 | $271.95 | $2.00 | — | $5,537.27 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; ret5=+16.2; leftover $1104.51 | join🟢 sector🟡 gen🟢 news🔴 digest🔴 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `MIDD` | 7 | $138.52 | $2.01 | — | $4,565.62 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; ret5=+14.8; leftover $1104.51 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 ab🟡 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `EPAM` | 7 | $156.46 | $2.01 | — | $3,468.39 | — | rank by macd_hist; rank macd_hist; list yday_gainer; 🔵; ret5=+13.4; leftover $1104.51 | join🔴 sector🟡 gen🟢 news🟢 digest🔴 judge🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-09 09:30 ET | **BUY** | `TTWO` | 5 | $216.26 | $2.00 | — | $2,385.09 | — | rank by macd_hist; rank macd_hist; list overnight; 🔵; ⚪; ret5=+13.0; leftover $1104.51 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `ALGN` | 6 | $167.90 | $2.01 | — | $1,375.68 | — | rank by macd_hist; rank macd_hist; list flatten; 🔵; ⚪; ret5=+10.7; leftover $1104.51 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `SEZL` | 7 | $152.59 | $2.01 | — | $305.54 | — | rank by macd_hist; rank macd_hist; list yday_gainer; 🔵; ret5=+10.8; leftover $1104.51 | join🟢 sector🔴 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $305.54 | ▲ close $8,494.04 vs 09:30 $8,454.65 (session +63.59) | 16:00 close · cash $305.54 · equity $8,494.04 vs 09:30 $8,454.65 (+39.39; session marks +63.59) · 8 name(s) marked open→close (per-name table). APP×2 09:30 $387.71 → close $410.00 +44.58; JBTM×8 09:30 $130.00 → close $129.46 -4.32; RGLD×4 09:30 $271.95 → close $282.66 +42.84; MIDD×7 09:30 $138.52 → close $138.00 -3.64; EPAM×7 09:30 $156.46 → close $156.82 +2.52; TTWO×5 09:30 $216.26 → close $207.40 -44.30; ALGN×6 09:30 $167.90 → close $174.26 +38.16; SEZL×7 09:30 $152.59 → close $150.84 -12.25 | — |
 
 ## Not taken
 

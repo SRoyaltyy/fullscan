@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ flow_in, no 🚨
 
-Cash book **-13.26%** ($8,674) · signal-only (no cash/fees) was +15.53%. Starts YES **3/30**. Fills 104 · skips 105 · realized $-281.48.
+Cash book **-9.68%** ($9,032) · signal-only (no cash/fees) was +15.53%. Starts YES **3/30**. Fills 109 · skips 105 · realized $-281.48.
 
 ## How this sleeve decides (like you are 10)
 
@@ -298,6 +298,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2.45 | ▲ close $8,300.97 vs 09:30 $7,794.71 (session +506.26) | 16:00 close · cash $2.45 · equity $8,300.97 vs 09:30 $7,794.71 (+506.26; session marks +506.26) · 2 name(s) marked open→close (per-name table). HLP×1108 09:30 $2.87 → close $3.37 +554.00; RKT×308 09:30 $14.97 → close $14.82 -47.74 | — |
 | 2026-11-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $2.45 | ▼ 09:30 equity $8,158.69 vs yday $8,300.97 (-142.28) | 09:30 open · cash $2.45 (unchanged overnight, no fees) · equity $8,158.69 vs prior close $8,300.97 (-142.28) · 2 name(s) re-marked at the open (per-name table). HLP×1108 yday $3.37 → 09:30 $3.35 -22.16; RKT×308 yday $14.82 → 09:30 $14.43 -120.12 | — |
 | 2026-11-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2.45 | ▲ close $8,674.05 vs 09:30 $8,158.69 (session +515.36) | 16:00 close · cash $2.45 · equity $8,674.05 vs 09:30 $8,158.69 (+515.36; session marks +515.36) · 2 name(s) marked open→close (per-name table). HLP×1108 09:30 $3.35 → close $3.64 +321.32; RKT×308 09:30 $14.43 → close $15.06 +194.04 | — |
+| 2026-11-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $2.45 | ▲ 09:30 equity $8,747.97 vs yday $8,674.05 (+73.92) | 09:30 open · cash $2.45 (unchanged overnight, no fees) · equity $8,747.97 vs prior close $8,674.05 (+73.92) · 2 name(s) re-marked at the open (per-name table). HLP×1108 yday $3.64 → 09:30 $3.64 +0.00; RKT×308 yday $15.06 → 09:30 $15.30 +73.92 | — |
+| 2026-11-09 09:30 ET | **SELL** | `HLP` | 1108 | $3.64 | $14.51 | $-405.52 | $4,021.06 | ▼ -405.52 after sell → book $8,733.46; vs 09:30 mark -14.51 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-09 09:30 ET | **SELL** | `RKT` | 308 | $15.30 | $4.06 | $+299.96 | $8,729.40 | ▲ +299.96 after sell → book $8,729.40; vs 09:30 mark -4.06 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-09 09:30 ET | **BUY** | `CERT` | 241 | $12.06 | $3.11 | — | $5,819.83 | — | union ∩ flow_in, no 🚨; gate flow_in=True; list probable; 🔵; ⚪; ret5=+9.3; leftover $2909.80 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `VCYT` | 119 | $24.40 | $2.35 | — | $2,913.88 | — | union ∩ flow_in, no 🚨; gate flow_in=True; list yday_mover; 🔵; ret5=-51.7; leftover $2909.80 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟡 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `FERG` | 11 | $251.68 | $2.02 | — | $143.38 | — | union ∩ flow_in, no 🚨; gate flow_in=True; list earn_react; ret5=-2.1; leftover $2909.80 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-11-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $143.38 | ▲ close $9,032.11 vs 09:30 $8,747.97 (session +310.19) | 16:00 close · cash $143.38 · equity $9,032.11 vs 09:30 $8,747.97 (+284.14; session marks +310.19) · 3 name(s) marked open→close (per-name table). CERT×241 09:30 $12.06 → close $12.22 +38.56; VCYT×119 09:30 $24.40 → close $25.92 +180.88; FERG×11 09:30 $251.68 → close $259.93 +90.75 | — |
 
 ## Not taken
 

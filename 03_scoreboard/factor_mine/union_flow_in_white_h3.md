@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-13.15%** ($8,685) · signal-only (no cash/fees) was +4.80%. Starts YES **2/30**. Fills 17 · skips 18 · realized $+210.43.
+Cash book **-12.09%** ($8,791) · signal-only (no cash/fees) was +4.80%. Starts YES **2/30**. Fills 18 · skips 18 · realized $+210.43.
 
 ## How this sleeve decides (like you are 10)
 
@@ -213,6 +213,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,684.86 | ▲ close $8,684.86 vs 09:30 $8,684.86 (session +0.00) | 16:00 close · cash $8,684.86 · no lots left · equity $8,684.86. | — |
 | 2026-11-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,684.86 | ▲ 09:30 equity $8,684.86 vs yday $8,684.86 (+0.00) | 09:30 open · cash $8,684.86 · no holdings · equity $8,684.86 vs prior close $8,684.86 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-11-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,684.86 | ▲ close $8,684.86 vs 09:30 $8,684.86 (session +0.00) | 16:00 close · cash $8,684.86 · no lots left · equity $8,684.86. | — |
+| 2026-11-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,684.86 | ▲ 09:30 equity $8,684.86 vs yday $8,684.86 (+0.00) | 09:30 open · cash $8,684.86 · no holdings · equity $8,684.86 vs prior close $8,684.86 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-09 09:30 ET | **BUY** | `CERT` | 719 | $12.06 | $9.28 | — | $4.44 | — | combo gate; gate flow_in=True,zero_red=True; list probable; 🔵; ⚪; ret5=+9.3; leftover $8684.86 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $4.44 | ▲ close $8,790.62 vs 09:30 $8,684.86 (session +115.04) | 16:00 close · cash $4.44 · equity $8,790.62 vs 09:30 $8,684.86 (+105.76; session marks +115.04) · 1 name(s) marked open→close (per-name table). CERT×719 09:30 $12.06 → close $12.22 +115.04 | — |
 
 ## Not taken
 

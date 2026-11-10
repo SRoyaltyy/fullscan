@@ -6,7 +6,7 @@ Buys the flatten **wish-list** even on io/HOLD mornings — live `flatten_robust
 
 Side **long** · universe `flatten` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · flatten wish-list ∩ vol🟢
 
-Cash book **-27.98%** ($7,202) · signal-only (no cash/fees) was -19.12%. Starts YES **6/30**. Fills 64 · skips 71 · realized $-2440.55.
+Cash book **-27.35%** ($7,265) · signal-only (no cash/fees) was -19.12%. Starts YES **6/30**. Fills 66 · skips 71 · realized $-2440.55.
 
 ## How this sleeve decides (like you are 10)
 
@@ -258,6 +258,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-06 09:30 ET | **BUY** | `APP` | 9 | $355.95 | $2.02 | — | $3,719.08 | — | flatten wish-list ∩ vol🟢; gate vol=good; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ret5=+39.7; leftover $3462.32 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-06 09:30 ET | **BUY** | `GPK` | 306 | $11.30 | $3.95 | — | $257.34 | — | flatten wish-list ∩ vol🟢; gate vol=good; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ret5=+31.0; leftover $3462.32 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
 | 2026-11-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $257.34 | ▲ close $7,202.46 vs 09:30 $6,924.65 (session +283.77) | 16:00 close · cash $257.34 · equity $7,202.46 vs 09:30 $6,924.65 (+277.81; session marks +283.77) · 2 name(s) marked open→close (per-name table). APP×9 09:30 $355.95 → close $391.22 +317.43; GPK×306 09:30 $11.30 → close $11.19 -33.66 | — |
+| 2026-11-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $257.34 | ▲ 09:30 equity $7,253.49 vs yday $7,202.46 (+51.03) | 09:30 open · cash $257.34 (unchanged overnight, no fees) · equity $7,253.49 vs prior close $7,202.46 (+51.03) · 2 name(s) re-marked at the open (per-name table). APP×9 yday $391.22 → 09:30 $387.71 -31.59; GPK×306 yday $11.19 → 09:30 $11.46 +82.62 | — |
+| 2026-11-09 09:30 ET | **BUY** | `CLOV` | 13 | $4.88 | $0.67 | — | $193.23 | — | flatten wish-list ∩ vol🟢; gate vol=good; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ret5=+8.1; leftover $64.33 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `ZVRA` | 5 | $11.65 | $0.60 | — | $134.38 | — | flatten wish-list ∩ vol🟢; gate vol=good; list flatten,ohlc_hot; wish-list (live io HOLD — not a ticket); 🔵; ⚪; ret5=+12.7; leftover $64.33 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $134.38 | ▲ close $7,264.91 vs 09:30 $7,253.49 (session +12.69) | 16:00 close · cash $134.38 · equity $7,264.91 vs 09:30 $7,253.49 (+11.42; session marks +12.69) · 4 name(s) marked open→close (per-name table). APP×9 09:30 $387.71 → close $410.00 +200.61; GPK×306 09:30 $11.46 → close $10.84 -189.72; CLOV×13 09:30 $4.88 → close $4.83 -0.65; ZVRA×5 09:30 $11.65 → close $12.14 +2.45 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `overnight_mega` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · mega calendar ∩ last bar green; still a print-night long, not a reaction
 
-Cash book **+1.98%** ($10,198) · signal-only (no cash/fees) was -9.06%. Starts YES **0/30**. Fills 26 · skips 7 · realized $-886.90.
+Cash book **+2.34%** ($10,234) · signal-only (no cash/fees) was -9.06%. Starts YES **0/30**. Fills 27 · skips 7 · realized $-886.90.
 
 ## How this sleeve decides (like you are 10)
 
@@ -220,6 +220,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,197.67 | ▲ close $10,197.67 vs 09:30 $10,197.67 (session +0.00) | 16:00 close · cash $10,197.67 · no lots left · equity $10,197.67. | — |
 | 2026-11-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,197.67 | ▲ 09:30 equity $10,197.67 vs yday $10,197.67 (+0.00) | 09:30 open · cash $10,197.67 · no holdings · equity $10,197.67 vs prior close $10,197.67 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-11-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,197.67 | ▲ close $10,197.67 vs 09:30 $10,197.67 (session +0.00) | 16:00 close · cash $10,197.67 · no lots left · equity $10,197.67. | — |
+| 2026-11-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,197.67 | ▲ 09:30 equity $10,197.67 vs yday $10,197.67 (+0.00) | 09:30 open · cash $10,197.67 · no holdings · equity $10,197.67 vs prior close $10,197.67 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-09 09:30 ET | **BUY** | `OXY` | 183 | $55.55 | $2.54 | — | $29.48 | — | mega calendar ∩ last bar green; still a print-night long, not a reaction; gate last_green=True; list overnight,overnight_mega; 🔵; ret5=-11.9; leftover $10197.67 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟡 heat🔴 vol🟢 buy🟡 |
+| 2026-11-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $29.48 | ▲ close $10,233.56 vs 09:30 $10,197.67 (session +38.43) | 16:00 close · cash $29.48 · equity $10,233.56 vs 09:30 $10,197.67 (+35.89; session marks +38.43) · 1 name(s) marked open→close (per-name table). OXY×183 09:30 $55.55 → close $55.76 +38.43 | — |
 
 ## Not taken
 

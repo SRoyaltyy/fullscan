@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ ab_g, no 🚨
 
-Cash book **-25.91%** ($7,409) · signal-only (no cash/fees) was -11.54%. Starts YES **0/30**. Fills 450 · skips 92 · realized $-226.14.
+Cash book **-22.11%** ($7,789) · signal-only (no cash/fees) was -11.54%. Starts YES **0/30**. Fills 466 · skips 92 · realized $-226.14.
 
 ## How this sleeve decides (like you are 10)
 
@@ -644,6 +644,24 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-06 09:30 ET | **BUY** | `XMAX` | 179 | $5.07 | $2.53 | — | $1,244.67 | — | union ∩ ab_g, no 🚨; gate ab=good; list probable,yday_gainer,yday_mover; 🔵; ret5=-38.2; leftover $908.69 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-06 09:30 ET | **BUY** | `OCGN` | 1094 | $0.83 | $12.36 | — | $324.29 | — | union ∩ ab_g, no 🚨; gate ab=good; list probable,yday_gainer; 🔵; ret5=+9.7; leftover $908.69 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-11-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $324.29 | ▲ close $7,409.30 vs 09:30 $7,219.66 (session +225.17) | 16:00 close · cash $324.29 · equity $7,409.30 vs 09:30 $7,219.66 (+189.64; session marks +225.17) · 8 name(s) marked open→close (per-name table). CSGP×28 09:30 $30.80 → close $30.55 -7.00; GPK×79 09:30 $11.30 → close $11.19 -8.69; APP×2 09:30 $355.95 → close $391.22 +70.54; TMUS×5 09:30 $155.61 → close $162.01 +32.00; MGNI×33 09:30 $27.25 → close $27.39 +4.62; CPRI×43 09:30 $20.93 → close $20.54 -16.77; XMAX×179 09:30 $5.07 → close $5.33 +46.54; OCGN×1094 09:30 $0.83 → close $0.93 +103.93 | — |
+| 2026-11-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $324.29 | ▲ 09:30 equity $7,522.50 vs yday $7,409.30 (+113.20) | 09:30 open · cash $324.29 (unchanged overnight, no fees) · equity $7,522.50 vs prior close $7,409.30 (+113.20) · 8 name(s) re-marked at the open (per-name table). APP×2 yday $391.22 → 09:30 $387.71 -7.02; CPRI×43 yday $20.54 → 09:30 $20.84 +12.90; CSGP×28 yday $30.55 → 09:30 $30.63 +2.24; GPK×79 yday $11.19 → 09:30 $11.46 +21.33; MGNI×33 yday $27.39 → 09:30 $27.92 +17.49; OCGN×1094 yday $0.93 → 09:30 $0.98 +56.89; TMUS×5 yday $162.01 → 09:30 $162.81 +4.00; XMAX×179 yday $5.33 → 09:30 $5.36 +5.37 | — |
+| 2026-11-09 09:30 ET | **SELL** | `APP` | 2 | $387.71 | $2.02 | $+59.51 | $1,097.69 | ▲ +59.51 after sell → book $7,520.48; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-09 09:30 ET | **SELL** | `CPRI` | 43 | $20.84 | $2.14 | $-8.13 | $1,991.67 | ▼ -8.13 after sell → book $7,518.34; vs 09:30 mark -2.14 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-09 09:30 ET | **SELL** | `CSGP` | 28 | $30.63 | $2.09 | $-73.61 | $2,847.22 | ▼ -73.61 after sell → book $7,516.25; vs 09:30 mark -2.09 | dropped from list after 2 sess (min 1) | — |
+| 2026-11-09 09:30 ET | **SELL** | `GPK` | 79 | $11.46 | $2.25 | $-32.92 | $3,750.31 | ▼ -32.92 after sell → book $7,514.00; vs 09:30 mark -2.25 | dropped from list after 2 sess (min 1) | — |
+| 2026-11-09 09:30 ET | **SELL** | `MGNI` | 33 | $27.92 | $2.11 | $+17.91 | $4,669.56 | ▲ +17.91 after sell → book $7,511.89; vs 09:30 mark -2.11 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-09 09:30 ET | **SELL** | `OCGN` | 1094 | $0.98 | $14.16 | $+134.29 | $5,724.24 | ▲ +134.29 after sell → book $7,497.73; vs 09:30 mark -14.16 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-09 09:30 ET | **SELL** | `TMUS` | 5 | $162.81 | $2.02 | $+31.97 | $6,536.26 | ▲ +31.97 after sell → book $7,495.70; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-09 09:30 ET | **SELL** | `XMAX` | 179 | $5.36 | $2.57 | $+46.82 | $7,493.14 | ▲ +46.82 after sell → book $7,493.14; vs 09:30 mark -2.56 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-09 09:30 ET | **BUY** | `ALGN` | 5 | $167.90 | $2.00 | — | $6,651.63 | — | union ∩ ab_g, no 🚨; gate ab=good; list flatten; 🔵; ⚪; ret5=+10.7; leftover $936.64 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `CLOV` | 191 | $4.88 | $2.56 | — | $5,716.99 | — | union ∩ ab_g, no 🚨; gate ab=good; list flatten; 🔵; ret5=+8.1; leftover $936.64 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `ZVRA` | 80 | $11.65 | $2.23 | — | $4,782.76 | — | union ∩ ab_g, no 🚨; gate ab=good; list flatten,ohlc_hot; 🔵; ⚪; ret5=+12.7; leftover $936.64 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `ETON` | 16 | $58.10 | $2.04 | — | $3,851.12 | — | union ∩ ab_g, no 🚨; gate ab=good; list flatten; 🔵; ret5=+8.2; leftover $936.64 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `WRBY` | 36 | $25.91 | $2.10 | — | $2,916.26 | — | union ∩ ab_g, no 🚨; gate ab=good; list probable,yday_gainer; 🔵; ⚪; ret5=+3.5; leftover $936.64 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `CERT` | 77 | $12.06 | $2.22 | — | $1,985.42 | — | union ∩ ab_g, no 🚨; gate ab=good; list probable; 🔵; ⚪; ret5=+9.3; leftover $936.64 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `GCT` | 15 | $60.00 | $2.04 | — | $1,083.39 | — | union ∩ ab_g, no 🚨; gate ab=good; list probable; 🔵; ret5=-0.0; leftover $936.64 | join🟢 sector🟡 gen🟢 news🟢 digest🔴 judge🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `APPN` | 18 | $51.46 | $2.04 | — | $155.06 | — | union ∩ ab_g, no 🚨; gate ab=good; list probable; 🔵; ret5=+5.1; leftover $936.64 | join🟢 sector🟡 gen🟢 news🟢 digest🔴 judge🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $155.06 | ▲ close $7,788.84 vs 09:30 $7,522.50 (session +312.94) | 16:00 close · cash $155.06 · equity $7,788.84 vs 09:30 $7,522.50 (+266.34; session marks +312.94) · 8 name(s) marked open→close (per-name table). ALGN×5 09:30 $167.90 → close $174.26 +31.80; CLOV×191 09:30 $4.88 → close $4.83 -9.55; ZVRA×80 09:30 $11.65 → close $12.14 +39.20; ETON×16 09:30 $58.10 → close $64.35 +100.00; WRBY×36 09:30 $25.91 → close $30.21 +154.80; CERT×77 09:30 $12.06 → close $12.22 +12.32; GCT×15 09:30 $60.00 → close $59.33 -10.05; APPN×18 09:30 $51.46 → close $51.15 -5.58 | — |
 
 ## Not taken
 

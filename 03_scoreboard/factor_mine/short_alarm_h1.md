@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · alarm
 
-Cash book **+0.64%** ($10,064) · signal-only (no cash/fees) was +3.57%. Starts YES **5/30**. Fills 276 · skips 96 · realized $+54.59.
+Cash book **-0.65%** ($9,935) · signal-only (no cash/fees) was +3.57%. Starts YES **5/30**. Fills 278 · skips 96 · realized $+54.59.
 
 ## How this sleeve decides (like you are 10)
 
@@ -468,6 +468,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-06 09:30 ET | **SHORT** | `ARCT` | 251 | $10.00 | $3.37 | — | $12,574.82 | — | alarm; gate alarm=True; list earn_react; ret5=-23.0; leftover $2517.05 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-11-06 09:30 ET | **SHORT** | `ETON` | 42 | $58.59 | $2.21 | — | $15,033.39 | — | alarm; gate alarm=True; list earn_react; ret5=-12.1; leftover $2517.05 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-11-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $15,033.39 | ▲ close $10,064.22 vs 09:30 $10,086.97 (session +1.61) | 16:00 close · cash $15,033.39 · equity $10,064.22 vs 09:30 $10,086.97 (-22.75; session marks +1.61) · 2 name(s) marked open→close (per-name table). ARCT×251 09:30 $10.00 → close $10.35 -87.85; ETON×42 09:30 $58.59 → close $56.46 +89.46 | — |
+| 2026-11-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $15,033.39 | ▼ 09:30 equity $9,940.12 vs yday $10,064.22 (-124.10) | 09:30 open · cash $15,033.39 (unchanged overnight, no fees) · equity $9,940.12 vs prior close $10,064.22 (-124.10) · 2 name(s) re-marked at the open (per-name table). ARCT×251 yday $10.35 → 09:30 $10.57 -55.22; ETON×42 yday $56.46 → 09:30 $58.10 -68.88 | — |
+| 2026-11-09 09:30 ET | **COVER** | `ARCT` | 251 | $10.57 | $3.24 | $-149.68 | $12,377.08 | ▼ -149.68 after sell → book $9,936.88; vs 09:30 mark -3.24 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-09 09:30 ET | **COVER** | `ETON` | 42 | $58.10 | $2.12 | $+16.25 | $9,934.77 | ▲ +16.25 after sell → book $9,934.77; vs 09:30 mark -2.11 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-11-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,934.77 | ▲ close $9,934.77 vs 09:30 $9,940.12 (session +0.00) | 16:00 close · cash $9,934.77 · no lots left · equity $9,934.77. | — |
 
 ## Not taken
 

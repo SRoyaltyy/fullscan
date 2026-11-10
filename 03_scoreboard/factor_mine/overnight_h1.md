@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `overnight` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · baseline list, no extra gate
 
-Cash book **-23.38%** ($7,662) · signal-only (no cash/fees) was -22.61%. Starts YES **0/30**. Fills 163 · skips 80 · realized $-2514.32.
+Cash book **-12.96%** ($8,704) · signal-only (no cash/fees) was -22.61%. Starts YES **0/30**. Fills 172 · skips 80 · realized $-2514.32.
 
 ## How this sleeve decides (like you are 10)
 
@@ -353,6 +353,17 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,564.94 | ▲ 09:30 equity $7,564.94 vs yday $7,564.94 (+0.00) | 09:30 open · cash $7,564.94 · no holdings · equity $7,564.94 vs prior close $7,564.94 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-11-06 09:30 ET | **BUY** | `HE` | 910 | $8.30 | $11.74 | — | $0.20 | — | baseline list, no extra gate; list overnight; 🔵; ret5=-1.3; leftover $7564.94 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
 | 2026-11-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $0.20 | ▲ close $7,662.40 vs 09:30 $7,564.94 (session +109.20) | 16:00 close · cash $0.20 · equity $7,662.40 vs 09:30 $7,564.94 (+97.46; session marks +109.20) · 1 name(s) marked open→close (per-name table). HE×910 09:30 $8.30 → close $8.42 +109.20 | — |
+| 2026-11-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $0.20 | ▲ 09:30 equity $8,317.60 vs yday $7,662.40 (+655.20) | 09:30 open · cash $0.20 (unchanged overnight, no fees) · equity $8,317.60 vs prior close $7,662.40 (+655.20) · 1 name(s) re-marked at the open (per-name table). HE×910 yday $8.42 → 09:30 $9.14 +655.20 | — |
+| 2026-11-09 09:30 ET | **SELL** | `HE` | 910 | $9.14 | $11.96 | $+740.70 | $8,305.64 | ▲ +740.70 after sell → book $8,305.64; vs 09:30 mark -11.96 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `AAON` | 17 | $58.44 | $2.04 | — | $7,310.12 | — | baseline list, no extra gate; list overnight; ret5=-15.1; leftover $1038.21 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `ABCL` | 87 | $11.90 | $2.25 | — | $6,272.57 | — | baseline list, no extra gate; list overnight; 🔵; ret5=-3.2; leftover $1038.21 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `ACHR` | 230 | $4.51 | $2.97 | — | $5,232.30 | — | baseline list, no extra gate; list overnight; ret5=+5.7; leftover $1038.21 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `AMCX` | 123 | $8.38 | $2.36 | — | $4,199.21 | — | baseline list, no extra gate; list overnight; ret5=+6.3; leftover $1038.21 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `AMRC` | 46 | $22.48 | $2.13 | — | $3,163.00 | — | baseline list, no extra gate; list overnight; 🔵; ret5=+6.4; leftover $1038.21 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `APPS` | 98 | $10.53 | $2.28 | — | $2,128.77 | — | baseline list, no extra gate; list overnight; 🔵; ret5=+17.0; leftover $1038.21 | join🟡 sector🟡 gen🟢 news🟡 digest🔴 judge🔴 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `ASTS` | 31 | $33.48 | $2.08 | — | $1,088.66 | — | baseline list, no extra gate; list overnight; 🔵; ret5=-21.1; leftover $1038.21 | join🔴 sector🟡 gen🟢 news🟡 digest🔴 judge🔴 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `BCSF` | 92 | $11.22 | $2.27 | — | $54.15 | — | baseline list, no extra gate; list overnight; ret5=+3.4; leftover $1038.21 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $54.15 | ▲ close $8,704.37 vs 09:30 $8,317.60 (session +417.11) | 16:00 close · cash $54.15 · equity $8,704.37 vs 09:30 $8,317.60 (+386.77; session marks +417.11) · 8 name(s) marked open→close (per-name table). AAON×17 09:30 $58.44 → close $62.87 +75.31; ABCL×87 09:30 $11.90 → close $12.50 +52.20; ACHR×230 09:30 $4.51 → close $4.81 +69.00; AMCX×123 09:30 $8.38 → close $8.90 +63.96; AMRC×46 09:30 $22.48 → close $22.45 -1.38; APPS×98 09:30 $10.53 → close $11.30 +75.46; ASTS×31 09:30 $33.48 → close $36.89 +105.56; BCSF×92 09:30 $11.22 → close $10.97 -23.00 | — |
 
 ## Not taken
 

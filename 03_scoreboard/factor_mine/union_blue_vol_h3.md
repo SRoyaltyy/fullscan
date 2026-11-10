@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-14.75%** ($8,525) · signal-only (no cash/fees) was -21.78%. Starts YES **2/30**. Fills 268 · skips 248 · realized $-1054.91.
+Cash book **-10.89%** ($8,911) · signal-only (no cash/fees) was -21.78%. Starts YES **2/30**. Fills 272 · skips 248 · realized $-1054.91.
 
 ## How this sleeve decides (like you are 10)
 
@@ -464,6 +464,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-06 09:30 ET | **BUY** | `OUST` | 33 | $31.95 | $2.09 | — | $1,392.21 | — | combo gate; gate blue=True,vol=good; list probable; 🔵; ret5=-5.0; leftover $1060.40 | join🔴 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-11-06 09:30 ET | **BUY** | `CMTG` | 631 | $1.68 | $8.14 | — | $323.99 | — | combo gate; gate blue=True,vol=good; list yday_gainer,yday_mover; 🔵; ret5=+44.9; leftover $1060.40 | join🟢 sector🟡 gen🔴 news🟡 ab🔴 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-11-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $323.99 | ▲ close $8,525.38 vs 09:30 $8,483.22 (session +84.99) | 16:00 close · cash $323.99 · equity $8,525.38 vs 09:30 $8,483.22 (+42.16; session marks +84.99) · 8 name(s) marked open→close (per-name table). APP×2 09:30 $355.95 → close $391.22 +70.54; GPK×93 09:30 $11.30 → close $11.19 -10.23; XMAX×209 09:30 $5.07 → close $5.33 +54.34; STIM×431 09:30 $2.46 → close $2.15 -133.61; GERN×1116 09:30 $0.95 → close $0.99 +44.64; CYH×475 09:30 $2.23 → close $2.21 -9.50; OUST×33 09:30 $31.95 → close $34.80 +94.05; CMTG×631 09:30 $1.68 → close $1.64 -25.24 | — |
+| 2026-11-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $323.99 | ▲ 09:30 equity $8,621.62 vs yday $8,525.38 (+96.24) | 09:30 open · cash $323.99 (unchanged overnight, no fees) · equity $8,621.62 vs prior close $8,525.38 (+96.24) · 8 name(s) re-marked at the open (per-name table). APP×2 yday $391.22 → 09:30 $387.71 -7.02; CMTG×631 yday $1.64 → 09:30 $1.66 +12.62; CYH×475 yday $2.21 → 09:30 $2.25 +19.00; GERN×1116 yday $0.99 → 09:30 $0.99 +0.00; GPK×93 yday $11.19 → 09:30 $11.46 +25.11; OUST×33 yday $34.80 → 09:30 $34.97 +5.77; STIM×431 yday $2.15 → 09:30 $2.23 +34.48; XMAX×209 yday $5.33 → 09:30 $5.36 +6.27 | — |
+| 2026-11-09 09:30 ET | **BUY** | `CLOV` | 8 | $4.88 | $0.41 | — | $284.54 | — | combo gate; gate blue=True,vol=good; list flatten; 🔵; ret5=+8.1; leftover $40.50 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `ZVRA` | 3 | $11.65 | $0.36 | — | $249.23 | — | combo gate; gate blue=True,vol=good; list flatten,ohlc_hot; 🔵; ⚪; ret5=+12.7; leftover $40.50 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `WRBY` | 1 | $25.91 | $0.26 | — | $223.05 | — | combo gate; gate blue=True,vol=good; list probable,yday_gainer; 🔵; ⚪; ret5=+3.5; leftover $40.50 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `ECX` | 50 | $0.80 | $0.55 | — | $182.40 | — | combo gate; gate blue=True,vol=good; list probable,yday_gainer; 🔵; ret5=-10.5; leftover $40.50 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 judge🟢 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-11-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $182.40 | ▲ close $8,910.63 vs 09:30 $8,621.62 (session +290.60) | 16:00 close · cash $182.40 · equity $8,910.63 vs 09:30 $8,621.62 (+289.01; session marks +290.60) · 12 name(s) marked open→close (per-name table). APP×2 09:30 $387.71 → close $410.00 +44.58; CMTG×631 09:30 $1.66 → close $1.72 +37.86; CYH×475 09:30 $2.25 → close $2.26 +4.75; GERN×1116 09:30 $0.99 → close $1.00 +11.16; GPK×93 09:30 $11.46 → close $10.84 -57.66; OUST×33 09:30 $34.97 → close $38.57 +118.80; STIM×431 09:30 $2.23 → close $2.18 -21.55; XMAX×209 09:30 $5.36 → close $6.07 +148.39; CLOV×8 09:30 $4.88 → close $4.83 -0.40; ZVRA×3 09:30 $11.65 → close $12.14 +1.47; WRBY×1 09:30 $25.91 → close $30.21 +4.30; ECX×50 09:30 $0.80 → close $0.78 -1.10 | — |
 
 ## Not taken
 

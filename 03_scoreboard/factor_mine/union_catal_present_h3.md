@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ catal_present, no 🚨
 
-Cash book **-11.49%** ($8,851) · signal-only (no cash/fees) was -22.70%. Starts YES **0/30**. Fills 14 · skips 18 · realized $-156.79.
+Cash book **-9.58%** ($9,042) · signal-only (no cash/fees) was -22.70%. Starts YES **0/30**. Fills 15 · skips 18 · realized $-156.79.
 
 ## How this sleeve decides (like you are 10)
 
@@ -208,6 +208,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,850.74 | ▲ close $8,850.74 vs 09:30 $8,850.74 (session +0.00) | 16:00 close · cash $8,850.74 · no lots left · equity $8,850.74. | — |
 | 2026-11-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,850.74 | ▲ 09:30 equity $8,850.74 vs yday $8,850.74 (+0.00) | 09:30 open · cash $8,850.74 · no holdings · equity $8,850.74 vs prior close $8,850.74 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-11-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,850.74 | ▲ close $8,850.74 vs 09:30 $8,850.74 (session +0.00) | 16:00 close · cash $8,850.74 · no lots left · equity $8,850.74. | — |
+| 2026-11-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,850.74 | ▲ 09:30 equity $8,850.74 vs yday $8,850.74 (+0.00) | 09:30 open · cash $8,850.74 · no holdings · equity $8,850.74 vs prior close $8,850.74 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-09 09:30 ET | **BUY** | `KGS` | 202 | $43.71 | $2.61 | — | $18.71 | — | union ∩ catal_present, no 🚨; gate catal_present=True; list earn_react; 🔵; ret5=-11.1; leftover $8850.74 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🔴 vol🟢 catal🟡 buy🟡 |
+| 2026-11-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $18.71 | ▲ close $9,042.05 vs 09:30 $8,850.74 (session +193.92) | 16:00 close · cash $18.71 · equity $9,042.05 vs 09:30 $8,850.74 (+191.31; session marks +193.92) · 1 name(s) marked open→close (per-name table). KGS×202 09:30 $43.71 → close $44.67 +193.92 | — |
 
 ## Not taken
 

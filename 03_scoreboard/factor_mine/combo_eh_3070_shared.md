@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared union_e_fresh_h3/union_hot_n4_h1 w=0.3,0.7 net=priority
 
-Cash book **+24.16%** ($12,417) · signal-only (no cash/fees) was —. Starts YES **29/30**. Fills 494 · skips 269 · realized $+2681.43.
+Cash book **+25.90%** ($12,590) · signal-only (no cash/fees) was —. Starts YES **29/30**. Fills 505 · skips 269 · realized $+2681.43.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $305.76.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $13.33.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -689,6 +689,19 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-06 09:30 ET | **BUY** | `APP` | 4 | $355.95 | $2.00 | — | $2,054.52 | — | top 4 by hot; rank hot_score; list flatten; 🔵; ret5=+39.7; combo leftover $1736.83; owner union_hot_n4_h1 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-06 09:30 ET | **BUY** | `CMTG` | 1033 | $1.68 | $13.33 | — | $305.76 | — | top 4 by hot; rank hot_score; list yday_gainer,yday_mover; 🔵; ret5=+44.9; combo leftover $1736.83; owner union_hot_n4_h1 | join🟢 sector🟡 gen🔴 news🟡 ab🔴 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-11-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $305.76 | ▲ close $12,416.53 vs 09:30 $12,343.55 (session +125.34) | 16:00 close · cash $305.76 · equity $12,416.53 vs 09:30 $12,343.55 (+72.98; session marks +125.34) · 17 name(s) marked open→close (per-name table). AMC×157 09:30 $3.13 → close $3.14 +1.57; ARHS×44 09:30 $13.00 → close $14.19 +52.36; DNUT×160 09:30 $4.44 → close $4.17 -43.20; EXPE×1 09:30 $272.19 → close $259.24 -12.95; PRMB×26 09:30 $21.74 → close $22.39 +16.90; ENOV×13 09:30 $27.24 → close $27.16 -1.04; WD×9 09:30 $39.02 → close $39.05 +0.27; SSP×121 09:30 $3.00 → close $3.05 +6.05; PLTK×161 09:30 $2.26 → close $2.44 +28.98; GPGI×26 09:30 $13.52 → close $14.21 +17.94; CHTR×3 09:30 $115.74 → close $118.07 +6.99; WEN×46 09:30 $7.85 → close $8.15 +13.80; TPR×2 09:30 $131.35 → close $132.80 +2.90; BUUU×325 09:30 $5.33 → close $5.26 -22.75; CRCT×192 09:30 $9.00 → close $8.78 -42.24; APP×4 09:30 $355.95 → close $391.22 +141.08; CMTG×1033 09:30 $1.68 → close $1.64 -41.32 | — |
+| 2026-11-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $305.76 | ▲ 09:30 equity $12,495.42 vs yday $12,416.53 (+78.89) | 09:30 open · cash $305.76 (unchanged overnight, no fees) · equity $12,495.42 vs prior close $12,416.53 (+78.89) | — |
+| 2026-11-09 09:30 ET | **SELL** | `CMTG` | 1033 | $1.66 | $13.51 | $-47.50 | $2,007.03 | ▼ -47.50 after sell → book $12,481.91; vs 09:30 mark -13.51 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-11-09 09:30 ET | **SELL** | `CRCT` | 192 | $8.82 | $2.61 | $-39.74 | $3,697.86 | ▼ -39.74 after sell → book $12,479.30; vs 09:30 mark -2.61 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-11-09 09:30 ET | **BUY** | `ADCT` | 84 | $1.65 | $1.64 | — | $3,557.62 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; 🔵; ⚪; ret5=+3.3; combo leftover $138.67; owner union_e_fresh_h3 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `AIOT` | 42 | $3.25 | $1.49 | — | $3,419.63 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=-6.9; combo leftover $138.67; owner union_e_fresh_h3 | join🔴 sector🟡 gen🟢 news🟡 digest🔴 judge🔴 ab🔴 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `B` | 3 | $42.30 | $1.28 | — | $3,291.45 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=+9.6; combo leftover $138.67; owner union_e_fresh_h3 | join🟡 sector🟡 gen🟢 news🟡 digest🔴 ab🟢 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `BCAX` | 15 | $8.90 | $1.38 | — | $3,156.57 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; 🔵; ret5=-5.3; combo leftover $138.67; owner union_e_fresh_h3 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `CECO` | 2 | $61.01 | $1.23 | — | $3,033.32 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=-13.4; combo leftover $138.67; owner union_e_fresh_h3 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🟡 vol🟢 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `CEVA` | 6 | $22.73 | $1.38 | — | $2,895.56 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; 🔵; ret5=-8.2; combo leftover $138.67; owner union_e_fresh_h3 | join🔴 sector🟡 gen🟢 news🟡 digest🔴 judge🔴 ab🔴 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `CNH` | 11 | $12.16 | $1.37 | — | $2,760.43 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=-1.7; combo leftover $138.67; owner union_e_fresh_h3 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `AEHL` | 105 | $13.10 | $2.31 | — | $1,382.63 | — | top 4 by hot; rank hot_score; list yday_gainer,yday_mover; 🔵; ret5=+71.0; combo leftover $1380.22; owner union_hot_n4_h1 | join🔴 sector🔴 gen🟢 news🔴 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `XERS` | 89 | $15.36 | $2.26 | — | $13.33 | — | top 4 by hot; rank hot_score; list yday_gainer; 🔵; ⚪; ret5=+41.9; combo leftover $1380.22; owner union_hot_n4_h1 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $13.33 | ▲ close $12,589.99 vs 09:30 $12,495.42 (session +125.02) | 16:00 close · cash $13.33 · equity $12,589.99 vs 09:30 $12,495.42 (+94.57; session marks +125.02) · 24 name(s) marked open→close (per-name table). AMC×157 09:30 $3.19 → close $3.40 +32.97; APP×4 09:30 $387.71 → close $410.00 +89.16; ARHS×44 09:30 $14.41 → close $15.02 +26.62; BUUU×325 09:30 $5.30 → close $4.93 -120.25; CHTR×3 09:30 $119.82 → close $121.20 +4.14; DNUT×160 09:30 $4.12 → close $4.03 -13.60; ENOV×13 09:30 $27.59 → close $28.54 +12.35; EXPE×1 09:30 $263.05 → close $259.16 -3.89; GPGI×26 09:30 $14.44 → close $15.35 +23.66; PLTK×161 09:30 $2.42 → close $2.59 +27.37; PRMB×26 09:30 $22.75 → close $24.13 +35.88; SSP×121 09:30 $3.12 → close $3.56 +53.24; TPR×2 09:30 $135.29 → close $136.07 +1.56; WD×9 09:30 $39.83 → close $41.49 +14.94; WEN×46 09:30 $8.05 → close $8.30 +11.50; ADCT×84 09:30 $1.65 → close $1.67 +1.68; AIOT×42 09:30 $3.25 → close $2.79 -19.32; B×3 09:30 $42.30 → close $42.27 -0.09; BCAX×15 09:30 $8.90 → close $9.98 +16.20; CECO×2 09:30 $61.01 → close $52.00 -18.02; CEVA×6 09:30 $22.73 → close $24.84 +12.66; CNH×11 09:30 $12.16 → close $12.82 +7.26; AEHL×105 09:30 $13.10 → close $12.00 -115.50; XERS×89 09:30 $15.36 → close $15.86 +44.50 | — |
 
 ## Not taken
 

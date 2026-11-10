@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · merged news🟢 and cameras +7 −≤1
 
-Cash book **-22.75%** ($7,726) · signal-only (no cash/fees) was -9.70%. Starts YES **2/30**. Fills 59 · skips 63 · realized $-1714.70.
+Cash book **-19.17%** ($8,083) · signal-only (no cash/fees) was -9.70%. Starts YES **2/30**. Fills 65 · skips 63 · realized $-1714.70.
 
 ## How this sleeve decides (like you are 10)
 
@@ -256,6 +256,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,057.47 | ▲ 09:30 equity $7,057.47 vs yday $7,057.47 (+0.00) | 09:30 open · cash $7,057.47 · no holdings · equity $7,057.47 vs prior close $7,057.47 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-11-06 09:30 ET | **BUY** | `APP` | 19 | $355.95 | $2.05 | — | $292.37 | — | merged news🟢 and cameras +7 −≤1; gate cam_bad_max=1,n_pos_min=7,news=good; rank cond; list flatten; 🔵; ret5=+39.7; leftover $7057.47 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $292.37 | ▲ close $7,725.55 vs 09:30 $7,057.47 (session +670.13) | 16:00 close · cash $292.37 · equity $7,725.55 vs 09:30 $7,057.47 (+668.08; session marks +670.13) · 1 name(s) marked open→close (per-name table). APP×19 09:30 $355.95 → close $391.22 +670.13 | — |
+| 2026-11-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $292.37 | ▼ 09:30 equity $7,658.86 vs yday $7,725.55 (-66.69) | 09:30 open · cash $292.37 (unchanged overnight, no fees) · equity $7,658.86 vs prior close $7,725.55 (-66.69) · 1 name(s) re-marked at the open (per-name table). APP×19 yday $391.22 → 09:30 $387.71 -66.69 | — |
+| 2026-11-09 09:30 ET | **BUY** | `ADMA` | 3 | $12.90 | $0.40 | — | $253.27 | — | merged news🟢 and cameras +7 −≤1; gate cam_bad_max=1,n_pos_min=7,news=good; rank cond; list yday_gainer; 🔵; ⚪; ret5=+11.6; leftover $41.77 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-09 09:30 ET | **BUY** | `COLL` | 1 | $24.41 | $0.25 | — | $228.62 | — | merged news🟢 and cameras +7 −≤1; gate cam_bad_max=1,n_pos_min=7,news=good; rank cond; list probable; 🔵; ⚪; ret5=+1.7; leftover $41.77 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `COTY` | 10 | $4.14 | $0.44 | — | $186.77 | — | merged news🟢 and cameras +7 −≤1; gate cam_bad_max=1,n_pos_min=7,news=good; rank cond; list yday_gainer; 🔵; ⚪; ret5=+19.1; leftover $41.77 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-09 09:30 ET | **BUY** | `ENOV` | 1 | $27.59 | $0.28 | — | $158.90 | — | merged news🟢 and cameras +7 −≤1; gate cam_bad_max=1,n_pos_min=7,news=good; rank cond; list yday_gainer; 🔵; ⚪; ret5=+36.4; leftover $41.77 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `MGNI` | 1 | $27.92 | $0.28 | — | $130.70 | — | merged news🟢 and cameras +7 −≤1; gate cam_bad_max=1,n_pos_min=7,news=good; rank cond; list yday_gainer; 🔵; ⚪; ret5=+27.5; leftover $41.77 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-09 09:30 ET | **BUY** | `PRVA` | 1 | $24.45 | $0.25 | — | $106.00 | — | merged news🟢 and cameras +7 −≤1; gate cam_bad_max=1,n_pos_min=7,news=good; rank cond; list ohlc_hot; 🔵; ⚪; ret5=+13.7; leftover $41.77 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $106.00 | ▲ close $8,083.40 vs 09:30 $7,658.86 (session +426.44) | 16:00 close · cash $106.00 · equity $8,083.40 vs 09:30 $7,658.86 (+424.54; session marks +426.44) · 7 name(s) marked open→close (per-name table). APP×19 09:30 $387.71 → close $410.00 +423.51; ADMA×3 09:30 $12.90 → close $12.79 -0.33; COLL×1 09:30 $24.41 → close $24.71 +0.30; COTY×10 09:30 $4.14 → close $4.22 +0.80; ENOV×1 09:30 $27.59 → close $28.54 +0.95; MGNI×1 09:30 $27.92 → close $29.04 +1.12; PRVA×1 09:30 $24.45 → close $24.54 +0.09 | — |
 
 ## Not taken
 

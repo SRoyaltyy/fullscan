@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · Clock-B #8 flow-in + green + not extended
 
-Cash book **+6.88%** ($10,688) · signal-only (no cash/fees) was -14.71%. Starts YES **10/30**. Fills 38 · skips 8 · realized $-732.31.
+Cash book **+9.25%** ($10,925) · signal-only (no cash/fees) was -14.71%. Starts YES **10/30**. Fills 40 · skips 8 · realized $-732.31.
 
 ## How this sleeve decides (like you are 10)
 
@@ -234,6 +234,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,688.44 | ▲ close $10,688.44 vs 09:30 $10,688.44 (session +0.00) | 16:00 close · cash $10,688.44 · no lots left · equity $10,688.44. | — |
 | 2026-11-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,688.44 | ▲ 09:30 equity $10,688.44 vs yday $10,688.44 (+0.00) | 09:30 open · cash $10,688.44 · no holdings · equity $10,688.44 vs prior close $10,688.44 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-11-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,688.44 | ▲ close $10,688.44 vs 09:30 $10,688.44 (session +0.00) | 16:00 close · cash $10,688.44 · no lots left · equity $10,688.44. | — |
+| 2026-11-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,688.44 | ▲ 09:30 equity $10,688.44 vs yday $10,688.44 (+0.00) | 09:30 open · cash $10,688.44 · no holdings · equity $10,688.44 vs prior close $10,688.44 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-09 09:30 ET | **BUY** | `CERT` | 443 | $12.06 | $5.71 | — | $5,340.15 | — | Clock-B #8 flow-in + green + not extended; gate clk_flow_coil=True; rank cond; list probable; 🔵; ⚪; ret5=+9.3; leftover $5344.22 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `FERG` | 21 | $251.68 | $2.05 | — | $52.81 | — | Clock-B #8 flow-in + green + not extended; gate clk_flow_coil=True; rank cond; list earn_react; ret5=-2.1; leftover $5344.22 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-11-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $52.81 | ▲ close $10,924.80 vs 09:30 $10,688.44 (session +244.13) | 16:00 close · cash $52.81 · equity $10,924.80 vs 09:30 $10,688.44 (+236.36; session marks +244.13) · 2 name(s) marked open→close (per-name table). CERT×443 09:30 $12.06 → close $12.22 +70.88; FERG×21 09:30 $251.68 → close $259.93 +173.25 | — |
 
 ## Not taken
 

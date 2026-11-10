@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `w_hot_candle` · size `leftover` · sell `list` · S-boost `none` · rank by w_hot_candle
 
-Cash book **+19.77%** ($11,977) · signal-only (no cash/fees) was +36.45%. Starts YES **29/30**. Fills 523 · skips 97 · realized $+14.68.
+Cash book **+20.27%** ($12,027) · signal-only (no cash/fees) was +36.45%. Starts YES **29/30**. Fills 535 · skips 97 · realized $+14.68.
 
 ## How this sleeve decides (like you are 10)
 
@@ -716,6 +716,20 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-06 09:30 ET | **BUY** | `GPGI` | 105 | $13.52 | $2.31 | — | $1,781.42 | — | rank by w_hot_candle; rank w_hot_candle; list ohlc_hot; 🔵; ret5=+17.4; leftover $1420.98 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 heat🔴 vol🟡 buy🟡 |
 | 2026-11-06 09:30 ET | **BUY** | `CMG` | 40 | $34.75 | $2.11 | — | $389.31 | — | rank by w_hot_candle; rank w_hot_candle; list ohlc_hot; 🔵; ret5=+13.2; leftover $1420.98 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-11-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $389.31 | ▲ close $11,976.60 vs 09:30 $11,465.81 (session +550.82) | 16:00 close · cash $389.31 · equity $11,976.60 vs 09:30 $11,465.81 (+510.79; session marks +550.82) · 8 name(s) marked open→close (per-name table). MOS×68 09:30 $22.00 → close $22.36 +24.48; BUUU×266 09:30 $5.33 → close $5.26 -18.62; CRCT×157 09:30 $9.00 → close $8.78 -34.54; EVC×204 09:30 $6.94 → close $8.99 +418.20; APP×3 09:30 $355.95 → close $391.22 +105.81; ENOV×52 09:30 $27.24 → close $27.16 -4.16; GPGI×105 09:30 $13.52 → close $14.21 +72.45; CMG×40 09:30 $34.75 → close $34.43 -12.80 | — |
+| 2026-11-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $389.31 | ▲ 09:30 equity $12,046.38 vs yday $11,976.60 (+69.78) | 09:30 open · cash $389.31 (unchanged overnight, no fees) · equity $12,046.38 vs prior close $11,976.60 (+69.78) · 8 name(s) re-marked at the open (per-name table). APP×3 yday $391.22 → 09:30 $387.71 -10.53; BUUU×266 yday $5.26 → 09:30 $5.30 +10.64; CMG×40 yday $34.43 → 09:30 $34.75 +12.80; CRCT×157 yday $8.78 → 09:30 $8.82 +6.28; ENOV×52 yday $27.16 → 09:30 $27.59 +22.36; EVC×204 yday $8.99 → 09:30 $8.95 -8.16; GPGI×105 yday $14.21 → 09:30 $14.44 +24.15; MOS×68 yday $22.36 → 09:30 $22.54 +12.24 | — |
+| 2026-11-09 09:30 ET | **SELL** | `CMG` | 40 | $34.75 | $2.13 | $-4.24 | $1,777.18 | ▼ -4.24 after sell → book $12,044.25; vs 09:30 mark -2.13 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-09 09:30 ET | **SELL** | `CRCT` | 157 | $8.82 | $2.50 | $-33.22 | $3,159.42 | ▼ -33.22 after sell → book $12,041.75; vs 09:30 mark -2.50 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-09 09:30 ET | **SELL** | `ENOV` | 52 | $27.59 | $2.17 | $+13.89 | $4,591.93 | ▲ +13.89 after sell → book $12,039.58; vs 09:30 mark -2.17 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-09 09:30 ET | **SELL** | `EVC` | 204 | $8.95 | $2.68 | $+404.73 | $6,415.05 | ▲ +404.73 after sell → book $12,036.90; vs 09:30 mark -2.68 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-09 09:30 ET | **SELL** | `GPGI` | 105 | $14.44 | $2.33 | $+91.96 | $7,928.92 | ▲ +91.96 after sell → book $12,034.57; vs 09:30 mark -2.33 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-09 09:30 ET | **SELL** | `MOS` | 68 | $22.54 | $2.22 | $+63.25 | $9,459.42 | ▲ +63.25 after sell → book $12,032.35; vs 09:30 mark -2.22 | dropped from list after 2 sess (min 1) | — |
+| 2026-11-09 09:30 ET | **BUY** | `AEHL` | 120 | $13.10 | $2.35 | — | $7,885.07 | — | rank by w_hot_candle; rank w_hot_candle; list yday_gainer,yday_mover; 🔵; ret5=+71.0; leftover $1576.57 | join🔴 sector🔴 gen🟢 news🔴 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `ONT` | 71 | $22.10 | $2.20 | — | $6,313.77 | — | rank by w_hot_candle; rank w_hot_candle; list yday_gainer; 🔵; ret5=+46.9; leftover $1576.57 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 ab🟡 heat🟢 vol🟢 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `XERS` | 102 | $15.36 | $2.30 | — | $4,744.75 | — | rank by w_hot_candle; rank w_hot_candle; list yday_gainer; 🔵; ⚪; ret5=+41.9; leftover $1576.57 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `U` | 30 | $52.15 | $2.08 | — | $3,178.17 | — | rank by w_hot_candle; rank w_hot_candle; list yday_gainer; 🔵; ret5=+36.6; leftover $1576.57 | join🟢 sector🟡 gen🟢 news🟡 digest🔴 judge🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `EVGO` | 861 | $1.83 | $11.11 | — | $1,591.44 | — | rank by w_hot_candle; rank w_hot_candle; list earn_react; 🔵; ret5=+45.2; leftover $1576.57 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 judge🟢 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `PTLO` | 234 | $6.73 | $3.02 | — | $13.60 | — | rank by w_hot_candle; rank w_hot_candle; list yday_gainer,yday_mover; 🔵; ret5=+36.3; leftover $1576.57 | join🟢 sector🔴 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $13.60 | ▲ close $12,026.99 vs 09:30 $12,046.38 (session +17.69) | 16:00 close · cash $13.60 · equity $12,026.99 vs 09:30 $12,046.38 (-19.39; session marks +17.69) · 8 name(s) marked open→close (per-name table). APP×3 09:30 $387.71 → close $410.00 +66.87; BUUU×266 09:30 $5.30 → close $4.93 -98.42; AEHL×120 09:30 $13.10 → close $12.00 -132.00; ONT×71 09:30 $22.10 → close $23.59 +105.79; XERS×102 09:30 $15.36 → close $15.86 +51.00; U×30 09:30 $52.15 → close $51.43 -21.60; EVGO×861 09:30 $1.83 → close $1.84 +8.61; PTLO×234 09:30 $6.73 → close $6.89 +37.44 | — |
 
 ## Not taken
 

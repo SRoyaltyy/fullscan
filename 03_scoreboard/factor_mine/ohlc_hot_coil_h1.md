@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `ohlc_hot` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · hot list ∩ not exploded
 
-Cash book **-32.44%** ($6,756) · signal-only (no cash/fees) was -11.86%. Starts YES **9/30**. Fills 357 · skips 74 · realized $-1849.08.
+Cash book **-31.89%** ($6,811) · signal-only (no cash/fees) was -11.86%. Starts YES **9/30**. Fills 361 · skips 74 · realized $-1849.08.
 
 ## How this sleeve decides (like you are 10)
 
@@ -553,6 +553,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-06 09:30 ET | **BUY** | `FTDR` | 17 | $94.54 | $2.04 | — | $1,716.83 | — | hot list ∩ not exploded; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list ohlc_hot; 🔵; ret5=+9.9; leftover $1660.19 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-06 09:30 ET | **BUY** | `STE` | 6 | $248.03 | $2.01 | — | $226.64 | — | hot list ∩ not exploded; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list ohlc_hot; ret5=+9.5; leftover $1660.19 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟡 heat🟢 vol🟢 buy🟡 |
 | 2026-11-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $226.64 | ▲ close $6,756.46 vs 09:30 $6,743.82 (session +124.22) | 16:00 close · cash $226.64 · equity $6,756.46 vs 09:30 $6,743.82 (+12.64; session marks +124.22) · 4 name(s) marked open→close (per-name table). FER×29 09:30 $56.90 → close $58.71 +52.49; CERT×138 09:30 $12.03 → close $12.05 +2.76; FTDR×17 09:30 $94.54 → close $97.09 +43.35; STE×6 09:30 $248.03 → close $252.30 +25.62 | — |
+| 2026-11-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $226.64 | ▲ 09:30 equity $6,819.90 vs yday $6,756.46 (+63.44) | 09:30 open · cash $226.64 (unchanged overnight, no fees) · equity $6,819.90 vs prior close $6,756.46 (+63.44) · 4 name(s) re-marked at the open (per-name table). CERT×138 yday $12.05 → 09:30 $12.06 +1.38; FER×29 yday $58.71 → 09:30 $60.29 +45.82; FTDR×17 yday $97.09 → 09:30 $97.59 +8.50; STE×6 yday $252.30 → 09:30 $253.59 +7.74 | — |
+| 2026-11-09 09:30 ET | **SELL** | `CERT` | 138 | $12.06 | $2.44 | $-0.70 | $1,888.48 | ▼ -0.70 after sell → book $6,817.46; vs 09:30 mark -2.44 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-09 09:30 ET | **SELL** | `FER` | 29 | $60.29 | $2.10 | $+94.13 | $3,634.79 | ▲ +94.13 after sell → book $6,815.36; vs 09:30 mark -2.10 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-09 09:30 ET | **SELL** | `FTDR` | 17 | $97.59 | $2.06 | $+47.74 | $5,291.75 | ▲ +47.74 after sell → book $6,813.29; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-09 09:30 ET | **SELL** | `STE` | 6 | $253.59 | $2.03 | $+29.32 | $6,811.26 | ▲ +29.32 after sell → book $6,811.26; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,811.26 | ▲ close $6,811.26 vs 09:30 $6,819.90 (session +0.00) | 16:00 close · cash $6,811.26 · no lots left · equity $6,811.26. | — |
 
 ## Not taken
 

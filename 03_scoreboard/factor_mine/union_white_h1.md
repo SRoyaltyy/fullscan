@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ white, no 🚨
 
-Cash book **-6.38%** ($9,362) · signal-only (no cash/fees) was -8.86%. Starts YES **3/30**. Fills 258 · skips 0 · realized $-116.79.
+Cash book **-3.14%** ($9,686) · signal-only (no cash/fees) was -8.86%. Starts YES **3/30**. Fills 266 · skips 0 · realized $-116.79.
 
 ## How this sleeve decides (like you are 10)
 
@@ -452,3 +452,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,361.52 | ▲ close $9,361.52 vs 09:30 $9,361.52 (session +0.00) | 16:00 close · cash $9,361.52 · no lots left · equity $9,361.52. | — |
 | 2026-11-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,361.52 | ▲ 09:30 equity $9,361.52 vs yday $9,361.52 (+0.00) | 09:30 open · cash $9,361.52 · no holdings · equity $9,361.52 vs prior close $9,361.52 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-11-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,361.52 | ▲ close $9,361.52 vs 09:30 $9,361.52 (session +0.00) | 16:00 close · cash $9,361.52 · no lots left · equity $9,361.52. | — |
+| 2026-11-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,361.52 | ▲ 09:30 equity $9,361.52 vs yday $9,361.52 (+0.00) | 09:30 open · cash $9,361.52 · no holdings · equity $9,361.52 vs prior close $9,361.52 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-09 09:30 ET | **BUY** | `ALGN` | 6 | $167.90 | $2.01 | — | $8,352.11 | — | union ∩ white, no 🚨; gate zero_red=True; list flatten; 🔵; ⚪; ret5=+10.7; leftover $1170.19 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `ZVRA` | 100 | $11.65 | $2.29 | — | $7,184.82 | — | union ∩ white, no 🚨; gate zero_red=True; list flatten,ohlc_hot; 🔵; ⚪; ret5=+12.7; leftover $1170.19 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `WRBY` | 45 | $25.91 | $2.12 | — | $6,016.75 | — | union ∩ white, no 🚨; gate zero_red=True; list probable,yday_gainer; 🔵; ⚪; ret5=+3.5; leftover $1170.19 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `CERT` | 97 | $12.06 | $2.28 | — | $4,844.65 | — | union ∩ white, no 🚨; gate zero_red=True; list probable; 🔵; ⚪; ret5=+9.3; leftover $1170.19 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `COLL` | 47 | $24.41 | $2.13 | — | $3,695.25 | — | union ∩ white, no 🚨; gate zero_red=True; list probable; 🔵; ⚪; ret5=+1.7; leftover $1170.19 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `APP` | 3 | $387.71 | $2.00 | — | $2,530.12 | — | union ∩ white, no 🚨; gate zero_red=True; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+71.2; leftover $1170.19 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-09 09:30 ET | **BUY** | `DNUT` | 284 | $4.12 | $3.66 | — | $1,357.79 | — | union ∩ white, no 🚨; gate zero_red=True; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+27.3; leftover $1170.19 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `ADMA` | 90 | $12.90 | $2.26 | — | $194.53 | — | union ∩ white, no 🚨; gate zero_red=True; list yday_gainer; 🔵; ⚪; ret5=+11.6; leftover $1170.19 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $194.53 | ▲ close $9,685.87 vs 09:30 $9,361.52 (session +343.11) | 16:00 close · cash $194.53 · equity $9,685.87 vs 09:30 $9,361.52 (+324.35; session marks +343.11) · 8 name(s) marked open→close (per-name table). ALGN×6 09:30 $167.90 → close $174.26 +38.16; ZVRA×100 09:30 $11.65 → close $12.14 +49.00; WRBY×45 09:30 $25.91 → close $30.21 +193.50; CERT×97 09:30 $12.06 → close $12.22 +15.52; COLL×47 09:30 $24.41 → close $24.71 +14.10; APP×3 09:30 $387.71 → close $410.00 +66.87; DNUT×284 09:30 $4.12 → close $4.03 -24.14; ADMA×90 09:30 $12.90 → close $12.79 -9.90 | — |

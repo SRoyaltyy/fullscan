@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-8.41%** ($9,159) · signal-only (no cash/fees) was -2.67%. Starts YES **12/30**. Fills 301 · skips 272 · realized $-923.90.
+Cash book **-3.34%** ($9,666) · signal-only (no cash/fees) was -2.67%. Starts YES **12/30**. Fills 310 · skips 272 · realized $-923.90.
 
 ## How this sleeve decides (like you are 10)
 
@@ -497,6 +497,17 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2.92 | ▲ close $9,158.62 vs 09:30 $9,096.22 (session +62.41) | 16:00 close · cash $2.92 · equity $9,158.62 vs 09:30 $9,096.22 (+62.41; session marks +62.41) · 1 name(s) marked open→close (per-name table). EGG×1783 09:30 $5.10 → close $5.13 +62.41 | — |
 | 2026-11-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $2.92 | ▲ 09:30 equity $9,158.62 vs yday $9,158.62 (+0.00) | 09:30 open · cash $2.92 (unchanged overnight, no fees) · equity $9,158.62 vs prior close $9,158.62 (+0.00) · 1 name(s) re-marked at the open (per-name table). EGG×1783 yday $5.13 → 09:30 $5.13 +0.00 | — |
 | 2026-11-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2.92 | ▲ close $9,158.62 vs 09:30 $9,158.62 (session +0.00) | 16:00 close · cash $2.92 · equity $9,158.62 vs 09:30 $9,158.62 (+0.00; session marks +0.00) · 1 name(s) marked open→close (per-name table). EGG×1783 09:30 $5.13 → close $5.13 +0.00 | — |
+| 2026-11-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $2.92 | ▲ 09:30 equity $9,451.04 vs yday $9,158.62 (+292.42) | 09:30 open · cash $2.92 (unchanged overnight, no fees) · equity $9,451.04 vs prior close $9,158.62 (+292.42) · 1 name(s) re-marked at the open (per-name table). EGG×1783 yday $5.13 → 09:30 $5.30 +292.41 | — |
+| 2026-11-09 09:30 ET | **SELL** | `EGG` | 1783 | $5.30 | $23.37 | $+486.74 | $9,427.66 | ▲ +486.74 after sell → book $9,427.66; vs 09:30 mark -23.38 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-09 09:30 ET | **BUY** | `ALGN` | 7 | $167.90 | $2.01 | — | $8,250.35 | — | combo gate; gate last_green=True,vol=good; list flatten; 🔵; ⚪; ret5=+10.7; leftover $1178.46 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `TMDX` | 13 | $88.00 | $2.03 | — | $7,104.32 | — | combo gate; gate last_green=True,vol=good; list flatten; 🔵; ret5=+33.7; leftover $1178.46 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `CLOV` | 241 | $4.88 | $3.11 | — | $5,925.14 | — | combo gate; gate last_green=True,vol=good; list flatten; 🔵; ret5=+8.1; leftover $1178.46 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `ZVRA` | 101 | $11.65 | $2.29 | — | $4,746.19 | — | combo gate; gate last_green=True,vol=good; list flatten,ohlc_hot; 🔵; ⚪; ret5=+12.7; leftover $1178.46 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `VRSK` | 5 | $204.66 | $2.00 | — | $3,720.89 | — | combo gate; gate last_green=True,vol=good; list probable; ret5=+4.2; leftover $1178.46 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `COLL` | 48 | $24.41 | $2.13 | — | $2,547.07 | — | combo gate; gate last_green=True,vol=good; list probable; 🔵; ⚪; ret5=+1.7; leftover $1178.46 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `APP` | 3 | $387.71 | $2.00 | — | $1,381.94 | — | combo gate; gate last_green=True,vol=good; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+71.2; leftover $1178.46 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-09 09:30 ET | **BUY** | `XERS` | 76 | $15.36 | $2.22 | — | $212.37 | — | combo gate; gate last_green=True,vol=good; list yday_gainer; 🔵; ⚪; ret5=+41.9; leftover $1178.46 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $212.37 | ▲ close $9,666.07 vs 09:30 $9,451.04 (session +256.20) | 16:00 close · cash $212.37 · equity $9,666.07 vs 09:30 $9,451.04 (+215.03; session marks +256.20) · 8 name(s) marked open→close (per-name table). ALGN×7 09:30 $167.90 → close $174.26 +44.52; TMDX×13 09:30 $88.00 → close $93.79 +75.27; CLOV×241 09:30 $4.88 → close $4.83 -12.05; ZVRA×101 09:30 $11.65 → close $12.14 +49.49; VRSK×5 09:30 $204.66 → close $200.60 -20.30; COLL×48 09:30 $24.41 → close $24.71 +14.40; APP×3 09:30 $387.71 → close $410.00 +66.87; XERS×76 09:30 $15.36 → close $15.86 +38.00 | — |
 
 ## Not taken
 

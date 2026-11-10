@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 4 · rank `list` · size `leftover` · sell `list` · S-boost `none` · −0 red + yday up AND catalyst, top 4 by Score
 
-Cash book **-5.61%** ($9,439) · signal-only (no cash/fees) was +6.63%. Starts YES **7/30**. Fills 98 · skips 0 · realized $+1337.35.
+Cash book **+3.08%** ($10,308) · signal-only (no cash/fees) was +6.63%. Starts YES **7/30**. Fills 99 · skips 0 · realized $+1337.35.
 
 ## How this sleeve decides (like you are 10)
 
@@ -294,3 +294,6 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,438.99 | ▲ close $9,438.99 vs 09:30 $9,438.99 (session +0.00) | 16:00 close · cash $9,438.99 · no lots left · equity $9,438.99. | — |
 | 2026-11-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,438.99 | ▲ 09:30 equity $9,438.99 vs yday $9,438.99 (+0.00) | 09:30 open · cash $9,438.99 · no holdings · equity $9,438.99 vs prior close $9,438.99 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-11-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,438.99 | ▲ close $9,438.99 vs 09:30 $9,438.99 (session +0.00) | 16:00 close · cash $9,438.99 · no lots left · equity $9,438.99. | — |
+| 2026-11-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,438.99 | ▲ 09:30 equity $9,438.99 vs yday $9,438.99 (+0.00) | 09:30 open · cash $9,438.99 · no holdings · equity $9,438.99 vs prior close $9,438.99 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-09 09:30 ET | **BUY** | `TGTX` | 162 | $58.00 | $2.48 | — | $40.51 | — | −0 red + yday up AND catalyst, top 4 by Score; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list earn_react; 🔵; ⚪; ret5=-2.2; leftover $9438.99 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $40.51 | ▲ close $10,308.07 vs 09:30 $9,438.99 (session +871.56) | 16:00 close · cash $40.51 · equity $10,308.07 vs 09:30 $9,438.99 (+869.08; session marks +871.56) · 1 name(s) marked open→close (per-name table). TGTX×162 09:30 $58.00 → close $63.38 +871.56 | — |

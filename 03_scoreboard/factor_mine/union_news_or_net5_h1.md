@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · packet🟢 OR headline🟢 and camera net ≥ 5
 
-Cash book **-22.94%** ($7,706) · signal-only (no cash/fees) was -10.75%. Starts YES **1/30**. Fills 143 · skips 18 · realized $-1136.92.
+Cash book **-20.44%** ($7,956) · signal-only (no cash/fees) was -10.75%. Starts YES **1/30**. Fills 152 · skips 18 · realized $-1136.92.
 
 ## How this sleeve decides (like you are 10)
 
@@ -339,6 +339,17 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-06 09:30 ET | **BUY** | `LIVN` | 27 | $90.08 | $2.07 | — | $2,836.67 | — | packet🟢 OR headline🟢 and camera net ≥ 5; gate cam_net_min=5,news_or_headline=True; rank cond; list yday_gainer; 🔵; ret5=+12.2; leftover $2469.58 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-06 09:30 ET | **BUY** | `MNST` | 56 | $44.04 | $2.16 | — | $368.27 | — | packet🟢 OR headline🟢 and camera net ≥ 5; gate cam_net_min=5,news_or_headline=True; rank cond; list earn_react; 🔵; ret5=+3.2; leftover $2469.58 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-11-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $368.27 | ▲ close $7,705.64 vs 09:30 $7,408.74 (session +303.14) | 16:00 close · cash $368.27 · equity $7,705.64 vs 09:30 $7,408.74 (+296.90; session marks +303.14) · 3 name(s) marked open→close (per-name table). APP×6 09:30 $355.95 → close $391.22 +211.62; LIVN×27 09:30 $90.08 → close $89.99 -2.56; MNST×56 09:30 $44.04 → close $45.72 +94.08 | — |
+| 2026-11-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $368.27 | ▲ 09:30 equity $7,738.82 vs yday $7,705.64 (+33.18) | 09:30 open · cash $368.27 (unchanged overnight, no fees) · equity $7,738.82 vs prior close $7,705.64 (+33.18) · 3 name(s) re-marked at the open (per-name table). APP×6 yday $391.22 → 09:30 $387.71 -21.06; LIVN×27 yday $89.99 → 09:30 $92.31 +62.64; MNST×56 yday $45.72 → 09:30 $45.57 -8.40 | — |
+| 2026-11-09 09:30 ET | **SELL** | `LIVN` | 27 | $92.31 | $2.10 | $+55.90 | $2,858.54 | ▲ +55.90 after sell → book $7,736.72; vs 09:30 mark -2.10 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-09 09:30 ET | **SELL** | `MNST` | 56 | $45.57 | $2.19 | $+81.33 | $5,408.27 | ▲ +81.33 after sell → book $7,734.53; vs 09:30 mark -2.19 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-09 09:30 ET | **BUY** | `ADMA` | 59 | $12.90 | $2.17 | — | $4,645.00 | — | packet🟢 OR headline🟢 and camera net ≥ 5; gate cam_net_min=5,news_or_headline=True; rank cond; list yday_gainer; 🔵; ⚪; ret5=+11.6; leftover $772.61 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-09 09:30 ET | **BUY** | `ALGN` | 4 | $167.90 | $2.00 | — | $3,971.40 | — | packet🟢 OR headline🟢 and camera net ≥ 5; gate cam_net_min=5,news_or_headline=True; rank cond; list flatten; 🔵; ⚪; ret5=+10.7; leftover $772.61 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `COLL` | 31 | $24.41 | $2.08 | — | $3,212.61 | — | packet🟢 OR headline🟢 and camera net ≥ 5; gate cam_net_min=5,news_or_headline=True; rank cond; list probable; 🔵; ⚪; ret5=+1.7; leftover $772.61 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `COTY` | 186 | $4.14 | $2.55 | — | $2,440.02 | — | packet🟢 OR headline🟢 and camera net ≥ 5; gate cam_net_min=5,news_or_headline=True; rank cond; list yday_gainer; 🔵; ⚪; ret5=+19.1; leftover $772.61 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-09 09:30 ET | **BUY** | `ENOV` | 28 | $27.59 | $2.07 | — | $1,665.43 | — | packet🟢 OR headline🟢 and camera net ≥ 5; gate cam_net_min=5,news_or_headline=True; rank cond; list yday_gainer; 🔵; ⚪; ret5=+36.4; leftover $772.61 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `MGNI` | 27 | $27.92 | $2.07 | — | $909.52 | — | packet🟢 OR headline🟢 and camera net ≥ 5; gate cam_net_min=5,news_or_headline=True; rank cond; list yday_gainer; 🔵; ⚪; ret5=+27.5; leftover $772.61 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-09 09:30 ET | **BUY** | `PRVA` | 31 | $24.45 | $2.08 | — | $149.48 | — | packet🟢 OR headline🟢 and camera net ≥ 5; gate cam_net_min=5,news_or_headline=True; rank cond; list ohlc_hot; 🔵; ⚪; ret5=+13.7; leftover $772.61 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $149.48 | ▲ close $7,956.00 vs 09:30 $7,738.82 (session +236.50) | 16:00 close · cash $149.48 · equity $7,956.00 vs 09:30 $7,738.82 (+217.18; session marks +236.50) · 8 name(s) marked open→close (per-name table). APP×6 09:30 $387.71 → close $410.00 +133.74; ADMA×59 09:30 $12.90 → close $12.79 -6.49; ALGN×4 09:30 $167.90 → close $174.26 +25.44; COLL×31 09:30 $24.41 → close $24.71 +9.30; COTY×186 09:30 $4.14 → close $4.22 +14.88; ENOV×28 09:30 $27.59 → close $28.54 +26.60; MGNI×27 09:30 $27.92 → close $29.04 +30.24; PRVA×31 09:30 $24.45 → close $24.54 +2.79 | — |
 
 ## Not taken
 

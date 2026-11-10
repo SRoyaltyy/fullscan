@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · packet🟢 and camera net ≥ 2
 
-Cash book **-0.27%** ($9,973) · signal-only (no cash/fees) was -9.47%. Starts YES **16/30**. Fills 72 · skips 82 · realized $-1172.71.
+Cash book **+1.30%** ($10,130) · signal-only (no cash/fees) was -9.47%. Starts YES **16/30**. Fills 73 · skips 82 · realized $-1172.71.
 
 ## How this sleeve decides (like you are 10)
 
@@ -268,6 +268,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-06 09:30 ET | **BUY** | `SPG` | 8 | $222.28 | $2.01 | — | $2,303.71 | — | packet🟢 and camera net ≥ 2; gate cam_net_min=2,news_box=good; rank cond; list earn_react; 🔵; ret5=+5.0; leftover $1935.01 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
 | 2026-11-06 09:30 ET | **BUY** | `EOG` | 13 | $145.47 | $2.03 | — | $410.57 | — | packet🟢 and camera net ≥ 2; gate cam_net_min=2,news_box=good; rank cond; list earn_react; 🔵; ret5=-10.7; leftover $1935.01 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-11-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $410.57 | ▲ close $9,972.58 vs 09:30 $9,675.03 (session +307.74) | 16:00 close · cash $410.57 · equity $9,972.58 vs 09:30 $9,675.03 (+297.55; session marks +307.74) · 5 name(s) marked open→close (per-name table). APP×5 09:30 $355.95 → close $391.22 +176.35; MNST×43 09:30 $44.04 → close $45.72 +72.24; ABNB×10 09:30 $191.15 → close $189.99 -11.55; SPG×8 09:30 $222.28 → close $228.42 +49.12; EOG×13 09:30 $145.47 → close $147.13 +21.58 | — |
+| 2026-11-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $410.57 | ▼ 09:30 equity $9,971.04 vs yday $9,972.58 (-1.54) | 09:30 open · cash $410.57 (unchanged overnight, no fees) · equity $9,971.04 vs prior close $9,972.58 (-1.54) · 5 name(s) re-marked at the open (per-name table). ABNB×10 yday $189.99 → 09:30 $192.72 +27.30; APP×5 yday $391.22 → 09:30 $387.71 -17.55; EOG×13 yday $147.13 → 09:30 $145.17 -25.48; MNST×43 yday $45.72 → 09:30 $45.57 -6.45; SPG×8 yday $228.42 → 09:30 $231.00 +20.64 | — |
+| 2026-11-09 09:30 ET | **BUY** | `ALGN` | 2 | $167.90 | $2.00 | — | $72.77 | — | packet🟢 and camera net ≥ 2; gate cam_net_min=2,news_box=good; rank cond; list flatten; 🔵; ⚪; ret5=+10.7; leftover $410.57 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $72.77 | ▲ close $10,130.38 vs 09:30 $9,971.04 (session +161.34) | 16:00 close · cash $72.77 · equity $10,130.38 vs 09:30 $9,971.04 (+159.34; session marks +161.34) · 6 name(s) marked open→close (per-name table). ABNB×10 09:30 $192.72 → close $190.29 -24.30; APP×5 09:30 $387.71 → close $410.00 +111.45; EOG×13 09:30 $145.17 → close $148.43 +42.38; MNST×43 09:30 $45.57 → close $45.64 +3.01; SPG×8 09:30 $231.00 → close $233.01 +16.08; ALGN×2 09:30 $167.90 → close $174.26 +12.72 | — |
 
 ## Not taken
 

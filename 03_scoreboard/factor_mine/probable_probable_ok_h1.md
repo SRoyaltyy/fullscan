@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `probable` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-21.30%** ($7,870) · signal-only (no cash/fees) was -9.22%. Starts YES **0/30**. Fills 330 · skips 53 · realized $-864.75.
+Cash book **-21.20%** ($7,881) · signal-only (no cash/fees) was -9.22%. Starts YES **0/30**. Fills 333 · skips 53 · realized $-864.75.
 
 ## How this sleeve decides (like you are 10)
 
@@ -526,6 +526,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,869.56 | ▲ close $7,869.56 vs 09:30 $7,874.39 (session +0.00) | 16:00 close · cash $7,869.56 · no lots left · equity $7,869.56. | — |
 | 2026-11-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,869.56 | ▲ 09:30 equity $7,869.56 vs yday $7,869.56 (+0.00) | 09:30 open · cash $7,869.56 · no holdings · equity $7,869.56 vs prior close $7,869.56 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-11-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,869.56 | ▲ close $7,869.56 vs 09:30 $7,869.56 (session +0.00) | 16:00 close · cash $7,869.56 · no lots left · equity $7,869.56. | — |
+| 2026-11-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,869.56 | ▲ 09:30 equity $7,869.56 vs yday $7,869.56 (+0.00) | 09:30 open · cash $7,869.56 · no holdings · equity $7,869.56 vs prior close $7,869.56 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-09 09:30 ET | **BUY** | `CERT` | 217 | $12.06 | $2.80 | — | $5,249.74 | — | combo gate; gate last_green=True,ret_5_max=10.0; list probable; 🔵; ⚪; ret5=+9.3; leftover $2623.19 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `VRSK` | 12 | $204.66 | $2.03 | — | $2,791.79 | — | combo gate; gate last_green=True,ret_5_max=10.0; list probable; ret5=+4.2; leftover $2623.19 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `COLL` | 107 | $24.41 | $2.31 | — | $177.61 | — | combo gate; gate last_green=True,ret_5_max=10.0; list probable; 🔵; ⚪; ret5=+1.7; leftover $2623.19 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $177.61 | ▲ close $7,880.52 vs 09:30 $7,869.56 (session +18.10) | 16:00 close · cash $177.61 · equity $7,880.52 vs 09:30 $7,869.56 (+10.96; session marks +18.10) · 3 name(s) marked open→close (per-name table). CERT×217 09:30 $12.06 → close $12.22 +34.72; VRSK×12 09:30 $204.66 → close $200.60 -48.72; COLL×107 09:30 $24.41 → close $24.71 +32.10 | — |
 
 ## Not taken
 

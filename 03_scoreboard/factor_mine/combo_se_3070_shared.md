@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared short_news_r_h3/union_e_fresh_h3 w=0.3,0.7 net=priority
 
-Cash book **-5.91%** ($9,409) · signal-only (no cash/fees) was —. Starts YES **25/30**. Fills 395 · skips 324 · realized $+3855.15.
+Cash book **-1.65%** ($9,835) · signal-only (no cash/fees) was —. Starts YES **25/30**. Fills 396 · skips 324 · realized $+3855.15.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $145.76.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $-4,449.75.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -590,6 +590,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-06 09:30 ET | **SHORT** | `ANGI` | 2 | $7.20 | $0.17 | — | $132.83 | — | news🔴; gate news=bad; list yday_gainer; 🔵; ret5=+21.6; combo leftover $14.82; owner short_news_r_h3 | join🟢 sector🟡 gen🔴 news🔴 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-06 09:30 ET | **SHORT** | `GSM` | 5 | $2.62 | $0.17 | — | $145.76 | — | news🔴; gate news=bad; list yday_mover; 🔵; ret5=-36.9; combo leftover $14.82; owner short_news_r_h3 | join🔴 sector🟡 gen🔴 news🔴 digest🟢 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
 | 2026-11-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $145.76 | ▲ close $9,409.05 vs 09:30 $9,311.51 (session +98.22) | 16:00 close · cash $145.76 · equity $9,409.05 vs 09:30 $9,311.51 (+97.54; session marks +98.22) · 11 name(s) marked open→close (per-name table). AMC×757 09:30 $3.13 → close $3.14 +7.57; ARHS×214 09:30 $13.00 → close $14.19 +254.66; DNUT×767 09:30 $4.44 → close $4.17 -207.09; EXPE×9 09:30 $272.19 → close $259.24 -116.55; HRB×86 09:30 $53.56 → close $52.69 +74.82; PRMB×127 09:30 $21.74 → close $22.39 +82.55; SSP×4 09:30 $3.00 → close $3.05 +0.20; PLTK×5 09:30 $2.26 → close $2.44 +0.90; WEN×1 09:30 $7.85 → close $8.15 +0.30; ANGI×2 09:30 $7.20 → close $6.92 +0.56; GSM×5 09:30 $2.62 → close $2.56 +0.30 | — |
+| 2026-11-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $145.76 | ▲ 09:30 equity $9,470.68 vs yday $9,409.05 (+61.64) | 09:30 open · cash $145.76 (unchanged overnight, no fees) · equity $9,470.68 vs prior close $9,409.05 (+61.64) | — |
+| 2026-11-09 09:30 ET | **COVER** | `HRB` | 86 | $53.41 | $2.25 | $+2.21 | $-4,449.75 | ▲ +2.21 after sell → book $9,468.44; vs 09:30 mark -2.24 | short_news_r_h3: dropped from list after 3 sess (min 3) | join🟢 sector🔴 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $-4,449.75 | ▲ close $9,835.25 vs 09:30 $9,470.68 (session +366.82) | 16:00 close · cash $-4,449.75 · equity $9,835.25 vs 09:30 $9,470.68 (+364.57; session marks +366.82) · 10 name(s) marked open→close (per-name table). AMC×757 09:30 $3.19 → close $3.40 +158.97; ANGI×2 09:30 $6.92 → close $6.69 +0.46; ARHS×214 09:30 $14.41 → close $15.02 +129.47; DNUT×767 09:30 $4.12 → close $4.03 -65.19; EXPE×9 09:30 $263.05 → close $259.16 -35.01; GSM×5 09:30 $2.63 → close $2.63 -0.00; PLTK×5 09:30 $2.42 → close $2.59 +0.85; PRMB×127 09:30 $22.75 → close $24.13 +175.26; SSP×4 09:30 $3.12 → close $3.56 +1.76; WEN×1 09:30 $8.05 → close $8.30 +0.25 | — |
 
 ## Not taken
 

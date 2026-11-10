@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared union_join_vol_green_h1/flatten_h5 w=0.5,0.5 net=priority
 
-Cash book **-14.31%** ($8,569) · signal-only (no cash/fees) was —. Starts YES **2/30**. Fills 551 · skips 364 · realized $+311.24.
+Cash book **-12.70%** ($8,730) · signal-only (no cash/fees) was —. Starts YES **2/30**. Fills 552 · skips 364 · realized $+311.24.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $90.20.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $85.27.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -746,6 +746,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-06 09:30 ET | **BUY** | `MGNI` | 3 | $27.25 | $0.83 | — | $174.77 | — | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ret5=+22.7; combo leftover $85.78; owner flatten_h5 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
 | 2026-11-06 09:30 ET | **BUY** | `CPRI` | 4 | $20.93 | $0.85 | — | $90.20 | — | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ret5=+31.6; combo leftover $85.78; owner flatten_h5 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
 | 2026-11-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $90.20 | ▲ close $8,569.00 vs 09:30 $8,506.41 (session +64.27) | 16:00 close · cash $90.20 · equity $8,569.00 vs 09:30 $8,506.41 (+62.59; session marks +64.27) · 15 name(s) marked open→close (per-name table). CDNA×12 09:30 $77.88 → close $78.56 +8.22; CLX×2 09:30 $96.74 → close $99.96 +6.44; CMCSA×10 09:30 $24.21 → close $24.39 +1.80; COCO×3 09:30 $62.29 → close $62.45 +0.48; CON×27 09:30 $41.60 → close $42.22 +16.74; CROX×1 09:30 $150.37 → close $151.86 +1.49; CSGP×7 09:30 $30.80 → close $30.55 -1.75; GPK×22 09:30 $11.30 → close $11.19 -2.42; ILMN×4 09:30 $208.52 → close $213.13 +18.44; PACS×22 09:30 $50.94 → close $49.60 -29.48; PCRX×30 09:30 $36.42 → close $36.43 +0.30; RGEN×6 09:30 $169.35 → close $173.49 +24.84; VEEV×3 09:30 $296.96 → close $303.73 +20.31; MGNI×3 09:30 $27.25 → close $27.39 +0.42; CPRI×4 09:30 $20.93 → close $20.54 -1.56 | — |
+| 2026-11-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $90.20 | ▲ 09:30 equity $8,643.91 vs yday $8,569.00 (+74.91) | 09:30 open · cash $90.20 (unchanged overnight, no fees) · equity $8,643.91 vs prior close $8,569.00 (+74.91) | — |
+| 2026-11-09 09:30 ET | **BUY** | `CLOV` | 1 | $4.88 | $0.05 | — | $85.27 | — | combo gate; gate join=good,last_green=True,vol=good; list flatten; 🔵; ret5=+8.1; combo leftover $5.64; owner union_join_vol_green_h1 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-11-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $85.27 | ▲ close $8,730.30 vs 09:30 $8,643.91 (session +86.44) | 16:00 close · cash $85.27 · equity $8,730.30 vs 09:30 $8,643.91 (+86.39; session marks +86.44) · 16 name(s) marked open→close (per-name table). CDNA×12 09:30 $80.26 → close $84.42 +49.92; CLX×2 09:30 $100.49 → close $105.53 +10.08; CMCSA×10 09:30 $24.16 → close $24.51 +3.50; COCO×3 09:30 $62.62 → close $64.49 +5.61; CON×27 09:30 $42.60 → close $42.40 -5.53; CPRI×4 09:30 $20.84 → close $21.38 +2.16; CROX×1 09:30 $155.54 → close $160.23 +4.69; CSGP×7 09:30 $30.63 → close $31.24 +4.27; GPK×22 09:30 $11.46 → close $10.84 -13.64; ILMN×4 09:30 $216.98 → close $220.78 +15.20; MGNI×3 09:30 $27.92 → close $29.04 +3.36; PACS×22 09:30 $50.09 → close $48.77 -29.04; PCRX×30 09:30 $36.44 → close $36.46 +0.60; RGEN×6 09:30 $174.29 → close $178.94 +27.90; VEEV×3 09:30 $303.93 → close $306.40 +7.41; CLOV×1 09:30 $4.88 → close $4.83 -0.05 | — |
 
 ## Not taken
 

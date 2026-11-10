@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · rank by cond
 
-Cash book **-11.21%** ($8,879) · signal-only (no cash/fees) was -4.88%. Starts YES **0/30**. Fills 528 · skips 105 · realized $-723.91.
+Cash book **-8.43%** ($9,157) · signal-only (no cash/fees) was -4.88%. Starts YES **0/30**. Fills 542 · skips 105 · realized $-723.91.
 
 ## How this sleeve decides (like you are 10)
 
@@ -721,6 +721,22 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-06 09:30 ET | **BUY** | `LIVN` | 12 | $90.08 | $2.03 | — | $1,246.46 | — | rank by cond; rank cond; list yday_gainer; 🔵; ret5=+12.2; leftover $1102.40 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-06 09:30 ET | **BUY** | `MNST` | 25 | $44.04 | $2.06 | — | $143.39 | — | rank by cond; rank cond; list earn_react; 🔵; ret5=+3.2; leftover $1102.40 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-11-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $143.39 | ▲ close $8,878.71 vs 09:30 $8,838.02 (session +76.64) | 16:00 close · cash $143.39 · equity $8,878.71 vs 09:30 $8,838.02 (+40.69; session marks +76.64) · 8 name(s) marked open→close (per-name table). APP×3 09:30 $355.95 → close $391.22 +105.81; GPK×97 09:30 $11.30 → close $11.19 -10.67; YELP×59 09:30 $18.50 → close $19.46 +56.64; ANGI×153 09:30 $7.20 → close $6.92 -42.84; CARG×29 09:30 $37.23 → close $33.74 -101.21; FTDR×11 09:30 $94.54 → close $97.09 +28.05; LIVN×12 09:30 $90.08 → close $89.99 -1.14; MNST×25 09:30 $44.04 → close $45.72 +42.00 | — |
+| 2026-11-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $143.39 | ▲ 09:30 equity $8,946.37 vs yday $8,878.71 (+67.66) | 09:30 open · cash $143.39 (unchanged overnight, no fees) · equity $8,946.37 vs prior close $8,878.71 (+67.66) · 8 name(s) re-marked at the open (per-name table). ANGI×153 yday $6.92 → 09:30 $6.92 +0.00; APP×3 yday $391.22 → 09:30 $387.71 -10.53; CARG×29 yday $33.74 → 09:30 $34.35 +17.69; FTDR×11 yday $97.09 → 09:30 $97.59 +5.50; GPK×97 yday $11.19 → 09:30 $11.46 +26.19; LIVN×12 yday $89.99 → 09:30 $92.31 +27.84; MNST×25 yday $45.72 → 09:30 $45.57 -3.75; YELP×59 yday $19.46 → 09:30 $19.54 +4.72 | — |
+| 2026-11-09 09:30 ET | **SELL** | `ANGI` | 153 | $6.92 | $2.48 | $-47.77 | $1,199.67 | ▼ -47.77 after sell → book $8,943.89; vs 09:30 mark -2.48 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-09 09:30 ET | **SELL** | `CARG` | 29 | $34.35 | $2.10 | $-87.69 | $2,193.72 | ▼ -87.69 after sell → book $8,941.79; vs 09:30 mark -2.10 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-09 09:30 ET | **SELL** | `FTDR` | 11 | $97.59 | $2.04 | $+29.48 | $3,265.17 | ▲ +29.48 after sell → book $8,939.75; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-09 09:30 ET | **SELL** | `GPK` | 97 | $11.46 | $2.31 | $+10.93 | $4,374.48 | ▲ +10.93 after sell → book $8,937.44; vs 09:30 mark -2.31 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-09 09:30 ET | **SELL** | `LIVN` | 12 | $92.31 | $2.05 | $+22.63 | $5,480.15 | ▲ +22.63 after sell → book $8,935.39; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-09 09:30 ET | **SELL** | `MNST` | 25 | $45.57 | $2.08 | $+34.10 | $6,617.32 | ▲ +34.10 after sell → book $8,933.31; vs 09:30 mark -2.08 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-09 09:30 ET | **SELL** | `YELP` | 59 | $19.54 | $2.19 | $+57.01 | $7,767.99 | ▲ +57.01 after sell → book $8,931.12; vs 09:30 mark -2.19 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-09 09:30 ET | **BUY** | `ADMA` | 86 | $12.90 | $2.25 | — | $6,656.34 | — | rank by cond; rank cond; list yday_gainer; 🔵; ⚪; ret5=+11.6; leftover $1109.71 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-09 09:30 ET | **BUY** | `ALGN` | 6 | $167.90 | $2.01 | — | $5,646.93 | — | rank by cond; rank cond; list flatten; 🔵; ⚪; ret5=+10.7; leftover $1109.71 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `PGNY` | 31 | $34.99 | $2.08 | — | $4,560.16 | — | rank by cond; rank cond; list yday_gainer; 🔵; ⚪; ret5=+19.4; leftover $1109.71 | join🟢 sector🟡 gen🟢 news🔴 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-09 09:30 ET | **BUY** | `COLL` | 45 | $24.41 | $2.12 | — | $3,459.59 | — | rank by cond; rank cond; list probable; 🔵; ⚪; ret5=+1.7; leftover $1109.71 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `COTY` | 268 | $4.14 | $3.46 | — | $2,346.61 | — | rank by cond; rank cond; list yday_gainer; 🔵; ⚪; ret5=+19.1; leftover $1109.71 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-09 09:30 ET | **BUY** | `ENOV` | 40 | $27.59 | $2.11 | — | $1,240.90 | — | rank by cond; rank cond; list yday_gainer; 🔵; ⚪; ret5=+36.4; leftover $1109.71 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `MGNI` | 39 | $27.92 | $2.11 | — | $149.91 | — | rank by cond; rank cond; list yday_gainer; 🔵; ⚪; ret5=+27.5; leftover $1109.71 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $149.91 | ▲ close $9,156.93 vs 09:30 $8,946.37 (session +241.95) | 16:00 close · cash $149.91 · equity $9,156.93 vs 09:30 $8,946.37 (+210.56; session marks +241.95) · 8 name(s) marked open→close (per-name table). APP×3 09:30 $387.71 → close $410.00 +66.87; ADMA×86 09:30 $12.90 → close $12.79 -9.46; ALGN×6 09:30 $167.90 → close $174.26 +38.16; PGNY×31 09:30 $34.99 → close $35.95 +29.76; COLL×45 09:30 $24.41 → close $24.71 +13.50; COTY×268 09:30 $4.14 → close $4.22 +21.44; ENOV×40 09:30 $27.59 → close $28.54 +38.00; MGNI×39 09:30 $27.92 → close $29.04 +43.68 | — |
 
 ## Not taken
 

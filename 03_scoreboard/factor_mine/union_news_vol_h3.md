@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-42.74%** ($5,726) · signal-only (no cash/fees) was +139.18%. Starts YES **0/30**. Fills 120 · skips 133 · realized $-1334.78.
+Cash book **-41.96%** ($5,804) · signal-only (no cash/fees) was +139.18%. Starts YES **0/30**. Fills 125 · skips 133 · realized $-1334.78.
 
 ## How this sleeve decides (like you are 10)
 
@@ -316,6 +316,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-06 09:30 ET | **BUY** | `LIVN` | 7 | $90.08 | $2.01 | — | $1,202.41 | — | combo gate; gate news=good,vol=good; list yday_gainer; 🔵; ret5=+12.2; leftover $711.36 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-06 09:30 ET | **BUY** | `AHCO` | 97 | $7.27 | $2.28 | — | $494.94 | — | combo gate; gate news=good,vol=good; list yday_gainer; 🔵; ret5=+25.0; leftover $711.36 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $494.94 | ▲ close $5,725.52 vs 09:30 $5,690.85 (session +51.66) | 16:00 close · cash $494.94 · equity $5,725.52 vs 09:30 $5,690.85 (+34.67; session marks +51.66) · 8 name(s) marked open→close (per-name table). APP×1 09:30 $355.95 → close $391.22 +35.27; CRCT×79 09:30 $9.00 → close $8.78 -17.38; KD×44 09:30 $15.83 → close $16.29 +20.24; OPRT×61 09:30 $11.60 → close $11.31 -17.69; ALIT×56 09:30 $12.61 → close $12.86 +14.00; PCOR×9 09:30 $73.99 → close $75.33 +12.06; LIVN×7 09:30 $90.08 → close $89.99 -0.66; AHCO×97 09:30 $7.27 → close $7.33 +5.82 | — |
+| 2026-11-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $494.94 | ▲ 09:30 equity $5,738.46 vs yday $5,725.52 (+12.94) | 09:30 open · cash $494.94 (unchanged overnight, no fees) · equity $5,738.46 vs prior close $5,725.52 (+12.94) · 8 name(s) re-marked at the open (per-name table). AHCO×97 yday $7.33 → 09:30 $7.39 +6.30; ALIT×56 yday $12.86 → 09:30 $12.22 -35.84; APP×1 yday $391.22 → 09:30 $387.71 -3.51; CRCT×79 yday $8.78 → 09:30 $8.82 +3.16; KD×44 yday $16.29 → 09:30 $16.29 +0.00; LIVN×7 yday $89.99 → 09:30 $92.31 +16.24; OPRT×61 yday $11.31 → 09:30 $11.68 +22.27; PCOR×9 yday $75.33 → 09:30 $75.81 +4.32 | — |
+| 2026-11-09 09:30 ET | **BUY** | `CLOV` | 14 | $4.88 | $0.73 | — | $425.89 | — | combo gate; gate news=good,vol=good; list flatten; 🔵; ret5=+8.1; leftover $70.71 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `ZVRA` | 6 | $11.65 | $0.72 | — | $355.28 | — | combo gate; gate news=good,vol=good; list flatten,ohlc_hot; 🔵; ⚪; ret5=+12.7; leftover $70.71 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `GCT` | 1 | $60.00 | $0.60 | — | $294.67 | — | combo gate; gate news=good,vol=good; list probable; 🔵; ret5=-0.0; leftover $70.71 | join🟢 sector🟡 gen🟢 news🟢 digest🔴 judge🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `APPN` | 1 | $51.46 | $0.52 | — | $242.70 | — | combo gate; gate news=good,vol=good; list probable; 🔵; ret5=+5.1; leftover $70.71 | join🟢 sector🟡 gen🟢 news🟢 digest🔴 judge🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `COLL` | 2 | $24.41 | $0.49 | — | $193.38 | — | combo gate; gate news=good,vol=good; list probable; 🔵; ⚪; ret5=+1.7; leftover $70.71 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $193.38 | ▲ close $5,803.93 vs 09:30 $5,738.46 (session +68.53) | 16:00 close · cash $193.38 · equity $5,803.93 vs 09:30 $5,738.46 (+65.47; session marks +68.53) · 13 name(s) marked open→close (per-name table). AHCO×97 09:30 $7.39 → close $7.35 -4.36; ALIT×56 09:30 $12.22 → close $12.65 +24.08; APP×1 09:30 $387.71 → close $410.00 +22.29; CRCT×79 09:30 $8.82 → close $8.79 -2.37; KD×44 09:30 $16.29 → close $16.80 +22.44; LIVN×7 09:30 $92.31 → close $92.61 +2.10; OPRT×61 09:30 $11.68 → close $11.62 -3.36; PCOR×9 09:30 $75.81 → close $76.46 +5.85; CLOV×14 09:30 $4.88 → close $4.83 -0.70; ZVRA×6 09:30 $11.65 → close $12.14 +2.94; GCT×1 09:30 $60.00 → close $59.33 -0.67; APPN×1 09:30 $51.46 → close $51.15 -0.31; COLL×2 09:30 $24.41 → close $24.71 +0.60 | — |
 
 ## Not taken
 

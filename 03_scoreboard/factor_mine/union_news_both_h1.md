@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · packet🟢 AND headline🟢 (thin; kept as a KILL)
 
-Cash book **+0.19%** ($10,019) · signal-only (no cash/fees) was +4.21%. Starts YES **21/30**. Fills 9 · skips 2 · realized $+729.11.
+Cash book **-0.17%** ($9,983) · signal-only (no cash/fees) was +4.21%. Starts YES **21/30**. Fills 10 · skips 2 · realized $+729.11.
 
 ## How this sleeve decides (like you are 10)
 
@@ -204,6 +204,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,653.47 | ▲ 09:30 equity $9,653.47 vs yday $9,653.47 (+0.00) | 09:30 open · cash $9,653.47 · no holdings · equity $9,653.47 vs prior close $9,653.47 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-11-06 09:30 ET | **BUY** | `MNST` | 219 | $44.04 | $2.83 | — | $5.88 | — | packet🟢 AND headline🟢 (thin; kept as a KILL); gate news_and_headline=True; rank cond; list earn_react; 🔵; ret5=+3.2; leftover $9653.47 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-11-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5.88 | ▲ close $10,018.56 vs 09:30 $9,653.47 (session +367.92) | 16:00 close · cash $5.88 · equity $10,018.56 vs 09:30 $9,653.47 (+365.09; session marks +367.92) · 1 name(s) marked open→close (per-name table). MNST×219 09:30 $44.04 → close $45.72 +367.92 | — |
+| 2026-11-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $5.88 | ▼ 09:30 equity $9,985.71 vs yday $10,018.56 (-32.85) | 09:30 open · cash $5.88 (unchanged overnight, no fees) · equity $9,985.71 vs prior close $10,018.56 (-32.85) · 1 name(s) re-marked at the open (per-name table). MNST×219 yday $45.72 → 09:30 $45.57 -32.85 | — |
+| 2026-11-09 09:30 ET | **SELL** | `MNST` | 219 | $45.57 | $2.94 | $+329.30 | $9,982.77 | ▲ +329.30 after sell → book $9,982.77; vs 09:30 mark -2.94 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,982.77 | ▲ close $9,982.77 vs 09:30 $9,985.71 (session +0.00) | 16:00 close · cash $9,982.77 · no lots left · equity $9,982.77. | — |
 
 ## Not taken
 

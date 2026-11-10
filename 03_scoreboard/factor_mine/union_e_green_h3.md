@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-7.27%** ($9,273) · signal-only (no cash/fees) was -18.73%. Starts YES **20/30**. Fills 106 · skips 104 · realized $-87.73.
+Cash book **-4.92%** ($9,508) · signal-only (no cash/fees) was -18.73%. Starts YES **20/30**. Fills 110 · skips 104 · realized $-87.73.
 
 ## How this sleeve decides (like you are 10)
 
@@ -302,6 +302,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-06 09:30 ET | **BUY** | `PAR` | 1 | $19.72 | $0.20 | — | $137.95 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; 🔵; ret5=+7.8; leftover $33.64 | join🔴 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-06 09:30 ET | **BUY** | `SG` | 2 | $11.25 | $0.23 | — | $115.22 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; ret5=+1.2; leftover $33.64 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
 | 2026-11-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $115.22 | ▼ close $9,273.15 vs 09:30 $9,305.11 (session -30.35) | 16:00 close · cash $115.22 · equity $9,273.15 vs 09:30 $9,305.11 (-31.96; session marks -30.35) · 10 name(s) marked open→close (per-name table). AMC×631 09:30 $3.13 → close $3.14 +6.31; ARHS×178 09:30 $13.00 → close $14.19 +211.82; DNUT×640 09:30 $4.44 → close $4.17 -172.80; EXPE×7 09:30 $272.19 → close $259.24 -90.65; SSP×11 09:30 $3.00 → close $3.05 +0.55; DKNG×1 09:30 $17.34 → close $18.51 +1.17; EVC×4 09:30 $6.94 → close $8.99 +8.20; FIP×10 09:30 $3.20 → close $3.47 +2.70; PAR×1 09:30 $19.72 → close $20.55 +0.83; SG×2 09:30 $11.25 → close $12.01 +1.52 | — |
+| 2026-11-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $115.22 | ▲ 09:30 equity $9,336.85 vs yday $9,273.15 (+63.70) | 09:30 open · cash $115.22 (unchanged overnight, no fees) · equity $9,336.85 vs prior close $9,273.15 (+63.70) · 10 name(s) re-marked at the open (per-name table). AMC×631 yday $3.14 → 09:30 $3.19 +31.55; ARHS×178 yday $14.19 → 09:30 $14.41 +40.05; DKNG×1 yday $18.51 → 09:30 $17.79 -0.73; DNUT×640 yday $4.17 → 09:30 $4.12 -35.20; EVC×4 yday $8.99 → 09:30 $8.95 -0.16; EXPE×7 yday $259.24 → 09:30 $263.05 +26.67; FIP×10 yday $3.47 → 09:30 $3.50 +0.30; PAR×1 yday $20.55 → 09:30 $21.00 +0.45; SG×2 yday $12.01 → 09:30 $12.01 +0.00; SSP×11 yday $3.05 → 09:30 $3.12 +0.77 | — |
+| 2026-11-09 09:30 ET | **BUY** | `AIOT` | 4 | $3.25 | $0.14 | — | $102.08 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; ret5=-6.9; leftover $14.40 | join🔴 sector🟡 gen🟢 news🟡 digest🔴 judge🔴 ab🔴 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `BCAX` | 1 | $8.90 | $0.09 | — | $93.09 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; 🔵; ret5=-5.3; leftover $14.40 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `CNH` | 1 | $12.16 | $0.12 | — | $80.80 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; ret5=-1.7; leftover $14.40 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `DOLE` | 1 | $13.50 | $0.14 | — | $67.16 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; ret5=+6.2; leftover $14.40 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟡 heat🔴 vol🟡 buy🟡 |
+| 2026-11-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $67.16 | ▲ close $9,508.07 vs 09:30 $9,336.85 (session +171.71) | 16:00 close · cash $67.16 · equity $9,508.07 vs 09:30 $9,336.85 (+171.22; session marks +171.71) · 14 name(s) marked open→close (per-name table). AMC×631 09:30 $3.19 → close $3.40 +132.51; ARHS×178 09:30 $14.41 → close $15.02 +107.69; DKNG×1 09:30 $17.79 → close $18.70 +0.91; DNUT×640 09:30 $4.12 → close $4.03 -54.40; EVC×4 09:30 $8.95 → close $9.30 +1.40; EXPE×7 09:30 $263.05 → close $259.16 -27.23; FIP×10 09:30 $3.50 → close $3.71 +2.10; PAR×1 09:30 $21.00 → close $21.81 +0.81; SG×2 09:30 $12.01 → close $13.36 +2.70; SSP×11 09:30 $3.12 → close $3.56 +4.84; AIOT×4 09:30 $3.25 → close $2.79 -1.84; BCAX×1 09:30 $8.90 → close $9.98 +1.08; CNH×1 09:30 $12.16 → close $12.82 +0.66; DOLE×1 09:30 $13.50 → close $13.98 +0.48 | — |
 
 ## Not taken
 

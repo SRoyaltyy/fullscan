@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 2 · rank `cond` · size `topheavy` · sell `list` · S-boost `none` · topheavy leftover on news🟢 +7 −≤1
 
-Cash book **-16.27%** ($8,373) · signal-only (no cash/fees) was -13.89%. Starts YES **4/30**. Fills 65 · skips 6 · realized $-1349.66.
+Cash book **-15.52%** ($8,448) · signal-only (no cash/fees) was -13.89%. Starts YES **4/30**. Fills 68 · skips 6 · realized $-1349.66.
 
 ## How this sleeve decides (like you are 10)
 
@@ -262,6 +262,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,634.64 | ▲ 09:30 equity $7,634.64 vs yday $7,634.64 (+0.00) | 09:30 open · cash $7,634.64 · no holdings · equity $7,634.64 vs prior close $7,634.64 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-11-06 09:30 ET | **BUY** | `APP` | 21 | $355.95 | $2.05 | — | $157.64 | — | topheavy leftover on news🟢 +7 −≤1; gate cam_bad_max=1,n_pos_min=7,news=good; rank cond; list flatten; 🔵; ret5=+39.7; leftover $7634.64 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $157.64 | ▲ close $8,373.26 vs 09:30 $7,634.64 (session +740.67) | 16:00 close · cash $157.64 · equity $8,373.26 vs 09:30 $7,634.64 (+738.62; session marks +740.67) · 1 name(s) marked open→close (per-name table). APP×21 09:30 $355.95 → close $391.22 +740.67 | — |
+| 2026-11-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $157.64 | ▼ 09:30 equity $8,299.55 vs yday $8,373.26 (-73.71) | 09:30 open · cash $157.64 (unchanged overnight, no fees) · equity $8,299.55 vs prior close $8,373.26 (-73.71) · 1 name(s) re-marked at the open (per-name table). APP×21 yday $391.22 → 09:30 $387.71 -73.71 | — |
+| 2026-11-09 09:30 ET | **SELL** | `APP` | 21 | $387.71 | $2.13 | $+662.78 | $8,297.42 | ▲ +662.78 after sell → book $8,297.42; vs 09:30 mark -2.13 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-09 09:30 ET | **BUY** | `ADMA` | 257 | $12.90 | $3.32 | — | $4,978.81 | — | topheavy leftover on news🟢 +7 −≤1; gate cam_bad_max=1,n_pos_min=7,news=good; rank cond; list yday_gainer; 🔵; ⚪; ret5=+11.6; leftover $3318.97 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-09 09:30 ET | **BUY** | `ALGN` | 29 | $167.90 | $2.08 | — | $107.63 | — | topheavy leftover on news🟢 +7 −≤1; gate cam_bad_max=1,n_pos_min=7,news=good; rank cond; list flatten; 🔵; ⚪; ret5=+10.7; leftover $4978.45 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $107.63 | ▲ close $8,448.20 vs 09:30 $8,299.55 (session +156.17) | 16:00 close · cash $107.63 · equity $8,448.20 vs 09:30 $8,299.55 (+148.65; session marks +156.17) · 2 name(s) marked open→close (per-name table). ADMA×257 09:30 $12.90 → close $12.79 -28.27; ALGN×29 09:30 $167.90 → close $174.26 +184.44 | — |
 
 ## Not taken
 

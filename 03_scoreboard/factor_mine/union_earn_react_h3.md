@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ earn_react, no 🚨
 
-Cash book **-24.01%** ($7,599) · signal-only (no cash/fees) was -14.12%. Starts YES **25/30**. Fills 200 · skips 198 · realized $+2100.34.
+Cash book **-21.35%** ($7,865) · signal-only (no cash/fees) was -14.12%. Starts YES **25/30**. Fills 202 · skips 198 · realized $+2100.34.
 
 ## How this sleeve decides (like you are 10)
 
@@ -394,6 +394,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-06 09:30 ET | **BUY** | `SSP` | 2 | $3.00 | $0.07 | — | $52.00 | — | union ∩ earn_react, no 🚨; gate earn_react=True; list ohlc_hot,earn_react; 🔵; ret5=+17.1; leftover $7.26 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-11-06 09:30 ET | **BUY** | `ACRE` | 1 | $3.84 | $0.04 | — | $48.12 | — | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; 🔵; ret5=-0.6; leftover $7.26 | join🟢 sector🟡 gen🔴 news🟡 ab🟢 peer🟡 heat🔴 vol🟡 buy🟡 |
 | 2026-11-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $48.12 | ▲ close $7,599.09 vs 09:30 $7,588.69 (session +10.51) | 16:00 close · cash $48.12 · equity $7,599.09 vs 09:30 $7,588.69 (+10.40; session marks +10.51) · 7 name(s) marked open→close (per-name table). AMC×413 09:30 $3.13 → close $3.14 +4.13; ARHS×117 09:30 $13.00 → close $14.19 +139.23; DNUT×418 09:30 $4.44 → close $4.17 -112.86; EXPE×5 09:30 $272.19 → close $259.24 -64.75; PRMB×69 09:30 $21.74 → close $22.39 +44.85; SSP×2 09:30 $3.00 → close $3.05 +0.10; ACRE×1 09:30 $3.84 → close $3.65 -0.19 | — |
+| 2026-11-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $48.12 | ▲ 09:30 equity $7,667.15 vs yday $7,599.09 (+68.06) | 09:30 open · cash $48.12 (unchanged overnight, no fees) · equity $7,667.15 vs prior close $7,599.09 (+68.06) · 7 name(s) re-marked at the open (per-name table). ACRE×1 yday $3.65 → 09:30 $3.70 +0.05; AMC×413 yday $3.14 → 09:30 $3.19 +20.65; ARHS×117 yday $14.19 → 09:30 $14.41 +26.32; DNUT×418 yday $4.17 → 09:30 $4.12 -22.99; EXPE×5 yday $259.24 → 09:30 $263.05 +19.05; PRMB×69 yday $22.39 → 09:30 $22.75 +24.84; SSP×2 yday $3.05 → 09:30 $3.12 +0.14 | — |
+| 2026-11-09 09:30 ET | **BUY** | `ADCT` | 3 | $1.65 | $0.06 | — | $43.11 | — | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; 🔵; ⚪; ret5=+3.3; leftover $6.01 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `AIOT` | 1 | $3.25 | $0.04 | — | $39.83 | — | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; ret5=-6.9; leftover $6.01 | join🔴 sector🟡 gen🟢 news🟡 digest🔴 judge🔴 ab🔴 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-11-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $39.83 | ▲ close $7,865.28 vs 09:30 $7,667.15 (session +198.22) | 16:00 close · cash $39.83 · equity $7,865.28 vs 09:30 $7,667.15 (+198.13; session marks +198.22) · 9 name(s) marked open→close (per-name table). ACRE×1 09:30 $3.70 → close $3.68 -0.02; AMC×413 09:30 $3.19 → close $3.40 +86.73; ARHS×117 09:30 $14.41 → close $15.02 +70.79; DNUT×418 09:30 $4.12 → close $4.03 -35.53; EXPE×5 09:30 $263.05 → close $259.16 -19.45; PRMB×69 09:30 $22.75 → close $24.13 +95.22; SSP×2 09:30 $3.12 → close $3.56 +0.88; ADCT×3 09:30 $1.65 → close $1.67 +0.06; AIOT×1 09:30 $3.25 → close $2.79 -0.46 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `rsi` · size `leftover` · sell `list` · S-boost `none` · rank by rsi
 
-Cash book **+39.09%** ($13,909) · signal-only (no cash/fees) was -22.60%. Starts YES **0/30**. Fills 496 · skips 98 · realized $-2571.92.
+Cash book **+57.35%** ($15,735) · signal-only (no cash/fees) was -22.60%. Starts YES **0/30**. Fills 510 · skips 98 · realized $-2571.92.
 
 ## How this sleeve decides (like you are 10)
 
@@ -689,6 +689,22 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-06 09:30 ET | **BUY** | `KURA` | 245 | $6.91 | $3.16 | — | $1,727.97 | — | rank by rsi; rank rsi; list yday_mover; ret5=-35.6; leftover $1695.64 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-11-06 09:30 ET | **BUY** | `UMAC` | 150 | $11.28 | $2.44 | — | $33.53 | — | rank by rsi; rank rsi; list earn_react; ret5=-37.8; leftover $1695.64 | join🔴 sector🟡 gen🔴 news🟡 digest🔴 ab🔴 heat🔴 vol🟢 buy🟡 |
 | 2026-11-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $33.53 | ▲ close $13,908.63 vs 09:30 $13,585.91 (session +377.71) | 16:00 close · cash $33.53 · equity $13,908.63 vs 09:30 $13,585.91 (+322.72; session marks +377.71) · 8 name(s) marked open→close (per-name table). DOX×39 09:30 $42.62 → close $42.09 -20.67; DJT×416 09:30 $4.07 → close $3.99 -33.28; NRIX×112 09:30 $15.10 → close $15.30 +22.40; OKLO×79 09:30 $21.22 → close $23.55 +184.07; GSM×647 09:30 $2.62 → close $2.56 -38.82; SPRY×637 09:30 $2.66 → close $2.79 +82.81; KURA×245 09:30 $6.91 → close $7.27 +88.20; UMAC×150 09:30 $11.28 → close $11.90 +93.00 | — |
+| 2026-11-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $33.53 | ▲ 09:30 equity $14,038.71 vs yday $13,908.63 (+130.08) | 09:30 open · cash $33.53 (unchanged overnight, no fees) · equity $14,038.71 vs prior close $13,908.63 (+130.08) · 8 name(s) re-marked at the open (per-name table). DJT×416 yday $3.99 → 09:30 $3.94 -18.72; DOX×39 yday $42.09 → 09:30 $42.00 -3.51; GSM×647 yday $2.56 → 09:30 $2.63 +45.29; KURA×245 yday $7.27 → 09:30 $7.39 +29.40; NRIX×112 yday $15.30 → 09:30 $15.32 +2.24; OKLO×79 yday $23.55 → 09:30 $23.74 +15.01; SPRY×637 yday $2.79 → 09:30 $2.80 +6.37; UMAC×150 yday $11.90 → 09:30 $12.26 +54.00 | — |
+| 2026-11-09 09:30 ET | **SELL** | `DOX` | 39 | $42.00 | $2.13 | $-28.42 | $1,669.40 | ▼ -28.42 after sell → book $14,036.58; vs 09:30 mark -2.13 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-09 09:30 ET | **SELL** | `GSM` | 647 | $2.63 | $8.47 | $-10.34 | $3,362.54 | ▼ -10.34 after sell → book $14,028.11; vs 09:30 mark -8.47 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-09 09:30 ET | **SELL** | `KURA` | 245 | $7.39 | $3.22 | $+111.22 | $5,169.88 | ▲ +111.22 after sell → book $14,024.90; vs 09:30 mark -3.21 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-09 09:30 ET | **SELL** | `NRIX` | 112 | $15.32 | $2.36 | $+19.96 | $6,883.36 | ▲ +19.96 after sell → book $14,022.54; vs 09:30 mark -2.36 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-09 09:30 ET | **SELL** | `OKLO` | 79 | $23.74 | $2.26 | $+194.60 | $8,756.56 | ▲ +194.60 after sell → book $14,020.28; vs 09:30 mark -2.26 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-09 09:30 ET | **SELL** | `SPRY` | 637 | $2.80 | $8.34 | $+72.63 | $10,531.83 | ▲ +72.63 after sell → book $14,011.95; vs 09:30 mark -8.33 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-09 09:30 ET | **SELL** | `UMAC` | 150 | $12.26 | $2.48 | $+142.08 | $12,368.35 | ▲ +142.08 after sell → book $14,009.47; vs 09:30 mark -2.48 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-09 09:30 ET | **BUY** | `SOC` | 2935 | $0.60 | $26.47 | — | $10,575.00 | — | rank by rsi; rank rsi; list earn_react; ret5=-29.8; leftover $1766.91 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `DDD` | 992 | $1.78 | $12.80 | — | $8,796.45 | — | rank by rsi; rank rsi; list yday_mover; 🔵; ret5=-37.1; leftover $1766.91 | join🔴 sector🟡 gen🟢 news🔴 digest🔴 judge🔴 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `THM` | 1125 | $1.57 | $14.51 | — | $7,015.68 | — | rank by rsi; rank rsi; list yday_mover; ret5=-14.4; leftover $1766.91 | join🔴 sector🟡 gen🟢 news🟡 digest🔴 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `HIMX` | 205 | $8.61 | $2.64 | — | $5,247.99 | — | rank by rsi; rank rsi; list yday_mover; 🔵; ret5=-21.9; leftover $1766.91 | join🔴 sector🟡 gen🟢 news🟡 digest🔴 judge🔴 ab🟡 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `PCT` | 1015 | $1.74 | $13.09 | — | $3,468.80 | — | rank by rsi; rank rsi; list yday_mover; ret5=-50.4; leftover $1766.91 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🟡 vol🟢 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `BCAX` | 198 | $8.90 | $2.58 | — | $1,704.01 | — | rank by rsi; rank rsi; list earn_react; 🔵; ret5=-5.3; leftover $1766.91 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `BW` | 511 | $3.32 | $6.59 | — | $0.90 | — | rank by rsi; rank rsi; list overnight; ret5=-23.9; leftover $1766.91 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-11-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $0.90 | ▲ close $15,734.73 vs 09:30 $14,038.71 (session +1,803.96) | 16:00 close · cash $0.90 · equity $15,734.73 vs 09:30 $14,038.71 (+1696.02; session marks +1803.96) · 8 name(s) marked open→close (per-name table). DJT×416 09:30 $3.94 → close $4.06 +47.84; SOC×2935 09:30 $0.60 → close $0.88 +815.93; DDD×992 09:30 $1.78 → close $1.92 +138.88; THM×1125 09:30 $1.57 → close $1.59 +22.50; HIMX×205 09:30 $8.61 → close $8.61 +0.00; PCT×1015 09:30 $1.74 → close $2.06 +324.80; BCAX×198 09:30 $8.90 → close $9.98 +213.84; BW×511 09:30 $3.32 → close $3.79 +240.17 | — |
 
 ## Not taken
 

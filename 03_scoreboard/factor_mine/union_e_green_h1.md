@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-1.90%** ($9,810) · signal-only (no cash/fees) was -17.92%. Starts YES **5/30**. Fills 160 · skips 17 · realized $-2405.95.
+Cash book **-1.21%** ($9,879) · signal-only (no cash/fees) was -17.92%. Starts YES **5/30**. Fills 176 · skips 17 · realized $-2405.95.
 
 ## How this sleeve decides (like you are 10)
 
@@ -356,6 +356,24 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-06 09:30 ET | **BUY** | `PAR` | 57 | $19.72 | $2.16 | — | $1,307.80 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; 🔵; ret5=+7.8; leftover $1143.02 | join🔴 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-06 09:30 ET | **BUY** | `SG` | 101 | $11.25 | $2.29 | — | $169.26 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; ret5=+1.2; leftover $1143.02 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
 | 2026-11-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $169.26 | ▲ close $9,809.78 vs 09:30 $9,165.13 (session +688.35) | 16:00 close · cash $169.26 · equity $9,809.78 vs 09:30 $9,165.13 (+644.65; session marks +688.35) · 8 name(s) marked open→close (per-name table). SSP×381 09:30 $3.00 → close $3.05 +19.05; CHTR×9 09:30 $115.74 → close $118.07 +20.97; DKNG×65 09:30 $17.34 → close $18.51 +76.05; EMA×22 09:30 $49.98 → close $50.69 +15.62; EVC×164 09:30 $6.94 → close $8.99 +336.20; FIP×357 09:30 $3.20 → close $3.47 +96.39; PAR×57 09:30 $19.72 → close $20.55 +47.31; SG×101 09:30 $11.25 → close $12.01 +76.76 | — |
+| 2026-11-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $169.26 | ▲ 09:30 equity $9,842.57 vs yday $9,809.78 (+32.79) | 09:30 open · cash $169.26 (unchanged overnight, no fees) · equity $9,842.57 vs prior close $9,809.78 (+32.79) · 8 name(s) re-marked at the open (per-name table). CHTR×9 yday $118.07 → 09:30 $119.82 +15.75; DKNG×65 yday $18.51 → 09:30 $17.79 -47.13; EMA×22 yday $50.69 → 09:30 $51.04 +7.70; EVC×164 yday $8.99 → 09:30 $8.95 -6.56; FIP×357 yday $3.47 → 09:30 $3.50 +10.71; PAR×57 yday $20.55 → 09:30 $21.00 +25.65; SG×101 yday $12.01 → 09:30 $12.01 +0.00; SSP×381 yday $3.05 → 09:30 $3.12 +26.67 | — |
+| 2026-11-09 09:30 ET | **SELL** | `CHTR` | 9 | $119.82 | $2.04 | $+32.67 | $1,245.60 | ▲ +32.67 after sell → book $9,840.54; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-09 09:30 ET | **SELL** | `DKNG` | 65 | $17.79 | $2.21 | $+24.53 | $2,399.42 | ▲ +24.53 after sell → book $9,838.33; vs 09:30 mark -2.21 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-09 09:30 ET | **SELL** | `EMA` | 22 | $51.04 | $2.08 | $+19.19 | $3,520.23 | ▲ +19.19 after sell → book $9,836.26; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-09 09:30 ET | **SELL** | `EVC` | 164 | $8.95 | $2.52 | $+324.64 | $4,985.51 | ▲ +324.64 after sell → book $9,833.74; vs 09:30 mark -2.52 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-09 09:30 ET | **SELL** | `FIP` | 357 | $3.50 | $4.67 | $+97.82 | $6,230.33 | ▲ +97.82 after sell → book $9,829.06; vs 09:30 mark -4.68 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-09 09:30 ET | **SELL** | `PAR` | 57 | $21.00 | $2.18 | $+68.62 | $7,425.15 | ▲ +68.62 after sell → book $9,826.88; vs 09:30 mark -2.18 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-09 09:30 ET | **SELL** | `SG` | 101 | $12.01 | $2.32 | $+72.15 | $8,635.84 | ▲ +72.15 after sell → book $9,824.56; vs 09:30 mark -2.32 | dropped from list after 1 sess (min 1) | join🟢 sector🔴 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-11-09 09:30 ET | **SELL** | `SSP` | 381 | $3.12 | $4.99 | $+35.82 | $9,819.57 | ▲ +35.82 after sell → book $9,819.57; vs 09:30 mark -4.99 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `AIOT` | 377 | $3.25 | $4.86 | — | $8,589.46 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; ret5=-6.9; leftover $1227.45 | join🔴 sector🟡 gen🟢 news🟡 digest🔴 judge🔴 ab🔴 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `B` | 29 | $42.30 | $2.08 | — | $7,360.68 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; ret5=+9.6; leftover $1227.45 | join🟡 sector🟡 gen🟢 news🟡 digest🔴 ab🟢 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `BCAX` | 137 | $8.90 | $2.40 | — | $6,138.98 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; 🔵; ret5=-5.3; leftover $1227.45 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `CECO` | 20 | $61.01 | $2.05 | — | $4,916.73 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; ret5=-13.4; leftover $1227.45 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🟡 vol🟢 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `CEG` | 4 | $260.40 | $2.00 | — | $3,873.13 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; 🔵; ret5=-4.7; leftover $1227.45 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `CEVA` | 54 | $22.73 | $2.15 | — | $2,643.56 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; 🔵; ret5=-8.2; leftover $1227.45 | join🔴 sector🟡 gen🟢 news🟡 digest🔴 judge🔴 ab🔴 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `CNH` | 100 | $12.16 | $2.29 | — | $1,425.27 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; ret5=-1.7; leftover $1227.45 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-09 09:30 ET | **BUY** | `DOLE` | 90 | $13.50 | $2.26 | — | $208.01 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; ret5=+6.2; leftover $1227.45 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟡 heat🔴 vol🟡 buy🟡 |
+| 2026-11-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $208.01 | ▲ close $9,878.85 vs 09:30 $9,842.57 (session +79.37) | 16:00 close · cash $208.01 · equity $9,878.85 vs 09:30 $9,842.57 (+36.28; session marks +79.37) · 8 name(s) marked open→close (per-name table). AIOT×377 09:30 $3.25 → close $2.79 -173.42; B×29 09:30 $42.30 → close $42.27 -0.87; BCAX×137 09:30 $8.90 → close $9.98 +147.96; CECO×20 09:30 $61.01 → close $52.00 -180.20; CEG×4 09:30 $260.40 → close $276.09 +62.76; CEVA×54 09:30 $22.73 → close $24.84 +113.94; CNH×100 09:30 $12.16 → close $12.82 +66.00; DOLE×90 09:30 $13.50 → close $13.98 +43.20 | — |
 
 ## Not taken
 
