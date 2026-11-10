@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `ohlc_hot` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · hot list ∩ not exploded
 
-Cash book **-31.89%** ($6,811) · signal-only (no cash/fees) was -11.86%. Starts YES **9/30**. Fills 361 · skips 74 · realized $-1849.08.
+Cash book **-39.76%** ($6,024) · signal-only (no cash/fees) was -11.86%. Starts YES **9/30**. Fills 363 · skips 74 · realized $-1849.08.
 
 ## How this sleeve decides (like you are 10)
 
@@ -559,6 +559,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-09 09:30 ET | **SELL** | `FTDR` | 17 | $97.59 | $2.06 | $+47.74 | $5,291.75 | ▲ +47.74 after sell → book $6,813.29; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-09 09:30 ET | **SELL** | `STE` | 6 | $253.59 | $2.03 | $+29.32 | $6,811.26 | ▲ +29.32 after sell → book $6,811.26; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,811.26 | ▲ close $6,811.26 vs 09:30 $6,819.90 (session +0.00) | 16:00 close · cash $6,811.26 · no lots left · equity $6,811.26. | — |
+| 2026-11-10 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6,811.26 | ▲ 09:30 equity $6,811.26 vs yday $6,811.26 (+0.00) | 09:30 open · cash $6,811.26 · no holdings · equity $6,811.26 vs prior close $6,811.26 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-10 09:30 ET | **BUY** | `WING` | 19 | $176.00 | $2.05 | — | $3,465.21 | — | hot list ∩ not exploded; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list ohlc_hot; ret5=+8.6; leftover $3405.63 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-10 09:30 ET | **BUY** | `SENS` | 273 | $12.45 | $3.52 | — | $64.21 | — | hot list ∩ not exploded; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list ohlc_hot,earn_react; ret5=+9.1; leftover $3405.63 | join🟡 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-11-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $64.21 | ▼ close $6,024.42 vs 09:30 $6,811.26 (session -781.28) | 16:00 close · cash $64.21 · equity $6,024.42 vs 09:30 $6,811.26 (-786.84; session marks -781.28) · 2 name(s) marked open→close (per-name table). WING×19 09:30 $176.00 → close $169.58 -121.98; SENS×273 09:30 $12.45 → close $10.03 -659.30 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ vol_g, no 🚨
 
-Cash book **-6.21%** ($9,379) · signal-only (no cash/fees) was -4.96%. Starts YES **0/30**. Fills 392 · skips 87 · realized $-1273.21.
+Cash book **-8.37%** ($9,163) · signal-only (no cash/fees) was -4.96%. Starts YES **0/30**. Fills 400 · skips 87 · realized $-1273.21.
 
 ## How this sleeve decides (like you are 10)
 
@@ -588,6 +588,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-09 09:30 ET | **BUY** | `GCT` | 19 | $60.00 | $2.05 | — | $1,348.65 | — | union ∩ vol_g, no 🚨; gate vol=good; list probable; 🔵; ret5=-0.0; leftover $1141.10 | join🟢 sector🟡 gen🟢 news🟢 digest🔴 judge🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-09 09:30 ET | **BUY** | `APPN` | 22 | $51.46 | $2.06 | — | $214.48 | — | union ∩ vol_g, no 🚨; gate vol=good; list probable; 🔵; ret5=+5.1; leftover $1141.10 | join🟢 sector🟡 gen🟢 news🟢 digest🔴 judge🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $214.48 | ▲ close $9,379.45 vs 09:30 $9,170.58 (session +281.89) | 16:00 close · cash $214.48 · equity $9,379.45 vs 09:30 $9,170.58 (+208.88; session marks +281.89) · 8 name(s) marked open→close (per-name table). ALGN×6 09:30 $167.90 → close $174.26 +38.16; TMDX×12 09:30 $88.00 → close $93.79 +69.48; CLOV×233 09:30 $4.88 → close $4.83 -11.65; ZVRA×97 09:30 $11.65 → close $12.14 +47.53; WRBY×44 09:30 $25.91 → close $30.21 +189.20; ECX×1422 09:30 $0.80 → close $0.78 -31.28; GCT×19 09:30 $60.00 → close $59.33 -12.73; APPN×22 09:30 $51.46 → close $51.15 -6.82 | — |
+| 2026-11-10 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $214.48 | ▼ 09:30 equity $9,306.86 vs yday $9,379.45 (-72.59) | 09:30 open · cash $214.48 (unchanged overnight, no fees) · equity $9,306.86 vs prior close $9,379.45 (-72.59) · 8 name(s) re-marked at the open (per-name table). ALGN×6 yday $174.26 → 09:30 $171.82 -14.64; APPN×22 yday $51.15 → 09:30 $50.61 -11.88; CLOV×233 yday $4.83 → 09:30 $4.82 -2.33; ECX×1422 yday $0.78 → 09:30 $0.80 +24.32; GCT×19 yday $59.33 → 09:30 $58.50 -15.77; TMDX×12 yday $93.79 → 09:30 $93.50 -3.48; WRBY×44 yday $30.21 → 09:30 $29.85 -15.84; ZVRA×97 yday $12.14 → 09:30 $11.80 -32.98 | — |
+| 2026-11-10 09:30 ET | **SELL** | `APPN` | 22 | $50.61 | $2.08 | $-22.83 | $1,325.82 | ▼ -22.83 after sell → book $9,304.78; vs 09:30 mark -2.08 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-10 09:30 ET | **SELL** | `CLOV` | 233 | $4.82 | $3.05 | $-20.04 | $2,445.83 | ▼ -20.04 after sell → book $9,301.73; vs 09:30 mark -3.05 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-10 09:30 ET | **SELL** | `ECX` | 1422 | $0.80 | $15.85 | $-38.48 | $3,563.46 | ▼ -38.48 after sell → book $9,285.88; vs 09:30 mark -15.85 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-10 09:30 ET | **SELL** | `GCT` | 19 | $58.50 | $2.07 | $-32.61 | $4,672.89 | ▼ -32.61 after sell → book $9,283.81; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-10 09:30 ET | **BUY** | `ETON` | 18 | $63.63 | $2.04 | — | $3,525.51 | — | union ∩ vol_g, no 🚨; gate vol=good; list flatten; 🔵; ⚪; ret5=+26.6; leftover $1168.22 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-10 09:30 ET | **BUY** | `THM` | 773 | $1.51 | $9.97 | — | $2,348.31 | — | union ∩ vol_g, no 🚨; gate vol=good; list probable,yday_gainer,yday_mover; 🔵; ret5=-14.5; leftover $1168.22 | join🔴 sector🟢 gen🟢 news🟡 digest🔴 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-11-10 09:30 ET | **BUY** | `NUAI` | 549 | $2.12 | $7.08 | — | $1,174.60 | — | union ∩ vol_g, no 🚨; gate vol=good; list probable,yday_gainer,yday_mover; ret5=-5.6; leftover $1168.22 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 judge🟡 ab🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-11-10 09:30 ET | **BUY** | `IREN` | 56 | $20.80 | $2.16 | — | $7.64 | — | union ∩ vol_g, no 🚨; gate vol=good; list probable,yday_gainer; 🔵; ret5=-2.8; leftover $1168.22 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 judge🟢 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-11-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7.64 | ▼ close $9,163.34 vs 09:30 $9,306.86 (session -99.22) | 16:00 close · cash $7.64 · equity $9,163.34 vs 09:30 $9,306.86 (-143.52; session marks -99.22) · 8 name(s) marked open→close (per-name table). ALGN×6 09:30 $171.82 → close $174.26 +14.64; TMDX×12 09:30 $93.50 → close $90.94 -30.66; WRBY×44 09:30 $29.85 → close $29.90 +2.20; ZVRA×97 09:30 $11.80 → close $11.92 +11.64; ETON×18 09:30 $63.63 → close $67.54 +70.38; THM×773 09:30 $1.51 → close $1.41 -77.30; NUAI×549 09:30 $2.12 → close $2.07 -30.20; IREN×56 09:30 $20.80 → close $19.73 -59.92 | — |
 
 ## Not taken
 

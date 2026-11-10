@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ white, no 🚨
 
-Cash book **-8.93%** ($9,107) · signal-only (no cash/fees) was +12.04%. Starts YES **3/30**. Fills 202 · skips 157 · realized $-1586.47.
+Cash book **-10.21%** ($8,979) · signal-only (no cash/fees) was +12.04%. Starts YES **3/30**. Fills 206 · skips 157 · realized $-1586.47.
 
 ## How this sleeve decides (like you are 10)
 
@@ -398,6 +398,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-09 09:30 ET | **BUY** | `DNUT` | 237 | $4.12 | $3.06 | — | $1,362.32 | — | union ∩ white, no 🚨; gate zero_red=True; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+27.3; leftover $976.33 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-09 09:30 ET | **BUY** | `ADMA` | 75 | $12.90 | $2.21 | — | $392.60 | — | union ∩ white, no 🚨; gate zero_red=True; list yday_gainer; 🔵; ⚪; ret5=+11.6; leftover $976.33 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
 | 2026-11-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $392.60 | ▲ close $9,107.41 vs 09:30 $8,853.11 (session +272.26) | 16:00 close · cash $392.60 · equity $9,107.41 vs 09:30 $8,853.11 (+254.30; session marks +272.26) · 9 name(s) marked open→close (per-name table). BLFS×27 09:30 $38.61 → close $38.61 +0.00; ALGN×5 09:30 $167.90 → close $174.26 +31.80; ZVRA×83 09:30 $11.65 → close $12.14 +40.67; WRBY×37 09:30 $25.91 → close $30.21 +159.10; CERT×80 09:30 $12.06 → close $12.22 +12.80; COLL×39 09:30 $24.41 → close $24.71 +11.70; APP×2 09:30 $387.71 → close $410.00 +44.58; DNUT×237 09:30 $4.12 → close $4.03 -20.14; ADMA×75 09:30 $12.90 → close $12.79 -8.25 | — |
+| 2026-11-10 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $392.60 | ▼ 09:30 equity $9,013.52 vs yday $9,107.41 (-93.89) | 09:30 open · cash $392.60 (unchanged overnight, no fees) · equity $9,013.52 vs prior close $9,107.41 (-93.89) · 9 name(s) re-marked at the open (per-name table). ADMA×75 yday $12.79 → 09:30 $12.89 +7.87; ALGN×5 yday $174.26 → 09:30 $171.82 -12.20; APP×2 yday $410.00 → 09:30 $405.59 -8.82; BLFS×27 yday $38.61 → 09:30 $38.61 +0.00; CERT×80 yday $12.22 → 09:30 $12.00 -17.60; COLL×39 yday $24.71 → 09:30 $24.46 -9.75; DNUT×237 yday $4.03 → 09:30 $3.98 -11.85; WRBY×37 yday $30.21 → 09:30 $29.85 -13.32; ZVRA×83 yday $12.14 → 09:30 $11.80 -28.22 | — |
+| 2026-11-10 09:30 ET | **BUY** | `ETON` | 1 | $63.63 | $0.64 | — | $328.33 | — | union ∩ white, no 🚨; gate zero_red=True; list flatten; 🔵; ⚪; ret5=+26.6; leftover $78.52 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-10 09:30 ET | **BUY** | `SERV` | 23 | $3.29 | $0.83 | — | $251.84 | — | union ∩ white, no 🚨; gate zero_red=True; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+35.1; leftover $78.52 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-10 09:30 ET | **BUY** | `EVC` | 8 | $9.30 | $0.77 | — | $176.67 | — | union ∩ white, no 🚨; gate zero_red=True; list yday_gainer; 🔵; ⚪; ret5=+44.2; leftover $78.52 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-10 09:30 ET | **BUY** | `REPL` | 3 | $22.10 | $0.67 | — | $109.70 | — | union ∩ white, no 🚨; gate zero_red=True; list ohlc_hot; 🔵; ⚪; ret5=+14.2; leftover $78.52 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $109.70 | ▼ close $8,978.97 vs 09:30 $9,013.52 (session -31.65) | 16:00 close · cash $109.70 · equity $8,978.97 vs 09:30 $9,013.52 (-34.56; session marks -31.65) · 13 name(s) marked open→close (per-name table). ADMA×75 09:30 $12.89 → close $12.67 -16.87; ALGN×5 09:30 $171.82 → close $174.26 +12.20; APP×2 09:30 $405.59 → close $395.51 -20.16; BLFS×27 09:30 $38.61 → close $38.61 +0.00; CERT×80 09:30 $12.00 → close $12.12 +10.00; COLL×39 09:30 $24.46 → close $24.47 +0.39; DNUT×237 09:30 $3.98 → close $3.85 -30.81; WRBY×37 09:30 $29.85 → close $29.90 +1.85; ZVRA×83 09:30 $11.80 → close $11.92 +9.96; ETON×1 09:30 $63.63 → close $67.54 +3.91; SERV×23 09:30 $3.29 → close $3.11 -4.14; EVC×8 09:30 $9.30 → close $9.11 -1.52; REPL×3 09:30 $22.10 → close $23.28 +3.54 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-3.34%** ($9,666) · signal-only (no cash/fees) was -2.67%. Starts YES **12/30**. Fills 310 · skips 272 · realized $-923.90.
+Cash book **-4.17%** ($9,583) · signal-only (no cash/fees) was -2.67%. Starts YES **12/30**. Fills 314 · skips 272 · realized $-923.90.
 
 ## How this sleeve decides (like you are 10)
 
@@ -508,6 +508,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-09 09:30 ET | **BUY** | `APP` | 3 | $387.71 | $2.00 | — | $1,381.94 | — | combo gate; gate last_green=True,vol=good; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+71.2; leftover $1178.46 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
 | 2026-11-09 09:30 ET | **BUY** | `XERS` | 76 | $15.36 | $2.22 | — | $212.37 | — | combo gate; gate last_green=True,vol=good; list yday_gainer; 🔵; ⚪; ret5=+41.9; leftover $1178.46 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $212.37 | ▲ close $9,666.07 vs 09:30 $9,451.04 (session +256.20) | 16:00 close · cash $212.37 · equity $9,666.07 vs 09:30 $9,451.04 (+215.03; session marks +256.20) · 8 name(s) marked open→close (per-name table). ALGN×7 09:30 $167.90 → close $174.26 +44.52; TMDX×13 09:30 $88.00 → close $93.79 +75.27; CLOV×241 09:30 $4.88 → close $4.83 -12.05; ZVRA×101 09:30 $11.65 → close $12.14 +49.49; VRSK×5 09:30 $204.66 → close $200.60 -20.30; COLL×48 09:30 $24.41 → close $24.71 +14.40; APP×3 09:30 $387.71 → close $410.00 +66.87; XERS×76 09:30 $15.36 → close $15.86 +38.00 | — |
+| 2026-11-10 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $212.37 | ▼ 09:30 equity $9,564.08 vs yday $9,666.07 (-101.99) | 09:30 open · cash $212.37 (unchanged overnight, no fees) · equity $9,564.08 vs prior close $9,666.07 (-101.99) · 8 name(s) re-marked at the open (per-name table). ALGN×7 yday $174.26 → 09:30 $171.82 -17.08; APP×3 yday $410.00 → 09:30 $405.59 -13.23; CLOV×241 yday $4.83 → 09:30 $4.82 -2.41; COLL×48 yday $24.71 → 09:30 $24.46 -12.00; TMDX×13 yday $93.79 → 09:30 $93.50 -3.77; VRSK×5 yday $200.60 → 09:30 $198.44 -10.80; XERS×76 yday $15.86 → 09:30 $15.75 -8.36; ZVRA×101 yday $12.14 → 09:30 $11.80 -34.34 | — |
+| 2026-11-10 09:30 ET | **BUY** | `WRBY` | 1 | $29.85 | $0.30 | — | $182.22 | — | combo gate; gate last_green=True,vol=good; list flatten; 🔵; ⚪; ret5=+26.6; leftover $42.47 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-10 09:30 ET | **BUY** | `THM` | 28 | $1.51 | $0.51 | — | $139.43 | — | combo gate; gate last_green=True,vol=good; list probable,yday_gainer,yday_mover; 🔵; ret5=-14.5; leftover $42.47 | join🔴 sector🟢 gen🟢 news🟡 digest🔴 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-11-10 09:30 ET | **BUY** | `NUAI` | 19 | $2.12 | $0.46 | — | $98.60 | — | combo gate; gate last_green=True,vol=good; list probable,yday_gainer,yday_mover; ret5=-5.6; leftover $42.47 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 judge🟡 ab🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-11-10 09:30 ET | **BUY** | `IREN` | 2 | $20.80 | $0.42 | — | $56.57 | — | combo gate; gate last_green=True,vol=good; list probable,yday_gainer; 🔵; ret5=-2.8; leftover $42.47 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 judge🟢 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-11-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $56.57 | ▲ close $9,583.17 vs 09:30 $9,564.08 (session +20.77) | 16:00 close · cash $56.57 · equity $9,583.17 vs 09:30 $9,564.08 (+19.09; session marks +20.77) · 12 name(s) marked open→close (per-name table). ALGN×7 09:30 $171.82 → close $174.26 +17.08; APP×3 09:30 $405.59 → close $395.51 -30.24; CLOV×241 09:30 $4.82 → close $4.93 +26.51; COLL×48 09:30 $24.46 → close $24.47 +0.48; TMDX×13 09:30 $93.50 → close $90.94 -33.22; VRSK×5 09:30 $198.44 → close $204.02 +27.90; XERS×76 09:30 $15.75 → close $15.83 +6.08; ZVRA×101 09:30 $11.80 → close $11.92 +12.12; WRBY×1 09:30 $29.85 → close $29.90 +0.05; THM×28 09:30 $1.51 → close $1.41 -2.80; NUAI×19 09:30 $2.12 → close $2.07 -1.05; IREN×2 09:30 $20.80 → close $19.73 -2.14 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · packet🟢 and camera net ≥ 2
 
-Cash book **+10.56%** ($11,056) · signal-only (no cash/fees) was +7.99%. Starts YES **21/30**. Fills 122 · skips 28 · realized $+1837.87.
+Cash book **+10.32%** ($11,032) · signal-only (no cash/fees) was +7.99%. Starts YES **21/30**. Fills 123 · skips 28 · realized $+1837.87.
 
 ## How this sleeve decides (like you are 10)
 
@@ -320,6 +320,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-09 09:30 ET | **SELL** | `SPG` | 9 | $231.00 | $2.04 | $+74.42 | $8,683.75 | ▲ +74.42 after sell → book $10,622.30; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-09 09:30 ET | **BUY** | `ALGN` | 51 | $167.90 | $2.14 | — | $118.70 | — | packet🟢 and camera net ≥ 2; gate cam_net_min=2,news_box=good; rank cond; list flatten; 🔵; ⚪; ret5=+10.7; leftover $8683.75 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $118.70 | ▲ close $11,055.96 vs 09:30 $10,630.60 (session +435.81) | 16:00 close · cash $118.70 · equity $11,055.96 vs 09:30 $10,630.60 (+425.36; session marks +435.81) · 2 name(s) marked open→close (per-name table). APP×5 09:30 $387.71 → close $410.00 +111.45; ALGN×51 09:30 $167.90 → close $174.26 +324.36 | — |
+| 2026-11-10 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $118.70 | ▼ 09:30 equity $10,909.47 vs yday $11,055.96 (-146.49) | 09:30 open · cash $118.70 (unchanged overnight, no fees) · equity $10,909.47 vs prior close $11,055.96 (-146.49) · 2 name(s) re-marked at the open (per-name table). ALGN×51 yday $174.26 → 09:30 $171.82 -124.44; APP×5 yday $410.00 → 09:30 $405.59 -22.05 | — |
+| 2026-11-10 09:30 ET | **SELL** | `APP` | 5 | $405.59 | $2.03 | $+244.16 | $2,144.62 | ▲ +244.16 after sell → book $10,907.44; vs 09:30 mark -2.03 | dropped from list after 2 sess (min 1) | — |
+| 2026-11-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2,144.62 | ▲ close $11,031.88 vs 09:30 $10,909.47 (session +124.44) | 16:00 close · cash $2,144.62 · equity $11,031.88 vs 09:30 $10,909.47 (+122.41; session marks +124.44) · 1 name(s) marked open→close (per-name table). ALGN×51 09:30 $171.82 → close $174.26 +124.44 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared union_hot_n4_h1/flatten_h5 w=0.5,0.5 net=priority
 
-Cash book **+2.33%** ($10,233) · signal-only (no cash/fees) was —. Starts YES **29/30**. Fills 556 · skips 415 · realized $+719.52.
+Cash book **+1.52%** ($10,152) · signal-only (no cash/fees) was —. Starts YES **29/30**. Fills 563 · skips 415 · realized $+719.52.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $98.68.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $25.68.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -753,6 +753,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-09 09:30 ET | **BUY** | `CLOV` | 41 | $4.88 | $2.11 | — | $298.76 | — | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ret5=+8.1; combo leftover $200.85; owner flatten_h5 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-11-09 09:30 ET | **BUY** | `ZVRA` | 17 | $11.65 | $2.03 | — | $98.68 | — | baseline list, no extra gate; list flatten,ohlc_hot; wish-list (live io HOLD — not a ticket); 🔵; ⚪; ret5=+12.7; combo leftover $200.85; owner flatten_h5 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $98.68 | ▲ close $10,233.14 vs 09:30 $10,122.03 (session +137.74) | 16:00 close · cash $98.68 · equity $10,233.14 vs 09:30 $10,122.03 (+111.11; session marks +137.74) · 24 name(s) marked open→close (per-name table). APP×1 09:30 $387.71 → close $410.00 +22.29; BUUU×73 09:30 $5.30 → close $4.93 -27.01; CDNA×7 09:30 $80.26 → close $84.42 +29.12; CLX×5 09:30 $100.49 → close $105.53 +25.20; CMCSA×21 09:30 $24.16 → close $24.51 +7.35; COCO×8 09:30 $62.62 → close $64.49 +14.96; CON×15 09:30 $42.60 → close $42.40 -3.07; CPRI×19 09:30 $20.84 → close $21.38 +10.26; CSGP×16 09:30 $30.63 → close $31.24 +9.76; ETON×7 09:30 $58.10 → close $64.35 +43.75; GPK×35 09:30 $11.46 → close $10.84 -21.70; ILMN×2 09:30 $216.98 → close $220.78 +7.60; MGNI×14 09:30 $27.92 → close $29.04 +15.68; PACS×13 09:30 $50.09 → close $48.77 -17.16; PCRX×17 09:30 $36.44 → close $36.46 +0.34; RGEN×3 09:30 $174.29 → close $178.94 +13.95; TMUS×2 09:30 $162.81 → close $168.71 +11.80; AEHL×37 09:30 $13.10 → close $12.00 -40.70; XERS×32 09:30 $15.36 → close $15.86 +16.00; ALGN×1 09:30 $167.90 → close $174.26 +6.36; TMDX×2 09:30 $88.00 → close $93.79 +11.58; CGON×2 09:30 $77.19 → close $74.74 -4.90; CLOV×41 09:30 $4.88 → close $4.83 -2.05; ZVRA×17 09:30 $11.65 → close $12.14 +8.33 | — |
+| 2026-11-10 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $98.68 | ▼ 09:30 equity $10,155.21 vs yday $10,233.14 (-77.93) | 09:30 open · cash $98.68 (unchanged overnight, no fees) · equity $10,155.21 vs prior close $10,233.14 (-77.93) | — |
+| 2026-11-10 09:30 ET | **SELL** | `APP` | 1 | $405.59 | $2.01 | $+45.63 | $502.26 | ▲ +45.63 after sell → book $10,153.20; vs 09:30 mark -2.01 | union_hot_n4_h1: dropped from list after 2 sess (min 1) | — |
+| 2026-11-10 09:30 ET | **SELL** | `BUUU` | 73 | $4.93 | $2.23 | $-33.64 | $859.92 | ▼ -33.64 after sell → book $10,150.97; vs 09:30 mark -2.23 | union_hot_n4_h1: dropped from list after 2 sess (min 1) | — |
+| 2026-11-10 09:30 ET | **SELL** | `XERS` | 32 | $15.75 | $2.11 | $+8.29 | $1,361.81 | ▲ +8.29 after sell → book $10,148.86; vs 09:30 mark -2.11 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-11-10 09:30 ET | **BUY** | `GOGO` | 64 | $3.53 | $2.18 | — | $1,133.71 | — | top 4 by hot; rank hot_score; list yday_gainer,yday_mover; ret5=+56.7; combo leftover $226.97; owner union_hot_n4_h1 | join🔴 sector🟢 gen🟢 news🟢 digest🟢 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-10 09:30 ET | **BUY** | `CAPR` | 23 | $9.65 | $2.06 | — | $909.70 | — | top 4 by hot; rank hot_score; list overnight; ret5=+36.0; combo leftover $226.97; owner union_hot_n4_h1 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🔴 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-10 09:30 ET | **BUY** | `EVC` | 24 | $9.30 | $2.06 | — | $684.44 | — | top 4 by hot; rank hot_score; list yday_gainer; 🔵; ⚪; ret5=+44.2; combo leftover $226.97; owner union_hot_n4_h1 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-10 09:30 ET | **BUY** | `WRBY` | 22 | $29.85 | $2.06 | — | $25.68 | — | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ⚪; ret5=+26.6; combo leftover $684.44; owner flatten_h5 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $25.68 | ▲ close $10,151.63 vs 09:30 $10,155.21 (session +11.13) | 16:00 close · cash $25.68 · equity $10,151.63 vs 09:30 $10,155.21 (-3.58; session marks +11.13) · 25 name(s) marked open→close (per-name table). AEHL×37 09:30 $11.33 → close $11.21 -4.44; ALGN×1 09:30 $171.82 → close $174.26 +2.44; CDNA×7 09:30 $84.09 → close $80.77 -23.24; CGON×2 09:30 $73.84 → close $72.64 -2.40; CLOV×41 09:30 $4.82 → close $4.93 +4.51; CLX×5 09:30 $105.00 → close $106.60 +8.00; CMCSA×21 09:30 $24.59 → close $24.75 +3.36; COCO×8 09:30 $64.54 → close $65.91 +10.96; CON×15 09:30 $42.40 → close $42.67 +4.05; CPRI×19 09:30 $21.31 → close $21.73 +7.98; CSGP×16 09:30 $30.84 → close $30.33 -8.16; ETON×7 09:30 $63.63 → close $67.54 +27.37; GPK×35 09:30 $10.79 → close $11.14 +12.25; ILMN×2 09:30 $217.14 → close $214.91 -4.46; MGNI×14 09:30 $28.91 → close $28.52 -5.46; PACS×13 09:30 $48.53 → close $49.10 +7.41; PCRX×17 09:30 $36.46 → close $36.49 +0.51; RGEN×3 09:30 $176.76 → close $173.98 -8.34; TMDX×2 09:30 $93.50 → close $90.94 -5.11; TMUS×2 09:30 $169.69 → close $169.08 -1.22; ZVRA×17 09:30 $11.80 → close $11.92 +2.04; GOGO×64 09:30 $3.53 → close $3.60 +4.48; CAPR×23 09:30 $9.65 → close $8.87 -17.94; EVC×24 09:30 $9.30 → close $9.11 -4.56; WRBY×22 09:30 $29.85 → close $29.90 +1.10 | — |
 
 ## Not taken
 

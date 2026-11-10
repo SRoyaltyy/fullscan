@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-1.21%** ($9,879) · signal-only (no cash/fees) was -17.92%. Starts YES **5/30**. Fills 176 · skips 17 · realized $-2405.95.
+Cash book **-10.30%** ($8,970) · signal-only (no cash/fees) was -17.92%. Starts YES **5/30**. Fills 192 · skips 17 · realized $-2405.95.
 
 ## How this sleeve decides (like you are 10)
 
@@ -374,6 +374,24 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-09 09:30 ET | **BUY** | `CNH` | 100 | $12.16 | $2.29 | — | $1,425.27 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; ret5=-1.7; leftover $1227.45 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-11-09 09:30 ET | **BUY** | `DOLE` | 90 | $13.50 | $2.26 | — | $208.01 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; ret5=+6.2; leftover $1227.45 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟡 heat🔴 vol🟡 buy🟡 |
 | 2026-11-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $208.01 | ▲ close $9,878.85 vs 09:30 $9,842.57 (session +79.37) | 16:00 close · cash $208.01 · equity $9,878.85 vs 09:30 $9,842.57 (+36.28; session marks +79.37) · 8 name(s) marked open→close (per-name table). AIOT×377 09:30 $3.25 → close $2.79 -173.42; B×29 09:30 $42.30 → close $42.27 -0.87; BCAX×137 09:30 $8.90 → close $9.98 +147.96; CECO×20 09:30 $61.01 → close $52.00 -180.20; CEG×4 09:30 $260.40 → close $276.09 +62.76; CEVA×54 09:30 $22.73 → close $24.84 +113.94; CNH×100 09:30 $12.16 → close $12.82 +66.00; DOLE×90 09:30 $13.50 → close $13.98 +43.20 | — |
+| 2026-11-10 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $208.01 | ▼ 09:30 equity $9,732.57 vs yday $9,878.85 (-146.28) | 09:30 open · cash $208.01 (unchanged overnight, no fees) · equity $9,732.57 vs prior close $9,878.85 (-146.28) · 8 name(s) re-marked at the open (per-name table). AIOT×377 yday $2.79 → 09:30 $2.75 -15.08; B×29 yday $42.27 → 09:30 $40.71 -45.24; BCAX×137 yday $9.98 → 09:30 $9.76 -30.14; CECO×20 yday $52.00 → 09:30 $52.33 +6.60; CEG×4 yday $276.09 → 09:30 $270.25 -23.36; CEVA×54 yday $24.84 → 09:30 $24.35 -26.46; CNH×100 yday $12.82 → 09:30 $12.64 -18.00; DOLE×90 yday $13.98 → 09:30 $14.04 +5.40 | — |
+| 2026-11-10 09:30 ET | **SELL** | `AIOT` | 377 | $2.75 | $4.94 | $-198.30 | $1,239.82 | ▼ -198.30 after sell → book $9,727.63; vs 09:30 mark -4.94 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-10 09:30 ET | **SELL** | `B` | 29 | $40.71 | $2.10 | $-50.28 | $2,418.32 | ▼ -50.28 after sell → book $9,725.54; vs 09:30 mark -2.09 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-10 09:30 ET | **SELL** | `BCAX` | 137 | $9.76 | $2.43 | $+112.98 | $3,753.00 | ▲ +112.98 after sell → book $9,723.10; vs 09:30 mark -2.44 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-10 09:30 ET | **SELL** | `CECO` | 20 | $52.33 | $2.07 | $-177.72 | $4,797.53 | ▼ -177.72 after sell → book $9,721.03; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-10 09:30 ET | **SELL** | `CEG` | 4 | $270.25 | $2.02 | $+35.38 | $5,876.51 | ▲ +35.38 after sell → book $9,719.01; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-10 09:30 ET | **SELL** | `CEVA` | 54 | $24.35 | $2.17 | $+83.16 | $7,189.24 | ▲ +83.16 after sell → book $9,716.84; vs 09:30 mark -2.17 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-10 09:30 ET | **SELL** | `CNH` | 100 | $12.64 | $2.32 | $+43.39 | $8,450.92 | ▲ +43.39 after sell → book $9,714.52; vs 09:30 mark -2.32 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-10 09:30 ET | **SELL** | `DOLE` | 90 | $14.04 | $2.29 | $+44.05 | $9,712.24 | ▲ +44.05 after sell → book $9,712.24; vs 09:30 mark -2.28 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-10 09:30 ET | **BUY** | `MNTK` | 559 | $2.17 | $7.21 | — | $8,492.00 | — | combo gate; gate earn_react=True,last_green=True; list ohlc_hot,earn_react; ret5=+15.4; leftover $1214.03 | join🔴 sector🟢 gen🟢 news🟡 digest🔴 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-10 09:30 ET | **BUY** | `ACHR` | 261 | $4.65 | $3.37 | — | $7,274.98 | — | combo gate; gate earn_react=True,last_green=True; list ohlc_hot,earn_react; 🔵; ret5=+15.3; leftover $1214.03 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟡 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-10 09:30 ET | **BUY** | `SENS` | 97 | $12.45 | $2.28 | — | $6,065.53 | — | combo gate; gate earn_react=True,last_green=True; list ohlc_hot,earn_react; ret5=+9.1; leftover $1214.03 | join🟡 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-11-10 09:30 ET | **BUY** | `AAON` | 16 | $71.64 | $2.04 | — | $4,917.25 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; ret5=-7.5; leftover $1214.03 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-11-10 09:30 ET | **BUY** | `ABCL` | 98 | $12.27 | $2.28 | — | $3,713.00 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; 🔵; ret5=+12.4; leftover $1214.03 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-10 09:30 ET | **BUY** | `ALH` | 48 | $24.93 | $2.13 | — | $2,514.23 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; 🔵; ⚪; ret5=+6.8; leftover $1214.03 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-10 09:30 ET | **BUY** | `AMCX` | 153 | $7.92 | $2.45 | — | $1,300.02 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; 🔵; ret5=+10.8; leftover $1214.03 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-10 09:30 ET | **BUY** | `APPS` | 148 | $8.18 | $2.43 | — | $87.54 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; 🔵; ret5=+33.6; leftover $1214.03 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟢 |
+| 2026-11-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $87.54 | ▼ close $8,969.90 vs 09:30 $9,732.57 (session -718.15) | 16:00 close · cash $87.54 · equity $8,969.90 vs 09:30 $9,732.57 (-762.67; session marks -718.15) · 8 name(s) marked open→close (per-name table). MNTK×559 09:30 $2.17 → close $1.19 -547.82; ACHR×261 09:30 $4.65 → close $4.71 +15.66; SENS×97 09:30 $12.45 → close $10.03 -234.26; AAON×16 09:30 $71.64 → close $75.01 +53.92; ABCL×98 09:30 $12.27 → close $12.46 +19.11; ALH×48 09:30 $24.93 → close $25.07 +6.72; AMCX×153 09:30 $7.92 → close $8.61 +105.57; APPS×148 09:30 $8.18 → close $7.25 -137.05 | — |
 
 ## Not taken
 

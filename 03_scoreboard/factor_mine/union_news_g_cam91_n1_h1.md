@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 1 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · all leftover on the rare news🟢 +9 −≤1 name (KILL example)
 
-Cash book **-23.13%** ($7,687) · signal-only (no cash/fees) was -2.85%. Starts YES **27/30**. Fills 9 · skips 1 · realized $+1232.62.
+Cash book **-24.28%** ($7,572) · signal-only (no cash/fees) was -2.85%. Starts YES **27/30**. Fills 11 · skips 1 · realized $+1232.62.
 
 ## How this sleeve decides (like you are 10)
 
@@ -208,6 +208,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,760.71 | ▲ 09:30 equity $7,760.71 vs yday $7,760.71 (+0.00) | 09:30 open · cash $7,760.71 · no holdings · equity $7,760.71 vs prior close $7,760.71 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-11-09 09:30 ET | **BUY** | `ADMA` | 601 | $12.90 | $7.75 | — | $0.06 | — | all leftover on the rare news🟢 +9 −≤1 name (KILL example); gate cam_bad_max=1,n_pos_min=9,news=good; rank cond; list yday_gainer; 🔵; ⚪; ret5=+11.6; leftover $7760.71 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
 | 2026-11-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $0.06 | ▼ close $7,686.85 vs 09:30 $7,760.71 (session -66.11) | 16:00 close · cash $0.06 · equity $7,686.85 vs 09:30 $7,760.71 (-73.86; session marks -66.11) · 1 name(s) marked open→close (per-name table). ADMA×601 09:30 $12.90 → close $12.79 -66.11 | — |
+| 2026-11-10 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $0.06 | ▲ 09:30 equity $7,749.89 vs yday $7,686.85 (+63.04) | 09:30 open · cash $0.06 (unchanged overnight, no fees) · equity $7,749.89 vs prior close $7,686.85 (+63.04) · 1 name(s) re-marked at the open (per-name table). ADMA×601 yday $12.79 → 09:30 $12.89 +63.04 | — |
+| 2026-11-10 09:30 ET | **SELL** | `ADMA` | 601 | $12.89 | $7.91 | $-18.73 | $7,741.98 | ▼ -18.73 after sell → book $7,741.98; vs 09:30 mark -7.91 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-10 09:30 ET | **BUY** | `FG` | 302 | $25.55 | $3.90 | — | $21.98 | — | all leftover on the rare news🟢 +9 −≤1 name (KILL example); gate cam_bad_max=1,n_pos_min=9,news=good; rank cond; list ohlc_hot; 🔵; ⚪; ret5=+17.7; leftover $7741.98 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $21.98 | ▼ close $7,571.98 vs 09:30 $7,749.89 (session -166.10) | 16:00 close · cash $21.98 · equity $7,571.98 vs 09:30 $7,749.89 (-177.91; session marks -166.10) · 1 name(s) marked open→close (per-name table). FG×302 09:30 $25.55 → close $25.00 -166.10 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `ohlc_hot` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · baseline list, no extra gate
 
-Cash book **-18.48%** ($8,152) · signal-only (no cash/fees) was +6.95%. Starts YES **0/30**. Fills 508 · skips 93 · realized $-1456.67.
+Cash book **-26.46%** ($7,354) · signal-only (no cash/fees) was +6.95%. Starts YES **0/30**. Fills 524 · skips 93 · realized $-1456.67.
 
 ## How this sleeve decides (like you are 10)
 
@@ -700,6 +700,24 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-09 09:30 ET | **BUY** | `PPTA` | 49 | $20.37 | $2.14 | — | $1,029.25 | — | baseline list, no extra gate; list ohlc_hot; ret5=+17.3; leftover $1003.29 | join🔴 sector🟡 gen🟢 news🟡 digest🔴 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
 | 2026-11-09 09:30 ET | **BUY** | `ARHS` | 69 | $14.41 | $2.20 | — | $32.42 | — | baseline list, no extra gate; list ohlc_hot; 🔵; ret5=+14.0; leftover $1003.29 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $32.42 | ▲ close $8,151.96 vs 09:30 $7,978.18 (session +218.04) | 16:00 close · cash $32.42 · equity $8,151.96 vs 09:30 $7,978.18 (+173.78; session marks +218.04) · 8 name(s) marked open→close (per-name table). BUUU×179 09:30 $5.30 → close $4.93 -66.23; SSP×318 09:30 $3.12 → close $3.56 +139.92; ZVRA×86 09:30 $11.65 → close $12.14 +42.14; KRMN×21 09:30 $45.72 → close $45.90 +3.88; ATER×1176 09:30 $0.85 → close $0.88 +31.75; OVID×347 09:30 $2.89 → close $2.85 -13.88; PPTA×49 09:30 $20.37 → close $21.16 +38.71; ARHS×69 09:30 $14.41 → close $15.02 +41.75 | — |
+| 2026-11-10 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $32.42 | ▼ 09:30 equity $7,882.04 vs yday $8,151.96 (-269.92) | 09:30 open · cash $32.42 (unchanged overnight, no fees) · equity $7,882.04 vs prior close $8,151.96 (-269.92) · 8 name(s) re-marked at the open (per-name table). ARHS×69 yday $15.02 → 09:30 $14.80 -15.18; ATER×1176 yday $0.88 → 09:30 $0.79 -102.31; BUUU×179 yday $4.93 → 09:30 $4.93 +0.00; KRMN×21 yday $45.90 → 09:30 $44.67 -25.83; OVID×347 yday $2.85 → 09:30 $2.76 -31.23; PPTA×49 yday $21.16 → 09:30 $20.07 -53.41; SSP×318 yday $3.56 → 09:30 $3.52 -12.72; ZVRA×86 yday $12.14 → 09:30 $11.80 -29.24 | — |
+| 2026-11-10 09:30 ET | **SELL** | `ARHS` | 69 | $14.80 | $2.22 | $+22.15 | $1,051.40 | ▲ +22.15 after sell → book $7,879.82; vs 09:30 mark -2.22 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-10 09:30 ET | **SELL** | `ATER` | 1176 | $0.79 | $13.06 | $-97.18 | $1,970.91 | ▼ -97.18 after sell → book $7,866.76; vs 09:30 mark -13.06 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-10 09:30 ET | **SELL** | `BUUU` | 179 | $4.93 | $2.57 | $-76.69 | $2,850.81 | ▼ -76.69 after sell → book $7,864.19; vs 09:30 mark -2.57 | dropped from list after 2 sess (min 1) | — |
+| 2026-11-10 09:30 ET | **SELL** | `KRMN` | 21 | $44.67 | $2.07 | $-26.07 | $3,786.81 | ▼ -26.07 after sell → book $7,862.12; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-10 09:30 ET | **SELL** | `OVID` | 347 | $2.76 | $4.54 | $-54.13 | $4,739.99 | ▼ -54.13 after sell → book $7,857.58; vs 09:30 mark -4.54 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-10 09:30 ET | **SELL** | `PPTA` | 49 | $20.07 | $2.16 | $-18.99 | $5,721.26 | ▼ -18.99 after sell → book $7,855.42; vs 09:30 mark -2.16 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-10 09:30 ET | **SELL** | `SSP` | 318 | $3.52 | $4.17 | $+157.09 | $6,836.45 | ▲ +157.09 after sell → book $7,851.26; vs 09:30 mark -4.16 | dropped from list after 2 sess (min 1) | — |
+| 2026-11-10 09:30 ET | **SELL** | `ZVRA` | 86 | $11.80 | $2.27 | $+8.38 | $7,848.98 | ▲ +8.38 after sell → book $7,848.98; vs 09:30 mark -2.28 | dropped from list after 1 sess (min 1) | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-10 09:30 ET | **BUY** | `REPL` | 44 | $22.10 | $2.12 | — | $6,874.46 | — | baseline list, no extra gate; list ohlc_hot; 🔵; ⚪; ret5=+14.2; leftover $981.12 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-10 09:30 ET | **BUY** | `ULCC` | 116 | $8.43 | $2.34 | — | $5,894.24 | — | baseline list, no extra gate; list ohlc_hot; ret5=+12.4; leftover $981.12 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-10 09:30 ET | **BUY** | `QXO` | 72 | $13.57 | $2.21 | — | $4,915.00 | — | baseline list, no extra gate; list ohlc_hot; 🔵; ret5=+18.0; leftover $981.12 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟡 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-10 09:30 ET | **BUY** | `SG` | 72 | $13.61 | $2.21 | — | $3,932.87 | — | baseline list, no extra gate; list ohlc_hot; 🔵; ⚪; ret5=+16.5; leftover $981.12 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-10 09:30 ET | **BUY** | `ESAB` | 11 | $89.15 | $2.02 | — | $2,950.20 | — | baseline list, no extra gate; list ohlc_hot; 🔵; ret5=+17.9; leftover $981.12 | join🟢 sector🟢 gen🟢 news🔴 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-10 09:30 ET | **BUY** | `KLC` | 430 | $2.28 | $5.55 | — | $1,964.25 | — | baseline list, no extra gate; list ohlc_hot; ret5=+13.7; leftover $981.12 | join🔴 sector🔴 gen🟢 news🟡 digest🟡 ab🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-11-10 09:30 ET | **BUY** | `REAL` | 67 | $14.50 | $2.19 | — | $990.56 | — | baseline list, no extra gate; list ohlc_hot; ret5=+12.5; leftover $981.12 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-10 09:30 ET | **BUY** | `MNTK` | 452 | $2.17 | $5.83 | — | $3.89 | — | baseline list, no extra gate; list ohlc_hot,earn_react; ret5=+15.4; leftover $981.12 | join🔴 sector🟢 gen🟢 news🟡 digest🔴 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $3.89 | ▼ close $7,354.07 vs 09:30 $7,882.04 (session -470.45) | 16:00 close · cash $3.89 · equity $7,354.07 vs 09:30 $7,882.04 (-527.97; session marks -470.45) · 8 name(s) marked open→close (per-name table). REPL×44 09:30 $22.10 → close $23.28 +51.92; ULCC×116 09:30 $8.43 → close $8.09 -39.44; QXO×72 09:30 $13.57 → close $13.73 +11.52; SG×72 09:30 $13.61 → close $13.24 -26.64; ESAB×11 09:30 $89.15 → close $87.13 -22.22; KLC×430 09:30 $2.28 → close $2.21 -30.10; REAL×67 09:30 $14.50 → close $14.91 +27.47; MNTK×452 09:30 $2.17 → close $1.19 -442.96 | — |
 
 ## Not taken
 

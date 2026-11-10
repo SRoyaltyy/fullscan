@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ macd_xup, no 🚨
 
-Cash book **-9.60%** ($9,040) · signal-only (no cash/fees) was -55.44%. Starts YES **5/30**. Fills 236 · skips 209 · realized $-2117.42.
+Cash book **-9.02%** ($9,098) · signal-only (no cash/fees) was -55.44%. Starts YES **5/30**. Fills 238 · skips 209 · realized $-2117.42.
 
 ## How this sleeve decides (like you are 10)
 
@@ -432,6 +432,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-09 09:30 ET | **SELL** | `VFF` | 3 | $3.10 | $0.12 | $+0.37 | $42.19 | ▲ +0.37 after sell → book $8,920.91; vs 09:30 mark -0.12 | dropped from list after 3 sess (min 3) | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-11-09 09:30 ET | **BUY** | `HIVE` | 2 | $1.77 | $0.04 | — | $38.61 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list overnight; 🔵; ret5=-6.8; leftover $5.27 | join🟢 sector🔴 gen🟢 news🔴 digest🟢 ab🔴 peer🟢 heat🔴 vol🟡 buy🟡 |
 | 2026-11-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $38.61 | ▲ close $9,040.46 vs 09:30 $8,921.40 (session +119.59) | 16:00 close · cash $38.61 · equity $9,040.46 vs 09:30 $8,921.40 (+119.06; session marks +119.59) · 6 name(s) marked open→close (per-name table). ANGI×258 09:30 $6.92 → close $6.69 -59.34; HRZN×494 09:30 $4.00 → close $3.87 -64.22; MGNI×68 09:30 $27.92 → close $29.04 +76.16; ORGO×2401 09:30 $0.84 → close $0.91 +160.87; STLN×302 09:30 $3.98 → close $4.00 +6.04; HIVE×2 09:30 $1.77 → close $1.81 +0.08 | — |
+| 2026-11-10 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $38.61 | ▼ 09:30 equity $9,017.45 vs yday $9,040.46 (-23.01) | 09:30 open · cash $38.61 (unchanged overnight, no fees) · equity $9,017.45 vs prior close $9,040.46 (-23.01) · 6 name(s) re-marked at the open (per-name table). ANGI×258 yday $6.69 → 09:30 $6.75 +16.77; HIVE×2 yday $1.81 → 09:30 $1.75 -0.13; HRZN×494 yday $3.87 → 09:30 $3.86 -4.94; MGNI×68 yday $29.04 → 09:30 $28.91 -8.84; ORGO×2401 yday $0.91 → 09:30 $0.90 -16.81; STLN×302 yday $4.00 → 09:30 $3.97 -9.06 | — |
+| 2026-11-10 09:30 ET | **BUY** | `SES` | 5 | $0.88 | $0.06 | — | $34.15 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list yday_gainer; 🔵; ret5=+17.0; leftover $4.83 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟡 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-11-10 09:30 ET | **BUY** | `SATL` | 1 | $3.81 | $0.04 | — | $30.30 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list yday_gainer,overnight; 🔵; ret5=+28.7; leftover $4.83 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $30.30 | ▲ close $9,097.77 vs 09:30 $9,017.45 (session +80.42) | 16:00 close · cash $30.30 · equity $9,097.77 vs 09:30 $9,017.45 (+80.32; session marks +80.42) · 8 name(s) marked open→close (per-name table). ANGI×258 09:30 $6.75 → close $6.60 -39.99; HIVE×2 09:30 $1.75 → close $1.72 -0.05; HRZN×494 09:30 $3.86 → close $3.76 -49.40; MGNI×68 09:30 $28.91 → close $28.52 -26.52; ORGO×2401 09:30 $0.90 → close $0.94 +84.52; STLN×302 09:30 $3.97 → close $4.34 +111.74; SES×5 09:30 $0.88 → close $0.89 +0.03; SATL×1 09:30 $3.81 → close $3.90 +0.09 | — |
 
 ## Not taken
 

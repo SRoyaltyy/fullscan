@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · last bar red
 
-Cash book **-6.26%** ($9,374) · signal-only (no cash/fees) was -2.93%. Starts YES **19/30**. Fills 538 · skips 107 · realized $-717.78.
+Cash book **-7.79%** ($9,221) · signal-only (no cash/fees) was -2.93%. Starts YES **19/30**. Fills 554 · skips 107 · realized $-717.78.
 
 ## How this sleeve decides (like you are 10)
 
@@ -732,6 +732,24 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-09 09:30 ET | **SHORT** | `AMTX` | 366 | $1.65 | $4.81 | — | $13,812.81 | — | last bar red; gate last_red=True; list yday_gainer,yday_mover; 🔵; ret5=+29.6; leftover $605.25 | join🟡 sector🟡 gen🟢 news🔴 digest🔴 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-11-09 09:30 ET | **SHORT** | `DNUT` | 147 | $4.12 | $2.48 | — | $14,415.23 | — | last bar red; gate last_red=True; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+27.3; leftover $605.25 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,415.23 | ▼ close $9,374.04 vs 09:30 $9,709.78 (session -283.49) | 16:00 close · cash $14,415.23 · equity $9,374.04 vs 09:30 $9,709.78 (-335.74; session marks -283.49) · 8 name(s) marked open→close (per-name table). ETON×10 09:30 $58.10 → close $64.35 -62.50; WRBY×23 09:30 $25.91 → close $30.21 -98.90; ECX×754 09:30 $0.80 → close $0.78 +16.59; GCT×10 09:30 $60.00 → close $59.33 +6.70; APPN×11 09:30 $51.46 → close $51.15 +3.41; ASPN×120 09:30 $5.01 → close $6.11 -132.00; AMTX×366 09:30 $1.65 → close $1.73 -29.28; DNUT×147 09:30 $4.12 → close $4.03 +12.49 | — |
+| 2026-11-10 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $14,415.23 | ▲ 09:30 equity $9,424.74 vs yday $9,374.04 (+50.70) | 09:30 open · cash $14,415.23 (unchanged overnight, no fees) · equity $9,424.74 vs prior close $9,374.04 (+50.70) · 8 name(s) re-marked at the open (per-name table). AMTX×366 yday $1.73 → 09:30 $1.71 +7.32; APPN×11 yday $51.15 → 09:30 $50.61 +5.94; ASPN×120 yday $6.11 → 09:30 $5.95 +19.20; DNUT×147 yday $4.03 → 09:30 $3.98 +7.35; ECX×754 yday $0.78 → 09:30 $0.80 -12.89; ETON×10 yday $64.35 → 09:30 $63.63 +7.20; GCT×10 yday $59.33 → 09:30 $58.50 +8.30; WRBY×23 yday $30.21 → 09:30 $29.85 +8.28 | — |
+| 2026-11-10 09:30 ET | **COVER** | `AMTX` | 366 | $1.71 | $4.72 | $-31.49 | $13,784.65 | ▼ -31.49 after sell → book $9,420.02; vs 09:30 mark -4.72 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-10 09:30 ET | **COVER** | `APPN` | 11 | $50.61 | $2.02 | $+5.27 | $13,225.92 | ▲ +5.27 after sell → book $9,417.99; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-10 09:30 ET | **COVER** | `ASPN` | 120 | $5.95 | $2.35 | $-117.55 | $12,509.57 | ▼ -117.55 after sell → book $9,415.64; vs 09:30 mark -2.35 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-10 09:30 ET | **COVER** | `DNUT` | 147 | $3.98 | $2.43 | $+14.93 | $11,922.07 | ▲ +14.93 after sell → book $9,413.21; vs 09:30 mark -2.43 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-10 09:30 ET | **COVER** | `ECX` | 754 | $0.80 | $8.27 | $-13.04 | $11,312.79 | ▼ -13.04 after sell → book $9,404.94; vs 09:30 mark -8.27 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-10 09:30 ET | **COVER** | `ETON` | 10 | $63.63 | $2.02 | $-59.38 | $10,674.47 | ▼ -59.38 after sell → book $9,402.92; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-10 09:30 ET | **COVER** | `GCT` | 10 | $58.50 | $2.02 | $+10.92 | $10,087.45 | ▲ +10.92 after sell → book $9,400.90; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-10 09:30 ET | **COVER** | `WRBY` | 23 | $29.85 | $2.06 | $-94.77 | $9,398.84 | ▼ -94.77 after sell → book $9,398.84; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-10 09:30 ET | **SHORT** | `GOGO` | 166 | $3.53 | $2.54 | — | $9,982.28 | — | last bar red; gate last_red=True; list yday_gainer,yday_mover; ret5=+56.7; leftover $587.43 | join🔴 sector🟢 gen🟢 news🟢 digest🟢 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-10 09:30 ET | **SHORT** | `LYNX` | 40 | $14.50 | $2.15 | — | $10,560.13 | — | last bar red; gate last_red=True; list yday_gainer,yday_mover; 🔵; ret5=+26.0; leftover $587.43 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-10 09:30 ET | **SHORT** | `NRDS` | 75 | $7.75 | $2.25 | — | $11,139.13 | — | last bar red; gate last_red=True; list yday_mover; ret5=-28.9; leftover $587.43 | join🔴 sector🟢 gen🟢 news🔴 digest🟢 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-11-10 09:30 ET | **SHORT** | `IRTC` | 6 | $87.50 | $2.04 | — | $11,662.09 | — | last bar red; gate last_red=True; list yday_mover; ret5=-29.7; leftover $587.43 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-11-10 09:30 ET | **SHORT** | `AEHL` | 51 | $11.33 | $2.18 | — | $12,237.74 | — | last bar red; gate last_red=True; list yday_mover; 🔵; ret5=+80.5; leftover $587.43 | join🟢 sector🟢 gen🟢 news🔴 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-10 09:30 ET | **SHORT** | `AMRC` | 24 | $23.75 | $2.10 | — | $12,805.64 | — | last bar red; gate last_red=True; list earn_react; 🔵; ret5=+7.1; leftover $587.43 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-10 09:30 ET | **SHORT** | `ATAT` | 16 | $34.79 | $2.07 | — | $13,360.21 | — | last bar red; gate last_red=True; list earn_react; ⚪; ret5=+5.6; leftover $587.43 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-10 09:30 ET | **SHORT** | `AUTL` | 485 | $1.21 | $6.36 | — | $13,940.69 | — | last bar red; gate last_red=True; list earn_react; ret5=-7.0; leftover $587.43 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $13,940.69 | ▼ close $9,220.64 vs 09:30 $9,424.74 (session -156.50) | 16:00 close · cash $13,940.69 · equity $9,220.64 vs 09:30 $9,424.74 (-204.10; session marks -156.50) · 8 name(s) marked open→close (per-name table). GOGO×166 09:30 $3.53 → close $3.60 -11.62; LYNX×40 09:30 $14.50 → close $14.95 -18.00; NRDS×75 09:30 $7.75 → close $7.42 +24.75; IRTC×6 09:30 $87.50 → close $86.06 +8.64; AEHL×51 09:30 $11.33 → close $11.21 +6.12; AMRC×24 09:30 $23.75 → close $27.62 -92.88; ATAT×16 09:30 $34.79 → close $36.05 -20.16; AUTL×485 09:30 $1.21 → close $1.32 -53.35 | — |
 
 ## Not taken
 

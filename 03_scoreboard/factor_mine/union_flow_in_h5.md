@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ flow_in hold 5, no 🚨
 
-Cash book **-4.57%** ($9,543) · signal-only (no cash/fees) was -2.74%. Starts YES **16/30**. Fills 80 · skips 144 · realized $+404.42.
+Cash book **-5.37%** ($9,463) · signal-only (no cash/fees) was -2.74%. Starts YES **16/30**. Fills 80 · skips 144 · realized $+404.42.
 
 ## How this sleeve decides (like you are 10)
 
@@ -276,6 +276,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2.21 | ▲ close $9,511.45 vs 09:30 $8,946.45 (session +565.00) | 16:00 close · cash $2.21 · equity $9,511.45 vs 09:30 $8,946.45 (+565.00; session marks +565.00) · 2 name(s) marked open→close (per-name table). HLP×1214 09:30 $3.35 → close $3.64 +352.06; RKT×338 09:30 $14.43 → close $15.06 +212.94 | — |
 | 2026-11-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $2.21 | ▲ 09:30 equity $9,592.57 vs yday $9,511.45 (+81.12) | 09:30 open · cash $2.21 (unchanged overnight, no fees) · equity $9,592.57 vs prior close $9,511.45 (+81.12) · 2 name(s) re-marked at the open (per-name table). HLP×1214 yday $3.64 → 09:30 $3.64 +0.00; RKT×338 yday $15.06 → 09:30 $15.30 +81.12 | — |
 | 2026-11-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2.21 | ▼ close $9,543.25 vs 09:30 $9,592.57 (session -49.32) | 16:00 close · cash $2.21 · equity $9,543.25 vs 09:30 $9,592.57 (-49.32; session marks -49.32) · 2 name(s) marked open→close (per-name table). HLP×1214 09:30 $3.64 → close $3.63 -12.14; RKT×338 09:30 $15.30 → close $15.19 -37.18 | — |
+| 2026-11-10 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $2.21 | ▼ 09:30 equity $9,361.49 vs yday $9,543.25 (-181.76) | 09:30 open · cash $2.21 (unchanged overnight, no fees) · equity $9,361.49 vs prior close $9,543.25 (-181.76) · 2 name(s) re-marked at the open (per-name table). HLP×1214 yday $3.63 → 09:30 $3.60 -36.42; RKT×338 yday $15.19 → 09:30 $14.76 -145.34 | — |
+| 2026-11-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2.21 | ▲ close $9,463.09 vs 09:30 $9,361.49 (session +101.60) | 16:00 close · cash $2.21 · equity $9,463.09 vs 09:30 $9,361.49 (+101.60; session marks +101.60) · 2 name(s) marked open→close (per-name table). HLP×1214 09:30 $3.60 → close $3.77 +206.38; RKT×338 09:30 $14.76 → close $14.45 -104.78 | — |
 
 ## Not taken
 

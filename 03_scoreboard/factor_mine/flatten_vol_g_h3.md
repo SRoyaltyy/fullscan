@@ -6,7 +6,7 @@ Buys the flatten **wish-list** even on io/HOLD mornings — live `flatten_robust
 
 Side **long** · universe `flatten` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · flatten wish-list ∩ vol🟢
 
-Cash book **-27.35%** ($7,265) · signal-only (no cash/fees) was -19.12%. Starts YES **6/30**. Fills 66 · skips 71 · realized $-2440.55.
+Cash book **-27.74%** ($7,226) · signal-only (no cash/fees) was -19.12%. Starts YES **6/30**. Fills 67 · skips 71 · realized $-2440.55.
 
 ## How this sleeve decides (like you are 10)
 
@@ -262,6 +262,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-09 09:30 ET | **BUY** | `CLOV` | 13 | $4.88 | $0.67 | — | $193.23 | — | flatten wish-list ∩ vol🟢; gate vol=good; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ret5=+8.1; leftover $64.33 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-11-09 09:30 ET | **BUY** | `ZVRA` | 5 | $11.65 | $0.60 | — | $134.38 | — | flatten wish-list ∩ vol🟢; gate vol=good; list flatten,ohlc_hot; wish-list (live io HOLD — not a ticket); 🔵; ⚪; ret5=+12.7; leftover $64.33 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $134.38 | ▲ close $7,264.91 vs 09:30 $7,253.49 (session +12.69) | 16:00 close · cash $134.38 · equity $7,264.91 vs 09:30 $7,253.49 (+11.42; session marks +12.69) · 4 name(s) marked open→close (per-name table). APP×9 09:30 $387.71 → close $410.00 +200.61; GPK×306 09:30 $11.46 → close $10.84 -189.72; CLOV×13 09:30 $4.88 → close $4.83 -0.65; ZVRA×5 09:30 $11.65 → close $12.14 +2.45 | — |
+| 2026-11-10 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $134.38 | ▼ 09:30 equity $7,208.09 vs yday $7,264.91 (-56.82) | 09:30 open · cash $134.38 (unchanged overnight, no fees) · equity $7,208.09 vs prior close $7,264.91 (-56.82) · 4 name(s) re-marked at the open (per-name table). APP×9 yday $410.00 → 09:30 $405.59 -39.69; CLOV×13 yday $4.83 → 09:30 $4.82 -0.13; GPK×306 yday $10.84 → 09:30 $10.79 -15.30; ZVRA×5 yday $12.14 → 09:30 $11.80 -1.70 | — |
+| 2026-11-10 09:30 ET | **BUY** | `WRBY` | 1 | $29.85 | $0.30 | — | $104.23 | — | flatten wish-list ∩ vol🟢; gate vol=good; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ⚪; ret5=+26.6; leftover $33.59 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $104.23 | ▲ close $7,226.25 vs 09:30 $7,208.09 (session +18.46) | 16:00 close · cash $104.23 · equity $7,226.25 vs 09:30 $7,208.09 (+18.16; session marks +18.46) · 5 name(s) marked open→close (per-name table). APP×9 09:30 $405.59 → close $395.51 -90.72; CLOV×13 09:30 $4.82 → close $4.93 +1.43; GPK×306 09:30 $10.79 → close $11.14 +107.10; ZVRA×5 09:30 $11.80 → close $11.92 +0.60; WRBY×1 09:30 $29.85 → close $29.90 +0.05 | — |
 
 ## Not taken
 

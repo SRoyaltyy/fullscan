@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `probable` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-38.16%** ($6,184) · signal-only (no cash/fees) was +1.46%. Starts YES **0/30**. Fills 263 · skips 201 · realized $-2103.38.
+Cash book **-38.18%** ($6,182) · signal-only (no cash/fees) was +1.46%. Starts YES **0/30**. Fills 265 · skips 201 · realized $-2103.38.
 
 ## How this sleeve decides (like you are 10)
 
@@ -461,6 +461,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-09 09:30 ET | **BUY** | `VRSK` | 10 | $204.66 | $2.02 | — | $2,078.07 | — | combo gate; gate last_green=True,ret_5_max=10.0; list probable; ret5=+4.2; leftover $2059.80 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-09 09:30 ET | **BUY** | `COLL` | 84 | $24.41 | $2.24 | — | $25.39 | — | combo gate; gate last_green=True,ret_5_max=10.0; list probable; 🔵; ⚪; ret5=+1.7; leftover $2059.80 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $25.39 | ▲ close $6,184.43 vs 09:30 $6,179.39 (session +11.80) | 16:00 close · cash $25.39 · equity $6,184.43 vs 09:30 $6,179.39 (+5.04; session marks +11.80) · 3 name(s) marked open→close (per-name table). CERT×170 09:30 $12.06 → close $12.22 +27.20; VRSK×10 09:30 $204.66 → close $200.60 -40.60; COLL×84 09:30 $24.41 → close $24.71 +25.20 | — |
+| 2026-11-10 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $25.39 | ▼ 09:30 equity $6,104.43 vs yday $6,184.43 (-80.00) | 09:30 open · cash $25.39 (unchanged overnight, no fees) · equity $6,104.43 vs prior close $6,184.43 (-80.00) · 3 name(s) re-marked at the open (per-name table). CERT×170 yday $12.22 → 09:30 $12.00 -37.40; COLL×84 yday $24.71 → 09:30 $24.46 -21.00; VRSK×10 yday $200.60 → 09:30 $198.44 -21.60 | — |
+| 2026-11-10 09:30 ET | **BUY** | `THM` | 2 | $1.51 | $0.04 | — | $22.33 | — | combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer,yday_mover; 🔵; ret5=-14.5; leftover $3.63 | join🔴 sector🟢 gen🟢 news🟡 digest🔴 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-11-10 09:30 ET | **BUY** | `NUAI` | 1 | $2.12 | $0.02 | — | $20.18 | — | combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer,yday_mover; ret5=-5.6; leftover $3.63 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 judge🟡 ab🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-11-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $20.18 | ▲ close $6,182.00 vs 09:30 $6,104.43 (session +77.63) | 16:00 close · cash $20.18 · equity $6,182.00 vs 09:30 $6,104.43 (+77.57; session marks +77.63) · 5 name(s) marked open→close (per-name table). CERT×170 09:30 $12.00 → close $12.12 +21.25; COLL×84 09:30 $24.46 → close $24.47 +0.84; VRSK×10 09:30 $198.44 → close $204.02 +55.80; THM×2 09:30 $1.51 → close $1.41 -0.20; NUAI×1 09:30 $2.12 → close $2.07 -0.06 | — |
 
 ## Not taken
 

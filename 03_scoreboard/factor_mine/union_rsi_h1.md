@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `rsi` · size `leftover` · sell `list` · S-boost `none` · rank by rsi
 
-Cash book **+57.35%** ($15,735) · signal-only (no cash/fees) was -22.60%. Starts YES **0/30**. Fills 510 · skips 98 · realized $-2571.92.
+Cash book **+59.01%** ($15,901) · signal-only (no cash/fees) was -22.60%. Starts YES **0/30**. Fills 522 · skips 98 · realized $-2571.92.
 
 ## How this sleeve decides (like you are 10)
 
@@ -705,6 +705,20 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-09 09:30 ET | **BUY** | `BCAX` | 198 | $8.90 | $2.58 | — | $1,704.01 | — | rank by rsi; rank rsi; list earn_react; 🔵; ret5=-5.3; leftover $1766.91 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🔴 heat🟢 vol🟡 buy🟡 |
 | 2026-11-09 09:30 ET | **BUY** | `BW` | 511 | $3.32 | $6.59 | — | $0.90 | — | rank by rsi; rank rsi; list overnight; ret5=-23.9; leftover $1766.91 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🔴 vol🟡 buy🟡 |
 | 2026-11-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $0.90 | ▲ close $15,734.73 vs 09:30 $14,038.71 (session +1,803.96) | 16:00 close · cash $0.90 · equity $15,734.73 vs 09:30 $14,038.71 (+1696.02; session marks +1803.96) · 8 name(s) marked open→close (per-name table). DJT×416 09:30 $3.94 → close $4.06 +47.84; SOC×2935 09:30 $0.60 → close $0.88 +815.93; DDD×992 09:30 $1.78 → close $1.92 +138.88; THM×1125 09:30 $1.57 → close $1.59 +22.50; HIMX×205 09:30 $8.61 → close $8.61 +0.00; PCT×1015 09:30 $1.74 → close $2.06 +324.80; BCAX×198 09:30 $8.90 → close $9.98 +213.84; BW×511 09:30 $3.32 → close $3.79 +240.17 | — |
+| 2026-11-10 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $0.90 | ▼ 09:30 equity $15,232.00 vs yday $15,734.73 (-502.73) | 09:30 open · cash $0.90 (unchanged overnight, no fees) · equity $15,232.00 vs prior close $15,734.73 (-502.73) · 8 name(s) re-marked at the open (per-name table). BCAX×198 yday $9.98 → 09:30 $9.76 -43.56; BW×511 yday $3.79 → 09:30 $3.79 +2.55; DDD×992 yday $1.92 → 09:30 $1.89 -29.76; DJT×416 yday $4.06 → 09:30 $4.00 -24.96; HIMX×205 yday $8.61 → 09:30 $8.45 -32.80; PCT×1015 yday $2.06 → 09:30 $2.02 -40.60; SOC×2935 yday $0.88 → 09:30 $0.80 -243.60; THM×1125 yday $1.59 → 09:30 $1.51 -90.00 | — |
+| 2026-11-10 09:30 ET | **SELL** | `BCAX` | 198 | $9.76 | $2.63 | $+165.06 | $1,930.75 | ▲ +165.06 after sell → book $15,229.37; vs 09:30 mark -2.63 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-10 09:30 ET | **SELL** | `DDD` | 992 | $1.89 | $12.98 | $+83.35 | $3,792.65 | ▲ +83.35 after sell → book $15,216.39; vs 09:30 mark -12.98 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-10 09:30 ET | **SELL** | `HIMX` | 205 | $8.45 | $2.69 | $-38.14 | $5,522.21 | ▼ -38.14 after sell → book $15,213.70; vs 09:30 mark -2.69 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-10 09:30 ET | **SELL** | `PCT` | 1015 | $2.02 | $13.28 | $+257.83 | $7,559.23 | ▲ +257.83 after sell → book $15,200.42; vs 09:30 mark -13.28 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-10 09:30 ET | **SELL** | `SOC` | 2935 | $0.80 | $32.70 | $+513.15 | $9,865.72 | ▲ +513.15 after sell → book $15,167.72; vs 09:30 mark -32.70 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-10 09:30 ET | **SELL** | `THM` | 1125 | $1.51 | $14.71 | $-96.73 | $11,549.76 | ▼ -96.73 after sell → book $15,153.00; vs 09:30 mark -14.72 | dropped from list after 1 sess (min 1) | join🔴 sector🟢 gen🟢 news🟡 digest🔴 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-11-10 09:30 ET | **BUY** | `LAND` | 276 | $6.97 | $3.56 | — | $9,622.48 | — | rank by rsi; rank rsi; list overnight; ret5=-5.9; leftover $1924.96 | join🔴 sector🟢 gen🟢 news🟡 digest🟡 ab🔴 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-11-10 09:30 ET | **BUY** | `STLN` | 484 | $3.97 | $6.24 | — | $7,694.76 | — | rank by rsi; rank rsi; list yday_mover; ret5=-36.0; leftover $1924.96 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-11-10 09:30 ET | **BUY** | `SWMR` | 218 | $8.79 | $2.81 | — | $5,775.72 | — | rank by rsi; rank rsi; list overnight; ret5=-1.6; leftover $1924.96 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 judge🟡 ab🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-11-10 09:30 ET | **BUY** | `AUTL` | 1590 | $1.21 | $20.51 | — | $3,831.31 | — | rank by rsi; rank rsi; list earn_react; ret5=-7.0; leftover $1924.96 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-10 09:30 ET | **BUY** | `NCMI` | 1159 | $1.66 | $14.95 | — | $1,892.42 | — | rank by rsi; rank rsi; list overnight; 🔵; ret5=+3.1; leftover $1924.96 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-10 09:30 ET | **BUY** | `FRNM` | 180 | $10.47 | $2.53 | — | $5.29 | — | rank by rsi; rank rsi; list overnight; ret5=-9.0; leftover $1924.96 | join🔴 sector🟢 gen🟢 news🟢 digest🟢 ab🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-11-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5.29 | ▲ close $15,901.33 vs 09:30 $15,232.00 (session +798.94) | 16:00 close · cash $5.29 · equity $15,901.33 vs 09:30 $15,232.00 (+669.33; session marks +798.94) · 8 name(s) marked open→close (per-name table). BW×511 09:30 $3.79 → close $4.48 +350.04; DJT×416 09:30 $4.00 → close $4.28 +116.48; LAND×276 09:30 $6.97 → close $6.88 -24.84; STLN×484 09:30 $3.97 → close $4.34 +179.08; SWMR×218 09:30 $8.79 → close $8.77 -4.36; AUTL×1590 09:30 $1.21 → close $1.32 +174.90; NCMI×1159 09:30 $1.66 → close $1.62 -46.36; FRNM×180 09:30 $10.47 → close $10.77 +54.00 | — |
 
 ## Not taken
 

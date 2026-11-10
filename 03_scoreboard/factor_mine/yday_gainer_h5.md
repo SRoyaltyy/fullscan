@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `yday_gainer` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · baseline list, no extra gate
 
-Cash book **-25.14%** ($7,486) · signal-only (no cash/fees) was +30.33%. Starts YES **6/30**. Fills 273 · skips 452 · realized $+2.09.
+Cash book **-26.84%** ($7,316) · signal-only (no cash/fees) was +30.33%. Starts YES **6/30**. Fills 273 · skips 452 · realized $+2.09.
 
 ## How this sleeve decides (like you are 10)
 
@@ -465,6 +465,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6.65 | ▲ 09:30 equity $7,307.33 vs yday $7,179.73 (+127.60) | 09:30 open · cash $6.65 (unchanged overnight, no fees) · equity $7,307.33 vs prior close $7,179.73 (+127.60) · 8 name(s) re-marked at the open (per-name table). CMTG×536 yday $1.64 → 09:30 $1.66 +10.72; CRCT×100 yday $8.78 → 09:30 $8.82 +4.00; GERN×947 yday $0.99 → 09:30 $0.99 +0.00; KD×54 yday $16.29 → 09:30 $16.29 +0.00; OCGN×1084 yday $0.93 → 09:30 $0.98 +56.37; STIM×366 yday $2.15 → 09:30 $2.23 +29.28; VNET×274 yday $3.16 → 09:30 $3.24 +21.92; XMAX×177 yday $5.33 → 09:30 $5.36 +5.31 | — |
 | 2026-11-09 09:30 ET | **BUY** | `ECX` | 1 | $0.80 | $0.01 | — | $5.84 | — | baseline list, no extra gate; list probable,yday_gainer; 🔵; ret5=-10.5; leftover $0.83 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 judge🟢 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
 | 2026-11-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5.84 | ▲ close $7,486.38 vs 09:30 $7,307.33 (session +179.06) | 16:00 close · cash $5.84 · equity $7,486.38 vs 09:30 $7,307.33 (+179.05; session marks +179.06) · 9 name(s) marked open→close (per-name table). CMTG×536 09:30 $1.66 → close $1.72 +32.16; CRCT×100 09:30 $8.82 → close $8.79 -3.00; GERN×947 09:30 $0.99 → close $1.00 +9.47; KD×54 09:30 $16.29 → close $16.80 +27.54; OCGN×1084 09:30 $0.98 → close $0.97 -5.42; STIM×366 09:30 $2.23 → close $2.18 -18.30; VNET×274 09:30 $3.24 → close $3.28 +10.96; XMAX×177 09:30 $5.36 → close $6.07 +125.67; ECX×1 09:30 $0.80 → close $0.78 -0.02 | — |
+| 2026-11-10 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $5.84 | ▼ 09:30 equity $7,476.32 vs yday $7,486.38 (-10.06) | 09:30 open · cash $5.84 (unchanged overnight, no fees) · equity $7,476.32 vs prior close $7,486.38 (-10.06) · 9 name(s) re-marked at the open (per-name table). CMTG×536 yday $1.72 → 09:30 $1.73 +5.36; CRCT×100 yday $8.79 → 09:30 $8.75 -4.00; ECX×1 yday $0.78 → 09:30 $0.80 +0.02; GERN×947 yday $1.00 → 09:30 $0.99 -13.54; KD×54 yday $16.80 → 09:30 $16.71 -4.86; OCGN×1084 yday $0.97 → 09:30 $0.98 +11.60; STIM×366 yday $2.18 → 09:30 $2.17 -3.66; VNET×274 yday $3.28 → 09:30 $3.27 -2.74; XMAX×177 yday $6.07 → 09:30 $6.08 +1.77 | — |
+| 2026-11-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5.84 | ▼ close $7,315.97 vs 09:30 $7,476.32 (session -160.35) | 16:00 close · cash $5.84 · equity $7,315.97 vs 09:30 $7,476.32 (-160.35; session marks -160.35) · 9 name(s) marked open→close (per-name table). CMTG×536 09:30 $1.73 → close $1.70 -16.08; CRCT×100 09:30 $8.75 → close $8.67 -8.00; ECX×1 09:30 $0.80 → close $0.78 -0.02; GERN×947 09:30 $0.99 → close $0.97 -10.89; KD×54 09:30 $16.71 → close $17.27 +30.24; OCGN×1084 09:30 $0.98 → close $0.95 -35.45; STIM×366 09:30 $2.17 → close $2.01 -58.56; VNET×274 09:30 $3.27 → close $3.00 -73.98; XMAX×177 09:30 $6.08 → close $6.15 +12.39 | — |
 
 ## Not taken
 

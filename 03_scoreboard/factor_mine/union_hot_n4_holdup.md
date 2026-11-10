@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 4 · rank `hot_score` · size `leftover` · sell `list` · S-boost `holdup` · hot4; S>0 lots stay through the next 09:30 so the overnight gap is in the book
 
-Cash book **+54.81%** ($15,481) · signal-only (no cash/fees) was +89.81%. Starts YES **29/30**. Fills 144 · skips 79 · realized $+4974.44.
+Cash book **+51.77%** ($15,177) · signal-only (no cash/fees) was +89.81%. Starts YES **29/30**. Fills 146 · skips 79 · realized $+4974.44.
 
 ## How this sleeve decides (like you are 10)
 
@@ -340,6 +340,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-09 09:30 ET | **BUY** | `AEHL` | 304 | $13.10 | $3.92 | — | $3,988.07 | — | hot4; S>0 lots stay through the next 09:30 so the overnight gap is in the book; rank hot_score; list yday_gainer,yday_mover; 🔵; ret5=+71.0; leftover $3987.19 | join🔴 sector🔴 gen🟢 news🔴 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-11-09 09:30 ET | **BUY** | `XERS` | 259 | $15.36 | $3.34 | — | $6.48 | — | hot4; S>0 lots stay through the next 09:30 so the overnight gap is in the book; rank hot_score; list yday_gainer; 🔵; ⚪; ret5=+41.9; leftover $3987.19 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6.48 | ▼ close $15,480.84 vs 09:30 $15,777.85 (session -253.58) | 16:00 close · cash $6.48 · equity $15,480.84 vs 09:30 $15,777.85 (-297.01; session marks -253.58) · 4 name(s) marked open→close (per-name table). APP×10 09:30 $387.71 → close $410.00 +222.90; BUUU×734 09:30 $5.30 → close $4.93 -271.58; AEHL×304 09:30 $13.10 → close $12.00 -334.40; XERS×259 09:30 $15.36 → close $15.86 +129.50 | — |
+| 2026-11-10 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6.48 | ▼ 09:30 equity $15,204.57 vs yday $15,480.84 (-276.27) | 09:30 open · cash $6.48 (unchanged overnight, no fees) · equity $15,204.57 vs prior close $15,480.84 (-276.27) · 4 name(s) re-marked at the open (per-name table). AEHL×304 yday $12.00 → 09:30 $11.33 -203.68; APP×10 yday $410.00 → 09:30 $405.59 -44.10; BUUU×734 yday $4.93 → 09:30 $4.93 +0.00; XERS×259 yday $15.86 → 09:30 $15.75 -28.49 | — |
+| 2026-11-10 09:30 ET | **SELL** | `APP` | 10 | $405.59 | $2.06 | $+492.32 | $4,060.32 | ▲ +492.32 after sell → book $15,202.51; vs 09:30 mark -2.06 | dropped from list after 2 sess (min 1) | — |
+| 2026-11-10 09:30 ET | **SELL** | `BUUU` | 734 | $4.93 | $9.62 | $-312.69 | $7,669.32 | ▼ -312.69 after sell → book $15,192.89; vs 09:30 mark -9.62 | dropped from list after 2 sess (min 1) | — |
+| 2026-11-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,669.32 | ▼ close $15,177.13 vs 09:30 $15,204.57 (session -15.76) | 16:00 close · cash $7,669.32 · equity $15,177.13 vs 09:30 $15,204.57 (-27.44; session marks -15.76) · 2 name(s) marked open→close (per-name table). AEHL×304 09:30 $11.33 → close $11.21 -36.48; XERS×259 09:30 $15.75 → close $15.83 +20.72 | — |
 
 ## Not taken
 

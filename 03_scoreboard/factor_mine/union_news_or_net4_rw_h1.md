@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 4 · rank `cond` · size `rank_w` · sell `list` · S-boost `none` · OR news + net≥4; leftover weighted by camera rank
 
-Cash book **-28.84%** ($7,116) · signal-only (no cash/fees) was -7.44%. Starts YES **5/30**. Fills 154 · skips 30 · realized $-225.56.
+Cash book **-30.22%** ($6,978) · signal-only (no cash/fees) was -7.44%. Starts YES **5/30**. Fills 160 · skips 30 · realized $-225.56.
 
 ## How this sleeve decides (like you are 10)
 
@@ -352,6 +352,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-09 09:30 ET | **BUY** | `ALGN` | 8 | $167.90 | $2.01 | — | $760.35 | — | OR news + net≥4; leftover weighted by camera rank; gate cam_net_min=4,news_or_headline=True; rank cond; list flatten; 🔵; ⚪; ret5=+10.7; leftover $1403.58 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-09 09:30 ET | **BUY** | `COLL` | 28 | $24.41 | $2.07 | — | $74.80 | — | OR news + net≥4; leftover weighted by camera rank; gate cam_net_min=4,news_or_headline=True; rank cond; list probable; 🔵; ⚪; ret5=+1.7; leftover $701.79 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $74.80 | ▲ close $7,115.53 vs 09:30 $6,931.00 (session +197.38) | 16:00 close · cash $74.80 · equity $7,115.53 vs 09:30 $6,931.00 (+184.53; session marks +197.38) · 4 name(s) marked open→close (per-name table). APP×7 09:30 $387.71 → close $410.00 +156.03; ADMA×163 09:30 $12.90 → close $12.79 -17.93; ALGN×8 09:30 $167.90 → close $174.26 +50.88; COLL×28 09:30 $24.41 → close $24.71 +8.40 | — |
+| 2026-11-10 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $74.80 | ▼ 09:30 equity $7,075.24 vs yday $7,115.53 (-40.29) | 09:30 open · cash $74.80 (unchanged overnight, no fees) · equity $7,075.24 vs prior close $7,115.53 (-40.29) · 4 name(s) re-marked at the open (per-name table). ADMA×163 yday $12.79 → 09:30 $12.89 +17.10; ALGN×8 yday $174.26 → 09:30 $171.82 -19.52; APP×7 yday $410.00 → 09:30 $405.59 -30.87; COLL×28 yday $24.71 → 09:30 $24.46 -7.00 | — |
+| 2026-11-10 09:30 ET | **SELL** | `ADMA` | 163 | $12.89 | $2.52 | $-5.83 | $2,174.15 | ▼ -5.83 after sell → book $7,072.72; vs 09:30 mark -2.52 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-10 09:30 ET | **SELL** | `APP` | 7 | $405.59 | $2.04 | $+343.43 | $5,011.23 | ▲ +343.43 after sell → book $7,070.67; vs 09:30 mark -2.05 | dropped from list after 2 sess (min 1) | — |
+| 2026-11-10 09:30 ET | **SELL** | `COLL` | 28 | $24.46 | $2.09 | $-2.77 | $5,694.02 | ▼ -2.77 after sell → book $7,068.58; vs 09:30 mark -2.09 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-10 09:30 ET | **BUY** | `FG` | 111 | $25.55 | $2.32 | — | $2,855.65 | — | OR news + net≥4; leftover weighted by camera rank; gate cam_net_min=4,news_or_headline=True; rank cond; list ohlc_hot; 🔵; ⚪; ret5=+17.7; leftover $2847.01 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-10 09:30 ET | **BUY** | `SG` | 139 | $13.61 | $2.41 | — | $961.45 | — | OR news + net≥4; leftover weighted by camera rank; gate cam_net_min=4,news_or_headline=True; rank cond; list ohlc_hot; 🔵; ⚪; ret5=+16.5; leftover $1898.01 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-10 09:30 ET | **BUY** | `ZVRA` | 80 | $11.80 | $2.23 | — | $15.22 | — | OR news + net≥4; leftover weighted by camera rank; gate cam_net_min=4,news_or_headline=True; rank cond; list flatten; 🔵; ⚪; ret5=+20.2; leftover $949.00 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $15.22 | ▼ close $6,978.26 vs 09:30 $7,075.24 (session -83.36) | 16:00 close · cash $15.22 · equity $6,978.26 vs 09:30 $7,075.24 (-96.98; session marks -83.36) · 4 name(s) marked open→close (per-name table). ALGN×8 09:30 $171.82 → close $174.26 +19.52; FG×111 09:30 $25.55 → close $25.00 -61.05; SG×139 09:30 $13.61 → close $13.24 -51.43; ZVRA×80 09:30 $11.80 → close $11.92 +9.60 | — |
 
 ## Not taken
 

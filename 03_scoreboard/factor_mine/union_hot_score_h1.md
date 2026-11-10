@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `hot_score` · size `leftover` · sell `list` · S-boost `none` · rank by hot_score
 
-Cash book **+24.77%** ($12,477) · signal-only (no cash/fees) was +50.67%. Starts YES **29/30**. Fills 530 · skips 90 · realized $+477.92.
+Cash book **+23.12%** ($12,312) · signal-only (no cash/fees) was +50.67%. Starts YES **29/30**. Fills 544 · skips 90 · realized $+477.92.
 
 ## How this sleeve decides (like you are 10)
 
@@ -725,6 +725,22 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-09 09:30 ET | **BUY** | `FUN` | 156 | $10.00 | $2.46 | — | $1,570.50 | — | rank by hot_score; rank hot_score; list yday_gainer; 🔵; ret5=+33.7; leftover $1561.51 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-11-09 09:30 ET | **BUY** | `LYNX` | 106 | $14.73 | $2.31 | — | $6.81 | — | rank by hot_score; rank hot_score; list yday_gainer; 🔵; ret5=+27.2; leftover $1561.51 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-11-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6.81 | ▲ close $12,476.91 vs 09:30 $12,406.03 (session +116.83) | 16:00 close · cash $6.81 · equity $12,476.91 vs 09:30 $12,406.03 (+70.88; session marks +116.83) · 8 name(s) marked open→close (per-name table). APP×4 09:30 $387.71 → close $410.00 +89.16; BUUU×276 09:30 $5.30 → close $4.93 -102.12; AEHL×119 09:30 $13.10 → close $12.00 -130.90; XERS×101 09:30 $15.36 → close $15.86 +50.50; ONT×70 09:30 $22.10 → close $23.59 +104.30; EVGO×853 09:30 $1.83 → close $1.84 +8.53; FUN×156 09:30 $10.00 → close $10.76 +118.56; LYNX×106 09:30 $14.73 → close $14.53 -21.20 | — |
+| 2026-11-10 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6.81 | ▼ 09:30 equity $12,310.62 vs yday $12,476.91 (-166.29) | 09:30 open · cash $6.81 (unchanged overnight, no fees) · equity $12,310.62 vs prior close $12,476.91 (-166.29) · 8 name(s) re-marked at the open (per-name table). AEHL×119 yday $12.00 → 09:30 $11.33 -79.73; APP×4 yday $410.00 → 09:30 $405.59 -17.64; BUUU×276 yday $4.93 → 09:30 $4.93 +0.00; EVGO×853 yday $1.84 → 09:30 $1.79 -42.65; FUN×156 yday $10.76 → 09:30 $10.76 -0.78; LYNX×106 yday $14.53 → 09:30 $14.50 -3.18; ONT×70 yday $23.59 → 09:30 $23.43 -11.20; XERS×101 yday $15.86 → 09:30 $15.75 -11.11 | — |
+| 2026-11-10 09:30 ET | **SELL** | `APP` | 4 | $405.59 | $2.02 | $+194.53 | $1,627.14 | ▲ +194.53 after sell → book $12,308.60; vs 09:30 mark -2.02 | dropped from list after 2 sess (min 1) | — |
+| 2026-11-10 09:30 ET | **SELL** | `BUUU` | 276 | $4.93 | $3.62 | $-117.58 | $2,984.21 | ▼ -117.58 after sell → book $12,304.98; vs 09:30 mark -3.62 | dropped from list after 2 sess (min 1) | — |
+| 2026-11-10 09:30 ET | **SELL** | `EVGO` | 853 | $1.79 | $11.16 | $-56.28 | $4,499.92 | ▼ -56.28 after sell → book $12,293.82; vs 09:30 mark -11.16 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-10 09:30 ET | **SELL** | `FUN` | 156 | $10.76 | $2.50 | $+112.82 | $6,175.20 | ▲ +112.82 after sell → book $12,291.32; vs 09:30 mark -2.50 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-10 09:30 ET | **SELL** | `LYNX` | 106 | $14.50 | $2.34 | $-29.03 | $7,709.87 | ▼ -29.03 after sell → book $12,288.99; vs 09:30 mark -2.33 | dropped from list after 1 sess (min 1) | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-10 09:30 ET | **SELL** | `ONT` | 70 | $23.43 | $2.22 | $+88.68 | $9,347.74 | ▲ +88.68 after sell → book $12,286.76; vs 09:30 mark -2.23 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-10 09:30 ET | **SELL** | `XERS` | 101 | $15.75 | $2.32 | $+34.77 | $10,936.17 | ▲ +34.77 after sell → book $12,284.44; vs 09:30 mark -2.32 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-10 09:30 ET | **BUY** | `GOGO` | 442 | $3.53 | $5.70 | — | $9,370.21 | — | rank by hot_score; rank hot_score; list yday_gainer,yday_mover; ret5=+56.7; leftover $1562.31 | join🔴 sector🟢 gen🟢 news🟢 digest🟢 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-10 09:30 ET | **BUY** | `CAPR` | 161 | $9.65 | $2.47 | — | $7,814.08 | — | rank by hot_score; rank hot_score; list overnight; ret5=+36.0; leftover $1562.31 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🔴 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-10 09:30 ET | **BUY** | `EVC` | 167 | $9.30 | $2.49 | — | $6,258.49 | — | rank by hot_score; rank hot_score; list yday_gainer; 🔵; ⚪; ret5=+44.2; leftover $1562.31 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-10 09:30 ET | **BUY** | `FLY` | 66 | $23.51 | $2.19 | — | $4,704.64 | — | rank by hot_score; rank hot_score; list yday_gainer,yday_mover,overnight; 🔵; ret5=+49.2; leftover $1562.31 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-10 09:30 ET | **BUY** | `INDI` | 731 | $2.13 | $9.43 | — | $3,134.53 | — | rank by hot_score; rank hot_score; list yday_gainer,yday_mover; 🔵; ret5=+46.2; leftover $1562.31 | join🔴 sector🔴 gen🟢 news🔴 digest🟢 judge🟡 ab🔴 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-10 09:30 ET | **BUY** | `NEOV` | 567 | $2.75 | $7.31 | — | $1,565.13 | — | rank by hot_score; rank hot_score; list yday_gainer; 🔵; ret5=+45.2; leftover $1562.31 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-11-10 09:30 ET | **BUY** | `TMDX` | 16 | $93.50 | $2.04 | — | $67.09 | — | rank by hot_score; rank hot_score; list flatten,yday_gainer,yday_mover; 🔵; ⚪; ret5=+40.7; leftover $1562.31 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $67.09 | ▲ close $12,311.71 vs 09:30 $12,310.62 (session +58.92) | 16:00 close · cash $67.09 · equity $12,311.71 vs 09:30 $12,310.62 (+1.09; session marks +58.92) · 8 name(s) marked open→close (per-name table). AEHL×119 09:30 $11.33 → close $11.21 -14.28; GOGO×442 09:30 $3.53 → close $3.60 +30.94; CAPR×161 09:30 $9.65 → close $8.87 -125.58; EVC×167 09:30 $9.30 → close $9.11 -31.73; FLY×66 09:30 $23.51 → close $23.70 +12.54; INDI×731 09:30 $2.13 → close $2.28 +106.00; NEOV×567 09:30 $2.75 → close $2.97 +121.91; TMDX×16 09:30 $93.50 → close $90.94 -40.88 | — |
 
 ## Not taken
 

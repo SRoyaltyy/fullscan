@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · MACD histogram < 0
 
-Cash book **-5.72%** ($9,428) · signal-only (no cash/fees) was +6.85%. Starts YES **5/30**. Fills 496 · skips 108 · realized $-743.47.
+Cash book **-4.91%** ($9,509) · signal-only (no cash/fees) was +6.85%. Starts YES **5/30**. Fills 512 · skips 108 · realized $-743.47.
 
 ## How this sleeve decides (like you are 10)
 
@@ -690,6 +690,24 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-09 09:30 ET | **SHORT** | `VCYT` | 25 | $24.40 | $2.10 | — | $14,119.59 | — | MACD histogram < 0; gate macd_down=True; list yday_mover; 🔵; ret5=-51.7; leftover $617.16 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟡 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-11-09 09:30 ET | **SHORT** | `AKBA` | 1520 | $0.41 | $11.01 | — | $14,725.70 | — | MACD histogram < 0; gate macd_down=True; list yday_mover; 🔵; ret5=-43.3; leftover $617.16 | join🟢 sector🟡 gen🟢 news🔴 digest🟢 judge🟢 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-11-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,725.70 | ▼ close $9,427.82 vs 09:30 $9,901.82 (session -413.66) | 16:00 close · cash $14,725.70 · equity $9,427.82 vs 09:30 $9,901.82 (-474.00; session marks -413.66) · 8 name(s) marked open→close (per-name table). CLOV×126 09:30 $4.88 → close $4.83 +6.30; WRBY×23 09:30 $25.91 → close $30.21 -98.90; ECX×769 09:30 $0.80 → close $0.78 +16.92; GCT×10 09:30 $60.00 → close $59.33 +6.70; ASPN×123 09:30 $5.01 → close $6.11 -135.30; MNTN×114 09:30 $5.38 → close $5.19 +21.66; VCYT×25 09:30 $24.40 → close $25.92 -38.00; AKBA×1520 09:30 $0.41 → close $0.53 -193.04 | — |
+| 2026-11-10 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $14,725.70 | ▲ 09:30 equity $9,470.32 vs yday $9,427.82 (+42.50) | 09:30 open · cash $14,725.70 (unchanged overnight, no fees) · equity $9,470.32 vs prior close $9,427.82 (+42.50) · 8 name(s) re-marked at the open (per-name table). AKBA×1520 yday $0.53 → 09:30 $0.53 -2.13; ASPN×123 yday $6.11 → 09:30 $5.95 +19.68; CLOV×126 yday $4.83 → 09:30 $4.82 +1.26; ECX×769 yday $0.78 → 09:30 $0.80 -13.15; GCT×10 yday $59.33 → 09:30 $58.50 +8.30; MNTN×114 yday $5.19 → 09:30 $5.10 +10.26; VCYT×25 yday $25.92 → 09:30 $25.52 +10.00; WRBY×23 yday $30.21 → 09:30 $29.85 +8.28 | — |
+| 2026-11-10 09:30 ET | **COVER** | `AKBA` | 1520 | $0.53 | $12.68 | $-218.86 | $13,900.73 | ▼ -218.86 after sell → book $9,457.64; vs 09:30 mark -12.68 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-10 09:30 ET | **COVER** | `ASPN` | 123 | $5.95 | $2.36 | $-120.39 | $13,166.52 | ▼ -120.39 after sell → book $9,455.28; vs 09:30 mark -2.36 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-10 09:30 ET | **COVER** | `CLOV` | 126 | $4.82 | $2.37 | $+2.78 | $12,556.83 | ▲ +2.78 after sell → book $9,452.91; vs 09:30 mark -2.37 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-10 09:30 ET | **COVER** | `ECX` | 769 | $0.80 | $8.44 | $-13.30 | $11,935.43 | ▼ -13.30 after sell → book $9,444.48; vs 09:30 mark -8.43 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-10 09:30 ET | **COVER** | `GCT` | 10 | $58.50 | $2.02 | $+10.92 | $11,348.41 | ▲ +10.92 after sell → book $9,442.46; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-10 09:30 ET | **COVER** | `MNTN` | 114 | $5.10 | $2.33 | $+27.21 | $10,764.67 | ▲ +27.21 after sell → book $9,440.12; vs 09:30 mark -2.34 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-10 09:30 ET | **COVER** | `VCYT` | 25 | $25.52 | $2.06 | $-32.17 | $10,124.61 | ▼ -32.17 after sell → book $9,438.06; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-10 09:30 ET | **COVER** | `WRBY` | 23 | $29.85 | $2.06 | $-94.77 | $9,436.00 | ▼ -94.77 after sell → book $9,436.00; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-10 09:30 ET | **SHORT** | `THM` | 390 | $1.51 | $5.12 | — | $10,019.78 | — | MACD histogram < 0; gate macd_down=True; list probable,yday_gainer,yday_mover; 🔵; ret5=-14.5; leftover $589.75 | join🔴 sector🟢 gen🟢 news🟡 digest🔴 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-11-10 09:30 ET | **SHORT** | `NUAI` | 277 | $2.12 | $3.65 | — | $10,604.76 | — | MACD histogram < 0; gate macd_down=True; list probable,yday_gainer,yday_mover; ret5=-5.6; leftover $589.75 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 judge🟡 ab🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-11-10 09:30 ET | **SHORT** | `IREN` | 28 | $20.80 | $2.11 | — | $11,185.05 | — | MACD histogram < 0; gate macd_down=True; list probable,yday_gainer; 🔵; ret5=-2.8; leftover $589.75 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 judge🟢 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-11-10 09:30 ET | **SHORT** | `ONDS` | 101 | $5.83 | $2.34 | — | $11,771.95 | — | MACD histogram < 0; gate macd_down=True; list probable; ret5=+3.8; leftover $589.75 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 judge🟡 ab🔴 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-11-10 09:30 ET | **SHORT** | `SITM` | 1 | $449.21 | $2.03 | — | $12,219.13 | — | MACD histogram < 0; gate macd_down=True; list probable; 🔵; ret5=+9.4; leftover $589.75 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 judge🟡 ab🟡 peer🟡 heat🔴 vol🟢 buy🟡 |
+| 2026-11-10 09:30 ET | **SHORT** | `STLN` | 148 | $3.97 | $2.48 | — | $12,804.21 | — | MACD histogram < 0; gate macd_down=True; list yday_mover; ret5=-36.0; leftover $589.75 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-11-10 09:30 ET | **SHORT** | `NRDS` | 76 | $7.75 | $2.26 | — | $13,390.95 | — | MACD histogram < 0; gate macd_down=True; list yday_mover; ret5=-28.9; leftover $589.75 | join🔴 sector🟢 gen🟢 news🔴 digest🟢 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-11-10 09:30 ET | **SHORT** | `IRTC` | 6 | $87.50 | $2.04 | — | $13,913.91 | — | MACD histogram < 0; gate macd_down=True; list yday_mover; ret5=-29.7; leftover $589.75 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-11-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $13,913.91 | ▲ close $9,508.56 vs 09:30 $9,470.32 (session +94.58) | 16:00 close · cash $13,913.91 · equity $9,508.56 vs 09:30 $9,470.32 (+38.24; session marks +94.58) · 8 name(s) marked open→close (per-name table). THM×390 09:30 $1.51 → close $1.41 +39.00; NUAI×277 09:30 $2.12 → close $2.07 +15.24; IREN×28 09:30 $20.80 → close $19.73 +29.96; ONDS×101 09:30 $5.83 → close $5.57 +26.66; SITM×1 09:30 $449.21 → close $444.45 +4.76; STLN×148 09:30 $3.97 → close $4.34 -54.76; NRDS×76 09:30 $7.75 → close $7.42 +25.08; IRTC×6 09:30 $87.50 → close $86.06 +8.64 | — |
 
 ## Not taken
 

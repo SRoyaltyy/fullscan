@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · merged news🟢, rank +G−R
 
-Cash book **-44.44%** ($5,556) · signal-only (no cash/fees) was +8.94%. Starts YES **0/30**. Fills 384 · skips 79 · realized $-430.09.
+Cash book **-44.29%** ($5,571) · signal-only (no cash/fees) was +8.94%. Starts YES **0/30**. Fills 398 · skips 79 · realized $-430.09.
 
 ## How this sleeve decides (like you are 10)
 
@@ -581,6 +581,22 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-09 09:30 ET | **BUY** | `MGNI` | 25 | $27.92 | $2.06 | — | $813.39 | — | merged news🟢, rank +G−R; gate news=good; rank cond; list yday_gainer; 🔵; ⚪; ret5=+27.5; leftover $723.41 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
 | 2026-11-09 09:30 ET | **BUY** | `PRVA` | 29 | $24.45 | $2.08 | — | $102.26 | — | merged news🟢, rank +G−R; gate news=good; rank cond; list ohlc_hot; 🔵; ⚪; ret5=+13.7; leftover $723.41 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $102.26 | ▲ close $5,556.11 vs 09:30 $5,466.30 (session +119.50) | 16:00 close · cash $102.26 · equity $5,556.11 vs 09:30 $5,466.30 (+89.81; session marks +119.50) · 8 name(s) marked open→close (per-name table). APP×1 09:30 $387.71 → close $410.00 +22.29; ADMA×56 09:30 $12.90 → close $12.79 -6.16; ALGN×4 09:30 $167.90 → close $174.26 +25.44; COLL×29 09:30 $24.41 → close $24.71 +8.70; COTY×174 09:30 $4.14 → close $4.22 +13.92; ENOV×26 09:30 $27.59 → close $28.54 +24.70; MGNI×25 09:30 $27.92 → close $29.04 +28.00; PRVA×29 09:30 $24.45 → close $24.54 +2.61 | — |
+| 2026-11-10 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $102.26 | ▼ 09:30 equity $5,522.99 vs yday $5,556.11 (-33.12) | 09:30 open · cash $102.26 (unchanged overnight, no fees) · equity $5,522.99 vs prior close $5,556.11 (-33.12) · 8 name(s) re-marked at the open (per-name table). ADMA×56 yday $12.79 → 09:30 $12.89 +5.87; ALGN×4 yday $174.26 → 09:30 $171.82 -9.76; APP×1 yday $410.00 → 09:30 $405.59 -4.41; COLL×29 yday $24.71 → 09:30 $24.46 -7.25; COTY×174 yday $4.22 → 09:30 $4.19 -5.22; ENOV×26 yday $28.54 → 09:30 $28.19 -9.10; MGNI×25 yday $29.04 → 09:30 $28.91 -3.25; PRVA×29 yday $24.54 → 09:30 $24.54 +0.00 | — |
+| 2026-11-10 09:30 ET | **SELL** | `ADMA` | 56 | $12.89 | $2.18 | $-4.62 | $822.20 | ▼ -4.62 after sell → book $5,520.82; vs 09:30 mark -2.17 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-10 09:30 ET | **SELL** | `APP` | 1 | $405.59 | $2.01 | $+45.63 | $1,225.77 | ▲ +45.63 after sell → book $5,518.80; vs 09:30 mark -2.02 | dropped from list after 2 sess (min 1) | — |
+| 2026-11-10 09:30 ET | **SELL** | `COLL` | 29 | $24.46 | $2.10 | $-2.72 | $1,933.02 | ▼ -2.72 after sell → book $5,516.71; vs 09:30 mark -2.09 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-10 09:30 ET | **SELL** | `COTY` | 174 | $4.19 | $2.55 | $+3.64 | $2,659.53 | ▲ +3.64 after sell → book $5,514.16; vs 09:30 mark -2.55 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-10 09:30 ET | **SELL** | `ENOV` | 26 | $28.19 | $2.09 | $+11.44 | $3,390.38 | ▲ +11.44 after sell → book $5,512.07; vs 09:30 mark -2.09 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-10 09:30 ET | **SELL** | `MGNI` | 25 | $28.91 | $2.08 | $+20.60 | $4,111.04 | ▲ +20.60 after sell → book $5,509.98; vs 09:30 mark -2.09 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-10 09:30 ET | **SELL** | `PRVA` | 29 | $24.54 | $2.10 | $-1.56 | $4,820.61 | ▼ -1.56 after sell → book $5,507.89; vs 09:30 mark -2.09 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-10 09:30 ET | **BUY** | `FG` | 26 | $25.55 | $2.07 | — | $4,154.24 | — | merged news🟢, rank +G−R; gate news=good; rank cond; list ohlc_hot; 🔵; ⚪; ret5=+17.7; leftover $688.66 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-10 09:30 ET | **BUY** | `SG` | 50 | $13.61 | $2.14 | — | $3,471.60 | — | merged news🟢, rank +G−R; gate news=good; rank cond; list ohlc_hot; 🔵; ⚪; ret5=+16.5; leftover $688.66 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-10 09:30 ET | **BUY** | `ZVRA` | 58 | $11.80 | $2.16 | — | $2,785.03 | — | merged news🟢, rank +G−R; gate news=good; rank cond; list flatten; 🔵; ⚪; ret5=+20.2; leftover $688.66 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-10 09:30 ET | **BUY** | `ETON` | 10 | $63.63 | $2.02 | — | $2,146.71 | — | merged news🟢, rank +G−R; gate news=good; rank cond; list flatten; 🔵; ⚪; ret5=+26.6; leftover $688.66 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-10 09:30 ET | **BUY** | `GRDN` | 14 | $46.67 | $2.03 | — | $1,491.30 | — | merged news🟢, rank +G−R; gate news=good; rank cond; list ohlc_hot; 🔵; ⚪; ret5=+17.6; leftover $688.66 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-10 09:30 ET | **BUY** | `SERV` | 209 | $3.29 | $2.70 | — | $801.00 | — | merged news🟢, rank +G−R; gate news=good; rank cond; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+35.1; leftover $688.66 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-10 09:30 ET | **BUY** | `CLYM` | 62 | $10.96 | $2.18 | — | $119.30 | — | merged news🟢, rank +G−R; gate news=good; rank cond; list ohlc_hot; 🔵; ⚪; ret5=+13.0; leftover $688.66 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $119.30 | ▲ close $5,570.87 vs 09:30 $5,522.99 (session +78.28) | 16:00 close · cash $119.30 · equity $5,570.87 vs 09:30 $5,522.99 (+47.88; session marks +78.28) · 8 name(s) marked open→close (per-name table). ALGN×4 09:30 $171.82 → close $174.26 +9.76; FG×26 09:30 $25.55 → close $25.00 -14.30; SG×50 09:30 $13.61 → close $13.24 -18.50; ZVRA×58 09:30 $11.80 → close $11.92 +6.96; ETON×10 09:30 $63.63 → close $67.54 +39.10; GRDN×14 09:30 $46.67 → close $49.85 +44.52; SERV×209 09:30 $3.29 → close $3.11 -37.62; CLYM×62 09:30 $10.96 → close $11.74 +48.36 | — |
 
 ## Not taken
 

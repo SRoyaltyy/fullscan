@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ flow_in, no 🚨
 
-Cash book **-9.68%** ($9,032) · signal-only (no cash/fees) was +15.53%. Starts YES **3/30**. Fills 109 · skips 105 · realized $-281.48.
+Cash book **-12.23%** ($8,777) · signal-only (no cash/fees) was +15.53%. Starts YES **3/30**. Fills 112 · skips 105 · realized $-281.48.
 
 ## How this sleeve decides (like you are 10)
 
@@ -305,6 +305,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-09 09:30 ET | **BUY** | `VCYT` | 119 | $24.40 | $2.35 | — | $2,913.88 | — | union ∩ flow_in, no 🚨; gate flow_in=True; list yday_mover; 🔵; ret5=-51.7; leftover $2909.80 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟡 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-11-09 09:30 ET | **BUY** | `FERG` | 11 | $251.68 | $2.02 | — | $143.38 | — | union ∩ flow_in, no 🚨; gate flow_in=True; list earn_react; ret5=-2.1; leftover $2909.80 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🟡 buy🟡 |
 | 2026-11-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $143.38 | ▲ close $9,032.11 vs 09:30 $8,747.97 (session +310.19) | 16:00 close · cash $143.38 · equity $9,032.11 vs 09:30 $8,747.97 (+284.14; session marks +310.19) · 3 name(s) marked open→close (per-name table). CERT×241 09:30 $12.06 → close $12.22 +38.56; VCYT×119 09:30 $24.40 → close $25.92 +180.88; FERG×11 09:30 $251.68 → close $259.93 +90.75 | — |
+| 2026-11-10 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $143.38 | ▼ 09:30 equity $8,916.75 vs yday $9,032.11 (-115.36) | 09:30 open · cash $143.38 (unchanged overnight, no fees) · equity $8,916.75 vs prior close $9,032.11 (-115.36) · 3 name(s) re-marked at the open (per-name table). CERT×241 yday $12.22 → 09:30 $12.00 -53.02; FERG×11 yday $259.93 → 09:30 $258.59 -14.74; VCYT×119 yday $25.92 → 09:30 $25.52 -47.60 | — |
+| 2026-11-10 09:30 ET | **BUY** | `CLNE` | 25 | $1.90 | $0.55 | — | $95.33 | — | union ∩ flow_in, no 🚨; gate flow_in=True; list yday_gainer,yday_mover; ret5=+33.1; leftover $47.79 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-10 09:30 ET | **BUY** | `NRDS` | 6 | $7.75 | $0.48 | — | $48.35 | — | union ∩ flow_in, no 🚨; gate flow_in=True; list yday_mover; ret5=-28.9; leftover $47.79 | join🔴 sector🟢 gen🟢 news🔴 digest🟢 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-11-10 09:30 ET | **BUY** | `ONON` | 1 | $34.72 | $0.35 | — | $13.28 | — | union ∩ flow_in, no 🚨; gate flow_in=True; list earn_react; ret5=+5.7; leftover $47.79 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $13.28 | ▼ close $8,777.35 vs 09:30 $8,916.75 (session -138.02) | 16:00 close · cash $13.28 · equity $8,777.35 vs 09:30 $8,916.75 (-139.40; session marks -138.02) · 6 name(s) marked open→close (per-name table). CERT×241 09:30 $12.00 → close $12.12 +30.12; FERG×11 09:30 $258.59 → close $259.44 +9.35; VCYT×119 09:30 $25.52 → close $24.06 -173.74; CLNE×25 09:30 $1.90 → close $1.83 -1.75; NRDS×6 09:30 $7.75 → close $7.42 -1.98; ONON×1 09:30 $34.72 → close $34.70 -0.02 | — |
 
 ## Not taken
 

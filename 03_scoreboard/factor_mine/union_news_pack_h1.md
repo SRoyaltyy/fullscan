@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · morning packet news🟢 only (not the merged box)
 
-Cash book **+14.12%** ($11,412) · signal-only (no cash/fees) was +6.91%. Starts YES **21/30**. Fills 146 · skips 29 · realized $+1396.12.
+Cash book **+14.15%** ($11,415) · signal-only (no cash/fees) was +6.91%. Starts YES **21/30**. Fills 148 · skips 29 · realized $+1396.12.
 
 ## How this sleeve decides (like you are 10)
 
@@ -343,6 +343,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-09 09:30 ET | **SELL** | `VST` | 11 | $128.00 | $2.04 | $+88.66 | $9,815.02 | ▲ +88.66 after sell → book $10,978.15; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-09 09:30 ET | **BUY** | `ALGN` | 58 | $167.90 | $2.16 | — | $74.66 | — | morning packet news🟢 only (not the merged box); gate news_box=good; rank cond; list flatten; 🔵; ⚪; ret5=+10.7; leftover $9815.02 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $74.66 | ▲ close $11,411.74 vs 09:30 $10,992.66 (session +435.75) | 16:00 close · cash $74.66 · equity $11,411.74 vs 09:30 $10,992.66 (+419.08; session marks +435.75) · 2 name(s) marked open→close (per-name table). APP×3 09:30 $387.71 → close $410.00 +66.87; ALGN×58 09:30 $167.90 → close $174.26 +368.88 | — |
+| 2026-11-10 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $74.66 | ▼ 09:30 equity $11,256.99 vs yday $11,411.74 (-154.75) | 09:30 open · cash $74.66 (unchanged overnight, no fees) · equity $11,256.99 vs prior close $11,411.74 (-154.75) · 2 name(s) re-marked at the open (per-name table). ALGN×58 yday $174.26 → 09:30 $171.82 -141.52; APP×3 yday $410.00 → 09:30 $405.59 -13.23 | — |
+| 2026-11-10 09:30 ET | **SELL** | `APP` | 3 | $405.59 | $2.02 | $+144.90 | $1,289.41 | ▲ +144.90 after sell → book $11,254.97; vs 09:30 mark -2.02 | dropped from list after 2 sess (min 1) | — |
+| 2026-11-10 09:30 ET | **BUY** | `HNRG` | 128 | $10.00 | $2.37 | — | $7.04 | — | morning packet news🟢 only (not the merged box); gate news_box=good; rank cond; list earn_react; 🔵; ret5=-0.1; leftover $1289.41 | join🔴 sector🟢 gen🟢 news🟢 digest🟢 ab🔴 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-11-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7.04 | ▲ close $11,414.60 vs 09:30 $11,256.99 (session +162.00) | 16:00 close · cash $7.04 · equity $11,414.60 vs 09:30 $11,256.99 (+157.61; session marks +162.00) · 2 name(s) marked open→close (per-name table). ALGN×58 09:30 $171.82 → close $174.26 +141.52; HNRG×128 09:30 $10.00 → close $10.16 +20.48 | — |
 
 ## Not taken
 

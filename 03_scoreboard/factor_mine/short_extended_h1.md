@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · ret_5>15
 
-Cash book **-3.10%** ($9,690) · signal-only (no cash/fees) was -19.86%. Starts YES **3/30**. Fills 476 · skips 88 · realized $-1484.16.
+Cash book **-2.71%** ($9,729) · signal-only (no cash/fees) was -19.86%. Starts YES **3/30**. Fills 490 · skips 88 · realized $-1484.16.
 
 ## How this sleeve decides (like you are 10)
 
@@ -670,6 +670,22 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-09 09:30 ET | **SHORT** | `PTLO` | 103 | $6.73 | $2.35 | — | $14,210.37 | — | ret_5>15; gate ret_5_min=15.0; list yday_gainer,yday_mover; 🔵; ret5=+36.3; leftover $696.39 | join🟢 sector🔴 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-09 09:30 ET | **SHORT** | `XERS` | 45 | $15.36 | $2.16 | — | $14,899.40 | — | ret_5>15; gate ret_5_min=15.0; list yday_gainer; 🔵; ⚪; ret5=+41.9; leftover $696.39 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,899.40 | ▼ close $9,689.71 vs 09:30 $9,767.68 (session -40.85) | 16:00 close · cash $14,899.40 · equity $9,689.71 vs 09:30 $9,767.68 (-77.97; session marks -40.85) · 8 name(s) marked open→close (per-name table). APP×1 09:30 $387.71 → close $410.00 -22.29; TMDX×7 09:30 $88.00 → close $93.79 -40.53; CGON×9 09:30 $77.19 → close $74.74 +22.05; AEHL×53 09:30 $13.10 → close $12.00 +58.30; AMTX×422 09:30 $1.65 → close $1.73 -33.76; DNUT×169 09:30 $4.12 → close $4.03 +14.36; PTLO×103 09:30 $6.73 → close $6.89 -16.48; XERS×45 09:30 $15.36 → close $15.86 -22.50 | — |
+| 2026-11-10 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $14,899.40 | ▲ 09:30 equity $9,762.63 vs yday $9,689.71 (+72.92) | 09:30 open · cash $14,899.40 (unchanged overnight, no fees) · equity $9,762.63 vs prior close $9,689.71 (+72.92) · 8 name(s) re-marked at the open (per-name table). AEHL×53 yday $12.00 → 09:30 $11.33 +35.51; AMTX×422 yday $1.73 → 09:30 $1.71 +8.44; APP×1 yday $410.00 → 09:30 $405.59 +4.41; CGON×9 yday $74.74 → 09:30 $73.84 +8.10; DNUT×169 yday $4.03 → 09:30 $3.98 +8.45; PTLO×103 yday $6.89 → 09:30 $6.88 +1.03; TMDX×7 yday $93.79 → 09:30 $93.50 +2.03; XERS×45 yday $15.86 → 09:30 $15.75 +4.95 | — |
+| 2026-11-10 09:30 ET | **COVER** | `AEHL` | 53 | $11.33 | $2.15 | $+89.47 | $14,296.76 | ▲ +89.47 after sell → book $9,760.48; vs 09:30 mark -2.15 | dropped from list after 1 sess (min 1) | join🟢 sector🟢 gen🟢 news🔴 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-10 09:30 ET | **COVER** | `AMTX` | 422 | $1.71 | $5.44 | $-36.31 | $13,569.70 | ▼ -36.31 after sell → book $9,755.04; vs 09:30 mark -5.44 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-10 09:30 ET | **COVER** | `APP` | 1 | $405.59 | $1.99 | $-53.66 | $13,162.11 | ▼ -53.66 after sell → book $9,753.04; vs 09:30 mark -2.00 | dropped from list after 2 sess (min 1) | — |
+| 2026-11-10 09:30 ET | **COVER** | `CGON` | 9 | $73.84 | $2.02 | $+26.08 | $12,495.54 | ▲ +26.08 after sell → book $9,751.03; vs 09:30 mark -2.01 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-10 09:30 ET | **COVER** | `DNUT` | 169 | $3.98 | $2.50 | $+17.76 | $11,820.42 | ▲ +17.76 after sell → book $9,748.53; vs 09:30 mark -2.50 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-10 09:30 ET | **COVER** | `PTLO` | 103 | $6.88 | $2.30 | $-20.09 | $11,109.48 | ▼ -20.09 after sell → book $9,746.23; vs 09:30 mark -2.30 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-10 09:30 ET | **COVER** | `XERS` | 45 | $15.75 | $2.12 | $-21.84 | $10,398.61 | ▼ -21.84 after sell → book $9,744.11; vs 09:30 mark -2.12 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-10 09:30 ET | **SHORT** | `WRBY` | 23 | $29.85 | $2.10 | — | $11,083.06 | — | ret_5>15; gate ret_5_min=15.0; list flatten; 🔵; ⚪; ret5=+26.6; leftover $696.01 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-10 09:30 ET | **SHORT** | `ETON` | 10 | $63.63 | $2.06 | — | $11,717.30 | — | ret_5>15; gate ret_5_min=15.0; list flatten; 🔵; ⚪; ret5=+26.6; leftover $696.01 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-10 09:30 ET | **SHORT** | `ZVRA` | 58 | $11.80 | $2.20 | — | $12,399.50 | — | ret_5>15; gate ret_5_min=15.0; list flatten; 🔵; ⚪; ret5=+20.2; leftover $696.01 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-10 09:30 ET | **SHORT** | `GOGO` | 197 | $3.53 | $2.64 | — | $13,092.27 | — | ret_5>15; gate ret_5_min=15.0; list yday_gainer,yday_mover; ret5=+56.7; leftover $696.01 | join🔴 sector🟢 gen🟢 news🟢 digest🟢 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-10 09:30 ET | **SHORT** | `KRMN` | 15 | $44.67 | $2.07 | — | $13,760.24 | — | ret_5>15; gate ret_5_min=15.0; list yday_gainer,yday_mover; 🔵; ret5=+17.3; leftover $696.01 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-10 09:30 ET | **SHORT** | `SERV` | 211 | $3.29 | $2.79 | — | $14,451.65 | — | ret_5>15; gate ret_5_min=15.0; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+35.1; leftover $696.01 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-10 09:30 ET | **SHORT** | `FLY` | 29 | $23.51 | $2.12 | — | $15,131.32 | — | ret_5>15; gate ret_5_min=15.0; list yday_gainer,yday_mover,overnight; 🔵; ret5=+49.2; leftover $696.01 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $15,131.32 | ▲ close $9,728.89 vs 09:30 $9,762.63 (session +0.76) | 16:00 close · cash $15,131.32 · equity $9,728.89 vs 09:30 $9,762.63 (-33.74; session marks +0.76) · 8 name(s) marked open→close (per-name table). TMDX×7 09:30 $93.50 → close $90.94 +17.89; WRBY×23 09:30 $29.85 → close $29.90 -1.15; ETON×10 09:30 $63.63 → close $67.54 -39.10; ZVRA×58 09:30 $11.80 → close $11.92 -6.96; GOGO×197 09:30 $3.53 → close $3.60 -13.79; KRMN×15 09:30 $44.67 → close $43.91 +11.40; SERV×211 09:30 $3.29 → close $3.11 +37.98; FLY×29 09:30 $23.51 → close $23.70 -5.51 | — |
 
 ## Not taken
 

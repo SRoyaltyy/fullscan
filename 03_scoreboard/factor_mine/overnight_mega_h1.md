@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `overnight_mega` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · prior-calendar AMC-today / BMO-next, mcap≥$50B; hold 1 sells at next 09:30 so the print gap is in the book
 
-Cash book **-6.08%** ($9,392) · signal-only (no cash/fees) was -15.28%. Starts YES **0/30**. Fills 33 · skips 15 · realized $-576.24.
+Cash book **-6.96%** ($9,304) · signal-only (no cash/fees) was -15.28%. Starts YES **0/30**. Fills 34 · skips 15 · realized $-576.24.
 
 ## How this sleeve decides (like you are 10)
 
@@ -227,6 +227,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,359.12 | ▲ 09:30 equity $9,359.12 vs yday $9,359.12 (+0.00) | 09:30 open · cash $9,359.12 · no holdings · equity $9,359.12 vs prior close $9,359.12 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-11-09 09:30 ET | **BUY** | `OXY` | 168 | $55.55 | $2.49 | — | $24.23 | — | prior-calendar AMC-today / BMO-next, mcap≥$50B; hold 1 sells at next 09:30 so the print gap is in the book; list overnight,overnight_mega; 🔵; ret5=-11.9; leftover $9359.12 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟡 heat🔴 vol🟢 buy🟡 |
 | 2026-11-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $24.23 | ▲ close $9,391.91 vs 09:30 $9,359.12 (session +35.28) | 16:00 close · cash $24.23 · equity $9,391.91 vs 09:30 $9,359.12 (+32.79; session marks +35.28) · 1 name(s) marked open→close (per-name table). OXY×168 09:30 $55.55 → close $55.76 +35.28 | — |
+| 2026-11-10 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $24.23 | ▼ 09:30 equity $9,306.23 vs yday $9,391.91 (-85.68) | 09:30 open · cash $24.23 (unchanged overnight, no fees) · equity $9,306.23 vs prior close $9,391.91 (-85.68) · 1 name(s) re-marked at the open (per-name table). OXY×168 yday $55.76 → 09:30 $55.25 -85.68 | — |
+| 2026-11-10 09:30 ET | **SELL** | `OXY` | 168 | $55.25 | $2.60 | $-55.49 | $9,303.63 | ▼ -55.49 after sell → book $9,303.63; vs 09:30 mark -2.60 | dropped from list after 1 sess (min 1) | join🔴 sector🔴 gen🟢 news🟢 digest🟢 ab🟢 peer🟡 heat🔴 vol🟡 buy🟡 |
+| 2026-11-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,303.63 | ▲ close $9,303.63 vs 09:30 $9,306.23 (session +0.00) | 16:00 close · cash $9,303.63 · no lots left · equity $9,303.63. | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **+37.64%** ($13,764) · signal-only (no cash/fees) was -3.93%. Starts YES **1/30**. Fills 72 · skips 0 · realized $-826.45.
+Cash book **+32.71%** ($13,271) · signal-only (no cash/fees) was -3.93%. Starts YES **1/30**. Fills 75 · skips 0 · realized $-826.45.
 
 ## How this sleeve decides (like you are 10)
 
@@ -270,3 +270,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-09 09:30 ET | **BUY** | `MARA` | 1025 | $6.31 | $13.22 | — | $6,459.16 | — | combo gate; gate macd_up=True,rsi_os=True; list overnight; 🔵; ret5=-6.2; leftover $6470.07 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 heat🔴 vol🟡 buy🟡 |
 | 2026-11-09 09:30 ET | **BUY** | `QUBT` | 1014 | $6.36 | $13.08 | — | $2.11 | — | combo gate; gate macd_up=True,rsi_os=True; list overnight; ret5=-4.1; leftover $6470.07 | join🔴 sector🟡 gen🟢 news🟡 digest🔴 judge🔴 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
 | 2026-11-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2.11 | ▲ close $13,764.15 vs 09:30 $13,054.24 (session +850.32) | 16:00 close · cash $2.11 · equity $13,764.15 vs 09:30 $13,054.24 (+709.91; session marks +850.32) · 2 name(s) marked open→close (per-name table). MARA×1025 09:30 $6.31 → close $6.64 +338.25; QUBT×1014 09:30 $6.36 → close $6.86 +512.07 | — |
+| 2026-11-10 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $2.11 | ▼ 09:30 equity $13,347.53 vs yday $13,764.15 (-416.62) | 09:30 open · cash $2.11 (unchanged overnight, no fees) · equity $13,347.53 vs prior close $13,764.15 (-416.62) · 2 name(s) re-marked at the open (per-name table). MARA×1025 yday $6.64 → 09:30 $6.56 -82.00; QUBT×1014 yday $6.86 → 09:30 $6.53 -334.62 | — |
+| 2026-11-10 09:30 ET | **SELL** | `MARA` | 1025 | $6.56 | $13.45 | $+229.58 | $6,712.66 | ▲ +229.58 after sell → book $13,334.08; vs 09:30 mark -13.45 | dropped from list after 1 sess (min 1) | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🔴 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-10 09:30 ET | **SELL** | `QUBT` | 1014 | $6.53 | $13.30 | $+151.07 | $13,320.78 | ▲ +151.07 after sell → book $13,320.78; vs 09:30 mark -13.30 | dropped from list after 1 sess (min 1) | join🔴 sector🔴 gen🟢 news🟡 digest🟢 judge🟡 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-11-10 09:30 ET | **BUY** | `SWMR` | 1513 | $8.79 | $19.52 | — | $1.99 | — | combo gate; gate macd_up=True,rsi_os=True; list overnight; ret5=-1.6; leftover $13320.78 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 judge🟡 ab🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-11-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1.99 | ▼ close $13,271.00 vs 09:30 $13,347.53 (session -30.26) | 16:00 close · cash $1.99 · equity $13,271.00 vs 09:30 $13,347.53 (-76.53; session marks -30.26) · 1 name(s) marked open→close (per-name table). SWMR×1513 09:30 $8.79 → close $8.77 -30.26 | — |

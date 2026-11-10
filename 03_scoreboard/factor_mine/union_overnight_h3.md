@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ overnight, no 🚨
 
-Cash book **-6.76%** ($9,324) · signal-only (no cash/fees) was -45.53%. Starts YES **0/30**. Fills 123 · skips 176 · realized $-1797.14.
+Cash book **-6.66%** ($9,334) · signal-only (no cash/fees) was -45.53%. Starts YES **0/30**. Fills 123 · skips 176 · realized $-1797.14.
 
 ## How this sleeve decides (like you are 10)
 
@@ -319,6 +319,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $0.02 | ▲ close $8,655.78 vs 09:30 $8,545.68 (session +123.36) | 16:00 close · cash $0.02 · equity $8,655.78 vs 09:30 $8,545.68 (+110.10; session marks +123.36) · 1 name(s) marked open→close (per-name table). HE×1028 09:30 $8.30 → close $8.42 +123.36 | — |
 | 2026-11-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $0.02 | ▲ 09:30 equity $9,395.94 vs yday $8,655.78 (+740.16) | 09:30 open · cash $0.02 (unchanged overnight, no fees) · equity $9,395.94 vs prior close $8,655.78 (+740.16) · 1 name(s) re-marked at the open (per-name table). HE×1028 yday $8.42 → 09:30 $9.14 +740.16 | — |
 | 2026-11-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $0.02 | ▼ close $9,323.98 vs 09:30 $9,395.94 (session -71.96) | 16:00 close · cash $0.02 · equity $9,323.98 vs 09:30 $9,395.94 (-71.96; session marks -71.96) · 1 name(s) marked open→close (per-name table). HE×1028 09:30 $9.14 → close $9.07 -71.96 | — |
+| 2026-11-10 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $0.02 | ▼ 09:30 equity $9,159.50 vs yday $9,323.98 (-164.48) | 09:30 open · cash $0.02 (unchanged overnight, no fees) · equity $9,159.50 vs prior close $9,323.98 (-164.48) · 1 name(s) re-marked at the open (per-name table). HE×1028 yday $9.07 → 09:30 $8.91 -164.48 | — |
+| 2026-11-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $0.02 | ▲ close $9,334.26 vs 09:30 $9,159.50 (session +174.76) | 16:00 close · cash $0.02 · equity $9,334.26 vs 09:30 $9,159.50 (+174.76; session marks +174.76) · 1 name(s) marked open→close (per-name table). HE×1028 09:30 $8.91 → close $9.08 +174.76 | — |
 
 ## Not taken
 

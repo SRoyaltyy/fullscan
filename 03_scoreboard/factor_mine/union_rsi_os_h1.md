@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ rsi_os, no 🚨
 
-Cash book **-24.80%** ($7,520) · signal-only (no cash/fees) was -7.54%. Starts YES **0/30**. Fills 228 · skips 20 · realized $-3180.18.
+Cash book **-22.67%** ($7,733) · signal-only (no cash/fees) was -7.54%. Starts YES **0/30**. Fills 244 · skips 20 · realized $-3180.18.
 
 ## How this sleeve decides (like you are 10)
 
@@ -424,6 +424,24 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-09 09:30 ET | **BUY** | `ACDC` | 283 | $3.01 | $3.65 | — | $835.84 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list yday_mover; 🔵; ret5=-38.4; leftover $852.03 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
 | 2026-11-09 09:30 ET | **BUY** | `CCOI` | 205 | $4.06 | $2.64 | — | $0.89 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list yday_mover; ret5=-40.9; leftover $852.03 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-11-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $0.89 | ▲ close $7,519.71 vs 09:30 $6,836.82 (session +750.06) | 16:00 close · cash $0.89 · equity $7,519.71 vs 09:30 $6,836.82 (+682.89; session marks +750.06) · 8 name(s) marked open→close (per-name table). MNTN×158 09:30 $5.38 → close $5.19 -30.02; VCYT×34 09:30 $24.40 → close $25.92 +51.68; AKBA×2098 09:30 $0.41 → close $0.53 +266.45; DDD×478 09:30 $1.78 → close $1.92 +66.92; TDUP×655 09:30 $1.30 → close $1.36 +42.57; PCT×489 09:30 $1.74 → close $2.06 +156.48; ACDC×283 09:30 $3.01 → close $3.42 +116.03; CCOI×205 09:30 $4.06 → close $4.45 +79.95 | — |
+| 2026-11-10 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $0.89 | ▼ 09:30 equity $7,398.60 vs yday $7,519.71 (-121.11) | 09:30 open · cash $0.89 (unchanged overnight, no fees) · equity $7,398.60 vs prior close $7,519.71 (-121.11) · 8 name(s) re-marked at the open (per-name table). ACDC×283 yday $3.42 → 09:30 $3.32 -28.30; AKBA×2098 yday $0.53 → 09:30 $0.53 +2.94; CCOI×205 yday $4.45 → 09:30 $4.30 -30.75; DDD×478 yday $1.92 → 09:30 $1.89 -14.34; MNTN×158 yday $5.19 → 09:30 $5.10 -14.22; PCT×489 yday $2.06 → 09:30 $2.02 -19.56; TDUP×655 yday $1.36 → 09:30 $1.36 -3.27; VCYT×34 yday $25.92 → 09:30 $25.52 -13.60 | — |
+| 2026-11-10 09:30 ET | **SELL** | `ACDC` | 283 | $3.32 | $3.71 | $+80.37 | $936.74 | ▲ +80.37 after sell → book $7,394.89; vs 09:30 mark -3.71 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-10 09:30 ET | **SELL** | `AKBA` | 2098 | $0.53 | $17.86 | $+236.71 | $2,040.05 | ▲ +236.71 after sell → book $7,377.03; vs 09:30 mark -17.86 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-10 09:30 ET | **SELL** | `CCOI` | 205 | $4.30 | $2.69 | $+43.87 | $2,918.86 | ▲ +43.87 after sell → book $7,374.34; vs 09:30 mark -2.69 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-10 09:30 ET | **SELL** | `DDD` | 478 | $1.89 | $6.26 | $+40.16 | $3,816.03 | ▲ +40.16 after sell → book $7,368.09; vs 09:30 mark -6.25 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-10 09:30 ET | **SELL** | `MNTN` | 158 | $5.10 | $2.50 | $-49.20 | $4,619.33 | ▼ -49.20 after sell → book $7,365.59; vs 09:30 mark -2.50 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-10 09:30 ET | **SELL** | `PCT` | 489 | $2.02 | $6.40 | $+124.21 | $5,600.71 | ▲ +124.21 after sell → book $7,359.19; vs 09:30 mark -6.40 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-10 09:30 ET | **SELL** | `TDUP` | 655 | $1.36 | $8.57 | $+22.28 | $6,482.94 | ▲ +22.28 after sell → book $7,350.62; vs 09:30 mark -8.57 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-10 09:30 ET | **SELL** | `VCYT` | 34 | $25.52 | $2.11 | $+33.88 | $7,348.51 | ▲ +33.88 after sell → book $7,348.51; vs 09:30 mark -2.11 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-10 09:30 ET | **BUY** | `STLN` | 231 | $3.97 | $2.98 | — | $6,428.46 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list yday_mover; ret5=-36.0; leftover $918.56 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-11-10 09:30 ET | **BUY** | `AUTL` | 759 | $1.21 | $9.79 | — | $5,500.27 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list earn_react; ret5=-7.0; leftover $918.56 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-10 09:30 ET | **BUY** | `BW` | 242 | $3.79 | $3.12 | — | $4,578.76 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list earn_react; 🔵; ret5=-6.9; leftover $918.56 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-11-10 09:30 ET | **BUY** | `DJT` | 229 | $4.00 | $2.95 | — | $3,659.81 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list earn_react; 🔵; ret5=-28.3; leftover $918.56 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-11-10 09:30 ET | **BUY** | `PDYN` | 245 | $3.74 | $3.16 | — | $2,740.35 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list earn_react; ret5=+6.0; leftover $918.56 | join🔴 sector🔴 gen🟢 news🔴 digest🟢 judge🟡 ab🔴 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-11-10 09:30 ET | **BUY** | `SB` | 125 | $7.33 | $2.37 | — | $1,821.73 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list earn_react; ret5=-3.3; leftover $918.56 | join🟡 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-10 09:30 ET | **BUY** | `FRNM` | 87 | $10.47 | $2.25 | — | $908.59 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list overnight; ret5=-9.0; leftover $918.56 | join🔴 sector🟢 gen🟢 news🟢 digest🟢 ab🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-11-10 09:30 ET | **BUY** | `KURA` | 119 | $7.58 | $2.35 | — | $4.23 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list overnight; 🔵; ret5=-22.7; leftover $918.56 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-11-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $4.23 | ▲ close $7,732.90 vs 09:30 $7,398.60 (session +413.36) | 16:00 close · cash $4.23 · equity $7,732.90 vs 09:30 $7,398.60 (+334.30; session marks +413.36) · 8 name(s) marked open→close (per-name table). STLN×231 09:30 $3.97 → close $4.34 +85.47; AUTL×759 09:30 $1.21 → close $1.32 +83.49; BW×242 09:30 $3.79 → close $4.48 +165.77; DJT×229 09:30 $4.00 → close $4.28 +64.12; PDYN×245 09:30 $3.74 → close $3.57 -41.65; SB×125 09:30 $7.33 → close $7.58 +31.25; FRNM×87 09:30 $10.47 → close $10.77 +26.10; KURA×119 09:30 $7.58 → close $7.57 -1.19 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · alarm
 
-Cash book **-0.65%** ($9,935) · signal-only (no cash/fees) was +3.57%. Starts YES **5/30**. Fills 278 · skips 96 · realized $+54.59.
+Cash book **-1.82%** ($9,818) · signal-only (no cash/fees) was +3.57%. Starts YES **5/30**. Fills 286 · skips 96 · realized $+54.59.
 
 ## How this sleeve decides (like you are 10)
 
@@ -472,6 +472,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-09 09:30 ET | **COVER** | `ARCT` | 251 | $10.57 | $3.24 | $-149.68 | $12,377.08 | ▼ -149.68 after sell → book $9,936.88; vs 09:30 mark -3.24 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-09 09:30 ET | **COVER** | `ETON` | 42 | $58.10 | $2.12 | $+16.25 | $9,934.77 | ▲ +16.25 after sell → book $9,934.77; vs 09:30 mark -2.11 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
 | 2026-11-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,934.77 | ▲ close $9,934.77 vs 09:30 $9,940.12 (session +0.00) | 16:00 close · cash $9,934.77 · no lots left · equity $9,934.77. | — |
+| 2026-11-10 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,934.77 | ▲ 09:30 equity $9,934.77 vs yday $9,934.77 (+0.00) | 09:30 open · cash $9,934.77 · no holdings · equity $9,934.77 vs prior close $9,934.77 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-10 09:30 ET | **SHORT** | `KLC` | 272 | $2.28 | $3.58 | — | $10,551.35 | — | alarm; gate alarm=True; list ohlc_hot; ret5=+13.7; leftover $620.92 | join🔴 sector🔴 gen🟢 news🟡 digest🟡 ab🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-11-10 09:30 ET | **SHORT** | `CLX` | 5 | $105.00 | $2.04 | — | $11,074.31 | — | alarm; gate alarm=True; list ohlc_hot; ret5=+17.4; leftover $620.92 | join🟡 sector🔴 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-10 09:30 ET | **SHORT** | `PRMB` | 25 | $24.10 | $2.10 | — | $11,674.71 | — | alarm; gate alarm=True; list ohlc_hot; ret5=+16.2; leftover $620.92 | join🔴 sector🔴 gen🟢 news🟢 digest🟡 ab🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-10 09:30 ET | **SHORT** | `DHT` | 31 | $19.58 | $2.12 | — | $12,279.57 | — | alarm; gate alarm=True; list earn_react; ret5=-13.8; leftover $620.92 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-11-10 09:30 ET | **SHORT** | `HPK` | 95 | $6.50 | $2.32 | — | $12,894.75 | — | alarm; gate alarm=True; list earn_react; ret5=-22.0; leftover $620.92 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 ab🔴 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-11-10 09:30 ET | **SHORT** | `JBS` | 50 | $12.34 | $2.18 | — | $13,509.32 | — | alarm; gate alarm=True; list earn_react; ret5=+5.5; leftover $620.92 | join🔴 sector🔴 gen🟢 news🟡 digest🟡 ab🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-10 09:30 ET | **SHORT** | `OXY` | 11 | $55.25 | $2.06 | — | $14,115.01 | — | alarm; gate alarm=True; list earn_react; ret5=-8.2; leftover $620.92 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 ab🟢 peer🟡 heat🔴 vol🟡 buy🟡 |
+| 2026-11-10 09:30 ET | **SHORT** | `TDW` | 8 | $71.40 | $2.05 | — | $14,684.16 | — | alarm; gate alarm=True; list earn_react; ret5=-10.1; leftover $620.92 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🔴 peer🟡 heat🔴 vol🟢 buy🟡 |
+| 2026-11-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,684.16 | ▼ close $9,817.54 vs 09:30 $9,934.77 (session -98.78) | 16:00 close · cash $14,684.16 · equity $9,817.54 vs 09:30 $9,934.77 (-117.23; session marks -98.78) · 8 name(s) marked open→close (per-name table). KLC×272 09:30 $2.28 → close $2.21 +19.04; CLX×5 09:30 $105.00 → close $106.60 -8.00; PRMB×25 09:30 $24.10 → close $24.07 +0.75; DHT×31 09:30 $19.58 → close $20.81 -38.13; HPK×95 09:30 $6.50 → close $6.82 -30.40; JBS×50 09:30 $12.34 → close $12.40 -3.25; OXY×11 09:30 $55.25 → close $56.90 -18.15; TDW×8 09:30 $71.40 → close $73.98 -20.64 | — |
 
 ## Not taken
 

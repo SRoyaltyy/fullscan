@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared short_news_r_h3/flatten_h5 w=0.7,0.3 net=priority
 
-Cash book **+1.08%** ($10,108) · signal-only (no cash/fees) was —. Starts YES **8/30**. Fills 386 · skips 449 · realized $+750.35.
+Cash book **+1.62%** ($10,162) · signal-only (no cash/fees) was —. Starts YES **8/30**. Fills 386 · skips 449 · realized $+750.35.
 
 ## How this sleeve decides (like you are 10)
 
@@ -583,6 +583,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-09 09:30 ET | **SELL** | `CORT` | 3 | $73.31 | $2.02 | $-26.88 | $1,059.22 | ▼ -26.88 after sell → book $9,932.51; vs 09:30 mark -2.02 | flatten_h5: dropped from list after 5 sess (min 5) | — |
 | 2026-11-09 09:30 ET | **COVER** | `HRB` | 100 | $53.41 | $2.29 | $+3.21 | $-4,284.07 | ▲ +3.21 after sell → book $9,930.22; vs 09:30 mark -2.29 | short_news_r_h3: dropped from list after 3 sess (min 3) | join🟢 sector🔴 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-11-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $-4,284.07 | ▲ close $10,107.84 vs 09:30 $9,940.61 (session +177.62) | 16:00 close · cash $-4,284.07 · equity $10,107.84 vs 09:30 $9,940.61 (+167.23; session marks +177.62) · 16 name(s) marked open→close (per-name table). ANGI×2 09:30 $6.92 → close $6.69 +0.46; BLFS×28 09:30 $38.61 → close $38.61 +0.00; CLX×16 09:30 $100.49 → close $105.53 +80.64; CMCSA×65 09:30 $24.16 → close $24.51 +22.75; COCO×24 09:30 $62.62 → close $64.49 +44.88; CON×16 09:30 $42.60 → close $42.40 -3.28; CROX×10 09:30 $155.54 → close $160.23 +46.90; CSGP×49 09:30 $30.63 → close $31.24 +29.89; ETON×5 09:30 $58.10 → close $64.35 +31.25; GPK×138 09:30 $11.46 → close $10.84 -85.56; GSM×6 09:30 $2.63 → close $2.63 -0.00; ILMN×2 09:30 $216.98 → close $220.78 +7.60; PACS×13 09:30 $50.09 → close $48.77 -17.16; PCRX×18 09:30 $36.44 → close $36.46 +0.36; RGEN×3 09:30 $174.29 → close $178.94 +13.95; VEEV×2 09:30 $303.93 → close $306.40 +4.94 | — |
+| 2026-11-10 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $-4,284.07 | ▼ 09:30 equity $10,062.27 vs yday $10,107.84 (-45.57) | 09:30 open · cash $-4,284.07 (unchanged overnight, no fees) · equity $10,062.27 vs prior close $10,107.84 (-45.57) | — |
+| 2026-11-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $-4,284.07 | ▲ close $10,161.93 vs 09:30 $10,062.27 (session +99.66) | 16:00 close · cash $-4,284.07 · equity $10,161.93 vs 09:30 $10,062.27 (+99.66; session marks +99.66) · 16 name(s) marked open→close (per-name table). ANGI×2 09:30 $6.75 → close $6.60 +0.31; BLFS×28 09:30 $38.61 → close $38.61 +0.00; CLX×16 09:30 $105.00 → close $106.60 +25.60; CMCSA×65 09:30 $24.59 → close $24.75 +10.40; COCO×24 09:30 $64.54 → close $65.91 +32.88; CON×16 09:30 $42.40 → close $42.67 +4.32; CROX×10 09:30 $160.77 → close $159.66 -11.10; CSGP×49 09:30 $30.84 → close $30.33 -24.99; ETON×5 09:30 $63.63 → close $67.54 +19.55; GPK×138 09:30 $10.79 → close $11.14 +48.30; GSM×6 09:30 $2.65 → close $2.76 -0.66; ILMN×2 09:30 $217.14 → close $214.91 -4.46; PACS×13 09:30 $48.53 → close $49.10 +7.41; PCRX×18 09:30 $36.46 → close $36.49 +0.54; RGEN×3 09:30 $176.76 → close $173.98 -8.34; VEEV×2 09:30 $305.60 → close $305.55 -0.10 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Buys the flatten **wish-list** even on io/HOLD mornings — live `flatten_robust
 
 Side **long** · universe `flatten` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · flatten looker: 0 red + yesterday up
 
-Cash book **-3.76%** ($9,624) · signal-only (no cash/fees) was +1.97%. Starts YES **12/30**. Fills 79 · skips 119 · realized $-62.52.
+Cash book **-4.64%** ($9,536) · signal-only (no cash/fees) was +1.97%. Starts YES **12/30**. Fills 80 · skips 119 · realized $-62.52.
 
 ## How this sleeve decides (like you are 10)
 
@@ -277,6 +277,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-09 09:30 ET | **BUY** | `ALGN` | 27 | $167.90 | $2.07 | — | $4,729.53 | — | flatten looker: 0 red + yesterday up; gate yday_up=True,zero_red=True; rank cond; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ⚪; ret5=+10.7; leftover $4632.45 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-09 09:30 ET | **BUY** | `ZVRA` | 397 | $11.65 | $5.12 | — | $99.36 | — | flatten looker: 0 red + yesterday up; gate yday_up=True,zero_red=True; rank cond; list flatten,ohlc_hot; wish-list (live io HOLD — not a ticket); 🔵; ⚪; ret5=+12.7; leftover $4632.45 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $99.36 | ▲ close $9,623.96 vs 09:30 $9,264.90 (session +366.25) | 16:00 close · cash $99.36 · equity $9,623.96 vs 09:30 $9,264.90 (+359.06; session marks +366.25) · 2 name(s) marked open→close (per-name table). ALGN×27 09:30 $167.90 → close $174.26 +171.72; ZVRA×397 09:30 $11.65 → close $12.14 +194.53 | — |
+| 2026-11-10 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $99.36 | ▼ 09:30 equity $9,423.10 vs yday $9,623.96 (-200.86) | 09:30 open · cash $99.36 (unchanged overnight, no fees) · equity $9,423.10 vs prior close $9,623.96 (-200.86) · 2 name(s) re-marked at the open (per-name table). ALGN×27 yday $174.26 → 09:30 $171.82 -65.88; ZVRA×397 yday $12.14 → 09:30 $11.80 -134.98 | — |
+| 2026-11-10 09:30 ET | **BUY** | `WRBY` | 1 | $29.85 | $0.30 | — | $69.21 | — | flatten looker: 0 red + yesterday up; gate yday_up=True,zero_red=True; rank cond; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ⚪; ret5=+26.6; leftover $33.12 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $69.21 | ▲ close $9,536.37 vs 09:30 $9,423.10 (session +113.57) | 16:00 close · cash $69.21 · equity $9,536.37 vs 09:30 $9,423.10 (+113.27; session marks +113.57) · 3 name(s) marked open→close (per-name table). ALGN×27 09:30 $171.82 → close $174.26 +65.88; ZVRA×397 09:30 $11.80 → close $11.92 +47.64; WRBY×1 09:30 $29.85 → close $29.90 +0.05 | — |
 
 ## Not taken
 

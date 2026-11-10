@@ -1,0 +1,81 @@
+{
+  "buys": [],
+  "cash": 28.56,
+  "date": "2026-11-10",
+  "equity": 10343.65,
+  "fees": 0,
+  "fills": [],
+  "holdings": [
+    "COLD",
+    "JAN",
+    "PGNY",
+    "STGW"
+  ],
+  "mean": 0.6676,
+  "n_trades_today": 0,
+  "recipe": "oos0914_zero_candle_h2_sx",
+  "sells": [],
+  "state": {
+    "after": "2026-11-10",
+    "cash": 28.56,
+    "pos": {
+      "COLD": {
+        "close_px": 16.139999389648438,
+        "cost": 2559.187,
+        "entry_date": "2026-11-09",
+        "entry_px": 16.08,
+        "fee_in": 2.467,
+        "last_px": 15.819999694824219,
+        "min_hold": 2,
+        "notional": 2556.72,
+        "peak_px": 16.08,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate zero_red=True,last_green=True; rank candle_score; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+11.4; leftover $2567.40",
+        "shares": 159,
+        "ticker": "COLD"
+      },
+      "JAN": {
+        "close_px": 32.880001068115234,
+        "cost": 2565.43,
+        "entry_date": "2026-11-09",
+        "entry_px": 32.04,
+        "fee_in": 2.23,
+        "last_px": 31.809999465942383,
+        "min_hold": 2,
+        "notional": 2563.2,
+        "peak_px": 32.04,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate zero_red=True,last_green=True; rank candle_score; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+12.2; leftover $2567.40",
+        "shares": 80,
+        "ticker": "JAN"
+      },
+      "PGNY": {
+        "close_px": 36.43000030517578,
+        "cost": 2556.479,
+        "entry_date": "2026-11-09",
+        "entry_px": 34.99,
+        "fee_in": 2.209,
+        "last_px": 35.619998931884766,
+        "min_hold": 2,
+        "notional": 2554.27,
+        "peak_px": 35.619998931884766,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate zero_red=True,last_green=True; rank candle_score; list yday_gainer; \ud83d\udd35; \u26aa; ret5=+19.4; leftover $2567.40",
+        "shares": 73,
+        "ticker": "PGNY"
+      },
+      "STGW": {
+        "close_px": 11.279999732971191,
+        "cost": 2559.9521999999997,
+        "entry_date": "2026-11-09",
+        "entry_px": 11.73,
+        "fee_in": 2.8122,
+        "last_px": 11.460000038146973,
+        "min_hold": 2,
+        "notional": 2557.14,
+        "peak_px": 11.73,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate zero_red=True,last_green=True; rank candle_score; list ohlc_hot; \u26aa; ret5=+11.2; leftover $2567.40",
+        "shares": 218,
+        "ticker": "STGW"
+      }
+    },
+    "yday_equity": 10343.65
+  }
+}

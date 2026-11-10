@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · packet🟢 AND headline🟢 (thin; kept as a KILL)
 
-Cash book **-0.33%** ($9,967) · signal-only (no cash/fees) was +1.48%. Starts YES **21/30**. Fills 7 · skips 7 · realized $+403.48.
+Cash book **-0.98%** ($9,902) · signal-only (no cash/fees) was +1.48%. Starts YES **21/30**. Fills 7 · skips 7 · realized $+403.48.
 
 ## How this sleeve decides (like you are 10)
 
@@ -204,6 +204,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $17.75 | ▲ close $9,984.71 vs 09:30 $9,621.28 (session +366.24) | 16:00 close · cash $17.75 · equity $9,984.71 vs 09:30 $9,621.28 (+363.43; session marks +366.24) · 1 name(s) marked open→close (per-name table). MNST×218 09:30 $44.04 → close $45.72 +366.24 | — |
 | 2026-11-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $17.75 | ▼ 09:30 equity $9,952.01 vs yday $9,984.71 (-32.70) | 09:30 open · cash $17.75 (unchanged overnight, no fees) · equity $9,952.01 vs prior close $9,984.71 (-32.70) · 1 name(s) re-marked at the open (per-name table). MNST×218 yday $45.72 → 09:30 $45.57 -32.70 | — |
 | 2026-11-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $17.75 | ▲ close $9,967.27 vs 09:30 $9,952.01 (session +15.26) | 16:00 close · cash $17.75 · equity $9,967.27 vs 09:30 $9,952.01 (+15.26; session marks +15.26) · 1 name(s) marked open→close (per-name table). MNST×218 09:30 $45.57 → close $45.64 +15.26 | — |
+| 2026-11-10 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $17.75 | ▲ 09:30 equity $9,967.27 vs yday $9,967.27 (+0.00) | 09:30 open · cash $17.75 (unchanged overnight, no fees) · equity $9,967.27 vs prior close $9,967.27 (+0.00) · 1 name(s) re-marked at the open (per-name table). MNST×218 yday $45.64 → 09:30 $45.64 +0.00 | — |
+| 2026-11-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $17.75 | ▼ close $9,901.87 vs 09:30 $9,967.27 (session -65.40) | 16:00 close · cash $17.75 · equity $9,901.87 vs 09:30 $9,967.27 (-65.40; session marks -65.40) · 1 name(s) marked open→close (per-name table). MNST×218 09:30 $45.64 → close $45.34 -65.40 | — |
 
 ## Not taken
 

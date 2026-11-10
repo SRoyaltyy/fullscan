@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `probable` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · baseline list, no extra gate
 
-Cash book **-26.62%** ($7,338) · signal-only (no cash/fees) was -1.12%. Starts YES **3/30**. Fills 410 · skips 107 · realized $-305.80.
+Cash book **-30.09%** ($6,991) · signal-only (no cash/fees) was -1.12%. Starts YES **3/30**. Fills 426 · skips 107 · realized $-305.80.
 
 ## How this sleeve decides (like you are 10)
 
@@ -602,6 +602,24 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-09 09:30 ET | **BUY** | `VRSK` | 4 | $204.66 | $2.00 | — | $974.55 | — | baseline list, no extra gate; list probable; ret5=+4.2; leftover $882.19 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-09 09:30 ET | **BUY** | `COLL` | 36 | $24.41 | $2.10 | — | $93.69 | — | baseline list, no extra gate; list probable; 🔵; ⚪; ret5=+1.7; leftover $882.19 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $93.69 | ▲ close $7,337.60 vs 09:30 $7,113.42 (session +307.21) | 16:00 close · cash $93.69 · equity $7,337.60 vs 09:30 $7,113.42 (+224.18; session marks +307.21) · 8 name(s) marked open→close (per-name table). WRBY×34 09:30 $25.91 → close $30.21 +146.20; ECX×1099 09:30 $0.80 → close $0.78 -24.18; CERT×73 09:30 $12.06 → close $12.22 +11.68; GCT×14 09:30 $60.00 → close $59.33 -9.38; APPN×17 09:30 $51.46 → close $51.15 -5.27; ASPN×176 09:30 $5.01 → close $6.11 +193.60; VRSK×4 09:30 $204.66 → close $200.60 -16.24; COLL×36 09:30 $24.41 → close $24.71 +10.80 | — |
+| 2026-11-10 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $93.69 | ▼ 09:30 equity $7,261.49 vs yday $7,337.60 (-76.11) | 09:30 open · cash $93.69 (unchanged overnight, no fees) · equity $7,261.49 vs prior close $7,337.60 (-76.11) · 8 name(s) re-marked at the open (per-name table). APPN×17 yday $51.15 → 09:30 $50.61 -9.18; ASPN×176 yday $6.11 → 09:30 $5.95 -28.16; CERT×73 yday $12.22 → 09:30 $12.00 -16.06; COLL×36 yday $24.71 → 09:30 $24.46 -9.00; ECX×1099 yday $0.78 → 09:30 $0.80 +18.79; GCT×14 yday $59.33 → 09:30 $58.50 -11.62; VRSK×4 yday $200.60 → 09:30 $198.44 -8.64; WRBY×34 yday $30.21 → 09:30 $29.85 -12.24 | — |
+| 2026-11-10 09:30 ET | **SELL** | `APPN` | 17 | $50.61 | $2.06 | $-18.55 | $952.00 | ▼ -18.55 after sell → book $7,259.43; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-10 09:30 ET | **SELL** | `ASPN` | 176 | $5.95 | $2.56 | $+160.36 | $1,996.64 | ▲ +160.36 after sell → book $7,256.87; vs 09:30 mark -2.56 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-10 09:30 ET | **SELL** | `CERT` | 73 | $12.00 | $2.23 | $-8.82 | $2,870.41 | ▼ -8.82 after sell → book $7,254.64; vs 09:30 mark -2.23 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-10 09:30 ET | **SELL** | `COLL` | 36 | $24.46 | $2.12 | $-2.42 | $3,748.85 | ▼ -2.42 after sell → book $7,252.53; vs 09:30 mark -2.11 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-10 09:30 ET | **SELL** | `ECX` | 1099 | $0.80 | $12.25 | $-29.75 | $4,612.62 | ▼ -29.75 after sell → book $7,240.28; vs 09:30 mark -12.25 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-10 09:30 ET | **SELL** | `GCT` | 14 | $58.50 | $2.05 | $-25.08 | $5,429.56 | ▼ -25.08 after sell → book $7,238.22; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-10 09:30 ET | **SELL** | `VRSK` | 4 | $198.44 | $2.02 | $-28.90 | $6,221.30 | ▼ -28.90 after sell → book $7,236.20; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-10 09:30 ET | **SELL** | `WRBY` | 34 | $29.85 | $2.11 | $+129.76 | $7,234.09 | ▲ +129.76 after sell → book $7,234.09; vs 09:30 mark -2.11 | dropped from list after 1 sess (min 1) | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-10 09:30 ET | **BUY** | `THM` | 598 | $1.51 | $7.71 | — | $6,323.40 | — | baseline list, no extra gate; list probable,yday_gainer,yday_mover; 🔵; ret5=-14.5; leftover $904.26 | join🔴 sector🟢 gen🟢 news🟡 digest🔴 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-11-10 09:30 ET | **BUY** | `NUAI` | 425 | $2.12 | $5.48 | — | $5,414.79 | — | baseline list, no extra gate; list probable,yday_gainer,yday_mover; ret5=-5.6; leftover $904.26 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 judge🟡 ab🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-11-10 09:30 ET | **BUY** | `IREN` | 43 | $20.80 | $2.12 | — | $4,518.27 | — | baseline list, no extra gate; list probable,yday_gainer; 🔵; ret5=-2.8; leftover $904.26 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 judge🟢 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-11-10 09:30 ET | **BUY** | `POET` | 178 | $5.07 | $2.52 | — | $3,612.57 | — | baseline list, no extra gate; list probable; 🔵; ret5=+9.7; leftover $904.26 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-10 09:30 ET | **BUY** | `RCAT` | 206 | $4.37 | $2.66 | — | $2,709.98 | — | baseline list, no extra gate; list probable; 🔵; ret5=+1.1; leftover $904.26 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-11-10 09:30 ET | **BUY** | `ONDS` | 154 | $5.83 | $2.45 | — | $1,809.10 | — | baseline list, no extra gate; list probable; ret5=+3.8; leftover $904.26 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 judge🟡 ab🔴 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-11-10 09:30 ET | **BUY** | `CIFR` | 138 | $6.55 | $2.40 | — | $902.79 | — | baseline list, no extra gate; list probable; ret5=-0.7; leftover $904.26 | join🔴 sector🔴 gen🟢 news🔴 digest🟢 judge🟡 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-11-10 09:30 ET | **BUY** | `SITM` | 2 | $449.21 | $2.00 | — | $2.38 | — | baseline list, no extra gate; list probable; 🔵; ret5=+9.4; leftover $904.26 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 judge🟡 ab🟡 peer🟡 heat🔴 vol🟢 buy🟡 |
+| 2026-11-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2.38 | ▼ close $6,991.24 vs 09:30 $7,261.49 (session -215.51) | 16:00 close · cash $2.38 · equity $6,991.24 vs 09:30 $7,261.49 (-270.25; session marks -215.51) · 8 name(s) marked open→close (per-name table). THM×598 09:30 $1.51 → close $1.41 -59.80; NUAI×425 09:30 $2.12 → close $2.07 -23.38; IREN×43 09:30 $20.80 → close $19.73 -46.01; POET×178 09:30 $5.07 → close $5.07 -0.71; RCAT×206 09:30 $4.37 → close $4.21 -32.67; ONDS×154 09:30 $5.83 → close $5.57 -40.66; CIFR×138 09:30 $6.55 → close $6.53 -2.76; SITM×2 09:30 $449.21 → close $444.45 -9.52 | — |
 
 ## Not taken
 

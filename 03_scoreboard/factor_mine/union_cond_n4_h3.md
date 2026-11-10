@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 4 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · top 4 by cond
 
-Cash book **-6.08%** ($9,392) · signal-only (no cash/fees) was -7.67%. Starts YES **1/30**. Fills 179 · skips 159 · realized $-515.67.
+Cash book **-6.10%** ($9,390) · signal-only (no cash/fees) was -7.67%. Starts YES **1/30**. Fills 186 · skips 159 · realized $-515.67.
 
 ## How this sleeve decides (like you are 10)
 
@@ -374,6 +374,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-09 09:30 ET | **BUY** | `ALGN` | 1 | $167.90 | $1.68 | — | $452.62 | — | top 4 by cond; rank cond; list flatten; 🔵; ⚪; ret5=+10.7; leftover $204.42 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-09 09:30 ET | **BUY** | `PGNY` | 5 | $34.99 | $1.76 | — | $275.91 | — | top 4 by cond; rank cond; list yday_gainer; 🔵; ⚪; ret5=+19.4; leftover $204.42 | join🟢 sector🟡 gen🟢 news🔴 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
 | 2026-11-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $275.91 | ▲ close $9,392.20 vs 09:30 $9,180.18 (session +221.51) | 16:00 close · cash $275.91 · equity $9,392.20 vs 09:30 $9,180.18 (+212.02; session marks +221.51) · 10 name(s) marked open→close (per-name table). AMC×609 09:30 $3.19 → close $3.40 +127.89; AMX×87 09:30 $25.88 → close $26.05 +14.79; ANGI×12 09:30 $6.92 → close $6.69 -2.76; GPK×8 09:30 $11.46 → close $10.84 -4.96; SPOT×3 09:30 $602.02 → close $609.10 +21.24; TRU×26 09:30 $80.97 → close $83.11 +55.64; YELP×4 09:30 $19.54 → close $19.58 +0.16; ADMA×15 09:30 $12.90 → close $12.79 -1.65; ALGN×1 09:30 $167.90 → close $174.26 +6.36; PGNY×5 09:30 $34.99 → close $35.95 +4.80 | — |
+| 2026-11-10 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $275.91 | ▼ 09:30 equity $9,303.74 vs yday $9,392.20 (-88.46) | 09:30 open · cash $275.91 (unchanged overnight, no fees) · equity $9,303.74 vs prior close $9,392.20 (-88.46) · 10 name(s) re-marked at the open (per-name table). ADMA×15 yday $12.79 → 09:30 $12.89 +1.57; ALGN×1 yday $174.26 → 09:30 $171.82 -2.44; AMC×609 yday $3.40 → 09:30 $3.35 -27.40; AMX×87 yday $26.05 → 09:30 $25.76 -25.23; ANGI×12 yday $6.69 → 09:30 $6.75 +0.78; GPK×8 yday $10.84 → 09:30 $10.79 -0.40; PGNY×5 yday $35.95 → 09:30 $35.62 -1.65; SPOT×3 yday $609.10 → 09:30 $602.43 -20.01; TRU×26 yday $83.11 → 09:30 $82.55 -14.56; YELP×4 yday $19.58 → 09:30 $19.80 +0.88 | — |
+| 2026-11-10 09:30 ET | **SELL** | `AMC` | 609 | $3.35 | $7.97 | $-180.26 | $2,311.13 | ▼ -180.26 after sell → book $9,295.76; vs 09:30 mark -7.98 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-10 09:30 ET | **SELL** | `AMX` | 87 | $25.76 | $2.28 | $+51.15 | $4,549.97 | ▲ +51.15 after sell → book $9,293.48; vs 09:30 mark -2.28 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-10 09:30 ET | **SELL** | `SPOT` | 3 | $602.43 | $2.02 | $-101.73 | $6,355.23 | ▼ -101.73 after sell → book $9,291.46; vs 09:30 mark -2.02 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-10 09:30 ET | **SELL** | `TRU` | 26 | $82.55 | $2.10 | $-14.56 | $8,499.44 | ▼ -14.56 after sell → book $9,289.36; vs 09:30 mark -2.10 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-10 09:30 ET | **BUY** | `FG` | 110 | $25.55 | $2.32 | — | $5,686.62 | — | top 4 by cond; rank cond; list ohlc_hot; 🔵; ⚪; ret5=+17.7; leftover $2833.15 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-10 09:30 ET | **BUY** | `EVC` | 304 | $9.30 | $3.92 | — | $2,855.50 | — | top 4 by cond; rank cond; list yday_gainer; 🔵; ⚪; ret5=+44.2; leftover $2833.15 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-10 09:30 ET | **BUY** | `KMPR` | 88 | $31.87 | $2.25 | — | $48.68 | — | top 4 by cond; rank cond; list earn_react; 🔵; ⚪; ret5=-5.5; leftover $2833.15 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $48.68 | ▲ close $9,389.82 vs 09:30 $9,303.74 (session +108.96) | 16:00 close · cash $48.68 · equity $9,389.82 vs 09:30 $9,303.74 (+86.08; session marks +108.96) · 9 name(s) marked open→close (per-name table). ADMA×15 09:30 $12.89 → close $12.67 -3.37; ALGN×1 09:30 $171.82 → close $174.26 +2.44; ANGI×12 09:30 $6.75 → close $6.60 -1.86; GPK×8 09:30 $10.79 → close $11.14 +2.80; PGNY×5 09:30 $35.62 → close $36.43 +4.05; YELP×4 09:30 $19.80 → close $20.15 +1.40; FG×110 09:30 $25.55 → close $25.00 -60.50; EVC×304 09:30 $9.30 → close $9.11 -57.76; KMPR×88 09:30 $31.87 → close $34.39 +221.76 | — |
 
 ## Not taken
 

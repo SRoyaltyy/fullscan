@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · short morning packet news🔴
 
-Cash book **+5.24%** ($10,524) · signal-only (no cash/fees) was -6.15%. Starts YES **9/30**. Fills 42 · skips 26 · realized $+60.75.
+Cash book **+6.40%** ($10,640) · signal-only (no cash/fees) was -6.15%. Starts YES **9/30**. Fills 42 · skips 26 · realized $+60.75.
 
 ## How this sleeve decides (like you are 10)
 
@@ -236,6 +236,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $16,362.06 | ▼ close $10,799.46 vs 09:30 $10,979.25 (session -175.31) | 16:00 close · cash $16,362.06 · equity $10,799.46 vs 09:30 $10,979.25 (-179.79; session marks -175.31) · 2 name(s) marked open→close (per-name table). MDLN×69 09:30 $39.53 → close $39.64 -7.59; FROG×28 09:30 $94.99 → close $100.98 -167.72 | — |
 | 2026-11-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $16,362.06 | ▼ 09:30 equity $10,751.29 vs yday $10,799.46 (-48.17) | 09:30 open · cash $16,362.06 (unchanged overnight, no fees) · equity $10,751.29 vs prior close $10,799.46 (-48.17) · 2 name(s) re-marked at the open (per-name table). FROG×28 yday $100.98 → 09:30 $101.69 -19.88; MDLN×69 yday $39.64 → 09:30 $40.05 -28.29 | — |
 | 2026-11-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $16,362.06 | ▼ close $10,524.03 vs 09:30 $10,751.29 (session -227.26) | 16:00 close · cash $16,362.06 · equity $10,524.03 vs 09:30 $10,751.29 (-227.26; session marks -227.26) · 2 name(s) marked open→close (per-name table). FROG×28 09:30 $101.69 → close $108.18 -181.72; MDLN×69 09:30 $40.05 → close $40.71 -45.54 | — |
+| 2026-11-10 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $16,362.06 | ▲ 09:30 equity $10,593.75 vs yday $10,524.03 (+69.72) | 09:30 open · cash $16,362.06 (unchanged overnight, no fees) · equity $10,593.75 vs prior close $10,524.03 (+69.72) · 2 name(s) re-marked at the open (per-name table). FROG×28 yday $108.18 → 09:30 $105.00 +89.04; MDLN×69 yday $40.71 → 09:30 $40.99 -19.32 | — |
+| 2026-11-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $16,362.06 | ▲ close $10,639.87 vs 09:30 $10,593.75 (session +46.12) | 16:00 close · cash $16,362.06 · equity $10,639.87 vs 09:30 $10,593.75 (+46.12; session marks +46.12) · 2 name(s) marked open→close (per-name table). FROG×28 09:30 $105.00 → close $103.55 +40.60; MDLN×69 09:30 $40.99 → close $40.91 +5.52 | — |
 
 ## Not taken
 

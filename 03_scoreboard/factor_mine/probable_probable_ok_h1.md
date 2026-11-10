@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `probable` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-21.20%** ($7,881) · signal-only (no cash/fees) was -9.22%. Starts YES **0/30**. Fills 333 · skips 53 · realized $-864.75.
+Cash book **-25.16%** ($7,484) · signal-only (no cash/fees) was -9.22%. Starts YES **0/30**. Fills 343 · skips 53 · realized $-864.75.
 
 ## How this sleeve decides (like you are 10)
 
@@ -531,6 +531,18 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-09 09:30 ET | **BUY** | `VRSK` | 12 | $204.66 | $2.03 | — | $2,791.79 | — | combo gate; gate last_green=True,ret_5_max=10.0; list probable; ret5=+4.2; leftover $2623.19 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-09 09:30 ET | **BUY** | `COLL` | 107 | $24.41 | $2.31 | — | $177.61 | — | combo gate; gate last_green=True,ret_5_max=10.0; list probable; 🔵; ⚪; ret5=+1.7; leftover $2623.19 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $177.61 | ▲ close $7,880.52 vs 09:30 $7,869.56 (session +18.10) | 16:00 close · cash $177.61 · equity $7,880.52 vs 09:30 $7,869.56 (+10.96; session marks +18.10) · 3 name(s) marked open→close (per-name table). CERT×217 09:30 $12.06 → close $12.22 +34.72; VRSK×12 09:30 $204.66 → close $200.60 -48.72; COLL×107 09:30 $24.41 → close $24.71 +32.10 | — |
+| 2026-11-10 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $177.61 | ▼ 09:30 equity $7,780.11 vs yday $7,880.52 (-100.41) | 09:30 open · cash $177.61 (unchanged overnight, no fees) · equity $7,780.11 vs prior close $7,880.52 (-100.41) · 3 name(s) re-marked at the open (per-name table). CERT×217 yday $12.22 → 09:30 $12.00 -47.74; COLL×107 yday $24.71 → 09:30 $24.46 -26.75; VRSK×12 yday $200.60 → 09:30 $198.44 -25.92 | — |
+| 2026-11-10 09:30 ET | **SELL** | `CERT` | 217 | $12.00 | $2.86 | $-18.68 | $2,778.75 | ▼ -18.68 after sell → book $7,777.25; vs 09:30 mark -2.86 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-10 09:30 ET | **SELL** | `COLL` | 107 | $24.46 | $2.35 | $+0.69 | $5,393.62 | ▲ +0.69 after sell → book $7,774.90; vs 09:30 mark -2.35 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-10 09:30 ET | **SELL** | `VRSK` | 12 | $198.44 | $2.06 | $-78.72 | $7,772.85 | ▼ -78.72 after sell → book $7,772.85; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-10 09:30 ET | **BUY** | `THM` | 735 | $1.51 | $9.48 | — | $6,653.52 | — | combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer,yday_mover; 🔵; ret5=-14.5; leftover $1110.41 | join🔴 sector🟢 gen🟢 news🟡 digest🔴 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-11-10 09:30 ET | **BUY** | `NUAI` | 522 | $2.12 | $6.73 | — | $5,537.53 | — | combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer,yday_mover; ret5=-5.6; leftover $1110.41 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 judge🟡 ab🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-11-10 09:30 ET | **BUY** | `IREN` | 53 | $20.80 | $2.15 | — | $4,432.98 | — | combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer; 🔵; ret5=-2.8; leftover $1110.41 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 judge🟢 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-11-10 09:30 ET | **BUY** | `POET` | 218 | $5.07 | $2.81 | — | $3,324.04 | — | combo gate; gate last_green=True,ret_5_max=10.0; list probable; 🔵; ret5=+9.7; leftover $1110.41 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-10 09:30 ET | **BUY** | `RCAT` | 254 | $4.37 | $3.28 | — | $2,211.14 | — | combo gate; gate last_green=True,ret_5_max=10.0; list probable; 🔵; ret5=+1.1; leftover $1110.41 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-11-10 09:30 ET | **BUY** | `ONDS` | 190 | $5.83 | $2.56 | — | $1,100.12 | — | combo gate; gate last_green=True,ret_5_max=10.0; list probable; ret5=+3.8; leftover $1110.41 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 judge🟡 ab🔴 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-11-10 09:30 ET | **BUY** | `SITM` | 2 | $449.21 | $2.00 | — | $199.70 | — | combo gate; gate last_green=True,ret_5_max=10.0; list probable; 🔵; ret5=+9.4; leftover $1110.41 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 judge🟡 ab🟡 peer🟡 heat🔴 vol🟢 buy🟡 |
+| 2026-11-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $199.70 | ▼ close $7,484.08 vs 09:30 $7,780.11 (session -259.75) | 16:00 close · cash $199.70 · equity $7,484.08 vs 09:30 $7,780.11 (-296.03; session marks -259.75) · 7 name(s) marked open→close (per-name table). THM×735 09:30 $1.51 → close $1.41 -73.50; NUAI×522 09:30 $2.12 → close $2.07 -28.71; IREN×53 09:30 $20.80 → close $19.73 -56.71; POET×218 09:30 $5.07 → close $5.07 -0.87; RCAT×254 09:30 $4.37 → close $4.21 -40.28; ONDS×190 09:30 $5.83 → close $5.57 -50.16; SITM×2 09:30 $449.21 → close $444.45 -9.52 | — |
 
 ## Not taken
 

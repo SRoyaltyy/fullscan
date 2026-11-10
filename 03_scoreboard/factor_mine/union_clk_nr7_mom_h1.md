@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `hot_score` · size `leftover` · sell `list` · S-boost `none` · Clock-B #10 NR7 + moderate momentum
 
-Cash book **-9.47%** ($9,052) · signal-only (no cash/fees) was +27.44%. Starts YES **25/30**. Fills 118 · skips 16 · realized $+1589.64.
+Cash book **-12.33%** ($8,767) · signal-only (no cash/fees) was +27.44%. Starts YES **25/30**. Fills 121 · skips 16 · realized $+1589.64.
 
 ## How this sleeve decides (like you are 10)
 
@@ -316,6 +316,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-09 09:30 ET | **BUY** | `PAYS` | 330 | $14.93 | $4.26 | — | $4,928.23 | — | Clock-B #10 NR7 + moderate momentum; gate clk_nr7_mom=True; rank hot_score; list overnight; 🔵; ret5=+5.5; leftover $4929.69 | join🟢 sector🟡 gen🟢 news🟡 digest🔴 judge🔴 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
 | 2026-11-09 09:30 ET | **BUY** | `KSPI` | 55 | $89.50 | $2.15 | — | $3.58 | — | Clock-B #10 NR7 + moderate momentum; gate clk_nr7_mom=True; rank hot_score; list earn_react; 🔵; ret5=+0.4; leftover $4929.69 | join🔴 sector🟡 gen🟢 news🟡 digest🔴 judge🔴 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-11-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $3.58 | ▼ close $9,052.45 vs 09:30 $9,859.39 (session -800.52) | 16:00 close · cash $3.58 · equity $9,052.45 vs 09:30 $9,859.39 (-806.94; session marks -800.52) · 2 name(s) marked open→close (per-name table). PAYS×330 09:30 $14.93 → close $12.51 -798.60; KSPI×55 09:30 $89.50 → close $89.47 -1.92 | — |
+| 2026-11-10 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $3.58 | ▲ 09:30 equity $9,249.63 vs yday $9,052.45 (+197.18) | 09:30 open · cash $3.58 (unchanged overnight, no fees) · equity $9,249.63 vs prior close $9,052.45 (+197.18) · 2 name(s) re-marked at the open (per-name table). KSPI×55 yday $89.47 → 09:30 $89.51 +2.48; PAYS×330 yday $12.51 → 09:30 $13.10 +194.70 | — |
+| 2026-11-10 09:30 ET | **SELL** | `KSPI` | 55 | $89.51 | $2.20 | $-3.81 | $4,924.43 | ▼ -3.81 after sell → book $9,247.43; vs 09:30 mark -2.20 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-10 09:30 ET | **SELL** | `PAYS` | 330 | $13.10 | $4.35 | $-612.50 | $9,243.08 | ▼ -612.50 after sell → book $9,243.08; vs 09:30 mark -4.35 | dropped from list after 1 sess (min 1) | join🔴 sector🔴 gen🟢 news🟡 digest🟢 judge🟡 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-11-10 09:30 ET | **BUY** | `IMSR` | 3217 | $2.86 | $41.50 | — | $0.96 | — | Clock-B #10 NR7 + moderate momentum; gate clk_nr7_mom=True; rank hot_score; list earn_react; 🔵; ret5=+0.3; leftover $9243.08 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-11-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $0.96 | ▼ close $8,767.28 vs 09:30 $9,249.63 (session -434.29) | 16:00 close · cash $0.96 · equity $8,767.28 vs 09:30 $9,249.63 (-482.35; session marks -434.29) · 1 name(s) marked open→close (per-name table). IMSR×3217 09:30 $2.86 → close $2.73 -434.29 | — |
 
 ## Not taken
 

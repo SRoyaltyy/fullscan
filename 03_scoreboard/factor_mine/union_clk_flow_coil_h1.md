@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · Clock-B #8 flow-in + green + not extended
 
-Cash book **+9.25%** ($10,925) · signal-only (no cash/fees) was -14.71%. Starts YES **10/30**. Fills 40 · skips 8 · realized $-732.31.
+Cash book **+7.91%** ($10,791) · signal-only (no cash/fees) was -14.71%. Starts YES **10/30**. Fills 42 · skips 8 · realized $-732.31.
 
 ## How this sleeve decides (like you are 10)
 
@@ -238,6 +238,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-09 09:30 ET | **BUY** | `CERT` | 443 | $12.06 | $5.71 | — | $5,340.15 | — | Clock-B #8 flow-in + green + not extended; gate clk_flow_coil=True; rank cond; list probable; 🔵; ⚪; ret5=+9.3; leftover $5344.22 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-11-09 09:30 ET | **BUY** | `FERG` | 21 | $251.68 | $2.05 | — | $52.81 | — | Clock-B #8 flow-in + green + not extended; gate clk_flow_coil=True; rank cond; list earn_react; ret5=-2.1; leftover $5344.22 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🟡 buy🟡 |
 | 2026-11-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $52.81 | ▲ close $10,924.80 vs 09:30 $10,688.44 (session +244.13) | 16:00 close · cash $52.81 · equity $10,924.80 vs 09:30 $10,688.44 (+236.36; session marks +244.13) · 2 name(s) marked open→close (per-name table). CERT×443 09:30 $12.06 → close $12.22 +70.88; FERG×21 09:30 $251.68 → close $259.93 +173.25 | — |
+| 2026-11-10 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $52.81 | ▼ 09:30 equity $10,799.20 vs yday $10,924.80 (-125.60) | 09:30 open · cash $52.81 (unchanged overnight, no fees) · equity $10,799.20 vs prior close $10,924.80 (-125.60) · 2 name(s) re-marked at the open (per-name table). CERT×443 yday $12.22 → 09:30 $12.00 -97.46; FERG×21 yday $259.93 → 09:30 $258.59 -28.14 | — |
+| 2026-11-10 09:30 ET | **SELL** | `CERT` | 443 | $12.00 | $5.83 | $-38.13 | $5,362.98 | ▼ -38.13 after sell → book $10,793.37; vs 09:30 mark -5.83 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-10 09:30 ET | **SELL** | `FERG` | 21 | $258.59 | $2.11 | $+140.95 | $10,791.26 | ▲ +140.95 after sell → book $10,791.26; vs 09:30 mark -2.11 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,791.26 | ▲ close $10,791.26 vs 09:30 $10,799.20 (session +0.00) | 16:00 close · cash $10,791.26 · no lots left · equity $10,791.26. | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 2 · rank `cond` · size `topheavy` · sell `list` · S-boost `none` · topheavy leftover on news🟢 +7 −≤1
 
-Cash book **-15.52%** ($8,448) · signal-only (no cash/fees) was -13.89%. Starts YES **4/30**. Fills 68 · skips 6 · realized $-1349.66.
+Cash book **-16.04%** ($8,396) · signal-only (no cash/fees) was -13.89%. Starts YES **4/30**. Fills 70 · skips 6 · realized $-1349.66.
 
 ## How this sleeve decides (like you are 10)
 
@@ -267,6 +267,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-09 09:30 ET | **BUY** | `ADMA` | 257 | $12.90 | $3.32 | — | $4,978.81 | — | topheavy leftover on news🟢 +7 −≤1; gate cam_bad_max=1,n_pos_min=7,news=good; rank cond; list yday_gainer; 🔵; ⚪; ret5=+11.6; leftover $3318.97 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
 | 2026-11-09 09:30 ET | **BUY** | `ALGN` | 29 | $167.90 | $2.08 | — | $107.63 | — | topheavy leftover on news🟢 +7 −≤1; gate cam_bad_max=1,n_pos_min=7,news=good; rank cond; list flatten; 🔵; ⚪; ret5=+10.7; leftover $4978.45 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $107.63 | ▲ close $8,448.20 vs 09:30 $8,299.55 (session +156.17) | 16:00 close · cash $107.63 · equity $8,448.20 vs 09:30 $8,299.55 (+148.65; session marks +156.17) · 2 name(s) marked open→close (per-name table). ADMA×257 09:30 $12.90 → close $12.79 -28.27; ALGN×29 09:30 $167.90 → close $174.26 +184.44 | — |
+| 2026-11-10 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $107.63 | ▼ 09:30 equity $8,404.40 vs yday $8,448.20 (-43.80) | 09:30 open · cash $107.63 (unchanged overnight, no fees) · equity $8,404.40 vs prior close $8,448.20 (-43.80) · 2 name(s) re-marked at the open (per-name table). ADMA×257 yday $12.79 → 09:30 $12.89 +26.96; ALGN×29 yday $174.26 → 09:30 $171.82 -70.76 | — |
+| 2026-11-10 09:30 ET | **SELL** | `ADMA` | 257 | $12.89 | $3.38 | $-8.01 | $3,418.23 | ▼ -8.01 after sell → book $8,401.01; vs 09:30 mark -3.39 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-10 09:30 ET | **BUY** | `FG` | 133 | $25.55 | $2.39 | — | $17.70 | — | topheavy leftover on news🟢 +7 −≤1; gate cam_bad_max=1,n_pos_min=7,news=good; rank cond; list ohlc_hot; 🔵; ⚪; ret5=+17.7; leftover $3418.23 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $17.70 | ▼ close $8,396.24 vs 09:30 $8,404.40 (session -2.39) | 16:00 close · cash $17.70 · equity $8,396.24 vs 09:30 $8,404.40 (-8.16; session marks -2.39) · 2 name(s) marked open→close (per-name table). ALGN×29 09:30 $171.82 → close $174.26 +70.76; FG×133 09:30 $25.55 → close $25.00 -73.15 | — |
 
 ## Not taken
 
