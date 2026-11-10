@@ -44,7 +44,7 @@ Sectors (pooled S0–S4; per-sector overrides in engine_policy.json):
 - S2_BREADTH: n=173 sign-hit=0.57 → ×1.0
 - S3_FLOWS_POSITIONING: n=122 sign-hit=0.49 → ×0.5
 - S4_ETF_TAPE: n=187 sign-hit=0.58 → ×1.0
-Last change: general.B3_FEDPATH: 0.5 -> 0.0 (n=34, hit=0.441)
+Last change: hold
 
 ## Active adjustments (newest promoted lessons, truncated)
 

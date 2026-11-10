@@ -976,7 +976,7 @@
         "5d": -0.18,
         "10d": 14.86
       },
-      "mfe_pct": 15.39,
+      "mfe_pct": 15.27,
       "mfe_day": "2026-11-09",
       "ever_profitable": true,
       "first_profitable_day": "2026-10-26"
@@ -1624,7 +1624,7 @@
         "5d": 4.58,
         "10d": 13.39
       },
-      "mfe_pct": 14.53,
+      "mfe_pct": 14.52,
       "mfe_day": "2026-11-09",
       "ever_profitable": true,
       "first_profitable_day": "2026-10-26"
