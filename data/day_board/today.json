@@ -1,12 +1,12 @@
 {
   "date": "2026-11-10",
-  "generated_at": "2026-11-10T04:38:31.121496-05:00",
+  "generated_at": "2026-11-10T04:39:59.132666-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
-    "ok": 4,
-    "partial": 4,
-    "fail": 0,
+    "ok": 2,
+    "partial": 2,
+    "fail": 4,
     "n": 8
   },
   "buy_1d": [],
@@ -15,31 +15,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "ab",
-      "title": "AB checklist",
-      "date": "2026-11-10",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-11-10T04:34:58.170821-05:00",
-      "files": [
-        {
-          "path": "data/ab_checklist/2026-11-10_ab_checklist.csv",
-          "ok": true,
-          "reason": "",
-          "size": 7533042,
-          "preview": "2615 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CNM, TEL, WCN, SOLS, GPN"
-        },
-        {
-          "path": "data/ab_checklist/2026-11-10_ab_checklist_enriched.csv",
-          "ok": true,
-          "reason": "",
-          "size": 8310264,
-          "preview": "2615 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 WCN, CNM, TSCO, TEVA, HUM"
-        }
-      ],
-      "preview": "2615 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CNM, TEL, WCN, SOLS, GPN \u00b7 2615 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 WCN, CNM, TSCO, TEVA, HUM"
-    },
     {
       "key": "news_parse",
       "title": "News parse",
@@ -242,6 +217,31 @@
         }
       ],
       "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, sectors_required, all_ok \u00b7 keys: date, generated_at, run_id, runner, all_ok, qc_all_ok, book_ok, grok_ok, grok_fails, missing_required, attempts, github_runs \u00b7 # Pre-open ALL status \u2014 2026-11-10\nall_ok=False  qc_all_ok=False  book_ok=False  grok_ok=False  news_mode=on  missing=['events', 'news_judge', 'map_heat_research', 'general_predict']\nPredictive modules + stock book (must land before 09:30 ET).\nOutcome / learn / tonight's captain research = Post-Close ALL.\n- Weather / regime: exit 0\n- News parse: exit 0\n- News actions (no LLM): exit 0"
+    },
+    {
+      "key": "map_heat",
+      "title": "Map heat morning overlay",
+      "date": "2026-11-10",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-10T04:39:58.846660-05:00",
+      "files": [
+        {
+          "path": "01_daily/map_heat/2026-11-10_map_heat.json",
+          "ok": true,
+          "reason": "",
+          "size": 275967,
+          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
+        },
+        {
+          "path": "01_daily/map_heat/2026-11-10_map_heat.md",
+          "ok": true,
+          "reason": "",
+          "size": 18484,
+          "preview": "# MAP HEAT \u2014 2026-11-10\nExport `finviz_2026-11-10.csv` \u00b7 11616 names \u00b7 generated 2026-11-10T04:39:58.802207-05:00"
+        }
+      ],
+      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-11-10\nExport `finviz_2026-11-10.csv` \u00b7 11616 names \u00b7 generated 2026-11-10T04:39:58.802207-05:00"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"

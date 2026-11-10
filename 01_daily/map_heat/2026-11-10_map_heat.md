@@ -1,6 +1,6 @@
 # MAP HEAT — 2026-11-10
 
-Export `finviz_2026-11-09.csv` · 11616 names · generated 2026-11-10T04:24:00.861706-05:00
+Export `finviz_2026-11-10.csv` · 11616 names · generated 2026-11-10T04:39:58.802207-05:00
 
 ## TAPE (live futures)
 | Contract | Last | Change |
@@ -135,8 +135,8 @@ Mega-cap earnings:
 - AMC **A**  EPS est 1.7271  (Agilent Technologies Inc)
 - AMC **FNV**  EPS est 1.7362  (Franco-Nevada Corp)
 - AMC **KEYS**  EPS est 3.3713  (Keysight Technologies Inc)
-- AMC **WDAY**  EPS est 2.7452  (Workday Inc)
 - BMO **HMC**  EPS est 0.9544  (Honda Motor ADR)
+- AMC **WDAY**  EPS est 2.7452  (Workday Inc)
 - BMO **SE**  EPS est 0.9911  (Sea Ltd ADR)
 - BMO **HEI**  EPS est 1.5216  (Heico Corp)
 - BMO **HEI-A**  EPS est 1.5202  (Heico Corp)
@@ -280,31 +280,31 @@ COLD (1w):
 - **Real Estate** -0.5% 1d -1.9% 1w · VNQ, SCHH, XLRE
 
 ## TICKER-TAGGED NEWS (Finviz v=3)
-- 13 min **LCO** FTSE 100 climbs as sinking crude boosts broader market but drags on energy majors (Investing.com)
-- 14 min **NVDA** Beyond Nvidia: 6 stocks winning the AI infrastructure buildout (Investing.com)
-- 17 min **NVDA** Stock market today: Dow, S&P 500, Nasdaq trade mixed ahead of key inflation data (Yahoo Finance)
-- 18 min **MRP** Kaplan Fox Encourages Millrose Properties, Inc. (MRP) Investors Seeking Recovery to Contact the Firm Before December 8, 2026 (Newsfile)
-- 20 min **ZH** Zhihu Inc. to Report Third Quarter 2026 Financial Results on November 24, 2026 (GlobeNewswire)
-- 29 min **AAUC** Allied Gold pours first gold at Ethiopias Kurmuk Mine (Mining Technology)
-- 29 min **NRG** NRG to sell six natural gas assets to LS Power for $4bn (Power Technology)
-- 34 min **DKNG,TFC** DKNG Stock Faces Wall Street Pressure As Confidence In DraftKings Earnings Outlook Dims (Stocktwits)
-- 34 min **CL** European shares inch toward record highs as sinking oil eases inflation anxiety (Investing.com)
-- 34 min **NVDA,SMCI** Nvidias China Spy Fallout Deepens: Report Says Moonshot AI Accessed NVDAs Advanced Chips Despite Export Controls (Stocktwits)
-- 50 min **SHEL** Transaction in Own Shares (GlobeNewswire)
-- 52 min **NVDA,CRWV** Stock Market Today: Dow, S&P 500 and Nasdaq set for mixed start following rally; Nvidia shares rise; inflation data and CoreWeave results on tap: live updates (MarketWatch)
-- 52 min **NVDA,CRWV** Dow set to extend gains as traders await October's CPI (MarketWatch)
-- 53 min **LI** Li Auto Inc. to Report Third Quarter 2026 Financial Results on November 25, 2026 (GlobeNewswire)
-- 53 min **HSAI** Hesai Group Reports Third Quarter 2026 Unaudited Financial Results (GlobeNewswire)
-- 57 min **TSLA,UBER** Elon Musk Ally Jason Calacanis Bets Another $1M On Uber  Says Waymo Team-Up Could Steal Teslas Driverless Crown (Stocktwits)
-- 58 min **NVDA,TSLA** Musk expected to join Trump at APEC; Huang's participation in doubt, SCMP reports (Reuters)
+- 4 min **NVDA** Nvidia CEO Huang's scandal is the flip side of centralized leadership: Sierra co-founder Clay Bavor (Yahoo Finance)
+- 9 min **RLX** RLX Technology to Report Third Quarter 2026 Financial Results on November 20, 2026 (PR Newswire)
+- 13 min **EC** Ecopetrol's "New Era": The Company Announces Pricing of US$2.0 Billion in International Bonds to Optimize Its Debt Profile (PR Newswire)
+- 29 min **LCO** FTSE 100 climbs as sinking crude boosts broader market but drags on energy majors (Investing.com)
+- 30 min **NVDA** Beyond Nvidia: 6 stocks winning the AI infrastructure buildout (Investing.com)
+- 33 min **NVDA** Stock market today: Dow, S&P 500, Nasdaq trade mixed ahead of key inflation data (Yahoo Finance)
+- 34 min **MRP** Kaplan Fox Encourages Millrose Properties, Inc. (MRP) Investors Seeking Recovery to Contact the Firm Before December 8, 2026 (Newsfile)
+- 36 min **ZH** Zhihu Inc. to Report Third Quarter 2026 Financial Results on November 24, 2026 (GlobeNewswire)
+- 43 min **ETHA,IBIT,BLK** BlackRock Bitcoin ETF Sees $213M Outflow as CPI Report Tests Crypto Markets (99bitcoins)
+- 45 min **AAUC** Allied Gold pours first gold at Ethiopias Kurmuk Mine (Mining Technology)
+- 45 min **NRG** NRG to sell six natural gas assets to LS Power for $4bn (Power Technology)
+- 50 min **DKNG,TFC** DKNG Stock Faces Wall Street Pressure As Confidence In DraftKings Earnings Outlook Dims (Stocktwits)
+- 50 min **CL** European shares inch toward record highs as sinking oil eases inflation anxiety (Investing.com)
+- 50 min **NVDA,SMCI** Nvidias China Spy Fallout Deepens: Report Says Moonshot AI Accessed NVDAs Advanced Chips Despite Export Controls (Stocktwits)
+- 1 hour **SHEL** Transaction in Own Shares (GlobeNewswire)
+- 1 hour **NVDA,CRWV** Stock Market Today: Dow, S&P 500 and Nasdaq set for mixed start following rally; Nvidia shares rise; inflation data and CoreWeave results on tap: live updates (MarketWatch)
+- 1 hour **NVDA,CRWV** Dow set to extend gains as traders await October's CPI (MarketWatch)
+- 1 hour **LI** Li Auto Inc. to Report Third Quarter 2026 Financial Results on November 25, 2026 (GlobeNewswire)
+- 1 hour **HSAI** Hesai Group Reports Third Quarter 2026 Unaudited Financial Results (GlobeNewswire)
+- 1 hour **TSLA,UBER** Elon Musk Ally Jason Calacanis Bets Another $1M On Uber  Says Waymo Team-Up Could Steal Teslas Driverless Crown (Stocktwits)
+- 1 hour **NVDA,TSLA** Musk expected to join Trump at APEC; Huang's participation in doubt, SCMP reports (Reuters)
 - 1 hour **NVDA,MSFT,AAPL,AMZN** Tech leads stock rally as traders track Wall St rebound (AFP)
-- 1 hour **TSLA,SPCX** SPCX Stock Climbs Overnight: Tesla Influencer Presses Texas Governor-Elect  Analyst Sees 10,000 AI Racks In Space By 2028 (Stocktwits)
+- 1 hour **SPCX,TSLA** SPCX Stock Climbs Overnight: Tesla Influencer Presses Texas Governor-Elect  Analyst Sees 10,000 AI Racks In Space By 2028 (Stocktwits)
 - 1 hour **TTWO** GTA VI Preorders Far In Excess Of ExpectationsNumbers Will Speak Soon  CEO Boosts Expectations As TTWO Lifts Annual Forecasts (Stocktwits)
 - 1 hour **NTAP** NetApp Hosts Second Quarter of Fiscal Year 2027 Financial Results Webcast (Business Wire)
-- 1 hour **TXN** TI redefines embedded development with agentic AI in its CCStudio ecosystem, empowering engineers to accelerate innovation (PR Newswire)
-- 1 hour **ON** onsemi's EliteSiC M4 Pushes Power Density Higher as Energy Demands Grow (GlobeNewswire)
-- 1 hour **NAVN** Wise Selects Navan to Modernize Global Travel Program (Business Wire)
-- 1 hour **DIOD** Intelligent High-Side Switches from Diodes Incorporated Deliver Combined Protection and Diagnostics to Safely Drive 12V Automotive Loads (Business Wire)
 
 ## NOTES
 - Captains = top 2 by market cap. RUT needs ≥ $5m 20-day dollar volume.
