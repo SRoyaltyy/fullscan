@@ -7,15 +7,14 @@
   "bearish"
  ],
  "sector_tilts": {
-  "Technology": "bearish",
-  "Healthcare": "bullish",
-  "Consumer Cyclical": "bullish"
+  "Semis/Ai": "mixed",
+  "Power/Industrials": "bullish",
+  "Financial": "bullish",
+  "Global Ai Supply Chain": "bullish"
  },
  "tickers": {
-  "IGV": -4.0,
-  "ADBE": -5.5,
-  "AMGN": 11.0
+  "CEG": 1.5
  },
- "b1_inject": "NEWS_JUDGE: n=8 rescued=3\nMACRO rates: [hawkish] pending US inflation report tests Fed after 165k jobs (session/1d-1w)\nMACRO risk: [bearish] AI/tech selloff broadens; Nvidia probe adds mega-cap overhang (session/1d-1w)\nSECTOR semis: [mixed] Arm growth and chip ETF dip-buying vs Nvidia probe/tech rout (SOX)\nSECTOR software: [bearish] Adobe downgrade flags SaaS multiple compression (IGV)\nSECTOR healthcare: [bullish] biotech leadership plus Amgen Repatha outcomes (XBI/healthcare)\nSECTOR consumer: [bullish] Airbnb beat/raise lifts travel-discretionary sympathy (consumer disc/travel)\nINTERACTION: AI chip demand + Nvidia probe/tech selloff \u2192 semis mixed; Adobe downgrade + tech rout \u2192 avoid software on rates hope; biotech/Amgen \u2192 healthcare basket\nWATCH: hard US macro confirmation thin; pending CPI headline low-quality, verify date/tape.",
+ "b1_inject": "NEWS_JUDGE: n=8 rescued=4\nMACRO rates: [hawkish] Hot US inflation/CPI keeps Fed hike risk alive (regime/1d-1w)\nMACRO risk: [bearish] AI sell-off broadens; correction charts and Nvidia scrutiny pressure SPX/NDX beta (regime/1d-1w)\nSECTOR semis/AI: [mixed] JPM warns semiconductor sugar rush fades; ARM beat offset by Nvidia probe/export tightening (SMH/NDX)\nSECTOR power/industrials: [bullish] Anthropic $3.4B CAT gas-turbine order and CEG nuclear deals reinforce AI power demand (CAT/CEG/utilities)\nSECTOR financials: [bullish] KKR record profit on asset sales/fees supports alt managers (KKR/BX)\nSECTOR global AI supply chain: [bullish] Taiwan AI exports surge; China/Taiwan stabilization buying supports sentiment (SMH supply chain)\nINTERACTION: AI multiple compression + hot inflation keeps rates high -> do not buy long-duration software on dovish-rate hope; AI power demand supports CAT/CEG but semis mixed on Nvidia/export risk.\nWATCH: CPI/Fed hike risk and Nvidia headlines can override sector strength; ranking thin on direct US macro besides inflation.",
  "date": "2026-11-10"
 }
