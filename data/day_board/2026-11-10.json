@@ -1,6 +1,6 @@
 {
   "date": "2026-11-10",
-  "generated_at": "2026-11-10T09:12:40.390776-05:00",
+  "generated_at": "2026-11-10T09:12:50.704349-05:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -809,10 +809,10 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=5894",
-          "size": 2262740,
-          "said": "201 rows",
+          "size": 2314913,
+          "said": "200 rows",
           "bullets": [
-            "SEZL, CDNA, AVAH, NRIX, PRCH, TMDX, BLK, EVR"
+            "SEZL, CDNA, AVAH, STRL, PRCH, TMDX, EVR, BLK"
           ]
         },
         {
@@ -890,9 +890,9 @@
           "bullets": []
         }
       ],
-      "said": "201 rows",
+      "said": "200 rows",
       "bullets": [
-        "SEZL, CDNA, AVAH, NRIX, PRCH"
+        "SEZL, CDNA, AVAH, STRL, PRCH"
       ]
     },
     {
@@ -1636,6 +1636,24 @@
         }
       ],
       "preview": "weather sectors 11 \u00b7 Basic Materials={'score': 1.452, 'dir': 'up', 'conf': 0.558, 'source': 'llm'}, Communication Services={'score': 3.77, 'dir': 'up', 'conf': 0.651, 'source': 'llm'}, Consumer Cyclical={'score': 6.369, 'dir': 'up', 'conf': 0.755, 'source': 'llm'}, Consumer Defensive={'score': -2.789, 'dir': 'down', 'conf': 0.512, 'source': 'llm'}, Energy={'score': -9.084, 'dir': 'down', 'conf': 0.85, 'source': 'llm'}, Financial={'score': 5.692, 'dir': 'up', 'conf': 0.728, 'source': 'llm'}, Healthcare={'score': 6.41, 'dir': 'up', 'conf': 0.756, 'source': 'llm'}, Industrials={'score': 4.267, 'dir': 'up', 'conf': 0.571, 'source': 'llm'} \u00b7 # Weather report \u2014 2026-11-10\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-11-10",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-10T09:12:49.765747-05:00",
+      "files": [
+        {
+          "path": "data/join/2026-11-10_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2314913,
+          "preview": "5894 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 SEZL, CDNA, AVAH, STRL, PRCH"
+        }
+      ],
+      "preview": "5894 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 SEZL, CDNA, AVAH, STRL, PRCH"
     }
   ],
   "href": {
