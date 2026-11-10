@@ -1,6 +1,6 @@
 {
   "date": "2026-11-10",
-  "generated_at": "2026-11-10T04:34:28.024467-05:00",
+  "generated_at": "2026-11-10T04:34:34.854902-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -11,8 +11,8 @@
   ],
   "counts": {
     "ok": 3,
-    "partial": 2,
-    "fail": 3,
+    "partial": 3,
+    "fail": 2,
     "n": 8
   },
   "processes": [
@@ -626,9 +626,9 @@
       "key": "stock_book",
       "name": "Stock Book ALL",
       "yaml": "stock_book_all.yml",
-      "status": "FAIL",
+      "status": "PARTIAL",
       "inputs_ready": false,
-      "n_req_ok": 0,
+      "n_req_ok": 1,
       "n_req": 4,
       "n_opt_ok": 1,
       "n_opt": 4,
@@ -722,11 +722,13 @@
           "name": "Join ranked CSV",
           "path": "data/join/2026-11-10_ranked.csv",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "rows=5894",
+          "size": 2206160,
+          "said": "202 rows",
+          "bullets": [
+            "KNSA, ONC, CDNA, BLLN, AVAH, REGN, IAG, ZVRA"
+          ]
         },
         {
           "key": "peers",
@@ -798,8 +800,10 @@
           "bullets": []
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "202 rows",
+      "bullets": [
+        "KNSA, ONC, CDNA, BLLN, AVAH"
+      ]
     },
     {
       "key": "publish",
@@ -1113,6 +1117,24 @@
         }
       ],
       "preview": "weather sectors 11 \u00b7 Basic Materials={'score': 4.4350000000000005, 'dir': 'up', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': 2.175, 'dir': 'up', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': 0.625, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': 0.89, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -7.16, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': 0.2, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': 2.28, 'dir': 'up', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -0.14, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-11-10\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-11-10",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-10T04:34:34.572649-05:00",
+      "files": [
+        {
+          "path": "data/join/2026-11-10_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2206160,
+          "preview": "5894 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 KNSA, ONC, CDNA, BLLN, AVAH"
+        }
+      ],
+      "preview": "5894 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 KNSA, ONC, CDNA, BLLN, AVAH"
     }
   ],
   "href": {
