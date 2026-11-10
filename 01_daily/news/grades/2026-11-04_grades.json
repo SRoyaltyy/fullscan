@@ -454,7 +454,7 @@
         "1d": 8.76,
         "3d": 15.27
       },
-      "mfe_pct": 16.48,
+      "mfe_pct": 16.49,
       "mfe_day": "2026-11-09",
       "ever_profitable": true,
       "first_profitable_day": "2026-11-04"
@@ -1129,7 +1129,7 @@
         "1d": -9.98,
         "3d": 6.79
       },
-      "mfe_pct": 7.48,
+      "mfe_pct": 7.5,
       "mfe_day": "2026-11-09",
       "ever_profitable": true,
       "first_profitable_day": "2026-11-04"
@@ -1279,7 +1279,7 @@
         "1d": 0.06,
         "3d": 15.27
       },
-      "mfe_pct": 15.69,
+      "mfe_pct": 15.81,
       "mfe_day": "2026-11-09",
       "ever_profitable": true,
       "first_profitable_day": "2026-11-04"
@@ -1848,7 +1848,7 @@
       "window_through": "2026-11-09",
       "trading_days_elapsed": 3,
       "complete": false,
-      "latest_close": 146.465,
+      "latest_close": 146.47,
       "current_return_pct": -4.53,
       "horizon_returns_pct": {
         "1d": -5.07,
@@ -1879,7 +1879,7 @@
         "1d": -3.83,
         "3d": 22.65
       },
-      "mfe_pct": 23.13,
+      "mfe_pct": 23.25,
       "mfe_day": "2026-11-09",
       "ever_profitable": true,
       "first_profitable_day": "2026-11-04"
@@ -2129,7 +2129,7 @@
         "1d": 5.69,
         "3d": 10.5
       },
-      "mfe_pct": 12.35,
+      "mfe_pct": 12.37,
       "mfe_day": "2026-11-09",
       "ever_profitable": true,
       "first_profitable_day": "2026-11-04"
@@ -2223,11 +2223,11 @@
       "window_through": "2026-11-09",
       "trading_days_elapsed": 3,
       "complete": false,
-      "latest_close": 29.665,
-      "current_return_pct": 14.18,
+      "latest_close": 29.67,
+      "current_return_pct": 14.2,
       "horizon_returns_pct": {
         "1d": 7.47,
-        "3d": 14.18
+        "3d": 14.2
       },
       "mfe_pct": 15.86,
       "mfe_day": "2026-11-09",
@@ -2254,7 +2254,7 @@
         "1d": 3.66,
         "3d": 17.79
       },
-      "mfe_pct": 18.37,
+      "mfe_pct": 18.45,
       "mfe_day": "2026-11-09",
       "ever_profitable": true,
       "first_profitable_day": "2026-11-04"
@@ -2588,7 +2588,7 @@
         "n": 63,
         "wins": 63,
         "win_rate": 100.0,
-        "avg": 4.98
+        "avg": 4.99
       },
       "close_5d": null
     },
