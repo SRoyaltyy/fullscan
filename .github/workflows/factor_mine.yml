@@ -153,6 +153,17 @@ jobs:
     # Normal land is 10-20 min; 150 leaves room, the mine step is capped at 120.
     timeout-minutes: 180  # was 150; full-fetch checkout (up to 30 min) + work
     steps:
+      # 16GB extra swap so freeze build_panel can page instead of
+      # taking SIGTERM (exit 143) on the 16GB runner. Does not change
+      # sealed snapshot bytes.
+      - name: Add swap (16G freeze safety net)
+        run: |
+          sudo fallocate -l 16G /swapfile || sudo dd if=/dev/zero of=/swapfile bs=1M count=16384
+          sudo chmod 600 /swapfile
+          sudo mkswap /swapfile
+          sudo swapon /swapfile
+          sudo swapon --show || true
+          free -m
       # workflow_run/queued runs otherwise check out the sha from trigger
       # time; on 10-12 a queued land built from b070934c, before the
       # first run's seal. Always build from the latest main.
