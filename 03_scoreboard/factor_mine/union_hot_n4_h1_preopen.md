@@ -4,7 +4,7 @@ _starts 10-08 open, no past days. Parent recipe `union_hot_n4_h1` (same selectio
 
 _Factor Mine recipe union_hot_n4_h1, not the separate IRONCLAD h1 book (research/hot_n4_clean_v4/forward_h1)._
 
-Equity: 10000.04 | days: 23
+Equity: 9974.68 | days: 24
 
 | date | S | picks | buys | sells | cash | equity | mean% | sit / reason |
 |---|---|---|---|---|---|---|---|---|
@@ -31,3 +31,4 @@ Equity: 10000.04 | days: 23
 | 2026-11-05 | None | - | - | - | 10000.04 | 10000.04 | 0.0 | tickets look.source=no_same_day_panel (need look); no pre-open weather S: no buys; no pre-open candidate list |
 | 2026-11-06 | None | - | - | - | 10000.04 | 10000.04 | 0.0 | seal not committed before 09:30 ET: never committed |
 | 2026-11-09 | None | - | - | - | 10000.04 | 10000.04 | 0.0 | seal not committed before 09:30 ET: never committed |
+| 2026-11-10 | 6.883 | AEHL, GOGO, EVC, FLY | AEHL 220@11.33, GOGO 708@3.53, EVC 268@9.3, FLY 106@23.51 | - | 6.0 | 9974.68 | -0.2536 | - |

@@ -388,6 +388,27 @@
           "s": null,
           "sells": [],
           "sit": true
+        },
+        {
+          "buys": [
+            "AEHL",
+            "GOGO",
+            "EVC",
+            "FLY"
+          ],
+          "date": "2026-11-10",
+          "equity": 9974.68,
+          "mean": -0.2536,
+          "picks": [
+            "AEHL",
+            "GOGO",
+            "EVC",
+            "FLY"
+          ],
+          "reasons": [],
+          "s": 6.883,
+          "sells": [],
+          "sit": false
         }
       ],
       "label": "starts 10-08 open, no past days",
@@ -772,6 +793,27 @@
           "s": null,
           "sells": [],
           "sit": true
+        },
+        {
+          "buys": [
+            "AEHL",
+            "GOGO",
+            "EVC",
+            "FLY"
+          ],
+          "date": "2026-11-10",
+          "equity": 8885.34,
+          "mean": -0.2585,
+          "picks": [
+            "AEHL",
+            "GOGO",
+            "EVC",
+            "FLY"
+          ],
+          "reasons": [],
+          "s": 6.883,
+          "sells": [],
+          "sit": false
         }
       ],
       "label": "starts 10-08 open, no past days",

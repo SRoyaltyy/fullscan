@@ -1,0 +1,159 @@
+{
+  "buys": [
+    {
+      "fill_rule": "open",
+      "price": 11.33,
+      "shares": 220,
+      "side": "BUY",
+      "ticker": "AEHL"
+    },
+    {
+      "fill_rule": "open",
+      "price": 3.53,
+      "shares": 708,
+      "side": "BUY",
+      "ticker": "GOGO"
+    },
+    {
+      "fill_rule": "open",
+      "price": 9.3,
+      "shares": 268,
+      "side": "BUY",
+      "ticker": "EVC"
+    },
+    {
+      "fill_rule": "open",
+      "price": 23.51,
+      "shares": 106,
+      "side": "BUY",
+      "ticker": "FLY"
+    }
+  ],
+  "cash": 6.0,
+  "date": "2026-11-10",
+  "equity": 9974.68,
+  "fees": 17.7364,
+  "fills": [
+    {
+      "fees": 2.838,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 11.33,
+      "shares": 220,
+      "side": "BUY",
+      "ticker": "AEHL"
+    },
+    {
+      "fees": 9.1332,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 3.53,
+      "shares": 708,
+      "side": "BUY",
+      "ticker": "GOGO"
+    },
+    {
+      "fees": 3.4572,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 9.3,
+      "shares": 268,
+      "side": "BUY",
+      "ticker": "EVC"
+    },
+    {
+      "fees": 2.308,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 23.51,
+      "shares": 106,
+      "side": "BUY",
+      "ticker": "FLY"
+    }
+  ],
+  "holdings": [
+    "AEHL",
+    "EVC",
+    "FLY",
+    "GOGO"
+  ],
+  "label": "starts 10-08 open, no past days",
+  "mean": -0.2536,
+  "n_trades_today": 4,
+  "parent": "union_hot_n4_h1",
+  "picks": [
+    "AEHL",
+    "GOGO",
+    "EVC",
+    "FLY"
+  ],
+  "reasons": [],
+  "recipe": "union_hot_n4_h1_preopen",
+  "s": 6.883,
+  "seal_sha256": "ea37b32bd553bca2e5aa250f95e1fe959489ff1783e0c3ffd8aedc1e5819c48c",
+  "sells": [],
+  "sit": false,
+  "state": {
+    "after": "2026-11-10",
+    "cash": 6.0,
+    "pos": {
+      "AEHL": {
+        "close_px": 11.21,
+        "cost": 2495.438,
+        "entry_date": "2026-11-10",
+        "entry_px": 11.33,
+        "fee_in": 2.838,
+        "last_px": 11.33,
+        "min_hold": 1,
+        "notional": 2492.6,
+        "peak_px": 11.33,
+        "reason": "top 4 by hot | pre-open inputs only; starts 10-08 open, no past days; rank hot_score; list preopen_seal; leftover $2500.01",
+        "shares": 220,
+        "ticker": "AEHL"
+      },
+      "EVC": {
+        "close_px": 9.11,
+        "cost": 2495.8572,
+        "entry_date": "2026-11-10",
+        "entry_px": 9.3,
+        "fee_in": 3.4572,
+        "last_px": 9.3,
+        "min_hold": 1,
+        "notional": 2492.4,
+        "peak_px": 9.3,
+        "reason": "top 4 by hot | pre-open inputs only; starts 10-08 open, no past days; rank hot_score; list preopen_seal; leftover $2500.01",
+        "shares": 268,
+        "ticker": "EVC"
+      },
+      "FLY": {
+        "close_px": 23.7,
+        "cost": 2494.368,
+        "entry_date": "2026-11-10",
+        "entry_px": 23.51,
+        "fee_in": 2.308,
+        "last_px": 23.51,
+        "min_hold": 1,
+        "notional": 2492.06,
+        "peak_px": 23.51,
+        "reason": "top 4 by hot | pre-open inputs only; starts 10-08 open, no past days; rank hot_score; list preopen_seal; leftover $2500.01",
+        "shares": 106,
+        "ticker": "FLY"
+      },
+      "GOGO": {
+        "close_px": 3.6,
+        "cost": 2508.3732,
+        "entry_date": "2026-11-10",
+        "entry_px": 3.53,
+        "fee_in": 9.1332,
+        "last_px": 3.53,
+        "min_hold": 1,
+        "notional": 2499.24,
+        "peak_px": 3.53,
+        "reason": "top 4 by hot | pre-open inputs only; starts 10-08 open, no past days; rank hot_score; list preopen_seal; leftover $2500.01",
+        "shares": 708,
+        "ticker": "GOGO"
+      }
+    },
+    "yday_equity": 9974.68
+  }
+}
