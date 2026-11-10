@@ -2325,5 +2325,7 @@
     "IGV": -4.0,
     "ADBE": -5.5,
     "AMGN": 11.0
-  }
+  },
+  "catalyst_tickers": 0,
+  "catalyst_date": "2026-11-10"
 }
