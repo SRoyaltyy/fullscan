@@ -2901,7 +2901,7 @@
   },
   "per_sleeve": {
     "tag": "RESEARCH",
-    "date": "2026-11-09",
+    "date": "2026-11-10",
     "live_sit": true,
     "keep_bar_unchanged": true,
     "n_sit": 1,
@@ -2921,14 +2921,14 @@
         "sit": true,
         "hard_red": false,
         "side": "long",
-        "s": "morning S missing; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held",
+        "s": 9.449,
         "short_only": [],
         "dip_scoop": [
           {
-            "ticker": "CLOV",
+            "ticker": "SOLV",
             "side": "long",
             "open": null,
-            "px": 4.82,
+            "px": 90.43,
             "px_src": "session_export",
             "low": null,
             "scoops": {
@@ -2961,10 +2961,10 @@
             "tag": "RESEARCH"
           },
           {
-            "ticker": "APP",
+            "ticker": "ALGN",
             "side": "long",
             "open": null,
-            "px": 391.22,
+            "px": 174.26,
             "px_src": "session_export",
             "low": null,
             "scoops": {
@@ -2997,10 +2997,10 @@
             "tag": "RESEARCH"
           },
           {
-            "ticker": "RBLX",
+            "ticker": "TMDX",
             "side": "long",
             "open": null,
-            "px": 49.3,
+            "px": 93.79,
             "px_src": "session_export",
             "low": null,
             "scoops": {
@@ -3033,10 +3033,10 @@
             "tag": "RESEARCH"
           },
           {
-            "ticker": "TMUS",
+            "ticker": "PGNY",
             "side": "long",
             "open": null,
-            "px": 162.01,
+            "px": 35.95,
             "px_src": "session_export",
             "low": null,
             "scoops": {
@@ -3069,46 +3069,10 @@
             "tag": "RESEARCH"
           },
           {
-            "ticker": "STGW",
+            "ticker": "ZVRA",
             "side": "long",
             "open": null,
-            "px": 11.64,
-            "px_src": "session_export",
-            "low": null,
-            "scoops": {
-              "0.5": {
-                "kind": "no_open",
-                "x": 0.5,
-                "fill": null
-              },
-              "1.0": {
-                "kind": "no_open",
-                "x": 1.0,
-                "fill": null
-              },
-              "1.5": {
-                "kind": "no_open",
-                "x": 1.5,
-                "fill": null
-              },
-              "2.0": {
-                "kind": "no_open",
-                "x": 2.0,
-                "fill": null
-              },
-              "3.0": {
-                "kind": "no_open",
-                "x": 3.0,
-                "fill": null
-              }
-            },
-            "tag": "RESEARCH"
-          },
-          {
-            "ticker": "COMP",
-            "side": "long",
-            "open": null,
-            "px": 10.21,
+            "px": 12.14,
             "px_src": "session_export",
             "low": null,
             "scoops": {
