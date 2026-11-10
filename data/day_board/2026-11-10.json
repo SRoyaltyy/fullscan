@@ -1,6 +1,6 @@
 {
   "date": "2026-11-10",
-  "generated_at": "2026-11-10T09:15:58.676833-05:00",
+  "generated_at": "2026-11-10T09:29:11.387053-05:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -835,7 +835,7 @@
           "role": "required",
           "status": "OK",
           "reason": "horizons=5 names=245",
-          "size": 1642248,
+          "size": 1642247,
           "said": "1d BUY MGNI, TMDX, ETON, WRBY, ADPT, RBLX, SG, SEZL \u00b7 SELL XPRO, KOS, ACDC, BTU, VET, AESI \u00b7 0.65875",
           "bullets": []
         },
@@ -849,7 +849,7 @@
           "size": 106325,
           "said": "Stock book \u2014 2026-11-10",
           "bullets": [
-            "_Generated 2026-11-10T09:13:10.817916-05:00_",
+            "_Generated 2026-11-10T09:29:07.974072-05:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -885,7 +885,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "live-book poller + today.json (2026-11-10)",
-          "size": 16224380,
+          "size": 16224396,
           "said": "live-book poller + today.json (2026-11-10)",
           "bullets": []
         }
@@ -913,7 +913,7 @@
           "role": "input",
           "status": "OK",
           "reason": "horizons=5 names=245",
-          "size": 1642248,
+          "size": 1642247,
           "said": "1d BUY MGNI, TMDX, ETON, WRBY, ADPT, RBLX, SG, SEZL \u00b7 SELL XPRO, KOS, ACDC, BTU, VET, AESI \u00b7 0.65875",
           "bullets": []
         },
@@ -924,7 +924,7 @@
           "role": "required",
           "status": "OK",
           "reason": "live-book poller + today.json (2026-11-10)",
-          "size": 16224380,
+          "size": 16224396,
           "said": "live-book poller + today.json (2026-11-10)",
           "bullets": []
         },
@@ -1953,5 +1953,47 @@
     "readiness_action": "https://github.com/SRoyaltyy/fullscan/actions/workflows/stock_book_diag.yml",
     "factor_mine": "https://sroyaltyy.github.io/fullscan/dashboard/factor-mine/",
     "paper": "https://sroyaltyy.github.io/fullscan/dashboard/"
-  }
+  },
+  "frozen_write_skips": [
+    {
+      "path": "01_daily/2026-11-10_stock_book.md",
+      "at": "2026-11-10T09:29:38-05:00",
+      "commit_msg": "auto: strategy tickets 2026-11-10",
+      "workflow": "Publish strategy tickets",
+      "run_id": "42831797590",
+      "manifest": "research/input_freeze/2026-11-10/manifest.json"
+    },
+    {
+      "path": "data/day_board/2026-11-10_strategy_tickets.json",
+      "at": "2026-11-10T09:29:38-05:00",
+      "commit_msg": "auto: strategy tickets 2026-11-10",
+      "workflow": "Publish strategy tickets",
+      "run_id": "42831797590",
+      "manifest": "research/input_freeze/2026-11-10/manifest.json"
+    },
+    {
+      "path": "data/factor_mine/send_inputs/2026-11-10.json",
+      "at": "2026-11-10T09:29:38-05:00",
+      "commit_msg": "auto: strategy tickets 2026-11-10",
+      "workflow": "Publish strategy tickets",
+      "run_id": "42831797590",
+      "manifest": "research/input_freeze/2026-11-10/manifest.json"
+    },
+    {
+      "path": "data/stock_book/2026-11-10_input_health.json",
+      "at": "2026-11-10T09:29:38-05:00",
+      "commit_msg": "auto: strategy tickets 2026-11-10",
+      "workflow": "Publish strategy tickets",
+      "run_id": "42831797590",
+      "manifest": "research/input_freeze/2026-11-10/manifest.json"
+    },
+    {
+      "path": "data/stock_book/2026-11-10_stock_book.json",
+      "at": "2026-11-10T09:29:38-05:00",
+      "commit_msg": "auto: strategy tickets 2026-11-10",
+      "workflow": "Publish strategy tickets",
+      "run_id": "42831797590",
+      "manifest": "research/input_freeze/2026-11-10/manifest.json"
+    }
+  ]
 }
