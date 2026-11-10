@@ -1,6 +1,6 @@
 {
   "date": "2026-11-10",
-  "generated_at": "2026-11-10T09:29:11.387053-05:00",
+  "generated_at": "2026-11-10T12:38:50.720529-05:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -835,7 +835,7 @@
           "role": "required",
           "status": "OK",
           "reason": "horizons=5 names=245",
-          "size": 1642247,
+          "size": 1642248,
           "said": "1d BUY MGNI, TMDX, ETON, WRBY, ADPT, RBLX, SG, SEZL \u00b7 SELL XPRO, KOS, ACDC, BTU, VET, AESI \u00b7 0.65875",
           "bullets": []
         },
@@ -849,7 +849,7 @@
           "size": 106325,
           "said": "Stock book \u2014 2026-11-10",
           "bullets": [
-            "_Generated 2026-11-10T09:29:07.974072-05:00_",
+            "_Generated 2026-11-10T09:13:10.817916-05:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -913,7 +913,7 @@
           "role": "input",
           "status": "OK",
           "reason": "horizons=5 names=245",
-          "size": 1642247,
+          "size": 1642248,
           "said": "1d BUY MGNI, TMDX, ETON, WRBY, ADPT, RBLX, SG, SEZL \u00b7 SELL XPRO, KOS, ACDC, BTU, VET, AESI \u00b7 0.65875",
           "bullets": []
         },
@@ -1946,6 +1946,122 @@
         }
       ],
       "preview": "# flatten_robust card \u2014 2026-11-10\n_Generated 2026-11-10T14:15:56 \u2014 live `flatten_robust`._\n**S=+6.88; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**\n- Score **+6.88** (UP) \u00b7 route **io**\n- Cash leftover **$0.60** (after 09:30 $0.60 \u00b7 after 16:00 $118,236.68)\n- Prior close **$118,279.77** \u00b7 09:30 **$118,279.77** \u00b7 overnight **$+0.00** \u00b7 session **$-43.09** \u00b7 16:00 **$118,236.68**\n- Overnight lots **12** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$0.00** \u2264 leftover after sells **$118,236.68** \u00b7 2026-11-04 BUY \u2014 \u00b7 SELL \u2014 \u00b7 keys: date, policy, generated, score, predict, hard_red, flatten_ok, n_priced_buys, prior_book, route, cash_open, cash_after_0930 \u00b7 [{\"date\": \"2026-08-13\", \"route\": \"io\", \"score\": 8.525, \"predict\": \"UP\", \"yday_equity\": 100000.0, \"open_cash\": 100000.0, \"open_held\": 0, \"open_equity\": 100000.0, \"overnight_delta\": 0.0, \"session_delta\": -169.94, \"equity\": 99830.06, \"cash\": 9917.52, \"overnight_names\": \"\", \"overnight\": [], \"marks\": [{\"ticker\": \"BTSG\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 166, \"shares\": 166, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 59.8, \"close_p"
+    },
+    {
+      "key": "live_boards",
+      "title": "live_boards",
+      "date": "2026-11-10",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-10T12:38:49.761241-05:00",
+      "files": [
+        {
+          "path": "data/day_board/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 26329,
+          "preview": "2026-11-10 BUY MGNI, TMDX, ETON, WRBY, ADPT, RBLX, SG, SEZL \u00b7 SELL XPRO, KOS, ACDC, BTU, VET, AESI, IEP, SOC"
+        },
+        {
+          "path": "data/day_board/latest.json",
+          "ok": true,
+          "reason": "",
+          "size": 1115,
+          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
+        },
+        {
+          "path": "data/day_board/2026-11-10.after-freeze-1.json",
+          "ok": true,
+          "reason": "",
+          "size": 94737,
+          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href"
+        },
+        {
+          "path": "data/day_board/2026-11-10_tickets.after-freeze-1.json",
+          "ok": true,
+          "reason": "",
+          "size": 58589,
+          "preview": "2026-11-10 BUY MGNI, TMDX, ETON, WRBY, ADPT, RBLX, SG, SEZL \u00b7 SELL XPRO, KOS, ACDC, BTU, VET, AESI, IEP, SOC"
+        },
+        {
+          "path": "data/day_board/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 1012779,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/2026-11-10_strategy_tickets.after-freeze-1.json",
+          "ok": true,
+          "reason": "",
+          "size": 1012779,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/factor_mine/morning_look/2026-11-10.json",
+          "ok": true,
+          "reason": "",
+          "size": 457718,
+          "preview": "keys: asof_commit, asof_committed_at, cutoff_et, date, n, read_from, rows"
+        },
+        {
+          "path": "data/day_board/today_strategies.after-freeze-4.json",
+          "ok": true,
+          "reason": "",
+          "size": 1462227,
+          "preview": "2026-11-10 BUY MGNI, TMDX, ETON, WRBY, ADPT, RBLX, SG, SEZL \u00b7 SELL XPRO, KOS, ACDC, BTU, VET, AESI, IEP, SOC"
+        },
+        {
+          "path": "data/factor_mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 1012779,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 58589,
+          "preview": "2026-11-10 BUY MGNI, TMDX, ETON, WRBY, ADPT, RBLX, SG, SEZL \u00b7 SELL XPRO, KOS, ACDC, BTU, VET, AESI, IEP, SOC"
+        },
+        {
+          "path": "dashboard/factor-mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 1012779,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 1012779,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 1462227,
+          "preview": "2026-11-10 BUY MGNI, TMDX, ETON, WRBY, ADPT, RBLX, SG, SEZL \u00b7 SELL XPRO, KOS, ACDC, BTU, VET, AESI, IEP, SOC"
+        },
+        {
+          "path": "data/day_board/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 1753,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        },
+        {
+          "path": "dashboard/factor-mine/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 1753,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        }
+      ],
+      "preview": "2026-11-10 BUY MGNI, TMDX, ETON, WRBY, ADPT, RBLX, SG, SEZL \u00b7 SELL XPRO, KOS, ACDC, BTU, VET, AESI, IEP, SOC \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href \u00b7 2026-11-10 BUY MGNI, TMDX, ETON, WRBY, ADPT, RBLX, SG, SEZL \u00b7 SELL XPRO, KOS, ACDC, BTU, VET, AESI, IEP, SOC \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: asof_commit, asof_committed_at, cutoff_et, date, n, read_from, rows \u00b7 2026-11-10 BUY MGNI, TMDX, ETON, WRBY, ADPT, RBLX, SG, SEZL \u00b7 SELL XPRO, KOS, ACDC, BTU, VET, AESI, IEP, SOC \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-11-10 BUY MGNI, TMDX, ETON, WRBY, ADPT, RBLX, SG, SEZL \u00b7 SELL XPRO, KOS, ACDC, BTU, VET, AESI, IEP, SOC \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, "
     }
   ],
   "href": {
@@ -1956,43 +2072,11 @@
   },
   "frozen_write_skips": [
     {
-      "path": "01_daily/2026-11-10_stock_book.md",
-      "at": "2026-11-10T09:29:38-05:00",
-      "commit_msg": "auto: strategy tickets 2026-11-10",
-      "workflow": "Publish strategy tickets",
-      "run_id": "42831797590",
-      "manifest": "research/input_freeze/2026-11-10/manifest.json"
-    },
-    {
-      "path": "data/day_board/2026-11-10_strategy_tickets.json",
-      "at": "2026-11-10T09:29:38-05:00",
-      "commit_msg": "auto: strategy tickets 2026-11-10",
-      "workflow": "Publish strategy tickets",
-      "run_id": "42831797590",
-      "manifest": "research/input_freeze/2026-11-10/manifest.json"
-    },
-    {
-      "path": "data/factor_mine/send_inputs/2026-11-10.json",
-      "at": "2026-11-10T09:29:38-05:00",
-      "commit_msg": "auto: strategy tickets 2026-11-10",
-      "workflow": "Publish strategy tickets",
-      "run_id": "42831797590",
-      "manifest": "research/input_freeze/2026-11-10/manifest.json"
-    },
-    {
-      "path": "data/stock_book/2026-11-10_input_health.json",
-      "at": "2026-11-10T09:29:38-05:00",
-      "commit_msg": "auto: strategy tickets 2026-11-10",
-      "workflow": "Publish strategy tickets",
-      "run_id": "42831797590",
-      "manifest": "research/input_freeze/2026-11-10/manifest.json"
-    },
-    {
-      "path": "data/stock_book/2026-11-10_stock_book.json",
-      "at": "2026-11-10T09:29:38-05:00",
-      "commit_msg": "auto: strategy tickets 2026-11-10",
-      "workflow": "Publish strategy tickets",
-      "run_id": "42831797590",
+      "path": "data/day_board/2026-11-10.json",
+      "at": "2026-11-10T12:38:51-05:00",
+      "commit_msg": "auto: land live_boards [2026-11-10]",
+      "workflow": "Pre-Open ALL (predictive one-shot)",
+      "run_id": "42863707063",
       "manifest": "research/input_freeze/2026-11-10/manifest.json"
     }
   ]
