@@ -1,6 +1,6 @@
 {
   "date": "2026-11-10",
-  "generated_at": "2026-11-10T15:43:57.798311-05:00",
+  "generated_at": "2026-11-10T16:00:20.580180-05:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -1953,7 +1953,7 @@
       "date": "2026-11-10",
       "ok": true,
       "pushed": true,
-      "at": "2026-11-10T15:43:56.566587-05:00",
+      "at": "2026-11-10T16:00:19.355687-05:00",
       "files": [
         {
           "path": "data/day_board/today.json",
@@ -1970,14 +1970,14 @@
           "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
         },
         {
-          "path": "data/day_board/2026-11-10.after-freeze-4.json",
+          "path": "data/day_board/2026-11-10.after-freeze-5.json",
           "ok": true,
           "reason": "",
           "size": 100768,
           "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href"
         },
         {
-          "path": "data/day_board/2026-11-10_tickets.after-freeze-4.json",
+          "path": "data/day_board/2026-11-10_tickets.after-freeze-5.json",
           "ok": true,
           "reason": "",
           "size": 65889,
@@ -2108,10 +2108,10 @@
   "frozen_write_skips": [
     {
       "path": "data/day_board/2026-11-10.json",
-      "at": "2026-11-10T15:43:58-05:00",
+      "at": "2026-11-10T16:00:21-05:00",
       "commit_msg": "auto: land live_boards [2026-11-10]",
       "workflow": "Stock Book ALL (one-shot)",
-      "run_id": "42896497739",
+      "run_id": "42899197363",
       "manifest": "research/input_freeze/2026-11-10/manifest.json"
     }
   ]
