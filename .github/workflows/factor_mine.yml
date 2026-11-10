@@ -161,6 +161,27 @@ jobs:
         with:
           ref: main
           fetch-depth: 0  # 2026-11-09: depth 1 stalls >20 min on the ~12.6 GB tree (#765)
+          # The tip tree is ~12.6 GB. Checking out news_intake, 01_daily,
+          # research, and dashboard next to a full fetch left the land
+          # runner with no headroom: 2026-11-09 freeze died exit 143
+          # ~3 min after "land-closed →" with no price_store line
+          # (runner shutdown / OOM, not the 120-min step timeout).
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /*
+            !/data/news_intake/
+            !/data/ab_checklist/
+            !/data/ab_backfill/
+            !/data/checklist/
+            !/excel_bot/
+            !/validation/
+            !/eval/
+            !/01_daily/
+            /01_daily/factor_mine_action.md
+            !/research/
+            /research/rebuild/
+            !/dashboard/
+            /dashboard/factor-mine/
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -213,6 +234,9 @@ jobs:
           FULLSCAN_OPPSET_UNION: ${{ (inputs.oppset_union == true || inputs.oppset_union == 'true') && '1' || '' }}
         run: |
           set -euo pipefail
+          echo "[factor-mine] runner disk/memory before land"
+          df -h || true
+          free -m || true
           DATE=$(TZ=America/New_York date +%F)
           python3 -m src.workflow_progress beat --workflow factor_mine --date "$DATE" --stages land_closed --stage land_closed >> /tmp/progress_beat.log 2>&1 &
           echo $! > /tmp/progress_beat.pid
