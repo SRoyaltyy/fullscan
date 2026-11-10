@@ -1,6 +1,6 @@
 {
   "date": "2026-11-10",
-  "generated_at": "2026-11-10T04:34:58.890718-05:00",
+  "generated_at": "2026-11-10T04:35:32.047638-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -181,7 +181,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 1,
+      "n_req_ok": 2,
       "n_req": 9,
       "n_opt_ok": 1,
       "n_opt": 14,
@@ -239,10 +239,10 @@
           "name": "News parse JSON",
           "path": "01_daily/news/2026-11-10_parsed.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "",
+          "size": 6260139,
+          "said": "6260139B on disk",
           "bullets": []
         },
         {
@@ -329,13 +329,13 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7576,
-          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 18 fail",
+          "size": 7575,
+          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 17 fail",
           "bullets": [
             "general_predict:missing",
             "events:missing",
             "news_judge:missing",
-            "news_parse:missing"
+            "news_actions:missing"
           ]
         },
         {
@@ -1169,6 +1169,31 @@
         }
       ],
       "preview": "2615 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CNM, TEL, WCN, SOLS, GPN \u00b7 2615 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 WCN, CNM, TSCO, TEVA, HUM"
+    },
+    {
+      "key": "news_parse",
+      "title": "News parse",
+      "date": "2026-11-10",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-10T04:35:31.203273-05:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-11-10_parsed.json",
+          "ok": true,
+          "reason": "",
+          "size": 6260139,
+          "preview": "raw=8706 usable=721 single=610 \u00b7 Faltering Philippine Growth Spurs Calls for Rate Hold, State Aid - Bloomberg.com | China's factory-gate inflation at fastest in nearly 4-1/2 years in October, whil | RBA\u2019s Hunter Says AI Boom Will Put Near-Term Pressure on CPI - Bloomberg.com | China's October crude oil imports rise to highest level since March - Reuters | The stock-market rally keeps spreading beyond Big Tech. October inflation data c"
+        },
+        {
+          "path": "01_daily/news/2026-11-10_parsed.md",
+          "ok": true,
+          "reason": "",
+          "size": 12355,
+          "preview": "# News Parse v2 \u2014 2026-11-10T04:35:30.756862-05:00\nWindow\u224848h | news_mode=on | raw=8706 | usable=721 | single_name=610 | noise_dropped=7178\nusable polarity={'+': 47, '-': 103, 'mixed': 3, 'neutral': 568}"
+        }
+      ],
+      "preview": "raw=8706 usable=721 single=610 \u00b7 Faltering Philippine Growth Spurs Calls for Rate Hold, State Aid - Bloomberg.com | China's factory-gate inflation at fastest in nearly 4-1/2 years in October, whil | RBA\u2019s Hunter Says AI Boom Will Put Near-Term Pressure on CPI - Bloomberg.com | China's October crude oil imports rise to highest level since March - Reuters | The stock-market rally keeps spreading beyond Big Tech. October inflation data c \u00b7 # News Parse v2 \u2014 2026-11-10T04:35:30.756862-05:00\nWindow\u224848h | news_mode=on | raw=8706 | usable=721 | single_name=610 | noise_dropped=7178\nusable polarity={'+': 47, '-': 103, 'mixed': 3, 'neutral': 568}"
     }
   ],
   "href": {
