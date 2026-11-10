@@ -2,33 +2,33 @@
 
 Live sleeves still SIT on S≤−3. Search a ticker for every session since 8/13: cameras (+N −N), 09:30 open, close, same-day % and hold-1/3/5 with actual prices.
 
-Generated 2026-11-09T23:17:10.530028-05:00 · 2026-08-13 → 2026-11-06 · live sit **untouched**.
+Generated 2026-11-10T02:44:32.244248-05:00 · 2026-08-13 → 2026-11-09 · live sit **untouched**.
 
 ## Latest morning
 
-- Date **2026-11-06** S=None hard-red=False · 399 investigator cards · 164 long-ok · 46 short-ok
+- Date **2026-11-09** S=9.449 hard-red=False · 315 investigator cards · 132 long-ok · 25 short-ok
 
 ### Longs weather sat on (top)
 
-- **APP** idio +25 · +7 −1 · E good · H1 15.18% H3 None%
-- **YELP** idio +20 · +7 −1 · E good · H1 5.84% H3 None%
-- **MNST** idio +20 · +6 −1 · E good · H1 3.63% H3 None%
-- **NTRA** idio +19 · +6 −1 · E good · H1 0.13% H3 None%
-- **CHTR** idio +19 · +5 −1 · E good · H1 4.72% H3 None%
-- **ENOV** idio +19 · +5 −1 · E good · H1 4.77% H3 None%
-- **FNF** idio +19 · +5 −1 · E good · H1 6.18% H3 None%
-- **CARG** idio +18 · +6 −1 · E good · H1 -7.2% H3 None%
+- **APP** idio +31 · +9 −0 · E good · H1 None% H3 None%
+- **ZVRA** idio +31 · +8 −1 · E good · H1 None% H3 None%
+- **ALGN** idio +30 · +9 −1 · E good · H1 None% H3 None%
+- **PRVA** idio +29 · +8 −0 · E good · H1 None% H3 None%
+- **VCEL** idio +29 · +8 −0 · E good · H1 None% H3 None%
+- **XERS** idio +29 · +8 −0 · E good · H1 None% H3 None%
+- **ADMA** idio +28 · +9 −0 · E good · H1 None% H3 None%
+- **COLL** idio +28 · +8 −0 · E good · H1 None% H3 None%
 
 ### Shorts weather sat on (top)
 
-- **GSM** idio -12 · +2 −5 · H1 -0.38%
-- **HRZN** idio -12 · +1 −5 · H1 -5.32%
-- **IONQ** idio -12 · +0 −5 · H1 -26.17%
-- **VSAT** idio -12 · +1 −6 · H1 -21.34%
-- **IREN** idio -11 · +2 −5 · H1 -1.23%
-- **VNET** idio -11 · +2 −5 · H1 -0.0%
-- **AIP** idio -11 · +1 −6 · H1 -12.54%
-- **OPEN** idio -10 · +1 −4 · H1 21.67%
+- **TROX** idio -14 · +2 −5 · H1 None%
+- **DDD** idio -14 · +2 −6 · H1 None%
+- **ASPN** idio -11 · +2 −5 · H1 None%
+- **HE** idio -10 · +3 −4 · H1 None%
+- **DQ** idio -9 · +2 −5 · H1 None%
+- **ASTS** idio -8 · +2 −6 · H1 None%
+- **LTRX** idio -7 · +1 −5 · H1 None%
+- **PPTA** idio -7 · +2 −5 · H1 None%
 
 ## If we had taken them on hard-red sits (research)
 
