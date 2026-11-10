@@ -5,8 +5,8 @@
   "run_id": "42788614801",
   "model": "glm-5.3-flash",
   "started_at": "2026-11-10T04:33:36-05:00",
-  "updated_at": "2026-11-10T04:35:14-05:00",
-  "heartbeat_at": "2026-11-10T04:35:14-05:00",
+  "updated_at": "2026-11-10T04:35:54-05:00",
+  "heartbeat_at": "2026-11-10T04:35:54-05:00",
   "stages": [
     {
       "name": "prep",
@@ -24,8 +24,8 @@
       "state": "running",
       "started_at": "2026-11-10T04:35:14-05:00",
       "ended_at": "",
-      "heartbeat_at": "2026-11-10T04:35:14-05:00",
-      "done": 0,
+      "heartbeat_at": "2026-11-10T04:35:54-05:00",
+      "done": 1,
       "total": 4,
       "model": "glm-5.3-flash",
       "error": ""
