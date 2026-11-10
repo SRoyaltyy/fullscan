@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-09T20:10:41.250273-05:00",
+  "generated": "2026-11-10T10:03:15.972247-05:00",
   "capital": 10000.0,
   "dates": [
     "2026-08-13",
@@ -67,7 +67,8 @@
     "2026-11-04",
     "2026-11-05",
     "2026-11-06",
-    "2026-11-09"
+    "2026-11-09",
+    "2026-11-10"
   ],
   "scenarios": [
     {
@@ -327,7 +328,8 @@
       -0.02,
       1.65,
       -4.41,
-      0.31
+      0.31,
+      2.37
     ],
     "equity": [
       10046.0,
@@ -395,7 +397,8 @@
       10212.88,
       10381.39,
       9923.57,
-      9954.33
+      9954.33,
+      10190.25
     ]
   },
   "sleeves": {
@@ -411,15 +414,15 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 66,
+        "n_days": 67,
         "n_win_days": 13,
-        "n_loss_days": 51,
-        "p_loss_day": 0.7727,
-        "p_win_day": 0.197,
-        "mean_day": -4.258,
+        "n_loss_days": 52,
+        "p_loss_day": 0.7761,
+        "p_win_day": 0.194,
+        "mean_day": -4.49,
         "avg_win_day": 0.968,
-        "avg_loss_day": -5.757,
-        "cum_sum": -281.034
+        "avg_loss_day": -6.026,
+        "cum_sum": -300.797
       },
       "equity": [
         9953.57,
@@ -487,9 +490,10 @@
         278.22,
         273.65,
         272.93,
-        215.14
+        271.27,
+        161.87
       ],
-      "final": 215.14,
+      "final": 161.87,
       "orig_window": {
         "start": "2026-08-13",
         "end": "2026-08-21",
@@ -11349,44 +11353,186 @@
         },
         {
           "date": "2026-11-09",
-          "day_pnl": -21.174,
-          "equity": 215.14,
+          "day_pnl": -0.608,
+          "equity": 271.27,
           "n_held": 7,
-          "n_buy": 0,
+          "n_buy": 4,
           "n_sell": 2,
-          "n_skip": 7,
+          "n_skip": 3,
           "n_cand": 7,
           "hard_red": false,
-          "bought": [],
+          "bought": [
+            "ACHC",
+            "LFST",
+            "UIS",
+            "DLO"
+          ],
           "sold": [
             "MD",
             "AVAH"
+          ],
+          "held": [
+            "ACHC",
+            "LFST",
+            "UIS",
+            "DLO"
+          ],
+          "buys": [
+            {
+              "ticker": "ACHC",
+              "side": "buy",
+              "buy_px": 38.61000061035156,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 37.90999984741211,
+              "low": 37.790000915527344,
+              "high": 39.70000076293945,
+              "close": 38.61000061035156,
+              "shares": 1,
+              "fees": 0.3891,
+              "amount": 39.0,
+              "cash_after": 233.4
+            },
+            {
+              "ticker": "LFST",
+              "side": "buy",
+              "buy_px": 14.600000381469727,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 13.760000228881836,
+              "low": 13.199999809265137,
+              "high": 14.914999961853027,
+              "close": 14.600000381469727,
+              "shares": 2,
+              "fees": 0.298,
+              "amount": 29.5,
+              "cash_after": 203.91
+            },
+            {
+              "ticker": "UIS",
+              "side": "buy",
+              "buy_px": 2.7200000286102295,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 2.700000047683716,
+              "low": 2.640000104904175,
+              "high": 2.7799999713897705,
+              "close": 2.7200000286102295,
+              "shares": 10,
+              "fees": 0.302,
+              "amount": 27.5,
+              "cash_after": 176.4
+            },
+            {
+              "ticker": "DLO",
+              "side": "buy",
+              "buy_px": 14.390000343322754,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 14.15999984741211,
+              "low": 14.010000228881836,
+              "high": 14.484999656677246,
+              "close": 14.390000343322754,
+              "shares": 1,
+              "fees": 0.1469,
+              "amount": 14.54,
+              "cash_after": 161.87
+            }
+          ],
+          "sells": [
+            {
+              "ticker": "MD",
+              "side": "sell",
+              "sell_px": 31.489999771118164,
+              "sell_when": "16:00 ET close",
+              "buy_px": 31.290000915527344,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "shares": 1,
+              "fees": 0.3379,
+              "amount": 31.15,
+              "realized_pnl": -0.45,
+              "cash_after": 246.29
+            },
+            {
+              "ticker": "AVAH",
+              "side": "sell",
+              "sell_px": 13.199999809265137,
+              "sell_when": "16:00 ET close",
+              "buy_px": 13.25,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "shares": 2,
+              "fees": 0.29,
+              "amount": 26.11,
+              "realized_pnl": -0.66,
+              "cash_after": 272.4
+            }
+          ],
+          "cash": 161.87,
+          "invested": 109.4,
+          "fees_cum": 720.88
+        },
+        {
+          "date": "2026-11-10",
+          "day_pnl": -40.329,
+          "equity": 161.87,
+          "n_held": 24,
+          "n_buy": 0,
+          "n_sell": 4,
+          "n_skip": 24,
+          "n_cand": 24,
+          "hard_red": false,
+          "bought": [],
+          "sold": [
+            "ACHC",
+            "LFST",
+            "UIS",
+            "DLO"
           ],
           "held": [],
           "buys": [],
           "sells": [
             {
-              "ticker": "MD",
+              "ticker": "ACHC",
               "side": "sell",
               "sell_px": null,
               "sell_when": null,
-              "buy_px": 31.290000915527344,
+              "buy_px": 38.61000061035156,
               "buy_when": "16:00 ET close",
               "buy_kind": "close"
             },
             {
-              "ticker": "AVAH",
+              "ticker": "LFST",
               "side": "sell",
               "sell_px": null,
               "sell_when": null,
-              "buy_px": 13.25,
+              "buy_px": 14.600000381469727,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "UIS",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 2.7200000286102295,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "DLO",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 14.390000343322754,
               "buy_when": "16:00 ET close",
               "buy_kind": "close"
             }
           ],
-          "cash": 215.14,
+          "cash": 161.87,
           "invested": 0.0,
-          "fees_cum": 719.12
+          "fees_cum": 720.88
         }
       ]
     },
@@ -11402,15 +11548,15 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 66,
+        "n_days": 67,
         "n_win_days": 9,
-        "n_loss_days": 55,
-        "p_loss_day": 0.8333,
-        "p_win_day": 0.1364,
-        "mean_day": -4.096,
+        "n_loss_days": 56,
+        "p_loss_day": 0.8358,
+        "p_win_day": 0.1343,
+        "mean_day": -4.488,
         "avg_win_day": 0.705,
-        "avg_loss_day": -5.031,
-        "cum_sum": -270.362
+        "avg_loss_day": -5.483,
+        "cum_sum": -300.703
       },
       "equity": [
         9955.38,
@@ -11478,9 +11624,10 @@
         312.82,
         309.24,
         308.05,
-        283.61
+        306.15,
+        190.86
       ],
-      "final": 283.61,
+      "final": 190.86,
       "orig_window": {
         "start": "2026-08-13",
         "end": "2026-08-21",
@@ -24320,44 +24467,213 @@
         },
         {
           "date": "2026-11-09",
-          "day_pnl": -7.934,
-          "equity": 283.61,
+          "day_pnl": -0.617,
+          "equity": 306.15,
           "n_held": 9,
-          "n_buy": 0,
+          "n_buy": 5,
           "n_sell": 2,
-          "n_skip": 9,
+          "n_skip": 4,
           "n_cand": 9,
           "hard_red": false,
-          "bought": [],
+          "bought": [
+            "UIS",
+            "DLO",
+            "PTLO",
+            "EVC",
+            "LFST"
+          ],
           "sold": [
             "GPK",
             "AVAH"
+          ],
+          "held": [
+            "UIS",
+            "DLO",
+            "PTLO",
+            "EVC",
+            "LFST"
+          ],
+          "buys": [
+            {
+              "ticker": "UIS",
+              "side": "buy",
+              "buy_px": 2.7200000286102295,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 2.700000047683716,
+              "low": 2.640000104904175,
+              "high": 2.7799999713897705,
+              "close": 2.7200000286102295,
+              "shares": 12,
+              "fees": 0.3624,
+              "amount": 33.0,
+              "cash_after": 274.36
+            },
+            {
+              "ticker": "DLO",
+              "side": "buy",
+              "buy_px": 14.390000343322754,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 14.15999984741211,
+              "low": 14.010000228881836,
+              "high": 14.484999656677246,
+              "close": 14.390000343322754,
+              "shares": 2,
+              "fees": 0.2938,
+              "amount": 29.07,
+              "cash_after": 245.29
+            },
+            {
+              "ticker": "PTLO",
+              "side": "buy",
+              "buy_px": 6.889999866485596,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 6.730000019073486,
+              "low": 6.639999866485596,
+              "high": 7.067999839782715,
+              "close": 6.889999866485596,
+              "shares": 3,
+              "fees": 0.2157,
+              "amount": 20.89,
+              "cash_after": 224.4
+            },
+            {
+              "ticker": "EVC",
+              "side": "buy",
+              "buy_px": 9.300000190734863,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 8.949999809265137,
+              "low": 8.949999809265137,
+              "high": 9.479999542236328,
+              "close": 9.300000190734863,
+              "shares": 2,
+              "fees": 0.192,
+              "amount": 18.79,
+              "cash_after": 205.61
+            },
+            {
+              "ticker": "LFST",
+              "side": "buy",
+              "buy_px": 14.600000381469727,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 13.760000228881836,
+              "low": 13.199999809265137,
+              "high": 14.914999961853027,
+              "close": 14.600000381469727,
+              "shares": 1,
+              "fees": 0.149,
+              "amount": 14.75,
+              "cash_after": 190.86
+            }
+          ],
+          "sells": [
+            {
+              "ticker": "GPK",
+              "side": "sell",
+              "sell_px": 10.84000015258789,
+              "sell_when": "16:00 ET close",
+              "buy_px": 11.539999961853027,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "shares": 1,
+              "fees": 0.1314,
+              "amount": 10.71,
+              "realized_pnl": -0.95,
+              "cash_after": 294.32
+            },
+            {
+              "ticker": "AVAH",
+              "side": "sell",
+              "sell_px": 13.199999809265137,
+              "sell_when": "16:00 ET close",
+              "buy_px": 13.25,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "shares": 1,
+              "fees": 0.155,
+              "amount": 13.04,
+              "realized_pnl": -0.34,
+              "cash_after": 307.37
+            }
+          ],
+          "cash": 190.86,
+          "invested": 115.29,
+          "fees_cum": 825.22
+        },
+        {
+          "date": "2026-11-10",
+          "day_pnl": -37.658,
+          "equity": 190.86,
+          "n_held": 24,
+          "n_buy": 0,
+          "n_sell": 5,
+          "n_skip": 24,
+          "n_cand": 24,
+          "hard_red": false,
+          "bought": [],
+          "sold": [
+            "UIS",
+            "DLO",
+            "PTLO",
+            "EVC",
+            "LFST"
           ],
           "held": [],
           "buys": [],
           "sells": [
             {
-              "ticker": "GPK",
+              "ticker": "UIS",
               "side": "sell",
               "sell_px": null,
               "sell_when": null,
-              "buy_px": 11.539999961853027,
+              "buy_px": 2.7200000286102295,
               "buy_when": "16:00 ET close",
               "buy_kind": "close"
             },
             {
-              "ticker": "AVAH",
+              "ticker": "DLO",
               "side": "sell",
               "sell_px": null,
               "sell_when": null,
-              "buy_px": 13.25,
+              "buy_px": 14.390000343322754,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "PTLO",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 6.889999866485596,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "EVC",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 9.300000190734863,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "LFST",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 14.600000381469727,
               "buy_when": "16:00 ET close",
               "buy_kind": "close"
             }
           ],
-          "cash": 283.61,
+          "cash": 190.86,
           "invested": 0.0,
-          "fees_cum": 823.72
+          "fees_cum": 825.22
         }
       ]
     },
@@ -24373,15 +24689,15 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 66,
+        "n_days": 67,
         "n_win_days": 10,
-        "n_loss_days": 55,
-        "p_loss_day": 0.8333,
-        "p_win_day": 0.1515,
-        "mean_day": 4.13,
+        "n_loss_days": 56,
+        "p_loss_day": 0.8358,
+        "p_win_day": 0.1493,
+        "mean_day": 3.998,
         "avg_win_day": 66.755,
-        "avg_loss_day": -7.181,
-        "cum_sum": 272.573
+        "avg_loss_day": -7.137,
+        "cum_sum": 267.877
       },
       "equity": [
         9880.7,
@@ -24449,9 +24765,10 @@
         497.54,
         491.12,
         482.49,
-        376.45
+        475.84,
+        355.47
       ],
-      "final": 376.45,
+      "final": 355.47,
       "orig_window": {
         "start": "2026-08-13",
         "end": "2026-08-21",
@@ -50563,15 +50880,23 @@
         },
         {
           "date": "2026-11-09",
-          "day_pnl": -21.978,
-          "equity": 376.45,
+          "day_pnl": -1.378,
+          "equity": 475.84,
           "n_held": 21,
-          "n_buy": 0,
+          "n_buy": 7,
           "n_sell": 6,
-          "n_skip": 20,
+          "n_skip": 13,
           "n_cand": 21,
           "hard_red": false,
-          "bought": [],
+          "bought": [
+            "CARS",
+            "DNUT",
+            "EVC",
+            "STGW",
+            "HNST",
+            "CERT",
+            "FOSL"
+          ],
           "sold": [
             "ABX",
             "MAX",
@@ -50581,68 +50906,312 @@
             "ACAD"
           ],
           "held": [
-            "ADMA"
+            "ADMA",
+            "CARS",
+            "DNUT",
+            "EVC",
+            "STGW",
+            "HNST",
+            "CERT",
+            "FOSL"
           ],
-          "buys": [],
+          "buys": [
+            {
+              "ticker": "CARS",
+              "side": "buy",
+              "buy_px": 13.479999542236328,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 13.399999618530273,
+              "low": 12.720000267028809,
+              "high": 13.744999885559082,
+              "close": 13.479999542236328,
+              "shares": 1,
+              "fees": 0.1378,
+              "amount": 13.62,
+              "cash_after": 450.56
+            },
+            {
+              "ticker": "DNUT",
+              "side": "buy",
+              "buy_px": 4.03000020980835,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 4.114999771118164,
+              "low": 3.9149999618530273,
+              "high": 4.190000057220459,
+              "close": 4.03000020980835,
+              "shares": 5,
+              "fees": 0.2165,
+              "amount": 20.37,
+              "cash_after": 430.19
+            },
+            {
+              "ticker": "EVC",
+              "side": "buy",
+              "buy_px": 9.300000190734863,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 8.949999809265137,
+              "low": 8.949999809265137,
+              "high": 9.479999542236328,
+              "close": 9.300000190734863,
+              "shares": 2,
+              "fees": 0.192,
+              "amount": 18.79,
+              "cash_after": 411.4
+            },
+            {
+              "ticker": "STGW",
+              "side": "buy",
+              "buy_px": 11.5,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 11.729999542236328,
+              "low": 11.390000343322754,
+              "high": 12.260000228881836,
+              "close": 11.5,
+              "shares": 1,
+              "fees": 0.118,
+              "amount": 11.62,
+              "cash_after": 399.78
+            },
+            {
+              "ticker": "HNST",
+              "side": "buy",
+              "buy_px": 5.170000076293945,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 4.519999980926514,
+              "low": 4.519999980926514,
+              "high": 5.210000038146973,
+              "close": 5.170000076293945,
+              "shares": 3,
+              "fees": 0.1641,
+              "amount": 15.67,
+              "cash_after": 384.11
+            },
+            {
+              "ticker": "CERT",
+              "side": "buy",
+              "buy_px": 12.220000267028809,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 12.0600004196167,
+              "low": 11.979999542236328,
+              "high": 12.600000381469727,
+              "close": 12.220000267028809,
+              "shares": 1,
+              "fees": 0.1252,
+              "amount": 12.35,
+              "cash_after": 371.76
+            },
+            {
+              "ticker": "FOSL",
+              "side": "buy",
+              "buy_px": 8.0600004196167,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 7.96999979019165,
+              "low": 7.900000095367432,
+              "high": 8.25,
+              "close": 8.0600004196167,
+              "shares": 2,
+              "fees": 0.1672,
+              "amount": 16.29,
+              "cash_after": 355.47
+            }
+          ],
           "sells": [
             {
               "ticker": "ABX",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 8.989999771118164,
+              "sell_when": "16:00 ET close",
               "buy_px": 9.050000190734863,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 1,
+              "fees": 0.1129,
+              "amount": 8.88,
+              "realized_pnl": -0.27,
+              "cash_after": 372.59
             },
             {
               "ticker": "MAX",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 14.15999984741211,
+              "sell_when": "16:00 ET close",
               "buy_px": 14.449999809265137,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 1,
+              "fees": 0.1646,
+              "amount": 14.0,
+              "realized_pnl": -0.6,
+              "cash_after": 386.59
             },
             {
               "ticker": "ATHM",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 22.350000381469727,
+              "sell_when": "16:00 ET close",
               "buy_px": 22.8700008392334,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 1,
+              "fees": 0.2465,
+              "amount": 22.1,
+              "realized_pnl": -1.0,
+              "cash_after": 408.69
             },
             {
               "ticker": "BILI",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 14.3100004196167,
+              "sell_when": "16:00 ET close",
               "buy_px": 14.65999984741211,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 1,
+              "fees": 0.1661,
+              "amount": 14.14,
+              "realized_pnl": -0.67,
+              "cash_after": 422.83
             },
             {
               "ticker": "COTY",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 4.21999979019165,
+              "sell_when": "16:00 ET close",
               "buy_px": 4.050000190734863,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 6,
+              "fees": 0.2912,
+              "amount": 25.03,
+              "realized_pnl": 0.47,
+              "cash_after": 447.86
             },
             {
               "ticker": "ACAD",
               "side": "sell",
+              "sell_px": 16.5,
+              "sell_when": "16:00 ET close",
+              "buy_px": 21.229999542236328,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "shares": 1,
+              "fees": 0.188,
+              "amount": 16.31,
+              "realized_pnl": -5.13,
+              "cash_after": 464.18
+            }
+          ],
+          "cash": 355.47,
+          "invested": 120.37,
+          "fees_cum": 2731.01
+        },
+        {
+          "date": "2026-11-10",
+          "day_pnl": -25.296,
+          "equity": 355.47,
+          "n_held": 25,
+          "n_buy": 0,
+          "n_sell": 8,
+          "n_skip": 25,
+          "n_cand": 25,
+          "hard_red": false,
+          "bought": [],
+          "sold": [
+            "ADMA",
+            "CARS",
+            "DNUT",
+            "EVC",
+            "STGW",
+            "HNST",
+            "CERT",
+            "FOSL"
+          ],
+          "held": [],
+          "buys": [],
+          "sells": [
+            {
+              "ticker": "ADMA",
+              "side": "sell",
               "sell_px": null,
               "sell_when": null,
-              "buy_px": 21.229999542236328,
+              "buy_px": 12.729999542236328,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "CARS",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 13.479999542236328,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "DNUT",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 4.03000020980835,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "EVC",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 9.300000190734863,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "STGW",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 11.5,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "HNST",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 5.170000076293945,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "CERT",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 12.220000267028809,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "FOSL",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 8.0600004196167,
               "buy_when": "16:00 ET close",
               "buy_kind": "close"
             }
           ],
-          "cash": 363.72,
-          "invested": 12.73,
-          "fees_cum": 2728.72
+          "cash": 355.47,
+          "invested": 0.0,
+          "fees_cum": 2731.01
         }
       ]
     },
@@ -50658,15 +51227,15 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 66,
+        "n_days": 67,
         "n_win_days": 9,
-        "n_loss_days": 55,
-        "p_loss_day": 0.8333,
-        "p_win_day": 0.1364,
-        "mean_day": -4.39,
+        "n_loss_days": 56,
+        "p_loss_day": 0.8358,
+        "p_win_day": 0.1343,
+        "mean_day": -4.728,
         "avg_win_day": 0.705,
-        "avg_loss_day": -5.384,
-        "cum_sum": -289.77
+        "avg_loss_day": -5.77,
+        "cum_sum": -316.795
       },
       "equity": [
         9918.74,
@@ -50734,9 +51303,10 @@
         229.86,
         226.82,
         226.28,
-        201.84
+        224.71,
+        141.27
       ],
-      "final": 201.84,
+      "final": 141.27,
       "orig_window": {
         "start": "2026-08-13",
         "end": "2026-08-21",
@@ -60286,44 +60856,213 @@
         },
         {
           "date": "2026-11-09",
-          "day_pnl": -10.801,
-          "equity": 201.84,
+          "day_pnl": -0.694,
+          "equity": 224.71,
           "n_held": 9,
-          "n_buy": 0,
+          "n_buy": 5,
           "n_sell": 2,
-          "n_skip": 9,
+          "n_skip": 4,
           "n_cand": 9,
           "hard_red": false,
-          "bought": [],
+          "bought": [
+            "UIS",
+            "DLO",
+            "PTLO",
+            "EVC",
+            "LFST"
+          ],
           "sold": [
             "AVAH",
             "GPK"
+          ],
+          "held": [
+            "UIS",
+            "DLO",
+            "PTLO",
+            "EVC",
+            "LFST"
+          ],
+          "buys": [
+            {
+              "ticker": "UIS",
+              "side": "buy",
+              "buy_px": 2.7200000286102295,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 2.700000047683716,
+              "low": 2.640000104904175,
+              "high": 2.7799999713897705,
+              "close": 2.7200000286102295,
+              "shares": 9,
+              "fees": 0.2718,
+              "amount": 24.75,
+              "cash_after": 200.84
+            },
+            {
+              "ticker": "DLO",
+              "side": "buy",
+              "buy_px": 14.390000343322754,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 14.15999984741211,
+              "low": 14.010000228881836,
+              "high": 14.484999656677246,
+              "close": 14.390000343322754,
+              "shares": 1,
+              "fees": 0.1469,
+              "amount": 14.54,
+              "cash_after": 186.3
+            },
+            {
+              "ticker": "PTLO",
+              "side": "buy",
+              "buy_px": 6.889999866485596,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 6.730000019073486,
+              "low": 6.639999866485596,
+              "high": 7.067999839782715,
+              "close": 6.889999866485596,
+              "shares": 3,
+              "fees": 0.2157,
+              "amount": 20.89,
+              "cash_after": 165.42
+            },
+            {
+              "ticker": "EVC",
+              "side": "buy",
+              "buy_px": 9.300000190734863,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 8.949999809265137,
+              "low": 8.949999809265137,
+              "high": 9.479999542236328,
+              "close": 9.300000190734863,
+              "shares": 1,
+              "fees": 0.096,
+              "amount": 9.4,
+              "cash_after": 156.02
+            },
+            {
+              "ticker": "LFST",
+              "side": "buy",
+              "buy_px": 14.600000381469727,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 13.760000228881836,
+              "low": 13.199999809265137,
+              "high": 14.914999961853027,
+              "close": 14.600000381469727,
+              "shares": 1,
+              "fees": 0.149,
+              "amount": 14.75,
+              "cash_after": 141.27
+            }
+          ],
+          "sells": [
+            {
+              "ticker": "AVAH",
+              "side": "sell",
+              "sell_px": 13.199999809265137,
+              "sell_when": "16:00 ET close",
+              "buy_px": 13.25,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "shares": 1,
+              "fees": 0.155,
+              "amount": 13.04,
+              "realized_pnl": -0.34,
+              "cash_after": 214.88
+            },
+            {
+              "ticker": "GPK",
+              "side": "sell",
+              "sell_px": 10.84000015258789,
+              "sell_when": "16:00 ET close",
+              "buy_px": 11.1899995803833,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "shares": 1,
+              "fees": 0.1314,
+              "amount": 10.71,
+              "realized_pnl": -0.6,
+              "cash_after": 225.59
+            }
+          ],
+          "cash": 141.27,
+          "invested": 83.44,
+          "fees_cum": 720.85
+        },
+        {
+          "date": "2026-11-10",
+          "day_pnl": -37.132,
+          "equity": 141.27,
+          "n_held": 10,
+          "n_buy": 0,
+          "n_sell": 5,
+          "n_skip": 10,
+          "n_cand": 10,
+          "hard_red": false,
+          "bought": [],
+          "sold": [
+            "UIS",
+            "DLO",
+            "PTLO",
+            "EVC",
+            "LFST"
           ],
           "held": [],
           "buys": [],
           "sells": [
             {
-              "ticker": "AVAH",
+              "ticker": "UIS",
               "side": "sell",
               "sell_px": null,
               "sell_when": null,
-              "buy_px": 13.25,
+              "buy_px": 2.7200000286102295,
               "buy_when": "16:00 ET close",
               "buy_kind": "close"
             },
             {
-              "ticker": "GPK",
+              "ticker": "DLO",
               "side": "sell",
               "sell_px": null,
               "sell_when": null,
-              "buy_px": 11.1899995803833,
+              "buy_px": 14.390000343322754,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "PTLO",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 6.889999866485596,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "EVC",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 9.300000190734863,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "LFST",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 14.600000381469727,
               "buy_when": "16:00 ET close",
               "buy_kind": "close"
             }
           ],
-          "cash": 201.84,
+          "cash": 141.27,
           "invested": 0.0,
-          "fees_cum": 719.68
+          "fees_cum": 720.85
         }
       ]
     },
@@ -60339,15 +61078,15 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 66,
+        "n_days": 67,
         "n_win_days": 10,
-        "n_loss_days": 54,
-        "p_loss_day": 0.8182,
-        "p_win_day": 0.1515,
-        "mean_day": -4.128,
+        "n_loss_days": 55,
+        "p_loss_day": 0.8209,
+        "p_win_day": 0.1493,
+        "mean_day": -4.377,
         "avg_win_day": 0.567,
-        "avg_loss_day": -5.151,
-        "cum_sum": -272.469
+        "avg_loss_day": -5.435,
+        "cum_sum": -293.26
       },
       "equity": [
         9955.38,
@@ -60415,9 +61154,10 @@
         340.2,
         336.9,
         335.38,
-        279.24
+        331.34,
+        210.98
       ],
-      "final": 279.24,
+      "final": 210.98,
       "orig_window": {
         "start": "2026-08-13",
         "end": "2026-08-21",
@@ -74357,64 +75097,297 @@
         },
         {
           "date": "2026-11-09",
-          "day_pnl": -16.739,
-          "equity": 279.24,
+          "day_pnl": -1.205,
+          "equity": 331.34,
           "n_held": 13,
-          "n_buy": 0,
+          "n_buy": 7,
           "n_sell": 4,
-          "n_skip": 13,
+          "n_skip": 6,
           "n_cand": 13,
           "hard_red": false,
-          "bought": [],
+          "bought": [
+            "UIS",
+            "DLO",
+            "PTLO",
+            "EVC",
+            "DNUT",
+            "STGW",
+            "LFST"
+          ],
           "sold": [
             "GPK",
             "AVAH",
             "QNST",
             "MNSO"
           ],
-          "held": [],
-          "buys": [],
+          "held": [
+            "UIS",
+            "DLO",
+            "PTLO",
+            "EVC",
+            "DNUT",
+            "STGW",
+            "LFST"
+          ],
+          "buys": [
+            {
+              "ticker": "UIS",
+              "side": "buy",
+              "buy_px": 2.7200000286102295,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 2.700000047683716,
+              "low": 2.640000104904175,
+              "high": 2.7799999713897705,
+              "close": 2.7200000286102295,
+              "shares": 9,
+              "fees": 0.2718,
+              "amount": 24.75,
+              "cash_after": 307.85
+            },
+            {
+              "ticker": "DLO",
+              "side": "buy",
+              "buy_px": 14.390000343322754,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 14.15999984741211,
+              "low": 14.010000228881836,
+              "high": 14.484999656677246,
+              "close": 14.390000343322754,
+              "shares": 1,
+              "fees": 0.1469,
+              "amount": 14.54,
+              "cash_after": 293.32
+            },
+            {
+              "ticker": "PTLO",
+              "side": "buy",
+              "buy_px": 6.889999866485596,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 6.730000019073486,
+              "low": 6.639999866485596,
+              "high": 7.067999839782715,
+              "close": 6.889999866485596,
+              "shares": 3,
+              "fees": 0.2157,
+              "amount": 20.89,
+              "cash_after": 272.43
+            },
+            {
+              "ticker": "EVC",
+              "side": "buy",
+              "buy_px": 9.300000190734863,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 8.949999809265137,
+              "low": 8.949999809265137,
+              "high": 9.479999542236328,
+              "close": 9.300000190734863,
+              "shares": 2,
+              "fees": 0.192,
+              "amount": 18.79,
+              "cash_after": 253.64
+            },
+            {
+              "ticker": "DNUT",
+              "side": "buy",
+              "buy_px": 4.03000020980835,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 4.114999771118164,
+              "low": 3.9149999618530273,
+              "high": 4.190000057220459,
+              "close": 4.03000020980835,
+              "shares": 4,
+              "fees": 0.1732,
+              "amount": 16.29,
+              "cash_after": 237.35
+            },
+            {
+              "ticker": "STGW",
+              "side": "buy",
+              "buy_px": 11.5,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 11.729999542236328,
+              "low": 11.390000343322754,
+              "high": 12.260000228881836,
+              "close": 11.5,
+              "shares": 1,
+              "fees": 0.118,
+              "amount": 11.62,
+              "cash_after": 225.73
+            },
+            {
+              "ticker": "LFST",
+              "side": "buy",
+              "buy_px": 14.600000381469727,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 13.760000228881836,
+              "low": 13.199999809265137,
+              "high": 14.914999961853027,
+              "close": 14.600000381469727,
+              "shares": 1,
+              "fees": 0.149,
+              "amount": 14.75,
+              "cash_after": 210.98
+            }
+          ],
           "sells": [
             {
               "ticker": "GPK",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 10.84000015258789,
+              "sell_when": "16:00 ET close",
               "buy_px": 11.539999961853027,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 1,
+              "fees": 0.1314,
+              "amount": 10.71,
+              "realized_pnl": -0.95,
+              "cash_after": 289.95
             },
             {
               "ticker": "AVAH",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 13.199999809265137,
+              "sell_when": "16:00 ET close",
               "buy_px": 13.25,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 1,
+              "fees": 0.155,
+              "amount": 13.04,
+              "realized_pnl": -0.34,
+              "cash_after": 302.99
             },
             {
               "ticker": "QNST",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 19.040000915527344,
+              "sell_when": "16:00 ET close",
               "buy_px": 20.65999984741211,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 1,
+              "fees": 0.2134,
+              "amount": 18.83,
+              "realized_pnl": -2.04,
+              "cash_after": 321.82
             },
             {
               "ticker": "MNSO",
               "side": "sell",
+              "sell_px": 10.920000076293945,
+              "sell_when": "16:00 ET close",
+              "buy_px": 11.039999961853027,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "shares": 1,
+              "fees": 0.1322,
+              "amount": 10.79,
+              "realized_pnl": -0.37,
+              "cash_after": 332.61
+            }
+          ],
+          "cash": 210.98,
+          "invested": 120.36,
+          "fees_cum": 862.67
+        },
+        {
+          "date": "2026-11-10",
+          "day_pnl": -36.325,
+          "equity": 210.98,
+          "n_held": 24,
+          "n_buy": 0,
+          "n_sell": 7,
+          "n_skip": 24,
+          "n_cand": 24,
+          "hard_red": false,
+          "bought": [],
+          "sold": [
+            "UIS",
+            "DLO",
+            "PTLO",
+            "EVC",
+            "DNUT",
+            "STGW",
+            "LFST"
+          ],
+          "held": [],
+          "buys": [],
+          "sells": [
+            {
+              "ticker": "UIS",
+              "side": "sell",
               "sell_px": null,
               "sell_when": null,
-              "buy_px": 11.039999961853027,
+              "buy_px": 2.7200000286102295,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "DLO",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 14.390000343322754,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "PTLO",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 6.889999866485596,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "EVC",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 9.300000190734863,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "DNUT",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 4.03000020980835,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "STGW",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 11.5,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "LFST",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 14.600000381469727,
               "buy_when": "16:00 ET close",
               "buy_kind": "close"
             }
           ],
-          "cash": 279.24,
+          "cash": 210.98,
           "invested": 0.0,
-          "fees_cum": 860.77
+          "fees_cum": 862.67
         }
       ]
     },
@@ -74430,15 +75403,15 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 66,
+        "n_days": 67,
         "n_win_days": 19,
-        "n_loss_days": 47,
-        "p_loss_day": 0.7121,
-        "p_win_day": 0.2879,
-        "mean_day": -4.696,
+        "n_loss_days": 48,
+        "p_loss_day": 0.7164,
+        "p_win_day": 0.2836,
+        "mean_day": -4.403,
         "avg_win_day": 0.59,
-        "avg_loss_day": -6.833,
-        "cum_sum": -309.93
+        "avg_loss_day": -6.379,
+        "cum_sum": -295.005
       },
       "equity": [
         9955.38,
@@ -74506,9 +75479,10 @@
         263.69,
         255.83,
         255.53,
-        202.75
+        254.16,
+        240.96
       ],
-      "final": 202.75,
+      "final": 240.96,
       "orig_window": {
         "start": "2026-08-13",
         "end": "2026-08-21",
@@ -84904,15 +85878,21 @@
         },
         {
           "date": "2026-11-09",
-          "day_pnl": -20.655,
-          "equity": 202.75,
+          "day_pnl": -0.536,
+          "equity": 254.16,
           "n_held": 10,
-          "n_buy": 0,
+          "n_buy": 5,
           "n_sell": 4,
-          "n_skip": 9,
+          "n_skip": 4,
           "n_cand": 9,
           "hard_red": false,
-          "bought": [],
+          "bought": [
+            "UIS",
+            "DLO",
+            "PTLO",
+            "EVC",
+            "LFST"
+          ],
           "sold": [
             "KD",
             "HLF",
@@ -84920,50 +85900,188 @@
             "GPK"
           ],
           "held": [
-            "AVAH"
+            "AVAH",
+            "UIS",
+            "DLO",
+            "PTLO",
+            "EVC",
+            "LFST"
           ],
-          "buys": [],
+          "buys": [
+            {
+              "ticker": "UIS",
+              "side": "buy",
+              "buy_px": 2.7200000286102295,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 2.700000047683716,
+              "low": 2.640000104904175,
+              "high": 2.7799999713897705,
+              "close": 2.7200000286102295,
+              "shares": 9,
+              "fees": 0.2718,
+              "amount": 24.75,
+              "cash_after": 217.19
+            },
+            {
+              "ticker": "DLO",
+              "side": "buy",
+              "buy_px": 14.390000343322754,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 14.15999984741211,
+              "low": 14.010000228881836,
+              "high": 14.484999656677246,
+              "close": 14.390000343322754,
+              "shares": 1,
+              "fees": 0.1469,
+              "amount": 14.54,
+              "cash_after": 202.65
+            },
+            {
+              "ticker": "PTLO",
+              "side": "buy",
+              "buy_px": 6.889999866485596,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 6.730000019073486,
+              "low": 6.639999866485596,
+              "high": 7.067999839782715,
+              "close": 6.889999866485596,
+              "shares": 3,
+              "fees": 0.2157,
+              "amount": 20.89,
+              "cash_after": 181.77
+            },
+            {
+              "ticker": "EVC",
+              "side": "buy",
+              "buy_px": 9.300000190734863,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 8.949999809265137,
+              "low": 8.949999809265137,
+              "high": 9.479999542236328,
+              "close": 9.300000190734863,
+              "shares": 2,
+              "fees": 0.192,
+              "amount": 18.79,
+              "cash_after": 162.97
+            },
+            {
+              "ticker": "LFST",
+              "side": "buy",
+              "buy_px": 14.600000381469727,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 13.760000228881836,
+              "low": 13.199999809265137,
+              "high": 14.914999961853027,
+              "close": 14.600000381469727,
+              "shares": 1,
+              "fees": 0.149,
+              "amount": 14.75,
+              "cash_after": 148.22
+            }
+          ],
           "sells": [
             {
               "ticker": "KD",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 16.799999237060547,
+              "sell_when": "16:00 ET close",
               "buy_px": 16.18000030517578,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 1,
+              "fees": 0.191,
+              "amount": 16.61,
+              "realized_pnl": 0.26,
+              "cash_after": 206.11
             },
             {
               "ticker": "HLF",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 15.699999809265137,
+              "sell_when": "16:00 ET close",
               "buy_px": 14.899999618530273,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 1,
+              "fees": 0.18,
+              "amount": 15.52,
+              "realized_pnl": 0.47,
+              "cash_after": 221.63
             },
             {
               "ticker": "UPWK",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 9.720000267028809,
+              "sell_when": "16:00 ET close",
               "buy_px": 10.319999694824219,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 1,
+              "fees": 0.1202,
+              "amount": 9.6,
+              "realized_pnl": -0.83,
+              "cash_after": 231.23
             },
             {
               "ticker": "GPK",
               "side": "sell",
+              "sell_px": 10.84000015258789,
+              "sell_when": "16:00 ET close",
+              "buy_px": 11.539999961853027,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "shares": 1,
+              "fees": 0.1314,
+              "amount": 10.71,
+              "realized_pnl": -0.95,
+              "cash_after": 241.94
+            }
+          ],
+          "cash": 148.22,
+          "invested": 105.94,
+          "fees_cum": 624.6
+        },
+        {
+          "date": "2026-11-10",
+          "day_pnl": -5.194,
+          "equity": 240.96,
+          "n_held": 25,
+          "n_buy": 0,
+          "n_sell": 1,
+          "n_skip": 24,
+          "n_cand": 24,
+          "hard_red": false,
+          "bought": [],
+          "sold": [
+            "AVAH"
+          ],
+          "held": [
+            "UIS",
+            "DLO",
+            "PTLO",
+            "EVC",
+            "LFST"
+          ],
+          "buys": [],
+          "sells": [
+            {
+              "ticker": "AVAH",
+              "side": "sell",
               "sell_px": null,
               "sell_when": null,
-              "buy_px": 11.539999961853027,
+              "buy_px": 13.25,
               "buy_when": "16:00 ET close",
               "buy_kind": "close"
             }
           ],
-          "cash": 189.5,
-          "invested": 13.25,
-          "fees_cum": 623.0
+          "cash": 148.22,
+          "invested": 92.74,
+          "fees_cum": 624.6
         }
       ]
     },
@@ -84979,15 +86097,15 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 66,
-        "n_win_days": 19,
+        "n_days": 67,
+        "n_win_days": 20,
         "n_loss_days": 47,
-        "p_loss_day": 0.7121,
-        "p_win_day": 0.2879,
-        "mean_day": -2.936,
-        "avg_win_day": 0.86,
-        "avg_loss_day": -4.471,
-        "cum_sum": -193.779
+        "p_loss_day": 0.7015,
+        "p_win_day": 0.2985,
+        "mean_day": -2.962,
+        "avg_win_day": 0.836,
+        "avg_loss_day": -4.578,
+        "cum_sum": -198.449
       },
       "equity": [
         9955.38,
@@ -85055,9 +86173,10 @@
         1410.02,
         1367.61,
         1355.09,
-        1215.81
+        1360.32,
+        1151.73
       ],
-      "final": 1215.81,
+      "final": 1151.73,
       "orig_window": {
         "start": "2026-08-13",
         "end": "2026-08-21",
@@ -99152,15 +100271,24 @@
         },
         {
           "date": "2026-11-09",
-          "day_pnl": -10.278,
-          "equity": 1215.81,
+          "day_pnl": 0.386,
+          "equity": 1360.32,
           "n_held": 19,
-          "n_buy": 0,
+          "n_buy": 8,
           "n_sell": 2,
-          "n_skip": 8,
+          "n_skip": 0,
           "n_cand": 9,
           "hard_red": false,
-          "bought": [],
+          "bought": [
+            "UIS",
+            "GRDN",
+            "DLO",
+            "PACS",
+            "CON",
+            "PTLO",
+            "EVC",
+            "LFST"
+          ],
           "sold": [
             "CNK",
             "PEB"
@@ -99176,32 +100304,257 @@
             "AVAH",
             "MD",
             "MGNI",
-            "ATAT"
+            "ATAT",
+            "UIS",
+            "GRDN",
+            "DLO",
+            "PACS",
+            "CON",
+            "PTLO",
+            "EVC",
+            "LFST"
           ],
-          "buys": [],
+          "buys": [
+            {
+              "ticker": "UIS",
+              "side": "buy",
+              "buy_px": 2.7200000286102295,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 2.700000047683716,
+              "low": 2.640000104904175,
+              "high": 2.7799999713897705,
+              "close": 2.7200000286102295,
+              "shares": 36,
+              "fees": 1.0872,
+              "amount": 99.01,
+              "cash_after": 690.66
+            },
+            {
+              "ticker": "GRDN",
+              "side": "buy",
+              "buy_px": 47.02000045776367,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 42.75,
+              "low": 41.5,
+              "high": 47.029998779296875,
+              "close": 47.02000045776367,
+              "shares": 1,
+              "fees": 0.4732,
+              "amount": 47.49,
+              "cash_after": 643.16
+            },
+            {
+              "ticker": "DLO",
+              "side": "buy",
+              "buy_px": 14.390000343322754,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 14.15999984741211,
+              "low": 14.010000228881836,
+              "high": 14.484999656677246,
+              "close": 14.390000343322754,
+              "shares": 5,
+              "fees": 0.7345,
+              "amount": 72.68,
+              "cash_after": 570.48
+            },
+            {
+              "ticker": "PACS",
+              "side": "buy",
+              "buy_px": 48.77000045776367,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 50.09000015258789,
+              "low": 48.32500076293945,
+              "high": 50.654998779296875,
+              "close": 48.77000045776367,
+              "shares": 1,
+              "fees": 0.4907,
+              "amount": 49.26,
+              "cash_after": 521.22
+            },
+            {
+              "ticker": "CON",
+              "side": "buy",
+              "buy_px": 42.400001525878906,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 42.60499954223633,
+              "low": 41.79999923706055,
+              "high": 43.0,
+              "close": 42.400001525878906,
+              "shares": 1,
+              "fees": 0.427,
+              "amount": 42.83,
+              "cash_after": 478.39
+            },
+            {
+              "ticker": "PTLO",
+              "side": "buy",
+              "buy_px": 6.889999866485596,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 6.730000019073486,
+              "low": 6.639999866485596,
+              "high": 7.067999839782715,
+              "close": 6.889999866485596,
+              "shares": 8,
+              "fees": 0.5752,
+              "amount": 55.7,
+              "cash_after": 422.69
+            },
+            {
+              "ticker": "EVC",
+              "side": "buy",
+              "buy_px": 9.300000190734863,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 8.949999809265137,
+              "low": 8.949999809265137,
+              "high": 9.479999542236328,
+              "close": 9.300000190734863,
+              "shares": 5,
+              "fees": 0.48,
+              "amount": 46.98,
+              "cash_after": 375.71
+            },
+            {
+              "ticker": "LFST",
+              "side": "buy",
+              "buy_px": 14.600000381469727,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 13.760000228881836,
+              "low": 13.199999809265137,
+              "high": 14.914999961853027,
+              "close": 14.600000381469727,
+              "shares": 3,
+              "fees": 0.447,
+              "amount": 44.25,
+              "cash_after": 331.47
+            }
+          ],
           "sells": [
             {
               "ticker": "CNK",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 40.88999938964844,
+              "sell_when": "16:00 ET close",
               "buy_px": 40.380001068115234,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 2,
+              "fees": 0.8438,
+              "amount": 80.94,
+              "realized_pnl": -0.64,
+              "cash_after": 725.06
             },
             {
               "ticker": "PEB",
               "side": "sell",
+              "sell_px": 21.760000228881836,
+              "sell_when": "16:00 ET close",
+              "buy_px": 22.200000762939453,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "shares": 3,
+              "fees": 0.6818,
+              "amount": 64.6,
+              "realized_pnl": -2.68,
+              "cash_after": 789.66
+            }
+          ],
+          "cash": 331.47,
+          "invested": 1028.85,
+          "fees_cum": 916.17
+        },
+        {
+          "date": "2026-11-10",
+          "day_pnl": -15.334,
+          "equity": 1151.73,
+          "n_held": 25,
+          "n_buy": 0,
+          "n_sell": 5,
+          "n_skip": 23,
+          "n_cand": 24,
+          "hard_red": false,
+          "bought": [],
+          "sold": [
+            "KD",
+            "DBX",
+            "HLF",
+            "UPWK",
+            "GPK"
+          ],
+          "held": [
+            "KDP",
+            "ACHC",
+            "AVAH",
+            "MD",
+            "MGNI",
+            "ATAT",
+            "UIS",
+            "GRDN",
+            "DLO",
+            "PACS",
+            "CON",
+            "PTLO",
+            "EVC",
+            "LFST"
+          ],
+          "buys": [],
+          "sells": [
+            {
+              "ticker": "KD",
+              "side": "sell",
               "sell_px": null,
               "sell_when": null,
-              "buy_px": 22.200000762939453,
+              "buy_px": 16.18000030517578,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "DBX",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 35.7599983215332,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "HLF",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 14.899999618530273,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "UPWK",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 10.319999694824219,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "GPK",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 11.539999961853027,
               "buy_when": "16:00 ET close",
               "buy_kind": "close"
             }
           ],
-          "cash": 644.13,
-          "invested": 571.68,
-          "fees_cum": 909.93
+          "cash": 331.47,
+          "invested": 820.26,
+          "fees_cum": 916.17
         }
       ]
     },
@@ -99217,15 +100570,15 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 66,
-        "n_win_days": 22,
+        "n_days": 67,
+        "n_win_days": 23,
         "n_loss_days": 44,
-        "p_loss_day": 0.6667,
-        "p_win_day": 0.3333,
-        "mean_day": -2.945,
-        "avg_win_day": 0.894,
-        "avg_loss_day": -4.865,
-        "cum_sum": -194.402
+        "p_loss_day": 0.6567,
+        "p_win_day": 0.3433,
+        "mean_day": -3.101,
+        "avg_win_day": 0.891,
+        "avg_loss_day": -5.188,
+        "cum_sum": -207.767
       },
       "equity": [
         9955.38,
@@ -99293,9 +100646,10 @@
         1153.66,
         1115.57,
         1109.7,
-        985.61
+        1118.77,
+        835.01
       ],
-      "final": 985.61,
+      "final": 835.01,
       "orig_window": {
         "start": "2026-08-13",
         "end": "2026-08-21",
@@ -109916,15 +111270,22 @@
         },
         {
           "date": "2026-11-09",
-          "day_pnl": -11.182,
-          "equity": 985.61,
+          "day_pnl": 0.817,
+          "equity": 1118.77,
           "n_held": 25,
-          "n_buy": 0,
+          "n_buy": 6,
           "n_sell": 4,
-          "n_skip": 8,
+          "n_skip": 2,
           "n_cand": 9,
           "hard_red": false,
-          "bought": [],
+          "bought": [
+            "UIS",
+            "GRDN",
+            "DLO",
+            "PTLO",
+            "EVC",
+            "LFST"
+          ],
           "sold": [
             "AVO",
             "CNK",
@@ -109948,50 +111309,266 @@
             "ACHC",
             "AVAH",
             "MD",
-            "MGNI"
+            "MGNI",
+            "UIS",
+            "GRDN",
+            "DLO",
+            "PTLO",
+            "EVC",
+            "LFST"
           ],
-          "buys": [],
+          "buys": [
+            {
+              "ticker": "UIS",
+              "side": "buy",
+              "buy_px": 2.7200000286102295,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 2.700000047683716,
+              "low": 2.640000104904175,
+              "high": 2.7799999713897705,
+              "close": 2.7200000286102295,
+              "shares": 20,
+              "fees": 0.604,
+              "amount": 55.0,
+              "cash_after": 393.1
+            },
+            {
+              "ticker": "GRDN",
+              "side": "buy",
+              "buy_px": 47.02000045776367,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 42.75,
+              "low": 41.5,
+              "high": 47.029998779296875,
+              "close": 47.02000045776367,
+              "shares": 1,
+              "fees": 0.4732,
+              "amount": 47.49,
+              "cash_after": 345.61
+            },
+            {
+              "ticker": "DLO",
+              "side": "buy",
+              "buy_px": 14.390000343322754,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 14.15999984741211,
+              "low": 14.010000228881836,
+              "high": 14.484999656677246,
+              "close": 14.390000343322754,
+              "shares": 3,
+              "fees": 0.4407,
+              "amount": 43.61,
+              "cash_after": 302.0
+            },
+            {
+              "ticker": "PTLO",
+              "side": "buy",
+              "buy_px": 6.889999866485596,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 6.730000019073486,
+              "low": 6.639999866485596,
+              "high": 7.067999839782715,
+              "close": 6.889999866485596,
+              "shares": 5,
+              "fees": 0.3595,
+              "amount": 34.81,
+              "cash_after": 267.19
+            },
+            {
+              "ticker": "EVC",
+              "side": "buy",
+              "buy_px": 9.300000190734863,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 8.949999809265137,
+              "low": 8.949999809265137,
+              "high": 9.479999542236328,
+              "close": 9.300000190734863,
+              "shares": 3,
+              "fees": 0.288,
+              "amount": 28.19,
+              "cash_after": 239.0
+            },
+            {
+              "ticker": "LFST",
+              "side": "buy",
+              "buy_px": 14.600000381469727,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 13.760000228881836,
+              "low": 13.199999809265137,
+              "high": 14.914999961853027,
+              "close": 14.600000381469727,
+              "shares": 2,
+              "fees": 0.298,
+              "amount": 29.5,
+              "cash_after": 209.5
+            }
+          ],
           "sells": [
             {
               "ticker": "AVO",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 11.90999984741211,
+              "sell_when": "16:00 ET close",
               "buy_px": 11.470000267028809,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 3,
+              "fees": 0.3863,
+              "amount": 35.34,
+              "realized_pnl": 0.58,
+              "cash_after": 342.82
             },
             {
               "ticker": "CNK",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 40.88999938964844,
+              "sell_when": "16:00 ET close",
               "buy_px": 38.75,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 1,
+              "fees": 0.4319,
+              "amount": 40.46,
+              "realized_pnl": 1.32,
+              "cash_after": 383.28
             },
             {
               "ticker": "ABX",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 8.989999771118164,
+              "sell_when": "16:00 ET close",
               "buy_px": 8.640000343322754,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 4,
+              "fees": 0.3916,
+              "amount": 35.57,
+              "realized_pnl": 0.65,
+              "cash_after": 418.84
             },
             {
               "ticker": "EZPW",
               "side": "sell",
+              "sell_px": 29.579999923706055,
+              "sell_when": "16:00 ET close",
+              "buy_px": 28.739999771118164,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "shares": 1,
+              "fees": 0.3188,
+              "amount": 29.26,
+              "realized_pnl": 0.23,
+              "cash_after": 448.1
+            }
+          ],
+          "cash": 209.5,
+          "invested": 909.27,
+          "fees_cum": 570.26
+        },
+        {
+          "date": "2026-11-10",
+          "day_pnl": -25.364,
+          "equity": 835.01,
+          "n_held": 25,
+          "n_buy": 0,
+          "n_sell": 6,
+          "n_skip": 23,
+          "n_cand": 24,
+          "hard_red": false,
+          "bought": [],
+          "sold": [
+            "REPL",
+            "MXCT",
+            "SY",
+            "CERS",
+            "HITI",
+            "ENIC"
+          ],
+          "held": [
+            "LAUR",
+            "PEB",
+            "KD",
+            "DBX",
+            "HLF",
+            "UPWK",
+            "KDP",
+            "ACHC",
+            "AVAH",
+            "MD",
+            "MGNI",
+            "UIS",
+            "GRDN",
+            "DLO",
+            "PTLO",
+            "EVC",
+            "LFST"
+          ],
+          "buys": [],
+          "sells": [
+            {
+              "ticker": "REPL",
+              "side": "sell",
               "sell_px": null,
               "sell_when": null,
-              "buy_px": 28.739999771118164,
+              "buy_px": 20.649999618530273,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "MXCT",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 1.4600000381469727,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "SY",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 1.9900000095367432,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "CERS",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 2.3399999141693115,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "HITI",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 2.7300000190734863,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "ENIC",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 4.25,
               "buy_when": "16:00 ET close",
               "buy_kind": "close"
             }
           ],
-          "cash": 307.47,
-          "invested": 678.14,
-          "fees_cum": 566.27
+          "cash": 209.5,
+          "invested": 625.51,
+          "fees_cum": 570.26
         }
       ]
     },
@@ -110007,15 +111584,15 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 66,
-        "n_win_days": 29,
+        "n_days": 67,
+        "n_win_days": 30,
         "n_loss_days": 36,
-        "p_loss_day": 0.5455,
-        "p_win_day": 0.4394,
-        "mean_day": -1.497,
-        "avg_win_day": 1.951,
-        "avg_loss_day": -4.316,
-        "cum_sum": -98.783
+        "p_loss_day": 0.5373,
+        "p_win_day": 0.4478,
+        "mean_day": -1.366,
+        "avg_win_day": 1.918,
+        "avg_loss_day": -4.141,
+        "cum_sum": -91.535
       },
       "equity": [
         9953.57,
@@ -110083,9 +111660,10 @@
         4217.17,
         4048.46,
         4008.98,
-        3051.69
+        4046.87,
+        3335.58
       ],
-      "final": 3051.69,
+      "final": 3335.58,
       "orig_window": {
         "start": "2026-08-13",
         "end": "2026-08-21",
@@ -122179,15 +123757,22 @@
         },
         {
           "date": "2026-11-09",
-          "day_pnl": -23.879,
-          "equity": 3051.69,
+          "day_pnl": 0.945,
+          "equity": 4046.87,
           "n_held": 18,
-          "n_buy": 0,
+          "n_buy": 6,
           "n_sell": 5,
-          "n_skip": 6,
+          "n_skip": 0,
           "n_cand": 7,
           "hard_red": false,
-          "bought": [],
+          "bought": [
+            "GRDN",
+            "LFST",
+            "CON",
+            "PACS",
+            "UIS",
+            "DLO"
+          ],
           "sold": [
             "VEEV",
             "ILMN",
@@ -122207,59 +123792,266 @@
             "UHS",
             "KDP",
             "AVAH",
-            "ACHC"
+            "ACHC",
+            "GRDN",
+            "LFST",
+            "CON",
+            "PACS",
+            "UIS",
+            "DLO"
           ],
-          "buys": [],
+          "buys": [
+            {
+              "ticker": "GRDN",
+              "side": "buy",
+              "buy_px": 47.02000045776367,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 42.75,
+              "low": 41.5,
+              "high": 47.029998779296875,
+              "close": 47.02000045776367,
+              "shares": 7,
+              "fees": 2.011,
+              "amount": 331.15,
+              "cash_after": 1695.78
+            },
+            {
+              "ticker": "LFST",
+              "side": "buy",
+              "buy_px": 14.600000381469727,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 13.760000228881836,
+              "low": 13.199999809265137,
+              "high": 14.914999961853027,
+              "close": 14.600000381469727,
+              "shares": 19,
+              "fees": 2.047,
+              "amount": 279.45,
+              "cash_after": 1416.33
+            },
+            {
+              "ticker": "CON",
+              "side": "buy",
+              "buy_px": 42.400001525878906,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 42.60499954223633,
+              "low": 41.79999923706055,
+              "high": 43.0,
+              "close": 42.400001525878906,
+              "shares": 5,
+              "fees": 2.005,
+              "amount": 214.01,
+              "cash_after": 1202.33
+            },
+            {
+              "ticker": "PACS",
+              "side": "buy",
+              "buy_px": 48.77000045776367,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 50.09000015258789,
+              "low": 48.32500076293945,
+              "high": 50.654998779296875,
+              "close": 48.77000045776367,
+              "shares": 4,
+              "fees": 1.9628,
+              "amount": 197.04,
+              "cash_after": 1005.28
+            },
+            {
+              "ticker": "UIS",
+              "side": "buy",
+              "buy_px": 2.7200000286102295,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 2.700000047683716,
+              "low": 2.640000104904175,
+              "high": 2.7799999713897705,
+              "close": 2.7200000286102295,
+              "shares": 61,
+              "fees": 1.8422,
+              "amount": 167.76,
+              "cash_after": 837.52
+            },
+            {
+              "ticker": "DLO",
+              "side": "buy",
+              "buy_px": 14.390000343322754,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 14.15999984741211,
+              "low": 14.010000228881836,
+              "high": 14.484999656677246,
+              "close": 14.390000343322754,
+              "shares": 9,
+              "fees": 1.3221,
+              "amount": 130.83,
+              "cash_after": 706.69
+            }
+          ],
           "sells": [
             {
               "ticker": "VEEV",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 306.3999938964844,
+              "sell_when": "16:00 ET close",
               "buy_px": 310.6300048828125,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 1,
+              "fees": 2.013,
+              "amount": 304.39,
+              "realized_pnl": -8.24,
+              "cash_after": 1348.81
             },
             {
               "ticker": "ILMN",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 220.77999877929688,
+              "sell_when": "16:00 ET close",
               "buy_px": 226.5399932861328,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 1,
+              "fees": 2.013,
+              "amount": 218.77,
+              "realized_pnl": -9.77,
+              "cash_after": 1567.57
             },
             {
               "ticker": "CNK",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 40.88999938964844,
+              "sell_when": "16:00 ET close",
               "buy_px": 40.380001068115234,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 5,
+              "fees": 2.025,
+              "amount": 202.42,
+              "realized_pnl": -1.48,
+              "cash_after": 1770.0
             },
             {
               "ticker": "CHEF",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 107.2699966430664,
+              "sell_when": "16:00 ET close",
               "buy_px": 106.83999633789062,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 1,
+              "fees": 1.0957,
+              "amount": 106.17,
+              "realized_pnl": -1.74,
+              "cash_after": 1876.17
             },
             {
               "ticker": "PEB",
               "side": "sell",
+              "sell_px": 21.760000228881836,
+              "sell_when": "16:00 ET close",
+              "buy_px": 22.200000762939453,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "shares": 7,
+              "fees": 1.5642,
+              "amount": 150.76,
+              "realized_pnl": -6.22,
+              "cash_after": 2026.93
+            }
+          ],
+          "cash": 706.69,
+          "invested": 3340.18,
+          "fees_cum": 1084.24
+        },
+        {
+          "date": "2026-11-10",
+          "day_pnl": -17.576,
+          "equity": 3335.58,
+          "n_held": 25,
+          "n_buy": 0,
+          "n_sell": 5,
+          "n_skip": 24,
+          "n_cand": 24,
+          "hard_red": false,
+          "bought": [],
+          "sold": [
+            "XYZ",
+            "CDW",
+            "KD",
+            "APPN",
+            "DBX"
+          ],
+          "held": [
+            "THC",
+            "MD",
+            "EHC",
+            "UHS",
+            "KDP",
+            "AVAH",
+            "ACHC",
+            "GRDN",
+            "LFST",
+            "CON",
+            "PACS",
+            "UIS",
+            "DLO"
+          ],
+          "buys": [],
+          "sells": [
+            {
+              "ticker": "XYZ",
+              "side": "sell",
               "sell_px": null,
               "sell_when": null,
-              "buy_px": 22.200000762939453,
+              "buy_px": 84.04000091552734,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "CDW",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 158.38999938964844,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "KD",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 16.18000030517578,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "APPN",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 54.029998779296875,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "DBX",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 35.7599983215332,
               "buy_when": "16:00 ET close",
               "buy_kind": "close"
             }
           ],
-          "cash": 1044.42,
-          "invested": 2007.27,
-          "fees_cum": 1064.34
+          "cash": 706.69,
+          "invested": 2628.89,
+          "fees_cum": 1084.24
         }
       ]
     },
@@ -122275,15 +124067,15 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 66,
-        "n_win_days": 28,
+        "n_days": 67,
+        "n_win_days": 29,
         "n_loss_days": 37,
-        "p_loss_day": 0.5606,
-        "p_win_day": 0.4242,
-        "mean_day": -3.014,
-        "avg_win_day": 0.964,
-        "avg_loss_day": -6.106,
-        "cum_sum": -198.93
+        "p_loss_day": 0.5522,
+        "p_win_day": 0.4328,
+        "mean_day": -2.654,
+        "avg_win_day": 0.974,
+        "avg_loss_day": -5.569,
+        "cum_sum": -177.8
       },
       "equity": [
         9918.74,
@@ -122351,9 +124143,10 @@
         1406.49,
         1342.16,
         1325.6,
-        974.95
+        1342.21,
+        1253.96
       ],
-      "final": 974.95,
+      "final": 1253.96,
       "orig_window": {
         "start": "2026-08-13",
         "end": "2026-08-21",
@@ -130280,15 +132073,21 @@
         },
         {
           "date": "2026-11-09",
-          "day_pnl": -26.452,
-          "equity": 974.95,
+          "day_pnl": 1.253,
+          "equity": 1342.21,
           "n_held": 10,
-          "n_buy": 0,
+          "n_buy": 5,
           "n_sell": 1,
-          "n_skip": 8,
+          "n_skip": 3,
           "n_cand": 9,
           "hard_red": false,
-          "bought": [],
+          "bought": [
+            "UIS",
+            "GRDN",
+            "DLO",
+            "PACS",
+            "CON"
+          ],
           "sold": [
             "CNK"
           ],
@@ -130297,23 +132096,150 @@
             "KDP",
             "ACHC",
             "AVAH",
-            "MD"
+            "MD",
+            "UIS",
+            "GRDN",
+            "DLO",
+            "PACS",
+            "CON"
           ],
-          "buys": [],
+          "buys": [
+            {
+              "ticker": "UIS",
+              "side": "buy",
+              "buy_px": 2.7200000286102295,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 2.700000047683716,
+              "low": 2.640000104904175,
+              "high": 2.7799999713897705,
+              "close": 2.7200000286102295,
+              "shares": 68,
+              "fees": 2.0536,
+              "amount": 187.01,
+              "cash_after": 747.04
+            },
+            {
+              "ticker": "GRDN",
+              "side": "buy",
+              "buy_px": 47.02000045776367,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 42.75,
+              "low": 41.5,
+              "high": 47.029998779296875,
+              "close": 47.02000045776367,
+              "shares": 3,
+              "fees": 1.4196,
+              "amount": 142.48,
+              "cash_after": 604.56
+            },
+            {
+              "ticker": "DLO",
+              "side": "buy",
+              "buy_px": 14.390000343322754,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 14.15999984741211,
+              "low": 14.010000228881836,
+              "high": 14.484999656677246,
+              "close": 14.390000343322754,
+              "shares": 8,
+              "fees": 1.1752,
+              "amount": 116.3,
+              "cash_after": 488.26
+            },
+            {
+              "ticker": "PACS",
+              "side": "buy",
+              "buy_px": 48.77000045776367,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 50.09000015258789,
+              "low": 48.32500076293945,
+              "high": 50.654998779296875,
+              "close": 48.77000045776367,
+              "shares": 2,
+              "fees": 0.9814,
+              "amount": 98.52,
+              "cash_after": 389.74
+            },
+            {
+              "ticker": "CON",
+              "side": "buy",
+              "buy_px": 42.400001525878906,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 42.60499954223633,
+              "low": 41.79999923706055,
+              "high": 43.0,
+              "close": 42.400001525878906,
+              "shares": 1,
+              "fees": 0.427,
+              "amount": 42.83,
+              "cash_after": 346.91
+            }
+          ],
           "sells": [
             {
               "ticker": "CNK",
               "side": "sell",
+              "sell_px": 40.88999938964844,
+              "sell_when": "16:00 ET close",
+              "buy_px": 40.380001068115234,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "shares": 9,
+              "fees": 2.037,
+              "amount": 365.97,
+              "realized_pnl": 0.54,
+              "cash_after": 934.05
+            }
+          ],
+          "cash": 346.91,
+          "invested": 995.3,
+          "fees_cum": 791.93
+        },
+        {
+          "date": "2026-11-10",
+          "day_pnl": -6.575,
+          "equity": 1253.96,
+          "n_held": 10,
+          "n_buy": 0,
+          "n_sell": 1,
+          "n_skip": 10,
+          "n_cand": 10,
+          "hard_red": false,
+          "bought": [],
+          "sold": [
+            "KD"
+          ],
+          "held": [
+            "KDP",
+            "ACHC",
+            "AVAH",
+            "MD",
+            "UIS",
+            "GRDN",
+            "DLO",
+            "PACS",
+            "CON"
+          ],
+          "buys": [],
+          "sells": [
+            {
+              "ticker": "KD",
+              "side": "sell",
               "sell_px": null,
               "sell_when": null,
-              "buy_px": 40.380001068115234,
+              "buy_px": 16.18000030517578,
               "buy_when": "16:00 ET close",
               "buy_kind": "close"
             }
           ],
-          "cash": 568.08,
-          "invested": 406.87,
-          "fees_cum": 783.83
+          "cash": 346.91,
+          "invested": 907.05,
+          "fees_cum": 791.93
         }
       ]
     },
@@ -130329,15 +132255,15 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 66,
+        "n_days": 67,
         "n_win_days": 9,
-        "n_loss_days": 54,
-        "p_loss_day": 0.8182,
-        "p_win_day": 0.1364,
-        "mean_day": -4.293,
+        "n_loss_days": 55,
+        "p_loss_day": 0.8209,
+        "p_win_day": 0.1343,
+        "mean_day": -4.787,
         "avg_win_day": 1.241,
-        "avg_loss_day": -5.454,
-        "cum_sum": -283.364
+        "avg_loss_day": -6.035,
+        "cum_sum": -320.754
       },
       "equity": [
         10000.0,
@@ -130405,9 +132331,10 @@
         237.33,
         235.65,
         234.73,
-        197.04
+        232.59,
+        110.4
       ],
-      "final": 197.04,
+      "final": 110.4,
       "orig_window": {
         "start": "2026-08-13",
         "end": "2026-08-21",
@@ -139656,44 +141583,213 @@
         },
         {
           "date": "2026-11-09",
-          "day_pnl": -16.057,
-          "equity": 197.04,
+          "day_pnl": -0.912,
+          "equity": 232.59,
           "n_held": 6,
-          "n_buy": 0,
+          "n_buy": 5,
           "n_sell": 2,
-          "n_skip": 6,
+          "n_skip": 1,
           "n_cand": 6,
           "hard_red": false,
-          "bought": [],
+          "bought": [
+            "ACHC",
+            "UIS",
+            "DLO",
+            "PTLO",
+            "EVC"
+          ],
           "sold": [
             "GPK",
             "AVAH"
+          ],
+          "held": [
+            "ACHC",
+            "UIS",
+            "DLO",
+            "PTLO",
+            "EVC"
+          ],
+          "buys": [
+            {
+              "ticker": "ACHC",
+              "side": "buy",
+              "buy_px": 38.61000061035156,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 37.90999984741211,
+              "low": 37.790000915527344,
+              "high": 39.70000076293945,
+              "close": 38.61000061035156,
+              "shares": 1,
+              "fees": 0.3891,
+              "amount": 39.0,
+              "cash_after": 194.86
+            },
+            {
+              "ticker": "UIS",
+              "side": "buy",
+              "buy_px": 2.7200000286102295,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 2.700000047683716,
+              "low": 2.640000104904175,
+              "high": 2.7799999713897705,
+              "close": 2.7200000286102295,
+              "shares": 11,
+              "fees": 0.3322,
+              "amount": 30.25,
+              "cash_after": 164.61
+            },
+            {
+              "ticker": "DLO",
+              "side": "buy",
+              "buy_px": 14.390000343322754,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 14.15999984741211,
+              "low": 14.010000228881836,
+              "high": 14.484999656677246,
+              "close": 14.390000343322754,
+              "shares": 1,
+              "fees": 0.1469,
+              "amount": 14.54,
+              "cash_after": 150.08
+            },
+            {
+              "ticker": "PTLO",
+              "side": "buy",
+              "buy_px": 6.889999866485596,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 6.730000019073486,
+              "low": 6.639999866485596,
+              "high": 7.067999839782715,
+              "close": 6.889999866485596,
+              "shares": 3,
+              "fees": 0.2157,
+              "amount": 20.89,
+              "cash_after": 129.19
+            },
+            {
+              "ticker": "EVC",
+              "side": "buy",
+              "buy_px": 9.300000190734863,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 8.949999809265137,
+              "low": 8.949999809265137,
+              "high": 9.479999542236328,
+              "close": 9.300000190734863,
+              "shares": 2,
+              "fees": 0.192,
+              "amount": 18.79,
+              "cash_after": 110.4
+            }
+          ],
+          "sells": [
+            {
+              "ticker": "GPK",
+              "side": "sell",
+              "sell_px": 10.84000015258789,
+              "sell_when": "16:00 ET close",
+              "buy_px": 11.539999961853027,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "shares": 1,
+              "fees": 0.1314,
+              "amount": 10.71,
+              "realized_pnl": -0.95,
+              "cash_after": 207.75
+            },
+            {
+              "ticker": "AVAH",
+              "side": "sell",
+              "sell_px": 13.199999809265137,
+              "sell_when": "16:00 ET close",
+              "buy_px": 13.25,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "shares": 2,
+              "fees": 0.29,
+              "amount": 26.11,
+              "realized_pnl": -0.66,
+              "cash_after": 233.86
+            }
+          ],
+          "cash": 110.4,
+          "invested": 122.19,
+          "fees_cum": 502.6
+        },
+        {
+          "date": "2026-11-10",
+          "day_pnl": -52.535,
+          "equity": 110.4,
+          "n_held": 18,
+          "n_buy": 0,
+          "n_sell": 5,
+          "n_skip": 18,
+          "n_cand": 18,
+          "hard_red": false,
+          "bought": [],
+          "sold": [
+            "ACHC",
+            "UIS",
+            "DLO",
+            "PTLO",
+            "EVC"
           ],
           "held": [],
           "buys": [],
           "sells": [
             {
-              "ticker": "GPK",
+              "ticker": "ACHC",
               "side": "sell",
               "sell_px": null,
               "sell_when": null,
-              "buy_px": 11.539999961853027,
+              "buy_px": 38.61000061035156,
               "buy_when": "16:00 ET close",
               "buy_kind": "close"
             },
             {
-              "ticker": "AVAH",
+              "ticker": "UIS",
               "side": "sell",
               "sell_px": null,
               "sell_when": null,
-              "buy_px": 13.25,
+              "buy_px": 2.7200000286102295,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "DLO",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 14.390000343322754,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "PTLO",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 6.889999866485596,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "EVC",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 9.300000190734863,
               "buy_when": "16:00 ET close",
               "buy_kind": "close"
             }
           ],
-          "cash": 197.04,
+          "cash": 110.4,
           "invested": 0.0,
-          "fees_cum": 500.9
+          "fees_cum": 502.6
         }
       ]
     },
@@ -139709,15 +141805,15 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 66,
+        "n_days": 67,
         "n_win_days": 12,
-        "n_loss_days": 52,
-        "p_loss_day": 0.7879,
-        "p_win_day": 0.1818,
-        "mean_day": -4.27,
+        "n_loss_days": 53,
+        "p_loss_day": 0.791,
+        "p_win_day": 0.1791,
+        "mean_day": -4.646,
         "avg_win_day": 0.675,
-        "avg_loss_day": -5.576,
-        "cum_sum": -281.833
+        "avg_loss_day": -6.026,
+        "cum_sum": -311.272
       },
       "equity": [
         9955.38,
@@ -139785,9 +141881,10 @@
         242.3,
         240.62,
         239.84,
-        215.4
+        238.18,
+        145.44
       ],
-      "final": 215.4,
+      "final": 145.44,
       "orig_window": {
         "start": "2026-08-13",
         "end": "2026-08-21",
@@ -150871,44 +152968,213 @@
         },
         {
           "date": "2026-11-09",
-          "day_pnl": -10.19,
-          "equity": 215.4,
+          "day_pnl": -0.692,
+          "equity": 238.18,
           "n_held": 9,
-          "n_buy": 0,
+          "n_buy": 5,
           "n_sell": 2,
-          "n_skip": 9,
+          "n_skip": 4,
           "n_cand": 9,
           "hard_red": false,
-          "bought": [],
+          "bought": [
+            "UIS",
+            "DLO",
+            "PTLO",
+            "EVC",
+            "LFST"
+          ],
           "sold": [
             "GPK",
             "AVAH"
+          ],
+          "held": [
+            "UIS",
+            "DLO",
+            "PTLO",
+            "EVC",
+            "LFST"
+          ],
+          "buys": [
+            {
+              "ticker": "UIS",
+              "side": "buy",
+              "buy_px": 2.7200000286102295,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 2.700000047683716,
+              "low": 2.640000104904175,
+              "high": 2.7799999713897705,
+              "close": 2.7200000286102295,
+              "shares": 9,
+              "fees": 0.2718,
+              "amount": 24.75,
+              "cash_after": 214.41
+            },
+            {
+              "ticker": "DLO",
+              "side": "buy",
+              "buy_px": 14.390000343322754,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 14.15999984741211,
+              "low": 14.010000228881836,
+              "high": 14.484999656677246,
+              "close": 14.390000343322754,
+              "shares": 1,
+              "fees": 0.1469,
+              "amount": 14.54,
+              "cash_after": 199.87
+            },
+            {
+              "ticker": "PTLO",
+              "side": "buy",
+              "buy_px": 6.889999866485596,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 6.730000019073486,
+              "low": 6.639999866485596,
+              "high": 7.067999839782715,
+              "close": 6.889999866485596,
+              "shares": 3,
+              "fees": 0.2157,
+              "amount": 20.89,
+              "cash_after": 178.98
+            },
+            {
+              "ticker": "EVC",
+              "side": "buy",
+              "buy_px": 9.300000190734863,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 8.949999809265137,
+              "low": 8.949999809265137,
+              "high": 9.479999542236328,
+              "close": 9.300000190734863,
+              "shares": 2,
+              "fees": 0.192,
+              "amount": 18.79,
+              "cash_after": 160.19
+            },
+            {
+              "ticker": "LFST",
+              "side": "buy",
+              "buy_px": 14.600000381469727,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 13.760000228881836,
+              "low": 13.199999809265137,
+              "high": 14.914999961853027,
+              "close": 14.600000381469727,
+              "shares": 1,
+              "fees": 0.149,
+              "amount": 14.75,
+              "cash_after": 145.44
+            }
+          ],
+          "sells": [
+            {
+              "ticker": "GPK",
+              "side": "sell",
+              "sell_px": 10.84000015258789,
+              "sell_when": "16:00 ET close",
+              "buy_px": 11.539999961853027,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "shares": 1,
+              "fees": 0.1314,
+              "amount": 10.71,
+              "realized_pnl": -0.95,
+              "cash_after": 226.11
+            },
+            {
+              "ticker": "AVAH",
+              "side": "sell",
+              "sell_px": 13.199999809265137,
+              "sell_when": "16:00 ET close",
+              "buy_px": 13.25,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "shares": 1,
+              "fees": 0.155,
+              "amount": 13.04,
+              "realized_pnl": -0.34,
+              "cash_after": 239.16
+            }
+          ],
+          "cash": 145.44,
+          "invested": 92.74,
+          "fees_cum": 729.15
+        },
+        {
+          "date": "2026-11-10",
+          "day_pnl": -38.937,
+          "equity": 145.44,
+          "n_held": 24,
+          "n_buy": 0,
+          "n_sell": 5,
+          "n_skip": 24,
+          "n_cand": 24,
+          "hard_red": false,
+          "bought": [],
+          "sold": [
+            "UIS",
+            "DLO",
+            "PTLO",
+            "EVC",
+            "LFST"
           ],
           "held": [],
           "buys": [],
           "sells": [
             {
-              "ticker": "GPK",
+              "ticker": "UIS",
               "side": "sell",
               "sell_px": null,
               "sell_when": null,
-              "buy_px": 11.539999961853027,
+              "buy_px": 2.7200000286102295,
               "buy_when": "16:00 ET close",
               "buy_kind": "close"
             },
             {
-              "ticker": "AVAH",
+              "ticker": "DLO",
               "side": "sell",
               "sell_px": null,
               "sell_when": null,
-              "buy_px": 13.25,
+              "buy_px": 14.390000343322754,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "PTLO",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 6.889999866485596,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "EVC",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 9.300000190734863,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "LFST",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 14.600000381469727,
               "buy_when": "16:00 ET close",
               "buy_kind": "close"
             }
           ],
-          "cash": 215.4,
+          "cash": 145.44,
           "invested": 0.0,
-          "fees_cum": 727.89
+          "fees_cum": 729.15
         }
       ]
     },
@@ -150924,15 +153190,15 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 66,
+        "n_days": 67,
         "n_win_days": 10,
-        "n_loss_days": 54,
-        "p_loss_day": 0.8182,
-        "p_win_day": 0.1515,
-        "mean_day": -4.304,
+        "n_loss_days": 55,
+        "p_loss_day": 0.8209,
+        "p_win_day": 0.1493,
+        "mean_day": -4.667,
         "avg_win_day": 1.129,
-        "avg_loss_day": -5.47,
-        "cum_sum": -284.093
+        "avg_loss_day": -5.89,
+        "cum_sum": -312.673
       },
       "equity": [
         9918.74,
@@ -151000,9 +153266,10 @@
         226.17,
         223.13,
         222.59,
-        198.15
+        221.0,
+        135.15
       ],
-      "final": 198.15,
+      "final": 135.15,
       "orig_window": {
         "start": "2026-08-13",
         "end": "2026-08-21",
@@ -159344,44 +161611,213 @@
         },
         {
           "date": "2026-11-09",
-          "day_pnl": -10.98,
-          "equity": 198.15,
+          "day_pnl": -0.714,
+          "equity": 221.0,
           "n_held": 9,
-          "n_buy": 0,
+          "n_buy": 5,
           "n_sell": 2,
-          "n_skip": 9,
+          "n_skip": 4,
           "n_cand": 9,
           "hard_red": false,
-          "bought": [],
+          "bought": [
+            "UIS",
+            "DLO",
+            "PTLO",
+            "EVC",
+            "LFST"
+          ],
           "sold": [
             "AVAH",
             "GPK"
+          ],
+          "held": [
+            "UIS",
+            "DLO",
+            "PTLO",
+            "EVC",
+            "LFST"
+          ],
+          "buys": [
+            {
+              "ticker": "UIS",
+              "side": "buy",
+              "buy_px": 2.7200000286102295,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 2.700000047683716,
+              "low": 2.640000104904175,
+              "high": 2.7799999713897705,
+              "close": 2.7200000286102295,
+              "shares": 9,
+              "fees": 0.2718,
+              "amount": 24.75,
+              "cash_after": 197.15
+            },
+            {
+              "ticker": "DLO",
+              "side": "buy",
+              "buy_px": 14.390000343322754,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 14.15999984741211,
+              "low": 14.010000228881836,
+              "high": 14.484999656677246,
+              "close": 14.390000343322754,
+              "shares": 1,
+              "fees": 0.1469,
+              "amount": 14.54,
+              "cash_after": 182.61
+            },
+            {
+              "ticker": "PTLO",
+              "side": "buy",
+              "buy_px": 6.889999866485596,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 6.730000019073486,
+              "low": 6.639999866485596,
+              "high": 7.067999839782715,
+              "close": 6.889999866485596,
+              "shares": 2,
+              "fees": 0.1438,
+              "amount": 13.92,
+              "cash_after": 168.69
+            },
+            {
+              "ticker": "EVC",
+              "side": "buy",
+              "buy_px": 9.300000190734863,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 8.949999809265137,
+              "low": 8.949999809265137,
+              "high": 9.479999542236328,
+              "close": 9.300000190734863,
+              "shares": 2,
+              "fees": 0.192,
+              "amount": 18.79,
+              "cash_after": 149.9
+            },
+            {
+              "ticker": "LFST",
+              "side": "buy",
+              "buy_px": 14.600000381469727,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 13.760000228881836,
+              "low": 13.199999809265137,
+              "high": 14.914999961853027,
+              "close": 14.600000381469727,
+              "shares": 1,
+              "fees": 0.149,
+              "amount": 14.75,
+              "cash_after": 135.15
+            }
+          ],
+          "sells": [
+            {
+              "ticker": "AVAH",
+              "side": "sell",
+              "sell_px": 13.199999809265137,
+              "sell_when": "16:00 ET close",
+              "buy_px": 13.25,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "shares": 1,
+              "fees": 0.155,
+              "amount": 13.04,
+              "realized_pnl": -0.34,
+              "cash_after": 211.19
+            },
+            {
+              "ticker": "GPK",
+              "side": "sell",
+              "sell_px": 10.84000015258789,
+              "sell_when": "16:00 ET close",
+              "buy_px": 11.1899995803833,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "shares": 1,
+              "fees": 0.1314,
+              "amount": 10.71,
+              "realized_pnl": -0.6,
+              "cash_after": 221.9
+            }
+          ],
+          "cash": 135.15,
+          "invested": 85.85,
+          "fees_cum": 634.53
+        },
+        {
+          "date": "2026-11-10",
+          "day_pnl": -38.846,
+          "equity": 135.15,
+          "n_held": 10,
+          "n_buy": 0,
+          "n_sell": 5,
+          "n_skip": 10,
+          "n_cand": 10,
+          "hard_red": false,
+          "bought": [],
+          "sold": [
+            "UIS",
+            "DLO",
+            "PTLO",
+            "EVC",
+            "LFST"
           ],
           "held": [],
           "buys": [],
           "sells": [
             {
-              "ticker": "AVAH",
+              "ticker": "UIS",
               "side": "sell",
               "sell_px": null,
               "sell_when": null,
-              "buy_px": 13.25,
+              "buy_px": 2.7200000286102295,
               "buy_when": "16:00 ET close",
               "buy_kind": "close"
             },
             {
-              "ticker": "GPK",
+              "ticker": "DLO",
               "side": "sell",
               "sell_px": null,
               "sell_when": null,
-              "buy_px": 11.1899995803833,
+              "buy_px": 14.390000343322754,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "PTLO",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 6.889999866485596,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "EVC",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 9.300000190734863,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "LFST",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 14.600000381469727,
               "buy_when": "16:00 ET close",
               "buy_kind": "close"
             }
           ],
-          "cash": 198.15,
+          "cash": 135.15,
           "invested": 0.0,
-          "fees_cum": 633.34
+          "fees_cum": 634.53
         }
       ]
     },
@@ -159397,15 +161833,15 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 66,
-        "n_win_days": 17,
+        "n_days": 67,
+        "n_win_days": 18,
         "n_loss_days": 48,
-        "p_loss_day": 0.7273,
-        "p_win_day": 0.2576,
-        "mean_day": -2.701,
-        "avg_win_day": 1.215,
-        "avg_loss_day": -4.144,
-        "cum_sum": -178.252
+        "p_loss_day": 0.7164,
+        "p_win_day": 0.2687,
+        "mean_day": -2.719,
+        "avg_win_day": 1.17,
+        "avg_loss_day": -4.234,
+        "cum_sum": -182.155
       },
       "equity": [
         10000.0,
@@ -159473,9 +161909,10 @@
         1701.35,
         1635.4,
         1617.45,
-        1478.17
+        1624.0,
+        1414.19
       ],
-      "final": 1478.17,
+      "final": 1414.19,
       "orig_window": {
         "start": "2026-08-13",
         "end": "2026-08-21",
@@ -171201,15 +173638,22 @@
         },
         {
           "date": "2026-11-09",
-          "day_pnl": -8.611,
-          "equity": 1478.17,
+          "day_pnl": 0.405,
+          "equity": 1624.0,
           "n_held": 18,
-          "n_buy": 0,
+          "n_buy": 6,
           "n_sell": 2,
-          "n_skip": 6,
+          "n_skip": 0,
           "n_cand": 6,
           "hard_red": false,
-          "bought": [],
+          "bought": [
+            "ACHC",
+            "UIS",
+            "GRDN",
+            "DLO",
+            "PTLO",
+            "EVC"
+          ],
           "sold": [
             "CNK",
             "PEB"
@@ -171226,32 +173670,224 @@
             "MGNI",
             "ATAT",
             "LRN",
-            "EDU"
+            "EDU",
+            "ACHC",
+            "UIS",
+            "GRDN",
+            "DLO",
+            "PTLO",
+            "EVC"
           ],
-          "buys": [],
+          "buys": [
+            {
+              "ticker": "ACHC",
+              "side": "buy",
+              "buy_px": 38.61000061035156,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 37.90999984741211,
+              "low": 37.790000915527344,
+              "high": 39.70000076293945,
+              "close": 38.61000061035156,
+              "shares": 3,
+              "fees": 1.1673,
+              "amount": 117.0,
+              "cash_after": 614.52
+            },
+            {
+              "ticker": "UIS",
+              "side": "buy",
+              "buy_px": 2.7200000286102295,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 2.700000047683716,
+              "low": 2.640000104904175,
+              "high": 2.7799999713897705,
+              "close": 2.7200000286102295,
+              "shares": 37,
+              "fees": 1.1174,
+              "amount": 101.76,
+              "cash_after": 512.76
+            },
+            {
+              "ticker": "GRDN",
+              "side": "buy",
+              "buy_px": 47.02000045776367,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 42.75,
+              "low": 41.5,
+              "high": 47.029998779296875,
+              "close": 47.02000045776367,
+              "shares": 1,
+              "fees": 0.4732,
+              "amount": 47.49,
+              "cash_after": 465.27
+            },
+            {
+              "ticker": "DLO",
+              "side": "buy",
+              "buy_px": 14.390000343322754,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 14.15999984741211,
+              "low": 14.010000228881836,
+              "high": 14.484999656677246,
+              "close": 14.390000343322754,
+              "shares": 5,
+              "fees": 0.7345,
+              "amount": 72.68,
+              "cash_after": 392.59
+            },
+            {
+              "ticker": "PTLO",
+              "side": "buy",
+              "buy_px": 6.889999866485596,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 6.730000019073486,
+              "low": 6.639999866485596,
+              "high": 7.067999839782715,
+              "close": 6.889999866485596,
+              "shares": 9,
+              "fees": 0.6471,
+              "amount": 62.66,
+              "cash_after": 329.93
+            },
+            {
+              "ticker": "EVC",
+              "side": "buy",
+              "buy_px": 9.300000190734863,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 8.949999809265137,
+              "low": 8.949999809265137,
+              "high": 9.479999542236328,
+              "close": 9.300000190734863,
+              "shares": 5,
+              "fees": 0.48,
+              "amount": 46.98,
+              "cash_after": 282.95
+            }
+          ],
           "sells": [
             {
               "ticker": "CNK",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 40.88999938964844,
+              "sell_when": "16:00 ET close",
               "buy_px": 40.380001068115234,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 2,
+              "fees": 0.8438,
+              "amount": 80.94,
+              "realized_pnl": -0.64,
+              "cash_after": 666.92
             },
             {
               "ticker": "PEB",
               "side": "sell",
+              "sell_px": 21.760000228881836,
+              "sell_when": "16:00 ET close",
+              "buy_px": 22.200000762939453,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "shares": 3,
+              "fees": 0.6818,
+              "amount": 64.6,
+              "realized_pnl": -2.68,
+              "cash_after": 731.52
+            }
+          ],
+          "cash": 282.95,
+          "invested": 1341.05,
+          "fees_cum": 692.31
+        },
+        {
+          "date": "2026-11-10",
+          "day_pnl": -12.919,
+          "equity": 1414.19,
+          "n_held": 25,
+          "n_buy": 0,
+          "n_sell": 5,
+          "n_skip": 17,
+          "n_cand": 18,
+          "hard_red": false,
+          "bought": [],
+          "sold": [
+            "KD",
+            "DBX",
+            "HLF",
+            "UPWK",
+            "GPK"
+          ],
+          "held": [
+            "KDP",
+            "EHC",
+            "AVAH",
+            "MGNI",
+            "ATAT",
+            "LRN",
+            "EDU",
+            "ACHC",
+            "UIS",
+            "GRDN",
+            "DLO",
+            "PTLO",
+            "EVC"
+          ],
+          "buys": [],
+          "sells": [
+            {
+              "ticker": "KD",
+              "side": "sell",
               "sell_px": null,
               "sell_when": null,
-              "buy_px": 22.200000762939453,
+              "buy_px": 16.18000030517578,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "DBX",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 35.7599983215332,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "HLF",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 14.899999618530273,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "UPWK",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 10.319999694824219,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "GPK",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 11.539999961853027,
               "buy_when": "16:00 ET close",
               "buy_kind": "close"
             }
           ],
-          "cash": 585.98,
-          "invested": 892.19,
-          "fees_cum": 686.17
+          "cash": 282.95,
+          "invested": 1131.24,
+          "fees_cum": 692.31
         }
       ]
     },
@@ -171267,15 +173903,15 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 66,
+        "n_days": 67,
         "n_win_days": 10,
-        "n_loss_days": 45,
-        "p_loss_day": 0.6818,
-        "p_win_day": 0.1515,
-        "mean_day": -4.042,
+        "n_loss_days": 46,
+        "p_loss_day": 0.6866,
+        "p_win_day": 0.1493,
+        "mean_day": -4.459,
         "avg_win_day": 0.235,
-        "avg_loss_day": -5.981,
-        "cum_sum": -266.782
+        "avg_loss_day": -6.546,
+        "cum_sum": -298.754
       },
       "equity": [
         9955.38,
@@ -171343,9 +173979,10 @@
         329.32,
         324.12,
         322.94,
-        298.5
+        320.93,
+        196.03
       ],
-      "final": 298.5,
+      "final": 196.03,
       "orig_window": {
         "start": "2026-08-13",
         "end": "2026-08-21",
@@ -181525,44 +184162,213 @@
         },
         {
           "date": "2026-11-09",
-          "day_pnl": -7.568,
-          "equity": 298.5,
+          "day_pnl": -0.622,
+          "equity": 320.93,
           "n_held": 9,
-          "n_buy": 0,
+          "n_buy": 5,
           "n_sell": 2,
-          "n_skip": 9,
+          "n_skip": 4,
           "n_cand": 9,
           "hard_red": false,
-          "bought": [],
+          "bought": [
+            "UIS",
+            "DLO",
+            "PTLO",
+            "EVC",
+            "LFST"
+          ],
           "sold": [
             "GPK",
             "AVAH"
+          ],
+          "held": [
+            "UIS",
+            "DLO",
+            "PTLO",
+            "EVC",
+            "LFST"
+          ],
+          "buys": [
+            {
+              "ticker": "UIS",
+              "side": "buy",
+              "buy_px": 2.7200000286102295,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 2.700000047683716,
+              "low": 2.640000104904175,
+              "high": 2.7799999713897705,
+              "close": 2.7200000286102295,
+              "shares": 13,
+              "fees": 0.3926,
+              "amount": 35.75,
+              "cash_after": 286.5
+            },
+            {
+              "ticker": "DLO",
+              "side": "buy",
+              "buy_px": 14.390000343322754,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 14.15999984741211,
+              "low": 14.010000228881836,
+              "high": 14.484999656677246,
+              "close": 14.390000343322754,
+              "shares": 2,
+              "fees": 0.2938,
+              "amount": 29.07,
+              "cash_after": 257.42
+            },
+            {
+              "ticker": "PTLO",
+              "side": "buy",
+              "buy_px": 6.889999866485596,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 6.730000019073486,
+              "low": 6.639999866485596,
+              "high": 7.067999839782715,
+              "close": 6.889999866485596,
+              "shares": 4,
+              "fees": 0.2876,
+              "amount": 27.85,
+              "cash_after": 229.57
+            },
+            {
+              "ticker": "EVC",
+              "side": "buy",
+              "buy_px": 9.300000190734863,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 8.949999809265137,
+              "low": 8.949999809265137,
+              "high": 9.479999542236328,
+              "close": 9.300000190734863,
+              "shares": 2,
+              "fees": 0.192,
+              "amount": 18.79,
+              "cash_after": 210.78
+            },
+            {
+              "ticker": "LFST",
+              "side": "buy",
+              "buy_px": 14.600000381469727,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 13.760000228881836,
+              "low": 13.199999809265137,
+              "high": 14.914999961853027,
+              "close": 14.600000381469727,
+              "shares": 1,
+              "fees": 0.149,
+              "amount": 14.75,
+              "cash_after": 196.03
+            }
+          ],
+          "sells": [
+            {
+              "ticker": "GPK",
+              "side": "sell",
+              "sell_px": 10.84000015258789,
+              "sell_when": "16:00 ET close",
+              "buy_px": 11.539999961853027,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "shares": 1,
+              "fees": 0.1314,
+              "amount": 10.71,
+              "realized_pnl": -0.95,
+              "cash_after": 309.2
+            },
+            {
+              "ticker": "AVAH",
+              "side": "sell",
+              "sell_px": 13.199999809265137,
+              "sell_when": "16:00 ET close",
+              "buy_px": 13.25,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "shares": 1,
+              "fees": 0.155,
+              "amount": 13.04,
+              "realized_pnl": -0.34,
+              "cash_after": 322.25
+            }
+          ],
+          "cash": 196.03,
+          "invested": 124.9,
+          "fees_cum": 633.1
+        },
+        {
+          "date": "2026-11-10",
+          "day_pnl": -38.918,
+          "equity": 196.03,
+          "n_held": 24,
+          "n_buy": 0,
+          "n_sell": 5,
+          "n_skip": 24,
+          "n_cand": 24,
+          "hard_red": false,
+          "bought": [],
+          "sold": [
+            "UIS",
+            "DLO",
+            "PTLO",
+            "EVC",
+            "LFST"
           ],
           "held": [],
           "buys": [],
           "sells": [
             {
-              "ticker": "GPK",
+              "ticker": "UIS",
               "side": "sell",
               "sell_px": null,
               "sell_when": null,
-              "buy_px": 11.539999961853027,
+              "buy_px": 2.7200000286102295,
               "buy_when": "16:00 ET close",
               "buy_kind": "close"
             },
             {
-              "ticker": "AVAH",
+              "ticker": "DLO",
               "side": "sell",
               "sell_px": null,
               "sell_when": null,
-              "buy_px": 13.25,
+              "buy_px": 14.390000343322754,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "PTLO",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 6.889999866485596,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "EVC",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 9.300000190734863,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "LFST",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 14.600000381469727,
               "buy_when": "16:00 ET close",
               "buy_kind": "close"
             }
           ],
-          "cash": 298.5,
+          "cash": 196.03,
           "invested": 0.0,
-          "fees_cum": 631.49
+          "fees_cum": 633.1
         }
       ]
     },
@@ -181578,15 +184384,15 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 66,
+        "n_days": 67,
         "n_win_days": 9,
-        "n_loss_days": 55,
-        "p_loss_day": 0.8333,
-        "p_win_day": 0.1364,
-        "mean_day": -4.1,
+        "n_loss_days": 56,
+        "p_loss_day": 0.8358,
+        "p_win_day": 0.1343,
+        "mean_day": -4.492,
         "avg_win_day": 0.713,
-        "avg_loss_day": -5.037,
-        "cum_sum": -270.611
+        "avg_loss_day": -5.489,
+        "cum_sum": -300.952
       },
       "equity": [
         9955.38,
@@ -181654,9 +184460,10 @@
         312.82,
         309.24,
         308.05,
-        283.61
+        306.15,
+        190.86
       ],
-      "final": 283.61,
+      "final": 190.86,
       "orig_window": {
         "start": "2026-08-13",
         "end": "2026-08-21",
@@ -194432,44 +197239,213 @@
         },
         {
           "date": "2026-11-09",
-          "day_pnl": -7.934,
-          "equity": 283.61,
+          "day_pnl": -0.617,
+          "equity": 306.15,
           "n_held": 9,
-          "n_buy": 0,
+          "n_buy": 5,
           "n_sell": 2,
-          "n_skip": 9,
+          "n_skip": 4,
           "n_cand": 9,
           "hard_red": false,
-          "bought": [],
+          "bought": [
+            "UIS",
+            "DLO",
+            "PTLO",
+            "EVC",
+            "LFST"
+          ],
           "sold": [
             "GPK",
             "AVAH"
+          ],
+          "held": [
+            "UIS",
+            "DLO",
+            "PTLO",
+            "EVC",
+            "LFST"
+          ],
+          "buys": [
+            {
+              "ticker": "UIS",
+              "side": "buy",
+              "buy_px": 2.7200000286102295,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 2.700000047683716,
+              "low": 2.640000104904175,
+              "high": 2.7799999713897705,
+              "close": 2.7200000286102295,
+              "shares": 12,
+              "fees": 0.3624,
+              "amount": 33.0,
+              "cash_after": 274.36
+            },
+            {
+              "ticker": "DLO",
+              "side": "buy",
+              "buy_px": 14.390000343322754,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 14.15999984741211,
+              "low": 14.010000228881836,
+              "high": 14.484999656677246,
+              "close": 14.390000343322754,
+              "shares": 2,
+              "fees": 0.2938,
+              "amount": 29.07,
+              "cash_after": 245.29
+            },
+            {
+              "ticker": "PTLO",
+              "side": "buy",
+              "buy_px": 6.889999866485596,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 6.730000019073486,
+              "low": 6.639999866485596,
+              "high": 7.067999839782715,
+              "close": 6.889999866485596,
+              "shares": 3,
+              "fees": 0.2157,
+              "amount": 20.89,
+              "cash_after": 224.4
+            },
+            {
+              "ticker": "EVC",
+              "side": "buy",
+              "buy_px": 9.300000190734863,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 8.949999809265137,
+              "low": 8.949999809265137,
+              "high": 9.479999542236328,
+              "close": 9.300000190734863,
+              "shares": 2,
+              "fees": 0.192,
+              "amount": 18.79,
+              "cash_after": 205.61
+            },
+            {
+              "ticker": "LFST",
+              "side": "buy",
+              "buy_px": 14.600000381469727,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 13.760000228881836,
+              "low": 13.199999809265137,
+              "high": 14.914999961853027,
+              "close": 14.600000381469727,
+              "shares": 1,
+              "fees": 0.149,
+              "amount": 14.75,
+              "cash_after": 190.86
+            }
+          ],
+          "sells": [
+            {
+              "ticker": "GPK",
+              "side": "sell",
+              "sell_px": 10.84000015258789,
+              "sell_when": "16:00 ET close",
+              "buy_px": 11.539999961853027,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "shares": 1,
+              "fees": 0.1314,
+              "amount": 10.71,
+              "realized_pnl": -0.95,
+              "cash_after": 294.32
+            },
+            {
+              "ticker": "AVAH",
+              "side": "sell",
+              "sell_px": 13.199999809265137,
+              "sell_when": "16:00 ET close",
+              "buy_px": 13.25,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "shares": 1,
+              "fees": 0.155,
+              "amount": 13.04,
+              "realized_pnl": -0.34,
+              "cash_after": 307.37
+            }
+          ],
+          "cash": 190.86,
+          "invested": 115.29,
+          "fees_cum": 820.95
+        },
+        {
+          "date": "2026-11-10",
+          "day_pnl": -37.658,
+          "equity": 190.86,
+          "n_held": 24,
+          "n_buy": 0,
+          "n_sell": 5,
+          "n_skip": 24,
+          "n_cand": 24,
+          "hard_red": false,
+          "bought": [],
+          "sold": [
+            "UIS",
+            "DLO",
+            "PTLO",
+            "EVC",
+            "LFST"
           ],
           "held": [],
           "buys": [],
           "sells": [
             {
-              "ticker": "GPK",
+              "ticker": "UIS",
               "side": "sell",
               "sell_px": null,
               "sell_when": null,
-              "buy_px": 11.539999961853027,
+              "buy_px": 2.7200000286102295,
               "buy_when": "16:00 ET close",
               "buy_kind": "close"
             },
             {
-              "ticker": "AVAH",
+              "ticker": "DLO",
               "side": "sell",
               "sell_px": null,
               "sell_when": null,
-              "buy_px": 13.25,
+              "buy_px": 14.390000343322754,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "PTLO",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 6.889999866485596,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "EVC",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 9.300000190734863,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "LFST",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 14.600000381469727,
               "buy_when": "16:00 ET close",
               "buy_kind": "close"
             }
           ],
-          "cash": 283.61,
+          "cash": 190.86,
           "invested": 0.0,
-          "fees_cum": 819.45
+          "fees_cum": 820.95
         }
       ]
     },
@@ -194485,15 +197461,15 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 66,
+        "n_days": 67,
         "n_win_days": 11,
-        "n_loss_days": 48,
-        "p_loss_day": 0.7273,
-        "p_win_day": 0.1667,
-        "mean_day": -4.171,
+        "n_loss_days": 49,
+        "p_loss_day": 0.7313,
+        "p_win_day": 0.1642,
+        "mean_day": -4.573,
         "avg_win_day": 0.467,
-        "avg_loss_day": -5.842,
-        "cum_sum": -275.299
+        "avg_loss_day": -6.358,
+        "cum_sum": -306.403
       },
       "equity": [
         9955.38,
@@ -194561,9 +197537,10 @@
         305.32,
         301.73,
         300.55,
-        276.11
+        298.65,
+        183.36
       ],
-      "final": 276.11,
+      "final": 183.36,
       "orig_window": {
         "start": "2026-08-13",
         "end": "2026-08-21",
@@ -204970,44 +207947,213 @@
         },
         {
           "date": "2026-11-09",
-          "day_pnl": -8.132,
-          "equity": 276.11,
+          "day_pnl": -0.632,
+          "equity": 298.65,
           "n_held": 9,
-          "n_buy": 0,
+          "n_buy": 5,
           "n_sell": 2,
-          "n_skip": 9,
+          "n_skip": 4,
           "n_cand": 9,
           "hard_red": false,
-          "bought": [],
+          "bought": [
+            "UIS",
+            "DLO",
+            "PTLO",
+            "EVC",
+            "LFST"
+          ],
           "sold": [
             "GPK",
             "AVAH"
+          ],
+          "held": [
+            "UIS",
+            "DLO",
+            "PTLO",
+            "EVC",
+            "LFST"
+          ],
+          "buys": [
+            {
+              "ticker": "UIS",
+              "side": "buy",
+              "buy_px": 2.7200000286102295,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 2.700000047683716,
+              "low": 2.640000104904175,
+              "high": 2.7799999713897705,
+              "close": 2.7200000286102295,
+              "shares": 12,
+              "fees": 0.3624,
+              "amount": 33.0,
+              "cash_after": 266.86
+            },
+            {
+              "ticker": "DLO",
+              "side": "buy",
+              "buy_px": 14.390000343322754,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 14.15999984741211,
+              "low": 14.010000228881836,
+              "high": 14.484999656677246,
+              "close": 14.390000343322754,
+              "shares": 2,
+              "fees": 0.2938,
+              "amount": 29.07,
+              "cash_after": 237.79
+            },
+            {
+              "ticker": "PTLO",
+              "side": "buy",
+              "buy_px": 6.889999866485596,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 6.730000019073486,
+              "low": 6.639999866485596,
+              "high": 7.067999839782715,
+              "close": 6.889999866485596,
+              "shares": 3,
+              "fees": 0.2157,
+              "amount": 20.89,
+              "cash_after": 216.9
+            },
+            {
+              "ticker": "EVC",
+              "side": "buy",
+              "buy_px": 9.300000190734863,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 8.949999809265137,
+              "low": 8.949999809265137,
+              "high": 9.479999542236328,
+              "close": 9.300000190734863,
+              "shares": 2,
+              "fees": 0.192,
+              "amount": 18.79,
+              "cash_after": 198.11
+            },
+            {
+              "ticker": "LFST",
+              "side": "buy",
+              "buy_px": 14.600000381469727,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 13.760000228881836,
+              "low": 13.199999809265137,
+              "high": 14.914999961853027,
+              "close": 14.600000381469727,
+              "shares": 1,
+              "fees": 0.149,
+              "amount": 14.75,
+              "cash_after": 183.36
+            }
+          ],
+          "sells": [
+            {
+              "ticker": "GPK",
+              "side": "sell",
+              "sell_px": 10.84000015258789,
+              "sell_when": "16:00 ET close",
+              "buy_px": 11.539999961853027,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "shares": 1,
+              "fees": 0.1314,
+              "amount": 10.71,
+              "realized_pnl": -0.95,
+              "cash_after": 286.82
+            },
+            {
+              "ticker": "AVAH",
+              "side": "sell",
+              "sell_px": 13.199999809265137,
+              "sell_when": "16:00 ET close",
+              "buy_px": 13.25,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "shares": 1,
+              "fees": 0.155,
+              "amount": 13.04,
+              "realized_pnl": -0.34,
+              "cash_after": 299.86
+            }
+          ],
+          "cash": 183.36,
+          "invested": 115.29,
+          "fees_cum": 663.22
+        },
+        {
+          "date": "2026-11-10",
+          "day_pnl": -38.604,
+          "equity": 183.36,
+          "n_held": 24,
+          "n_buy": 0,
+          "n_sell": 5,
+          "n_skip": 24,
+          "n_cand": 24,
+          "hard_red": false,
+          "bought": [],
+          "sold": [
+            "UIS",
+            "DLO",
+            "PTLO",
+            "EVC",
+            "LFST"
           ],
           "held": [],
           "buys": [],
           "sells": [
             {
-              "ticker": "GPK",
+              "ticker": "UIS",
               "side": "sell",
               "sell_px": null,
               "sell_when": null,
-              "buy_px": 11.539999961853027,
+              "buy_px": 2.7200000286102295,
               "buy_when": "16:00 ET close",
               "buy_kind": "close"
             },
             {
-              "ticker": "AVAH",
+              "ticker": "DLO",
               "side": "sell",
               "sell_px": null,
               "sell_when": null,
-              "buy_px": 13.25,
+              "buy_px": 14.390000343322754,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "PTLO",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 6.889999866485596,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "EVC",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 9.300000190734863,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "LFST",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 14.600000381469727,
               "buy_when": "16:00 ET close",
               "buy_kind": "close"
             }
           ],
-          "cash": 276.11,
+          "cash": 183.36,
           "invested": 0.0,
-          "fees_cum": 661.72
+          "fees_cum": 663.22
         }
       ]
     },
@@ -205023,15 +208169,15 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 66,
+        "n_days": 67,
         "n_win_days": 10,
-        "n_loss_days": 54,
-        "p_loss_day": 0.8182,
-        "p_win_day": 0.1515,
-        "mean_day": -4.118,
+        "n_loss_days": 55,
+        "p_loss_day": 0.8209,
+        "p_win_day": 0.1493,
+        "mean_day": -4.46,
         "avg_win_day": 0.607,
-        "avg_loss_day": -5.146,
-        "cum_sum": -271.821
+        "avg_loss_day": -5.543,
+        "cum_sum": -298.812
       },
       "equity": [
         9955.38,
@@ -205099,9 +208245,10 @@
         320.07,
         316.77,
         315.46,
-        279.98
+        313.29,
+        195.65
       ],
-      "final": 279.98,
+      "final": 195.65,
       "orig_window": {
         "start": "2026-08-13",
         "end": "2026-08-21",
@@ -218960,54 +222107,282 @@
         },
         {
           "date": "2026-11-09",
-          "day_pnl": -11.247,
-          "equity": 279.98,
+          "day_pnl": -0.688,
+          "equity": 313.29,
           "n_held": 13,
-          "n_buy": 0,
+          "n_buy": 7,
           "n_sell": 3,
-          "n_skip": 13,
+          "n_skip": 6,
           "n_cand": 13,
           "hard_red": false,
-          "bought": [],
+          "bought": [
+            "UIS",
+            "DLO",
+            "PTLO",
+            "EVC",
+            "DNUT",
+            "STGW",
+            "LFST"
+          ],
           "sold": [
             "GPK",
             "AVAH",
             "MNSO"
           ],
-          "held": [],
-          "buys": [],
+          "held": [
+            "UIS",
+            "DLO",
+            "PTLO",
+            "EVC",
+            "DNUT",
+            "STGW",
+            "LFST"
+          ],
+          "buys": [
+            {
+              "ticker": "UIS",
+              "side": "buy",
+              "buy_px": 2.7200000286102295,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 2.700000047683716,
+              "low": 2.640000104904175,
+              "high": 2.7799999713897705,
+              "close": 2.7200000286102295,
+              "shares": 8,
+              "fees": 0.2416,
+              "amount": 22.0,
+              "cash_after": 292.52
+            },
+            {
+              "ticker": "DLO",
+              "side": "buy",
+              "buy_px": 14.390000343322754,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 14.15999984741211,
+              "low": 14.010000228881836,
+              "high": 14.484999656677246,
+              "close": 14.390000343322754,
+              "shares": 1,
+              "fees": 0.1469,
+              "amount": 14.54,
+              "cash_after": 277.98
+            },
+            {
+              "ticker": "PTLO",
+              "side": "buy",
+              "buy_px": 6.889999866485596,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 6.730000019073486,
+              "low": 6.639999866485596,
+              "high": 7.067999839782715,
+              "close": 6.889999866485596,
+              "shares": 3,
+              "fees": 0.2157,
+              "amount": 20.89,
+              "cash_after": 257.1
+            },
+            {
+              "ticker": "EVC",
+              "side": "buy",
+              "buy_px": 9.300000190734863,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 8.949999809265137,
+              "low": 8.949999809265137,
+              "high": 9.479999542236328,
+              "close": 9.300000190734863,
+              "shares": 2,
+              "fees": 0.192,
+              "amount": 18.79,
+              "cash_after": 238.31
+            },
+            {
+              "ticker": "DNUT",
+              "side": "buy",
+              "buy_px": 4.03000020980835,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 4.114999771118164,
+              "low": 3.9149999618530273,
+              "high": 4.190000057220459,
+              "close": 4.03000020980835,
+              "shares": 4,
+              "fees": 0.1732,
+              "amount": 16.29,
+              "cash_after": 222.01
+            },
+            {
+              "ticker": "STGW",
+              "side": "buy",
+              "buy_px": 11.5,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 11.729999542236328,
+              "low": 11.390000343322754,
+              "high": 12.260000228881836,
+              "close": 11.5,
+              "shares": 1,
+              "fees": 0.118,
+              "amount": 11.62,
+              "cash_after": 210.4
+            },
+            {
+              "ticker": "LFST",
+              "side": "buy",
+              "buy_px": 14.600000381469727,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 13.760000228881836,
+              "low": 13.199999809265137,
+              "high": 14.914999961853027,
+              "close": 14.600000381469727,
+              "shares": 1,
+              "fees": 0.149,
+              "amount": 14.75,
+              "cash_after": 195.65
+            }
+          ],
           "sells": [
             {
               "ticker": "GPK",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 10.84000015258789,
+              "sell_when": "16:00 ET close",
               "buy_px": 11.539999961853027,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 1,
+              "fees": 0.1314,
+              "amount": 10.71,
+              "realized_pnl": -0.95,
+              "cash_after": 290.69
             },
             {
               "ticker": "AVAH",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 13.199999809265137,
+              "sell_when": "16:00 ET close",
               "buy_px": 13.25,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 1,
+              "fees": 0.155,
+              "amount": 13.04,
+              "realized_pnl": -0.34,
+              "cash_after": 303.74
             },
             {
               "ticker": "MNSO",
               "side": "sell",
+              "sell_px": 10.920000076293945,
+              "sell_when": "16:00 ET close",
+              "buy_px": 11.039999961853027,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "shares": 1,
+              "fees": 0.1322,
+              "amount": 10.79,
+              "realized_pnl": -0.37,
+              "cash_after": 314.52
+            }
+          ],
+          "cash": 195.65,
+          "invested": 117.64,
+          "fees_cum": 861.34
+        },
+        {
+          "date": "2026-11-10",
+          "day_pnl": -37.55,
+          "equity": 195.65,
+          "n_held": 24,
+          "n_buy": 0,
+          "n_sell": 7,
+          "n_skip": 24,
+          "n_cand": 24,
+          "hard_red": false,
+          "bought": [],
+          "sold": [
+            "UIS",
+            "DLO",
+            "PTLO",
+            "EVC",
+            "DNUT",
+            "STGW",
+            "LFST"
+          ],
+          "held": [],
+          "buys": [],
+          "sells": [
+            {
+              "ticker": "UIS",
+              "side": "sell",
               "sell_px": null,
               "sell_when": null,
-              "buy_px": 11.039999961853027,
+              "buy_px": 2.7200000286102295,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "DLO",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 14.390000343322754,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "PTLO",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 6.889999866485596,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "EVC",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 9.300000190734863,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "DNUT",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 4.03000020980835,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "STGW",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 11.5,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "LFST",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 14.600000381469727,
               "buy_when": "16:00 ET close",
               "buy_kind": "close"
             }
           ],
-          "cash": 279.98,
+          "cash": 195.65,
           "invested": 0.0,
-          "fees_cum": 859.68
+          "fees_cum": 861.34
         }
       ]
     }
