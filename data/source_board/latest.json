@@ -1,6 +1,6 @@
 {
  "date": "2026-11-10",
- "generated_at": "2026-11-10T08:27:45.195722+00:00",
+ "generated_at": "2026-11-10T20:29:41.367520+00:00",
  "catalog": {
   "generated_at": "2026-11-07T18:03:52.345238+00:00",
   "channels": 365,
@@ -34,46 +34,76 @@
   }
  },
  "collect": {
-  "generated_at": "2026-11-10T08:27:24.121930+00:00",
+  "generated_at": "2026-11-10T20:28:57.994479+00:00",
   "enabled_sources": 117,
-  "sources_ok": 117,
-  "sources_failed": 0,
+  "sources_ok": 116,
+  "sources_failed": 1,
   "coverage_status": "degraded",
   "counts": {
-   "observed": 1658,
-   "old": 1152,
+   "observed": 2006,
+   "old": 1258,
    "future": 0,
-   "undated": 253,
-   "new": 21,
-   "duplicates": 485
+   "undated": 312,
+   "new": 248,
+   "duplicates": 500
   },
-  "current_dated_documents": 261
+  "current_dated_documents": 497
  },
  "new_today": {
-  "count": 21,
+  "count": 248,
   "by_source": {
-   "us-doj-b3d27e1dc3": 11,
-   "eu-council-9d9e9444da": 6,
-   "jp-boj-d488538690": 2,
-   "us-fda-5696b24295": 1,
-   "de-bundesbank-e5b1c4a067": 1
+   "us-federal-register": 108,
+   "us-doj-b3d27e1dc3": 25,
+   "us-fda-5696b24295": 16,
+   "us-fcc-e95ecda3bb": 14,
+   "uk-govuk-decision": 13,
+   "us-ftc-df73e297e1": 12,
+   "io-bis-140216a5b6": 11,
+   "eu-commission-07d4f58ccf": 10,
+   "eu-council-9d9e9444da": 5,
+   "us-fda-03f7703006": 3,
+   "us-dol-99f477805a": 3,
+   "hk-hkma-public-press": 2,
+   "uk-govuk-regulation": 2,
+   "uk-govuk-consultation_outcome": 2,
+   "us-congress-76128ee9ff": 2,
+   "eu-ecb-991c113079": 2,
+   "de-bundesbank-027ac4024f": 2,
+   "de-bundesbank-e5b1c4a067": 2,
+   "uk-govuk-medical_safety_alert": 1,
+   "us-govinfo-bills": 1,
+   "us-govinfo-crpt": 1,
+   "us-sec-8940dd7737": 1,
+   "us-doj-e05071794d": 1,
+   "uk-boe-4feb372611": 1,
+   "uk-fca-7b9977ec8e": 1,
+   "ca-boc-49364b93d8": 1,
+   "ca-boc-a5cb9e38c1": 1,
+   "cn-state-council-index": 1,
+   "ch-snb-b0f42db828": 1,
+   "se-riksbank-8ea6f8481e": 1,
+   "de-bundesbank-617511c682": 1,
+   "io-bis-8d1fbea6ca": 1
   },
   "by_class": {
-   "watch": 4,
-   "high": 6,
-   "docket": 6,
-   "routine": 4,
-   "noise": 1
+   "high": 50,
+   "routine": 140,
+   "noise": 4,
+   "watch": 44,
+   "docket": 10
   }
  },
  "parsed_today": {
-  "count": 2,
+  "count": 132,
   "by_class": {
-   "watch": 1,
-   "noise": 1
+   "high": 51,
+   "routine": 49,
+   "watch": 30,
+   "noise": 5,
+   "docket": 1
   }
  },
- "n_failures": 0,
+ "n_failures": 1,
  "dates": [
   "2026-11-10"
  ],

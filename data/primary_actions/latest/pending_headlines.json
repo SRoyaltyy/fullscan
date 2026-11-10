@@ -1,9 +1,1821 @@
 [
   {
-    "n": 9412,
-    "title": "Justice Department Sues Lyft for Denying Rides to Passengers with Service Dogs, Wheelchairs",
-    "url": "https://www.justice.gov/opa/pr/justice-department-sues-lyft-denying-rides-passengers-service-dogs-wheelchairs",
-    "published_at": "2026-11-09T12:00:00+00:00",
+    "n": 9433,
+    "title": "Imposition of Special Measure Prohibiting the Transmittal of Funds Involving MEXC Global",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22962/imposition-of-special-measure-prohibiting-the-transmittal-of-funds-involving-mexc-global",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Treasury Department; Financial Crimes Enforcement Network",
+    "document_type": "Rule",
+    "document_stage": "final_rule_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9434,
+    "title": "Inspection Programs for Single-Engine Turbine-Powered Airplanes and Unmanned Aircraft; and Miscellaneous Maintenance-Related Updates",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22953/inspection-programs-for-single-engine-turbine-powered-airplanes-and-unmanned-aircraft-and",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Transportation Department; Federal Aviation Administration",
+    "document_type": "Rule",
+    "document_stage": "final_rule_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9435,
+    "title": "Special Conditions: Gulfstream Aerospace Corporation, Model GVII-G400 Airplane; Flight Envelope Protection: Takeoff Stall Protection",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22951/special-conditions-gulfstream-aerospace-corporation-model-gvii-g400-airplane-flight-envelope",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Transportation Department; Federal Aviation Administration",
+    "document_type": "Rule",
+    "document_stage": "final_rule_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9436,
+    "title": "Modification to Work Requirements for Able-Bodied Adults",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22944/modification-to-work-requirements-for-able-bodied-adults",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Agriculture Department; Food and Nutrition Administration",
+    "document_type": "Proposed Rule",
+    "document_stage": "proposal_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9437,
+    "title": "Certain Magnesia Carbon Bricks From the People's Republic of China: Initiation of Circumvention Inquiry on the Antidumping and Countervailing Duty Orders",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22943/certain-magnesia-carbon-bricks-from-the-peoples-republic-of-china-initiation-of-circumvention",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Commerce Department; International Trade Administration",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9438,
+    "title": "Polytetramethylene Ether Glycol From the People's Republic of China: Preliminary Affirmative Determination of Sales at Less Than Fair Value",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22942/polytetramethylene-ether-glycol-from-the-peoples-republic-of-china-preliminary-affirmative",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Commerce Department; International Trade Administration",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9439,
+    "title": "Polytetramethylene Ether Glycol From the Republic of Korea: Preliminary Affirmative Determination of Sales at Less Than Fair Value, Postponement of Final Determination, and Extension of Provisional Measures",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22941/polytetramethylene-ether-glycol-from-the-republic-of-korea-preliminary-affirmative-determination-of",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Commerce Department; International Trade Administration",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9440,
+    "title": "Polytetramethylene Ether Glycol From Taiwan: Preliminary Affirmative Determination of Sales at Less Than Fair Value, Postponement of Final Determination, and Extension of Provisional Measures",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22940/polytetramethylene-ether-glycol-from-taiwan-preliminary-affirmative-determination-of-sales-at-less",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Commerce Department; International Trade Administration",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9441,
+    "title": "Polytetramethylene Ether Glycol From the Socialist Republic of Vietnam: Preliminary Affirmative Determination of Sales at Less Than Fair Value, Postponement of Final Determination, and Extension of Provisional Measures",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22939/polytetramethylene-ether-glycol-from-the-socialist-republic-of-vietnam-preliminary-affirmative",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Commerce Department; International Trade Administration",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9442,
+    "title": "Tin Mill Products From Taiwan: Preliminary Affirmative Determination of Sales at Less Than Fair Value, Postponement of Final Determination, and Extension of Provisional Measures",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22938/tin-mill-products-from-taiwan-preliminary-affirmative-determination-of-sales-at-less-than-fair-value",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Commerce Department; International Trade Administration",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9443,
+    "title": "Tin Mill Products From the Republic of Türkiye: Preliminary Affirmative Determination of Sales at Less Than Fair Value, and Preliminary Affirmative Determination of Critical Circumstances, in Part",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22937/tin-mill-products-from-the-republic-of-trkiye-preliminary-affirmative-determination-of-sales-at-less",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Commerce Department; International Trade Administration",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9444,
+    "title": "Supplemental Nutrition Assistance Program: Reforming Categorical Eligibility",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22936/supplemental-nutrition-assistance-program-reforming-categorical-eligibility",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Agriculture Department; Food and Nutrition Administration",
+    "document_type": "Proposed Rule",
+    "document_stage": "proposal_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9445,
+    "title": "Foreign-Trade Zone (FTZ) 216; Authorization of Production Activity; Essex Laboratories LLC; (Mint Oil Blends); Chehalis, Washington",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22935/foreign-trade-zone-ftz-216-authorization-of-production-activity-essex-laboratories-llc-mint-oil",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Commerce Department; Foreign-Trade Zones Board",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9446,
+    "title": "Amtrak's Request To Amend Its Positive Train Control Safety Plan and Positive Train Control System",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22934/amtraks-request-to-amend-its-positive-train-control-safety-plan-and-positive-train-control-system",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Transportation Department; Federal Railroad Administration",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9447,
+    "title": "Membership of the Performance Review Boards",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22933/membership-of-the-performance-review-boards",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Commerce Department",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9448,
+    "title": "Minor Modification Approval",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22932/minor-modification-approval",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Susquehanna River Basin Commission",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9449,
+    "title": "Projects Approved for Consumptive Uses of Water",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22931/projects-approved-for-consumptive-uses-of-water",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Susquehanna River Basin Commission",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9450,
+    "title": "Commission Meeting",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22930/commission-meeting",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Susquehanna River Basin Commission",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9451,
+    "title": "Notice of Petition for Extension of Waiver of Compliance",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22929/notice-of-petition-for-extension-of-waiver-of-compliance",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Transportation Department; Federal Railroad Administration",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9452,
+    "title": "Airworthiness Directives; Leonardo S.p.a. Helicopters",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22928/airworthiness-directives-leonardo-spa-helicopters",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Transportation Department; Federal Aviation Administration",
+    "document_type": "Proposed Rule",
+    "document_stage": "proposal_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9453,
+    "title": "North Pacific Fishery Management Council; Public Meeting",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22927/north-pacific-fishery-management-council-public-meeting",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Commerce Department; National Oceanic and Atmospheric Administration",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9454,
+    "title": "Notice of Petition for Extension of Waiver of Compliance",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22926/notice-of-petition-for-extension-of-waiver-of-compliance",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Transportation Department; Federal Railroad Administration",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9455,
+    "title": "Notice of Product Exclusion Extensions: China's Acts, Policies, and Practices Related to Technology Transfer, Intellectual Property, and Innovation",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22925/notice-of-product-exclusion-extensions-chinas-acts-policies-and-practices-related-to-technology",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Trade Representative, Office of United States",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9456,
+    "title": "Agency Information Collection Activities; Submission to the Office of Management and Budget for Review and Approval; Comment Request; Response to Office Action and Voluntary Amendment Forms",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22924/agency-information-collection-activities-submission-to-the-office-of-management-and-budget-for",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Commerce Department; Patent and Trademark Office",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9457,
+    "title": "Prestressed Concrete Steel Wire Strand From China; Determinations",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22923/prestressed-concrete-steel-wire-strand-from-china-determinations",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "International Trade Commission",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9458,
+    "title": "Notice of Public Meeting of the Tennessee Advisory Committee",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22921/notice-of-public-meeting-of-the-tennessee-advisory-committee",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Civil Rights Commission",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9459,
+    "title": "Notice of Public Meeting of the Wisconsin Advisory Committee to the U.S. Commission on Civil Rights",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22920/notice-of-public-meeting-of-the-wisconsin-advisory-committee-to-the-us-commission-on-civil-rights",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Civil Rights Commission",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9460,
+    "title": "Airworthiness Directives; Airbus Canada Limited Partnership (Type Certificate Previously Held by C Series Aircraft Limited Partnership (CSALP); Bombardier, Inc.) Airplanes",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22919/airworthiness-directives-airbus-canada-limited-partnership-type-certificate-previously-held-by-c",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Transportation Department; Federal Aviation Administration",
+    "document_type": "Proposed Rule",
+    "document_stage": "proposal_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9461,
+    "title": "President's Council of Advisors on Science and Technology (PCAST)",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22918/presidents-council-of-advisors-on-science-and-technology-pcast",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Energy Department",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9462,
+    "title": "Office of the Secretary; Notice of Meeting",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22917/office-of-the-secretary-notice-of-meeting",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Health and Human Services Department; National Institutes of Health",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9463,
+    "title": "Notice Pursuant to the National Cooperative Research and Production Act of 1993-Rust Foundation",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22915/notice-pursuant-to-the-national-cooperative-research-and-production-act-of-1993-rust-foundation",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Justice Department; Antitrust Division",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9464,
+    "title": "Notice Pursuant to the National Cooperative Research and Production Act of 1993-Silicon Integration Initiative, Inc.",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22914/notice-pursuant-to-the-national-cooperative-research-and-production-act-of-1993-silicon-integration",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Justice Department; Antitrust Division",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9465,
+    "title": "Notice Pursuant to the National Cooperative Research and Production Act of 1993-OpenGMSL Association",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22913/notice-pursuant-to-the-national-cooperative-research-and-production-act-of-1993-opengmsl-association",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Justice Department; Antitrust Division",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9466,
+    "title": "Notice Pursuant to the National Cooperative Research and Production Act of 1993-Blockchain Security Standards Council, Inc.",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22912/notice-pursuant-to-the-national-cooperative-research-and-production-act-of-1993-blockchain-security",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Justice Department; Antitrust Division",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9467,
+    "title": "Notice of Receipt of Complaint; Solicitation of Comments Relating to the Public Interest",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22911/notice-of-receipt-of-complaint-solicitation-of-comments-relating-to-the-public-interest",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "International Trade Commission",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9468,
+    "title": "Notice Pursuant to the National Cooperative Research and Production Act of 1993-The Open Group, L.L.C.",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22910/notice-pursuant-to-the-national-cooperative-research-and-production-act-of-1993-the-open-group-llc",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Justice Department; Antitrust Division",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9469,
+    "title": "Notice Pursuant to the National Cooperative Research and Production Act of 1993-Canton Foundation (F/K/A Global Synchronizer Foundation)",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22909/notice-pursuant-to-the-national-cooperative-research-and-production-act-of-1993-canton-foundation",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Justice Department; Antitrust Division",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9470,
+    "title": "Notice Pursuant to the National Cooperative Research and Production Act of 1993-Bytecode Alliance Foundation",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22908/notice-pursuant-to-the-national-cooperative-research-and-production-act-of-1993-bytecode-alliance",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Justice Department; Antitrust Division",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9471,
+    "title": "Airworthiness Directives; Airbus SAS Airplanes; Correction",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22907/airworthiness-directives-airbus-sas-airplanes-correction",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Transportation Department; Federal Aviation Administration",
+    "document_type": "Rule",
+    "document_stage": "final_rule_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9472,
+    "title": "Notice Pursuant to the National Cooperative Research and Production Act of 1993-PXI Systems Alliance, Inc.",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22906/notice-pursuant-to-the-national-cooperative-research-and-production-act-of-1993-pxi-systems-alliance",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Justice Department; Antitrust Division",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9473,
+    "title": "Notice Pursuant to the National Cooperative Research and Production Act of 1993-National Fire Protection Association",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22905/notice-pursuant-to-the-national-cooperative-research-and-production-act-of-1993-national-fire",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Justice Department; Antitrust Division",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9474,
+    "title": "Notice of Receipt of Complaint; Solicitation of Comments Relating to the Public Interest",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22904/notice-of-receipt-of-complaint-solicitation-of-comments-relating-to-the-public-interest",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "International Trade Commission",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9475,
+    "title": "Unemployment Insurance Program National Minimum Weekly Work Search Requirements",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22903/unemployment-insurance-program-national-minimum-weekly-work-search-requirements",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Labor Department; Employment and Training Administration",
+    "document_type": "Proposed Rule",
+    "document_stage": "proposal_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9476,
+    "title": "Performance Review Board",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22902/performance-review-board",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Commerce Department; Patent and Trademark Office",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9477,
+    "title": "60-Day Notice of Proposed Information Collection: Section 202 Supportive Housing for the Elderly Application Submission Requirements",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22901/60-day-notice-of-proposed-information-collection-section-202-supportive-housing-for-the-elderly",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Housing and Urban Development Department",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9478,
+    "title": "Sunshine Act Meetings",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22900/sunshine-act-meetings",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Tennessee Valley Authority",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9479,
+    "title": "Airworthiness Directives; Bombardier, Inc., Airplanes",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22899/airworthiness-directives-bombardier-inc-airplanes",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Transportation Department; Federal Aviation Administration",
+    "document_type": "Proposed Rule",
+    "document_stage": "proposal_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9480,
+    "title": "Notice of Intent To Prepare a Programmatic Environmental Impact Statement (PEIS), Open Public Scoping Period, and Hold Public Scoping Meetings on the Proposed SpaceX Starship-Super Heavy Launch and Landing Operations at the Boca Chica Launch Site at Starbase, Texas and Expansion of Starship Landing and Expenditure Locations",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22898/notice-of-intent-to-prepare-a-programmatic-environmental-impact-statement-peis-open-public-scoping",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Transportation Department; Federal Aviation Administration",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9481,
+    "title": "Airworthiness Directives; Airbus SAS Airplanes",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22897/airworthiness-directives-airbus-sas-airplanes",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Transportation Department; Federal Aviation Administration",
+    "document_type": "Rule",
+    "document_stage": "final_rule_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9482,
+    "title": "60-Day Notice of Proposed Information Collection: Comprehensive Transactional Forms Supporting FHA's Section 242 Mortgage Insurance Program for Hospitals",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22896/60-day-notice-of-proposed-information-collection-comprehensive-transactional-forms-supporting-fhas",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Housing and Urban Development Department",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9483,
+    "title": "Notice Pursuant to the National Cooperative Research and Production Act of 1993-Mercury Consortium, Inc.",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22895/notice-pursuant-to-the-national-cooperative-research-and-production-act-of-1993-mercury-consortium",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Justice Department; Antitrust Division",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9484,
+    "title": "Notice Pursuant to the National Cooperative Research and Production Act of 1993-R Consortium, Inc.",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22894/notice-pursuant-to-the-national-cooperative-research-and-production-act-of-1993-r-consortium-inc",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Justice Department; Antitrust Division",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9485,
+    "title": "Notice Pursuant to the National Cooperative Research and Production Act of 1993-TeleManagement Forum (TM Forum)",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22893/notice-pursuant-to-the-national-cooperative-research-and-production-act-of-1993-telemanagement-forum",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Justice Department; Antitrust Division",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9486,
+    "title": "[Proposed Extension of Information Collection Request Submitted for Public Comment; Comment Request on Burden Related to the Qualified Intermediary (QI), Withholding Foreign Partnership (WP), and Withholding Foreign Trust (WT) Application and Account Management System",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22892/proposed-extension-of-information-collection-request-submitted-for-public-comment-comment-request-on",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Treasury Department; Internal Revenue Service",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9487,
+    "title": "Rules and Regulations, Series 8",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22891/rules-and-regulations-series-8",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "National Labor Relations Board",
+    "document_type": "Rule",
+    "document_stage": "final_rule_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9488,
+    "title": "Agency Information Collection Activities: Notice of Intent To Extend Collection 3038-0015, Copies of Crop and Market Information Reports",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22890/agency-information-collection-activities-notice-of-intent-to-extend-collection-3038-0015-copies-of",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Commodity Futures Trading Commission",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9489,
+    "title": "Agency Information Collection Activities: Notice of Intent To Extend Collection 3038-0026, Gross Collection of Exchange-Set Margins for Omnibus Accounts",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22889/agency-information-collection-activities-notice-of-intent-to-extend-collection-3038-0026-gross",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Commodity Futures Trading Commission",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9490,
+    "title": "Modification of Significant New Uses of Certain Chemical Substances (23-1.M)",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22888/modification-of-significant-new-uses-of-certain-chemical-substances-23-1m",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Environmental Protection Agency",
+    "document_type": "Rule",
+    "document_stage": "final_rule_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9491,
+    "title": "Air Plan Approval; Michigan; Determination of Attainment by the Attainment Date for the 2015 Ozone Standards",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22887/air-plan-approval-michigan-determination-of-attainment-by-the-attainment-date-for-the-2015-ozone",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Environmental Protection Agency",
+    "document_type": "Rule",
+    "document_stage": "final_rule_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9492,
+    "title": "Agency Information Collection Activities; Comment Request on Revenue Procedure 2004-47, Simplified Alternate Procedure for Making Late Reverse QTIP Election",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22886/agency-information-collection-activities-comment-request-on-revenue-procedure-2004-47-simplified",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Treasury Department; Internal Revenue Service",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9493,
+    "title": "Deregistration Under Section 8(f) of the Investment Company Act of 1940; Correction",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22885/deregistration-under-section-8f-of-the-investment-company-act-of-1940-correction",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Securities and Exchange Commission",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9494,
+    "title": "SMR, LLC; Palisades SMR, LLC; Pioneer Units 1 and 2; Receipt of Construction Permit Application",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22884/smr-llc-palisades-smr-llc-pioneer-units-1-and-2-receipt-of-construction-permit-application",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Nuclear Regulatory Commission",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9495,
+    "title": "Validation of Certain In Vitro Diagnostic Devices for Emerging Pathogens During a Section 564 Declared Emergency; Guidance for Industry and Food and Drug Administration Staff; Availability",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22883/validation-of-certain-in-vitro-diagnostic-devices-for-emerging-pathogens-during-a-section-564",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Health and Human Services Department; Food and Drug Administration",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9496,
+    "title": "Biweekly Notice; Applications and Amendments to Facility Operating Licenses and Combined Licenses Involving No Significant Hazards Considerations",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22882/biweekly-notice-applications-and-amendments-to-facility-operating-licenses-and-combined-licenses",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Nuclear Regulatory Commission",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9497,
+    "title": "Proposed Data Collection Submitted for Public Comment and Recommendations",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22881/proposed-data-collection-submitted-for-public-comment-and-recommendations",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Health and Human Services Department; Centers for Disease Control and Prevention",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9498,
+    "title": "Notice of Effectiveness of Exempt Wholesale Generator Status",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22880/notice-of-effectiveness-of-exempt-wholesale-generator-status",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Energy Department; Federal Energy Regulatory Commission",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9499,
+    "title": "Combined Notice of Filings #1",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22879/combined-notice-of-filings-1",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Energy Department; Federal Energy Regulatory Commission",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9500,
+    "title": "ConocoPhillips Company; Notice of Institution of Section 206 Proceeding and Refund Effective Date",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22878/conocophillips-company-notice-of-institution-of-section-206-proceeding-and-refund-effective-date",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Energy Department; Federal Energy Regulatory Commission",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9501,
+    "title": "Combined Notice of Filings",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22877/combined-notice-of-filings",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Energy Department; Federal Energy Regulatory Commission",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9502,
+    "title": "The Emergency Food Assistance Program; Availability of Foods for Fiscal Year 2027",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22876/the-emergency-food-assistance-program-availability-of-foods-for-fiscal-year-2027",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Agriculture Department; Food and Nutrition Administration",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9503,
+    "title": "30-Day Notice of Proposed Information Collection: Improving Customer Experience (OMB Circular A-11, Section 280 Implementation)",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22875/30-day-notice-of-proposed-information-collection-improving-customer-experience-omb-circular-a-11",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "State Department",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9504,
+    "title": "Center for Scientific Review; Amended Notice of Meeting",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22874/center-for-scientific-review-amended-notice-of-meeting",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Health and Human Services Department; National Institutes of Health",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9505,
+    "title": "National Institute on Aging; Notice of Meeting",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22873/national-institute-on-aging-notice-of-meeting",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Health and Human Services Department; National Institutes of Health",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9506,
+    "title": "National Institute on Aging; Notice of Meeting",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22872/national-institute-on-aging-notice-of-meeting",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Health and Human Services Department; National Institutes of Health",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9507,
+    "title": "Center for Scientific Review; Notice of Closed Meetings",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22871/center-for-scientific-review-notice-of-closed-meetings",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Health and Human Services Department; National Institutes of Health",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9508,
+    "title": "Center for Scientific Review; Notice of Closed Meetings",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22870/center-for-scientific-review-notice-of-closed-meetings",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Health and Human Services Department; National Institutes of Health",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9509,
+    "title": "Sunshine Act Meetings",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22869/sunshine-act-meetings",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Nuclear Regulatory Commission",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9510,
+    "title": "Notice of Determination To Extend Section 301 Investigation of Vietnam's Acts, Policies, and Practices Related to Intellectual Property Protection and Enforcement",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22868/notice-of-determination-to-extend-section-301-investigation-of-vietnams-acts-policies-and-practices",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Trade Representative, Office of United States",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9511,
+    "title": "Notice of Modification of Section 301 Action: China's Targeting of the Maritime, Logistics, and Shipbuilding Sectors for Dominance",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22867/notice-of-modification-of-section-301-action-chinas-targeting-of-the-maritime-logistics-and",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Trade Representative, Office of United States",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9512,
+    "title": "Color Additive Petition From the International Association of Color Manufacturers; Request To Amend the Color Additive Regulations To Remove the Solvents Methylene Chloride, Trichloroethylene, and Ethylene Dichloride",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22866/color-additive-petition-from-the-international-association-of-color-manufacturers-request-to-amend",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Health and Human Services Department; Food and Drug Administration",
+    "document_type": "Rule",
+    "document_stage": "final_rule_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9513,
+    "title": "Color Additive Petition From Environmental Defense Fund et al.; Request To Amend the Color Additive Regulations To Remove the Solvents Ethylene Dichloride, Methylene Chloride, and Trichloroethylene",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22865/color-additive-petition-from-environmental-defense-fund-et-al-request-to-amend-the-color-additive",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Health and Human Services Department; Food and Drug Administration",
+    "document_type": "Rule",
+    "document_stage": "final_rule_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9514,
+    "title": "Notice of OFAC Sanctions Action",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22864/notice-of-ofac-sanctions-action",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Treasury Department; Foreign Assets Control Office",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9515,
+    "title": "DCM Impartial Access Requirements",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22863/dcm-impartial-access-requirements",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Commodity Futures Trading Commission",
+    "document_type": "Rule",
+    "document_stage": "final_rule_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9516,
+    "title": "Notice of OFAC Sanctions Action",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22862/notice-of-ofac-sanctions-action",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Treasury Department; Foreign Assets Control Office",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9517,
+    "title": "Notice of OFAC Sanctions Action",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22861/notice-of-ofac-sanctions-action",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Treasury Department; Foreign Assets Control Office",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9518,
+    "title": "Revision of Regulations for Planning, Programming, Budgeting",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22860/revision-of-regulations-for-planning-programming-budgeting",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Interior Department; Land Management Bureau",
+    "document_type": "Proposed Rule",
+    "document_stage": "proposal_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9519,
+    "title": "Information Reporting Regarding Qualified Opportunity Zones and Updated Qualified Opportunity Fund Certification and Decertification Procedures; Correction",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22859/information-reporting-regarding-qualified-opportunity-zones-and-updated-qualified-opportunity-fund",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Treasury Department; Internal Revenue Service",
+    "document_type": "Proposed Rule",
+    "document_stage": "proposal_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9520,
+    "title": "Sunshine Act Meetings",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22858/sunshine-act-meetings",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Nuclear Regulatory Commission",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9521,
+    "title": "Agency Information Collection Activities: Submission for OMB Review, Comment Request; Homeland Security Exercise and Evaluation Program (HSEEP) Documentation",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22857/agency-information-collection-activities-submission-for-omb-review-comment-request-homeland-security",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Homeland Security Department; Federal Emergency Management Agency",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9522,
+    "title": "Notice of Open Public Event",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22856/notice-of-open-public-event",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "U.S.-China Economic and Security Review Commission",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9523,
+    "title": "Submission for OMB Review; Comment Request",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22855/submission-for-omb-review-comment-request",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Agriculture Department",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9524,
+    "title": "Bluerock ETF Trust and Bluerock ETF Advisor, LLC",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22854/bluerock-etf-trust-and-bluerock-etf-advisor-llc",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Securities and Exchange Commission",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9525,
+    "title": "Horizon Investments, LLC and Horizon Funds",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22853/horizon-investments-llc-and-horizon-funds",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Securities and Exchange Commission",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9526,
+    "title": "Self-Regulatory Organizations; 24X National Exchange LLC; Notice of Filing and Immediate Effectiveness of Proposed Rule Change To Amend the Transaction Fees Applicable to Members of the Exchange",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22852/self-regulatory-organizations-24x-national-exchange-llc-notice-of-filing-and-immediate-effectiveness",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Securities and Exchange Commission",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9527,
+    "title": "Self-Regulatory Organizations; Fixed Income Clearing Corporation; Order Instituting Proceedings To Determine Whether To Approve or Disapprove a Proposed Rule Change, as Modified by Partial Amendment No. 1, To Establish a Guaranty Fund at the Government Securities Division",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22851/self-regulatory-organizations-fixed-income-clearing-corporation-order-instituting-proceedings-to",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Securities and Exchange Commission",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9528,
+    "title": "Self-Regulatory Organizations; ICE Clear Credit LLC; Notice of Filing of Proposed Rule Change Relating to the Procedures for Monitoring Compliance With the Eligible Secondary Market Transaction Submission Requirements",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22850/self-regulatory-organizations-ice-clear-credit-llc-notice-of-filing-of-proposed-rule-change-relating",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Securities and Exchange Commission",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9529,
+    "title": "Self-Regulatory Organizations; Texas Stock Exchange LLC; Notice of Filing and Immediate Effectiveness of a Proposed Rule Change To Amend Rule 17.180 To Permit an Issuer To Elect a Higher Listing Tier for an Exchange Traded Product During a Calendar Year and To Provide for the Related Incremental Listing Fee",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22849/self-regulatory-organizations-texas-stock-exchange-llc-notice-of-filing-and-immediate-effectiveness",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Securities and Exchange Commission",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9530,
+    "title": "Order Cancelling Registrations of Certain Municipal Advisors Pursuant to Section 15B(c)(3) of the Securities Exchange Act of 1934",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22848/order-cancelling-registrations-of-certain-municipal-advisors-pursuant-to-section-15bc3-of-the",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Securities and Exchange Commission",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9531,
+    "title": "Self-Regulatory Organizations; Cboe BYX Exchange, Inc.; Notice of Designation of Longer Period for Commission Action on Proceedings To Determine Whether To Approve or Disapprove a Proposed Rule Change, as Modified by Amendment No. 1, To Amend Rule 11.25 To Introduce an Optional, Contingent Instruction Applicable to Periodic Auction Only Orders, Introduce a Time-in-Force of Auction or Cancel, and Make Conforming Changes to Its Periodic Auction Processing Behavior To Support the Proposed Contingent Instruction",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22847/self-regulatory-organizations-cboe-byx-exchange-inc-notice-of-designation-of-longer-period-for",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Securities and Exchange Commission",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9532,
+    "title": "Self-Regulatory Organizations; BOX Exchange LLC; Notice of Filing and Immediate Effectiveness of a Proposed Rule Change To Make Various Clean Up Changes and a Number of Technical, Non-Substantiative Changes to Its Rulebook",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22846/self-regulatory-organizations-box-exchange-llc-notice-of-filing-and-immediate-effectiveness-of-a",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Securities and Exchange Commission",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9533,
+    "title": "Self-Regulatory Organizations; Investors Exchange LLC; Notice of Filing and Immediate Effectiveness of Proposed Rule Change To Amend IEX Rule 3.291 (Influencing or Rewarding Employees of Others; Gratuities), To Conform to the Rules of FINRA for Purposes of an Agreement Between the Exchange and FINRA Pursuant To Rule 17d-2 Under the Act",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22845/self-regulatory-organizations-investors-exchange-llc-notice-of-filing-and-immediate-effectiveness-of",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Securities and Exchange Commission",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9534,
+    "title": "National Institute of Arthritis and Musculoskeletal and Skin Diseases; Notice of Closed Meeting",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22844/national-institute-of-arthritis-and-musculoskeletal-and-skin-diseases-notice-of-closed-meeting",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Health and Human Services Department; National Institutes of Health",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9535,
+    "title": "Proposed Aggregate Production Quotas for Schedule I and II Controlled Substances and Assessment of Annual Needs for the List I Chemicals Ephedrine, Pseudoephedrine, and Phenylpropanolamine for 2027",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22843/proposed-aggregate-production-quotas-for-schedule-i-and-ii-controlled-substances-and-assessment-of",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Justice Department; Drug Enforcement Administration",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9536,
+    "title": "Adjustment to the 2026 Aggregate Production Quota for d,l-Amphetamine, d-Amphetamine (for Sale), Hydromorphone and Methylphenidate (for Sale) Pursuant to 21 U.S.C. 826(h)",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22842/adjustment-to-the-2026-aggregate-production-quota-for-dl-amphetamine-d-amphetamine-for-sale",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Justice Department; Drug Enforcement Administration",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9537,
+    "title": "Notice of Removal of Designated Chinese Military Company",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22840/notice-of-removal-of-designated-chinese-military-company",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Defense Department; Office of the Secretary",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9538,
+    "title": "President's Military Spouse Commission; Notice of Federal Advisory Committee Meeting; Amendment",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22839/presidents-military-spouse-commission-notice-of-federal-advisory-committee-meeting-amendment",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Defense Department; Office of the Secretary",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9539,
+    "title": "Notice of Intent To Reorganize HUD and Revise Headquarters and Field Operating Model",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22838/notice-of-intent-to-reorganize-hud-and-revise-headquarters-and-field-operating-model",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Housing and Urban Development Department",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9540,
+    "title": "Medicare and Medicaid Programs; Cutting Administrative Requirements for Excellence in Patient Care",
+    "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22812/medicare-and-medicaid-programs-cutting-administrative-requirements-for-excellence-in-patient-care",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Health and Human Services Department; Centers for Medicare & Medicaid Services",
+    "document_type": "Proposed Rule",
+    "document_stage": "proposal_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 9541,
+    "title": "Exchange Fund Bills Tender Results",
+    "url": "https://www.hkma.gov.hk/eng/news-and-media/press-releases/2026/11/20261110-4/",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Hong Kong Monetary Authority",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "hk-hkma-public-press"
+    ]
+  },
+  {
+    "n": 9542,
+    "title": "Northern Metropolis Financial Advisory Taskforce holds its third meeting",
+    "url": "https://www.hkma.gov.hk/eng/news-and-media/press-releases/2026/11/20261110-3/",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Hong Kong Monetary Authority",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "hk-hkma-public-press"
+    ]
+  },
+  {
+    "n": 9543,
+    "title": "Botley West Solar Farm: development consent order, Planning Act 2008",
+    "url": "https://www.gov.uk/government/publications/botley-west-solar-farm-development-consent-order-planning-act-2008",
+    "published_at": "2026-11-10T16:14:07+00:00",
+    "official_issuer": "Department for Energy Security and Net Zero",
+    "document_type": "decision",
+    "document_stage": "decision_published",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "n": 9544,
+    "title": "Decision No 4/2026 of the Joint Committee established by the Agreement on the withdrawal of the UK from the EU: adding a newly adopted Union act to Annex 2 to the Windsor Framework",
+    "url": "https://www.gov.uk/government/publications/decision-no-42026-of-the-joint-committee-established-by-the-agreement-on-the-withdrawal-of-the-uk-from-the-eu-adding-a-newly-adopted-union-act-to-anne",
+    "published_at": "2026-11-10T16:00:02+00:00",
+    "official_issuer": "Cabinet Office",
+    "document_type": "decision",
+    "document_stage": "decision_published",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "n": 9545,
+    "title": "Decision No 3/2026 of the Joint Committee established by the Agreement on the withdrawal of the UK from the EU: adding a newly adopted Union act to Annex 2 to the Windsor Framework",
+    "url": "https://www.gov.uk/government/publications/decision-no-32026-of-the-joint-committee-established-by-the-agreement-on-the-withdrawal-of-the-uk-from-the-eu-adding-a-newly-adopted-union-act-to-anne",
+    "published_at": "2026-11-10T16:00:02+00:00",
+    "official_issuer": "Cabinet Office",
+    "document_type": "decision",
+    "document_stage": "decision_published",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "n": 9546,
+    "title": "Joint Declaration on the application of Article 5 of the Windsor Framework",
+    "url": "https://www.gov.uk/government/publications/joint-declaration-on-the-application-of-article-5-of-the-windsor-framework",
+    "published_at": "2026-11-10T16:00:02+00:00",
+    "official_issuer": "Cabinet Office",
+    "document_type": "decision",
+    "document_stage": "decision_published",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "n": 9547,
+    "title": "Decision No 2/2026 of the Joint Committee established by the Agreement on the withdrawal of the UK from the EU: amending Part I of Annex I to the Agreement",
+    "url": "https://www.gov.uk/government/publications/decision-no-22026-of-the-joint-committee-established-by-the-agreement-on-the-withdrawal-of-the-uk-from-the-eu-amending-part-i-of-annex-i-to-the-agreem",
+    "published_at": "2026-11-10T16:00:02+00:00",
+    "official_issuer": "Cabinet Office",
+    "document_type": "decision",
+    "document_stage": "decision_published",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "n": 9548,
+    "title": "CAC Outcome: PCS & OCS Group UK Limited",
+    "url": "https://www.gov.uk/government/publications/cac-outcome-pcs-ocs-group-uk-limited",
+    "published_at": "2026-11-10T15:13:44+00:00",
+    "official_issuer": "Central Arbitration Committee",
+    "document_type": "decision",
+    "document_stage": "decision_published",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "n": 9549,
+    "title": "CAC Outcome: Unite the Union & Evolve Housing and Support",
+    "url": "https://www.gov.uk/government/publications/cac-outcome-unite-the-union-evolve-housing-and-support",
+    "published_at": "2026-11-10T15:13:06+00:00",
+    "official_issuer": "Central Arbitration Committee",
+    "document_type": "decision",
+    "document_stage": "decision_published",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "n": 9550,
+    "title": "Platypus Field Development",
+    "url": "https://www.gov.uk/government/publications/platypus-field-development",
+    "published_at": "2026-11-10T14:51:21+00:00",
+    "official_issuer": "Offshore Petroleum Regulator for Environment and Decommissioning",
+    "document_type": "decision",
+    "document_stage": "decision_published",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "n": 9551,
+    "title": "Human and veterinary medicines: register of licensed manufacturing sites",
+    "url": "https://www.gov.uk/government/publications/human-and-veterinary-medicines-register-of-licensed-manufacturing-sites",
+    "published_at": "2026-11-10T14:50:33+00:00",
+    "official_issuer": "Medicines and Healthcare products Regulatory Agency",
+    "document_type": "decision",
+    "document_stage": "decision_published",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "n": 9552,
+    "title": "Medicines: new manufacturing and wholesale dealer licences",
+    "url": "https://www.gov.uk/government/publications/medicines-new-manufacturing-and-wholesale-dealer-licences",
+    "published_at": "2026-11-10T14:50:12+00:00",
+    "official_issuer": "Medicines and Healthcare products Regulatory Agency",
+    "document_type": "decision",
+    "document_stage": "decision_published",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "n": 9553,
+    "title": "Human medicines: register of licensed wholesale distribution sites",
+    "url": "https://www.gov.uk/government/publications/human-and-veterinary-medicines-register-of-licensed-wholesale-distribution-sites",
+    "published_at": "2026-11-10T14:49:52+00:00",
+    "official_issuer": "Medicines and Healthcare products Regulatory Agency",
+    "document_type": "decision",
+    "document_stage": "decision_published",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "n": 9554,
+    "title": "TS2 1UB, Fine Organics Limited: environmental permit - EPR/PP3439GG/V008",
+    "url": "https://www.gov.uk/government/publications/ts2-1ub-fine-organics-limited-environmental-permit-eprpp3439ggv008",
+    "published_at": "2026-11-10T10:24:34+00:00",
+    "official_issuer": "Environment Agency",
+    "document_type": "decision",
+    "document_stage": "decision_published",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "n": 9555,
+    "title": "Acquisition of David Brown Santasalo SARL by Stellex Capital Management LLC via its subsidiary Gear Bidco SARL: notices of final order and revocation",
+    "url": "https://www.gov.uk/government/publications/acquisition-of-david-brown-santasalo-sarl-by-stellex-capital-management-llc-via-its-subsidiary-gear-bidco-sarl-notices-of-final-order-and-revocation",
+    "published_at": "2026-11-10T09:29:32+00:00",
+    "official_issuer": "Cabinet Office",
+    "document_type": "decision",
+    "document_stage": "decision_published",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "n": 9556,
+    "title": "Withdrawn MAA regulatory instructions (RI)",
+    "url": "https://www.gov.uk/government/publications/withdrawn-maa-regulatory-instructions-ri",
+    "published_at": "2026-11-10T11:20:07+00:00",
+    "official_issuer": "Ministry of Defence; Military Aviation Authority",
+    "document_type": "regulation",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "uk-govuk-regulation"
+    ]
+  },
+  {
+    "n": 9557,
+    "title": "MAA regulatory instructions (RI)",
+    "url": "https://www.gov.uk/government/publications/maa-regulatory-instructions-ri",
+    "published_at": "2026-11-10T11:19:40+00:00",
+    "official_issuer": "Ministry of Defence; Military Aviation Authority",
+    "document_type": "regulation",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "uk-govuk-regulation"
+    ]
+  },
+  {
+    "n": 9558,
+    "title": "Trust-based pension schemes: Trustees and governance, building a stronger future",
+    "url": "https://www.gov.uk/government/consultations/trust-based-pension-schemes-trustees-and-governance-building-a-stronger-future",
+    "published_at": "2026-11-10T16:00:02+00:00",
+    "official_issuer": "Department for Work and Pensions",
+    "document_type": "consultation_outcome",
+    "document_stage": "consultation_response_published",
+    "source_ids": [
+      "uk-govuk-consultation_outcome"
+    ]
+  },
+  {
+    "n": 9559,
+    "title": "Application of the Chapter I prohibition in the Competition Act 1998 to technology transfer agreements",
+    "url": "https://www.gov.uk/government/consultations/application-of-the-chapter-i-prohibition-in-the-competition-act-1998-to-technology-transfer-agreements",
+    "published_at": "2026-11-10T14:09:28+00:00",
+    "official_issuer": "Competition and Markets Authority",
+    "document_type": "consultation_outcome",
+    "document_stage": "consultation_response_published",
+    "source_ids": [
+      "uk-govuk-consultation_outcome"
+    ]
+  },
+  {
+    "n": 9560,
+    "title": "Field Safety Notices from 02 to 06 November2026.",
+    "url": "https://www.gov.uk/drug-device-alerts/field-safety-notices-from-02-to-06-november2026",
+    "published_at": "2026-11-10T11:26:47+00:00",
+    "official_issuer": "Medicines and Healthcare products Regulatory Agency",
+    "document_type": "medical_safety_alert",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "uk-govuk-medical_safety_alert"
+    ]
+  },
+  {
+    "n": 9561,
+    "title": "H.R. 10967 (IH) - Diwali Day Act",
+    "url": "https://www.govinfo.gov/app/details/BILLS-119hr10967ih",
+    "published_at": "2026-11-10T11:07:00+00:00",
+    "official_issuer": "Congressional Bills",
+    "document_type": "bill",
+    "document_stage": "legislative_document_published",
+    "source_ids": [
+      "us-govinfo-bills"
+    ]
+  },
+  {
+    "n": 9562,
+    "title": "H. Rept. 119-878",
+    "url": "https://www.govinfo.gov/app/details/CRPT-119hrpt878",
+    "published_at": "2026-11-10T13:27:00+00:00",
+    "official_issuer": "Congressional Reports",
+    "document_type": "committee_report",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "us-govinfo-crpt"
+    ]
+  },
+  {
+    "n": 9565,
+    "title": "SEC Announces Enforcement Annual Results for Fiscal Year 2026",
+    "url": "https://www.sec.gov/newsroom/press-releases/2026-113-sec-announces-enforcement-annual-results-fiscal-year-2026",
+    "published_at": "2026-11-10T16:15:35+00:00",
+    "official_issuer": "Securities and Exchange Commission",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "us-sec-8940dd7737"
+    ]
+  },
+  {
+    "n": 9566,
+    "title": "20270182: Bain Capital Tech Opportunities Fund III, L.P.; Kahua, Inc.",
+    "url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20270182",
+    "published_at": "2026-11-10T15:38:51+00:00",
+    "official_issuer": "Federal Trade Commission — HSR Early Termination Notices",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "us-ftc-df73e297e1"
+    ]
+  },
+  {
+    "n": 9567,
+    "title": "20270074: Hormel Foods Corporation; Brakebush Holdings, Inc.",
+    "url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20270074",
+    "published_at": "2026-11-10T15:38:45+00:00",
+    "official_issuer": "Federal Trade Commission — HSR Early Termination Notices",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "us-ftc-df73e297e1"
+    ]
+  },
+  {
+    "n": 9568,
+    "title": "20270118: Novartis AG; Bo Ying",
+    "url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20270118",
+    "published_at": "2026-11-10T15:38:46+00:00",
+    "official_issuer": "Federal Trade Commission — HSR Early Termination Notices",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "us-ftc-df73e297e1"
+    ]
+  },
+  {
+    "n": 9569,
+    "title": "20270142: Compagnie de Saint-Gobain S.A.; Gibraltar Industries, Inc.",
+    "url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20270142",
+    "published_at": "2026-11-10T15:38:48+00:00",
+    "official_issuer": "Federal Trade Commission — HSR Early Termination Notices",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "us-ftc-df73e297e1"
+    ]
+  },
+  {
+    "n": 9570,
+    "title": "20270156: Cardinal Infrastructure Group, Inc.; Chad and Angela Hughes",
+    "url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20270156",
+    "published_at": "2026-11-10T15:38:50+00:00",
+    "official_issuer": "Federal Trade Commission — HSR Early Termination Notices",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "us-ftc-df73e297e1"
+    ]
+  },
+  {
+    "n": 9571,
+    "title": "20270082: Lovell Minnick Equity Partners VI LP; Thomas John",
+    "url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20270082",
+    "published_at": "2026-11-10T15:38:46+00:00",
+    "official_issuer": "Federal Trade Commission — HSR Early Termination Notices",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "us-ftc-df73e297e1"
+    ]
+  },
+  {
+    "n": 9572,
+    "title": "20270138: Littlejohn Fund VI, L.P.; Blue-Grace Group LLC",
+    "url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20270138",
+    "published_at": "2026-11-10T15:38:48+00:00",
+    "official_issuer": "Federal Trade Commission — HSR Early Termination Notices",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "us-ftc-df73e297e1"
+    ]
+  },
+  {
+    "n": 9573,
+    "title": "20270150: Platinum Equity Capital Partners VI, L.P.; EDP PPC Investor LLC",
+    "url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20270150",
+    "published_at": "2026-11-10T15:38:50+00:00",
+    "official_issuer": "Federal Trade Commission — HSR Early Termination Notices",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "us-ftc-df73e297e1"
+    ]
+  },
+  {
+    "n": 9574,
+    "title": "20270157: Cardinal Infrastructure Group, Inc.; Justin and Madeline Hughes",
+    "url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20270157",
+    "published_at": "2026-11-10T15:38:50+00:00",
+    "official_issuer": "Federal Trade Commission — HSR Early Termination Notices",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "us-ftc-df73e297e1"
+    ]
+  },
+  {
+    "n": 9575,
+    "title": "20270106: Centerbridge Capital Partners V, L.P.; RAB IntermediateCo, LLC",
+    "url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20270106",
+    "published_at": "2026-11-10T15:38:46+00:00",
+    "official_issuer": "Federal Trade Commission — HSR Early Termination Notices",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "us-ftc-df73e297e1"
+    ]
+  },
+  {
+    "n": 9576,
+    "title": "20270140: GenNx360 Capital Partners IV, L.P.; ChillCo, Inc.",
+    "url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20270140",
+    "published_at": "2026-11-10T15:38:48+00:00",
+    "official_issuer": "Federal Trade Commission — HSR Early Termination Notices",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "us-ftc-df73e297e1"
+    ]
+  },
+  {
+    "n": 9577,
+    "title": "20270154: GTAM SPN LP; Superior Energy Services, Inc.",
+    "url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20270154",
+    "published_at": "2026-11-10T15:38:50+00:00",
+    "official_issuer": "Federal Trade Commission — HSR Early Termination Notices",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "us-ftc-df73e297e1"
+    ]
+  },
+  {
+    "n": 9578,
+    "title": "Twice-Deported Illegal Alien Faces Federal Drug and Immigration Charges after Massive Conyers Meth Bust",
+    "url": "https://www.justice.gov/usao-ndga/pr/twice-deported-illegal-alien-faces-federal-drug-and-immigration-charges-after-massive",
+    "published_at": "2026-11-10T12:00:00+00:00",
+    "official_issuer": "Department of Justice",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "us-doj-b3d27e1dc3"
+    ]
+  },
+  {
+    "n": 9579,
+    "title": "Southwest Kansas Task Force to strengthen federal prosecutions in rural Kansas",
+    "url": "https://www.justice.gov/usao-ks/pr/southwest-kansas-task-force-strengthen-federal-prosecutions-rural-kansas",
+    "published_at": "2026-11-10T12:00:00+00:00",
+    "official_issuer": "Department of Justice",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "us-doj-b3d27e1dc3"
+    ]
+  },
+  {
+    "n": 9580,
+    "title": "New York Man Charged In Multimillion-Dollar Real Estate Fraud Scheme",
+    "url": "https://www.justice.gov/usao-sdny/pr/new-york-man-charged-multimillion-dollar-real-estate-fraud-scheme",
+    "published_at": "2026-11-10T12:00:00+00:00",
+    "official_issuer": "Department of Justice",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "us-doj-b3d27e1dc3"
+    ]
+  },
+  {
+    "n": 9581,
+    "title": "Federal Jury Finds Man Guilty of All 16 Counts of Animal Crushing",
+    "url": "https://www.justice.gov/usao-mn/pr/federal-jury-finds-man-guilty-all-16-counts-animal-crushing",
+    "published_at": "2026-11-10T12:00:00+00:00",
+    "official_issuer": "Department of Justice",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "us-doj-b3d27e1dc3"
+    ]
+  },
+  {
+    "n": 9582,
+    "title": "Ex-Fayette County Legislator and Teacher Pleads Guilty to Child Pornography Crime",
+    "url": "https://www.justice.gov/usao-sdwv/pr/ex-fayette-county-legislator-and-teacher-pleads-guilty-child-pornography-crime",
+    "published_at": "2026-11-10T12:00:00+00:00",
+    "official_issuer": "Department of Justice",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "us-doj-b3d27e1dc3"
+    ]
+  },
+  {
+    "n": 9583,
+    "title": "North Smithfield Man Charged with Multiple Child Exploitation Offenses Involving Surreptitious Filming of a Minor and Creating AI-Generated Child Sexual Abuse Material with Images of Minors Known to Him",
+    "url": "https://www.justice.gov/usao-ri/pr/north-smithfield-man-charged-multiple-child-exploitation-offenses-involving",
+    "published_at": "2026-11-10T12:00:00+00:00",
+    "official_issuer": "Department of Justice",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "us-doj-b3d27e1dc3"
+    ]
+  },
+  {
+    "n": 9584,
+    "title": "First defendant in Homeland Security Taskforce Investigation of gun and drug trafficking organization sentenced to five years in prison",
+    "url": "https://www.justice.gov/usao-wdwa/pr/first-defendant-homeland-security-taskforce-investigation-gun-and-drug-trafficking",
+    "published_at": "2026-11-10T12:00:00+00:00",
+    "official_issuer": "Department of Justice",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "us-doj-b3d27e1dc3"
+    ]
+  },
+  {
+    "n": 9585,
+    "title": "Fugitive South L.A. Gang Member Living in Mexico and Cartel Plaza Boss Charged with Using Political Ties to Help Canadian Olympian Traffic Drugs and Evade Capture",
+    "url": "https://www.justice.gov/usao-cdca/pr/fugitive-south-la-gang-member-living-mexico-and-cartel-plaza-boss-charged-using",
+    "published_at": "2026-11-10T12:00:00+00:00",
+    "official_issuer": "Department of Justice",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "us-doj-b3d27e1dc3"
+    ]
+  },
+  {
+    "n": 9586,
+    "title": "Social Adult Day Care Program Director Pleads Guilty to $127M Medicare and Medicaid Fraud Scheme",
+    "url": "https://www.justice.gov/opa/pr/social-adult-day-care-program-director-pleads-guilty-127m-medicare-and-medicaid-fraud-scheme",
+    "published_at": "2026-11-10T12:00:00+00:00",
     "official_issuer": "Department of Justice",
     "document_type": "official_announcement",
     "document_stage": "requires_semantic_review",
@@ -13,10 +1825,10 @@
     ]
   },
   {
-    "n": 9413,
-    "title": "New Orleans Man Indicted for Violating Federal Controlled Substances Act",
-    "url": "https://www.justice.gov/usao-edla/pr/new-orleans-man-indicted-violating-federal-controlled-substances-act-2",
-    "published_at": "2026-11-09T12:00:00+00:00",
+    "n": 9587,
+    "title": "Baltimore Man With Active Arrest Warrant Pleads Guilty to Federal Charges After Going Live On Social Media",
+    "url": "https://www.justice.gov/usao-md/pr/baltimore-man-active-arrest-warrant-pleads-guilty-federal-charges-after-going-live",
+    "published_at": "2026-11-10T12:00:00+00:00",
     "official_issuer": "Department of Justice",
     "document_type": "official_announcement",
     "document_stage": "requires_semantic_review",
@@ -25,10 +1837,10 @@
     ]
   },
   {
-    "n": 9414,
-    "title": "Rice Lake Man Sentenced to 5 Years for Distributing Child Pornography",
-    "url": "https://www.justice.gov/usao-wdwi/pr/rice-lake-man-sentenced-5-years-distributing-child-pornography",
-    "published_at": "2026-11-09T12:00:00+00:00",
+    "n": 9588,
+    "title": "St. Louis Man Admits Transporting Minor Across State Lines for Sex",
+    "url": "https://www.justice.gov/usao-edmo/pr/st-louis-man-admits-transporting-minor-across-state-lines-sex",
+    "published_at": "2026-11-10T12:00:00+00:00",
     "official_issuer": "Department of Justice",
     "document_type": "official_announcement",
     "document_stage": "requires_semantic_review",
@@ -37,10 +1849,10 @@
     ]
   },
   {
-    "n": 9415,
-    "title": "Geneva man pleads guilty to possession of child pornography",
-    "url": "https://www.justice.gov/usao-wdny/pr/geneva-man-pleads-guilty-possession-child-pornography",
-    "published_at": "2026-11-09T12:00:00+00:00",
+    "n": 9589,
+    "title": "ALABAMA MAN PLEADS GUILTY TO THEFT FROM AN INTERSTATE SHIPMENT AND POSSESSION OF GOODS STOLEN FROM AN INTERSTATE SHIPMENT",
+    "url": "https://www.justice.gov/usao-mdla/pr/alabama-man-pleads-guilty-theft-interstate-shipment-and-possession-goods-stolen",
+    "published_at": "2026-11-10T12:00:00+00:00",
     "official_issuer": "Department of Justice",
     "document_type": "official_announcement",
     "document_stage": "requires_semantic_review",
@@ -49,10 +1861,10 @@
     ]
   },
   {
-    "n": 9416,
-    "title": "Las Vegas Man Sentenced to Seven Years in Prison for Trafficking Methamphetamine and Fentanyl, and Money Laundering",
-    "url": "https://www.justice.gov/usao-nv/pr/las-vegas-man-sentenced-seven-years-prison-trafficking-methamphetamine-and-fentanyl-and",
-    "published_at": "2026-11-09T12:00:00+00:00",
+    "n": 9590,
+    "title": "Richmond couple sentenced for overbilling Medicaid by nearly $1M",
+    "url": "https://www.justice.gov/usao-edva/pr/richmond-couple-sentenced-overbilling-medicaid-nearly-1m",
+    "published_at": "2026-11-10T12:00:00+00:00",
     "official_issuer": "Department of Justice",
     "document_type": "official_announcement",
     "document_stage": "requires_semantic_review",
@@ -61,10 +1873,10 @@
     ]
   },
   {
-    "n": 9417,
-    "title": "Buffalo man sentenced for gun possession",
-    "url": "https://www.justice.gov/usao-wdny/pr/buffalo-man-sentenced-gun-possession",
-    "published_at": "2026-11-09T12:00:00+00:00",
+    "n": 9591,
+    "title": "Massachusetts Man Pleads Guilty to Trafficking Fentanyl",
+    "url": "https://www.justice.gov/usao-me/pr/massachusetts-man-pleads-guilty-trafficking-fentanyl",
+    "published_at": "2026-11-10T12:00:00+00:00",
     "official_issuer": "Department of Justice",
     "document_type": "official_announcement",
     "document_stage": "requires_semantic_review",
@@ -73,10 +1885,10 @@
     ]
   },
   {
-    "n": 9418,
-    "title": "Conesus man pleads guilty to production of child pornography",
-    "url": "https://www.justice.gov/usao-wdny/pr/conesus-man-pleads-guilty-production-child-pornography",
-    "published_at": "2026-11-09T12:00:00+00:00",
+    "n": 9592,
+    "title": "Houston Man Sentenced for Exploiting Eight Children in Maryland",
+    "url": "https://www.justice.gov/usao-md/pr/houston-man-sentenced-exploiting-eight-children-maryland",
+    "published_at": "2026-11-10T12:00:00+00:00",
     "official_issuer": "Department of Justice",
     "document_type": "official_announcement",
     "document_stage": "requires_semantic_review",
@@ -85,10 +1897,10 @@
     ]
   },
   {
-    "n": 9419,
-    "title": "Homeland Security Task Force Investigation Leads to Indictment of Multiple Defendants in Fentanyl-Related Death Case",
-    "url": "https://www.justice.gov/usao-ut/pr/homeland-security-task-force-investigation-leads-indictment-multiple-defendants-fentanyl",
-    "published_at": "2026-11-09T12:00:00+00:00",
+    "n": 9593,
+    "title": "2 Billings men sentenced to prison for trafficking meth",
+    "url": "https://www.justice.gov/usao-mt/pr/2-billings-men-sentenced-prison-trafficking-meth",
+    "published_at": "2026-11-10T12:00:00+00:00",
     "official_issuer": "Department of Justice",
     "document_type": "official_announcement",
     "document_stage": "requires_semantic_review",
@@ -97,10 +1909,10 @@
     ]
   },
   {
-    "n": 9420,
-    "title": "Merced County teacher indicted for distribution of child sexual abuse material (CSAM)",
-    "url": "https://www.justice.gov/usao-edca/pr/merced-county-teacher-indicted-distribution-child-sexual-abuse-material-csam",
-    "published_at": "2026-11-09T12:00:00+00:00",
+    "n": 9594,
+    "title": "Leake County Man Found Guilty of Attempted Coercion of Minor",
+    "url": "https://www.justice.gov/usao-sdms/pr/leake-county-man-found-guilty-attempted-coercion-minor-0",
+    "published_at": "2026-11-10T12:00:00+00:00",
     "official_issuer": "Department of Justice",
     "document_type": "official_announcement",
     "document_stage": "requires_semantic_review",
@@ -109,10 +1921,10 @@
     ]
   },
   {
-    "n": 9421,
-    "title": "North Carolina Man Indicted for Mailing Antisemitic Threats to Jewish Organizations and Secret Service Protectees in South Florida",
-    "url": "https://www.justice.gov/usao-sdfl/pr/north-carolina-man-indicted-mailing-antisemitic-threats-jewish-organizations-and",
-    "published_at": "2026-11-09T12:00:00+00:00",
+    "n": 9595,
+    "title": "Felon Caught with a Firearm in St. Charles Sentenced to 15 Years in Prison",
+    "url": "https://www.justice.gov/usao-edmo/pr/felon-caught-firearm-st-charles-sentenced-15-years-prison",
+    "published_at": "2026-11-10T12:00:00+00:00",
     "official_issuer": "Department of Justice",
     "document_type": "official_announcement",
     "document_stage": "requires_semantic_review",
@@ -121,10 +1933,22 @@
     ]
   },
   {
-    "n": 9422,
-    "title": "Justice Department Sues the City of Glendale, California for Violating Citizens’ Second Amendment Rights Through Unreasonable Fees and Processes for Legal Firearm Permitting",
-    "url": "https://www.justice.gov/opa/pr/justice-department-sues-city-glendale-california-violating-citizens-second-amendment-rights",
-    "published_at": "2026-11-09T12:00:00+00:00",
+    "n": 9596,
+    "title": "Leake County Man Pleads Guilty to Sexual Abuse of a Minor",
+    "url": "https://www.justice.gov/usao-sdms/pr/leake-county-man-pleads-guilty-sexual-abuse-minor",
+    "published_at": "2026-11-10T12:00:00+00:00",
+    "official_issuer": "Department of Justice",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "us-doj-b3d27e1dc3"
+    ]
+  },
+  {
+    "n": 9597,
+    "title": "Illinois Tax Preparer Sentenced for Stealing More than $11M from Taxpayers in COVID-19 Assistance Fraud Scheme",
+    "url": "https://www.justice.gov/opa/pr/illinois-tax-preparer-sentenced-stealing-more-11m-taxpayers-covid-19-assistance-fraud-scheme",
+    "published_at": "2026-11-10T12:00:00+00:00",
     "official_issuer": "Department of Justice",
     "document_type": "official_announcement",
     "document_stage": "requires_semantic_review",
@@ -134,10 +1958,84 @@
     ]
   },
   {
-    "n": 9423,
-    "title": "Newly Added Guidance Documents | Drugs",
-    "url": "http://www.fda.gov/drugs/guidances-drugs/newly-added-guidance-documents-drugs",
-    "published_at": "2026-11-09T23:03:07+00:00",
+    "n": 9598,
+    "title": "Three Iranian-Backed Operatives Indicted for Their Roles in Nearly 20 Terrorist Attacks and Attempted Attacks Across Europe and the United States",
+    "url": "https://www.justice.gov/opa/pr/three-iranian-backed-operatives-indicted-their-roles-nearly-20-terrorist-attacks-and",
+    "published_at": "2026-11-10T12:00:00+00:00",
+    "official_issuer": "Department of Justice",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "us-doj-b3d27e1dc3",
+      "us-doj-e05071794d"
+    ]
+  },
+  {
+    "n": 9599,
+    "title": "Multi-State Homeland Security Task Force Investigation Leads to 36 Indicted for Drug Trafficking and Money Laundering",
+    "url": "https://www.justice.gov/opa/pr/multi-state-homeland-security-task-force-investigation-leads-36-indicted-drug-trafficking",
+    "published_at": "2026-11-10T12:00:00+00:00",
+    "official_issuer": "Department of Justice",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "us-doj-b3d27e1dc3",
+      "us-doj-e05071794d"
+    ]
+  },
+  {
+    "n": 9600,
+    "title": "Massachusetts Man Indicted for Conspiring to Distribute 20 Kilograms of Cocaine",
+    "url": "https://www.justice.gov/usao-ma/pr/massachusetts-man-indicted-conspiring-distribute-20-kilograms-cocaine",
+    "published_at": "2026-11-10T12:00:00+00:00",
+    "official_issuer": "Department of Justice",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "us-doj-b3d27e1dc3"
+    ]
+  },
+  {
+    "n": 9601,
+    "title": "Columbian National Pleads Guilty to Distributing Fentanyl Pills",
+    "url": "https://www.justice.gov/usao-nv/pr/columbian-national-pleads-guilty-distributing-fentanyl-pills",
+    "published_at": "2026-11-10T12:00:00+00:00",
+    "official_issuer": "Department of Justice",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "us-doj-b3d27e1dc3"
+    ]
+  },
+  {
+    "n": 9602,
+    "title": "Convicted felon indicted for illegally possessing firearm during downtown shooting, high-speed chase",
+    "url": "https://www.justice.gov/usao-sdoh/pr/convicted-felon-indicted-illegally-possessing-firearm-during-downtown-shooting-high",
+    "published_at": "2026-11-10T12:00:00+00:00",
+    "official_issuer": "Department of Justice",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "us-doj-b3d27e1dc3"
+    ]
+  },
+  {
+    "n": 9603,
+    "title": "Arizona Federal Court Denies Request to Halt Hermosa Critical Minerals Project",
+    "url": "https://www.justice.gov/opa/pr/arizona-federal-court-denies-request-halt-hermosa-critical-minerals-project",
+    "published_at": "2026-11-10T12:00:00+00:00",
+    "official_issuer": "Department of Justice — RSS Feed",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "us-doj-e05071794d"
+    ]
+  },
+  {
+    "n": 9604,
+    "title": "Oncology (Cancer)/Hematologic Malignancies Approval Notifications",
+    "url": "http://www.fda.gov/drugs/cancer-approvals/oncology-cancerhematologic-malignancies-approval-notifications",
+    "published_at": "2026-11-10T17:34:44+00:00",
     "official_issuer": "Food and Drug Administration — What's New: Drugs",
     "document_type": "official_announcement",
     "document_stage": "requires_semantic_review",
@@ -146,10 +2044,382 @@
     ]
   },
   {
-    "n": 9424,
-    "title": "Media advisory - Economic and Financial Affairs Council (Budget) of 10 November 2026",
-    "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/11/09/media-advisory-economic-and-financial-affairs-council-budget-of-10-november-2026/",
-    "published_at": "2026-11-09T20:35:00+00:00",
+    "n": 9605,
+    "title": "FDA approves pimicotinib for symptomatic tenosynovial giant cell tumor",
+    "url": "http://www.fda.gov/drugs/cancer-approvals/fda-approves-pimicotinib-symptomatic-tenosynovial-giant-cell-tumor",
+    "published_at": "2026-11-10T17:32:27+00:00",
+    "official_issuer": "Food and Drug Administration — What's New: Drugs",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "us-fda-5696b24295"
+    ]
+  },
+  {
+    "n": 9606,
+    "title": "FDA grants accelerated approval to elranatamab-bcmm for multiple myeloma",
+    "url": "http://www.fda.gov/drugs/cancer-approvals/fda-grants-accelerated-approval-elranatamab-bcmm-multiple-myeloma",
+    "published_at": "2026-11-10T17:19:20+00:00",
+    "official_issuer": "Food and Drug Administration — What's New: Drugs",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "us-fda-5696b24295"
+    ]
+  },
+  {
+    "n": 9607,
+    "title": "FDA grants accelerated approval to dostarlimab-gxly for dMMR advanced solid tumors",
+    "url": "http://www.fda.gov/drugs/cancer-approvals/fda-grants-accelerated-approval-dostarlimab-gxly-dmmr-advanced-solid-tumors",
+    "published_at": "2026-11-10T17:17:35+00:00",
+    "official_issuer": "Food and Drug Administration — What's New: Drugs",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "us-fda-5696b24295"
+    ]
+  },
+  {
+    "n": 9608,
+    "title": "FDA grants accelerated approval to Darzalex Faspro for newly diagnosed light chain amyloidosis",
+    "url": "http://www.fda.gov/drugs/cancer-approvals/fda-grants-accelerated-approval-darzalex-faspro-newly-diagnosed-light-chain-amyloidosis",
+    "published_at": "2026-11-10T17:15:50+00:00",
+    "official_issuer": "Food and Drug Administration — What's New: Drugs",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "us-fda-5696b24295"
+    ]
+  },
+  {
+    "n": 9609,
+    "title": "FDA grants accelerated approval to asciminib for newly diagnosed chronic myeloid leukemia",
+    "url": "http://www.fda.gov/drugs/cancer-approvals/fda-grants-accelerated-approval-asciminib-newly-diagnosed-chronic-myeloid-leukemia",
+    "published_at": "2026-11-10T17:14:01+00:00",
+    "official_issuer": "Food and Drug Administration — What's New: Drugs",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "us-fda-5696b24295"
+    ]
+  },
+  {
+    "n": 9610,
+    "title": "FDA grants accelerated approval to afamitresgene autoleucel for unresectable or metastatic synovial sarcoma",
+    "url": "http://www.fda.gov/drugs/cancer-approvals/fda-grants-accelerated-approval-afamitresgene-autoleucel-unresectable-or-metastatic-synovial-sarcoma",
+    "published_at": "2026-11-10T17:09:55+00:00",
+    "official_issuer": "Food and Drug Administration — What's New: Drugs",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "us-fda-5696b24295"
+    ]
+  },
+  {
+    "n": 9611,
+    "title": "FDA grants accelerated approval to adagrasib with cetuximab for KRAS G12C-mutated colorectal cancer",
+    "url": "http://www.fda.gov/drugs/cancer-approvals/fda-grants-accelerated-approval-adagrasib-cetuximab-kras-g12c-mutated-colorectal-cancer",
+    "published_at": "2026-11-10T17:07:58+00:00",
+    "official_issuer": "Food and Drug Administration — What's New: Drugs",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "us-fda-5696b24295"
+    ]
+  },
+  {
+    "n": 9612,
+    "title": "FDA expands pediatric indication for entrectinib and approves new pellet formulation",
+    "url": "http://www.fda.gov/drugs/cancer-approvals/fda-expands-pediatric-indication-entrectinib-and-approves-new-pellet-formulation",
+    "published_at": "2026-11-10T17:04:45+00:00",
+    "official_issuer": "Food and Drug Administration — What's New: Drugs",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "us-fda-5696b24295"
+    ]
+  },
+  {
+    "n": 9613,
+    "title": "FDA expands endometrial cancer indication for dostarlimab-gxly with chemotherapy",
+    "url": "http://www.fda.gov/drugs/cancer-approvals/fda-expands-endometrial-cancer-indication-dostarlimab-gxly-chemotherapy",
+    "published_at": "2026-11-10T17:01:01+00:00",
+    "official_issuer": "Food and Drug Administration — What's New: Drugs",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "us-fda-5696b24295"
+    ]
+  },
+  {
+    "n": 9614,
+    "title": "FDA expands early breast cancer indication for abemaciclib with endocrine therapy",
+    "url": "http://www.fda.gov/drugs/cancer-approvals/fda-expands-early-breast-cancer-indication-abemaciclib-endocrine-therapy",
+    "published_at": "2026-11-10T16:58:01+00:00",
+    "official_issuer": "Food and Drug Administration — What's New: Drugs",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "us-fda-5696b24295"
+    ]
+  },
+  {
+    "n": 9615,
+    "title": "FDA approves zanubrutinib for chronic lymphocytic leukemia or small lymphocytic lymphoma",
+    "url": "http://www.fda.gov/drugs/cancer-approvals/fda-approves-zanubrutinib-chronic-lymphocytic-leukemia-or-small-lymphocytic-lymphoma",
+    "published_at": "2026-11-10T16:55:58+00:00",
+    "official_issuer": "Food and Drug Administration — What's New: Drugs",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "us-fda-5696b24295"
+    ]
+  },
+  {
+    "n": 9616,
+    "title": "Nanjing Hanxin Pharmaceutical Technology Co. Ltd. - 734913 - 11/03/2026",
+    "url": "http://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/nanjing-hanxin-pharmaceutical-technology-co-ltd-734913-11032026",
+    "published_at": "2026-11-10T14:20:07+00:00",
+    "official_issuer": "Food and Drug Administration — What's New: Drugs",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "us-fda-5696b24295"
+    ]
+  },
+  {
+    "n": 9617,
+    "title": "Tianjin Healthcare Medical Technology Co., Ltd. - 736415 - 10/29/2026",
+    "url": "http://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/tianjin-healthcare-medical-technology-co-ltd-736415-10292026",
+    "published_at": "2026-11-10T14:20:07+00:00",
+    "official_issuer": "Food and Drug Administration — What's New: Drugs",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "us-fda-5696b24295"
+    ]
+  },
+  {
+    "n": 9618,
+    "title": "Chongqing Qiancan Technology Co., Ltd. - 736416 - 10/29/2026",
+    "url": "http://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/chongqing-qiancan-technology-co-ltd-736416-10292026",
+    "published_at": "2026-11-10T14:20:06+00:00",
+    "official_issuer": "Food and Drug Administration — What's New: Drugs",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "us-fda-5696b24295"
+    ]
+  },
+  {
+    "n": 9619,
+    "title": "USV Private Limited - 735938 - 11/02/2026",
+    "url": "http://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/usv-private-limited-735938-11022026",
+    "published_at": "2026-11-10T14:20:05+00:00",
+    "official_issuer": "Food and Drug Administration — What's New: Drugs",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "us-fda-5696b24295"
+    ]
+  },
+  {
+    "n": 9620,
+    "title": "CBER Listening Meeting: Patient and Care Partner Perspectives on Early Enrollment into Gene Therapy Clinical Trials for Rare Diseases",
+    "url": "http://www.fda.gov/news-events/fda-meetings-conferences-and-workshops/cber-listening-meeting-patient-and-care-partner-perspectives-early-enrollment-gene-therapy-clinical",
+    "published_at": "2026-11-10T18:06:47+00:00",
+    "official_issuer": "Food and Drug Administration — What's New: Vaccines, Blood and Biologics",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "us-fda-03f7703006"
+    ]
+  },
+  {
+    "n": 9621,
+    "title": "Early-Phase IND Protocol Recommendations for Solid Tumors; Draft Guidance for Industry",
+    "url": "http://www.fda.gov/regulatory-information/search-fda-guidance-documents/early-phase-ind-protocol-recommendations-solid-tumors-draft-guidance-industry",
+    "published_at": "2026-11-10T13:50:16+00:00",
+    "official_issuer": "Food and Drug Administration — What's New: Vaccines, Blood and Biologics",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "us-fda-03f7703006"
+    ]
+  },
+  {
+    "n": 9622,
+    "title": "CBER 2026 Orphan Approvals (new BLAs)",
+    "url": "http://www.fda.gov/vaccines-blood-biologics/cber-2026-orphan-approvals-new-blas",
+    "published_at": "2026-11-10T10:40:02+00:00",
+    "official_issuer": "Food and Drug Administration — What's New: Vaccines, Blood and Biologics",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "us-fda-03f7703006"
+    ]
+  },
+  {
+    "n": 9637,
+    "title": "US Department of Labor announces plans to update employment resources for service members transitioning to civilian life",
+    "url": "http://www.dol.gov/newsroom/releases/vets/vets20261110",
+    "published_at": "2026-11-10T12:00:00+00:00",
+    "official_issuer": "Department of Labor",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "us-dol-99f477805a"
+    ]
+  },
+  {
+    "n": 9638,
+    "title": "US Department of Labor continues to implement President Trump’s deregulatory agenda, announces 5 final rules related to mine safety, health",
+    "url": "http://www.dol.gov/newsroom/releases/msha/msha20261110-0",
+    "published_at": "2026-11-10T12:00:00+00:00",
+    "official_issuer": "Department of Labor",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "us-dol-99f477805a"
+    ]
+  },
+  {
+    "n": 9639,
+    "title": "US Department of Labor unveils updated proposed rule designed to protect miners’ health from silica dust exposures",
+    "url": "http://www.dol.gov/newsroom/releases/msha/msha20261110",
+    "published_at": "2026-11-10T12:00:00+00:00",
+    "official_issuer": "Department of Labor",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "us-dol-99f477805a"
+    ]
+  },
+  {
+    "n": 9640,
+    "title": "Commissioner Šuica delivers a keynote speech at the European Parliament event “Beyond promises: Building a Digital Future that Works for Children”",
+    "url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2406",
+    "published_at": "2026-11-10T16:23:53+00:00",
+    "official_issuer": "European Commission press and decisions",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "eu-commission-07d4f58ccf"
+    ]
+  },
+  {
+    "n": 9641,
+    "title": "Opening remarks by Commissioner Kubilius at the second board meeting of the EU-Ukraine drone alliance",
+    "url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2398",
+    "published_at": "2026-11-10T14:46:44+00:00",
+    "official_issuer": "European Commission press and decisions",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "eu-commission-07d4f58ccf"
+    ]
+  },
+  {
+    "n": 9642,
+    "title": "Commissioner Šuica addresses the Senior Officials Meeting on the launch of the second iteration of the Action Plan of the Pact of the Mediterranean",
+    "url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2395",
+    "published_at": "2026-11-10T14:03:52+00:00",
+    "official_issuer": "European Commission press and decisions",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "eu-commission-07d4f58ccf"
+    ]
+  },
+  {
+    "n": 9643,
+    "title": "Daily News 10 / 11 / 2026",
+    "url": "https://ec.europa.eu/commission/presscorner/detail/en/mex_26_2394",
+    "published_at": "2026-11-10T10:40:27+00:00",
+    "official_issuer": "European Commission press and decisions",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "eu-commission-07d4f58ccf"
+    ]
+  },
+  {
+    "n": 9644,
+    "title": "Statement by President von der Leyen with Bulgarian Prime Minister Radev",
+    "url": "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2392",
+    "published_at": "2026-11-10T09:22:38+00:00",
+    "official_issuer": "European Commission press and decisions",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "eu-commission-07d4f58ccf"
+    ]
+  },
+  {
+    "n": 9645,
+    "title": "Updated Action Plan brings a total of 30 actions in one year under the Pact for the Mediterranean",
+    "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2391",
+    "published_at": "2026-11-10T09:16:42+00:00",
+    "official_issuer": "European Commission press and decisions",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "eu-commission-07d4f58ccf"
+    ]
+  },
+  {
+    "n": 9646,
+    "title": "Statement on today's meeting in Abu Dhabi between the EU, France, Germany, Italy, United Kingdom, Ukraine, United States and NATO",
+    "url": "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2390",
+    "published_at": "2026-11-10T09:12:37+00:00",
+    "official_issuer": "European Commission press and decisions",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "eu-commission-07d4f58ccf"
+    ]
+  },
+  {
+    "n": 9647,
+    "title": "Commission greenlights Luxembourg's final payment request for €59 million under NextGenerationEU",
+    "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2388",
+    "published_at": "2026-11-10T09:07:46+00:00",
+    "official_issuer": "European Commission press and decisions",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "eu-commission-07d4f58ccf"
+    ]
+  },
+  {
+    "n": 9648,
+    "title": "Commission greenlights Estonia's final payment request for €190.6 million under NextGenerationEU",
+    "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2387",
+    "published_at": "2026-11-10T09:07:29+00:00",
+    "official_issuer": "European Commission press and decisions",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "eu-commission-07d4f58ccf"
+    ]
+  },
+  {
+    "n": 9649,
+    "title": "Commission approves €2 billion Belgian State aid to support offshore wind energy",
+    "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2373",
+    "published_at": "2026-11-09T23:00:00+00:00",
+    "official_issuer": "European Commission press and decisions",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "eu-commission-07d4f58ccf"
+    ]
+  },
+  {
+    "n": 9650,
+    "title": "Statement by the High Representative on behalf of the EU on the alignment of certain countries concerning restrictive measures against the proliferation and use of chemical weapons",
+    "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/11/10/statement-by-the-high-representative-on-behalf-of-the-eu-on-the-alignment-of-certain-countries-concerning-restrictive-measures-against-the-proliferation-and-use-of-chemical-weapons/",
+    "published_at": "2026-11-10T13:56:00+00:00",
     "official_issuer": "Council of the European Union",
     "document_type": "official_announcement",
     "document_stage": "requires_semantic_review",
@@ -158,10 +2428,10 @@
     ]
   },
   {
-    "n": 9425,
-    "title": "Ukraine: Council extends EU Military Assistance Mission mandate for two years",
-    "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/11/09/ukraine-council-extends-eu-military-assistance-mission-mandate-for-two-years/",
-    "published_at": "2026-11-09T17:01:00+00:00",
+    "n": 9651,
+    "title": "Statement by the High Representative on behalf of the EU on the alignment of certain countries concerning restrictive measures against the Democratic People’s Republic of Korea",
+    "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/11/10/statement-by-the-high-representative-on-behalf-of-the-eu-on-the-alignment-of-certain-countries-concerning-restrictive-measures-against-the-democratic-people-s-republic-of-korea/",
+    "published_at": "2026-11-10T13:49:00+00:00",
     "official_issuer": "Council of the European Union",
     "document_type": "official_announcement",
     "document_stage": "requires_semantic_review",
@@ -170,10 +2440,10 @@
     ]
   },
   {
-    "n": 9426,
-    "title": "Humanitarian aid: Council approves conclusions on strengthening EU action amid global challenges",
-    "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/11/09/humanitarian-aid-council-approves-conclusions-on-strengthening-eu-action-amid-global-challenges/",
-    "published_at": "2026-11-09T15:20:00+00:00",
+    "n": 9652,
+    "title": "Statement by the High Representative on behalf of the EU on the alignment of certain countries concerning restrictive measures against the leadership of the Transnistrian region of the Republic of Moldova",
+    "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/11/10/statement-by-the-high-representative-on-behalf-of-the-eu-on-the-alignment-of-certain-countries-concerning-restrictive-measures-against-the-leadership-of-the-transnistrian-region-of-the-republic-of-moldova/",
+    "published_at": "2026-11-10T13:43:00+00:00",
     "official_issuer": "Council of the European Union",
     "document_type": "official_announcement",
     "document_stage": "requires_semantic_review",
@@ -182,10 +2452,10 @@
     ]
   },
   {
-    "n": 9427,
-    "title": "Remarks by Kyriakos Pierrakakis following the Eurogroup meeting of 9 November 2026",
-    "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/11/09/remarks-by-kyriakos-pierrakakis-following-the-eurogroup-meeting-of-9-november-2026/",
-    "published_at": "2026-11-09T14:40:00+00:00",
+    "n": 9653,
+    "title": "Statement by the High Representative on behalf of the EU on the alignment of certain countries concerning restrictive measures against ISIL (Da’esh) and Al-Qaeda and persons, groups, undertakings and entities associated with them",
+    "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/11/10/statement-by-the-high-representative-on-behalf-of-the-eu-on-the-alignment-of-certain-countries-concerning-restrictive-measures-against-isil-da-esh-and-al-qaeda-and-persons-groups-undertakings-and-entities-associated-with-them/",
+    "published_at": "2026-11-10T13:35:00+00:00",
     "official_issuer": "Council of the European Union",
     "document_type": "official_announcement",
     "document_stage": "requires_semantic_review",
@@ -194,10 +2464,10 @@
     ]
   },
   {
-    "n": 9428,
-    "title": "Taxation: Council approves further VAT simplification rules for online sales",
-    "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/11/09/taxation-council-approves-further-vat-simplification-rules-for-online-sales/",
-    "published_at": "2026-11-09T14:32:00+00:00",
+    "n": 9654,
+    "title": "Statement on today's meeting in Abu Dhabi between the EU, France, Germany, Italy, United Kingdom, Ukraine, United States and NATO",
+    "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/11/10/statement-on-today-s-meeting-in-abu-dhabi-between-the-eu-france-germany-italy-united-kingdom-ukraine-united-states-and-nato/",
+    "published_at": "2026-11-10T09:22:00+00:00",
     "official_issuer": "Council of the European Union",
     "document_type": "official_announcement",
     "document_stage": "requires_semantic_review",
@@ -206,51 +2476,291 @@
     ]
   },
   {
-    "n": 9429,
-    "title": "Press briefing - Meeting of the European Political Community of 12 November 2026 and the Informal meeting of Heads of State or Government of 13 November 2026",
-    "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/11/09/press-briefing-meeting-of-the-european-political-community-of-12-november-2026-and-the-informal-meeting-of-heads-of-state-or-government-of-13-november-2026/",
-    "published_at": "2026-11-09T12:00:00+00:00",
-    "official_issuer": "Council of the European Union",
+    "n": 9655,
+    "title": "Philip R. Lane: The science and practice of monetary policy communication: the ECB experience",
+    "url": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261110_1~9725b7aa07.en.html",
+    "published_at": "2026-11-10T16:45:00+00:00",
+    "official_issuer": "European Central Bank",
     "document_type": "official_announcement",
     "document_stage": "requires_semantic_review",
     "source_ids": [
-      "eu-council-9d9e9444da"
+      "eu-ecb-991c113079"
     ]
   },
   {
-    "n": 9430,
-    "title": "Principal Figures of Financial Institutions (Oct.)",
-    "url": "http://www.boj.or.jp/en/statistics/dl/depo/kashi/kasi2610.pdf",
-    "published_at": "2026-11-09T23:50:00+00:00",
-    "official_issuer": "Bank of Japan",
+    "n": 9656,
+    "title": "Piero Cipollone: Cash and the digital euro: two sides of the same coin",
+    "url": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261110~9422461bad.en.html",
+    "published_at": "2026-11-10T14:00:00+00:00",
+    "official_issuer": "European Central Bank",
     "document_type": "official_announcement",
     "document_stage": "requires_semantic_review",
     "source_ids": [
-      "jp-boj-d488538690"
+      "eu-ecb-991c113079"
     ]
   },
   {
-    "n": 9431,
-    "title": "Summary of Opinions at the Monetary Policy Meeting on October 29 and 30, 2026",
-    "url": "http://www.boj.or.jp/en/mopo/mpmsche_minu/opinion_2026/opi261030.pdf",
-    "published_at": "2026-11-09T23:50:00+00:00",
-    "official_issuer": "Bank of Japan",
+    "n": 9657,
+    "title": "Exchange of letters between the Governor and the Chancellor on the Asset Purchase Facility - November 2026",
+    "url": "https://www.bankofengland.co.uk/letter/2026/asset-purchase-facility-november-2026",
+    "published_at": "2026-11-10T12:00:00+00:00",
+    "official_issuer": "Bank of England",
     "document_type": "official_announcement",
     "document_stage": "requires_semantic_review",
     "source_ids": [
-      "jp-boj-d488538690"
+      "uk-boe-4feb372611"
     ]
   },
   {
-    "n": 9432,
-    "title": "FX Liquidity providing operation – Announcement | Tender-ID: 20260100 | Reverse transaction | USD",
-    "url": "https://www.bundesbank.de/en/tasks/monetary-policy/open-market-operations/outstanding-open-market-operations/fx-liquidity-providing-operation-announcement-1014704",
-    "published_at": "2026-11-10T08:15:30+00:00",
+    "n": 9659,
+    "title": "Summary of Governing Council deliberations: Fixed announcement date of October 28, 2026",
+    "url": "https://www.bankofcanada.ca/2026/11/summary-of-governing-council-deliberations-fixed-announcement-date-of-october-28-2026/",
+    "published_at": "2026-11-10T13:30:18+00:00",
+    "official_issuer": "Bank of Canada — Summary of deliberations",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "ca-boc-49364b93d8"
+    ]
+  },
+  {
+    "n": 9660,
+    "title": "Instant Payments, Fraud, and Optimal Consumer Protection",
+    "url": "https://www.bankofcanada.ca/2026/11/staff-working-paper-2026-41/",
+    "published_at": "2026-11-09T12:13:22+00:00",
+    "official_issuer": "Bank of Canada — Research",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "ca-boc-a5cb9e38c1"
+    ]
+  },
+  {
+    "n": 9662,
+    "title": "2026-11-10 - Antoine Martin: The Swiss National Bank, its monetary policy and the Swiss economy",
+    "url": "https://www.snb.ch/en/publications/communication/speeches/2026/ref_20261110_anmar",
+    "published_at": "2026-11-10T14:15:00+00:00",
+    "official_issuer": "Swiss National Bank",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "ch-snb-b0f42db828"
+    ]
+  },
+  {
+    "n": 9663,
+    "title": "Minutes of the monetary policy meeting on 3 November 2026",
+    "url": "https://www.riksbank.se/en-gb/press-and-published/notices-and-press-releases/press-releases/2026/minutes-of-the-monetary-policy-meeting-on-3-november-2026/",
+    "published_at": "2026-11-10T08:30:53+00:00",
+    "official_issuer": "Sveriges Riksbank",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "se-riksbank-8ea6f8481e"
+    ]
+  },
+  {
+    "n": 9664,
+    "title": "Invitation to bid – Reopening of two Federal bonds",
+    "url": "https://www.bundesbank.de/en/press/press-releases/federal-securities/invitation-to-bid-reopening-of-two-federal-bonds-964954",
+    "published_at": "2026-11-10T09:00:00+00:00",
+    "official_issuer": "Deutsche Bundesbank",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "de-bundesbank-027ac4024f"
+    ]
+  },
+  {
+    "n": 9665,
+    "title": "Announcement – Federal Treasury discount paper (Bubills)",
+    "url": "https://www.bundesbank.de/en/press/press-releases/federal-securities/announcement-federal-treasury-discount-paper-bubills--964946",
+    "published_at": "2026-11-10T08:30:00+00:00",
+    "official_issuer": "Deutsche Bundesbank",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "de-bundesbank-027ac4024f"
+    ]
+  },
+  {
+    "n": 9666,
+    "title": "Main refinancing operation – Allotment | Tender-ID: 20260099 | Reverse transaction",
+    "url": "https://www.bundesbank.de/en/tasks/monetary-policy/open-market-operations/outstanding-open-market-operations/main-refinancing-operation-allotment-1014580",
+    "published_at": "2026-11-10T10:31:07+00:00",
     "official_issuer": "Deutsche Bundesbank — Outstanding open market operations",
     "document_type": "official_announcement",
     "document_stage": "requires_semantic_review",
     "source_ids": [
       "de-bundesbank-e5b1c4a067"
+    ]
+  },
+  {
+    "n": 9667,
+    "title": "FX Liquidity providing operation – Allotment | Tender-ID: 20260100 | Reverse transaction | USD",
+    "url": "https://www.bundesbank.de/en/tasks/monetary-policy/open-market-operations/outstanding-open-market-operations/fx-liquidity-providing-operation-allotment-1014704",
+    "published_at": "2026-11-10T09:50:51+00:00",
+    "official_issuer": "Deutsche Bundesbank — Outstanding open market operations",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "de-bundesbank-e5b1c4a067"
+    ]
+  },
+  {
+    "n": 9668,
+    "title": "Europas Finanzsektor zwischen Geopolitik, technologischer Innovation und neuen Zahlungsformen | DigiFin26, Bitkom und Payment Banking",
+    "url": "https://www.bundesbank.de/de/presse/reden/europas-finanzsektor-zwischen-geopolitik-technologischer-innovation-und-neuen-zahlungsformen-964962",
+    "published_at": "2026-11-10T12:30:00+00:00",
+    "official_issuer": "Deutsche Bundesbank — Speeches, Interview and Contributions",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "de-bundesbank-617511c682"
+    ]
+  },
+  {
+    "n": 9669,
+    "title": "Appointments to BIS global payments standard-setting body and Consultative Council for the Americas",
+    "url": "https://www.bis.org/media-releases/20261110-appointments-bis-global-payments-standard-setting-body-and-consultative-council-americas",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Bank for International Settlements — View feed",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "io-bis-8d1fbea6ca"
+    ]
+  },
+  {
+    "n": 9670,
+    "title": "Welcome address - Fourth Women in Central Banking Workshop",
+    "url": "https://www.bis.org/speeches/20261110-welcome-address-fourth-women-central-banking-workshop",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Bank for International Settlements — View feed",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "io-bis-140216a5b6"
+    ]
+  },
+  {
+    "n": 9671,
+    "title": "Opening remarks - Monetary Policy Report (IPOM) press conference, third quarter of 2026",
+    "url": "https://www.bis.org/speeches/20261110-opening-remarks-monetary-policy-report-ipom-press-conference-third-quarter-2026",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Bank for International Settlements — View feed",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "io-bis-140216a5b6"
+    ]
+  },
+  {
+    "n": 9672,
+    "title": "Transmission and conduct of monetary policy in Switzerland",
+    "url": "https://www.bis.org/speeches/20261110-transmission-and-conduct-monetary-policy-switzerland",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Bank for International Settlements — View feed",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "io-bis-140216a5b6"
+    ]
+  },
+  {
+    "n": 9673,
+    "title": "Introductory remarks - Official Monetary and Financial Institutions Forum (OMFIF)",
+    "url": "https://www.bis.org/speeches/20261110-introductory-remarks-official-monetary-and-financial-institutions-forum-omfif",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Bank for International Settlements — View feed",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "io-bis-140216a5b6"
+    ]
+  },
+  {
+    "n": 9674,
+    "title": "We have kept the policy rate unchanged",
+    "url": "https://www.bis.org/speeches/20261110-we-have-kept-policy-rate-unchanged",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Bank for International Settlements — View feed",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "io-bis-140216a5b6"
+    ]
+  },
+  {
+    "n": 9675,
+    "title": "The future of FinTech",
+    "url": "https://www.bis.org/speeches/20261110-future-fintech",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Bank for International Settlements — View feed",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "io-bis-140216a5b6"
+    ]
+  },
+  {
+    "n": 9676,
+    "title": "What happens to the economy as “intelligence” gets cheaper?",
+    "url": "https://www.bis.org/speeches/20261110-what-happens-economy-as-intelligence-gets-cheaper",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Bank for International Settlements — View feed",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "io-bis-140216a5b6"
+    ]
+  },
+  {
+    "n": 9677,
+    "title": "The Danish pension system in a long-term perspective",
+    "url": "https://www.bis.org/speeches/20261110-danish-pension-system-long-term-perspective",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Bank for International Settlements — View feed",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "io-bis-140216a5b6"
+    ]
+  },
+  {
+    "n": 9678,
+    "title": "Trust, expectations and monetary policy",
+    "url": "https://www.bis.org/speeches/20261110-trust-expectations-and-monetary-policy",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Bank for International Settlements — View feed",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "io-bis-140216a5b6"
+    ]
+  },
+  {
+    "n": 9679,
+    "title": "Navigating stormy waters - reflections on monetary policy",
+    "url": "https://www.bis.org/speeches/20261110-navigating-stormy-waters-reflections-monetary-policy",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Bank for International Settlements — View feed",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "io-bis-140216a5b6"
+    ]
+  },
+  {
+    "n": 9680,
+    "title": "Message for the European Chamber of Commerce Philippines Luncheon Meeting",
+    "url": "https://www.bis.org/speeches/20261110-message-european-chamber-commerce-philippines-luncheon-meeting",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Bank for International Settlements — View feed",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "io-bis-140216a5b6"
     ]
   }
 ]
