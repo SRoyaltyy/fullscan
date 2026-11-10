@@ -1,0 +1,669 @@
+{
+  "date": "2026-11-10",
+  "horizons": {
+    "1d": {
+      "buy": [
+        {
+          "ticker": "MGNI",
+          "score": 0.9235470307118834
+        },
+        {
+          "ticker": "ETON",
+          "score": 0.8439676248633239
+        },
+        {
+          "ticker": "ZVRA",
+          "score": 0.8376141242664461
+        },
+        {
+          "ticker": "TMDX",
+          "score": 0.8636644762723429
+        },
+        {
+          "ticker": "WRBY",
+          "score": 0.862646231728154
+        },
+        {
+          "ticker": "RBLX",
+          "score": 0.7191844400847339
+        },
+        {
+          "ticker": "EVER",
+          "score": 0.7048521193402596
+        },
+        {
+          "ticker": "EVC",
+          "score": 0.8218954883922791
+        },
+        {
+          "ticker": "HNST",
+          "score": 0.830185802332142
+        },
+        {
+          "ticker": "COCO",
+          "score": 0.7521837294885718
+        },
+        {
+          "ticker": "XYZ",
+          "score": 0.5763501549535271
+        },
+        {
+          "ticker": "CELH",
+          "score": 0.7827684547710014
+        },
+        {
+          "ticker": "KD",
+          "score": 0.8021495466387734
+        },
+        {
+          "ticker": "VYX",
+          "score": 0.7789622156741081
+        },
+        {
+          "ticker": "MSFT",
+          "score": 0.22544474874262233
+        }
+      ],
+      "sell": [
+        {
+          "ticker": "FLUT",
+          "score": -0.41168152327787666
+        },
+        {
+          "ticker": "ECX",
+          "score": -0.4056848181639672
+        },
+        {
+          "ticker": "CGC",
+          "score": -0.36843763261852003
+        },
+        {
+          "ticker": "CNDT",
+          "score": -0.3621473596480284
+        },
+        {
+          "ticker": "TRIP",
+          "score": -0.34871305006886427
+        },
+        {
+          "ticker": "REAX",
+          "score": -0.33868621500359647
+        },
+        {
+          "ticker": "ZS",
+          "score": -0.33779205043605987
+        },
+        {
+          "ticker": "HTZ",
+          "score": -0.33571370549641016
+        },
+        {
+          "ticker": "NXRT",
+          "score": -0.334703919363243
+        },
+        {
+          "ticker": "KOS",
+          "score": -0.32577946319939227
+        },
+        {
+          "ticker": "ABR",
+          "score": -0.3250996769749578
+        },
+        {
+          "ticker": "PAA",
+          "score": -0.3229090790933832
+        },
+        {
+          "ticker": "JELD",
+          "score": -0.3206037445021246
+        },
+        {
+          "ticker": "BLND",
+          "score": -0.319975062908219
+        },
+        {
+          "ticker": "MNRO",
+          "score": -0.3090398958146889
+        }
+      ]
+    },
+    "3d": {
+      "buy": [
+        {
+          "ticker": "MGNI",
+          "score": 0.9939084321219993
+        },
+        {
+          "ticker": "ETON",
+          "score": 0.9218577674600958
+        },
+        {
+          "ticker": "ZVRA",
+          "score": 0.915022593708638
+        },
+        {
+          "ticker": "TMDX",
+          "score": 0.9331467988842299
+        },
+        {
+          "ticker": "WRBY",
+          "score": 0.9320808957295117
+        },
+        {
+          "ticker": "RBLX",
+          "score": 0.787989029229694
+        },
+        {
+          "ticker": "EVER",
+          "score": 0.7845849459657791
+        },
+        {
+          "ticker": "EVC",
+          "score": 0.8871192071287686
+        },
+        {
+          "ticker": "HNST",
+          "score": 0.8826853436732558
+        },
+        {
+          "ticker": "COCO",
+          "score": 0.8246511462757444
+        },
+        {
+          "ticker": "XYZ",
+          "score": 0.6035654971832254
+        },
+        {
+          "ticker": "CELH",
+          "score": 0.844109985121168
+        },
+        {
+          "ticker": "KD",
+          "score": 0.8523626737032401
+        },
+        {
+          "ticker": "VYX",
+          "score": 0.8335883493814229
+        },
+        {
+          "ticker": "MSFT",
+          "score": 0.28460979786706175
+        }
+      ],
+      "sell": [
+        {
+          "ticker": "FLUT",
+          "score": -0.49520104319065683
+        },
+        {
+          "ticker": "ECX",
+          "score": -0.49386054463299167
+        },
+        {
+          "ticker": "CNDT",
+          "score": -0.45171955221554794
+        },
+        {
+          "ticker": "CGC",
+          "score": -0.4437793903420607
+        },
+        {
+          "ticker": "TRIP",
+          "score": -0.43242605271181717
+        },
+        {
+          "ticker": "HTZ",
+          "score": -0.4286995868712968
+        },
+        {
+          "ticker": "REAX",
+          "score": -0.42257898295242163
+        },
+        {
+          "ticker": "NXRT",
+          "score": -0.4182003702158344
+        },
+        {
+          "ticker": "KOS",
+          "score": -0.4157799387167536
+        },
+        {
+          "ticker": "ABR",
+          "score": -0.4088127549551328
+        },
+        {
+          "ticker": "JELD",
+          "score": -0.4043883351510329
+        },
+        {
+          "ticker": "BLND",
+          "score": -0.3984094349224332
+        },
+        {
+          "ticker": "MNRO",
+          "score": -0.3922527448748577
+        },
+        {
+          "ticker": "ACDC",
+          "score": -0.39077876886760327
+        },
+        {
+          "ticker": "ZS",
+          "score": -0.3887358237386105
+        }
+      ]
+    },
+    "1w": {
+      "buy": [
+        {
+          "ticker": "MGNI",
+          "score": 1.0534886778880943
+        },
+        {
+          "ticker": "ETON",
+          "score": 0.9829393877720187
+        },
+        {
+          "ticker": "ZVRA",
+          "score": 0.975560261811959
+        },
+        {
+          "ticker": "TMDX",
+          "score": 0.9916084885548619
+        },
+        {
+          "ticker": "WRBY",
+          "score": 0.9905173813272679
+        },
+        {
+          "ticker": "RBLX",
+          "score": 0.8460923021630091
+        },
+        {
+          "ticker": "EVER",
+          "score": 0.842520859560476
+        },
+        {
+          "ticker": "EVC",
+          "score": 0.9407325236433655
+        },
+        {
+          "ticker": "HNST",
+          "score": 0.9332199746952128
+        },
+        {
+          "ticker": "COCO",
+          "score": 0.879956720418146
+        },
+        {
+          "ticker": "XYZ",
+          "score": 0.632143498325658
+        },
+        {
+          "ticker": "CELH",
+          "score": 0.8968603691443906
+        },
+        {
+          "ticker": "KD",
+          "score": 0.899462325132228
+        },
+        {
+          "ticker": "VYX",
+          "score": 0.882373440072663
+        },
+        {
+          "ticker": "MSFT",
+          "score": 0.33536198282273133
+        }
+      ],
+      "sell": [
+        {
+          "ticker": "ECX",
+          "score": -0.5547356443716348
+        },
+        {
+          "ticker": "FLUT",
+          "score": -0.5525697293878524
+        },
+        {
+          "ticker": "CNDT",
+          "score": -0.5108196302194918
+        },
+        {
+          "ticker": "CGC",
+          "score": -0.498126985366827
+        },
+        {
+          "ticker": "HTZ",
+          "score": -0.49066948024538176
+        },
+        {
+          "ticker": "TRIP",
+          "score": -0.49045293195252065
+        },
+        {
+          "ticker": "REAX",
+          "score": -0.4807069348789705
+        },
+        {
+          "ticker": "KOS",
+          "score": -0.4780164982540586
+        },
+        {
+          "ticker": "NXRT",
+          "score": -0.47611678934643115
+        },
+        {
+          "ticker": "ABR",
+          "score": -0.463738806892252
+        },
+        {
+          "ticker": "JELD",
+          "score": -0.46037478970366863
+        },
+        {
+          "ticker": "MNRO",
+          "score": -0.45113166658234033
+        },
+        {
+          "ticker": "BLND",
+          "score": -0.4492368995175233
+        },
+        {
+          "ticker": "ACDC",
+          "score": -0.4478176613722266
+        },
+        {
+          "ticker": "CWH",
+          "score": -0.4335553666366672
+        }
+      ]
+    },
+    "2w": {
+      "buy": [
+        {
+          "ticker": "MGNI",
+          "score": 1.0557453282968663
+        },
+        {
+          "ticker": "ETON",
+          "score": 1.005418260429118
+        },
+        {
+          "ticker": "ZVRA",
+          "score": 0.9978580845920044
+        },
+        {
+          "ticker": "TMDX",
+          "score": 0.9935728098574401
+        },
+        {
+          "ticker": "WRBY",
+          "score": 0.9924551237893586
+        },
+        {
+          "ticker": "RBLX",
+          "score": 0.8476786567244167
+        },
+        {
+          "ticker": "EVER",
+          "score": 0.8779649161953419
+        },
+        {
+          "ticker": "EVC",
+          "score": 0.9411032101314194
+        },
+        {
+          "ticker": "HNST",
+          "score": 0.9252755708331315
+        },
+        {
+          "ticker": "COCO",
+          "score": 0.9109340608962744
+        },
+        {
+          "ticker": "XYZ",
+          "score": 0.6126854864462089
+        },
+        {
+          "ticker": "CELH",
+          "score": 0.9098802674221058
+        },
+        {
+          "ticker": "KD",
+          "score": 0.8909200457435138
+        },
+        {
+          "ticker": "VYX",
+          "score": 0.876532068784726
+        },
+        {
+          "ticker": "MSFT",
+          "score": 0.34741852227220194
+        }
+      ],
+      "sell": [
+        {
+          "ticker": "ECX",
+          "score": -0.6151800252641074
+        },
+        {
+          "ticker": "FLUT",
+          "score": -0.6107192919368191
+        },
+        {
+          "ticker": "CNDT",
+          "score": -0.5880500381679689
+        },
+        {
+          "ticker": "HTZ",
+          "score": -0.569483026934988
+        },
+        {
+          "ticker": "CGC",
+          "score": -0.5512525250340664
+        },
+        {
+          "ticker": "TRIP",
+          "score": -0.548531592572941
+        },
+        {
+          "ticker": "KOS",
+          "score": -0.5393837883644867
+        },
+        {
+          "ticker": "REAX",
+          "score": -0.5388887775944717
+        },
+        {
+          "ticker": "ABR",
+          "score": -0.5379882014039351
+        },
+        {
+          "ticker": "JELD",
+          "score": -0.5343517109195302
+        },
+        {
+          "ticker": "NXRT",
+          "score": -0.5340766619491519
+        },
+        {
+          "ticker": "ACDC",
+          "score": -0.5277735408913482
+        },
+        {
+          "ticker": "MNRO",
+          "score": -0.508598054050015
+        },
+        {
+          "ticker": "CWH",
+          "score": -0.5063529151647939
+        },
+        {
+          "ticker": "BLND",
+          "score": -0.5057118879868611
+        }
+      ]
+    },
+    "1m": {
+      "buy": [
+        {
+          "ticker": "MGNI",
+          "score": 1.1623083696096643
+        },
+        {
+          "ticker": "ETON",
+          "score": 1.0928481216927433
+        },
+        {
+          "ticker": "ZVRA",
+          "score": 1.0846987883458985
+        },
+        {
+          "ticker": "TMDX",
+          "score": 1.0989272166519126
+        },
+        {
+          "ticker": "WRBY",
+          "score": 1.0977815769757324
+        },
+        {
+          "ticker": "RBLX",
+          "score": 0.9526355467738649
+        },
+        {
+          "ticker": "EVER",
+          "score": 0.9474642168547391
+        },
+        {
+          "ticker": "EVC",
+          "score": 1.0412109570306898
+        },
+        {
+          "ticker": "HNST",
+          "score": 1.0218793712093694
+        },
+        {
+          "ticker": "COCO",
+          "score": 0.9774943675534054
+        },
+        {
+          "ticker": "XYZ",
+          "score": 0.6853844878352268
+        },
+        {
+          "ticker": "CELH",
+          "score": 0.9881299161868888
+        },
+        {
+          "ticker": "KD",
+          "score": 0.9838203619957375
+        },
+        {
+          "ticker": "VYX",
+          "score": 0.9712992981788944
+        },
+        {
+          "ticker": "MSFT",
+          "score": 0.4234981508800285
+        }
+      ],
+      "sell": [
+        {
+          "ticker": "ECX",
+          "score": -0.6608374957449914
+        },
+        {
+          "ticker": "FLUT",
+          "score": -0.6525499880422206
+        },
+        {
+          "ticker": "CNDT",
+          "score": -0.6109628083956682
+        },
+        {
+          "ticker": "HTZ",
+          "score": -0.5955253430552916
+        },
+        {
+          "ticker": "TRIP",
+          "score": -0.5910733383398679
+        },
+        {
+          "ticker": "CGC",
+          "score": -0.5897225988147565
+        },
+        {
+          "ticker": "KOS",
+          "score": -0.5865120353451629
+        },
+        {
+          "ticker": "REAX",
+          "score": -0.5815386089037684
+        },
+        {
+          "ticker": "NXRT",
+          "score": -0.5764931821577608
+        },
+        {
+          "ticker": "ABR",
+          "score": -0.5563547808435947
+        },
+        {
+          "ticker": "JELD",
+          "score": -0.5538465282992467
+        },
+        {
+          "ticker": "MNRO",
+          "score": -0.5520265042311836
+        },
+        {
+          "ticker": "ACDC",
+          "score": -0.5485429094103471
+        },
+        {
+          "ticker": "BLND",
+          "score": -0.5404799409378268
+        },
+        {
+          "ticker": "XPRO",
+          "score": -0.5311203779390317
+        }
+      ]
+    }
+  },
+  "buy_1d": [
+    "MGNI",
+    "ETON",
+    "ZVRA",
+    "TMDX",
+    "WRBY",
+    "RBLX",
+    "EVER",
+    "EVC",
+    "HNST",
+    "COCO",
+    "XYZ",
+    "CELH",
+    "KD",
+    "VYX",
+    "MSFT"
+  ],
+  "sell_1d": [
+    "FLUT",
+    "ECX",
+    "CGC",
+    "CNDT",
+    "TRIP",
+    "REAX",
+    "ZS",
+    "HTZ",
+    "NXRT",
+    "KOS",
+    "ABR",
+    "PAA",
+    "JELD",
+    "BLND",
+    "MNRO"
+  ]
+}

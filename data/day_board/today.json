@@ -1,18 +1,151 @@
 {
   "date": "2026-11-10",
-  "generated_at": "2026-11-10T04:39:59.132666-05:00",
+  "generated_at": "2026-11-10T05:30:17.663435-05:00",
   "overall": "PARTIAL",
-  "ranker_ready": false,
+  "ranker_ready": true,
   "counts": {
-    "ok": 2,
-    "partial": 2,
-    "fail": 4,
+    "ok": 6,
+    "partial": 1,
+    "fail": 1,
     "n": 8
   },
-  "buy_1d": [],
-  "sell_1d": [],
+  "buy_1d": [
+    {
+      "ticker": "MGNI",
+      "score": 0.9235470307118834
+    },
+    {
+      "ticker": "ETON",
+      "score": 0.8439676248633239
+    },
+    {
+      "ticker": "ZVRA",
+      "score": 0.8376141242664461
+    },
+    {
+      "ticker": "TMDX",
+      "score": 0.8636644762723429
+    },
+    {
+      "ticker": "WRBY",
+      "score": 0.862646231728154
+    },
+    {
+      "ticker": "RBLX",
+      "score": 0.7191844400847339
+    },
+    {
+      "ticker": "EVER",
+      "score": 0.7048521193402596
+    },
+    {
+      "ticker": "EVC",
+      "score": 0.8218954883922791
+    },
+    {
+      "ticker": "HNST",
+      "score": 0.830185802332142
+    },
+    {
+      "ticker": "COCO",
+      "score": 0.7521837294885718
+    },
+    {
+      "ticker": "XYZ",
+      "score": 0.5763501549535271
+    },
+    {
+      "ticker": "CELH",
+      "score": 0.7827684547710014
+    },
+    {
+      "ticker": "KD",
+      "score": 0.8021495466387734
+    },
+    {
+      "ticker": "VYX",
+      "score": 0.7789622156741081
+    },
+    {
+      "ticker": "MSFT",
+      "score": 0.22544474874262233
+    }
+  ],
+  "sell_1d": [
+    {
+      "ticker": "FLUT",
+      "score": -0.41168152327787666
+    },
+    {
+      "ticker": "ECX",
+      "score": -0.4056848181639672
+    },
+    {
+      "ticker": "CGC",
+      "score": -0.36843763261852003
+    },
+    {
+      "ticker": "CNDT",
+      "score": -0.3621473596480284
+    },
+    {
+      "ticker": "TRIP",
+      "score": -0.34871305006886427
+    },
+    {
+      "ticker": "REAX",
+      "score": -0.33868621500359647
+    },
+    {
+      "ticker": "ZS",
+      "score": -0.33779205043605987
+    },
+    {
+      "ticker": "HTZ",
+      "score": -0.33571370549641016
+    },
+    {
+      "ticker": "NXRT",
+      "score": -0.334703919363243
+    },
+    {
+      "ticker": "KOS",
+      "score": -0.32577946319939227
+    },
+    {
+      "ticker": "ABR",
+      "score": -0.3250996769749578
+    },
+    {
+      "ticker": "PAA",
+      "score": -0.3229090790933832
+    },
+    {
+      "ticker": "JELD",
+      "score": -0.3206037445021246
+    },
+    {
+      "ticker": "BLND",
+      "score": -0.319975062908219
+    },
+    {
+      "ticker": "MNRO",
+      "score": -0.3090398958146889
+    }
+  ],
   "flatten": {},
-  "general": {},
+  "general": {
+    "said": "UP  6.883",
+    "bullets": [
+      "bad: hawkish Fed wall Waller open to 50bp",
+      "bad: Nvidia CEO scandal class action",
+      "bad: China CPI miss 0.8%",
+      "good: oil collapse Brent below $90",
+      "good: Iran de-escalation Trump positive momentum"
+    ],
+    "score": "6.883",
+    "direction": "up"
+  },
   "sectors": {},
   "lands": [
     {
