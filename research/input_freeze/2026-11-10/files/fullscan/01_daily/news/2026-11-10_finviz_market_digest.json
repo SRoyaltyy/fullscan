@@ -1,0 +1,84 @@
+{
+  "date": "2026-11-10",
+  "generated_at": "2026-11-10T04:37:38.809487-05:00",
+  "timezone": "America/New_York",
+  "source": "live",
+  "source_url": "https://elite.finviz.com/",
+  "archive_snapshot_ts": null,
+  "archive_snapshot_at": null,
+  "archive_url": null,
+  "clock_legal": true,
+  "clock_same_morning": true,
+  "clock_use": "same_morning",
+  "clock_legal_for": "2026-11-10",
+  "clock_rule": "Live: Generated must be before 09:30 ET on this date or leave missing. Wayback: capture before 09:30 ET that day is legal for that morning's Pre-Open. Afternoon Wayback is legal for the NEXT session open only (prior-day close recap), marked by clock_legal_for. Gaps stay gaps. Capture only — not tape_anchor / predict / #210.",
+  "kind": "finviz_homepage_market_digest",
+  "represents": "Finviz homepage market-day prose. Same-morning Pre-Open when Generated is before 09:30 ET; afternoon Wayback is a prior-day close recap legal for the next session only. Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "US futures point to a modestly higher open as traders await October CPI data and react to earnings-driven stock moves",
+  "raw_text": "- S&P 500 futures (@ES) rise 0.19%, Dow Jones futures (@YM) climb 0.47%, Nasdaq 100 futures (@NQ) edge lower by 0.01%, and Russell 2000 futures (@ER2) gain 0.35%, indicating relative strength in value and small caps\n- Estee Lauder (EL) trades roughly flat pre-market after raising its annual sales and profit forecasts on resilient demand for premium skincare and fragrances\n- Rivian (RIVN) slips about 0.2% after UBS (UBS) upgrades the stock to Buy with a $17 price target\n- Check Point Software (CHKP) trades roughly flat in pre-market trading after issuing a weaker-than-expected Q4 revenue forecast\n- TransDigm Group (TDG) reports earnings before the bell alongside On Holding (ONON) and other names\n- October CPI is due at 8:30 AM ET and is expected to be the primary catalyst for intraday volatility\n- European shares advance in their session while major Asian markets trade mixed overnight",
+  "raw_summary_md": "- **S&P 500 futures** ([@ES](https://finviz.com/futures_charts?t=ES)) rise 0.19%, **Dow Jones futures** ([@YM](https://finviz.com/futures_charts?t=YM)) climb 0.47%, **Nasdaq 100 futures** ([@NQ](https://finviz.com/futures_charts?t=NQ)) edge lower by 0.01%, and **Russell 2000 futures** ([@ER2](https://finviz.com/futures_charts?t=ER2)) gain 0.35%, indicating **relative strength** in value and small caps\n- **Estee Lauder** ([EL](https://finviz.com/quote?t=EL)) trades roughly flat pre-market after raising its annual **sales and profit forecasts** on resilient demand for premium skincare and fragrances\n- **Rivian** ([RIVN](https://finviz.com/quote?t=RIVN)) slips about 0.2% after **UBS** ([UBS](https://finviz.com/quote?t=UBS)) upgrades the stock to **Buy** with a $17 price target\n- **Check Point Software** ([CHKP](https://finviz.com/quote?t=CHKP)) trades roughly flat in pre-market trading after issuing a **weaker-than-expected** Q4 revenue forecast\n- **TransDigm Group** ([TDG](https://finviz.com/quote?t=TDG)) reports **earnings before the bell** alongside **On Holding** ([ONON](https://finviz.com/quote?t=ONON)) and other names\n- October CPI is due at 8:30 AM ET and is expected to be the **primary catalyst** for intraday volatility\n- European shares **advance** in their session while major Asian markets **trade mixed** overnight",
+  "index_moves": [],
+  "oil": null,
+  "cpi": {
+    "text": "October CPI is due at 8:30 AM ET and is expected to be the primary catalyst for intraday volatility",
+    "hotter": false
+  },
+  "fed_odds": null,
+  "named_tickers": [
+    "EL",
+    "RIVN",
+    "UBS",
+    "CHKP",
+    "TDG",
+    "ONON"
+  ],
+  "named_leaders": [
+    "EL",
+    "RIVN",
+    "UBS",
+    "CHKP",
+    "TDG",
+    "ONON"
+  ],
+  "calendar": [
+    "October CPI is due at 8:30 AM ET and is expected to be the primary catalyst for intraday volatility"
+  ],
+  "prior_close": {
+    "spx": null,
+    "nasdaq": null,
+    "dow": null
+  },
+  "cpi_fed": {
+    "cpi": {
+      "text": "October CPI is due at 8:30 AM ET and is expected to be the primary catalyst for intraday volatility",
+      "hotter": false
+    },
+    "fed_odds": null
+  },
+  "next_session_calendar": {
+    "housing": false,
+    "retail": false,
+    "fed": false,
+    "bullets": [],
+    "text": ""
+  },
+  "earnings_slate": {
+    "tickers": [
+      "TDG",
+      "ONON"
+    ],
+    "text": "TransDigm Group (TDG) reports earnings before the bell alongside On Holding (ONON) and other names"
+  },
+  "geo_grain": {
+    "geo": false,
+    "grain": false,
+    "flags": [],
+    "text": ""
+  },
+  "finviz_id": 338830,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-11-10T04:06:41.627",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "good"
+}

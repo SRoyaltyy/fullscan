@@ -1,0 +1,88 @@
+{
+  "date": "2026-11-10",
+  "n_ok": 11,
+  "n_total": 11,
+  "required": false,
+  "ok": true,
+  "summary": "",
+  "sectors": [
+    {
+      "sector": "Basic Materials",
+      "ok": true,
+      "reason": "",
+      "size": 7585,
+      "status": "OK"
+    },
+    {
+      "sector": "Communication Services",
+      "ok": true,
+      "reason": "",
+      "size": 9361,
+      "status": "OK"
+    },
+    {
+      "sector": "Consumer Cyclical",
+      "ok": true,
+      "reason": "",
+      "size": 8484,
+      "status": "OK"
+    },
+    {
+      "sector": "Consumer Defensive",
+      "ok": true,
+      "reason": "",
+      "size": 7196,
+      "status": "OK"
+    },
+    {
+      "sector": "Energy",
+      "ok": true,
+      "reason": "",
+      "size": 6854,
+      "status": "OK"
+    },
+    {
+      "sector": "Financial",
+      "ok": true,
+      "reason": "",
+      "size": 10283,
+      "status": "OK"
+    },
+    {
+      "sector": "Healthcare",
+      "ok": true,
+      "reason": "",
+      "size": 6212,
+      "status": "OK"
+    },
+    {
+      "sector": "Industrials",
+      "ok": true,
+      "reason": "",
+      "size": 6889,
+      "status": "OK"
+    },
+    {
+      "sector": "Real Estate",
+      "ok": true,
+      "reason": "",
+      "size": 7824,
+      "status": "OK"
+    },
+    {
+      "sector": "Technology",
+      "ok": true,
+      "reason": "",
+      "size": 8415,
+      "status": "OK"
+    },
+    {
+      "sector": "Utilities",
+      "ok": true,
+      "reason": "",
+      "size": 10140,
+      "status": "OK",
+      "provider": "deepseek-web"
+    }
+  ]
+}

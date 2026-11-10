@@ -1,0 +1,105 @@
+{
+  "date": "2026-11-10",
+  "files": [
+    {
+      "bytes": 12313983,
+      "path": "data/factor_mine/panel.json",
+      "sha256": "d3310e180e6f72cef89114ada3ffd64884bdbda0e1cde31dea756cbd70878e6c"
+    },
+    {
+      "path": "01_daily/general/2026-11-10_predict.md",
+      "sha256": "839f5135d05ae03a1495dc19119e9b783cf71661589b3ff37751848b431134f6"
+    },
+    {
+      "path": "01_daily/news/2026-11-10_actions.json",
+      "sha256": "8e8152a1fbabdebc4c95c0b3d5c977cbde21367e62b1af7c8130ff478db3dd4b"
+    },
+    {
+      "path": "01_daily/news/2026-11-10_finviz_digest.json",
+      "sha256": "eeb6d8d8b470cd62599ebe258ea4de94385899a9cbdc1b95910eb10d68edddd0"
+    },
+    {
+      "path": "01_daily/news/2026-11-10_judge.md",
+      "sha256": "f3c76c34ffbe36660abe5b1ff7aaf51f605a36ab5176d596981efbcde9bd3585"
+    },
+    {
+      "path": "01_daily/weather/2026-11-10_weather.json",
+      "sha256": "26d0d47803e1181c107ceff59b28de8b520a33fc8af35d5aa6334af8151c60e5"
+    },
+    {
+      "path": "data/ab_checklist/2026-11-10_ab_checklist_enriched.csv",
+      "sha256": "ddd21959da46d54aa0009a4d75af9fc8a2ec4e399f051921eb6dfd70f967246d"
+    },
+    {
+      "path": "data/join/2026-11-10_ranked.csv",
+      "sha256": "97cb1b4524863c7a9b33939dc2f4e94a17ba4394a0e164de5aafd5d981fd0eb0"
+    },
+    {
+      "path": "data/peers/2026-11-10_peer_rs.csv",
+      "sha256": "5369da15d76ac9a9b5ce69420ac534d0da2e2c74cc5077cbbde2d8347ac3a17b"
+    },
+    {
+      "path": "data/sleeve_merge/today.json",
+      "sha256": "47f85cc0fe7bc241c766b2ad65ef4d42f74c5bf5fd2ffd13a8d08edf95980b3f"
+    },
+    {
+      "path": "excel_bot/suggestions/suggestions.csv",
+      "sha256": "80330301b3f6a65df83d28cc3ff3aea7885c4bbb37406b5995e55a9e066968d4"
+    }
+  ],
+  "picks": {
+    "union_hot_n4_h1": [
+      "AEHL",
+      "GOGO",
+      "EVC",
+      "FLY"
+    ],
+    "union_hot_n4_holdup": [
+      "AEHL",
+      "GOGO",
+      "EVC",
+      "FLY"
+    ]
+  },
+  "prices": [
+    {
+      "px": 12.0,
+      "px_src": "session_export",
+      "ticker": "AEHL"
+    },
+    {
+      "px": 3.62,
+      "px_src": "session_export",
+      "ticker": "GOGO"
+    },
+    {
+      "px": 9.3,
+      "px_src": "session_export",
+      "ticker": "EVC"
+    },
+    {
+      "px": 24.31,
+      "px_src": "session_export",
+      "ticker": "FLY"
+    },
+    {
+      "px": 4.93,
+      "px_src": "session_export",
+      "ticker": "BUUU"
+    },
+    {
+      "px": 410.0,
+      "px_src": "session_export",
+      "ticker": "APP"
+    },
+    {
+      "px": 15.86,
+      "px_src": "session_export",
+      "ticker": "XERS"
+    }
+  ],
+  "reason": "",
+  "rows": [],
+  "sha256": "a0145b8a17cc022b9608a03a6e0368148d441ee920dd8c83c38fb5f107d99bea",
+  "source": "no_same_day_panel"
+}
