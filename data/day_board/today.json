@@ -1,12 +1,12 @@
 {
   "date": "2026-11-10",
-  "generated_at": "2026-11-10T04:35:48.642294-05:00",
+  "generated_at": "2026-11-10T04:36:13.683518-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
     "ok": 4,
-    "partial": 3,
-    "fail": 1,
+    "partial": 4,
+    "fail": 0,
     "n": 8
   },
   "buy_1d": [],
@@ -15,31 +15,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "finviz_digest",
-      "title": "Finviz digest",
-      "date": "2026-11-10",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-11-10T04:33:39.155158-05:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-11-10_finviz_digest.json",
-          "ok": true,
-          "reason": "",
-          "size": 102828,
-          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
-        },
-        {
-          "path": "01_daily/news/2026-11-10_finviz_digest.md",
-          "ok": true,
-          "reason": "",
-          "size": 12038,
-          "preview": "# Finviz Daily Digest \u2014 2026-11-10\n_Generated 2026-11-10T04:21:41.257147-05:00 \u00b7 export=data/exports/finviz_2026-11-09.csv \u00b7 ticker digests=2098 \u00b7 high-signal=1111_"
-        }
-      ],
-      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-11-10\n_Generated 2026-11-10T04:21:41.257147-05:00 \u00b7 export=data/exports/finviz_2026-11-09.csv \u00b7 ticker digests=2098 \u00b7 high-signal=1111_"
-    },
     {
       "key": "map_heat",
       "title": "Map heat tables",
@@ -200,6 +175,31 @@
         }
       ],
       "preview": "raw=8706 usable=721 single=610 \u00b7 Faltering Philippine Growth Spurs Calls for Rate Hold, State Aid - Bloomberg.com | China's factory-gate inflation at fastest in nearly 4-1/2 years in October, whil | RBA\u2019s Hunter Says AI Boom Will Put Near-Term Pressure on CPI - Bloomberg.com | China's October crude oil imports rise to highest level since March - Reuters | The stock-market rally keeps spreading beyond Big Tech. October inflation data c \u00b7 # News Parse v2 \u2014 2026-11-10T04:35:30.756862-05:00\nWindow\u224848h | news_mode=on | raw=8706 | usable=721 | single_name=610 | noise_dropped=7178\nusable polarity={'+': 47, '-': 103, 'mixed': 3, 'neutral': 568}"
+    },
+    {
+      "key": "news_actions",
+      "title": "News actions",
+      "date": "2026-11-10",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-10T04:36:12.866450-05:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-11-10_actions.json",
+          "ok": true,
+          "reason": "",
+          "size": 73005,
+          "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers"
+        },
+        {
+          "path": "01_daily/news/2026-11-10_actions.md",
+          "ok": true,
+          "reason": "",
+          "size": 15718,
+          "preview": "# News \u2192 Actions v4 (full framework) \u2014 2026-11-10T04:36:12.850422-05:00\nraw=8706 unique_events=7 tickers=83"
+        }
+      ],
+      "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-11-10T04:36:12.850422-05:00\nraw=8706 unique_events=7 tickers=83"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"

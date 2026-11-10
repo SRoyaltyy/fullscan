@@ -1,17 +1,16 @@
 {
   "date": "2026-11-10",
-  "generated_at": "2026-11-10T04:35:48.642294-05:00",
+  "generated_at": "2026-11-10T04:36:13.683518-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
     "MISSING General predict MD `01_daily/general/2026-11-10_predict.md` \u2014 missing",
-    "MISSING News actions JSON `01_daily/news/2026-11-10_actions.json` \u2014 missing",
     "MISSING News judge MD `01_daily/news/2026-11-10_judge.md` \u2014 missing"
   ],
   "counts": {
     "ok": 4,
-    "partial": 3,
-    "fail": 1,
+    "partial": 4,
+    "fail": 0,
     "n": 8
   },
   "processes": [
@@ -183,7 +182,7 @@
       "inputs_ready": true,
       "n_req_ok": 2,
       "n_req": 9,
-      "n_opt_ok": 1,
+      "n_opt_ok": 2,
       "n_opt": 14,
       "files": [
         {
@@ -294,11 +293,16 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-11-10_actions.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 73005,
+          "said": "83 ticker actions \u00b7 7 events \u00b7 8706 headlines \u00b7 AMGN BUY, CRM SELL, NOW SELL, UBER SELL, ESTC SELL, PCTY SELL, DSP SELL, DJCO SELL",
+          "bullets": [
+            "BUY AMGN",
+            "SELL CRM",
+            "SELL NOW",
+            "SELL UBER"
+          ]
         },
         {
           "key": "general",
@@ -579,8 +583,8 @@
       "key": "catalyst",
       "name": "Catalyst dossiers",
       "yaml": "catalyst_daily.yml",
-      "status": "FAIL",
-      "inputs_ready": false,
+      "status": "PARTIAL",
+      "inputs_ready": true,
       "n_req_ok": 0,
       "n_req": 0,
       "n_opt_ok": 0,
@@ -591,11 +595,16 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-11-10_actions.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 73005,
+          "said": "83 ticker actions \u00b7 7 events \u00b7 8706 headlines \u00b7 AMGN BUY, CRM SELL, NOW SELL, UBER SELL, ESTC SELL, PCTY SELL, DSP SELL, DJCO SELL",
+          "bullets": [
+            "BUY AMGN",
+            "SELL CRM",
+            "SELL NOW",
+            "SELL UBER"
+          ]
         },
         {
           "key": "in_digest",
@@ -624,8 +633,17 @@
           "bullets": []
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "83 ticker actions \u00b7 7 events \u00b7 8706 headlines \u00b7 AMGN BUY, CRM SELL, NOW SELL, UBER SELL, ESTC SELL, PCTY SELL, DSP SELL, DJCO SELL",
+      "bullets": [
+        "BUY AMGN",
+        "SELL CRM",
+        "SELL NOW",
+        "SELL UBER",
+        "SELL ESTC",
+        "SELL PCTY",
+        "SELL DSP",
+        "SELL DJCO"
+      ]
     },
     {
       "key": "stock_book",
@@ -665,11 +683,16 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-11-10_actions.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 73005,
+          "said": "83 ticker actions \u00b7 7 events \u00b7 8706 headlines \u00b7 AMGN BUY, CRM SELL, NOW SELL, UBER SELL, ESTC SELL, PCTY SELL, DSP SELL, DJCO SELL",
+          "bullets": [
+            "BUY AMGN",
+            "SELL CRM",
+            "SELL NOW",
+            "SELL UBER"
+          ]
         },
         {
           "key": "in_digest",
@@ -1194,6 +1217,31 @@
         }
       ],
       "preview": "raw=8706 usable=721 single=610 \u00b7 Faltering Philippine Growth Spurs Calls for Rate Hold, State Aid - Bloomberg.com | China's factory-gate inflation at fastest in nearly 4-1/2 years in October, whil | RBA\u2019s Hunter Says AI Boom Will Put Near-Term Pressure on CPI - Bloomberg.com | China's October crude oil imports rise to highest level since March - Reuters | The stock-market rally keeps spreading beyond Big Tech. October inflation data c \u00b7 # News Parse v2 \u2014 2026-11-10T04:35:30.756862-05:00\nWindow\u224848h | news_mode=on | raw=8706 | usable=721 | single_name=610 | noise_dropped=7178\nusable polarity={'+': 47, '-': 103, 'mixed': 3, 'neutral': 568}"
+    },
+    {
+      "key": "news_actions",
+      "title": "News actions",
+      "date": "2026-11-10",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-10T04:36:12.866450-05:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-11-10_actions.json",
+          "ok": true,
+          "reason": "",
+          "size": 73005,
+          "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers"
+        },
+        {
+          "path": "01_daily/news/2026-11-10_actions.md",
+          "ok": true,
+          "reason": "",
+          "size": 15718,
+          "preview": "# News \u2192 Actions v4 (full framework) \u2014 2026-11-10T04:36:12.850422-05:00\nraw=8706 unique_events=7 tickers=83"
+        }
+      ],
+      "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-11-10T04:36:12.850422-05:00\nraw=8706 unique_events=7 tickers=83"
     }
   ],
   "href": {
