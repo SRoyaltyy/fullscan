@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-09T19:31:33.130608-05:00",
+  "updated_at": "2026-11-09T19:34:11.531161-05:00",
   "grading_rule": {
     "entry": "open of first trading day at/after generated_at (same day if signal < 09:30 ET, else next day)",
     "window_trading_days": 14,
@@ -107145,7 +107145,7 @@
         "1d": -0.93,
         "3d": -2.57
       },
-      "mfe_pct": 6.57,
+      "mfe_pct": 6.46,
       "mfe_day": "2026-11-09",
       "ever_profitable": true,
       "first_profitable_day": "2026-11-03"
@@ -113182,7 +113182,7 @@
       "horizon_returns_pct": {
         "1d": 3.13
       },
-      "mfe_pct": 12.8,
+      "mfe_pct": 12.69,
       "mfe_day": "2026-11-09",
       "ever_profitable": true,
       "first_profitable_day": "2026-11-06"
@@ -114465,7 +114465,7 @@
       "horizon_returns_pct": {
         "1d": 12.54
       },
-      "mfe_pct": 14.13,
+      "mfe_pct": 14.01,
       "mfe_day": "2026-11-09",
       "ever_profitable": true,
       "first_profitable_day": "2026-11-06"
@@ -114489,7 +114489,7 @@
       "horizon_returns_pct": {
         "1d": 3.5
       },
-      "mfe_pct": 5.14,
+      "mfe_pct": 5.1,
       "mfe_day": "2026-11-09",
       "ever_profitable": true,
       "first_profitable_day": "2026-11-06"
