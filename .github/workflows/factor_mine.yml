@@ -161,27 +161,39 @@ jobs:
         with:
           ref: main
           fetch-depth: 0  # 2026-11-09: depth 1 stalls >20 min on the ~12.6 GB tree (#765)
-          # The tip tree is ~12.6 GB. Checking out news_intake, 01_daily,
-          # research, and dashboard next to a full fetch left the land
-          # runner with no headroom: 2026-11-09 freeze died exit 143
-          # ~3 min after "land-closed →" with no price_store line
-          # (runner shutdown / OOM, not the 120-min step timeout).
+          # The tip tree is ~12.6 GB. A full checkout plus land OOMed
+          # (exit 143, runner shutdown) ~3 min after land-closed on
+          # 2026-11-09. Keep fetch-depth 0 (#765) but omit trees the
+          # FM unit tests and land/freeze path do not read:
+          # data/news_intake, data/ab_backfill, data/checklist,
+          # excel_bot (freeze tests only use those paths as strings),
+          # validation, eval, most of research, most of dashboard,
+          # 01_daily/_transcripts, and news intake/parsed/backtest
+          # dumps (tests + lookback read digest pins, actions, judge).
+          # Must keep: 01_daily (news digests/actions/judge, general
+          # predict, weather, map_heat, catalyst, sectors, events,
+          # root preopen_status files), data/ab_checklist
+          # (ticker_lookback calendar + row attach), research/rebuild
+          # and research/oppset_clock_b, dashboard/factor-mine.
           sparse-checkout-cone-mode: false
           sparse-checkout: |
             /*
             !/data/news_intake/
-            !/data/ab_checklist/
             !/data/ab_backfill/
             !/data/checklist/
             !/excel_bot/
             !/validation/
             !/eval/
-            !/01_daily/
-            /01_daily/factor_mine_action.md
-            /01_daily/general/
-            /01_daily/weather/
+            !/01_daily/_transcripts/
+            !/01_daily/news/*_intake_parsed.json
+            !/01_daily/news/*_intake.md
+            !/01_daily/news/*_parsed.json
+            !/01_daily/news/*_parsed.md
+            !/01_daily/news/*news_impact_backtest*
+            !/01_daily/news/*all_news_impact*
             !/research/
             /research/rebuild/
+            /research/oppset_clock_b/
             !/dashboard/
             /dashboard/factor-mine/
       - uses: actions/setup-python@v5
