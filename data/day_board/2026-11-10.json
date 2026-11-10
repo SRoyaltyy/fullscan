@@ -1,19 +1,13 @@
 {
   "date": "2026-11-10",
-  "generated_at": "2026-11-10T04:39:59.132666-05:00",
+  "generated_at": "2026-11-10T07:11:38.692929-05:00",
   "overall": "PARTIAL",
-  "ranker_ready": false,
-  "blockers": [
-    "MISSING General predict MD `01_daily/general/2026-11-10_predict.md` \u2014 missing",
-    "MISSING News actions JSON `01_daily/news/2026-11-10_actions.json` \u2014 missing",
-    "MISSING News judge MD `01_daily/news/2026-11-10_judge.md` \u2014 missing",
-    "MISSING Weather JSON `01_daily/weather/2026-11-10_weather.json` \u2014 missing",
-    "MISSING AB checklist enriched `data/ab_checklist/2026-11-10_ab_checklist_enriched.csv` \u2014 missing"
-  ],
+  "ranker_ready": true,
+  "blockers": [],
   "counts": {
-    "ok": 2,
-    "partial": 2,
-    "fail": 4,
+    "ok": 6,
+    "partial": 1,
+    "fail": 1,
     "n": 8
   },
   "processes": [
@@ -183,9 +177,9 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 2,
+      "n_req_ok": 7,
       "n_req": 9,
-      "n_opt_ok": 1,
+      "n_opt_ok": 2,
       "n_opt": 14,
       "files": [
         {
@@ -241,10 +235,10 @@
           "name": "News parse JSON",
           "path": "01_daily/news/2026-11-10_parsed.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "",
+          "size": 6260139,
+          "said": "6260139B on disk",
           "bullets": []
         },
         {
@@ -252,22 +246,31 @@
           "name": "Events JSON",
           "path": "01_daily/events/2026-11-10_events.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 24953,
+          "said": "30 events \u00b7 elevated uncertainty \u00b7 Markets enter November 10 with a near-certain December Fed hike priced in, October CPI due today, and China extending its tariff suspension",
+          "bullets": [
+            "US October CPI",
+            "China extends suspension of 24% tariff on US imports for two months",
+            "Anthropic IPO roadshow begins",
+            "Russia-US-Ukraine trilateral talks in Abu Dhabi"
+          ]
         },
         {
           "key": "judge",
           "name": "News judge MD",
           "path": "01_daily/news/2026-11-10_judge.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 8573,
+          "said": "1. **Stock Market Correction Or Crash? 3 Charts For The Week Ahead After The AI Sell-Off** \u2014 broad AI-led drawdown is the main SPX/NDX risk-appetite driver; pro",
+          "bullets": [
+            "2. **Hot U.S. inflation hasn\u2019t cooled off; rising prices keep Fed rate hike on track** \u2014 pending CPI/Fed path is the rates gate for beta; provisional channel: **rates**.",
+            "3. **JPMorgan: semiconductor earnings sugar rush likely to fade** \u2014 semis earnings/valuation risk can cap any NDX/SMH rebound; provisional channel: **sector_fundamental**.",
+            "4. **Nvidia spy allegations likely to spur laws to tighten China\u2019s access to AI chips** \u2014 Nvidia-centered export/legal risk transmits to AI semis and NDX; provisional channel: **sector_policy**."
+          ]
         },
         {
           "key": "research_json",
@@ -296,22 +299,32 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-11-10_actions.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 73063,
+          "said": "83 ticker actions \u00b7 7 events \u00b7 8706 headlines \u00b7 AMGN BUY, CRM SELL, NOW SELL, UBER SELL, ESTC SELL, PCTY SELL, DSP SELL, DJCO SELL",
+          "bullets": [
+            "BUY AMGN",
+            "SELL CRM",
+            "SELL NOW",
+            "SELL UBER"
+          ]
         },
         {
           "key": "general",
           "name": "General predict MD",
           "path": "01_daily/general/2026-11-10_predict.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 18135,
+          "said": "UP 6.883",
+          "bullets": [
+            "bad: hawkish Fed wall Waller open to 50bp",
+            "bad: Nvidia CEO scandal class action",
+            "bad: China CPI miss 0.8%",
+            "good: oil collapse Brent below $90"
+          ]
         },
         {
           "key": "board",
@@ -345,10 +358,10 @@
           "name": "Pre-open status JSON",
           "path": "01_daily/2026-11-10_preopen_status.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "all_ok=False missing=['events', 'news_judge', 'map_heat_research', 'general_predict']",
+          "size": 6635,
+          "said": "all_ok=False \u00b7 qc=False \u00b7 grok=False \u00b7 book=False \u00b7 missing events, news_judge, map_heat_research, general_predict",
           "bullets": []
         },
         {
@@ -486,16 +499,22 @@
           "bullets": []
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "general UP  6.883",
+      "bullets": [
+        "bad: hawkish Fed wall Waller open to 50bp",
+        "bad: Nvidia CEO scandal class action",
+        "bad: China CPI miss 0.8%",
+        "good: oil collapse Brent below $90",
+        "good: Iran de-escalation Trump positive momentum"
+      ]
     },
     {
       "key": "weather",
       "name": "Label + weather",
       "yaml": "label_weather.yml",
-      "status": "FAIL",
+      "status": "OK",
       "inputs_ready": true,
-      "n_req_ok": 0,
+      "n_req_ok": 1,
       "n_req": 1,
       "n_opt_ok": 0,
       "n_opt": 0,
@@ -520,25 +539,31 @@
           "name": "Weather JSON",
           "path": "01_daily/weather/2026-11-10_weather.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "sectors=11 bytes=9827 vix=calm yields=flat",
+          "size": 9827,
+          "said": "favorable 4 \u00b7 hostile 1 \u00b7 neutral 6",
+          "bullets": [
+            "hostile: Energy",
+            "events bull 2 / bear 3"
+          ]
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "favorable 4 \u00b7 hostile 1 \u00b7 neutral 6",
+      "bullets": [
+        "hostile: Energy",
+        "events bull 2 / bear 3"
+      ]
     },
     {
       "key": "ab",
       "name": "AB checklist",
       "yaml": "ab_checklist.yml",
-      "status": "FAIL",
+      "status": "OK",
       "inputs_ready": true,
-      "n_req_ok": 0,
+      "n_req_ok": 1,
       "n_req": 1,
-      "n_opt_ok": 0,
+      "n_opt_ok": 1,
       "n_opt": 1,
       "files": [
         {
@@ -546,33 +571,39 @@
           "name": "AB checklist raw",
           "path": "data/ab_checklist/2026-11-10_ab_checklist.csv",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "rows=2615",
+          "size": 7533042,
+          "said": "27 rows",
+          "bullets": [
+            "CNM, TEL, WCN, SOLS, GPN, TAK, V, TXN"
+          ]
         },
         {
           "key": "ab_enriched",
           "name": "AB checklist enriched",
           "path": "data/ab_checklist/2026-11-10_ab_checklist_enriched.csv",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "rows=2615",
+          "size": 8310264,
+          "said": "25 rows",
+          "bullets": [
+            "WCN, CNM, TSCO, TEVA, HUM, AAPL, HSY, SOLS"
+          ]
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "25 rows",
+      "bullets": [
+        "WCN, CNM, TSCO, TEVA, HUM"
+      ]
     },
     {
       "key": "catalyst",
       "name": "Catalyst dossiers",
       "yaml": "catalyst_daily.yml",
       "status": "FAIL",
-      "inputs_ready": false,
+      "inputs_ready": true,
       "n_req_ok": 0,
       "n_req": 0,
       "n_opt_ok": 0,
@@ -583,11 +614,16 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-11-10_actions.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 73063,
+          "said": "83 ticker actions \u00b7 7 events \u00b7 8706 headlines \u00b7 AMGN BUY, CRM SELL, NOW SELL, UBER SELL, ESTC SELL, PCTY SELL, DSP SELL, DJCO SELL",
+          "bullets": [
+            "BUY AMGN",
+            "SELL CRM",
+            "SELL NOW",
+            "SELL UBER"
+          ]
         },
         {
           "key": "in_digest",
@@ -609,25 +645,39 @@
           "name": "Catalyst dossiers JSON",
           "path": "01_daily/catalyst/2026-11-10_dossiers.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "FAIL",
+          "reason": "zero usable dossiers (n=8)",
+          "size": 2723,
+          "said": "zero usable dossiers (n=8) \u00b7 0/8 usable \u00b7 Grok \u2192 DeepSeek \u00b7 NVDA, UEC, UUUU, SLB, BKR, KGS, AMGN, UBER",
+          "bullets": [
+            "NVDA: OpenClaw and DeepSeek both returned empty for CATALYST STEP1 NVDA",
+            "UEC: OpenClaw and DeepSeek both returned empty for CATALYST STEP1 UEC",
+            "UUUU: OpenClaw and DeepSeek both returned empty for CATALYST STEP1 UUUU",
+            "SLB: OpenClaw and DeepSeek both returned empty for CATALYST STEP1 SLB"
+          ]
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "83 ticker actions \u00b7 7 events \u00b7 8706 headlines \u00b7 AMGN BUY, CRM SELL, NOW SELL, UBER SELL, ESTC SELL, PCTY SELL, DSP SELL, DJCO SELL",
+      "bullets": [
+        "BUY AMGN",
+        "SELL CRM",
+        "SELL NOW",
+        "SELL UBER",
+        "SELL ESTC",
+        "SELL PCTY",
+        "SELL DSP",
+        "SELL DJCO"
+      ]
     },
     {
       "key": "stock_book",
       "name": "Stock Book ALL",
       "yaml": "stock_book_all.yml",
-      "status": "FAIL",
-      "inputs_ready": false,
-      "n_req_ok": 0,
+      "status": "OK",
+      "inputs_ready": true,
+      "n_req_ok": 4,
       "n_req": 4,
-      "n_opt_ok": 1,
+      "n_opt_ok": 3,
       "n_opt": 4,
       "files": [
         {
@@ -635,11 +685,16 @@
           "name": "General predict MD",
           "path": "01_daily/general/2026-11-10_predict.md",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 18135,
+          "said": "UP 6.883",
+          "bullets": [
+            "bad: hawkish Fed wall Waller open to 50bp",
+            "bad: Nvidia CEO scandal class action",
+            "bad: China CPI miss 0.8%",
+            "good: oil collapse Brent below $90"
+          ]
         },
         {
           "key": "in_board",
@@ -657,11 +712,16 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-11-10_actions.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 73063,
+          "said": "83 ticker actions \u00b7 7 events \u00b7 8706 headlines \u00b7 AMGN BUY, CRM SELL, NOW SELL, UBER SELL, ESTC SELL, PCTY SELL, DSP SELL, DJCO SELL",
+          "bullets": [
+            "BUY AMGN",
+            "SELL CRM",
+            "SELL NOW",
+            "SELL UBER"
+          ]
         },
         {
           "key": "in_digest",
@@ -683,65 +743,78 @@
           "name": "News judge MD",
           "path": "01_daily/news/2026-11-10_judge.md",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 8573,
+          "said": "1. **Stock Market Correction Or Crash? 3 Charts For The Week Ahead After The AI Sell-Off** \u2014 broad AI-led drawdown is the main SPX/NDX risk-appetite driver; pro",
+          "bullets": [
+            "2. **Hot U.S. inflation hasn\u2019t cooled off; rising prices keep Fed rate hike on track** \u2014 pending CPI/Fed path is the rates gate for beta; provisional channel: **rates**.",
+            "3. **JPMorgan: semiconductor earnings sugar rush likely to fade** \u2014 semis earnings/valuation risk can cap any NDX/SMH rebound; provisional channel: **sector_fundamental**.",
+            "4. **Nvidia spy allegations likely to spur laws to tighten China\u2019s access to AI chips** \u2014 Nvidia-centered export/legal risk transmits to AI semis and NDX; provisional channel: **sector_policy**."
+          ]
         },
         {
           "key": "in_weather",
           "name": "Weather JSON",
           "path": "01_daily/weather/2026-11-10_weather.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "sectors=11 bytes=9827 vix=calm yields=flat",
+          "size": 9827,
+          "said": "favorable 4 \u00b7 hostile 1 \u00b7 neutral 6",
+          "bullets": [
+            "hostile: Energy",
+            "events bull 2 / bear 3"
+          ]
         },
         {
           "key": "in_ab",
           "name": "AB checklist enriched",
           "path": "data/ab_checklist/2026-11-10_ab_checklist_enriched.csv",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "rows=2615",
+          "size": 8310264,
+          "said": "25 rows",
+          "bullets": [
+            "WCN, CNM, TSCO, TEVA, HUM, AAPL, HSY, SOLS"
+          ]
         },
         {
           "key": "join",
           "name": "Join ranked CSV",
           "path": "data/join/2026-11-10_ranked.csv",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "rows=5894",
+          "size": 2262740,
+          "said": "201 rows",
+          "bullets": [
+            "SEZL, CDNA, AVAH, NRIX, PRCH, TMDX, BLK, EVR"
+          ]
         },
         {
           "key": "peers",
           "name": "Peer RS CSV",
           "path": "data/peers/2026-11-10_peer_rs.csv",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "rows=5040",
+          "size": 808484,
+          "said": "496 rows",
+          "bullets": [
+            "A, AA, AACG, AAL, AAME, AAMI, AAOI, AAON"
+          ]
         },
         {
           "key": "book_json",
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-11-10_stock_book.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "horizons=5 names=245",
+          "size": 1606340,
+          "said": "1d BUY MGNI, ETON, ZVRA, TMDX, WRBY, RBLX, EVER, EVC \u00b7 SELL FLUT, ECX, CGC, CNDT, TRIP, REAX \u00b7 0.65875",
           "bullets": []
         },
         {
@@ -749,21 +822,24 @@
           "name": "Stock book MD",
           "path": "01_daily/2026-11-10_stock_book.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 106273,
+          "said": "Stock book \u2014 2026-11-10",
+          "bullets": [
+            "_Generated 2026-11-10T05:55:07.685262-05:00_",
+            "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
+          ]
         },
         {
           "key": "green",
           "name": "Green-pile JSON",
           "path": "data/stock_book/2026-11-10_green.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "",
+          "size": 5945,
+          "said": "458 green \u00b7 TMDX, BTSG, RDDT, TGTX, CLOV, MGNI, ISRG, APP, IAG, TEM",
           "bullets": []
         },
         {
@@ -785,23 +861,25 @@
           "name": "Dashboard HTML",
           "path": "dashboard/index.html",
           "role": "optional",
-          "status": "FAIL",
-          "reason": "session 2026-11-10 not in dashboard dates (last=2026-11-09)",
+          "status": "OK",
+          "reason": "live-book poller + today.json (2026-11-10)",
           "size": 16224380,
-          "said": "session 2026-11-10 not in dashboard dates (last=2026-11-09)",
+          "said": "live-book poller + today.json (2026-11-10)",
           "bullets": []
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "201 rows",
+      "bullets": [
+        "SEZL, CDNA, AVAH, NRIX, PRCH"
+      ]
     },
     {
       "key": "publish",
       "name": "Dashboard / .io",
       "yaml": "deploy-dashboard.yml",
-      "status": "PARTIAL",
-      "inputs_ready": false,
-      "n_req_ok": 1,
+      "status": "OK",
+      "inputs_ready": true,
+      "n_req_ok": 2,
       "n_req": 2,
       "n_opt_ok": 0,
       "n_opt": 1,
@@ -811,10 +889,10 @@
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-11-10_stock_book.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "horizons=5 names=245",
+          "size": 1606340,
+          "said": "1d BUY MGNI, ETON, ZVRA, TMDX, WRBY, RBLX, EVER, EVC \u00b7 SELL FLUT, ECX, CGC, CNDT, TRIP, REAX \u00b7 0.65875",
           "bullets": []
         },
         {
@@ -822,10 +900,10 @@
           "name": "Dashboard HTML (repo)",
           "path": "dashboard/index.html",
           "role": "required",
-          "status": "FAIL",
-          "reason": "session 2026-11-10 not in dashboard dates (last=2026-11-09)",
+          "status": "OK",
+          "reason": "live-book poller + today.json (2026-11-10)",
           "size": 16224380,
-          "said": "session 2026-11-10 not in dashboard dates (last=2026-11-09)",
+          "said": "live-book poller + today.json (2026-11-10)",
           "bullets": []
         },
         {
@@ -861,13 +939,152 @@
   "news_mode": "on",
   "news_mode_reason": "",
   "selections": {
-    "buy_1d": [],
-    "sell_1d": [],
+    "buy_1d": [
+      {
+        "ticker": "MGNI",
+        "score": 0.9235470307118834
+      },
+      {
+        "ticker": "ETON",
+        "score": 0.8439676248633239
+      },
+      {
+        "ticker": "ZVRA",
+        "score": 0.8376141242664461
+      },
+      {
+        "ticker": "TMDX",
+        "score": 0.8636644762723429
+      },
+      {
+        "ticker": "WRBY",
+        "score": 0.862646231728154
+      },
+      {
+        "ticker": "RBLX",
+        "score": 0.7191844400847339
+      },
+      {
+        "ticker": "EVER",
+        "score": 0.7048521193402596
+      },
+      {
+        "ticker": "EVC",
+        "score": 0.8218954883922791
+      },
+      {
+        "ticker": "HNST",
+        "score": 0.830185802332142
+      },
+      {
+        "ticker": "COCO",
+        "score": 0.7521837294885718
+      },
+      {
+        "ticker": "XYZ",
+        "score": 0.5763501549535271
+      },
+      {
+        "ticker": "CELH",
+        "score": 0.7827684547710014
+      },
+      {
+        "ticker": "KD",
+        "score": 0.8021495466387734
+      },
+      {
+        "ticker": "VYX",
+        "score": 0.7789622156741081
+      },
+      {
+        "ticker": "MSFT",
+        "score": 0.22544474874262233
+      }
+    ],
+    "sell_1d": [
+      {
+        "ticker": "FLUT",
+        "score": -0.41168152327787666
+      },
+      {
+        "ticker": "ECX",
+        "score": -0.4056848181639672
+      },
+      {
+        "ticker": "CGC",
+        "score": -0.36843763261852003
+      },
+      {
+        "ticker": "CNDT",
+        "score": -0.3621473596480284
+      },
+      {
+        "ticker": "TRIP",
+        "score": -0.34871305006886427
+      },
+      {
+        "ticker": "REAX",
+        "score": -0.33868621500359647
+      },
+      {
+        "ticker": "ZS",
+        "score": -0.33779205043605987
+      },
+      {
+        "ticker": "HTZ",
+        "score": -0.33571370549641016
+      },
+      {
+        "ticker": "NXRT",
+        "score": -0.334703919363243
+      },
+      {
+        "ticker": "KOS",
+        "score": -0.32577946319939227
+      },
+      {
+        "ticker": "ABR",
+        "score": -0.3250996769749578
+      },
+      {
+        "ticker": "PAA",
+        "score": -0.3229090790933832
+      },
+      {
+        "ticker": "JELD",
+        "score": -0.3206037445021246
+      },
+      {
+        "ticker": "BLND",
+        "score": -0.319975062908219
+      },
+      {
+        "ticker": "MNRO",
+        "score": -0.3090398958146889
+      }
+    ],
     "flatten": {},
-    "general": {},
+    "general": {
+      "said": "UP  6.883",
+      "bullets": [
+        "bad: hawkish Fed wall Waller open to 50bp",
+        "bad: Nvidia CEO scandal class action",
+        "bad: China CPI miss 0.8%",
+        "good: oil collapse Brent below $90",
+        "good: Iran de-escalation Trump positive momentum"
+      ],
+      "score": "6.883",
+      "direction": "up"
+    },
     "sectors": {},
     "news": {},
-    "weather": {}
+    "weather": {
+      "said": "favorable 4 \u00b7 hostile 1 \u00b7 neutral 6",
+      "bullets": [
+        "hostile: Energy",
+        "events bull 2 / bear 3"
+      ]
+    }
   },
   "lands": [
     {
