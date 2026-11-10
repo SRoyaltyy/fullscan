@@ -2,7 +2,7 @@
 
 _starts 10-08 open, no past days. Parent recipe `union_hot_n4_holdup` (same selection and exits); candidates only from inputs committed before 09:30 ET._
 
-Equity: 8908.37 | days: 22
+Equity: 8908.37 | days: 23
 
 | date | S | picks | buys | sells | cash | equity | mean% | sit / reason |
 |---|---|---|---|---|---|---|---|---|
@@ -28,3 +28,4 @@ Equity: 8908.37 | days: 22
 | 2026-11-04 | 10.848 | - | - | BAH 25@86.29, BC 28@80.08, GEN 75@30.5, SLN 110@19.78 | 8908.37 | 8908.37 | 0.9968 | prior state 2026-11-03 not committed before 09:30 ET: never committed; no pre-open candidate list |
 | 2026-11-05 | None | - | - | - | 8908.37 | 8908.37 | 0.0 | tickets look.source=no_same_day_panel (need look); no pre-open weather S: no buys; no pre-open candidate list |
 | 2026-11-06 | None | - | - | - | 8908.37 | 8908.37 | 0.0 | seal not committed before 09:30 ET: never committed |
+| 2026-11-09 | None | - | - | - | 8908.37 | 8908.37 | 0.0 | seal not committed before 09:30 ET: never committed |

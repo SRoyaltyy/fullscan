@@ -4,7 +4,7 @@ _starts 10-08 open, no past days. Parent recipe `union_hot_n4_h1` (same selectio
 
 _Factor Mine recipe union_hot_n4_h1, not the separate IRONCLAD h1 book (research/hot_n4_clean_v4/forward_h1)._
 
-Equity: 10000.04 | days: 22
+Equity: 10000.04 | days: 23
 
 | date | S | picks | buys | sells | cash | equity | mean% | sit / reason |
 |---|---|---|---|---|---|---|---|---|
@@ -30,3 +30,4 @@ Equity: 10000.04 | days: 22
 | 2026-11-04 | 10.848 | - | - | - | 10000.04 | 10000.04 | 0.0 | prior state 2026-11-03 not committed before 09:30 ET: never committed; no pre-open candidate list |
 | 2026-11-05 | None | - | - | - | 10000.04 | 10000.04 | 0.0 | tickets look.source=no_same_day_panel (need look); no pre-open weather S: no buys; no pre-open candidate list |
 | 2026-11-06 | None | - | - | - | 10000.04 | 10000.04 | 0.0 | seal not committed before 09:30 ET: never committed |
+| 2026-11-09 | None | - | - | - | 10000.04 | 10000.04 | 0.0 | seal not committed before 09:30 ET: never committed |
