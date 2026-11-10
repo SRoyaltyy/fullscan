@@ -2,7 +2,7 @@
 
 Live sleeves still SIT on S≤−3. Search a ticker for every session since 8/13: cameras (+N −N), 09:30 open, close, same-day % and hold-1/3/5 with actual prices.
 
-Generated 2026-11-09T08:45:36.867683-05:00 · 2026-08-13 → 2026-11-06 · live sit **untouched**.
+Generated 2026-11-09T19:47:54.634211-05:00 · 2026-08-13 → 2026-11-06 · live sit **untouched**.
 
 ## Latest morning
 
@@ -10,25 +10,25 @@ Generated 2026-11-09T08:45:36.867683-05:00 · 2026-08-13 → 2026-11-06 · live 
 
 ### Longs weather sat on (top)
 
-- **APP** idio +25 · +7 −1 · E good · H1 None% H3 None%
-- **YELP** idio +20 · +7 −1 · E good · H1 None% H3 None%
-- **MNST** idio +20 · +6 −1 · E good · H1 None% H3 None%
-- **NTRA** idio +19 · +6 −1 · E good · H1 None% H3 None%
-- **CHTR** idio +19 · +5 −1 · E good · H1 None% H3 None%
-- **ENOV** idio +19 · +5 −1 · E good · H1 None% H3 None%
-- **FNF** idio +19 · +5 −1 · E good · H1 None% H3 None%
-- **CARG** idio +18 · +6 −1 · E good · H1 None% H3 None%
+- **APP** idio +25 · +7 −1 · E good · H1 15.18% H3 None%
+- **YELP** idio +20 · +7 −1 · E good · H1 5.84% H3 None%
+- **MNST** idio +20 · +6 −1 · E good · H1 3.63% H3 None%
+- **NTRA** idio +19 · +6 −1 · E good · H1 0.13% H3 None%
+- **CHTR** idio +19 · +5 −1 · E good · H1 4.72% H3 None%
+- **ENOV** idio +19 · +5 −1 · E good · H1 4.77% H3 None%
+- **FNF** idio +19 · +5 −1 · E good · H1 6.18% H3 None%
+- **CARG** idio +18 · +6 −1 · E good · H1 -7.2% H3 None%
 
 ### Shorts weather sat on (top)
 
-- **GSM** idio -12 · +2 −5 · H1 None%
+- **GSM** idio -12 · +2 −5 · H1 -0.38%
 - **HRZN** idio -12 · +1 −5 · H1 -5.32%
-- **IONQ** idio -12 · +0 −5 · H1 None%
-- **VSAT** idio -12 · +1 −6 · H1 None%
-- **IREN** idio -11 · +2 −5 · H1 None%
-- **VNET** idio -11 · +2 −5 · H1 None%
-- **AIP** idio -11 · +1 −6 · H1 None%
-- **OPEN** idio -10 · +1 −4 · H1 None%
+- **IONQ** idio -12 · +0 −5 · H1 -26.17%
+- **VSAT** idio -12 · +1 −6 · H1 -21.34%
+- **IREN** idio -11 · +2 −5 · H1 -1.23%
+- **VNET** idio -11 · +2 −5 · H1 0.15%
+- **AIP** idio -11 · +1 −6 · H1 -12.54%
+- **OPEN** idio -10 · +1 −4 · H1 21.67%
 
 ## If we had taken them on hard-red sits (research)
 
