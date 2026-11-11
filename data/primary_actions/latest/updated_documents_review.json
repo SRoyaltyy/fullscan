@@ -1,40 +1,83 @@
 [
   {
-    "title": "Orphan registered medicinal products",
-    "url": "https://www.gov.uk/government/publications/orphan-registered-medicinal-products",
-    "native_id": "/government/publications/orphan-registered-medicinal-products",
-    "published_at": "2026-11-10T09:26:39+00:00",
-    "published_raw": "2026-11-10T09:26:39Z",
-    "document_type": "decision",
-    "issuer": "Medicines and Healthcare products Regulatory Agency",
-    "issuer_ids": [
-      "uk-gov:medicines-and-healthcare-products-regulatory-agency"
-    ],
-    "summary": "A list of authorised orphan medicinal products registered by the UK licensing authority.",
+    "title": "DCPD-2026ACTSAPPROVED - Acts Approved by the President",
+    "url": "https://www.govinfo.gov/app/details/DCPD-2026ACTSAPPROVED",
+    "native_id": "DCPD-2026ACTSAPPROVED",
+    "published_at": "2026-11-10T21:28:51+00:00",
+    "published_raw": "Tue, 10 Nov 2026 21:28:51 +0000",
+    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
     "source_metadata": {
-      "document_type": "decision",
-      "document_stage": "decision_published",
+      "document_type": "presidential_document",
+      "document_stage": "presidential_document_published",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Medicines and Healthcare products Regulatory Agency",
-      "jurisdiction": "UK",
-      "family": "typed_government_documents"
+      "issuer": "Compilation of Presidential Documents",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
     },
-    "primary_source_id": "uk-govuk-decision",
-    "n": 4,
-    "first_seen": "2026-10-15T10:17:11.133023+00:00",
-    "last_seen": "2026-11-10T20:28:57.994479+00:00",
+    "primary_source_id": "us-govinfo-dcpd",
+    "n": 2475,
+    "first_seen": "2026-10-16T05:53:15.995133+00:00",
+    "last_seen": "2026-11-11T07:46:05.445744+00:00",
     "source_ids": [
-      "uk-govuk-decision"
+      "us-govinfo-dcpd"
     ]
   },
   {
-    "title": "What's New Related to Drugs",
-    "url": "http://www.fda.gov/drugs/news-events-human-drugs/whats-new-related-drugs",
-    "native_id": "http://www.fda.gov/drugs/news-events-human-drugs/whats-new-related-drugs",
-    "published_at": "2026-11-10T17:34:51+00:00",
-    "published_raw": "Tue, 10 Nov 2026 12:34:51 EST",
-    "summary": "Want to know what's new on drugs from FDA? This page provides quick links to the latest on a variety of topics including: drug approvals, safety warnings, drug shortages, etc.",
+    "title": "DCPD-2026CHECKLIST - Checklist of White House Press Releases",
+    "url": "https://www.govinfo.gov/app/details/DCPD-2026CHECKLIST",
+    "native_id": "DCPD-2026CHECKLIST",
+    "published_at": "2026-11-10T21:28:51+00:00",
+    "published_raw": "Tue, 10 Nov 2026 21:28:51 +0000",
+    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "presidential_document",
+      "document_stage": "presidential_document_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Compilation of Presidential Documents",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-dcpd",
+    "n": 2477,
+    "first_seen": "2026-10-16T05:53:15.995133+00:00",
+    "last_seen": "2026-11-11T07:46:05.445744+00:00",
+    "source_ids": [
+      "us-govinfo-dcpd"
+    ]
+  },
+  {
+    "title": "DCPD-2026DIGEST - Digest of Other White House Announcements",
+    "url": "https://www.govinfo.gov/app/details/DCPD-2026DIGEST",
+    "native_id": "DCPD-2026DIGEST",
+    "published_at": "2026-11-10T21:28:51+00:00",
+    "published_raw": "Tue, 10 Nov 2026 21:28:51 +0000",
+    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "presidential_document",
+      "document_stage": "presidential_document_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Compilation of Presidential Documents",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-dcpd",
+    "n": 2481,
+    "first_seen": "2026-10-16T05:53:15.995133+00:00",
+    "last_seen": "2026-11-11T07:46:05.445744+00:00",
+    "source_ids": [
+      "us-govinfo-dcpd"
+    ]
+  },
+  {
+    "title": "Reviews of Pediatric Studies Conducted under BPCA and Pediatric Assessments Conducted Under PREA from 2012 – Present",
+    "url": "http://www.fda.gov/drugs/development-resources/reviews-pediatric-studies-conducted-under-bpca-and-pediatric-assessments-conducted-under-prea-2012",
+    "native_id": "http://www.fda.gov/drugs/development-resources/reviews-pediatric-studies-conducted-under-bpca-and-pediatric-assessments-conducted-under-prea-2012",
+    "published_at": "2026-11-10T19:28:10+00:00",
+    "published_raw": "Tue, 10 Nov 2026 14:28:10 EST",
+    "summary": "The following are the medical, statistical, and clinical pharmacology reviews of pediatric studies conducted in response to a Written Request issued under the BPCA and pediatric assessments conducted under PREA.",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
@@ -45,20 +88,44 @@
       "family": "product_permissions_and_safety"
     },
     "primary_source_id": "us-fda-5696b24295",
-    "n": 1394,
-    "first_seen": "2026-10-15T10:17:11.133023+00:00",
-    "last_seen": "2026-11-10T20:28:57.994479+00:00",
+    "n": 8552,
+    "first_seen": "2026-11-04T20:26:55.940049+00:00",
+    "last_seen": "2026-11-11T07:46:05.445744+00:00",
     "source_ids": [
       "us-fda-5696b24295"
     ]
   },
   {
-    "title": "Drugs@FDA Data Files",
-    "url": "http://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
-    "native_id": "http://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
-    "published_at": "2026-11-10T14:20:33+00:00",
-    "published_raw": "Tue, 10 Nov 2026 09:20:33 EST",
-    "summary": "Drugs@FDA Downloadable Data File in ZIP format, Data Definitions, and Entity Relationship Diagram (ERD)",
+    "title": "20270182: Bain Capital Tech Opportunities Fund III, L.P.; Kahua, Inc.",
+    "url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20270182",
+    "native_id": "338967 at https://www.ftc.gov",
+    "published_at": "2026-11-10T15:38:51+00:00",
+    "published_raw": "Tue, 10 Nov 2026 15:38:51 +0000",
+    "summary": "20270182: Bain Capital Tech Opportunities Fund III, L.P.; Kahua, Inc. Date November 9, 2026 hbarber November 10, 2026 | 10:38AM Transaction Number 20270182 Acquiring Party Bain Capital Tech Opportunities Fund III, L.P. Acquired Party Kahua, Inc. Granting Status Granted Acquired Entities Kahua, Inc.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Federal Trade Commission — HSR Early Termination Notices",
+      "jurisdiction": "US",
+      "family": "competition_and_enforcement"
+    },
+    "primary_source_id": "us-ftc-df73e297e1",
+    "n": 9566,
+    "first_seen": "2026-11-10T20:28:57.994479+00:00",
+    "last_seen": "2026-11-11T07:46:05.445744+00:00",
+    "source_ids": [
+      "us-ftc-df73e297e1"
+    ]
+  },
+  {
+    "title": "FDA approves pimicotinib for symptomatic tenosynovial giant cell tumor",
+    "url": "http://www.fda.gov/drugs/cancer-approvals/fda-approves-pimicotinib-symptomatic-tenosynovial-giant-cell-tumor",
+    "native_id": "http://www.fda.gov/drugs/cancer-approvals/fda-approves-pimicotinib-symptomatic-tenosynovial-giant-cell-tumor",
+    "published_at": "2026-11-10T19:58:07+00:00",
+    "published_raw": "Tue, 10 Nov 2026 14:58:07 EST",
+    "summary": "On November 10, 2026, the Food and Drug Administration approved pimicotinib (Pimjetmi, EMD Serono, Inc.), a kinase inhibitor, for adults with symptomatic tenosynovial giant cell tumor (TGCT) for which surgical resection may cause worsening functional limitation or severe morbidity.",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
@@ -69,243 +136,11 @@
       "family": "product_permissions_and_safety"
     },
     "primary_source_id": "us-fda-5696b24295",
-    "n": 1398,
-    "first_seen": "2026-10-15T10:17:11.133023+00:00",
-    "last_seen": "2026-11-10T20:28:57.994479+00:00",
-    "source_ids": [
-      "us-fda-03f7703006",
-      "us-fda-5696b24295"
-    ]
-  },
-  {
-    "title": "Don’t Be Left Out in the Cold This Holiday Season with Unsafe Presents: Buy from Trusted Sources",
-    "url": "https://www.cpsc.gov/Newsroom/News-Releases/2026/Dont-Be-Left-Out-in-the-Cold-This-Holiday-Season-with-Unsafe-Presents-Buy-from-Trusted-Sources",
-    "native_id": "https://www.cpsc.gov/_6d039050-7fba-4cdf-8361-f7db2f5e3963",
-    "published_at": null,
-    "published_raw": "Tue, 12/09/2025 - 12:00",
-    "summary": "CPSC Reminds Consumers to Shop Safely This Holiday Season",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Consumer Product Safety Commission",
-      "jurisdiction": "US",
-      "family": "product_safety"
-    },
-    "primary_source_id": "us-cpsc-08fe06e2e6",
-    "n": 3537,
-    "first_seen": "2026-10-16T10:36:18.842579+00:00",
-    "last_seen": "2026-11-10T20:28:57.994479+00:00",
-    "source_ids": [
-      "us-cpsc-08fe06e2e6"
-    ]
-  },
-  {
-    "title": "Put Safety on the Menu: Consumer Product Safety Commission Offers Safe Cooking Tips for a Joyful Holiday Season",
-    "url": "https://www.cpsc.gov/Newsroom/News-Releases/2026/Put-Safety-on-the-Menu-Consumer-Product-Safety-Commission-Offers-Safe-Cooking-Tips-for-a-Joyful-Holiday-Season",
-    "native_id": "https://www.cpsc.gov/_59de4207-4ace-44ca-ace0-3cde0cfb8ddb",
-    "published_at": null,
-    "published_raw": "Wed, 11/19/2025 - 12:00",
-    "summary": "WASHINGTON, D.C. – As families across America prepare to gather for Thanksgiving, the U.S. Consumer Product Safety Commission (CPSC) is issuing an urgent reminder that the holiday season marks the most dangerous time of year for cooking-related fires and",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Consumer Product Safety Commission",
-      "jurisdiction": "US",
-      "family": "product_safety"
-    },
-    "primary_source_id": "us-cpsc-08fe06e2e6",
-    "n": 3538,
-    "first_seen": "2026-10-16T10:36:18.842579+00:00",
-    "last_seen": "2026-11-10T20:28:57.994479+00:00",
-    "source_ids": [
-      "us-cpsc-08fe06e2e6"
-    ]
-  },
-  {
-    "title": "Parallel import licences granted in 2026",
-    "url": "https://www.gov.uk/government/publications/parallel-import-licences-granted-in-2026",
-    "native_id": "/government/publications/parallel-import-licences-granted-in-2026",
-    "published_at": "2026-11-10T11:26:59+00:00",
-    "published_raw": "2026-11-10T11:26:59Z",
-    "document_type": "decision",
-    "issuer": "Medicines and Healthcare products Regulatory Agency",
-    "issuer_ids": [
-      "uk-gov:medicines-and-healthcare-products-regulatory-agency"
-    ],
-    "summary": "Parallel import licences granted in 2026.",
-    "source_metadata": {
-      "document_type": "decision",
-      "document_stage": "decision_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Medicines and Healthcare products Regulatory Agency",
-      "jurisdiction": "UK",
-      "family": "typed_government_documents"
-    },
-    "primary_source_id": "uk-govuk-decision",
-    "n": 5609,
-    "first_seen": "2026-10-20T18:00:04.951908+00:00",
-    "last_seen": "2026-11-10T20:28:57.994479+00:00",
-    "source_ids": [
-      "uk-govuk-decision"
-    ]
-  },
-  {
-    "title": "Marketing authorisations granted in 2026",
-    "url": "https://www.gov.uk/government/publications/marketing-authorisations-granted-in-2026",
-    "native_id": "/government/publications/marketing-authorisations-granted-in-2026",
-    "published_at": "2026-11-10T11:27:10+00:00",
-    "published_raw": "2026-11-10T11:27:10Z",
-    "document_type": "decision",
-    "issuer": "Medicines and Healthcare products Regulatory Agency",
-    "issuer_ids": [
-      "uk-gov:medicines-and-healthcare-products-regulatory-agency"
-    ],
-    "summary": "Marketing authorisations granted in 2026.",
-    "source_metadata": {
-      "document_type": "decision",
-      "document_stage": "decision_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Medicines and Healthcare products Regulatory Agency",
-      "jurisdiction": "UK",
-      "family": "typed_government_documents"
-    },
-    "primary_source_id": "uk-govuk-decision",
-    "n": 5610,
-    "first_seen": "2026-10-20T18:00:04.951908+00:00",
-    "last_seen": "2026-11-10T20:28:57.994479+00:00",
-    "source_ids": [
-      "uk-govuk-decision"
-    ]
-  },
-  {
-    "title": "Trade mark disputes: unpaid costs orders",
-    "url": "https://www.gov.uk/government/publications/trade-mark-disputes-unpaid-costs-orders",
-    "native_id": "/government/publications/trade-mark-disputes-unpaid-costs-orders",
-    "published_at": "2026-11-10T15:10:43+00:00",
-    "published_raw": "2026-11-10T15:10:43Z",
-    "document_type": "decision",
-    "issuer": "Intellectual Property Office",
-    "issuer_ids": [
-      "uk-gov:intellectual-property-office"
-    ],
-    "summary": "A list of unpaid costs following inter parte hearings about intellectual property.",
-    "source_metadata": {
-      "document_type": "decision",
-      "document_stage": "decision_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Intellectual Property Office",
-      "jurisdiction": "UK",
-      "family": "typed_government_documents"
-    },
-    "primary_source_id": "uk-govuk-decision",
-    "n": 5623,
-    "first_seen": "2026-10-20T18:00:04.951908+00:00",
-    "last_seen": "2026-11-10T20:28:57.994479+00:00",
-    "source_ids": [
-      "uk-govuk-decision"
-    ]
-  },
-  {
-    "title": "CDER Manual of Policies & Procedures | MAPP",
-    "url": "http://www.fda.gov/about-fda/center-drug-evaluation-and-research-cder/cder-manual-policies-procedures-mapp",
-    "native_id": "http://www.fda.gov/about-fda/center-drug-evaluation-and-research-cder/cder-manual-policies-procedures-mapp",
-    "published_at": "2026-11-10T16:47:53+00:00",
-    "published_raw": "Tue, 10 Nov 2026 11:47:53 EST",
-    "summary": "CDER's Manual of Policies and Procedures (MAPPs) are federal directives and documentation of internal policies and procedures.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Food and Drug Administration — What's New: Drugs",
-      "jurisdiction": "US",
-      "family": "product_permissions_and_safety"
-    },
-    "primary_source_id": "us-fda-5696b24295",
-    "n": 8113,
-    "first_seen": "2026-11-02T22:20:55.750782+00:00",
-    "last_seen": "2026-11-10T20:28:57.994479+00:00",
+    "n": 9605,
+    "first_seen": "2026-11-10T20:28:57.994479+00:00",
+    "last_seen": "2026-11-11T07:46:05.445744+00:00",
     "source_ids": [
       "us-fda-5696b24295"
-    ]
-  },
-  {
-    "title": "Recommendations for Reducing the Risk of Transfusion-Transmitted Hepatitis B Virus",
-    "url": "http://www.fda.gov/regulatory-information/search-fda-guidance-documents/recommendations-reducing-risk-transfusion-transmitted-hepatitis-b-virus",
-    "native_id": "http://www.fda.gov/regulatory-information/search-fda-guidance-documents/recommendations-reducing-risk-transfusion-transmitted-hepatitis-b-virus",
-    "published_at": "2026-11-10T17:28:30+00:00",
-    "published_raw": "Tue, 10 Nov 2026 12:28:30 EST",
-    "summary": "This is the final guidance Recommendations for Testing Blood Donations for Hepatitis B Surface Antigen",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Food and Drug Administration — What's New: Vaccines, Blood and Biologics",
-      "jurisdiction": "US",
-      "family": "product_permissions_and_safety"
-    },
-    "primary_source_id": "us-fda-03f7703006",
-    "n": 8114,
-    "first_seen": "2026-11-02T22:20:55.750782+00:00",
-    "last_seen": "2026-11-10T20:28:57.994479+00:00",
-    "source_ids": [
-      "us-fda-03f7703006"
-    ]
-  },
-  {
-    "title": "PDUFA and BsUFA Quarterly Hiring Updates",
-    "url": "http://www.fda.gov/industry/prescription-drug-user-fee-amendments/pdufa-and-bsufa-quarterly-hiring-updates",
-    "native_id": "http://www.fda.gov/industry/prescription-drug-user-fee-amendments/pdufa-and-bsufa-quarterly-hiring-updates",
-    "published_at": "2026-11-10T16:32:45+00:00",
-    "published_raw": "Tue, 10 Nov 2026 11:32:45 EST",
-    "summary": "PDUFA and BsUFA Quarterly Hiring Updates",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Food and Drug Administration — What's New: Drugs",
-      "jurisdiction": "US",
-      "family": "product_permissions_and_safety"
-    },
-    "primary_source_id": "us-fda-5696b24295",
-    "n": 8811,
-    "first_seen": "2026-11-05T20:41:39.999913+00:00",
-    "last_seen": "2026-11-10T20:28:57.994479+00:00",
-    "source_ids": [
-      "us-fda-5696b24295"
-    ]
-  },
-  {
-    "title": "Biologics Electronic Reading Room (eFOIA)",
-    "url": "http://www.fda.gov/about-fda/center-biologics-evaluation-and-research-cber/biologics-electronic-reading-room-efoia",
-    "native_id": "http://www.fda.gov/about-fda/center-biologics-evaluation-and-research-cber/biologics-electronic-reading-room-efoia",
-    "published_at": "2026-11-10T14:26:18+00:00",
-    "published_raw": "Tue, 10 Nov 2026 09:26:18 EST",
-    "summary": "The Biologics eFOI Reading Room provides access to documents posted throughout the \"Vaccines, Blood & Biologics\" and other sections related to the Center for Biologics Evaluation and Research on the FDA.gov Web site.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Food and Drug Administration — What's New: Vaccines, Blood and Biologics",
-      "jurisdiction": "US",
-      "family": "product_permissions_and_safety"
-    },
-    "primary_source_id": "us-fda-03f7703006",
-    "n": 8815,
-    "first_seen": "2026-11-05T20:41:39.999913+00:00",
-    "last_seen": "2026-11-10T20:28:57.994479+00:00",
-    "source_ids": [
-      "us-fda-03f7703006"
     ]
   }
 ]

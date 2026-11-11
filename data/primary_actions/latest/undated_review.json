@@ -1,416 +1,32 @@
 [
   {
-    "title": "H.R.1703",
-    "url": "https://www.congress.gov/bill/119th-congress/house-bill/1703",
-    "native_id": "H.R.1703",
+    "title": "Samuel Connelly -- Ambridge, Pennsylvania",
+    "url": "https://www.fcc.gov/edoc/426164",
+    "native_id": "426164",
     "published_at": null,
     "published_raw": "",
-    "summary": "Choices for Increased Mobility Act of 2026",
+    "summary": "NOHI/NOUO for transmitting interference to licensed public safety communications network",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congress.gov legislative status",
-      "jurisdiction": "US",
-      "family": "legislative_procedure"
-    },
-    "primary_source_id": "us-congress-76128ee9ff",
-    "n": 9563,
-    "first_seen": "2026-11-10T20:28:57.994479+00:00",
-    "last_seen": "2026-11-10T20:28:57.994479+00:00",
-    "source_ids": [
-      "us-congress-76128ee9ff"
-    ]
-  },
-  {
-    "title": "H.R.997",
-    "url": "https://www.congress.gov/bill/119th-congress/house-bill/997",
-    "native_id": "H.R.997",
-    "published_at": null,
-    "published_raw": "",
-    "summary": "National Taxpayer Advocate Enhancement Act of 2025",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congress.gov legislative status",
-      "jurisdiction": "US",
-      "family": "legislative_procedure"
-    },
-    "primary_source_id": "us-congress-76128ee9ff",
-    "n": 9564,
-    "first_seen": "2026-11-10T20:28:57.994479+00:00",
-    "last_seen": "2026-11-10T20:28:57.994479+00:00",
-    "source_ids": [
-      "us-congress-76128ee9ff"
-    ]
-  },
-  {
-    "title": "Domestic Section 214 Application Filed For The Transfer of Control of Easton Telecom Services, L.L.C. to RSTN Communications LLC",
-    "url": "https://www.fcc.gov/edoc/426703",
-    "native_id": "426703",
-    "published_at": null,
-    "published_raw": "",
-    "summary": "Non-Streamlined Pleading Cycle Established",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Public Notices",
+      "issuer": "Federal Communications Commission — Enforcement Bureau",
       "jurisdiction": "US",
       "family": "telecom_rules_and_licences"
     },
-    "primary_source_id": "us-fcc-e95ecda3bb",
-    "n": 9623,
-    "first_seen": "2026-11-10T20:28:57.994479+00:00",
-    "last_seen": "2026-11-10T20:28:57.994479+00:00",
+    "primary_source_id": "us-fcc-364d1b4932",
+    "n": 9734,
+    "first_seen": "2026-11-11T07:46:05.445744+00:00",
+    "last_seen": "2026-11-11T07:46:05.445744+00:00",
     "source_ids": [
-      "us-fcc-e95ecda3bb"
+      "us-fcc-364d1b4932"
     ]
   },
   {
-    "title": "Grant of Certification for Bond Communications, Inc., to Provide Video Relay Service",
-    "url": "https://www.fcc.gov/edoc/426710",
-    "native_id": "426710",
-    "published_at": null,
-    "published_raw": "",
-    "summary": "The FCC grants Bond Communications full five-year certification to provide Video Relay Service supported by the Interstate TRS Fund.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Public Notices",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
-    },
-    "primary_source_id": "us-fcc-e95ecda3bb",
-    "n": 9624,
-    "first_seen": "2026-11-10T20:28:57.994479+00:00",
-    "last_seen": "2026-11-10T20:28:57.994479+00:00",
-    "source_ids": [
-      "us-fcc-e95ecda3bb"
-    ]
-  },
-  {
-    "title": "Domestic Section 214 Application Filed For The Transfer of Control of Sangoma U.S. Inc. to BRC Group Holdings, Inc.",
-    "url": "https://www.fcc.gov/edoc/426700",
-    "native_id": "426700",
-    "published_at": null,
-    "published_raw": "",
-    "summary": "Streamlined Pleading Cycle Established",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Public Notices",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
-    },
-    "primary_source_id": "us-fcc-e95ecda3bb",
-    "n": 9625,
-    "first_seen": "2026-11-10T20:28:57.994479+00:00",
-    "last_seen": "2026-11-10T20:28:57.994479+00:00",
-    "source_ids": [
-      "us-fcc-e95ecda3bb"
-    ]
-  },
-  {
-    "title": "Applications",
-    "url": "https://www.fcc.gov/edoc/426684",
-    "native_id": "426684",
-    "published_at": null,
-    "published_raw": "",
-    "summary": ".",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Public Notices",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
-    },
-    "primary_source_id": "us-fcc-e95ecda3bb",
-    "n": 9626,
-    "first_seen": "2026-11-10T20:28:57.994479+00:00",
-    "last_seen": "2026-11-10T20:28:57.994479+00:00",
-    "source_ids": [
-      "us-fcc-e95ecda3bb"
-    ]
-  },
-  {
-    "title": "Pleadings",
-    "url": "https://www.fcc.gov/edoc/426686",
-    "native_id": "426686",
-    "published_at": null,
-    "published_raw": "",
-    "summary": ".",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Public Notices",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
-    },
-    "primary_source_id": "us-fcc-e95ecda3bb",
-    "n": 9627,
-    "first_seen": "2026-11-10T20:28:57.994479+00:00",
-    "last_seen": "2026-11-10T20:28:57.994479+00:00",
-    "source_ids": [
-      "us-fcc-e95ecda3bb"
-    ]
-  },
-  {
-    "title": "Actions",
-    "url": "https://www.fcc.gov/edoc/426685",
-    "native_id": "426685",
-    "published_at": null,
-    "published_raw": "",
-    "summary": ".",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Public Notices",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
-    },
-    "primary_source_id": "us-fcc-e95ecda3bb",
-    "n": 9628,
-    "first_seen": "2026-11-10T20:28:57.994479+00:00",
-    "last_seen": "2026-11-10T20:28:57.994479+00:00",
-    "source_ids": [
-      "us-fcc-e95ecda3bb"
-    ]
-  },
-  {
-    "title": "Satellite Communications Services - SES",
-    "url": "https://www.fcc.gov/edoc/426688",
-    "native_id": "426688",
-    "published_at": null,
-    "published_raw": "",
-    "summary": ".",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Public Notices",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
-    },
-    "primary_source_id": "us-fcc-e95ecda3bb",
-    "n": 9629,
-    "first_seen": "2026-11-10T20:28:57.994479+00:00",
-    "last_seen": "2026-11-10T20:28:57.994479+00:00",
-    "source_ids": [
-      "us-fcc-e95ecda3bb"
-    ]
-  },
-  {
-    "title": "Satellite Communications Services - SES",
-    "url": "https://www.fcc.gov/edoc/426689",
-    "native_id": "426689",
-    "published_at": null,
-    "published_raw": "",
-    "summary": ".",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Public Notices",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
-    },
-    "primary_source_id": "us-fcc-e95ecda3bb",
-    "n": 9630,
-    "first_seen": "2026-11-10T20:28:57.994479+00:00",
-    "last_seen": "2026-11-10T20:28:57.994479+00:00",
-    "source_ids": [
-      "us-fcc-e95ecda3bb"
-    ]
-  },
-  {
-    "title": "Domestic Section 214 Application Filed for the Transfer of Control of Affinity Network Incorporated, NOS Communications, Inc., and NOSVA Limited Partnership to The Samuel P. Delug Living Trust",
-    "url": "https://www.fcc.gov/edoc/426692",
-    "native_id": "426692",
-    "published_at": null,
-    "published_raw": "",
-    "summary": ".",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Public Notices",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
-    },
-    "primary_source_id": "us-fcc-e95ecda3bb",
-    "n": 9631,
-    "first_seen": "2026-11-10T20:28:57.994479+00:00",
-    "last_seen": "2026-11-10T20:28:57.994479+00:00",
-    "source_ids": [
-      "us-fcc-e95ecda3bb"
-    ]
-  },
-  {
-    "title": "PSHSB Announces Region 28 (Delaware, Eastern Pennsylvania, and Southern New Jersey) RPCs to Hold 700 MHZ and 800 MHZ Meetings",
-    "url": "https://www.fcc.gov/edoc/426706",
-    "native_id": "426706",
-    "published_at": null,
-    "published_raw": "",
-    "summary": "Announces Region 28 (DE, PA, and NJ) RPC Meetings for 700 MHZ and 800 MHZ",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Public Notices",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
-    },
-    "primary_source_id": "us-fcc-e95ecda3bb",
-    "n": 9632,
-    "first_seen": "2026-11-10T20:28:57.994479+00:00",
-    "last_seen": "2026-11-10T20:28:57.994479+00:00",
-    "source_ids": [
-      "us-fcc-e95ecda3bb"
-    ]
-  },
-  {
-    "title": "Applications Accepted for Filing for the Transfer of Control of Subsidiaries of British Telecommunications Limited and Assignment, Transfer, and Acquisition of Assets of Verizon Communications, Inc. to Jasper NewCo Limited",
-    "url": "https://www.fcc.gov/edoc/426694",
-    "native_id": "426694",
-    "published_at": null,
-    "published_raw": "",
-    "summary": ".",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Public Notices",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
-    },
-    "primary_source_id": "us-fcc-e95ecda3bb",
-    "n": 9633,
-    "first_seen": "2026-11-10T20:28:57.994479+00:00",
-    "last_seen": "2026-11-10T20:28:57.994479+00:00",
-    "source_ids": [
-      "us-fcc-e95ecda3bb"
-    ]
-  },
-  {
-    "title": "Auction of FM Broadcast Construction Permits Scheduled for February 2, 2027; Status of Applications to Participate in Auction 114",
-    "url": "https://www.fcc.gov/edoc/426508",
-    "native_id": "426508",
-    "published_at": null,
-    "published_raw": "",
-    "summary": "Announces the status of short-form applications to participate in Auction 114 (FM Broadcast)",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Public Notices",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
-    },
-    "primary_source_id": "us-fcc-e95ecda3bb",
-    "n": 9634,
-    "first_seen": "2026-11-10T20:28:57.994479+00:00",
-    "last_seen": "2026-11-10T20:28:57.994479+00:00",
-    "source_ids": [
-      "us-fcc-e95ecda3bb"
-    ]
-  },
-  {
-    "title": "PSHSB Announces Region 8 (New York Metropolitan and Northern New Jersey) RPCs to Hold 700 MHZ and 800 MHZ Meetings",
-    "url": "https://www.fcc.gov/edoc/426702",
-    "native_id": "426702",
-    "published_at": null,
-    "published_raw": "",
-    "summary": "Announces Region 8 (New York Metropolitan and Northern New Jersey) RPC Meetings for 700 MHZ and 800 MHZ",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Public Notices",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
-    },
-    "primary_source_id": "us-fcc-e95ecda3bb",
-    "n": 9635,
-    "first_seen": "2026-11-10T20:28:57.994479+00:00",
-    "last_seen": "2026-11-10T20:28:57.994479+00:00",
-    "source_ids": [
-      "us-fcc-e95ecda3bb"
-    ]
-  },
-  {
-    "title": "Wireless Telecommunications Bureau Accepts for Filing Starlink Spectrum Holdings, LLC, Space Exploration Technologies Corp., NewLevel IV, L.P., Prism License Co. 1 LLC, and Prism License Co. 2 LCC Transfer of Control Applications",
-    "url": "https://www.fcc.gov/edoc/426723",
-    "native_id": "426723",
-    "published_at": null,
-    "published_raw": "",
-    "summary": "Public Notice announcing that the SpaceX-Grain Transfer of Control Applications have been found to be acceptable for filing",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Public Notices",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
-    },
-    "primary_source_id": "us-fcc-e95ecda3bb",
-    "n": 9636,
-    "first_seen": "2026-11-10T20:28:57.994479+00:00",
-    "last_seen": "2026-11-10T20:28:57.994479+00:00",
-    "source_ids": [
-      "us-fcc-e95ecda3bb"
-    ]
-  },
-  {
-    "title": "Man sentenced over £154m fake takeover bid targeting UK-listed company",
-    "url": "https://www.fca.org.uk/news/press-releases/man-sentenced-over-154m-fake-takeover-bid-targeting-uk-listed-company",
-    "native_id": "177531",
-    "published_at": null,
-    "published_raw": "Tuesday, November 10, 2026 - 17:12",
-    "summary": "Christopher Woolcott has today been given a 2-year prison sentence, suspended for 2 years, after staging a £154m fake takeover bid for Touchstone Exploration Inc. He was also ordered to complete 200 hours of unpaid work and to pay costs of £4,627.73.Mr Woolcott built a sizeable stake in Touchstone, an oil and gas listed company. He then launched a bogus bid to drive up its share price. To give the bid credibility, Mr Woolcott invented several identities, forged takeover documents using Chat GPT and met Touchstone’s chief executive at a central London hotel under a false name. Touchstone ultimately determined that the bid was not legitimate.Had his plan succeeded, he stood to gain as much as £70,000 through the sale of his shares.The Financial Conduct Authority (FCA) used a combination of its transaction reporting data, phone records, receipts, CCTV footage and evidence seized to identify Mr Woolcott as the person behind the fraud.Investigators traced three phone numbers used by different supposed individuals to contact Touchstone, to the same handset, and combined voter-register, open source research and FCA trading data to narrow down potential suspects. A parking payment also pla",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Financial Conduct Authority",
-      "jurisdiction": "UK",
-      "family": "financial_enforcement"
-    },
-    "primary_source_id": "uk-fca-7b9977ec8e",
-    "n": 9658,
-    "first_seen": "2026-11-10T20:28:57.994479+00:00",
-    "last_seen": "2026-11-10T20:28:57.994479+00:00",
-    "source_ids": [
-      "uk-fca-7b9977ec8e"
-    ]
-  },
-  {
-    "title": "China issues revised regulations on management of foundations",
-    "url": "https://english.www.gov.cn/policies/latestreleases/202611/10/content_WS6af31c5dc6d00ca5f9a0e342.html",
-    "native_id": "https://english.www.gov.cn/policies/latestreleases/202611/10/content_WS6af31c5dc6d00ca5f9a0e342.html",
+    "title": "Announcement of the Winners in the 12th Robot Awards Program",
+    "url": "https://www.meti.go.jp/english/press/2026/11/20261111001.html",
+    "native_id": "https://www.meti.go.jp/english/press/2026/11/20261111001.html",
     "published_at": null,
     "published_raw": null,
     "summary": "",
@@ -419,16 +35,16 @@
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "State Council of China policies",
-      "jurisdiction": "CN",
-      "family": "executive_instruments"
+      "issuer": "Japan Ministry of Economy Trade and Industry",
+      "jurisdiction": "JP",
+      "family": "trade_and_industry_policy"
     },
-    "primary_source_id": "cn-state-council-index",
-    "n": 9661,
-    "first_seen": "2026-11-10T20:28:57.994479+00:00",
-    "last_seen": "2026-11-10T20:28:57.994479+00:00",
+    "primary_source_id": "jp-meti-index",
+    "n": 9742,
+    "first_seen": "2026-11-11T07:46:05.445744+00:00",
+    "last_seen": "2026-11-11T07:46:05.445744+00:00",
     "source_ids": [
-      "cn-state-council-index"
+      "jp-meti-index"
     ]
   }
 ]
