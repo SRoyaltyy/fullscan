@@ -1,6 +1,6 @@
 {
   "date": "2026-11-11",
-  "generated_at": "2026-11-11T13:14:47.103681-05:00",
+  "generated_at": "2026-11-11T13:14:58.175053-05:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -154,150 +154,6 @@
   },
   "sectors": {},
   "lands": [
-    {
-      "key": "live_boards",
-      "title": "Live 1d BUY/SELL strip",
-      "date": "2026-11-11",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-11-11T09:12:08.578467-05:00",
-      "files": [
-        {
-          "path": "data/day_board/today.json",
-          "ok": true,
-          "reason": "",
-          "size": 18464,
-          "preview": "2026-11-11 BUY HNST, HLF, CLX, PRCH, PFGC, TTD, GCT, ZETA \u00b7 SELL GTM, VSAT, ZS, ENPH, EXFY, ASTS, ECX, CGC"
-        },
-        {
-          "path": "data/day_board/latest.json",
-          "ok": true,
-          "reason": "",
-          "size": 1115,
-          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
-        },
-        {
-          "path": "data/day_board/2026-11-11.json",
-          "ok": true,
-          "reason": "",
-          "size": 76281,
-          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href"
-        },
-        {
-          "path": "data/day_board/2026-11-11_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 38438,
-          "preview": "2026-11-11 BUY HNST, HLF, CLX, PRCH, PFGC, TTD, GCT, ZETA \u00b7 SELL GTM, VSAT, ZS, ENPH, EXFY, ASTS, ECX, CGC"
-        },
-        {
-          "path": "data/day_board/strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 982065,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "data/day_board/2026-11-11_strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 982065,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "data/factor_mine/morning_look/2026-11-11.json",
-          "ok": true,
-          "reason": "",
-          "size": 284140,
-          "preview": "keys: asof_commit, asof_committed_at, cutoff_et, date, n, read_from, rows"
-        },
-        {
-          "path": "data/day_board/today_strategies.json",
-          "ok": true,
-          "reason": "",
-          "size": 1408389,
-          "preview": "2026-11-11 BUY HNST, HLF, CLX, PRCH, PFGC, TTD, GCT, ZETA \u00b7 SELL GTM, VSAT, ZS, ENPH, EXFY, ASTS, ECX, CGC"
-        },
-        {
-          "path": "data/factor_mine/strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 982065,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "dashboard/factor-mine/today.json",
-          "ok": true,
-          "reason": "",
-          "size": 38438,
-          "preview": "2026-11-11 BUY HNST, HLF, CLX, PRCH, PFGC, TTD, GCT, ZETA \u00b7 SELL GTM, VSAT, ZS, ENPH, EXFY, ASTS, ECX, CGC"
-        },
-        {
-          "path": "dashboard/factor-mine/strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 982065,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "dashboard/factor-mine/today_strategies.json",
-          "ok": true,
-          "reason": "",
-          "size": 982065,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "dashboard/today_strategies.json",
-          "ok": true,
-          "reason": "",
-          "size": 1408389,
-          "preview": "2026-11-11 BUY HNST, HLF, CLX, PRCH, PFGC, TTD, GCT, ZETA \u00b7 SELL GTM, VSAT, ZS, ENPH, EXFY, ASTS, ECX, CGC"
-        },
-        {
-          "path": "data/day_board/hold_live_px.json",
-          "ok": true,
-          "reason": "",
-          "size": 1791,
-          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
-        },
-        {
-          "path": "dashboard/factor-mine/hold_live_px.json",
-          "ok": true,
-          "reason": "",
-          "size": 1791,
-          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
-        },
-        {
-          "path": "data/day_board/today_strategies.after-freeze-1.json",
-          "ok": true,
-          "reason": "",
-          "size": 281364,
-          "preview": "2026-11-04 BUY CDNA, BLFS, VEEV, ILMN, PRCH, LAUR, CNK, CHEF \u00b7 SELL NEOV, BIDU, ROIV, BAK, PAL, GFL, VNET, NOK"
-        },
-        {
-          "path": "data/day_board/today_strategies.after-freeze-2.json",
-          "ok": true,
-          "reason": "",
-          "size": 1165723,
-          "preview": "2026-11-04 BUY CDNA, BLFS, VEEV, ILMN, PRCH, LAUR, CNK, TRU \u00b7 SELL NEOV, BIDU, ROIV, BAK, GFL, PAL, VNET, NFLX"
-        },
-        {
-          "path": "data/day_board/today_strategies.after-freeze-3.json",
-          "ok": true,
-          "reason": "",
-          "size": 885881,
-          "preview": "2026-11-05 BUY XYZ, CDW, KD, JKHY, APPN, VRSN, DBX, MSFT \u00b7 SELL ENVX, AMKR, FCEL, METC, AMPX, EAF, HYLN, RGTI"
-        },
-        {
-          "path": "data/day_board/today_strategies.after-freeze-4.json",
-          "ok": true,
-          "reason": "",
-          "size": 1462227,
-          "preview": "2026-11-10 BUY MGNI, TMDX, ETON, WRBY, ADPT, RBLX, SG, SEZL \u00b7 SELL XPRO, KOS, ACDC, BTU, VET, AESI, IEP, SOC"
-        }
-      ],
-      "preview": "2026-11-11 BUY HNST, HLF, CLX, PRCH, PFGC, TTD, GCT, ZETA \u00b7 SELL GTM, VSAT, ZS, ENPH, EXFY, ASTS, ECX, CGC \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href \u00b7 2026-11-11 BUY HNST, HLF, CLX, PRCH, PFGC, TTD, GCT, ZETA \u00b7 SELL GTM, VSAT, ZS, ENPH, EXFY, ASTS, ECX, CGC \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: asof_commit, asof_committed_at, cutoff_et, date, n, read_from, rows \u00b7 2026-11-11 BUY HNST, HLF, CLX, PRCH, PFGC, TTD, GCT, ZETA \u00b7 SELL GTM, VSAT, ZS, ENPH, EXFY, ASTS, ECX, CGC \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-11-11 BUY HNST, HLF, CLX, PRCH, PFGC, TTD, GCT, ZETA \u00b7 SELL GTM, VSAT, ZS, ENPH, EXFY, ASTS, ECX, CGC \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_"
-    },
     {
       "key": "paper",
       "title": "Paper dashboard",
@@ -745,6 +601,45 @@
         }
       ],
       "preview": "weather sectors 11 \u00b7 Basic Materials={'score': 1.7650000000000001, 'dir': 'up', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': 1.1549999999999998, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': 0.645, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': 1.53, 'dir': 'up', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -6.295, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -0.02, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': 0.43, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -0.815, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-11-11\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade. \u00b7 weather sectors 11 \u00b7 Basic Materials={'score': 1.7650000000000001, 'dir': 'up', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': 1.1549999999999998, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': 0.645, 'dir': 'flat', 'conf': 0.4, 'source': 'fin"
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-11-11",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-11T13:14:57.257470-05:00",
+      "files": [
+        {
+          "path": "data/join/2026-11-11_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2280768,
+          "preview": "5894 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 ELF, NUE, SSD, FRPT, MEOH"
+        },
+        {
+          "path": "data/join/2026-11-11_ranked.after-freeze-1.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2280768,
+          "preview": "5894 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 ELF, NUE, SSD, FRPT, MEOH"
+        },
+        {
+          "path": "data/join/2026-11-11_ranked.after-freeze-2.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2280768,
+          "preview": "5894 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 ELF, NUE, SSD, FRPT, MEOH"
+        },
+        {
+          "path": "data/join/2026-11-11_ranked.after-freeze-3.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2280768,
+          "preview": "5894 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 ELF, NUE, SSD, FRPT, MEOH"
+        }
+      ],
+      "preview": "5894 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 ELF, NUE, SSD, FRPT, MEOH \u00b7 5894 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 ELF, NUE, SSD, FRPT, MEOH \u00b7 5894 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 ELF, NUE, SSD, FRPT, MEOH \u00b7 5894 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 ELF, NUE, SSD, FRPT, MEOH"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
