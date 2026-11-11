@@ -1,6 +1,6 @@
 {
   "date": "2026-11-10",
-  "generated_at": "2026-11-10T17:04:55.736437-05:00",
+  "generated_at": "2026-11-11T02:50:38.441019-05:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -351,14 +351,11 @@
           "path": "01_daily/2026-11-10_preopen_qc.json",
           "role": "required",
           "status": "OK",
-          "reason": "all_ok=False",
-          "size": 7576,
-          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 18 fail",
+          "reason": "all_ok=True",
+          "size": 7475,
+          "said": "all_ok=True \u00b7 sectors 11/11 \u00b7 1 fail",
           "bullets": [
-            "general_predict:missing",
-            "events:missing",
-            "news_judge:missing",
-            "news_parse:missing"
+            "map_heat_research:missing"
           ]
         },
         {
@@ -367,9 +364,9 @@
           "path": "01_daily/2026-11-10_preopen_status.json",
           "role": "required",
           "status": "OK",
-          "reason": "all_ok=False missing=['events', 'news_judge', 'map_heat_research', 'general_predict']",
-          "size": 6635,
-          "said": "all_ok=False \u00b7 qc=False \u00b7 grok=False \u00b7 book=False \u00b7 missing events, news_judge, map_heat_research, general_predict",
+          "reason": "all_ok=False missing=['map_heat_research']",
+          "size": 6508,
+          "said": "all_ok=False \u00b7 qc=True \u00b7 grok=False \u00b7 book=True \u00b7 missing map_heat_research",
           "bullets": []
         },
         {
@@ -379,7 +376,7 @@
           "role": "required",
           "status": "OK",
           "reason": "ok=False Grok returned an empty review",
-          "size": 308,
+          "size": 309,
           "said": "ok=False \u00b7 empty_review_reply (review)",
           "bullets": [
             "Grok returned an empty review"
@@ -853,7 +850,7 @@
           "role": "required",
           "status": "OK",
           "reason": "horizons=5 names=245",
-          "size": 1642245,
+          "size": 1642248,
           "said": "1d BUY MGNI, TMDX, ETON, WRBY, ADPT, RBLX, SG, SEZL \u00b7 SELL XPRO, KOS, ACDC, BTU, VET, AESI \u00b7 0.65875",
           "bullets": []
         },
@@ -864,10 +861,10 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 106289,
+          "size": 106325,
           "said": "Stock book \u2014 2026-11-10",
           "bullets": [
-            "_Generated 2026-11-10T17:04:51.922675-05:00_",
+            "_Generated 2026-11-10T09:13:10.817916-05:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -903,7 +900,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "live-book poller + today.json (2026-11-10)",
-          "size": 16224396,
+          "size": 16224374,
           "said": "live-book poller + today.json (2026-11-10)",
           "bullets": []
         }
@@ -931,7 +928,7 @@
           "role": "input",
           "status": "OK",
           "reason": "horizons=5 names=245",
-          "size": 1642245,
+          "size": 1642248,
           "said": "1d BUY MGNI, TMDX, ETON, WRBY, ADPT, RBLX, SG, SEZL \u00b7 SELL XPRO, KOS, ACDC, BTU, VET, AESI \u00b7 0.65875",
           "bullets": []
         },
@@ -942,7 +939,7 @@
           "role": "required",
           "status": "OK",
           "reason": "live-book poller + today.json (2026-11-10)",
-          "size": 16224396,
+          "size": 16224374,
           "said": "live-book poller + today.json (2026-11-10)",
           "bullets": []
         },
@@ -2306,6 +2303,52 @@
         }
       ],
       "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest (close) \u2014 2026-11-10\n**Generated:** 2026-11-10T16:32:28.744966-05:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks closed lower as hotter October CPI pushed the 10-year yield back near 5% and December Fed hike odds toward 99%\n**Prior close:** SPX -0.40%  Nasdaq -0.74%  Dow -0.30%\n**SPX:** -0.40%  **Nasdaq:** -0.74%  **Dow:** -0.30%\n**Oil:** \u2014\n**CPI/Fed:** October CPI rose 0; 99.0% hike (hike odds climbing to 99%)\n**Leaders:** CME, DB, NVDA, MSFT, PEPG, SANM, SBH, ONON, GFL, PBR, ALC, CRWV\n**Next session:** housing no \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** \u2014\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-11-11\n**Clock use:** `next_open`"
+    },
+    {
+      "key": "finviz_digest",
+      "title": "Finviz digest",
+      "date": "2026-11-10",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-11T02:50:37.150822-05:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-11-10_finviz_digest.after-freeze-1.json",
+          "ok": true,
+          "reason": "",
+          "size": 99048,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        },
+        {
+          "path": "01_daily/news/2026-11-10_finviz_digest.after-freeze-1.md",
+          "ok": true,
+          "reason": "",
+          "size": 11088,
+          "preview": "# Finviz Daily Digest \u2014 2026-11-10\n_Generated 2026-11-11T02:50:36.485352-05:00 \u00b7 export=data/exports/finviz_2026-11-10.csv \u00b7 ticker digests=1144 \u00b7 high-signal=439_"
+        },
+        {
+          "path": "data/exports/finviz_2026-11-10.after-freeze-1.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11079951,
+          "preview": "11748 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAB\""
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11079951,
+          "preview": "11748 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAB\""
+        },
+        {
+          "path": "01_daily/news/2026-11-10_finviz_digest_preopen.json",
+          "ok": true,
+          "reason": "",
+          "size": 102637,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        }
+      ],
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-11-10\n_Generated 2026-11-11T02:50:36.485352-05:00 \u00b7 export=data/exports/finviz_2026-11-10.csv \u00b7 ticker digests=1144 \u00b7 high-signal=439_ \u00b7 11748 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAB\" \u00b7 11748 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAB\" \u00b7 keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
     }
   ],
   "href": {
@@ -2367,6 +2410,46 @@
       "path": "data/exports/finviz_2026-11-10.csv",
       "at": "2026-11-11T02:50:10-05:00",
       "commit_msg": "auto: land finviz export [2026-11-10]",
+      "workflow": "Finviz ALL (GH-hosted Elite)",
+      "run_id": "42981381792",
+      "manifest": "research/input_freeze/2026-11-10/manifest.json"
+    },
+    {
+      "path": "01_daily/2026-11-10_grok_review.json",
+      "at": "2026-11-11T02:50:39-05:00",
+      "commit_msg": "auto: land finviz_digest [2026-11-10]",
+      "workflow": "Finviz ALL (GH-hosted Elite)",
+      "run_id": "42981381792",
+      "manifest": "research/input_freeze/2026-11-10/manifest.json"
+    },
+    {
+      "path": "01_daily/2026-11-10_preopen_qc.json",
+      "at": "2026-11-11T02:50:39-05:00",
+      "commit_msg": "auto: land finviz_digest [2026-11-10]",
+      "workflow": "Finviz ALL (GH-hosted Elite)",
+      "run_id": "42981381792",
+      "manifest": "research/input_freeze/2026-11-10/manifest.json"
+    },
+    {
+      "path": "01_daily/2026-11-10_preopen_status.json",
+      "at": "2026-11-11T02:50:39-05:00",
+      "commit_msg": "auto: land finviz_digest [2026-11-10]",
+      "workflow": "Finviz ALL (GH-hosted Elite)",
+      "run_id": "42981381792",
+      "manifest": "research/input_freeze/2026-11-10/manifest.json"
+    },
+    {
+      "path": "01_daily/2026-11-10_preopen_status.md",
+      "at": "2026-11-11T02:50:39-05:00",
+      "commit_msg": "auto: land finviz_digest [2026-11-10]",
+      "workflow": "Finviz ALL (GH-hosted Elite)",
+      "run_id": "42981381792",
+      "manifest": "research/input_freeze/2026-11-10/manifest.json"
+    },
+    {
+      "path": "data/day_board/2026-11-10.json",
+      "at": "2026-11-11T02:50:39-05:00",
+      "commit_msg": "auto: land finviz_digest [2026-11-10]",
       "workflow": "Finviz ALL (GH-hosted Elite)",
       "run_id": "42981381792",
       "manifest": "research/input_freeze/2026-11-10/manifest.json"
