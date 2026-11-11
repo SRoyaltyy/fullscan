@@ -9255,5 +9255,93 @@
     "sha256": "7240ee6627ef305cc2e7089b33e6a5cbc8975c46ff0d5eef6f7324191ee06463",
     "shares": 142,
     "ticker": "WYHG"
+  },
+  {
+    "bar_cutoff": "2026-11-10",
+    "cash_before": 31.72505012337524,
+    "committed_at": "2026-11-11T14:09:06Z",
+    "date": "2026-11-11",
+    "excluded_unexplained_legs": [
+      {
+        "bar_date": "2026-11-09",
+        "leg": "close_over_prev_close",
+        "reason": "not a verified split and not a filing-verified real move",
+        "ticker": "ZURA"
+      },
+      {
+        "bar_date": "2026-11-09",
+        "leg": "open_over_prev_close",
+        "reason": "not a verified split and not a filing-verified real move",
+        "ticker": "ZURA"
+      }
+    ],
+    "finviz_source": {
+      "commit": "abd1f0764d318753311c54ad79315346b762c32e",
+      "commit_time": "2026-11-10T21:48:29Z",
+      "file_sha256": "6411fb58c2c99a292c0fa3bc5944f4b40a981aa597dece36527b1b430cc8436c",
+      "path": "data/snapshots/2026-11-10.csv",
+      "snapshot_date": "2026-11-10",
+      "status": "BEFORE_OPEN"
+    },
+    "holdup_on": true,
+    "kind": "plan",
+    "morning_s": 12.369,
+    "picks": [
+      {
+        "fv_avg_volume": 894.6,
+        "fv_price": 4.61,
+        "rank": 1,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "PEPG"
+      },
+      {
+        "fv_avg_volume": 809.25,
+        "fv_price": 6.59,
+        "rank": 2,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "ZIP"
+      },
+      {
+        "fv_avg_volume": 6674.5,
+        "fv_price": 0.59,
+        "rank": 3,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "HUMA"
+      },
+      {
+        "fv_avg_volume": 2792.19,
+        "fv_price": 23.28,
+        "rank": 4,
+        "sources": [
+          "ohlc_hot"
+        ],
+        "ticker": "REPL"
+      }
+    ],
+    "planned_sells": [
+      {
+        "reason": "hold-expired",
+        "shares": 159,
+        "ticker": "ZJYL"
+      }
+    ],
+    "recipe": "union_hot_n4_holdup__w0",
+    "s_source": {
+      "blob_sha": "179ef35e1ab12e1ea27fb90598b63d5d54335b6f",
+      "kind": "predict",
+      "path": "01_daily/general/2026-11-11_predict.md",
+      "server_time_utc": "2026-11-11T20:11:31+08:00",
+      "status": "BEFORE_1330"
+    },
+    "sha256": "e0fd92c2bc4ac2060332c5dc7d2012e1b7036730f5aeb7a50627eaacd1502889"
   }
 ]
