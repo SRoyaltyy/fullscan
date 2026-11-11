@@ -1,12 +1,12 @@
 {
   "date": "2026-11-11",
-  "generated_at": "2026-11-11T04:37:07.478448-05:00",
+  "generated_at": "2026-11-11T04:37:27.622996-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
     "ok": 4,
-    "partial": 3,
-    "fail": 1,
+    "partial": 4,
+    "fail": 0,
     "n": 8
   },
   "buy_1d": [],
@@ -15,31 +15,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "finviz_digest",
-      "title": "Finviz digest",
-      "date": "2026-11-11",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-11-11T04:34:59.285949-05:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-11-11_finviz_digest.json",
-          "ok": true,
-          "reason": "",
-          "size": 102592,
-          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
-        },
-        {
-          "path": "01_daily/news/2026-11-11_finviz_digest.md",
-          "ok": true,
-          "reason": "",
-          "size": 11481,
-          "preview": "# Finviz Daily Digest \u2014 2026-11-11\n_Generated 2026-11-11T04:22:25.597463-05:00 \u00b7 export=data/exports/finviz_2026-11-10.csv \u00b7 ticker digests=2008 \u00b7 high-signal=950_"
-        }
-      ],
-      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-11-11\n_Generated 2026-11-11T04:22:25.597463-05:00 \u00b7 export=data/exports/finviz_2026-11-10.csv \u00b7 ticker digests=2008 \u00b7 high-signal=950_"
-    },
     {
       "key": "map_heat",
       "title": "Map heat tables",
@@ -200,6 +175,31 @@
         }
       ],
       "preview": "raw=10005 usable=997 single=622 \u00b7 Watch Fed\u2019s Waller Sparks Larger Rate Hike Debate After Hot Inflation - Bloomber | Gold Holds Decline as US Jobs Data Fan December Rate Hike Bets - Bloomberg.com | Dollar Set for Best Day Since September as CPI Lifts Hike Bets - Bloomberg.com | Canadian dollar hits near four-week low as US CPI data boosts greenback - Reuter | Instant view: Hot October inflation report rattles markets - Reuters \u00b7 # News Parse v2 \u2014 2026-11-11T04:36:57.876981-05:00\nWindow\u224848h | news_mode=on | raw=10005 | usable=997 | single_name=622 | noise_dropped=8167\nusable polarity={'+': 44, '-': 217, 'mixed': 7, 'neutral': 729}"
+    },
+    {
+      "key": "news_actions",
+      "title": "News actions",
+      "date": "2026-11-11",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-11T04:37:26.627986-05:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-11-11_actions.json",
+          "ok": true,
+          "reason": "",
+          "size": 64682,
+          "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers"
+        },
+        {
+          "path": "01_daily/news/2026-11-11_actions.md",
+          "ok": true,
+          "reason": "",
+          "size": 15695,
+          "preview": "# News \u2192 Actions v4 (full framework) \u2014 2026-11-11T04:37:26.608238-05:00\nraw=10003 unique_events=7 tickers=72"
+        }
+      ],
+      "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-11-11T04:37:26.608238-05:00\nraw=10003 unique_events=7 tickers=72"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
