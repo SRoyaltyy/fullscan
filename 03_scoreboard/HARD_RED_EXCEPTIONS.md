@@ -2,7 +2,7 @@
 
 Live sleeves still SIT on S≤−3. Search a ticker for every session since 8/13: cameras (+N −N), 09:30 open, close, same-day % and hold-1/3/5 with actual prices.
 
-Generated 2026-11-11T14:01:26.340255-05:00 · 2026-08-13 → 2026-11-10 · live sit **untouched**.
+Generated 2026-11-11T14:34:10.145325-05:00 · 2026-08-13 → 2026-11-10 · live sit **untouched**.
 
 ## Latest morning
 
@@ -10,25 +10,25 @@ Generated 2026-11-11T14:01:26.340255-05:00 · 2026-08-13 → 2026-11-10 · live 
 
 ### Longs weather sat on (top)
 
-- **FG** idio +33 · +10 −0 · E good · H1 -2.74% H3 None%
-- **ZVRA** idio +33 · +9 −0 · E good · H1 1.19% H3 None%
+- **FG** idio +33 · +10 −0 · E good · H1 -2.39% H3 None%
+- **ZVRA** idio +33 · +9 −0 · E good · H1 1.02% H3 None%
 - **ALGN** idio +31 · +9 −0 · E good · H1 1.42% H3 None%
-- **TMDX** idio +31 · +9 −0 · E good · H1 -2.23% H3 None%
-- **ETON** idio +31 · +8 −0 · E good · H1 8.46% H3 None%
-- **SERV** idio +31 · +8 −0 · E good · H1 -2.13% H3 None%
+- **TMDX** idio +31 · +9 −0 · E good · H1 -1.55% H3 None%
+- **ETON** idio +31 · +8 −0 · E good · H1 7.86% H3 None%
+- **SERV** idio +31 · +8 −0 · E good · H1 -2.28% H3 None%
 - **GRDN** idio +30 · +8 −0 · E good · H1 7.61% H3 None%
-- **CWST** idio +30 · +7 −0 · E good · H1 6.4% H3 None%
+- **CWST** idio +30 · +7 −0 · E good · H1 6.42% H3 None%
 
 ### Shorts weather sat on (top)
 
-- **ASTS** idio -9 · +2 −5 · H1 -6.76%
-- **HPK** idio -9 · +3 −5 · H1 -11.46%
-- **URG** idio -9 · +2 −5 · H1 15.28%
-- **TDW** idio -7 · +3 −4 · H1 -11.15%
-- **LAND** idio -6 · +2 −4 · H1 -4.38%
-- **KLC** idio -5 · +2 −3 · H1 5.7%
-- **PBR** idio -5 · +3 −4 · H1 0.41%
-- **ONDS** idio -5 · +2 −5 · H1 0.84%
+- **ASTS** idio -9 · +2 −5 · H1 -6.74%
+- **HPK** idio -9 · +3 −5 · H1 -10.31%
+- **URG** idio -9 · +2 −5 · H1 15.86%
+- **TDW** idio -7 · +3 −4 · H1 -10.63%
+- **LAND** idio -6 · +2 −4 · H1 -5.02%
+- **KLC** idio -5 · +2 −3 · H1 4.17%
+- **PBR** idio -5 · +3 −4 · H1 1.13%
+- **ONDS** idio -5 · +2 −5 · H1 1.44%
 
 ## If we had taken them on hard-red sits (research)
 
