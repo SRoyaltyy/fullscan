@@ -409,6 +409,32 @@
           "s": 6.883,
           "sells": [],
           "sit": false
+        },
+        {
+          "buys": [
+            "TLS",
+            "INDI",
+            "ETON",
+            "ATER"
+          ],
+          "date": "2026-11-11",
+          "equity": 9931.97,
+          "mean": -0.4282,
+          "picks": [
+            "TLS",
+            "INDI",
+            "ETON",
+            "ATER"
+          ],
+          "reasons": [],
+          "s": 12.369,
+          "sells": [
+            "AEHL",
+            "EVC",
+            "FLY",
+            "GOGO"
+          ],
+          "sit": false
         }
       ],
       "label": "starts 10-08 open, no past days",
@@ -812,6 +838,25 @@
           ],
           "reasons": [],
           "s": 6.883,
+          "sells": [],
+          "sit": false
+        },
+        {
+          "buys": [
+            "INDI",
+            "ATER"
+          ],
+          "date": "2026-11-11",
+          "equity": 9448.34,
+          "mean": 6.3363,
+          "picks": [
+            "TLS",
+            "INDI",
+            "ETON",
+            "ATER"
+          ],
+          "reasons": [],
+          "s": 12.369,
           "sells": [],
           "sit": false
         }
