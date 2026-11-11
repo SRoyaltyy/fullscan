@@ -1,6 +1,6 @@
-# Learnings report — 2026-11-09
+# Learnings report — 2026-11-10
 
-Generated: **2026-11-10T20:23:45.350473-05:00** by `src/learn_cycle.py`.
+Generated: **2026-11-10T20:26:06.900086-05:00** by `src/learn_cycle.py`.
 
 This is the human-readable digest of what the bot **actually learned** this cycle: graded evidence, hypotheses (wins and losses), promoted standing rules, and **how that changes every daily workflow**.
 
@@ -17,8 +17,8 @@ Machine policy file (injected into predicts): `00_grounding/mutable_policy.md`.
 | News hypotheses | 1 |
 | Lessons promoted to active | 0 |
 | Lessons retired (efficacy-gated) | 10 |
-| Active lesson files now | 213 |
-| Engine policy version | 166 |
+| Active lesson files now | 203 |
+| Engine policy version | 167 |
 
 ## 2. Accuracy by topic (evidence this cycle learned from)
 
@@ -502,16 +502,16 @@ Full text lives in `02_lessons/active/`. Summaries also feed `mutable_policy.md`
 
 ## 4b. Retired this cycle (topic got worse after the lesson went live)
 
-- `a-utilities-xlu-call-is-built-after-a-stretch-of-risk-on-gro.md` (sector:Utilities): 80% → 14% (-66%) → `02_lessons/retired/`
-- `a-sector-call-has-a-scheduled-8-30-et-macro-release-pending.md` (sector:Financial): 75% → 14% (-61%) → `02_lessons/retired/`
-- `in-a-utilities-xlu-call-a-second-soft-inflation-print-has-al.md` (sector:Utilities): 75% → 14% (-61%) → `02_lessons/retired/`
-- `a-consumer-cyclical-down-call-is-driven-by-a-genuinely-negat.md` (sector:Consumer Cyclical): 86% → 29% (-57%) → `02_lessons/retired/`
-- `a-mega-cap-duration-heavy-consumer-cyclical-etf-xly-like-amz.md` (sector:Consumer Cyclical): 71% → 14% (-57%) → `02_lessons/retired/`
-- `when-the-pre-fetched-commodity-tape-conflicts-with-live-sour.md` (sector:Energy): 71% → 14% (-57%) → `02_lessons/retired/`
-- `a-sector-call-has-a-decisively-negative-fundamental-spine-fr.md` (sector:Consumer Cyclical): 83% → 29% (-55%) → `02_lessons/retired/`
-- `a-utility-defensive-sector-call-is-built-on-a-carried-defens.md` (sector:Utilities): 67% → 14% (-52%) → `02_lessons/retired/`
-- `sector-prediction-made-when-the-sector-s-dominant-commodity.md` (sector:Energy): 67% → 14% (-52%) → `02_lessons/retired/`
-- `a-sector-call-has-a-scheduled-8-30-et-high-impact-macro-rele.md` (sector:Financial): 60% → 14% (-46%) → `02_lessons/retired/`
+- `a-fresh-top-holding-legal-regulatory-catalyst-e-g-a-trial-op.md` (sector:Communication Services): 43% → 0% (-43%) → `02_lessons/retired/`
+- `a-cyclical-industrials-etf-xli-like-posts-an-all-zero-s0-s4.md` (sector:Industrials): 71% → 29% (-43%) → `02_lessons/retired/`
+- `a-defensive-bond-proxy-sector-utilities-faces-a-risk-off-tap.md` (sector:Utilities): 57% → 14% (-43%) → `02_lessons/retired/`
+- `a-healthcare-xlv-call-with-s0-0-flat-mixed-es-nq-leftover-te.md` (sector:Healthcare): 71% → 29% (-43%) → `02_lessons/retired/`
+- `a-live-macro-shock-oil-geopolitical-is-present-at-the-open-t.md` (sector:Consumer Cyclical): 57% → 14% (-43%) → `02_lessons/retired/`
+- `a-long-duration-rate-sensitive-sector-reits-faces-a-live-rat.md` (sector:Real Estate): 71% → 29% (-43%) → `02_lessons/retired/`
+- `a-single-macro-shock-oil-rates-is-scored-as-multiple-indepen.md` (sector:Consumer Cyclical): 57% → 14% (-43%) → `02_lessons/retired/`
+- `a-technology-xlk-down-call-has-strongly-negative-leading-com.md` (sector:Technology): 57% → 14% (-43%) → `02_lessons/retired/`
+- `sector-etf-prediction-where-the-prior-session-had-a-modest-p.md` (sector:Healthcare): 71% → 29% (-43%) → `02_lessons/retired/`
+- `sector-prediction-emits-flat-flat-when-broad-market-tape-is.md` (sector:Healthcare): 71% → 29% (-43%) → `02_lessons/retired/`
 
 ## 4c. Numeric factor weights (engine_policy.json)
 
@@ -533,7 +533,7 @@ Sectors (pooled S0–S4; per-sector overrides in engine_policy.json):
 - S2_BREADTH: n=173 sign-hit=0.57 → ×1.0
 - S3_FLOWS_POSITIONING: n=122 sign-hit=0.49 → ×0.5
 - S4_ETF_TAPE: n=187 sign-hit=0.58 → ×1.0
-Last change: general.B0_ASIA: 1.0 -> 0.5 (n=33, hit=0.545); general.B3_FEDPATH: 0.0 -> 0.5 (n=35, hit=0.457)
+Last change: hold
 
 Progress vs baselines: `03_scoreboard/IMPROVEMENT_TRACKER.md`.
 
@@ -585,7 +585,7 @@ Progress vs baselines: `03_scoreboard/IMPROVEMENT_TRACKER.md`.
 | File | Role |
 |------|------|
 | `03_scoreboard/LEARNINGS.md` | This digest (latest) |
-| `01_daily/2026-11-09_learnings.md` | Dated copy |
+| `01_daily/2026-11-10_learnings.md` | Dated copy |
 | `00_grounding/mutable_policy.md` | Injected into general + sector predict |
 | `02_lessons/hypotheses/*` | Per-event experiments |
 | `02_lessons/active/*` | Standing rules |

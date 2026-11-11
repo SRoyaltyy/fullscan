@@ -1,6 +1,6 @@
 # HIT Board — general + sectors (all dates)
 
-Generated: **2026-11-10T20:23:38.943817-05:00**
+Generated: **2026-11-10T20:26:00.907347-05:00**
 
 Source: `03_scoreboard/scoreboard.json`.
 
