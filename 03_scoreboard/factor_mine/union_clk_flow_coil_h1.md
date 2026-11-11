@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · Clock-B #8 flow-in + green + not extended
 
-Cash book **+7.91%** ($10,791) · signal-only (no cash/fees) was -14.71%. Starts YES **10/30**. Fills 42 · skips 8 · realized $-732.31.
+Cash book **+9.64%** ($10,964) · signal-only (no cash/fees) was -14.71%. Starts YES **10/30**. Fills 46 · skips 8 · realized $-732.31.
 
 ## How this sleeve decides (like you are 10)
 
@@ -242,6 +242,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-10 09:30 ET | **SELL** | `CERT` | 443 | $12.00 | $5.83 | $-38.13 | $5,362.98 | ▼ -38.13 after sell → book $10,793.37; vs 09:30 mark -5.83 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-10 09:30 ET | **SELL** | `FERG` | 21 | $258.59 | $2.11 | $+140.95 | $10,791.26 | ▲ +140.95 after sell → book $10,791.26; vs 09:30 mark -2.11 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,791.26 | ▲ close $10,791.26 vs 09:30 $10,799.20 (session +0.00) | 16:00 close · cash $10,791.26 · no lots left · equity $10,791.26. | — |
+| 2026-11-11 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,791.26 | ▲ 09:30 equity $10,791.26 vs yday $10,791.26 (+0.00) | 09:30 open · cash $10,791.26 · no holdings · equity $10,791.26 vs prior close $10,791.26 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-11 09:30 ET | **BUY** | `GO` | 215 | $12.52 | $2.77 | — | $8,096.69 | — | Clock-B #8 flow-in + green + not extended; gate clk_flow_coil=True; rank cond; list earn_react; 🔵; ⚪; ret5=+9.7; leftover $2697.82 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `SONO` | 154 | $17.50 | $2.45 | — | $5,399.23 | — | Clock-B #8 flow-in + green + not extended; gate clk_flow_coil=True; rank cond; list earn_react; ⚪; ret5=+6.0; leftover $2697.82 | join🟡 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `ICL` | 582 | $4.63 | $7.51 | — | $2,697.07 | — | Clock-B #8 flow-in + green + not extended; gate clk_flow_coil=True; rank cond; list earn_react; 🔵; ret5=+7.1; leftover $2697.82 | join🟡 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `ENS` | 17 | $156.29 | $2.04 | — | $38.10 | — | Clock-B #8 flow-in + green + not extended; gate clk_flow_coil=True; rank cond; list overnight; ret5=-9.9; leftover $2697.82 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-11-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $38.10 | ▲ close $10,963.93 vs 09:30 $10,791.26 (session +187.44) | 16:00 close · cash $38.10 · equity $10,963.93 vs 09:30 $10,791.26 (+172.67; session marks +187.44) · 4 name(s) marked open→close (per-name table). GO×215 09:30 $12.52 → close $13.12 +129.00; SONO×154 09:30 $17.50 → close $19.06 +240.24; ICL×582 09:30 $4.63 → close $4.57 -34.92; ENS×17 09:30 $156.29 → close $147.65 -146.88 | — |
 
 ## Not taken
 

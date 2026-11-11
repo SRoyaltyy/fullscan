@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `ohlc_hot` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · hot list ∩ not exploded
 
-Cash book **-39.76%** ($6,024) · signal-only (no cash/fees) was -11.86%. Starts YES **9/30**. Fills 363 · skips 74 · realized $-1849.08.
+Cash book **-39.53%** ($6,047) · signal-only (no cash/fees) was -11.86%. Starts YES **9/30**. Fills 370 · skips 74 · realized $-1849.08.
 
 ## How this sleeve decides (like you are 10)
 
@@ -563,6 +563,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-10 09:30 ET | **BUY** | `WING` | 19 | $176.00 | $2.05 | — | $3,465.21 | — | hot list ∩ not exploded; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list ohlc_hot; ret5=+8.6; leftover $3405.63 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-11-10 09:30 ET | **BUY** | `SENS` | 273 | $12.45 | $3.52 | — | $64.21 | — | hot list ∩ not exploded; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list ohlc_hot,earn_react; ret5=+9.1; leftover $3405.63 | join🟡 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🟡 buy🟡 |
 | 2026-11-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $64.21 | ▼ close $6,024.42 vs 09:30 $6,811.26 (session -781.28) | 16:00 close · cash $64.21 · equity $6,024.42 vs 09:30 $6,811.26 (-786.84; session marks -781.28) · 2 name(s) marked open→close (per-name table). WING×19 09:30 $176.00 → close $169.58 -121.98; SENS×273 09:30 $12.45 → close $10.03 -659.30 | — |
+| 2026-11-11 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $64.21 | ▲ 09:30 equity $6,040.34 vs yday $6,024.42 (+15.92) | 09:30 open · cash $64.21 (unchanged overnight, no fees) · equity $6,040.34 vs prior close $6,024.42 (+15.92) · 2 name(s) re-marked at the open (per-name table). SENS×273 yday $10.03 → 09:30 $10.16 +35.49; WING×19 yday $169.58 → 09:30 $168.55 -19.57 | — |
+| 2026-11-11 09:30 ET | **SELL** | `SENS` | 273 | $10.16 | $3.59 | $-630.92 | $2,834.30 | ▼ -630.92 after sell → book $6,036.75; vs 09:30 mark -3.59 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **SELL** | `WING` | 19 | $168.55 | $2.08 | $-145.68 | $6,034.67 | ▼ -145.68 after sell → book $6,034.67; vs 09:30 mark -2.08 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **BUY** | `GDYN` | 86 | $13.94 | $2.25 | — | $4,833.58 | — | hot list ∩ not exploded; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list ohlc_hot; ret5=+5.2; leftover $1206.93 | join🔴 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `HGV` | 26 | $44.86 | $2.07 | — | $3,665.15 | — | hot list ∩ not exploded; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list ohlc_hot; ret5=+9.1; leftover $1206.93 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `EMBJ` | 14 | $82.46 | $2.03 | — | $2,508.68 | — | hot list ∩ not exploded; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list ohlc_hot; 🔵; ret5=+9.3; leftover $1206.93 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `BLCO` | 56 | $21.36 | $2.16 | — | $1,310.36 | — | hot list ∩ not exploded; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list ohlc_hot; ret5=+6.7; leftover $1206.93 | join🟢 sector🔴 gen🟢 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `XENE` | 29 | $41.40 | $2.08 | — | $107.69 | — | hot list ∩ not exploded; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list ohlc_hot; ret5=+8.3; leftover $1206.93 | join🔴 sector🔴 gen🟢 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $107.69 | ▲ close $6,046.57 vs 09:30 $6,040.34 (session +22.48) | 16:00 close · cash $107.69 · equity $6,046.57 vs 09:30 $6,040.34 (+6.23; session marks +22.48) · 5 name(s) marked open→close (per-name table). GDYN×86 09:30 $13.94 → close $13.83 -9.46; HGV×26 09:30 $44.86 → close $45.41 +14.30; EMBJ×14 09:30 $82.46 → close $82.43 -0.42; BLCO×56 09:30 $21.36 → close $21.32 -2.24; XENE×29 09:30 $41.40 → close $42.10 +20.30 | — |
 
 ## Not taken
 

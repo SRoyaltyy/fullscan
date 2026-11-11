@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `macd_hist` · size `leftover` · sell `list` · S-boost `none` · rank by macd_hist
 
-Cash book **-17.13%** ($8,287) · signal-only (no cash/fees) was -17.17%. Starts YES **5/30**. Fills 372 · skips 257 · realized $-743.63.
+Cash book **-16.32%** ($8,368) · signal-only (no cash/fees) was -17.17%. Starts YES **5/30**. Fills 372 · skips 257 · realized $-743.63.
 
 ## How this sleeve decides (like you are 10)
 
@@ -569,6 +569,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-10 09:30 ET | **BUY** | `LQDA` | 24 | $48.73 | $2.06 | — | $1,569.17 | — | rank by macd_hist; rank macd_hist; list earn_react; ret5=+14.4; leftover $1207.78 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-11-10 09:30 ET | **BUY** | `ETON` | 18 | $63.63 | $2.04 | — | $421.79 | — | rank by macd_hist; rank macd_hist; list flatten; 🔵; ⚪; ret5=+26.6; leftover $1207.78 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $421.79 | ▲ close $8,287.10 vs 09:30 $8,225.91 (session +89.60) | 16:00 close · cash $421.79 · equity $8,287.10 vs 09:30 $8,225.91 (+61.19; session marks +89.60) · 12 name(s) marked open→close (per-name table). ALGN×1 09:30 $171.82 → close $174.26 +2.44; EPAM×1 09:30 $155.95 → close $164.14 +8.19; JBTM×1 09:30 $128.35 → close $129.74 +1.39; MIDD×1 09:30 $136.88 → close $138.27 +1.39; SEZL×1 09:30 $151.87 → close $149.28 -2.59; TTWO×1 09:30 $218.18 → close $224.64 +6.46; WING×6 09:30 $176.00 → close $169.58 -38.52; TMDX×12 09:30 $93.50 → close $90.94 -30.66; ESAB×13 09:30 $89.15 → close $87.13 -26.26; LOAR×15 09:30 $77.39 → close $79.61 +33.30; LQDA×24 09:30 $48.73 → close $51.40 +64.08; ETON×18 09:30 $63.63 → close $67.54 +70.38 | — |
+| 2026-11-11 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $421.79 | ▲ 09:30 equity $8,331.20 vs yday $8,287.10 (+44.10) | 09:30 open · cash $421.79 (unchanged overnight, no fees) · equity $8,331.20 vs prior close $8,287.10 (+44.10) · 12 name(s) re-marked at the open (per-name table). ALGN×1 yday $174.26 → 09:30 $174.30 +0.04; EPAM×1 yday $164.14 → 09:30 $161.54 -2.60; ESAB×13 yday $87.13 → 09:30 $86.91 -2.86; ETON×18 yday $67.54 → 09:30 $66.94 -10.80; JBTM×1 yday $129.74 → 09:30 $127.92 -1.82; LOAR×15 yday $79.61 → 09:30 $79.53 -1.20; LQDA×24 yday $51.40 → 09:30 $54.00 +62.40; MIDD×1 yday $138.27 → 09:30 $140.25 +1.97; SEZL×1 yday $149.28 → 09:30 $151.44 +2.16; TMDX×12 yday $90.94 → 09:30 $90.95 +0.06; TTWO×1 yday $224.64 → 09:30 $227.57 +2.93; WING×6 yday $169.58 → 09:30 $168.55 -6.18 | — |
+| 2026-11-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $421.79 | ▲ close $8,368.31 vs 09:30 $8,331.20 (session +37.10) | 16:00 close · cash $421.79 · equity $8,368.31 vs 09:30 $8,331.20 (+37.11; session marks +37.10) · 12 name(s) marked open→close (per-name table). ALGN×1 09:30 $174.30 → close $172.08 -2.22; EPAM×1 09:30 $161.54 → close $162.82 +1.28; ESAB×13 09:30 $86.91 → close $85.82 -14.17; ETON×18 09:30 $66.94 → close $68.40 +26.28; JBTM×1 09:30 $127.92 → close $126.56 -1.36; LOAR×15 09:30 $79.53 → close $79.24 -4.35; LQDA×24 09:30 $54.00 → close $55.21 +29.04; MIDD×1 09:30 $140.25 → close $136.10 -4.15; SEZL×1 09:30 $151.44 → close $152.65 +1.21; TMDX×12 09:30 $90.95 → close $92.01 +12.72; TTWO×1 09:30 $227.57 → close $231.31 +3.74; WING×6 09:30 $168.55 → close $166.73 -10.92 | — |
 
 ## Not taken
 

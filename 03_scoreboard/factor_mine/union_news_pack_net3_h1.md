@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · packet🟢 and camera net ≥ 3
 
-Cash book **-10.26%** ($8,974) · signal-only (no cash/fees) was +3.78%. Starts YES **14/30**. Fills 103 · skips 24 · realized $+978.05.
+Cash book **-9.77%** ($9,023) · signal-only (no cash/fees) was +3.78%. Starts YES **14/30**. Fills 109 · skips 24 · realized $+978.05.
 
 ## How this sleeve decides (like you are 10)
 
@@ -303,6 +303,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-10 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $152.37 | ▼ 09:30 equity $8,881.30 vs yday $8,998.51 (-117.21) | 09:30 open · cash $152.37 (unchanged overnight, no fees) · equity $8,881.30 vs prior close $8,998.51 (-117.21) · 2 name(s) re-marked at the open (per-name table). ALGN×39 yday $174.26 → 09:30 $171.82 -95.16; APP×5 yday $410.00 → 09:30 $405.59 -22.05 | — |
 | 2026-11-10 09:30 ET | **SELL** | `APP` | 5 | $405.59 | $2.03 | $+244.16 | $2,178.29 | ▲ +244.16 after sell → book $8,879.27; vs 09:30 mark -2.03 | dropped from list after 2 sess (min 1) | — |
 | 2026-11-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2,178.29 | ▲ close $8,974.43 vs 09:30 $8,881.30 (session +95.16) | 16:00 close · cash $2,178.29 · equity $8,974.43 vs 09:30 $8,881.30 (+93.13; session marks +95.16) · 1 name(s) marked open→close (per-name table). ALGN×39 09:30 $171.82 → close $174.26 +95.16 | — |
+| 2026-11-11 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $2,178.29 | ▲ 09:30 equity $8,975.99 vs yday $8,974.43 (+1.56) | 09:30 open · cash $2,178.29 (unchanged overnight, no fees) · equity $8,975.99 vs prior close $8,974.43 (+1.56) · 1 name(s) re-marked at the open (per-name table). ALGN×39 yday $174.26 → 09:30 $174.30 +1.56 | — |
+| 2026-11-11 09:30 ET | **SELL** | `ALGN` | 39 | $174.30 | $2.17 | $+245.32 | $8,973.82 | ▲ +245.32 after sell → book $8,973.82; vs 09:30 mark -2.17 | dropped from list after 2 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **BUY** | `ALH` | 72 | $24.92 | $2.21 | — | $7,177.37 | — | packet🟢 and camera net ≥ 3; gate cam_net_min=3,news_box=good; rank cond; list ohlc_hot; 🔵; ⚪; ret5=+12.9; leftover $1794.76 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `CECO` | 30 | $58.47 | $2.08 | — | $5,421.19 | — | packet🟢 and camera net ≥ 3; gate cam_net_min=3,news_box=good; rank cond; list probable,yday_gainer; 🔵; ret5=+3.2; leftover $1794.76 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🔴 peer🟢 heat🟡 vol🟢 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `EMBJ` | 21 | $82.46 | $2.05 | — | $3,687.48 | — | packet🟢 and camera net ≥ 3; gate cam_net_min=3,news_box=good; rank cond; list ohlc_hot; 🔵; ret5=+9.3; leftover $1794.76 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `CRWV` | 32 | $55.97 | $2.09 | — | $1,894.35 | — | packet🟢 and camera net ≥ 3; gate cam_net_min=3,news_box=good; rank cond; list earn_react; 🔵; ⚪; ret5=-9.3; leftover $1794.76 | join🟡 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `ATRO` | 31 | $56.86 | $2.08 | — | $129.61 | — | packet🟢 and camera net ≥ 3; gate cam_net_min=3,news_box=good; rank cond; list earn_react; 🔵; ret5=+1.8; leftover $1794.76 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-11-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $129.61 | ▲ close $9,022.91 vs 09:30 $8,975.99 (session +59.60) | 16:00 close · cash $129.61 · equity $9,022.91 vs 09:30 $8,975.99 (+46.92; session marks +59.60) · 5 name(s) marked open→close (per-name table). ALH×72 09:30 $24.92 → close $24.20 -51.84; CECO×30 09:30 $58.47 → close $53.50 -149.10; EMBJ×21 09:30 $82.46 → close $82.43 -0.63; CRWV×32 09:30 $55.97 → close $60.77 +153.60; ATRO×31 09:30 $56.86 → close $60.33 +107.57 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ vol_g, no 🚨
 
-Cash book **-8.37%** ($9,163) · signal-only (no cash/fees) was -4.96%. Starts YES **0/30**. Fills 400 · skips 87 · realized $-1273.21.
+Cash book **-9.86%** ($9,014) · signal-only (no cash/fees) was -4.96%. Starts YES **0/30**. Fills 416 · skips 87 · realized $-1273.21.
 
 ## How this sleeve decides (like you are 10)
 
@@ -598,6 +598,24 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-10 09:30 ET | **BUY** | `NUAI` | 549 | $2.12 | $7.08 | — | $1,174.60 | — | union ∩ vol_g, no 🚨; gate vol=good; list probable,yday_gainer,yday_mover; ret5=-5.6; leftover $1168.22 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 judge🟡 ab🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-11-10 09:30 ET | **BUY** | `IREN` | 56 | $20.80 | $2.16 | — | $7.64 | — | union ∩ vol_g, no 🚨; gate vol=good; list probable,yday_gainer; 🔵; ret5=-2.8; leftover $1168.22 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 judge🟢 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
 | 2026-11-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7.64 | ▼ close $9,163.34 vs 09:30 $9,306.86 (session -99.22) | 16:00 close · cash $7.64 · equity $9,163.34 vs 09:30 $9,306.86 (-143.52; session marks -99.22) · 8 name(s) marked open→close (per-name table). ALGN×6 09:30 $171.82 → close $174.26 +14.64; TMDX×12 09:30 $93.50 → close $90.94 -30.66; WRBY×44 09:30 $29.85 → close $29.90 +2.20; ZVRA×97 09:30 $11.80 → close $11.92 +11.64; ETON×18 09:30 $63.63 → close $67.54 +70.38; THM×773 09:30 $1.51 → close $1.41 -77.30; NUAI×549 09:30 $2.12 → close $2.07 -30.20; IREN×56 09:30 $20.80 → close $19.73 -59.92 | — |
+| 2026-11-11 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7.64 | ▲ 09:30 equity $9,346.33 vs yday $9,163.34 (+182.99) | 09:30 open · cash $7.64 (unchanged overnight, no fees) · equity $9,346.33 vs prior close $9,163.34 (+182.99) · 8 name(s) re-marked at the open (per-name table). ALGN×6 yday $174.26 → 09:30 $174.30 +0.24; ETON×18 yday $67.54 → 09:30 $66.94 -10.80; IREN×56 yday $19.73 → 09:30 $20.96 +68.88; NUAI×549 yday $2.07 → 09:30 $2.26 +104.31; THM×773 yday $1.41 → 09:30 $1.43 +15.46; TMDX×12 yday $90.94 → 09:30 $90.95 +0.06; WRBY×44 yday $29.90 → 09:30 $30.01 +4.84; ZVRA×97 yday $11.92 → 09:30 $11.92 +0.00 | — |
+| 2026-11-11 09:30 ET | **SELL** | `ALGN` | 6 | $174.30 | $2.03 | $+34.36 | $1,051.41 | ▲ +34.36 after sell → book $9,344.30; vs 09:30 mark -2.03 | dropped from list after 2 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **SELL** | `ETON` | 18 | $66.94 | $2.06 | $+55.47 | $2,254.27 | ▲ +55.47 after sell → book $9,342.24; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **SELL** | `IREN` | 56 | $20.96 | $2.18 | $+4.62 | $3,425.85 | ▲ +4.62 after sell → book $9,340.06; vs 09:30 mark -2.18 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **SELL** | `NUAI` | 549 | $2.26 | $7.18 | $+59.85 | $4,659.41 | ▲ +59.85 after sell → book $9,332.88; vs 09:30 mark -7.18 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **SELL** | `THM` | 773 | $1.43 | $10.11 | $-81.92 | $5,754.69 | ▼ -81.92 after sell → book $9,322.77; vs 09:30 mark -10.11 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **SELL** | `TMDX` | 12 | $90.95 | $2.05 | $+31.33 | $6,844.04 | ▲ +31.33 after sell → book $9,320.72; vs 09:30 mark -2.05 | dropped from list after 2 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **SELL** | `WRBY` | 44 | $30.01 | $2.14 | $+176.14 | $8,162.34 | ▲ +176.14 after sell → book $9,318.58; vs 09:30 mark -2.14 | dropped from list after 2 sess (min 1) | join🟢 sector🔴 gen🟢 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-11 09:30 ET | **SELL** | `ZVRA` | 97 | $11.92 | $2.31 | $+21.60 | $9,316.27 | ▲ +21.60 after sell → book $9,316.27; vs 09:30 mark -2.31 | dropped from list after 2 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **BUY** | `CLX` | 11 | $104.89 | $2.02 | — | $8,160.46 | — | union ∩ vol_g, no 🚨; gate vol=good; list flatten; 🔵; ⚪; ret5=+13.6; leftover $1164.53 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `COTY` | 272 | $4.28 | $3.51 | — | $6,992.79 | — | union ∩ vol_g, no 🚨; gate vol=good; list flatten; 🔵; ⚪; ret5=+31.6; leftover $1164.53 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `TTD` | 76 | $15.23 | $2.22 | — | $5,833.09 | — | union ∩ vol_g, no 🚨; gate vol=good; list flatten; 🔵; ret5=+19.9; leftover $1164.53 | join🟢 sector🟡 gen🟢 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `AKBA` | 2197 | $0.53 | $18.24 | — | $4,650.45 | — | union ∩ vol_g, no 🚨; gate vol=good; list probable,yday_gainer,yday_mover; ret5=-25.4; leftover $1164.53 | join🔴 sector🔴 gen🟢 news🔴 digest🔴 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `HLLY` | 436 | $2.67 | $5.62 | — | $3,480.70 | — | union ∩ vol_g, no 🚨; gate vol=good; list probable,yday_gainer,yday_mover; ret5=-3.3; leftover $1164.53 | join🔴 sector🟢 gen🟢 news🔴 digest🟢 ab🟡 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `PCT` | 529 | $2.20 | $6.82 | — | $2,310.08 | — | union ∩ vol_g, no 🚨; gate vol=good; list probable,yday_gainer,yday_mover; ret5=-31.7; leftover $1164.53 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🟡 vol🟢 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `RC` | 1153 | $1.01 | $14.87 | — | $1,130.67 | — | union ∩ vol_g, no 🚨; gate vol=good; list probable,yday_gainer,yday_mover; ret5=-7.3; leftover $1164.53 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `CECO` | 19 | $58.47 | $2.05 | — | $17.70 | — | union ∩ vol_g, no 🚨; gate vol=good; list probable,yday_gainer; 🔵; ret5=+3.2; leftover $1164.53 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🔴 peer🟢 heat🟡 vol🟢 buy🟡 |
+| 2026-11-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $17.70 | ▼ close $9,013.64 vs 09:30 $9,346.33 (session -247.27) | 16:00 close · cash $17.70 · equity $9,013.64 vs 09:30 $9,346.33 (-332.69; session marks -247.27) · 8 name(s) marked open→close (per-name table). CLX×11 09:30 $104.89 → close $106.86 +21.67; COTY×272 09:30 $4.28 → close $4.06 -59.84; TTD×76 09:30 $15.23 → close $15.98 +57.00; AKBA×2197 09:30 $0.53 → close $0.57 +96.01; HLLY×436 09:30 $2.67 → close $2.51 -69.76; PCT×529 09:30 $2.20 → close $2.00 -105.80; RC×1153 09:30 $1.01 → close $0.93 -92.12; CECO×19 09:30 $58.47 → close $53.50 -94.43 | — |
 
 ## Not taken
 

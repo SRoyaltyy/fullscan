@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `overnight_mega` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · same mega calendar; hold 2 also keeps the session after the print
 
-Cash book **+1.77%** ($10,177) · signal-only (no cash/fees) was -8.07%. Starts YES **1/30**. Fills 19 · skips 27 · realized $-735.01.
+Cash book **-0.84%** ($9,915) · signal-only (no cash/fees) was -8.07%. Starts YES **1/30**. Fills 21 · skips 27 · realized $-735.01.
 
 ## How this sleeve decides (like you are 10)
 
@@ -215,6 +215,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $49.29 | ▲ close $9,974.57 vs 09:30 $9,939.71 (session +37.38) | 16:00 close · cash $49.29 · equity $9,974.57 vs 09:30 $9,939.71 (+34.86; session marks +37.38) · 1 name(s) marked open→close (per-name table). OXY×178 09:30 $55.55 → close $55.76 +37.38 | — |
 | 2026-11-10 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $49.29 | ▼ 09:30 equity $9,883.79 vs yday $9,974.57 (-90.78) | 09:30 open · cash $49.29 (unchanged overnight, no fees) · equity $9,883.79 vs prior close $9,974.57 (-90.78) · 1 name(s) re-marked at the open (per-name table). OXY×178 yday $55.76 → 09:30 $55.25 -90.78 | — |
 | 2026-11-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $49.29 | ▲ close $10,177.49 vs 09:30 $9,883.79 (session +293.70) | 16:00 close · cash $49.29 · equity $10,177.49 vs 09:30 $9,883.79 (+293.70; session marks +293.70) · 1 name(s) marked open→close (per-name table). OXY×178 09:30 $55.25 → close $56.90 +293.70 | — |
+| 2026-11-11 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $49.29 | ▲ 09:30 equity $10,241.57 vs yday $10,177.49 (+64.08) | 09:30 open · cash $49.29 (unchanged overnight, no fees) · equity $10,241.57 vs prior close $10,177.49 (+64.08) · 1 name(s) re-marked at the open (per-name table). OXY×178 yday $56.90 → 09:30 $57.26 +64.08 | — |
+| 2026-11-11 09:30 ET | **SELL** | `OXY` | 178 | $57.26 | $2.64 | $+299.22 | $10,238.93 | ▲ +299.22 after sell → book $10,238.93; vs 09:30 mark -2.64 | dropped from list after 2 sess (min 2) | — |
+| 2026-11-11 09:30 ET | **BUY** | `FNV` | 39 | $257.00 | $2.11 | — | $213.83 | — | same mega calendar; hold 2 also keeps the session after the print; list overnight,overnight_mega; ret5=+13.2; leftover $10238.93 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-11-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $213.83 | ▼ close $9,915.47 vs 09:30 $10,241.57 (session -321.36) | 16:00 close · cash $213.83 · equity $9,915.47 vs 09:30 $10,241.57 (-326.10; session marks -321.36) · 1 name(s) marked open→close (per-name table). FNV×39 09:30 $257.00 → close $248.76 -321.36 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ flow_in hold 5, no 🚨
 
-Cash book **-5.37%** ($9,463) · signal-only (no cash/fees) was -2.74%. Starts YES **16/30**. Fills 80 · skips 144 · realized $+404.42.
+Cash book **-6.87%** ($9,313) · signal-only (no cash/fees) was -2.74%. Starts YES **16/30**. Fills 90 · skips 144 · realized $+404.42.
 
 ## How this sleeve decides (like you are 10)
 
@@ -278,6 +278,18 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2.21 | ▼ close $9,543.25 vs 09:30 $9,592.57 (session -49.32) | 16:00 close · cash $2.21 · equity $9,543.25 vs 09:30 $9,592.57 (-49.32; session marks -49.32) · 2 name(s) marked open→close (per-name table). HLP×1214 09:30 $3.64 → close $3.63 -12.14; RKT×338 09:30 $15.30 → close $15.19 -37.18 | — |
 | 2026-11-10 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $2.21 | ▼ 09:30 equity $9,361.49 vs yday $9,543.25 (-181.76) | 09:30 open · cash $2.21 (unchanged overnight, no fees) · equity $9,361.49 vs prior close $9,543.25 (-181.76) · 2 name(s) re-marked at the open (per-name table). HLP×1214 yday $3.63 → 09:30 $3.60 -36.42; RKT×338 yday $15.19 → 09:30 $14.76 -145.34 | — |
 | 2026-11-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2.21 | ▲ close $9,463.09 vs 09:30 $9,361.49 (session +101.60) | 16:00 close · cash $2.21 · equity $9,463.09 vs 09:30 $9,361.49 (+101.60; session marks +101.60) · 2 name(s) marked open→close (per-name table). HLP×1214 09:30 $3.60 → close $3.77 +206.38; RKT×338 09:30 $14.76 → close $14.45 -104.78 | — |
+| 2026-11-11 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $2.21 | ▼ 09:30 equity $9,429.29 vs yday $9,463.09 (-33.80) | 09:30 open · cash $2.21 (unchanged overnight, no fees) · equity $9,429.29 vs prior close $9,463.09 (-33.80) · 2 name(s) re-marked at the open (per-name table). HLP×1214 yday $3.77 → 09:30 $3.77 +0.00; RKT×338 yday $14.45 → 09:30 $14.35 -33.80 | — |
+| 2026-11-11 09:30 ET | **SELL** | `HLP` | 1214 | $3.77 | $15.90 | $-286.50 | $4,563.09 | ▼ -286.50 after sell → book $9,413.39; vs 09:30 mark -15.90 | dropped from list after 5 sess (min 5) | — |
+| 2026-11-11 09:30 ET | **SELL** | `RKT` | 338 | $14.35 | $4.46 | $+8.08 | $9,408.94 | ▲ +8.08 after sell → book $9,408.94; vs 09:30 mark -4.45 | dropped from list after 5 sess (min 5) | — |
+| 2026-11-11 09:30 ET | **BUY** | `CLX` | 11 | $104.89 | $2.02 | — | $8,253.12 | — | union ∩ flow_in hold 5, no 🚨; gate flow_in=True; list flatten; 🔵; ⚪; ret5=+13.6; leftover $1176.12 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `CECO` | 20 | $58.47 | $2.05 | — | $7,081.67 | — | union ∩ flow_in hold 5, no 🚨; gate flow_in=True; list probable,yday_gainer; 🔵; ret5=+3.2; leftover $1176.12 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🔴 peer🟢 heat🟡 vol🟢 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `GFR` | 152 | $7.70 | $2.45 | — | $5,908.83 | — | union ∩ flow_in hold 5, no 🚨; gate flow_in=True; list yday_gainer,yday_mover; 🔵; ret5=+24.5; leftover $1176.12 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `PDYN` | 316 | $3.72 | $4.08 | — | $4,729.23 | — | union ∩ flow_in hold 5, no 🚨; gate flow_in=True; list yday_gainer; ret5=+10.9; leftover $1176.12 | join🔴 sector🟢 gen🟢 news🔴 digest🟡 ab🔴 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `GO` | 93 | $12.52 | $2.27 | — | $3,562.60 | — | union ∩ flow_in hold 5, no 🚨; gate flow_in=True; list earn_react; 🔵; ⚪; ret5=+9.7; leftover $1176.12 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `ICL` | 254 | $4.63 | $3.28 | — | $2,383.31 | — | union ∩ flow_in hold 5, no 🚨; gate flow_in=True; list earn_react; 🔵; ret5=+7.1; leftover $1176.12 | join🟡 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `SONO` | 67 | $17.50 | $2.19 | — | $1,208.61 | — | union ∩ flow_in hold 5, no 🚨; gate flow_in=True; list earn_react; ⚪; ret5=+6.0; leftover $1176.12 | join🟡 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `ENS` | 7 | $156.29 | $2.01 | — | $112.57 | — | union ∩ flow_in hold 5, no 🚨; gate flow_in=True; list overnight; ret5=-9.9; leftover $1176.12 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-11-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $112.57 | ▼ close $9,313.30 vs 09:30 $9,429.29 (session -75.29) | 16:00 close · cash $112.57 · equity $9,313.30 vs 09:30 $9,429.29 (-115.99; session marks -75.29) · 8 name(s) marked open→close (per-name table). CLX×11 09:30 $104.89 → close $106.86 +21.67; CECO×20 09:30 $58.47 → close $53.50 -99.40; GFR×152 09:30 $7.70 → close $7.70 +0.00; PDYN×316 09:30 $3.72 → close $3.46 -82.16; GO×93 09:30 $12.52 → close $13.12 +55.80; ICL×254 09:30 $4.63 → close $4.57 -15.24; SONO×67 09:30 $17.50 → close $19.06 +104.52; ENS×7 09:30 $156.29 → close $147.65 -60.48 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 4 · rank `hot_score` · size `leftover` · sell `list` · S-boost `holdup` · hot4; S>0 lots stay through the next 09:30 so the overnight gap is in the book
 
-Cash book **+51.77%** ($15,177) · signal-only (no cash/fees) was +89.81%. Starts YES **29/30**. Fills 146 · skips 79 · realized $+4974.44.
+Cash book **+54.18%** ($15,418) · signal-only (no cash/fees) was +89.81%. Starts YES **29/30**. Fills 148 · skips 79 · realized $+4974.44.
 
 ## How this sleeve decides (like you are 10)
 
@@ -344,6 +344,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-10 09:30 ET | **SELL** | `APP` | 10 | $405.59 | $2.06 | $+492.32 | $4,060.32 | ▲ +492.32 after sell → book $15,202.51; vs 09:30 mark -2.06 | dropped from list after 2 sess (min 1) | — |
 | 2026-11-10 09:30 ET | **SELL** | `BUUU` | 734 | $4.93 | $9.62 | $-312.69 | $7,669.32 | ▼ -312.69 after sell → book $15,192.89; vs 09:30 mark -9.62 | dropped from list after 2 sess (min 1) | — |
 | 2026-11-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,669.32 | ▼ close $15,177.13 vs 09:30 $15,204.57 (session -15.76) | 16:00 close · cash $7,669.32 · equity $15,177.13 vs 09:30 $15,204.57 (-27.44; session marks -15.76) · 2 name(s) marked open→close (per-name table). AEHL×304 09:30 $11.33 → close $11.21 -36.48; XERS×259 09:30 $15.75 → close $15.83 +20.72 | — |
+| 2026-11-11 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,669.32 | ▲ 09:30 equity $15,425.29 vs yday $15,177.13 (+248.16) | 09:30 open · cash $7,669.32 (unchanged overnight, no fees) · equity $15,425.29 vs prior close $15,177.13 (+248.16) · 2 name(s) re-marked at the open (per-name table). AEHL×304 yday $11.21 → 09:30 $11.89 +206.72; XERS×259 yday $15.83 → 09:30 $15.99 +41.44 | — |
+| 2026-11-11 09:30 ET | **SELL** | `AEHL` | 304 | $11.89 | $4.00 | $-375.76 | $11,279.88 | ▼ -375.76 after sell → book $15,421.29; vs 09:30 mark -4.00 | dropped from list after 2 sess (min 2) | — |
+| 2026-11-11 09:30 ET | **SELL** | `XERS` | 259 | $15.99 | $3.42 | $+156.41 | $15,417.87 | ▲ +156.41 after sell → book $15,417.87; vs 09:30 mark -3.42 | dropped from list after 2 sess (min 2) | — |
+| 2026-11-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $15,417.87 | ▲ close $15,417.87 vs 09:30 $15,425.29 (session +0.00) | 16:00 close · cash $15,417.87 · no lots left · equity $15,417.87. | — |
 
 ## Not taken
 

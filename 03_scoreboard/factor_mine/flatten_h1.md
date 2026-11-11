@@ -6,7 +6,7 @@ Buys the flatten **wish-list** even on io/HOLD mornings — live `flatten_robust
 
 Side **long** · universe `flatten` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · baseline list, no extra gate
 
-Cash book **-18.38%** ($8,162) · signal-only (no cash/fees) was -9.51%. Starts YES **0/30**. Fills 405 · skips 78 · realized $-357.09.
+Cash book **-17.95%** ($8,205) · signal-only (no cash/fees) was -9.51%. Starts YES **0/30**. Fills 416 · skips 78 · realized $-357.09.
 
 ## How this sleeve decides (like you are 10)
 
@@ -599,6 +599,19 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-10 09:30 ET | **SELL** | `CLOV` | 270 | $4.82 | $3.54 | $-23.22 | $2,742.86 | ▼ -23.22 after sell → book $8,081.36; vs 09:30 mark -3.54 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-10 09:30 ET | **BUY** | `WRBY` | 91 | $29.85 | $2.26 | — | $24.25 | — | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ⚪; ret5=+26.6; leftover $2742.86 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $24.25 | ▲ close $8,161.98 vs 09:30 $8,086.96 (session +82.88) | 16:00 close · cash $24.25 · equity $8,161.98 vs 09:30 $8,086.96 (+75.02; session marks +82.88) · 5 name(s) marked open→close (per-name table). ALGN×7 09:30 $171.82 → close $174.26 +17.08; ETON×22 09:30 $63.63 → close $67.54 +86.02; TMDX×15 09:30 $93.50 → close $90.94 -38.33; ZVRA×113 09:30 $11.80 → close $11.92 +13.56; WRBY×91 09:30 $29.85 → close $29.90 +4.55 | — |
+| 2026-11-11 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $24.25 | ▼ 09:30 equity $8,159.15 vs yday $8,161.98 (-2.83) | 09:30 open · cash $24.25 (unchanged overnight, no fees) · equity $8,159.15 vs prior close $8,161.98 (-2.83) · 5 name(s) re-marked at the open (per-name table). ALGN×7 yday $174.26 → 09:30 $174.30 +0.28; ETON×22 yday $67.54 → 09:30 $66.94 -13.20; TMDX×15 yday $90.94 → 09:30 $90.95 +0.08; WRBY×91 yday $29.90 → 09:30 $30.01 +10.01; ZVRA×113 yday $11.92 → 09:30 $11.92 +0.00 | — |
+| 2026-11-11 09:30 ET | **SELL** | `ALGN` | 7 | $174.30 | $2.03 | $+40.76 | $1,242.32 | ▲ +40.76 after sell → book $8,157.12; vs 09:30 mark -2.03 | dropped from list after 2 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **SELL** | `ETON` | 22 | $66.94 | $2.08 | $+190.35 | $2,712.92 | ▲ +190.35 after sell → book $8,155.04; vs 09:30 mark -2.08 | dropped from list after 2 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **SELL** | `TMDX` | 15 | $90.95 | $2.06 | $+40.16 | $4,075.12 | ▲ +40.16 after sell → book $8,152.99; vs 09:30 mark -2.05 | dropped from list after 2 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **SELL** | `WRBY` | 91 | $30.01 | $2.30 | $+10.00 | $6,803.73 | ▲ +10.00 after sell → book $8,150.69; vs 09:30 mark -2.30 | dropped from list after 1 sess (min 1) | join🟢 sector🔴 gen🟢 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-11 09:30 ET | **SELL** | `ZVRA` | 113 | $11.92 | $2.36 | $+25.82 | $8,148.33 | ▲ +25.82 after sell → book $8,148.33; vs 09:30 mark -2.36 | dropped from list after 2 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **BUY** | `CLX` | 12 | $104.89 | $2.03 | — | $6,887.62 | — | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ⚪; ret5=+13.6; leftover $1358.05 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `PFGC` | 12 | $110.24 | $2.03 | — | $5,562.71 | — | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); ⚪; ret5=+15.0; leftover $1358.05 | join🟢 sector🟡 gen🟢 news🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `KDP` | 36 | $37.11 | $2.10 | — | $4,224.66 | — | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); ⚪; ret5=+8.2; leftover $1358.05 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟡 heat🟢 vol🟡 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `PRCH` | 61 | $22.17 | $2.17 | — | $2,870.11 | — | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); ret5=+2.0; leftover $1358.05 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `COTY` | 317 | $4.28 | $4.09 | — | $1,509.26 | — | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ⚪; ret5=+31.6; leftover $1358.05 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `TTD` | 89 | $15.23 | $2.26 | — | $151.54 | — | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ret5=+19.9; leftover $1358.05 | join🟢 sector🟡 gen🟢 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $151.54 | ▲ close $8,205.16 vs 09:30 $8,159.15 (session +71.50) | 16:00 close · cash $151.54 · equity $8,205.16 vs 09:30 $8,159.15 (+46.01; session marks +71.50) · 6 name(s) marked open→close (per-name table). CLX×12 09:30 $104.89 → close $106.86 +23.64; PFGC×12 09:30 $110.24 → close $111.21 +11.64; KDP×36 09:30 $37.11 → close $38.25 +41.04; PRCH×61 09:30 $22.17 → close $22.14 -1.83; COTY×317 09:30 $4.28 → close $4.06 -69.74; TTD×89 09:30 $15.23 → close $15.98 +66.75 | — |
 
 ## Not taken
 

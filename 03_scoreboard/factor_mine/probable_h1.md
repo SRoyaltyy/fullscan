@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `probable` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · baseline list, no extra gate
 
-Cash book **-30.09%** ($6,991) · signal-only (no cash/fees) was -1.12%. Starts YES **3/30**. Fills 426 · skips 107 · realized $-305.80.
+Cash book **-26.34%** ($7,366) · signal-only (no cash/fees) was -1.12%. Starts YES **3/30**. Fills 441 · skips 107 · realized $-305.80.
 
 ## How this sleeve decides (like you are 10)
 
@@ -620,6 +620,23 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-10 09:30 ET | **BUY** | `CIFR` | 138 | $6.55 | $2.40 | — | $902.79 | — | baseline list, no extra gate; list probable; ret5=-0.7; leftover $904.26 | join🔴 sector🔴 gen🟢 news🔴 digest🟢 judge🟡 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-11-10 09:30 ET | **BUY** | `SITM` | 2 | $449.21 | $2.00 | — | $2.38 | — | baseline list, no extra gate; list probable; 🔵; ret5=+9.4; leftover $904.26 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 judge🟡 ab🟡 peer🟡 heat🔴 vol🟢 buy🟡 |
 | 2026-11-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2.38 | ▼ close $6,991.24 vs 09:30 $7,261.49 (session -215.51) | 16:00 close · cash $2.38 · equity $6,991.24 vs 09:30 $7,261.49 (-270.25; session marks -215.51) · 8 name(s) marked open→close (per-name table). THM×598 09:30 $1.51 → close $1.41 -59.80; NUAI×425 09:30 $2.12 → close $2.07 -23.38; IREN×43 09:30 $20.80 → close $19.73 -46.01; POET×178 09:30 $5.07 → close $5.07 -0.71; RCAT×206 09:30 $4.37 → close $4.21 -32.67; ONDS×154 09:30 $5.83 → close $5.57 -40.66; CIFR×138 09:30 $6.55 → close $6.53 -2.76; SITM×2 09:30 $449.21 → close $444.45 -9.52 | — |
+| 2026-11-11 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $2.38 | ▲ 09:30 equity $7,472.19 vs yday $6,991.24 (+480.95) | 09:30 open · cash $2.38 (unchanged overnight, no fees) · equity $7,472.19 vs prior close $6,991.24 (+480.95) · 8 name(s) re-marked at the open (per-name table). CIFR×138 yday $6.53 → 09:30 $7.14 +84.18; IREN×43 yday $19.73 → 09:30 $20.96 +52.89; NUAI×425 yday $2.07 → 09:30 $2.26 +80.75; ONDS×154 yday $5.57 → 09:30 $5.84 +42.35; POET×178 yday $5.07 → 09:30 $5.52 +80.10; RCAT×206 yday $4.21 → 09:30 $4.40 +39.14; SITM×2 yday $444.45 → 09:30 $489.24 +89.58; THM×598 yday $1.41 → 09:30 $1.43 +11.96 | — |
+| 2026-11-11 09:30 ET | **SELL** | `CIFR` | 138 | $7.14 | $2.44 | $+76.58 | $985.26 | ▲ +76.58 after sell → book $7,469.75; vs 09:30 mark -2.44 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **SELL** | `IREN` | 43 | $20.96 | $2.14 | $+2.62 | $1,884.40 | ▲ +2.62 after sell → book $7,467.61; vs 09:30 mark -2.14 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **SELL** | `NUAI` | 425 | $2.26 | $5.56 | $+46.33 | $2,839.34 | ▲ +46.33 after sell → book $7,462.05; vs 09:30 mark -5.56 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **SELL** | `ONDS` | 154 | $5.84 | $2.49 | $-3.25 | $3,736.98 | ▼ -3.25 after sell → book $7,459.56; vs 09:30 mark -2.49 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **SELL** | `POET` | 178 | $5.52 | $2.56 | $+74.30 | $4,716.98 | ▲ +74.30 after sell → book $7,457.00; vs 09:30 mark -2.56 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **SELL** | `RCAT` | 206 | $4.40 | $2.70 | $+1.11 | $5,620.68 | ▲ +1.11 after sell → book $7,454.30; vs 09:30 mark -2.70 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **SELL** | `SITM` | 2 | $489.24 | $2.02 | $+76.05 | $6,597.14 | ▲ +76.05 after sell → book $7,452.28; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **SELL** | `THM` | 598 | $1.43 | $7.82 | $-63.38 | $7,444.46 | ▼ -63.38 after sell → book $7,444.46; vs 09:30 mark -7.82 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **BUY** | `AKBA` | 2006 | $0.53 | $16.65 | — | $6,364.63 | — | baseline list, no extra gate; list probable,yday_gainer,yday_mover; ret5=-25.4; leftover $1063.49 | join🔴 sector🔴 gen🟢 news🔴 digest🔴 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `SWMR` | 127 | $8.35 | $2.37 | — | $5,301.81 | — | baseline list, no extra gate; list probable,yday_gainer,yday_mover,earn_react; ret5=-4.9; leftover $1063.49 | join🔴 sector🟢 gen🟢 news🟡 digest🟡 ab🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `HLLY` | 398 | $2.67 | $5.13 | — | $4,234.01 | — | baseline list, no extra gate; list probable,yday_gainer,yday_mover; ret5=-3.3; leftover $1063.49 | join🔴 sector🟢 gen🟢 news🔴 digest🟢 ab🟡 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `INO` | 776 | $1.37 | $10.01 | — | $3,160.88 | — | baseline list, no extra gate; list probable,yday_gainer,yday_mover,earn_react; ret5=-12.7; leftover $1063.49 | join🟢 sector🔴 gen🟢 news🟡 digest🔴 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `PCT` | 483 | $2.20 | $6.23 | — | $2,092.05 | — | baseline list, no extra gate; list probable,yday_gainer,yday_mover; ret5=-31.7; leftover $1063.49 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🟡 vol🟢 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `RC` | 1052 | $1.01 | $13.57 | — | $1,015.96 | — | baseline list, no extra gate; list probable,yday_gainer,yday_mover; ret5=-7.3; leftover $1063.49 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `CECO` | 17 | $58.47 | $2.04 | — | $19.93 | — | baseline list, no extra gate; list probable,yday_gainer; 🔵; ret5=+3.2; leftover $1063.49 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🔴 peer🟢 heat🟡 vol🟢 buy🟡 |
+| 2026-11-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $19.93 | ▼ close $7,365.93 vs 09:30 $7,472.19 (session -22.52) | 16:00 close · cash $19.93 · equity $7,365.93 vs 09:30 $7,472.19 (-106.26; session marks -22.52) · 7 name(s) marked open→close (per-name table). AKBA×2006 09:30 $0.53 → close $0.57 +87.66; SWMR×127 09:30 $8.35 → close $9.43 +137.16; HLLY×398 09:30 $2.67 → close $2.51 -63.68; INO×776 09:30 $1.37 → close $1.48 +81.48; PCT×483 09:30 $2.20 → close $2.00 -96.60; RC×1052 09:30 $1.01 → close $0.93 -84.05; CECO×17 09:30 $58.47 → close $53.50 -84.49 | — |
 
 ## Not taken
 

@@ -1,0 +1,212 @@
+{
+  "buys": [
+    {
+      "fill_rule": "open",
+      "price": 7.8,
+      "shares": 379,
+      "side": "BUY",
+      "ticker": "TLS"
+    },
+    {
+      "fill_rule": "open",
+      "price": 2.4146,
+      "shares": 1225,
+      "side": "BUY",
+      "ticker": "INDI"
+    },
+    {
+      "fill_rule": "open",
+      "price": 15.23,
+      "shares": 194,
+      "side": "BUY",
+      "ticker": "TTD"
+    },
+    {
+      "fill_rule": "open",
+      "price": 104.89,
+      "shares": 28,
+      "side": "BUY",
+      "ticker": "CLX"
+    }
+  ],
+  "cash": 2.2,
+  "date": "2026-11-11",
+  "equity": 11811.25,
+  "fees": 62.176,
+  "fills": [
+    {
+      "fees": 3.9679,
+      "fill_rule": "open",
+      "pnl": -68.26,
+      "price": 9.1,
+      "shares": 302,
+      "side": "SELL",
+      "ticker": "EVC"
+    },
+    {
+      "fees": 2.3896,
+      "fill_rule": "open",
+      "pnl": 49.3,
+      "price": 23.9641,
+      "shares": 119,
+      "side": "SELL",
+      "ticker": "FLY"
+    },
+    {
+      "fees": 17.2203,
+      "fill_rule": "open",
+      "pnl": 333.76,
+      "price": 2.4146,
+      "shares": 1316,
+      "side": "SELL",
+      "ticker": "INDI"
+    },
+    {
+      "fees": 13.2606,
+      "fill_rule": "open",
+      "pnl": 272.51,
+      "price": 3.05,
+      "shares": 1013,
+      "side": "SELL",
+      "ticker": "NEOV"
+    },
+    {
+      "fees": 4.8891,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 7.8,
+      "shares": 379,
+      "side": "BUY",
+      "ticker": "TLS"
+    },
+    {
+      "fees": 15.8025,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 2.4146,
+      "shares": 1225,
+      "side": "BUY",
+      "ticker": "INDI"
+    },
+    {
+      "fees": 2.572,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 15.23,
+      "shares": 194,
+      "side": "BUY",
+      "ticker": "TTD"
+    },
+    {
+      "fees": 2.074,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 104.89,
+      "shares": 28,
+      "side": "BUY",
+      "ticker": "CLX"
+    }
+  ],
+  "holdings": [
+    "CLX",
+    "INDI",
+    "TLS",
+    "TTD"
+  ],
+  "mean": 1.9669,
+  "n_trades_today": 8,
+  "recipe": "oos0914_rvol_lg_h1_sx",
+  "sells": [
+    {
+      "fill_rule": "open",
+      "price": 9.1,
+      "shares": 302,
+      "side": "SELL",
+      "ticker": "EVC"
+    },
+    {
+      "fill_rule": "open",
+      "price": 23.9641,
+      "shares": 119,
+      "side": "SELL",
+      "ticker": "FLY"
+    },
+    {
+      "fill_rule": "open",
+      "price": 2.4146,
+      "shares": 1316,
+      "side": "SELL",
+      "ticker": "INDI"
+    },
+    {
+      "fill_rule": "open",
+      "price": 3.05,
+      "shares": 1013,
+      "side": "SELL",
+      "ticker": "NEOV"
+    }
+  ],
+  "state": {
+    "after": "2026-11-11",
+    "cash": 2.2,
+    "pos": {
+      "CLX": {
+        "close_px": 106.86,
+        "cost": 2938.994,
+        "entry_date": "2026-11-11",
+        "entry_px": 104.89,
+        "fee_in": 2.074,
+        "last_px": 104.89,
+        "min_hold": 1,
+        "notional": 2936.92,
+        "peak_px": 104.89,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate last_green=True,rvol_min=1.5; rank hot_score; list flatten; \ud83d\udd35; \u26aa; ret5=+13.6; leftover $2958.29",
+        "shares": 28,
+        "ticker": "CLX"
+      },
+      "INDI": {
+        "close_px": 2.3,
+        "cost": 2973.6875,
+        "entry_date": "2026-11-11",
+        "entry_px": 2.4146,
+        "fee_in": 15.8025,
+        "last_px": 2.4146,
+        "min_hold": 1,
+        "notional": 2957.885,
+        "peak_px": 2.4146,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate last_green=True,rvol_min=1.5; rank hot_score; list yday_gainer; ret5=+52.0; leftover $2958.29",
+        "shares": 1225,
+        "ticker": "INDI"
+      },
+      "TLS": {
+        "close_px": 7.65,
+        "cost": 2961.0890999999997,
+        "entry_date": "2026-11-11",
+        "entry_px": 7.8,
+        "fee_in": 4.8891,
+        "last_px": 7.8,
+        "min_hold": 1,
+        "notional": 2956.2,
+        "peak_px": 7.8,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate last_green=True,rvol_min=1.5; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+48.9; leftover $2958.29",
+        "shares": 379,
+        "ticker": "TLS"
+      },
+      "TTD": {
+        "close_px": 15.98,
+        "cost": 2957.192,
+        "entry_date": "2026-11-11",
+        "entry_px": 15.23,
+        "fee_in": 2.572,
+        "last_px": 15.23,
+        "min_hold": 1,
+        "notional": 2954.62,
+        "peak_px": 15.23,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate last_green=True,rvol_min=1.5; rank hot_score; list flatten; \ud83d\udd35; ret5=+19.9; leftover $2958.29",
+        "shares": 194,
+        "ticker": "TTD"
+      }
+    },
+    "yday_equity": 11811.25
+  }
+}

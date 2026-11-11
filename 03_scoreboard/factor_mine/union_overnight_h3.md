@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ overnight, no 🚨
 
-Cash book **-6.66%** ($9,334) · signal-only (no cash/fees) was -45.53%. Starts YES **0/30**. Fills 123 · skips 176 · realized $-1797.14.
+Cash book **-8.23%** ($9,177) · signal-only (no cash/fees) was -45.53%. Starts YES **0/30**. Fills 132 · skips 176 · realized $-1797.14.
 
 ## How this sleeve decides (like you are 10)
 
@@ -321,6 +321,17 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $0.02 | ▼ close $9,323.98 vs 09:30 $9,395.94 (session -71.96) | 16:00 close · cash $0.02 · equity $9,323.98 vs 09:30 $9,395.94 (-71.96; session marks -71.96) · 1 name(s) marked open→close (per-name table). HE×1028 09:30 $9.14 → close $9.07 -71.96 | — |
 | 2026-11-10 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $0.02 | ▼ 09:30 equity $9,159.50 vs yday $9,323.98 (-164.48) | 09:30 open · cash $0.02 (unchanged overnight, no fees) · equity $9,159.50 vs prior close $9,323.98 (-164.48) · 1 name(s) re-marked at the open (per-name table). HE×1028 yday $9.07 → 09:30 $8.91 -164.48 | — |
 | 2026-11-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $0.02 | ▲ close $9,334.26 vs 09:30 $9,159.50 (session +174.76) | 16:00 close · cash $0.02 · equity $9,334.26 vs 09:30 $9,159.50 (+174.76; session marks +174.76) · 1 name(s) marked open→close (per-name table). HE×1028 09:30 $8.91 → close $9.08 +174.76 | — |
+| 2026-11-11 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $0.02 | ▼ 09:30 equity $9,293.14 vs yday $9,334.26 (-41.12) | 09:30 open · cash $0.02 (unchanged overnight, no fees) · equity $9,293.14 vs prior close $9,334.26 (-41.12) · 1 name(s) re-marked at the open (per-name table). HE×1028 yday $9.08 → 09:30 $9.04 -41.12 | — |
+| 2026-11-11 09:30 ET | **SELL** | `HE` | 1028 | $9.04 | $13.51 | $+733.95 | $9,279.63 | ▲ +733.95 after sell → book $9,279.63; vs 09:30 mark -13.51 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-11 09:30 ET | **BUY** | `AGRO` | 130 | $8.90 | $2.38 | — | $8,119.60 | — | union ∩ overnight, no 🚨; gate overnight=True; list overnight; 🔵; ret5=-4.8; leftover $1159.95 | join🔴 sector🟡 gen🟢 news🟢 digest🟡 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `AVEX` | 99 | $11.70 | $2.29 | — | $6,959.02 | — | union ∩ overnight, no 🚨; gate overnight=True; list overnight; ret5=-2.8; leftover $1159.95 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `AZ` | 184 | $6.29 | $2.54 | — | $5,799.11 | — | union ∩ overnight, no 🚨; gate overnight=True; list overnight; 🔵; ret5=-0.6; leftover $1159.95 | join🔴 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `CTVA` | 95 | $12.12 | $2.27 | — | $4,645.44 | — | union ∩ overnight, no 🚨; gate overnight=True; list overnight; ret5=+2.4; leftover $1159.95 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `ECO` | 13 | $84.65 | $2.03 | — | $3,542.96 | — | union ∩ overnight, no 🚨; gate overnight=True; list overnight; 🔵; ⚪; ret5=-12.4; leftover $1159.95 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟡 heat🟢 vol🟡 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `ENS` | 7 | $156.29 | $2.01 | — | $2,446.92 | — | union ∩ overnight, no 🚨; gate overnight=True; list overnight; ret5=-9.9; leftover $1159.95 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `FNV` | 4 | $257.00 | $2.00 | — | $1,416.92 | — | union ∩ overnight, no 🚨; gate overnight=True; list overnight,overnight_mega; ret5=+13.2; leftover $1159.95 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `ITRG` | 524 | $2.21 | $6.76 | — | $252.12 | — | union ∩ overnight, no 🚨; gate overnight=True; list overnight; ret5=+9.0; leftover $1159.95 | join🟡 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-11-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $252.12 | ▼ close $9,176.53 vs 09:30 $9,293.14 (session -80.82) | 16:00 close · cash $252.12 · equity $9,176.53 vs 09:30 $9,293.14 (-116.61; session marks -80.82) · 8 name(s) marked open→close (per-name table). AGRO×130 09:30 $8.90 → close $9.05 +18.85; AVEX×99 09:30 $11.70 → close $12.13 +42.57; AZ×184 09:30 $6.29 → close $6.25 -7.36; CTVA×95 09:30 $12.12 → close $12.14 +1.90; ECO×13 09:30 $84.65 → close $85.75 +14.30; ENS×7 09:30 $156.29 → close $147.65 -60.48; FNV×4 09:30 $257.00 → close $248.76 -32.96; ITRG×524 09:30 $2.21 → close $2.10 -57.64 | — |
 
 ## Not taken
 

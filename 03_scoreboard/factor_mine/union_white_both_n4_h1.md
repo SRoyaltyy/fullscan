@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 4 · rank `list` · size `leftover` · sell `list` · S-boost `none` · −0 red + yday up AND catalyst, top 4 by Score
 
-Cash book **+0.37%** ($10,037) · signal-only (no cash/fees) was +6.63%. Starts YES **7/30**. Fills 104 · skips 0 · realized $+1337.35.
+Cash book **+4.93%** ($10,493) · signal-only (no cash/fees) was +6.63%. Starts YES **7/30**. Fills 109 · skips 0 · realized $+1337.35.
 
 ## How this sleeve decides (like you are 10)
 
@@ -304,3 +304,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-10 09:30 ET | **BUY** | `LEGN` | 119 | $21.28 | $2.35 | — | $2,567.95 | — | −0 red + yday up AND catalyst, top 4 by Score; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list earn_react; ⚪; ret5=+15.1; leftover $2548.83 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-11-10 09:30 ET | **BUY** | `LINE` | 69 | $36.60 | $2.20 | — | $40.35 | — | −0 red + yday up AND catalyst, top 4 by Score; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list earn_react; ⚪; ret5=+7.1; leftover $2548.83 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟡 vol🟡 buy🟡 |
 | 2026-11-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $40.35 | ▼ close $10,037.00 vs 09:30 $10,197.91 (session -149.41) | 16:00 close · cash $40.35 · equity $10,037.00 vs 09:30 $10,197.91 (-160.91; session marks -149.41) · 4 name(s) marked open→close (per-name table). ALH×102 09:30 $24.93 → close $25.07 +14.28; CWST×28 09:30 $90.91 → close $93.00 +58.52; LEGN×119 09:30 $21.28 → close $20.41 -103.53; LINE×69 09:30 $36.60 → close $34.88 -118.68 | — |
+| 2026-11-11 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $40.35 | ▼ 09:30 equity $10,033.02 vs yday $10,037.00 (-3.98) | 09:30 open · cash $40.35 (unchanged overnight, no fees) · equity $10,033.02 vs prior close $10,037.00 (-3.98) · 4 name(s) re-marked at the open (per-name table). ALH×102 yday $25.07 → 09:30 $24.92 -15.30; CWST×28 yday $93.00 → 09:30 $92.94 -1.68; LEGN×119 yday $20.41 → 09:30 $20.67 +30.94; LINE×69 yday $34.88 → 09:30 $34.62 -17.94 | — |
+| 2026-11-11 09:30 ET | **SELL** | `ALH` | 102 | $24.92 | $2.33 | $-5.65 | $2,579.86 | ▼ -5.65 after sell → book $10,030.69; vs 09:30 mark -2.33 | dropped from list after 1 sess (min 1) | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-11 09:30 ET | **SELL** | `CWST` | 28 | $92.94 | $2.10 | $+52.66 | $5,180.07 | ▲ +52.66 after sell → book $10,028.58; vs 09:30 mark -2.11 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **SELL** | `LEGN` | 119 | $20.67 | $2.39 | $-77.32 | $7,637.42 | ▼ -77.32 after sell → book $10,026.20; vs 09:30 mark -2.38 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **SELL** | `LINE` | 69 | $34.62 | $2.23 | $-141.04 | $10,023.97 | ▼ -141.04 after sell → book $10,023.97; vs 09:30 mark -2.23 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **BUY** | `GO` | 799 | $12.52 | $10.31 | — | $10.18 | — | −0 red + yday up AND catalyst, top 4 by Score; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list earn_react; 🔵; ⚪; ret5=+9.7; leftover $10023.97 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10.18 | ▲ close $10,493.06 vs 09:30 $10,033.02 (session +479.40) | 16:00 close · cash $10.18 · equity $10,493.06 vs 09:30 $10,033.02 (+460.04; session marks +479.40) · 1 name(s) marked open→close (per-name table). GO×799 09:30 $12.52 → close $13.12 +479.40 | — |

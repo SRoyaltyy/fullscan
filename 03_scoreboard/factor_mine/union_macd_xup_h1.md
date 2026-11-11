@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ macd_xup, no 🚨
 
-Cash book **-27.51%** ($7,249) · signal-only (no cash/fees) was -19.02%. Starts YES **0/30**. Fills 342 · skips 71 · realized $-1788.82.
+Cash book **-25.44%** ($7,456) · signal-only (no cash/fees) was -19.02%. Starts YES **0/30**. Fills 358 · skips 71 · realized $-1788.82.
 
 ## How this sleeve decides (like you are 10)
 
@@ -540,6 +540,24 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-10 09:30 ET | **BUY** | `OKLO` | 35 | $25.70 | $2.10 | — | $1,003.68 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list yday_gainer; 🔵; ret5=+14.1; leftover $908.97 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
 | 2026-11-10 09:30 ET | **BUY** | `SATL` | 238 | $3.81 | $3.07 | — | $93.83 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list yday_gainer,overnight; 🔵; ret5=+28.7; leftover $908.97 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 heat🔴 vol🟡 buy🟡 |
 | 2026-11-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $93.83 | ▲ close $7,248.86 vs 09:30 $7,294.19 (session +5.23) | 16:00 close · cash $93.83 · equity $7,248.86 vs 09:30 $7,294.19 (-45.33; session marks +5.23) · 8 name(s) marked open→close (per-name table). WRBY×30 09:30 $29.85 → close $29.90 +1.50; POET×179 09:30 $5.07 → close $5.07 -0.72; FROG×8 09:30 $105.00 → close $103.55 -11.60; LASR×21 09:30 $43.14 → close $44.00 +18.06; AOSL×31 09:30 $28.57 → close $28.28 -8.99; SES×1032 09:30 $0.88 → close $0.89 +6.91; OKLO×35 09:30 $25.70 → close $25.09 -21.35; SATL×238 09:30 $3.81 → close $3.90 +21.42 | — |
+| 2026-11-11 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $93.83 | ▲ 09:30 equity $7,671.18 vs yday $7,248.86 (+422.32) | 09:30 open · cash $93.83 (unchanged overnight, no fees) · equity $7,671.18 vs prior close $7,248.86 (+422.32) · 8 name(s) re-marked at the open (per-name table). AOSL×31 yday $28.28 → 09:30 $30.00 +53.32; FROG×8 yday $103.55 → 09:30 $108.50 +39.64; LASR×21 yday $44.00 → 09:30 $45.42 +29.82; OKLO×35 yday $25.09 → 09:30 $26.28 +41.65; POET×179 yday $5.07 → 09:30 $5.52 +80.55; SATL×238 yday $3.90 → 09:30 $4.53 +148.75; SES×1032 yday $0.89 → 09:30 $0.91 +25.28; WRBY×30 yday $29.90 → 09:30 $30.01 +3.30 | — |
+| 2026-11-11 09:30 ET | **SELL** | `AOSL` | 31 | $30.00 | $2.10 | $+40.14 | $1,021.73 | ▲ +40.14 after sell → book $7,669.08; vs 09:30 mark -2.10 | dropped from list after 1 sess (min 1) | join🔴 sector🟢 gen🟢 news🟢 digest🟡 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-11 09:30 ET | **SELL** | `FROG` | 8 | $108.50 | $2.03 | $+23.99 | $1,887.73 | ▲ +23.99 after sell → book $7,667.04; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **SELL** | `LASR` | 21 | $45.42 | $2.07 | $+43.75 | $2,839.48 | ▲ +43.75 after sell → book $7,664.97; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **SELL** | `OKLO` | 35 | $26.28 | $2.12 | $+16.09 | $3,757.17 | ▲ +16.09 after sell → book $7,662.85; vs 09:30 mark -2.12 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **SELL** | `POET` | 179 | $5.52 | $2.57 | $+74.74 | $4,742.68 | ▲ +74.74 after sell → book $7,660.29; vs 09:30 mark -2.56 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **SELL** | `SATL` | 238 | $4.53 | $3.12 | $+163.98 | $5,816.51 | ▲ +163.98 after sell → book $7,657.17; vs 09:30 mark -3.12 | dropped from list after 1 sess (min 1) | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-11 09:30 ET | **SELL** | `SES` | 1032 | $0.91 | $12.68 | $+7.34 | $6,744.19 | ▲ +7.34 after sell → book $7,644.49; vs 09:30 mark -12.68 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **SELL** | `WRBY` | 30 | $30.01 | $2.10 | $+0.62 | $7,642.39 | ▲ +0.62 after sell → book $7,642.39; vs 09:30 mark -2.10 | dropped from list after 1 sess (min 1) | join🟢 sector🔴 gen🟢 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-11 09:30 ET | **BUY** | `CECO` | 16 | $58.47 | $2.04 | — | $6,704.83 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list probable,yday_gainer; 🔵; ret5=+3.2; leftover $955.30 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🔴 peer🟢 heat🟡 vol🟢 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `GFR` | 124 | $7.70 | $2.36 | — | $5,747.67 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list yday_gainer,yday_mover; 🔵; ret5=+24.5; leftover $955.30 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `LINC` | 40 | $23.32 | $2.11 | — | $4,812.76 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+12.2; leftover $955.30 | join🟢 sector🟡 gen🟢 news🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `OSS` | 186 | $5.11 | $2.55 | — | $3,859.75 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list yday_gainer; ret5=-2.9; leftover $955.30 | join🔴 sector🟢 gen🟢 news🟡 digest🟡 ab🟡 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `ZETA` | 26 | $36.00 | $2.07 | — | $2,921.68 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list ohlc_hot; ⚪; ret5=+13.2; leftover $955.30 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `VLN` | 575 | $1.66 | $7.42 | — | $1,959.76 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list earn_react; ret5=+9.5; leftover $955.30 | join🔴 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `AVEX` | 81 | $11.70 | $2.23 | — | $1,009.83 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list overnight; ret5=-2.8; leftover $955.30 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `CTVA` | 78 | $12.12 | $2.22 | — | $62.25 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list overnight; ret5=+2.4; leftover $955.30 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $62.25 | ▼ close $7,455.93 vs 09:30 $7,671.18 (session -163.46) | 16:00 close · cash $62.25 · equity $7,455.93 vs 09:30 $7,671.18 (-215.25; session marks -163.46) · 8 name(s) marked open→close (per-name table). CECO×16 09:30 $58.47 → close $53.50 -79.52; GFR×124 09:30 $7.70 → close $7.70 +0.00; LINC×40 09:30 $23.32 → close $23.51 +7.60; OSS×186 09:30 $5.11 → close $4.89 -40.92; ZETA×26 09:30 $36.00 → close $37.74 +45.24; VLN×575 09:30 $1.66 → close $1.43 -132.25; AVEX×81 09:30 $11.70 → close $12.13 +34.83; CTVA×78 09:30 $12.12 → close $12.14 +1.56 | — |
 
 ## Not taken
 

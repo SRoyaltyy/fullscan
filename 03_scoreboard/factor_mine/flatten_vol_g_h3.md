@@ -6,7 +6,7 @@ Buys the flatten **wish-list** even on io/HOLD mornings — live `flatten_robust
 
 Side **long** · universe `flatten` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · flatten wish-list ∩ vol🟢
 
-Cash book **-27.74%** ($7,226) · signal-only (no cash/fees) was -19.12%. Starts YES **6/30**. Fills 67 · skips 71 · realized $-2440.55.
+Cash book **-28.20%** ($7,180) · signal-only (no cash/fees) was -19.12%. Starts YES **6/30**. Fills 72 · skips 71 · realized $-2440.55.
 
 ## How this sleeve decides (like you are 10)
 
@@ -265,6 +265,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-10 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $134.38 | ▼ 09:30 equity $7,208.09 vs yday $7,264.91 (-56.82) | 09:30 open · cash $134.38 (unchanged overnight, no fees) · equity $7,208.09 vs prior close $7,264.91 (-56.82) · 4 name(s) re-marked at the open (per-name table). APP×9 yday $410.00 → 09:30 $405.59 -39.69; CLOV×13 yday $4.83 → 09:30 $4.82 -0.13; GPK×306 yday $10.84 → 09:30 $10.79 -15.30; ZVRA×5 yday $12.14 → 09:30 $11.80 -1.70 | — |
 | 2026-11-10 09:30 ET | **BUY** | `WRBY` | 1 | $29.85 | $0.30 | — | $104.23 | — | flatten wish-list ∩ vol🟢; gate vol=good; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ⚪; ret5=+26.6; leftover $33.59 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $104.23 | ▲ close $7,226.25 vs 09:30 $7,208.09 (session +18.46) | 16:00 close · cash $104.23 · equity $7,226.25 vs 09:30 $7,208.09 (+18.16; session marks +18.46) · 5 name(s) marked open→close (per-name table). APP×9 09:30 $405.59 → close $395.51 -90.72; CLOV×13 09:30 $4.82 → close $4.93 +1.43; GPK×306 09:30 $10.79 → close $11.14 +107.10; ZVRA×5 09:30 $11.80 → close $11.92 +0.60; WRBY×1 09:30 $29.85 → close $29.90 +0.05 | — |
+| 2026-11-11 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $104.23 | ▼ 09:30 equity $7,160.12 vs yday $7,226.25 (-66.12) | 09:30 open · cash $104.23 (unchanged overnight, no fees) · equity $7,160.12 vs prior close $7,226.25 (-66.12) · 5 name(s) re-marked at the open (per-name table). APP×9 yday $395.51 → 09:30 $394.50 -9.13; CLOV×13 yday $4.93 → 09:30 $5.01 +1.04; GPK×306 yday $11.14 → 09:30 $10.95 -58.14; WRBY×1 yday $29.90 → 09:30 $30.01 +0.11; ZVRA×5 yday $11.92 → 09:30 $11.92 +0.00 | — |
+| 2026-11-11 09:30 ET | **SELL** | `APP` | 9 | $394.50 | $2.06 | $+342.83 | $3,652.63 | ▲ +342.83 after sell → book $7,158.07; vs 09:30 mark -2.06 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-11 09:30 ET | **SELL** | `GPK` | 306 | $10.95 | $4.03 | $-115.07 | $6,999.30 | ▼ -115.07 after sell → book $7,154.04; vs 09:30 mark -4.03 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-11 09:30 ET | **BUY** | `CLX` | 22 | $104.89 | $2.06 | — | $4,689.67 | — | flatten wish-list ∩ vol🟢; gate vol=good; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ⚪; ret5=+13.6; leftover $2333.10 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `COTY` | 545 | $4.28 | $7.03 | — | $2,350.04 | — | flatten wish-list ∩ vol🟢; gate vol=good; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ⚪; ret5=+31.6; leftover $2333.10 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `TTD` | 153 | $15.23 | $2.45 | — | $17.40 | — | flatten wish-list ∩ vol🟢; gate vol=good; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ret5=+19.9; leftover $2333.10 | join🟢 sector🟡 gen🟢 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $17.40 | ▲ close $7,179.97 vs 09:30 $7,160.12 (session +37.46) | 16:00 close · cash $17.40 · equity $7,179.97 vs 09:30 $7,160.12 (+19.85; session marks +37.46) · 6 name(s) marked open→close (per-name table). CLOV×13 09:30 $5.01 → close $4.97 -0.52; WRBY×1 09:30 $30.01 → close $30.15 +0.14; ZVRA×5 09:30 $11.92 → close $11.85 -0.35; CLX×22 09:30 $104.89 → close $106.86 +43.34; COTY×545 09:30 $4.28 → close $4.06 -119.90; TTD×153 09:30 $15.23 → close $15.98 +114.75 | — |
 
 ## Not taken
 

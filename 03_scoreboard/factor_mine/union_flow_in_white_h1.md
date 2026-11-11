@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-4.01%** ($9,599) · signal-only (no cash/fees) was +10.92%. Starts YES **15/30**. Fills 30 · skips 0 · realized $+806.69.
+Cash book **+0.87%** ($10,087) · signal-only (no cash/fees) was +10.92%. Starts YES **15/30**. Fills 33 · skips 0 · realized $+806.69.
 
 ## How this sleeve decides (like you are 10)
 
@@ -230,3 +230,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-10 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9.70 | ▼ 09:30 equity $9,609.70 vs yday $9,785.70 (-176.00) | 09:30 open · cash $9.70 (unchanged overnight, no fees) · equity $9,609.70 vs prior close $9,785.70 (-176.00) · 1 name(s) re-marked at the open (per-name table). CERT×800 yday $12.22 → 09:30 $12.00 -176.00 | — |
 | 2026-11-10 09:30 ET | **SELL** | `CERT` | 800 | $12.00 | $10.53 | $-68.85 | $9,599.17 | ▼ -68.85 after sell → book $9,599.17; vs 09:30 mark -10.53 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,599.17 | ▲ close $9,599.17 vs 09:30 $9,609.70 (session +0.00) | 16:00 close · cash $9,599.17 · no lots left · equity $9,599.17. | — |
+| 2026-11-11 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,599.17 | ▲ 09:30 equity $9,599.17 vs yday $9,599.17 (+0.00) | 09:30 open · cash $9,599.17 · no holdings · equity $9,599.17 vs prior close $9,599.17 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-11 09:30 ET | **BUY** | `CLX` | 30 | $104.89 | $2.08 | — | $6,450.39 | — | combo gate; gate flow_in=True,zero_red=True; list flatten; 🔵; ⚪; ret5=+13.6; leftover $3199.72 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `GO` | 255 | $12.52 | $3.29 | — | $3,254.50 | — | combo gate; gate flow_in=True,zero_red=True; list earn_react; 🔵; ⚪; ret5=+9.7; leftover $3199.72 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `SONO` | 182 | $17.50 | $2.54 | — | $66.96 | — | combo gate; gate flow_in=True,zero_red=True; list earn_react; ⚪; ret5=+6.0; leftover $3199.72 | join🟡 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $66.96 | ▲ close $10,087.28 vs 09:30 $9,599.17 (session +496.02) | 16:00 close · cash $66.96 · equity $10,087.28 vs 09:30 $9,599.17 (+488.11; session marks +496.02) · 3 name(s) marked open→close (per-name table). CLX×30 09:30 $104.89 → close $106.86 +59.10; GO×255 09:30 $12.52 → close $13.12 +153.00; SONO×182 09:30 $17.50 → close $19.06 +283.92 | — |

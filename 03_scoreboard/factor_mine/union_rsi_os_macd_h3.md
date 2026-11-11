@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-6.95%** ($9,305) · signal-only (no cash/fees) was +8.48%. Starts YES **1/30**. Fills 65 · skips 9 · realized $-574.52.
+Cash book **-1.20%** ($9,880) · signal-only (no cash/fees) was +8.48%. Starts YES **1/30**. Fills 67 · skips 9 · realized $-574.52.
 
 ## How this sleeve decides (like you are 10)
 
@@ -265,6 +265,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-10 09:30 ET | **SELL** | `STUB` | 405 | $5.76 | $5.31 | $-332.51 | $7,295.47 | ▼ -332.51 after sell → book $9,249.44; vs 09:30 mark -5.31 | dropped from list after 3 sess (min 3) | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 heat🟢 vol🟡 buy🟡 |
 | 2026-11-10 09:30 ET | **BUY** | `SWMR` | 828 | $8.79 | $10.68 | — | $6.67 | — | combo gate; gate macd_up=True,rsi_os=True; list overnight; ret5=-1.6; leftover $7295.47 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 judge🟡 ab🔴 heat🟢 vol🟡 buy🟡 |
 | 2026-11-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6.67 | ▲ close $9,305.12 vs 09:30 $9,261.96 (session +66.37) | 16:00 close · cash $6.67 · equity $9,305.12 vs 09:30 $9,261.96 (+43.16; session marks +66.37) · 5 name(s) marked open→close (per-name table). INDI×1 09:30 $2.13 → close $2.28 +0.15; KDK×1 09:30 $1.39 → close $1.21 -0.18; MARA×150 09:30 $6.56 → close $7.34 +117.00; QUBT×148 09:30 $6.53 → close $6.30 -34.04; SWMR×828 09:30 $8.79 → close $8.77 -16.56 | — |
+| 2026-11-11 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6.67 | ▼ 09:30 equity $9,048.15 vs yday $9,305.12 (-256.97) | 09:30 open · cash $6.67 (unchanged overnight, no fees) · equity $9,048.15 vs prior close $9,305.12 (-256.97) · 5 name(s) re-marked at the open (per-name table). INDI×1 yday $2.28 → 09:30 $2.41 +0.13; KDK×1 yday $1.21 → 09:30 $1.28 +0.07; MARA×150 yday $7.34 → 09:30 $7.68 +50.63; QUBT×148 yday $6.30 → 09:30 $6.57 +39.96; SWMR×828 yday $8.77 → 09:30 $8.35 -347.76 | — |
+| 2026-11-11 09:30 ET | **SELL** | `INDI` | 1 | $2.41 | $0.05 | $+0.65 | $9.04 | ▲ +0.65 after sell → book $9,048.10; vs 09:30 mark -0.05 | dropped from list after 3 sess (min 3) | join🔴 sector🟢 gen🟢 news🔴 digest🟡 ab🔴 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-11 09:30 ET | **SELL** | `KDK` | 1 | $1.28 | $0.04 | $+0.14 | $10.28 | ▲ +0.14 after sell → book $9,048.07; vs 09:30 mark -0.03 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10.28 | ▲ close $9,880.48 vs 09:30 $9,048.15 (session +832.41) | 16:00 close · cash $10.28 · equity $9,880.48 vs 09:30 $9,048.15 (+832.33; session marks +832.41) · 3 name(s) marked open→close (per-name table). MARA×150 09:30 $7.68 → close $7.66 -2.63; QUBT×148 09:30 $6.57 → close $6.17 -59.20; SWMR×828 09:30 $8.35 → close $9.43 +894.24 | — |
 
 ## Not taken
 

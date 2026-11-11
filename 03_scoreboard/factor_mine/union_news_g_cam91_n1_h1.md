@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 1 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · all leftover on the rare news🟢 +9 −≤1 name (KILL example)
 
-Cash book **-24.28%** ($7,572) · signal-only (no cash/fees) was -2.85%. Starts YES **27/30**. Fills 11 · skips 1 · realized $+1232.62.
+Cash book **-24.92%** ($7,508) · signal-only (no cash/fees) was -2.85%. Starts YES **27/30**. Fills 12 · skips 1 · realized $+1232.62.
 
 ## How this sleeve decides (like you are 10)
 
@@ -212,6 +212,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-10 09:30 ET | **SELL** | `ADMA` | 601 | $12.89 | $7.91 | $-18.73 | $7,741.98 | ▼ -18.73 after sell → book $7,741.98; vs 09:30 mark -7.91 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-10 09:30 ET | **BUY** | `FG` | 302 | $25.55 | $3.90 | — | $21.98 | — | all leftover on the rare news🟢 +9 −≤1 name (KILL example); gate cam_bad_max=1,n_pos_min=9,news=good; rank cond; list ohlc_hot; 🔵; ⚪; ret5=+17.7; leftover $7741.98 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
 | 2026-11-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $21.98 | ▼ close $7,571.98 vs 09:30 $7,749.89 (session -166.10) | 16:00 close · cash $21.98 · equity $7,571.98 vs 09:30 $7,749.89 (-177.91; session marks -166.10) · 1 name(s) marked open→close (per-name table). FG×302 09:30 $25.55 → close $25.00 -166.10 | — |
+| 2026-11-11 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $21.98 | ▼ 09:30 equity $7,511.58 vs yday $7,571.98 (-60.40) | 09:30 open · cash $21.98 (unchanged overnight, no fees) · equity $7,511.58 vs prior close $7,571.98 (-60.40) · 1 name(s) re-marked at the open (per-name table). FG×302 yday $25.00 → 09:30 $24.80 -60.40 | — |
+| 2026-11-11 09:30 ET | **SELL** | `FG` | 302 | $24.80 | $4.01 | $-234.40 | $7,507.57 | ▼ -234.40 after sell → book $7,507.57; vs 09:30 mark -4.01 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,507.57 | ▲ close $7,507.57 vs 09:30 $7,511.58 (session +0.00) | 16:00 close · cash $7,507.57 · no lots left · equity $7,507.57. | — |
 
 ## Not taken
 

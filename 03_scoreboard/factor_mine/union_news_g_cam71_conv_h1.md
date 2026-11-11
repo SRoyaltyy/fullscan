@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 4 · rank `cond` · size `conviction` · sell `list` · S-boost `none` · news🟢 +7 −≤1; 70% leftover if #1 net ≥ 5
 
-Cash book **-15.81%** ($8,419) · signal-only (no cash/fees) was -13.48%. Starts YES **6/30**. Fills 86 · skips 10 · realized $-54.32.
+Cash book **-18.93%** ($8,107) · signal-only (no cash/fees) was -13.48%. Starts YES **6/30**. Fills 94 · skips 10 · realized $-54.32.
 
 ## How this sleeve decides (like you are 10)
 
@@ -287,6 +287,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-10 09:30 ET | **BUY** | `SG` | 62 | $13.61 | $2.18 | — | $1,044.63 | — | news🟢 +7 −≤1; 70% leftover if #1 net ≥ 5; gate cam_bad_max=1,n_pos_min=7,news=good; rank cond; list ohlc_hot; 🔵; ⚪; ret5=+16.5; leftover $856.16 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
 | 2026-11-10 09:30 ET | **BUY** | `ZVRA` | 72 | $11.80 | $2.21 | — | $192.82 | — | news🟢 +7 −≤1; 70% leftover if #1 net ≥ 5; gate cam_bad_max=1,n_pos_min=7,news=good; rank cond; list flatten; 🔵; ⚪; ret5=+20.2; leftover $856.16 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
 | 2026-11-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $192.82 | ▼ close $8,418.98 vs 09:30 $8,564.04 (session -133.24) | 16:00 close · cash $192.82 · equity $8,418.98 vs 09:30 $8,564.04 (-145.06; session marks -133.24) · 4 name(s) marked open→close (per-name table). FG×234 09:30 $25.55 → close $25.00 -128.70; ALGN×4 09:30 $171.82 → close $174.26 +9.76; SG×62 09:30 $13.61 → close $13.24 -22.94; ZVRA×72 09:30 $11.80 → close $11.92 +8.64 | — |
+| 2026-11-11 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $192.82 | ▼ 09:30 equity $8,366.76 vs yday $8,418.98 (-52.22) | 09:30 open · cash $192.82 (unchanged overnight, no fees) · equity $8,366.76 vs prior close $8,418.98 (-52.22) · 4 name(s) re-marked at the open (per-name table). ALGN×4 yday $174.26 → 09:30 $174.30 +0.16; FG×234 yday $25.00 → 09:30 $24.80 -46.80; SG×62 yday $13.24 → 09:30 $13.15 -5.58; ZVRA×72 yday $11.92 → 09:30 $11.92 +0.00 | — |
+| 2026-11-11 09:30 ET | **SELL** | `ALGN` | 4 | $174.30 | $2.02 | $+5.90 | $888.00 | ▲ +5.90 after sell → book $8,364.74; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **SELL** | `FG` | 234 | $24.80 | $3.10 | $-181.62 | $6,688.09 | ▼ -181.62 after sell → book $8,361.63; vs 09:30 mark -3.11 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **SELL** | `SG` | 62 | $13.15 | $2.20 | $-32.89 | $7,501.20 | ▼ -32.89 after sell → book $8,359.44; vs 09:30 mark -2.19 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **SELL** | `ZVRA` | 72 | $11.92 | $2.23 | $+4.21 | $8,357.21 | ▲ +4.21 after sell → book $8,357.21; vs 09:30 mark -2.23 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **BUY** | `ALH` | 234 | $24.92 | $3.02 | — | $2,522.91 | — | news🟢 +7 −≤1; 70% leftover if #1 net ≥ 5; gate cam_bad_max=1,n_pos_min=7,news=good; rank cond; list ohlc_hot; 🔵; ⚪; ret5=+12.9; leftover $5850.05 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `CECO` | 14 | $58.47 | $2.03 | — | $1,702.30 | — | news🟢 +7 −≤1; 70% leftover if #1 net ≥ 5; gate cam_bad_max=1,n_pos_min=7,news=good; rank cond; list probable,yday_gainer; 🔵; ret5=+3.2; leftover $835.72 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🔴 peer🟢 heat🟡 vol🟢 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `EMBJ` | 10 | $82.46 | $2.02 | — | $875.68 | — | news🟢 +7 −≤1; 70% leftover if #1 net ≥ 5; gate cam_bad_max=1,n_pos_min=7,news=good; rank cond; list ohlc_hot; 🔵; ret5=+9.3; leftover $835.72 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `LOAR` | 10 | $79.53 | $2.02 | — | $78.36 | — | news🟢 +7 −≤1; 70% leftover if #1 net ≥ 5; gate cam_bad_max=1,n_pos_min=7,news=good; rank cond; list ohlc_hot; 🔵; ret5=+16.4; leftover $835.72 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $78.36 | ▼ close $8,106.86 vs 09:30 $8,366.76 (session -241.26) | 16:00 close · cash $78.36 · equity $8,106.86 vs 09:30 $8,366.76 (-259.90; session marks -241.26) · 4 name(s) marked open→close (per-name table). ALH×234 09:30 $24.92 → close $24.20 -168.48; CECO×14 09:30 $58.47 → close $53.50 -69.58; EMBJ×10 09:30 $82.46 → close $82.43 -0.30; LOAR×10 09:30 $79.53 → close $79.24 -2.90 | — |
 
 ## Not taken
 

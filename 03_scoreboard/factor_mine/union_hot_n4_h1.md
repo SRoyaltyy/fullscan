@@ -366,6 +366,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-10 09:30 ET | **SELL** | `BUUU` | 589 | $4.93 | $7.72 | $-250.92 | $8,925.17 | ▼ -250.92 after sell → book $12,201.17; vs 09:30 mark -7.72 | dropped from list after 2 sess (min 1) | — |
 | 2026-11-10 09:30 ET | **SELL** | `XERS` | 208 | $15.75 | $2.74 | $+75.69 | $12,198.42 | ▲ +75.69 after sell → book $12,198.42; vs 09:30 mark -2.75 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $12,198.42 | ▲ close $12,198.42 vs 09:30 $12,214.16 (session +0.00) | 16:00 close · cash $12,198.42 · no lots left · equity $12,198.42. | — |
+| 2026-11-11 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $12,198.42 | ▲ 09:30 equity $12,198.42 vs yday $12,198.42 (+0.00) | 09:30 open · cash $12,198.42 · no holdings · equity $12,198.42 vs prior close $12,198.42 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $12,198.42 | ▲ close $12,198.42 vs 09:30 $12,198.42 (session +0.00) | 16:00 close · cash $12,198.42 · no lots left · equity $12,198.42. | — |
 
 ## Not taken
 

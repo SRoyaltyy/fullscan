@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · Clock-B #7 insider/Form-4 + inst Tx + stabilize (if data)
 
-Cash book **+13.82%** ($11,382) · signal-only (no cash/fees) was -5.54%. Starts YES **0/30**. Fills 15 · skips 7 · realized $-603.63.
+Cash book **+14.50%** ($11,450) · signal-only (no cash/fees) was -5.54%. Starts YES **0/30**. Fills 15 · skips 7 · realized $-603.63.
 
 ## How this sleeve decides (like you are 10)
 
@@ -215,6 +215,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2.33 | ▲ close $11,154.33 vs 09:30 $11,114.92 (session +42.00) | 16:00 close · cash $2.33 · equity $11,154.33 vs 09:30 $11,114.92 (+39.41; session marks +42.00) · 1 name(s) marked open→close (per-name table). OXY×200 09:30 $55.55 → close $55.76 +42.00 | — |
 | 2026-11-10 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $2.33 | ▼ 09:30 equity $11,052.33 vs yday $11,154.33 (-102.00) | 09:30 open · cash $2.33 (unchanged overnight, no fees) · equity $11,052.33 vs prior close $11,154.33 (-102.00) · 1 name(s) re-marked at the open (per-name table). OXY×200 yday $55.76 → 09:30 $55.25 -102.00 | — |
 | 2026-11-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2.33 | ▲ close $11,382.33 vs 09:30 $11,052.33 (session +330.00) | 16:00 close · cash $2.33 · equity $11,382.33 vs 09:30 $11,052.33 (+330.00; session marks +330.00) · 1 name(s) marked open→close (per-name table). OXY×200 09:30 $55.25 → close $56.90 +330.00 | — |
+| 2026-11-11 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $2.33 | ▲ 09:30 equity $11,454.33 vs yday $11,382.33 (+72.00) | 09:30 open · cash $2.33 (unchanged overnight, no fees) · equity $11,454.33 vs prior close $11,382.33 (+72.00) · 1 name(s) re-marked at the open (per-name table). OXY×200 yday $56.90 → 09:30 $57.26 +72.00 | — |
+| 2026-11-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2.33 | ▼ close $11,450.33 vs 09:30 $11,454.33 (session -4.00) | 16:00 close · cash $2.33 · equity $11,450.33 vs 09:30 $11,454.33 (-4.00; session marks -4.00) · 1 name(s) marked open→close (per-name table). OXY×200 09:30 $57.26 → close $57.24 -4.00 | — |
 
 ## Not taken
 

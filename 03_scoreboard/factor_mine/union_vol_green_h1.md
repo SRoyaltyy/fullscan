@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-12.03%** ($8,797) · signal-only (no cash/fees) was -4.91%. Starts YES **5/30**. Fills 400 · skips 78 · realized $-2.02.
+Cash book **-11.57%** ($8,843) · signal-only (no cash/fees) was -4.91%. Starts YES **5/30**. Fills 414 · skips 78 · realized $-2.02.
 
 ## How this sleeve decides (like you are 10)
 
@@ -600,6 +600,22 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-10 09:30 ET | **BUY** | `NUAI` | 533 | $2.12 | $6.88 | — | $1,196.42 | — | combo gate; gate last_green=True,vol=good; list probable,yday_gainer,yday_mover; ret5=-5.6; leftover $1133.68 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 judge🟡 ab🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-11-10 09:30 ET | **BUY** | `IREN` | 54 | $20.80 | $2.15 | — | $71.07 | — | combo gate; gate last_green=True,vol=good; list probable,yday_gainer; 🔵; ret5=-2.8; leftover $1133.68 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 judge🟢 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
 | 2026-11-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $71.07 | ▼ close $8,797.24 vs 09:30 $8,930.05 (session -98.64) | 16:00 close · cash $71.07 · equity $8,797.24 vs 09:30 $8,930.05 (-132.81; session marks -98.64) · 8 name(s) marked open→close (per-name table). ALGN×6 09:30 $171.82 → close $174.26 +14.64; TMDX×12 09:30 $93.50 → close $90.94 -30.66; ZVRA×93 09:30 $11.80 → close $11.92 +11.16; WRBY×37 09:30 $29.85 → close $29.90 +1.85; ETON×17 09:30 $63.63 → close $67.54 +66.47; THM×750 09:30 $1.51 → close $1.41 -75.00; NUAI×533 09:30 $2.12 → close $2.07 -29.32; IREN×54 09:30 $20.80 → close $19.73 -57.78 | — |
+| 2026-11-11 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $71.07 | ▲ 09:30 equity $8,974.10 vs yday $8,797.24 (+176.86) | 09:30 open · cash $71.07 (unchanged overnight, no fees) · equity $8,974.10 vs prior close $8,797.24 (+176.86) · 8 name(s) re-marked at the open (per-name table). ALGN×6 yday $174.26 → 09:30 $174.30 +0.24; ETON×17 yday $67.54 → 09:30 $66.94 -10.20; IREN×54 yday $19.73 → 09:30 $20.96 +66.42; NUAI×533 yday $2.07 → 09:30 $2.26 +101.27; THM×750 yday $1.41 → 09:30 $1.43 +15.00; TMDX×12 yday $90.94 → 09:30 $90.95 +0.06; WRBY×37 yday $29.90 → 09:30 $30.01 +4.07; ZVRA×93 yday $11.92 → 09:30 $11.92 +0.00 | — |
+| 2026-11-11 09:30 ET | **SELL** | `ALGN` | 6 | $174.30 | $2.03 | $+34.36 | $1,114.84 | ▲ +34.36 after sell → book $8,972.07; vs 09:30 mark -2.03 | dropped from list after 2 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **SELL** | `ETON` | 17 | $66.94 | $2.06 | $+52.17 | $2,250.76 | ▲ +52.17 after sell → book $8,970.01; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **SELL** | `IREN` | 54 | $20.96 | $2.17 | $+4.32 | $3,380.43 | ▲ +4.32 after sell → book $8,967.84; vs 09:30 mark -2.17 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **SELL** | `NUAI` | 533 | $2.26 | $6.97 | $+58.11 | $4,578.03 | ▲ +58.11 after sell → book $8,960.86; vs 09:30 mark -6.98 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **SELL** | `THM` | 750 | $1.43 | $9.81 | $-79.48 | $5,640.73 | ▼ -79.48 after sell → book $8,951.06; vs 09:30 mark -9.80 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **SELL** | `TMDX` | 12 | $90.95 | $2.05 | $+31.33 | $6,730.08 | ▲ +31.33 after sell → book $8,949.01; vs 09:30 mark -2.05 | dropped from list after 2 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **SELL** | `ZVRA` | 93 | $11.92 | $2.29 | $+20.55 | $7,836.34 | ▲ +20.55 after sell → book $8,946.71; vs 09:30 mark -2.30 | dropped from list after 2 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **BUY** | `CLX` | 10 | $104.89 | $2.02 | — | $6,785.42 | — | combo gate; gate last_green=True,vol=good; list flatten; 🔵; ⚪; ret5=+13.6; leftover $1119.48 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `COTY` | 261 | $4.28 | $3.37 | — | $5,664.98 | — | combo gate; gate last_green=True,vol=good; list flatten; 🔵; ⚪; ret5=+31.6; leftover $1119.48 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `TTD` | 73 | $15.23 | $2.21 | — | $4,550.98 | — | combo gate; gate last_green=True,vol=good; list flatten; 🔵; ret5=+19.9; leftover $1119.48 | join🟢 sector🟡 gen🟢 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `PCT` | 508 | $2.20 | $6.55 | — | $3,426.83 | — | combo gate; gate last_green=True,vol=good; list probable,yday_gainer,yday_mover; ret5=-31.7; leftover $1119.48 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🟡 vol🟢 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `TLS` | 143 | $7.80 | $2.42 | — | $2,309.01 | — | combo gate; gate last_green=True,vol=good; list yday_gainer,yday_mover; 🔵; ret5=+48.9; leftover $1119.48 | join🔴 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `LINC` | 48 | $23.32 | $2.13 | — | $1,187.51 | — | combo gate; gate last_green=True,vol=good; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+12.2; leftover $1119.48 | join🟢 sector🟡 gen🟢 news🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `QXO` | 81 | $13.70 | $2.23 | — | $75.58 | — | combo gate; gate last_green=True,vol=good; list yday_gainer; 🔵; ret5=+17.3; leftover $1119.48 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $75.58 | ▼ close $8,842.97 vs 09:30 $8,974.10 (session -82.81) | 16:00 close · cash $75.58 · equity $8,842.97 vs 09:30 $8,974.10 (-131.13; session marks -82.81) · 8 name(s) marked open→close (per-name table). WRBY×37 09:30 $30.01 → close $30.15 +5.18; CLX×10 09:30 $104.89 → close $106.86 +19.70; COTY×261 09:30 $4.28 → close $4.06 -57.42; TTD×73 09:30 $15.23 → close $15.98 +54.75; PCT×508 09:30 $2.20 → close $2.00 -101.60; TLS×143 09:30 $7.80 → close $7.65 -21.45; LINC×48 09:30 $23.32 → close $23.51 +9.12; QXO×81 09:30 $13.70 → close $13.81 +8.91 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `probable` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-25.16%** ($7,484) · signal-only (no cash/fees) was -9.22%. Starts YES **0/30**. Fills 343 · skips 53 · realized $-864.75.
+Cash book **-28.40%** ($7,160) · signal-only (no cash/fees) was -9.22%. Starts YES **0/30**. Fills 351 · skips 53 · realized $-864.75.
 
 ## How this sleeve decides (like you are 10)
 
@@ -543,6 +543,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-10 09:30 ET | **BUY** | `ONDS` | 190 | $5.83 | $2.56 | — | $1,100.12 | — | combo gate; gate last_green=True,ret_5_max=10.0; list probable; ret5=+3.8; leftover $1110.41 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 judge🟡 ab🔴 peer🔴 heat🔴 vol🟡 buy🟡 |
 | 2026-11-10 09:30 ET | **BUY** | `SITM` | 2 | $449.21 | $2.00 | — | $199.70 | — | combo gate; gate last_green=True,ret_5_max=10.0; list probable; 🔵; ret5=+9.4; leftover $1110.41 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 judge🟡 ab🟡 peer🟡 heat🔴 vol🟢 buy🟡 |
 | 2026-11-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $199.70 | ▼ close $7,484.08 vs 09:30 $7,780.11 (session -259.75) | 16:00 close · cash $199.70 · equity $7,484.08 vs 09:30 $7,780.11 (-296.03; session marks -259.75) · 7 name(s) marked open→close (per-name table). THM×735 09:30 $1.51 → close $1.41 -73.50; NUAI×522 09:30 $2.12 → close $2.07 -28.71; IREN×53 09:30 $20.80 → close $19.73 -56.71; POET×218 09:30 $5.07 → close $5.07 -0.87; RCAT×254 09:30 $4.37 → close $4.21 -40.28; ONDS×190 09:30 $5.83 → close $5.57 -50.16; SITM×2 09:30 $449.21 → close $444.45 -9.52 | — |
+| 2026-11-11 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $199.70 | ▲ 09:30 equity $7,951.34 vs yday $7,484.08 (+467.26) | 09:30 open · cash $199.70 (unchanged overnight, no fees) · equity $7,951.34 vs prior close $7,484.08 (+467.26) · 7 name(s) re-marked at the open (per-name table). IREN×53 yday $19.73 → 09:30 $20.96 +65.19; NUAI×522 yday $2.07 → 09:30 $2.26 +99.18; ONDS×190 yday $5.57 → 09:30 $5.84 +52.25; POET×218 yday $5.07 → 09:30 $5.52 +98.10; RCAT×254 yday $4.21 → 09:30 $4.40 +48.26; SITM×2 yday $444.45 → 09:30 $489.24 +89.58; THM×735 yday $1.41 → 09:30 $1.43 +14.70 | — |
+| 2026-11-11 09:30 ET | **SELL** | `IREN` | 53 | $20.96 | $2.17 | $+4.16 | $1,308.41 | ▲ +4.16 after sell → book $7,949.17; vs 09:30 mark -2.17 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **SELL** | `NUAI` | 522 | $2.26 | $6.83 | $+56.91 | $2,481.30 | ▲ +56.91 after sell → book $7,942.34; vs 09:30 mark -6.83 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **SELL** | `ONDS` | 190 | $5.84 | $2.60 | $-3.07 | $3,589.25 | ▼ -3.07 after sell → book $7,939.74; vs 09:30 mark -2.60 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **SELL** | `POET` | 218 | $5.52 | $2.86 | $+91.56 | $4,789.75 | ▲ +91.56 after sell → book $7,936.88; vs 09:30 mark -2.86 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **SELL** | `RCAT` | 254 | $4.40 | $3.33 | $+1.37 | $5,904.02 | ▲ +1.37 after sell → book $7,933.55; vs 09:30 mark -3.33 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **SELL** | `SITM` | 2 | $489.24 | $2.02 | $+76.05 | $6,880.49 | ▲ +76.05 after sell → book $7,931.54; vs 09:30 mark -2.01 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **SELL** | `THM` | 735 | $1.43 | $9.61 | $-77.89 | $7,921.92 | ▼ -77.89 after sell → book $7,921.92; vs 09:30 mark -9.62 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **BUY** | `PCT` | 3579 | $2.20 | $46.17 | — | $1.95 | — | combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer,yday_mover; ret5=-31.7; leftover $7921.92 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🟡 vol🟢 buy🟡 |
+| 2026-11-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1.95 | ▼ close $7,159.95 vs 09:30 $7,951.34 (session -715.80) | 16:00 close · cash $1.95 · equity $7,159.95 vs 09:30 $7,951.34 (-791.39; session marks -715.80) · 1 name(s) marked open→close (per-name table). PCT×3579 09:30 $2.20 → close $2.00 -715.80 | — |
 
 ## Not taken
 

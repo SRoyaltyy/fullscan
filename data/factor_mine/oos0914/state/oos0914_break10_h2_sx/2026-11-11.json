@@ -1,0 +1,225 @@
+{
+  "buys": [
+    {
+      "fill_rule": "open",
+      "price": 7.8,
+      "shares": 15,
+      "side": "BUY",
+      "ticker": "TLS"
+    },
+    {
+      "fill_rule": "open",
+      "price": 15.23,
+      "shares": 7,
+      "side": "BUY",
+      "ticker": "TTD"
+    },
+    {
+      "fill_rule": "open",
+      "price": 0.9315,
+      "shares": 128,
+      "side": "BUY",
+      "ticker": "ATER"
+    }
+  ],
+  "cash": 12.77,
+  "date": "2026-11-11",
+  "equity": 11058.23,
+  "fees": 7.6133,
+  "fills": [
+    {
+      "fees": 1.3856,
+      "fill_rule": "open",
+      "pnl": 10.34,
+      "price": 11.08,
+      "shares": 12,
+      "side": "SELL",
+      "ticker": "FUN"
+    },
+    {
+      "fees": 1.189,
+      "fill_rule": "open",
+      "pnl": 2.59,
+      "price": 23.08,
+      "shares": 5,
+      "side": "SELL",
+      "ticker": "ONT"
+    },
+    {
+      "fees": 1.1603,
+      "fill_rule": "open",
+      "pnl": 2.15,
+      "price": 15.99,
+      "shares": 7,
+      "side": "SELL",
+      "ticker": "XERS"
+    },
+    {
+      "fees": 1.215,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 7.8,
+      "shares": 15,
+      "side": "BUY",
+      "ticker": "TLS"
+    },
+    {
+      "fees": 1.0871,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 15.23,
+      "shares": 7,
+      "side": "BUY",
+      "ticker": "TTD"
+    },
+    {
+      "fees": 1.5763,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 0.9315,
+      "shares": 128,
+      "side": "BUY",
+      "ticker": "ATER"
+    }
+  ],
+  "holdings": [
+    "ATER",
+    "CAPR",
+    "EVC",
+    "FLY",
+    "INDI",
+    "TLS",
+    "TTD"
+  ],
+  "mean": 11.4206,
+  "n_trades_today": 6,
+  "recipe": "oos0914_break10_h2_sx",
+  "sells": [
+    {
+      "fill_rule": "open",
+      "price": 11.08,
+      "shares": 12,
+      "side": "SELL",
+      "ticker": "FUN"
+    },
+    {
+      "fill_rule": "open",
+      "price": 23.08,
+      "shares": 5,
+      "side": "SELL",
+      "ticker": "ONT"
+    },
+    {
+      "fill_rule": "open",
+      "price": 15.99,
+      "shares": 7,
+      "side": "SELL",
+      "ticker": "XERS"
+    }
+  ],
+  "state": {
+    "after": "2026-11-11",
+    "cash": 12.77,
+    "pos": {
+      "ATER": {
+        "close_px": 0.925,
+        "cost": 120.8083,
+        "entry_date": "2026-11-11",
+        "entry_px": 0.9315,
+        "fee_in": 1.5763,
+        "last_px": 0.9315,
+        "min_hold": 2,
+        "notional": 119.232,
+        "peak_px": 0.9315,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list ohlc_hot; ret5=+16.4; leftover $119.83",
+        "shares": 128,
+        "ticker": "ATER"
+      },
+      "CAPR": {
+        "close_px": 11.22,
+        "cost": 2415.725,
+        "entry_date": "2026-11-10",
+        "entry_px": 9.65,
+        "fee_in": 3.225,
+        "last_px": 9.85,
+        "min_hold": 2,
+        "notional": 2412.5,
+        "peak_px": 9.85,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list overnight; ret5=+36.0; leftover $2414.54",
+        "shares": 250,
+        "ticker": "CAPR"
+      },
+      "EVC": {
+        "close_px": 9.970000267028809,
+        "cost": 2412.0411000000004,
+        "entry_date": "2026-11-10",
+        "entry_px": 9.3,
+        "fee_in": 3.3411,
+        "last_px": 9.100000381469727,
+        "min_hold": 2,
+        "notional": 2408.7000000000003,
+        "peak_px": 9.3,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list yday_gainer; \ud83d\udd35; \u26aa; ret5=+44.2; leftover $2414.54",
+        "shares": 259,
+        "ticker": "EVC"
+      },
+      "FLY": {
+        "close_px": 26.61,
+        "cost": 2400.316,
+        "entry_date": "2026-11-10",
+        "entry_px": 23.51,
+        "fee_in": 2.296,
+        "last_px": 23.9641,
+        "min_hold": 2,
+        "notional": 2398.02,
+        "peak_px": 23.9641,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list yday_gainer,yday_mover,overnight; \ud83d\udd35; ret5=+49.2; leftover $2414.54",
+        "shares": 102,
+        "ticker": "FLY"
+      },
+      "INDI": {
+        "close_px": 2.3,
+        "cost": 2427.127,
+        "entry_date": "2026-11-10",
+        "entry_px": 2.135,
+        "fee_in": 14.577,
+        "last_px": 2.4146,
+        "min_hold": 2,
+        "notional": 2412.5499999999997,
+        "peak_px": 2.4146,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+46.2; leftover $2414.54",
+        "shares": 1130,
+        "ticker": "INDI"
+      },
+      "TLS": {
+        "close_px": 7.65,
+        "cost": 118.215,
+        "entry_date": "2026-11-11",
+        "entry_px": 7.8,
+        "fee_in": 1.215,
+        "last_px": 7.8,
+        "min_hold": 2,
+        "notional": 117.0,
+        "peak_px": 7.8,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+48.9; leftover $119.83",
+        "shares": 15,
+        "ticker": "TLS"
+      },
+      "TTD": {
+        "close_px": 15.98,
+        "cost": 107.6971,
+        "entry_date": "2026-11-11",
+        "entry_px": 15.23,
+        "fee_in": 1.0871,
+        "last_px": 15.23,
+        "min_hold": 2,
+        "notional": 106.61,
+        "peak_px": 15.23,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list flatten; \ud83d\udd35; ret5=+19.9; leftover $119.83",
+        "shares": 7,
+        "ticker": "TTD"
+      }
+    },
+    "yday_equity": 11058.23
+  }
+}

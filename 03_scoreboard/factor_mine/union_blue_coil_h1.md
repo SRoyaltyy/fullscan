@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-17.10%** ($8,290) · signal-only (no cash/fees) was -23.64%. Starts YES **0/30**. Fills 506 · skips 79 · realized $-1931.95.
+Cash book **-14.15%** ($8,585) · signal-only (no cash/fees) was -23.64%. Starts YES **0/30**. Fills 522 · skips 79 · realized $-1931.95.
 
 ## How this sleeve decides (like you are 10)
 
@@ -706,6 +706,24 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-10 09:30 ET | **BUY** | `AMRC` | 43 | $23.75 | $2.12 | — | $1,193.14 | — | combo gate; gate blue=True,ret_5_max=10.0; list earn_react; 🔵; ret5=+7.1; leftover $1033.86 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-11-10 09:30 ET | **BUY** | `BCSF` | 95 | $10.80 | $2.27 | — | $164.87 | — | combo gate; gate blue=True,ret_5_max=10.0; list earn_react; 🔵; ret5=+0.5; leftover $1033.86 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
 | 2026-11-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $164.87 | ▲ close $8,290.13 vs 09:30 $8,300.43 (session +44.41) | 16:00 close · cash $164.87 · equity $8,290.13 vs 09:30 $8,300.43 (-10.30; session marks +44.41) · 8 name(s) marked open→close (per-name table). THM×684 09:30 $1.51 → close $1.41 -68.40; IREN×49 09:30 $20.80 → close $19.73 -52.43; POET×203 09:30 $5.07 → close $5.07 -0.81; RCAT×236 09:30 $4.37 → close $4.21 -37.43; SITM×2 09:30 $449.21 → close $444.45 -9.52; ALH×41 09:30 $24.93 → close $25.07 +5.74; AMRC×43 09:30 $23.75 → close $27.62 +166.41; BCSF×95 09:30 $10.80 → close $11.23 +40.85 | — |
+| 2026-11-11 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $164.87 | ▲ 09:30 equity $8,591.94 vs yday $8,290.13 (+301.81) | 09:30 open · cash $164.87 (unchanged overnight, no fees) · equity $8,591.94 vs prior close $8,290.13 (+301.81) · 8 name(s) re-marked at the open (per-name table). ALH×41 yday $25.07 → 09:30 $24.92 -6.15; AMRC×43 yday $27.62 → 09:30 $27.90 +12.04; BCSF×95 yday $11.23 → 09:30 $11.19 -3.80; IREN×49 yday $19.73 → 09:30 $20.96 +60.27; POET×203 yday $5.07 → 09:30 $5.52 +91.35; RCAT×236 yday $4.21 → 09:30 $4.40 +44.84; SITM×2 yday $444.45 → 09:30 $489.24 +89.58; THM×684 yday $1.41 → 09:30 $1.43 +13.68 | — |
+| 2026-11-11 09:30 ET | **SELL** | `ALH` | 41 | $24.92 | $2.13 | $-4.66 | $1,184.46 | ▼ -4.66 after sell → book $8,589.81; vs 09:30 mark -2.13 | dropped from list after 1 sess (min 1) | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-11 09:30 ET | **SELL** | `AMRC` | 43 | $27.90 | $2.14 | $+174.19 | $2,382.02 | ▲ +174.19 after sell → book $8,587.67; vs 09:30 mark -2.14 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **SELL** | `BCSF` | 95 | $11.19 | $2.30 | $+32.47 | $3,442.77 | ▲ +32.47 after sell → book $8,585.37; vs 09:30 mark -2.30 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **SELL** | `IREN` | 49 | $20.96 | $2.16 | $+3.55 | $4,467.65 | ▲ +3.55 after sell → book $8,583.21; vs 09:30 mark -2.16 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **SELL** | `POET` | 203 | $5.52 | $2.66 | $+85.26 | $5,585.55 | ▲ +85.26 after sell → book $8,580.55; vs 09:30 mark -2.66 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **SELL** | `RCAT` | 236 | $4.40 | $3.09 | $+1.27 | $6,620.85 | ▲ +1.27 after sell → book $8,577.45; vs 09:30 mark -3.10 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **SELL** | `SITM` | 2 | $489.24 | $2.02 | $+76.05 | $7,597.32 | ▲ +76.05 after sell → book $8,575.44; vs 09:30 mark -2.01 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **SELL** | `THM` | 684 | $1.43 | $8.95 | $-72.49 | $8,566.49 | ▼ -72.49 after sell → book $8,566.49; vs 09:30 mark -8.95 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **BUY** | `CECO` | 18 | $58.47 | $2.04 | — | $7,511.99 | — | combo gate; gate blue=True,ret_5_max=10.0; list probable,yday_gainer; 🔵; ret5=+3.2; leftover $1070.81 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🔴 peer🟢 heat🟡 vol🟢 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `QMCO` | 61 | $17.52 | $2.17 | — | $6,441.09 | — | combo gate; gate blue=True,ret_5_max=10.0; list yday_gainer; 🔵; ret5=-7.8; leftover $1070.81 | join🔴 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `SOC` | 1466 | $0.73 | $15.10 | — | $5,355.67 | — | combo gate; gate blue=True,ret_5_max=10.0; list yday_mover; 🔵; ret5=-69.7; leftover $1070.81 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `EMBJ` | 12 | $82.46 | $2.03 | — | $4,364.12 | — | combo gate; gate blue=True,ret_5_max=10.0; list ohlc_hot; 🔵; ret5=+9.3; leftover $1070.81 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `AMPX` | 119 | $8.96 | $2.35 | — | $3,295.53 | — | combo gate; gate blue=True,ret_5_max=10.0; list earn_react; 🔵; ret5=+3.9; leftover $1070.81 | join🟡 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `ATRO` | 18 | $56.86 | $2.04 | — | $2,270.01 | — | combo gate; gate blue=True,ret_5_max=10.0; list earn_react; 🔵; ret5=+1.8; leftover $1070.81 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `CRWV` | 19 | $55.97 | $2.05 | — | $1,204.53 | — | combo gate; gate blue=True,ret_5_max=10.0; list earn_react; 🔵; ⚪; ret5=-9.3; leftover $1070.81 | join🟡 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `GO` | 85 | $12.52 | $2.25 | — | $138.09 | — | combo gate; gate blue=True,ret_5_max=10.0; list earn_react; 🔵; ⚪; ret5=+9.7; leftover $1070.81 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $138.09 | ▲ close $8,585.00 vs 09:30 $8,591.94 (session +48.54) | 16:00 close · cash $138.09 · equity $8,585.00 vs 09:30 $8,591.94 (-6.94; session marks +48.54) · 8 name(s) marked open→close (per-name table). CECO×18 09:30 $58.47 → close $53.50 -89.46; QMCO×61 09:30 $17.52 → close $16.87 -39.65; SOC×1466 09:30 $0.73 → close $0.75 +22.14; EMBJ×12 09:30 $82.46 → close $82.43 -0.36; AMPX×119 09:30 $8.96 → close $8.55 -48.79; ATRO×18 09:30 $56.86 → close $60.33 +62.46; CRWV×19 09:30 $55.97 → close $60.77 +91.20; GO×85 09:30 $12.52 → close $13.12 +51.00 | — |
 
 ## Not taken
 

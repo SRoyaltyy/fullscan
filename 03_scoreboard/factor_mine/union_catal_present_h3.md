@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ catal_present, no 🚨
 
-Cash book **-14.45%** ($8,555) · signal-only (no cash/fees) was -22.70%. Starts YES **0/30**. Fills 15 · skips 18 · realized $-156.79.
+Cash book **-11.22%** ($8,878) · signal-only (no cash/fees) was -22.70%. Starts YES **0/30**. Fills 15 · skips 18 · realized $-156.79.
 
 ## How this sleeve decides (like you are 10)
 
@@ -213,6 +213,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $18.71 | ▲ close $9,042.05 vs 09:30 $8,850.74 (session +193.92) | 16:00 close · cash $18.71 · equity $9,042.05 vs 09:30 $8,850.74 (+191.31; session marks +193.92) · 1 name(s) marked open→close (per-name table). KGS×202 09:30 $43.71 → close $44.67 +193.92 | — |
 | 2026-11-10 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $18.71 | ▼ 09:30 equity $8,767.33 vs yday $9,042.05 (-274.72) | 09:30 open · cash $18.71 (unchanged overnight, no fees) · equity $8,767.33 vs prior close $9,042.05 (-274.72) · 1 name(s) re-marked at the open (per-name table). KGS×202 yday $44.67 → 09:30 $43.31 -274.72 | — |
 | 2026-11-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $18.71 | ▼ close $8,555.23 vs 09:30 $8,767.33 (session -212.10) | 16:00 close · cash $18.71 · equity $8,555.23 vs 09:30 $8,767.33 (-212.10; session marks -212.10) · 1 name(s) marked open→close (per-name table). KGS×202 09:30 $43.31 → close $42.26 -212.10 | — |
+| 2026-11-11 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $18.71 | ▲ 09:30 equity $8,947.11 vs yday $8,555.23 (+391.88) | 09:30 open · cash $18.71 (unchanged overnight, no fees) · equity $8,947.11 vs prior close $8,555.23 (+391.88) · 1 name(s) re-marked at the open (per-name table). KGS×202 yday $42.26 → 09:30 $44.20 +391.88 | — |
+| 2026-11-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $18.71 | ▼ close $8,878.43 vs 09:30 $8,947.11 (session -68.68) | 16:00 close · cash $18.71 · equity $8,878.43 vs 09:30 $8,947.11 (-68.68; session marks -68.68) · 1 name(s) marked open→close (per-name table). KGS×202 09:30 $44.20 → close $43.86 -68.68 | — |
 
 ## Not taken
 

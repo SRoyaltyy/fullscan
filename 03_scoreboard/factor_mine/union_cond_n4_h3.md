@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 4 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · top 4 by cond
 
-Cash book **-6.10%** ($9,390) · signal-only (no cash/fees) was -7.67%. Starts YES **1/30**. Fills 186 · skips 159 · realized $-515.67.
+Cash book **-3.49%** ($9,651) · signal-only (no cash/fees) was -7.67%. Starts YES **1/30**. Fills 193 · skips 159 · realized $-515.67.
 
 ## How this sleeve decides (like you are 10)
 
@@ -383,6 +383,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-10 09:30 ET | **BUY** | `EVC` | 304 | $9.30 | $3.92 | — | $2,855.50 | — | top 4 by cond; rank cond; list yday_gainer; 🔵; ⚪; ret5=+44.2; leftover $2833.15 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
 | 2026-11-10 09:30 ET | **BUY** | `KMPR` | 88 | $31.87 | $2.25 | — | $48.68 | — | top 4 by cond; rank cond; list earn_react; 🔵; ⚪; ret5=-5.5; leftover $2833.15 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $48.68 | ▲ close $9,389.82 vs 09:30 $9,303.74 (session +108.96) | 16:00 close · cash $48.68 · equity $9,389.82 vs 09:30 $9,303.74 (+86.08; session marks +108.96) · 9 name(s) marked open→close (per-name table). ADMA×15 09:30 $12.89 → close $12.67 -3.37; ALGN×1 09:30 $171.82 → close $174.26 +2.44; ANGI×12 09:30 $6.75 → close $6.60 -1.86; GPK×8 09:30 $10.79 → close $11.14 +2.80; PGNY×5 09:30 $35.62 → close $36.43 +4.05; YELP×4 09:30 $19.80 → close $20.15 +1.40; FG×110 09:30 $25.55 → close $25.00 -60.50; EVC×304 09:30 $9.30 → close $9.11 -57.76; KMPR×88 09:30 $31.87 → close $34.39 +221.76 | — |
+| 2026-11-11 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $48.68 | ▼ 09:30 equity $9,294.11 vs yday $9,389.82 (-95.71) | 09:30 open · cash $48.68 (unchanged overnight, no fees) · equity $9,294.11 vs prior close $9,389.82 (-95.71) · 9 name(s) re-marked at the open (per-name table). ADMA×15 yday $12.67 → 09:30 $12.64 -0.45; ALGN×1 yday $174.26 → 09:30 $174.30 +0.04; ANGI×12 yday $6.60 → 09:30 $6.51 -1.08; EVC×304 yday $9.11 → 09:30 $9.10 -3.04; FG×110 yday $25.00 → 09:30 $24.80 -22.00; GPK×8 yday $11.14 → 09:30 $10.95 -1.52; KMPR×88 yday $34.39 → 09:30 $33.64 -66.00; PGNY×5 yday $36.43 → 09:30 $36.41 -0.10; YELP×4 yday $20.15 → 09:30 $19.76 -1.56 | — |
+| 2026-11-11 09:30 ET | **SELL** | `ANGI` | 12 | $6.51 | $0.84 | $-10.02 | $125.96 | ▼ -10.02 after sell → book $9,293.27; vs 09:30 mark -0.84 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-11 09:30 ET | **SELL** | `GPK` | 8 | $10.95 | $0.92 | $-4.65 | $212.64 | ▼ -4.65 after sell → book $9,292.35; vs 09:30 mark -0.92 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-11 09:30 ET | **SELL** | `YELP` | 4 | $19.76 | $0.82 | $+3.47 | $290.86 | ▲ +3.47 after sell → book $9,291.53; vs 09:30 mark -0.82 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-11 09:30 ET | **BUY** | `FOSL` | 7 | $9.72 | $0.70 | — | $222.12 | — | top 4 by cond; rank cond; list earn_react; ⚪; ret5=+17.6; leftover $72.72 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `ALH` | 2 | $24.92 | $0.50 | — | $171.77 | — | top 4 by cond; rank cond; list ohlc_hot; 🔵; ⚪; ret5=+12.9; leftover $72.72 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `SBH` | 3 | $20.27 | $0.62 | — | $110.36 | — | top 4 by cond; rank cond; list ohlc_hot; 🔵; ⚪; ret5=+14.7; leftover $72.72 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟡 heat🟢 vol🟢 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `CECO` | 1 | $58.47 | $0.59 | — | $51.31 | — | top 4 by cond; rank cond; list probable,yday_gainer; 🔵; ret5=+3.2; leftover $72.72 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🔴 peer🟢 heat🟡 vol🟢 buy🟡 |
+| 2026-11-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $51.31 | ▲ close $9,650.84 vs 09:30 $9,294.11 (session +361.72) | 16:00 close · cash $51.31 · equity $9,650.84 vs 09:30 $9,294.11 (+356.73; session marks +361.72) · 10 name(s) marked open→close (per-name table). ADMA×15 09:30 $12.64 → close $13.19 +8.25; ALGN×1 09:30 $174.30 → close $172.08 -2.22; EVC×304 09:30 $9.10 → close $9.97 +264.48; FG×110 09:30 $24.80 → close $24.80 +0.00; KMPR×88 09:30 $33.64 → close $34.76 +98.56; PGNY×5 09:30 $36.41 → close $36.50 +0.45; FOSL×7 09:30 $9.72 → close $9.97 +1.75; ALH×2 09:30 $24.92 → close $24.20 -1.44; SBH×3 09:30 $20.27 → close $19.22 -3.14; CECO×1 09:30 $58.47 → close $53.50 -4.97 | — |
 
 ## Not taken
 

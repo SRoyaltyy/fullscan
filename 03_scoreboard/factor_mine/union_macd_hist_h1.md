@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `macd_hist` · size `leftover` · sell `list` · S-boost `none` · rank by macd_hist
 
-Cash book **-14.40%** ($8,559) · signal-only (no cash/fees) was +3.37%. Starts YES **20/30**. Fills 513 · skips 94 · realized $-657.32.
+Cash book **-14.17%** ($8,583) · signal-only (no cash/fees) was +3.37%. Starts YES **20/30**. Fills 525 · skips 94 · realized $-657.32.
 
 ## How this sleeve decides (like you are 10)
 
@@ -710,6 +710,20 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-10 09:30 ET | **BUY** | `LQDA` | 21 | $48.73 | $2.05 | — | $1,239.57 | — | rank by macd_hist; rank macd_hist; list earn_react; ret5=+14.4; leftover $1057.38 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-11-10 09:30 ET | **BUY** | `ETON` | 16 | $63.63 | $2.04 | — | $219.45 | — | rank by macd_hist; rank macd_hist; list flatten; 🔵; ⚪; ret5=+26.6; leftover $1057.38 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $219.45 | ▲ close $8,559.49 vs 09:30 $8,478.24 (session +105.58) | 16:00 close · cash $219.45 · equity $8,559.49 vs 09:30 $8,478.24 (+81.25; session marks +105.58) · 8 name(s) marked open→close (per-name table). ALGN×6 09:30 $171.82 → close $174.26 +14.64; TTWO×5 09:30 $218.18 → close $224.64 +32.30; WING×6 09:30 $176.00 → close $169.58 -38.52; TMDX×11 09:30 $93.50 → close $90.94 -28.11; ESAB×11 09:30 $89.15 → close $87.13 -22.22; LOAR×13 09:30 $77.39 → close $79.61 +28.86; LQDA×21 09:30 $48.73 → close $51.40 +56.07; ETON×16 09:30 $63.63 → close $67.54 +62.56 | — |
+| 2026-11-11 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $219.45 | ▲ 09:30 equity $8,609.79 vs yday $8,559.49 (+50.30) | 09:30 open · cash $219.45 (unchanged overnight, no fees) · equity $8,609.79 vs prior close $8,559.49 (+50.30) · 8 name(s) re-marked at the open (per-name table). ALGN×6 yday $174.26 → 09:30 $174.30 +0.24; ESAB×11 yday $87.13 → 09:30 $86.91 -2.42; ETON×16 yday $67.54 → 09:30 $66.94 -9.60; LOAR×13 yday $79.61 → 09:30 $79.53 -1.04; LQDA×21 yday $51.40 → 09:30 $54.00 +54.60; TMDX×11 yday $90.94 → 09:30 $90.95 +0.06; TTWO×5 yday $224.64 → 09:30 $227.57 +14.65; WING×6 yday $169.58 → 09:30 $168.55 -6.18 | — |
+| 2026-11-11 09:30 ET | **SELL** | `ALGN` | 6 | $174.30 | $2.03 | $+34.36 | $1,263.22 | ▲ +34.36 after sell → book $8,607.76; vs 09:30 mark -2.03 | dropped from list after 2 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **SELL** | `ESAB` | 11 | $86.91 | $2.04 | $-28.71 | $2,217.19 | ▼ -28.71 after sell → book $8,605.72; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **SELL** | `ETON` | 16 | $66.94 | $2.06 | $+48.86 | $3,286.17 | ▲ +48.86 after sell → book $8,603.66; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **SELL** | `LQDA` | 21 | $54.00 | $2.07 | $+106.54 | $4,418.10 | ▲ +106.54 after sell → book $8,601.59; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **SELL** | `TMDX` | 11 | $90.95 | $2.04 | $-32.12 | $5,416.51 | ▼ -32.12 after sell → book $8,599.55; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **SELL** | `WING` | 6 | $168.55 | $2.03 | $-48.74 | $6,425.78 | ▼ -48.74 after sell → book $8,597.52; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **BUY** | `FNV` | 4 | $257.00 | $2.00 | — | $5,395.77 | — | rank by macd_hist; rank macd_hist; list overnight,overnight_mega; ret5=+13.2; leftover $1070.96 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `INSM` | 8 | $119.49 | $2.01 | — | $4,437.84 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; ret5=+14.4; leftover $1070.96 | join🔴 sector🔴 gen🟢 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `ORKA` | 9 | $112.28 | $2.02 | — | $3,425.30 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; ret5=+10.0; leftover $1070.96 | join🟢 sector🔴 gen🟢 news🟡 digest🔴 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `CLX` | 10 | $104.89 | $2.02 | — | $2,374.38 | — | rank by macd_hist; rank macd_hist; list flatten; 🔵; ⚪; ret5=+13.6; leftover $1070.96 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `FWONK` | 9 | $108.64 | $2.02 | — | $1,394.61 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; ret5=+14.0; leftover $1070.96 | join🟢 sector🟡 gen🟢 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `PFGC` | 9 | $110.24 | $2.02 | — | $400.43 | — | rank by macd_hist; rank macd_hist; list flatten; ⚪; ret5=+15.0; leftover $1070.96 | join🟢 sector🟡 gen🟢 news🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $400.43 | ▼ close $8,582.69 vs 09:30 $8,609.79 (session -2.74) | 16:00 close · cash $400.43 · equity $8,582.69 vs 09:30 $8,609.79 (-27.10; session marks -2.74) · 8 name(s) marked open→close (per-name table). LOAR×13 09:30 $79.53 → close $79.24 -3.77; TTWO×5 09:30 $227.57 → close $231.31 +18.70; FNV×4 09:30 $257.00 → close $248.76 -32.96; INSM×8 09:30 $119.49 → close $120.75 +10.08; ORKA×9 09:30 $112.28 → close $107.17 -45.99; CLX×10 09:30 $104.89 → close $106.86 +19.70; FWONK×9 09:30 $108.64 → close $111.17 +22.77; PFGC×9 09:30 $110.24 → close $111.21 +8.73 | — |
 
 ## Not taken
 

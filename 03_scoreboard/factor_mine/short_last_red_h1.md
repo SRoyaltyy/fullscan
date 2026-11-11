@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · last bar red
 
-Cash book **-7.79%** ($9,221) · signal-only (no cash/fees) was -2.93%. Starts YES **19/30**. Fills 554 · skips 107 · realized $-717.78.
+Cash book **-9.84%** ($9,016) · signal-only (no cash/fees) was -2.93%. Starts YES **19/30**. Fills 570 · skips 107 · realized $-717.78.
 
 ## How this sleeve decides (like you are 10)
 
@@ -750,6 +750,24 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-10 09:30 ET | **SHORT** | `ATAT` | 16 | $34.79 | $2.07 | — | $13,360.21 | — | last bar red; gate last_red=True; list earn_react; ⚪; ret5=+5.6; leftover $587.43 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-11-10 09:30 ET | **SHORT** | `AUTL` | 485 | $1.21 | $6.36 | — | $13,940.69 | — | last bar red; gate last_red=True; list earn_react; ret5=-7.0; leftover $587.43 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-11-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $13,940.69 | ▼ close $9,220.64 vs 09:30 $9,424.74 (session -156.50) | 16:00 close · cash $13,940.69 · equity $9,220.64 vs 09:30 $9,424.74 (-204.10; session marks -156.50) · 8 name(s) marked open→close (per-name table). GOGO×166 09:30 $3.53 → close $3.60 -11.62; LYNX×40 09:30 $14.50 → close $14.95 -18.00; NRDS×75 09:30 $7.75 → close $7.42 +24.75; IRTC×6 09:30 $87.50 → close $86.06 +8.64; AEHL×51 09:30 $11.33 → close $11.21 +6.12; AMRC×24 09:30 $23.75 → close $27.62 -92.88; ATAT×16 09:30 $34.79 → close $36.05 -20.16; AUTL×485 09:30 $1.21 → close $1.32 -53.35 | — |
+| 2026-11-11 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $13,940.69 | ▼ 09:30 equity $9,191.42 vs yday $9,220.64 (-29.22) | 09:30 open · cash $13,940.69 (unchanged overnight, no fees) · equity $9,191.42 vs prior close $9,220.64 (-29.22) · 8 name(s) re-marked at the open (per-name table). AEHL×51 yday $11.21 → 09:30 $11.89 -34.68; AMRC×24 yday $27.62 → 09:30 $27.90 -6.72; ATAT×16 yday $36.05 → 09:30 $35.68 +5.92; AUTL×485 yday $1.32 → 09:30 $1.32 -0.00; GOGO×166 yday $3.60 → 09:30 $3.58 +3.32; IRTC×6 yday $86.06 → 09:30 $85.32 +4.44; LYNX×40 yday $14.95 → 09:30 $15.10 -6.00; NRDS×75 yday $7.42 → 09:30 $7.36 +4.50 | — |
+| 2026-11-11 09:30 ET | **COVER** | `AEHL` | 51 | $11.89 | $2.14 | $-32.88 | $13,332.16 | ▼ -32.88 after sell → book $9,189.28; vs 09:30 mark -2.14 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **COVER** | `AMRC` | 24 | $27.90 | $2.06 | $-103.76 | $12,660.50 | ▼ -103.76 after sell → book $9,187.22; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **COVER** | `ATAT` | 16 | $35.68 | $2.04 | $-18.35 | $12,087.58 | ▼ -18.35 after sell → book $9,185.18; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **COVER** | `AUTL` | 485 | $1.32 | $6.26 | $-65.97 | $11,441.12 | ▼ -65.97 after sell → book $9,178.92; vs 09:30 mark -6.26 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **COVER** | `GOGO` | 166 | $3.58 | $2.49 | $-13.33 | $10,844.35 | ▼ -13.33 after sell → book $9,176.43; vs 09:30 mark -2.49 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **COVER** | `IRTC` | 6 | $85.32 | $2.01 | $+9.03 | $10,330.42 | ▲ +9.03 after sell → book $9,174.42; vs 09:30 mark -2.01 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **COVER** | `LYNX` | 40 | $15.10 | $2.11 | $-28.26 | $9,724.31 | ▼ -28.26 after sell → book $9,172.31; vs 09:30 mark -2.11 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **COVER** | `NRDS` | 75 | $7.36 | $2.21 | $+24.78 | $9,170.10 | ▲ +24.78 after sell → book $9,170.10; vs 09:30 mark -2.21 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **SHORT** | `PFGC` | 5 | $110.24 | $2.04 | — | $9,719.26 | — | last bar red; gate last_red=True; list flatten; ⚪; ret5=+15.0; leftover $573.13 | join🟢 sector🟡 gen🟢 news🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-11 09:30 ET | **SHORT** | `SWMR` | 68 | $8.35 | $2.23 | — | $10,284.83 | — | last bar red; gate last_red=True; list probable,yday_gainer,yday_mover,earn_react; ret5=-4.9; leftover $573.13 | join🔴 sector🟢 gen🟢 news🟡 digest🟡 ab🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-11-11 09:30 ET | **SHORT** | `INO` | 418 | $1.37 | $5.49 | — | $10,852.00 | — | last bar red; gate last_red=True; list probable,yday_gainer,yday_mover,earn_react; ret5=-12.7; leftover $573.13 | join🟢 sector🔴 gen🟢 news🟡 digest🔴 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-11-11 09:30 ET | **SHORT** | `RC` | 567 | $1.01 | $7.43 | — | $11,417.24 | — | last bar red; gate last_red=True; list probable,yday_gainer,yday_mover; ret5=-7.3; leftover $573.13 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-11-11 09:30 ET | **SHORT** | `CECO` | 9 | $58.47 | $2.05 | — | $11,941.42 | — | last bar red; gate last_red=True; list probable,yday_gainer; 🔵; ret5=+3.2; leftover $573.13 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🔴 peer🟢 heat🟡 vol🟢 buy🟡 |
+| 2026-11-11 09:30 ET | **SHORT** | `GFR` | 74 | $7.70 | $2.25 | — | $12,508.97 | — | last bar red; gate last_red=True; list yday_gainer,yday_mover; 🔵; ret5=+24.5; leftover $573.13 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-11 09:30 ET | **SHORT** | `FRVO` | 48 | $11.88 | $2.17 | — | $13,076.80 | — | last bar red; gate last_red=True; list yday_gainer,yday_mover; 🔵; ret5=+22.1; leftover $573.13 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-11 09:30 ET | **SHORT** | `ASPN` | 96 | $5.94 | $2.32 | — | $13,644.72 | — | last bar red; gate last_red=True; list yday_gainer,yday_mover; 🔵; ret5=+15.3; leftover $573.13 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $13,644.72 | ▼ close $9,015.73 vs 09:30 $9,191.42 (session -128.39) | 16:00 close · cash $13,644.72 · equity $9,015.73 vs 09:30 $9,191.42 (-175.69; session marks -128.39) · 8 name(s) marked open→close (per-name table). PFGC×5 09:30 $110.24 → close $111.21 -4.85; SWMR×68 09:30 $8.35 → close $9.43 -73.44; INO×418 09:30 $1.37 → close $1.48 -43.89; RC×567 09:30 $1.01 → close $0.93 +45.30; CECO×9 09:30 $58.47 → close $53.50 +44.73; GFR×74 09:30 $7.70 → close $7.70 -0.00; FRVO×48 09:30 $11.88 → close $12.94 -51.12; ASPN×96 09:30 $5.94 → close $6.41 -45.12 | — |
 
 ## Not taken
 

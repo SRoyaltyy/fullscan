@@ -226,6 +226,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-10 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $29.48 | ▼ 09:30 equity $10,140.23 vs yday $10,233.56 (-93.33) | 09:30 open · cash $29.48 (unchanged overnight, no fees) · equity $10,140.23 vs prior close $10,233.56 (-93.33) · 1 name(s) re-marked at the open (per-name table). OXY×183 yday $55.76 → 09:30 $55.25 -93.33 | — |
 | 2026-11-10 09:30 ET | **SELL** | `OXY` | 183 | $55.25 | $2.65 | $-60.09 | $10,137.58 | ▼ -60.09 after sell → book $10,137.58; vs 09:30 mark -2.65 | dropped from list after 1 sess (min 1) | join🔴 sector🔴 gen🟢 news🟢 digest🟢 ab🟢 peer🟡 heat🔴 vol🟡 buy🟡 |
 | 2026-11-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,137.58 | ▲ close $10,137.58 vs 09:30 $10,140.23 (session +0.00) | 16:00 close · cash $10,137.58 · no lots left · equity $10,137.58. | — |
+| 2026-11-11 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,137.58 | ▲ 09:30 equity $10,137.58 vs yday $10,137.58 (+0.00) | 09:30 open · cash $10,137.58 · no holdings · equity $10,137.58 vs prior close $10,137.58 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,137.58 | ▲ close $10,137.58 vs 09:30 $10,137.58 (session +0.00) | 16:00 close · cash $10,137.58 · no lots left · equity $10,137.58. | — |
 
 ## Not taken
 

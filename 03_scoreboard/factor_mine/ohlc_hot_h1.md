@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `ohlc_hot` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · baseline list, no extra gate
 
-Cash book **-26.46%** ($7,354) · signal-only (no cash/fees) was +6.95%. Starts YES **0/30**. Fills 524 · skips 93 · realized $-1456.67.
+Cash book **-27.42%** ($7,258) · signal-only (no cash/fees) was +6.95%. Starts YES **0/30**. Fills 536 · skips 93 · realized $-1456.67.
 
 ## How this sleeve decides (like you are 10)
 
@@ -718,6 +718,20 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-10 09:30 ET | **BUY** | `REAL` | 67 | $14.50 | $2.19 | — | $990.56 | — | baseline list, no extra gate; list ohlc_hot; ret5=+12.5; leftover $981.12 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
 | 2026-11-10 09:30 ET | **BUY** | `MNTK` | 452 | $2.17 | $5.83 | — | $3.89 | — | baseline list, no extra gate; list ohlc_hot,earn_react; ret5=+15.4; leftover $981.12 | join🔴 sector🟢 gen🟢 news🟡 digest🔴 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
 | 2026-11-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $3.89 | ▼ close $7,354.07 vs 09:30 $7,882.04 (session -470.45) | 16:00 close · cash $3.89 · equity $7,354.07 vs 09:30 $7,882.04 (-527.97; session marks -470.45) · 8 name(s) marked open→close (per-name table). REPL×44 09:30 $22.10 → close $23.28 +51.92; ULCC×116 09:30 $8.43 → close $8.09 -39.44; QXO×72 09:30 $13.57 → close $13.73 +11.52; SG×72 09:30 $13.61 → close $13.24 -26.64; ESAB×11 09:30 $89.15 → close $87.13 -22.22; KLC×430 09:30 $2.28 → close $2.21 -30.10; REAL×67 09:30 $14.50 → close $14.91 +27.47; MNTK×452 09:30 $2.17 → close $1.19 -442.96 | — |
+| 2026-11-11 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $3.89 | ▲ 09:30 equity $7,374.13 vs yday $7,354.07 (+20.06) | 09:30 open · cash $3.89 (unchanged overnight, no fees) · equity $7,374.13 vs prior close $7,354.07 (+20.06) · 8 name(s) re-marked at the open (per-name table). ESAB×11 yday $87.13 → 09:30 $86.91 -2.42; KLC×430 yday $2.21 → 09:30 $2.24 +12.90; MNTK×452 yday $1.19 → 09:30 $1.25 +29.38; QXO×72 yday $13.73 → 09:30 $13.70 -2.16; REAL×67 yday $14.91 → 09:30 $14.83 -5.36; REPL×44 yday $23.28 → 09:30 $23.28 +0.00; SG×72 yday $13.24 → 09:30 $13.15 -6.48; ULCC×116 yday $8.09 → 09:30 $8.04 -5.80 | — |
+| 2026-11-11 09:30 ET | **SELL** | `ESAB` | 11 | $86.91 | $2.04 | $-28.71 | $957.86 | ▼ -28.71 after sell → book $7,372.09; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **SELL** | `KLC` | 430 | $2.24 | $5.63 | $-28.38 | $1,915.43 | ▼ -28.38 after sell → book $7,366.46; vs 09:30 mark -5.63 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **SELL** | `MNTK` | 452 | $1.25 | $5.92 | $-425.33 | $2,476.77 | ▼ -425.33 after sell → book $7,360.54; vs 09:30 mark -5.92 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **SELL** | `QXO` | 72 | $13.70 | $2.23 | $+4.93 | $3,460.94 | ▲ +4.93 after sell → book $7,358.31; vs 09:30 mark -2.23 | dropped from list after 1 sess (min 1) | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-11 09:30 ET | **SELL** | `SG` | 72 | $13.15 | $2.23 | $-37.55 | $4,405.52 | ▼ -37.55 after sell → book $7,356.09; vs 09:30 mark -2.22 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **SELL** | `ULCC` | 116 | $8.04 | $2.37 | $-49.95 | $5,335.79 | ▼ -49.95 after sell → book $7,353.72; vs 09:30 mark -2.37 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **BUY** | `ATER` | 954 | $0.93 | $11.75 | — | $4,435.39 | — | baseline list, no extra gate; list ohlc_hot; ret5=+16.4; leftover $889.30 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `GDYN` | 63 | $13.94 | $2.18 | — | $3,554.99 | — | baseline list, no extra gate; list ohlc_hot; ret5=+5.2; leftover $889.30 | join🔴 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `CHTR` | 6 | $133.11 | $2.01 | — | $2,754.32 | — | baseline list, no extra gate; list ohlc_hot; ret5=+17.8; leftover $889.30 | join🔴 sector🟡 gen🟢 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `TTWO` | 3 | $227.57 | $2.00 | — | $2,069.61 | — | baseline list, no extra gate; list ohlc_hot; ret5=+15.2; leftover $889.30 | join🟢 sector🟡 gen🟢 news🔴 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `LILAK` | 90 | $9.87 | $2.26 | — | $1,179.05 | — | baseline list, no extra gate; list ohlc_hot; ret5=+15.0; leftover $889.30 | join🟢 sector🟡 gen🟢 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `SBH` | 43 | $20.27 | $2.12 | — | $305.54 | — | baseline list, no extra gate; list ohlc_hot; 🔵; ⚪; ret5=+14.7; leftover $889.30 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟡 heat🟢 vol🟢 buy🟡 |
+| 2026-11-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $305.54 | ▼ close $7,257.70 vs 09:30 $7,374.13 (session -73.71) | 16:00 close · cash $305.54 · equity $7,257.70 vs 09:30 $7,374.13 (-116.43; session marks -73.71) · 8 name(s) marked open→close (per-name table). REAL×67 09:30 $14.83 → close $14.55 -18.76; REPL×44 09:30 $23.28 → close $21.78 -66.00; ATER×954 09:30 $0.93 → close $0.93 -6.20; GDYN×63 09:30 $13.94 → close $13.83 -6.93; CHTR×6 09:30 $133.11 → close $136.31 +19.20; TTWO×3 09:30 $227.57 → close $231.31 +11.22; LILAK×90 09:30 $9.87 → close $10.30 +38.70; SBH×43 09:30 $20.27 → close $19.22 -44.94 | — |
 
 ## Not taken
 

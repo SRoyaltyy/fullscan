@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-10.30%** ($8,970) · signal-only (no cash/fees) was -17.92%. Starts YES **5/30**. Fills 192 · skips 17 · realized $-2405.95.
+Cash book **-2.23%** ($9,777) · signal-only (no cash/fees) was -17.92%. Starts YES **5/30**. Fills 208 · skips 17 · realized $-2405.95.
 
 ## How this sleeve decides (like you are 10)
 
@@ -392,6 +392,24 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-10 09:30 ET | **BUY** | `AMCX` | 153 | $7.92 | $2.45 | — | $1,300.02 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; 🔵; ret5=+10.8; leftover $1214.03 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-11-10 09:30 ET | **BUY** | `APPS` | 148 | $8.18 | $2.43 | — | $87.54 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; 🔵; ret5=+33.6; leftover $1214.03 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟢 |
 | 2026-11-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $87.54 | ▼ close $8,969.90 vs 09:30 $9,732.57 (session -718.15) | 16:00 close · cash $87.54 · equity $8,969.90 vs 09:30 $9,732.57 (-762.67; session marks -718.15) · 8 name(s) marked open→close (per-name table). MNTK×559 09:30 $2.17 → close $1.19 -547.82; ACHR×261 09:30 $4.65 → close $4.71 +15.66; SENS×97 09:30 $12.45 → close $10.03 -234.26; AAON×16 09:30 $71.64 → close $75.01 +53.92; ABCL×98 09:30 $12.27 → close $12.46 +19.11; ALH×48 09:30 $24.93 → close $25.07 +6.72; AMCX×153 09:30 $7.92 → close $8.61 +105.57; APPS×148 09:30 $8.18 → close $7.25 -137.05 | — |
+| 2026-11-11 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $87.54 | ▲ 09:30 equity $9,132.78 vs yday $8,969.90 (+162.88) | 09:30 open · cash $87.54 (unchanged overnight, no fees) · equity $9,132.78 vs prior close $8,969.90 (+162.88) · 8 name(s) re-marked at the open (per-name table). AAON×16 yday $75.01 → 09:30 $76.32 +20.96; ABCL×98 yday $12.46 → 09:30 $12.78 +31.36; ACHR×261 yday $4.71 → 09:30 $4.85 +36.54; ALH×48 yday $25.07 → 09:30 $24.92 -7.20; AMCX×153 yday $8.61 → 09:30 $8.70 +13.77; APPS×148 yday $7.25 → 09:30 $7.38 +18.50; MNTK×559 yday $1.19 → 09:30 $1.25 +36.33; SENS×97 yday $10.03 → 09:30 $10.16 +12.61 | — |
+| 2026-11-11 09:30 ET | **SELL** | `AAON` | 16 | $76.32 | $2.06 | $+70.78 | $1,306.60 | ▲ +70.78 after sell → book $9,130.72; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **SELL** | `ABCL` | 98 | $12.78 | $2.31 | $+45.88 | $2,556.73 | ▲ +45.88 after sell → book $9,128.41; vs 09:30 mark -2.31 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **SELL** | `ACHR` | 261 | $4.85 | $3.42 | $+45.41 | $3,819.16 | ▲ +45.41 after sell → book $9,124.99; vs 09:30 mark -3.42 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **SELL** | `ALH` | 48 | $24.92 | $2.15 | $-4.77 | $5,013.17 | ▼ -4.77 after sell → book $9,122.83; vs 09:30 mark -2.16 | dropped from list after 1 sess (min 1) | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-11 09:30 ET | **SELL** | `AMCX` | 153 | $8.70 | $2.48 | $+114.41 | $6,341.78 | ▲ +114.41 after sell → book $9,120.35; vs 09:30 mark -2.48 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **SELL** | `APPS` | 148 | $7.38 | $2.47 | $-123.45 | $7,430.81 | ▼ -123.45 after sell → book $9,117.88; vs 09:30 mark -2.47 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **SELL** | `MNTK` | 559 | $1.25 | $7.31 | $-526.01 | $8,125.04 | ▼ -526.01 after sell → book $9,110.56; vs 09:30 mark -7.32 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **SELL** | `SENS` | 97 | $10.16 | $2.31 | $-226.23 | $9,108.26 | ▼ -226.23 after sell → book $9,108.26; vs 09:30 mark -2.30 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **BUY** | `ANGX` | 287 | $3.96 | $3.70 | — | $7,968.04 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; ret5=+7.8; leftover $1138.53 | join🔴 sector🟡 gen🟢 news🟡 digest🔴 ab🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `ATRO` | 20 | $56.86 | $2.05 | — | $6,828.79 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; 🔵; ret5=+1.8; leftover $1138.53 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `BGS` | 373 | $3.05 | $4.81 | — | $5,686.32 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; 🔵; ⚪; ret5=+11.3; leftover $1138.53 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟡 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `CRWV` | 20 | $55.97 | $2.05 | — | $4,564.87 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; 🔵; ⚪; ret5=-9.3; leftover $1138.53 | join🟡 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `FLY` | 47 | $23.96 | $2.13 | — | $3,436.43 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; ret5=+39.3; leftover $1138.53 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `GO` | 90 | $12.52 | $2.26 | — | $2,307.37 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; 🔵; ⚪; ret5=+9.7; leftover $1138.53 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `ICL` | 245 | $4.63 | $3.16 | — | $1,169.86 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; 🔵; ret5=+7.1; leftover $1138.53 | join🟡 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `KOPN` | 315 | $3.61 | $4.06 | — | $28.65 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; 🔵; ret5=-7.8; leftover $1138.53 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-11-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $28.65 | ▲ close $9,776.58 vs 09:30 $9,132.78 (session +692.55) | 16:00 close · cash $28.65 · equity $9,776.58 vs 09:30 $9,132.78 (+643.80; session marks +692.55) · 8 name(s) marked open→close (per-name table). ANGX×287 09:30 $3.96 → close $4.30 +97.58; ATRO×20 09:30 $56.86 → close $60.33 +69.40; BGS×373 09:30 $3.05 → close $3.67 +231.26; CRWV×20 09:30 $55.97 → close $60.77 +96.00; FLY×47 09:30 $23.96 → close $26.61 +124.36; GO×90 09:30 $12.52 → close $13.12 +54.00; ICL×245 09:30 $4.63 → close $4.57 -14.70; KOPN×315 09:30 $3.61 → close $3.72 +34.65 | — |
 
 ## Not taken
 

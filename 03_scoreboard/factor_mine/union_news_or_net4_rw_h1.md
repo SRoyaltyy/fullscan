@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 4 · rank `cond` · size `rank_w` · sell `list` · S-boost `none` · OR news + net≥4; leftover weighted by camera rank
 
-Cash book **-30.22%** ($6,978) · signal-only (no cash/fees) was -7.44%. Starts YES **5/30**. Fills 160 · skips 30 · realized $-225.56.
+Cash book **-33.30%** ($6,670) · signal-only (no cash/fees) was -7.44%. Starts YES **5/30**. Fills 168 · skips 30 · realized $-225.56.
 
 ## How this sleeve decides (like you are 10)
 
@@ -360,6 +360,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-10 09:30 ET | **BUY** | `SG` | 139 | $13.61 | $2.41 | — | $961.45 | — | OR news + net≥4; leftover weighted by camera rank; gate cam_net_min=4,news_or_headline=True; rank cond; list ohlc_hot; 🔵; ⚪; ret5=+16.5; leftover $1898.01 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
 | 2026-11-10 09:30 ET | **BUY** | `ZVRA` | 80 | $11.80 | $2.23 | — | $15.22 | — | OR news + net≥4; leftover weighted by camera rank; gate cam_net_min=4,news_or_headline=True; rank cond; list flatten; 🔵; ⚪; ret5=+20.2; leftover $949.00 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
 | 2026-11-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $15.22 | ▼ close $6,978.26 vs 09:30 $7,075.24 (session -83.36) | 16:00 close · cash $15.22 · equity $6,978.26 vs 09:30 $7,075.24 (-96.98; session marks -83.36) · 4 name(s) marked open→close (per-name table). ALGN×8 09:30 $171.82 → close $174.26 +19.52; FG×111 09:30 $25.55 → close $25.00 -61.05; SG×139 09:30 $13.61 → close $13.24 -51.43; ZVRA×80 09:30 $11.80 → close $11.92 +9.60 | — |
+| 2026-11-11 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $15.22 | ▼ 09:30 equity $6,943.87 vs yday $6,978.26 (-34.39) | 09:30 open · cash $15.22 (unchanged overnight, no fees) · equity $6,943.87 vs prior close $6,978.26 (-34.39) · 4 name(s) re-marked at the open (per-name table). ALGN×8 yday $174.26 → 09:30 $174.30 +0.32; FG×111 yday $25.00 → 09:30 $24.80 -22.20; SG×139 yday $13.24 → 09:30 $13.15 -12.51; ZVRA×80 yday $11.92 → 09:30 $11.92 +0.00 | — |
+| 2026-11-11 09:30 ET | **SELL** | `ALGN` | 8 | $174.30 | $2.04 | $+47.15 | $1,407.58 | ▲ +47.15 after sell → book $6,941.83; vs 09:30 mark -2.04 | dropped from list after 2 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **SELL** | `FG` | 111 | $24.80 | $2.36 | $-87.94 | $4,158.02 | ▼ -87.94 after sell → book $6,939.47; vs 09:30 mark -2.36 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **SELL** | `SG` | 139 | $13.15 | $2.44 | $-68.79 | $5,983.43 | ▼ -68.79 after sell → book $6,937.03; vs 09:30 mark -2.44 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **SELL** | `ZVRA` | 80 | $11.92 | $2.25 | $+5.12 | $6,934.77 | ▲ +5.12 after sell → book $6,934.77; vs 09:30 mark -2.26 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **BUY** | `ALH` | 111 | $24.92 | $2.32 | — | $4,166.33 | — | OR news + net≥4; leftover weighted by camera rank; gate cam_net_min=4,news_or_headline=True; rank cond; list ohlc_hot; 🔵; ⚪; ret5=+12.9; leftover $2773.91 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `CECO` | 35 | $58.47 | $2.10 | — | $2,117.79 | — | OR news + net≥4; leftover weighted by camera rank; gate cam_net_min=4,news_or_headline=True; rank cond; list probable,yday_gainer; 🔵; ret5=+3.2; leftover $2080.43 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🔴 peer🟢 heat🟡 vol🟢 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `EMBJ` | 16 | $82.46 | $2.04 | — | $796.39 | — | OR news + net≥4; leftover weighted by camera rank; gate cam_net_min=4,news_or_headline=True; rank cond; list ohlc_hot; 🔵; ret5=+9.3; leftover $1386.95 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `LOAR` | 8 | $79.53 | $2.01 | — | $158.13 | — | OR news + net≥4; leftover weighted by camera rank; gate cam_net_min=4,news_or_headline=True; rank cond; list ohlc_hot; 🔵; ret5=+16.4; leftover $693.48 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $158.13 | ▼ close $6,669.63 vs 09:30 $6,943.87 (session -256.67) | 16:00 close · cash $158.13 · equity $6,669.63 vs 09:30 $6,943.87 (-274.24; session marks -256.67) · 4 name(s) marked open→close (per-name table). ALH×111 09:30 $24.92 → close $24.20 -79.92; CECO×35 09:30 $58.47 → close $53.50 -173.95; EMBJ×16 09:30 $82.46 → close $82.43 -0.48; LOAR×8 09:30 $79.53 → close $79.24 -2.32 | — |
 
 ## Not taken
 

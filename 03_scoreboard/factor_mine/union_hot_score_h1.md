@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `hot_score` · size `leftover` · sell `list` · S-boost `none` · rank by hot_score
 
-Cash book **+23.12%** ($12,312) · signal-only (no cash/fees) was +50.67%. Starts YES **29/30**. Fills 544 · skips 90 · realized $+477.92.
+Cash book **+27.59%** ($12,759) · signal-only (no cash/fees) was +50.67%. Starts YES **29/30**. Fills 556 · skips 90 · realized $+477.92.
 
 ## How this sleeve decides (like you are 10)
 
@@ -741,6 +741,20 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-10 09:30 ET | **BUY** | `NEOV` | 567 | $2.75 | $7.31 | — | $1,565.13 | — | rank by hot_score; rank hot_score; list yday_gainer; 🔵; ret5=+45.2; leftover $1562.31 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🔴 vol🟡 buy🟡 |
 | 2026-11-10 09:30 ET | **BUY** | `TMDX` | 16 | $93.50 | $2.04 | — | $67.09 | — | rank by hot_score; rank hot_score; list flatten,yday_gainer,yday_mover; 🔵; ⚪; ret5=+40.7; leftover $1562.31 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
 | 2026-11-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $67.09 | ▲ close $12,311.71 vs 09:30 $12,310.62 (session +58.92) | 16:00 close · cash $67.09 · equity $12,311.71 vs 09:30 $12,310.62 (+1.09; session marks +58.92) · 8 name(s) marked open→close (per-name table). AEHL×119 09:30 $11.33 → close $11.21 -14.28; GOGO×442 09:30 $3.53 → close $3.60 +30.94; CAPR×161 09:30 $9.65 → close $8.87 -125.58; EVC×167 09:30 $9.30 → close $9.11 -31.73; FLY×66 09:30 $23.51 → close $23.70 +12.54; INDI×731 09:30 $2.13 → close $2.28 +106.00; NEOV×567 09:30 $2.75 → close $2.97 +121.91; TMDX×16 09:30 $93.50 → close $90.94 -40.88 | — |
+| 2026-11-11 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $67.09 | ▲ 09:30 equity $12,701.16 vs yday $12,311.71 (+389.45) | 09:30 open · cash $67.09 (unchanged overnight, no fees) · equity $12,701.16 vs prior close $12,311.71 (+389.45) · 8 name(s) re-marked at the open (per-name table). AEHL×119 yday $11.21 → 09:30 $11.89 +80.92; CAPR×161 yday $8.87 → 09:30 $9.85 +157.78; EVC×167 yday $9.11 → 09:30 $9.10 -1.67; FLY×66 yday $23.70 → 09:30 $23.96 +17.43; GOGO×442 yday $3.60 → 09:30 $3.58 -8.84; INDI×731 yday $2.28 → 09:30 $2.41 +98.39; NEOV×567 yday $2.97 → 09:30 $3.05 +45.36; TMDX×16 yday $90.94 → 09:30 $90.95 +0.08 | — |
+| 2026-11-11 09:30 ET | **SELL** | `AEHL` | 119 | $11.89 | $2.38 | $-148.72 | $1,479.62 | ▼ -148.72 after sell → book $12,698.79; vs 09:30 mark -2.37 | dropped from list after 2 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **SELL** | `CAPR` | 161 | $9.85 | $2.51 | $+27.21 | $3,062.96 | ▲ +27.21 after sell → book $12,696.27; vs 09:30 mark -2.52 | dropped from list after 1 sess (min 1) | join🔴 sector🔴 gen🟢 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-11 09:30 ET | **SELL** | `EVC` | 167 | $9.10 | $2.53 | $-38.42 | $4,580.13 | ▼ -38.42 after sell → book $12,693.74; vs 09:30 mark -2.53 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **SELL** | `GOGO` | 442 | $3.58 | $5.79 | $+10.61 | $6,156.70 | ▲ +10.61 after sell → book $12,687.95; vs 09:30 mark -5.79 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **SELL** | `NEOV` | 567 | $3.05 | $7.42 | $+152.53 | $7,878.63 | ▲ +152.53 after sell → book $12,680.53; vs 09:30 mark -7.42 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **SELL** | `TMDX` | 16 | $90.95 | $2.06 | $-44.90 | $9,331.77 | ▼ -44.90 after sell → book $12,678.47; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **BUY** | `TLS` | 199 | $7.80 | $2.59 | — | $7,776.98 | — | rank by hot_score; rank hot_score; list yday_gainer,yday_mover; 🔵; ret5=+48.9; leftover $1555.29 | join🔴 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `TTD` | 102 | $15.23 | $2.30 | — | $6,221.23 | — | rank by hot_score; rank hot_score; list flatten; 🔵; ret5=+19.9; leftover $1555.29 | join🟢 sector🟡 gen🟢 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `ATER` | 1669 | $0.93 | $20.55 | — | $4,646.00 | — | rank by hot_score; rank hot_score; list ohlc_hot; ret5=+16.4; leftover $1555.29 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `GDYN` | 111 | $13.94 | $2.32 | — | $3,096.34 | — | rank by hot_score; rank hot_score; list ohlc_hot; ret5=+5.2; leftover $1555.29 | join🔴 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `CLX` | 14 | $104.89 | $2.03 | — | $1,625.84 | — | rank by hot_score; rank hot_score; list flatten; 🔵; ⚪; ret5=+13.6; leftover $1555.29 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `REAL` | 104 | $14.83 | $2.30 | — | $81.22 | — | rank by hot_score; rank hot_score; list ohlc_hot; 🔵; ret5=+17.4; leftover $1555.29 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $81.22 | ▲ close $12,759.29 vs 09:30 $12,701.16 (session +112.91) | 16:00 close · cash $81.22 · equity $12,759.29 vs 09:30 $12,701.16 (+58.13; session marks +112.91) · 8 name(s) marked open→close (per-name table). FLY×66 09:30 $23.96 → close $26.61 +174.63; INDI×731 09:30 $2.41 → close $2.30 -83.77; TLS×199 09:30 $7.80 → close $7.65 -29.85; TTD×102 09:30 $15.23 → close $15.98 +76.50; ATER×1669 09:30 $0.93 → close $0.93 -10.85; GDYN×111 09:30 $13.94 → close $13.83 -12.21; CLX×14 09:30 $104.89 → close $106.86 +27.58; REAL×104 09:30 $14.83 → close $14.55 -29.12 | — |
 
 ## Not taken
 

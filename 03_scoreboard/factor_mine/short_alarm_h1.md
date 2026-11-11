@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · alarm
 
-Cash book **-1.82%** ($9,818) · signal-only (no cash/fees) was +3.57%. Starts YES **5/30**. Fills 286 · skips 96 · realized $+54.59.
+Cash book **-4.49%** ($9,551) · signal-only (no cash/fees) was +3.57%. Starts YES **5/30**. Fills 302 · skips 96 · realized $+54.59.
 
 ## How this sleeve decides (like you are 10)
 
@@ -482,6 +482,24 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-10 09:30 ET | **SHORT** | `OXY` | 11 | $55.25 | $2.06 | — | $14,115.01 | — | alarm; gate alarm=True; list earn_react; ret5=-8.2; leftover $620.92 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 ab🟢 peer🟡 heat🔴 vol🟡 buy🟡 |
 | 2026-11-10 09:30 ET | **SHORT** | `TDW` | 8 | $71.40 | $2.05 | — | $14,684.16 | — | alarm; gate alarm=True; list earn_react; ret5=-10.1; leftover $620.92 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🔴 peer🟡 heat🔴 vol🟢 buy🟡 |
 | 2026-11-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,684.16 | ▼ close $9,817.54 vs 09:30 $9,934.77 (session -98.78) | 16:00 close · cash $14,684.16 · equity $9,817.54 vs 09:30 $9,934.77 (-117.23; session marks -98.78) · 8 name(s) marked open→close (per-name table). KLC×272 09:30 $2.28 → close $2.21 +19.04; CLX×5 09:30 $105.00 → close $106.60 -8.00; PRMB×25 09:30 $24.10 → close $24.07 +0.75; DHT×31 09:30 $19.58 → close $20.81 -38.13; HPK×95 09:30 $6.50 → close $6.82 -30.40; JBS×50 09:30 $12.34 → close $12.40 -3.25; OXY×11 09:30 $55.25 → close $56.90 -18.15; TDW×8 09:30 $71.40 → close $73.98 -20.64 | — |
+| 2026-11-11 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $14,684.16 | ▼ 09:30 equity $9,738.80 vs yday $9,817.54 (-78.74) | 09:30 open · cash $14,684.16 (unchanged overnight, no fees) · equity $9,738.80 vs prior close $9,817.54 (-78.74) · 8 name(s) re-marked at the open (per-name table). CLX×5 yday $106.60 → 09:30 $104.89 +8.55; DHT×31 yday $20.81 → 09:30 $21.62 -25.11; HPK×95 yday $6.82 → 09:30 $7.23 -38.95; JBS×50 yday $12.40 → 09:30 $12.38 +0.75; KLC×272 yday $2.21 → 09:30 $2.24 -8.16; OXY×11 yday $56.90 → 09:30 $57.26 -3.96; PRMB×25 yday $24.07 → 09:30 $23.77 +7.50; TDW×8 yday $73.98 → 09:30 $76.40 -19.36 | — |
+| 2026-11-11 09:30 ET | **COVER** | `CLX` | 5 | $104.89 | $2.00 | $-3.49 | $14,157.70 | ▼ -3.49 after sell → book $9,736.79; vs 09:30 mark -2.01 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-11 09:30 ET | **COVER** | `DHT` | 31 | $21.62 | $2.08 | $-67.44 | $13,485.40 | ▼ -67.44 after sell → book $9,734.71; vs 09:30 mark -2.08 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **COVER** | `HPK` | 95 | $7.23 | $2.27 | $-73.94 | $12,796.28 | ▼ -73.94 after sell → book $9,732.44; vs 09:30 mark -2.27 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **COVER** | `JBS` | 50 | $12.38 | $2.14 | $-6.82 | $12,174.89 | ▼ -6.82 after sell → book $9,730.30; vs 09:30 mark -2.14 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **COVER** | `KLC` | 272 | $2.24 | $3.51 | $+3.79 | $11,562.10 | ▲ +3.79 after sell → book $9,726.79; vs 09:30 mark -3.51 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **COVER** | `OXY` | 11 | $57.26 | $2.02 | $-26.19 | $10,930.22 | ▼ -26.19 after sell → book $9,724.77; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **COVER** | `PRMB` | 25 | $23.77 | $2.06 | $+4.08 | $10,333.90 | ▲ +4.08 after sell → book $9,722.70; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **COVER** | `TDW` | 8 | $76.40 | $2.01 | $-44.06 | $9,720.69 | ▼ -44.06 after sell → book $9,720.69; vs 09:30 mark -2.01 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **SHORT** | `PRCH` | 27 | $22.17 | $2.11 | — | $10,317.17 | — | alarm; gate alarm=True; list flatten; ret5=+2.0; leftover $607.54 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-11-11 09:30 ET | **SHORT** | `INO` | 443 | $1.37 | $5.81 | — | $10,918.26 | — | alarm; gate alarm=True; list probable,yday_gainer,yday_mover,earn_react; ret5=-12.7; leftover $607.54 | join🟢 sector🔴 gen🟢 news🟡 digest🔴 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-11-11 09:30 ET | **SHORT** | `ZJYL` | 142 | $4.27 | $2.47 | — | $11,522.14 | — | alarm; gate alarm=True; list yday_gainer; ret5=+54.8; leftover $607.54 | join🔴 sector🔴 gen🟢 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-11 09:30 ET | **SHORT** | `REPL` | 26 | $23.28 | $2.10 | — | $12,125.31 | — | alarm; gate alarm=True; list ohlc_hot; ret5=+12.7; leftover $607.54 | join🟢 sector🔴 gen🟢 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-11 09:30 ET | **SHORT** | `CHTR` | 4 | $133.11 | $2.04 | — | $12,655.72 | — | alarm; gate alarm=True; list ohlc_hot; ret5=+17.8; leftover $607.54 | join🔴 sector🟡 gen🟢 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-11 09:30 ET | **SHORT** | `LILAK` | 61 | $9.87 | $2.21 | — | $13,255.58 | — | alarm; gate alarm=True; list ohlc_hot; ret5=+15.0; leftover $607.54 | join🟢 sector🟡 gen🟢 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-11 09:30 ET | **SHORT** | `IBN` | 17 | $34.27 | $2.08 | — | $13,836.09 | — | alarm; gate alarm=True; list ohlc_hot; ret5=+15.8; leftover $607.54 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-11 09:30 ET | **SHORT** | `PPLI` | 13 | $43.63 | $2.06 | — | $14,401.22 | — | alarm; gate alarm=True; list ohlc_hot; ret5=+13.7; leftover $607.54 | join🟢 sector🟡 gen🟢 news🟢 digest🔴 ab🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-11-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,401.22 | ▼ close $9,550.91 vs 09:30 $9,738.80 (session -148.89) | 16:00 close · cash $14,401.22 · equity $9,550.91 vs 09:30 $9,738.80 (-187.89; session marks -148.89) · 8 name(s) marked open→close (per-name table). PRCH×27 09:30 $22.17 → close $22.14 +0.81; INO×443 09:30 $1.37 → close $1.48 -46.51; ZJYL×142 09:30 $4.27 → close $4.91 -90.88; REPL×26 09:30 $23.28 → close $21.78 +39.00; CHTR×4 09:30 $133.11 → close $136.31 -12.80; LILAK×61 09:30 $9.87 → close $10.30 -26.23; IBN×17 09:30 $34.27 → close $34.74 -7.99; PPLI×13 09:30 $43.63 → close $43.96 -4.29 | — |
 
 ## Not taken
 

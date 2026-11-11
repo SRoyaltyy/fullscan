@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-32.75%** ($6,725) · signal-only (no cash/fees) was +0.74%. Starts YES **0/30**. Fills 176 · skips 41 · realized $-847.98.
+Cash book **-32.02%** ($6,798) · signal-only (no cash/fees) was +0.74%. Starts YES **0/30**. Fills 189 · skips 41 · realized $-847.98.
 
 ## How this sleeve decides (like you are 10)
 
@@ -376,6 +376,21 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-10 09:30 ET | **BUY** | `AOSL` | 29 | $28.57 | $2.08 | — | $870.87 | — | combo gate; gate news=good,vol=good; list yday_gainer,yday_mover; 🔵; ret5=+37.3; leftover $841.71 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 judge🟡 ab🔴 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-11-10 09:30 ET | **BUY** | `CLNE` | 443 | $1.90 | $5.71 | — | $23.46 | — | combo gate; gate news=good,vol=good; list yday_gainer,yday_mover; ret5=+33.1; leftover $841.71 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-11-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $23.46 | ▼ close $6,724.72 vs 09:30 $6,795.38 (session -39.55) | 16:00 close · cash $23.46 · equity $6,724.72 vs 09:30 $6,795.38 (-70.66; session marks -39.55) · 8 name(s) marked open→close (per-name table). ALGN×5 09:30 $171.82 → close $174.26 +12.20; ZVRA×74 09:30 $11.80 → close $11.92 +8.88; ETON×13 09:30 $63.63 → close $67.54 +50.83; IREN×40 09:30 $20.80 → close $19.73 -42.80; GOGO×238 09:30 $3.53 → close $3.60 +16.66; SERV×255 09:30 $3.29 → close $3.11 -45.90; AOSL×29 09:30 $28.57 → close $28.28 -8.41; CLNE×443 09:30 $1.90 → close $1.83 -31.01 | — |
+| 2026-11-11 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $23.46 | ▲ 09:30 equity $6,878.28 vs yday $6,724.72 (+153.56) | 09:30 open · cash $23.46 (unchanged overnight, no fees) · equity $6,878.28 vs prior close $6,724.72 (+153.56) · 8 name(s) re-marked at the open (per-name table). ALGN×5 yday $174.26 → 09:30 $174.30 +0.20; AOSL×29 yday $28.28 → 09:30 $30.00 +49.88; CLNE×443 yday $1.83 → 09:30 $1.86 +13.29; ETON×13 yday $67.54 → 09:30 $66.94 -7.80; GOGO×238 yday $3.60 → 09:30 $3.58 -4.76; IREN×40 yday $19.73 → 09:30 $20.96 +49.20; SERV×255 yday $3.11 → 09:30 $3.32 +53.55; ZVRA×74 yday $11.92 → 09:30 $11.92 +0.00 | — |
+| 2026-11-11 09:30 ET | **SELL** | `ALGN` | 5 | $174.30 | $2.02 | $+27.97 | $892.94 | ▲ +27.97 after sell → book $6,876.26; vs 09:30 mark -2.02 | dropped from list after 2 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **SELL** | `CLNE` | 443 | $1.86 | $5.80 | $-29.23 | $1,711.12 | ▼ -29.23 after sell → book $6,870.46; vs 09:30 mark -5.80 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **SELL** | `ETON` | 13 | $66.94 | $2.05 | $+38.95 | $2,579.29 | ▲ +38.95 after sell → book $6,868.41; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **SELL** | `GOGO` | 238 | $3.58 | $3.12 | $+5.71 | $3,428.21 | ▲ +5.71 after sell → book $6,865.29; vs 09:30 mark -3.12 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **SELL** | `IREN` | 40 | $20.96 | $2.13 | $+2.16 | $4,264.48 | ▲ +2.16 after sell → book $6,863.16; vs 09:30 mark -2.13 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **SELL** | `SERV` | 255 | $3.32 | $3.34 | $+1.02 | $5,107.74 | ▲ +1.02 after sell → book $6,859.82; vs 09:30 mark -3.34 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **SELL** | `ZVRA` | 74 | $11.92 | $2.23 | $+15.53 | $5,987.58 | ▲ +15.53 after sell → book $6,857.58; vs 09:30 mark -2.24 | dropped from list after 2 sess (min 1) | — |
+| 2026-11-11 09:30 ET | **BUY** | `RC` | 988 | $1.01 | $12.75 | — | $4,976.96 | — | combo gate; gate news=good,vol=good; list probable,yday_gainer,yday_mover; ret5=-7.3; leftover $997.93 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `CECO` | 17 | $58.47 | $2.04 | — | $3,980.93 | — | combo gate; gate news=good,vol=good; list probable,yday_gainer; 🔵; ret5=+3.2; leftover $997.93 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🔴 peer🟢 heat🟡 vol🟢 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `FRVO` | 84 | $11.88 | $2.24 | — | $2,981.18 | — | combo gate; gate news=good,vol=good; list yday_gainer,yday_mover; 🔵; ret5=+22.1; leftover $997.93 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `LINC` | 42 | $23.32 | $2.12 | — | $1,999.63 | — | combo gate; gate news=good,vol=good; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+12.2; leftover $997.93 | join🟢 sector🟡 gen🟢 news🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `SOC` | 1366 | $0.73 | $14.07 | — | $988.24 | — | combo gate; gate news=good,vol=good; list yday_mover; 🔵; ret5=-69.7; leftover $997.93 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-11-11 09:30 ET | **BUY** | `LOAR` | 12 | $79.53 | $2.03 | — | $31.85 | — | combo gate; gate news=good,vol=good; list ohlc_hot; 🔵; ret5=+16.4; leftover $997.93 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $31.85 | ▼ close $6,798.44 vs 09:30 $6,878.28 (session -23.90) | 16:00 close · cash $31.85 · equity $6,798.44 vs 09:30 $6,878.28 (-79.84; session marks -23.90) · 7 name(s) marked open→close (per-name table). AOSL×29 09:30 $30.00 → close $30.86 +24.94; RC×988 09:30 $1.01 → close $0.93 -78.94; CECO×17 09:30 $58.47 → close $53.50 -84.49; FRVO×84 09:30 $11.88 → close $12.94 +89.46; LINC×42 09:30 $23.32 → close $23.51 +7.98; SOC×1366 09:30 $0.73 → close $0.75 +20.63; LOAR×12 09:30 $79.53 → close $79.24 -3.48 | — |
 
 ## Not taken
 
