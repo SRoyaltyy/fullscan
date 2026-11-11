@@ -1,9 +1,453 @@
 [
   {
-    "n": 9681,
-    "title": "H.R. 10965 (IH) - Supporting After-School STEM Educators Act",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr10965ih",
-    "published_at": "2026-11-11T04:35:04+00:00",
+    "n": 9744,
+    "title": "Results of 7-year HKD HKSAR Institutional Government Bonds tender through re-opening",
+    "url": "https://www.hkma.gov.hk/eng/news-and-media/press-releases/2026/11/20261111-5/",
+    "published_at": "2026-11-11T00:00:00+00:00",
+    "official_issuer": "Hong Kong Monetary Authority",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "hk-hkma-public-press"
+    ]
+  },
+  {
+    "n": 9745,
+    "title": "Tender results of 1-year HONIA-indexed Floating Rate Notes",
+    "url": "https://www.hkma.gov.hk/eng/news-and-media/press-releases/2026/11/20261111-4/",
+    "published_at": "2026-11-11T00:00:00+00:00",
+    "official_issuer": "Hong Kong Monetary Authority",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "hk-hkma-public-press"
+    ]
+  },
+  {
+    "n": 9746,
+    "title": "Enforcement collaboration between HKMA and IA – IA bans Lim Ka Kit from being an insurance intermediary for nine months",
+    "url": "https://www.hkma.gov.hk/eng/news-and-media/press-releases/2026/11/20261111-3/",
+    "published_at": "2026-11-11T00:00:00+00:00",
+    "official_issuer": "Hong Kong Monetary Authority",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "hk-hkma-public-press"
+    ]
+  },
+  {
+    "n": 9747,
+    "title": "CAC Outcome: NEU & NASUWT & Cranleigh School",
+    "url": "https://www.gov.uk/government/publications/cac-outcome-neu-nasuwt-cranleigh-school",
+    "published_at": "2026-11-11T15:02:07+00:00",
+    "official_issuer": "Central Arbitration Committee",
+    "document_type": "decision",
+    "document_stage": "decision_published",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "n": 9748,
+    "title": "Company Names Tribunal decision: M & S Storage and Distribution Ltd",
+    "url": "https://www.gov.uk/government/publications/company-names-tribunal-decision-m-s-storage-and-distribution-ltd",
+    "published_at": "2026-11-11T09:33:46+00:00",
+    "official_issuer": "Company Names Tribunal",
+    "document_type": "decision",
+    "document_stage": "decision_published",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "n": 9749,
+    "title": "Company Names Tribunal decision: Kier Bam JV Ltd",
+    "url": "https://www.gov.uk/government/publications/company-names-tribunal-decision-kier-bam-jv-ltd",
+    "published_at": "2026-11-11T09:33:25+00:00",
+    "official_issuer": "Company Names Tribunal",
+    "document_type": "decision",
+    "document_stage": "decision_published",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "n": 9750,
+    "title": "Company Names Tribunal decision: Apple Distribution International Limited",
+    "url": "https://www.gov.uk/government/publications/company-names-tribunal-decision-apple-distribution-international-limited",
+    "published_at": "2026-11-11T09:33:05+00:00",
+    "official_issuer": "Company Names Tribunal",
+    "document_type": "decision",
+    "document_stage": "decision_published",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "n": 9751,
+    "title": "Lifestone Homes Limited (previously Paradigm Housing Group Limited)",
+    "url": "https://www.gov.uk/government/publications/paradigm-housing-group-limited",
+    "published_at": "2026-11-11T09:30:02+00:00",
+    "official_issuer": "Regulator of Social Housing",
+    "document_type": "decision",
+    "document_stage": "decision_published",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "n": 9752,
+    "title": "East Midlands Housing Group Limited",
+    "url": "https://www.gov.uk/government/publications/regulatory-judgement-east-midlands-housing-group",
+    "published_at": "2026-11-11T09:30:01+00:00",
+    "official_issuer": "Regulator of Social Housing",
+    "document_type": "decision",
+    "document_stage": "decision_published",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "n": 9753,
+    "title": "Ocean Housing Limited",
+    "url": "https://www.gov.uk/government/publications/ocean-housing-limited",
+    "published_at": "2026-11-11T09:30:01+00:00",
+    "official_issuer": "Regulator of Social Housing",
+    "document_type": "decision",
+    "document_stage": "decision_published",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "n": 9754,
+    "title": "Sanctuary Housing Association",
+    "url": "https://www.gov.uk/government/publications/sanctuary-housing-association",
+    "published_at": "2026-11-11T09:30:01+00:00",
+    "official_issuer": "Regulator of Social Housing",
+    "document_type": "decision",
+    "document_stage": "decision_published",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "n": 9755,
+    "title": "Saffron Housing Trust Limited",
+    "url": "https://www.gov.uk/government/publications/regulatory-judgement-saffron-housing-trust-limited--2",
+    "published_at": "2026-11-11T09:30:01+00:00",
+    "official_issuer": "Regulator of Social Housing",
+    "document_type": "decision",
+    "document_stage": "decision_published",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "n": 9756,
+    "title": "Poplar Housing and Regeneration Community Association Limited",
+    "url": "https://www.gov.uk/government/publications/regulatory-judgement-poplar-harca-limited--2",
+    "published_at": "2026-11-11T09:30:01+00:00",
+    "official_issuer": "Regulator of Social Housing",
+    "document_type": "decision",
+    "document_stage": "decision_published",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "n": 9757,
+    "title": "Orwell Housing Association Limited",
+    "url": "https://www.gov.uk/government/publications/orwell-housing-association-limited",
+    "published_at": "2026-11-11T09:30:01+00:00",
+    "official_issuer": "Regulator of Social Housing",
+    "document_type": "decision",
+    "document_stage": "decision_published",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "n": 9758,
+    "title": "YMCA St Paul’s Group",
+    "url": "https://www.gov.uk/government/publications/regulatory-judgement-ymca-st-pauls-group",
+    "published_at": "2026-11-11T09:30:01+00:00",
+    "official_issuer": "Regulator of Social Housing",
+    "document_type": "decision",
+    "document_stage": "decision_published",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "n": 9759,
+    "title": "The Guinness Partnership Limited",
+    "url": "https://www.gov.uk/government/publications/the-guinness-partnership-limited",
+    "published_at": "2026-11-11T09:30:01+00:00",
+    "official_issuer": "Regulator of Social Housing",
+    "document_type": "decision",
+    "document_stage": "decision_published",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "n": 9760,
+    "title": "Havebury Homes",
+    "url": "https://www.gov.uk/government/publications/havebury-homes",
+    "published_at": "2026-11-11T09:30:01+00:00",
+    "official_issuer": "Regulator of Social Housing",
+    "document_type": "decision",
+    "document_stage": "decision_published",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "n": 9761,
+    "title": "Karibu Community Homes Limited",
+    "url": "https://www.gov.uk/government/publications/karibu-community-homes-limited",
+    "published_at": "2026-11-11T09:30:01+00:00",
+    "official_issuer": "Regulator of Social Housing",
+    "document_type": "decision",
+    "document_stage": "decision_published",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "n": 9762,
+    "title": "Cobalt Housing Limited",
+    "url": "https://www.gov.uk/government/publications/cobalt-housing-limited",
+    "published_at": "2026-11-11T09:30:01+00:00",
+    "official_issuer": "Regulator of Social Housing",
+    "document_type": "decision",
+    "document_stage": "decision_published",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "n": 9763,
+    "title": "Eden Housing Association Limited",
+    "url": "https://www.gov.uk/government/publications/regulatory-judgement-eden-housing-association-limited",
+    "published_at": "2026-11-11T09:30:01+00:00",
+    "official_issuer": "Regulator of Social Housing",
+    "document_type": "decision",
+    "document_stage": "decision_published",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "n": 9764,
+    "title": "Bury Metropolitan Borough Council",
+    "url": "https://www.gov.uk/government/publications/bury-metropolitan-borough-council",
+    "published_at": "2026-11-11T09:30:01+00:00",
+    "official_issuer": "Regulator of Social Housing",
+    "document_type": "decision",
+    "document_stage": "decision_published",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "n": 9765,
+    "title": "Trident Housing Association Limited",
+    "url": "https://www.gov.uk/government/publications/regulatory-judgement-trident-housing-association-limited--2",
+    "published_at": "2026-11-11T09:30:01+00:00",
+    "official_issuer": "Regulator of Social Housing",
+    "document_type": "decision",
+    "document_stage": "decision_published",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "n": 9766,
+    "title": "Joseph Rowntree Housing Trust",
+    "url": "https://www.gov.uk/government/publications/regulatory-judgement-joseph-rowntree-housing-trust--2",
+    "published_at": "2026-11-11T09:30:00+00:00",
+    "official_issuer": "Regulator of Social Housing",
+    "document_type": "decision",
+    "document_stage": "decision_published",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "n": 9767,
+    "title": "CIL Appeal 1893155 — 16 September 26 — demolition and erection of buildings",
+    "url": "https://www.gov.uk/government/publications/cil-appeal-1893155-16-september-26-demolition-and-erection-of-buildings",
+    "published_at": "2026-11-11T09:30:00+00:00",
+    "official_issuer": "HM Revenue & Customs",
+    "document_type": "decision",
+    "document_stage": "decision_published",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "n": 9768,
+    "title": "North Devon Homes",
+    "url": "https://www.gov.uk/government/publications/regulatory-judgement-north-devon-homes",
+    "published_at": "2026-11-11T09:30:00+00:00",
+    "official_issuer": "Regulator of Social Housing",
+    "document_type": "decision",
+    "document_stage": "decision_published",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "n": 9769,
+    "title": "Peabody Trust",
+    "url": "https://www.gov.uk/government/publications/peabody-trust",
+    "published_at": "2026-11-11T09:30:00+00:00",
+    "official_issuer": "Regulator of Social Housing",
+    "document_type": "decision",
+    "document_stage": "decision_published",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "n": 9770,
+    "title": "Citizen Housing Group Limited",
+    "url": "https://www.gov.uk/government/publications/regulatory-judgement-citizen-housing-group-limited",
+    "published_at": "2026-11-11T09:30:00+00:00",
+    "official_issuer": "Regulator of Social Housing",
+    "document_type": "decision",
+    "document_stage": "decision_published",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "n": 9771,
+    "title": "Page withdrawn: Ocean Housing Group Limited",
+    "url": "https://www.gov.uk/government/publications/regulatory-judgement-ocean-housing-group-limited",
+    "published_at": "2026-11-11T09:30:00+00:00",
+    "official_issuer": "Regulator of Social Housing",
+    "document_type": "decision",
+    "document_stage": "decision_published",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "n": 9772,
+    "title": "Hyde Housing Association Limited",
+    "url": "https://www.gov.uk/government/publications/regulatory-judgement-hyde-housing-association-limited",
+    "published_at": "2026-11-11T09:30:00+00:00",
+    "official_issuer": "Regulator of Social Housing",
+    "document_type": "decision",
+    "document_stage": "decision_published",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "n": 9773,
+    "title": "Southern Housing",
+    "url": "https://www.gov.uk/government/publications/southern-housing",
+    "published_at": "2026-11-11T09:30:00+00:00",
+    "official_issuer": "Regulator of Social Housing",
+    "document_type": "decision",
+    "document_stage": "decision_published",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "n": 9774,
+    "title": "Catton Grove Primary School: 10 November 2026",
+    "url": "https://www.gov.uk/government/publications/catton-grove-primary-school-10-november-2026",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "official_issuer": "Office of the Schools Adjudicator",
+    "document_type": "decision",
+    "document_stage": "decision_published",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "n": 9775,
+    "title": "Defence maritime regulations",
+    "url": "https://www.gov.uk/government/publications/defence-maritime-regulations",
+    "published_at": "2026-11-11T13:45:20+00:00",
+    "official_issuer": "Ministry of Defence; Defence Safety Authority",
+    "document_type": "regulation",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "uk-govuk-regulation"
+    ]
+  },
+  {
+    "n": 9776,
+    "title": "Notice of authorised amendments (NAA) 2026 documents",
+    "url": "https://www.gov.uk/government/publications/notice-of-authorised-amendments-naa-2026-documents",
+    "published_at": "2026-11-11T11:14:34+00:00",
+    "official_issuer": "Ministry of Defence; Military Aviation Authority",
+    "document_type": "regulation",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "uk-govuk-regulation"
+    ]
+  },
+  {
+    "n": 9777,
+    "title": "Notice of authorised amendments (NAA) reference table",
+    "url": "https://www.gov.uk/government/publications/notice-of-authorised-amendments-naa-reference-table",
+    "published_at": "2026-11-11T11:14:30+00:00",
+    "official_issuer": "Ministry of Defence; Military Aviation Authority",
+    "document_type": "regulation",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "uk-govuk-regulation"
+    ]
+  },
+  {
+    "n": 9778,
+    "title": "Notice of proposed amendments (NPA) comment response sheets",
+    "url": "https://www.gov.uk/government/publications/notice-of-proposed-amendments-npa-comment-response-sheets",
+    "published_at": "2026-11-11T11:14:27+00:00",
+    "official_issuer": "Ministry of Defence; Military Aviation Authority",
+    "document_type": "regulation",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "uk-govuk-regulation"
+    ]
+  },
+  {
+    "n": 9779,
+    "title": "MAA02: Military aviation authority (MAA) master glossary",
+    "url": "https://www.gov.uk/government/publications/maa02-military-aviation-authority-maa-master-glossary",
+    "published_at": "2026-11-11T11:14:11+00:00",
+    "official_issuer": "Ministry of Defence; Military Aviation Authority",
+    "document_type": "regulation",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "uk-govuk-regulation"
+    ]
+  },
+  {
+    "n": 9780,
+    "title": "MAA Regulatory Publications (MRP) amendment record sheet",
+    "url": "https://www.gov.uk/government/publications/maa-regulatory-publications-mrp-amendment-record-sheet",
+    "published_at": "2026-11-11T11:13:05+00:00",
+    "official_issuer": "Ministry of Defence; Military Aviation Authority",
+    "document_type": "regulation",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "uk-govuk-regulation"
+    ]
+  },
+  {
+    "n": 9781,
+    "title": "H.R. 10986 (IH) - Lebanon TPS Act",
+    "url": "https://www.govinfo.gov/app/details/BILLS-119hr10986ih",
+    "published_at": "2026-11-11T10:10:00+00:00",
     "official_issuer": "Congressional Bills",
     "document_type": "bill",
     "document_stage": "legislative_document_published",
@@ -12,10 +456,10 @@
     ]
   },
   {
-    "n": 9682,
-    "title": "H.R. 10970 (IH) - Cardiovascular Disease Early Detection and Prevention Act of 2026",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr10970ih",
-    "published_at": "2026-11-11T04:35:05+00:00",
+    "n": 9782,
+    "title": "H.R. 10980 (IH) - Promoting Resilient Buildings Act",
+    "url": "https://www.govinfo.gov/app/details/BILLS-119hr10980ih",
+    "published_at": "2026-11-11T10:43:00+00:00",
     "official_issuer": "Congressional Bills",
     "document_type": "bill",
     "document_stage": "legislative_document_published",
@@ -24,298 +468,9 @@
     ]
   },
   {
-    "n": 9683,
-    "title": "H.R. 10961 (IH) - To direct the Secretary of Veterans Affairs to report on the Warrior Training Advancement Course of the Veterans Benefits Administration.",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr10961ih",
-    "published_at": "2026-11-11T04:35:05+00:00",
-    "official_issuer": "Congressional Bills",
-    "document_type": "bill",
-    "document_stage": "legislative_document_published",
-    "source_ids": [
-      "us-govinfo-bills"
-    ]
-  },
-  {
-    "n": 9684,
-    "title": "H.R. 10969 (IH) - Healthy Meal Time Act of 2026",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr10969ih",
-    "published_at": "2026-11-11T04:35:05+00:00",
-    "official_issuer": "Congressional Bills",
-    "document_type": "bill",
-    "document_stage": "legislative_document_published",
-    "source_ids": [
-      "us-govinfo-bills"
-    ]
-  },
-  {
-    "n": 9685,
-    "title": "H.R. 10966 (IH) - Supporting Veteran Mothers Act of 2026",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr10966ih",
-    "published_at": "2026-11-11T04:35:05+00:00",
-    "official_issuer": "Congressional Bills",
-    "document_type": "bill",
-    "document_stage": "legislative_document_published",
-    "source_ids": [
-      "us-govinfo-bills"
-    ]
-  },
-  {
-    "n": 9686,
-    "title": "H.R. 8552 (EH) - Veterans’ Compensation Cost-of-Living Adjustment Act of 2026",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr8552eh",
-    "published_at": "2026-11-11T04:35:05+00:00",
-    "official_issuer": "Congressional Bills",
-    "document_type": "bill",
-    "document_stage": "legislative_document_published",
-    "source_ids": [
-      "us-govinfo-bills"
-    ]
-  },
-  {
-    "n": 9687,
-    "title": "H.R. 10968 (IH) - No Veteran Left Behind: Housing Retention Act of 2026",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr10968ih",
-    "published_at": "2026-11-11T04:35:05+00:00",
-    "official_issuer": "Congressional Bills",
-    "document_type": "bill",
-    "document_stage": "legislative_document_published",
-    "source_ids": [
-      "us-govinfo-bills"
-    ]
-  },
-  {
-    "n": 9688,
-    "title": "H.R. 10962 (IH) - Justification Oversight and Opportunities for Main Street Act of 2026",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr10962ih",
-    "published_at": "2026-11-11T04:35:06+00:00",
-    "official_issuer": "Congressional Bills",
-    "document_type": "bill",
-    "document_stage": "legislative_document_published",
-    "source_ids": [
-      "us-govinfo-bills"
-    ]
-  },
-  {
-    "n": 9689,
-    "title": "H.R. 9613 (EH) - Nuclear Advisory Committee Reform Act",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr9613eh",
-    "published_at": "2026-11-11T04:35:06+00:00",
-    "official_issuer": "Congressional Bills",
-    "document_type": "bill",
-    "document_stage": "legislative_document_published",
-    "source_ids": [
-      "us-govinfo-bills"
-    ]
-  },
-  {
-    "n": 9690,
-    "title": "H.R. 3978 (EH) - Nuclear REFUEL (Recycling Efficient Fuels Utilizing Expedited Licensing) Act",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr3978eh",
-    "published_at": "2026-11-11T04:35:06+00:00",
-    "official_issuer": "Congressional Bills",
-    "document_type": "bill",
-    "document_stage": "legislative_document_published",
-    "source_ids": [
-      "us-govinfo-bills"
-    ]
-  },
-  {
-    "n": 9691,
-    "title": "H.R. 9612 (EH) - American Enrichment Deployment Act",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr9612eh",
-    "published_at": "2026-11-11T04:35:06+00:00",
-    "official_issuer": "Congressional Bills",
-    "document_type": "bill",
-    "document_stage": "legislative_document_published",
-    "source_ids": [
-      "us-govinfo-bills"
-    ]
-  },
-  {
-    "n": 9692,
-    "title": "H.R. 9614 (EH) - NRC Staff Pay Alignment Act",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr9614eh",
-    "published_at": "2026-11-11T04:35:06+00:00",
-    "official_issuer": "Congressional Bills",
-    "document_type": "bill",
-    "document_stage": "legislative_document_published",
-    "source_ids": [
-      "us-govinfo-bills"
-    ]
-  },
-  {
-    "n": 9693,
-    "title": "H.R. 10984 (IH) - ‘Innovation for VA Technology and Entrepreneurship Act",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr10984ih",
-    "published_at": "2026-11-11T06:02:00+00:00",
-    "official_issuer": "Congressional Bills",
-    "document_type": "bill",
-    "document_stage": "legislative_document_published",
-    "source_ids": [
-      "us-govinfo-bills"
-    ]
-  },
-  {
-    "n": 9694,
-    "title": "H.R. 10972 (IH) - Nodes, Enterprise Workloads, and Hybrid Operations, Resilience, Integration, Zero-Trust, Orbital Networks Act",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr10972ih",
-    "published_at": "2026-11-11T06:02:00+00:00",
-    "official_issuer": "Congressional Bills",
-    "document_type": "bill",
-    "document_stage": "legislative_document_published",
-    "source_ids": [
-      "us-govinfo-bills"
-    ]
-  },
-  {
-    "n": 9695,
-    "title": "H.R. 10990 (IH) - For the relief of Paula Valentina Albornoz Hernández, Eliana Karina Hernández Peranquive, Nicole Alejandra Albornoz Hernández, and Leonardo Albornoz Rodríguez.",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr10990ih",
-    "published_at": "2026-11-11T06:02:00+00:00",
-    "official_issuer": "Congressional Bills",
-    "document_type": "bill",
-    "document_stage": "legislative_document_published",
-    "source_ids": [
-      "us-govinfo-bills"
-    ]
-  },
-  {
-    "n": 9696,
-    "title": "H.R. 10975 (IH) - Fair Manufactured Housing Lending Act",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr10975ih",
-    "published_at": "2026-11-11T06:02:00+00:00",
-    "official_issuer": "Congressional Bills",
-    "document_type": "bill",
-    "document_stage": "legislative_document_published",
-    "source_ids": [
-      "us-govinfo-bills"
-    ]
-  },
-  {
-    "n": 9697,
-    "title": "H.R. 10971 (IH) - Gulf Maritime Restoration Act",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr10971ih",
-    "published_at": "2026-11-11T06:02:00+00:00",
-    "official_issuer": "Congressional Bills",
-    "document_type": "bill",
-    "document_stage": "legislative_document_published",
-    "source_ids": [
-      "us-govinfo-bills"
-    ]
-  },
-  {
-    "n": 9698,
-    "title": "H.R. 10973 (IH) - Master Sergeant Roy P. Benavidez VA Clinic Act of 2026",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr10973ih",
-    "published_at": "2026-11-11T06:48:00+00:00",
-    "official_issuer": "Congressional Bills",
-    "document_type": "bill",
-    "document_stage": "legislative_document_published",
-    "source_ids": [
-      "us-govinfo-bills"
-    ]
-  },
-  {
-    "n": 9699,
-    "title": "DCPD-202600685 - Proclamation 11072-National Energy Dominance Month, 2026",
-    "url": "https://www.govinfo.gov/app/details/DCPD-202600685",
-    "published_at": "2026-11-10T21:28:50+00:00",
-    "official_issuer": "Compilation of Presidential Documents",
-    "document_type": "presidential_document",
-    "document_stage": "presidential_document_published",
-    "source_ids": [
-      "us-govinfo-dcpd"
-    ]
-  },
-  {
-    "n": 9700,
-    "title": "DCPD-202600687 - Memorandum on Establishment of a Committee of Inquiry To Investigate Allegations of False Statements by Lisa DeNell Cook",
-    "url": "https://www.govinfo.gov/app/details/DCPD-202600687",
-    "published_at": "2026-11-10T21:28:51+00:00",
-    "official_issuer": "Compilation of Presidential Documents",
-    "document_type": "presidential_document",
-    "document_stage": "presidential_document_published",
-    "source_ids": [
-      "us-govinfo-dcpd"
-    ]
-  },
-  {
-    "n": 9701,
-    "title": "DCPD-202600686 - Proclamation 11073-Columbus Day, 2026",
-    "url": "https://www.govinfo.gov/app/details/DCPD-202600686",
-    "published_at": "2026-11-10T21:28:51+00:00",
-    "official_issuer": "Compilation of Presidential Documents",
-    "document_type": "presidential_document",
-    "document_stage": "presidential_document_published",
-    "source_ids": [
-      "us-govinfo-dcpd"
-    ]
-  },
-  {
-    "n": 9702,
-    "title": "DCPD-202600689 - Remarks on Presenting the National Medal of Science and National Medals of Technology and Innovation",
-    "url": "https://www.govinfo.gov/app/details/DCPD-202600689",
-    "published_at": "2026-11-10T21:28:51+00:00",
-    "official_issuer": "Compilation of Presidential Documents",
-    "document_type": "presidential_document",
-    "document_stage": "presidential_document_published",
-    "source_ids": [
-      "us-govinfo-dcpd"
-    ]
-  },
-  {
-    "n": 9703,
-    "title": "Nominations and Withdrawals Sent to the Senate",
-    "url": "https://www.whitehouse.gov/presidential-actions/2026/11/nominations-and-withdrawals-sent-to-the-senate-b6a4/",
-    "published_at": "2026-11-10T21:56:49+00:00",
-    "official_issuer": "White House presidential actions",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "us-white-house-0691096d16"
-    ]
-  },
-  {
-    "n": 9704,
-    "title": "VETERANS DAY, 2026",
-    "url": "https://www.whitehouse.gov/presidential-actions/2026/11/veterans-day-2026/",
-    "published_at": "2026-11-10T21:12:15+00:00",
-    "official_issuer": "White House presidential actions",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "us-white-house-0691096d16"
-    ]
-  },
-  {
-    "n": 9705,
-    "title": "Presidential Determination Concerning Wildfire Suppression Activities in the United States",
-    "url": "https://www.whitehouse.gov/presidential-actions/2026/11/presidential-determination-concerning-wildfire-suppression-activities-in-the-united-states/",
-    "published_at": "2026-11-10T21:11:07+00:00",
-    "official_issuer": "White House presidential actions",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "us-white-house-0691096d16"
-    ]
-  },
-  {
-    "n": 9706,
-    "title": "Five States Join FTC Lawsuit Alleging Hims and Hers Engaged in Deceptive and Unlawful Privacy Practices",
-    "url": "https://www.ftc.gov/news-events/news/press-releases/2026/11/five-states-join-ftc-lawsuit-alleging-hims-hers-engaged-deceptive-unlawful-privacy-practices",
-    "published_at": "2026-11-10T12:00:00+00:00",
-    "official_issuer": "Federal Trade Commission — Press Releases",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "us-ftc-58b0383166",
-      "us-ftc-62f72b4a5d"
-    ]
-  },
-  {
-    "n": 9707,
-    "title": "West Virginia’s U.S. Attorneys Create Task Force to Combat Fraud",
-    "url": "https://www.justice.gov/usao-sdwv/pr/west-virginias-us-attorneys-create-task-force-combat-fraud",
+    "n": 9783,
+    "title": "Anchorage Woman Sentenced to 5 Years in Prison for Wire Fraud and Aggravated Identity Theft",
+    "url": "https://www.justice.gov/usao-ak/pr/anchorage-woman-sentenced-5-years-prison-wire-fraud-and-aggravated-identity-theft",
     "published_at": "2026-11-10T12:00:00+00:00",
     "official_issuer": "Department of Justice",
     "document_type": "official_announcement",
@@ -325,9 +480,9 @@
     ]
   },
   {
-    "n": 9708,
-    "title": "Former Philadelphia Housing Development Corporation Employee Sentenced for Housing Assistance Fraud Scheme",
-    "url": "https://www.justice.gov/usao-edpa/pr/former-philadelphia-housing-development-corporation-employee-sentenced-housing",
+    "n": 9784,
+    "title": "Honduran National Unlawfully Residing in the United States Pleads Guilty to Fentanyl Trafficking and Firearm Charges",
+    "url": "https://www.justice.gov/usao-or/pr/honduran-national-unlawfully-residing-united-states-pleads-guilty-fentanyl-trafficking-0",
     "published_at": "2026-11-10T12:00:00+00:00",
     "official_issuer": "Department of Justice",
     "document_type": "official_announcement",
@@ -337,9 +492,9 @@
     ]
   },
   {
-    "n": 9709,
-    "title": "Colombian-Based Cocaine Importers Indicted in Drug Conspiracy and Conspiracy to Provide Material Support to the FARC",
-    "url": "https://www.justice.gov/usao-edla/pr/colombian-based-cocaine-importers-indicted-drug-conspiracy-and-conspiracy-provide",
+    "n": 9785,
+    "title": "U.S. Attorneys Create Task Force to Combat Fraud",
+    "url": "https://www.justice.gov/usao-ndwv/pr/us-attorneys-create-task-force-combat-fraud",
     "published_at": "2026-11-10T12:00:00+00:00",
     "official_issuer": "Department of Justice",
     "document_type": "official_announcement",
@@ -349,9 +504,9 @@
     ]
   },
   {
-    "n": 9710,
-    "title": "Florida Woman Pleads Guilty to Multi-Million-Dollar COVID Fraud Scheme",
-    "url": "https://www.justice.gov/usao-ma/pr/florida-woman-pleads-guilty-multi-million-dollar-covid-fraud-scheme",
+    "n": 9786,
+    "title": "Cheektowaga man arrested, charged with production of child pornography",
+    "url": "https://www.justice.gov/usao-wdny/pr/cheektowaga-man-arrested-charged-production-child-pornography",
     "published_at": "2026-11-10T12:00:00+00:00",
     "official_issuer": "Department of Justice",
     "document_type": "official_announcement",
@@ -361,9 +516,9 @@
     ]
   },
   {
-    "n": 9711,
-    "title": "Connecticut Man Charged With Three Counts of Arson",
-    "url": "https://www.justice.gov/usao-ma/pr/connecticut-man-charged-three-counts-arson",
+    "n": 9787,
+    "title": "Porter woman sentenced for fraud, threats, and assault of an officer after fraudulently receiving $435,000 new home",
+    "url": "https://www.justice.gov/usao-sdtx/pr/porter-woman-sentenced-fraud-threats-and-assault-officer-after-fraudulently-receiving",
     "published_at": "2026-11-10T12:00:00+00:00",
     "official_issuer": "Department of Justice",
     "document_type": "official_announcement",
@@ -373,22 +528,9 @@
     ]
   },
   {
-    "n": 9712,
-    "title": "Idaho Man Sentenced to 18 Years in Prison for Attempting to Provide Material Support to ISIS in Plot to Attack Churches",
-    "url": "https://www.justice.gov/opa/pr/idaho-man-sentenced-18-years-prison-attempting-provide-material-support-isis-plot-attack",
-    "published_at": "2026-11-10T12:00:00+00:00",
-    "official_issuer": "Department of Justice",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "us-doj-b3d27e1dc3",
-      "us-doj-e05071794d"
-    ]
-  },
-  {
-    "n": 9713,
-    "title": "South Carolina Man Pleads Guilty to Hate Crime Charge for Defacing Multiple Buildings at Charlotte Jewish Complex",
-    "url": "https://www.justice.gov/usao-wdnc/pr/south-carolina-man-pleads-guilty-hate-crime-charge-defacing-multiple-buildings",
+    "n": 9788,
+    "title": "Previously Convicted Mexican National Unlawfully Residing in the United States Sentenced to Five Years in Federal Prison for Distributing Methamphetamine in Oregon",
+    "url": "https://www.justice.gov/usao-or/pr/previously-convicted-mexican-national-unlawfully-residing-united-states-sentenced-five",
     "published_at": "2026-11-10T12:00:00+00:00",
     "official_issuer": "Department of Justice",
     "document_type": "official_announcement",
@@ -398,9 +540,9 @@
     ]
   },
   {
-    "n": 9714,
-    "title": "Bridgeport Man Involved in Armed Robbery Spree Sentenced to More Than 7 Years in Federal Prison",
-    "url": "https://www.justice.gov/usao-ct/pr/bridgeport-man-involved-armed-robbery-spree-sentenced-more-7-years-federal-prison",
+    "n": 9789,
+    "title": "Mexican National Pleads Guilty to Possession With Intent to Distribute Heroin",
+    "url": "https://www.justice.gov/usao-nv/pr/mexican-national-pleads-guilty-possession-intent-distribute-heroin",
     "published_at": "2026-11-10T12:00:00+00:00",
     "official_issuer": "Department of Justice",
     "document_type": "official_announcement",
@@ -410,9 +552,9 @@
     ]
   },
   {
-    "n": 9715,
-    "title": "Sequoyah County Resident Pleads Guilty To Illegally Possessing Firearm",
-    "url": "https://www.justice.gov/usao-edok/pr/sequoyah-county-resident-pleads-guilty-illegally-possessing-firearm",
+    "n": 9790,
+    "title": "Umatilla Man Sentenced to Seven Years in Federal Prison for Distributing Child Sexual Abuse Material and Making Hoax Abuse Reports",
+    "url": "https://www.justice.gov/usao-or/pr/umatilla-man-sentenced-seven-years-federal-prison-distributing-child-sexual-abuse",
     "published_at": "2026-11-10T12:00:00+00:00",
     "official_issuer": "Department of Justice",
     "document_type": "official_announcement",
@@ -422,9 +564,9 @@
     ]
   },
   {
-    "n": 9716,
-    "title": "McCurtain County Resident Pleads Guilty To 2022 New Year's Eve Shooting",
-    "url": "https://www.justice.gov/usao-edok/pr/mccurtain-county-resident-pleads-guilty-2022-new-years-eve-shooting",
+    "n": 9791,
+    "title": "Trucking company owner charged in labor scheme involving unauthorized non-citizen drivers",
+    "url": "https://www.justice.gov/usao-sdtx/pr/trucking-company-owner-charged-labor-scheme-involving-unauthorized-non-citizen-drivers",
     "published_at": "2026-11-10T12:00:00+00:00",
     "official_issuer": "Department of Justice",
     "document_type": "official_announcement",
@@ -434,9 +576,9 @@
     ]
   },
   {
-    "n": 9717,
-    "title": "Member of Chicago-based drug ring sentenced to 18 months in prison for trafficking oxycodone",
-    "url": "https://www.justice.gov/usao-mt/pr/member-chicago-based-drug-ring-sentenced-18-months-prison-trafficking-oxycodone",
+    "n": 9792,
+    "title": "New York Man Sentenced to Over 10 Years in Prison for Laundering Proceeds for Elder Fraud Scam Network",
+    "url": "https://www.justice.gov/usao-az/pr/new-york-man-sentenced-over-10-years-prison-laundering-proceeds-elder-fraud-scam-network",
     "published_at": "2026-11-10T12:00:00+00:00",
     "official_issuer": "Department of Justice",
     "document_type": "official_announcement",
@@ -446,9 +588,9 @@
     ]
   },
   {
-    "n": 9718,
-    "title": "Miramar-Based Government Contractor Charged in Aviation Parts Fraud Scheme Involving Forged FAA Certificates",
-    "url": "https://www.justice.gov/usao-sdfl/pr/miramar-based-government-contractor-charged-aviation-parts-fraud-scheme-involving",
+    "n": 9793,
+    "title": "Portland Man Sentenced to 55 Months in Federal Prison for Mail Theft, Identity Theft Scheme",
+    "url": "https://www.justice.gov/usao-or/pr/portland-man-sentenced-55-months-federal-prison-mail-theft-identity-theft-scheme",
     "published_at": "2026-11-10T12:00:00+00:00",
     "official_issuer": "Department of Justice",
     "document_type": "official_announcement",
@@ -458,9 +600,9 @@
     ]
   },
   {
-    "n": 9719,
-    "title": "California Man Pleads Guilty to Fentanyl Crime",
-    "url": "https://www.justice.gov/usao-sdwv/pr/california-man-pleads-guilty-fentanyl-crime",
+    "n": 9794,
+    "title": "Kalihi Man Sentenced to Over Nine Years in Prison for Gunpoint Game Room Robbery",
+    "url": "https://www.justice.gov/usao-hi/pr/kalihi-man-sentenced-over-nine-years-prison-gunpoint-game-room-robbery",
     "published_at": "2026-11-10T12:00:00+00:00",
     "official_issuer": "Department of Justice",
     "document_type": "official_announcement",
@@ -470,157 +612,9 @@
     ]
   },
   {
-    "n": 9720,
-    "title": "New Jersey Tax Preparer Pleads Guilty to Filing False Tax Returns for Clients",
-    "url": "https://www.justice.gov/opa/pr/new-jersey-tax-preparer-pleads-guilty-filing-false-tax-returns-clients",
-    "published_at": "2026-11-10T12:00:00+00:00",
-    "official_issuer": "Department of Justice",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "us-doj-b3d27e1dc3",
-      "us-doj-e05071794d"
-    ]
-  },
-  {
-    "n": 9721,
-    "title": "Bergen County Orthopedic Surgeon Pleads Guilty to Employment Tax Crime",
-    "url": "https://www.justice.gov/opa/pr/bergen-county-orthopedic-surgeon-pleads-guilty-employment-tax-crime",
-    "published_at": "2026-11-10T12:00:00+00:00",
-    "official_issuer": "Department of Justice",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "us-doj-b3d27e1dc3",
-      "us-doj-e05071794d"
-    ]
-  },
-  {
-    "n": 9722,
-    "title": "Dual Kazakhstani-Tajikistani Citizen Extradited from Egypt for Role in Alien Smuggling Conspiracy",
-    "url": "https://www.justice.gov/opa/pr/dual-kazakhstani-tajikistani-citizen-extradited-egypt-role-alien-smuggling-conspiracy",
-    "published_at": "2026-11-10T12:00:00+00:00",
-    "official_issuer": "Department of Justice",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "us-doj-b3d27e1dc3",
-      "us-doj-e05071794d"
-    ]
-  },
-  {
-    "n": 9723,
-    "title": "Federal Judge in Del Rio Sentences PRM General to 25 Years in Federal Prison for Drug Trafficking",
-    "url": "https://www.justice.gov/usao-wdtx/pr/federal-judge-del-rio-sentences-prm-general-25-years-federal-prison-drug-trafficking",
-    "published_at": "2026-11-10T12:00:00+00:00",
-    "official_issuer": "Department of Justice",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "us-doj-b3d27e1dc3"
-    ]
-  },
-  {
-    "n": 9724,
-    "title": "Court Orders Atlanta Area Tax Return Preparer to Permanently Shut Down Tax Preparation Business",
-    "url": "https://www.justice.gov/opa/pr/court-orders-atlanta-area-tax-return-preparer-permanently-shut-down-tax-preparation-business",
-    "published_at": "2026-11-10T12:00:00+00:00",
-    "official_issuer": "Department of Justice",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "us-doj-b3d27e1dc3",
-      "us-doj-e05071794d"
-    ]
-  },
-  {
-    "n": 9725,
-    "title": "Foreign National Sentenced to 7 Years in Defrauding American Taxpayers Out of Millions in Covid-Era Emergency Aid",
-    "url": "https://www.justice.gov/usao-dc/pr/foreign-national-sentenced-7-years-defrauding-american-taxpayers-out-millions-covid-era",
-    "published_at": "2026-11-10T12:00:00+00:00",
-    "official_issuer": "Department of Justice",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "us-doj-b3d27e1dc3"
-    ]
-  },
-  {
-    "n": 9726,
-    "title": "Kanawha County Woman Pleads Guilty to Child Pornography Crime",
-    "url": "https://www.justice.gov/usao-sdwv/pr/kanawha-county-woman-pleads-guilty-child-pornography-crime",
-    "published_at": "2026-11-10T12:00:00+00:00",
-    "official_issuer": "Department of Justice",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "us-doj-b3d27e1dc3"
-    ]
-  },
-  {
-    "n": 9727,
-    "title": "Norwalk Man Sentenced to 46 Months in Federal Prison for Firearm Offense",
-    "url": "https://www.justice.gov/usao-ct/pr/norwalk-man-sentenced-46-months-federal-prison-firearm-offense",
-    "published_at": "2026-11-10T12:00:00+00:00",
-    "official_issuer": "Department of Justice",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "us-doj-b3d27e1dc3"
-    ]
-  },
-  {
-    "n": 9728,
-    "title": "U.S. Attorney, ATF, State and Local Law Enforcement Partners announce results of Operation Summit City Sweep",
-    "url": "https://www.justice.gov/usao-ndin/pr/us-attorney-atf-state-and-local-law-enforcement-partners-announce-results-operation",
-    "published_at": "2026-11-10T12:00:00+00:00",
-    "official_issuer": "Department of Justice",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "us-doj-b3d27e1dc3"
-    ]
-  },
-  {
-    "n": 9729,
-    "title": "Two New York Men Indicted For Controlled Substances Conspiracy That Involved Death Of A Minor",
-    "url": "https://www.justice.gov/usao-sdny/pr/two-new-york-men-indicted-controlled-substances-conspiracy-involved-death-minor",
-    "published_at": "2026-11-10T12:00:00+00:00",
-    "official_issuer": "Department of Justice",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "us-doj-b3d27e1dc3"
-    ]
-  },
-  {
-    "n": 9730,
-    "title": "Mexican illegal alien with prior heroin conviction sentenced to 11 years in prison for new drug, immigration crimes",
-    "url": "https://www.justice.gov/usao-sdoh/pr/mexican-illegal-alien-prior-heroin-conviction-sentenced-11-years-prison-new-drug",
-    "published_at": "2026-11-10T12:00:00+00:00",
-    "official_issuer": "Department of Justice",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "us-doj-b3d27e1dc3"
-    ]
-  },
-  {
-    "n": 9731,
-    "title": "Albuquerque Man Faces Federal Child Pornography Charge Following FBI Investigation",
-    "url": "https://www.justice.gov/usao-nm/pr/albuquerque-man-faces-federal-child-pornography-charge-following-fbi-investigation",
-    "published_at": "2026-11-10T12:00:00+00:00",
-    "official_issuer": "Department of Justice",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "us-doj-b3d27e1dc3"
-    ]
-  },
-  {
-    "n": 9732,
-    "title": "Court Permanently Bars Florida Tax Return Preparer and Tax Preparation Business and Orders Disgorgement of More Than $550,000",
-    "url": "https://www.justice.gov/opa/pr/court-permanently-bars-florida-tax-return-preparer-and-tax-preparation-business-and-orders",
+    "n": 9795,
+    "title": "Justice Department Issues Fact Sheets About Lease Terminations for Servicemembers and their Dependents",
+    "url": "https://www.justice.gov/opa/pr/justice-department-issues-fact-sheets-about-lease-terminations-servicemembers-and-their",
     "published_at": "2026-11-10T12:00:00+00:00",
     "official_issuer": "Department of Justice — RSS Feed",
     "document_type": "official_announcement",
@@ -630,21 +624,93 @@
     ]
   },
   {
-    "n": 9733,
-    "title": "Family Farmstead Dairy Announces Recall of All Cheddar Cheese Products Because of Possible Health Risk",
-    "url": "http://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/family-farmstead-dairy-announces-recall-all-cheddar-cheese-products-because-possible-health-risk",
-    "published_at": "2026-11-10T05:00:00+00:00",
-    "official_issuer": "Food and Drug Administration — Food Safety Recalls",
+    "n": 9796,
+    "title": "Speech by Commissioner Kadis at the Plenary Session of the Organisation of African, Caribbean and Pacific States-European Union",
+    "url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2417",
+    "published_at": "2026-11-11T13:44:12+00:00",
+    "official_issuer": "European Commission press and decisions",
     "document_type": "official_announcement",
     "document_stage": "requires_semantic_review",
     "source_ids": [
-      "us-fda-2cdcdcca63"
+      "eu-commission-07d4f58ccf"
     ]
   },
   {
-    "n": 9735,
-    "title": "Bringing the current MFF to a successful close: agreement on the final Annual Budget",
-    "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2385",
+    "n": 9797,
+    "title": "President von der Leyen travels to Black Sea region and reaffirms EU's solidarity with Romania and Bulgaria in ‘testing times'",
+    "url": "https://ec.europa.eu/commission/presscorner/detail/en/ac_26_2416",
+    "published_at": "2026-11-11T13:31:55+00:00",
+    "official_issuer": "European Commission press and decisions",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "eu-commission-07d4f58ccf"
+    ]
+  },
+  {
+    "n": 9798,
+    "title": "Speech by Commissioner Albuquerque at the Latvijas Banka's Economic Conference 2026: From policy to Impact",
+    "url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2414",
+    "published_at": "2026-11-11T12:48:44+00:00",
+    "official_issuer": "European Commission press and decisions",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "eu-commission-07d4f58ccf"
+    ]
+  },
+  {
+    "n": 9799,
+    "title": "Opening remarks by Commissioner Hansen at the first in-person meeting of the Women in Farming Platform",
+    "url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2413",
+    "published_at": "2026-11-11T10:41:44+00:00",
+    "official_issuer": "European Commission press and decisions",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "eu-commission-07d4f58ccf"
+    ]
+  },
+  {
+    "n": 9800,
+    "title": "Remarks by Executive Vice-President Virkkunen and Commissioner McGrath on the Digital Fairness Act and a Consumer enforcement initiative",
+    "url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2412",
+    "published_at": "2026-11-11T10:24:11+00:00",
+    "official_issuer": "European Commission press and decisions",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "eu-commission-07d4f58ccf"
+    ]
+  },
+  {
+    "n": 9801,
+    "title": "Daily News 11 / 11 / 2026",
+    "url": "https://ec.europa.eu/commission/presscorner/detail/en/mex_26_2411",
+    "published_at": "2026-11-11T09:53:22+00:00",
+    "official_issuer": "European Commission press and decisions",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "eu-commission-07d4f58ccf"
+    ]
+  },
+  {
+    "n": 9802,
+    "title": "Speech by President von der Leyen at the United Nations Climate Change Conference (COP31)",
+    "url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2410",
+    "published_at": "2026-11-11T09:32:34+00:00",
+    "official_issuer": "European Commission press and decisions",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "eu-commission-07d4f58ccf"
+    ]
+  },
+  {
+    "n": 9803,
+    "title": "Commission strengthens consumer protection laws, making them fit for the digital age",
+    "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2407",
     "published_at": "2026-11-10T23:00:00+00:00",
     "official_issuer": "European Commission press and decisions",
     "document_type": "official_announcement",
@@ -654,9 +720,9 @@
     ]
   },
   {
-    "n": 9736,
-    "title": "Questions and answers on the agreement on the EU Annual Budget 2027",
-    "url": "https://ec.europa.eu/commission/presscorner/detail/en/qanda_26_2386",
+    "n": 9804,
+    "title": "Questions and answers on the Consumer Package",
+    "url": "https://ec.europa.eu/commission/presscorner/detail/en/qanda_26_2408",
     "published_at": "2026-11-10T23:00:00+00:00",
     "official_issuer": "European Commission press and decisions",
     "document_type": "official_announcement",
@@ -666,10 +732,10 @@
     ]
   },
   {
-    "n": 9737,
-    "title": "EU budget for 2027: Council and Parliament reach agreement",
-    "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/11/11/eu-budget-for-2027-council-and-parliament-reach-agreement/",
-    "published_at": "2026-11-11T06:25:00+00:00",
+    "n": 9805,
+    "title": "Media advisory - Meeting of the European Political Community of 12 November 2026 and the Informal meeting of Heads of State or Government of 13 November 2026",
+    "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/11/11/media-advisory-meeting-of-the-european-political-community-of-12-november-2026-and-the-informal-meeting-of-heads-of-state-or-government-of-13-november-2026/",
+    "published_at": "2026-11-11T17:20:00+00:00",
     "official_issuer": "Council of the European Union",
     "document_type": "official_announcement",
     "document_stage": "requires_semantic_review",
@@ -678,10 +744,70 @@
     ]
   },
   {
-    "n": 9738,
-    "title": "91-Day, 182-Day and 364-Day T-Bill Auction Result: Cut-off",
-    "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63955",
-    "published_at": "2026-11-11T12:55:00+00:00",
+    "n": 9806,
+    "title": "Press briefing ahead of the Foreign Affairs Council and the Foreign Affairs (Defence) Councils of 16 and 17 November 2026",
+    "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/11/11/press-briefing-ahead-of-the-foreign-affairs-council-and-the-foreign-affairs-defence-councils-of-16-and-17-november-2026/",
+    "published_at": "2026-11-11T13:51:00+00:00",
+    "official_issuer": "Council of the European Union",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "eu-council-9d9e9444da"
+    ]
+  },
+  {
+    "n": 9807,
+    "title": "162/2026 : 11 November 2026 - Judgment of the General Court in Case T-523/24",
+    "url": "https://curia.europa.eu/site/jcms/p1_1000088980",
+    "published_at": "2026-11-11T08:47:48+00:00",
+    "official_issuer": "Court of Justice of the European Union",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "eu-court-1433471e58"
+    ]
+  },
+  {
+    "n": 9808,
+    "title": "A Svensson extension to the Reserve Bank’s yield curve model. - Reserve Bank of New Zealand",
+    "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxQUjlHaWliRU9VSGhpU1lMMTVobEtVdjhGcUk0MkFVNkFIMEhiUl82NjBOalg5eFBQd045aXFpeDZYZ1RkR2NRWWNaaENfWFFaUE83U3hDcTg1VUJ6NnhWRlYtZGZvUGdld3QyNExQSDl2NkMtME0zN2ZWYktQRnpnMVJTVlRGSVEwc3VVV3dzbWUydlVXQnpWUXhkNG9HTjllczh3eEExcmk2ZVVNMmpSZzJxSkIyNE1yYVNsQ0swcWFhcjE1QlJWdVdGLUh2dXhWSWd2RlZZa3RjUVVaZDRwc2JIcmdKaTc5UnYyRA",
+    "published_at": "2026-11-11T15:22:18+00:00",
+    "official_issuer": "Reserve Bank of New Zealand (official-site news mirror)",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "nz-rbnz-gnews"
+    ]
+  },
+  {
+    "n": 9809,
+    "title": "Anita Tautuhi - Reserve Bank of New Zealand",
+    "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOaFBBcWNTdjNCYVFvMktNbGVjQ0Nya3hpNUNmMEhNX1BnU1RmUWVJc1lUSWFSejNNOE80bVE3eGY3eS1vUTJHcEctb2xFTFpIVzJjQUNDVzZ3LVJSSzJIMzVXQ1NpaW5GQ2ZLakFidEZ5QVpkRjhhWERSMXRWUm1qR0VYZlk",
+    "published_at": "2026-11-10T15:06:16+00:00",
+    "official_issuer": "Reserve Bank of New Zealand (official-site news mirror)",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "nz-rbnz-gnews"
+    ]
+  },
+  {
+    "n": 9810,
+    "title": "A Svensson extension to the Reserve Bank’s yield curve model - Reserve Bank of New Zealand",
+    "url": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxOUmhFbDJGdXppVHo5Q1g2T2lqcW15QnBNc21sUWw2NVl3NlEyRHJXWDVaNmxFcGZaM216OUdRQXJ5QUNtRnJfNFlYWWxreDJZUEY2em82ZTlRc3VBM2RJSWp2Y1hzdVhacjE2ZnBtcUZSZDVtU050Vzhta2tUaG1QbUdKZGR4eWkySUphdURGcHNVSHY4ckFRY29xM3Z0SnE3Y2xwYVZ6dVNLSk9XdzdsUGJ2Qld1NkZCLWxXNlNYVmFnVmtwRmRCRXJQbkJQSjZ2RTJPcV91aFpleWVDNVJqVFV6elJEaGo5amFtc1o0R3dtLWlaV2JVa0lhRQ",
+    "published_at": "2026-11-11T15:20:17+00:00",
+    "official_issuer": "Reserve Bank of New Zealand (official-site news mirror)",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "nz-rbnz-gnews"
+    ]
+  },
+  {
+    "n": 9811,
+    "title": "Conversion/Switch of Government of India Securities",
+    "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63958",
+    "published_at": "2026-11-11T18:10:00+00:00",
     "official_issuer": "Reserve Bank of India",
     "document_type": "official_announcement",
     "document_stage": "requires_semantic_review",
@@ -690,10 +816,10 @@
     ]
   },
   {
-    "n": 9739,
-    "title": "Money Market Operations as on November 10, 2026",
-    "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63954",
-    "published_at": "2026-11-11T11:30:00+00:00",
+    "n": 9812,
+    "title": "Reserve Money and Money Supply for the fortnight ended on October 31, 2026",
+    "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63957",
+    "published_at": "2026-11-11T17:25:00+00:00",
     "official_issuer": "Reserve Bank of India",
     "document_type": "official_announcement",
     "document_stage": "requires_semantic_review",
@@ -702,39 +828,112 @@
     ]
   },
   {
-    "n": 9740,
-    "title": "Money Market Operations as on November 09, 2026",
-    "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63953",
+    "n": 9813,
+    "title": "Treasury Bills: Full Auction Result",
+    "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63956",
+    "published_at": "2026-11-11T13:40:00+00:00",
+    "official_issuer": "Reserve Bank of India",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "in-rbi-cc71120b98"
+    ]
+  },
+  {
+    "n": 9814,
+    "title": "Reserve Bank of India (Domestic Money Transfer) Directions, 2026",
+    "url": "https://www.rbi.org.in/scripts/NotificationUser.aspx?Id=13752&Mode=0",
+    "published_at": "2026-11-11T17:00:00+00:00",
+    "official_issuer": "Reserve Bank of India",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "in-rbi-738b09bded"
+    ]
+  },
+  {
+    "n": 9815,
+    "title": "JFTC Approves the Commitment Plan Submitted by Amazon Japan G.K. - 公正取引委員会",
+    "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5fUVlPUkl3SFZxblFTcXVNejY3LWVqSGpqOTV4bC1KSktaTG1yU25PTHdqN3Vrb2N4ZXVTTktDOElpVENMbXZuVmRvTWRGX01TdFREeS1ZVmRyazZkSENGOTc3cmZKam9Bek5MSWVfYXpGUlZPbjlJM1VIaGI",
+    "published_at": "2026-11-11T10:07:30+00:00",
+    "official_issuer": "Japan Fair Trade Commission (official-site news mirror)",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "jp-jftc-gnews"
+    ]
+  },
+  {
+    "n": 9816,
+    "title": "Reopening of two Federal bonds – Auction result",
+    "url": "https://www.bundesbank.de/en/press/press-releases/federal-securities/reopening-of-two-federal-bonds-auction-result-964972",
+    "published_at": "2026-11-11T11:00:00+00:00",
+    "official_issuer": "Deutsche Bundesbank",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "de-bundesbank-027ac4024f"
+    ]
+  },
+  {
+    "n": 9817,
+    "title": "Announcement of auction – Reopening of Federal Treasury notes",
+    "url": "https://www.bundesbank.de/en/press/press-releases/federal-securities/announcement-of-auction-reopening-of-federal-treasury-notes-964968",
     "published_at": "2026-11-11T09:00:00+00:00",
-    "official_issuer": "Reserve Bank of India",
+    "official_issuer": "Deutsche Bundesbank",
     "document_type": "official_announcement",
     "document_stage": "requires_semantic_review",
     "source_ids": [
-      "in-rbi-cc71120b98"
+      "de-bundesbank-027ac4024f"
     ]
   },
   {
-    "n": 9741,
-    "title": "Money Stock (Oct.)",
-    "url": "http://www.boj.or.jp/en/statistics/money/ms/ms2610.pdf",
-    "published_at": "2026-11-10T23:50:00+00:00",
-    "official_issuer": "Bank of Japan",
+    "n": 9818,
+    "title": "Economic challenges in Germany and the future of Europe | Keynote speech at the Latvijas Banka Economic Conference 2026",
+    "url": "https://www.bundesbank.de/en/press/speeches/economic-challenges-in-germany-and-the-future-of-europe-964960",
+    "published_at": "2026-11-11T08:20:00+00:00",
+    "official_issuer": "Deutsche Bundesbank",
     "document_type": "official_announcement",
     "document_stage": "requires_semantic_review",
     "source_ids": [
-      "jp-boj-d488538690"
+      "de-bundesbank-027ac4024f",
+      "de-bundesbank-617511c682"
     ]
   },
   {
-    "n": 9743,
-    "title": "Increased risk of serious events that could weaken financial stability",
-    "url": "https://www.norges-bank.no/en/news-events/news/Press-releases/2026/2026-11-11-fsr2/",
-    "published_at": "2026-11-11T07:30:00+00:00",
-    "official_issuer": "Norges Bank",
+    "n": 9819,
+    "title": "Häuser, Hitze, Hochwasser: Wie geht die Finanzaufsicht mit Klimarisiken um? | 26. Immobilienkongress, Hochschule für Wirtschaft und Umwelt",
+    "url": "https://www.bundesbank.de/de/presse/reden/haeuser-hitze-hochwasser-wie-geht-die-finanzaufsicht-mit-klimarisiken-um--964964",
+    "published_at": "2026-11-11T09:10:00+00:00",
+    "official_issuer": "Deutsche Bundesbank — Speeches, Interview and Contributions",
     "document_type": "official_announcement",
     "document_stage": "requires_semantic_review",
     "source_ids": [
-      "no-norges-5079edc79e"
+      "de-bundesbank-617511c682"
+    ]
+  },
+  {
+    "n": 9820,
+    "title": "Europas Finanzsystem im Wandel: Wie bleiben wir souverän? | Rede beim SZ-Wirtschaftsgipfel",
+    "url": "https://www.bundesbank.de/de/presse/reden/europas-finanzsystem-im-wandel-wie-bleiben-wir-souveraen--964652",
+    "published_at": "2026-11-11T09:00:00+00:00",
+    "official_issuer": "Deutsche Bundesbank — Speeches, Interview and Contributions",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "de-bundesbank-617511c682"
+    ]
+  },
+  {
+    "n": 9821,
+    "title": "South Africa notifies launch of safeguard investigation into certain non-wired float glass products",
+    "url": "https://www.wto.org/english/news_e/news26_e/safe_zaf_11nov26_546_e.htm",
+    "published_at": "2026-11-11T00:00:00+00:00",
+    "official_issuer": "World Trade Organization disputes and decisions",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "io-wto-497f28e20d"
     ]
   }
 ]

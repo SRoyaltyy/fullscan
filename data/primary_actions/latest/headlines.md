@@ -1,7 +1,7 @@
 # Primary-origin action documents
 
-Updated 2026-11-11T07:46:05.445744+00:00. 561 dated documents in the configured 3-day window; 63 newly retained; 635 repeat observations.
-Source health: 116/117 checked successfully. Collection uses zero LLM calls.
+Updated 2026-11-11T20:12:59.574202+00:00. 635 dated documents in the configured 3-day window; 78 newly retained; 738 repeat observations.
+Source health: 117/117 checked successfully. Collection uses zero LLM calls.
 
 Document stage comes from publisher metadata. Proposed rules, bills and announcements are not automatically labelled enacted policy or concrete public actions.
 
@@ -12,6 +12,36 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 
 ## decision_published
 
+- [Platypus Field Development](https://www.gov.uk/government/publications/platypus-field-development) — Offshore Petroleum Regulator for Environment and Decommissioning; 2026-11-11T16:14:47+00:00
+- [CAC Outcome: NEU & NASUWT & Cranleigh School](https://www.gov.uk/government/publications/cac-outcome-neu-nasuwt-cranleigh-school) — Central Arbitration Committee; 2026-11-11T15:02:07+00:00
+- [Company Names Tribunal undefended decisions and orders](https://www.gov.uk/government/publications/company-names-tribunal-undefended-decisions-and-orders) — Company Names Tribunal; 2026-11-11T09:35:01+00:00
+- [Company Names Tribunal decision: M & S Storage and Distribution Ltd](https://www.gov.uk/government/publications/company-names-tribunal-decision-m-s-storage-and-distribution-ltd) — Company Names Tribunal; 2026-11-11T09:33:46+00:00
+- [Company Names Tribunal decision: Kier Bam JV Ltd](https://www.gov.uk/government/publications/company-names-tribunal-decision-kier-bam-jv-ltd) — Company Names Tribunal; 2026-11-11T09:33:25+00:00
+- [Company Names Tribunal decision: Apple Distribution International Limited](https://www.gov.uk/government/publications/company-names-tribunal-decision-apple-distribution-international-limited) — Company Names Tribunal; 2026-11-11T09:33:05+00:00
+- [Lifestone Homes Limited (previously Paradigm Housing Group Limited)](https://www.gov.uk/government/publications/paradigm-housing-group-limited) — Regulator of Social Housing; 2026-11-11T09:30:02+00:00
+- [Regulatory judgements and enforcement notices - 11 November 2026](https://www.gov.uk/government/publications/regulatory-judgements-and-enforcement-notices) — Regulator of Social Housing; 2026-11-11T09:30:02+00:00
+- [Trident Housing Association Limited](https://www.gov.uk/government/publications/regulatory-judgement-trident-housing-association-limited--2) — Regulator of Social Housing; 2026-11-11T09:30:01+00:00
+- [Bury Metropolitan Borough Council](https://www.gov.uk/government/publications/bury-metropolitan-borough-council) — Regulator of Social Housing; 2026-11-11T09:30:01+00:00
+- [Eden Housing Association Limited](https://www.gov.uk/government/publications/regulatory-judgement-eden-housing-association-limited) — Regulator of Social Housing; 2026-11-11T09:30:01+00:00
+- [Cobalt Housing Limited](https://www.gov.uk/government/publications/cobalt-housing-limited) — Regulator of Social Housing; 2026-11-11T09:30:01+00:00
+- [Karibu Community Homes Limited](https://www.gov.uk/government/publications/karibu-community-homes-limited) — Regulator of Social Housing; 2026-11-11T09:30:01+00:00
+- [Havebury Homes](https://www.gov.uk/government/publications/havebury-homes) — Regulator of Social Housing; 2026-11-11T09:30:01+00:00
+- [The Guinness Partnership Limited](https://www.gov.uk/government/publications/the-guinness-partnership-limited) — Regulator of Social Housing; 2026-11-11T09:30:01+00:00
+- [YMCA St Paul’s Group](https://www.gov.uk/government/publications/regulatory-judgement-ymca-st-pauls-group) — Regulator of Social Housing; 2026-11-11T09:30:01+00:00
+- [Orwell Housing Association Limited](https://www.gov.uk/government/publications/orwell-housing-association-limited) — Regulator of Social Housing; 2026-11-11T09:30:01+00:00
+- [Poplar Housing and Regeneration Community Association Limited](https://www.gov.uk/government/publications/regulatory-judgement-poplar-harca-limited--2) — Regulator of Social Housing; 2026-11-11T09:30:01+00:00
+- [Saffron Housing Trust Limited](https://www.gov.uk/government/publications/regulatory-judgement-saffron-housing-trust-limited--2) — Regulator of Social Housing; 2026-11-11T09:30:01+00:00
+- [Sanctuary Housing Association](https://www.gov.uk/government/publications/sanctuary-housing-association) — Regulator of Social Housing; 2026-11-11T09:30:01+00:00
+- [Ocean Housing Limited](https://www.gov.uk/government/publications/ocean-housing-limited) — Regulator of Social Housing; 2026-11-11T09:30:01+00:00
+- [East Midlands Housing Group Limited](https://www.gov.uk/government/publications/regulatory-judgement-east-midlands-housing-group) — Regulator of Social Housing; 2026-11-11T09:30:01+00:00
+- [Southern Housing](https://www.gov.uk/government/publications/southern-housing) — Regulator of Social Housing; 2026-11-11T09:30:00+00:00
+- [Hyde Housing Association Limited](https://www.gov.uk/government/publications/regulatory-judgement-hyde-housing-association-limited) — Regulator of Social Housing; 2026-11-11T09:30:00+00:00
+- [Page withdrawn: Ocean Housing Group Limited](https://www.gov.uk/government/publications/regulatory-judgement-ocean-housing-group-limited) — Regulator of Social Housing; 2026-11-11T09:30:00+00:00
+- [Citizen Housing Group Limited](https://www.gov.uk/government/publications/regulatory-judgement-citizen-housing-group-limited) — Regulator of Social Housing; 2026-11-11T09:30:00+00:00
+- [Peabody Trust](https://www.gov.uk/government/publications/peabody-trust) — Regulator of Social Housing; 2026-11-11T09:30:00+00:00
+- [North Devon Homes](https://www.gov.uk/government/publications/regulatory-judgement-north-devon-homes) — Regulator of Social Housing; 2026-11-11T09:30:00+00:00
+- [CIL Appeal 1893155 — 16 September 26 — demolition and erection of buildings](https://www.gov.uk/government/publications/cil-appeal-1893155-16-september-26-demolition-and-erection-of-buildings) — HM Revenue & Customs; 2026-11-11T09:30:00+00:00
+- [Joseph Rowntree Housing Trust](https://www.gov.uk/government/publications/regulatory-judgement-joseph-rowntree-housing-trust--2) — Regulator of Social Housing; 2026-11-11T09:30:00+00:00
 - [Botley West Solar Farm: development consent order, Planning Act 2008](https://www.gov.uk/government/publications/botley-west-solar-farm-development-consent-order-planning-act-2008) — Department for Energy Security and Net Zero; 2026-11-10T16:14:07+00:00
 - [Decision No 2/2026 of the Joint Committee established by the Agreement on the withdrawal of the UK from the EU: amending Part I of Annex I to the Agreement](https://www.gov.uk/government/publications/decision-no-22026-of-the-joint-committee-established-by-the-agreement-on-the-withdrawal-of-the-uk-from-the-eu-amending-part-i-of-annex-i-to-the-agreem) — Cabinet Office; 2026-11-10T16:00:02+00:00
 - [Joint Declaration on the application of Article 5 of the Windsor Framework](https://www.gov.uk/government/publications/joint-declaration-on-the-application-of-article-5-of-the-windsor-framework) — Cabinet Office; 2026-11-10T16:00:02+00:00
@@ -20,7 +50,6 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [CAC Outcome: PCS & OCS Group UK Limited](https://www.gov.uk/government/publications/cac-outcome-pcs-ocs-group-uk-limited) — Central Arbitration Committee; 2026-11-10T15:13:44+00:00
 - [CAC Outcome: Unite the Union & Evolve Housing and Support](https://www.gov.uk/government/publications/cac-outcome-unite-the-union-evolve-housing-and-support) — Central Arbitration Committee; 2026-11-10T15:13:06+00:00
 - [Trade mark disputes: unpaid costs orders](https://www.gov.uk/government/publications/trade-mark-disputes-unpaid-costs-orders) — Intellectual Property Office; 2026-11-10T15:10:43+00:00
-- [Platypus Field Development](https://www.gov.uk/government/publications/platypus-field-development) — Offshore Petroleum Regulator for Environment and Decommissioning; 2026-11-10T14:51:21+00:00
 - [Human and veterinary medicines: register of licensed manufacturing sites](https://www.gov.uk/government/publications/human-and-veterinary-medicines-register-of-licensed-manufacturing-sites) — Medicines and Healthcare products Regulatory Agency; 2026-11-10T14:50:33+00:00
 - [Medicines: new manufacturing and wholesale dealer licences](https://www.gov.uk/government/publications/medicines-new-manufacturing-and-wholesale-dealer-licences) — Medicines and Healthcare products Regulatory Agency; 2026-11-10T14:50:12+00:00
 - [Human medicines: register of licensed wholesale distribution sites](https://www.gov.uk/government/publications/human-and-veterinary-medicines-register-of-licensed-wholesale-distribution-sites) — Medicines and Healthcare products Regulatory Agency; 2026-11-10T14:49:52+00:00
@@ -29,13 +58,13 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [TS2 1UB, Fine Organics Limited: environmental permit - EPR/PP3439GG/V008](https://www.gov.uk/government/publications/ts2-1ub-fine-organics-limited-environmental-permit-eprpp3439ggv008) — Environment Agency; 2026-11-10T10:24:34+00:00
 - [Acquisition of David Brown Santasalo SARL by Stellex Capital Management LLC via its subsidiary Gear Bidco SARL: notices of final order and revocation](https://www.gov.uk/government/publications/acquisition-of-david-brown-santasalo-sarl-by-stellex-capital-management-llc-via-its-subsidiary-gear-bidco-sarl-notices-of-final-order-and-revocation) — Cabinet Office; 2026-11-10T09:29:32+00:00
 - [Orphan registered medicinal products](https://www.gov.uk/government/publications/orphan-registered-medicinal-products) — Medicines and Healthcare products Regulatory Agency; 2026-11-10T09:26:39+00:00
+- [Catton Grove Primary School: 10 November 2026](https://www.gov.uk/government/publications/catton-grove-primary-school-10-november-2026) — Office of the Schools Adjudicator; 2026-11-10T00:00:00+00:00
 - [CAC Outcome: Unite the Union & Konectbus Limited](https://www.gov.uk/government/publications/cac-outcome-unite-the-union-konectbus-limited) — Central Arbitration Committee; 2026-11-09T17:02:58+00:00
 - [Human medicines: register of electronic export certificates](https://www.gov.uk/government/publications/human-medicines-register-of-electronic-export-certificates) — Medicines and Healthcare products Regulatory Agency; 2026-11-09T15:08:31+00:00
 - [CAC Outcome: Unite the Union & Blank Street Coffee Shop](https://www.gov.uk/government/publications/cac-outcome-unite-the-union-blank-street-coffee-shop) — Central Arbitration Committee; 2026-11-09T13:52:40+00:00
 - [UK REACH authorisation for AB Connectors Limited, 19 October 2026](https://www.gov.uk/government/publications/uk-reach-authorisation-for-ab-connectors-limited-19-october-2026) — Department for Environment, Food & Rural Affairs; 2026-11-09T11:15:14+00:00
 - [Gangmasters Licensing Appeals results and judgements](https://www.gov.uk/government/publications/gangmasters-licensing-appeals-results-and-judgements) — Fair Work Agency; HM Courts & Tribunals Service; Department for Business, Innovation, Science and Trade; Department for Business and Trade; 2026-11-09T10:44:00+00:00
 - [SG1 2NY, Glaxosmithkline Research & Development Limited: environmental permit surrender and variation – EPR/YP3236SA/S008 and EPR/YP3236SA/V009](https://www.gov.uk/government/publications/sg1-2ny-glaxosmithkline-research-development-limited-environmental-permit-surrender-and-variation-epryp3236sas008-and-epryp3236sav009) — Environment Agency; 2026-11-09T10:13:54+00:00
-- [Company Names Tribunal undefended decisions and orders](https://www.gov.uk/government/publications/company-names-tribunal-undefended-decisions-and-orders) — Company Names Tribunal; 2026-11-09T09:40:42+00:00
 - [Company Names Tribunal decision: Arab Society for Paediatric Endocrinology and Diabetes](https://www.gov.uk/government/publications/company-names-tribunal-decision-arab-society-for-paediatric-endocrinology-and-diabetes) — Company Names Tribunal; 2026-11-09T09:38:22+00:00
 - [Company Names Tribunal decision: Temuland Limited](https://www.gov.uk/government/publications/company-names-tribunal-decision-temuland-limited) — Company Names Tribunal; 2026-11-09T09:34:33+00:00
 - [Company Names Tribunal decision: Aviva Recruitment Limited](https://www.gov.uk/government/publications/company-names-tribunal-decision-aviva-recruitment-limited) — Company Names Tribunal; 2026-11-09T09:34:03+00:00
@@ -81,6 +110,8 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 
 ## legislative_document_published
 
+- [H.R. 10980 (IH) - Promoting Resilient Buildings Act](https://www.govinfo.gov/app/details/BILLS-119hr10980ih) — Congressional Bills; 2026-11-11T10:43:00+00:00
+- [H.R. 10986 (IH) - Lebanon TPS Act](https://www.govinfo.gov/app/details/BILLS-119hr10986ih) — Congressional Bills; 2026-11-11T10:10:00+00:00
 - [H.R. 10973 (IH) - Master Sergeant Roy P. Benavidez VA Clinic Act of 2026](https://www.govinfo.gov/app/details/BILLS-119hr10973ih) — Congressional Bills; 2026-11-11T06:48:00+00:00
 - [H.R. 10971 (IH) - Gulf Maritime Restoration Act](https://www.govinfo.gov/app/details/BILLS-119hr10971ih) — Congressional Bills; 2026-11-11T06:02:00+00:00
 - [H.R. 10975 (IH) - Fair Manufactured Housing Lending Act](https://www.govinfo.gov/app/details/BILLS-119hr10975ih) — Congressional Bills; 2026-11-11T06:02:00+00:00
@@ -304,14 +335,49 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 
 ## requires_semantic_review
 
+- [Conversion/Switch of Government of India Securities](https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63958) — Reserve Bank of India; 2026-11-11T18:10:00+00:00
+- [Reserve Money and Money Supply for the fortnight ended on October 31, 2026](https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63957) — Reserve Bank of India; 2026-11-11T17:25:00+00:00
+- [Media advisory - Meeting of the European Political Community of 12 November 2026 and the Informal meeting of Heads of State or Government of 13 November 2026](https://www.consilium.europa.eu/en/press/press-releases/2026/11/11/media-advisory-meeting-of-the-european-political-community-of-12-november-2026-and-the-informal-meeting-of-heads-of-state-or-government-of-13-november-2026/) — Council of the European Union; 2026-11-11T17:20:00+00:00
+- [Reserve Bank of India (Domestic Money Transfer) Directions, 2026](https://www.rbi.org.in/scripts/NotificationUser.aspx?Id=13752&Mode=0) — Reserve Bank of India; 2026-11-11T17:00:00+00:00
+- [A Svensson extension to the Reserve Bank’s yield curve model. - Reserve Bank of New Zealand](https://news.google.com/rss/articles/CBMi7AFBVV95cUxQUjlHaWliRU9VSGhpU1lMMTVobEtVdjhGcUk0MkFVNkFIMEhiUl82NjBOalg5eFBQd045aXFpeDZYZ1RkR2NRWWNaaENfWFFaUE83U3hDcTg1VUJ6NnhWRlYtZGZvUGdld3QyNExQSDl2NkMtME0zN2ZWYktQRnpnMVJTVlRGSVEwc3VVV3dzbWUydlVXQnpWUXhkNG9HTjllczh3eEExcmk2ZVVNMmpSZzJxSkIyNE1yYVNsQ0swcWFhcjE1QlJWdVdGLUh2dXhWSWd2RlZZa3RjUVVaZDRwc2JIcmdKaTc5UnYyRA) — Reserve Bank of New Zealand (official-site news mirror); 2026-11-11T15:22:18+00:00
+- [A Svensson extension to the Reserve Bank’s yield curve model - Reserve Bank of New Zealand](https://news.google.com/rss/articles/CBMi-wFBVV95cUxOUmhFbDJGdXppVHo5Q1g2T2lqcW15QnBNc21sUWw2NVl3NlEyRHJXWDVaNmxFcGZaM216OUdRQXJ5QUNtRnJfNFlYWWxreDJZUEY2em82ZTlRc3VBM2RJSWp2Y1hzdVhacjE2ZnBtcUZSZDVtU050Vzhta2tUaG1QbUdKZGR4eWkySUphdURGcHNVSHY4ckFRY29xM3Z0SnE3Y2xwYVZ6dVNLSk9XdzdsUGJ2Qld1NkZCLWxXNlNYVmFnVmtwRmRCRXJQbkJQSjZ2RTJPcV91aFpleWVDNVJqVFV6elJEaGo5amFtc1o0R3dtLWlaV2JVa0lhRQ) — Reserve Bank of New Zealand (official-site news mirror); 2026-11-11T15:20:17+00:00
+- [Press briefing ahead of the Foreign Affairs Council and the Foreign Affairs (Defence) Councils of 16 and 17 November 2026](https://www.consilium.europa.eu/en/press/press-releases/2026/11/11/press-briefing-ahead-of-the-foreign-affairs-council-and-the-foreign-affairs-defence-councils-of-16-and-17-november-2026/) — Council of the European Union; 2026-11-11T13:51:00+00:00
+- [Defence maritime regulations](https://www.gov.uk/government/publications/defence-maritime-regulations) — Ministry of Defence; Defence Safety Authority; 2026-11-11T13:45:20+00:00
+- [Speech by Commissioner Kadis at the Plenary Session of the Organisation of African, Caribbean and Pacific States-European Union](https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2417) — European Commission press and decisions; 2026-11-11T13:44:12+00:00
+- [Treasury Bills: Full Auction Result](https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63956) — Reserve Bank of India; 2026-11-11T13:40:00+00:00
+- [President von der Leyen travels to Black Sea region and reaffirms EU's solidarity with Romania and Bulgaria in ‘testing times'](https://ec.europa.eu/commission/presscorner/detail/en/ac_26_2416) — European Commission press and decisions; 2026-11-11T13:31:55+00:00
 - [91-Day, 182-Day and 364-Day T-Bill Auction Result: Cut-off](https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63955) — Reserve Bank of India; 2026-11-11T12:55:00+00:00
+- [Speech by Commissioner Albuquerque at the Latvijas Banka's Economic Conference 2026: From policy to Impact](https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2414) — European Commission press and decisions; 2026-11-11T12:48:44+00:00
 - [Money Market Operations as on November 10, 2026](https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63954) — Reserve Bank of India; 2026-11-11T11:30:00+00:00
+- [Notice of authorised amendments (NAA) 2026 documents](https://www.gov.uk/government/publications/notice-of-authorised-amendments-naa-2026-documents) — Ministry of Defence; Military Aviation Authority; 2026-11-11T11:14:34+00:00
+- [Notice of authorised amendments (NAA) reference table](https://www.gov.uk/government/publications/notice-of-authorised-amendments-naa-reference-table) — Ministry of Defence; Military Aviation Authority; 2026-11-11T11:14:30+00:00
+- [Notice of proposed amendments (NPA) comment response sheets](https://www.gov.uk/government/publications/notice-of-proposed-amendments-npa-comment-response-sheets) — Ministry of Defence; Military Aviation Authority; 2026-11-11T11:14:27+00:00
+- [Notice of proposed amendments (NPA) reference table](https://www.gov.uk/government/publications/notice-of-proposed-amendments-npa-reference-table) — Ministry of Defence; Military Aviation Authority; 2026-11-11T11:14:24+00:00
+- [MAA02: Military aviation authority (MAA) master glossary](https://www.gov.uk/government/publications/maa02-military-aviation-authority-maa-master-glossary) — Ministry of Defence; Military Aviation Authority; 2026-11-11T11:14:11+00:00
+- [MAA Regulatory Publications (MRP) amendment record sheet](https://www.gov.uk/government/publications/maa-regulatory-publications-mrp-amendment-record-sheet) — Ministry of Defence; Military Aviation Authority; 2026-11-11T11:13:05+00:00
+- [Reopening of two Federal bonds – Auction result](https://www.bundesbank.de/en/press/press-releases/federal-securities/reopening-of-two-federal-bonds-auction-result-964972) — Deutsche Bundesbank; 2026-11-11T11:00:00+00:00
+- [Opening remarks by Commissioner Hansen at the first in-person meeting of the Women in Farming Platform](https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2413) — European Commission press and decisions; 2026-11-11T10:41:44+00:00
+- [Remarks by Executive Vice-President Virkkunen and Commissioner McGrath on the Digital Fairness Act and a Consumer enforcement initiative](https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2412) — European Commission press and decisions; 2026-11-11T10:24:11+00:00
+- [JFTC Approves the Commitment Plan Submitted by Amazon Japan G.K. - 公正取引委員会](https://news.google.com/rss/articles/CBMifEFVX3lxTE5fUVlPUkl3SFZxblFTcXVNejY3LWVqSGpqOTV4bC1KSktaTG1yU25PTHdqN3Vrb2N4ZXVTTktDOElpVENMbXZuVmRvTWRGX01TdFREeS1ZVmRyazZkSENGOTc3cmZKam9Bek5MSWVfYXpGUlZPbjlJM1VIaGI) — Japan Fair Trade Commission (official-site news mirror); 2026-11-11T10:07:30+00:00
+- [Daily News 11 / 11 / 2026](https://ec.europa.eu/commission/presscorner/detail/en/mex_26_2411) — European Commission press and decisions; 2026-11-11T09:53:22+00:00
+- [Speech by President von der Leyen at the United Nations Climate Change Conference (COP31)](https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2410) — European Commission press and decisions; 2026-11-11T09:32:34+00:00
+- [Häuser, Hitze, Hochwasser: Wie geht die Finanzaufsicht mit Klimarisiken um? | 26. Immobilienkongress, Hochschule für Wirtschaft und Umwelt](https://www.bundesbank.de/de/presse/reden/haeuser-hitze-hochwasser-wie-geht-die-finanzaufsicht-mit-klimarisiken-um--964964) — Deutsche Bundesbank — Speeches, Interview and Contributions; 2026-11-11T09:10:00+00:00
+- [Europas Finanzsystem im Wandel: Wie bleiben wir souverän? | Rede beim SZ-Wirtschaftsgipfel](https://www.bundesbank.de/de/presse/reden/europas-finanzsystem-im-wandel-wie-bleiben-wir-souveraen--964652) — Deutsche Bundesbank — Speeches, Interview and Contributions; 2026-11-11T09:00:00+00:00
+- [Announcement of auction – Reopening of Federal Treasury notes](https://www.bundesbank.de/en/press/press-releases/federal-securities/announcement-of-auction-reopening-of-federal-treasury-notes-964968) — Deutsche Bundesbank; 2026-11-11T09:00:00+00:00
 - [Money Market Operations as on November 09, 2026](https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63953) — Reserve Bank of India; 2026-11-11T09:00:00+00:00
+- [162/2026 : 11 November 2026 - Judgment of the General Court in Case T-523/24](https://curia.europa.eu/site/jcms/p1_1000088980) — Court of Justice of the European Union; 2026-11-11T08:47:48+00:00
+- [Economic challenges in Germany and the future of Europe | Keynote speech at the Latvijas Banka Economic Conference 2026](https://www.bundesbank.de/en/press/speeches/economic-challenges-in-germany-and-the-future-of-europe-964960) — Deutsche Bundesbank; 2026-11-11T08:20:00+00:00
 - [Increased risk of serious events that could weaken financial stability](https://www.norges-bank.no/en/news-events/news/Press-releases/2026/2026-11-11-fsr2/) — Norges Bank; 2026-11-11T07:30:00+00:00
 - [EU budget for 2027: Council and Parliament reach agreement](https://www.consilium.europa.eu/en/press/press-releases/2026/11/11/eu-budget-for-2027-council-and-parliament-reach-agreement/) — Council of the European Union; 2026-11-11T06:25:00+00:00
+- [South Africa notifies launch of safeguard investigation into certain non-wired float glass products](https://www.wto.org/english/news_e/news26_e/safe_zaf_11nov26_546_e.htm) — World Trade Organization disputes and decisions; 2026-11-11T00:00:00+00:00
+- [Enforcement collaboration between HKMA and IA – IA bans Lim Ka Kit from being an insurance intermediary for nine months](https://www.hkma.gov.hk/eng/news-and-media/press-releases/2026/11/20261111-3/) — Hong Kong Monetary Authority; 2026-11-11T00:00:00+00:00
+- [Tender results of 1-year HONIA-indexed Floating Rate Notes](https://www.hkma.gov.hk/eng/news-and-media/press-releases/2026/11/20261111-4/) — Hong Kong Monetary Authority; 2026-11-11T00:00:00+00:00
+- [Results of 7-year HKD HKSAR Institutional Government Bonds tender through re-opening](https://www.hkma.gov.hk/eng/news-and-media/press-releases/2026/11/20261111-5/) — Hong Kong Monetary Authority; 2026-11-11T00:00:00+00:00
 - [Money Stock (Oct.)](http://www.boj.or.jp/en/statistics/money/ms/ms2610.pdf) — Bank of Japan; 2026-11-10T23:50:00+00:00
+- [Questions and answers on the Consumer Package](https://ec.europa.eu/commission/presscorner/detail/en/qanda_26_2408) — European Commission press and decisions; 2026-11-10T23:00:00+00:00
+- [Commission strengthens consumer protection laws, making them fit for the digital age](https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2407) — European Commission press and decisions; 2026-11-10T23:00:00+00:00
 - [Questions and answers on the agreement on the EU Annual Budget 2027](https://ec.europa.eu/commission/presscorner/detail/en/qanda_26_2386) — European Commission press and decisions; 2026-11-10T23:00:00+00:00
-- [Bringing the current MFF to a successful close: agreement on the final Annual Budget](https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2385) — European Commission press and decisions; 2026-11-10T23:00:00+00:00
+- [Bringing the current MFF to a successful close: agreement on the final Annual Budget *](https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2385) — European Commission press and decisions; 2026-11-10T23:00:00+00:00
 - [Nominations and Withdrawals Sent to the Senate](https://www.whitehouse.gov/presidential-actions/2026/11/nominations-and-withdrawals-sent-to-the-senate-b6a4/) — White House presidential actions; 2026-11-10T21:56:49+00:00
 - [VETERANS DAY, 2026](https://www.whitehouse.gov/presidential-actions/2026/11/veterans-day-2026/) — White House presidential actions; 2026-11-10T21:12:15+00:00
 - [Presidential Determination Concerning Wildfire Suppression Activities in the United States](https://www.whitehouse.gov/presidential-actions/2026/11/presidential-determination-concerning-wildfire-suppression-activities-in-the-united-states/) — White House presidential actions; 2026-11-10T21:11:07+00:00
@@ -348,6 +414,7 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [20270082: Lovell Minnick Equity Partners VI LP; Thomas John](https://www.ftc.gov/legal-library/browse/early-termination-notices/20270082) — Federal Trade Commission — HSR Early Termination Notices; 2026-11-10T15:38:46+00:00
 - [20270118: Novartis AG; Bo Ying](https://www.ftc.gov/legal-library/browse/early-termination-notices/20270118) — Federal Trade Commission — HSR Early Termination Notices; 2026-11-10T15:38:46+00:00
 - [20270074: Hormel Foods Corporation; Brakebush Holdings, Inc.](https://www.ftc.gov/legal-library/browse/early-termination-notices/20270074) — Federal Trade Commission — HSR Early Termination Notices; 2026-11-10T15:38:45+00:00
+- [Anita Tautuhi - Reserve Bank of New Zealand](https://news.google.com/rss/articles/CBMihAFBVV95cUxOaFBBcWNTdjNCYVFvMktNbGVjQ0Nya3hpNUNmMEhNX1BnU1RmUWVJc1lUSWFSejNNOE80bVE3eGY3eS1vUTJHcEctb2xFTFpIVzJjQUNDVzZ3LVJSSzJIMzVXQ1NpaW5GQ2ZLakFidEZ5QVpkRjhhWERSMXRWUm1qR0VYZlk) — Reserve Bank of New Zealand (official-site news mirror); 2026-11-10T15:06:16+00:00
 - [Opening remarks by Commissioner Kubilius at the second board meeting of the EU-Ukraine drone alliance](https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2398) — European Commission press and decisions; 2026-11-10T14:46:44+00:00
 - [Biologics Electronic Reading Room (eFOIA)](http://www.fda.gov/about-fda/center-biologics-evaluation-and-research-cber/biologics-electronic-reading-room-efoia) — Food and Drug Administration — What's New: Vaccines, Blood and Biologics; 2026-11-10T14:26:18+00:00
 - [Drugs@FDA Data Files](http://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files) — Food and Drug Administration — What's New: Drugs; 2026-11-10T14:20:33+00:00
@@ -367,6 +434,19 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [Summary of Governing Council deliberations: Fixed announcement date of October 28, 2026](https://www.bankofcanada.ca/2026/11/summary-of-governing-council-deliberations-fixed-announcement-date-of-october-28-2026/) — Bank of Canada — Summary of deliberations; 2026-11-10T13:30:18+00:00
 - [H. Rept. 119-878](https://www.govinfo.gov/app/details/CRPT-119hrpt878) — Congressional Reports; 2026-11-10T13:27:00+00:00
 - [Europas Finanzsektor zwischen Geopolitik, technologischer Innovation und neuen Zahlungsformen | DigiFin26, Bitkom und Payment Banking](https://www.bundesbank.de/de/presse/reden/europas-finanzsektor-zwischen-geopolitik-technologischer-innovation-und-neuen-zahlungsformen-964962) — Deutsche Bundesbank — Speeches, Interview and Contributions; 2026-11-10T12:30:00+00:00
+- [Justice Department Issues Fact Sheets About Lease Terminations for Servicemembers and their Dependents](https://www.justice.gov/opa/pr/justice-department-issues-fact-sheets-about-lease-terminations-servicemembers-and-their) — Department of Justice — RSS Feed; 2026-11-10T12:00:00+00:00
+- [Kalihi Man Sentenced to Over Nine Years in Prison for Gunpoint Game Room Robbery](https://www.justice.gov/usao-hi/pr/kalihi-man-sentenced-over-nine-years-prison-gunpoint-game-room-robbery) — Department of Justice; 2026-11-10T12:00:00+00:00
+- [Portland Man Sentenced to 55 Months in Federal Prison for Mail Theft, Identity Theft Scheme](https://www.justice.gov/usao-or/pr/portland-man-sentenced-55-months-federal-prison-mail-theft-identity-theft-scheme) — Department of Justice; 2026-11-10T12:00:00+00:00
+- [New York Man Sentenced to Over 10 Years in Prison for Laundering Proceeds for Elder Fraud Scam Network](https://www.justice.gov/usao-az/pr/new-york-man-sentenced-over-10-years-prison-laundering-proceeds-elder-fraud-scam-network) — Department of Justice; 2026-11-10T12:00:00+00:00
+- [Trucking company owner charged in labor scheme involving unauthorized non-citizen drivers](https://www.justice.gov/usao-sdtx/pr/trucking-company-owner-charged-labor-scheme-involving-unauthorized-non-citizen-drivers) — Department of Justice; 2026-11-10T12:00:00+00:00
+- [Umatilla Man Sentenced to Seven Years in Federal Prison for Distributing Child Sexual Abuse Material and Making Hoax Abuse Reports](https://www.justice.gov/usao-or/pr/umatilla-man-sentenced-seven-years-federal-prison-distributing-child-sexual-abuse) — Department of Justice; 2026-11-10T12:00:00+00:00
+- [Mexican National Pleads Guilty to Possession With Intent to Distribute Heroin](https://www.justice.gov/usao-nv/pr/mexican-national-pleads-guilty-possession-intent-distribute-heroin) — Department of Justice; 2026-11-10T12:00:00+00:00
+- [Previously Convicted Mexican National Unlawfully Residing in the United States Sentenced to Five Years in Federal Prison for Distributing Methamphetamine in Oregon](https://www.justice.gov/usao-or/pr/previously-convicted-mexican-national-unlawfully-residing-united-states-sentenced-five) — Department of Justice; 2026-11-10T12:00:00+00:00
+- [Porter woman sentenced for fraud, threats, and assault of an officer after fraudulently receiving $435,000 new home](https://www.justice.gov/usao-sdtx/pr/porter-woman-sentenced-fraud-threats-and-assault-officer-after-fraudulently-receiving) — Department of Justice; 2026-11-10T12:00:00+00:00
+- [Cheektowaga man arrested, charged with production of child pornography](https://www.justice.gov/usao-wdny/pr/cheektowaga-man-arrested-charged-production-child-pornography) — Department of Justice; 2026-11-10T12:00:00+00:00
+- [U.S. Attorneys Create Task Force to Combat Fraud](https://www.justice.gov/usao-ndwv/pr/us-attorneys-create-task-force-combat-fraud) — Department of Justice; 2026-11-10T12:00:00+00:00
+- [Honduran National Unlawfully Residing in the United States Pleads Guilty to Fentanyl Trafficking and Firearm Charges](https://www.justice.gov/usao-or/pr/honduran-national-unlawfully-residing-united-states-pleads-guilty-fentanyl-trafficking-0) — Department of Justice; 2026-11-10T12:00:00+00:00
+- [Anchorage Woman Sentenced to 5 Years in Prison for Wire Fraud and Aggravated Identity Theft](https://www.justice.gov/usao-ak/pr/anchorage-woman-sentenced-5-years-prison-wire-fraud-and-aggravated-identity-theft) — Department of Justice; 2026-11-10T12:00:00+00:00
 - [Court Permanently Bars Florida Tax Return Preparer and Tax Preparation Business and Orders Disgorgement of More Than $550,000](https://www.justice.gov/opa/pr/court-permanently-bars-florida-tax-return-preparer-and-tax-preparation-business-and-orders) — Department of Justice — RSS Feed; 2026-11-10T12:00:00+00:00
 - [Albuquerque Man Faces Federal Child Pornography Charge Following FBI Investigation](https://www.justice.gov/usao-nm/pr/albuquerque-man-faces-federal-child-pornography-charge-following-fbi-investigation) — Department of Justice; 2026-11-10T12:00:00+00:00
 - [Mexican illegal alien with prior heroin conviction sentenced to 11 years in prison for new drug, immigration crimes](https://www.justice.gov/usao-sdoh/pr/mexican-illegal-alien-prior-heroin-conviction-sentenced-11-years-prison-new-drug) — Department of Justice; 2026-11-10T12:00:00+00:00
@@ -586,16 +666,9 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [High-Level Platform meets in Moldova to strengthen digital connectivity between the EU, the Black Sea region, South-Caucasus and Central Asia*](https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2371) — European Commission press and decisions; 2026-11-08T23:00:00+00:00
 - [EU emissions continue to fall as clean energy gains ground](https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2343) — European Commission press and decisions; 2026-11-08T23:00:00+00:00
 - [Im Livestream: Pressekonferenz zum Finanzstabilitätsbericht 2026](https://www.bundesbank.de/de/aufgaben/themen/finanzstabilitaetsbericht-1013174) — Deutsche Bundesbank — Topics; 2026-11-08T23:00:00+00:00
-- [FDA Expedited Investigational New Drug (IND) Pilot Program](http://www.fda.gov/industry/fda-actions-accelerate-and-modernize-early-and-late-stage-clinical-development/fda-expedited-investigational-new-drug-ind-pilot-program) — Food and Drug Administration — What's New: Vaccines, Blood and Biologics; 2026-11-08T20:02:58+00:00
-- [Minocycline Oral | Injection Products](http://www.fda.gov/drugs/development-resources/minocycline-oral-injection-products) — Food and Drug Administration — What's New: Drugs; 2026-11-08T19:57:38+00:00
-- [2026 Meeting Materials | Pediatric Advisory Committee](http://www.fda.gov/advisory-committees/pediatric-advisory-committee/2026-meeting-materials-pediatric-advisory-committee) — Food and Drug Administration — What's New: Drugs; 2026-11-08T19:46:03+00:00
-- [OTP Guidance Webinar: Potency Assurance for Cellular and Gene Therapy Products - 12/10/2026](http://www.fda.gov/vaccines-blood-biologics/office-therapeutic-products-otp-events-meetings-and-workshops/otp-guidance-webinar-potency-assurance-cellular-and-gene-therapy-products-12102026) — Food and Drug Administration — What's New: Vaccines, Blood and Biologics; 2026-11-08T19:43:59+00:00
-- [FDA Investigating Serious Risk of Malignancy Linked to Zolgensma Gene Therapy](http://www.fda.gov/vaccines-blood-biologics/safety-availability-biologics/fda-investigating-serious-risk-malignancy-linked-zolgensma-gene-therapy) — Food and Drug Administration — What's New: Vaccines, Blood and Biologics; 2026-11-08T19:23:44+00:00
-- [Science & Research | Generic Drugs](http://www.fda.gov/drugs/generic-drugs/science-research-generic-drugs) — Food and Drug Administration — What's New: Drugs; 2026-11-08T19:12:15+00:00
 
 ## Source failures and coverage warnings
 
-- hk-hkma-public-press: fetch_failed; 
 - us-govinfo-bills-enr: unchanged; stale_feed_outside_requested_window
 - us-sec-2476f14c28: ok; stale_feed_outside_requested_window
 - us-ftc-ebb4359fb7: ok; stale_feed_outside_requested_window
@@ -622,17 +695,13 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - us-fmc-fe8f0538ae: unchanged; stale_feed_outside_requested_window
 - us-fhfa-index: unchanged; stale_feed_outside_requested_window
 - us-ca-oal-c1209cfd66: unchanged; stale_feed_outside_requested_window
-- eu-court-1433471e58: ok; stale_feed_outside_requested_window
 - eu-ecb-fb5fd59aed: ok; stale_feed_outside_requested_window
-- ca-boc-4aa19b2183: unchanged; stale_feed_outside_requested_window
-- ca-boc-4192a605ae: unchanged; stale_feed_outside_requested_window
-- ca-boc-5cc0603f1f: unchanged; stale_feed_outside_requested_window
-- ca-boc-1c9979e6ac: unchanged; stale_feed_outside_requested_window
-- ca-boc-e24c58f2d0: unchanged; stale_feed_outside_requested_window
-- ca-boc-cffefa81f7: unchanged; stale_feed_outside_requested_window
+- ca-boc-4aa19b2183: ok; stale_feed_outside_requested_window
+- ca-boc-4192a605ae: ok; stale_feed_outside_requested_window
+- ca-boc-5cc0603f1f: ok; stale_feed_outside_requested_window
+- ca-boc-1c9979e6ac: ok; stale_feed_outside_requested_window
+- ca-boc-e24c58f2d0: ok; stale_feed_outside_requested_window
+- ca-boc-cffefa81f7: ok; stale_feed_outside_requested_window
 - au-rba-9e35f5f8d1: unchanged; stale_feed_outside_requested_window
-- nz-rbnz-gnews: ok; stale_feed_outside_requested_window
-- in-rbi-738b09bded: ok; stale_feed_outside_requested_window
-- jp-jftc-gnews: ok; stale_feed_outside_requested_window
 - ch-snb-4a868c4407: ok; stale_feed_outside_requested_window
 - io-bis-b3dfd5b7aa: ok; stale_feed_outside_requested_window

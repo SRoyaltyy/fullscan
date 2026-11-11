@@ -1,146 +1,239 @@
 [
   {
-    "title": "DCPD-2026ACTSAPPROVED - Acts Approved by the President",
-    "url": "https://www.govinfo.gov/app/details/DCPD-2026ACTSAPPROVED",
-    "native_id": "DCPD-2026ACTSAPPROVED",
-    "published_at": "2026-11-10T21:28:51+00:00",
-    "published_raw": "Tue, 10 Nov 2026 21:28:51 +0000",
-    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "title": "Regulatory judgements and enforcement notices - 11 November 2026",
+    "url": "https://www.gov.uk/government/publications/regulatory-judgements-and-enforcement-notices",
+    "native_id": "/government/publications/regulatory-judgements-and-enforcement-notices",
+    "published_at": "2026-11-11T09:30:02+00:00",
+    "published_raw": "2026-11-11T09:30:02Z",
+    "document_type": "decision",
+    "issuer": "Regulator of Social Housing",
+    "issuer_ids": [
+      "uk-gov:regulator-of-social-housing"
+    ],
+    "summary": "The judgements we publish on how well registered landlords are meeting our standards.",
     "source_metadata": {
-      "document_type": "presidential_document",
-      "document_stage": "presidential_document_published",
+      "document_type": "decision",
+      "document_stage": "decision_published",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Compilation of Presidential Documents",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
+      "issuer": "Regulator of Social Housing",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
     },
-    "primary_source_id": "us-govinfo-dcpd",
-    "n": 2475,
-    "first_seen": "2026-10-16T05:53:15.995133+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
+    "primary_source_id": "uk-govuk-decision",
+    "n": 5,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
     "source_ids": [
-      "us-govinfo-dcpd"
+      "uk-govuk-decision"
     ]
   },
   {
-    "title": "DCPD-2026CHECKLIST - Checklist of White House Press Releases",
-    "url": "https://www.govinfo.gov/app/details/DCPD-2026CHECKLIST",
-    "native_id": "DCPD-2026CHECKLIST",
-    "published_at": "2026-11-10T21:28:51+00:00",
-    "published_raw": "Tue, 10 Nov 2026 21:28:51 +0000",
-    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "title": "Notice of proposed amendments (NPA) reference table",
+    "url": "https://www.gov.uk/government/publications/notice-of-proposed-amendments-npa-reference-table",
+    "native_id": "/government/publications/notice-of-proposed-amendments-npa-reference-table",
+    "published_at": "2026-11-11T11:14:24+00:00",
+    "published_raw": "2026-11-11T11:14:24Z",
+    "document_type": "regulation",
+    "issuer": "Ministry of Defence; Military Aviation Authority",
+    "issuer_ids": [
+      "uk-gov:ministry-of-defence",
+      "uk-gov:military-aviation-authority"
+    ],
+    "summary": "The Military Aviation Authority (MAA) NPA table provides information of proposed changes in regulations and release date.",
     "source_metadata": {
-      "document_type": "presidential_document",
-      "document_stage": "presidential_document_published",
+      "document_type": "regulation",
+      "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Compilation of Presidential Documents",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
+      "issuer": "Ministry of Defence; Military Aviation Authority",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
     },
-    "primary_source_id": "us-govinfo-dcpd",
-    "n": 2477,
-    "first_seen": "2026-10-16T05:53:15.995133+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
+    "primary_source_id": "uk-govuk-regulation",
+    "n": 22,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
     "source_ids": [
-      "us-govinfo-dcpd"
+      "uk-govuk-regulation"
     ]
   },
   {
-    "title": "DCPD-2026DIGEST - Digest of Other White House Announcements",
-    "url": "https://www.govinfo.gov/app/details/DCPD-2026DIGEST",
-    "native_id": "DCPD-2026DIGEST",
-    "published_at": "2026-11-10T21:28:51+00:00",
-    "published_raw": "Tue, 10 Nov 2026 21:28:51 +0000",
-    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "title": "Company Names Tribunal undefended decisions and orders",
+    "url": "https://www.gov.uk/government/publications/company-names-tribunal-undefended-decisions-and-orders",
+    "native_id": "/government/publications/company-names-tribunal-undefended-decisions-and-orders",
+    "published_at": "2026-11-11T09:35:01+00:00",
+    "published_raw": "2026-11-11T09:35:01Z",
+    "document_type": "decision",
+    "issuer": "Company Names Tribunal",
+    "issuer_ids": [
+      "uk-gov:company-names-tribunal"
+    ],
+    "summary": "Decisions and orders of the Company Names Tribunal - undefended.",
     "source_metadata": {
-      "document_type": "presidential_document",
-      "document_stage": "presidential_document_published",
+      "document_type": "decision",
+      "document_stage": "decision_published",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Compilation of Presidential Documents",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
+      "issuer": "Company Names Tribunal",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
     },
-    "primary_source_id": "us-govinfo-dcpd",
-    "n": 2481,
-    "first_seen": "2026-10-16T05:53:15.995133+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
+    "primary_source_id": "uk-govuk-decision",
+    "n": 2103,
+    "first_seen": "2026-10-15T12:16:32.997656+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
     "source_ids": [
-      "us-govinfo-dcpd"
+      "uk-govuk-decision"
     ]
   },
   {
-    "title": "Reviews of Pediatric Studies Conducted under BPCA and Pediatric Assessments Conducted Under PREA from 2012 – Present",
-    "url": "http://www.fda.gov/drugs/development-resources/reviews-pediatric-studies-conducted-under-bpca-and-pediatric-assessments-conducted-under-prea-2012",
-    "native_id": "http://www.fda.gov/drugs/development-resources/reviews-pediatric-studies-conducted-under-bpca-and-pediatric-assessments-conducted-under-prea-2012",
-    "published_at": "2026-11-10T19:28:10+00:00",
-    "published_raw": "Tue, 10 Nov 2026 14:28:10 EST",
-    "summary": "The following are the medical, statistical, and clinical pharmacology reviews of pediatric studies conducted in response to a Written Request issued under the BPCA and pediatric assessments conducted under PREA.",
+    "title": "Que no lo dejen colgado esta temporada festiva con regalos inseguros: Compre de fuentes confiables",
+    "url": "https://www.cpsc.gov/es/Newsroom/News-Releases/2026/Dont-Be-Left-Out-in-the-Cold-This-Holiday-Season-with-Unsafe-Presents-Buy-from-Trusted-Sources",
+    "native_id": "https://www.cpsc.gov/_6d039050-7fba-4cdf-8361-f7db2f5e3963",
+    "published_at": null,
+    "published_raw": "Tue, 12/09/2025 - 12:00",
+    "summary": "La CPSC les recuerda a los consumidores comprar de manera segura esta temporada festiva",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Food and Drug Administration — What's New: Drugs",
+      "issuer": "Consumer Product Safety Commission",
       "jurisdiction": "US",
-      "family": "product_permissions_and_safety"
+      "family": "product_safety"
     },
-    "primary_source_id": "us-fda-5696b24295",
-    "n": 8552,
-    "first_seen": "2026-11-04T20:26:55.940049+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
+    "primary_source_id": "us-cpsc-08fe06e2e6",
+    "n": 3537,
+    "first_seen": "2026-10-16T10:36:18.842579+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
     "source_ids": [
-      "us-fda-5696b24295"
+      "us-cpsc-08fe06e2e6"
     ]
   },
   {
-    "title": "20270182: Bain Capital Tech Opportunities Fund III, L.P.; Kahua, Inc.",
-    "url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20270182",
-    "native_id": "338967 at https://www.ftc.gov",
-    "published_at": "2026-11-10T15:38:51+00:00",
-    "published_raw": "Tue, 10 Nov 2026 15:38:51 +0000",
-    "summary": "20270182: Bain Capital Tech Opportunities Fund III, L.P.; Kahua, Inc. Date November 9, 2026 hbarber November 10, 2026 | 10:38AM Transaction Number 20270182 Acquiring Party Bain Capital Tech Opportunities Fund III, L.P. Acquired Party Kahua, Inc. Granting Status Granted Acquired Entities Kahua, Inc.",
+    "title": "Ponga la seguridad en el menú para unas felices fiestas: la Comisión de Seguridad de Productos del Consumidor ofrece consejos para cocinar con seguridad",
+    "url": "https://www.cpsc.gov/es/Newsroom/News-Releases/2026/Put-Safety-on-the-Menu-Consumer-Product-Safety-Commission-Offers-Safe-Cooking-Tips-for-a-Joyful-Holiday-Season",
+    "native_id": "https://www.cpsc.gov/_59de4207-4ace-44ca-ace0-3cde0cfb8ddb",
+    "published_at": null,
+    "published_raw": "Wed, 11/19/2025 - 12:00",
+    "summary": "WASHINGTON, D.C. – A medida que las familias de todo Estados Unidos se preparan para reunirse en Acción de Gracias, la Comisión de Seguridad de Productos del Consumidor de Estados Unidos (CPSC, por sus siglas en inglés) emite un recordatorio urgente: la",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Trade Commission — HSR Early Termination Notices",
+      "issuer": "Consumer Product Safety Commission",
       "jurisdiction": "US",
-      "family": "competition_and_enforcement"
+      "family": "product_safety"
     },
-    "primary_source_id": "us-ftc-df73e297e1",
-    "n": 9566,
+    "primary_source_id": "us-cpsc-08fe06e2e6",
+    "n": 3538,
+    "first_seen": "2026-10-16T10:36:18.842579+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
+    "source_ids": [
+      "us-cpsc-08fe06e2e6"
+    ]
+  },
+  {
+    "title": "La CPSC aprueba nueva norma federal de seguridad para flotadores de cuello con el fin de prevenir muertes de bebés y lesiones graves",
+    "url": "https://www.cpsc.gov/es/Newsroom/News-Releases/2025/CPSC-Approves-New-Federal-Safety-Standard-for-Neck-Floats-to-Prevent-Infant-Deaths-and-Serious-Injuries",
+    "native_id": "https://www.cpsc.gov/_4014aab3-f30e-41aa-ad48-dd7587119b4c",
+    "published_at": null,
+    "published_raw": "Thu, 08/21/2025 - 12:00",
+    "summary": "La Comisión de Seguridad de Productos del Consumidor de EE. UU. (CPSC) aprobó una norma de seguridad de productos de consumo para mejorar la seguridad de los flotadores de cuello, un juguete acuático destinado a niños de hasta cuatro años de edad.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Consumer Product Safety Commission",
+      "jurisdiction": "US",
+      "family": "product_safety"
+    },
+    "primary_source_id": "us-cpsc-08fe06e2e6",
+    "n": 3540,
+    "first_seen": "2026-10-16T10:36:18.842579+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
+    "source_ids": [
+      "us-cpsc-08fe06e2e6"
+    ]
+  },
+  {
+    "title": "Platypus Field Development",
+    "url": "https://www.gov.uk/government/publications/platypus-field-development",
+    "native_id": "/government/publications/platypus-field-development",
+    "published_at": "2026-11-11T16:14:47+00:00",
+    "published_raw": "2026-11-11T16:14:47Z",
+    "document_type": "decision",
+    "issuer": "Offshore Petroleum Regulator for Environment and Decommissioning",
+    "issuer_ids": [
+      "uk-gov:offshore-petroleum-regulator-for-environment-and-decommissioning"
+    ],
+    "summary": "Project Summary",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Offshore Petroleum Regulator for Environment and Decommissioning",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 9550,
     "first_seen": "2026-11-10T20:28:57.994479+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
     "source_ids": [
-      "us-ftc-df73e297e1"
+      "uk-govuk-decision"
     ]
   },
   {
-    "title": "FDA approves pimicotinib for symptomatic tenosynovial giant cell tumor",
-    "url": "http://www.fda.gov/drugs/cancer-approvals/fda-approves-pimicotinib-symptomatic-tenosynovial-giant-cell-tumor",
-    "native_id": "http://www.fda.gov/drugs/cancer-approvals/fda-approves-pimicotinib-symptomatic-tenosynovial-giant-cell-tumor",
-    "published_at": "2026-11-10T19:58:07+00:00",
-    "published_raw": "Tue, 10 Nov 2026 14:58:07 EST",
-    "summary": "On November 10, 2026, the Food and Drug Administration approved pimicotinib (Pimjetmi, EMD Serono, Inc.), a kinase inhibitor, for adults with symptomatic tenosynovial giant cell tumor (TGCT) for which surgical resection may cause worsening functional limitation or severe morbidity.",
+    "title": "Bringing the current MFF to a successful close: agreement on the final Annual Budget *",
+    "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2385",
+    "native_id": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2385",
+    "published_at": "2026-11-10T23:00:00+00:00",
+    "published_raw": "Tue, 10 Nov 2026 23:00:00 GMT",
+    "summary": "European Commission Press release Brussels, 11 Nov 2026 The Commission welcomes the agreement reached last evening between the European Parliament and the Council of the European Union on the annual EU budget 2027.",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Food and Drug Administration — What's New: Drugs",
-      "jurisdiction": "US",
-      "family": "product_permissions_and_safety"
+      "issuer": "European Commission press and decisions",
+      "jurisdiction": "EU",
+      "family": "executive_and_regulatory"
     },
-    "primary_source_id": "us-fda-5696b24295",
-    "n": 9605,
-    "first_seen": "2026-11-10T20:28:57.994479+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
+    "primary_source_id": "eu-commission-07d4f58ccf",
+    "n": 9735,
+    "first_seen": "2026-11-11T07:46:05.445744+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
     "source_ids": [
-      "us-fda-5696b24295"
+      "eu-commission-07d4f58ccf"
+    ]
+  },
+  {
+    "title": "Increased risk of serious events that could weaken financial stability",
+    "url": "https://www.norges-bank.no/en/news-events/news/Press-releases/2026/2026-11-11-fsr2/",
+    "native_id": "d08b2abe-576f-4ad3-854b-6bd3d24936d4",
+    "published_at": "2026-11-11T07:30:00+00:00",
+    "published_raw": "Wed, 11 Nov 2026 07:30:00 GMT",
+    "summary": "In its bi-annual Financial Stability Report, Norges Bank assesses vulnerabilities, risks and resilience in the financial system.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Norges Bank",
+      "jurisdiction": "NO",
+      "family": "monetary_operations"
+    },
+    "primary_source_id": "no-norges-5079edc79e",
+    "n": 9743,
+    "first_seen": "2026-11-11T07:46:05.445744+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
+    "source_ids": [
+      "no-norges-5079edc79e"
     ]
   }
 ]

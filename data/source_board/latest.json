@@ -1,6 +1,6 @@
 {
  "date": "2026-11-11",
- "generated_at": "2026-11-11T07:46:25.545898+00:00",
+ "generated_at": "2026-11-11T20:13:21.062393+00:00",
  "catalog": {
   "generated_at": "2026-11-07T18:03:52.345238+00:00",
   "channels": 365,
@@ -34,54 +34,59 @@
   }
  },
  "collect": {
-  "generated_at": "2026-11-11T07:46:05.445744+00:00",
+  "generated_at": "2026-11-11T20:12:59.574202+00:00",
   "enabled_sources": 117,
-  "sources_ok": 116,
-  "sources_failed": 1,
+  "sources_ok": 117,
+  "sources_failed": 0,
   "coverage_status": "degraded",
   "counts": {
-   "observed": 1713,
-   "old": 1015,
-   "future": 0,
-   "undated": 225,
-   "new": 63,
-   "duplicates": 635
+   "observed": 1902,
+   "old": 1076,
+   "future": 10,
+   "undated": 305,
+   "new": 78,
+   "duplicates": 738
   },
-  "current_dated_documents": 561
+  "current_dated_documents": 635
  },
  "new_today": {
-  "count": 63,
+  "count": 78,
   "by_source": {
-   "us-doj-b3d27e1dc3": 25,
-   "us-govinfo-bills": 18,
-   "us-govinfo-dcpd": 4,
-   "us-white-house-0691096d16": 3,
+   "uk-govuk-decision": 28,
+   "us-doj-b3d27e1dc3": 12,
+   "eu-commission-07d4f58ccf": 9,
+   "uk-govuk-regulation": 6,
+   "hk-hkma-public-press": 3,
+   "nz-rbnz-gnews": 3,
    "in-rbi-cc71120b98": 3,
-   "eu-commission-07d4f58ccf": 2,
-   "us-ftc-58b0383166": 1,
+   "de-bundesbank-027ac4024f": 3,
+   "us-govinfo-bills": 2,
+   "eu-council-9d9e9444da": 2,
+   "de-bundesbank-617511c682": 2,
    "us-doj-e05071794d": 1,
-   "us-fda-2cdcdcca63": 1,
-   "us-fcc-364d1b4932": 1,
-   "eu-council-9d9e9444da": 1,
-   "jp-boj-d488538690": 1,
-   "jp-meti-index": 1,
-   "no-norges-5079edc79e": 1
+   "eu-court-1433471e58": 1,
+   "in-rbi-738b09bded": 1,
+   "jp-jftc-gnews": 1,
+   "io-wto-497f28e20d": 1
   },
   "by_class": {
-   "routine": 28,
-   "watch": 14,
-   "high": 12,
-   "docket": 9
+   "noise": 2,
+   "high": 7,
+   "routine": 47,
+   "docket": 6,
+   "watch": 16
   }
  },
  "parsed_today": {
-  "count": 23,
+  "count": 83,
   "by_class": {
-   "routine": 19,
-   "watch": 4
+   "high": 4,
+   "noise": 2,
+   "routine": 61,
+   "watch": 17
   }
  },
- "n_failures": 1,
+ "n_failures": 0,
  "dates": [
   "2026-11-11"
  ],

@@ -1,5 +1,875 @@
 [
   {
+    "title": "Platypus Field Development",
+    "url": "https://www.gov.uk/government/publications/platypus-field-development",
+    "native_id": "/government/publications/platypus-field-development",
+    "published_at": "2026-11-11T16:14:47+00:00",
+    "published_raw": "2026-11-11T16:14:47Z",
+    "document_type": "decision",
+    "issuer": "Offshore Petroleum Regulator for Environment and Decommissioning",
+    "issuer_ids": [
+      "uk-gov:offshore-petroleum-regulator-for-environment-and-decommissioning"
+    ],
+    "summary": "Project Summary",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Offshore Petroleum Regulator for Environment and Decommissioning",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 9550,
+    "first_seen": "2026-11-10T20:28:57.994479+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "CAC Outcome: NEU & NASUWT & Cranleigh School",
+    "url": "https://www.gov.uk/government/publications/cac-outcome-neu-nasuwt-cranleigh-school",
+    "native_id": "/government/publications/cac-outcome-neu-nasuwt-cranleigh-school",
+    "published_at": "2026-11-11T15:02:07+00:00",
+    "published_raw": "2026-11-11T15:02:07Z",
+    "document_type": "decision",
+    "issuer": "Central Arbitration Committee",
+    "issuer_ids": [
+      "uk-gov:central-arbitration-committee"
+    ],
+    "summary": "Outcome(s) by the Central Arbitration Committee on an application from NEU & NASUWT.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Central Arbitration Committee",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 9747,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Company Names Tribunal undefended decisions and orders",
+    "url": "https://www.gov.uk/government/publications/company-names-tribunal-undefended-decisions-and-orders",
+    "native_id": "/government/publications/company-names-tribunal-undefended-decisions-and-orders",
+    "published_at": "2026-11-11T09:35:01+00:00",
+    "published_raw": "2026-11-11T09:35:01Z",
+    "document_type": "decision",
+    "issuer": "Company Names Tribunal",
+    "issuer_ids": [
+      "uk-gov:company-names-tribunal"
+    ],
+    "summary": "Decisions and orders of the Company Names Tribunal - undefended.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Company Names Tribunal",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 2103,
+    "first_seen": "2026-10-15T12:16:32.997656+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Company Names Tribunal decision: M & S Storage and Distribution Ltd",
+    "url": "https://www.gov.uk/government/publications/company-names-tribunal-decision-m-s-storage-and-distribution-ltd",
+    "native_id": "/government/publications/company-names-tribunal-decision-m-s-storage-and-distribution-ltd",
+    "published_at": "2026-11-11T09:33:46+00:00",
+    "published_raw": "2026-11-11T09:33:46Z",
+    "document_type": "decision",
+    "issuer": "Company Names Tribunal",
+    "issuer_ids": [
+      "uk-gov:company-names-tribunal"
+    ],
+    "summary": "Decision for applicant Marks and Spencer Plc registration number 16793112 applicant successful.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Company Names Tribunal",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 9748,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Company Names Tribunal decision: Kier Bam JV Ltd",
+    "url": "https://www.gov.uk/government/publications/company-names-tribunal-decision-kier-bam-jv-ltd",
+    "native_id": "/government/publications/company-names-tribunal-decision-kier-bam-jv-ltd",
+    "published_at": "2026-11-11T09:33:25+00:00",
+    "published_raw": "2026-11-11T09:33:25Z",
+    "document_type": "decision",
+    "issuer": "Company Names Tribunal",
+    "issuer_ids": [
+      "uk-gov:company-names-tribunal"
+    ],
+    "summary": "Decision for applicant Kier Bam Joint Venture, Kier Infrastructure and Overseas Limited, Kier Group Plc and Bam Nuttall Limited registration number 11647752 applicant successful.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Company Names Tribunal",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 9749,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Company Names Tribunal decision: Apple Distribution International Limited",
+    "url": "https://www.gov.uk/government/publications/company-names-tribunal-decision-apple-distribution-international-limited",
+    "native_id": "/government/publications/company-names-tribunal-decision-apple-distribution-international-limited",
+    "published_at": "2026-11-11T09:33:05+00:00",
+    "published_raw": "2026-11-11T09:33:05Z",
+    "document_type": "decision",
+    "issuer": "Company Names Tribunal",
+    "issuer_ids": [
+      "uk-gov:company-names-tribunal"
+    ],
+    "summary": "Decision for applicant Apple Inc. registration number NI728761 applicant successful.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Company Names Tribunal",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 9750,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Lifestone Homes Limited (previously Paradigm Housing Group Limited)",
+    "url": "https://www.gov.uk/government/publications/paradigm-housing-group-limited",
+    "native_id": "/government/publications/paradigm-housing-group-limited",
+    "published_at": "2026-11-11T09:30:02+00:00",
+    "published_raw": "2026-11-11T09:30:02Z",
+    "document_type": "decision",
+    "issuer": "Regulator of Social Housing",
+    "issuer_ids": [
+      "uk-gov:regulator-of-social-housing"
+    ],
+    "summary": "The Regulator of Social Housing's view of how well Paradigm Housing Group Limited is meeting regulatory standards.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Regulator of Social Housing",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 9751,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Regulatory judgements and enforcement notices - 11 November 2026",
+    "url": "https://www.gov.uk/government/publications/regulatory-judgements-and-enforcement-notices",
+    "native_id": "/government/publications/regulatory-judgements-and-enforcement-notices",
+    "published_at": "2026-11-11T09:30:02+00:00",
+    "published_raw": "2026-11-11T09:30:02Z",
+    "document_type": "decision",
+    "issuer": "Regulator of Social Housing",
+    "issuer_ids": [
+      "uk-gov:regulator-of-social-housing"
+    ],
+    "summary": "The judgements we publish on how well registered landlords are meeting our standards.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Regulator of Social Housing",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 5,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Trident Housing Association Limited",
+    "url": "https://www.gov.uk/government/publications/regulatory-judgement-trident-housing-association-limited--2",
+    "native_id": "/government/publications/regulatory-judgement-trident-housing-association-limited--2",
+    "published_at": "2026-11-11T09:30:01+00:00",
+    "published_raw": "2026-11-11T09:30:01Z",
+    "document_type": "decision",
+    "issuer": "Regulator of Social Housing",
+    "issuer_ids": [
+      "uk-gov:regulator-of-social-housing"
+    ],
+    "summary": "The Regulator of Social Housing's view of how well Trident Housing Association Limited is meeting regulatory standards.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Regulator of Social Housing",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 9765,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Bury Metropolitan Borough Council",
+    "url": "https://www.gov.uk/government/publications/bury-metropolitan-borough-council",
+    "native_id": "/government/publications/bury-metropolitan-borough-council",
+    "published_at": "2026-11-11T09:30:01+00:00",
+    "published_raw": "2026-11-11T09:30:01Z",
+    "document_type": "decision",
+    "issuer": "Regulator of Social Housing",
+    "issuer_ids": [
+      "uk-gov:regulator-of-social-housing"
+    ],
+    "summary": "The Regulator of Social Housing's view of how well Bury Metropolitan Borough Council is meeting regulatory standards.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Regulator of Social Housing",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 9764,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Eden Housing Association Limited",
+    "url": "https://www.gov.uk/government/publications/regulatory-judgement-eden-housing-association-limited",
+    "native_id": "/government/publications/regulatory-judgement-eden-housing-association-limited",
+    "published_at": "2026-11-11T09:30:01+00:00",
+    "published_raw": "2026-11-11T09:30:01Z",
+    "document_type": "decision",
+    "issuer": "Regulator of Social Housing",
+    "issuer_ids": [
+      "uk-gov:regulator-of-social-housing"
+    ],
+    "summary": "The Regulator of Social Housing's view of how well Eden Housing Association Limited is meeting regulatory standards.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Regulator of Social Housing",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 9763,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Cobalt Housing Limited",
+    "url": "https://www.gov.uk/government/publications/cobalt-housing-limited",
+    "native_id": "/government/publications/cobalt-housing-limited",
+    "published_at": "2026-11-11T09:30:01+00:00",
+    "published_raw": "2026-11-11T09:30:01Z",
+    "document_type": "decision",
+    "issuer": "Regulator of Social Housing",
+    "issuer_ids": [
+      "uk-gov:regulator-of-social-housing"
+    ],
+    "summary": "The Regulator of Social Housing's view of how well Cobalt Housing Limited is meeting regulatory standards.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Regulator of Social Housing",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 9762,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Karibu Community Homes Limited",
+    "url": "https://www.gov.uk/government/publications/karibu-community-homes-limited",
+    "native_id": "/government/publications/karibu-community-homes-limited",
+    "published_at": "2026-11-11T09:30:01+00:00",
+    "published_raw": "2026-11-11T09:30:01Z",
+    "document_type": "decision",
+    "issuer": "Regulator of Social Housing",
+    "issuer_ids": [
+      "uk-gov:regulator-of-social-housing"
+    ],
+    "summary": "The Regulator of Social Housing's view of how well Karibu Community Homes Limited is meeting regulatory standards.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Regulator of Social Housing",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 9761,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Havebury Homes",
+    "url": "https://www.gov.uk/government/publications/havebury-homes",
+    "native_id": "/government/publications/havebury-homes",
+    "published_at": "2026-11-11T09:30:01+00:00",
+    "published_raw": "2026-11-11T09:30:01Z",
+    "document_type": "decision",
+    "issuer": "Regulator of Social Housing",
+    "issuer_ids": [
+      "uk-gov:regulator-of-social-housing"
+    ],
+    "summary": "The Regulator of Social Housing's view of how well Havebury Homes is meeting regulatory standards.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Regulator of Social Housing",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 9760,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "The Guinness Partnership Limited",
+    "url": "https://www.gov.uk/government/publications/the-guinness-partnership-limited",
+    "native_id": "/government/publications/the-guinness-partnership-limited",
+    "published_at": "2026-11-11T09:30:01+00:00",
+    "published_raw": "2026-11-11T09:30:01Z",
+    "document_type": "decision",
+    "issuer": "Regulator of Social Housing",
+    "issuer_ids": [
+      "uk-gov:regulator-of-social-housing"
+    ],
+    "summary": "The Regulator of Social Housing's view of how well The Guinness Partnership Limited is meeting regulatory standards.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Regulator of Social Housing",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 9759,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "YMCA St Paul’s Group",
+    "url": "https://www.gov.uk/government/publications/regulatory-judgement-ymca-st-pauls-group",
+    "native_id": "/government/publications/regulatory-judgement-ymca-st-pauls-group",
+    "published_at": "2026-11-11T09:30:01+00:00",
+    "published_raw": "2026-11-11T09:30:01Z",
+    "document_type": "decision",
+    "issuer": "Regulator of Social Housing",
+    "issuer_ids": [
+      "uk-gov:regulator-of-social-housing"
+    ],
+    "summary": "The Regulator of Social Housing's view of how well YMCA St Paul's Group is meeting regulatory standards.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Regulator of Social Housing",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 9758,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Orwell Housing Association Limited",
+    "url": "https://www.gov.uk/government/publications/orwell-housing-association-limited",
+    "native_id": "/government/publications/orwell-housing-association-limited",
+    "published_at": "2026-11-11T09:30:01+00:00",
+    "published_raw": "2026-11-11T09:30:01Z",
+    "document_type": "decision",
+    "issuer": "Regulator of Social Housing",
+    "issuer_ids": [
+      "uk-gov:regulator-of-social-housing"
+    ],
+    "summary": "The Regulator of Social Housing's view of how well Orwell Housing Association Limited is meeting regulatory standards.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Regulator of Social Housing",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 9757,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Poplar Housing and Regeneration Community Association Limited",
+    "url": "https://www.gov.uk/government/publications/regulatory-judgement-poplar-harca-limited--2",
+    "native_id": "/government/publications/regulatory-judgement-poplar-harca-limited--2",
+    "published_at": "2026-11-11T09:30:01+00:00",
+    "published_raw": "2026-11-11T09:30:01Z",
+    "document_type": "decision",
+    "issuer": "Regulator of Social Housing",
+    "issuer_ids": [
+      "uk-gov:regulator-of-social-housing"
+    ],
+    "summary": "The Regulator of Social Housing's view of how well Poplar Housing and Regeneration Community Association Limited is meeting regulatory standards.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Regulator of Social Housing",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 9756,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Saffron Housing Trust Limited",
+    "url": "https://www.gov.uk/government/publications/regulatory-judgement-saffron-housing-trust-limited--2",
+    "native_id": "/government/publications/regulatory-judgement-saffron-housing-trust-limited--2",
+    "published_at": "2026-11-11T09:30:01+00:00",
+    "published_raw": "2026-11-11T09:30:01Z",
+    "document_type": "decision",
+    "issuer": "Regulator of Social Housing",
+    "issuer_ids": [
+      "uk-gov:regulator-of-social-housing"
+    ],
+    "summary": "The Regulator of Social Housing's view of how well Saffron Housing Trust Limited is meeting regulatory standards.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Regulator of Social Housing",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 9755,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Sanctuary Housing Association",
+    "url": "https://www.gov.uk/government/publications/sanctuary-housing-association",
+    "native_id": "/government/publications/sanctuary-housing-association",
+    "published_at": "2026-11-11T09:30:01+00:00",
+    "published_raw": "2026-11-11T09:30:01Z",
+    "document_type": "decision",
+    "issuer": "Regulator of Social Housing",
+    "issuer_ids": [
+      "uk-gov:regulator-of-social-housing"
+    ],
+    "summary": "The Regulator of Social Housing's view of how well Sanctuary Housing Association is meeting regulatory standards.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Regulator of Social Housing",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 9754,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Ocean Housing Limited",
+    "url": "https://www.gov.uk/government/publications/ocean-housing-limited",
+    "native_id": "/government/publications/ocean-housing-limited",
+    "published_at": "2026-11-11T09:30:01+00:00",
+    "published_raw": "2026-11-11T09:30:01Z",
+    "document_type": "decision",
+    "issuer": "Regulator of Social Housing",
+    "issuer_ids": [
+      "uk-gov:regulator-of-social-housing"
+    ],
+    "summary": "The Regulator of Social Housing's view of how well Ocean Housing Limited is meeting regulatory standards.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Regulator of Social Housing",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 9753,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "East Midlands Housing Group Limited",
+    "url": "https://www.gov.uk/government/publications/regulatory-judgement-east-midlands-housing-group",
+    "native_id": "/government/publications/regulatory-judgement-east-midlands-housing-group",
+    "published_at": "2026-11-11T09:30:01+00:00",
+    "published_raw": "2026-11-11T09:30:01Z",
+    "document_type": "decision",
+    "issuer": "Regulator of Social Housing",
+    "issuer_ids": [
+      "uk-gov:regulator-of-social-housing"
+    ],
+    "summary": "The Regulator of Social Housing's view of how well East Midlands Housing Group Limited is meeting regulatory standards.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Regulator of Social Housing",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 9752,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Southern Housing",
+    "url": "https://www.gov.uk/government/publications/southern-housing",
+    "native_id": "/government/publications/southern-housing",
+    "published_at": "2026-11-11T09:30:00+00:00",
+    "published_raw": "2026-11-11T09:30:00Z",
+    "document_type": "decision",
+    "issuer": "Regulator of Social Housing",
+    "issuer_ids": [
+      "uk-gov:regulator-of-social-housing"
+    ],
+    "summary": "The Regulator of Social Housing's view of how well Southern Housing is meeting regulatory standards.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Regulator of Social Housing",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 9773,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Hyde Housing Association Limited",
+    "url": "https://www.gov.uk/government/publications/regulatory-judgement-hyde-housing-association-limited",
+    "native_id": "/government/publications/regulatory-judgement-hyde-housing-association-limited",
+    "published_at": "2026-11-11T09:30:00+00:00",
+    "published_raw": "2026-11-11T09:30:00Z",
+    "document_type": "decision",
+    "issuer": "Regulator of Social Housing",
+    "issuer_ids": [
+      "uk-gov:regulator-of-social-housing"
+    ],
+    "summary": "The Regulator of Social Housing's view of how well Hyde Housing Association Limited is meeting regulatory standards.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Regulator of Social Housing",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 9772,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Page withdrawn: Ocean Housing Group Limited",
+    "url": "https://www.gov.uk/government/publications/regulatory-judgement-ocean-housing-group-limited",
+    "native_id": "/government/publications/regulatory-judgement-ocean-housing-group-limited",
+    "published_at": "2026-11-11T09:30:00+00:00",
+    "published_raw": "2026-11-11T09:30:00Z",
+    "document_type": "decision",
+    "issuer": "Regulator of Social Housing",
+    "issuer_ids": [
+      "uk-gov:regulator-of-social-housing"
+    ],
+    "summary": "The Regulator of Social Housing's view of how well Ocean Housing Group Limited met regulatory standards.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Regulator of Social Housing",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 9771,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Citizen Housing Group Limited",
+    "url": "https://www.gov.uk/government/publications/regulatory-judgement-citizen-housing-group-limited",
+    "native_id": "/government/publications/regulatory-judgement-citizen-housing-group-limited",
+    "published_at": "2026-11-11T09:30:00+00:00",
+    "published_raw": "2026-11-11T09:30:00Z",
+    "document_type": "decision",
+    "issuer": "Regulator of Social Housing",
+    "issuer_ids": [
+      "uk-gov:regulator-of-social-housing"
+    ],
+    "summary": "The Regulator of Social Housing's view of how well Citizen Housing Group Limited is meeting regulatory standards.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Regulator of Social Housing",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 9770,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Peabody Trust",
+    "url": "https://www.gov.uk/government/publications/peabody-trust",
+    "native_id": "/government/publications/peabody-trust",
+    "published_at": "2026-11-11T09:30:00+00:00",
+    "published_raw": "2026-11-11T09:30:00Z",
+    "document_type": "decision",
+    "issuer": "Regulator of Social Housing",
+    "issuer_ids": [
+      "uk-gov:regulator-of-social-housing"
+    ],
+    "summary": "The Regulator of Social Housing's view of how well Peabody Trust is meeting regulatory standards.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Regulator of Social Housing",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 9769,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "North Devon Homes",
+    "url": "https://www.gov.uk/government/publications/regulatory-judgement-north-devon-homes",
+    "native_id": "/government/publications/regulatory-judgement-north-devon-homes",
+    "published_at": "2026-11-11T09:30:00+00:00",
+    "published_raw": "2026-11-11T09:30:00Z",
+    "document_type": "decision",
+    "issuer": "Regulator of Social Housing",
+    "issuer_ids": [
+      "uk-gov:regulator-of-social-housing"
+    ],
+    "summary": "The Regulator of Social Housing's view of how well North Devon Homes is meeting regulatory standards.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Regulator of Social Housing",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 9768,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "CIL Appeal 1893155 — 16 September 26 — demolition and erection of buildings",
+    "url": "https://www.gov.uk/government/publications/cil-appeal-1893155-16-september-26-demolition-and-erection-of-buildings",
+    "native_id": "/government/publications/cil-appeal-1893155-16-september-26-demolition-and-erection-of-buildings",
+    "published_at": "2026-11-11T09:30:00+00:00",
+    "published_raw": "2026-11-11T09:30:00Z",
+    "document_type": "decision",
+    "issuer": "HM Revenue & Customs",
+    "issuer_ids": [
+      "uk-gov:hm-revenue-customs"
+    ],
+    "summary": "Part retrospective planning application (demolition of building and erection of 2) to provide 10 residential units with amenity space and waste/recycling.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "HM Revenue & Customs",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 9767,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Joseph Rowntree Housing Trust",
+    "url": "https://www.gov.uk/government/publications/regulatory-judgement-joseph-rowntree-housing-trust--2",
+    "native_id": "/government/publications/regulatory-judgement-joseph-rowntree-housing-trust--2",
+    "published_at": "2026-11-11T09:30:00+00:00",
+    "published_raw": "2026-11-11T09:30:00Z",
+    "document_type": "decision",
+    "issuer": "Regulator of Social Housing",
+    "issuer_ids": [
+      "uk-gov:regulator-of-social-housing"
+    ],
+    "summary": "The Regulator of Social Housing's view of how well Joseph Rowntree Housing Trust is meeting regulatory standards.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Regulator of Social Housing",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 9766,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
     "title": "DCPD-202600689 - Remarks on Presenting the National Medal of Science and National Medals of Technology and Innovation",
     "url": "https://www.govinfo.gov/app/details/DCPD-202600689",
     "native_id": "DCPD-202600689",
@@ -191,7 +1061,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 9543,
     "first_seen": "2026-11-10T20:28:57.994479+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -220,7 +1090,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 9547,
     "first_seen": "2026-11-10T20:28:57.994479+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -249,7 +1119,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 9546,
     "first_seen": "2026-11-10T20:28:57.994479+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -278,7 +1148,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 9545,
     "first_seen": "2026-11-10T20:28:57.994479+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -307,7 +1177,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 9544,
     "first_seen": "2026-11-10T20:28:57.994479+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -336,7 +1206,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 9548,
     "first_seen": "2026-11-10T20:28:57.994479+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -365,7 +1235,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 9549,
     "first_seen": "2026-11-10T20:28:57.994479+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -394,36 +1264,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 5623,
     "first_seen": "2026-10-20T18:00:04.951908+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
-    "source_ids": [
-      "uk-govuk-decision"
-    ]
-  },
-  {
-    "title": "Platypus Field Development",
-    "url": "https://www.gov.uk/government/publications/platypus-field-development",
-    "native_id": "/government/publications/platypus-field-development",
-    "published_at": "2026-11-10T14:51:21+00:00",
-    "published_raw": "2026-11-10T14:51:21Z",
-    "document_type": "decision",
-    "issuer": "Offshore Petroleum Regulator for Environment and Decommissioning",
-    "issuer_ids": [
-      "uk-gov:offshore-petroleum-regulator-for-environment-and-decommissioning"
-    ],
-    "summary": "Project Summary",
-    "source_metadata": {
-      "document_type": "decision",
-      "document_stage": "decision_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Offshore Petroleum Regulator for Environment and Decommissioning",
-      "jurisdiction": "UK",
-      "family": "typed_government_documents"
-    },
-    "primary_source_id": "uk-govuk-decision",
-    "n": 9550,
-    "first_seen": "2026-11-10T20:28:57.994479+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -452,7 +1293,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 9551,
     "first_seen": "2026-11-10T20:28:57.994479+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -481,7 +1322,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 9552,
     "first_seen": "2026-11-10T20:28:57.994479+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -510,7 +1351,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 9553,
     "first_seen": "2026-11-10T20:28:57.994479+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -539,7 +1380,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 5610,
     "first_seen": "2026-10-20T18:00:04.951908+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -568,7 +1409,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 5609,
     "first_seen": "2026-10-20T18:00:04.951908+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -597,7 +1438,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 9554,
     "first_seen": "2026-11-10T20:28:57.994479+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -626,7 +1467,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 9555,
     "first_seen": "2026-11-10T20:28:57.994479+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -655,7 +1496,36 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 4,
     "first_seen": "2026-10-15T10:17:11.133023+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Catton Grove Primary School: 10 November 2026",
+    "url": "https://www.gov.uk/government/publications/catton-grove-primary-school-10-november-2026",
+    "native_id": "/government/publications/catton-grove-primary-school-10-november-2026",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "published_raw": "2026-11-10T00:00:00Z",
+    "document_type": "decision",
+    "issuer": "Office of the Schools Adjudicator",
+    "issuer_ids": [
+      "uk-gov:office-of-the-schools-adjudicator"
+    ],
+    "summary": "The schools adjudicator’s admission variation decision about Catton Grove Primary School.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Office of the Schools Adjudicator",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 9774,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -685,7 +1555,7 @@
     "primary_source_id": "us-federal-register",
     "n": 9515,
     "first_seen": "2026-11-10T20:28:57.994479+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -716,7 +1586,7 @@
     "primary_source_id": "us-federal-register",
     "n": 9513,
     "first_seen": "2026-11-10T20:28:57.994479+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -747,7 +1617,7 @@
     "primary_source_id": "us-federal-register",
     "n": 9512,
     "first_seen": "2026-11-10T20:28:57.994479+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -777,7 +1647,7 @@
     "primary_source_id": "us-federal-register",
     "n": 9491,
     "first_seen": "2026-11-10T20:28:57.994479+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -807,7 +1677,7 @@
     "primary_source_id": "us-federal-register",
     "n": 9490,
     "first_seen": "2026-11-10T20:28:57.994479+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -837,7 +1707,7 @@
     "primary_source_id": "us-federal-register",
     "n": 9487,
     "first_seen": "2026-11-10T20:28:57.994479+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -868,7 +1738,7 @@
     "primary_source_id": "us-federal-register",
     "n": 9481,
     "first_seen": "2026-11-10T20:28:57.994479+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -899,7 +1769,7 @@
     "primary_source_id": "us-federal-register",
     "n": 9471,
     "first_seen": "2026-11-10T20:28:57.994479+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -930,7 +1800,7 @@
     "primary_source_id": "us-federal-register",
     "n": 9435,
     "first_seen": "2026-11-10T20:28:57.994479+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -961,7 +1831,7 @@
     "primary_source_id": "us-federal-register",
     "n": 9434,
     "first_seen": "2026-11-10T20:28:57.994479+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -992,7 +1862,7 @@
     "primary_source_id": "us-federal-register",
     "n": 9433,
     "first_seen": "2026-11-10T20:28:57.994479+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1141,7 +2011,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 5822,
     "first_seen": "2026-10-21T18:05:07.789957+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -1218,7 +2088,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 9289,
     "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -1247,7 +2117,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 9290,
     "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -1276,7 +2146,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 9291,
     "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -1308,7 +2178,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 21,
     "first_seen": "2026-10-15T10:17:11.133023+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -1337,36 +2207,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 9292,
     "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
-    "source_ids": [
-      "uk-govuk-decision"
-    ]
-  },
-  {
-    "title": "Company Names Tribunal undefended decisions and orders",
-    "url": "https://www.gov.uk/government/publications/company-names-tribunal-undefended-decisions-and-orders",
-    "native_id": "/government/publications/company-names-tribunal-undefended-decisions-and-orders",
-    "published_at": "2026-11-09T09:40:42+00:00",
-    "published_raw": "2026-11-09T09:40:42Z",
-    "document_type": "decision",
-    "issuer": "Company Names Tribunal",
-    "issuer_ids": [
-      "uk-gov:company-names-tribunal"
-    ],
-    "summary": "Decisions and orders of the Company Names Tribunal - undefended.",
-    "source_metadata": {
-      "document_type": "decision",
-      "document_stage": "decision_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Company Names Tribunal",
-      "jurisdiction": "UK",
-      "family": "typed_government_documents"
-    },
-    "primary_source_id": "uk-govuk-decision",
-    "n": 2103,
-    "first_seen": "2026-10-15T12:16:32.997656+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -1395,7 +2236,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 9293,
     "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -1424,7 +2265,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 9294,
     "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -1453,7 +2294,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 9295,
     "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -1482,7 +2323,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 9296,
     "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -1511,7 +2352,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 9297,
     "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -1540,7 +2381,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 9298,
     "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -1569,7 +2410,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 9299,
     "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -1598,7 +2439,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 9300,
     "first_seen": "2026-11-09T23:08:47.577478+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -1629,7 +2470,7 @@
     "primary_source_id": "us-federal-register",
     "n": 9268,
     "first_seen": "2026-11-09T08:00:48.097881+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1660,7 +2501,7 @@
     "primary_source_id": "us-federal-register",
     "n": 9263,
     "first_seen": "2026-11-09T08:00:48.097881+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1690,7 +2531,7 @@
     "primary_source_id": "us-federal-register",
     "n": 9252,
     "first_seen": "2026-11-09T08:00:48.097881+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1721,7 +2562,7 @@
     "primary_source_id": "us-federal-register",
     "n": 9241,
     "first_seen": "2026-11-09T08:00:48.097881+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1752,7 +2593,7 @@
     "primary_source_id": "us-federal-register",
     "n": 9239,
     "first_seen": "2026-11-09T08:00:48.097881+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1783,7 +2624,7 @@
     "primary_source_id": "us-federal-register",
     "n": 9237,
     "first_seen": "2026-11-09T08:00:48.097881+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1814,7 +2655,7 @@
     "primary_source_id": "us-federal-register",
     "n": 9233,
     "first_seen": "2026-11-09T08:00:48.097881+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1845,7 +2686,7 @@
     "primary_source_id": "us-federal-register",
     "n": 9232,
     "first_seen": "2026-11-09T08:00:48.097881+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1876,7 +2717,7 @@
     "primary_source_id": "us-federal-register",
     "n": 9228,
     "first_seen": "2026-11-09T08:00:48.097881+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1906,7 +2747,7 @@
     "primary_source_id": "us-federal-register",
     "n": 9226,
     "first_seen": "2026-11-09T08:00:48.097881+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1937,7 +2778,7 @@
     "primary_source_id": "us-federal-register",
     "n": 9223,
     "first_seen": "2026-11-09T08:00:48.097881+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1968,7 +2809,7 @@
     "primary_source_id": "us-federal-register",
     "n": 9222,
     "first_seen": "2026-11-09T08:00:48.097881+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1999,7 +2840,7 @@
     "primary_source_id": "us-federal-register",
     "n": 9199,
     "first_seen": "2026-11-09T08:00:48.097881+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -2030,7 +2871,7 @@
     "primary_source_id": "us-federal-register",
     "n": 9187,
     "first_seen": "2026-11-09T08:00:48.097881+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -2061,7 +2902,7 @@
     "primary_source_id": "us-federal-register",
     "n": 9186,
     "first_seen": "2026-11-09T08:00:48.097881+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
     "source_ids": [
       "us-federal-register"
     ]

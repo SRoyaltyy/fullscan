@@ -1,633 +1,1123 @@
 [
   {
-    "title": "H.R. 10965 (IH) - Supporting After-School STEM Educators Act",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr10965ih",
-    "native_id": "BILLS-119hr10965ih",
-    "published_at": "2026-11-11T04:35:04+00:00",
-    "published_raw": "Wed, 11 Nov 2026 04:35:04 +0000",
-    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "bill",
-      "document_stage": "legislative_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Bills",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-bills",
-    "n": 9681,
-    "first_seen": "2026-11-11T07:46:05.445744+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
-    "source_ids": [
-      "us-govinfo-bills"
-    ]
-  },
-  {
-    "title": "H.R. 10970 (IH) - Cardiovascular Disease Early Detection and Prevention Act of 2026",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr10970ih",
-    "native_id": "BILLS-119hr10970ih",
-    "published_at": "2026-11-11T04:35:05+00:00",
-    "published_raw": "Wed, 11 Nov 2026 04:35:05 +0000",
-    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "bill",
-      "document_stage": "legislative_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Bills",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-bills",
-    "n": 9682,
-    "first_seen": "2026-11-11T07:46:05.445744+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
-    "source_ids": [
-      "us-govinfo-bills"
-    ]
-  },
-  {
-    "title": "H.R. 10961 (IH) - To direct the Secretary of Veterans Affairs to report on the Warrior Training Advancement Course of the Veterans Benefits Administration.",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr10961ih",
-    "native_id": "BILLS-119hr10961ih",
-    "published_at": "2026-11-11T04:35:05+00:00",
-    "published_raw": "Wed, 11 Nov 2026 04:35:05 +0000",
-    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "bill",
-      "document_stage": "legislative_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Bills",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-bills",
-    "n": 9683,
-    "first_seen": "2026-11-11T07:46:05.445744+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
-    "source_ids": [
-      "us-govinfo-bills"
-    ]
-  },
-  {
-    "title": "H.R. 10969 (IH) - Healthy Meal Time Act of 2026",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr10969ih",
-    "native_id": "BILLS-119hr10969ih",
-    "published_at": "2026-11-11T04:35:05+00:00",
-    "published_raw": "Wed, 11 Nov 2026 04:35:05 +0000",
-    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "bill",
-      "document_stage": "legislative_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Bills",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-bills",
-    "n": 9684,
-    "first_seen": "2026-11-11T07:46:05.445744+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
-    "source_ids": [
-      "us-govinfo-bills"
-    ]
-  },
-  {
-    "title": "H.R. 10966 (IH) - Supporting Veteran Mothers Act of 2026",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr10966ih",
-    "native_id": "BILLS-119hr10966ih",
-    "published_at": "2026-11-11T04:35:05+00:00",
-    "published_raw": "Wed, 11 Nov 2026 04:35:05 +0000",
-    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "bill",
-      "document_stage": "legislative_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Bills",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-bills",
-    "n": 9685,
-    "first_seen": "2026-11-11T07:46:05.445744+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
-    "source_ids": [
-      "us-govinfo-bills"
-    ]
-  },
-  {
-    "title": "H.R. 8552 (EH) - Veterans’ Compensation Cost-of-Living Adjustment Act of 2026",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr8552eh",
-    "native_id": "BILLS-119hr8552eh",
-    "published_at": "2026-11-11T04:35:05+00:00",
-    "published_raw": "Wed, 11 Nov 2026 04:35:05 +0000",
-    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "bill",
-      "document_stage": "legislative_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Bills",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-bills",
-    "n": 9686,
-    "first_seen": "2026-11-11T07:46:05.445744+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
-    "source_ids": [
-      "us-govinfo-bills"
-    ]
-  },
-  {
-    "title": "H.R. 10968 (IH) - No Veteran Left Behind: Housing Retention Act of 2026",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr10968ih",
-    "native_id": "BILLS-119hr10968ih",
-    "published_at": "2026-11-11T04:35:05+00:00",
-    "published_raw": "Wed, 11 Nov 2026 04:35:05 +0000",
-    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "bill",
-      "document_stage": "legislative_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Bills",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-bills",
-    "n": 9687,
-    "first_seen": "2026-11-11T07:46:05.445744+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
-    "source_ids": [
-      "us-govinfo-bills"
-    ]
-  },
-  {
-    "title": "H.R. 10962 (IH) - Justification Oversight and Opportunities for Main Street Act of 2026",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr10962ih",
-    "native_id": "BILLS-119hr10962ih",
-    "published_at": "2026-11-11T04:35:06+00:00",
-    "published_raw": "Wed, 11 Nov 2026 04:35:06 +0000",
-    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "bill",
-      "document_stage": "legislative_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Bills",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-bills",
-    "n": 9688,
-    "first_seen": "2026-11-11T07:46:05.445744+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
-    "source_ids": [
-      "us-govinfo-bills"
-    ]
-  },
-  {
-    "title": "H.R. 9613 (EH) - Nuclear Advisory Committee Reform Act",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr9613eh",
-    "native_id": "BILLS-119hr9613eh",
-    "published_at": "2026-11-11T04:35:06+00:00",
-    "published_raw": "Wed, 11 Nov 2026 04:35:06 +0000",
-    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "bill",
-      "document_stage": "legislative_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Bills",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-bills",
-    "n": 9689,
-    "first_seen": "2026-11-11T07:46:05.445744+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
-    "source_ids": [
-      "us-govinfo-bills"
-    ]
-  },
-  {
-    "title": "H.R. 3978 (EH) - Nuclear REFUEL (Recycling Efficient Fuels Utilizing Expedited Licensing) Act",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr3978eh",
-    "native_id": "BILLS-119hr3978eh",
-    "published_at": "2026-11-11T04:35:06+00:00",
-    "published_raw": "Wed, 11 Nov 2026 04:35:06 +0000",
-    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "bill",
-      "document_stage": "legislative_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Bills",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-bills",
-    "n": 9690,
-    "first_seen": "2026-11-11T07:46:05.445744+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
-    "source_ids": [
-      "us-govinfo-bills"
-    ]
-  },
-  {
-    "title": "H.R. 9612 (EH) - American Enrichment Deployment Act",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr9612eh",
-    "native_id": "BILLS-119hr9612eh",
-    "published_at": "2026-11-11T04:35:06+00:00",
-    "published_raw": "Wed, 11 Nov 2026 04:35:06 +0000",
-    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "bill",
-      "document_stage": "legislative_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Bills",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-bills",
-    "n": 9691,
-    "first_seen": "2026-11-11T07:46:05.445744+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
-    "source_ids": [
-      "us-govinfo-bills"
-    ]
-  },
-  {
-    "title": "H.R. 9614 (EH) - NRC Staff Pay Alignment Act",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr9614eh",
-    "native_id": "BILLS-119hr9614eh",
-    "published_at": "2026-11-11T04:35:06+00:00",
-    "published_raw": "Wed, 11 Nov 2026 04:35:06 +0000",
-    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "bill",
-      "document_stage": "legislative_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Bills",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-bills",
-    "n": 9692,
-    "first_seen": "2026-11-11T07:46:05.445744+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
-    "source_ids": [
-      "us-govinfo-bills"
-    ]
-  },
-  {
-    "title": "H.R. 10984 (IH) - ‘Innovation for VA Technology and Entrepreneurship Act",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr10984ih",
-    "native_id": "BILLS-119hr10984ih",
-    "published_at": "2026-11-11T06:02:00+00:00",
-    "published_raw": "Wed, 11 Nov 2026 06:02:00 +0000",
-    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "bill",
-      "document_stage": "legislative_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Bills",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-bills",
-    "n": 9693,
-    "first_seen": "2026-11-11T07:46:05.445744+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
-    "source_ids": [
-      "us-govinfo-bills"
-    ]
-  },
-  {
-    "title": "H.R. 10972 (IH) - Nodes, Enterprise Workloads, and Hybrid Operations, Resilience, Integration, Zero-Trust, Orbital Networks Act",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr10972ih",
-    "native_id": "BILLS-119hr10972ih",
-    "published_at": "2026-11-11T06:02:00+00:00",
-    "published_raw": "Wed, 11 Nov 2026 06:02:00 +0000",
-    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "bill",
-      "document_stage": "legislative_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Bills",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-bills",
-    "n": 9694,
-    "first_seen": "2026-11-11T07:46:05.445744+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
-    "source_ids": [
-      "us-govinfo-bills"
-    ]
-  },
-  {
-    "title": "H.R. 10990 (IH) - For the relief of Paula Valentina Albornoz Hernández, Eliana Karina Hernández Peranquive, Nicole Alejandra Albornoz Hernández, and Leonardo Albornoz Rodríguez.",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr10990ih",
-    "native_id": "BILLS-119hr10990ih",
-    "published_at": "2026-11-11T06:02:00+00:00",
-    "published_raw": "Wed, 11 Nov 2026 06:02:00 +0000",
-    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "bill",
-      "document_stage": "legislative_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Bills",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-bills",
-    "n": 9695,
-    "first_seen": "2026-11-11T07:46:05.445744+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
-    "source_ids": [
-      "us-govinfo-bills"
-    ]
-  },
-  {
-    "title": "H.R. 10975 (IH) - Fair Manufactured Housing Lending Act",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr10975ih",
-    "native_id": "BILLS-119hr10975ih",
-    "published_at": "2026-11-11T06:02:00+00:00",
-    "published_raw": "Wed, 11 Nov 2026 06:02:00 +0000",
-    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "bill",
-      "document_stage": "legislative_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Bills",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-bills",
-    "n": 9696,
-    "first_seen": "2026-11-11T07:46:05.445744+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
-    "source_ids": [
-      "us-govinfo-bills"
-    ]
-  },
-  {
-    "title": "H.R. 10971 (IH) - Gulf Maritime Restoration Act",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr10971ih",
-    "native_id": "BILLS-119hr10971ih",
-    "published_at": "2026-11-11T06:02:00+00:00",
-    "published_raw": "Wed, 11 Nov 2026 06:02:00 +0000",
-    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "bill",
-      "document_stage": "legislative_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Bills",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-bills",
-    "n": 9697,
-    "first_seen": "2026-11-11T07:46:05.445744+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
-    "source_ids": [
-      "us-govinfo-bills"
-    ]
-  },
-  {
-    "title": "H.R. 10973 (IH) - Master Sergeant Roy P. Benavidez VA Clinic Act of 2026",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr10973ih",
-    "native_id": "BILLS-119hr10973ih",
-    "published_at": "2026-11-11T06:48:00+00:00",
-    "published_raw": "Wed, 11 Nov 2026 06:48:00 +0000",
-    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "bill",
-      "document_stage": "legislative_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Bills",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-bills",
-    "n": 9698,
-    "first_seen": "2026-11-11T07:46:05.445744+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
-    "source_ids": [
-      "us-govinfo-bills"
-    ]
-  },
-  {
-    "title": "DCPD-202600685 - Proclamation 11072-National Energy Dominance Month, 2026",
-    "url": "https://www.govinfo.gov/app/details/DCPD-202600685",
-    "native_id": "DCPD-202600685",
-    "published_at": "2026-11-10T21:28:50+00:00",
-    "published_raw": "Tue, 10 Nov 2026 21:28:50 +0000",
-    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "presidential_document",
-      "document_stage": "presidential_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Compilation of Presidential Documents",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-dcpd",
-    "n": 9699,
-    "first_seen": "2026-11-11T07:46:05.445744+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
-    "source_ids": [
-      "us-govinfo-dcpd"
-    ]
-  },
-  {
-    "title": "DCPD-202600687 - Memorandum on Establishment of a Committee of Inquiry To Investigate Allegations of False Statements by Lisa DeNell Cook",
-    "url": "https://www.govinfo.gov/app/details/DCPD-202600687",
-    "native_id": "DCPD-202600687",
-    "published_at": "2026-11-10T21:28:51+00:00",
-    "published_raw": "Tue, 10 Nov 2026 21:28:51 +0000",
-    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "presidential_document",
-      "document_stage": "presidential_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Compilation of Presidential Documents",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-dcpd",
-    "n": 9700,
-    "first_seen": "2026-11-11T07:46:05.445744+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
-    "source_ids": [
-      "us-govinfo-dcpd"
-    ]
-  },
-  {
-    "title": "DCPD-202600686 - Proclamation 11073-Columbus Day, 2026",
-    "url": "https://www.govinfo.gov/app/details/DCPD-202600686",
-    "native_id": "DCPD-202600686",
-    "published_at": "2026-11-10T21:28:51+00:00",
-    "published_raw": "Tue, 10 Nov 2026 21:28:51 +0000",
-    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "presidential_document",
-      "document_stage": "presidential_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Compilation of Presidential Documents",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-dcpd",
-    "n": 9701,
-    "first_seen": "2026-11-11T07:46:05.445744+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
-    "source_ids": [
-      "us-govinfo-dcpd"
-    ]
-  },
-  {
-    "title": "DCPD-202600689 - Remarks on Presenting the National Medal of Science and National Medals of Technology and Innovation",
-    "url": "https://www.govinfo.gov/app/details/DCPD-202600689",
-    "native_id": "DCPD-202600689",
-    "published_at": "2026-11-10T21:28:51+00:00",
-    "published_raw": "Tue, 10 Nov 2026 21:28:51 +0000",
-    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "presidential_document",
-      "document_stage": "presidential_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Compilation of Presidential Documents",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-dcpd",
-    "n": 9702,
-    "first_seen": "2026-11-11T07:46:05.445744+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
-    "source_ids": [
-      "us-govinfo-dcpd"
-    ]
-  },
-  {
-    "title": "Nominations and Withdrawals Sent to the Senate",
-    "url": "https://www.whitehouse.gov/presidential-actions/2026/11/nominations-and-withdrawals-sent-to-the-senate-b6a4/",
-    "native_id": "https://www.whitehouse.gov/?p=54367",
-    "published_at": "2026-11-10T21:56:49+00:00",
-    "published_raw": "Tue, 10 Nov 2026 21:56:49 +0000",
-    "summary": "NOMINATIONS SENT TO THE SENATE: Mark Aesch, of Florida, to be Federal Transit Administrator, vice Marcus Molinaro. Mikhail Bogachek, of Florida, to be Ambassador Extraordinary and Plenipotentiary of the United States of America to the Republic of Kosovo. Andreas Borgeas, of California, to be a Member of the Foreign Claims Settlement Commission of the United […] The post Nominations and Withdrawals Sent to the Senate appeared first on The White House .",
+    "title": "Results of 7-year HKD HKSAR Institutional Government Bonds tender through re-opening",
+    "url": "https://www.hkma.gov.hk/eng/news-and-media/press-releases/2026/11/20261111-5/",
+    "native_id": "https://www.hkma.gov.hk/eng/news-and-media/press-releases/2026/11/20261111-5/",
+    "published_at": "2026-11-11T00:00:00+00:00",
+    "published_raw": "2026-11-11",
+    "issuer": "Hong Kong Monetary Authority",
+    "summary": "",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "White House presidential actions",
-      "jurisdiction": "US",
-      "family": "executive_instruments"
+      "issuer": "Hong Kong Monetary Authority",
+      "jurisdiction": "HK",
+      "family": "monetary_and_supervisory"
     },
-    "primary_source_id": "us-white-house-0691096d16",
-    "n": 9703,
-    "first_seen": "2026-11-11T07:46:05.445744+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
+    "primary_source_id": "hk-hkma-public-press",
+    "n": 9744,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
     "source_ids": [
-      "us-white-house-0691096d16"
+      "hk-hkma-public-press"
     ]
   },
   {
-    "title": "VETERANS DAY, 2026",
-    "url": "https://www.whitehouse.gov/presidential-actions/2026/11/veterans-day-2026/",
-    "native_id": "https://www.whitehouse.gov/?p=54360",
-    "published_at": "2026-11-10T21:12:15+00:00",
-    "published_raw": "Tue, 10 Nov 2026 21:12:15 +0000",
-    "summary": "BY THE PRESIDENT OF THE UNITED STATES OF AMERICA A PROCLAMATION For over 250 years, the liberties and freedoms of every American have been safeguarded by the heroic men and women who have faithfully served in the United States Armed Forces. This Veterans Day, we honor our Nation’s cherished veterans and recommit to strengthen the […] The post VETERANS DAY, 2026 appeared first on The White House .",
+    "title": "Tender results of 1-year HONIA-indexed Floating Rate Notes",
+    "url": "https://www.hkma.gov.hk/eng/news-and-media/press-releases/2026/11/20261111-4/",
+    "native_id": "https://www.hkma.gov.hk/eng/news-and-media/press-releases/2026/11/20261111-4/",
+    "published_at": "2026-11-11T00:00:00+00:00",
+    "published_raw": "2026-11-11",
+    "issuer": "Hong Kong Monetary Authority",
+    "summary": "",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "White House presidential actions",
-      "jurisdiction": "US",
-      "family": "executive_instruments"
+      "issuer": "Hong Kong Monetary Authority",
+      "jurisdiction": "HK",
+      "family": "monetary_and_supervisory"
     },
-    "primary_source_id": "us-white-house-0691096d16",
-    "n": 9704,
-    "first_seen": "2026-11-11T07:46:05.445744+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
+    "primary_source_id": "hk-hkma-public-press",
+    "n": 9745,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
     "source_ids": [
-      "us-white-house-0691096d16"
+      "hk-hkma-public-press"
     ]
   },
   {
-    "title": "Presidential Determination Concerning Wildfire Suppression Activities in the United States",
-    "url": "https://www.whitehouse.gov/presidential-actions/2026/11/presidential-determination-concerning-wildfire-suppression-activities-in-the-united-states/",
-    "native_id": "https://www.whitehouse.gov/?p=54356",
-    "published_at": "2026-11-10T21:11:07+00:00",
-    "published_raw": "Tue, 10 Nov 2026 21:11:07 +0000",
-    "summary": "MEMORANDUM FOR THE SECRETARY OF THE INTERIOR, THE SECRETARY OF AGRICULTURE, THE ADMINISTRATOR OF THE ENVIRONMENTAL PROTECTION AGENCY SUBJECT: Presidential Determination Concerning Wildfire Suppression Activities in the United States By the authority vested in me as President by the Constitution and the laws of the United States of America, including section 313 of the Federal Water […] The post Presidential Determination Concerning Wildfire Suppression Activities in the United States appeared first on The White House .",
+    "title": "Enforcement collaboration between HKMA and IA – IA bans Lim Ka Kit from being an insurance intermediary for nine months",
+    "url": "https://www.hkma.gov.hk/eng/news-and-media/press-releases/2026/11/20261111-3/",
+    "native_id": "https://www.hkma.gov.hk/eng/news-and-media/press-releases/2026/11/20261111-3/",
+    "published_at": "2026-11-11T00:00:00+00:00",
+    "published_raw": "2026-11-11",
+    "issuer": "Hong Kong Monetary Authority",
+    "summary": "",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "White House presidential actions",
-      "jurisdiction": "US",
-      "family": "executive_instruments"
+      "issuer": "Hong Kong Monetary Authority",
+      "jurisdiction": "HK",
+      "family": "monetary_and_supervisory"
     },
-    "primary_source_id": "us-white-house-0691096d16",
-    "n": 9705,
-    "first_seen": "2026-11-11T07:46:05.445744+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
+    "primary_source_id": "hk-hkma-public-press",
+    "n": 9746,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
     "source_ids": [
-      "us-white-house-0691096d16"
+      "hk-hkma-public-press"
     ]
   },
   {
-    "title": "Five States Join FTC Lawsuit Alleging Hims and Hers Engaged in Deceptive and Unlawful Privacy Practices",
-    "url": "https://www.ftc.gov/news-events/news/press-releases/2026/11/five-states-join-ftc-lawsuit-alleging-hims-hers-engaged-deceptive-unlawful-privacy-practices",
-    "native_id": "338978",
-    "published_at": "2026-11-10T12:00:00+00:00",
-    "published_raw": "Tue, 10 Nov 2026 07:00:00 -0500",
-    "summary": "The Federal Trade Commission filed an amended complaint adding five states as co-plaintiffs in its lawsuit alleging that telehealth provider Hims and Hers shared consumers’ sensitive health information with third-party advertising platforms, despite claiming its services maintain consumers’ privacy, and it deceived users about its billing and cancellation practices. View Press Release",
+    "title": "CAC Outcome: NEU & NASUWT & Cranleigh School",
+    "url": "https://www.gov.uk/government/publications/cac-outcome-neu-nasuwt-cranleigh-school",
+    "native_id": "/government/publications/cac-outcome-neu-nasuwt-cranleigh-school",
+    "published_at": "2026-11-11T15:02:07+00:00",
+    "published_raw": "2026-11-11T15:02:07Z",
+    "document_type": "decision",
+    "issuer": "Central Arbitration Committee",
+    "issuer_ids": [
+      "uk-gov:central-arbitration-committee"
+    ],
+    "summary": "Outcome(s) by the Central Arbitration Committee on an application from NEU & NASUWT.",
     "source_metadata": {
-      "document_type": "official_announcement",
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Central Arbitration Committee",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 9747,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Company Names Tribunal decision: M & S Storage and Distribution Ltd",
+    "url": "https://www.gov.uk/government/publications/company-names-tribunal-decision-m-s-storage-and-distribution-ltd",
+    "native_id": "/government/publications/company-names-tribunal-decision-m-s-storage-and-distribution-ltd",
+    "published_at": "2026-11-11T09:33:46+00:00",
+    "published_raw": "2026-11-11T09:33:46Z",
+    "document_type": "decision",
+    "issuer": "Company Names Tribunal",
+    "issuer_ids": [
+      "uk-gov:company-names-tribunal"
+    ],
+    "summary": "Decision for applicant Marks and Spencer Plc registration number 16793112 applicant successful.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Company Names Tribunal",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 9748,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Company Names Tribunal decision: Kier Bam JV Ltd",
+    "url": "https://www.gov.uk/government/publications/company-names-tribunal-decision-kier-bam-jv-ltd",
+    "native_id": "/government/publications/company-names-tribunal-decision-kier-bam-jv-ltd",
+    "published_at": "2026-11-11T09:33:25+00:00",
+    "published_raw": "2026-11-11T09:33:25Z",
+    "document_type": "decision",
+    "issuer": "Company Names Tribunal",
+    "issuer_ids": [
+      "uk-gov:company-names-tribunal"
+    ],
+    "summary": "Decision for applicant Kier Bam Joint Venture, Kier Infrastructure and Overseas Limited, Kier Group Plc and Bam Nuttall Limited registration number 11647752 applicant successful.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Company Names Tribunal",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 9749,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Company Names Tribunal decision: Apple Distribution International Limited",
+    "url": "https://www.gov.uk/government/publications/company-names-tribunal-decision-apple-distribution-international-limited",
+    "native_id": "/government/publications/company-names-tribunal-decision-apple-distribution-international-limited",
+    "published_at": "2026-11-11T09:33:05+00:00",
+    "published_raw": "2026-11-11T09:33:05Z",
+    "document_type": "decision",
+    "issuer": "Company Names Tribunal",
+    "issuer_ids": [
+      "uk-gov:company-names-tribunal"
+    ],
+    "summary": "Decision for applicant Apple Inc. registration number NI728761 applicant successful.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Company Names Tribunal",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 9750,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Lifestone Homes Limited (previously Paradigm Housing Group Limited)",
+    "url": "https://www.gov.uk/government/publications/paradigm-housing-group-limited",
+    "native_id": "/government/publications/paradigm-housing-group-limited",
+    "published_at": "2026-11-11T09:30:02+00:00",
+    "published_raw": "2026-11-11T09:30:02Z",
+    "document_type": "decision",
+    "issuer": "Regulator of Social Housing",
+    "issuer_ids": [
+      "uk-gov:regulator-of-social-housing"
+    ],
+    "summary": "The Regulator of Social Housing's view of how well Paradigm Housing Group Limited is meeting regulatory standards.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Regulator of Social Housing",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 9751,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "East Midlands Housing Group Limited",
+    "url": "https://www.gov.uk/government/publications/regulatory-judgement-east-midlands-housing-group",
+    "native_id": "/government/publications/regulatory-judgement-east-midlands-housing-group",
+    "published_at": "2026-11-11T09:30:01+00:00",
+    "published_raw": "2026-11-11T09:30:01Z",
+    "document_type": "decision",
+    "issuer": "Regulator of Social Housing",
+    "issuer_ids": [
+      "uk-gov:regulator-of-social-housing"
+    ],
+    "summary": "The Regulator of Social Housing's view of how well East Midlands Housing Group Limited is meeting regulatory standards.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Regulator of Social Housing",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 9752,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Ocean Housing Limited",
+    "url": "https://www.gov.uk/government/publications/ocean-housing-limited",
+    "native_id": "/government/publications/ocean-housing-limited",
+    "published_at": "2026-11-11T09:30:01+00:00",
+    "published_raw": "2026-11-11T09:30:01Z",
+    "document_type": "decision",
+    "issuer": "Regulator of Social Housing",
+    "issuer_ids": [
+      "uk-gov:regulator-of-social-housing"
+    ],
+    "summary": "The Regulator of Social Housing's view of how well Ocean Housing Limited is meeting regulatory standards.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Regulator of Social Housing",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 9753,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Sanctuary Housing Association",
+    "url": "https://www.gov.uk/government/publications/sanctuary-housing-association",
+    "native_id": "/government/publications/sanctuary-housing-association",
+    "published_at": "2026-11-11T09:30:01+00:00",
+    "published_raw": "2026-11-11T09:30:01Z",
+    "document_type": "decision",
+    "issuer": "Regulator of Social Housing",
+    "issuer_ids": [
+      "uk-gov:regulator-of-social-housing"
+    ],
+    "summary": "The Regulator of Social Housing's view of how well Sanctuary Housing Association is meeting regulatory standards.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Regulator of Social Housing",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 9754,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Saffron Housing Trust Limited",
+    "url": "https://www.gov.uk/government/publications/regulatory-judgement-saffron-housing-trust-limited--2",
+    "native_id": "/government/publications/regulatory-judgement-saffron-housing-trust-limited--2",
+    "published_at": "2026-11-11T09:30:01+00:00",
+    "published_raw": "2026-11-11T09:30:01Z",
+    "document_type": "decision",
+    "issuer": "Regulator of Social Housing",
+    "issuer_ids": [
+      "uk-gov:regulator-of-social-housing"
+    ],
+    "summary": "The Regulator of Social Housing's view of how well Saffron Housing Trust Limited is meeting regulatory standards.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Regulator of Social Housing",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 9755,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Poplar Housing and Regeneration Community Association Limited",
+    "url": "https://www.gov.uk/government/publications/regulatory-judgement-poplar-harca-limited--2",
+    "native_id": "/government/publications/regulatory-judgement-poplar-harca-limited--2",
+    "published_at": "2026-11-11T09:30:01+00:00",
+    "published_raw": "2026-11-11T09:30:01Z",
+    "document_type": "decision",
+    "issuer": "Regulator of Social Housing",
+    "issuer_ids": [
+      "uk-gov:regulator-of-social-housing"
+    ],
+    "summary": "The Regulator of Social Housing's view of how well Poplar Housing and Regeneration Community Association Limited is meeting regulatory standards.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Regulator of Social Housing",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 9756,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Orwell Housing Association Limited",
+    "url": "https://www.gov.uk/government/publications/orwell-housing-association-limited",
+    "native_id": "/government/publications/orwell-housing-association-limited",
+    "published_at": "2026-11-11T09:30:01+00:00",
+    "published_raw": "2026-11-11T09:30:01Z",
+    "document_type": "decision",
+    "issuer": "Regulator of Social Housing",
+    "issuer_ids": [
+      "uk-gov:regulator-of-social-housing"
+    ],
+    "summary": "The Regulator of Social Housing's view of how well Orwell Housing Association Limited is meeting regulatory standards.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Regulator of Social Housing",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 9757,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "YMCA St Paul’s Group",
+    "url": "https://www.gov.uk/government/publications/regulatory-judgement-ymca-st-pauls-group",
+    "native_id": "/government/publications/regulatory-judgement-ymca-st-pauls-group",
+    "published_at": "2026-11-11T09:30:01+00:00",
+    "published_raw": "2026-11-11T09:30:01Z",
+    "document_type": "decision",
+    "issuer": "Regulator of Social Housing",
+    "issuer_ids": [
+      "uk-gov:regulator-of-social-housing"
+    ],
+    "summary": "The Regulator of Social Housing's view of how well YMCA St Paul's Group is meeting regulatory standards.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Regulator of Social Housing",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 9758,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "The Guinness Partnership Limited",
+    "url": "https://www.gov.uk/government/publications/the-guinness-partnership-limited",
+    "native_id": "/government/publications/the-guinness-partnership-limited",
+    "published_at": "2026-11-11T09:30:01+00:00",
+    "published_raw": "2026-11-11T09:30:01Z",
+    "document_type": "decision",
+    "issuer": "Regulator of Social Housing",
+    "issuer_ids": [
+      "uk-gov:regulator-of-social-housing"
+    ],
+    "summary": "The Regulator of Social Housing's view of how well The Guinness Partnership Limited is meeting regulatory standards.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Regulator of Social Housing",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 9759,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Havebury Homes",
+    "url": "https://www.gov.uk/government/publications/havebury-homes",
+    "native_id": "/government/publications/havebury-homes",
+    "published_at": "2026-11-11T09:30:01+00:00",
+    "published_raw": "2026-11-11T09:30:01Z",
+    "document_type": "decision",
+    "issuer": "Regulator of Social Housing",
+    "issuer_ids": [
+      "uk-gov:regulator-of-social-housing"
+    ],
+    "summary": "The Regulator of Social Housing's view of how well Havebury Homes is meeting regulatory standards.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Regulator of Social Housing",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 9760,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Karibu Community Homes Limited",
+    "url": "https://www.gov.uk/government/publications/karibu-community-homes-limited",
+    "native_id": "/government/publications/karibu-community-homes-limited",
+    "published_at": "2026-11-11T09:30:01+00:00",
+    "published_raw": "2026-11-11T09:30:01Z",
+    "document_type": "decision",
+    "issuer": "Regulator of Social Housing",
+    "issuer_ids": [
+      "uk-gov:regulator-of-social-housing"
+    ],
+    "summary": "The Regulator of Social Housing's view of how well Karibu Community Homes Limited is meeting regulatory standards.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Regulator of Social Housing",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 9761,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Cobalt Housing Limited",
+    "url": "https://www.gov.uk/government/publications/cobalt-housing-limited",
+    "native_id": "/government/publications/cobalt-housing-limited",
+    "published_at": "2026-11-11T09:30:01+00:00",
+    "published_raw": "2026-11-11T09:30:01Z",
+    "document_type": "decision",
+    "issuer": "Regulator of Social Housing",
+    "issuer_ids": [
+      "uk-gov:regulator-of-social-housing"
+    ],
+    "summary": "The Regulator of Social Housing's view of how well Cobalt Housing Limited is meeting regulatory standards.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Regulator of Social Housing",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 9762,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Eden Housing Association Limited",
+    "url": "https://www.gov.uk/government/publications/regulatory-judgement-eden-housing-association-limited",
+    "native_id": "/government/publications/regulatory-judgement-eden-housing-association-limited",
+    "published_at": "2026-11-11T09:30:01+00:00",
+    "published_raw": "2026-11-11T09:30:01Z",
+    "document_type": "decision",
+    "issuer": "Regulator of Social Housing",
+    "issuer_ids": [
+      "uk-gov:regulator-of-social-housing"
+    ],
+    "summary": "The Regulator of Social Housing's view of how well Eden Housing Association Limited is meeting regulatory standards.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Regulator of Social Housing",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 9763,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Bury Metropolitan Borough Council",
+    "url": "https://www.gov.uk/government/publications/bury-metropolitan-borough-council",
+    "native_id": "/government/publications/bury-metropolitan-borough-council",
+    "published_at": "2026-11-11T09:30:01+00:00",
+    "published_raw": "2026-11-11T09:30:01Z",
+    "document_type": "decision",
+    "issuer": "Regulator of Social Housing",
+    "issuer_ids": [
+      "uk-gov:regulator-of-social-housing"
+    ],
+    "summary": "The Regulator of Social Housing's view of how well Bury Metropolitan Borough Council is meeting regulatory standards.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Regulator of Social Housing",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 9764,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Trident Housing Association Limited",
+    "url": "https://www.gov.uk/government/publications/regulatory-judgement-trident-housing-association-limited--2",
+    "native_id": "/government/publications/regulatory-judgement-trident-housing-association-limited--2",
+    "published_at": "2026-11-11T09:30:01+00:00",
+    "published_raw": "2026-11-11T09:30:01Z",
+    "document_type": "decision",
+    "issuer": "Regulator of Social Housing",
+    "issuer_ids": [
+      "uk-gov:regulator-of-social-housing"
+    ],
+    "summary": "The Regulator of Social Housing's view of how well Trident Housing Association Limited is meeting regulatory standards.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Regulator of Social Housing",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 9765,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Joseph Rowntree Housing Trust",
+    "url": "https://www.gov.uk/government/publications/regulatory-judgement-joseph-rowntree-housing-trust--2",
+    "native_id": "/government/publications/regulatory-judgement-joseph-rowntree-housing-trust--2",
+    "published_at": "2026-11-11T09:30:00+00:00",
+    "published_raw": "2026-11-11T09:30:00Z",
+    "document_type": "decision",
+    "issuer": "Regulator of Social Housing",
+    "issuer_ids": [
+      "uk-gov:regulator-of-social-housing"
+    ],
+    "summary": "The Regulator of Social Housing's view of how well Joseph Rowntree Housing Trust is meeting regulatory standards.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Regulator of Social Housing",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 9766,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "CIL Appeal 1893155 — 16 September 26 — demolition and erection of buildings",
+    "url": "https://www.gov.uk/government/publications/cil-appeal-1893155-16-september-26-demolition-and-erection-of-buildings",
+    "native_id": "/government/publications/cil-appeal-1893155-16-september-26-demolition-and-erection-of-buildings",
+    "published_at": "2026-11-11T09:30:00+00:00",
+    "published_raw": "2026-11-11T09:30:00Z",
+    "document_type": "decision",
+    "issuer": "HM Revenue & Customs",
+    "issuer_ids": [
+      "uk-gov:hm-revenue-customs"
+    ],
+    "summary": "Part retrospective planning application (demolition of building and erection of 2) to provide 10 residential units with amenity space and waste/recycling.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "HM Revenue & Customs",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 9767,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "North Devon Homes",
+    "url": "https://www.gov.uk/government/publications/regulatory-judgement-north-devon-homes",
+    "native_id": "/government/publications/regulatory-judgement-north-devon-homes",
+    "published_at": "2026-11-11T09:30:00+00:00",
+    "published_raw": "2026-11-11T09:30:00Z",
+    "document_type": "decision",
+    "issuer": "Regulator of Social Housing",
+    "issuer_ids": [
+      "uk-gov:regulator-of-social-housing"
+    ],
+    "summary": "The Regulator of Social Housing's view of how well North Devon Homes is meeting regulatory standards.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Regulator of Social Housing",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 9768,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Peabody Trust",
+    "url": "https://www.gov.uk/government/publications/peabody-trust",
+    "native_id": "/government/publications/peabody-trust",
+    "published_at": "2026-11-11T09:30:00+00:00",
+    "published_raw": "2026-11-11T09:30:00Z",
+    "document_type": "decision",
+    "issuer": "Regulator of Social Housing",
+    "issuer_ids": [
+      "uk-gov:regulator-of-social-housing"
+    ],
+    "summary": "The Regulator of Social Housing's view of how well Peabody Trust is meeting regulatory standards.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Regulator of Social Housing",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 9769,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Citizen Housing Group Limited",
+    "url": "https://www.gov.uk/government/publications/regulatory-judgement-citizen-housing-group-limited",
+    "native_id": "/government/publications/regulatory-judgement-citizen-housing-group-limited",
+    "published_at": "2026-11-11T09:30:00+00:00",
+    "published_raw": "2026-11-11T09:30:00Z",
+    "document_type": "decision",
+    "issuer": "Regulator of Social Housing",
+    "issuer_ids": [
+      "uk-gov:regulator-of-social-housing"
+    ],
+    "summary": "The Regulator of Social Housing's view of how well Citizen Housing Group Limited is meeting regulatory standards.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Regulator of Social Housing",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 9770,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Page withdrawn: Ocean Housing Group Limited",
+    "url": "https://www.gov.uk/government/publications/regulatory-judgement-ocean-housing-group-limited",
+    "native_id": "/government/publications/regulatory-judgement-ocean-housing-group-limited",
+    "published_at": "2026-11-11T09:30:00+00:00",
+    "published_raw": "2026-11-11T09:30:00Z",
+    "document_type": "decision",
+    "issuer": "Regulator of Social Housing",
+    "issuer_ids": [
+      "uk-gov:regulator-of-social-housing"
+    ],
+    "summary": "The Regulator of Social Housing's view of how well Ocean Housing Group Limited met regulatory standards.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Regulator of Social Housing",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 9771,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Hyde Housing Association Limited",
+    "url": "https://www.gov.uk/government/publications/regulatory-judgement-hyde-housing-association-limited",
+    "native_id": "/government/publications/regulatory-judgement-hyde-housing-association-limited",
+    "published_at": "2026-11-11T09:30:00+00:00",
+    "published_raw": "2026-11-11T09:30:00Z",
+    "document_type": "decision",
+    "issuer": "Regulator of Social Housing",
+    "issuer_ids": [
+      "uk-gov:regulator-of-social-housing"
+    ],
+    "summary": "The Regulator of Social Housing's view of how well Hyde Housing Association Limited is meeting regulatory standards.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Regulator of Social Housing",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 9772,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Southern Housing",
+    "url": "https://www.gov.uk/government/publications/southern-housing",
+    "native_id": "/government/publications/southern-housing",
+    "published_at": "2026-11-11T09:30:00+00:00",
+    "published_raw": "2026-11-11T09:30:00Z",
+    "document_type": "decision",
+    "issuer": "Regulator of Social Housing",
+    "issuer_ids": [
+      "uk-gov:regulator-of-social-housing"
+    ],
+    "summary": "The Regulator of Social Housing's view of how well Southern Housing is meeting regulatory standards.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Regulator of Social Housing",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 9773,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Catton Grove Primary School: 10 November 2026",
+    "url": "https://www.gov.uk/government/publications/catton-grove-primary-school-10-november-2026",
+    "native_id": "/government/publications/catton-grove-primary-school-10-november-2026",
+    "published_at": "2026-11-10T00:00:00+00:00",
+    "published_raw": "2026-11-10T00:00:00Z",
+    "document_type": "decision",
+    "issuer": "Office of the Schools Adjudicator",
+    "issuer_ids": [
+      "uk-gov:office-of-the-schools-adjudicator"
+    ],
+    "summary": "The schools adjudicator’s admission variation decision about Catton Grove Primary School.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Office of the Schools Adjudicator",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 9774,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Defence maritime regulations",
+    "url": "https://www.gov.uk/government/publications/defence-maritime-regulations",
+    "native_id": "/government/publications/defence-maritime-regulations",
+    "published_at": "2026-11-11T13:45:20+00:00",
+    "published_raw": "2026-11-11T13:45:20Z",
+    "document_type": "regulation",
+    "issuer": "Ministry of Defence; Defence Safety Authority",
+    "issuer_ids": [
+      "uk-gov:ministry-of-defence",
+      "uk-gov:defence-safety-authority"
+    ],
+    "summary": "This publication specifies the defence maritime regulations for health, safety and environmental protection for UK Ministry of Defence maritime activity.",
+    "source_metadata": {
+      "document_type": "regulation",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Trade Commission — Press Releases",
-      "jurisdiction": "US",
-      "family": "competition_and_enforcement"
+      "issuer": "Ministry of Defence; Defence Safety Authority",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
     },
-    "primary_source_id": "us-ftc-58b0383166",
-    "n": 9706,
-    "first_seen": "2026-11-11T07:46:05.445744+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
+    "primary_source_id": "uk-govuk-regulation",
+    "n": 9775,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
     "source_ids": [
-      "us-ftc-58b0383166",
-      "us-ftc-62f72b4a5d"
+      "uk-govuk-regulation"
     ]
   },
   {
-    "title": "West Virginia’s U.S. Attorneys Create Task Force to Combat Fraud",
-    "url": "https://www.justice.gov/usao-sdwv/pr/west-virginias-us-attorneys-create-task-force-combat-fraud",
-    "native_id": "https://www.justice.gov/usao-sdwv/pr/west-virginias-us-attorneys-create-task-force-combat-fraud",
+    "title": "Notice of authorised amendments (NAA) 2026 documents",
+    "url": "https://www.gov.uk/government/publications/notice-of-authorised-amendments-naa-2026-documents",
+    "native_id": "/government/publications/notice-of-authorised-amendments-naa-2026-documents",
+    "published_at": "2026-11-11T11:14:34+00:00",
+    "published_raw": "2026-11-11T11:14:34Z",
+    "document_type": "regulation",
+    "issuer": "Ministry of Defence; Military Aviation Authority",
+    "issuer_ids": [
+      "uk-gov:ministry-of-defence",
+      "uk-gov:military-aviation-authority"
+    ],
+    "summary": "Issuing of an NAA gives notice to the changes in regulations and manuals. Produced by the Military Aviation Authority (MAA).",
+    "source_metadata": {
+      "document_type": "regulation",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Ministry of Defence; Military Aviation Authority",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-regulation",
+    "n": 9776,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
+    "source_ids": [
+      "uk-govuk-regulation"
+    ]
+  },
+  {
+    "title": "Notice of authorised amendments (NAA) reference table",
+    "url": "https://www.gov.uk/government/publications/notice-of-authorised-amendments-naa-reference-table",
+    "native_id": "/government/publications/notice-of-authorised-amendments-naa-reference-table",
+    "published_at": "2026-11-11T11:14:30+00:00",
+    "published_raw": "2026-11-11T11:14:30Z",
+    "document_type": "regulation",
+    "issuer": "Ministry of Defence; Military Aviation Authority",
+    "issuer_ids": [
+      "uk-gov:ministry-of-defence",
+      "uk-gov:military-aviation-authority"
+    ],
+    "summary": "The NAA table provides information of changes in regulations and manuals and release date produced by the Military Aviation Authority (MAA).",
+    "source_metadata": {
+      "document_type": "regulation",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Ministry of Defence; Military Aviation Authority",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-regulation",
+    "n": 9777,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
+    "source_ids": [
+      "uk-govuk-regulation"
+    ]
+  },
+  {
+    "title": "Notice of proposed amendments (NPA) comment response sheets",
+    "url": "https://www.gov.uk/government/publications/notice-of-proposed-amendments-npa-comment-response-sheets",
+    "native_id": "/government/publications/notice-of-proposed-amendments-npa-comment-response-sheets",
+    "published_at": "2026-11-11T11:14:27+00:00",
+    "published_raw": "2026-11-11T11:14:27Z",
+    "document_type": "regulation",
+    "issuer": "Ministry of Defence; Military Aviation Authority",
+    "issuer_ids": [
+      "uk-gov:ministry-of-defence",
+      "uk-gov:military-aviation-authority"
+    ],
+    "summary": "NPA comment response sheets contains the collated MAA responses to individual NPA publications.",
+    "source_metadata": {
+      "document_type": "regulation",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Ministry of Defence; Military Aviation Authority",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-regulation",
+    "n": 9778,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
+    "source_ids": [
+      "uk-govuk-regulation"
+    ]
+  },
+  {
+    "title": "MAA02: Military aviation authority (MAA) master glossary",
+    "url": "https://www.gov.uk/government/publications/maa02-military-aviation-authority-maa-master-glossary",
+    "native_id": "/government/publications/maa02-military-aviation-authority-maa-master-glossary",
+    "published_at": "2026-11-11T11:14:11+00:00",
+    "published_raw": "2026-11-11T11:14:11Z",
+    "document_type": "regulation",
+    "issuer": "Ministry of Defence; Military Aviation Authority",
+    "issuer_ids": [
+      "uk-gov:ministry-of-defence",
+      "uk-gov:military-aviation-authority"
+    ],
+    "summary": "This document provides a single reference source for abbreviations and definition of terms as defined by the MAA.",
+    "source_metadata": {
+      "document_type": "regulation",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Ministry of Defence; Military Aviation Authority",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-regulation",
+    "n": 9779,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
+    "source_ids": [
+      "uk-govuk-regulation"
+    ]
+  },
+  {
+    "title": "MAA Regulatory Publications (MRP) amendment record sheet",
+    "url": "https://www.gov.uk/government/publications/maa-regulatory-publications-mrp-amendment-record-sheet",
+    "native_id": "/government/publications/maa-regulatory-publications-mrp-amendment-record-sheet",
+    "published_at": "2026-11-11T11:13:05+00:00",
+    "published_raw": "2026-11-11T11:13:05Z",
+    "document_type": "regulation",
+    "issuer": "Ministry of Defence; Military Aviation Authority",
+    "issuer_ids": [
+      "uk-gov:ministry-of-defence",
+      "uk-gov:military-aviation-authority"
+    ],
+    "summary": "This document contains dates of issue of regulatory publications. Produced by the Military Aviation Authority (MAA).",
+    "source_metadata": {
+      "document_type": "regulation",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Ministry of Defence; Military Aviation Authority",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-regulation",
+    "n": 9780,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
+    "source_ids": [
+      "uk-govuk-regulation"
+    ]
+  },
+  {
+    "title": "H.R. 10986 (IH) - Lebanon TPS Act",
+    "url": "https://www.govinfo.gov/app/details/BILLS-119hr10986ih",
+    "native_id": "BILLS-119hr10986ih",
+    "published_at": "2026-11-11T10:10:00+00:00",
+    "published_raw": "Wed, 11 Nov 2026 10:10:00 +0000",
+    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "bill",
+      "document_stage": "legislative_document_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Congressional Bills",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-bills",
+    "n": 9781,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
+    "source_ids": [
+      "us-govinfo-bills"
+    ]
+  },
+  {
+    "title": "H.R. 10980 (IH) - Promoting Resilient Buildings Act",
+    "url": "https://www.govinfo.gov/app/details/BILLS-119hr10980ih",
+    "native_id": "BILLS-119hr10980ih",
+    "published_at": "2026-11-11T10:43:00+00:00",
+    "published_raw": "Wed, 11 Nov 2026 10:43:00 +0000",
+    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "bill",
+      "document_stage": "legislative_document_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Congressional Bills",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-bills",
+    "n": 9782,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
+    "source_ids": [
+      "us-govinfo-bills"
+    ]
+  },
+  {
+    "title": "Anchorage Woman Sentenced to 5 Years in Prison for Wire Fraud and Aggravated Identity Theft",
+    "url": "https://www.justice.gov/usao-ak/pr/anchorage-woman-sentenced-5-years-prison-wire-fraud-and-aggravated-identity-theft",
+    "native_id": "https://www.justice.gov/usao-ak/pr/anchorage-woman-sentenced-5-years-prison-wire-fraud-and-aggravated-identity-theft",
     "published_at": "2026-11-10T12:00:00+00:00",
     "published_raw": "Tue, 10 Nov 2026 12:00:00 +0000",
     "summary": "",
@@ -641,20 +1131,20 @@
       "family": "judicial_and_enforcement"
     },
     "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 9707,
-    "first_seen": "2026-11-11T07:46:05.445744+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
+    "n": 9783,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
     "source_ids": [
       "us-doj-b3d27e1dc3"
     ]
   },
   {
-    "title": "Former Philadelphia Housing Development Corporation Employee Sentenced for Housing Assistance Fraud Scheme",
-    "url": "https://www.justice.gov/usao-edpa/pr/former-philadelphia-housing-development-corporation-employee-sentenced-housing",
-    "native_id": "https://www.justice.gov/usao-edpa/pr/former-philadelphia-housing-development-corporation-employee-sentenced-housing",
+    "title": "Honduran National Unlawfully Residing in the United States Pleads Guilty to Fentanyl Trafficking and Firearm Charges",
+    "url": "https://www.justice.gov/usao-or/pr/honduran-national-unlawfully-residing-united-states-pleads-guilty-fentanyl-trafficking-0",
+    "native_id": "https://www.justice.gov/usao-or/pr/honduran-national-unlawfully-residing-united-states-pleads-guilty-fentanyl-trafficking-0",
     "published_at": "2026-11-10T12:00:00+00:00",
     "published_raw": "Tue, 10 Nov 2026 12:00:00 +0000",
-    "summary": "",
+    "summary": "A Honduran national unlawfully residing in the United States pleaded guilty in federal court today to possessing fentanyl with the intent to distribute and unlawfully possessing a firearm, announced U.S. Attorney Scott Bradford.",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
@@ -665,20 +1155,20 @@
       "family": "judicial_and_enforcement"
     },
     "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 9708,
-    "first_seen": "2026-11-11T07:46:05.445744+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
+    "n": 9784,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
     "source_ids": [
       "us-doj-b3d27e1dc3"
     ]
   },
   {
-    "title": "Colombian-Based Cocaine Importers Indicted in Drug Conspiracy and Conspiracy to Provide Material Support to the FARC",
-    "url": "https://www.justice.gov/usao-edla/pr/colombian-based-cocaine-importers-indicted-drug-conspiracy-and-conspiracy-provide",
-    "native_id": "https://www.justice.gov/usao-edla/pr/colombian-based-cocaine-importers-indicted-drug-conspiracy-and-conspiracy-provide",
+    "title": "U.S. Attorneys Create Task Force to Combat Fraud",
+    "url": "https://www.justice.gov/usao-ndwv/pr/us-attorneys-create-task-force-combat-fraud",
+    "native_id": "https://www.justice.gov/usao-ndwv/pr/us-attorneys-create-task-force-combat-fraud",
     "published_at": "2026-11-10T12:00:00+00:00",
     "published_raw": "Tue, 10 Nov 2026 12:00:00 +0000",
-    "summary": "NEW ORLEANS, LOUISIANA – A third superseding indictment recently unsealed in the Eastern District of Louisiana charges six members and associates of a Colombian-Russian drug trafficking organization with federal drug trafficking offenses, including conspiring to import hundreds of kilograms of cocaine into the United States, announced U.S. Attorney David I. Courcelle.",
+    "summary": "U.S. Attorneys Matthew L. Harvey and Moore Capito have joined with other federal, state, and local partners to create the Mountain State Fraud and Diversion Task Force, which will tirelessly combat fraud across the state of West Virginia. Fraud costs consumers billions of dollars each year, raising the costs of insurance premiums, healthcare costs, and the costs of other goods, as well as depleting the retirement funds and savings of victims across the country.",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
@@ -689,20 +1179,20 @@
       "family": "judicial_and_enforcement"
     },
     "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 9709,
-    "first_seen": "2026-11-11T07:46:05.445744+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
+    "n": 9785,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
     "source_ids": [
       "us-doj-b3d27e1dc3"
     ]
   },
   {
-    "title": "Florida Woman Pleads Guilty to Multi-Million-Dollar COVID Fraud Scheme",
-    "url": "https://www.justice.gov/usao-ma/pr/florida-woman-pleads-guilty-multi-million-dollar-covid-fraud-scheme",
-    "native_id": "https://www.justice.gov/usao-ma/pr/florida-woman-pleads-guilty-multi-million-dollar-covid-fraud-scheme",
+    "title": "Cheektowaga man arrested, charged with production of child pornography",
+    "url": "https://www.justice.gov/usao-wdny/pr/cheektowaga-man-arrested-charged-production-child-pornography",
+    "native_id": "https://www.justice.gov/usao-wdny/pr/cheektowaga-man-arrested-charged-production-child-pornography",
     "published_at": "2026-11-10T12:00:00+00:00",
     "published_raw": "Tue, 10 Nov 2026 12:00:00 +0000",
-    "summary": "BOSTON – A Florida woman has pleaded guilty to her involvement in a multi-state scheme to obtain millions of dollars in Paycheck Protection Program (PPP) funds for herself and others by submitting fraudulent applications to PPP lenders.",
+    "summary": "U.S. Attorney Michael DiGiacomo announced today that Bryce Weston, 22, of Cheektowaga, NY, was arrested and charged by criminal complaint with production of child sexual abuse material, which carries a minimum penalty of 15 years in prison, a maximum of 30 years, and a fine of $250,000.",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
@@ -713,20 +1203,20 @@
       "family": "judicial_and_enforcement"
     },
     "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 9710,
-    "first_seen": "2026-11-11T07:46:05.445744+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
+    "n": 9786,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
     "source_ids": [
       "us-doj-b3d27e1dc3"
     ]
   },
   {
-    "title": "Connecticut Man Charged With Three Counts of Arson",
-    "url": "https://www.justice.gov/usao-ma/pr/connecticut-man-charged-three-counts-arson",
-    "native_id": "https://www.justice.gov/usao-ma/pr/connecticut-man-charged-three-counts-arson",
+    "title": "Porter woman sentenced for fraud, threats, and assault of an officer after fraudulently receiving $435,000 new home",
+    "url": "https://www.justice.gov/usao-sdtx/pr/porter-woman-sentenced-fraud-threats-and-assault-officer-after-fraudulently-receiving",
+    "native_id": "https://www.justice.gov/usao-sdtx/pr/porter-woman-sentenced-fraud-threats-and-assault-officer-after-fraudulently-receiving",
     "published_at": "2026-11-10T12:00:00+00:00",
     "published_raw": "Tue, 10 Nov 2026 12:00:00 +0000",
-    "summary": "BOSTON – A Connecticut man has been charged in connection with arsons that occurred in Swampscott and Marlborough, Mass. during the early morning hours of Oct. 7, 2026.",
+    "summary": "A 56-year-old local resident has been ordered to federal prison for wire fraud, fraud in connection with a major disaster, threatening to kill a witness, and assaulting/impeding a law enforcement officer.",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
@@ -737,20 +1227,20 @@
       "family": "judicial_and_enforcement"
     },
     "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 9711,
-    "first_seen": "2026-11-11T07:46:05.445744+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
+    "n": 9787,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
     "source_ids": [
       "us-doj-b3d27e1dc3"
     ]
   },
   {
-    "title": "Idaho Man Sentenced to 18 Years in Prison for Attempting to Provide Material Support to ISIS in Plot to Attack Churches",
-    "url": "https://www.justice.gov/opa/pr/idaho-man-sentenced-18-years-prison-attempting-provide-material-support-isis-plot-attack",
-    "native_id": "https://www.justice.gov/opa/pr/idaho-man-sentenced-18-years-prison-attempting-provide-material-support-isis-plot-attack",
+    "title": "Previously Convicted Mexican National Unlawfully Residing in the United States Sentenced to Five Years in Federal Prison for Distributing Methamphetamine in Oregon",
+    "url": "https://www.justice.gov/usao-or/pr/previously-convicted-mexican-national-unlawfully-residing-united-states-sentenced-five",
+    "native_id": "https://www.justice.gov/usao-or/pr/previously-convicted-mexican-national-unlawfully-residing-united-states-sentenced-five",
     "published_at": "2026-11-10T12:00:00+00:00",
     "published_raw": "Tue, 10 Nov 2026 12:00:00 +0000",
-    "summary": "Alexander Scott Mercurio, 21, of Coeur d’Alene, Idaho, was sentenced today to 18 years in prison and lifetime supervised release by U.S. District Judge David C. Nye of the District of Idaho for attempting to provide material support and resources to a designated foreign terrorist organization.",
+    "summary": "Fernando Lombera Gonzalez , 34, a Mexican national unlawfully residing in the United States, was sentenced to 63 months in federal prison and five years of supervised release today for conspiring to distribute more than three pounds of methamphetamine in Oregon.",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
@@ -761,45 +1251,20 @@
       "family": "judicial_and_enforcement"
     },
     "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 9712,
-    "first_seen": "2026-11-11T07:46:05.445744+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
-    "source_ids": [
-      "us-doj-b3d27e1dc3",
-      "us-doj-e05071794d"
-    ]
-  },
-  {
-    "title": "South Carolina Man Pleads Guilty to Hate Crime Charge for Defacing Multiple Buildings at Charlotte Jewish Complex",
-    "url": "https://www.justice.gov/usao-wdnc/pr/south-carolina-man-pleads-guilty-hate-crime-charge-defacing-multiple-buildings",
-    "native_id": "https://www.justice.gov/usao-wdnc/pr/south-carolina-man-pleads-guilty-hate-crime-charge-defacing-multiple-buildings",
-    "published_at": "2026-11-10T12:00:00+00:00",
-    "published_raw": "Tue, 10 Nov 2026 12:00:00 +0000",
-    "summary": "",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Department of Justice",
-      "jurisdiction": "US",
-      "family": "judicial_and_enforcement"
-    },
-    "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 9713,
-    "first_seen": "2026-11-11T07:46:05.445744+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
+    "n": 9788,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
     "source_ids": [
       "us-doj-b3d27e1dc3"
     ]
   },
   {
-    "title": "Bridgeport Man Involved in Armed Robbery Spree Sentenced to More Than 7 Years in Federal Prison",
-    "url": "https://www.justice.gov/usao-ct/pr/bridgeport-man-involved-armed-robbery-spree-sentenced-more-7-years-federal-prison",
-    "native_id": "https://www.justice.gov/usao-ct/pr/bridgeport-man-involved-armed-robbery-spree-sentenced-more-7-years-federal-prison",
+    "title": "Mexican National Pleads Guilty to Possession With Intent to Distribute Heroin",
+    "url": "https://www.justice.gov/usao-nv/pr/mexican-national-pleads-guilty-possession-intent-distribute-heroin",
+    "native_id": "https://www.justice.gov/usao-nv/pr/mexican-national-pleads-guilty-possession-intent-distribute-heroin",
     "published_at": "2026-11-10T12:00:00+00:00",
     "published_raw": "Tue, 10 Nov 2026 12:00:00 +0000",
-    "summary": "ELIJAH RAFFINGTON, 22, of Bridgeport, was sentenced today by U.S. District Judge Stefan R. Underhill in Bridgeport to 89 months of imprisonment and five years of supervised release for his participation in the violent armed robberies of multiple retail stores and an Amazon delivery truck.",
+    "summary": "RENO – A Mexican national pleaded guilty today to possession with intent to distribute nearly two pounds of heroin.",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
@@ -810,20 +1275,20 @@
       "family": "judicial_and_enforcement"
     },
     "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 9714,
-    "first_seen": "2026-11-11T07:46:05.445744+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
+    "n": 9789,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
     "source_ids": [
       "us-doj-b3d27e1dc3"
     ]
   },
   {
-    "title": "Sequoyah County Resident Pleads Guilty To Illegally Possessing Firearm",
-    "url": "https://www.justice.gov/usao-edok/pr/sequoyah-county-resident-pleads-guilty-illegally-possessing-firearm",
-    "native_id": "https://www.justice.gov/usao-edok/pr/sequoyah-county-resident-pleads-guilty-illegally-possessing-firearm",
+    "title": "Umatilla Man Sentenced to Seven Years in Federal Prison for Distributing Child Sexual Abuse Material and Making Hoax Abuse Reports",
+    "url": "https://www.justice.gov/usao-or/pr/umatilla-man-sentenced-seven-years-federal-prison-distributing-child-sexual-abuse",
+    "native_id": "https://www.justice.gov/usao-or/pr/umatilla-man-sentenced-seven-years-federal-prison-distributing-child-sexual-abuse",
     "published_at": "2026-11-10T12:00:00+00:00",
     "published_raw": "Tue, 10 Nov 2026 12:00:00 +0000",
-    "summary": "MUSKOGEE, OKLAHOMA – The United States Attorney’s Office for the Eastern District of Oklahoma announced that Lucas James Blackbird, age 42, of Vian, Oklahoma, entered a guilty plea to one count of Felon in Possession of Firearm, punishable by up to fifteen years in prison and a $250,000 fine.The Indictment charged Blackbird with knowingly possessing a 12-gauge, break-open weapon made from a shotgun on May 12, 2026, after having been previously convicted of a crime punishable by more than one year imprisonment.",
+    "summary": "Thomas Goatley , 23, of Umatilla, was sentenced to 87 months in federal prison and five years of supervised release for distributing child sexual abuse material and making harassing phone calls in which he falsely claimed to be sexually abusing children, U.S. Attorney Scott Bradford announced today.",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
@@ -834,20 +1299,20 @@
       "family": "judicial_and_enforcement"
     },
     "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 9715,
-    "first_seen": "2026-11-11T07:46:05.445744+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
+    "n": 9790,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
     "source_ids": [
       "us-doj-b3d27e1dc3"
     ]
   },
   {
-    "title": "McCurtain County Resident Pleads Guilty To 2022 New Year's Eve Shooting",
-    "url": "https://www.justice.gov/usao-edok/pr/mccurtain-county-resident-pleads-guilty-2022-new-years-eve-shooting",
-    "native_id": "https://www.justice.gov/usao-edok/pr/mccurtain-county-resident-pleads-guilty-2022-new-years-eve-shooting",
+    "title": "Trucking company owner charged in labor scheme involving unauthorized non-citizen drivers",
+    "url": "https://www.justice.gov/usao-sdtx/pr/trucking-company-owner-charged-labor-scheme-involving-unauthorized-non-citizen-drivers",
+    "native_id": "https://www.justice.gov/usao-sdtx/pr/trucking-company-owner-charged-labor-scheme-involving-unauthorized-non-citizen-drivers",
     "published_at": "2026-11-10T12:00:00+00:00",
     "published_raw": "Tue, 10 Nov 2026 12:00:00 +0000",
-    "summary": "MUSKOGEE, OKLAHOMA – The United States Attorney’s Office for the Eastern District of Oklahoma announced that Kendel Reese Wolfe, age 19, of Broken Bow, Oklahoma, entered a guilty plea to five counts of Assault with a Dangerous Weapon with Intent to do Bodily Harm in Indian Country, each punishable by up to ten years in prison and a $250,000 fine, and two counts of Causing the Death of a Person in the Course of a Violation of Title 18 U.S.C. Section 924(c), punishable by any term of years up to Life in prison, and a $250,000 fine.At the plea hearing, Wolfe admitted that on December 31, 2022, he fired an assault rifle into an occupied truck as it exited a business in Idabel. Wolfe’s shooting injured one and killed two of the seven people who were passengers in the truck. The shooting constituted an assault with a dangerous weapon intending to do bodily harm of five of the victims and causing the death of two of the victims while using a firearm in the commission of a crime of violence.",
+    "summary": "A 56-year-old Laredo man has been indicted for allegedly employing unauthorized drivers to transport domestic freight.",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
@@ -858,20 +1323,20 @@
       "family": "judicial_and_enforcement"
     },
     "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 9716,
-    "first_seen": "2026-11-11T07:46:05.445744+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
+    "n": 9791,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
     "source_ids": [
       "us-doj-b3d27e1dc3"
     ]
   },
   {
-    "title": "Member of Chicago-based drug ring sentenced to 18 months in prison for trafficking oxycodone",
-    "url": "https://www.justice.gov/usao-mt/pr/member-chicago-based-drug-ring-sentenced-18-months-prison-trafficking-oxycodone",
-    "native_id": "https://www.justice.gov/usao-mt/pr/member-chicago-based-drug-ring-sentenced-18-months-prison-trafficking-oxycodone",
+    "title": "New York Man Sentenced to Over 10 Years in Prison for Laundering Proceeds for Elder Fraud Scam Network",
+    "url": "https://www.justice.gov/usao-az/pr/new-york-man-sentenced-over-10-years-prison-laundering-proceeds-elder-fraud-scam-network",
+    "native_id": "https://www.justice.gov/usao-az/pr/new-york-man-sentenced-over-10-years-prison-laundering-proceeds-elder-fraud-scam-network",
     "published_at": "2026-11-10T12:00:00+00:00",
     "published_raw": "Tue, 10 Nov 2026 12:00:00 +0000",
-    "summary": "An Indiana man who helped illegally obtain oxycodone from Montana pharmacies was sentenced today to 18 months in prison, followed by three years of supervised release.",
+    "summary": "TUCSON, Ariz. – Ivan Wilbur Seales, 58, a resident of New York and citizen of Saint Vincent and the Grenadines, was sentenced on Nov. 6, by United States District Judge Scott H. Rash, to 121 months in prison. Seales was previously found guilty by a jury for Conspiracy to Commit Money Laundering. As part of his sentence, Seales was also ordered to pay approximately $855,000 in restitution to the numerous victims who suffered a loss.",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
@@ -882,20 +1347,20 @@
       "family": "judicial_and_enforcement"
     },
     "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 9717,
-    "first_seen": "2026-11-11T07:46:05.445744+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
+    "n": 9792,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
     "source_ids": [
       "us-doj-b3d27e1dc3"
     ]
   },
   {
-    "title": "Miramar-Based Government Contractor Charged in Aviation Parts Fraud Scheme Involving Forged FAA Certificates",
-    "url": "https://www.justice.gov/usao-sdfl/pr/miramar-based-government-contractor-charged-aviation-parts-fraud-scheme-involving",
-    "native_id": "https://www.justice.gov/usao-sdfl/pr/miramar-based-government-contractor-charged-aviation-parts-fraud-scheme-involving",
+    "title": "Portland Man Sentenced to 55 Months in Federal Prison for Mail Theft, Identity Theft Scheme",
+    "url": "https://www.justice.gov/usao-or/pr/portland-man-sentenced-55-months-federal-prison-mail-theft-identity-theft-scheme",
+    "native_id": "https://www.justice.gov/usao-or/pr/portland-man-sentenced-55-months-federal-prison-mail-theft-identity-theft-scheme",
     "published_at": "2026-11-10T12:00:00+00:00",
     "published_raw": "Tue, 10 Nov 2026 12:00:00 +0000",
-    "summary": "A federal grand jury in the Southern District of Florida has returned an indictment charging a Miramar man with operating a multi‑year aviation‑parts fraud and investor scheme involving forged Federal Aviation Administration (FAA) certifications, fabricated military purchase orders, and more than $1 million in victim losses.",
+    "summary": "Michael John Peters , 43, was sentenced to 55 months in federal prison and three years of supervised release after pleading guilty to possession of stolen mail, possession of counterfeit postal service arrow keys, bank fraud, and aggravated identity theft.",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
@@ -906,20 +1371,20 @@
       "family": "judicial_and_enforcement"
     },
     "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 9718,
-    "first_seen": "2026-11-11T07:46:05.445744+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
+    "n": 9793,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
     "source_ids": [
       "us-doj-b3d27e1dc3"
     ]
   },
   {
-    "title": "California Man Pleads Guilty to Fentanyl Crime",
-    "url": "https://www.justice.gov/usao-sdwv/pr/california-man-pleads-guilty-fentanyl-crime",
-    "native_id": "https://www.justice.gov/usao-sdwv/pr/california-man-pleads-guilty-fentanyl-crime",
+    "title": "Kalihi Man Sentenced to Over Nine Years in Prison for Gunpoint Game Room Robbery",
+    "url": "https://www.justice.gov/usao-hi/pr/kalihi-man-sentenced-over-nine-years-prison-gunpoint-game-room-robbery",
+    "native_id": "https://www.justice.gov/usao-hi/pr/kalihi-man-sentenced-over-nine-years-prison-gunpoint-game-room-robbery",
     "published_at": "2026-11-10T12:00:00+00:00",
     "published_raw": "Tue, 10 Nov 2026 12:00:00 +0000",
-    "summary": "",
+    "summary": "HONOLULU – United States Attorney Ken Sorenson announced that Chris Pham, 22, of Kalihi, Oahu, was sentenced on November 9, 2026, by Senior United States District Judge Helen Gillmor to 111 months in federal prison for Hobbs Act robbery and brandishing a firearm during the commission of the robbery, followed by five years of supervised release.",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
@@ -930,312 +1395,20 @@
       "family": "judicial_and_enforcement"
     },
     "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 9719,
-    "first_seen": "2026-11-11T07:46:05.445744+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
+    "n": 9794,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
     "source_ids": [
       "us-doj-b3d27e1dc3"
     ]
   },
   {
-    "title": "New Jersey Tax Preparer Pleads Guilty to Filing False Tax Returns for Clients",
-    "url": "https://www.justice.gov/opa/pr/new-jersey-tax-preparer-pleads-guilty-filing-false-tax-returns-clients",
-    "native_id": "https://www.justice.gov/opa/pr/new-jersey-tax-preparer-pleads-guilty-filing-false-tax-returns-clients",
+    "title": "Justice Department Issues Fact Sheets About Lease Terminations for Servicemembers and their Dependents",
+    "url": "https://www.justice.gov/opa/pr/justice-department-issues-fact-sheets-about-lease-terminations-servicemembers-and-their",
+    "native_id": "https://www.justice.gov/opa/pr/justice-department-issues-fact-sheets-about-lease-terminations-servicemembers-and-their",
     "published_at": "2026-11-10T12:00:00+00:00",
     "published_raw": "Tue, 10 Nov 2026 12:00:00 +0000",
-    "summary": "A New Jersey man pleaded guilty today to filing false tax returns for clients that caused an intended loss of $327,647 to the United States.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Department of Justice",
-      "jurisdiction": "US",
-      "family": "judicial_and_enforcement"
-    },
-    "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 9720,
-    "first_seen": "2026-11-11T07:46:05.445744+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
-    "source_ids": [
-      "us-doj-b3d27e1dc3",
-      "us-doj-e05071794d"
-    ]
-  },
-  {
-    "title": "Bergen County Orthopedic Surgeon Pleads Guilty to Employment Tax Crime",
-    "url": "https://www.justice.gov/opa/pr/bergen-county-orthopedic-surgeon-pleads-guilty-employment-tax-crime",
-    "native_id": "https://www.justice.gov/opa/pr/bergen-county-orthopedic-surgeon-pleads-guilty-employment-tax-crime",
-    "published_at": "2026-11-10T12:00:00+00:00",
-    "published_raw": "Tue, 10 Nov 2026 12:00:00 +0000",
-    "summary": "A New Jersey orthopedic surgeon pleaded guilty to failing to pay over trust fund taxes.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Department of Justice",
-      "jurisdiction": "US",
-      "family": "judicial_and_enforcement"
-    },
-    "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 9721,
-    "first_seen": "2026-11-11T07:46:05.445744+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
-    "source_ids": [
-      "us-doj-b3d27e1dc3",
-      "us-doj-e05071794d"
-    ]
-  },
-  {
-    "title": "Dual Kazakhstani-Tajikistani Citizen Extradited from Egypt for Role in Alien Smuggling Conspiracy",
-    "url": "https://www.justice.gov/opa/pr/dual-kazakhstani-tajikistani-citizen-extradited-egypt-role-alien-smuggling-conspiracy",
-    "native_id": "https://www.justice.gov/opa/pr/dual-kazakhstani-tajikistani-citizen-extradited-egypt-role-alien-smuggling-conspiracy",
-    "published_at": "2026-11-10T12:00:00+00:00",
-    "published_raw": "Tue, 10 Nov 2026 12:00:00 +0000",
-    "summary": "Abdulhafiz Bahovatdiny, 36, a dual Kazakhstani-Tajikistani citizen made his initial appearance in court in Phoenix, Arizona, today after being extradited from Egypt to face charges for his role in a human smuggling conspiracy.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Department of Justice",
-      "jurisdiction": "US",
-      "family": "judicial_and_enforcement"
-    },
-    "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 9722,
-    "first_seen": "2026-11-11T07:46:05.445744+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
-    "source_ids": [
-      "us-doj-b3d27e1dc3",
-      "us-doj-e05071794d"
-    ]
-  },
-  {
-    "title": "Federal Judge in Del Rio Sentences PRM General to 25 Years in Federal Prison for Drug Trafficking",
-    "url": "https://www.justice.gov/usao-wdtx/pr/federal-judge-del-rio-sentences-prm-general-25-years-federal-prison-drug-trafficking",
-    "native_id": "https://www.justice.gov/usao-wdtx/pr/federal-judge-del-rio-sentences-prm-general-25-years-federal-prison-drug-trafficking",
-    "published_at": "2026-11-10T12:00:00+00:00",
-    "published_raw": "Tue, 10 Nov 2026 12:00:00 +0000",
-    "summary": "Louis Iglesias, a leader of the Partido Revolucionario Mexicano prison gang, was sentenced to 300 months in federal prison",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Department of Justice",
-      "jurisdiction": "US",
-      "family": "judicial_and_enforcement"
-    },
-    "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 9723,
-    "first_seen": "2026-11-11T07:46:05.445744+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
-    "source_ids": [
-      "us-doj-b3d27e1dc3"
-    ]
-  },
-  {
-    "title": "Court Orders Atlanta Area Tax Return Preparer to Permanently Shut Down Tax Preparation Business",
-    "url": "https://www.justice.gov/opa/pr/court-orders-atlanta-area-tax-return-preparer-permanently-shut-down-tax-preparation-business",
-    "native_id": "https://www.justice.gov/opa/pr/court-orders-atlanta-area-tax-return-preparer-permanently-shut-down-tax-preparation-business",
-    "published_at": "2026-11-10T12:00:00+00:00",
-    "published_raw": "Tue, 10 Nov 2026 12:00:00 +0000",
-    "summary": "The U.S. District Court for the Northern District of Georgia issued a permanent injunction against tax return preparer Tanja D. Hollis, of Griffin, Georgia, and Hollis’s business, Tanja Tax Preparations, LLC. The injunction bars Hollis from acting as a return preparer, preparing tax returns or assisting others in the preparation of tax returns, engaging in conduct that substantially interferes with the proper administration and enforcement of the internal revenue laws and from promoting any false tax scheme.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Department of Justice",
-      "jurisdiction": "US",
-      "family": "judicial_and_enforcement"
-    },
-    "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 9724,
-    "first_seen": "2026-11-11T07:46:05.445744+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
-    "source_ids": [
-      "us-doj-b3d27e1dc3",
-      "us-doj-e05071794d"
-    ]
-  },
-  {
-    "title": "Foreign National Sentenced to 7 Years in Defrauding American Taxpayers Out of Millions in Covid-Era Emergency Aid",
-    "url": "https://www.justice.gov/usao-dc/pr/foreign-national-sentenced-7-years-defrauding-american-taxpayers-out-millions-covid-era",
-    "native_id": "https://www.justice.gov/usao-dc/pr/foreign-national-sentenced-7-years-defrauding-american-taxpayers-out-millions-covid-era",
-    "published_at": "2026-11-10T12:00:00+00:00",
-    "published_raw": "Tue, 10 Nov 2026 12:00:00 +0000",
-    "summary": "Jose “Joe” Biaou, 42, a citizen of Benin and a resident of the District, was sentenced today in U.S. District Court to 84 months in federal prison in connection with a scheme to defraud Covid-era economic programs out of millions of dollars in taxpayer-provided emergency funds, announced U.S. Attorney Jeanine Ferris Pirro.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Department of Justice",
-      "jurisdiction": "US",
-      "family": "judicial_and_enforcement"
-    },
-    "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 9725,
-    "first_seen": "2026-11-11T07:46:05.445744+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
-    "source_ids": [
-      "us-doj-b3d27e1dc3"
-    ]
-  },
-  {
-    "title": "Kanawha County Woman Pleads Guilty to Child Pornography Crime",
-    "url": "https://www.justice.gov/usao-sdwv/pr/kanawha-county-woman-pleads-guilty-child-pornography-crime",
-    "native_id": "https://www.justice.gov/usao-sdwv/pr/kanawha-county-woman-pleads-guilty-child-pornography-crime",
-    "published_at": "2026-11-10T12:00:00+00:00",
-    "published_raw": "Tue, 10 Nov 2026 12:00:00 +0000",
-    "summary": "",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Department of Justice",
-      "jurisdiction": "US",
-      "family": "judicial_and_enforcement"
-    },
-    "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 9726,
-    "first_seen": "2026-11-11T07:46:05.445744+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
-    "source_ids": [
-      "us-doj-b3d27e1dc3"
-    ]
-  },
-  {
-    "title": "Norwalk Man Sentenced to 46 Months in Federal Prison for Firearm Offense",
-    "url": "https://www.justice.gov/usao-ct/pr/norwalk-man-sentenced-46-months-federal-prison-firearm-offense",
-    "native_id": "https://www.justice.gov/usao-ct/pr/norwalk-man-sentenced-46-months-federal-prison-firearm-offense",
-    "published_at": "2026-11-10T12:00:00+00:00",
-    "published_raw": "Tue, 10 Nov 2026 12:00:00 +0000",
-    "summary": "CHRISTOPHER MILES, 41, of Norwalk, was sentenced today by U.S. District Judge Victor A. Bolden in New Haven to 46 months of imprisonment and three years of supervised release for unlawfully possessing a firearm.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Department of Justice",
-      "jurisdiction": "US",
-      "family": "judicial_and_enforcement"
-    },
-    "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 9727,
-    "first_seen": "2026-11-11T07:46:05.445744+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
-    "source_ids": [
-      "us-doj-b3d27e1dc3"
-    ]
-  },
-  {
-    "title": "U.S. Attorney, ATF, State and Local Law Enforcement Partners announce results of Operation Summit City Sweep",
-    "url": "https://www.justice.gov/usao-ndin/pr/us-attorney-atf-state-and-local-law-enforcement-partners-announce-results-operation",
-    "native_id": "https://www.justice.gov/usao-ndin/pr/us-attorney-atf-state-and-local-law-enforcement-partners-announce-results-operation",
-    "published_at": "2026-11-10T12:00:00+00:00",
-    "published_raw": "Tue, 10 Nov 2026 12:00:00 +0000",
-    "summary": "",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Department of Justice",
-      "jurisdiction": "US",
-      "family": "judicial_and_enforcement"
-    },
-    "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 9728,
-    "first_seen": "2026-11-11T07:46:05.445744+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
-    "source_ids": [
-      "us-doj-b3d27e1dc3"
-    ]
-  },
-  {
-    "title": "Two New York Men Indicted For Controlled Substances Conspiracy That Involved Death Of A Minor",
-    "url": "https://www.justice.gov/usao-sdny/pr/two-new-york-men-indicted-controlled-substances-conspiracy-involved-death-minor",
-    "native_id": "https://www.justice.gov/usao-sdny/pr/two-new-york-men-indicted-controlled-substances-conspiracy-involved-death-minor",
-    "published_at": "2026-11-10T12:00:00+00:00",
-    "published_raw": "Tue, 10 Nov 2026 12:00:00 +0000",
-    "summary": "United States Attorney for the Southern District of New York, Jamie McDonald, Special Agent in Charge of the New York Task Force Division of the Drug Enforcement Administration (“DEA”), Christopher Roberts, and Commissioner of the New York City Police Department (“NYPD”) Jessica S. Tisch, announced today the unsealing of a three-count Indictment charging JORDAN SHARON and JUAN UMPIERREZ with participating in a controlled substances distribution conspiracy that resulted in the overdose death of a minor victim (the “Minor Victim”) in Westchester County, New York this past May.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Department of Justice",
-      "jurisdiction": "US",
-      "family": "judicial_and_enforcement"
-    },
-    "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 9729,
-    "first_seen": "2026-11-11T07:46:05.445744+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
-    "source_ids": [
-      "us-doj-b3d27e1dc3"
-    ]
-  },
-  {
-    "title": "Mexican illegal alien with prior heroin conviction sentenced to 11 years in prison for new drug, immigration crimes",
-    "url": "https://www.justice.gov/usao-sdoh/pr/mexican-illegal-alien-prior-heroin-conviction-sentenced-11-years-prison-new-drug",
-    "native_id": "https://www.justice.gov/usao-sdoh/pr/mexican-illegal-alien-prior-heroin-conviction-sentenced-11-years-prison-new-drug",
-    "published_at": "2026-11-10T12:00:00+00:00",
-    "published_raw": "Tue, 10 Nov 2026 12:00:00 +0000",
-    "summary": "COLUMBUS, Ohio – Luis Cabrales-Guerra, 32, was sentenced in U.S. District Court today to 132 months in prison for conspiring to distribute fentanyl and for illegally reentering the United States following his previous federal conviction for an aggravated drug felony.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Department of Justice",
-      "jurisdiction": "US",
-      "family": "judicial_and_enforcement"
-    },
-    "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 9730,
-    "first_seen": "2026-11-11T07:46:05.445744+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
-    "source_ids": [
-      "us-doj-b3d27e1dc3"
-    ]
-  },
-  {
-    "title": "Albuquerque Man Faces Federal Child Pornography Charge Following FBI Investigation",
-    "url": "https://www.justice.gov/usao-nm/pr/albuquerque-man-faces-federal-child-pornography-charge-following-fbi-investigation",
-    "native_id": "https://www.justice.gov/usao-nm/pr/albuquerque-man-faces-federal-child-pornography-charge-following-fbi-investigation",
-    "published_at": "2026-11-10T12:00:00+00:00",
-    "published_raw": "Tue, 10 Nov 2026 12:00:00 +0000",
-    "summary": "Don Roberto Lopez has been charged with accessing with intent to view child sexual abuse material (CSAM) after allegedly using cryptocurrency to purchase access to a dark web website offering CSAM.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Department of Justice",
-      "jurisdiction": "US",
-      "family": "judicial_and_enforcement"
-    },
-    "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 9731,
-    "first_seen": "2026-11-11T07:46:05.445744+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
-    "source_ids": [
-      "us-doj-b3d27e1dc3"
-    ]
-  },
-  {
-    "title": "Court Permanently Bars Florida Tax Return Preparer and Tax Preparation Business and Orders Disgorgement of More Than $550,000",
-    "url": "https://www.justice.gov/opa/pr/court-permanently-bars-florida-tax-return-preparer-and-tax-preparation-business-and-orders",
-    "native_id": "https://www.justice.gov/opa/pr/court-permanently-bars-florida-tax-return-preparer-and-tax-preparation-business-and-orders",
-    "published_at": "2026-11-10T12:00:00+00:00",
-    "published_raw": "Tue, 10 Nov 2026 12:00:00 +0000",
-    "summary": "The U.S. District Court for the Middle District of Florida has permanently barred Juan Humberto Garcia and his tax preparation business, The Tax Master of BVL, Inc., from preparing federal tax returns for others and ordered them to pay $558,520. The court also barred Marcos Yariel Figueroa from preparing federal tax returns for others for two years.",
+    "summary": "The Justice Department announced today that it has issued two fact sheets to help servicemembers, including those who are returning to civilian life as veterans, avoid unnecessary rent payments and costly fees. The first explains how servicemembers and their dependents can end a residential or business lease on receiving eligible military orders. And the second explains how they can end certain vehicle leases.",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
@@ -1246,68 +1419,20 @@
       "family": "judicial_and_enforcement"
     },
     "primary_source_id": "us-doj-e05071794d",
-    "n": 9732,
-    "first_seen": "2026-11-11T07:46:05.445744+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
+    "n": 9795,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
     "source_ids": [
       "us-doj-e05071794d"
     ]
   },
   {
-    "title": "Family Farmstead Dairy Announces Recall of All Cheddar Cheese Products Because of Possible Health Risk",
-    "url": "http://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/family-farmstead-dairy-announces-recall-all-cheddar-cheese-products-because-possible-health-risk",
-    "native_id": "http://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/family-farmstead-dairy-announces-recall-all-cheddar-cheese-products-because-possible-health-risk",
-    "published_at": "2026-11-10T05:00:00+00:00",
-    "published_raw": "Tue, 10 Nov 2026 00:00:00 EST",
-    "summary": "Worcester, New York – Family Farmstead Dairy is recalling all cheddar cheese products because it has the potential to be contaminated with Listeria monocytogenes, an organism which can cause serious and sometimes fatal infections in young children, frail or elderly people, and others with weakened",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Food and Drug Administration — Food Safety Recalls",
-      "jurisdiction": "US",
-      "family": "product_permissions_and_safety"
-    },
-    "primary_source_id": "us-fda-2cdcdcca63",
-    "n": 9733,
-    "first_seen": "2026-11-11T07:46:05.445744+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
-    "source_ids": [
-      "us-fda-2cdcdcca63"
-    ]
-  },
-  {
-    "title": "Samuel Connelly -- Ambridge, Pennsylvania",
-    "url": "https://www.fcc.gov/edoc/426164",
-    "native_id": "426164",
-    "published_at": null,
-    "published_raw": "",
-    "summary": "NOHI/NOUO for transmitting interference to licensed public safety communications network",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Enforcement Bureau",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
-    },
-    "primary_source_id": "us-fcc-364d1b4932",
-    "n": 9734,
-    "first_seen": "2026-11-11T07:46:05.445744+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
-    "source_ids": [
-      "us-fcc-364d1b4932"
-    ]
-  },
-  {
-    "title": "Bringing the current MFF to a successful close: agreement on the final Annual Budget",
-    "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2385",
-    "native_id": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2385",
-    "published_at": "2026-11-10T23:00:00+00:00",
-    "published_raw": "Tue, 10 Nov 2026 23:00:00 GMT",
-    "summary": "European Commission Press release Brussels, 11 Nov 2026 The Commission welcomes the agreement reached last evening between the European Parliament and the Council of the European Union on the annual EU budget 2027.",
+    "title": "Speech by Commissioner Kadis at the Plenary Session of the Organisation of African, Caribbean and Pacific States-European Union",
+    "url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2417",
+    "native_id": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2417",
+    "published_at": "2026-11-11T13:44:12+00:00",
+    "published_raw": "Wed, 11 Nov 2026 13:44:12 GMT",
+    "summary": "European Commission Speech Brussels, 11 Nov 2026 Ladies and Gentlemen, It is an honour to join you for closing this session of the Organisation of African, Caribbean and Pacific States and EU Joint Parliamenta...",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
@@ -1318,20 +1443,20 @@
       "family": "executive_and_regulatory"
     },
     "primary_source_id": "eu-commission-07d4f58ccf",
-    "n": 9735,
-    "first_seen": "2026-11-11T07:46:05.445744+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
+    "n": 9796,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
     "source_ids": [
       "eu-commission-07d4f58ccf"
     ]
   },
   {
-    "title": "Questions and answers on the agreement on the EU Annual Budget 2027",
-    "url": "https://ec.europa.eu/commission/presscorner/detail/en/qanda_26_2386",
-    "native_id": "https://ec.europa.eu/commission/presscorner/detail/en/qanda_26_2386",
-    "published_at": "2026-11-10T23:00:00+00:00",
-    "published_raw": "Tue, 10 Nov 2026 23:00:00 GMT",
-    "summary": "European Commission Questions and answers Brussels, 11 Nov 2026 Full overview of the Annual Budget 2027: In the Annual Budget 2027 the following amounts will be allocated to the various EU priorities (in commitments): €53.8...",
+    "title": "President von der Leyen travels to Black Sea region and reaffirms EU's solidarity with Romania and Bulgaria in ‘testing times'",
+    "url": "https://ec.europa.eu/commission/presscorner/detail/en/ac_26_2416",
+    "native_id": "https://ec.europa.eu/commission/presscorner/detail/en/ac_26_2416",
+    "published_at": "2026-11-11T13:31:55+00:00",
+    "published_raw": "Wed, 11 Nov 2026 13:31:55 GMT",
+    "summary": "European Commission News Brussels, 11 Nov 2026 President of the Commission Ursula von der Leyen was in Romania and Bulgaria on 9 and 10 November on a visit to the Black Sea region to reiterate the Commissio...",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
@@ -1342,20 +1467,188 @@
       "family": "executive_and_regulatory"
     },
     "primary_source_id": "eu-commission-07d4f58ccf",
-    "n": 9736,
-    "first_seen": "2026-11-11T07:46:05.445744+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
+    "n": 9797,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
     "source_ids": [
       "eu-commission-07d4f58ccf"
     ]
   },
   {
-    "title": "EU budget for 2027: Council and Parliament reach agreement",
-    "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/11/11/eu-budget-for-2027-council-and-parliament-reach-agreement/",
-    "native_id": "152162",
-    "published_at": "2026-11-11T06:25:00+00:00",
-    "published_raw": "2026-11-11T07:25:00+01:00",
-    "summary": "The Council and the European Parliament secured agreement on the EU’s annual budget for 2027 - the seventh and final annual budget of the current multiannual financial framework (MFF) 2021-2027.",
+    "title": "Speech by Commissioner Albuquerque at the Latvijas Banka's Economic Conference 2026: From policy to Impact",
+    "url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2414",
+    "native_id": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2414",
+    "published_at": "2026-11-11T12:48:44+00:00",
+    "published_raw": "Wed, 11 Nov 2026 12:48:44 GMT",
+    "summary": "European Commission Speech Riga, 11 Nov 2026 Good morning, ladies and gentlemen. Let me begin with a word of thanks to our hosts at Latvijas Banka and to Mārtiņš for inviting me to speak here today. I'd al...",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "European Commission press and decisions",
+      "jurisdiction": "EU",
+      "family": "executive_and_regulatory"
+    },
+    "primary_source_id": "eu-commission-07d4f58ccf",
+    "n": 9798,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
+    "source_ids": [
+      "eu-commission-07d4f58ccf"
+    ]
+  },
+  {
+    "title": "Opening remarks by Commissioner Hansen at the first in-person meeting of the Women in Farming Platform",
+    "url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2413",
+    "native_id": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2413",
+    "published_at": "2026-11-11T10:41:44+00:00",
+    "published_raw": "Wed, 11 Nov 2026 10:41:44 GMT",
+    "summary": "European Commission Speech Brussels, 11 Nov 2026 Ladies and gentlemen, Dear women farmers and entrepreneurs, Dear representatives of the European Investment Bank, and National financial institutions, Thank you...",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "European Commission press and decisions",
+      "jurisdiction": "EU",
+      "family": "executive_and_regulatory"
+    },
+    "primary_source_id": "eu-commission-07d4f58ccf",
+    "n": 9799,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
+    "source_ids": [
+      "eu-commission-07d4f58ccf"
+    ]
+  },
+  {
+    "title": "Remarks by Executive Vice-President Virkkunen and Commissioner McGrath on the Digital Fairness Act and a Consumer enforcement initiative",
+    "url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2412",
+    "native_id": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2412",
+    "published_at": "2026-11-11T10:24:11+00:00",
+    "published_raw": "Wed, 11 Nov 2026 10:24:11 GMT",
+    "summary": "European Commission Speech Brussels, 11 Nov 2026 Executive Vice-President Virkkunen Good morning, and welcome to the college readout. Today we present the Consumer Package. This package has two proposals: the ...",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "European Commission press and decisions",
+      "jurisdiction": "EU",
+      "family": "executive_and_regulatory"
+    },
+    "primary_source_id": "eu-commission-07d4f58ccf",
+    "n": 9800,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
+    "source_ids": [
+      "eu-commission-07d4f58ccf"
+    ]
+  },
+  {
+    "title": "Daily News 11 / 11 / 2026",
+    "url": "https://ec.europa.eu/commission/presscorner/detail/en/mex_26_2411",
+    "native_id": "https://ec.europa.eu/commission/presscorner/detail/en/mex_26_2411",
+    "published_at": "2026-11-11T09:53:22+00:00",
+    "published_raw": "Wed, 11 Nov 2026 09:53:22 GMT",
+    "summary": "European Commission Daily news Brussels, 11 Nov 2026 Commission to advance Ukraine's recovery, reconstruction, and modernisation at EU-Ukraine Investment Conference On 12 and 13 November, the European Commission, ...",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "European Commission press and decisions",
+      "jurisdiction": "EU",
+      "family": "executive_and_regulatory"
+    },
+    "primary_source_id": "eu-commission-07d4f58ccf",
+    "n": 9801,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
+    "source_ids": [
+      "eu-commission-07d4f58ccf"
+    ]
+  },
+  {
+    "title": "Speech by President von der Leyen at the United Nations Climate Change Conference (COP31)",
+    "url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2410",
+    "native_id": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2410",
+    "published_at": "2026-11-11T09:32:34+00:00",
+    "published_raw": "Wed, 11 Nov 2026 09:32:34 GMT",
+    "summary": "European Commission Speech Antalya, 11 Nov 2026 Mr President, Heads of State and Government, Excellencies, This summer was the summer of truth. Devastating floods in Nepal, droughts from Sudan to Central Amer...",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "European Commission press and decisions",
+      "jurisdiction": "EU",
+      "family": "executive_and_regulatory"
+    },
+    "primary_source_id": "eu-commission-07d4f58ccf",
+    "n": 9802,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
+    "source_ids": [
+      "eu-commission-07d4f58ccf"
+    ]
+  },
+  {
+    "title": "Commission strengthens consumer protection laws, making them fit for the digital age",
+    "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2407",
+    "native_id": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2407",
+    "published_at": "2026-11-10T23:00:00+00:00",
+    "published_raw": "Tue, 10 Nov 2026 23:00:00 GMT",
+    "summary": "European Commission Press release Brussels, 11 Nov 2026 Today, the European Commission presented its Proposal for a Digital Fairness Act (DFA) - a major update of the EU consumer protection rules to ensure that consumers in the EU enjoy the same high level of protection online as they do offline.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "European Commission press and decisions",
+      "jurisdiction": "EU",
+      "family": "executive_and_regulatory"
+    },
+    "primary_source_id": "eu-commission-07d4f58ccf",
+    "n": 9803,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
+    "source_ids": [
+      "eu-commission-07d4f58ccf"
+    ]
+  },
+  {
+    "title": "Questions and answers on the Consumer Package",
+    "url": "https://ec.europa.eu/commission/presscorner/detail/en/qanda_26_2408",
+    "native_id": "https://ec.europa.eu/commission/presscorner/detail/en/qanda_26_2408",
+    "published_at": "2026-11-10T23:00:00+00:00",
+    "published_raw": "Tue, 10 Nov 2026 23:00:00 GMT",
+    "summary": "European Commission Questions and answers Brussels, 11 Nov 2026 How will the proposals benefit businesses and align with the simplification agenda? The proposed measures will provide clearer, simpler, and harmonised rules ac...",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "European Commission press and decisions",
+      "jurisdiction": "EU",
+      "family": "executive_and_regulatory"
+    },
+    "primary_source_id": "eu-commission-07d4f58ccf",
+    "n": 9804,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
+    "source_ids": [
+      "eu-commission-07d4f58ccf"
+    ]
+  },
+  {
+    "title": "Media advisory - Meeting of the European Political Community of 12 November 2026 and the Informal meeting of Heads of State or Government of 13 November 2026",
+    "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/11/11/media-advisory-meeting-of-the-european-political-community-of-12-november-2026-and-the-informal-meeting-of-heads-of-state-or-government-of-13-november-2026/",
+    "native_id": "152225",
+    "published_at": "2026-11-11T17:20:00+00:00",
+    "published_raw": "2026-11-11T18:20:00+01:00",
+    "summary": "Main agenda items, approximate timing, public sessions and press opportunities.",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
@@ -1366,20 +1659,140 @@
       "family": "sanctions_and_legislation"
     },
     "primary_source_id": "eu-council-9d9e9444da",
-    "n": 9737,
-    "first_seen": "2026-11-11T07:46:05.445744+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
+    "n": 9805,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
     "source_ids": [
       "eu-council-9d9e9444da"
     ]
   },
   {
-    "title": "91-Day, 182-Day and 364-Day T-Bill Auction Result: Cut-off",
-    "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63955",
-    "native_id": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63955",
-    "published_at": "2026-11-11T12:55:00+00:00",
-    "published_raw": "Wed, 11 Nov 2026 12:55:00",
-    "summary": "T-Bill 91-Day 182-Day 364-Day I. Total Face Value Notified ₹8,000 Crore ₹8,000 Crore ₹7,000 Crore II. Cut-off Price (₹) and Implicit Yield at Cut-Off Price 98.5581 (YTM: 5.8681%) 96.8521 (YTM: 6.5183%) 93.7900 (YTM: 6.6394%) III. Total Face Value Accepted ₹8,000 Crore ₹8,000 Crore ₹7,000 Crore Ajit Prasad Deputy General Manager (Communications) Press Release: 2026-2027/1477",
+    "title": "Press briefing ahead of the Foreign Affairs Council and the Foreign Affairs (Defence) Councils of 16 and 17 November 2026",
+    "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/11/11/press-briefing-ahead-of-the-foreign-affairs-council-and-the-foreign-affairs-defence-councils-of-16-and-17-november-2026/",
+    "native_id": "151778",
+    "published_at": "2026-11-11T13:51:00+00:00",
+    "published_raw": "2026-11-11T14:51:00+01:00",
+    "summary": "Press briefing ahead of the upcoming Foreign Affairs Council and the Foreign Affairs Council (Defence) will take place on 13 November at 16.00.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Council of the European Union",
+      "jurisdiction": "EU",
+      "family": "sanctions_and_legislation"
+    },
+    "primary_source_id": "eu-council-9d9e9444da",
+    "n": 9806,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
+    "source_ids": [
+      "eu-council-9d9e9444da"
+    ]
+  },
+  {
+    "title": "162/2026 : 11 November 2026 - Judgment of the General Court in Case T-523/24",
+    "url": "https://curia.europa.eu/site/jcms/p1_1000088980",
+    "native_id": "https://curia.europa.eu/site/jcms/p1_1000088982",
+    "published_at": "2026-11-11T08:47:48+00:00",
+    "published_raw": "Wed, 11 Nov 2026 09:47:48 +0100",
+    "summary": "Kerry and Kerry Ingredients (UK) v Commission Food safety: the Commission was right to refuse the renewal of authorisation of three smoke flavouring products marketed by Kerry",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Court of Justice of the European Union",
+      "jurisdiction": "EU",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "eu-court-1433471e58",
+    "n": 9807,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
+    "source_ids": [
+      "eu-court-1433471e58"
+    ]
+  },
+  {
+    "title": "A Svensson extension to the Reserve Bank’s yield curve model. - Reserve Bank of New Zealand",
+    "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxQUjlHaWliRU9VSGhpU1lMMTVobEtVdjhGcUk0MkFVNkFIMEhiUl82NjBOalg5eFBQd045aXFpeDZYZ1RkR2NRWWNaaENfWFFaUE83U3hDcTg1VUJ6NnhWRlYtZGZvUGdld3QyNExQSDl2NkMtME0zN2ZWYktQRnpnMVJTVlRGSVEwc3VVV3dzbWUydlVXQnpWUXhkNG9HTjllczh3eEExcmk2ZVVNMmpSZzJxSkIyNE1yYVNsQ0swcWFhcjE1QlJWdVdGLUh2dXhWSWd2RlZZa3RjUVVaZDRwc2JIcmdKaTc5UnYyRA",
+    "native_id": "CBMi7AFBVV95cUxQUjlHaWliRU9VSGhpU1lMMTVobEtVdjhGcUk0MkFVNkFIMEhiUl82NjBOalg5eFBQd045aXFpeDZYZ1RkR2NRWWNaaENfWFFaUE83U3hDcTg1VUJ6NnhWRlYtZGZvUGdld3QyNExQSDl2NkMtME0zN2ZWYktQRnpnMVJTVlRGSVEwc3VVV3dzbWUydlVXQnpWUXhkNG9HTjllczh3eEExcmk2ZVVNMmpSZzJxSkIyNE1yYVNsQ0swcWFhcjE1QlJWdVdGLUh2dXhWSWd2RlZZa3RjUVVaZDRwc2JIcmdKaTc5UnYyRA",
+    "published_at": "2026-11-11T15:22:18+00:00",
+    "published_raw": "Wed, 11 Nov 2026 15:22:18 GMT",
+    "summary": "A Svensson extension to the Reserve Bank’s yield curve model. Reserve Bank of New Zealand",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Reserve Bank of New Zealand (official-site news mirror)",
+      "jurisdiction": "NZ",
+      "family": "monetary_operations"
+    },
+    "primary_source_id": "nz-rbnz-gnews",
+    "n": 9808,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
+    "source_ids": [
+      "nz-rbnz-gnews"
+    ]
+  },
+  {
+    "title": "Anita Tautuhi - Reserve Bank of New Zealand",
+    "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOaFBBcWNTdjNCYVFvMktNbGVjQ0Nya3hpNUNmMEhNX1BnU1RmUWVJc1lUSWFSejNNOE80bVE3eGY3eS1vUTJHcEctb2xFTFpIVzJjQUNDVzZ3LVJSSzJIMzVXQ1NpaW5GQ2ZLakFidEZ5QVpkRjhhWERSMXRWUm1qR0VYZlk",
+    "native_id": "CBMihAFBVV95cUxOaFBBcWNTdjNCYVFvMktNbGVjQ0Nya3hpNUNmMEhNX1BnU1RmUWVJc1lUSWFSejNNOE80bVE3eGY3eS1vUTJHcEctb2xFTFpIVzJjQUNDVzZ3LVJSSzJIMzVXQ1NpaW5GQ2ZLakFidEZ5QVpkRjhhWERSMXRWUm1qR0VYZlk",
+    "published_at": "2026-11-10T15:06:16+00:00",
+    "published_raw": "Tue, 10 Nov 2026 15:06:16 GMT",
+    "summary": "Anita Tautuhi Reserve Bank of New Zealand",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Reserve Bank of New Zealand (official-site news mirror)",
+      "jurisdiction": "NZ",
+      "family": "monetary_operations"
+    },
+    "primary_source_id": "nz-rbnz-gnews",
+    "n": 9809,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
+    "source_ids": [
+      "nz-rbnz-gnews"
+    ]
+  },
+  {
+    "title": "A Svensson extension to the Reserve Bank’s yield curve model - Reserve Bank of New Zealand",
+    "url": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxOUmhFbDJGdXppVHo5Q1g2T2lqcW15QnBNc21sUWw2NVl3NlEyRHJXWDVaNmxFcGZaM216OUdRQXJ5QUNtRnJfNFlYWWxreDJZUEY2em82ZTlRc3VBM2RJSWp2Y1hzdVhacjE2ZnBtcUZSZDVtU050Vzhta2tUaG1QbUdKZGR4eWkySUphdURGcHNVSHY4ckFRY29xM3Z0SnE3Y2xwYVZ6dVNLSk9XdzdsUGJ2Qld1NkZCLWxXNlNYVmFnVmtwRmRCRXJQbkJQSjZ2RTJPcV91aFpleWVDNVJqVFV6elJEaGo5amFtc1o0R3dtLWlaV2JVa0lhRQ",
+    "native_id": "CBMi-wFBVV95cUxOUmhFbDJGdXppVHo5Q1g2T2lqcW15QnBNc21sUWw2NVl3NlEyRHJXWDVaNmxFcGZaM216OUdRQXJ5QUNtRnJfNFlYWWxreDJZUEY2em82ZTlRc3VBM2RJSWp2Y1hzdVhacjE2ZnBtcUZSZDVtU050Vzhta2tUaG1QbUdKZGR4eWkySUphdURGcHNVSHY4ckFRY29xM3Z0SnE3Y2xwYVZ6dVNLSk9XdzdsUGJ2Qld1NkZCLWxXNlNYVmFnVmtwRmRCRXJQbkJQSjZ2RTJPcV91aFpleWVDNVJqVFV6elJEaGo5amFtc1o0R3dtLWlaV2JVa0lhRQ",
+    "published_at": "2026-11-11T15:20:17+00:00",
+    "published_raw": "Wed, 11 Nov 2026 15:20:17 GMT",
+    "summary": "A Svensson extension to the Reserve Bank’s yield curve model Reserve Bank of New Zealand",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Reserve Bank of New Zealand (official-site news mirror)",
+      "jurisdiction": "NZ",
+      "family": "monetary_operations"
+    },
+    "primary_source_id": "nz-rbnz-gnews",
+    "n": 9810,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
+    "source_ids": [
+      "nz-rbnz-gnews"
+    ]
+  },
+  {
+    "title": "Conversion/Switch of Government of India Securities",
+    "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63958",
+    "native_id": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63958",
+    "published_at": "2026-11-11T18:10:00+00:00",
+    "published_raw": "Wed, 11 Nov 2026 18:10:00",
+    "summary": "Government of India announces the conversion/switch of its securities through auction for an aggregate amount of ₹25,000 crore (face value). The security-wise details of the conversion/switch are given as under: Date of Auction Source Securities Amount (FV) of Source Securities (in ₹ crore) Destination Securities November 16, 2026 (Monday) 7.38% GS 2027 (Maturing on Jun 20, 2027) 5,000 7.18% GS 2037 (Maturing on Jul 24, 2037) 8.26% GS 2027 (Maturing on Aug 02, 2027) 2,000 7.40% GS 2062 (Maturing on Sep 19, 2062) 7.37% GS 2028 (Maturing on Oct 23, 2028) 4,000 6.83% GS 2039 (Maturing on Jan 19, 2039) 7.26% GS 2029 (Maturing on Jan 14, 2029) 4,000 7.73% GS 2034 (Maturing on Dec 19, 2034) 7.10% GS 2029 (Maturing on Apr 18, 2029) 5,000 6.64% GS 2035 (Maturing on Jun 16, 2035) 7.04% GS 2029 (Maturing on Jun 03, 2029) 5,000 7.41% GS 2036 (Maturing on Dec 19, 2036) Total 25,000 The market participants are required to place their bids in Reserve Bank of India Core Banking Solution (e-Kuber) giving the amount of the source security and the price of the source and destination security expressed in Indian Rupees up to two decimal places. The auction will be a multiple-price based auction, i.e.",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
@@ -1390,20 +1803,20 @@
       "family": "monetary_and_supervisory"
     },
     "primary_source_id": "in-rbi-cc71120b98",
-    "n": 9738,
-    "first_seen": "2026-11-11T07:46:05.445744+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
+    "n": 9811,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
     "source_ids": [
       "in-rbi-cc71120b98"
     ]
   },
   {
-    "title": "Money Market Operations as on November 10, 2026",
-    "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63954",
-    "native_id": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63954",
-    "published_at": "2026-11-11T11:30:00+00:00",
-    "published_raw": "Wed, 11 Nov 2026 11:30:00",
-    "summary": "(Amount in ₹ crore, Rate in Per cent) MONEY MARKETS @ --> Money Markets @ Volume (One Leg) Weighted Average Rate Range A. Overnight Segment (I+II+III+IV) 0.00 - - I. Call Money 0.00 - - II. Triparty Repo 0.00 - - III. Market Repo 0.00 - - IV. Repo in Corporate Bond 0.00 - - B. Term Segment I. Notice Money ** 0.00 - - II. Term Money @@ 0.00 - - III. Triparty Repo 0.00 - - IV. Market Repo 0.00 - - V. Repo in Corporate Bond 0.00 - - RBI OPERATIONS @ --> RBI OPERATIONS @ --> RBI Operations @ Auction Date Tenor (Days) Maturity Date Amount Current Rate / Cut off Rate C. Liquidity Adjustment Facility (LAF), Marginal Standing Facility (MSF) & Standing Deposit Facility (SDF) I. Today's Operations 1. Fixed Rate 2. Variable Rate & (a) Repo Operation (b) Reverse Repo Operation 3. MSF # Tue, 10/11/2026 1 Wed, 11/11/2026 7,331.00 5.75 4. SDF Δ# Tue, 10/11/2026 1 Wed, 11/11/2026 2,07,233.00 5.25 5. Net liquidity injected from today's operations [injection (+)/absorption (-)]* -1,99,902.00 II. Outstanding Operations 1. Fixed Rate 2. Variable Rate & (a) Repo Operation Mon, 09/11/2026 4 Fri, 13/11/2026 50,003.00 5.51 (b) Reverse Repo Operation 3. MSF # Mon, 09/11/2026 2 Wed, 11/11/2026 1,000.00 5.75",
+    "title": "Reserve Money and Money Supply for the fortnight ended on October 31, 2026",
+    "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63957",
+    "native_id": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63957",
+    "published_at": "2026-11-11T17:25:00+00:00",
+    "published_raw": "Wed, 11 Nov 2026 17:25:00",
+    "summary": "The Reserve Bank has today released data on Reserve Money and Money Supply for the fortnight ended on October 31, 2026. Ajit Prasad Deputy General Manager (Communications) Press Release: 2026-2027/1479",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
@@ -1414,107 +1827,228 @@
       "family": "monetary_and_supervisory"
     },
     "primary_source_id": "in-rbi-cc71120b98",
-    "n": 9739,
-    "first_seen": "2026-11-11T07:46:05.445744+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
+    "n": 9812,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
     "source_ids": [
       "in-rbi-cc71120b98"
     ]
   },
   {
-    "title": "Money Market Operations as on November 09, 2026",
-    "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63953",
-    "native_id": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63953",
+    "title": "Treasury Bills: Full Auction Result",
+    "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63956",
+    "native_id": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63956",
+    "published_at": "2026-11-11T13:40:00+00:00",
+    "published_raw": "Wed, 11 Nov 2026 13:40:00",
+    "summary": "(Amount in ₹ crore) Auction Results 91-Day 182-Day 364-Day I. Notified Amount 8,000 8,000 7,000 II. Competitive Bids Received (i) Number 132 91 146 (ii) Amount 27,046.800 20,021.500 21,548.500 III. Cut-off price (₹) / Yield 98.5581 96.8521 93.7900 (YTM: 5.8681%) (YTM: 6.5183%) (YTM: 6.6394%) IV. Competitive Bids Accepted (i) Number 28 18 48 (ii) Amount 7,600.000 7,600.000 6,650.000 V. Partial Allotment Percentage of Competitive Bids 48.1700% 62.7941% 60.0855% (2 bids) (1 bid) (3 bids) VI. Weighted Average Price (₹)/Yield 98.5602 96.8579 93.8091 (WAY: 5.8594%) (WAY: 6.5059%) (WAY: 6.6176%) VII. Non-Competitive Bids Received (i) Number 9 5 6 (ii) Amount 11,614.937 1,019.514 1,794.240 VIII. Non-Competitive Bids Accepted (i) Number 9 5 6 (ii) Amount 11,600.000 1,000.000 1,700.000 (iii) Partial Allotment Percentage 96.4002 95.3484 78.7862 Ajit Prasad Deputy General Manager (Communications) Press Release: 2026-2027/1478",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Reserve Bank of India",
+      "jurisdiction": "IN",
+      "family": "monetary_and_supervisory"
+    },
+    "primary_source_id": "in-rbi-cc71120b98",
+    "n": 9813,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
+    "source_ids": [
+      "in-rbi-cc71120b98"
+    ]
+  },
+  {
+    "title": "Reserve Bank of India (Domestic Money Transfer) Directions, 2026",
+    "url": "https://www.rbi.org.in/scripts/NotificationUser.aspx?Id=13752&Mode=0",
+    "native_id": "https://www.rbi.org.in/scripts/NotificationUser.aspx?Id=13752&Mode=0",
+    "published_at": "2026-11-11T17:00:00+00:00",
+    "published_raw": "Wed, 11 Nov 2026 17:00:00",
+    "summary": "RBI/DPSS/2026-27/476 CO.DPSS.POLC.No.S843/02-27-019/2026-2027 November 11, 2026 All Scheduled Commercial Banks, including Regional Rural Banks / Urban Co-operative Banks / State Co-operative Banks / District Central Co-operative Banks / Authorised Payment System Operators and Participants (Banks and Non-banks) Madam / Dear Sir, Reserve Bank of India (Domestic Money Transfer) Directions, 2026 With a view to harmonising and consolidating the extant instructions relating to Domestic Money Transfer (DMT), it has been decided to issue the Reserve Bank of India (Domestic Money Transfer) Directions, 2026 . 2. These Directions are issued under Section 18 read with Section 10(2) of the Payment and Settlement Systems Act, 2007. Yours faithfully, (Sara Rajendra Kumar Neti) Chief General Manager-in-Charge Encl.: As above Reserve Bank of India (Domestic Money Transfer) Directions, 2026 Table of Contents Chapter I – Preliminary A. Short Title and Commencement B. Applicability Chapter II – Conduct of Business C. Payment of amounts transferred from a bank account (Cash Pay-out Service) D. Payment of amounts to be credited to bank accounts (Cash Pay-in Service) E. Operational Safeguards and Monitor",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Reserve Bank of India",
+      "jurisdiction": "IN",
+      "family": "monetary_and_supervisory"
+    },
+    "primary_source_id": "in-rbi-738b09bded",
+    "n": 9814,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
+    "source_ids": [
+      "in-rbi-738b09bded"
+    ]
+  },
+  {
+    "title": "JFTC Approves the Commitment Plan Submitted by Amazon Japan G.K. - 公正取引委員会",
+    "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5fUVlPUkl3SFZxblFTcXVNejY3LWVqSGpqOTV4bC1KSktaTG1yU25PTHdqN3Vrb2N4ZXVTTktDOElpVENMbXZuVmRvTWRGX01TdFREeS1ZVmRyazZkSENGOTc3cmZKam9Bek5MSWVfYXpGUlZPbjlJM1VIaGI",
+    "native_id": "CBMifEFVX3lxTE5fUVlPUkl3SFZxblFTcXVNejY3LWVqSGpqOTV4bC1KSktaTG1yU25PTHdqN3Vrb2N4ZXVTTktDOElpVENMbXZuVmRvTWRGX01TdFREeS1ZVmRyazZkSENGOTc3cmZKam9Bek5MSWVfYXpGUlZPbjlJM1VIaGI",
+    "published_at": "2026-11-11T10:07:30+00:00",
+    "published_raw": "Wed, 11 Nov 2026 10:07:30 GMT",
+    "summary": "JFTC Approves the Commitment Plan Submitted by Amazon Japan G.K. 公正取引委員会",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Japan Fair Trade Commission (official-site news mirror)",
+      "jurisdiction": "JP",
+      "family": "competition_and_enforcement"
+    },
+    "primary_source_id": "jp-jftc-gnews",
+    "n": 9815,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
+    "source_ids": [
+      "jp-jftc-gnews"
+    ]
+  },
+  {
+    "title": "Reopening of two Federal bonds – Auction result",
+    "url": "https://www.bundesbank.de/en/press/press-releases/federal-securities/reopening-of-two-federal-bonds-auction-result-964972",
+    "native_id": "https://www.bundesbank.de/en/press/press-releases/federal-securities/reopening-of-two-federal-bonds-auction-result-964972",
+    "published_at": "2026-11-11T11:00:00+00:00",
+    "published_raw": "Wed, 11 Nov 2026 11:00:00 GMT",
+    "summary": "",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Deutsche Bundesbank",
+      "jurisdiction": "DE",
+      "family": "monetary_and_supervisory"
+    },
+    "primary_source_id": "de-bundesbank-027ac4024f",
+    "n": 9816,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
+    "source_ids": [
+      "de-bundesbank-027ac4024f"
+    ]
+  },
+  {
+    "title": "Announcement of auction – Reopening of Federal Treasury notes",
+    "url": "https://www.bundesbank.de/en/press/press-releases/federal-securities/announcement-of-auction-reopening-of-federal-treasury-notes-964968",
+    "native_id": "https://www.bundesbank.de/en/press/press-releases/federal-securities/announcement-of-auction-reopening-of-federal-treasury-notes-964968",
     "published_at": "2026-11-11T09:00:00+00:00",
-    "published_raw": "Wed, 11 Nov 2026 09:00:00",
-    "summary": "(Amount in ₹ crore, Rate in Per cent) MONEY MARKETS @ --> Money Markets @ Volume (One Leg) Weighted Average Rate Range A. Overnight Segment (I+II+III+IV) 7,37,804.31 5.50 3.00-7.50 I. Call Money 14,551.04 5.59 4.30-5.70 II. Triparty Repo 5,39,199.30 5.47 4.95-5.63 III. Market Repo 1,76,503.97 5.57 3.00-5.75 IV. Repo in Corporate Bond 7,550.00 5.74 5.65-7.50 B. Term Segment I. Notice Money ** 292.55 5.45 5.20-5.60 II. Term Money @@ 348.00 - 5.60-6.20 III. Triparty Repo 9,679.45 5.53 5.25-5.65 IV. Market Repo 330.00 5.25 5.25-5.25 V. Repo in Corporate Bond 0.00 - - RBI OPERATIONS @ --> RBI OPERATIONS @ --> RBI Operations @ Auction Date Tenor (Days) Maturity Date Amount Current Rate / Cut off Rate C. Liquidity Adjustment Facility (LAF), Marginal Standing Facility (MSF) & Standing Deposit Facility (SDF) I. Today's Operations 1. Fixed Rate 2. Variable Rate & (a) Repo Operation Mon, 09/11/2026 4 Fri, 13/11/2026 50,003.00 5.51 (b) Reverse Repo Operation 3. MSF # Mon, 09/11/2026 1 Tue, 10/11/2026 5,239.00 5.75 Mon, 09/11/2026 2 Wed, 11/11/2026 1,000.00 5.75 4. SDF Δ# Mon, 09/11/2026 1 Tue, 10/11/2026 2,03,264.00 5.25 Mon, 09/11/2026 2 Wed, 11/11/2026 1,401.00 5.25 5. Net liquidity injected",
+    "published_raw": "Wed, 11 Nov 2026 09:00:00 GMT",
+    "summary": "",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Reserve Bank of India",
-      "jurisdiction": "IN",
+      "issuer": "Deutsche Bundesbank",
+      "jurisdiction": "DE",
       "family": "monetary_and_supervisory"
     },
-    "primary_source_id": "in-rbi-cc71120b98",
-    "n": 9740,
-    "first_seen": "2026-11-11T07:46:05.445744+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
+    "primary_source_id": "de-bundesbank-027ac4024f",
+    "n": 9817,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
     "source_ids": [
-      "in-rbi-cc71120b98"
+      "de-bundesbank-027ac4024f"
     ]
   },
   {
-    "title": "Money Stock (Oct.)",
-    "url": "http://www.boj.or.jp/en/statistics/money/ms/ms2610.pdf",
-    "native_id": "http://www.boj.or.jp/en/statistics/money/ms/ms2610.pdf",
-    "published_at": "2026-11-10T23:50:00+00:00",
-    "published_raw": "Wed, 11 Nov 2026 08:50:00 +0900",
+    "title": "Economic challenges in Germany and the future of Europe | Keynote speech at the Latvijas Banka Economic Conference 2026",
+    "url": "https://www.bundesbank.de/en/press/speeches/economic-challenges-in-germany-and-the-future-of-europe-964960",
+    "native_id": "https://www.bundesbank.de/en/press/speeches/economic-challenges-in-germany-and-the-future-of-europe-964960",
+    "published_at": "2026-11-11T08:20:00+00:00",
+    "published_raw": "Wed, 11 Nov 2026 08:20:00 GMT",
     "summary": "",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Bank of Japan",
-      "jurisdiction": "JP",
-      "family": "monetary_operations"
+      "issuer": "Deutsche Bundesbank",
+      "jurisdiction": "DE",
+      "family": "monetary_and_supervisory"
     },
-    "primary_source_id": "jp-boj-d488538690",
-    "n": 9741,
-    "first_seen": "2026-11-11T07:46:05.445744+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
+    "primary_source_id": "de-bundesbank-027ac4024f",
+    "n": 9818,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
     "source_ids": [
-      "jp-boj-d488538690"
+      "de-bundesbank-027ac4024f",
+      "de-bundesbank-617511c682"
     ]
   },
   {
-    "title": "Announcement of the Winners in the 12th Robot Awards Program",
-    "url": "https://www.meti.go.jp/english/press/2026/11/20261111001.html",
-    "native_id": "https://www.meti.go.jp/english/press/2026/11/20261111001.html",
-    "published_at": null,
-    "published_raw": null,
+    "title": "Häuser, Hitze, Hochwasser: Wie geht die Finanzaufsicht mit Klimarisiken um? | 26. Immobilienkongress, Hochschule für Wirtschaft und Umwelt",
+    "url": "https://www.bundesbank.de/de/presse/reden/haeuser-hitze-hochwasser-wie-geht-die-finanzaufsicht-mit-klimarisiken-um--964964",
+    "native_id": "https://www.bundesbank.de/de/presse/reden/haeuser-hitze-hochwasser-wie-geht-die-finanzaufsicht-mit-klimarisiken-um--964964",
+    "published_at": "2026-11-11T09:10:00+00:00",
+    "published_raw": "Wed, 11 Nov 2026 09:10:00 GMT",
     "summary": "",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Japan Ministry of Economy Trade and Industry",
-      "jurisdiction": "JP",
-      "family": "trade_and_industry_policy"
+      "issuer": "Deutsche Bundesbank — Speeches, Interview and Contributions",
+      "jurisdiction": "DE",
+      "family": "monetary_and_supervisory"
     },
-    "primary_source_id": "jp-meti-index",
-    "n": 9742,
-    "first_seen": "2026-11-11T07:46:05.445744+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
+    "primary_source_id": "de-bundesbank-617511c682",
+    "n": 9819,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
     "source_ids": [
-      "jp-meti-index"
+      "de-bundesbank-617511c682"
     ]
   },
   {
-    "title": "Increased risk of serious events that could weaken financial stability",
-    "url": "https://www.norges-bank.no/en/news-events/news/Press-releases/2026/2026-11-11-fsr2/",
-    "native_id": "d08b2abe-576f-4ad3-854b-6bd3d24936d4",
-    "published_at": "2026-11-11T07:30:00+00:00",
-    "published_raw": "Wed, 11 Nov 2026 07:30:00 GMT",
-    "summary": "In its semi-annual Financial Stability Report, Norges Bank assesses vulnerabilities, risks and resilience in the financial system.",
+    "title": "Europas Finanzsystem im Wandel: Wie bleiben wir souverän? | Rede beim SZ-Wirtschaftsgipfel",
+    "url": "https://www.bundesbank.de/de/presse/reden/europas-finanzsystem-im-wandel-wie-bleiben-wir-souveraen--964652",
+    "native_id": "https://www.bundesbank.de/de/presse/reden/europas-finanzsystem-im-wandel-wie-bleiben-wir-souveraen--964652",
+    "published_at": "2026-11-11T09:00:00+00:00",
+    "published_raw": "Wed, 11 Nov 2026 09:00:00 GMT",
+    "summary": "",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Norges Bank",
-      "jurisdiction": "NO",
-      "family": "monetary_operations"
+      "issuer": "Deutsche Bundesbank — Speeches, Interview and Contributions",
+      "jurisdiction": "DE",
+      "family": "monetary_and_supervisory"
     },
-    "primary_source_id": "no-norges-5079edc79e",
-    "n": 9743,
-    "first_seen": "2026-11-11T07:46:05.445744+00:00",
-    "last_seen": "2026-11-11T07:46:05.445744+00:00",
+    "primary_source_id": "de-bundesbank-617511c682",
+    "n": 9820,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
     "source_ids": [
-      "no-norges-5079edc79e"
+      "de-bundesbank-617511c682"
+    ]
+  },
+  {
+    "title": "South Africa notifies launch of safeguard investigation into certain non-wired float glass products",
+    "url": "https://www.wto.org/english/news_e/news26_e/safe_zaf_11nov26_546_e.htm",
+    "native_id": "https://www.wto.org/english/news_e/news26_e/safe_zaf_11nov26_546_e.htm",
+    "published_at": "2026-11-11T00:00:00+00:00",
+    "published_raw": "Wed, 11 Nov 2026 00:00:00 GMT",
+    "summary": "On 11 November 2026, South Africa notified the WTO’s Committee on Safeguards regarding the initiation on 3 November 2026 of a safeguard investigation into imports of certain non-wired float glass products.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "World Trade Organization disputes and decisions",
+      "jurisdiction": "INT",
+      "family": "trade_and_dispute_decisions"
+    },
+    "primary_source_id": "io-wto-497f28e20d",
+    "n": 9821,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-11T20:12:59.574202+00:00",
+    "source_ids": [
+      "io-wto-497f28e20d"
     ]
   }
 ]
