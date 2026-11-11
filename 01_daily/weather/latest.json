@@ -1,6 +1,6 @@
 {
  "date": "2026-11-11",
- "generated_at": "2026-11-11T16:32:05.963772-05:00",
+ "generated_at": "2026-11-11T16:44:51.962760-05:00",
  "stance_vocabulary": [
   "favorable",
   "neutral",
@@ -29,7 +29,7 @@
   "vix_delta_1d": -1.97,
   "vix_ratio_source": "vix/vix3m",
   "vix": "falling",
-  "oil_pct_1d": 0.41,
+  "oil_pct_1d": 0.4,
   "oil": "flat",
   "fear_greed": null,
   "fear_greed_label": null,
