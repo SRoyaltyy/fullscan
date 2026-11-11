@@ -1,6 +1,6 @@
 # MAP HEAT — 2026-11-11
 
-Export `finviz_2026-11-10.csv` · 11616 names · generated 2026-11-11T04:24:44.253297-05:00
+Export `finviz_2026-11-11.csv` · 11616 names · generated 2026-11-11T04:40:51.442565-05:00
 
 ## TAPE (live futures)
 | Contract | Last | Change |
@@ -280,31 +280,31 @@ COLD (1w):
 - **Real Estate** -0.5% 1d -1.9% 1w · VNQ, SCHH, XLRE
 
 ## TICKER-TAGGED NEWS (Finviz v=3)
-- 4 min **MRP** Kaplan Fox Urges Investors of Millrose Properties, Inc. (MRP) to Seek a Leadership Role Before December 8, 2026 (Newsfile)
-- 6 min **AXTA** AkzoNobel-Axalta $25 Billion Merger Could Harm Competition, U.K. Regulator Warns (The Wall Street Journal)
-- 8 min **PFE,MRK,BMY** Up 42% since January: Why Merck is defeating the patent cliff (Investing.com)
-- 8 min **KR** Albertsons deal or no deal: Why Krogers grocery moat is winning (Investing.com)
-- 8 min **CRWV** Nasdaq Futures Rally as AI Optimism Returns (The Wall Street Journal)
-- 10 min **AMZN** Amazon EU may face Italian trial over alleged unpaid import VAT  report (Retail Insight Network)
-- 16 min **ECO,AVEX,CTVA,FNV,NYAX** Franko-Nevada headlines Wednesday's earnings slate (MarketWatch)
-- 17 min **AMD,TSM** TSM Stock Jumps Premarket After Board Approves $1B Investment In Anthropic And OpenAI, Dividend Raise (Stocktwits)
-- 20 min **ONON** ONON Stock Rises Premarket: Retail Says 'Smack That Buy Button' (Stocktwits)
-- 21 min **SBET,MSTR,MSCI,STRC** MSTR Stock In Focus: MSCI Prepares First Index Review Under New Crypto Treasury Rules (Stocktwits)
-- 22 min **ECO,AVEX,CTVA,FNV,NYAX** Stock Market Today: Dow, S&P 500 and Nasdaq set to rise as investors seek to move past hotter-than-expected CPI; CoreWeave shares jump: live updates (MarketWatch)
-- 24 min **UCL** UCLOUDLINK GROUP INC. Announces Unaudited Third Quarter 2026 Financial Results (GlobeNewswire)
-- 30 min **BLK,IBIT** Bitcoin Safe-Haven Narrative Is Falling Apart? Liquidations and ETF Outflows Wipe Out Bulls (99bitcoins)
-- 43 min **NVDA** Exclusive-Military-linked Chinese university bought Nvidia H200 chips despite US blacklist, records show (Reuters)
-- 46 min **CRWV,CL** European shares near record high as earnings absorb tech volatility (Investing.com)
-- 54 min **APP** Kaplan Fox Urges Investors Who Lost Money on AppLovin Corporation (APP) to Contact the Firm Before November 16, 2026 (Newsfile)
+- 11 min **MPC** BoE rate peak of 4.25% will not be enough, NIESR says in Autumn 2026 outlook (Investing.com)
+- 17 min **RGTI** RGTI Stock Falls Premarket On Weak Q3, Outlook: Retail Says Therere Better Quantum Plays Than This (Stocktwits)
+- 20 min **MRP** Kaplan Fox Urges Investors of Millrose Properties, Inc. (MRP) to Seek a Leadership Role Before December 8, 2026 (Newsfile)
+- 22 min **AXTA** AkzoNobel-Axalta $25 Billion Merger Could Harm Competition, U.K. Regulator Warns (The Wall Street Journal)
+- 24 min **MRK,PFE,BMY** Up 42% since January: Why Merck is defeating the patent cliff (Investing.com)
+- 24 min **ACI,KR** Albertsons deal or no deal: Why Krogers grocery moat is winning (Investing.com)
+- 24 min **CRWV** Nasdaq Futures Rally as AI Optimism Returns (The Wall Street Journal)
+- 26 min **AMZN** Amazon EU may face Italian trial over alleged unpaid import VAT  report (Retail Insight Network)
+- 32 min **ECO,ODD,AVEX,CTVA,FNV** Franko-Nevada headlines Wednesday's earnings slate (MarketWatch)
+- 33 min **AMD,TSM** TSM Stock Jumps Premarket After Board Approves $1B Investment In Anthropic And OpenAI, Dividend Raise (Stocktwits)
+- 36 min **ONON** ONON Stock Rises Premarket: Retail Says 'Smack That Buy Button' (Stocktwits)
+- 37 min **SBET,MSTR,STRC,MSCI** MSTR Stock In Focus: MSCI Prepares First Index Review Under New Crypto Treasury Rules (Stocktwits)
+- 38 min **ECO,ODD,AVEX,CTVA,FNV** Stock Market Today: Dow, S&P 500 and Nasdaq set to rise as investors seek to move past hotter-than-expected CPI; CoreWeave shares jump: live updates (MarketWatch)
+- 40 min **UCL** UCLOUDLINK GROUP INC. Announces Unaudited Third Quarter 2026 Financial Results (GlobeNewswire)
+- 46 min **IBIT,BLK** Bitcoin Safe-Haven Narrative Is Falling Apart? Liquidations and ETF Outflows Wipe Out Bulls (99bitcoins)
+- 59 min **NVDA** Exclusive-Military-linked Chinese university bought Nvidia H200 chips despite US blacklist, records show (Reuters)
+- 1 hour **CRWV,CL** European shares near record high as earnings absorb tech volatility (Investing.com)
+- 1 hour **XOM** Oil giant Exxon plots Venezuela return ahead of Democrat crackdown (The Telegraph)
+- 1 hour **APP** Kaplan Fox Urges Investors Who Lost Money on AppLovin Corporation (APP) to Contact the Firm Before November 16, 2026 (Newsfile)
 - 1 hour **TW** Taylor Wimpey down 3% as weak Autumn demand hits 2026 homebuilding outlook (Investing.com)
 - 1 hour **CRWV** CoreWeave Raises 2026 Outlook to $13.3 Billion, Stock Rebounds From 52-Week Low (BeInCrypto)
 - 1 hour **ETOR** Cathie Wood Sees Opportunity In eToro As Crypto Trading Cools And Wall Street Cuts Price Target (Stocktwits)
 - 1 hour **CRWV,NBIS** NBIS Stock Jumps Over 11% On CoreWeave Boost: Analysts Expect Over Six-Fold Growth In Sales In Upcoming Q3 Report (Stocktwits)
 - 1 hour **AXTA** Update on the UK Competition and Markets Authority's review of the AkzoNobel-Axalta merger (GlobeNewswire)
 - 1 hour **JCI** Armada and Johnson Controls Launch Galleon Forge Two in Dublin, Bringing Sovereign AI Infrastructure Production to Europe (PR Newswire)
-- 1 hour **CLVT** Clarivate's IPOne Connects Trusted Patent, Trademark and Litigation Intelligence to Claude (PR Newswire)
-- 1 hour **GXO** GXO and ASOS Extend Strategic Partnership to 2034 (GlobeNewswire)
-- 1 hour **HLI** Houlihan Lokey to Acquire Vicente & Partners (Business Wire)
 
 ## NOTES
 - Captains = top 2 by market cap. RUT needs ≥ $5m 20-day dollar volume.
