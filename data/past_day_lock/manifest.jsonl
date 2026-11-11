@@ -15285,3 +15285,6 @@
 {"date":"2026-11-09","kind":"day","name":"","record":"paper_skipped","sha256":"12a97f89c852ce731f370fb7b1b9222c45066ff10ed43f5c43f9fe5eb36446f3"}
 {"date":"2026-11-10","kind":"day","name":"","record":"flatten_robust","sealed_at":"2026-11-11T14:14:45Z","sha256":"12b7bd05d0714569b777699c1964c06b391f8f6c8ee2e3522b512ba2b35efe55"}
 {"date":"2026-11-11","kind":"day","name":"","record":"strategy_tickets","sha256":"50f78d74a7e5a0a8c3a6ea94bcf603d445036f7139d8c9df1459726683daae16"}
+{"date":"2026-11-10","kind":"day","name":"","record":"paper_equity","sha256":"d4da1e197f2ec2187e918583511ce2504514fe08b112e36f35744da1a904d0a5"}
+{"date":"2026-11-10","kind":"day","name":"","record":"paper_trades","sha256":"5082a117e7f23b26d35943b56007a1d728f47a1ac6e855547e5c49d743161fd4"}
+{"date":"2026-11-10","kind":"day","name":"","record":"paper_skipped","sha256":"406db245dc8b7e8088db7805018ecec511a6b7cfb87c49868d6c5f0635e69112"}
