@@ -52,7 +52,7 @@
   }
  },
  "date": "2026-11-11",
- "generated_at": "2026-11-11T09:21:41-05:00",
+ "generated_at": "2026-11-11T09:38:18-05:00",
  "strategies": [
   {
    "buys": [
@@ -6416,28 +6416,28 @@
   },
   {
    "buys": [
-    "ALGN",
-    "TMDX",
-    "WRBY",
-    "ETON",
-    "ZVRA"
+    "CLX",
+    "PFGC",
+    "KDP",
+    "PRCH",
+    "COTY",
+    "TTD"
    ],
    "family": "flatten_robust",
    "name": "flatten_robust",
    "note": "live flatten_robust card",
    "sells": [
+    "FG",
+    "SPNT",
     "ACHC",
-    "EHC",
-    "UHS",
-    "ADMA",
+    "ABNB",
     "ALGN",
-    "APP",
-    "CAH",
-    "CDNA",
-    "PGNY",
-    "FMS",
-    "WRBY",
-    "ECX"
+    "CGON",
+    "CLOV",
+    "EVC",
+    "FTDR",
+    "PTLO",
+    "THM"
    ],
    "source": "data/day_board/2026-11-11_strategy_tickets.json",
    "status": "OK"
