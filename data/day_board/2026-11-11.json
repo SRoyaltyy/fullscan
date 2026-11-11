@@ -1,6 +1,6 @@
 {
   "date": "2026-11-11",
-  "generated_at": "2026-11-11T09:11:01.152029-05:00",
+  "generated_at": "2026-11-11T09:11:11.125719-05:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -787,10 +787,10 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=5894",
-          "size": 2280097,
-          "said": "206 rows",
+          "size": 2280768,
+          "said": "203 rows",
           "bullets": [
-            "SSD, ELF, AVNT, FRPT, NUE, NEM, HNST, COCO"
+            "ELF, NUE, SSD, FRPT, MEOH, BKH, ALM, NEM"
           ]
         },
         {
@@ -868,9 +868,9 @@
           "bullets": []
         }
       ],
-      "said": "206 rows",
+      "said": "203 rows",
       "bullets": [
-        "SSD, ELF, AVNT, FRPT, NUE"
+        "ELF, NUE, SSD, FRPT, MEOH"
       ]
     },
     {
@@ -1589,6 +1589,24 @@
         }
       ],
       "preview": "weather sectors 11 \u00b7 Basic Materials={'score': 1.7650000000000001, 'dir': 'up', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': 1.1549999999999998, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': 0.645, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': 1.53, 'dir': 'up', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -6.295, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -0.02, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': 0.43, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -0.815, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-11-11\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-11-11",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-11T09:11:09.978017-05:00",
+      "files": [
+        {
+          "path": "data/join/2026-11-11_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2280768,
+          "preview": "5894 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 ELF, NUE, SSD, FRPT, MEOH"
+        }
+      ],
+      "preview": "5894 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 ELF, NUE, SSD, FRPT, MEOH"
     }
   ],
   "href": {
