@@ -1984,5 +1984,7 @@
   ],
   "judge_tickers": {
     "CEG": 1.5
-  }
+  },
+  "catalyst_tickers": 0,
+  "catalyst_date": "2026-11-11"
 }
