@@ -1,6 +1,6 @@
 {
   "date": "2026-11-11",
-  "generated_at": "2026-11-11T09:29:53.137148-05:00",
+  "generated_at": "2026-11-11T09:30:20.492719-05:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -827,7 +827,7 @@
           "size": 76489,
           "said": "Stock book \u2014 2026-11-11",
           "bullets": [
-            "_Generated 2026-11-11T09:11:31.679341-05:00_",
+            "_Generated 2026-11-11T09:30:00.394423-05:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -863,7 +863,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "live-book poller + today.json (2026-11-11)",
-          "size": 16384840,
+          "size": 16384856,
           "said": "live-book poller + today.json (2026-11-11)",
           "bullets": []
         }
@@ -902,7 +902,7 @@
           "role": "required",
           "status": "OK",
           "reason": "live-book poller + today.json (2026-11-11)",
-          "size": 16384840,
+          "size": 16384856,
           "said": "live-book poller + today.json (2026-11-11)",
           "bullets": []
         },
@@ -1967,6 +1967,59 @@
         }
       ],
       "preview": "5039 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-11-11",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-11T09:30:19.830779-05:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-11-11_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1506992,
+          "preview": "1d BUY HNST, HLF, CLX, PRCH, PFGC, TTD, GCT, ZETA \u00b7 SELL GTM, VSAT, ZS, ENPH, EXFY, ASTS, ECX, CGC"
+        },
+        {
+          "path": "data/stock_book/2026-11-11_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 4310,
+          "preview": "green 322 \u00b7 ELF, COCO, AVNT, KDP, CGAU, SJM, JHX, RGLD, OLLI, EL"
+        },
+        {
+          "path": "data/stock_book/2026-11-11_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2502,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-11-11_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 13832,
+          "preview": "2026-11-11 BUY HNST, HLF, CLX, PRCH, PFGC, TTD, GCT, ZETA \u00b7 SELL GTM, VSAT, ZS, ENPH, EXFY, ASTS, ECX, CGC"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 13832,
+          "preview": "2026-11-11 BUY HNST, HLF, CLX, PRCH, PFGC, TTD, GCT, ZETA \u00b7 SELL GTM, VSAT, ZS, ENPH, EXFY, ASTS, ECX, CGC"
+        },
+        {
+          "path": "01_daily/2026-11-11_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 77621,
+          "preview": "# Stock book \u2014 2026-11-11\n_Generated 2026-11-11T09:30:00.394423-05:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY HNST, HLF, CLX, PRCH, PFGC, TTD, GCT, ZETA \u00b7 SELL GTM, VSAT, ZS, ENPH, EXFY, ASTS, ECX, CGC \u00b7 green 322 \u00b7 ELF, COCO, AVNT, KDP, CGAU, SJM, JHX, RGLD, OLLI, EL \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-11-11 BUY HNST, HLF, CLX, PRCH, PFGC, TTD, GCT, ZETA \u00b7 SELL GTM, VSAT, ZS, ENPH, EXFY, ASTS, ECX, CGC \u00b7 2026-11-11 BUY HNST, HLF, CLX, PRCH, PFGC, TTD, GCT, ZETA \u00b7 SELL GTM, VSAT, ZS, ENPH, EXFY, ASTS, ECX, CGC \u00b7 # Stock book \u2014 2026-11-11\n_Generated 2026-11-11T09:30:00.394423-05:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "href": {
@@ -2052,6 +2105,46 @@
       "path": "data/day_board/2026-11-11.json",
       "at": "2026-11-11T09:29:53-05:00",
       "commit_msg": "auto: land peer_rs [2026-11-11]",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "43037486451",
+      "manifest": "research/input_freeze/2026-11-11/manifest.json"
+    },
+    {
+      "path": "01_daily/2026-11-11_stock_book.md",
+      "at": "2026-11-11T09:30:21-05:00",
+      "commit_msg": "auto: land stock_book [2026-11-11]",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "43037486451",
+      "manifest": "research/input_freeze/2026-11-11/manifest.json"
+    },
+    {
+      "path": "data/day_board/2026-11-11.json",
+      "at": "2026-11-11T09:30:21-05:00",
+      "commit_msg": "auto: land stock_book [2026-11-11]",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "43037486451",
+      "manifest": "research/input_freeze/2026-11-11/manifest.json"
+    },
+    {
+      "path": "data/stock_book/2026-11-11_green.json",
+      "at": "2026-11-11T09:30:21-05:00",
+      "commit_msg": "auto: land stock_book [2026-11-11]",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "43037486451",
+      "manifest": "research/input_freeze/2026-11-11/manifest.json"
+    },
+    {
+      "path": "data/stock_book/2026-11-11_input_health.json",
+      "at": "2026-11-11T09:30:21-05:00",
+      "commit_msg": "auto: land stock_book [2026-11-11]",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "43037486451",
+      "manifest": "research/input_freeze/2026-11-11/manifest.json"
+    },
+    {
+      "path": "data/stock_book/2026-11-11_stock_book.json",
+      "at": "2026-11-11T09:30:21-05:00",
+      "commit_msg": "auto: land stock_book [2026-11-11]",
       "workflow": "Stock Book ALL (one-shot)",
       "run_id": "43037486451",
       "manifest": "research/input_freeze/2026-11-11/manifest.json"
