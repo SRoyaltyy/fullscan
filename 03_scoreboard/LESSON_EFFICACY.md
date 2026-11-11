@@ -1,6 +1,6 @@
 # Lesson efficacy — did promoted lessons change outcomes?
 
-_Generated 2026-11-10T16:49:57.732015-05:00_ · window: 7 graded runs each side of activation · deltas within ±5pp count as flat.
+_Generated 2026-11-10T20:23:45.301279-05:00_ · window: 7 graded runs each side of activation · deltas within ±5pp count as flat.
 
 This is correlation, not proof — but a lesson whose topic got WORSE after promotion has no evidence of working and is a retirement candidate for the monthly distill.
 
@@ -219,7 +219,7 @@ This is correlation, not proof — but a lesson whose topic got WORSE after prom
 | `an-industrials-down-call-is-made-after-a-sharp-p` | sector:Industrials | 2026-08-27 | 14% (n=7) | 43% (n=7) | +29% | improved |
 | `basic-materials-xlb-has-s0-and-s1-net-zero-no-fr` | sector:Basic Materials | 2026-08-28 | 57% (n=7) | 57% (n=7) | +0% | flat |
 | `basic-materials-xlb-is-predicted-up-from-a-a-bro` | sector:Basic Materials | 2026-08-27 | 71% (n=7) | 43% (n=7) | -28% | WORSE |
-| `before-the-open-a-fresh-same-morning-mega-cap-ai` | general | 2026-11-05 | 71% (n=7) | 100% (n=1) | — | insufficient |
+| `before-the-open-a-fresh-same-morning-mega-cap-ai` | general | 2026-11-05 | 71% (n=7) | 50% (n=2) | — | insufficient |
 | `before-the-open-channel-1-es-nq-is-locked-from-a` | — | 2026-10-05 | — | — | — | not market-graded |
 | `bond-proxy-utilities-with-s0-0-on-a-two-sided-sc` | sector:Utilities | 2026-08-28 | 14% (n=7) | 43% (n=7) | +29% | improved |
 | `consumer-cyclical-xly-is-called-down-mild-from-m` | sector:Consumer Cyclical | 2026-08-13 | 67% (n=3) | 57% (n=7) | — | insufficient |
@@ -322,7 +322,7 @@ This is correlation, not proof — but a lesson whose topic got WORSE after prom
 
 | Topic | prev 10 | last 10 |
 |-------|---------|---------|
-| general | 60% (n=10) | 70% (n=10) |
+| general | 50% (n=10) | 70% (n=10) |
 | sector:Basic Materials | 30% (n=10) | 30% (n=10) |
 | sector:Communication Services | 30% (n=10) | 10% (n=10) |
 | sector:Consumer Cyclical | 40% (n=10) | 30% (n=10) |
