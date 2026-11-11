@@ -1,0 +1,17 @@
+{
+ "date": "2026-11-11",
+ "missing": [],
+ "prices": {
+  "FLY": 23.362,
+  "FRVO": 11.98,
+  "INDI": 2.4123,
+  "ZJYL": 4.12
+ },
+ "sources": {
+  "FLY": "yahoo_premarket",
+  "FRVO": "yahoo_premarket",
+  "INDI": "yahoo_premarket",
+  "ZJYL": "yahoo_premarket"
+ },
+ "written_at": "2026-11-11T14:20:36+00:00"
+}
