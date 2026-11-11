@@ -1,18 +1,139 @@
 {
   "date": "2026-11-11",
-  "generated_at": "2026-11-11T04:40:51.875041-05:00",
+  "generated_at": "2026-11-11T07:24:26.711938-05:00",
   "overall": "PARTIAL",
-  "ranker_ready": false,
+  "ranker_ready": true,
   "counts": {
-    "ok": 2,
-    "partial": 2,
-    "fail": 4,
+    "ok": 6,
+    "partial": 1,
+    "fail": 1,
     "n": 8
   },
-  "buy_1d": [],
-  "sell_1d": [],
+  "buy_1d": [
+    {
+      "ticker": "HNST",
+      "score": 0.8704798998310859
+    },
+    {
+      "ticker": "HLF",
+      "score": 0.8473878345837405
+    },
+    {
+      "ticker": "CLX",
+      "score": 0.6691167411287767
+    },
+    {
+      "ticker": "PRCH",
+      "score": 0.833295428753946
+    },
+    {
+      "ticker": "PFGC",
+      "score": 0.46612860908841347
+    },
+    {
+      "ticker": "TTD",
+      "score": 0.7744365534068602
+    },
+    {
+      "ticker": "TMUS",
+      "score": 0.6042768001020192
+    },
+    {
+      "ticker": "PRU",
+      "score": 0.2828795962216404
+    },
+    {
+      "ticker": "CNK",
+      "score": 0.670311512980174
+    },
+    {
+      "ticker": "CHDN",
+      "score": 0.6168863933199795
+    },
+    {
+      "ticker": "ATAT",
+      "score": 0.7702633129996606
+    },
+    {
+      "ticker": "EVER",
+      "score": 0.48038427840402126
+    }
+  ],
+  "sell_1d": [
+    {
+      "ticker": "VSAT",
+      "score": -0.47926865060504226
+    },
+    {
+      "ticker": "GTM",
+      "score": -0.4590920910752873
+    },
+    {
+      "ticker": "ASTS",
+      "score": -0.44291029757006795
+    },
+    {
+      "ticker": "ZS",
+      "score": -0.42347152420290396
+    },
+    {
+      "ticker": "EXFY",
+      "score": -0.4098093668538912
+    },
+    {
+      "ticker": "ENPH",
+      "score": -0.4093605114464551
+    },
+    {
+      "ticker": "NOW",
+      "score": -0.38265705821135043
+    },
+    {
+      "ticker": "CGC",
+      "score": -0.36156672479390417
+    },
+    {
+      "ticker": "GH",
+      "score": -0.3610253451272813
+    },
+    {
+      "ticker": "ECX",
+      "score": -0.35814044229859965
+    },
+    {
+      "ticker": "CHRS",
+      "score": -0.35048501196421344
+    },
+    {
+      "ticker": "LITE",
+      "score": -0.34441687416086353
+    },
+    {
+      "ticker": "CRWD",
+      "score": -0.3424521016300185
+    },
+    {
+      "ticker": "MU",
+      "score": -0.3416940968341651
+    },
+    {
+      "ticker": "AKBA",
+      "score": -0.3369375623005614
+    }
+  ],
   "flatten": {},
-  "general": {},
+  "general": {
+    "said": "UP  12.369",
+    "bullets": [
+      "bad: hot core CPI 0.3%",
+      "bad: December hike 100% priced with 50bp tail",
+      "bad: Waller open to 50bp",
+      "good: CoreWeave beat and raise reignites AI trade",
+      "good: Nvidia +5% premarket"
+    ],
+    "score": "12.369",
+    "direction": "up"
+  },
   "sectors": {},
   "lands": [
     {
