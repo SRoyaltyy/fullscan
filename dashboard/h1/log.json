@@ -10941,5 +10941,200 @@
       "status": "BEFORE_1330"
     },
     "sha256": "846385e0356e564b9d66a779993def651ba965de87214935c040e775300000a9"
+  },
+  {
+    "buys": [
+      {
+        "fee": 5.3148,
+        "fill": 5.4,
+        "fill_basis": "open",
+        "liquidity_cap_shares": 7637,
+        "rank": 1,
+        "shares": 412,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "PEPG"
+      },
+      {
+        "fee": 3.7152,
+        "fill": 6.45,
+        "fill_basis": "open",
+        "liquidity_cap_shares": 8268,
+        "rank": 2,
+        "shares": 288,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "ZIP"
+      },
+      {
+        "fee": 28.0184,
+        "fill": 0.5797,
+        "fill_basis": "open",
+        "liquidity_cap_shares": 67930,
+        "rank": 3,
+        "shares": 3185,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "HUMA"
+      },
+      {
+        "fee": 2.233,
+        "fill": 23.280001,
+        "fill_basis": "open",
+        "liquidity_cap_shares": 27921,
+        "rank": 4,
+        "shares": 81,
+        "sources": [
+          "ohlc_hot"
+        ],
+        "ticker": "REPL"
+      }
+    ],
+    "cash_primary": 344.3928205537818,
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-11-11",
+    "equity_primary": 7865.217401553782,
+    "excluded_on_fill": [],
+    "holdings": [
+      {
+        "cost_primary": 1883.5946224999996,
+        "entry_date": "2026-11-11",
+        "entry_px": 0.5797,
+        "last_px": 0.5797,
+        "min_hold": 1,
+        "peak_px": 0.5797,
+        "shares": 3185,
+        "ticker": "HUMA"
+      },
+      {
+        "cost_primary": 2241.2388,
+        "entry_date": "2026-11-11",
+        "entry_px": 5.4,
+        "last_px": 5.4,
+        "min_hold": 1,
+        "peak_px": 5.4,
+        "shares": 412,
+        "ticker": "PEPG"
+      },
+      {
+        "cost_primary": 1897.3414814049997,
+        "entry_date": "2026-11-11",
+        "entry_px": 23.280001,
+        "last_px": 23.280001,
+        "min_hold": 1,
+        "peak_px": 23.280001,
+        "shares": 81,
+        "ticker": "REPL"
+      },
+      {
+        "cost_primary": 1870.6032,
+        "entry_date": "2026-11-11",
+        "entry_px": 6.45,
+        "last_px": 6.45,
+        "min_hold": 1,
+        "peak_px": 6.45,
+        "shares": 288,
+        "ticker": "ZIP"
+      }
+    ],
+    "holdup_on": false,
+    "kind": "fill",
+    "morning_s": 12.369,
+    "plan_sha256": "846385e0356e564b9d66a779993def651ba965de87214935c040e775300000a9",
+    "recipe": "union_hot_n4_h1__w0",
+    "sells": [
+      {
+        "fee": 2.2351,
+        "fill": 23.9641,
+        "reason": "hold-expired",
+        "shares": 73,
+        "ticker": "FLY"
+      },
+      {
+        "fee": 2.502,
+        "fill": 11.875,
+        "reason": "hold-expired",
+        "shares": 157,
+        "ticker": "FRVO"
+      },
+      {
+        "fee": 10.586,
+        "fill": 2.4146,
+        "reason": "hold-expired",
+        "shares": 809,
+        "ticker": "INDI"
+      },
+      {
+        "fee": 7.061,
+        "fill": 4.27,
+        "reason": "hold-expired",
+        "shares": 539,
+        "ticker": "ZJYL"
+      }
+    ],
+    "sha256": "614aefcef690ae99519a1e478d2b7a405fbb0ad1d7d4d4d932fb51b207792157",
+    "unfilled": []
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-11-11",
+    "entry_date": "2026-11-10",
+    "entry_px": 23.51,
+    "fill": 23.9641,
+    "kind": "close",
+    "pnl_primary": 11.37715349999985,
+    "reason": "hold-expired",
+    "recipe": "union_hot_n4_h1__w0",
+    "sha256": "6e82846f5c06c199e1f3f981b948a19f3d62312cdede7dfece347e00713d1130",
+    "shares": 73,
+    "ticker": "FLY"
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-11-11",
+    "entry_date": "2026-11-10",
+    "entry_px": 11.435,
+    "fill": 11.875,
+    "kind": "close",
+    "pnl_primary": 45.81865000000016,
+    "reason": "hold-expired",
+    "recipe": "union_hot_n4_h1__w0",
+    "sha256": "91c3f863886084d434d1fff3990e25963946932ad376c97b35ed64d9c160b694",
+    "shares": 157,
+    "ticker": "FRVO"
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-11-11",
+    "entry_date": "2026-11-10",
+    "entry_px": 2.135,
+    "fill": 2.4146,
+    "kind": "close",
+    "pnl_primary": 186.77116800000022,
+    "reason": "hold-expired",
+    "recipe": "union_hot_n4_h1__w0",
+    "sha256": "b2bc5e394593f64bf00012ac8473f3e2aee9d76fcdb3f4a8ff9344969b822a2e",
+    "shares": 809,
+    "ticker": "INDI"
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-11-11",
+    "entry_date": "2026-11-05",
+    "entry_px": 2.98,
+    "fill": 4.27,
+    "kind": "close",
+    "pnl_primary": 661.7571499999997,
+    "reason": "hold-expired",
+    "recipe": "union_hot_n4_h1__w0",
+    "sha256": "759b11b537f92ca898e8ec16051a041be321dd7b140d45796cce95619038611d",
+    "shares": 539,
+    "ticker": "ZJYL"
   }
 ]

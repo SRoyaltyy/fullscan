@@ -1736,5 +1736,47 @@
       "open": 3.84,
       "prior_close": 3.95
     }
+  },
+  "2026-11-11": {
+    "FLY": {
+      "close": 26.610001,
+      "open": 23.9641,
+      "prior_close": 23.700001
+    },
+    "FRVO": {
+      "close": 12.94,
+      "open": 11.875,
+      "prior_close": 11.38
+    },
+    "HUMA": {
+      "close": 0.5917,
+      "open": 0.5797,
+      "prior_close": 0.59
+    },
+    "INDI": {
+      "close": 2.3,
+      "open": 2.4146,
+      "prior_close": 2.28
+    },
+    "PEPG": {
+      "close": 5.26,
+      "open": 5.4,
+      "prior_close": 4.61
+    },
+    "REPL": {
+      "close": 21.780001,
+      "open": 23.280001,
+      "prior_close": 23.280001
+    },
+    "ZIP": {
+      "close": 5.92,
+      "open": 6.45,
+      "prior_close": 6.59
+    },
+    "ZJYL": {
+      "close": 4.91,
+      "open": 4.27,
+      "prior_close": 4.21
+    }
   }
 }
