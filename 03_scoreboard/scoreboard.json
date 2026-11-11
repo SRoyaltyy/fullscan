@@ -32182,6 +32182,18 @@
           "predicted_direction": "flat",
           "predicted_magnitude_band": "mild",
           "confidence": 0.45
+        },
+        "HORIZON_1M": {
+          "label": "1m",
+          "target_date": "2026-11-10",
+          "actual_pct": -3.15,
+          "actual_direction": "down",
+          "actual_magnitude_band": "mild",
+          "direction_hit": false,
+          "magnitude_hit": true,
+          "predicted_direction": "up",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.45
         }
       },
       "lesson_schema_ok": true
@@ -34926,6 +34938,18 @@
           "predicted_direction": "up",
           "predicted_magnitude_band": "mild",
           "confidence": 0.45
+        },
+        "HORIZON_2W": {
+          "label": "2w",
+          "target_date": "2026-11-10",
+          "actual_pct": -2.61,
+          "actual_direction": "down",
+          "actual_magnitude_band": "mild",
+          "direction_hit": false,
+          "magnitude_hit": true,
+          "predicted_direction": "flat",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.4
         }
       }
     },
@@ -35342,6 +35366,18 @@
           "predicted_direction": "flat",
           "predicted_magnitude_band": "mild",
           "confidence": 0.5
+        },
+        "HORIZON_1W": {
+          "label": "1w",
+          "target_date": "2026-11-10",
+          "actual_pct": -0.63,
+          "actual_direction": "down",
+          "actual_magnitude_band": "flat",
+          "direction_hit": false,
+          "magnitude_hit": false,
+          "predicted_direction": "flat",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.5
         }
       },
       "lesson_schema_ok": true
@@ -35716,7 +35752,20 @@
       "attribution_contested": "yes",
       "outlier_watch": "Energy equities diverged from crude’s collapse, and bonds rallied while stocks crashed — a growth-scare signal rather than a simple risk-off move; defensives held up while tech was liquidated",
       "lesson_schema_ok": true,
-      "horizon_grades": {}
+      "horizon_grades": {
+        "HORIZON_3D": {
+          "label": "3d",
+          "target_date": "2026-11-10",
+          "actual_pct": 2.27,
+          "actual_direction": "up",
+          "actual_magnitude_band": "notable",
+          "direction_hit": false,
+          "magnitude_hit": false,
+          "predicted_direction": "down",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.55
+        }
+      }
     },
     {
       "date": "2026-11-06",
@@ -36019,7 +36068,8 @@
       "knowable_at_9am": "yes",
       "attribution_contested": "no",
       "outlier_watch": "Dow’s V-shaped recovery vs NDX’s failed intraday reversal, and Nvidia falling while AMD rose — the shock was concentrated in rate-sensitive/long-duration tech and one idiosyncratic name, not a uniform risk-off",
-      "lesson_schema_ok": true
+      "lesson_schema_ok": true,
+      "horizon_grades": {}
     },
     {
       "date": "2026-11-10",
