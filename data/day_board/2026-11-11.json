@@ -1,6 +1,6 @@
 {
   "date": "2026-11-11",
-  "generated_at": "2026-11-11T04:35:11.554971-05:00",
+  "generated_at": "2026-11-11T04:35:25.254297-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -1056,6 +1056,24 @@
         }
       ],
       "preview": "keys: date, source_heat_date, phase, generated_at, n_targets, n_cards, coverage, validation_errors, source_calendar_results, source_market_reaction_pct, cards, size_gate \u00b7 # MAP HEAT RESEARCH \u2014 2026-11-11\n142 captain cards \u00b7 size_gate=False set by pre-open refresh"
+    },
+    {
+      "key": "universe",
+      "title": "Universe labels",
+      "date": "2026-11-11",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-11T04:35:24.921867-05:00",
+      "files": [
+        {
+          "path": "data/universe/2026-11-11_membership.csv",
+          "ok": true,
+          "reason": "",
+          "size": 1125605,
+          "preview": "5894 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
+        }
+      ],
+      "preview": "5894 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
     }
   ],
   "href": {
