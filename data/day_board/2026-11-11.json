@@ -1,6 +1,6 @@
 {
   "date": "2026-11-11",
-  "generated_at": "2026-11-11T04:36:25.009050-05:00",
+  "generated_at": "2026-11-11T04:36:59.624313-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -181,7 +181,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 1,
+      "n_req_ok": 2,
       "n_req": 9,
       "n_opt_ok": 1,
       "n_opt": 14,
@@ -239,10 +239,10 @@
           "name": "News parse JSON",
           "path": "01_daily/news/2026-11-11_parsed.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "",
+          "size": 7169807,
+          "said": "7169807B on disk",
           "bullets": []
         },
         {
@@ -329,13 +329,13 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7576,
-          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 18 fail",
+          "size": 7575,
+          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 17 fail",
           "bullets": [
             "general_predict:missing",
             "events:missing",
             "news_judge:missing",
-            "news_parse:missing"
+            "news_actions:missing"
           ]
         },
         {
@@ -1169,6 +1169,31 @@
         }
       ],
       "preview": "2614 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 MSCI, DOCS, VNT, TTEK, HONA \u00b7 2614 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 MSCI, ED, ATAT, ALGN, DOCS"
+    },
+    {
+      "key": "news_parse",
+      "title": "News parse",
+      "date": "2026-11-11",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-11T04:36:58.565070-05:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-11-11_parsed.json",
+          "ok": true,
+          "reason": "",
+          "size": 7169807,
+          "preview": "raw=10005 usable=997 single=622 \u00b7 Watch Fed\u2019s Waller Sparks Larger Rate Hike Debate After Hot Inflation - Bloomber | Gold Holds Decline as US Jobs Data Fan December Rate Hike Bets - Bloomberg.com | Dollar Set for Best Day Since September as CPI Lifts Hike Bets - Bloomberg.com | Canadian dollar hits near four-week low as US CPI data boosts greenback - Reuter | Instant view: Hot October inflation report rattles markets - Reuters"
+        },
+        {
+          "path": "01_daily/news/2026-11-11_parsed.md",
+          "ok": true,
+          "reason": "",
+          "size": 10781,
+          "preview": "# News Parse v2 \u2014 2026-11-11T04:36:57.876981-05:00\nWindow\u224848h | news_mode=on | raw=10005 | usable=997 | single_name=622 | noise_dropped=8167\nusable polarity={'+': 44, '-': 217, 'mixed': 7, 'neutral': 729}"
+        }
+      ],
+      "preview": "raw=10005 usable=997 single=622 \u00b7 Watch Fed\u2019s Waller Sparks Larger Rate Hike Debate After Hot Inflation - Bloomber | Gold Holds Decline as US Jobs Data Fan December Rate Hike Bets - Bloomberg.com | Dollar Set for Best Day Since September as CPI Lifts Hike Bets - Bloomberg.com | Canadian dollar hits near four-week low as US CPI data boosts greenback - Reuter | Instant view: Hot October inflation report rattles markets - Reuters \u00b7 # News Parse v2 \u2014 2026-11-11T04:36:57.876981-05:00\nWindow\u224848h | news_mode=on | raw=10005 | usable=997 | single_name=622 | noise_dropped=8167\nusable polarity={'+': 44, '-': 217, 'mixed': 7, 'neutral': 729}"
     }
   ],
   "href": {

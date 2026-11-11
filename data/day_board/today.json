@@ -1,6 +1,6 @@
 {
   "date": "2026-11-11",
-  "generated_at": "2026-11-11T04:36:25.009050-05:00",
+  "generated_at": "2026-11-11T04:36:59.624313-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -15,31 +15,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "map_heat",
-      "title": "Map heat morning overlay",
-      "date": "2026-11-11",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-11-11T04:24:44.335479-05:00",
-      "files": [
-        {
-          "path": "01_daily/map_heat/2026-11-11_map_heat.json",
-          "ok": true,
-          "reason": "",
-          "size": 271588,
-          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
-        },
-        {
-          "path": "01_daily/map_heat/2026-11-11_map_heat.md",
-          "ok": true,
-          "reason": "",
-          "size": 18482,
-          "preview": "# MAP HEAT \u2014 2026-11-11\nExport `finviz_2026-11-10.csv` \u00b7 11616 names \u00b7 generated 2026-11-11T04:24:44.253297-05:00"
-        }
-      ],
-      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-11-11\nExport `finviz_2026-11-10.csv` \u00b7 11616 names \u00b7 generated 2026-11-11T04:24:44.253297-05:00"
-    },
     {
       "key": "finviz_digest",
       "title": "Finviz digest",
@@ -200,6 +175,31 @@
         }
       ],
       "preview": "2614 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 MSCI, DOCS, VNT, TTEK, HONA \u00b7 2614 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 MSCI, ED, ATAT, ALGN, DOCS"
+    },
+    {
+      "key": "news_parse",
+      "title": "News parse",
+      "date": "2026-11-11",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-11T04:36:58.565070-05:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-11-11_parsed.json",
+          "ok": true,
+          "reason": "",
+          "size": 7169807,
+          "preview": "raw=10005 usable=997 single=622 \u00b7 Watch Fed\u2019s Waller Sparks Larger Rate Hike Debate After Hot Inflation - Bloomber | Gold Holds Decline as US Jobs Data Fan December Rate Hike Bets - Bloomberg.com | Dollar Set for Best Day Since September as CPI Lifts Hike Bets - Bloomberg.com | Canadian dollar hits near four-week low as US CPI data boosts greenback - Reuter | Instant view: Hot October inflation report rattles markets - Reuters"
+        },
+        {
+          "path": "01_daily/news/2026-11-11_parsed.md",
+          "ok": true,
+          "reason": "",
+          "size": 10781,
+          "preview": "# News Parse v2 \u2014 2026-11-11T04:36:57.876981-05:00\nWindow\u224848h | news_mode=on | raw=10005 | usable=997 | single_name=622 | noise_dropped=8167\nusable polarity={'+': 44, '-': 217, 'mixed': 7, 'neutral': 729}"
+        }
+      ],
+      "preview": "raw=10005 usable=997 single=622 \u00b7 Watch Fed\u2019s Waller Sparks Larger Rate Hike Debate After Hot Inflation - Bloomber | Gold Holds Decline as US Jobs Data Fan December Rate Hike Bets - Bloomberg.com | Dollar Set for Best Day Since September as CPI Lifts Hike Bets - Bloomberg.com | Canadian dollar hits near four-week low as US CPI data boosts greenback - Reuter | Instant view: Hot October inflation report rattles markets - Reuters \u00b7 # News Parse v2 \u2014 2026-11-11T04:36:57.876981-05:00\nWindow\u224848h | news_mode=on | raw=10005 | usable=997 | single_name=622 | noise_dropped=8167\nusable polarity={'+': 44, '-': 217, 'mixed': 7, 'neutral': 729}"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
