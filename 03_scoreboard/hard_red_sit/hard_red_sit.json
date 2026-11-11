@@ -2921,15 +2921,15 @@
         "sit": true,
         "hard_red": false,
         "side": "long",
-        "s": 6.883,
+        "s": 12.369,
         "short_only": [],
         "dip_scoop": [
           {
-            "ticker": "ALGN",
+            "ticker": "CLX",
             "side": "long",
             "open": null,
-            "px": 174.26,
-            "px_src": "session_export",
+            "px": 106.6,
+            "px_src": "session_export+elite_live_skipped",
             "low": null,
             "scoops": {
               "0.5": {
@@ -2961,11 +2961,11 @@
             "tag": "RESEARCH"
           },
           {
-            "ticker": "TMDX",
+            "ticker": "PFGC",
             "side": "long",
             "open": null,
-            "px": 90.94,
-            "px_src": "session_export",
+            "px": 111.0,
+            "px_src": "session_export+elite_live_skipped",
             "low": null,
             "scoops": {
               "0.5": {
@@ -2997,11 +2997,11 @@
             "tag": "RESEARCH"
           },
           {
-            "ticker": "WRBY",
+            "ticker": "KDP",
             "side": "long",
             "open": null,
-            "px": 29.9,
-            "px_src": "session_export",
+            "px": 37.59,
+            "px_src": "session_export+elite_live_skipped",
             "low": null,
             "scoops": {
               "0.5": {
@@ -3033,11 +3033,11 @@
             "tag": "RESEARCH"
           },
           {
-            "ticker": "ETON",
+            "ticker": "PRCH",
             "side": "long",
             "open": null,
-            "px": 67.54,
-            "px_src": "session_export",
+            "px": 21.95,
+            "px_src": "session_export+elite_live_skipped",
             "low": null,
             "scoops": {
               "0.5": {
@@ -3069,11 +3069,119 @@
             "tag": "RESEARCH"
           },
           {
-            "ticker": "ZVRA",
+            "ticker": "COTY",
             "side": "long",
             "open": null,
-            "px": 11.92,
-            "px_src": "session_export",
+            "px": 4.33,
+            "px_src": "session_export+elite_live_skipped",
+            "low": null,
+            "scoops": {
+              "0.5": {
+                "kind": "no_open",
+                "x": 0.5,
+                "fill": null
+              },
+              "1.0": {
+                "kind": "no_open",
+                "x": 1.0,
+                "fill": null
+              },
+              "1.5": {
+                "kind": "no_open",
+                "x": 1.5,
+                "fill": null
+              },
+              "2.0": {
+                "kind": "no_open",
+                "x": 2.0,
+                "fill": null
+              },
+              "3.0": {
+                "kind": "no_open",
+                "x": 3.0,
+                "fill": null
+              }
+            },
+            "tag": "RESEARCH"
+          },
+          {
+            "ticker": "TTD",
+            "side": "long",
+            "open": null,
+            "px": 15.42,
+            "px_src": "session_export+elite_live_skipped",
+            "low": null,
+            "scoops": {
+              "0.5": {
+                "kind": "no_open",
+                "x": 0.5,
+                "fill": null
+              },
+              "1.0": {
+                "kind": "no_open",
+                "x": 1.0,
+                "fill": null
+              },
+              "1.5": {
+                "kind": "no_open",
+                "x": 1.5,
+                "fill": null
+              },
+              "2.0": {
+                "kind": "no_open",
+                "x": 2.0,
+                "fill": null
+              },
+              "3.0": {
+                "kind": "no_open",
+                "x": 3.0,
+                "fill": null
+              }
+            },
+            "tag": "RESEARCH"
+          },
+          {
+            "ticker": "FG",
+            "side": "long",
+            "open": null,
+            "px": 25.0,
+            "px_src": "session_export+elite_live_skipped",
+            "low": null,
+            "scoops": {
+              "0.5": {
+                "kind": "no_open",
+                "x": 0.5,
+                "fill": null
+              },
+              "1.0": {
+                "kind": "no_open",
+                "x": 1.0,
+                "fill": null
+              },
+              "1.5": {
+                "kind": "no_open",
+                "x": 1.5,
+                "fill": null
+              },
+              "2.0": {
+                "kind": "no_open",
+                "x": 2.0,
+                "fill": null
+              },
+              "3.0": {
+                "kind": "no_open",
+                "x": 3.0,
+                "fill": null
+              }
+            },
+            "tag": "RESEARCH"
+          },
+          {
+            "ticker": "SPNT",
+            "side": "long",
+            "open": null,
+            "px": 27.38,
+            "px_src": "session_export+elite_live_skipped",
             "low": null,
             "scoops": {
               "0.5": {
@@ -3109,7 +3217,7 @@
             "side": "long",
             "open": null,
             "px": 38.64,
-            "px_src": "session_export",
+            "px_src": "session_export+elite_live_skipped",
             "low": null,
             "scoops": {
               "0.5": {
@@ -3141,11 +3249,11 @@
             "tag": "RESEARCH"
           },
           {
-            "ticker": "EHC",
+            "ticker": "ABNB",
             "side": "long",
             "open": null,
-            "px": 142.51,
-            "px_src": "session_export",
+            "px": 186.9,
+            "px_src": "session_export+elite_live_skipped",
             "low": null,
             "scoops": {
               "0.5": {
@@ -3177,11 +3285,11 @@
             "tag": "RESEARCH"
           },
           {
-            "ticker": "UHS",
+            "ticker": "ALGN",
             "side": "long",
             "open": null,
-            "px": 195.41,
-            "px_src": "session_export",
+            "px": 174.26,
+            "px_src": "session_export+elite_live_skipped",
             "low": null,
             "scoops": {
               "0.5": {
@@ -3213,11 +3321,11 @@
             "tag": "RESEARCH"
           },
           {
-            "ticker": "ADMA",
+            "ticker": "CGON",
             "side": "long",
             "open": null,
-            "px": 12.67,
-            "px_src": "session_export",
+            "px": 72.64,
+            "px_src": "session_export+elite_live_skipped",
             "low": null,
             "scoops": {
               "0.5": {
@@ -3249,11 +3357,11 @@
             "tag": "RESEARCH"
           },
           {
-            "ticker": "APP",
+            "ticker": "CLOV",
             "side": "long",
             "open": null,
-            "px": 395.51,
-            "px_src": "session_export",
+            "px": 4.93,
+            "px_src": "session_export+elite_live_skipped",
             "low": null,
             "scoops": {
               "0.5": {
@@ -3285,11 +3393,11 @@
             "tag": "RESEARCH"
           },
           {
-            "ticker": "CAH",
+            "ticker": "EVC",
             "side": "long",
             "open": null,
-            "px": 276.79,
-            "px_src": "session_export",
+            "px": 9.11,
+            "px_src": "session_export+elite_live_skipped",
             "low": null,
             "scoops": {
               "0.5": {
@@ -3321,11 +3429,11 @@
             "tag": "RESEARCH"
           },
           {
-            "ticker": "CDNA",
+            "ticker": "FTDR",
             "side": "long",
             "open": null,
-            "px": 80.77,
-            "px_src": "session_export",
+            "px": 98.5,
+            "px_src": "session_export+elite_live_skipped",
             "low": null,
             "scoops": {
               "0.5": {
@@ -3357,11 +3465,11 @@
             "tag": "RESEARCH"
           },
           {
-            "ticker": "PGNY",
+            "ticker": "PTLO",
             "side": "long",
             "open": null,
-            "px": 36.43,
-            "px_src": "session_export",
+            "px": 6.98,
+            "px_src": "session_export+elite_live_skipped",
             "low": null,
             "scoops": {
               "0.5": {
@@ -3393,47 +3501,11 @@
             "tag": "RESEARCH"
           },
           {
-            "ticker": "FMS",
+            "ticker": "THM",
             "side": "long",
             "open": null,
-            "px": 22.74,
-            "px_src": "session_export",
-            "low": null,
-            "scoops": {
-              "0.5": {
-                "kind": "no_open",
-                "x": 0.5,
-                "fill": null
-              },
-              "1.0": {
-                "kind": "no_open",
-                "x": 1.0,
-                "fill": null
-              },
-              "1.5": {
-                "kind": "no_open",
-                "x": 1.5,
-                "fill": null
-              },
-              "2.0": {
-                "kind": "no_open",
-                "x": 2.0,
-                "fill": null
-              },
-              "3.0": {
-                "kind": "no_open",
-                "x": 3.0,
-                "fill": null
-              }
-            },
-            "tag": "RESEARCH"
-          },
-          {
-            "ticker": "ECX",
-            "side": "long",
-            "open": null,
-            "px": 0.78,
-            "px_src": "session_export",
+            "px": 1.41,
+            "px_src": "session_export+elite_live_skipped",
             "low": null,
             "scoops": {
               "0.5": {
