@@ -1,0 +1,85 @@
+{
+  "date": "2026-11-11",
+  "generated_at": "2026-11-11T04:38:30.117529-05:00",
+  "timezone": "America/New_York",
+  "source": "live",
+  "source_url": "https://elite.finviz.com/",
+  "archive_snapshot_ts": null,
+  "archive_snapshot_at": null,
+  "archive_url": null,
+  "clock_legal": true,
+  "clock_same_morning": true,
+  "clock_use": "same_morning",
+  "clock_legal_for": "2026-11-11",
+  "clock_rule": "Live: Generated must be before 09:30 ET on this date or leave missing. Wayback: capture before 09:30 ET that day is legal for that morning's Pre-Open. Afternoon Wayback is legal for the NEXT session open only (prior-day close recap), marked by clock_legal_for. Gaps stay gaps. Capture only — not tape_anchor / predict / #210.",
+  "kind": "finviz_homepage_market_digest",
+  "represents": "Finviz homepage market-day prose. Same-morning Pre-Open when Generated is before 09:30 ET; afternoon Wayback is a prior-day close recap legal for the next session only. Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "US stocks set to open higher as AI-led rebound gathers pace after CoreWeave earnings beat in quiet Veterans Day data calendar",
+  "raw_text": "- S&P 500 (@ES) futures are up 0.65%, Dow Jones (@YM) futures up 0.07%, Nasdaq 100 (@NQ) futures up 1.53%, and Russell 2000 (@ER2) futures up 0.48%, pointing to a gap-up open led by technology after CoreWeave’s results eased AI slowdown concerns.\n- CoreWeave (CRWV) is up about 11% pre-market after reporting Q3 revenue of $3.66 billion, a 168% year-over-year increase that beat estimates, and raising full-year 2026 revenue guidance to $13.0–$13.3 billion with adjusted operating income of $1.275–$1.375 billion.\n- AI infrastructure names Nebius (NBIS) and IREN (IREN) also climb in pre-market trading following CoreWeave’s stronger-than-expected Q3 results and raised long-term outlook.\n- Estee Lauder (EL) advances after raising its annual sales and profit outlook, supported by resilient demand for premium skincare products.\n- Rivian (RIVN) gains in early trade after UBS (UBS) upgrades the stock to Buy and sets a $17 price target.\n- Check Point Software (CHKP) edges slightly higher pre-market after being named a Leader in Forrester’s Q4 2026 Enterprise Firewall Solutions Wave report.\n- Around 20 companies, including CGI/CGI Group (GIB), Riskified (RSKD) and Oddity Tech (ODD), are scheduled to report earnings before the bell, with their results expected to influence early trading.\n- No major US economic data releases are scheduled amid the Veterans Day federal holiday, keeping focus on individual stock catalysts and AI and tech momentum.\n- Asian markets trade mixed with the Nikkei advancing, while European bourses post modest gains and limited moves in oil (@CL) and gold (@GC) show little spillover into equities.",
+  "raw_summary_md": "- **S&P 500** ([@ES](https://finviz.com/futures_charts?t=ES)) futures are up 0.65%, **Dow Jones** ([@YM](https://finviz.com/futures_charts?t=YM)) futures up 0.07%, **Nasdaq 100** ([@NQ](https://finviz.com/futures_charts?t=NQ)) futures up 1.53%, and **Russell 2000** ([@ER2](https://finviz.com/futures_charts?t=ER2)) futures up 0.48%, pointing to a **gap-up open** led by technology after CoreWeave’s results eased **AI slowdown concerns**.\n- **CoreWeave** ([CRWV](https://finviz.com/quote?t=CRWV)) is up about **11%** pre-market after reporting Q3 revenue of $3.66 billion, a 168% year-over-year increase that beat estimates, and raising full-year 2026 revenue guidance to **$13.0–$13.3 billion** with adjusted operating income of $1.275–$1.375 billion.\n- AI infrastructure names **Nebius** ([NBIS](https://finviz.com/quote?t=NBIS)) and **IREN** ([IREN](https://finviz.com/quote?t=IREN)) also climb in pre-market trading following CoreWeave’s **stronger-than-expected Q3 results** and **raised long-term outlook**.\n- **Estee Lauder** ([EL](https://finviz.com/quote?t=EL)) advances after raising its annual **sales and profit outlook**, supported by resilient demand for premium skincare products.\n- **Rivian** ([RIVN](https://finviz.com/quote?t=RIVN)) gains in early trade after **UBS** ([UBS](https://finviz.com/quote?t=UBS)) **upgrades** the stock to Buy and sets a **$17 price target**.\n- **Check Point Software** ([CHKP](https://finviz.com/quote?t=CHKP)) edges slightly higher pre-market after being named **a Leader** in Forrester’s Q4 2026 Enterprise Firewall Solutions Wave report.\n- Around 20 companies, including CGI/**CGI Group** ([GIB](https://finviz.com/quote?t=GIB)), **Riskified** ([RSKD](https://finviz.com/quote?t=RSKD)) and **Oddity Tech** ([ODD](https://finviz.com/quote?t=ODD)), are scheduled to report **earnings before the bell**, with their results expected to influence early trading.\n- No major US economic **data releases** are scheduled amid the Veterans Day federal holiday, keeping focus on individual stock catalysts and AI and tech momentum.\n- Asian markets **trade mixed** with the Nikkei advancing, while European bourses post **modest gains** and limited moves in **oil** ([@CL](https://finviz.com/futures_charts?t=CL)) and **gold** ([@GC](https://finviz.com/futures_charts?t=GC)) show little spillover into equities.",
+  "index_moves": [],
+  "oil": null,
+  "cpi": null,
+  "fed_odds": null,
+  "named_tickers": [
+    "CRWV",
+    "NBIS",
+    "IREN",
+    "EL",
+    "RIVN",
+    "UBS",
+    "CHKP",
+    "GIB",
+    "RSKD",
+    "ODD"
+  ],
+  "named_leaders": [
+    "CRWV",
+    "NBIS",
+    "IREN",
+    "EL",
+    "RIVN",
+    "UBS",
+    "CHKP",
+    "GIB",
+    "RSKD",
+    "ODD"
+  ],
+  "calendar": [],
+  "prior_close": {
+    "spx": null,
+    "nasdaq": null,
+    "dow": null
+  },
+  "cpi_fed": {
+    "cpi": null,
+    "fed_odds": null
+  },
+  "next_session_calendar": {
+    "housing": false,
+    "retail": false,
+    "fed": true,
+    "bullets": [],
+    "text": ""
+  },
+  "earnings_slate": {
+    "tickers": [
+      "GIB",
+      "RSKD",
+      "ODD"
+    ],
+    "text": "Around 20 companies, including CGI/CGI Group (GIB), Riskified (RSKD) and Oddity Tech (ODD), are scheduled to report earnings before the bell, with their results expected to influence early trading."
+  },
+  "geo_grain": {
+    "geo": false,
+    "grain": false,
+    "flags": [],
+    "text": ""
+  },
+  "finviz_id": 340576,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-11-11T04:37:33.203",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "good"
+}

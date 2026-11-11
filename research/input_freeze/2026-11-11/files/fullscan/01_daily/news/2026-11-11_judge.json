@@ -1,0 +1,12 @@
+{
+ "risk_tilt": null,
+ "macros": [],
+ "sector_tilts": {},
+ "tickers": {
+  "XLE": 1.5,
+  "XLU": 1.5,
+  "CEG": 1.5
+ },
+ "b1_inject": "NEWS_JUDGE: n=8 rescued=2\nMACRO rates: [pol] Hot CPI + Waller half-point debate lift Dec hike odds, 10Y near 5% (regime/1d-1w)\nSECTOR semis/AI: [pol] Nvidia selloff/deepening AI jitters weigh QQQ/SMH (sector_etf:SMH/QQQ)\nSECTOR industrials/energy: [pol] CAT $3.4B Anthropic gas-turbine order supports AI-power capex (sector_etf:XLI/XLE)\nSECTOR utilities: [pol] CEG raises EPS on Amazon/Google nuclear deals supports AI-power IPPs (sector_etf:XLU)\nSECTOR industrials: [pol] Boeing 5% commercial workforce cut signals production slowdown (sector_etf:XLI)\nSECTOR semis: [pol] Chip ETF dip-buying inflows top $44B, partial offset to Nvidia selloff (basket:chip ETFs)\nSECTOR AI-infra: [pol] CoreWeave raises forecast, Wells Fargo upgrades AI-infra view offset chip selloff (basket:AI-infra)\nINTERACTION: Hot CPI/Waller + Nvidia selloff = rates/AI risk-off cluster; AI-power positives offset only partly; do not double-count AI-infra upgrades as all-clear.\nWATCH: Hawkish CPI repricing can dominate single-name positives; semis remain headline-sensitive.",
+ "date": "2026-11-11"
+}
