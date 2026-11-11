@@ -1,6 +1,6 @@
 {
   "date": "2026-11-11",
-  "generated_at": "2026-11-11T04:37:06.332715-05:00",
+  "generated_at": "2026-11-11T04:38:13.534671-05:00",
   "items": [
     {
       "ok": false,
@@ -36,14 +36,14 @@
       "missing_markers": []
     },
     {
-      "ok": true,
+      "ok": false,
       "kind": "news_parse",
       "path": "01_daily/news/2026-11-11_parsed.json",
-      "reason": "",
-      "size": 7169807,
+      "reason": "missing",
+      "size": 0,
       "carried": false,
       "timeout": false,
-      "empty": false,
+      "empty": true,
       "missing_markers": []
     },
     {
@@ -62,21 +62,21 @@
       "kind": "finviz_digest",
       "path": "01_daily/news/2026-11-11_finviz_digest.json",
       "reason": "",
-      "size": 102592,
+      "size": 100024,
       "carried": false,
       "timeout": false,
       "empty": false,
       "missing_markers": []
     },
     {
-      "ok": true,
+      "ok": false,
       "kind": "finviz_market_digest",
       "path": "01_daily/news/2026-11-11_finviz_market_digest.json",
-      "reason": "",
-      "size": 5599,
+      "reason": "missing",
+      "size": 0,
       "carried": false,
       "timeout": false,
-      "empty": false,
+      "empty": true,
       "missing_markers": []
     },
     {
@@ -91,11 +91,11 @@
       "missing_markers": []
     },
     {
-      "ok": true,
+      "ok": false,
       "kind": "map_heat",
       "path": "01_daily/map_heat/2026-11-11_map_heat.json",
-      "reason": "",
-      "size": 271588,
+      "reason": "stale_map_heat_md",
+      "size": 0,
       "carried": false,
       "timeout": false,
       "empty": false,
