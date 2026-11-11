@@ -2,17 +2,17 @@
 
 Live sleeves still SIT on S≤−3. Search a ticker for every session since 8/13: cameras (+N −N), 09:30 open, close, same-day % and hold-1/3/5 with actual prices.
 
-Generated 2026-11-10T21:30:50.414777-05:00 · 2026-08-13 → 2026-11-10 · live sit **untouched**.
+Generated 2026-11-11T05:12:32.535005-05:00 · 2026-08-13 → 2026-11-10 · live sit **untouched**.
 
 ## Latest morning
 
-- Date **2026-11-10** S=6.883 hard-red=False · 201 investigator cards · 156 long-ok · 16 short-ok
+- Date **2026-11-10** S=6.883 hard-red=False · 304 investigator cards · 160 long-ok · 16 short-ok
 
 ### Longs weather sat on (top)
 
 - **FG** idio +33 · +10 −0 · E good · H1 None% H3 None%
 - **ZVRA** idio +33 · +9 −0 · E good · H1 None% H3 None%
-- **ALGN** idio +31 · +9 −0 · E good · H1 None% H3 None%
+- **ALGN** idio +31 · +9 −0 · E good · H1 1.42% H3 None%
 - **TMDX** idio +31 · +9 −0 · E good · H1 None% H3 None%
 - **ETON** idio +31 · +8 −0 · E good · H1 None% H3 None%
 - **SERV** idio +31 · +8 −0 · E good · H1 None% H3 None%
