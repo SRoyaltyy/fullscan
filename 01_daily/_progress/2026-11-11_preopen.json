@@ -5,8 +5,8 @@
   "run_id": "42993147852",
   "model": "glm-5.3-flash",
   "started_at": "2026-11-11T04:34:57-05:00",
-  "updated_at": "2026-11-11T04:39:25-05:00",
-  "heartbeat_at": "2026-11-11T04:39:25-05:00",
+  "updated_at": "2026-11-11T04:39:45-05:00",
+  "heartbeat_at": "2026-11-11T04:39:45-05:00",
   "stages": [
     {
       "name": "prep",
@@ -98,11 +98,11 @@
     },
     {
       "name": "qc",
-      "state": "running",
+      "state": "ok",
       "started_at": "2026-11-11T04:39:25-05:00",
-      "ended_at": "",
+      "ended_at": "2026-11-11T04:39:45-05:00",
       "heartbeat_at": "2026-11-11T04:39:25-05:00",
-      "done": 0,
+      "done": 1,
       "total": 1,
       "model": "glm-5.3-flash",
       "error": ""
