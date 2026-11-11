@@ -2,7 +2,7 @@
 
 Live sleeves still SIT on S≤−3. Search a ticker for every session since 8/13: cameras (+N −N), 09:30 open, close, same-day % and hold-1/3/5 with actual prices.
 
-Generated 2026-11-11T15:06:55.807195-05:00 · 2026-08-13 → 2026-11-10 · live sit **untouched**.
+Generated 2026-11-11T15:38:17.222138-05:00 · 2026-08-13 → 2026-11-10 · live sit **untouched**.
 
 ## Latest morning
 
@@ -10,25 +10,25 @@ Generated 2026-11-11T15:06:55.807195-05:00 · 2026-08-13 → 2026-11-10 · live 
 
 ### Longs weather sat on (top)
 
-- **FG** idio +33 · +10 −0 · E good · H1 -2.43% H3 None%
-- **ZVRA** idio +33 · +9 −0 · E good · H1 0.59% H3 None%
+- **FG** idio +33 · +10 −0 · E good · H1 -2.6% H3 None%
+- **ZVRA** idio +33 · +9 −0 · E good · H1 0.81% H3 None%
 - **ALGN** idio +31 · +9 −0 · E good · H1 1.42% H3 None%
-- **TMDX** idio +31 · +9 −0 · E good · H1 -0.64% H3 None%
-- **ETON** idio +31 · +8 −0 · E good · H1 7.32% H3 None%
-- **SERV** idio +31 · +8 −0 · E good · H1 -2.73% H3 None%
-- **GRDN** idio +30 · +8 −0 · E good · H1 6.92% H3 None%
-- **CWST** idio +30 · +7 −0 · E good · H1 6.59% H3 None%
+- **TMDX** idio +31 · +9 −0 · E good · H1 -0.87% H3 None%
+- **ETON** idio +31 · +8 −0 · E good · H1 7.46% H3 None%
+- **SERV** idio +31 · +8 −0 · E good · H1 -2.58% H3 None%
+- **GRDN** idio +30 · +8 −0 · E good · H1 7.34% H3 None%
+- **CWST** idio +30 · +7 −0 · E good · H1 7.52% H3 None%
 
 ### Shorts weather sat on (top)
 
-- **ASTS** idio -9 · +2 −5 · H1 -5.74%
-- **HPK** idio -9 · +3 −5 · H1 -11.46%
-- **URG** idio -9 · +2 −5 · H1 16.06%
-- **TDW** idio -7 · +3 −4 · H1 -10.24%
-- **LAND** idio -6 · +2 −4 · H1 -5.09%
-- **KLC** idio -5 · +2 −3 · H1 4.61%
-- **PBR** idio -5 · +3 −4 · H1 1.05%
-- **ONDS** idio -5 · +2 −5 · H1 1.6%
+- **ASTS** idio -9 · +2 −5 · H1 -4.98%
+- **HPK** idio -9 · +3 −5 · H1 -11.77%
+- **URG** idio -9 · +2 −5 · H1 16.4%
+- **TDW** idio -7 · +3 −4 · H1 -10.18%
+- **LAND** idio -6 · +2 −4 · H1 -5.45%
+- **KLC** idio -5 · +2 −3 · H1 6.36%
+- **PBR** idio -5 · +3 −4 · H1 1.63%
+- **ONDS** idio -5 · +2 −5 · H1 2.3%
 
 ## If we had taken them on hard-red sits (research)
 
