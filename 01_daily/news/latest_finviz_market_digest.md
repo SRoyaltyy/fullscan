@@ -1,6 +1,6 @@
 # Finviz homepage market digest — 2026-11-11
 
-**Generated:** 2026-11-11T04:20:54.719745-05:00 (America/New_York)
+**Generated:** 2026-11-11T04:22:35.039882-05:00 (America/New_York)
 **Source:** `live`
 **Banner:** US stocks set for higher open as tech leads futures gains into quiet Veterans Day session with no major data on tap
 **Prior close:** SPX —  Nasdaq —  Dow —
