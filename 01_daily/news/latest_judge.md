@@ -1,71 +1,57 @@
-# News Judge — 2026-11-10
+# News Judge — 2026-11-11
 
 ### IMPORTANT NEWS (my ranking)
-1. **Stock Market Correction Or Crash? 3 Charts For The Week Ahead After The AI Sell-Off** — broad AI-led drawdown is the main SPX/NDX risk-appetite driver; provisional channel: **risk**.
-2. **Hot U.S. inflation hasn’t cooled off; rising prices keep Fed rate hike on track** — pending CPI/Fed path is the rates gate for beta; provisional channel: **rates**.
-3. **JPMorgan: semiconductor earnings sugar rush likely to fade** — semis earnings/valuation risk can cap any NDX/SMH rebound; provisional channel: **sector_fundamental**.
-4. **Nvidia spy allegations likely to spur laws to tighten China’s access to AI chips** — Nvidia-centered export/legal risk transmits to AI semis and NDX; provisional channel: **sector_policy**.
-5. **Anthropic reportedly buying $3.4B natural-gas turbines from Caterpillar** — AI data-center power demand is a direct CAT/industrials/power catalyst; provisional channel: **sector_fundamental**.
-6. **Constellation raises EPS guidance on expanded nuclear deals with Amazon/Google** — AI power demand supports CEG/utilities/IPP basket; provisional channel: **sector_fundamental**.
-7. **KKR profit hits record as asset sales, fees surge** — alternative-manager earnings strength supports financials/alt basket; provisional channel: **sector_fundamental**.
-8. **Taiwan October exports surge again on strong AI demand** — AI supply-chain confirmation supports semis/global risk sentiment; provisional channel: **sector_fundamental**.
-
-RULES_APPLIED: `a-scheduled-high-impact-macro-release-cpi-nfp-fomc-is-the-do` — CPI/Fed hike risk is pending; news layer does not emit a directional lean against confirming futures.
+1. **Hot October CPI and Waller’s half-point hike debate cement December hike odds** — dominant rates/risk shock; lifts hike odds, 10Y near 5%, pressures SPX beta. Channel: rates.
+2. **Nvidia selloff deepens on AI jitters and Jensen Huang scrutiny** — AI/semis leadership risk; spills into QQQ/SMH and crowded AI basket. Channel: risk.
+3. **Caterpillar reportedly wins $3.4B Anthropic gas-turbine order for AI data centers** — AI-power capex signal for industrials/energy, not pure single-name color. Channel: sector_fundamental.
+4. **Constellation raises 2024 EPS guidance again on expanded Amazon/Google nuclear deals** — supports AI-power IPP/utility earnings narrative. Channel: sector_fundamental.
+5. **Boeing to cut 5% of commercial airplane workforce as it slows production increases** — industrials production/sentiment negative. Channel: sector_fundamental.
+6. **Investors buy the dip in chip ETFs as inflows top $44B** — partial semis sentiment offset to Nvidia selloff. Channel: sentiment.
+7. **CoreWeave boosts annual forecast easing AI slowdown concerns** — rescued AI-infra demand signal; offsets chip weakness only partially. Channel: sentiment.
+8. **Wells Fargo upgrades US AI infrastructure view after chip selloff** — rescued sector-sentiment stabilizer, not an all-clear. Channel: sentiment.
 
 ### STEP 1 — FRAMEWORK SCORE
-- **AI sell-off / correction charts**: keep; us_relevance high; channel risk; geography us_domestic; severity regime; horizon 1d-1w; object spx:SPX/NDX beta; polarity bearish; conf 0.82.
-- **Hot US inflation / Fed hike on track**: keep; high; rates; us_domestic; regime; 1d-1w; spx:SPX/rate-sensitive beta; hawkish; conf 0.78.
-- **JPM semiconductor sugar-rush fade**: keep; high; sector_fundamental; global_priced; session; 1d-1w; sector_etf:SMH/NDX semis; bearish/mixed; conf 0.68.
-- **Nvidia scrutiny / China AI-chip tightening**: keep; high; sector_policy; us_supply_chain; session; 1d-1w; basket:AI semis/NDX/SMH; bearish/mixed; conf 0.76.
-- **Anthropic-CAT gas turbines**: keep; high; sector_fundamental; us_domestic; session; 1d-1w; sector_etf:CAT/industrials/power; bullish; conf 0.72.
-- **CEG nuclear deals / guidance**: keep; high; sector_fundamental; us_domestic; session; 1d-1w; sector_etf:CEG/utilities; bullish; conf 0.66.
-- **KKR record profit**: keep; medium-high; sector_fundamental; us_domestic; session; 1d-1w; sector_etf:KKR/BX alt managers; bullish; conf 0.62.
-- **Taiwan AI export surge**: conditional; medium; sector_fundamental; us_supply_chain; session; 1d-1w; sector_etf:SMH/semis supply chain; bullish; conf 0.60.
+- **Hot CPI/Waller hike debate** | keep | us_relevance: high — direct SPX discount-rate and Fed-path shock | channel: rates | geography: us_domestic | severity: regime | horizon: 1d-1w | action: spx:SPX beta/10Y | polarity: hawkish — hot CPI plus Waller half-point talk lift hike odds | conf: 0.90
+- **Nvidia selloff/AI jitters** | keep | us_relevance: high — AI leadership is index and semis beta | channel: risk | geography: us_domestic | severity: session | horizon: 1d-1w | action: sector_etf:SMH/QQQ | polarity: bearish — selling pressure in AI bellwether | conf: 0.85
+- **CAT/Anthropic turbine order** | keep | us_relevance: medium-high — AI data-center power capex read-through | channel: sector_fundamental | geography: us_domestic | severity: session | horizon: 1w-1m | action: sector_etf:XLI/XLE | polarity: bullish — large AI-power contract supports capex | conf: 0.75
+- **CEG nuclear guidance** | keep | us_relevance: medium-high — AI-power utility earnings signal | channel: sector_fundamental | geography: us_domestic | severity: session | horizon: 1w-1m | action: sector_etf:XLU | polarity: bullish — expanded nuclear PPAs lift guidance | conf: 0.75
+- **Boeing workforce cut** | conditional | us_relevance: medium — large industrial single-name with sector read-through | channel: sector_fundamental | geography: us_domestic | severity: session | horizon: 1w | action: sector_etf:XLI | polarity: bearish — production slowdown signal | conf: 0.70
+- **Chip ETF dip-buying inflows** | conditional | us_relevance: medium — semis sentiment stabilizer, not fundamental | channel: sentiment | geography: us_domestic | severity: session | horizon: 1d-1w | action: basket:chip ETFs | polarity: bullish — inflows show dip demand despite Nvidia | conf: 0.60
+- **CoreWeave forecast boost** | conditional | us_relevance: medium — AI-infra demand signal | channel: sentiment | geography: us_domestic | severity: session | horizon: 1d-1w | action: basket:AI-infra | polarity: bullish — forecast raise eases slowdown fear | conf: 0.65
+- **Wells Fargo AI-infra upgrade** | conditional | us_relevance: medium — analyst sentiment after chip selloff | channel: sentiment | geography: us_domestic | severity: session | horizon: 1d-1w | action: basket:AI-infra | polarity: bullish — upgrade supports AI-infra view | conf: 0.60
 
 ### STEP 2 — INTERACTIONS
-- **AI sell-off + hot inflation → long-duration/AI multiple compression**; do not buy software/semis on dovish-rate hope.
-- **Nvidia export/probe risk + JPM semis fade → semis mixed**; do not double-count ARM beat as sector-wide clean signal.
-- **AI power demand (CAT/CEG) is separate from semis risk**; do not short IPPs on wind alone.
-- **Taiwan AI exports + China ETF support → global supply-chain sentiment support**, but US rates/AI risk dominate.
+Hot CPI/Waller + Nvidia selloff = one rates/AI risk-off cluster; do not buy software/semis on dovish-rate hope. AI-power demand (CAT turbines, CEG nuclear) + Nvidia/AI jitters = AI capex mixed; utilities/power supported, semis not all-clear. CoreWeave/Wells/chip ETF inflows offset Nvidia selloff only partially; semis sentiment mixed, do not double-count positives. Fed path + hot CPI = one rates cluster, not separate signals.
 
 ### STEP 3 — RECLASSIFY AUDIT
-- **Dropped from usable**: Lake Powell/Powell local false positives, Fed Dallas-NY private-credit survey, China PPI/CPI, China crude imports, RBA AI-CPI, Indian shares — not top US session drivers.
-- **Rescued from noise**: Taiwan AI export surge; KKR record profit; China National Team record ETF buying; Wall St brokerages “AI selloff overdone” sentiment item.
+**DROPPED_FROM_USABLE:** duplicate CPI/Fed headlines, foreign macro/rates spillovers, crypto CPI item, and non-US equity items — no incremental US equity/sector force beyond the rates cluster. **RESCUED_FROM_NOISE:** CoreWeave forecast boost and Wells Fargo AI-infra upgrade — both are AI-infra sentiment stabilizers after the chip selloff, so they belong in conditional sector context, not noise.
 
-### STEP 4 — B1 / SECTOR INJECT
-NEWS_JUDGE: n=8 rescued=4  
-MACRO rates: [hawkish] Hot US inflation/CPI keeps Fed hike risk alive (regime/1d-1w)  
-MACRO risk: [bearish] AI sell-off broadens; correction charts and Nvidia scrutiny pressure SPX/NDX beta (regime/1d-1w)  
-SECTOR semis/AI: [mixed] JPM warns semiconductor sugar rush fades; ARM beat offset by Nvidia probe/export tightening (SMH/NDX)  
-SECTOR power/industrials: [bullish] Anthropic $3.4B CAT gas-turbine order and CEG nuclear deals reinforce AI power demand (CAT/CEG/utilities)  
-SECTOR financials: [bullish] KKR record profit on asset sales/fees supports alt managers (KKR/BX)  
-SECTOR global AI supply chain: [bullish] Taiwan AI exports surge; China/Taiwan stabilization buying supports sentiment (SMH supply chain)  
-INTERACTION: AI multiple compression + hot inflation keeps rates high -> do not buy long-duration software on dovish-rate hope; AI power demand supports CAT/CEG but semis mixed on Nvidia/export risk.  
-WATCH: CPI/Fed hike risk and Nvidia headlines can override sector strength; ranking thin on direct US macro besides inflation.
+**RULES_APPLIED: none** — no fresh kinetic oil shock, no unresolved same-morning voting Fed binary, and CPI/Waller are already printing rather than pending at the open.
 
 NEWS_PARSE_BEGIN
 IMPORTANT_COUNT: 8
 TOP_ITEMS:
-- Stock Market Correction Or Crash? 3 Charts For The Week Ahead After The AI Sell-Off | keep=keep | channel=risk | severity=regime | horizon=1d-1w | object=spx:SPX/NDX beta | pol=bearish | conf=0.82
-- Hot U.S. inflation hasn’t cooled off. Rising consumer prices to keep Fed rate hike on track | keep=keep | channel=rates | severity=regime | horizon=1d-1w | object=spx:SPX/rate-sensitive beta | pol=hawkish | conf=0.78
-- Watch AI Markets: Semiconductor Earnings Sugar Rush Likely to Fade, Says JPMorgan’s Peters | keep=keep | channel=sector_fundamental | severity=session | horizon=1d-1w | object=sector_etf:SMH/NDX semis | pol=bearish | conf=0.68
-- Nvidia spy allegations likely to spur laws to tighten China's access to AI chips | keep=keep | channel=sector_policy | severity=session | horizon=1d-1w | object=basket:AI semis/NDX/SMH | pol=bearish | conf=0.76
-- Anthropic is reportedly buying $3.4 billion of natural-gas power turbines directly from Caterpillar | keep=keep | channel=sector_fundamental | severity=session | horizon=1d-1w | object=sector_etf:CAT/industrials/power | pol=bullish | conf=0.72
-- Constellation raises EPS guidance on expanded nuclear deals with Amazon and Google | keep=keep | channel=sector_fundamental | severity=session | horizon=1d-1w | object=sector_etf:CEG/utilities | pol=bullish | conf=0.66
-- KKR profit hits record as asset sales, fees surge | keep=keep | channel=sector_fundamental | severity=session | horizon=1d-1w | object=sector_etf:KKR/BX alt managers | pol=bullish | conf=0.62
-- Taiwan's October exports surge again on strong AI demand | keep=conditional | channel=sector_fundamental | severity=session | horizon=1d-1w | object=sector_etf:SMH/semis supply chain | pol=bullish | conf=0.60
-INTERACTIONS: AI sell-off + hot inflation -> long-duration/AI multiple compression; Nvidia export/probe risk + JPM semis fade -> semis mixed; AI power demand CAT/CEG separate from semis risk; Taiwan AI exports + China ETF support -> global supply-chain sentiment support but US rates/AI risk dominate
-RESCUED_FROM_NOISE: Taiwan's October exports surge again on strong AI demand; KKR profit hits record as asset sales, fees surge; China’s National Team Ramps Up ETF Buying to Record High; Wall St brokerages say AI selloff overdone
-DROPPED_FROM_USABLE: Lake Powell/Powell local false positives; Fed Dallas-NY private-credit survey; China PPI/CPI; China crude imports; RBA Hunter AI-CPI; Indian shares
+- Hot October CPI and Waller half-point hike debate cement December hike odds | keep=keep | channel=rates | severity=regime | horizon=1d-1w | object=spx:SPX beta | pol=hawkish | conf=0.90
+- Nvidia selloff deepens on AI jitters and Jensen Huang scrutiny | keep=keep | channel=risk | severity=session | horizon=1d-1w | object=sector_etf:SMH/QQQ | pol=bearish | conf=0.85
+- Caterpillar reportedly wins $3.4B Anthropic gas-turbine order for AI data centers | keep=keep | channel=sector_fundamental | severity=session | horizon=1w-1m | object=sector_etf:XLI/XLE | pol=bullish | conf=0.75
+- Constellation raises 2024 EPS guidance again on expanded Amazon/Google nuclear deals | keep=keep | channel=sector_fundamental | severity=session | horizon=1w-1m | object=sector_etf:XLU | pol=bullish | conf=0.75
+- Boeing to cut 5% of commercial airplane workforce as it slows production increases | keep=conditional | channel=sector_fundamental | severity=session | horizon=1w | object=sector_etf:XLI | pol=bearish | conf=0.70
+- Investors buy the dip in chip ETFs as inflows top $44B | keep=conditional | channel=sentiment | severity=session | horizon=1d-1w | object=basket:chip ETFs | pol=bullish | conf=0.60
+- CoreWeave boosts annual forecast easing AI slowdown concerns | keep=conditional | channel=sentiment | severity=session | horizon=1d-1w | object=basket:AI-infra | pol=bullish | conf=0.65
+- Wells Fargo upgrades US AI infrastructure view after chip selloff | keep=conditional | channel=sentiment | severity=session | horizon=1d-1w | object=basket:AI-infra | pol=bullish | conf=0.60
+INTERACTIONS: Hot CPI/Waller + Nvidia selloff = rates/AI risk-off cluster; AI-power demand (CAT turbines, CEG nuclear) + Nvidia/AI jitters = AI capex mixed; CoreWeave/Wells/chip ETF inflows offset Nvidia selloff only partially; Fed path + hot CPI = one rates cluster
+RESCUED_FROM_NOISE: CoreWeave boosts annual forecast easing AI slowdown concerns; Wells Fargo upgrades US AI infrastructure view after chip selloff
+DROPPED_FROM_USABLE: Canadian dollar hits near four-week low as US CPI data boosts greenback; Canada reimposes sanctions on 11 Iranian entities for contributing to nuclear activities; Faltering Philippine Growth Spurs Calls for Rate Hold State Aid; KPMG Chief Economist Predicts Hot PCE Report After CPI; Food Gas Prices Push October CPI Higher; China's October crude oil imports rise to highest level since March; Indian shares inch higher to close at 8-month high as crude oil drops; Bitcoin Trades Near $73K as Hot CPI Fuels Fed Rate Hike Fears
 B1_INJECT:
-NEWS_JUDGE: n=8 rescued=4
-MACRO rates: [hawkish] Hot US inflation/CPI keeps Fed hike risk alive (regime/1d-1w)
-MACRO risk: [bearish] AI sell-off broadens; correction charts and Nvidia scrutiny pressure SPX/NDX beta (regime/1d-1w)
-SECTOR semis/AI: [mixed] JPM warns semiconductor sugar rush fades; ARM beat offset by Nvidia probe/export tightening (SMH/NDX)
-SECTOR power/industrials: [bullish] Anthropic $3.4B CAT gas-turbine order and CEG nuclear deals reinforce AI power demand (CAT/CEG/utilities)
-SECTOR financials: [bullish] KKR record profit on asset sales/fees supports alt managers (KKR/BX)
-SECTOR global AI supply chain: [bullish] Taiwan AI exports surge; China/Taiwan stabilization buying supports sentiment (SMH supply chain)
-INTERACTION: AI multiple compression + hot inflation keeps rates high -> do not buy long-duration software on dovish-rate hope; AI power demand supports CAT/CEG but semis mixed on Nvidia/export risk.
-WATCH: CPI/Fed hike risk and Nvidia headlines can override sector strength; ranking thin on direct US macro besides inflation.
+NEWS_JUDGE: n=8 rescued=2
+MACRO rates: [pol] Hot CPI + Waller half-point debate lift Dec hike odds, 10Y near 5% (regime/1d-1w)
+SECTOR semis/AI: [pol] Nvidia selloff/deepening AI jitters weigh QQQ/SMH (sector_etf:SMH/QQQ)
+SECTOR industrials/energy: [pol] CAT $3.4B Anthropic gas-turbine order supports AI-power capex (sector_etf:XLI/XLE)
+SECTOR utilities: [pol] CEG raises EPS on Amazon/Google nuclear deals supports AI-power IPPs (sector_etf:XLU)
+SECTOR industrials: [pol] Boeing 5% commercial workforce cut signals production slowdown (sector_etf:XLI)
+SECTOR semis: [pol] Chip ETF dip-buying inflows top $44B, partial offset to Nvidia selloff (basket:chip ETFs)
+SECTOR AI-infra: [pol] CoreWeave raises forecast, Wells Fargo upgrades AI-infra view offset chip selloff (basket:AI-infra)
+INTERACTION: Hot CPI/Waller + Nvidia selloff = rates/AI risk-off cluster; AI-power positives offset only partly; do not double-count AI-infra upgrades as all-clear.
+WATCH: Hawkish CPI repricing can dominate single-name positives; semis remain headline-sensitive.
 NEWS_PARSE_END
 
