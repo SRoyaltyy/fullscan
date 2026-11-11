@@ -13503,7 +13503,7 @@
   "strategy": "updown_rel1_hv_v1",
   "label": "paper only \u2014 failed multiple-testing haircut (t 2.02 vs 3.37)",
   "days_locked": 26,
-  "days_realized": 24,
+  "days_realized": 25,
   "days_missed": 0,
   "missed_dates": [],
   "rule": {
@@ -13512,45 +13512,45 @@
    "missed": "Missed days (not frozen before 09:25 ET) are recorded in MISSED.jsonl, never back-filled, and earn nothing."
   },
   "gross": {
-   "cum": 0.0103719643,
-   "mean_bp": 8.4005486597,
-   "t_nw": 0.2050004057
+   "cum": 0.0447004071,
+   "mean_bp": 21.6316023984,
+   "t_nw": 0.5603498673
   },
   "net5": {
-   "cum": -0.0214933028,
-   "mean_bp": -4.9077846737,
-   "t_nw": -0.1187864277
+   "cum": 0.0103824711,
+   "mean_bp": 8.2956023984,
+   "t_nw": 0.2133097625
   },
   "net10": {
-   "cum": -0.0523959641,
-   "mean_bp": -18.216118007,
-   "t_nw": -0.4372848513
+   "cum": -0.0228536198,
+   "mean_bp": -5.0403976016,
+   "t_nw": -0.1286462678
   },
   "net15": {
-   "cum": -0.0823638197,
-   "mean_bp": -31.5244513403,
-   "t_nw": -0.7505467077
+   "cum": -0.0550405368,
+   "mean_bp": -18.3763976016,
+   "t_nw": -0.4655232983
   },
   "hedged_net10": {
-   "cum": -0.1733701791,
-   "mean_bp": -74.9277446447,
-   "t_nw": -1.332280441
+   "cum": -0.1392221389,
+   "mean_bp": -55.667077693,
+   "t_nw": -1.1212010671
   },
   "iwm_oo1": {
-   "cum": null,
-   "mean_bp": null,
-   "t_nw": null
+   "cum": 0.0170350053,
+   "mean_bp": 7.5801955186,
+   "t_nw": 0.4641294094
   },
   "rand_med_net10": {
-   "cum": -0.0808302369,
-   "mean_bp": -35.0558216281,
-   "t_nw": -54.1903840387
+   "cum": -0.0837941332,
+   "mean_bp": -34.9434188622,
+   "t_nw": -56.3716532508
   },
   "best_stock": "TTMI",
   "best_stock_contrib": 0.0122230958,
-  "net10_ex_best_cum": -0.0635066151,
-  "mean_turnover": 2.6616666667,
-  "status": "collecting (24 realized days; kill check from day 20/60, promotion review not before day 120)",
+  "net10_ex_best_cum": -0.0343106546,
+  "mean_turnover": 2.6672,
+  "status": "collecting (25 realized days; kill check from day 20/60, promotion review not before day 120)",
   "killed": false
  },
  "realized_cols": [
@@ -14279,30 +14279,60 @@
    "2026-11-10",
    50,
    50,
-   0.0,
+   0.001817935,
    2.6,
    -0.62377564,
-   -0.016321763,
-   -0.010181118,
+   0.01007068,
+   0.00809978,
+   0.008073307,
+   0.0084703218,
    null,
    null,
-   "AEHR;AMAT;AMD;AMKR;ANF;APLD;APP;ASST;ASTS;ASX;ATI;AVAV;AXTI;BABA;BAH;BE;BEN;CDE;CIEN;CIFR;CLF;CLS;CRCL;CRDO;CRWD;CRWV;CSCO;DELL;DINO;DOCN;ECHO;EPAM;FFIV;FIG;FLEX;FPS;FRO;GNRC;GRAL;HL;HPE;HPQ;HUBS;HUT;IBRX;IESC;IONQ;IREN;IT;KEYS;KRMN;KTOS;LITE;LQDA;LRCX;LSCC;MARA;MOD;MOS;MPC;MRNA;MRVL;MTZ;NET;NTAP;NUE;NXT;OKTA;ON;ONDS;ONTO;ORCL;P;PANW;PBF;PRIM;PSX;PURR;QXO;RBLX;RBRK;RIOT;RKLB;RNG;RYTM;SEI;SIMO;SITM;SNDK;STX;TER;TPL;TXG;VG;VLO;VRT;WDC;WULF;WYNN;ZS",
+   0.000517935,
+   0.00679978,
+   -0.000782065,
+   0.00549978,
+   -0.002082065,
+   0.00419978,
+   0.0042538673,
+   -0.0016324996,
+   0.0094036165,
+   -0.0034987085,
+   0.007567816,
+   -0.0053225168,
+   0.0057325673,
+   0.648,
+   -0.000782065
+  ],
+  [
+   "2026-11-10",
+   "2026-11-11",
+   50,
+   50,
+   0.032099754,
+   2.8,
+   0.56140567,
+   0.012329337,
+   0.025177995,
+   0.01184585,
+   0.011437083,
    null,
-   -0.0013,
-   -0.011481118,
-   -0.0026,
-   -0.012781118,
-   -0.0039,
-   -0.014081118,
    null,
-   -0.00182,
-   -0.0015388052,
-   -0.00364,
-   -0.0033588052,
-   -0.00546,
-   -0.0051,
+   0.030699754,
+   0.023777995,
+   0.029299754,
+   0.022377995,
+   0.027899754,
+   0.020977995,
+   0.022649427,
+   -0.0015391105,
+   0.011169591,
+   -0.0033658667,
+   0.0094199695,
+   -0.0051985136,
+   0.0076229695,
    1.0,
-   -0.0026
+   0.029299754
   ]
  ]
 }
