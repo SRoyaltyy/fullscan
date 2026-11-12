@@ -9591,5 +9591,104 @@
     "sha256": "693003712943988f3c9502f1bd223ef761d5b73f10e113fe25a514236e76ed62",
     "shares": 159,
     "ticker": "ZJYL"
+  },
+  {
+    "bar_cutoff": "2026-11-11",
+    "cash_before": 17.905638588375297,
+    "committed_at": "2026-11-12T13:44:56Z",
+    "date": "2026-11-12",
+    "excluded_unexplained_legs": [
+      {
+        "bar_date": "2026-10-16",
+        "leg": "close_over_prev_close",
+        "reason": "not a verified split and not a filing-verified real move",
+        "ticker": "BBOT"
+      },
+      {
+        "bar_date": "2026-10-16",
+        "leg": "open_over_prev_close",
+        "reason": "not a verified split and not a filing-verified real move",
+        "ticker": "BBOT"
+      }
+    ],
+    "finviz_source": {
+      "commit": "066987a48278fe98c6e5483fa019de8fd1a9a4cb",
+      "commit_time": "2026-11-11T21:43:34Z",
+      "file_sha256": "3a2cc6437a7eeeb62723a7dda4549afe705ad77d7f99de2d0e8cf897ea65ac4f",
+      "path": "data/snapshots/2026-11-11.csv",
+      "snapshot_date": "2026-11-11",
+      "status": "BEFORE_OPEN"
+    },
+    "holdup_on": false,
+    "kind": "plan",
+    "morning_s": -7.158,
+    "picks": [
+      {
+        "fv_avg_volume": 2159.44,
+        "fv_price": 3.67,
+        "rank": 1,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "BGS"
+      },
+      {
+        "fv_avg_volume": 2810.64,
+        "fv_price": 1.82,
+        "rank": 2,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "GEVO"
+      },
+      {
+        "fv_avg_volume": 6012.78,
+        "fv_price": 11.22,
+        "rank": 3,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "CAPR"
+      },
+      {
+        "fv_avg_volume": 834.03,
+        "fv_price": 9.97,
+        "rank": 4,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "FOSL"
+      }
+    ],
+    "planned_sells": [
+      {
+        "reason": "holdup extension",
+        "shares": 105,
+        "ticker": "FLY"
+      },
+      {
+        "reason": "holdup extension",
+        "shares": 217,
+        "ticker": "FRVO"
+      },
+      {
+        "reason": "holdup extension",
+        "shares": 1160,
+        "ticker": "INDI"
+      }
+    ],
+    "recipe": "union_hot_n4_holdup__w0",
+    "s_source": {
+      "blob_sha": "cde9d320ad702c2a42b737a17fb3e8fdd85073f9",
+      "kind": "predict",
+      "path": "01_daily/general/2026-11-12_predict.md",
+      "server_time_utc": "2026-11-12T20:27:30+08:00",
+      "status": "BEFORE_1330"
+    },
+    "sha256": "d9435de08cfd96ebf094726e56b9b0270efccc719299c6588bde4eed22440533"
   }
 ]
