@@ -1,6 +1,6 @@
 # MAP HEAT — 2026-11-12
 
-Export `finviz_2026-11-11.csv` · 11616 names · generated 2026-11-12T04:32:45.318650-05:00
+Export `finviz_2026-11-12.csv` · 11616 names · generated 2026-11-12T04:47:14.383012-05:00
 
 ## TAPE (live futures)
 | Contract | Last | Change |
@@ -280,31 +280,31 @@ COLD (1w):
 - **Real Estate** -0.5% 1d -1.9% 1w · VNQ, SCHH, XLRE
 
 ## TICKER-TAGGED NEWS (Finviz v=3)
-- 3 min **NVDA** Nvidia Shares Fall 7% Premarket (The Wall Street Journal)
-- 13 min **H** DFW Airport acquires on-site Hyatt Regency hotel for $194m (Hotel Management Network)
-- 13 min **NVDA** Will Jensen Huang reign last the day? What the prediction market says (MarketWatch)
-- 15 min **XLV,BMY** Our Bristol Myers Squibb Stock Pick Is Up 35%. It's Still a Good Bet in Healthcare. (Barrons.com)
-- 15 min **NVDA** Nvidia Leadership Scandal Drags on U.S. Stock Futures, Pressures AI Trade (The Wall Street Journal)
-- 16 min **NVDA** NVDA Stock Rout: Another Analyst Slashes Rating, Beijing Warns US Against Tech Curbs (Stocktwits)
-- 17 min **CCB** Kaplan Fox & Kilsheimer LLP Encourages Coastal Financial Corporation (CCB) Investors With Losses to Seek Appointment as Lead Plaintiff Before December 1, 2026 (Newsfile)
-- 22 min **NVDA,ASML,STM** European tech shares fall as Nvidia board weighs ousting Jensen Huang (Euronews)
-- 23 min **CRWV,SMCI,DELL** Stocks in Nvidia's orbit take a hit (MarketWatch)
-- 24 min **AMCR,CL** Industry leaders back new packaging hub for unified recycling data (Packaging Gateway)
-- 29 min **EL,UL,CPRI** Capri names Estée Lauder executive Justin Boxford as CEO (Retail Insight Network)
-- 29 min **AMZN** Amazon receives UK approvals for Prime Air drone deliveries (Retail Insight Network)
-- 30 min **SHEL** Transaction in Own Shares (GlobeNewswire)
-- 32 min **NVDA** Nvidia live updates: Stock tanks after new affair allegations, board reportedly preparing to oust Jensen Huang (Yahoo Finance)
-- 32 min **YUMC** Yum China Surpasses 20,000 Stores and Targets 30,000 Within Four Years (PR Newswire)
-- 32 min **BAC,ALGT** Allegiant and Bank of America Extend Co-Branded Credit Card Partnership (PR Newswire)
-- 32 min **IDCC** At SMPTE Media Technology Summit, InterDigital Validates Metadata Standard Underpinning HDR For Premium Video Across Creator Ecosystem (GlobeNewswire)
-- 32 min **WTW** Willis appoints Chris Mulligan to lead global risk engineering (GlobeNewswire)
-- 32 min **QFIN** Qfin Holdings to Announce Third Quarter 2026 Unaudited Financial Results on November 24, 2026 (GlobeNewswire)
-- 40 min **AVEX** Why Is AVEX Stock Surging 15% Overnight Today? (Stocktwits)
-- 45 min **TRMD** TORM plc capital increase in connection with exercise of Restricted Share Units as part of TORM's incentive program (PR Newswire)
-- 47 min **APP** Kaplan Fox Notifies AppLovin Corporation (APP) Investors of the Opportunity to Serve as Lead Plaintiff Before November 16, 2026 (Newsfile)
-- 47 min **CVRX** Kaplan Fox Encourages CVRx, Inc. (CVRX) Investors with Significant Losses to Contact the Firm Before January 8, 2027 (Newsfile)
-- 48 min **CRWV,AMD,AVGO,SKHY** Nvidia board meets to decide CEO Huang's future as leadership crisis deepens (Reuters)
-- 50 min **NVDA,CRWV,NBIS** NBIS Retreats After CoreWeave Rally Ahead Of Q3 Report: Analyst Says Market Cant Squeeze Out Top Players Amid Record Cloud Demand (Stocktwits)
+- 8 min **NVDA,CRWV,AMD,AVGO,SKHY** Nvidia board weighs CEO Huang's future as leadership crisis deepens (Reuters)
+- 17 min **NVDA** Nvidia Shares Fall 7% Premarket (The Wall Street Journal)
+- 27 min **H** DFW Airport acquires on-site Hyatt Regency hotel for $194m (Hotel Management Network)
+- 28 min **NVDA** Will Jensen Huang reign last the day? What the prediction market says (MarketWatch)
+- 30 min **BMY,XLV** Our Bristol Myers Squibb Stock Pick Is Up 35%. It's Still a Good Bet in Healthcare. (Barrons.com)
+- 30 min **NVDA** Nvidia Leadership Scandal Drags on U.S. Stock Futures, Pressures AI Trade (The Wall Street Journal)
+- 30 min **NVDA** NVDA Stock Rout: Another Analyst Slashes Rating, Beijing Warns US Against Tech Curbs (Stocktwits)
+- 32 min **CCB** Kaplan Fox & Kilsheimer LLP Encourages Coastal Financial Corporation (CCB) Investors With Losses to Seek Appointment as Lead Plaintiff Before December 1, 2026 (Newsfile)
+- 36 min **NVDA,STM,ASML** European tech shares fall as Nvidia board weighs ousting Jensen Huang (Euronews)
+- 37 min **SMCI,CRWV,DELL** Stocks in Nvidia's orbit take a hit (MarketWatch)
+- 38 min **CL,AMCR** Industry leaders back new packaging hub for unified recycling data (Packaging Gateway)
+- 43 min **EL,CPRI,UL** Capri names Estée Lauder executive Justin Boxford as CEO (Retail Insight Network)
+- 43 min **AMZN** Amazon receives UK approvals for Prime Air drone deliveries (Retail Insight Network)
+- 45 min **SHEL** Transaction in Own Shares (GlobeNewswire)
+- 46 min **NVDA** Nvidia live updates: Stock tanks after new affair allegations, board reportedly preparing to oust Jensen Huang (Yahoo Finance)
+- 47 min **YUMC** Yum China Surpasses 20,000 Stores and Targets 30,000 Within Four Years (PR Newswire)
+- 47 min **BAC,ALGT** Allegiant and Bank of America Extend Co-Branded Credit Card Partnership (PR Newswire)
+- 47 min **IDCC** At SMPTE Media Technology Summit, InterDigital Validates Metadata Standard Underpinning HDR For Premium Video Across Creator Ecosystem (GlobeNewswire)
+- 47 min **WTW** Willis appoints Chris Mulligan to lead global risk engineering (GlobeNewswire)
+- 47 min **QFIN** Qfin Holdings to Announce Third Quarter 2026 Unaudited Financial Results on November 24, 2026 (GlobeNewswire)
+- 54 min **AVEX** Why Is AVEX Stock Surging 15% Overnight Today? (Stocktwits)
+- 1 hour **TRMD** TORM plc capital increase in connection with exercise of Restricted Share Units as part of TORM's incentive program (PR Newswire)
+- 1 hour **APP** Kaplan Fox Notifies AppLovin Corporation (APP) Investors of the Opportunity to Serve as Lead Plaintiff Before November 16, 2026 (Newsfile)
+- 1 hour **CVRX** Kaplan Fox Encourages CVRx, Inc. (CVRX) Investors with Significant Losses to Contact the Firm Before January 8, 2027 (Newsfile)
+- 1 hour **NVDA,CRWV,NBIS** NBIS Retreats After CoreWeave Rally Ahead Of Q3 Report: Analyst Says Market Cant Squeeze Out Top Players Amid Record Cloud Demand (Stocktwits)
 
 ## NOTES
 - Captains = top 2 by market cap. RUT needs ≥ $5m 20-day dollar volume.
