@@ -1176,6 +1176,77 @@
       "date": "2026-11-12",
       "ok": true,
       "pushed": true,
+      "at": "2026-11-12T04:42:53.599808-05:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-11-12_parsed.json",
+          "ok": true,
+          "reason": "",
+          "size": 5963115,
+          "preview": "raw=8221 usable=692 single=495 \u00b7 Saudis Tell OPEC Output Surged 26% to Highest Since War Began - Bloomberg.com | OPEC+ oil output in October nears pre-Iran war rate, led by Saudi Arabia - Reute | Watch Hot Inflation Revives December Rate Hike - Bloomberg.com | Oil production nears pre-Iran war levels, OPEC says | Watch KPMG Chief Economist Predicts Hot PCE Report After CPI - Bloomberg.com"
+        },
+        {
+          "path": "01_daily/news/2026-11-12_parsed.md",
+          "ok": true,
+          "reason": "",
+          "size": 12085,
+          "preview": "# News Parse v2 \u2014 2026-11-12T04:42:53.164423-05:00\nWindow\u224848h | news_mode=on | raw=8221 | usable=692 | single_name=495 | noise_dropped=6896\nusable polarity={'+': 31, '-': 161, 'mixed': 7, 'neutral': 493}"
+        }
+      ],
+      "preview": "raw=8221 usable=692 single=495 \u00b7 Saudis Tell OPEC Output Surged 26% to Highest Since War Began - Bloomberg.com | OPEC+ oil output in October nears pre-Iran war rate, led by Saudi Arabia - Reute | Watch Hot Inflation Revives December Rate Hike - Bloomberg.com | Oil production nears pre-Iran war levels, OPEC says | Watch KPMG Chief Economist Predicts Hot PCE Report After CPI - Bloomberg.com \u00b7 # News Parse v2 \u2014 2026-11-12T04:42:53.164423-05:00\nWindow\u224848h | news_mode=on | raw=8221 | usable=692 | single_name=495 | noise_dropped=6896\nusable polarity={'+': 31, '-': 161, 'mixed': 7, 'neutral': 493}"
+    },
+    {
+      "key": "finviz_digest",
+      "title": "Finviz digest",
+      "date": "2026-11-12",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-12T04:42:59.224071-05:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-11-12_finviz_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 91206,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        },
+        {
+          "path": "01_daily/news/2026-11-12_finviz_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 9937,
+          "preview": "# Finviz Daily Digest \u2014 2026-11-12\n_Generated 2026-11-12T04:42:59.071741-05:00 \u00b7 export=data/exports/finviz_2026-11-12.csv \u00b7 ticker digests=1385 \u00b7 high-signal=520_"
+        },
+        {
+          "path": "data/exports/finviz_2026-11-12.csv",
+          "ok": true,
+          "reason": "",
+          "size": 12317646,
+          "preview": "11754 rows \u00b7 Ticker,Company,Industry,Market Cap,Forward P/E,P/S,P/B,P/Cash,P/Free Cash Flow,EPS (ttm),Sales Year Over Year TTM,EPS Su \u00b7 A, AA, AAA, AAAA, AAAB"
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11055848,
+          "preview": "11754 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAB\""
+        },
+        {
+          "path": "01_daily/news/2026-11-12_finviz_digest_preopen.json",
+          "ok": true,
+          "reason": "",
+          "size": 91206,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        }
+      ],
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-11-12\n_Generated 2026-11-12T04:42:59.071741-05:00 \u00b7 export=data/exports/finviz_2026-11-12.csv \u00b7 ticker digests=1385 \u00b7 high-signal=520_ \u00b7 11754 rows \u00b7 Ticker,Company,Industry,Market Cap,Forward P/E,P/S,P/B,P/Cash,P/Free Cash Flow,EPS (ttm),Sales Year Over Year TTM,EPS Su \u00b7 A, AA, AAA, AAAA, AAAB \u00b7 11754 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAB\" \u00b7 keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+    },
+    {
+      "key": "news_parse",
+      "title": "News parse",
+      "date": "2026-11-12",
+      "ok": true,
+      "pushed": true,
       "at": "2026-11-12T04:42:59.738848-05:00",
       "files": [
         {
