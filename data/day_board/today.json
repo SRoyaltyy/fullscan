@@ -1,12 +1,12 @@
 {
   "date": "2026-11-12",
-  "generated_at": "2026-11-12T04:43:00.342733-05:00",
+  "generated_at": "2026-11-12T04:43:16.392092-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
     "ok": 4,
-    "partial": 3,
-    "fail": 1,
+    "partial": 4,
+    "fail": 0,
     "n": 8
   },
   "buy_1d": [],
@@ -15,31 +15,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "map_heat_baseline",
-      "title": "Map heat night baseline",
-      "date": "2026-11-12",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-11-12T04:41:33.232240-05:00",
-      "files": [
-        {
-          "path": "01_daily/map_heat/2026-11-12_research_baseline.json",
-          "ok": true,
-          "reason": "",
-          "size": 187514,
-          "preview": "keys: date, source_heat_date, phase, generated_at, n_targets, n_cards, coverage, validation_errors, source_calendar_results, source_market_reaction_pct, cards, size_gate"
-        },
-        {
-          "path": "01_daily/map_heat/2026-11-12_research_baseline.md",
-          "ok": true,
-          "reason": "",
-          "size": 25855,
-          "preview": "# MAP HEAT RESEARCH \u2014 2026-11-12\n142 captain cards \u00b7 size_gate=False set by pre-open refresh"
-        }
-      ],
-      "preview": "keys: date, source_heat_date, phase, generated_at, n_targets, n_cards, coverage, validation_errors, source_calendar_results, source_market_reaction_pct, cards, size_gate \u00b7 # MAP HEAT RESEARCH \u2014 2026-11-12\n142 captain cards \u00b7 size_gate=False set by pre-open refresh"
-    },
     {
       "key": "universe",
       "title": "Universe labels",
@@ -221,6 +196,31 @@
         }
       ],
       "preview": "raw=8221 usable=692 single=495 \u00b7 Saudis Tell OPEC Output Surged 26% to Highest Since War Began - Bloomberg.com | OPEC+ oil output in October nears pre-Iran war rate, led by Saudi Arabia - Reute | Watch Hot Inflation Revives December Rate Hike - Bloomberg.com | Oil production nears pre-Iran war levels, OPEC says | Watch KPMG Chief Economist Predicts Hot PCE Report After CPI - Bloomberg.com \u00b7 # News Parse v2 \u2014 2026-11-12T04:42:53.164423-05:00\nWindow\u224848h | news_mode=on | raw=8221 | usable=692 | single_name=495 | noise_dropped=6896\nusable polarity={'+': 31, '-': 161, 'mixed': 7, 'neutral': 493}"
+    },
+    {
+      "key": "news_actions",
+      "title": "News actions",
+      "date": "2026-11-12",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-12T04:43:15.722202-05:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-11-12_actions.json",
+          "ok": true,
+          "reason": "",
+          "size": 62995,
+          "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers"
+        },
+        {
+          "path": "01_daily/news/2026-11-12_actions.md",
+          "ok": true,
+          "reason": "",
+          "size": 12384,
+          "preview": "# News \u2192 Actions v4 (full framework) \u2014 2026-11-12T04:43:15.709055-05:00\nraw=8220 unique_events=5 tickers=78"
+        }
+      ],
+      "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-11-12T04:43:15.709055-05:00\nraw=8220 unique_events=5 tickers=78"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
