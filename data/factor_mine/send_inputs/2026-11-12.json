@@ -1,0 +1,110 @@
+{
+  "date": "2026-11-12",
+  "files": [
+    {
+      "bytes": 13068867,
+      "path": "data/factor_mine/panel.json",
+      "sha256": "35be5767bcafd26d6db4a6cf4be518204bb350f8c387c640c8b1e706f8425421"
+    },
+    {
+      "path": "01_daily/general/2026-11-12_predict.md",
+      "sha256": "3785bf5951638fc5f8783e48deda75f70ef0a6608f4e01e9c587eb55ae992925"
+    },
+    {
+      "path": "01_daily/news/2026-11-12_actions.json",
+      "sha256": "473bba65fb1fd1f8e6add89ff7812111c0b6d6674af642dac0388fd91f01593f"
+    },
+    {
+      "path": "01_daily/news/2026-11-12_finviz_digest.json",
+      "sha256": "500a659c72f78c36a9fe7114b8b516317c4dfbeec5a88b4299442418ddff0292"
+    },
+    {
+      "path": "01_daily/news/2026-11-12_judge.md",
+      "sha256": "8740896999ed2631d38a090bbe5b38f4a42de5aed2b2fb202309581a938758dc"
+    },
+    {
+      "path": "01_daily/weather/2026-11-12_weather.json",
+      "sha256": "e1163a95e12c8918931c2e7a216d950a9cf7ef2f241624ef717f977d5cefb5e2"
+    },
+    {
+      "path": "data/ab_checklist/2026-11-12_ab_checklist_enriched.csv",
+      "sha256": "03529557da47f08a9e6a450938dab6775b6ea86e18ae3d654e764520b3839ce3"
+    },
+    {
+      "path": "data/join/2026-11-12_ranked.csv",
+      "sha256": "9686008ea215af6feab814f72c4181cd67a6820670955a2dd6aecb8f4713926d"
+    },
+    {
+      "path": "data/peers/2026-11-12_peer_rs.csv",
+      "sha256": "7aab459d9ab8b19eaceae05c110f38be0d62bd6359ea1bd00bacc11a00885bc1"
+    },
+    {
+      "path": "data/sleeve_merge/today.json",
+      "sha256": "47f85cc0fe7bc241c766b2ad65ef4d42f74c5bf5fd2ffd13a8d08edf95980b3f"
+    },
+    {
+      "path": "excel_bot/suggestions/suggestions.csv",
+      "sha256": "4807ef9dd6ebecc12f0772c1b092f6c1029253a8a5a67a694222081cc37ed78a"
+    }
+  ],
+  "picks": {
+    "union_hot_n4_h1": [
+      "PEPG",
+      "GCTS",
+      "BW",
+      "ZIP"
+    ],
+    "union_hot_n4_holdup": [
+      "PEPG",
+      "GCTS",
+      "BW",
+      "ZIP"
+    ]
+  },
+  "prices": [
+    {
+      "px": 5.26,
+      "px_src": "session_export",
+      "ticker": "PEPG"
+    },
+    {
+      "px": 1.59,
+      "px_src": "session_export",
+      "ticker": "GCTS"
+    },
+    {
+      "px": 4.84,
+      "px_src": "session_export",
+      "ticker": "BW"
+    },
+    {
+      "px": 5.92,
+      "px_src": "session_export",
+      "ticker": "ZIP"
+    },
+    {
+      "px": 7.65,
+      "px_src": "session_export",
+      "ticker": "TLS"
+    },
+    {
+      "px": 2.3,
+      "px_src": "session_export",
+      "ticker": "INDI"
+    },
+    {
+      "px": 15.98,
+      "px_src": "session_export",
+      "ticker": "TTD"
+    },
+    {
+      "px": 0.93,
+      "px_src": "session_export",
+      "ticker": "ATER"
+    }
+  ],
+  "reason": "",
+  "rows": [],
+  "sha256": "03d65a575e0b4cca20598d949a0a83cdccb8a97c4a3be22c04b1cfa4dfff98ed",
+  "source": "no_same_day_panel"
+}
