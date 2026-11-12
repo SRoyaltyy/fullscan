@@ -36829,7 +36829,7 @@
           "status": "hit"
         }
       ],
-      "reflection_lesson_ref": null,
+      "reflection_lesson_ref": "02_lessons/candidate/2026-11-11_lesson.md",
       "sources_used": [
         {
           "url": "https://apnews.com/article/wall-street-stocks-dow-nasdaq-027cd5f4583d1a11c1795150bf065afb",
@@ -36922,7 +36922,8 @@
       "key_interaction": "Amplification — CoreWeave’s “no expensive debt through 2027” removed the financing fear that had pressured AI infrastructure, compounding the demand beat into a semis/memory squeeze; offset by the hot-CPI/5% yield overhang and AI buyers (MSFT/META/AMZN) falling",
       "knowable_at_9am": "yes",
       "attribution_contested": "no",
-      "outlier_watch": "Nvidia lagged (+2.9% vs SOX +5%) on Baird downgrade; Microsoft/Meta/Amazon fell while AI infrastructure rallied; oil rose despite the morning “offered” call"
+      "outlier_watch": "Nvidia lagged (+2.9% vs SOX +5%) on Baird downgrade; Microsoft/Meta/Amazon fell while AI infrastructure rallied; oil rose despite the morning “offered” call",
+      "lesson_schema_ok": true
     },
     {
       "date": "2026-11-12",
