@@ -513,18 +513,8 @@ date,ticker,side,conviction,reason
 2026-11-03,REPL,BUY,0.36294849990499856,day gate CLOSED: predict DOWN score -5.63 < +1.00
 2026-11-03,SY,BUY,0.2094448209817628,day gate CLOSED: predict DOWN score -5.63 < +1.00
 2026-11-03,CERS,BUY,0.12066910330743348,day gate CLOSED: predict DOWN score -5.63 < +1.00
-2026-11-04,CDNA,BUY,0.9139860186956776,no exit price (unsettleable)
 2026-11-04,BLFS,BUY,0.8556152993942336,no session bar (price data missing)
-2026-11-04,PRCH,BUY,0.7389164097213633,no exit price (unsettleable)
-2026-11-04,CNK,BUY,0.6753681310382919,no exit price (unsettleable)
-2026-11-04,LAUR,BUY,0.659884782245604,no exit price (unsettleable)
-2026-11-04,CHEF,BUY,0.6285082053494221,no exit price (unsettleable)
-2026-11-04,PEB,BUY,0.5750426305890313,no exit price (unsettleable)
-2026-11-04,AVO,BUY,0.5415655401504464,no exit price (unsettleable)
-2026-11-04,ABX,BUY,0.5204083726898243,no exit price (unsettleable)
-2026-11-04,TRU,BUY,0.508811218194425,no exit price (unsettleable)
-2026-11-04,ILMN,BUY,0.4505554479976306,no exit price (unsettleable)
-2026-11-04,VEEV,BUY,0.4135263786294272,no exit price (unsettleable)
+2026-11-04,VEEV,BUY,0.4135263786294272,outside top-N conviction cut
 2026-11-05,XYZ,BUY,0.3567288721519301,day gate CLOSED: predict DOWN score -2.50 < +1.00
 2026-11-05,CDW,BUY,0.3326692868212943,day gate CLOSED: predict DOWN score -2.50 < +1.00
 2026-11-05,KD,BUY,0.6646564745922765,day gate CLOSED: predict DOWN score -2.50 < +1.00
@@ -572,3 +562,18 @@ date,ticker,side,conviction,reason
 2026-11-10,SBLK,BUY,0.6763718216075423,no exit price (unsettleable)
 2026-11-10,EVER,BUY,0.6711157345037787,no exit price (unsettleable)
 2026-11-10,ABNB,BUY,0.49577715754465584,no exit price (unsettleable)
+2026-11-11,GCT,BUY,0.8724634617037419,no exit price (unsettleable)
+2026-11-11,HNST,BUY,0.8720196974969263,no exit price (unsettleable)
+2026-11-11,HLF,BUY,0.8478092759082019,no exit price (unsettleable)
+2026-11-11,ZETA,BUY,0.8351644166896395,no exit price (unsettleable)
+2026-11-11,PRCH,BUY,0.8334231184167276,no exit price (unsettleable)
+2026-11-11,FLYW,BUY,0.8294607814058932,no exit price (unsettleable)
+2026-11-11,TTD,BUY,0.8082052832215199,no exit price (unsettleable)
+2026-11-11,CVLT,BUY,0.7831245515606615,no exit price (unsettleable)
+2026-11-11,ATAT,BUY,0.7706743560604641,no exit price (unsettleable)
+2026-11-11,CNK,BUY,0.6969057707770517,no exit price (unsettleable)
+2026-11-11,CLX,BUY,0.6733540509544882,no exit price (unsettleable)
+2026-11-11,CHDN,BUY,0.6564738083262383,no exit price (unsettleable)
+2026-11-11,TMUS,BUY,0.6107154428639655,no exit price (unsettleable)
+2026-11-11,PFGC,BUY,0.46974264166318747,no exit price (unsettleable)
+2026-11-11,FWONK,BUY,0.38285359428462246,no exit price (unsettleable)
