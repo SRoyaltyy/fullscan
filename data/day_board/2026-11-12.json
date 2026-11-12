@@ -1,6 +1,6 @@
 {
   "date": "2026-11-12",
-  "generated_at": "2026-11-12T13:21:40.246793-05:00",
+  "generated_at": "2026-11-12T13:21:50.116697-05:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -2538,6 +2538,24 @@
         }
       ],
       "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -1.2149999999999999, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -0.65, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -2.8, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -0.165, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -0.46, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -0.955, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': 0.01, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-11-12\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade. \u00b7 weather sectors 11 \u00b7 Basic Materials={'score': -1.2149999999999999, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -0.65, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -2.8, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consume"
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-11-12",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-12T13:21:48.939416-05:00",
+      "files": [
+        {
+          "path": "data/join/2026-11-12_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2252431,
+          "preview": "5894 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 ARGX, ASND, BZ, RGLD, AZN"
+        }
+      ],
+      "preview": "5894 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 ARGX, ASND, BZ, RGLD, AZN"
     }
   ],
   "href": {
@@ -2567,6 +2585,14 @@
       "path": "data/day_board/2026-11-12.json",
       "at": "2026-11-12T13:21:41-05:00",
       "commit_msg": "auto: land weather [2026-11-12]",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "43276609475",
+      "manifest": "research/input_freeze/2026-11-12/manifest.json"
+    },
+    {
+      "path": "data/day_board/2026-11-12.json",
+      "at": "2026-11-12T13:21:50-05:00",
+      "commit_msg": "auto: land join [2026-11-12]",
       "workflow": "Stock Book ALL (one-shot)",
       "run_id": "43276609475",
       "manifest": "research/input_freeze/2026-11-12/manifest.json"
