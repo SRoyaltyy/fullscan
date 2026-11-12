@@ -1,16 +1,66 @@
 {
   "date": "2026-11-12",
-  "generated_at": "2026-11-12T07:57:11.216922-05:00",
+  "generated_at": "2026-11-12T08:03:27.001147-05:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
-    "ok": 4,
-    "partial": 3,
+    "ok": 6,
+    "partial": 1,
     "fail": 1,
     "n": 8
   },
-  "buy_1d": [],
-  "sell_1d": [],
+  "buy_1d": [
+    {
+      "ticker": "NBIS",
+      "score": 0.3567673998708891
+    },
+    {
+      "ticker": "BB",
+      "score": 0.6950864238245527
+    },
+    {
+      "ticker": "SONO",
+      "score": 0.7450587557530413
+    },
+    {
+      "ticker": "GMRS",
+      "score": 0.30819922122581966
+    }
+  ],
+  "sell_1d": [
+    {
+      "ticker": "DDD",
+      "score": -0.3920587326172455
+    },
+    {
+      "ticker": "QUBT",
+      "score": -0.2940890820936341
+    },
+    {
+      "ticker": "LTBR",
+      "score": -0.34019287251121244
+    },
+    {
+      "ticker": "SOC",
+      "score": -0.3970691077139542
+    },
+    {
+      "ticker": "UNIT",
+      "score": -0.45609801495911334
+    },
+    {
+      "ticker": "LWLG",
+      "score": -0.36264532981609704
+    },
+    {
+      "ticker": "HYLN",
+      "score": -0.17231165789706027
+    },
+    {
+      "ticker": "FLNC",
+      "score": -0.5101329534442267
+    }
+  ],
   "flatten": {},
   "general": {
     "said": "DOWN  -7.158",
@@ -26,31 +76,6 @@
   },
   "sectors": {},
   "lands": [
-    {
-      "key": "finviz_market_digest",
-      "title": "Finviz homepage market digest",
-      "date": "2026-11-12",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-11-12T04:43:16.608298-05:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-11-12_finviz_market_digest.json",
-          "ok": true,
-          "reason": "",
-          "size": 6333,
-          "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for"
-        },
-        {
-          "path": "01_daily/news/2026-11-12_finviz_market_digest.md",
-          "ok": true,
-          "reason": "",
-          "size": 2876,
-          "preview": "# Finviz homepage market digest \u2014 2026-11-12\n**Generated:** 2026-11-12T04:43:16.594312-05:00 (America/New_York)\n**Source:** `live`\n**Banner:** US futures trade mixed with tech under pressure as Nvidia weakness looms over session ahead of CPI and business formation data\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** The CPI report is due at 8:30 a\n**Leaders:** NVDA, NBIS, BN, ASND, TWST, DDS, CSCO, AMAT, CBRS\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** NBIS, BN, ASND, TWST, DDS\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-11-12\n**Clock use:** `same_morning`"
-        }
-      ],
-      "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest \u2014 2026-11-12\n**Generated:** 2026-11-12T04:43:16.594312-05:00 (America/New_York)\n**Source:** `live`\n**Banner:** US futures trade mixed with tech under pressure as Nvidia weakness looms over session ahead of CPI and business formation data\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** The CPI report is due at 8:30 a\n**Leaders:** NVDA, NBIS, BN, ASND, TWST, DDS, CSCO, AMAT, CBRS\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** NBIS, BN, ASND, TWST, DDS\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-11-12\n**Clock use:** `same_morning`"
-    },
     {
       "key": "news_actions",
       "title": "News actions (no LLM)",
@@ -218,6 +243,59 @@
         }
       ],
       "preview": "5039 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-11-12",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-12T08:03:25.781461-05:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-11-12_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1279042,
+          "preview": "1d BUY NBIS, BB, SONO, GMRS \u00b7 SELL DDD, QUBT, LTBR, SOC, UNIT, LWLG, HYLN, FLNC"
+        },
+        {
+          "path": "data/stock_book/2026-11-12_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-11-12_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2432,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-11-12_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 9956,
+          "preview": "2026-11-12 BUY NBIS, BB, SONO, GMRS \u00b7 SELL DDD, QUBT, LTBR, SOC, UNIT, LWLG, HYLN, FLNC"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 9956,
+          "preview": "2026-11-12 BUY NBIS, BB, SONO, GMRS \u00b7 SELL DDD, QUBT, LTBR, SOC, UNIT, LWLG, HYLN, FLNC"
+        },
+        {
+          "path": "01_daily/2026-11-12_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 48394,
+          "preview": "# Stock book \u2014 2026-11-12\n_Generated 2026-11-12T07:58:18.434518-05:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY NBIS, BB, SONO, GMRS \u00b7 SELL DDD, QUBT, LTBR, SOC, UNIT, LWLG, HYLN, FLNC \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-11-12 BUY NBIS, BB, SONO, GMRS \u00b7 SELL DDD, QUBT, LTBR, SOC, UNIT, LWLG, HYLN, FLNC \u00b7 2026-11-12 BUY NBIS, BB, SONO, GMRS \u00b7 SELL DDD, QUBT, LTBR, SOC, UNIT, LWLG, HYLN, FLNC \u00b7 # Stock book \u2014 2026-11-12\n_Generated 2026-11-12T07:58:18.434518-05:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"

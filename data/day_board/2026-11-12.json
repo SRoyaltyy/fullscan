@@ -1,12 +1,12 @@
 {
   "date": "2026-11-12",
-  "generated_at": "2026-11-12T07:57:11.216922-05:00",
+  "generated_at": "2026-11-12T08:03:27.001147-05:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
   "counts": {
-    "ok": 4,
-    "partial": 3,
+    "ok": 6,
+    "partial": 1,
     "fail": 1,
     "n": 8
   },
@@ -673,11 +673,11 @@
       "key": "stock_book",
       "name": "Stock Book ALL",
       "yaml": "stock_book_all.yml",
-      "status": "PARTIAL",
+      "status": "OK",
       "inputs_ready": true,
-      "n_req_ok": 2,
+      "n_req_ok": 4,
       "n_req": 4,
-      "n_opt_ok": 1,
+      "n_opt_ok": 3,
       "n_opt": 4,
       "files": [
         {
@@ -811,10 +811,10 @@
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-11-12_stock_book.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "horizons=5 names=148",
+          "size": 1279042,
+          "said": "1d BUY NBIS, BB, SONO, GMRS \u00b7 SELL DDD, QUBT, LTBR, SOC, UNIT, LWLG \u00b7 -0.6681",
           "bullets": []
         },
         {
@@ -822,21 +822,24 @@
           "name": "Stock book MD",
           "path": "01_daily/2026-11-12_stock_book.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 47464,
+          "said": "Stock book \u2014 2026-11-12",
+          "bullets": [
+            "_Generated 2026-11-12T07:58:18.434518-05:00_",
+            "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
+          ]
         },
         {
           "key": "green",
           "name": "Green-pile JSON",
           "path": "data/stock_book/2026-11-12_green.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "",
+          "size": 585,
+          "said": "0 green \u00b7",
           "bullets": []
         },
         {
@@ -858,10 +861,10 @@
           "name": "Dashboard HTML",
           "path": "dashboard/index.html",
           "role": "optional",
-          "status": "FAIL",
-          "reason": "session 2026-11-12 not in dashboard dates (last=2026-11-11)",
-          "size": 16522134,
-          "said": "session 2026-11-12 not in dashboard dates (last=2026-11-11)",
+          "status": "OK",
+          "reason": "live-book poller + today.json (2026-11-12)",
+          "size": 16522150,
+          "said": "live-book poller + today.json (2026-11-12)",
           "bullets": []
         }
       ],
@@ -874,9 +877,9 @@
       "key": "publish",
       "name": "Dashboard / .io",
       "yaml": "deploy-dashboard.yml",
-      "status": "PARTIAL",
-      "inputs_ready": false,
-      "n_req_ok": 1,
+      "status": "OK",
+      "inputs_ready": true,
+      "n_req_ok": 2,
       "n_req": 2,
       "n_opt_ok": 0,
       "n_opt": 1,
@@ -886,10 +889,10 @@
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-11-12_stock_book.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "horizons=5 names=148",
+          "size": 1279042,
+          "said": "1d BUY NBIS, BB, SONO, GMRS \u00b7 SELL DDD, QUBT, LTBR, SOC, UNIT, LWLG \u00b7 -0.6681",
           "bullets": []
         },
         {
@@ -897,10 +900,10 @@
           "name": "Dashboard HTML (repo)",
           "path": "dashboard/index.html",
           "role": "required",
-          "status": "FAIL",
-          "reason": "session 2026-11-12 not in dashboard dates (last=2026-11-11)",
-          "size": 16522134,
-          "said": "session 2026-11-12 not in dashboard dates (last=2026-11-11)",
+          "status": "OK",
+          "reason": "live-book poller + today.json (2026-11-12)",
+          "size": 16522150,
+          "said": "live-book poller + today.json (2026-11-12)",
           "bullets": []
         },
         {
@@ -936,8 +939,58 @@
   "news_mode": "on",
   "news_mode_reason": "",
   "selections": {
-    "buy_1d": [],
-    "sell_1d": [],
+    "buy_1d": [
+      {
+        "ticker": "NBIS",
+        "score": 0.3567673998708891
+      },
+      {
+        "ticker": "BB",
+        "score": 0.6950864238245527
+      },
+      {
+        "ticker": "SONO",
+        "score": 0.7450587557530413
+      },
+      {
+        "ticker": "GMRS",
+        "score": 0.30819922122581966
+      }
+    ],
+    "sell_1d": [
+      {
+        "ticker": "DDD",
+        "score": -0.3920587326172455
+      },
+      {
+        "ticker": "QUBT",
+        "score": -0.2940890820936341
+      },
+      {
+        "ticker": "LTBR",
+        "score": -0.34019287251121244
+      },
+      {
+        "ticker": "SOC",
+        "score": -0.3970691077139542
+      },
+      {
+        "ticker": "UNIT",
+        "score": -0.45609801495911334
+      },
+      {
+        "ticker": "LWLG",
+        "score": -0.36264532981609704
+      },
+      {
+        "ticker": "HYLN",
+        "score": -0.17231165789706027
+      },
+      {
+        "ticker": "FLNC",
+        "score": -0.5101329534442267
+      }
+    ],
     "flatten": {},
     "general": {
       "said": "DOWN  -7.158",
@@ -1525,6 +1578,59 @@
         }
       ],
       "preview": "5039 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-11-12",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-12T08:03:25.781461-05:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-11-12_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1279042,
+          "preview": "1d BUY NBIS, BB, SONO, GMRS \u00b7 SELL DDD, QUBT, LTBR, SOC, UNIT, LWLG, HYLN, FLNC"
+        },
+        {
+          "path": "data/stock_book/2026-11-12_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-11-12_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2432,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-11-12_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 9956,
+          "preview": "2026-11-12 BUY NBIS, BB, SONO, GMRS \u00b7 SELL DDD, QUBT, LTBR, SOC, UNIT, LWLG, HYLN, FLNC"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 9956,
+          "preview": "2026-11-12 BUY NBIS, BB, SONO, GMRS \u00b7 SELL DDD, QUBT, LTBR, SOC, UNIT, LWLG, HYLN, FLNC"
+        },
+        {
+          "path": "01_daily/2026-11-12_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 48394,
+          "preview": "# Stock book \u2014 2026-11-12\n_Generated 2026-11-12T07:58:18.434518-05:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY NBIS, BB, SONO, GMRS \u00b7 SELL DDD, QUBT, LTBR, SOC, UNIT, LWLG, HYLN, FLNC \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-11-12 BUY NBIS, BB, SONO, GMRS \u00b7 SELL DDD, QUBT, LTBR, SOC, UNIT, LWLG, HYLN, FLNC \u00b7 2026-11-12 BUY NBIS, BB, SONO, GMRS \u00b7 SELL DDD, QUBT, LTBR, SOC, UNIT, LWLG, HYLN, FLNC \u00b7 # Stock book \u2014 2026-11-12\n_Generated 2026-11-12T07:58:18.434518-05:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "href": {
