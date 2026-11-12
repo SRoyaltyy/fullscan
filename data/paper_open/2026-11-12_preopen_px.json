@@ -1,0 +1,17 @@
+{
+ "date": "2026-11-12",
+ "missing": [],
+ "prices": {
+  "HUMA": 0.5838,
+  "PEPG": 5.3,
+  "REPL": 21.61,
+  "ZIP": 6.59
+ },
+ "sources": {
+  "HUMA": "yahoo_premarket",
+  "PEPG": "yahoo_premarket",
+  "REPL": "yahoo_premarket",
+  "ZIP": "yahoo_prior_close"
+ },
+ "written_at": "2026-11-12T13:37:27+00:00"
+}
