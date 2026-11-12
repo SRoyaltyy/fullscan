@@ -88,10 +88,16 @@ def _jsonl_rows(folder: Path) -> list[dict]:
     if not path.is_file():
         return []
     rows = []
+    seen = set()
     for line in path.read_text(encoding="utf-8").splitlines():
         if not line:
             continue
         row = json.loads(line)
+        # First stored line per (ticker, session) wins, as in prices.load_price_rows.
+        key = (str(row["ticker"]).upper(), str(row["date"])[:10])
+        if key in seen:
+            continue
+        seen.add(key)
         rows.append(row)
     return rows
 

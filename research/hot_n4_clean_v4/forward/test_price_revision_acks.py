@@ -164,6 +164,9 @@ def _h1_replay() -> None:
     with tempfile.TemporaryDirectory() as tmp:
         folder = Path(tmp)
         shutil.copyfile(H1 / "prices.jsonl", prices_path(folder))
+        # The real store carries acked duplicate lines (2026-11-12 GEVO/HUMA).
+        if (H1 / "duplicate_bar_acks.jsonl").is_file():
+            shutil.copyfile(H1 / "duplicate_bar_acks.jsonl", folder / "duplicate_bar_acks.jsonl")
         stored = prices_path(folder).read_bytes()
         _expect_stop(folder, bars, records, "h1 no acks", session="2026-10-07")
         shutil.copyfile(H1 / ACKS_NAME, acks_path(folder))
