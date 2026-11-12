@@ -2,7 +2,7 @@
 
 Live sleeves still SIT on S≤−3. Search a ticker for every session since 8/13: cameras (+N −N), 09:30 open, close, same-day % and hold-1/3/5 with actual prices.
 
-Generated 2026-11-12T15:16:51.444539-05:00 · 2026-08-13 → 2026-11-11 · live sit **untouched**.
+Generated 2026-11-12T15:48:32.480646-05:00 · 2026-08-13 → 2026-11-11 · live sit **untouched**.
 
 ## Latest morning
 
@@ -10,25 +10,25 @@ Generated 2026-11-12T15:16:51.444539-05:00 · 2026-08-13 → 2026-11-11 · live 
 
 ### Longs weather sat on (top)
 
-- **LINC** idio +27 · +6 −0 · E good · H1 -1.11% H3 None%
-- **FOSL** idio +26 · +8 −0 · E good · H1 -9.0% H3 None%
-- **ALH** idio +26 · +7 −0 · E good · H1 -4.53% H3 None%
-- **ZETA** idio +25 · +6 −0 · E good · H1 4.6% H3 None%
-- **EMBJ** idio +24 · +7 −1 · E good · H1 -3.1% H3 None%
-- **SBH** idio +24 · +7 −0 · E good · H1 -8.71% H3 None%
-- **CECO** idio +23 · +7 −1 · E good · H1 -4.07% H3 None%
-- **LOAR** idio +23 · +7 −1 · E good · H1 -5.09% H3 None%
+- **LINC** idio +27 · +6 −0 · E good · H1 -1.52% H3 None%
+- **FOSL** idio +26 · +8 −0 · E good · H1 -9.52% H3 None%
+- **ALH** idio +26 · +7 −0 · E good · H1 -3.93% H3 None%
+- **ZETA** idio +25 · +6 −0 · E good · H1 3.47% H3 None%
+- **EMBJ** idio +24 · +7 −1 · E good · H1 -3.13% H3 None%
+- **SBH** idio +24 · +7 −0 · E good · H1 -8.51% H3 None%
+- **CECO** idio +23 · +7 −1 · E good · H1 -3.81% H3 None%
+- **LOAR** idio +23 · +7 −1 · E good · H1 -5.44% H3 None%
 
 ### Shorts weather sat on (top)
 
-- **AKBA** idio -9 · +3 −5 · H1 0.45%
-- **LDI** idio -7 · +2 −3 · H1 4.17%
-- **NCMI** idio -7 · +2 −4 · H1 -9.06%
-- **STUB** idio -6 · +2 −3 · H1 3.83%
-- **LAND** idio -6 · +3 −4 · H1 6.42%
-- **RC** idio -6 · +3 −4 · H1 7.61%
+- **AKBA** idio -9 · +3 −5 · H1 2.75%
+- **LDI** idio -7 · +2 −3 · H1 5.65%
+- **NCMI** idio -7 · +2 −4 · H1 -6.56%
+- **STUB** idio -6 · +2 −3 · H1 4.39%
+- **LAND** idio -6 · +3 −4 · H1 6.08%
+- **RC** idio -6 · +3 −4 · H1 8.1%
 - **SOC** idio -6 · +3 −5 · H1 -2.73%
-- **AGRO** idio -5 · +2 −4 · H1 5.45%
+- **AGRO** idio -5 · +2 −4 · H1 6.23%
 
 ## If we had taken them on hard-red sits (research)
 
