@@ -1,6 +1,6 @@
-# Finviz Daily Digest — 2026-11-11
+# Finviz Daily Digest — 2026-11-12
 
-_Generated 2026-11-12T03:19:42.240466-05:00 · export=data/exports/finviz_2026-11-11.csv · ticker digests=1101 · high-signal=410_
+_Generated 2026-11-12T04:30:30.054307-05:00 · export=data/exports/finviz_2026-11-11.csv · ticker digests=1200 · high-signal=459_
 
 ## Major indices (live quote page)
 
@@ -11,99 +11,108 @@ _Generated 2026-11-12T03:19:42.240466-05:00 · export=data/exports/finviz_2026-1
 
 ## High-signal ticker digests (ranked)
 
-- **ADP** [Technology]: ADP raises quarterly dividend 12% to $1.90 per share, extending 52-year streak of annual increases
-- **AMD** [Technology]: AMD's AI-infrastructure funding concerns ease as CoreWeave expects $9 billion in customer prepayments and contract-backed financing
-- **ARM** [Technology]: CoreWeave’s beat revives AI demand trade, lifting Arm 5.7% in early premarket
-- **AVGO** [Technology]: Broadcom's AI infrastructure funding concerns ease as CoreWeave raises outlook and expects $9 billion in customer prepayments and contract-backed financing
-- **BE** [Industrials]: CoreWeave earnings revive AI-infrastructure demand trade, lifting Bloom Energy 9% in Wednesday premarket
+- **BA** [Industrials]: Boeing to cut 5% of commercial airplane workforce via attrition and voluntary layoffs as it slows production increases to stabilize operations
+- **BKNG** [Consumer Cyclical]: Report of OpenAI acquisition of AI travel planner Odessia raises AI competition worries in online travel for Booking Holdings
+- **CAH** [Healthcare]: No clear catalyst identified; Cardinal Health drops 5% after its post-earnings rally
+- **CAT** [Industrials]: Anthropic is reportedly buying $3.4 billion of natural-gas power turbines directly from Caterpillar, securing a major AI data-center power contract for the company.
+- **CEG** [Utilities]: Constellation raises 2024 EPS guidance again on expanded long-term nuclear deals with Amazon and Google
 - **COST** [Consumer Defensive]: Costco declares $30 per share special dividend (~$13.3B) and reauthorizes $4B buyback through November 2030
-- **ETN** [Industrials]: JPMorgan initiated coverage of Eaton at Neutral, citing increased caution on AI-linked industrials.
-- **GEV** [Industrials]: JPMorgan cut its GE Vernova price target to $1,000 from $1,035 while maintaining an Overweight rating.
-- **INTC** [Technology]: CoreWeave beat-and-raise eases AI-demand fears, lifting Intel 5.3% with chip peers premarket
-- **KLAC** [Technology]: CoreWeave earnings beat and Asian chip rally lift KLA 5.4% in pre-market
-- **LRCX** [Technology]: CoreWeave earnings ease AI-demand fears, lifting Lam Research 5.6% in early pre-market
-- **MU** [Technology]: Micron's AI infrastructure demand outlook gains support as CoreWeave reports $132.5 billion backlog and demand at 10 times capacity
+- **CVE** [Energy]: Cenovus Energy gets TSX approval for renewed buyback of up to 126,482,982 common shares
+- **DELL** [Technology]: Hotter CPI and Fed hike fears drive Dell 5% lower by midday
+- **FERG** [Industrials]: Ferguson Enterprises Inc beats Q3 estimates and raises 2026 sales and margin guidance on nonresidential, industrial strength
+- **KKR** [Financial]: KKR posts record Q3 2026 adjusted net income $1.6B, EPS $1.78 beats, plans one-share-one-vote structure as co-founders’ super-votes sunset
+- **LITE** [Technology]: Falling oil and AI rebound lift Marvell-linked Lumentum 10% as merger spread narrows
+- **LLY** [Healthcare]: FDA to require Eli Lilly to add NAION vision-loss warning to GLP-1 diabetes and weight-loss drugs
+- **LRCX** [Technology]: BofA semis report and broad rebound lift Lam Research 6%, extending buyback rally
+- **MRNA** [Healthcare]: Piper Sandler’s $305 target helps lift Moderna 10% as post-earnings rally extends
 - **NET** [Technology]: Cloudflare’s Q3 beat and raised outlook extend post-earnings rally 8.5% in early Monday trading
 - **O** [Real Estate]: Realty Income declares 137th monthly dividend increase, raises monthly cash dividend to $0.2740 per share
-- **PBR** [Energy]: Petrobras Q3 2026 EPS $1.20 and revenue $33.0B miss estimates despite strong growth as company raises 2026 production guidance
-- **SKHY** [Technology]: CoreWeave earnings beat revives AI-demand confidence, lifting SK Hynix ADR 9.7% Wednesday
+- **OXY** [Energy]: Occidental tops Q3 estimates with adjusted EPS $1.91 and revenue $6.77B, surpasses $10.4B debt reduction milestone
+- **PBR** [Energy]: Petroleo Brasileiro SA Petrobras ADR is scheduled to announce earnings today after market close
+- **PDD** [Consumer Cyclical]: Morgan Stanley downgrades PDD to Equalweight from Overweight, cuts price target to $90 from $129
+- **QCOM** [Technology]: Freedom Broker downgrades Qualcomm to Hold from Buy, cuts price target to $185 from $200
+- **REGN** [Healthcare]: Regeneron: single dose of experimental CIDEB siRNA cut liver fat up to 80% in MASLD first-in-human Phase 1/2 study
+- **SPCX** [Industrials]: SpaceX signs more than €60 million HJT solar-cell line contract with Singulus to scale Starmind AI satellite constellation
 - **TDG** [Industrials]: TransDigm beats Q4 2026 estimates and FY26 guidance, sets FY27 revenue growth ~14% and EPS growth 15%
-- **TT** [Industrials]: JPMorgan cuts Trane Technologies’ price target to $480 from $550, maintaining its Buy rating
 - **TTE** [Energy]: TotalEnergies discloses details of share repurchases carried out between November 2 and 6, 2026 under its shareholder-approved buyback program.
-- **WMT** [Consumer Defensive]: Bank of America raises Walmart price target to $139 from $126, reiterates Buy rating
-- **ALC** [Healthcare]: Alcon Inc reports fiscal Q3 2026 results with non-GAAP EPS $0.91 (+15% YoY) and revenue $2.7B (+5% YoY), beats EPS but misses revenue estimates
-- **BAP** [Financial]: Credicorp delivers ~20% ROE, maintains 2026 guidance despite higher El Niño provisioning
-- **CBRS** [Technology]: CoreWeave’s beat-and-raise sparks broad AI-chip rebound, lifting Cerebras 8% ahead of Thursday earnings
+- **WMT** [Consumer Defensive]: UBS lifts Walmart price target to $149 from $130 on stronger earnings growth potential ahead of Q3 results
+- **AKAM** [Technology]: Akamai prices $2.2B 1.00% convertible senior notes due 2028 and 2031 to refinance 2027 notes and fund Cloud Infrastructure Services capex
+- **ASTS** [Technology]: BofA Securities cuts AST SpaceMobile (ASTS) price target to $45 from $80, keeps Neutral rating on slower launch cadence, commercialization delays
+- **BAP** [Financial]: Credicorp Q3 2026 non-GAAP EPS $7.06 (+9% YoY) misses estimates, revenue $1.9B (+15% YoY) beats forecasts
 - **CG** [Financial]: UBS downgrades Carlyle to Neutral, cuts target to $47 on weaker fund returns and fundraising delays
-- **CIB** [Financial]: Third-quarter earnings miss and margin compression send Grupo Cibest 4% lower at open
-- **CLS** [Technology]: CoreWeave beat-and-raise revives AI infrastructure confidence, lifting Celestica 9.5% by late morning
-- **COHR** [Technology]: CoreWeave beat-and-raise sparks broad AI-hardware rebound, lifting Coherent 8.5% in pre-market trading
-- **CRDO** [Technology]: CoreWeave's earnings beat and guidance raise lift Credo 9% premarket with AI hardware peers
+- **CNH** [Industrials]: CNH Industrial raises 2026 EPS and free cash flow guidance, sells 70% of Construction Equipment unit in $1B Kobelco JV
+- **COHR** [Technology]: Citi’s $440 post-earnings target extends Coherent rebound 11% amid optical-sector strength Monday morning
+- **CRWV** [Technology]: CoreWeave beats Q3 revenue estimates with $3.66B, posts $709M net loss, raises 2026 revenue guidance to $13.0–$13.3B
 - **EC** [Energy]: Ecopetrol prices US$2.0B 7.875% notes due 2034 for debt management and Brava Energia acquisition financing
 - **EMBJ** [Industrials]: Embraer lifts 2026 revenue and FCF guidance after quarterly revenue $2.3B (+17% YoY) beats estimates
-- **EQX** [Basic Materials]: Equinox tracks low-end 2024 production guidance, outlines disciplined path to 2M oz growth
-- **ES** [Utilities]: CoreWeave’s strong earnings revived AI demand confidence, lifting S&P 500 futures 1.63%
-- **ESLT** [Industrials]: Elbit Systems announced a $260 million, five-year contract to supply PULS rocket artillery systems and munitions to a European NATO country.
-- **FN** [Technology]: CoreWeave’s beat-and-raise revives AI-optics trade, lifting Fabrinet 8% during Wednesday’s morning session
-- **FNV** [Basic Materials]: Franco-Nevada reports Q3 2026 non-GAAP EPS of $1.89 (+32% YoY), beating estimates, while revenue of $549.3M (+13% YoY) misses
-- **FROG** [Technology]: Q3 beat-and-raise resumes JFrog rally, lifting shares 8% Wednesday amid AI-stock rebound
-- **GGG** [Industrials]: Graco Inc. announces a $600 million accelerated share repurchase agreement.
-- **GH** [Healthcare]: Guardant Health prices $500 million of 0% convertible notes due 2032 at a $208.95 conversion price, partly to repurchase 2027 notes
-- **GIB** [Technology]: CGI beats fiscal Q4 2026 estimates with adjusted EPS C$2.31 and revenue C$4.15B, posts FY 2026 revenue C$16.57B (+4.2%)
+- **EQX** [Basic Materials]: Equinox Gold posts Q3 2026 net income $62.5M, adj EPS $0.19, $1.0B revenue beats estimates
+- **ES** [Utilities]: Hotter CPI and Waller’s half-point warning drive S&P 500 futures down 1.03%
+- **FMS** [Healthcare]: Barclays downgrades Fresenius Medical Care to underweight and cuts price target to €35 on expected reimbursement, volume and inflation pressures on earnings
+- **HMC** [Consumer Cyclical]: Honda Motor ADR fiscal Q2 2027 non-GAAP EPS $0.32 (-44% YoY) misses, revenue $37.8B (+10% YoY) beats as it raises FY operating profit forecast 20% to 780B yen
 - **IONQ** [Technology]: IonQ’s Q3 beat and guidance hike extend rally 10% during Monday trading
+- **ITT** [Industrials]: ITT hits Scope 1 and 2 emissions reduction target a year early with 13% cut from 2021 levels
 
 ## By sector (top signal)
 
 ### Technology (n=8)
-- ADP: ADP raises quarterly dividend 12% to $1.90 per share, extending 52-year streak of annual increases
-- AMD: AMD's AI-infrastructure funding concerns ease as CoreWeave expects $9 billion in customer prepayments and contract-backed financing
-- ARM: CoreWeave’s beat revives AI demand trade, lifting Arm 5.7% in early premarket
-- AVGO: Broadcom's AI infrastructure funding concerns ease as CoreWeave raises outlook and expects $9 billion in customer prepayments and contract-backed financing
-- INTC: CoreWeave beat-and-raise eases AI-demand fears, lifting Intel 5.3% with chip peers premarket
+- DELL: Hotter CPI and Fed hike fears drive Dell 5% lower by midday
+- LITE: Falling oil and AI rebound lift Marvell-linked Lumentum 10% as merger spread narrows
+- LRCX: BofA semis report and broad rebound lift Lam Research 6%, extending buyback rally
+- NET: Cloudflare’s Q3 beat and raised outlook extend post-earnings rally 8.5% in early Monday trading
+- QCOM: Freedom Broker downgrades Qualcomm to Hold from Buy, cuts price target to $185 from $200
 
 ### Industrials (n=8)
-- BE: CoreWeave earnings revive AI-infrastructure demand trade, lifting Bloom Energy 9% in Wednesday premarket
-- ETN: JPMorgan initiated coverage of Eaton at Neutral, citing increased caution on AI-linked industrials.
-- GEV: JPMorgan cut its GE Vernova price target to $1,000 from $1,035 while maintaining an Overweight rating.
+- BA: Boeing to cut 5% of commercial airplane workforce via attrition and voluntary layoffs as it slows production increases to stabilize operations
+- CAT: Anthropic is reportedly buying $3.4 billion of natural-gas power turbines directly from Caterpillar, securing a major AI data-center power contract for the company.
+- FERG: Ferguson Enterprises Inc beats Q3 estimates and raises 2026 sales and margin guidance on nonresidential, industrial strength
+- SPCX: SpaceX signs more than €60 million HJT solar-cell line contract with Singulus to scale Starmind AI satellite constellation
 - TDG: TransDigm beats Q4 2026 estimates and FY26 guidance, sets FY27 revenue growth ~14% and EPS growth 15%
-- TT: JPMorgan cuts Trane Technologies’ price target to $480 from $550, maintaining its Buy rating
 
-### Energy (n=4)
-- PBR: Petrobras Q3 2026 EPS $1.20 and revenue $33.0B miss estimates despite strong growth as company raises 2026 production guidance
-- TTE: TotalEnergies discloses details of share repurchases carried out between November 2 and 6, 2026 under its shareholder-approved buyback program.
-- EC: Ecopetrol prices US$2.0B 7.875% notes due 2034 for debt management and Brava Energia acquisition financing
-- VG: Venture Global posts record Q3 adjusted EBITDA, sharply raises 2026 guidance and unveils AI power/data center strategy
+### Healthcare (n=7)
+- CAH: No clear catalyst identified; Cardinal Health drops 5% after its post-earnings rally
+- LLY: FDA to require Eli Lilly to add NAION vision-loss warning to GLP-1 diabetes and weight-loss drugs
+- MRNA: Piper Sandler’s $305 target helps lift Moderna 10% as post-earnings rally extends
+- REGN: Regeneron: single dose of experimental CIDEB siRNA cut liver fat up to 80% in MASLD first-in-human Phase 1/2 study
+- FMS: Barclays downgrades Fresenius Medical Care to underweight and cuts price target to €35 on expected reimbursement, volume and inflation pressures on earnings
 
-### Financial (n=4)
-- BAP: Credicorp delivers ~20% ROE, maintains 2026 guidance despite higher El Niño provisioning
-- CG: UBS downgrades Carlyle to Neutral, cuts target to $47 on weaker fund returns and fundraising delays
-- CIB: Third-quarter earnings miss and margin compression send Grupo Cibest 4% lower at open
-- RGA: Piper Sandler’s $300 target and insurer rally extend RGA’s post-earnings advance 3.2%
-
-### Healthcare (n=3)
-- ALC: Alcon Inc reports fiscal Q3 2026 results with non-GAAP EPS $0.91 (+15% YoY) and revenue $2.7B (+5% YoY), beats EPS but misses revenue estimates
-- GH: Guardant Health prices $500 million of 0% convertible notes due 2032 at a $208.95 conversion price, partly to repurchase 2027 notes
-- SMMT: FDA decision-week positioning and broad biotech rally lift Summit Therapeutics nearly 9% intraday
-
-### Consumer Cyclical (n=3)
-- MGA: Magna targets 2–4% organic sales growth above market through 2030, 15%+ annual adjusted EPS growth, 200+ bps adjusted EBIT margin improvement and adjusted ROIC above 15%
+### Consumer Cyclical (n=6)
+- BKNG: Report of OpenAI acquisition of AI travel planner Odessia raises AI competition worries in online travel for Booking Holdings
+- PDD: Morgan Stanley downgrades PDD to Equalweight from Overweight, cuts price target to $90 from $129
+- HMC: Honda Motor ADR fiscal Q2 2027 non-GAAP EPS $0.32 (-44% YoY) misses, revenue $37.8B (+10% YoY) beats as it raises FY operating profit forecast 20% to 780B yen
 - ONON: On Holding posts record Q3 revenue and margins, raises 2026 margin outlook, reiterates low‑20s% sales growth guidance
 - SE: Sea Q3 2026 revenue $8.6B (+43% YoY) beats estimates, EPS misses, record EBITDA, announces $1B buyback
 
-### Consumer Defensive (n=2)
+### Energy (n=6)
+- CVE: Cenovus Energy gets TSX approval for renewed buyback of up to 126,482,982 common shares
+- OXY: Occidental tops Q3 estimates with adjusted EPS $1.91 and revenue $6.77B, surpasses $10.4B debt reduction milestone
+- PBR: Petroleo Brasileiro SA Petrobras ADR is scheduled to announce earnings today after market close
+- TTE: TotalEnergies discloses details of share repurchases carried out between November 2 and 6, 2026 under its shareholder-approved buyback program.
+- EC: Ecopetrol prices US$2.0B 7.875% notes due 2034 for debt management and Brava Energia acquisition financing
+
+### Financial (n=4)
+- KKR: KKR posts record Q3 2026 adjusted net income $1.6B, EPS $1.78 beats, plans one-share-one-vote structure as co-founders’ super-votes sunset
+- BAP: Credicorp Q3 2026 non-GAAP EPS $7.06 (+9% YoY) misses estimates, revenue $1.9B (+15% YoY) beats forecasts
+- CG: UBS downgrades Carlyle to Neutral, cuts target to $47 on weaker fund returns and fundraising delays
+- RGA: Piper Sandler’s $300 target and insurer rally extend RGA’s post-earnings advance 3.2%
+
+### Utilities (n=3)
+- CEG: Constellation raises 2024 EPS guidance again on expanded long-term nuclear deals with Amazon and Google
+- ES: Hotter CPI and Waller’s half-point warning drive S&P 500 futures down 1.03%
+- NRG: NRG sells $4B of non-core gas plants to LS Power, funds $3B 2026–27 buybacks and issues 2027 guidance
+
+### Consumer Defensive (n=3)
 - COST: Costco declares $30 per share special dividend (~$13.3B) and reauthorizes $4B buyback through November 2030
-- WMT: Bank of America raises Walmart price target to $139 from $126, reiterates Buy rating
+- WMT: UBS lifts Walmart price target to $149 from $130 on stronger earnings growth potential ahead of Q3 results
+- JBS: JBS NV posts 3Q26 EPS $0.16 (-69% YoY) and revenue $22.7B (+2% YoY), misses estimates as adjusted EBITDA falls 36% to $1.18B
+
+### Communication Services (n=3)
+- TTWO: UBS cuts Take-Two price target to $295 from $300, maintains Buy, trims FY27–28 estimates on softer Rockstar despite unprecedented GTA VI preorders
+- VIV: Telefonica Brasil SA ADR reports fiscal quarterly results with revenue $2.9B (+5% YoY), misses revenue estimates
+- VOD: Vodafone Group plc ADR reports fiscal Q2 2027 results with non-GAAP EPS $0.17 (-79% YoY) and revenue $24.5B (+8% YoY), misses EPS and revenue estimates
 
 ### Basic Materials (n=2)
-- EQX: Equinox tracks low-end 2024 production guidance, outlines disciplined path to 2M oz growth
-- FNV: Franco-Nevada reports Q3 2026 non-GAAP EPS of $1.89 (+32% YoY), beating estimates, while revenue of $549.3M (+13% YoY) misses
-
-### Communication Services (n=2)
-- VIV: Telefonica Brasil SA ADR 3Q26 net income jumps 30.1% YoY as net revenue rises 7.2%, misses revenue estimates
-- VOD: Vodafone Group plc ADR reports fiscal Q2 2027 results with non-GAAP EPS $0.17 (-79% YoY) and revenue $24.5B (+8% YoY), misses EPS and revenue estimates
+- EQX: Equinox Gold posts Q3 2026 net income $62.5M, adj EPS $0.19, $1.0B revenue beats estimates
+- STLD: Steel Dynamics authorizes an additional $3.0 billion share repurchase program and declares a $0.53 per share fourth-quarter 2026 cash dividend.
 
 ### Real Estate (n=1)
 - O: Realty Income declares 137th monthly dividend increase, raises monthly cash dividend to $0.2740 per share
-
-### Utilities (n=1)
-- ES: CoreWeave’s strong earnings revived AI demand confidence, lifting S&P 500 futures 1.63%

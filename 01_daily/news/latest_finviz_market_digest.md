@@ -1,6 +1,6 @@
 # Finviz homepage market digest — 2026-11-12
 
-**Generated:** 2026-11-12T04:29:24.749225-05:00 (America/New_York)
+**Generated:** 2026-11-12T04:30:40.189086-05:00 (America/New_York)
 **Source:** `live`
 **Banner:** US futures trade mixed with tech under pressure on Nvidia leadership concerns ahead of key CPI release
 **Prior close:** SPX —  Nasdaq —  Dow —
