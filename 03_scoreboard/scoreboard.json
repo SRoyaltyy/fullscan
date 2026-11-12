@@ -35571,6 +35571,18 @@
           "predicted_direction": "up",
           "predicted_magnitude_band": "mild",
           "confidence": 0.65
+        },
+        "HORIZON_1W": {
+          "label": "1w",
+          "target_date": "2026-11-11",
+          "actual_pct": -0.9,
+          "actual_direction": "down",
+          "actual_magnitude_band": "mild",
+          "direction_hit": false,
+          "magnitude_hit": true,
+          "predicted_direction": "up",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.62
         }
       }
     },
@@ -36923,7 +36935,8 @@
       "knowable_at_9am": "yes",
       "attribution_contested": "no",
       "outlier_watch": "Nvidia lagged (+2.9% vs SOX +5%) on Baird downgrade; Microsoft/Meta/Amazon fell while AI infrastructure rallied; oil rose despite the morning “offered” call",
-      "lesson_schema_ok": true
+      "lesson_schema_ok": true,
+      "horizon_grades": {}
     },
     {
       "date": "2026-11-12",
