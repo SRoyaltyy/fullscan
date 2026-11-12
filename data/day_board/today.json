@@ -1,12 +1,12 @@
 {
   "date": "2026-11-12",
-  "generated_at": "2026-11-12T04:42:07.732480-05:00",
+  "generated_at": "2026-11-12T04:42:24.702951-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
-    "ok": 3,
+    "ok": 4,
     "partial": 3,
-    "fail": 2,
+    "fail": 1,
     "n": 8
   },
   "buy_1d": [],
@@ -15,31 +15,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "finviz_market_digest",
-      "title": "Finviz homepage market digest",
-      "date": "2026-11-12",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-11-12T04:30:40.205769-05:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-11-12_finviz_market_digest.json",
-          "ok": true,
-          "reason": "",
-          "size": 5808,
-          "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for"
-        },
-        {
-          "path": "01_daily/news/2026-11-12_finviz_market_digest.md",
-          "ok": true,
-          "reason": "",
-          "size": 2816,
-          "preview": "# Finviz homepage market digest \u2014 2026-11-12\n**Generated:** 2026-11-12T04:30:40.189086-05:00 (America/New_York)\n**Source:** `live`\n**Banner:** US futures trade mixed with tech under pressure on Nvidia leadership concerns ahead of key CPI release\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** the CPI report at 8:30 AM ET for the latest inflation reading that could influence Federal Reserve rate expectations and intraday volatility\n**Leaders:** NVDA, BN, NBIS, ASND, TWST, CSCO, AMAT\n**Next session:** housing no \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** \u2014\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-11-12\n**Clock use:** `same_morning`"
-        }
-      ],
-      "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest \u2014 2026-11-12\n**Generated:** 2026-11-12T04:30:40.189086-05:00 (America/New_York)\n**Source:** `live`\n**Banner:** US futures trade mixed with tech under pressure on Nvidia leadership concerns ahead of key CPI release\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** the CPI report at 8:30 AM ET for the latest inflation reading that could influence Federal Reserve rate expectations and intraday volatility\n**Leaders:** NVDA, BN, NBIS, ASND, TWST, CSCO, AMAT\n**Next session:** housing no \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** \u2014\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-11-12\n**Clock use:** `same_morning`"
-    },
     {
       "key": "map_heat",
       "title": "Map heat morning overlay",
@@ -200,6 +175,31 @@
         }
       ],
       "preview": "5894 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 CDNA, ASND, BLLN, ETON, KNSA"
+    },
+    {
+      "key": "ab",
+      "title": "AB checklist",
+      "date": "2026-11-12",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-12T04:42:24.211061-05:00",
+      "files": [
+        {
+          "path": "data/ab_checklist/2026-11-12_ab_checklist.csv",
+          "ok": true,
+          "reason": "",
+          "size": 7519621,
+          "preview": "2611 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 ZM, RSG, MSCI, ABBV, V"
+        },
+        {
+          "path": "data/ab_checklist/2026-11-12_ab_checklist_enriched.csv",
+          "ok": true,
+          "reason": "",
+          "size": 8292945,
+          "preview": "2611 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 RSG, EOG, LMT, HONA, HII"
+        }
+      ],
+      "preview": "2611 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 ZM, RSG, MSCI, ABBV, V \u00b7 2611 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 RSG, EOG, LMT, HONA, HII"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
