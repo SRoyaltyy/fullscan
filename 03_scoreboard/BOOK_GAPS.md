@@ -1,6 +1,6 @@
-# Book gaps — what the ranker missed (signal 2026-10-26, 1w = 5 sessions)
+# Book gaps — what the ranker missed (signal 2026-11-04, 1w = 5 sessions)
 
-_Generated 2026-11-03T07:49:51.483803-05:00_ · universe median fwd: -1.20%
+_Generated 2026-11-12T08:31:10.340891-05:00_ · universe median fwd: -0.37%
 
 Classes: **blind** = every input was silent (unknown-unknown evidence) · **outweighed** = signals existed but the rank buried them (weight-tuner territory) · **gated_out** = excluded by hard micro/mcap gates on purpose.
 
@@ -8,21 +8,21 @@ Classes: **blind** = every input was silent (unknown-unknown evidence) · **outw
 
 | Ticker | fwd% | class | size | sector | join | sect | gen | news | ab | peer | opp |
 |--------|------|-------|------|--------|------|------|-----|------|----|------|-----|
-| ENHA | +571.6 | outweighed | small | Consumer Defensive | -0.77 | +0.20 | -0.06 | +0.00 | -0.85 | +0.00 | +0.20 |
-| INO | +117.2 | gated_out | micro | Healthcare | +0.84 | +0.00 | -0.41 | +0.00 | +0.00 | -0.85 | +0.12 |
-| GDYN | +59.0 | outweighed | small | Technology | -0.15 | -0.20 | -0.21 | +0.00 | +0.76 | +0.26 | +0.20 |
-| ADT | +42.9 | outweighed | mid | Industrials | -0.15 | +0.20 | -0.21 | +0.00 | +0.88 | -0.62 | +0.20 |
-| AIRS | +42.7 | gated_out | micro | Healthcare | +0.55 | +0.00 | -0.41 | +0.00 | -0.91 | -0.98 | +0.16 |
-| FMC | +41.0 | outweighed | small | Basic Materials | -0.15 | +0.20 | -0.06 | +0.00 | -0.36 | -0.61 | +0.20 |
-| TDOC | +38.3 | outweighed | small | Healthcare | +0.82 | +0.00 | -0.41 | +0.00 | -0.64 | -0.51 | +0.20 |
-| UPBD | +34.4 | outweighed | small | Technology | -0.15 | -0.20 | -0.41 | -0.89 | +0.56 | -0.62 | +0.20 |
-| GKOS | +33.9 | outweighed | mid | Healthcare | +0.99 | +0.00 | -0.06 | +0.00 | +0.36 | -0.09 | +0.20 |
-| JBLU | +33.8 | outweighed | small | Industrials | -0.98 | +0.20 | -0.41 | -0.74 | -0.64 | -0.58 | +0.20 |
-| HRI | +32.3 | outweighed | mid | Industrials | -0.15 | +0.20 | -0.41 | +0.00 | +0.46 | -0.64 | +0.20 |
-| CPRI | +28.8 | outweighed | small | Consumer Cyclical | +0.32 | +0.20 | -0.41 | +0.00 | +0.85 | -0.56 | +0.20 |
-| CVNA | +27.2 | outweighed | large | Consumer Cyclical | +0.88 | +0.20 | -0.41 | +0.00 | +0.24 | -0.38 | +0.11 |
-| ECX | +26.6 | gated_out | small | Consumer Cyclical | +0.23 | +0.20 | -0.21 | +0.00 | -0.70 | +0.21 | +0.20 |
-| CAPR | +26.1 | outweighed | small | Healthcare | +0.81 | +0.00 | -0.06 | +0.00 | -0.36 | +0.22 | +0.20 |
+| AIIO | +1026.6 | gated_out | micro | Consumer Cyclical | +0.12 | -0.20 | +0.72 | +0.00 | -0.88 | -0.43 | +0.16 |
+| PEPG | +114.7 | gated_out | micro | Healthcare | +0.70 | +0.00 | +0.72 | +0.00 | -0.64 | -0.03 | +0.16 |
+| AEHL | +81.0 | gated_out | micro | Industrials | -0.94 | -0.20 | +0.36 | +0.00 | -0.64 | +0.76 | +0.16 |
+| FIP | +59.3 | gated_out | small | Industrials | -0.56 | -0.20 | +0.72 | +0.00 | -0.85 | -0.65 | +0.20 |
+| LYNX | +59.2 | outweighed | small | Industrials | -0.66 | -0.20 | +0.29 | +0.00 | -0.36 | +0.00 | +0.20 |
+| ZJYL | +58.9 | gated_out | micro | Healthcare | +0.11 | +0.00 | +0.72 | +0.00 | +0.46 | -0.83 | +0.16 |
+| XERS | +57.9 | outweighed | small | Healthcare | +0.99 | +0.00 | +0.11 | +0.00 | +0.24 | +0.96 | +0.12 |
+| FLY | +55.1 | outweighed | mid | Industrials | -0.15 | -0.20 | +0.11 | +0.00 | -0.56 | +0.00 | +0.20 |
+| TLS | +51.2 | gated_out | small | Technology | -0.15 | -0.20 | +0.36 | +0.00 | +0.00 | +0.07 | +0.20 |
+| VIVO | +50.7 | gated_out | micro | Technology | -0.40 | -0.20 | +0.11 | +0.00 | -0.64 | +0.00 | +0.08 |
+| HLP | +49.1 | gated_out | micro | Basic Materials | -0.62 | +0.00 | +0.11 | +0.00 | +0.56 | +0.99 | -0.12 |
+| APP | +49.0 | outweighed | large | Communication Services | -0.51 | +0.00 | +0.72 | +0.00 | -0.12 | +0.02 | +0.11 |
+| GOGO | +45.9 | gated_out | small | Communication Services | -0.72 | +0.00 | +0.36 | +0.00 | -0.85 | -0.88 | +0.20 |
+| AOSL | +45.8 | outweighed | small | Technology | -0.15 | -0.20 | +0.72 | +0.00 | -0.46 | -0.52 | +0.20 |
+| ONT | +45.5 | outweighed | small | Industrials | -0.79 | -0.20 | +0.72 | +0.00 | -0.81 | +0.00 | +0.20 |
 
 **0/15 missed movers were blind** — no current input carried any signal on them.
 
@@ -31,23 +31,23 @@ Classes: **blind** = every input was silent (unknown-unknown evidence) · **outw
 | input | silent share |
 |-------|--------------|
 | s_join | 0% |
-| s_sector | 20% |
+| s_sector | 52% |
 | s_general | 0% |
-| s_news | 97% |
-| s_ab | 8% |
-| s_peer | 10% |
+| s_news | 100% |
+| s_ab | 3% |
+| s_peer | 18% |
 
 ## Worst realized buys
 
 | Ticker | fwd% | size | sector | join | sect | gen | news | ab | peer | opp |
 |--------|------|------|--------|------|------|-----|------|----|------|-----|
-| NTAP | -16.6 | large | Technology | +0.17 | -0.20 | -0.41 | +0.00 | +0.93 | +0.65 | -0.17 |
-| SONO | -10.6 | mid | Technology | +0.14 | -0.20 | -0.41 | +0.00 | +0.88 | +0.28 | +0.20 |
-| LAUR | -9.5 | mid | Consumer Defensive | +0.43 | +0.20 | -0.06 | +0.00 | +0.76 | +0.71 | +0.20 |
-| SM | -6.8 | mid | Energy | +0.32 | +0.00 | -0.21 | +0.88 | +0.85 | -0.05 | +0.20 |
-| AMN | -6.6 | small | Healthcare | +0.99 | +0.00 | -0.06 | +0.00 | +0.91 | +0.29 | +0.20 |
-| PACS | -6.5 | mid | Healthcare | +0.99 | +0.00 | -0.06 | +0.00 | +0.88 | +0.74 | +0.20 |
-| CVLT | -5.9 | mid | Technology | +0.57 | -0.20 | -0.21 | +0.00 | +0.93 | +0.04 | +0.20 |
-| CRGY | -3.0 | mid | Energy | +0.26 | +0.00 | -0.21 | +0.00 | +0.81 | -0.13 | +0.20 |
-| AVO | -2.5 | small | Consumer Defensive | -0.15 | +0.20 | -0.06 | +0.00 | +0.91 | +0.57 | +0.20 |
-| TBBB | -2.4 | mid | Consumer Defensive | -0.15 | +0.20 | -0.06 | +0.00 | +0.76 | +0.89 | +0.20 |
+| ILMN | -6.0 | large | Healthcare | +0.99 | +0.00 | +0.72 | +0.00 | +0.76 | +0.73 | -0.17 |
+| CDNA | -5.5 | mid | Healthcare | +0.99 | +0.00 | +0.72 | +0.00 | +0.98 | +0.89 | +0.20 |
+| VEEV | -1.9 | large | Healthcare | +0.99 | +0.00 | +0.36 | +0.00 | +0.64 | +0.87 | -0.17 |
+| PEB | -0.7 | mid | Real Estate | +0.41 | +0.00 | +0.72 | +0.00 | +0.64 | +0.13 | +0.20 |
+| ABX | -0.4 | small | Financial | +0.11 | +0.00 | +0.11 | +0.00 | +0.76 | +0.16 | +0.20 |
+| TRU | -0.2 | large | Financial | +0.67 | +0.00 | +0.72 | +0.00 | +0.70 | +0.18 | +0.07 |
+| CHEF | +0.4 | mid | Consumer Defensive | +0.71 | +0.00 | +0.72 | +0.00 | +0.64 | +0.19 | +0.20 |
+| AVO | +0.6 | small | Consumer Defensive | +0.20 | +0.00 | +0.11 | +0.00 | +0.46 | +0.57 | +0.20 |
+| LAUR | +1.3 | mid | Consumer Defensive | +0.50 | +0.00 | +0.11 | +0.00 | +0.64 | +0.71 | +0.20 |
+| CNK | +2.3 | mid | Communication Services | +0.31 | +0.00 | +0.36 | +0.00 | +0.85 | +0.53 | +0.20 |
