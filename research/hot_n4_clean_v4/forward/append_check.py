@@ -23,6 +23,7 @@ RECORD_NAMES = (
     "PRICE_LEDGER.jsonl",
     "price_revisions.jsonl",
     "price_revision_acks.jsonl",
+    "duplicate_bar_acks.jsonl",
     "mark_notes.jsonl",
     "prices.jsonl",
     "skips.jsonl",

@@ -225,19 +225,90 @@ def load_price_rows(folder: Path | None = None) -> list[dict]:
     if b"\r" in text or not text.endswith(b"\n"):
         raise RuntimeError("prices.jsonl")
     rows = []
-    seen = set()
+    seen: dict[tuple[str, str], dict] = {}
+    dup_acks = None
     for line in text.splitlines():
         if not line:
             raise RuntimeError("blank price line")
         row = _round_bar(json.loads(line))
         key = (row["ticker"], row["date"])
-        if key in seen:
-            raise RuntimeError(f"duplicate stored bar {key}")
         if row["date"] <= PIN_END:
             raise RuntimeError(f"forward store has a pinned date {row['date']}")
-        seen.add(key)
+        if key in seen:
+            first = seen[key]
+            # Read-only dedupe. The first stored line is the stored bar; the
+            # file is never rewritten. An exact repeat (same OHLCV) is
+            # dropped from the read. A repeat whose values differ refuses
+            # unless an approved line in duplicate_bar_acks.jsonl names
+            # this ticker and session with both rows exactly.
+            if _same(first, row):
+                continue
+            if dup_acks is None:
+                dup_acks = approved_duplicate_keys(load_duplicate_acks(folder))
+            if (key, _bar_key(first), _bar_key(row)) in dup_acks:
+                continue
+            raise RuntimeError(f"duplicate stored bar {key}")
+        seen[key] = row
         rows.append(row)
     return rows
+
+
+DUP_ACKS_NAME = "duplicate_bar_acks.jsonl"
+DUP_ACK_KIND = "duplicate_stored_bar_ack"
+DUP_ACK_REQUIRED = ("approved_by", "date", "dropped", "kept", "kind", "reason", "ticker")
+
+
+def duplicate_acks_path(folder: Path | None = None) -> Path:
+    return _price_folder(folder) / DUP_ACKS_NAME
+
+
+def _bar_key(row: dict) -> tuple:
+    bar = _round_bar(row)
+    return tuple(bar[k] for k in ("ticker", "date", "open", "high", "low", "close", "volume"))
+
+
+def load_duplicate_acks(folder: Path | None = None) -> list[dict]:
+    """Append-only acks for a second stored line on one (ticker, session).
+
+    One line says: keep ``kept`` (the first stored line) and leave the later
+    stored line ``dropped`` out of the in-memory read. Both rows must match
+    the stored lines exactly. Neither line in prices.jsonl is edited. A
+    malformed file refuses. ``PENDING`` approvals are not honored.
+    """
+    path = duplicate_acks_path(folder)
+    if not path.is_file() or path.stat().st_size == 0:
+        return []
+    text = path.read_bytes()
+    if b"\r" in text or not text.endswith(b"\n"):
+        raise RuntimeError(f"{DUP_ACKS_NAME} is not complete lines")
+    rows = []
+    for line in text.splitlines():
+        if not line:
+            raise RuntimeError(f"blank line in {DUP_ACKS_NAME}")
+        row = json.loads(line)
+        missing = [key for key in DUP_ACK_REQUIRED if key not in row]
+        if missing:
+            raise RuntimeError(f"{DUP_ACKS_NAME} line is missing {', '.join(missing)}")
+        if row["kind"] != DUP_ACK_KIND:
+            raise RuntimeError(f"{DUP_ACKS_NAME} kind {row['kind']}")
+        for side in ("kept", "dropped"):
+            bar = row[side]
+            if str(bar.get("ticker", "")).upper() != str(row["ticker"]).upper() or str(bar.get("date", ""))[:10] != str(row["date"])[:10]:
+                raise RuntimeError(f"{DUP_ACKS_NAME} {side} row is not {row['ticker']} {row['date']}")
+        if str(row["date"])[:10] <= PIN_END:
+            raise RuntimeError(f"{DUP_ACKS_NAME} names a pinned date {row['date']}")
+        rows.append(row)
+    return rows
+
+
+def approved_duplicate_keys(acks: list[dict]) -> set[tuple]:
+    out = set()
+    for row in acks:
+        if not ack_is_approved(row):
+            continue
+        key = (str(row["ticker"]).upper(), str(row["date"])[:10])
+        out.add((key, _bar_key(row["kept"]), _bar_key(row["dropped"])))
+    return out
 
 
 def _append_lines(path: Path, lines: list[bytes]) -> None:
