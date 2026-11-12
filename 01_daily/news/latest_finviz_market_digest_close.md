@@ -1,47 +1,46 @@
-# Finviz homepage market digest (close) — 2026-11-10
+# Finviz homepage market digest (close) — 2026-11-11
 
-**Generated:** 2026-11-10T16:32:28.744966-05:00 (America/New_York)
+**Generated:** 2026-11-11T21:21:08.026310-05:00 (America/New_York)
 **Source:** `live`
-**Banner:** US stocks closed lower as hotter October CPI pushed the 10-year yield back near 5% and December Fed hike odds toward 99%
-**Prior close:** SPX -0.40%  Nasdaq -0.74%  Dow -0.30%
-**SPX:** -0.40%  **Nasdaq:** -0.74%  **Dow:** -0.30%
+**Banner:** US stocks closed higher as AI-led tech rebound lifted the market while Nvidia falls after-hours on report its board may oust CEO
+**Prior close:** SPX +1.31%  Nasdaq +1.60%  Dow +0.49%
+**SPX:** +1.31%  **Nasdaq:** +1.60%  **Dow:** +0.49%
 **Oil:** —
-**CPI/Fed:** October CPI rose 0; 99.0% hike (hike odds climbing to 99%)
-**Leaders:** CME, DB, NVDA, MSFT, PEPG, SANM, SBH, ONON, GFL, PBR, ALC, CRWV
-**Next session:** housing no · retail no · Fed yes
-**Earnings slate:** —
+**CPI/Fed:** —
+**Leaders:** CRWV, MU, SNDK, DELL, NBIS, ORCL, AAPL, NVDA, MSFT, ABNB, LULU, MCD, CURI, OPRX, CSCO, AMAT
+**Next session:** housing no · retail no · Fed no
+**Earnings slate:** CSCO, AMAT
 **Geo/grain:** —
-**Clock legal for:** 2026-11-11
+**Clock legal for:** 2026-11-12
 **Clock use:** `next_open`
 
 ## Clock
 
-Live post-close answer-key (~16:05 ET). **Legal for the NEXT session open only** (`clock_legal_for` = 2026-11-11) — **NOT** the same morning. `clock_use` is always `next_open`. File is `*_finviz_market_digest_close.*`; the same_morning warm-up file is left untouched.
+Live post-close answer-key (~16:05 ET). **Legal for the NEXT session open only** (`clock_legal_for` = 2026-11-12) — **NOT** the same morning. `clock_use` is always `next_open`. File is `*_finviz_market_digest_close.*`; the same_morning warm-up file is left untouched.
 
 Homepage `$MARKET` prose — **not** `YYYY-MM-DD_finviz_digest.md` (quote-page headlines + ticker blurbs). Capture only. Not wired into tape_anchor / predict / #210.
 
 ## Theme Radar
 
-- **Prior close:** SPX -0.40% · Nasdaq -0.74% · Dow -0.30%
+- **Prior close:** SPX +1.31% · Nasdaq +1.60% · Dow +0.49%
 - **Oil:** —
-- **CPI / Fed-odds:** October CPI rose 0; 99.0% hike (hike odds climbing to 99%)
-- **Named leaders:** CME, DB, NVDA, MSFT, PEPG, SANM, SBH, ONON, GFL, PBR, ALC, CRWV
-- **Next-session calendar:** housing no · retail no · Fed yes
-  - After the bell, Petrobras (PBR), Alcon (ALC), and CoreWeave (CRWV) were scheduled to report earnings, while index futures traded little changed as investors looked ahead to more Fed speakers and additional earnings on Wednesday.
-- **Earnings slate:** —
+- **CPI / Fed-odds:** —
+- **Named leaders:** CRWV, MU, SNDK, DELL, NBIS, ORCL, AAPL, NVDA, MSFT, ABNB, LULU, MCD, CURI, OPRX, CSCO, AMAT
+- **Next-session calendar:** housing no · retail no · Fed no
+- **Earnings slate:** CSCO, AMAT
 - **Geo / grain:** —
 
 ## Narrative
 
-**US stocks closed lower as hotter October CPI pushed the 10-year yield back near 5% and December Fed hike odds toward 99%**
+**US stocks closed higher as AI-led tech rebound lifted the market while Nvidia falls after-hours on report its board may oust CEO**
 
-- The S&P 500 ($SPX) fell about 0.4% to 7,521, the Dow Jones Industrial Average ($DJI) lost about 0.3% to 52,232, the Nasdaq Composite ($COMP) declined 0.74% to 25,066, and the Russell 2000 (IWM) slipped 0.62%.
-- October CPI rose 0.4% month-over-month versus the 0.3% consensus, with core CPI up 0.3% and beating forecasts for a third straight month after the 8:30 a.m. ET release, lifting the 10-year Treasury yield (@10Y) back near 5%.
-- CME (CME) FedWatch showed December Fed hike odds climbing to 99%, Deutsche Bank (DB) flagged potential hikes at the next three meetings, and some traders priced in a 50-basis-point move after comments from Fed Governor Chris Waller.
-- Nine of 11 S&P 500 ($SPX) sectors finished lower, led by utilities and real estate, while financials eked out a gain of about 0.15%.
-- Nvidia (NVDA) fell roughly 5.5% as CEO Jensen Huang faces a subpoena threat from congressional Republicans over his reported relationship with alleged Chinese intelligence operative Alice Huang, amid concerns over about $7.5 billion in chip shipments to China and an independent board investigation.
-- Microsoft (MSFT) dropped about 2% after Anthropic announced competing Claude workplace tools such as Sheets and Whiteboards, ahead of Anthropic’s amended S-1 targeting roughly a $1 trillion IPO valuation.
-- PepGen (PEPG) surged roughly 93% after reporting fiscal third-quarter results that missed EPS estimates but beat revenue forecasts.
-- Sanmina (SANM) rose nearly 4% after issuing strong fiscal 2027 guidance that topped expectations, while Sally Beauty (SBH) advanced following a fourth-quarter earnings beat.
-- On Holding (ONON) sank 8% despite posting record third-quarter revenue and margins and raising its 2026 margin outlook, and GFL Environmental (GFL) fell about 8% after rejecting takeover bids and opting to remain public.
-- After the bell, Petrobras (PBR), Alcon (ALC), and CoreWeave (CRWV) were scheduled to report earnings, while index futures traded little changed as investors looked ahead to more Fed speakers and additional earnings on Wednesday.
+- The S&P 500 ($SPX) rose 1.31% to 7,619.38, the Nasdaq Composite ($COMP) gained 1.60% to 25,466.19, and the Dow Jones Industrial Average ($DJI) added 0.49% to 52,486.49, with 10 of 11 S&P sectors closing higher and technology up more than 3%.
+- CoreWeave (CRWV) jumped 24.71% after reporting third-quarter revenue of $3.66 billion, up 168% year-over-year, raising its 2026 revenue forecast to $13.0–13.3 billion and targeting adjusted profitability in the first half of 2028.
+- Stronger CoreWeave (CRWV) results eased AI spending concerns and helped fuel a rally across chip and data-center names including Micron Technology (MU), which climbed 11.89%, Sandisk (SNDK), which gained 13.69%, Dell Technologies (DELL), which advanced 11.75%, and Nebius Group (NBIS), which rose 15.4%. Oracle (ORCL) added 8.82% after its Opower platform delivered a record 1 GW peak energy demand reduction.
+- Apple (AAPL) gained 2.04% to a record high above $355, extending its leadership among megacap technology names.
+- Nvidia (NVDA) rose 2.87% in the regular session to $173.73 as part of the broader AI rebound.
+- On the downside, Microsoft (MSFT) fell 2.26%, Airbnb (ABNB) slipped 3.09%, Lululemon (LULU) declined 2.65%, and McDonald’s (MCD) lost 2.61%, bucking the broader market advance.
+- In extended trading, Nvidia (NVDA) fell more than 8% after Barron’s reported its board is preparing to oust CEO Jensen Huang following reports of affairs, including one with a subordinate executive and another allegedly involving a suspected Chinese spy.
+- CuriosityStream (CURI) rose after-hours after reporting 13% revenue growth and raising its outlook, though its smaller size limited any broader index impact.
+- OptimizeRx (OPRX) dropped sharply in extended trading after its results and guidance update, also with limited influence on major averages.
+- Investors looked ahead to earnings from Cisco Systems (CSCO) and Applied Materials (AMAT), both due after Thursday’s close.
