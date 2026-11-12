@@ -9864,5 +9864,142 @@
     ],
     "sha256": "3d61889782396238dbf9d3a4f44894ccce54e20fd4d28b15c5e50066b442f02d",
     "unfilled": []
+  },
+  {
+    "added_buys": [],
+    "added_sells": [],
+    "cash_primary": 11.882988588377202,
+    "date": "2026-11-12",
+    "equity_primary": 7961.996788588378,
+    "holdings": [
+      {
+        "cost_primary": 1961.6624999999997,
+        "entry_date": "2026-11-12",
+        "entry_px": 3.67,
+        "last_px": 3.67,
+        "min_hold": 1,
+        "peak_px": 3.67,
+        "shares": 530,
+        "ticker": "BGS"
+      },
+      {
+        "cost_primary": 1961.3694999999996,
+        "entry_date": "2026-11-12",
+        "entry_px": 10.95,
+        "last_px": 10.95,
+        "min_hold": 1,
+        "peak_px": 10.95,
+        "shares": 178,
+        "ticker": "CAPR"
+      },
+      {
+        "cost_primary": 1960.6455999999998,
+        "entry_date": "2026-11-12",
+        "entry_px": 9.84,
+        "last_px": 9.84,
+        "min_hold": 1,
+        "peak_px": 9.84,
+        "shares": 198,
+        "ticker": "FOSL"
+      },
+      {
+        "cost_primary": 1963.5720000000001,
+        "entry_date": "2026-11-12",
+        "entry_px": 1.82,
+        "last_px": 1.82,
+        "min_hold": 1,
+        "peak_px": 1.82,
+        "shares": 1066,
+        "ticker": "GEVO"
+      },
+      {
+        "cost_primary": 175.64445449999997,
+        "entry_date": "2026-11-11",
+        "entry_px": 0.5797,
+        "last_px": 0.5844,
+        "min_hold": 2,
+        "peak_px": 0.5844,
+        "shares": 297,
+        "ticker": "HUMA"
+      },
+      {
+        "cost_primary": 175.488,
+        "entry_date": "2026-11-11",
+        "entry_px": 5.4,
+        "last_px": 5.26,
+        "min_hold": 2,
+        "peak_px": 5.4,
+        "shares": 32,
+        "ticker": "PEPG"
+      },
+      {
+        "cost_primary": 165.42540703499998,
+        "entry_date": "2026-11-11",
+        "entry_px": 23.280001,
+        "last_px": 21.32,
+        "min_hold": 2,
+        "peak_px": 23.280001,
+        "shares": 7,
+        "ticker": "REPL"
+      },
+      {
+        "cost_primary": 170.2935,
+        "entry_date": "2026-11-11",
+        "entry_px": 6.45,
+        "last_px": 5.99,
+        "min_hold": 2,
+        "peak_px": 6.45,
+        "shares": 26,
+        "ticker": "ZIP"
+      }
+    ],
+    "kind": "mark",
+    "open_fill_sha256": "3d61889782396238dbf9d3a4f44894ccce54e20fd4d28b15c5e50066b442f02d",
+    "plan_sha256": "d9435de08cfd96ebf094726e56b9b0270efccc719299c6588bde4eed22440533",
+    "pnl_status": "marked",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "6dab1a137a195ca6799db556239ebc4dac09aa5b406a963460525c2e4b8f4fe1"
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-11-12",
+    "entry_date": "2026-11-10",
+    "entry_px": 23.51,
+    "fill": 26.18,
+    "kind": "close",
+    "pnl_primary": 249.61335000000054,
+    "reason": "holdup extension",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "0f785697165119ab032961758149ecca812cc1693e5ae9b879f84b466ae65c1c",
+    "shares": 105,
+    "ticker": "FLY"
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-11-12",
+    "entry_date": "2026-11-10",
+    "entry_px": 11.435,
+    "fill": 12.33,
+    "kind": "close",
+    "pnl_primary": 162.77397500000052,
+    "reason": "holdup extension",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "f5f8fb237102416da7504c1402cab5d3f67c959c0795e4a2dcfc2dd60e6481fc",
+    "shares": 217,
+    "ticker": "FRVO"
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-11-12",
+    "entry_date": "2026-11-10",
+    "entry_px": 2.135,
+    "fill": 2.135,
+    "kind": "close",
+    "pnl_primary": -54.906399999999394,
+    "reason": "holdup extension",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "8441daaf8503a8f851de1b64691ede96a6b2f0f03676c22c3c45e529b107820d",
+    "shares": 1160,
+    "ticker": "INDI"
   }
 ]
