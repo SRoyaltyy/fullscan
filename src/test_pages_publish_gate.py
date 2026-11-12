@@ -286,7 +286,9 @@ def test_live_curve_keeps_2026_11_04_recorded_as_missed() -> None:
     """
     root = Path(__file__).resolve().parent.parent
     page = (root / "dashboard" / "index.html").read_text(encoding="utf-8")
-    assert gate.data_asof_from_html(page) == "2026-11-09"
+    # The live page keeps advancing (2026-11-12 after the post-close paper run).
+    # Pin a floor, not one day, so a later caught-up session does not fail.
+    assert gate.data_asof_from_html(page) >= "2026-11-09"
     assert gate.page_shows_missed_note("2026-11-04", text=page)
     match = gate._DATES_ARRAY.search(page)
     assert match is not None
