@@ -1,6 +1,6 @@
 {
   "date": "2026-11-12",
-  "generated_at": "2026-11-12T14:17:51.959324-05:00",
+  "generated_at": "2026-11-12T16:01:31.403700-05:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -1391,13 +1391,13 @@
       "date": "2026-11-12",
       "ok": true,
       "pushed": true,
-      "at": "2026-11-12T13:38:06.222118-05:00",
+      "at": "2026-11-12T14:18:29.133577-05:00",
       "files": [
         {
           "path": "data/day_board/today.json",
           "ok": true,
           "reason": "",
-          "size": 33681,
+          "size": 27379,
           "preview": "2026-11-12 BUY NBIS, BB, SONO, GMRS \u00b7 SELL DDD, QUBT, LTBR, SOC, UNIT, LWLG, HYLN, FLNC"
         },
         {
@@ -1408,17 +1408,17 @@
           "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
         },
         {
-          "path": "data/day_board/2026-11-12.after-freeze-2.json",
+          "path": "data/day_board/2026-11-12.after-freeze-3.json",
           "ok": true,
           "reason": "",
-          "size": 156714,
+          "size": 146653,
           "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href"
         },
         {
-          "path": "data/day_board/2026-11-12_tickets.after-freeze-2.json",
+          "path": "data/day_board/2026-11-12_tickets.after-freeze-3.json",
           "ok": true,
           "reason": "",
-          "size": 116758,
+          "size": 107321,
           "preview": "2026-11-12 BUY NBIS, BB, SONO, GMRS \u00b7 SELL DDD, QUBT, LTBR, SOC, UNIT, LWLG, HYLN, FLNC"
         },
         {
@@ -1460,7 +1460,7 @@
           "path": "dashboard/factor-mine/today.json",
           "ok": true,
           "reason": "",
-          "size": 116758,
+          "size": 107321,
           "preview": "2026-11-12 BUY NBIS, BB, SONO, GMRS \u00b7 SELL DDD, QUBT, LTBR, SOC, UNIT, LWLG, HYLN, FLNC"
         },
         {
@@ -1549,7 +1549,7 @@
       "date": "2026-11-12",
       "ok": true,
       "pushed": true,
-      "at": "2026-11-12T13:38:20.044053-05:00",
+      "at": "2026-11-12T14:18:42.723454-05:00",
       "files": [
         {
           "path": "03_scoreboard/PAPER_TRADING.md",
@@ -1574,7 +1574,7 @@
       "date": "2026-11-12",
       "ok": true,
       "pushed": true,
-      "at": "2026-11-12T14:17:16.399898-05:00",
+      "at": "2026-11-12T16:00:55.378082-05:00",
       "files": [
         {
           "path": "01_daily/weather/2026-11-12_weather.json",
@@ -1617,6 +1617,13 @@
           "reason": "",
           "size": 10509,
           "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -1.2149999999999999, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -0.65, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -2.8, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -0.165, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -0.46, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -0.955, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': 0.01, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-11-12_weather.after-freeze-5.json",
+          "ok": true,
+          "reason": "",
+          "size": 10508,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -1.2149999999999999, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -0.65, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -2.8, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -0.165, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -0.46, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -0.955, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': 0.01, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}"
         }
       ],
       "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -1.2149999999999999, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -0.65, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -2.8, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -0.165, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -0.46, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -0.955, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': 0.01, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-11-12\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade. \u00b7 weather sectors 11 \u00b7 Basic Materials={'score': -1.2149999999999999, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -0.65, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -2.8, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consume"
@@ -1627,7 +1634,7 @@
       "date": "2026-11-12",
       "ok": true,
       "pushed": true,
-      "at": "2026-11-12T14:17:26.971249-05:00",
+      "at": "2026-11-12T16:01:05.905702-05:00",
       "files": [
         {
           "path": "data/join/2026-11-12_ranked.csv",
@@ -1649,9 +1656,16 @@
           "reason": "",
           "size": 2252431,
           "preview": "5894 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 ARGX, ASND, BZ, RGLD, AZN"
+        },
+        {
+          "path": "data/join/2026-11-12_ranked.after-freeze-3.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2252431,
+          "preview": "5894 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 ARGX, ASND, BZ, RGLD, AZN"
         }
       ],
-      "preview": "5894 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 ARGX, ASND, BZ, RGLD, AZN \u00b7 5894 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 ARGX, ASND, BZ, RGLD, AZN \u00b7 5894 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 ARGX, ASND, BZ, RGLD, AZN"
+      "preview": "5894 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 ARGX, ASND, BZ, RGLD, AZN \u00b7 5894 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 ARGX, ASND, BZ, RGLD, AZN \u00b7 5894 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 ARGX, ASND, BZ, RGLD, AZN \u00b7 5894 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 ARGX, ASND, BZ, RGLD, AZN"
     },
     {
       "key": "peer_rs",
@@ -1659,7 +1673,7 @@
       "date": "2026-11-12",
       "ok": true,
       "pushed": true,
-      "at": "2026-11-12T14:17:36.453709-05:00",
+      "at": "2026-11-12T16:01:15.834837-05:00",
       "files": [
         {
           "path": "data/peers/2026-11-12_peer_rs.csv",
