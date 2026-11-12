@@ -2,7 +2,7 @@
 
 Live sleeves still SIT on S≤−3. Search a ticker for every session since 8/13: cameras (+N −N), 09:30 open, close, same-day % and hold-1/3/5 with actual prices.
 
-Generated 2026-11-12T13:40:44.578490-05:00 · 2026-08-13 → 2026-11-11 · live sit **untouched**.
+Generated 2026-11-12T14:09:51.938251-05:00 · 2026-08-13 → 2026-11-11 · live sit **untouched**.
 
 ## Latest morning
 
@@ -10,23 +10,23 @@ Generated 2026-11-12T13:40:44.578490-05:00 · 2026-08-13 → 2026-11-11 · live 
 
 ### Longs weather sat on (top)
 
-- **LINC** idio +27 · +6 −0 · E good · H1 0.13% H3 None%
-- **FOSL** idio +26 · +8 −0 · E good · H1 -4.89% H3 None%
-- **ALH** idio +26 · +7 −0 · E good · H1 -4.01% H3 None%
-- **ZETA** idio +25 · +6 −0 · E good · H1 4.78% H3 None%
-- **EMBJ** idio +24 · +7 −1 · E good · H1 -3.37% H3 None%
-- **SBH** idio +24 · +7 −0 · E good · H1 -7.77% H3 None%
-- **CECO** idio +23 · +7 −1 · E good · H1 -3.87% H3 None%
-- **LOAR** idio +23 · +7 −1 · E good · H1 -3.48% H3 None%
+- **LINC** idio +27 · +6 −0 · E good · H1 -1.33% H3 None%
+- **FOSL** idio +26 · +8 −0 · E good · H1 -8.23% H3 None%
+- **ALH** idio +26 · +7 −0 · E good · H1 -4.82% H3 None%
+- **ZETA** idio +25 · +6 −0 · E good · H1 5.64% H3 None%
+- **EMBJ** idio +24 · +7 −1 · E good · H1 -3.65% H3 None%
+- **SBH** idio +24 · +7 −0 · E good · H1 -8.61% H3 None%
+- **CECO** idio +23 · +7 −1 · E good · H1 -4.45% H3 None%
+- **LOAR** idio +23 · +7 −1 · E good · H1 -4.24% H3 None%
 
 ### Shorts weather sat on (top)
 
-- **AKBA** idio -9 · +3 −5 · H1 -0.28%
-- **LDI** idio -7 · +2 −3 · H1 3.07%
-- **NCMI** idio -7 · +2 −4 · H1 -7.19%
-- **STUB** idio -6 · +2 −3 · H1 1.96%
-- **LAND** idio -6 · +3 −4 · H1 6.62%
-- **RC** idio -6 · +3 −4 · H1 8.94%
+- **AKBA** idio -9 · +3 −5 · H1 1.21%
+- **LDI** idio -7 · +2 −3 · H1 4.34%
+- **NCMI** idio -7 · +2 −4 · H1 -7.58%
+- **STUB** idio -6 · +2 −3 · H1 2.24%
+- **LAND** idio -6 · +3 −4 · H1 5.48%
+- **RC** idio -6 · +3 −4 · H1 9.71%
 - **SOC** idio -6 · +3 −5 · H1 -2.73%
 - **AGRO** idio -5 · +2 −4 · H1 7.47%
 
