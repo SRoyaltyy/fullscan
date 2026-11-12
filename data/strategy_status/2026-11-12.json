@@ -21,8 +21,8 @@
    "SIT": 0
   },
   "h1": {
-   "MISSING": 1,
-   "OK": 0,
+   "MISSING": 0,
+   "OK": 1,
    "SIT": 0
   },
   "holdup": {
@@ -52,7 +52,7 @@
   }
  },
  "date": "2026-11-12",
- "generated_at": "2026-11-12T08:36:20-05:00",
+ "generated_at": "2026-11-12T08:37:25-05:00",
  "strategies": [
   {
    "buys": [
@@ -6345,13 +6345,23 @@
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "BGS",
+    "GEVO",
+    "CAPR",
+    "FOSL"
+   ],
    "family": "h1",
    "name": "h1",
-   "note": "no sealed plan row",
-   "sells": [],
+   "note": "sealed 2026-11-12T13:36:35Z",
+   "sells": [
+    "HUMA 3185",
+    "PEPG 412",
+    "REPL 81",
+    "ZIP 288"
+   ],
    "source": "research/hot_n4_clean_v4/forward_h1/h1_log.jsonl",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [],
