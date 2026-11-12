@@ -1,6 +1,6 @@
-# CATALYST DAILY — 2026-11-11
+# CATALYST DAILY — 2026-11-12
 
-0/8 dossiers · max=8 · routing=Grok → DeepSeek
+0/7 dossiers · max=8 · routing=Grok → DeepSeek
 
 ## TARGETS
 - **NVDA** [earnings] earnings AMC
@@ -10,7 +10,6 @@
 - **SLB** [override_captain] OVERRIDE Oil & Gas Equipment & Services
 - **BKR** [override_captain] OVERRIDE Oil & Gas Equipment & Services
 - **KGS** [override_captain] OVERRIDE Oil & Gas Equipment & Services
-- **SM** [action_top] news_actions buy net=6.8
 
 ## DOSSIERS
 - **NVDA** ERROR OpenClaw and DeepSeek both returned empty for CATALYST STEP1 NVDA
@@ -20,6 +19,5 @@
 - **SLB** ERROR OpenClaw and DeepSeek both returned empty for CATALYST STEP1 SLB
 - **BKR** ERROR OpenClaw and DeepSeek both returned empty for CATALYST STEP1 BKR
 - **KGS** ERROR OpenClaw and DeepSeek both returned empty for CATALYST STEP1 KGS
-- **SM** ERROR OpenClaw and DeepSeek both returned empty for CATALYST STEP1 SM
 
-CATALYST_DAILY_FAIL 0/8
+CATALYST_DAILY_FAIL 0/7
