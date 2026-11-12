@@ -1,19 +1,13 @@
 {
   "date": "2026-11-12",
-  "generated_at": "2026-11-12T04:47:14.734689-05:00",
+  "generated_at": "2026-11-12T07:56:56.327733-05:00",
   "overall": "PARTIAL",
-  "ranker_ready": false,
-  "blockers": [
-    "MISSING General predict MD `01_daily/general/2026-11-12_predict.md` \u2014 missing",
-    "MISSING News actions JSON `01_daily/news/2026-11-12_actions.json` \u2014 missing",
-    "MISSING News judge MD `01_daily/news/2026-11-12_judge.md` \u2014 missing",
-    "MISSING Weather JSON `01_daily/weather/2026-11-12_weather.json` \u2014 missing",
-    "MISSING AB checklist enriched `data/ab_checklist/2026-11-12_ab_checklist_enriched.csv` \u2014 missing"
-  ],
+  "ranker_ready": true,
+  "blockers": [],
   "counts": {
-    "ok": 2,
-    "partial": 2,
-    "fail": 4,
+    "ok": 4,
+    "partial": 3,
+    "fail": 1,
     "n": 8
   },
   "processes": [
@@ -183,9 +177,9 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 2,
+      "n_req_ok": 7,
       "n_req": 9,
-      "n_opt_ok": 1,
+      "n_opt_ok": 2,
       "n_opt": 14,
       "files": [
         {
@@ -241,10 +235,10 @@
           "name": "News parse JSON",
           "path": "01_daily/news/2026-11-12_parsed.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "",
+          "size": 5963115,
+          "said": "5963115B on disk",
           "bullets": []
         },
         {
@@ -252,22 +246,31 @@
           "name": "Events JSON",
           "path": "01_daily/events/2026-11-12_events.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 24205,
+          "said": "32 events \u00b7 elevated uncertainty \u00b7 Markets are digesting a historic Democratic midterm sweep and a third hot CPI print that has December Fed hike odds near 90%, with a 50bp ta",
+          "bullets": [
+            "US midterm elections: Democratic sweep of Congress",
+            "US October CPI surprises hot",
+            "December Fed hike ~90% priced; 50bp tail risk",
+            "China extends suspension of 24% retaliatory tariff on US goods"
+          ]
         },
         {
           "key": "judge",
           "name": "News judge MD",
           "path": "01_daily/news/2026-11-12_judge.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 9899,
+          "said": "1. **Hot October CPI (+0.4% m/m) revives December Fed hike; Goldman adds hike** \u2014 Dominant rates/risk catalyst; multiple hike headlines collapse into one hawkis",
+          "bullets": [
+            "2. **CoreWeave beat/raise: $9B prepayments, $132.5B backlog revives AI demand trade** \u2014 Rescues AI-infra/semis demand narrative and lifts AMD/ARM/AVGO/INTC/KLAC/LRCX/MU premarket. Channel: sector_fundamental.",
+            "3. **Nvidia board meets on Huang fate after affair/spy allegations; selloff deepens** \u2014 Mega-cap single-name but index/semis sentiment risk if board action resolves intraday. Channel: sentiment.",
+            "4. **OPEC+ October output surges 26% to highest since war began** \u2014 Supply normalization is bearish for crude/energy beta despite Iran-talks floor. Channel: sector_fundamental."
+          ]
         },
         {
           "key": "research_json",
@@ -296,22 +299,32 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-11-12_actions.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 62995,
+          "said": "78 ticker actions \u00b7 5 events \u00b7 8220 headlines \u00b7 COP BUY, EOG BUY, CHRD BUY, SM BUY, REPX BUY, HPK BUY, OXY BUY, DVN BUY",
+          "bullets": [
+            "BUY COP",
+            "BUY EOG",
+            "BUY CHRD",
+            "BUY SM"
+          ]
         },
         {
           "key": "general",
           "name": "General predict MD",
           "path": "01_daily/general/2026-11-12_predict.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 10331,
+          "said": "DOWN -7.158",
+          "bullets": [
+            "bad: Nvidia -6.7% on CEO governance scandal",
+            "bad: NQ futures -0.93%",
+            "bad: Asia semis selloff (Kospi -0.61%, SK Hynix -3.3%)",
+            "good: AMD +4.2% premarket"
+          ]
         },
         {
           "key": "board",
@@ -345,10 +358,10 @@
           "name": "Pre-open status JSON",
           "path": "01_daily/2026-11-12_preopen_status.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "all_ok=False missing=['events', 'news_judge', 'map_heat_research', 'general_predict']",
+          "size": 6635,
+          "said": "all_ok=False \u00b7 qc=False \u00b7 grok=False \u00b7 book=False \u00b7 missing events, news_judge, map_heat_research, general_predict",
           "bullets": []
         },
         {
@@ -486,16 +499,22 @@
           "bullets": []
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "general DOWN  -7.158",
+      "bullets": [
+        "bad: Nvidia -6.7% on CEO governance scandal",
+        "bad: NQ futures -0.93%",
+        "bad: Asia semis selloff (Kospi -0.61%, SK Hynix -3.3%)",
+        "good: AMD +4.2% premarket",
+        "good: oil offered on peace-talk hopes"
+      ]
     },
     {
       "key": "weather",
       "name": "Label + weather",
       "yaml": "label_weather.yml",
-      "status": "FAIL",
+      "status": "OK",
       "inputs_ready": true,
-      "n_req_ok": 0,
+      "n_req_ok": 1,
       "n_req": 1,
       "n_opt_ok": 0,
       "n_opt": 0,
@@ -520,25 +539,31 @@
           "name": "Weather JSON",
           "path": "01_daily/weather/2026-11-12_weather.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "sectors=11 bytes=10498 vix=calm yields=flat",
+          "size": 10498,
+          "said": "hostile 5 \u00b7 neutral 6",
+          "bullets": [
+            "hostile: Consumer Cyclical, Consumer Defensive, Energy, Industrials, Real Estate",
+            "events bull 5 / bear 10"
+          ]
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "hostile 5 \u00b7 neutral 6",
+      "bullets": [
+        "hostile: Consumer Cyclical, Consumer Defensive, Energy, Industrials, Real Estate",
+        "events bull 5 / bear 10"
+      ]
     },
     {
       "key": "ab",
       "name": "AB checklist",
       "yaml": "ab_checklist.yml",
-      "status": "FAIL",
+      "status": "OK",
       "inputs_ready": true,
-      "n_req_ok": 0,
+      "n_req_ok": 1,
       "n_req": 1,
-      "n_opt_ok": 0,
+      "n_opt_ok": 1,
       "n_opt": 1,
       "files": [
         {
@@ -546,33 +571,39 @@
           "name": "AB checklist raw",
           "path": "data/ab_checklist/2026-11-12_ab_checklist.csv",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "rows=2611",
+          "size": 7519692,
+          "said": "27 rows",
+          "bullets": [
+            "RSG, ZM, MSCI, ABBV, V, WMT, GPN, SOLS"
+          ]
         },
         {
           "key": "ab_enriched",
           "name": "AB checklist enriched",
           "path": "data/ab_checklist/2026-11-12_ab_checklist_enriched.csv",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "rows=2611",
+          "size": 8312674,
+          "said": "25 rows",
+          "bullets": [
+            "RSG, EOG, HII, HONA, LMT, PBA, WCN, ENTG"
+          ]
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "25 rows",
+      "bullets": [
+        "RSG, EOG, HII, HONA, LMT"
+      ]
     },
     {
       "key": "catalyst",
       "name": "Catalyst dossiers",
       "yaml": "catalyst_daily.yml",
       "status": "FAIL",
-      "inputs_ready": false,
+      "inputs_ready": true,
       "n_req_ok": 0,
       "n_req": 0,
       "n_opt_ok": 0,
@@ -583,11 +614,16 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-11-12_actions.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 62995,
+          "said": "78 ticker actions \u00b7 5 events \u00b7 8220 headlines \u00b7 COP BUY, EOG BUY, CHRD BUY, SM BUY, REPX BUY, HPK BUY, OXY BUY, DVN BUY",
+          "bullets": [
+            "BUY COP",
+            "BUY EOG",
+            "BUY CHRD",
+            "BUY SM"
+          ]
         },
         {
           "key": "in_digest",
@@ -609,23 +645,37 @@
           "name": "Catalyst dossiers JSON",
           "path": "01_daily/catalyst/2026-11-12_dossiers.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "FAIL",
+          "reason": "zero usable dossiers (n=7)",
+          "size": 2390,
+          "said": "zero usable dossiers (n=7) \u00b7 0/7 usable \u00b7 Grok \u2192 DeepSeek \u00b7 NVDA, CRM, UEC, UUUU, SLB, BKR, KGS",
+          "bullets": [
+            "NVDA: OpenClaw and DeepSeek both returned empty for CATALYST STEP1 NVDA",
+            "CRM: OpenClaw and DeepSeek both returned empty for CATALYST STEP1 CRM",
+            "UEC: OpenClaw and DeepSeek both returned empty for CATALYST STEP1 UEC",
+            "UUUU: OpenClaw and DeepSeek both returned empty for CATALYST STEP1 UUUU"
+          ]
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "78 ticker actions \u00b7 5 events \u00b7 8220 headlines \u00b7 COP BUY, EOG BUY, CHRD BUY, SM BUY, REPX BUY, HPK BUY, OXY BUY, DVN BUY",
+      "bullets": [
+        "BUY COP",
+        "BUY EOG",
+        "BUY CHRD",
+        "BUY SM",
+        "BUY REPX",
+        "BUY HPK",
+        "BUY OXY",
+        "BUY DVN"
+      ]
     },
     {
       "key": "stock_book",
       "name": "Stock Book ALL",
       "yaml": "stock_book_all.yml",
-      "status": "FAIL",
-      "inputs_ready": false,
-      "n_req_ok": 0,
+      "status": "PARTIAL",
+      "inputs_ready": true,
+      "n_req_ok": 2,
       "n_req": 4,
       "n_opt_ok": 1,
       "n_opt": 4,
@@ -635,11 +685,16 @@
           "name": "General predict MD",
           "path": "01_daily/general/2026-11-12_predict.md",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 10331,
+          "said": "DOWN -7.158",
+          "bullets": [
+            "bad: Nvidia -6.7% on CEO governance scandal",
+            "bad: NQ futures -0.93%",
+            "bad: Asia semis selloff (Kospi -0.61%, SK Hynix -3.3%)",
+            "good: AMD +4.2% premarket"
+          ]
         },
         {
           "key": "in_board",
@@ -657,11 +712,16 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-11-12_actions.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 62995,
+          "said": "78 ticker actions \u00b7 5 events \u00b7 8220 headlines \u00b7 COP BUY, EOG BUY, CHRD BUY, SM BUY, REPX BUY, HPK BUY, OXY BUY, DVN BUY",
+          "bullets": [
+            "BUY COP",
+            "BUY EOG",
+            "BUY CHRD",
+            "BUY SM"
+          ]
         },
         {
           "key": "in_digest",
@@ -683,55 +743,68 @@
           "name": "News judge MD",
           "path": "01_daily/news/2026-11-12_judge.md",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 9899,
+          "said": "1. **Hot October CPI (+0.4% m/m) revives December Fed hike; Goldman adds hike** \u2014 Dominant rates/risk catalyst; multiple hike headlines collapse into one hawkis",
+          "bullets": [
+            "2. **CoreWeave beat/raise: $9B prepayments, $132.5B backlog revives AI demand trade** \u2014 Rescues AI-infra/semis demand narrative and lifts AMD/ARM/AVGO/INTC/KLAC/LRCX/MU premarket. Channel: sector_fundamental.",
+            "3. **Nvidia board meets on Huang fate after affair/spy allegations; selloff deepens** \u2014 Mega-cap single-name but index/semis sentiment risk if board action resolves intraday. Channel: sentiment.",
+            "4. **OPEC+ October output surges 26% to highest since war began** \u2014 Supply normalization is bearish for crude/energy beta despite Iran-talks floor. Channel: sector_fundamental."
+          ]
         },
         {
           "key": "in_weather",
           "name": "Weather JSON",
           "path": "01_daily/weather/2026-11-12_weather.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "sectors=11 bytes=10498 vix=calm yields=flat",
+          "size": 10498,
+          "said": "hostile 5 \u00b7 neutral 6",
+          "bullets": [
+            "hostile: Consumer Cyclical, Consumer Defensive, Energy, Industrials, Real Estate",
+            "events bull 5 / bear 10"
+          ]
         },
         {
           "key": "in_ab",
           "name": "AB checklist enriched",
           "path": "data/ab_checklist/2026-11-12_ab_checklist_enriched.csv",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "rows=2611",
+          "size": 8312674,
+          "said": "25 rows",
+          "bullets": [
+            "RSG, EOG, HII, HONA, LMT, PBA, WCN, ENTG"
+          ]
         },
         {
           "key": "join",
           "name": "Join ranked CSV",
           "path": "data/join/2026-11-12_ranked.csv",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "rows=5894",
+          "size": 2252431,
+          "said": "215 rows",
+          "bullets": [
+            "ARGX, ASND, BZ, RGLD, AZN, FNV, REGN, SSB"
+          ]
         },
         {
           "key": "peers",
           "name": "Peer RS CSV",
           "path": "data/peers/2026-11-12_peer_rs.csv",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "rows=5039",
+          "size": 809823,
+          "said": "493 rows",
+          "bullets": [
+            "A, AA, AACG, AAL, AAME, AAMI, AAOI, AAON"
+          ]
         },
         {
           "key": "book_json",
@@ -792,8 +865,10 @@
           "bullets": []
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "215 rows",
+      "bullets": [
+        "ARGX, ASND, BZ, RGLD, AZN"
+      ]
     },
     {
       "key": "publish",
@@ -864,10 +939,27 @@
     "buy_1d": [],
     "sell_1d": [],
     "flatten": {},
-    "general": {},
+    "general": {
+      "said": "DOWN  -7.158",
+      "bullets": [
+        "bad: Nvidia -6.7% on CEO governance scandal",
+        "bad: NQ futures -0.93%",
+        "bad: Asia semis selloff (Kospi -0.61%, SK Hynix -3.3%)",
+        "good: AMD +4.2% premarket",
+        "good: oil offered on peace-talk hopes"
+      ],
+      "score": "-7.158",
+      "direction": "down"
+    },
     "sectors": {},
     "news": {},
-    "weather": {}
+    "weather": {
+      "said": "hostile 5 \u00b7 neutral 6",
+      "bullets": [
+        "hostile: Consumer Cyclical, Consumer Defensive, Energy, Industrials, Real Estate",
+        "events bull 5 / bear 10"
+      ]
+    }
   },
   "lands": [
     {
@@ -1372,6 +1464,31 @@
         }
       ],
       "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-11-12\nExport `finviz_2026-11-12.csv` \u00b7 11616 names \u00b7 generated 2026-11-12T04:47:14.383012-05:00"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-11-12",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-12T07:56:55.011525-05:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-11-12_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 10498,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -1.2149999999999999, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -0.65, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -2.8, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -0.165, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -0.46, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -0.955, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': 0.01, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-11-12_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5885,
+          "preview": "# Weather report \u2014 2026-11-12\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -1.2149999999999999, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -0.65, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -2.8, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -0.165, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -0.46, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -0.955, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': 0.01, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-11-12\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
     }
   ],
   "href": {
