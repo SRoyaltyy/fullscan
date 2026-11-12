@@ -1,6 +1,6 @@
 {
   "date": "2026-11-12",
-  "generated_at": "2026-11-12T09:21:51.556707-05:00",
+  "generated_at": "2026-11-12T09:24:10.942547-05:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -540,8 +540,8 @@
           "path": "01_daily/weather/2026-11-12_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=10497 vix=calm yields=flat",
-          "size": 10497,
+          "reason": "sectors=11 bytes=10498 vix=calm yields=flat",
+          "size": 10498,
           "said": "hostile 5 \u00b7 neutral 6",
           "bullets": [
             "hostile: Consumer Cyclical, Consumer Defensive, Energy, Industrials, Real Estate",
@@ -759,8 +759,8 @@
           "path": "01_daily/weather/2026-11-12_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=10497 vix=calm yields=flat",
-          "size": 10497,
+          "reason": "sectors=11 bytes=10498 vix=calm yields=flat",
+          "size": 10498,
           "said": "hostile 5 \u00b7 neutral 6",
           "bullets": [
             "hostile: Consumer Cyclical, Consumer Defensive, Energy, Industrials, Real Estate",
@@ -790,7 +790,7 @@
           "size": 2252431,
           "said": "215 rows",
           "bullets": [
-            "ARGX, ASND, BZ, RGLD, AZN, FNV, REGN, SSB"
+            "ARGX, ASND, BZ, RGLD, AZN, FNV, SSB, NEM"
           ]
         },
         {
@@ -813,7 +813,7 @@
           "role": "required",
           "status": "OK",
           "reason": "horizons=5 names=148",
-          "size": 1279042,
+          "size": 1279041,
           "said": "1d BUY NBIS, BB, SONO, GMRS \u00b7 SELL DDD, QUBT, LTBR, SOC, UNIT, LWLG \u00b7 -0.6681",
           "bullets": []
         },
@@ -827,7 +827,7 @@
           "size": 47464,
           "said": "Stock book \u2014 2026-11-12",
           "bullets": [
-            "_Generated 2026-11-12T09:19:18.595051-05:00_",
+            "_Generated 2026-11-12T09:24:08.025760-05:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -863,7 +863,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "live-book poller + today.json (2026-11-12)",
-          "size": 16522134,
+          "size": 16522150,
           "said": "live-book poller + today.json (2026-11-12)",
           "bullets": []
         }
@@ -891,7 +891,7 @@
           "role": "input",
           "status": "OK",
           "reason": "horizons=5 names=148",
-          "size": 1279042,
+          "size": 1279041,
           "said": "1d BUY NBIS, BB, SONO, GMRS \u00b7 SELL DDD, QUBT, LTBR, SOC, UNIT, LWLG \u00b7 -0.6681",
           "bullets": []
         },
@@ -902,7 +902,7 @@
           "role": "required",
           "status": "OK",
           "reason": "live-book poller + today.json (2026-11-12)",
-          "size": 16522134,
+          "size": 16522150,
           "said": "live-book poller + today.json (2026-11-12)",
           "bullets": []
         },
@@ -2575,6 +2575,46 @@
       "commit_msg": "auto: stock book leftover sweep",
       "workflow": "Stock Book ALL (one-shot)",
       "run_id": "43232938907",
+      "manifest": "research/input_freeze/2026-11-12/manifest.json"
+    },
+    {
+      "path": "01_daily/2026-11-12_stock_book.md",
+      "at": "2026-11-12T09:24:33-05:00",
+      "commit_msg": "auto: strategy tickets 2026-11-12",
+      "workflow": "Publish strategy tickets",
+      "run_id": "43232712350",
+      "manifest": "research/input_freeze/2026-11-12/manifest.json"
+    },
+    {
+      "path": "data/day_board/2026-11-12_strategy_tickets.json",
+      "at": "2026-11-12T09:24:33-05:00",
+      "commit_msg": "auto: strategy tickets 2026-11-12",
+      "workflow": "Publish strategy tickets",
+      "run_id": "43232712350",
+      "manifest": "research/input_freeze/2026-11-12/manifest.json"
+    },
+    {
+      "path": "data/factor_mine/send_inputs/2026-11-12.json",
+      "at": "2026-11-12T09:24:33-05:00",
+      "commit_msg": "auto: strategy tickets 2026-11-12",
+      "workflow": "Publish strategy tickets",
+      "run_id": "43232712350",
+      "manifest": "research/input_freeze/2026-11-12/manifest.json"
+    },
+    {
+      "path": "data/stock_book/2026-11-12_input_health.json",
+      "at": "2026-11-12T09:24:33-05:00",
+      "commit_msg": "auto: strategy tickets 2026-11-12",
+      "workflow": "Publish strategy tickets",
+      "run_id": "43232712350",
+      "manifest": "research/input_freeze/2026-11-12/manifest.json"
+    },
+    {
+      "path": "data/stock_book/2026-11-12_stock_book.json",
+      "at": "2026-11-12T09:24:33-05:00",
+      "commit_msg": "auto: strategy tickets 2026-11-12",
+      "workflow": "Publish strategy tickets",
+      "run_id": "43232712350",
       "manifest": "research/input_freeze/2026-11-12/manifest.json"
     }
   ]
