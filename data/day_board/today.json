@@ -1,6 +1,6 @@
 {
   "date": "2026-11-12",
-  "generated_at": "2026-11-12T08:03:27.001147-05:00",
+  "generated_at": "2026-11-12T08:03:35.671298-05:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -76,31 +76,6 @@
   },
   "sectors": {},
   "lands": [
-    {
-      "key": "news_actions",
-      "title": "News actions (no LLM)",
-      "date": "2026-11-12",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-11-12T04:43:21.335433-05:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-11-12_actions.json",
-          "ok": true,
-          "reason": "",
-          "size": 62995,
-          "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers"
-        },
-        {
-          "path": "01_daily/news/2026-11-12_actions.md",
-          "ok": true,
-          "reason": "",
-          "size": 12384,
-          "preview": "# News \u2192 Actions v4 (full framework) \u2014 2026-11-12T04:43:15.709055-05:00\nraw=8220 unique_events=5 tickers=78"
-        }
-      ],
-      "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-11-12T04:43:15.709055-05:00\nraw=8220 unique_events=5 tickers=78"
-    },
     {
       "key": "paper",
       "title": "Paper dashboard",
@@ -296,6 +271,157 @@
         }
       ],
       "preview": "1d BUY NBIS, BB, SONO, GMRS \u00b7 SELL DDD, QUBT, LTBR, SOC, UNIT, LWLG, HYLN, FLNC \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-11-12 BUY NBIS, BB, SONO, GMRS \u00b7 SELL DDD, QUBT, LTBR, SOC, UNIT, LWLG, HYLN, FLNC \u00b7 2026-11-12 BUY NBIS, BB, SONO, GMRS \u00b7 SELL DDD, QUBT, LTBR, SOC, UNIT, LWLG, HYLN, FLNC \u00b7 # Stock book \u2014 2026-11-12\n_Generated 2026-11-12T07:58:18.434518-05:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+    },
+    {
+      "key": "live_boards",
+      "title": "Live 1d BUY/SELL strip",
+      "date": "2026-11-12",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-12T08:03:34.624359-05:00",
+      "files": [
+        {
+          "path": "data/day_board/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 15800,
+          "preview": "2026-11-12 BUY NBIS, BB, SONO, GMRS \u00b7 SELL DDD, QUBT, LTBR, SOC, UNIT, LWLG, HYLN, FLNC"
+        },
+        {
+          "path": "data/day_board/latest.json",
+          "ok": true,
+          "reason": "",
+          "size": 1115,
+          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
+        },
+        {
+          "path": "data/day_board/2026-11-12.json",
+          "ok": true,
+          "reason": "",
+          "size": 76531,
+          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href"
+        },
+        {
+          "path": "data/day_board/2026-11-12_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 39414,
+          "preview": "2026-11-12 BUY NBIS, BB, SONO, GMRS \u00b7 SELL DDD, QUBT, LTBR, SOC, UNIT, LWLG, HYLN, FLNC"
+        },
+        {
+          "path": "data/day_board/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 3276383,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/2026-11-12_strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 3276383,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/factor_mine/morning_look/2026-11-12.json",
+          "ok": true,
+          "reason": "",
+          "size": 371899,
+          "preview": "keys: asof_commit, asof_committed_at, cutoff_et, date, n, read_from, rows"
+        },
+        {
+          "path": "data/day_board/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 3635169,
+          "preview": "2026-11-12 BUY NBIS, BB, SONO, GMRS \u00b7 SELL DDD, QUBT, LTBR, SOC, UNIT, LWLG, HYLN, FLNC"
+        },
+        {
+          "path": "data/factor_mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 3276383,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 39414,
+          "preview": "2026-11-12 BUY NBIS, BB, SONO, GMRS \u00b7 SELL DDD, QUBT, LTBR, SOC, UNIT, LWLG, HYLN, FLNC"
+        },
+        {
+          "path": "dashboard/factor-mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 3276383,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 3276383,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 3635169,
+          "preview": "2026-11-12 BUY NBIS, BB, SONO, GMRS \u00b7 SELL DDD, QUBT, LTBR, SOC, UNIT, LWLG, HYLN, FLNC"
+        },
+        {
+          "path": "data/day_board/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 1791,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        },
+        {
+          "path": "dashboard/factor-mine/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 1791,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        },
+        {
+          "path": "data/day_board/today_strategies.after-freeze-1.json",
+          "ok": true,
+          "reason": "",
+          "size": 281364,
+          "preview": "2026-11-04 BUY CDNA, BLFS, VEEV, ILMN, PRCH, LAUR, CNK, CHEF \u00b7 SELL NEOV, BIDU, ROIV, BAK, PAL, GFL, VNET, NOK"
+        },
+        {
+          "path": "data/day_board/today_strategies.after-freeze-2.json",
+          "ok": true,
+          "reason": "",
+          "size": 1165723,
+          "preview": "2026-11-04 BUY CDNA, BLFS, VEEV, ILMN, PRCH, LAUR, CNK, TRU \u00b7 SELL NEOV, BIDU, ROIV, BAK, GFL, PAL, VNET, NFLX"
+        },
+        {
+          "path": "data/day_board/today_strategies.after-freeze-3.json",
+          "ok": true,
+          "reason": "",
+          "size": 885881,
+          "preview": "2026-11-05 BUY XYZ, CDW, KD, JKHY, APPN, VRSN, DBX, MSFT \u00b7 SELL ENVX, AMKR, FCEL, METC, AMPX, EAF, HYLN, RGTI"
+        },
+        {
+          "path": "data/day_board/today_strategies.after-freeze-4.json",
+          "ok": true,
+          "reason": "",
+          "size": 1462227,
+          "preview": "2026-11-10 BUY MGNI, TMDX, ETON, WRBY, ADPT, RBLX, SG, SEZL \u00b7 SELL XPRO, KOS, ACDC, BTU, VET, AESI, IEP, SOC"
+        },
+        {
+          "path": "data/day_board/today_strategies.after-freeze-5.json",
+          "ok": true,
+          "reason": "",
+          "size": 1410192,
+          "preview": "2026-11-11 BUY HNST, HLF, CLX, PRCH, PFGC, TTD, GCT, ZETA \u00b7 SELL GTM, VSAT, ZS, ENPH, EXFY, ASTS, ECX, CGC"
+        }
+      ],
+      "preview": "2026-11-12 BUY NBIS, BB, SONO, GMRS \u00b7 SELL DDD, QUBT, LTBR, SOC, UNIT, LWLG, HYLN, FLNC \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href \u00b7 2026-11-12 BUY NBIS, BB, SONO, GMRS \u00b7 SELL DDD, QUBT, LTBR, SOC, UNIT, LWLG, HYLN, FLNC \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: asof_commit, asof_committed_at, cutoff_et, date, n, read_from, rows \u00b7 2026-11-12 BUY NBIS, BB, SONO, GMRS \u00b7 SELL DDD, QUBT, LTBR, SOC, UNIT, LWLG, HYLN, FLNC \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-11-12 BUY NBIS, BB, SONO, GMRS \u00b7 SELL DDD, QUBT, LTBR, SOC, UNIT, LWLG, HYLN, FLNC \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, error"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
