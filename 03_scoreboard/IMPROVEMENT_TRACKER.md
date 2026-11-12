@@ -1,8 +1,8 @@
-# Improvement tracker — 2026-11-11T21:41:25-05:00
+# Improvement tracker — 2026-11-12T17:16:10-05:00
 
 Rolling direction/magnitude hit of the *shipped* prediction vs three naive baselines computed on the same graded runs (always up, always down, same direction as the previous graded session of that topic). `edge` = engine direction hit minus the best baseline over the same window. Sessions are dated by the predicted session; sectors are pooled (11 per day).
 
-## General market (SPX) — 60 graded runs over 60 sessions
+## General market (SPX) — 61 graded runs over 61 sessions
 
 **Read:** improving; beating best baseline by +20% (last 10 sessions)
 
@@ -10,9 +10,9 @@ Rolling direction/magnitude hit of the *shipped* prediction vs three naive basel
 
 | Era | n | engine dir | engine mag | always up | always down | same as yesterday | edge vs best baseline |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| all graded | 60 | **57%** | 53% | 47% | 47% | 46% | **+10%** |
+| all graded | 61 | **57%** | 54% | 48% | 46% | 45% | **+10%** |
 | legacy engine era | 28 | **57%** | 46% | 46% | 50% | 48% | **+7%** |
-| v2 engine live (since 2026-09-14) | 32 | **56%** | 59% | 47% | 44% | 44% | **+9%** |
+| v2 engine live (since 2026-09-14) | 33 | **58%** | 61% | 48% | 42% | 42% | **+9%** |
 
 Walk-forward replay estimate for v2 on the same history: **71%** direction / 57% magnitude (n=28, `REPLAY_HARNESS.md` 2026-09-12). The live v2 curve above should converge toward this as sessions accumulate; if it sits well below it for 20+ sessions, the anchor inputs or the LLM components changed.
 
@@ -52,12 +52,12 @@ Walk-forward replay estimate for v2 on the same history: **71%** direction / 57%
 | 30 | 2026-11-05 | general | 57% | 60% |
 | 31 | 2026-11-09 | general | 58% | 58% |
 | 32 | 2026-11-10 | general | 56% | 59% |
+| 33 | 2026-11-11 | general | 58% | 61% |
 
 ### Session curve (last 30 sessions)
 
 | Session | engine | n | session dir | dir (10) | mag (10) | up (10) | down (10) | yest (10) | edge (10) | dir (20) | edge (20) |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| 2026-09-18 | v2 | 1 | 100% | **70%** | 60% | 30% | 70% | 60% | +0% | 50% | -10% |
 | 2026-09-21 | v2 | 1 | 100% | **80%** | 70% | 40% | 60% | 70% | +10% | 55% | +0% |
 | 2026-09-22 | v2 | 1 | 0% | **70%** | 60% | 40% | 50% | 60% | +10% | 50% | +0% |
 | 2026-09-23 | v2 | 1 | 0% | **60%** | 60% | 40% | 50% | 50% | +10% | 50% | -5% |
@@ -87,6 +87,7 @@ Walk-forward replay estimate for v2 on the same history: **71%** direction / 57%
 | 2026-11-05 | v2 | 1 | 100% | **70%** | 70% | 50% | 50% | 50% | +20% | 60% | +5% |
 | 2026-11-09 | v2 | 1 | 100% | **70%** | 60% | 60% | 40% | 50% | +10% | 65% | +10% |
 | 2026-11-10 | v2 | 1 | 0% | **70%** | 60% | 50% | 50% | 50% | +20% | 60% | +10% |
+| 2026-11-11 | v2 | 1 | 100% | **70%** | 60% | 50% | 50% | 40% | +20% | 65% | +15% |
 
 ## Sectors (11 ETFs pooled) — 336 graded runs over 34 sessions
 

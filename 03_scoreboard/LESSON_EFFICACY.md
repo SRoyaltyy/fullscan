@@ -1,10 +1,10 @@
 # Lesson efficacy — did promoted lessons change outcomes?
 
-_Generated 2026-11-11T21:41:19.931201-05:00_ · window: 7 graded runs each side of activation · deltas within ±5pp count as flat.
+_Generated 2026-11-12T17:16:07.300977-05:00_ · window: 7 graded runs each side of activation · deltas within ±5pp count as flat.
 
 This is correlation, not proof — but a lesson whose topic got WORSE after promotion has no evidence of working and is a retirement candidate for the monthly distill.
 
-**Active lessons: 223 · judged (enough data both sides): 178 · improved: 67 · flat: 30 · worse: 81 · mean delta: -0.022**
+**Active lessons: 224 · judged (enough data both sides): 178 · improved: 67 · flat: 30 · worse: 81 · mean delta: -0.022**
 
 ## Retirement candidates (topic got worse after activation)
 
@@ -219,7 +219,7 @@ This is correlation, not proof — but a lesson whose topic got WORSE after prom
 | `an-industrials-down-call-is-made-after-a-sharp-p` | sector:Industrials | 2026-08-27 | 14% (n=7) | 43% (n=7) | +29% | improved |
 | `basic-materials-xlb-has-s0-and-s1-net-zero-no-fr` | sector:Basic Materials | 2026-08-28 | 57% (n=7) | 57% (n=7) | +0% | flat |
 | `basic-materials-xlb-is-predicted-up-from-a-a-bro` | sector:Basic Materials | 2026-08-27 | 71% (n=7) | 43% (n=7) | -28% | WORSE |
-| `before-the-open-a-fresh-same-morning-mega-cap-ai` | general | 2026-11-05 | 71% (n=7) | 50% (n=2) | — | insufficient |
+| `before-the-open-a-fresh-same-morning-mega-cap-ai` | general | 2026-11-05 | 71% (n=7) | 67% (n=3) | — | insufficient |
 | `before-the-open-channel-1-es-nq-is-locked-from-a` | — | 2026-10-05 | — | — | — | not market-graded |
 | `bond-proxy-utilities-with-s0-0-on-a-two-sided-sc` | sector:Utilities | 2026-08-28 | 14% (n=7) | 43% (n=7) | +29% | improved |
 | `consumer-cyclical-xly-is-called-down-mild-from-m` | sector:Consumer Cyclical | 2026-08-13 | 67% (n=3) | 57% (n=7) | — | insufficient |
@@ -246,6 +246,7 @@ This is correlation, not proof — but a lesson whose topic got WORSE after prom
 | `mega-cap-earnings-over-macro-drag.md` | general | 2026-07-31 | — | 71% (n=7) | — | insufficient |
 | `missed-1w-movers-show-s-news-0-despite-a-catalog` | — | 2026-09-01 | — | — | — | not market-graded |
 | `mixed-catalyst-session-positive-geopolitical-de-` | general | 2026-08-13 | 57% (n=7) | 29% (n=7) | -28% | WORSE |
+| `n-a-hit-day-no-miss-to-correct.md` | general | 2026-11-12 | 57% (n=7) | — | — | insufficient |
 | `no-corrective-trigger-full-hit-on-both-axes-unde` | general | 2026-08-13 | 57% (n=7) | 29% (n=7) | -28% | WORSE |
 | `no-error-full-direction-magnitude-hit-no-correct` | general | 2026-08-13 | 57% (n=7) | 29% (n=7) | -28% | WORSE |
 | `no-new-lesson-needed-confirmed-pattern-an-energy` | sector:Energy | 2026-08-14 | 50% (n=4) | 43% (n=7) | -7% | WORSE |
@@ -322,7 +323,7 @@ This is correlation, not proof — but a lesson whose topic got WORSE after prom
 
 | Topic | prev 10 | last 10 |
 |-------|---------|---------|
-| general | 50% (n=10) | 70% (n=10) |
+| general | 60% (n=10) | 70% (n=10) |
 | sector:Basic Materials | 30% (n=10) | 30% (n=10) |
 | sector:Communication Services | 30% (n=10) | 10% (n=10) |
 | sector:Consumer Cyclical | 40% (n=10) | 30% (n=10) |

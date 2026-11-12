@@ -1,6 +1,6 @@
 # HIT Board — general + sectors (all dates)
 
-Generated: **2026-11-11T21:41:13.820336-05:00**
+Generated: **2026-11-12T17:16:03.376439-05:00**
 
 Source: `03_scoreboard/scoreboard.json`.
 
@@ -10,14 +10,14 @@ Source: `03_scoreboard/scoreboard.json`.
 
 | Book | Direction HIT% | hits / graded | Mag HIT% | n mag |
 |------|----------------|---------------|----------|-------|
-| **General (SPX-style)** | **56.7%** | 34/60 | 53.3% | 60 |
+| **General (SPX-style)** | **57.4%** | 35/61 | 54.1% | 61 |
 | **All sector calls** | **43.2%** | 145/336 | 35.7% | 336 |
 
 ### Pipeline blanks (general) — excluded from HIT%
 
 - No `predicted_direction`: **2026-08-02, 2026-08-08, 2026-08-09, 2026-08-15, 2026-08-16, 2026-08-22, 2026-08-25, 2026-08-27, 2026-08-29, 2026-08-30, 2026-09-30, 2026-10-06, 2026-10-07, 2026-10-12, 2026-10-15, 2026-11-06** (n=16)
 - Of those, legacy scoreboard still marked direction_hit=false: **2026-08-02, 2026-08-08, 2026-08-09** — ops failure, not model error
-- If blanks were counted as MISS (old method): **54.0%** (34/63)
+- If blanks were counted as MISS (old method): **54.7%** (35/64)
 
 ## General market — by date
 
@@ -103,7 +103,8 @@ Source: `03_scoreboard/scoreboard.json`.
 | 2026-11-06 | — | — | — | 0.31 | up | NO_PRED | NO_PRED |
 | 2026-11-09 | up | notable | 9.449 | 2.35 | up | HIT | MISS |
 | 2026-11-10 | up | mild | 6.883 | -0.38 | down | MISS | HIT |
-| 2026-11-11 | up | notable | 12.369 | — | — | — | — |
+| 2026-11-11 | up | notable | 12.369 | 1.31 | up | HIT | HIT |
+| 2026-11-12 | down | mild | -7.158 | — | — | — | — |
 
 ## Sectors — HIT% by date (model calls only)
 
@@ -190,6 +191,7 @@ Source: `03_scoreboard/scoreboard.json`.
 | 2026-11-09 | 0 | **—** | 0/0 | — |
 | 2026-11-10 | 11 | **—** | 0/0 | — |
 | 2026-11-11 | 0 | **—** | 0/0 | — |
+| 2026-11-12 | 0 | **—** | 0/0 | — |
 
 ## Sectors — HIT% by sector (across dates)
 
@@ -211,19 +213,19 @@ Source: `03_scoreboard/scoreboard.json`.
 
 HIT / MISS / NO_PRED / — . Actual % when graded.
 
-| Sector | 2026-10-29 | 2026-10-30 | 2026-11-02 | 2026-11-03 | 2026-11-04 | 2026-11-05 | 2026-11-06 | 2026-11-09 | 2026-11-10 | 2026-11-11 |
+| Sector | 2026-10-30 | 2026-11-02 | 2026-11-03 | 2026-11-04 | 2026-11-05 | 2026-11-06 | 2026-11-09 | 2026-11-10 | 2026-11-11 | 2026-11-12 |
 |--------|------|------|------|------|------|------|------|------|------|------|
-| Basic Materials | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | up | NO_PRED |
-| Communication Services | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | up | NO_PRED |
-| Consumer Cyclical | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | up | NO_PRED |
-| Consumer Defensive | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | down | NO_PRED |
-| Energy | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | down | NO_PRED |
-| Financial | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | up | NO_PRED |
-| Healthcare | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | up | NO_PRED |
-| Industrials | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | up | NO_PRED |
-| Real Estate | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | up | NO_PRED |
-| Technology | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | down | NO_PRED |
-| Utilities | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | up | NO_PRED |
+| Basic Materials | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | up | NO_PRED | NO_PRED |
+| Communication Services | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | up | NO_PRED | NO_PRED |
+| Consumer Cyclical | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | up | NO_PRED | NO_PRED |
+| Consumer Defensive | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | down | NO_PRED | NO_PRED |
+| Energy | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | down | NO_PRED | NO_PRED |
+| Financial | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | up | NO_PRED | NO_PRED |
+| Healthcare | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | up | NO_PRED | NO_PRED |
+| Industrials | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | up | NO_PRED | NO_PRED |
+| Real Estate | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | up | NO_PRED | NO_PRED |
+| Technology | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | down | NO_PRED | NO_PRED |
+| Utilities | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | NO_PRED | up | NO_PRED | NO_PRED |
 
 ## Files
 

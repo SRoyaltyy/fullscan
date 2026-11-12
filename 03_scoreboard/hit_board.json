@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-11T21:41:13.820336-05:00",
+  "generated_at": "2026-11-12T17:16:03.376439-05:00",
   "dates": [
     "2026-07-31",
     "2026-08-02",
@@ -81,17 +81,18 @@
     "2026-11-06",
     "2026-11-09",
     "2026-11-10",
-    "2026-11-11"
+    "2026-11-11",
+    "2026-11-12"
   ],
   "general": {
     "overall": {
-      "n_graded": 60,
-      "n_predicts": 65,
-      "dir_hits": 34,
-      "dir_hit_pct": 56.666666666666664,
-      "mag_hits": 32,
-      "mag_n": 60,
-      "mag_hit_pct": 53.333333333333336,
+      "n_graded": 61,
+      "n_predicts": 66,
+      "dir_hits": 35,
+      "dir_hit_pct": 57.377049180327866,
+      "mag_hits": 33,
+      "mag_n": 61,
+      "mag_hit_pct": 54.09836065573771,
       "n_pipeline_blank": 16,
       "pipeline_blank_dates": [
         "2026-08-02",
@@ -119,13 +120,13 @@
       ]
     },
     "legacy_all_graded": {
-      "n_graded": 63,
-      "n_predicts": 65,
-      "dir_hits": 34,
-      "dir_hit_pct": 53.96825396825397,
-      "mag_hits": 32,
-      "mag_n": 63,
-      "mag_hit_pct": 50.79365079365079,
+      "n_graded": 64,
+      "n_predicts": 66,
+      "dir_hits": 35,
+      "dir_hit_pct": 54.6875,
+      "mag_hits": 33,
+      "mag_n": 64,
+      "mag_hit_pct": 51.5625,
       "n_pipeline_blank": 16,
       "pipeline_blank_dates": [
         "2026-08-02",
@@ -1039,6 +1040,17 @@
         "predicted_direction": "up",
         "predicted_magnitude_band": "notable",
         "total_score": 12.369,
+        "actual_pct_change": 1.31,
+        "actual_direction": "up",
+        "direction_hit": true,
+        "magnitude_hit": true
+      },
+      {
+        "date": "2026-11-12",
+        "has_predict": true,
+        "predicted_direction": "down",
+        "predicted_magnitude_band": "mild",
+        "total_score": -7.158,
         "actual_pct_change": null,
         "actual_direction": null,
         "direction_hit": null,
@@ -2271,6 +2283,21 @@
       },
       {
         "date": "2026-11-11",
+        "n_graded": 0,
+        "n_predicts": 0,
+        "dir_hits": 0,
+        "dir_hit_pct": null,
+        "mag_hits": 0,
+        "mag_n": 0,
+        "mag_hit_pct": null,
+        "n_pipeline_blank": 0,
+        "pipeline_blank_dates": [],
+        "n_auto_miss_no_predict": 0,
+        "auto_miss_dates": [],
+        "n_sectors": 0
+      },
+      {
+        "date": "2026-11-12",
         "n_graded": 0,
         "n_predicts": 0,
         "dir_hits": 0,
@@ -7930,6 +7957,74 @@
         }
       },
       "2026-11-11": {
+        "Basic Materials": {
+          "dir": null,
+          "hit": null,
+          "pct": null,
+          "has_predict": false
+        },
+        "Communication Services": {
+          "dir": null,
+          "hit": null,
+          "pct": null,
+          "has_predict": false
+        },
+        "Consumer Cyclical": {
+          "dir": null,
+          "hit": null,
+          "pct": null,
+          "has_predict": false
+        },
+        "Consumer Defensive": {
+          "dir": null,
+          "hit": null,
+          "pct": null,
+          "has_predict": false
+        },
+        "Energy": {
+          "dir": null,
+          "hit": null,
+          "pct": null,
+          "has_predict": false
+        },
+        "Financial": {
+          "dir": null,
+          "hit": null,
+          "pct": null,
+          "has_predict": false
+        },
+        "Healthcare": {
+          "dir": null,
+          "hit": null,
+          "pct": null,
+          "has_predict": false
+        },
+        "Industrials": {
+          "dir": null,
+          "hit": null,
+          "pct": null,
+          "has_predict": false
+        },
+        "Real Estate": {
+          "dir": null,
+          "hit": null,
+          "pct": null,
+          "has_predict": false
+        },
+        "Technology": {
+          "dir": null,
+          "hit": null,
+          "pct": null,
+          "has_predict": false
+        },
+        "Utilities": {
+          "dir": null,
+          "hit": null,
+          "pct": null,
+          "has_predict": false
+        }
+      },
+      "2026-11-12": {
         "Basic Materials": {
           "dir": null,
           "hit": null,

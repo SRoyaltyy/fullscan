@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-11-11T21:41:19.931201-05:00",
+  "generated_at": "2026-11-12T17:16:07.300977-05:00",
   "window": 7,
   "summary": {
-    "n_active": 223,
+    "n_active": 224,
     "n_judged": 178,
     "improved": 67,
     "flat": 30,
@@ -1961,8 +1961,8 @@
         "n": 7
       },
       "after": {
-        "hit": 0.5,
-        "n": 2
+        "hit": 0.667,
+        "n": 3
       },
       "verdict": "insufficient"
     },
@@ -2349,6 +2349,21 @@
       },
       "delta": -0.285,
       "verdict": "WORSE"
+    },
+    {
+      "lesson": "n-a-hit-day-no-miss-to-correct.md",
+      "topic": "general",
+      "active_since": "2026-11-12",
+      "error_category": "NONE",
+      "before": {
+        "hit": 0.571,
+        "n": 7
+      },
+      "after": {
+        "hit": null,
+        "n": 0
+      },
+      "verdict": "insufficient"
     },
     {
       "lesson": "no-corrective-trigger-full-hit-on-both-axes-under-an-activel.md",
@@ -3390,7 +3405,7 @@
         "n": 10
       },
       "prev10": {
-        "hit": 0.5,
+        "hit": 0.6,
         "n": 10
       }
     },

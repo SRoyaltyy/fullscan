@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-11T21:41:25-05:00",
+ "generated": "2026-11-12T17:16:10-05:00",
  "replay_reference": {
   "general": {
    "n": 28,
@@ -16,16 +16,16 @@
  },
  "scopes": {
   "general": {
-   "n_runs": 60,
-   "n_sessions": 60,
+   "n_runs": 61,
+   "n_sessions": 61,
    "all": {
-    "n": 60,
-    "dir": 0.567,
-    "mag": 0.533,
-    "always_up": 0.467,
-    "always_down": 0.467,
-    "same_as_yesterday": 0.458,
-    "edge_vs_best_baseline": 0.1
+    "n": 61,
+    "dir": 0.574,
+    "mag": 0.541,
+    "always_up": 0.475,
+    "always_down": 0.459,
+    "same_as_yesterday": 0.45,
+    "edge_vs_best_baseline": 0.099
    },
    "legacy_era": {
     "n": 28,
@@ -39,13 +39,13 @@
    "since_v2": {
     "live": true,
     "since": "2026-09-14",
-    "n": 32,
-    "dir": 0.562,
-    "mag": 0.594,
-    "always_up": 0.469,
-    "always_down": 0.438,
-    "same_as_yesterday": 0.438,
-    "edge_vs_best_baseline": 0.093,
+    "n": 33,
+    "dir": 0.576,
+    "mag": 0.606,
+    "always_up": 0.485,
+    "always_down": 0.424,
+    "same_as_yesterday": 0.424,
+    "edge_vs_best_baseline": 0.091,
     "cumulative": [
      {
       "date": "2026-09-14",
@@ -270,33 +270,17 @@
       "n": 32,
       "cum_dir": 0.562,
       "cum_mag": 0.594
+     },
+     {
+      "date": "2026-11-11",
+      "topic": "general",
+      "n": 33,
+      "cum_dir": 0.576,
+      "cum_mag": 0.606
      }
     ]
    },
    "curve": [
-    {
-     "date": "2026-07-31",
-     "n": 1,
-     "engine": "legacy",
-     "session_dir": 0.0,
-     "session_mag": 1.0,
-     "dir_10": 0.0,
-     "mag_10": 1.0,
-     "base_10": {
-      "always_up": 1.0,
-      "always_down": 0.0,
-      "same_as_yesterday": null
-     },
-     "edge_10": -1.0,
-     "dir_20": 0.0,
-     "mag_20": 1.0,
-     "base_20": {
-      "always_up": 1.0,
-      "always_down": 0.0,
-      "same_as_yesterday": null
-     },
-     "edge_20": -1.0
-    },
     {
      "date": "2026-08-03",
      "n": 1,
@@ -1653,6 +1637,29 @@
       "same_as_yesterday": 0.45
      },
      "edge_20": 0.1
+    },
+    {
+     "date": "2026-11-11",
+     "n": 1,
+     "engine": "v2",
+     "session_dir": 1.0,
+     "session_mag": 1.0,
+     "dir_10": 0.7,
+     "mag_10": 0.6,
+     "base_10": {
+      "always_up": 0.5,
+      "always_down": 0.5,
+      "same_as_yesterday": 0.4
+     },
+     "edge_10": 0.2,
+     "dir_20": 0.65,
+     "mag_20": 0.6,
+     "base_20": {
+      "always_up": 0.5,
+      "always_down": 0.45,
+      "same_as_yesterday": 0.4
+     },
+     "edge_20": 0.15
     }
    ],
    "by_sector": {},
