@@ -94,6 +94,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
+          # 2026-11-12: without ref, a queued schedule run checks out its
+          # event SHA, not the main the previous writer just pushed. Run
+          # 43307742129 re-appended the 11-12 bars on 2b0aa70392 after
+          # 43307104372 had stored them (duplicate GEVO/HUMA lines).
+          ref: main
           fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
