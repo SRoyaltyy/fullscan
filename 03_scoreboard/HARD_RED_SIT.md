@@ -32,7 +32,7 @@ Per-sleeve paper counterfactuals on looked names. Live sit stays default. KEEP b
 
 | Sleeve | Side | (A) short-only @ open | (B) dip-scoop X% |
 |---|---|---|---|
-| `flatten_robust` | long | — | CLX miss; PFGC miss; KDP miss; PRCH miss; COTY miss; TTD miss; FG miss; SPNT miss; ACHC miss; ABNB miss; ALGN miss; CGON miss; CLOV miss; EVC miss; FTDR miss; PTLO miss; THM miss |
+| `flatten_robust` | long | — | DVN miss; SLDB miss; IVA miss; NBIS miss; ORCL miss; SONO miss; APPN miss; PCTY miss; HTHT miss; CCK miss; ATEN miss; CLX miss; COTY miss; HNST miss; KMB miss; LINC miss; AKBA miss |
 | `union_h1` | long | — | ADIG miss; CLBT miss; PRCH miss; ASND miss; FRMI miss; MBGL miss; NIQ miss; TK miss |
 | `union_h3` | long | — | ADIG miss; CLBT miss; PRCH miss; ASND miss; FRMI miss; MBGL miss; NIQ miss; TK miss |
 | `union_h5` | long | — | ADIG miss; CLBT miss; PRCH miss; ASND miss; FRMI miss; MBGL miss; NIQ miss; TK miss |
