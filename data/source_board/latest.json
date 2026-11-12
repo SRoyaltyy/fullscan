@@ -1,6 +1,6 @@
 {
- "date": "2026-11-11",
- "generated_at": "2026-11-11T20:13:21.062393+00:00",
+ "date": "2026-11-12",
+ "generated_at": "2026-11-12T08:23:04.962060+00:00",
  "catalog": {
   "generated_at": "2026-11-07T18:03:52.345238+00:00",
   "channels": 365,
@@ -34,62 +34,53 @@
   }
  },
  "collect": {
-  "generated_at": "2026-11-11T20:12:59.574202+00:00",
+  "generated_at": "2026-11-12T08:22:44.765863+00:00",
   "enabled_sources": 117,
-  "sources_ok": 117,
-  "sources_failed": 0,
+  "sources_ok": 116,
+  "sources_failed": 1,
   "coverage_status": "degraded",
   "counts": {
-   "observed": 1902,
-   "old": 1076,
-   "future": 10,
-   "undated": 305,
-   "new": 78,
-   "duplicates": 738
+   "observed": 1888,
+   "old": 1034,
+   "future": 0,
+   "undated": 316,
+   "new": 167,
+   "duplicates": 687
   },
-  "current_dated_documents": 635
+  "current_dated_documents": 683
  },
  "new_today": {
-  "count": 78,
+  "count": 167,
   "by_source": {
-   "uk-govuk-decision": 28,
-   "us-doj-b3d27e1dc3": 12,
-   "eu-commission-07d4f58ccf": 9,
-   "uk-govuk-regulation": 6,
-   "hk-hkma-public-press": 3,
-   "nz-rbnz-gnews": 3,
-   "in-rbi-cc71120b98": 3,
-   "de-bundesbank-027ac4024f": 3,
-   "us-govinfo-bills": 2,
-   "eu-council-9d9e9444da": 2,
-   "de-bundesbank-617511c682": 2,
-   "us-doj-e05071794d": 1,
-   "eu-court-1433471e58": 1,
-   "in-rbi-738b09bded": 1,
-   "jp-jftc-gnews": 1,
-   "io-wto-497f28e20d": 1
+   "us-federal-register": 124,
+   "us-govinfo-bills": 14,
+   "io-bis-140216a5b6": 12,
+   "jp-boj-d488538690": 6,
+   "in-rbi-cc71120b98": 5,
+   "nz-rbnz-gnews": 2,
+   "uk-govuk-consultation_outcome": 1,
+   "jp-meti-index": 1,
+   "de-bundesbank-617511c682": 1,
+   "de-bundesbank-fe89ad3ac9": 1
   },
   "by_class": {
-   "noise": 2,
-   "high": 7,
-   "routine": 47,
-   "docket": 6,
-   "watch": 16
+   "high": 16,
+   "routine": 136,
+   "watch": 15
   }
  },
  "parsed_today": {
-  "count": 83,
+  "count": 55,
   "by_class": {
-   "high": 4,
-   "noise": 2,
-   "routine": 61,
-   "watch": 17
+   "high": 16,
+   "routine": 30,
+   "watch": 9
   }
  },
- "n_failures": 0,
+ "n_failures": 1,
  "dates": [
-  "2026-11-11"
+  "2026-11-12"
  ],
- "href": "https://raw.githubusercontent.com/SRoyaltyy/fullscan/main/data/source_board/2026-11-11.json",
+ "href": "https://raw.githubusercontent.com/SRoyaltyy/fullscan/main/data/source_board/2026-11-12.json",
  "pages": "https://sroyaltyy.github.io/fullscan/dashboard/source-board/"
 }

@@ -1,6 +1,6 @@
 [
   {
-    "url": "https://www.federalregister.gov/api/v1/documents.json?per_page=1000&order=newest&conditions%5Bpublication_date%5D%5Bgte%5D=2026-11-08&conditions%5Bpublication_date%5D%5Blte%5D=2026-11-11",
+    "url": "https://www.federalregister.gov/api/v1/documents.json?per_page=1000&order=newest&conditions%5Bpublication_date%5D%5Bgte%5D=2026-11-09&conditions%5Bpublication_date%5D%5Blte%5D=2026-11-12",
     "method": "GET",
     "body_bytes": 0,
     "authorization_sent": false
@@ -12,31 +12,25 @@
     "authorization_sent": false
   },
   {
-    "url": "https://www.gov.uk/api/search.json?filter_content_store_document_type=decision&filter_public_timestamp=from%3A2026-11-08T20%3A12%3A59.574202%2B00%3A00%2Cto%3A2026-11-11T20%3A12%3A59.574202%2B00%3A00&count=1000&order=-public_timestamp&start=0",
+    "url": "https://www.gov.uk/api/search.json?filter_content_store_document_type=decision&filter_public_timestamp=from%3A2026-11-09T08%3A22%3A44.765863%2B00%3A00%2Cto%3A2026-11-12T08%3A22%3A44.765863%2B00%3A00&count=1000&order=-public_timestamp&start=0",
     "method": "GET",
     "body_bytes": 0,
     "authorization_sent": false
   },
   {
-    "url": "https://www.gov.uk/api/search.json?filter_content_store_document_type=regulation&filter_public_timestamp=from%3A2026-11-08T20%3A12%3A59.574202%2B00%3A00%2Cto%3A2026-11-11T20%3A12%3A59.574202%2B00%3A00&count=1000&order=-public_timestamp&start=0",
+    "url": "https://www.gov.uk/api/search.json?filter_content_store_document_type=regulation&filter_public_timestamp=from%3A2026-11-09T08%3A22%3A44.765863%2B00%3A00%2Cto%3A2026-11-12T08%3A22%3A44.765863%2B00%3A00&count=1000&order=-public_timestamp&start=0",
     "method": "GET",
     "body_bytes": 0,
     "authorization_sent": false
   },
   {
-    "url": "https://www.gov.uk/api/search.json?filter_content_store_document_type=drug_safety_update&filter_public_timestamp=from%3A2026-11-08T20%3A12%3A59.574202%2B00%3A00%2Cto%3A2026-11-11T20%3A12%3A59.574202%2B00%3A00&count=1000&order=-public_timestamp&start=0",
+    "url": "https://www.gov.uk/api/search.json?filter_content_store_document_type=product_safety_alert_report_recall&filter_public_timestamp=from%3A2026-11-09T08%3A22%3A44.765863%2B00%3A00%2Cto%3A2026-11-12T08%3A22%3A44.765863%2B00%3A00&count=1000&order=-public_timestamp&start=0",
     "method": "GET",
     "body_bytes": 0,
     "authorization_sent": false
   },
   {
-    "url": "https://www.gov.uk/api/search.json?filter_content_store_document_type=product_safety_alert_report_recall&filter_public_timestamp=from%3A2026-11-08T20%3A12%3A59.574202%2B00%3A00%2Cto%3A2026-11-11T20%3A12%3A59.574202%2B00%3A00&count=1000&order=-public_timestamp&start=0",
-    "method": "GET",
-    "body_bytes": 0,
-    "authorization_sent": false
-  },
-  {
-    "url": "https://www.gov.uk/api/search.json?filter_content_store_document_type=international_treaty&filter_public_timestamp=from%3A2026-11-08T20%3A12%3A59.574202%2B00%3A00%2Cto%3A2026-11-11T20%3A12%3A59.574202%2B00%3A00&count=1000&order=-public_timestamp&start=0",
+    "url": "https://www.gov.uk/api/search.json?filter_content_store_document_type=international_treaty&filter_public_timestamp=from%3A2026-11-09T08%3A22%3A44.765863%2B00%3A00%2Cto%3A2026-11-12T08%3A22%3A44.765863%2B00%3A00&count=1000&order=-public_timestamp&start=0",
     "method": "GET",
     "body_bytes": 0,
     "authorization_sent": false
@@ -48,25 +42,25 @@
     "authorization_sent": false
   },
   {
-    "url": "https://www.gov.uk/api/search.json?filter_content_store_document_type=medical_safety_alert&filter_public_timestamp=from%3A2026-11-08T20%3A12%3A59.574202%2B00%3A00%2Cto%3A2026-11-11T20%3A12%3A59.574202%2B00%3A00&count=1000&order=-public_timestamp&start=0",
-    "method": "GET",
-    "body_bytes": 0,
-    "authorization_sent": false
-  },
-  {
     "url": "https://www.govinfo.gov/rss/bills-enr.xml",
     "method": "GET",
     "body_bytes": 0,
     "authorization_sent": false
   },
   {
-    "url": "https://www.govinfo.gov/rss/plaw.xml",
+    "url": "https://www.gov.uk/api/search.json?filter_content_store_document_type=government_response&filter_public_timestamp=from%3A2026-11-09T08%3A22%3A44.765863%2B00%3A00%2Cto%3A2026-11-12T08%3A22%3A44.765863%2B00%3A00&count=1000&order=-public_timestamp&start=0",
     "method": "GET",
     "body_bytes": 0,
     "authorization_sent": false
   },
   {
-    "url": "https://www.gov.uk/api/search.json?filter_content_store_document_type=statutory_instrument&filter_public_timestamp=from%3A2026-11-08T20%3A12%3A59.574202%2B00%3A00%2Cto%3A2026-11-11T20%3A12%3A59.574202%2B00%3A00&count=1000&order=-public_timestamp&start=0",
+    "url": "https://www.gov.uk/api/search.json?filter_content_store_document_type=medical_safety_alert&filter_public_timestamp=from%3A2026-11-09T08%3A22%3A44.765863%2B00%3A00%2Cto%3A2026-11-12T08%3A22%3A44.765863%2B00%3A00&count=1000&order=-public_timestamp&start=0",
+    "method": "GET",
+    "body_bytes": 0,
+    "authorization_sent": false
+  },
+  {
+    "url": "https://www.govinfo.gov/rss/dcpd.xml",
     "method": "GET",
     "body_bytes": 0,
     "authorization_sent": false
@@ -84,7 +78,7 @@
     "authorization_sent": false
   },
   {
-    "url": "https://www.gov.uk/api/search.json?filter_content_store_document_type=consultation_outcome&filter_public_timestamp=from%3A2026-11-08T20%3A12%3A59.574202%2B00%3A00%2Cto%3A2026-11-11T20%3A12%3A59.574202%2B00%3A00&count=1000&order=-public_timestamp&start=0",
+    "url": "https://www.gov.uk/api/search.json?filter_content_store_document_type=drug_safety_update&filter_public_timestamp=from%3A2026-11-09T08%3A22%3A44.765863%2B00%3A00%2Cto%3A2026-11-12T08%3A22%3A44.765863%2B00%3A00&count=1000&order=-public_timestamp&start=0",
     "method": "GET",
     "body_bytes": 0,
     "authorization_sent": false
@@ -96,7 +90,7 @@
     "authorization_sent": false
   },
   {
-    "url": "https://www.govinfo.gov/rss/dcpd.xml",
+    "url": "https://www.govinfo.gov/rss/plaw.xml",
     "method": "GET",
     "body_bytes": 0,
     "authorization_sent": false
@@ -126,32 +120,6 @@
     "authorization_sent": false
   },
   {
-    "url": "https://www.gov.uk/api/search.json?filter_content_store_document_type=government_response&filter_public_timestamp=from%3A2026-11-08T20%3A12%3A59.574202%2B00%3A00%2Cto%3A2026-11-11T20%3A12%3A59.574202%2B00%3A00&count=1000&order=-public_timestamp&start=0",
-    "method": "GET",
-    "body_bytes": 0,
-    "authorization_sent": false
-  },
-  {
-    "url": "https://www.ftc.gov/feeds/press-release-competition.xml",
-    "method": "GET",
-    "body_bytes": 0,
-    "authorization_sent": false
-  },
-  {
-    "url": "https://www.ftc.gov/feeds/press-release.xml",
-    "method": "GET",
-    "body_bytes": 0,
-    "authorization_sent": false,
-    "via_relay": true
-  },
-  {
-    "url": "https://www.ftc.gov/feeds/press-release-competition.xml",
-    "method": "GET",
-    "body_bytes": 0,
-    "authorization_sent": false,
-    "via_relay": true
-  },
-  {
     "url": "https://www.sec.gov/enforcement-litigation/litigation-releases/rss",
     "method": "GET",
     "body_bytes": 0,
@@ -162,8 +130,33 @@
     "url": "https://www.ftc.gov/feeds/press-release-competition.xml",
     "method": "GET",
     "body_bytes": 0,
+    "authorization_sent": false
+  },
+  {
+    "url": "https://www.gov.uk/api/search.json?filter_content_store_document_type=statutory_instrument&filter_public_timestamp=from%3A2026-11-09T08%3A22%3A44.765863%2B00%3A00%2Cto%3A2026-11-12T08%3A22%3A44.765863%2B00%3A00&count=1000&order=-public_timestamp&start=0",
+    "method": "GET",
+    "body_bytes": 0,
+    "authorization_sent": false
+  },
+  {
+    "url": "https://www.gov.uk/api/search.json?filter_content_store_document_type=consultation_outcome&filter_public_timestamp=from%3A2026-11-09T08%3A22%3A44.765863%2B00%3A00%2Cto%3A2026-11-12T08%3A22%3A44.765863%2B00%3A00&count=1000&order=-public_timestamp&start=0",
+    "method": "GET",
+    "body_bytes": 0,
+    "authorization_sent": false
+  },
+  {
+    "url": "https://www.ftc.gov/feeds/press-release-competition.xml",
+    "method": "GET",
+    "body_bytes": 0,
     "authorization_sent": false,
-    "via_jina": true
+    "via_relay": true
+  },
+  {
+    "url": "https://www.ftc.gov/feeds/press-release.xml",
+    "method": "GET",
+    "body_bytes": 0,
+    "authorization_sent": false,
+    "via_relay": true
   },
   {
     "url": "https://www.justice.gov/news/rss",
@@ -172,13 +165,20 @@
     "authorization_sent": false
   },
   {
+    "url": "https://www.ftc.gov/feeds/press-release.xml",
+    "method": "GET",
+    "body_bytes": 0,
+    "authorization_sent": false,
+    "via_jina": true
+  },
+  {
     "url": "https://www.justice.gov/news/rss?m=1",
     "method": "GET",
     "body_bytes": 0,
     "authorization_sent": false
   },
   {
-    "url": "https://www.ftc.gov/feeds/press-release.xml",
+    "url": "https://www.ftc.gov/feeds/press-release-competition.xml",
     "method": "GET",
     "body_bytes": 0,
     "authorization_sent": false,
@@ -216,13 +216,6 @@
     "via_relay": true
   },
   {
-    "url": "https://www.ftc.gov/feeds/press-release-consumer-protection.xml",
-    "method": "GET",
-    "body_bytes": 0,
-    "authorization_sent": false,
-    "via_jina": true
-  },
-  {
     "url": "https://ustr.gov/about-us/policy-offices/press-office/press-releases",
     "method": "GET",
     "body_bytes": 0,
@@ -233,6 +226,13 @@
     "method": "GET",
     "body_bytes": 0,
     "authorization_sent": false
+  },
+  {
+    "url": "https://www.ftc.gov/feeds/press-release-consumer-protection.xml",
+    "method": "GET",
+    "body_bytes": 0,
+    "authorization_sent": false,
+    "via_jina": true
   },
   {
     "url": "https://www.ftc.gov/feeds/hsr-early-termination-notices.xml",
@@ -248,19 +248,14 @@
     "authorization_sent": false
   },
   {
+    "url": "https://www.ftc.gov/feeds/hsr-early-termination-notices.xml",
+    "method": "GET",
+    "body_bytes": 0,
+    "authorization_sent": false,
+    "via_jina": true
+  },
+  {
     "url": "https://www.federalreserve.gov/feeds/press_monetary.xml",
-    "method": "GET",
-    "body_bytes": 0,
-    "authorization_sent": false
-  },
-  {
-    "url": "https://www.federalreserve.gov/feeds/press_enforcement.xml",
-    "method": "GET",
-    "body_bytes": 0,
-    "authorization_sent": false
-  },
-  {
-    "url": "https://www.federalreserve.gov/feeds/press_bcreg.xml",
     "method": "GET",
     "body_bytes": 0,
     "authorization_sent": false
@@ -279,20 +274,32 @@
     "via_relay": true
   },
   {
-    "url": "https://www.ftc.gov/feeds/hsr-early-termination-notices.xml",
-    "method": "GET",
-    "body_bytes": 0,
-    "authorization_sent": false,
-    "via_jina": true
-  },
-  {
-    "url": "https://www.federalreserve.gov/feeds/press_all.xml",
+    "url": "https://www.federalreserve.gov/feeds/press_enforcement.xml",
     "method": "GET",
     "body_bytes": 0,
     "authorization_sent": false
   },
   {
-    "url": "https://www.federalreserve.gov/feeds/press_orders.xml",
+    "url": "https://www.federalreserve.gov/feeds/press_bcreg.xml",
+    "method": "GET",
+    "body_bytes": 0,
+    "authorization_sent": false
+  },
+  {
+    "url": "https://www.ftc.gov/feeds/oig-reports-press-releases.xml",
+    "method": "GET",
+    "body_bytes": 0,
+    "authorization_sent": false
+  },
+  {
+    "url": "https://www.ftc.gov/feeds/oig-reports-press-releases.xml",
+    "method": "GET",
+    "body_bytes": 0,
+    "authorization_sent": false,
+    "via_relay": true
+  },
+  {
+    "url": "https://www.federalreserve.gov/feeds/press_all.xml",
     "method": "GET",
     "body_bytes": 0,
     "authorization_sent": false
@@ -310,6 +317,12 @@
     "authorization_sent": false
   },
   {
+    "url": "https://www.federalreserve.gov/feeds/boardmeetings.xml",
+    "method": "GET",
+    "body_bytes": 0,
+    "authorization_sent": false
+  },
+  {
     "url": "https://www.ftc.gov/feeds/data-spotlight.xml",
     "method": "GET",
     "body_bytes": 0,
@@ -317,7 +330,7 @@
     "via_jina": true
   },
   {
-    "url": "https://www.federalreserve.gov/feeds/boardmeetings.xml",
+    "url": "https://www.federalreserve.gov/feeds/scoos.xml",
     "method": "GET",
     "body_bytes": 0,
     "authorization_sent": false
@@ -329,7 +342,20 @@
     "authorization_sent": false
   },
   {
+    "url": "https://www.ftc.gov/feeds/oig-reports-press-releases.xml",
+    "method": "GET",
+    "body_bytes": 0,
+    "authorization_sent": false,
+    "via_jina": true
+  },
+  {
     "url": "https://www.fdic.gov/news/press-releases",
+    "method": "GET",
+    "body_bytes": 0,
+    "authorization_sent": false
+  },
+  {
+    "url": "https://www.federalreserve.gov/feeds/press_orders.xml",
     "method": "GET",
     "body_bytes": 0,
     "authorization_sent": false
@@ -338,16 +364,11 @@
     "url": "https://www.federalreserve.gov/feeds/scoos.xml",
     "method": "GET",
     "body_bytes": 0,
-    "authorization_sent": false
+    "authorization_sent": false,
+    "via_relay": true
   },
   {
     "url": "https://www.occ.gov/rss/occ_news.xml",
-    "method": "GET",
-    "body_bytes": 0,
-    "authorization_sent": false
-  },
-  {
-    "url": "https://www.ftc.gov/feeds/oig-reports-press-releases.xml",
     "method": "GET",
     "body_bytes": 0,
     "authorization_sent": false
@@ -357,20 +378,6 @@
     "method": "GET",
     "body_bytes": 0,
     "authorization_sent": false
-  },
-  {
-    "url": "https://www.ftc.gov/feeds/oig-reports-press-releases.xml",
-    "method": "GET",
-    "body_bytes": 0,
-    "authorization_sent": false,
-    "via_relay": true
-  },
-  {
-    "url": "https://www.federalreserve.gov/feeds/scoos.xml",
-    "method": "GET",
-    "body_bytes": 0,
-    "authorization_sent": false,
-    "via_relay": true
   },
   {
     "url": "https://www.fincen.gov/news/press-releases",
@@ -397,10 +404,11 @@
     "authorization_sent": false
   },
   {
-    "url": "https://www.fda.gov/about-fda/contact-fda/stay-informed/rss-feeds/food-safety-recalls/rss.xml",
+    "url": "https://www.occ.gov/rss/occ_news.xml",
     "method": "GET",
     "body_bytes": 0,
-    "authorization_sent": false
+    "authorization_sent": false,
+    "via_relay": true
   },
   {
     "url": "https://www.fda.gov/about-fda/contact-fda/stay-informed/rss-feeds/press-releases/rss.xml",
@@ -415,13 +423,6 @@
     "authorization_sent": false
   },
   {
-    "url": "https://www.occ.gov/rss/occ_news.xml",
-    "method": "GET",
-    "body_bytes": 0,
-    "authorization_sent": false,
-    "via_relay": true
-  },
-  {
     "url": "https://www.fda.gov/about-fda/contact-fda/stay-informed/rss-feeds/biologics/rss.xml",
     "method": "GET",
     "body_bytes": 0,
@@ -434,13 +435,19 @@
     "authorization_sent": false
   },
   {
-    "url": "https://www.fda.gov/about-fda/contact-fda/stay-informed/rss-feeds/fda-outbreaks/rss.xml",
+    "url": "https://www.fda.gov/about-fda/contact-fda/stay-informed/rss-feeds/food-safety-recalls/rss.xml",
     "method": "GET",
     "body_bytes": 0,
     "authorization_sent": false
   },
   {
     "url": "https://www.cpsc.gov/Newsroom/CPSC-RSS-Feed/News-RSS",
+    "method": "GET",
+    "body_bytes": 0,
+    "authorization_sent": false
+  },
+  {
+    "url": "https://www.fda.gov/about-fda/contact-fda/stay-informed/rss-feeds/fda-outbreaks/rss.xml",
     "method": "GET",
     "body_bytes": 0,
     "authorization_sent": false
@@ -464,13 +471,6 @@
     "authorization_sent": false
   },
   {
-    "url": "https://www.ftc.gov/feeds/oig-reports-press-releases.xml",
-    "method": "GET",
-    "body_bytes": 0,
-    "authorization_sent": false,
-    "via_jina": true
-  },
-  {
     "url": "https://www.hhs.gov/rss/news.xml",
     "method": "GET",
     "body_bytes": 0,
@@ -484,17 +484,17 @@
     "authorization_sent": false
   },
   {
+    "url": "https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/docTypes/Notice",
+    "method": "GET",
+    "body_bytes": 0,
+    "authorization_sent": false
+  },
+  {
     "url": "https://www.hhs.gov/rss/news.xml",
     "method": "GET",
     "body_bytes": 0,
     "authorization_sent": false,
     "via_jina": true
-  },
-  {
-    "url": "https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/docTypes/Notice",
-    "method": "GET",
-    "body_bytes": 0,
-    "authorization_sent": false
   },
   {
     "url": "https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/docTypes/RO_NPRM",
@@ -521,27 +521,7 @@
     "authorization_sent": false
   },
   {
-    "url": "https://www.osha.gov/laws-regs/federalregisters.xml",
-    "method": "GET",
-    "body_bytes": 0,
-    "authorization_sent": false,
-    "via_relay": true
-  },
-  {
-    "url": "https://www.osha.gov/laws-regs/federalregisters.xml",
-    "method": "GET",
-    "body_bytes": 0,
-    "authorization_sent": false,
-    "via_jina": true
-  },
-  {
     "url": "https://www.nlrb.gov/rss/rssPressReleases.xml",
-    "method": "GET",
-    "body_bytes": 0,
-    "authorization_sent": false
-  },
-  {
-    "url": "https://www.nlrb.gov/rss/rssWeeklySummaries.xml",
     "method": "GET",
     "body_bytes": 0,
     "authorization_sent": false
@@ -553,7 +533,26 @@
     "authorization_sent": false
   },
   {
+    "url": "https://www.osha.gov/laws-regs/federalregisters.xml",
+    "method": "GET",
+    "body_bytes": 0,
+    "authorization_sent": false,
+    "via_relay": true
+  },
+  {
+    "url": "https://www.nlrb.gov/rss/rssWeeklySummaries.xml",
+    "method": "GET",
+    "body_bytes": 0,
+    "authorization_sent": false
+  },
+  {
     "url": "https://www.fmc.gov/feed/",
+    "method": "GET",
+    "body_bytes": 0,
+    "authorization_sent": false
+  },
+  {
+    "url": "https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/bureaus/EB",
     "method": "GET",
     "body_bytes": 0,
     "authorization_sent": false
@@ -565,13 +564,14 @@
     "authorization_sent": false
   },
   {
-    "url": "https://oal.ca.gov/feed/",
+    "url": "https://www.osha.gov/laws-regs/federalregisters.xml",
     "method": "GET",
     "body_bytes": 0,
-    "authorization_sent": false
+    "authorization_sent": false,
+    "via_jina": true
   },
   {
-    "url": "https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/bureaus/EB",
+    "url": "https://oal.ca.gov/feed/",
     "method": "GET",
     "body_bytes": 0,
     "authorization_sent": false
@@ -649,7 +649,7 @@
     "authorization_sent": false
   },
   {
-    "url": "https://www.bankofcanada.ca/content_type/notices/feed/",
+    "url": "https://www.bankofcanada.ca/content_type/press/feed/",
     "method": "GET",
     "body_bytes": 0,
     "authorization_sent": false
@@ -703,7 +703,7 @@
     "authorization_sent": false
   },
   {
-    "url": "https://www.bankofcanada.ca/content_type/press/feed/",
+    "url": "https://www.bankofcanada.ca/content_type/notices/feed/",
     "method": "GET",
     "body_bytes": 0,
     "authorization_sent": false
@@ -768,6 +768,13 @@
     "via_relay": true
   },
   {
+    "url": "https://rbi.org.in/notifications_rss.xml",
+    "method": "GET",
+    "body_bytes": 0,
+    "authorization_sent": false,
+    "via_relay": true
+  },
+  {
     "url": "https://www.meti.go.jp/english/press/",
     "method": "GET",
     "body_bytes": 0,
@@ -779,13 +786,6 @@
     "method": "GET",
     "body_bytes": 0,
     "authorization_sent": false
-  },
-  {
-    "url": "https://rbi.org.in/notifications_rss.xml",
-    "method": "GET",
-    "body_bytes": 0,
-    "authorization_sent": false,
-    "via_relay": true
   },
   {
     "url": "https://www.meti.go.jp/english/press/",
@@ -825,19 +825,31 @@
     "authorization_sent": false
   },
   {
-    "url": "https://www.bundesbank.de/service/rss/en/633312/feed.rss",
-    "method": "GET",
-    "body_bytes": 0,
-    "authorization_sent": false
-  },
-  {
     "url": "https://www.wto.org/library/rss/latest_news_e.xml",
     "method": "GET",
     "body_bytes": 0,
     "authorization_sent": false
   },
   {
+    "url": "https://www.bis.org/doclist/all_pressrels.rss",
+    "method": "GET",
+    "body_bytes": 0,
+    "authorization_sent": false
+  },
+  {
     "url": "https://www.bundesbank.de/service/rss/en/633296/feed.rss",
+    "method": "GET",
+    "body_bytes": 0,
+    "authorization_sent": false
+  },
+  {
+    "url": "https://www.bis.org/doclist/mgmtspeeches.rss",
+    "method": "GET",
+    "body_bytes": 0,
+    "authorization_sent": false
+  },
+  {
+    "url": "https://www.bundesbank.de/service/rss/en/633312/feed.rss",
     "method": "GET",
     "body_bytes": 0,
     "authorization_sent": false
@@ -857,25 +869,13 @@
     "via_jina": true
   },
   {
-    "url": "https://www.bis.org/doclist/all_pressrels.rss",
-    "method": "GET",
-    "body_bytes": 0,
-    "authorization_sent": false
-  },
-  {
-    "url": "https://www.bis.org/doclist/mgmtspeeches.rss",
+    "url": "https://www.bis.org/doclist/cbspeeches.rss",
     "method": "GET",
     "body_bytes": 0,
     "authorization_sent": false
   },
   {
     "url": "https://www.supremecourt.gov/orders/ordersofthecourt",
-    "method": "GET",
-    "body_bytes": 0,
-    "authorization_sent": false
-  },
-  {
-    "url": "https://www.bis.org/doclist/cbspeeches.rss",
     "method": "GET",
     "body_bytes": 0,
     "authorization_sent": false
