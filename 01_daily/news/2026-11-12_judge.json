@@ -1,12 +1,16 @@
 {
  "risk_tilt": null,
  "macros": [],
- "sector_tilts": {},
- "tickers": {
-  "XLE": 1.5,
-  "XLU": 1.5,
-  "CEG": 1.5
+ "sector_tilts": {
+  "Ai Infra/Semis": "bullish",
+  "Energy": "bearish",
+  "Industrials/Ai Power": "mixed",
+  "Industrials": "bearish"
  },
- "b1_inject": "NEWS_JUDGE: n=8 rescued=2\nMACRO rates: [pol] Hot CPI + Waller half-point debate lift Dec hike odds, 10Y near 5% (regime/1d-1w)\nSECTOR semis/AI: [pol] Nvidia selloff/deepening AI jitters weigh QQQ/SMH (sector_etf:SMH/QQQ)\nSECTOR industrials/energy: [pol] CAT $3.4B Anthropic gas-turbine order supports AI-power capex (sector_etf:XLI/XLE)\nSECTOR utilities: [pol] CEG raises EPS on Amazon/Google nuclear deals supports AI-power IPPs (sector_etf:XLU)\nSECTOR industrials: [pol] Boeing 5% commercial workforce cut signals production slowdown (sector_etf:XLI)\nSECTOR semis: [pol] Chip ETF dip-buying inflows top $44B, partial offset to Nvidia selloff (basket:chip ETFs)\nSECTOR AI-infra: [pol] CoreWeave raises forecast, Wells Fargo upgrades AI-infra view offset chip selloff (basket:AI-infra)\nINTERACTION: Hot CPI/Waller + Nvidia selloff = rates/AI risk-off cluster; AI-power positives offset only partly; do not double-count AI-infra upgrades as all-clear.\nWATCH: Hawkish CPI repricing can dominate single-name positives; semis remain headline-sensitive.",
+ "tickers": {
+  "XLE": -5.5,
+  "NVDA": -1.5
+ },
+ "b1_inject": "NEWS_JUDGE: n=8 rescued=4\nMACRO hot CPI/December hike: [hawkish] October CPI +0.4% m/m revives Dec hike; Goldman adds hike (regime/1d-1w)\nMACRO OPEC+ supply: [bearish energy] OPEC output +26% to highest since war; oil supply normalization (session/1d-1w)\nSECTOR AI infra/semis: [bullish] CoreWeave $9B prepayments/$132.5B backlog revives AI demand; AMD/ARM/AVGO/INTC/KLAC/LRCX/MU (basket)\nSECTOR energy: [bearish] OPEC output near pre-Iran-war rate; XLE/oil beta (sector_etf:XLE)\nSECTOR industrials/AI power: [mixed] Anthropic $3.4B CAT gas turbines positive; JPM cautious AI industrials/GEV PT cut offsets (basket)\nSECTOR industrials: [bearish] Boeing cuts 5% commercial workforce on slower production (single_name:BA)\nSECTOR consumer defensive: [bullish sentiment] Costco $30 special dividend + $4B buyback (single_name:COST)\nINTERACTION: Hot CPI/hike headlines = one rates cluster; CoreWeave AI demand offsets Nvidia scandal, do not double-count; CAT AI power vs JPM cautious industrials mixed\nWATCH: Nvidia board/CEO headline can dominate Nasdaq if resolved intraday; OPEC oversupply may cap energy despite geopolitical floor",
  "date": "2026-11-12"
 }
