@@ -1,15 +1,15 @@
 # Finviz homepage market digest — 2026-11-12
 
-**Generated:** 2026-11-12T04:30:40.189086-05:00 (America/New_York)
+**Generated:** 2026-11-12T04:43:16.594312-05:00 (America/New_York)
 **Source:** `live`
-**Banner:** US futures trade mixed with tech under pressure on Nvidia leadership concerns ahead of key CPI release
+**Banner:** US futures trade mixed with tech under pressure as Nvidia weakness looms over session ahead of CPI and business formation data
 **Prior close:** SPX —  Nasdaq —  Dow —
 **SPX:** —  **Nasdaq:** —  **Dow:** —
 **Oil:** —
-**CPI/Fed:** the CPI report at 8:30 AM ET for the latest inflation reading that could influence Federal Reserve rate expectations and intraday volatility
-**Leaders:** NVDA, BN, NBIS, ASND, TWST, CSCO, AMAT
-**Next session:** housing no · retail no · Fed yes
-**Earnings slate:** —
+**CPI/Fed:** The CPI report is due at 8:30 a
+**Leaders:** NVDA, NBIS, BN, ASND, TWST, DDS, CSCO, AMAT, CBRS
+**Next session:** housing no · retail no · Fed no
+**Earnings slate:** NBIS, BN, ASND, TWST, DDS
 **Geo/grain:** —
 **Clock legal for:** 2026-11-12
 **Clock use:** `same_morning`
@@ -24,21 +24,22 @@ Homepage `$MARKET` prose — **not** `YYYY-MM-DD_finviz_digest.md` (quote-page h
 
 - **Prior close:** SPX — · Nasdaq — · Dow —
 - **Oil:** —
-- **CPI / Fed-odds:** the CPI report at 8:30 AM ET for the latest inflation reading that could influence Federal Reserve rate expectations and intraday volatility
-- **Named leaders:** NVDA, BN, NBIS, ASND, TWST, CSCO, AMAT
-- **Next-session calendar:** housing no · retail no · Fed yes
-  - Investors eye the CPI report at 8:30 AM ET for the latest inflation reading that could influence Federal Reserve rate expectations and intraday volatility
-- **Earnings slate:** —
+- **CPI / Fed-odds:** The CPI report is due at 8:30 a
+- **Named leaders:** NVDA, NBIS, BN, ASND, TWST, DDS, CSCO, AMAT, CBRS
+- **Next-session calendar:** housing no · retail no · Fed no
+  - Business Formation Statistics are scheduled for release at 10:00 a.m. ET in an otherwise light US data calendar.
+- **Earnings slate:** NBIS, BN, ASND, TWST, DDS
 - **Geo / grain:** —
 
 ## Narrative
 
-**US futures trade mixed with tech under pressure on Nvidia leadership concerns ahead of key CPI release**
+**US futures trade mixed with tech under pressure as Nvidia weakness looms over session ahead of CPI and business formation data**
 
-- S&P 500 Futures (@ES) decline 0.40%, Nasdaq 100 Futures (@NQ) drop 0.82%, Dow Jones Futures (@YM) edge higher 0.06%, and Russell 2000 Futures (@ER2) fall 0.09% in pre-market trading
-- Nvidia (NVDA) faces reports that its board is considering ousting CEO Jensen Huang amid an internal review of his personal relationships, weighing on semiconductor and AI-related stocks
-- Investors eye the CPI report at 8:30 AM ET for the latest inflation reading that could influence Federal Reserve rate expectations and intraday volatility
-- Pre-market earnings on the docket include Brookfield (BN), Nebius Group (NBIS), Ascendis Pharma (ASND), and Twist Bioscience (TWST)
-- Post-close earnings focus later in the day centers on Cisco (CSCO) and Applied Materials (AMAT)
-- Asian equity markets posted mixed performance overnight, reflecting the prior session’s AI rebound before sentiment was hit by the Nvidia (NVDA) headlines
-- In the prior US session, equities saw broad gains led by AI-related names, but today’s setup highlights caution in growth sectors ahead of the CPI data and earnings releases
+- Nvidia (NVDA) is down roughly 6% in pre-market trading after reports its board is weighing ousting CEO Jensen Huang amid an internal review and multiple alleged extramarital affairs, including one reportedly involving a suspected Chinese spy.
+- S&P 500 futures (@ES) fall 0.37%, Nasdaq 100 futures (@NQ) drop 0.78%, Dow Jones futures (@YM) edge higher by 0.02%, and Russell 2000 futures (@ER2) dip 0.11% in early trade.
+- Nvidia’s sharp pre-market decline is putting pressure on other semiconductor and AI-related names as markets price roughly even odds of a board announcement today.
+- The CPI report is due at 8:30 a.m. ET, giving investors the latest official reading on US inflation.
+- Business Formation Statistics are scheduled for release at 10:00 a.m. ET in an otherwise light US data calendar.
+- Nebius Group (NBIS), Brookfield (BN), Ascendis Pharma (ASND), Twist Bioscience (TWST), and Dillard’s (DDS) are slated to report earnings before the bell.
+- Cisco Systems (CSCO), Applied Materials (AMAT), and Cerebras Systems (CBRS) are scheduled to release quarterly results after the close.
+- Asian markets finished mixed, with regional chip stocks swinging from the prior day’s AI rebound to renewed pressure following the Nvidia headlines, while European trading is just getting underway.
