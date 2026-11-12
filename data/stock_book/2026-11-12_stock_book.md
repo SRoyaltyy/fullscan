@@ -1,6 +1,6 @@
 # Stock book — 2026-11-12
 
-_Generated 2026-11-12T08:33:40.393062-05:00_
+_Generated 2026-11-12T08:51:39.169367-05:00_
 
 This file is the **human read** of one run. CSV/JSON next to it are the machine files.
 
@@ -53,8 +53,8 @@ Decision domains: **MKT · parent · child · company · setup · flow**. Measur
 | # | Ticker | Domains | Lane | Company / group | Decision |
 |---:|--------|---------|------|-----------------|----------|
 | 1 | **NBIS** | 🔴🔴🟢🟡🟢🟢 | group_leader | direct high digest (stale/undated): CoreWeave raises 2026 revenue outlook to $13 billion–$13.3 billion, a development seen as positive for Nebius Group; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BUY GROUP_LEADER — market=RED; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.48); setup=GREEN; flow=GREEN; lookback=🔵,Cond green |
-| 2 | **BB** | 🔴🔴🟢🟡🟢🟢 | group_leader | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BUY GROUP_LEADER — market=RED; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=Cond green |
-| 3 | **SONO** | 🔴🔴🟢🟡🟢🟢 | group_leader | no direct company event; Consumer Electronics +0.3% d1 / +4.0% 1w / +6.0% vs parent | BUY GROUP_LEADER — market=RED; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=Cond green |
+| 2 | **SONO** | 🔴🔴🟢🟡🟢🟢 | group_leader | no direct company event; Consumer Electronics +0.3% d1 / +4.0% 1w / +6.0% vs parent | BUY GROUP_LEADER — market=RED; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=Cond green |
+| 3 | **BB** | 🔴🔴🟢🟡🟢🟢 | group_leader | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BUY GROUP_LEADER — market=RED; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=Cond green |
 | 4 | **PLTR** | 🔴🔴🟢🟡🟢🟢 | group_leader | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BUY GROUP_LEADER — market=RED; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=Cond green |
 | 5 | **CHKP** | 🔴🔴🟢🟡🟢🟢 | group_leader | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BUY GROUP_LEADER — market=RED; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=Cond green |
 | 6 | **GMRS** | 🔴🟡🟢🟡🟢🟢 | group_leader | no direct company event; Medical Care Facilities +0.6% d1 / +3.1% 1w / +5.6% vs parent | BUY GROUP_LEADER — market=RED; parent=YELLOW; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=Cond green |
@@ -232,7 +232,7 @@ If a row says **missing**, that layer scored 0 today. If it says **found**, it m
 | sector:Technology | 36% | 31 | ×0.50 |
 | sector:Utilities | 40% | 30 | ×0.50 |
 
-## Horizon weights — book_policy.json v19 · renormalized (absent: sector)
+## Horizon weights — book_policy.json v20 · renormalized (absent: sector)
 
 | Horizon | join | sector | general | news | AB | peer | + opportunity |
 |---------|------|--------|---------|------|----|------|----------------|
