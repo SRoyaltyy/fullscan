@@ -1,6 +1,6 @@
 {
   "date": "2026-11-12",
-  "generated_at": "2026-11-12T07:57:04.326055-05:00",
+  "generated_at": "2026-11-12T07:57:11.216922-05:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -26,31 +26,6 @@
   },
   "sectors": {},
   "lands": [
-    {
-      "key": "news_parse",
-      "title": "News parse",
-      "date": "2026-11-12",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-11-12T04:42:59.738848-05:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-11-12_parsed.json",
-          "ok": true,
-          "reason": "",
-          "size": 5963115,
-          "preview": "raw=8221 usable=692 single=495 \u00b7 Saudis Tell OPEC Output Surged 26% to Highest Since War Began - Bloomberg.com | OPEC+ oil output in October nears pre-Iran war rate, led by Saudi Arabia - Reute | Watch Hot Inflation Revives December Rate Hike - Bloomberg.com | Oil production nears pre-Iran war levels, OPEC says | Watch KPMG Chief Economist Predicts Hot PCE Report After CPI - Bloomberg.com"
-        },
-        {
-          "path": "01_daily/news/2026-11-12_parsed.md",
-          "ok": true,
-          "reason": "",
-          "size": 12085,
-          "preview": "# News Parse v2 \u2014 2026-11-12T04:42:53.164423-05:00\nWindow\u224848h | news_mode=on | raw=8221 | usable=692 | single_name=495 | noise_dropped=6896\nusable polarity={'+': 31, '-': 161, 'mixed': 7, 'neutral': 493}"
-        }
-      ],
-      "preview": "raw=8221 usable=692 single=495 \u00b7 Saudis Tell OPEC Output Surged 26% to Highest Since War Began - Bloomberg.com | OPEC+ oil output in October nears pre-Iran war rate, led by Saudi Arabia - Reute | Watch Hot Inflation Revives December Rate Hike - Bloomberg.com | Oil production nears pre-Iran war levels, OPEC says | Watch KPMG Chief Economist Predicts Hot PCE Report After CPI - Bloomberg.com \u00b7 # News Parse v2 \u2014 2026-11-12T04:42:53.164423-05:00\nWindow\u224848h | news_mode=on | raw=8221 | usable=692 | single_name=495 | noise_dropped=6896\nusable polarity={'+': 31, '-': 161, 'mixed': 7, 'neutral': 493}"
-    },
     {
       "key": "finviz_market_digest",
       "title": "Finviz homepage market digest",
@@ -225,6 +200,24 @@
         }
       ],
       "preview": "5894 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 ARGX, ASND, BZ, RGLD, AZN"
+    },
+    {
+      "key": "peer_rs",
+      "title": "Peer RS",
+      "date": "2026-11-12",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-12T07:57:10.211785-05:00",
+      "files": [
+        {
+          "path": "data/peers/2026-11-12_peer_rs.csv",
+          "ok": true,
+          "reason": "",
+          "size": 809823,
+          "preview": "5039 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+        }
+      ],
+      "preview": "5039 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
