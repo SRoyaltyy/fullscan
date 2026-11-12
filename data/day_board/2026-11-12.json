@@ -1,6 +1,6 @@
 {
   "date": "2026-11-12",
-  "generated_at": "2026-11-12T04:32:45.766781-05:00",
+  "generated_at": "2026-11-12T04:41:23.955164-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -183,7 +183,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 2,
+      "n_req_ok": 1,
       "n_req": 9,
       "n_opt_ok": 1,
       "n_opt": 14,
@@ -356,13 +356,11 @@
           "name": "Grok review JSON",
           "path": "01_daily/2026-11-12_grok_review.json",
           "role": "required",
-          "status": "OK",
-          "reason": "ok=False Grok returned an empty review",
-          "size": 308,
-          "said": "ok=False \u00b7 empty_review_reply (review)",
-          "bullets": [
-            "Grok returned an empty review"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "sector_basic_materials",
@@ -983,6 +981,31 @@
         }
       ],
       "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-11-12\nExport `finviz_2026-11-11.csv` \u00b7 11616 names \u00b7 generated 2026-11-12T04:32:45.318650-05:00"
+    },
+    {
+      "key": "finviz_digest",
+      "title": "Finviz digest",
+      "date": "2026-11-12",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-12T04:41:23.500539-05:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-11-12_finviz_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 100024,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        },
+        {
+          "path": "01_daily/news/2026-11-12_finviz_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 11122,
+          "preview": "# Finviz Daily Digest \u2014 2026-11-12\n_Generated 2026-11-12T04:30:30.054307-05:00 \u00b7 export=data/exports/finviz_2026-11-11.csv \u00b7 ticker digests=1200 \u00b7 high-signal=459_"
+        }
+      ],
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-11-12\n_Generated 2026-11-12T04:30:30.054307-05:00 \u00b7 export=data/exports/finviz_2026-11-11.csv \u00b7 ticker digests=1200 \u00b7 high-signal=459_"
     }
   ],
   "href": {
