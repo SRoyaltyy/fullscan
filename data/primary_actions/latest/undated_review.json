@@ -1,8 +1,8 @@
 [
   {
-    "title": "Progress Report on Global South Future-Oriented Co-Creation Project Compiled",
-    "url": "https://www.meti.go.jp/english/press/2026/10/20261019002.html",
-    "native_id": "https://www.meti.go.jp/english/press/2026/10/20261019002.html",
+    "title": "Truck Bed Covers From China Injure U.S. Industry, Says USITC",
+    "url": "https://www.usitc.gov/press_room/news_release/2026/er1112_69497.htm",
+    "native_id": "https://www.usitc.gov/press_room/news_release/2026/er1112_69497.htm",
     "published_at": null,
     "published_raw": null,
     "summary": "",
@@ -11,16 +11,784 @@
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Japan Ministry of Economy Trade and Industry",
-      "jurisdiction": "JP",
-      "family": "trade_and_industry_policy"
+      "issuer": "United States International Trade Commission",
+      "jurisdiction": "US",
+      "family": "trade_and_judicial"
     },
-    "primary_source_id": "jp-meti-index",
-    "n": 9974,
-    "first_seen": "2026-11-12T08:22:44.765863+00:00",
-    "last_seen": "2026-11-12T08:22:44.765863+00:00",
+    "primary_source_id": "us-itc-index",
+    "n": 10032,
+    "first_seen": "2026-11-12T20:50:38.075613+00:00",
+    "last_seen": "2026-11-12T20:50:38.075613+00:00",
     "source_ids": [
-      "jp-meti-index"
+      "us-itc-index"
+    ]
+  },
+  {
+    "title": "USITC Institutes Section 337 Investigation of Certain Spectral Flow Cytometer Systems and Components Thereof",
+    "url": "https://www.usitc.gov/press_room/news_release/2026/er1112_69500.htm",
+    "native_id": "https://www.usitc.gov/press_room/news_release/2026/er1112_69500.htm",
+    "published_at": null,
+    "published_raw": null,
+    "summary": "",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "United States International Trade Commission",
+      "jurisdiction": "US",
+      "family": "trade_and_judicial"
+    },
+    "primary_source_id": "us-itc-index",
+    "n": 10033,
+    "first_seen": "2026-11-12T20:50:38.075613+00:00",
+    "last_seen": "2026-11-12T20:50:38.075613+00:00",
+    "source_ids": [
+      "us-itc-index"
+    ]
+  },
+  {
+    "title": "USITC Makes Determinations In Five-Year (Sunset) Reviews Concerning Welded Line Pipe From South Korea And Turkey",
+    "url": "https://www.usitc.gov/press_room/news_release/2026/er1112_69498.htm",
+    "native_id": "https://www.usitc.gov/press_room/news_release/2026/er1112_69498.htm",
+    "published_at": null,
+    "published_raw": null,
+    "summary": "",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "United States International Trade Commission",
+      "jurisdiction": "US",
+      "family": "trade_and_judicial"
+    },
+    "primary_source_id": "us-itc-index",
+    "n": 10034,
+    "first_seen": "2026-11-12T20:50:38.075613+00:00",
+    "last_seen": "2026-11-12T20:50:38.075613+00:00",
+    "source_ids": [
+      "us-itc-index"
+    ]
+  },
+  {
+    "title": "SHEIN Distribution Corporation Recalls Baby Rattle and Teether Toy Sets Due to Risk of Serious Injury or Death from Choking; Violate Mandatory Small Parts Ban",
+    "url": "https://www.cpsc.gov/Recalls/2027/SHEIN-Distribution-Corporation-Recalls-Baby-Rattle-and-Teether-Toy-Sets-Due-to-Risk-of-Serious-Injury-or-Death-from-Choking-Violate-Mandatory-Small-Parts-Ban",
+    "native_id": "https://www.cpsc.gov/_3c8621aa-2bb8-4e6a-90d8-278c8db2302c",
+    "published_at": null,
+    "published_raw": "November 12, 2026",
+    "summary": "The recalled toy sets violate the small parts ban because they are intended for children under three years old and the purple and orange knobs can detach from the product, posing a deadly choking hazard to young children.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Consumer Product Safety Commission",
+      "jurisdiction": "US",
+      "family": "product_safety"
+    },
+    "primary_source_id": "us-cpsc-99343b5112",
+    "n": 10054,
+    "first_seen": "2026-11-12T20:50:38.075613+00:00",
+    "last_seen": "2026-11-12T20:50:38.075613+00:00",
+    "source_ids": [
+      "us-cpsc-99343b5112"
+    ]
+  },
+  {
+    "title": "QIOMALA Pressure Washers Recalled Due to Serious Risk of Injury or Death from Shock and Electrocution Hazards",
+    "url": "https://www.cpsc.gov/Recalls/2027/QIOMALA-Pressure-Washers-Recalled-Due-to-Serious-Risk-of-Injury-or-Death-from-Shock-and-Electrocution-Hazards",
+    "native_id": "https://www.cpsc.gov/_9f2d2d83-c0d4-4d70-b858-bbd72e1833c1",
+    "published_at": null,
+    "published_raw": "November 12, 2026",
+    "summary": "The recalled pressure washers lack an adequate-length power cord, which can encourage use of an extension cord, posing a serious risk of injury or death from shock and electrocution hazards.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Consumer Product Safety Commission",
+      "jurisdiction": "US",
+      "family": "product_safety"
+    },
+    "primary_source_id": "us-cpsc-99343b5112",
+    "n": 10055,
+    "first_seen": "2026-11-12T20:50:38.075613+00:00",
+    "last_seen": "2026-11-12T20:50:38.075613+00:00",
+    "source_ids": [
+      "us-cpsc-99343b5112"
+    ]
+  },
+  {
+    "title": "Kakgold Recalls 4WD Remote-Controlled Car Toys Due to Risk of Serious Injury or Death from Battery Ingestion; Violate Mandatory Standard for Toys",
+    "url": "https://www.cpsc.gov/Recalls/2027/Kakgold-Recalls-4WD-Remote-Controlled-Car-Toys-Due-to-Risk-of-Serious-Injury-or-Death-from-Battery-Ingestion-Violate-Mandatory-Standard-for-Toys",
+    "native_id": "https://www.cpsc.gov/_21b37c0a-ec76-4c4b-b99a-25ea495b908a",
+    "published_at": null,
+    "published_raw": "November 12, 2026",
+    "summary": "The recalled remote-controlled cars violate the mandatory standard for toys because they contain button cell and lithium-ion batteries in the remote control that can be easily accessed by children, posing a deadly ingestion hazard to children. When button cell or coin batteries are swallowed, the ingested batteries can cause serious injuries, internal chemical burns and death",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Consumer Product Safety Commission",
+      "jurisdiction": "US",
+      "family": "product_safety"
+    },
+    "primary_source_id": "us-cpsc-99343b5112",
+    "n": 10056,
+    "first_seen": "2026-11-12T20:50:38.075613+00:00",
+    "last_seen": "2026-11-12T20:50:38.075613+00:00",
+    "source_ids": [
+      "us-cpsc-99343b5112"
+    ]
+  },
+  {
+    "title": "Huffy Recalls Buzz Bicycles Cerana T2 E-Trikes Due to Risk of Serious Injury from Fall Hazard",
+    "url": "https://www.cpsc.gov/Recalls/2027/Huffy-Recalls-Buzz-Bicycles-Cerana-T2-E-Trikes-Due-to-Risk-of-Serious-Injury-from-Fall-Hazard",
+    "native_id": "https://www.cpsc.gov/_c78be799-d720-430c-bf25-4fce41815f61",
+    "published_at": null,
+    "published_raw": "November 12, 2026",
+    "summary": "The recalled tricycles’ rear wheels can become loose or separate from the rear frame, posing a risk of serious injury from a fall hazard.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Consumer Product Safety Commission",
+      "jurisdiction": "US",
+      "family": "product_safety"
+    },
+    "primary_source_id": "us-cpsc-99343b5112",
+    "n": 10057,
+    "first_seen": "2026-11-12T20:50:38.075613+00:00",
+    "last_seen": "2026-11-12T20:50:38.075613+00:00",
+    "source_ids": [
+      "us-cpsc-99343b5112"
+    ]
+  },
+  {
+    "title": "Cummins Recalls Portable Generators Due to Risk of Serious Injury from Fire and Burn Hazards",
+    "url": "https://www.cpsc.gov/Recalls/2027/Cummins-Recalls-Portable-Generators-Due-to-Risk-of-Serious-Injury-from-Fire-and-Burn-Hazards",
+    "native_id": "https://www.cpsc.gov/_0b7d72df-0b3c-4e0a-a850-58ee394198b2",
+    "published_at": null,
+    "published_raw": "November 12, 2026",
+    "summary": "The valves in the recalled generators were installed incorrectly, preventing fuel vapors from venting properly from the gasoline tank, causing excessive pressure to build up. This pressure can cause fuel to discharge or the fuel cap to eject, posing a risk of serious injury from fire and burn hazards.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Consumer Product Safety Commission",
+      "jurisdiction": "US",
+      "family": "product_safety"
+    },
+    "primary_source_id": "us-cpsc-99343b5112",
+    "n": 10058,
+    "first_seen": "2026-11-12T20:50:38.075613+00:00",
+    "last_seen": "2026-11-12T20:50:38.075613+00:00",
+    "source_ids": [
+      "us-cpsc-99343b5112"
+    ]
+  },
+  {
+    "title": "Boshengya Recalls Rugs Due to Risk of Serious Injury or Death from Fire Hazard; Violate Mandatory Standard for Carpets and Rugs",
+    "url": "https://www.cpsc.gov/Recalls/2027/Boshengya-Recalls-Rugs-Due-to-Risk-of-Serious-Injury-or-Death-from-Fire-Hazard-Violate-Mandatory-Standard-for-Carpets-and-Rugs",
+    "native_id": "https://www.cpsc.gov/_f608f36a-8d9a-4ec8-9c08-45b12676044d",
+    "published_at": null,
+    "published_raw": "November 12, 2026",
+    "summary": "The recalled rugs violate the mandatory standard for the flammability of carpets and rugs , posing a risk of serious injury or death from fire hazard.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Consumer Product Safety Commission",
+      "jurisdiction": "US",
+      "family": "product_safety"
+    },
+    "primary_source_id": "us-cpsc-99343b5112",
+    "n": 10059,
+    "first_seen": "2026-11-12T20:50:38.075613+00:00",
+    "last_seen": "2026-11-12T20:50:38.075613+00:00",
+    "source_ids": [
+      "us-cpsc-99343b5112"
+    ]
+  },
+  {
+    "title": "FCC To Hold Open Commission Meeting Thursday, November 19, 2026",
+    "url": "https://www.fcc.gov/edoc/426778",
+    "native_id": "426778",
+    "published_at": null,
+    "published_raw": "",
+    "summary": "Sunshine Notice",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Federal Communications Commission — News Releases",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
+    },
+    "primary_source_id": "us-fcc-685c5e7dd2",
+    "n": 10061,
+    "first_seen": "2026-11-12T20:50:38.075613+00:00",
+    "last_seen": "2026-11-12T20:50:38.075613+00:00",
+    "source_ids": [
+      "us-fcc-685c5e7dd2"
+    ]
+  },
+  {
+    "title": "Public Safety and Homeland Security Bureau Site Based Licenses Termination Pending Public Notice",
+    "url": "https://www.fcc.gov/edoc/426739",
+    "native_id": "426739",
+    "published_at": null,
+    "published_raw": "",
+    "summary": ".",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Federal Communications Commission — Public Notices",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
+    },
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 10062,
+    "first_seen": "2026-11-12T20:50:38.075613+00:00",
+    "last_seen": "2026-11-12T20:50:38.075613+00:00",
+    "source_ids": [
+      "us-fcc-e95ecda3bb"
+    ]
+  },
+  {
+    "title": "Antenna Structure Registration Service Information - Environmental Action",
+    "url": "https://www.fcc.gov/edoc/426773",
+    "native_id": "426773",
+    "published_at": null,
+    "published_raw": "",
+    "summary": ".",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Federal Communications Commission — Public Notices",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
+    },
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 10063,
+    "first_seen": "2026-11-12T20:50:38.075613+00:00",
+    "last_seen": "2026-11-12T20:50:38.075613+00:00",
+    "source_ids": [
+      "us-fcc-e95ecda3bb"
+    ]
+  },
+  {
+    "title": "Public Safety and Homeland Security Bureau Assignment of License authorization Applications, Transfer of Control of Licensee Applications, De Facto Transfer Lease Applications and Spectrum Manager Lease Notifications, Designated Entity Reportable",
+    "url": "https://www.fcc.gov/edoc/426732",
+    "native_id": "426732",
+    "published_at": null,
+    "published_raw": "",
+    "summary": "Eligibility Event Applications, And Designated Entity Annual Reports Action",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Federal Communications Commission — Public Notices",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
+    },
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 10064,
+    "first_seen": "2026-11-12T20:50:38.075613+00:00",
+    "last_seen": "2026-11-12T20:50:38.075613+00:00",
+    "source_ids": [
+      "us-fcc-e95ecda3bb"
+    ]
+  },
+  {
+    "title": "Public Safety and Homeland Security Bureau Market Based Licenses Termination Pending Public Notice",
+    "url": "https://www.fcc.gov/edoc/426737",
+    "native_id": "426737",
+    "published_at": null,
+    "published_raw": "",
+    "summary": ".",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Federal Communications Commission — Public Notices",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
+    },
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 10065,
+    "first_seen": "2026-11-12T20:50:38.075613+00:00",
+    "last_seen": "2026-11-12T20:50:38.075613+00:00",
+    "source_ids": [
+      "us-fcc-e95ecda3bb"
+    ]
+  },
+  {
+    "title": "Wireless Telecommunications Bureau Market Based Licenses Termination Pending Public Notice",
+    "url": "https://www.fcc.gov/edoc/426734",
+    "native_id": "426734",
+    "published_at": null,
+    "published_raw": "",
+    "summary": ".",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Federal Communications Commission — Public Notices",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
+    },
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 10066,
+    "first_seen": "2026-11-12T20:50:38.075613+00:00",
+    "last_seen": "2026-11-12T20:50:38.075613+00:00",
+    "source_ids": [
+      "us-fcc-e95ecda3bb"
+    ]
+  },
+  {
+    "title": "Public Safety and Homeland Security Bureau Assignment of License Authorization Applications, Transfer of Control of Licensee Applications, and De Facto Transfer Lease Applications, and Designated Entity Reportable Eligibility Event Applications Accepted",
+    "url": "https://www.fcc.gov/edoc/426728",
+    "native_id": "426728",
+    "published_at": null,
+    "published_raw": "",
+    "summary": "For Filing",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Federal Communications Commission — Public Notices",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
+    },
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 10067,
+    "first_seen": "2026-11-12T20:50:38.075613+00:00",
+    "last_seen": "2026-11-12T20:50:38.075613+00:00",
+    "source_ids": [
+      "us-fcc-e95ecda3bb"
+    ]
+  },
+  {
+    "title": "Wireless Telecommunications Bureau Assignment of License Authorization Applications, Transfer of Control of Licensee Applications, and De Facto Transfer Lease Applications, and Designated Entity Reportable Eligibility Event Applications Accepted for",
+    "url": "https://www.fcc.gov/edoc/426725",
+    "native_id": "426725",
+    "published_at": null,
+    "published_raw": "",
+    "summary": "Filing",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Federal Communications Commission — Public Notices",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
+    },
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 10068,
+    "first_seen": "2026-11-12T20:50:38.075613+00:00",
+    "last_seen": "2026-11-12T20:50:38.075613+00:00",
+    "source_ids": [
+      "us-fcc-e95ecda3bb"
+    ]
+  },
+  {
+    "title": "Public Safety and Homeland Security Bureau Market-Based Applications Action",
+    "url": "https://www.fcc.gov/edoc/426661",
+    "native_id": "426661",
+    "published_at": null,
+    "published_raw": "",
+    "summary": ".",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Federal Communications Commission — Public Notices",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
+    },
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 10069,
+    "first_seen": "2026-11-12T20:50:38.075613+00:00",
+    "last_seen": "2026-11-12T20:50:38.075613+00:00",
+    "source_ids": [
+      "us-fcc-e95ecda3bb"
+    ]
+  },
+  {
+    "title": "Pleadings",
+    "url": "https://www.fcc.gov/edoc/426766",
+    "native_id": "426766",
+    "published_at": null,
+    "published_raw": "",
+    "summary": ".",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Federal Communications Commission — Public Notices",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
+    },
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 10070,
+    "first_seen": "2026-11-12T20:50:38.075613+00:00",
+    "last_seen": "2026-11-12T20:50:38.075613+00:00",
+    "source_ids": [
+      "us-fcc-e95ecda3bb"
+    ]
+  },
+  {
+    "title": "Public Safety and Homeland Security Bureau Market-Based Applications Accepted for Filing",
+    "url": "https://www.fcc.gov/edoc/426659",
+    "native_id": "426659",
+    "published_at": null,
+    "published_raw": "",
+    "summary": ".",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Federal Communications Commission — Public Notices",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
+    },
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 10071,
+    "first_seen": "2026-11-12T20:50:38.075613+00:00",
+    "last_seen": "2026-11-12T20:50:38.075613+00:00",
+    "source_ids": [
+      "us-fcc-e95ecda3bb"
+    ]
+  },
+  {
+    "title": "Public Safety and Homeland Security Bureau Site-By-Site Action",
+    "url": "https://www.fcc.gov/edoc/426698",
+    "native_id": "426698",
+    "published_at": null,
+    "published_raw": "",
+    "summary": ".",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Federal Communications Commission — Public Notices",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
+    },
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 10072,
+    "first_seen": "2026-11-12T20:50:38.075613+00:00",
+    "last_seen": "2026-11-12T20:50:38.075613+00:00",
+    "source_ids": [
+      "us-fcc-e95ecda3bb"
+    ]
+  },
+  {
+    "title": "Public Safety and Homeland Security Bureau Site-By-Site Accepted for Filing",
+    "url": "https://www.fcc.gov/edoc/426696",
+    "native_id": "426696",
+    "published_at": null,
+    "published_raw": "",
+    "summary": ".",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Federal Communications Commission — Public Notices",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
+    },
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 10073,
+    "first_seen": "2026-11-12T20:50:38.075613+00:00",
+    "last_seen": "2026-11-12T20:50:38.075613+00:00",
+    "source_ids": [
+      "us-fcc-e95ecda3bb"
+    ]
+  },
+  {
+    "title": "Wireless Telecommunications Bureau Site-By-Site Accepted for Filing",
+    "url": "https://www.fcc.gov/edoc/426697",
+    "native_id": "426697",
+    "published_at": null,
+    "published_raw": "",
+    "summary": ".",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Federal Communications Commission — Public Notices",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
+    },
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 10074,
+    "first_seen": "2026-11-12T20:50:38.075613+00:00",
+    "last_seen": "2026-11-12T20:50:38.075613+00:00",
+    "source_ids": [
+      "us-fcc-e95ecda3bb"
+    ]
+  },
+  {
+    "title": "Actions",
+    "url": "https://www.fcc.gov/edoc/426765",
+    "native_id": "426765",
+    "published_at": null,
+    "published_raw": "",
+    "summary": ".",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Federal Communications Commission — Public Notices",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
+    },
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 10075,
+    "first_seen": "2026-11-12T20:50:38.075613+00:00",
+    "last_seen": "2026-11-12T20:50:38.075613+00:00",
+    "source_ids": [
+      "us-fcc-e95ecda3bb"
+    ]
+  },
+  {
+    "title": "Applications",
+    "url": "https://www.fcc.gov/edoc/426764",
+    "native_id": "426764",
+    "published_at": null,
+    "published_raw": "",
+    "summary": ".",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Federal Communications Commission — Public Notices",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
+    },
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 10076,
+    "first_seen": "2026-11-12T20:50:38.075613+00:00",
+    "last_seen": "2026-11-12T20:50:38.075613+00:00",
+    "source_ids": [
+      "us-fcc-e95ecda3bb"
+    ]
+  },
+  {
+    "title": "FCC Extends Application Deadline for Fall 2027 Honors Program",
+    "url": "https://www.fcc.gov/edoc/426767",
+    "native_id": "426767",
+    "published_at": null,
+    "published_raw": "",
+    "summary": "Applications Must Be Submitted by December 31 Submit Applications via USAJOBS",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Federal Communications Commission — Public Notices",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
+    },
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 10077,
+    "first_seen": "2026-11-12T20:50:38.075613+00:00",
+    "last_seen": "2026-11-12T20:50:38.075613+00:00",
+    "source_ids": [
+      "us-fcc-e95ecda3bb"
+    ]
+  },
+  {
+    "title": "Wireless Telecommunications Bureau Market-Based Applications Accepted for Filing",
+    "url": "https://www.fcc.gov/edoc/426660",
+    "native_id": "426660",
+    "published_at": null,
+    "published_raw": "",
+    "summary": ".",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Federal Communications Commission — Public Notices",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
+    },
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 10078,
+    "first_seen": "2026-11-12T20:50:38.075613+00:00",
+    "last_seen": "2026-11-12T20:50:38.075613+00:00",
+    "source_ids": [
+      "us-fcc-e95ecda3bb"
+    ]
+  },
+  {
+    "title": "Wireless Telecommunications Bureau Assignment of License Authorization Applications, Transfer of Control of Licensee Applications, De Facto Transfer Lease Applications and Spectrum Manager Lease Notifications, Designated Entity Reportable Eligibility",
+    "url": "https://www.fcc.gov/edoc/426730",
+    "native_id": "426730",
+    "published_at": null,
+    "published_raw": "",
+    "summary": "Event Applications, And Designated Entity Annual Reports Action",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Federal Communications Commission — Public Notices",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
+    },
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 10079,
+    "first_seen": "2026-11-12T20:50:38.075613+00:00",
+    "last_seen": "2026-11-12T20:50:38.075613+00:00",
+    "source_ids": [
+      "us-fcc-e95ecda3bb"
+    ]
+  },
+  {
+    "title": "Wireless Telecommunications Bureau Site-By-Site Action",
+    "url": "https://www.fcc.gov/edoc/426699",
+    "native_id": "426699",
+    "published_at": null,
+    "published_raw": "",
+    "summary": ".",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Federal Communications Commission — Public Notices",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
+    },
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 10080,
+    "first_seen": "2026-11-12T20:50:38.075613+00:00",
+    "last_seen": "2026-11-12T20:50:38.075613+00:00",
+    "source_ids": [
+      "us-fcc-e95ecda3bb"
+    ]
+  },
+  {
+    "title": "Wireless Telecommunications Bureau Market-Based Applications Action",
+    "url": "https://www.fcc.gov/edoc/426663",
+    "native_id": "426663",
+    "published_at": null,
+    "published_raw": "",
+    "summary": ".",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Federal Communications Commission — Public Notices",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
+    },
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 10081,
+    "first_seen": "2026-11-12T20:50:38.075613+00:00",
+    "last_seen": "2026-11-12T20:50:38.075613+00:00",
+    "source_ids": [
+      "us-fcc-e95ecda3bb"
+    ]
+  },
+  {
+    "title": "Wireless Telecommunications Bureau Site Based Licenses Termination Pending Public Notice",
+    "url": "https://www.fcc.gov/edoc/426736",
+    "native_id": "426736",
+    "published_at": null,
+    "published_raw": "",
+    "summary": ".",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Federal Communications Commission — Public Notices",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
+    },
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 10082,
+    "first_seen": "2026-11-12T20:50:38.075613+00:00",
+    "last_seen": "2026-11-12T20:50:38.075613+00:00",
+    "source_ids": [
+      "us-fcc-e95ecda3bb"
+    ]
+  },
+  {
+    "title": "FCA proposes greater pension investment flexibility to support long-term value for savers",
+    "url": "https://www.fca.org.uk/news/press-releases/fca-proposes-greater-pension-investment-flexibility-support-long-term-value-savers",
+    "native_id": "177566",
+    "published_at": null,
+    "published_raw": "Thursday, November 12, 2026 - 10:05",
+    "summary": "Workplace pension providers could have greater flexibility to invest for the long term under proposals from the FCA, helping them deliver better outcomes for savers while ensuring savers' interests remain protected. The FCA is consulting on excluding certain performance-linked fees from the charge cap for default funds in workplace pensions it regulates.Performance-linked fees are common in private markets, including private equity, venture capital and private credit. The proposed change would give providers greater flexibility to access a broader range of investments where this could help improve long-term returns and value for savers.The FCA is clear that greater flexibility is not a licence to charge more. Providers should carefully weigh potential returns, risks and costs when making investment decisions, and any higher charges should be justified by the additional value delivered to savers.Alongside the proposed flexibility, the FCA is proposing safeguards covering transparency, fair allocation of fees between savers and scrutiny of how private assets are valued. Providers and Independent Governance Committees would need access to the information necessary to assess whether pe",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Financial Conduct Authority",
+      "jurisdiction": "UK",
+      "family": "financial_enforcement"
+    },
+    "primary_source_id": "uk-fca-7b9977ec8e",
+    "n": 10100,
+    "first_seen": "2026-11-12T20:50:38.075613+00:00",
+    "last_seen": "2026-11-12T20:50:38.075613+00:00",
+    "source_ids": [
+      "uk-fca-7b9977ec8e"
+    ]
+  },
+  {
+    "title": "Miscellaneous Order",
+    "url": "https://www.supremecourt.gov/orders/courtorders/111226zr_3204.pdf",
+    "native_id": "https://www.supremecourt.gov/orders/courtorders/111226zr_3204.pdf",
+    "published_at": null,
+    "published_raw": null,
+    "summary": "",
+    "source_metadata": {
+      "document_type": "court_order",
+      "document_stage": "judicial_order_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Supreme Court orders of the Court",
+      "jurisdiction": "US",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "us-supreme-court-orders-index",
+    "n": 10110,
+    "first_seen": "2026-11-12T20:50:38.075613+00:00",
+    "last_seen": "2026-11-12T20:50:38.075613+00:00",
+    "source_ids": [
+      "us-supreme-court-orders-index"
     ]
   }
 ]
