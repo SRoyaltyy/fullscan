@@ -1,6 +1,6 @@
 {
  "date": "2026-11-12",
- "generated_at": "2026-11-12T16:00:55.267281-05:00",
+ "generated_at": "2026-11-12T16:39:21.046723-05:00",
  "stance_vocabulary": [
   "favorable",
   "neutral",
@@ -17,19 +17,19 @@
   "fed_score": 0.0,
   "dollar_oil_score": 0.5,
   "futures_score": -0.5,
-  "yields": "flat",
+  "yields": "rising",
   "yields_source": "fred_dgs10",
-  "dgs10_delta_1d": 0.02,
-  "dgs10_current": 4.88,
+  "dgs10_delta_1d": 0.1,
+  "dgs10_current": 4.98,
   "dollar": "strong",
   "dollar_source": "dxy",
-  "dxy_pct_1d": 0.26,
-  "vix_ratio": 0.937,
-  "vix_spot": 18.89,
-  "vix_delta_1d": 1.4,
+  "dxy_pct_1d": 0.27,
+  "vix_ratio": 0.932,
+  "vix_spot": 18.7,
+  "vix_delta_1d": 1.21,
   "vix_ratio_source": "vix/vix3m",
   "vix": "calm",
-  "oil_pct_1d": 2.75,
+  "oil_pct_1d": 2.69,
   "oil": "rising",
   "fear_greed": null,
   "fear_greed_label": null,
@@ -320,7 +320,7 @@
    "high": {
     "stance": "hostile",
     "confidence": "medium",
-    "why": "risk-off — leverage amplifies the downside [factors + general]"
+    "why": "yields rising — leverage amplifies the downside [factors + general]"
    },
    "low": {
     "stance": "favorable",
@@ -340,14 +340,14 @@
   },
   "style": {
    "growth": {
-    "stance": "neutral",
-    "confidence": "low",
-    "why": "yields flat/unknown"
+    "stance": "hostile",
+    "confidence": "medium",
+    "why": "yields rising — long-duration growth de-rates [factor: Bond yields]"
    },
    "value": {
-    "stance": "neutral",
-    "confidence": "low",
-    "why": "yields flat/unknown"
+    "stance": "favorable",
+    "confidence": "medium",
+    "why": "rising yields/reflation favors value & cyclicals [factor: Bond yields]"
    },
    "blend": {
     "stance": "neutral",
