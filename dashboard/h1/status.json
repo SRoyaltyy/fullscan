@@ -1,7 +1,5 @@
 {
   "date": "2026-11-12",
-  "latest_skip": null,
-  "pending": "2026-11-12",
-  "phase": "plan",
+  "latest_skip": "sent share lock FOSL 196 at open 9.84 costs 1940.8611999999996 and book cash is 1871.5786505537826; refusing to resize",
   "recipe": "union_hot_n4_h1__w0"
 }
