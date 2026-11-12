@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "generated_at": "2026-11-11T22:29:54.859615-05:00",
+  "generated_at": "2026-11-12T05:15:26.215170-05:00",
   "from_date": "2026-08-13",
   "to_date": "2026-11-11",
   "n_days": 64,
@@ -2297,7 +2297,19 @@
     "GEO",
     "ICL",
     "ITRG",
-    "TTEK"
+    "TTEK",
+    "ALSN",
+    "CHDN",
+    "CTNM",
+    "EHC",
+    "FISN",
+    "FMS",
+    "HUCK",
+    "LYCA",
+    "SBGI",
+    "SUPX",
+    "VRA",
+    "VYLR"
   ],
   "live_sit_untouched": true,
   "backtest": {
