@@ -1,6 +1,6 @@
 {
   "date": "2026-11-12",
-  "generated_at": "2026-11-12T04:42:24.702951-05:00",
+  "generated_at": "2026-11-12T04:42:54.275130-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -181,7 +181,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 1,
+      "n_req_ok": 2,
       "n_req": 9,
       "n_opt_ok": 1,
       "n_opt": 14,
@@ -239,10 +239,10 @@
           "name": "News parse JSON",
           "path": "01_daily/news/2026-11-12_parsed.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "",
+          "size": 5963115,
+          "said": "5963115B on disk",
           "bullets": []
         },
         {
@@ -329,13 +329,13 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7576,
-          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 18 fail",
+          "size": 7575,
+          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 17 fail",
           "bullets": [
             "general_predict:missing",
             "events:missing",
             "news_judge:missing",
-            "news_parse:missing"
+            "news_actions:missing"
           ]
         },
         {
@@ -1169,6 +1169,31 @@
         }
       ],
       "preview": "2611 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 ZM, RSG, MSCI, ABBV, V \u00b7 2611 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 RSG, EOG, LMT, HONA, HII"
+    },
+    {
+      "key": "news_parse",
+      "title": "News parse",
+      "date": "2026-11-12",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-12T04:42:53.599808-05:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-11-12_parsed.json",
+          "ok": true,
+          "reason": "",
+          "size": 5963115,
+          "preview": "raw=8221 usable=692 single=495 \u00b7 Saudis Tell OPEC Output Surged 26% to Highest Since War Began - Bloomberg.com | OPEC+ oil output in October nears pre-Iran war rate, led by Saudi Arabia - Reute | Watch Hot Inflation Revives December Rate Hike - Bloomberg.com | Oil production nears pre-Iran war levels, OPEC says | Watch KPMG Chief Economist Predicts Hot PCE Report After CPI - Bloomberg.com"
+        },
+        {
+          "path": "01_daily/news/2026-11-12_parsed.md",
+          "ok": true,
+          "reason": "",
+          "size": 12085,
+          "preview": "# News Parse v2 \u2014 2026-11-12T04:42:53.164423-05:00\nWindow\u224848h | news_mode=on | raw=8221 | usable=692 | single_name=495 | noise_dropped=6896\nusable polarity={'+': 31, '-': 161, 'mixed': 7, 'neutral': 493}"
+        }
+      ],
+      "preview": "raw=8221 usable=692 single=495 \u00b7 Saudis Tell OPEC Output Surged 26% to Highest Since War Began - Bloomberg.com | OPEC+ oil output in October nears pre-Iran war rate, led by Saudi Arabia - Reute | Watch Hot Inflation Revives December Rate Hike - Bloomberg.com | Oil production nears pre-Iran war levels, OPEC says | Watch KPMG Chief Economist Predicts Hot PCE Report After CPI - Bloomberg.com \u00b7 # News Parse v2 \u2014 2026-11-12T04:42:53.164423-05:00\nWindow\u224848h | news_mode=on | raw=8221 | usable=692 | single_name=495 | noise_dropped=6896\nusable polarity={'+': 31, '-': 161, 'mixed': 7, 'neutral': 493}"
     }
   ],
   "href": {
