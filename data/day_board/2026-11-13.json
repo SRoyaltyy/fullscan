@@ -1,6 +1,6 @@
 {
   "date": "2026-11-13",
-  "generated_at": "2026-11-13T13:38:45.589788-05:00",
+  "generated_at": "2026-11-13T13:38:55.698690-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -1744,6 +1744,24 @@
         }
       ],
       "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -1.16, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': 0.5449999999999999, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.42, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -0.53, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': 4.14, 'dir': 'up', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': 0.96, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': 0.99, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': 3.13, 'dir': 'up', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-11-13\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade. \u00b7 weather sectors 11 \u00b7 Basic Materials={'score': -1.16, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': 0.5449999999999999, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.42, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensi"
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-11-13",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-13T13:38:54.770854-05:00",
+      "files": [
+        {
+          "path": "data/join/2026-11-13_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2235397,
+          "preview": "5897 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 YMM, TDC, TS, AVPT, MPWR"
+        }
+      ],
+      "preview": "5897 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 YMM, TDC, TS, AVPT, MPWR"
     }
   ],
   "href": {
@@ -1781,6 +1799,14 @@
       "path": "data/day_board/2026-11-13.json",
       "at": "2026-11-13T13:38:46-05:00",
       "commit_msg": "auto: land weather [2026-11-13]",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "43482972869",
+      "manifest": "research/input_freeze/2026-11-13/manifest.json"
+    },
+    {
+      "path": "data/day_board/2026-11-13.json",
+      "at": "2026-11-13T13:38:56-05:00",
+      "commit_msg": "auto: land join [2026-11-13]",
       "workflow": "Stock Book ALL (one-shot)",
       "run_id": "43482972869",
       "manifest": "research/input_freeze/2026-11-13/manifest.json"
