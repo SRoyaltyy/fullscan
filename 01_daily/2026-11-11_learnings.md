@@ -1,6 +1,6 @@
 # Learnings report — 2026-11-11
 
-Generated: **2026-11-11T21:41:19.983923-05:00** by `src/learn_cycle.py`.
+Generated: **2026-11-12T20:56:30.215166-05:00** by `src/learn_cycle.py`.
 
 This is the human-readable digest of what the bot **actually learned** this cycle: graded evidence, hypotheses (wins and losses), promoted standing rules, and **how that changes every daily workflow**.
 
@@ -17,8 +17,8 @@ Machine policy file (injected into predicts): `00_grounding/mutable_policy.md`.
 | News hypotheses | 1 |
 | Lessons promoted to active | 0 |
 | Lessons retired (efficacy-gated) | 10 |
-| Active lesson files now | 213 |
-| Engine policy version | 172 |
+| Active lesson files now | 214 |
+| Engine policy version | 174 |
 
 ## 2. Accuracy by topic (evidence this cycle learned from)
 
@@ -42,13 +42,6 @@ Machine policy file (injected into predicts): `00_grounding/mutable_policy.md`.
 Each scope lists recent win and loss hypotheses: the **counterfactual ask**, the **experiment** to run next, and the **policy candidate** (do instead).
 
 ### `general` — 10 wins, 5 losses
-
-#### LOSS — 2026-11-03
-- **When:** [general] Predicted down but went up (pct=0.36, score=-5.632, sector=).
-- **Ask:** Dominant factor family? Regime misread vs sector-specific shock? Shared macro S0 wrong or sector factors S1 wrong?
-- **Experiment:** [general] Require one extra confirming source in the dominant bucket before full weight when score sign matches this fail pattern.
-- **Do instead:** [general] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
-- **Wrong if:** [general] Wrong if this hedge reduces direction accuracy over 10 runs.
 
 #### WIN — 2026-11-04
 - **When:** [general] Predicted up, market/sector went up (pct=1.58, score=10.848, sector=).
@@ -77,6 +70,13 @@ Each scope lists recent win and loss hypotheses: the **counterfactual ask**, the
 - **Experiment:** [general] Require one extra confirming source in the dominant bucket before full weight when score sign matches this fail pattern.
 - **Do instead:** [general] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
 - **Wrong if:** [general] Wrong if this hedge reduces direction accuracy over 10 runs.
+
+#### WIN — 2026-11-11
+- **When:** [general] Predicted up, market/sector went up (pct=1.31, score=12.369, sector=).
+- **Ask:** Could magnitude/conviction have been better? Double-count in factors? Missing confirming source?
+- **Experiment:** [general] On similar setups, test milder bands when |score|<4; log whether lagging tape factors overrode leading ones.
+- **Do instead:** [general] Keep direction; shrink confidence on modest |score| when magnitude historically misses.
+- **Wrong if:** [general] Wrong if milder bands hurt direction accuracy over 10 runs.
 
 ### `news` — 0 wins, 1 losses
 
@@ -518,15 +518,15 @@ Full text lives in `02_lessons/active/`. Summaries also feed `mutable_policy.md`
 These are applied by `compute_scores` / `compute_sector_scores` regardless of what the LLM writes — the part of learning that cannot be ignored.
 
 General (B0–B7 LLM components; multiplier applied by compute_scores):
-- B0_ASIA: n=33 sign-hit=0.55 → ×0.5
-- B0_EUROPE: n=25 sign-hit=0.68 → ×1.25
-- B1_CATALYSTS: n=41 sign-hit=0.71 → ×1.25
-- B2_BONDS: n=42 sign-hit=0.38 → ×0.0
+- B0_ASIA: n=34 sign-hit=0.56 → ×1.0
+- B0_EUROPE: n=26 sign-hit=0.69 → ×1.25
+- B1_CATALYSTS: n=42 sign-hit=0.71 → ×1.25
+- B2_BONDS: n=43 sign-hit=0.37 → ×0.0
 - B3_FEDPATH: n=35 sign-hit=0.46 → ×0.5
 - B4_VIX: n=15 sign-hit=0.47 → ×0.5
 - B5_SENTIMENT: n=24 sign-hit=0.33 → ×0.0
-- B6_FUTURES: n=35 sign-hit=0.77 → ×1.25
-- B7_OIL_DOLLAR: n=50 sign-hit=0.56 → ×1.0
+- B6_FUTURES: n=36 sign-hit=0.78 → ×1.25
+- B7_OIL_DOLLAR: n=51 sign-hit=0.57 → ×1.0
 Sectors (pooled S0–S4; per-sector overrides in engine_policy.json):
 - S0_SHARED_MACRO: n=204 sign-hit=0.58 → ×1.0
 - S1_SECTOR_FACTORS: n=226 sign-hit=0.54 → ×0.5
