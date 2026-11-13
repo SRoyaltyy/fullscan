@@ -2,37 +2,37 @@
 
 Live sleeves still SIT on S≤−3. Search a ticker for every session since 8/13: cameras (+N −N), 09:30 open, close, same-day % and hold-1/3/5 with actual prices.
 
-Generated 2026-11-12T15:48:32.480646-05:00 · 2026-08-13 → 2026-11-11 · live sit **untouched**.
+Generated 2026-11-12T19:32:47.371553-05:00 · 2026-08-13 → 2026-11-12 · live sit **untouched**.
 
 ## Latest morning
 
-- Date **2026-11-11** S=12.369 hard-red=False · 239 investigator cards · 79 long-ok · 16 short-ok
+- Date **2026-11-12** S=-7.158 hard-red=True · 161 investigator cards · 59 long-ok · 48 short-ok
 
 ### Longs weather sat on (top)
 
-- **LINC** idio +27 · +6 −0 · E good · H1 -1.52% H3 None%
-- **FOSL** idio +26 · +8 −0 · E good · H1 -9.52% H3 None%
-- **ALH** idio +26 · +7 −0 · E good · H1 -3.93% H3 None%
-- **ZETA** idio +25 · +6 −0 · E good · H1 3.47% H3 None%
-- **EMBJ** idio +24 · +7 −1 · E good · H1 -3.13% H3 None%
-- **SBH** idio +24 · +7 −0 · E good · H1 -8.51% H3 None%
-- **CECO** idio +23 · +7 −1 · E good · H1 -3.81% H3 None%
-- **LOAR** idio +23 · +7 −1 · E good · H1 -5.44% H3 None%
+- **ATAT** idio +22 · +7 −1 · E good · H1 None% H3 None%
+- **SONO** idio +21 · +6 −1 · E good · H1 None% H3 None%
+- **NBIS** idio +20 · +5 −1 · E good · H1 None% H3 None%
+- **NIQ** idio +19 · +5 −1 · E good · H1 None% H3 None%
+- **PLX** idio +19 · +5 −2 · E good · H1 None% H3 None%
+- **OCTV** idio +18 · +5 −1 · E good · H1 None% H3 None%
+- **EXTR** idio +17 · +5 −2 · E good · H1 None% H3 None%
+- **LSCC** idio +17 · +5 −2 · E good · H1 None% H3 None%
 
 ### Shorts weather sat on (top)
 
-- **AKBA** idio -9 · +3 −5 · H1 2.75%
-- **LDI** idio -7 · +2 −3 · H1 5.65%
-- **NCMI** idio -7 · +2 −4 · H1 -6.56%
-- **STUB** idio -6 · +2 −3 · H1 4.39%
-- **LAND** idio -6 · +3 −4 · H1 6.08%
-- **RC** idio -6 · +3 −4 · H1 8.1%
-- **SOC** idio -6 · +3 −5 · H1 -2.73%
-- **AGRO** idio -5 · +2 −4 · H1 6.23%
+- **BTBT** idio -21 · +0 −8 · H1 None%
+- **JBI** idio -20 · +2 −7 · H1 None%
+- **AMPY** idio -16 · +2 −7 · H1 None%
+- **TE** idio -15 · +1 −7 · H1 None%
+- **GEMI** idio -14 · +0 −6 · H1 None%
+- **XE** idio -14 · +1 −6 · H1 None%
+- **YSS** idio -14 · +1 −7 · H1 None%
+- **GRPN** idio -11 · +2 −4 · H1 None%
 
 ## If we had taken them on hard-red sits (research)
 
-- Hard-red mornings in window: 22
+- Hard-red mornings in window: 23
 - long hold-1: n=176 win=52.3% mean -0.035%
 - long hold-3: n=176 win=52.3% mean -0.33%
 - short hold-1: n=176 win=51.1% mean -0.184%
