@@ -1,6 +1,6 @@
 # Finviz homepage market digest — 2026-11-13
 
-**Generated:** 2026-11-13T04:30:50.473875-05:00 (America/New_York)
+**Generated:** 2026-11-13T04:33:10.878695-05:00 (America/New_York)
 **Source:** `live`
 **Banner:** US equity futures point to a softer open ahead of October PPI, Fed speakers and energy data in a catalyst-light session
 **Prior close:** SPX —  Nasdaq —  Dow —
