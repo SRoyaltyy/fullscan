@@ -1,6 +1,6 @@
 {
  "date": "2026-11-13",
- "generated_at": "2026-11-13T08:02:18.722527+00:00",
+ "generated_at": "2026-11-13T20:30:27.797754+00:00",
  "catalog": {
   "generated_at": "2026-11-07T18:03:52.345238+00:00",
   "channels": 365,
@@ -34,52 +34,71 @@
   }
  },
  "collect": {
-  "generated_at": "2026-11-13T08:01:59.025457+00:00",
+  "generated_at": "2026-11-13T20:30:06.658433+00:00",
   "enabled_sources": 117,
   "sources_ok": 117,
   "sources_failed": 0,
   "coverage_status": "degraded",
   "counts": {
-   "observed": 1958,
-   "old": 1198,
-   "future": 9,
-   "undated": 283,
-   "new": 85,
+   "observed": 2157,
+   "old": 1269,
+   "future": 11,
+   "undated": 326,
+   "new": 211,
    "duplicates": 666
   },
-  "current_dated_documents": 591
+  "current_dated_documents": 630
  },
  "new_today": {
-  "count": 85,
+  "count": 211,
   "by_source": {
-   "us-govinfo-bills": 39,
-   "us-doj-b3d27e1dc3": 15,
-   "us-fincen-index": 15,
-   "in-rbi-cc71120b98": 4,
-   "us-govinfo-bills-enr": 2,
-   "us-doj-e05071794d": 2,
-   "us-white-house-0691096d16": 1,
+   "us-federal-register": 118,
+   "us-doj-b3d27e1dc3": 16,
+   "us-fcc-e95ecda3bb": 10,
+   "eu-commission-07d4f58ccf": 7,
+   "in-rbi-cc71120b98": 7,
+   "uk-govuk-decision": 6,
+   "us-fda-5696b24295": 5,
+   "us-govinfo-crpt": 4,
+   "us-congress-76128ee9ff": 4,
+   "us-doj-e05071794d": 4,
+   "hk-hkma-public-press": 3,
+   "us-fcc-685c5e7dd2": 3,
+   "eu-council-9d9e9444da": 3,
+   "de-bundesbank-027ac4024f": 3,
+   "us-hhs-6f995a5754": 2,
+   "us-dol-99f477805a": 2,
+   "us-sec-8940dd7737": 1,
+   "us-ftc-58b0383166": 1,
+   "us-ftc-df73e297e1": 1,
+   "us-ofac-index": 1,
    "us-itc-index": 1,
-   "us-fed-eea49fa482": 1,
-   "us-fed-8d9ba6faea": 1,
-   "us-nlrb-7c63020d7d": 1,
-   "eu-council-9d9e9444da": 1,
-   "eu-ecb-991c113079": 1,
-   "ch-snb-b0f42db828": 1
+   "us-cftc-fda5c3631d": 1,
+   "us-fda-03f7703006": 1,
+   "us-nlrb-3db5e72bf9": 1,
+   "eu-eba-60bdc59843": 1,
+   "uk-boe-4feb372611": 1,
+   "jp-jftc-gnews": 1,
+   "de-bundesbank-617511c682": 1,
+   "io-wto-497f28e20d": 1,
+   "us-supreme-court-orders-index": 1
   },
   "by_class": {
-   "routine": 53,
-   "high": 7,
-   "docket": 12,
-   "watch": 13
+   "high": 32,
+   "routine": 132,
+   "watch": 35,
+   "noise": 2,
+   "docket": 10
   }
  },
  "parsed_today": {
-  "count": 38,
+  "count": 128,
   "by_class": {
-   "high": 2,
-   "routine": 30,
-   "watch": 6
+   "high": 33,
+   "routine": 55,
+   "watch": 35,
+   "noise": 2,
+   "docket": 7
   }
  },
  "n_failures": 0,

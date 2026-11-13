@@ -1,5 +1,517 @@
 [
   {
+    "title": "CAC Outcome: CWU, Unite the Union & Google UK Limited (2)",
+    "url": "https://www.gov.uk/government/publications/cac-outcome-cwu-unite-the-union-google-uk-limited-2",
+    "native_id": "/government/publications/cac-outcome-cwu-unite-the-union-google-uk-limited-2",
+    "published_at": "2026-11-13T17:33:33+00:00",
+    "published_raw": "2026-11-13T17:33:33Z",
+    "document_type": "decision",
+    "issuer": "Central Arbitration Committee",
+    "issuer_ids": [
+      "uk-gov:central-arbitration-committee"
+    ],
+    "summary": "Outcome(s) by the Central Arbitration Committee on an application from the CWU & Unite the Union.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Central Arbitration Committee",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 10317,
+    "first_seen": "2026-11-13T20:30:06.658433+00:00",
+    "last_seen": "2026-11-13T20:30:06.658433+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Teacher misconduct panel outcome: Mr Elliot Wilson",
+    "url": "https://www.gov.uk/government/publications/teacher-misconduct-panel-outcome-mr-elliot-wilson",
+    "native_id": "/government/publications/teacher-misconduct-panel-outcome-mr-elliot-wilson",
+    "published_at": "2026-11-13T14:38:21+00:00",
+    "published_raw": "2026-11-13T14:38:21Z",
+    "document_type": "decision",
+    "issuer": "Teaching Regulation Agency",
+    "issuer_ids": [
+      "uk-gov:teaching-regulation-agency"
+    ],
+    "summary": "Professional conduct panel outcome, including decision and reasons.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Teaching Regulation Agency",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 10318,
+    "first_seen": "2026-11-13T20:30:06.658433+00:00",
+    "last_seen": "2026-11-13T20:30:06.658433+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Deep Drilling Screening Directions – 2026",
+    "url": "https://www.gov.uk/government/publications/deep-drilling-screening-directions-2026",
+    "native_id": "/government/publications/deep-drilling-screening-directions-2026",
+    "published_at": "2026-11-13T13:55:55+00:00",
+    "published_raw": "2026-11-13T13:55:55Z",
+    "document_type": "decision",
+    "issuer": "Offshore Petroleum Regulator for Environment and Decommissioning",
+    "issuer_ids": [
+      "uk-gov:offshore-petroleum-regulator-for-environment-and-decommissioning"
+    ],
+    "summary": "Screening Directions",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Offshore Petroleum Regulator for Environment and Decommissioning",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 3303,
+    "first_seen": "2026-10-16T10:36:18.842579+00:00",
+    "last_seen": "2026-11-13T20:30:06.658433+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Teacher misconduct panel outcome: Ms Evangelina Tsadiosou",
+    "url": "https://www.gov.uk/government/publications/teacher-misconduct-panel-outcome-ms-evangelina-tsadiosou",
+    "native_id": "/government/publications/teacher-misconduct-panel-outcome-ms-evangelina-tsadiosou",
+    "published_at": "2026-11-13T13:21:32+00:00",
+    "published_raw": "2026-11-13T13:21:32Z",
+    "document_type": "decision",
+    "issuer": "Teaching Regulation Agency",
+    "issuer_ids": [
+      "uk-gov:teaching-regulation-agency"
+    ],
+    "summary": "Professional conduct panel outcome, including decision and reasons.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Teaching Regulation Agency",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 10319,
+    "first_seen": "2026-11-13T20:30:06.658433+00:00",
+    "last_seen": "2026-11-13T20:30:06.658433+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Teacher misconduct panel outcome: Ms Amanda Rogers",
+    "url": "https://www.gov.uk/government/publications/teacher-misconduct-panel-outcome-ms-amanda-rogers",
+    "native_id": "/government/publications/teacher-misconduct-panel-outcome-ms-amanda-rogers",
+    "published_at": "2026-11-13T11:29:55+00:00",
+    "published_raw": "2026-11-13T11:29:55Z",
+    "document_type": "decision",
+    "issuer": "Teaching Regulation Agency",
+    "issuer_ids": [
+      "uk-gov:teaching-regulation-agency"
+    ],
+    "summary": "Professional conduct panel outcome, including decision and reasons.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Teaching Regulation Agency",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 10320,
+    "first_seen": "2026-11-13T20:30:06.658433+00:00",
+    "last_seen": "2026-11-13T20:30:06.658433+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Revocation of the Color Additive Listing for Use of Orange B on Casings or Surfaces of Frankfurters and Sausages; Confirmation of Effective Date",
+    "url": "https://www.federalregister.gov/documents/2026/11/13/2026-23112/revocation-of-the-color-additive-listing-for-use-of-orange-b-on-casings-or-surfaces-of-frankfurters",
+    "native_id": "2026-23112",
+    "published_at": "2026-11-13T00:00:00+00:00",
+    "published_raw": "2026-11-13",
+    "document_type": "Rule",
+    "issuer": "Health and Human Services Department; Food and Drug Administration",
+    "issuer_ids": [
+      "us-fr:221",
+      "us-fr:199"
+    ],
+    "summary": "The Food and Drug Administration (FDA or we) is confirming the effective date of September 8, 2026, for the final order that appeared in the Federal Register of July 23, 2026, and that repealed the color additive regulation that allows for the use of Orange B for coloring the casings or surfaces of frankfurters and sausages.",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-11-13/pdf/2026-23112.pdf",
+    "source_metadata": {
+      "document_type": "Rule",
+      "document_stage": "final_rule_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Health and Human Services Department; Food and Drug Administration",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 10278,
+    "first_seen": "2026-11-13T20:30:06.658433+00:00",
+    "last_seen": "2026-11-13T20:30:06.658433+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Isocycloseram; Pesticide Tolerance for Emergency Exemption",
+    "url": "https://www.federalregister.gov/documents/2026/11/13/2026-23115/isocycloseram-pesticide-tolerance-for-emergency-exemption",
+    "native_id": "2026-23115",
+    "published_at": "2026-11-13T00:00:00+00:00",
+    "published_raw": "2026-11-13",
+    "document_type": "Rule",
+    "issuer": "Environmental Protection Agency",
+    "issuer_ids": [
+      "us-fr:145"
+    ],
+    "summary": "This regulation establishes a time-limited tolerance for residues of isocycloseram, including its metabolites and degradates, in or on sunflowers. This action is in response to EPA's authorization of a specific exemption under the Federal Insecticide, Fungicide, and Rodenticide Act (FIFRA) authorizing use of the pesticide on sunflowers. This regulation establishes a maximum permissible level for residues of isocycloseram in or on sunflower, seed at 0.4 parts per million. The time-limited tolerance expires on December 31, 2029.",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-11-13/pdf/2026-23115.pdf",
+    "source_metadata": {
+      "document_type": "Rule",
+      "document_stage": "final_rule_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Environmental Protection Agency",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 10276,
+    "first_seen": "2026-11-13T20:30:06.658433+00:00",
+    "last_seen": "2026-11-13T20:30:06.658433+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Ethephon; Pesticide Tolerances",
+    "url": "https://www.federalregister.gov/documents/2026/11/13/2026-23120/ethephon-pesticide-tolerances",
+    "native_id": "2026-23120",
+    "published_at": "2026-11-13T00:00:00+00:00",
+    "published_raw": "2026-11-13",
+    "document_type": "Rule",
+    "issuer": "Environmental Protection Agency",
+    "issuer_ids": [
+      "us-fr:145"
+    ],
+    "summary": "This regulation establishes tolerances for residues of ethephon in or on fig. Under the Federal Food, Drug, and Cosmetic Act (FFDCA), Interregional Research Project Number 4 (IR-4) submitted a petition to EPA requesting that EPA establish a maximum permissible level for residues of this pesticide in or on the identified commodity.",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-11-13/pdf/2026-23120.pdf",
+    "source_metadata": {
+      "document_type": "Rule",
+      "document_stage": "final_rule_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Environmental Protection Agency",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 10271,
+    "first_seen": "2026-11-13T20:30:06.658433+00:00",
+    "last_seen": "2026-11-13T20:30:06.658433+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Air Plan Approval; Utah; Update to Materials Incorporated by Reference",
+    "url": "https://www.federalregister.gov/documents/2026/11/13/2026-23121/air-plan-approval-utah-update-to-materials-incorporated-by-reference",
+    "native_id": "2026-23121",
+    "published_at": "2026-11-13T00:00:00+00:00",
+    "published_raw": "2026-11-13",
+    "document_type": "Rule",
+    "issuer": "Environmental Protection Agency",
+    "issuer_ids": [
+      "us-fr:145"
+    ],
+    "summary": "The U.S. Environmental Protection Agency (EPA) is updating the materials that are incorporated by reference (IBR) into the Utah State Implementation Plan (SIP). The regulations affected by this update have been previously submitted by Utah and approved by the EPA. In this final rule, the EPA is also notifying the public of corrections and clarifying changes in the Code of Federal Regulations (CFR) tables that identify material IBR into the Utah SIP. This update affects the materials that are available for public inspection at the National Archives and Records Administration (NARA) and the EPA Regional Office.",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-11-13/pdf/2026-23121.pdf",
+    "source_metadata": {
+      "document_type": "Rule",
+      "document_stage": "final_rule_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Environmental Protection Agency",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 10270,
+    "first_seen": "2026-11-13T20:30:06.658433+00:00",
+    "last_seen": "2026-11-13T20:30:06.658433+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Safety Zone; Massachusetts Bay, Boston, MA",
+    "url": "https://www.federalregister.gov/documents/2026/11/13/2026-23148/safety-zone-massachusetts-bay-boston-ma",
+    "native_id": "2026-23148",
+    "published_at": "2026-11-13T00:00:00+00:00",
+    "published_raw": "2026-11-13",
+    "document_type": "Rule",
+    "issuer": "Homeland Security Department; Coast Guard",
+    "issuer_ids": [
+      "us-fr:227",
+      "us-fr:53"
+    ],
+    "summary": "The Coast Guard is establishing temporary moving safety zones for certain portions of the navigable water of Massachusetts Bay, 22 miles northeast of Boston, MA. The safety zones are needed to protect personnel, vessels, and the maritime public from potential hazards created by subsea demolition operations. Entry of vessels or persons into this zone is prohibited unless specifically authorized by the Captain of the Port, Sector Boston, or their designated representative.",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-11-13/pdf/2026-23148.pdf",
+    "source_metadata": {
+      "document_type": "Rule",
+      "document_stage": "final_rule_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Homeland Security Department; Coast Guard",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 10244,
+    "first_seen": "2026-11-13T20:30:06.658433+00:00",
+    "last_seen": "2026-11-13T20:30:06.658433+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Update to Statutory Citations and Internet Address in Bid Protest Regulations",
+    "url": "https://www.federalregister.gov/documents/2026/11/13/2026-23168/update-to-statutory-citations-and-internet-address-in-bid-protest-regulations",
+    "native_id": "2026-23168",
+    "published_at": "2026-11-13T00:00:00+00:00",
+    "published_raw": "2026-11-13",
+    "document_type": "Rule",
+    "issuer": "Government Accountability Office",
+    "issuer_ids": [
+      "us-fr:213"
+    ],
+    "summary": "The Government Accountability Office (GAO) is issuing a final rule to amend its Bid Protest Regulations, promulgated in accordance with the Competition in Contracting Act of 1984 (CICA), to make an administrative change by updating citations to the United States Code to reflect amendment and recodification of underlying statutory provisions. The revisions only reflect changes that update an internet address and that update statutory citations to reflect statutory changes, so GAO has determined that the rule is uncontroversial and therefore it is appropriate to issue a final rule.",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-11-13/pdf/2026-23168.pdf",
+    "source_metadata": {
+      "document_type": "Rule",
+      "document_stage": "final_rule_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Government Accountability Office",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 10227,
+    "first_seen": "2026-11-13T20:30:06.658433+00:00",
+    "last_seen": "2026-11-13T20:30:06.658433+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Publication of Iran-Related Web General License W",
+    "url": "https://www.federalregister.gov/documents/2026/11/13/2026-23193/publication-of-iran-related-web-general-license-w",
+    "native_id": "2026-23193",
+    "published_at": "2026-11-13T00:00:00+00:00",
+    "published_raw": "2026-11-13",
+    "document_type": "Rule",
+    "issuer": "Treasury Department; Foreign Assets Control Office",
+    "issuer_ids": [
+      "us-fr:497",
+      "us-fr:203"
+    ],
+    "summary": "The Department of the Treasury's Office of Foreign Assets Control (OFAC) is publishing an Iran-related general license (GL): GL W. This GL was previously made available on OFAC's website.",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-11-13/pdf/2026-23193.pdf",
+    "source_metadata": {
+      "document_type": "Rule",
+      "document_stage": "final_rule_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Treasury Department; Foreign Assets Control Office",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 10202,
+    "first_seen": "2026-11-13T20:30:06.658433+00:00",
+    "last_seen": "2026-11-13T20:30:06.658433+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Amendment of Class C Airspace; Laughlin Air Force Base, Del Rio, TX",
+    "url": "https://www.federalregister.gov/documents/2026/11/13/2026-23194/amendment-of-class-c-airspace-laughlin-air-force-base-del-rio-tx",
+    "native_id": "2026-23194",
+    "published_at": "2026-11-13T00:00:00+00:00",
+    "published_raw": "2026-11-13",
+    "document_type": "Rule",
+    "issuer": "Transportation Department; Federal Aviation Administration",
+    "issuer_ids": [
+      "us-fr:492",
+      "us-fr:159"
+    ],
+    "summary": "This action makes administrative amendments to the Laughlin AFB, TX, Class C airspace legal description. Specifically, the action updates the geographic coordinates of the airport reference point (ARP) to match the FAA's National Airspace System Resources (NASR) database information. Additionally, this action corrects the header format to conform with current FAA policy. Lastly, this action updates the outdated term \"Airport/Facility Directory\" to \"Chart Supplement.\" This action does not change the lateral boundaries, altitudes, or operating requirements of the Class C airspace area.",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-11-13/pdf/2026-23194.pdf",
+    "source_metadata": {
+      "document_type": "Rule",
+      "document_stage": "final_rule_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Transportation Department; Federal Aviation Administration",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 10201,
+    "first_seen": "2026-11-13T20:30:06.658433+00:00",
+    "last_seen": "2026-11-13T20:30:06.658433+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Publication of a Cuba Sanctions Regulations Web General License",
+    "url": "https://www.federalregister.gov/documents/2026/11/13/2026-23195/publication-of-a-cuba-sanctions-regulations-web-general-license",
+    "native_id": "2026-23195",
+    "published_at": "2026-11-13T00:00:00+00:00",
+    "published_raw": "2026-11-13",
+    "document_type": "Rule",
+    "issuer": "Treasury Department; Foreign Assets Control Office",
+    "issuer_ids": [
+      "us-fr:497",
+      "us-fr:203"
+    ],
+    "summary": "The Department of the Treasury's Office of Foreign Assets Control (OFAC) is publishing a general license (GL) issued in the Cuba Sanctions program: GL 1. This GL was previously made available on OFAC's website.",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-11-13/pdf/2026-23195.pdf",
+    "source_metadata": {
+      "document_type": "Rule",
+      "document_stage": "final_rule_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Treasury Department; Foreign Assets Control Office",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 10200,
+    "first_seen": "2026-11-13T20:30:06.658433+00:00",
+    "last_seen": "2026-11-13T20:30:06.658433+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Publication of Russian Harmful Foreign Activities Sanctions Regulations Web General Licenses 55F and 115D",
+    "url": "https://www.federalregister.gov/documents/2026/11/13/2026-23196/publication-of-russian-harmful-foreign-activities-sanctions-regulations-web-general-licenses-55f-and",
+    "native_id": "2026-23196",
+    "published_at": "2026-11-13T00:00:00+00:00",
+    "published_raw": "2026-11-13",
+    "document_type": "Rule",
+    "issuer": "Treasury Department; Foreign Assets Control Office",
+    "issuer_ids": [
+      "us-fr:497",
+      "us-fr:203"
+    ],
+    "summary": "The Department of the Treasury's Office of Foreign Assets Control (OFAC) is publishing two general licenses (GLs) issued pursuant to the Russian Harmful Foreign Activities Sanctions Regulations: GLs 55F and 115D, each of which was previously made available on OFAC's website.",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-11-13/pdf/2026-23196.pdf",
+    "source_metadata": {
+      "document_type": "Rule",
+      "document_stage": "final_rule_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Treasury Department; Foreign Assets Control Office",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 10199,
+    "first_seen": "2026-11-13T20:30:06.658433+00:00",
+    "last_seen": "2026-11-13T20:30:06.658433+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Publication of Iran-Related Web General Licenses EE and FF",
+    "url": "https://www.federalregister.gov/documents/2026/11/13/2026-23197/publication-of-iran-related-web-general-licenses-ee-and-ff",
+    "native_id": "2026-23197",
+    "published_at": "2026-11-13T00:00:00+00:00",
+    "published_raw": "2026-11-13",
+    "document_type": "Rule",
+    "issuer": "Treasury Department; Foreign Assets Control Office",
+    "issuer_ids": [
+      "us-fr:497",
+      "us-fr:203"
+    ],
+    "summary": "The Department of the Treasury's Office of Foreign Assets Control (OFAC) is publishing two Iran-related general licenses (GLs): GLs EE and FF, which were made available on OFAC's website at the time of issuance.",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-11-13/pdf/2026-23197.pdf",
+    "source_metadata": {
+      "document_type": "Rule",
+      "document_stage": "final_rule_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Treasury Department; Foreign Assets Control Office",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 10198,
+    "first_seen": "2026-11-13T20:30:06.658433+00:00",
+    "last_seen": "2026-11-13T20:30:06.658433+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Presidential Determination Pursuant to Section 1245(d)(4)(B) and (C) of the National Defense Authorization Act for Fiscal Year 2012",
+    "url": "https://www.federalregister.gov/documents/2026/11/13/2026-23233/presidential-determination-pursuant-to-section-1245d4b-and-c-of-the-national-defense-authorization",
+    "native_id": "2026-23233",
+    "published_at": "2026-11-13T00:00:00+00:00",
+    "published_raw": "2026-11-13",
+    "document_type": "Presidential Document",
+    "issuer": "Executive Office of the President",
+    "issuer_ids": [
+      "us-fr:538"
+    ],
+    "summary": "",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-11-13/pdf/2026-23233.pdf",
+    "source_metadata": {
+      "document_type": "Presidential Document",
+      "document_stage": "presidential_document_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Executive Office of the President",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 10196,
+    "first_seen": "2026-11-13T20:30:06.658433+00:00",
+    "last_seen": "2026-11-13T20:30:06.658433+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
     "title": "CAC Outcome: NEU & NASUWT & CRANLEIGH SCHOOL (2)",
     "url": "https://www.gov.uk/government/publications/cac-outcome-neu-nasuwt-cranleigh-school-2",
     "native_id": "/government/publications/cac-outcome-neu-nasuwt-cranleigh-school-2",
@@ -23,7 +535,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 9992,
     "first_seen": "2026-11-12T20:50:38.075613+00:00",
-    "last_seen": "2026-11-13T08:01:59.025457+00:00",
+    "last_seen": "2026-11-13T20:30:06.658433+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -52,7 +564,65 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 9993,
     "first_seen": "2026-11-12T20:50:38.075613+00:00",
-    "last_seen": "2026-11-13T08:01:59.025457+00:00",
+    "last_seen": "2026-11-13T20:30:06.658433+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Woolaston Primary School: 12 November 2026",
+    "url": "https://www.gov.uk/government/publications/woolaston-primary-school-12-november-2026",
+    "native_id": "/government/publications/woolaston-primary-school-12-november-2026",
+    "published_at": "2026-11-12T00:00:00+00:00",
+    "published_raw": "2026-11-12T00:00:00Z",
+    "document_type": "decision",
+    "issuer": "Office of the Schools Adjudicator",
+    "issuer_ids": [
+      "uk-gov:office-of-the-schools-adjudicator"
+    ],
+    "summary": "The schools adjudicator’s admission variation decision about Woolaston Primary School",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Office of the Schools Adjudicator",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 10322,
+    "first_seen": "2026-11-13T20:30:06.658433+00:00",
+    "last_seen": "2026-11-13T20:30:06.658433+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Boreas Offshore Wind Farm Project: post-consent condition discharge, Planning Act 2008",
+    "url": "https://www.gov.uk/government/publications/boreas-offshore-wind-farm-project-post-consent-condition-discharge-planning-act-2008",
+    "native_id": "/government/publications/boreas-offshore-wind-farm-project-post-consent-condition-discharge-planning-act-2008",
+    "published_at": "2026-11-12T00:00:00+00:00",
+    "published_raw": "2026-11-12T00:00:00Z",
+    "document_type": "decision",
+    "issuer": "Department for Energy Security and Net Zero",
+    "issuer_ids": [
+      "uk-gov:department-for-energy-security-and-net-zero"
+    ],
+    "summary": "Decision by the Secretary of State on an application by Norfolk Boreas Limited under the Planning Act 2008.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Department for Energy Security and Net Zero",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 10321,
+    "first_seen": "2026-11-13T20:30:06.658433+00:00",
+    "last_seen": "2026-11-13T20:30:06.658433+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -83,7 +653,7 @@
     "primary_source_id": "us-federal-register",
     "n": 9895,
     "first_seen": "2026-11-12T08:22:44.765863+00:00",
-    "last_seen": "2026-11-13T08:01:59.025457+00:00",
+    "last_seen": "2026-11-13T20:30:06.658433+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -113,7 +683,7 @@
     "primary_source_id": "us-federal-register",
     "n": 9894,
     "first_seen": "2026-11-12T08:22:44.765863+00:00",
-    "last_seen": "2026-11-13T08:01:59.025457+00:00",
+    "last_seen": "2026-11-13T20:30:06.658433+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -144,7 +714,7 @@
     "primary_source_id": "us-federal-register",
     "n": 9890,
     "first_seen": "2026-11-12T08:22:44.765863+00:00",
-    "last_seen": "2026-11-13T08:01:59.025457+00:00",
+    "last_seen": "2026-11-13T20:30:06.658433+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -175,7 +745,7 @@
     "primary_source_id": "us-federal-register",
     "n": 9871,
     "first_seen": "2026-11-12T08:22:44.765863+00:00",
-    "last_seen": "2026-11-13T08:01:59.025457+00:00",
+    "last_seen": "2026-11-13T20:30:06.658433+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -205,7 +775,7 @@
     "primary_source_id": "us-federal-register",
     "n": 9859,
     "first_seen": "2026-11-12T08:22:44.765863+00:00",
-    "last_seen": "2026-11-13T08:01:59.025457+00:00",
+    "last_seen": "2026-11-13T20:30:06.658433+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -235,7 +805,7 @@
     "primary_source_id": "us-federal-register",
     "n": 9858,
     "first_seen": "2026-11-12T08:22:44.765863+00:00",
-    "last_seen": "2026-11-13T08:01:59.025457+00:00",
+    "last_seen": "2026-11-13T20:30:06.658433+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -266,7 +836,7 @@
     "primary_source_id": "us-federal-register",
     "n": 9852,
     "first_seen": "2026-11-12T08:22:44.765863+00:00",
-    "last_seen": "2026-11-13T08:01:59.025457+00:00",
+    "last_seen": "2026-11-13T20:30:06.658433+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -297,7 +867,7 @@
     "primary_source_id": "us-federal-register",
     "n": 9850,
     "first_seen": "2026-11-12T08:22:44.765863+00:00",
-    "last_seen": "2026-11-13T08:01:59.025457+00:00",
+    "last_seen": "2026-11-13T20:30:06.658433+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -328,7 +898,7 @@
     "primary_source_id": "us-federal-register",
     "n": 9849,
     "first_seen": "2026-11-12T08:22:44.765863+00:00",
-    "last_seen": "2026-11-13T08:01:59.025457+00:00",
+    "last_seen": "2026-11-13T20:30:06.658433+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -359,7 +929,7 @@
     "primary_source_id": "us-federal-register",
     "n": 9848,
     "first_seen": "2026-11-12T08:22:44.765863+00:00",
-    "last_seen": "2026-11-13T08:01:59.025457+00:00",
+    "last_seen": "2026-11-13T20:30:06.658433+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -390,7 +960,7 @@
     "primary_source_id": "us-federal-register",
     "n": 9847,
     "first_seen": "2026-11-12T08:22:44.765863+00:00",
-    "last_seen": "2026-11-13T08:01:59.025457+00:00",
+    "last_seen": "2026-11-13T20:30:06.658433+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -421,7 +991,7 @@
     "primary_source_id": "us-federal-register",
     "n": 9846,
     "first_seen": "2026-11-12T08:22:44.765863+00:00",
-    "last_seen": "2026-11-13T08:01:59.025457+00:00",
+    "last_seen": "2026-11-13T20:30:06.658433+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -451,7 +1021,7 @@
     "primary_source_id": "us-federal-register",
     "n": 9839,
     "first_seen": "2026-11-12T08:22:44.765863+00:00",
-    "last_seen": "2026-11-13T08:01:59.025457+00:00",
+    "last_seen": "2026-11-13T20:30:06.658433+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -482,7 +1052,7 @@
     "primary_source_id": "us-federal-register",
     "n": 9830,
     "first_seen": "2026-11-12T08:22:44.765863+00:00",
-    "last_seen": "2026-11-13T08:01:59.025457+00:00",
+    "last_seen": "2026-11-13T20:30:06.658433+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -513,7 +1083,7 @@
     "primary_source_id": "us-federal-register",
     "n": 9829,
     "first_seen": "2026-11-12T08:22:44.765863+00:00",
-    "last_seen": "2026-11-13T08:01:59.025457+00:00",
+    "last_seen": "2026-11-13T20:30:06.658433+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -544,7 +1114,7 @@
     "primary_source_id": "us-federal-register",
     "n": 9827,
     "first_seen": "2026-11-12T08:22:44.765863+00:00",
-    "last_seen": "2026-11-13T08:01:59.025457+00:00",
+    "last_seen": "2026-11-13T20:30:06.658433+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -574,7 +1144,7 @@
     "primary_source_id": "us-federal-register",
     "n": 9824,
     "first_seen": "2026-11-12T08:22:44.765863+00:00",
-    "last_seen": "2026-11-13T08:01:59.025457+00:00",
+    "last_seen": "2026-11-13T20:30:06.658433+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -604,7 +1174,7 @@
     "primary_source_id": "us-federal-register",
     "n": 9823,
     "first_seen": "2026-11-12T08:22:44.765863+00:00",
-    "last_seen": "2026-11-13T08:01:59.025457+00:00",
+    "last_seen": "2026-11-13T20:30:06.658433+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -633,17 +1203,17 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 9550,
     "first_seen": "2026-11-10T20:28:57.994479+00:00",
-    "last_seen": "2026-11-13T08:01:59.025457+00:00",
+    "last_seen": "2026-11-13T20:30:06.658433+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
   },
   {
-    "title": "CAC Outcome: NEU & NASUWT & Cranleigh School",
+    "title": "CAC Outcome: NEU & NASUWT & Cranleigh School (1)",
     "url": "https://www.gov.uk/government/publications/cac-outcome-neu-nasuwt-cranleigh-school",
     "native_id": "/government/publications/cac-outcome-neu-nasuwt-cranleigh-school",
-    "published_at": "2026-11-11T15:02:07+00:00",
-    "published_raw": "2026-11-11T15:02:07Z",
+    "published_at": "2026-11-11T15:02:00+00:00",
+    "published_raw": "2026-11-11T15:02:00Z",
     "document_type": "decision",
     "issuer": "Central Arbitration Committee",
     "issuer_ids": [
@@ -662,7 +1232,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 9747,
     "first_seen": "2026-11-11T20:12:59.574202+00:00",
-    "last_seen": "2026-11-13T08:01:59.025457+00:00",
+    "last_seen": "2026-11-13T20:30:06.658433+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -691,7 +1261,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 2103,
     "first_seen": "2026-10-15T12:16:32.997656+00:00",
-    "last_seen": "2026-11-13T08:01:59.025457+00:00",
+    "last_seen": "2026-11-13T20:30:06.658433+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -720,7 +1290,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 9748,
     "first_seen": "2026-11-11T20:12:59.574202+00:00",
-    "last_seen": "2026-11-13T08:01:59.025457+00:00",
+    "last_seen": "2026-11-13T20:30:06.658433+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -749,7 +1319,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 9749,
     "first_seen": "2026-11-11T20:12:59.574202+00:00",
-    "last_seen": "2026-11-13T08:01:59.025457+00:00",
+    "last_seen": "2026-11-13T20:30:06.658433+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -778,7 +1348,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 9750,
     "first_seen": "2026-11-11T20:12:59.574202+00:00",
-    "last_seen": "2026-11-13T08:01:59.025457+00:00",
+    "last_seen": "2026-11-13T20:30:06.658433+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -807,7 +1377,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 9751,
     "first_seen": "2026-11-11T20:12:59.574202+00:00",
-    "last_seen": "2026-11-13T08:01:59.025457+00:00",
+    "last_seen": "2026-11-13T20:30:06.658433+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -836,7 +1406,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 5,
     "first_seen": "2026-10-15T10:17:11.133023+00:00",
-    "last_seen": "2026-11-13T08:01:59.025457+00:00",
+    "last_seen": "2026-11-13T20:30:06.658433+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -865,7 +1435,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 9765,
     "first_seen": "2026-11-11T20:12:59.574202+00:00",
-    "last_seen": "2026-11-13T08:01:59.025457+00:00",
+    "last_seen": "2026-11-13T20:30:06.658433+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -894,7 +1464,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 9764,
     "first_seen": "2026-11-11T20:12:59.574202+00:00",
-    "last_seen": "2026-11-13T08:01:59.025457+00:00",
+    "last_seen": "2026-11-13T20:30:06.658433+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -923,7 +1493,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 9763,
     "first_seen": "2026-11-11T20:12:59.574202+00:00",
-    "last_seen": "2026-11-13T08:01:59.025457+00:00",
+    "last_seen": "2026-11-13T20:30:06.658433+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -952,7 +1522,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 9762,
     "first_seen": "2026-11-11T20:12:59.574202+00:00",
-    "last_seen": "2026-11-13T08:01:59.025457+00:00",
+    "last_seen": "2026-11-13T20:30:06.658433+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -981,7 +1551,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 9761,
     "first_seen": "2026-11-11T20:12:59.574202+00:00",
-    "last_seen": "2026-11-13T08:01:59.025457+00:00",
+    "last_seen": "2026-11-13T20:30:06.658433+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -1010,7 +1580,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 9760,
     "first_seen": "2026-11-11T20:12:59.574202+00:00",
-    "last_seen": "2026-11-13T08:01:59.025457+00:00",
+    "last_seen": "2026-11-13T20:30:06.658433+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -1039,7 +1609,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 9759,
     "first_seen": "2026-11-11T20:12:59.574202+00:00",
-    "last_seen": "2026-11-13T08:01:59.025457+00:00",
+    "last_seen": "2026-11-13T20:30:06.658433+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -1068,7 +1638,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 9758,
     "first_seen": "2026-11-11T20:12:59.574202+00:00",
-    "last_seen": "2026-11-13T08:01:59.025457+00:00",
+    "last_seen": "2026-11-13T20:30:06.658433+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -1097,7 +1667,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 9757,
     "first_seen": "2026-11-11T20:12:59.574202+00:00",
-    "last_seen": "2026-11-13T08:01:59.025457+00:00",
+    "last_seen": "2026-11-13T20:30:06.658433+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -1126,7 +1696,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 9756,
     "first_seen": "2026-11-11T20:12:59.574202+00:00",
-    "last_seen": "2026-11-13T08:01:59.025457+00:00",
+    "last_seen": "2026-11-13T20:30:06.658433+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -1155,7 +1725,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 9755,
     "first_seen": "2026-11-11T20:12:59.574202+00:00",
-    "last_seen": "2026-11-13T08:01:59.025457+00:00",
+    "last_seen": "2026-11-13T20:30:06.658433+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -1184,7 +1754,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 9754,
     "first_seen": "2026-11-11T20:12:59.574202+00:00",
-    "last_seen": "2026-11-13T08:01:59.025457+00:00",
+    "last_seen": "2026-11-13T20:30:06.658433+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -1213,7 +1783,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 9753,
     "first_seen": "2026-11-11T20:12:59.574202+00:00",
-    "last_seen": "2026-11-13T08:01:59.025457+00:00",
+    "last_seen": "2026-11-13T20:30:06.658433+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -1242,7 +1812,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 9752,
     "first_seen": "2026-11-11T20:12:59.574202+00:00",
-    "last_seen": "2026-11-13T08:01:59.025457+00:00",
+    "last_seen": "2026-11-13T20:30:06.658433+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -1271,7 +1841,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 9773,
     "first_seen": "2026-11-11T20:12:59.574202+00:00",
-    "last_seen": "2026-11-13T08:01:59.025457+00:00",
+    "last_seen": "2026-11-13T20:30:06.658433+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -1300,7 +1870,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 9772,
     "first_seen": "2026-11-11T20:12:59.574202+00:00",
-    "last_seen": "2026-11-13T08:01:59.025457+00:00",
+    "last_seen": "2026-11-13T20:30:06.658433+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -1329,7 +1899,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 9771,
     "first_seen": "2026-11-11T20:12:59.574202+00:00",
-    "last_seen": "2026-11-13T08:01:59.025457+00:00",
+    "last_seen": "2026-11-13T20:30:06.658433+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -1358,7 +1928,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 9770,
     "first_seen": "2026-11-11T20:12:59.574202+00:00",
-    "last_seen": "2026-11-13T08:01:59.025457+00:00",
+    "last_seen": "2026-11-13T20:30:06.658433+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -1387,7 +1957,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 9769,
     "first_seen": "2026-11-11T20:12:59.574202+00:00",
-    "last_seen": "2026-11-13T08:01:59.025457+00:00",
+    "last_seen": "2026-11-13T20:30:06.658433+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -1416,7 +1986,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 9768,
     "first_seen": "2026-11-11T20:12:59.574202+00:00",
-    "last_seen": "2026-11-13T08:01:59.025457+00:00",
+    "last_seen": "2026-11-13T20:30:06.658433+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -1445,7 +2015,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 9767,
     "first_seen": "2026-11-11T20:12:59.574202+00:00",
-    "last_seen": "2026-11-13T08:01:59.025457+00:00",
+    "last_seen": "2026-11-13T20:30:06.658433+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -1474,7 +2044,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 9766,
     "first_seen": "2026-11-11T20:12:59.574202+00:00",
-    "last_seen": "2026-11-13T08:01:59.025457+00:00",
+    "last_seen": "2026-11-13T20:30:06.658433+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -1645,470 +2215,6 @@
     "last_seen": "2026-11-11T07:46:05.445744+00:00",
     "source_ids": [
       "us-govinfo-dcpd"
-    ]
-  },
-  {
-    "title": "Botley West Solar Farm: development consent order, Planning Act 2008",
-    "url": "https://www.gov.uk/government/publications/botley-west-solar-farm-development-consent-order-planning-act-2008",
-    "native_id": "/government/publications/botley-west-solar-farm-development-consent-order-planning-act-2008",
-    "published_at": "2026-11-10T16:14:07+00:00",
-    "published_raw": "2026-11-10T16:14:07Z",
-    "document_type": "decision",
-    "issuer": "Department for Energy Security and Net Zero",
-    "issuer_ids": [
-      "uk-gov:department-for-energy-security-and-net-zero"
-    ],
-    "summary": "Decision on an application by Photovolt Development Partners (PVDP) for a solar farm in West Oxfordshire.",
-    "source_metadata": {
-      "document_type": "decision",
-      "document_stage": "decision_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Department for Energy Security and Net Zero",
-      "jurisdiction": "UK",
-      "family": "typed_government_documents"
-    },
-    "primary_source_id": "uk-govuk-decision",
-    "n": 9543,
-    "first_seen": "2026-11-10T20:28:57.994479+00:00",
-    "last_seen": "2026-11-13T08:01:59.025457+00:00",
-    "source_ids": [
-      "uk-govuk-decision"
-    ]
-  },
-  {
-    "title": "Decision No 2/2026 of the Joint Committee established by the Agreement on the withdrawal of the UK from the EU: amending Part I of Annex I to the Agreement",
-    "url": "https://www.gov.uk/government/publications/decision-no-22026-of-the-joint-committee-established-by-the-agreement-on-the-withdrawal-of-the-uk-from-the-eu-amending-part-i-of-annex-i-to-the-agreem",
-    "native_id": "/government/publications/decision-no-22026-of-the-joint-committee-established-by-the-agreement-on-the-withdrawal-of-the-uk-from-the-eu-amending-part-i-of-annex-i-to-the-agreem",
-    "published_at": "2026-11-10T16:00:02+00:00",
-    "published_raw": "2026-11-10T16:00:02Z",
-    "document_type": "decision",
-    "issuer": "Cabinet Office",
-    "issuer_ids": [
-      "uk-gov:cabinet-office"
-    ],
-    "summary": "This decision was made at the Withdrawal Agreement Joint Committee meeting on 10 November 2026",
-    "source_metadata": {
-      "document_type": "decision",
-      "document_stage": "decision_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Cabinet Office",
-      "jurisdiction": "UK",
-      "family": "typed_government_documents"
-    },
-    "primary_source_id": "uk-govuk-decision",
-    "n": 9547,
-    "first_seen": "2026-11-10T20:28:57.994479+00:00",
-    "last_seen": "2026-11-13T08:01:59.025457+00:00",
-    "source_ids": [
-      "uk-govuk-decision"
-    ]
-  },
-  {
-    "title": "Joint Declaration on the application of Article 5 of the Windsor Framework",
-    "url": "https://www.gov.uk/government/publications/joint-declaration-on-the-application-of-article-5-of-the-windsor-framework",
-    "native_id": "/government/publications/joint-declaration-on-the-application-of-article-5-of-the-windsor-framework",
-    "published_at": "2026-11-10T16:00:02+00:00",
-    "published_raw": "2026-11-10T16:00:02Z",
-    "document_type": "decision",
-    "issuer": "Cabinet Office",
-    "issuer_ids": [
-      "uk-gov:cabinet-office"
-    ],
-    "summary": "This declaration was made at the Withdrawal Agreement Joint Committee meeting on 10 November 2026",
-    "source_metadata": {
-      "document_type": "decision",
-      "document_stage": "decision_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Cabinet Office",
-      "jurisdiction": "UK",
-      "family": "typed_government_documents"
-    },
-    "primary_source_id": "uk-govuk-decision",
-    "n": 9546,
-    "first_seen": "2026-11-10T20:28:57.994479+00:00",
-    "last_seen": "2026-11-13T08:01:59.025457+00:00",
-    "source_ids": [
-      "uk-govuk-decision"
-    ]
-  },
-  {
-    "title": "Decision No 3/2026 of the Joint Committee established by the Agreement on the withdrawal of the UK from the EU: adding a newly adopted Union act to Annex 2 to the Windsor Framework",
-    "url": "https://www.gov.uk/government/publications/decision-no-32026-of-the-joint-committee-established-by-the-agreement-on-the-withdrawal-of-the-uk-from-the-eu-adding-a-newly-adopted-union-act-to-anne",
-    "native_id": "/government/publications/decision-no-32026-of-the-joint-committee-established-by-the-agreement-on-the-withdrawal-of-the-uk-from-the-eu-adding-a-newly-adopted-union-act-to-anne",
-    "published_at": "2026-11-10T16:00:02+00:00",
-    "published_raw": "2026-11-10T16:00:02Z",
-    "document_type": "decision",
-    "issuer": "Cabinet Office",
-    "issuer_ids": [
-      "uk-gov:cabinet-office"
-    ],
-    "summary": "This decision was made at the Withdrawal Agreement Joint Committee meeting on 10 November 2026",
-    "source_metadata": {
-      "document_type": "decision",
-      "document_stage": "decision_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Cabinet Office",
-      "jurisdiction": "UK",
-      "family": "typed_government_documents"
-    },
-    "primary_source_id": "uk-govuk-decision",
-    "n": 9545,
-    "first_seen": "2026-11-10T20:28:57.994479+00:00",
-    "last_seen": "2026-11-13T08:01:59.025457+00:00",
-    "source_ids": [
-      "uk-govuk-decision"
-    ]
-  },
-  {
-    "title": "Decision No 4/2026 of the Joint Committee established by the Agreement on the withdrawal of the UK from the EU: adding a newly adopted Union act to Annex 2 to the Windsor Framework",
-    "url": "https://www.gov.uk/government/publications/decision-no-42026-of-the-joint-committee-established-by-the-agreement-on-the-withdrawal-of-the-uk-from-the-eu-adding-a-newly-adopted-union-act-to-anne",
-    "native_id": "/government/publications/decision-no-42026-of-the-joint-committee-established-by-the-agreement-on-the-withdrawal-of-the-uk-from-the-eu-adding-a-newly-adopted-union-act-to-anne",
-    "published_at": "2026-11-10T16:00:02+00:00",
-    "published_raw": "2026-11-10T16:00:02Z",
-    "document_type": "decision",
-    "issuer": "Cabinet Office",
-    "issuer_ids": [
-      "uk-gov:cabinet-office"
-    ],
-    "summary": "This decision was made at the Withdrawal Agreement Joint Committee meeting on 10 November 2026",
-    "source_metadata": {
-      "document_type": "decision",
-      "document_stage": "decision_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Cabinet Office",
-      "jurisdiction": "UK",
-      "family": "typed_government_documents"
-    },
-    "primary_source_id": "uk-govuk-decision",
-    "n": 9544,
-    "first_seen": "2026-11-10T20:28:57.994479+00:00",
-    "last_seen": "2026-11-13T08:01:59.025457+00:00",
-    "source_ids": [
-      "uk-govuk-decision"
-    ]
-  },
-  {
-    "title": "CAC Outcome: PCS & OCS Group UK Limited",
-    "url": "https://www.gov.uk/government/publications/cac-outcome-pcs-ocs-group-uk-limited",
-    "native_id": "/government/publications/cac-outcome-pcs-ocs-group-uk-limited",
-    "published_at": "2026-11-10T15:13:44+00:00",
-    "published_raw": "2026-11-10T15:13:44Z",
-    "document_type": "decision",
-    "issuer": "Central Arbitration Committee",
-    "issuer_ids": [
-      "uk-gov:central-arbitration-committee"
-    ],
-    "summary": "Outcome(s) by the Central Arbitration Committee on an application from PCS.",
-    "source_metadata": {
-      "document_type": "decision",
-      "document_stage": "decision_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Central Arbitration Committee",
-      "jurisdiction": "UK",
-      "family": "typed_government_documents"
-    },
-    "primary_source_id": "uk-govuk-decision",
-    "n": 9548,
-    "first_seen": "2026-11-10T20:28:57.994479+00:00",
-    "last_seen": "2026-11-13T08:01:59.025457+00:00",
-    "source_ids": [
-      "uk-govuk-decision"
-    ]
-  },
-  {
-    "title": "CAC Outcome: Unite the Union & Evolve Housing and Support",
-    "url": "https://www.gov.uk/government/publications/cac-outcome-unite-the-union-evolve-housing-and-support",
-    "native_id": "/government/publications/cac-outcome-unite-the-union-evolve-housing-and-support",
-    "published_at": "2026-11-10T15:13:06+00:00",
-    "published_raw": "2026-11-10T15:13:06Z",
-    "document_type": "decision",
-    "issuer": "Central Arbitration Committee",
-    "issuer_ids": [
-      "uk-gov:central-arbitration-committee"
-    ],
-    "summary": "Outcome(s) by the Central Arbitration Committee on an application from Unite the Union.",
-    "source_metadata": {
-      "document_type": "decision",
-      "document_stage": "decision_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Central Arbitration Committee",
-      "jurisdiction": "UK",
-      "family": "typed_government_documents"
-    },
-    "primary_source_id": "uk-govuk-decision",
-    "n": 9549,
-    "first_seen": "2026-11-10T20:28:57.994479+00:00",
-    "last_seen": "2026-11-13T08:01:59.025457+00:00",
-    "source_ids": [
-      "uk-govuk-decision"
-    ]
-  },
-  {
-    "title": "Trade mark disputes: unpaid costs orders",
-    "url": "https://www.gov.uk/government/publications/trade-mark-disputes-unpaid-costs-orders",
-    "native_id": "/government/publications/trade-mark-disputes-unpaid-costs-orders",
-    "published_at": "2026-11-10T15:10:43+00:00",
-    "published_raw": "2026-11-10T15:10:43Z",
-    "document_type": "decision",
-    "issuer": "Intellectual Property Office",
-    "issuer_ids": [
-      "uk-gov:intellectual-property-office"
-    ],
-    "summary": "A list of unpaid costs following inter parte hearings about intellectual property.",
-    "source_metadata": {
-      "document_type": "decision",
-      "document_stage": "decision_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Intellectual Property Office",
-      "jurisdiction": "UK",
-      "family": "typed_government_documents"
-    },
-    "primary_source_id": "uk-govuk-decision",
-    "n": 5623,
-    "first_seen": "2026-10-20T18:00:04.951908+00:00",
-    "last_seen": "2026-11-13T08:01:59.025457+00:00",
-    "source_ids": [
-      "uk-govuk-decision"
-    ]
-  },
-  {
-    "title": "Human and veterinary medicines: register of licensed manufacturing sites",
-    "url": "https://www.gov.uk/government/publications/human-and-veterinary-medicines-register-of-licensed-manufacturing-sites",
-    "native_id": "/government/publications/human-and-veterinary-medicines-register-of-licensed-manufacturing-sites",
-    "published_at": "2026-11-10T14:50:33+00:00",
-    "published_raw": "2026-11-10T14:50:33Z",
-    "document_type": "decision",
-    "issuer": "Medicines and Healthcare products Regulatory Agency",
-    "issuer_ids": [
-      "uk-gov:medicines-and-healthcare-products-regulatory-agency"
-    ],
-    "summary": "The MHRA register of licensed manufacturing sites: manufacturer specials - human (MS) and manufacturer specials authorisation - veterinary (MANSA) only.",
-    "source_metadata": {
-      "document_type": "decision",
-      "document_stage": "decision_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Medicines and Healthcare products Regulatory Agency",
-      "jurisdiction": "UK",
-      "family": "typed_government_documents"
-    },
-    "primary_source_id": "uk-govuk-decision",
-    "n": 9551,
-    "first_seen": "2026-11-10T20:28:57.994479+00:00",
-    "last_seen": "2026-11-13T08:01:59.025457+00:00",
-    "source_ids": [
-      "uk-govuk-decision"
-    ]
-  },
-  {
-    "title": "Medicines: new manufacturing and wholesale dealer licences",
-    "url": "https://www.gov.uk/government/publications/medicines-new-manufacturing-and-wholesale-dealer-licences",
-    "native_id": "/government/publications/medicines-new-manufacturing-and-wholesale-dealer-licences",
-    "published_at": "2026-11-10T14:50:12+00:00",
-    "published_raw": "2026-11-10T14:50:12Z",
-    "document_type": "decision",
-    "issuer": "Medicines and Healthcare products Regulatory Agency",
-    "issuer_ids": [
-      "uk-gov:medicines-and-healthcare-products-regulatory-agency"
-    ],
-    "summary": "List of sites granted a manufacturer or wholesale dealer licence.",
-    "source_metadata": {
-      "document_type": "decision",
-      "document_stage": "decision_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Medicines and Healthcare products Regulatory Agency",
-      "jurisdiction": "UK",
-      "family": "typed_government_documents"
-    },
-    "primary_source_id": "uk-govuk-decision",
-    "n": 9552,
-    "first_seen": "2026-11-10T20:28:57.994479+00:00",
-    "last_seen": "2026-11-13T08:01:59.025457+00:00",
-    "source_ids": [
-      "uk-govuk-decision"
-    ]
-  },
-  {
-    "title": "Human medicines: register of licensed wholesale distribution sites",
-    "url": "https://www.gov.uk/government/publications/human-and-veterinary-medicines-register-of-licensed-wholesale-distribution-sites",
-    "native_id": "/government/publications/human-and-veterinary-medicines-register-of-licensed-wholesale-distribution-sites",
-    "published_at": "2026-11-10T14:49:52+00:00",
-    "published_raw": "2026-11-10T14:49:52Z",
-    "document_type": "decision",
-    "issuer": "Medicines and Healthcare products Regulatory Agency",
-    "issuer_ids": [
-      "uk-gov:medicines-and-healthcare-products-regulatory-agency"
-    ],
-    "summary": "Department of Health and Social Care and MHRA register of licensed wholesale distribution sites (human).",
-    "source_metadata": {
-      "document_type": "decision",
-      "document_stage": "decision_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Medicines and Healthcare products Regulatory Agency",
-      "jurisdiction": "UK",
-      "family": "typed_government_documents"
-    },
-    "primary_source_id": "uk-govuk-decision",
-    "n": 9553,
-    "first_seen": "2026-11-10T20:28:57.994479+00:00",
-    "last_seen": "2026-11-13T08:01:59.025457+00:00",
-    "source_ids": [
-      "uk-govuk-decision"
-    ]
-  },
-  {
-    "title": "Marketing authorisations granted in 2026",
-    "url": "https://www.gov.uk/government/publications/marketing-authorisations-granted-in-2026",
-    "native_id": "/government/publications/marketing-authorisations-granted-in-2026",
-    "published_at": "2026-11-10T11:27:10+00:00",
-    "published_raw": "2026-11-10T11:27:10Z",
-    "document_type": "decision",
-    "issuer": "Medicines and Healthcare products Regulatory Agency",
-    "issuer_ids": [
-      "uk-gov:medicines-and-healthcare-products-regulatory-agency"
-    ],
-    "summary": "Marketing authorisations granted in 2026.",
-    "source_metadata": {
-      "document_type": "decision",
-      "document_stage": "decision_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Medicines and Healthcare products Regulatory Agency",
-      "jurisdiction": "UK",
-      "family": "typed_government_documents"
-    },
-    "primary_source_id": "uk-govuk-decision",
-    "n": 5610,
-    "first_seen": "2026-10-20T18:00:04.951908+00:00",
-    "last_seen": "2026-11-13T08:01:59.025457+00:00",
-    "source_ids": [
-      "uk-govuk-decision"
-    ]
-  },
-  {
-    "title": "Parallel import licences granted in 2026",
-    "url": "https://www.gov.uk/government/publications/parallel-import-licences-granted-in-2026",
-    "native_id": "/government/publications/parallel-import-licences-granted-in-2026",
-    "published_at": "2026-11-10T11:26:59+00:00",
-    "published_raw": "2026-11-10T11:26:59Z",
-    "document_type": "decision",
-    "issuer": "Medicines and Healthcare products Regulatory Agency",
-    "issuer_ids": [
-      "uk-gov:medicines-and-healthcare-products-regulatory-agency"
-    ],
-    "summary": "Parallel import licences granted in 2026.",
-    "source_metadata": {
-      "document_type": "decision",
-      "document_stage": "decision_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Medicines and Healthcare products Regulatory Agency",
-      "jurisdiction": "UK",
-      "family": "typed_government_documents"
-    },
-    "primary_source_id": "uk-govuk-decision",
-    "n": 5609,
-    "first_seen": "2026-10-20T18:00:04.951908+00:00",
-    "last_seen": "2026-11-13T08:01:59.025457+00:00",
-    "source_ids": [
-      "uk-govuk-decision"
-    ]
-  },
-  {
-    "title": "TS2 1UB, Fine Organics Limited: environmental permit - EPR/PP3439GG/V008",
-    "url": "https://www.gov.uk/government/publications/ts2-1ub-fine-organics-limited-environmental-permit-eprpp3439ggv008",
-    "native_id": "/government/publications/ts2-1ub-fine-organics-limited-environmental-permit-eprpp3439ggv008",
-    "published_at": "2026-11-10T10:24:34+00:00",
-    "published_raw": "2026-11-10T10:24:34Z",
-    "document_type": "decision",
-    "issuer": "Environment Agency",
-    "issuer_ids": [
-      "uk-gov:environment-agency"
-    ],
-    "summary": "View the permit issued for Fine Organics Seal Sands Facility, Stockton-on-Tees under the Industrial Emissions Directive.",
-    "source_metadata": {
-      "document_type": "decision",
-      "document_stage": "decision_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Environment Agency",
-      "jurisdiction": "UK",
-      "family": "typed_government_documents"
-    },
-    "primary_source_id": "uk-govuk-decision",
-    "n": 9554,
-    "first_seen": "2026-11-10T20:28:57.994479+00:00",
-    "last_seen": "2026-11-13T08:01:59.025457+00:00",
-    "source_ids": [
-      "uk-govuk-decision"
-    ]
-  },
-  {
-    "title": "Acquisition of David Brown Santasalo SARL by Stellex Capital Management LLC via its subsidiary Gear Bidco SARL: notices of final order and revocation",
-    "url": "https://www.gov.uk/government/publications/acquisition-of-david-brown-santasalo-sarl-by-stellex-capital-management-llc-via-its-subsidiary-gear-bidco-sarl-notices-of-final-order-and-revocation",
-    "native_id": "/government/publications/acquisition-of-david-brown-santasalo-sarl-by-stellex-capital-management-llc-via-its-subsidiary-gear-bidco-sarl-notices-of-final-order-and-revocation",
-    "published_at": "2026-11-10T09:29:32+00:00",
-    "published_raw": "2026-11-10T09:29:32Z",
-    "document_type": "decision",
-    "issuer": "Cabinet Office",
-    "issuer_ids": [
-      "uk-gov:cabinet-office"
-    ],
-    "summary": "Notices of final order and revocation relating to the acquisition of David Brown Santasalo S.à.r.l. by Stellex Capital Management LLC via its wholly owned subsidiary, Gear Bidco S.à.r.l.",
-    "source_metadata": {
-      "document_type": "decision",
-      "document_stage": "decision_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Cabinet Office",
-      "jurisdiction": "UK",
-      "family": "typed_government_documents"
-    },
-    "primary_source_id": "uk-govuk-decision",
-    "n": 9555,
-    "first_seen": "2026-11-10T20:28:57.994479+00:00",
-    "last_seen": "2026-11-13T08:01:59.025457+00:00",
-    "source_ids": [
-      "uk-govuk-decision"
-    ]
-  },
-  {
-    "title": "Orphan registered medicinal products",
-    "url": "https://www.gov.uk/government/publications/orphan-registered-medicinal-products",
-    "native_id": "/government/publications/orphan-registered-medicinal-products",
-    "published_at": "2026-11-10T09:26:39+00:00",
-    "published_raw": "2026-11-10T09:26:39Z",
-    "document_type": "decision",
-    "issuer": "Medicines and Healthcare products Regulatory Agency",
-    "issuer_ids": [
-      "uk-gov:medicines-and-healthcare-products-regulatory-agency"
-    ],
-    "summary": "A list of authorised orphan medicinal products registered by the UK licensing authority.",
-    "source_metadata": {
-      "document_type": "decision",
-      "document_stage": "decision_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Medicines and Healthcare products Regulatory Agency",
-      "jurisdiction": "UK",
-      "family": "typed_government_documents"
-    },
-    "primary_source_id": "uk-govuk-decision",
-    "n": 4,
-    "first_seen": "2026-10-15T10:17:11.133023+00:00",
-    "last_seen": "2026-11-13T08:01:59.025457+00:00",
-    "source_ids": [
-      "uk-govuk-decision"
     ]
   }
 ]

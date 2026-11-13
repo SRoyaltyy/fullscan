@@ -1,8 +1,104 @@
 [
   {
-    "title": "USITC Votes to Continue Investigations on Amine Compounds from China",
-    "url": "https://www.usitc.gov/press_room/news_release/2026/er1112_69496.htm",
-    "native_id": "https://www.usitc.gov/press_room/news_release/2026/er1112_69496.htm",
+    "title": "H.R.10167",
+    "url": "https://www.congress.gov/bill/119th-congress/house-bill/10167",
+    "native_id": "H.R.10167",
+    "published_at": null,
+    "published_raw": "",
+    "summary": "Common Cents Act",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Congress.gov legislative status",
+      "jurisdiction": "US",
+      "family": "legislative_procedure"
+    },
+    "primary_source_id": "us-congress-76128ee9ff",
+    "n": 10327,
+    "first_seen": "2026-11-13T20:30:06.658433+00:00",
+    "last_seen": "2026-11-13T20:30:06.658433+00:00",
+    "source_ids": [
+      "us-congress-76128ee9ff"
+    ]
+  },
+  {
+    "title": "H.R.8352",
+    "url": "https://www.congress.gov/bill/119th-congress/house-bill/8352",
+    "native_id": "H.R.8352",
+    "published_at": null,
+    "published_raw": "",
+    "summary": "Criminal History Access Act of 2026",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Congress.gov legislative status",
+      "jurisdiction": "US",
+      "family": "legislative_procedure"
+    },
+    "primary_source_id": "us-congress-76128ee9ff",
+    "n": 10328,
+    "first_seen": "2026-11-13T20:30:06.658433+00:00",
+    "last_seen": "2026-11-13T20:30:06.658433+00:00",
+    "source_ids": [
+      "us-congress-76128ee9ff"
+    ]
+  },
+  {
+    "title": "H.R.5284",
+    "url": "https://www.congress.gov/bill/119th-congress/house-bill/5284",
+    "native_id": "H.R.5284",
+    "published_at": null,
+    "published_raw": "",
+    "summary": "Claiming Age Clarity Act",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Congress.gov legislative status",
+      "jurisdiction": "US",
+      "family": "legislative_procedure"
+    },
+    "primary_source_id": "us-congress-76128ee9ff",
+    "n": 10329,
+    "first_seen": "2026-11-13T20:30:06.658433+00:00",
+    "last_seen": "2026-11-13T20:30:06.658433+00:00",
+    "source_ids": [
+      "us-congress-76128ee9ff"
+    ]
+  },
+  {
+    "title": "H.R.1550",
+    "url": "https://www.congress.gov/bill/119th-congress/house-bill/1550",
+    "native_id": "H.R.1550",
+    "published_at": null,
+    "published_raw": "",
+    "summary": "Strengthening America’s Turning Point Act",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Congress.gov legislative status",
+      "jurisdiction": "US",
+      "family": "legislative_procedure"
+    },
+    "primary_source_id": "us-congress-76128ee9ff",
+    "n": 10330,
+    "first_seen": "2026-11-13T20:30:06.658433+00:00",
+    "last_seen": "2026-11-13T20:30:06.658433+00:00",
+    "source_ids": [
+      "us-congress-76128ee9ff"
+    ]
+  },
+  {
+    "title": "USITC Reaches Equally Divided Determination In Lamb Meat Global Safeguard Investigation",
+    "url": "https://www.usitc.gov/press_room/news_release/2026/er1113_69510.htm",
+    "native_id": "https://www.usitc.gov/press_room/news_release/2026/er1113_69510.htm",
     "published_at": null,
     "published_raw": null,
     "summary": "",
@@ -16,371 +112,347 @@
       "family": "trade_and_judicial"
     },
     "primary_source_id": "us-itc-index",
-    "n": 10170,
-    "first_seen": "2026-11-13T08:01:59.025457+00:00",
-    "last_seen": "2026-11-13T08:01:59.025457+00:00",
+    "n": 10355,
+    "first_seen": "2026-11-13T20:30:06.658433+00:00",
+    "last_seen": "2026-11-13T20:30:06.658433+00:00",
     "source_ids": [
       "us-itc-index"
     ]
   },
   {
-    "title": "READOUT: FinCEN Hosts Exchange Event to Combat Overseas Scam Centers",
-    "url": "https://www.fincen.gov/news/news-releases/readout-fincen-hosts-exchange-event-combat-overseas-scam-centers",
-    "native_id": "https://www.fincen.gov/news/news-releases/readout-fincen-hosts-exchange-event-combat-overseas-scam-centers",
+    "title": "FCC Announces One Year of Clean Carts Success and Best Practices",
+    "url": "https://www.fcc.gov/edoc/426810",
+    "native_id": "426810",
     "published_at": null,
-    "published_raw": null,
-    "summary": "",
+    "published_raw": "",
+    "summary": "18 Million Devices Removed, Detailed E-Commerce Platform Best Practices Provided",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Financial Crimes Enforcement Network",
+      "issuer": "Federal Communications Commission — News Releases",
       "jurisdiction": "US",
-      "family": "sanctions_and_enforcement"
+      "family": "telecom_rules_and_licences"
     },
-    "primary_source_id": "us-fincen-index",
-    "n": 10173,
-    "first_seen": "2026-11-13T08:01:59.025457+00:00",
-    "last_seen": "2026-11-13T08:01:59.025457+00:00",
+    "primary_source_id": "us-fcc-685c5e7dd2",
+    "n": 10365,
+    "first_seen": "2026-11-13T20:30:06.658433+00:00",
+    "last_seen": "2026-11-13T20:30:06.658433+00:00",
     "source_ids": [
-      "us-fincen-index"
+      "us-fcc-685c5e7dd2"
     ]
   },
   {
-    "title": "FinCEN Announces Withdrawal of Proposed Rule Related to Recordkeeping and Travel Rule Obligations",
-    "url": "https://www.fincen.gov/news/news-releases/fincen-announces-withdrawal-proposed-rule-related-recordkeeping-and-travel-rule",
-    "native_id": "https://www.fincen.gov/news/news-releases/fincen-announces-withdrawal-proposed-rule-related-recordkeeping-and-travel-rule",
+    "title": "FCC Effectively Prohibits Eight Providers from Connecting to U.S. Networks for Failing to Reply to Robocall Traceback Requests",
+    "url": "https://www.fcc.gov/edoc/426806",
+    "native_id": "426806",
     "published_at": null,
-    "published_raw": null,
-    "summary": "",
+    "published_raw": "",
+    "summary": ".",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Financial Crimes Enforcement Network",
+      "issuer": "Federal Communications Commission — News Releases",
       "jurisdiction": "US",
-      "family": "sanctions_and_enforcement"
+      "family": "telecom_rules_and_licences"
     },
-    "primary_source_id": "us-fincen-index",
-    "n": 10174,
-    "first_seen": "2026-11-13T08:01:59.025457+00:00",
-    "last_seen": "2026-11-13T08:01:59.025457+00:00",
+    "primary_source_id": "us-fcc-685c5e7dd2",
+    "n": 10366,
+    "first_seen": "2026-11-13T20:30:06.658433+00:00",
+    "last_seen": "2026-11-13T20:30:06.658433+00:00",
     "source_ids": [
-      "us-fincen-index"
+      "us-fcc-685c5e7dd2"
     ]
   },
   {
-    "title": "Operation Economic Outcast Severs MEXC Global’s Access to the U.S. Financial System",
-    "url": "https://www.fincen.gov/news/news-releases/operation-economic-outcast-severs-mexc-globals-access-us-financial-system",
-    "native_id": "https://www.fincen.gov/news/news-releases/operation-economic-outcast-severs-mexc-globals-access-us-financial-system",
+    "title": "FCC Announces Start of Upper C-Band Auction on April 27, 2027",
+    "url": "https://www.fcc.gov/edoc/426831",
+    "native_id": "426831",
     "published_at": null,
-    "published_raw": null,
-    "summary": "",
+    "published_raw": "",
+    "summary": ".",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Financial Crimes Enforcement Network",
+      "issuer": "Federal Communications Commission — News Releases",
       "jurisdiction": "US",
-      "family": "sanctions_and_enforcement"
+      "family": "telecom_rules_and_licences"
     },
-    "primary_source_id": "us-fincen-index",
-    "n": 10175,
-    "first_seen": "2026-11-13T08:01:59.025457+00:00",
-    "last_seen": "2026-11-13T08:01:59.025457+00:00",
+    "primary_source_id": "us-fcc-685c5e7dd2",
+    "n": 10367,
+    "first_seen": "2026-11-13T20:30:06.658433+00:00",
+    "last_seen": "2026-11-13T20:30:06.658433+00:00",
     "source_ids": [
-      "us-fincen-index"
+      "us-fcc-685c5e7dd2"
     ]
   },
   {
-    "title": "Financial Action Task Force Identifies Jurisdictions with Anti-Money Laundering, Combating the Financing of Terrorism, and Counter-Proliferation Finance Deficiencies",
-    "url": "https://www.fincen.gov/news/news-releases/financial-action-task-force-identifies-jurisdictions-anti-money-laundering-6",
-    "native_id": "https://www.fincen.gov/news/news-releases/financial-action-task-force-identifies-jurisdictions-anti-money-laundering-6",
+    "title": "Applications",
+    "url": "https://www.fcc.gov/edoc/426802",
+    "native_id": "426802",
     "published_at": null,
-    "published_raw": null,
-    "summary": "",
+    "published_raw": "",
+    "summary": ".",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Financial Crimes Enforcement Network",
+      "issuer": "Federal Communications Commission — Public Notices",
       "jurisdiction": "US",
-      "family": "sanctions_and_enforcement"
+      "family": "telecom_rules_and_licences"
     },
-    "primary_source_id": "us-fincen-index",
-    "n": 10176,
-    "first_seen": "2026-11-13T08:01:59.025457+00:00",
-    "last_seen": "2026-11-13T08:01:59.025457+00:00",
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 10368,
+    "first_seen": "2026-11-13T20:30:06.658433+00:00",
+    "last_seen": "2026-11-13T20:30:06.658433+00:00",
     "source_ids": [
-      "us-fincen-index"
+      "us-fcc-e95ecda3bb"
     ]
   },
   {
-    "title": "FinCEN Issues Alert and Notice to Support New Fraud Prevention Measures in Minnesota",
-    "url": "https://www.fincen.gov/news/news-releases/fincen-issues-alert-and-notice-support-new-fraud-prevention-measures-minnesota",
-    "native_id": "https://www.fincen.gov/news/news-releases/fincen-issues-alert-and-notice-support-new-fraud-prevention-measures-minnesota",
+    "title": "Satellite Licensing Division and Satellite Programs and Policy Division Information - SAT - Accepted for Filing",
+    "url": "https://www.fcc.gov/edoc/426789",
+    "native_id": "426789",
     "published_at": null,
-    "published_raw": null,
-    "summary": "",
+    "published_raw": "",
+    "summary": ".",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Financial Crimes Enforcement Network",
+      "issuer": "Federal Communications Commission — Public Notices",
       "jurisdiction": "US",
-      "family": "sanctions_and_enforcement"
+      "family": "telecom_rules_and_licences"
     },
-    "primary_source_id": "us-fincen-index",
-    "n": 10177,
-    "first_seen": "2026-11-13T08:01:59.025457+00:00",
-    "last_seen": "2026-11-13T08:01:59.025457+00:00",
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 10369,
+    "first_seen": "2026-11-13T20:30:06.658433+00:00",
+    "last_seen": "2026-11-13T20:30:06.658433+00:00",
     "source_ids": [
-      "us-fincen-index"
+      "us-fcc-e95ecda3bb"
     ]
   },
   {
-    "title": "Operation Economic Outcast Targets Iran’s Shadow Fleet Networks",
-    "url": "https://www.fincen.gov/news/news-releases/operation-economic-outcast-targets-irans-shadow-fleet-networks",
-    "native_id": "https://www.fincen.gov/news/news-releases/operation-economic-outcast-targets-irans-shadow-fleet-networks",
+    "title": "The Office of International Affairs Provides Filing Instructions for the Submarine Cable Foreign Adversary Annual Report",
+    "url": "https://www.fcc.gov/edoc/426809",
+    "native_id": "426809",
     "published_at": null,
-    "published_raw": null,
-    "summary": "",
+    "published_raw": "",
+    "summary": "The Office of International Affairs announces that submarine cable landing licensees subject to the new Foreign Adversary Annual Report requirement must submit initial reports no later than January 8, 2027, and provides filing instructions.",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Financial Crimes Enforcement Network",
+      "issuer": "Federal Communications Commission — Public Notices",
       "jurisdiction": "US",
-      "family": "sanctions_and_enforcement"
+      "family": "telecom_rules_and_licences"
     },
-    "primary_source_id": "us-fincen-index",
-    "n": 10178,
-    "first_seen": "2026-11-13T08:01:59.025457+00:00",
-    "last_seen": "2026-11-13T08:01:59.025457+00:00",
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 10370,
+    "first_seen": "2026-11-13T20:30:06.658433+00:00",
+    "last_seen": "2026-11-13T20:30:06.658433+00:00",
     "source_ids": [
-      "us-fincen-index"
+      "us-fcc-e95ecda3bb"
     ]
   },
   {
-    "title": "Treasury Press Release: U.S. Treasury Identifies $270 Million in Suspicious Activity Linked to Federal Student Aid Fraud",
-    "url": "https://www.fincen.gov/news/news-releases/treasury-press-release-us-treasury-identifies-270-million-suspicious-activity",
-    "native_id": "https://www.fincen.gov/news/news-releases/treasury-press-release-us-treasury-identifies-270-million-suspicious-activity",
+    "title": "Satellite Licensing Division and Satellite Programs and Policy Division Information - SAT - Actions Taken",
+    "url": "https://www.fcc.gov/edoc/426784",
+    "native_id": "426784",
     "published_at": null,
-    "published_raw": null,
-    "summary": "",
+    "published_raw": "",
+    "summary": ".",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Financial Crimes Enforcement Network",
+      "issuer": "Federal Communications Commission — Public Notices",
       "jurisdiction": "US",
-      "family": "sanctions_and_enforcement"
+      "family": "telecom_rules_and_licences"
     },
-    "primary_source_id": "us-fincen-index",
-    "n": 10179,
-    "first_seen": "2026-11-13T08:01:59.025457+00:00",
-    "last_seen": "2026-11-13T08:01:59.025457+00:00",
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 10371,
+    "first_seen": "2026-11-13T20:30:06.658433+00:00",
+    "last_seen": "2026-11-13T20:30:06.658433+00:00",
     "source_ids": [
-      "us-fincen-index"
+      "us-fcc-e95ecda3bb"
     ]
   },
   {
-    "title": "Operation Economic Outcast Targets Iranian Regime’s Abuse of Religious Charity Networks",
-    "url": "https://www.fincen.gov/news/news-releases/operation-economic-outcast-targets-iranian-regimes-abuse-religious-charity",
-    "native_id": "https://www.fincen.gov/news/news-releases/operation-economic-outcast-targets-iranian-regimes-abuse-religious-charity",
+    "title": "Actions",
+    "url": "https://www.fcc.gov/edoc/426803",
+    "native_id": "426803",
     "published_at": null,
-    "published_raw": null,
-    "summary": "",
+    "published_raw": "",
+    "summary": ".",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Financial Crimes Enforcement Network",
+      "issuer": "Federal Communications Commission — Public Notices",
       "jurisdiction": "US",
-      "family": "sanctions_and_enforcement"
+      "family": "telecom_rules_and_licences"
     },
-    "primary_source_id": "us-fincen-index",
-    "n": 10180,
-    "first_seen": "2026-11-13T08:01:59.025457+00:00",
-    "last_seen": "2026-11-13T08:01:59.025457+00:00",
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 10372,
+    "first_seen": "2026-11-13T20:30:06.658433+00:00",
+    "last_seen": "2026-11-13T20:30:06.658433+00:00",
     "source_ids": [
-      "us-fincen-index"
+      "us-fcc-e95ecda3bb"
     ]
   },
   {
-    "title": "FinCEN Assesses $1.2 Billion Penalty against Bank of America",
-    "url": "https://www.fincen.gov/news/news-releases/fincen-assesses-12-billion-penalty-against-bank-america",
-    "native_id": "https://www.fincen.gov/news/news-releases/fincen-assesses-12-billion-penalty-against-bank-america",
+    "title": "Pleadings",
+    "url": "https://www.fcc.gov/edoc/426804",
+    "native_id": "426804",
     "published_at": null,
-    "published_raw": null,
-    "summary": "",
+    "published_raw": "",
+    "summary": ".",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Financial Crimes Enforcement Network",
+      "issuer": "Federal Communications Commission — Public Notices",
       "jurisdiction": "US",
-      "family": "sanctions_and_enforcement"
+      "family": "telecom_rules_and_licences"
     },
-    "primary_source_id": "us-fincen-index",
-    "n": 10181,
-    "first_seen": "2026-11-13T08:01:59.025457+00:00",
-    "last_seen": "2026-11-13T08:01:59.025457+00:00",
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 10373,
+    "first_seen": "2026-11-13T20:30:06.658433+00:00",
+    "last_seen": "2026-11-13T20:30:06.658433+00:00",
     "source_ids": [
-      "us-fincen-index"
+      "us-fcc-e95ecda3bb"
     ]
   },
   {
-    "title": "FinCEN Announces Withdrawals of Proposed Digital Asset Related Rules",
-    "url": "https://www.fincen.gov/news/news-releases/fincen-announces-withdrawals-proposed-digital-asset-related-rules",
-    "native_id": "https://www.fincen.gov/news/news-releases/fincen-announces-withdrawals-proposed-digital-asset-related-rules",
+    "title": "FCC's Enforcement Bureau Announces Success of Operation Clean Carts and Outlines Best Practices for E-Commerce Platforms to Combat the Sale of Covered List Devices",
+    "url": "https://www.fcc.gov/edoc/426769",
+    "native_id": "426769",
     "published_at": null,
-    "published_raw": null,
-    "summary": "",
+    "published_raw": "",
+    "summary": ".",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Financial Crimes Enforcement Network",
+      "issuer": "Federal Communications Commission — Public Notices",
       "jurisdiction": "US",
-      "family": "sanctions_and_enforcement"
+      "family": "telecom_rules_and_licences"
     },
-    "primary_source_id": "us-fincen-index",
-    "n": 10182,
-    "first_seen": "2026-11-13T08:01:59.025457+00:00",
-    "last_seen": "2026-11-13T08:01:59.025457+00:00",
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 10374,
+    "first_seen": "2026-11-13T20:30:06.658433+00:00",
+    "last_seen": "2026-11-13T20:30:06.658433+00:00",
     "source_ids": [
-      "us-fincen-index"
+      "us-fcc-e95ecda3bb"
     ]
   },
   {
-    "title": "Operation Economic Outcast Takes Unprecedented Action Against Sanctions Evasion Network Used by Iran",
-    "url": "https://www.fincen.gov/news/news-releases/operation-economic-outcast-takes-unprecedented-action-against-sanctions-evasion",
-    "native_id": "https://www.fincen.gov/news/news-releases/operation-economic-outcast-takes-unprecedented-action-against-sanctions-evasion",
+    "title": "Auction of Flexible-Use Licenses in the Upper C-band for Next-Generation Wireless Services; Notice and Filing Requirements, Minimum Opening Bids, Upfront Payments, and Other Procedures for Auction 115; Bidding Scheduled to Begin April 27, 2027",
+    "url": "https://www.fcc.gov/edoc/426724",
+    "native_id": "426724",
     "published_at": null,
-    "published_raw": null,
-    "summary": "",
+    "published_raw": "",
+    "summary": "Announces procedures, deadlines, inventory, and minimum opening bid amounts for the auction of licenses in the 3.98–4.14 GHz portion of the Upper C-band (Auction 115)",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Financial Crimes Enforcement Network",
+      "issuer": "Federal Communications Commission — Public Notices",
       "jurisdiction": "US",
-      "family": "sanctions_and_enforcement"
+      "family": "telecom_rules_and_licences"
     },
-    "primary_source_id": "us-fincen-index",
-    "n": 10183,
-    "first_seen": "2026-11-13T08:01:59.025457+00:00",
-    "last_seen": "2026-11-13T08:01:59.025457+00:00",
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 10375,
+    "first_seen": "2026-11-13T20:30:06.658433+00:00",
+    "last_seen": "2026-11-13T20:30:06.658433+00:00",
     "source_ids": [
-      "us-fincen-index"
+      "us-fcc-e95ecda3bb"
     ]
   },
   {
-    "title": "Treasury Convenes Global Financial Institutions to Advance Operation Economic Outcast",
-    "url": "https://www.fincen.gov/news/news-releases/treasury-convenes-global-financial-institutions-advance-operation-economic",
-    "native_id": "https://www.fincen.gov/news/news-releases/treasury-convenes-global-financial-institutions-advance-operation-economic",
+    "title": "Wireline Competition Bureau Announces Carriers Open Certain RDOF Census Block Groups and E-ACAM Locations in AL, AZ, AR, CA, FL, GA, KS, LA, MI, NE, NV, NC, OH, OK, SC, TX, and VA to Eligibility for Other Funding Programs",
+    "url": "https://www.fcc.gov/edoc/426814",
+    "native_id": "426814",
     "published_at": null,
-    "published_raw": null,
-    "summary": "",
+    "published_raw": "",
+    "summary": ".",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Financial Crimes Enforcement Network",
+      "issuer": "Federal Communications Commission — Public Notices",
       "jurisdiction": "US",
-      "family": "sanctions_and_enforcement"
+      "family": "telecom_rules_and_licences"
     },
-    "primary_source_id": "us-fincen-index",
-    "n": 10184,
-    "first_seen": "2026-11-13T08:01:59.025457+00:00",
-    "last_seen": "2026-11-13T08:01:59.025457+00:00",
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 10376,
+    "first_seen": "2026-11-13T20:30:06.658433+00:00",
+    "last_seen": "2026-11-13T20:30:06.658433+00:00",
     "source_ids": [
-      "us-fincen-index"
+      "us-fcc-e95ecda3bb"
     ]
   },
   {
-    "title": "FinCEN Issues Whistleblower Bulletin on Iran-Related Illicit Finance",
-    "url": "https://www.fincen.gov/news/news-releases/fincen-issues-whistleblower-bulletin-iran-related-illicit-finance",
-    "native_id": "https://www.fincen.gov/news/news-releases/fincen-issues-whistleblower-bulletin-iran-related-illicit-finance",
+    "title": "Streamlined Resolution of Requests Under the Secure and Trusted Communications Networks Reimbursement Program",
+    "url": "https://www.fcc.gov/edoc/426833",
+    "native_id": "426833",
     "published_at": null,
-    "published_raw": null,
-    "summary": "",
+    "published_raw": "",
+    "summary": ".",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Financial Crimes Enforcement Network",
+      "issuer": "Federal Communications Commission — Public Notices",
       "jurisdiction": "US",
-      "family": "sanctions_and_enforcement"
+      "family": "telecom_rules_and_licences"
     },
-    "primary_source_id": "us-fincen-index",
-    "n": 10185,
-    "first_seen": "2026-11-13T08:01:59.025457+00:00",
-    "last_seen": "2026-11-13T08:01:59.025457+00:00",
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 10377,
+    "first_seen": "2026-11-13T20:30:06.658433+00:00",
+    "last_seen": "2026-11-13T20:30:06.658433+00:00",
     "source_ids": [
-      "us-fincen-index"
+      "us-fcc-e95ecda3bb"
     ]
   },
   {
-    "title": "FinCEN Issues Financial Trend Analysis on Health Care Fraud",
-    "url": "https://www.fincen.gov/news/news-releases/fincen-issues-financial-trend-analysis-health-care-fraud",
-    "native_id": "https://www.fincen.gov/news/news-releases/fincen-issues-financial-trend-analysis-health-care-fraud",
+    "title": "Miscellaneous Order",
+    "url": "https://www.supremecourt.gov/orders/courtorders/111326zr_09m1.pdf",
+    "native_id": "https://www.supremecourt.gov/orders/courtorders/111326zr_09m1.pdf",
     "published_at": null,
     "published_raw": null,
     "summary": "",
     "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
+      "document_type": "court_order",
+      "document_stage": "judicial_order_published",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Financial Crimes Enforcement Network",
+      "issuer": "Supreme Court orders of the Court",
       "jurisdiction": "US",
-      "family": "sanctions_and_enforcement"
+      "family": "judicial_decisions"
     },
-    "primary_source_id": "us-fincen-index",
-    "n": 10186,
-    "first_seen": "2026-11-13T08:01:59.025457+00:00",
-    "last_seen": "2026-11-13T08:01:59.025457+00:00",
+    "primary_source_id": "us-supreme-court-orders-index",
+    "n": 10406,
+    "first_seen": "2026-11-13T20:30:06.658433+00:00",
+    "last_seen": "2026-11-13T20:30:06.658433+00:00",
     "source_ids": [
-      "us-fincen-index"
-    ]
-  },
-  {
-    "title": "FinCEN Issues Frequently Asked Questions Regarding Treatment of Verifiable Digital Credentials Under the Customer Identification Program Rule",
-    "url": "https://www.fincen.gov/news/news-releases/fincen-issues-frequently-asked-questions-regarding-treatment-verifiable-digital",
-    "native_id": "https://www.fincen.gov/news/news-releases/fincen-issues-frequently-asked-questions-regarding-treatment-verifiable-digital",
-    "published_at": null,
-    "published_raw": null,
-    "summary": "",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Financial Crimes Enforcement Network",
-      "jurisdiction": "US",
-      "family": "sanctions_and_enforcement"
-    },
-    "primary_source_id": "us-fincen-index",
-    "n": 10187,
-    "first_seen": "2026-11-13T08:01:59.025457+00:00",
-    "last_seen": "2026-11-13T08:01:59.025457+00:00",
-    "source_ids": [
-      "us-fincen-index"
+      "us-supreme-court-orders-index"
     ]
   }
 ]
