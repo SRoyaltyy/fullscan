@@ -1,12 +1,12 @@
 {
   "date": "2026-11-13",
-  "generated_at": "2026-11-13T04:44:12.127802-05:00",
+  "generated_at": "2026-11-13T04:45:39.860605-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
     "ok": 2,
-    "partial": 1,
-    "fail": 5,
+    "partial": 2,
+    "fail": 4,
     "n": 8
   },
   "buy_1d": [],
@@ -146,6 +146,31 @@
         }
       ],
       "preview": "5897 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
+    },
+    {
+      "key": "finviz_digest",
+      "title": "Finviz digest",
+      "date": "2026-11-13",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-13T04:45:39.509198-05:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-11-13_finviz_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 91231,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        },
+        {
+          "path": "01_daily/news/2026-11-13_finviz_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 9962,
+          "preview": "# Finviz Daily Digest \u2014 2026-11-13\n_Generated 2026-11-13T04:33:00.366278-05:00 \u00b7 export=data/exports/finviz_2026-11-12.csv \u00b7 ticker digests=1385 \u00b7 high-signal=520_"
+        }
+      ],
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-11-13\n_Generated 2026-11-13T04:33:00.366278-05:00 \u00b7 export=data/exports/finviz_2026-11-12.csv \u00b7 ticker digests=1385 \u00b7 high-signal=520_"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
