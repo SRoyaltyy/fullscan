@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-13T06:37:28-05:00",
+  "updated_at": "2026-11-13T06:37:34-05:00",
   "runs": [
     {
       "date": "2026-11-05",
@@ -201,12 +201,6 @@
     },
     {
       "date": "2026-11-12",
-      "workflow": "postclose",
-      "file": "2026-11-12_postclose.json",
-      "updated_at": "2026-11-12T17:17:09-05:00"
-    },
-    {
-      "date": "2026-11-12",
       "workflow": "factor_mine",
       "file": "2026-11-12_factor_mine.json",
       "updated_at": "2026-11-12T19:01:21-05:00"
@@ -240,6 +234,12 @@
       "workflow": "postclose",
       "file": "2026-11-11_postclose.json",
       "updated_at": "2026-11-13T06:37:28-05:00"
+    },
+    {
+      "date": "2026-11-12",
+      "workflow": "postclose",
+      "file": "2026-11-12_postclose.json",
+      "updated_at": "2026-11-13T06:37:34-05:00"
     }
   ]
 }
