@@ -15977,3 +15977,5 @@
 {"date":"2026-11-12","kind":"day","name":"union_hot_n4_holdup_preopen","record":"factor_mine","sha256":"1d65df4297073be8c857e755a4c430d878efef579c0b4332401e065b6046bf89"}
 {"date":"2026-11-13","kind":"day","name":"","record":"strategy_tickets","sha256":"7707ad95ae24bd2e7268ddd6f4c0885b928024755c5fb86c9afb7637680931e5"}
 {"date":"2026-11-12","kind":"day","name":"","record":"flatten_robust","sealed_at":"2026-11-13T19:21:47Z","sha256":"8b9c86a3f820ffe9d3a30e7d9c8746ac099c913f2cabd9fe351bb3a3834b0996"}
+{"date":"2026-11-13","kind":"day","name":"union_hot_n4_h1_preopen","record":"factor_mine","sha256":"da353eced1935bcc0cb45939ed2e3b9ae1e6b3960ff335cf29658433240b5705"}
+{"date":"2026-11-13","kind":"day","name":"union_hot_n4_holdup_preopen","record":"factor_mine","sha256":"5649ec2078682c31a81fe6680ebc585d92d7b5a9418e90a445c1b6dfb102d025"}

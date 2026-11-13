@@ -2,7 +2,7 @@
 
 _starts 10-08 open, no past days. Parent recipe `union_hot_n4_holdup` (same selection and exits); candidates only from inputs committed before 09:30 ET._
 
-Equity: 9292.28 | days: 26
+Equity: 9292.17 | days: 27
 
 | date | S | picks | buys | sells | cash | equity | mean% | sit / reason |
 |---|---|---|---|---|---|---|---|---|
@@ -32,3 +32,4 @@ Equity: 9292.28 | days: 26
 | 2026-11-10 | 6.883 | AEHL, GOGO, EVC, FLY | AEHL 196@11.33, GOGO 630@3.53, EVC 239@9.3, FLY 94@23.51 | - | 15.09 | 8885.34 | -0.2585 | - |
 | 2026-11-11 | 12.369 | TLS, INDI, ETON, ATER | INDI 1@2.4146, ATER 4@0.9315 | - | 8.87 | 9448.34 | 6.3363 | - |
 | 2026-11-12 | -7.158 | - | - | AEHL 196@11.33, EVC 239@9.77, FLY 94@26.18, GOGO 630@3.615 | 9286.62 | 9292.28 | -1.6517 | S=-7.16 <= -3: no buys |
+| 2026-11-13 | None | - | - | ATER 4@0.8689, INDI 1@2.19 | 9292.17 | 9292.17 | -0.0012 | seal not committed before 09:30 ET: never committed |
