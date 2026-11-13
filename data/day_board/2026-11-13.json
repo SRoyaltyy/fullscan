@@ -1,19 +1,17 @@
 {
   "date": "2026-11-13",
-  "generated_at": "2026-11-13T04:47:01.651492-05:00",
+  "generated_at": "2026-11-13T04:47:18.527130-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
     "MISSING General predict MD `01_daily/general/2026-11-13_predict.md` \u2014 missing",
     "MISSING News actions JSON `01_daily/news/2026-11-13_actions.json` \u2014 missing",
-    "MISSING News judge MD `01_daily/news/2026-11-13_judge.md` \u2014 missing",
-    "MISSING Weather JSON `01_daily/weather/2026-11-13_weather.json` \u2014 missing",
-    "MISSING AB checklist enriched `data/ab_checklist/2026-11-13_ab_checklist_enriched.csv` \u2014 missing"
+    "MISSING News judge MD `01_daily/news/2026-11-13_judge.md` \u2014 missing"
   ],
   "counts": {
-    "ok": 1,
+    "ok": 4,
     "partial": 3,
-    "fail": 4,
+    "fail": 1,
     "n": 8
   },
   "processes": [
@@ -21,9 +19,9 @@
       "key": "postclose",
       "name": "Post-close research",
       "yaml": "map_heat_postclose.yml",
-      "status": "PARTIAL",
+      "status": "OK",
       "inputs_ready": true,
-      "n_req_ok": 1,
+      "n_req_ok": 2,
       "n_req": 2,
       "n_opt_ok": 2,
       "n_opt": 2,
@@ -58,10 +56,10 @@
           "name": "Map heat tables JSON",
           "path": "01_daily/map_heat/2026-11-13_map_heat.json",
           "role": "required",
-          "status": "FAIL",
-          "reason": "stale_map_heat_md",
-          "size": 0,
-          "said": "stale_map_heat_md \u00b7 morning_overlay \u00b7 11616 names \u00b7 hot Tobacco, Internet Content & Information, Electronic Gaming & Multimedia, Consumer Electronics \u00b7 cold Coking Coal, Utilities - Independent Power Producers, Metal Fabrication \u00b7 macro_gate",
+          "status": "OK",
+          "reason": "",
+          "size": 274460,
+          "said": "morning_overlay \u00b7 11616 names \u00b7 hot Tobacco, Internet Content & Information, Electronic Gaming & Multimedia, Consumer Electronics \u00b7 cold Coking Coal, Utilities - Independent Power Producers, Metal Fabrication \u00b7 macro_gate",
           "bullets": []
         },
         {
@@ -71,10 +69,10 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 18047,
-          "said": "MAP HEAT \u2014 2026-11-12",
+          "size": 18010,
+          "said": "MAP HEAT \u2014 2026-11-13",
           "bullets": [
-            "Export `finviz_2026-11-12.csv` \u00b7 11616 names \u00b7 generated 2026-11-12T04:47:14.383012-05:00",
+            "Export `finviz_2026-11-12.csv` \u00b7 11616 names \u00b7 generated 2026-11-13T04:35:13.239002-05:00",
             "TAPE (live futures)"
           ]
         }
@@ -100,12 +98,12 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 94997,
-          "said": "1543 tickers \u00b7 575 signals \u00b7 top ADP, AMAT, BE, BN, COST, CSCO, ETN, GEV",
+          "size": 91231,
+          "said": "1385 tickers \u00b7 520 signals \u00b7 top ADP, AMD, ARM, AVGO, BA, BE, CAT, COST",
           "bullets": [
             "ADP Increases Cash Dividend; Marks 52nd Consecutive Year of Dividend Increases",
-            "Applied Materials: Fiscal Q4 Earnings Snapshot",
-            "Jensen Huang's Nvidia Exit Rattles AI Power Stocks"
+            "Anthropic's IPO Prospectus by the Head-Spinning Numbers",
+            "Chip Stocks Rally After Slide. These Names Are Leading The Charge Higher."
           ]
         },
         {
@@ -115,10 +113,10 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 10682,
+          "size": 9927,
           "said": "Finviz Daily Digest \u2014 2026-11-13",
           "bullets": [
-            "_Generated 2026-11-13T04:46:48.024771-05:00 \u00b7 export=data/exports/finviz_2026-11-13.csv \u00b7 ticker digests=1543 \u00b7 high-signal=575_",
+            "_Generated 2026-11-13T04:33:00.366278-05:00 \u00b7 export=data/exports/finviz_2026-11-12.csv \u00b7 ticker digests=1385 \u00b7 high-signal=520_",
             "Major indices (live quote page)"
           ]
         },
@@ -129,8 +127,8 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 5955,
-          "said": "US futures trade flat as PPI data and Fed remarks loom amid Nvidia CEO Jensen Huang's resignation and Microsoft outage reports \u00b7 leaders MSFT, NVDA, BKR, USAS, PAVM, NDLS \u00b7 neutral",
+          "size": 5049,
+          "said": "US equity futures point to a softer open ahead of October PPI, Fed speakers and energy data in a catalyst-light session \u00b7 leaders BKR, USAS, NDLS, PAVM \u00b7 bad",
           "bullets": []
         },
         {
@@ -140,10 +138,10 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 2778,
+          "size": 2475,
           "said": "Finviz homepage market digest \u2014 2026-11-13",
           "bullets": [
-            "Generated:** 2026-11-13T04:47:01.395442-05:00 (America/New_York)",
+            "Generated:** 2026-11-13T04:33:10.878695-05:00 (America/New_York)",
             "Source:** `live`"
           ]
         },
@@ -170,11 +168,11 @@
           "bullets": []
         }
       ],
-      "said": "1543 tickers \u00b7 575 signals \u00b7 top ADP, AMAT, BE, BN, COST, CSCO, ETN, GEV",
+      "said": "1385 tickers \u00b7 520 signals \u00b7 top ADP, AMD, ARM, AVGO, BA, BE, CAT, COST",
       "bullets": [
         "ADP Increases Cash Dividend; Marks 52nd Consecutive Year of Dividend Increases",
-        "Applied Materials: Fiscal Q4 Earnings Snapshot",
-        "Jensen Huang's Nvidia Exit Rattles AI Power Stocks"
+        "Anthropic's IPO Prospectus by the Head-Spinning Numbers",
+        "Chip Stocks Rally After Slide. These Names Are Leading The Charge Higher."
       ]
     },
     {
@@ -182,8 +180,8 @@
       "name": "Pre-Open ALL",
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
-      "inputs_ready": false,
-      "n_req_ok": 2,
+      "inputs_ready": true,
+      "n_req_ok": 1,
       "n_req": 9,
       "n_opt_ok": 1,
       "n_opt": 14,
@@ -195,12 +193,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 94997,
-          "said": "1543 tickers \u00b7 575 signals \u00b7 top ADP, AMAT, BE, BN, COST, CSCO, ETN, GEV",
+          "size": 91231,
+          "said": "1385 tickers \u00b7 520 signals \u00b7 top ADP, AMD, ARM, AVGO, BA, BE, CAT, COST",
           "bullets": [
             "ADP Increases Cash Dividend; Marks 52nd Consecutive Year of Dividend Increases",
-            "Applied Materials: Fiscal Q4 Earnings Snapshot",
-            "Jensen Huang's Nvidia Exit Rattles AI Power Stocks"
+            "Anthropic's IPO Prospectus by the Head-Spinning Numbers",
+            "Chip Stocks Rally After Slide. These Names Are Leading The Charge Higher."
           ]
         },
         {
@@ -210,8 +208,8 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 5955,
-          "said": "US futures trade flat as PPI data and Fed remarks loom amid Nvidia CEO Jensen Huang's resignation and Microsoft outage reports \u00b7 leaders MSFT, NVDA, BKR, USAS, PAVM, NDLS \u00b7 neutral",
+          "size": 5049,
+          "said": "US equity futures point to a softer open ahead of October PPI, Fed speakers and energy data in a catalyst-light session \u00b7 leaders BKR, USAS, NDLS, PAVM \u00b7 bad",
           "bullets": []
         },
         {
@@ -230,10 +228,10 @@
           "name": "Map heat tables JSON",
           "path": "01_daily/map_heat/2026-11-13_map_heat.json",
           "role": "input",
-          "status": "FAIL",
-          "reason": "stale_map_heat_md",
-          "size": 0,
-          "said": "stale_map_heat_md \u00b7 morning_overlay \u00b7 11616 names \u00b7 hot Tobacco, Internet Content & Information, Electronic Gaming & Multimedia, Consumer Electronics \u00b7 cold Coking Coal, Utilities - Independent Power Producers, Metal Fabrication \u00b7 macro_gate",
+          "status": "OK",
+          "reason": "",
+          "size": 274460,
+          "said": "morning_overlay \u00b7 11616 names \u00b7 hot Tobacco, Internet Content & Information, Electronic Gaming & Multimedia, Consumer Electronics \u00b7 cold Coking Coal, Utilities - Independent Power Producers, Metal Fabrication \u00b7 macro_gate",
           "bullets": []
         },
         {
@@ -331,8 +329,8 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7592,
-          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 20 fail",
+          "size": 7575,
+          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 18 fail",
           "bullets": [
             "general_predict:missing",
             "events:missing",
@@ -356,13 +354,11 @@
           "name": "Grok review JSON",
           "path": "01_daily/2026-11-13_grok_review.json",
           "role": "required",
-          "status": "OK",
-          "reason": "ok=False Grok returned an empty review",
-          "size": 308,
-          "said": "ok=False \u00b7 empty_review_reply (review)",
-          "bullets": [
-            "Grok returned an empty review"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "sector_basic_materials",
@@ -493,9 +489,9 @@
       "key": "weather",
       "name": "Label + weather",
       "yaml": "label_weather.yml",
-      "status": "FAIL",
+      "status": "OK",
       "inputs_ready": true,
-      "n_req_ok": 0,
+      "n_req_ok": 1,
       "n_req": 1,
       "n_opt_ok": 0,
       "n_opt": 0,
@@ -507,12 +503,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 94997,
-          "said": "1543 tickers \u00b7 575 signals \u00b7 top ADP, AMAT, BE, BN, COST, CSCO, ETN, GEV",
+          "size": 91231,
+          "said": "1385 tickers \u00b7 520 signals \u00b7 top ADP, AMD, ARM, AVGO, BA, BE, CAT, COST",
           "bullets": [
             "ADP Increases Cash Dividend; Marks 52nd Consecutive Year of Dividend Increases",
-            "Applied Materials: Fiscal Q4 Earnings Snapshot",
-            "Jensen Huang's Nvidia Exit Rattles AI Power Stocks"
+            "Anthropic's IPO Prospectus by the Head-Spinning Numbers",
+            "Chip Stocks Rally After Slide. These Names Are Leading The Charge Higher."
           ]
         },
         {
@@ -520,25 +516,31 @@
           "name": "Weather JSON",
           "path": "01_daily/weather/2026-11-13_weather.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "sectors=11 bytes=9651 vix=calm yields=rising",
+          "size": 9651,
+          "said": "favorable 1 \u00b7 hostile 2 \u00b7 neutral 8",
+          "bullets": [
+            "hostile: Energy, Industrials",
+            "events bull 5 / bear 10"
+          ]
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "favorable 1 \u00b7 hostile 2 \u00b7 neutral 8",
+      "bullets": [
+        "hostile: Energy, Industrials",
+        "events bull 5 / bear 10"
+      ]
     },
     {
       "key": "ab",
       "name": "AB checklist",
       "yaml": "ab_checklist.yml",
-      "status": "FAIL",
+      "status": "OK",
       "inputs_ready": true,
-      "n_req_ok": 0,
+      "n_req_ok": 1,
       "n_req": 1,
-      "n_opt_ok": 0,
+      "n_opt_ok": 1,
       "n_opt": 1,
       "files": [
         {
@@ -546,26 +548,32 @@
           "name": "AB checklist raw",
           "path": "data/ab_checklist/2026-11-13_ab_checklist.csv",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "rows=2609",
+          "size": 7524774,
+          "said": "27 rows",
+          "bullets": [
+            "WCN, PM, WMT, ECO, RSG, EW, SONO, HTHT"
+          ]
         },
         {
           "key": "ab_enriched",
           "name": "AB checklist enriched",
           "path": "data/ab_checklist/2026-11-13_ab_checklist_enriched.csv",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "rows=2609",
+          "size": 8299223,
+          "said": "25 rows",
+          "bullets": [
+            "ECO, UNP, RSG, WCN, CHRD, WMT, SB, ASC"
+          ]
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "25 rows",
+      "bullets": [
+        "ECO, UNP, RSG, WCN, CHRD"
+      ]
     },
     {
       "key": "catalyst",
@@ -596,12 +604,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 94997,
-          "said": "1543 tickers \u00b7 575 signals \u00b7 top ADP, AMAT, BE, BN, COST, CSCO, ETN, GEV",
+          "size": 91231,
+          "said": "1385 tickers \u00b7 520 signals \u00b7 top ADP, AMD, ARM, AVGO, BA, BE, CAT, COST",
           "bullets": [
             "ADP Increases Cash Dividend; Marks 52nd Consecutive Year of Dividend Increases",
-            "Applied Materials: Fiscal Q4 Earnings Snapshot",
-            "Jensen Huang's Nvidia Exit Rattles AI Power Stocks"
+            "Anthropic's IPO Prospectus by the Head-Spinning Numbers",
+            "Chip Stocks Rally After Slide. These Names Are Leading The Charge Higher."
           ]
         },
         {
@@ -623,9 +631,9 @@
       "key": "stock_book",
       "name": "Stock Book ALL",
       "yaml": "stock_book_all.yml",
-      "status": "FAIL",
+      "status": "PARTIAL",
       "inputs_ready": false,
-      "n_req_ok": 0,
+      "n_req_ok": 2,
       "n_req": 4,
       "n_opt_ok": 1,
       "n_opt": 4,
@@ -670,12 +678,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 94997,
-          "said": "1543 tickers \u00b7 575 signals \u00b7 top ADP, AMAT, BE, BN, COST, CSCO, ETN, GEV",
+          "size": 91231,
+          "said": "1385 tickers \u00b7 520 signals \u00b7 top ADP, AMD, ARM, AVGO, BA, BE, CAT, COST",
           "bullets": [
             "ADP Increases Cash Dividend; Marks 52nd Consecutive Year of Dividend Increases",
-            "Applied Materials: Fiscal Q4 Earnings Snapshot",
-            "Jensen Huang's Nvidia Exit Rattles AI Power Stocks"
+            "Anthropic's IPO Prospectus by the Head-Spinning Numbers",
+            "Chip Stocks Rally After Slide. These Names Are Leading The Charge Higher."
           ]
         },
         {
@@ -694,44 +702,53 @@
           "name": "Weather JSON",
           "path": "01_daily/weather/2026-11-13_weather.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "sectors=11 bytes=9651 vix=calm yields=rising",
+          "size": 9651,
+          "said": "favorable 1 \u00b7 hostile 2 \u00b7 neutral 8",
+          "bullets": [
+            "hostile: Energy, Industrials",
+            "events bull 5 / bear 10"
+          ]
         },
         {
           "key": "in_ab",
           "name": "AB checklist enriched",
           "path": "data/ab_checklist/2026-11-13_ab_checklist_enriched.csv",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "rows=2609",
+          "size": 8299223,
+          "said": "25 rows",
+          "bullets": [
+            "ECO, UNP, RSG, WCN, CHRD, WMT, SB, ASC"
+          ]
         },
         {
           "key": "join",
           "name": "Join ranked CSV",
           "path": "data/join/2026-11-13_ranked.csv",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "rows=5897",
+          "size": 2235603,
+          "said": "202 rows",
+          "bullets": [
+            "YMM, TDC, AVPT, MPWR, DFIN, ANET, FLYW, KVYO"
+          ]
         },
         {
           "key": "peers",
           "name": "Peer RS CSV",
           "path": "data/peers/2026-11-13_peer_rs.csv",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "rows=5039",
+          "size": 809317,
+          "said": "494 rows",
+          "bullets": [
+            "A, AA, AACG, AAL, AAME, AAMI, AAOI, AAON"
+          ]
         },
         {
           "key": "book_json",
@@ -792,8 +809,10 @@
           "bullets": []
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "202 rows",
+      "bullets": [
+        "YMM, TDC, AVPT, MPWR, DFIN"
+      ]
     },
     {
       "key": "publish",
@@ -867,7 +886,13 @@
     "general": {},
     "sectors": {},
     "news": {},
-    "weather": {}
+    "weather": {
+      "said": "favorable 1 \u00b7 hostile 2 \u00b7 neutral 8",
+      "bullets": [
+        "hostile: Energy, Industrials",
+        "events bull 5 / bear 10"
+      ]
+    }
   },
   "lands": [
     {
@@ -1208,6 +1233,31 @@
         }
       ],
       "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest \u2014 2026-11-13\n**Generated:** 2026-11-13T04:47:01.395442-05:00 (America/New_York)\n**Source:** `live`\n**Banner:** US futures trade flat as PPI data and Fed remarks loom amid Nvidia CEO Jensen Huang's resignation and Microsoft outage reports\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** MSFT, NVDA, BKR, USAS, PAVM, NDLS\n**Next session:** housing no \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** \u2014\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-11-13\n**Clock use:** `same_morning`"
+    },
+    {
+      "key": "ab",
+      "title": "AB checklist",
+      "date": "2026-11-13",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-13T04:47:17.643485-05:00",
+      "files": [
+        {
+          "path": "data/ab_checklist/2026-11-13_ab_checklist.csv",
+          "ok": true,
+          "reason": "",
+          "size": 7524774,
+          "preview": "2609 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 WCN, PM, WMT, ECO, RSG"
+        },
+        {
+          "path": "data/ab_checklist/2026-11-13_ab_checklist_enriched.csv",
+          "ok": true,
+          "reason": "",
+          "size": 8299223,
+          "preview": "2609 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 ECO, UNP, RSG, WCN, CHRD"
+        }
+      ],
+      "preview": "2609 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 WCN, PM, WMT, ECO, RSG \u00b7 2609 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 ECO, UNP, RSG, WCN, CHRD"
     }
   ],
   "href": {
