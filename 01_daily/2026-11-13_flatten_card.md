@@ -1,6 +1,6 @@
 # flatten_robust card — 2026-11-13
 
-_Generated 2026-11-13T18:55:39 — live `flatten_robust`._
+_Generated 2026-11-13T19:21:46 — live `flatten_robust`._
 
 **morning S missing; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**
 
@@ -40,10 +40,10 @@ Sized from marked equity **$122,238.04** as if the book were flat. `io 3d_size (
 
 | Clock | Ticker | Sleeve | Shares | Px | $ | Blocked live by |
 |---|---|---|---:|---:|---:|---|
-| 16:00 ET | DVN | io_core | 525 | $46.48 | $24,404.63 | cash tied |
-| 16:00 ET | ALNY | io_core | 147 | $165.64 | $24,349.08 | cash tied |
-| 16:00 ET | CHRD | io_core | 163 | $149.98 | $24,446.74 | cash tied |
-| 16:00 ET | GRNT | io_core | 3811 | $6.42 | $24,447.56 | cash tied |
-| 16:00 ET | ETON | io_core | 382 | $63.91 | $24,413.62 | cash tied |
+| 16:00 ET | DVN | io_core | 526 | $46.44 | $24,424.81 | cash tied |
+| 16:00 ET | ALNY | io_core | 148 | $164.84 | $24,396.32 | cash tied |
+| 16:00 ET | CHRD | io_core | 162 | $150.24 | $24,338.88 | cash tied |
+| 16:00 ET | GRNT | io_core | 3828 | $6.38 | $24,441.78 | cash tied |
+| 16:00 ET | ETON | io_core | 384 | $63.57 | $24,411.96 | cash tied |
 
 Dashboard: https://sroyaltyy.github.io/fullscan/dashboard/sleeve-merge/
