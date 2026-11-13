@@ -1,0 +1,22 @@
+{
+ "risk_tilt": "off",
+ "macros": [
+  "hawkish",
+  "bearish",
+  "bearish",
+  "hawkish",
+  "bearish",
+  "bearish"
+ ],
+ "sector_tilts": {
+  "Semis/Ai-Infra": "bullish",
+  "Industrials": "bearish",
+  "Ai-Infra": "mixed"
+ },
+ "tickers": {
+  "XLI": -4.0,
+  "XLK": 1.5
+ },
+ "b1_inject": "NEWS_JUDGE: n=8 rescued=4\nMACRO rates: [hawkish] Hot inflation + Goolsbee/Goldman hike odds lift yields (regime/1d-1w)\nMACRO risk: [bearish] Nvidia CEO exit and -10% drop pressure AI leadership/SPX beta (session/1d-1w)\nSECTOR semis/AI-infra: [bullish] CoreWeave backlog + Cisco/AMAT beats revive AI demand (SMH/IGV)\nSECTOR industrials: [bearish] JPMorgan cautious on AI-linked industrials caps ETN/GEV (XLI)\nSECTOR banks: [context] Hancock Whitney/Trustmark deal signals regional-bank consolidation (KRE)\nMACRO housing: [bearish] Existing home sales 16-year low confirms rate drag (session)\nSECTOR AI-infra: [mixed] Cerebras raise vs Nebius capacity cut (AI basket)\nINTERACTION: Hawkish rates caps software multiples; AI-infra bullish vs Nvidia governance bearish = semis mixed; housing weakness is rates confirmation.\nWATCH: Nvidia CEO-exit headline risk can dominate sector fundamentals intraday.",
+ "date": "2026-11-13"
+}
