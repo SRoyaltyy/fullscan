@@ -1,0 +1,118 @@
+{
+  "date": "2026-11-12",
+  "generated_at": "2026-11-12T20:53:55.416480-05:00",
+  "timezone": "America/New_York",
+  "source": "live",
+  "source_url": "https://elite.finviz.com/",
+  "archive_snapshot_ts": null,
+  "archive_snapshot_at": null,
+  "archive_url": null,
+  "clock_legal": true,
+  "clock_same_morning": false,
+  "clock_use": "next_open",
+  "clock_legal_for": "2026-11-13",
+  "capture_slot": "close",
+  "clock_rule": "Live post-close answer-key (~16:05 ET). Always next_open for the NEXT session (2026-11-13) — never same_morning. Writes *_finviz_market_digest_close.* only. Capture only — not tape_anchor / predict / #210.",
+  "kind": "finviz_homepage_market_digest_close",
+  "represents": "Finviz homepage post-close answer-key. clock_use is always next_open; clock_legal_for is the next NYSE session. Lives at *_finviz_market_digest_close.*. Does not replace the same_morning warm-up file. Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "US stocks closed modestly lower as Nvidia leadership turmoil and a bond-yield spike weighed on equities ahead of PPI data and Fed remarks",
+  "raw_text": "- The S&P 500 ($SPX) fell 0.35% to 7,592.40, the Dow Jones Industrial Average ($DJI) dropped 0.36% to 52,297.09, the Nasdaq Composite ($COMP) declined 0.39% to 25,366.09, and the Russell 2000 (IWM) lost 1.66% to 2,799.06.\n- Nvidia (NVDA) shares closed down 4.34% at $166.19 after CEO Jensen Huang resigned amid reports of multiple affairs including an alleged relationship with an employee suspected of being a Chinese spy, with CFO Colette Kress named interim CEO.\n- Vanda Research reported retail investors bought over $111 million of Nvidia (NVDA) stock in the opening half-hour, the largest such inflow on record, helping the stock recover from an intraday loss of nearly 14%.\n- Super Micro Computer (SMCI) fell about 11% after Bloomberg reported a DOJ investigation into whether entities linked to Alice Huang were involved in smuggling Super Micro products to China, while Advanced Micro Devices (AMD) rose 5.86% and Broadcom (AVGO) climbed 5.54% on bets they could gain AI-chip business amid Nvidia (NVDA)’s leadership turmoil.\n- Energy gained 1.5% as a sector, while West Texas Intermediate crude (@CL) slipped about 0.4% to $88.38 per barrel following comments from President Trump that the US does not need a deal with Iran.\n- Nine of 11 S&P 500 sectors declined, led by materials and industrials, after existing home sales dropped to their lowest level since 2010 and bond yields logged their largest one-day surge since 2022 on renewed Fed rate-hike fears.\n- Corteva (CTVA) sank 24.3% after cutting its annual profit forecast, citing weakness in Brazil.\n- Nebius Group (NBIS) slid 16.8% after raising its 2026 capex outlook to $27 billion and narrowing its 2026 revenue outlook to $3.0–$3.2 billion from $3.0–$3.4 billion, citing co-location delays.\n- In after-hours trading, Cerebras Systems (CBRS) rose after an adjusted EPS beat and a higher 2026 core revenue outlook, even as Q3 revenue of $210.8 million missed estimates and OpenAI contract deployments were delayed.\n- Cisco Systems (CSCO) beat fiscal Q1 estimates and raised FY27 guidance, Applied Materials (AMAT) posted record fiscal Q4 results with a stronger Q1 outlook, and Nu Holdings (NU) missed EPS estimates but beat on revenue, while stock index futures rose following the close ahead of Friday’s PPI release and remarks from Fed officials Michelle Bowman and Philip Jefferson.",
+  "raw_summary_md": "- The **S&P 500** ([$SPX](https://finviz.com/index/SPX?p=d)) fell 0.35% to 7,592.40, the **Dow Jones Industrial Average** ([$DJI](https://finviz.com/index/DJI?p=d)) dropped 0.36% to 52,297.09, the **Nasdaq Composite** ([$COMP](https://finviz.com/index/COMP?p=d)) declined 0.39% to 25,366.09, and the **Russell 2000** ([IWM](https://finviz.com/quote?t=IWM)) lost **1.66%** to 2,799.06.\n- **Nvidia** ([NVDA](https://finviz.com/quote?t=NVDA)) shares closed down 4.34% at $166.19 after **CEO Jensen Huang resigned** amid reports of multiple affairs including an alleged relationship with an employee suspected of being a Chinese spy, with CFO Colette Kress named interim CEO.\n- Vanda Research reported retail investors bought over **$111 million** of **Nvidia** ([NVDA](https://finviz.com/quote?t=NVDA)) stock in the opening half-hour, the **largest such inflow** on record, helping the stock recover from an intraday loss of nearly 14%.\n- **Super Micro Computer** ([SMCI](https://finviz.com/quote?t=SMCI)) fell **about 11%** after Bloomberg reported a **DOJ investigation** into whether entities linked to Alice Huang were involved in smuggling Super Micro products to China, while **Advanced Micro Devices** ([AMD](https://finviz.com/quote?t=AMD)) rose 5.86% and **Broadcom** ([AVGO](https://finviz.com/quote?t=AVGO)) climbed 5.54% on bets they could gain AI-chip business amid **Nvidia** ([NVDA](https://finviz.com/quote?t=NVDA))’s leadership turmoil.\n- Energy **gained 1.5%** as a sector, while **West Texas Intermediate crude** ([@CL](https://finviz.com/futures_charts?t=CL)) slipped about 0.4% to $88.38 per barrel following comments from President Trump that the US does not need a deal with Iran.\n- Nine of 11 S&P 500 sectors declined, led by materials and industrials, after existing home sales dropped to their lowest level since 2010 and bond yields logged their largest one-day surge since 2022 on renewed **Fed rate-hike fears**.\n- **Corteva** ([CTVA](https://finviz.com/quote?t=CTVA)) sank **24.3%** after cutting its **annual profit forecast**, citing weakness in Brazil.\n- **Nebius Group** ([NBIS](https://finviz.com/quote?t=NBIS)) slid **16.8%** after raising its 2026 capex outlook to **$27 billion** and narrowing its 2026 revenue outlook to $3.0–$3.2 billion from $3.0–$3.4 billion, citing co-location delays.\n- In after-hours trading, **Cerebras Systems** ([CBRS](https://finviz.com/quote?t=CBRS)) rose after an **adjusted EPS beat** and a higher 2026 core revenue outlook, even as Q3 revenue of $210.8 million missed estimates and OpenAI contract deployments were delayed.\n- **Cisco Systems** ([CSCO](https://finviz.com/quote?t=CSCO)) beat fiscal Q1 estimates and **raised FY27 guidance**, **Applied Materials** ([AMAT](https://finviz.com/quote?t=AMAT)) posted record fiscal Q4 results with a stronger Q1 outlook, and **Nu Holdings** ([NU](https://finviz.com/quote?t=NU)) missed EPS estimates but beat on revenue, while **stock index futures rose** following the close ahead of Friday’s PPI release and remarks from Fed officials Michelle Bowman and Philip Jefferson.",
+  "index_moves": [
+    {
+      "name": "S&P 500",
+      "code": "SPX",
+      "change_pct": -0.35,
+      "verb": "fell"
+    },
+    {
+      "name": "Dow Jones Industrial Average",
+      "code": "DJI",
+      "change_pct": -0.36,
+      "verb": "dropped"
+    },
+    {
+      "name": "Nasdaq Composite",
+      "code": "COMP",
+      "change_pct": -0.39,
+      "verb": "declined"
+    },
+    {
+      "name": "Russell 2000",
+      "code": "RUT",
+      "change_pct": -1.66,
+      "verb": "lost"
+    }
+  ],
+  "oil": {
+    "name": "crude",
+    "price": 88.38,
+    "verb": null,
+    "direction": null
+  },
+  "cpi": null,
+  "fed_odds": null,
+  "named_tickers": [
+    "NVDA",
+    "SMCI",
+    "AMD",
+    "AVGO",
+    "CTVA",
+    "NBIS",
+    "CBRS",
+    "CSCO",
+    "AMAT",
+    "NU"
+  ],
+  "named_leaders": [
+    "NVDA",
+    "SMCI",
+    "AMD",
+    "AVGO",
+    "CTVA",
+    "NBIS",
+    "CBRS",
+    "CSCO",
+    "AMAT",
+    "NU"
+  ],
+  "calendar": [
+    "Cisco Systems (CSCO) beat fiscal Q1 estimates and raised FY27 guidance, Applied Materials (AMAT) posted record fiscal Q4 results with a stronger Q1 outlook, and Nu Holdings (NU) missed EPS estimates but beat on revenue, while stock index futures rose following the close ahead of Friday’s PPI release and remarks from Fed officials Michelle Bowman and Philip Jefferson."
+  ],
+  "prior_close": {
+    "spx": -0.35,
+    "nasdaq": -0.39,
+    "dow": -0.36
+  },
+  "cpi_fed": {
+    "cpi": null,
+    "fed_odds": null
+  },
+  "next_session_calendar": {
+    "housing": true,
+    "retail": false,
+    "fed": true,
+    "bullets": [
+      "Nine of 11 S&P 500 sectors declined, led by materials and industrials, after existing home sales dropped to their lowest level since 2010 and bond yields logged their largest one-day surge since 2022 on renewed Fed rate-hike fears."
+    ],
+    "text": "Nine of 11 S&P 500 sectors declined, led by materials and industrials, after existing home sales dropped to their lowest level since 2010 and bond yields logged their largest one-day surge since 2022 on renewed Fed rate-hike fears."
+  },
+  "earnings_slate": {
+    "tickers": [],
+    "text": ""
+  },
+  "geo_grain": {
+    "geo": true,
+    "grain": false,
+    "flags": [
+      "geo"
+    ],
+    "text": "Energy gained 1.5% as a sector, while West Texas Intermediate crude (@CL) slipped about 0.4% to $88.38 per barrel following comments from President Trump that the US does not need a deal with Iran."
+  },
+  "finviz_id": 343535,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-11-12T20:37:27.45",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "good"
+}
