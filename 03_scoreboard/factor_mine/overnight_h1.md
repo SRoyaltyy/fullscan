@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `overnight` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · baseline list, no extra gate
 
-Cash book **-13.58%** ($8,642) · signal-only (no cash/fees) was -22.61%. Starts YES **0/30**. Fills 204 · skips 80 · realized $-2514.32.
+Cash book **-12.93%** ($8,707) · signal-only (no cash/fees) was -22.61%. Starts YES **0/30**. Fills 212 · skips 80 · realized $-2514.32.
 
 ## How this sleeve decides (like you are 10)
 
@@ -400,6 +400,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-11 09:30 ET | **BUY** | `CURI` | 441 | $2.45 | $5.69 | — | $1,084.91 | — | baseline list, no extra gate; list overnight; ret5=-5.1; leftover $1081.25 | join🟡 sector🟡 gen🟢 news🟡 digest🔴 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-11-11 09:30 ET | **BUY** | `ECO` | 12 | $84.65 | $2.03 | — | $67.09 | — | baseline list, no extra gate; list overnight; 🔵; ⚪; ret5=-12.4; leftover $1081.25 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟡 heat🟢 vol🟡 buy🟡 |
 | 2026-11-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $67.09 | ▲ close $8,642.25 vs 09:30 $8,673.34 (session +14.30) | 16:00 close · cash $67.09 · equity $8,642.25 vs 09:30 $8,673.34 (-31.09; session marks +14.30) · 8 name(s) marked open→close (per-name table). AGRO×121 09:30 $8.90 → close $9.05 +17.55; ALVO×218 09:30 $4.94 → close $4.92 -4.36; AVEX×92 09:30 $11.70 → close $12.13 +39.56; AZ×171 09:30 $6.29 → close $6.25 -6.84; CAE×39 09:30 $27.68 → close $27.39 -11.31; CTVA×89 09:30 $12.12 → close $12.14 +1.78; CURI×441 09:30 $2.45 → close $2.37 -35.28; ECO×12 09:30 $84.65 → close $85.75 +13.20 | — |
+| 2026-11-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $67.09 | ▲ 09:30 equity $8,729.00 vs yday $8,642.25 (+86.75) | 09:30 open · cash $67.09 (unchanged overnight, no fees) · equity $8,729.00 vs prior close $8,642.25 (+86.75) · 8 name(s) re-marked at the open (per-name table). AGRO×121 yday $9.05 → 09:30 $8.86 -22.99; ALVO×218 yday $4.92 → 09:30 $4.49 -93.74; AVEX×92 yday $12.13 → 09:30 $13.65 +139.84; AZ×171 yday $6.25 → 09:30 $6.49 +41.04; CAE×39 yday $27.39 → 09:30 $28.32 +36.27; CTVA×89 yday $12.14 → 09:30 $10.51 -145.07; CURI×441 yday $2.37 → 09:30 $2.73 +158.76; ECO×12 yday $85.75 → 09:30 $83.47 -27.36 | — |
+| 2026-11-12 09:30 ET | **SELL** | `AGRO` | 121 | $8.86 | $2.38 | $-10.18 | $1,136.77 | ▼ -10.18 after sell → book $8,726.62; vs 09:30 mark -2.38 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-11-12 09:30 ET | **SELL** | `ALVO` | 218 | $4.49 | $2.86 | $-103.77 | $2,112.73 | ▼ -103.77 after sell → book $8,723.76; vs 09:30 mark -2.86 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🔴 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-12 09:30 ET | **SELL** | `AVEX` | 92 | $13.65 | $2.29 | $+174.84 | $3,366.24 | ▲ +174.84 after sell → book $8,721.47; vs 09:30 mark -2.29 | dropped from list after 1 sess (min 1) | join🔴 sector🟢 gen🔴 news🟡 digest🔴 judge🔴 ab🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-12 09:30 ET | **SELL** | `AZ` | 171 | $6.49 | $2.54 | $+29.16 | $4,473.49 | ▲ +29.16 after sell → book $8,718.93; vs 09:30 mark -2.54 | dropped from list after 1 sess (min 1) | join🟢 sector🟢 gen🔴 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-11-12 09:30 ET | **SELL** | `CAE` | 39 | $28.32 | $2.13 | $+20.73 | $5,575.84 | ▲ +20.73 after sell → book $8,716.80; vs 09:30 mark -2.13 | dropped from list after 1 sess (min 1) | join🟢 sector🟢 gen🔴 news🟡 digest🔴 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-12 09:30 ET | **SELL** | `CTVA` | 89 | $10.51 | $2.28 | $-147.83 | $6,508.95 | ▼ -147.83 after sell → book $8,714.52; vs 09:30 mark -2.28 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟡 ab🟢 peer🟡 heat🔴 vol🔴 buy🟡 |
+| 2026-11-12 09:30 ET | **SELL** | `CURI` | 441 | $2.73 | $5.77 | $+112.02 | $7,707.10 | ▲ +112.02 after sell → book $8,708.74; vs 09:30 mark -5.78 | dropped from list after 1 sess (min 1) | join🟡 sector🟡 gen🔴 news🟡 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-12 09:30 ET | **SELL** | `ECO` | 12 | $83.47 | $2.05 | $-18.23 | $8,706.70 | ▼ -18.23 after sell → book $8,706.70; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | join🟢 sector🟢 gen🔴 news🟡 digest🔴 judge🔴 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,706.70 | ▲ close $8,706.70 vs 09:30 $8,729.00 (session +0.00) | 16:00 close · cash $8,706.70 · no lots left · equity $8,706.70. | — |
 
 ## Not taken
 

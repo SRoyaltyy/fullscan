@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · news🔴
 
-Cash book **-14.97%** ($8,503) · signal-only (no cash/fees) was +4.61%. Starts YES **16/30**. Fills 231 · skips 28 · realized $+7.41.
+Cash book **-13.86%** ($8,614) · signal-only (no cash/fees) was +4.61%. Starts YES **16/30**. Fills 239 · skips 28 · realized $+7.41.
 
 ## How this sleeve decides (like you are 10)
 
@@ -429,6 +429,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-11 09:30 ET | **SHORT** | `ZURA` | 511 | $1.39 | $6.71 | — | $13,366.50 | — | news🔴; gate news=bad; list yday_mover; ret5=-64.8; leftover $710.55 | join🔴 sector🔴 gen🟢 news🔴 digest🔴 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-11-11 09:30 ET | **SHORT** | `TTWO` | 3 | $227.57 | $2.04 | — | $14,047.17 | — | news🔴; gate news=bad; list ohlc_hot; ret5=+15.2; leftover $710.55 | join🟢 sector🟡 gen🟢 news🔴 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,047.17 | ▲ close $8,503.19 vs 09:30 $8,542.24 (session +8.80) | 16:00 close · cash $14,047.17 · equity $8,503.19 vs 09:30 $8,542.24 (-39.05; session marks +8.80) · 8 name(s) marked open→close (per-name table). INDI×291 09:30 $2.41 → close $2.30 +33.35; PDYN×166 09:30 $3.72 → close $3.46 +43.16; AKBA×1340 09:30 $0.53 → close $0.57 -58.56; HLLY×266 09:30 $2.67 → close $2.51 +42.56; LENZ×173 09:30 $4.10 → close $4.11 -1.73; GCTS×458 09:30 $1.55 → close $1.59 -18.32; ZURA×511 09:30 $1.39 → close $1.43 -20.44; TTWO×3 09:30 $227.57 → close $231.31 -11.22 | — |
+| 2026-11-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $14,047.17 | ▲ 09:30 equity $8,652.49 vs yday $8,503.19 (+149.30) | 09:30 open · cash $14,047.17 (unchanged overnight, no fees) · equity $8,652.49 vs prior close $8,503.19 (+149.30) · 8 name(s) re-marked at the open (per-name table). AKBA×1340 yday $0.57 → 09:30 $0.56 +15.28; GCTS×458 yday $1.59 → 09:30 $1.48 +50.38; HLLY×266 yday $2.51 → 09:30 $2.48 +7.98; INDI×291 yday $2.30 → 09:30 $2.13 +48.02; LENZ×173 yday $4.11 → 09:30 $4.10 +1.73; PDYN×166 yday $3.46 → 09:30 $3.35 +18.26; TTWO×3 yday $231.31 → 09:30 $232.16 -2.55; ZURA×511 yday $1.43 → 09:30 $1.41 +10.22 | — |
+| 2026-11-12 09:30 ET | **COVER** | `AKBA` | 1340 | $0.56 | $11.55 | $-66.21 | $13,282.13 | ▼ -66.21 after sell → book $8,640.94; vs 09:30 mark -11.55 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **COVER** | `GCTS` | 458 | $1.48 | $5.91 | $+20.14 | $12,598.39 | ▲ +20.14 after sell → book $8,635.03; vs 09:30 mark -5.91 | dropped from list after 1 sess (min 1) | join🔴 sector🟢 gen🔴 news🔴 digest🟢 ab🔴 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-12 09:30 ET | **COVER** | `HLLY` | 266 | $2.48 | $3.43 | $+43.60 | $11,935.27 | ▲ +43.60 after sell → book $8,631.60; vs 09:30 mark -3.43 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **COVER** | `INDI` | 291 | $2.13 | $3.75 | $-7.58 | $11,310.23 | ▼ -7.58 after sell → book $8,627.84; vs 09:30 mark -3.76 | dropped from list after 2 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **COVER** | `LENZ` | 173 | $4.10 | $2.51 | $-5.08 | $10,598.43 | ▼ -5.08 after sell → book $8,625.34; vs 09:30 mark -2.50 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **COVER** | `PDYN` | 166 | $3.35 | $2.49 | $+59.71 | $10,039.84 | ▲ +59.71 after sell → book $8,622.85; vs 09:30 mark -2.49 | dropped from list after 2 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **COVER** | `TTWO` | 3 | $232.16 | $2.00 | $-17.81 | $9,341.36 | ▼ -17.81 after sell → book $8,620.85; vs 09:30 mark -2.00 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-12 09:30 ET | **COVER** | `ZURA` | 511 | $1.41 | $6.59 | $-23.52 | $8,614.26 | ▼ -23.52 after sell → book $8,614.26; vs 09:30 mark -6.59 | dropped from list after 1 sess (min 1) | join🟡 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,614.26 | ▲ close $8,614.26 vs 09:30 $8,652.49 (session +0.00) | 16:00 close · cash $8,614.26 · no lots left · equity $8,614.26. | — |
 
 ## Not taken
 

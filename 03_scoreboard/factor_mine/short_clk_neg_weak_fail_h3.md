@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · Clock-B #4 neg catalyst + weakness + failed recovery
 
-Cash book **-8.05%** ($9,195) · signal-only (no cash/fees) was -21.45%. Starts YES **8/30**. Fills 263 · skips 270 · realized $-967.53.
+Cash book **-2.30%** ($9,770) · signal-only (no cash/fees) was -21.45%. Starts YES **8/30**. Fills 269 · skips 270 · realized $-967.53.
 
 ## How this sleeve decides (like you are 10)
 
@@ -461,6 +461,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-11 09:30 ET | **SHORT** | `ZURA` | 1141 | $1.39 | $14.96 | — | $22,812.89 | — | Clock-B #4 neg catalyst + weakness + failed recovery; gate clk_neg_weak_fail=True; list yday_mover; ret5=-64.8; leftover $1586.56 | join🔴 sector🔴 gen🟢 news🔴 digest🔴 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-11-11 09:30 ET | **SHORT** | `DPRO` | 528 | $3.00 | $6.95 | — | $24,389.94 | — | Clock-B #4 neg catalyst + weakness + failed recovery; gate clk_neg_weak_fail=True; list earn_react; 🔵; ret5=-3.0; leftover $1586.56 | join🔴 sector🟢 gen🟢 news🔴 digest🟢 ab🔴 peer🟡 heat🔴 vol🔴 buy🟡 |
 | 2026-11-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $24,389.94 | ▼ close $9,195.03 vs 09:30 $9,543.12 (session -297.30) | 16:00 close · cash $24,389.94 · equity $9,195.03 vs 09:30 $9,543.12 (-348.09; session marks -297.30) · 10 name(s) marked open→close (per-name table). AKBA×2097 09:30 $0.53 → close $0.57 -91.64; DDD×478 09:30 $1.91 → close $1.81 +47.80; HLLY×390 09:30 $2.67 → close $2.51 +62.40; MNTN×158 09:30 $4.93 → close $4.98 -7.90; NRDS×620 09:30 $7.36 → close $7.70 -210.80; TRIP×117 09:30 $7.04 → close $7.47 -50.89; TROX×323 09:30 $2.83 → close $2.82 +3.23; LENZ×386 09:30 $4.10 → close $4.11 -3.86; ZURA×1141 09:30 $1.39 → close $1.43 -45.64; DPRO×528 09:30 $3.00 → close $3.00 -0.00 | — |
+| 2026-11-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $24,389.94 | ▲ 09:30 equity $9,311.04 vs yday $9,195.03 (+116.01) | 09:30 open · cash $24,389.94 (unchanged overnight, no fees) · equity $9,311.04 vs prior close $9,195.03 (+116.01) · 10 name(s) re-marked at the open (per-name table). AKBA×2097 yday $0.57 → 09:30 $0.56 +23.91; DDD×478 yday $1.81 → 09:30 $1.79 +9.56; DPRO×528 yday $3.00 → 09:30 $2.93 +36.96; HLLY×390 yday $2.51 → 09:30 $2.48 +11.70; LENZ×386 yday $4.11 → 09:30 $4.10 +3.86; MNTN×158 yday $4.98 → 09:30 $4.90 +12.64; NRDS×620 yday $7.70 → 09:30 $7.75 -31.00; TRIP×117 yday $7.47 → 09:30 $7.50 -3.51; TROX×323 yday $2.82 → 09:30 $2.73 +29.07; ZURA×1141 yday $1.43 → 09:30 $1.41 +22.82 | — |
+| 2026-11-12 09:30 ET | **COVER** | `AKBA` | 2097 | $0.56 | $18.08 | $-361.03 | $23,192.71 | ▼ -361.03 after sell → book $9,292.95; vs 09:30 mark -18.09 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-12 09:30 ET | **COVER** | `DDD` | 478 | $1.79 | $6.17 | $-17.23 | $22,330.93 | ▼ -17.23 after sell → book $9,286.79; vs 09:30 mark -6.16 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-12 09:30 ET | **COVER** | `HLLY` | 390 | $2.48 | $5.03 | $-127.16 | $21,358.70 | ▼ -127.16 after sell → book $9,281.76; vs 09:30 mark -5.03 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-12 09:30 ET | **COVER** | `MNTN` | 158 | $4.90 | $2.46 | $+70.85 | $20,582.03 | ▲ +70.85 after sell → book $9,279.29; vs 09:30 mark -2.47 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-12 09:30 ET | **COVER** | `TRIP` | 117 | $7.50 | $2.34 | $-35.15 | $19,702.19 | ▼ -35.15 after sell → book $9,276.95; vs 09:30 mark -2.34 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-12 09:30 ET | **COVER** | `TROX` | 323 | $2.73 | $4.17 | $-40.72 | $18,816.24 | ▼ -40.72 after sell → book $9,272.79; vs 09:30 mark -4.16 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $18,816.24 | ▲ close $9,769.82 vs 09:30 $9,311.04 (session +497.03) | 16:00 close · cash $18,816.24 · equity $9,769.82 vs 09:30 $9,311.04 (+458.78; session marks +497.03) · 4 name(s) marked open→close (per-name table). DPRO×528 09:30 $2.93 → close $2.88 +26.40; LENZ×386 09:30 $4.10 → close $4.09 +3.86; NRDS×620 09:30 $7.75 → close $7.31 +272.80; ZURA×1141 09:30 $1.41 → close $1.24 +193.97 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Buys the flatten **wish-list** even on io/HOLD mornings — live `flatten_robust
 
 Side **long** · universe `flatten` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · baseline list, no extra gate
 
-Cash book **-17.95%** ($8,205) · signal-only (no cash/fees) was -9.51%. Starts YES **0/30**. Fills 416 · skips 78 · realized $-357.09.
+Cash book **-18.63%** ($8,137) · signal-only (no cash/fees) was -9.51%. Starts YES **0/30**. Fills 422 · skips 78 · realized $-357.09.
 
 ## How this sleeve decides (like you are 10)
 
@@ -612,6 +612,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-11 09:30 ET | **BUY** | `COTY` | 317 | $4.28 | $4.09 | — | $1,509.26 | — | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ⚪; ret5=+31.6; leftover $1358.05 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-11 09:30 ET | **BUY** | `TTD` | 89 | $15.23 | $2.26 | — | $151.54 | — | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ret5=+19.9; leftover $1358.05 | join🟢 sector🟡 gen🟢 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $151.54 | ▲ close $8,205.16 vs 09:30 $8,159.15 (session +71.50) | 16:00 close · cash $151.54 · equity $8,205.16 vs 09:30 $8,159.15 (+46.01; session marks +71.50) · 6 name(s) marked open→close (per-name table). CLX×12 09:30 $104.89 → close $106.86 +23.64; PFGC×12 09:30 $110.24 → close $111.21 +11.64; KDP×36 09:30 $37.11 → close $38.25 +41.04; PRCH×61 09:30 $22.17 → close $22.14 -1.83; COTY×317 09:30 $4.28 → close $4.06 -69.74; TTD×89 09:30 $15.23 → close $15.98 +66.75 | — |
+| 2026-11-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $151.54 | ▼ 09:30 equity $8,151.95 vs yday $8,205.16 (-53.21) | 09:30 open · cash $151.54 (unchanged overnight, no fees) · equity $8,151.95 vs prior close $8,205.16 (-53.21) · 6 name(s) re-marked at the open (per-name table). CLX×12 yday $106.86 → 09:30 $107.52 +7.92; COTY×317 yday $4.06 → 09:30 $4.09 +9.51; KDP×36 yday $38.25 → 09:30 $36.49 -63.32; PFGC×12 yday $111.21 → 09:30 $111.88 +8.04; PRCH×61 yday $22.14 → 09:30 $22.08 -3.78; TTD×89 yday $15.98 → 09:30 $15.85 -11.57 | — |
+| 2026-11-12 09:30 ET | **SELL** | `CLX` | 12 | $107.52 | $2.05 | $+27.49 | $1,439.73 | ▲ +27.49 after sell → book $8,149.91; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `COTY` | 317 | $4.09 | $4.15 | $-68.47 | $2,732.11 | ▼ -68.47 after sell → book $8,145.76; vs 09:30 mark -4.15 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `KDP` | 36 | $36.49 | $2.12 | $-26.50 | $4,043.67 | ▼ -26.50 after sell → book $8,143.64; vs 09:30 mark -2.12 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `PFGC` | 12 | $111.88 | $2.05 | $+15.61 | $5,384.18 | ▲ +15.61 after sell → book $8,141.59; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `PRCH` | 61 | $22.08 | $2.19 | $-9.98 | $6,728.75 | ▼ -9.98 after sell → book $8,139.40; vs 09:30 mark -2.19 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `TTD` | 89 | $15.85 | $2.28 | $+50.64 | $8,137.11 | ▲ +50.64 after sell → book $8,137.11; vs 09:30 mark -2.29 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,137.11 | ▲ close $8,137.11 vs 09:30 $8,151.95 (session +0.00) | 16:00 close · cash $8,137.11 · no lots left · equity $8,137.11. | — |
 
 ## Not taken
 

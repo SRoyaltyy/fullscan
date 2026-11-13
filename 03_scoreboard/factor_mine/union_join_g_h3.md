@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ join_g, no 🚨
 
-Cash book **-22.21%** ($7,779) · signal-only (no cash/fees) was +0.61%. Starts YES **2/30**. Fills 412 · skips 306 · realized $-674.41.
+Cash book **-26.91%** ($7,309) · signal-only (no cash/fees) was +0.61%. Starts YES **2/30**. Fills 416 · skips 306 · realized $-674.41.
 
 ## How this sleeve decides (like you are 10)
 
@@ -612,6 +612,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-11 09:30 ET | **BUY** | `PCT` | 13 | $2.20 | $0.33 | — | $159.67 | — | union ∩ join_g, no 🚨; gate join=good; list probable,yday_gainer,yday_mover; ret5=-31.7; leftover $28.74 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🟡 vol🟢 buy🟡 |
 | 2026-11-11 09:30 ET | **BUY** | `FRVO` | 2 | $11.88 | $0.24 | — | $135.68 | — | union ∩ join_g, no 🚨; gate join=good; list yday_gainer,yday_mover; 🔵; ret5=+22.1; leftover $28.74 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-11-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $135.68 | ▼ close $7,779.16 vs 09:30 $7,782.70 (session -0.72) | 16:00 close · cash $135.68 · equity $7,779.16 vs 09:30 $7,782.70 (-3.54; session marks -0.72) · 14 name(s) marked open→close (per-name table). ALGN×7 09:30 $174.30 → close $172.08 -15.54; CERT×4 09:30 $12.25 → close $11.73 -2.08; CLOV×11 09:30 $5.01 → close $4.97 -0.44; ETON×19 09:30 $66.94 → close $68.40 +27.74; IREN×59 09:30 $20.96 → close $20.84 -7.08; KRMN×27 09:30 $44.14 → close $44.69 +14.85; RCAT×281 09:30 $4.40 → close $4.29 -30.91; TMDX×13 09:30 $90.95 → close $92.01 +13.78; WRBY×2 09:30 $30.01 → close $30.15 +0.28; ZVRA×4 09:30 $11.92 → close $11.85 -0.28; COTY×6 09:30 $4.28 → close $4.06 -1.32; TTD×1 09:30 $15.23 → close $15.98 +0.75; PCT×13 09:30 $2.20 → close $2.00 -2.60; FRVO×2 09:30 $11.88 → close $12.94 +2.13 | — |
+| 2026-11-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $135.68 | ▼ 09:30 equity $7,590.19 vs yday $7,779.16 (-188.97) | 09:30 open · cash $135.68 (unchanged overnight, no fees) · equity $7,590.19 vs prior close $7,779.16 (-188.97) · 14 name(s) re-marked at the open (per-name table). ALGN×7 yday $172.08 → 09:30 $171.45 -4.41; CERT×4 yday $11.73 → 09:30 $11.73 +0.00; CLOV×11 yday $4.97 → 09:30 $4.92 -0.55; COTY×6 yday $4.06 → 09:30 $4.09 +0.18; ETON×19 yday $68.40 → 09:30 $68.38 -0.38; FRVO×2 yday $12.94 → 09:30 $12.33 -1.22; IREN×59 yday $20.84 → 09:30 $19.02 -107.38; KRMN×27 yday $44.69 → 09:30 $43.90 -21.33; PCT×13 yday $2.00 → 09:30 $1.96 -0.52; RCAT×281 yday $4.29 → 09:30 $4.12 -47.77; TMDX×13 yday $92.01 → 09:30 $91.65 -4.68; TTD×1 yday $15.98 → 09:30 $15.85 -0.13; WRBY×2 yday $30.15 → 09:30 $29.96 -0.38; ZVRA×4 yday $11.85 → 09:30 $11.75 -0.40 | — |
+| 2026-11-12 09:30 ET | **SELL** | `CERT` | 4 | $11.73 | $0.50 | $-2.32 | $182.10 | ▼ -2.32 after sell → book $7,589.69; vs 09:30 mark -0.50 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-12 09:30 ET | **SELL** | `CLOV` | 11 | $4.92 | $0.59 | $-0.72 | $235.62 | ▼ -0.72 after sell → book $7,589.09; vs 09:30 mark -0.60 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-12 09:30 ET | **SELL** | `WRBY` | 2 | $29.96 | $0.63 | $+6.95 | $294.92 | ▲ +6.95 after sell → book $7,588.47; vs 09:30 mark -0.62 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-12 09:30 ET | **SELL** | `ZVRA` | 4 | $11.75 | $0.50 | $-0.58 | $341.42 | ▼ -0.58 after sell → book $7,587.97; vs 09:30 mark -0.50 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $341.42 | ▼ close $7,308.66 vs 09:30 $7,590.19 (session -279.31) | 16:00 close · cash $341.42 · equity $7,308.66 vs 09:30 $7,590.19 (-281.53; session marks -279.31) · 10 name(s) marked open→close (per-name table). ALGN×7 09:30 $171.45 → close $166.97 -31.36; COTY×6 09:30 $4.09 → close $4.03 -0.36; ETON×19 09:30 $68.38 → close $61.45 -131.67; FRVO×2 09:30 $12.33 → close $11.65 -1.36; IREN×59 09:30 $19.02 → close $19.48 +27.14; KRMN×27 09:30 $43.90 → close $40.50 -91.80; PCT×13 09:30 $1.96 → close $1.80 -2.08; RCAT×281 09:30 $4.12 → close $3.94 -51.99; TMDX×13 09:30 $91.65 → close $92.00 +4.55; TTD×1 09:30 $15.85 → close $15.47 -0.38 | — |
 
 ## Not taken
 

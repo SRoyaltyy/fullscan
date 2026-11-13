@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · Clock-B #2 fresh catalyst + limited extension (research; not KEEP)
 
-Cash book **-24.47%** ($7,553) · signal-only (no cash/fees) was -4.91%. Starts YES **13/30**. Fills 450 · skips 106 · realized $-137.13.
+Cash book **-26.90%** ($7,310) · signal-only (no cash/fees) was -4.91%. Starts YES **13/30**. Fills 458 · skips 106 · realized $-137.13.
 
 ## How this sleeve decides (like you are 10)
 
@@ -652,6 +652,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-11 09:30 ET | **BUY** | `SONO` | 52 | $17.50 | $2.15 | — | $989.75 | — | Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list earn_react; ⚪; ret5=+6.0; leftover $915.84 | join🟡 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-11-11 09:30 ET | **BUY** | `AMPX` | 102 | $8.96 | $2.30 | — | $73.54 | — | Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list earn_react; 🔵; ret5=+3.9; leftover $915.84 | join🟡 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
 | 2026-11-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $73.54 | ▲ close $7,553.35 vs 09:30 $7,346.03 (session +243.50) | 16:00 close · cash $73.54 · equity $7,553.35 vs 09:30 $7,346.03 (+207.32; session marks +243.50) · 8 name(s) marked open→close (per-name table). CECO×15 09:30 $58.47 → close $53.50 -74.55; EMBJ×11 09:30 $82.46 → close $82.43 -0.33; CRWV×16 09:30 $55.97 → close $60.77 +76.80; REZI×44 09:30 $20.66 → close $23.00 +102.96; ATRO×16 09:30 $56.86 → close $60.33 +55.52; GO×73 09:30 $12.52 → close $13.12 +43.80; SONO×52 09:30 $17.50 → close $19.06 +81.12; AMPX×102 09:30 $8.96 → close $8.55 -41.82 | — |
+| 2026-11-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $73.54 | ▼ 09:30 equity $7,327.52 vs yday $7,553.35 (-225.83) | 09:30 open · cash $73.54 (unchanged overnight, no fees) · equity $7,327.52 vs prior close $7,553.35 (-225.83) · 8 name(s) re-marked at the open (per-name table). AMPX×102 yday $8.55 → 09:30 $8.10 -45.90; ATRO×16 yday $60.33 → 09:30 $58.05 -36.48; CECO×15 yday $53.50 → 09:30 $54.34 +12.60; CRWV×16 yday $60.77 → 09:30 $50.89 -158.04; EMBJ×11 yday $82.43 → 09:30 $81.56 -9.57; GO×73 yday $13.12 → 09:30 $13.08 -2.92; REZI×44 yday $23.00 → 09:30 $23.40 +17.60; SONO×52 yday $19.06 → 09:30 $19.00 -3.12 | — |
+| 2026-11-12 09:30 ET | **SELL** | `AMPX` | 102 | $8.10 | $2.32 | $-92.34 | $897.42 | ▼ -92.34 after sell → book $7,325.19; vs 09:30 mark -2.33 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `ATRO` | 16 | $58.05 | $2.06 | $+14.94 | $1,824.16 | ▲ +14.94 after sell → book $7,323.14; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `CECO` | 15 | $54.34 | $2.06 | $-66.04 | $2,637.20 | ▼ -66.04 after sell → book $7,321.08; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `CRWV` | 16 | $50.89 | $2.06 | $-85.34 | $3,449.42 | ▼ -85.34 after sell → book $7,319.02; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `EMBJ` | 11 | $81.56 | $2.04 | $-13.97 | $4,344.54 | ▼ -13.97 after sell → book $7,316.98; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `GO` | 73 | $13.08 | $2.23 | $+36.44 | $5,297.15 | ▲ +36.44 after sell → book $7,314.75; vs 09:30 mark -2.23 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `REZI` | 44 | $23.40 | $2.14 | $+116.30 | $6,324.61 | ▲ +116.30 after sell → book $7,312.61; vs 09:30 mark -2.14 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `SONO` | 52 | $19.00 | $2.17 | $+73.69 | $7,310.44 | ▲ +73.69 after sell → book $7,310.44; vs 09:30 mark -2.17 | dropped from list after 1 sess (min 1) | join🟢 sector🟢 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,310.44 | ▲ close $7,310.44 vs 09:30 $7,327.52 (session +0.00) | 16:00 close · cash $7,310.44 · no lots left · equity $7,310.44. | — |
 
 ## Not taken
 

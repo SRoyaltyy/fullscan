@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ flow_in hold 5, no 🚨
 
-Cash book **-6.87%** ($9,313) · signal-only (no cash/fees) was -2.74%. Starts YES **16/30**. Fills 90 · skips 144 · realized $+404.42.
+Cash book **-7.70%** ($9,230) · signal-only (no cash/fees) was -2.74%. Starts YES **16/30**. Fills 90 · skips 144 · realized $+404.42.
 
 ## How this sleeve decides (like you are 10)
 
@@ -290,6 +290,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-11 09:30 ET | **BUY** | `SONO` | 67 | $17.50 | $2.19 | — | $1,208.61 | — | union ∩ flow_in hold 5, no 🚨; gate flow_in=True; list earn_react; ⚪; ret5=+6.0; leftover $1176.12 | join🟡 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-11-11 09:30 ET | **BUY** | `ENS` | 7 | $156.29 | $2.01 | — | $112.57 | — | union ∩ flow_in hold 5, no 🚨; gate flow_in=True; list overnight; ret5=-9.9; leftover $1176.12 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🟡 buy🟡 |
 | 2026-11-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $112.57 | ▼ close $9,313.30 vs 09:30 $9,429.29 (session -75.29) | 16:00 close · cash $112.57 · equity $9,313.30 vs 09:30 $9,429.29 (-115.99; session marks -75.29) · 8 name(s) marked open→close (per-name table). CLX×11 09:30 $104.89 → close $106.86 +21.67; CECO×20 09:30 $58.47 → close $53.50 -99.40; GFR×152 09:30 $7.70 → close $7.70 +0.00; PDYN×316 09:30 $3.72 → close $3.46 -82.16; GO×93 09:30 $12.52 → close $13.12 +55.80; ICL×254 09:30 $4.63 → close $4.57 -15.24; SONO×67 09:30 $17.50 → close $19.06 +104.52; ENS×7 09:30 $156.29 → close $147.65 -60.48 | — |
+| 2026-11-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $112.57 | ▼ 09:30 equity $9,298.84 vs yday $9,313.30 (-14.46) | 09:30 open · cash $112.57 (unchanged overnight, no fees) · equity $9,298.84 vs prior close $9,313.30 (-14.46) · 8 name(s) re-marked at the open (per-name table). CECO×20 yday $53.50 → 09:30 $54.34 +16.80; CLX×11 yday $106.86 → 09:30 $107.52 +7.26; ENS×7 yday $147.65 → 09:30 $145.97 -11.76; GFR×152 yday $7.70 → 09:30 $7.72 +3.04; GO×93 yday $13.12 → 09:30 $13.08 -3.72; ICL×254 yday $4.57 → 09:30 $4.62 +12.70; PDYN×316 yday $3.46 → 09:30 $3.35 -34.76; SONO×67 yday $19.06 → 09:30 $19.00 -4.02 | — |
+| 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $112.57 | ▼ close $9,230.45 vs 09:30 $9,298.84 (session -68.39) | 16:00 close · cash $112.57 · equity $9,230.45 vs 09:30 $9,298.84 (-68.39; session marks -68.39) · 8 name(s) marked open→close (per-name table). CECO×20 09:30 $54.34 → close $56.00 +33.20; CLX×11 09:30 $107.52 → close $108.20 +7.48; ENS×7 09:30 $145.97 → close $147.80 +12.81; GFR×152 09:30 $7.72 → close $7.73 +1.52; GO×93 09:30 $13.08 → close $12.85 -21.39; ICL×254 09:30 $4.62 → close $4.59 -7.62; PDYN×316 09:30 $3.35 → close $3.24 -34.76; SONO×67 09:30 $19.00 → close $18.11 -59.63 | — |
 
 ## Not taken
 

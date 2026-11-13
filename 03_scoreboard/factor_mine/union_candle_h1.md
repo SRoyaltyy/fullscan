@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ candle, no 🚨
 
-Cash book **-17.46%** ($8,254) · signal-only (no cash/fees) was -3.26%. Starts YES **0/30**. Fills 570 · skips 106 · realized $-563.17.
+Cash book **-20.11%** ($7,989) · signal-only (no cash/fees) was -3.26%. Starts YES **0/30**. Fills 578 · skips 106 · realized $-563.17.
 
 ## How this sleeve decides (like you are 10)
 
@@ -770,6 +770,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-11 09:30 ET | **BUY** | `INDI` | 428 | $2.41 | $5.52 | — | $1,075.45 | — | union ∩ candle, no 🚨; gate candle_capture=True; list yday_gainer; ret5=+52.0; leftover $1034.94 | join🔴 sector🟢 gen🟢 news🔴 digest🟡 ab🔴 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-11-11 09:30 ET | **BUY** | `QXO` | 75 | $13.70 | $2.21 | — | $45.74 | — | union ∩ candle, no 🚨; gate candle_capture=True; list yday_gainer; 🔵; ret5=+17.3; leftover $1034.94 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-11-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $45.74 | ▼ close $8,253.66 vs 09:30 $8,300.19 (session -2.14) | 16:00 close · cash $45.74 · equity $8,253.66 vs 09:30 $8,300.19 (-46.53; session marks -2.14) · 8 name(s) marked open→close (per-name table). KDP×27 09:30 $37.11 → close $38.25 +30.78; COTY×241 09:30 $4.28 → close $4.06 -53.02; TTD×67 09:30 $15.23 → close $15.98 +50.25; TLS×132 09:30 $7.80 → close $7.65 -19.80; FRVO×87 09:30 $11.88 → close $12.94 +92.65; UAMY×311 09:30 $3.32 → close $3.12 -62.20; INDI×428 09:30 $2.41 → close $2.30 -49.05; QXO×75 09:30 $13.70 → close $13.81 +8.25 | — |
+| 2026-11-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $45.74 | ▼ 09:30 equity $8,013.22 vs yday $8,253.66 (-240.44) | 09:30 open · cash $45.74 (unchanged overnight, no fees) · equity $8,013.22 vs prior close $8,253.66 (-240.44) · 8 name(s) re-marked at the open (per-name table). COTY×241 yday $4.06 → 09:30 $4.09 +7.23; FRVO×87 yday $12.94 → 09:30 $12.33 -53.07; INDI×428 yday $2.30 → 09:30 $2.13 -70.62; KDP×27 yday $38.25 → 09:30 $36.49 -47.49; QXO×75 yday $13.81 → 09:30 $13.38 -32.25; TLS×132 yday $7.65 → 09:30 $7.64 -1.32; TTD×67 yday $15.98 → 09:30 $15.85 -8.71; UAMY×311 yday $3.12 → 09:30 $3.01 -34.21 | — |
+| 2026-11-12 09:30 ET | **SELL** | `COTY` | 241 | $4.09 | $3.16 | $-52.06 | $1,028.27 | ▼ -52.06 after sell → book $8,010.06; vs 09:30 mark -3.16 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `FRVO` | 87 | $12.33 | $2.28 | $+35.06 | $2,098.71 | ▲ +35.06 after sell → book $8,007.78; vs 09:30 mark -2.28 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `INDI` | 428 | $2.13 | $5.60 | $-130.79 | $3,006.88 | ▼ -130.79 after sell → book $8,002.18; vs 09:30 mark -5.60 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `KDP` | 27 | $36.49 | $2.09 | $-20.88 | $3,990.05 | ▼ -20.88 after sell → book $8,000.09; vs 09:30 mark -2.09 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `QXO` | 75 | $13.38 | $2.24 | $-28.45 | $4,991.31 | ▼ -28.45 after sell → book $7,997.85; vs 09:30 mark -2.24 | dropped from list after 1 sess (min 1) | join🔴 sector🟢 gen🔴 news🟢 digest🔴 judge🔴 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-12 09:30 ET | **SELL** | `TLS` | 132 | $7.64 | $2.42 | $-25.92 | $5,997.37 | ▼ -25.92 after sell → book $7,995.43; vs 09:30 mark -2.42 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `TTD` | 67 | $15.85 | $2.21 | $+37.14 | $7,057.11 | ▲ +37.14 after sell → book $7,993.22; vs 09:30 mark -2.21 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `UAMY` | 311 | $3.01 | $4.07 | $-104.50 | $7,989.15 | ▼ -104.50 after sell → book $7,989.15; vs 09:30 mark -4.07 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,989.15 | ▲ close $7,989.15 vs 09:30 $8,013.22 (session +0.00) | 16:00 close · cash $7,989.15 · no lots left · equity $7,989.15. | — |
 
 ## Not taken
 

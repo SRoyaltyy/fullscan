@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `yday_gainer` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · baseline list, no extra gate
 
-Cash book **-34.44%** ($6,556) · signal-only (no cash/fees) was +49.33%. Starts YES **2/30**. Fills 312 · skips 312 · realized $-869.27.
+Cash book **-37.37%** ($6,263) · signal-only (no cash/fees) was +49.33%. Starts YES **2/30**. Fills 313 · skips 312 · realized $-869.27.
 
 ## How this sleeve decides (like you are 10)
 
@@ -508,6 +508,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-11 09:30 ET | **BUY** | `CECO` | 14 | $58.47 | $2.03 | — | $804.18 | — | baseline list, no extra gate; list probable,yday_gainer; 🔵; ret5=+3.2; leftover $829.82 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🔴 peer🟢 heat🟡 vol🟢 buy🟡 |
 | 2026-11-11 09:30 ET | **BUY** | `TLS` | 102 | $7.80 | $2.30 | — | $6.29 | — | baseline list, no extra gate; list yday_gainer,yday_mover; 🔵; ret5=+48.9; leftover $829.82 | join🔴 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6.29 | ▼ close $6,555.87 vs 09:30 $6,684.48 (session -36.62) | 16:00 close · cash $6.29 · equity $6,555.87 vs 09:30 $6,684.48 (-128.61; session marks -36.62) · 9 name(s) marked open→close (per-name table). ECX×1 09:30 $0.76 → close $0.79 +0.03; AKBA×1565 09:30 $0.53 → close $0.57 +68.39; SWMR×99 09:30 $8.35 → close $9.43 +106.92; HLLY×310 09:30 $2.67 → close $2.51 -49.60; INO×605 09:30 $1.37 → close $1.48 +63.52; PCT×377 09:30 $2.20 → close $2.00 -75.40; RC×821 09:30 $1.01 → close $0.93 -65.60; CECO×14 09:30 $58.47 → close $53.50 -69.58; TLS×102 09:30 $7.80 → close $7.65 -15.30 | — |
+| 2026-11-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6.29 | ▼ 09:30 equity $6,467.49 vs yday $6,555.87 (-88.38) | 09:30 open · cash $6.29 (unchanged overnight, no fees) · equity $6,467.49 vs prior close $6,555.87 (-88.38) · 9 name(s) re-marked at the open (per-name table). AKBA×1565 yday $0.57 → 09:30 $0.56 -17.84; CECO×14 yday $53.50 → 09:30 $54.34 +11.76; ECX×1 yday $0.79 → 09:30 $0.78 -0.01; HLLY×310 yday $2.51 → 09:30 $2.48 -9.30; INO×605 yday $1.48 → 09:30 $1.44 -21.18; PCT×377 yday $2.00 → 09:30 $1.96 -15.08; RC×821 yday $0.93 → 09:30 $0.93 -0.08; SWMR×99 yday $9.43 → 09:30 $9.07 -35.64; TLS×102 yday $7.65 → 09:30 $7.64 -1.02 | — |
+| 2026-11-12 09:30 ET | **SELL** | `ECX` | 1 | $0.78 | $0.03 | $-0.06 | $7.04 | ▼ -0.06 after sell → book $6,467.46; vs 09:30 mark -0.03 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7.04 | ▼ close $6,263.47 vs 09:30 $6,467.49 (session -203.99) | 16:00 close · cash $7.04 · equity $6,263.47 vs 09:30 $6,467.49 (-204.02; session marks -203.99) · 8 name(s) marked open→close (per-name table). AKBA×1565 09:30 $0.56 → close $0.50 -100.63; CECO×14 09:30 $54.34 → close $56.00 +23.24; HLLY×310 09:30 $2.48 → close $2.36 -37.20; INO×605 09:30 $1.44 → close $1.46 +12.10; PCT×377 09:30 $1.96 → close $1.80 -60.32; RC×821 09:30 $0.93 → close $0.91 -15.68; SWMR×99 09:30 $9.07 → close $8.73 -33.66; TLS×102 09:30 $7.64 → close $7.72 +8.16 | — |
 
 ## Not taken
 

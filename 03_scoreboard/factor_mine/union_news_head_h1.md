@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · prior-export headline🟢 only
 
-Cash book **-55.80%** ($4,420) · signal-only (no cash/fees) was +13.09%. Starts YES **0/30**. Fills 334 · skips 65 · realized $-814.48.
+Cash book **-56.84%** ($4,316) · signal-only (no cash/fees) was +13.09%. Starts YES **0/30**. Fills 342 · skips 65 · realized $-814.48.
 
 ## How this sleeve decides (like you are 10)
 
@@ -535,6 +535,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-11 09:30 ET | **BUY** | `RSKD` | 51 | $10.50 | $2.14 | — | $717.54 | — | prior-export headline🟢 only; gate headline=good; rank cond; list earn_react; 🔵; ret5=-1.6; leftover $537.42 | join🔴 sector🟢 gen🟢 news🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-11-11 09:30 ET | **BUY** | `CAPR` | 54 | $9.85 | $2.15 | — | $183.49 | — | prior-export headline🟢 only; gate headline=good; rank cond; list earn_react; ret5=+7.6; leftover $537.42 | join🔴 sector🔴 gen🟢 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-11-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $183.49 | ▲ close $4,420.17 vs 09:30 $4,316.50 (session +137.36) | 16:00 close · cash $183.49 · equity $4,420.17 vs 09:30 $4,316.50 (+103.67; session marks +137.36) · 8 name(s) marked open→close (per-name table). LOAR×6 09:30 $79.53 → close $79.24 -1.74; FLYW×24 09:30 $22.21 → close $22.25 +0.96; LINC×23 09:30 $23.32 → close $23.51 +4.37; PFGC×4 09:30 $110.24 → close $111.21 +3.88; FRVO×45 09:30 $11.88 → close $12.94 +47.92; AOSL×17 09:30 $30.00 → close $30.86 +14.62; RSKD×51 09:30 $10.50 → close $10.37 -6.63; CAPR×54 09:30 $9.85 → close $11.22 +73.98 | — |
+| 2026-11-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $183.49 | ▼ 09:30 equity $4,332.36 vs yday $4,420.17 (-87.81) | 09:30 open · cash $183.49 (unchanged overnight, no fees) · equity $4,332.36 vs prior close $4,420.17 (-87.81) · 8 name(s) re-marked at the open (per-name table). AOSL×17 yday $30.86 → 09:30 $29.12 -29.55; CAPR×54 yday $11.22 → 09:30 $10.95 -14.58; FLYW×24 yday $22.25 → 09:30 $22.14 -2.64; FRVO×45 yday $12.94 → 09:30 $12.33 -27.45; LINC×23 yday $23.51 → 09:30 $23.30 -4.83; LOAR×6 yday $79.24 → 09:30 $78.31 -5.58; PFGC×4 yday $111.21 → 09:30 $111.88 +2.68; RSKD×51 yday $10.37 → 09:30 $10.26 -5.86 | — |
+| 2026-11-12 09:30 ET | **SELL** | `AOSL` | 17 | $29.12 | $2.06 | $-19.03 | $676.50 | ▼ -19.03 after sell → book $4,330.30; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `CAPR` | 54 | $10.95 | $2.17 | $+55.08 | $1,265.63 | ▲ +55.08 after sell → book $4,328.13; vs 09:30 mark -2.17 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `FLYW` | 24 | $22.14 | $2.08 | $-5.82 | $1,794.91 | ▼ -5.82 after sell → book $4,326.04; vs 09:30 mark -2.09 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `FRVO` | 45 | $12.33 | $2.15 | $+16.21 | $2,347.61 | ▲ +16.21 after sell → book $4,323.90; vs 09:30 mark -2.14 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `LINC` | 23 | $23.30 | $2.08 | $-4.60 | $2,881.43 | ▼ -4.60 after sell → book $4,321.82; vs 09:30 mark -2.08 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `LOAR` | 6 | $78.31 | $2.03 | $-11.36 | $3,349.27 | ▼ -11.36 after sell → book $4,319.79; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `PFGC` | 4 | $111.88 | $2.02 | $+2.54 | $3,794.76 | ▲ +2.54 after sell → book $4,317.77; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `RSKD` | 51 | $10.26 | $2.16 | $-16.80 | $4,315.61 | ▼ -16.80 after sell → book $4,315.61; vs 09:30 mark -2.16 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $4,315.61 | ▲ close $4,315.61 vs 09:30 $4,332.36 (session +0.00) | 16:00 close · cash $4,315.61 · no lots left · equity $4,315.61. | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 2 · rank `cond` · size `topheavy` · sell `list` · S-boost `none` · topheavy leftover on news🟢 +7 −≤1
 
-Cash book **-21.57%** ($7,843) · signal-only (no cash/fees) was -13.89%. Starts YES **4/30**. Fills 74 · skips 6 · realized $-1349.66.
+Cash book **-20.79%** ($7,921) · signal-only (no cash/fees) was -13.89%. Starts YES **4/30**. Fills 76 · skips 6 · realized $-1349.66.
 
 ## How this sleeve decides (like you are 10)
 
@@ -277,6 +277,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-11 09:30 ET | **BUY** | `ALH` | 134 | $24.92 | $2.39 | — | $5,024.56 | — | topheavy leftover on news🟢 +7 −≤1; gate cam_bad_max=1,n_pos_min=7,news=good; rank cond; list ohlc_hot; 🔵; ⚪; ret5=+12.9; leftover $3346.49 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-11-11 09:30 ET | **BUY** | `CECO` | 85 | $58.47 | $2.25 | — | $52.37 | — | topheavy leftover on news🟢 +7 −≤1; gate cam_bad_max=1,n_pos_min=7,news=good; rank cond; list probable,yday_gainer; 🔵; ret5=+3.2; leftover $5019.74 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🔴 peer🟢 heat🟡 vol🟢 buy🟡 |
 | 2026-11-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $52.37 | ▼ close $7,842.67 vs 09:30 $8,370.80 (session -518.93) | 16:00 close · cash $52.37 · equity $7,842.67 vs 09:30 $8,370.80 (-528.13; session marks -518.93) · 2 name(s) marked open→close (per-name table). ALH×134 09:30 $24.92 → close $24.20 -96.48; CECO×85 09:30 $58.47 → close $53.50 -422.45 | — |
+| 2026-11-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $52.37 | ▲ 09:30 equity $7,926.13 vs yday $7,842.67 (+83.46) | 09:30 open · cash $52.37 (unchanged overnight, no fees) · equity $7,926.13 vs prior close $7,842.67 (+83.46) · 2 name(s) re-marked at the open (per-name table). ALH×134 yday $24.20 → 09:30 $24.29 +12.06; CECO×85 yday $53.50 → 09:30 $54.34 +71.40 | — |
+| 2026-11-12 09:30 ET | **SELL** | `ALH` | 134 | $24.29 | $2.44 | $-89.25 | $3,304.79 | ▼ -89.25 after sell → book $7,923.69; vs 09:30 mark -2.44 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `CECO` | 85 | $54.34 | $2.30 | $-355.59 | $7,921.39 | ▼ -355.59 after sell → book $7,921.39; vs 09:30 mark -2.30 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,921.39 | ▲ close $7,921.39 vs 09:30 $7,926.13 (session +0.00) | 16:00 close · cash $7,921.39 · no lots left · equity $7,921.39. | — |
 
 ## Not taken
 

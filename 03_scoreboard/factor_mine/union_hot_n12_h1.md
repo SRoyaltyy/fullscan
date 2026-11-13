@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 12 · rank `hot_score` · size `leftover` · sell `list` · S-boost `none` · top 12 by hot
 
-Cash book **+7.27%** ($10,727) · signal-only (no cash/fees) was +34.72%. Starts YES **29/30**. Fills 829 · skips 145 · realized $-34.73.
+Cash book **+5.78%** ($10,578) · signal-only (no cash/fees) was +34.72%. Starts YES **29/30**. Fills 841 · skips 145 · realized $-34.73.
 
 ## How this sleeve decides (like you are 10)
 
@@ -1028,6 +1028,20 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-11 09:30 ET | **BUY** | `TTWO` | 3 | $227.57 | $2.00 | — | $1,171.26 | — | top 12 by hot; rank hot_score; list ohlc_hot; ret5=+15.2; leftover $888.43 | join🟢 sector🟡 gen🟢 news🔴 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-11 09:30 ET | **BUY** | `SBH` | 43 | $20.27 | $2.12 | — | $297.74 | — | top 12 by hot; rank hot_score; list ohlc_hot; 🔵; ⚪; ret5=+14.7; leftover $888.43 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟡 heat🟢 vol🟢 buy🟡 |
 | 2026-11-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $297.74 | ▼ close $10,727.11 vs 09:30 $10,803.04 (session -12.07) | 16:00 close · cash $297.74 · equity $10,727.11 vs 09:30 $10,803.04 (-75.93; session marks -12.07) · 12 name(s) marked open→close (per-name table). FLY×37 09:30 $23.96 → close $26.61 +97.90; INDI×414 09:30 $2.41 → close $2.30 -47.44; TLS×113 09:30 $7.80 → close $7.65 -16.95; TTD×58 09:30 $15.23 → close $15.98 +43.50; ATER×953 09:30 $0.93 → close $0.93 -6.19; GDYN×63 09:30 $13.94 → close $13.83 -6.93; CLX×8 09:30 $104.89 → close $106.86 +15.76; REAL×59 09:30 $14.83 → close $14.55 -16.52; WRBY×29 09:30 $30.01 → close $30.15 +4.06; COTY×207 09:30 $4.28 → close $4.06 -45.54; TTWO×3 09:30 $227.57 → close $231.31 +11.22; SBH×43 09:30 $20.27 → close $19.22 -44.94 | — |
+| 2026-11-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $297.74 | ▼ 09:30 equity $10,616.79 vs yday $10,727.11 (-110.32) | 09:30 open · cash $297.74 (unchanged overnight, no fees) · equity $10,616.79 vs prior close $10,727.11 (-110.32) · 12 name(s) re-marked at the open (per-name table). ATER×953 yday $0.93 → 09:30 $0.90 -23.83; CLX×8 yday $106.86 → 09:30 $107.52 +5.28; COTY×207 yday $4.06 → 09:30 $4.09 +6.21; FLY×37 yday $26.61 → 09:30 $26.18 -15.91; GDYN×63 yday $13.83 → 09:30 $13.90 +4.41; INDI×414 yday $2.30 → 09:30 $2.13 -68.31; REAL×59 yday $14.55 → 09:30 $14.41 -8.26; SBH×43 yday $19.22 → 09:30 $19.26 +1.72; TLS×113 yday $7.65 → 09:30 $7.64 -1.13; TTD×58 yday $15.98 → 09:30 $15.85 -7.54; TTWO×3 yday $231.31 → 09:30 $232.16 +2.55; WRBY×29 yday $30.15 → 09:30 $29.96 -5.51 | — |
+| 2026-11-12 09:30 ET | **SELL** | `ATER` | 953 | $0.90 | $11.60 | $-53.36 | $1,143.84 | ▼ -53.36 after sell → book $10,605.19; vs 09:30 mark -11.60 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `CLX` | 8 | $107.52 | $2.03 | $+16.99 | $2,001.96 | ▲ +16.99 after sell → book $10,603.15; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `COTY` | 207 | $4.09 | $2.71 | $-44.72 | $2,845.88 | ▼ -44.72 after sell → book $10,600.44; vs 09:30 mark -2.71 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `FLY` | 37 | $26.18 | $2.12 | $+94.57 | $3,812.42 | ▲ +94.57 after sell → book $10,598.32; vs 09:30 mark -2.12 | dropped from list after 2 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `GDYN` | 63 | $13.90 | $2.20 | $-6.90 | $4,685.92 | ▼ -6.90 after sell → book $10,596.12; vs 09:30 mark -2.20 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `INDI` | 414 | $2.13 | $5.42 | $-10.76 | $5,564.39 | ▼ -10.76 after sell → book $10,590.70; vs 09:30 mark -5.42 | dropped from list after 2 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `REAL` | 59 | $14.41 | $2.19 | $-29.13 | $6,412.39 | ▼ -29.13 after sell → book $10,588.51; vs 09:30 mark -2.19 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `SBH` | 43 | $19.26 | $2.14 | $-47.47 | $7,238.43 | ▼ -47.47 after sell → book $10,586.37; vs 09:30 mark -2.14 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `TLS` | 113 | $7.64 | $2.36 | $-22.77 | $8,099.39 | ▼ -22.77 after sell → book $10,584.01; vs 09:30 mark -2.36 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `TTD` | 58 | $15.85 | $2.18 | $+31.61 | $9,016.51 | ▲ +31.61 after sell → book $10,581.83; vs 09:30 mark -2.18 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `TTWO` | 3 | $232.16 | $2.02 | $+9.75 | $9,710.97 | ▲ +9.75 after sell → book $10,579.81; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-12 09:30 ET | **SELL** | `WRBY` | 29 | $29.96 | $2.10 | $-5.62 | $10,577.71 | ▼ -5.62 after sell → book $10,577.71; vs 09:30 mark -2.10 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,577.71 | ▲ close $10,577.71 vs 09:30 $10,616.79 (session +0.00) | 16:00 close · cash $10,577.71 · no lots left · equity $10,577.71. | — |
 
 ## Not taken
 

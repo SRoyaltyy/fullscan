@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ news_g, no 🚨
 
-Cash book **-43.98%** ($5,602) · signal-only (no cash/fees) was +8.62%. Starts YES **0/30**. Fills 386 · skips 78 · realized $-274.79.
+Cash book **-45.12%** ($5,488) · signal-only (no cash/fees) was +8.62%. Starts YES **0/30**. Fills 394 · skips 78 · realized $-274.79.
 
 ## How this sleeve decides (like you are 10)
 
@@ -586,6 +586,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-11 09:30 ET | **BUY** | `SOC` | 962 | $0.73 | $9.91 | — | $724.63 | — | union ∩ news_g, no 🚨; gate news=good; list yday_mover; 🔵; ret5=-69.7; leftover $702.77 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
 | 2026-11-11 09:30 ET | **BUY** | `LOAR` | 8 | $79.53 | $2.01 | — | $86.38 | — | union ∩ news_g, no 🚨; gate news=good; list ohlc_hot; 🔵; ret5=+16.4; leftover $702.77 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-11-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $86.38 | ▼ close $5,602.26 vs 09:30 $5,657.97 (session -7.97) | 16:00 close · cash $86.38 · equity $5,602.26 vs 09:30 $5,657.97 (-55.71; session marks -7.97) · 8 name(s) marked open→close (per-name table). AOSL×24 09:30 $30.00 → close $30.86 +20.64; PFGC×6 09:30 $110.24 → close $111.21 +5.82; RC×695 09:30 $1.01 → close $0.93 -55.53; CECO×12 09:30 $58.47 → close $53.50 -59.64; FRVO×59 09:30 $11.88 → close $12.94 +62.83; LINC×30 09:30 $23.32 → close $23.51 +5.70; SOC×962 09:30 $0.73 → close $0.75 +14.53; LOAR×8 09:30 $79.53 → close $79.24 -2.32 | — |
+| 2026-11-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $86.38 | ▼ 09:30 equity $5,519.37 vs yday $5,602.26 (-82.89) | 09:30 open · cash $86.38 (unchanged overnight, no fees) · equity $5,519.37 vs prior close $5,602.26 (-82.89) · 8 name(s) re-marked at the open (per-name table). AOSL×24 yday $30.86 → 09:30 $29.12 -41.71; CECO×12 yday $53.50 → 09:30 $54.34 +10.08; FRVO×59 yday $12.94 → 09:30 $12.33 -35.99; LINC×30 yday $23.51 → 09:30 $23.30 -6.30; LOAR×8 yday $79.24 → 09:30 $78.31 -7.44; PFGC×6 yday $111.21 → 09:30 $111.88 +4.02; RC×695 yday $0.93 → 09:30 $0.93 -0.07; SOC×962 yday $0.75 → 09:30 $0.74 -5.48 | — |
+| 2026-11-12 09:30 ET | **SELL** | `AOSL` | 24 | $29.12 | $2.08 | $+9.10 | $783.23 | ▲ +9.10 after sell → book $5,517.28; vs 09:30 mark -2.09 | dropped from list after 2 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `CECO` | 12 | $54.34 | $2.05 | $-53.63 | $1,433.26 | ▼ -53.63 after sell → book $5,515.24; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `FRVO` | 59 | $12.33 | $2.19 | $+22.49 | $2,158.54 | ▲ +22.49 after sell → book $5,513.05; vs 09:30 mark -2.19 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `LINC` | 30 | $23.30 | $2.10 | $-4.78 | $2,855.44 | ▼ -4.78 after sell → book $5,510.95; vs 09:30 mark -2.10 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `LOAR` | 8 | $78.31 | $2.03 | $-13.81 | $3,479.89 | ▼ -13.81 after sell → book $5,508.92; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `PFGC` | 6 | $111.88 | $2.03 | $+5.80 | $4,149.14 | ▲ +5.80 after sell → book $5,506.89; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `RC` | 695 | $0.93 | $8.67 | $-73.24 | $4,786.82 | ▼ -73.24 after sell → book $5,498.22; vs 09:30 mark -8.67 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `SOC` | 962 | $0.74 | $10.17 | $-11.04 | $5,488.05 | ▼ -11.04 after sell → book $5,488.05; vs 09:30 mark -10.17 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5,488.05 | ▲ close $5,488.05 vs 09:30 $5,519.37 (session +0.00) | 16:00 close · cash $5,488.05 · no lots left · equity $5,488.05. | — |
 
 ## Not taken
 

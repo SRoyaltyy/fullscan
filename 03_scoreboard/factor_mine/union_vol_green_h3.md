@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-3.05%** ($9,695) · signal-only (no cash/fees) was -2.67%. Starts YES **12/30**. Fills 317 · skips 272 · realized $-923.90.
+Cash book **-3.38%** ($9,662) · signal-only (no cash/fees) was -2.67%. Starts YES **12/30**. Fills 325 · skips 272 · realized $-923.90.
 
 ## How this sleeve decides (like you are 10)
 
@@ -519,6 +519,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-11 09:30 ET | **BUY** | `PCT` | 3 | $2.20 | $0.07 | — | $45.57 | — | combo gate; gate last_green=True,vol=good; list probable,yday_gainer,yday_mover; ret5=-31.7; leftover $8.08 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🟡 vol🟢 buy🟡 |
 | 2026-11-11 09:30 ET | **BUY** | `TLS` | 1 | $7.80 | $0.08 | — | $37.69 | — | combo gate; gate last_green=True,vol=good; list yday_gainer,yday_mover; 🔵; ret5=+48.9; leftover $8.08 | join🔴 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $37.69 | ▲ close $9,694.66 vs 09:30 $9,585.52 (session +109.33) | 16:00 close · cash $37.69 · equity $9,694.66 vs 09:30 $9,585.52 (+109.14; session marks +109.33) · 15 name(s) marked open→close (per-name table). ALGN×7 09:30 $174.30 → close $172.08 -15.54; APP×3 09:30 $394.50 → close $404.77 +30.82; CLOV×241 09:30 $5.01 → close $4.97 -9.64; COLL×48 09:30 $24.13 → close $24.81 +32.64; IREN×2 09:30 $20.96 → close $20.84 -0.24; NUAI×19 09:30 $2.26 → close $2.33 +1.33; THM×28 09:30 $1.43 → close $1.33 -2.80; TMDX×13 09:30 $90.95 → close $92.01 +13.78; VRSK×5 09:30 $200.66 → close $205.98 +26.60; WRBY×1 09:30 $30.01 → close $30.15 +0.14; XERS×76 09:30 $15.99 → close $16.52 +40.28; ZVRA×101 09:30 $11.92 → close $11.85 -7.07; COTY×1 09:30 $4.28 → close $4.06 -0.22; PCT×3 09:30 $2.20 → close $2.00 -0.60; TLS×1 09:30 $7.80 → close $7.65 -0.15 | — |
+| 2026-11-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $37.69 | ▼ 09:30 equity $9,675.27 vs yday $9,694.66 (-19.39) | 09:30 open · cash $37.69 (unchanged overnight, no fees) · equity $9,675.27 vs prior close $9,694.66 (-19.39) · 15 name(s) re-marked at the open (per-name table). ALGN×7 yday $172.08 → 09:30 $171.45 -4.41; APP×3 yday $404.77 → 09:30 $399.58 -15.56; CLOV×241 yday $4.97 → 09:30 $4.92 -12.05; COLL×48 yday $24.81 → 09:30 $25.06 +12.00; COTY×1 yday $4.06 → 09:30 $4.09 +0.03; IREN×2 yday $20.84 → 09:30 $19.02 -3.64; NUAI×19 yday $2.33 → 09:30 $2.27 -1.14; PCT×3 yday $2.00 → 09:30 $1.96 -0.12; THM×28 yday $1.33 → 09:30 $1.31 -0.56; TLS×1 yday $7.65 → 09:30 $7.64 -0.01; TMDX×13 yday $92.01 → 09:30 $91.65 -4.68; VRSK×5 yday $205.98 → 09:30 $208.97 +14.95; WRBY×1 yday $30.15 → 09:30 $29.96 -0.19; XERS×76 yday $16.52 → 09:30 $16.60 +6.08; ZVRA×101 yday $11.85 → 09:30 $11.75 -10.10 | — |
+| 2026-11-12 09:30 ET | **SELL** | `ALGN` | 7 | $171.45 | $2.03 | $+20.81 | $1,235.81 | ▲ +20.81 after sell → book $9,673.23; vs 09:30 mark -2.04 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-12 09:30 ET | **SELL** | `APP` | 3 | $399.58 | $2.02 | $+31.61 | $2,432.55 | ▲ +31.61 after sell → book $9,671.22; vs 09:30 mark -2.01 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-12 09:30 ET | **SELL** | `CLOV` | 241 | $4.92 | $3.16 | $+3.37 | $3,615.11 | ▲ +3.37 after sell → book $9,668.06; vs 09:30 mark -3.16 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-12 09:30 ET | **SELL** | `COLL` | 48 | $25.06 | $2.15 | $+26.91 | $4,815.83 | ▲ +26.91 after sell → book $9,665.90; vs 09:30 mark -2.16 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-12 09:30 ET | **SELL** | `TMDX` | 13 | $91.65 | $2.05 | $+43.37 | $6,005.23 | ▲ +43.37 after sell → book $9,663.85; vs 09:30 mark -2.05 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-12 09:30 ET | **SELL** | `VRSK` | 5 | $208.97 | $2.02 | $+17.52 | $7,048.06 | ▲ +17.52 after sell → book $9,661.83; vs 09:30 mark -2.02 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-12 09:30 ET | **SELL** | `XERS` | 76 | $16.60 | $2.24 | $+89.78 | $8,307.42 | ▲ +89.78 after sell → book $9,659.59; vs 09:30 mark -2.24 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-12 09:30 ET | **SELL** | `ZVRA` | 101 | $11.75 | $2.32 | $+5.49 | $9,491.85 | ▲ +5.49 after sell → book $9,657.27; vs 09:30 mark -2.32 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,491.85 | ▲ close $9,662.49 vs 09:30 $9,675.27 (session +5.22) | 16:00 close · cash $9,491.85 · equity $9,662.49 vs 09:30 $9,675.27 (-12.78; session marks +5.22) · 7 name(s) marked open→close (per-name table). COTY×1 09:30 $4.09 → close $4.03 -0.06; IREN×2 09:30 $19.02 → close $19.48 +0.92; NUAI×19 09:30 $2.27 → close $2.72 +8.55; PCT×3 09:30 $1.96 → close $1.80 -0.48; THM×28 09:30 $1.31 → close $1.29 -0.56; TLS×1 09:30 $7.64 → close $7.72 +0.08; WRBY×1 09:30 $29.96 → close $26.73 -3.23 | — |
 
 ## Not taken
 

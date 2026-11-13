@@ -6,7 +6,7 @@ Buys the flatten **wish-list** even on io/HOLD mornings — live `flatten_robust
 
 Side **long** · universe `flatten` · top 8 · rank `list` · size `half` · sell `list` · S-boost `none` · deploy half leftover
 
-Cash book **-14.25%** ($8,575) · signal-only (no cash/fees) was -10.41%. Starts YES **0/30**. Fills 380 · skips 239 · realized $-557.10.
+Cash book **-17.78%** ($8,222) · signal-only (no cash/fees) was -10.41%. Starts YES **0/30**. Fills 386 · skips 239 · realized $-557.10.
 
 ## How this sleeve decides (like you are 10)
 
@@ -576,6 +576,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-11 09:30 ET | **BUY** | `COTY` | 78 | $4.28 | $2.22 | — | $2,354.06 | — | deploy half leftover; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ⚪; ret5=+31.6; leftover $334.17 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-11 09:30 ET | **BUY** | `TTD` | 21 | $15.23 | $2.05 | — | $2,032.17 | — | deploy half leftover; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ret5=+19.9; leftover $334.17 | join🟢 sector🟡 gen🟢 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2,032.17 | ▲ close $8,575.15 vs 09:30 $8,565.66 (session +29.96) | 16:00 close · cash $2,032.17 · equity $8,575.15 vs 09:30 $8,565.66 (+9.49; session marks +29.96) · 14 name(s) marked open→close (per-name table). ALGN×1 09:30 $174.30 → close $172.08 -2.22; BLFS×9 09:30 $38.61 → close $38.61 +0.00; CGON×4 09:30 $73.21 → close $72.61 -2.40; CLOV×66 09:30 $5.01 → close $4.97 -2.64; ETON×5 09:30 $66.94 → close $68.40 +7.30; TMDX×3 09:30 $90.95 → close $92.01 +3.18; WRBY×82 09:30 $30.01 → close $30.15 +11.48; ZVRA×28 09:30 $11.92 → close $11.85 -1.96; CLX×3 09:30 $104.89 → close $106.86 +5.91; PFGC×3 09:30 $110.24 → close $111.21 +2.91; KDP×9 09:30 $37.11 → close $38.25 +10.26; PRCH×15 09:30 $22.17 → close $22.14 -0.45; COTY×78 09:30 $4.28 → close $4.06 -17.16; TTD×21 09:30 $15.23 → close $15.98 +15.75 | — |
+| 2026-11-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $2,032.17 | ▼ 09:30 equity $8,536.90 vs yday $8,575.15 (-38.25) | 09:30 open · cash $2,032.17 (unchanged overnight, no fees) · equity $8,536.90 vs prior close $8,575.15 (-38.25) · 14 name(s) re-marked at the open (per-name table). ALGN×1 yday $172.08 → 09:30 $171.45 -0.63; BLFS×9 yday $38.61 → 09:30 $38.61 +0.00; CGON×4 yday $72.61 → 09:30 $72.21 -1.60; CLOV×66 yday $4.97 → 09:30 $4.92 -3.30; CLX×3 yday $106.86 → 09:30 $107.52 +1.98; COTY×78 yday $4.06 → 09:30 $4.09 +2.34; ETON×5 yday $68.40 → 09:30 $68.38 -0.10; KDP×9 yday $38.25 → 09:30 $36.49 -15.83; PFGC×3 yday $111.21 → 09:30 $111.88 +2.01; PRCH×15 yday $22.14 → 09:30 $22.08 -0.93; TMDX×3 yday $92.01 → 09:30 $91.65 -1.08; TTD×21 yday $15.98 → 09:30 $15.85 -2.73; WRBY×82 yday $30.15 → 09:30 $29.96 -15.58; ZVRA×28 yday $11.85 → 09:30 $11.75 -2.80 | — |
+| 2026-11-12 09:30 ET | **SELL** | `ALGN` | 1 | $171.45 | $1.74 | $+0.13 | $2,201.88 | ▲ +0.13 after sell → book $8,535.16; vs 09:30 mark -1.74 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-12 09:30 ET | **SELL** | `CGON` | 4 | $72.21 | $2.02 | $-23.94 | $2,488.70 | ▼ -23.94 after sell → book $8,533.14; vs 09:30 mark -2.02 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-12 09:30 ET | **SELL** | `CLOV` | 66 | $4.92 | $2.21 | $-1.76 | $2,811.21 | ▼ -1.76 after sell → book $8,530.93; vs 09:30 mark -2.21 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-12 09:30 ET | **SELL** | `ETON` | 5 | $68.38 | $2.02 | $+47.37 | $3,151.09 | ▲ +47.37 after sell → book $8,528.91; vs 09:30 mark -2.02 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-12 09:30 ET | **SELL** | `TMDX` | 3 | $91.65 | $2.02 | $+6.93 | $3,424.02 | ▲ +6.93 after sell → book $8,526.89; vs 09:30 mark -2.02 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-12 09:30 ET | **SELL** | `ZVRA` | 28 | $11.75 | $2.09 | $-1.37 | $3,750.92 | ▼ -1.37 after sell → book $8,524.79; vs 09:30 mark -2.10 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $3,750.92 | ▼ close $8,222.39 vs 09:30 $8,536.90 (session -302.40) | 16:00 close · cash $3,750.92 · equity $8,222.39 vs 09:30 $8,536.90 (-314.51; session marks -302.40) · 8 name(s) marked open→close (per-name table). BLFS×9 09:30 $38.61 → close $38.61 +0.00; CLX×3 09:30 $107.52 → close $108.20 +2.04; COTY×78 09:30 $4.09 → close $4.03 -4.68; KDP×9 09:30 $36.49 → close $35.42 -9.64; PFGC×3 09:30 $111.88 → close $109.96 -5.76; PRCH×15 09:30 $22.08 → close $21.31 -11.52; TTD×21 09:30 $15.85 → close $15.47 -7.98; WRBY×82 09:30 $29.96 → close $26.73 -264.86 | — |
 
 ## Not taken
 

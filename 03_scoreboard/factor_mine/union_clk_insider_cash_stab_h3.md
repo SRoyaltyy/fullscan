@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · Clock-B #7 insider/Form-4 + inst Tx + stabilize (if data)
 
-Cash book **+14.50%** ($11,450) · signal-only (no cash/fees) was -5.54%. Starts YES **0/30**. Fills 15 · skips 7 · realized $-603.63.
+Cash book **+15.48%** ($11,548) · signal-only (no cash/fees) was -5.54%. Starts YES **0/30**. Fills 16 · skips 7 · realized $-603.63.
 
 ## How this sleeve decides (like you are 10)
 
@@ -217,6 +217,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2.33 | ▲ close $11,382.33 vs 09:30 $11,052.33 (session +330.00) | 16:00 close · cash $2.33 · equity $11,382.33 vs 09:30 $11,052.33 (+330.00; session marks +330.00) · 1 name(s) marked open→close (per-name table). OXY×200 09:30 $55.25 → close $56.90 +330.00 | — |
 | 2026-11-11 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $2.33 | ▲ 09:30 equity $11,454.33 vs yday $11,382.33 (+72.00) | 09:30 open · cash $2.33 (unchanged overnight, no fees) · equity $11,454.33 vs prior close $11,382.33 (+72.00) · 1 name(s) re-marked at the open (per-name table). OXY×200 yday $56.90 → 09:30 $57.26 +72.00 | — |
 | 2026-11-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2.33 | ▼ close $11,450.33 vs 09:30 $11,454.33 (session -4.00) | 16:00 close · cash $2.33 · equity $11,450.33 vs 09:30 $11,454.33 (-4.00; session marks -4.00) · 1 name(s) marked open→close (per-name table). OXY×200 09:30 $57.26 → close $57.24 -4.00 | — |
+| 2026-11-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $2.33 | ▲ 09:30 equity $11,550.33 vs yday $11,450.33 (+100.00) | 09:30 open · cash $2.33 (unchanged overnight, no fees) · equity $11,550.33 vs prior close $11,450.33 (+100.00) · 1 name(s) re-marked at the open (per-name table). OXY×200 yday $57.24 → 09:30 $57.74 +100.00 | — |
+| 2026-11-12 09:30 ET | **SELL** | `OXY` | 200 | $57.74 | $2.72 | $+432.69 | $11,547.61 | ▲ +432.69 after sell → book $11,547.61; vs 09:30 mark -2.72 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $11,547.61 | ▲ close $11,547.61 vs 09:30 $11,550.33 (session +0.00) | 16:00 close · cash $11,547.61 · no lots left · equity $11,547.61. | — |
 
 ## Not taken
 

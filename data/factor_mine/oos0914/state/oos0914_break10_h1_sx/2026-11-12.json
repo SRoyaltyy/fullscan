@@ -1,0 +1,85 @@
+{
+  "buys": [],
+  "cash": 7720.14,
+  "date": "2026-11-12",
+  "equity": 7720.14,
+  "fees": 42.6525,
+  "fills": [
+    {
+      "fees": 25.9167,
+      "fill_rule": "open",
+      "pnl": -119.2,
+      "price": 0.9,
+      "shares": 2129,
+      "side": "SELL",
+      "ticker": "ATER"
+    },
+    {
+      "fees": 10.9244,
+      "fill_rule": "open",
+      "pnl": -255.16,
+      "price": 2.135,
+      "shares": 835,
+      "side": "SELL",
+      "ticker": "INDI"
+    },
+    {
+      "fees": 3.3868,
+      "fill_rule": "open",
+      "pnl": -48.0,
+      "price": 7.64,
+      "shares": 258,
+      "side": "SELL",
+      "ticker": "TLS"
+    },
+    {
+      "fees": 2.4246,
+      "fill_rule": "open",
+      "pnl": 77.03,
+      "price": 15.85,
+      "shares": 132,
+      "side": "SELL",
+      "ticker": "TTD"
+    }
+  ],
+  "holdings": [],
+  "mean": -3.1779,
+  "n_trades_today": 4,
+  "recipe": "oos0914_break10_h1_sx",
+  "sells": [
+    {
+      "fill_rule": "open",
+      "price": 0.9,
+      "shares": 2129,
+      "side": "SELL",
+      "ticker": "ATER"
+    },
+    {
+      "fill_rule": "open",
+      "price": 2.135,
+      "shares": 835,
+      "side": "SELL",
+      "ticker": "INDI"
+    },
+    {
+      "fill_rule": "open",
+      "price": 7.64,
+      "shares": 258,
+      "side": "SELL",
+      "ticker": "TLS"
+    },
+    {
+      "fill_rule": "open",
+      "price": 15.85,
+      "shares": 132,
+      "side": "SELL",
+      "ticker": "TTD"
+    }
+  ],
+  "state": {
+    "after": "2026-11-12",
+    "cash": 7720.14,
+    "pos": {},
+    "yday_equity": 7720.14
+  }
+}

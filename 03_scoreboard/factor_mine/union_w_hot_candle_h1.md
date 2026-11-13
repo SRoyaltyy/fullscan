@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `w_hot_candle` · size `leftover` · sell `list` · S-boost `none` · rank by w_hot_candle
 
-Cash book **+19.02%** ($11,902) · signal-only (no cash/fees) was +36.45%. Starts YES **29/30**. Fills 565 · skips 97 · realized $+14.68.
+Cash book **+17.02%** ($11,702) · signal-only (no cash/fees) was +36.45%. Starts YES **29/30**. Fills 572 · skips 97 · realized $+14.68.
 
 ## How this sleeve decides (like you are 10)
 
@@ -764,6 +764,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-11 09:30 ET | **BUY** | `CLX` | 14 | $104.89 | $2.03 | — | $1,528.13 | — | rank by w_hot_candle; rank w_hot_candle; list flatten; 🔵; ⚪; ret5=+13.6; leftover $1511.37 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-11 09:30 ET | **BUY** | `FWONK` | 13 | $108.64 | $2.03 | — | $113.78 | — | rank by w_hot_candle; rank w_hot_candle; list ohlc_hot; ret5=+14.0; leftover $1511.37 | join🟢 sector🟡 gen🟢 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $113.78 | ▼ close $11,901.71 vs 09:30 $12,117.48 (session -145.70) | 16:00 close · cash $113.78 · equity $11,901.71 vs 09:30 $12,117.48 (-215.77; session marks -145.70) · 8 name(s) marked open→close (per-name table). TLS×193 09:30 $7.80 → close $7.65 -28.95; INDI×625 09:30 $2.41 → close $2.30 -71.63; GDYN×108 09:30 $13.94 → close $13.83 -11.88; ATER×1622 09:30 $0.93 → close $0.93 -10.54; COTY×353 09:30 $4.28 → close $4.06 -77.66; LOAR×19 09:30 $79.53 → close $79.24 -5.51; CLX×14 09:30 $104.89 → close $106.86 +27.58; FWONK×13 09:30 $108.64 → close $111.17 +32.89 | — |
+| 2026-11-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $113.78 | ▼ 09:30 equity $11,771.81 vs yday $11,901.71 (-129.90) | 09:30 open · cash $113.78 (unchanged overnight, no fees) · equity $11,771.81 vs prior close $11,901.71 (-129.90) · 8 name(s) re-marked at the open (per-name table). ATER×1622 yday $0.93 → 09:30 $0.90 -40.55; CLX×14 yday $106.86 → 09:30 $107.52 +9.24; COTY×353 yday $4.06 → 09:30 $4.09 +10.59; FWONK×13 yday $111.17 → 09:30 $111.63 +5.98; GDYN×108 yday $13.83 → 09:30 $13.90 +7.56; INDI×625 yday $2.30 → 09:30 $2.13 -103.13; LOAR×19 yday $79.24 → 09:30 $78.31 -17.67; TLS×193 yday $7.65 → 09:30 $7.64 -1.93 | — |
+| 2026-11-12 09:30 ET | **SELL** | `ATER` | 1622 | $0.90 | $19.74 | $-90.81 | $1,553.84 | ▼ -90.81 after sell → book $11,752.06; vs 09:30 mark -19.75 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `CLX` | 14 | $107.52 | $2.05 | $+32.73 | $3,057.06 | ▲ +32.73 after sell → book $11,750.01; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `COTY` | 353 | $4.09 | $4.62 | $-76.25 | $4,496.21 | ▼ -76.25 after sell → book $11,745.38; vs 09:30 mark -4.63 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `GDYN` | 108 | $13.90 | $2.34 | $-8.98 | $5,995.06 | ▼ -8.98 after sell → book $11,743.04; vs 09:30 mark -2.34 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `INDI` | 625 | $2.13 | $8.18 | $-190.99 | $7,321.26 | ▼ -190.99 after sell → book $11,734.86; vs 09:30 mark -8.18 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `LOAR` | 19 | $78.31 | $2.07 | $-27.30 | $8,807.08 | ▼ -27.30 after sell → book $11,732.79; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `TLS` | 193 | $7.64 | $2.61 | $-36.06 | $10,278.99 | ▼ -36.06 after sell → book $11,730.18; vs 09:30 mark -2.61 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,278.99 | ▼ close $11,701.71 vs 09:30 $11,771.81 (session -28.47) | 16:00 close · cash $10,278.99 · equity $11,701.71 vs 09:30 $11,771.81 (-70.10; session marks -28.47) · 1 name(s) marked open→close (per-name table). FWONK×13 09:30 $111.63 → close $109.44 -28.47 | — |
 
 ## Not taken
 

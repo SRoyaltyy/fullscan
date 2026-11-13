@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-17.51%** ($8,249) · signal-only (no cash/fees) was -22.27%. Starts YES **0/30**. Fills 181 · skips 128 · realized $-1374.07.
+Cash book **-18.07%** ($8,193) · signal-only (no cash/fees) was -22.27%. Starts YES **0/30**. Fills 188 · skips 128 · realized $-1374.07.
 
 ## How this sleeve decides (like you are 10)
 
@@ -384,6 +384,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-11 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $80.44 | ▼ 09:30 equity $8,165.23 vs yday $8,181.30 (-16.07) | 09:30 open · cash $80.44 (unchanged overnight, no fees) · equity $8,165.23 vs prior close $8,181.30 (-16.07) · 8 name(s) re-marked at the open (per-name table). ADCT×617 yday $1.51 → 09:30 $1.50 -6.17; BLFS×26 yday $38.61 → 09:30 $38.61 +0.00; CERT×84 yday $12.12 → 09:30 $12.25 +10.50; COLL×41 yday $24.47 → 09:30 $24.13 -13.94; LINE×25 yday $34.88 → 09:30 $34.62 -6.50; SKYD×126 yday $8.04 → 09:30 $8.04 +0.00; TGTX×17 yday $64.26 → 09:30 $64.01 -4.25; WRBY×39 yday $29.90 → 09:30 $30.01 +4.29 | — |
 | 2026-11-11 09:30 ET | **BUY** | `GO` | 1 | $12.52 | $0.13 | — | $67.79 | — | combo gate; gate ret_5_max=10.0,rvol_max=2.2,zero_red=True; list earn_react; 🔵; ⚪; ret5=+9.7; leftover $16.09 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-11-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $67.79 | ▲ close $8,248.67 vs 09:30 $8,165.23 (session +83.57) | 16:00 close · cash $67.79 · equity $8,248.67 vs 09:30 $8,165.23 (+83.44; session marks +83.57) · 9 name(s) marked open→close (per-name table). ADCT×617 09:30 $1.50 → close $1.60 +61.70; BLFS×26 09:30 $38.61 → close $38.61 +0.00; CERT×84 09:30 $12.25 → close $11.73 -43.68; COLL×41 09:30 $24.13 → close $24.81 +27.88; LINE×25 09:30 $34.62 → close $35.40 +19.50; SKYD×126 09:30 $8.04 → close $7.90 -17.64; TGTX×17 09:30 $64.01 → close $65.76 +29.75; WRBY×39 09:30 $30.01 → close $30.15 +5.46; GO×1 09:30 $12.52 → close $13.12 +0.60 | — |
+| 2026-11-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $67.79 | ▼ 09:30 equity $8,214.75 vs yday $8,248.67 (-33.92) | 09:30 open · cash $67.79 (unchanged overnight, no fees) · equity $8,214.75 vs prior close $8,248.67 (-33.92) · 9 name(s) re-marked at the open (per-name table). ADCT×617 yday $1.60 → 09:30 $1.58 -12.34; BLFS×26 yday $38.61 → 09:30 $38.61 +0.00; CERT×84 yday $11.73 → 09:30 $11.73 +0.00; COLL×41 yday $24.81 → 09:30 $25.06 +10.25; GO×1 yday $13.12 → 09:30 $13.08 -0.04; LINE×25 yday $35.40 → 09:30 $35.25 -3.75; SKYD×126 yday $7.90 → 09:30 $7.77 -16.38; TGTX×17 yday $65.76 → 09:30 $65.51 -4.25; WRBY×39 yday $30.15 → 09:30 $29.96 -7.41 | — |
+| 2026-11-12 09:30 ET | **SELL** | `ADCT` | 617 | $1.58 | $8.07 | $-59.22 | $1,034.58 | ▼ -59.22 after sell → book $8,206.68; vs 09:30 mark -8.07 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-12 09:30 ET | **SELL** | `CERT` | 84 | $11.73 | $2.27 | $-32.23 | $2,017.63 | ▼ -32.23 after sell → book $8,204.41; vs 09:30 mark -2.27 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-12 09:30 ET | **SELL** | `COLL` | 41 | $25.06 | $2.13 | $+22.40 | $3,042.96 | ▲ +22.40 after sell → book $8,202.28; vs 09:30 mark -2.13 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-12 09:30 ET | **SELL** | `LINE` | 25 | $35.25 | $2.08 | $-108.90 | $3,922.12 | ▼ -108.90 after sell → book $8,200.19; vs 09:30 mark -2.09 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-12 09:30 ET | **SELL** | `SKYD` | 126 | $7.77 | $2.40 | $-43.83 | $4,898.75 | ▼ -43.83 after sell → book $8,197.80; vs 09:30 mark -2.39 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-12 09:30 ET | **SELL** | `TGTX` | 17 | $65.51 | $2.06 | $+123.57 | $6,010.35 | ▲ +123.57 after sell → book $8,195.73; vs 09:30 mark -2.07 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-12 09:30 ET | **SELL** | `WRBY` | 39 | $29.96 | $2.13 | $+153.72 | $7,176.67 | ▲ +153.72 after sell → book $8,193.61; vs 09:30 mark -2.12 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,176.67 | ▼ close $8,193.38 vs 09:30 $8,214.75 (session -0.23) | 16:00 close · cash $7,176.67 · equity $8,193.38 vs 09:30 $8,214.75 (-21.37; session marks -0.23) · 2 name(s) marked open→close (per-name table). BLFS×26 09:30 $38.61 → close $38.61 +0.00; GO×1 09:30 $13.08 → close $12.85 -0.23 | — |
 
 ## Not taken
 

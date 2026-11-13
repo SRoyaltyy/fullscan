@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ rsi_os, no 🚨
 
-Cash book **-21.47%** ($7,853) · signal-only (no cash/fees) was -7.54%. Starts YES **0/30**. Fills 258 · skips 20 · realized $-3180.18.
+Cash book **-24.39%** ($7,561) · signal-only (no cash/fees) was -7.54%. Starts YES **0/30**. Fills 263 · skips 20 · realized $-3180.18.
 
 ## How this sleeve decides (like you are 10)
 
@@ -458,6 +458,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-11 09:30 ET | **BUY** | `ACAD` | 73 | $18.13 | $2.21 | — | $1,312.50 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list yday_mover; ret5=-11.1; leftover $1340.81 | join🟢 sector🔴 gen🟢 news🟡 digest🔴 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-11-11 09:30 ET | **BUY** | `LAND` | 175 | $7.48 | $2.52 | — | $0.98 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list earn_react; ret5=-6.1; leftover $1340.81 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
 | 2026-11-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $0.98 | ▼ close $7,852.80 vs 09:30 $8,074.22 (session -141.05) | 16:00 close · cash $0.98 · equity $7,852.80 vs 09:30 $8,074.22 (-221.42; session marks -141.05) · 6 name(s) marked open→close (per-name table). PCT×609 09:30 $2.20 → close $2.00 -121.80; ZURA×964 09:30 $1.39 → close $1.43 +38.56; SOC×1836 09:30 $0.73 → close $0.75 +27.72; ABEO×547 09:30 $2.45 → close $2.30 -82.05; ACAD×73 09:30 $18.13 → close $18.37 +17.52; LAND×175 09:30 $7.48 → close $7.36 -21.00 | — |
+| 2026-11-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $0.98 | ▼ 09:30 equity $7,764.55 vs yday $7,852.80 (-88.25) | 09:30 open · cash $0.98 (unchanged overnight, no fees) · equity $7,764.55 vs prior close $7,852.80 (-88.25) · 6 name(s) re-marked at the open (per-name table). ABEO×547 yday $2.30 → 09:30 $2.28 -10.94; ACAD×73 yday $18.37 → 09:30 $18.22 -10.95; LAND×175 yday $7.36 → 09:30 $7.29 -12.25; PCT×609 yday $2.00 → 09:30 $1.96 -24.36; SOC×1836 yday $0.75 → 09:30 $0.74 -10.47; ZURA×964 yday $1.43 → 09:30 $1.41 -19.28 | — |
+| 2026-11-12 09:30 ET | **SELL** | `ABEO` | 547 | $2.28 | $7.16 | $-107.20 | $1,240.98 | ▼ -107.20 after sell → book $7,757.39; vs 09:30 mark -7.16 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `ACAD` | 73 | $18.22 | $2.23 | $+2.13 | $2,568.81 | ▲ +2.13 after sell → book $7,755.16; vs 09:30 mark -2.23 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-11-12 09:30 ET | **SELL** | `LAND` | 175 | $7.29 | $2.55 | $-38.32 | $3,842.01 | ▼ -38.32 after sell → book $7,752.61; vs 09:30 mark -2.55 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `PCT` | 609 | $1.96 | $7.97 | $-161.98 | $5,027.68 | ▼ -161.98 after sell → book $7,744.64; vs 09:30 mark -7.97 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `SOC` | 1836 | $0.74 | $19.40 | $-21.06 | $6,366.00 | ▼ -21.06 after sell → book $7,725.24; vs 09:30 mark -19.40 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,366.00 | ▼ close $7,561.36 vs 09:30 $7,764.55 (session -163.88) | 16:00 close · cash $6,366.00 · equity $7,561.36 vs 09:30 $7,764.55 (-203.19; session marks -163.88) · 1 name(s) marked open→close (per-name table). ZURA×964 09:30 $1.41 → close $1.24 -163.88 | — |
 
 ## Not taken
 

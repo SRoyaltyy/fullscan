@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared union_news_g_h1/union_join_vol_green_h1 w=0.5,0.5 net=priority
 
-Cash book **-36.32%** ($6,368) · signal-only (no cash/fees) was —. Starts YES **9/30**. Fills 699 · skips 133 · realized $+83.38.
+Cash book **-37.70%** ($6,230) · signal-only (no cash/fees) was —. Starts YES **9/30**. Fills 713 · skips 133 · realized $+83.38.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $128.17.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $5,884.94.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -900,6 +900,22 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-11 09:30 ET | **BUY** | `SOC` | 581 | $0.73 | $5.98 | — | $527.82 | — | union ∩ news_g, no 🚨; gate news=good; list yday_mover; 🔵; ret5=-69.7; combo leftover $424.89; owner union_news_g_h1 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
 | 2026-11-11 09:30 ET | **BUY** | `LOAR` | 5 | $79.53 | $2.00 | — | $128.17 | — | union ∩ news_g, no 🚨; gate news=good; list ohlc_hot; 🔵; ret5=+16.4; combo leftover $424.89; owner union_news_g_h1 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-11-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $128.17 | ▼ close $6,368.18 vs 09:30 $6,435.54 (session -8.73) | 16:00 close · cash $128.17 · equity $6,368.18 vs 09:30 $6,435.54 (-67.36; session marks -8.73) · 15 name(s) marked open→close (per-name table). AOSL×31 09:30 $30.00 → close $30.86 +26.66; WRBY×17 09:30 $30.01 → close $30.15 +2.38; LINC×15 09:30 $23.32 → close $23.51 +2.85; CLX×3 09:30 $104.89 → close $106.86 +5.91; COTY×82 09:30 $4.28 → close $4.06 -18.04; TTD×23 09:30 $15.23 → close $15.98 +17.25; PCT×161 09:30 $2.20 → close $2.00 -32.20; QXO×25 09:30 $13.70 → close $13.81 +2.75; ACAD×19 09:30 $18.13 → close $18.37 +4.56; PFGC×3 09:30 $110.24 → close $111.21 +2.91; RC×420 09:30 $1.01 → close $0.93 -33.56; CECO×7 09:30 $58.47 → close $53.50 -34.79; FRVO×35 09:30 $11.88 → close $12.94 +37.27; SOC×581 09:30 $0.73 → close $0.75 +8.77; LOAR×5 09:30 $79.53 → close $79.24 -1.45 | — |
+| 2026-11-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $128.17 | ▼ 09:30 equity $6,267.87 vs yday $6,368.18 (-100.31) | 09:30 open · cash $128.17 (unchanged overnight, no fees) · equity $6,267.87 vs prior close $6,368.18 (-100.31) | — |
+| 2026-11-12 09:30 ET | **SELL** | `AOSL` | 31 | $29.12 | $2.10 | $+12.93 | $1,028.85 | ▲ +12.93 after sell → book $6,265.77; vs 09:30 mark -2.10 | union_news_g_h1: dropped from list after 2 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `CECO` | 7 | $54.34 | $2.03 | $-32.95 | $1,407.20 | ▼ -32.95 after sell → book $6,263.74; vs 09:30 mark -2.03 | union_news_g_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `CLX` | 3 | $107.52 | $2.02 | $+3.87 | $1,727.74 | ▲ +3.87 after sell → book $6,261.72; vs 09:30 mark -2.02 | union_join_vol_green_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `COTY` | 82 | $4.09 | $2.26 | $-20.08 | $2,060.86 | ▼ -20.08 after sell → book $6,259.46; vs 09:30 mark -2.26 | union_join_vol_green_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `FRVO` | 35 | $12.33 | $2.12 | $+11.71 | $2,490.29 | ▲ +11.71 after sell → book $6,257.34; vs 09:30 mark -2.12 | union_news_g_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `LINC` | 15 | $23.30 | $2.06 | $-4.39 | $2,837.74 | ▼ -4.39 after sell → book $6,255.29; vs 09:30 mark -2.05 | union_join_vol_green_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `LOAR` | 5 | $78.31 | $2.02 | $-10.13 | $3,227.26 | ▼ -10.13 after sell → book $6,253.26; vs 09:30 mark -2.03 | union_news_g_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `PCT` | 161 | $1.96 | $2.51 | $-43.62 | $3,540.31 | ▼ -43.62 after sell → book $6,250.75; vs 09:30 mark -2.51 | union_join_vol_green_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `PFGC` | 3 | $111.88 | $2.02 | $+0.90 | $3,873.94 | ▲ +0.90 after sell → book $6,248.74; vs 09:30 mark -2.01 | union_news_g_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `QXO` | 25 | $13.38 | $2.08 | $-12.15 | $4,206.35 | ▼ -12.15 after sell → book $6,246.65; vs 09:30 mark -2.09 | union_join_vol_green_h1: dropped from list after 1 sess (min 1) | join🔴 sector🟢 gen🔴 news🟢 digest🔴 judge🔴 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-12 09:30 ET | **SELL** | `RC` | 420 | $0.93 | $5.25 | $-44.26 | $4,591.71 | ▼ -44.26 after sell → book $6,241.40; vs 09:30 mark -5.25 | union_news_g_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `SOC` | 581 | $0.74 | $6.15 | $-6.67 | $5,015.21 | ▼ -6.67 after sell → book $6,235.26; vs 09:30 mark -6.14 | union_news_g_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `TTD` | 23 | $15.85 | $2.08 | $+10.12 | $5,377.68 | ▲ +10.12 after sell → book $6,233.18; vs 09:30 mark -2.08 | union_join_vol_green_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `WRBY` | 17 | $29.96 | $2.06 | $-2.23 | $5,884.94 | ▼ -2.23 after sell → book $6,231.12; vs 09:30 mark -2.06 | union_join_vol_green_h1: dropped from list after 2 sess (min 1) | — |
+| 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5,884.94 | ▼ close $6,229.60 vs 09:30 $6,267.87 (session -1.52) | 16:00 close · cash $5,884.94 · equity $6,229.60 vs 09:30 $6,267.87 (-38.27; session marks -1.52) · 1 name(s) marked open→close (per-name table). ACAD×19 09:30 $18.22 → close $18.14 -1.52 | — |
 
 ## Not taken
 

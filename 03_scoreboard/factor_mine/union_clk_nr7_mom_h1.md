@@ -324,6 +324,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-11 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $0.96 | ▲ 09:30 equity $8,847.71 vs yday $8,767.28 (+80.43) | 09:30 open · cash $0.96 (unchanged overnight, no fees) · equity $8,847.71 vs prior close $8,767.28 (+80.43) · 1 name(s) re-marked at the open (per-name table). IMSR×3217 yday $2.73 → 09:30 $2.75 +80.42 | — |
 | 2026-11-11 09:30 ET | **SELL** | `IMSR` | 3217 | $2.75 | $42.10 | $-437.47 | $8,805.61 | ▼ -437.47 after sell → book $8,805.61; vs 09:30 mark -42.10 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,805.61 | ▲ close $8,805.61 vs 09:30 $8,847.71 (session +0.00) | 16:00 close · cash $8,805.61 · no lots left · equity $8,805.61. | — |
+| 2026-11-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,805.61 | ▲ 09:30 equity $8,805.61 vs yday $8,805.61 (+0.00) | 09:30 open · cash $8,805.61 · no holdings · equity $8,805.61 vs prior close $8,805.61 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,805.61 | ▲ close $8,805.61 vs 09:30 $8,805.61 (session +0.00) | 16:00 close · cash $8,805.61 · no lots left · equity $8,805.61. | — |
 
 ## Not taken
 

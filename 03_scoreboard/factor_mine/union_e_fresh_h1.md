@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ e_fresh, no 🚨
 
-Cash book **-13.52%** ($8,648) · signal-only (no cash/fees) was +4.74%. Starts YES **24/30**. Fills 326 · skips 56 · realized $+1231.21.
+Cash book **-15.83%** ($8,417) · signal-only (no cash/fees) was +4.74%. Starts YES **24/30**. Fills 334 · skips 56 · realized $+1231.21.
 
 ## How this sleeve decides (like you are 10)
 
@@ -527,6 +527,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-11 09:30 ET | **BUY** | `AADX` | 108 | $10.10 | $2.31 | — | $1,131.62 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=-3.1; leftover $1092.96 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 heat🔴 vol🟡 buy🟡 |
 | 2026-11-11 09:30 ET | **BUY** | `AMPX` | 121 | $8.96 | $2.35 | — | $45.11 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; 🔵; ret5=+3.9; leftover $1092.96 | join🟡 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
 | 2026-11-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $45.11 | ▼ close $8,648.14 vs 09:30 $8,843.22 (session -156.06) | 16:00 close · cash $45.11 · equity $8,648.14 vs 09:30 $8,843.22 (-195.08; session marks -156.06) · 8 name(s) marked open→close (per-name table). ALH×47 09:30 $24.92 → close $24.20 -33.84; SWMR×130 09:30 $8.35 → close $9.43 +140.40; ITG×214 09:30 $5.10 → close $5.12 +5.35; PDYN×293 09:30 $3.72 → close $3.46 -76.18; SBH×53 09:30 $20.27 → close $19.22 -55.39; EMBJ×13 09:30 $82.46 → close $82.43 -0.39; AADX×108 09:30 $10.10 → close $9.30 -86.40; AMPX×121 09:30 $8.96 → close $8.55 -49.61 | — |
+| 2026-11-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $45.11 | ▼ 09:30 equity $8,436.77 vs yday $8,648.14 (-211.37) | 09:30 open · cash $45.11 (unchanged overnight, no fees) · equity $8,436.77 vs prior close $8,648.14 (-211.37) · 8 name(s) re-marked at the open (per-name table). AADX×108 yday $9.30 → 09:30 $9.13 -18.36; ALH×47 yday $24.20 → 09:30 $24.29 +4.23; AMPX×121 yday $8.55 → 09:30 $8.10 -54.45; EMBJ×13 yday $82.43 → 09:30 $81.56 -11.31; ITG×214 yday $5.12 → 09:30 $4.87 -54.57; PDYN×293 yday $3.46 → 09:30 $3.35 -32.23; SBH×53 yday $19.22 → 09:30 $19.26 +2.12; SWMR×130 yday $9.43 → 09:30 $9.07 -46.80 | — |
+| 2026-11-12 09:30 ET | **SELL** | `AADX` | 108 | $9.13 | $2.34 | $-109.42 | $1,028.81 | ▼ -109.42 after sell → book $8,434.43; vs 09:30 mark -2.34 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `ALH` | 47 | $24.29 | $2.15 | $-34.36 | $2,168.29 | ▼ -34.36 after sell → book $8,432.28; vs 09:30 mark -2.15 | dropped from list after 2 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `AMPX` | 121 | $8.10 | $2.38 | $-108.80 | $3,146.00 | ▼ -108.80 after sell → book $8,429.89; vs 09:30 mark -2.39 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `EMBJ` | 13 | $81.56 | $2.05 | $-15.78 | $4,204.23 | ▼ -15.78 after sell → book $8,427.85; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `ITG` | 214 | $4.87 | $2.81 | $-54.79 | $5,243.61 | ▼ -54.79 after sell → book $8,425.04; vs 09:30 mark -2.81 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `PDYN` | 293 | $3.35 | $3.84 | $-116.03 | $6,221.32 | ▼ -116.03 after sell → book $8,421.20; vs 09:30 mark -3.84 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `SBH` | 53 | $19.26 | $2.17 | $-57.58 | $7,239.93 | ▼ -57.58 after sell → book $8,419.03; vs 09:30 mark -2.17 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `SWMR` | 130 | $9.07 | $2.41 | $+88.81 | $8,416.62 | ▲ +88.81 after sell → book $8,416.62; vs 09:30 mark -2.41 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,416.62 | ▲ close $8,416.62 vs 09:30 $8,436.77 (session +0.00) | 16:00 close · cash $8,416.62 · no lots left · equity $8,416.62. | — |
 
 ## Not taken
 

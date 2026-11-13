@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `overnight` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · baseline list, no extra gate
 
-Cash book **-7.27%** ($9,273) · signal-only (no cash/fees) was -40.60%. Starts YES **0/30**. Fills 136 · skips 188 · realized $-1635.94.
+Cash book **-7.12%** ($9,288) · signal-only (no cash/fees) was -40.60%. Starts YES **0/30**. Fills 136 · skips 188 · realized $-1635.94.
 
 ## How this sleeve decides (like you are 10)
 
@@ -332,6 +332,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-11 09:30 ET | **BUY** | `CURI` | 473 | $2.45 | $6.10 | — | $1,184.52 | — | baseline list, no extra gate; list overnight; ret5=-5.1; leftover $1159.95 | join🟡 sector🟡 gen🟢 news🟡 digest🔴 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-11-11 09:30 ET | **BUY** | `ECO` | 13 | $84.65 | $2.03 | — | $82.04 | — | baseline list, no extra gate; list overnight; 🔵; ⚪; ret5=-12.4; leftover $1159.95 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟡 heat🟢 vol🟡 buy🟡 |
 | 2026-11-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $82.04 | ▲ close $9,272.74 vs 09:30 $9,293.14 (session +15.85) | 16:00 close · cash $82.04 · equity $9,272.74 vs 09:30 $9,293.14 (-20.40; session marks +15.85) · 8 name(s) marked open→close (per-name table). AGRO×130 09:30 $8.90 → close $9.05 +18.85; ALVO×234 09:30 $4.94 → close $4.92 -4.68; AVEX×99 09:30 $11.70 → close $12.13 +42.57; AZ×184 09:30 $6.29 → close $6.25 -7.36; CAE×41 09:30 $27.68 → close $27.39 -11.89; CTVA×95 09:30 $12.12 → close $12.14 +1.90; CURI×473 09:30 $2.45 → close $2.37 -37.84; ECO×13 09:30 $84.65 → close $85.75 +14.30 | — |
+| 2026-11-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $82.04 | ▲ 09:30 equity $9,365.98 vs yday $9,272.74 (+93.24) | 09:30 open · cash $82.04 (unchanged overnight, no fees) · equity $9,365.98 vs prior close $9,272.74 (+93.24) · 8 name(s) re-marked at the open (per-name table). AGRO×130 yday $9.05 → 09:30 $8.86 -24.70; ALVO×234 yday $4.92 → 09:30 $4.49 -100.62; AVEX×99 yday $12.13 → 09:30 $13.65 +150.48; AZ×184 yday $6.25 → 09:30 $6.49 +44.16; CAE×41 yday $27.39 → 09:30 $28.32 +38.13; CTVA×95 yday $12.14 → 09:30 $10.51 -154.85; CURI×473 yday $2.37 → 09:30 $2.73 +170.28; ECO×13 yday $85.75 → 09:30 $83.47 -29.64 | — |
+| 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $82.04 | ▼ close $9,287.61 vs 09:30 $9,365.98 (session -78.37) | 16:00 close · cash $82.04 · equity $9,287.61 vs 09:30 $9,365.98 (-78.37; session marks -78.37) · 8 name(s) marked open→close (per-name table). AGRO×130 09:30 $8.86 → close $8.47 -50.70; ALVO×234 09:30 $4.49 → close $4.67 +42.12; AVEX×99 09:30 $13.65 → close $13.76 +10.89; AZ×184 09:30 $6.49 → close $6.14 -64.40; CAE×41 09:30 $28.32 → close $28.15 -6.97; CTVA×95 09:30 $10.51 → close $9.19 -125.40; CURI×473 09:30 $2.73 → close $2.86 +61.49; ECO×13 09:30 $83.47 → close $87.67 +54.60 | — |
 
 ## Not taken
 

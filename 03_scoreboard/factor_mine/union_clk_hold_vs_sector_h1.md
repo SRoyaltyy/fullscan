@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · Clock-B #6 stock holds while sector camera is red
 
-Cash book **-16.57%** ($8,343) · signal-only (no cash/fees) was -2.27%. Starts YES **25/30**. Fills 439 · skips 96 · realized $+387.41.
+Cash book **-17.47%** ($8,253) · signal-only (no cash/fees) was -2.27%. Starts YES **25/30**. Fills 446 · skips 96 · realized $+387.41.
 
 ## How this sleeve decides (like you are 10)
 
@@ -641,6 +641,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-11 09:30 ET | **BUY** | `XENE` | 25 | $41.40 | $2.06 | — | $1,176.15 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list ohlc_hot; ret5=+8.3; leftover $1037.27 | join🔴 sector🔴 gen🟢 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-11-11 09:30 ET | **BUY** | `ZURA` | 746 | $1.39 | $9.62 | — | $129.59 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list yday_mover; ret5=-64.8; leftover $1037.27 | join🔴 sector🔴 gen🟢 news🔴 digest🔴 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-11-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $129.59 | ▲ close $8,342.71 vs 09:30 $8,328.16 (session +68.79) | 16:00 close · cash $129.59 · equity $8,342.71 vs 09:30 $8,328.16 (+14.55; session marks +68.79) · 8 name(s) marked open→close (per-name table). WRBY×34 09:30 $30.01 → close $30.15 +4.76; TGTX×16 09:30 $64.01 → close $65.76 +28.00; ORKA×9 09:30 $112.28 → close $107.17 -45.99; ACAD×57 09:30 $18.13 → close $18.37 +13.68; INSM×8 09:30 $119.49 → close $120.75 +10.08; TK×78 09:30 $13.18 → close $13.32 +10.92; XENE×25 09:30 $41.40 → close $42.10 +17.50; ZURA×746 09:30 $1.39 → close $1.43 +29.84 | — |
+| 2026-11-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $129.59 | ▼ 09:30 equity $8,276.46 vs yday $8,342.71 (-66.25) | 09:30 open · cash $129.59 (unchanged overnight, no fees) · equity $8,276.46 vs prior close $8,342.71 (-66.25) · 8 name(s) re-marked at the open (per-name table). ACAD×57 yday $18.37 → 09:30 $18.22 -8.55; INSM×8 yday $120.75 → 09:30 $119.00 -14.00; ORKA×9 yday $107.17 → 09:30 $105.10 -18.63; TGTX×16 yday $65.76 → 09:30 $65.51 -4.00; TK×78 yday $13.32 → 09:30 $13.34 +1.56; WRBY×34 yday $30.15 → 09:30 $29.96 -6.46; XENE×25 yday $42.10 → 09:30 $42.05 -1.25; ZURA×746 yday $1.43 → 09:30 $1.41 -14.92 | — |
+| 2026-11-12 09:30 ET | **SELL** | `ACAD` | 57 | $18.22 | $2.18 | $+0.79 | $1,165.95 | ▲ +0.79 after sell → book $8,274.28; vs 09:30 mark -2.18 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-11-12 09:30 ET | **SELL** | `INSM` | 8 | $119.00 | $2.03 | $-7.97 | $2,115.91 | ▼ -7.97 after sell → book $8,272.24; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `ORKA` | 9 | $105.10 | $2.04 | $-68.67 | $3,059.78 | ▼ -68.67 after sell → book $8,270.21; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `TGTX` | 16 | $65.51 | $2.06 | $+19.90 | $4,105.88 | ▲ +19.90 after sell → book $8,268.15; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `WRBY` | 34 | $29.96 | $2.11 | $-5.90 | $5,122.41 | ▼ -5.90 after sell → book $8,266.04; vs 09:30 mark -2.11 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `XENE` | 25 | $42.05 | $2.08 | $+12.10 | $6,171.57 | ▲ +12.10 after sell → book $8,263.95; vs 09:30 mark -2.09 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `ZURA` | 746 | $1.41 | $9.76 | $-4.46 | $7,213.68 | ▼ -4.46 after sell → book $8,254.20; vs 09:30 mark -9.75 | dropped from list after 1 sess (min 1) | join🟡 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,213.68 | ▼ close $8,253.42 vs 09:30 $8,276.46 (session -0.78) | 16:00 close · cash $7,213.68 · equity $8,253.42 vs 09:30 $8,276.46 (-23.04; session marks -0.78) · 1 name(s) marked open→close (per-name table). TK×78 09:30 $13.34 → close $13.33 -0.78 | — |
 
 ## Not taken
 

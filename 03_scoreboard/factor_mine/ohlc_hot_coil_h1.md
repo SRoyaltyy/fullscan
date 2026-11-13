@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `ohlc_hot` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · hot list ∩ not exploded
 
-Cash book **-39.53%** ($6,047) · signal-only (no cash/fees) was -11.86%. Starts YES **9/30**. Fills 370 · skips 74 · realized $-1849.08.
+Cash book **-39.69%** ($6,031) · signal-only (no cash/fees) was -11.86%. Starts YES **9/30**. Fills 375 · skips 74 · realized $-1849.08.
 
 ## How this sleeve decides (like you are 10)
 
@@ -572,6 +572,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-11 09:30 ET | **BUY** | `BLCO` | 56 | $21.36 | $2.16 | — | $1,310.36 | — | hot list ∩ not exploded; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list ohlc_hot; ret5=+6.7; leftover $1206.93 | join🟢 sector🔴 gen🟢 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-11-11 09:30 ET | **BUY** | `XENE` | 29 | $41.40 | $2.08 | — | $107.69 | — | hot list ∩ not exploded; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list ohlc_hot; ret5=+8.3; leftover $1206.93 | join🔴 sector🔴 gen🟢 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-11-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $107.69 | ▲ close $6,046.57 vs 09:30 $6,040.34 (session +22.48) | 16:00 close · cash $107.69 · equity $6,046.57 vs 09:30 $6,040.34 (+6.23; session marks +22.48) · 5 name(s) marked open→close (per-name table). GDYN×86 09:30 $13.94 → close $13.83 -9.46; HGV×26 09:30 $44.86 → close $45.41 +14.30; EMBJ×14 09:30 $82.46 → close $82.43 -0.42; BLCO×56 09:30 $21.36 → close $21.32 -2.24; XENE×29 09:30 $41.40 → close $42.10 +20.30 | — |
+| 2026-11-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $107.69 | ▼ 09:30 equity $6,041.46 vs yday $6,046.57 (-5.11) | 09:30 open · cash $107.69 (unchanged overnight, no fees) · equity $6,041.46 vs prior close $6,046.57 (-5.11) · 5 name(s) re-marked at the open (per-name table). BLCO×56 yday $21.32 → 09:30 $21.36 +2.24; EMBJ×14 yday $82.43 → 09:30 $81.56 -12.18; GDYN×86 yday $13.83 → 09:30 $13.90 +6.02; HGV×26 yday $45.41 → 09:30 $45.42 +0.26; XENE×29 yday $42.10 → 09:30 $42.05 -1.45 | — |
+| 2026-11-12 09:30 ET | **SELL** | `BLCO` | 56 | $21.36 | $2.18 | $-4.34 | $1,301.67 | ▼ -4.34 after sell → book $6,039.28; vs 09:30 mark -2.18 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `EMBJ` | 14 | $81.56 | $2.05 | $-16.68 | $2,441.46 | ▼ -16.68 after sell → book $6,037.23; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `GDYN` | 86 | $13.90 | $2.27 | $-7.96 | $3,634.59 | ▼ -7.96 after sell → book $6,034.96; vs 09:30 mark -2.27 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `HGV` | 26 | $45.42 | $2.09 | $+10.40 | $4,813.42 | ▲ +10.40 after sell → book $6,032.87; vs 09:30 mark -2.09 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `XENE` | 29 | $42.05 | $2.10 | $+14.68 | $6,030.77 | ▲ +14.68 after sell → book $6,030.77; vs 09:30 mark -2.10 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,030.77 | ▲ close $6,030.77 vs 09:30 $6,041.46 (session +0.00) | 16:00 close · cash $6,030.77 · no lots left · equity $6,030.77. | — |
 
 ## Not taken
 

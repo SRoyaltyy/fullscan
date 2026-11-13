@@ -209,6 +209,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-11 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $17.75 | ▼ 09:30 equity $9,858.27 vs yday $9,901.87 (-43.60) | 09:30 open · cash $17.75 (unchanged overnight, no fees) · equity $9,858.27 vs prior close $9,901.87 (-43.60) · 1 name(s) re-marked at the open (per-name table). MNST×218 yday $45.34 → 09:30 $45.14 -43.60 | — |
 | 2026-11-11 09:30 ET | **SELL** | `MNST` | 218 | $45.14 | $2.93 | $+234.06 | $9,855.34 | ▲ +234.06 after sell → book $9,855.34; vs 09:30 mark -2.93 | dropped from list after 3 sess (min 3) | — |
 | 2026-11-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,855.34 | ▲ close $9,855.34 vs 09:30 $9,858.27 (session +0.00) | 16:00 close · cash $9,855.34 · no lots left · equity $9,855.34. | — |
+| 2026-11-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,855.34 | ▲ 09:30 equity $9,855.34 vs yday $9,855.34 (+0.00) | 09:30 open · cash $9,855.34 · no holdings · equity $9,855.34 vs prior close $9,855.34 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,855.34 | ▲ close $9,855.34 vs 09:30 $9,855.34 (session +0.00) | 16:00 close · cash $9,855.34 · no lots left · equity $9,855.34. | — |
 
 ## Not taken
 

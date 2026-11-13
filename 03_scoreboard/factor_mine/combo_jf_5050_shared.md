@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared union_join_vol_green_h1/flatten_h5 w=0.5,0.5 net=priority
 
-Cash book **-13.02%** ($8,698) · signal-only (no cash/fees) was —. Starts YES **2/30**. Fills 572 · skips 364 · realized $+311.24.
+Cash book **-15.11%** ($8,489) · signal-only (no cash/fees) was —. Starts YES **2/30**. Fills 584 · skips 364 · realized $+311.24.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $49.04.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $4,317.64.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -773,6 +773,20 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-11 09:30 ET | **BUY** | `KDP` | 32 | $37.11 | $2.09 | — | $1,248.37 | — | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); ⚪; ret5=+8.2; combo leftover $1217.55; owner flatten_h5 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟡 heat🟢 vol🟡 buy🟡 |
 | 2026-11-11 09:30 ET | **BUY** | `PRCH` | 54 | $22.17 | $2.15 | — | $49.04 | — | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); ret5=+2.0; combo leftover $1217.55; owner flatten_h5 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
 | 2026-11-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $49.04 | ▲ close $8,698.00 vs 09:30 $8,705.62 (session +28.91) | 16:00 close · cash $49.04 · equity $8,698.00 vs 09:30 $8,705.62 (-7.62; session marks +28.91) · 18 name(s) marked open→close (per-name table). CLX×2 09:30 $104.89 → close $106.86 +3.94; CMCSA×10 09:30 $24.46 → close $25.02 +5.55; COCO×3 09:30 $66.14 → close $65.31 -2.49; CPRI×4 09:30 $21.27 → close $20.89 -1.52; CROX×1 09:30 $159.11 → close $159.98 +0.87; CSGP×7 09:30 $29.82 → close $30.27 +3.12; GPK×22 09:30 $10.95 → close $11.07 +2.64; MGNI×3 09:30 $28.53 → close $29.21 +2.04; COTY×121 09:30 $4.28 → close $4.06 -26.62; TTD×34 09:30 $15.23 → close $15.98 +25.50; PCT×235 09:30 $2.20 → close $2.00 -47.00; LINC×22 09:30 $23.32 → close $23.51 +4.18; QXO×37 09:30 $13.70 → close $13.81 +4.07; WRBY×17 09:30 $30.01 → close $30.15 +2.38; ACAD×28 09:30 $18.13 → close $18.37 +6.72; PFGC×11 09:30 $110.24 → close $111.21 +10.67; KDP×32 09:30 $37.11 → close $38.25 +36.48; PRCH×54 09:30 $22.17 → close $22.14 -1.62 | — |
+| 2026-11-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $49.04 | ▼ 09:30 equity $8,616.19 vs yday $8,698.00 (-81.81) | 09:30 open · cash $49.04 (unchanged overnight, no fees) · equity $8,616.19 vs prior close $8,698.00 (-81.81) | — |
+| 2026-11-12 09:30 ET | **SELL** | `CLX` | 2 | $107.52 | $2.02 | $+11.27 | $262.06 | ▲ +11.27 after sell → book $8,614.18; vs 09:30 mark -2.01 | flatten_h5: dropped from list after 5 sess (min 5) | — |
+| 2026-11-12 09:30 ET | **SELL** | `CMCSA` | 10 | $25.27 | $2.04 | $-2.36 | $512.72 | ▼ -2.36 after sell → book $8,612.14; vs 09:30 mark -2.04 | flatten_h5: dropped from list after 5 sess (min 5) | — |
+| 2026-11-12 09:30 ET | **SELL** | `COCO` | 3 | $65.03 | $1.98 | $-10.34 | $705.83 | ▼ -10.34 after sell → book $8,610.16; vs 09:30 mark -1.98 | flatten_h5: dropped from list after 5 sess (min 5) | — |
+| 2026-11-12 09:30 ET | **SELL** | `COTY` | 121 | $4.09 | $2.38 | $-27.73 | $1,198.34 | ▼ -27.73 after sell → book $8,607.77; vs 09:30 mark -2.39 | union_join_vol_green_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `CROX` | 1 | $159.92 | $1.62 | $-3.31 | $1,356.64 | ▼ -3.31 after sell → book $8,606.15; vs 09:30 mark -1.62 | flatten_h5: dropped from list after 5 sess (min 5) | — |
+| 2026-11-12 09:30 ET | **SELL** | `CSGP` | 7 | $30.62 | $2.03 | $-21.47 | $1,568.95 | ▼ -21.47 after sell → book $8,604.12; vs 09:30 mark -2.03 | flatten_h5: dropped from list after 5 sess (min 5) | — |
+| 2026-11-12 09:30 ET | **SELL** | `GPK` | 22 | $11.17 | $2.08 | $-18.43 | $1,812.61 | ▼ -18.43 after sell → book $8,602.05; vs 09:30 mark -2.07 | flatten_h5: dropped from list after 5 sess (min 5) | — |
+| 2026-11-12 09:30 ET | **SELL** | `LINC` | 22 | $23.30 | $2.08 | $-4.57 | $2,323.14 | ▼ -4.57 after sell → book $8,599.97; vs 09:30 mark -2.08 | union_join_vol_green_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `PCT` | 235 | $1.96 | $3.08 | $-62.51 | $2,780.66 | ▼ -62.51 after sell → book $8,596.89; vs 09:30 mark -3.08 | union_join_vol_green_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `QXO` | 37 | $13.38 | $2.12 | $-16.06 | $3,273.59 | ▼ -16.06 after sell → book $8,594.77; vs 09:30 mark -2.12 | union_join_vol_green_h1: dropped from list after 1 sess (min 1) | join🔴 sector🟢 gen🔴 news🟢 digest🔴 judge🔴 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-12 09:30 ET | **SELL** | `TTD` | 34 | $15.85 | $2.11 | $+16.88 | $3,810.38 | ▲ +16.88 after sell → book $8,592.66; vs 09:30 mark -2.11 | union_join_vol_green_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `WRBY` | 17 | $29.96 | $2.06 | $-4.95 | $4,317.64 | ▼ -4.95 after sell → book $8,590.60; vs 09:30 mark -2.06 | union_join_vol_green_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $4,317.64 | ▼ close $8,488.84 vs 09:30 $8,616.19 (session -101.75) | 16:00 close · cash $4,317.64 · equity $8,488.84 vs 09:30 $8,616.19 (-127.35; session marks -101.75) · 6 name(s) marked open→close (per-name table). ACAD×28 09:30 $18.22 → close $18.14 -2.24; CPRI×4 09:30 $21.11 → close $20.38 -2.92; KDP×32 09:30 $36.49 → close $35.42 -34.27; MGNI×3 09:30 $29.25 → close $29.34 +0.27; PFGC×11 09:30 $111.88 → close $109.96 -21.12; PRCH×54 09:30 $22.08 → close $21.31 -41.47 | — |
 
 ## Not taken
 

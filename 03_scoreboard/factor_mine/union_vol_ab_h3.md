@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-5.54%** ($9,446) · signal-only (no cash/fees) was +81.51%. Starts YES **27/30**. Fills 295 · skips 225 · realized $+477.57.
+Cash book **-8.04%** ($9,196) · signal-only (no cash/fees) was +81.51%. Starts YES **27/30**. Fills 295 · skips 225 · realized $+477.57.
 
 ## How this sleeve decides (like you are 10)
 
@@ -497,6 +497,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-11 09:30 ET | **BUY** | `LINC` | 49 | $23.32 | $2.14 | — | $1,173.72 | — | combo gate; gate ab=good,vol=good; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+12.2; leftover $1157.69 | join🟢 sector🟡 gen🟢 news🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-11 09:30 ET | **BUY** | `ASPN` | 194 | $5.94 | $2.57 | — | $18.79 | — | combo gate; gate ab=good,vol=good; list yday_gainer,yday_mover; 🔵; ret5=+15.3; leftover $1157.69 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-11-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $18.79 | ▲ close $9,446.00 vs 09:30 $9,287.32 (session +200.71) | 16:00 close · cash $18.79 · equity $9,446.00 vs 09:30 $9,287.32 (+158.68; session marks +200.71) · 9 name(s) marked open→close (per-name table). SERV×1 09:30 $3.32 → close $3.17 -0.15; CLX×11 09:30 $104.89 → close $106.86 +21.67; COTY×270 09:30 $4.28 → close $4.06 -59.40; TTD×76 09:30 $15.23 → close $15.98 +57.00; TLS×148 09:30 $7.80 → close $7.65 -22.20; GFR×150 09:30 $7.70 → close $7.70 +0.00; FRVO×97 09:30 $11.88 → close $12.94 +103.30; LINC×49 09:30 $23.32 → close $23.51 +9.31; ASPN×194 09:30 $5.94 → close $6.41 +91.18 | — |
+| 2026-11-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $18.79 | ▼ 09:30 equity $9,338.76 vs yday $9,446.00 (-107.24) | 09:30 open · cash $18.79 (unchanged overnight, no fees) · equity $9,338.76 vs prior close $9,446.00 (-107.24) · 9 name(s) re-marked at the open (per-name table). ASPN×194 yday $6.41 → 09:30 $6.18 -44.62; CLX×11 yday $106.86 → 09:30 $107.52 +7.26; COTY×270 yday $4.06 → 09:30 $4.09 +8.10; FRVO×97 yday $12.94 → 09:30 $12.33 -59.17; GFR×150 yday $7.70 → 09:30 $7.72 +3.00; LINC×49 yday $23.51 → 09:30 $23.30 -10.29; SERV×1 yday $3.17 → 09:30 $3.00 -0.17; TLS×148 yday $7.65 → 09:30 $7.64 -1.48; TTD×76 yday $15.98 → 09:30 $15.85 -9.88 | — |
+| 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $18.79 | ▼ close $9,195.91 vs 09:30 $9,338.76 (session -142.86) | 16:00 close · cash $18.79 · equity $9,195.91 vs 09:30 $9,338.76 (-142.85; session marks -142.86) · 9 name(s) marked open→close (per-name table). ASPN×194 09:30 $6.18 → close $5.99 -36.86; CLX×11 09:30 $107.52 → close $108.20 +7.48; COTY×270 09:30 $4.09 → close $4.03 -16.20; FRVO×97 09:30 $12.33 → close $11.65 -65.96; GFR×150 09:30 $7.72 → close $7.73 +1.50; LINC×49 09:30 $23.30 → close $22.98 -15.68; SERV×1 09:30 $3.00 → close $2.90 -0.10; TLS×148 09:30 $7.64 → close $7.72 +11.84; TTD×76 09:30 $15.85 → close $15.47 -28.88 | — |
 
 ## Not taken
 

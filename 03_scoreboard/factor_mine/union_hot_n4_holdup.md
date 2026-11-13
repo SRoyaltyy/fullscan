@@ -348,6 +348,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-11 09:30 ET | **SELL** | `AEHL` | 304 | $11.89 | $4.00 | $-375.76 | $11,279.88 | ▼ -375.76 after sell → book $15,421.29; vs 09:30 mark -4.00 | dropped from list after 2 sess (min 2) | — |
 | 2026-11-11 09:30 ET | **SELL** | `XERS` | 259 | $15.99 | $3.42 | $+156.41 | $15,417.87 | ▲ +156.41 after sell → book $15,417.87; vs 09:30 mark -3.42 | dropped from list after 2 sess (min 2) | — |
 | 2026-11-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $15,417.87 | ▲ close $15,417.87 vs 09:30 $15,425.29 (session +0.00) | 16:00 close · cash $15,417.87 · no lots left · equity $15,417.87. | — |
+| 2026-11-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $15,417.87 | ▲ 09:30 equity $15,417.87 vs yday $15,417.87 (+0.00) | 09:30 open · cash $15,417.87 · no holdings · equity $15,417.87 vs prior close $15,417.87 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $15,417.87 | ▲ close $15,417.87 vs 09:30 $15,417.87 (session +0.00) | 16:00 close · cash $15,417.87 · no lots left · equity $15,417.87. | — |
 
 ## Not taken
 

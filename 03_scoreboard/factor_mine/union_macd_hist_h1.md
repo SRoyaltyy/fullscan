@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `macd_hist` · size `leftover` · sell `list` · S-boost `none` · rank by macd_hist
 
-Cash book **-14.17%** ($8,583) · signal-only (no cash/fees) was +3.37%. Starts YES **20/30**. Fills 525 · skips 94 · realized $-657.32.
+Cash book **-14.77%** ($8,523) · signal-only (no cash/fees) was +3.37%. Starts YES **20/30**. Fills 531 · skips 94 · realized $-657.32.
 
 ## How this sleeve decides (like you are 10)
 
@@ -724,6 +724,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-11 09:30 ET | **BUY** | `FWONK` | 9 | $108.64 | $2.02 | — | $1,394.61 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; ret5=+14.0; leftover $1070.96 | join🟢 sector🟡 gen🟢 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-11 09:30 ET | **BUY** | `PFGC` | 9 | $110.24 | $2.02 | — | $400.43 | — | rank by macd_hist; rank macd_hist; list flatten; ⚪; ret5=+15.0; leftover $1070.96 | join🟢 sector🟡 gen🟢 news🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-11-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $400.43 | ▼ close $8,582.69 vs 09:30 $8,609.79 (session -2.74) | 16:00 close · cash $400.43 · equity $8,582.69 vs 09:30 $8,609.79 (-27.10; session marks -2.74) · 8 name(s) marked open→close (per-name table). LOAR×13 09:30 $79.53 → close $79.24 -3.77; TTWO×5 09:30 $227.57 → close $231.31 +18.70; FNV×4 09:30 $257.00 → close $248.76 -32.96; INSM×8 09:30 $119.49 → close $120.75 +10.08; ORKA×9 09:30 $112.28 → close $107.17 -45.99; CLX×10 09:30 $104.89 → close $106.86 +19.70; FWONK×9 09:30 $108.64 → close $111.17 +22.77; PFGC×9 09:30 $110.24 → close $111.21 +8.73 | — |
+| 2026-11-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $400.43 | ▼ 09:30 equity $8,548.39 vs yday $8,582.69 (-34.30) | 09:30 open · cash $400.43 (unchanged overnight, no fees) · equity $8,548.39 vs prior close $8,582.69 (-34.30) · 8 name(s) re-marked at the open (per-name table). CLX×10 yday $106.86 → 09:30 $107.52 +6.60; FNV×4 yday $248.76 → 09:30 $246.11 -10.60; FWONK×9 yday $111.17 → 09:30 $111.63 +4.14; INSM×8 yday $120.75 → 09:30 $119.00 -14.00; LOAR×13 yday $79.24 → 09:30 $78.31 -12.09; ORKA×9 yday $107.17 → 09:30 $105.10 -18.63; PFGC×9 yday $111.21 → 09:30 $111.88 +6.03; TTWO×5 yday $231.31 → 09:30 $232.16 +4.25 | — |
+| 2026-11-12 09:30 ET | **SELL** | `CLX` | 10 | $107.52 | $2.04 | $+22.24 | $1,473.59 | ▲ +22.24 after sell → book $8,546.35; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `INSM` | 8 | $119.00 | $2.03 | $-7.97 | $2,423.56 | ▼ -7.97 after sell → book $8,544.32; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `LOAR` | 13 | $78.31 | $2.05 | $+7.88 | $3,439.54 | ▲ +7.88 after sell → book $8,542.27; vs 09:30 mark -2.05 | dropped from list after 2 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `ORKA` | 9 | $105.10 | $2.04 | $-68.67 | $4,383.40 | ▼ -68.67 after sell → book $8,540.23; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `PFGC` | 9 | $111.88 | $2.04 | $+10.71 | $5,388.28 | ▲ +10.71 after sell → book $8,538.19; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `TTWO` | 5 | $232.16 | $2.02 | $+75.47 | $6,547.06 | ▲ +75.47 after sell → book $8,536.17; vs 09:30 mark -2.02 | dropped from list after 3 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,547.06 | ▼ close $8,522.90 vs 09:30 $8,548.39 (session -13.27) | 16:00 close · cash $6,547.06 · equity $8,522.90 vs 09:30 $8,548.39 (-25.49; session marks -13.27) · 2 name(s) marked open→close (per-name table). FNV×4 09:30 $246.11 → close $247.72 +6.44; FWONK×9 09:30 $111.63 → close $109.44 -19.71 | — |
 
 ## Not taken
 

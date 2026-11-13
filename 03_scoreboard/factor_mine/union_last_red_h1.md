@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ last_red, no 🚨
 
-Cash book **+73.55%** ($17,355) · signal-only (no cash/fees) was +1.25%. Starts YES **0/30**. Fills 566 · skips 105 · realized $-1315.32.
+Cash book **+69.52%** ($16,952) · signal-only (no cash/fees) was +1.25%. Starts YES **0/30**. Fills 574 · skips 105 · realized $-1315.32.
 
 ## How this sleeve decides (like you are 10)
 
@@ -766,6 +766,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-11 09:30 ET | **BUY** | `ASPN` | 358 | $5.94 | $4.62 | — | $2,156.68 | — | union ∩ last_red, no 🚨; gate last_red=True; list yday_gainer,yday_mover; 🔵; ret5=+15.3; leftover $2129.65 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-11-11 09:30 ET | **BUY** | `AOSL` | 70 | $30.00 | $2.20 | — | $54.48 | — | union ∩ last_red, no 🚨; gate last_red=True; list yday_gainer,yday_mover; ret5=+27.7; leftover $2129.65 | join🔴 sector🟢 gen🟢 news🟢 digest🟡 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-11-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $54.48 | ▲ close $17,355.21 vs 09:30 $17,082.12 (session +365.57) | 16:00 close · cash $54.48 · equity $17,355.21 vs 09:30 $17,082.12 (+273.09; session marks +365.57) · 8 name(s) marked open→close (per-name table). PFGC×19 09:30 $110.24 → close $111.21 +18.43; SWMR×255 09:30 $8.35 → close $9.43 +275.40; RC×2108 09:30 $1.01 → close $0.93 -168.43; CECO×36 09:30 $58.47 → close $53.50 -178.92; GFR×276 09:30 $7.70 → close $7.70 +0.00; FRVO×179 09:30 $11.88 → close $12.94 +190.63; ASPN×358 09:30 $5.94 → close $6.41 +168.26; AOSL×70 09:30 $30.00 → close $30.86 +60.20 | — |
+| 2026-11-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $54.48 | ▼ 09:30 equity $16,998.50 vs yday $17,355.21 (-356.71) | 09:30 open · cash $54.48 (unchanged overnight, no fees) · equity $16,998.50 vs prior close $17,355.21 (-356.71) · 8 name(s) re-marked at the open (per-name table). AOSL×70 yday $30.86 → 09:30 $29.12 -121.66; ASPN×358 yday $6.41 → 09:30 $6.18 -82.34; CECO×36 yday $53.50 → 09:30 $54.34 +30.24; FRVO×179 yday $12.94 → 09:30 $12.33 -109.19; GFR×276 yday $7.70 → 09:30 $7.72 +5.52; PFGC×19 yday $111.21 → 09:30 $111.88 +12.73; RC×2108 yday $0.93 → 09:30 $0.93 -0.21; SWMR×255 yday $9.43 → 09:30 $9.07 -91.80 | — |
+| 2026-11-12 09:30 ET | **SELL** | `AOSL` | 70 | $29.12 | $2.23 | $-65.89 | $2,090.79 | ▼ -65.89 after sell → book $16,996.27; vs 09:30 mark -2.23 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `ASPN` | 358 | $6.18 | $4.70 | $+76.61 | $4,298.54 | ▲ +76.61 after sell → book $16,991.58; vs 09:30 mark -4.69 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `CECO` | 36 | $54.34 | $2.12 | $-152.90 | $6,252.65 | ▼ -152.90 after sell → book $16,989.45; vs 09:30 mark -2.13 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `FRVO` | 179 | $12.33 | $2.57 | $+76.34 | $8,457.15 | ▲ +76.34 after sell → book $16,986.88; vs 09:30 mark -2.57 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `GFR` | 276 | $7.72 | $3.62 | $-1.66 | $10,584.25 | ▼ -1.66 after sell → book $16,983.26; vs 09:30 mark -3.62 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `PFGC` | 19 | $111.88 | $2.07 | $+27.04 | $12,707.89 | ▲ +27.04 after sell → book $16,981.18; vs 09:30 mark -2.08 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `RC` | 2108 | $0.93 | $26.29 | $-222.13 | $14,642.04 | ▼ -222.13 after sell → book $16,954.89; vs 09:30 mark -26.29 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `SWMR` | 255 | $9.07 | $3.35 | $+176.96 | $16,951.54 | ▲ +176.96 after sell → book $16,951.54; vs 09:30 mark -3.35 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $16,951.54 | ▲ close $16,951.54 vs 09:30 $16,998.50 (session +0.00) | 16:00 close · cash $16,951.54 · no lots left · equity $16,951.54. | — |
 
 ## Not taken
 

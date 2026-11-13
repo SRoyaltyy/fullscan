@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ macd_xup, no 🚨
 
-Cash book **-10.67%** ($8,933) · signal-only (no cash/fees) was -55.44%. Starts YES **5/30**. Fills 251 · skips 209 · realized $-2117.42.
+Cash book **-12.08%** ($8,792) · signal-only (no cash/fees) was -55.44%. Starts YES **5/30**. Fills 252 · skips 209 · realized $-2117.42.
 
 ## How this sleeve decides (like you are 10)
 
@@ -451,6 +451,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-11 09:30 ET | **BUY** | `AVEX` | 97 | $11.70 | $2.28 | — | $1,216.00 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list overnight; ret5=-2.8; leftover $1142.64 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 heat🔴 vol🟡 buy🟡 |
 | 2026-11-11 09:30 ET | **BUY** | `CTVA` | 94 | $12.12 | $2.27 | — | $74.44 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list overnight; ret5=+2.4; leftover $1142.64 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-11-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $74.44 | ▼ close $8,932.84 vs 09:30 $9,199.93 (session -195.98) | 16:00 close · cash $74.44 · equity $8,932.84 vs 09:30 $9,199.93 (-267.09; session marks -195.98) · 11 name(s) marked open→close (per-name table). HIVE×2 09:30 $1.80 → close $1.75 -0.11; SATL×1 09:30 $4.53 → close $3.80 -0.73; SES×5 09:30 $0.91 → close $0.90 -0.06; CECO×19 09:30 $58.47 → close $53.50 -94.43; GFR×148 09:30 $7.70 → close $7.70 +0.00; LINC×48 09:30 $23.32 → close $23.51 +9.12; OSS×223 09:30 $5.11 → close $4.89 -49.06; ZETA×31 09:30 $36.00 → close $37.74 +53.94; VLN×688 09:30 $1.66 → close $1.43 -158.24; AVEX×97 09:30 $11.70 → close $12.13 +41.71; CTVA×94 09:30 $12.12 → close $12.14 +1.88 | — |
+| 2026-11-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $74.44 | ▼ 09:30 equity $8,860.95 vs yday $8,932.84 (-71.89) | 09:30 open · cash $74.44 (unchanged overnight, no fees) · equity $8,860.95 vs prior close $8,932.84 (-71.89) · 11 name(s) re-marked at the open (per-name table). AVEX×97 yday $12.13 → 09:30 $13.65 +147.44; CECO×19 yday $53.50 → 09:30 $54.34 +15.96; CTVA×94 yday $12.14 → 09:30 $10.51 -153.22; GFR×148 yday $7.70 → 09:30 $7.72 +2.96; HIVE×2 yday $1.75 → 09:30 $1.66 -0.18; LINC×48 yday $23.51 → 09:30 $23.30 -10.08; OSS×223 yday $4.89 → 09:30 $4.79 -22.30; SATL×1 yday $3.80 → 09:30 $3.63 -0.17; SES×5 yday $0.90 → 09:30 $0.82 -0.41; VLN×688 yday $1.43 → 09:30 $1.41 -13.76; ZETA×31 yday $37.74 → 09:30 $36.51 -38.13 | — |
+| 2026-11-12 09:30 ET | **SELL** | `HIVE` | 2 | $1.66 | $0.06 | $-0.32 | $77.70 | ▼ -0.32 after sell → book $8,860.89; vs 09:30 mark -0.06 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $77.70 | ▼ close $8,792.42 vs 09:30 $8,860.95 (session -68.47) | 16:00 close · cash $77.70 · equity $8,792.42 vs 09:30 $8,860.95 (-68.53; session marks -68.47) · 10 name(s) marked open→close (per-name table). AVEX×97 09:30 $13.65 → close $13.76 +10.67; CECO×19 09:30 $54.34 → close $56.00 +31.54; CTVA×94 09:30 $10.51 → close $9.19 -124.08; GFR×148 09:30 $7.72 → close $7.73 +1.48; LINC×48 09:30 $23.30 → close $22.98 -15.36; OSS×223 09:30 $4.79 → close $4.72 -15.61; SATL×1 09:30 $3.63 → close $3.52 -0.11; SES×5 09:30 $0.82 → close $0.58 -1.20; VLN×688 09:30 $1.41 → close $1.44 +20.64; ZETA×31 09:30 $36.51 → close $37.27 +23.56 | — |
 
 ## Not taken
 

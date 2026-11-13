@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · −0 red + (yday up or major catalyst), then Score
 
-Cash book **-8.33%** ($9,167) · signal-only (no cash/fees) was +6.04%. Starts YES **5/30**. Fills 248 · skips 94 · realized $-316.93.
+Cash book **-10.48%** ($8,952) · signal-only (no cash/fees) was +6.04%. Starts YES **5/30**. Fills 254 · skips 94 · realized $-316.93.
 
 ## How this sleeve decides (like you are 10)
 
@@ -450,6 +450,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-11 09:30 ET | **BUY** | `FLYW` | 49 | $22.21 | $2.14 | — | $1,186.94 | — | −0 red + (yday up or major catalyst), then Score; gate cam_bad_max=0,yday_or_catalyst=True; rank list; list ohlc_hot; ⚪; ret5=+16.7; leftover $1099.97 | join🟢 sector🟢 gen🟢 news🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-11-11 09:30 ET | **BUY** | `ZETA` | 30 | $36.00 | $2.08 | — | $104.86 | — | −0 red + (yday up or major catalyst), then Score; gate cam_bad_max=0,yday_or_catalyst=True; rank list; list ohlc_hot; ⚪; ret5=+13.2; leftover $1099.97 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-11-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $104.86 | ▼ close $9,166.89 vs 09:30 $9,231.09 (session -31.62) | 16:00 close · cash $104.86 · equity $9,166.89 vs 09:30 $9,231.09 (-64.20; session marks -31.62) · 13 name(s) marked open→close (per-name table). COTY×272 09:30 $4.28 → close $4.06 -59.84; ETON×1 09:30 $66.94 → close $68.40 +1.46; EVC×8 09:30 $9.10 → close $9.97 +6.96; REPL×3 09:30 $23.28 → close $21.78 -4.50; SERV×24 09:30 $3.32 → close $3.17 -3.72; WRBY×2 09:30 $30.01 → close $30.15 +0.28; CLX×10 09:30 $104.89 → close $106.86 +19.70; KDP×29 09:30 $37.11 → close $38.25 +33.06; LINC×47 09:30 $23.32 → close $23.51 +8.93; SBH×54 09:30 $20.27 → close $19.22 -56.43; ALH×44 09:30 $24.92 → close $24.20 -31.68; FLYW×49 09:30 $22.21 → close $22.25 +1.96; ZETA×30 09:30 $36.00 → close $37.74 +52.20 | — |
+| 2026-11-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $104.86 | ▼ 09:30 equity $9,077.26 vs yday $9,166.89 (-89.63) | 09:30 open · cash $104.86 (unchanged overnight, no fees) · equity $9,077.26 vs prior close $9,166.89 (-89.63) · 13 name(s) re-marked at the open (per-name table). ALH×44 yday $24.20 → 09:30 $24.29 +3.96; CLX×10 yday $106.86 → 09:30 $107.52 +6.60; COTY×272 yday $4.06 → 09:30 $4.09 +8.16; ETON×1 yday $68.40 → 09:30 $68.38 -0.02; EVC×8 yday $9.97 → 09:30 $9.77 -1.60; FLYW×49 yday $22.25 → 09:30 $22.14 -5.39; KDP×29 yday $38.25 → 09:30 $36.49 -51.01; LINC×47 yday $23.51 → 09:30 $23.30 -9.87; REPL×3 yday $21.78 → 09:30 $21.32 -1.38; SBH×54 yday $19.22 → 09:30 $19.26 +2.16; SERV×24 yday $3.17 → 09:30 $3.00 -3.96; WRBY×2 yday $30.15 → 09:30 $29.96 -0.38; ZETA×30 yday $37.74 → 09:30 $36.51 -36.90 | — |
+| 2026-11-12 09:30 ET | **SELL** | `COTY` | 272 | $4.09 | $3.56 | $-20.67 | $1,213.78 | ▼ -20.67 after sell → book $9,073.69; vs 09:30 mark -3.57 | dropped from list after 3 sess (min 2) | — |
+| 2026-11-12 09:30 ET | **SELL** | `ETON` | 1 | $68.38 | $0.71 | $+3.40 | $1,281.45 | ▲ +3.40 after sell → book $9,072.99; vs 09:30 mark -0.70 | dropped from list after 2 sess (min 2) | — |
+| 2026-11-12 09:30 ET | **SELL** | `EVC` | 8 | $9.77 | $0.83 | $+2.17 | $1,358.78 | ▲ +2.17 after sell → book $9,072.16; vs 09:30 mark -0.83 | dropped from list after 2 sess (min 2) | — |
+| 2026-11-12 09:30 ET | **SELL** | `REPL` | 3 | $21.32 | $0.67 | $-3.68 | $1,422.07 | ▼ -3.68 after sell → book $9,071.49; vs 09:30 mark -0.67 | dropped from list after 2 sess (min 2) | — |
+| 2026-11-12 09:30 ET | **SELL** | `SERV` | 24 | $3.00 | $0.81 | $-8.63 | $1,493.26 | ▼ -8.63 after sell → book $9,070.68; vs 09:30 mark -0.81 | dropped from list after 2 sess (min 2) | — |
+| 2026-11-12 09:30 ET | **SELL** | `WRBY` | 2 | $29.96 | $0.63 | $-1.01 | $1,552.56 | ▼ -1.01 after sell → book $9,070.06; vs 09:30 mark -0.62 | dropped from list after 2 sess (min 2) | — |
+| 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,552.56 | ▼ close $8,951.51 vs 09:30 $9,077.26 (session -118.55) | 16:00 close · cash $1,552.56 · equity $8,951.51 vs 09:30 $9,077.26 (-125.75; session marks -118.55) · 7 name(s) marked open→close (per-name table). ALH×44 09:30 $24.29 → close $23.76 -23.32; CLX×10 09:30 $107.52 → close $108.20 +6.80; FLYW×49 09:30 $22.14 → close $21.47 -32.83; KDP×29 09:30 $36.49 → close $35.42 -31.06; LINC×47 09:30 $23.30 → close $22.98 -15.04; SBH×54 09:30 $19.26 → close $18.41 -45.90; ZETA×30 09:30 $36.51 → close $37.27 +22.80 | — |
 
 ## Not taken
 

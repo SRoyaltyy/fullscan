@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · RSI overbought
 
-Cash book **-1.92%** ($9,808) · signal-only (no cash/fees) was -20.71%. Starts YES **6/30**. Fills 448 · skips 95 · realized $-976.57.
+Cash book **-1.63%** ($9,837) · signal-only (no cash/fees) was -20.71%. Starts YES **6/30**. Fills 456 · skips 95 · realized $-976.57.
 
 ## How this sleeve decides (like you are 10)
 
@@ -646,6 +646,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-11 09:30 ET | **SHORT** | `ATER` | 755 | $0.93 | $9.45 | — | $14,559.19 | — | RSI overbought; gate rsi_ob=True; list ohlc_hot; ret5=+16.4; leftover $703.81 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-11-11 09:30 ET | **SHORT** | `GDYN` | 50 | $13.94 | $2.18 | — | $15,254.01 | — | RSI overbought; gate rsi_ob=True; list ohlc_hot; ret5=+5.2; leftover $703.81 | join🔴 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
 | 2026-11-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $15,254.01 | ▼ close $9,808.08 vs 09:30 $9,870.39 (session -22.11) | 16:00 close · cash $15,254.01 · equity $9,808.08 vs 09:30 $9,870.39 (-62.31; session marks -22.11) · 8 name(s) marked open→close (per-name table). REPL×27 09:30 $23.28 → close $21.78 +40.50; CLX×6 09:30 $104.89 → close $106.86 -11.82; PFGC×6 09:30 $110.24 → close $111.21 -5.82; COTY×164 09:30 $4.28 → close $4.06 +36.08; TLS×90 09:30 $7.80 → close $7.65 +13.50; ZJYL×164 09:30 $4.27 → close $4.91 -104.96; ATER×755 09:30 $0.93 → close $0.93 +4.91; GDYN×50 09:30 $13.94 → close $13.83 +5.50 | — |
+| 2026-11-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $15,254.01 | ▲ 09:30 equity $9,861.59 vs yday $9,808.08 (+53.51) | 09:30 open · cash $15,254.01 (unchanged overnight, no fees) · equity $9,861.59 vs prior close $9,808.08 (+53.51) · 8 name(s) re-marked at the open (per-name table). ATER×755 yday $0.93 → 09:30 $0.90 +18.88; CLX×6 yday $106.86 → 09:30 $107.52 -3.96; COTY×164 yday $4.06 → 09:30 $4.09 -4.92; GDYN×50 yday $13.83 → 09:30 $13.90 -3.50; PFGC×6 yday $111.21 → 09:30 $111.88 -4.02; REPL×27 yday $21.78 → 09:30 $21.32 +12.42; TLS×90 yday $7.65 → 09:30 $7.64 +0.90; ZJYL×164 yday $4.91 → 09:30 $4.68 +37.72 | — |
+| 2026-11-12 09:30 ET | **COVER** | `ATER` | 755 | $0.90 | $9.06 | $+5.27 | $14,565.45 | ▲ +5.27 after sell → book $9,852.53; vs 09:30 mark -9.06 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **COVER** | `CLX` | 6 | $107.52 | $2.01 | $-19.83 | $13,918.32 | ▼ -19.83 after sell → book $9,850.52; vs 09:30 mark -2.01 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **COVER** | `COTY` | 164 | $4.09 | $2.48 | $+26.14 | $13,245.08 | ▲ +26.14 after sell → book $9,848.04; vs 09:30 mark -2.48 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **COVER** | `GDYN` | 50 | $13.90 | $2.14 | $-2.32 | $12,547.94 | ▼ -2.32 after sell → book $9,845.90; vs 09:30 mark -2.14 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **COVER** | `PFGC` | 6 | $111.88 | $2.01 | $-13.89 | $11,874.65 | ▼ -13.89 after sell → book $9,843.89; vs 09:30 mark -2.01 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **COVER** | `REPL` | 27 | $21.32 | $2.07 | $+16.88 | $11,296.94 | ▲ +16.88 after sell → book $9,841.82; vs 09:30 mark -2.07 | dropped from list after 2 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **COVER** | `TLS` | 90 | $7.64 | $2.26 | $+9.84 | $10,607.08 | ▲ +9.84 after sell → book $9,839.56; vs 09:30 mark -2.26 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **COVER** | `ZJYL` | 164 | $4.68 | $2.48 | $-72.26 | $9,837.08 | ▼ -72.26 after sell → book $9,837.08; vs 09:30 mark -2.48 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,837.08 | ▲ close $9,837.08 vs 09:30 $9,861.59 (session +0.00) | 16:00 close · cash $9,837.08 · no lots left · equity $9,837.08. | — |
 
 ## Not taken
 

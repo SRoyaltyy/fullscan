@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · alarm
 
-Cash book **-4.49%** ($9,551) · signal-only (no cash/fees) was +3.57%. Starts YES **5/30**. Fills 302 · skips 96 · realized $+54.59.
+Cash book **-4.16%** ($9,584) · signal-only (no cash/fees) was +3.57%. Starts YES **5/30**. Fills 310 · skips 96 · realized $+54.59.
 
 ## How this sleeve decides (like you are 10)
 
@@ -500,6 +500,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-11 09:30 ET | **SHORT** | `IBN` | 17 | $34.27 | $2.08 | — | $13,836.09 | — | alarm; gate alarm=True; list ohlc_hot; ret5=+15.8; leftover $607.54 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-11-11 09:30 ET | **SHORT** | `PPLI` | 13 | $43.63 | $2.06 | — | $14,401.22 | — | alarm; gate alarm=True; list ohlc_hot; ret5=+13.7; leftover $607.54 | join🟢 sector🟡 gen🟢 news🟢 digest🔴 ab🔴 heat🟢 vol🟡 buy🟡 |
 | 2026-11-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,401.22 | ▼ close $9,550.91 vs 09:30 $9,738.80 (session -148.89) | 16:00 close · cash $14,401.22 · equity $9,550.91 vs 09:30 $9,738.80 (-187.89; session marks -148.89) · 8 name(s) marked open→close (per-name table). PRCH×27 09:30 $22.17 → close $22.14 +0.81; INO×443 09:30 $1.37 → close $1.48 -46.51; ZJYL×142 09:30 $4.27 → close $4.91 -90.88; REPL×26 09:30 $23.28 → close $21.78 +39.00; CHTR×4 09:30 $133.11 → close $136.31 -12.80; LILAK×61 09:30 $9.87 → close $10.30 -26.23; IBN×17 09:30 $34.27 → close $34.74 -7.99; PPLI×13 09:30 $43.63 → close $43.96 -4.29 | — |
+| 2026-11-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $14,401.22 | ▲ 09:30 equity $9,604.13 vs yday $9,550.91 (+53.22) | 09:30 open · cash $14,401.22 (unchanged overnight, no fees) · equity $9,604.13 vs prior close $9,550.91 (+53.22) · 8 name(s) re-marked at the open (per-name table). CHTR×4 yday $136.31 → 09:30 $138.13 -7.28; IBN×17 yday $34.74 → 09:30 $34.75 -0.17; INO×443 yday $1.48 → 09:30 $1.44 +15.51; LILAK×61 yday $10.30 → 09:30 $10.31 -0.61; PPLI×13 yday $43.96 → 09:30 $44.00 -0.52; PRCH×27 yday $22.14 → 09:30 $22.08 +1.67; REPL×26 yday $21.78 → 09:30 $21.32 +11.96; ZJYL×142 yday $4.91 → 09:30 $4.68 +32.66 | — |
+| 2026-11-12 09:30 ET | **COVER** | `CHTR` | 4 | $138.13 | $2.00 | $-24.12 | $13,846.70 | ▼ -24.12 after sell → book $9,602.13; vs 09:30 mark -2.00 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-12 09:30 ET | **COVER** | `IBN` | 17 | $34.75 | $2.04 | $-12.28 | $13,253.91 | ▼ -12.28 after sell → book $9,600.09; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **COVER** | `INO` | 443 | $1.44 | $5.71 | $-42.54 | $12,610.27 | ▼ -42.54 after sell → book $9,594.38; vs 09:30 mark -5.71 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **COVER** | `LILAK` | 61 | $10.31 | $2.17 | $-31.22 | $11,979.19 | ▼ -31.22 after sell → book $9,592.20; vs 09:30 mark -2.18 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **COVER** | `PPLI` | 13 | $44.00 | $2.03 | $-8.90 | $11,405.16 | ▼ -8.90 after sell → book $9,590.17; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **COVER** | `PRCH` | 27 | $22.08 | $2.07 | $-1.69 | $10,806.98 | ▼ -1.69 after sell → book $9,588.10; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **COVER** | `REPL` | 26 | $21.32 | $2.07 | $+46.79 | $10,250.60 | ▲ +46.79 after sell → book $9,586.04; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **COVER** | `ZJYL` | 142 | $4.68 | $2.42 | $-63.10 | $9,583.62 | ▼ -63.10 after sell → book $9,583.62; vs 09:30 mark -2.42 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,583.62 | ▲ close $9,583.62 vs 09:30 $9,604.13 (session +0.00) | 16:00 close · cash $9,583.62 · no lots left · equity $9,583.62. | — |
 
 ## Not taken
 

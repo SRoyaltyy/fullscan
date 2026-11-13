@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared short_news_r_h3/flatten_h5 w=0.7,0.3 net=priority
 
-Cash book **+1.71%** ($10,171) · signal-only (no cash/fees) was —. Starts YES **8/30**. Fills 395 · skips 449 · realized $+750.35.
+Cash book **+2.08%** ($10,208) · signal-only (no cash/fees) was —. Starts YES **8/30**. Fills 401 · skips 449 · realized $+750.35.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $-424.47.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $9,127.16.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -596,6 +596,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-11 09:30 ET | **SELL** | `RGEN` | 3 | $176.11 | $2.02 | $-25.89 | $-1,042.31 | ▼ -25.89 after sell → book $10,077.83; vs 09:30 mark -2.02 | flatten_h5: dropped from list after 5 sess (min 5) | — |
 | 2026-11-11 09:30 ET | **SELL** | `VEEV` | 2 | $309.93 | $2.02 | $+2.61 | $-424.47 | ▲ +2.61 after sell → book $10,075.82; vs 09:30 mark -2.01 | flatten_h5: dropped from list after 5 sess (min 5) | — |
 | 2026-11-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $-424.47 | ▲ close $10,170.56 vs 09:30 $10,090.39 (session +94.74) | 16:00 close · cash $-424.47 · equity $10,170.56 vs 09:30 $10,090.39 (+80.17; session marks +94.74) · 7 name(s) marked open→close (per-name table). BLFS×28 09:30 $38.61 → close $38.61 +0.00; CLX×16 09:30 $104.89 → close $106.86 +31.52; CMCSA×65 09:30 $24.46 → close $25.02 +36.07; COCO×24 09:30 $66.14 → close $65.31 -19.92; CROX×10 09:30 $159.11 → close $159.98 +8.70; CSGP×49 09:30 $29.82 → close $30.27 +21.81; GPK×138 09:30 $10.95 → close $11.07 +16.56 | — |
+| 2026-11-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $-424.47 | ▲ 09:30 equity $10,221.24 vs yday $10,170.56 (+50.68) | 09:30 open · cash $-424.47 (unchanged overnight, no fees) · equity $10,221.24 vs prior close $10,170.56 (+50.68) | — |
+| 2026-11-12 09:30 ET | **SELL** | `CLX` | 16 | $107.52 | $2.06 | $+118.14 | $1,293.79 | ▲ +118.14 after sell → book $10,219.18; vs 09:30 mark -2.06 | flatten_h5: dropped from list after 5 sess (min 5) | — |
+| 2026-11-12 09:30 ET | **SELL** | `CMCSA` | 65 | $25.27 | $2.21 | $+6.66 | $2,934.13 | ▲ +6.66 after sell → book $10,216.97; vs 09:30 mark -2.21 | flatten_h5: dropped from list after 5 sess (min 5) | — |
+| 2026-11-12 09:30 ET | **SELL** | `COCO` | 24 | $65.03 | $2.08 | $-55.03 | $4,492.76 | ▼ -55.03 after sell → book $10,214.88; vs 09:30 mark -2.09 | flatten_h5: dropped from list after 5 sess (min 5) | — |
+| 2026-11-12 09:30 ET | **SELL** | `CROX` | 10 | $159.92 | $2.04 | $-4.86 | $6,089.92 | ▼ -4.86 after sell → book $10,212.84; vs 09:30 mark -2.04 | flatten_h5: dropped from list after 5 sess (min 5) | — |
+| 2026-11-12 09:30 ET | **SELL** | `CSGP` | 49 | $30.62 | $2.16 | $-126.31 | $7,588.14 | ▼ -126.31 after sell → book $10,210.68; vs 09:30 mark -2.16 | flatten_h5: dropped from list after 5 sess (min 5) | — |
+| 2026-11-12 09:30 ET | **SELL** | `GPK` | 138 | $11.17 | $2.44 | $-94.54 | $9,127.16 | ▼ -94.54 after sell → book $10,208.24; vs 09:30 mark -2.44 | flatten_h5: dropped from list after 5 sess (min 5) | — |
+| 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,127.16 | ▲ close $10,208.24 vs 09:30 $10,221.24 (session +0.00) | 16:00 close · cash $9,127.16 · equity $10,208.24 vs 09:30 $10,221.24 (-13.00; session marks +0.00) · 1 name(s) marked open→close (per-name table). BLFS×28 09:30 $38.61 → close $38.61 +0.00 | — |
 
 ## Not taken
 

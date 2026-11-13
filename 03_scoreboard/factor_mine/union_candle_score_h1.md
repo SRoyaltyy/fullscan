@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `candle_score` · size `leftover` · sell `list` · S-boost `none` · rank by candle_score
 
-Cash book **-2.64%** ($9,736) · signal-only (no cash/fees) was +8.19%. Starts YES **0/30**. Fills 563 · skips 104 · realized $-563.45.
+Cash book **-3.14%** ($9,686) · signal-only (no cash/fees) was +8.19%. Starts YES **0/30**. Fills 570 · skips 104 · realized $-563.45.
 
 ## How this sleeve decides (like you are 10)
 
@@ -762,6 +762,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-11 09:30 ET | **BUY** | `HGV` | 26 | $44.86 | $2.07 | — | $1,270.43 | — | rank by candle_score; rank candle_score; list ohlc_hot; ret5=+9.1; leftover $1203.05 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
 | 2026-11-11 09:30 ET | **BUY** | `COTY` | 281 | $4.28 | $3.62 | — | $64.13 | — | rank by candle_score; rank candle_score; list flatten; 🔵; ⚪; ret5=+31.6; leftover $1203.05 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $64.13 | ▲ close $9,735.68 vs 09:30 $9,550.30 (session +220.17) | 16:00 close · cash $64.13 · equity $9,735.68 vs 09:30 $9,550.30 (+185.38; session marks +220.17) · 8 name(s) marked open→close (per-name table). LOAR×14 09:30 $79.53 → close $79.24 -4.06; BGS×394 09:30 $3.05 → close $3.67 +244.28; GEO×37 09:30 $32.26 → close $32.72 +17.02; GDYN×86 09:30 $13.94 → close $13.83 -9.46; JAN×36 09:30 $32.77 → close $32.55 -7.92; FWONK×11 09:30 $108.64 → close $111.17 +27.83; HGV×26 09:30 $44.86 → close $45.41 +14.30; COTY×281 09:30 $4.28 → close $4.06 -61.82 | — |
+| 2026-11-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $64.13 | ▼ 09:30 equity $9,729.27 vs yday $9,735.68 (-6.41) | 09:30 open · cash $64.13 (unchanged overnight, no fees) · equity $9,729.27 vs prior close $9,735.68 (-6.41) · 8 name(s) re-marked at the open (per-name table). BGS×394 yday $3.67 → 09:30 $3.67 +0.00; COTY×281 yday $4.06 → 09:30 $4.09 +8.43; FWONK×11 yday $111.17 → 09:30 $111.63 +5.06; GDYN×86 yday $13.83 → 09:30 $13.90 +6.02; GEO×37 yday $32.72 → 09:30 $32.52 -7.40; HGV×26 yday $45.41 → 09:30 $45.42 +0.26; JAN×36 yday $32.55 → 09:30 $32.39 -5.76; LOAR×14 yday $79.24 → 09:30 $78.31 -13.02 | — |
+| 2026-11-12 09:30 ET | **SELL** | `BGS` | 394 | $3.67 | $5.16 | $+234.04 | $1,504.95 | ▲ +234.04 after sell → book $9,724.11; vs 09:30 mark -5.16 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `COTY` | 281 | $4.09 | $3.68 | $-60.70 | $2,650.56 | ▼ -60.70 after sell → book $9,720.43; vs 09:30 mark -3.68 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `GDYN` | 86 | $13.90 | $2.27 | $-7.96 | $3,843.69 | ▼ -7.96 after sell → book $9,718.16; vs 09:30 mark -2.27 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `GEO` | 37 | $32.52 | $2.12 | $+5.40 | $5,044.81 | ▲ +5.40 after sell → book $9,716.04; vs 09:30 mark -2.12 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `HGV` | 26 | $45.42 | $2.09 | $+10.40 | $6,223.64 | ▲ +10.40 after sell → book $9,713.95; vs 09:30 mark -2.09 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `JAN` | 36 | $32.39 | $2.12 | $-17.90 | $7,387.56 | ▼ -17.90 after sell → book $9,711.83; vs 09:30 mark -2.12 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `LOAR` | 14 | $78.31 | $2.05 | $+8.80 | $8,481.85 | ▲ +8.80 after sell → book $9,709.78; vs 09:30 mark -2.05 | dropped from list after 2 sess (min 1) | — |
+| 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,481.85 | ▼ close $9,685.69 vs 09:30 $9,729.27 (session -24.09) | 16:00 close · cash $8,481.85 · equity $9,685.69 vs 09:30 $9,729.27 (-43.58; session marks -24.09) · 1 name(s) marked open→close (per-name table). FWONK×11 09:30 $111.63 → close $109.44 -24.09 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `topheavy` · sell `list` · S-boost `none` · 40% to #1, rest split
 
-Cash book **-27.75%** ($7,225) · signal-only (no cash/fees) was -4.92%. Starts YES **0/30**. Fills 401 · skips 294 · realized $-410.95.
+Cash book **-26.63%** ($7,337) · signal-only (no cash/fees) was -4.92%. Starts YES **0/30**. Fills 407 · skips 294 · realized $-410.95.
 
 ## How this sleeve decides (like you are 10)
 
@@ -597,6 +597,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-11 09:30 ET | **BUY** | `AKBA` | 24 | $0.53 | $0.20 | — | $128.04 | — | 40% to #1, rest split; list probable,yday_gainer,yday_mover; ret5=-25.4; leftover $13.19 | join🔴 sector🔴 gen🟢 news🔴 digest🔴 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-11-11 09:30 ET | **BUY** | `SWMR` | 1 | $8.35 | $0.09 | — | $119.60 | — | 40% to #1, rest split; list probable,yday_gainer,yday_mover,earn_react; ret5=-4.9; leftover $13.19 | join🔴 sector🟢 gen🟢 news🟡 digest🟡 ab🔴 heat🟢 vol🟡 buy🟡 |
 | 2026-11-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $119.60 | ▼ close $7,224.73 vs 09:30 $7,246.75 (session -20.34) | 16:00 close · cash $119.60 · equity $7,224.73 vs 09:30 $7,246.75 (-22.02; session marks -20.34) · 14 name(s) marked open→close (per-name table). ALGN×1 09:30 $174.30 → close $172.08 -2.22; BLFS×1 09:30 $38.61 → close $38.61 +0.00; CLOV×12 09:30 $5.01 → close $4.97 -0.48; ECX×73 09:30 $0.76 → close $0.79 +2.07; ETON×1 09:30 $66.94 → close $68.40 +1.46; IREN×64 09:30 $20.96 → close $20.84 -7.68; NUAI×629 09:30 $2.26 → close $2.33 +44.03; THM×886 09:30 $1.43 → close $1.33 -88.60; TMDX×28 09:30 $90.95 → close $92.01 +29.68; WRBY×2 09:30 $30.01 → close $30.15 +0.28; ZVRA×5 09:30 $11.92 → close $11.85 -0.35; COTY×3 09:30 $4.28 → close $4.06 -0.66; AKBA×24 09:30 $0.53 → close $0.57 +1.05; SWMR×1 09:30 $8.35 → close $9.43 +1.08 | — |
+| 2026-11-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $119.60 | ▼ 09:30 equity $7,039.50 vs yday $7,224.73 (-185.23) | 09:30 open · cash $119.60 (unchanged overnight, no fees) · equity $7,039.50 vs prior close $7,224.73 (-185.23) · 14 name(s) re-marked at the open (per-name table). AKBA×24 yday $0.57 → 09:30 $0.56 -0.27; ALGN×1 yday $172.08 → 09:30 $171.45 -0.63; BLFS×1 yday $38.61 → 09:30 $38.61 +0.00; CLOV×12 yday $4.97 → 09:30 $4.92 -0.60; COTY×3 yday $4.06 → 09:30 $4.09 +0.09; ECX×73 yday $0.79 → 09:30 $0.78 -0.54; ETON×1 yday $68.40 → 09:30 $68.38 -0.02; IREN×64 yday $20.84 → 09:30 $19.02 -116.48; NUAI×629 yday $2.33 → 09:30 $2.27 -37.74; SWMR×1 yday $9.43 → 09:30 $9.07 -0.36; THM×886 yday $1.33 → 09:30 $1.31 -17.72; TMDX×28 yday $92.01 → 09:30 $91.65 -10.08; WRBY×2 yday $30.15 → 09:30 $29.96 -0.38; ZVRA×5 yday $11.85 → 09:30 $11.75 -0.50 | — |
+| 2026-11-12 09:30 ET | **SELL** | `ALGN` | 1 | $171.45 | $1.74 | $+0.13 | $289.31 | ▲ +0.13 after sell → book $7,037.76; vs 09:30 mark -1.74 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-12 09:30 ET | **SELL** | `CLOV` | 12 | $4.92 | $0.65 | $-0.79 | $347.71 | ▼ -0.79 after sell → book $7,037.11; vs 09:30 mark -0.65 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-12 09:30 ET | **SELL** | `ECX` | 73 | $0.78 | $0.81 | $-3.22 | $403.84 | ▼ -3.22 after sell → book $7,036.30; vs 09:30 mark -0.81 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-12 09:30 ET | **SELL** | `ETON` | 1 | $68.38 | $0.71 | $+8.99 | $471.51 | ▲ +8.99 after sell → book $7,035.59; vs 09:30 mark -0.71 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-12 09:30 ET | **SELL** | `WRBY` | 2 | $29.96 | $0.63 | $+6.95 | $530.80 | ▲ +6.95 after sell → book $7,034.97; vs 09:30 mark -0.62 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-12 09:30 ET | **SELL** | `ZVRA` | 5 | $11.75 | $0.62 | $-0.72 | $588.93 | ▼ -0.72 after sell → book $7,034.35; vs 09:30 mark -0.62 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $588.93 | ▲ close $7,336.85 vs 09:30 $7,039.50 (session +302.51) | 16:00 close · cash $588.93 · equity $7,336.85 vs 09:30 $7,039.50 (+297.35; session marks +302.51) · 8 name(s) marked open→close (per-name table). AKBA×24 09:30 $0.56 → close $0.50 -1.54; BLFS×1 09:30 $38.61 → close $38.61 +0.00; COTY×3 09:30 $4.09 → close $4.03 -0.18; IREN×64 09:30 $19.02 → close $19.48 +29.44; NUAI×629 09:30 $2.27 → close $2.72 +283.05; SWMR×1 09:30 $9.07 → close $8.73 -0.34; THM×886 09:30 $1.31 → close $1.29 -17.72; TMDX×28 09:30 $91.65 → close $92.00 +9.80 | — |
 
 ## Not taken
 

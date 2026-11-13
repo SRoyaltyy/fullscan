@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared union_join_vol_green_h1/union_earn_react_h3 w=0.5,0.5 net=priority
 
-Cash book **-6.23%** ($9,377) · signal-only (no cash/fees) was —. Starts YES **22/30**. Fills 568 · skips 286 · realized $+2954.01.
+Cash book **-8.83%** ($9,117) · signal-only (no cash/fees) was —. Starts YES **22/30**. Fills 577 · skips 286 · realized $+2954.01.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $104.87.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $2,386.61.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -769,6 +769,17 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-11 09:30 ET | **BUY** | `QXO` | 22 | $13.70 | $2.06 | — | $396.99 | — | combo gate; gate join=good,last_green=True,vol=good; list yday_gainer; 🔵; ret5=+17.3; combo leftover $305.16; owner union_join_vol_green_h1 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-11-11 09:30 ET | **BUY** | `ACAD` | 16 | $18.13 | $2.04 | — | $104.87 | — | combo gate; gate join=good,last_green=True,vol=good; list yday_mover; ret5=-11.1; combo leftover $305.16; owner union_join_vol_green_h1 | join🟢 sector🔴 gen🟢 news🟡 digest🔴 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-11-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $104.87 | ▲ close $9,376.95 vs 09:30 $9,369.47 (session +54.26) | 16:00 close · cash $104.87 · equity $9,376.95 vs 09:30 $9,369.47 (+7.48; session marks +54.26) · 26 name(s) marked open→close (per-name table). AAON×8 09:30 $76.32 → close $76.33 +0.08; ABCL×48 09:30 $12.78 → close $11.95 -39.84; ACHR×127 09:30 $4.85 → close $4.86 +1.27; ADCT×3 09:30 $1.50 → close $1.60 +0.30; AIOT×1 09:30 $2.65 → close $2.68 +0.03; ALH×23 09:30 $24.92 → close $24.20 -16.56; AMCX×74 09:30 $8.70 → close $9.59 +65.86; AMRC×24 09:30 $27.90 → close $26.51 -33.36; MNTK×272 09:30 $1.25 → close $1.07 -50.32; SENS×47 09:30 $10.16 → close $10.42 +12.22; WRBY×20 09:30 $30.01 → close $30.15 +2.80; SWMR×31 09:30 $8.35 → close $9.43 +33.48; ITG×51 09:30 $5.10 → close $5.12 +1.28; AADX×26 09:30 $10.10 → close $9.30 -20.80; AMPX×29 09:30 $8.96 → close $8.55 -11.89; ANGX×66 09:30 $3.96 → close $4.30 +22.44; ATRO×4 09:30 $56.86 → close $60.33 +13.88; BGS×86 09:30 $3.05 → close $3.67 +53.32; CAPR×26 09:30 $9.85 → close $11.22 +35.62; CLX×2 09:30 $104.89 → close $106.86 +3.94; COTY×71 09:30 $4.28 → close $4.06 -15.62; TTD×20 09:30 $15.23 → close $15.98 +15.00; PCT×138 09:30 $2.20 → close $2.00 -27.60; LINC×13 09:30 $23.32 → close $23.51 +2.47; QXO×22 09:30 $13.70 → close $13.81 +2.42; ACAD×16 09:30 $18.13 → close $18.37 +3.84 | — |
+| 2026-11-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $104.87 | ▼ 09:30 equity $9,213.50 vs yday $9,376.95 (-163.45) | 09:30 open · cash $104.87 (unchanged overnight, no fees) · equity $9,213.50 vs prior close $9,376.95 (-163.45) | — |
+| 2026-11-12 09:30 ET | **SELL** | `ADCT` | 3 | $1.58 | $0.08 | $-0.34 | $109.53 | ▼ -0.34 after sell → book $9,213.42; vs 09:30 mark -0.08 | union_earn_react_h3: dropped from list after 3 sess (min 3) | — |
+| 2026-11-12 09:30 ET | **SELL** | `AIOT` | 1 | $2.70 | $0.05 | $-0.64 | $112.18 | ▼ -0.64 after sell → book $9,213.37; vs 09:30 mark -0.05 | union_earn_react_h3: dropped from list after 3 sess (min 3) | — |
+| 2026-11-12 09:30 ET | **SELL** | `CLX` | 2 | $107.52 | $2.02 | $+1.25 | $325.21 | ▲ +1.25 after sell → book $9,211.36; vs 09:30 mark -2.01 | union_join_vol_green_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `COTY` | 71 | $4.09 | $2.22 | $-17.92 | $613.37 | ▼ -17.92 after sell → book $9,209.13; vs 09:30 mark -2.23 | union_join_vol_green_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `LINC` | 13 | $23.30 | $2.05 | $-4.34 | $914.22 | ▼ -4.34 after sell → book $9,207.08; vs 09:30 mark -2.05 | union_join_vol_green_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `PCT` | 138 | $1.96 | $2.44 | $-37.96 | $1,182.27 | ▼ -37.96 after sell → book $9,204.65; vs 09:30 mark -2.43 | union_join_vol_green_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `QXO` | 22 | $13.38 | $2.08 | $-11.17 | $1,474.55 | ▼ -11.17 after sell → book $9,202.57; vs 09:30 mark -2.08 | union_join_vol_green_h1: dropped from list after 1 sess (min 1) | join🔴 sector🟢 gen🔴 news🟢 digest🔴 judge🔴 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-12 09:30 ET | **SELL** | `TTD` | 20 | $15.85 | $2.07 | $+8.28 | $1,789.48 | ▲ +8.28 after sell → book $9,200.50; vs 09:30 mark -2.07 | union_join_vol_green_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `WRBY` | 20 | $29.96 | $2.07 | $-1.92 | $2,386.61 | ▼ -1.92 after sell → book $9,198.43; vs 09:30 mark -2.07 | union_join_vol_green_h1: dropped from list after 2 sess (min 1) | — |
+| 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2,386.61 | ▼ close $9,117.06 vs 09:30 $9,213.50 (session -81.37) | 16:00 close · cash $2,386.61 · equity $9,117.06 vs 09:30 $9,213.50 (-96.44; session marks -81.37) · 17 name(s) marked open→close (per-name table). AADX×26 09:30 $9.13 → close $8.67 -11.96; AAON×8 09:30 $74.63 → close $78.80 +33.36; ABCL×48 09:30 $11.62 → close $11.62 +0.00; ACAD×16 09:30 $18.22 → close $18.14 -1.28; ACHR×127 09:30 $4.61 → close $4.33 -35.56; ALH×23 09:30 $24.29 → close $23.76 -12.19; AMCX×74 09:30 $9.59 → close $9.33 -19.24; AMPX×29 09:30 $8.10 → close $8.35 +7.25; AMRC×24 09:30 $25.53 → close $25.89 +8.64; ANGX×66 09:30 $4.22 → close $4.36 +9.24; ATRO×4 09:30 $58.05 → close $60.31 +9.04; BGS×86 09:30 $3.67 → close $3.35 -27.52; CAPR×26 09:30 $10.95 → close $10.24 -18.46; ITG×51 09:30 $4.87 → close $5.30 +21.93; MNTK×272 09:30 $1.10 → close $1.03 -19.04; SENS×47 09:30 $10.36 → close $10.04 -15.04; SWMR×31 09:30 $9.07 → close $8.73 -10.54 | — |
 
 ## Not taken
 

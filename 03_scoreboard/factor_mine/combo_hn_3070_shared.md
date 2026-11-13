@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared union_hot_n4_h1/union_news_g_h1 w=0.3,0.7 net=priority
 
-Cash book **-24.39%** ($7,561) · signal-only (no cash/fees) was —. Starts YES **28/30**. Fills 619 · skips 123 · realized $+818.31.
+Cash book **-26.25%** ($7,375) · signal-only (no cash/fees) was —. Starts YES **28/30**. Fills 631 · skips 123 · realized $+818.31.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $81.08.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $7,375.34.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -820,6 +820,20 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-11 09:30 ET | **BUY** | `SOC` | 932 | $0.73 | $9.60 | — | $719.33 | — | union ∩ news_g, no 🚨; gate news=good; list yday_mover; 🔵; ret5=-69.7; combo leftover $680.55; owner union_news_g_h1 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
 | 2026-11-11 09:30 ET | **BUY** | `LOAR` | 8 | $79.53 | $2.01 | — | $81.08 | — | union ∩ news_g, no 🚨; gate news=good; list ohlc_hot; 🔵; ret5=+16.4; combo leftover $680.55; owner union_news_g_h1 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-11-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $81.08 | ▼ close $7,560.62 vs 09:30 $7,643.01 (session -14.18) | 16:00 close · cash $81.08 · equity $7,560.62 vs 09:30 $7,643.01 (-82.39; session marks -14.18) · 12 name(s) marked open→close (per-name table). AOSL×27 09:30 $30.00 → close $30.86 +23.22; TLS×65 09:30 $7.80 → close $7.65 -9.75; INDI×211 09:30 $2.41 → close $2.30 -24.18; TTD×33 09:30 $15.23 → close $15.98 +24.75; ATER×548 09:30 $0.93 → close $0.93 -3.56; PFGC×6 09:30 $110.24 → close $111.21 +5.82; RC×673 09:30 $1.01 → close $0.93 -53.77; CECO×11 09:30 $58.47 → close $53.50 -54.67; FRVO×57 09:30 $11.88 → close $12.94 +60.70; LINC×29 09:30 $23.32 → close $23.51 +5.51; SOC×932 09:30 $0.73 → close $0.75 +14.07; LOAR×8 09:30 $79.53 → close $79.24 -2.32 | — |
+| 2026-11-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $81.08 | ▼ 09:30 equity $7,419.82 vs yday $7,560.62 (-140.80) | 09:30 open · cash $81.08 (unchanged overnight, no fees) · equity $7,419.82 vs prior close $7,560.62 (-140.80) | — |
+| 2026-11-12 09:30 ET | **SELL** | `AOSL` | 27 | $29.12 | $2.09 | $+10.74 | $865.28 | ▲ +10.74 after sell → book $7,417.73; vs 09:30 mark -2.09 | union_news_g_h1: dropped from list after 2 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `ATER` | 548 | $0.90 | $6.68 | $-30.69 | $1,351.81 | ▼ -30.69 after sell → book $7,411.06; vs 09:30 mark -6.67 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `CECO` | 11 | $54.34 | $2.04 | $-49.50 | $1,947.50 | ▼ -49.50 after sell → book $7,409.01; vs 09:30 mark -2.05 | union_news_g_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `FRVO` | 57 | $12.33 | $2.18 | $+21.59 | $2,648.13 | ▲ +21.59 after sell → book $7,406.83; vs 09:30 mark -2.18 | union_news_g_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `INDI` | 211 | $2.13 | $2.77 | $-64.48 | $3,095.85 | ▼ -64.48 after sell → book $7,404.06; vs 09:30 mark -2.77 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `LINC` | 29 | $23.30 | $2.10 | $-4.75 | $3,769.45 | ▼ -4.75 after sell → book $7,401.97; vs 09:30 mark -2.09 | union_news_g_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `LOAR` | 8 | $78.31 | $2.03 | $-13.81 | $4,393.90 | ▼ -13.81 after sell → book $7,399.93; vs 09:30 mark -2.04 | union_news_g_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `PFGC` | 6 | $111.88 | $2.03 | $+5.80 | $5,063.15 | ▲ +5.80 after sell → book $7,397.91; vs 09:30 mark -2.02 | union_news_g_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `RC` | 673 | $0.93 | $8.40 | $-70.92 | $5,680.64 | ▼ -70.92 after sell → book $7,389.51; vs 09:30 mark -8.40 | union_news_g_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `SOC` | 932 | $0.74 | $9.85 | $-10.69 | $6,360.00 | ▼ -10.69 after sell → book $7,379.65; vs 09:30 mark -9.86 | union_news_g_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `TLS` | 65 | $7.64 | $2.21 | $-14.79 | $6,854.40 | ▼ -14.79 after sell → book $7,377.45; vs 09:30 mark -2.20 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `TTD` | 33 | $15.85 | $2.11 | $+16.26 | $7,375.34 | ▲ +16.26 after sell → book $7,375.34; vs 09:30 mark -2.11 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,375.34 | ▲ close $7,375.34 vs 09:30 $7,419.82 (session +0.00) | 16:00 close · cash $7,375.34 · no lots left · equity $7,375.34. | — |
 
 ## Not taken
 

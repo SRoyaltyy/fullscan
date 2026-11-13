@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **+0.87%** ($10,087) · signal-only (no cash/fees) was +10.92%. Starts YES **15/30**. Fills 33 · skips 0 · realized $+806.69.
+Cash book **+0.78%** ($10,078) · signal-only (no cash/fees) was +10.92%. Starts YES **15/30**. Fills 36 · skips 0 · realized $+806.69.
 
 ## How this sleeve decides (like you are 10)
 
@@ -235,3 +235,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-11 09:30 ET | **BUY** | `GO` | 255 | $12.52 | $3.29 | — | $3,254.50 | — | combo gate; gate flow_in=True,zero_red=True; list earn_react; 🔵; ⚪; ret5=+9.7; leftover $3199.72 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-11-11 09:30 ET | **BUY** | `SONO` | 182 | $17.50 | $2.54 | — | $66.96 | — | combo gate; gate flow_in=True,zero_red=True; list earn_react; ⚪; ret5=+6.0; leftover $3199.72 | join🟡 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-11-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $66.96 | ▲ close $10,087.28 vs 09:30 $9,599.17 (session +496.02) | 16:00 close · cash $66.96 · equity $10,087.28 vs 09:30 $9,599.17 (+488.11; session marks +496.02) · 3 name(s) marked open→close (per-name table). CLX×30 09:30 $104.89 → close $106.86 +59.10; GO×255 09:30 $12.52 → close $13.12 +153.00; SONO×182 09:30 $17.50 → close $19.06 +283.92 | — |
+| 2026-11-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $66.96 | ▼ 09:30 equity $10,085.96 vs yday $10,087.28 (-1.32) | 09:30 open · cash $66.96 (unchanged overnight, no fees) · equity $10,085.96 vs prior close $10,087.28 (-1.32) · 3 name(s) re-marked at the open (per-name table). CLX×30 yday $106.86 → 09:30 $107.52 +19.80; GO×255 yday $13.12 → 09:30 $13.08 -10.20; SONO×182 yday $19.06 → 09:30 $19.00 -10.92 | — |
+| 2026-11-12 09:30 ET | **SELL** | `CLX` | 30 | $107.52 | $2.12 | $+74.70 | $3,290.44 | ▲ +74.70 after sell → book $10,083.84; vs 09:30 mark -2.12 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `GO` | 255 | $13.08 | $3.36 | $+136.15 | $6,622.49 | ▲ +136.15 after sell → book $10,080.49; vs 09:30 mark -3.35 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `SONO` | 182 | $19.00 | $2.59 | $+267.87 | $10,077.89 | ▲ +267.87 after sell → book $10,077.89; vs 09:30 mark -2.60 | dropped from list after 1 sess (min 1) | join🟢 sector🟢 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,077.89 | ▲ close $10,077.89 vs 09:30 $10,085.96 (session +0.00) | 16:00 close · cash $10,077.89 · no lots left · equity $10,077.89. | — |

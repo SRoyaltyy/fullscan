@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ overnight, no 🚨
 
-Cash book **-8.23%** ($9,177) · signal-only (no cash/fees) was -45.53%. Starts YES **0/30**. Fills 132 · skips 176 · realized $-1797.14.
+Cash book **-11.52%** ($8,848) · signal-only (no cash/fees) was -45.53%. Starts YES **0/30**. Fills 132 · skips 176 · realized $-1797.14.
 
 ## How this sleeve decides (like you are 10)
 
@@ -332,6 +332,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-11 09:30 ET | **BUY** | `FNV` | 4 | $257.00 | $2.00 | — | $1,416.92 | — | union ∩ overnight, no 🚨; gate overnight=True; list overnight,overnight_mega; ret5=+13.2; leftover $1159.95 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🟡 buy🟡 |
 | 2026-11-11 09:30 ET | **BUY** | `ITRG` | 524 | $2.21 | $6.76 | — | $252.12 | — | union ∩ overnight, no 🚨; gate overnight=True; list overnight; ret5=+9.0; leftover $1159.95 | join🟡 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
 | 2026-11-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $252.12 | ▼ close $9,176.53 vs 09:30 $9,293.14 (session -80.82) | 16:00 close · cash $252.12 · equity $9,176.53 vs 09:30 $9,293.14 (-116.61; session marks -80.82) · 8 name(s) marked open→close (per-name table). AGRO×130 09:30 $8.90 → close $9.05 +18.85; AVEX×99 09:30 $11.70 → close $12.13 +42.57; AZ×184 09:30 $6.29 → close $6.25 -7.36; CTVA×95 09:30 $12.12 → close $12.14 +1.90; ECO×13 09:30 $84.65 → close $85.75 +14.30; ENS×7 09:30 $156.29 → close $147.65 -60.48; FNV×4 09:30 $257.00 → close $248.76 -32.96; ITRG×524 09:30 $2.21 → close $2.10 -57.64 | — |
+| 2026-11-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $252.12 | ▼ 09:30 equity $9,087.22 vs yday $9,176.53 (-89.31) | 09:30 open · cash $252.12 (unchanged overnight, no fees) · equity $9,087.22 vs prior close $9,176.53 (-89.31) · 8 name(s) re-marked at the open (per-name table). AGRO×130 yday $9.05 → 09:30 $8.86 -24.70; AVEX×99 yday $12.13 → 09:30 $13.65 +150.48; AZ×184 yday $6.25 → 09:30 $6.49 +44.16; CTVA×95 yday $12.14 → 09:30 $10.51 -154.85; ECO×13 yday $85.75 → 09:30 $83.47 -29.64; ENS×7 yday $147.65 → 09:30 $145.97 -11.76; FNV×4 yday $248.76 → 09:30 $246.11 -10.60; ITRG×524 yday $2.10 → 09:30 $2.00 -52.40 | — |
+| 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $252.12 | ▼ close $8,847.62 vs 09:30 $9,087.22 (session -239.60) | 16:00 close · cash $252.12 · equity $8,847.62 vs 09:30 $9,087.22 (-239.60; session marks -239.60) · 8 name(s) marked open→close (per-name table). AGRO×130 09:30 $8.86 → close $8.47 -50.70; AVEX×99 09:30 $13.65 → close $13.76 +10.89; AZ×184 09:30 $6.49 → close $6.14 -64.40; CTVA×95 09:30 $10.51 → close $9.19 -125.40; ECO×13 09:30 $83.47 → close $87.67 +54.60; ENS×7 09:30 $145.97 → close $147.80 +12.81; FNV×4 09:30 $246.11 → close $247.72 +6.44; ITRG×524 09:30 $2.00 → close $1.84 -83.84 | — |
 
 ## Not taken
 

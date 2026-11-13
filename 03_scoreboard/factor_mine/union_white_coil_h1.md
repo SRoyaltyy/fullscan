@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-6.11%** ($9,389) · signal-only (no cash/fees) was -4.35%. Starts YES **0/30**. Fills 237 · skips 0 · realized $-550.20.
+Cash book **-10.72%** ($8,928) · signal-only (no cash/fees) was -4.35%. Starts YES **0/30**. Fills 242 · skips 0 · realized $-550.20.
 
 ## How this sleeve decides (like you are 10)
 
@@ -440,3 +440,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-11 09:30 ET | **BUY** | `SONO` | 102 | $17.50 | $2.30 | — | $1,840.90 | — | combo gate; gate ret_5_max=10.0,rvol_max=2.2,zero_red=True; list earn_react; ⚪; ret5=+6.0; leftover $1785.80 | join🟡 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-11-11 09:30 ET | **BUY** | `ECO` | 21 | $84.65 | $2.05 | — | $61.20 | — | combo gate; gate ret_5_max=10.0,rvol_max=2.2,zero_red=True; list overnight; 🔵; ⚪; ret5=-12.4; leftover $1785.80 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟡 heat🟢 vol🟡 buy🟡 |
 | 2026-11-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $61.20 | ▲ close $9,388.98 vs 09:30 $8,945.81 (session +470.94) | 16:00 close · cash $61.20 · equity $9,388.98 vs 09:30 $8,945.81 (+443.17; session marks +470.94) · 5 name(s) marked open→close (per-name table). KDP×48 09:30 $37.11 → close $38.25 +54.72; CRWV×31 09:30 $55.97 → close $60.77 +148.80; GO×142 09:30 $12.52 → close $13.12 +85.20; SONO×102 09:30 $17.50 → close $19.06 +159.12; ECO×21 09:30 $84.65 → close $85.75 +23.10 | — |
+| 2026-11-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $61.20 | ▼ 09:30 equity $8,938.67 vs yday $9,388.98 (-450.31) | 09:30 open · cash $61.20 (unchanged overnight, no fees) · equity $8,938.67 vs prior close $9,388.98 (-450.31) · 5 name(s) re-marked at the open (per-name table). CRWV×31 yday $60.77 → 09:30 $50.89 -306.20; ECO×21 yday $85.75 → 09:30 $83.47 -47.88; GO×142 yday $13.12 → 09:30 $13.08 -5.68; KDP×48 yday $38.25 → 09:30 $36.49 -84.43; SONO×102 yday $19.06 → 09:30 $19.00 -6.12 | — |
+| 2026-11-12 09:30 ET | **SELL** | `CRWV` | 31 | $50.89 | $2.11 | $-161.59 | $1,636.76 | ▼ -161.59 after sell → book $8,936.56; vs 09:30 mark -2.11 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `ECO` | 21 | $83.47 | $2.08 | $-28.91 | $3,387.55 | ▼ -28.91 after sell → book $8,934.48; vs 09:30 mark -2.08 | dropped from list after 1 sess (min 1) | join🟢 sector🟢 gen🔴 news🟡 digest🔴 judge🔴 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-11-12 09:30 ET | **SELL** | `GO` | 142 | $13.08 | $2.45 | $+74.65 | $5,242.46 | ▲ +74.65 after sell → book $8,932.03; vs 09:30 mark -2.45 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `KDP` | 48 | $36.49 | $2.16 | $-34.00 | $6,991.87 | ▼ -34.00 after sell → book $8,929.87; vs 09:30 mark -2.16 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `SONO` | 102 | $19.00 | $2.33 | $+148.38 | $8,927.54 | ▲ +148.38 after sell → book $8,927.54; vs 09:30 mark -2.33 | dropped from list after 1 sess (min 1) | join🟢 sector🟢 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,927.54 | ▲ close $8,927.54 vs 09:30 $8,938.67 (session +0.00) | 16:00 close · cash $8,927.54 · no lots left · equity $8,927.54. | — |

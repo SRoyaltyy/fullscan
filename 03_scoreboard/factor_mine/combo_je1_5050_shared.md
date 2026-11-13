@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared union_join_vol_green_h1/union_e_fresh_h1 w=0.5,0.5 net=priority
 
-Cash book **-9.31%** ($9,069) · signal-only (no cash/fees) was —. Starts YES **25/30**. Fills 684 · skips 110 · realized $+1669.53.
+Cash book **-11.18%** ($8,882) · signal-only (no cash/fees) was —. Starts YES **25/30**. Fills 699 · skips 110 · realized $+1669.53.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $92.92.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $8,319.97.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -885,6 +885,23 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-11 09:30 ET | **BUY** | `QXO` | 42 | $13.70 | $2.12 | — | $657.03 | — | combo gate; gate join=good,last_green=True,vol=good; list yday_gainer; 🔵; ret5=+17.3; combo leftover $578.65; owner union_join_vol_green_h1 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-11-11 09:30 ET | **BUY** | `ACAD` | 31 | $18.13 | $2.08 | — | $92.92 | — | combo gate; gate join=good,last_green=True,vol=good; list yday_mover; ret5=-11.1; combo leftover $578.65; owner union_join_vol_green_h1 | join🟢 sector🔴 gen🟢 news🟡 digest🔴 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-11-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $92.92 | ▼ close $9,068.80 vs 09:30 $9,234.06 (session -102.57) | 16:00 close · cash $92.92 · equity $9,068.80 vs 09:30 $9,234.06 (-165.26; session marks -102.57) · 16 name(s) marked open→close (per-name table). ALH×19 09:30 $24.92 → close $24.20 -13.68; WRBY×26 09:30 $30.01 → close $30.15 +3.64; SWMR×67 09:30 $8.35 → close $9.43 +72.36; ITG×111 09:30 $5.10 → close $5.12 +2.78; PDYN×152 09:30 $3.72 → close $3.46 -39.52; SBH×28 09:30 $20.27 → close $19.22 -29.26; EMBJ×6 09:30 $82.46 → close $82.43 -0.18; AADX×56 09:30 $10.10 → close $9.30 -44.80; AMPX×63 09:30 $8.96 → close $8.55 -25.83; CLX×5 09:30 $104.89 → close $106.86 +9.85; COTY×135 09:30 $4.28 → close $4.06 -29.70; TTD×37 09:30 $15.23 → close $15.98 +27.75; PCT×263 09:30 $2.20 → close $2.00 -52.60; LINC×24 09:30 $23.32 → close $23.51 +4.56; QXO×42 09:30 $13.70 → close $13.81 +4.62; ACAD×31 09:30 $18.13 → close $18.37 +7.44 | — |
+| 2026-11-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $92.92 | ▼ 09:30 equity $8,918.73 vs yday $9,068.80 (-150.07) | 09:30 open · cash $92.92 (unchanged overnight, no fees) · equity $8,918.73 vs prior close $9,068.80 (-150.07) | — |
+| 2026-11-12 09:30 ET | **SELL** | `AADX` | 56 | $9.13 | $2.18 | $-58.66 | $602.02 | ▼ -58.66 after sell → book $8,916.55; vs 09:30 mark -2.18 | union_e_fresh_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `ALH` | 19 | $24.29 | $2.07 | $-16.27 | $1,061.47 | ▼ -16.27 after sell → book $8,914.48; vs 09:30 mark -2.07 | union_e_fresh_h1: dropped from list after 2 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `AMPX` | 63 | $8.10 | $2.20 | $-58.56 | $1,569.57 | ▼ -58.56 after sell → book $8,912.29; vs 09:30 mark -2.19 | union_e_fresh_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `CLX` | 5 | $107.52 | $2.02 | $+9.12 | $2,105.14 | ▲ +9.12 after sell → book $8,910.26; vs 09:30 mark -2.03 | union_join_vol_green_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `COTY` | 135 | $4.09 | $2.43 | $-30.47 | $2,654.86 | ▼ -30.47 after sell → book $8,907.83; vs 09:30 mark -2.43 | union_join_vol_green_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `EMBJ` | 6 | $81.56 | $2.03 | $-9.44 | $3,142.20 | ▼ -9.44 after sell → book $8,905.81; vs 09:30 mark -2.02 | union_e_fresh_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `ITG` | 111 | $4.87 | $2.35 | $-30.20 | $3,680.41 | ▼ -30.20 after sell → book $8,903.45; vs 09:30 mark -2.36 | union_e_fresh_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `LINC` | 24 | $23.30 | $2.08 | $-4.62 | $4,237.53 | ▼ -4.62 after sell → book $8,901.37; vs 09:30 mark -2.08 | union_join_vol_green_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `PCT` | 263 | $1.96 | $3.45 | $-69.96 | $4,749.57 | ▼ -69.96 after sell → book $8,897.93; vs 09:30 mark -3.44 | union_join_vol_green_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `PDYN` | 152 | $3.35 | $2.48 | $-61.17 | $5,256.28 | ▼ -61.17 after sell → book $8,895.44; vs 09:30 mark -2.49 | union_e_fresh_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `QXO` | 42 | $13.38 | $2.14 | $-17.69 | $5,816.11 | ▼ -17.69 after sell → book $8,893.31; vs 09:30 mark -2.13 | union_join_vol_green_h1: dropped from list after 1 sess (min 1) | join🔴 sector🟢 gen🔴 news🟢 digest🔴 judge🔴 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-12 09:30 ET | **SELL** | `SBH` | 28 | $19.26 | $2.09 | $-32.31 | $6,353.29 | ▼ -32.31 after sell → book $8,891.21; vs 09:30 mark -2.10 | union_e_fresh_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `SWMR` | 67 | $9.07 | $2.21 | $+43.84 | $6,958.77 | ▲ +43.84 after sell → book $8,889.00; vs 09:30 mark -2.21 | union_e_fresh_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `TTD` | 37 | $15.85 | $2.12 | $+18.72 | $7,543.10 | ▲ +18.72 after sell → book $8,886.88; vs 09:30 mark -2.12 | union_join_vol_green_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `WRBY` | 26 | $29.96 | $2.09 | $-1.30 | $8,319.97 | ▼ -1.30 after sell → book $8,884.79; vs 09:30 mark -2.09 | union_join_vol_green_h1: dropped from list after 2 sess (min 1) | — |
+| 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,319.97 | ▼ close $8,882.31 vs 09:30 $8,918.73 (session -2.48) | 16:00 close · cash $8,319.97 · equity $8,882.31 vs 09:30 $8,918.73 (-36.42; session marks -2.48) · 1 name(s) marked open→close (per-name table). ACAD×31 09:30 $18.22 → close $18.14 -2.48 | — |
 
 ## Not taken
 

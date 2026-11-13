@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 4 · rank `list` · size `leftover` · sell `list` · S-boost `none` · −0 red + yday up AND catalyst, top 4 by Score
 
-Cash book **+7.52%** ($10,752) · signal-only (no cash/fees) was +32.51%. Starts YES **3/30**. Fills 74 · skips 73 · realized $+170.12.
+Cash book **+7.08%** ($10,708) · signal-only (no cash/fees) was +32.51%. Starts YES **3/30**. Fills 75 · skips 73 · realized $+170.12.
 
 ## How this sleeve decides (like you are 10)
 
@@ -276,6 +276,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-11 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $31.97 | ▼ 09:30 equity $10,465.60 vs yday $10,506.35 (-40.75) | 09:30 open · cash $31.97 (unchanged overnight, no fees) · equity $10,465.60 vs prior close $10,506.35 (-40.75) · 1 name(s) re-marked at the open (per-name table). TGTX×163 yday $64.26 → 09:30 $64.01 -40.75 | — |
 | 2026-11-11 09:30 ET | **BUY** | `GO` | 2 | $12.52 | $0.26 | — | $6.67 | — | −0 red + yday up AND catalyst, top 4 by Score; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list earn_react; 🔵; ⚪; ret5=+9.7; leftover $31.97 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-11-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6.67 | ▲ close $10,751.79 vs 09:30 $10,465.60 (session +286.45) | 16:00 close · cash $6.67 · equity $10,751.79 vs 09:30 $10,465.60 (+286.19; session marks +286.45) · 2 name(s) marked open→close (per-name table). TGTX×163 09:30 $64.01 → close $65.76 +285.25; GO×2 09:30 $12.52 → close $13.12 +1.20 | — |
+| 2026-11-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6.67 | ▼ 09:30 equity $10,710.96 vs yday $10,751.79 (-40.83) | 09:30 open · cash $6.67 (unchanged overnight, no fees) · equity $10,710.96 vs prior close $10,751.79 (-40.83) · 2 name(s) re-marked at the open (per-name table). GO×2 yday $13.12 → 09:30 $13.08 -0.08; TGTX×163 yday $65.76 → 09:30 $65.51 -40.75 | — |
+| 2026-11-12 09:30 ET | **SELL** | `TGTX` | 163 | $65.51 | $2.59 | $+1219.06 | $10,682.21 | ▲ +1,219.06 after sell → book $10,708.37; vs 09:30 mark -2.59 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,682.21 | ▼ close $10,707.91 vs 09:30 $10,710.96 (session -0.46) | 16:00 close · cash $10,682.21 · equity $10,707.91 vs 09:30 $10,710.96 (-3.05; session marks -0.46) · 1 name(s) marked open→close (per-name table). GO×2 09:30 $13.08 → close $12.85 -0.46 | — |
 
 ## Not taken
 

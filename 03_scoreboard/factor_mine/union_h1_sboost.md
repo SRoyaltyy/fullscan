@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `both` · S≥+5: sizeup + more names
 
-Cash book **-20.99%** ($7,901) · signal-only (no cash/fees) was -0.80%. Starts YES **0/30**. Fills 602 · skips 108 · realized $-308.78.
+Cash book **-22.50%** ($7,750) · signal-only (no cash/fees) was -0.80%. Starts YES **0/30**. Fills 614 · skips 108 · realized $-308.78.
 
 ## How this sleeve decides (like you are 10)
 
@@ -799,6 +799,20 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-11 09:30 ET | **BUY** | `PCT` | 298 | $2.20 | $3.84 | — | $799.86 | — | S≥+5: sizeup + more names; list probable,yday_gainer,yday_mover; ret5=-31.7; leftover $656.31 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🟡 vol🟢 buy🟡 |
 | 2026-11-11 09:30 ET | **BUY** | `RC` | 649 | $1.01 | $8.37 | — | $135.99 | — | S≥+5: sizeup + more names; list probable,yday_gainer,yday_mover; ret5=-7.3; leftover $656.31 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
 | 2026-11-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $135.99 | ▲ close $7,900.72 vs 09:30 $7,907.47 (session +71.74) | 16:00 close · cash $135.99 · equity $7,900.72 vs 09:30 $7,907.47 (-6.75; session marks +71.74) · 12 name(s) marked open→close (per-name table). CLX×6 09:30 $104.89 → close $106.86 +11.82; PFGC×5 09:30 $110.24 → close $111.21 +4.85; KDP×17 09:30 $37.11 → close $38.25 +19.38; PRCH×29 09:30 $22.17 → close $22.14 -0.87; COTY×153 09:30 $4.28 → close $4.06 -33.66; TTD×43 09:30 $15.23 → close $15.98 +32.25; AKBA×1238 09:30 $0.53 → close $0.57 +54.10; SWMR×78 09:30 $8.35 → close $9.43 +84.24; HLLY×245 09:30 $2.67 → close $2.51 -39.20; INO×479 09:30 $1.37 → close $1.48 +50.29; PCT×298 09:30 $2.20 → close $2.00 -59.60; RC×649 09:30 $1.01 → close $0.93 -51.86 | — |
+| 2026-11-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $135.99 | ▼ 09:30 equity $7,797.04 vs yday $7,900.72 (-103.68) | 09:30 open · cash $135.99 (unchanged overnight, no fees) · equity $7,797.04 vs prior close $7,900.72 (-103.68) · 12 name(s) re-marked at the open (per-name table). AKBA×1238 yday $0.57 → 09:30 $0.56 -14.11; CLX×6 yday $106.86 → 09:30 $107.52 +3.96; COTY×153 yday $4.06 → 09:30 $4.09 +4.59; HLLY×245 yday $2.51 → 09:30 $2.48 -7.35; INO×479 yday $1.48 → 09:30 $1.44 -16.77; KDP×17 yday $38.25 → 09:30 $36.49 -29.90; PCT×298 yday $2.00 → 09:30 $1.96 -11.92; PFGC×5 yday $111.21 → 09:30 $111.88 +3.35; PRCH×29 yday $22.14 → 09:30 $22.08 -1.80; RC×649 yday $0.93 → 09:30 $0.93 -0.06; SWMR×78 yday $9.43 → 09:30 $9.07 -28.08; TTD×43 yday $15.98 → 09:30 $15.85 -5.59 | — |
+| 2026-11-12 09:30 ET | **SELL** | `AKBA` | 1238 | $0.56 | $10.89 | $+18.82 | $821.23 | ▲ +18.82 after sell → book $7,786.15; vs 09:30 mark -10.89 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `CLX` | 6 | $107.52 | $2.03 | $+11.74 | $1,464.32 | ▲ +11.74 after sell → book $7,784.12; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `COTY` | 153 | $4.09 | $2.48 | $-34.00 | $2,087.60 | ▼ -34.00 after sell → book $7,781.63; vs 09:30 mark -2.49 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `HLLY` | 245 | $2.48 | $3.21 | $-52.92 | $2,691.99 | ▼ -52.92 after sell → book $7,778.42; vs 09:30 mark -3.21 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `INO` | 479 | $1.44 | $6.27 | $+21.08 | $3,375.48 | ▲ +21.08 after sell → book $7,772.15; vs 09:30 mark -6.27 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `KDP` | 17 | $36.49 | $2.06 | $-14.63 | $3,993.77 | ▼ -14.63 after sell → book $7,770.09; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `PCT` | 298 | $1.96 | $3.90 | $-79.27 | $4,573.95 | ▼ -79.27 after sell → book $7,766.19; vs 09:30 mark -3.90 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `PFGC` | 5 | $111.88 | $2.02 | $+4.17 | $5,131.32 | ▲ +4.17 after sell → book $7,764.16; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `PRCH` | 29 | $22.08 | $2.10 | $-6.84 | $5,769.49 | ▼ -6.84 after sell → book $7,762.07; vs 09:30 mark -2.09 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `RC` | 649 | $0.93 | $8.10 | $-68.39 | $6,364.96 | ▼ -68.39 after sell → book $7,753.97; vs 09:30 mark -8.10 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `SWMR` | 78 | $9.07 | $2.25 | $+51.69 | $7,070.17 | ▲ +51.69 after sell → book $7,751.72; vs 09:30 mark -2.25 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `TTD` | 43 | $15.85 | $2.14 | $+22.40 | $7,749.58 | ▲ +22.40 after sell → book $7,749.58; vs 09:30 mark -2.14 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,749.58 | ▲ close $7,749.58 vs 09:30 $7,797.04 (session +0.00) | 16:00 close · cash $7,749.58 · no lots left · equity $7,749.58. | — |
 
 ## Not taken
 

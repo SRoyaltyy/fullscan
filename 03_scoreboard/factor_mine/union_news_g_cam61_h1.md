@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · merged news🟢 and cameras +6 −≤1
 
-Cash book **-18.49%** ($8,151) · signal-only (no cash/fees) was -17.43%. Starts YES **1/30**. Fills 149 · skips 17 · realized $-1774.27.
+Cash book **-20.82%** ($7,918) · signal-only (no cash/fees) was -17.43%. Starts YES **1/30**. Fills 156 · skips 17 · realized $-1774.27.
 
 ## How this sleeve decides (like you are 10)
 
@@ -352,6 +352,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-11 09:30 ET | **BUY** | `FLYW` | 52 | $22.21 | $2.15 | — | $1,324.48 | — | merged news🟢 and cameras +6 −≤1; gate cam_bad_max=1,n_pos_min=6,news=good; rank cond; list ohlc_hot; ⚪; ret5=+16.7; leftover $1170.69 | join🟢 sector🟢 gen🟢 news🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-11-11 09:30 ET | **BUY** | `LINC` | 50 | $23.32 | $2.14 | — | $156.34 | — | merged news🟢 and cameras +6 −≤1; gate cam_bad_max=1,n_pos_min=6,news=good; rank cond; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+12.2; leftover $1170.69 | join🟢 sector🟡 gen🟢 news🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $156.34 | ▼ close $8,150.82 vs 09:30 $8,214.13 (session -29.42) | 16:00 close · cash $156.34 · equity $8,150.82 vs 09:30 $8,214.13 (-63.31; session marks -29.42) · 7 name(s) marked open→close (per-name table). ALH×46 09:30 $24.92 → close $24.20 -33.12; CECO×20 09:30 $58.47 → close $53.50 -99.40; EMBJ×14 09:30 $82.46 → close $82.43 -0.42; LOAR×14 09:30 $79.53 → close $79.24 -4.06; CRWV×20 09:30 $55.97 → close $60.77 +96.00; FLYW×52 09:30 $22.21 → close $22.25 +2.08; LINC×50 09:30 $23.32 → close $23.51 +9.50 | — |
+| 2026-11-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $156.34 | ▼ 09:30 equity $7,932.79 vs yday $8,150.82 (-218.03) | 09:30 open · cash $156.34 (unchanged overnight, no fees) · equity $7,932.79 vs prior close $8,150.82 (-218.03) · 7 name(s) re-marked at the open (per-name table). ALH×46 yday $24.20 → 09:30 $24.29 +4.14; CECO×20 yday $53.50 → 09:30 $54.34 +16.80; CRWV×20 yday $60.77 → 09:30 $50.89 -197.55; EMBJ×14 yday $82.43 → 09:30 $81.56 -12.18; FLYW×52 yday $22.25 → 09:30 $22.14 -5.72; LINC×50 yday $23.51 → 09:30 $23.30 -10.50; LOAR×14 yday $79.24 → 09:30 $78.31 -13.02 | — |
+| 2026-11-12 09:30 ET | **SELL** | `ALH` | 46 | $24.29 | $2.15 | $-33.26 | $1,271.53 | ▼ -33.26 after sell → book $7,930.64; vs 09:30 mark -2.15 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `CECO` | 20 | $54.34 | $2.07 | $-86.72 | $2,356.26 | ▼ -86.72 after sell → book $7,928.57; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `CRWV` | 20 | $50.89 | $2.07 | $-105.67 | $3,372.04 | ▼ -105.67 after sell → book $7,926.50; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `EMBJ` | 14 | $81.56 | $2.05 | $-16.68 | $4,511.83 | ▼ -16.68 after sell → book $7,924.45; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `FLYW` | 52 | $22.14 | $2.17 | $-7.95 | $5,660.94 | ▼ -7.95 after sell → book $7,922.28; vs 09:30 mark -2.17 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `LINC` | 50 | $23.30 | $2.16 | $-5.30 | $6,823.78 | ▼ -5.30 after sell → book $7,920.12; vs 09:30 mark -2.16 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `LOAR` | 14 | $78.31 | $2.05 | $-21.16 | $7,918.07 | ▼ -21.16 after sell → book $7,918.07; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,918.07 | ▲ close $7,918.07 vs 09:30 $7,932.79 (session +0.00) | 16:00 close · cash $7,918.07 · no lots left · equity $7,918.07. | — |
 
 ## Not taken
 

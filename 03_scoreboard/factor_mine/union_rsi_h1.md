@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `rsi` · size `leftover` · sell `list` · S-boost `none` · rank by rsi
 
-Cash book **+61.37%** ($16,137) · signal-only (no cash/fees) was -22.60%. Starts YES **0/30**. Fills 536 · skips 98 · realized $-2571.92.
+Cash book **+55.57%** ($15,557) · signal-only (no cash/fees) was -22.60%. Starts YES **0/30**. Fills 543 · skips 98 · realized $-2571.92.
 
 ## How this sleeve decides (like you are 10)
 
@@ -735,6 +735,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-11 09:30 ET | **BUY** | `JANX` | 169 | $12.07 | $2.50 | — | $1,977.75 | — | rank by rsi; rank rsi; list yday_mover; ret5=-32.4; leftover $2040.03 | join🟢 sector🔴 gen🟢 news🟡 digest🔴 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-11-11 09:30 ET | **BUY** | `AGRO` | 221 | $8.90 | $2.85 | — | $6.90 | — | rank by rsi; rank rsi; list overnight; 🔵; ret5=-4.8; leftover $2040.03 | join🔴 sector🟡 gen🟢 news🟢 digest🟡 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
 | 2026-11-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6.90 | ▼ close $16,137.16 vs 09:30 $16,404.55 (session -129.44) | 16:00 close · cash $6.90 · equity $16,137.16 vs 09:30 $16,404.55 (-267.39; session marks -129.44) · 8 name(s) marked open→close (per-name table). LAND×276 09:30 $7.48 → close $7.36 -33.12; SOC×2794 09:30 $0.73 → close $0.75 +42.19; ABEO×832 09:30 $2.45 → close $2.30 -124.80; ZURA×1467 09:30 $1.39 → close $1.43 +58.68; ACAD×112 09:30 $18.13 → close $18.37 +26.88; PCT×927 09:30 $2.20 → close $2.00 -185.40; JANX×169 09:30 $12.07 → close $12.39 +54.08; AGRO×221 09:30 $8.90 → close $9.05 +32.05 | — |
+| 2026-11-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6.90 | ▼ 09:30 equity $15,870.49 vs yday $16,137.16 (-266.67) | 09:30 open · cash $6.90 (unchanged overnight, no fees) · equity $15,870.49 vs prior close $16,137.16 (-266.67) · 8 name(s) re-marked at the open (per-name table). ABEO×832 yday $2.30 → 09:30 $2.28 -16.64; ACAD×112 yday $18.37 → 09:30 $18.22 -16.80; AGRO×221 yday $9.05 → 09:30 $8.86 -41.99; JANX×169 yday $12.39 → 09:30 $11.86 -89.57; LAND×276 yday $7.36 → 09:30 $7.29 -19.32; PCT×927 yday $2.00 → 09:30 $1.96 -37.08; SOC×2794 yday $0.75 → 09:30 $0.74 -15.93; ZURA×1467 yday $1.43 → 09:30 $1.41 -29.34 | — |
+| 2026-11-12 09:30 ET | **SELL** | `ABEO` | 832 | $2.28 | $10.89 | $-163.06 | $1,892.97 | ▼ -163.06 after sell → book $15,859.61; vs 09:30 mark -10.88 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `ACAD` | 112 | $18.22 | $2.36 | $+5.39 | $3,931.25 | ▲ +5.39 after sell → book $15,857.25; vs 09:30 mark -2.36 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-11-12 09:30 ET | **SELL** | `AGRO` | 221 | $8.86 | $2.90 | $-15.70 | $5,886.41 | ▼ -15.70 after sell → book $15,854.34; vs 09:30 mark -2.91 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-11-12 09:30 ET | **SELL** | `JANX` | 169 | $11.86 | $2.54 | $-40.53 | $7,888.21 | ▼ -40.53 after sell → book $15,851.80; vs 09:30 mark -2.54 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `LAND` | 276 | $7.29 | $3.62 | $+81.14 | $9,896.63 | ▲ +81.14 after sell → book $15,848.18; vs 09:30 mark -3.62 | dropped from list after 2 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `PCT` | 927 | $1.96 | $12.13 | $-246.56 | $11,701.42 | ▼ -246.56 after sell → book $15,836.05; vs 09:30 mark -12.13 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `SOC` | 2794 | $0.74 | $29.52 | $-32.04 | $13,738.06 | ▼ -32.04 after sell → book $15,806.53; vs 09:30 mark -29.52 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $13,738.06 | ▼ close $15,557.14 vs 09:30 $15,870.49 (session -249.39) | 16:00 close · cash $13,738.06 · equity $15,557.14 vs 09:30 $15,870.49 (-313.35; session marks -249.39) · 1 name(s) marked open→close (per-name table). ZURA×1467 09:30 $1.41 → close $1.24 -249.39 | — |
 
 ## Not taken
 

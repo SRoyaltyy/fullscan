@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared short_news_r_h3/union_news_g_h1 w=0.3,0.7 net=priority
 
-Cash book **-59.01%** ($4,099) · signal-only (no cash/fees) was —. Starts YES **0/30**. Fills 583 · skips 196 · realized $-422.24.
+Cash book **-58.59%** ($4,141) · signal-only (no cash/fees) was —. Starts YES **0/30**. Fills 599 · skips 196 · realized $-422.24.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $4,224.91.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $7,871.26.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -784,6 +784,24 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-11 09:30 ET | **SHORT** | `ZURA` | 292 | $1.39 | $3.84 | — | $3,999.36 | — | news🔴; gate news=bad; list yday_mover; ret5=-64.8; combo leftover $406.79; owner short_news_r_h3 | join🔴 sector🔴 gen🟢 news🔴 digest🔴 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-11-11 09:30 ET | **SHORT** | `TTWO` | 1 | $227.57 | $2.02 | — | $4,224.91 | — | news🔴; gate news=bad; list ohlc_hot; ret5=+15.2; combo leftover $406.79; owner short_news_r_h3 | join🟢 sector🟡 gen🟢 news🔴 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $4,224.91 | ▲ close $4,099.30 vs 09:30 $4,135.16 (session +45.50) | 16:00 close · cash $4,224.91 · equity $4,099.30 vs 09:30 $4,135.16 (-35.86; session marks +45.50) · 28 name(s) marked open→close (per-name table). AEHL×20 09:30 $11.89 → close $11.35 +10.80; AKBA×649 09:30 $0.53 → close $0.57 -28.36; AMTX×159 09:30 $1.62 → close $1.44 +29.42; AOSL×29 09:30 $30.00 → close $30.86 +24.94; CIFR×45 09:30 $7.14 → close $7.11 +1.35; DDD×148 09:30 $1.91 → close $1.81 +14.80; ESAB×3 09:30 $86.91 → close $85.82 +3.27; HIVE×169 09:30 $1.80 → close $1.75 +9.29; INDI×138 09:30 $2.41 → close $2.30 +15.81; MNKD×70 09:30 $4.23 → close $4.19 +2.80; MNTN×49 09:30 $4.93 → close $4.98 -2.45; NRDS×38 09:30 $7.36 → close $7.70 -12.92; PDYN×79 09:30 $3.72 → close $3.46 +20.54; PGNY×7 09:30 $36.41 → close $36.50 -0.63; PRKS×6 09:30 $42.25 → close $41.75 +3.00; TRIP×36 09:30 $7.04 → close $7.47 -15.66; PFGC×6 09:30 $110.24 → close $111.21 +5.82; RC×736 09:30 $1.01 → close $0.93 -58.81; CECO×12 09:30 $58.47 → close $53.50 -59.64; FRVO×62 09:30 $11.88 → close $12.94 +66.03; LINC×31 09:30 $23.32 → close $23.51 +5.89; SOC×1019 09:30 $0.73 → close $0.75 +15.39; LOAR×9 09:30 $79.53 → close $79.24 -2.61; HLLY×152 09:30 $2.67 → close $2.51 +24.32; LENZ×99 09:30 $4.10 → close $4.11 -0.99; GCTS×262 09:30 $1.55 → close $1.59 -10.48; ZURA×292 09:30 $1.39 → close $1.43 -11.68; TTWO×1 09:30 $227.57 → close $231.31 -3.74 | — |
+| 2026-11-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $4,224.91 | ▲ 09:30 equity $4,134.08 vs yday $4,099.30 (+34.78) | 09:30 open · cash $4,224.91 (unchanged overnight, no fees) · equity $4,134.08 vs prior close $4,099.30 (+34.78) | — |
+| 2026-11-12 09:30 ET | **COVER** | `AEHL` | 20 | $11.33 | $2.05 | $+31.27 | $3,996.26 | ▲ +31.27 after sell → book $4,132.03; vs 09:30 mark -2.05 | short_news_r_h3: dropped from list after 3 sess (min 3) | — |
+| 2026-11-12 09:30 ET | **COVER** | `AKBA` | 649 | $0.56 | $5.60 | $-111.74 | $3,625.73 | ▼ -111.74 after sell → book $4,126.43; vs 09:30 mark -5.60 | short_news_r_h3: dropped from list after 3 sess (min 3) | — |
+| 2026-11-12 09:30 ET | **COVER** | `AMTX` | 159 | $1.40 | $2.47 | $+34.77 | $3,400.66 | ▲ +34.77 after sell → book $4,123.96; vs 09:30 mark -2.47 | short_news_r_h3: dropped from list after 3 sess (min 3) | — |
+| 2026-11-12 09:30 ET | **SELL** | `AOSL` | 29 | $29.12 | $2.10 | $+11.83 | $4,243.10 | ▲ +11.83 after sell → book $4,121.87; vs 09:30 mark -2.09 | union_news_g_h1: dropped from list after 2 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `CECO` | 12 | $54.34 | $2.05 | $-53.63 | $4,893.14 | ▼ -53.63 after sell → book $4,119.82; vs 09:30 mark -2.05 | union_news_g_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **COVER** | `DDD` | 148 | $1.79 | $2.43 | $-6.39 | $4,625.78 | ▼ -6.39 after sell → book $4,117.39; vs 09:30 mark -2.43 | short_news_r_h3: dropped from list after 3 sess (min 3) | — |
+| 2026-11-12 09:30 ET | **SELL** | `FRVO` | 62 | $12.33 | $2.20 | $+23.84 | $5,388.05 | ▲ +23.84 after sell → book $4,115.19; vs 09:30 mark -2.20 | union_news_g_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `LINC` | 31 | $23.30 | $2.10 | $-4.81 | $6,108.25 | ▼ -4.81 after sell → book $4,113.09; vs 09:30 mark -2.10 | union_news_g_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `LOAR` | 9 | $78.31 | $2.04 | $-15.03 | $6,811.00 | ▼ -15.03 after sell → book $4,111.05; vs 09:30 mark -2.04 | union_news_g_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **COVER** | `MNTN` | 49 | $4.90 | $2.14 | $+19.22 | $6,568.76 | ▲ +19.22 after sell → book $4,108.91; vs 09:30 mark -2.14 | short_news_r_h3: dropped from list after 3 sess (min 3) | — |
+| 2026-11-12 09:30 ET | **SELL** | `PFGC` | 6 | $111.88 | $2.03 | $+5.80 | $7,238.01 | ▲ +5.80 after sell → book $4,106.88; vs 09:30 mark -2.03 | union_news_g_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **COVER** | `PGNY` | 7 | $36.75 | $2.01 | $-16.37 | $6,978.75 | ▼ -16.37 after sell → book $4,104.87; vs 09:30 mark -2.01 | short_news_r_h3: dropped from list after 3 sess (min 3) | — |
+| 2026-11-12 09:30 ET | **COVER** | `PRKS` | 6 | $41.91 | $2.01 | $-20.00 | $6,725.28 | ▼ -20.00 after sell → book $4,102.87; vs 09:30 mark -2.00 | short_news_r_h3: dropped from list after 3 sess (min 3) | — |
+| 2026-11-12 09:30 ET | **SELL** | `RC` | 736 | $0.93 | $9.19 | $-77.56 | $7,400.58 | ▼ -77.56 after sell → book $4,093.68; vs 09:30 mark -9.19 | union_news_g_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `SOC` | 1019 | $0.74 | $10.77 | $-11.69 | $8,143.36 | ▼ -11.69 after sell → book $4,082.91; vs 09:30 mark -10.77 | union_news_g_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **COVER** | `TRIP` | 36 | $7.50 | $2.10 | $-13.58 | $7,871.26 | ▼ -13.58 after sell → book $4,080.81; vs 09:30 mark -2.10 | short_news_r_h3: dropped from list after 3 sess (min 3) | — |
+| 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,871.26 | ▲ close $4,141.09 vs 09:30 $4,134.08 (session +60.28) | 16:00 close · cash $7,871.26 · equity $4,141.09 vs 09:30 $4,134.08 (+7.01; session marks +60.28) · 12 name(s) marked open→close (per-name table). CIFR×45 09:30 $6.55 → close $7.15 -27.00; ESAB×3 09:30 $85.46 → close $82.55 +8.73; GCTS×262 09:30 $1.48 → close $1.54 -15.72; HIVE×169 09:30 $1.66 → close $1.65 +1.69; HLLY×152 09:30 $2.48 → close $2.36 +18.24; INDI×138 09:30 $2.13 → close $2.18 -6.21; LENZ×99 09:30 $4.10 → close $4.09 +0.99; MNKD×70 09:30 $4.15 → close $4.16 -0.70; NRDS×38 09:30 $7.75 → close $7.31 +16.72; PDYN×79 09:30 $3.35 → close $3.24 +8.69; TTWO×1 09:30 $232.16 → close $226.95 +5.21; ZURA×292 09:30 $1.41 → close $1.24 +49.64 | — |
 
 ## Not taken
 

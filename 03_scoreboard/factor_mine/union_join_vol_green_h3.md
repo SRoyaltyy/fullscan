@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **+12.54%** ($11,254) · signal-only (no cash/fees) was +58.93%. Starts YES **21/30**. Fills 283 · skips 230 · realized $-9.83.
+Cash book **+7.78%** ($10,778) · signal-only (no cash/fees) was +58.93%. Starts YES **21/30**. Fills 288 · skips 230 · realized $-9.83.
 
 ## How this sleeve decides (like you are 10)
 
@@ -486,6 +486,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-11 09:30 ET | **BUY** | `WRBY` | 46 | $30.01 | $2.13 | — | $1,463.72 | — | combo gate; gate join=good,last_green=True,vol=good; list yday_gainer; ret5=+36.3; leftover $1395.83 | join🟢 sector🔴 gen🟢 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
 | 2026-11-11 09:30 ET | **BUY** | `ACAD` | 76 | $18.13 | $2.22 | — | $83.62 | — | combo gate; gate join=good,last_green=True,vol=good; list yday_mover; ret5=-11.1; leftover $1395.83 | join🟢 sector🔴 gen🟢 news🟡 digest🔴 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-11-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $83.62 | ▼ close $11,254.21 vs 09:30 $11,351.75 (session -57.33) | 16:00 close · cash $83.62 · equity $11,254.21 vs 09:30 $11,351.75 (-97.54; session marks -57.33) · 14 name(s) marked open→close (per-name table). CLOV×7 09:30 $5.01 → close $4.97 -0.28; COLL×1 09:30 $24.13 → close $24.81 +0.68; LYNX×2 09:30 $15.10 → close $14.95 -0.30; SERV×4 09:30 $3.32 → close $3.17 -0.62; XERS×2 09:30 $15.99 → close $16.52 +1.06; ZVRA×3 09:30 $11.92 → close $11.85 -0.21; CLX×13 09:30 $104.89 → close $106.86 +25.61; COTY×326 09:30 $4.28 → close $4.06 -71.72; TTD×91 09:30 $15.23 → close $15.98 +68.25; PCT×634 09:30 $2.20 → close $2.00 -126.80; LINC×59 09:30 $23.32 → close $23.51 +11.21; QXO×101 09:30 $13.70 → close $13.81 +11.11; WRBY×46 09:30 $30.01 → close $30.15 +6.44; ACAD×76 09:30 $18.13 → close $18.37 +18.24 | — |
+| 2026-11-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $83.62 | ▼ 09:30 equity $11,158.06 vs yday $11,254.21 (-96.15) | 09:30 open · cash $83.62 (unchanged overnight, no fees) · equity $11,158.06 vs prior close $11,254.21 (-96.15) · 14 name(s) re-marked at the open (per-name table). ACAD×76 yday $18.37 → 09:30 $18.22 -11.40; CLOV×7 yday $4.97 → 09:30 $4.92 -0.35; CLX×13 yday $106.86 → 09:30 $107.52 +8.58; COLL×1 yday $24.81 → 09:30 $25.06 +0.25; COTY×326 yday $4.06 → 09:30 $4.09 +9.78; LINC×59 yday $23.51 → 09:30 $23.30 -12.39; LYNX×2 yday $14.95 → 09:30 $14.72 -0.46; PCT×634 yday $2.00 → 09:30 $1.96 -25.36; QXO×101 yday $13.81 → 09:30 $13.38 -43.43; SERV×4 yday $3.17 → 09:30 $3.00 -0.66; TTD×91 yday $15.98 → 09:30 $15.85 -11.83; WRBY×46 yday $30.15 → 09:30 $29.96 -8.74; XERS×2 yday $16.52 → 09:30 $16.60 +0.16; ZVRA×3 yday $11.85 → 09:30 $11.75 -0.30 | — |
+| 2026-11-12 09:30 ET | **SELL** | `CLOV` | 7 | $4.92 | $0.39 | $-0.47 | $117.67 | ▼ -0.47 after sell → book $11,157.67; vs 09:30 mark -0.39 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-12 09:30 ET | **SELL** | `COLL` | 1 | $25.06 | $0.27 | $+0.13 | $142.46 | ▲ +0.13 after sell → book $11,157.40; vs 09:30 mark -0.27 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-12 09:30 ET | **SELL** | `LYNX` | 2 | $14.72 | $0.32 | $-0.64 | $171.58 | ▼ -0.64 after sell → book $11,157.08; vs 09:30 mark -0.32 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-12 09:30 ET | **SELL** | `XERS` | 2 | $16.60 | $0.36 | $+1.81 | $204.42 | ▲ +1.81 after sell → book $11,156.72; vs 09:30 mark -0.36 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-12 09:30 ET | **SELL** | `ZVRA` | 3 | $11.75 | $0.38 | $-0.44 | $239.29 | ▼ -0.44 after sell → book $11,156.34; vs 09:30 mark -0.38 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $239.29 | ▼ close $10,778.11 vs 09:30 $11,158.06 (session -378.23) | 16:00 close · cash $239.29 · equity $10,778.11 vs 09:30 $11,158.06 (-379.95; session marks -378.23) · 9 name(s) marked open→close (per-name table). ACAD×76 09:30 $18.22 → close $18.14 -6.08; CLX×13 09:30 $107.52 → close $108.20 +8.84; COTY×326 09:30 $4.09 → close $4.03 -19.56; LINC×59 09:30 $23.30 → close $22.98 -18.88; PCT×634 09:30 $1.96 → close $1.80 -101.44; QXO×101 09:30 $13.38 → close $12.81 -57.57; SERV×4 09:30 $3.00 → close $2.90 -0.38; TTD×91 09:30 $15.85 → close $15.47 -34.58; WRBY×46 09:30 $29.96 → close $26.73 -148.58 | — |
 
 ## Not taken
 

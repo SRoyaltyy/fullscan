@@ -6,7 +6,7 @@ Buys the flatten **wish-list** even on io/HOLD mornings — live `flatten_robust
 
 Side **long** · universe `flatten` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · flatten wish-list ∩ vol🟢
 
-Cash book **-28.20%** ($7,180) · signal-only (no cash/fees) was -19.12%. Starts YES **6/30**. Fills 72 · skips 71 · realized $-2440.55.
+Cash book **-28.91%** ($7,109) · signal-only (no cash/fees) was -19.12%. Starts YES **6/30**. Fills 74 · skips 71 · realized $-2440.55.
 
 ## How this sleeve decides (like you are 10)
 
@@ -272,6 +272,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-11 09:30 ET | **BUY** | `COTY` | 545 | $4.28 | $7.03 | — | $2,350.04 | — | flatten wish-list ∩ vol🟢; gate vol=good; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ⚪; ret5=+31.6; leftover $2333.10 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-11 09:30 ET | **BUY** | `TTD` | 153 | $15.23 | $2.45 | — | $17.40 | — | flatten wish-list ∩ vol🟢; gate vol=good; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ret5=+19.9; leftover $2333.10 | join🟢 sector🟡 gen🟢 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $17.40 | ▲ close $7,179.97 vs 09:30 $7,160.12 (session +37.46) | 16:00 close · cash $17.40 · equity $7,179.97 vs 09:30 $7,160.12 (+19.85; session marks +37.46) · 6 name(s) marked open→close (per-name table). CLOV×13 09:30 $5.01 → close $4.97 -0.52; WRBY×1 09:30 $30.01 → close $30.15 +0.14; ZVRA×5 09:30 $11.92 → close $11.85 -0.35; CLX×22 09:30 $104.89 → close $106.86 +43.34; COTY×545 09:30 $4.28 → close $4.06 -119.90; TTD×153 09:30 $15.23 → close $15.98 +114.75 | — |
+| 2026-11-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $17.40 | ▲ 09:30 equity $7,189.61 vs yday $7,179.97 (+9.64) | 09:30 open · cash $17.40 (unchanged overnight, no fees) · equity $7,189.61 vs prior close $7,179.97 (+9.64) · 6 name(s) re-marked at the open (per-name table). CLOV×13 yday $4.97 → 09:30 $4.92 -0.65; CLX×22 yday $106.86 → 09:30 $107.52 +14.52; COTY×545 yday $4.06 → 09:30 $4.09 +16.35; TTD×153 yday $15.98 → 09:30 $15.85 -19.89; WRBY×1 yday $30.15 → 09:30 $29.96 -0.19; ZVRA×5 yday $11.85 → 09:30 $11.75 -0.50 | — |
+| 2026-11-12 09:30 ET | **SELL** | `CLOV` | 13 | $4.92 | $0.70 | $-0.85 | $80.66 | ▼ -0.85 after sell → book $7,188.91; vs 09:30 mark -0.70 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-12 09:30 ET | **SELL** | `ZVRA` | 5 | $11.75 | $0.62 | $-0.72 | $138.79 | ▼ -0.72 after sell → book $7,188.29; vs 09:30 mark -0.62 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $138.79 | ▼ close $7,109.18 vs 09:30 $7,189.61 (session -79.11) | 16:00 close · cash $138.79 · equity $7,109.18 vs 09:30 $7,189.61 (-80.43; session marks -79.11) · 4 name(s) marked open→close (per-name table). CLX×22 09:30 $107.52 → close $108.20 +14.96; COTY×545 09:30 $4.09 → close $4.03 -32.70; TTD×153 09:30 $15.85 → close $15.47 -58.14; WRBY×1 09:30 $29.96 → close $26.73 -3.23 | — |
 
 ## Not taken
 

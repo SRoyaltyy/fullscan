@@ -1,0 +1,85 @@
+{
+  "buys": [],
+  "cash": 11572.86,
+  "date": "2026-11-12",
+  "equity": 11572.86,
+  "fees": 25.7389,
+  "fills": [
+    {
+      "fees": 2.1081,
+      "fill_rule": "open",
+      "pnl": 69.46,
+      "price": 107.52,
+      "shares": 28,
+      "side": "SELL",
+      "ticker": "CLX"
+    },
+    {
+      "fees": 16.0268,
+      "fill_rule": "open",
+      "pnl": -374.34,
+      "price": 2.135,
+      "shares": 1225,
+      "side": "SELL",
+      "ticker": "INDI"
+    },
+    {
+      "fees": 4.9752,
+      "fill_rule": "open",
+      "pnl": -70.5,
+      "price": 7.64,
+      "shares": 379,
+      "side": "SELL",
+      "ticker": "TLS"
+    },
+    {
+      "fees": 2.6288,
+      "fill_rule": "open",
+      "pnl": 115.08,
+      "price": 15.85,
+      "shares": 194,
+      "side": "SELL",
+      "ticker": "TTD"
+    }
+  ],
+  "holdings": [],
+  "mean": -2.0183,
+  "n_trades_today": 4,
+  "recipe": "oos0914_rvol_lg_h1_sx",
+  "sells": [
+    {
+      "fill_rule": "open",
+      "price": 107.52,
+      "shares": 28,
+      "side": "SELL",
+      "ticker": "CLX"
+    },
+    {
+      "fill_rule": "open",
+      "price": 2.135,
+      "shares": 1225,
+      "side": "SELL",
+      "ticker": "INDI"
+    },
+    {
+      "fill_rule": "open",
+      "price": 7.64,
+      "shares": 379,
+      "side": "SELL",
+      "ticker": "TLS"
+    },
+    {
+      "fill_rule": "open",
+      "price": 15.85,
+      "shares": 194,
+      "side": "SELL",
+      "ticker": "TTD"
+    }
+  ],
+  "state": {
+    "after": "2026-11-12",
+    "cash": 11572.86,
+    "pos": {},
+    "yday_equity": 11572.86
+  }
+}

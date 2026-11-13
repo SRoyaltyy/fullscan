@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `ohlc_hot` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · baseline list, no extra gate
 
-Cash book **-27.42%** ($7,258) · signal-only (no cash/fees) was +6.95%. Starts YES **0/30**. Fills 536 · skips 93 · realized $-1456.67.
+Cash book **-28.33%** ($7,167) · signal-only (no cash/fees) was +6.95%. Starts YES **0/30**. Fills 543 · skips 93 · realized $-1456.67.
 
 ## How this sleeve decides (like you are 10)
 
@@ -732,6 +732,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-11 09:30 ET | **BUY** | `LILAK` | 90 | $9.87 | $2.26 | — | $1,179.05 | — | baseline list, no extra gate; list ohlc_hot; ret5=+15.0; leftover $889.30 | join🟢 sector🟡 gen🟢 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-11 09:30 ET | **BUY** | `SBH` | 43 | $20.27 | $2.12 | — | $305.54 | — | baseline list, no extra gate; list ohlc_hot; 🔵; ⚪; ret5=+14.7; leftover $889.30 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟡 heat🟢 vol🟢 buy🟡 |
 | 2026-11-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $305.54 | ▼ close $7,257.70 vs 09:30 $7,374.13 (session -73.71) | 16:00 close · cash $305.54 · equity $7,257.70 vs 09:30 $7,374.13 (-116.43; session marks -73.71) · 8 name(s) marked open→close (per-name table). REAL×67 09:30 $14.83 → close $14.55 -18.76; REPL×44 09:30 $23.28 → close $21.78 -66.00; ATER×954 09:30 $0.93 → close $0.93 -6.20; GDYN×63 09:30 $13.94 → close $13.83 -6.93; CHTR×6 09:30 $133.11 → close $136.31 +19.20; TTWO×3 09:30 $227.57 → close $231.31 +11.22; LILAK×90 09:30 $9.87 → close $10.30 +38.70; SBH×43 09:30 $20.27 → close $19.22 -44.94 | — |
+| 2026-11-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $305.54 | ▼ 09:30 equity $7,224.73 vs yday $7,257.70 (-32.97) | 09:30 open · cash $305.54 (unchanged overnight, no fees) · equity $7,224.73 vs prior close $7,257.70 (-32.97) · 8 name(s) re-marked at the open (per-name table). ATER×954 yday $0.93 → 09:30 $0.90 -23.85; CHTR×6 yday $136.31 → 09:30 $138.13 +10.92; GDYN×63 yday $13.83 → 09:30 $13.90 +4.41; LILAK×90 yday $10.30 → 09:30 $10.31 +0.90; REAL×67 yday $14.55 → 09:30 $14.41 -9.38; REPL×44 yday $21.78 → 09:30 $21.32 -20.24; SBH×43 yday $19.22 → 09:30 $19.26 +1.72; TTWO×3 yday $231.31 → 09:30 $232.16 +2.55 | — |
+| 2026-11-12 09:30 ET | **SELL** | `ATER` | 954 | $0.90 | $11.62 | $-53.42 | $1,152.52 | ▼ -53.42 after sell → book $7,213.11; vs 09:30 mark -11.62 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `GDYN` | 63 | $13.90 | $2.20 | $-6.90 | $2,026.02 | ▼ -6.90 after sell → book $7,210.91; vs 09:30 mark -2.20 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `LILAK` | 90 | $10.31 | $2.28 | $+35.06 | $2,951.64 | ▲ +35.06 after sell → book $7,208.63; vs 09:30 mark -2.28 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `REAL` | 67 | $14.41 | $2.21 | $-10.43 | $3,914.90 | ▼ -10.43 after sell → book $7,206.42; vs 09:30 mark -2.21 | dropped from list after 2 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `REPL` | 44 | $21.32 | $2.14 | $-38.58 | $4,850.84 | ▼ -38.58 after sell → book $7,204.28; vs 09:30 mark -2.14 | dropped from list after 2 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `SBH` | 43 | $19.26 | $2.14 | $-47.47 | $5,676.88 | ▼ -47.47 after sell → book $7,202.14; vs 09:30 mark -2.14 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `TTWO` | 3 | $232.16 | $2.02 | $+9.75 | $6,371.34 | ▲ +9.75 after sell → book $7,200.12; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,371.34 | ▼ close $7,167.30 vs 09:30 $7,224.73 (session -32.82) | 16:00 close · cash $6,371.34 · equity $7,167.30 vs 09:30 $7,224.73 (-57.43; session marks -32.82) · 1 name(s) marked open→close (per-name table). CHTR×6 09:30 $138.13 → close $132.66 -32.82 | — |
 
 ## Not taken
 

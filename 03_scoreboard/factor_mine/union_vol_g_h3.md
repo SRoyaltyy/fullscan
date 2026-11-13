@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ vol_g, no 🚨
 
-Cash book **-4.39%** ($9,561) · signal-only (no cash/fees) was -14.17%. Starts YES **21/30**. Fills 338 · skips 286 · realized $-156.04.
+Cash book **-8.02%** ($9,198) · signal-only (no cash/fees) was -14.17%. Starts YES **21/30**. Fills 341 · skips 286 · realized $-156.04.
 
 ## How this sleeve decides (like you are 10)
 
@@ -538,6 +538,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-11 09:30 ET | **BUY** | `RC` | 1214 | $1.01 | $15.66 | — | $1,254.96 | — | union ∩ vol_g, no 🚨; gate vol=good; list probable,yday_gainer,yday_mover; ret5=-7.3; leftover $1226.26 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
 | 2026-11-11 09:30 ET | **BUY** | `CECO` | 20 | $58.47 | $2.05 | — | $83.51 | — | union ∩ vol_g, no 🚨; gate vol=good; list probable,yday_gainer; 🔵; ret5=+3.2; leftover $1226.26 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🔴 peer🟢 heat🟡 vol🟢 buy🟡 |
 | 2026-11-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $83.51 | ▼ close $9,560.76 vs 09:30 $9,924.72 (session -261.46) | 16:00 close · cash $83.51 · equity $9,560.76 vs 09:30 $9,924.72 (-363.96; session marks -261.46) · 13 name(s) marked open→close (per-name table). CLOV×3 09:30 $5.01 → close $4.97 -0.12; ECX×22 09:30 $0.76 → close $0.79 +0.62; NUAI×6 09:30 $2.26 → close $2.33 +0.42; THM×9 09:30 $1.43 → close $1.33 -0.90; ZVRA×1 09:30 $11.92 → close $11.85 -0.07; CLX×11 09:30 $104.89 → close $106.86 +21.67; COTY×286 09:30 $4.28 → close $4.06 -62.92; TTD×80 09:30 $15.23 → close $15.98 +60.00; AKBA×2313 09:30 $0.53 → close $0.57 +101.08; HLLY×459 09:30 $2.67 → close $2.51 -73.44; PCT×557 09:30 $2.20 → close $2.00 -111.40; RC×1214 09:30 $1.01 → close $0.93 -97.00; CECO×20 09:30 $58.47 → close $53.50 -99.40 | — |
+| 2026-11-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $83.51 | ▼ 09:30 equity $9,519.51 vs yday $9,560.76 (-41.25) | 09:30 open · cash $83.51 (unchanged overnight, no fees) · equity $9,519.51 vs prior close $9,560.76 (-41.25) · 13 name(s) re-marked at the open (per-name table). AKBA×2313 yday $0.57 → 09:30 $0.56 -26.37; CECO×20 yday $53.50 → 09:30 $54.34 +16.80; CLOV×3 yday $4.97 → 09:30 $4.92 -0.15; CLX×11 yday $106.86 → 09:30 $107.52 +7.26; COTY×286 yday $4.06 → 09:30 $4.09 +8.58; ECX×22 yday $0.79 → 09:30 $0.78 -0.16; HLLY×459 yday $2.51 → 09:30 $2.48 -13.77; NUAI×6 yday $2.33 → 09:30 $2.27 -0.36; PCT×557 yday $2.00 → 09:30 $1.96 -22.28; RC×1214 yday $0.93 → 09:30 $0.93 -0.12; THM×9 yday $1.33 → 09:30 $1.31 -0.18; TTD×80 yday $15.98 → 09:30 $15.85 -10.40; ZVRA×1 yday $11.85 → 09:30 $11.75 -0.10 | — |
+| 2026-11-12 09:30 ET | **SELL** | `CLOV` | 3 | $4.92 | $0.18 | $-0.21 | $98.09 | ▼ -0.21 after sell → book $9,519.33; vs 09:30 mark -0.18 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-12 09:30 ET | **SELL** | `ECX` | 22 | $0.78 | $0.26 | $-0.98 | $115.00 | ▼ -0.98 after sell → book $9,519.08; vs 09:30 mark -0.25 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-12 09:30 ET | **SELL** | `ZVRA` | 1 | $11.75 | $0.14 | $-0.16 | $126.61 | ▼ -0.16 after sell → book $9,518.94; vs 09:30 mark -0.14 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $126.61 | ▼ close $9,198.46 vs 09:30 $9,519.51 (session -320.48) | 16:00 close · cash $126.61 · equity $9,198.46 vs 09:30 $9,519.51 (-321.05; session marks -320.48) · 10 name(s) marked open→close (per-name table). AKBA×2313 09:30 $0.56 → close $0.50 -148.73; CECO×20 09:30 $54.34 → close $56.00 +33.20; CLX×11 09:30 $107.52 → close $108.20 +7.48; COTY×286 09:30 $4.09 → close $4.03 -17.16; HLLY×459 09:30 $2.48 → close $2.36 -55.08; NUAI×6 09:30 $2.27 → close $2.72 +2.70; PCT×557 09:30 $1.96 → close $1.80 -89.12; RC×1214 09:30 $0.93 → close $0.91 -23.19; THM×9 09:30 $1.31 → close $1.29 -0.18; TTD×80 09:30 $15.85 → close $15.47 -30.40 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · merged news🟢 and cameras +6 −≤1
 
-Cash book **-21.42%** ($7,858) · signal-only (no cash/fees) was -22.84%. Starts YES **1/30**. Fills 101 · skips 85 · realized $-2058.05.
+Cash book **-23.61%** ($7,639) · signal-only (no cash/fees) was -22.84%. Starts YES **1/30**. Fills 103 · skips 85 · realized $-2058.05.
 
 ## How this sleeve decides (like you are 10)
 
@@ -304,6 +304,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-11 09:30 ET | **BUY** | `FLYW` | 50 | $22.21 | $2.14 | — | $1,209.81 | — | merged news🟢 and cameras +6 −≤1; gate cam_bad_max=1,n_pos_min=6,news=good; rank cond; list ohlc_hot; ⚪; ret5=+16.7; leftover $1120.71 | join🟢 sector🟢 gen🟢 news🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-11-11 09:30 ET | **BUY** | `LINC` | 48 | $23.32 | $2.13 | — | $88.32 | — | merged news🟢 and cameras +6 −≤1; gate cam_bad_max=1,n_pos_min=6,news=good; rank cond; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+12.2; leftover $1120.71 | join🟢 sector🟡 gen🟢 news🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $88.32 | ▼ close $7,858.12 vs 09:30 $7,902.71 (session -23.70) | 16:00 close · cash $88.32 · equity $7,858.12 vs 09:30 $7,902.71 (-44.59; session marks -23.70) · 11 name(s) marked open→close (per-name table). ADMA×1 09:30 $12.64 → close $13.19 +0.55; CLYM×1 09:30 $11.72 → close $12.25 +0.53; COTY×4 09:30 $4.28 → close $4.06 -0.88; SERV×3 09:30 $3.32 → close $3.17 -0.46; ALH×44 09:30 $24.92 → close $24.20 -31.68; CECO×19 09:30 $58.47 → close $53.50 -94.43; EMBJ×13 09:30 $82.46 → close $82.43 -0.39; LOAR×14 09:30 $79.53 → close $79.24 -4.06; CRWV×20 09:30 $55.97 → close $60.77 +96.00; FLYW×50 09:30 $22.21 → close $22.25 +2.00; LINC×48 09:30 $23.32 → close $23.51 +9.12 | — |
+| 2026-11-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $88.32 | ▼ 09:30 equity $7,639.97 vs yday $7,858.12 (-218.15) | 09:30 open · cash $88.32 (unchanged overnight, no fees) · equity $7,639.97 vs prior close $7,858.12 (-218.15) · 11 name(s) re-marked at the open (per-name table). ADMA×1 yday $13.19 → 09:30 $13.23 +0.04; ALH×44 yday $24.20 → 09:30 $24.29 +3.96; CECO×19 yday $53.50 → 09:30 $54.34 +15.96; CLYM×1 yday $12.25 → 09:30 $11.97 -0.28; COTY×4 yday $4.06 → 09:30 $4.09 +0.12; CRWV×20 yday $60.77 → 09:30 $50.89 -197.55; EMBJ×13 yday $82.43 → 09:30 $81.56 -11.31; FLYW×50 yday $22.25 → 09:30 $22.14 -5.50; LINC×48 yday $23.51 → 09:30 $23.30 -10.08; LOAR×14 yday $79.24 → 09:30 $78.31 -13.02; SERV×3 yday $3.17 → 09:30 $3.00 -0.50 | — |
+| 2026-11-12 09:30 ET | **SELL** | `ADMA` | 1 | $13.23 | $0.16 | $+0.04 | $101.39 | ▲ +0.04 after sell → book $7,639.81; vs 09:30 mark -0.16 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-12 09:30 ET | **SELL** | `COTY` | 4 | $4.09 | $0.20 | $-0.57 | $117.56 | ▼ -0.57 after sell → book $7,639.62; vs 09:30 mark -0.19 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $117.56 | ▼ close $7,638.92 vs 09:30 $7,639.97 (session -0.70) | 16:00 close · cash $117.56 · equity $7,638.92 vs 09:30 $7,639.97 (-1.05; session marks -0.70) · 9 name(s) marked open→close (per-name table). ALH×44 09:30 $24.29 → close $23.76 -23.32; CECO×19 09:30 $54.34 → close $56.00 +31.54; CLYM×1 09:30 $11.97 → close $10.87 -1.10; CRWV×20 09:30 $50.89 → close $56.60 +114.15; EMBJ×13 09:30 $81.56 → close $79.48 -27.04; FLYW×50 09:30 $22.14 → close $21.47 -33.50; LINC×48 09:30 $23.30 → close $22.98 -15.36; LOAR×14 09:30 $78.31 → close $75.04 -45.78; SERV×3 09:30 $3.00 → close $2.90 -0.29 | — |
 
 ## Not taken
 

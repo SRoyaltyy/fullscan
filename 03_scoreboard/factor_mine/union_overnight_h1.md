@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ overnight, no 🚨
 
-Cash book **-16.11%** ($8,389) · signal-only (no cash/fees) was -26.59%. Starts YES **0/30**. Fills 198 · skips 73 · realized $-2767.20.
+Cash book **-17.16%** ($8,284) · signal-only (no cash/fees) was -26.59%. Starts YES **0/30**. Fills 206 · skips 73 · realized $-2767.20.
 
 ## How this sleeve decides (like you are 10)
 
@@ -398,6 +398,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-11 09:30 ET | **BUY** | `FNV` | 4 | $257.00 | $2.00 | — | $1,263.13 | — | union ∩ overnight, no 🚨; gate overnight=True; list overnight,overnight_mega; ret5=+13.2; leftover $1060.49 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🟡 buy🟡 |
 | 2026-11-11 09:30 ET | **BUY** | `ITRG` | 479 | $2.21 | $6.18 | — | $198.36 | — | union ∩ overnight, no 🚨; gate overnight=True; list overnight; ret5=+9.0; leftover $1060.49 | join🟡 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
 | 2026-11-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $198.36 | ▼ close $8,389.03 vs 09:30 $8,504.43 (session -73.31) | 16:00 close · cash $198.36 · equity $8,389.03 vs 09:30 $8,504.43 (-115.40; session marks -73.31) · 8 name(s) marked open→close (per-name table). AGRO×119 09:30 $8.90 → close $9.05 +17.26; AVEX×90 09:30 $11.70 → close $12.13 +38.70; AZ×168 09:30 $6.29 → close $6.25 -6.72; CTVA×87 09:30 $12.12 → close $12.14 +1.74; ECO×12 09:30 $84.65 → close $85.75 +13.20; ENS×6 09:30 $156.29 → close $147.65 -51.84; FNV×4 09:30 $257.00 → close $248.76 -32.96; ITRG×479 09:30 $2.21 → close $2.10 -52.69 | — |
+| 2026-11-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $198.36 | ▼ 09:30 equity $8,305.79 vs yday $8,389.03 (-83.24) | 09:30 open · cash $198.36 (unchanged overnight, no fees) · equity $8,305.79 vs prior close $8,389.03 (-83.24) · 8 name(s) re-marked at the open (per-name table). AGRO×119 yday $9.05 → 09:30 $8.86 -22.61; AVEX×90 yday $12.13 → 09:30 $13.65 +136.80; AZ×168 yday $6.25 → 09:30 $6.49 +40.32; CTVA×87 yday $12.14 → 09:30 $10.51 -141.81; ECO×12 yday $85.75 → 09:30 $83.47 -27.36; ENS×6 yday $147.65 → 09:30 $145.97 -10.08; FNV×4 yday $248.76 → 09:30 $246.11 -10.60; ITRG×479 yday $2.10 → 09:30 $2.00 -47.90 | — |
+| 2026-11-12 09:30 ET | **SELL** | `AGRO` | 119 | $8.86 | $2.38 | $-10.08 | $1,250.32 | ▼ -10.08 after sell → book $8,303.41; vs 09:30 mark -2.38 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-11-12 09:30 ET | **SELL** | `AVEX` | 90 | $13.65 | $2.28 | $+170.96 | $2,476.54 | ▲ +170.96 after sell → book $8,301.13; vs 09:30 mark -2.28 | dropped from list after 1 sess (min 1) | join🔴 sector🟢 gen🔴 news🟡 digest🔴 judge🔴 ab🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-12 09:30 ET | **SELL** | `AZ` | 168 | $6.49 | $2.53 | $+28.57 | $3,564.33 | ▲ +28.57 after sell → book $8,298.60; vs 09:30 mark -2.53 | dropped from list after 1 sess (min 1) | join🟢 sector🟢 gen🔴 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-11-12 09:30 ET | **SELL** | `CTVA` | 87 | $10.51 | $2.28 | $-144.60 | $4,476.42 | ▼ -144.60 after sell → book $8,296.32; vs 09:30 mark -2.28 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟡 ab🟢 peer🟡 heat🔴 vol🔴 buy🟡 |
+| 2026-11-12 09:30 ET | **SELL** | `ECO` | 12 | $83.47 | $2.05 | $-18.23 | $5,476.02 | ▼ -18.23 after sell → book $8,294.28; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | join🟢 sector🟢 gen🔴 news🟡 digest🔴 judge🔴 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-11-12 09:30 ET | **SELL** | `ENS` | 6 | $145.97 | $2.03 | $-65.96 | $6,349.81 | ▼ -65.96 after sell → book $8,292.25; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | join🔴 sector🟢 gen🔴 news🟡 digest🔴 judge🔴 ab🟢 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-11-12 09:30 ET | **SELL** | `FNV` | 4 | $246.11 | $2.02 | $-47.58 | $7,332.23 | ▼ -47.58 after sell → book $8,290.23; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟡 ab🟢 peer🟡 heat🔴 vol🟡 buy🟡 |
+| 2026-11-12 09:30 ET | **SELL** | `ITRG` | 479 | $2.00 | $6.27 | $-113.04 | $8,283.96 | ▼ -113.04 after sell → book $8,283.96; vs 09:30 mark -6.27 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟡 ab🔴 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,283.96 | ▲ close $8,283.96 vs 09:30 $8,305.79 (session +0.00) | 16:00 close · cash $8,283.96 · no lots left · equity $8,283.96. | — |
 
 ## Not taken
 

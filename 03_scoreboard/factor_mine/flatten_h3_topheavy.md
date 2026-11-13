@@ -6,7 +6,7 @@ Buys the flatten **wish-list** even on io/HOLD mornings — live `flatten_robust
 
 Side **long** · universe `flatten` · top 8 · rank `list` · size `topheavy` · sell `list` · S-boost `none` · 40% to #1, rest split
 
-Cash book **-27.04%** ($7,296) · signal-only (no cash/fees) was -10.41%. Starts YES **2/30**. Fills 293 · skips 214 · realized $-900.04.
+Cash book **-31.82%** ($6,818) · signal-only (no cash/fees) was -10.41%. Starts YES **2/30**. Fills 297 · skips 214 · realized $-900.04.
 
 ## How this sleeve decides (like you are 10)
 
@@ -489,6 +489,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-11 09:30 ET | **SELL** | `MGNI` | 1 | $28.53 | $0.31 | $+0.70 | $86.18 | ▲ +0.70 after sell → book $7,248.01; vs 09:30 mark -0.30 | dropped from list after 3 sess (min 3) | — |
 | 2026-11-11 09:30 ET | **BUY** | `COTY` | 2 | $4.28 | $0.09 | — | $77.52 | — | 40% to #1, rest split; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ⚪; ret5=+31.6; leftover $10.34 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $77.52 | ▲ close $7,295.79 vs 09:30 $7,248.55 (session +47.88) | 16:00 close · cash $77.52 · equity $7,295.79 vs 09:30 $7,248.55 (+47.24; session marks +47.88) · 7 name(s) marked open→close (per-name table). ALGN×1 09:30 $174.30 → close $172.08 -2.22; CLOV×14 09:30 $5.01 → close $4.97 -0.56; ETON×1 09:30 $66.94 → close $68.40 +1.46; TMDX×29 09:30 $90.95 → close $92.01 +30.74; WRBY×138 09:30 $30.01 → close $30.15 +19.32; ZVRA×6 09:30 $11.92 → close $11.85 -0.42; COTY×2 09:30 $4.28 → close $4.06 -0.44 | — |
+| 2026-11-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $77.52 | ▼ 09:30 equity $7,257.24 vs yday $7,295.79 (-38.55) | 09:30 open · cash $77.52 (unchanged overnight, no fees) · equity $7,257.24 vs prior close $7,295.79 (-38.55) · 7 name(s) re-marked at the open (per-name table). ALGN×1 yday $172.08 → 09:30 $171.45 -0.63; CLOV×14 yday $4.97 → 09:30 $4.92 -0.70; COTY×2 yday $4.06 → 09:30 $4.09 +0.06; ETON×1 yday $68.40 → 09:30 $68.38 -0.02; TMDX×29 yday $92.01 → 09:30 $91.65 -10.44; WRBY×138 yday $30.15 → 09:30 $29.96 -26.22; ZVRA×6 yday $11.85 → 09:30 $11.75 -0.60 | — |
+| 2026-11-12 09:30 ET | **SELL** | `ALGN` | 1 | $171.45 | $1.74 | $+0.13 | $247.23 | ▲ +0.13 after sell → book $7,255.50; vs 09:30 mark -1.74 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-12 09:30 ET | **SELL** | `CLOV` | 14 | $4.92 | $0.75 | $-0.92 | $315.36 | ▼ -0.92 after sell → book $7,254.75; vs 09:30 mark -0.75 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-12 09:30 ET | **SELL** | `ETON` | 1 | $68.38 | $0.71 | $+8.99 | $383.03 | ▲ +8.99 after sell → book $7,254.04; vs 09:30 mark -0.71 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-12 09:30 ET | **SELL** | `ZVRA` | 6 | $11.75 | $0.74 | $-0.86 | $452.79 | ▼ -0.86 after sell → book $7,253.30; vs 09:30 mark -0.74 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $452.79 | ▼ close $6,817.59 vs 09:30 $7,257.24 (session -435.71) | 16:00 close · cash $452.79 · equity $6,817.59 vs 09:30 $7,257.24 (-439.65; session marks -435.71) · 3 name(s) marked open→close (per-name table). COTY×2 09:30 $4.09 → close $4.03 -0.12; TMDX×29 09:30 $91.65 → close $92.00 +10.15; WRBY×138 09:30 $29.96 → close $26.73 -445.74 | — |
 
 ## Not taken
 

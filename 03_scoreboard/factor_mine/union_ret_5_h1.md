@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `ret_5` · size `leftover` · sell `list` · S-boost `none` · rank by ret_5
 
-Cash book **+9.79%** ($10,979) · signal-only (no cash/fees) was +36.33%. Starts YES **29/30**. Fills 551 · skips 100 · realized $+370.60.
+Cash book **+7.07%** ($10,707) · signal-only (no cash/fees) was +36.33%. Starts YES **29/30**. Fills 558 · skips 100 · realized $+370.60.
 
 ## How this sleeve decides (like you are 10)
 
@@ -750,6 +750,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-11 09:30 ET | **BUY** | `COTY` | 311 | $4.28 | $4.01 | — | $1,336.56 | — | rank by ret_5; rank ret_5; list flatten; 🔵; ⚪; ret5=+31.6; leftover $1335.24 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-11 09:30 ET | **BUY** | `GFR` | 173 | $7.70 | $2.51 | — | $1.95 | — | rank by ret_5; rank ret_5; list yday_gainer,yday_mover; 🔵; ret5=+24.5; leftover $1335.24 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-11-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1.95 | ▲ close $10,978.88 vs 09:30 $10,954.25 (session +65.06) | 16:00 close · cash $1.95 · equity $10,978.88 vs 09:30 $10,954.25 (+24.63; session marks +65.06) · 8 name(s) marked open→close (per-name table). AOSL×46 09:30 $30.00 → close $30.86 +39.56; FLY×57 09:30 $23.96 → close $26.61 +150.82; INDI×627 09:30 $2.41 → close $2.30 -71.85; TLS×171 09:30 $7.80 → close $7.65 -25.65; WRBY×44 09:30 $30.01 → close $30.15 +6.16; GCTS×861 09:30 $1.55 → close $1.59 +34.44; COTY×311 09:30 $4.28 → close $4.06 -68.42; GFR×173 09:30 $7.70 → close $7.70 +0.00 | — |
+| 2026-11-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $1.95 | ▼ 09:30 equity $10,678.98 vs yday $10,978.88 (-299.90) | 09:30 open · cash $1.95 (unchanged overnight, no fees) · equity $10,678.98 vs prior close $10,978.88 (-299.90) · 8 name(s) re-marked at the open (per-name table). AOSL×46 yday $30.86 → 09:30 $29.12 -79.95; COTY×311 yday $4.06 → 09:30 $4.09 +9.33; FLY×57 yday $26.61 → 09:30 $26.18 -24.51; GCTS×861 yday $1.59 → 09:30 $1.48 -94.71; GFR×173 yday $7.70 → 09:30 $7.72 +3.46; INDI×627 yday $2.30 → 09:30 $2.13 -103.46; TLS×171 yday $7.65 → 09:30 $7.64 -1.71; WRBY×44 yday $30.15 → 09:30 $29.96 -8.36 | — |
+| 2026-11-12 09:30 ET | **SELL** | `AOSL` | 46 | $29.12 | $2.15 | $+21.12 | $1,339.41 | ▲ +21.12 after sell → book $10,676.83; vs 09:30 mark -2.15 | dropped from list after 2 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `COTY` | 311 | $4.09 | $4.07 | $-67.18 | $2,607.33 | ▼ -67.18 after sell → book $10,672.75; vs 09:30 mark -4.08 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `FLY` | 57 | $26.18 | $2.18 | $+147.85 | $4,097.41 | ▲ +147.85 after sell → book $10,670.57; vs 09:30 mark -2.18 | dropped from list after 2 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `GFR` | 173 | $7.72 | $2.55 | $-1.60 | $5,430.42 | ▼ -1.60 after sell → book $10,668.02; vs 09:30 mark -2.55 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `INDI` | 627 | $2.13 | $8.20 | $-16.29 | $6,760.86 | ▼ -16.29 after sell → book $10,659.82; vs 09:30 mark -8.20 | dropped from list after 2 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `TLS` | 171 | $7.64 | $2.54 | $-32.40 | $8,064.76 | ▼ -32.40 after sell → book $10,657.28; vs 09:30 mark -2.54 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **SELL** | `WRBY` | 44 | $29.96 | $2.14 | $-6.46 | $9,380.86 | ▼ -6.46 after sell → book $10,655.14; vs 09:30 mark -2.14 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,380.86 | ▲ close $10,706.80 vs 09:30 $10,678.98 (session +51.66) | 16:00 close · cash $9,380.86 · equity $10,706.80 vs 09:30 $10,678.98 (+27.82; session marks +51.66) · 1 name(s) marked open→close (per-name table). GCTS×861 09:30 $1.48 → close $1.54 +51.66 | — |
 
 ## Not taken
 

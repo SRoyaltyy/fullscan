@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ news_g hold 5, no 🚨
 
-Cash book **-38.12%** ($6,188) · signal-only (no cash/fees) was +99.58%. Starts YES **1/30**. Fills 232 · skips 344 · realized $-1589.16.
+Cash book **-40.59%** ($5,941) · signal-only (no cash/fees) was +99.58%. Starts YES **1/30**. Fills 234 · skips 344 · realized $-1589.16.
 
 ## How this sleeve decides (like you are 10)
 
@@ -432,6 +432,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-11 09:30 ET | **BUY** | `SOC` | 807 | $0.73 | $8.31 | — | $642.42 | — | union ∩ news_g hold 5, no 🚨; gate news=good; list yday_mover; 🔵; ret5=-69.7; leftover $589.67 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
 | 2026-11-11 09:30 ET | **BUY** | `LOAR` | 7 | $79.53 | $2.01 | — | $83.70 | — | union ∩ news_g hold 5, no 🚨; gate news=good; list ohlc_hot; 🔵; ret5=+16.4; leftover $589.67 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-11-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $83.70 | ▲ close $6,187.91 vs 09:30 $6,130.58 (session +101.22) | 16:00 close · cash $83.70 · equity $6,187.91 vs 09:30 $6,130.58 (+57.33; session marks +101.22) · 10 name(s) marked open→close (per-name table). MVST×1797 09:30 $0.23 → close $0.26 +66.67; STUB×185 09:30 $5.35 → close $5.58 +42.55; PFGC×5 09:30 $110.24 → close $111.21 +4.85; RC×583 09:30 $1.01 → close $0.93 -46.58; CECO×10 09:30 $58.47 → close $53.50 -49.70; FRVO×49 09:30 $11.88 → close $12.94 +52.18; LINC×25 09:30 $23.32 → close $23.51 +4.75; AOSL×19 09:30 $30.00 → close $30.86 +16.34; SOC×807 09:30 $0.73 → close $0.75 +12.19; LOAR×7 09:30 $79.53 → close $79.24 -2.03 | — |
+| 2026-11-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $83.70 | ▼ 09:30 equity $6,091.73 vs yday $6,187.91 (-96.18) | 09:30 open · cash $83.70 (unchanged overnight, no fees) · equity $6,091.73 vs prior close $6,187.91 (-96.18) · 10 name(s) re-marked at the open (per-name table). AOSL×19 yday $30.86 → 09:30 $29.12 -33.02; CECO×10 yday $53.50 → 09:30 $54.34 +8.40; FRVO×49 yday $12.94 → 09:30 $12.33 -29.89; LINC×25 yday $23.51 → 09:30 $23.30 -5.25; LOAR×7 yday $79.24 → 09:30 $78.31 -6.51; MVST×1797 yday $0.26 → 09:30 $0.25 -21.20; PFGC×5 yday $111.21 → 09:30 $111.88 +3.35; RC×583 yday $0.93 → 09:30 $0.93 -0.06; SOC×807 yday $0.75 → 09:30 $0.74 -4.60; STUB×185 yday $5.58 → 09:30 $5.54 -7.40 | — |
+| 2026-11-12 09:30 ET | **SELL** | `MVST` | 1797 | $0.25 | $10.23 | $-778.45 | $526.67 | ▼ -778.45 after sell → book $6,081.50; vs 09:30 mark -10.23 | dropped from list after 5 sess (min 5) | — |
+| 2026-11-12 09:30 ET | **SELL** | `STUB` | 185 | $5.54 | $2.59 | $-193.83 | $1,548.99 | ▼ -193.83 after sell → book $6,078.91; vs 09:30 mark -2.59 | dropped from list after 5 sess (min 5) | — |
+| 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,548.99 | ▼ close $5,941.04 vs 09:30 $6,091.73 (session -137.88) | 16:00 close · cash $1,548.99 · equity $5,941.04 vs 09:30 $6,091.73 (-150.69; session marks -137.88) · 8 name(s) marked open→close (per-name table). AOSL×19 09:30 $29.12 → close $30.53 +26.75; CECO×10 09:30 $54.34 → close $56.00 +16.60; FRVO×49 09:30 $12.33 → close $11.65 -33.32; LINC×25 09:30 $23.30 → close $22.98 -8.00; LOAR×7 09:30 $78.31 → close $75.04 -22.89; PFGC×5 09:30 $111.88 → close $109.96 -9.60; RC×583 09:30 $0.93 → close $0.91 -11.14; SOC×807 09:30 $0.74 → close $0.62 -96.28 | — |
 
 ## Not taken
 

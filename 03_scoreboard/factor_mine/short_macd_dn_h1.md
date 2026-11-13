@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · MACD histogram < 0
 
-Cash book **-7.09%** ($9,291) · signal-only (no cash/fees) was +6.85%. Starts YES **5/30**. Fills 528 · skips 108 · realized $-743.47.
+Cash book **-5.63%** ($9,437) · signal-only (no cash/fees) was +6.85%. Starts YES **5/30**. Fills 535 · skips 108 · realized $-743.47.
 
 ## How this sleeve decides (like you are 10)
 
@@ -726,6 +726,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-11 09:30 ET | **SHORT** | `ABEO` | 236 | $2.45 | $3.11 | — | $13,293.54 | — | MACD histogram < 0; gate macd_down=True; list yday_mover; ret5=-42.2; leftover $579.70 | join🟢 sector🔴 gen🟢 news🟡 digest🔴 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-11-11 09:30 ET | **SHORT** | `JANX` | 48 | $12.07 | $2.17 | — | $13,870.73 | — | MACD histogram < 0; gate macd_down=True; list yday_mover; ret5=-32.4; leftover $579.70 | join🟢 sector🔴 gen🟢 news🟡 digest🔴 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-11-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $13,870.73 | ▲ close $9,290.78 vs 09:30 $9,296.85 (session +52.38) | 16:00 close · cash $13,870.73 · equity $9,290.78 vs 09:30 $9,296.85 (-6.07; session marks +52.38) · 8 name(s) marked open→close (per-name table). AKBA×1093 09:30 $0.53 → close $0.57 -47.76; HLLY×217 09:30 $2.67 → close $2.51 +34.72; PCT×263 09:30 $2.20 → close $2.00 +52.60; QMCO×33 09:30 $17.52 → close $16.87 +21.45; ZURA×417 09:30 $1.39 → close $1.43 -16.68; SOC×794 09:30 $0.73 → close $0.75 -11.99; ABEO×236 09:30 $2.45 → close $2.30 +35.40; JANX×48 09:30 $12.07 → close $12.39 -15.36 | — |
+| 2026-11-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $13,870.73 | ▲ 09:30 equity $9,397.58 vs yday $9,290.78 (+106.80) | 09:30 open · cash $13,870.73 (unchanged overnight, no fees) · equity $9,397.58 vs prior close $9,290.78 (+106.80) · 8 name(s) re-marked at the open (per-name table). ABEO×236 yday $2.30 → 09:30 $2.28 +4.72; AKBA×1093 yday $0.57 → 09:30 $0.56 +12.46; HLLY×217 yday $2.51 → 09:30 $2.48 +6.51; JANX×48 yday $12.39 → 09:30 $11.86 +25.44; PCT×263 yday $2.00 → 09:30 $1.96 +10.52; QMCO×33 yday $16.87 → 09:30 $15.83 +34.29; SOC×794 yday $0.75 → 09:30 $0.74 +4.53; ZURA×417 yday $1.43 → 09:30 $1.41 +8.34 | — |
+| 2026-11-12 09:30 ET | **COVER** | `ABEO` | 236 | $2.28 | $3.04 | $+33.97 | $13,329.61 | ▲ +33.97 after sell → book $9,394.54; vs 09:30 mark -3.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **COVER** | `AKBA` | 1093 | $0.56 | $9.42 | $-54.01 | $12,705.59 | ▼ -54.01 after sell → book $9,385.11; vs 09:30 mark -9.43 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **COVER** | `HLLY` | 217 | $2.48 | $2.80 | $+35.57 | $12,164.63 | ▲ +35.57 after sell → book $9,382.31; vs 09:30 mark -2.80 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **COVER** | `JANX` | 48 | $11.86 | $2.13 | $+5.78 | $11,593.21 | ▲ +5.78 after sell → book $9,380.18; vs 09:30 mark -2.13 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **COVER** | `PCT` | 263 | $1.96 | $3.39 | $+56.27 | $11,074.34 | ▲ +56.27 after sell → book $9,376.78; vs 09:30 mark -3.40 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **COVER** | `QMCO` | 33 | $15.83 | $2.09 | $+51.52 | $10,549.83 | ▲ +51.52 after sell → book $9,374.70; vs 09:30 mark -2.08 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 09:30 ET | **COVER** | `SOC` | 794 | $0.74 | $8.25 | $-24.05 | $9,954.41 | ▼ -24.05 after sell → book $9,366.44; vs 09:30 mark -8.26 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,954.41 | ▲ close $9,437.33 vs 09:30 $9,397.58 (session +70.89) | 16:00 close · cash $9,954.41 · equity $9,437.33 vs 09:30 $9,397.58 (+39.75; session marks +70.89) · 1 name(s) marked open→close (per-name table). ZURA×417 09:30 $1.41 → close $1.24 +70.89 | — |
 
 ## Not taken
 

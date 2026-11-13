@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 4 · rank `list` · size `leftover` · sell `list` · S-boost `none` · −0 red + yday up AND catalyst, top 4 by Score
 
-Cash book **+12.12%** ($11,212) · signal-only (no cash/fees) was +20.82%. Starts YES **13/30**. Fills 85 · skips 47 · realized $+2113.32.
+Cash book **+9.82%** ($10,982) · signal-only (no cash/fees) was +20.82%. Starts YES **13/30**. Fills 85 · skips 47 · realized $+2113.32.
 
 ## How this sleeve decides (like you are 10)
 
@@ -287,6 +287,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-11 09:30 ET | **SELL** | `TGTX` | 167 | $64.01 | $2.60 | $+998.57 | $10,710.98 | ▲ +998.57 after sell → book $10,710.98; vs 09:30 mark -2.60 | dropped from list after 2 sess (min 2) | join🟢 sector🔴 gen🟢 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-11 09:30 ET | **BUY** | `GO` | 854 | $12.52 | $11.02 | — | $7.88 | — | −0 red + yday up AND catalyst, top 4 by Score; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list earn_react; 🔵; ⚪; ret5=+9.7; leftover $10710.98 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-11-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7.88 | ▲ close $11,212.36 vs 09:30 $10,713.58 (session +512.40) | 16:00 close · cash $7.88 · equity $11,212.36 vs 09:30 $10,713.58 (+498.78; session marks +512.40) · 1 name(s) marked open→close (per-name table). GO×854 09:30 $12.52 → close $13.12 +512.40 | — |
+| 2026-11-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7.88 | ▼ 09:30 equity $11,178.20 vs yday $11,212.36 (-34.16) | 09:30 open · cash $7.88 (unchanged overnight, no fees) · equity $11,178.20 vs prior close $11,212.36 (-34.16) · 1 name(s) re-marked at the open (per-name table). GO×854 yday $13.12 → 09:30 $13.08 -34.16 | — |
+| 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7.88 | ▼ close $10,981.78 vs 09:30 $11,178.20 (session -196.42) | 16:00 close · cash $7.88 · equity $10,981.78 vs 09:30 $11,178.20 (-196.42; session marks -196.42) · 1 name(s) marked open→close (per-name table). GO×854 09:30 $13.08 → close $12.85 -196.42 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `overnight_mega` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · same mega calendar; hold 2 also keeps the session after the print
 
-Cash book **-0.84%** ($9,915) · signal-only (no cash/fees) was -8.07%. Starts YES **1/30**. Fills 21 · skips 27 · realized $-735.01.
+Cash book **-1.25%** ($9,875) · signal-only (no cash/fees) was -8.07%. Starts YES **1/30**. Fills 21 · skips 27 · realized $-735.01.
 
 ## How this sleeve decides (like you are 10)
 
@@ -219,6 +219,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-11 09:30 ET | **SELL** | `OXY` | 178 | $57.26 | $2.64 | $+299.22 | $10,238.93 | ▲ +299.22 after sell → book $10,238.93; vs 09:30 mark -2.64 | dropped from list after 2 sess (min 2) | — |
 | 2026-11-11 09:30 ET | **BUY** | `FNV` | 39 | $257.00 | $2.11 | — | $213.83 | — | same mega calendar; hold 2 also keeps the session after the print; list overnight,overnight_mega; ret5=+13.2; leftover $10238.93 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🟡 buy🟡 |
 | 2026-11-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $213.83 | ▼ close $9,915.47 vs 09:30 $10,241.57 (session -321.36) | 16:00 close · cash $213.83 · equity $9,915.47 vs 09:30 $10,241.57 (-326.10; session marks -321.36) · 1 name(s) marked open→close (per-name table). FNV×39 09:30 $257.00 → close $248.76 -321.36 | — |
+| 2026-11-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $213.83 | ▼ 09:30 equity $9,812.12 vs yday $9,915.47 (-103.35) | 09:30 open · cash $213.83 (unchanged overnight, no fees) · equity $9,812.12 vs prior close $9,915.47 (-103.35) · 1 name(s) re-marked at the open (per-name table). FNV×39 yday $248.76 → 09:30 $246.11 -103.35 | — |
+| 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $213.83 | ▲ close $9,874.91 vs 09:30 $9,812.12 (session +62.79) | 16:00 close · cash $213.83 · equity $9,874.91 vs 09:30 $9,812.12 (+62.79; session marks +62.79) · 1 name(s) marked open→close (per-name table). FNV×39 09:30 $246.11 → close $247.72 +62.79 | — |
 
 ## Not taken
 
