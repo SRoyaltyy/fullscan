@@ -1,15 +1,15 @@
 # Finviz homepage market digest — 2026-11-13
 
-**Generated:** 2026-11-13T04:33:10.878695-05:00 (America/New_York)
+**Generated:** 2026-11-13T04:47:01.395442-05:00 (America/New_York)
 **Source:** `live`
-**Banner:** US equity futures point to a softer open ahead of October PPI, Fed speakers and energy data in a catalyst-light session
+**Banner:** US futures trade flat as PPI data and Fed remarks loom amid Nvidia CEO Jensen Huang's resignation and Microsoft outage reports
 **Prior close:** SPX —  Nasdaq —  Dow —
 **SPX:** —  **Nasdaq:** —  **Dow:** —
 **Oil:** —
 **CPI/Fed:** —
-**Leaders:** BKR, USAS, NDLS, PAVM
+**Leaders:** MSFT, NVDA, BKR, USAS, PAVM, NDLS
 **Next session:** housing no · retail no · Fed yes
-**Earnings slate:** USAS, NDLS, PAVM
+**Earnings slate:** —
 **Geo/grain:** —
 **Clock legal for:** 2026-11-13
 **Clock use:** `same_morning`
@@ -25,19 +25,22 @@ Homepage `$MARKET` prose — **not** `YYYY-MM-DD_finviz_digest.md` (quote-page h
 - **Prior close:** SPX — · Nasdaq — · Dow —
 - **Oil:** —
 - **CPI / Fed-odds:** —
-- **Named leaders:** BKR, USAS, NDLS, PAVM
+- **Named leaders:** MSFT, NVDA, BKR, USAS, PAVM, NDLS
 - **Next-session calendar:** housing no · retail no · Fed yes
-  - Federal Reserve Governor Michelle Bowman is scheduled to speak at 10:50 AM ET, followed by Fed Vice Chair Philip Jefferson at 7:00 PM ET
-- **Earnings slate:** USAS, NDLS, PAVM
+  - No major earnings reactions are expected before the bell, with the calendar limited to smaller names including Americas Gold & Silver (USAS), PAVmed (PAVM), and Noodles & Company (NDLS)
+- **Earnings slate:** —
 - **Geo / grain:** —
 
 ## Narrative
 
-**US equity futures point to a softer open ahead of October PPI, Fed speakers and energy data in a catalyst-light session**
+**US futures trade flat as PPI data and Fed remarks loom amid Nvidia CEO Jensen Huang's resignation and Microsoft outage reports**
 
-- S&P 500 futures (@ES) fall 0.15%, Dow Jones Futures (@YM) fall 0.07%, Nasdaq 100 Futures (@NQ) decline 0.41%, and Russell 2000 Futures (@ER2) dip 0.06% in early trade
-- October Producer Price Index data are due at 8:30 AM ET and are expected to guide rate expectations and broader market direction
-- Federal Reserve Governor Michelle Bowman is scheduled to speak at 10:50 AM ET, followed by Fed Vice Chair Philip Jefferson at 7:00 PM ET
-- Baker Hughes (BKR) is set to release its weekly US oil and gas rig count at 1:00 PM ET
-- Americas Gold & Silver (USAS) and Noodles & Company (NDLS) are among smaller companies reporting earnings before the opening bell, while PAVmed (PAVM) subsidiary Lucid reported $1.2 million in third-quarter revenue, first Medicare payments for EsoGuard, and record October test volume
-- Web checks of Reuters, CNBC, Bloomberg, and MarketWatch after 4:00 AM ET on November 13 show no major pre-market stock movers with confirmed catalysts or significant new overnight geopolitical developments
+- S&P 500 futures (@ES) are down 0.04%, Dow Jones futures (@YM) are unchanged, Nasdaq 100 futures (@NQ) are off 0.26%, and Russell 2000 futures (@ER2) are up 0.01% ahead of the open
+- Microsoft (MSFT) trades lower pre-market on reports of a continued outage impacting key services
+- Nvidia (NVDA) remains in focus after CEO Jensen Huang resigns immediately, with CFO Colette Kress becoming interim CEO
+- The October Producer Price Index is due at 8:30 AM ET and is viewed as the primary catalyst for today’s trade and a key test for Fed rate expectations
+- Fed Governor Michelle Bowman is scheduled to speak at 10:50 AM ET, with Vice Chair Philip Jefferson speaking at 7:00 PM ET
+- The Baker Hughes (BKR) US rig count is due at 1:00 PM ET, offering an updated read on energy sector activity
+- No major earnings reactions are expected before the bell, with the calendar limited to smaller names including Americas Gold & Silver (USAS), PAVmed (PAVM), and Noodles & Company (NDLS)
+- Overnight global equity moves were mixed with limited sector-rotation signals and no notable new geopolitical or macro shocks reported
+- Traders remain focused on the upcoming PPI print, near-term volatility around the data, and follow-through from prior session tech-driven swings

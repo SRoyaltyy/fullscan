@@ -1,8 +1,8 @@
 {
   "date": "2026-11-13",
-  "generated_at": "2026-11-13T04:35:13.239002-05:00",
+  "generated_at": "2026-11-13T04:49:09.316996-05:00",
   "phase": "morning_overlay",
-  "export": "finviz_2026-11-12.csv",
+  "export": "finviz_2026-11-13.csv",
   "n_tickers": 11616,
   "sectors": [
     {
@@ -8935,16 +8935,38 @@
   ],
   "ticker_news": [
     {
-      "time": "4 min",
+      "time": "9 min",
+      "title": "Kaplan Fox & Kilsheimer LLP Encourages Duolingo, Inc. (DUOL) Investors With Losses to Seek Appointment as Lead Plaintiff Before December 7, 2026",
+      "url": "https://www.newsfilecorp.com/release/323639/Kaplan-Fox-Kilsheimer-LLP-Encourages-Duolingo-Inc.-DUOL-Investors-With-Losses-to-Seek-Appointment-as-Lead-Plaintiff-Before-December-7-2026",
+      "source": "Newsfile",
+      "tickers": [
+        "DUOL"
+      ]
+    },
+    {
+      "time": "13 min",
+      "title": "Huang ouster fallout; Cisco, Applied Materials outlooks - whats moving markets",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/huang-ouster-fallout-cisco-applied-093548568.html",
+      "source": "Investing.com",
+      "tickers": [
+        "MSFT",
+        "CSCO",
+        "NVDA",
+        "AMAT"
+      ]
+    },
+    {
+      "time": "18 min",
       "title": "AICPA urges clarity on reporting gambling gains and losses",
       "url": "https://finance.yahoo.com/news/aicpa-urges-clarity-reporting-gambling-093008936.html",
       "source": "The Accountant",
       "tickers": [
+        "AMZN",
         "MMYT"
       ]
     },
     {
-      "time": "5 min",
+      "time": "19 min",
       "title": "DATA.BET Now Powers Sportradar's Unified Odds Feed",
       "url": "/news/422454/databet-now-powers-sportradars-unified-odds-feed",
       "source": "PR Newswire",
@@ -8953,7 +8975,7 @@
       ]
     },
     {
-      "time": "7 min",
+      "time": "21 min",
       "title": "Stock Futures Lower as Investors Look to U.S. Inflation Data",
       "url": "https://www.wsj.com/finance/stocks/stock-futures-lower-as-investors-look-to-u-s-inflation-data-5b1b5988?mod=wsj_FV",
       "source": "The Wall Street Journal",
@@ -8962,7 +8984,16 @@
       ]
     },
     {
-      "time": "10 min",
+      "time": "21 min",
+      "title": "China's $3 billion-plus pipeline of Nvidia-powered AI data centres",
+      "url": "https://finance.yahoo.com/news/chinas-3-billion-plus-pipeline-092758838.html",
+      "source": "Reuters",
+      "tickers": [
+        "NVDA"
+      ]
+    },
+    {
+      "time": "24 min",
       "title": "Microsoft services outage disrupts Outlook and Teams worldwide",
       "url": "https://finance.yahoo.com/news/microsoft-services-outage-disrupts-outlook-092451146.html",
       "source": "Verdict",
@@ -8971,7 +9002,7 @@
       ]
     },
     {
-      "time": "11 min",
+      "time": "25 min",
       "title": "Nvidia announces CEO change as Jensen Huang resigns",
       "url": "https://finance.yahoo.com/news/nvidia-announces-ceo-change-jensen-092331169.html",
       "source": "Verdict",
@@ -8980,7 +9011,16 @@
       ]
     },
     {
-      "time": "15 min",
+      "time": "27 min",
+      "title": "European shares retreat from record highs after Nvidia CEO's exit",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/european-shares-retreat-record-highs-092118745.html",
+      "source": "Reuters",
+      "tickers": [
+        "NVDA"
+      ]
+    },
+    {
+      "time": "29 min",
       "title": "Microsoft stock set to dip amid global outage",
       "url": "https://www.marketwatch.com/livecoverage/stock-market-today-dow-s-p-500-nasdaq-nvidia-ceo-jensen-huang-resigns-ppi-inflation-data/card/microsoft-stock-set-to-dip-amid-global-outage-dNGepHeZZs55mAcPgdAM?mod=mw_FV",
       "source": "MarketWatch",
@@ -8989,20 +9029,20 @@
       ]
     },
     {
-      "time": "20 min",
+      "time": "34 min",
       "title": "AI Roundup: Nvidia CEOs Exit Dominates Headlines  CoreWeave, Cisco Results Boost AI Sentiment",
       "url": "https://finance.yahoo.com/technology/ai/articles/ai-roundup-nvidia-ceo-exit-091457648.html",
       "source": "Stocktwits",
       "tickers": [
-        "CRWV",
         "AMD",
-        "AVGO",
+        "CRWV",
         "CSCO",
+        "AVGO",
         "NVDA"
       ]
     },
     {
-      "time": "28 min",
+      "time": "42 min",
       "title": "Wall Street Wrap: Nvidia Faces Downgrades As Jensen Huangs Exit Rattles Analysts  AMD, MP Materials, Riot Platforms Get Bullish Calls",
       "url": "https://finance.yahoo.com/markets/stocks/articles/wall-street-wrap-nvidia-faces-090645549.html",
       "source": "Stocktwits",
@@ -9010,12 +9050,12 @@
         "AMD",
         "RIOT",
         "NVDA",
-        "TFC",
-        "TOST"
+        "MP",
+        "TFC"
       ]
     },
     {
-      "time": "35 min",
+      "time": "49 min",
       "title": "European Manufacturers Pursue Connected Transformation",
       "url": "https://www.businesswire.com/news/home/20261112208938/en/",
       "source": "Business Wire",
@@ -9024,7 +9064,7 @@
       ]
     },
     {
-      "time": "38 min",
+      "time": "52 min",
       "title": "ExxonMobil to invest $12.5bn in Longtail development offshore Guyana",
       "url": "https://finance.yahoo.com/news/exxonmobil-invest-12-5bn-longtail-085608737.html",
       "source": "Offshore Technology",
@@ -9033,7 +9073,7 @@
       ]
     },
     {
-      "time": "46 min",
+      "time": "1 hour",
       "title": "FTSE 100 today: Stocks edge lower as Iran, Ukraine uncertainty weigh",
       "url": "https://finance.yahoo.com/markets/world-indices/articles/ftse-100-today-stocks-edge-084813171.html",
       "source": "Investing.com",
@@ -9042,7 +9082,7 @@
       ]
     },
     {
-      "time": "50 min",
+      "time": "1 hour",
       "title": "European shares ease from record peaks but eye best week since June",
       "url": "https://finance.yahoo.com/markets/world-indices/articles/european-shares-ease-record-peaks-084430071.html",
       "source": "Investing.com",
@@ -9051,7 +9091,7 @@
       ]
     },
     {
-      "time": "51 min",
+      "time": "1 hour",
       "title": "TDG Gold to sell 51% of Aurora West project to Freeport for $77m",
       "url": "https://finance.yahoo.com/news/tdg-gold-sell-51-aurora-084305323.html",
       "source": "Mining Technology",
@@ -9060,7 +9100,7 @@
       ]
     },
     {
-      "time": "53 min",
+      "time": "1 hour",
       "title": "European shares fall as Nvidia CEOs exit raises doubts over AI boom",
       "url": "https://finance.yahoo.com/technology/ai/articles/european-shares-fall-nvidia-ceo-082107771.html",
       "source": "Euronews",
@@ -9070,7 +9110,7 @@
       ]
     },
     {
-      "time": "56 min",
+      "time": "1 hour",
       "title": "Stock Market Today: Dow, S&P 500 and Nasdaq set for flat to weaker start as investors digest Nvidia turmoil, await PPI data: live updates",
       "url": "https://www.marketwatch.com/livecoverage/stock-market-today-dow-s-p-500-nasdaq-nvidia-ceo-jensen-huang-resigns-ppi-inflation-data?mod=mw_FV",
       "source": "MarketWatch",
@@ -9079,7 +9119,7 @@
       ]
     },
     {
-      "time": "56 min",
+      "time": "1 hour",
       "title": "Nasdaq set to edge lower as investors weigh Nvidia scandal, await PPI data",
       "url": "https://www.marketwatch.com/livecoverage/stock-market-today-dow-s-p-500-nasdaq-nvidia-ceo-jensen-huang-resigns-ppi-inflation-data/card/nasdaq-set-to-edge-lower-as-investors-weigh-nvidia-scandal-await-ppi-data-69NOczufcXw35QmNb1Um?mod=mw_FV",
       "source": "MarketWatch",
@@ -9088,7 +9128,7 @@
       ]
     },
     {
-      "time": "58 min",
+      "time": "1 hour",
       "title": "CD&R, GTCR put Global Payments takeover talks on hold- report",
       "url": "https://finance.yahoo.com/news/cd-r-gtcr-put-global-083642798.html",
       "source": "Electronic Payments",
@@ -9111,8 +9151,8 @@
       "url": "https://finance.yahoo.com/markets/stocks/articles/crwv-vs-iren-vs-nbis-083340683.html",
       "source": "Stocktwits",
       "tickers": [
-        "CRWV",
         "NBIS",
+        "CRWV",
         "IREN",
         "NVDA"
       ]
@@ -9196,15 +9236,15 @@
       "url": "https://finance.yahoo.com/markets/stocks/articles/space-stocks-had-stellar-week-075154983.html",
       "source": "Stocktwits",
       "tickers": [
-        "SPCX",
         "LUNR",
-        "RKLB",
         "FLY",
-        "ASTS"
+        "RKLB",
+        "ASTS",
+        "SPCX"
       ]
     },
     {
-      "time": "1 hour",
+      "time": "2 hours",
       "title": "Revolut well-positioned to scale globally without damaging core markets: GlobalData",
       "url": "https://finance.yahoo.com/news/revolut-well-positioned-scale-globally-074234157.html",
       "source": "Retail Banker International",
@@ -9213,7 +9253,7 @@
       ]
     },
     {
-      "time": "1 hour",
+      "time": "2 hours",
       "title": "Wise lifts revenue outlook as first-half customer numbers and payments volumes jump",
       "url": "https://finance.yahoo.com/markets/currencies/articles/wise-lifts-revenue-outlook-first-074000537.html",
       "source": "Proactive",
@@ -9222,7 +9262,7 @@
       ]
     },
     {
-      "time": "1 hour",
+      "time": "2 hours",
       "title": "iQIYI's \"The Shadow's Edge\" Gains Further Industry Recognition as Tony Ka-fai LEUNG Wins Best Actor at the Golden Rooster Awards",
       "url": "/news/422451/iqiyis-the-shadows-edge-gains-further-industry-recognition-as-tony-ka-fai-leung-wins-best-actor-at-the-golden-rooster-awards",
       "source": "PR Newswire",
@@ -9231,7 +9271,7 @@
       ]
     },
     {
-      "time": "1 hour",
+      "time": "2 hours",
       "title": "Major Crypto ETFs Bled $1.5 Billion While Wall Street Went Dip Shopping",
       "url": "https://finance.yahoo.com/markets/crypto/articles/major-crypto-etfs-bled-1-073628335.html",
       "source": "BeInCrypto",
@@ -9241,7 +9281,7 @@
       ]
     },
     {
-      "time": "1 hour",
+      "time": "2 hours",
       "title": "Mizuho H1 profit jumps 47%; hikes annual outlook",
       "url": "https://finance.yahoo.com/markets/stocks/articles/mizuho-h1-profit-jumps-47-073509115.html",
       "source": "Investing.com",
@@ -9287,8 +9327,8 @@
       "tickers": [
         "MSFT",
         "NVDA",
-        "META",
         "AMZN",
+        "META",
         "WMT"
       ]
     },
@@ -9378,7 +9418,7 @@
       ]
     },
     {
-      "time": "2 hours",
+      "time": "3 hours",
       "title": "Stocks struggle on Nvidia whiplash, dollar climbs with US yields",
       "url": "https://finance.yahoo.com/markets/stocks/articles/stocks-recover-nvidia-whiplash-dollar-015858641.html",
       "source": "Reuters",
@@ -9387,7 +9427,7 @@
       ]
     },
     {
-      "time": "2 hours",
+      "time": "3 hours",
       "title": "SK Hynix, Intel explore shared memory to ease AI bottlenecks",
       "url": "https://www.digitimes.com/news/a20261113PD229/sk-hynix-intel-data-capacity-cxl.html",
       "source": "DigiTimes",
@@ -9396,7 +9436,7 @@
       ]
     },
     {
-      "time": "2 hours",
+      "time": "3 hours",
       "title": "China AI stocks tumble as Nvidia fallout fuels fears of tighter U.S. chip curbs",
       "url": "https://finance.yahoo.com/technology/ai/articles/china-ai-stocks-tumble-nvidia-064035259.html",
       "source": "Investing.com",
@@ -9443,7 +9483,7 @@
       ]
     },
     {
-      "time": "3 hours",
+      "time": "4 hours",
       "title": "World shares log modest losses as investors assess impact on AI sector from the Nvidia scandal",
       "url": "https://finance.yahoo.com/markets/stocks/articles/asian-shares-mixed-investors-assess-053708191.html",
       "source": "Associated Press",
@@ -9768,47 +9808,6 @@
       "source": "Earnings Whispers",
       "tickers": [
         "VTSI"
-      ]
-    },
-    {
-      "time": "Nov-12",
-      "title": "Nvidia live updates: Following Jensen Huang's resignation as CEO, allegations of a third affair emerge",
-      "url": "https://finance.yahoo.com/technology/live/nvidia-live-updates-following-jensen-huangs-resignation-as-ceo-allegations-of-a-third-affair-emerge-195535310.html",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "NVDA"
-      ]
-    },
-    {
-      "time": "Nov-12",
-      "title": "NVDA Stock Heads for Worst Week In Over A Year As Jensen Huangs CEO Saga Ends: Are Retail Traders Still Buying The Dip?",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/nvda-stock-heads-worst-week-032900844.html",
-      "source": "Stocktwits",
-      "tickers": [
-        "NVDA"
-      ]
-    },
-    {
-      "time": "Nov-12",
-      "title": "Dow, S&P 500, Nasdaq Futures Edge Higher As Markets Attempt To Recover From Nvidia Rout: SLS, MSFT, CADL, MSTR In Focus",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/dow-p-500-nasdaq-futures-030745752.html",
-      "source": "Stocktwits",
-      "tickers": [
-        "MSTR",
-        "NVDA",
-        "MSFT",
-        "AAPL",
-        "STRC"
-      ]
-    },
-    {
-      "time": "Nov-12",
-      "title": "Who is Colette Kress, interim Nvidia CEO after Jensen Huang exit?",
-      "url": "https://finance.yahoo.com/technology/articles/could-replace-departed-jensen-huang-000357633.html",
-      "source": "The Guardian",
-      "tickers": [
-        "NVDA",
-        "ARM"
       ]
     }
   ],
@@ -10362,7 +10361,7 @@
       "company": "NVIDIA Corp",
       "datetime": "2026-11-17T16:30:00",
       "session": "AMC",
-      "mcap": 4044411.430006501,
+      "mcap": 4073382.1041482077,
       "eps_est": 2.4696
     },
     {
@@ -10370,7 +10369,7 @@
       "company": "Walmart Inc",
       "datetime": "2026-11-19T08:30:00",
       "session": "BMO",
-      "mcap": 999838.440282796,
+      "mcap": 1002984.1677068744,
       "eps_est": 0.6368
     },
     {
@@ -10386,7 +10385,7 @@
       "company": "Palo Alto Networks Inc",
       "datetime": "2026-11-18T16:30:00",
       "session": "AMC",
-      "mcap": 270931.5200531915,
+      "mcap": 270604.0164074211,
       "eps_est": 0.972
     },
     {
@@ -10402,7 +10401,7 @@
       "company": "Dell Technologies Inc",
       "datetime": "2026-11-24T16:30:00",
       "session": "AMC",
-      "mcap": 234983.67063940642,
+      "mcap": 234748.42302342554,
       "eps_est": 6.5603
     },
     {
@@ -10418,7 +10417,7 @@
       "company": "Walt Disney Co",
       "datetime": "2026-11-17T08:30:00",
       "session": "BMO",
-      "mcap": 204543.33061372067,
+      "mcap": 204802.33628599433,
       "eps_est": 1.6771
     },
     {
@@ -10426,7 +10425,7 @@
       "company": "Analog Devices Inc",
       "datetime": "2026-11-24T08:30:00",
       "session": "BMO",
-      "mcap": 197150.29470100356,
+      "mcap": 196975.85823464213,
       "eps_est": 3.885
     },
     {
@@ -10442,7 +10441,7 @@
       "company": "Salesforce Inc",
       "datetime": "2026-11-27T12:00:00",
       "session": "BMO",
-      "mcap": 179932.498010075,
+      "mcap": 179825.50398914682,
       "eps_est": 3.2689
     },
     {
@@ -10474,7 +10473,7 @@
       "company": "Lowe\\u0027s Cos. Inc",
       "datetime": "2026-11-18T08:30:00",
       "session": "BMO",
-      "mcap": 125772.7102814591,
+      "mcap": 125687.32281892266,
       "eps_est": 2.8866
     },
     {
@@ -10482,7 +10481,7 @@
       "company": "Mizuho Financial Group Inc ADR",
       "datetime": "2026-11-13T08:30:00",
       "session": "BMO",
-      "mcap": 121904.50662145614,
+      "mcap": 123470.47499999999,
       "eps_est": 0.1993
     },
     {
@@ -10490,7 +10489,7 @@
       "company": "PDD Holdings Inc ADR",
       "datetime": "2026-11-19T08:30:00",
       "session": "BMO",
-      "mcap": 109231.71295928955,
+      "mcap": 109174.77565612794,
       "eps_est": 2.797
     },
     {
@@ -10538,7 +10537,7 @@
       "company": "Hewlett Packard Enterprise Co",
       "datetime": "2026-11-23T16:30:00",
       "session": "AMC",
-      "mcap": 66373.23584784195,
+      "mcap": 66632.35944796783,
       "eps_est": 1.2711
     },
     {
@@ -10618,7 +10617,7 @@
       "company": "Elbit Systems Ltd",
       "datetime": "2026-11-17T08:30:00",
       "session": "BMO",
-      "mcap": 33566.08,
+      "mcap": 33867.17755859375,
       "eps_est": 3.6191
     },
     {
@@ -10626,7 +10625,7 @@
       "company": "JD.com Inc ADR",
       "datetime": "2026-11-17T08:30:00",
       "session": "BMO",
-      "mcap": 32868.697708244326,
+      "mcap": 32784.51187526703,
       "eps_est": 0.8838
     },
     {
@@ -10666,7 +10665,7 @@
       "company": "Bending Spoons S.p.A",
       "datetime": "2026-11-20T08:30:00",
       "session": "BMO",
-      "mcap": 26729.280000000002,
+      "mcap": 26794.952903298552,
       "eps_est": 0.3211
     },
     {
@@ -10757,7 +10756,7 @@
       "company": "Mizuho Financial Group Inc ADR",
       "datetime": "2026-11-13T08:30:00",
       "session": "BMO",
-      "mcap": 121904.50662145614,
+      "mcap": 123470.47499999999,
       "eps_est": 0.1993
     }
   ],
@@ -10773,5 +10772,5 @@
   "calendar_window_days": 16,
   "econ_window_count": 172,
   "earnings_window_count": 269,
-  "overlay_at": "2026-11-13T04:35:13.239002-05:00"
+  "overlay_at": "2026-11-13T04:49:09.316996-05:00"
 }
