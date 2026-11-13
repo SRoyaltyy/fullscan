@@ -1,6 +1,6 @@
 {
   "date": "2026-11-13",
-  "generated_at": "2026-11-13T04:33:10.878695-05:00",
+  "generated_at": "2026-11-13T04:47:01.395442-05:00",
   "timezone": "America/New_York",
   "source": "live",
   "source_url": "https://elite.finviz.com/",
@@ -15,26 +15,34 @@
   "kind": "finviz_homepage_market_digest",
   "represents": "Finviz homepage market-day prose. Same-morning Pre-Open when Generated is before 09:30 ET; afternoon Wayback is a prior-day close recap legal for the next session only. Not quote-page ticker blurbs.",
   "error": null,
-  "headline": "US equity futures point to a softer open ahead of October PPI, Fed speakers and energy data in a catalyst-light session",
-  "raw_text": "- S&P 500 futures (@ES) fall 0.15%, Dow Jones Futures (@YM) fall 0.07%, Nasdaq 100 Futures (@NQ) decline 0.41%, and Russell 2000 Futures (@ER2) dip 0.06% in early trade\n- October Producer Price Index data are due at 8:30 AM ET and are expected to guide rate expectations and broader market direction\n- Federal Reserve Governor Michelle Bowman is scheduled to speak at 10:50 AM ET, followed by Fed Vice Chair Philip Jefferson at 7:00 PM ET\n- Baker Hughes (BKR) is set to release its weekly US oil and gas rig count at 1:00 PM ET\n- Americas Gold & Silver (USAS) and Noodles & Company (NDLS) are among smaller companies reporting earnings before the opening bell, while PAVmed (PAVM) subsidiary Lucid reported $1.2 million in third-quarter revenue, first Medicare payments for EsoGuard, and record October test volume\n- Web checks of Reuters, CNBC, Bloomberg, and MarketWatch after 4:00 AM ET on November 13 show no major pre-market stock movers with confirmed catalysts or significant new overnight geopolitical developments",
-  "raw_summary_md": "- **S&P 500 futures** ([@ES](https://finviz.com/futures_charts?t=ES)) **fall 0.15%**, **Dow Jones Futures** ([@YM](https://finviz.com/futures_charts?t=YM)) fall 0.07%, **Nasdaq 100 Futures** ([@NQ](https://finviz.com/futures_charts?t=NQ)) decline 0.41%, and **Russell 2000 Futures** ([@ER2](https://finviz.com/futures_charts?t=ER2)) dip 0.06% in early trade\n- October **Producer Price Index** data are due at 8:30 AM ET and are expected to guide rate expectations and broader market direction\n- Federal Reserve Governor **Michelle Bowman** is scheduled to speak at 10:50 AM ET, followed by Fed Vice Chair **Philip Jefferson** at 7:00 PM ET\n- **Baker Hughes** ([BKR](https://finviz.com/quote?t=BKR)) is set to release its weekly US oil and gas rig count at 1:00 PM ET\n- **Americas Gold & Silver** ([USAS](https://finviz.com/quote?t=USAS)) and **Noodles & Company** ([NDLS](https://finviz.com/quote?t=NDLS)) are among smaller companies reporting earnings before the opening bell, while **PAVmed** ([PAVM](https://finviz.com/quote?t=PAVM)) subsidiary Lucid reported **$1.2 million** in third-quarter revenue, **first Medicare payments** for EsoGuard, and **record October test volume**\n- Web checks of Reuters, CNBC, Bloomberg, and MarketWatch after 4:00 AM ET on November 13 show **no major** pre-market stock movers with confirmed catalysts or significant new overnight geopolitical developments",
+  "headline": "US futures trade flat as PPI data and Fed remarks loom amid Nvidia CEO Jensen Huang's resignation and Microsoft outage reports",
+  "raw_text": "- S&P 500 futures (@ES) are down 0.04%, Dow Jones futures (@YM) are unchanged, Nasdaq 100 futures (@NQ) are off 0.26%, and Russell 2000 futures (@ER2) are up 0.01% ahead of the open\n- Microsoft (MSFT) trades lower pre-market on reports of a continued outage impacting key services\n- Nvidia (NVDA) remains in focus after CEO Jensen Huang resigns immediately, with CFO Colette Kress becoming interim CEO\n- The October Producer Price Index is due at 8:30 AM ET and is viewed as the primary catalyst for today’s trade and a key test for Fed rate expectations\n- Fed Governor Michelle Bowman is scheduled to speak at 10:50 AM ET, with Vice Chair Philip Jefferson speaking at 7:00 PM ET\n- The Baker Hughes (BKR) US rig count is due at 1:00 PM ET, offering an updated read on energy sector activity\n- No major earnings reactions are expected before the bell, with the calendar limited to smaller names including Americas Gold & Silver (USAS), PAVmed (PAVM), and Noodles & Company (NDLS)\n- Overnight global equity moves were mixed with limited sector-rotation signals and no notable new geopolitical or macro shocks reported\n- Traders remain focused on the upcoming PPI print, near-term volatility around the data, and follow-through from prior session tech-driven swings",
+  "raw_summary_md": "- **S&P 500 futures** ([@ES](https://finviz.com/futures_charts?t=ES)) are down 0.04%, **Dow Jones futures** ([@YM](https://finviz.com/futures_charts?t=YM)) are unchanged, **Nasdaq 100 futures** ([@NQ](https://finviz.com/futures_charts?t=NQ)) are **off 0.26%**, and **Russell 2000 futures** ([@ER2](https://finviz.com/futures_charts?t=ER2)) are up 0.01% ahead of the open\n- **Microsoft** ([MSFT](https://finviz.com/quote?t=MSFT)) trades lower pre-market on reports of a **continued outage** impacting key services\n- **Nvidia** ([NVDA](https://finviz.com/quote?t=NVDA)) remains in focus after CEO Jensen Huang **resigns immediately**, with CFO Colette Kress becoming interim CEO\n- The **October Producer Price Index** is due at 8:30 AM ET and is viewed as the primary catalyst for today’s trade and a key test for Fed rate expectations\n- Fed Governor Michelle Bowman is scheduled to speak at 10:50 AM ET, with Vice Chair Philip Jefferson speaking at 7:00 PM ET\n- The **Baker Hughes** ([BKR](https://finviz.com/quote?t=BKR)) **US rig count** is due at 1:00 PM ET, offering an updated read on energy sector activity\n- **No major earnings reactions** are expected before the bell, with the calendar limited to smaller names including **Americas Gold & Silver** ([USAS](https://finviz.com/quote?t=USAS)), **PAVmed** ([PAVM](https://finviz.com/quote?t=PAVM)), and **Noodles & Company** ([NDLS](https://finviz.com/quote?t=NDLS))\n- Overnight global equity moves were **mixed** with limited sector-rotation signals and no notable new geopolitical or macro shocks reported\n- Traders remain focused on the **upcoming PPI print**, **near-term volatility** around the data, and follow-through from prior session tech-driven swings",
   "index_moves": [],
   "oil": null,
   "cpi": null,
   "fed_odds": null,
   "named_tickers": [
+    "MSFT",
+    "NVDA",
     "BKR",
     "USAS",
-    "NDLS",
-    "PAVM"
+    "PAVM",
+    "NDLS"
   ],
   "named_leaders": [
+    "MSFT",
+    "NVDA",
     "BKR",
     "USAS",
-    "NDLS",
-    "PAVM"
+    "PAVM",
+    "NDLS"
   ],
-  "calendar": [],
+  "calendar": [
+    "The October Producer Price Index is due at 8:30 AM ET and is viewed as the primary catalyst for today’s trade and a key test for Fed rate expectations",
+    "No major earnings reactions are expected before the bell, with the calendar limited to smaller names including Americas Gold & Silver (USAS), PAVmed (PAVM), and Noodles & Company (NDLS)",
+    "Traders remain focused on the upcoming PPI print, near-term volatility around the data, and follow-through from prior session tech-driven swings"
+  ],
   "prior_close": {
     "spx": null,
     "nasdaq": null,
@@ -49,17 +57,13 @@
     "retail": false,
     "fed": true,
     "bullets": [
-      "Federal Reserve Governor Michelle Bowman is scheduled to speak at 10:50 AM ET, followed by Fed Vice Chair Philip Jefferson at 7:00 PM ET"
+      "No major earnings reactions are expected before the bell, with the calendar limited to smaller names including Americas Gold & Silver (USAS), PAVmed (PAVM), and Noodles & Company (NDLS)"
     ],
-    "text": "Federal Reserve Governor Michelle Bowman is scheduled to speak at 10:50 AM ET, followed by Fed Vice Chair Philip Jefferson at 7:00 PM ET"
+    "text": "No major earnings reactions are expected before the bell, with the calendar limited to smaller names including Americas Gold & Silver (USAS), PAVmed (PAVM), and Noodles & Company (NDLS)"
   },
   "earnings_slate": {
-    "tickers": [
-      "USAS",
-      "NDLS",
-      "PAVM"
-    ],
-    "text": "Americas Gold & Silver (USAS) and Noodles & Company (NDLS) are among smaller companies reporting earnings before the opening bell, while PAVmed (PAVM) subsidiary Lucid reported $1.2 million in third-quarter revenue, first Medicare payments for EsoGuard, and record October test volume"
+    "tickers": [],
+    "text": ""
   },
   "geo_grain": {
     "geo": false,
@@ -67,9 +71,9 @@
     "flags": [],
     "text": ""
   },
-  "finviz_id": 343733,
+  "finviz_id": 343751,
   "finviz_ticker": "$MARKET",
-  "finviz_published_at": "2026-11-13T04:06:48.073",
+  "finviz_published_at": "2026-11-13T04:37:13.387",
   "finviz_source": "market_summary",
-  "finviz_sentiment": "bad"
+  "finviz_sentiment": "neutral"
 }
