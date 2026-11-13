@@ -989,25 +989,25 @@
       "score": 9.449,
       "route": "io",
       "why": "predict +9.45 >= +1.0 \u2014 mover 09:30 book (gated, high hit-rate)",
-      "cash": 24970.7,
-      "equity": 119835.92,
-      "open": 4,
+      "cash": 1094.68,
+      "equity": 119833.52,
+      "open": 5,
       "filled_am": 0,
-      "filled_pm": 0,
+      "filled_pm": 1,
       "exits": 1,
       "n_mover_calls": 571,
       "n_io_picks": 27,
       "has_book": true,
-      "gap": "3d cannot settle (end of calendar)"
+      "gap": ""
     },
     {
       "date": "2026-11-10",
       "score": 6.883,
       "route": "io",
       "why": "predict +6.88 >= +1.0 \u2014 mover 09:30 book (gated, high hit-rate)",
-      "cash": 120140.93,
-      "equity": 120140.93,
-      "open": 0,
+      "cash": 96264.91,
+      "equity": 120138.53,
+      "open": 1,
       "filled_am": 0,
       "filled_pm": 0,
       "exits": 4,
@@ -1021,14 +1021,30 @@
       "score": 12.369,
       "route": "io",
       "why": "predict +12.37 >= +1.0 \u2014 mover 09:30 book (gated, high hit-rate)",
-      "cash": 120140.93,
-      "equity": 120140.93,
-      "open": 0,
+      "cash": 96264.91,
+      "equity": 119839.87,
+      "open": 1,
       "filled_am": 0,
       "filled_pm": 0,
       "exits": 0,
       "n_mover_calls": 177,
       "n_io_picks": 16,
+      "has_book": true,
+      "gap": "3d cannot settle (end of calendar)"
+    },
+    {
+      "date": "2026-11-12",
+      "score": -7.158,
+      "route": "io",
+      "why": "predict -7.16 < -3.0 \u2014 hard-red: no new 1d risk; hold existing .io size sleeves",
+      "cash": 119137.19,
+      "equity": 119137.19,
+      "open": 0,
+      "filled_am": 0,
+      "filled_pm": 0,
+      "exits": 1,
+      "n_mover_calls": 43,
+      "n_io_picks": 12,
       "has_book": true,
       "gap": "3d cannot settle (end of calendar)"
     }
@@ -1099,29 +1115,13 @@
       "gap": "io source missing (no stock_book file)"
     },
     {
-      "date": "2026-11-09",
-      "score": 9.449,
-      "route": "io",
-      "why": "predict +9.45 >= +1.0 \u2014 mover 09:30 book (gated, high hit-rate)",
-      "cash": 24970.7,
-      "equity": 119835.92,
-      "open": 4,
-      "filled_am": 0,
-      "filled_pm": 0,
-      "exits": 1,
-      "n_mover_calls": 571,
-      "n_io_picks": 27,
-      "has_book": true,
-      "gap": "3d cannot settle (end of calendar)"
-    },
-    {
       "date": "2026-11-10",
       "score": 6.883,
       "route": "io",
       "why": "predict +6.88 >= +1.0 \u2014 mover 09:30 book (gated, high hit-rate)",
-      "cash": 120140.93,
-      "equity": 120140.93,
-      "open": 0,
+      "cash": 96264.91,
+      "equity": 120138.53,
+      "open": 1,
       "filled_am": 0,
       "filled_pm": 0,
       "exits": 4,
@@ -1135,9 +1135,9 @@
       "score": 12.369,
       "route": "io",
       "why": "predict +12.37 >= +1.0 \u2014 mover 09:30 book (gated, high hit-rate)",
-      "cash": 120140.93,
-      "equity": 120140.93,
-      "open": 0,
+      "cash": 96264.91,
+      "equity": 119839.87,
+      "open": 1,
       "filled_am": 0,
       "filled_pm": 0,
       "exits": 0,
@@ -1145,16 +1145,32 @@
       "n_io_picks": 16,
       "has_book": true,
       "gap": "3d cannot settle (end of calendar)"
+    },
+    {
+      "date": "2026-11-12",
+      "score": -7.158,
+      "route": "io",
+      "why": "predict -7.16 < -3.0 \u2014 hard-red: no new 1d risk; hold existing .io size sleeves",
+      "cash": 119137.19,
+      "equity": 119137.19,
+      "open": 0,
+      "filled_am": 0,
+      "filled_pm": 0,
+      "exits": 1,
+      "n_mover_calls": 43,
+      "n_io_picks": 12,
+      "has_book": true,
+      "gap": "3d cannot settle (end of calendar)"
     }
   ],
-  "n_trades": 115,
-  "n_skipped": 814,
-  "hit": 0.557,
-  "final_equity": 120140.93,
-  "total_ret_pct": 20.14,
+  "n_trades": 116,
+  "n_skipped": 825,
+  "hit": 0.552,
+  "final_equity": 119137.19,
+  "total_ret_pct": 19.14,
   "max_dd_pct": 12.19,
   "gross_win": 61597.5,
-  "gross_loss": -41456.53,
+  "gross_loss": -42460.27,
   "by_source": {
     "mover": {
       "n": 0,
@@ -1162,15 +1178,15 @@
       "pnl": 0
     },
     "io": {
-      "n": 115,
-      "hit": 0.557,
-      "pnl": 20140.97
+      "n": 116,
+      "hit": 0.552,
+      "pnl": 19137.23
     }
   },
   "n_gap_days": 7,
   "window": [
     "2026-08-13",
-    "2026-11-11"
+    "2026-11-12"
   ],
-  "generated_at": "2026-11-11T23:19:49-05:00"
+  "generated_at": "2026-11-12T23:10:19-05:00"
 }
