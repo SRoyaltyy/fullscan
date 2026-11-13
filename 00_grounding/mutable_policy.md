@@ -9,7 +9,7 @@ see_also: 03_scoreboard/LEARNINGS.md
 
 # Mutable policy (all workflows)
 
-Last learn_cycle: **2026-11-12**. Promoted: 0. Retired: 10. Active lessons: 204. Human digest: `03_scoreboard/LEARNINGS.md`.
+Last learn_cycle: **2026-11-12**. Promoted: 0. Retired: 10. Active lessons: 214. Human digest: `03_scoreboard/LEARNINGS.md`.
 
 ## Accuracy by topic (graded window)
 
@@ -152,7 +152,7 @@ When leading S0–S4 is net-negative and sector PM is non-haven and already in t
 ## WHEN IT FIRES
 A low-beta bond-proxy defensive (XLP-like) posts a net-negative leading S0–S4 card and a non-haven premarket print al …
 
-_(+189 older active lessons not excerpted; each predict receives only its own topic's lessons via lesson_select)_
+_(+199 older active lessons not excerpted; each predict receives only its own topic's lessons via lesson_select)_
 
 ## Per-scope DO-INSTEAD
 
@@ -244,13 +244,13 @@ _(+189 older active lessons not excerpted; each predict receives only its own to
 
 ## Retired / falsified (efficacy-gated, automatic)
 
-- 2026-11-12: `a-fresh-top-holding-legal-regulatory-catalyst-e-g-a-trial-op.md` (sector:Communication Services) — topic hit 43% → 0% after activation; retired.
-- 2026-11-12: `a-cyclical-industrials-etf-xli-like-posts-an-all-zero-s0-s4.md` (sector:Industrials) — topic hit 71% → 29% after activation; retired.
-- 2026-11-12: `a-defensive-bond-proxy-sector-utilities-faces-a-risk-off-tap.md` (sector:Utilities) — topic hit 57% → 14% after activation; retired.
-- 2026-11-12: `a-healthcare-xlv-call-with-s0-0-flat-mixed-es-nq-leftover-te.md` (sector:Healthcare) — topic hit 71% → 29% after activation; retired.
-- 2026-11-12: `a-live-macro-shock-oil-geopolitical-is-present-at-the-open-t.md` (sector:Consumer Cyclical) — topic hit 57% → 14% after activation; retired.
-- 2026-11-12: `a-long-duration-rate-sensitive-sector-reits-faces-a-live-rat.md` (sector:Real Estate) — topic hit 71% → 29% after activation; retired.
-- 2026-11-12: `a-single-macro-shock-oil-rates-is-scored-as-multiple-indepen.md` (sector:Consumer Cyclical) — topic hit 57% → 14% after activation; retired.
-- 2026-11-12: `a-technology-xlk-down-call-has-strongly-negative-leading-com.md` (sector:Technology) — topic hit 57% → 14% after activation; retired.
-- 2026-11-12: `sector-etf-prediction-where-the-prior-session-had-a-modest-p.md` (sector:Healthcare) — topic hit 71% → 29% after activation; retired.
-- 2026-11-12: `sector-prediction-emits-flat-flat-when-broad-market-tape-is.md` (sector:Healthcare) — topic hit 71% → 29% after activation; retired.
+- 2026-11-12: `a-utilities-xlu-call-is-built-after-a-stretch-of-risk-on-gro.md` (sector:Utilities) — topic hit 80% → 14% after activation; retired.
+- 2026-11-12: `a-sector-call-has-a-scheduled-8-30-et-macro-release-pending.md` (sector:Financial) — topic hit 75% → 14% after activation; retired.
+- 2026-11-12: `in-a-utilities-xlu-call-a-second-soft-inflation-print-has-al.md` (sector:Utilities) — topic hit 75% → 14% after activation; retired.
+- 2026-11-12: `a-consumer-cyclical-down-call-is-driven-by-a-genuinely-negat.md` (sector:Consumer Cyclical) — topic hit 86% → 29% after activation; retired.
+- 2026-11-12: `a-mega-cap-duration-heavy-consumer-cyclical-etf-xly-like-amz.md` (sector:Consumer Cyclical) — topic hit 71% → 14% after activation; retired.
+- 2026-11-12: `when-the-pre-fetched-commodity-tape-conflicts-with-live-sour.md` (sector:Energy) — topic hit 71% → 14% after activation; retired.
+- 2026-11-12: `a-sector-call-has-a-decisively-negative-fundamental-spine-fr.md` (sector:Consumer Cyclical) — topic hit 83% → 29% after activation; retired.
+- 2026-11-12: `a-utility-defensive-sector-call-is-built-on-a-carried-defens.md` (sector:Utilities) — topic hit 67% → 14% after activation; retired.
+- 2026-11-12: `sector-prediction-made-when-the-sector-s-dominant-commodity.md` (sector:Energy) — topic hit 67% → 14% after activation; retired.
+- 2026-11-12: `a-sector-call-has-a-scheduled-8-30-et-high-impact-macro-rele.md` (sector:Financial) — topic hit 60% → 14% after activation; retired.
