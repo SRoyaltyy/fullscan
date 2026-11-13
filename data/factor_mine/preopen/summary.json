@@ -435,6 +435,24 @@
             "GOGO"
           ],
           "sit": false
+        },
+        {
+          "buys": [],
+          "date": "2026-11-12",
+          "equity": 9634.22,
+          "mean": -2.9979,
+          "picks": [],
+          "reasons": [
+            "S=-7.16 <= -3: no buys"
+          ],
+          "s": -7.158,
+          "sells": [
+            "ATER",
+            "ETON",
+            "INDI",
+            "TLS"
+          ],
+          "sit": true
         }
       ],
       "label": "starts 10-08 open, no past days",
@@ -859,6 +877,24 @@
           "s": 12.369,
           "sells": [],
           "sit": false
+        },
+        {
+          "buys": [],
+          "date": "2026-11-12",
+          "equity": 9292.28,
+          "mean": -1.6517,
+          "picks": [],
+          "reasons": [
+            "S=-7.16 <= -3: no buys"
+          ],
+          "s": -7.158,
+          "sells": [
+            "AEHL",
+            "EVC",
+            "FLY",
+            "GOGO"
+          ],
+          "sit": true
         }
       ],
       "label": "starts 10-08 open, no past days",

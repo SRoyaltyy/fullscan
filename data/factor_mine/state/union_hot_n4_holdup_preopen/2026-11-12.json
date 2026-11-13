@@ -1,0 +1,126 @@
+{
+  "buys": [],
+  "cash": 9286.62,
+  "date": "2026-11-12",
+  "equity": 9292.28,
+  "fees": 16.3269,
+  "fills": [
+    {
+      "fees": 2.6283,
+      "fill_rule": "open",
+      "pnl": -5.21,
+      "price": 11.33,
+      "shares": 196,
+      "side": "SELL",
+      "ticker": "AEHL"
+    },
+    {
+      "fees": 3.1415,
+      "fill_rule": "open",
+      "pnl": 106.11,
+      "price": 9.77,
+      "shares": 239,
+      "side": "SELL",
+      "ticker": "EVC"
+    },
+    {
+      "fees": 2.3073,
+      "fill_rule": "open",
+      "pnl": 246.4,
+      "price": 26.18,
+      "shares": 94,
+      "side": "SELL",
+      "ticker": "FLY"
+    },
+    {
+      "fees": 8.2498,
+      "fill_rule": "open",
+      "pnl": 37.17,
+      "price": 3.615,
+      "shares": 630,
+      "side": "SELL",
+      "ticker": "GOGO"
+    }
+  ],
+  "holdings": [
+    "ATER",
+    "INDI"
+  ],
+  "label": "starts 10-08 open, no past days",
+  "mean": -1.6517,
+  "n_trades_today": 4,
+  "parent": "union_hot_n4_holdup",
+  "picks": [],
+  "reasons": [
+    "S=-7.16 <= -3: no buys"
+  ],
+  "recipe": "union_hot_n4_holdup_preopen",
+  "s": -7.158,
+  "seal_sha256": "7f08b98ca37f310571e9b46d5ab207d0c6f020d89b1115319659171d6d4ffbe8",
+  "sells": [
+    {
+      "fill_rule": "open",
+      "price": 11.33,
+      "shares": 196,
+      "side": "SELL",
+      "ticker": "AEHL"
+    },
+    {
+      "fill_rule": "open",
+      "price": 9.77,
+      "shares": 239,
+      "side": "SELL",
+      "ticker": "EVC"
+    },
+    {
+      "fill_rule": "open",
+      "price": 26.18,
+      "shares": 94,
+      "side": "SELL",
+      "ticker": "FLY"
+    },
+    {
+      "fill_rule": "open",
+      "price": 3.615,
+      "shares": 630,
+      "side": "SELL",
+      "ticker": "GOGO"
+    }
+  ],
+  "sit": true,
+  "state": {
+    "after": "2026-11-12",
+    "cash": 9286.62,
+    "pos": {
+      "ATER": {
+        "close_px": 0.869,
+        "cost": 3.7753,
+        "entry_date": "2026-11-11",
+        "entry_px": 0.9315,
+        "fee_in": 0.0493,
+        "last_px": 0.9,
+        "min_hold": 2,
+        "notional": 3.726,
+        "peak_px": 0.9315,
+        "reason": "hot4; S>0 lots stay through the next 09:30 so the overnight gap is in the book | pre-open inputs only; starts 10-08 open, no past days; rank hot_score; list preopen_seal; leftover $3.77",
+        "shares": 4,
+        "ticker": "ATER"
+      },
+      "INDI": {
+        "close_px": 2.18,
+        "cost": 2.4417,
+        "entry_date": "2026-11-11",
+        "entry_px": 2.4146,
+        "fee_in": 0.0271,
+        "last_px": 2.135,
+        "min_hold": 2,
+        "notional": 2.4146,
+        "peak_px": 2.4146,
+        "reason": "hot4; S>0 lots stay through the next 09:30 so the overnight gap is in the book | pre-open inputs only; starts 10-08 open, no past days; rank hot_score; list preopen_seal; leftover $3.77",
+        "shares": 1,
+        "ticker": "INDI"
+      }
+    },
+    "yday_equity": 9292.28
+  }
+}

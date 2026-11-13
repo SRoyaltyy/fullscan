@@ -1,0 +1,94 @@
+{
+  "buys": [],
+  "cash": 9634.22,
+  "date": "2026-11-12",
+  "equity": 9634.22,
+  "fees": 53.1326,
+  "fills": [
+    {
+      "fees": 33.0502,
+      "fill_rule": "open",
+      "pnl": -152.01,
+      "price": 0.9,
+      "shares": 2715,
+      "side": "SELL",
+      "ticker": "ATER"
+    },
+    {
+      "fees": 2.1312,
+      "fill_rule": "open",
+      "pnl": 49.05,
+      "price": 68.38,
+      "shares": 37,
+      "side": "SELL",
+      "ticker": "ETON"
+    },
+    {
+      "fees": 13.698,
+      "fill_rule": "open",
+      "pnl": -319.95,
+      "price": 2.135,
+      "shares": 1047,
+      "side": "SELL",
+      "ticker": "INDI"
+    },
+    {
+      "fees": 4.2532,
+      "fill_rule": "open",
+      "pnl": -60.27,
+      "price": 7.64,
+      "shares": 324,
+      "side": "SELL",
+      "ticker": "TLS"
+    }
+  ],
+  "holdings": [],
+  "label": "starts 10-08 open, no past days",
+  "mean": -2.9979,
+  "n_trades_today": 4,
+  "parent": "union_hot_n4_h1",
+  "picks": [],
+  "reasons": [
+    "S=-7.16 <= -3: no buys"
+  ],
+  "recipe": "union_hot_n4_h1_preopen",
+  "s": -7.158,
+  "seal_sha256": "7f08b98ca37f310571e9b46d5ab207d0c6f020d89b1115319659171d6d4ffbe8",
+  "sells": [
+    {
+      "fill_rule": "open",
+      "price": 0.9,
+      "shares": 2715,
+      "side": "SELL",
+      "ticker": "ATER"
+    },
+    {
+      "fill_rule": "open",
+      "price": 68.38,
+      "shares": 37,
+      "side": "SELL",
+      "ticker": "ETON"
+    },
+    {
+      "fill_rule": "open",
+      "price": 2.135,
+      "shares": 1047,
+      "side": "SELL",
+      "ticker": "INDI"
+    },
+    {
+      "fill_rule": "open",
+      "price": 7.64,
+      "shares": 324,
+      "side": "SELL",
+      "ticker": "TLS"
+    }
+  ],
+  "sit": true,
+  "state": {
+    "after": "2026-11-12",
+    "cash": 9634.22,
+    "pos": {},
+    "yday_equity": 9634.22
+  }
+}
