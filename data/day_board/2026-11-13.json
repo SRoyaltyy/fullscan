@@ -1,6 +1,6 @@
 {
   "date": "2026-11-13",
-  "generated_at": "2026-11-13T16:05:19.474093-05:00",
+  "generated_at": "2026-11-13T16:05:52.645697-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -813,7 +813,7 @@
           "size": 80692,
           "said": "Stock book \u2014 2026-11-13",
           "bullets": [
-            "_Generated 2026-11-13T13:39:11.423552-05:00_",
+            "_Generated 2026-11-13T16:05:28.369056-05:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -849,7 +849,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "live-book poller + today.json (2026-11-13)",
-          "size": 16618432,
+          "size": 16618448,
           "said": "live-book poller + today.json (2026-11-13)",
           "bullets": []
         }
@@ -888,7 +888,7 @@
           "role": "required",
           "status": "OK",
           "reason": "live-book poller + today.json (2026-11-13)",
-          "size": 16618432,
+          "size": 16618448,
           "said": "live-book poller + today.json (2026-11-13)",
           "bullets": []
         },
@@ -1787,6 +1787,59 @@
         }
       ],
       "preview": "5039 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-11-13",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-13T16:05:51.741007-05:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-11-13_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1462158,
+          "preview": "1d BUY PM, CON, NET, ARDT, ATEN \u00b7 SELL BLDP, FLNC, BEP, LTBR, CWEN, AXON, FMC, JBI"
+        },
+        {
+          "path": "data/stock_book/2026-11-13_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-11-13_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2556,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-11-13_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12123,
+          "preview": "2026-11-13 BUY PM, CON, NET, ARDT, ATEN \u00b7 SELL BLDP, FLNC, BEP, LTBR, CWEN, AXON, FMC, JBI"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12123,
+          "preview": "2026-11-13 BUY PM, CON, NET, ARDT, ATEN \u00b7 SELL BLDP, FLNC, BEP, LTBR, CWEN, AXON, FMC, JBI"
+        },
+        {
+          "path": "01_daily/2026-11-13_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 81802,
+          "preview": "# Stock book \u2014 2026-11-13\n_Generated 2026-11-13T16:05:28.369056-05:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY PM, CON, NET, ARDT, ATEN \u00b7 SELL BLDP, FLNC, BEP, LTBR, CWEN, AXON, FMC, JBI \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-11-13 BUY PM, CON, NET, ARDT, ATEN \u00b7 SELL BLDP, FLNC, BEP, LTBR, CWEN, AXON, FMC, JBI \u00b7 2026-11-13 BUY PM, CON, NET, ARDT, ATEN \u00b7 SELL BLDP, FLNC, BEP, LTBR, CWEN, AXON, FMC, JBI \u00b7 # Stock book \u2014 2026-11-13\n_Generated 2026-11-13T16:05:28.369056-05:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "href": {
@@ -1840,6 +1893,14 @@
       "path": "data/day_board/2026-11-13.json",
       "at": "2026-11-13T16:05:19-05:00",
       "commit_msg": "auto: land peer_rs [2026-11-13]",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "43505800624",
+      "manifest": "research/input_freeze/2026-11-13/manifest.json"
+    },
+    {
+      "path": "data/day_board/2026-11-13.json",
+      "at": "2026-11-13T16:05:53-05:00",
+      "commit_msg": "auto: land stock_book [2026-11-13]",
       "workflow": "Stock Book ALL (one-shot)",
       "run_id": "43505800624",
       "manifest": "research/input_freeze/2026-11-13/manifest.json"

@@ -1,6 +1,6 @@
 {
   "date": "2026-11-13",
-  "generated_at": "2026-11-13T13:39:14.152400-05:00",
+  "generated_at": "2026-11-13T16:05:30.900190-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -66,10 +66,10 @@
     }
   ],
   "flatten": {
-    "said": "0 priced buys \u00b7 cash $116,187.58 \u00b7 morning S missing",
+    "said": "0 priced buys \u00b7 cash $122,238.04 \u00b7 morning S missing",
     "bullets": [
       "0 priced buys",
-      "cash $116,187.58",
+      "cash $122,238.04",
       "morning S missing"
     ]
   },
@@ -639,13 +639,13 @@
       "date": "2026-11-13",
       "ok": true,
       "pushed": true,
-      "at": "2026-11-13T13:06:55.849045-05:00",
+      "at": "2026-11-13T13:39:44.272400-05:00",
       "files": [
         {
           "path": "data/day_board/today.json",
           "ok": true,
           "reason": "",
-          "size": 25669,
+          "size": 21627,
           "preview": "2026-11-13 BUY PM, CON, NET, ARDT, ATEN \u00b7 SELL BLDP, FLNC, BEP, LTBR, CWEN, AXON, FMC, JBI"
         },
         {
@@ -656,17 +656,17 @@
           "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
         },
         {
-          "path": "data/day_board/2026-11-13.after-freeze-2.json",
+          "path": "data/day_board/2026-11-13.after-freeze-3.json",
           "ok": true,
           "reason": "",
-          "size": 96720,
+          "size": 91923,
           "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href"
         },
         {
           "path": "data/day_board/2026-11-13_tickets.json",
           "ok": true,
           "reason": "",
-          "size": 58697,
+          "size": 53915,
           "preview": "2026-11-13 BUY PM, CON, NET, ARDT, ATEN \u00b7 SELL BLDP, FLNC, BEP, LTBR, CWEN, AXON, FMC, JBI"
         },
         {
@@ -691,7 +691,7 @@
           "preview": "keys: asof_commit, asof_committed_at, cutoff_et, date, n, read_from, rows"
         },
         {
-          "path": "data/day_board/today_strategies.after-freeze-7.json",
+          "path": "data/day_board/today_strategies.after-freeze-8.json",
           "ok": true,
           "reason": "",
           "size": 1373415,
@@ -708,7 +708,7 @@
           "path": "dashboard/factor-mine/today.json",
           "ok": true,
           "reason": "",
-          "size": 58697,
+          "size": 53915,
           "preview": "2026-11-13 BUY PM, CON, NET, ARDT, ATEN \u00b7 SELL BLDP, FLNC, BEP, LTBR, CWEN, AXON, FMC, JBI"
         },
         {
@@ -736,7 +736,7 @@
           "path": "data/day_board/hold_live_px.json",
           "ok": true,
           "reason": "",
-          "size": 1776,
+          "size": 1825,
           "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
         },
         {
@@ -755,7 +755,7 @@
       "date": "2026-11-13",
       "ok": true,
       "pushed": true,
-      "at": "2026-11-13T13:07:07.433780-05:00",
+      "at": "2026-11-13T13:39:55.684417-05:00",
       "files": [
         {
           "path": "03_scoreboard/PAPER_TRADING.md",
@@ -780,7 +780,7 @@
       "date": "2026-11-13",
       "ok": true,
       "pushed": true,
-      "at": "2026-11-13T13:38:44.525714-05:00",
+      "at": "2026-11-13T16:05:03.486155-05:00",
       "files": [
         {
           "path": "01_daily/weather/2026-11-13_weather.json",
@@ -816,6 +816,13 @@
           "reason": "",
           "size": 9658,
           "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -1.16, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': 0.5449999999999999, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.42, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -0.53, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': 4.14, 'dir': 'up', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': 0.96, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': 0.99, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': 3.13, 'dir': 'up', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-11-13_weather.after-freeze-4.json",
+          "ok": true,
+          "reason": "",
+          "size": 9657,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -1.16, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': 0.5449999999999999, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.42, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -0.53, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': 4.14, 'dir': 'up', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': 0.96, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': 0.99, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': 3.13, 'dir': 'up', 'conf': 0.4, 'source': 'finviz_week'}"
         }
       ],
       "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -1.16, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': 0.5449999999999999, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.42, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -0.53, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': 4.14, 'dir': 'up', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': 0.96, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': 0.99, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': 3.13, 'dir': 'up', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-11-13\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade. \u00b7 weather sectors 11 \u00b7 Basic Materials={'score': -1.16, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': 0.5449999999999999, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.42, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensi"
@@ -826,7 +833,7 @@
       "date": "2026-11-13",
       "ok": true,
       "pushed": true,
-      "at": "2026-11-13T13:38:54.770854-05:00",
+      "at": "2026-11-13T16:05:13.146927-05:00",
       "files": [
         {
           "path": "data/join/2026-11-13_ranked.csv",
@@ -844,7 +851,7 @@
       "date": "2026-11-13",
       "ok": true,
       "pushed": true,
-      "at": "2026-11-13T13:39:01.451585-05:00",
+      "at": "2026-11-13T16:05:18.581170-05:00",
       "files": [
         {
           "path": "data/peers/2026-11-13_peer_rs.csv",
