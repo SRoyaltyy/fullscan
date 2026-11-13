@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-12T17:38:30.286800-05:00",
+  "generated": "2026-11-13T14:45:26.263209-05:00",
   "capital": 10000.0,
   "dates": [
     "2026-08-13",
@@ -70,7 +70,8 @@
     "2026-11-09",
     "2026-11-10",
     "2026-11-11",
-    "2026-11-12"
+    "2026-11-12",
+    "2026-11-13"
   ],
   "scenarios": [
     {
@@ -333,7 +334,8 @@
       0.31,
       2.37,
       -0.37,
-      1.32
+      1.32,
+      -0.35
     ],
     "equity": [
       10046.0,
@@ -404,7 +406,8 @@
       9954.33,
       10190.25,
       10152.55,
-      10286.56
+      10286.56,
+      10250.56
     ]
   },
   "sleeves": {
@@ -420,15 +423,15 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 69,
+        "n_days": 70,
         "n_win_days": 14,
-        "n_loss_days": 53,
-        "p_loss_day": 0.7681,
-        "p_win_day": 0.2029,
-        "mean_day": -4.026,
+        "n_loss_days": 54,
+        "p_loss_day": 0.7714,
+        "p_win_day": 0.2,
+        "mean_day": -4.456,
         "avg_win_day": 0.904,
-        "avg_loss_day": -5.48,
-        "cum_sum": -277.788
+        "avg_loss_day": -6.011,
+        "cum_sum": -311.942
       },
       "equity": [
         9953.57,
@@ -499,9 +502,10 @@
         271.27,
         271.48,
         271.14,
-        224.31
+        267.49,
+        133.53
       ],
-      "final": 224.31,
+      "final": 133.53,
       "orig_window": {
         "start": "2026-08-13",
         "end": "2026-08-21",
@@ -11674,54 +11678,174 @@
         },
         {
           "date": "2026-11-12",
-          "day_pnl": -17.272,
-          "equity": 224.31,
+          "day_pnl": -1.346,
+          "equity": 267.49,
           "n_held": 4,
-          "n_buy": 0,
+          "n_buy": 3,
           "n_sell": 3,
-          "n_skip": 4,
+          "n_skip": 1,
           "n_cand": 4,
           "hard_red": false,
-          "bought": [],
+          "bought": [
+            "BB",
+            "SONO",
+            "GMRS"
+          ],
           "sold": [
             "HNST",
             "HLF",
             "TTD"
           ],
-          "held": [],
-          "buys": [],
+          "held": [
+            "BB",
+            "SONO",
+            "GMRS"
+          ],
+          "buys": [
+            {
+              "ticker": "BB",
+              "side": "buy",
+              "buy_px": 9.119999885559082,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 9.050000190734863,
+              "low": 8.890000343322754,
+              "high": 9.380000114440918,
+              "close": 9.119999885559082,
+              "shares": 7,
+              "fees": 0.6594,
+              "amount": 64.5,
+              "cash_after": 204.37
+            },
+            {
+              "ticker": "SONO",
+              "side": "buy",
+              "buy_px": 18.110000610351562,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 19.0,
+              "low": 18.024999618530273,
+              "high": 19.530000686645508,
+              "close": 18.110000610351562,
+              "shares": 2,
+              "fees": 0.3682,
+              "amount": 36.59,
+              "cash_after": 167.78
+            },
+            {
+              "ticker": "GMRS",
+              "side": "buy",
+              "buy_px": 11.300000190734863,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 11.720000267028809,
+              "low": 10.90999984741211,
+              "high": 11.729999542236328,
+              "close": 11.300000190734863,
+              "shares": 3,
+              "fees": 0.348,
+              "amount": 34.25,
+              "cash_after": 133.53
+            }
+          ],
           "sells": [
             {
               "ticker": "HNST",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 4.800000190734863,
+              "sell_when": "16:00 ET close",
               "buy_px": 5.099999904632568,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 3,
+              "fees": 0.173,
+              "amount": 14.23,
+              "realized_pnl": -1.23,
+              "cash_after": 238.54
             },
             {
               "ticker": "HLF",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 15.210000038146973,
+              "sell_when": "16:00 ET close",
               "buy_px": 15.550000190734863,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 1,
+              "fees": 0.1751,
+              "amount": 15.03,
+              "realized_pnl": -0.67,
+              "cash_after": 253.58
             },
             {
               "ticker": "TTD",
               "side": "sell",
+              "sell_px": 15.470000267028809,
+              "sell_when": "16:00 ET close",
+              "buy_px": 15.979999542236328,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "shares": 1,
+              "fees": 0.1777,
+              "amount": 15.29,
+              "realized_pnl": -0.85,
+              "cash_after": 268.87
+            }
+          ],
+          "cash": 133.53,
+          "invested": 133.96,
+          "fees_cum": 724.73
+        },
+        {
+          "date": "2026-11-13",
+          "day_pnl": -50.08,
+          "equity": 133.53,
+          "n_held": 5,
+          "n_buy": 0,
+          "n_sell": 3,
+          "n_skip": 5,
+          "n_cand": 5,
+          "hard_red": false,
+          "bought": [],
+          "sold": [
+            "BB",
+            "SONO",
+            "GMRS"
+          ],
+          "held": [],
+          "buys": [],
+          "sells": [
+            {
+              "ticker": "BB",
+              "side": "sell",
               "sell_px": null,
               "sell_when": null,
-              "buy_px": 15.979999542236328,
+              "buy_px": 9.119999885559082,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "SONO",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 18.110000610351562,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "GMRS",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 11.300000190734863,
               "buy_when": "16:00 ET close",
               "buy_kind": "close"
             }
           ],
-          "cash": 224.31,
+          "cash": 133.53,
           "invested": 0.0,
-          "fees_cum": 722.82
+          "fees_cum": 724.73
         }
       ]
     },
@@ -11737,15 +11861,15 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 69,
+        "n_days": 70,
         "n_win_days": 10,
-        "n_loss_days": 57,
-        "p_loss_day": 0.8261,
-        "p_win_day": 0.1449,
-        "mean_day": -4.036,
+        "n_loss_days": 58,
+        "p_loss_day": 0.8286,
+        "p_win_day": 0.1429,
+        "mean_day": -4.384,
         "avg_win_day": 0.635,
-        "avg_loss_day": -4.997,
-        "cum_sum": -278.461
+        "avg_loss_day": -5.4,
+        "cum_sum": -306.852
       },
       "equity": [
         9955.38,
@@ -11816,9 +11940,10 @@
         306.15,
         306.17,
         305.83,
-        259.0
+        302.24,
+        173.7
       ],
-      "final": 259.0,
+      "final": 173.7,
       "orig_window": {
         "start": "2026-08-13",
         "end": "2026-08-21",
@@ -25003,54 +25128,228 @@
         },
         {
           "date": "2026-11-12",
-          "day_pnl": -15.312,
-          "equity": 259.0,
+          "day_pnl": -1.174,
+          "equity": 302.24,
           "n_held": 8,
-          "n_buy": 0,
+          "n_buy": 5,
           "n_sell": 3,
-          "n_skip": 8,
+          "n_skip": 3,
           "n_cand": 8,
           "hard_red": false,
-          "bought": [],
+          "bought": [
+            "SONO",
+            "BB",
+            "SLDB",
+            "STVN",
+            "GMRS"
+          ],
           "sold": [
             "TTD",
             "HLF",
             "HNST"
           ],
-          "held": [],
-          "buys": [],
+          "held": [
+            "SONO",
+            "BB",
+            "SLDB",
+            "STVN",
+            "GMRS"
+          ],
+          "buys": [
+            {
+              "ticker": "SONO",
+              "side": "buy",
+              "buy_px": 18.110000610351562,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 19.0,
+              "low": 18.024999618530273,
+              "high": 19.530000686645508,
+              "close": 18.110000610351562,
+              "shares": 2,
+              "fees": 0.3682,
+              "amount": 36.59,
+              "cash_after": 266.97
+            },
+            {
+              "ticker": "BB",
+              "side": "buy",
+              "buy_px": 9.119999885559082,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 9.050000190734863,
+              "low": 8.890000343322754,
+              "high": 9.380000114440918,
+              "close": 9.119999885559082,
+              "shares": 3,
+              "fees": 0.2826,
+              "amount": 27.64,
+              "cash_after": 239.33
+            },
+            {
+              "ticker": "SLDB",
+              "side": "buy",
+              "buy_px": 7.0,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 7.590000152587891,
+              "low": 6.980000019073486,
+              "high": 7.590000152587891,
+              "close": 7.0,
+              "shares": 4,
+              "fees": 0.292,
+              "amount": 28.29,
+              "cash_after": 211.03
+            },
+            {
+              "ticker": "STVN",
+              "side": "buy",
+              "buy_px": 14.359999656677246,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 13.800000190734863,
+              "low": 13.859999656677246,
+              "high": 14.758000373840332,
+              "close": 14.359999656677246,
+              "shares": 1,
+              "fees": 0.1466,
+              "amount": 14.51,
+              "cash_after": 196.53
+            },
+            {
+              "ticker": "GMRS",
+              "side": "buy",
+              "buy_px": 11.300000190734863,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 11.720000267028809,
+              "low": 10.90999984741211,
+              "high": 11.729999542236328,
+              "close": 11.300000190734863,
+              "shares": 2,
+              "fees": 0.232,
+              "amount": 22.83,
+              "cash_after": 173.7
+            }
+          ],
           "sells": [
             {
               "ticker": "TTD",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 15.470000267028809,
+              "sell_when": "16:00 ET close",
               "buy_px": 15.979999542236328,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 1,
+              "fees": 0.1777,
+              "amount": 15.29,
+              "realized_pnl": -0.85,
+              "cash_after": 274.3
             },
             {
               "ticker": "HLF",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 15.210000038146973,
+              "sell_when": "16:00 ET close",
               "buy_px": 15.550000190734863,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 1,
+              "fees": 0.1751,
+              "amount": 15.03,
+              "realized_pnl": -0.67,
+              "cash_after": 289.33
             },
             {
               "ticker": "HNST",
               "side": "sell",
+              "sell_px": 4.800000190734863,
+              "sell_when": "16:00 ET close",
+              "buy_px": 5.099999904632568,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "shares": 3,
+              "fees": 0.173,
+              "amount": 14.23,
+              "realized_pnl": -1.23,
+              "cash_after": 303.56
+            }
+          ],
+          "cash": 173.7,
+          "invested": 128.54,
+          "fees_cum": 829.11
+        },
+        {
+          "date": "2026-11-13",
+          "day_pnl": -42.529,
+          "equity": 173.7,
+          "n_held": 9,
+          "n_buy": 0,
+          "n_sell": 5,
+          "n_skip": 9,
+          "n_cand": 9,
+          "hard_red": false,
+          "bought": [],
+          "sold": [
+            "SONO",
+            "BB",
+            "SLDB",
+            "STVN",
+            "GMRS"
+          ],
+          "held": [],
+          "buys": [],
+          "sells": [
+            {
+              "ticker": "SONO",
+              "side": "sell",
               "sell_px": null,
               "sell_when": null,
-              "buy_px": 5.099999904632568,
+              "buy_px": 18.110000610351562,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "BB",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 9.119999885559082,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "SLDB",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 7.0,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "STVN",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 14.359999656677246,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "GMRS",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 11.300000190734863,
               "buy_when": "16:00 ET close",
               "buy_kind": "close"
             }
           ],
-          "cash": 259.0,
+          "cash": 173.7,
           "invested": 0.0,
-          "fees_cum": 827.26
+          "fees_cum": 829.11
         }
       ]
     },
@@ -25066,15 +25365,15 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 69,
+        "n_days": 70,
         "n_win_days": 10,
-        "n_loss_days": 58,
-        "p_loss_day": 0.8406,
-        "p_win_day": 0.1449,
-        "mean_day": 3.845,
+        "n_loss_days": 59,
+        "p_loss_day": 0.8429,
+        "p_win_day": 0.1429,
+        "mean_day": 3.707,
         "avg_win_day": 66.755,
-        "avg_loss_day": -6.935,
-        "cum_sum": 265.323
+        "avg_loss_day": -6.916,
+        "cum_sum": 259.481
       },
       "equity": [
         9880.7,
@@ -25145,9 +25444,10 @@
         475.84,
         471.41,
         469.8,
-        344.94
+        464.05,
+        319.29
       ],
-      "final": 344.94,
+      "final": 319.29,
       "orig_window": {
         "start": "2026-08-13",
         "end": "2026-08-21",
@@ -52006,15 +52306,25 @@
         },
         {
           "date": "2026-11-12",
-          "day_pnl": -26.577,
-          "equity": 344.94,
+          "day_pnl": -1.224,
+          "equity": 464.05,
           "n_held": 20,
-          "n_buy": 0,
+          "n_buy": 9,
           "n_sell": 9,
-          "n_skip": 20,
+          "n_skip": 11,
           "n_cand": 20,
           "hard_red": false,
-          "bought": [],
+          "bought": [
+            "SLDB",
+            "STVN",
+            "COLD",
+            "LAND",
+            "RZLT",
+            "SY",
+            "IVA",
+            "DEC",
+            "PTLO"
+          ],
           "sold": [
             "CARS",
             "GO",
@@ -52026,94 +52336,396 @@
             "GRND",
             "DSX"
           ],
-          "held": [],
-          "buys": [],
+          "held": [
+            "SLDB",
+            "STVN",
+            "COLD",
+            "LAND",
+            "RZLT",
+            "SY",
+            "IVA",
+            "DEC",
+            "PTLO"
+          ],
+          "buys": [
+            {
+              "ticker": "SLDB",
+              "side": "buy",
+              "buy_px": 7.0,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 7.590000152587891,
+              "low": 6.980000019073486,
+              "high": 7.590000152587891,
+              "close": 7.0,
+              "shares": 3,
+              "fees": 0.219,
+              "amount": 21.22,
+              "cash_after": 444.36
+            },
+            {
+              "ticker": "STVN",
+              "side": "buy",
+              "buy_px": 14.359999656677246,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 13.800000190734863,
+              "low": 13.859999656677246,
+              "high": 14.758000373840332,
+              "close": 14.359999656677246,
+              "shares": 1,
+              "fees": 0.1466,
+              "amount": 14.51,
+              "cash_after": 429.86
+            },
+            {
+              "ticker": "COLD",
+              "side": "buy",
+              "buy_px": 15.899999618530273,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 16.18000030517578,
+              "low": 15.835000038146973,
+              "high": 16.200000762939453,
+              "close": 15.899999618530273,
+              "shares": 1,
+              "fees": 0.162,
+              "amount": 16.06,
+              "cash_after": 413.79
+            },
+            {
+              "ticker": "LAND",
+              "side": "buy",
+              "buy_px": 7.019999980926514,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 7.289999961853027,
+              "low": 6.699999809265137,
+              "high": 7.289999961853027,
+              "close": 7.019999980926514,
+              "shares": 2,
+              "fees": 0.1464,
+              "amount": 14.19,
+              "cash_after": 399.61
+            },
+            {
+              "ticker": "RZLT",
+              "side": "buy",
+              "buy_px": 3.869999885559082,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 4.059999942779541,
+              "low": 3.8499999046325684,
+              "high": 4.125,
+              "close": 3.869999885559082,
+              "shares": 5,
+              "fees": 0.2085,
+              "amount": 19.56,
+              "cash_after": 380.05
+            },
+            {
+              "ticker": "SY",
+              "side": "buy",
+              "buy_px": 1.940000057220459,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 2.069999933242798,
+              "low": 1.940000057220459,
+              "high": 2.069999933242798,
+              "close": 1.940000057220459,
+              "shares": 9,
+              "fees": 0.2016,
+              "amount": 17.66,
+              "cash_after": 362.39
+            },
+            {
+              "ticker": "IVA",
+              "side": "buy",
+              "buy_px": 3.880000114440918,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 3.9800000190734863,
+              "low": 3.869999885559082,
+              "high": 4.105000019073486,
+              "close": 3.880000114440918,
+              "shares": 4,
+              "fees": 0.1672,
+              "amount": 15.69,
+              "cash_after": 346.7
+            },
+            {
+              "ticker": "DEC",
+              "side": "buy",
+              "buy_px": 13.770000457763672,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 13.84000015258789,
+              "low": 13.569999694824219,
+              "high": 13.930000305175781,
+              "close": 13.770000457763672,
+              "shares": 1,
+              "fees": 0.1407,
+              "amount": 13.91,
+              "cash_after": 332.79
+            },
+            {
+              "ticker": "PTLO",
+              "side": "buy",
+              "buy_px": 6.679999828338623,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 7.050000190734863,
+              "low": 6.644999980926514,
+              "high": 7.228000164031982,
+              "close": 6.679999828338623,
+              "shares": 2,
+              "fees": 0.1396,
+              "amount": 13.5,
+              "cash_after": 319.29
+            }
+          ],
           "sells": [
             {
               "ticker": "CARS",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 12.850000381469727,
+              "sell_when": "16:00 ET close",
               "buy_px": 13.479999542236328,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 1,
+              "fees": 0.1515,
+              "amount": 12.7,
+              "realized_pnl": -0.92,
+              "cash_after": 357.63
             },
             {
               "ticker": "GO",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 12.850000381469727,
+              "sell_when": "16:00 ET close",
               "buy_px": 13.119999885559082,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 1,
+              "fees": 0.1515,
+              "amount": 12.7,
+              "realized_pnl": -0.56,
+              "cash_after": 370.33
             },
             {
               "ticker": "ZIP",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 5.639999866485596,
+              "sell_when": "16:00 ET close",
               "buy_px": 5.920000076293945,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 3,
+              "fees": 0.1982,
+              "amount": 16.72,
+              "realized_pnl": -1.22,
+              "cash_after": 387.05
             },
             {
               "ticker": "ABCL",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 11.619999885559082,
+              "sell_when": "16:00 ET close",
               "buy_px": 11.949999809265137,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 1,
+              "fees": 0.1392,
+              "amount": 11.48,
+              "realized_pnl": -0.59,
+              "cash_after": 398.53
             },
             {
               "ticker": "DNUT",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 3.7049999237060547,
+              "sell_when": "16:00 ET close",
               "buy_px": 3.819999933242798,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 4,
+              "fees": 0.1802,
+              "amount": 14.64,
+              "realized_pnl": -0.81,
+              "cash_after": 413.17
             },
             {
               "ticker": "BILI",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 13.5,
+              "sell_when": "16:00 ET close",
               "buy_px": 13.949999809265137,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 1,
+              "fees": 0.158,
+              "amount": 13.34,
+              "realized_pnl": -0.75,
+              "cash_after": 426.52
             },
             {
               "ticker": "GRAB",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 3.240000009536743,
+              "sell_when": "16:00 ET close",
               "buy_px": 3.3299999237060547,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 4,
+              "fees": 0.1616,
+              "amount": 12.8,
+              "realized_pnl": -0.67,
+              "cash_after": 439.31
             },
             {
               "ticker": "GRND",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 14.4399995803833,
+              "sell_when": "16:00 ET close",
               "buy_px": 14.050000190734863,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 1,
+              "fees": 0.1674,
+              "amount": 14.27,
+              "realized_pnl": 0.08,
+              "cash_after": 453.59
             },
             {
               "ticker": "DSX",
               "side": "sell",
+              "sell_px": 2.430000066757202,
+              "sell_when": "16:00 ET close",
+              "buy_px": 2.390000104904175,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "shares": 5,
+              "fees": 0.1565,
+              "amount": 11.99,
+              "realized_pnl": -0.09,
+              "cash_after": 465.58
+            }
+          ],
+          "cash": 319.29,
+          "invested": 144.76,
+          "fees_cum": 2738.7
+        },
+        {
+          "date": "2026-11-13",
+          "day_pnl": -31.195,
+          "equity": 319.29,
+          "n_held": 21,
+          "n_buy": 0,
+          "n_sell": 9,
+          "n_skip": 21,
+          "n_cand": 21,
+          "hard_red": false,
+          "bought": [],
+          "sold": [
+            "SLDB",
+            "STVN",
+            "COLD",
+            "LAND",
+            "RZLT",
+            "SY",
+            "IVA",
+            "DEC",
+            "PTLO"
+          ],
+          "held": [],
+          "buys": [],
+          "sells": [
+            {
+              "ticker": "SLDB",
+              "side": "sell",
               "sell_px": null,
               "sell_when": null,
-              "buy_px": 2.390000104904175,
+              "buy_px": 7.0,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "STVN",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 14.359999656677246,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "COLD",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 15.899999618530273,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "LAND",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 7.019999980926514,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "RZLT",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 3.869999885559082,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "SY",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 1.940000057220459,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "IVA",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 3.880000114440918,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "DEC",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 13.770000457763672,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "PTLO",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 6.679999828338623,
               "buy_when": "16:00 ET close",
               "buy_kind": "close"
             }
           ],
-          "cash": 344.94,
+          "cash": 319.29,
           "invested": 0.0,
-          "fees_cum": 2735.7
+          "fees_cum": 2738.7
         }
       ]
     },
@@ -52129,15 +52741,15 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 69,
+        "n_days": 70,
         "n_win_days": 10,
-        "n_loss_days": 57,
-        "p_loss_day": 0.8261,
-        "p_win_day": 0.1449,
-        "mean_day": -4.402,
+        "n_loss_days": 58,
+        "p_loss_day": 0.8286,
+        "p_win_day": 0.1429,
+        "mean_day": -4.553,
         "avg_win_day": 0.639,
-        "avg_loss_day": -5.44,
-        "cum_sum": -303.717
+        "avg_loss_day": -5.605,
+        "cum_sum": -318.704
       },
       "equity": [
         9918.74,
@@ -52208,9 +52820,10 @@
         224.71,
         224.79,
         224.4,
-        170.73
+        221.28,
+        138.27
       ],
-      "final": 170.73,
+      "final": 138.27,
       "orig_window": {
         "start": "2026-08-13",
         "end": "2026-08-21",
@@ -62137,54 +62750,228 @@
         },
         {
           "date": "2026-11-12",
-          "day_pnl": -23.917,
-          "equity": 170.73,
+          "day_pnl": -1.39,
+          "equity": 221.28,
           "n_held": 8,
-          "n_buy": 0,
+          "n_buy": 5,
           "n_sell": 3,
-          "n_skip": 8,
+          "n_skip": 3,
           "n_cand": 8,
           "hard_red": false,
-          "bought": [],
+          "bought": [
+            "SONO",
+            "BB",
+            "SLDB",
+            "STVN",
+            "GMRS"
+          ],
           "sold": [
             "PRCH",
             "TTD",
             "HLF"
           ],
-          "held": [],
-          "buys": [],
+          "held": [
+            "SONO",
+            "BB",
+            "SLDB",
+            "STVN",
+            "GMRS"
+          ],
+          "buys": [
+            {
+              "ticker": "SONO",
+              "side": "buy",
+              "buy_px": 18.110000610351562,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 19.0,
+              "low": 18.024999618530273,
+              "high": 19.530000686645508,
+              "close": 18.110000610351562,
+              "shares": 1,
+              "fees": 0.1841,
+              "amount": 18.29,
+              "cash_after": 203.84
+            },
+            {
+              "ticker": "BB",
+              "side": "buy",
+              "buy_px": 9.119999885559082,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 9.050000190734863,
+              "low": 8.890000343322754,
+              "high": 9.380000114440918,
+              "close": 9.119999885559082,
+              "shares": 2,
+              "fees": 0.1884,
+              "amount": 18.43,
+              "cash_after": 185.41
+            },
+            {
+              "ticker": "SLDB",
+              "side": "buy",
+              "buy_px": 7.0,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 7.590000152587891,
+              "low": 6.980000019073486,
+              "high": 7.590000152587891,
+              "close": 7.0,
+              "shares": 3,
+              "fees": 0.219,
+              "amount": 21.22,
+              "cash_after": 164.19
+            },
+            {
+              "ticker": "STVN",
+              "side": "buy",
+              "buy_px": 14.359999656677246,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 13.800000190734863,
+              "low": 13.859999656677246,
+              "high": 14.758000373840332,
+              "close": 14.359999656677246,
+              "shares": 1,
+              "fees": 0.1466,
+              "amount": 14.51,
+              "cash_after": 149.69
+            },
+            {
+              "ticker": "GMRS",
+              "side": "buy",
+              "buy_px": 11.300000190734863,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 11.720000267028809,
+              "low": 10.90999984741211,
+              "high": 11.729999542236328,
+              "close": 11.300000190734863,
+              "shares": 1,
+              "fees": 0.116,
+              "amount": 11.42,
+              "cash_after": 138.27
+            }
+          ],
           "sells": [
             {
               "ticker": "PRCH",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 21.309999465942383,
+              "sell_when": "16:00 ET close",
               "buy_px": 22.139999389648438,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 1,
+              "fees": 0.2361,
+              "amount": 21.07,
+              "realized_pnl": -1.29,
+              "cash_after": 191.81
             },
             {
               "ticker": "TTD",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 15.470000267028809,
+              "sell_when": "16:00 ET close",
               "buy_px": 15.979999542236328,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 1,
+              "fees": 0.1777,
+              "amount": 15.29,
+              "realized_pnl": -0.85,
+              "cash_after": 207.1
             },
             {
               "ticker": "HLF",
               "side": "sell",
+              "sell_px": 15.210000038146973,
+              "sell_when": "16:00 ET close",
+              "buy_px": 15.550000190734863,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "shares": 1,
+              "fees": 0.1751,
+              "amount": 15.03,
+              "realized_pnl": -0.67,
+              "cash_after": 222.14
+            }
+          ],
+          "cash": 138.27,
+          "invested": 83.01,
+          "fees_cum": 724.62
+        },
+        {
+          "date": "2026-11-13",
+          "day_pnl": -37.514,
+          "equity": 138.27,
+          "n_held": 9,
+          "n_buy": 0,
+          "n_sell": 5,
+          "n_skip": 9,
+          "n_cand": 9,
+          "hard_red": false,
+          "bought": [],
+          "sold": [
+            "SONO",
+            "BB",
+            "SLDB",
+            "STVN",
+            "GMRS"
+          ],
+          "held": [],
+          "buys": [],
+          "sells": [
+            {
+              "ticker": "SONO",
+              "side": "sell",
               "sell_px": null,
               "sell_when": null,
-              "buy_px": 15.550000190734863,
+              "buy_px": 18.110000610351562,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "BB",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 9.119999885559082,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "SLDB",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 7.0,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "STVN",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 14.359999656677246,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "GMRS",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 11.300000190734863,
               "buy_when": "16:00 ET close",
               "buy_kind": "close"
             }
           ],
-          "cash": 170.73,
+          "cash": 138.27,
           "invested": 0.0,
-          "fees_cum": 723.17
+          "fees_cum": 724.62
         }
       ]
     },
@@ -62200,15 +62987,15 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 69,
+        "n_days": 70,
         "n_win_days": 10,
-        "n_loss_days": 57,
-        "p_loss_day": 0.8261,
-        "p_win_day": 0.1449,
-        "mean_day": -4.056,
+        "n_loss_days": 58,
+        "p_loss_day": 0.8286,
+        "p_win_day": 0.1429,
+        "mean_day": -4.172,
         "avg_win_day": 0.567,
-        "avg_loss_day": -5.01,
-        "cum_sum": -279.884
+        "avg_loss_day": -5.133,
+        "cum_sum": -292.037
       },
       "equity": [
         9955.38,
@@ -62279,9 +63066,10 @@
         331.34,
         330.0,
         328.87,
-        255.85
+        325.15,
+        217.12
       ],
-      "final": 255.85,
+      "final": 217.12,
       "orig_window": {
         "start": "2026-08-13",
         "end": "2026-08-21",
@@ -76726,15 +77514,22 @@
         },
         {
           "date": "2026-11-12",
-          "day_pnl": -22.203,
-          "equity": 255.85,
+          "day_pnl": -1.131,
+          "equity": 325.15,
           "n_held": 11,
-          "n_buy": 0,
+          "n_buy": 6,
           "n_sell": 5,
-          "n_skip": 11,
+          "n_skip": 5,
           "n_cand": 11,
           "hard_red": false,
-          "bought": [],
+          "bought": [
+            "SONO",
+            "BB",
+            "SLDB",
+            "STVN",
+            "COLD",
+            "GMRS"
+          ],
           "sold": [
             "TTD",
             "HLF",
@@ -76742,58 +77537,262 @@
             "VGZ",
             "GRNT"
           ],
-          "held": [],
-          "buys": [],
+          "held": [
+            "SONO",
+            "BB",
+            "SLDB",
+            "STVN",
+            "COLD",
+            "GMRS"
+          ],
+          "buys": [
+            {
+              "ticker": "SONO",
+              "side": "buy",
+              "buy_px": 18.110000610351562,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 19.0,
+              "low": 18.024999618530273,
+              "high": 19.530000686645508,
+              "close": 18.110000610351562,
+              "shares": 1,
+              "fees": 0.1841,
+              "amount": 18.29,
+              "cash_after": 307.97
+            },
+            {
+              "ticker": "BB",
+              "side": "buy",
+              "buy_px": 9.119999885559082,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 9.050000190734863,
+              "low": 8.890000343322754,
+              "high": 9.380000114440918,
+              "close": 9.119999885559082,
+              "shares": 3,
+              "fees": 0.2826,
+              "amount": 27.64,
+              "cash_after": 280.32
+            },
+            {
+              "ticker": "SLDB",
+              "side": "buy",
+              "buy_px": 7.0,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 7.590000152587891,
+              "low": 6.980000019073486,
+              "high": 7.590000152587891,
+              "close": 7.0,
+              "shares": 3,
+              "fees": 0.219,
+              "amount": 21.22,
+              "cash_after": 259.1
+            },
+            {
+              "ticker": "STVN",
+              "side": "buy",
+              "buy_px": 14.359999656677246,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 13.800000190734863,
+              "low": 13.859999656677246,
+              "high": 14.758000373840332,
+              "close": 14.359999656677246,
+              "shares": 1,
+              "fees": 0.1466,
+              "amount": 14.51,
+              "cash_after": 244.6
+            },
+            {
+              "ticker": "COLD",
+              "side": "buy",
+              "buy_px": 15.899999618530273,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 16.18000030517578,
+              "low": 15.835000038146973,
+              "high": 16.200000762939453,
+              "close": 15.899999618530273,
+              "shares": 1,
+              "fees": 0.162,
+              "amount": 16.06,
+              "cash_after": 228.54
+            },
+            {
+              "ticker": "GMRS",
+              "side": "buy",
+              "buy_px": 11.300000190734863,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 11.720000267028809,
+              "low": 10.90999984741211,
+              "high": 11.729999542236328,
+              "close": 11.300000190734863,
+              "shares": 1,
+              "fees": 0.116,
+              "amount": 11.42,
+              "cash_after": 217.12
+            }
+          ],
           "sells": [
             {
               "ticker": "TTD",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 15.470000267028809,
+              "sell_when": "16:00 ET close",
               "buy_px": 15.979999542236328,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 1,
+              "fees": 0.1777,
+              "amount": 15.29,
+              "realized_pnl": -0.85,
+              "cash_after": 271.14
             },
             {
               "ticker": "HLF",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 15.210000038146973,
+              "sell_when": "16:00 ET close",
               "buy_px": 15.550000190734863,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 1,
+              "fees": 0.1751,
+              "amount": 15.03,
+              "realized_pnl": -0.67,
+              "cash_after": 286.18
             },
             {
               "ticker": "HNST",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 4.800000190734863,
+              "sell_when": "16:00 ET close",
               "buy_px": 5.099999904632568,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 3,
+              "fees": 0.173,
+              "amount": 14.23,
+              "realized_pnl": -1.23,
+              "cash_after": 300.4
             },
             {
               "ticker": "VGZ",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 2.640000104904175,
+              "sell_when": "16:00 ET close",
               "buy_px": 2.7300000190734863,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 5,
+              "fees": 0.167,
+              "amount": 13.03,
+              "realized_pnl": -0.77,
+              "cash_after": 313.44
             },
             {
               "ticker": "GRNT",
               "side": "sell",
+              "sell_px": 6.489999771118164,
+              "sell_when": "16:00 ET close",
+              "buy_px": 6.269999980926514,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "shares": 2,
+              "fees": 0.1558,
+              "amount": 12.82,
+              "realized_pnl": 0.15,
+              "cash_after": 326.26
+            }
+          ],
+          "cash": 217.12,
+          "invested": 108.03,
+          "fees_cum": 867.32
+        },
+        {
+          "date": "2026-11-13",
+          "day_pnl": -33.225,
+          "equity": 217.12,
+          "n_held": 12,
+          "n_buy": 0,
+          "n_sell": 6,
+          "n_skip": 12,
+          "n_cand": 12,
+          "hard_red": false,
+          "bought": [],
+          "sold": [
+            "SONO",
+            "BB",
+            "SLDB",
+            "STVN",
+            "COLD",
+            "GMRS"
+          ],
+          "held": [],
+          "buys": [],
+          "sells": [
+            {
+              "ticker": "SONO",
+              "side": "sell",
               "sell_px": null,
               "sell_when": null,
-              "buy_px": 6.269999980926514,
+              "buy_px": 18.110000610351562,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "BB",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 9.119999885559082,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "SLDB",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 7.0,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "STVN",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 14.359999656677246,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "COLD",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 15.899999618530273,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "GMRS",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 11.300000190734863,
               "buy_when": "16:00 ET close",
               "buy_kind": "close"
             }
           ],
-          "cash": 255.85,
+          "cash": 217.12,
           "invested": 0.0,
-          "fees_cum": 865.36
+          "fees_cum": 867.32
         }
       ]
     },
@@ -76809,15 +77808,15 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 69,
+        "n_days": 70,
         "n_win_days": 21,
-        "n_loss_days": 47,
-        "p_loss_day": 0.6812,
-        "p_win_day": 0.3043,
-        "mean_day": -4.191,
+        "n_loss_days": 49,
+        "p_loss_day": 0.7,
+        "p_win_day": 0.3,
+        "mean_day": -4.371,
         "avg_win_day": 0.565,
-        "avg_loss_day": -6.405,
-        "cum_sum": -289.163
+        "avg_loss_day": -6.486,
+        "cum_sum": -305.951
       },
       "equity": [
         9955.38,
@@ -76888,9 +77887,10 @@
         254.16,
         255.25,
         255.81,
-        255.81
+        253.51,
+        213.23
       ],
-      "final": 255.81,
+      "final": 213.23,
       "orig_window": {
         "start": "2026-08-13",
         "end": "2026-08-21",
@@ -87648,26 +88648,170 @@
         },
         {
           "date": "2026-11-12",
-          "day_pnl": 0.0,
-          "equity": 255.81,
+          "day_pnl": -0.899,
+          "equity": 253.51,
           "n_held": 11,
-          "n_buy": 0,
+          "n_buy": 5,
           "n_sell": 0,
-          "n_skip": 8,
+          "n_skip": 3,
           "n_cand": 8,
           "hard_red": false,
-          "bought": [],
+          "bought": [
+            "SONO",
+            "BB",
+            "SLDB",
+            "STVN",
+            "GMRS"
+          ],
           "sold": [],
           "held": [
             "TTD",
             "HLF",
+            "HNST",
+            "SONO",
+            "BB",
+            "SLDB",
+            "STVN",
+            "GMRS"
+          ],
+          "buys": [
+            {
+              "ticker": "SONO",
+              "side": "buy",
+              "buy_px": 18.110000610351562,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 19.0,
+              "low": 18.024999618530273,
+              "high": 19.530000686645508,
+              "close": 18.110000610351562,
+              "shares": 1,
+              "fees": 0.1841,
+              "amount": 18.29,
+              "cash_after": 195.79
+            },
+            {
+              "ticker": "BB",
+              "side": "buy",
+              "buy_px": 9.119999885559082,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 9.050000190734863,
+              "low": 8.890000343322754,
+              "high": 9.380000114440918,
+              "close": 9.119999885559082,
+              "shares": 2,
+              "fees": 0.1884,
+              "amount": 18.43,
+              "cash_after": 177.36
+            },
+            {
+              "ticker": "SLDB",
+              "side": "buy",
+              "buy_px": 7.0,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 7.590000152587891,
+              "low": 6.980000019073486,
+              "high": 7.590000152587891,
+              "close": 7.0,
+              "shares": 3,
+              "fees": 0.219,
+              "amount": 21.22,
+              "cash_after": 156.14
+            },
+            {
+              "ticker": "STVN",
+              "side": "buy",
+              "buy_px": 14.359999656677246,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 13.800000190734863,
+              "low": 13.859999656677246,
+              "high": 14.758000373840332,
+              "close": 14.359999656677246,
+              "shares": 1,
+              "fees": 0.1466,
+              "amount": 14.51,
+              "cash_after": 141.63
+            },
+            {
+              "ticker": "GMRS",
+              "side": "buy",
+              "buy_px": 11.300000190734863,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 11.720000267028809,
+              "low": 10.90999984741211,
+              "high": 11.729999542236328,
+              "close": 11.300000190734863,
+              "shares": 1,
+              "fees": 0.116,
+              "amount": 11.42,
+              "cash_after": 130.22
+            }
+          ],
+          "sells": [],
+          "cash": 130.22,
+          "invested": 123.29,
+          "fees_cum": 627.15
+        },
+        {
+          "date": "2026-11-13",
+          "day_pnl": -15.889,
+          "equity": 213.23,
+          "n_held": 14,
+          "n_buy": 0,
+          "n_sell": 3,
+          "n_skip": 9,
+          "n_cand": 9,
+          "hard_red": false,
+          "bought": [],
+          "sold": [
+            "TTD",
+            "HLF",
             "HNST"
           ],
+          "held": [
+            "SONO",
+            "BB",
+            "SLDB",
+            "STVN",
+            "GMRS"
+          ],
           "buys": [],
-          "sells": [],
-          "cash": 214.08,
-          "invested": 41.73,
-          "fees_cum": 626.29
+          "sells": [
+            {
+              "ticker": "TTD",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 15.979999542236328,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "HLF",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 15.550000190734863,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "HNST",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 5.099999904632568,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            }
+          ],
+          "cash": 130.22,
+          "invested": 83.01,
+          "fees_cum": 627.15
         }
       ]
     },
@@ -87683,15 +88827,15 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 69,
+        "n_days": 70,
         "n_win_days": 22,
-        "n_loss_days": 47,
-        "p_loss_day": 0.6812,
-        "p_win_day": 0.3188,
-        "mean_day": -3.175,
+        "n_loss_days": 48,
+        "p_loss_day": 0.6857,
+        "p_win_day": 0.3143,
+        "mean_day": -2.79,
         "avg_win_day": 0.806,
-        "avg_loss_day": -5.039,
-        "cum_sum": -219.1
+        "avg_loss_day": -4.438,
+        "cum_sum": -195.286
       },
       "equity": [
         9955.38,
@@ -87762,9 +88906,10 @@
         1360.32,
         1367.62,
         1374.03,
-        865.76
+        1333.99,
+        1197.08
       ],
-      "final": 865.76,
+      "final": 1197.08,
       "orig_window": {
         "start": "2026-08-13",
         "end": "2026-08-21",
@@ -102473,15 +103618,21 @@
         },
         {
           "date": "2026-11-12",
-          "day_pnl": -36.991,
-          "equity": 865.76,
+          "day_pnl": -2.914,
+          "equity": 1333.99,
           "n_held": 19,
-          "n_buy": 0,
+          "n_buy": 5,
           "n_sell": 9,
-          "n_skip": 8,
+          "n_skip": 3,
           "n_cand": 8,
           "hard_red": false,
-          "bought": [],
+          "bought": [
+            "SONO",
+            "BB",
+            "SLDB",
+            "STVN",
+            "GMRS"
+          ],
           "sold": [
             "ATAT",
             "UIS",
@@ -102504,95 +103655,304 @@
             "TTD",
             "HLF",
             "FLYW",
-            "HNST"
+            "HNST",
+            "SONO",
+            "BB",
+            "SLDB",
+            "STVN",
+            "GMRS"
           ],
-          "buys": [],
+          "buys": [
+            {
+              "ticker": "SONO",
+              "side": "buy",
+              "buy_px": 18.110000610351562,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 19.0,
+              "low": 18.024999618530273,
+              "high": 19.530000686645508,
+              "close": 18.110000610351562,
+              "shares": 6,
+              "fees": 1.1046,
+              "amount": 109.76,
+              "cash_after": 829.92
+            },
+            {
+              "ticker": "BB",
+              "side": "buy",
+              "buy_px": 9.119999885559082,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 9.050000190734863,
+              "low": 8.890000343322754,
+              "high": 9.380000114440918,
+              "close": 9.119999885559082,
+              "shares": 11,
+              "fees": 1.0362,
+              "amount": 101.36,
+              "cash_after": 728.57
+            },
+            {
+              "ticker": "SLDB",
+              "side": "buy",
+              "buy_px": 7.0,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 7.590000152587891,
+              "low": 6.980000019073486,
+              "high": 7.590000152587891,
+              "close": 7.0,
+              "shares": 13,
+              "fees": 0.949,
+              "amount": 91.95,
+              "cash_after": 636.62
+            },
+            {
+              "ticker": "STVN",
+              "side": "buy",
+              "buy_px": 14.359999656677246,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 13.800000190734863,
+              "low": 13.859999656677246,
+              "high": 14.758000373840332,
+              "close": 14.359999656677246,
+              "shares": 5,
+              "fees": 0.733,
+              "amount": 72.53,
+              "cash_after": 564.08
+            },
+            {
+              "ticker": "GMRS",
+              "side": "buy",
+              "buy_px": 11.300000190734863,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 11.720000267028809,
+              "low": 10.90999984741211,
+              "high": 11.729999542236328,
+              "close": 11.300000190734863,
+              "shares": 6,
+              "fees": 0.696,
+              "amount": 68.5,
+              "cash_after": 495.59
+            }
+          ],
           "sells": [
             {
               "ticker": "ATAT",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 36.869998931884766,
+              "sell_when": "16:00 ET close",
               "buy_px": 35.90999984741211,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 1,
+              "fees": 0.3917,
+              "amount": 36.48,
+              "realized_pnl": 0.21,
+              "cash_after": 489.35
             },
             {
               "ticker": "UIS",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 2.869999885559082,
+              "sell_when": "16:00 ET close",
               "buy_px": 2.7200000286102295,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 36,
+              "fees": 1.1612,
+              "amount": 102.16,
+              "realized_pnl": 3.15,
+              "cash_after": 591.51
             },
             {
               "ticker": "GRDN",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 49.380001068115234,
+              "sell_when": "16:00 ET close",
               "buy_px": 47.02000045776367,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 1,
+              "fees": 0.5168,
+              "amount": 48.86,
+              "realized_pnl": 1.37,
+              "cash_after": 640.37
             },
             {
               "ticker": "DLO",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 13.699999809265137,
+              "sell_when": "16:00 ET close",
               "buy_px": 14.390000343322754,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 5,
+              "fees": 0.72,
+              "amount": 67.78,
+              "realized_pnl": -4.9,
+              "cash_after": 708.15
             },
             {
               "ticker": "PACS",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 48.0,
+              "sell_when": "16:00 ET close",
               "buy_px": 48.77000045776367,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 1,
+              "fees": 0.503,
+              "amount": 47.5,
+              "realized_pnl": -1.76,
+              "cash_after": 755.65
             },
             {
               "ticker": "CON",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 42.9900016784668,
+              "sell_when": "16:00 ET close",
               "buy_px": 42.400001525878906,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 1,
+              "fees": 0.4529,
+              "amount": 42.54,
+              "realized_pnl": -0.29,
+              "cash_after": 798.19
             },
             {
               "ticker": "PTLO",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 6.679999828338623,
+              "sell_when": "16:00 ET close",
               "buy_px": 6.889999866485596,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 8,
+              "fees": 0.5784,
+              "amount": 52.86,
+              "realized_pnl": -2.83,
+              "cash_after": 851.05
             },
             {
               "ticker": "EVC",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 9.430000305175781,
+              "sell_when": "16:00 ET close",
               "buy_px": 9.300000190734863,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 5,
+              "fees": 0.5065,
+              "amount": 46.64,
+              "realized_pnl": -0.34,
+              "cash_after": 897.69
             },
             {
               "ticker": "LFST",
               "side": "sell",
+              "sell_px": 14.149999618530273,
+              "sell_when": "16:00 ET close",
+              "buy_px": 14.600000381469727,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "shares": 3,
+              "fees": 0.4535,
+              "amount": 42.0,
+              "realized_pnl": -2.25,
+              "cash_after": 939.69
+            }
+          ],
+          "cash": 495.59,
+          "invested": 838.4,
+          "fees_cum": 935.91
+        },
+        {
+          "date": "2026-11-13",
+          "day_pnl": -10.263,
+          "equity": 1197.08,
+          "n_held": 20,
+          "n_buy": 0,
+          "n_sell": 5,
+          "n_skip": 9,
+          "n_cand": 9,
+          "hard_red": false,
+          "bought": [],
+          "sold": [
+            "WRBY",
+            "COMP",
+            "COLD",
+            "FG",
+            "BKSY"
+          ],
+          "held": [
+            "ZETA",
+            "PRCH",
+            "TTD",
+            "HLF",
+            "FLYW",
+            "HNST",
+            "SONO",
+            "BB",
+            "SLDB",
+            "STVN",
+            "GMRS"
+          ],
+          "buys": [],
+          "sells": [
+            {
+              "ticker": "WRBY",
+              "side": "sell",
               "sell_px": null,
               "sell_when": null,
-              "buy_px": 14.600000381469727,
+              "buy_px": 29.899999618530273,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "COMP",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 9.989999771118164,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "COLD",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 16.139999389648438,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "FG",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 25.0,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "BKSY",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 23.84000015258789,
               "buy_when": "16:00 ET close",
               "buy_kind": "close"
             }
           ],
-          "cash": 452.87,
-          "invested": 412.89,
-          "fees_cum": 926.11
+          "cash": 495.59,
+          "invested": 701.49,
+          "fees_cum": 935.91
         }
       ]
     },
@@ -102608,15 +103968,15 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 69,
+        "n_days": 70,
         "n_win_days": 24,
-        "n_loss_days": 45,
-        "p_loss_day": 0.6522,
-        "p_win_day": 0.3478,
-        "mean_day": -2.87,
+        "n_loss_days": 46,
+        "p_loss_day": 0.6571,
+        "p_win_day": 0.3429,
+        "mean_day": -2.855,
         "avg_win_day": 0.873,
-        "avg_loss_day": -4.867,
-        "cum_sum": -198.048
+        "avg_loss_day": -4.8,
+        "cum_sum": -199.842
       },
       "equity": [
         9955.38,
@@ -102687,9 +104047,10 @@
         1118.77,
         1114.73,
         1119.82,
-        943.55
+        1088.08,
+        928.12
       ],
-      "final": 943.55,
+      "final": 928.12,
       "orig_window": {
         "start": "2026-08-13",
         "end": "2026-08-21",
@@ -113871,15 +115232,19 @@
         },
         {
           "date": "2026-11-12",
-          "day_pnl": -15.741,
-          "equity": 943.55,
+          "day_pnl": -2.834,
+          "equity": 1088.08,
           "n_held": 25,
-          "n_buy": 0,
+          "n_buy": 3,
           "n_sell": 4,
-          "n_skip": 8,
+          "n_skip": 5,
           "n_cand": 8,
           "hard_red": false,
-          "bought": [],
+          "bought": [
+            "SONO",
+            "BB",
+            "SLDB"
+          ],
           "sold": [
             "KD",
             "DBX",
@@ -113906,50 +115271,209 @@
             "ATAT",
             "ZETA",
             "PRCH",
-            "TTD"
+            "TTD",
+            "SONO",
+            "BB",
+            "SLDB"
           ],
-          "buys": [],
+          "buys": [
+            {
+              "ticker": "SONO",
+              "side": "buy",
+              "buy_px": 18.110000610351562,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 19.0,
+              "low": 18.024999618530273,
+              "high": 19.530000686645508,
+              "close": 18.110000610351562,
+              "shares": 3,
+              "fees": 0.5523,
+              "amount": 54.88,
+              "cash_after": 296.18
+            },
+            {
+              "ticker": "BB",
+              "side": "buy",
+              "buy_px": 9.119999885559082,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 9.050000190734863,
+              "low": 8.890000343322754,
+              "high": 9.380000114440918,
+              "close": 9.119999885559082,
+              "shares": 6,
+              "fees": 0.5652,
+              "amount": 55.29,
+              "cash_after": 240.89
+            },
+            {
+              "ticker": "SLDB",
+              "side": "buy",
+              "buy_px": 7.0,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 7.590000152587891,
+              "low": 6.980000019073486,
+              "high": 7.590000152587891,
+              "close": 7.0,
+              "shares": 6,
+              "fees": 0.438,
+              "amount": 42.44,
+              "cash_after": 198.45
+            }
+          ],
           "sells": [
             {
               "ticker": "KD",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 17.059999465942383,
+              "sell_when": "16:00 ET close",
               "buy_px": 16.18000030517578,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 3,
+              "fees": 0.5408,
+              "amount": 50.64,
+              "realized_pnl": 1.6,
+              "cash_after": 243.51
             },
             {
               "ticker": "DBX",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 33.5099983215332,
+              "sell_when": "16:00 ET close",
               "buy_px": 35.7599983215332,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 1,
+              "fees": 0.3581,
+              "amount": 33.15,
+              "realized_pnl": -2.97,
+              "cash_after": 276.66
             },
             {
               "ticker": "HLF",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 15.210000038146973,
+              "sell_when": "16:00 ET close",
               "buy_px": 14.899999618530273,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 3,
+              "fees": 0.4853,
+              "amount": 45.14,
+              "realized_pnl": -0.01,
+              "cash_after": 321.8
             },
             {
               "ticker": "UPWK",
               "side": "sell",
+              "sell_px": 9.859999656677246,
+              "sell_when": "16:00 ET close",
+              "buy_px": 10.319999694824219,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "shares": 3,
+              "fees": 0.3248,
+              "amount": 29.26,
+              "realized_pnl": -2.02,
+              "cash_after": 351.06
+            }
+          ],
+          "cash": 198.45,
+          "invested": 889.63,
+          "fees_cum": 580.83
+        },
+        {
+          "date": "2026-11-13",
+          "day_pnl": -14.701,
+          "equity": 928.12,
+          "n_held": 25,
+          "n_buy": 0,
+          "n_sell": 5,
+          "n_skip": 9,
+          "n_cand": 9,
+          "hard_red": false,
+          "bought": [],
+          "sold": [
+            "KDP",
+            "ACHC",
+            "AVAH",
+            "MD",
+            "MGNI"
+          ],
+          "held": [
+            "UIS",
+            "GRDN",
+            "DLO",
+            "PTLO",
+            "EVC",
+            "LFST",
+            "WRBY",
+            "COMP",
+            "COLD",
+            "FG",
+            "BKSY",
+            "ATAT",
+            "ZETA",
+            "PRCH",
+            "TTD",
+            "SONO",
+            "BB",
+            "SLDB"
+          ],
+          "buys": [],
+          "sells": [
+            {
+              "ticker": "KDP",
+              "side": "sell",
               "sell_px": null,
               "sell_when": null,
-              "buy_px": 10.319999694824219,
+              "buy_px": 36.630001068115234,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "ACHC",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 37.0,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "AVAH",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 13.25,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "MD",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 31.290000915527344,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "MGNI",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 27.389999389648438,
               "buy_when": "16:00 ET close",
               "buy_kind": "close"
             }
           ],
-          "cash": 192.87,
-          "invested": 750.68,
-          "fees_cum": 577.56
+          "cash": 198.45,
+          "invested": 729.67,
+          "fees_cum": 580.83
         }
       ]
     },
@@ -113965,15 +115489,15 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 69,
+        "n_days": 70,
         "n_win_days": 31,
-        "n_loss_days": 37,
-        "p_loss_day": 0.5362,
-        "p_win_day": 0.4493,
-        "mean_day": -1.546,
+        "n_loss_days": 38,
+        "p_loss_day": 0.5429,
+        "p_win_day": 0.4429,
+        "mean_day": -1.32,
         "avg_win_day": 1.877,
-        "avg_loss_day": -4.456,
-        "cum_sum": -106.707
+        "avg_loss_day": -3.962,
+        "cum_sum": -92.38
       },
       "equity": [
         9953.57,
@@ -114044,9 +115568,10 @@
         4046.87,
         4073.01,
         4067.75,
-        2714.62
+        3964.07,
+        3314.38
       ],
-      "final": 2714.62,
+      "final": 3314.38,
       "orig_window": {
         "start": "2026-08-13",
         "end": "2026-08-21",
@@ -126933,15 +128458,20 @@
         },
         {
           "date": "2026-11-12",
-          "day_pnl": -33.265,
-          "equity": 2714.62,
+          "day_pnl": -2.549,
+          "equity": 3964.07,
           "n_held": 23,
-          "n_buy": 0,
+          "n_buy": 4,
           "n_sell": 6,
-          "n_skip": 4,
+          "n_skip": 0,
           "n_cand": 4,
           "hard_red": false,
-          "bought": [],
+          "bought": [
+            "NBIS",
+            "BB",
+            "SONO",
+            "GMRS"
+          ],
           "sold": [
             "GRDN",
             "LFST",
@@ -126969,68 +128499,298 @@
             "TTD",
             "GCT",
             "ZETA",
-            "FLYW"
+            "FLYW",
+            "NBIS",
+            "BB",
+            "SONO",
+            "GMRS"
           ],
-          "buys": [],
+          "buys": [
+            {
+              "ticker": "NBIS",
+              "side": "buy",
+              "buy_px": 128.63999938964844,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 119.87999725341797,
+              "low": 118.80999755859375,
+              "high": 132.69000244140625,
+              "close": 128.63999938964844,
+              "shares": 4,
+              "fees": 2.002,
+              "amount": 516.56,
+              "cash_after": 1627.25
+            },
+            {
+              "ticker": "BB",
+              "side": "buy",
+              "buy_px": 9.119999885559082,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 9.050000190734863,
+              "low": 8.890000343322754,
+              "high": 9.380000114440918,
+              "close": 9.119999885559082,
+              "shares": 44,
+              "fees": 2.122,
+              "amount": 403.4,
+              "cash_after": 1223.85
+            },
+            {
+              "ticker": "SONO",
+              "side": "buy",
+              "buy_px": 18.110000610351562,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 19.0,
+              "low": 18.024999618530273,
+              "high": 19.530000686645508,
+              "close": 18.110000610351562,
+              "shares": 16,
+              "fees": 2.038,
+              "amount": 291.8,
+              "cash_after": 932.05
+            },
+            {
+              "ticker": "GMRS",
+              "side": "buy",
+              "buy_px": 11.300000190734863,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 11.720000267028809,
+              "low": 10.90999984741211,
+              "high": 11.729999542236328,
+              "close": 11.300000190734863,
+              "shares": 20,
+              "fees": 2.05,
+              "amount": 228.05,
+              "cash_after": 704.0
+            }
+          ],
           "sells": [
             {
               "ticker": "GRDN",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 49.380001068115234,
+              "sell_when": "16:00 ET close",
               "buy_px": 47.02000045776367,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 7,
+              "fees": 2.031,
+              "amount": 343.63,
+              "realized_pnl": 12.48,
+              "cash_after": 1178.92
             },
             {
               "ticker": "LFST",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 14.149999618530273,
+              "sell_when": "16:00 ET close",
               "buy_px": 14.600000381469727,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 19,
+              "fees": 2.067,
+              "amount": 266.78,
+              "realized_pnl": -12.66,
+              "cash_after": 1445.7
             },
             {
               "ticker": "CON",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 42.9900016784668,
+              "sell_when": "16:00 ET close",
               "buy_px": 42.400001525878906,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 5,
+              "fees": 2.025,
+              "amount": 212.93,
+              "realized_pnl": -1.08,
+              "cash_after": 1658.62
             },
             {
               "ticker": "PACS",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 48.0,
+              "sell_when": "16:00 ET close",
               "buy_px": 48.77000045776367,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 4,
+              "fees": 1.952,
+              "amount": 190.05,
+              "realized_pnl": -6.99,
+              "cash_after": 1848.67
             },
             {
               "ticker": "UIS",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 2.869999885559082,
+              "sell_when": "16:00 ET close",
               "buy_px": 2.7200000286102295,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 61,
+              "fees": 1.9538,
+              "amount": 173.12,
+              "realized_pnl": 5.35,
+              "cash_after": 2021.79
             },
             {
               "ticker": "DLO",
               "side": "sell",
+              "sell_px": 13.699999809265137,
+              "sell_when": "16:00 ET close",
+              "buy_px": 14.390000343322754,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "shares": 9,
+              "fees": 1.28,
+              "amount": 122.02,
+              "realized_pnl": -8.81,
+              "cash_after": 2143.81
+            }
+          ],
+          "cash": 704.0,
+          "invested": 3260.07,
+          "fees_cum": 1141.98
+        },
+        {
+          "date": "2026-11-13",
+          "day_pnl": -16.389,
+          "equity": 3314.38,
+          "n_held": 18,
+          "n_buy": 0,
+          "n_sell": 10,
+          "n_skip": 5,
+          "n_cand": 5,
+          "hard_red": false,
+          "bought": [],
+          "sold": [
+            "MGNI",
+            "TMDX",
+            "ETON",
+            "WRBY",
+            "ADPT",
+            "RBLX",
+            "SG",
+            "ASO",
+            "EVER",
+            "VVV"
+          ],
+          "held": [
+            "HNST",
+            "HLF",
+            "CLX",
+            "PRCH",
+            "PFGC",
+            "TTD",
+            "GCT",
+            "ZETA",
+            "FLYW",
+            "NBIS",
+            "BB",
+            "SONO",
+            "GMRS"
+          ],
+          "buys": [],
+          "sells": [
+            {
+              "ticker": "MGNI",
+              "side": "sell",
               "sell_px": null,
               "sell_when": null,
-              "buy_px": 14.390000343322754,
+              "buy_px": 28.520000457763672,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "TMDX",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 90.94499969482422,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "ETON",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 67.54000091552734,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "WRBY",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 29.899999618530273,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "ADPT",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 29.360000610351562,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "RBLX",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 51.189998626708984,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "SG",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 13.239999771118164,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "ASO",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 70.38999938964844,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "EVER",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 28.030000686645508,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "VVV",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 35.72999954223633,
               "buy_when": "16:00 ET close",
               "buy_kind": "close"
             }
           ],
-          "cash": 835.29,
-          "invested": 1879.33,
-          "fees_cum": 1122.46
+          "cash": 704.0,
+          "invested": 2610.38,
+          "fees_cum": 1141.98
         }
       ]
     },
@@ -127046,15 +128806,15 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 69,
+        "n_days": 70,
         "n_win_days": 31,
-        "n_loss_days": 37,
-        "p_loss_day": 0.5362,
-        "p_win_day": 0.4493,
-        "mean_day": -3.099,
+        "n_loss_days": 38,
+        "p_loss_day": 0.5429,
+        "p_win_day": 0.4429,
+        "mean_day": -2.835,
         "avg_win_day": 0.975,
-        "avg_loss_day": -6.596,
-        "cum_sum": -213.821
+        "avg_loss_day": -6.018,
+        "cum_sum": -198.477
       },
       "equity": [
         9918.74,
@@ -127125,9 +128885,10 @@
         1342.21,
         1363.69,
         1368.78,
-        758.73
+        1340.35,
+        976.47
       ],
-      "final": 758.73,
+      "final": 976.47,
       "orig_window": {
         "start": "2026-08-13",
         "end": "2026-08-21",
@@ -135389,15 +137150,20 @@
         },
         {
           "date": "2026-11-12",
-          "day_pnl": -44.569,
-          "equity": 758.73,
+          "day_pnl": -2.077,
+          "equity": 1340.35,
           "n_held": 10,
-          "n_buy": 0,
+          "n_buy": 4,
           "n_sell": 5,
-          "n_skip": 8,
+          "n_skip": 4,
           "n_cand": 8,
           "hard_red": false,
-          "bought": [],
+          "bought": [
+            "SONO",
+            "BB",
+            "SLDB",
+            "STVN"
+          ],
           "sold": [
             "UIS",
             "GRDN",
@@ -135409,59 +137175,188 @@
             "TMDX",
             "ATAT",
             "ZETA",
-            "PRCH"
+            "PRCH",
+            "SONO",
+            "BB",
+            "SLDB",
+            "STVN"
           ],
-          "buys": [],
+          "buys": [
+            {
+              "ticker": "SONO",
+              "side": "buy",
+              "buy_px": 18.110000610351562,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 19.0,
+              "low": 18.024999618530273,
+              "high": 19.530000686645508,
+              "close": 18.110000610351562,
+              "shares": 7,
+              "fees": 1.2887,
+              "amount": 128.06,
+              "cash_after": 657.49
+            },
+            {
+              "ticker": "BB",
+              "side": "buy",
+              "buy_px": 9.119999885559082,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 9.050000190734863,
+              "low": 8.890000343322754,
+              "high": 9.380000114440918,
+              "close": 9.119999885559082,
+              "shares": 12,
+              "fees": 1.1304,
+              "amount": 110.57,
+              "cash_after": 546.92
+            },
+            {
+              "ticker": "SLDB",
+              "side": "buy",
+              "buy_px": 7.0,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 7.590000152587891,
+              "low": 6.980000019073486,
+              "high": 7.590000152587891,
+              "close": 7.0,
+              "shares": 13,
+              "fees": 0.949,
+              "amount": 91.95,
+              "cash_after": 454.97
+            },
+            {
+              "ticker": "STVN",
+              "side": "buy",
+              "buy_px": 14.359999656677246,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 13.800000190734863,
+              "low": 13.859999656677246,
+              "high": 14.758000373840332,
+              "close": 14.359999656677246,
+              "shares": 5,
+              "fees": 0.733,
+              "amount": 72.53,
+              "cash_after": 382.44
+            }
+          ],
           "sells": [
             {
               "ticker": "UIS",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 2.869999885559082,
+              "sell_when": "16:00 ET close",
               "buy_px": 2.7200000286102295,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 68,
+              "fees": 2.1769,
+              "amount": 192.98,
+              "realized_pnl": 5.97,
+              "cash_after": 392.91
             },
             {
               "ticker": "GRDN",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 49.380001068115234,
+              "sell_when": "16:00 ET close",
               "buy_px": 47.02000045776367,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 3,
+              "fees": 1.5104,
+              "amount": 146.63,
+              "realized_pnl": 4.15,
+              "cash_after": 539.54
             },
             {
               "ticker": "DLO",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 13.699999809265137,
+              "sell_when": "16:00 ET close",
               "buy_px": 14.390000343322754,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 8,
+              "fees": 1.14,
+              "amount": 108.46,
+              "realized_pnl": -7.84,
+              "cash_after": 648.0
             },
             {
               "ticker": "PACS",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 48.0,
+              "sell_when": "16:00 ET close",
               "buy_px": 48.77000045776367,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 2,
+              "fees": 0.986,
+              "amount": 95.01,
+              "realized_pnl": -3.51,
+              "cash_after": 743.02
             },
             {
               "ticker": "CON",
               "side": "sell",
+              "sell_px": 42.9900016784668,
+              "sell_when": "16:00 ET close",
+              "buy_px": 42.400001525878906,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "shares": 1,
+              "fees": 0.4529,
+              "amount": 42.54,
+              "realized_pnl": -0.29,
+              "cash_after": 785.55
+            }
+          ],
+          "cash": 382.44,
+          "invested": 957.91,
+          "fees_cum": 810.62
+        },
+        {
+          "date": "2026-11-13",
+          "day_pnl": -27.148,
+          "equity": 976.47,
+          "n_held": 10,
+          "n_buy": 0,
+          "n_sell": 1,
+          "n_skip": 9,
+          "n_cand": 9,
+          "hard_red": false,
+          "bought": [],
+          "sold": [
+            "TMDX"
+          ],
+          "held": [
+            "ATAT",
+            "ZETA",
+            "PRCH",
+            "SONO",
+            "BB",
+            "SLDB",
+            "STVN"
+          ],
+          "buys": [],
+          "sells": [
+            {
+              "ticker": "TMDX",
+              "side": "sell",
               "sell_px": null,
               "sell_when": null,
-              "buy_px": 42.400001525878906,
+              "buy_px": 90.94499969482422,
               "buy_when": "16:00 ET close",
               "buy_kind": "close"
             }
           ],
-          "cash": 199.93,
-          "invested": 558.8,
-          "fees_cum": 800.25
+          "cash": 382.44,
+          "invested": 594.03,
+          "fees_cum": 810.62
         }
       ]
     },
@@ -135477,15 +137372,15 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 69,
+        "n_days": 70,
         "n_win_days": 10,
-        "n_loss_days": 56,
-        "p_loss_day": 0.8116,
-        "p_win_day": 0.1449,
-        "mean_day": -4.123,
+        "n_loss_days": 57,
+        "p_loss_day": 0.8143,
+        "p_win_day": 0.1429,
+        "mean_day": -4.284,
         "avg_win_day": 1.127,
-        "avg_loss_day": -5.281,
-        "cum_sum": -284.48
+        "avg_loss_day": -5.459,
+        "cum_sum": -299.905
       },
       "equity": [
         10000.0,
@@ -135556,9 +137451,10 @@
         232.59,
         232.81,
         232.57,
-        194.77
+        230.31,
+        159.59
       ],
-      "final": 194.77,
+      "final": 159.59,
       "orig_window": {
         "start": "2026-08-13",
         "end": "2026-08-21",
@@ -145135,44 +147031,132 @@
         },
         {
           "date": "2026-11-12",
-          "day_pnl": -16.253,
-          "equity": 194.77,
+          "day_pnl": -0.972,
+          "equity": 230.31,
           "n_held": 5,
-          "n_buy": 0,
+          "n_buy": 2,
           "n_sell": 2,
-          "n_skip": 5,
+          "n_skip": 3,
           "n_cand": 5,
           "hard_red": false,
-          "bought": [],
+          "bought": [
+            "SLDB",
+            "STVN"
+          ],
           "sold": [
             "HLF",
             "FLYW"
+          ],
+          "held": [
+            "SLDB",
+            "STVN"
+          ],
+          "buys": [
+            {
+              "ticker": "SLDB",
+              "side": "buy",
+              "buy_px": 7.0,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 7.590000152587891,
+              "low": 6.980000019073486,
+              "high": 7.590000152587891,
+              "close": 7.0,
+              "shares": 6,
+              "fees": 0.438,
+              "amount": 42.44,
+              "cash_after": 188.6
+            },
+            {
+              "ticker": "STVN",
+              "side": "buy",
+              "buy_px": 14.359999656677246,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 13.800000190734863,
+              "low": 13.859999656677246,
+              "high": 14.758000373840332,
+              "close": 14.359999656677246,
+              "shares": 2,
+              "fees": 0.2932,
+              "amount": 29.01,
+              "cash_after": 159.59
+            }
+          ],
+          "sells": [
+            {
+              "ticker": "HLF",
+              "side": "sell",
+              "sell_px": 15.210000038146973,
+              "sell_when": "16:00 ET close",
+              "buy_px": 15.550000190734863,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "shares": 1,
+              "fees": 0.1751,
+              "amount": 15.03,
+              "realized_pnl": -0.67,
+              "cash_after": 209.81
+            },
+            {
+              "ticker": "FLYW",
+              "side": "sell",
+              "sell_px": 21.469999313354492,
+              "sell_when": "16:00 ET close",
+              "buy_px": 22.25,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "shares": 1,
+              "fees": 0.2377,
+              "amount": 21.23,
+              "realized_pnl": -1.24,
+              "cash_after": 231.04
+            }
+          ],
+          "cash": 159.59,
+          "invested": 70.72,
+          "fees_cum": 505.75
+        },
+        {
+          "date": "2026-11-13",
+          "day_pnl": -30.706,
+          "equity": 159.59,
+          "n_held": 8,
+          "n_buy": 0,
+          "n_sell": 2,
+          "n_skip": 8,
+          "n_cand": 8,
+          "hard_red": false,
+          "bought": [],
+          "sold": [
+            "SLDB",
+            "STVN"
           ],
           "held": [],
           "buys": [],
           "sells": [
             {
-              "ticker": "HLF",
+              "ticker": "SLDB",
               "side": "sell",
               "sell_px": null,
               "sell_when": null,
-              "buy_px": 15.550000190734863,
+              "buy_px": 7.0,
               "buy_when": "16:00 ET close",
               "buy_kind": "close"
             },
             {
-              "ticker": "FLYW",
+              "ticker": "STVN",
               "side": "sell",
               "sell_px": null,
               "sell_when": null,
-              "buy_px": 22.25,
+              "buy_px": 14.359999656677246,
               "buy_when": "16:00 ET close",
               "buy_kind": "close"
             }
           ],
-          "cash": 194.77,
+          "cash": 159.59,
           "invested": 0.0,
-          "fees_cum": 504.61
+          "fees_cum": 505.75
         }
       ]
     },
@@ -145188,15 +147172,15 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 69,
+        "n_days": 70,
         "n_win_days": 13,
-        "n_loss_days": 54,
-        "p_loss_day": 0.7826,
-        "p_win_day": 0.1884,
-        "mean_day": -4.104,
+        "n_loss_days": 55,
+        "p_loss_day": 0.7857,
+        "p_win_day": 0.1857,
+        "mean_day": -4.406,
         "avg_win_day": 0.628,
-        "avg_loss_day": -5.395,
-        "cum_sum": -283.193
+        "avg_loss_day": -5.756,
+        "cum_sum": -308.43
       },
       "equity": [
         9955.38,
@@ -145267,9 +147251,10 @@
         238.18,
         238.34,
         238.08,
-        212.33
+        235.99,
+        152.98
       ],
-      "final": 212.33,
+      "final": 152.98,
       "orig_window": {
         "start": "2026-08-13",
         "end": "2026-08-21",
@@ -156644,44 +158629,213 @@
         },
         {
           "date": "2026-11-12",
-          "day_pnl": -10.816,
-          "equity": 212.33,
+          "day_pnl": -0.878,
+          "equity": 235.99,
+          "n_held": 8,
+          "n_buy": 5,
+          "n_sell": 2,
+          "n_skip": 3,
+          "n_cand": 8,
+          "hard_red": false,
+          "bought": [
+            "SONO",
+            "BB",
+            "SLDB",
+            "STVN",
+            "GMRS"
+          ],
+          "sold": [
+            "HLF",
+            "HNST"
+          ],
+          "held": [
+            "SONO",
+            "BB",
+            "SLDB",
+            "STVN",
+            "GMRS"
+          ],
+          "buys": [
+            {
+              "ticker": "SONO",
+              "side": "buy",
+              "buy_px": 18.110000610351562,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 19.0,
+              "low": 18.024999618530273,
+              "high": 19.530000686645508,
+              "close": 18.110000610351562,
+              "shares": 1,
+              "fees": 0.1841,
+              "amount": 18.29,
+              "cash_after": 218.55
+            },
+            {
+              "ticker": "BB",
+              "side": "buy",
+              "buy_px": 9.119999885559082,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 9.050000190734863,
+              "low": 8.890000343322754,
+              "high": 9.380000114440918,
+              "close": 9.119999885559082,
+              "shares": 2,
+              "fees": 0.1884,
+              "amount": 18.43,
+              "cash_after": 200.12
+            },
+            {
+              "ticker": "SLDB",
+              "side": "buy",
+              "buy_px": 7.0,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 7.590000152587891,
+              "low": 6.980000019073486,
+              "high": 7.590000152587891,
+              "close": 7.0,
+              "shares": 3,
+              "fees": 0.219,
+              "amount": 21.22,
+              "cash_after": 178.9
+            },
+            {
+              "ticker": "STVN",
+              "side": "buy",
+              "buy_px": 14.359999656677246,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 13.800000190734863,
+              "low": 13.859999656677246,
+              "high": 14.758000373840332,
+              "close": 14.359999656677246,
+              "shares": 1,
+              "fees": 0.1466,
+              "amount": 14.51,
+              "cash_after": 164.39
+            },
+            {
+              "ticker": "GMRS",
+              "side": "buy",
+              "buy_px": 11.300000190734863,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 11.720000267028809,
+              "low": 10.90999984741211,
+              "high": 11.729999542236328,
+              "close": 11.300000190734863,
+              "shares": 1,
+              "fees": 0.116,
+              "amount": 11.42,
+              "cash_after": 152.98
+            }
+          ],
+          "sells": [
+            {
+              "ticker": "HLF",
+              "side": "sell",
+              "sell_px": 15.210000038146973,
+              "sell_when": "16:00 ET close",
+              "buy_px": 15.550000190734863,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "shares": 1,
+              "fees": 0.1751,
+              "amount": 15.03,
+              "realized_pnl": -0.67,
+              "cash_after": 227.36
+            },
+            {
+              "ticker": "HNST",
+              "side": "sell",
+              "sell_px": 4.800000190734863,
+              "sell_when": "16:00 ET close",
+              "buy_px": 5.099999904632568,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "shares": 2,
+              "fees": 0.122,
+              "amount": 9.48,
+              "realized_pnl": -0.83,
+              "cash_after": 236.84
+            }
+          ],
+          "cash": 152.98,
+          "invested": 83.01,
+          "fees_cum": 731.66
+        },
+        {
+          "date": "2026-11-13",
+          "day_pnl": -35.175,
+          "equity": 152.98,
           "n_held": 8,
           "n_buy": 0,
-          "n_sell": 2,
+          "n_sell": 5,
           "n_skip": 8,
           "n_cand": 8,
           "hard_red": false,
           "bought": [],
           "sold": [
-            "HLF",
-            "HNST"
+            "SONO",
+            "BB",
+            "SLDB",
+            "STVN",
+            "GMRS"
           ],
           "held": [],
           "buys": [],
           "sells": [
             {
-              "ticker": "HLF",
+              "ticker": "SONO",
               "side": "sell",
               "sell_px": null,
               "sell_when": null,
-              "buy_px": 15.550000190734863,
+              "buy_px": 18.110000610351562,
               "buy_when": "16:00 ET close",
               "buy_kind": "close"
             },
             {
-              "ticker": "HNST",
+              "ticker": "BB",
               "side": "sell",
               "sell_px": null,
               "sell_when": null,
-              "buy_px": 5.099999904632568,
+              "buy_px": 9.119999885559082,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "SLDB",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 7.0,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "STVN",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 14.359999656677246,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "GMRS",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 11.300000190734863,
               "buy_when": "16:00 ET close",
               "buy_kind": "close"
             }
           ],
-          "cash": 212.33,
+          "cash": 152.98,
           "invested": 0.0,
-          "fees_cum": 730.51
+          "fees_cum": 731.66
         }
       ]
     },
@@ -156697,15 +158851,15 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 69,
+        "n_days": 70,
         "n_win_days": 10,
-        "n_loss_days": 57,
-        "p_loss_day": 0.8261,
-        "p_win_day": 0.1449,
-        "mean_day": -4.178,
+        "n_loss_days": 58,
+        "p_loss_day": 0.8286,
+        "p_win_day": 0.1429,
+        "mean_day": -4.47,
         "avg_win_day": 1.129,
-        "avg_loss_day": -5.256,
-        "cum_sum": -288.291
+        "avg_loss_day": -5.59,
+        "cum_sum": -312.913
       },
       "equity": [
         9918.74,
@@ -156776,9 +158930,10 @@
         221.0,
         220.77,
         220.62,
-        189.09
+        218.56,
+        135.55
       ],
-      "final": 189.09,
+      "final": 135.55,
       "orig_window": {
         "start": "2026-08-13",
         "end": "2026-08-21",
@@ -165480,44 +167635,213 @@
         },
         {
           "date": "2026-11-12",
-          "day_pnl": -14.292,
-          "equity": 189.09,
+          "day_pnl": -0.934,
+          "equity": 218.56,
+          "n_held": 8,
+          "n_buy": 5,
+          "n_sell": 2,
+          "n_skip": 3,
+          "n_cand": 8,
+          "hard_red": false,
+          "bought": [
+            "SONO",
+            "BB",
+            "SLDB",
+            "STVN",
+            "GMRS"
+          ],
+          "sold": [
+            "TTD",
+            "HLF"
+          ],
+          "held": [
+            "SONO",
+            "BB",
+            "SLDB",
+            "STVN",
+            "GMRS"
+          ],
+          "buys": [
+            {
+              "ticker": "SONO",
+              "side": "buy",
+              "buy_px": 18.110000610351562,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 19.0,
+              "low": 18.024999618530273,
+              "high": 19.530000686645508,
+              "close": 18.110000610351562,
+              "shares": 1,
+              "fees": 0.1841,
+              "amount": 18.29,
+              "cash_after": 201.12
+            },
+            {
+              "ticker": "BB",
+              "side": "buy",
+              "buy_px": 9.119999885559082,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 9.050000190734863,
+              "low": 8.890000343322754,
+              "high": 9.380000114440918,
+              "close": 9.119999885559082,
+              "shares": 2,
+              "fees": 0.1884,
+              "amount": 18.43,
+              "cash_after": 182.69
+            },
+            {
+              "ticker": "SLDB",
+              "side": "buy",
+              "buy_px": 7.0,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 7.590000152587891,
+              "low": 6.980000019073486,
+              "high": 7.590000152587891,
+              "close": 7.0,
+              "shares": 3,
+              "fees": 0.219,
+              "amount": 21.22,
+              "cash_after": 161.47
+            },
+            {
+              "ticker": "STVN",
+              "side": "buy",
+              "buy_px": 14.359999656677246,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 13.800000190734863,
+              "low": 13.859999656677246,
+              "high": 14.758000373840332,
+              "close": 14.359999656677246,
+              "shares": 1,
+              "fees": 0.1466,
+              "amount": 14.51,
+              "cash_after": 146.96
+            },
+            {
+              "ticker": "GMRS",
+              "side": "buy",
+              "buy_px": 11.300000190734863,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 11.720000267028809,
+              "low": 10.90999984741211,
+              "high": 11.729999542236328,
+              "close": 11.300000190734863,
+              "shares": 1,
+              "fees": 0.116,
+              "amount": 11.42,
+              "cash_after": 135.55
+            }
+          ],
+          "sells": [
+            {
+              "ticker": "TTD",
+              "side": "sell",
+              "sell_px": 15.470000267028809,
+              "sell_when": "16:00 ET close",
+              "buy_px": 15.979999542236328,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "shares": 1,
+              "fees": 0.1777,
+              "amount": 15.29,
+              "realized_pnl": -0.85,
+              "cash_after": 204.38
+            },
+            {
+              "ticker": "HLF",
+              "side": "sell",
+              "sell_px": 15.210000038146973,
+              "sell_when": "16:00 ET close",
+              "buy_px": 15.550000190734863,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "shares": 1,
+              "fees": 0.1751,
+              "amount": 15.03,
+              "realized_pnl": -0.67,
+              "cash_after": 219.41
+            }
+          ],
+          "cash": 135.55,
+          "invested": 83.01,
+          "fees_cum": 637.86
+        },
+        {
+          "date": "2026-11-13",
+          "day_pnl": -37.98,
+          "equity": 135.55,
           "n_held": 8,
           "n_buy": 0,
-          "n_sell": 2,
+          "n_sell": 5,
           "n_skip": 8,
           "n_cand": 8,
           "hard_red": false,
           "bought": [],
           "sold": [
-            "TTD",
-            "HLF"
+            "SONO",
+            "BB",
+            "SLDB",
+            "STVN",
+            "GMRS"
           ],
           "held": [],
           "buys": [],
           "sells": [
             {
-              "ticker": "TTD",
+              "ticker": "SONO",
               "side": "sell",
               "sell_px": null,
               "sell_when": null,
-              "buy_px": 15.979999542236328,
+              "buy_px": 18.110000610351562,
               "buy_when": "16:00 ET close",
               "buy_kind": "close"
             },
             {
-              "ticker": "HLF",
+              "ticker": "BB",
               "side": "sell",
               "sell_px": null,
               "sell_when": null,
-              "buy_px": 15.550000190734863,
+              "buy_px": 9.119999885559082,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "SLDB",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 7.0,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "STVN",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 14.359999656677246,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "GMRS",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 11.300000190734863,
               "buy_when": "16:00 ET close",
               "buy_kind": "close"
             }
           ],
-          "cash": 189.09,
+          "cash": 135.55,
           "invested": 0.0,
-          "fees_cum": 636.65
+          "fees_cum": 637.86
         }
       ]
     },
@@ -165533,15 +167857,15 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 69,
+        "n_days": 70,
         "n_win_days": 20,
-        "n_loss_days": 48,
-        "p_loss_day": 0.6957,
-        "p_win_day": 0.2899,
-        "mean_day": -2.914,
+        "n_loss_days": 49,
+        "p_loss_day": 0.7,
+        "p_win_day": 0.2857,
+        "mean_day": -2.556,
         "avg_win_day": 1.095,
-        "avg_loss_day": -4.646,
-        "cum_sum": -201.085
+        "avg_loss_day": -4.098,
+        "cum_sum": -178.901
       },
       "equity": [
         10000.0,
@@ -165612,9 +167936,10 @@
         1624.0,
         1634.05,
         1637.74,
-        1102.29
+        1599.9,
+        1468.72
       ],
-      "final": 1102.29,
+      "final": 1468.72,
       "orig_window": {
         "start": "2026-08-13",
         "end": "2026-08-21",
@@ -177916,15 +180241,20 @@
         },
         {
           "date": "2026-11-12",
-          "day_pnl": -32.694,
-          "equity": 1102.29,
+          "day_pnl": -2.311,
+          "equity": 1599.9,
           "n_held": 15,
-          "n_buy": 0,
+          "n_buy": 4,
           "n_sell": 7,
-          "n_skip": 5,
+          "n_skip": 1,
           "n_cand": 5,
           "hard_red": false,
-          "bought": [],
+          "bought": [
+            "NBIS",
+            "TSEM",
+            "SLDB",
+            "STVN"
+          ],
           "sold": [
             "ATAT",
             "ACHC",
@@ -177944,77 +180274,258 @@
             "ZETA",
             "HLF",
             "GCT",
-            "FLYW"
+            "FLYW",
+            "NBIS",
+            "TSEM",
+            "SLDB",
+            "STVN"
           ],
-          "buys": [],
+          "buys": [
+            {
+              "ticker": "NBIS",
+              "side": "buy",
+              "buy_px": 128.63999938964844,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 119.87999725341797,
+              "low": 118.80999755859375,
+              "high": 132.69000244140625,
+              "close": 128.63999938964844,
+              "shares": 1,
+              "fees": 1.2894,
+              "amount": 129.93,
+              "cash_after": 899.57
+            },
+            {
+              "ticker": "TSEM",
+              "side": "buy",
+              "buy_px": 157.86000061035156,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 149.16000366210938,
+              "low": 147.71499633789062,
+              "high": 161.60499572753906,
+              "close": 157.86000061035156,
+              "shares": 1,
+              "fees": 1.5816,
+              "amount": 159.44,
+              "cash_after": 740.12
+            },
+            {
+              "ticker": "SLDB",
+              "side": "buy",
+              "buy_px": 7.0,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 7.590000152587891,
+              "low": 6.980000019073486,
+              "high": 7.590000152587891,
+              "close": 7.0,
+              "shares": 21,
+              "fees": 1.533,
+              "amount": 148.53,
+              "cash_after": 591.59
+            },
+            {
+              "ticker": "STVN",
+              "side": "buy",
+              "buy_px": 14.359999656677246,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 13.800000190734863,
+              "low": 13.859999656677246,
+              "high": 14.758000373840332,
+              "close": 14.359999656677246,
+              "shares": 8,
+              "fees": 1.1728,
+              "amount": 116.05,
+              "cash_after": 475.54
+            }
+          ],
           "sells": [
             {
               "ticker": "ATAT",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 36.869998931884766,
+              "sell_when": "16:00 ET close",
               "buy_px": 35.90999984741211,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 2,
+              "fees": 0.7634,
+              "amount": 72.98,
+              "realized_pnl": 0.43,
+              "cash_after": 589.47
             },
             {
               "ticker": "ACHC",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 37.810001373291016,
+              "sell_when": "16:00 ET close",
               "buy_px": 38.61000061035156,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 3,
+              "fees": 1.1633,
+              "amount": 112.27,
+              "realized_pnl": -4.73,
+              "cash_after": 701.74
             },
             {
               "ticker": "UIS",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 2.869999885559082,
+              "sell_when": "16:00 ET close",
               "buy_px": 2.7200000286102295,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 37,
+              "fees": 1.1929,
+              "amount": 105.0,
+              "realized_pnl": 3.24,
+              "cash_after": 806.74
             },
             {
               "ticker": "GRDN",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 49.380001068115234,
+              "sell_when": "16:00 ET close",
               "buy_px": 47.02000045776367,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 1,
+              "fees": 0.5168,
+              "amount": 48.86,
+              "realized_pnl": 1.37,
+              "cash_after": 855.6
             },
             {
               "ticker": "DLO",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 13.699999809265137,
+              "sell_when": "16:00 ET close",
               "buy_px": 14.390000343322754,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 5,
+              "fees": 0.72,
+              "amount": 67.78,
+              "realized_pnl": -4.9,
+              "cash_after": 923.38
             },
             {
               "ticker": "PTLO",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 6.679999828338623,
+              "sell_when": "16:00 ET close",
               "buy_px": 6.889999866485596,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 9,
+              "fees": 0.6482,
+              "amount": 59.47,
+              "realized_pnl": -3.19,
+              "cash_after": 982.85
             },
             {
               "ticker": "EVC",
               "side": "sell",
+              "sell_px": 9.430000305175781,
+              "sell_when": "16:00 ET close",
+              "buy_px": 9.300000190734863,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "shares": 5,
+              "fees": 0.5065,
+              "amount": 46.64,
+              "realized_pnl": -0.34,
+              "cash_after": 1029.5
+            }
+          ],
+          "cash": 475.54,
+          "invested": 1124.36,
+          "fees_cum": 717.98
+        },
+        {
+          "date": "2026-11-13",
+          "day_pnl": -8.199,
+          "equity": 1468.72,
+          "n_held": 17,
+          "n_buy": 0,
+          "n_sell": 5,
+          "n_skip": 8,
+          "n_cand": 8,
+          "hard_red": false,
+          "bought": [],
+          "sold": [
+            "WRBY",
+            "COMP",
+            "COLD",
+            "FG",
+            "BKSY"
+          ],
+          "held": [
+            "CLX",
+            "ZETA",
+            "HLF",
+            "GCT",
+            "FLYW",
+            "NBIS",
+            "TSEM",
+            "SLDB",
+            "STVN"
+          ],
+          "buys": [],
+          "sells": [
+            {
+              "ticker": "WRBY",
+              "side": "sell",
               "sell_px": null,
               "sell_when": null,
-              "buy_px": 9.300000190734863,
+              "buy_px": 29.899999618530273,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "COMP",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 9.989999771118164,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "COLD",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 16.139999389648438,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "FG",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 25.0,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "BKSY",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 23.84000015258789,
               "buy_when": "16:00 ET close",
               "buy_kind": "close"
             }
           ],
-          "cash": 516.5,
-          "invested": 585.79,
-          "fees_cum": 706.89
+          "cash": 475.54,
+          "invested": 993.18,
+          "fees_cum": 717.98
         }
       ]
     },
@@ -178030,15 +180541,15 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 69,
+        "n_days": 70,
         "n_win_days": 11,
-        "n_loss_days": 47,
-        "p_loss_day": 0.6812,
-        "p_win_day": 0.1594,
-        "mean_day": -3.978,
+        "n_loss_days": 48,
+        "p_loss_day": 0.6857,
+        "p_win_day": 0.1571,
+        "mean_day": -4.307,
         "avg_win_day": 0.219,
-        "avg_loss_day": -5.891,
-        "cum_sum": -274.475
+        "avg_loss_day": -6.332,
+        "cum_sum": -301.522
       },
       "equity": [
         9955.38,
@@ -178109,9 +180620,10 @@
         320.93,
         321.14,
         320.8,
-        273.97
+        317.2,
+        188.66
       ],
-      "final": 273.97,
+      "final": 188.66,
       "orig_window": {
         "start": "2026-08-13",
         "end": "2026-08-21",
@@ -188636,54 +191148,228 @@
         },
         {
           "date": "2026-11-12",
-          "day_pnl": -14.598,
-          "equity": 273.97,
+          "day_pnl": -1.122,
+          "equity": 317.2,
           "n_held": 8,
-          "n_buy": 0,
+          "n_buy": 5,
           "n_sell": 3,
-          "n_skip": 8,
+          "n_skip": 3,
           "n_cand": 8,
           "hard_red": false,
-          "bought": [],
+          "bought": [
+            "SONO",
+            "BB",
+            "SLDB",
+            "STVN",
+            "GMRS"
+          ],
           "sold": [
             "TTD",
             "HLF",
             "HNST"
           ],
-          "held": [],
-          "buys": [],
+          "held": [
+            "SONO",
+            "BB",
+            "SLDB",
+            "STVN",
+            "GMRS"
+          ],
+          "buys": [
+            {
+              "ticker": "SONO",
+              "side": "buy",
+              "buy_px": 18.110000610351562,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 19.0,
+              "low": 18.024999618530273,
+              "high": 19.530000686645508,
+              "close": 18.110000610351562,
+              "shares": 2,
+              "fees": 0.3682,
+              "amount": 36.59,
+              "cash_after": 281.94
+            },
+            {
+              "ticker": "BB",
+              "side": "buy",
+              "buy_px": 9.119999885559082,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 9.050000190734863,
+              "low": 8.890000343322754,
+              "high": 9.380000114440918,
+              "close": 9.119999885559082,
+              "shares": 3,
+              "fees": 0.2826,
+              "amount": 27.64,
+              "cash_after": 254.29
+            },
+            {
+              "ticker": "SLDB",
+              "side": "buy",
+              "buy_px": 7.0,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 7.590000152587891,
+              "low": 6.980000019073486,
+              "high": 7.590000152587891,
+              "close": 7.0,
+              "shares": 4,
+              "fees": 0.292,
+              "amount": 28.29,
+              "cash_after": 226.0
+            },
+            {
+              "ticker": "STVN",
+              "side": "buy",
+              "buy_px": 14.359999656677246,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 13.800000190734863,
+              "low": 13.859999656677246,
+              "high": 14.758000373840332,
+              "close": 14.359999656677246,
+              "shares": 1,
+              "fees": 0.1466,
+              "amount": 14.51,
+              "cash_after": 211.49
+            },
+            {
+              "ticker": "GMRS",
+              "side": "buy",
+              "buy_px": 11.300000190734863,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 11.720000267028809,
+              "low": 10.90999984741211,
+              "high": 11.729999542236328,
+              "close": 11.300000190734863,
+              "shares": 2,
+              "fees": 0.232,
+              "amount": 22.83,
+              "cash_after": 188.66
+            }
+          ],
           "sells": [
             {
               "ticker": "TTD",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 15.470000267028809,
+              "sell_when": "16:00 ET close",
               "buy_px": 15.979999542236328,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 1,
+              "fees": 0.1777,
+              "amount": 15.29,
+              "realized_pnl": -0.85,
+              "cash_after": 289.26
             },
             {
               "ticker": "HLF",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 15.210000038146973,
+              "sell_when": "16:00 ET close",
               "buy_px": 15.550000190734863,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 1,
+              "fees": 0.1751,
+              "amount": 15.03,
+              "realized_pnl": -0.67,
+              "cash_after": 304.3
             },
             {
               "ticker": "HNST",
               "side": "sell",
+              "sell_px": 4.800000190734863,
+              "sell_when": "16:00 ET close",
+              "buy_px": 5.099999904632568,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "shares": 3,
+              "fees": 0.173,
+              "amount": 14.23,
+              "realized_pnl": -1.23,
+              "cash_after": 318.52
+            }
+          ],
+          "cash": 188.66,
+          "invested": 128.54,
+          "fees_cum": 637.09
+        },
+        {
+          "date": "2026-11-13",
+          "day_pnl": -40.523,
+          "equity": 188.66,
+          "n_held": 9,
+          "n_buy": 0,
+          "n_sell": 5,
+          "n_skip": 9,
+          "n_cand": 9,
+          "hard_red": false,
+          "bought": [],
+          "sold": [
+            "SONO",
+            "BB",
+            "SLDB",
+            "STVN",
+            "GMRS"
+          ],
+          "held": [],
+          "buys": [],
+          "sells": [
+            {
+              "ticker": "SONO",
+              "side": "sell",
               "sell_px": null,
               "sell_when": null,
-              "buy_px": 5.099999904632568,
+              "buy_px": 18.110000610351562,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "BB",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 9.119999885559082,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "SLDB",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 7.0,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "STVN",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 14.359999656677246,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "GMRS",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 11.300000190734863,
               "buy_when": "16:00 ET close",
               "buy_kind": "close"
             }
           ],
-          "cash": 273.97,
+          "cash": 188.66,
           "invested": 0.0,
-          "fees_cum": 635.24
+          "fees_cum": 637.09
         }
       ]
     },
@@ -188699,15 +191385,15 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 69,
+        "n_days": 70,
         "n_win_days": 10,
-        "n_loss_days": 57,
-        "p_loss_day": 0.8261,
-        "p_win_day": 0.1449,
-        "mean_day": -4.039,
+        "n_loss_days": 58,
+        "p_loss_day": 0.8286,
+        "p_win_day": 0.1429,
+        "mean_day": -4.387,
         "avg_win_day": 0.642,
-        "avg_loss_day": -5.002,
-        "cum_sum": -278.71
+        "avg_loss_day": -5.406,
+        "cum_sum": -307.101
       },
       "equity": [
         9955.38,
@@ -188778,9 +191464,10 @@
         306.15,
         306.17,
         305.83,
-        259.0
+        302.24,
+        173.7
       ],
-      "final": 259.0,
+      "final": 173.7,
       "orig_window": {
         "start": "2026-08-13",
         "end": "2026-08-21",
@@ -201901,54 +204588,228 @@
         },
         {
           "date": "2026-11-12",
-          "day_pnl": -15.312,
-          "equity": 259.0,
+          "day_pnl": -1.174,
+          "equity": 302.24,
           "n_held": 8,
-          "n_buy": 0,
+          "n_buy": 5,
           "n_sell": 3,
-          "n_skip": 8,
+          "n_skip": 3,
           "n_cand": 8,
           "hard_red": false,
-          "bought": [],
+          "bought": [
+            "SONO",
+            "BB",
+            "SLDB",
+            "STVN",
+            "GMRS"
+          ],
           "sold": [
             "TTD",
             "HLF",
             "HNST"
           ],
-          "held": [],
-          "buys": [],
+          "held": [
+            "SONO",
+            "BB",
+            "SLDB",
+            "STVN",
+            "GMRS"
+          ],
+          "buys": [
+            {
+              "ticker": "SONO",
+              "side": "buy",
+              "buy_px": 18.110000610351562,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 19.0,
+              "low": 18.024999618530273,
+              "high": 19.530000686645508,
+              "close": 18.110000610351562,
+              "shares": 2,
+              "fees": 0.3682,
+              "amount": 36.59,
+              "cash_after": 266.97
+            },
+            {
+              "ticker": "BB",
+              "side": "buy",
+              "buy_px": 9.119999885559082,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 9.050000190734863,
+              "low": 8.890000343322754,
+              "high": 9.380000114440918,
+              "close": 9.119999885559082,
+              "shares": 3,
+              "fees": 0.2826,
+              "amount": 27.64,
+              "cash_after": 239.33
+            },
+            {
+              "ticker": "SLDB",
+              "side": "buy",
+              "buy_px": 7.0,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 7.590000152587891,
+              "low": 6.980000019073486,
+              "high": 7.590000152587891,
+              "close": 7.0,
+              "shares": 4,
+              "fees": 0.292,
+              "amount": 28.29,
+              "cash_after": 211.04
+            },
+            {
+              "ticker": "STVN",
+              "side": "buy",
+              "buy_px": 14.359999656677246,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 13.800000190734863,
+              "low": 13.859999656677246,
+              "high": 14.758000373840332,
+              "close": 14.359999656677246,
+              "shares": 1,
+              "fees": 0.1466,
+              "amount": 14.51,
+              "cash_after": 196.53
+            },
+            {
+              "ticker": "GMRS",
+              "side": "buy",
+              "buy_px": 11.300000190734863,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 11.720000267028809,
+              "low": 10.90999984741211,
+              "high": 11.729999542236328,
+              "close": 11.300000190734863,
+              "shares": 2,
+              "fees": 0.232,
+              "amount": 22.83,
+              "cash_after": 173.7
+            }
+          ],
           "sells": [
             {
               "ticker": "TTD",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 15.470000267028809,
+              "sell_when": "16:00 ET close",
               "buy_px": 15.979999542236328,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 1,
+              "fees": 0.1777,
+              "amount": 15.29,
+              "realized_pnl": -0.85,
+              "cash_after": 274.3
             },
             {
               "ticker": "HLF",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 15.210000038146973,
+              "sell_when": "16:00 ET close",
               "buy_px": 15.550000190734863,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 1,
+              "fees": 0.1751,
+              "amount": 15.03,
+              "realized_pnl": -0.67,
+              "cash_after": 289.33
             },
             {
               "ticker": "HNST",
               "side": "sell",
+              "sell_px": 4.800000190734863,
+              "sell_when": "16:00 ET close",
+              "buy_px": 5.099999904632568,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "shares": 3,
+              "fees": 0.173,
+              "amount": 14.23,
+              "realized_pnl": -1.23,
+              "cash_after": 303.56
+            }
+          ],
+          "cash": 173.7,
+          "invested": 128.54,
+          "fees_cum": 824.83
+        },
+        {
+          "date": "2026-11-13",
+          "day_pnl": -42.529,
+          "equity": 173.7,
+          "n_held": 9,
+          "n_buy": 0,
+          "n_sell": 5,
+          "n_skip": 9,
+          "n_cand": 9,
+          "hard_red": false,
+          "bought": [],
+          "sold": [
+            "SONO",
+            "BB",
+            "SLDB",
+            "STVN",
+            "GMRS"
+          ],
+          "held": [],
+          "buys": [],
+          "sells": [
+            {
+              "ticker": "SONO",
+              "side": "sell",
               "sell_px": null,
               "sell_when": null,
-              "buy_px": 5.099999904632568,
+              "buy_px": 18.110000610351562,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "BB",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 9.119999885559082,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "SLDB",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 7.0,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "STVN",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 14.359999656677246,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "GMRS",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 11.300000190734863,
               "buy_when": "16:00 ET close",
               "buy_kind": "close"
             }
           ],
-          "cash": 259.0,
+          "cash": 173.7,
           "invested": 0.0,
-          "fees_cum": 822.98
+          "fees_cum": 824.83
         }
       ]
     },
@@ -201964,15 +204825,15 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 69,
+        "n_days": 70,
         "n_win_days": 12,
-        "n_loss_days": 50,
-        "p_loss_day": 0.7246,
-        "p_win_day": 0.1739,
-        "mean_day": -4.11,
+        "n_loss_days": 51,
+        "p_loss_day": 0.7286,
+        "p_win_day": 0.1714,
+        "mean_day": -4.467,
         "avg_win_day": 0.429,
-        "avg_loss_day": -5.775,
-        "cum_sum": -283.603
+        "avg_loss_day": -6.233,
+        "cum_sum": -312.72
       },
       "equity": [
         9955.38,
@@ -202043,9 +204904,10 @@
         298.65,
         298.67,
         298.33,
-        251.5
+        294.74,
+        166.2
       ],
-      "final": 251.5,
+      "final": 166.2,
       "orig_window": {
         "start": "2026-08-13",
         "end": "2026-08-21",
@@ -212797,54 +215659,228 @@
         },
         {
           "date": "2026-11-12",
-          "day_pnl": -15.697,
-          "equity": 251.5,
+          "day_pnl": -1.203,
+          "equity": 294.74,
           "n_held": 8,
-          "n_buy": 0,
+          "n_buy": 5,
           "n_sell": 3,
-          "n_skip": 8,
+          "n_skip": 3,
           "n_cand": 8,
           "hard_red": false,
-          "bought": [],
+          "bought": [
+            "SONO",
+            "BB",
+            "SLDB",
+            "STVN",
+            "GMRS"
+          ],
           "sold": [
             "TTD",
             "HLF",
             "HNST"
           ],
-          "held": [],
-          "buys": [],
+          "held": [
+            "SONO",
+            "BB",
+            "SLDB",
+            "STVN",
+            "GMRS"
+          ],
+          "buys": [
+            {
+              "ticker": "SONO",
+              "side": "buy",
+              "buy_px": 18.110000610351562,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 19.0,
+              "low": 18.024999618530273,
+              "high": 19.530000686645508,
+              "close": 18.110000610351562,
+              "shares": 2,
+              "fees": 0.3682,
+              "amount": 36.59,
+              "cash_after": 259.47
+            },
+            {
+              "ticker": "BB",
+              "side": "buy",
+              "buy_px": 9.119999885559082,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 9.050000190734863,
+              "low": 8.890000343322754,
+              "high": 9.380000114440918,
+              "close": 9.119999885559082,
+              "shares": 3,
+              "fees": 0.2826,
+              "amount": 27.64,
+              "cash_after": 231.83
+            },
+            {
+              "ticker": "SLDB",
+              "side": "buy",
+              "buy_px": 7.0,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 7.590000152587891,
+              "low": 6.980000019073486,
+              "high": 7.590000152587891,
+              "close": 7.0,
+              "shares": 4,
+              "fees": 0.292,
+              "amount": 28.29,
+              "cash_after": 203.53
+            },
+            {
+              "ticker": "STVN",
+              "side": "buy",
+              "buy_px": 14.359999656677246,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 13.800000190734863,
+              "low": 13.859999656677246,
+              "high": 14.758000373840332,
+              "close": 14.359999656677246,
+              "shares": 1,
+              "fees": 0.1466,
+              "amount": 14.51,
+              "cash_after": 189.03
+            },
+            {
+              "ticker": "GMRS",
+              "side": "buy",
+              "buy_px": 11.300000190734863,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 11.720000267028809,
+              "low": 10.90999984741211,
+              "high": 11.729999542236328,
+              "close": 11.300000190734863,
+              "shares": 2,
+              "fees": 0.232,
+              "amount": 22.83,
+              "cash_after": 166.2
+            }
+          ],
           "sells": [
             {
               "ticker": "TTD",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 15.470000267028809,
+              "sell_when": "16:00 ET close",
               "buy_px": 15.979999542236328,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 1,
+              "fees": 0.1777,
+              "amount": 15.29,
+              "realized_pnl": -0.85,
+              "cash_after": 266.79
             },
             {
               "ticker": "HLF",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 15.210000038146973,
+              "sell_when": "16:00 ET close",
               "buy_px": 15.550000190734863,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 1,
+              "fees": 0.1751,
+              "amount": 15.03,
+              "realized_pnl": -0.67,
+              "cash_after": 281.83
             },
             {
               "ticker": "HNST",
               "side": "sell",
+              "sell_px": 4.800000190734863,
+              "sell_when": "16:00 ET close",
+              "buy_px": 5.099999904632568,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "shares": 3,
+              "fees": 0.173,
+              "amount": 14.23,
+              "realized_pnl": -1.23,
+              "cash_after": 296.06
+            }
+          ],
+          "cash": 166.2,
+          "invested": 128.54,
+          "fees_cum": 667.1
+        },
+        {
+          "date": "2026-11-13",
+          "day_pnl": -43.611,
+          "equity": 166.2,
+          "n_held": 9,
+          "n_buy": 0,
+          "n_sell": 5,
+          "n_skip": 9,
+          "n_cand": 9,
+          "hard_red": false,
+          "bought": [],
+          "sold": [
+            "SONO",
+            "BB",
+            "SLDB",
+            "STVN",
+            "GMRS"
+          ],
+          "held": [],
+          "buys": [],
+          "sells": [
+            {
+              "ticker": "SONO",
+              "side": "sell",
               "sell_px": null,
               "sell_when": null,
-              "buy_px": 5.099999904632568,
+              "buy_px": 18.110000610351562,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "BB",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 9.119999885559082,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "SLDB",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 7.0,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "STVN",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 14.359999656677246,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "GMRS",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 11.300000190734863,
               "buy_when": "16:00 ET close",
               "buy_kind": "close"
             }
           ],
-          "cash": 251.5,
+          "cash": 166.2,
           "invested": 0.0,
-          "fees_cum": 665.26
+          "fees_cum": 667.1
         }
       ]
     },
@@ -212860,15 +215896,15 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 69,
+        "n_days": 70,
         "n_win_days": 10,
-        "n_loss_days": 57,
-        "p_loss_day": 0.8261,
-        "p_win_day": 0.1449,
-        "mean_day": -4.112,
+        "n_loss_days": 58,
+        "p_loss_day": 0.8286,
+        "p_win_day": 0.1429,
+        "mean_day": -4.215,
         "avg_win_day": 0.607,
-        "avg_loss_day": -5.084,
-        "cum_sum": -283.697
+        "avg_loss_day": -5.192,
+        "cum_sum": -295.041
       },
       "equity": [
         9955.38,
@@ -212939,9 +215975,10 @@
         313.29,
         311.92,
         311.35,
-        243.43
+        308.07,
+        209.16
       ],
-      "final": 243.43,
+      "final": 209.16,
       "orig_window": {
         "start": "2026-08-13",
         "end": "2026-08-21",
@@ -227258,15 +230295,22 @@
         },
         {
           "date": "2026-11-12",
-          "day_pnl": -21.815,
-          "equity": 243.43,
+          "day_pnl": -1.053,
+          "equity": 308.07,
           "n_held": 11,
-          "n_buy": 0,
+          "n_buy": 6,
           "n_sell": 5,
-          "n_skip": 11,
+          "n_skip": 5,
           "n_cand": 11,
           "hard_red": false,
-          "bought": [],
+          "bought": [
+            "SONO",
+            "BB",
+            "SLDB",
+            "STVN",
+            "COLD",
+            "GMRS"
+          ],
           "sold": [
             "TTD",
             "HLF",
@@ -227274,58 +230318,262 @@
             "VGZ",
             "GRNT"
           ],
-          "held": [],
-          "buys": [],
+          "held": [
+            "SONO",
+            "BB",
+            "SLDB",
+            "STVN",
+            "COLD",
+            "GMRS"
+          ],
+          "buys": [
+            {
+              "ticker": "SONO",
+              "side": "buy",
+              "buy_px": 18.110000610351562,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 19.0,
+              "low": 18.024999618530273,
+              "high": 19.530000686645508,
+              "close": 18.110000610351562,
+              "shares": 1,
+              "fees": 0.1841,
+              "amount": 18.29,
+              "cash_after": 290.8
+            },
+            {
+              "ticker": "BB",
+              "side": "buy",
+              "buy_px": 9.119999885559082,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 9.050000190734863,
+              "low": 8.890000343322754,
+              "high": 9.380000114440918,
+              "close": 9.119999885559082,
+              "shares": 2,
+              "fees": 0.1884,
+              "amount": 18.43,
+              "cash_after": 272.37
+            },
+            {
+              "ticker": "SLDB",
+              "side": "buy",
+              "buy_px": 7.0,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 7.590000152587891,
+              "low": 6.980000019073486,
+              "high": 7.590000152587891,
+              "close": 7.0,
+              "shares": 3,
+              "fees": 0.219,
+              "amount": 21.22,
+              "cash_after": 251.15
+            },
+            {
+              "ticker": "STVN",
+              "side": "buy",
+              "buy_px": 14.359999656677246,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 13.800000190734863,
+              "low": 13.859999656677246,
+              "high": 14.758000373840332,
+              "close": 14.359999656677246,
+              "shares": 1,
+              "fees": 0.1466,
+              "amount": 14.51,
+              "cash_after": 236.64
+            },
+            {
+              "ticker": "COLD",
+              "side": "buy",
+              "buy_px": 15.899999618530273,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 16.18000030517578,
+              "low": 15.835000038146973,
+              "high": 16.200000762939453,
+              "close": 15.899999618530273,
+              "shares": 1,
+              "fees": 0.162,
+              "amount": 16.06,
+              "cash_after": 220.58
+            },
+            {
+              "ticker": "GMRS",
+              "side": "buy",
+              "buy_px": 11.300000190734863,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 11.720000267028809,
+              "low": 10.90999984741211,
+              "high": 11.729999542236328,
+              "close": 11.300000190734863,
+              "shares": 1,
+              "fees": 0.116,
+              "amount": 11.42,
+              "cash_after": 209.16
+            }
+          ],
           "sells": [
             {
               "ticker": "TTD",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 15.470000267028809,
+              "sell_when": "16:00 ET close",
               "buy_px": 15.979999542236328,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 1,
+              "fees": 0.1777,
+              "amount": 15.29,
+              "realized_pnl": -0.85,
+              "cash_after": 258.72
             },
             {
               "ticker": "HLF",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 15.210000038146973,
+              "sell_when": "16:00 ET close",
               "buy_px": 15.550000190734863,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 1,
+              "fees": 0.1751,
+              "amount": 15.03,
+              "realized_pnl": -0.67,
+              "cash_after": 273.76
             },
             {
               "ticker": "HNST",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 4.800000190734863,
+              "sell_when": "16:00 ET close",
               "buy_px": 5.099999904632568,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 2,
+              "fees": 0.122,
+              "amount": 9.48,
+              "realized_pnl": -0.83,
+              "cash_after": 283.23
             },
             {
               "ticker": "VGZ",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 2.640000104904175,
+              "sell_when": "16:00 ET close",
               "buy_px": 2.7300000190734863,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 5,
+              "fees": 0.167,
+              "amount": 13.03,
+              "realized_pnl": -0.77,
+              "cash_after": 296.27
             },
             {
               "ticker": "GRNT",
               "side": "sell",
+              "sell_px": 6.489999771118164,
+              "sell_when": "16:00 ET close",
+              "buy_px": 6.269999980926514,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "shares": 2,
+              "fees": 0.1558,
+              "amount": 12.82,
+              "realized_pnl": 0.15,
+              "cash_after": 309.09
+            }
+          ],
+          "cash": 209.16,
+          "invested": 98.91,
+          "fees_cum": 865.47
+        },
+        {
+          "date": "2026-11-13",
+          "day_pnl": -32.106,
+          "equity": 209.16,
+          "n_held": 12,
+          "n_buy": 0,
+          "n_sell": 6,
+          "n_skip": 12,
+          "n_cand": 12,
+          "hard_red": false,
+          "bought": [],
+          "sold": [
+            "SONO",
+            "BB",
+            "SLDB",
+            "STVN",
+            "COLD",
+            "GMRS"
+          ],
+          "held": [],
+          "buys": [],
+          "sells": [
+            {
+              "ticker": "SONO",
+              "side": "sell",
               "sell_px": null,
               "sell_when": null,
-              "buy_px": 6.269999980926514,
+              "buy_px": 18.110000610351562,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "BB",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 9.119999885559082,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "SLDB",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 7.0,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "STVN",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 14.359999656677246,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "COLD",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 15.899999618530273,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "GMRS",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 11.300000190734863,
               "buy_when": "16:00 ET close",
               "buy_kind": "close"
             }
           ],
-          "cash": 243.43,
+          "cash": 209.16,
           "invested": 0.0,
-          "fees_cum": 863.65
+          "fees_cum": 865.47
         }
       ]
     }
