@@ -1,6 +1,6 @@
 # MAP HEAT — 2026-11-13
 
-Export `finviz_2026-11-12.csv` · 11616 names · generated 2026-11-13T04:35:13.239002-05:00
+Export `finviz_2026-11-13.csv` · 11616 names · generated 2026-11-13T04:49:09.316996-05:00
 
 ## TAPE (live futures)
 | Contract | Last | Change |
@@ -280,31 +280,31 @@ COLD (1w):
 - **Real Estate** -0.5% 1d -1.9% 1w · VNQ, SCHH, XLRE
 
 ## TICKER-TAGGED NEWS (Finviz v=3)
-- 4 min **MMYT** AICPA urges clarity on reporting gambling gains and losses (The Accountant)
-- 5 min **SRAD** DATA.BET Now Powers Sportradar's Unified Odds Feed (PR Newswire)
-- 7 min **NVDA** Stock Futures Lower as Investors Look to U.S. Inflation Data (The Wall Street Journal)
-- 10 min **MSFT** Microsoft services outage disrupts Outlook and Teams worldwide (Verdict)
-- 11 min **NVDA** Nvidia announces CEO change as Jensen Huang resigns (Verdict)
-- 15 min **MSFT** Microsoft stock set to dip amid global outage (MarketWatch)
-- 20 min **CRWV,AMD,AVGO,CSCO,NVDA** AI Roundup: Nvidia CEOs Exit Dominates Headlines  CoreWeave, Cisco Results Boost AI Sentiment (Stocktwits)
-- 28 min **AMD,RIOT,NVDA,TFC,TOST** Wall Street Wrap: Nvidia Faces Downgrades As Jensen Huangs Exit Rattles Analysts  AMD, MP Materials, Riot Platforms Get Bullish Calls (Stocktwits)
-- 35 min **III** European Manufacturers Pursue Connected Transformation (Business Wire)
-- 38 min **XOM** ExxonMobil to invest $12.5bn in Longtail development offshore Guyana (Offshore Technology)
-- 46 min **LCO** FTSE 100 today: Stocks edge lower as Iran, Ukraine uncertainty weigh (Investing.com)
-- 50 min **NVDA** European shares ease from record peaks but eye best week since June (Investing.com)
-- 51 min **FCX** TDG Gold to sell 51% of Aurora West project to Freeport for $77m (Mining Technology)
-- 53 min **AMD,NVDA** European shares fall as Nvidia CEOs exit raises doubts over AI boom (Euronews)
-- 56 min **NVDA** Stock Market Today: Dow, S&P 500 and Nasdaq set for flat to weaker start as investors digest Nvidia turmoil, await PPI data: live updates (MarketWatch)
-- 56 min **NVDA** Nasdaq set to edge lower as investors weigh Nvidia scandal, await PPI data (MarketWatch)
-- 58 min **GPN** CD&R, GTCR put Global Payments takeover talks on hold- report (Electronic Payments)
+- 9 min **DUOL** Kaplan Fox & Kilsheimer LLP Encourages Duolingo, Inc. (DUOL) Investors With Losses to Seek Appointment as Lead Plaintiff Before December 7, 2026 (Newsfile)
+- 13 min **MSFT,CSCO,NVDA,AMAT** Huang ouster fallout; Cisco, Applied Materials outlooks - whats moving markets (Investing.com)
+- 18 min **AMZN,MMYT** AICPA urges clarity on reporting gambling gains and losses (The Accountant)
+- 19 min **SRAD** DATA.BET Now Powers Sportradar's Unified Odds Feed (PR Newswire)
+- 21 min **NVDA** Stock Futures Lower as Investors Look to U.S. Inflation Data (The Wall Street Journal)
+- 21 min **NVDA** China's $3 billion-plus pipeline of Nvidia-powered AI data centres (Reuters)
+- 24 min **MSFT** Microsoft services outage disrupts Outlook and Teams worldwide (Verdict)
+- 25 min **NVDA** Nvidia announces CEO change as Jensen Huang resigns (Verdict)
+- 27 min **NVDA** European shares retreat from record highs after Nvidia CEO's exit (Reuters)
+- 29 min **MSFT** Microsoft stock set to dip amid global outage (MarketWatch)
+- 34 min **AMD,CRWV,CSCO,AVGO,NVDA** AI Roundup: Nvidia CEOs Exit Dominates Headlines  CoreWeave, Cisco Results Boost AI Sentiment (Stocktwits)
+- 42 min **AMD,RIOT,NVDA,MP,TFC** Wall Street Wrap: Nvidia Faces Downgrades As Jensen Huangs Exit Rattles Analysts  AMD, MP Materials, Riot Platforms Get Bullish Calls (Stocktwits)
+- 49 min **III** European Manufacturers Pursue Connected Transformation (Business Wire)
+- 52 min **XOM** ExxonMobil to invest $12.5bn in Longtail development offshore Guyana (Offshore Technology)
+- 1 hour **LCO** FTSE 100 today: Stocks edge lower as Iran, Ukraine uncertainty weigh (Investing.com)
+- 1 hour **NVDA** European shares ease from record peaks but eye best week since June (Investing.com)
+- 1 hour **FCX** TDG Gold to sell 51% of Aurora West project to Freeport for $77m (Mining Technology)
+- 1 hour **AMD,NVDA** European shares fall as Nvidia CEOs exit raises doubts over AI boom (Euronews)
+- 1 hour **NVDA** Stock Market Today: Dow, S&P 500 and Nasdaq set for flat to weaker start as investors digest Nvidia turmoil, await PPI data: live updates (MarketWatch)
+- 1 hour **NVDA** Nasdaq set to edge lower as investors weigh Nvidia scandal, await PPI data (MarketWatch)
+- 1 hour **GPN** CD&R, GTCR put Global Payments takeover talks on hold- report (Electronic Payments)
 - 1 hour **NVDA** Commentary: From industry definer to industry participant? Nvidia's 2035 outlook in post-Jensen Huang Era (DigiTimes)
-- 1 hour **CRWV,NBIS,IREN,NVDA** CRWV vs IREN vs NBIS: Which Neocloud Stock To Bet On After Q3 Reports Allay Durability Fears (Stocktwits)
+- 1 hour **NBIS,CRWV,IREN,NVDA** CRWV vs IREN vs NBIS: Which Neocloud Stock To Bet On After Q3 Reports Allay Durability Fears (Stocktwits)
 - 1 hour **KHC** KHC Stock Forms Death Cross: Can Kraft Heinzs New Growth Plan Power A Turnaround? (Stocktwits)
 - 1 hour **NVDA** Huang's exit, AI bubble and financial crisis fears in focus on Web Summit's last day (Euronews)
-- 1 hour **NVDA** Asian markets turn negative as early rally fades after Huang downfall (AFP)
-- 1 hour **STG** Sunlands Technology Group to Hold Annual General Meeting on December 18, 2026 (GlobeNewswire)
-- 1 hour **NVDA** Silicon Valley insiders nervously eye Nvidia scandal fallout (AFP)
-- 1 hour **BMNR,NVDA** Tom Lee Says Buy The Dip In NVDA After Huang Exit Even As Bitcoin Plunges Below $70,000: Best Risk/Reward In AI (Stocktwits)
 
 ## NOTES
 - Captains = top 2 by market cap. RUT needs ≥ $5m 20-day dollar volume.
