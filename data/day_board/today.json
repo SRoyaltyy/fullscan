@@ -1,6 +1,6 @@
 {
   "date": "2026-11-13",
-  "generated_at": "2026-11-13T04:47:18.527130-05:00",
+  "generated_at": "2026-11-13T04:48:08.075398-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -15,31 +15,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "map_heat",
-      "title": "Map heat tables",
-      "date": "2026-11-13",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-11-13T04:45:46.516172-05:00",
-      "files": [
-        {
-          "path": "01_daily/map_heat/2026-11-13_map_heat.json",
-          "ok": true,
-          "reason": "",
-          "size": 274460,
-          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
-        },
-        {
-          "path": "01_daily/map_heat/2026-11-13_map_heat.md",
-          "ok": true,
-          "reason": "",
-          "size": 18415,
-          "preview": "# MAP HEAT \u2014 2026-11-13\nExport `finviz_2026-11-12.csv` \u00b7 11616 names \u00b7 generated 2026-11-13T04:35:13.239002-05:00"
-        }
-      ],
-      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-11-13\nExport `finviz_2026-11-12.csv` \u00b7 11616 names \u00b7 generated 2026-11-13T04:35:13.239002-05:00"
-    },
     {
       "key": "map_heat_baseline",
       "title": "Map heat night baseline",
@@ -221,6 +196,31 @@
         }
       ],
       "preview": "2609 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 WCN, PM, WMT, ECO, RSG \u00b7 2609 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 ECO, UNP, RSG, WCN, CHRD"
+    },
+    {
+      "key": "news_parse",
+      "title": "News parse",
+      "date": "2026-11-13",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-13T04:48:07.040644-05:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-11-13_parsed.json",
+          "ok": true,
+          "reason": "",
+          "size": 6704418,
+          "preview": "raw=9325 usable=637 single=1146 \u00b7 US weekly jobless claims increase, but labor market remains stable - Reuters | Sterling steady after UK GDP data; Fed official up next - Reuters | Applied Materials forecasts quarterly revenue above estimates on strong AI chip  | US regional bank Hancock Whitney strikes around $3.2 billion deal for Trustmark  | BHP Plans Overhaul of Australia Iron Ore Business to Cut Costs - Bloomberg.com"
+        },
+        {
+          "path": "01_daily/news/2026-11-13_parsed.md",
+          "ok": true,
+          "reason": "",
+          "size": 12320,
+          "preview": "# News Parse v2 \u2014 2026-11-13T04:48:06.487144-05:00\nWindow\u224848h | news_mode=on | raw=9325 | usable=637 | single_name=1146 | noise_dropped=7332\nusable polarity={'+': 30, '-': 106, 'mixed': 4, 'neutral': 497}"
+        }
+      ],
+      "preview": "raw=9325 usable=637 single=1146 \u00b7 US weekly jobless claims increase, but labor market remains stable - Reuters | Sterling steady after UK GDP data; Fed official up next - Reuters | Applied Materials forecasts quarterly revenue above estimates on strong AI chip  | US regional bank Hancock Whitney strikes around $3.2 billion deal for Trustmark  | BHP Plans Overhaul of Australia Iron Ore Business to Cut Costs - Bloomberg.com \u00b7 # News Parse v2 \u2014 2026-11-13T04:48:06.487144-05:00\nWindow\u224848h | news_mode=on | raw=9325 | usable=637 | single_name=1146 | noise_dropped=7332\nusable polarity={'+': 30, '-': 106, 'mixed': 4, 'neutral': 497}"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
