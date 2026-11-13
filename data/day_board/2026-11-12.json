@@ -2698,6 +2698,14 @@
       "workflow": "Finviz ALL (GH-hosted Elite)",
       "run_id": "43388541642",
       "manifest": "research/input_freeze/2026-11-12/manifest.json"
+    },
+    {
+      "path": "01_daily/map_heat/2026-11-12_map_heat.json",
+      "at": "2026-11-13T03:10:32-05:00",
+      "commit_msg": "auto: finviz ALL (export+digest+groups+tape+colors) [2026-11-12]",
+      "workflow": "Finviz ALL (GH-hosted Elite)",
+      "run_id": "43388541642",
+      "manifest": "research/input_freeze/2026-11-12/manifest.json"
     }
   ]
 }
