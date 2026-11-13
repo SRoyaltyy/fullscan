@@ -577,3 +577,7 @@ date,ticker,side,conviction,reason
 2026-11-11,TMUS,BUY,0.6107154428639655,no exit price (unsettleable)
 2026-11-11,PFGC,BUY,0.46974264166318747,no exit price (unsettleable)
 2026-11-11,FWONK,BUY,0.38285359428462246,no exit price (unsettleable)
+2026-11-12,NBIS,BUY,0.3567673998708891,day gate CLOSED: predict DOWN score -7.16 < +1.00
+2026-11-12,BB,BUY,0.6950864238245527,day gate CLOSED: predict DOWN score -7.16 < +1.00
+2026-11-12,SONO,BUY,0.7450587557530413,day gate CLOSED: predict DOWN score -7.16 < +1.00
+2026-11-12,GMRS,BUY,0.30819922122581966,day gate CLOSED: predict DOWN score -7.16 < +1.00

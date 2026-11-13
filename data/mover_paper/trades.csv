@@ -228,3 +228,4 @@ entry_dt,ticker,side,shares,entry_px,exit_dt,exit_px,notional,fee_in,fee_out,pnl
 2026-10-30 16:00 ET,2w_size,BUY,0,0.0,2026-10-30 16:00 ET,0.0,117195.86,0.0,0.0,1362.88,1.16,0,io,live 2w_size day mark (already on),io
 2026-11-03 16:00 ET,2w_size,BUY,0,0.0,2026-11-03 16:00 ET,0.0,116393.67,0.0,0.0,-1666.78,-1.43,0,io,live 2w_size day mark (already on),io
 2026-11-05 16:00 ET,2w_size,BUY,0,0.0,2026-11-05 16:00 ET,0.0,115956.13,0.0,0.0,-3827.62,-3.3,0,io,live 2w_size day mark (already on),io
+2026-11-12 16:00 ET,2w_size,BUY,0,0.0,2026-11-12 16:00 ET,0.0,115285.49,0.0,0.0,-1983.13,-1.72,0,io,live 2w_size day mark (already on),io
