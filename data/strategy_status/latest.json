@@ -1,8 +1,8 @@
 {
  "counts": {
   "excel_bot": {
-   "MISSING": 1,
-   "OK": 0,
+   "MISSING": 0,
+   "OK": 1,
    "SIT": 0
   },
   "factor_mine": {
@@ -52,7 +52,7 @@
   }
  },
  "date": "2026-11-13",
- "generated_at": "2026-11-13T13:26:19-05:00",
+ "generated_at": "2026-11-13T13:44:28-05:00",
  "strategies": [
   {
    "buys": [
@@ -6223,10 +6223,10 @@
    ],
    "family": "excel_bot",
    "name": "excel_all",
-   "note": "excel_bot/freeze_manifest.json prior-session kind:lock commit time not proven before 09:30 ET",
+   "note": "excel_bot/freeze_manifest.json prior-session kind:lock n_picks=74 sha=3a22d9db613f before 09:30 ET",
    "sells": [],
    "source": "excel_bot/freeze_manifest.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [],
