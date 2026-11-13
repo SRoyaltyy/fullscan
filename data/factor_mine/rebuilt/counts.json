@@ -118,21 +118,21 @@
       "still broken": 15
     },
     "union_hot_n4_h1": {
-      "both_halves_0": 35,
+      "both_halves_0": 36,
       "build": 2,
       "lock": 0,
       "rebuilt": 27,
       "render": 0,
-      "sat out (rule)": 6,
+      "sat out (rule)": 7,
       "still broken": 2
     },
     "union_hot_n4_holdup": {
-      "both_halves_0": 30,
+      "both_halves_0": 31,
       "build": 1,
       "lock": 0,
       "rebuilt": 24,
       "render": 0,
-      "sat out (rule)": 5,
+      "sat out (rule)": 6,
       "still broken": 1
     },
     "union_news_pack_h1": {
@@ -154,14 +154,14 @@
       "still broken": 1
     },
     "union_rsi_os_macd_h1": {
-      "both_halves_0": 39,
+      "both_halves_0": 40,
       "build": 15,
       "lock": 1,
       "rebuilt": 0,
       "render": 0,
-      "sat out (rule)": 23,
+      "sat out (rule)": 24,
       "still broken": 16
     }
   },
-  "table": "| strategy | both-halves-0 | rebuilt | sat out (rule) | still broken | build | lock | render |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| combo_oh_5050_shared | 19 | 16 | 3 | 0 | 0 | 0 | 0 |\n| combo_ps_7030_shared | 15 | 0 | 4 | 11 | 9 | 2 | 0 |\n| combo_sf_5050_shared | 15 | 0 | 4 | 11 | 8 | 3 | 0 |\n| combo_sf_7030_shared | 15 | 14 | 1 | 0 | 0 | 0 | 0 |\n| flatten_h5 | 14 | 13 | 1 | 0 | 0 | 0 | 0 |\n| overnight_h1 | 41 | 31 | 9 | 1 | 1 | 0 | 0 |\n| overnight_mega_h1 | 57 | 39 | 15 | 3 | 3 | 0 | 0 |\n| overnight_mega_h2 | 55 | 38 | 14 | 3 | 3 | 0 | 0 |\n| short_alarm_h3 | 28 | 22 | 4 | 2 | 1 | 1 | 0 |\n| short_macd_dn_h3 | 14 | 14 | 0 | 0 | 0 | 0 | 0 |\n| short_news_r_h3 | 15 | 13 | 1 | 1 | 1 | 0 | 0 |\n| short_news_r_macd_h3 | 15 | 13 | 1 | 1 | 1 | 0 | 0 |\n| union_flow_in_h1 | 33 | 3 | 15 | 15 | 13 | 2 | 0 |\n| union_hot_n4_h1 | 35 | 27 | 6 | 2 | 2 | 0 | 0 |\n| union_hot_n4_holdup | 30 | 24 | 5 | 1 | 1 | 0 | 0 |\n| union_news_pack_h1 | 26 | 22 | 3 | 1 | 1 | 0 | 0 |\n| union_news_pack_net2_h1 | 27 | 21 | 5 | 1 | 1 | 0 | 0 |\n| union_rsi_os_macd_h1 | 39 | 0 | 23 | 16 | 15 | 1 | 0 |\n| total | 493 | 310 | 114 | 69 | 60 | 9 | 0 |"
+  "table": "| strategy | both-halves-0 | rebuilt | sat out (rule) | still broken | build | lock | render |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| combo_oh_5050_shared | 19 | 16 | 3 | 0 | 0 | 0 | 0 |\n| combo_ps_7030_shared | 15 | 0 | 4 | 11 | 9 | 2 | 0 |\n| combo_sf_5050_shared | 15 | 0 | 4 | 11 | 8 | 3 | 0 |\n| combo_sf_7030_shared | 15 | 14 | 1 | 0 | 0 | 0 | 0 |\n| flatten_h5 | 14 | 13 | 1 | 0 | 0 | 0 | 0 |\n| overnight_h1 | 41 | 31 | 9 | 1 | 1 | 0 | 0 |\n| overnight_mega_h1 | 57 | 39 | 15 | 3 | 3 | 0 | 0 |\n| overnight_mega_h2 | 55 | 38 | 14 | 3 | 3 | 0 | 0 |\n| short_alarm_h3 | 28 | 22 | 4 | 2 | 1 | 1 | 0 |\n| short_macd_dn_h3 | 14 | 14 | 0 | 0 | 0 | 0 | 0 |\n| short_news_r_h3 | 15 | 13 | 1 | 1 | 1 | 0 | 0 |\n| short_news_r_macd_h3 | 15 | 13 | 1 | 1 | 1 | 0 | 0 |\n| union_flow_in_h1 | 33 | 3 | 15 | 15 | 13 | 2 | 0 |\n| union_hot_n4_h1 | 36 | 27 | 7 | 2 | 2 | 0 | 0 |\n| union_hot_n4_holdup | 31 | 24 | 6 | 1 | 1 | 0 | 0 |\n| union_news_pack_h1 | 26 | 22 | 3 | 1 | 1 | 0 | 0 |\n| union_news_pack_net2_h1 | 27 | 21 | 5 | 1 | 1 | 0 | 0 |\n| union_rsi_os_macd_h1 | 40 | 0 | 24 | 16 | 15 | 1 | 0 |\n| total | 496 | 310 | 117 | 69 | 60 | 9 | 0 |"
 }
