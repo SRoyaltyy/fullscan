@@ -1,6 +1,6 @@
 {
   "date": "2026-11-13",
-  "generated_at": "2026-11-13T16:05:14.035797-05:00",
+  "generated_at": "2026-11-13T16:05:19.474093-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -76,38 +76,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "status",
-      "title": "Pre-open status packet",
-      "date": "2026-11-13",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-11-13T04:50:44.222230-05:00",
-      "files": [
-        {
-          "path": "01_daily/2026-11-13_preopen_qc.json",
-          "ok": true,
-          "reason": "",
-          "size": 7571,
-          "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, sectors_required, all_ok"
-        },
-        {
-          "path": "01_daily/2026-11-13_preopen_status.json",
-          "ok": true,
-          "reason": "",
-          "size": 6640,
-          "preview": "keys: date, generated_at, run_id, runner, all_ok, qc_all_ok, book_ok, grok_ok, grok_fails, missing_required, attempts, github_runs"
-        },
-        {
-          "path": "01_daily/2026-11-13_preopen_status.md",
-          "ok": true,
-          "reason": "",
-          "size": 392,
-          "preview": "# Pre-open ALL status \u2014 2026-11-13\nall_ok=False  qc_all_ok=False  book_ok=False  grok_ok=False  news_mode=on  missing=['events', 'news_judge', 'map_heat_research', 'general_predict']\nPredictive modules + stock book (must land before 09:30 ET).\nOutcome / learn / tonight's captain research = Post-Close ALL.\n- Weather / regime: exit 0\n- News parse: exit 0\n- News actions (no LLM): exit 0"
-        }
-      ],
-      "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, sectors_required, all_ok \u00b7 keys: date, generated_at, run_id, runner, all_ok, qc_all_ok, book_ok, grok_ok, grok_fails, missing_required, attempts, github_runs \u00b7 # Pre-open ALL status \u2014 2026-11-13\nall_ok=False  qc_all_ok=False  book_ok=False  grok_ok=False  news_mode=on  missing=['events', 'news_judge', 'map_heat_research', 'general_predict']\nPredictive modules + stock book (must land before 09:30 ET).\nOutcome / learn / tonight's captain research = Post-Close ALL.\n- Weather / regime: exit 0\n- News parse: exit 0\n- News actions (no LLM): exit 0"
-    },
     {
       "key": "weather",
       "title": "Weather / regime",
@@ -380,6 +348,24 @@
         }
       ],
       "preview": "5897 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 YMM, TDC, TS, AVPT, MPWR"
+    },
+    {
+      "key": "peer_rs",
+      "title": "Peer RS",
+      "date": "2026-11-13",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-13T16:05:18.581170-05:00",
+      "files": [
+        {
+          "path": "data/peers/2026-11-13_peer_rs.csv",
+          "ok": true,
+          "reason": "",
+          "size": 809317,
+          "preview": "5039 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+        }
+      ],
+      "preview": "5039 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
