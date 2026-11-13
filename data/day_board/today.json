@@ -1,6 +1,6 @@
 {
   "date": "2026-11-13",
-  "generated_at": "2026-11-13T04:48:08.075398-05:00",
+  "generated_at": "2026-11-13T04:48:16.503140-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -203,7 +203,7 @@
       "date": "2026-11-13",
       "ok": true,
       "pushed": true,
-      "at": "2026-11-13T04:48:07.040644-05:00",
+      "at": "2026-11-13T04:48:15.465229-05:00",
       "files": [
         {
           "path": "01_daily/news/2026-11-13_parsed.json",
