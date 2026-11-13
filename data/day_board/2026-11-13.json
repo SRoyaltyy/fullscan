@@ -1,17 +1,16 @@
 {
   "date": "2026-11-13",
-  "generated_at": "2026-11-13T04:48:16.503140-05:00",
+  "generated_at": "2026-11-13T04:48:35.672479-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
     "MISSING General predict MD `01_daily/general/2026-11-13_predict.md` \u2014 missing",
-    "MISSING News actions JSON `01_daily/news/2026-11-13_actions.json` \u2014 missing",
     "MISSING News judge MD `01_daily/news/2026-11-13_judge.md` \u2014 missing"
   ],
   "counts": {
     "ok": 4,
-    "partial": 3,
-    "fail": 1,
+    "partial": 4,
+    "fail": 0,
     "n": 8
   },
   "processes": [
@@ -183,7 +182,7 @@
       "inputs_ready": true,
       "n_req_ok": 2,
       "n_req": 9,
-      "n_opt_ok": 1,
+      "n_opt_ok": 2,
       "n_opt": 14,
       "files": [
         {
@@ -294,11 +293,16 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-11-13_actions.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 64934,
+          "said": "76 ticker actions \u00b7 5 events \u00b7 9324 headlines \u00b7 COP BUY, EOG BUY, CHRD BUY, SM BUY, REPX BUY, GRNT BUY, OXY BUY, DVN BUY",
+          "bullets": [
+            "BUY COP",
+            "BUY EOG",
+            "BUY CHRD",
+            "BUY SM"
+          ]
         },
         {
           "key": "general",
@@ -579,8 +583,8 @@
       "key": "catalyst",
       "name": "Catalyst dossiers",
       "yaml": "catalyst_daily.yml",
-      "status": "FAIL",
-      "inputs_ready": false,
+      "status": "PARTIAL",
+      "inputs_ready": true,
       "n_req_ok": 0,
       "n_req": 0,
       "n_opt_ok": 0,
@@ -591,11 +595,16 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-11-13_actions.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 64934,
+          "said": "76 ticker actions \u00b7 5 events \u00b7 9324 headlines \u00b7 COP BUY, EOG BUY, CHRD BUY, SM BUY, REPX BUY, GRNT BUY, OXY BUY, DVN BUY",
+          "bullets": [
+            "BUY COP",
+            "BUY EOG",
+            "BUY CHRD",
+            "BUY SM"
+          ]
         },
         {
           "key": "in_digest",
@@ -624,8 +633,17 @@
           "bullets": []
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "76 ticker actions \u00b7 5 events \u00b7 9324 headlines \u00b7 COP BUY, EOG BUY, CHRD BUY, SM BUY, REPX BUY, GRNT BUY, OXY BUY, DVN BUY",
+      "bullets": [
+        "BUY COP",
+        "BUY EOG",
+        "BUY CHRD",
+        "BUY SM",
+        "BUY REPX",
+        "BUY GRNT",
+        "BUY OXY",
+        "BUY DVN"
+      ]
     },
     {
       "key": "stock_book",
@@ -665,11 +683,16 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-11-13_actions.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 64934,
+          "said": "76 ticker actions \u00b7 5 events \u00b7 9324 headlines \u00b7 COP BUY, EOG BUY, CHRD BUY, SM BUY, REPX BUY, GRNT BUY, OXY BUY, DVN BUY",
+          "bullets": [
+            "BUY COP",
+            "BUY EOG",
+            "BUY CHRD",
+            "BUY SM"
+          ]
         },
         {
           "key": "in_digest",
@@ -1283,6 +1306,31 @@
         }
       ],
       "preview": "raw=9325 usable=637 single=1146 \u00b7 US weekly jobless claims increase, but labor market remains stable - Reuters | Sterling steady after UK GDP data; Fed official up next - Reuters | Applied Materials forecasts quarterly revenue above estimates on strong AI chip  | US regional bank Hancock Whitney strikes around $3.2 billion deal for Trustmark  | BHP Plans Overhaul of Australia Iron Ore Business to Cut Costs - Bloomberg.com \u00b7 # News Parse v2 \u2014 2026-11-13T04:48:06.487144-05:00\nWindow\u224848h | news_mode=on | raw=9325 | usable=637 | single_name=1146 | noise_dropped=7332\nusable polarity={'+': 30, '-': 106, 'mixed': 4, 'neutral': 497}"
+    },
+    {
+      "key": "news_actions",
+      "title": "News actions",
+      "date": "2026-11-13",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-13T04:48:34.689588-05:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-11-13_actions.json",
+          "ok": true,
+          "reason": "",
+          "size": 64934,
+          "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers"
+        },
+        {
+          "path": "01_daily/news/2026-11-13_actions.md",
+          "ok": true,
+          "reason": "",
+          "size": 12500,
+          "preview": "# News \u2192 Actions v4 (full framework) \u2014 2026-11-13T04:48:34.670641-05:00\nraw=9324 unique_events=5 tickers=76"
+        }
+      ],
+      "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-11-13T04:48:34.670641-05:00\nraw=9324 unique_events=5 tickers=76"
     }
   ],
   "href": {

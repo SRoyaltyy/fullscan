@@ -1,12 +1,12 @@
 {
   "date": "2026-11-13",
-  "generated_at": "2026-11-13T04:48:16.503140-05:00",
+  "generated_at": "2026-11-13T04:48:35.672479-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
     "ok": 4,
-    "partial": 3,
-    "fail": 1,
+    "partial": 4,
+    "fail": 0,
     "n": 8
   },
   "buy_1d": [],
@@ -15,31 +15,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "map_heat_baseline",
-      "title": "Map heat night baseline",
-      "date": "2026-11-13",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-11-13T04:45:52.627538-05:00",
-      "files": [
-        {
-          "path": "01_daily/map_heat/2026-11-13_research_baseline.json",
-          "ok": true,
-          "reason": "",
-          "size": 187527,
-          "preview": "keys: date, source_heat_date, phase, generated_at, n_targets, n_cards, coverage, validation_errors, source_calendar_results, source_market_reaction_pct, cards, size_gate"
-        },
-        {
-          "path": "01_daily/map_heat/2026-11-13_research_baseline.md",
-          "ok": true,
-          "reason": "",
-          "size": 25855,
-          "preview": "# MAP HEAT RESEARCH \u2014 2026-11-13\n142 captain cards \u00b7 size_gate=False set by pre-open refresh"
-        }
-      ],
-      "preview": "keys: date, source_heat_date, phase, generated_at, n_targets, n_cards, coverage, validation_errors, source_calendar_results, source_market_reaction_pct, cards, size_gate \u00b7 # MAP HEAT RESEARCH \u2014 2026-11-13\n142 captain cards \u00b7 size_gate=False set by pre-open refresh"
-    },
     {
       "key": "universe",
       "title": "Universe labels",
@@ -221,6 +196,31 @@
         }
       ],
       "preview": "raw=9325 usable=637 single=1146 \u00b7 US weekly jobless claims increase, but labor market remains stable - Reuters | Sterling steady after UK GDP data; Fed official up next - Reuters | Applied Materials forecasts quarterly revenue above estimates on strong AI chip  | US regional bank Hancock Whitney strikes around $3.2 billion deal for Trustmark  | BHP Plans Overhaul of Australia Iron Ore Business to Cut Costs - Bloomberg.com \u00b7 # News Parse v2 \u2014 2026-11-13T04:48:06.487144-05:00\nWindow\u224848h | news_mode=on | raw=9325 | usable=637 | single_name=1146 | noise_dropped=7332\nusable polarity={'+': 30, '-': 106, 'mixed': 4, 'neutral': 497}"
+    },
+    {
+      "key": "news_actions",
+      "title": "News actions",
+      "date": "2026-11-13",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-13T04:48:34.689588-05:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-11-13_actions.json",
+          "ok": true,
+          "reason": "",
+          "size": 64934,
+          "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers"
+        },
+        {
+          "path": "01_daily/news/2026-11-13_actions.md",
+          "ok": true,
+          "reason": "",
+          "size": 12500,
+          "preview": "# News \u2192 Actions v4 (full framework) \u2014 2026-11-13T04:48:34.670641-05:00\nraw=9324 unique_events=5 tickers=76"
+        }
+      ],
+      "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-11-13T04:48:34.670641-05:00\nraw=9324 unique_events=5 tickers=76"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
