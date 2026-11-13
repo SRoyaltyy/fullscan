@@ -1,16 +1,22 @@
 {
- "risk_tilt": null,
- "macros": [],
+ "risk_tilt": "off",
+ "macros": [
+  "hawkish",
+  "bearish",
+  "bearish",
+  "hawkish",
+  "bearish",
+  "bearish"
+ ],
  "sector_tilts": {
-  "Ai Infra/Semis": "bullish",
-  "Energy": "bearish",
-  "Industrials/Ai Power": "mixed",
-  "Industrials": "bearish"
+  "Semis/Ai-Infra": "bullish",
+  "Industrials": "bearish",
+  "Ai-Infra": "mixed"
  },
  "tickers": {
-  "XLE": -5.5,
-  "NVDA": -1.5
+  "XLI": -4.0,
+  "XLK": 1.5
  },
- "b1_inject": "NEWS_JUDGE: n=8 rescued=4\nMACRO hot CPI/December hike: [hawkish] October CPI +0.4% m/m revives Dec hike; Goldman adds hike (regime/1d-1w)\nMACRO OPEC+ supply: [bearish energy] OPEC output +26% to highest since war; oil supply normalization (session/1d-1w)\nSECTOR AI infra/semis: [bullish] CoreWeave $9B prepayments/$132.5B backlog revives AI demand; AMD/ARM/AVGO/INTC/KLAC/LRCX/MU (basket)\nSECTOR energy: [bearish] OPEC output near pre-Iran-war rate; XLE/oil beta (sector_etf:XLE)\nSECTOR industrials/AI power: [mixed] Anthropic $3.4B CAT gas turbines positive; JPM cautious AI industrials/GEV PT cut offsets (basket)\nSECTOR industrials: [bearish] Boeing cuts 5% commercial workforce on slower production (single_name:BA)\nSECTOR consumer defensive: [bullish sentiment] Costco $30 special dividend + $4B buyback (single_name:COST)\nINTERACTION: Hot CPI/hike headlines = one rates cluster; CoreWeave AI demand offsets Nvidia scandal, do not double-count; CAT AI power vs JPM cautious industrials mixed\nWATCH: Nvidia board/CEO headline can dominate Nasdaq if resolved intraday; OPEC oversupply may cap energy despite geopolitical floor",
+ "b1_inject": "NEWS_JUDGE: n=8 rescued=4\nMACRO rates: [hawkish] Hot inflation + Goolsbee/Goldman hike odds lift yields (regime/1d-1w)\nMACRO risk: [bearish] Nvidia CEO exit and -10% drop pressure AI leadership/SPX beta (session/1d-1w)\nSECTOR semis/AI-infra: [bullish] CoreWeave backlog + Cisco/AMAT beats revive AI demand (SMH/IGV)\nSECTOR industrials: [bearish] JPMorgan cautious on AI-linked industrials caps ETN/GEV (XLI)\nSECTOR banks: [context] Hancock Whitney/Trustmark deal signals regional-bank consolidation (KRE)\nMACRO housing: [bearish] Existing home sales 16-year low confirms rate drag (session)\nSECTOR AI-infra: [mixed] Cerebras raise vs Nebius capacity cut (AI basket)\nINTERACTION: Hawkish rates caps software multiples; AI-infra bullish vs Nvidia governance bearish = semis mixed; housing weakness is rates confirmation.\nWATCH: Nvidia CEO-exit headline risk can dominate sector fundamentals intraday.",
  "date": "2026-11-13"
 }
