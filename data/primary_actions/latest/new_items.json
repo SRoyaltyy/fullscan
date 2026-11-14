@@ -1,683 +1,11 @@
 [
   {
-    "title": "H.R. 11027 (IH) - Enhancing Competition in Contracting Orders Act",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr11027ih",
-    "native_id": "BILLS-119hr11027ih",
-    "published_at": "2026-11-14T04:52:00+00:00",
-    "published_raw": "Sat, 14 Nov 2026 04:52:00 +0000",
-    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "bill",
-      "document_stage": "legislative_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Bills",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-bills",
-    "n": 10407,
-    "first_seen": "2026-11-14T07:37:52.310222+00:00",
-    "last_seen": "2026-11-14T07:37:52.310222+00:00",
-    "source_ids": [
-      "us-govinfo-bills"
-    ]
-  },
-  {
-    "title": "H.R. 11014 (IH) - Ducks and Geese Protection Act",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr11014ih",
-    "native_id": "BILLS-119hr11014ih",
-    "published_at": "2026-11-14T04:53:04+00:00",
-    "published_raw": "Sat, 14 Nov 2026 04:53:04 +0000",
-    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "bill",
-      "document_stage": "legislative_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Bills",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-bills",
-    "n": 10408,
-    "first_seen": "2026-11-14T07:37:52.310222+00:00",
-    "last_seen": "2026-11-14T07:37:52.310222+00:00",
-    "source_ids": [
-      "us-govinfo-bills"
-    ]
-  },
-  {
-    "title": "H.R. 9718 (RFS) - Reshoring American Manufacturing Act of 2026",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr9718rfs",
-    "native_id": "BILLS-119hr9718rfs",
-    "published_at": "2026-11-14T04:53:04+00:00",
-    "published_raw": "Sat, 14 Nov 2026 04:53:04 +0000",
-    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "bill",
-      "document_stage": "legislative_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Bills",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-bills",
-    "n": 10409,
-    "first_seen": "2026-11-14T07:37:52.310222+00:00",
-    "last_seen": "2026-11-14T07:37:52.310222+00:00",
-    "source_ids": [
-      "us-govinfo-bills"
-    ]
-  },
-  {
-    "title": "H.R. 11026 (IH) - To amend title 37, United States Code, to authorize the Secretary of Defense to make contributions to Trump Accounts as a bonus for a member of the Armed Forces who commits to continued service in the Armed Forces and to amend the Internal Revenue Code of 1986 to treat any such contribution in the same manner as a contribution made pursuant to an employer Trump account contribution program.",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr11026ih",
-    "native_id": "BILLS-119hr11026ih",
-    "published_at": "2026-11-14T04:53:05+00:00",
-    "published_raw": "Sat, 14 Nov 2026 04:53:05 +0000",
-    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "bill",
-      "document_stage": "legislative_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Bills",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-bills",
-    "n": 10410,
-    "first_seen": "2026-11-14T07:37:52.310222+00:00",
-    "last_seen": "2026-11-14T07:37:52.310222+00:00",
-    "source_ids": [
-      "us-govinfo-bills"
-    ]
-  },
-  {
-    "title": "H.R. 10846 (IH) - Pay Your Taxes Avoided by Borrowing Act of 2026",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr10846ih",
-    "native_id": "BILLS-119hr10846ih",
-    "published_at": "2026-11-14T04:53:05+00:00",
-    "published_raw": "Sat, 14 Nov 2026 04:53:05 +0000",
-    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "bill",
-      "document_stage": "legislative_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Bills",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-bills",
-    "n": 10411,
-    "first_seen": "2026-11-14T07:37:52.310222+00:00",
-    "last_seen": "2026-11-14T07:37:52.310222+00:00",
-    "source_ids": [
-      "us-govinfo-bills"
-    ]
-  },
-  {
-    "title": "H.R. 11013 (IH) - Protect U.S. Preventive Services Task Force Integrity Act",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr11013ih",
-    "native_id": "BILLS-119hr11013ih",
-    "published_at": "2026-11-14T04:53:05+00:00",
-    "published_raw": "Sat, 14 Nov 2026 04:53:05 +0000",
-    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "bill",
-      "document_stage": "legislative_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Bills",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-bills",
-    "n": 10412,
-    "first_seen": "2026-11-14T07:37:52.310222+00:00",
-    "last_seen": "2026-11-14T07:37:52.310222+00:00",
-    "source_ids": [
-      "us-govinfo-bills"
-    ]
-  },
-  {
-    "title": "H.R. 11030 (IH) - Fair Premiums for Farmers Act",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr11030ih",
-    "native_id": "BILLS-119hr11030ih",
-    "published_at": "2026-11-14T04:53:05+00:00",
-    "published_raw": "Sat, 14 Nov 2026 04:53:05 +0000",
-    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "bill",
-      "document_stage": "legislative_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Bills",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-bills",
-    "n": 10413,
-    "first_seen": "2026-11-14T07:37:52.310222+00:00",
-    "last_seen": "2026-11-14T07:37:52.310222+00:00",
-    "source_ids": [
-      "us-govinfo-bills"
-    ]
-  },
-  {
-    "title": "H.R. 11023 (IH) - Reasonable Adjustments To Energy Schedules Act of 2026",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr11023ih",
-    "native_id": "BILLS-119hr11023ih",
-    "published_at": "2026-11-14T04:53:05+00:00",
-    "published_raw": "Sat, 14 Nov 2026 04:53:05 +0000",
-    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "bill",
-      "document_stage": "legislative_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Bills",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-bills",
-    "n": 10414,
-    "first_seen": "2026-11-14T07:37:52.310222+00:00",
-    "last_seen": "2026-11-14T07:37:52.310222+00:00",
-    "source_ids": [
-      "us-govinfo-bills"
-    ]
-  },
-  {
-    "title": "H.R. 11029 (IH) - Bringing Rehabilitation, Integrated Delivery, and Greater Extended Care at Home Act",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr11029ih",
-    "native_id": "BILLS-119hr11029ih",
-    "published_at": "2026-11-14T04:53:05+00:00",
-    "published_raw": "Sat, 14 Nov 2026 04:53:05 +0000",
-    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "bill",
-      "document_stage": "legislative_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Bills",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-bills",
-    "n": 10415,
-    "first_seen": "2026-11-14T07:37:52.310222+00:00",
-    "last_seen": "2026-11-14T07:37:52.310222+00:00",
-    "source_ids": [
-      "us-govinfo-bills"
-    ]
-  },
-  {
-    "title": "H.R. 11028 (IH) - Designating North American Islamic Trust Act of 2026",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr11028ih",
-    "native_id": "BILLS-119hr11028ih",
-    "published_at": "2026-11-14T04:53:05+00:00",
-    "published_raw": "Sat, 14 Nov 2026 04:53:05 +0000",
-    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "bill",
-      "document_stage": "legislative_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Bills",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-bills",
-    "n": 10416,
-    "first_seen": "2026-11-14T07:37:52.310222+00:00",
-    "last_seen": "2026-11-14T07:37:52.310222+00:00",
-    "source_ids": [
-      "us-govinfo-bills"
-    ]
-  },
-  {
-    "title": "H.R. 11021 (IH) - Accurate Cancer Screenings for our Veterans Act of 2026",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr11021ih",
-    "native_id": "BILLS-119hr11021ih",
-    "published_at": "2026-11-14T04:53:05+00:00",
-    "published_raw": "Sat, 14 Nov 2026 04:53:05 +0000",
-    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "bill",
-      "document_stage": "legislative_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Bills",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-bills",
-    "n": 10417,
-    "first_seen": "2026-11-14T07:37:52.310222+00:00",
-    "last_seen": "2026-11-14T07:37:52.310222+00:00",
-    "source_ids": [
-      "us-govinfo-bills"
-    ]
-  },
-  {
-    "title": "H.R. 9084 (RFS) - Department of Energy Nuclear Transparency Act",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr9084rfs",
-    "native_id": "BILLS-119hr9084rfs",
-    "published_at": "2026-11-14T04:53:05+00:00",
-    "published_raw": "Sat, 14 Nov 2026 04:53:05 +0000",
-    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "bill",
-      "document_stage": "legislative_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Bills",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-bills",
-    "n": 10418,
-    "first_seen": "2026-11-14T07:37:52.310222+00:00",
-    "last_seen": "2026-11-14T07:37:52.310222+00:00",
-    "source_ids": [
-      "us-govinfo-bills"
-    ]
-  },
-  {
-    "title": "H.R. 11020 (IH) - Health and Human Services Workforce Visa Act",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr11020ih",
-    "native_id": "BILLS-119hr11020ih",
-    "published_at": "2026-11-14T04:53:05+00:00",
-    "published_raw": "Sat, 14 Nov 2026 04:53:05 +0000",
-    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "bill",
-      "document_stage": "legislative_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Bills",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-bills",
-    "n": 10419,
-    "first_seen": "2026-11-14T07:37:52.310222+00:00",
-    "last_seen": "2026-11-14T07:37:52.310222+00:00",
-    "source_ids": [
-      "us-govinfo-bills"
-    ]
-  },
-  {
-    "title": "H.R. 11015 (IH) - Promoting High-skilled Doctoral Talent Act of 2026",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr11015ih",
-    "native_id": "BILLS-119hr11015ih",
-    "published_at": "2026-11-14T04:55:00+00:00",
-    "published_raw": "Sat, 14 Nov 2026 04:55:00 +0000",
-    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "bill",
-      "document_stage": "legislative_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Bills",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-bills",
-    "n": 10420,
-    "first_seen": "2026-11-14T07:37:52.310222+00:00",
-    "last_seen": "2026-11-14T07:37:52.310222+00:00",
-    "source_ids": [
-      "us-govinfo-bills"
-    ]
-  },
-  {
-    "title": "H.R. 10848 (IH) - Shipyard Modernization Sustainment Act of 2026",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr10848ih",
-    "native_id": "BILLS-119hr10848ih",
-    "published_at": "2026-11-14T04:55:00+00:00",
-    "published_raw": "Sat, 14 Nov 2026 04:55:00 +0000",
-    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "bill",
-      "document_stage": "legislative_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Bills",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-bills",
-    "n": 10421,
-    "first_seen": "2026-11-14T07:37:52.310222+00:00",
-    "last_seen": "2026-11-14T07:37:52.310222+00:00",
-    "source_ids": [
-      "us-govinfo-bills"
-    ]
-  },
-  {
-    "title": "H.R. 11033 (IH) - To amend the Internal Revenue Code of 1986 to include qualified domestic film or television production as a qualified production activity for purposes of the special allowance for qualified production property.",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr11033ih",
-    "native_id": "BILLS-119hr11033ih",
-    "published_at": "2026-11-14T04:55:00+00:00",
-    "published_raw": "Sat, 14 Nov 2026 04:55:00 +0000",
-    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "bill",
-      "document_stage": "legislative_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Bills",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-bills",
-    "n": 10422,
-    "first_seen": "2026-11-14T07:37:52.310222+00:00",
-    "last_seen": "2026-11-14T07:37:52.310222+00:00",
-    "source_ids": [
-      "us-govinfo-bills"
-    ]
-  },
-  {
-    "title": "H.R. 11031 (IH) - CDL Fraud Tipline Act",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr11031ih",
-    "native_id": "BILLS-119hr11031ih",
-    "published_at": "2026-11-14T04:55:00+00:00",
-    "published_raw": "Sat, 14 Nov 2026 04:55:00 +0000",
-    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "bill",
-      "document_stage": "legislative_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Bills",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-bills",
-    "n": 10423,
-    "first_seen": "2026-11-14T07:37:52.310222+00:00",
-    "last_seen": "2026-11-14T07:37:52.310222+00:00",
-    "source_ids": [
-      "us-govinfo-bills"
-    ]
-  },
-  {
-    "title": "H.R. 11001 (IH) - Protecting Neighborhood Postal Access",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr11001ih",
-    "native_id": "BILLS-119hr11001ih",
-    "published_at": "2026-11-14T04:55:00+00:00",
-    "published_raw": "Sat, 14 Nov 2026 04:55:00 +0000",
-    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "bill",
-      "document_stage": "legislative_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Bills",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-bills",
-    "n": 10424,
-    "first_seen": "2026-11-14T07:37:52.310222+00:00",
-    "last_seen": "2026-11-14T07:37:52.310222+00:00",
-    "source_ids": [
-      "us-govinfo-bills"
-    ]
-  },
-  {
-    "title": "H.R. 6365 (RS) - Wintergreen Emergency Egress Act",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr6365rs",
-    "native_id": "BILLS-119hr6365rs",
-    "published_at": "2026-11-14T04:55:00+00:00",
-    "published_raw": "Sat, 14 Nov 2026 04:55:00 +0000",
-    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "bill",
-      "document_stage": "legislative_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Bills",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-bills",
-    "n": 10425,
-    "first_seen": "2026-11-14T07:37:52.310222+00:00",
-    "last_seen": "2026-11-14T07:37:52.310222+00:00",
-    "source_ids": [
-      "us-govinfo-bills"
-    ]
-  },
-  {
-    "title": "H.R. 11022 (IH) - AGRI–FLOOD Resilience and Infrastructure Act",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr11022ih",
-    "native_id": "BILLS-119hr11022ih",
-    "published_at": "2026-11-14T04:55:00+00:00",
-    "published_raw": "Sat, 14 Nov 2026 04:55:00 +0000",
-    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "bill",
-      "document_stage": "legislative_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Bills",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-bills",
-    "n": 10426,
-    "first_seen": "2026-11-14T07:37:52.310222+00:00",
-    "last_seen": "2026-11-14T07:37:52.310222+00:00",
-    "source_ids": [
-      "us-govinfo-bills"
-    ]
-  },
-  {
-    "title": "H.R. 11012 (IH) - Optimizing Networks for Distributed Energy Management and New Demand Act",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr11012ih",
-    "native_id": "BILLS-119hr11012ih",
-    "published_at": "2026-11-14T04:55:00+00:00",
-    "published_raw": "Sat, 14 Nov 2026 04:55:00 +0000",
-    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "bill",
-      "document_stage": "legislative_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Bills",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-bills",
-    "n": 10427,
-    "first_seen": "2026-11-14T07:37:52.310222+00:00",
-    "last_seen": "2026-11-14T07:37:52.310222+00:00",
-    "source_ids": [
-      "us-govinfo-bills"
-    ]
-  },
-  {
-    "title": "H.R. 11016 (IH) - No Kids as Bait Act",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr11016ih",
-    "native_id": "BILLS-119hr11016ih",
-    "published_at": "2026-11-14T04:55:00+00:00",
-    "published_raw": "Sat, 14 Nov 2026 04:55:00 +0000",
-    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "bill",
-      "document_stage": "legislative_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Bills",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-bills",
-    "n": 10428,
-    "first_seen": "2026-11-14T07:37:52.310222+00:00",
-    "last_seen": "2026-11-14T07:37:52.310222+00:00",
-    "source_ids": [
-      "us-govinfo-bills"
-    ]
-  },
-  {
-    "title": "H.R. 11018 (IH) - Helping Encourage Animal Rescue through Tax Credits Act of 2026",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr11018ih",
-    "native_id": "BILLS-119hr11018ih",
-    "published_at": "2026-11-14T04:55:00+00:00",
-    "published_raw": "Sat, 14 Nov 2026 04:55:00 +0000",
-    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "bill",
-      "document_stage": "legislative_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Bills",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-bills",
-    "n": 10429,
-    "first_seen": "2026-11-14T07:37:52.310222+00:00",
-    "last_seen": "2026-11-14T07:37:52.310222+00:00",
-    "source_ids": [
-      "us-govinfo-bills"
-    ]
-  },
-  {
-    "title": "DCPD-202600684 - Remarks in an Exchange With Reporters Prior to Departure for San Antonio, Texas",
-    "url": "https://www.govinfo.gov/app/details/DCPD-202600684",
-    "native_id": "DCPD-202600684",
-    "published_at": "2026-11-13T21:43:00+00:00",
-    "published_raw": "Fri, 13 Nov 2026 21:43:00 +0000",
-    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "presidential_document",
-      "document_stage": "presidential_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Compilation of Presidential Documents",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-dcpd",
-    "n": 10430,
-    "first_seen": "2026-11-14T07:37:52.310222+00:00",
-    "last_seen": "2026-11-14T07:37:52.310222+00:00",
-    "source_ids": [
-      "us-govinfo-dcpd"
-    ]
-  },
-  {
-    "title": "DCPD-202600690 - Remarks at a Columbus Day Celebration",
-    "url": "https://www.govinfo.gov/app/details/DCPD-202600690",
-    "native_id": "DCPD-202600690",
-    "published_at": "2026-11-13T21:44:00+00:00",
-    "published_raw": "Fri, 13 Nov 2026 21:44:00 +0000",
-    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "presidential_document",
-      "document_stage": "presidential_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Compilation of Presidential Documents",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-dcpd",
-    "n": 10431,
-    "first_seen": "2026-11-14T07:37:52.310222+00:00",
-    "last_seen": "2026-11-14T07:37:52.310222+00:00",
-    "source_ids": [
-      "us-govinfo-dcpd"
-    ]
-  },
-  {
-    "title": "DCPD-202600691 - Remarks and an Exchange With Reporters Prior to Departure for Syracuse, New York",
-    "url": "https://www.govinfo.gov/app/details/DCPD-202600691",
-    "native_id": "DCPD-202600691",
-    "published_at": "2026-11-13T21:44:00+00:00",
-    "published_raw": "Fri, 13 Nov 2026 21:44:00 +0000",
-    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "presidential_document",
-      "document_stage": "presidential_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Compilation of Presidential Documents",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-dcpd",
-    "n": 10432,
-    "first_seen": "2026-11-14T07:37:52.310222+00:00",
-    "last_seen": "2026-11-14T07:37:52.310222+00:00",
-    "source_ids": [
-      "us-govinfo-dcpd"
-    ]
-  },
-  {
-    "title": "DCPD-202600692 - Message on Leif Erikson Day",
-    "url": "https://www.govinfo.gov/app/details/DCPD-202600692",
-    "native_id": "DCPD-202600692",
-    "published_at": "2026-11-13T21:44:00+00:00",
-    "published_raw": "Fri, 13 Nov 2026 21:44:00 +0000",
-    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "presidential_document",
-      "document_stage": "presidential_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Compilation of Presidential Documents",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-dcpd",
-    "n": 10433,
-    "first_seen": "2026-11-14T07:37:52.310222+00:00",
-    "last_seen": "2026-11-14T07:37:52.310222+00:00",
-    "source_ids": [
-      "us-govinfo-dcpd"
-    ]
-  },
-  {
-    "title": "DCPD-202600693 - Remarks at a Campaign Rally for New York Republican Candidates in Syracuse, New York",
-    "url": "https://www.govinfo.gov/app/details/DCPD-202600693",
-    "native_id": "DCPD-202600693",
-    "published_at": "2026-11-13T21:45:00+00:00",
-    "published_raw": "Fri, 13 Nov 2026 21:45:00 +0000",
-    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "presidential_document",
-      "document_stage": "presidential_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Compilation of Presidential Documents",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-dcpd",
-    "n": 10434,
-    "first_seen": "2026-11-14T07:37:52.310222+00:00",
-    "last_seen": "2026-11-14T07:37:52.310222+00:00",
-    "source_ids": [
-      "us-govinfo-dcpd"
-    ]
-  },
-  {
-    "title": "Chinese National in Viral YouTube Video Sentenced to 6 ½ Years in $27 Million Multinational Fraud Scheme Targeting 2,000 Seniors",
-    "url": "https://www.justice.gov/usao-sdca/pr/chinese-national-viral-youtube-video-sentenced-6-12-years-27-million-multinational",
-    "native_id": "https://www.justice.gov/usao-sdca/pr/chinese-national-viral-youtube-video-sentenced-6-12-years-27-million-multinational",
+    "title": "U.S. Attorney’s Office Filed 103 Border-Related Cases This Week",
+    "url": "https://www.justice.gov/usao-sdca/pr/us-attorneys-office-filed-103-border-related-cases-week-0",
+    "native_id": "https://www.justice.gov/usao-sdca/pr/us-attorneys-office-filed-103-border-related-cases-week-0",
     "published_at": "2026-11-13T12:00:00+00:00",
     "published_raw": "Fri, 13 Nov 2026 12:00:00 +0000",
-    "summary": "SAN DIEGO – Jiandong Chen, aka “Little Tiger,” was sentenced in federal court today to 6 ½ years in prison for his part in a $27 million fraud and money laundering scheme targeting approximately 2,000 elderly victims across the United States.",
+    "summary": "SAN DIEGO – Federal prosecutors in the Southern District of California filed 103 border-related cases this week, including charges of bringing in aliens for financial gain, reentering the U.S. after deportation, and importation of controlled substances.",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
@@ -688,17 +16,17 @@
       "family": "judicial_and_enforcement"
     },
     "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 10435,
-    "first_seen": "2026-11-14T07:37:52.310222+00:00",
-    "last_seen": "2026-11-14T07:37:52.310222+00:00",
+    "n": 10463,
+    "first_seen": "2026-11-14T18:47:17.701409+00:00",
+    "last_seen": "2026-11-14T18:47:17.701409+00:00",
     "source_ids": [
       "us-doj-b3d27e1dc3"
     ]
   },
   {
-    "title": "U.S. Attorney Russ Ferguson Convenes Rural Crime Summit with Federal, State, Local, and Tribal Law Enforcement to Enhance Public Safety",
-    "url": "https://www.justice.gov/usao-wdnc/pr/us-attorney-russ-ferguson-convenes-rural-crime-summit-federal-state-local-and-tribal",
-    "native_id": "https://www.justice.gov/usao-wdnc/pr/us-attorney-russ-ferguson-convenes-rural-crime-summit-federal-state-local-and-tribal",
+    "title": "Alien Pleads Guilty to Illegal Reentry as an Aggravated Felon",
+    "url": "https://www.justice.gov/usao-ndia/pr/alien-pleads-guilty-illegal-reentry-aggravated-felon",
+    "native_id": "https://www.justice.gov/usao-ndia/pr/alien-pleads-guilty-illegal-reentry-aggravated-felon",
     "published_at": "2026-11-13T12:00:00+00:00",
     "published_raw": "Fri, 13 Nov 2026 12:00:00 +0000",
     "summary": "",
@@ -712,17 +40,17 @@
       "family": "judicial_and_enforcement"
     },
     "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 10436,
-    "first_seen": "2026-11-14T07:37:52.310222+00:00",
-    "last_seen": "2026-11-14T07:37:52.310222+00:00",
+    "n": 10464,
+    "first_seen": "2026-11-14T18:47:17.701409+00:00",
+    "last_seen": "2026-11-14T18:47:17.701409+00:00",
     "source_ids": [
       "us-doj-b3d27e1dc3"
     ]
   },
   {
-    "title": "Charlotte Woman Sentenced to Prison for Interfering with Federal Officers Performing Official Duties and Related Offenses",
-    "url": "https://www.justice.gov/usao-wdnc/pr/charlotte-woman-sentenced-prison-interfering-federal-officers-performing-official",
-    "native_id": "https://www.justice.gov/usao-wdnc/pr/charlotte-woman-sentenced-prison-interfering-federal-officers-performing-official",
+    "title": "EDNC Forms Taxpayer Fraud Task Force, TF2, Harnessing Combined Talents of Federal Partners to Combat Fraud Against the Government",
+    "url": "https://www.justice.gov/usao-ednc/pr/ednc-forms-taxpayer-fraud-task-force-tf2-harnessing-combined-talents-federal-1",
+    "native_id": "https://www.justice.gov/usao-ednc/pr/ednc-forms-taxpayer-fraud-task-force-tf2-harnessing-combined-talents-federal-1",
     "published_at": "2026-11-13T12:00:00+00:00",
     "published_raw": "Fri, 13 Nov 2026 12:00:00 +0000",
     "summary": "",
@@ -736,20 +64,20 @@
       "family": "judicial_and_enforcement"
     },
     "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 10437,
-    "first_seen": "2026-11-14T07:37:52.310222+00:00",
-    "last_seen": "2026-11-14T07:37:52.310222+00:00",
+    "n": 10465,
+    "first_seen": "2026-11-14T18:47:17.701409+00:00",
+    "last_seen": "2026-11-14T18:47:17.701409+00:00",
     "source_ids": [
       "us-doj-b3d27e1dc3"
     ]
   },
   {
-    "title": "Money Launderer Sentenced for Laundering $52 Million for the Sinaloa Cartel as Part of Ongoing Homeland Security Task Force Investigation",
-    "url": "https://www.justice.gov/usao-sdca/pr/money-launderer-sentenced-laundering-52-million-sinaloa-cartel-part-ongoing-homeland",
-    "native_id": "https://www.justice.gov/usao-sdca/pr/money-launderer-sentenced-laundering-52-million-sinaloa-cartel-part-ongoing-homeland",
+    "title": "D.C. Man Gets 36 Years in Prison for Shooting Death Over BBQ Grill Argument",
+    "url": "https://www.justice.gov/usao-dc/pr/dc-man-gets-36-years-prison-shooting-death-over-bbq-grill-argument",
+    "native_id": "https://www.justice.gov/usao-dc/pr/dc-man-gets-36-years-prison-shooting-death-over-bbq-grill-argument",
     "published_at": "2026-11-13T12:00:00+00:00",
     "published_raw": "Fri, 13 Nov 2026 12:00:00 +0000",
-    "summary": "SAN DIEGO – Hector Paez-Garcia, who was previously extradited from Panama to the United States on money laundering charges, was sentenced in federal court today to 41 months in custody as part of a Homeland Security Task Force investigation.",
+    "summary": "Irv Duff, 36, of Washington, D.C., was sentenced today to 36 years in prison, in the Superior Court of the District of Columbia stemming from the shooting death of Darnell Gibson, 26, in August 2023, announced U.S. Attorney Jeanine Ferris Pirro.",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
@@ -760,20 +88,20 @@
       "family": "judicial_and_enforcement"
     },
     "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 10438,
-    "first_seen": "2026-11-14T07:37:52.310222+00:00",
-    "last_seen": "2026-11-14T07:37:52.310222+00:00",
+    "n": 10466,
+    "first_seen": "2026-11-14T18:47:17.701409+00:00",
+    "last_seen": "2026-11-14T18:47:17.701409+00:00",
     "source_ids": [
       "us-doj-b3d27e1dc3"
     ]
   },
   {
-    "title": "Bethany Man Sentenced to Federal Prison after Firearms and Drugs Found at Residence",
-    "url": "https://www.justice.gov/usao-wdok/pr/bethany-man-sentenced-federal-prison-after-firearms-and-drugs-found-residence",
-    "native_id": "https://www.justice.gov/usao-wdok/pr/bethany-man-sentenced-federal-prison-after-firearms-and-drugs-found-residence",
+    "title": "Illegal alien pleads guilty after soliciting sex from a minor",
+    "url": "https://www.justice.gov/usao-ks/pr/illegal-alien-pleads-guilty-after-soliciting-sex-minor",
+    "native_id": "https://www.justice.gov/usao-ks/pr/illegal-alien-pleads-guilty-after-soliciting-sex-minor",
     "published_at": "2026-11-13T12:00:00+00:00",
     "published_raw": "Fri, 13 Nov 2026 12:00:00 +0000",
-    "summary": "",
+    "summary": "An illegal alien deported multiple times pleaded guilty to attempting to have sex with a minor.",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
@@ -784,20 +112,20 @@
       "family": "judicial_and_enforcement"
     },
     "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 10439,
-    "first_seen": "2026-11-14T07:37:52.310222+00:00",
-    "last_seen": "2026-11-14T07:37:52.310222+00:00",
+    "n": 10467,
+    "first_seen": "2026-11-14T18:47:17.701409+00:00",
+    "last_seen": "2026-11-14T18:47:17.701409+00:00",
     "source_ids": [
       "us-doj-b3d27e1dc3"
     ]
   },
   {
-    "title": "Teen Gets Probation for Shooting a Juvenile Playing Basketball at a Recreation Center",
-    "url": "https://www.justice.gov/usao-dc/pr/teen-gets-probation-shooting-juvenile-playing-basketball-recreation-center",
-    "native_id": "https://www.justice.gov/usao-dc/pr/teen-gets-probation-shooting-juvenile-playing-basketball-recreation-center",
+    "title": "Massachusetts Man Pleads Guilty to Multi-Million-Dollar SNAP Fraud",
+    "url": "https://www.justice.gov/usao-ma/pr/illegal-alien-pleads-guilty-multi-million-dollar-snap-fraud",
+    "native_id": "https://www.justice.gov/usao-ma/pr/illegal-alien-pleads-guilty-multi-million-dollar-snap-fraud",
     "published_at": "2026-11-13T12:00:00+00:00",
     "published_raw": "Fri, 13 Nov 2026 12:00:00 +0000",
-    "summary": "Darius Drew, 19, of Washington, D.C., was sentenced today to probation, on charges stemming from the shooting of a young boy who was playing basketball at a Northwest recreation center in May 2026, announced U.S. Attorney Jeanine Ferris Pirro.",
+    "summary": "BOSTON – A Hyde Park, Mass. man has pleaded guilty in federal court in Boston to fraudulently obtain millions of dollars’ worth of Supplemental Nutrition Assistance Program (SNAP) benefits through small retail stores he operated in Boston.",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
@@ -808,381 +136,20 @@
       "family": "judicial_and_enforcement"
     },
     "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 10440,
-    "first_seen": "2026-11-14T07:37:52.310222+00:00",
-    "last_seen": "2026-11-14T07:37:52.310222+00:00",
+    "n": 10468,
+    "first_seen": "2026-11-14T18:47:17.701409+00:00",
+    "last_seen": "2026-11-14T18:47:17.701409+00:00",
     "source_ids": [
       "us-doj-b3d27e1dc3"
     ]
   },
   {
-    "title": "Northern Kentucky Man and Former Lawyer Indicted in Alleged Murder-for-Hire Scheme",
-    "url": "https://www.justice.gov/usao-edky/pr/northern-kentucky-man-and-former-lawyer-indicted-alleged-murder-hire-scheme",
-    "native_id": "https://www.justice.gov/usao-edky/pr/northern-kentucky-man-and-former-lawyer-indicted-alleged-murder-hire-scheme",
-    "published_at": "2026-11-13T12:00:00+00:00",
-    "published_raw": "Fri, 13 Nov 2026 12:00:00 +0000",
-    "summary": "",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Department of Justice",
-      "jurisdiction": "US",
-      "family": "judicial_and_enforcement"
-    },
-    "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 10441,
-    "first_seen": "2026-11-14T07:37:52.310222+00:00",
-    "last_seen": "2026-11-14T07:37:52.310222+00:00",
-    "source_ids": [
-      "us-doj-b3d27e1dc3"
-    ]
-  },
-  {
-    "title": "Previously Convicted Mexican National Unlawfully Residing in the United States Pleads Guilty to Fentanyl Trafficking and Illegal Reentry",
-    "url": "https://www.justice.gov/usao-or/pr/previously-convicted-mexican-national-unlawfully-residing-united-states-pleads-guilty",
-    "native_id": "https://www.justice.gov/usao-or/pr/previously-convicted-mexican-national-unlawfully-residing-united-states-pleads-guilty",
-    "published_at": "2026-11-13T12:00:00+00:00",
-    "published_raw": "Fri, 13 Nov 2026 12:00:00 +0000",
-    "summary": "A Mexican national unlawfully residing in the United States pleaded guilty in federal court Tuesday to possessing fentanyl with intent to distribute and illegally reentering the United States after removal.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Department of Justice",
-      "jurisdiction": "US",
-      "family": "judicial_and_enforcement"
-    },
-    "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 10442,
-    "first_seen": "2026-11-14T07:37:52.310222+00:00",
-    "last_seen": "2026-11-14T07:37:52.310222+00:00",
-    "source_ids": [
-      "us-doj-b3d27e1dc3"
-    ]
-  },
-  {
-    "title": "Career offender sentenced to over 21 years in prison for latest drug and firearms conviction",
-    "url": "https://www.justice.gov/usao-edva/pr/career-offender-sentenced-over-21-years-prison-latest-drug-and-firearms-conviction",
-    "native_id": "https://www.justice.gov/usao-edva/pr/career-offender-sentenced-over-21-years-prison-latest-drug-and-firearms-conviction",
-    "published_at": "2026-11-13T12:00:00+00:00",
-    "published_raw": "Fri, 13 Nov 2026 12:00:00 +0000",
-    "summary": "Duwan Jeremy Sumiel, 38, of Essex County man was sentenced to 21 years & 10 months for possession with intent to distribute cocaine , possession of a firearm by a convicted felon, and possession of a firearm in furtherance of a drug trafficking crime.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Department of Justice",
-      "jurisdiction": "US",
-      "family": "judicial_and_enforcement"
-    },
-    "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 10443,
-    "first_seen": "2026-11-14T07:37:52.310222+00:00",
-    "last_seen": "2026-11-14T07:37:52.310222+00:00",
-    "source_ids": [
-      "us-doj-b3d27e1dc3"
-    ]
-  },
-  {
-    "title": "29-Year-Old Man Arrested for Child Exploitation",
-    "url": "https://www.justice.gov/usao-pr/pr/29-year-old-man-arrested-child-exploitation",
-    "native_id": "https://www.justice.gov/usao-pr/pr/29-year-old-man-arrested-child-exploitation",
-    "published_at": "2026-11-13T12:00:00+00:00",
-    "published_raw": "Fri, 13 Nov 2026 12:00:00 +0000",
-    "summary": "SAN JUAN, Puerto Rico – On November 12, 2026, FBI special agents arrested Jonathan David Mercado Valladares, 29-year-old man from Ponce, on criminal charges related to child exploitation, announced Héctor Ramírez Carbó, Acting United States Attorney for the District of Puerto Rico.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Department of Justice",
-      "jurisdiction": "US",
-      "family": "judicial_and_enforcement"
-    },
-    "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 10444,
-    "first_seen": "2026-11-14T07:37:52.310222+00:00",
-    "last_seen": "2026-11-14T07:37:52.310222+00:00",
-    "source_ids": [
-      "us-doj-b3d27e1dc3"
-    ]
-  },
-  {
-    "title": "Federal Jury Convicts Crucian Man For Possessing “Glock switch” Machine Gun",
-    "url": "https://www.justice.gov/usao-vi/pr/federal-jury-convicts-crucian-man-possessing-glock-switch-machine-gun",
-    "native_id": "https://www.justice.gov/usao-vi/pr/federal-jury-convicts-crucian-man-possessing-glock-switch-machine-gun",
-    "published_at": "2026-11-13T12:00:00+00:00",
-    "published_raw": "Fri, 13 Nov 2026 12:00:00 +0000",
-    "summary": "St. Croix, USVI – U.S. Attorney Adam F. Sleeper announced today that a federal jury convicted Ervin Noel Jr, 22, of St. Croix, for Possession of a Machinegun, 18 U.S.C. § 922(o), and Reckless Endangerment, 14 V.I.C. § 625(a). The defendant faces a sentence of up to 10 years imprisonment. The Chief District Court Judge, Robert A. Molloy, will schedule a sentencing hearing to determine the sentence to be imposed.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Department of Justice",
-      "jurisdiction": "US",
-      "family": "judicial_and_enforcement"
-    },
-    "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 10445,
-    "first_seen": "2026-11-14T07:37:52.310222+00:00",
-    "last_seen": "2026-11-14T07:37:52.310222+00:00",
-    "source_ids": [
-      "us-doj-b3d27e1dc3"
-    ]
-  },
-  {
-    "title": "HSI San Juan Arrests 2 Men on Child Exploitation Charges",
-    "url": "https://www.justice.gov/usao-pr/pr/hsi-san-juan-arrests-2-men-child-exploitation-charges-0",
-    "native_id": "https://www.justice.gov/usao-pr/pr/hsi-san-juan-arrests-2-men-child-exploitation-charges-0",
-    "published_at": "2026-11-13T12:00:00+00:00",
-    "published_raw": "Fri, 13 Nov 2026 12:00:00 +0000",
-    "summary": "SAN JUAN, Puerto Rico – In two separate cases, Homeland Security Investigations (HSI) special agents, with the support of the Puerto Rico Police Department arrested two men indicted for child exploitation, announced Héctor Ramírez Carbó, Acting United States Attorney for the District of Puerto Rico.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Department of Justice",
-      "jurisdiction": "US",
-      "family": "judicial_and_enforcement"
-    },
-    "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 10446,
-    "first_seen": "2026-11-14T07:37:52.310222+00:00",
-    "last_seen": "2026-11-14T07:37:52.310222+00:00",
-    "source_ids": [
-      "us-doj-b3d27e1dc3"
-    ]
-  },
-  {
-    "title": "Palm Harbor Man Arrested for Threatening to Injure and Kill Four Individuals, Including Two Sitting United States Congressmembers",
-    "url": "https://www.justice.gov/usao-mdfl/pr/palm-harbor-man-arrested-threatening-injure-and-kill-four-individuals-including-two",
-    "native_id": "https://www.justice.gov/usao-mdfl/pr/palm-harbor-man-arrested-threatening-injure-and-kill-four-individuals-including-two",
-    "published_at": "2026-11-13T12:00:00+00:00",
-    "published_raw": "Fri, 13 Nov 2026 12:00:00 +0000",
-    "summary": "Tampa, Florida – Robert Odell Potts (58, Palm Harbor) has been charged by indictment with interstate communication of threats to injure and kill. If convicted, he faces a maximum penalty of five years in federal prison. U.S. Attorney Gregory W. Kehoe made the announcement.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Department of Justice",
-      "jurisdiction": "US",
-      "family": "judicial_and_enforcement"
-    },
-    "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 10447,
-    "first_seen": "2026-11-14T07:37:52.310222+00:00",
-    "last_seen": "2026-11-14T07:37:52.310222+00:00",
-    "source_ids": [
-      "us-doj-b3d27e1dc3"
-    ]
-  },
-  {
-    "title": "4 defendants convicted in case involving freight shipment of hundreds of pounds of cocaine, fentanyl, methamphetamine & marijuana",
-    "url": "https://www.justice.gov/usao-sdoh/pr/4-defendants-convicted-case-involving-freight-shipment-hundreds-pounds-cocaine",
-    "native_id": "https://www.justice.gov/usao-sdoh/pr/4-defendants-convicted-case-involving-freight-shipment-hundreds-pounds-cocaine",
-    "published_at": "2026-11-13T12:00:00+00:00",
-    "published_raw": "Fri, 13 Nov 2026 12:00:00 +0000",
-    "summary": "DAYTON, Ohio – A final defendant pleaded guilty in U.S. District Court here today in a federal case involving the seizure of 119 kilograms of cocaine and fentanyl, 170 pounds of methamphetamine and 80 pounds of marijuana.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Department of Justice",
-      "jurisdiction": "US",
-      "family": "judicial_and_enforcement"
-    },
-    "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 10448,
-    "first_seen": "2026-11-14T07:37:52.310222+00:00",
-    "last_seen": "2026-11-14T07:37:52.310222+00:00",
-    "source_ids": [
-      "us-doj-b3d27e1dc3"
-    ]
-  },
-  {
-    "title": "Teen Sentenced for 2024 Armed Carjacking",
-    "url": "https://www.justice.gov/usao-dc/pr/teen-sentenced-2024-armed-carjacking",
-    "native_id": "https://www.justice.gov/usao-dc/pr/teen-sentenced-2024-armed-carjacking",
-    "published_at": "2026-11-13T12:00:00+00:00",
-    "published_raw": "Fri, 13 Nov 2026 12:00:00 +0000",
-    "summary": "Jordan Grice, 19, of Washington, D.C., was sentenced today to 7.5 years in prison for charges related to an armed carjacking he committed in August 2024, announced U.S. Attorney Jeanine Ferris Pirro.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Department of Justice",
-      "jurisdiction": "US",
-      "family": "judicial_and_enforcement"
-    },
-    "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 10449,
-    "first_seen": "2026-11-14T07:37:52.310222+00:00",
-    "last_seen": "2026-11-14T07:37:52.310222+00:00",
-    "source_ids": [
-      "us-doj-b3d27e1dc3"
-    ]
-  },
-  {
-    "title": "Warrenton man charged with transportation of child sexual abuse material",
-    "url": "https://www.justice.gov/usao-edva/pr/warrenton-man-charged-transportation-child-sexual-abuse-material",
-    "native_id": "https://www.justice.gov/usao-edva/pr/warrenton-man-charged-transportation-child-sexual-abuse-material",
-    "published_at": "2026-11-13T12:00:00+00:00",
-    "published_raw": "Fri, 13 Nov 2026 12:00:00 +0000",
-    "summary": "Kyle Owen Brennan, 40, of Warrenton, made an initial appearance in federal court following his arrest on a charge of transportation of child sexual abuse material.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Department of Justice",
-      "jurisdiction": "US",
-      "family": "judicial_and_enforcement"
-    },
-    "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 10450,
-    "first_seen": "2026-11-14T07:37:52.310222+00:00",
-    "last_seen": "2026-11-14T07:37:52.310222+00:00",
-    "source_ids": [
-      "us-doj-b3d27e1dc3"
-    ]
-  },
-  {
-    "title": "United States Seeks Mexico’s Review of Alleged Denial of Workers’ Rights at Industrias FG",
-    "url": "https://ustr.gov/about/policy-offices/press-office/press-releases/2026/november/united-states-seeks-mexicos-review-alleged-denial-workers-rights-industrias-fg",
-    "native_id": "https://ustr.gov/about/policy-offices/press-office/press-releases/2026/november/united-states-seeks-mexicos-review-alleged-denial-workers-rights-industrias-fg",
-    "published_at": "2026-11-13T00:00:00+00:00",
-    "published_raw": "2026-11-13",
-    "summary": "",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "United States Trade Representative",
-      "jurisdiction": "US",
-      "family": "trade_and_tariffs"
-    },
-    "primary_source_id": "us-ustr-index",
-    "n": 10451,
-    "first_seen": "2026-11-14T07:37:52.310222+00:00",
-    "last_seen": "2026-11-14T07:37:52.310222+00:00",
-    "source_ids": [
-      "us-ustr-index"
-    ]
-  },
-  {
-    "title": "Agencies extend comment period for proposed third-party risk management guidance",
-    "url": "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20261113a.htm",
-    "native_id": "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20261113a.htm",
-    "published_at": "2026-11-13T21:15:00+00:00",
-    "published_raw": "Fri, 13 Nov 2026 21:15:00 GMT",
-    "summary": "Agencies extend comment period for proposed third-party risk management guidance",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Reserve Board",
-      "jurisdiction": "US",
-      "family": "monetary_operations"
-    },
-    "primary_source_id": "us-fed-a383ca0d09",
-    "n": 10452,
-    "first_seen": "2026-11-14T07:37:52.310222+00:00",
-    "last_seen": "2026-11-14T07:37:52.310222+00:00",
-    "source_ids": [
-      "us-fed-97656cefc7",
-      "us-fed-a383ca0d09"
-    ]
-  },
-  {
-    "title": "Agencies Extend Comment Period for Proposed Third-Party Risk Management Gu…",
-    "url": "https://www.fdic.gov/news/press-releases/2026/agencies-extend-comment-period-proposed-third-party-risk-management",
-    "native_id": "https://www.fdic.gov/news/press-releases/2026/agencies-extend-comment-period-proposed-third-party-risk-management",
-    "published_at": "2026-11-13T00:00:00+00:00",
-    "published_raw": "2026-11-13",
-    "summary": "",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Deposit Insurance Corporation",
-      "jurisdiction": "US",
-      "family": "financial_enforcement"
-    },
-    "primary_source_id": "us-fdic-index",
-    "n": 10453,
-    "first_seen": "2026-11-14T07:37:52.310222+00:00",
-    "last_seen": "2026-11-14T07:37:52.310222+00:00",
-    "source_ids": [
-      "us-fdic-index"
-    ]
-  },
-  {
-    "title": "Agencies Extend Comment Period for Proposed Third-Party Risk Management Guidance",
-    "url": "https://www.occ.gov/news-issuances/news-releases/2026/nr-ia-2026-100.html",
-    "native_id": "https://www.occ.gov/news-issuances/news-releases/2026/nr-ia-2026-100.html",
-    "published_at": "2026-11-13T21:15:00+00:00",
-    "published_raw": "13 Nov 2026 16:15:00 -0500",
-    "summary": "The Federal Deposit Insurance Corporation, the Federal Reserve Board, the National Credit Union Administration, and the Office of the Comptroller of the Currency today announced that they will extend, until December 16, the comment period for proposed guidance on managing risks associated with third-party relationships. Comments on the proposal were originally due November 16.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Office of the Comptroller of the Currency",
-      "jurisdiction": "US",
-      "family": "financial_enforcement"
-    },
-    "primary_source_id": "us-occ-6f63126133",
-    "n": 10454,
-    "first_seen": "2026-11-14T07:37:52.310222+00:00",
-    "last_seen": "2026-11-14T07:37:52.310222+00:00",
-    "source_ids": [
-      "us-occ-6f63126133"
-    ]
-  },
-  {
-    "title": "CFTC Sues Louisiana After State Court Blocks CFTC-Regulated Exchanges",
-    "url": "https://www.cftc.gov/PressRoom/PressReleases/9326-26",
-    "native_id": "https://www.cftc.gov/PressRoom/PressReleases/9326-26",
-    "published_at": "2026-11-13T21:00:40+00:00",
-    "published_raw": "Fri, 13 Nov 2026 21:00:40 +0000",
-    "summary": "",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Commodity Futures Trading Commission",
-      "jurisdiction": "US",
-      "family": "financial_enforcement"
-    },
-    "primary_source_id": "us-cftc-fda5c3631d",
-    "n": 10455,
-    "first_seen": "2026-11-14T07:37:52.310222+00:00",
-    "last_seen": "2026-11-14T07:37:52.310222+00:00",
-    "source_ids": [
-      "us-cftc-fda5c3631d"
-    ]
-  },
-  {
-    "title": "FDA Approves First Drug to Treat Adults with Primary Membranous Nephropathy",
-    "url": "http://www.fda.gov/drugs/news-events-human-drugs/fda-approves-first-drug-treat-adults-primary-membranous-nephropathy",
-    "native_id": "http://www.fda.gov/drugs/news-events-human-drugs/fda-approves-first-drug-treat-adults-primary-membranous-nephropathy",
-    "published_at": "2026-11-13T22:33:49+00:00",
-    "published_raw": "Fri, 13 Nov 2026 17:33:49 EST",
-    "summary": "FDA approved Gazyva (obinutuzumab) injection to induce remission of proteinuria (protein in the urine) in adults with primary membranous nephropathy at risk of disease progression.",
+    "title": "Activities Report of the Generic Drug Program | FDARA Title VIII Sections 807 and 805",
+    "url": "http://www.fda.gov/industry/generic-drug-user-fee-amendments/activities-report-generic-drug-program-fdara-title-viii-sections-807-and-805",
+    "native_id": "http://www.fda.gov/industry/generic-drug-user-fee-amendments/activities-report-generic-drug-program-fdara-title-viii-sections-807-and-805",
+    "published_at": "2026-11-14T16:11:36+00:00",
+    "published_raw": "Sat, 14 Nov 2026 11:11:36 EST",
+    "summary": "Section 807 of the FDA Reauthorization Act of 2017 (FDARA) requires the FDA to report on certain abbreviated new drug applications (ANDAs).",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
@@ -1193,155 +160,107 @@
       "family": "product_permissions_and_safety"
     },
     "primary_source_id": "us-fda-5696b24295",
-    "n": 10456,
-    "first_seen": "2026-11-14T07:37:52.310222+00:00",
-    "last_seen": "2026-11-14T07:37:52.310222+00:00",
+    "n": 10469,
+    "first_seen": "2026-11-14T18:47:17.701409+00:00",
+    "last_seen": "2026-11-14T18:47:17.701409+00:00",
     "source_ids": [
       "us-fda-5696b24295"
     ]
   },
   {
-    "title": "Guidance Recap Podcast | Master Protocols for Drug and Biological Product Development",
-    "url": "http://www.fda.gov/drugs/guidances-drugs/guidance-recap-podcast-master-protocols-drug-and-biological-product-development",
-    "native_id": "http://www.fda.gov/drugs/guidances-drugs/guidance-recap-podcast-master-protocols-drug-and-biological-product-development",
-    "published_at": "2026-11-13T21:37:00+00:00",
-    "published_raw": "Fri, 13 Nov 2026 16:37:00 EST",
-    "summary": "Guidance Recap Podcast | Master Protocols for Drug and Biological Product Development",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Food and Drug Administration — What's New: Drugs",
-      "jurisdiction": "US",
-      "family": "product_permissions_and_safety"
-    },
-    "primary_source_id": "us-fda-5696b24295",
-    "n": 10457,
-    "first_seen": "2026-11-14T07:37:52.310222+00:00",
-    "last_seen": "2026-11-14T07:37:52.310222+00:00",
-    "source_ids": [
-      "us-fda-5696b24295"
-    ]
-  },
-  {
-    "title": "Guidance Recap Podcast | Assessing the Effects of Food on Drugs in INDs and NDAs – Clinical Pharmacology Considerations",
-    "url": "http://www.fda.gov/drugs/guidances-drugs/guidance-recap-podcast-assessing-effects-food-drugs-inds-and-ndas-clinical-pharmacology",
-    "native_id": "http://www.fda.gov/drugs/guidances-drugs/guidance-recap-podcast-assessing-effects-food-drugs-inds-and-ndas-clinical-pharmacology",
-    "published_at": "2026-11-13T21:34:15+00:00",
-    "published_raw": "Fri, 13 Nov 2026 16:34:15 EST",
-    "summary": "Guidance Recap Podcast | Assessing the Effects of Food on Drugs in INDs and NDAs – Clinical Pharmacology Considerations",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Food and Drug Administration — What's New: Drugs",
-      "jurisdiction": "US",
-      "family": "product_permissions_and_safety"
-    },
-    "primary_source_id": "us-fda-5696b24295",
-    "n": 10458,
-    "first_seen": "2026-11-14T07:37:52.310222+00:00",
-    "last_seen": "2026-11-14T07:37:52.310222+00:00",
-    "source_ids": [
-      "us-fda-5696b24295"
-    ]
-  },
-  {
-    "title": "Allstar Recalls Sharper Image Tabletop and Infinity Fire Pits Due to Risk of Serious Injury from Burn and Fire Hazards",
-    "url": "https://www.cpsc.gov/Recalls/2027/Allstar-Recalls-Sharper-Image-Tabletop-and-Infinity-Fire-Pits-Due-to-Risk-of-Serious-Injury-from-Burn-and-Fire-Hazards",
-    "native_id": "https://www.cpsc.gov/_5ba9d41c-f1f3-471b-b3a3-ba728c1df59c",
+    "title": "The Recipe for a Safe Thanksgiving",
+    "url": "http://www.fsis.usda.gov/news-events/news-press-releases/recipe-a-safe-thanksgiving",
+    "native_id": "a86d941f-6996-4948-b6a9-afcb2bb20cb1",
     "published_at": null,
-    "published_raw": "November 12, 2026",
-    "summary": "Ignited flammable liquid can escape from the recalled fire pits or trigger flame jetting from the fuel containers, posing a risk of serious injury from burn and fire hazards.",
+    "published_raw": "Fri, 11/13/2026 - 12:00",
+    "summary": "<p>(Washington, D.C., November 13, 2026) – As families across the country prepare for Thanksgiving, the U.S. Department of Agriculture’s Food Safety and Inspection Service (FSIS) is reminding consumers to take</p>",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Consumer Product Safety Commission",
+      "issuer": "USDA Food Safety and Inspection Service — News & Events",
       "jurisdiction": "US",
       "family": "product_safety"
     },
-    "primary_source_id": "us-cpsc-99343b5112",
-    "n": 10459,
-    "first_seen": "2026-11-14T07:37:52.310222+00:00",
-    "last_seen": "2026-11-14T07:37:52.310222+00:00",
+    "primary_source_id": "us-fsis-2f49ece915",
+    "n": 10470,
+    "first_seen": "2026-11-14T18:47:17.701409+00:00",
+    "last_seen": "2026-11-14T18:47:17.701409+00:00",
     "source_ids": [
-      "us-cpsc-99343b5112"
+      "us-fsis-2f49ece915"
     ]
   },
   {
-    "title": "Section 1.767(a) Submarine Cable Landing Licenses, Modifications, and Assignments or Transfers of Control of Interests in Submarine Cable Landing Licenses (47 C.F.R. § 1.767(a)) - SCL",
-    "url": "https://www.fcc.gov/edoc/426835",
-    "native_id": "426835",
+    "title": "Constituent Update - November 6, 2026",
+    "url": "http://www.fsis.usda.gov/news-events/news-press-releases/constituent-update-november-6-2026",
+    "native_id": "c551daf4-45da-4f98-99b8-ee2b60e5f0ea",
     "published_at": null,
-    "published_raw": "",
-    "summary": ".",
+    "published_raw": "Fri, 11/06/2026 - 12:00",
+    "summary": "FSIS Requests Input on STEC Testing Solutions FSIS is seeking input from commercial vendors regarding innovative laboratory rapid screening methods and selective media for detecting and isolating Shiga toxin-producing Escherichia",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Public Notices",
+      "issuer": "USDA Food Safety and Inspection Service — News & Events",
       "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
+      "family": "product_safety"
     },
-    "primary_source_id": "us-fcc-e95ecda3bb",
-    "n": 10460,
-    "first_seen": "2026-11-14T07:37:52.310222+00:00",
-    "last_seen": "2026-11-14T07:37:52.310222+00:00",
+    "primary_source_id": "us-fsis-2f49ece915",
+    "n": 10471,
+    "first_seen": "2026-11-14T18:47:17.701409+00:00",
+    "last_seen": "2026-11-14T18:47:17.701409+00:00",
     "source_ids": [
-      "us-fcc-e95ecda3bb"
+      "us-fsis-2f49ece915"
     ]
   },
   {
-    "title": "International Authorizations Granted - ITC",
-    "url": "https://www.fcc.gov/edoc/426837",
-    "native_id": "426837",
+    "title": "Constituent Update - October 30, 2026",
+    "url": "http://www.fsis.usda.gov/news-events/news-press-releases/constituent-update-october-30-2026",
+    "native_id": "8b3529e1-edf6-4294-acc8-19ff5ed11a0c",
     "published_at": null,
-    "published_raw": "",
-    "summary": ".",
+    "published_raw": "Fri, 10/30/2026 - 12:00",
+    "summary": "FSIS to Host Open House at Midwestern Laboratory On Nov. 17, FSIS will host an open house at its new Midwestern Laboratory, located at 7654 Natural Bridge Rd., Normandy, Mo",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Public Notices",
+      "issuer": "USDA Food Safety and Inspection Service — News & Events",
       "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
+      "family": "product_safety"
     },
-    "primary_source_id": "us-fcc-e95ecda3bb",
-    "n": 10461,
-    "first_seen": "2026-11-14T07:37:52.310222+00:00",
-    "last_seen": "2026-11-14T07:37:52.310222+00:00",
+    "primary_source_id": "us-fsis-2f49ece915",
+    "n": 10472,
+    "first_seen": "2026-11-14T18:47:17.701409+00:00",
+    "last_seen": "2026-11-14T18:47:17.701409+00:00",
     "source_ids": [
-      "us-fcc-e95ecda3bb"
+      "us-fsis-2f49ece915"
     ]
   },
   {
-    "title": "In the Matter of Robocall Mitigation Database Filers",
-    "url": "https://www.fcc.gov/edoc/426780",
-    "native_id": "426780",
-    "published_at": null,
-    "published_raw": "",
-    "summary": "FCC Enforcement Bureau removes eight Companies from the Robocall Mitigation Database. All intermediate providers and voice service providers must cease accepting all calls directly from these Companies.",
+    "title": "ISRAEL/PALESTINE: Statement by the High Representative on behalf of the European Union on the humanitarian developments in Gaza",
+    "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/11/14/statement/",
+    "native_id": "152357",
+    "published_at": "2026-11-14T12:20:00+00:00",
+    "published_raw": "2026-11-14T13:20:00+01:00",
+    "summary": "The High Representative issued a statement on behalf of the European Union on the humanitarian developments in Gaza.",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Enforcement Bureau",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
+      "issuer": "Council of the European Union",
+      "jurisdiction": "EU",
+      "family": "sanctions_and_legislation"
     },
-    "primary_source_id": "us-fcc-364d1b4932",
-    "n": 10462,
-    "first_seen": "2026-11-14T07:37:52.310222+00:00",
-    "last_seen": "2026-11-14T07:37:52.310222+00:00",
+    "primary_source_id": "eu-council-9d9e9444da",
+    "n": 10473,
+    "first_seen": "2026-11-14T18:47:17.701409+00:00",
+    "last_seen": "2026-11-14T18:47:17.701409+00:00",
     "source_ids": [
-      "us-fcc-364d1b4932"
+      "eu-council-9d9e9444da"
     ]
   }
 ]

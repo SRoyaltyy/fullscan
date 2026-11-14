@@ -1,11 +1,11 @@
 [
   {
-    "title": "What's New Related to Drugs",
-    "url": "http://www.fda.gov/drugs/news-events-human-drugs/whats-new-related-drugs",
-    "native_id": "http://www.fda.gov/drugs/news-events-human-drugs/whats-new-related-drugs",
-    "published_at": "2026-11-13T22:37:31+00:00",
-    "published_raw": "Fri, 13 Nov 2026 17:37:31 EST",
-    "summary": "Want to know what's new on drugs from FDA? This page provides quick links to the latest on a variety of topics including: drug approvals, safety warnings, drug shortages, etc.",
+    "title": "CDER Manual of Policies & Procedures | MAPP",
+    "url": "http://www.fda.gov/about-fda/center-drug-evaluation-and-research-cder/cder-manual-policies-procedures-mapp",
+    "native_id": "http://www.fda.gov/about-fda/center-drug-evaluation-and-research-cder/cder-manual-policies-procedures-mapp",
+    "published_at": "2026-11-14T16:24:32+00:00",
+    "published_raw": "Sat, 14 Nov 2026 11:24:32 EST",
+    "summary": "CDER's Manual of Policies and Procedures (MAPPs) are federal directives and documentation of internal policies and procedures.",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
@@ -16,20 +16,20 @@
       "family": "product_permissions_and_safety"
     },
     "primary_source_id": "us-fda-5696b24295",
-    "n": 1394,
-    "first_seen": "2026-10-15T10:17:11.133023+00:00",
-    "last_seen": "2026-11-14T07:37:52.310222+00:00",
+    "n": 8113,
+    "first_seen": "2026-11-02T22:20:55.750782+00:00",
+    "last_seen": "2026-11-14T18:47:17.701409+00:00",
     "source_ids": [
       "us-fda-5696b24295"
     ]
   },
   {
-    "title": "Notable Approvals | Drugs",
-    "url": "http://www.fda.gov/drugs/news-events-human-drugs/notable-approvals-drugs",
-    "native_id": "http://www.fda.gov/drugs/news-events-human-drugs/notable-approvals-drugs",
-    "published_at": "2026-11-13T22:34:14+00:00",
-    "published_raw": "Fri, 13 Nov 2026 17:34:14 EST",
-    "summary": "News about human drug-related approvals",
+    "title": "Antimicrobial Resistance",
+    "url": "http://www.fda.gov/emergency-preparedness-and-response/medical-countermeasure-mcm-issues/antimicrobial-resistance",
+    "native_id": "http://www.fda.gov/emergency-preparedness-and-response/medical-countermeasure-mcm-issues/antimicrobial-resistance",
+    "published_at": "2026-11-14T15:59:19+00:00",
+    "published_raw": "Sat, 14 Nov 2026 10:59:19 EST",
+    "summary": "Antimicrobial resistance (AMR)—the ability of a microorganism (bacteria, virus, fungi, parasite) to resist the effects of a drug—is a serious, complex and costly public health problem. Learn what FDA is doing to address AMR.",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
@@ -40,59 +40,12 @@
       "family": "product_permissions_and_safety"
     },
     "primary_source_id": "us-fda-5696b24295",
-    "n": 6465,
-    "first_seen": "2026-10-24T05:56:48.534199+00:00",
-    "last_seen": "2026-11-14T07:37:52.310222+00:00",
+    "n": 10053,
+    "first_seen": "2026-11-12T20:50:38.075613+00:00",
+    "last_seen": "2026-11-14T18:47:17.701409+00:00",
     "source_ids": [
+      "us-fda-03f7703006",
       "us-fda-5696b24295"
-    ]
-  },
-  {
-    "title": "Generic Drug User Fee Amendments",
-    "url": "http://www.fda.gov/industry/fda-user-fee-programs/generic-drug-user-fee-amendments",
-    "native_id": "http://www.fda.gov/industry/fda-user-fee-programs/generic-drug-user-fee-amendments",
-    "published_at": "2026-11-13T23:44:39+00:00",
-    "published_raw": "Fri, 13 Nov 2026 18:44:39 EST",
-    "summary": "This page features news and information for industry and stakeholders about GDUFA, its fee structure, payment methods, and related information.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Food and Drug Administration — What's New: Drugs",
-      "jurisdiction": "US",
-      "family": "product_permissions_and_safety"
-    },
-    "primary_source_id": "us-fda-5696b24295",
-    "n": 7920,
-    "first_seen": "2026-10-31T07:20:30.145427+00:00",
-    "last_seen": "2026-11-14T07:37:52.310222+00:00",
-    "source_ids": [
-      "us-fda-5696b24295"
-    ]
-  },
-  {
-    "title": "USITC Reaches Equally Divided Determination in Lamb Meat Global Safeguard Investigation",
-    "url": "https://www.usitc.gov/press_room/news_release/2026/er1113_69510.htm",
-    "native_id": "https://www.usitc.gov/press_room/news_release/2026/er1113_69510.htm",
-    "published_at": null,
-    "published_raw": null,
-    "summary": "",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "United States International Trade Commission",
-      "jurisdiction": "US",
-      "family": "trade_and_judicial"
-    },
-    "primary_source_id": "us-itc-index",
-    "n": 10355,
-    "first_seen": "2026-11-13T20:30:06.658433+00:00",
-    "last_seen": "2026-11-14T07:37:52.310222+00:00",
-    "source_ids": [
-      "us-itc-index"
     ]
   }
 ]

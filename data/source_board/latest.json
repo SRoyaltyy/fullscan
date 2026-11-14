@@ -1,21 +1,21 @@
 {
  "date": "2026-11-14",
- "generated_at": "2026-11-14T07:38:15.199464+00:00",
+ "generated_at": "2026-11-14T18:47:38.855799+00:00",
  "catalog": {
-  "generated_at": "2026-11-07T18:03:52.345238+00:00",
+  "generated_at": "2026-11-14T18:45:12.782675+00:00",
   "channels": 365,
-  "enabled": 117,
-  "verified_ok": 109,
+  "enabled": 118,
+  "verified_ok": 111,
   "by_adapter": {
    "federal_register": 1,
    "hkma_press": 1,
    "govuk_search": 9,
-   "rss": 93,
+   "rss": 94,
    "html_index": 11,
    "google_news_rss": 2
   },
   "by_jurisdiction": {
-   "US": 64,
+   "US": 65,
    "UK": 11,
    "CA": 11,
    "EU": 7,
@@ -34,52 +34,45 @@
   }
  },
  "collect": {
-  "generated_at": "2026-11-14T07:37:52.310222+00:00",
-  "enabled_sources": 117,
+  "generated_at": "2026-11-14T18:47:17.701409+00:00",
+  "enabled_sources": 118,
   "sources_ok": 117,
-  "sources_failed": 0,
+  "sources_failed": 1,
   "coverage_status": "degraded",
   "counts": {
-   "observed": 1981,
-   "old": 1155,
-   "future": 11,
-   "undated": 269,
-   "new": 56,
-   "duplicates": 759
+   "observed": 1651,
+   "old": 985,
+   "future": 0,
+   "undated": 239,
+   "new": 11,
+   "duplicates": 655
   },
-  "current_dated_documents": 645
+  "current_dated_documents": 588
  },
  "new_today": {
-  "count": 56,
+  "count": 11,
   "by_source": {
-   "us-govinfo-bills": 23,
-   "us-doj-b3d27e1dc3": 16,
-   "us-govinfo-dcpd": 5,
-   "us-fda-5696b24295": 3,
-   "us-fcc-e95ecda3bb": 2,
-   "us-ustr-index": 1,
-   "us-fed-a383ca0d09": 1,
-   "us-fdic-index": 1,
-   "us-occ-6f63126133": 1,
-   "us-cftc-fda5c3631d": 1,
-   "us-cpsc-99343b5112": 1,
-   "us-fcc-364d1b4932": 1
+   "us-doj-b3d27e1dc3": 6,
+   "us-fsis-2f49ece915": 3,
+   "us-fda-5696b24295": 1,
+   "eu-council-9d9e9444da": 1
   },
   "by_class": {
-   "routine": 31,
-   "high": 6,
-   "watch": 10,
-   "docket": 9
+   "watch": 6,
+   "docket": 1,
+   "high": 3,
+   "routine": 1
   }
  },
  "parsed_today": {
-  "count": 23,
+  "count": 27,
   "by_class": {
    "high": 1,
-   "routine": 22
+   "routine": 23,
+   "watch": 4
   }
  },
- "n_failures": 0,
+ "n_failures": 1,
  "dates": [
   "2026-11-14"
  ],
