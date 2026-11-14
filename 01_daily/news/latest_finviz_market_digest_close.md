@@ -1,47 +1,47 @@
-# Finviz homepage market digest (close) — 2026-11-12
+# Finviz homepage market digest (close) — 2026-11-13
 
-**Generated:** 2026-11-12T20:53:55.416480-05:00 (America/New_York)
+**Generated:** 2026-11-13T20:32:28.879573-05:00 (America/New_York)
 **Source:** `live`
-**Banner:** US stocks closed modestly lower as Nvidia leadership turmoil and a bond-yield spike weighed on equities ahead of PPI data and Fed remarks
-**Prior close:** SPX -0.35%  Nasdaq -0.39%  Dow -0.36%
-**SPX:** -0.35%  **Nasdaq:** -0.39%  **Dow:** -0.36%
-**Oil:** crude $88.38
+**Banner:** US stocks ended mixed as Nvidia-led chip selloff offset defensive sector strength while hotter PPI data left weekly rebound intact
+**Prior close:** SPX -0.40%  Nasdaq -0.91%  Dow —
+**SPX:** -0.40%  **Nasdaq:** -0.91%  **Dow:** —
+**Oil:** —
 **CPI/Fed:** —
-**Leaders:** NVDA, SMCI, AMD, AVGO, CTVA, NBIS, CBRS, CSCO, AMAT, NU
-**Next session:** housing yes · retail no · Fed yes
+**Leaders:** NVDA, AMD, AVGO, META, AAPL, LLY, INBX, BEEM, ACTU
+**Next session:** housing no · retail no · Fed yes
 **Earnings slate:** —
-**Geo/grain:** geo
-**Clock legal for:** 2026-11-13
+**Geo/grain:** —
+**Clock legal for:** 2026-11-16
 **Clock use:** `next_open`
 
 ## Clock
 
-Live post-close answer-key (~16:05 ET). **Legal for the NEXT session open only** (`clock_legal_for` = 2026-11-13) — **NOT** the same morning. `clock_use` is always `next_open`. File is `*_finviz_market_digest_close.*`; the same_morning warm-up file is left untouched.
+Live post-close answer-key (~16:05 ET). **Legal for the NEXT session open only** (`clock_legal_for` = 2026-11-16) — **NOT** the same morning. `clock_use` is always `next_open`. File is `*_finviz_market_digest_close.*`; the same_morning warm-up file is left untouched.
 
 Homepage `$MARKET` prose — **not** `YYYY-MM-DD_finviz_digest.md` (quote-page headlines + ticker blurbs). Capture only. Not wired into tape_anchor / predict / #210.
 
 ## Theme Radar
 
-- **Prior close:** SPX -0.35% · Nasdaq -0.39% · Dow -0.36%
-- **Oil:** crude $88.38
+- **Prior close:** SPX -0.40% · Nasdaq -0.91% · Dow —
+- **Oil:** —
 - **CPI / Fed-odds:** —
-- **Named leaders:** NVDA, SMCI, AMD, AVGO, CTVA, NBIS, CBRS, CSCO, AMAT, NU
-- **Next-session calendar:** housing yes · retail no · Fed yes
-  - Nine of 11 S&P 500 sectors declined, led by materials and industrials, after existing home sales dropped to their lowest level since 2010 and bond yields logged their largest one-day surge since 2022 on renewed Fed rate-hike fears.
+- **Named leaders:** NVDA, AMD, AVGO, META, AAPL, LLY, INBX, BEEM, ACTU
+- **Next-session calendar:** housing no · retail no · Fed yes
+  - Traders looked ahead to next week’s Nvidia (NVDA) earnings and the planned Anthropic IPO as key tests for the durability of the AI trade.
 - **Earnings slate:** —
-- **Geo / grain:** geo
+- **Geo / grain:** —
 
 ## Narrative
 
-**US stocks closed modestly lower as Nvidia leadership turmoil and a bond-yield spike weighed on equities ahead of PPI data and Fed remarks**
+**US stocks ended mixed as Nvidia-led chip selloff offset defensive sector strength while hotter PPI data left weekly rebound intact**
 
-- The S&P 500 ($SPX) fell 0.35% to 7,592.40, the Dow Jones Industrial Average ($DJI) dropped 0.36% to 52,297.09, the Nasdaq Composite ($COMP) declined 0.39% to 25,366.09, and the Russell 2000 (IWM) lost 1.66% to 2,799.06.
-- Nvidia (NVDA) shares closed down 4.34% at $166.19 after CEO Jensen Huang resigned amid reports of multiple affairs including an alleged relationship with an employee suspected of being a Chinese spy, with CFO Colette Kress named interim CEO.
-- Vanda Research reported retail investors bought over $111 million of Nvidia (NVDA) stock in the opening half-hour, the largest such inflow on record, helping the stock recover from an intraday loss of nearly 14%.
-- Super Micro Computer (SMCI) fell about 11% after Bloomberg reported a DOJ investigation into whether entities linked to Alice Huang were involved in smuggling Super Micro products to China, while Advanced Micro Devices (AMD) rose 5.86% and Broadcom (AVGO) climbed 5.54% on bets they could gain AI-chip business amid Nvidia (NVDA)’s leadership turmoil.
-- Energy gained 1.5% as a sector, while West Texas Intermediate crude (@CL) slipped about 0.4% to $88.38 per barrel following comments from President Trump that the US does not need a deal with Iran.
-- Nine of 11 S&P 500 sectors declined, led by materials and industrials, after existing home sales dropped to their lowest level since 2010 and bond yields logged their largest one-day surge since 2022 on renewed Fed rate-hike fears.
-- Corteva (CTVA) sank 24.3% after cutting its annual profit forecast, citing weakness in Brazil.
-- Nebius Group (NBIS) slid 16.8% after raising its 2026 capex outlook to $27 billion and narrowing its 2026 revenue outlook to $3.0–$3.2 billion from $3.0–$3.4 billion, citing co-location delays.
-- In after-hours trading, Cerebras Systems (CBRS) rose after an adjusted EPS beat and a higher 2026 core revenue outlook, even as Q3 revenue of $210.8 million missed estimates and OpenAI contract deployments were delayed.
-- Cisco Systems (CSCO) beat fiscal Q1 estimates and raised FY27 guidance, Applied Materials (AMAT) posted record fiscal Q4 results with a stronger Q1 outlook, and Nu Holdings (NU) missed EPS estimates but beat on revenue, while stock index futures rose following the close ahead of Friday’s PPI release and remarks from Fed officials Michelle Bowman and Philip Jefferson.
+- The S&P 500 ($SPX) fell 0.4%, the Nasdaq Composite ($COMP) dropped 0.91%, and the Russell 2000 (IWM) lost 0.31%, while the Dow Jones Industrial Average ($DJI) edged up 0.1% in Friday’s mixed session.
+- For the week, the S&P 500 ($SPX), Dow, and Nasdaq each gained about 2.1%–2.5%, with the S&P 500 ($SPX) and Nasdaq logging their best weekly performance since August and snapping four-week losing streaks.
+- Nvidia (NVDA) slid 2% after CEO Jensen Huang resigned amid reports of multiple extramarital affairs, including with a businesswoman suspected of spying for China, leaving the stock down more than $650 billion in market value for the week.
+- Advanced Micro Devices (AMD) sank 8.8% and Broadcom (AVGO) fell 4.8%, helping push the Philadelphia Semiconductor Index 3.4% lower as investors reassessed the chip group following the Nvidia (NVDA) turmoil.
+- Six of 11 S&P 500 ($SPX) sectors advanced, led by consumer staples, which climbed roughly 1.4%–1.9%, and energy, while technology lagged on chip weakness.
+- Meta Platforms (META) gained 2.9%, and strength in Apple (AAPL) and Eli Lilly (LLY) helped limit broader S&P 500 ($SPX) losses despite pressure from semiconductor stocks.
+- The Federal Aviation Administration ordered a rare nationwide ground stop due to a telecommunications outage at air traffic control centers, delaying more than 10,000 flights and weighing on airline stocks.
+- October producer prices rose 0.3% month-over-month and 6.5% year-over-year, the fastest annual pace since November 2022, though the report had limited impact on interest-rate expectations.
+- In after-hours trading, Inhibrx Biosciences (INBX) fell about 4.5% after missing fiscal Q3 EPS estimates, while small-cap names BEEM (BEEM) and ACTU (ACTU) reported earnings with limited immediate stock reaction.
+- Traders looked ahead to next week’s Nvidia (NVDA) earnings and the planned Anthropic IPO as key tests for the durability of the AI trade.
