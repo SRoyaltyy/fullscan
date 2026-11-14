@@ -1,6 +1,6 @@
 # Primary-origin action documents
 
-Updated 2026-11-13T20:30:06.658433+00:00. 630 dated documents in the configured 3-day window; 211 newly retained; 666 repeat observations.
+Updated 2026-11-14T07:37:52.310222+00:00. 645 dated documents in the configured 3-day window; 56 newly retained; 759 repeat observations.
 Source health: 117/117 checked successfully. Collection uses zero LLM calls.
 
 Document stage comes from publisher metadata. Proposed rules, bills and announcements are not automatically labelled enacted policy or concrete public actions.
@@ -94,6 +94,29 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 
 ## legislative_document_published
 
+- [H.R. 11018 (IH) - Helping Encourage Animal Rescue through Tax Credits Act of 2026](https://www.govinfo.gov/app/details/BILLS-119hr11018ih) — Congressional Bills; 2026-11-14T04:55:00+00:00
+- [H.R. 11016 (IH) - No Kids as Bait Act](https://www.govinfo.gov/app/details/BILLS-119hr11016ih) — Congressional Bills; 2026-11-14T04:55:00+00:00
+- [H.R. 11012 (IH) - Optimizing Networks for Distributed Energy Management and New Demand Act](https://www.govinfo.gov/app/details/BILLS-119hr11012ih) — Congressional Bills; 2026-11-14T04:55:00+00:00
+- [H.R. 11022 (IH) - AGRI–FLOOD Resilience and Infrastructure Act](https://www.govinfo.gov/app/details/BILLS-119hr11022ih) — Congressional Bills; 2026-11-14T04:55:00+00:00
+- [H.R. 6365 (RS) - Wintergreen Emergency Egress Act](https://www.govinfo.gov/app/details/BILLS-119hr6365rs) — Congressional Bills; 2026-11-14T04:55:00+00:00
+- [H.R. 11001 (IH) - Protecting Neighborhood Postal Access](https://www.govinfo.gov/app/details/BILLS-119hr11001ih) — Congressional Bills; 2026-11-14T04:55:00+00:00
+- [H.R. 11031 (IH) - CDL Fraud Tipline Act](https://www.govinfo.gov/app/details/BILLS-119hr11031ih) — Congressional Bills; 2026-11-14T04:55:00+00:00
+- [H.R. 11033 (IH) - To amend the Internal Revenue Code of 1986 to include qualified domestic film or television production as a qualified production activity for purposes of the special allowance for qualified production property.](https://www.govinfo.gov/app/details/BILLS-119hr11033ih) — Congressional Bills; 2026-11-14T04:55:00+00:00
+- [H.R. 10848 (IH) - Shipyard Modernization Sustainment Act of 2026](https://www.govinfo.gov/app/details/BILLS-119hr10848ih) — Congressional Bills; 2026-11-14T04:55:00+00:00
+- [H.R. 11015 (IH) - Promoting High-skilled Doctoral Talent Act of 2026](https://www.govinfo.gov/app/details/BILLS-119hr11015ih) — Congressional Bills; 2026-11-14T04:55:00+00:00
+- [H.R. 11020 (IH) - Health and Human Services Workforce Visa Act](https://www.govinfo.gov/app/details/BILLS-119hr11020ih) — Congressional Bills; 2026-11-14T04:53:05+00:00
+- [H.R. 9084 (RFS) - Department of Energy Nuclear Transparency Act](https://www.govinfo.gov/app/details/BILLS-119hr9084rfs) — Congressional Bills; 2026-11-14T04:53:05+00:00
+- [H.R. 11021 (IH) - Accurate Cancer Screenings for our Veterans Act of 2026](https://www.govinfo.gov/app/details/BILLS-119hr11021ih) — Congressional Bills; 2026-11-14T04:53:05+00:00
+- [H.R. 11028 (IH) - Designating North American Islamic Trust Act of 2026](https://www.govinfo.gov/app/details/BILLS-119hr11028ih) — Congressional Bills; 2026-11-14T04:53:05+00:00
+- [H.R. 11029 (IH) - Bringing Rehabilitation, Integrated Delivery, and Greater Extended Care at Home Act](https://www.govinfo.gov/app/details/BILLS-119hr11029ih) — Congressional Bills; 2026-11-14T04:53:05+00:00
+- [H.R. 11023 (IH) - Reasonable Adjustments To Energy Schedules Act of 2026](https://www.govinfo.gov/app/details/BILLS-119hr11023ih) — Congressional Bills; 2026-11-14T04:53:05+00:00
+- [H.R. 11030 (IH) - Fair Premiums for Farmers Act](https://www.govinfo.gov/app/details/BILLS-119hr11030ih) — Congressional Bills; 2026-11-14T04:53:05+00:00
+- [H.R. 11013 (IH) - Protect U.S. Preventive Services Task Force Integrity Act](https://www.govinfo.gov/app/details/BILLS-119hr11013ih) — Congressional Bills; 2026-11-14T04:53:05+00:00
+- [H.R. 10846 (IH) - Pay Your Taxes Avoided by Borrowing Act of 2026](https://www.govinfo.gov/app/details/BILLS-119hr10846ih) — Congressional Bills; 2026-11-14T04:53:05+00:00
+- [H.R. 11026 (IH) - To amend title 37, United States Code, to authorize the Secretary of Defense to make contributions to Trump Accounts as a bonus for a member of the Armed Forces who commits to continued service in the Armed Forces and to amend the Internal Revenue Code of 1986 to treat any such contribution in the same manner as a contribution made pursuant to an employer Trump account contribution program.](https://www.govinfo.gov/app/details/BILLS-119hr11026ih) — Congressional Bills; 2026-11-14T04:53:05+00:00
+- [H.R. 9718 (RFS) - Reshoring American Manufacturing Act of 2026](https://www.govinfo.gov/app/details/BILLS-119hr9718rfs) — Congressional Bills; 2026-11-14T04:53:04+00:00
+- [H.R. 11014 (IH) - Ducks and Geese Protection Act](https://www.govinfo.gov/app/details/BILLS-119hr11014ih) — Congressional Bills; 2026-11-14T04:53:04+00:00
+- [H.R. 11027 (IH) - Enhancing Competition in Contracting Orders Act](https://www.govinfo.gov/app/details/BILLS-119hr11027ih) — Congressional Bills; 2026-11-14T04:52:00+00:00
 - [H.R. 10329 (EH) - Combating Foreign Threats to Main Street Act of 2026](https://www.govinfo.gov/app/details/BILLS-119hr10329eh) — Congressional Bills; 2026-11-13T07:56:00+00:00
 - [H.R. 10355 (EH) - Disaster Loan Outreach Consistency Act](https://www.govinfo.gov/app/details/BILLS-119hr10355eh) — Congressional Bills; 2026-11-13T07:56:00+00:00
 - [H.R. 1013 (EH) - Retirement Fairness for Charities and Educational Institutions Act of 2025](https://www.govinfo.gov/app/details/BILLS-119hr1013eh) — Congressional Bills; 2026-11-13T07:56:00+00:00
@@ -152,24 +175,6 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [H.R. 10991 (IH) - Suicide Prevention for At-Risk K-12 Students Act](https://www.govinfo.gov/app/details/BILLS-119hr10991ih) — Congressional Bills; 2026-11-12T04:45:01+00:00
 - [H.R. 10980 (IH) - Promoting Resilient Buildings Act](https://www.govinfo.gov/app/details/BILLS-119hr10980ih) — Congressional Bills; 2026-11-11T10:43:00+00:00
 - [H.R. 10986 (IH) - Lebanon TPS Act](https://www.govinfo.gov/app/details/BILLS-119hr10986ih) — Congressional Bills; 2026-11-11T10:10:00+00:00
-- [H.R. 10973 (IH) - Master Sergeant Roy P. Benavidez VA Clinic Act of 2026](https://www.govinfo.gov/app/details/BILLS-119hr10973ih) — Congressional Bills; 2026-11-11T06:48:00+00:00
-- [H.R. 10971 (IH) - Gulf Maritime Restoration Act](https://www.govinfo.gov/app/details/BILLS-119hr10971ih) — Congressional Bills; 2026-11-11T06:02:00+00:00
-- [H.R. 10975 (IH) - Fair Manufactured Housing Lending Act](https://www.govinfo.gov/app/details/BILLS-119hr10975ih) — Congressional Bills; 2026-11-11T06:02:00+00:00
-- [H.R. 10990 (IH) - For the relief of Paula Valentina Albornoz Hernández, Eliana Karina Hernández Peranquive, Nicole Alejandra Albornoz Hernández, and Leonardo Albornoz Rodríguez.](https://www.govinfo.gov/app/details/BILLS-119hr10990ih) — Congressional Bills; 2026-11-11T06:02:00+00:00
-- [H.R. 10972 (IH) - Nodes, Enterprise Workloads, and Hybrid Operations, Resilience, Integration, Zero-Trust, Orbital Networks Act](https://www.govinfo.gov/app/details/BILLS-119hr10972ih) — Congressional Bills; 2026-11-11T06:02:00+00:00
-- [H.R. 10984 (IH) - ‘Innovation for VA Technology and Entrepreneurship Act](https://www.govinfo.gov/app/details/BILLS-119hr10984ih) — Congressional Bills; 2026-11-11T06:02:00+00:00
-- [H.R. 9614 (EH) - NRC Staff Pay Alignment Act](https://www.govinfo.gov/app/details/BILLS-119hr9614eh) — Congressional Bills; 2026-11-11T04:35:06+00:00
-- [H.R. 9612 (EH) - American Enrichment Deployment Act](https://www.govinfo.gov/app/details/BILLS-119hr9612eh) — Congressional Bills; 2026-11-11T04:35:06+00:00
-- [H.R. 3978 (EH) - Nuclear REFUEL (Recycling Efficient Fuels Utilizing Expedited Licensing) Act](https://www.govinfo.gov/app/details/BILLS-119hr3978eh) — Congressional Bills; 2026-11-11T04:35:06+00:00
-- [H.R. 9613 (EH) - Nuclear Advisory Committee Reform Act](https://www.govinfo.gov/app/details/BILLS-119hr9613eh) — Congressional Bills; 2026-11-11T04:35:06+00:00
-- [H.R. 10962 (IH) - Justification Oversight and Opportunities for Main Street Act of 2026](https://www.govinfo.gov/app/details/BILLS-119hr10962ih) — Congressional Bills; 2026-11-11T04:35:06+00:00
-- [H.R. 10968 (IH) - No Veteran Left Behind: Housing Retention Act of 2026](https://www.govinfo.gov/app/details/BILLS-119hr10968ih) — Congressional Bills; 2026-11-11T04:35:05+00:00
-- [H.R. 8552 (EH) - Veterans’ Compensation Cost-of-Living Adjustment Act of 2026](https://www.govinfo.gov/app/details/BILLS-119hr8552eh) — Congressional Bills; 2026-11-11T04:35:05+00:00
-- [H.R. 10966 (IH) - Supporting Veteran Mothers Act of 2026](https://www.govinfo.gov/app/details/BILLS-119hr10966ih) — Congressional Bills; 2026-11-11T04:35:05+00:00
-- [H.R. 10969 (IH) - Healthy Meal Time Act of 2026](https://www.govinfo.gov/app/details/BILLS-119hr10969ih) — Congressional Bills; 2026-11-11T04:35:05+00:00
-- [H.R. 10961 (IH) - To direct the Secretary of Veterans Affairs to report on the Warrior Training Advancement Course of the Veterans Benefits Administration.](https://www.govinfo.gov/app/details/BILLS-119hr10961ih) — Congressional Bills; 2026-11-11T04:35:05+00:00
-- [H.R. 10970 (IH) - Cardiovascular Disease Early Detection and Prevention Act of 2026](https://www.govinfo.gov/app/details/BILLS-119hr10970ih) — Congressional Bills; 2026-11-11T04:35:05+00:00
-- [H.R. 10965 (IH) - Supporting After-School STEM Educators Act](https://www.govinfo.gov/app/details/BILLS-119hr10965ih) — Congressional Bills; 2026-11-11T04:35:04+00:00
 
 ## notice_published
 
@@ -369,15 +374,13 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 
 ## presidential_document_published
 
+- [DCPD-202600693 - Remarks at a Campaign Rally for New York Republican Candidates in Syracuse, New York](https://www.govinfo.gov/app/details/DCPD-202600693) — Compilation of Presidential Documents; 2026-11-13T21:45:00+00:00
+- [DCPD-202600692 - Message on Leif Erikson Day](https://www.govinfo.gov/app/details/DCPD-202600692) — Compilation of Presidential Documents; 2026-11-13T21:44:00+00:00
+- [DCPD-202600691 - Remarks and an Exchange With Reporters Prior to Departure for Syracuse, New York](https://www.govinfo.gov/app/details/DCPD-202600691) — Compilation of Presidential Documents; 2026-11-13T21:44:00+00:00
+- [DCPD-202600690 - Remarks at a Columbus Day Celebration](https://www.govinfo.gov/app/details/DCPD-202600690) — Compilation of Presidential Documents; 2026-11-13T21:44:00+00:00
+- [DCPD-202600684 - Remarks in an Exchange With Reporters Prior to Departure for San Antonio, Texas](https://www.govinfo.gov/app/details/DCPD-202600684) — Compilation of Presidential Documents; 2026-11-13T21:43:00+00:00
 - [Presidential Determination Pursuant to Section 1245(d)(4)(B) and (C) of the National Defense Authorization Act for Fiscal Year 2012](https://www.federalregister.gov/documents/2026/11/13/2026-23233/presidential-determination-pursuant-to-section-1245d4b-and-c-of-the-national-defense-authorization) — Executive Office of the President; 2026-11-13T00:00:00+00:00
 - [Establishment of the Oval Office National Monument](https://www.federalregister.gov/documents/2026/11/12/2026-23113/establishment-of-the-oval-office-national-monument) — Executive Office of the President; 2026-11-12T00:00:00+00:00
-- [DCPD-202600689 - Remarks on Presenting the National Medal of Science and National Medals of Technology and Innovation](https://www.govinfo.gov/app/details/DCPD-202600689) — Compilation of Presidential Documents; 2026-11-10T21:28:51+00:00
-- [DCPD-202600686 - Proclamation 11073-Columbus Day, 2026](https://www.govinfo.gov/app/details/DCPD-202600686) — Compilation of Presidential Documents; 2026-11-10T21:28:51+00:00
-- [DCPD-202600687 - Memorandum on Establishment of a Committee of Inquiry To Investigate Allegations of False Statements by Lisa DeNell Cook](https://www.govinfo.gov/app/details/DCPD-202600687) — Compilation of Presidential Documents; 2026-11-10T21:28:51+00:00
-- [DCPD-2026DIGEST - Digest of Other White House Announcements](https://www.govinfo.gov/app/details/DCPD-2026DIGEST) — Compilation of Presidential Documents; 2026-11-10T21:28:51+00:00
-- [DCPD-2026CHECKLIST - Checklist of White House Press Releases](https://www.govinfo.gov/app/details/DCPD-2026CHECKLIST) — Compilation of Presidential Documents; 2026-11-10T21:28:51+00:00
-- [DCPD-2026ACTSAPPROVED - Acts Approved by the President](https://www.govinfo.gov/app/details/DCPD-2026ACTSAPPROVED) — Compilation of Presidential Documents; 2026-11-10T21:28:51+00:00
-- [DCPD-202600685 - Proclamation 11072-National Energy Dominance Month, 2026](https://www.govinfo.gov/app/details/DCPD-202600685) — Compilation of Presidential Documents; 2026-11-10T21:28:50+00:00
 
 ## proposal_published
 
@@ -403,6 +406,15 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 
 ## requires_semantic_review
 
+- [Generic Drug User Fee Amendments](http://www.fda.gov/industry/fda-user-fee-programs/generic-drug-user-fee-amendments) — Food and Drug Administration — What's New: Drugs; 2026-11-13T23:44:39+00:00
+- [What's New Related to Drugs](http://www.fda.gov/drugs/news-events-human-drugs/whats-new-related-drugs) — Food and Drug Administration — What's New: Drugs; 2026-11-13T22:37:31+00:00
+- [Notable Approvals | Drugs](http://www.fda.gov/drugs/news-events-human-drugs/notable-approvals-drugs) — Food and Drug Administration — What's New: Drugs; 2026-11-13T22:34:14+00:00
+- [FDA Approves First Drug to Treat Adults with Primary Membranous Nephropathy](http://www.fda.gov/drugs/news-events-human-drugs/fda-approves-first-drug-treat-adults-primary-membranous-nephropathy) — Food and Drug Administration — What's New: Drugs; 2026-11-13T22:33:49+00:00
+- [Guidance Recap Podcast | Master Protocols for Drug and Biological Product Development](http://www.fda.gov/drugs/guidances-drugs/guidance-recap-podcast-master-protocols-drug-and-biological-product-development) — Food and Drug Administration — What's New: Drugs; 2026-11-13T21:37:00+00:00
+- [Guidance Recap Podcast | Assessing the Effects of Food on Drugs in INDs and NDAs – Clinical Pharmacology Considerations](http://www.fda.gov/drugs/guidances-drugs/guidance-recap-podcast-assessing-effects-food-drugs-inds-and-ndas-clinical-pharmacology) — Food and Drug Administration — What's New: Drugs; 2026-11-13T21:34:15+00:00
+- [Agencies Extend Comment Period for Proposed Third-Party Risk Management Guidance](https://www.occ.gov/news-issuances/news-releases/2026/nr-ia-2026-100.html) — Office of the Comptroller of the Currency; 2026-11-13T21:15:00+00:00
+- [Agencies extend comment period for proposed third-party risk management guidance](https://www.federalreserve.gov/newsevents/pressreleases/bcreg20261113a.htm) — Federal Reserve Board; 2026-11-13T21:15:00+00:00
+- [CFTC Sues Louisiana After State Court Blocks CFTC-Regulated Exchanges](https://www.cftc.gov/PressRoom/PressReleases/9326-26) — Commodity Futures Trading Commission; 2026-11-13T21:00:40+00:00
 - [Section 804 Importation Program Policies and Authorizations](http://www.fda.gov/drugs/importation-program-under-section-804-fdc-act/section-804-importation-program-policies-and-authorizations) — Food and Drug Administration — What's New: Drugs; 2026-11-13T19:36:20+00:00
 - [Oncology (Cancer)/Hematologic Malignancies Approval Notifications](http://www.fda.gov/drugs/cancer-approvals/oncology-cancerhematologic-malignancies-approval-notifications) — Food and Drug Administration — What's New: Drugs; 2026-11-13T18:22:59+00:00
 - [FDA approves durvalumab with enfortumab vedotin-ejfv for muscle invasive bladder cancer](http://www.fda.gov/drugs/cancer-approvals/fda-approves-durvalumab-enfortumab-vedotin-ejfv-muscle-invasive-bladder-cancer) — Food and Drug Administration — What's New: Drugs; 2026-11-13T18:22:19+00:00
@@ -415,7 +427,6 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [Reserve Bank of India – Bulletin Weekly Statistical Supplement – Extract](https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63972) — Reserve Bank of India; 2026-11-13T17:00:00+00:00
 - [Secretary Kennedy Launches ‘100 Veterans in 100 Days’ & Signs Additional DOW MOU to Expand Veterans’ Career Opportunities at HHS](https://www.hhs.gov/press-room/secretary-kennedy-launches-100-veterans-100-days-hhs-careers.html) — Health and Human Services; 2026-11-13T17:00:00+00:00
 - [SEC Proposes Executive and Director Compensation Disclosure Reforms](https://www.sec.gov/newsroom/press-releases/2026-114-sec-proposes-executive-director-compensation-disclosure-reforms) — Securities and Exchange Commission; 2026-11-13T16:57:00+00:00
-- [What's New Related to Drugs](http://www.fda.gov/drugs/news-events-human-drugs/whats-new-related-drugs) — Food and Drug Administration — What's New: Drugs; 2026-11-13T16:29:19+00:00
 - [20262405: Aon plc; KKR Management LLP](https://www.ftc.gov/legal-library/browse/early-termination-notices/20262405) — Federal Trade Commission — HSR Early Termination Notices; 2026-11-13T16:28:54+00:00
 - [Weekly schedule of President António Costa](https://www.consilium.europa.eu/en/press/press-releases/2026/11/13/weekly-schedule-of-president-antonio-costa/) — Council of the European Union; 2026-11-13T16:25:00+00:00
 - [Secretary Kennedy Takes MAHA to North Dakota to Advance Regenerative Agriculture and Strengthen Tribal and Rural Healthcare](https://www.hhs.gov/press-room/secretary-kennedy-take-back-your-health-tour-north-dakota.html) — Health and Human Services; 2026-11-13T16:20:00+00:00
@@ -437,6 +448,22 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [Government Stock - Auction Results: Cut-off](https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63969) — Reserve Bank of India; 2026-11-13T13:10:00+00:00
 - [Nathan M. Seidman Named Regional Director for Region 20—San Francisco, CA, and Honolulu, HI](https://www.nlrb.gov/news-outreach/news-story/nathan-m-seidman-named-regional-director-for-region-20-san-francisco-ca) — National Labor Relations Board — https://www.nlrb.gov/rss/rssPressReleases.xml; 2026-11-13T12:26:22+00:00
 - [Commissioner Roswall's address at the Circular Valley Forum](https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2437) — European Commission press and decisions; 2026-11-13T12:24:19+00:00
+- [Warrenton man charged with transportation of child sexual abuse material](https://www.justice.gov/usao-edva/pr/warrenton-man-charged-transportation-child-sexual-abuse-material) — Department of Justice; 2026-11-13T12:00:00+00:00
+- [Teen Sentenced for 2024 Armed Carjacking](https://www.justice.gov/usao-dc/pr/teen-sentenced-2024-armed-carjacking) — Department of Justice; 2026-11-13T12:00:00+00:00
+- [4 defendants convicted in case involving freight shipment of hundreds of pounds of cocaine, fentanyl, methamphetamine & marijuana](https://www.justice.gov/usao-sdoh/pr/4-defendants-convicted-case-involving-freight-shipment-hundreds-pounds-cocaine) — Department of Justice; 2026-11-13T12:00:00+00:00
+- [Palm Harbor Man Arrested for Threatening to Injure and Kill Four Individuals, Including Two Sitting United States Congressmembers](https://www.justice.gov/usao-mdfl/pr/palm-harbor-man-arrested-threatening-injure-and-kill-four-individuals-including-two) — Department of Justice; 2026-11-13T12:00:00+00:00
+- [HSI San Juan Arrests 2 Men on Child Exploitation Charges](https://www.justice.gov/usao-pr/pr/hsi-san-juan-arrests-2-men-child-exploitation-charges-0) — Department of Justice; 2026-11-13T12:00:00+00:00
+- [Federal Jury Convicts Crucian Man For Possessing “Glock switch” Machine Gun](https://www.justice.gov/usao-vi/pr/federal-jury-convicts-crucian-man-possessing-glock-switch-machine-gun) — Department of Justice; 2026-11-13T12:00:00+00:00
+- [29-Year-Old Man Arrested for Child Exploitation](https://www.justice.gov/usao-pr/pr/29-year-old-man-arrested-child-exploitation) — Department of Justice; 2026-11-13T12:00:00+00:00
+- [Career offender sentenced to over 21 years in prison for latest drug and firearms conviction](https://www.justice.gov/usao-edva/pr/career-offender-sentenced-over-21-years-prison-latest-drug-and-firearms-conviction) — Department of Justice; 2026-11-13T12:00:00+00:00
+- [Previously Convicted Mexican National Unlawfully Residing in the United States Pleads Guilty to Fentanyl Trafficking and Illegal Reentry](https://www.justice.gov/usao-or/pr/previously-convicted-mexican-national-unlawfully-residing-united-states-pleads-guilty) — Department of Justice; 2026-11-13T12:00:00+00:00
+- [Northern Kentucky Man and Former Lawyer Indicted in Alleged Murder-for-Hire Scheme](https://www.justice.gov/usao-edky/pr/northern-kentucky-man-and-former-lawyer-indicted-alleged-murder-hire-scheme) — Department of Justice; 2026-11-13T12:00:00+00:00
+- [Teen Gets Probation for Shooting a Juvenile Playing Basketball at a Recreation Center](https://www.justice.gov/usao-dc/pr/teen-gets-probation-shooting-juvenile-playing-basketball-recreation-center) — Department of Justice; 2026-11-13T12:00:00+00:00
+- [Bethany Man Sentenced to Federal Prison after Firearms and Drugs Found at Residence](https://www.justice.gov/usao-wdok/pr/bethany-man-sentenced-federal-prison-after-firearms-and-drugs-found-residence) — Department of Justice; 2026-11-13T12:00:00+00:00
+- [Money Launderer Sentenced for Laundering $52 Million for the Sinaloa Cartel as Part of Ongoing Homeland Security Task Force Investigation](https://www.justice.gov/usao-sdca/pr/money-launderer-sentenced-laundering-52-million-sinaloa-cartel-part-ongoing-homeland) — Department of Justice; 2026-11-13T12:00:00+00:00
+- [Charlotte Woman Sentenced to Prison for Interfering with Federal Officers Performing Official Duties and Related Offenses](https://www.justice.gov/usao-wdnc/pr/charlotte-woman-sentenced-prison-interfering-federal-officers-performing-official) — Department of Justice; 2026-11-13T12:00:00+00:00
+- [U.S. Attorney Russ Ferguson Convenes Rural Crime Summit with Federal, State, Local, and Tribal Law Enforcement to Enhance Public Safety](https://www.justice.gov/usao-wdnc/pr/us-attorney-russ-ferguson-convenes-rural-crime-summit-federal-state-local-and-tribal) — Department of Justice; 2026-11-13T12:00:00+00:00
+- [Chinese National in Viral YouTube Video Sentenced to 6 ½ Years in $27 Million Multinational Fraud Scheme Targeting 2,000 Seniors](https://www.justice.gov/usao-sdca/pr/chinese-national-viral-youtube-video-sentenced-6-12-years-27-million-multinational) — Department of Justice; 2026-11-13T12:00:00+00:00
 - [US Department of Labor honors 772 employers committed to veterans’ employment with 2026 HIRE Vets Medallion Awards](http://www.dol.gov/newsroom/releases/vets/vets20261113) — Department of Labor; 2026-11-13T12:00:00+00:00
 - [US Department of Labor issues guidance to employers, plan fiduciaries on inaccurate health network provider directories](http://www.dol.gov/newsroom/releases/ebsa/ebsa20261113) — Department of Labor; 2026-11-13T12:00:00+00:00
 - [HVAC Supplier Johnson Controls Inc. and Two Subsidiaries Agree to Pay $5 Million to Settle Cybersecurity Fraud Allegations](https://www.justice.gov/opa/pr/hvac-supplier-johnson-controls-inc-and-two-subsidiaries-agree-pay-5-million-settle) — Department of Justice — RSS Feed; 2026-11-13T12:00:00+00:00
@@ -473,6 +500,8 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [Invitation to bid – Federal Treasury discount paper (Bubills)](https://www.bundesbank.de/en/press/press-releases/federal-securities/invitation-to-bid-federal-treasury-discount-paper-bubills--1015924) — Deutsche Bundesbank; 2026-11-13T08:30:00+00:00
 - [2026-11-13 - Data portal - IMF SDDS Plus, 13 November 2026](https://www.snb.ch/en/publications/statistical-publications/data-portal/2026/11/statpub_news_20261113_sddsplus) — Swiss National Bank; 2026-11-13T08:00:00+00:00
 - [Isabel Schnabel: Made in Europe](https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261113~3883f1f187.en.html) — European Central Bank; 2026-11-13T07:20:00+00:00
+- [Agencies Extend Comment Period for Proposed Third-Party Risk Management Gu…](https://www.fdic.gov/news/press-releases/2026/agencies-extend-comment-period-proposed-third-party-risk-management) — Federal Deposit Insurance Corporation; 2026-11-13T00:00:00+00:00
+- [United States Seeks Mexico’s Review of Alleged Denial of Workers’ Rights at Industrias FG](https://ustr.gov/about/policy-offices/press-office/press-releases/2026/november/united-states-seeks-mexicos-review-alleged-denial-workers-rights-industrias-fg) — United States Trade Representative; 2026-11-13T00:00:00+00:00
 - [Ireland contributes EUR 200,000 to strengthen trade opportunities in developing countries](https://www.wto.org/english/news_e/pres26_e/pr998_551_e.htm) — World Trade Organization disputes and decisions; 2026-11-13T00:00:00+00:00
 - [Counter Narcotics and Counter Terrorism Designations](https://ofac.treasury.gov/recent-actions/20261113) — Treasury Office of Foreign Assets Control; 2026-11-13T00:00:00+00:00
 - [Tentative issuance schedule for Exchange Fund Bills and Notes](https://www.hkma.gov.hk/eng/news-and-media/press-releases/2026/11/20261113-3/) — Hong Kong Monetary Authority; 2026-11-13T00:00:00+00:00
@@ -647,31 +676,14 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [Wirtschaftliche Herausforderungen in Deutschland und die Zukunft Europas | Grundsatzrede auf der Economic Conference 2026 der Latvijas Banka](https://www.bundesbank.de/de/presse/reden/wirtschaftliche-herausforderungen-in-deutschland-und-die-zukunft-europas-964976) — Deutsche Bundesbank — Speeches, Interview and Contributions; 2026-11-11T08:20:00+00:00
 - [Economic challenges in Germany and the future of Europe | Keynote speech at the Latvijas Banka Economic Conference 2026](https://www.bundesbank.de/en/press/speeches/economic-challenges-in-germany-and-the-future-of-europe-964960) — Deutsche Bundesbank; 2026-11-11T08:20:00+00:00
 - [1 JFTC Approves the Commitment Plan Submitted by Amazon Japan G.K. November 11, 2026 Japan Fair Trade Commission The Japan Fair - 公正取引委員会](https://news.google.com/rss/articles/CBMickFVX3lxTE5MV295Um5BT0l6c2tWbzNrcjBKYWh2SFpyb01Ya3hOR1BYT2lPWXA4S01CejZOV05VVmhmZk1QWFAwYWRWUkpKQU8xODY5VkYwYWJxa1c4cXpsb3Uya2locURJajlNMi10VTFZWTVBNzJZdw) — Japan Fair Trade Commission (official-site news mirror); 2026-11-11T08:00:00+00:00
-- [Increased risk of serious events that could weaken financial stability](https://www.norges-bank.no/en/news-events/news/Press-releases/2026/2026-11-11-fsr2/) — Norges Bank; 2026-11-11T07:30:00+00:00
-- [EU budget for 2027: Council and Parliament reach agreement](https://www.consilium.europa.eu/en/press/press-releases/2026/11/11/eu-budget-for-2027-council-and-parliament-reach-agreement/) — Council of the European Union; 2026-11-11T06:25:00+00:00
-- [South Africa notifies launch of safeguard investigation into certain non-wired float glass products](https://www.wto.org/english/news_e/news26_e/safe_zaf_11nov26_546_e.htm) — World Trade Organization disputes and decisions; 2026-11-11T00:00:00+00:00
-- [Enforcement collaboration between HKMA and IA – IA bans Lim Ka Kit from being an insurance intermediary for nine months](https://www.hkma.gov.hk/eng/news-and-media/press-releases/2026/11/20261111-3/) — Hong Kong Monetary Authority; 2026-11-11T00:00:00+00:00
-- [Tender results of 1-year HONIA-indexed Floating Rate Notes](https://www.hkma.gov.hk/eng/news-and-media/press-releases/2026/11/20261111-4/) — Hong Kong Monetary Authority; 2026-11-11T00:00:00+00:00
-- [Results of 7-year HKD HKSAR Institutional Government Bonds tender through re-opening](https://www.hkma.gov.hk/eng/news-and-media/press-releases/2026/11/20261111-5/) — Hong Kong Monetary Authority; 2026-11-11T00:00:00+00:00
-- [Money Stock (Oct.)](http://www.boj.or.jp/en/statistics/money/ms/ms2610.pdf) — Bank of Japan; 2026-11-10T23:50:00+00:00
-- [Questions and answers on the Consumer Package](https://ec.europa.eu/commission/presscorner/detail/en/qanda_26_2408) — European Commission press and decisions; 2026-11-10T23:00:00+00:00
-- [Commission strengthens consumer protection laws, making them fit for the digital age](https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2407) — European Commission press and decisions; 2026-11-10T23:00:00+00:00
-- [Questions and answers on the agreement on the EU Annual Budget 2027](https://ec.europa.eu/commission/presscorner/detail/en/qanda_26_2386) — European Commission press and decisions; 2026-11-10T23:00:00+00:00
-- [Bringing the current MFF to a successful close: agreement on the final Annual Budget *](https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2385) — European Commission press and decisions; 2026-11-10T23:00:00+00:00
-- [Nominations and Withdrawals Sent to the Senate](https://www.whitehouse.gov/presidential-actions/2026/11/nominations-and-withdrawals-sent-to-the-senate-b6a4/) — White House presidential actions; 2026-11-10T21:56:49+00:00
-- [VETERANS DAY, 2026](https://www.whitehouse.gov/presidential-actions/2026/11/veterans-day-2026/) — White House presidential actions; 2026-11-10T21:12:15+00:00
-- [Presidential Determination Concerning Wildfire Suppression Activities in the United States](https://www.whitehouse.gov/presidential-actions/2026/11/presidential-determination-concerning-wildfire-suppression-activities-in-the-united-states/) — White House presidential actions; 2026-11-10T21:11:07+00:00
 
 ## Source failures and coverage warnings
 
 - us-govinfo-bills: ok; feed_at_capacity_in_requested_window; snapshots may miss overflow
 - us-ftc-69601f2e49: ok; stale_feed_outside_requested_window
 - us-treasury-a69e5b5ef0: ok; stale_feed_outside_requested_window
-- us-ustr-index: ok; stale_feed_outside_requested_window
-- us-fed-a383ca0d09: ok; stale_feed_outside_requested_window
 - us-fed-1401ff4ff2: ok; stale_feed_outside_requested_window
 - us-fed-ba8ad56252: ok; stale_feed_outside_requested_window
-- us-fdic-index: ok; stale_feed_outside_requested_window
 - us-fda-1a1096082f: ok; stale_feed_outside_requested_window
 - us-fda-2d9c4fc2f9: ok; stale_feed_outside_requested_window
 - us-fda-3eaddf14de: ok; stale_feed_outside_requested_window
@@ -679,9 +691,9 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - us-fda-00e9311ef2: ok; stale_feed_outside_requested_window
 - us-fcc-1ad902e468: unchanged; stale_feed_outside_requested_window
 - us-osha-d8e445af0b: ok; stale_feed_outside_requested_window
-- us-fmc-fe8f0538ae: ok; stale_feed_outside_requested_window
+- us-fmc-fe8f0538ae: unchanged; stale_feed_outside_requested_window
 - us-fhfa-index: ok; stale_feed_outside_requested_window
-- us-ca-oal-c1209cfd66: ok; stale_feed_outside_requested_window
+- us-ca-oal-c1209cfd66: unchanged; stale_feed_outside_requested_window
 - eu-ecb-fb5fd59aed: ok; stale_feed_outside_requested_window
 - ca-boc-4aa19b2183: ok; stale_feed_outside_requested_window
 - ca-boc-1f26bb2971: ok; stale_feed_outside_requested_window
@@ -695,6 +707,7 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - au-rba-9e35f5f8d1: unchanged; stale_feed_outside_requested_window
 - ch-snb-4a868c4407: ok; stale_feed_outside_requested_window
 - se-riksbank-8ea6f8481e: ok; stale_feed_outside_requested_window
+- no-norges-5079edc79e: ok; stale_feed_outside_requested_window
 - de-bundesbank-e5b1c4a067: ok; stale_feed_outside_requested_window
 - io-bis-8d1fbea6ca: ok; stale_feed_outside_requested_window
 - io-bis-b3dfd5b7aa: ok; stale_feed_outside_requested_window
