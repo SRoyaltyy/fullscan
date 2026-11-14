@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-14T06:02:50-05:00",
+  "updated_at": "2026-11-14T13:10:57-05:00",
   "runs": [
     {
       "date": "2026-11-06",
@@ -224,12 +224,6 @@
       "updated_at": "2026-11-13T22:37:52-05:00"
     },
     {
-      "date": "2026-11-14",
-      "workflow": "fm_preopen",
-      "file": "2026-11-14_fm_preopen.json",
-      "updated_at": "2026-11-14T03:05:02-05:00"
-    },
-    {
       "date": "2026-11-12",
       "workflow": "postclose",
       "file": "2026-11-12_postclose.json",
@@ -240,6 +234,12 @@
       "workflow": "postclose",
       "file": "2026-11-13_postclose.json",
       "updated_at": "2026-11-14T06:02:50-05:00"
+    },
+    {
+      "date": "2026-11-14",
+      "workflow": "fm_preopen",
+      "file": "2026-11-14_fm_preopen.json",
+      "updated_at": "2026-11-14T13:10:57-05:00"
     }
   ]
 }
