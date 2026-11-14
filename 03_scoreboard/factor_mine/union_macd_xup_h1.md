@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ macd_xup, no 🚨
 
-Cash book **-26.26%** ($7,374) · signal-only (no cash/fees) was -19.02%. Starts YES **0/30**. Fills 366 · skips 71 · realized $-1788.82.
+Cash book **-32.55%** ($6,745) · signal-only (no cash/fees) was -19.02%. Starts YES **0/30**. Fills 369 · skips 71 · realized $-1788.82.
 
 ## How this sleeve decides (like you are 10)
 
@@ -568,6 +568,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-12 09:30 ET | **SELL** | `VLN` | 575 | $1.41 | $7.52 | $-158.69 | $6,426.89 | ▼ -158.69 after sell → book $7,376.15; vs 09:30 mark -7.53 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-12 09:30 ET | **SELL** | `ZETA` | 26 | $36.51 | $2.09 | $+9.10 | $7,374.07 | ▲ +9.10 after sell → book $7,374.07; vs 09:30 mark -2.08 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,374.07 | ▲ close $7,374.07 vs 09:30 $7,397.35 (session +0.00) | 16:00 close · cash $7,374.07 · no lots left · equity $7,374.07. | — |
+| 2026-11-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,374.07 | ▲ 09:30 equity $7,374.07 vs yday $7,374.07 (+0.00) | 09:30 open · cash $7,374.07 · no holdings · equity $7,374.07 vs prior close $7,374.07 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-13 09:30 ET | **BUY** | `DJT` | 494 | $4.97 | $6.37 | — | $4,912.52 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list yday_gainer,yday_mover; 🔵; ret5=+23.6; leftover $2458.02 | join🔴 sector🟡 gen🔴 news🔴 digest🔴 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `GOOGL` | 8 | $302.98 | $2.01 | — | $2,486.66 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list ohlc_hot; 🔵; ret5=+5.7; leftover $2458.02 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🔴 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `HTFL` | 42 | $57.94 | $2.12 | — | $51.07 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list ohlc_hot,earn_react; 🔵; ret5=+15.3; leftover $2458.02 | join🟡 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $51.07 | ▼ close $6,744.71 vs 09:30 $7,374.07 (session -618.86) | 16:00 close · cash $51.07 · equity $6,744.71 vs 09:30 $7,374.07 (-629.36; session marks -618.86) · 3 name(s) marked open→close (per-name table). DJT×494 09:30 $4.97 → close $4.64 -163.02; GOOGL×8 09:30 $302.98 → close $295.77 -57.68; HTFL×42 09:30 $57.94 → close $48.46 -398.16 | — |
 
 ## Not taken
 

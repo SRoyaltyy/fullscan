@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-12.49%** ($8,751) · signal-only (no cash/fees) was -4.91%. Starts YES **5/30**. Fills 422 · skips 78 · realized $-2.02.
+Cash book **-14.52%** ($8,548) · signal-only (no cash/fees) was -4.91%. Starts YES **5/30**. Fills 428 · skips 78 · realized $-2.02.
 
 ## How this sleeve decides (like you are 10)
 
@@ -626,6 +626,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-12 09:30 ET | **SELL** | `TTD` | 73 | $15.85 | $2.23 | $+40.82 | $7,644.50 | ▲ +40.82 after sell → book $8,753.02; vs 09:30 mark -2.23 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-12 09:30 ET | **SELL** | `WRBY` | 37 | $29.96 | $2.12 | $-0.15 | $8,750.90 | ▼ -0.15 after sell → book $8,750.90; vs 09:30 mark -2.12 | dropped from list after 2 sess (min 1) | — |
 | 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,750.90 | ▲ close $8,750.90 vs 09:30 $8,774.22 (session +0.00) | 16:00 close · cash $8,750.90 · no lots left · equity $8,750.90. | — |
+| 2026-11-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,750.90 | ▲ 09:30 equity $8,750.90 vs yday $8,750.90 (+0.00) | 09:30 open · cash $8,750.90 · no holdings · equity $8,750.90 vs prior close $8,750.90 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-13 09:30 ET | **BUY** | `NBIS` | 11 | $123.52 | $2.02 | — | $7,390.16 | — | combo gate; gate last_green=True,vol=good; list probable,yday_gainer; ret5=+6.9; leftover $1458.48 | join🟡 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-13 09:30 ET | **BUY** | `CRWV` | 26 | $56.01 | $2.07 | — | $5,931.83 | — | combo gate; gate last_green=True,vol=good; list yday_gainer,yday_mover; ret5=+29.6; leftover $1458.48 | join🔴 sector🔴 gen🔴 news🟡 digest🟢 ab🟡 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `AXTI` | 33 | $43.36 | $2.09 | — | $4,498.86 | — | combo gate; gate last_green=True,vol=good; list yday_gainer,yday_mover; ret5=+18.6; leftover $1458.48 | join🟡 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `RUM` | 255 | $5.71 | $3.29 | — | $3,039.52 | — | combo gate; gate last_green=True,vol=good; list yday_gainer; 🔵; ret5=+21.6; leftover $1458.48 | join🔴 sector🟡 gen🔴 news🟢 digest🔴 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `TEVA` | 33 | $43.91 | $2.09 | — | $1,588.40 | — | combo gate; gate last_green=True,vol=good; list ohlc_hot; 🔵; ret5=+4.5; leftover $1458.48 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `SKM` | 41 | $34.94 | $2.11 | — | $153.75 | — | combo gate; gate last_green=True,vol=good; list ohlc_hot; ret5=+16.0; leftover $1458.48 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $153.75 | ▼ close $8,547.75 vs 09:30 $8,750.90 (session -189.48) | 16:00 close · cash $153.75 · equity $8,547.75 vs 09:30 $8,750.90 (-203.15; session marks -189.48) · 6 name(s) marked open→close (per-name table). NBIS×11 09:30 $123.52 → close $115.88 -84.04; CRWV×26 09:30 $56.01 → close $53.13 -74.88; AXTI×33 09:30 $43.36 → close $41.84 -50.16; RUM×255 09:30 $5.71 → close $5.77 +15.30; TEVA×33 09:30 $43.91 → close $44.50 +19.47; SKM×41 09:30 $34.94 → close $34.57 -15.17 | — |
 
 ## Not taken
 

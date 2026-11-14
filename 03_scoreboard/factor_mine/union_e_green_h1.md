@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-5.51%** ($9,449) · signal-only (no cash/fees) was -17.92%. Starts YES **5/30**. Fills 216 · skips 17 · realized $-2405.95.
+Cash book **-15.23%** ($8,477) · signal-only (no cash/fees) was -17.92%. Starts YES **5/30**. Fills 221 · skips 17 · realized $-2405.95.
 
 ## How this sleeve decides (like you are 10)
 
@@ -420,6 +420,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-12 09:30 ET | **SELL** | `ICL` | 245 | $4.62 | $3.21 | $-8.82 | $8,306.67 | ▼ -8.82 after sell → book $9,453.27; vs 09:30 mark -3.22 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-12 09:30 ET | **SELL** | `KOPN` | 315 | $3.64 | $4.13 | $+1.26 | $9,449.15 | ▲ +1.26 after sell → book $9,449.15; vs 09:30 mark -4.12 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,449.15 | ▲ close $9,449.15 vs 09:30 $9,473.71 (session +0.00) | 16:00 close · cash $9,449.15 · no lots left · equity $9,449.15. | — |
+| 2026-11-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,449.15 | ▲ 09:30 equity $9,449.15 vs yday $9,449.15 (+0.00) | 09:30 open · cash $9,449.15 · no holdings · equity $9,449.15 vs prior close $9,449.15 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-13 09:30 ET | **BUY** | `HTFL` | 32 | $57.94 | $2.09 | — | $7,592.98 | — | combo gate; gate earn_react=True,last_green=True; list ohlc_hot,earn_react; 🔵; ret5=+15.3; leftover $1889.83 | join🟡 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `ALMU` | 261 | $7.22 | $3.37 | — | $5,704.91 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; ret5=+26.3; leftover $1889.83 | join🔴 sector🔴 gen🔴 news🟡 digest🟢 ab🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `CBRS` | 17 | $108.40 | $2.04 | — | $3,860.07 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; ret5=+19.6; leftover $1889.83 | join🔴 sector🔴 gen🔴 news🟢 digest🟢 ab🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `DGXX` | 733 | $2.58 | $9.46 | — | $1,963.14 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; ret5=+16.3; leftover $1889.83 | join🔴 sector🟡 gen🔴 news🟡 digest🟡 ab🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `NEOV` | 574 | $3.29 | $7.40 | — | $67.27 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; 🔵; ret5=+35.1; leftover $1889.83 | join🔴 sector🟢 gen🔴 news🟡 digest🟡 judge🔴 ab🔴 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $67.27 | ▼ close $8,477.18 vs 09:30 $9,449.15 (session -947.62) | 16:00 close · cash $67.27 · equity $8,477.18 vs 09:30 $9,449.15 (-971.97; session marks -947.62) · 5 name(s) marked open→close (per-name table). HTFL×32 09:30 $57.94 → close $48.46 -303.36; ALMU×261 09:30 $7.22 → close $6.55 -175.16; CBRS×17 09:30 $108.40 → close $108.72 +5.44; DGXX×733 09:30 $2.58 → close $2.28 -216.24; NEOV×574 09:30 $3.29 → close $2.84 -258.30 | — |
 
 ## Not taken
 

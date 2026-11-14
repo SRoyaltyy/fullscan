@@ -6,7 +6,7 @@ Buys the flatten **wish-list** even on io/HOLD mornings — live `flatten_robust
 
 Side **long** · universe `flatten` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · flatten wish-list ∩ vol🟢
 
-Cash book **-28.91%** ($7,109) · signal-only (no cash/fees) was -19.12%. Starts YES **6/30**. Fills 74 · skips 71 · realized $-2440.55.
+Cash book **-28.24%** ($7,176) · signal-only (no cash/fees) was -19.12%. Starts YES **6/30**. Fills 76 · skips 71 · realized $-2440.55.
 
 ## How this sleeve decides (like you are 10)
 
@@ -276,6 +276,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-12 09:30 ET | **SELL** | `CLOV` | 13 | $4.92 | $0.70 | $-0.85 | $80.66 | ▼ -0.85 after sell → book $7,188.91; vs 09:30 mark -0.70 | dropped from list after 3 sess (min 3) | — |
 | 2026-11-12 09:30 ET | **SELL** | `ZVRA` | 5 | $11.75 | $0.62 | $-0.72 | $138.79 | ▼ -0.72 after sell → book $7,188.29; vs 09:30 mark -0.62 | dropped from list after 3 sess (min 3) | — |
 | 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $138.79 | ▼ close $7,109.18 vs 09:30 $7,189.61 (session -79.11) | 16:00 close · cash $138.79 · equity $7,109.18 vs 09:30 $7,189.61 (-80.43; session marks -79.11) · 4 name(s) marked open→close (per-name table). CLX×22 09:30 $107.52 → close $108.20 +14.96; COTY×545 09:30 $4.09 → close $4.03 -32.70; TTD×153 09:30 $15.85 → close $15.47 -58.14; WRBY×1 09:30 $29.96 → close $26.73 -3.23 | — |
+| 2026-11-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $138.79 | ▲ 09:30 equity $7,151.51 vs yday $7,109.18 (+42.32) | 09:30 open · cash $138.79 (unchanged overnight, no fees) · equity $7,151.51 vs prior close $7,109.18 (+42.32) · 4 name(s) re-marked at the open (per-name table). CLX×22 yday $108.20 → 09:30 $109.05 +18.70; COTY×545 yday $4.03 → 09:30 $4.03 -0.55; TTD×153 yday $15.47 → 09:30 $15.63 +24.48; WRBY×1 yday $26.73 → 09:30 $26.42 -0.31 | — |
+| 2026-11-13 09:30 ET | **SELL** | `WRBY` | 1 | $26.42 | $0.29 | $-4.02 | $164.92 | ▼ -4.02 after sell → book $7,151.22; vs 09:30 mark -0.28 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-13 09:30 ET | **BUY** | `ETON` | 1 | $61.25 | $0.62 | — | $103.06 | — | flatten wish-list ∩ vol🟢; gate vol=good; list flatten; wish-list (live io HOLD — not a ticket); ret5=+30.3; leftover $82.46 | join🟢 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $103.06 | ▲ close $7,175.95 vs 09:30 $7,151.51 (session +25.35) | 16:00 close · cash $103.06 · equity $7,175.95 vs 09:30 $7,151.51 (+24.44; session marks +25.35) · 4 name(s) marked open→close (per-name table). CLX×22 09:30 $109.05 → close $109.46 +9.02; COTY×545 09:30 $4.03 → close $4.04 +6.00; TTD×153 09:30 $15.63 → close $15.68 +7.65; ETON×1 09:30 $61.25 → close $63.93 +2.68 | — |
 
 ## Not taken
 

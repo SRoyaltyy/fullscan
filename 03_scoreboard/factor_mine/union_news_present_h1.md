@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ news_present, no 🚨
 
-Cash book **-20.81%** ($7,919) · signal-only (no cash/fees) was -2.20%. Starts YES **0/30**. Fills 536 · skips 106 · realized $-251.67.
+Cash book **-23.40%** ($7,660) · signal-only (no cash/fees) was -2.20%. Starts YES **0/30**. Fills 544 · skips 106 · realized $-251.67.
 
 ## How this sleeve decides (like you are 10)
 
@@ -738,6 +738,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-12 09:30 ET | **SELL** | `SWMR` | 118 | $9.07 | $2.37 | $+80.24 | $6,906.64 | ▲ +80.24 after sell → book $7,921.04; vs 09:30 mark -2.38 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-12 09:30 ET | **SELL** | `TTD` | 64 | $15.85 | $2.20 | $+35.30 | $7,918.84 | ▲ +35.30 after sell → book $7,918.84; vs 09:30 mark -2.20 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,918.84 | ▲ close $7,918.84 vs 09:30 $7,953.80 (session +0.00) | 16:00 close · cash $7,918.84 · no lots left · equity $7,918.84. | — |
+| 2026-11-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,918.84 | ▲ 09:30 equity $7,918.84 vs yday $7,918.84 (+0.00) | 09:30 open · cash $7,918.84 · no holdings · equity $7,918.84 vs prior close $7,918.84 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-13 09:30 ET | **BUY** | `DVN` | 21 | $46.76 | $2.05 | — | $6,934.83 | — | union ∩ news_present, no 🚨; gate news_present=True; list flatten; 🔵; ret5=+7.8; leftover $989.86 | join🟢 sector🔴 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟢 |
+| 2026-11-13 09:30 ET | **BUY** | `ALNY` | 6 | $159.17 | $2.01 | — | $5,977.80 | — | union ∩ news_present, no 🚨; gate news_present=True; list flatten; 🔵; ret5=-0.0; leftover $989.86 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `ETON` | 16 | $61.25 | $2.04 | — | $4,995.76 | — | union ∩ news_present, no 🚨; gate news_present=True; list flatten; ret5=+30.3; leftover $989.86 | join🟢 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `MVST` | 4190 | $0.24 | $22.47 | — | $3,983.62 | — | union ∩ news_present, no 🚨; gate news_present=True; list probable,yday_gainer,yday_mover; 🔵; ret5=-59.1; leftover $989.86 | join🔴 sector🟢 gen🔴 news🔴 digest🟢 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `REZI` | 45 | $21.52 | $2.12 | — | $3,013.09 | — | union ∩ news_present, no 🚨; gate news_present=True; list probable,yday_gainer,yday_mover; 🔵; ret5=+9.5; leftover $989.86 | join🔴 sector🟢 gen🔴 news🟢 digest🟡 judge🔴 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `BBOT` | 417 | $2.37 | $5.38 | — | $2,019.42 | — | union ∩ news_present, no 🚨; gate news_present=True; list probable,yday_gainer; 🔵; ret5=+8.3; leftover $989.86 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `VNET` | 317 | $3.12 | $4.09 | — | $1,026.29 | — | union ∩ news_present, no 🚨; gate news_present=True; list probable,yday_gainer; ret5=-1.9; leftover $989.86 | join🔴 sector🔴 gen🔴 news🟡 digest🟢 ab🔴 peer🟡 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `NBIS` | 8 | $123.52 | $2.01 | — | $36.12 | — | union ∩ news_present, no 🚨; gate news_present=True; list probable,yday_gainer; ret5=+6.9; leftover $989.86 | join🟡 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $36.12 | ▼ close $7,660.13 vs 09:30 $7,918.84 (session -216.54) | 16:00 close · cash $36.12 · equity $7,660.13 vs 09:30 $7,918.84 (-258.71; session marks -216.54) · 8 name(s) marked open→close (per-name table). DVN×21 09:30 $46.76 → close $46.58 -3.78; ALNY×6 09:30 $159.17 → close $165.04 +35.22; ETON×16 09:30 $61.25 → close $63.93 +42.88; MVST×4190 09:30 $0.24 → close $0.22 -80.45; REZI×45 09:30 $21.52 → close $21.32 -9.00; BBOT×417 09:30 $2.37 → close $2.14 -95.91; VNET×317 09:30 $3.12 → close $2.98 -44.38; NBIS×8 09:30 $123.52 → close $115.88 -61.12 | — |
 
 ## Not taken
 

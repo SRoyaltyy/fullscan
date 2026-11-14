@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ last_red, no 🚨
 
-Cash book **+69.52%** ($16,952) · signal-only (no cash/fees) was +1.25%. Starts YES **0/30**. Fills 574 · skips 105 · realized $-1315.32.
+Cash book **+68.61%** ($16,861) · signal-only (no cash/fees) was +1.25%. Starts YES **0/30**. Fills 582 · skips 105 · realized $-1315.32.
 
 ## How this sleeve decides (like you are 10)
 
@@ -776,6 +776,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-12 09:30 ET | **SELL** | `RC` | 2108 | $0.93 | $26.29 | $-222.13 | $14,642.04 | ▼ -222.13 after sell → book $16,954.89; vs 09:30 mark -26.29 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-12 09:30 ET | **SELL** | `SWMR` | 255 | $9.07 | $3.35 | $+176.96 | $16,951.54 | ▲ +176.96 after sell → book $16,951.54; vs 09:30 mark -3.35 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $16,951.54 | ▲ close $16,951.54 vs 09:30 $16,998.50 (session +0.00) | 16:00 close · cash $16,951.54 · no lots left · equity $16,951.54. | — |
+| 2026-11-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $16,951.54 | ▲ 09:30 equity $16,951.54 vs yday $16,951.54 (+0.00) | 09:30 open · cash $16,951.54 · no holdings · equity $16,951.54 vs prior close $16,951.54 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-13 09:30 ET | **BUY** | `ALNY` | 13 | $159.17 | $2.03 | — | $14,880.30 | — | union ∩ last_red, no 🚨; gate last_red=True; list flatten; 🔵; ret5=-0.0; leftover $2118.94 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `ETON` | 34 | $61.25 | $2.09 | — | $12,795.71 | — | union ∩ last_red, no 🚨; gate last_red=True; list flatten; ret5=+30.3; leftover $2118.94 | join🟢 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `MVST` | 8970 | $0.24 | $48.10 | — | $10,628.90 | — | union ∩ last_red, no 🚨; gate last_red=True; list probable,yday_gainer,yday_mover; 🔵; ret5=-59.1; leftover $2118.94 | join🔴 sector🟢 gen🔴 news🔴 digest🟢 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `REZI` | 98 | $21.52 | $2.28 | — | $8,517.65 | — | union ∩ last_red, no 🚨; gate last_red=True; list probable,yday_gainer,yday_mover; 🔵; ret5=+9.5; leftover $2118.94 | join🔴 sector🟢 gen🔴 news🟢 digest🟡 judge🔴 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `BBOT` | 894 | $2.37 | $11.53 | — | $6,387.34 | — | union ∩ last_red, no 🚨; gate last_red=True; list probable,yday_gainer; 🔵; ret5=+8.3; leftover $2118.94 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `VNET` | 679 | $3.12 | $8.76 | — | $4,260.10 | — | union ∩ last_red, no 🚨; gate last_red=True; list probable,yday_gainer; ret5=-1.9; leftover $2118.94 | join🔴 sector🔴 gen🔴 news🟡 digest🟢 ab🔴 peer🟡 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `NCMI` | 1239 | $1.71 | $15.98 | — | $2,125.43 | — | union ∩ last_red, no 🚨; gate last_red=True; list probable; 🔵; ret5=+4.9; leftover $2118.94 | join🔴 sector🟡 gen🔴 news🟢 digest🔴 ab🔴 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `BGS` | 643 | $3.29 | $8.29 | — | $1.66 | — | union ∩ last_red, no 🚨; gate last_red=True; list yday_gainer,yday_mover; 🔵; ret5=+35.6; leftover $2118.94 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🟡 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1.66 | ▲ close $16,860.66 vs 09:30 $16,951.54 (session +8.20) | 16:00 close · cash $1.66 · equity $16,860.66 vs 09:30 $16,951.54 (-90.88; session marks +8.20) · 8 name(s) marked open→close (per-name table). ALNY×13 09:30 $159.17 → close $165.04 +76.31; ETON×34 09:30 $61.25 → close $63.93 +91.12; MVST×8970 09:30 $0.24 → close $0.22 -172.22; REZI×98 09:30 $21.52 → close $21.32 -19.60; BBOT×894 09:30 $2.37 → close $2.14 -205.62; VNET×679 09:30 $3.12 → close $2.98 -95.06; NCMI×1239 09:30 $1.71 → close $1.87 +198.24; BGS×643 09:30 $3.29 → close $3.50 +135.03 | — |
 
 ## Not taken
 

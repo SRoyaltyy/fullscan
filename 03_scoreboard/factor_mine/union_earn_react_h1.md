@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ earn_react, no 🚨
 
-Cash book **-10.71%** ($8,929) · signal-only (no cash/fees) was -3.08%. Starts YES **4/30**. Fills 330 · skips 54 · realized $-117.67.
+Cash book **-15.59%** ($8,441) · signal-only (no cash/fees) was -3.08%. Starts YES **4/30**. Fills 338 · skips 54 · realized $-117.67.
 
 ## How this sleeve decides (like you are 10)
 
@@ -532,6 +532,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-12 09:30 ET | **SELL** | `ITG` | 213 | $4.87 | $2.79 | $-54.53 | $7,751.93 | ▼ -54.53 after sell → book $8,931.03; vs 09:30 mark -2.80 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-12 09:30 ET | **SELL** | `SWMR` | 130 | $9.07 | $2.41 | $+88.81 | $8,928.62 | ▲ +88.81 after sell → book $8,928.62; vs 09:30 mark -2.41 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,928.62 | ▲ close $8,928.62 vs 09:30 $8,951.22 (session +0.00) | 16:00 close · cash $8,928.62 · no lots left · equity $8,928.62. | — |
+| 2026-11-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,928.62 | ▲ 09:30 equity $8,928.62 vs yday $8,928.62 (+0.00) | 09:30 open · cash $8,928.62 · no holdings · equity $8,928.62 vs prior close $8,928.62 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-13 09:30 ET | **BUY** | `HTFL` | 19 | $57.94 | $2.05 | — | $7,825.71 | — | union ∩ earn_react, no 🚨; gate earn_react=True; list ohlc_hot,earn_react; 🔵; ret5=+15.3; leftover $1116.08 | join🟡 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `ALMU` | 154 | $7.22 | $2.45 | — | $6,711.21 | — | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; ret5=+26.3; leftover $1116.08 | join🔴 sector🔴 gen🔴 news🟡 digest🟢 ab🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `ANDG` | 17 | $62.82 | $2.04 | — | $5,641.23 | — | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; 🔵; ret5=-1.3; leftover $1116.08 | join🟡 sector🟢 gen🔴 news🟢 digest🟢 ab🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `ARWR` | 23 | $47.68 | $2.06 | — | $4,542.53 | — | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; ret5=-17.9; leftover $1116.08 | join🔴 sector🟡 gen🔴 news🟡 digest🔴 ab🔴 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `CBRS` | 10 | $108.40 | $2.02 | — | $3,456.51 | — | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; ret5=+19.6; leftover $1116.08 | join🔴 sector🔴 gen🔴 news🟢 digest🟢 ab🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `CDXS` | 987 | $1.13 | $12.73 | — | $2,328.47 | — | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; 🔵; ret5=-6.1; leftover $1116.08 | join🔴 sector🟡 gen🔴 news🟡 digest🔴 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `DGXX` | 433 | $2.58 | $5.59 | — | $1,207.91 | — | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; ret5=+16.3; leftover $1116.08 | join🔴 sector🟡 gen🔴 news🟡 digest🟡 ab🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `FLO` | 195 | $5.70 | $2.58 | — | $93.83 | — | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; 🔵; ret5=-15.4; leftover $1116.08 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $93.83 | ▼ close $8,440.94 vs 09:30 $8,928.62 (session -456.17) | 16:00 close · cash $93.83 · equity $8,440.94 vs 09:30 $8,928.62 (-487.68; session marks -456.17) · 8 name(s) marked open→close (per-name table). HTFL×19 09:30 $57.94 → close $48.46 -180.12; ALMU×154 09:30 $7.22 → close $6.55 -103.35; ANDG×17 09:30 $62.82 → close $60.06 -46.92; ARWR×23 09:30 $47.68 → close $47.78 +2.30; CBRS×10 09:30 $108.40 → close $108.72 +3.20; CDXS×987 09:30 $1.13 → close $1.16 +29.61; DGXX×433 09:30 $2.58 → close $2.28 -127.74; FLO×195 09:30 $5.70 → close $5.53 -33.15 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ coil_off, no 🚨
 
-Cash book **-31.10%** ($6,890) · signal-only (no cash/fees) was -17.20%. Starts YES **0/30**. Fills 537 · skips 105 · realized $-1593.31.
+Cash book **-31.38%** ($6,862) · signal-only (no cash/fees) was -17.20%. Starts YES **0/30**. Fills 545 · skips 105 · realized $-1593.31.
 
 ## How this sleeve decides (like you are 10)
 
@@ -742,6 +742,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-12 09:30 ET | **SELL** | `KDP` | 23 | $36.49 | $2.08 | $-18.37 | $6,008.77 | ▼ -18.37 after sell → book $6,891.82; vs 09:30 mark -2.08 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-12 09:30 ET | **SELL** | `XENE` | 21 | $42.05 | $2.07 | $+9.52 | $6,889.75 | ▲ +9.52 after sell → book $6,889.75; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,889.75 | ▲ close $6,889.75 vs 09:30 $6,906.70 (session +0.00) | 16:00 close · cash $6,889.75 · no lots left · equity $6,889.75. | — |
+| 2026-11-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6,889.75 | ▲ 09:30 equity $6,889.75 vs yday $6,889.75 (+0.00) | 09:30 open · cash $6,889.75 · no holdings · equity $6,889.75 vs prior close $6,889.75 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-13 09:30 ET | **BUY** | `DVN` | 18 | $46.76 | $2.04 | — | $6,046.03 | — | union ∩ coil_off, no 🚨; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list flatten; 🔵; ret5=+7.8; leftover $861.22 | join🟢 sector🔴 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟢 |
+| 2026-11-13 09:30 ET | **BUY** | `REZI` | 40 | $21.52 | $2.11 | — | $5,183.12 | — | union ∩ coil_off, no 🚨; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list probable,yday_gainer,yday_mover; 🔵; ret5=+9.5; leftover $861.22 | join🔴 sector🟢 gen🔴 news🟢 digest🟡 judge🔴 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `BBOT` | 363 | $2.37 | $4.68 | — | $4,318.12 | — | union ∩ coil_off, no 🚨; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list probable,yday_gainer; 🔵; ret5=+8.3; leftover $861.22 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `NCMI` | 503 | $1.71 | $6.49 | — | $3,451.50 | — | union ∩ coil_off, no 🚨; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list probable; 🔵; ret5=+4.9; leftover $861.22 | join🔴 sector🟡 gen🔴 news🟢 digest🔴 ab🔴 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `PGNY` | 23 | $36.74 | $2.06 | — | $2,604.43 | — | union ∩ coil_off, no 🚨; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list ohlc_hot; ret5=+6.4; leftover $861.22 | join🟢 sector🟡 gen🔴 news🔴 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `ASND` | 3 | $267.40 | $2.00 | — | $1,800.23 | — | union ∩ coil_off, no 🚨; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list ohlc_hot; ret5=+5.4; leftover $861.22 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `CAE` | 30 | $28.32 | $2.08 | — | $948.55 | — | union ∩ coil_off, no 🚨; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list ohlc_hot; ret5=+5.1; leftover $861.22 | join🟢 sector🟢 gen🔴 news🟡 digest🟡 judge🔴 ab🟢 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `LBTYA` | 80 | $10.64 | $2.23 | — | $95.12 | — | union ∩ coil_off, no 🚨; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list ohlc_hot; ret5=+9.6; leftover $861.22 | join🟡 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $95.12 | ▼ close $6,861.60 vs 09:30 $6,889.75 (session -4.46) | 16:00 close · cash $95.12 · equity $6,861.60 vs 09:30 $6,889.75 (-28.15; session marks -4.46) · 8 name(s) marked open→close (per-name table). DVN×18 09:30 $46.76 → close $46.58 -3.24; REZI×40 09:30 $21.52 → close $21.32 -8.00; BBOT×363 09:30 $2.37 → close $2.14 -83.49; NCMI×503 09:30 $1.71 → close $1.87 +80.48; PGNY×23 09:30 $36.74 → close $36.18 -12.88; ASND×3 09:30 $267.40 → close $275.39 +23.97; CAE×30 09:30 $28.32 → close $27.93 -11.70; LBTYA×80 09:30 $10.64 → close $10.77 +10.40 | — |
 
 ## Not taken
 

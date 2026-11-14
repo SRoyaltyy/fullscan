@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · −0 red + (yday up or major catalyst), then Score
 
-Cash book **-10.48%** ($8,952) · signal-only (no cash/fees) was +6.04%. Starts YES **5/30**. Fills 254 · skips 94 · realized $-316.93.
+Cash book **-10.15%** ($8,985) · signal-only (no cash/fees) was +6.04%. Starts YES **5/30**. Fills 261 · skips 94 · realized $-316.93.
 
 ## How this sleeve decides (like you are 10)
 
@@ -458,6 +458,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-12 09:30 ET | **SELL** | `SERV` | 24 | $3.00 | $0.81 | $-8.63 | $1,493.26 | ▼ -8.63 after sell → book $9,070.68; vs 09:30 mark -0.81 | dropped from list after 2 sess (min 2) | — |
 | 2026-11-12 09:30 ET | **SELL** | `WRBY` | 2 | $29.96 | $0.63 | $-1.01 | $1,552.56 | ▼ -1.01 after sell → book $9,070.06; vs 09:30 mark -0.62 | dropped from list after 2 sess (min 2) | — |
 | 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,552.56 | ▼ close $8,951.51 vs 09:30 $9,077.26 (session -118.55) | 16:00 close · cash $1,552.56 · equity $8,951.51 vs 09:30 $9,077.26 (-125.75; session marks -118.55) · 7 name(s) marked open→close (per-name table). ALH×44 09:30 $24.29 → close $23.76 -23.32; CLX×10 09:30 $107.52 → close $108.20 +6.80; FLYW×49 09:30 $22.14 → close $21.47 -32.83; KDP×29 09:30 $36.49 → close $35.42 -31.06; LINC×47 09:30 $23.30 → close $22.98 -15.04; SBH×54 09:30 $19.26 → close $18.41 -45.90; ZETA×30 09:30 $36.51 → close $37.27 +22.80 | — |
+| 2026-11-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $1,552.56 | ▲ 09:30 equity $9,000.25 vs yday $8,951.51 (+48.74) | 09:30 open · cash $1,552.56 (unchanged overnight, no fees) · equity $9,000.25 vs prior close $8,951.51 (+48.74) · 7 name(s) re-marked at the open (per-name table). ALH×44 yday $23.76 → 09:30 $23.91 +6.60; CLX×10 yday $108.20 → 09:30 $109.05 +8.50; FLYW×49 yday $21.47 → 09:30 $21.55 +3.92; KDP×29 yday $35.42 → 09:30 $35.73 +8.99; LINC×47 yday $22.98 → 09:30 $23.01 +1.41; SBH×54 yday $18.41 → 09:30 $18.44 +1.62; ZETA×30 yday $37.27 → 09:30 $37.86 +17.70 | — |
+| 2026-11-13 09:30 ET | **SELL** | `ALH` | 44 | $23.91 | $2.14 | $-48.70 | $2,602.46 | ▼ -48.70 after sell → book $8,998.11; vs 09:30 mark -2.14 | dropped from list after 2 sess (min 2) | — |
+| 2026-11-13 09:30 ET | **SELL** | `CLX` | 10 | $109.05 | $2.04 | $+37.54 | $3,690.92 | ▲ +37.54 after sell → book $8,996.07; vs 09:30 mark -2.04 | dropped from list after 2 sess (min 2) | — |
+| 2026-11-13 09:30 ET | **SELL** | `FLYW` | 49 | $21.55 | $2.16 | $-36.63 | $4,744.71 | ▼ -36.63 after sell → book $8,993.91; vs 09:30 mark -2.16 | dropped from list after 2 sess (min 2) | — |
+| 2026-11-13 09:30 ET | **SELL** | `KDP` | 29 | $35.73 | $2.10 | $-44.19 | $5,778.78 | ▼ -44.19 after sell → book $8,991.81; vs 09:30 mark -2.10 | dropped from list after 2 sess (min 2) | — |
+| 2026-11-13 09:30 ET | **SELL** | `LINC` | 47 | $23.01 | $2.15 | $-18.85 | $6,858.10 | ▼ -18.85 after sell → book $8,989.66; vs 09:30 mark -2.15 | dropped from list after 2 sess (min 2) | — |
+| 2026-11-13 09:30 ET | **SELL** | `SBH` | 54 | $18.44 | $2.17 | $-102.87 | $7,851.69 | ▼ -102.87 after sell → book $8,987.49; vs 09:30 mark -2.17 | dropped from list after 2 sess (min 2) | — |
+| 2026-11-13 09:30 ET | **SELL** | `ZETA` | 30 | $37.86 | $2.10 | $+51.62 | $8,985.39 | ▲ +51.62 after sell → book $8,985.39; vs 09:30 mark -2.10 | dropped from list after 2 sess (min 2) | — |
+| 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,985.39 | ▲ close $8,985.39 vs 09:30 $9,000.25 (session +0.00) | 16:00 close · cash $8,985.39 · no lots left · equity $8,985.39. | — |
 
 ## Not taken
 

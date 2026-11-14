@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `hot_score` · size `leftover` · sell `list` · S-boost `none` · Clock-B #10 NR7 + moderate momentum
 
-Cash book **-11.94%** ($8,806) · signal-only (no cash/fees) was +27.44%. Starts YES **25/30**. Fills 122 · skips 16 · realized $+1589.64.
+Cash book **-12.26%** ($8,774) · signal-only (no cash/fees) was +27.44%. Starts YES **25/30**. Fills 123 · skips 16 · realized $+1589.64.
 
 ## How this sleeve decides (like you are 10)
 
@@ -326,6 +326,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,805.61 | ▲ close $8,805.61 vs 09:30 $8,847.71 (session +0.00) | 16:00 close · cash $8,805.61 · no lots left · equity $8,805.61. | — |
 | 2026-11-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,805.61 | ▲ 09:30 equity $8,805.61 vs yday $8,805.61 (+0.00) | 09:30 open · cash $8,805.61 · no holdings · equity $8,805.61 vs prior close $8,805.61 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,805.61 | ▲ close $8,805.61 vs 09:30 $8,805.61 (session +0.00) | 16:00 close · cash $8,805.61 · no lots left · equity $8,805.61. | — |
+| 2026-11-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,805.61 | ▲ 09:30 equity $8,805.61 vs yday $8,805.61 (+0.00) | 09:30 open · cash $8,805.61 · no holdings · equity $8,805.61 vs prior close $8,805.61 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-13 09:30 ET | **BUY** | `AKR` | 434 | $20.27 | $5.60 | — | $2.83 | — | Clock-B #10 NR7 + moderate momentum; gate clk_nr7_mom=True; rank hot_score; list ohlc_hot; ret5=+2.8; leftover $8805.61 | join🔴 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2.83 | ▼ close $8,773.97 vs 09:30 $8,805.61 (session -26.04) | 16:00 close · cash $2.83 · equity $8,773.97 vs 09:30 $8,805.61 (-31.64; session marks -26.04) · 1 name(s) marked open→close (per-name table). AKR×434 09:30 $20.27 → close $20.21 -26.04 | — |
 
 ## Not taken
 

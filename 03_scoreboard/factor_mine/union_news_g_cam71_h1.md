@@ -331,6 +331,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-12 09:30 ET | **SELL** | `EMBJ` | 26 | $81.56 | $2.10 | $-27.56 | $6,499.12 | ▼ -27.56 after sell → book $8,613.49; vs 09:30 mark -2.09 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-12 09:30 ET | **SELL** | `LOAR` | 27 | $78.31 | $2.10 | $-37.11 | $8,611.39 | ▼ -37.11 after sell → book $8,611.39; vs 09:30 mark -2.10 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,611.39 | ▲ close $8,611.39 vs 09:30 $8,620.00 (session +0.00) | 16:00 close · cash $8,611.39 · no lots left · equity $8,611.39. | — |
+| 2026-11-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,611.39 | ▲ 09:30 equity $8,611.39 vs yday $8,611.39 (+0.00) | 09:30 open · cash $8,611.39 · no holdings · equity $8,611.39 vs prior close $8,611.39 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,611.39 | ▲ close $8,611.39 vs 09:30 $8,611.39 (session +0.00) | 16:00 close · cash $8,611.39 · no lots left · equity $8,611.39. | — |
 
 ## Not taken
 

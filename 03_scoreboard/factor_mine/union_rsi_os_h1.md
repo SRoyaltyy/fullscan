@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ rsi_os, no 🚨
 
-Cash book **-24.39%** ($7,561) · signal-only (no cash/fees) was -7.54%. Starts YES **0/30**. Fills 263 · skips 20 · realized $-3180.18.
+Cash book **-23.22%** ($7,678) · signal-only (no cash/fees) was -7.54%. Starts YES **0/30**. Fills 266 · skips 20 · realized $-3180.18.
 
 ## How this sleeve decides (like you are 10)
 
@@ -465,6 +465,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-12 09:30 ET | **SELL** | `PCT` | 609 | $1.96 | $7.97 | $-161.98 | $5,027.68 | ▼ -161.98 after sell → book $7,744.64; vs 09:30 mark -7.97 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-12 09:30 ET | **SELL** | `SOC` | 1836 | $0.74 | $19.40 | $-21.06 | $6,366.00 | ▼ -21.06 after sell → book $7,725.24; vs 09:30 mark -19.40 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,366.00 | ▼ close $7,561.36 vs 09:30 $7,764.55 (session -163.88) | 16:00 close · cash $6,366.00 · equity $7,561.36 vs 09:30 $7,764.55 (-203.19; session marks -163.88) · 1 name(s) marked open→close (per-name table). ZURA×964 09:30 $1.41 → close $1.24 -163.88 | — |
+| 2026-11-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6,366.00 | ▼ 09:30 equity $7,551.72 vs yday $7,561.36 (-9.64) | 09:30 open · cash $6,366.00 (unchanged overnight, no fees) · equity $7,551.72 vs prior close $7,561.36 (-9.64) · 1 name(s) re-marked at the open (per-name table). ZURA×964 yday $1.24 → 09:30 $1.23 -9.64 | — |
+| 2026-11-13 09:30 ET | **SELL** | `ZURA` | 964 | $1.23 | $12.61 | $-179.28 | $7,539.11 | ▼ -179.28 after sell → book $7,539.11; vs 09:30 mark -12.61 | dropped from list after 2 sess (min 1) | — |
+| 2026-11-13 09:30 ET | **BUY** | `ALNY` | 23 | $159.17 | $2.06 | — | $3,876.15 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list flatten; 🔵; ret5=-0.0; leftover $3769.56 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `ARWR` | 79 | $47.68 | $2.23 | — | $107.20 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list earn_react; ret5=-17.9; leftover $3769.56 | join🔴 sector🟡 gen🔴 news🟡 digest🔴 ab🔴 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $107.20 | ▲ close $7,677.74 vs 09:30 $7,551.72 (session +142.91) | 16:00 close · cash $107.20 · equity $7,677.74 vs 09:30 $7,551.72 (+126.02; session marks +142.91) · 2 name(s) marked open→close (per-name table). ALNY×23 09:30 $159.17 → close $165.04 +135.01; ARWR×79 09:30 $47.68 → close $47.78 +7.90 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · Clock-B #2 fresh catalyst + limited extension (research; not KEEP)
 
-Cash book **-26.90%** ($7,310) · signal-only (no cash/fees) was -4.91%. Starts YES **13/30**. Fills 458 · skips 106 · realized $-137.13.
+Cash book **-27.72%** ($7,228) · signal-only (no cash/fees) was -4.91%. Starts YES **13/30**. Fills 466 · skips 106 · realized $-137.13.
 
 ## How this sleeve decides (like you are 10)
 
@@ -662,6 +662,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-12 09:30 ET | **SELL** | `REZI` | 44 | $23.40 | $2.14 | $+116.30 | $6,324.61 | ▲ +116.30 after sell → book $7,312.61; vs 09:30 mark -2.14 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-12 09:30 ET | **SELL** | `SONO` | 52 | $19.00 | $2.17 | $+73.69 | $7,310.44 | ▲ +73.69 after sell → book $7,310.44; vs 09:30 mark -2.17 | dropped from list after 1 sess (min 1) | join🟢 sector🟢 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,310.44 | ▲ close $7,310.44 vs 09:30 $7,327.52 (session +0.00) | 16:00 close · cash $7,310.44 · no lots left · equity $7,310.44. | — |
+| 2026-11-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,310.44 | ▲ 09:30 equity $7,310.44 vs yday $7,310.44 (+0.00) | 09:30 open · cash $7,310.44 · no holdings · equity $7,310.44 vs prior close $7,310.44 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-13 09:30 ET | **BUY** | `DVN` | 19 | $46.76 | $2.05 | — | $6,419.95 | — | Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list flatten; 🔵; ret5=+7.8; leftover $913.80 | join🟢 sector🔴 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟢 |
+| 2026-11-13 09:30 ET | **BUY** | `ANDG` | 14 | $62.82 | $2.03 | — | $5,538.44 | — | Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list earn_react; 🔵; ret5=-1.3; leftover $913.80 | join🟡 sector🟢 gen🔴 news🟢 digest🟢 ab🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `REZI` | 42 | $21.52 | $2.12 | — | $4,632.48 | — | Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list probable,yday_gainer,yday_mover; 🔵; ret5=+9.5; leftover $913.80 | join🔴 sector🟢 gen🔴 news🟢 digest🟡 judge🔴 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `BKH` | 10 | $87.83 | $2.02 | — | $3,752.16 | — | Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list ohlc_hot; ret5=+3.4; leftover $913.80 | join🟢 sector🟡 gen🔴 news🟢 digest🟡 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `LFTO` | 38 | $23.74 | $2.10 | — | $2,847.94 | — | Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list earn_react; 🔵; ret5=+9.1; leftover $913.80 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `LCTX` | 923 | $0.99 | $11.86 | — | $1,922.31 | — | Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list earn_react; ret5=+1.1; leftover $913.80 | join🟡 sector🟡 gen🔴 news🟡 digest🔴 ab🔴 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `FLO` | 160 | $5.70 | $2.47 | — | $1,007.84 | — | Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list earn_react; 🔵; ret5=-15.4; leftover $913.80 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `NCMI` | 534 | $1.71 | $6.89 | — | $87.81 | — | Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list probable; 🔵; ret5=+4.9; leftover $913.80 | join🔴 sector🟡 gen🔴 news🟢 digest🔴 ab🔴 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $87.81 | ▼ close $7,228.14 vs 09:30 $7,310.44 (session -50.76) | 16:00 close · cash $87.81 · equity $7,228.14 vs 09:30 $7,310.44 (-82.30; session marks -50.76) · 8 name(s) marked open→close (per-name table). DVN×19 09:30 $46.76 → close $46.58 -3.42; ANDG×14 09:30 $62.82 → close $60.06 -38.64; REZI×42 09:30 $21.52 → close $21.32 -8.40; BKH×10 09:30 $87.83 → close $86.70 -11.30; LFTO×38 09:30 $23.74 → close $24.44 +26.60; LCTX×923 09:30 $0.99 → close $0.91 -73.84; FLO×160 09:30 $5.70 → close $5.53 -27.20; NCMI×534 09:30 $1.71 → close $1.87 +85.44 | — |
 
 ## Not taken
 

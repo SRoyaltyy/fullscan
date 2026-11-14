@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · packet🟢 and camera net ≥ 3
 
-Cash book **-16.51%** ($8,349) · signal-only (no cash/fees) was -17.00%. Starts YES **11/30**. Fills 80 · skips 76 · realized $-1552.71.
+Cash book **-18.71%** ($8,129) · signal-only (no cash/fees) was -17.00%. Starts YES **11/30**. Fills 82 · skips 76 · realized $-1552.71.
 
 ## How this sleeve decides (like you are 10)
 
@@ -284,6 +284,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $129.74 | ▼ 09:30 equity $8,169.07 vs yday $8,477.43 (-308.36) | 09:30 open · cash $129.74 (unchanged overnight, no fees) · equity $8,169.07 vs prior close $8,477.43 (-308.36) · 6 name(s) re-marked at the open (per-name table). ALGN×6 yday $172.08 → 09:30 $171.45 -3.78; ALH×59 yday $24.20 → 09:30 $24.29 +5.31; ATRO×26 yday $60.33 → 09:30 $58.05 -59.29; CECO×25 yday $53.50 → 09:30 $54.34 +21.00; CRWV×26 yday $60.77 → 09:30 $50.89 -256.82; EMBJ×17 yday $82.43 → 09:30 $81.56 -14.79 | — |
 | 2026-11-12 09:30 ET | **SELL** | `ALGN` | 6 | $171.45 | $2.03 | $+17.26 | $1,156.41 | ▲ +17.26 after sell → book $8,167.04; vs 09:30 mark -2.03 | dropped from list after 3 sess (min 3) | — |
 | 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,156.41 | ▲ close $8,349.07 vs 09:30 $8,169.07 (session +182.04) | 16:00 close · cash $1,156.41 · equity $8,349.07 vs 09:30 $8,169.07 (+180.00; session marks +182.04) · 5 name(s) marked open→close (per-name table). ALH×59 09:30 $24.29 → close $23.76 -31.27; ATRO×26 09:30 $58.05 → close $60.31 +58.77; CECO×25 09:30 $54.34 → close $56.00 +41.50; CRWV×26 09:30 $50.89 → close $56.60 +148.40; EMBJ×17 09:30 $81.56 → close $79.48 -35.36 | — |
+| 2026-11-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $1,156.41 | ▼ 09:30 equity $8,313.64 vs yday $8,349.07 (-35.43) | 09:30 open · cash $1,156.41 (unchanged overnight, no fees) · equity $8,313.64 vs prior close $8,349.07 (-35.43) · 5 name(s) re-marked at the open (per-name table). ALH×59 yday $23.76 → 09:30 $23.91 +8.85; ATRO×26 yday $60.31 → 09:30 $60.50 +4.94; CECO×25 yday $56.00 → 09:30 $55.42 -14.50; CRWV×26 yday $56.60 → 09:30 $56.01 -15.34; EMBJ×17 yday $79.48 → 09:30 $78.34 -19.38 | — |
+| 2026-11-13 09:30 ET | **BUY** | `DVN` | 12 | $46.76 | $2.03 | — | $593.26 | — | packet🟢 and camera net ≥ 3; gate cam_net_min=3,news_box=good; rank cond; list flatten; 🔵; ret5=+7.8; leftover $578.21 | join🟢 sector🔴 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟢 |
+| 2026-11-13 09:30 ET | **BUY** | `ANDG` | 9 | $62.82 | $2.02 | — | $25.87 | — | packet🟢 and camera net ≥ 3; gate cam_net_min=3,news_box=good; rank cond; list earn_react; 🔵; ret5=-1.3; leftover $578.21 | join🟡 sector🟢 gen🔴 news🟢 digest🟢 ab🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $25.87 | ▼ close $8,128.54 vs 09:30 $8,313.64 (session -181.06) | 16:00 close · cash $25.87 · equity $8,128.54 vs 09:30 $8,313.64 (-185.10; session marks -181.06) · 7 name(s) marked open→close (per-name table). ALH×59 09:30 $23.91 → close $23.63 -16.52; ATRO×26 09:30 $60.50 → close $58.96 -40.04; CECO×25 09:30 $55.42 → close $54.25 -29.25; CRWV×26 09:30 $56.01 → close $53.13 -74.88; EMBJ×17 09:30 $78.34 → close $78.73 +6.63; DVN×12 09:30 $46.76 → close $46.58 -2.16; ANDG×9 09:30 $62.82 → close $60.06 -24.84 | — |
 
 ## Not taken
 

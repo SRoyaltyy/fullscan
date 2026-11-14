@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `probable` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-30.30%** ($6,970) · signal-only (no cash/fees) was -9.22%. Starts YES **0/30**. Fills 352 · skips 53 · realized $-864.75.
+Cash book **-34.60%** ($6,540) · signal-only (no cash/fees) was -9.22%. Starts YES **0/30**. Fills 353 · skips 53 · realized $-864.75.
 
 ## How this sleeve decides (like you are 10)
 
@@ -556,6 +556,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $1.95 | ▼ 09:30 equity $7,016.79 vs yday $7,159.95 (-143.16) | 09:30 open · cash $1.95 (unchanged overnight, no fees) · equity $7,016.79 vs prior close $7,159.95 (-143.16) · 1 name(s) re-marked at the open (per-name table). PCT×3579 yday $2.00 → 09:30 $1.96 -143.16 | — |
 | 2026-11-12 09:30 ET | **SELL** | `PCT` | 3579 | $1.96 | $46.82 | $-951.95 | $6,969.97 | ▼ -951.95 after sell → book $6,969.97; vs 09:30 mark -46.82 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,969.97 | ▲ close $6,969.97 vs 09:30 $7,016.79 (session +0.00) | 16:00 close · cash $6,969.97 · no lots left · equity $6,969.97. | — |
+| 2026-11-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6,969.97 | ▲ 09:30 equity $6,969.97 vs yday $6,969.97 (+0.00) | 09:30 open · cash $6,969.97 · no holdings · equity $6,969.97 vs prior close $6,969.97 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-13 09:30 ET | **BUY** | `NBIS` | 56 | $123.52 | $2.16 | — | $50.69 | — | combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer; ret5=+6.9; leftover $6969.97 | join🟡 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $50.69 | ▼ close $6,539.97 vs 09:30 $6,969.97 (session -427.84) | 16:00 close · cash $50.69 · equity $6,539.97 vs 09:30 $6,969.97 (-430.00; session marks -427.84) · 1 name(s) marked open→close (per-name table). NBIS×56 09:30 $123.52 → close $115.88 -427.84 | — |
 
 ## Not taken
 

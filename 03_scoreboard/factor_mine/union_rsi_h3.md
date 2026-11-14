@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `rsi` · size `leftover` · sell `list` · S-boost `none` · rank by rsi
 
-Cash book **-23.52%** ($7,648) · signal-only (no cash/fees) was -34.58%. Starts YES **0/30**. Fills 408 · skips 269 · realized $-1699.80.
+Cash book **-24.31%** ($7,569) · signal-only (no cash/fees) was -34.58%. Starts YES **0/30**. Fills 422 · skips 269 · realized $-1699.80.
 
 ## How this sleeve decides (like you are 10)
 
@@ -609,6 +609,22 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-12 09:30 ET | **SELL** | `SOC` | 274 | $0.74 | $2.90 | $+32.30 | $1,140.67 | ▲ +32.30 after sell → book $8,011.22; vs 09:30 mark -2.90 | dropped from list after 3 sess (min 3) | — |
 | 2026-11-12 09:30 ET | **SELL** | `THM` | 105 | $1.31 | $1.72 | $-30.98 | $1,276.50 | ▼ -30.98 after sell → book $8,009.50; vs 09:30 mark -1.72 | dropped from list after 3 sess (min 3) | — |
 | 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,276.50 | ▼ close $7,648.17 vs 09:30 $8,024.06 (session -361.33) | 16:00 close · cash $1,276.50 · equity $7,648.17 vs 09:30 $8,024.06 (-375.89; session marks -361.33) · 11 name(s) marked open→close (per-name table). ABEO×22 09:30 $2.28 → close $2.29 +0.22; ACAD×2 09:30 $18.22 → close $18.14 -0.16; AGRO×6 09:30 $8.86 → close $8.47 -2.34; AUTL×855 09:30 $1.21 → close $1.19 -17.10; FRNM×97 09:30 $11.33 → close $10.61 -69.84; JANX×4 09:30 $11.86 → close $11.49 -1.46; LAND×148 09:30 $7.29 → close $7.02 -39.96; NCMI×623 09:30 $1.85 → close $1.70 -93.45; STLN×260 09:30 $4.10 → close $3.75 -91.00; SWMR×117 09:30 $9.07 → close $8.73 -39.78; ZURA×38 09:30 $1.41 → close $1.24 -6.46 | — |
+| 2026-11-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $1,276.50 | ▲ 09:30 equity $7,679.02 vs yday $7,648.17 (+30.85) | 09:30 open · cash $1,276.50 (unchanged overnight, no fees) · equity $7,679.02 vs prior close $7,648.17 (+30.85) · 11 name(s) re-marked at the open (per-name table). ABEO×22 yday $2.29 → 09:30 $2.33 +0.88; ACAD×2 yday $18.14 → 09:30 $18.12 -0.04; AGRO×6 yday $8.47 → 09:30 $8.60 +0.78; AUTL×855 yday $1.19 → 09:30 $1.20 +8.55; FRNM×97 yday $10.61 → 09:30 $10.50 -10.67; JANX×4 yday $11.49 → 09:30 $11.49 -0.02; LAND×148 yday $7.02 → 09:30 $7.08 +8.88; NCMI×623 yday $1.70 → 09:30 $1.71 +6.23; STLN×260 yday $3.75 → 09:30 $3.76 +2.60; SWMR×117 yday $8.73 → 09:30 $8.85 +14.04; ZURA×38 yday $1.24 → 09:30 $1.23 -0.38 | — |
+| 2026-11-13 09:30 ET | **SELL** | `AUTL` | 855 | $1.20 | $11.18 | $-30.76 | $2,291.32 | ▼ -30.76 after sell → book $7,667.84; vs 09:30 mark -11.18 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-13 09:30 ET | **SELL** | `FRNM` | 97 | $10.50 | $2.31 | $-1.68 | $3,307.51 | ▼ -1.68 after sell → book $7,665.53; vs 09:30 mark -2.31 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-13 09:30 ET | **SELL** | `LAND` | 148 | $7.08 | $2.47 | $+11.38 | $4,352.88 | ▲ +11.38 after sell → book $7,663.06; vs 09:30 mark -2.47 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-13 09:30 ET | **SELL** | `NCMI` | 623 | $1.71 | $8.15 | $+14.96 | $5,410.06 | ▲ +14.96 after sell → book $7,654.91; vs 09:30 mark -8.15 | dropped from list after 3 sess (min 3) | join🔴 sector🟡 gen🔴 news🟢 digest🔴 ab🔴 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **SELL** | `STLN` | 260 | $3.76 | $3.41 | $-61.36 | $6,384.26 | ▼ -61.36 after sell → book $7,651.51; vs 09:30 mark -3.40 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-13 09:30 ET | **SELL** | `SWMR` | 117 | $8.85 | $2.37 | $+2.31 | $7,417.34 | ▲ +2.31 after sell → book $7,649.14; vs 09:30 mark -2.37 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-13 09:30 ET | **BUY** | `ARWR` | 19 | $47.68 | $2.05 | — | $6,509.37 | — | rank by rsi; rank rsi; list earn_react; ret5=-17.9; leftover $927.17 | join🔴 sector🟡 gen🔴 news🟡 digest🔴 ab🔴 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `ALNY` | 5 | $159.17 | $2.00 | — | $5,711.51 | — | rank by rsi; rank rsi; list flatten; 🔵; ret5=-0.0; leftover $927.17 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `NPWR` | 1158 | $0.80 | $12.74 | — | $4,772.38 | — | rank by rsi; rank rsi; list earn_react; 🔵; ret5=-0.7; leftover $927.17 | join🔴 sector🟢 gen🔴 news🟡 digest🟡 judge🔴 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `MVST` | 3925 | $0.24 | $21.05 | — | $3,824.24 | — | rank by rsi; rank rsi; list probable,yday_gainer,yday_mover; 🔵; ret5=-59.1; leftover $927.17 | join🔴 sector🟢 gen🔴 news🔴 digest🟢 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `CDXS` | 820 | $1.13 | $10.58 | — | $2,887.07 | — | rank by rsi; rank rsi; list earn_react; 🔵; ret5=-6.1; leftover $927.17 | join🔴 sector🟡 gen🔴 news🟡 digest🔴 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `VELO` | 210 | $4.41 | $2.71 | — | $1,958.26 | — | rank by rsi; rank rsi; list yday_mover; ret5=-8.9; leftover $927.17 | join🔴 sector🔴 gen🔴 news🟡 digest🟢 ab🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `STIM` | 766 | $1.21 | $9.88 | — | $1,021.52 | — | rank by rsi; rank rsi; list yday_mover; ret5=-41.2; leftover $927.17 | join🔴 sector🟡 gen🔴 news🔴 digest🔴 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `AAOI` | 17 | $51.87 | $2.04 | — | $137.68 | — | rank by rsi; rank rsi; list yday_gainer; 🔵; ret5=+12.7; leftover $927.17 | join🔴 sector🔴 gen🔴 news🟢 digest🟢 ab🟢 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $137.68 | ▼ close $7,568.67 vs 09:30 $7,679.02 (session -17.42) | 16:00 close · cash $137.68 · equity $7,568.67 vs 09:30 $7,679.02 (-110.35; session marks -17.42) · 13 name(s) marked open→close (per-name table). ABEO×22 09:30 $2.33 → close $2.42 +1.98; ACAD×2 09:30 $18.12 → close $18.75 +1.26; AGRO×6 09:30 $8.60 → close $9.11 +3.06; JANX×4 09:30 $11.49 → close $11.37 -0.48; ZURA×38 09:30 $1.23 → close $1.24 +0.38; ARWR×19 09:30 $47.68 → close $47.78 +1.90; ALNY×5 09:30 $159.17 → close $165.04 +29.35; NPWR×1158 09:30 $0.80 → close $0.75 -53.73; MVST×3925 09:30 $0.24 → close $0.22 -75.36; CDXS×820 09:30 $1.13 → close $1.16 +24.60; VELO×210 09:30 $4.41 → close $4.15 -54.60; STIM×766 09:30 $1.21 → close $1.39 +137.88; AAOI×17 09:30 $51.87 → close $49.89 -33.66 | — |
 
 ## Not taken
 

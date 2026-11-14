@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ break10, no 🚨
 
-Cash book **-14.54%** ($8,546) · signal-only (no cash/fees) was +11.56%. Starts YES **14/30**. Fills 587 · skips 100 · realized $-529.03.
+Cash book **-15.49%** ($8,451) · signal-only (no cash/fees) was +11.56%. Starts YES **14/30**. Fills 595 · skips 100 · realized $-529.03.
 
 ## How this sleeve decides (like you are 10)
 
@@ -789,6 +789,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-12 09:30 ET | **SELL** | `TLS` | 140 | $7.64 | $2.44 | $-27.25 | $7,422.83 | ▼ -27.25 after sell → book $8,548.18; vs 09:30 mark -2.44 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-12 09:30 ET | **SELL** | `TTD` | 71 | $15.85 | $2.22 | $+39.59 | $8,545.96 | ▲ +39.59 after sell → book $8,545.96; vs 09:30 mark -2.22 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,545.96 | ▲ close $8,545.96 vs 09:30 $8,579.53 (session +0.00) | 16:00 close · cash $8,545.96 · no lots left · equity $8,545.96. | — |
+| 2026-11-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,545.96 | ▲ 09:30 equity $8,545.96 vs yday $8,545.96 (+0.00) | 09:30 open · cash $8,545.96 · no holdings · equity $8,545.96 vs prior close $8,545.96 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-13 09:30 ET | **BUY** | `MBGL` | 46 | $23.17 | $2.13 | — | $7,478.01 | — | union ∩ break10, no 🚨; gate break_10=True; list ohlc_hot; ret5=+16.5; leftover $1068.24 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟡 heat🟢 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `CEG` | 3 | $284.97 | $2.00 | — | $6,621.10 | — | union ∩ break10, no 🚨; gate break_10=True; list ohlc_hot; 🔵; ret5=+17.8; leftover $1068.24 | join🟢 sector🟡 gen🔴 news🟢 digest🟡 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `ATI` | 5 | $194.18 | $2.00 | — | $5,648.20 | — | union ∩ break10, no 🚨; gate break_10=True; list ohlc_hot; ret5=+13.0; leftover $1068.24 | join🟢 sector🟢 gen🔴 news🟡 digest🟡 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `DNTH` | 11 | $91.87 | $2.02 | — | $4,635.60 | — | union ∩ break10, no 🚨; gate break_10=True; list ohlc_hot; ret5=+11.4; leftover $1068.24 | join🟡 sector🟡 gen🔴 news🟡 digest🔴 ab🔴 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `PGNY` | 29 | $36.74 | $2.08 | — | $3,568.07 | — | union ∩ break10, no 🚨; gate break_10=True; list ohlc_hot; ret5=+6.4; leftover $1068.24 | join🟢 sector🟡 gen🔴 news🔴 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `WT` | 49 | $21.78 | $2.14 | — | $2,498.71 | — | union ∩ break10, no 🚨; gate break_10=True; list ohlc_hot; 🔵; ret5=+14.0; leftover $1068.24 | join🟢 sector🔴 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `ASND` | 3 | $267.40 | $2.00 | — | $1,694.51 | — | union ∩ break10, no 🚨; gate break_10=True; list ohlc_hot; ret5=+5.4; leftover $1068.24 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `CAE` | 37 | $28.32 | $2.10 | — | $644.57 | — | union ∩ break10, no 🚨; gate break_10=True; list ohlc_hot; ret5=+5.1; leftover $1068.24 | join🟢 sector🟢 gen🔴 news🟡 digest🟡 judge🔴 ab🟢 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $644.57 | ▼ close $8,450.57 vs 09:30 $8,545.96 (session -78.92) | 16:00 close · cash $644.57 · equity $8,450.57 vs 09:30 $8,545.96 (-95.39; session marks -78.92) · 8 name(s) marked open→close (per-name table). MBGL×46 09:30 $23.17 → close $23.28 +5.06; CEG×3 09:30 $284.97 → close $280.20 -14.31; ATI×5 09:30 $194.18 → close $183.09 -55.45; DNTH×11 09:30 $91.87 → close $91.81 -0.66; PGNY×29 09:30 $36.74 → close $36.18 -16.24; WT×49 09:30 $21.78 → close $21.64 -6.86; ASND×3 09:30 $267.40 → close $275.39 +23.97; CAE×37 09:30 $28.32 → close $27.93 -14.43 | — |
 
 ## Not taken
 

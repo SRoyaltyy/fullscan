@@ -6,7 +6,7 @@ Buys the flatten **wish-list** even on io/HOLD mornings — live `flatten_robust
 
 Side **long** · universe `flatten` · top 8 · rank `list` · size `topheavy` · sell `list` · S-boost `none` · 40% to #1, rest split
 
-Cash book **-31.82%** ($6,818) · signal-only (no cash/fees) was -10.41%. Starts YES **2/30**. Fills 297 · skips 214 · realized $-900.04.
+Cash book **-31.71%** ($6,829) · signal-only (no cash/fees) was -10.41%. Starts YES **2/30**. Fills 304 · skips 214 · realized $-900.04.
 
 ## How this sleeve decides (like you are 10)
 
@@ -495,6 +495,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-12 09:30 ET | **SELL** | `ETON` | 1 | $68.38 | $0.71 | $+8.99 | $383.03 | ▲ +8.99 after sell → book $7,254.04; vs 09:30 mark -0.71 | dropped from list after 3 sess (min 3) | — |
 | 2026-11-12 09:30 ET | **SELL** | `ZVRA` | 6 | $11.75 | $0.74 | $-0.86 | $452.79 | ▼ -0.86 after sell → book $7,253.30; vs 09:30 mark -0.74 | dropped from list after 3 sess (min 3) | — |
 | 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $452.79 | ▼ close $6,817.59 vs 09:30 $7,257.24 (session -435.71) | 16:00 close · cash $452.79 · equity $6,817.59 vs 09:30 $7,257.24 (-439.65; session marks -435.71) · 3 name(s) marked open→close (per-name table). COTY×2 09:30 $4.09 → close $4.03 -0.12; TMDX×29 09:30 $91.65 → close $92.00 +10.15; WRBY×138 09:30 $29.96 → close $26.73 -445.74 | — |
+| 2026-11-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $452.79 | ▼ 09:30 equity $6,786.12 vs yday $6,817.59 (-31.47) | 09:30 open · cash $452.79 (unchanged overnight, no fees) · equity $6,786.12 vs prior close $6,817.59 (-31.47) · 3 name(s) re-marked at the open (per-name table). COTY×2 yday $4.03 → 09:30 $4.03 -0.00; TMDX×29 yday $92.00 → 09:30 $92.39 +11.31; WRBY×138 yday $26.73 → 09:30 $26.42 -42.78 | — |
+| 2026-11-13 09:30 ET | **SELL** | `TMDX` | 29 | $92.39 | $2.11 | $-36.38 | $3,129.99 | ▼ -36.38 after sell → book $6,784.01; vs 09:30 mark -2.11 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-13 09:30 ET | **SELL** | `WRBY` | 138 | $26.42 | $2.46 | $-478.20 | $6,773.50 | ▼ -478.20 after sell → book $6,781.55; vs 09:30 mark -2.46 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-13 09:30 ET | **BUY** | `DVN` | 57 | $46.76 | $2.16 | — | $4,106.01 | — | 40% to #1, rest split; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ret5=+7.8; leftover $2709.40 | join🟢 sector🔴 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟢 |
+| 2026-11-13 09:30 ET | **BUY** | `ALNY` | 6 | $159.17 | $2.01 | — | $3,148.99 | — | 40% to #1, rest split; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ret5=-0.0; leftover $1016.02 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `CHRD` | 6 | $148.35 | $2.01 | — | $2,256.88 | — | 40% to #1, rest split; list flatten; wish-list (live io HOLD — not a ticket); ret5=+11.0; leftover $1016.02 | join🟢 sector🔴 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `GRNT` | 158 | $6.42 | $2.46 | — | $1,240.05 | — | 40% to #1, rest split; list flatten; wish-list (live io HOLD — not a ticket); ret5=+39.0; leftover $1016.02 | join🟢 sector🔴 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `ETON` | 16 | $61.25 | $2.04 | — | $258.02 | — | 40% to #1, rest split; list flatten; wish-list (live io HOLD — not a ticket); ret5=+30.3; leftover $1016.02 | join🟢 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $258.02 | ▲ close $6,829.26 vs 09:30 $6,786.12 (session +58.38) | 16:00 close · cash $258.02 · equity $6,829.26 vs 09:30 $6,786.12 (+43.14; session marks +58.38) · 6 name(s) marked open→close (per-name table). COTY×2 09:30 $4.03 → close $4.04 +0.02; DVN×57 09:30 $46.76 → close $46.58 -10.26; ALNY×6 09:30 $159.17 → close $165.04 +35.22; CHRD×6 09:30 $148.35 → close $149.93 +9.48; GRNT×158 09:30 $6.42 → close $6.30 -18.96; ETON×16 09:30 $61.25 → close $63.93 +42.88 | — |
 
 ## Not taken
 

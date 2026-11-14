@@ -218,6 +218,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $18.71 | ▼ 09:30 equity $8,730.97 vs yday $8,878.43 (-147.46) | 09:30 open · cash $18.71 (unchanged overnight, no fees) · equity $8,730.97 vs prior close $8,878.43 (-147.46) · 1 name(s) re-marked at the open (per-name table). KGS×202 yday $43.86 → 09:30 $43.13 -147.46 | — |
 | 2026-11-12 09:30 ET | **SELL** | `KGS` | 202 | $43.13 | $2.71 | $-122.48 | $8,728.26 | ▼ -122.48 after sell → book $8,728.26; vs 09:30 mark -2.71 | dropped from list after 3 sess (min 3) | — |
 | 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,728.26 | ▲ close $8,728.26 vs 09:30 $8,730.97 (session +0.00) | 16:00 close · cash $8,728.26 · no lots left · equity $8,728.26. | — |
+| 2026-11-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,728.26 | ▲ 09:30 equity $8,728.26 vs yday $8,728.26 (+0.00) | 09:30 open · cash $8,728.26 · no holdings · equity $8,728.26 vs prior close $8,728.26 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,728.26 | ▲ close $8,728.26 vs 09:30 $8,728.26 (session +0.00) | 16:00 close · cash $8,728.26 · no lots left · equity $8,728.26. | — |
 
 ## Not taken
 

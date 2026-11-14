@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ vol_g, no 🚨
 
-Cash book **-10.80%** ($8,920) · signal-only (no cash/fees) was -4.96%. Starts YES **0/30**. Fills 424 · skips 87 · realized $-1273.21.
+Cash book **-12.97%** ($8,703) · signal-only (no cash/fees) was -4.96%. Starts YES **0/30**. Fills 432 · skips 87 · realized $-1273.21.
 
 ## How this sleeve decides (like you are 10)
 
@@ -626,6 +626,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-12 09:30 ET | **SELL** | `RC` | 1153 | $0.93 | $14.38 | $-121.50 | $7,717.14 | ▼ -121.50 after sell → book $8,921.74; vs 09:30 mark -14.38 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-12 09:30 ET | **SELL** | `TTD` | 76 | $15.85 | $2.24 | $+42.66 | $8,919.50 | ▲ +42.66 after sell → book $8,919.50; vs 09:30 mark -2.24 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,919.50 | ▲ close $8,919.50 vs 09:30 $8,975.74 (session +0.00) | 16:00 close · cash $8,919.50 · no lots left · equity $8,919.50. | — |
+| 2026-11-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,919.50 | ▲ 09:30 equity $8,919.50 vs yday $8,919.50 (+0.00) | 09:30 open · cash $8,919.50 · no holdings · equity $8,919.50 vs prior close $8,919.50 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-13 09:30 ET | **BUY** | `ALNY` | 7 | $159.17 | $2.01 | — | $7,803.30 | — | union ∩ vol_g, no 🚨; gate vol=good; list flatten; 🔵; ret5=-0.0; leftover $1114.94 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `ETON` | 18 | $61.25 | $2.04 | — | $6,698.76 | — | union ∩ vol_g, no 🚨; gate vol=good; list flatten; ret5=+30.3; leftover $1114.94 | join🟢 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `MVST` | 4720 | $0.24 | $25.31 | — | $5,558.58 | — | union ∩ vol_g, no 🚨; gate vol=good; list probable,yday_gainer,yday_mover; 🔵; ret5=-59.1; leftover $1114.94 | join🔴 sector🟢 gen🔴 news🔴 digest🟢 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `REZI` | 51 | $21.52 | $2.14 | — | $4,458.92 | — | union ∩ vol_g, no 🚨; gate vol=good; list probable,yday_gainer,yday_mover; 🔵; ret5=+9.5; leftover $1114.94 | join🔴 sector🟢 gen🔴 news🟢 digest🟡 judge🔴 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `BBOT` | 470 | $2.37 | $6.06 | — | $3,338.96 | — | union ∩ vol_g, no 🚨; gate vol=good; list probable,yday_gainer; 🔵; ret5=+8.3; leftover $1114.94 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `VNET` | 357 | $3.12 | $4.61 | — | $2,220.51 | — | union ∩ vol_g, no 🚨; gate vol=good; list probable,yday_gainer; ret5=-1.9; leftover $1114.94 | join🔴 sector🔴 gen🔴 news🟡 digest🟢 ab🔴 peer🟡 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `NBIS` | 9 | $123.52 | $2.02 | — | $1,106.81 | — | union ∩ vol_g, no 🚨; gate vol=good; list probable,yday_gainer; ret5=+6.9; leftover $1114.94 | join🟡 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-13 09:30 ET | **BUY** | `BGS` | 335 | $3.29 | $4.32 | — | $0.34 | — | union ∩ vol_g, no 🚨; gate vol=good; list yday_gainer,yday_mover; 🔵; ret5=+35.6; leftover $1114.94 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🟡 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $0.34 | ▼ close $8,703.00 vs 09:30 $8,919.50 (session -167.98) | 16:00 close · cash $0.34 · equity $8,703.00 vs 09:30 $8,919.50 (-216.50; session marks -167.98) · 8 name(s) marked open→close (per-name table). ALNY×7 09:30 $159.17 → close $165.04 +41.09; ETON×18 09:30 $61.25 → close $63.93 +48.24; MVST×4720 09:30 $0.24 → close $0.22 -90.62; REZI×51 09:30 $21.52 → close $21.32 -10.20; BBOT×470 09:30 $2.37 → close $2.14 -108.10; VNET×357 09:30 $3.12 → close $2.98 -49.98; NBIS×9 09:30 $123.52 → close $115.88 -68.76; BGS×335 09:30 $3.29 → close $3.50 +70.35 | — |
 
 ## Not taken
 

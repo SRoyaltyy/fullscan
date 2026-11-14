@@ -408,6 +408,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-12 09:30 ET | **SELL** | `FNV` | 4 | $246.11 | $2.02 | $-47.58 | $7,332.23 | ▼ -47.58 after sell → book $8,290.23; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟡 ab🟢 peer🟡 heat🔴 vol🟡 buy🟡 |
 | 2026-11-12 09:30 ET | **SELL** | `ITRG` | 479 | $2.00 | $6.27 | $-113.04 | $8,283.96 | ▼ -113.04 after sell → book $8,283.96; vs 09:30 mark -6.27 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟡 ab🔴 peer🔴 heat🔴 vol🟡 buy🟡 |
 | 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,283.96 | ▲ close $8,283.96 vs 09:30 $8,305.79 (session +0.00) | 16:00 close · cash $8,283.96 · no lots left · equity $8,283.96. | — |
+| 2026-11-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,283.96 | ▲ 09:30 equity $8,283.96 vs yday $8,283.96 (+0.00) | 09:30 open · cash $8,283.96 · no holdings · equity $8,283.96 vs prior close $8,283.96 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,283.96 | ▲ close $8,283.96 vs 09:30 $8,283.96 (session +0.00) | 16:00 close · cash $8,283.96 · no lots left · equity $8,283.96. | — |
 
 ## Not taken
 

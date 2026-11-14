@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · packet🟢 OR headline🟢 and camera net ≥ 4
 
-Cash book **-37.32%** ($6,268) · signal-only (no cash/fees) was -6.67%. Starts YES **0/30**. Fills 242 · skips 35 · realized $-1049.49.
+Cash book **-40.08%** ($5,992) · signal-only (no cash/fees) was -6.67%. Starts YES **0/30**. Fills 243 · skips 35 · realized $-1049.49.
 
 ## How this sleeve decides (like you are 10)
 
@@ -446,6 +446,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-12 09:30 ET | **SELL** | `LINC` | 34 | $23.30 | $2.11 | $-4.88 | $5,486.92 | ▼ -4.88 after sell → book $6,270.02; vs 09:30 mark -2.11 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-12 09:30 ET | **SELL** | `LOAR` | 10 | $78.31 | $2.04 | $-16.26 | $6,267.98 | ▼ -16.26 after sell → book $6,267.98; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,267.98 | ▲ close $6,267.98 vs 09:30 $6,284.54 (session +0.00) | 16:00 close · cash $6,267.98 · no lots left · equity $6,267.98. | — |
+| 2026-11-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6,267.98 | ▲ 09:30 equity $6,267.98 vs yday $6,267.98 (+0.00) | 09:30 open · cash $6,267.98 · no holdings · equity $6,267.98 vs prior close $6,267.98 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-13 09:30 ET | **BUY** | `ANDG` | 99 | $62.82 | $2.29 | — | $46.51 | — | packet🟢 OR headline🟢 and camera net ≥ 4; gate cam_net_min=4,news_or_headline=True; rank cond; list earn_react; 🔵; ret5=-1.3; leftover $6267.98 | join🟡 sector🟢 gen🔴 news🟢 digest🟢 ab🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $46.51 | ▼ close $5,992.45 vs 09:30 $6,267.98 (session -273.24) | 16:00 close · cash $46.51 · equity $5,992.45 vs 09:30 $6,267.98 (-275.53; session marks -273.24) · 1 name(s) marked open→close (per-name table). ANDG×99 09:30 $62.82 → close $60.06 -273.24 | — |
 
 ## Not taken
 

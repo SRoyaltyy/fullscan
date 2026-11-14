@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `topheavy` · sell `list` · S-boost `none` · 40% to #1, rest split
 
-Cash book **-26.63%** ($7,337) · signal-only (no cash/fees) was -4.92%. Starts YES **0/30**. Fills 407 · skips 294 · realized $-410.95.
+Cash book **-26.77%** ($7,323) · signal-only (no cash/fees) was -4.92%. Starts YES **0/30**. Fills 419 · skips 294 · realized $-410.95.
 
 ## How this sleeve decides (like you are 10)
 
@@ -605,6 +605,20 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-12 09:30 ET | **SELL** | `WRBY` | 2 | $29.96 | $0.63 | $+6.95 | $530.80 | ▲ +6.95 after sell → book $7,034.97; vs 09:30 mark -0.62 | dropped from list after 3 sess (min 3) | — |
 | 2026-11-12 09:30 ET | **SELL** | `ZVRA` | 5 | $11.75 | $0.62 | $-0.72 | $588.93 | ▼ -0.72 after sell → book $7,034.35; vs 09:30 mark -0.62 | dropped from list after 3 sess (min 3) | — |
 | 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $588.93 | ▲ close $7,336.85 vs 09:30 $7,039.50 (session +302.51) | 16:00 close · cash $588.93 · equity $7,336.85 vs 09:30 $7,039.50 (+297.35; session marks +302.51) · 8 name(s) marked open→close (per-name table). AKBA×24 09:30 $0.56 → close $0.50 -1.54; BLFS×1 09:30 $38.61 → close $38.61 +0.00; COTY×3 09:30 $4.09 → close $4.03 -0.18; IREN×64 09:30 $19.02 → close $19.48 +29.44; NUAI×629 09:30 $2.27 → close $2.72 +283.05; SWMR×1 09:30 $9.07 → close $8.73 -0.34; THM×886 09:30 $1.31 → close $1.29 -17.72; TMDX×28 09:30 $91.65 → close $92.00 +9.80 | — |
+| 2026-11-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $588.93 | ▲ 09:30 equity $7,470.94 vs yday $7,336.85 (+134.09) | 09:30 open · cash $588.93 (unchanged overnight, no fees) · equity $7,470.94 vs prior close $7,336.85 (+134.09) · 8 name(s) re-marked at the open (per-name table). AKBA×24 yday $0.50 → 09:30 $0.49 -0.19; BLFS×1 yday $38.61 → 09:30 $38.61 +0.00; COTY×3 yday $4.03 → 09:30 $4.03 -0.00; IREN×64 yday $19.48 → 09:30 $19.11 -24.00; NUAI×629 yday $2.72 → 09:30 $2.94 +138.38; SWMR×1 yday $8.73 → 09:30 $8.85 +0.12; THM×886 yday $1.29 → 09:30 $1.30 +8.86; TMDX×28 yday $92.00 → 09:30 $92.39 +10.92 | — |
+| 2026-11-13 09:30 ET | **SELL** | `IREN` | 64 | $19.11 | $2.20 | $-112.86 | $1,809.45 | ▼ -112.86 after sell → book $7,468.73; vs 09:30 mark -2.21 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-13 09:30 ET | **SELL** | `NUAI` | 629 | $2.94 | $8.23 | $+496.29 | $3,650.47 | ▲ +496.29 after sell → book $7,460.50; vs 09:30 mark -8.23 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-13 09:30 ET | **SELL** | `THM` | 886 | $1.30 | $11.59 | $-209.08 | $4,790.69 | ▼ -209.08 after sell → book $7,448.91; vs 09:30 mark -11.59 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-13 09:30 ET | **SELL** | `TMDX` | 28 | $92.39 | $2.10 | $-35.26 | $7,375.50 | ▼ -35.26 after sell → book $7,446.81; vs 09:30 mark -2.10 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-13 09:30 ET | **BUY** | `DVN` | 63 | $46.76 | $2.18 | — | $4,427.44 | — | 40% to #1, rest split; list flatten; 🔵; ret5=+7.8; leftover $2950.20 | join🟢 sector🔴 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟢 |
+| 2026-11-13 09:30 ET | **BUY** | `ALNY` | 3 | $159.17 | $2.00 | — | $3,947.93 | — | 40% to #1, rest split; list flatten; 🔵; ret5=-0.0; leftover $632.19 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `CHRD` | 4 | $148.35 | $2.00 | — | $3,352.53 | — | 40% to #1, rest split; list flatten; ret5=+11.0; leftover $632.19 | join🟢 sector🔴 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `GRNT` | 98 | $6.42 | $2.28 | — | $2,721.09 | — | 40% to #1, rest split; list flatten; ret5=+39.0; leftover $632.19 | join🟢 sector🔴 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `ETON` | 10 | $61.25 | $2.02 | — | $2,106.57 | — | 40% to #1, rest split; list flatten; ret5=+30.3; leftover $632.19 | join🟢 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `MVST` | 2676 | $0.24 | $14.35 | — | $1,460.15 | — | 40% to #1, rest split; list probable,yday_gainer,yday_mover; 🔵; ret5=-59.1; leftover $632.19 | join🔴 sector🟢 gen🔴 news🔴 digest🟢 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `REZI` | 29 | $21.52 | $2.08 | — | $833.99 | — | 40% to #1, rest split; list probable,yday_gainer,yday_mover; 🔵; ret5=+9.5; leftover $632.19 | join🔴 sector🟢 gen🔴 news🟢 digest🟡 judge🔴 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `XRPN` | 72 | $8.75 | $2.21 | — | $201.79 | — | 40% to #1, rest split; list probable,yday_gainer; ret5=-12.9; leftover $632.19 | join🔴 sector🔴 gen🔴 news🟡 digest🔴 ab🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $201.79 | ▼ close $7,322.99 vs 09:30 $7,470.94 (session -94.71) | 16:00 close · cash $201.79 · equity $7,322.99 vs 09:30 $7,470.94 (-147.95; session marks -94.71) · 12 name(s) marked open→close (per-name table). AKBA×24 09:30 $0.49 → close $0.47 -0.38; BLFS×1 09:30 $38.61 → close $38.61 +0.00; COTY×3 09:30 $4.03 → close $4.04 +0.03; SWMR×1 09:30 $8.85 → close $8.84 -0.01; DVN×63 09:30 $46.76 → close $46.58 -11.34; ALNY×3 09:30 $159.17 → close $165.04 +17.61; CHRD×4 09:30 $148.35 → close $149.93 +6.32; GRNT×98 09:30 $6.42 → close $6.30 -11.76; ETON×10 09:30 $61.25 → close $63.93 +26.80; MVST×2676 09:30 $0.24 → close $0.22 -51.38; REZI×29 09:30 $21.52 → close $21.32 -5.80; XRPN×72 09:30 $8.75 → close $7.85 -64.80 | — |
 
 ## Not taken
 

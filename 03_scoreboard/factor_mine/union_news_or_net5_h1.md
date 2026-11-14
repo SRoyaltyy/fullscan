@@ -394,6 +394,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-12 09:30 ET | **SELL** | `LOAR` | 12 | $78.31 | $2.05 | $-18.71 | $6,770.16 | ▼ -18.71 after sell → book $7,777.08; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-12 09:30 ET | **SELL** | `PFGC` | 9 | $111.88 | $2.04 | $+10.71 | $7,775.04 | ▲ +10.71 after sell → book $7,775.04; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,775.04 | ▲ close $7,775.04 vs 09:30 $7,791.70 (session +0.00) | 16:00 close · cash $7,775.04 · no lots left · equity $7,775.04. | — |
+| 2026-11-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,775.04 | ▲ 09:30 equity $7,775.04 vs yday $7,775.04 (+0.00) | 09:30 open · cash $7,775.04 · no holdings · equity $7,775.04 vs prior close $7,775.04 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,775.04 | ▲ close $7,775.04 vs 09:30 $7,775.04 (session +0.00) | 16:00 close · cash $7,775.04 · no lots left · equity $7,775.04. | — |
 
 ## Not taken
 

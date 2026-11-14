@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-29.44%** ($7,056) · signal-only (no cash/fees) was -12.21%. Starts YES **0/30**. Fills 550 · skips 101 · realized $-768.45.
+Cash book **-29.60%** ($7,040) · signal-only (no cash/fees) was -12.21%. Starts YES **0/30**. Fills 557 · skips 101 · realized $-768.45.
 
 ## How this sleeve decides (like you are 10)
 
@@ -757,6 +757,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-12 09:30 ET | **SELL** | `KDP` | 23 | $36.49 | $2.08 | $-18.37 | $6,175.44 | ▼ -18.37 after sell → book $7,058.49; vs 09:30 mark -2.08 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-12 09:30 ET | **SELL** | `XENE` | 21 | $42.05 | $2.07 | $+9.52 | $7,056.42 | ▲ +9.52 after sell → book $7,056.42; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,056.42 | ▲ close $7,056.42 vs 09:30 $7,073.96 (session +0.00) | 16:00 close · cash $7,056.42 · no lots left · equity $7,056.42. | — |
+| 2026-11-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,056.42 | ▲ 09:30 equity $7,056.42 vs yday $7,056.42 (+0.00) | 09:30 open · cash $7,056.42 · no holdings · equity $7,056.42 vs prior close $7,056.42 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-13 09:30 ET | **BUY** | `DVN` | 21 | $46.76 | $2.05 | — | $6,072.41 | — | combo gate; gate last_green=True,ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list flatten; 🔵; ret5=+7.8; leftover $1008.06 | join🟢 sector🔴 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟢 |
+| 2026-11-13 09:30 ET | **BUY** | `ASND` | 3 | $267.40 | $2.00 | — | $5,268.21 | — | combo gate; gate last_green=True,ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list ohlc_hot; ret5=+5.4; leftover $1008.06 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `TEVA` | 22 | $43.91 | $2.06 | — | $4,300.13 | — | combo gate; gate last_green=True,ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list ohlc_hot; 🔵; ret5=+4.5; leftover $1008.06 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `BKH` | 11 | $87.83 | $2.02 | — | $3,331.98 | — | combo gate; gate last_green=True,ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list ohlc_hot; ret5=+3.4; leftover $1008.06 | join🟢 sector🟡 gen🔴 news🟢 digest🟡 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `AKR` | 49 | $20.27 | $2.14 | — | $2,336.61 | — | combo gate; gate last_green=True,ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list ohlc_hot; ret5=+2.8; leftover $1008.06 | join🔴 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `GOOGL` | 3 | $302.98 | $2.00 | — | $1,425.67 | — | combo gate; gate last_green=True,ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list ohlc_hot; 🔵; ret5=+5.7; leftover $1008.06 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🔴 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `TW` | 7 | $132.44 | $2.01 | — | $496.58 | — | combo gate; gate last_green=True,ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list ohlc_hot; ret5=+3.2; leftover $1008.06 | join🟢 sector🔴 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $496.58 | ▼ close $7,040.41 vs 09:30 $7,056.42 (session -1.73) | 16:00 close · cash $496.58 · equity $7,040.41 vs 09:30 $7,056.42 (-16.01; session marks -1.73) · 7 name(s) marked open→close (per-name table). DVN×21 09:30 $46.76 → close $46.58 -3.78; ASND×3 09:30 $267.40 → close $275.39 +23.97; TEVA×22 09:30 $43.91 → close $44.50 +12.98; BKH×11 09:30 $87.83 → close $86.70 -12.43; AKR×49 09:30 $20.27 → close $20.21 -2.94; GOOGL×3 09:30 $302.98 → close $295.77 -21.63; TW×7 09:30 $132.44 → close $132.74 +2.10 | — |
 
 ## Not taken
 

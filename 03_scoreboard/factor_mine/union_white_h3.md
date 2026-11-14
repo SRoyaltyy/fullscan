@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ white, no 🚨
 
-Cash book **-10.37%** ($8,963) · signal-only (no cash/fees) was +12.04%. Starts YES **3/30**. Fills 215 · skips 157 · realized $-1586.47.
+Cash book **-10.38%** ($8,962) · signal-only (no cash/fees) was +12.04%. Starts YES **3/30**. Fills 219 · skips 157 · realized $-1586.47.
 
 ## How this sleeve decides (like you are 10)
 
@@ -417,6 +417,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-12 09:30 ET | **SELL** | `WRBY` | 37 | $29.96 | $2.12 | $+145.63 | $6,666.21 | ▲ +145.63 after sell → book $8,975.70; vs 09:30 mark -2.12 | dropped from list after 3 sess (min 3) | — |
 | 2026-11-12 09:30 ET | **SELL** | `ZVRA` | 83 | $11.75 | $2.26 | $+3.80 | $7,639.20 | ▲ +3.80 after sell → book $8,973.44; vs 09:30 mark -2.26 | dropped from list after 3 sess (min 3) | — |
 | 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,639.20 | ▼ close $8,963.41 vs 09:30 $8,991.59 (session -10.04) | 16:00 close · cash $7,639.20 · equity $8,963.41 vs 09:30 $8,991.59 (-28.18; session marks -10.04) · 6 name(s) marked open→close (per-name table). BLFS×27 09:30 $38.61 → close $38.61 +0.00; COTY×3 09:30 $4.09 → close $4.03 -0.18; ETON×1 09:30 $68.38 → close $61.45 -6.93; EVC×8 09:30 $9.77 → close $9.43 -2.72; REPL×3 09:30 $21.32 → close $21.98 +1.98; SERV×23 09:30 $3.00 → close $2.90 -2.19 | — |
+| 2026-11-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,639.20 | ▲ 09:30 equity $8,964.68 vs yday $8,963.41 (+1.27) | 09:30 open · cash $7,639.20 (unchanged overnight, no fees) · equity $8,964.68 vs prior close $8,963.41 (+1.27) · 6 name(s) re-marked at the open (per-name table). BLFS×27 yday $38.61 → 09:30 $38.61 +0.00; COTY×3 yday $4.03 → 09:30 $4.03 -0.00; ETON×1 yday $61.45 → 09:30 $61.25 -0.20; EVC×8 yday $9.43 → 09:30 $9.56 +1.04; REPL×3 yday $21.98 → 09:30 $21.78 -0.60; SERV×23 yday $2.90 → 09:30 $2.95 +1.04 | — |
+| 2026-11-13 09:30 ET | **SELL** | `ETON` | 1 | $61.25 | $0.64 | $-3.65 | $7,699.81 | ▼ -3.65 after sell → book $8,964.04; vs 09:30 mark -0.64 | dropped from list after 3 sess (min 3) | join🟢 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **SELL** | `EVC` | 8 | $9.56 | $0.81 | $+0.50 | $7,775.49 | ▲ +0.50 after sell → book $8,963.23; vs 09:30 mark -0.81 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-13 09:30 ET | **SELL** | `REPL` | 3 | $21.78 | $0.68 | $-2.31 | $7,840.14 | ▼ -2.31 after sell → book $8,962.55; vs 09:30 mark -0.68 | dropped from list after 3 sess (min 3) | join🔴 sector🟡 gen🔴 news🟢 digest🔴 ab🟡 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **SELL** | `SERV` | 23 | $2.95 | $0.77 | $-9.41 | $7,907.23 | ▼ -9.41 after sell → book $8,961.78; vs 09:30 mark -0.77 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,907.23 | ▲ close $8,961.82 vs 09:30 $8,964.68 (session +0.03) | 16:00 close · cash $7,907.23 · equity $8,961.82 vs 09:30 $8,964.68 (-2.86; session marks +0.03) · 2 name(s) marked open→close (per-name table). BLFS×27 09:30 $38.61 → close $38.61 +0.00; COTY×3 09:30 $4.03 → close $4.04 +0.03 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `candle_score` · size `leftover` · sell `list` · S-boost `none` · rank by candle_score
 
-Cash book **-9.57%** ($9,043) · signal-only (no cash/fees) was +43.18%. Starts YES **21/30**. Fills 420 · skips 288 · realized $+91.50.
+Cash book **-10.46%** ($8,954) · signal-only (no cash/fees) was +43.18%. Starts YES **21/30**. Fills 435 · skips 288 · realized $+91.50.
 
 ## How this sleeve decides (like you are 10)
 
@@ -621,6 +621,23 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-12 09:30 ET | **SELL** | `STGW` | 4 | $11.35 | $0.49 | $-2.49 | $302.68 | ▼ -2.49 after sell → book $9,173.24; vs 09:30 mark -0.49 | dropped from list after 3 sess (min 3) | — |
 | 2026-11-12 09:30 ET | **SELL** | `WEN` | 6 | $8.45 | $0.55 | $+1.35 | $352.84 | ▲ +1.35 after sell → book $9,172.70; vs 09:30 mark -0.54 | dropped from list after 3 sess (min 3) | — |
 | 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $352.84 | ▼ close $9,042.86 vs 09:30 $9,175.82 (session -129.84) | 16:00 close · cash $352.84 · equity $9,042.86 vs 09:30 $9,175.82 (-132.96; session marks -129.84) · 10 name(s) marked open→close (per-name table). AMCX×154 09:30 $9.59 → close $9.33 -40.04; BGS×5 09:30 $3.67 → close $3.35 -1.60; COTY×3 09:30 $4.09 → close $4.03 -0.18; CWST×13 09:30 $99.64 → close $100.29 +8.45; EVC×131 09:30 $9.77 → close $9.43 -44.54; GDYN×1 09:30 $13.90 → close $13.38 -0.52; LOAR×15 09:30 $78.31 → close $75.04 -49.05; REPL×55 09:30 $21.32 → close $21.98 +36.30; VIA×28 09:30 $42.43 → close $42.11 -8.96; WD×30 09:30 $39.60 → close $38.61 -29.70 | — |
+| 2026-11-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $352.84 | ▲ 09:30 equity $9,104.85 vs yday $9,042.86 (+61.99) | 09:30 open · cash $352.84 (unchanged overnight, no fees) · equity $9,104.85 vs prior close $9,042.86 (+61.99) · 10 name(s) re-marked at the open (per-name table). AMCX×154 yday $9.33 → 09:30 $9.39 +9.24; BGS×5 yday $3.35 → 09:30 $3.29 -0.30; COTY×3 yday $4.03 → 09:30 $4.03 -0.00; CWST×13 yday $100.29 → 09:30 $101.53 +16.12; EVC×131 yday $9.43 → 09:30 $9.56 +17.03; GDYN×1 yday $13.38 → 09:30 $13.45 +0.06; LOAR×15 yday $75.04 → 09:30 $75.80 +11.40; REPL×55 yday $21.98 → 09:30 $21.78 -11.00; VIA×28 yday $42.11 → 09:30 $42.74 +17.64; WD×30 yday $38.61 → 09:30 $38.67 +1.80 | — |
+| 2026-11-13 09:30 ET | **SELL** | `AMCX` | 154 | $9.39 | $2.49 | $+221.44 | $1,796.41 | ▲ +221.44 after sell → book $9,102.36; vs 09:30 mark -2.49 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-13 09:30 ET | **SELL** | `CWST` | 13 | $101.53 | $2.05 | $+133.98 | $3,114.25 | ▲ +133.98 after sell → book $9,100.31; vs 09:30 mark -2.05 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-13 09:30 ET | **SELL** | `EVC` | 131 | $9.56 | $2.41 | $+29.26 | $4,364.20 | ▲ +29.26 after sell → book $9,097.90; vs 09:30 mark -2.41 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-13 09:30 ET | **SELL** | `LOAR` | 15 | $75.80 | $2.06 | $-27.94 | $5,499.14 | ▼ -27.94 after sell → book $9,095.84; vs 09:30 mark -2.06 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-13 09:30 ET | **SELL** | `REPL` | 55 | $21.78 | $2.17 | $-21.93 | $6,694.87 | ▼ -21.93 after sell → book $9,093.67; vs 09:30 mark -2.17 | dropped from list after 3 sess (min 3) | join🔴 sector🟡 gen🔴 news🟢 digest🔴 ab🟡 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **SELL** | `VIA` | 28 | $42.74 | $2.09 | $-26.57 | $7,889.49 | ▼ -26.57 after sell → book $9,091.57; vs 09:30 mark -2.10 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-13 09:30 ET | **SELL** | `WD` | 30 | $38.67 | $2.10 | $-64.78 | $9,047.49 | ▼ -64.78 after sell → book $9,089.47; vs 09:30 mark -2.10 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-13 09:30 ET | **BUY** | `BKH` | 12 | $87.83 | $2.03 | — | $7,991.51 | — | rank by candle_score; rank candle_score; list ohlc_hot; ret5=+3.4; leftover $1130.94 | join🟢 sector🟡 gen🔴 news🟢 digest🟡 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `TW` | 8 | $132.44 | $2.01 | — | $6,929.97 | — | rank by candle_score; rank candle_score; list ohlc_hot; ret5=+3.2; leftover $1130.94 | join🟢 sector🔴 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `NEOV` | 343 | $3.29 | $4.42 | — | $5,797.08 | — | rank by candle_score; rank candle_score; list earn_react; 🔵; ret5=+35.1; leftover $1130.94 | join🔴 sector🟢 gen🔴 news🟡 digest🟡 judge🔴 ab🔴 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `MBGL` | 48 | $23.17 | $2.13 | — | $4,682.78 | — | rank by candle_score; rank candle_score; list ohlc_hot; ret5=+16.5; leftover $1130.94 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟡 heat🟢 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `APP` | 2 | $394.88 | $2.00 | — | $3,891.03 | — | rank by candle_score; rank candle_score; list ohlc_hot; ret5=+10.6; leftover $1130.94 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `LBTYA` | 106 | $10.64 | $2.31 | — | $2,760.88 | — | rank by candle_score; rank candle_score; list ohlc_hot; ret5=+9.6; leftover $1130.94 | join🟡 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `TEVA` | 25 | $43.91 | $2.06 | — | $1,661.06 | — | rank by candle_score; rank candle_score; list ohlc_hot; 🔵; ret5=+4.5; leftover $1130.94 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `CEG` | 3 | $284.97 | $2.00 | — | $804.16 | — | rank by candle_score; rank candle_score; list ohlc_hot; 🔵; ret5=+17.8; leftover $1130.94 | join🟢 sector🟡 gen🔴 news🟢 digest🟡 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $804.16 | ▼ close $8,953.79 vs 09:30 $9,104.85 (session -116.72) | 16:00 close · cash $804.16 · equity $8,953.79 vs 09:30 $9,104.85 (-151.06; session marks -116.72) · 11 name(s) marked open→close (per-name table). BGS×5 09:30 $3.29 → close $3.50 +1.05; COTY×3 09:30 $4.03 → close $4.04 +0.03; GDYN×1 09:30 $13.45 → close $13.21 -0.23; BKH×12 09:30 $87.83 → close $86.70 -13.56; TW×8 09:30 $132.44 → close $132.74 +2.40; NEOV×343 09:30 $3.29 → close $2.84 -154.35; MBGL×48 09:30 $23.17 → close $23.28 +5.28; APP×2 09:30 $394.88 → close $409.10 +28.44; LBTYA×106 09:30 $10.64 → close $10.77 +13.78; TEVA×25 09:30 $43.91 → close $44.50 +14.75; CEG×3 09:30 $284.97 → close $280.20 -14.31 | — |
 
 ## Not taken
 

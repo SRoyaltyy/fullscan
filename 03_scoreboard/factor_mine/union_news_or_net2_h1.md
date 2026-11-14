@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · packet🟢 OR headline🟢 and camera net ≥ 2
 
-Cash book **-23.73%** ($7,627) · signal-only (no cash/fees) was -3.45%. Starts YES **0/30**. Fills 326 · skips 55 · realized $-720.09.
+Cash book **-22.89%** ($7,711) · signal-only (no cash/fees) was -3.45%. Starts YES **0/30**. Fills 332 · skips 55 · realized $-720.09.
 
 ## How this sleeve decides (like you are 10)
 
@@ -530,6 +530,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-12 09:30 ET | **SELL** | `LINC` | 42 | $23.30 | $2.14 | $-5.09 | $6,689.28 | ▼ -5.09 after sell → book $7,629.00; vs 09:30 mark -2.14 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-12 09:30 ET | **SELL** | `LOAR` | 12 | $78.31 | $2.05 | $-18.71 | $7,626.96 | ▼ -18.71 after sell → book $7,626.96; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,626.96 | ▲ close $7,626.96 vs 09:30 $7,643.63 (session +0.00) | 16:00 close · cash $7,626.96 · no lots left · equity $7,626.96. | — |
+| 2026-11-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,626.96 | ▲ 09:30 equity $7,626.96 vs yday $7,626.96 (+0.00) | 09:30 open · cash $7,626.96 · no holdings · equity $7,626.96 vs prior close $7,626.96 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-13 09:30 ET | **BUY** | `DVN` | 27 | $46.76 | $2.07 | — | $6,362.37 | — | packet🟢 OR headline🟢 and camera net ≥ 2; gate cam_net_min=2,news_or_headline=True; rank cond; list flatten; 🔵; ret5=+7.8; leftover $1271.16 | join🟢 sector🔴 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟢 |
+| 2026-11-13 09:30 ET | **BUY** | `ANDG` | 20 | $62.82 | $2.05 | — | $5,103.92 | — | packet🟢 OR headline🟢 and camera net ≥ 2; gate cam_net_min=2,news_or_headline=True; rank cond; list earn_react; 🔵; ret5=-1.3; leftover $1271.16 | join🟡 sector🟢 gen🔴 news🟢 digest🟢 ab🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `ETON` | 20 | $61.25 | $2.05 | — | $3,876.87 | — | packet🟢 OR headline🟢 and camera net ≥ 2; gate cam_net_min=2,news_or_headline=True; rank cond; list flatten; ret5=+30.3; leftover $1271.16 | join🟢 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `PLX` | 432 | $2.94 | $5.57 | — | $2,601.22 | — | packet🟢 OR headline🟢 and camera net ≥ 2; gate cam_net_min=2,news_or_headline=True; rank cond; list ohlc_hot; ret5=+17.9; leftover $1271.16 | join🟢 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `BGS` | 386 | $3.29 | $4.98 | — | $1,326.30 | — | packet🟢 OR headline🟢 and camera net ≥ 2; gate cam_net_min=2,news_or_headline=True; rank cond; list yday_gainer,yday_mover; 🔵; ret5=+35.6; leftover $1271.16 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🟡 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `CEG` | 4 | $284.97 | $2.00 | — | $184.41 | — | packet🟢 OR headline🟢 and camera net ≥ 2; gate cam_net_min=2,news_or_headline=True; rank cond; list ohlc_hot; 🔵; ret5=+17.8; leftover $1271.16 | join🟢 sector🟡 gen🔴 news🟢 digest🟡 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $184.41 | ▲ close $7,711.27 vs 09:30 $7,626.96 (session +103.04) | 16:00 close · cash $184.41 · equity $7,711.27 vs 09:30 $7,626.96 (+84.31; session marks +103.04) · 6 name(s) marked open→close (per-name table). DVN×27 09:30 $46.76 → close $46.58 -4.86; ANDG×20 09:30 $62.82 → close $60.06 -55.20; ETON×20 09:30 $61.25 → close $63.93 +53.60; PLX×432 09:30 $2.94 → close $3.05 +47.52; BGS×386 09:30 $3.29 → close $3.50 +81.06; CEG×4 09:30 $284.97 → close $280.20 -19.08 | — |
 
 ## Not taken
 

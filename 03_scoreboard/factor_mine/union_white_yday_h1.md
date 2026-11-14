@@ -486,6 +486,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-12 09:30 ET | **SELL** | `SBH` | 54 | $19.26 | $2.17 | $-58.59 | $7,660.90 | ▼ -58.59 after sell → book $8,756.20; vs 09:30 mark -2.17 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-12 09:30 ET | **SELL** | `ZETA` | 30 | $36.51 | $2.10 | $+11.12 | $8,754.10 | ▲ +11.12 after sell → book $8,754.10; vs 09:30 mark -2.10 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,754.10 | ▲ close $8,754.10 vs 09:30 $8,772.37 (session +0.00) | 16:00 close · cash $8,754.10 · no lots left · equity $8,754.10. | — |
+| 2026-11-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,754.10 | ▲ 09:30 equity $8,754.10 vs yday $8,754.10 (+0.00) | 09:30 open · cash $8,754.10 · no holdings · equity $8,754.10 vs prior close $8,754.10 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,754.10 | ▲ close $8,754.10 vs 09:30 $8,754.10 (session +0.00) | 16:00 close · cash $8,754.10 · no lots left · equity $8,754.10. | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `ohlc_hot` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · hot list ∩ not exploded
 
-Cash book **-39.69%** ($6,031) · signal-only (no cash/fees) was -11.86%. Starts YES **9/30**. Fills 375 · skips 74 · realized $-1849.08.
+Cash book **-39.98%** ($6,002) · signal-only (no cash/fees) was -11.86%. Starts YES **9/30**. Fills 383 · skips 74 · realized $-1849.08.
 
 ## How this sleeve decides (like you are 10)
 
@@ -579,6 +579,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-12 09:30 ET | **SELL** | `HGV` | 26 | $45.42 | $2.09 | $+10.40 | $4,813.42 | ▲ +10.40 after sell → book $6,032.87; vs 09:30 mark -2.09 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-12 09:30 ET | **SELL** | `XENE` | 29 | $42.05 | $2.10 | $+14.68 | $6,030.77 | ▲ +14.68 after sell → book $6,030.77; vs 09:30 mark -2.10 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,030.77 | ▲ close $6,030.77 vs 09:30 $6,041.46 (session +0.00) | 16:00 close · cash $6,030.77 · no lots left · equity $6,030.77. | — |
+| 2026-11-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6,030.77 | ▲ 09:30 equity $6,030.77 vs yday $6,030.77 (+0.00) | 09:30 open · cash $6,030.77 · no holdings · equity $6,030.77 vs prior close $6,030.77 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-13 09:30 ET | **BUY** | `PGNY` | 20 | $36.74 | $2.05 | — | $5,293.92 | — | hot list ∩ not exploded; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list ohlc_hot; ret5=+6.4; leftover $753.85 | join🟢 sector🟡 gen🔴 news🔴 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `ASND` | 2 | $267.40 | $2.00 | — | $4,757.12 | — | hot list ∩ not exploded; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list ohlc_hot; ret5=+5.4; leftover $753.85 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `CAE` | 26 | $28.32 | $2.07 | — | $4,018.74 | — | hot list ∩ not exploded; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list ohlc_hot; ret5=+5.1; leftover $753.85 | join🟢 sector🟢 gen🔴 news🟡 digest🟡 judge🔴 ab🟢 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `LBTYA` | 70 | $10.64 | $2.20 | — | $3,271.74 | — | hot list ∩ not exploded; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list ohlc_hot; ret5=+9.6; leftover $753.85 | join🟡 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `TEVA` | 17 | $43.91 | $2.04 | — | $2,523.22 | — | hot list ∩ not exploded; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list ohlc_hot; 🔵; ret5=+4.5; leftover $753.85 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `BKH` | 8 | $87.83 | $2.01 | — | $1,818.57 | — | hot list ∩ not exploded; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list ohlc_hot; ret5=+3.4; leftover $753.85 | join🟢 sector🟡 gen🔴 news🟢 digest🟡 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `AKR` | 37 | $20.27 | $2.10 | — | $1,066.48 | — | hot list ∩ not exploded; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list ohlc_hot; ret5=+2.8; leftover $753.85 | join🔴 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `GOOGL` | 2 | $302.98 | $2.00 | — | $458.52 | — | hot list ∩ not exploded; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list ohlc_hot; 🔵; ret5=+5.7; leftover $753.85 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🔴 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $458.52 | ▼ close $6,002.39 vs 09:30 $6,030.77 (session -11.91) | 16:00 close · cash $458.52 · equity $6,002.39 vs 09:30 $6,030.77 (-28.38; session marks -11.91) · 8 name(s) marked open→close (per-name table). PGNY×20 09:30 $36.74 → close $36.18 -11.20; ASND×2 09:30 $267.40 → close $275.39 +15.98; CAE×26 09:30 $28.32 → close $27.93 -10.14; LBTYA×70 09:30 $10.64 → close $10.77 +9.10; TEVA×17 09:30 $43.91 → close $44.50 +10.03; BKH×8 09:30 $87.83 → close $86.70 -9.04; AKR×37 09:30 $20.27 → close $20.21 -2.22; GOOGL×2 09:30 $302.98 → close $295.77 -14.42 | — |
 
 ## Not taken
 

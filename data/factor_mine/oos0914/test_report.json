@@ -43,7 +43,8 @@
     "2026-11-09",
     "2026-11-10",
     "2026-11-11",
-    "2026-11-12"
+    "2026-11-12",
+    "2026-11-13"
   ],
   "rules": [
     {
@@ -1665,14 +1666,75 @@
           "equity": 10675.12,
           "mean": -3.4645,
           "mean_flat_15bp": -3.1772
+        },
+        {
+          "date": "2026-11-13",
+          "buys": [
+            {
+              "fill_rule": "open",
+              "price": 23.17,
+              "shares": 115,
+              "side": "BUY",
+              "ticker": "MBGL"
+            },
+            {
+              "fill_rule": "open",
+              "price": 284.97,
+              "shares": 9,
+              "side": "BUY",
+              "ticker": "CEG"
+            },
+            {
+              "fill_rule": "open",
+              "price": 194.18,
+              "shares": 13,
+              "side": "BUY",
+              "ticker": "ATI"
+            },
+            {
+              "fill_rule": "open",
+              "price": 91.87,
+              "shares": 29,
+              "side": "BUY",
+              "ticker": "DNTH"
+            }
+          ],
+          "sells": [
+            {
+              "fill_rule": "open",
+              "price": 0.8689,
+              "shares": 128,
+              "side": "SELL",
+              "ticker": "ATER"
+            },
+            {
+              "fill_rule": "open",
+              "price": 7.715,
+              "shares": 15,
+              "side": "SELL",
+              "ticker": "TLS"
+            },
+            {
+              "fill_rule": "open",
+              "price": 15.63,
+              "shares": 7,
+              "side": "SELL",
+              "ticker": "TTD"
+            }
+          ],
+          "fees": 12.3428,
+          "cash": 245.96,
+          "equity": 10487.62,
+          "mean": -1.7564,
+          "mean_flat_15bp": -1.638
         }
       ],
       "keep_bar_met": false,
       "keep_bar_note": "12 train fires against the 30-fire bar. Excel's luck test p=0.87.",
-      "after_fees_return": 6.751,
-      "start_day_win_rate": 0.9318,
+      "after_fees_return": 4.876,
+      "start_day_win_rate": 0.8889,
       "best_stock": "SDGR",
-      "without_best_stock_return": 2.988
+      "without_best_stock_return": 1.124
     },
     {
       "name": "oos0914_rvol_lg_h1_sx",
@@ -3742,14 +3804,53 @@
           "equity": 11572.86,
           "mean": -2.0183,
           "mean_flat_15bp": -1.7116
+        },
+        {
+          "date": "2026-11-13",
+          "buys": [
+            {
+              "fill_rule": "open",
+              "price": 23.17,
+              "shares": 124,
+              "side": "BUY",
+              "ticker": "MBGL"
+            },
+            {
+              "fill_rule": "open",
+              "price": 267.4,
+              "shares": 10,
+              "side": "BUY",
+              "ticker": "ASND"
+            },
+            {
+              "fill_rule": "open",
+              "price": 57.94,
+              "shares": 49,
+              "side": "BUY",
+              "ticker": "HTFL"
+            },
+            {
+              "fill_rule": "open",
+              "price": 123.52,
+              "shares": 23,
+              "side": "BUY",
+              "ticker": "NBIS"
+            }
+          ],
+          "sells": [],
+          "fees": 8.578,
+          "cash": 337.18,
+          "equity": 11017.58,
+          "mean": -4.7981,
+          "mean_flat_15bp": -4.3672
         }
       ],
       "keep_bar_met": false,
       "keep_bar_note": "12 train fires against the 30-fire bar. Excel's luck test p=0.87.",
-      "after_fees_return": 15.729,
-      "start_day_win_rate": 0.8636,
+      "after_fees_return": 10.176,
+      "start_day_win_rate": 0.6667,
       "best_stock": "SDEV",
-      "without_best_stock_return": -4.226
+      "without_best_stock_return": -8.897
     },
     {
       "name": "oos0914_break10_h1_sx",
@@ -5818,14 +5919,53 @@
           "equity": 7720.14,
           "mean": -3.1779,
           "mean_flat_15bp": -2.4507
+        },
+        {
+          "date": "2026-11-13",
+          "buys": [
+            {
+              "fill_rule": "open",
+              "price": 23.17,
+              "shares": 83,
+              "side": "BUY",
+              "ticker": "MBGL"
+            },
+            {
+              "fill_rule": "open",
+              "price": 284.97,
+              "shares": 6,
+              "side": "BUY",
+              "ticker": "CEG"
+            },
+            {
+              "fill_rule": "open",
+              "price": 194.18,
+              "shares": 9,
+              "side": "BUY",
+              "ticker": "ATI"
+            },
+            {
+              "fill_rule": "open",
+              "price": 91.87,
+              "shares": 21,
+              "side": "BUY",
+              "ticker": "DNTH"
+            }
+          ],
+          "sells": [],
+          "fees": 8.317,
+          "cash": 402.0,
+          "equity": 7591.26,
+          "mean": -1.6694,
+          "mean_flat_15bp": -1.4622
         }
       ],
       "keep_bar_met": false,
       "keep_bar_note": "12 train fires against the 30-fire bar. Excel's luck test p=0.87.",
-      "after_fees_return": -22.799,
-      "start_day_win_rate": 0.5,
+      "after_fees_return": -24.087,
+      "start_day_win_rate": 0.4667,
       "best_stock": "QSI",
-      "without_best_stock_return": -26.469
+      "without_best_stock_return": -27.761
     },
     {
       "name": "oos0914_zero_candle_h2_sx",
@@ -6795,14 +6935,53 @@
           "equity": 10405.11,
           "mean": -2.6827,
           "mean_flat_15bp": -2.6601
+        },
+        {
+          "date": "2026-11-13",
+          "buys": [],
+          "sells": [
+            {
+              "fill_rule": "open",
+              "price": 3.29,
+              "shares": 843,
+              "side": "SELL",
+              "ticker": "BGS"
+            },
+            {
+              "fill_rule": "open",
+              "price": 109.05,
+              "shares": 24,
+              "side": "SELL",
+              "ticker": "CLX"
+            },
+            {
+              "fill_rule": "open",
+              "price": 4.029,
+              "shares": 601,
+              "side": "SELL",
+              "ticker": "COTY"
+            },
+            {
+              "fill_rule": "open",
+              "price": 32.32,
+              "shares": 78,
+              "side": "SELL",
+              "ticker": "JAN"
+            }
+          ],
+          "fees": 23.2588,
+          "cash": 10364.33,
+          "equity": 10364.33,
+          "mean": -0.3919,
+          "mean_flat_15bp": -0.2408
         }
       ],
       "keep_bar_met": false,
       "keep_bar_note": "12 train fires against the 30-fire bar. Excel's luck test p=0.87.",
-      "after_fees_return": 4.051,
-      "start_day_win_rate": 0.8409,
+      "after_fees_return": 3.643,
+      "start_day_win_rate": 0.7778,
       "best_stock": "NAUT",
-      "without_best_stock_return": 1.053
+      "without_best_stock_return": 0.653
     }
   ],
   "baselines": {

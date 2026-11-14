@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `probable` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-37.96%** ($6,204) · signal-only (no cash/fees) was +1.46%. Starts YES **0/30**. Fills 269 · skips 201 · realized $-2103.38.
+Cash book **-41.81%** ($5,819) · signal-only (no cash/fees) was +1.46%. Starts YES **0/30**. Fills 272 · skips 201 · realized $-2103.38.
 
 ## How this sleeve decides (like you are 10)
 
@@ -473,6 +473,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-12 09:30 ET | **SELL** | `COLL` | 84 | $25.06 | $2.27 | $+50.09 | $4,094.47 | ▲ +50.09 after sell → book $6,206.70; vs 09:30 mark -2.28 | dropped from list after 3 sess (min 3) | — |
 | 2026-11-12 09:30 ET | **SELL** | `VRSK` | 10 | $208.97 | $2.05 | $+39.03 | $6,182.13 | ▲ +39.03 after sell → book $6,204.66; vs 09:30 mark -2.04 | dropped from list after 3 sess (min 3) | — |
 | 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,182.13 | ▼ close $6,203.63 vs 09:30 $6,211.52 (session -1.03) | 16:00 close · cash $6,182.13 · equity $6,203.63 vs 09:30 $6,211.52 (-7.89; session marks -1.03) · 3 name(s) marked open→close (per-name table). NUAI×1 09:30 $2.27 → close $2.72 +0.45; PCT×9 09:30 $1.96 → close $1.80 -1.44; THM×2 09:30 $1.31 → close $1.29 -0.04 | — |
+| 2026-11-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6,182.13 | ▲ 09:30 equity $6,203.87 vs yday $6,203.63 (+0.24) | 09:30 open · cash $6,182.13 (unchanged overnight, no fees) · equity $6,203.87 vs prior close $6,203.63 (+0.24) · 3 name(s) re-marked at the open (per-name table). NUAI×1 yday $2.72 → 09:30 $2.94 +0.22; PCT×9 yday $1.80 → 09:30 $1.80 +0.00; THM×2 yday $1.29 → 09:30 $1.30 +0.02 | — |
+| 2026-11-13 09:30 ET | **SELL** | `NUAI` | 1 | $2.94 | $0.05 | $+0.74 | $6,185.02 | ▲ +0.74 after sell → book $6,203.82; vs 09:30 mark -0.05 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-13 09:30 ET | **SELL** | `THM` | 2 | $1.30 | $0.05 | $-0.51 | $6,187.57 | ▼ -0.51 after sell → book $6,203.77; vs 09:30 mark -0.05 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-13 09:30 ET | **BUY** | `NBIS` | 50 | $123.52 | $2.14 | — | $9.43 | — | combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer; ret5=+6.9; leftover $6187.57 | join🟡 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9.43 | ▼ close $5,818.77 vs 09:30 $6,203.87 (session -382.85) | 16:00 close · cash $9.43 · equity $5,818.77 vs 09:30 $6,203.87 (-385.10; session marks -382.85) · 2 name(s) marked open→close (per-name table). PCT×9 09:30 $1.80 → close $1.71 -0.85; NBIS×50 09:30 $123.52 → close $115.88 -382.00 | — |
 
 ## Not taken
 

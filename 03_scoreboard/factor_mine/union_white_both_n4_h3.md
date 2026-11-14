@@ -279,6 +279,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6.67 | ▼ 09:30 equity $10,710.96 vs yday $10,751.79 (-40.83) | 09:30 open · cash $6.67 (unchanged overnight, no fees) · equity $10,710.96 vs prior close $10,751.79 (-40.83) · 2 name(s) re-marked at the open (per-name table). GO×2 yday $13.12 → 09:30 $13.08 -0.08; TGTX×163 yday $65.76 → 09:30 $65.51 -40.75 | — |
 | 2026-11-12 09:30 ET | **SELL** | `TGTX` | 163 | $65.51 | $2.59 | $+1219.06 | $10,682.21 | ▲ +1,219.06 after sell → book $10,708.37; vs 09:30 mark -2.59 | dropped from list after 3 sess (min 3) | — |
 | 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,682.21 | ▼ close $10,707.91 vs 09:30 $10,710.96 (session -0.46) | 16:00 close · cash $10,682.21 · equity $10,707.91 vs 09:30 $10,710.96 (-3.05; session marks -0.46) · 1 name(s) marked open→close (per-name table). GO×2 09:30 $13.08 → close $12.85 -0.46 | — |
+| 2026-11-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,682.21 | ▼ 09:30 equity $10,707.71 vs yday $10,707.91 (-0.20) | 09:30 open · cash $10,682.21 (unchanged overnight, no fees) · equity $10,707.71 vs prior close $10,707.91 (-0.20) · 1 name(s) re-marked at the open (per-name table). GO×2 yday $12.85 → 09:30 $12.75 -0.20 | — |
+| 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,682.21 | ▼ close $10,707.51 vs 09:30 $10,707.71 (session -0.20) | 16:00 close · cash $10,682.21 · equity $10,707.51 vs 09:30 $10,707.71 (-0.20; session marks -0.20) · 1 name(s) marked open→close (per-name table). GO×2 09:30 $12.75 → close $12.65 -0.20 | — |
 
 ## Not taken
 

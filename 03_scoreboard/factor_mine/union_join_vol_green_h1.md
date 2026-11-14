@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **+1.91%** ($10,191) · signal-only (no cash/fees) was +14.99%. Starts YES **24/30**. Fills 375 · skips 55 · realized $+1581.44.
+Cash book **+1.97%** ($10,197) · signal-only (no cash/fees) was +14.99%. Starts YES **24/30**. Fills 378 · skips 55 · realized $+1581.44.
 
 ## How this sleeve decides (like you are 10)
 
@@ -580,6 +580,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-12 09:30 ET | **SELL** | `TTD` | 85 | $15.85 | $2.27 | $+48.19 | $7,616.82 | ▲ +48.19 after sell → book $10,198.72; vs 09:30 mark -2.27 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-12 09:30 ET | **SELL** | `WRBY` | 43 | $29.96 | $2.14 | $+0.47 | $8,902.96 | ▲ +0.47 after sell → book $10,196.58; vs 09:30 mark -2.14 | dropped from list after 2 sess (min 1) | — |
 | 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,902.96 | ▼ close $10,190.90 vs 09:30 $10,219.20 (session -5.68) | 16:00 close · cash $8,902.96 · equity $10,190.90 vs 09:30 $10,219.20 (-28.30; session marks -5.68) · 1 name(s) marked open→close (per-name table). ACAD×71 09:30 $18.22 → close $18.14 -5.68 | — |
+| 2026-11-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,902.96 | ▼ 09:30 equity $10,189.48 vs yday $10,190.90 (-1.42) | 09:30 open · cash $8,902.96 (unchanged overnight, no fees) · equity $10,189.48 vs prior close $10,190.90 (-1.42) · 1 name(s) re-marked at the open (per-name table). ACAD×71 yday $18.14 → 09:30 $18.12 -1.42 | — |
+| 2026-11-13 09:30 ET | **SELL** | `ACAD` | 71 | $18.12 | $2.23 | $-5.14 | $10,187.25 | ▼ -5.14 after sell → book $10,187.25; vs 09:30 mark -2.23 | dropped from list after 2 sess (min 1) | — |
+| 2026-11-13 09:30 ET | **BUY** | `TEVA` | 116 | $43.91 | $2.34 | — | $5,091.36 | — | combo gate; gate join=good,last_green=True,vol=good; list ohlc_hot; 🔵; ret5=+4.5; leftover $5093.63 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `SKM` | 145 | $34.94 | $2.42 | — | $22.63 | — | combo gate; gate join=good,last_green=True,vol=good; list ohlc_hot; ret5=+16.0; leftover $5093.63 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $22.63 | ▲ close $10,197.28 vs 09:30 $10,189.48 (session +14.79) | 16:00 close · cash $22.63 · equity $10,197.28 vs 09:30 $10,189.48 (+7.80; session marks +14.79) · 2 name(s) marked open→close (per-name table). TEVA×116 09:30 $43.91 → close $44.50 +68.44; SKM×145 09:30 $34.94 → close $34.57 -53.65 | — |
 
 ## Not taken
 

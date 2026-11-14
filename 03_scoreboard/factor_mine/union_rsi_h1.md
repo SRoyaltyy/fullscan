@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `rsi` · size `leftover` · sell `list` · S-boost `none` · rank by rsi
 
-Cash book **+55.57%** ($15,557) · signal-only (no cash/fees) was -22.60%. Starts YES **0/30**. Fills 543 · skips 98 · realized $-2571.92.
+Cash book **+53.56%** ($15,356) · signal-only (no cash/fees) was -22.60%. Starts YES **0/30**. Fills 552 · skips 98 · realized $-2571.92.
 
 ## How this sleeve decides (like you are 10)
 
@@ -744,6 +744,17 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-12 09:30 ET | **SELL** | `PCT` | 927 | $1.96 | $12.13 | $-246.56 | $11,701.42 | ▼ -246.56 after sell → book $15,836.05; vs 09:30 mark -12.13 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-12 09:30 ET | **SELL** | `SOC` | 2794 | $0.74 | $29.52 | $-32.04 | $13,738.06 | ▼ -32.04 after sell → book $15,806.53; vs 09:30 mark -29.52 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $13,738.06 | ▼ close $15,557.14 vs 09:30 $15,870.49 (session -249.39) | 16:00 close · cash $13,738.06 · equity $15,557.14 vs 09:30 $15,870.49 (-313.35; session marks -249.39) · 1 name(s) marked open→close (per-name table). ZURA×1467 09:30 $1.41 → close $1.24 -249.39 | — |
+| 2026-11-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $13,738.06 | ▼ 09:30 equity $15,542.47 vs yday $15,557.14 (-14.67) | 09:30 open · cash $13,738.06 (unchanged overnight, no fees) · equity $15,542.47 vs prior close $15,557.14 (-14.67) · 1 name(s) re-marked at the open (per-name table). ZURA×1467 yday $1.24 → 09:30 $1.23 -14.67 | — |
+| 2026-11-13 09:30 ET | **SELL** | `ZURA` | 1467 | $1.23 | $19.18 | $-272.83 | $15,523.29 | ▼ -272.83 after sell → book $15,523.29; vs 09:30 mark -19.18 | dropped from list after 2 sess (min 1) | — |
+| 2026-11-13 09:30 ET | **BUY** | `ARWR` | 40 | $47.68 | $2.11 | — | $13,613.98 | — | rank by rsi; rank rsi; list earn_react; ret5=-17.9; leftover $1940.41 | join🔴 sector🟡 gen🔴 news🟡 digest🔴 ab🔴 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `ALNY` | 12 | $159.17 | $2.03 | — | $11,701.91 | — | rank by rsi; rank rsi; list flatten; 🔵; ret5=-0.0; leftover $1940.41 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `NPWR` | 2425 | $0.80 | $26.68 | — | $9,735.24 | — | rank by rsi; rank rsi; list earn_react; 🔵; ret5=-0.7; leftover $1940.41 | join🔴 sector🟢 gen🔴 news🟡 digest🟡 judge🔴 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `MVST` | 8215 | $0.24 | $44.05 | — | $7,750.80 | — | rank by rsi; rank rsi; list probable,yday_gainer,yday_mover; 🔵; ret5=-59.1; leftover $1940.41 | join🔴 sector🟢 gen🔴 news🔴 digest🟢 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `CDXS` | 1717 | $1.13 | $22.15 | — | $5,788.45 | — | rank by rsi; rank rsi; list earn_react; 🔵; ret5=-6.1; leftover $1940.41 | join🔴 sector🟡 gen🔴 news🟡 digest🔴 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `VELO` | 440 | $4.41 | $5.68 | — | $3,842.37 | — | rank by rsi; rank rsi; list yday_mover; ret5=-8.9; leftover $1940.41 | join🔴 sector🔴 gen🔴 news🟡 digest🟢 ab🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `STIM` | 1603 | $1.21 | $20.68 | — | $1,882.06 | — | rank by rsi; rank rsi; list yday_mover; ret5=-41.2; leftover $1940.41 | join🔴 sector🟡 gen🔴 news🔴 digest🔴 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `AAOI` | 36 | $51.87 | $2.10 | — | $12.64 | — | rank by rsi; rank rsi; list yday_gainer; 🔵; ret5=+12.7; leftover $1940.41 | join🔴 sector🔴 gen🔴 news🟢 digest🟢 ab🟢 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $12.64 | ▼ close $15,356.39 vs 09:30 $15,542.47 (session -41.44) | 16:00 close · cash $12.64 · equity $15,356.39 vs 09:30 $15,542.47 (-186.08; session marks -41.44) · 8 name(s) marked open→close (per-name table). ARWR×40 09:30 $47.68 → close $47.78 +4.00; ALNY×12 09:30 $159.17 → close $165.04 +70.44; NPWR×2425 09:30 $0.80 → close $0.75 -112.52; MVST×8215 09:30 $0.24 → close $0.22 -157.73; CDXS×1717 09:30 $1.13 → close $1.16 +51.51; VELO×440 09:30 $4.41 → close $4.15 -114.40; STIM×1603 09:30 $1.21 → close $1.39 +288.54; AAOI×36 09:30 $51.87 → close $49.89 -71.28 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `macd_hist` · size `leftover` · sell `list` · S-boost `none` · rank by macd_hist
 
-Cash book **-18.44%** ($8,156) · signal-only (no cash/fees) was -17.17%. Starts YES **5/30**. Fills 378 · skips 257 · realized $-743.63.
+Cash book **-18.60%** ($8,140) · signal-only (no cash/fees) was -17.17%. Starts YES **5/30**. Fills 390 · skips 257 · realized $-743.63.
 
 ## How this sleeve decides (like you are 10)
 
@@ -579,6 +579,20 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-12 09:30 ET | **SELL** | `SEZL` | 1 | $150.65 | $1.53 | $-5.00 | $1,166.64 | ▼ -5.00 after sell → book $8,323.03; vs 09:30 mark -1.53 | dropped from list after 3 sess (min 3) | — |
 | 2026-11-12 09:30 ET | **SELL** | `TTWO` | 1 | $232.16 | $2.01 | $+11.89 | $1,396.79 | ▲ +11.89 after sell → book $8,321.02; vs 09:30 mark -2.01 | dropped from list after 3 sess (min 3) | join🟢 sector🟡 gen🔴 news🟡 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,396.79 | ▼ close $8,156.08 vs 09:30 $8,330.67 (session -164.94) | 16:00 close · cash $1,396.79 · equity $8,156.08 vs 09:30 $8,330.67 (-174.59; session marks -164.94) · 6 name(s) marked open→close (per-name table). ESAB×13 09:30 $85.46 → close $82.55 -37.83; ETON×18 09:30 $68.38 → close $61.45 -124.74; LOAR×15 09:30 $78.31 → close $75.04 -49.05; LQDA×24 09:30 $55.00 → close $58.12 +74.88; TMDX×12 09:30 $91.65 → close $92.00 +4.20; WING×6 09:30 $164.66 → close $159.26 -32.40 | — |
+| 2026-11-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $1,396.79 | ▲ 09:30 equity $8,183.04 vs yday $8,156.08 (+26.96) | 09:30 open · cash $1,396.79 (unchanged overnight, no fees) · equity $8,183.04 vs prior close $8,156.08 (+26.96) · 6 name(s) re-marked at the open (per-name table). ESAB×13 yday $82.55 → 09:30 $82.99 +5.72; ETON×18 yday $61.45 → 09:30 $61.25 -3.60; LOAR×15 yday $75.04 → 09:30 $75.80 +11.40; LQDA×24 yday $58.12 → 09:30 $58.37 +6.00; TMDX×12 yday $92.00 → 09:30 $92.39 +4.68; WING×6 yday $159.26 → 09:30 $159.72 +2.76 | — |
+| 2026-11-13 09:30 ET | **SELL** | `ESAB` | 13 | $82.99 | $2.05 | $-84.16 | $2,473.61 | ▼ -84.16 after sell → book $8,180.99; vs 09:30 mark -2.05 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-13 09:30 ET | **SELL** | `LOAR` | 15 | $75.80 | $2.06 | $-27.94 | $3,608.56 | ▼ -27.94 after sell → book $8,178.94; vs 09:30 mark -2.05 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-13 09:30 ET | **SELL** | `LQDA` | 24 | $58.37 | $2.08 | $+227.21 | $5,007.35 | ▲ +227.21 after sell → book $8,176.85; vs 09:30 mark -2.09 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-13 09:30 ET | **SELL** | `TMDX` | 12 | $92.39 | $2.05 | $-17.39 | $6,113.99 | ▼ -17.39 after sell → book $8,174.81; vs 09:30 mark -2.04 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-13 09:30 ET | **SELL** | `WING` | 6 | $159.72 | $2.03 | $-101.72 | $7,070.28 | ▼ -101.72 after sell → book $8,172.78; vs 09:30 mark -2.03 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-13 09:30 ET | **BUY** | `APP` | 2 | $394.88 | $2.00 | — | $6,278.52 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; ret5=+10.6; leftover $1010.04 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `CEG` | 3 | $284.97 | $2.00 | — | $5,421.61 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; 🔵; ret5=+17.8; leftover $1010.04 | join🟢 sector🟡 gen🔴 news🟢 digest🟡 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `ATI` | 5 | $194.18 | $2.00 | — | $4,448.71 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; ret5=+13.0; leftover $1010.04 | join🟢 sector🟢 gen🔴 news🟡 digest🟡 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `CBRS` | 9 | $108.40 | $2.02 | — | $3,471.09 | — | rank by macd_hist; rank macd_hist; list earn_react; ret5=+19.6; leftover $1010.04 | join🔴 sector🔴 gen🔴 news🟢 digest🟢 ab🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `DNTH` | 10 | $91.87 | $2.02 | — | $2,550.37 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; ret5=+11.4; leftover $1010.04 | join🟡 sector🟡 gen🔴 news🟡 digest🔴 ab🔴 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `ASND` | 3 | $267.40 | $2.00 | — | $1,746.17 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; ret5=+5.4; leftover $1010.04 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `CRWV` | 18 | $56.01 | $2.04 | — | $735.95 | — | rank by macd_hist; rank macd_hist; list yday_gainer,yday_mover; ret5=+29.6; leftover $1010.04 | join🔴 sector🔴 gen🔴 news🟡 digest🟢 ab🟡 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $735.95 | ▼ close $8,140.03 vs 09:30 $8,183.04 (session -18.67) | 16:00 close · cash $735.95 · equity $8,140.03 vs 09:30 $8,183.04 (-43.01; session marks -18.67) · 8 name(s) marked open→close (per-name table). ETON×18 09:30 $61.25 → close $63.93 +48.24; APP×2 09:30 $394.88 → close $409.10 +28.44; CEG×3 09:30 $284.97 → close $280.20 -14.31; ATI×5 09:30 $194.18 → close $183.09 -55.45; CBRS×9 09:30 $108.40 → close $108.72 +2.88; DNTH×10 09:30 $91.87 → close $91.81 -0.60; ASND×3 09:30 $267.40 → close $275.39 +23.97; CRWV×18 09:30 $56.01 → close $53.13 -51.84 | — |
 
 ## Not taken
 

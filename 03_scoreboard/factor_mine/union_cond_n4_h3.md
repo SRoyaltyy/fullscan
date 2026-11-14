@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 4 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · top 4 by cond
 
-Cash book **-6.97%** ($9,303) · signal-only (no cash/fees) was -7.67%. Starts YES **1/30**. Fills 196 · skips 159 · realized $-515.67.
+Cash book **-6.57%** ($9,343) · signal-only (no cash/fees) was -7.67%. Starts YES **1/30**. Fills 202 · skips 159 · realized $-515.67.
 
 ## How this sleeve decides (like you are 10)
 
@@ -397,6 +397,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-12 09:30 ET | **SELL** | `ALGN` | 1 | $171.45 | $1.74 | $+0.13 | $417.43 | ▲ +0.13 after sell → book $9,668.24; vs 09:30 mark -1.73 | dropped from list after 3 sess (min 3) | — |
 | 2026-11-12 09:30 ET | **SELL** | `PGNY` | 5 | $36.75 | $1.87 | $+5.16 | $599.30 | ▲ +5.16 after sell → book $9,666.36; vs 09:30 mark -1.88 | dropped from list after 3 sess (min 3) | — |
 | 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $599.30 | ▼ close $9,302.55 vs 09:30 $9,672.02 (session -363.81) | 16:00 close · cash $599.30 · equity $9,302.55 vs 09:30 $9,672.02 (-369.47; session marks -363.81) · 7 name(s) marked open→close (per-name table). ALH×2 09:30 $24.29 → close $23.76 -1.06; CECO×1 09:30 $54.34 → close $56.00 +1.66; EVC×304 09:30 $9.77 → close $9.43 -103.36; FG×110 09:30 $25.06 → close $23.62 -158.40; FOSL×7 09:30 $9.84 → close $8.74 -7.70; KMPR×88 09:30 $35.35 → close $34.30 -92.40; SBH×3 09:30 $19.26 → close $18.41 -2.55 | — |
+| 2026-11-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $599.30 | ▲ 09:30 equity $9,391.88 vs yday $9,302.55 (+89.33) | 09:30 open · cash $599.30 (unchanged overnight, no fees) · equity $9,391.88 vs prior close $9,302.55 (+89.33) · 7 name(s) re-marked at the open (per-name table). ALH×2 yday $23.76 → 09:30 $23.91 +0.30; CECO×1 yday $56.00 → 09:30 $55.42 -0.58; EVC×304 yday $9.43 → 09:30 $9.56 +39.52; FG×110 yday $23.62 → 09:30 $23.99 +40.70; FOSL×7 yday $8.74 → 09:30 $8.56 -1.26; KMPR×88 yday $34.30 → 09:30 $34.42 +10.56; SBH×3 yday $18.41 → 09:30 $18.44 +0.09 | — |
+| 2026-11-13 09:30 ET | **SELL** | `EVC` | 304 | $9.56 | $4.00 | $+71.12 | $3,501.54 | ▲ +71.12 after sell → book $9,387.88; vs 09:30 mark -4.00 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-13 09:30 ET | **SELL** | `FG` | 110 | $23.99 | $2.36 | $-176.28 | $6,138.09 | ▼ -176.28 after sell → book $9,385.53; vs 09:30 mark -2.35 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-13 09:30 ET | **SELL** | `KMPR` | 88 | $34.42 | $2.29 | $+219.85 | $9,164.75 | ▲ +219.85 after sell → book $9,383.23; vs 09:30 mark -2.30 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-13 09:30 ET | **BUY** | `DVN` | 65 | $46.76 | $2.19 | — | $6,123.17 | — | top 4 by cond; rank cond; list flatten; 🔵; ret5=+7.8; leftover $3054.92 | join🟢 sector🔴 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟢 |
+| 2026-11-13 09:30 ET | **BUY** | `ANDG` | 48 | $62.82 | $2.13 | — | $3,105.67 | — | top 4 by cond; rank cond; list earn_react; 🔵; ret5=-1.3; leftover $3054.92 | join🟡 sector🟢 gen🔴 news🟢 digest🟢 ab🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `ALNY` | 19 | $159.17 | $2.05 | — | $79.40 | — | top 4 by cond; rank cond; list flatten; 🔵; ret5=-0.0; leftover $3054.92 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $79.40 | ▼ close $9,343.14 vs 09:30 $9,391.88 (session -33.73) | 16:00 close · cash $79.40 · equity $9,343.14 vs 09:30 $9,391.88 (-48.74; session marks -33.73) · 7 name(s) marked open→close (per-name table). ALH×2 09:30 $23.91 → close $23.63 -0.56; CECO×1 09:30 $55.42 → close $54.25 -1.17; FOSL×7 09:30 $8.56 → close $8.43 -0.91; SBH×3 09:30 $18.44 → close $18.96 +1.56; DVN×65 09:30 $46.76 → close $46.58 -11.70; ANDG×48 09:30 $62.82 → close $60.06 -132.48; ALNY×19 09:30 $159.17 → close $165.04 +111.53 | — |
 
 ## Not taken
 

@@ -254,6 +254,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-12 09:30 ET | **SELL** | `ICL` | 582 | $4.62 | $7.63 | $-20.95 | $8,008.10 | ▼ -20.95 after sell → book $10,934.10; vs 09:30 mark -7.63 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-12 09:30 ET | **SELL** | `SONO` | 154 | $19.00 | $2.50 | $+226.05 | $10,931.60 | ▲ +226.05 after sell → book $10,931.60; vs 09:30 mark -2.50 | dropped from list after 1 sess (min 1) | join🟢 sector🟢 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,931.60 | ▲ close $10,931.60 vs 09:30 $10,946.63 (session +0.00) | 16:00 close · cash $10,931.60 · no lots left · equity $10,931.60. | — |
+| 2026-11-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,931.60 | ▲ 09:30 equity $10,931.60 vs yday $10,931.60 (+0.00) | 09:30 open · cash $10,931.60 · no holdings · equity $10,931.60 vs prior close $10,931.60 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,931.60 | ▲ close $10,931.60 vs 09:30 $10,931.60 (session +0.00) | 16:00 close · cash $10,931.60 · no lots left · equity $10,931.60. | — |
 
 ## Not taken
 

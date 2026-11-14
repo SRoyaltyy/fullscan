@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ candle, no 🚨
 
-Cash book **-20.11%** ($7,989) · signal-only (no cash/fees) was -3.26%. Starts YES **0/30**. Fills 578 · skips 106 · realized $-563.17.
+Cash book **-22.77%** ($7,723) · signal-only (no cash/fees) was -3.26%. Starts YES **0/30**. Fills 586 · skips 106 · realized $-563.17.
 
 ## How this sleeve decides (like you are 10)
 
@@ -780,6 +780,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-12 09:30 ET | **SELL** | `TTD` | 67 | $15.85 | $2.21 | $+37.14 | $7,057.11 | ▲ +37.14 after sell → book $7,993.22; vs 09:30 mark -2.21 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-12 09:30 ET | **SELL** | `UAMY` | 311 | $3.01 | $4.07 | $-104.50 | $7,989.15 | ▼ -104.50 after sell → book $7,989.15; vs 09:30 mark -4.07 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
 | 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,989.15 | ▲ close $7,989.15 vs 09:30 $8,013.22 (session +0.00) | 16:00 close · cash $7,989.15 · no lots left · equity $7,989.15. | — |
+| 2026-11-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,989.15 | ▲ 09:30 equity $7,989.15 vs yday $7,989.15 (+0.00) | 09:30 open · cash $7,989.15 · no holdings · equity $7,989.15 vs prior close $7,989.15 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-13 09:30 ET | **BUY** | `BBOT` | 421 | $2.37 | $5.43 | — | $6,985.95 | — | union ∩ candle, no 🚨; gate candle_capture=True; list probable,yday_gainer; 🔵; ret5=+8.3; leftover $998.64 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `NBIS` | 8 | $123.52 | $2.01 | — | $5,995.78 | — | union ∩ candle, no 🚨; gate candle_capture=True; list probable,yday_gainer; ret5=+6.9; leftover $998.64 | join🟡 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-13 09:30 ET | **BUY** | `BGS` | 303 | $3.29 | $3.91 | — | $4,995.00 | — | union ∩ candle, no 🚨; gate candle_capture=True; list yday_gainer,yday_mover; 🔵; ret5=+35.6; leftover $998.64 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🟡 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `CRWV` | 17 | $56.01 | $2.04 | — | $4,040.79 | — | union ∩ candle, no 🚨; gate candle_capture=True; list yday_gainer,yday_mover; ret5=+29.6; leftover $998.64 | join🔴 sector🔴 gen🔴 news🟡 digest🟢 ab🟡 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `ETRA` | 106 | $9.37 | $2.31 | — | $3,045.26 | — | union ∩ candle, no 🚨; gate candle_capture=True; list yday_gainer,yday_mover; ret5=+23.9; leftover $998.64 | join🟡 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `EQPT` | 60 | $16.41 | $2.17 | — | $2,058.49 | — | union ∩ candle, no 🚨; gate candle_capture=True; list yday_gainer,yday_mover; 🔵; ret5=+12.9; leftover $998.64 | join🔴 sector🟢 gen🔴 news🟡 digest🟡 judge🔴 ab🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `RUM` | 174 | $5.71 | $2.51 | — | $1,062.44 | — | union ∩ candle, no 🚨; gate candle_capture=True; list yday_gainer; 🔵; ret5=+21.6; leftover $998.64 | join🔴 sector🟡 gen🔴 news🟢 digest🔴 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `MBGL` | 43 | $23.17 | $2.12 | — | $64.01 | — | union ∩ candle, no 🚨; gate candle_capture=True; list ohlc_hot; ret5=+16.5; leftover $998.64 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟡 heat🟢 vol🟡 buy🟡 |
+| 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $64.01 | ▼ close $7,722.96 vs 09:30 $7,989.15 (session -243.69) | 16:00 close · cash $64.01 · equity $7,722.96 vs 09:30 $7,989.15 (-266.19; session marks -243.69) · 8 name(s) marked open→close (per-name table). BBOT×421 09:30 $2.37 → close $2.14 -96.83; NBIS×8 09:30 $123.52 → close $115.88 -61.12; BGS×303 09:30 $3.29 → close $3.50 +63.63; CRWV×17 09:30 $56.01 → close $53.13 -48.96; ETRA×106 09:30 $9.37 → close $8.84 -56.18; EQPT×60 09:30 $16.41 → close $15.42 -59.40; RUM×174 09:30 $5.71 → close $5.77 +10.44; MBGL×43 09:30 $23.17 → close $23.28 +4.73 | — |
 
 ## Not taken
 

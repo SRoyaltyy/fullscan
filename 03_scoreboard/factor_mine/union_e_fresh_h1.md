@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ e_fresh, no 🚨
 
-Cash book **-15.83%** ($8,417) · signal-only (no cash/fees) was +4.74%. Starts YES **24/30**. Fills 334 · skips 56 · realized $+1231.21.
+Cash book **-19.75%** ($8,026) · signal-only (no cash/fees) was +4.74%. Starts YES **24/30**. Fills 342 · skips 56 · realized $+1231.21.
 
 ## How this sleeve decides (like you are 10)
 
@@ -537,6 +537,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-12 09:30 ET | **SELL** | `SBH` | 53 | $19.26 | $2.17 | $-57.58 | $7,239.93 | ▼ -57.58 after sell → book $8,419.03; vs 09:30 mark -2.17 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-12 09:30 ET | **SELL** | `SWMR` | 130 | $9.07 | $2.41 | $+88.81 | $8,416.62 | ▲ +88.81 after sell → book $8,416.62; vs 09:30 mark -2.41 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,416.62 | ▲ close $8,416.62 vs 09:30 $8,436.77 (session +0.00) | 16:00 close · cash $8,416.62 · no lots left · equity $8,416.62. | — |
+| 2026-11-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,416.62 | ▲ 09:30 equity $8,416.62 vs yday $8,416.62 (+0.00) | 09:30 open · cash $8,416.62 · no holdings · equity $8,416.62 vs prior close $8,416.62 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-13 09:30 ET | **BUY** | `NBIS` | 8 | $123.52 | $2.01 | — | $7,426.45 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list probable,yday_gainer; ret5=+6.9; leftover $1052.08 | join🟡 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-13 09:30 ET | **BUY** | `LGN` | 29 | $36.11 | $2.08 | — | $6,377.18 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list yday_gainer; 🔵; ret5=+42.7; leftover $1052.08 | join🔴 sector🟢 gen🔴 news🟢 digest🟡 judge🔴 ab🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `MBGL` | 45 | $23.17 | $2.12 | — | $5,332.40 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list ohlc_hot; ret5=+16.5; leftover $1052.08 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟡 heat🟢 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `ASND` | 3 | $267.40 | $2.00 | — | $4,528.21 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list ohlc_hot; ret5=+5.4; leftover $1052.08 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `HTFL` | 18 | $57.94 | $2.04 | — | $3,483.24 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list ohlc_hot,earn_react; 🔵; ret5=+15.3; leftover $1052.08 | join🟡 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `ALMU` | 145 | $7.22 | $2.42 | — | $2,433.76 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=+26.3; leftover $1052.08 | join🔴 sector🔴 gen🔴 news🟡 digest🟢 ab🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `ANDG` | 16 | $62.82 | $2.04 | — | $1,426.60 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; 🔵; ret5=-1.3; leftover $1052.08 | join🟡 sector🟢 gen🔴 news🟢 digest🟢 ab🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `ARWR` | 22 | $47.68 | $2.06 | — | $375.58 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=-17.9; leftover $1052.08 | join🔴 sector🟡 gen🔴 news🟡 digest🔴 ab🔴 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $375.58 | ▼ close $8,025.54 vs 09:30 $8,416.62 (session -374.30) | 16:00 close · cash $375.58 · equity $8,025.54 vs 09:30 $8,416.62 (-391.08; session marks -374.30) · 8 name(s) marked open→close (per-name table). NBIS×8 09:30 $123.52 → close $115.88 -61.12; LGN×29 09:30 $36.11 → close $35.00 -32.19; MBGL×45 09:30 $23.17 → close $23.28 +4.95; ASND×3 09:30 $267.40 → close $275.39 +23.97; HTFL×18 09:30 $57.94 → close $48.46 -170.64; ALMU×145 09:30 $7.22 → close $6.55 -97.31; ANDG×16 09:30 $62.82 → close $60.06 -44.16; ARWR×22 09:30 $47.68 → close $47.78 +2.20 | — |
 
 ## Not taken
 

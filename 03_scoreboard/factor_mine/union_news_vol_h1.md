@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-33.54%** ($6,646) · signal-only (no cash/fees) was +0.74%. Starts YES **0/30**. Fills 196 · skips 41 · realized $-847.98.
+Cash book **-33.10%** ($6,690) · signal-only (no cash/fees) was +0.74%. Starts YES **0/30**. Fills 204 · skips 41 · realized $-847.98.
 
 ## How this sleeve decides (like you are 10)
 
@@ -400,6 +400,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-12 09:30 ET | **SELL** | `RC` | 988 | $0.93 | $12.33 | $-104.11 | $5,650.12 | ▼ -104.11 after sell → book $6,660.27; vs 09:30 mark -12.33 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-12 09:30 ET | **SELL** | `SOC` | 1366 | $0.74 | $14.44 | $-15.67 | $6,645.84 | ▼ -15.67 after sell → book $6,645.84; vs 09:30 mark -14.43 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,645.84 | ▲ close $6,645.84 vs 09:30 $6,683.21 (session +0.00) | 16:00 close · cash $6,645.84 · no lots left · equity $6,645.84. | — |
+| 2026-11-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6,645.84 | ▲ 09:30 equity $6,645.84 vs yday $6,645.84 (+0.00) | 09:30 open · cash $6,645.84 · no holdings · equity $6,645.84 vs prior close $6,645.84 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-13 09:30 ET | **BUY** | `ETON` | 13 | $61.25 | $2.03 | — | $5,847.56 | — | combo gate; gate news=good,vol=good; list flatten; ret5=+30.3; leftover $830.73 | join🟢 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `REZI` | 38 | $21.52 | $2.10 | — | $5,027.70 | — | combo gate; gate news=good,vol=good; list probable,yday_gainer,yday_mover; 🔵; ret5=+9.5; leftover $830.73 | join🔴 sector🟢 gen🔴 news🟢 digest🟡 judge🔴 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `BGS` | 252 | $3.29 | $3.25 | — | $4,195.37 | — | combo gate; gate news=good,vol=good; list yday_gainer,yday_mover; 🔵; ret5=+35.6; leftover $830.73 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🟡 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `CAPR` | 81 | $10.21 | $2.23 | — | $3,366.12 | — | combo gate; gate news=good,vol=good; list yday_gainer,yday_mover; 🔵; ret5=+19.1; leftover $830.73 | join🔴 sector🟡 gen🔴 news🟢 digest🔴 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `AZTA` | 18 | $44.26 | $2.04 | — | $2,567.40 | — | combo gate; gate news=good,vol=good; list yday_gainer,yday_mover; 🔵; ret5=+17.3; leftover $830.73 | join🔴 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `RUM` | 145 | $5.71 | $2.42 | — | $1,737.02 | — | combo gate; gate news=good,vol=good; list yday_gainer; 🔵; ret5=+21.6; leftover $830.73 | join🔴 sector🟡 gen🔴 news🟢 digest🔴 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `LGN` | 23 | $36.11 | $2.06 | — | $904.44 | — | combo gate; gate news=good,vol=good; list yday_gainer; 🔵; ret5=+42.7; leftover $830.73 | join🔴 sector🟢 gen🔴 news🟢 digest🟡 judge🔴 ab🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `PLX` | 282 | $2.94 | $3.64 | — | $71.72 | — | combo gate; gate news=good,vol=good; list ohlc_hot; ret5=+17.9; leftover $830.73 | join🟢 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $71.72 | ▲ close $6,690.35 vs 09:30 $6,645.84 (session +64.29) | 16:00 close · cash $71.72 · equity $6,690.35 vs 09:30 $6,645.84 (+44.51; session marks +64.29) · 8 name(s) marked open→close (per-name table). ETON×13 09:30 $61.25 → close $63.93 +34.84; REZI×38 09:30 $21.52 → close $21.32 -7.60; BGS×252 09:30 $3.29 → close $3.50 +52.92; CAPR×81 09:30 $10.21 → close $9.53 -55.08; AZTA×18 09:30 $44.26 → close $45.65 +25.02; RUM×145 09:30 $5.71 → close $5.77 +8.70; LGN×23 09:30 $36.11 → close $35.00 -25.53; PLX×282 09:30 $2.94 → close $3.05 +31.02 | — |
 
 ## Not taken
 

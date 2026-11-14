@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · MACD histogram < 0
 
-Cash book **-5.63%** ($9,437) · signal-only (no cash/fees) was +6.85%. Starts YES **5/30**. Fills 535 · skips 108 · realized $-743.47.
+Cash book **-4.28%** ($9,572) · signal-only (no cash/fees) was +6.85%. Starts YES **5/30**. Fills 544 · skips 108 · realized $-743.47.
 
 ## How this sleeve decides (like you are 10)
 
@@ -735,6 +735,17 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-12 09:30 ET | **COVER** | `QMCO` | 33 | $15.83 | $2.09 | $+51.52 | $10,549.83 | ▲ +51.52 after sell → book $9,374.70; vs 09:30 mark -2.08 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-12 09:30 ET | **COVER** | `SOC` | 794 | $0.74 | $8.25 | $-24.05 | $9,954.41 | ▼ -24.05 after sell → book $9,366.44; vs 09:30 mark -8.26 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,954.41 | ▲ close $9,437.33 vs 09:30 $9,397.58 (session +70.89) | 16:00 close · cash $9,954.41 · equity $9,437.33 vs 09:30 $9,397.58 (+39.75; session marks +70.89) · 1 name(s) marked open→close (per-name table). ZURA×417 09:30 $1.41 → close $1.24 +70.89 | — |
+| 2026-11-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,954.41 | ▲ 09:30 equity $9,441.50 vs yday $9,437.33 (+4.17) | 09:30 open · cash $9,954.41 (unchanged overnight, no fees) · equity $9,441.50 vs prior close $9,437.33 (+4.17) · 1 name(s) re-marked at the open (per-name table). ZURA×417 yday $1.24 → 09:30 $1.23 +4.17 | — |
+| 2026-11-13 09:30 ET | **COVER** | `ZURA` | 417 | $1.23 | $5.38 | $+55.87 | $9,436.12 | ▲ +55.87 after sell → book $9,436.12; vs 09:30 mark -5.38 | dropped from list after 2 sess (min 1) | — |
+| 2026-11-13 09:30 ET | **SHORT** | `DVN` | 12 | $46.76 | $2.06 | — | $9,995.18 | — | MACD histogram < 0; gate macd_down=True; list flatten; 🔵; ret5=+7.8; leftover $589.76 | join🟢 sector🔴 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟢 |
+| 2026-11-13 09:30 ET | **SHORT** | `ALNY` | 3 | $159.17 | $2.03 | — | $10,470.66 | — | MACD histogram < 0; gate macd_down=True; list flatten; 🔵; ret5=-0.0; leftover $589.76 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **SHORT** | `CHRD` | 3 | $148.35 | $2.03 | — | $10,913.68 | — | MACD histogram < 0; gate macd_down=True; list flatten; ret5=+11.0; leftover $589.76 | join🟢 sector🔴 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **SHORT** | `MVST` | 2496 | $0.24 | $13.82 | — | $11,489.41 | — | MACD histogram < 0; gate macd_down=True; list probable,yday_gainer,yday_mover; 🔵; ret5=-59.1; leftover $589.76 | join🔴 sector🟢 gen🔴 news🔴 digest🟢 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **SHORT** | `XRPN` | 67 | $8.75 | $2.23 | — | $12,073.43 | — | MACD histogram < 0; gate macd_down=True; list probable,yday_gainer; ret5=-12.9; leftover $589.76 | join🔴 sector🔴 gen🔴 news🟡 digest🔴 ab🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **SHORT** | `AXTI` | 13 | $43.36 | $2.06 | — | $12,635.04 | — | MACD histogram < 0; gate macd_down=True; list yday_gainer,yday_mover; ret5=+18.6; leftover $589.76 | join🟡 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **SHORT** | `EQPT` | 35 | $16.41 | $2.13 | — | $13,207.26 | — | MACD histogram < 0; gate macd_down=True; list yday_gainer,yday_mover; 🔵; ret5=+12.9; leftover $589.76 | join🔴 sector🟢 gen🔴 news🟡 digest🟡 judge🔴 ab🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **SHORT** | `AAOI` | 11 | $51.87 | $2.06 | — | $13,775.78 | — | MACD histogram < 0; gate macd_down=True; list yday_gainer; 🔵; ret5=+12.7; leftover $589.76 | join🔴 sector🔴 gen🔴 news🟢 digest🟢 ab🟢 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $13,775.78 | ▲ close $9,571.91 vs 09:30 $9,441.50 (session +164.22) | 16:00 close · cash $13,775.78 · equity $9,571.91 vs 09:30 $9,441.50 (+130.41; session marks +164.22) · 8 name(s) marked open→close (per-name table). DVN×12 09:30 $46.76 → close $46.58 +2.16; ALNY×3 09:30 $159.17 → close $165.04 -17.61; CHRD×3 09:30 $148.35 → close $149.93 -4.74; MVST×2496 09:30 $0.24 → close $0.22 +47.92; XRPN×67 09:30 $8.75 → close $7.85 +60.30; AXTI×13 09:30 $43.36 → close $41.84 +19.76; EQPT×35 09:30 $16.41 → close $15.42 +34.65; AAOI×11 09:30 $51.87 → close $49.89 +21.78 | — |
 
 ## Not taken
 

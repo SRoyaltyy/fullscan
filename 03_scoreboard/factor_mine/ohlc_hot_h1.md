@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `ohlc_hot` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · baseline list, no extra gate
 
-Cash book **-28.33%** ($7,167) · signal-only (no cash/fees) was +6.95%. Starts YES **0/30**. Fills 543 · skips 93 · realized $-1456.67.
+Cash book **-29.14%** ($7,086) · signal-only (no cash/fees) was +6.95%. Starts YES **0/30**. Fills 552 · skips 93 · realized $-1456.67.
 
 ## How this sleeve decides (like you are 10)
 
@@ -741,6 +741,17 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-12 09:30 ET | **SELL** | `SBH` | 43 | $19.26 | $2.14 | $-47.47 | $5,676.88 | ▼ -47.47 after sell → book $7,202.14; vs 09:30 mark -2.14 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-12 09:30 ET | **SELL** | `TTWO` | 3 | $232.16 | $2.02 | $+9.75 | $6,371.34 | ▲ +9.75 after sell → book $7,200.12; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,371.34 | ▼ close $7,167.30 vs 09:30 $7,224.73 (session -32.82) | 16:00 close · cash $6,371.34 · equity $7,167.30 vs 09:30 $7,224.73 (-57.43; session marks -32.82) · 1 name(s) marked open→close (per-name table). CHTR×6 09:30 $138.13 → close $132.66 -32.82 | — |
+| 2026-11-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6,371.34 | ▲ 09:30 equity $7,170.18 vs yday $7,167.30 (+2.88) | 09:30 open · cash $6,371.34 (unchanged overnight, no fees) · equity $7,170.18 vs prior close $7,167.30 (+2.88) · 1 name(s) re-marked at the open (per-name table). CHTR×6 yday $132.66 → 09:30 $133.14 +2.88 | — |
+| 2026-11-13 09:30 ET | **SELL** | `CHTR` | 6 | $133.14 | $2.03 | $-3.86 | $7,168.15 | ▼ -3.86 after sell → book $7,168.15; vs 09:30 mark -2.03 | dropped from list after 2 sess (min 1) | — |
+| 2026-11-13 09:30 ET | **BUY** | `FOSL` | 104 | $8.56 | $2.30 | — | $6,275.61 | — | baseline list, no extra gate; list yday_gainer,yday_mover,ohlc_hot; 🔵; ret5=+12.6; leftover $896.02 | join🔴 sector🟢 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `MBGL` | 38 | $23.17 | $2.10 | — | $5,393.05 | — | baseline list, no extra gate; list ohlc_hot; ret5=+16.5; leftover $896.02 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟡 heat🟢 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `INO` | 622 | $1.44 | $8.02 | — | $4,489.34 | — | baseline list, no extra gate; list ohlc_hot; ret5=+0.7; leftover $896.02 | join🔴 sector🟡 gen🔴 news🟡 digest🔴 ab🔴 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `CEG` | 3 | $284.97 | $2.00 | — | $3,632.43 | — | baseline list, no extra gate; list ohlc_hot; 🔵; ret5=+17.8; leftover $896.02 | join🟢 sector🟡 gen🔴 news🟢 digest🟡 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `ATI` | 4 | $194.18 | $2.00 | — | $2,853.71 | — | baseline list, no extra gate; list ohlc_hot; ret5=+13.0; leftover $896.02 | join🟢 sector🟢 gen🔴 news🟡 digest🟡 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `DNTH` | 9 | $91.87 | $2.02 | — | $2,024.86 | — | baseline list, no extra gate; list ohlc_hot; ret5=+11.4; leftover $896.02 | join🟡 sector🟡 gen🔴 news🟡 digest🔴 ab🔴 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `APP` | 2 | $394.88 | $2.00 | — | $1,233.11 | — | baseline list, no extra gate; list ohlc_hot; ret5=+10.6; leftover $896.02 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `PGNY` | 24 | $36.74 | $2.06 | — | $349.29 | — | baseline list, no extra gate; list ohlc_hot; ret5=+6.4; leftover $896.02 | join🟢 sector🟡 gen🔴 news🔴 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $349.29 | ▼ close $7,085.88 vs 09:30 $7,170.18 (session -59.77) | 16:00 close · cash $349.29 · equity $7,085.88 vs 09:30 $7,170.18 (-84.30; session marks -59.77) · 8 name(s) marked open→close (per-name table). FOSL×104 09:30 $8.56 → close $8.43 -13.52; MBGL×38 09:30 $23.17 → close $23.28 +4.18; INO×622 09:30 $1.44 → close $1.43 -6.22; CEG×3 09:30 $284.97 → close $280.20 -14.31; ATI×4 09:30 $194.18 → close $183.09 -44.36; DNTH×9 09:30 $91.87 → close $91.81 -0.54; APP×2 09:30 $394.88 → close $409.10 +28.44; PGNY×24 09:30 $36.74 → close $36.18 -13.44 | — |
 
 ## Not taken
 

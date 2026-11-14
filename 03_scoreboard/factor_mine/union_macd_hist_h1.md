@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `macd_hist` · size `leftover` · sell `list` · S-boost `none` · rank by macd_hist
 
-Cash book **-14.77%** ($8,523) · signal-only (no cash/fees) was +3.37%. Starts YES **20/30**. Fills 531 · skips 94 · realized $-657.32.
+Cash book **-15.14%** ($8,486) · signal-only (no cash/fees) was +3.37%. Starts YES **20/30**. Fills 541 · skips 94 · realized $-657.32.
 
 ## How this sleeve decides (like you are 10)
 
@@ -732,6 +732,18 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-12 09:30 ET | **SELL** | `PFGC` | 9 | $111.88 | $2.04 | $+10.71 | $5,388.28 | ▲ +10.71 after sell → book $8,538.19; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-12 09:30 ET | **SELL** | `TTWO` | 5 | $232.16 | $2.02 | $+75.47 | $6,547.06 | ▲ +75.47 after sell → book $8,536.17; vs 09:30 mark -2.02 | dropped from list after 3 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,547.06 | ▼ close $8,522.90 vs 09:30 $8,548.39 (session -13.27) | 16:00 close · cash $6,547.06 · equity $8,522.90 vs 09:30 $8,548.39 (-25.49; session marks -13.27) · 2 name(s) marked open→close (per-name table). FNV×4 09:30 $246.11 → close $247.72 +6.44; FWONK×9 09:30 $111.63 → close $109.44 -19.71 | — |
+| 2026-11-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6,547.06 | ▲ 09:30 equity $8,530.25 vs yday $8,522.90 (+7.35) | 09:30 open · cash $6,547.06 (unchanged overnight, no fees) · equity $8,530.25 vs prior close $8,522.90 (+7.35) · 2 name(s) re-marked at the open (per-name table). FNV×4 yday $247.72 → 09:30 $248.77 +4.20; FWONK×9 yday $109.44 → 09:30 $109.79 +3.15 | — |
+| 2026-11-13 09:30 ET | **SELL** | `FNV` | 4 | $248.77 | $2.02 | $-36.94 | $7,540.12 | ▼ -36.94 after sell → book $8,528.23; vs 09:30 mark -2.02 | dropped from list after 2 sess (min 1) | — |
+| 2026-11-13 09:30 ET | **SELL** | `FWONK` | 9 | $109.79 | $2.04 | $+6.30 | $8,526.19 | ▲ +6.30 after sell → book $8,526.19; vs 09:30 mark -2.04 | dropped from list after 2 sess (min 1) | — |
+| 2026-11-13 09:30 ET | **BUY** | `APP` | 2 | $394.88 | $2.00 | — | $7,734.44 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; ret5=+10.6; leftover $1065.77 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `CEG` | 3 | $284.97 | $2.00 | — | $6,877.53 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; 🔵; ret5=+17.8; leftover $1065.77 | join🟢 sector🟡 gen🔴 news🟢 digest🟡 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `ATI` | 5 | $194.18 | $2.00 | — | $5,904.62 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; ret5=+13.0; leftover $1065.77 | join🟢 sector🟢 gen🔴 news🟡 digest🟡 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `CBRS` | 9 | $108.40 | $2.02 | — | $4,927.00 | — | rank by macd_hist; rank macd_hist; list earn_react; ret5=+19.6; leftover $1065.77 | join🔴 sector🔴 gen🔴 news🟢 digest🟢 ab🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `ETON` | 17 | $61.25 | $2.04 | — | $3,883.71 | — | rank by macd_hist; rank macd_hist; list flatten; ret5=+30.3; leftover $1065.77 | join🟢 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `DNTH` | 11 | $91.87 | $2.02 | — | $2,871.12 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; ret5=+11.4; leftover $1065.77 | join🟡 sector🟡 gen🔴 news🟡 digest🔴 ab🔴 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `ASND` | 3 | $267.40 | $2.00 | — | $2,066.92 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; ret5=+5.4; leftover $1065.77 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `CRWV` | 19 | $56.01 | $2.05 | — | $1,000.68 | — | rank by macd_hist; rank macd_hist; list yday_gainer,yday_mover; ret5=+29.6; leftover $1065.77 | join🔴 sector🔴 gen🔴 news🟡 digest🟢 ab🟡 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,000.68 | ▼ close $8,485.77 vs 09:30 $8,530.25 (session -24.29) | 16:00 close · cash $1,000.68 · equity $8,485.77 vs 09:30 $8,530.25 (-44.48; session marks -24.29) · 8 name(s) marked open→close (per-name table). APP×2 09:30 $394.88 → close $409.10 +28.44; CEG×3 09:30 $284.97 → close $280.20 -14.31; ATI×5 09:30 $194.18 → close $183.09 -55.45; CBRS×9 09:30 $108.40 → close $108.72 +2.88; ETON×17 09:30 $61.25 → close $63.93 +45.56; DNTH×11 09:30 $91.87 → close $91.81 -0.66; ASND×3 09:30 $267.40 → close $275.39 +23.97; CRWV×19 09:30 $56.01 → close $53.13 -54.72 | — |
 
 ## Not taken
 

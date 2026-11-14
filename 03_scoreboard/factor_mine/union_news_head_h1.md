@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · prior-export headline🟢 only
 
-Cash book **-56.84%** ($4,316) · signal-only (no cash/fees) was +13.09%. Starts YES **0/30**. Fills 342 · skips 65 · realized $-814.48.
+Cash book **-56.58%** ($4,342) · signal-only (no cash/fees) was +13.09%. Starts YES **0/30**. Fills 350 · skips 65 · realized $-814.48.
 
 ## How this sleeve decides (like you are 10)
 
@@ -545,6 +545,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-12 09:30 ET | **SELL** | `PFGC` | 4 | $111.88 | $2.02 | $+2.54 | $3,794.76 | ▲ +2.54 after sell → book $4,317.77; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-12 09:30 ET | **SELL** | `RSKD` | 51 | $10.26 | $2.16 | $-16.80 | $4,315.61 | ▼ -16.80 after sell → book $4,315.61; vs 09:30 mark -2.16 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $4,315.61 | ▲ close $4,315.61 vs 09:30 $4,332.36 (session +0.00) | 16:00 close · cash $4,315.61 · no lots left · equity $4,315.61. | — |
+| 2026-11-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $4,315.61 | ▲ 09:30 equity $4,315.61 vs yday $4,315.61 (+0.00) | 09:30 open · cash $4,315.61 · no holdings · equity $4,315.61 vs prior close $4,315.61 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-13 09:30 ET | **BUY** | `DVN` | 11 | $46.76 | $2.02 | — | $3,799.23 | — | prior-export headline🟢 only; gate headline=good; rank cond; list flatten; 🔵; ret5=+7.8; leftover $539.45 | join🟢 sector🔴 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟢 |
+| 2026-11-13 09:30 ET | **BUY** | `ETON` | 8 | $61.25 | $2.01 | — | $3,307.21 | — | prior-export headline🟢 only; gate headline=good; rank cond; list flatten; ret5=+30.3; leftover $539.45 | join🟢 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `PLX` | 183 | $2.94 | $2.54 | — | $2,766.65 | — | prior-export headline🟢 only; gate headline=good; rank cond; list ohlc_hot; ret5=+17.9; leftover $539.45 | join🟢 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `BGS` | 163 | $3.29 | $2.48 | — | $2,227.90 | — | prior-export headline🟢 only; gate headline=good; rank cond; list yday_gainer,yday_mover; 🔵; ret5=+35.6; leftover $539.45 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🟡 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `AZTA` | 12 | $44.26 | $2.03 | — | $1,694.76 | — | prior-export headline🟢 only; gate headline=good; rank cond; list yday_gainer,yday_mover; 🔵; ret5=+17.3; leftover $539.45 | join🔴 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `REZI` | 25 | $21.52 | $2.06 | — | $1,154.69 | — | prior-export headline🟢 only; gate headline=good; rank cond; list probable,yday_gainer,yday_mover; 🔵; ret5=+9.5; leftover $539.45 | join🔴 sector🟢 gen🔴 news🟢 digest🟡 judge🔴 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `BKH` | 6 | $87.83 | $2.01 | — | $625.71 | — | prior-export headline🟢 only; gate headline=good; rank cond; list ohlc_hot; ret5=+3.4; leftover $539.45 | join🟢 sector🟡 gen🔴 news🟢 digest🟡 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `CAPR` | 52 | $10.21 | $2.15 | — | $92.64 | — | prior-export headline🟢 only; gate headline=good; rank cond; list yday_gainer,yday_mover; 🔵; ret5=+19.1; leftover $539.45 | join🔴 sector🟡 gen🔴 news🟢 digest🔴 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $92.64 | ▲ close $4,341.67 vs 09:30 $4,315.61 (session +43.36) | 16:00 close · cash $92.64 · equity $4,341.67 vs 09:30 $4,315.61 (+26.06; session marks +43.36) · 8 name(s) marked open→close (per-name table). DVN×11 09:30 $46.76 → close $46.58 -1.98; ETON×8 09:30 $61.25 → close $63.93 +21.44; PLX×183 09:30 $2.94 → close $3.05 +20.13; BGS×163 09:30 $3.29 → close $3.50 +34.23; AZTA×12 09:30 $44.26 → close $45.65 +16.68; REZI×25 09:30 $21.52 → close $21.32 -5.00; BKH×6 09:30 $87.83 → close $86.70 -6.78; CAPR×52 09:30 $10.21 → close $9.53 -35.36 | — |
 
 ## Not taken
 

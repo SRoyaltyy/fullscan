@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ rsi_os, no 🚨
 
-Cash book **-37.63%** ($6,237) · signal-only (no cash/fees) was -42.97%. Starts YES **6/30**. Fills 191 · skips 88 · realized $-2389.72.
+Cash book **-36.50%** ($6,350) · signal-only (no cash/fees) was -42.97%. Starts YES **6/30**. Fills 201 · skips 88 · realized $-2389.72.
 
 ## How this sleeve decides (like you are 10)
 
@@ -393,6 +393,18 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-12 09:30 ET | **SELL** | `TDUP` | 118 | $1.47 | $2.12 | $+16.05 | $1,169.30 | ▲ +16.05 after sell → book $6,336.74; vs 09:30 mark -2.12 | dropped from list after 3 sess (min 3) | join🔴 sector🟢 gen🔴 news🟡 digest🟡 ab🟢 peer🔴 heat🔴 vol🟡 buy🟡 |
 | 2026-11-12 09:30 ET | **SELL** | `VCYT` | 6 | $24.60 | $1.51 | $-1.80 | $1,315.39 | ▼ -1.80 after sell → book $6,335.23; vs 09:30 mark -1.51 | dropped from list after 3 sess (min 3) | — |
 | 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,315.39 | ▼ close $6,237.27 vs 09:30 $6,351.09 (session -97.96) | 16:00 close · cash $1,315.39 · equity $6,237.27 vs 09:30 $6,351.09 (-113.82; session marks -97.96) · 9 name(s) marked open→close (per-name table). AUTL×486 09:30 $1.21 → close $1.19 -9.72; BW×154 09:30 $4.71 → close $4.86 +23.10; DJT×147 09:30 $5.01 → close $4.97 -5.88; FRNM×56 09:30 $11.33 → close $10.61 -40.32; KURA×75 09:30 $7.60 → close $7.43 -12.75; PDYN×157 09:30 $3.35 → close $3.24 -17.27; SB×80 09:30 $7.90 → close $8.11 +16.80; SOC×1 09:30 $0.74 → close $0.62 -0.12; STLN×148 09:30 $4.10 → close $3.75 -51.80 | — |
+| 2026-11-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $1,315.39 | ▲ 09:30 equity $6,258.97 vs yday $6,237.27 (+21.70) | 09:30 open · cash $1,315.39 (unchanged overnight, no fees) · equity $6,258.97 vs prior close $6,237.27 (+21.70) · 9 name(s) re-marked at the open (per-name table). AUTL×486 yday $1.19 → 09:30 $1.20 +4.86; BW×154 yday $4.86 → 09:30 $4.95 +13.86; DJT×147 yday $4.97 → 09:30 $4.97 +0.00; FRNM×56 yday $10.61 → 09:30 $10.50 -6.16; KURA×75 yday $7.43 → 09:30 $7.50 +5.25; PDYN×157 yday $3.24 → 09:30 $3.25 +1.57; SB×80 yday $8.11 → 09:30 $8.12 +0.80; SOC×1 yday $0.62 → 09:30 $0.66 +0.04; STLN×148 yday $3.75 → 09:30 $3.76 +1.48 | — |
+| 2026-11-13 09:30 ET | **SELL** | `AUTL` | 486 | $1.20 | $6.36 | $-17.49 | $1,892.23 | ▼ -17.49 after sell → book $6,252.61; vs 09:30 mark -6.36 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-13 09:30 ET | **SELL** | `BW` | 154 | $4.95 | $2.49 | $+172.93 | $2,652.04 | ▲ +172.93 after sell → book $6,250.12; vs 09:30 mark -2.49 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-13 09:30 ET | **SELL** | `DJT` | 147 | $4.97 | $2.47 | $+137.69 | $3,380.17 | ▲ +137.69 after sell → book $6,247.65; vs 09:30 mark -2.47 | dropped from list after 3 sess (min 3) | join🔴 sector🟡 gen🔴 news🔴 digest🔴 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **SELL** | `FRNM` | 56 | $10.50 | $2.18 | $-2.66 | $3,965.99 | ▼ -2.66 after sell → book $6,245.47; vs 09:30 mark -2.18 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-13 09:30 ET | **SELL** | `KURA` | 75 | $7.50 | $2.24 | $-10.45 | $4,526.25 | ▼ -10.45 after sell → book $6,243.24; vs 09:30 mark -2.23 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-13 09:30 ET | **SELL** | `PDYN` | 157 | $3.25 | $2.50 | $-81.89 | $5,034.00 | ▼ -81.89 after sell → book $6,240.74; vs 09:30 mark -2.50 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-13 09:30 ET | **SELL** | `SB` | 80 | $8.12 | $2.25 | $+58.72 | $5,681.35 | ▲ +58.72 after sell → book $6,238.49; vs 09:30 mark -2.25 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-13 09:30 ET | **SELL** | `STLN` | 148 | $3.76 | $2.47 | $-35.98 | $6,235.36 | ▼ -35.98 after sell → book $6,236.02; vs 09:30 mark -2.47 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-13 09:30 ET | **BUY** | `ALNY` | 19 | $159.17 | $2.05 | — | $3,209.09 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list flatten; 🔵; ret5=-0.0; leftover $3117.68 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `ARWR` | 65 | $47.68 | $2.19 | — | $107.70 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list earn_react; ret5=-17.9; leftover $3117.68 | join🔴 sector🟡 gen🔴 news🟡 digest🔴 ab🔴 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $107.70 | ▲ close $6,349.89 vs 09:30 $6,258.97 (session +118.10) | 16:00 close · cash $107.70 · equity $6,349.89 vs 09:30 $6,258.97 (+90.92; session marks +118.10) · 3 name(s) marked open→close (per-name table). SOC×1 09:30 $0.66 → close $0.73 +0.07; ALNY×19 09:30 $159.17 → close $165.04 +111.53; ARWR×65 09:30 $47.68 → close $47.78 +6.50 | — |
 
 ## Not taken
 

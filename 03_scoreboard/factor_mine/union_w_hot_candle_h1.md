@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `w_hot_candle` · size `leftover` · sell `list` · S-boost `none` · rank by w_hot_candle
 
-Cash book **+17.02%** ($11,702) · signal-only (no cash/fees) was +36.45%. Starts YES **29/30**. Fills 572 · skips 97 · realized $+14.68.
+Cash book **+15.63%** ($11,563) · signal-only (no cash/fees) was +36.45%. Starts YES **29/30**. Fills 581 · skips 97 · realized $+14.68.
 
 ## How this sleeve decides (like you are 10)
 
@@ -773,6 +773,17 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-12 09:30 ET | **SELL** | `LOAR` | 19 | $78.31 | $2.07 | $-27.30 | $8,807.08 | ▼ -27.30 after sell → book $11,732.79; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-12 09:30 ET | **SELL** | `TLS` | 193 | $7.64 | $2.61 | $-36.06 | $10,278.99 | ▼ -36.06 after sell → book $11,730.18; vs 09:30 mark -2.61 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,278.99 | ▼ close $11,701.71 vs 09:30 $11,771.81 (session -28.47) | 16:00 close · cash $10,278.99 · equity $11,701.71 vs 09:30 $11,771.81 (-70.10; session marks -28.47) · 1 name(s) marked open→close (per-name table). FWONK×13 09:30 $111.63 → close $109.44 -28.47 | — |
+| 2026-11-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,278.99 | ▲ 09:30 equity $11,706.26 vs yday $11,701.71 (+4.55) | 09:30 open · cash $10,278.99 (unchanged overnight, no fees) · equity $11,706.26 vs prior close $11,701.71 (+4.55) · 1 name(s) re-marked at the open (per-name table). FWONK×13 yday $109.44 → 09:30 $109.79 +4.55 | — |
+| 2026-11-13 09:30 ET | **SELL** | `FWONK` | 13 | $109.79 | $2.05 | $+10.87 | $11,704.21 | ▲ +10.87 after sell → book $11,704.21; vs 09:30 mark -2.05 | dropped from list after 2 sess (min 1) | — |
+| 2026-11-13 09:30 ET | **BUY** | `NEOV` | 444 | $3.29 | $5.73 | — | $10,237.72 | — | rank by w_hot_candle; rank w_hot_candle; list earn_react; 🔵; ret5=+35.1; leftover $1463.03 | join🔴 sector🟢 gen🔴 news🟡 digest🟡 judge🔴 ab🔴 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `MBGL` | 63 | $23.17 | $2.18 | — | $8,775.83 | — | rank by w_hot_candle; rank w_hot_candle; list ohlc_hot; ret5=+16.5; leftover $1463.03 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟡 heat🟢 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `BGS` | 444 | $3.29 | $5.73 | — | $7,309.35 | — | rank by w_hot_candle; rank w_hot_candle; list yday_gainer,yday_mover; 🔵; ret5=+35.6; leftover $1463.03 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🟡 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `APP` | 3 | $394.88 | $2.00 | — | $6,122.71 | — | rank by w_hot_candle; rank w_hot_candle; list ohlc_hot; ret5=+10.6; leftover $1463.03 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `CEG` | 5 | $284.97 | $2.00 | — | $4,695.85 | — | rank by w_hot_candle; rank w_hot_candle; list ohlc_hot; 🔵; ret5=+17.8; leftover $1463.03 | join🟢 sector🟡 gen🔴 news🟢 digest🟡 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `BKH` | 16 | $87.83 | $2.04 | — | $3,288.53 | — | rank by w_hot_candle; rank w_hot_candle; list ohlc_hot; ret5=+3.4; leftover $1463.03 | join🟢 sector🟡 gen🔴 news🟢 digest🟡 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `TW` | 11 | $132.44 | $2.02 | — | $1,829.67 | — | rank by w_hot_candle; rank w_hot_candle; list ohlc_hot; ret5=+3.2; leftover $1463.03 | join🟢 sector🔴 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `PGNY` | 39 | $36.74 | $2.11 | — | $394.70 | — | rank by w_hot_candle; rank w_hot_candle; list ohlc_hot; ret5=+6.4; leftover $1463.03 | join🟢 sector🟡 gen🔴 news🔴 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $394.70 | ▼ close $11,562.96 vs 09:30 $11,706.26 (session -117.44) | 16:00 close · cash $394.70 · equity $11,562.96 vs 09:30 $11,706.26 (-143.30; session marks -117.44) · 8 name(s) marked open→close (per-name table). NEOV×444 09:30 $3.29 → close $2.84 -199.80; MBGL×63 09:30 $23.17 → close $23.28 +6.93; BGS×444 09:30 $3.29 → close $3.50 +93.24; APP×3 09:30 $394.88 → close $409.10 +42.66; CEG×5 09:30 $284.97 → close $280.20 -23.85; BKH×16 09:30 $87.83 → close $86.70 -18.08; TW×11 09:30 $132.44 → close $132.74 +3.30; PGNY×39 09:30 $36.74 → close $36.18 -21.84 | — |
 
 ## Not taken
 

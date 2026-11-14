@@ -361,6 +361,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-12 09:30 ET | **SELL** | `LINC` | 50 | $23.30 | $2.16 | $-5.30 | $6,823.78 | ▼ -5.30 after sell → book $7,920.12; vs 09:30 mark -2.16 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-12 09:30 ET | **SELL** | `LOAR` | 14 | $78.31 | $2.05 | $-21.16 | $7,918.07 | ▼ -21.16 after sell → book $7,918.07; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,918.07 | ▲ close $7,918.07 vs 09:30 $7,932.79 (session +0.00) | 16:00 close · cash $7,918.07 · no lots left · equity $7,918.07. | — |
+| 2026-11-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,918.07 | ▲ 09:30 equity $7,918.07 vs yday $7,918.07 (+0.00) | 09:30 open · cash $7,918.07 · no holdings · equity $7,918.07 vs prior close $7,918.07 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,918.07 | ▲ close $7,918.07 vs 09:30 $7,918.07 (session +0.00) | 16:00 close · cash $7,918.07 · no lots left · equity $7,918.07. | — |
 
 ## Not taken
 

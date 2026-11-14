@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · Clock-B #6 stock holds while sector camera is red
 
-Cash book **-17.47%** ($8,253) · signal-only (no cash/fees) was -2.27%. Starts YES **25/30**. Fills 446 · skips 96 · realized $+387.41.
+Cash book **-20.43%** ($7,957) · signal-only (no cash/fees) was -2.27%. Starts YES **25/30**. Fills 455 · skips 96 · realized $+387.41.
 
 ## How this sleeve decides (like you are 10)
 
@@ -650,6 +650,17 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-12 09:30 ET | **SELL** | `XENE` | 25 | $42.05 | $2.08 | $+12.10 | $6,171.57 | ▲ +12.10 after sell → book $8,263.95; vs 09:30 mark -2.09 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-12 09:30 ET | **SELL** | `ZURA` | 746 | $1.41 | $9.76 | $-4.46 | $7,213.68 | ▼ -4.46 after sell → book $8,254.20; vs 09:30 mark -9.75 | dropped from list after 1 sess (min 1) | join🟡 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,213.68 | ▼ close $8,253.42 vs 09:30 $8,276.46 (session -0.78) | 16:00 close · cash $7,213.68 · equity $8,253.42 vs 09:30 $8,276.46 (-23.04; session marks -0.78) · 1 name(s) marked open→close (per-name table). TK×78 09:30 $13.34 → close $13.33 -0.78 | — |
+| 2026-11-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,213.68 | ▲ 09:30 equity $8,269.02 vs yday $8,253.42 (+15.60) | 09:30 open · cash $7,213.68 (unchanged overnight, no fees) · equity $8,269.02 vs prior close $8,253.42 (+15.60) · 1 name(s) re-marked at the open (per-name table). TK×78 yday $13.33 → 09:30 $13.53 +15.60 | — |
+| 2026-11-13 09:30 ET | **SELL** | `TK` | 78 | $13.53 | $2.25 | $+22.83 | $8,266.77 | ▲ +22.83 after sell → book $8,266.77; vs 09:30 mark -2.25 | dropped from list after 2 sess (min 1) | — |
+| 2026-11-13 09:30 ET | **BUY** | `DVN` | 22 | $46.76 | $2.06 | — | $7,236.00 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list flatten; 🔵; ret5=+7.8; leftover $1033.35 | join🟢 sector🔴 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟢 |
+| 2026-11-13 09:30 ET | **BUY** | `NBIS` | 8 | $123.52 | $2.01 | — | $6,245.82 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list probable,yday_gainer; ret5=+6.9; leftover $1033.35 | join🟡 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-13 09:30 ET | **BUY** | `RXT` | 343 | $3.01 | $4.42 | — | $5,208.97 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list yday_gainer; ret5=+26.5; leftover $1033.35 | join🔴 sector🔴 gen🔴 news🔴 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `MX` | 370 | $2.79 | $4.77 | — | $4,171.90 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list yday_gainer,yday_mover; ret5=+37.6; leftover $1033.35 | join🟡 sector🔴 gen🔴 news🔴 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `MBGL` | 44 | $23.17 | $2.12 | — | $3,150.29 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list ohlc_hot; ret5=+16.5; leftover $1033.35 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟡 heat🟢 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `CRWV` | 18 | $56.01 | $2.04 | — | $2,140.07 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list yday_gainer,yday_mover; ret5=+29.6; leftover $1033.35 | join🔴 sector🔴 gen🔴 news🟡 digest🟢 ab🟡 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `AKR` | 50 | $20.27 | $2.14 | — | $1,124.43 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list ohlc_hot; ret5=+2.8; leftover $1033.35 | join🔴 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `AXTI` | 23 | $43.36 | $2.06 | — | $125.09 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list yday_gainer,yday_mover; ret5=+18.6; leftover $1033.35 | join🟡 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $125.09 | ▼ close $7,956.93 vs 09:30 $8,269.02 (session -288.21) | 16:00 close · cash $125.09 · equity $7,956.93 vs 09:30 $8,269.02 (-312.09; session marks -288.21) · 8 name(s) marked open→close (per-name table). DVN×22 09:30 $46.76 → close $46.58 -3.96; NBIS×8 09:30 $123.52 → close $115.88 -61.12; RXT×343 09:30 $3.01 → close $2.92 -30.87; MX×370 09:30 $2.79 → close $2.50 -107.30; MBGL×44 09:30 $23.17 → close $23.28 +4.84; CRWV×18 09:30 $56.01 → close $53.13 -51.84; AKR×50 09:30 $20.27 → close $20.21 -3.00; AXTI×23 09:30 $43.36 → close $41.84 -34.96 | — |
 
 ## Not taken
 

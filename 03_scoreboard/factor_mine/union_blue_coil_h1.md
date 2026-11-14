@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-17.98%** ($8,202) · signal-only (no cash/fees) was -23.64%. Starts YES **0/30**. Fills 530 · skips 79 · realized $-1931.95.
+Cash book **-18.58%** ($8,142) · signal-only (no cash/fees) was -23.64%. Starts YES **0/30**. Fills 538 · skips 79 · realized $-1931.95.
 
 ## How this sleeve decides (like you are 10)
 
@@ -734,6 +734,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-12 09:30 ET | **SELL** | `QMCO` | 61 | $15.83 | $2.19 | $-107.40 | $7,133.09 | ▼ -107.40 after sell → book $8,217.20; vs 09:30 mark -2.19 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-12 09:30 ET | **SELL** | `SOC` | 1466 | $0.74 | $15.49 | $-16.81 | $8,201.71 | ▼ -16.81 after sell → book $8,201.71; vs 09:30 mark -15.49 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,201.71 | ▲ close $8,201.71 vs 09:30 $8,232.28 (session +0.00) | 16:00 close · cash $8,201.71 · no lots left · equity $8,201.71. | — |
+| 2026-11-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,201.71 | ▲ 09:30 equity $8,201.71 vs yday $8,201.71 (+0.00) | 09:30 open · cash $8,201.71 · no holdings · equity $8,201.71 vs prior close $8,201.71 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-13 09:30 ET | **BUY** | `DVN` | 21 | $46.76 | $2.05 | — | $7,217.70 | — | combo gate; gate blue=True,ret_5_max=10.0; list flatten; 🔵; ret5=+7.8; leftover $1025.21 | join🟢 sector🔴 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟢 |
+| 2026-11-13 09:30 ET | **BUY** | `ALNY` | 6 | $159.17 | $2.01 | — | $6,260.67 | — | combo gate; gate blue=True,ret_5_max=10.0; list flatten; 🔵; ret5=-0.0; leftover $1025.21 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `REZI` | 47 | $21.52 | $2.13 | — | $5,247.10 | — | combo gate; gate blue=True,ret_5_max=10.0; list probable,yday_gainer,yday_mover; 🔵; ret5=+9.5; leftover $1025.21 | join🔴 sector🟢 gen🔴 news🟢 digest🟡 judge🔴 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `BBOT` | 432 | $2.37 | $5.57 | — | $4,217.69 | — | combo gate; gate blue=True,ret_5_max=10.0; list probable,yday_gainer; 🔵; ret5=+8.3; leftover $1025.21 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `NCMI` | 599 | $1.71 | $7.73 | — | $3,185.67 | — | combo gate; gate blue=True,ret_5_max=10.0; list probable; 🔵; ret5=+4.9; leftover $1025.21 | join🔴 sector🟡 gen🔴 news🟢 digest🔴 ab🔴 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `TEVA` | 23 | $43.91 | $2.06 | — | $2,173.68 | — | combo gate; gate blue=True,ret_5_max=10.0; list ohlc_hot; 🔵; ret5=+4.5; leftover $1025.21 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `GOOGL` | 3 | $302.98 | $2.00 | — | $1,262.74 | — | combo gate; gate blue=True,ret_5_max=10.0; list ohlc_hot; 🔵; ret5=+5.7; leftover $1025.21 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🔴 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `ANDG` | 16 | $62.82 | $2.04 | — | $255.58 | — | combo gate; gate blue=True,ret_5_max=10.0; list earn_react; 🔵; ret5=-1.3; leftover $1025.21 | join🟡 sector🟢 gen🔴 news🟢 digest🟢 ab🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $255.58 | ▼ close $8,142.42 vs 09:30 $8,201.71 (session -33.70) | 16:00 close · cash $255.58 · equity $8,142.42 vs 09:30 $8,201.71 (-59.29; session marks -33.70) · 8 name(s) marked open→close (per-name table). DVN×21 09:30 $46.76 → close $46.58 -3.78; ALNY×6 09:30 $159.17 → close $165.04 +35.22; REZI×47 09:30 $21.52 → close $21.32 -9.40; BBOT×432 09:30 $2.37 → close $2.14 -99.36; NCMI×599 09:30 $1.71 → close $1.87 +95.84; TEVA×23 09:30 $43.91 → close $44.50 +13.57; GOOGL×3 09:30 $302.98 → close $295.77 -21.63; ANDG×16 09:30 $62.82 → close $60.06 -44.16 | — |
 
 ## Not taken
 

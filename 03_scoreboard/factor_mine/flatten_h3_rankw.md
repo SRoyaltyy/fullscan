@@ -6,7 +6,7 @@ Buys the flatten **wish-list** even on io/HOLD mornings — live `flatten_robust
 
 Side **long** · universe `flatten` · top 8 · rank `list` · size `rank_w` · sell `list` · S-boost `none` · rank-weighted leftover
 
-Cash book **-26.02%** ($7,398) · signal-only (no cash/fees) was -10.41%. Starts YES **1/30**. Fills 291 · skips 213 · realized $-994.96.
+Cash book **-25.13%** ($7,487) · signal-only (no cash/fees) was -10.41%. Starts YES **1/30**. Fills 297 · skips 213 · realized $-994.96.
 
 ## How this sleeve decides (like you are 10)
 
@@ -489,6 +489,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-12 09:30 ET | **SELL** | `TMDX` | 1 | $91.65 | $0.94 | $+1.83 | $362.59 | ▲ +1.83 after sell → book $7,897.26; vs 09:30 mark -0.93 | dropped from list after 3 sess (min 3) | — |
 | 2026-11-12 09:30 ET | **SELL** | `ZVRA` | 3 | $11.75 | $0.38 | $-0.44 | $397.45 | ▼ -0.44 after sell → book $7,896.87; vs 09:30 mark -0.39 | dropped from list after 3 sess (min 3) | — |
 | 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $397.45 | ▼ close $7,397.60 vs 09:30 $7,898.79 (session -499.27) | 16:00 close · cash $397.45 · equity $7,397.60 vs 09:30 $7,898.79 (-501.19; session marks -499.27) · 6 name(s) marked open→close (per-name table). ALGN×21 09:30 $171.45 → close $166.97 -94.08; COTY×6 09:30 $4.09 → close $4.03 -0.36; ETON×19 09:30 $68.38 → close $61.45 -131.67; KDP×1 09:30 $36.49 → close $35.42 -1.07; PRCH×1 09:30 $22.08 → close $21.31 -0.77; WRBY×84 09:30 $29.96 → close $26.73 -271.32 | — |
+| 2026-11-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $397.45 | ▼ 09:30 equity $7,392.42 vs yday $7,397.60 (-5.18) | 09:30 open · cash $397.45 (unchanged overnight, no fees) · equity $7,392.42 vs prior close $7,397.60 (-5.18) · 6 name(s) re-marked at the open (per-name table). ALGN×21 yday $166.97 → 09:30 $168.13 +24.36; COTY×6 yday $4.03 → 09:30 $4.03 -0.01; ETON×19 yday $61.45 → 09:30 $61.25 -3.80; KDP×1 yday $35.42 → 09:30 $35.73 +0.31; PRCH×1 yday $21.31 → 09:30 $21.31 +0.00; WRBY×84 yday $26.73 → 09:30 $26.42 -26.04 | — |
+| 2026-11-13 09:30 ET | **SELL** | `ALGN` | 21 | $168.13 | $2.09 | $-81.63 | $3,926.09 | ▼ -81.63 after sell → book $7,390.33; vs 09:30 mark -2.09 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-13 09:30 ET | **SELL** | `WRBY` | 84 | $26.42 | $2.27 | $-292.64 | $6,143.10 | ▼ -292.64 after sell → book $7,388.06; vs 09:30 mark -2.27 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-13 09:30 ET | **BUY** | `DVN` | 52 | $46.76 | $2.15 | — | $3,709.43 | — | rank-weighted leftover; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ret5=+7.8; leftover $2457.24 | join🟢 sector🔴 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟢 |
+| 2026-11-13 09:30 ET | **BUY** | `ALNY` | 11 | $159.17 | $2.02 | — | $1,956.54 | — | rank-weighted leftover; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ret5=-0.0; leftover $1842.93 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `CHRD` | 8 | $148.35 | $2.01 | — | $767.72 | — | rank-weighted leftover; list flatten; wish-list (live io HOLD — not a ticket); ret5=+11.0; leftover $1228.62 | join🟢 sector🔴 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `GRNT` | 95 | $6.42 | $2.27 | — | $155.55 | — | rank-weighted leftover; list flatten; wish-list (live io HOLD — not a ticket); ret5=+39.0; leftover $614.31 | join🟢 sector🔴 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $155.55 | ▲ close $7,487.39 vs 09:30 $7,392.42 (session +107.79) | 16:00 close · cash $155.55 · equity $7,487.39 vs 09:30 $7,392.42 (+94.97; session marks +107.79) · 8 name(s) marked open→close (per-name table). COTY×6 09:30 $4.03 → close $4.04 +0.07; ETON×19 09:30 $61.25 → close $63.93 +50.92; KDP×1 09:30 $35.73 → close $36.34 +0.61; PRCH×1 09:30 $21.31 → close $21.05 -0.26; DVN×52 09:30 $46.76 → close $46.58 -9.36; ALNY×11 09:30 $159.17 → close $165.04 +64.57; CHRD×8 09:30 $148.35 → close $149.93 +12.64; GRNT×95 09:30 $6.42 → close $6.30 -11.40 | — |
 
 ## Not taken
 

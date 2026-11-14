@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ vol_g, no 🚨
 
-Cash book **-8.02%** ($9,198) · signal-only (no cash/fees) was -14.17%. Starts YES **21/30**. Fills 341 · skips 286 · realized $-156.04.
+Cash book **-9.64%** ($9,036) · signal-only (no cash/fees) was -14.17%. Starts YES **21/30**. Fills 347 · skips 286 · realized $-156.04.
 
 ## How this sleeve decides (like you are 10)
 
@@ -543,6 +543,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-12 09:30 ET | **SELL** | `ECX` | 22 | $0.78 | $0.26 | $-0.98 | $115.00 | ▼ -0.98 after sell → book $9,519.08; vs 09:30 mark -0.25 | dropped from list after 3 sess (min 3) | — |
 | 2026-11-12 09:30 ET | **SELL** | `ZVRA` | 1 | $11.75 | $0.14 | $-0.16 | $126.61 | ▼ -0.16 after sell → book $9,518.94; vs 09:30 mark -0.14 | dropped from list after 3 sess (min 3) | — |
 | 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $126.61 | ▼ close $9,198.46 vs 09:30 $9,519.51 (session -320.48) | 16:00 close · cash $126.61 · equity $9,198.46 vs 09:30 $9,519.51 (-321.05; session marks -320.48) · 10 name(s) marked open→close (per-name table). AKBA×2313 09:30 $0.56 → close $0.50 -148.73; CECO×20 09:30 $54.34 → close $56.00 +33.20; CLX×11 09:30 $107.52 → close $108.20 +7.48; COTY×286 09:30 $4.09 → close $4.03 -17.16; HLLY×459 09:30 $2.48 → close $2.36 -55.08; NUAI×6 09:30 $2.27 → close $2.72 +2.70; PCT×557 09:30 $1.96 → close $1.80 -89.12; RC×1214 09:30 $0.93 → close $0.91 -23.19; THM×9 09:30 $1.31 → close $1.29 -0.18; TTD×80 09:30 $15.85 → close $15.47 -30.40 | — |
+| 2026-11-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $126.61 | ▲ 09:30 equity $9,286.63 vs yday $9,198.46 (+88.17) | 09:30 open · cash $126.61 (unchanged overnight, no fees) · equity $9,286.63 vs prior close $9,198.46 (+88.17) · 10 name(s) re-marked at the open (per-name table). AKBA×2313 yday $0.50 → 09:30 $0.49 -18.50; CECO×20 yday $56.00 → 09:30 $55.42 -11.60; CLX×11 yday $108.20 → 09:30 $109.05 +9.35; COTY×286 yday $4.03 → 09:30 $4.03 -0.29; HLLY×459 yday $2.36 → 09:30 $2.49 +59.67; NUAI×6 yday $2.72 → 09:30 $2.94 +1.32; PCT×557 yday $1.80 → 09:30 $1.80 +0.00; RC×1214 yday $0.91 → 09:30 $0.94 +35.33; THM×9 yday $1.29 → 09:30 $1.30 +0.09; TTD×80 yday $15.47 → 09:30 $15.63 +12.80 | — |
+| 2026-11-13 09:30 ET | **SELL** | `NUAI` | 6 | $2.94 | $0.21 | $+4.53 | $144.04 | ▲ +4.53 after sell → book $9,286.42; vs 09:30 mark -0.21 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-13 09:30 ET | **SELL** | `THM` | 9 | $1.30 | $0.16 | $-2.22 | $155.57 | ▼ -2.22 after sell → book $9,286.26; vs 09:30 mark -0.16 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-13 09:30 ET | **BUY** | `MVST` | 82 | $0.24 | $0.44 | — | $135.76 | — | union ∩ vol_g, no 🚨; gate vol=good; list probable,yday_gainer,yday_mover; 🔵; ret5=-59.1; leftover $19.45 | join🔴 sector🟢 gen🔴 news🔴 digest🟢 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `BBOT` | 8 | $2.37 | $0.21 | — | $116.59 | — | union ∩ vol_g, no 🚨; gate vol=good; list probable,yday_gainer; 🔵; ret5=+8.3; leftover $19.45 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `VNET` | 6 | $3.12 | $0.21 | — | $97.66 | — | union ∩ vol_g, no 🚨; gate vol=good; list probable,yday_gainer; ret5=-1.9; leftover $19.45 | join🔴 sector🔴 gen🔴 news🟡 digest🟢 ab🔴 peer🟡 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `BGS` | 5 | $3.29 | $0.18 | — | $81.04 | — | union ∩ vol_g, no 🚨; gate vol=good; list yday_gainer,yday_mover; 🔵; ret5=+35.6; leftover $19.45 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🟡 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $81.04 | ▼ close $9,035.76 vs 09:30 $9,286.63 (session -249.45) | 16:00 close · cash $81.04 · equity $9,035.76 vs 09:30 $9,286.63 (-250.87; session marks -249.45) · 12 name(s) marked open→close (per-name table). AKBA×2313 09:30 $0.49 → close $0.47 -36.55; CECO×20 09:30 $55.42 → close $54.25 -23.40; CLX×11 09:30 $109.05 → close $109.46 +4.51; COTY×286 09:30 $4.03 → close $4.04 +3.15; HLLY×459 09:30 $2.49 → close $2.48 -4.59; PCT×557 09:30 $1.80 → close $1.71 -52.91; RC×1214 09:30 $0.94 → close $0.82 -140.46; TTD×80 09:30 $15.63 → close $15.68 +4.00; MVST×82 09:30 $0.24 → close $0.22 -1.57; BBOT×8 09:30 $2.37 → close $2.14 -1.84; VNET×6 09:30 $3.12 → close $2.98 -0.84; BGS×5 09:30 $3.29 → close $3.50 +1.05 | — |
 
 ## Not taken
 

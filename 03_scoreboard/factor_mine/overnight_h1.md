@@ -410,6 +410,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-12 09:30 ET | **SELL** | `CURI` | 441 | $2.73 | $5.77 | $+112.02 | $7,707.10 | ▲ +112.02 after sell → book $8,708.74; vs 09:30 mark -5.78 | dropped from list after 1 sess (min 1) | join🟡 sector🟡 gen🔴 news🟡 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-11-12 09:30 ET | **SELL** | `ECO` | 12 | $83.47 | $2.05 | $-18.23 | $8,706.70 | ▼ -18.23 after sell → book $8,706.70; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | join🟢 sector🟢 gen🔴 news🟡 digest🔴 judge🔴 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
 | 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,706.70 | ▲ close $8,706.70 vs 09:30 $8,729.00 (session +0.00) | 16:00 close · cash $8,706.70 · no lots left · equity $8,706.70. | — |
+| 2026-11-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,706.70 | ▲ 09:30 equity $8,706.70 vs yday $8,706.70 (+0.00) | 09:30 open · cash $8,706.70 · no holdings · equity $8,706.70 vs prior close $8,706.70 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,706.70 | ▲ close $8,706.70 vs 09:30 $8,706.70 (session +0.00) | 16:00 close · cash $8,706.70 · no lots left · equity $8,706.70. | — |
 
 ## Not taken
 

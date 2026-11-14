@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · merged news🟢, rank +G−R
 
-Cash book **-45.83%** ($5,417) · signal-only (no cash/fees) was +8.94%. Starts YES **0/30**. Fills 422 · skips 79 · realized $-430.09.
+Cash book **-45.27%** ($5,472) · signal-only (no cash/fees) was +8.94%. Starts YES **0/30**. Fills 430 · skips 79 · realized $-430.09.
 
 ## How this sleeve decides (like you are 10)
 
@@ -625,6 +625,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-12 09:30 ET | **SELL** | `LINC` | 29 | $23.30 | $2.10 | $-4.75 | $4,793.02 | ▼ -4.75 after sell → book $5,419.50; vs 09:30 mark -2.09 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-12 09:30 ET | **SELL** | `LOAR` | 8 | $78.31 | $2.03 | $-13.81 | $5,417.46 | ▼ -13.81 after sell → book $5,417.46; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5,417.46 | ▲ close $5,417.46 vs 09:30 $5,433.96 (session +0.00) | 16:00 close · cash $5,417.46 · no lots left · equity $5,417.46. | — |
+| 2026-11-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $5,417.46 | ▲ 09:30 equity $5,417.46 vs yday $5,417.46 (+0.00) | 09:30 open · cash $5,417.46 · no holdings · equity $5,417.46 vs prior close $5,417.46 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-13 09:30 ET | **BUY** | `DVN` | 14 | $46.76 | $2.03 | — | $4,760.79 | — | merged news🟢, rank +G−R; gate news=good; rank cond; list flatten; 🔵; ret5=+7.8; leftover $677.18 | join🟢 sector🔴 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟢 |
+| 2026-11-13 09:30 ET | **BUY** | `ANDG` | 10 | $62.82 | $2.02 | — | $4,130.57 | — | merged news🟢, rank +G−R; gate news=good; rank cond; list earn_react; 🔵; ret5=-1.3; leftover $677.18 | join🟡 sector🟢 gen🔴 news🟢 digest🟢 ab🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `ETON` | 11 | $61.25 | $2.02 | — | $3,454.80 | — | merged news🟢, rank +G−R; gate news=good; rank cond; list flatten; ret5=+30.3; leftover $677.18 | join🟢 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `PLX` | 230 | $2.94 | $2.97 | — | $2,775.63 | — | merged news🟢, rank +G−R; gate news=good; rank cond; list ohlc_hot; ret5=+17.9; leftover $677.18 | join🟢 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `BGS` | 205 | $3.29 | $2.64 | — | $2,098.53 | — | merged news🟢, rank +G−R; gate news=good; rank cond; list yday_gainer,yday_mover; 🔵; ret5=+35.6; leftover $677.18 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🟡 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `CEG` | 2 | $284.97 | $2.00 | — | $1,526.60 | — | merged news🟢, rank +G−R; gate news=good; rank cond; list ohlc_hot; 🔵; ret5=+17.8; leftover $677.18 | join🟢 sector🟡 gen🔴 news🟢 digest🟡 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `AZTA` | 15 | $44.26 | $2.04 | — | $860.66 | — | merged news🟢, rank +G−R; gate news=good; rank cond; list yday_gainer,yday_mover; 🔵; ret5=+17.3; leftover $677.18 | join🔴 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `REZI` | 31 | $21.52 | $2.08 | — | $191.46 | — | merged news🟢, rank +G−R; gate news=good; rank cond; list probable,yday_gainer,yday_mover; 🔵; ret5=+9.5; leftover $677.18 | join🔴 sector🟢 gen🔴 news🟢 digest🟡 judge🔴 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $191.46 | ▲ close $5,472.48 vs 09:30 $5,417.46 (session +72.82) | 16:00 close · cash $191.46 · equity $5,472.48 vs 09:30 $5,417.46 (+55.02; session marks +72.82) · 8 name(s) marked open→close (per-name table). DVN×14 09:30 $46.76 → close $46.58 -2.52; ANDG×10 09:30 $62.82 → close $60.06 -27.60; ETON×11 09:30 $61.25 → close $63.93 +29.48; PLX×230 09:30 $2.94 → close $3.05 +25.30; BGS×205 09:30 $3.29 → close $3.50 +43.05; CEG×2 09:30 $284.97 → close $280.20 -9.54; AZTA×15 09:30 $44.26 → close $45.65 +20.85; REZI×31 09:30 $21.52 → close $21.32 -6.20 | — |
 
 ## Not taken
 

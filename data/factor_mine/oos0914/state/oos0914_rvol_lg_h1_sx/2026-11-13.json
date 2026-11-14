@@ -1,0 +1,147 @@
+{
+  "buys": [
+    {
+      "fill_rule": "open",
+      "price": 23.17,
+      "shares": 124,
+      "side": "BUY",
+      "ticker": "MBGL"
+    },
+    {
+      "fill_rule": "open",
+      "price": 267.4,
+      "shares": 10,
+      "side": "BUY",
+      "ticker": "ASND"
+    },
+    {
+      "fill_rule": "open",
+      "price": 57.94,
+      "shares": 49,
+      "side": "BUY",
+      "ticker": "HTFL"
+    },
+    {
+      "fill_rule": "open",
+      "price": 123.52,
+      "shares": 23,
+      "side": "BUY",
+      "ticker": "NBIS"
+    }
+  ],
+  "cash": 337.18,
+  "date": "2026-11-13",
+  "equity": 11017.58,
+  "fees": 8.578,
+  "fills": [
+    {
+      "fees": 2.362,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 23.17,
+      "shares": 124,
+      "side": "BUY",
+      "ticker": "MBGL"
+    },
+    {
+      "fees": 2.02,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 267.4,
+      "shares": 10,
+      "side": "BUY",
+      "ticker": "ASND"
+    },
+    {
+      "fees": 2.137,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 57.94,
+      "shares": 49,
+      "side": "BUY",
+      "ticker": "HTFL"
+    },
+    {
+      "fees": 2.059,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 123.52,
+      "shares": 23,
+      "side": "BUY",
+      "ticker": "NBIS"
+    }
+  ],
+  "holdings": [
+    "ASND",
+    "HTFL",
+    "MBGL",
+    "NBIS"
+  ],
+  "mean": -4.7981,
+  "n_trades_today": 4,
+  "recipe": "oos0914_rvol_lg_h1_sx",
+  "sells": [],
+  "state": {
+    "after": "2026-11-13",
+    "cash": 337.18,
+    "pos": {
+      "ASND": {
+        "close_px": 275.39,
+        "cost": 2676.02,
+        "entry_date": "2026-11-13",
+        "entry_px": 267.4,
+        "fee_in": 2.02,
+        "last_px": 267.4,
+        "min_hold": 1,
+        "notional": 2674.0,
+        "peak_px": 267.4,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate last_green=True,rvol_min=1.5; rank hot_score; list ohlc_hot; ret5=+5.4; leftover $2893.22",
+        "shares": 10,
+        "ticker": "ASND"
+      },
+      "HTFL": {
+        "close_px": 48.46,
+        "cost": 2841.197,
+        "entry_date": "2026-11-13",
+        "entry_px": 57.94,
+        "fee_in": 2.137,
+        "last_px": 57.94,
+        "min_hold": 1,
+        "notional": 2839.06,
+        "peak_px": 57.94,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate last_green=True,rvol_min=1.5; rank hot_score; list ohlc_hot,earn_react; \ud83d\udd35; ret5=+15.3; leftover $2893.22",
+        "shares": 49,
+        "ticker": "HTFL"
+      },
+      "MBGL": {
+        "close_px": 23.28,
+        "cost": 2875.4420000000005,
+        "entry_date": "2026-11-13",
+        "entry_px": 23.17,
+        "fee_in": 2.362,
+        "last_px": 23.17,
+        "min_hold": 1,
+        "notional": 2873.0800000000004,
+        "peak_px": 23.17,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate last_green=True,rvol_min=1.5; rank hot_score; list ohlc_hot; ret5=+16.5; leftover $2893.22",
+        "shares": 124,
+        "ticker": "MBGL"
+      },
+      "NBIS": {
+        "close_px": 115.88,
+        "cost": 2843.0190000000002,
+        "entry_date": "2026-11-13",
+        "entry_px": 123.52,
+        "fee_in": 2.059,
+        "last_px": 123.52,
+        "min_hold": 1,
+        "notional": 2840.96,
+        "peak_px": 123.52,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate last_green=True,rvol_min=1.5; rank hot_score; list probable,yday_gainer; ret5=+6.9; leftover $2893.22",
+        "shares": 23,
+        "ticker": "NBIS"
+      }
+    },
+    "yday_equity": 11017.58
+  }
+}

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · union looker hold 3: 0 red + yesterday up
 
-Cash book **-9.58%** ($9,042) · signal-only (no cash/fees) was -11.78%. Starts YES **2/30**. Fills 182 · skips 140 · realized $-1313.49.
+Cash book **-9.62%** ($9,038) · signal-only (no cash/fees) was -11.78%. Starts YES **2/30**. Fills 187 · skips 140 · realized $-1313.49.
 
 ## How this sleeve decides (like you are 10)
 
@@ -386,6 +386,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-12 09:30 ET | **SELL** | `XERS` | 72 | $16.60 | $2.23 | $+84.85 | $7,569.97 | ▲ +84.85 after sell → book $9,071.03; vs 09:30 mark -2.23 | dropped from list after 3 sess (min 3) | — |
 | 2026-11-12 09:30 ET | **SELL** | `ZVRA` | 94 | $11.75 | $2.30 | $+4.83 | $8,672.18 | ▲ +4.83 after sell → book $9,068.74; vs 09:30 mark -2.29 | dropped from list after 3 sess (min 3) | — |
 | 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,672.18 | ▼ close $9,041.61 vs 09:30 $9,087.12 (session -27.13) | 16:00 close · cash $8,672.18 · equity $9,041.61 vs 09:30 $9,087.12 (-45.51; session marks -27.13) · 5 name(s) marked open→close (per-name table). ETON×1 09:30 $68.38 → close $61.45 -6.93; EVC×8 09:30 $9.77 → close $9.43 -2.72; FG×3 09:30 $25.06 → close $23.62 -4.32; FOSL×10 09:30 $9.84 → close $8.74 -11.00; SG×6 09:30 $12.74 → close $12.38 -2.16 | — |
+| 2026-11-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,672.18 | ▼ 09:30 equity $9,041.40 vs yday $9,041.61 (-0.21) | 09:30 open · cash $8,672.18 (unchanged overnight, no fees) · equity $9,041.40 vs prior close $9,041.61 (-0.21) · 5 name(s) re-marked at the open (per-name table). ETON×1 yday $61.45 → 09:30 $61.25 -0.20; EVC×8 yday $9.43 → 09:30 $9.56 +1.04; FG×3 yday $23.62 → 09:30 $23.99 +1.11; FOSL×10 yday $8.74 → 09:30 $8.56 -1.80; SG×6 yday $12.38 → 09:30 $12.32 -0.36 | — |
+| 2026-11-13 09:30 ET | **SELL** | `ETON` | 1 | $61.25 | $0.64 | $-3.65 | $8,732.79 | ▼ -3.65 after sell → book $9,040.76; vs 09:30 mark -0.64 | dropped from list after 3 sess (min 3) | join🟢 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **SELL** | `EVC` | 8 | $9.56 | $0.81 | $+0.50 | $8,808.47 | ▲ +0.50 after sell → book $9,039.96; vs 09:30 mark -0.80 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-13 09:30 ET | **SELL** | `FG` | 3 | $23.99 | $0.75 | $-6.20 | $8,879.69 | ▼ -6.20 after sell → book $9,039.21; vs 09:30 mark -0.75 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-13 09:30 ET | **SELL** | `FOSL` | 10 | $8.56 | $0.91 | $+3.26 | $8,964.38 | ▲ +3.26 after sell → book $9,038.30; vs 09:30 mark -0.91 | dropped from list after 3 sess (min 3) | join🔴 sector🟢 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **SELL** | `SG` | 6 | $12.32 | $0.78 | $-9.35 | $9,037.52 | ▼ -9.35 after sell → book $9,037.52; vs 09:30 mark -0.78 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,037.52 | ▲ close $9,037.52 vs 09:30 $9,041.40 (session +0.00) | 16:00 close · cash $9,037.52 · no lots left · equity $9,037.52. | — |
 
 ## Not taken
 

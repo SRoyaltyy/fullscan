@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 4 · rank `list` · size `leftover` · sell `list` · S-boost `none` · −0 red + yday up AND catalyst, top 4 by Score
 
-Cash book **+12.22%** ($11,222) · signal-only (no cash/fees) was +22.84%. Starts YES **9/30**. Fills 80 · skips 141 · realized $+2101.03.
+Cash book **+12.12%** ($11,212) · signal-only (no cash/fees) was +22.84%. Starts YES **9/30**. Fills 80 · skips 141 · realized $+2101.03.
 
 ## How this sleeve decides (like you are 10)
 
@@ -284,6 +284,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1.38 | ▲ close $11,430.34 vs 09:30 $11,125.70 (session +305.15) | 16:00 close · cash $1.38 · equity $11,430.34 vs 09:30 $11,125.70 (+304.64; session marks +305.15) · 2 name(s) marked open→close (per-name table). TGTX×173 09:30 $64.01 → close $65.76 +302.75; GO×4 09:30 $12.52 → close $13.12 +2.40 | — |
 | 2026-11-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $1.38 | ▼ 09:30 equity $11,386.93 vs yday $11,430.34 (-43.41) | 09:30 open · cash $1.38 (unchanged overnight, no fees) · equity $11,386.93 vs prior close $11,430.34 (-43.41) · 2 name(s) re-marked at the open (per-name table). GO×4 yday $13.12 → 09:30 $13.08 -0.16; TGTX×173 yday $65.76 → 09:30 $65.51 -43.25 | — |
 | 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1.38 | ▼ close $11,221.66 vs 09:30 $11,386.93 (session -165.27) | 16:00 close · cash $1.38 · equity $11,221.66 vs 09:30 $11,386.93 (-165.27; session marks -165.27) · 2 name(s) marked open→close (per-name table). GO×4 09:30 $13.08 → close $12.85 -0.92; TGTX×173 09:30 $65.51 → close $64.56 -164.35 | — |
+| 2026-11-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $1.38 | ▼ 09:30 equity $11,193.58 vs yday $11,221.66 (-28.08) | 09:30 open · cash $1.38 (unchanged overnight, no fees) · equity $11,193.58 vs prior close $11,221.66 (-28.08) · 2 name(s) re-marked at the open (per-name table). GO×4 yday $12.85 → 09:30 $12.75 -0.40; TGTX×173 yday $64.56 → 09:30 $64.40 -27.68 | — |
+| 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1.38 | ▲ close $11,212.21 vs 09:30 $11,193.58 (session +18.63) | 16:00 close · cash $1.38 · equity $11,212.21 vs 09:30 $11,193.58 (+18.63; session marks +18.63) · 2 name(s) marked open→close (per-name table). GO×4 09:30 $12.75 → close $12.65 -0.40; TGTX×173 09:30 $64.40 → close $64.51 +19.03 | — |
 
 ## Not taken
 

@@ -4,7 +4,7 @@ Rules for this mine: [IRONCLAD_RULES.md](../IRONCLAD_RULES.md).
 
 The frozen rules are logged experiments, not keepers. `keep_bar_met` is false. 12 train fires against the 30-fire bar. Excel's luck test p=0.87.
 
-`oos0914_break10_h2_sx` made +6.75% on the 44 locked test sessions (2026-09-14 through 2026-11-12) after fees, versus random picks -6.87% and IWM -1.34%. Without its best stock (SDGR) that test window was +2.99%. `oos0914_rvol_lg_h1_sx` made +15.73% on the 44 locked test sessions (2026-09-14 through 2026-11-12) after fees, versus random picks -6.87% and IWM -1.34%. Without its best stock (SDEV) that test window was -4.23%. `oos0914_break10_h1_sx` made -22.80% on the 44 locked test sessions (2026-09-14 through 2026-11-12) after fees, versus random picks -6.87% and IWM -1.34%. Without its best stock (QSI) that test window was -26.47%. `oos0914_zero_candle_h2_sx` made +4.05% on the 44 locked test sessions (2026-09-14 through 2026-11-12) after fees, versus random picks -6.87% and IWM -1.34%. Without its best stock (NAUT) that test window was +1.05%.
+`oos0914_break10_h2_sx` made +4.88% on the 45 locked test sessions (2026-09-14 through 2026-11-13) after fees, versus random picks -6.87% and IWM -1.34%. Without its best stock (SDGR) that test window was +1.12%. `oos0914_rvol_lg_h1_sx` made +10.18% on the 45 locked test sessions (2026-09-14 through 2026-11-13) after fees, versus random picks -6.87% and IWM -1.34%. Without its best stock (SDEV) that test window was -8.90%. `oos0914_break10_h1_sx` made -24.09% on the 45 locked test sessions (2026-09-14 through 2026-11-13) after fees, versus random picks -6.87% and IWM -1.34%. Without its best stock (QSI) that test window was -27.76%. `oos0914_zero_candle_h2_sx` made +3.64% on the 45 locked test sessions (2026-09-14 through 2026-11-13) after fees, versus random picks -6.87% and IWM -1.34%. Without its best stock (NAUT) that test window was +0.65%.
 
 ## Train
 
@@ -108,6 +108,7 @@ Logged experiment, not a keeper. `keep_bar_met` is false.
 | 2026-11-10 | CAPR,EVC,FLY,INDI | APP,CRCT,ENOV,MGNI | 33.4953 | 2.94 | 9924.76 | -1.78% | -1.52% |
 | 2026-11-11 | TLS,TTD,ATER | FUN,ONT,XERS | 7.6133 | 12.77 | 11058.23 | +11.42% | +10.95% |
 | 2026-11-12 | — | CAPR,EVC,FLY,INDI | 23.8109 | 10339.8 | 10675.12 | -3.46% | -3.18% |
+| 2026-11-13 | MBGL,CEG,ATI,DNTH | ATER,TLS,TTD | 12.3428 | 245.96 | 10487.62 | -1.76% | -1.64% |
 
 ### `oos0914_rvol_lg_h1_sx`
 
@@ -159,6 +160,7 @@ Logged experiment, not a keeper. `keep_bar_met` is false.
 | 2026-11-10 | EVC,FLY,INDI,NEOV | APP,FUN,ONT,XERS | 46.8077 | 2.81 | 11583.42 | +2.30% | +2.35% |
 | 2026-11-11 | TLS,INDI,TTD,CLX | EVC,FLY,INDI,NEOV | 62.176 | 2.2 | 11811.25 | +1.97% | +2.15% |
 | 2026-11-12 | — | CLX,INDI,TLS,TTD | 25.7389 | 11572.86 | 11572.86 | -2.02% | -1.71% |
+| 2026-11-13 | MBGL,ASND,HTFL,NBIS | — | 8.578 | 337.18 | 11017.58 | -4.80% | -4.37% |
 
 ### `oos0914_break10_h1_sx`
 
@@ -210,6 +212,7 @@ Logged experiment, not a keeper. `keep_bar_met` is false.
 | 2026-11-10 | CAPR,EVC,FLY,INDI | APP,FUN,ONT,XERS | 28.56 | 0.45 | 7744.91 | -1.57% | -1.23% |
 | 2026-11-11 | TLS,INDI,TTD,ATER | CAPR,EVC,FLY,INDI | 62.2821 | 0.65 | 7973.53 | +2.95% | +3.26% |
 | 2026-11-12 | — | ATER,INDI,TLS,TTD | 42.6525 | 7720.14 | 7720.14 | -3.18% | -2.45% |
+| 2026-11-13 | MBGL,CEG,ATI,DNTH | — | 8.317 | 402.0 | 7591.26 | -1.67% | -1.46% |
 
 ### `oos0914_zero_candle_h2_sx`
 
@@ -261,6 +264,7 @@ Logged experiment, not a keeper. `keep_bar_met` is false.
 | 2026-11-10 | — | — | 0 | 28.56 | 10343.65 | +0.67% | +0.66% |
 | 2026-11-11 | BGS,JAN,COTY,CLX | COLD,JAN,PGNY,STGW | 32.802 | 54.53 | 10691.94 | +3.37% | +3.51% |
 | 2026-11-12 | — | — | 0 | 54.53 | 10405.11 | -2.68% | -2.66% |
+| 2026-11-13 | — | BGS,CLX,COTY,JAN | 23.2588 | 10364.33 | 10364.33 | -0.39% | -0.24% |
 
 ## Baselines
 

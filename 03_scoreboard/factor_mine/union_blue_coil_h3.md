@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-28.04%** ($7,196) · signal-only (no cash/fees) was -38.70%. Starts YES **1/30**. Fills 401 · skips 286 · realized $-1292.46.
+Cash book **-29.03%** ($7,097) · signal-only (no cash/fees) was -38.70%. Starts YES **1/30**. Fills 409 · skips 286 · realized $-1292.46.
 
 ## How this sleeve decides (like you are 10)
 
@@ -605,6 +605,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-12 09:30 ET | **SELL** | `ECX` | 44 | $0.78 | $0.50 | $-1.95 | $282.10 | ▼ -1.95 after sell → book $7,166.52; vs 09:30 mark -0.50 | dropped from list after 3 sess (min 3) | — |
 | 2026-11-12 09:30 ET | **SELL** | `WRBY` | 1 | $29.96 | $0.32 | $+3.47 | $311.73 | ▲ +3.47 after sell → book $7,166.20; vs 09:30 mark -0.32 | dropped from list after 3 sess (min 3) | — |
 | 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $311.73 | ▲ close $7,195.82 vs 09:30 $7,167.94 (session +29.61) | 16:00 close · cash $311.73 · equity $7,195.82 vs 09:30 $7,167.94 (+27.88; session marks +29.61) · 12 name(s) marked open→close (per-name table). AMPX×101 09:30 $8.10 → close $8.35 +25.25; ATRO×15 09:30 $58.05 → close $60.31 +33.90; BCSF×1 09:30 $11.26 → close $11.06 -0.20; CECO×15 09:30 $54.34 → close $56.00 +24.90; CRWV×16 09:30 $50.89 → close $56.60 +91.32; EMBJ×10 09:30 $81.56 → close $79.48 -20.80; GO×72 09:30 $13.08 → close $12.85 -16.56; POET×3 09:30 $5.25 → close $5.21 -0.12; QMCO×51 09:30 $15.83 → close $16.63 +40.75; RCAT×3 09:30 $4.12 → close $3.94 -0.56; SOC×1241 09:30 $0.74 → close $0.62 -148.05; THM×11 09:30 $1.31 → close $1.29 -0.22 | — |
+| 2026-11-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $311.73 | ▲ 09:30 equity $7,199.68 vs yday $7,195.82 (+3.86) | 09:30 open · cash $311.73 (unchanged overnight, no fees) · equity $7,199.68 vs prior close $7,195.82 (+3.86) · 12 name(s) re-marked at the open (per-name table). AMPX×101 yday $8.35 → 09:30 $8.30 -5.05; ATRO×15 yday $60.31 → 09:30 $60.50 +2.85; BCSF×1 yday $11.06 → 09:30 $11.14 +0.08; CECO×15 yday $56.00 → 09:30 $55.42 -8.70; CRWV×16 yday $56.60 → 09:30 $56.01 -9.44; EMBJ×10 yday $79.48 → 09:30 $78.34 -11.40; GO×72 yday $12.85 → 09:30 $12.75 -7.20; POET×3 yday $5.21 → 09:30 $5.17 -0.12; QMCO×51 yday $16.63 → 09:30 $16.61 -1.02; RCAT×3 yday $3.94 → 09:30 $3.96 +0.07; SOC×1241 yday $0.62 → 09:30 $0.66 +43.68; THM×11 yday $1.29 → 09:30 $1.30 +0.11 | — |
+| 2026-11-13 09:30 ET | **SELL** | `BCSF` | 1 | $11.14 | $0.13 | $+0.09 | $322.74 | ▲ +0.09 after sell → book $7,199.55; vs 09:30 mark -0.13 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-13 09:30 ET | **SELL** | `POET` | 3 | $5.17 | $0.18 | $-0.06 | $338.06 | ▼ -0.06 after sell → book $7,199.36; vs 09:30 mark -0.19 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-13 09:30 ET | **SELL** | `RCAT` | 3 | $3.96 | $0.15 | $-1.51 | $349.79 | ▼ -1.51 after sell → book $7,199.22; vs 09:30 mark -0.14 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-13 09:30 ET | **SELL** | `THM` | 11 | $1.30 | $0.20 | $-2.71 | $363.90 | ▼ -2.71 after sell → book $7,199.02; vs 09:30 mark -0.20 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-13 09:30 ET | **BUY** | `REZI` | 2 | $21.52 | $0.44 | — | $320.42 | — | combo gate; gate blue=True,ret_5_max=10.0; list probable,yday_gainer,yday_mover; 🔵; ret5=+9.5; leftover $45.49 | join🔴 sector🟢 gen🔴 news🟢 digest🟡 judge🔴 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `BBOT` | 19 | $2.37 | $0.51 | — | $274.88 | — | combo gate; gate blue=True,ret_5_max=10.0; list probable,yday_gainer; 🔵; ret5=+8.3; leftover $45.49 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `NCMI` | 26 | $1.71 | $0.52 | — | $229.90 | — | combo gate; gate blue=True,ret_5_max=10.0; list probable; 🔵; ret5=+4.9; leftover $45.49 | join🔴 sector🟡 gen🔴 news🟢 digest🔴 ab🔴 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `TEVA` | 1 | $43.91 | $0.44 | — | $185.55 | — | combo gate; gate blue=True,ret_5_max=10.0; list ohlc_hot; 🔵; ret5=+4.5; leftover $45.49 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $185.55 | ▼ close $7,097.38 vs 09:30 $7,199.68 (session -99.74) | 16:00 close · cash $185.55 · equity $7,097.38 vs 09:30 $7,199.68 (-102.30; session marks -99.74) · 12 name(s) marked open→close (per-name table). AMPX×101 09:30 $8.30 → close $7.93 -37.37; ATRO×15 09:30 $60.50 → close $58.96 -23.10; CECO×15 09:30 $55.42 → close $54.25 -17.55; CRWV×16 09:30 $56.01 → close $53.13 -46.08; EMBJ×10 09:30 $78.34 → close $78.73 +3.90; GO×72 09:30 $12.75 → close $12.65 -7.20; QMCO×51 09:30 $16.61 → close $15.34 -64.77; SOC×1241 09:30 $0.66 → close $0.73 +92.45; REZI×2 09:30 $21.52 → close $21.32 -0.40; BBOT×19 09:30 $2.37 → close $2.14 -4.37; NCMI×26 09:30 $1.71 → close $1.87 +4.16; TEVA×1 09:30 $43.91 → close $44.50 +0.59 | — |
 
 ## Not taken
 

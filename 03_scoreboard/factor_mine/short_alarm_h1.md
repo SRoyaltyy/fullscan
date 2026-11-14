@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · alarm
 
-Cash book **-4.16%** ($9,584) · signal-only (no cash/fees) was +3.57%. Starts YES **5/30**. Fills 310 · skips 96 · realized $+54.59.
+Cash book **-4.27%** ($9,573) · signal-only (no cash/fees) was +3.57%. Starts YES **5/30**. Fills 318 · skips 96 · realized $+54.59.
 
 ## How this sleeve decides (like you are 10)
 
@@ -510,6 +510,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-12 09:30 ET | **COVER** | `REPL` | 26 | $21.32 | $2.07 | $+46.79 | $10,250.60 | ▲ +46.79 after sell → book $9,586.04; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-12 09:30 ET | **COVER** | `ZJYL` | 142 | $4.68 | $2.42 | $-63.10 | $9,583.62 | ▼ -63.10 after sell → book $9,583.62; vs 09:30 mark -2.42 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,583.62 | ▲ close $9,583.62 vs 09:30 $9,604.13 (session +0.00) | 16:00 close · cash $9,583.62 · no lots left · equity $9,583.62. | — |
+| 2026-11-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,583.62 | ▲ 09:30 equity $9,583.62 vs yday $9,583.62 (+0.00) | 09:30 open · cash $9,583.62 · no holdings · equity $9,583.62 vs prior close $9,583.62 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-13 09:30 ET | **SHORT** | `CHRD` | 4 | $148.35 | $2.04 | — | $10,174.98 | — | alarm; gate alarm=True; list flatten; ret5=+11.0; leftover $598.98 | join🟢 sector🔴 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **SHORT** | `GRNT` | 93 | $6.42 | $2.31 | — | $10,769.73 | — | alarm; gate alarm=True; list flatten; ret5=+39.0; leftover $598.98 | join🟢 sector🔴 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **SHORT** | `XRPN` | 68 | $8.75 | $2.23 | — | $11,362.50 | — | alarm; gate alarm=True; list probable,yday_gainer; ret5=-12.9; leftover $598.98 | join🔴 sector🔴 gen🔴 news🟡 digest🔴 ab🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **SHORT** | `BRUN` | 99 | $6.04 | $2.33 | — | $11,958.13 | — | alarm; gate alarm=True; list probable,yday_gainer; ret5=+6.5; leftover $598.98 | join🔴 sector🔴 gen🔴 news🟡 digest🟢 ab🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **SHORT** | `GEVO` | 322 | $1.86 | $4.23 | — | $12,552.82 | — | alarm; gate alarm=True; list yday_gainer,yday_mover; ret5=+52.5; leftover $598.98 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **SHORT** | `FRMI` | 287 | $2.08 | $3.78 | — | $13,147.43 | — | alarm; gate alarm=True; list yday_gainer,yday_mover; ret5=+34.6; leftover $598.98 | join🔴 sector🔴 gen🔴 news🟡 digest🟢 ab🟡 heat🔴 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **SHORT** | `GPRO` | 880 | $0.68 | $8.80 | — | $13,737.13 | — | alarm; gate alarm=True; list yday_mover; ret5=-22.1; leftover $598.98 | join🔴 sector🔴 gen🔴 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-13 09:30 ET | **SHORT** | `INO` | 415 | $1.44 | $5.45 | — | $14,329.28 | — | alarm; gate alarm=True; list ohlc_hot; ret5=+0.7; leftover $598.98 | join🔴 sector🟡 gen🔴 news🟡 digest🔴 ab🔴 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,329.28 | ▲ close $9,573.30 vs 09:30 $9,583.62 (session +20.85) | 16:00 close · cash $14,329.28 · equity $9,573.30 vs 09:30 $9,583.62 (-10.32; session marks +20.85) · 8 name(s) marked open→close (per-name table). CHRD×4 09:30 $148.35 → close $149.93 -6.32; GRNT×93 09:30 $6.42 → close $6.30 +11.16; XRPN×68 09:30 $8.75 → close $7.85 +61.20; BRUN×99 09:30 $6.04 → close $5.53 +50.49; GEVO×322 09:30 $1.86 → close $1.83 +9.66; FRMI×287 09:30 $2.08 → close $2.61 -150.67; GPRO×880 09:30 $0.68 → close $0.63 +41.18; INO×415 09:30 $1.44 → close $1.43 +4.15 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared union_hot_n4_h1/union_join_vol_green_h1 w=0.5,0.5 net=priority
 
-Cash book **+13.35%** ($11,335) · signal-only (no cash/fees) was —. Starts YES **29/30**. Fills 588 · skips 100 · realized $+1412.04.
+Cash book **+11.29%** ($11,129) · signal-only (no cash/fees) was —. Starts YES **29/30**. Fills 595 · skips 100 · realized $+1412.04.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $10,428.05.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $19.67.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -791,6 +791,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-12 09:30 ET | **SELL** | `TTD` | 90 | $15.85 | $2.29 | $+51.25 | $9,681.14 | ▲ +51.25 after sell → book $11,341.14; vs 09:30 mark -2.28 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | — |
 | 2026-11-12 09:30 ET | **SELL** | `WRBY` | 25 | $29.96 | $2.08 | $-1.40 | $10,428.05 | ▼ -1.40 after sell → book $11,339.05; vs 09:30 mark -2.09 | union_join_vol_green_h1: dropped from list after 2 sess (min 1) | — |
 | 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,428.05 | ▼ close $11,335.05 vs 09:30 $11,385.96 (session -4.00) | 16:00 close · cash $10,428.05 · equity $11,335.05 vs 09:30 $11,385.96 (-50.91; session marks -4.00) · 1 name(s) marked open→close (per-name table). ACAD×50 09:30 $18.22 → close $18.14 -4.00 | — |
+| 2026-11-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,428.05 | ▼ 09:30 equity $11,334.05 vs yday $11,335.05 (-1.00) | 09:30 open · cash $10,428.05 (unchanged overnight, no fees) · equity $11,334.05 vs prior close $11,335.05 (-1.00) | — |
+| 2026-11-13 09:30 ET | **SELL** | `ACAD` | 50 | $18.12 | $2.16 | $-4.80 | $11,331.89 | ▼ -4.80 after sell → book $11,331.89; vs 09:30 mark -2.16 | union_join_vol_green_h1: dropped from list after 2 sess (min 1) | — |
+| 2026-11-13 09:30 ET | **BUY** | `BGS` | 430 | $3.29 | $5.55 | — | $9,911.64 | — | top 4 by hot; rank hot_score; list yday_gainer,yday_mover; 🔵; ret5=+35.6; combo leftover $1416.49; owner union_hot_n4_h1 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🟡 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `NEOV` | 430 | $3.29 | $5.55 | — | $8,491.40 | — | top 4 by hot; rank hot_score; list earn_react; 🔵; ret5=+35.1; combo leftover $1416.49; owner union_hot_n4_h1 | join🔴 sector🟢 gen🔴 news🟡 digest🟡 judge🔴 ab🔴 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `MBGL` | 61 | $23.17 | $2.17 | — | $7,075.85 | — | top 4 by hot; rank hot_score; list ohlc_hot; ret5=+16.5; combo leftover $1416.49; owner union_hot_n4_h1 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟡 heat🟢 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `CAPR` | 138 | $10.21 | $2.40 | — | $5,664.47 | — | top 4 by hot; rank hot_score; list yday_gainer,yday_mover; 🔵; ret5=+19.1; combo leftover $1416.49; owner union_hot_n4_h1 | join🔴 sector🟡 gen🔴 news🟢 digest🔴 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `TEVA` | 64 | $43.91 | $2.18 | — | $2,852.05 | — | combo gate; gate join=good,last_green=True,vol=good; list ohlc_hot; 🔵; ret5=+4.5; combo leftover $2832.23; owner union_join_vol_green_h1 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `SKM` | 81 | $34.94 | $2.23 | — | $19.67 | — | combo gate; gate join=good,last_green=True,vol=good; list ohlc_hot; ret5=+16.0; combo leftover $2832.23; owner union_join_vol_green_h1 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $19.67 | ▼ close $11,129.26 vs 09:30 $11,334.05 (session -182.54) | 16:00 close · cash $19.67 · equity $11,129.26 vs 09:30 $11,334.05 (-204.79; session marks -182.54) · 6 name(s) marked open→close (per-name table). BGS×430 09:30 $3.29 → close $3.50 +90.30; NEOV×430 09:30 $3.29 → close $2.84 -193.50; MBGL×61 09:30 $23.17 → close $23.28 +6.71; CAPR×138 09:30 $10.21 → close $9.53 -93.84; TEVA×64 09:30 $43.91 → close $44.50 +37.76; SKM×81 09:30 $34.94 → close $34.57 -29.97 | — |
 
 ## Not taken
 

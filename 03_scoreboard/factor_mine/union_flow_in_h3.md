@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ flow_in, no 🚨
 
-Cash book **-11.85%** ($8,815) · signal-only (no cash/fees) was +15.53%. Starts YES **3/30**. Fills 115 · skips 105 · realized $-281.48.
+Cash book **-9.31%** ($9,069) · signal-only (no cash/fees) was +15.53%. Starts YES **3/30**. Fills 119 · skips 105 · realized $-281.48.
 
 ## How this sleeve decides (like you are 10)
 
@@ -317,6 +317,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-12 09:30 ET | **SELL** | `FERG` | 11 | $266.24 | $2.06 | $+156.08 | $5,763.62 | ▲ +156.08 after sell → book $8,819.28; vs 09:30 mark -2.06 | dropped from list after 3 sess (min 3) | — |
 | 2026-11-12 09:30 ET | **SELL** | `VCYT` | 119 | $24.60 | $2.39 | $+19.06 | $8,688.63 | ▲ +19.06 after sell → book $8,816.89; vs 09:30 mark -2.39 | dropped from list after 3 sess (min 3) | — |
 | 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,688.63 | ▼ close $8,815.06 vs 09:30 $8,824.51 (session -1.83) | 16:00 close · cash $8,688.63 · equity $8,815.06 vs 09:30 $8,824.51 (-9.45; session marks -1.83) · 3 name(s) marked open→close (per-name table). CLNE×25 09:30 $1.89 → close $1.98 +2.25; NRDS×6 09:30 $7.75 → close $7.31 -2.64; ONON×1 09:30 $34.51 → close $33.07 -1.44 | — |
+| 2026-11-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,688.63 | ▲ 09:30 equity $8,815.12 vs yday $8,815.06 (+0.06) | 09:30 open · cash $8,688.63 (unchanged overnight, no fees) · equity $8,815.12 vs prior close $8,815.06 (+0.06) · 3 name(s) re-marked at the open (per-name table). CLNE×25 yday $1.98 → 09:30 $1.97 -0.25; NRDS×6 yday $7.31 → 09:30 $7.29 -0.12; ONON×1 yday $33.07 → 09:30 $33.50 +0.43 | — |
+| 2026-11-13 09:30 ET | **SELL** | `CLNE` | 25 | $1.97 | $0.59 | $+0.61 | $8,737.29 | ▲ +0.61 after sell → book $8,814.53; vs 09:30 mark -0.59 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-13 09:30 ET | **SELL** | `NRDS` | 6 | $7.29 | $0.48 | $-3.72 | $8,780.56 | ▼ -3.72 after sell → book $8,814.06; vs 09:30 mark -0.47 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-13 09:30 ET | **SELL** | `ONON` | 1 | $33.50 | $0.36 | $-1.93 | $8,813.70 | ▼ -1.93 after sell → book $8,813.70; vs 09:30 mark -0.36 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-13 09:30 ET | **BUY** | `LFTO` | 371 | $23.74 | $4.79 | — | $1.37 | — | union ∩ flow_in, no 🚨; gate flow_in=True; list earn_react; 🔵; ret5=+9.1; leftover $8813.70 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1.37 | ▲ close $9,068.61 vs 09:30 $8,815.12 (session +259.70) | 16:00 close · cash $1.37 · equity $9,068.61 vs 09:30 $8,815.12 (+253.49; session marks +259.70) · 1 name(s) marked open→close (per-name table). LFTO×371 09:30 $23.74 → close $24.44 +259.70 | — |
 
 ## Not taken
 

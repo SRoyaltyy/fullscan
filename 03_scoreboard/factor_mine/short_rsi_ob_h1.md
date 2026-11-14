@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · RSI overbought
 
-Cash book **-1.63%** ($9,837) · signal-only (no cash/fees) was -20.71%. Starts YES **6/30**. Fills 456 · skips 95 · realized $-976.57.
+Cash book **-2.53%** ($9,747) · signal-only (no cash/fees) was -20.71%. Starts YES **6/30**. Fills 464 · skips 95 · realized $-976.57.
 
 ## How this sleeve decides (like you are 10)
 
@@ -656,6 +656,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-12 09:30 ET | **COVER** | `TLS` | 90 | $7.64 | $2.26 | $+9.84 | $10,607.08 | ▲ +9.84 after sell → book $9,839.56; vs 09:30 mark -2.26 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-12 09:30 ET | **COVER** | `ZJYL` | 164 | $4.68 | $2.48 | $-72.26 | $9,837.08 | ▼ -72.26 after sell → book $9,837.08; vs 09:30 mark -2.48 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,837.08 | ▲ close $9,837.08 vs 09:30 $9,861.59 (session +0.00) | 16:00 close · cash $9,837.08 · no lots left · equity $9,837.08. | — |
+| 2026-11-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,837.08 | ▲ 09:30 equity $9,837.08 vs yday $9,837.08 (+0.00) | 09:30 open · cash $9,837.08 · no holdings · equity $9,837.08 vs prior close $9,837.08 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-13 09:30 ET | **SHORT** | `ETON` | 10 | $61.25 | $2.06 | — | $10,447.52 | — | RSI overbought; gate rsi_ob=True; list flatten; ret5=+30.3; leftover $614.82 | join🟢 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **SHORT** | `REZI` | 28 | $21.52 | $2.11 | — | $11,047.97 | — | RSI overbought; gate rsi_ob=True; list probable,yday_gainer,yday_mover; 🔵; ret5=+9.5; leftover $614.82 | join🔴 sector🟢 gen🔴 news🟢 digest🟡 judge🔴 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **SHORT** | `BGS` | 186 | $3.29 | $2.61 | — | $11,657.31 | — | RSI overbought; gate rsi_ob=True; list yday_gainer,yday_mover; 🔵; ret5=+35.6; leftover $614.82 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🟡 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **SHORT** | `GEVO` | 330 | $1.86 | $4.34 | — | $12,266.77 | — | RSI overbought; gate rsi_ob=True; list yday_gainer,yday_mover; ret5=+52.5; leftover $614.82 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **SHORT** | `FOSL` | 71 | $8.56 | $2.24 | — | $12,872.29 | — | RSI overbought; gate rsi_ob=True; list yday_gainer,yday_mover,ohlc_hot; 🔵; ret5=+12.6; leftover $614.82 | join🔴 sector🟢 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **SHORT** | `RSKD` | 66 | $9.31 | $2.23 | — | $13,484.52 | — | RSI overbought; gate rsi_ob=True; list yday_gainer,yday_mover; ret5=+13.4; leftover $614.82 | join🟢 sector🔴 gen🔴 news🔴 digest🟢 ab🟡 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **SHORT** | `AZTA` | 13 | $44.26 | $2.06 | — | $14,057.84 | — | RSI overbought; gate rsi_ob=True; list yday_gainer,yday_mover; 🔵; ret5=+17.3; leftover $614.82 | join🔴 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **SHORT** | `APP` | 1 | $394.88 | $2.02 | — | $14,450.69 | — | RSI overbought; gate rsi_ob=True; list ohlc_hot; ret5=+10.6; leftover $614.82 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,450.69 | ▼ close $9,746.63 vs 09:30 $9,837.08 (session -70.78) | 16:00 close · cash $14,450.69 · equity $9,746.63 vs 09:30 $9,837.08 (-90.45; session marks -70.78) · 8 name(s) marked open→close (per-name table). ETON×10 09:30 $61.25 → close $63.93 -26.80; REZI×28 09:30 $21.52 → close $21.32 +5.60; BGS×186 09:30 $3.29 → close $3.50 -39.06; GEVO×330 09:30 $1.86 → close $1.83 +9.90; FOSL×71 09:30 $8.56 → close $8.43 +9.23; RSKD×66 09:30 $9.31 → close $9.27 +2.64; AZTA×13 09:30 $44.26 → close $45.65 -18.07; APP×1 09:30 $394.88 → close $409.10 -14.22 | — |
 
 ## Not taken
 

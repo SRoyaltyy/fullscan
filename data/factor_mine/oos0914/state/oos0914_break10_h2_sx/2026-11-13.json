@@ -1,0 +1,196 @@
+{
+  "buys": [
+    {
+      "fill_rule": "open",
+      "price": 23.17,
+      "shares": 115,
+      "side": "BUY",
+      "ticker": "MBGL"
+    },
+    {
+      "fill_rule": "open",
+      "price": 284.97,
+      "shares": 9,
+      "side": "BUY",
+      "ticker": "CEG"
+    },
+    {
+      "fill_rule": "open",
+      "price": 194.18,
+      "shares": 13,
+      "side": "BUY",
+      "ticker": "ATI"
+    },
+    {
+      "fill_rule": "open",
+      "price": 91.87,
+      "shares": 29,
+      "side": "BUY",
+      "ticker": "DNTH"
+    }
+  ],
+  "cash": 245.96,
+  "date": "2026-11-13",
+  "equity": 10487.62,
+  "fees": 12.3428,
+  "fills": [
+    {
+      "fees": 1.5274,
+      "fill_rule": "open",
+      "pnl": -11.12,
+      "price": 0.8689,
+      "shares": 128,
+      "side": "SELL",
+      "ticker": "ATER"
+    },
+    {
+      "fees": 1.2223,
+      "fill_rule": "open",
+      "pnl": -3.71,
+      "price": 7.715,
+      "shares": 15,
+      "side": "SELL",
+      "ticker": "TLS"
+    },
+    {
+      "fees": 1.1351,
+      "fill_rule": "open",
+      "pnl": 0.58,
+      "price": 15.63,
+      "shares": 7,
+      "side": "SELL",
+      "ticker": "TTD"
+    },
+    {
+      "fees": 2.335,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 23.17,
+      "shares": 115,
+      "side": "BUY",
+      "ticker": "MBGL"
+    },
+    {
+      "fees": 2.017,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 284.97,
+      "shares": 9,
+      "side": "BUY",
+      "ticker": "CEG"
+    },
+    {
+      "fees": 2.029,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 194.18,
+      "shares": 13,
+      "side": "BUY",
+      "ticker": "ATI"
+    },
+    {
+      "fees": 2.077,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 91.87,
+      "shares": 29,
+      "side": "BUY",
+      "ticker": "DNTH"
+    }
+  ],
+  "holdings": [
+    "ATI",
+    "CEG",
+    "DNTH",
+    "MBGL"
+  ],
+  "mean": -1.7564,
+  "n_trades_today": 7,
+  "recipe": "oos0914_break10_h2_sx",
+  "sells": [
+    {
+      "fill_rule": "open",
+      "price": 0.8689,
+      "shares": 128,
+      "side": "SELL",
+      "ticker": "ATER"
+    },
+    {
+      "fill_rule": "open",
+      "price": 7.715,
+      "shares": 15,
+      "side": "SELL",
+      "ticker": "TLS"
+    },
+    {
+      "fill_rule": "open",
+      "price": 15.63,
+      "shares": 7,
+      "side": "SELL",
+      "ticker": "TTD"
+    }
+  ],
+  "state": {
+    "after": "2026-11-13",
+    "cash": 245.96,
+    "pos": {
+      "ATI": {
+        "close_px": 183.09,
+        "cost": 2526.369,
+        "entry_date": "2026-11-13",
+        "entry_px": 194.18,
+        "fee_in": 2.029,
+        "last_px": 194.18,
+        "min_hold": 2,
+        "notional": 2524.34,
+        "peak_px": 194.18,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list ohlc_hot; ret5=+13.0; leftover $2668.07",
+        "shares": 13,
+        "ticker": "ATI"
+      },
+      "CEG": {
+        "close_px": 280.2,
+        "cost": 2566.7470000000003,
+        "entry_date": "2026-11-13",
+        "entry_px": 284.97,
+        "fee_in": 2.017,
+        "last_px": 284.97,
+        "min_hold": 2,
+        "notional": 2564.7300000000005,
+        "peak_px": 284.97,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list ohlc_hot; \ud83d\udd35; ret5=+17.8; leftover $2668.07",
+        "shares": 9,
+        "ticker": "CEG"
+      },
+      "DNTH": {
+        "close_px": 91.81,
+        "cost": 2666.3070000000002,
+        "entry_date": "2026-11-13",
+        "entry_px": 91.87,
+        "fee_in": 2.077,
+        "last_px": 91.87,
+        "min_hold": 2,
+        "notional": 2664.23,
+        "peak_px": 91.87,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list ohlc_hot; ret5=+11.4; leftover $2668.07",
+        "shares": 29,
+        "ticker": "DNTH"
+      },
+      "MBGL": {
+        "close_px": 23.28,
+        "cost": 2666.885,
+        "entry_date": "2026-11-13",
+        "entry_px": 23.17,
+        "fee_in": 2.335,
+        "last_px": 23.17,
+        "min_hold": 2,
+        "notional": 2664.55,
+        "peak_px": 23.17,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list ohlc_hot; ret5=+16.5; leftover $2668.07",
+        "shares": 115,
+        "ticker": "MBGL"
+      }
+    },
+    "yday_equity": 10487.62
+  }
+}

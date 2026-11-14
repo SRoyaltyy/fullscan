@@ -393,6 +393,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-12 09:30 ET | **SELL** | `TGTX` | 17 | $65.51 | $2.06 | $+123.57 | $6,010.35 | ▲ +123.57 after sell → book $8,195.73; vs 09:30 mark -2.07 | dropped from list after 3 sess (min 3) | — |
 | 2026-11-12 09:30 ET | **SELL** | `WRBY` | 39 | $29.96 | $2.13 | $+153.72 | $7,176.67 | ▲ +153.72 after sell → book $8,193.61; vs 09:30 mark -2.12 | dropped from list after 3 sess (min 3) | — |
 | 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,176.67 | ▼ close $8,193.38 vs 09:30 $8,214.75 (session -0.23) | 16:00 close · cash $7,176.67 · equity $8,193.38 vs 09:30 $8,214.75 (-21.37; session marks -0.23) · 2 name(s) marked open→close (per-name table). BLFS×26 09:30 $38.61 → close $38.61 +0.00; GO×1 09:30 $13.08 → close $12.85 -0.23 | — |
+| 2026-11-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,176.67 | ▼ 09:30 equity $8,193.28 vs yday $8,193.38 (-0.10) | 09:30 open · cash $7,176.67 (unchanged overnight, no fees) · equity $8,193.28 vs prior close $8,193.38 (-0.10) · 2 name(s) re-marked at the open (per-name table). BLFS×26 yday $38.61 → 09:30 $38.61 +0.00; GO×1 yday $12.85 → 09:30 $12.75 -0.10 | — |
+| 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,176.67 | ▼ close $8,193.18 vs 09:30 $8,193.28 (session -0.10) | 16:00 close · cash $7,176.67 · equity $8,193.18 vs 09:30 $8,193.28 (-0.10; session marks -0.10) · 2 name(s) marked open→close (per-name table). BLFS×26 09:30 $38.61 → close $38.61 +0.00; GO×1 09:30 $12.75 → close $12.65 -0.10 | — |
 
 ## Not taken
 

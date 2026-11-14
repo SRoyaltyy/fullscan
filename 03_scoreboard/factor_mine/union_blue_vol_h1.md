@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-28.13%** ($7,187) · signal-only (no cash/fees) was -5.26%. Starts YES **0/30**. Fills 400 · skips 56 · realized $-1650.33.
+Cash book **-29.41%** ($7,059) · signal-only (no cash/fees) was -5.26%. Starts YES **0/30**. Fills 408 · skips 56 · realized $-1650.33.
 
 ## How this sleeve decides (like you are 10)
 
@@ -604,6 +604,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-12 09:30 ET | **SELL** | `TLS` | 116 | $7.64 | $2.37 | $-23.27 | $6,254.38 | ▼ -23.27 after sell → book $7,189.53; vs 09:30 mark -2.37 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-12 09:30 ET | **SELL** | `TTD` | 59 | $15.85 | $2.19 | $+32.23 | $7,187.34 | ▲ +32.23 after sell → book $7,187.34; vs 09:30 mark -2.19 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,187.34 | ▲ close $7,187.34 vs 09:30 $7,205.49 (session +0.00) | 16:00 close · cash $7,187.34 · no lots left · equity $7,187.34. | — |
+| 2026-11-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,187.34 | ▲ 09:30 equity $7,187.34 vs yday $7,187.34 (+0.00) | 09:30 open · cash $7,187.34 · no holdings · equity $7,187.34 vs prior close $7,187.34 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-13 09:30 ET | **BUY** | `ALNY` | 5 | $159.17 | $2.00 | — | $6,389.49 | — | combo gate; gate blue=True,vol=good; list flatten; 🔵; ret5=-0.0; leftover $898.42 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `REZI` | 41 | $21.52 | $2.11 | — | $5,505.05 | — | combo gate; gate blue=True,vol=good; list probable,yday_gainer,yday_mover; 🔵; ret5=+9.5; leftover $898.42 | join🔴 sector🟢 gen🔴 news🟢 digest🟡 judge🔴 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `BBOT` | 379 | $2.37 | $4.89 | — | $4,601.93 | — | combo gate; gate blue=True,vol=good; list probable,yday_gainer; 🔵; ret5=+8.3; leftover $898.42 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `BGS` | 273 | $3.29 | $3.52 | — | $3,700.24 | — | combo gate; gate blue=True,vol=good; list yday_gainer,yday_mover; 🔵; ret5=+35.6; leftover $898.42 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🟡 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `FOSL` | 104 | $8.56 | $2.30 | — | $2,807.70 | — | combo gate; gate blue=True,vol=good; list yday_gainer,yday_mover,ohlc_hot; 🔵; ret5=+12.6; leftover $898.42 | join🔴 sector🟢 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `CAPR` | 87 | $10.21 | $2.25 | — | $1,917.18 | — | combo gate; gate blue=True,vol=good; list yday_gainer,yday_mover; 🔵; ret5=+19.1; leftover $898.42 | join🔴 sector🟡 gen🔴 news🟢 digest🔴 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `AZTA` | 20 | $44.26 | $2.05 | — | $1,029.93 | — | combo gate; gate blue=True,vol=good; list yday_gainer,yday_mover; 🔵; ret5=+17.3; leftover $898.42 | join🔴 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `EQPT` | 54 | $16.41 | $2.15 | — | $141.64 | — | combo gate; gate blue=True,vol=good; list yday_gainer,yday_mover; 🔵; ret5=+12.9; leftover $898.42 | join🔴 sector🟢 gen🔴 news🟡 digest🟡 judge🔴 ab🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $141.64 | ▼ close $7,059.03 vs 09:30 $7,187.34 (session -107.03) | 16:00 close · cash $141.64 · equity $7,059.03 vs 09:30 $7,187.34 (-128.31; session marks -107.03) · 8 name(s) marked open→close (per-name table). ALNY×5 09:30 $159.17 → close $165.04 +29.35; REZI×41 09:30 $21.52 → close $21.32 -8.20; BBOT×379 09:30 $2.37 → close $2.14 -87.17; BGS×273 09:30 $3.29 → close $3.50 +57.33; FOSL×104 09:30 $8.56 → close $8.43 -13.52; CAPR×87 09:30 $10.21 → close $9.53 -59.16; AZTA×20 09:30 $44.26 → close $45.65 +27.80; EQPT×54 09:30 $16.41 → close $15.42 -53.46 | — |
 
 ## Not taken
 

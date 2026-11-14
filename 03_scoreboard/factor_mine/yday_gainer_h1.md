@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `yday_gainer` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · baseline list, no extra gate
 
-Cash book **-43.50%** ($5,650) · signal-only (no cash/fees) was -1.36%. Starts YES **6/30**. Fills 462 · skips 103 · realized $+133.85.
+Cash book **-46.72%** ($5,328) · signal-only (no cash/fees) was -1.36%. Starts YES **6/30**. Fills 470 · skips 103 · realized $+133.85.
 
 ## How this sleeve decides (like you are 10)
 
@@ -660,6 +660,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-12 09:30 ET | **SELL** | `SWMR` | 87 | $9.07 | $2.28 | $+58.11 | $4,949.36 | ▲ +58.11 after sell → book $5,652.24; vs 09:30 mark -2.28 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-12 09:30 ET | **SELL** | `TLS` | 92 | $7.64 | $2.29 | $-19.28 | $5,649.95 | ▼ -19.28 after sell → book $5,649.95; vs 09:30 mark -2.29 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5,649.95 | ▲ close $5,649.95 vs 09:30 $5,692.61 (session +0.00) | 16:00 close · cash $5,649.95 · no lots left · equity $5,649.95. | — |
+| 2026-11-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $5,649.95 | ▲ 09:30 equity $5,649.95 vs yday $5,649.95 (+0.00) | 09:30 open · cash $5,649.95 · no holdings · equity $5,649.95 vs prior close $5,649.95 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-13 09:30 ET | **BUY** | `MVST` | 2990 | $0.24 | $16.03 | — | $4,927.68 | — | baseline list, no extra gate; list probable,yday_gainer,yday_mover; 🔵; ret5=-59.1; leftover $706.24 | join🔴 sector🟢 gen🔴 news🔴 digest🟢 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `REZI` | 32 | $21.52 | $2.09 | — | $4,236.95 | — | baseline list, no extra gate; list probable,yday_gainer,yday_mover; 🔵; ret5=+9.5; leftover $706.24 | join🔴 sector🟢 gen🔴 news🟢 digest🟡 judge🔴 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `XRPN` | 80 | $8.75 | $2.23 | — | $3,534.72 | — | baseline list, no extra gate; list probable,yday_gainer; ret5=-12.9; leftover $706.24 | join🔴 sector🔴 gen🔴 news🟡 digest🔴 ab🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `BBOT` | 297 | $2.37 | $3.83 | — | $2,827.00 | — | baseline list, no extra gate; list probable,yday_gainer; 🔵; ret5=+8.3; leftover $706.24 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `VNET` | 226 | $3.12 | $2.92 | — | $2,118.97 | — | baseline list, no extra gate; list probable,yday_gainer; ret5=-1.9; leftover $706.24 | join🔴 sector🔴 gen🔴 news🟡 digest🟢 ab🔴 peer🟡 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `BRUN` | 116 | $6.04 | $2.34 | — | $1,415.99 | — | baseline list, no extra gate; list probable,yday_gainer; ret5=+6.5; leftover $706.24 | join🔴 sector🔴 gen🔴 news🟡 digest🟢 ab🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `NBIS` | 5 | $123.52 | $2.00 | — | $796.38 | — | baseline list, no extra gate; list probable,yday_gainer; ret5=+6.9; leftover $706.24 | join🟡 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-13 09:30 ET | **BUY** | `BGS` | 214 | $3.29 | $2.76 | — | $89.56 | — | baseline list, no extra gate; list yday_gainer,yday_mover; 🔵; ret5=+35.6; leftover $706.24 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🟡 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $89.56 | ▼ close $5,327.57 vs 09:30 $5,649.95 (session -288.18) | 16:00 close · cash $89.56 · equity $5,327.57 vs 09:30 $5,649.95 (-322.38; session marks -288.18) · 8 name(s) marked open→close (per-name table). MVST×2990 09:30 $0.24 → close $0.22 -57.41; REZI×32 09:30 $21.52 → close $21.32 -6.40; XRPN×80 09:30 $8.75 → close $7.85 -72.00; BBOT×297 09:30 $2.37 → close $2.14 -68.31; VNET×226 09:30 $3.12 → close $2.98 -31.64; BRUN×116 09:30 $6.04 → close $5.53 -59.16; NBIS×5 09:30 $123.52 → close $115.88 -38.20; BGS×214 09:30 $3.29 → close $3.50 +44.94 | — |
 
 ## Not taken
 

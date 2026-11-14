@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · packet🟢 and camera net ≥ 3
 
-Cash book **-13.61%** ($8,639) · signal-only (no cash/fees) was +3.78%. Starts YES **14/30**. Fills 114 · skips 24 · realized $+978.05.
+Cash book **-15.70%** ($8,430) · signal-only (no cash/fees) was +3.78%. Starts YES **14/30**. Fills 116 · skips 24 · realized $+978.05.
 
 ## How this sleeve decides (like you are 10)
 
@@ -318,6 +318,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-12 09:30 ET | **SELL** | `CRWV` | 32 | $50.89 | $2.11 | $-166.67 | $6,928.24 | ▼ -166.67 after sell → book $8,641.00; vs 09:30 mark -2.11 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-12 09:30 ET | **SELL** | `EMBJ` | 21 | $81.56 | $2.08 | $-23.03 | $8,638.93 | ▼ -23.03 after sell → book $8,638.93; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,638.93 | ▲ close $8,638.93 vs 09:30 $8,649.55 (session +0.00) | 16:00 close · cash $8,638.93 · no lots left · equity $8,638.93. | — |
+| 2026-11-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,638.93 | ▲ 09:30 equity $8,638.93 vs yday $8,638.93 (+0.00) | 09:30 open · cash $8,638.93 · no holdings · equity $8,638.93 vs prior close $8,638.93 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-13 09:30 ET | **BUY** | `DVN` | 92 | $46.76 | $2.27 | — | $4,334.74 | — | packet🟢 and camera net ≥ 3; gate cam_net_min=3,news_box=good; rank cond; list flatten; 🔵; ret5=+7.8; leftover $4319.47 | join🟢 sector🔴 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟢 |
+| 2026-11-13 09:30 ET | **BUY** | `ANDG` | 68 | $62.82 | $2.19 | — | $60.79 | — | packet🟢 and camera net ≥ 3; gate cam_net_min=3,news_box=good; rank cond; list earn_react; 🔵; ret5=-1.3; leftover $4319.47 | join🟡 sector🟢 gen🔴 news🟢 digest🟢 ab🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $60.79 | ▼ close $8,430.23 vs 09:30 $8,638.93 (session -204.24) | 16:00 close · cash $60.79 · equity $8,430.23 vs 09:30 $8,638.93 (-208.70; session marks -204.24) · 2 name(s) marked open→close (per-name table). DVN×92 09:30 $46.76 → close $46.58 -16.56; ANDG×68 09:30 $62.82 → close $60.06 -187.68 | — |
 
 ## Not taken
 

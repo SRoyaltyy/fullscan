@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ flow_in, no 🚨
 
-Cash book **+13.75%** ($11,375) · signal-only (no cash/fees) was +17.31%. Starts YES **6/30**. Fills 178 · skips 27 · realized $+766.09.
+Cash book **+17.03%** ($11,703) · signal-only (no cash/fees) was +17.31%. Starts YES **6/30**. Fills 179 · skips 27 · realized $+766.09.
 
 ## How this sleeve decides (like you are 10)
 
@@ -380,6 +380,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-12 09:30 ET | **SELL** | `PDYN` | 387 | $3.35 | $5.07 | $-153.25 | $9,818.93 | ▼ -153.25 after sell → book $11,376.93; vs 09:30 mark -5.07 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-12 09:30 ET | **SELL** | `SONO` | 82 | $19.00 | $2.26 | $+118.50 | $11,374.67 | ▲ +118.50 after sell → book $11,374.67; vs 09:30 mark -2.26 | dropped from list after 1 sess (min 1) | join🟢 sector🟢 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $11,374.67 | ▲ close $11,374.67 vs 09:30 $11,397.20 (session +0.00) | 16:00 close · cash $11,374.67 · no lots left · equity $11,374.67. | — |
+| 2026-11-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $11,374.67 | ▲ 09:30 equity $11,374.67 vs yday $11,374.67 (+0.00) | 09:30 open · cash $11,374.67 · no holdings · equity $11,374.67 vs prior close $11,374.67 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-13 09:30 ET | **BUY** | `LFTO` | 478 | $23.74 | $6.17 | — | $20.78 | — | union ∩ flow_in, no 🚨; gate flow_in=True; list earn_react; 🔵; ret5=+9.1; leftover $11374.67 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $20.78 | ▲ close $11,703.10 vs 09:30 $11,374.67 (session +334.60) | 16:00 close · cash $20.78 · equity $11,703.10 vs 09:30 $11,374.67 (+328.43; session marks +334.60) · 1 name(s) marked open→close (per-name table). LFTO×478 09:30 $23.74 → close $24.44 +334.60 | — |
 
 ## Not taken
 

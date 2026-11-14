@@ -6,7 +6,7 @@ Buys the flatten **wish-list** even on io/HOLD mornings — live `flatten_robust
 
 Side **long** · universe `flatten` · top 8 · rank `list` · size `topheavy` · sell `list` · S-boost `none` · 40% to #1, rest split
 
-Cash book **-12.22%** ($8,778) · signal-only (no cash/fees) was +4.47%. Starts YES **12/30**. Fills 252 · skips 345 · realized $+372.21.
+Cash book **-11.50%** ($8,850) · signal-only (no cash/fees) was +4.47%. Starts YES **12/30**. Fills 257 · skips 345 · realized $+372.21.
 
 ## How this sleeve decides (like you are 10)
 
@@ -450,6 +450,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-12 09:30 ET | **SELL** | `CSGP` | 6 | $30.62 | $1.88 | $-18.82 | $389.86 | ▼ -18.82 after sell → book $8,874.72; vs 09:30 mark -1.88 | dropped from list after 5 sess (min 5) | — |
 | 2026-11-12 09:30 ET | **SELL** | `GPK` | 5 | $11.17 | $0.59 | $-4.45 | $445.12 | ▼ -4.45 after sell → book $8,874.13; vs 09:30 mark -0.59 | dropped from list after 5 sess (min 5) | — |
 | 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $445.12 | ▼ close $8,778.07 vs 09:30 $8,877.13 (session -96.06) | 16:00 close · cash $445.12 · equity $8,778.07 vs 09:30 $8,877.13 (-99.06; session marks -96.06) · 11 name(s) marked open→close (per-name table). BLFS×6 09:30 $38.61 → close $38.61 +0.00; CLOV×3 09:30 $4.92 → close $4.88 -0.12; CLX×31 09:30 $107.52 → close $108.20 +21.08; COTY×229 09:30 $4.09 → close $4.03 -13.74; CPRI×2 09:30 $21.11 → close $20.38 -1.46; KDP×26 09:30 $36.49 → close $35.42 -27.85; MGNI×1 09:30 $29.25 → close $29.34 +0.09; PFGC×8 09:30 $111.88 → close $109.96 -15.36; PRCH×44 09:30 $22.08 → close $21.31 -33.79; TTD×64 09:30 $15.85 → close $15.47 -24.32; ZVRA×1 09:30 $11.75 → close $11.16 -0.59 | — |
+| 2026-11-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $445.12 | ▲ 09:30 equity $8,825.16 vs yday $8,778.07 (+47.09) | 09:30 open · cash $445.12 (unchanged overnight, no fees) · equity $8,825.16 vs prior close $8,778.07 (+47.09) · 11 name(s) re-marked at the open (per-name table). BLFS×6 yday $38.61 → 09:30 $38.61 +0.00; CLOV×3 yday $4.88 → 09:30 $4.90 +0.06; CLX×31 yday $108.20 → 09:30 $109.05 +26.35; COTY×229 yday $4.03 → 09:30 $4.03 -0.23; CPRI×2 yday $20.38 → 09:30 $20.79 +0.82; KDP×26 yday $35.42 → 09:30 $35.73 +8.06; MGNI×1 yday $29.34 → 09:30 $29.25 -0.09; PFGC×8 yday $109.96 → 09:30 $110.26 +2.40; PRCH×44 yday $21.31 → 09:30 $21.31 +0.00; TTD×64 yday $15.47 → 09:30 $15.63 +10.24; ZVRA×1 yday $11.16 → 09:30 $10.64 -0.52 | — |
+| 2026-11-13 09:30 ET | **SELL** | `CPRI` | 2 | $20.79 | $0.44 | $-1.15 | $486.26 | ▼ -1.15 after sell → book $8,824.72; vs 09:30 mark -0.44 | dropped from list after 5 sess (min 5) | — |
+| 2026-11-13 09:30 ET | **SELL** | `MGNI` | 1 | $29.25 | $0.32 | $+1.41 | $515.19 | ▲ +1.41 after sell → book $8,824.40; vs 09:30 mark -0.32 | dropped from list after 5 sess (min 5) | — |
+| 2026-11-13 09:30 ET | **BUY** | `DVN` | 4 | $46.76 | $1.88 | — | $326.27 | — | 40% to #1, rest split; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ret5=+7.8; leftover $206.08 | join🟢 sector🔴 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟢 |
+| 2026-11-13 09:30 ET | **BUY** | `GRNT` | 12 | $6.42 | $0.81 | — | $248.42 | — | 40% to #1, rest split; list flatten; wish-list (live io HOLD — not a ticket); ret5=+39.0; leftover $77.28 | join🟢 sector🔴 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `ETON` | 1 | $61.25 | $0.62 | — | $186.56 | — | 40% to #1, rest split; list flatten; wish-list (live io HOLD — not a ticket); ret5=+30.3; leftover $77.28 | join🟢 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $186.56 | ▲ close $8,850.37 vs 09:30 $8,825.16 (session +29.27) | 16:00 close · cash $186.56 · equity $8,850.37 vs 09:30 $8,825.16 (+25.21; session marks +29.27) · 12 name(s) marked open→close (per-name table). BLFS×6 09:30 $38.61 → close $38.61 +0.00; CLOV×3 09:30 $4.90 → close $4.96 +0.18; CLX×31 09:30 $109.05 → close $109.46 +12.71; COTY×229 09:30 $4.03 → close $4.04 +2.52; KDP×26 09:30 $35.73 → close $36.34 +15.86; PFGC×8 09:30 $110.26 → close $111.17 +7.28; PRCH×44 09:30 $21.31 → close $21.05 -11.44; TTD×64 09:30 $15.63 → close $15.68 +3.20; ZVRA×1 09:30 $10.64 → close $9.08 -1.56; DVN×4 09:30 $46.76 → close $46.58 -0.72; GRNT×12 09:30 $6.42 → close $6.30 -1.44; ETON×1 09:30 $61.25 → close $63.93 +2.68 | — |
 
 ## Not taken
 

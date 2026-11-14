@@ -502,3 +502,5 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-12 09:30 ET | **SELL** | `PFGC` | 10 | $111.88 | $2.04 | $+12.34 | $8,342.87 | ▲ +12.34 after sell → book $9,479.21; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-12 09:30 ET | **SELL** | `SBH` | 59 | $19.26 | $2.19 | $-63.65 | $9,477.03 | ▼ -63.65 after sell → book $9,477.03; vs 09:30 mark -2.18 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,477.03 | ▲ close $9,477.03 vs 09:30 $9,495.57 (session +0.00) | 16:00 close · cash $9,477.03 · no lots left · equity $9,477.03. | — |
+| 2026-11-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,477.03 | ▲ 09:30 equity $9,477.03 vs yday $9,477.03 (+0.00) | 09:30 open · cash $9,477.03 · no holdings · equity $9,477.03 vs prior close $9,477.03 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,477.03 | ▲ close $9,477.03 vs 09:30 $9,477.03 (session +0.00) | 16:00 close · cash $9,477.03 · no lots left · equity $9,477.03. | — |

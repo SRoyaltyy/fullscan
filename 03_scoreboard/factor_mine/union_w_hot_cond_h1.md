@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `w_hot_cond` · size `leftover` · sell `list` · S-boost `none` · rank by w_hot_cond
 
-Cash book **+26.53%** ($12,653) · signal-only (no cash/fees) was +31.34%. Starts YES **29/30**. Fills 578 · skips 96 · realized $-9.27.
+Cash book **+24.24%** ($12,424) · signal-only (no cash/fees) was +31.34%. Starts YES **29/30**. Fills 586 · skips 96 · realized $-9.27.
 
 ## How this sleeve decides (like you are 10)
 
@@ -779,6 +779,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-12 09:30 ET | **SELL** | `TLS` | 209 | $7.64 | $2.74 | $-38.88 | $10,959.32 | ▼ -38.88 after sell → book $12,655.27; vs 09:30 mark -2.74 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-12 09:30 ET | **SELL** | `TTD` | 107 | $15.85 | $2.34 | $+61.69 | $12,652.93 | ▲ +61.69 after sell → book $12,652.93; vs 09:30 mark -2.34 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $12,652.93 | ▲ close $12,652.93 vs 09:30 $12,680.72 (session +0.00) | 16:00 close · cash $12,652.93 · no lots left · equity $12,652.93. | — |
+| 2026-11-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $12,652.93 | ▲ 09:30 equity $12,652.93 vs yday $12,652.93 (+0.00) | 09:30 open · cash $12,652.93 · no holdings · equity $12,652.93 vs prior close $12,652.93 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-13 09:30 ET | **BUY** | `BGS` | 480 | $3.29 | $6.19 | — | $11,067.54 | — | rank by w_hot_cond; rank w_hot_cond; list yday_gainer,yday_mover; 🔵; ret5=+35.6; leftover $1581.62 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🟡 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `ETON` | 25 | $61.25 | $2.06 | — | $9,534.22 | — | rank by w_hot_cond; rank w_hot_cond; list flatten; ret5=+30.3; leftover $1581.62 | join🟢 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `FOSL` | 184 | $8.56 | $2.54 | — | $7,956.64 | — | rank by w_hot_cond; rank w_hot_cond; list yday_gainer,yday_mover,ohlc_hot; 🔵; ret5=+12.6; leftover $1581.62 | join🔴 sector🟢 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `MBGL` | 68 | $23.17 | $2.19 | — | $6,378.89 | — | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; ret5=+16.5; leftover $1581.62 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟡 heat🟢 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `PLX` | 537 | $2.94 | $6.93 | — | $4,793.18 | — | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; ret5=+17.9; leftover $1581.62 | join🟢 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `CEG` | 5 | $284.97 | $2.00 | — | $3,366.32 | — | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; 🔵; ret5=+17.8; leftover $1581.62 | join🟢 sector🟡 gen🔴 news🟢 digest🟡 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `MX` | 566 | $2.79 | $7.30 | — | $1,779.88 | — | rank by w_hot_cond; rank w_hot_cond; list yday_gainer,yday_mover; ret5=+37.6; leftover $1581.62 | join🟡 sector🔴 gen🔴 news🔴 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-13 09:30 ET | **BUY** | `NEOV` | 480 | $3.29 | $6.19 | — | $194.49 | — | rank by w_hot_cond; rank w_hot_cond; list earn_react; 🔵; ret5=+35.1; leftover $1581.62 | join🔴 sector🟢 gen🔴 news🟡 digest🟡 judge🔴 ab🔴 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $194.49 | ▼ close $12,423.95 vs 09:30 $12,652.93 (session -193.56) | 16:00 close · cash $194.49 · equity $12,423.95 vs 09:30 $12,652.93 (-228.98; session marks -193.56) · 8 name(s) marked open→close (per-name table). BGS×480 09:30 $3.29 → close $3.50 +100.80; ETON×25 09:30 $61.25 → close $63.93 +67.00; FOSL×184 09:30 $8.56 → close $8.43 -23.92; MBGL×68 09:30 $23.17 → close $23.28 +7.48; PLX×537 09:30 $2.94 → close $3.05 +59.07; CEG×5 09:30 $284.97 → close $280.20 -23.85; MX×566 09:30 $2.79 → close $2.50 -164.14; NEOV×480 09:30 $3.29 → close $2.84 -216.00 | — |
 
 ## Not taken
 
