@@ -1,0 +1,599 @@
+{
+  "schema": "jev-train-days-1",
+  "days": [
+    {
+      "date": "2026-07-30",
+      "parsed": false,
+      "digest": true,
+      "judge": false
+    },
+    {
+      "date": "2026-07-31",
+      "parsed": false,
+      "digest": false,
+      "judge": true
+    },
+    {
+      "date": "2026-08-03",
+      "parsed": false,
+      "digest": false,
+      "judge": true
+    },
+    {
+      "date": "2026-08-04",
+      "parsed": false,
+      "digest": true,
+      "judge": true
+    },
+    {
+      "date": "2026-08-05",
+      "parsed": false,
+      "digest": false,
+      "judge": true
+    },
+    {
+      "date": "2026-08-06",
+      "parsed": false,
+      "digest": false,
+      "judge": true
+    },
+    {
+      "date": "2026-08-07",
+      "parsed": false,
+      "digest": true,
+      "judge": true
+    },
+    {
+      "date": "2026-08-08",
+      "parsed": true,
+      "digest": false,
+      "judge": false
+    },
+    {
+      "date": "2026-08-10",
+      "parsed": true,
+      "digest": false,
+      "judge": true
+    },
+    {
+      "date": "2026-08-11",
+      "parsed": true,
+      "digest": false,
+      "judge": true
+    },
+    {
+      "date": "2026-08-12",
+      "parsed": true,
+      "digest": false,
+      "judge": true
+    },
+    {
+      "date": "2026-08-13",
+      "parsed": true,
+      "digest": true,
+      "judge": true
+    },
+    {
+      "date": "2026-08-14",
+      "parsed": true,
+      "digest": false,
+      "judge": true
+    },
+    {
+      "date": "2026-08-17",
+      "parsed": true,
+      "digest": false,
+      "judge": true
+    },
+    {
+      "date": "2026-08-18",
+      "parsed": true,
+      "digest": false,
+      "judge": true
+    },
+    {
+      "date": "2026-08-19",
+      "parsed": true,
+      "digest": false,
+      "judge": true
+    },
+    {
+      "date": "2026-08-20",
+      "parsed": true,
+      "digest": true,
+      "judge": true
+    },
+    {
+      "date": "2026-08-21",
+      "parsed": true,
+      "digest": true,
+      "judge": true
+    },
+    {
+      "date": "2026-08-23",
+      "parsed": false,
+      "digest": true,
+      "judge": false
+    },
+    {
+      "date": "2026-08-24",
+      "parsed": true,
+      "digest": true,
+      "judge": true
+    },
+    {
+      "date": "2026-08-25",
+      "parsed": true,
+      "digest": true,
+      "judge": true
+    },
+    {
+      "date": "2026-08-26",
+      "parsed": true,
+      "digest": true,
+      "judge": true
+    },
+    {
+      "date": "2026-08-27",
+      "parsed": true,
+      "digest": true,
+      "judge": true
+    },
+    {
+      "date": "2026-08-28",
+      "parsed": true,
+      "digest": true,
+      "judge": true
+    },
+    {
+      "date": "2026-08-29",
+      "parsed": false,
+      "digest": true,
+      "judge": false
+    },
+    {
+      "date": "2026-08-30",
+      "parsed": false,
+      "digest": true,
+      "judge": true
+    },
+    {
+      "date": "2026-08-31",
+      "parsed": true,
+      "digest": true,
+      "judge": true
+    },
+    {
+      "date": "2026-09-01",
+      "parsed": true,
+      "digest": true,
+      "judge": true
+    },
+    {
+      "date": "2026-09-02",
+      "parsed": true,
+      "digest": true,
+      "judge": true
+    },
+    {
+      "date": "2026-09-03",
+      "parsed": true,
+      "digest": true,
+      "judge": true
+    },
+    {
+      "date": "2026-09-04",
+      "parsed": true,
+      "digest": true,
+      "judge": true
+    },
+    {
+      "date": "2026-09-05",
+      "parsed": false,
+      "digest": true,
+      "judge": false
+    },
+    {
+      "date": "2026-09-06",
+      "parsed": false,
+      "digest": true,
+      "judge": true
+    },
+    {
+      "date": "2026-09-07",
+      "parsed": false,
+      "digest": true,
+      "judge": true
+    },
+    {
+      "date": "2026-09-08",
+      "parsed": true,
+      "digest": true,
+      "judge": true
+    },
+    {
+      "date": "2026-09-09",
+      "parsed": true,
+      "digest": true,
+      "judge": true
+    },
+    {
+      "date": "2026-09-10",
+      "parsed": true,
+      "digest": true,
+      "judge": true
+    },
+    {
+      "date": "2026-09-11",
+      "parsed": true,
+      "digest": true,
+      "judge": true
+    },
+    {
+      "date": "2026-09-12",
+      "parsed": false,
+      "digest": true,
+      "judge": true
+    },
+    {
+      "date": "2026-09-13",
+      "parsed": false,
+      "digest": false,
+      "judge": true
+    },
+    {
+      "date": "2026-09-14",
+      "parsed": true,
+      "digest": true,
+      "judge": true
+    },
+    {
+      "date": "2026-09-15",
+      "parsed": true,
+      "digest": true,
+      "judge": true
+    },
+    {
+      "date": "2026-09-16",
+      "parsed": true,
+      "digest": true,
+      "judge": true
+    },
+    {
+      "date": "2026-09-17",
+      "parsed": true,
+      "digest": true,
+      "judge": true
+    },
+    {
+      "date": "2026-09-18",
+      "parsed": true,
+      "digest": true,
+      "judge": true
+    },
+    {
+      "date": "2026-09-20",
+      "parsed": false,
+      "digest": false,
+      "judge": true
+    },
+    {
+      "date": "2026-09-21",
+      "parsed": true,
+      "digest": true,
+      "judge": true
+    },
+    {
+      "date": "2026-09-22",
+      "parsed": true,
+      "digest": true,
+      "judge": true
+    },
+    {
+      "date": "2026-09-23",
+      "parsed": true,
+      "digest": true,
+      "judge": true
+    },
+    {
+      "date": "2026-09-24",
+      "parsed": true,
+      "digest": true,
+      "judge": true
+    },
+    {
+      "date": "2026-09-25",
+      "parsed": true,
+      "digest": true,
+      "judge": true
+    },
+    {
+      "date": "2026-09-27",
+      "parsed": true,
+      "digest": false,
+      "judge": true
+    },
+    {
+      "date": "2026-09-28",
+      "parsed": true,
+      "digest": true,
+      "judge": true
+    },
+    {
+      "date": "2026-09-29",
+      "parsed": true,
+      "digest": true,
+      "judge": true
+    },
+    {
+      "date": "2026-09-30",
+      "parsed": true,
+      "digest": true,
+      "judge": true
+    },
+    {
+      "date": "2026-10-01",
+      "parsed": true,
+      "digest": true,
+      "judge": true
+    },
+    {
+      "date": "2026-10-02",
+      "parsed": true,
+      "digest": true,
+      "judge": true
+    },
+    {
+      "date": "2026-10-03",
+      "parsed": true,
+      "digest": false,
+      "judge": false
+    },
+    {
+      "date": "2026-10-04",
+      "parsed": true,
+      "digest": false,
+      "judge": false
+    },
+    {
+      "date": "2026-10-05",
+      "parsed": true,
+      "digest": true,
+      "judge": true
+    },
+    {
+      "date": "2026-10-06",
+      "parsed": true,
+      "digest": true,
+      "judge": true
+    },
+    {
+      "date": "2026-10-07",
+      "parsed": true,
+      "digest": true,
+      "judge": true
+    },
+    {
+      "date": "2026-10-08",
+      "parsed": true,
+      "digest": true,
+      "judge": true
+    },
+    {
+      "date": "2026-10-09",
+      "parsed": true,
+      "digest": true,
+      "judge": true
+    },
+    {
+      "date": "2026-10-10",
+      "parsed": true,
+      "digest": false,
+      "judge": false
+    },
+    {
+      "date": "2026-10-11",
+      "parsed": true,
+      "digest": false,
+      "judge": false
+    },
+    {
+      "date": "2026-10-12",
+      "parsed": true,
+      "digest": true,
+      "judge": true
+    },
+    {
+      "date": "2026-10-13",
+      "parsed": true,
+      "digest": true,
+      "judge": true
+    },
+    {
+      "date": "2026-10-14",
+      "parsed": true,
+      "digest": true,
+      "judge": true
+    },
+    {
+      "date": "2026-10-15",
+      "parsed": true,
+      "digest": true,
+      "judge": true
+    },
+    {
+      "date": "2026-10-16",
+      "parsed": true,
+      "digest": true,
+      "judge": true
+    },
+    {
+      "date": "2026-10-17",
+      "parsed": true,
+      "digest": false,
+      "judge": false
+    },
+    {
+      "date": "2026-10-18",
+      "parsed": true,
+      "digest": false,
+      "judge": true
+    },
+    {
+      "date": "2026-10-19",
+      "parsed": true,
+      "digest": true,
+      "judge": true
+    },
+    {
+      "date": "2026-10-20",
+      "parsed": true,
+      "digest": true,
+      "judge": true
+    },
+    {
+      "date": "2026-10-21",
+      "parsed": true,
+      "digest": true,
+      "judge": true
+    },
+    {
+      "date": "2026-10-22",
+      "parsed": true,
+      "digest": true,
+      "judge": true
+    },
+    {
+      "date": "2026-10-23",
+      "parsed": true,
+      "digest": true,
+      "judge": true
+    },
+    {
+      "date": "2026-10-24",
+      "parsed": true,
+      "digest": false,
+      "judge": false
+    },
+    {
+      "date": "2026-10-25",
+      "parsed": true,
+      "digest": false,
+      "judge": false
+    },
+    {
+      "date": "2026-10-26",
+      "parsed": true,
+      "digest": true,
+      "judge": true
+    },
+    {
+      "date": "2026-10-27",
+      "parsed": true,
+      "digest": true,
+      "judge": true
+    },
+    {
+      "date": "2026-10-28",
+      "parsed": true,
+      "digest": true,
+      "judge": true
+    },
+    {
+      "date": "2026-10-29",
+      "parsed": true,
+      "digest": true,
+      "judge": true
+    },
+    {
+      "date": "2026-10-30",
+      "parsed": true,
+      "digest": true,
+      "judge": true
+    },
+    {
+      "date": "2026-10-31",
+      "parsed": true,
+      "digest": false,
+      "judge": false
+    },
+    {
+      "date": "2026-11-01",
+      "parsed": true,
+      "digest": false,
+      "judge": false
+    },
+    {
+      "date": "2026-11-02",
+      "parsed": true,
+      "digest": true,
+      "judge": true
+    },
+    {
+      "date": "2026-11-03",
+      "parsed": true,
+      "digest": true,
+      "judge": true
+    },
+    {
+      "date": "2026-11-04",
+      "parsed": true,
+      "digest": true,
+      "judge": true
+    },
+    {
+      "date": "2026-11-05",
+      "parsed": true,
+      "digest": false,
+      "judge": false
+    },
+    {
+      "date": "2026-11-06",
+      "parsed": true,
+      "digest": true,
+      "judge": true
+    },
+    {
+      "date": "2026-11-07",
+      "parsed": true,
+      "digest": false,
+      "judge": false
+    },
+    {
+      "date": "2026-11-08",
+      "parsed": true,
+      "digest": false,
+      "judge": false
+    },
+    {
+      "date": "2026-11-09",
+      "parsed": true,
+      "digest": true,
+      "judge": true
+    },
+    {
+      "date": "2026-11-10",
+      "parsed": true,
+      "digest": true,
+      "judge": true
+    },
+    {
+      "date": "2026-11-11",
+      "parsed": true,
+      "digest": true,
+      "judge": true
+    },
+    {
+      "date": "2026-11-12",
+      "parsed": true,
+      "digest": true,
+      "judge": true
+    },
+    {
+      "date": "2026-11-13",
+      "parsed": true,
+      "digest": true,
+      "judge": true
+    }
+  ]
+}
