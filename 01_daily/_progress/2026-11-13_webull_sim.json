@@ -5,15 +5,15 @@
   "run_id": "43506614709",
   "model": "",
   "started_at": "2026-11-13T16:16:03-05:00",
-  "updated_at": "2026-11-13T16:46:21-05:00",
-  "heartbeat_at": "2026-11-13T16:46:21-05:00",
+  "updated_at": "2026-11-13T20:41:54-05:00",
+  "heartbeat_at": "2026-11-13T20:41:54-05:00",
   "stages": [
     {
       "name": "rows",
       "state": "running",
       "started_at": "2026-11-13T16:16:03-05:00",
       "ended_at": "",
-      "heartbeat_at": "2026-11-13T16:46:21-05:00",
+      "heartbeat_at": "2026-11-13T20:41:54-05:00",
       "done": 0,
       "total": 1,
       "model": "",
