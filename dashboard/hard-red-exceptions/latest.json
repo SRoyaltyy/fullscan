@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "generated_at": "2026-11-13T22:09:47.759480-05:00",
+  "generated_at": "2026-11-14T13:32:45.194803-05:00",
   "from_date": "2026-08-13",
   "to_date": "2026-11-13",
   "n_days": 66,
@@ -2332,7 +2332,18 @@
     "ANDG",
     "ATI",
     "DNTH",
-    "RMIX"
+    "RMIX",
+    "ADRX",
+    "BHR",
+    "GCL",
+    "LMND",
+    "LUNG",
+    "NWE",
+    "OSPN",
+    "PHAT",
+    "SKYA",
+    "TTEC",
+    "WEX"
   ],
   "live_sit_untouched": true,
   "backtest": {
