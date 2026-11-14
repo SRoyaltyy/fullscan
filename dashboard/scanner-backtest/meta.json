@@ -2194,5 +2194,6 @@
   "fill_forward": true,
   "sealed_snapshot_ids": [
     "635ed486ab96fe0988a99c663331049172532c1cd1f8561dd0375ce3bedf0673"
-  ]
+  ],
+  "asset_base_url": "https://raw.githubusercontent.com/SRoyaltyy/fullscan/c690ed5012bf212daae18f76a4d4bb50d207cec8/dashboard/scanner-backtest/"
 }
