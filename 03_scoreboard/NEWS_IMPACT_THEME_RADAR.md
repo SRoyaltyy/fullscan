@@ -21,12 +21,12 @@ Rubric hit rates count a call only when q5=impulse, direction in {up, down}, tra
 | non-weather | 32816 |
 | reaction-in-title (killed by the router) | 1279 |
 | impulse + up/down + listed | 17355 |
-| graded articles 0-1d | 1879 |
-| graded articles 2d | 1844 |
-| graded articles 3d | 1817 |
-| graded articles 4d | 1799 |
-| graded articles 5d | 1777 |
-| graded articles 1-4w | 8168 |
+| graded articles 0-1d | 1891 |
+| graded articles 2d | 1852 |
+| graded articles 3d | 1830 |
+| graded articles 4d | 1804 |
+| graded articles 5d | 1789 |
+| graded articles 1-4w | 8221 |
 
 ## Hit rates
 
@@ -34,12 +34,12 @@ Rubric column skips long-horizon classes on 0-1d and 2-5d. Broad column keeps th
 
 | horizon | rubric hits | rubric n | rubric rate | broad hits | broad n | broad rate |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| 0-1d | 1726 | 3414 | 1726/3414 = 50.6% | 9220 | 18745 | 9220/18745 = 49.2% |
-| 2d | 1653 | 3333 | 1653/3333 = 49.6% | 9182 | 18366 | 9182/18366 = 50.0% |
-| 3d | 1572 | 3282 | 1572/3282 = 47.9% | 9013 | 18122 | 9013/18122 = 49.7% |
-| 4d | 1565 | 3259 | 1565/3259 = 48.0% | 8933 | 17929 | 8933/17929 = 49.8% |
-| 5d | 1561 | 3223 | 1561/3223 = 48.4% | 8564 | 17410 | 8564/17410 = 49.2% |
-| 1-4w | 6002 | 12738 | 6002/12738 = 47.1% | — | — | — |
+| 0-1d | 1734 | 3429 | 1734/3429 = 50.6% | 9275 | 18865 | 9275/18865 = 49.2% |
+| 2d | 1659 | 3359 | 1659/3359 = 49.4% | 9264 | 18522 | 9264/18522 = 50.0% |
+| 3d | 1578 | 3310 | 1578/3310 = 47.7% | 9089 | 18270 | 9089/18270 = 49.7% |
+| 4d | 1567 | 3264 | 1567/3264 = 48.0% | 8992 | 18033 | 8992/18033 = 49.9% |
+| 5d | 1570 | 3241 | 1570/3241 = 48.4% | 8786 | 17787 | 8786/17787 = 49.4% |
+| 1-4w | 6040 | 12816 | 6040/12816 = 47.1% | — | — | — |
 
 ## Convergence / clash ledger
 
@@ -59,9 +59,9 @@ Hit rates grade the entity once per session. Converge uses that side. Clash uses
 
 | bucket | 0-1d | 2d | 3d | 4d | 5d |
 | --- | --- | --- | --- | --- | --- |
-| singleton | 852/1767 = 48.2% | 873/1737 = 50.3% | 842/1720 = 49.0% | 847/1706 = 49.6% | 844/1688 = 50.0% |
-| converge | 103/193 = 53.4% | 83/183 = 45.4% | 86/176 = 48.9% | 81/174 = 46.6% | 82/169 = 48.5% |
-| clash | 6/15 = 40.0% | 7/14 = 50.0% | 10/14 = 71.4% | 6/14 = 42.9% | 6/14 = 42.9% |
+| singleton | 859/1779 = 48.3% | 876/1742 = 50.3% | 846/1728 = 49.0% | 848/1710 = 49.6% | 850/1696 = 50.1% |
+| converge | 103/193 = 53.4% | 84/188 = 44.7% | 86/181 = 47.5% | 81/174 = 46.6% | 84/174 = 48.3% |
+| clash | 6/15 = 40.0% | 7/15 = 46.7% | 10/14 = 71.4% | 6/14 = 42.9% | 6/14 = 42.9% |
 
 ### Top converge names
 
@@ -99,8 +99,8 @@ Same direction as the call and |forward return| at the threshold. 5% rows are �
 
 ### 0-1d
 
-- ≥5% and <10%: **980**
-- ≥10%: **531**
+- ≥5% and <10%: **999**
+- ≥10%: **545**
 
 | threshold | ticker | date | ret | class | title |
 | --- | --- | --- | ---: | --- | --- |
@@ -129,12 +129,12 @@ Same direction as the call and |forward return| at the threshold. 5% rows are �
 | ≥10% | BDSX | 2026-11-06 | -31.32% | print_vs_priced | Biodesix Announces Third Quarter 2026 Results and Highlights |
 | ≥10% | BDSX | 2026-11-06 | -31.32% | print_vs_priced | Biodesix Breaks Its Beat-And-Raise Streak As Growth Slows To 10% And Guidance Falls Below The Original Outlook |
 | ≥10% | SNT | 2026-11-09 | +31.02% | print_vs_priced | Senstar (SNT) Delivers Its Promised Inflection With 37.5% Revenue Growth, But Preliminary Blickfeld Accounting |
-| … | | | | | 1486 more in the JSON |
+| … | | | | | 1519 more in the JSON |
 
 ### 2d
 
-- ≥5% and <10%: **1732**
-- ≥10%: **1080**
+- ≥5% and <10%: **1754**
+- ≥10%: **1112**
 
 | threshold | ticker | date | ret | class | title |
 | --- | --- | --- | ---: | --- | --- |
@@ -163,12 +163,12 @@ Same direction as the call and |forward return| at the threshold. 5% rows are �
 | ≥10% | BWMN | 2026-08-07 | +55.03% | gate | Earnings To Watch: Bowman Consulting Group Ltd (BWMN) Q2 2026 -- GF Value Sees 64% Upside |
 | ≥10% | APH | 2026-08-19 | -51.54% | print_vs_priced | Amphenol Corp. Cl A stock underperforms Tuesday when compared to competitors |
 | ≥10% | LUNG | 2026-07-30 | +51.43% | print_vs_priced | Pulmonx Corporation Q2 2026 Earnings Call Summary |
-| … | | | | | 2787 more in the JSON |
+| … | | | | | 2841 more in the JSON |
 
 ### 3d
 
-- ≥5% and <10%: **1887**
-- ≥10%: **1253**
+- ≥5% and <10%: **1900**
+- ≥10%: **1282**
 
 | threshold | ticker | date | ret | class | title |
 | --- | --- | --- | ---: | --- | --- |
@@ -197,12 +197,12 @@ Same direction as the call and |forward return| at the threshold. 5% rows are �
 | ≥10% | ABCL | 2026-08-06 | +68.57% | guidance | AbCellera Biologics Inc (ABCL) (Q2 2026) Earnings Call Highlights: Strong Pipeline Progress and ... |
 | ≥10% | GCTK | 2026-09-02 | +67.91% | capacity | Lokahi Therapeutics Expands ai² Futures Lab Asset Origination Network Through Collaboration with San Diego Sta |
 | ≥10% | AEYE | 2026-10-27 | +60.86% | guidance | AudioEye Beats As AI Efficiencies Drive Margins And First GAAP Profit, But Revenue Growth Slows To 7% |
-| … | | | | | 3115 more in the JSON |
+| … | | | | | 3157 more in the JSON |
 
 ### 4d
 
-- ≥5% and <10%: **1995**
-- ≥10%: **1456**
+- ≥5% and <10%: **2011**
+- ≥10%: **1467**
 
 | threshold | ticker | date | ret | class | title |
 | --- | --- | --- | ---: | --- | --- |
@@ -231,12 +231,12 @@ Same direction as the call and |forward return| at the threshold. 5% rows are �
 | ≥10% | SECZ | 2026-09-18 | +77.36% | market_structure | Securitize Surges After SEC Clears Path for Tokenized Stock Trading |
 | ≥10% | SECZ | 2026-09-18 | +77.36% | market_structure | Polymarket Hires Coinbase's Failed Social-Coin Architect |
 | ≥10% | SECZ | 2026-09-18 | +77.36% | market_structure | SEC Sends Strong Signal to Robinhood, Coinbase Investors |
-| … | | | | | 3426 more in the JSON |
+| … | | | | | 3453 more in the JSON |
 
 ### 5d
 
-- ≥5% and <10%: **2059**
-- ≥10%: **1509**
+- ≥5% and <10%: **2126**
+- ≥10%: **1596**
 
 | threshold | ticker | date | ret | class | title |
 | --- | --- | --- | ---: | --- | --- |
@@ -265,7 +265,7 @@ Same direction as the call and |forward return| at the threshold. 5% rows are �
 | ≥10% | BETR | 2026-10-12 | +72.89% | capital_return | Grant Cardone Says He Never Tells Fannie Mae About The Bitcoin In His Real Estate Deals: Its Just Too Much |
 | ≥10% | SECZ | 2026-09-18 | +71.24% | market_structure | Robinhood Rises as the SEC Clears Tokenized Stocks |
 | ≥10% | SECZ | 2026-09-18 | +71.24% | market_structure | Securitize Surges After SEC Clears Path for Tokenized Stock Trading |
-| … | | | | | 3543 more in the JSON |
+| … | | | | | 3697 more in the JSON |
 
 ## AMRX
 
@@ -285,7 +285,7 @@ Same direction as the call and |forward return| at the threshold. 5% rows are �
 | 4d | +4.27% agree=True |
 | 5d | +8.12% agree=True |
 | 1-4w | +2.11% agree=True |
-| note | window open (1-6m not elapsed; through 2026-11-12) |
+| note | window open (1-6m not elapsed; through 2026-11-13) |
 
 Friday 2026-09-18 16:01 is after the cash close. Entry is Monday 2026-09-21 open→close for 0-1d, never Friday cash. Published at/after 09:30 ET (09:30+30m included) waits for the next RTH.
 
