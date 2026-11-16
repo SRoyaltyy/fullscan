@@ -1,12 +1,12 @@
 {
   "date": "2026-11-16",
-  "generated_at": "2026-11-16T05:06:03.209147-05:00",
+  "generated_at": "2026-11-16T05:06:22.099477-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
     "ok": 4,
-    "partial": 3,
-    "fail": 1,
+    "partial": 4,
+    "fail": 0,
     "n": 8
   },
   "buy_1d": [],
@@ -15,31 +15,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "finviz_digest",
-      "title": "Finviz digest",
-      "date": "2026-11-16",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-11-16T05:03:53.722103-05:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-11-16_finviz_digest.json",
-          "ok": true,
-          "reason": "",
-          "size": 95082,
-          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
-        },
-        {
-          "path": "01_daily/news/2026-11-16_finviz_digest.md",
-          "ok": true,
-          "reason": "",
-          "size": 10798,
-          "preview": "# Finviz Daily Digest \u2014 2026-11-16\n_Generated 2026-11-16T04:49:26.815856-05:00 \u00b7 export=data/exports/finviz_2026-11-13.csv \u00b7 ticker digests=1543 \u00b7 high-signal=575_"
-        }
-      ],
-      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-11-16\n_Generated 2026-11-16T04:49:26.815856-05:00 \u00b7 export=data/exports/finviz_2026-11-13.csv \u00b7 ticker digests=1543 \u00b7 high-signal=575_"
-    },
     {
       "key": "map_heat",
       "title": "Map heat tables",
@@ -200,6 +175,31 @@
         }
       ],
       "preview": "raw=5061 usable=348 single=447 \u00b7 China's economy falters in October as factory output, retail sales miss forecast | Australia Warns China Iron Ore Push Could Breach Trade Rules - Bloomberg.com | This Week's Key Economic and Crypto Events: FOMC Minutes Due, US Retail Sales on | Bulls Notes: Winning Without Caleb? Patrick Williams, Norman Powell Trade Surge  | China\u2019s slowdown deepens in October as industrial output, retail sales, investme \u00b7 # News Parse v2 \u2014 2026-11-16T05:05:54.087890-05:00\nWindow\u224848h | news_mode=on | raw=5061 | usable=348 | single_name=447 | noise_dropped=4177\nusable polarity={'+': 10, '-': 64, 'mixed': 3, 'neutral': 271}"
+    },
+    {
+      "key": "news_actions",
+      "title": "News actions",
+      "date": "2026-11-16",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-16T05:06:21.145908-05:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-11-16_actions.json",
+          "ok": true,
+          "reason": "",
+          "size": 79856,
+          "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers"
+        },
+        {
+          "path": "01_daily/news/2026-11-16_actions.md",
+          "ok": true,
+          "reason": "",
+          "size": 16156,
+          "preview": "# News \u2192 Actions v4 (full framework) \u2014 2026-11-16T05:06:21.129457-05:00\nraw=5060 unique_events=7 tickers=112"
+        }
+      ],
+      "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-11-16T05:06:21.129457-05:00\nraw=5060 unique_events=7 tickers=112"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
