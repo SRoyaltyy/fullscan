@@ -1,6 +1,6 @@
 {
   "date": "2026-11-16",
-  "generated_at": "2026-11-16T15:25:43.094502-05:00",
+  "generated_at": "2026-11-16T15:26:18.801172-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -837,7 +837,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "live-book poller + today.json (2026-11-16)",
-          "size": 16618466,
+          "size": 16618482,
           "said": "live-book poller + today.json (2026-11-16)",
           "bullets": []
         }
@@ -876,7 +876,7 @@
           "role": "required",
           "status": "OK",
           "reason": "live-book poller + today.json (2026-11-16)",
-          "size": 16618466,
+          "size": 16618482,
           "said": "live-book poller + today.json (2026-11-16)",
           "bullets": []
         },
@@ -1887,6 +1887,59 @@
         }
       ],
       "preview": "5037 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-11-16",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-16T15:26:17.835893-05:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-11-16_stock_book.after-freeze-1.json",
+          "ok": true,
+          "reason": "",
+          "size": 1477798,
+          "preview": "1d BUY AMN, ARDT, ACHC, LFST, GMRS \u00b7 SELL ENVX, SKYX, FLNC, TE, RGTI, LTBR, DDD, ATOM"
+        },
+        {
+          "path": "data/stock_book/2026-11-16_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-11-16_input_health.after-freeze-1.json",
+          "ok": true,
+          "reason": "",
+          "size": 2591,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-11-16_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12139,
+          "preview": "2026-11-16 BUY AMN, ARDT, ACHC, LFST, GMRS \u00b7 SELL ENVX, SKYX, FLNC, TE, RGTI, LTBR, DDD, ATOM"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12139,
+          "preview": "2026-11-16 BUY AMN, ARDT, ACHC, LFST, GMRS \u00b7 SELL ENVX, SKYX, FLNC, TE, RGTI, LTBR, DDD, ATOM"
+        },
+        {
+          "path": "01_daily/2026-11-16_stock_book.after-freeze-1.md",
+          "ok": true,
+          "reason": "",
+          "size": 80041,
+          "preview": "# Stock book \u2014 2026-11-16\n_Generated 2026-11-16T15:25:51.486069-05:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY AMN, ARDT, ACHC, LFST, GMRS \u00b7 SELL ENVX, SKYX, FLNC, TE, RGTI, LTBR, DDD, ATOM \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-11-16 BUY AMN, ARDT, ACHC, LFST, GMRS \u00b7 SELL ENVX, SKYX, FLNC, TE, RGTI, LTBR, DDD, ATOM \u00b7 2026-11-16 BUY AMN, ARDT, ACHC, LFST, GMRS \u00b7 SELL ENVX, SKYX, FLNC, TE, RGTI, LTBR, DDD, ATOM \u00b7 # Stock book \u2014 2026-11-16\n_Generated 2026-11-16T15:25:51.486069-05:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "href": {
@@ -1924,6 +1977,14 @@
       "path": "data/day_board/2026-11-16.json",
       "at": "2026-11-16T15:25:43-05:00",
       "commit_msg": "auto: land peer_rs [2026-11-16]",
+      "workflow": "Pre-Open ALL (predictive one-shot)",
+      "run_id": "43943983172",
+      "manifest": "research/input_freeze/2026-11-16/manifest.json"
+    },
+    {
+      "path": "data/day_board/2026-11-16.json",
+      "at": "2026-11-16T15:26:19-05:00",
+      "commit_msg": "auto: land stock_book [2026-11-16]",
       "workflow": "Pre-Open ALL (predictive one-shot)",
       "run_id": "43943983172",
       "manifest": "research/input_freeze/2026-11-16/manifest.json"
