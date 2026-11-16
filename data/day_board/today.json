@@ -1,6 +1,6 @@
 {
   "date": "2026-11-16",
-  "generated_at": "2026-11-16T09:10:43.463179-05:00",
+  "generated_at": "2026-11-16T09:10:53.480685-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -15,31 +15,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "news_parse",
-      "title": "News parse",
-      "date": "2026-11-16",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-11-16T05:06:02.228796-05:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-11-16_parsed.json",
-          "ok": true,
-          "reason": "",
-          "size": 3702299,
-          "preview": "raw=5061 usable=348 single=447 \u00b7 China's economy falters in October as factory output, retail sales miss forecast | Australia Warns China Iron Ore Push Could Breach Trade Rules - Bloomberg.com | This Week's Key Economic and Crypto Events: FOMC Minutes Due, US Retail Sales on | Bulls Notes: Winning Without Caleb? Patrick Williams, Norman Powell Trade Surge  | China\u2019s slowdown deepens in October as industrial output, retail sales, investme"
-        },
-        {
-          "path": "01_daily/news/2026-11-16_parsed.md",
-          "ok": true,
-          "reason": "",
-          "size": 12031,
-          "preview": "# News Parse v2 \u2014 2026-11-16T05:05:54.087890-05:00\nWindow\u224848h | news_mode=on | raw=5061 | usable=348 | single_name=447 | noise_dropped=4177\nusable polarity={'+': 10, '-': 64, 'mixed': 3, 'neutral': 271}"
-        }
-      ],
-      "preview": "raw=5061 usable=348 single=447 \u00b7 China's economy falters in October as factory output, retail sales miss forecast | Australia Warns China Iron Ore Push Could Breach Trade Rules - Bloomberg.com | This Week's Key Economic and Crypto Events: FOMC Minutes Due, US Retail Sales on | Bulls Notes: Winning Without Caleb? Patrick Williams, Norman Powell Trade Surge  | China\u2019s slowdown deepens in October as industrial output, retail sales, investme \u00b7 # News Parse v2 \u2014 2026-11-16T05:05:54.087890-05:00\nWindow\u224848h | news_mode=on | raw=5061 | usable=348 | single_name=447 | noise_dropped=4177\nusable polarity={'+': 10, '-': 64, 'mixed': 3, 'neutral': 271}"
-    },
     {
       "key": "news_actions",
       "title": "News actions (no LLM)",
@@ -242,6 +217,24 @@
         }
       ],
       "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -3.21, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': 1.22, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -0.275, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': 0.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': 4.27, 'dir': 'up', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': 1.15, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -0.95, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': 2.12, 'dir': 'up', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-11-16\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-11-16",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-16T09:10:52.883110-05:00",
+      "files": [
+        {
+          "path": "data/join/2026-11-16_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2229452,
+          "preview": "5900 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 TS, CHRD, EOG, CVX, OXY"
+        }
+      ],
+      "preview": "5900 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 TS, CHRD, EOG, CVX, OXY"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
