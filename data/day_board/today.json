@@ -1,6 +1,6 @@
 {
   "date": "2026-11-16",
-  "generated_at": "2026-11-16T16:43:18.056692-05:00",
+  "generated_at": "2026-11-16T18:35:45.924774-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -76,24 +76,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "peer_rs",
-      "title": "Peer RS",
-      "date": "2026-11-16",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-11-16T09:10:59.523931-05:00",
-      "files": [
-        {
-          "path": "data/peers/2026-11-16_peer_rs.csv",
-          "ok": true,
-          "reason": "",
-          "size": 807187,
-          "preview": "5037 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
-        }
-      ],
-      "preview": "5037 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
-    },
     {
       "key": "stock_book",
       "title": "Stock book + green",
@@ -639,6 +621,59 @@
         }
       ],
       "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest (close) \u2014 2026-11-16\n**Generated:** 2026-11-16T16:43:16.770054-05:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks closed sharply lower as tech weakness and AI uncertainty ahead of Nvidia earnings drove the worst session since November 5\n**Prior close:** SPX -1.92%  Nasdaq -2.49%  Dow -1.41%\n**SPX:** -1.92%  **Nasdaq:** -2.49%  **Dow:** -1.41%\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** NVDA, INTC, MRVL, MU, ARM, PG, UNH, TSN, LHX, MOH, CGON, SMMT, POWL, RCAT\n**Next session:** housing no \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** NVDA\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-11-17\n**Clock use:** `next_open`"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-11-16",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-16T18:35:44.802199-05:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-11-16_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 9633,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -3.21, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': 1.22, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -0.275, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': 0.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': 4.27, 'dir': 'up', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': 1.15, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -0.95, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': 2.12, 'dir': 'up', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-11-16_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5348,
+          "preview": "# Weather report \u2014 2026-11-16\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        },
+        {
+          "path": "01_daily/weather/2026-11-16_weather.after-freeze-1.json",
+          "ok": true,
+          "reason": "",
+          "size": 9746,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -3.21, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': 1.22, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -0.275, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': 0.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': 4.27, 'dir': 'up', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': 1.15, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -0.95, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': 2.12, 'dir': 'up', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-11-16_weather.after-freeze-2.json",
+          "ok": true,
+          "reason": "",
+          "size": 9746,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -3.21, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': 1.22, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -0.275, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': 0.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': 4.27, 'dir': 'up', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': 1.15, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -0.95, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': 2.12, 'dir': 'up', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-11-16_weather.after-freeze-3.json",
+          "ok": true,
+          "reason": "",
+          "size": 9748,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -3.21, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': 1.22, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -0.275, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': 0.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': 4.27, 'dir': 'up', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': 1.15, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -0.95, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': 2.12, 'dir': 'up', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-11-16_weather.after-freeze-4.json",
+          "ok": true,
+          "reason": "",
+          "size": 9749,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -3.21, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': 1.22, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -0.275, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': 0.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': 4.27, 'dir': 'up', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': 1.15, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -0.95, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': 2.12, 'dir': 'up', 'conf': 0.4, 'source': 'finviz_week'}"
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -3.21, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': 1.22, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -0.275, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': 0.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': 4.27, 'dir': 'up', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': 1.15, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -0.95, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': 2.12, 'dir': 'up', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-11-16\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade. \u00b7 weather sectors 11 \u00b7 Basic Materials={'score': -3.21, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': 1.22, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -0.275, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': 0.38, 'dir': "
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
