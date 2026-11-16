@@ -1,66 +1,74 @@
 {
   "date": "2026-11-16",
-  "generated_at": "2026-11-16T09:11:00.126848-05:00",
+  "generated_at": "2026-11-16T09:15:38.393606-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
-    "ok": 4,
-    "partial": 3,
+    "ok": 6,
+    "partial": 1,
     "fail": 1,
     "n": 8
   },
-  "buy_1d": [],
-  "sell_1d": [],
+  "buy_1d": [
+    {
+      "ticker": "AMN",
+      "score": 0.7321068594934466
+    },
+    {
+      "ticker": "ARDT",
+      "score": 0.6496088967113168
+    },
+    {
+      "ticker": "ACHC",
+      "score": 0.5140029661053572
+    },
+    {
+      "ticker": "LFST",
+      "score": 0.7078145581465245
+    },
+    {
+      "ticker": "GMRS",
+      "score": 0.45320589078074586
+    }
+  ],
+  "sell_1d": [
+    {
+      "ticker": "ENVX",
+      "score": -0.27819823184902825
+    },
+    {
+      "ticker": "SKYX",
+      "score": -0.5014180063486378
+    },
+    {
+      "ticker": "FLNC",
+      "score": -0.45141321172328647
+    },
+    {
+      "ticker": "TE",
+      "score": -0.32837044903220364
+    },
+    {
+      "ticker": "RGTI",
+      "score": -0.3630272887615335
+    },
+    {
+      "ticker": "LTBR",
+      "score": -0.36103928049199696
+    },
+    {
+      "ticker": "DDD",
+      "score": -0.35245192234565703
+    },
+    {
+      "ticker": "ATOM",
+      "score": -0.4058944925854121
+    }
+  ],
   "flatten": {},
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "finviz_digest",
-      "title": "Finviz digest",
-      "date": "2026-11-16",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-11-16T05:07:27.640936-05:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-11-16_finviz_digest.json",
-          "ok": true,
-          "reason": "",
-          "size": 97850,
-          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
-        },
-        {
-          "path": "01_daily/news/2026-11-16_finviz_digest.md",
-          "ok": true,
-          "reason": "",
-          "size": 11347,
-          "preview": "# Finviz Daily Digest \u2014 2026-11-16\n_Generated 2026-11-16T05:07:27.453251-05:00 \u00b7 export=data/exports/finviz_2026-11-16.csv \u00b7 ticker digests=966 \u00b7 high-signal=382_"
-        },
-        {
-          "path": "data/exports/finviz_2026-11-16.csv",
-          "ok": true,
-          "reason": "",
-          "size": 12285243,
-          "preview": "11763 rows \u00b7 Ticker,Company,Industry,Market Cap,Forward P/E,P/S,P/B,P/Cash,P/Free Cash Flow,EPS (ttm),Sales Year Over Year TTM,EPS Su \u00b7 A, AA, AAA, AAAA, AAAB"
-        },
-        {
-          "path": "data/finviz/latest.csv",
-          "ok": true,
-          "reason": "",
-          "size": 11061963,
-          "preview": "11763 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAB\""
-        },
-        {
-          "path": "01_daily/news/2026-11-16_finviz_digest_preopen.json",
-          "ok": true,
-          "reason": "",
-          "size": 97850,
-          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
-        }
-      ],
-      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-11-16\n_Generated 2026-11-16T05:07:27.453251-05:00 \u00b7 export=data/exports/finviz_2026-11-16.csv \u00b7 ticker digests=966 \u00b7 high-signal=382_ \u00b7 11763 rows \u00b7 Ticker,Company,Industry,Market Cap,Forward P/E,P/S,P/B,P/Cash,P/Free Cash Flow,EPS (ttm),Sales Year Over Year TTM,EPS Su \u00b7 A, AA, AAA, AAAA, AAAB \u00b7 11763 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAB\" \u00b7 keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
-    },
     {
       "key": "finviz_market_digest",
       "title": "Finviz homepage market digest",
@@ -228,6 +236,59 @@
         }
       ],
       "preview": "5037 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-11-16",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-16T09:15:37.396553-05:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-11-16_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1477798,
+          "preview": "1d BUY AMN, ARDT, ACHC, LFST, GMRS \u00b7 SELL ENVX, SKYX, FLNC, TE, RGTI, LTBR, DDD, ATOM"
+        },
+        {
+          "path": "data/stock_book/2026-11-16_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-11-16_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2591,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-11-16_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12139,
+          "preview": "2026-11-16 BUY AMN, ARDT, ACHC, LFST, GMRS \u00b7 SELL ENVX, SKYX, FLNC, TE, RGTI, LTBR, DDD, ATOM"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12139,
+          "preview": "2026-11-16 BUY AMN, ARDT, ACHC, LFST, GMRS \u00b7 SELL ENVX, SKYX, FLNC, TE, RGTI, LTBR, DDD, ATOM"
+        },
+        {
+          "path": "01_daily/2026-11-16_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 80041,
+          "preview": "# Stock book \u2014 2026-11-16\n_Generated 2026-11-16T09:11:07.549499-05:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY AMN, ARDT, ACHC, LFST, GMRS \u00b7 SELL ENVX, SKYX, FLNC, TE, RGTI, LTBR, DDD, ATOM \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-11-16 BUY AMN, ARDT, ACHC, LFST, GMRS \u00b7 SELL ENVX, SKYX, FLNC, TE, RGTI, LTBR, DDD, ATOM \u00b7 2026-11-16 BUY AMN, ARDT, ACHC, LFST, GMRS \u00b7 SELL ENVX, SKYX, FLNC, TE, RGTI, LTBR, DDD, ATOM \u00b7 # Stock book \u2014 2026-11-16\n_Generated 2026-11-16T09:11:07.549499-05:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
