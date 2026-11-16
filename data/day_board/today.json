@@ -1,6 +1,6 @@
 {
   "date": "2026-11-16",
-  "generated_at": "2026-11-16T05:05:28.742960-05:00",
+  "generated_at": "2026-11-16T05:05:55.549597-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -15,31 +15,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "map_heat",
-      "title": "Map heat morning overlay",
-      "date": "2026-11-16",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-11-16T04:51:51.443241-05:00",
-      "files": [
-        {
-          "path": "01_daily/map_heat/2026-11-16_map_heat.json",
-          "ok": true,
-          "reason": "",
-          "size": 273862,
-          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
-        },
-        {
-          "path": "01_daily/map_heat/2026-11-16_map_heat.md",
-          "ok": true,
-          "reason": "",
-          "size": 18475,
-          "preview": "# MAP HEAT \u2014 2026-11-16\nExport `finviz_2026-11-13.csv` \u00b7 11616 names \u00b7 generated 2026-11-16T04:51:51.371774-05:00"
-        }
-      ],
-      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-11-16\nExport `finviz_2026-11-13.csv` \u00b7 11616 names \u00b7 generated 2026-11-16T04:51:51.371774-05:00"
-    },
     {
       "key": "finviz_digest",
       "title": "Finviz digest",
@@ -200,6 +175,31 @@
         }
       ],
       "preview": "2610 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 YMM, BEKE, ECO, HAL, ABNB \u00b7 2610 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 ECO, HAL, ATAT, YMM, ASC"
+    },
+    {
+      "key": "news_parse",
+      "title": "News parse",
+      "date": "2026-11-16",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-16T05:05:54.526636-05:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-11-16_parsed.json",
+          "ok": true,
+          "reason": "",
+          "size": 3702299,
+          "preview": "raw=5061 usable=348 single=447 \u00b7 China's economy falters in October as factory output, retail sales miss forecast | Australia Warns China Iron Ore Push Could Breach Trade Rules - Bloomberg.com | This Week's Key Economic and Crypto Events: FOMC Minutes Due, US Retail Sales on | Bulls Notes: Winning Without Caleb? Patrick Williams, Norman Powell Trade Surge  | China\u2019s slowdown deepens in October as industrial output, retail sales, investme"
+        },
+        {
+          "path": "01_daily/news/2026-11-16_parsed.md",
+          "ok": true,
+          "reason": "",
+          "size": 12031,
+          "preview": "# News Parse v2 \u2014 2026-11-16T05:05:54.087890-05:00\nWindow\u224848h | news_mode=on | raw=5061 | usable=348 | single_name=447 | noise_dropped=4177\nusable polarity={'+': 10, '-': 64, 'mixed': 3, 'neutral': 271}"
+        }
+      ],
+      "preview": "raw=5061 usable=348 single=447 \u00b7 China's economy falters in October as factory output, retail sales miss forecast | Australia Warns China Iron Ore Push Could Breach Trade Rules - Bloomberg.com | This Week's Key Economic and Crypto Events: FOMC Minutes Due, US Retail Sales on | Bulls Notes: Winning Without Caleb? Patrick Williams, Norman Powell Trade Surge  | China\u2019s slowdown deepens in October as industrial output, retail sales, investme \u00b7 # News Parse v2 \u2014 2026-11-16T05:05:54.087890-05:00\nWindow\u224848h | news_mode=on | raw=5061 | usable=348 | single_name=447 | noise_dropped=4177\nusable polarity={'+': 10, '-': 64, 'mixed': 3, 'neutral': 271}"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
