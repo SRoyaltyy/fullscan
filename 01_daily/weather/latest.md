@@ -1,11 +1,11 @@
-# Weather report — 2026-11-13
+# Weather report — 2026-11-16
 
 Is today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade.
 
 ## Snapshot
 
 - **Risk state:** UNKNOWN
-- **Yields:** rising (fred_dgs10) | **Dollar:** strong (dxy) | **Oil:** flat | **VIX:** calm (ratio 0.93 via vix/vix3m) spot 19.07
+- **Yields:** unknown (llm_factor_fallback) | **Dollar:** flat (dxy) | **Oil:** flat | **VIX:** calm (ratio 0.97 via vix/vix3m) spot 20.09
 - **Fear & Greed:** n/a | **Yield/SPX 5d corr:** -0.84
 - **High-impact events:** 4 bullish vs 12 bearish | China: bull
 - ⚠️ **Data gaps:** general predict run, general predict factor scoreboard
@@ -14,17 +14,17 @@ Is today good for each *kind* of stock? Labels come from `data/universe/`; this 
 
 | Label | Weather | Conf | Why |
 |---|---|---|---|
-| sector:Basic Materials | ⛅ neutral | medium | finviz sector median week -1.16% [tape] |
-| sector:Communication Services | ⛅ neutral | medium | finviz sector median week +0.54% [tape] |
-| sector:Consumer Cyclical | ⛅ neutral | medium | finviz sector median week -1.42% [tape] |
-| sector:Consumer Defensive | ⛅ neutral | medium | finviz sector median week -0.53% [tape] |
-| sector:Energy | 🌤️ favorable | medium | finviz sector median week +4.14% [tape] |
-| sector:Financial | ⛅ neutral | medium | finviz sector median week +0.96% [tape] |
-| sector:Healthcare | ⛅ neutral | medium | finviz sector median week +0.99% [tape] |
+| sector:Basic Materials | 🌧️ hostile | medium | finviz sector median week -3.21% [tape] |
+| sector:Communication Services | ⛅ neutral | medium | finviz sector median week +1.22% [tape] |
+| sector:Consumer Cyclical | ⛅ neutral | medium | finviz sector median week -0.28% [tape] |
+| sector:Consumer Defensive | ⛅ neutral | medium | finviz sector median week +0.38% [tape] |
+| sector:Energy | 🌤️ favorable | medium | finviz sector median week +4.27% [tape] |
+| sector:Financial | ⛅ neutral | medium | finviz sector median week +1.15% [tape] |
+| sector:Healthcare | ⛅ neutral | medium | finviz sector median week -0.95% [tape] |
 | sector:Industrials | 🌧️ hostile | medium | news_judge SECTOR Industrials [bearish] |
-| sector:Real Estate | ⛅ neutral | medium | finviz sector median week -1.38% [tape] |
-| sector:Technology | 🌤️ favorable | medium | finviz sector median week +3.05% [tape] |
-| sector:Utilities | ⛅ neutral | medium | finviz sector median week +0.20% [tape] |
+| sector:Real Estate | ⛅ neutral | medium | finviz sector median week -0.66% [tape] |
+| sector:Technology | ⛅ neutral | medium | finviz sector median week +1.43% [tape] |
+| sector:Utilities | ⛅ neutral | medium | finviz sector median week +1.27% [tape] |
 
 ## Size
 
@@ -57,26 +57,26 @@ Is today good for each *kind* of stock? Labels come from `data/universe/`; this 
 
 | Label | Weather | Conf | Why |
 |---|---|---|---|
-| profit:no | ⛅ neutral | low | risk-unknown, F&G None |
-| profit:yes | ⛅ neutral | low | — |
-| profit:thin | ⛅ neutral | low | — |
+| profit:no | ❔ unknown | low | no yields/risk signals |
+| profit:thin | ❔ unknown | low | no yields/risk signals |
+| profit:yes | ❔ unknown | low | no yields/risk signals |
 
 ## Style (growth/value)
 
 | Label | Weather | Conf | Why |
 |---|---|---|---|
-| style:growth | 🌧️ hostile | medium | yields rising — long-duration growth de-rates [factor: Bond yields] |
-| style:value | 🌤️ favorable | medium | rising yields/reflation favors value & cyclicals [factor: Bond yields] |
-| style:blend | ⛅ neutral | low | — |
+| style:growth | ❔ unknown | low | no yields/risk signals |
+| style:blend | ❔ unknown | low | no yields/risk signals |
+| style:value | ❔ unknown | low | no yields/risk signals |
 
 ## Leverage
 
 | Label | Weather | Conf | Why |
 |---|---|---|---|
-| lev:high | 🌧️ hostile | medium | yields rising — leverage amplifies the downside [factors + general] |
-| lev:low | 🌤️ favorable | low | balance-sheet strength preferred in stress |
-| lev:mid | ⛅ neutral | low | — |
-| lev:neg_equity | 🌧️ hostile | low | negative equity is distressed in any regime |
+| lev:low | ❔ unknown | low | no signals |
+| lev:mid | ❔ unknown | low | no signals |
+| lev:high | ❔ unknown | low | no signals |
+| lev:neg_equity | ❔ unknown | low | no signals |
 
 ## Momentum state
 
