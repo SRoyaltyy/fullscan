@@ -1,6 +1,6 @@
 {
  "date": "2026-11-16",
- "generated_at": "2026-11-16T04:44:46.544296-05:00",
+ "generated_at": "2026-11-16T04:57:15.537161-05:00",
  "stance_vocabulary": [
   "favorable",
   "neutral",
@@ -14,17 +14,19 @@
   "fed_score": null,
   "dollar_oil_score": null,
   "futures_score": null,
-  "yields": "unknown",
-  "yields_source": "llm_factor_fallback",
+  "yields": "rising",
+  "yields_source": "fred_dgs10",
+  "dgs10_delta_1d": 0.12,
+  "dgs10_current": 5.1,
   "dollar": "flat",
   "dollar_source": "dxy",
-  "dxy_pct_1d": 0.06,
-  "vix_ratio": 0.974,
-  "vix_spot": 20.09,
-  "vix_delta_1d": 0.79,
+  "dxy_pct_1d": 0.11,
+  "vix_ratio": 0.975,
+  "vix_spot": 20.11,
+  "vix_delta_1d": 0.81,
   "vix_ratio_source": "vix/vix3m",
   "vix": "calm",
-  "oil_pct_1d": -0.67,
+  "oil_pct_1d": -0.17,
   "oil": "flat",
   "fear_greed": null,
   "fear_greed_label": null,
@@ -296,58 +298,58 @@
   },
   "profit": {
    "no": {
-    "stance": "unknown",
+    "stance": "neutral",
     "confidence": "low",
-    "why": "no yields/risk signals"
-   },
-   "thin": {
-    "stance": "unknown",
-    "confidence": "low",
-    "why": "no yields/risk signals"
+    "why": "risk-unknown, F&G None"
    },
    "yes": {
-    "stance": "unknown",
+    "stance": "neutral",
     "confidence": "low",
-    "why": "no yields/risk signals"
+    "why": "—"
+   },
+   "thin": {
+    "stance": "neutral",
+    "confidence": "low",
+    "why": "—"
    }
   },
   "lev": {
+   "high": {
+    "stance": "hostile",
+    "confidence": "medium",
+    "why": "yields rising — leverage amplifies the downside [factors + general]"
+   },
    "low": {
-    "stance": "unknown",
+    "stance": "favorable",
     "confidence": "low",
-    "why": "no signals"
+    "why": "balance-sheet strength preferred in stress"
    },
    "mid": {
-    "stance": "unknown",
+    "stance": "neutral",
     "confidence": "low",
-    "why": "no signals"
-   },
-   "high": {
-    "stance": "unknown",
-    "confidence": "low",
-    "why": "no signals"
+    "why": "—"
    },
    "neg_equity": {
-    "stance": "unknown",
+    "stance": "hostile",
     "confidence": "low",
-    "why": "no signals"
+    "why": "negative equity is distressed in any regime"
    }
   },
   "style": {
    "growth": {
-    "stance": "unknown",
-    "confidence": "low",
-    "why": "no yields/risk signals"
-   },
-   "blend": {
-    "stance": "unknown",
-    "confidence": "low",
-    "why": "no yields/risk signals"
+    "stance": "hostile",
+    "confidence": "medium",
+    "why": "yields rising — long-duration growth de-rates [factor: Bond yields]"
    },
    "value": {
-    "stance": "unknown",
+    "stance": "favorable",
+    "confidence": "medium",
+    "why": "rising yields/reflation favors value & cyclicals [factor: Bond yields]"
+   },
+   "blend": {
+    "stance": "neutral",
     "confidence": "low",
-    "why": "no yields/risk signals"
+    "why": "—"
    }
   },
   "mom": {
