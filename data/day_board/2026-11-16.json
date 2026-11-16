@@ -1,6 +1,6 @@
 {
   "date": "2026-11-16",
-  "generated_at": "2026-11-16T16:04:27.987895-05:00",
+  "generated_at": "2026-11-16T16:04:35.285875-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -2069,6 +2069,31 @@
         }
       ],
       "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -3.21, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': 1.22, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -0.275, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': 0.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': 4.27, 'dir': 'up', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': 1.15, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -0.95, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': 2.12, 'dir': 'up', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-11-16\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade. \u00b7 weather sectors 11 \u00b7 Basic Materials={'score': -3.21, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': 1.22, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -0.275, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': 0.38, 'dir': "
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-11-16",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-16T16:04:34.523936-05:00",
+      "files": [
+        {
+          "path": "data/join/2026-11-16_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2229452,
+          "preview": "5900 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 TS, CHRD, EOG, CVX, OXY"
+        },
+        {
+          "path": "data/join/2026-11-16_ranked.after-freeze-1.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2229452,
+          "preview": "5900 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 TS, CHRD, EOG, CVX, OXY"
+        }
+      ],
+      "preview": "5900 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 TS, CHRD, EOG, CVX, OXY \u00b7 5900 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 TS, CHRD, EOG, CVX, OXY"
     }
   ],
   "href": {
@@ -2106,6 +2131,14 @@
       "path": "data/day_board/2026-11-16.json",
       "at": "2026-11-16T16:04:28-05:00",
       "commit_msg": "auto: land weather [2026-11-16]",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "43954816113",
+      "manifest": "research/input_freeze/2026-11-16/manifest.json"
+    },
+    {
+      "path": "data/day_board/2026-11-16.json",
+      "at": "2026-11-16T16:04:35-05:00",
+      "commit_msg": "auto: land join [2026-11-16]",
       "workflow": "Stock Book ALL (one-shot)",
       "run_id": "43954816113",
       "manifest": "research/input_freeze/2026-11-16/manifest.json"

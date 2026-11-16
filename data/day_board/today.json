@@ -1,6 +1,6 @@
 {
   "date": "2026-11-16",
-  "generated_at": "2026-11-16T16:04:27.987895-05:00",
+  "generated_at": "2026-11-16T16:04:35.285875-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -76,24 +76,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "peer_rs",
-      "title": "Peer RS",
-      "date": "2026-11-16",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-11-16T09:10:59.523931-05:00",
-      "files": [
-        {
-          "path": "data/peers/2026-11-16_peer_rs.csv",
-          "ok": true,
-          "reason": "",
-          "size": 807187,
-          "preview": "5037 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
-        }
-      ],
-      "preview": "5037 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
-    },
     {
       "key": "stock_book",
       "title": "Stock book + green",
@@ -660,6 +642,31 @@
         }
       ],
       "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -3.21, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': 1.22, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -0.275, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': 0.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': 4.27, 'dir': 'up', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': 1.15, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -0.95, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': 2.12, 'dir': 'up', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-11-16\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade. \u00b7 weather sectors 11 \u00b7 Basic Materials={'score': -3.21, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': 1.22, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -0.275, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': 0.38, 'dir': "
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-11-16",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-16T16:04:34.523936-05:00",
+      "files": [
+        {
+          "path": "data/join/2026-11-16_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2229452,
+          "preview": "5900 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 TS, CHRD, EOG, CVX, OXY"
+        },
+        {
+          "path": "data/join/2026-11-16_ranked.after-freeze-1.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2229452,
+          "preview": "5900 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 TS, CHRD, EOG, CVX, OXY"
+        }
+      ],
+      "preview": "5900 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 TS, CHRD, EOG, CVX, OXY \u00b7 5900 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 TS, CHRD, EOG, CVX, OXY"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
