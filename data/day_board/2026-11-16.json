@@ -1,6 +1,6 @@
 {
   "date": "2026-11-16",
-  "generated_at": "2026-11-16T05:06:22.099477-05:00",
+  "generated_at": "2026-11-16T05:06:30.944587-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -1195,11 +1195,11 @@
     },
     {
       "key": "news_actions",
-      "title": "News actions",
+      "title": "News actions (no LLM)",
       "date": "2026-11-16",
       "ok": true,
       "pushed": true,
-      "at": "2026-11-16T05:06:21.145908-05:00",
+      "at": "2026-11-16T05:06:29.951143-05:00",
       "files": [
         {
           "path": "01_daily/news/2026-11-16_actions.json",
