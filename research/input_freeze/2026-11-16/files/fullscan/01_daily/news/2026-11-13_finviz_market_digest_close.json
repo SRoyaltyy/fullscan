@@ -1,0 +1,104 @@
+{
+  "date": "2026-11-13",
+  "generated_at": "2026-11-13T20:32:28.879573-05:00",
+  "timezone": "America/New_York",
+  "source": "live",
+  "source_url": "https://elite.finviz.com/",
+  "archive_snapshot_ts": null,
+  "archive_snapshot_at": null,
+  "archive_url": null,
+  "clock_legal": true,
+  "clock_same_morning": false,
+  "clock_use": "next_open",
+  "clock_legal_for": "2026-11-16",
+  "capture_slot": "close",
+  "clock_rule": "Live post-close answer-key (~16:05 ET). Always next_open for the NEXT session (2026-11-16) — never same_morning. Writes *_finviz_market_digest_close.* only. Capture only — not tape_anchor / predict / #210.",
+  "kind": "finviz_homepage_market_digest_close",
+  "represents": "Finviz homepage post-close answer-key. clock_use is always next_open; clock_legal_for is the next NYSE session. Lives at *_finviz_market_digest_close.*. Does not replace the same_morning warm-up file. Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "US stocks ended mixed as Nvidia-led chip selloff offset defensive sector strength while hotter PPI data left weekly rebound intact",
+  "raw_text": "- The S&P 500 ($SPX) fell 0.4%, the Nasdaq Composite ($COMP) dropped 0.91%, and the Russell 2000 (IWM) lost 0.31%, while the Dow Jones Industrial Average ($DJI) edged up 0.1% in Friday’s mixed session.\n- For the week, the S&P 500 ($SPX), Dow, and Nasdaq each gained about 2.1%–2.5%, with the S&P 500 ($SPX) and Nasdaq logging their best weekly performance since August and snapping four-week losing streaks.\n- Nvidia (NVDA) slid 2% after CEO Jensen Huang resigned amid reports of multiple extramarital affairs, including with a businesswoman suspected of spying for China, leaving the stock down more than $650 billion in market value for the week.\n- Advanced Micro Devices (AMD) sank 8.8% and Broadcom (AVGO) fell 4.8%, helping push the Philadelphia Semiconductor Index 3.4% lower as investors reassessed the chip group following the Nvidia (NVDA) turmoil.\n- Six of 11 S&P 500 ($SPX) sectors advanced, led by consumer staples, which climbed roughly 1.4%–1.9%, and energy, while technology lagged on chip weakness.\n- Meta Platforms (META) gained 2.9%, and strength in Apple (AAPL) and Eli Lilly (LLY) helped limit broader S&P 500 ($SPX) losses despite pressure from semiconductor stocks.\n- The Federal Aviation Administration ordered a rare nationwide ground stop due to a telecommunications outage at air traffic control centers, delaying more than 10,000 flights and weighing on airline stocks.\n- October producer prices rose 0.3% month-over-month and 6.5% year-over-year, the fastest annual pace since November 2022, though the report had limited impact on interest-rate expectations.\n- In after-hours trading, Inhibrx Biosciences (INBX) fell about 4.5% after missing fiscal Q3 EPS estimates, while small-cap names BEEM (BEEM) and ACTU (ACTU) reported earnings with limited immediate stock reaction.\n- Traders looked ahead to next week’s Nvidia (NVDA) earnings and the planned Anthropic IPO as key tests for the durability of the AI trade.",
+  "raw_summary_md": "- The **S&P 500** ([$SPX](https://finviz.com/index/SPX?p=d)) fell 0.4%, the **Nasdaq Composite** ([$COMP](https://finviz.com/index/COMP?p=d)) dropped 0.91%, and the **Russell 2000** ([IWM](https://finviz.com/quote?t=IWM)) lost 0.31%, while the **Dow Jones Industrial Average** ([$DJI](https://finviz.com/index/DJI?p=d)) edged up 0.1% in Friday’s **mixed session**.\n- For the week, the **S&P 500** ([$SPX](https://finviz.com/index/SPX?p=d)), Dow, and Nasdaq each gained about 2.1%–2.5%, with the **S&P 500** ([$SPX](https://finviz.com/index/SPX?p=d)) and Nasdaq logging their **best weekly performance** since August and snapping **four-week losing streaks**.\n- **Nvidia** ([NVDA](https://finviz.com/quote?t=NVDA)) slid 2% after CEO Jensen Huang resigned amid reports of multiple **extramarital affairs**, including with a businesswoman suspected of spying for China, leaving the stock down more than **$650 billion** in market value for the week.\n- **Advanced Micro Devices** ([AMD](https://finviz.com/quote?t=AMD)) sank 8.8% and **Broadcom** ([AVGO](https://finviz.com/quote?t=AVGO)) fell 4.8%, helping push the Philadelphia Semiconductor Index **3.4% lower** as investors reassessed the chip group following the **Nvidia** ([NVDA](https://finviz.com/quote?t=NVDA)) turmoil.\n- Six of 11 **S&P 500** ([$SPX](https://finviz.com/index/SPX?p=d)) sectors advanced, led by **consumer staples**, which climbed roughly 1.4%–1.9%, and energy, while **technology lagged** on chip weakness.\n- **Meta Platforms** ([META](https://finviz.com/quote?t=META)) **gained 2.9%**, and strength in **Apple** ([AAPL](https://finviz.com/quote?t=AAPL)) and **Eli Lilly** ([LLY](https://finviz.com/quote?t=LLY)) helped limit broader **S&P 500** ([$SPX](https://finviz.com/index/SPX?p=d)) losses despite pressure from semiconductor stocks.\n- The Federal Aviation Administration ordered a rare **nationwide ground stop** due to a telecommunications outage at air traffic control centers, delaying more than **10,000 flights** and weighing on airline stocks.\n- October producer prices rose 0.3% month-over-month and **6.5% year-over-year**, the fastest annual pace since November 2022, though the report had limited impact on interest-rate expectations.\n- In after-hours trading, Inhibrx Biosciences ([INBX](https://finviz.com/quote?t=INBX)) **fell about 4.5%** after missing fiscal Q3 EPS estimates, while small-cap names **BEEM** ([BEEM](https://finviz.com/quote?t=BEEM)) and **ACTU** ([ACTU](https://finviz.com/quote?t=ACTU)) reported earnings with limited immediate stock reaction.\n- Traders looked ahead to next week’s **Nvidia** ([NVDA](https://finviz.com/quote?t=NVDA)) earnings and the **planned Anthropic IPO** as **key tests** for the durability of the AI trade.",
+  "index_moves": [
+    {
+      "name": "S&P 500",
+      "code": "SPX",
+      "change_pct": -0.4,
+      "verb": "fell"
+    },
+    {
+      "name": "Nasdaq Composite",
+      "code": "COMP",
+      "change_pct": -0.91,
+      "verb": "dropped"
+    },
+    {
+      "name": "Russell 2000",
+      "code": "RUT",
+      "change_pct": -0.31,
+      "verb": "lost"
+    }
+  ],
+  "oil": null,
+  "cpi": null,
+  "fed_odds": null,
+  "named_tickers": [
+    "NVDA",
+    "AMD",
+    "AVGO",
+    "META",
+    "AAPL",
+    "LLY",
+    "INBX",
+    "BEEM",
+    "ACTU"
+  ],
+  "named_leaders": [
+    "NVDA",
+    "AMD",
+    "AVGO",
+    "META",
+    "AAPL",
+    "LLY",
+    "INBX",
+    "BEEM",
+    "ACTU"
+  ],
+  "calendar": [
+    "The S&P 500 ($SPX) fell 0.4%, the Nasdaq Composite ($COMP) dropped 0.91%, and the Russell 2000 (IWM) lost 0.31%, while the Dow Jones Industrial Average ($DJI) edged up 0.1% in Friday’s mixed session.",
+    "Traders looked ahead to next week’s Nvidia (NVDA) earnings and the planned Anthropic IPO as key tests for the durability of the AI trade."
+  ],
+  "prior_close": {
+    "spx": -0.4,
+    "nasdaq": -0.91,
+    "dow": null
+  },
+  "cpi_fed": {
+    "cpi": null,
+    "fed_odds": null
+  },
+  "next_session_calendar": {
+    "housing": false,
+    "retail": false,
+    "fed": true,
+    "bullets": [
+      "Traders looked ahead to next week’s Nvidia (NVDA) earnings and the planned Anthropic IPO as key tests for the durability of the AI trade."
+    ],
+    "text": "Traders looked ahead to next week’s Nvidia (NVDA) earnings and the planned Anthropic IPO as key tests for the durability of the AI trade."
+  },
+  "earnings_slate": {
+    "tickers": [],
+    "text": ""
+  },
+  "geo_grain": {
+    "geo": false,
+    "grain": false,
+    "flags": [],
+    "text": ""
+  },
+  "finviz_id": 344537,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-11-13T20:07:11.647",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "bad"
+}
