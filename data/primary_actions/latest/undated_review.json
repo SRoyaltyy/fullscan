@@ -1,8 +1,8 @@
 [
   {
-    "title": "Measures for Balancing Electricity Supply and Demand for Winter 2026 Compiled",
-    "url": "https://www.meti.go.jp/english/press/2026/11/20261110001.html",
-    "native_id": "https://www.meti.go.jp/english/press/2026/11/20261110001.html",
+    "title": "BIS Issues Rule Addressing Remote Access to American Super Intelligence Technology",
+    "url": "https://www.bis.gov/press-release/bis-issues-rule-addressing-remote-access-american-super-intelligence-technology",
+    "native_id": "https://www.bis.gov/press-release/bis-issues-rule-addressing-remote-access-american-super-intelligence-technology",
     "published_at": null,
     "published_raw": null,
     "summary": "",
@@ -11,16 +11,184 @@
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Japan Ministry of Economy Trade and Industry",
-      "jurisdiction": "JP",
-      "family": "trade_and_industry_policy"
+      "issuer": "Bureau of Industry and Security",
+      "jurisdiction": "US",
+      "family": "export_controls"
     },
-    "primary_source_id": "jp-meti-index",
-    "n": 10585,
-    "first_seen": "2026-11-16T08:01:11.696033+00:00",
-    "last_seen": "2026-11-16T08:01:11.696033+00:00",
+    "primary_source_id": "us-bis-index",
+    "n": 10619,
+    "first_seen": "2026-11-16T22:54:52.991484+00:00",
+    "last_seen": "2026-11-16T22:54:52.991484+00:00",
     "source_ids": [
-      "jp-meti-index"
+      "us-bis-index"
+    ]
+  },
+  {
+    "title": "From Freezer to Feast: Choosing and Safely Thawing Your Thanksgiving Turkey",
+    "url": "http://www.fsis.usda.gov/news-events/news-press-releases/freezer-feast-choosing-and-safely-thawing-your-thanksgiving-turkey",
+    "native_id": "d149c43c-dcbe-4d46-8c35-5043f67f6a44",
+    "published_at": null,
+    "published_raw": "Mon, 11/16/2026 - 12:00",
+    "summary": "<p>Planning a safe Thanksgiving meal starts long before the oven turns on. Whether you’re hosting Thanksgiving for the first time or preparing your annual family feast, choosing the right turkey</p>",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "USDA Food Safety and Inspection Service — News & Events",
+      "jurisdiction": "US",
+      "family": "product_safety"
+    },
+    "primary_source_id": "us-fsis-2f49ece915",
+    "n": 10635,
+    "first_seen": "2026-11-16T22:54:52.991484+00:00",
+    "last_seen": "2026-11-16T22:54:52.991484+00:00",
+    "source_ids": [
+      "us-fsis-2f49ece915"
+    ]
+  },
+  {
+    "title": "Constituent Update - November 13, 2026",
+    "url": "http://www.fsis.usda.gov/news-events/news-press-releases/constituent-update-november-13-2026",
+    "native_id": "20006bb3-4f9f-45e9-b217-3b87e545b805",
+    "published_at": null,
+    "published_raw": "Fri, 11/13/2026 - 12:00",
+    "summary": "<p>Stakeholder Engagement On November 11, Administrator Dr. Justin Ransom addressed members at the U.S. Meat Export Federation’s 50th Anniversary Strategic Planning Conference in Indian Wells, Calif., where he shared how</p>",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "USDA Food Safety and Inspection Service — News & Events",
+      "jurisdiction": "US",
+      "family": "product_safety"
+    },
+    "primary_source_id": "us-fsis-2f49ece915",
+    "n": 10636,
+    "first_seen": "2026-11-16T22:54:52.991484+00:00",
+    "last_seen": "2026-11-16T22:54:52.991484+00:00",
+    "source_ids": [
+      "us-fsis-2f49ece915"
+    ]
+  },
+  {
+    "title": "Media Bureau Announces January 11, 2027 Effective Date for Repeal of the National Television Multiple Ownership Rule",
+    "url": "https://www.fcc.gov/edoc/426987",
+    "native_id": "426987",
+    "published_at": null,
+    "published_raw": "",
+    "summary": "The Media Bureau announces that the Commission's repeal of the national television multiple ownership rule will become effective on January 11, 2027.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Federal Communications Commission — Public Notices",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
+    },
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 10640,
+    "first_seen": "2026-11-16T22:54:52.991484+00:00",
+    "last_seen": "2026-11-16T22:54:52.991484+00:00",
+    "source_ids": [
+      "us-fcc-e95ecda3bb"
+    ]
+  },
+  {
+    "title": "The Public Safety and Homeland Security Bureau Places into the Record of Two Proceedings an Opposition Memorandum From the U.S. Department of War",
+    "url": "https://www.fcc.gov/edoc/426980",
+    "native_id": "426980",
+    "published_at": null,
+    "published_raw": "",
+    "summary": ".",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Federal Communications Commission — Public Notices",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
+    },
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 10641,
+    "first_seen": "2026-11-16T22:54:52.991484+00:00",
+    "last_seen": "2026-11-16T22:54:52.991484+00:00",
+    "source_ids": [
+      "us-fcc-e95ecda3bb"
+    ]
+  },
+  {
+    "title": "Applications",
+    "url": "https://www.fcc.gov/edoc/426976",
+    "native_id": "426976",
+    "published_at": null,
+    "published_raw": "",
+    "summary": ".",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Federal Communications Commission — Public Notices",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
+    },
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 10642,
+    "first_seen": "2026-11-16T22:54:52.991484+00:00",
+    "last_seen": "2026-11-16T22:54:52.991484+00:00",
+    "source_ids": [
+      "us-fcc-e95ecda3bb"
+    ]
+  },
+  {
+    "title": "Actions",
+    "url": "https://www.fcc.gov/edoc/426977",
+    "native_id": "426977",
+    "published_at": null,
+    "published_raw": "",
+    "summary": ".",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Federal Communications Commission — Public Notices",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
+    },
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 10643,
+    "first_seen": "2026-11-16T22:54:52.991484+00:00",
+    "last_seen": "2026-11-16T22:54:52.991484+00:00",
+    "source_ids": [
+      "us-fcc-e95ecda3bb"
+    ]
+  },
+  {
+    "title": "Pleadings",
+    "url": "https://www.fcc.gov/edoc/426978",
+    "native_id": "426978",
+    "published_at": null,
+    "published_raw": "",
+    "summary": ".",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Federal Communications Commission — Public Notices",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
+    },
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 10644,
+    "first_seen": "2026-11-16T22:54:52.991484+00:00",
+    "last_seen": "2026-11-16T22:54:52.991484+00:00",
+    "source_ids": [
+      "us-fcc-e95ecda3bb"
     ]
   }
 ]
