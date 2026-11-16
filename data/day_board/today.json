@@ -1,12 +1,12 @@
 {
   "date": "2026-11-16",
-  "generated_at": "2026-11-16T05:04:55.314390-05:00",
+  "generated_at": "2026-11-16T05:05:28.742960-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
-    "ok": 3,
+    "ok": 4,
     "partial": 3,
-    "fail": 2,
+    "fail": 1,
     "n": 8
   },
   "buy_1d": [],
@@ -15,31 +15,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "finviz_market_digest",
-      "title": "Finviz homepage market digest",
-      "date": "2026-11-16",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-11-16T04:49:38.343645-05:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-11-16_finviz_market_digest.json",
-          "ok": true,
-          "reason": "",
-          "size": 6341,
-          "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for"
-        },
-        {
-          "path": "01_daily/news/2026-11-16_finviz_market_digest.md",
-          "ok": true,
-          "reason": "",
-          "size": 2940,
-          "preview": "# Finviz homepage market digest \u2014 2026-11-16\n**Generated:** 2026-11-16T04:49:38.327256-05:00 (America/New_York)\n**Source:** `live`\n**Banner:** US futures point to a mixed open amid tech-led caution as traders await Nvidia earnings and the Anthropic IPO following Asian market weakness\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** NVDA, TSM, EL, RIVN, UBS, CHKP, BIDU, TSN, XPEV, ARMK\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** BIDU, TSN, XPEV, ARMK\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-11-16\n**Clock use:** `same_morning`"
-        }
-      ],
-      "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest \u2014 2026-11-16\n**Generated:** 2026-11-16T04:49:38.327256-05:00 (America/New_York)\n**Source:** `live`\n**Banner:** US futures point to a mixed open amid tech-led caution as traders await Nvidia earnings and the Anthropic IPO following Asian market weakness\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** NVDA, TSM, EL, RIVN, UBS, CHKP, BIDU, TSN, XPEV, ARMK\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** BIDU, TSN, XPEV, ARMK\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-11-16\n**Clock use:** `same_morning`"
-    },
     {
       "key": "map_heat",
       "title": "Map heat morning overlay",
@@ -200,6 +175,31 @@
         }
       ],
       "preview": "5900 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 TS, CHRD, EOG, CVX, OXY"
+    },
+    {
+      "key": "ab",
+      "title": "AB checklist",
+      "date": "2026-11-16",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-16T05:05:27.870184-05:00",
+      "files": [
+        {
+          "path": "data/ab_checklist/2026-11-16_ab_checklist.csv",
+          "ok": true,
+          "reason": "",
+          "size": 7518842,
+          "preview": "2610 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 YMM, BEKE, ECO, HAL, ABNB"
+        },
+        {
+          "path": "data/ab_checklist/2026-11-16_ab_checklist_enriched.csv",
+          "ok": true,
+          "reason": "",
+          "size": 8289469,
+          "preview": "2610 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 ECO, HAL, ATAT, YMM, ASC"
+        }
+      ],
+      "preview": "2610 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 YMM, BEKE, ECO, HAL, ABNB \u00b7 2610 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 ECO, HAL, ATAT, YMM, ASC"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
