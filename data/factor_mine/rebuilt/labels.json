@@ -725,6 +725,12 @@
         "label": "missed",
         "reason": "prior export 2026-11-04 is a byte copy of 2026-10-12; that morning's candidate list was not reconstructed",
         "step": "build"
+      },
+      "2026-11-13": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
+        "step": null
       }
     },
     "overnight_mega_h1": {
@@ -1068,6 +1074,12 @@
         "class": "sat out (rule)",
         "label": "sat out (rule)",
         "reason": "strategy no-trade rule",
+        "step": null
+      },
+      "2026-11-13": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
         "step": null
       }
     },
@@ -3010,6 +3022,12 @@
         "class": "sat out (rule)",
         "label": "sat out (rule)",
         "reason": "hard-red sit S<=-3",
+        "step": null
+      },
+      "2026-11-13": {
+        "class": "rebuilt",
+        "label": "rebuilt",
+        "reason": "chained forward from the rebuilt state",
         "step": null
       }
     }
