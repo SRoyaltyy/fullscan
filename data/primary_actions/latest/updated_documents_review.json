@@ -18,7 +18,7 @@
     "primary_source_id": "us-cpsc-08fe06e2e6",
     "n": 3537,
     "first_seen": "2026-10-16T10:36:18.842579+00:00",
-    "last_seen": "2026-11-15T19:23:48.775688+00:00",
+    "last_seen": "2026-11-16T08:01:11.696033+00:00",
     "source_ids": [
       "us-cpsc-08fe06e2e6"
     ]
@@ -42,81 +42,33 @@
     "primary_source_id": "us-cpsc-08fe06e2e6",
     "n": 3538,
     "first_seen": "2026-10-16T10:36:18.842579+00:00",
-    "last_seen": "2026-11-15T19:23:48.775688+00:00",
+    "last_seen": "2026-11-16T08:01:11.696033+00:00",
     "source_ids": [
       "us-cpsc-08fe06e2e6"
     ]
   },
   {
-    "title": "La CPSC aprueba nueva norma federal de seguridad para las bolas de gel con el fin de reducir el riesgo de lesiones y muerte niños pequeños",
-    "url": "https://www.cpsc.gov/es/Newsroom/News-Releases/2025/CPSC-Approves-New-Federal-Safety-Standard-for-Water-Beads-to-Reduce-the-Risk-of-Injury-and-Death-to-Young-Children",
-    "native_id": "https://www.cpsc.gov/_51cc46a0-5dc1-4f70-8cc1-c6b5b0f0a782",
-    "published_at": null,
-    "published_raw": "Thu, 08/21/2025 - 12:00",
-    "summary": "WASHINGTON D. C. – La Comisión de Seguridad de Productos del Consumidor (CPSC, por sus iniciales en inglés) aprobó una norma de seguridad de productos de consumo para juguetes tipo bolas de gel, lo que refleja el compromiso constante de la entidad con la",
+    "title": "BOJ Current Account Balances by Sector (Oct.)",
+    "url": "http://www.boj.or.jp/en/statistics/boj/other/cabs/cabs.xlsx",
+    "native_id": "http://www.boj.or.jp/en/statistics/boj/other/cabs/cabs.xlsx",
+    "published_at": "2026-11-16T08:00:00+00:00",
+    "published_raw": "Mon, 16 Nov 2026 17:00:00 +0900",
+    "summary": "",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Consumer Product Safety Commission",
-      "jurisdiction": "US",
-      "family": "product_safety"
+      "issuer": "Bank of Japan",
+      "jurisdiction": "JP",
+      "family": "monetary_operations"
     },
-    "primary_source_id": "us-cpsc-08fe06e2e6",
-    "n": 3539,
+    "primary_source_id": "jp-boj-d488538690",
+    "n": 3701,
     "first_seen": "2026-10-16T10:36:18.842579+00:00",
-    "last_seen": "2026-11-15T19:23:48.775688+00:00",
+    "last_seen": "2026-11-16T08:01:11.696033+00:00",
     "source_ids": [
-      "us-cpsc-08fe06e2e6"
-    ]
-  },
-  {
-    "title": "Biologics Electronic Reading Room (eFOIA)",
-    "url": "http://www.fda.gov/about-fda/center-biologics-evaluation-and-research-cber/biologics-electronic-reading-room-efoia",
-    "native_id": "http://www.fda.gov/about-fda/center-biologics-evaluation-and-research-cber/biologics-electronic-reading-room-efoia",
-    "published_at": "2026-11-14T16:34:24+00:00",
-    "published_raw": "Sat, 14 Nov 2026 11:34:24 EST",
-    "summary": "The Biologics eFOI Reading Room provides access to documents posted throughout the \"Vaccines, Blood & Biologics\" and other sections related to the Center for Biologics Evaluation and Research on the FDA.gov Web site.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Food and Drug Administration — What's New: Vaccines, Blood and Biologics",
-      "jurisdiction": "US",
-      "family": "product_permissions_and_safety"
-    },
-    "primary_source_id": "us-fda-03f7703006",
-    "n": 8815,
-    "first_seen": "2026-11-05T20:41:39.999913+00:00",
-    "last_seen": "2026-11-15T19:23:48.775688+00:00",
-    "source_ids": [
-      "us-fda-03f7703006"
-    ]
-  },
-  {
-    "title": "CBER 2026 Orphan Approvals (new BLAs)",
-    "url": "http://www.fda.gov/vaccines-blood-biologics/cber-2026-orphan-approvals-new-blas",
-    "native_id": "http://www.fda.gov/vaccines-blood-biologics/cber-2026-orphan-approvals-new-blas",
-    "published_at": "2026-11-14T16:49:41+00:00",
-    "published_raw": "Sat, 14 Nov 2026 11:49:41 EST",
-    "summary": "CBER 2026 Orphan Approvals (new BLAs)",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Food and Drug Administration — What's New: Vaccines, Blood and Biologics",
-      "jurisdiction": "US",
-      "family": "product_permissions_and_safety"
-    },
-    "primary_source_id": "us-fda-03f7703006",
-    "n": 9622,
-    "first_seen": "2026-11-10T20:28:57.994479+00:00",
-    "last_seen": "2026-11-15T19:23:48.775688+00:00",
-    "source_ids": [
-      "us-fda-03f7703006"
+      "jp-boj-d488538690"
     ]
   }
 ]
