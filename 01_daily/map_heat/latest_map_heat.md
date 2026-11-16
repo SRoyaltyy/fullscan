@@ -1,6 +1,6 @@
 # MAP HEAT — 2026-11-16
 
-Export `finviz_2026-11-13.csv` · 11616 names · generated 2026-11-16T04:51:51.371774-05:00
+Export `finviz_2026-11-16.csv` · 11616 names · generated 2026-11-16T05:09:56.952005-05:00
 
 ## TAPE (live futures)
 | Contract | Last | Change |
@@ -280,31 +280,31 @@ COLD (1w):
 - **Real Estate** -0.5% 1d -1.9% 1w · VNQ, SCHH, XLRE
 
 ## TICKER-TAGGED NEWS (Finviz v=3)
-- 8 min **NVDA** Stock Futures Slip Ahead of Pivotal Week for AI Trade With Nvidia, Anthropic in Focus (The Wall Street Journal)
-- 10 min **SMSI** Smith Micro Beats On A Sharply Narrower Loss And Guides Higher, But Thin Cash And A Surprise CEO Reversal Temper The Turnaround (Earnings Whispers)
-- 10 min **PMN** ProMIS Beats On A Shrinking Burn, But A $3 Stock Says The Oligomer Thesis Is Now On Trial (Earnings Whispers)
-- 10 min **MSTR,NVDA,STRC** Nvidia Earnings Could Set The Tone For Bitcoin, MSTR: Heres What Retail Traders Are Watching (Stocktwits)
-- 11 min **XPEV** XPENG Reports Third Quarter 2026 Unaudited Financial Results (GlobeNewswire)
-- 18 min **NVDA** Nvidia results ahead this week; Feds Warsh to speak - whats moving markets (Investing.com)
-- 19 min **NVDA** Eurozone yields stall after volatile week as traders brace for AI mega-tests (Investing.com)
-- 21 min **CNQ** Canadian Natural Resources Limited Enters into Agreement to Acquire Advantage Energy Ltd. (Newsfile Corp.)
-- 21 min **MDGL** Kaplan Fox is Investigating Madrigal Pharmaceuticals, Inc. (MDGL) on Behalf of Investors for Potential Securities Law Violations (Newsfile)
-- 25 min **MS** Morgan Stanley sees ECB cuts in 2028, favours Bunds and gilts (Investing.com)
-- 26 min **NVDA,TSLA,SPCX** Nvidia stock slips as Jensen Huang reportedly weighs CEO comeback, Musk backs return (Yahoo Finance)
-- 30 min **LCO** Deutsche Bank sees 3 straight Fed hikes after hotter-than-expected U.S. inflation (Investing.com)
-- 35 min **NVDA** Stock market today: Dow, S&P 500, Nasdaq futures little changed ahead of pivotal week for AI traders (Yahoo Finance)
-- 35 min **NVDA** Stocks dip as caution sets in before Nvidia earnings, Anthropic IPO (Reuters)
-- 42 min **BAM** Brookfield and KKR negotiate controlling stake in retailer Eyewa  report (Retail Insight Network)
-- 42 min **SPCX** Bitcoin Price Tumbles 19% Ahead of Anthropic IPO: Is SpaceX Crash Repeating? (Coinspeaker)
-- 51 min **VTSI** VirTra Appoints Caleb Rauch as Director of Operations (GlobeNewswire)
-- 51 min **CYTK** Cytokinetics Announces Prescribing Information for MYQORZO (aficamten) Expanded to Include Data from Phase 3 MAPLE-HCM (GlobeNewswire)
-- 51 min **THCH** Tims China to Announce Third Quarter 2026 Financial Results on November 23, 2026 (GlobeNewswire)
-- 51 min **BIDU** Baidu Announces Third Quarter 2026 Results (PR Newswire)
-- 51 min **NIU** Niu Technologies Announces Unaudited Third Quarter 2026 Financial Results (GlobeNewswire)
-- 54 min **NVDA** NVDA Earnings Preview: Nvidias AI Engine Is Running, But Can It Keep Growing Without Its Chief Architect? (Stocktwits)
-- 59 min **LCO** Morgan Stanley raises S&P 500 target on earnings growth, lower oil and AI adoption (Investing.com)
-- 1 hour **SSL** RESULTS OF THE ANNUAL GENERAL MEETING OF SASOL LIMITED HELD ON 13 NOVEMBER 2026 (PR Newswire)
-- 1 hour **NVDA** Stocks extend losses as traders await Nvidia earnings and Anthropic IPO (Euronews)
+- 3 min **MSTR,COIN** Bitcoin trades under $65,000, pressuring Coinbase and Strategy (MarketWatch)
+- 4 min **JNJ** J&J looks to buy Ollin Biosciences for up to $3.4 billion, FT says (Reuters)
+- 5 min **NVDA,SPCX** Nvidia Stock Doesn't Need a Jensen Huang Comeback to Thrive (Barrons.com)
+- 6 min **NVDA** European stocks buoyed by defence, consumer sectors; tech lags (Reuters)
+- 7 min **TM,HMC** Topre Corp to invest $140m to expand US parts production (Just Auto)
+- 9 min **NVDA** Stock market today: Dow, S&P 500, Nasdaq futures little changed ahead of pivotal week for AI traders (Yahoo Finance)
+- 9 min **VIPS** Vipshop to Announce Third Quarter 2026 Financial Results on November 24, 2026 (PR Newswire)
+- 9 min **DQ** Daqo New Energy Corp. to Hold Annual General Meeting on December 10, 2026 (PR Newswire)
+- 9 min **EEFT** Euronet and Santander Group's Getnet Partner to Integrate Tax Free Services Directly into the Payment Experience (GlobeNewswire)
+- 9 min **BEKE** KE Holdings Inc. Announces Third Quarter 2026 Unaudited Financial Results (GlobeNewswire)
+- 9 min **NVDA,TSLA,SPCX** Trump is headed to China this week. Jensen Huang won't be on the trip, but Elon Musk will. (Yahoo Finance)
+- 9 min **LLY,NVS,SNY** Big-name investors pour $100M into DNA therapeutics developer Seawolf (BioPharma Dive)
+- 9 min **NVDA,MAGS** The Market's Resilience Faces Its Toughest Week Yet, and It Starts With Nvidia (Barrons.com)
+- 9 min **NVDA** Nvidia's first post-Jensen earnings and Anthropic's IPO: What to watch this week (Yahoo Finance)
+- 13 min **HSBC** Haven't saved enough for retirement? Wealthy people haven't either. (Yahoo Finance)
+- 19 min **NVDA** 6 Reasons Bitcoin Could See a Wild Week as Nvidia, Fed and Russia Take Center Stage (99bitcoins)
+- 26 min **NVDA** Stock Futures Slip Ahead of Pivotal Week for AI Trade With Nvidia, Anthropic in Focus (The Wall Street Journal)
+- 28 min **SMSI** Smith Micro Beats On A Sharply Narrower Loss And Guides Higher, But Thin Cash And A Surprise CEO Reversal Temper The Turnaround (Earnings Whispers)
+- 28 min **PMN** ProMIS Beats On A Shrinking Burn, But A $3 Stock Says The Oligomer Thesis Is Now On Trial (Earnings Whispers)
+- 28 min **MSTR,NVDA,STRC** Nvidia Earnings Could Set The Tone For Bitcoin, MSTR: Heres What Retail Traders Are Watching (Stocktwits)
+- 29 min **XPEV** XPENG Reports Third Quarter 2026 Unaudited Financial Results (GlobeNewswire)
+- 37 min **NVDA** Nvidia results ahead this week; Feds Warsh to speak - whats moving markets (Investing.com)
+- 37 min **NVDA** Eurozone yields stall after volatile week as traders brace for AI mega-tests (Investing.com)
+- 39 min **CNQ** Canadian Natural Resources Limited Enters into Agreement to Acquire Advantage Energy Ltd. (Newsfile Corp.)
+- 39 min **MDGL** Kaplan Fox is Investigating Madrigal Pharmaceuticals, Inc. (MDGL) on Behalf of Investors for Potential Securities Law Violations (Newsfile)
 
 ## NOTES
 - Captains = top 2 by market cap. RUT needs ≥ $5m 20-day dollar volume.
