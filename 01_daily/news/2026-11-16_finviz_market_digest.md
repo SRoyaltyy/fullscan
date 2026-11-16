@@ -1,6 +1,6 @@
 # Finviz homepage market digest — 2026-11-16
 
-**Generated:** 2026-11-16T04:49:38.327256-05:00 (America/New_York)
+**Generated:** 2026-11-16T05:07:35.979086-05:00 (America/New_York)
 **Source:** `live`
 **Banner:** US futures point to a mixed open amid tech-led caution as traders await Nvidia earnings and the Anthropic IPO following Asian market weakness
 **Prior close:** SPX —  Nasdaq —  Dow —
