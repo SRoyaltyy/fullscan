@@ -1,19 +1,16 @@
 {
   "date": "2026-11-16",
-  "generated_at": "2026-11-16T05:09:57.401543-05:00",
+  "generated_at": "2026-11-16T09:10:43.463179-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
     "MISSING General predict MD `01_daily/general/2026-11-16_predict.md` \u2014 missing",
-    "MISSING News actions JSON `01_daily/news/2026-11-16_actions.json` \u2014 missing",
-    "MISSING News judge MD `01_daily/news/2026-11-16_judge.md` \u2014 missing",
-    "MISSING Weather JSON `01_daily/weather/2026-11-16_weather.json` \u2014 missing",
-    "MISSING AB checklist enriched `data/ab_checklist/2026-11-16_ab_checklist_enriched.csv` \u2014 missing"
+    "MISSING News judge MD `01_daily/news/2026-11-16_judge.md` \u2014 missing"
   ],
   "counts": {
-    "ok": 2,
-    "partial": 2,
-    "fail": 4,
+    "ok": 4,
+    "partial": 3,
+    "fail": 1,
     "n": 8
   },
   "processes": [
@@ -183,9 +180,9 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 2,
+      "n_req_ok": 4,
       "n_req": 9,
-      "n_opt_ok": 1,
+      "n_opt_ok": 2,
       "n_opt": 14,
       "files": [
         {
@@ -241,10 +238,10 @@
           "name": "News parse JSON",
           "path": "01_daily/news/2026-11-16_parsed.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "",
+          "size": 3702299,
+          "said": "3702299B on disk",
           "bullets": []
         },
         {
@@ -296,11 +293,16 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-11-16_actions.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 79856,
+          "said": "112 ticker actions \u00b7 7 events \u00b7 5060 headlines \u00b7 COP BUY, EOG BUY, CHRD BUY, SM BUY, REPX BUY, GRNT BUY, OXY BUY, DVN BUY",
+          "bullets": [
+            "BUY COP",
+            "BUY EOG",
+            "BUY CHRD",
+            "BUY SM"
+          ]
         },
         {
           "key": "general",
@@ -345,10 +347,10 @@
           "name": "Pre-open status JSON",
           "path": "01_daily/2026-11-16_preopen_status.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "all_ok=False missing=['events', 'news_judge', 'map_heat_research', 'general_predict']",
+          "size": 6637,
+          "said": "all_ok=False \u00b7 qc=False \u00b7 grok=False \u00b7 book=False \u00b7 missing events, news_judge, map_heat_research, general_predict",
           "bullets": []
         },
         {
@@ -493,9 +495,9 @@
       "key": "weather",
       "name": "Label + weather",
       "yaml": "label_weather.yml",
-      "status": "FAIL",
+      "status": "OK",
       "inputs_ready": true,
-      "n_req_ok": 0,
+      "n_req_ok": 1,
       "n_req": 1,
       "n_opt_ok": 0,
       "n_opt": 0,
@@ -520,25 +522,31 @@
           "name": "Weather JSON",
           "path": "01_daily/weather/2026-11-16_weather.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "sectors=11 bytes=9633 vix=calm yields=rising",
+          "size": 9633,
+          "said": "favorable 1 \u00b7 hostile 2 \u00b7 neutral 8",
+          "bullets": [
+            "hostile: Basic Materials, Industrials",
+            "events bull 4 / bear 12"
+          ]
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "favorable 1 \u00b7 hostile 2 \u00b7 neutral 8",
+      "bullets": [
+        "hostile: Basic Materials, Industrials",
+        "events bull 4 / bear 12"
+      ]
     },
     {
       "key": "ab",
       "name": "AB checklist",
       "yaml": "ab_checklist.yml",
-      "status": "FAIL",
+      "status": "OK",
       "inputs_ready": true,
-      "n_req_ok": 0,
+      "n_req_ok": 1,
       "n_req": 1,
-      "n_opt_ok": 0,
+      "n_opt_ok": 1,
       "n_opt": 1,
       "files": [
         {
@@ -546,33 +554,39 @@
           "name": "AB checklist raw",
           "path": "data/ab_checklist/2026-11-16_ab_checklist.csv",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "rows=2610",
+          "size": 7518842,
+          "said": "27 rows",
+          "bullets": [
+            "YMM, BEKE, ECO, HAL, ABNB, IR, ASC, FRPT"
+          ]
         },
         {
           "key": "ab_enriched",
           "name": "AB checklist enriched",
           "path": "data/ab_checklist/2026-11-16_ab_checklist_enriched.csv",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "rows=2610",
+          "size": 8289469,
+          "said": "25 rows",
+          "bullets": [
+            "ECO, HAL, ATAT, YMM, ASC, IR, FRPT, SB"
+          ]
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "25 rows",
+      "bullets": [
+        "ECO, HAL, ATAT, YMM, ASC"
+      ]
     },
     {
       "key": "catalyst",
       "name": "Catalyst dossiers",
       "yaml": "catalyst_daily.yml",
       "status": "FAIL",
-      "inputs_ready": false,
+      "inputs_ready": true,
       "n_req_ok": 0,
       "n_req": 0,
       "n_opt_ok": 0,
@@ -583,11 +597,16 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-11-16_actions.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 79856,
+          "said": "112 ticker actions \u00b7 7 events \u00b7 5060 headlines \u00b7 COP BUY, EOG BUY, CHRD BUY, SM BUY, REPX BUY, GRNT BUY, OXY BUY, DVN BUY",
+          "bullets": [
+            "BUY COP",
+            "BUY EOG",
+            "BUY CHRD",
+            "BUY SM"
+          ]
         },
         {
           "key": "in_digest",
@@ -609,23 +628,37 @@
           "name": "Catalyst dossiers JSON",
           "path": "01_daily/catalyst/2026-11-16_dossiers.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "FAIL",
+          "reason": "zero usable dossiers (n=7)",
+          "size": 2390,
+          "said": "zero usable dossiers (n=7) \u00b7 0/7 usable \u00b7 Grok \u2192 DeepSeek \u00b7 NVDA, CRM, UEC, UUUU, SLB, BKR, KGS",
+          "bullets": [
+            "NVDA: OpenClaw and DeepSeek both returned empty for CATALYST STEP1 NVDA",
+            "CRM: OpenClaw and DeepSeek both returned empty for CATALYST STEP1 CRM",
+            "UEC: OpenClaw and DeepSeek both returned empty for CATALYST STEP1 UEC",
+            "UUUU: OpenClaw and DeepSeek both returned empty for CATALYST STEP1 UUUU"
+          ]
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "112 ticker actions \u00b7 7 events \u00b7 5060 headlines \u00b7 COP BUY, EOG BUY, CHRD BUY, SM BUY, REPX BUY, GRNT BUY, OXY BUY, DVN BUY",
+      "bullets": [
+        "BUY COP",
+        "BUY EOG",
+        "BUY CHRD",
+        "BUY SM",
+        "BUY REPX",
+        "BUY GRNT",
+        "BUY OXY",
+        "BUY DVN"
+      ]
     },
     {
       "key": "stock_book",
       "name": "Stock Book ALL",
       "yaml": "stock_book_all.yml",
-      "status": "FAIL",
+      "status": "PARTIAL",
       "inputs_ready": false,
-      "n_req_ok": 0,
+      "n_req_ok": 2,
       "n_req": 4,
       "n_opt_ok": 1,
       "n_opt": 4,
@@ -657,11 +690,16 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-11-16_actions.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 79856,
+          "said": "112 ticker actions \u00b7 7 events \u00b7 5060 headlines \u00b7 COP BUY, EOG BUY, CHRD BUY, SM BUY, REPX BUY, GRNT BUY, OXY BUY, DVN BUY",
+          "bullets": [
+            "BUY COP",
+            "BUY EOG",
+            "BUY CHRD",
+            "BUY SM"
+          ]
         },
         {
           "key": "in_digest",
@@ -694,44 +732,53 @@
           "name": "Weather JSON",
           "path": "01_daily/weather/2026-11-16_weather.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "sectors=11 bytes=9633 vix=calm yields=rising",
+          "size": 9633,
+          "said": "favorable 1 \u00b7 hostile 2 \u00b7 neutral 8",
+          "bullets": [
+            "hostile: Basic Materials, Industrials",
+            "events bull 4 / bear 12"
+          ]
         },
         {
           "key": "in_ab",
           "name": "AB checklist enriched",
           "path": "data/ab_checklist/2026-11-16_ab_checklist_enriched.csv",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "rows=2610",
+          "size": 8289469,
+          "said": "25 rows",
+          "bullets": [
+            "ECO, HAL, ATAT, YMM, ASC, IR, FRPT, SB"
+          ]
         },
         {
           "key": "join",
           "name": "Join ranked CSV",
           "path": "data/join/2026-11-16_ranked.csv",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "rows=5900",
+          "size": 2229452,
+          "said": "210 rows",
+          "bullets": [
+            "TS, CHRD, EOG, CVX, OXY, RRC, STNG, EQT"
+          ]
         },
         {
           "key": "peers",
           "name": "Peer RS CSV",
           "path": "data/peers/2026-11-16_peer_rs.csv",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "rows=5037",
+          "size": 807187,
+          "said": "496 rows",
+          "bullets": [
+            "A, AA, AACG, AAL, AAME, AAMI, AAOI, AAON"
+          ]
         },
         {
           "key": "book_json",
@@ -773,7 +820,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 1802,
+          "size": 1809,
           "said": "Paper trading \u2014 Futubull-fee simulation",
           "bullets": [
             "As of **2026-11-12** \u00b7 $10,000 starting capital per sleeve \u00b7 fees per `00_grounding/futubull_fees.json`",
@@ -792,8 +839,10 @@
           "bullets": []
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "210 rows",
+      "bullets": [
+        "TS, CHRD, EOG, CVX, OXY"
+      ]
     },
     {
       "key": "publish",
@@ -835,7 +884,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 1802,
+          "size": 1809,
           "said": "Paper trading \u2014 Futubull-fee simulation",
           "bullets": [
             "As of **2026-11-12** \u00b7 $10,000 starting capital per sleeve \u00b7 fees per `00_grounding/futubull_fees.json`",
@@ -867,7 +916,13 @@
     "general": {},
     "sectors": {},
     "news": {},
-    "weather": {}
+    "weather": {
+      "said": "favorable 1 \u00b7 hostile 2 \u00b7 neutral 8",
+      "bullets": [
+        "hostile: Basic Materials, Industrials",
+        "events bull 4 / bear 12"
+      ]
+    }
   },
   "lands": [
     {
@@ -1322,6 +1377,31 @@
         }
       ],
       "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-11-16\nExport `finviz_2026-11-16.csv` \u00b7 11616 names \u00b7 generated 2026-11-16T05:09:56.952005-05:00"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-11-16",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-16T09:10:42.749400-05:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-11-16_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 9633,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -3.21, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': 1.22, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -0.275, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': 0.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': 4.27, 'dir': 'up', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': 1.15, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -0.95, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': 2.12, 'dir': 'up', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-11-16_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5255,
+          "preview": "# Weather report \u2014 2026-11-16\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -3.21, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': 1.22, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -0.275, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': 0.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': 4.27, 'dir': 'up', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': 1.15, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -0.95, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': 2.12, 'dir': 'up', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-11-16\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
     }
   ],
   "href": {
