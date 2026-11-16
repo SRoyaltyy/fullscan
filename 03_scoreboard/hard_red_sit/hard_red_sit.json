@@ -2901,7 +2901,7 @@
   },
   "per_sleeve": {
     "tag": "RESEARCH",
-    "date": "2026-11-13",
+    "date": "2026-11-16",
     "live_sit": true,
     "keep_bar_unchanged": true,
     "n_sit": 1,
@@ -2928,8 +2928,8 @@
             "ticker": "DVN",
             "side": "long",
             "open": null,
-            "px": 46.23,
-            "px_src": "session_export+elite_live_skipped",
+            "px": 46.58,
+            "px_src": "session_export",
             "low": null,
             "scoops": {
               "0.5": {
@@ -2964,8 +2964,8 @@
             "ticker": "ALNY",
             "side": "long",
             "open": null,
-            "px": 156.65,
-            "px_src": "session_export+elite_live_skipped",
+            "px": 165.04,
+            "px_src": "session_export",
             "low": null,
             "scoops": {
               "0.5": {
@@ -3000,8 +3000,8 @@
             "ticker": "CHRD",
             "side": "long",
             "open": null,
-            "px": 147.05,
-            "px_src": "session_export+elite_live_skipped",
+            "px": 149.93,
+            "px_src": "session_export",
             "low": null,
             "scoops": {
               "0.5": {
@@ -3036,8 +3036,8 @@
             "ticker": "GRNT",
             "side": "long",
             "open": null,
-            "px": 6.49,
-            "px_src": "session_export+elite_live_skipped",
+            "px": 6.3,
+            "px_src": "session_export",
             "low": null,
             "scoops": {
               "0.5": {
@@ -3072,8 +3072,8 @@
             "ticker": "ETON",
             "side": "long",
             "open": null,
-            "px": 61.45,
-            "px_src": "session_export+elite_live_skipped",
+            "px": 63.93,
+            "px_src": "session_export",
             "low": null,
             "scoops": {
               "0.5": {
