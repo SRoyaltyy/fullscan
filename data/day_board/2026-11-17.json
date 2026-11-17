@@ -1901,6 +1901,14 @@
       "manifest": "research/input_freeze/2026-11-17/manifest.json"
     },
     {
+      "path": "01_daily/2026-11-17_preopen_qc.json",
+      "at": "2026-11-17T14:06:05-05:00",
+      "commit_msg": "auto: pre-open leftover sweep [2026-11-17_1906]",
+      "workflow": "Pre-Open ALL (predictive one-shot)",
+      "run_id": "44151423892",
+      "manifest": "research/input_freeze/2026-11-17/manifest.json"
+    },
+    {
       "path": "data/day_board/2026-11-17.json",
       "at": "2026-11-17T14:06:13-05:00",
       "commit_msg": "auto: land join [2026-11-17]",
