@@ -1,6 +1,6 @@
 {
   "date": "2026-11-17",
-  "generated_at": "2026-11-17T05:15:59.427407-05:00",
+  "generated_at": "2026-11-17T09:11:03.509116-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -9,8 +9,8 @@
   ],
   "counts": {
     "ok": 4,
-    "partial": 4,
-    "fail": 0,
+    "partial": 3,
+    "fail": 1,
     "n": 8
   },
   "processes": [
@@ -523,8 +523,8 @@
           "path": "01_daily/weather/2026-11-17_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=9640 vix=calm yields=rising",
-          "size": 9640,
+          "reason": "sectors=11 bytes=9643 vix=calm yields=rising",
+          "size": 9643,
           "said": "hostile 8 \u00b7 neutral 3",
           "bullets": [
             "hostile: Basic Materials, Consumer Cyclical, Consumer Defensive, Financial, Healthcare, Industrials, Real Estate, Technology"
@@ -583,7 +583,7 @@
       "key": "catalyst",
       "name": "Catalyst dossiers",
       "yaml": "catalyst_daily.yml",
-      "status": "PARTIAL",
+      "status": "FAIL",
       "inputs_ready": true,
       "n_req_ok": 0,
       "n_req": 0,
@@ -626,11 +626,16 @@
           "name": "Catalyst dossiers JSON",
           "path": "01_daily/catalyst/2026-11-17_dossiers.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "FAIL",
+          "reason": "zero usable dossiers (n=6)",
+          "size": 2127,
+          "said": "zero usable dossiers (n=6) \u00b7 0/6 usable \u00b7 Grok \u2192 DeepSeek \u00b7 NVDA, UEC, UUUU, SLB, BKR, KGS",
+          "bullets": [
+            "NVDA: OpenClaw and DeepSeek both returned empty for CATALYST STEP1 NVDA",
+            "UEC: OpenClaw and DeepSeek both returned empty for CATALYST STEP1 UEC",
+            "UUUU: OpenClaw and DeepSeek both returned empty for CATALYST STEP1 UUUU",
+            "SLB: OpenClaw and DeepSeek both returned empty for CATALYST STEP1 SLB"
+          ]
         }
       ],
       "said": "113 ticker actions \u00b7 7 events \u00b7 8300 headlines \u00b7 COP BUY, EOG BUY, CHRD BUY, SM BUY, HPK BUY, REPX BUY, OXY BUY, DVN BUY",
@@ -726,8 +731,8 @@
           "path": "01_daily/weather/2026-11-17_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=9640 vix=calm yields=rising",
-          "size": 9640,
+          "reason": "sectors=11 bytes=9643 vix=calm yields=rising",
+          "size": 9643,
           "said": "hostile 8 \u00b7 neutral 3",
           "bullets": [
             "hostile: Basic Materials, Consumer Cyclical, Consumer Defensive, Financial, Healthcare, Industrials, Real Estate, Technology"
@@ -1368,6 +1373,31 @@
         }
       ],
       "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, sectors_required, all_ok \u00b7 keys: date, generated_at, run_id, runner, all_ok, qc_all_ok, book_ok, grok_ok, grok_fails, missing_required, attempts, github_runs \u00b7 # Pre-open ALL status \u2014 2026-11-17\nall_ok=False  qc_all_ok=False  book_ok=False  grok_ok=False  news_mode=on  missing=['events', 'news_judge', 'map_heat_research', 'general_predict']\nPredictive modules + stock book (must land before 09:30 ET).\nOutcome / learn / tonight's captain research = Post-Close ALL.\n- Weather / regime: exit 0\n- News parse: exit 0\n- News actions (no LLM): exit 0"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-11-17",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-17T09:11:02.649991-05:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-11-17_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 9643,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -10.7, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -3.8, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.57, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': 0.7050000000000001, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.63, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -7.255, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -3.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-11-17_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5256,
+          "preview": "# Weather report \u2014 2026-11-17\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -10.7, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -3.8, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.57, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': 0.7050000000000001, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.63, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -7.255, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -3.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-11-17\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
     }
   ],
   "href": {
