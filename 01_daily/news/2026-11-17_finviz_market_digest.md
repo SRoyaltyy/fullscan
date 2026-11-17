@@ -1,6 +1,6 @@
 # Finviz homepage market digest — 2026-11-17
 
-**Generated:** 2026-11-17T04:50:44.929376-05:00 (America/New_York)
+**Generated:** 2026-11-17T05:03:00.613697-05:00 (America/New_York)
 **Source:** `live`
 **Banner:** US futures point to lower open as tech weakness and Nvidia earnings loom alongside key US retail sales and industrial data
 **Prior close:** SPX —  Nasdaq —  Dow —
