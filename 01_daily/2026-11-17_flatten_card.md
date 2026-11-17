@@ -1,6 +1,6 @@
 # flatten_robust card — 2026-11-17
 
-_Generated 2026-11-17T19:36:07 — live `flatten_robust`._
+_Generated 2026-11-17T20:04:46 — live `flatten_robust`._
 
 **morning S missing; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**
 
@@ -40,11 +40,11 @@ Sized from marked equity **$122,221.28** as if the book were flat. `io 3d_size (
 
 | Clock | Ticker | Sleeve | Shares | Px | $ | Blocked live by |
 |---|---|---|---:|---:|---:|---|
-| 16:00 ET | HUBS | io_core | 92 | $220.83 | $20,316.76 | cash tied |
-| 16:00 ET | APP | io_core | 50 | $403.50 | $20,175.00 | cash tied |
-| 16:00 ET | CMCSA | io_core | 796 | $25.58 | $20,361.68 | cash tied |
-| 16:00 ET | WWW | io_core | 814 | $25.01 | $20,360.18 | cash tied |
-| 16:00 ET | ATAT | io_core | 528 | $38.58 | $20,367.60 | cash tied |
-| 16:00 ET | KVYO | io_core | 914 | $22.28 | $20,363.92 | cash tied |
+| 16:00 ET | HUBS | io_core | 93 | $217.29 | $20,207.97 | cash tied |
+| 16:00 ET | APP | io_core | 50 | $401.96 | $20,098.25 | cash tied |
+| 16:00 ET | CMCSA | io_core | 797 | $25.53 | $20,348.05 | cash tied |
+| 16:00 ET | WWW | io_core | 817 | $24.92 | $20,359.64 | cash tied |
+| 16:00 ET | ATAT | io_core | 528 | $38.56 | $20,359.68 | cash tied |
+| 16:00 ET | KVYO | io_core | 918 | $22.17 | $20,352.06 | cash tied |
 
 Dashboard: https://sroyaltyy.github.io/fullscan/dashboard/sleeve-merge/
