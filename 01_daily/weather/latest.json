@@ -1,6 +1,6 @@
 {
  "date": "2026-11-17",
- "generated_at": "2026-11-17T14:55:34.688466-05:00",
+ "generated_at": "2026-11-17T17:39:45.886837-05:00",
  "stance_vocabulary": [
   "favorable",
   "neutral",
@@ -14,23 +14,23 @@
   "fed_score": null,
   "dollar_oil_score": null,
   "futures_score": null,
-  "yields": "rising",
+  "yields": "falling",
   "yields_source": "fred_dgs10",
-  "dgs10_delta_1d": 0.05,
-  "dgs10_current": 5.15,
+  "dgs10_delta_1d": -0.03,
+  "dgs10_current": 5.12,
   "dollar": "flat",
   "dollar_source": "dxy",
-  "dxy_pct_1d": -0.09,
-  "vix_ratio": 1.042,
-  "vix_spot": 26.24,
-  "vix_delta_1d": 3.33,
+  "dxy_pct_1d": 0.0,
+  "vix_ratio": 1.019,
+  "vix_spot": 25.46,
+  "vix_delta_1d": 2.55,
   "vix_ratio_source": "vix/vix3m",
   "vix": "spiking",
-  "oil_pct_1d": -0.02,
+  "oil_pct_1d": -0.13,
   "oil": "flat",
   "fear_greed": null,
   "fear_greed_label": null,
-  "regime_corr": 0.439,
+  "regime_corr": 0.384,
   "sectors": {
    "Basic Materials": {
     "score": -10.7,
@@ -315,14 +315,14 @@
   },
   "lev": {
    "high": {
-    "stance": "hostile",
-    "confidence": "medium",
-    "why": "yields rising — leverage amplifies the downside [factors + general]"
+    "stance": "neutral",
+    "confidence": "low",
+    "why": "—"
    },
    "low": {
-    "stance": "favorable",
+    "stance": "neutral",
     "confidence": "low",
-    "why": "balance-sheet strength preferred in stress"
+    "why": "—"
    },
    "mid": {
     "stance": "neutral",
@@ -337,14 +337,14 @@
   },
   "style": {
    "growth": {
-    "stance": "hostile",
-    "confidence": "medium",
-    "why": "yields rising — long-duration growth de-rates [factor: Bond yields]"
-   },
-   "value": {
     "stance": "favorable",
     "confidence": "medium",
-    "why": "rising yields/reflation favors value & cyclicals [factor: Bond yields]"
+    "why": "yields falling — duration/growth re-rates [factor: Bond yields]"
+   },
+   "value": {
+    "stance": "neutral",
+    "confidence": "low",
+    "why": "value lags duration rallies"
    },
    "blend": {
     "stance": "neutral",
