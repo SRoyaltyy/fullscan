@@ -2,33 +2,33 @@
 
 Live sleeves still SIT on S≤−3. Search a ticker for every session since 8/13: cameras (+N −N), 09:30 open, close, same-day % and hold-1/3/5 with actual prices.
 
-Generated 2026-11-16T06:38:50.777977-05:00 · 2026-08-13 → 2026-11-13 · live sit **untouched**.
+Generated 2026-11-17T00:31:11.964816-05:00 · 2026-08-13 → 2026-11-16 · live sit **untouched**.
 
 ## Latest morning
 
-- Date **2026-11-13** S=None hard-red=False · 210 investigator cards · 39 long-ok · 39 short-ok
+- Date **2026-11-16** S=None hard-red=False · 100 investigator cards · 48 long-ok · 28 short-ok
 
 ### Longs weather sat on (top)
 
-- **DVN** idio +17 · +6 −3 · E good · H1 None% H3 None%
-- **ANDG** idio +17 · +5 −1 · E good · H1 None% H3 None%
-- **CEG** idio +17 · +4 −2 · E good · H1 None% H3 None%
-- **TEVA** idio +16 · +5 −2 · E good · H1 None% H3 None%
-- **ALNY** idio +14 · +5 −2 · E good · H1 None% H3 None%
-- **ETON** idio +14 · +5 −2 · E good · H1 None% H3 None%
-- **PLX** idio +14 · +5 −2 · E good · H1 None% H3 None%
-- **SKM** idio +14 · +5 −2 · E good · H1 None% H3 None%
+- **FROG** idio +23 · +6 −1 · E good · H1 None% H3 None%
+- **WWW** idio +23 · +6 −1 · E good · H1 None% H3 None%
+- **CURI** idio +21 · +5 −1 · E good · H1 None% H3 None%
+- **ATAT** idio +20 · +6 −1 · E good · H1 None% H3 None%
+- **CHA** idio +18 · +5 −1 · E good · H1 None% H3 None%
+- **HUBS** idio +17 · +6 −1 · E good · H1 None% H3 None%
+- **MBGL** idio +17 · +6 −1 · E good · H1 None% H3 None%
+- **ALNY** idio +16 · +5 −2 · E good · H1 None% H3 None%
 
 ### Shorts weather sat on (top)
 
-- **GEMI** idio -20 · +0 −7 · H1 None%
-- **USAS** idio -19 · +0 −7 · H1 None%
-- **XRPN** idio -17 · +0 −6 · H1 None%
-- **INO** idio -15 · +1 −5 · H1 None%
-- **RMIX** idio -15 · +0 −5 · H1 None%
-- **GPRO** idio -15 · +2 −6 · H1 None%
-- **LWLG** idio -15 · +1 −6 · H1 None%
-- **BSBR** idio -14 · +1 −6 · H1 None%
+- **KOS** idio -14 · +0 −5 · H1 None%
+- **BLDP** idio -13 · +1 −6 · H1 None%
+- **IQ** idio -12 · +1 −4 · H1 None%
+- **SLNH** idio -10 · +1 −6 · H1 None%
+- **UNIT** idio -9 · +2 −5 · H1 None%
+- **EMAT** idio -8 · +0 −4 · H1 None%
+- **TSN** idio -8 · +1 −4 · H1 None%
+- **ALT** idio -8 · +2 −5 · H1 None%
 
 ## If we had taken them on hard-red sits (research)
 
