@@ -1,6 +1,6 @@
 {
   "date": "2026-11-17",
-  "generated_at": "2026-11-17T14:21:39.795104-05:00",
+  "generated_at": "2026-11-17T14:21:59.546181-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -76,59 +76,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "stock_book",
-      "title": "Stock book + green",
-      "date": "2026-11-17",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-11-17T09:15:59.674543-05:00",
-      "files": [
-        {
-          "path": "data/stock_book/2026-11-17_stock_book.json",
-          "ok": true,
-          "reason": "",
-          "size": 1471480,
-          "preview": "1d BUY THC, APP, DBX, VRSK, APPN \u00b7 SELL ENVX, FLNC, RGTI, QUBT, TE, METC, FCEL, QBTS"
-        },
-        {
-          "path": "data/stock_book/2026-11-17_green.json",
-          "ok": true,
-          "reason": "",
-          "size": 585,
-          "preview": "green 0 \u00b7 "
-        },
-        {
-          "path": "data/stock_book/2026-11-17_input_health.json",
-          "ok": true,
-          "reason": "",
-          "size": 2612,
-          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
-        },
-        {
-          "path": "data/stock_book/2026-11-17_suggestions.json",
-          "ok": true,
-          "reason": "",
-          "size": 12146,
-          "preview": "2026-11-17 BUY THC, APP, DBX, VRSK, APPN \u00b7 SELL ENVX, FLNC, RGTI, QUBT, TE, METC, FCEL, QBTS"
-        },
-        {
-          "path": "data/stock_book/latest_suggestions.json",
-          "ok": true,
-          "reason": "",
-          "size": 12146,
-          "preview": "2026-11-17 BUY THC, APP, DBX, VRSK, APPN \u00b7 SELL ENVX, FLNC, RGTI, QUBT, TE, METC, FCEL, QBTS"
-        },
-        {
-          "path": "01_daily/2026-11-17_stock_book.md",
-          "ok": true,
-          "reason": "",
-          "size": 81256,
-          "preview": "# Stock book \u2014 2026-11-17\n_Generated 2026-11-17T09:11:25.049502-05:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
-        }
-      ],
-      "preview": "1d BUY THC, APP, DBX, VRSK, APPN \u00b7 SELL ENVX, FLNC, RGTI, QUBT, TE, METC, FCEL, QBTS \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-11-17 BUY THC, APP, DBX, VRSK, APPN \u00b7 SELL ENVX, FLNC, RGTI, QUBT, TE, METC, FCEL, QBTS \u00b7 2026-11-17 BUY THC, APP, DBX, VRSK, APPN \u00b7 SELL ENVX, FLNC, RGTI, QUBT, TE, METC, FCEL, QBTS \u00b7 # Stock book \u2014 2026-11-17\n_Generated 2026-11-17T09:11:25.049502-05:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
-    },
     {
       "key": "live_boards",
       "title": "Live 1d BUY/SELL strip",
@@ -660,6 +607,24 @@
         }
       ],
       "preview": "5883 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 TS, CARG, FOXA, FOX, NYT \u00b7 5883 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 TS, CARG, FOXA, FOX, NYT"
+    },
+    {
+      "key": "peer_rs",
+      "title": "Peer RS",
+      "date": "2026-11-17",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-17T14:21:58.280882-05:00",
+      "files": [
+        {
+          "path": "data/peers/2026-11-17_peer_rs.csv",
+          "ok": true,
+          "reason": "",
+          "size": 810611,
+          "preview": "5023 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+        }
+      ],
+      "preview": "5023 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
