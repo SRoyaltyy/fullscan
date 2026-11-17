@@ -4,7 +4,7 @@ _starts 10-08 open, no past days. Parent recipe `union_hot_n4_h1` (same selectio
 
 _Factor Mine recipe union_hot_n4_h1, not the separate IRONCLAD h1 book (research/hot_n4_clean_v4/forward_h1)._
 
-Equity: 9634.22 | days: 27
+Equity: 9634.22 | days: 28
 
 | date | S | picks | buys | sells | cash | equity | mean% | sit / reason |
 |---|---|---|---|---|---|---|---|---|
@@ -35,3 +35,4 @@ Equity: 9634.22 | days: 27
 | 2026-11-11 | 12.369 | TLS, INDI, ETON, ATER | TLS 324@7.8, INDI 1047@2.4146, ETON 37@66.94, ATER 2715@0.9315 | AEHL 220@11.89, EVC 268@9.1, FLY 106@23.9641, GOGO 708@3.58 | 3.09 | 9931.97 | -0.4282 | - |
 | 2026-11-12 | -7.158 | - | - | ATER 2715@0.9, ETON 37@68.38, INDI 1047@2.135, TLS 324@7.64 | 9634.22 | 9634.22 | -2.9979 | S=-7.16 <= -3: no buys |
 | 2026-11-13 | None | - | - | - | 9634.22 | 9634.22 | 0.0 | seal not committed before 09:30 ET: never committed |
+| 2026-11-16 | None | - | - | - | 9634.22 | 9634.22 | 0.0 | seal not committed before 09:30 ET: never committed |
