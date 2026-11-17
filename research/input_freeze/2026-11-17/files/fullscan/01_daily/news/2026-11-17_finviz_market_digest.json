@@ -1,0 +1,74 @@
+{
+  "date": "2026-11-17",
+  "generated_at": "2026-11-17T05:03:00.613697-05:00",
+  "timezone": "America/New_York",
+  "source": "live",
+  "source_url": "https://elite.finviz.com/",
+  "archive_snapshot_ts": null,
+  "archive_snapshot_at": null,
+  "archive_url": null,
+  "clock_legal": true,
+  "clock_same_morning": true,
+  "clock_use": "same_morning",
+  "clock_legal_for": "2026-11-17",
+  "clock_rule": "Live: Generated must be before 09:30 ET on this date or leave missing. Wayback: capture before 09:30 ET that day is legal for that morning's Pre-Open. Afternoon Wayback is legal for the NEXT session open only (prior-day close recap), marked by clock_legal_for. Gaps stay gaps. Capture only — not tape_anchor / predict / #210.",
+  "kind": "finviz_homepage_market_digest",
+  "represents": "Finviz homepage market-day prose. Same-morning Pre-Open when Generated is before 09:30 ET; afternoon Wayback is a prior-day close recap legal for the next session only. Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "US futures point to lower open as tech weakness and Nvidia earnings loom alongside key US retail sales and industrial data",
+  "raw_text": "- S&P 500 futures (@ES) fall 0.56%, Dow futures (@YM) lose 0.63%, Nasdaq 100 futures (@NQ) slip 0.68% and Russell 2000 futures (@ER2) decline 0.74% amid tech pressure and pre-Nvidia (NVDA) selling\n- Nvidia (NVDA) is set to report after the close, with traders focused on AI demand signals and tighter China chip access after the Commerce Department moved to close a remote-access loophole\n- Home Depot (HD) and Walt Disney (DIS) report earnings before the bell, setting up potential moves in consumer and retail-related names\n- US retail sales data are due at 8:30 AM ET, with industrial production and capacity utilization scheduled for 9:15 AM ET as key macro volatility catalysts\n- European equities trade weaker, with the DAX (@DY) and EuroStoxx 50 (@EX) down around 1.2%\n- Asian markets are mostly lower, led by a 1.3% drop in the Nikkei (@NKD) and nearly 2% slide in the KOSPI on AI-sector pressure and new US restrictions on advanced chips to China\n- Brent (@QA) and WTI (@CL) crude prices edge slightly higher even as supply-surplus concerns linger\n- Early pre-market coverage from Reuters, Bloomberg and CNBC notes no major large-cap movers with clear catalysts, with small-cap action dominated by low-float names lacking fundamental drivers",
+  "raw_summary_md": "- **S&P 500 futures** ([@ES](https://finviz.com/futures_charts?t=ES)) fall 0.56%, **Dow futures** ([@YM](https://finviz.com/futures_charts?t=YM)) lose 0.63%, **Nasdaq 100 futures** ([@NQ](https://finviz.com/futures_charts?t=NQ)) slip 0.68% and **Russell 2000 futures** ([@ER2](https://finviz.com/futures_charts?t=ER2)) decline 0.74% amid **tech pressure** and pre-**Nvidia** ([NVDA](https://finviz.com/quote?t=NVDA)) selling\n- **Nvidia** ([NVDA](https://finviz.com/quote?t=NVDA)) is set to report after the close, with traders focused on **AI demand signals** and **tighter China chip access** after the Commerce Department moved to close a remote-access loophole\n- **Home Depot** ([HD](https://finviz.com/quote?t=HD)) and **Walt Disney** ([DIS](https://finviz.com/quote?t=DIS)) **report earnings** before the bell, setting up potential moves in consumer and retail-related names\n- US retail sales data are due at 8:30 AM ET, with industrial production and capacity utilization scheduled for 9:15 AM ET as key **macro volatility catalysts**\n- European equities trade weaker, with the **DAX** ([@DY](https://finviz.com/futures_charts?t=DY)) and **EuroStoxx 50** ([@EX](https://finviz.com/futures_charts?t=EX)) **down around 1.2%**\n- Asian markets are mostly lower, led by a 1.3% drop in the **Nikkei** ([@NKD](https://finviz.com/futures_charts?t=NKD)) and **nearly 2% slide** in the KOSPI on AI-sector pressure and **new US restrictions** on advanced chips to China\n- **Brent** ([@QA](https://finviz.com/futures_charts?t=QA)) and **WTI** ([@CL](https://finviz.com/futures_charts?t=CL)) crude prices edge **slightly higher** even as supply-surplus concerns linger\n- Early pre-market coverage from Reuters, Bloomberg and CNBC notes **no major large-cap movers** with clear catalysts, with small-cap action dominated by low-float names **lacking fundamental drivers**",
+  "index_moves": [],
+  "oil": null,
+  "cpi": null,
+  "fed_odds": null,
+  "named_tickers": [
+    "NVDA",
+    "HD",
+    "DIS"
+  ],
+  "named_leaders": [
+    "NVDA",
+    "HD",
+    "DIS"
+  ],
+  "calendar": [
+    "US retail sales data are due at 8:30 AM ET, with industrial production and capacity utilization scheduled for 9:15 AM ET as key macro volatility catalysts"
+  ],
+  "prior_close": {
+    "spx": null,
+    "nasdaq": null,
+    "dow": null
+  },
+  "cpi_fed": {
+    "cpi": null,
+    "fed_odds": null
+  },
+  "next_session_calendar": {
+    "housing": false,
+    "retail": true,
+    "fed": false,
+    "bullets": [
+      "US retail sales data are due at 8:30 AM ET, with industrial production and capacity utilization scheduled for 9:15 AM ET as key macro volatility catalysts"
+    ],
+    "text": "US retail sales data are due at 8:30 AM ET, with industrial production and capacity utilization scheduled for 9:15 AM ET as key macro volatility catalysts"
+  },
+  "earnings_slate": {
+    "tickers": [
+      "HD",
+      "DIS"
+    ],
+    "text": "Home Depot (HD) and Walt Disney (DIS) report earnings before the bell, setting up potential moves in consumer and retail-related names"
+  },
+  "geo_grain": {
+    "geo": false,
+    "grain": false,
+    "flags": [],
+    "text": ""
+  },
+  "finviz_id": 346353,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-11-17T04:37:23.963",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "bad"
+}
