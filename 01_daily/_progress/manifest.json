@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-16T23:17:20-05:00",
+  "updated_at": "2026-11-16T23:19:46-05:00",
   "runs": [
     {
       "date": "2026-11-05",
@@ -194,16 +194,16 @@
       "updated_at": "2026-11-14T05:59:25-05:00"
     },
     {
-      "date": "2026-11-13",
-      "workflow": "postclose",
-      "file": "2026-11-13_postclose.json",
-      "updated_at": "2026-11-14T06:02:50-05:00"
-    },
-    {
       "date": "2026-11-14",
       "workflow": "fm_preopen",
       "file": "2026-11-14_fm_preopen.json",
       "updated_at": "2026-11-14T13:11:12-05:00"
+    },
+    {
+      "date": "2026-11-16",
+      "workflow": "fm_preopen",
+      "file": "2026-11-16_fm_preopen.json",
+      "updated_at": "2026-11-16T06:13:52-05:00"
     },
     {
       "date": "2026-11-16",
@@ -213,33 +213,33 @@
     },
     {
       "date": "2026-11-16",
+      "workflow": "webull_sim",
+      "file": "2026-11-16_webull_sim.json",
+      "updated_at": "2026-11-16T18:45:17-05:00"
+    },
+    {
+      "date": "2026-11-16",
       "workflow": "homepage_digest",
       "file": "2026-11-16_homepage_digest.json",
-      "updated_at": "2026-11-16T16:43:26-05:00"
+      "updated_at": "2026-11-16T22:52:57-05:00"
+    },
+    {
+      "date": "2026-11-13",
+      "workflow": "postclose",
+      "file": "2026-11-13_postclose.json",
+      "updated_at": "2026-11-16T22:57:43-05:00"
     },
     {
       "date": "2026-11-16",
       "workflow": "postclose",
       "file": "2026-11-16_postclose.json",
-      "updated_at": "2026-11-16T19:11:41-05:00"
+      "updated_at": "2026-11-16T22:59:54-05:00"
     },
     {
       "date": "2026-11-16",
       "workflow": "factor_mine",
       "file": "2026-11-16_factor_mine.json",
-      "updated_at": "2026-11-16T20:43:35-05:00"
-    },
-    {
-      "date": "2026-11-16",
-      "workflow": "webull_sim",
-      "file": "2026-11-16_webull_sim.json",
-      "updated_at": "2026-11-16T23:00:56-05:00"
-    },
-    {
-      "date": "2026-11-16",
-      "workflow": "fm_preopen",
-      "file": "2026-11-16_fm_preopen.json",
-      "updated_at": "2026-11-16T23:17:20-05:00"
+      "updated_at": "2026-11-16T23:19:46-05:00"
     }
   ]
 }
