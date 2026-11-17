@@ -1,12 +1,12 @@
 {
   "date": "2026-11-17",
-  "generated_at": "2026-11-17T05:14:10.336674-05:00",
+  "generated_at": "2026-11-17T05:14:26.903358-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
     "ok": 4,
-    "partial": 3,
-    "fail": 1,
+    "partial": 4,
+    "fail": 0,
     "n": 8
   },
   "buy_1d": [],
@@ -15,31 +15,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "finviz_digest",
-      "title": "Finviz digest",
-      "date": "2026-11-17",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-11-17T05:12:21.508137-05:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-11-17_finviz_digest.json",
-          "ok": true,
-          "reason": "",
-          "size": 101295,
-          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
-        },
-        {
-          "path": "01_daily/news/2026-11-17_finviz_digest.md",
-          "ok": true,
-          "reason": "",
-          "size": 11793,
-          "preview": "# Finviz Daily Digest \u2014 2026-11-17\n_Generated 2026-11-17T05:02:51.479066-05:00 \u00b7 export=data/exports/finviz_2026-11-17.csv \u00b7 ticker digests=597 \u00b7 high-signal=162_"
-        }
-      ],
-      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-11-17\n_Generated 2026-11-17T05:02:51.479066-05:00 \u00b7 export=data/exports/finviz_2026-11-17.csv \u00b7 ticker digests=597 \u00b7 high-signal=162_"
-    },
     {
       "key": "map_heat",
       "title": "Map heat tables",
@@ -200,6 +175,31 @@
         }
       ],
       "preview": "raw=8300 usable=687 single=624 \u00b7 Gold sinks to 1-year low as Treasury yields and dollar bite, set for worst year  | UK stocks steady ahead of jobs, inflation data - Reuters | India's October unemployment rate at 4.9% y/y - Reuters | CPI | Supreme Court Denies Custodia Bank Appeal in Federal Reserve Dispute - PYM | Mapping the Market: Semiconductor stocks may slide as another recovery fades - R \u00b7 # News Parse v2 \u2014 2026-11-17T05:14:01.096061-05:00\nWindow\u224848h | news_mode=on | raw=8300 | usable=687 | single_name=624 | noise_dropped=6792\nusable polarity={'+': 16, '-': 117, 'mixed': 1, 'neutral': 553}"
+    },
+    {
+      "key": "news_actions",
+      "title": "News actions",
+      "date": "2026-11-17",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-17T05:14:25.955916-05:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-11-17_actions.json",
+          "ok": true,
+          "reason": "",
+          "size": 84128,
+          "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers"
+        },
+        {
+          "path": "01_daily/news/2026-11-17_actions.md",
+          "ok": true,
+          "reason": "",
+          "size": 16323,
+          "preview": "# News \u2192 Actions v4 (full framework) \u2014 2026-11-17T05:14:25.941284-05:00\nraw=8300 unique_events=7 tickers=113"
+        }
+      ],
+      "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-11-17T05:14:25.941284-05:00\nraw=8300 unique_events=7 tickers=113"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
