@@ -10582,5 +10582,142 @@
       "status": "BEFORE_1330"
     },
     "sha256": "bec82a4def64445db60725b80a4f1b65fea78fb1bf8581a5233bbbcb3dcfd0a9"
+  },
+  {
+    "buys": [
+      {
+        "fee": 3.8184,
+        "fill": 6.06,
+        "fill_basis": "open",
+        "liquidity_cap_shares": 9398,
+        "rank": 1,
+        "shares": 296,
+        "sources": [
+          "yday_gainer"
+        ],
+        "ticker": "ZIP"
+      },
+      {
+        "fee": 2.002,
+        "fill": 411.579987,
+        "fill_basis": "open",
+        "liquidity_cap_shares": 52207,
+        "rank": 2,
+        "shares": 4,
+        "sources": [
+          "ohlc_hot"
+        ],
+        "ticker": "APP"
+      },
+      {
+        "fee": 2.053,
+        "fill": 82.510002,
+        "fill_basis": "open",
+        "liquidity_cap_shares": 10198,
+        "rank": 3,
+        "shares": 21,
+        "sources": [
+          "yday_gainer"
+        ],
+        "ticker": "CGON"
+      },
+      {
+        "fee": 2.455,
+        "fill": 11.55,
+        "fill_basis": "open",
+        "liquidity_cap_shares": 40541,
+        "rank": 4,
+        "shares": 155,
+        "sources": [
+          "ohlc_hot"
+        ],
+        "ticker": "FUN"
+      }
+    ],
+    "cash_primary": 232.00970560337805,
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-11-17",
+    "excluded_on_fill": [],
+    "holdings": [
+      {
+        "cost_primary": 1656.5535477399999,
+        "entry_date": "2026-11-17",
+        "entry_px": 411.579987,
+        "last_px": 411.579987,
+        "min_hold": 1,
+        "peak_px": 411.579987,
+        "shares": 4,
+        "ticker": "APP"
+      },
+      {
+        "cost_primary": 1743.4265922099999,
+        "entry_date": "2026-11-17",
+        "entry_px": 82.510002,
+        "last_px": 82.510002,
+        "min_hold": 1,
+        "peak_px": 82.510002,
+        "shares": 21,
+        "ticker": "CGON"
+      },
+      {
+        "cost_primary": 1801.6562499999998,
+        "entry_date": "2026-11-17",
+        "entry_px": 11.55,
+        "last_px": 11.55,
+        "min_hold": 1,
+        "peak_px": 11.55,
+        "shares": 155,
+        "ticker": "FUN"
+      },
+      {
+        "cost_primary": 1806.5472,
+        "entry_date": "2026-11-17",
+        "entry_px": 6.06,
+        "last_px": 6.06,
+        "min_hold": 1,
+        "peak_px": 6.06,
+        "shares": 296,
+        "ticker": "ZIP"
+      }
+    ],
+    "holdup_on": false,
+    "kind": "open_fill",
+    "morning_s": null,
+    "open_source": "yahoo_split_adjusted_daily_open",
+    "plan_sha256": "bec82a4def64445db60725b80a4f1b65fea78fb1bf8581a5233bbbcb3dcfd0a9",
+    "pnl_status": "pending",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sells": [
+      {
+        "fee": 2.4582,
+        "fill": 13.49,
+        "reason": "hold-expired",
+        "shares": 143,
+        "ticker": "AVEX"
+      },
+      {
+        "fee": 10.4911,
+        "fill": 1.89,
+        "reason": "hold-expired",
+        "shares": 802,
+        "ticker": "ENGN"
+      },
+      {
+        "fee": 2.4692,
+        "fill": 11.73,
+        "reason": "hold-expired",
+        "shares": 147,
+        "ticker": "LUNR"
+      },
+      {
+        "fee": 8.6143,
+        "fill": 3.21,
+        "reason": "hold-expired",
+        "shares": 658,
+        "ticker": "NUAI"
+      }
+    ],
+    "sha256": "08892f519854c7cb1d7dd1edda4d089c970501f3ef9eeb3778c61d3d2b7e4ea5",
+    "unfilled": []
   }
 ]
