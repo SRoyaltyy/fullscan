@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "generated_at": "2026-11-17T00:31:11.964816-05:00",
+  "generated_at": "2026-11-17T05:49:45.387470-05:00",
   "from_date": "2026-08-13",
   "to_date": "2026-11-16",
   "n_days": 67,
@@ -2349,7 +2349,11 @@
     "EPRX",
     "PERI",
     "SUPV",
-    "VC"
+    "VC",
+    "EAF",
+    "FUFU",
+    "HOS",
+    "STVN"
   ],
   "live_sit_untouched": true,
   "backtest": {
