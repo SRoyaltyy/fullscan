@@ -1,6 +1,6 @@
 {
   "date": "2026-11-17",
-  "generated_at": "2026-11-17T14:06:04.147914-05:00",
+  "generated_at": "2026-11-17T14:06:13.088812-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -1847,6 +1847,24 @@
         }
       ],
       "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -10.7, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -3.8, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.57, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': 0.7050000000000001, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.63, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -7.255, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -3.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-11-17\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade. \u00b7 weather sectors 11 \u00b7 Basic Materials={'score': -10.7, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -3.8, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'sco"
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-11-17",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-17T14:06:12.340104-05:00",
+      "files": [
+        {
+          "path": "data/join/2026-11-17_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2304266,
+          "preview": "5883 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 TS, CARG, FOXA, FOX, NYT"
+        }
+      ],
+      "preview": "5883 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 TS, CARG, FOXA, FOX, NYT"
     }
   ],
   "href": {
@@ -1860,6 +1878,14 @@
       "path": "data/day_board/2026-11-17.json",
       "at": "2026-11-17T14:06:04-05:00",
       "commit_msg": "auto: land weather [2026-11-17]",
+      "workflow": "Pre-Open ALL (predictive one-shot)",
+      "run_id": "44151423892",
+      "manifest": "research/input_freeze/2026-11-17/manifest.json"
+    },
+    {
+      "path": "data/day_board/2026-11-17.json",
+      "at": "2026-11-17T14:06:13-05:00",
+      "commit_msg": "auto: land join [2026-11-17]",
       "workflow": "Pre-Open ALL (predictive one-shot)",
       "run_id": "44151423892",
       "manifest": "research/input_freeze/2026-11-17/manifest.json"
