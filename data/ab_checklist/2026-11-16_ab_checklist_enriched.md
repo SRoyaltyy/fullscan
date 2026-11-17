@@ -18,28 +18,28 @@
 
 | Ticker | enr | base | ctx | rs_w | beat% | ind_med_w | sector | board | label |
 |--------|----:|-----:|----:|-----:|------:|----------:|--------|-------|-------|
-| ECO | +19 | +16 | +3 | +1.3 | 60% | +2.3 | Industrials | — | LEAD,peers↑,ind↑ |
-| HAL | +19 | +16 | +3 | +2.9 | 80% | +4.8 | Energy | — | LEAD,peers↑,ind↑ |
-| ATAT | +18 | +15 | +3 | +4.1 | 100% | +1.8 | Consumer Cyclical | — | LEAD,peers↑,ind↑ |
-| YMM | +18 | +17 | +1 | -7.2 | 0% | +0.4 | Technology | — | LAG,peers↑,ind↑ |
-| ASC | +18 | +15 | +3 | +7.7 | 100% | +2.3 | Industrials | — | LEAD,peers↑,ind↑ |
-| IR | +18 | +15 | +3 | +0.2 | 67% | +2.6 | Industrials | — | LEAD,peers↑,ind↑ |
-| FRPT | +18 | +15 | +3 | +4.6 | 100% | +0.1 | Consumer Defensive | — | LEAD,peers↑,ind↑ |
-| SB | +17 | +14 | +3 | +11.6 | 100% | +2.3 | Industrials | — | LEAD,peers↑,ind↑ |
-| EW | +17 | +14 | +3 | +4.4 | 100% | +0.1 | Healthcare | — | LEAD,peers↑,ind↑ |
-| SVV | +17 | +14 | +3 | +4.4 | 100% | +1.8 | Consumer Cyclical | — | LEAD,peers↑,ind↑ |
-| MEOH | +16 | +13 | +3 | +5.4 | 90% | +0.9 | Basic Materials | — | LEAD,peers↑,ind↑ |
-| WMT | +16 | +15 | +1 | -0.2 | 50% | +2.0 | Consumer Defensive | — | LAG,peers↑,ind↑ |
-| FOXA | +16 | +13 | +3 | +0.4 | 71% | +1.8 | Communication Serv | — | LEAD,peers↑,ind↑ |
-| HTHT | +16 | +15 | +1 | -3.2 | 0% | +1.8 | Consumer Cyclical | — | LAG,peers↑,ind↑ |
-| URI | +16 | +13 | +3 | +1.0 | 71% | +3.9 | Industrials | — | LEAD,peers↑,ind↑ |
-| WDAY | +16 | +13 | +3 | +1.4 | 70% | +0.4 | Technology | — | LEAD,peers↑,ind↑ |
+| FOXA | +20 | +17 | +3 | +0.4 | 71% | +1.8 | Communication Serv | — | LEAD,peers↑,ind↑ |
+| PBH | +19 | +16 | +3 | +4.4 | 90% | +0.3 | Healthcare | — | LEAD,peers↑,ind↑ |
+| CBRL | +19 | +16 | +3 | +1.1 | 89% | +1.0 | Consumer Cyclical | — | LEAD,peers↑,ind↑ |
+| LFST | +18 | +15 | +3 | +1.6 | 100% | +0.1 | Healthcare | — | LEAD,peers↑,ind↑ |
+| MSCI | +18 | +15 | +3 | +1.2 | 70% | +1.1 | Financial | — | LEAD,peers↑,ind↑ |
+| DRH | +18 | +15 | +3 | +0.0 | 50% | +2.7 | Real Estate | — | LEAD,peers↑,ind↑ |
+| FNKO | +17 | +14 | +3 | +0.4 | 50% | +1.1 | Consumer Cyclical | — | LEAD,peers↑,ind↑ |
+| SBH | +17 | +14 | +3 | +3.0 | 80% | +1.8 | Consumer Cyclical | — | LEAD,peers↑,ind↑ |
+| VNT | +17 | +14 | +3 | +0.8 | 80% | +0.9 | Technology | — | LEAD,peers↑,ind↑ |
+| AMN | +17 | +14 | +3 | +4.1 | 100% | +0.1 | Healthcare | — | LEAD,peers↑,ind↑ |
+| SWBI | +16 | +13 | +3 | +5.6 | 100% | +1.7 | Industrials | — | LEAD,peers↑,ind↑ |
 | CLOV | +16 | +13 | +3 | +0.8 | 70% | +2.2 | Healthcare | — | LEAD,peers↑,ind↑ |
-| TRGP | +16 | +13 | +3 | +9.0 | 100% | +4.3 | Energy | — | LEAD,peers↑,ind↑ |
-| CHRD | +15 | +12 | +3 | +3.8 | 83% | +4.5 | Energy | — | LEAD,peers↑,ind↑ |
-| DOCS | +15 | +14 | +1 | +1.8 | 80% | -0.7 | Healthcare | — | LEAD,peers↑,ind↓ |
-| AKAM | +15 | +12 | +3 | +0.4 | 50% | +0.0 | Technology | — | LEAD,peers↑,ind↑ |
-| KNX | +15 | +12 | +3 | +3.6 | 100% | +3.9 | Industrials | — | LEAD,peers↑,ind↑ |
-| FRSH | +15 | +12 | +3 | +3.5 | 80% | +0.4 | Technology | — | LEAD,peers↑,ind↑ |
-| BEKE | +15 | +17 | -2 | -5.2 | 20% | -3.8 | Real Estate | — | LAG,ind↓ |
-| MSCI | +15 | +12 | +3 | +1.2 | 70% | +1.1 | Financial | — | LEAD,peers↑,ind↑ |
+| RPD | +16 | +15 | +1 | -3.9 | 33% | +0.0 | Technology | — | LAG,peers↑,ind↑ |
+| FRSH | +16 | +13 | +3 | +3.5 | 80% | +0.4 | Technology | — | LEAD,peers↑,ind↑ |
+| ABNB | +16 | +17 | -1 | -2.4 | 0% | -0.5 | Consumer Cyclical | — | LAG,peers↑,ind↓ |
+| EW | +16 | +13 | +3 | +4.4 | 100% | +0.1 | Healthcare | — | LEAD,peers↑,ind↑ |
+| ZIP | +15 | +12 | +3 | +43.5 | 100% | +0.8 | Communication Serv | — | LEAD,peers↑,ind↑ |
+| KMB | +15 | +14 | +1 | -2.0 | 22% | +1.4 | Consumer Defensive | — | LAG,peers↑,ind↑ |
+| UPBD | +15 | +12 | +3 | +2.4 | 75% | +0.4 | Technology | — | LEAD,peers↑,ind↑ |
+| CNK | +15 | +12 | +3 | +3.0 | 78% | +1.8 | Communication Serv | — | LEAD,peers↑,ind↑ |
+| GXO | +15 | +14 | +1 | -6.5 | 10% | +3.0 | Industrials | — | LAG,peers↑,ind↑ |
+| ELV | +15 | +14 | +1 | -1.2 | 29% | +2.2 | Healthcare | — | LAG,peers↑,ind↑ |
+| WWW | +15 | +14 | +1 | +14.1 | 100% | -0.3 | Consumer Cyclical | — | LEAD,peers↑,ind↓ |
+| SEZL | +15 | +14 | +1 | +2.7 | 67% | -3.1 | Financial | — | LEAD,peers↑,ind↓ |
+| SO | +15 | +14 | +1 | -0.7 | 30% | +1.4 | Utilities | — | LAG,peers↑,ind↑ |
