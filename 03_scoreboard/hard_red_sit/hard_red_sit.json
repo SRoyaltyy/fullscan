@@ -2901,7 +2901,7 @@
   },
   "per_sleeve": {
     "tag": "RESEARCH",
-    "date": "2026-11-16",
+    "date": "2026-11-17",
     "live_sit": true,
     "keep_bar_unchanged": true,
     "n_sit": 1,
@@ -2928,8 +2928,8 @@
             "ticker": "DVN",
             "side": "long",
             "open": null,
-            "px": 46.58,
-            "px_src": "session_export+elite_live_skipped",
+            "px": 44.27,
+            "px_src": "session_export",
             "low": null,
             "scoops": {
               "0.5": {
@@ -2964,8 +2964,8 @@
             "ticker": "ALNY",
             "side": "long",
             "open": null,
-            "px": 165.04,
-            "px_src": "session_export+elite_live_skipped",
+            "px": 159.73,
+            "px_src": "session_export",
             "low": null,
             "scoops": {
               "0.5": {
@@ -3000,8 +3000,8 @@
             "ticker": "PODD",
             "side": "long",
             "open": null,
-            "px": 152.48,
-            "px_src": "session_export+elite_live_skipped",
+            "px": 145.29,
+            "px_src": "session_export",
             "low": null,
             "scoops": {
               "0.5": {
@@ -3036,8 +3036,8 @@
             "ticker": "CHRD",
             "side": "long",
             "open": null,
-            "px": 149.93,
-            "px_src": "session_export+elite_live_skipped",
+            "px": 146.78,
+            "px_src": "session_export",
             "low": null,
             "scoops": {
               "0.5": {
@@ -3072,8 +3072,8 @@
             "ticker": "EPRX",
             "side": "long",
             "open": null,
-            "px": 8.15,
-            "px_src": "session_export+elite_live_skipped",
+            "px": 7.34,
+            "px_src": "session_export",
             "low": null,
             "scoops": {
               "0.5": {
