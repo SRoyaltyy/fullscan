@@ -2925,11 +2925,11 @@
         "short_only": [],
         "dip_scoop": [
           {
-            "ticker": "DVN",
+            "ticker": "HUBS",
             "side": "long",
             "open": null,
-            "px": 44.27,
-            "px_src": "session_export",
+            "px": 231.98,
+            "px_src": "session_export+elite_live_skipped",
             "low": null,
             "scoops": {
               "0.5": {
@@ -2961,11 +2961,11 @@
             "tag": "RESEARCH"
           },
           {
-            "ticker": "ALNY",
+            "ticker": "APP",
             "side": "long",
             "open": null,
-            "px": 159.73,
-            "px_src": "session_export",
+            "px": 415.22,
+            "px_src": "session_export+elite_live_skipped",
             "low": null,
             "scoops": {
               "0.5": {
@@ -2997,11 +2997,11 @@
             "tag": "RESEARCH"
           },
           {
-            "ticker": "PODD",
+            "ticker": "CMCSA",
             "side": "long",
             "open": null,
-            "px": 145.29,
-            "px_src": "session_export",
+            "px": 25.6,
+            "px_src": "session_export+elite_live_skipped",
             "low": null,
             "scoops": {
               "0.5": {
@@ -3033,11 +3033,11 @@
             "tag": "RESEARCH"
           },
           {
-            "ticker": "CHRD",
+            "ticker": "WWW",
             "side": "long",
             "open": null,
-            "px": 146.78,
-            "px_src": "session_export",
+            "px": 25.29,
+            "px_src": "session_export+elite_live_skipped",
             "low": null,
             "scoops": {
               "0.5": {
@@ -3069,11 +3069,47 @@
             "tag": "RESEARCH"
           },
           {
-            "ticker": "EPRX",
+            "ticker": "ATAT",
             "side": "long",
             "open": null,
-            "px": 7.34,
-            "px_src": "session_export",
+            "px": 38.75,
+            "px_src": "session_export+elite_live_skipped",
+            "low": null,
+            "scoops": {
+              "0.5": {
+                "kind": "no_open",
+                "x": 0.5,
+                "fill": null
+              },
+              "1.0": {
+                "kind": "no_open",
+                "x": 1.0,
+                "fill": null
+              },
+              "1.5": {
+                "kind": "no_open",
+                "x": 1.5,
+                "fill": null
+              },
+              "2.0": {
+                "kind": "no_open",
+                "x": 2.0,
+                "fill": null
+              },
+              "3.0": {
+                "kind": "no_open",
+                "x": 3.0,
+                "fill": null
+              }
+            },
+            "tag": "RESEARCH"
+          },
+          {
+            "ticker": "KVYO",
+            "side": "long",
+            "open": null,
+            "px": 22.89,
+            "px_src": "session_export+elite_live_skipped",
             "low": null,
             "scoops": {
               "0.5": {
