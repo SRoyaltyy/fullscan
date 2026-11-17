@@ -1,18 +1,17 @@
 {
   "date": "2026-11-17",
-  "generated_at": "2026-11-17T05:13:10.523548-05:00",
+  "generated_at": "2026-11-17T05:13:37.177441-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
     "MISSING General predict MD `01_daily/general/2026-11-17_predict.md` \u2014 missing",
     "MISSING News actions JSON `01_daily/news/2026-11-17_actions.json` \u2014 missing",
-    "MISSING News judge MD `01_daily/news/2026-11-17_judge.md` \u2014 missing",
-    "MISSING AB checklist enriched `data/ab_checklist/2026-11-17_ab_checklist_enriched.csv` \u2014 missing"
+    "MISSING News judge MD `01_daily/news/2026-11-17_judge.md` \u2014 missing"
   ],
   "counts": {
-    "ok": 3,
+    "ok": 4,
     "partial": 3,
-    "fail": 2,
+    "fail": 1,
     "n": 8
   },
   "processes": [
@@ -535,11 +534,11 @@
       "key": "ab",
       "name": "AB checklist",
       "yaml": "ab_checklist.yml",
-      "status": "FAIL",
+      "status": "OK",
       "inputs_ready": true,
-      "n_req_ok": 0,
+      "n_req_ok": 1,
       "n_req": 1,
-      "n_opt_ok": 0,
+      "n_opt_ok": 1,
       "n_opt": 1,
       "files": [
         {
@@ -547,26 +546,32 @@
           "name": "AB checklist raw",
           "path": "data/ab_checklist/2026-11-17_ab_checklist.csv",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "rows=2593",
+          "size": 7459869,
+          "said": "27 rows",
+          "bullets": [
+            "ABNB, WCN, CBRL, SO, FOXA, LFST, PPL, GXO"
+          ]
         },
         {
           "key": "ab_enriched",
           "name": "AB checklist enriched",
           "path": "data/ab_checklist/2026-11-17_ab_checklist_enriched.csv",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "rows=2593",
+          "size": 8235830,
+          "said": "25 rows",
+          "bullets": [
+            "GXO, ELV, DRH, HTHT, SO, WCN, MSCI, FOXA"
+          ]
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "25 rows",
+      "bullets": [
+        "GXO, ELV, DRH, HTHT, SO"
+      ]
     },
     {
       "key": "catalyst",
@@ -626,7 +631,7 @@
       "yaml": "stock_book_all.yml",
       "status": "PARTIAL",
       "inputs_ready": false,
-      "n_req_ok": 1,
+      "n_req_ok": 2,
       "n_req": 4,
       "n_opt_ok": 1,
       "n_opt": 4,
@@ -708,11 +713,13 @@
           "name": "AB checklist enriched",
           "path": "data/ab_checklist/2026-11-17_ab_checklist_enriched.csv",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "rows=2593",
+          "size": 8235830,
+          "said": "25 rows",
+          "bullets": [
+            "GXO, ELV, DRH, HTHT, SO, WCN, MSCI, FOXA"
+          ]
         },
         {
           "key": "join",
@@ -732,11 +739,13 @@
           "name": "Peer RS CSV",
           "path": "data/peers/2026-11-17_peer_rs.csv",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "rows=5023",
+          "size": 810611,
+          "said": "492 rows",
+          "bullets": [
+            "A, AA, AACG, AAL, AAME, AAMI, AAOI, AAON"
+          ]
         },
         {
           "key": "book_json",
@@ -1202,6 +1211,31 @@
         }
       ],
       "preview": "5883 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 TS, CARG, FOXA, FOX, NYT"
+    },
+    {
+      "key": "ab",
+      "title": "AB checklist",
+      "date": "2026-11-17",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-17T05:13:36.386097-05:00",
+      "files": [
+        {
+          "path": "data/ab_checklist/2026-11-17_ab_checklist.csv",
+          "ok": true,
+          "reason": "",
+          "size": 7459869,
+          "preview": "2593 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 ABNB, WCN, CBRL, SO, FOXA"
+        },
+        {
+          "path": "data/ab_checklist/2026-11-17_ab_checklist_enriched.csv",
+          "ok": true,
+          "reason": "",
+          "size": 8235830,
+          "preview": "2593 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 GXO, ELV, DRH, HTHT, SO"
+        }
+      ],
+      "preview": "2593 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 ABNB, WCN, CBRL, SO, FOXA \u00b7 2593 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 GXO, ELV, DRH, HTHT, SO"
     }
   ],
   "href": {
