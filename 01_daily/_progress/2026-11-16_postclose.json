@@ -5,8 +5,8 @@
   "run_id": "43982057466",
   "model": "deepseek",
   "started_at": "2026-11-16T19:08:16-05:00",
-  "updated_at": "2026-11-16T19:11:36-05:00",
-  "heartbeat_at": "2026-11-16T19:11:36-05:00",
+  "updated_at": "2026-11-16T19:11:41-05:00",
+  "heartbeat_at": "2026-11-16T19:11:41-05:00",
   "stages": [
     {
       "name": "outcome",
@@ -76,9 +76,9 @@
     },
     {
       "name": "captains",
-      "state": "running",
+      "state": "ok",
       "started_at": "2026-11-16T19:10:36-05:00",
-      "ended_at": "",
+      "ended_at": "2026-11-16T19:11:41-05:00",
       "heartbeat_at": "2026-11-16T19:11:36-05:00",
       "done": 1,
       "total": 1,
