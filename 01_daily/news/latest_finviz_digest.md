@@ -1,6 +1,6 @@
-# Finviz Daily Digest — 2026-11-16
+# Finviz Daily Digest — 2026-11-17
 
-_Generated 2026-11-17T04:16:00.607186-05:00 · export=data/exports/finviz_2026-11-16.csv · ticker digests=645 · high-signal=205_
+_Generated 2026-11-17T04:50:30.764501-05:00 · export=data/exports/finviz_2026-11-16.csv · ticker digests=966 · high-signal=382_
 
 ## Major indices (live quote page)
 
@@ -11,106 +11,99 @@ _Generated 2026-11-17T04:16:00.607186-05:00 · export=data/exports/finviz_2026-1
 
 ## High-signal ticker digests (ranked)
 
-- **AON** [Financial]: Aon completed its $17 billion acquisition of USI, adding about $3 billion in annual revenue and targeting $395 million in net adjusted EBITDA synergies.
-- **APP** [Communication Serv]: Jefferies names AppLovin its top 2027 stock pick and raises its price target to $500, maintaining a Buy rating.
-- **AZN** [Healthcare]: AstraZeneca wins FDA approval for an Imfinzi-Padcev regimen for cisplatin-ineligible or cisplatin-refusing patients with muscle-invasive bladder cancer.
-- **DIS** [Communication Serv]: Walt Disney Co is scheduled to announce earnings today before market open
-- **HD** [Consumer Cyclical]: Home Depot Inc is scheduled to announce earnings today before market open
-- **LRCX** [Technology]: Nvidia leadership fallout and earnings anxiety pull Lam Research 5.4% lower pre-market
-- **MDLN** [Healthcare]: Medline announces a 60 million-share secondary offering by existing investors and a concurrent $200 million repurchase of shares and units from selling stockholders.
-- **MDT** [Healthcare]: Medtronic announced plans to acquire Contego Medical for $380 million, with the deal expected to be minimally dilutive to adjusted EPS in FY27 and FY28.
-- **NKE** [Consumer Cyclical]: Nike unveiled Tuned Air, a new digital manufacturing process it says cuts development time by 70%, alongside new footwear and apparel innovations.
-- **NUE** [Basic Materials]: UBS upgraded Nucor to Buy from Neutral and raised its price target 20% to $307, citing stronger earnings prospects and potential for higher shareholder returns.
-- **PFE** [Healthcare]: Pfizer's Padcev gains FDA approval with AstraZeneca's Imfinzi for certain adults with muscle-invasive bladder cancer who cannot receive or refused cisplatin-based chemotherapy
-- **TJX** [Consumer Cyclical]: TJX accrued $112 million in year-end incentive compensation and discretionary bonuses against tariff refunds, leaving a $219 million net pretax benefit in fiscal Q2
-- **AS** [Consumer Cyclical]: Amer Sports Inc is scheduled to announce earnings today before market open
-- **BEKE** [Real Estate]: KE Holdings reports fiscal Q3 2026 non-GAAP EPS of $0.35 (+123% YoY) and revenue of $3.1B (-3% YoY), beating estimates
-- **BIDU** [Communication Serv]: Baidu reports Q3 FY2026 EPS $1.02 (-35% YoY), revenue $4.6B, beats EPS but misses revenue estimates as AI cloud grows 94% YoY
-- **CIEN** [Technology]: TD Cowen target cut and AI-infrastructure selloff drive Ciena shares down 8.2%
-- **CRCL** [Financial]: Bitcoin’s weekend plunge drags Circle 8.6% lower alongside crypto peers Monday pre-market
-- **CRDO** [Technology]: TD Cowen’s 42% target cut and semiconductor selloff push Credo down 8.2%
-- **CRWV** [Technology]: Nvidia leadership fallout hits AI infrastructure peers, pulling CoreWeave 8% lower pre-market ahead of earnings
-- **ESLT** [Industrials]: Elbit Systems reports Q3 revenue of $2.25 billion, GAAP EPS of $3.70 and record $33 billion backlog
-- **HII** [Industrials]: HII receives updated U.S. Navy contract for 82 more Lionfish unmanned undersea vehicles, bringing five-year program deliveries to 175 with potential value above $347 million
-- **HRL** [Consumer Defensive]: Hormel Foods completed its approximately $1.055 billion acquisition of Brakebush Brothers, which it expects to nearly triple its chicken business by net sales.
-- **HTHT** [Consumer Cyclical]: H World reports Q3 2026 revenue of $1.2B, up 18% YoY and above estimates, raises 2026 growth guidance to 9%-10%
-- **KB** [Financial]: KB Financial reported third-quarter net income of $1.24 billion, earnings of $3.42 per share and revenue of $6.22 billion.
-- **NBIS** [Technology]: Northland, Truist and DA Davidson cut Nebius price targets, with DA Davidson halving its target to $125 while maintaining a Neutral rating.
-- **RBLX** [Communication Serv]: Friday's Citi downgrade and Monday's technology selloff drive Roblox 8% lower intraday
-- **TEVA** [Healthcare]: Teva receives FDA approval for at-home IGALMI treatment of acute agitation in adults with schizophrenia, schizoaffective disorder, or bipolar I or II disorder
-- **TSN** [Consumer Defensive]: Tyson meets FY26 guidance but guides FY27 earnings lower on chicken and pork headwinds
-- **VIK** [Consumer Cyclical]: Viking Holdings Ltd is scheduled to announce earnings today before market open
-- **ZTO** [Industrials]: ZTO Express (Cayman) Inc ADR is scheduled to announce earnings today after market close
-- **ABCB** [Financial]: Ameris Bancorp disclosed a $180 million all-stock acquisition of Bank of Central Florida, expected to close in Q1 2027
-- **ACCV** [Industrials]: Pre-market earnings correction drives Accelevation 14% lower as corrected SG&A margins increase
-- **ACM** [Industrials]: AECOM reports fiscal 2026 Q4 adjusted EPS of $1.63, beating estimates, while revenue of $3.9B (+97% YoY) misses consensus
-- **BLSH** [Technology]: Wells Fargo target cut and Bitcoin-led crypto selloff sink Bullish 12% before earnings
-- **CAAP** [Industrials]: Corporacion America Airports SA is scheduled to announce earnings today after market close
-- **DLB** [Industrials]: Dolby Laboratories Inc is scheduled to announce earnings today after market close
-- **FIGR** [Financial]: Needham cut its Figure Technology price target to $50 from $55 while maintaining its Buy rating and naming the stock a top pick.
-- **GBDC** [Financial]: Golub Capital BDC Inc is scheduled to announce earnings today after market close
-- **GFF** [Industrials]: Griffon Corp is scheduled to announce earnings today before market open
-- **HSIC** [Healthcare]: Henry Schein lowers 2026 non-GAAP EPS guidance to $5.42–$5.48 solely to exclude acquisition-related remeasurement gains, with no change to its underlying business outlook.
+- **AMAT** [Technology]: Applied Materials posts record FY Q4 2026 revenue $10.41B (+53%) and non-GAAP EPS $4.16 (+92%), guides Q1 revenue $10.6B-$11.6B and adjusted EPS $4.15-$4.55
+- **BE** [Industrials]: CoreWeave earnings revive AI-infrastructure demand trade, lifting Bloom Energy 9% in Wednesday premarket
+- **BN** [Financial]: Brookfield Corp reports fiscal Q3 2026 non-GAAP EPS of $0.64 (+14% YoY), misses estimates, while revenue rises 18% to $1.9B and beats estimates
+- **COP** [Energy]: Bernstein downgrades ConocoPhillips to Market Perform, cuts price target to $122 from $129
+- **CSCO** [Technology]: Cisco posts record fiscal Q1 and raises FY27 guidance as AI networking demand accelerates
+- **KLAC** [Technology]: CoreWeave earnings beat and Asian chip rally lift KLA 5.4% in pre-market
+- **LOW** [Consumer Cyclical]: Stifel downgrades Lowe's to Sell from Hold, cuts price target to $190 from $195 on housing weakness, margin pressure and competition
+- **MFG** [Financial]: Mizuho Financial Group Inc ADR reports fiscal quarterly results with non-GAAP EPS $0.32 (+53% YoY) and revenue $15.5B (+178% YoY), beats EPS and revenue estimates
+- **MRNA** [Healthcare]: Moderna targets annual cash costs of $4 billion–$4.5 billion from 2027 through 2030 and says amended Ares credit-facility terms cut interest rates by 75 basis points.
+- **MSFT** [Technology]: Microsoft traces outage to earlier network-capacity upgrade and continues restoring Outlook service
+- **MUFG** [Financial]: Mitsubishi UFJ Financial Group Inc ADR reports fiscal Q2 2027 results with non-GAAP EPS $0.46 (+8% YoY) and revenue $25.6B (+9% YoY), beats EPS and revenue estimates
+- **NU** [Financial]: Nu Holdings posts record Q3 net income of $1.1 billion and lowers full-year efficiency ratio guidance to 19–19.5%
+- **SMFG** [Financial]: Sumitomo Mitsui Financial Group Inc ADR reports fiscal Q2 2027 results with non-GAAP EPS $0.50 (-11% YoY) and revenue $27.5B (+239% YoY), misses EPS but beats revenue estimates
+- **VRT** [Industrials]: Vertiv raises its annual dividend 60% to $0.40 per share, beginning with a $0.10 quarterly payment in December.
+- **XOM** [Energy]: Bernstein cut its ExxonMobil price target to $186 from $193 while maintaining an Outperform rating.
+- **ALSN** [Consumer Cyclical]: Allison Transmission secures $67 million U.S. Army contract for propulsion systems for 2027 Abrams tank orders
+- **BNT** [Financial]: Brookfield Wealth Solutions reports third-quarter distributable operating earnings of $519 million, up from $427 million, and net income of $863 million versus $608 million
+- **CBRS** [Technology]: Cerebras says OpenAI contract deployments are behind schedule due to land, power and facility delays, with catch-up not expected until the second half of 2027
+- **CHKP** [Technology]: Check Point announced that its Web Application and API Security platform earned FedRAMP certification, expanding its government-certified security offerings.
+- **CTSH** [Technology]: Deutsche Bank downgraded Cognizant to Hold from Buy and cut its price target to $66, citing a slower path to organic revenue growth.
+- **EC** [Energy]: Ecopetrol SA ADR reports fiscal Q3 2026 results with non-GAAP EPS $0.63 (+89% YoY) and revenue $10.7B (+32% YoY), misses EPS but beats revenue estimates
+- **ESLT** [Industrials]: Elbit Systems announced a $260 million, five-year contract to supply PULS rocket artillery systems and munitions to a European NATO country.
+- **FIX** [Industrials]: JPMorgan initiated coverage of Comfort Systems USA with an Overweight rating and a $1,700 December 2027 price target.
+- **FROG** [Technology]: Q3 beat-and-raise resumes JFrog rally, lifting shares 8% Wednesday amid AI-stock rebound
+- **GH** [Healthcare]: Guardant Health prices $500 million of 0% convertible notes due 2032 at a $208.95 conversion price, partly to repurchase 2027 notes
+- **KEP** [Utilities]: Q3 profit miss and Korean broker target cuts sink KEP 8% pre-market
+- **LH** [Healthcare]: No clear catalyst identified as lean hogs rebound from Thursday's contract-low-area selloff
+- **MTSI** [Technology]: CoreWeave raises outlook, reviving AI-optical trade and lifting MACOM 11% in regular hours
+- **MTZ** [Industrials]: CoreWeave beat revives AI-infrastructure spending trade, lifting MasTec 6% alongside construction peers
+- **NBIS** [Technology]: Nebius narrows 2026 revenue guidance to $3.0 billion–$3.2 billion from $3.0 billion–$3.4 billion
+- **P** [Technology]: CoreWeave earnings revive AI infrastructure trade, lifting Everpure 8% during regular hours
+- **QXO** [Industrials]: QXO reports fiscal Q3 2026 non-GAAP EPS of $0.13, down 7% YoY, and revenue of $4.9B, up 79%, missing EPS but beating revenue estimates
+- **VYLR** [Basic Materials]: Vylor reports fiscal Q3 2026 EPS of $-0.42 and revenue of $911.0M, beats EPS, misses revenue, reaffirms 2026 guidance
+- **WSM** [Consumer Cyclical]: Williams-Sonoma Inc reports fiscal Q3 2027 results with non-GAAP EPS $2.19 (+12% YoY) and revenue $2.0B (+6% YoY), beats EPS and revenue estimates
+- **XYL** [Industrials]: Xylem authorizes a $1.5 billion share repurchase program
+- **ZM** [Technology]: Mizuho’s bullish earnings preview and AI rebound lift Zoom 6.8% by midday
+- **AAOI** [Technology]: CoreWeave’s beat-and-raise revives AI infrastructure demand, lifting Applied Optoelectronics 17% by late morning
+- **ACCV** [Industrials]: Accelevation Holdings Corp reports fiscal Q3 2026 results with non-GAAP EPS $0.09 and revenue $202.2M, beats EPS and revenue estimates
+- **ALM** [Basic Materials]: Almonty Industries Inc reports fiscal Q3 2026 results with non-GAAP EPS $0.12 (+29% YoY) and revenue $29.4M (+376% YoY), beats EPS but misses revenue estimates
+- **ANDG** [Consumer Cyclical]: Andersen raises 2026 guidance and targets ~30% revenue growth in 2027
 
 ## By sector (top signal)
 
-### Healthcare (n=8)
-- AZN: AstraZeneca wins FDA approval for an Imfinzi-Padcev regimen for cisplatin-ineligible or cisplatin-refusing patients with muscle-invasive bladder cancer.
-- MDLN: Medline announces a 60 million-share secondary offering by existing investors and a concurrent $200 million repurchase of shares and units from selling stockholders.
-- MDT: Medtronic announced plans to acquire Contego Medical for $380 million, with the deal expected to be minimally dilutive to adjusted EPS in FY27 and FY28.
-- PFE: Pfizer's Padcev gains FDA approval with AstraZeneca's Imfinzi for certain adults with muscle-invasive bladder cancer who cannot receive or refused cisplatin-based chemotherapy
-- TEVA: Teva receives FDA approval for at-home IGALMI treatment of acute agitation in adults with schizophrenia, schizoaffective disorder, or bipolar I or II disorder
+### Technology (n=8)
+- AMAT: Applied Materials posts record FY Q4 2026 revenue $10.41B (+53%) and non-GAAP EPS $4.16 (+92%), guides Q1 revenue $10.6B-$11.6B and adjusted EPS $4.15-$4.55
+- CSCO: Cisco posts record fiscal Q1 and raises FY27 guidance as AI networking demand accelerates
+- KLAC: CoreWeave earnings beat and Asian chip rally lift KLA 5.4% in pre-market
+- MSFT: Microsoft traces outage to earlier network-capacity upgrade and continues restoring Outlook service
+- CBRS: Cerebras says OpenAI contract deployments are behind schedule due to land, power and facility delays, with catch-up not expected until the second half of 2027
 
 ### Industrials (n=8)
-- ESLT: Elbit Systems reports Q3 revenue of $2.25 billion, GAAP EPS of $3.70 and record $33 billion backlog
-- HII: HII receives updated U.S. Navy contract for 82 more Lionfish unmanned undersea vehicles, bringing five-year program deliveries to 175 with potential value above $347 million
-- ZTO: ZTO Express (Cayman) Inc ADR is scheduled to announce earnings today after market close
-- ACCV: Pre-market earnings correction drives Accelevation 14% lower as corrected SG&A margins increase
-- ACM: AECOM reports fiscal 2026 Q4 adjusted EPS of $1.63, beating estimates, while revenue of $3.9B (+97% YoY) misses consensus
+- BE: CoreWeave earnings revive AI-infrastructure demand trade, lifting Bloom Energy 9% in Wednesday premarket
+- VRT: Vertiv raises its annual dividend 60% to $0.40 per share, beginning with a $0.10 quarterly payment in December.
+- ESLT: Elbit Systems announced a $260 million, five-year contract to supply PULS rocket artillery systems and munitions to a European NATO country.
+- FIX: JPMorgan initiated coverage of Comfort Systems USA with an Overweight rating and a $1,700 December 2027 price target.
+- MTZ: CoreWeave beat revives AI-infrastructure spending trade, lifting MasTec 6% alongside construction peers
 
-### Financial (n=8)
-- AON: Aon completed its $17 billion acquisition of USI, adding about $3 billion in annual revenue and targeting $395 million in net adjusted EBITDA synergies.
-- CRCL: Bitcoin’s weekend plunge drags Circle 8.6% lower alongside crypto peers Monday pre-market
-- KB: KB Financial reported third-quarter net income of $1.24 billion, earnings of $3.42 per share and revenue of $6.22 billion.
-- ABCB: Ameris Bancorp disclosed a $180 million all-stock acquisition of Bank of Central Florida, expected to close in Q1 2027
-- FIGR: Needham cut its Figure Technology price target to $50 from $55 while maintaining its Buy rating and naming the stock a top pick.
+### Financial (n=7)
+- BN: Brookfield Corp reports fiscal Q3 2026 non-GAAP EPS of $0.64 (+14% YoY), misses estimates, while revenue rises 18% to $1.9B and beats estimates
+- MFG: Mizuho Financial Group Inc ADR reports fiscal quarterly results with non-GAAP EPS $0.32 (+53% YoY) and revenue $15.5B (+178% YoY), beats EPS and revenue estimates
+- MUFG: Mitsubishi UFJ Financial Group Inc ADR reports fiscal Q2 2027 results with non-GAAP EPS $0.46 (+8% YoY) and revenue $25.6B (+9% YoY), beats EPS and revenue estimates
+- NU: Nu Holdings posts record Q3 net income of $1.1 billion and lowers full-year efficiency ratio guidance to 19–19.5%
+- SMFG: Sumitomo Mitsui Financial Group Inc ADR reports fiscal Q2 2027 results with non-GAAP EPS $0.50 (-11% YoY) and revenue $27.5B (+239% YoY), misses EPS but beats revenue estimates
 
-### Technology (n=8)
-- LRCX: Nvidia leadership fallout and earnings anxiety pull Lam Research 5.4% lower pre-market
-- CIEN: TD Cowen target cut and AI-infrastructure selloff drive Ciena shares down 8.2%
-- CRDO: TD Cowen’s 42% target cut and semiconductor selloff push Credo down 8.2%
-- CRWV: Nvidia leadership fallout hits AI infrastructure peers, pulling CoreWeave 8% lower pre-market ahead of earnings
-- NBIS: Northland, Truist and DA Davidson cut Nebius price targets, with DA Davidson halving its target to $125 while maintaining a Neutral rating.
+### Healthcare (n=6)
+- MRNA: Moderna targets annual cash costs of $4 billion–$4.5 billion from 2027 through 2030 and says amended Ares credit-facility terms cut interest rates by 75 basis points.
+- GH: Guardant Health prices $500 million of 0% convertible notes due 2032 at a $208.95 conversion price, partly to repurchase 2027 notes
+- LH: No clear catalyst identified as lean hogs rebound from Thursday's contract-low-area selloff
+- ARWR: Arrowhead says FDA STAR pilot acceptance could accelerate plozasiran’s sHTG launch to the second quarter of 2027, making its priority review voucher unnecessary
+- AVAH: Soft fourth-quarter outlook extends Aveanna’s post-earnings selloff, sending shares down another 7%
 
-### Consumer Cyclical (n=7)
-- HD: Home Depot Inc is scheduled to announce earnings today before market open
-- NKE: Nike unveiled Tuned Air, a new digital manufacturing process it says cuts development time by 70%, alongside new footwear and apparel innovations.
-- TJX: TJX accrued $112 million in year-end incentive compensation and discretionary bonuses against tariff refunds, leaving a $219 million net pretax benefit in fiscal Q2
-- AS: Amer Sports Inc is scheduled to announce earnings today before market open
-- HTHT: H World reports Q3 2026 revenue of $1.2B, up 18% YoY and above estimates, raises 2026 growth guidance to 9%-10%
+### Consumer Cyclical (n=5)
+- LOW: Stifel downgrades Lowe's to Sell from Hold, cuts price target to $190 from $195 on housing weakness, margin pressure and competition
+- ALSN: Allison Transmission secures $67 million U.S. Army contract for propulsion systems for 2027 Abrams tank orders
+- WSM: Williams-Sonoma Inc reports fiscal Q3 2027 results with non-GAAP EPS $2.19 (+12% YoY) and revenue $2.0B (+6% YoY), beats EPS and revenue estimates
+- ANDG: Andersen raises 2026 guidance and targets ~30% revenue growth in 2027
+- DDS: Dillard's Inc reports fiscal Q3 2027 results with non-GAAP EPS $8.38 (+1% YoY) and revenue $1.5B (-0% YoY), beats EPS and revenue estimates
 
-### Communication Services (n=5)
-- APP: Jefferies names AppLovin its top 2027 stock pick and raises its price target to $500, maintaining a Buy rating.
-- DIS: Walt Disney Co is scheduled to announce earnings today before market open
-- BIDU: Baidu reports Q3 FY2026 EPS $1.02 (-35% YoY), revenue $4.6B, beats EPS but misses revenue estimates as AI cloud grows 94% YoY
-- RBLX: Friday's Citi downgrade and Monday's technology selloff drive Roblox 8% lower intraday
-- TME: Tencent Music Entertainment Group ADR is scheduled to announce earnings today before market open
+### Utilities (n=4)
+- KEP: Q3 profit miss and Korean broker target cuts sink KEP 8% pre-market
+- CIG: Cemig reported third-quarter adjusted earnings of 7 cents per share and revenue of $2.17 billion.
+- ELPC: Copel reports fiscal Q3 2026 non-GAAP EPS of $0.16 (+66% YoY) and revenue of $1.2B (-4% YoY), beating estimates
+- FRVO: CoreWeave-led AI power rebound extends Fervo’s post-earnings rally to 14% by midday
+
+### Energy (n=3)
+- COP: Bernstein downgrades ConocoPhillips to Market Perform, cuts price target to $122 from $129
+- XOM: Bernstein cut its ExxonMobil price target to $186 from $193 while maintaining an Outperform rating.
+- EC: Ecopetrol SA ADR reports fiscal Q3 2026 results with non-GAAP EPS $0.63 (+89% YoY) and revenue $10.7B (+32% YoY), misses EPS but beats revenue estimates
 
 ### Basic Materials (n=3)
-- NUE: UBS upgraded Nucor to Buy from Neutral and raised its price target 20% to $307, citing stronger earnings prospects and potential for higher shareholder returns.
-- NG: Weekend weather models cut late-November heating demand, sending natural gas futures down 3.56%
-- SQM: Sociedad Quimica Y Minera de Chile SA ADR is scheduled to announce earnings today after market close
-
-### Consumer Defensive (n=2)
-- HRL: Hormel Foods completed its approximately $1.055 billion acquisition of Brakebush Brothers, which it expects to nearly triple its chicken business by net sales.
-- TSN: Tyson meets FY26 guidance but guides FY27 earnings lower on chicken and pork headwinds
-
-### Utilities (n=2)
-- HZN: Bright Horizon Energy completed the all-stock merger of Black Hills and NorthWestern, with shares beginning NYSE trading under ticker HZN today.
-- SR: Spire Inc is scheduled to announce earnings today before market open
+- VYLR: Vylor reports fiscal Q3 2026 EPS of $-0.42 and revenue of $911.0M, beats EPS, misses revenue, reaffirms 2026 guidance
+- ALM: Almonty Industries Inc reports fiscal Q3 2026 results with non-GAAP EPS $0.12 (+29% YoY) and revenue $29.4M (+376% YoY), beats EPS but misses revenue estimates
+- CTVA: Corteva reaffirms 2026 guidance, turns net licensing positive, and maintains 7–8% EBITDA growth framework
 
 ### Real Estate (n=1)
-- BEKE: KE Holdings reports fiscal Q3 2026 non-GAAP EPS of $0.35 (+123% YoY) and revenue of $3.1B (-3% YoY), beating estimates
-
-### Energy (n=1)
-- WFRD: Weatherford won a Constellation contract for deepwater managed-pressure drilling in Brazil, including a 12-month rental, equipment sale and two-year aftermarket agreement.
+- COLD: Piper Sandler upgrade and $19 target lift Americold 4.8% during regular trading
