@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `ret_5` · size `leftover` · sell `list` · S-boost `none` · rank by ret_5
 
-Cash book **-0.09%** ($9,991) · signal-only (no cash/fees) was +36.33%. Starts YES **29/30**. Fills 567 · skips 100 · realized $+370.60.
+Cash book **-6.26%** ($9,373) · signal-only (no cash/fees) was +36.33%. Starts YES **29/30**. Fills 583 · skips 100 · realized $+370.60.
 
 ## How this sleeve decides (like you are 10)
 
@@ -770,6 +770,24 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-13 09:30 ET | **BUY** | `RXT` | 434 | $3.01 | $5.60 | — | $1,336.22 | — | rank by ret_5; rank ret_5; list yday_gainer; ret5=+26.5; leftover $1307.88 | join🔴 sector🔴 gen🔴 news🔴 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-13 09:30 ET | **BUY** | `ALMU` | 181 | $7.22 | $2.53 | — | $26.67 | — | rank by ret_5; rank ret_5; list earn_react; ret5=+26.3; leftover $1307.88 | join🔴 sector🔴 gen🔴 news🟡 digest🟢 ab🔴 heat🔴 vol🟡 buy🟡 |
 | 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $26.67 | ▼ close $9,991.00 vs 09:30 $10,474.33 (session -441.45) | 16:00 close · cash $26.67 · equity $9,991.00 vs 09:30 $10,474.33 (-483.33; session marks -441.45) · 8 name(s) marked open→close (per-name table). LGN×36 09:30 $36.11 → close $35.00 -39.96; MX×468 09:30 $2.79 → close $2.50 -135.72; BGS×397 09:30 $3.29 → close $3.50 +83.37; NEOV×397 09:30 $3.29 → close $2.84 -178.65; ETON×21 09:30 $61.25 → close $63.93 +56.28; CRWV×23 09:30 $56.01 → close $53.13 -66.24; RXT×434 09:30 $3.01 → close $2.92 -39.06; ALMU×181 09:30 $7.22 → close $6.55 -121.47 | — |
+| 2026-11-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $26.67 | ▼ 09:30 equity $9,590.29 vs yday $9,991.00 (-400.71) | 09:30 open · cash $26.67 (unchanged overnight, no fees) · equity $9,590.29 vs prior close $9,991.00 (-400.71) · 8 name(s) re-marked at the open (per-name table). ALMU×181 yday $6.55 → 09:30 $6.22 -59.73; BGS×397 yday $3.50 → 09:30 $3.45 -19.85; CRWV×23 yday $53.13 → 09:30 $49.36 -86.71; ETON×21 yday $63.93 → 09:30 $64.29 +7.56; LGN×36 yday $35.00 → 09:30 $33.06 -69.84; MX×468 yday $2.50 → 09:30 $2.35 -70.20; NEOV×397 yday $2.84 → 09:30 $2.78 -23.82; RXT×434 yday $2.92 → 09:30 $2.74 -78.12 | — |
+| 2026-11-16 09:30 ET | **SELL** | `ALMU` | 181 | $6.22 | $2.57 | $-186.31 | $1,149.92 | ▼ -186.31 after sell → book $9,587.72; vs 09:30 mark -2.57 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-16 09:30 ET | **SELL** | `BGS` | 397 | $3.45 | $5.20 | $+53.20 | $2,514.37 | ▲ +53.20 after sell → book $9,582.52; vs 09:30 mark -5.20 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-16 09:30 ET | **SELL** | `CRWV` | 23 | $49.36 | $2.08 | $-157.09 | $3,647.57 | ▼ -157.09 after sell → book $9,580.44; vs 09:30 mark -2.08 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-16 09:30 ET | **SELL** | `ETON` | 21 | $64.29 | $2.07 | $+59.71 | $4,995.59 | ▲ +59.71 after sell → book $9,578.37; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-16 09:30 ET | **SELL** | `LGN` | 36 | $33.06 | $2.12 | $-114.02 | $6,183.63 | ▼ -114.02 after sell → book $9,576.25; vs 09:30 mark -2.12 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-16 09:30 ET | **SELL** | `MX` | 468 | $2.35 | $6.12 | $-218.08 | $7,277.30 | ▼ -218.08 after sell → book $9,570.12; vs 09:30 mark -6.13 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-16 09:30 ET | **SELL** | `NEOV` | 397 | $2.78 | $5.20 | $-212.79 | $8,375.77 | ▼ -212.79 after sell → book $9,564.93; vs 09:30 mark -5.19 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-16 09:30 ET | **SELL** | `RXT` | 434 | $2.74 | $5.68 | $-128.46 | $9,559.25 | ▼ -128.46 after sell → book $9,559.25; vs 09:30 mark -5.68 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-16 09:30 ET | **BUY** | `TTEC` | 406 | $2.94 | $5.24 | — | $8,360.37 | — | rank by ret_5; rank ret_5; list yday_gainer; 🔵; ret5=+113.8; leftover $1194.91 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `FRMI` | 453 | $2.63 | $5.84 | — | $7,160.87 | — | rank by ret_5; rank ret_5; list yday_gainer; ret5=+66.2; leftover $1194.91 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `NUAI` | 386 | $3.09 | $4.98 | — | $5,963.15 | — | rank by ret_5; rank ret_5; list yday_gainer,yday_mover; 🔵; ret5=+54.6; leftover $1194.91 | join🟢 sector🟡 gen🔴 news🔴 digest🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `XLAB` | 585 | $2.04 | $7.55 | — | $4,762.20 | — | rank by ret_5; rank ret_5; list yday_gainer,yday_mover; 🔵; ret5=+42.7; leftover $1194.91 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `NGEN` | 645 | $1.85 | $8.32 | — | $3,560.63 | — | rank by ret_5; rank ret_5; list yday_gainer,yday_mover; ret5=+41.4; leftover $1194.91 | join🔴 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `XTND` | 885 | $1.35 | $11.42 | — | $2,354.47 | — | rank by ret_5; rank ret_5; list yday_gainer; 🔵; ret5=+39.0; leftover $1194.91 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `ENGN` | 515 | $2.32 | $6.64 | — | $1,153.02 | — | rank by ret_5; rank ret_5; list yday_gainer,yday_mover; ret5=+37.7; leftover $1194.91 | join🟡 sector🟡 gen🔴 news🔴 digest🔴 ab🟡 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `CURI` | 376 | $3.05 | $4.85 | — | $1.37 | — | rank by ret_5; rank ret_5; list yday_gainer,yday_mover; 🔵; ret5=+24.7; leftover $1194.91 | join🟢 sector🟡 gen🔴 news🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1.37 | ▼ close $9,373.45 vs 09:30 $9,590.29 (session -130.95) | 16:00 close · cash $1.37 · equity $9,373.45 vs 09:30 $9,590.29 (-216.84; session marks -130.95) · 8 name(s) marked open→close (per-name table). TTEC×406 09:30 $2.94 → close $3.07 +52.78; FRMI×453 09:30 $2.63 → close $2.48 -70.21; NUAI×386 09:30 $3.09 → close $3.11 +7.72; XLAB×585 09:30 $2.04 → close $1.96 -46.80; NGEN×645 09:30 $1.85 → close $1.82 -19.35; XTND×885 09:30 $1.35 → close $1.47 +106.20; ENGN×515 09:30 $2.32 → close $1.89 -221.45; CURI×376 09:30 $3.05 → close $3.21 +60.16 | — |
 
 ## Not taken
 

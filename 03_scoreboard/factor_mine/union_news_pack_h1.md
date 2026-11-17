@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · morning packet news🟢 only (not the merged box)
 
-Cash book **+8.11%** ($10,810) · signal-only (no cash/fees) was +6.91%. Starts YES **21/30**. Fills 165 · skips 29 · realized $+1396.12.
+Cash book **+2.52%** ($10,252) · signal-only (no cash/fees) was +6.91%. Starts YES **21/30**. Fills 175 · skips 29 · realized $+1396.12.
 
 ## How this sleeve decides (like you are 10)
 
@@ -370,6 +370,18 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-13 09:30 ET | **BUY** | `CBRS` | 20 | $108.40 | $2.05 | — | $2,468.61 | — | morning packet news🟢 only (not the merged box); gate news_box=good; rank cond; list earn_react; ret5=+19.6; leftover $2207.22 | join🔴 sector🔴 gen🔴 news🟢 digest🟢 ab🟢 heat🔴 vol🟡 buy🟡 |
 | 2026-11-13 09:30 ET | **BUY** | `AAOI` | 42 | $51.87 | $2.12 | — | $287.96 | — | morning packet news🟢 only (not the merged box); gate news_box=good; rank cond; list yday_gainer; 🔵; ret5=+12.7; leftover $2207.22 | join🔴 sector🔴 gen🔴 news🟢 digest🟢 ab🟢 peer🔴 heat🔴 vol🟡 buy🟡 |
 | 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $287.96 | ▼ close $10,810.50 vs 09:30 $11,036.11 (session -215.21) | 16:00 close · cash $287.96 · equity $10,810.50 vs 09:30 $11,036.11 (-225.61; session marks -215.21) · 5 name(s) marked open→close (per-name table). DVN×47 09:30 $46.76 → close $46.58 -8.46; ANDG×35 09:30 $62.82 → close $60.06 -96.60; CEG×7 09:30 $284.97 → close $280.20 -33.39; CBRS×20 09:30 $108.40 → close $108.72 +6.40; AAOI×42 09:30 $51.87 → close $49.89 -83.16 | — |
+| 2026-11-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $287.96 | ▼ 09:30 equity $10,498.07 vs yday $10,810.50 (-312.43) | 09:30 open · cash $287.96 (unchanged overnight, no fees) · equity $10,498.07 vs prior close $10,810.50 (-312.43) · 5 name(s) re-marked at the open (per-name table). AAOI×42 yday $49.89 → 09:30 $46.66 -135.66; ANDG×35 yday $60.06 → 09:30 $60.25 +6.65; CBRS×20 yday $108.72 → 09:30 $102.55 -123.40; CEG×7 yday $280.20 → 09:30 $275.52 -32.76; DVN×47 yday $46.58 → 09:30 $46.00 -27.26 | — |
+| 2026-11-16 09:30 ET | **SELL** | `AAOI` | 42 | $46.66 | $2.14 | $-223.08 | $2,245.54 | ▼ -223.08 after sell → book $10,495.93; vs 09:30 mark -2.14 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-16 09:30 ET | **SELL** | `ANDG` | 35 | $60.25 | $2.12 | $-94.17 | $4,352.17 | ▼ -94.17 after sell → book $10,493.81; vs 09:30 mark -2.12 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-16 09:30 ET | **SELL** | `CBRS` | 20 | $102.55 | $2.08 | $-121.13 | $6,401.09 | ▼ -121.13 after sell → book $10,491.73; vs 09:30 mark -2.08 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-16 09:30 ET | **SELL** | `CEG` | 7 | $275.52 | $2.04 | $-70.20 | $8,327.69 | ▼ -70.20 after sell → book $10,489.69; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-16 09:30 ET | **BUY** | `FROG` | 12 | $110.78 | $2.03 | — | $6,996.25 | — | morning packet news🟢 only (not the merged box); gate news_box=good; rank cond; list ohlc_hot; 🔵; ret5=+12.5; leftover $1387.95 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `MBGL` | 59 | $23.44 | $2.17 | — | $5,611.12 | — | morning packet news🟢 only (not the merged box); gate news_box=good; rank cond; list yday_gainer,yday_mover; 🔵; ret5=+18.5; leftover $1387.95 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `CHRD` | 9 | $149.14 | $2.02 | — | $4,266.84 | — | morning packet news🟢 only (not the merged box); gate news_box=good; rank cond; list flatten; ret5=+9.8; leftover $1387.95 | join🟢 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 peer🟢 heat🔴 vol🟡 buy🟢 |
+| 2026-11-16 09:30 ET | **BUY** | `LUNR` | 110 | $12.53 | $2.32 | — | $2,886.22 | — | morning packet news🟢 only (not the merged box); gate news_box=good; rank cond; list yday_gainer; 🔵; ret5=+24.2; leftover $1387.95 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `COLD` | 82 | $16.82 | $2.24 | — | $1,504.75 | — | morning packet news🟢 only (not the merged box); gate news_box=good; rank cond; list ohlc_hot; 🔵; ret5=+4.2; leftover $1387.95 | join🟡 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟡 vol🟡 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `DPC` | 42 | $32.88 | $2.12 | — | $121.67 | — | morning packet news🟢 only (not the merged box); gate news_box=good; rank cond; list yday_gainer; 🔵; ret5=+19.0; leftover $1387.95 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 judge🔴 ab🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $121.67 | ▼ close $10,252.22 vs 09:30 $10,498.07 (session -224.59) | 16:00 close · cash $121.67 · equity $10,252.22 vs 09:30 $10,498.07 (-245.85; session marks -224.59) · 7 name(s) marked open→close (per-name table). DVN×47 09:30 $46.00 → close $44.27 -81.31; FROG×12 09:30 $110.78 → close $109.94 -10.14; MBGL×59 09:30 $23.44 → close $24.04 +35.40; CHRD×9 09:30 $149.14 → close $146.78 -21.24; LUNR×110 09:30 $12.53 → close $11.73 -88.00; COLD×82 09:30 $16.82 → close $16.65 -13.94; DPC×42 09:30 $32.88 → close $31.80 -45.36 | — |
 
 ## Not taken
 

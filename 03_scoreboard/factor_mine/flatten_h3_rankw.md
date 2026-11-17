@@ -6,7 +6,7 @@ Buys the flatten **wish-list** even on io/HOLD mornings — live `flatten_robust
 
 Side **long** · universe `flatten` · top 8 · rank `list` · size `rank_w` · sell `list` · S-boost `none` · rank-weighted leftover
 
-Cash book **-25.13%** ($7,487) · signal-only (no cash/fees) was -10.41%. Starts YES **1/30**. Fills 297 · skips 213 · realized $-994.96.
+Cash book **-28.29%** ($7,171) · signal-only (no cash/fees) was -10.41%. Starts YES **1/30**. Fills 303 · skips 213 · realized $-994.96.
 
 ## How this sleeve decides (like you are 10)
 
@@ -497,6 +497,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-13 09:30 ET | **BUY** | `CHRD` | 8 | $148.35 | $2.01 | — | $767.72 | — | rank-weighted leftover; list flatten; wish-list (live io HOLD — not a ticket); ret5=+11.0; leftover $1228.62 | join🟢 sector🔴 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
 | 2026-11-13 09:30 ET | **BUY** | `GRNT` | 95 | $6.42 | $2.27 | — | $155.55 | — | rank-weighted leftover; list flatten; wish-list (live io HOLD — not a ticket); ret5=+39.0; leftover $614.31 | join🟢 sector🔴 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
 | 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $155.55 | ▲ close $7,487.39 vs 09:30 $7,392.42 (session +107.79) | 16:00 close · cash $155.55 · equity $7,487.39 vs 09:30 $7,392.42 (+94.97; session marks +107.79) · 8 name(s) marked open→close (per-name table). COTY×6 09:30 $4.03 → close $4.04 +0.07; ETON×19 09:30 $61.25 → close $63.93 +50.92; KDP×1 09:30 $35.73 → close $36.34 +0.61; PRCH×1 09:30 $21.31 → close $21.05 -0.26; DVN×52 09:30 $46.76 → close $46.58 -9.36; ALNY×11 09:30 $159.17 → close $165.04 +64.57; CHRD×8 09:30 $148.35 → close $149.93 +12.64; GRNT×95 09:30 $6.42 → close $6.30 -11.40 | — |
+| 2026-11-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $155.55 | ▼ 09:30 equity $7,474.75 vs yday $7,487.39 (-12.64) | 09:30 open · cash $155.55 (unchanged overnight, no fees) · equity $7,474.75 vs prior close $7,487.39 (-12.64) · 8 name(s) re-marked at the open (per-name table). ALNY×11 yday $165.04 → 09:30 $166.98 +21.34; CHRD×8 yday $149.93 → 09:30 $149.14 -6.32; COTY×6 yday $4.04 → 09:30 $4.10 +0.36; DVN×52 yday $46.58 → 09:30 $46.00 -30.16; ETON×19 yday $63.93 → 09:30 $64.29 +6.84; GRNT×95 yday $6.30 → 09:30 $6.25 -4.75; KDP×1 yday $36.34 → 09:30 $36.71 +0.37; PRCH×1 yday $21.05 → 09:30 $20.73 -0.32 | — |
+| 2026-11-16 09:30 ET | **SELL** | `COTY` | 6 | $4.10 | $0.28 | $-1.64 | $179.87 | ▼ -1.64 after sell → book $7,474.47; vs 09:30 mark -0.28 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-16 09:30 ET | **SELL** | `ETON` | 19 | $64.29 | $2.07 | $+8.43 | $1,399.31 | ▲ +8.43 after sell → book $7,472.40; vs 09:30 mark -2.07 | dropped from list after 4 sess (min 3) | — |
+| 2026-11-16 09:30 ET | **SELL** | `KDP` | 1 | $36.71 | $0.39 | $-1.16 | $1,435.63 | ▼ -1.16 after sell → book $7,472.01; vs 09:30 mark -0.39 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-16 09:30 ET | **SELL** | `PRCH` | 1 | $20.73 | $0.23 | $-1.89 | $1,456.13 | ▼ -1.89 after sell → book $7,471.78; vs 09:30 mark -0.23 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-16 09:30 ET | **BUY** | `PODD` | 6 | $153.50 | $2.01 | — | $533.12 | — | rank-weighted leftover; list flatten; wish-list (live io HOLD — not a ticket); ret5=+4.1; leftover $970.75 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `EPRX` | 59 | $8.15 | $2.17 | — | $50.10 | — | rank-weighted leftover; list flatten; wish-list (live io HOLD — not a ticket); ret5=+18.3; leftover $485.38 | join🟢 sector🟡 gen🔴 news🔴 digest🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $50.10 | ▼ close $7,170.56 vs 09:30 $7,474.75 (session -297.04) | 16:00 close · cash $50.10 · equity $7,170.56 vs 09:30 $7,474.75 (-304.19; session marks -297.04) · 6 name(s) marked open→close (per-name table). ALNY×11 09:30 $166.98 → close $159.73 -79.75; CHRD×8 09:30 $149.14 → close $146.78 -18.88; DVN×52 09:30 $46.00 → close $44.27 -89.96; GRNT×95 09:30 $6.25 → close $6.13 -11.40; PODD×6 09:30 $153.50 → close $145.29 -49.26; EPRX×59 09:30 $8.15 → close $7.34 -47.79 | — |
 
 ## Not taken
 

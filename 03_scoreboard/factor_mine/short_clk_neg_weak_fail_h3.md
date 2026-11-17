@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · Clock-B #4 neg catalyst + weakness + failed recovery
 
-Cash book **-3.76%** ($9,624) · signal-only (no cash/fees) was -21.45%. Starts YES **8/30**. Fills 273 · skips 270 · realized $-967.53.
+Cash book **+0.05%** ($10,005) · signal-only (no cash/fees) was -21.45%. Starts YES **8/30**. Fills 278 · skips 270 · realized $-967.53.
 
 ## How this sleeve decides (like you are 10)
 
@@ -475,6 +475,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-13 09:30 ET | **SHORT** | `RSKD` | 175 | $9.31 | $2.60 | — | $17,508.75 | — | Clock-B #4 neg catalyst + weakness + failed recovery; gate clk_neg_weak_fail=True; list yday_gainer,yday_mover; ret5=+13.4; leftover $1631.99 | join🟢 sector🔴 gen🔴 news🔴 digest🟢 ab🟡 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-13 09:30 ET | **SHORT** | `STIM` | 1348 | $1.21 | $17.67 | — | $19,122.15 | — | Clock-B #4 neg catalyst + weakness + failed recovery; gate clk_neg_weak_fail=True; list yday_mover; ret5=-41.2; leftover $1631.99 | join🔴 sector🟡 gen🔴 news🔴 digest🔴 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $19,122.15 | ▼ close $9,623.67 vs 09:30 $9,799.93 (session -109.74) | 16:00 close · cash $19,122.15 · equity $9,623.67 vs 09:30 $9,799.93 (-176.26; session marks -109.74) · 6 name(s) marked open→close (per-name table). DPRO×528 09:30 $2.89 → close $2.83 +31.68; LENZ×386 09:30 $4.06 → close $4.13 -27.02; ZURA×1141 09:30 $1.23 → close $1.24 -11.41; MVST×6909 09:30 $0.24 → close $0.22 +132.65; RSKD×175 09:30 $9.31 → close $9.27 +7.00; STIM×1348 09:30 $1.21 → close $1.39 -242.64 | — |
+| 2026-11-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $19,122.15 | ▲ 09:30 equity $9,698.61 vs yday $9,623.67 (+74.94) | 09:30 open · cash $19,122.15 (unchanged overnight, no fees) · equity $9,698.61 vs prior close $9,623.67 (+74.94) · 6 name(s) re-marked at the open (per-name table). DPRO×528 yday $2.83 → 09:30 $2.74 +47.52; LENZ×386 yday $4.13 → 09:30 $4.10 +11.58; MVST×6909 yday $0.22 → 09:30 $0.22 -6.91; RSKD×175 yday $9.27 → 09:30 $9.14 +22.75; STIM×1348 yday $1.39 → 09:30 $1.39 -0.00; ZURA×1141 yday $1.24 → 09:30 $1.24 -0.00 | — |
+| 2026-11-16 09:30 ET | **COVER** | `DPRO` | 528 | $2.74 | $6.81 | $+123.51 | $17,668.62 | ▲ +123.51 after sell → book $9,691.80; vs 09:30 mark -6.81 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-16 09:30 ET | **COVER** | `LENZ` | 386 | $4.10 | $4.98 | $-10.08 | $16,081.04 | ▼ -10.08 after sell → book $9,686.82; vs 09:30 mark -4.98 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-16 09:30 ET | **COVER** | `ZURA` | 1141 | $1.24 | $14.72 | $+141.47 | $14,651.48 | ▲ +141.47 after sell → book $9,672.10; vs 09:30 mark -14.72 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-16 09:30 ET | **SHORT** | `CTVA` | 258 | $9.35 | $3.46 | — | $17,060.32 | — | Clock-B #4 neg catalyst + weakness + failed recovery; gate clk_neg_weak_fail=True; list yday_mover; ret5=-20.8; leftover $2418.02 | join🟢 sector🟡 gen🔴 news🔴 digest🟡 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-11-16 09:30 ET | **SHORT** | `BRUN` | 470 | $5.14 | $6.23 | — | $19,469.90 | — | Clock-B #4 neg catalyst + weakness + failed recovery; gate clk_neg_weak_fail=True; list yday_mover; 🔵; ret5=-9.2; leftover $2418.02 | join🟢 sector🟡 gen🔴 news🔴 digest🟢 ab🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-11-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $19,469.90 | ▲ close $10,005.44 vs 09:30 $9,698.61 (session +343.03) | 16:00 close · cash $19,469.90 · equity $10,005.44 vs 09:30 $9,698.61 (+306.83; session marks +343.03) · 5 name(s) marked open→close (per-name table). MVST×6909 09:30 $0.22 → close $0.23 -55.27; RSKD×175 09:30 $9.14 → close $9.42 -49.00; STIM×1348 09:30 $1.39 → close $1.25 +188.72; CTVA×258 09:30 $9.35 → close $9.04 +79.98; BRUN×470 09:30 $5.14 → close $4.76 +178.60 | — |
 
 ## Not taken
 

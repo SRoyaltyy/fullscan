@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ candle, no 🚨
 
-Cash book **-22.77%** ($7,723) · signal-only (no cash/fees) was -3.26%. Starts YES **0/30**. Fills 586 · skips 106 · realized $-563.17.
+Cash book **-28.45%** ($7,155) · signal-only (no cash/fees) was -3.26%. Starts YES **0/30**. Fills 602 · skips 106 · realized $-563.17.
 
 ## How this sleeve decides (like you are 10)
 
@@ -790,6 +790,24 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-13 09:30 ET | **BUY** | `RUM` | 174 | $5.71 | $2.51 | — | $1,062.44 | — | union ∩ candle, no 🚨; gate candle_capture=True; list yday_gainer; 🔵; ret5=+21.6; leftover $998.64 | join🔴 sector🟡 gen🔴 news🟢 digest🔴 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-13 09:30 ET | **BUY** | `MBGL` | 43 | $23.17 | $2.12 | — | $64.01 | — | union ∩ candle, no 🚨; gate candle_capture=True; list ohlc_hot; ret5=+16.5; leftover $998.64 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟡 heat🟢 vol🟡 buy🟡 |
 | 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $64.01 | ▼ close $7,722.96 vs 09:30 $7,989.15 (session -243.69) | 16:00 close · cash $64.01 · equity $7,722.96 vs 09:30 $7,989.15 (-266.19; session marks -243.69) · 8 name(s) marked open→close (per-name table). BBOT×421 09:30 $2.37 → close $2.14 -96.83; NBIS×8 09:30 $123.52 → close $115.88 -61.12; BGS×303 09:30 $3.29 → close $3.50 +63.63; CRWV×17 09:30 $56.01 → close $53.13 -48.96; ETRA×106 09:30 $9.37 → close $8.84 -56.18; EQPT×60 09:30 $16.41 → close $15.42 -59.40; RUM×174 09:30 $5.71 → close $5.77 +10.44; MBGL×43 09:30 $23.17 → close $23.28 +4.73 | — |
+| 2026-11-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $64.01 | ▼ 09:30 equity $7,496.99 vs yday $7,722.96 (-225.97) | 09:30 open · cash $64.01 (unchanged overnight, no fees) · equity $7,496.99 vs prior close $7,722.96 (-225.97) · 8 name(s) re-marked at the open (per-name table). BBOT×421 yday $2.14 → 09:30 $2.13 -4.21; BGS×303 yday $3.50 → 09:30 $3.45 -15.15; CRWV×17 yday $53.13 → 09:30 $49.36 -64.09; EQPT×60 yday $15.42 → 09:30 $14.93 -29.40; ETRA×106 yday $8.84 → 09:30 $8.82 -2.12; MBGL×43 yday $23.28 → 09:30 $23.44 +6.88; NBIS×8 yday $115.88 → 09:30 $106.80 -72.64; RUM×174 yday $5.77 → 09:30 $5.51 -45.24 | — |
+| 2026-11-16 09:30 ET | **SELL** | `BBOT` | 421 | $2.13 | $5.51 | $-111.98 | $955.23 | ▼ -111.98 after sell → book $7,491.48; vs 09:30 mark -5.51 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-16 09:30 ET | **SELL** | `BGS` | 303 | $3.45 | $3.97 | $+40.60 | $1,996.61 | ▲ +40.60 after sell → book $7,487.51; vs 09:30 mark -3.97 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-16 09:30 ET | **SELL** | `CRWV` | 17 | $49.36 | $2.06 | $-117.15 | $2,833.67 | ▼ -117.15 after sell → book $7,485.45; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-16 09:30 ET | **SELL** | `EQPT` | 60 | $14.93 | $2.19 | $-93.16 | $3,727.28 | ▼ -93.16 after sell → book $7,483.26; vs 09:30 mark -2.19 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-16 09:30 ET | **SELL** | `ETRA` | 106 | $8.82 | $2.34 | $-62.94 | $4,659.86 | ▼ -62.94 after sell → book $7,480.92; vs 09:30 mark -2.34 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-16 09:30 ET | **SELL** | `MBGL` | 43 | $23.44 | $2.14 | $+7.35 | $5,665.64 | ▲ +7.35 after sell → book $7,478.78; vs 09:30 mark -2.14 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-16 09:30 ET | **SELL** | `NBIS` | 8 | $106.80 | $2.03 | $-137.81 | $6,518.01 | ▼ -137.81 after sell → book $7,476.75; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟡 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-16 09:30 ET | **SELL** | `RUM` | 174 | $5.51 | $2.55 | $-39.86 | $7,474.20 | ▼ -39.86 after sell → book $7,474.20; vs 09:30 mark -2.55 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-16 09:30 ET | **BUY** | `ALNY` | 5 | $166.98 | $2.00 | — | $6,637.29 | — | union ∩ candle, no 🚨; gate candle_capture=True; list flatten; ret5=+5.8; leftover $934.27 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `PODD` | 6 | $153.50 | $2.01 | — | $5,714.29 | — | union ∩ candle, no 🚨; gate candle_capture=True; list flatten; ret5=+4.1; leftover $934.27 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `CHRD` | 6 | $149.14 | $2.01 | — | $4,817.44 | — | union ∩ candle, no 🚨; gate candle_capture=True; list flatten; ret5=+9.8; leftover $934.27 | join🟢 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 peer🟢 heat🔴 vol🟡 buy🟢 |
+| 2026-11-16 09:30 ET | **BUY** | `PRQR` | 662 | $1.41 | $8.54 | — | $3,875.48 | — | union ∩ candle, no 🚨; gate candle_capture=True; list probable,yday_gainer; 🔵; ret5=+4.4; leftover $934.27 | join🔴 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `UNIT` | 192 | $4.85 | $2.57 | — | $2,941.71 | — | union ∩ candle, no 🚨; gate candle_capture=True; list probable; 🔵; ret5=-6.5; leftover $934.27 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `NUAI` | 302 | $3.09 | $3.90 | — | $2,004.64 | — | union ∩ candle, no 🚨; gate candle_capture=True; list yday_gainer,yday_mover; 🔵; ret5=+54.6; leftover $934.27 | join🟢 sector🟡 gen🔴 news🔴 digest🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `FRMI` | 354 | $2.63 | $4.57 | — | $1,067.28 | — | union ∩ candle, no 🚨; gate candle_capture=True; list yday_gainer; ret5=+66.2; leftover $934.27 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `LMND` | 21 | $43.49 | $2.05 | — | $151.94 | — | union ∩ candle, no 🚨; gate candle_capture=True; list yday_gainer; 🔵; ret5=+11.7; leftover $934.27 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $151.94 | ▼ close $7,154.65 vs 09:30 $7,496.99 (session -291.91) | 16:00 close · cash $151.94 · equity $7,154.65 vs 09:30 $7,496.99 (-342.34; session marks -291.91) · 8 name(s) marked open→close (per-name table). ALNY×5 09:30 $166.98 → close $159.73 -36.25; PODD×6 09:30 $153.50 → close $145.29 -49.26; CHRD×6 09:30 $149.14 → close $146.78 -14.16; PRQR×662 09:30 $1.41 → close $1.18 -152.26; UNIT×192 09:30 $4.85 → close $4.79 -11.52; NUAI×302 09:30 $3.09 → close $3.11 +6.04; FRMI×354 09:30 $2.63 → close $2.48 -54.87; LMND×21 09:30 $43.49 → close $44.46 +20.37 | — |
 
 ## Not taken
 

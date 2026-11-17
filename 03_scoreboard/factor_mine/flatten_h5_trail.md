@@ -6,7 +6,7 @@ Buys the flatten **wish-list** even on io/HOLD mornings — live `flatten_robust
 
 Side **long** · universe `flatten` · top 8 · rank `list` · size `leftover` · sell `trail` · S-boost `none` · after min-hold, trail 5% off peak
 
-Cash book **-6.21%** ($9,379) · signal-only (no cash/fees) was +4.47%. Starts YES **4/30**. Fills 256 · skips 349 · realized $+556.94.
+Cash book **-6.89%** ($9,311) · signal-only (no cash/fees) was +4.47%. Starts YES **4/30**. Fills 259 · skips 349 · realized $+556.94.
 
 ## How this sleeve decides (like you are 10)
 
@@ -456,6 +456,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-13 09:30 ET | **BUY** | `GRNT` | 13 | $6.42 | $0.87 | — | $312.55 | — | after min-hold, trail 5% off peak; list flatten; wish-list (live io HOLD — not a ticket); ret5=+39.0; leftover $88.82 | join🟢 sector🔴 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
 | 2026-11-13 09:30 ET | **BUY** | `ETON` | 1 | $61.25 | $0.62 | — | $250.68 | — | after min-hold, trail 5% off peak; list flatten; wish-list (live io HOLD — not a ticket); ret5=+30.3; leftover $88.82 | join🟢 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $250.68 | ▲ close $9,379.16 vs 09:30 $9,349.01 (session +32.87) | 16:00 close · cash $250.68 · equity $9,379.16 vs 09:30 $9,349.01 (+30.15; session marks +32.87) · 12 name(s) marked open→close (per-name table). BLFS×3 09:30 $38.61 → close $38.61 +0.00; CLOV×3 09:30 $4.90 → close $4.96 +0.18; CLX×14 09:30 $109.05 → close $109.46 +5.74; COTY×351 09:30 $4.03 → close $4.04 +3.86; KDP×40 09:30 $35.73 → close $36.34 +24.40; PFGC×13 09:30 $110.26 → close $111.17 +11.83; PRCH×67 09:30 $21.31 → close $21.05 -17.42; TTD×98 09:30 $15.63 → close $15.68 +4.90; ZVRA×1 09:30 $10.64 → close $9.08 -1.56; DVN×1 09:30 $46.76 → close $46.58 -0.18; GRNT×13 09:30 $6.42 → close $6.30 -1.56; ETON×1 09:30 $61.25 → close $63.93 +2.68 | — |
+| 2026-11-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $250.68 | ▲ 09:30 equity $9,409.88 vs yday $9,379.16 (+30.72) | 09:30 open · cash $250.68 (unchanged overnight, no fees) · equity $9,409.88 vs prior close $9,379.16 (+30.72) · 12 name(s) re-marked at the open (per-name table). BLFS×3 yday $38.61 → 09:30 $38.61 +0.00; CLOV×3 yday $4.96 → 09:30 $4.97 +0.04; CLX×14 yday $109.46 → 09:30 $110.98 +21.28; COTY×351 yday $4.04 → 09:30 $4.10 +21.06; DVN×1 yday $46.58 → 09:30 $46.00 -0.58; ETON×1 yday $63.93 → 09:30 $64.29 +0.36; GRNT×13 yday $6.30 → 09:30 $6.25 -0.65; KDP×40 yday $36.34 → 09:30 $36.71 +14.80; PFGC×13 yday $111.17 → 09:30 $112.13 +12.48; PRCH×67 yday $21.05 → 09:30 $20.73 -21.44; TTD×98 yday $15.68 → 09:30 $15.51 -16.66; ZVRA×1 yday $9.08 → 09:30 $9.11 +0.03 | — |
+| 2026-11-16 09:30 ET | **SELL** | `CLOV` | 3 | $4.97 | $0.18 | $-0.06 | $265.42 | ▼ -0.06 after sell → book $9,409.70; vs 09:30 mark -0.18 | dropped from list after 5 sess (min 5) | — |
+| 2026-11-16 09:30 ET | **SELL** | `ZVRA` | 1 | $9.11 | $0.11 | $-2.77 | $274.41 | ▼ -2.77 after sell → book $9,409.58; vs 09:30 mark -0.12 | trail off peak after 5 sess (−5%) | — |
+| 2026-11-16 09:30 ET | **BUY** | `EPRX` | 8 | $8.15 | $0.68 | — | $208.54 | — | after min-hold, trail 5% off peak; list flatten; wish-list (live io HOLD — not a ticket); ret5=+18.3; leftover $68.60 | join🟢 sector🟡 gen🔴 news🔴 digest🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $208.54 | ▼ close $9,311.16 vs 09:30 $9,409.88 (session -97.75) | 16:00 close · cash $208.54 · equity $9,311.16 vs 09:30 $9,409.88 (-98.72; session marks -97.75) · 11 name(s) marked open→close (per-name table). BLFS×3 09:30 $38.61 → close $38.61 +0.00; CLX×14 09:30 $110.98 → close $110.17 -11.34; COTY×351 09:30 $4.10 → close $4.17 +24.57; DVN×1 09:30 $46.00 → close $44.27 -1.73; ETON×1 09:30 $64.29 → close $63.88 -0.41; GRNT×13 09:30 $6.25 → close $6.13 -1.56; KDP×40 09:30 $36.71 → close $35.58 -45.20; PFGC×13 09:30 $112.13 → close $112.00 -1.69; PRCH×67 09:30 $20.73 → close $20.92 +12.73; TTD×98 09:30 $15.51 → close $14.83 -66.64; EPRX×8 09:30 $8.15 → close $7.34 -6.48 | — |
 
 ## Not taken
 

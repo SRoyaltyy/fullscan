@@ -329,6 +329,11 @@
       "bytes": 173032,
       "sha256": "8ce5d506f230a587702a622f95cecd0e25171ab521d1f069df20daa0e9c0e092",
       "written_at": "2026-11-13T21:20:14.539938-05:00"
+    },
+    "2026-11-16": {
+      "bytes": 172369,
+      "sha256": "2ab82fee681860641f4010e9a954fc34b6b63c144f442ef7be9c74d9fc58b51f",
+      "written_at": "2026-11-16T23:26:15.233438-05:00"
     }
   },
   "excel_signals": {
@@ -1732,6 +1737,12 @@
       "encoding": "gzip",
       "sha256": "eba841f946dec0176cd9cf780fc9611d7cf0cae7cda99b097c1f7ccef3482009",
       "written_at": "2026-11-13T21:26:43.958010-05:00"
+    },
+    "2026-11-16": {
+      "bytes": 68990589,
+      "encoding": "gzip",
+      "sha256": "ed80cfcbc579e45fddfac25f4d7b59bf109c4a79081d5e999db26f1f015c437c",
+      "written_at": "2026-11-16T23:32:46.460413-05:00"
     }
   },
   "lineups": {
@@ -2064,6 +2075,11 @@
       "bytes": 866,
       "sha256": "da1a17c0d9754555228ea0caef191d091c2ca7c70435e0e272b87ca427119d97",
       "written_at": "2026-11-13T21:27:48.192507-05:00"
+    },
+    "2026-11-16": {
+      "bytes": 808,
+      "sha256": "7e2b73a4253badc0bcc8a439441eac6ac4fbf8ae30c5afe28d2800ea23c3ceff",
+      "written_at": "2026-11-16T23:33:39.399677-05:00"
     }
   },
   "prices": {
@@ -2246,6 +2262,11 @@
       "bytes": 849704,
       "sha256": "523cf68368e91c01cac5e817c782afdefb2b54706108f44580f4734145653912",
       "written_at": "2026-11-13T21:20:14.571202-05:00"
+    },
+    "2026-11-16": {
+      "bytes": 834886,
+      "sha256": "33402cdadbdbc6aab8aa50d65fa5b793d2868ad650f97bcb470d1f3cdcaba426",
+      "written_at": "2026-11-16T23:26:15.259812-05:00"
     }
   },
   "recipe_rules": {
@@ -15362,6 +15383,20 @@
         "TJGC"
       ],
       "written_at": "2026-11-13T21:20:29.524508-05:00"
+    },
+    "2026-11-16": {
+      "bytes": 334509,
+      "dropped_missing_bars": [
+        "EMBJ"
+      ],
+      "heat_vintage": "2026-11-16",
+      "n_rows": 100,
+      "sha256": "adc5c36771a055f5a29b5c272f498c7feb363e5db06b515976d37fbd6bf93737",
+      "unpriced_held": [
+        "BLFS",
+        "EMBJ"
+      ],
+      "written_at": "2026-11-16T23:26:27.585002-05:00"
     }
   },
   "version": 1

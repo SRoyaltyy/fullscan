@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · ret_5>15
 
-Cash book **-3.68%** ($9,632) · signal-only (no cash/fees) was -19.86%. Starts YES **3/30**. Fills 522 · skips 88 · realized $-1484.16.
+Cash book **-1.03%** ($9,897) · signal-only (no cash/fees) was -19.86%. Starts YES **3/30**. Fills 538 · skips 88 · realized $-1484.16.
 
 ## How this sleeve decides (like you are 10)
 
@@ -724,6 +724,24 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-13 09:30 ET | **SHORT** | `DJT` | 120 | $4.97 | $2.40 | — | $13,680.54 | — | ret_5>15; gate ret_5_min=15.0; list yday_gainer,yday_mover; 🔵; ret5=+23.6; leftover $600.23 | join🔴 sector🟡 gen🔴 news🔴 digest🔴 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-13 09:30 ET | **SHORT** | `AZTA` | 13 | $44.26 | $2.06 | — | $14,253.85 | — | ret_5>15; gate ret_5_min=15.0; list yday_gainer,yday_mover; 🔵; ret5=+17.3; leftover $600.23 | join🔴 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,253.85 | ▲ close $9,632.03 vs 09:30 $9,603.69 (session +48.25) | 16:00 close · cash $14,253.85 · equity $9,632.03 vs 09:30 $9,603.69 (+28.34; session marks +48.25) · 8 name(s) marked open→close (per-name table). GRNT×93 09:30 $6.42 → close $6.30 +11.16; ETON×9 09:30 $61.25 → close $63.93 -24.12; BGS×182 09:30 $3.29 → close $3.50 -38.22; GEVO×322 09:30 $1.86 → close $1.83 +9.66; CAPR×58 09:30 $10.21 → close $9.53 +39.44; CRWV×10 09:30 $56.01 → close $53.13 +28.80; DJT×120 09:30 $4.97 → close $4.64 +39.60; AZTA×13 09:30 $44.26 → close $45.65 -18.07 | — |
+| 2026-11-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $14,253.85 | ▲ 09:30 equity $9,750.03 vs yday $9,632.03 (+118.00) | 09:30 open · cash $14,253.85 (unchanged overnight, no fees) · equity $9,750.03 vs prior close $9,632.03 (+118.00) · 8 name(s) re-marked at the open (per-name table). AZTA×13 yday $45.65 → 09:30 $44.32 +17.29; BGS×182 yday $3.50 → 09:30 $3.45 +9.10; CAPR×58 yday $9.53 → 09:30 $9.35 +10.44; CRWV×10 yday $53.13 → 09:30 $49.36 +37.70; DJT×120 yday $4.64 → 09:30 $4.37 +32.40; ETON×9 yday $63.93 → 09:30 $64.29 -3.24; GEVO×322 yday $1.83 → 09:30 $1.80 +9.66; GRNT×93 yday $6.30 → 09:30 $6.25 +4.65 | — |
+| 2026-11-16 09:30 ET | **COVER** | `AZTA` | 13 | $44.32 | $2.03 | $-4.87 | $13,675.66 | ▼ -4.87 after sell → book $9,748.00; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-16 09:30 ET | **COVER** | `BGS` | 182 | $3.45 | $2.54 | $-34.25 | $13,045.23 | ▼ -34.25 after sell → book $9,745.47; vs 09:30 mark -2.53 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-16 09:30 ET | **COVER** | `CAPR` | 58 | $9.35 | $2.16 | $+45.52 | $12,500.76 | ▲ +45.52 after sell → book $9,743.30; vs 09:30 mark -2.17 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-16 09:30 ET | **COVER** | `CRWV` | 10 | $49.36 | $2.02 | $+62.42 | $12,005.14 | ▲ +62.42 after sell → book $9,741.28; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-16 09:30 ET | **COVER** | `DJT` | 120 | $4.37 | $2.35 | $+67.25 | $11,478.39 | ▲ +67.25 after sell → book $9,738.93; vs 09:30 mark -2.35 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-16 09:30 ET | **COVER** | `ETON` | 9 | $64.29 | $2.02 | $-31.43 | $10,897.76 | ▼ -31.43 after sell → book $9,736.91; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-16 09:30 ET | **COVER** | `GEVO` | 322 | $1.80 | $4.15 | $+10.93 | $10,314.01 | ▲ +10.93 after sell → book $9,732.76; vs 09:30 mark -4.15 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-16 09:30 ET | **COVER** | `GRNT` | 93 | $6.25 | $2.27 | $+11.23 | $9,730.49 | ▲ +11.23 after sell → book $9,730.49; vs 09:30 mark -2.27 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-16 09:30 ET | **SHORT** | `EPRX` | 74 | $8.15 | $2.25 | — | $10,331.34 | — | ret_5>15; gate ret_5_min=15.0; list flatten; ret5=+18.3; leftover $608.16 | join🟢 sector🟡 gen🔴 news🔴 digest🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-16 09:30 ET | **SHORT** | `XLAB` | 298 | $2.04 | $3.92 | — | $10,935.34 | — | ret_5>15; gate ret_5_min=15.0; list yday_gainer,yday_mover; 🔵; ret5=+42.7; leftover $608.16 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-16 09:30 ET | **SHORT** | `ENGN` | 262 | $2.32 | $3.45 | — | $11,539.73 | — | ret_5>15; gate ret_5_min=15.0; list yday_gainer,yday_mover; ret5=+37.7; leftover $608.16 | join🟡 sector🟡 gen🔴 news🔴 digest🔴 ab🟡 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-16 09:30 ET | **SHORT** | `NGEN` | 328 | $1.85 | $4.31 | — | $12,142.22 | — | ret_5>15; gate ret_5_min=15.0; list yday_gainer,yday_mover; ret5=+41.4; leftover $608.16 | join🔴 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-16 09:30 ET | **SHORT** | `CURI` | 199 | $3.05 | $2.65 | — | $12,746.52 | — | ret_5>15; gate ret_5_min=15.0; list yday_gainer,yday_mover; 🔵; ret5=+24.7; leftover $608.16 | join🟢 sector🟡 gen🔴 news🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-16 09:30 ET | **SHORT** | `NUAI` | 196 | $3.09 | $2.64 | — | $13,349.52 | — | ret_5>15; gate ret_5_min=15.0; list yday_gainer,yday_mover; 🔵; ret5=+54.6; leftover $608.16 | join🟢 sector🟡 gen🔴 news🔴 digest🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-16 09:30 ET | **SHORT** | `MBGL` | 25 | $23.44 | $2.10 | — | $13,933.42 | — | ret_5>15; gate ret_5_min=15.0; list yday_gainer,yday_mover; 🔵; ret5=+18.5; leftover $608.16 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-16 09:30 ET | **SHORT** | `FRMI` | 230 | $2.63 | $3.03 | — | $14,536.44 | — | ret_5>15; gate ret_5_min=15.0; list yday_gainer; ret5=+66.2; leftover $608.16 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-11-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,536.44 | ▲ close $9,897.31 vs 09:30 $9,750.03 (session +191.17) | 16:00 close · cash $14,536.44 · equity $9,897.31 vs 09:30 $9,750.03 (+147.28; session marks +191.17) · 8 name(s) marked open→close (per-name table). EPRX×74 09:30 $8.15 → close $7.34 +59.94; XLAB×298 09:30 $2.04 → close $1.96 +23.84; ENGN×262 09:30 $2.32 → close $1.89 +112.66; NGEN×328 09:30 $1.85 → close $1.82 +9.84; CURI×199 09:30 $3.05 → close $3.21 -31.84; NUAI×196 09:30 $3.09 → close $3.11 -3.92; MBGL×25 09:30 $23.44 → close $24.04 -15.00; FRMI×230 09:30 $2.63 → close $2.48 +35.65 | — |
 
 ## Not taken
 

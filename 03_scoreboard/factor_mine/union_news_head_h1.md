@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · prior-export headline🟢 only
 
-Cash book **-56.58%** ($4,342) · signal-only (no cash/fees) was +13.09%. Starts YES **0/30**. Fills 350 · skips 65 · realized $-814.48.
+Cash book **-57.12%** ($4,288) · signal-only (no cash/fees) was +13.09%. Starts YES **0/30**. Fills 366 · skips 65 · realized $-814.48.
 
 ## How this sleeve decides (like you are 10)
 
@@ -555,6 +555,24 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-13 09:30 ET | **BUY** | `BKH` | 6 | $87.83 | $2.01 | — | $625.71 | — | prior-export headline🟢 only; gate headline=good; rank cond; list ohlc_hot; ret5=+3.4; leftover $539.45 | join🟢 sector🟡 gen🔴 news🟢 digest🟡 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
 | 2026-11-13 09:30 ET | **BUY** | `CAPR` | 52 | $10.21 | $2.15 | — | $92.64 | — | prior-export headline🟢 only; gate headline=good; rank cond; list yday_gainer,yday_mover; 🔵; ret5=+19.1; leftover $539.45 | join🔴 sector🟡 gen🔴 news🟢 digest🔴 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $92.64 | ▲ close $4,341.67 vs 09:30 $4,315.61 (session +43.36) | 16:00 close · cash $92.64 · equity $4,341.67 vs 09:30 $4,315.61 (+26.06; session marks +43.36) · 8 name(s) marked open→close (per-name table). DVN×11 09:30 $46.76 → close $46.58 -1.98; ETON×8 09:30 $61.25 → close $63.93 +21.44; PLX×183 09:30 $2.94 → close $3.05 +20.13; BGS×163 09:30 $3.29 → close $3.50 +34.23; AZTA×12 09:30 $44.26 → close $45.65 +16.68; REZI×25 09:30 $21.52 → close $21.32 -5.00; BKH×6 09:30 $87.83 → close $86.70 -6.78; CAPR×52 09:30 $10.21 → close $9.53 -35.36 | — |
+| 2026-11-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $92.64 | ▼ 09:30 equity $4,299.72 vs yday $4,341.67 (-41.95) | 09:30 open · cash $92.64 (unchanged overnight, no fees) · equity $4,299.72 vs prior close $4,341.67 (-41.95) · 8 name(s) re-marked at the open (per-name table). AZTA×12 yday $45.65 → 09:30 $44.32 -15.96; BGS×163 yday $3.50 → 09:30 $3.45 -8.15; BKH×6 yday $86.70 → 09:30 $87.77 +6.42; CAPR×52 yday $9.53 → 09:30 $9.35 -9.36; DVN×11 yday $46.58 → 09:30 $46.00 -6.38; ETON×8 yday $63.93 → 09:30 $64.29 +2.88; PLX×183 yday $3.05 → 09:30 $3.00 -9.15; REZI×25 yday $21.32 → 09:30 $21.23 -2.25 | — |
+| 2026-11-16 09:30 ET | **SELL** | `AZTA` | 12 | $44.32 | $2.05 | $-3.35 | $622.43 | ▼ -3.35 after sell → book $4,297.67; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-16 09:30 ET | **SELL** | `BGS` | 163 | $3.45 | $2.52 | $+21.08 | $1,182.27 | ▲ +21.08 after sell → book $4,295.16; vs 09:30 mark -2.51 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-16 09:30 ET | **SELL** | `BKH` | 6 | $87.77 | $2.03 | $-4.40 | $1,706.86 | ▼ -4.40 after sell → book $4,293.13; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-16 09:30 ET | **SELL** | `CAPR` | 52 | $9.35 | $2.17 | $-49.03 | $2,190.89 | ▼ -49.03 after sell → book $4,290.96; vs 09:30 mark -2.17 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-16 09:30 ET | **SELL** | `DVN` | 11 | $46.00 | $2.04 | $-12.43 | $2,694.85 | ▼ -12.43 after sell → book $4,288.92; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-16 09:30 ET | **SELL** | `ETON` | 8 | $64.29 | $2.03 | $+20.27 | $3,207.14 | ▲ +20.27 after sell → book $4,286.89; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-16 09:30 ET | **SELL** | `PLX` | 183 | $3.00 | $2.58 | $+5.86 | $3,753.56 | ▲ +5.86 after sell → book $4,284.31; vs 09:30 mark -2.58 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-16 09:30 ET | **SELL** | `REZI` | 25 | $21.23 | $2.08 | $-11.40 | $4,282.22 | ▼ -11.40 after sell → book $4,282.22; vs 09:30 mark -2.09 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-16 09:30 ET | **BUY** | `MBGL` | 22 | $23.44 | $2.06 | — | $3,764.49 | — | prior-export headline🟢 only; gate headline=good; rank cond; list yday_gainer,yday_mover; 🔵; ret5=+18.5; leftover $535.28 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `WWW` | 21 | $25.00 | $2.05 | — | $3,237.43 | — | prior-export headline🟢 only; gate headline=good; rank cond; list ohlc_hot; 🔵; ret5=+16.7; leftover $535.28 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `CURI` | 175 | $3.05 | $2.52 | — | $2,701.17 | — | prior-export headline🟢 only; gate headline=good; rank cond; list yday_gainer,yday_mover; 🔵; ret5=+24.7; leftover $535.28 | join🟢 sector🟡 gen🔴 news🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `ZM` | 5 | $99.16 | $2.00 | — | $2,203.36 | — | prior-export headline🟢 only; gate headline=good; rank cond; list ohlc_hot; 🔵; ret5=+11.0; leftover $535.28 | join🟢 sector🟡 gen🔴 news🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `ARMK` | 10 | $51.45 | $2.02 | — | $1,686.84 | — | prior-export headline🟢 only; gate headline=good; rank cond; list earn_react; ret5=+2.7; leftover $535.28 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 judge🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `LUNR` | 42 | $12.53 | $2.12 | — | $1,158.47 | — | prior-export headline🟢 only; gate headline=good; rank cond; list yday_gainer; 🔵; ret5=+24.2; leftover $535.28 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `STE` | 2 | $265.49 | $2.00 | — | $625.49 | — | prior-export headline🟢 only; gate headline=good; rank cond; list ohlc_hot; ret5=+4.8; leftover $535.28 | join🟢 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `SB` | 65 | $8.20 | $2.19 | — | $90.31 | — | prior-export headline🟢 only; gate headline=good; rank cond; list ohlc_hot; ret5=+16.6; leftover $535.28 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 judge🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $90.31 | ▲ close $4,287.66 vs 09:30 $4,299.72 (session +22.38) | 16:00 close · cash $90.31 · equity $4,287.66 vs 09:30 $4,299.72 (-12.06; session marks +22.38) · 8 name(s) marked open→close (per-name table). MBGL×22 09:30 $23.44 → close $24.04 +13.20; WWW×21 09:30 $25.00 → close $25.29 +6.09; CURI×175 09:30 $3.05 → close $3.21 +28.00; ZM×5 09:30 $99.16 → close $96.18 -14.90; ARMK×10 09:30 $51.45 → close $55.37 +39.20; LUNR×42 09:30 $12.53 → close $11.73 -33.60; STE×2 09:30 $265.49 → close $261.91 -7.16; SB×65 09:30 $8.20 → close $8.07 -8.45 | — |
 
 ## Not taken
 

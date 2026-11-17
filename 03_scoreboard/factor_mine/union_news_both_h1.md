@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · packet🟢 AND headline🟢 (thin; kept as a KILL)
 
-Cash book **-0.58%** ($9,942) · signal-only (no cash/fees) was +4.21%. Starts YES **21/30**. Fills 11 · skips 2 · realized $+729.11.
+Cash book **-4.25%** ($9,575) · signal-only (no cash/fees) was +4.21%. Starts YES **21/30**. Fills 15 · skips 2 · realized $+729.11.
 
 ## How this sleeve decides (like you are 10)
 
@@ -216,6 +216,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,982.77 | ▲ 09:30 equity $9,982.77 vs yday $9,982.77 (+0.00) | 09:30 open · cash $9,982.77 · no holdings · equity $9,982.77 vs prior close $9,982.77 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-11-13 09:30 ET | **BUY** | `DVN` | 213 | $46.76 | $2.75 | — | $20.14 | — | packet🟢 AND headline🟢 (thin; kept as a KILL); gate news_and_headline=True; rank cond; list flatten; 🔵; ret5=+7.8; leftover $9982.77 | join🟢 sector🔴 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟢 |
 | 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $20.14 | ▼ close $9,941.68 vs 09:30 $9,982.77 (session -38.34) | 16:00 close · cash $20.14 · equity $9,941.68 vs 09:30 $9,982.77 (-41.09; session marks -38.34) · 1 name(s) marked open→close (per-name table). DVN×213 09:30 $46.76 → close $46.58 -38.34 | — |
+| 2026-11-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $20.14 | ▼ 09:30 equity $9,818.14 vs yday $9,941.68 (-123.54) | 09:30 open · cash $20.14 (unchanged overnight, no fees) · equity $9,818.14 vs prior close $9,941.68 (-123.54) · 1 name(s) re-marked at the open (per-name table). DVN×213 yday $46.58 → 09:30 $46.00 -123.54 | — |
+| 2026-11-16 09:30 ET | **SELL** | `DVN` | 213 | $46.00 | $2.86 | $-167.49 | $9,815.28 | ▼ -167.49 after sell → book $9,815.28; vs 09:30 mark -2.86 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `MBGL` | 139 | $23.44 | $2.41 | — | $6,554.71 | — | packet🟢 AND headline🟢 (thin; kept as a KILL); gate news_and_headline=True; rank cond; list yday_gainer,yday_mover; 🔵; ret5=+18.5; leftover $3271.76 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `LUNR` | 261 | $12.53 | $3.37 | — | $3,281.01 | — | packet🟢 AND headline🟢 (thin; kept as a KILL); gate news_and_headline=True; rank cond; list yday_gainer; 🔵; ret5=+24.2; leftover $3271.76 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `DPC` | 99 | $32.88 | $2.29 | — | $23.61 | — | packet🟢 AND headline🟢 (thin; kept as a KILL); gate news_and_headline=True; rank cond; list yday_gainer; 🔵; ret5=+19.0; leftover $3271.76 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 judge🔴 ab🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $23.61 | ▼ close $9,574.90 vs 09:30 $9,818.14 (session -232.32) | 16:00 close · cash $23.61 · equity $9,574.90 vs 09:30 $9,818.14 (-243.24; session marks -232.32) · 3 name(s) marked open→close (per-name table). MBGL×139 09:30 $23.44 → close $24.04 +83.40; LUNR×261 09:30 $12.53 → close $11.73 -208.80; DPC×99 09:30 $32.88 → close $31.80 -106.92 | — |
 
 ## Not taken
 

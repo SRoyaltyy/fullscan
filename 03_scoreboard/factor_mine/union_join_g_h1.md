@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ join_g, no 🚨
 
-Cash book **-20.00%** ($8,000) · signal-only (no cash/fees) was -3.42%. Starts YES **0/30**. Fills 584 · skips 104 · realized $-96.65.
+Cash book **-21.59%** ($7,841) · signal-only (no cash/fees) was -3.42%. Starts YES **0/30**. Fills 596 · skips 104 · realized $-96.65.
 
 ## How this sleeve decides (like you are 10)
 
@@ -788,6 +788,20 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-13 09:30 ET | **BUY** | `CEG` | 3 | $284.97 | $2.00 | — | $1,309.43 | — | union ∩ join_g, no 🚨; gate join=good; list ohlc_hot; 🔵; ret5=+17.8; leftover $1014.14 | join🟢 sector🟡 gen🔴 news🟢 digest🟡 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
 | 2026-11-13 09:30 ET | **BUY** | `ATI` | 5 | $194.18 | $2.00 | — | $336.53 | — | union ∩ join_g, no 🚨; gate join=good; list ohlc_hot; ret5=+13.0; leftover $1014.14 | join🟢 sector🟢 gen🔴 news🟡 digest🟡 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $336.53 | ▼ close $7,999.86 vs 09:30 $8,113.14 (session -93.24) | 16:00 close · cash $336.53 · equity $7,999.86 vs 09:30 $8,113.14 (-113.28; session marks -93.24) · 8 name(s) marked open→close (per-name table). DVN×21 09:30 $46.76 → close $46.58 -3.78; ALNY×6 09:30 $159.17 → close $165.04 +35.22; ETON×16 09:30 $61.25 → close $63.93 +42.88; BBOT×427 09:30 $2.37 → close $2.14 -98.21; RSKD×108 09:30 $9.31 → close $9.27 -4.32; MBGL×43 09:30 $23.17 → close $23.28 +4.73; CEG×3 09:30 $284.97 → close $280.20 -14.31; ATI×5 09:30 $194.18 → close $183.09 -55.45 | — |
+| 2026-11-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $336.53 | ▼ 09:30 equity $7,962.21 vs yday $7,999.86 (-37.65) | 09:30 open · cash $336.53 (unchanged overnight, no fees) · equity $7,962.21 vs prior close $7,999.86 (-37.65) · 8 name(s) re-marked at the open (per-name table). ALNY×6 yday $165.04 → 09:30 $166.98 +11.64; ATI×5 yday $183.09 → 09:30 $179.61 -17.40; BBOT×427 yday $2.14 → 09:30 $2.13 -4.27; CEG×3 yday $280.20 → 09:30 $275.52 -14.04; DVN×21 yday $46.58 → 09:30 $46.00 -12.18; ETON×16 yday $63.93 → 09:30 $64.29 +5.76; MBGL×43 yday $23.28 → 09:30 $23.44 +6.88; RSKD×108 yday $9.27 → 09:30 $9.14 -14.04 | — |
+| 2026-11-16 09:30 ET | **SELL** | `ATI` | 5 | $179.61 | $2.02 | $-76.88 | $1,232.56 | ▼ -76.88 after sell → book $7,960.19; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-16 09:30 ET | **SELL** | `BBOT` | 427 | $2.13 | $5.59 | $-113.58 | $2,136.48 | ▼ -113.58 after sell → book $7,954.60; vs 09:30 mark -5.59 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-16 09:30 ET | **SELL** | `CEG` | 3 | $275.52 | $2.02 | $-32.37 | $2,961.02 | ▼ -32.37 after sell → book $7,952.58; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-16 09:30 ET | **SELL** | `ETON` | 16 | $64.29 | $2.06 | $+44.54 | $3,987.60 | ▲ +44.54 after sell → book $7,950.52; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-16 09:30 ET | **SELL** | `MBGL` | 43 | $23.44 | $2.14 | $+7.35 | $4,993.38 | ▲ +7.35 after sell → book $7,948.38; vs 09:30 mark -2.14 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-16 09:30 ET | **SELL** | `RSKD` | 108 | $9.14 | $2.34 | $-23.02 | $5,978.16 | ▼ -23.02 after sell → book $7,946.04; vs 09:30 mark -2.34 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-16 09:30 ET | **BUY** | `PODD` | 6 | $153.50 | $2.01 | — | $5,055.15 | — | union ∩ join_g, no 🚨; gate join=good; list flatten; ret5=+4.1; leftover $996.36 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `CHRD` | 6 | $149.14 | $2.01 | — | $4,158.30 | — | union ∩ join_g, no 🚨; gate join=good; list flatten; ret5=+9.8; leftover $996.36 | join🟢 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 peer🟢 heat🔴 vol🟡 buy🟢 |
+| 2026-11-16 09:30 ET | **BUY** | `HUBS` | 4 | $222.08 | $2.00 | — | $3,267.98 | — | union ∩ join_g, no 🚨; gate join=good; list probable,yday_gainer; 🔵; ret5=+8.3; leftover $996.36 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `XLAB` | 488 | $2.04 | $6.30 | — | $2,266.16 | — | union ∩ join_g, no 🚨; gate join=good; list yday_gainer,yday_mover; 🔵; ret5=+42.7; leftover $996.36 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `CURI` | 326 | $3.05 | $4.21 | — | $1,267.66 | — | union ∩ join_g, no 🚨; gate join=good; list yday_gainer,yday_mover; 🔵; ret5=+24.7; leftover $996.36 | join🟢 sector🟡 gen🔴 news🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `NUAI` | 322 | $3.09 | $4.15 | — | $268.53 | — | union ∩ join_g, no 🚨; gate join=good; list yday_gainer,yday_mover; 🔵; ret5=+54.6; leftover $996.36 | join🟢 sector🟡 gen🔴 news🔴 digest🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $268.53 | ▼ close $7,841.28 vs 09:30 $7,962.21 (session -84.09) | 16:00 close · cash $268.53 · equity $7,841.28 vs 09:30 $7,962.21 (-120.93; session marks -84.09) · 8 name(s) marked open→close (per-name table). ALNY×6 09:30 $166.98 → close $159.73 -43.50; DVN×21 09:30 $46.00 → close $44.27 -36.33; PODD×6 09:30 $153.50 → close $145.29 -49.26; CHRD×6 09:30 $149.14 → close $146.78 -14.16; HUBS×4 09:30 $222.08 → close $231.98 +39.60; XLAB×488 09:30 $2.04 → close $1.96 -39.04; CURI×326 09:30 $3.05 → close $3.21 +52.16; NUAI×322 09:30 $3.09 → close $3.11 +6.44 | — |
 
 ## Not taken
 

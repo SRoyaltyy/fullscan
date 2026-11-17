@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ macd_xup, no 🚨
 
-Cash book **-14.07%** ($8,593) · signal-only (no cash/fees) was -55.44%. Starts YES **5/30**. Fills 255 · skips 209 · realized $-2117.42.
+Cash book **-17.22%** ($8,278) · signal-only (no cash/fees) was -55.44%. Starts YES **5/30**. Fills 266 · skips 209 · realized $-2117.42.
 
 ## How this sleeve decides (like you are 10)
 
@@ -459,6 +459,19 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-13 09:30 ET | **SELL** | `SES` | 5 | $0.61 | $0.07 | $-1.47 | $84.15 | ▼ -1.47 after sell → book $8,755.54; vs 09:30 mark -0.07 | dropped from list after 3 sess (min 3) | — |
 | 2026-11-13 09:30 ET | **BUY** | `DJT` | 5 | $4.97 | $0.26 | — | $59.04 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list yday_gainer,yday_mover; 🔵; ret5=+23.6; leftover $28.05 | join🔴 sector🟡 gen🔴 news🔴 digest🔴 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $59.04 | ▼ close $8,592.76 vs 09:30 $8,755.67 (session -162.52) | 16:00 close · cash $59.04 · equity $8,592.76 vs 09:30 $8,755.67 (-162.91; session marks -162.52) · 9 name(s) marked open→close (per-name table). AVEX×97 09:30 $13.53 → close $12.51 -98.94; CECO×19 09:30 $55.42 → close $54.25 -22.23; CTVA×94 09:30 $9.11 → close $9.43 +30.08; GFR×148 09:30 $7.73 → close $7.74 +1.48; LINC×48 09:30 $23.01 → close $22.81 -9.60; OSS×223 09:30 $4.68 → close $4.51 -37.91; VLN×688 09:30 $1.43 → close $1.45 +13.76; ZETA×31 09:30 $37.86 → close $36.65 -37.51; DJT×5 09:30 $4.97 → close $4.64 -1.65 | — |
+| 2026-11-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $59.04 | ▼ 09:30 equity $8,435.01 vs yday $8,592.76 (-157.75) | 09:30 open · cash $59.04 (unchanged overnight, no fees) · equity $8,435.01 vs prior close $8,592.76 (-157.75) · 9 name(s) re-marked at the open (per-name table). AVEX×97 yday $12.51 → 09:30 $12.30 -20.37; CECO×19 yday $54.25 → 09:30 $53.00 -23.75; CTVA×94 yday $9.43 → 09:30 $9.35 -7.52; DJT×5 yday $4.64 → 09:30 $4.37 -1.35; GFR×148 yday $7.74 → 09:30 $7.71 -4.44; LINC×48 yday $22.81 → 09:30 $22.69 -5.76; OSS×223 yday $4.51 → 09:30 $4.27 -53.52; VLN×688 yday $1.45 → 09:30 $1.43 -13.76; ZETA×31 yday $36.65 → 09:30 $35.77 -27.28 | — |
+| 2026-11-16 09:30 ET | **SELL** | `AVEX` | 97 | $12.30 | $2.31 | $+53.61 | $1,249.83 | ▲ +53.61 after sell → book $8,432.70; vs 09:30 mark -2.31 | dropped from list after 3 sess (min 3) | join🔴 sector🟡 gen🔴 news🟡 digest🟢 judge🔴 ab🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-16 09:30 ET | **SELL** | `CECO` | 19 | $53.00 | $2.07 | $-108.04 | $2,254.77 | ▼ -108.04 after sell → book $8,430.64; vs 09:30 mark -2.06 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-16 09:30 ET | **SELL** | `CTVA` | 94 | $9.35 | $2.30 | $-264.95 | $3,131.37 | ▼ -264.95 after sell → book $8,428.34; vs 09:30 mark -2.30 | dropped from list after 3 sess (min 3) | join🟢 sector🟡 gen🔴 news🔴 digest🟡 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-11-16 09:30 ET | **SELL** | `GFR` | 148 | $7.71 | $2.47 | $-3.42 | $4,269.98 | ▼ -3.42 after sell → book $8,425.87; vs 09:30 mark -2.47 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-16 09:30 ET | **SELL** | `LINC` | 48 | $22.69 | $2.15 | $-34.53 | $5,356.95 | ▼ -34.53 after sell → book $8,423.72; vs 09:30 mark -2.15 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-16 09:30 ET | **SELL** | `OSS` | 223 | $4.27 | $2.92 | $-193.12 | $6,306.23 | ▼ -193.12 after sell → book $8,420.79; vs 09:30 mark -2.93 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-16 09:30 ET | **SELL** | `VLN` | 688 | $1.43 | $9.00 | $-176.11 | $7,281.07 | ▼ -176.11 after sell → book $8,411.79; vs 09:30 mark -9.00 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-16 09:30 ET | **SELL** | `ZETA` | 31 | $35.77 | $2.10 | $-11.32 | $8,387.84 | ▼ -11.32 after sell → book $8,409.69; vs 09:30 mark -2.10 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-16 09:30 ET | **BUY** | `XLAB` | 1370 | $2.04 | $17.67 | — | $5,575.37 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list yday_gainer,yday_mover; 🔵; ret5=+42.7; leftover $2795.95 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `LMND` | 64 | $43.49 | $2.18 | — | $2,789.82 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list yday_gainer; 🔵; ret5=+11.7; leftover $2795.95 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `NU` | 215 | $12.96 | $2.77 | — | $0.65 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list ohlc_hot; ret5=+9.9; leftover $2795.95 | join🟡 sector🟡 gen🔴 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $0.65 | ▼ close $8,277.89 vs 09:30 $8,435.01 (session -109.17) | 16:00 close · cash $0.65 · equity $8,277.89 vs 09:30 $8,435.01 (-157.12; session marks -109.17) · 4 name(s) marked open→close (per-name table). DJT×5 09:30 $4.37 → close $4.08 -1.45; XLAB×1370 09:30 $2.04 → close $1.96 -109.60; LMND×64 09:30 $43.49 → close $44.46 +62.08; NU×215 09:30 $12.96 → close $12.68 -60.20 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `w_hot_cond` · size `leftover` · sell `list` · S-boost `none` · rank by w_hot_cond
 
-Cash book **+24.24%** ($12,424) · signal-only (no cash/fees) was +31.34%. Starts YES **29/30**. Fills 586 · skips 96 · realized $-9.27.
+Cash book **+19.97%** ($11,997) · signal-only (no cash/fees) was +31.34%. Starts YES **29/30**. Fills 602 · skips 96 · realized $-9.27.
 
 ## How this sleeve decides (like you are 10)
 
@@ -789,6 +789,24 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-13 09:30 ET | **BUY** | `MX` | 566 | $2.79 | $7.30 | — | $1,779.88 | — | rank by w_hot_cond; rank w_hot_cond; list yday_gainer,yday_mover; ret5=+37.6; leftover $1581.62 | join🟡 sector🔴 gen🔴 news🔴 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-11-13 09:30 ET | **BUY** | `NEOV` | 480 | $3.29 | $6.19 | — | $194.49 | — | rank by w_hot_cond; rank w_hot_cond; list earn_react; 🔵; ret5=+35.1; leftover $1581.62 | join🔴 sector🟢 gen🔴 news🟡 digest🟡 judge🔴 ab🔴 peer🟢 heat🔴 vol🟡 buy🟡 |
 | 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $194.49 | ▼ close $12,423.95 vs 09:30 $12,652.93 (session -193.56) | 16:00 close · cash $194.49 · equity $12,423.95 vs 09:30 $12,652.93 (-228.98; session marks -193.56) · 8 name(s) marked open→close (per-name table). BGS×480 09:30 $3.29 → close $3.50 +100.80; ETON×25 09:30 $61.25 → close $63.93 +67.00; FOSL×184 09:30 $8.56 → close $8.43 -23.92; MBGL×68 09:30 $23.17 → close $23.28 +7.48; PLX×537 09:30 $2.94 → close $3.05 +59.07; CEG×5 09:30 $284.97 → close $280.20 -23.85; MX×566 09:30 $2.79 → close $2.50 -164.14; NEOV×480 09:30 $3.29 → close $2.84 -216.00 | — |
+| 2026-11-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $194.49 | ▼ 09:30 equity $12,246.68 vs yday $12,423.95 (-177.27) | 09:30 open · cash $194.49 (unchanged overnight, no fees) · equity $12,246.68 vs prior close $12,423.95 (-177.27) · 8 name(s) re-marked at the open (per-name table). BGS×480 yday $3.50 → 09:30 $3.45 -24.00; CEG×5 yday $280.20 → 09:30 $275.52 -23.40; ETON×25 yday $63.93 → 09:30 $64.29 +9.00; FOSL×184 yday $8.43 → 09:30 $8.38 -9.20; MBGL×68 yday $23.28 → 09:30 $23.44 +10.88; MX×566 yday $2.50 → 09:30 $2.35 -84.90; NEOV×480 yday $2.84 → 09:30 $2.78 -28.80; PLX×537 yday $3.05 → 09:30 $3.00 -26.85 | — |
+| 2026-11-16 09:30 ET | **SELL** | `BGS` | 480 | $3.45 | $6.28 | $+64.32 | $1,844.21 | ▲ +64.32 after sell → book $12,240.40; vs 09:30 mark -6.28 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-16 09:30 ET | **SELL** | `CEG` | 5 | $275.52 | $2.03 | $-51.28 | $3,219.78 | ▼ -51.28 after sell → book $12,238.37; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-16 09:30 ET | **SELL** | `ETON` | 25 | $64.29 | $2.09 | $+71.85 | $4,824.94 | ▲ +71.85 after sell → book $12,236.28; vs 09:30 mark -2.09 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-16 09:30 ET | **SELL** | `FOSL` | 184 | $8.38 | $2.58 | $-38.25 | $6,364.28 | ▼ -38.25 after sell → book $12,233.70; vs 09:30 mark -2.58 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-16 09:30 ET | **SELL** | `MBGL` | 68 | $23.44 | $2.22 | $+13.95 | $7,955.98 | ▲ +13.95 after sell → book $12,231.48; vs 09:30 mark -2.22 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-16 09:30 ET | **SELL** | `MX` | 566 | $2.35 | $7.41 | $-263.75 | $9,278.67 | ▼ -263.75 after sell → book $12,224.07; vs 09:30 mark -7.41 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-16 09:30 ET | **SELL** | `NEOV` | 480 | $2.78 | $6.28 | $-257.27 | $10,606.79 | ▼ -257.27 after sell → book $12,217.79; vs 09:30 mark -6.28 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-16 09:30 ET | **SELL** | `PLX` | 537 | $3.00 | $7.03 | $+18.26 | $12,210.76 | ▲ +18.26 after sell → book $12,210.76; vs 09:30 mark -7.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-16 09:30 ET | **BUY** | `TTEC` | 519 | $2.94 | $6.70 | — | $10,678.21 | — | rank by w_hot_cond; rank w_hot_cond; list yday_gainer; 🔵; ret5=+113.8; leftover $1526.35 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `NUAI` | 493 | $3.09 | $6.36 | — | $9,148.48 | — | rank by w_hot_cond; rank w_hot_cond; list yday_gainer,yday_mover; 🔵; ret5=+54.6; leftover $1526.35 | join🟢 sector🟡 gen🔴 news🔴 digest🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `ENGN` | 657 | $2.32 | $8.48 | — | $7,615.76 | — | rank by w_hot_cond; rank w_hot_cond; list yday_gainer,yday_mover; ret5=+37.7; leftover $1526.35 | join🟡 sector🟡 gen🔴 news🔴 digest🔴 ab🟡 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `WWW` | 61 | $25.00 | $2.17 | — | $6,088.59 | — | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; 🔵; ret5=+16.7; leftover $1526.35 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `CURI` | 500 | $3.05 | $6.45 | — | $4,557.14 | — | rank by w_hot_cond; rank w_hot_cond; list yday_gainer,yday_mover; 🔵; ret5=+24.7; leftover $1526.35 | join🟢 sector🟡 gen🔴 news🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `NGEN` | 825 | $1.85 | $10.64 | — | $3,020.25 | — | rank by w_hot_cond; rank w_hot_cond; list yday_gainer,yday_mover; ret5=+41.4; leftover $1526.35 | join🔴 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `CHA` | 107 | $14.17 | $2.31 | — | $1,501.74 | — | rank by w_hot_cond; rank w_hot_cond; list yday_gainer,ohlc_hot; ret5=+15.6; leftover $1526.35 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `FROG` | 13 | $110.78 | $2.03 | — | $59.51 | — | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; 🔵; ret5=+12.5; leftover $1526.35 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $59.51 | ▼ close $11,996.72 vs 09:30 $12,246.68 (session -168.90) | 16:00 close · cash $59.51 · equity $11,996.72 vs 09:30 $12,246.68 (-249.96; session marks -168.90) · 8 name(s) marked open→close (per-name table). TTEC×519 09:30 $2.94 → close $3.07 +67.47; NUAI×493 09:30 $3.09 → close $3.11 +9.86; ENGN×657 09:30 $2.32 → close $1.89 -282.51; WWW×61 09:30 $25.00 → close $25.29 +17.69; CURI×500 09:30 $3.05 → close $3.21 +80.00; NGEN×825 09:30 $1.85 → close $1.82 -24.75; CHA×107 09:30 $14.17 → close $13.93 -25.68; FROG×13 09:30 $110.78 → close $109.94 -10.98 | — |
 
 ## Not taken
 

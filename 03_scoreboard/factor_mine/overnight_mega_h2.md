@@ -224,6 +224,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $213.83 | ▲ 09:30 equity $9,915.86 vs yday $9,874.91 (+40.95) | 09:30 open · cash $213.83 (unchanged overnight, no fees) · equity $9,915.86 vs prior close $9,874.91 (+40.95) · 1 name(s) re-marked at the open (per-name table). FNV×39 yday $247.72 → 09:30 $248.77 +40.95 | — |
 | 2026-11-13 09:30 ET | **SELL** | `FNV` | 39 | $248.77 | $2.19 | $-325.27 | $9,913.67 | ▼ -325.27 after sell → book $9,913.67; vs 09:30 mark -2.19 | dropped from list after 2 sess (min 2) | — |
 | 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,913.67 | ▲ close $9,913.67 vs 09:30 $9,915.86 (session +0.00) | 16:00 close · cash $9,913.67 · no lots left · equity $9,913.67. | — |
+| 2026-11-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,913.67 | ▲ 09:30 equity $9,913.67 vs yday $9,913.67 (+0.00) | 09:30 open · cash $9,913.67 · no holdings · equity $9,913.67 vs prior close $9,913.67 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,913.67 | ▲ close $9,913.67 vs 09:30 $9,913.67 (session +0.00) | 16:00 close · cash $9,913.67 · no lots left · equity $9,913.67. | — |
 
 ## Not taken
 

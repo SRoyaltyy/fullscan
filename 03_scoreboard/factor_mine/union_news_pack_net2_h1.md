@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · packet🟢 and camera net ≥ 2
 
-Cash book **+3.94%** ($10,394) · signal-only (no cash/fees) was +7.99%. Starts YES **21/30**. Fills 137 · skips 28 · realized $+1837.87.
+Cash book **+2.70%** ($10,270) · signal-only (no cash/fees) was +7.99%. Starts YES **21/30**. Fills 144 · skips 28 · realized $+1837.87.
 
 ## How this sleeve decides (like you are 10)
 
@@ -343,6 +343,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-13 09:30 ET | **BUY** | `ANDG` | 56 | $62.82 | $2.16 | — | $3,596.54 | — | packet🟢 and camera net ≥ 2; gate cam_net_min=2,news_box=good; rank cond; list earn_react; 🔵; ret5=-1.3; leftover $3541.94 | join🟡 sector🟢 gen🔴 news🟢 digest🟢 ab🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-11-13 09:30 ET | **BUY** | `CEG` | 12 | $284.97 | $2.03 | — | $174.87 | — | packet🟢 and camera net ≥ 2; gate cam_net_min=2,news_box=good; rank cond; list ohlc_hot; 🔵; ret5=+17.8; leftover $3541.94 | join🟢 sector🟡 gen🔴 news🟢 digest🟡 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
 | 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $174.87 | ▼ close $10,394.13 vs 09:30 $10,625.83 (session -225.30) | 16:00 close · cash $174.87 · equity $10,394.13 vs 09:30 $10,625.83 (-231.70; session marks -225.30) · 3 name(s) marked open→close (per-name table). DVN×75 09:30 $46.76 → close $46.58 -13.50; ANDG×56 09:30 $62.82 → close $60.06 -154.56; CEG×12 09:30 $284.97 → close $280.20 -57.24 | — |
+| 2026-11-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $174.87 | ▼ 09:30 equity $10,305.11 vs yday $10,394.13 (-89.02) | 09:30 open · cash $174.87 (unchanged overnight, no fees) · equity $10,305.11 vs prior close $10,394.13 (-89.02) · 3 name(s) re-marked at the open (per-name table). ANDG×56 yday $60.06 → 09:30 $60.25 +10.64; CEG×12 yday $280.20 → 09:30 $275.52 -56.16; DVN×75 yday $46.58 → 09:30 $46.00 -43.50 | — |
+| 2026-11-16 09:30 ET | **SELL** | `ANDG` | 56 | $60.25 | $2.19 | $-148.27 | $3,546.67 | ▼ -148.27 after sell → book $10,302.91; vs 09:30 mark -2.20 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-16 09:30 ET | **SELL** | `CEG` | 12 | $275.52 | $2.06 | $-117.49 | $6,850.85 | ▼ -117.49 after sell → book $10,300.85; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-16 09:30 ET | **SELL** | `DVN` | 75 | $46.00 | $2.25 | $-61.47 | $10,298.60 | ▼ -61.47 after sell → book $10,298.60; vs 09:30 mark -2.25 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `FROG` | 23 | $110.78 | $2.06 | — | $7,748.48 | — | packet🟢 and camera net ≥ 2; gate cam_net_min=2,news_box=good; rank cond; list ohlc_hot; 🔵; ret5=+12.5; leftover $2574.65 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `MBGL` | 109 | $23.44 | $2.32 | — | $5,191.21 | — | packet🟢 and camera net ≥ 2; gate cam_net_min=2,news_box=good; rank cond; list yday_gainer,yday_mover; 🔵; ret5=+18.5; leftover $2574.65 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `CHRD` | 17 | $149.14 | $2.04 | — | $2,653.79 | — | packet🟢 and camera net ≥ 2; gate cam_net_min=2,news_box=good; rank cond; list flatten; ret5=+9.8; leftover $2574.65 | join🟢 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 peer🟢 heat🔴 vol🟡 buy🟢 |
+| 2026-11-16 09:30 ET | **BUY** | `COLD` | 153 | $16.82 | $2.45 | — | $77.88 | — | packet🟢 and camera net ≥ 2; gate cam_net_min=2,news_box=good; rank cond; list ohlc_hot; 🔵; ret5=+4.2; leftover $2574.65 | join🟡 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟡 vol🟡 buy🟡 |
+| 2026-11-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $77.88 | ▼ close $10,269.57 vs 09:30 $10,305.11 (session -20.16) | 16:00 close · cash $77.88 · equity $10,269.57 vs 09:30 $10,305.11 (-35.54; session marks -20.16) · 4 name(s) marked open→close (per-name table). FROG×23 09:30 $110.78 → close $109.94 -19.43; MBGL×109 09:30 $23.44 → close $24.04 +65.40; CHRD×17 09:30 $149.14 → close $146.78 -40.12; COLD×153 09:30 $16.82 → close $16.65 -26.01 | — |
 
 ## Not taken
 

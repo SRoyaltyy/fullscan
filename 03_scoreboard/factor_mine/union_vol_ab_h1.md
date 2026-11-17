@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-18.43%** ($8,157) · signal-only (no cash/fees) was +53.27%. Starts YES **26/30**. Fills 388 · skips 65 · realized $+1139.59.
+Cash book **-19.71%** ($8,029) · signal-only (no cash/fees) was +53.27%. Starts YES **26/30**. Fills 402 · skips 65 · realized $+1139.59.
 
 ## How this sleeve decides (like you are 10)
 
@@ -594,6 +594,22 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-13 09:30 ET | **BUY** | `AZTA` | 23 | $44.26 | $2.06 | — | $1,225.73 | — | combo gate; gate ab=good,vol=good; list yday_gainer,yday_mover; 🔵; ret5=+17.3; leftover $1036.19 | join🔴 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-13 09:30 ET | **BUY** | `AXTI` | 23 | $43.36 | $2.06 | — | $226.39 | — | combo gate; gate ab=good,vol=good; list yday_gainer,yday_mover; ret5=+18.6; leftover $1036.19 | join🟡 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🟢 buy🟡 |
 | 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $226.39 | ▼ close $8,157.39 vs 09:30 $8,289.54 (session -111.85) | 16:00 close · cash $226.39 · equity $8,157.39 vs 09:30 $8,289.54 (-132.15; session marks -111.85) · 8 name(s) marked open→close (per-name table). ALNY×6 09:30 $159.17 → close $165.04 +35.22; ETON×16 09:30 $61.25 → close $63.93 +42.88; REZI×48 09:30 $21.52 → close $21.32 -9.60; BBOT×437 09:30 $2.37 → close $2.14 -100.51; NBIS×8 09:30 $123.52 → close $115.88 -61.12; FOSL×121 09:30 $8.56 → close $8.43 -15.73; AZTA×23 09:30 $44.26 → close $45.65 +31.97; AXTI×23 09:30 $43.36 → close $41.84 -34.96 | — |
+| 2026-11-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $226.39 | ▼ 09:30 equity $7,982.53 vs yday $8,157.39 (-174.86) | 09:30 open · cash $226.39 (unchanged overnight, no fees) · equity $7,982.53 vs prior close $8,157.39 (-174.86) · 8 name(s) re-marked at the open (per-name table). ALNY×6 yday $165.04 → 09:30 $166.98 +11.64; AXTI×23 yday $41.84 → 09:30 $38.61 -74.29; AZTA×23 yday $45.65 → 09:30 $44.32 -30.59; BBOT×437 yday $2.14 → 09:30 $2.13 -4.37; ETON×16 yday $63.93 → 09:30 $64.29 +5.76; FOSL×121 yday $8.43 → 09:30 $8.38 -6.05; NBIS×8 yday $115.88 → 09:30 $106.80 -72.64; REZI×48 yday $21.32 → 09:30 $21.23 -4.32 | — |
+| 2026-11-16 09:30 ET | **SELL** | `AXTI` | 23 | $38.61 | $2.08 | $-113.39 | $1,112.34 | ▼ -113.39 after sell → book $7,980.45; vs 09:30 mark -2.08 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-16 09:30 ET | **SELL** | `AZTA` | 23 | $44.32 | $2.08 | $-2.76 | $2,129.62 | ▼ -2.76 after sell → book $7,978.37; vs 09:30 mark -2.08 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-16 09:30 ET | **SELL** | `BBOT` | 437 | $2.13 | $5.72 | $-116.24 | $3,054.71 | ▼ -116.24 after sell → book $7,972.65; vs 09:30 mark -5.72 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-16 09:30 ET | **SELL** | `ETON` | 16 | $64.29 | $2.06 | $+44.54 | $4,081.29 | ▲ +44.54 after sell → book $7,970.59; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-16 09:30 ET | **SELL** | `FOSL` | 121 | $8.38 | $2.38 | $-26.52 | $5,092.89 | ▼ -26.52 after sell → book $7,968.21; vs 09:30 mark -2.38 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-16 09:30 ET | **SELL** | `NBIS` | 8 | $106.80 | $2.03 | $-137.81 | $5,945.26 | ▼ -137.81 after sell → book $7,966.18; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟡 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-16 09:30 ET | **SELL** | `REZI` | 48 | $21.23 | $2.15 | $-18.21 | $6,962.14 | ▼ -18.21 after sell → book $7,964.02; vs 09:30 mark -2.16 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-16 09:30 ET | **BUY** | `ADRX` | 69 | $14.22 | $2.20 | — | $5,978.77 | — | combo gate; gate ab=good,vol=good; list probable,yday_gainer; 🔵; ret5=+7.3; leftover $994.59 | join🟡 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `HUBS` | 4 | $222.08 | $2.00 | — | $5,088.44 | — | combo gate; gate ab=good,vol=good; list probable,yday_gainer; 🔵; ret5=+8.3; leftover $994.59 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `XLAB` | 487 | $2.04 | $6.28 | — | $4,088.68 | — | combo gate; gate ab=good,vol=good; list yday_gainer,yday_mover; 🔵; ret5=+42.7; leftover $994.59 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `NGEN` | 537 | $1.85 | $6.93 | — | $3,088.30 | — | combo gate; gate ab=good,vol=good; list yday_gainer,yday_mover; ret5=+41.4; leftover $994.59 | join🔴 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `CURI` | 326 | $3.05 | $4.21 | — | $2,089.80 | — | combo gate; gate ab=good,vol=good; list yday_gainer,yday_mover; 🔵; ret5=+24.7; leftover $994.59 | join🟢 sector🟡 gen🔴 news🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `MBGL` | 42 | $23.44 | $2.12 | — | $1,103.20 | — | combo gate; gate ab=good,vol=good; list yday_gainer,yday_mover; 🔵; ret5=+18.5; leftover $994.59 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `AVEX` | 80 | $12.30 | $2.23 | — | $116.97 | — | combo gate; gate ab=good,vol=good; list yday_gainer; ret5=+22.6; leftover $994.59 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 judge🔴 ab🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $116.97 | ▲ close $8,029.27 vs 09:30 $7,982.53 (session +91.21) | 16:00 close · cash $116.97 · equity $8,029.27 vs 09:30 $7,982.53 (+46.74; session marks +91.21) · 8 name(s) marked open→close (per-name table). ALNY×6 09:30 $166.98 → close $159.73 -43.50; ADRX×69 09:30 $14.22 → close $14.00 -15.18; HUBS×4 09:30 $222.08 → close $231.98 +39.60; XLAB×487 09:30 $2.04 → close $1.96 -38.96; NGEN×537 09:30 $1.85 → close $1.82 -16.11; CURI×326 09:30 $3.05 → close $3.21 +52.16; MBGL×42 09:30 $23.44 → close $24.04 +25.20; AVEX×80 09:30 $12.30 → close $13.40 +88.00 | — |
 
 ## Not taken
 

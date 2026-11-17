@@ -6,7 +6,7 @@ Buys the flatten **wish-list** even on io/HOLD mornings — live `flatten_robust
 
 Side **long** · universe `flatten` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · baseline list, no extra gate
 
-Cash book **-17.67%** ($8,233) · signal-only (no cash/fees) was -9.51%. Starts YES **0/30**. Fills 427 · skips 78 · realized $-357.09.
+Cash book **-22.07%** ($7,793) · signal-only (no cash/fees) was -9.51%. Starts YES **0/30**. Fills 431 · skips 78 · realized $-357.09.
 
 ## How this sleeve decides (like you are 10)
 
@@ -627,6 +627,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-13 09:30 ET | **BUY** | `GRNT` | 253 | $6.42 | $3.26 | — | $1,838.41 | — | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); ret5=+39.0; leftover $1627.42 | join🟢 sector🔴 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
 | 2026-11-13 09:30 ET | **BUY** | `ETON` | 26 | $61.25 | $2.07 | — | $243.85 | — | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); ret5=+30.3; leftover $1627.42 | join🟢 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $243.85 | ▲ close $8,233.35 vs 09:30 $8,137.11 (session +107.70) | 16:00 close · cash $243.85 · equity $8,233.35 vs 09:30 $8,137.11 (+96.24; session marks +107.70) · 5 name(s) marked open→close (per-name table). DVN×34 09:30 $46.76 → close $46.58 -6.12; ALNY×10 09:30 $159.17 → close $165.04 +58.70; CHRD×10 09:30 $148.35 → close $149.93 +15.80; GRNT×253 09:30 $6.42 → close $6.30 -30.36; ETON×26 09:30 $61.25 → close $63.93 +69.68 | — |
+| 2026-11-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $243.85 | ▼ 09:30 equity $8,221.84 vs yday $8,233.35 (-11.51) | 09:30 open · cash $243.85 (unchanged overnight, no fees) · equity $8,221.84 vs prior close $8,233.35 (-11.51) · 5 name(s) re-marked at the open (per-name table). ALNY×10 yday $165.04 → 09:30 $166.98 +19.40; CHRD×10 yday $149.93 → 09:30 $149.14 -7.90; DVN×34 yday $46.58 → 09:30 $46.00 -19.72; ETON×26 yday $63.93 → 09:30 $64.29 +9.36; GRNT×253 yday $6.30 → 09:30 $6.25 -12.65 | — |
+| 2026-11-16 09:30 ET | **SELL** | `ETON` | 26 | $64.29 | $2.09 | $+74.88 | $1,913.30 | ▲ +74.88 after sell → book $8,219.75; vs 09:30 mark -2.09 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-16 09:30 ET | **SELL** | `GRNT` | 253 | $6.25 | $3.32 | $-49.59 | $3,491.23 | ▼ -49.59 after sell → book $8,216.43; vs 09:30 mark -3.32 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-16 09:30 ET | **BUY** | `PODD` | 11 | $153.50 | $2.02 | — | $1,800.71 | — | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); ret5=+4.1; leftover $1745.62 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `EPRX` | 214 | $8.15 | $2.76 | — | $53.85 | — | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); ret5=+18.3; leftover $1745.62 | join🟢 sector🟡 gen🔴 news🔴 digest🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $53.85 | ▼ close $7,793.08 vs 09:30 $8,221.84 (session -418.57) | 16:00 close · cash $53.85 · equity $7,793.08 vs 09:30 $8,221.84 (-428.76; session marks -418.57) · 5 name(s) marked open→close (per-name table). ALNY×10 09:30 $166.98 → close $159.73 -72.50; CHRD×10 09:30 $149.14 → close $146.78 -23.60; DVN×34 09:30 $46.00 → close $44.27 -58.82; PODD×11 09:30 $153.50 → close $145.29 -90.31; EPRX×214 09:30 $8.15 → close $7.34 -173.34 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Buys the flatten **wish-list** even on io/HOLD mornings — live `flatten_robust
 
 Side **long** · universe `flatten` · top 8 · rank `list` · size `leftover` · sell `trail` · S-boost `none` · after min-hold, trail 5% off peak
 
-Cash book **-26.05%** ($7,395) · signal-only (no cash/fees) was -10.41%. Starts YES **1/30**. Fills 309 · skips 216 · realized $-1149.04.
+Cash book **-28.06%** ($7,194) · signal-only (no cash/fees) was -10.41%. Starts YES **1/30**. Fills 314 · skips 216 · realized $-1149.04.
 
 ## How this sleeve decides (like you are 10)
 
@@ -509,6 +509,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-13 09:30 ET | **BUY** | `GRNT` | 223 | $6.42 | $2.88 | — | $1,577.13 | — | after min-hold, trail 5% off peak; list flatten; wish-list (live io HOLD — not a ticket); ret5=+39.0; leftover $1437.65 | join🟢 sector🔴 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
 | 2026-11-13 09:30 ET | **BUY** | `ETON` | 23 | $61.25 | $2.06 | — | $166.32 | — | after min-hold, trail 5% off peak; list flatten; wish-list (live io HOLD — not a ticket); ret5=+30.3; leftover $1437.65 | join🟢 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $166.32 | ▲ close $7,394.81 vs 09:30 $7,315.21 (session +97.07) | 16:00 close · cash $166.32 · equity $7,394.81 vs 09:30 $7,315.21 (+79.60; session marks +97.07) · 9 name(s) marked open→close (per-name table). COTY×8 09:30 $4.03 → close $4.04 +0.09; KDP×1 09:30 $35.73 → close $36.34 +0.61; PRCH×1 09:30 $21.31 → close $21.05 -0.26; TTD×2 09:30 $15.63 → close $15.68 +0.10; DVN×30 09:30 $46.76 → close $46.58 -5.40; ALNY×9 09:30 $159.17 → close $165.04 +52.83; CHRD×9 09:30 $148.35 → close $149.93 +14.22; GRNT×223 09:30 $6.42 → close $6.30 -26.76; ETON×23 09:30 $61.25 → close $63.93 +61.64 | — |
+| 2026-11-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $166.32 | ▼ 09:30 equity $7,385.08 vs yday $7,394.81 (-9.73) | 09:30 open · cash $166.32 (unchanged overnight, no fees) · equity $7,385.08 vs prior close $7,394.81 (-9.73) · 9 name(s) re-marked at the open (per-name table). ALNY×9 yday $165.04 → 09:30 $166.98 +17.46; CHRD×9 yday $149.93 → 09:30 $149.14 -7.11; COTY×8 yday $4.04 → 09:30 $4.10 +0.48; DVN×30 yday $46.58 → 09:30 $46.00 -17.40; ETON×23 yday $63.93 → 09:30 $64.29 +8.28; GRNT×223 yday $6.30 → 09:30 $6.25 -11.15; KDP×1 yday $36.34 → 09:30 $36.71 +0.37; PRCH×1 yday $21.05 → 09:30 $20.73 -0.32; TTD×2 yday $15.68 → 09:30 $15.51 -0.34 | — |
+| 2026-11-16 09:30 ET | **SELL** | `COTY` | 8 | $4.10 | $0.37 | $-2.18 | $198.75 | ▼ -2.18 after sell → book $7,384.71; vs 09:30 mark -0.37 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-16 09:30 ET | **SELL** | `KDP` | 1 | $36.71 | $0.39 | $-1.16 | $235.07 | ▼ -1.16 after sell → book $7,384.32; vs 09:30 mark -0.39 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-16 09:30 ET | **SELL** | `PRCH` | 1 | $20.73 | $0.23 | $-1.89 | $255.57 | ▼ -1.89 after sell → book $7,384.09; vs 09:30 mark -0.23 | trail off peak after 3 sess (−5%) | — |
+| 2026-11-16 09:30 ET | **SELL** | `TTD` | 2 | $15.51 | $0.34 | $-0.09 | $286.25 | ▼ -0.09 after sell → book $7,383.75; vs 09:30 mark -0.34 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-16 09:30 ET | **BUY** | `EPRX` | 17 | $8.15 | $1.44 | — | $146.26 | — | after min-hold, trail 5% off peak; list flatten; wish-list (live io HOLD — not a ticket); ret5=+18.3; leftover $143.13 | join🟢 sector🟡 gen🔴 news🔴 digest🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $146.26 | ▼ close $7,193.96 vs 09:30 $7,385.08 (session -188.35) | 16:00 close · cash $146.26 · equity $7,193.96 vs 09:30 $7,385.08 (-191.12; session marks -188.35) · 6 name(s) marked open→close (per-name table). ALNY×9 09:30 $166.98 → close $159.73 -65.25; CHRD×9 09:30 $149.14 → close $146.78 -21.24; DVN×30 09:30 $46.00 → close $44.27 -51.90; ETON×23 09:30 $64.29 → close $63.88 -9.43; GRNT×223 09:30 $6.25 → close $6.13 -26.76; EPRX×17 09:30 $8.15 → close $7.34 -13.77 | — |
 
 ## Not taken
 

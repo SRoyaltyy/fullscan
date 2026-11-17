@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · rank by cond
 
-Cash book **-12.38%** ($8,763) · signal-only (no cash/fees) was -4.88%. Starts YES **0/30**. Fills 588 · skips 105 · realized $-723.91.
+Cash book **-12.38%** ($8,762) · signal-only (no cash/fees) was -4.88%. Starts YES **0/30**. Fills 604 · skips 105 · realized $-723.91.
 
 ## How this sleeve decides (like you are 10)
 
@@ -791,6 +791,24 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-13 09:30 ET | **BUY** | `PLX` | 373 | $2.94 | $4.81 | — | $1,456.47 | — | rank by cond; rank cond; list ohlc_hot; ret5=+17.9; leftover $1099.25 | join🟢 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-13 09:30 ET | **BUY** | `RSKD` | 118 | $9.31 | $2.34 | — | $355.55 | — | rank by cond; rank cond; list yday_gainer,yday_mover; ret5=+13.4; leftover $1099.25 | join🟢 sector🔴 gen🔴 news🔴 digest🟢 ab🟡 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $355.55 | ▼ close $8,762.55 vs 09:30 $8,793.97 (session -11.73) | 16:00 close · cash $355.55 · equity $8,762.55 vs 09:30 $8,793.97 (-31.42; session marks -11.73) · 8 name(s) marked open→close (per-name table). FOSL×128 09:30 $8.56 → close $8.43 -16.64; DVN×23 09:30 $46.76 → close $46.58 -4.14; ANDG×17 09:30 $62.82 → close $60.06 -46.92; ALNY×6 09:30 $159.17 → close $165.04 +35.22; ETON×17 09:30 $61.25 → close $63.93 +45.56; NBIS×8 09:30 $123.52 → close $115.88 -61.12; PLX×373 09:30 $2.94 → close $3.05 +41.03; RSKD×118 09:30 $9.31 → close $9.27 -4.72 | — |
+| 2026-11-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $355.55 | ▼ 09:30 equity $8,657.17 vs yday $8,762.55 (-105.38) | 09:30 open · cash $355.55 (unchanged overnight, no fees) · equity $8,657.17 vs prior close $8,762.55 (-105.38) · 8 name(s) re-marked at the open (per-name table). ALNY×6 yday $165.04 → 09:30 $166.98 +11.64; ANDG×17 yday $60.06 → 09:30 $60.25 +3.23; DVN×23 yday $46.58 → 09:30 $46.00 -13.34; ETON×17 yday $63.93 → 09:30 $64.29 +6.12; FOSL×128 yday $8.43 → 09:30 $8.38 -6.40; NBIS×8 yday $115.88 → 09:30 $106.80 -72.64; PLX×373 yday $3.05 → 09:30 $3.00 -18.65; RSKD×118 yday $9.27 → 09:30 $9.14 -15.34 | — |
+| 2026-11-16 09:30 ET | **SELL** | `ALNY` | 6 | $166.98 | $2.03 | $+42.82 | $1,355.40 | ▲ +42.82 after sell → book $8,655.14; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-16 09:30 ET | **SELL** | `ANDG` | 17 | $60.25 | $2.06 | $-47.79 | $2,377.59 | ▼ -47.79 after sell → book $8,653.08; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-16 09:30 ET | **SELL** | `DVN` | 23 | $46.00 | $2.08 | $-21.62 | $3,433.51 | ▼ -21.62 after sell → book $8,651.00; vs 09:30 mark -2.08 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-16 09:30 ET | **SELL** | `ETON` | 17 | $64.29 | $2.06 | $+47.58 | $4,524.38 | ▲ +47.58 after sell → book $8,648.94; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-16 09:30 ET | **SELL** | `FOSL` | 128 | $8.38 | $2.41 | $-27.82 | $5,594.62 | ▼ -27.82 after sell → book $8,646.54; vs 09:30 mark -2.40 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-16 09:30 ET | **SELL** | `NBIS` | 8 | $106.80 | $2.03 | $-137.81 | $6,446.98 | ▼ -137.81 after sell → book $8,644.50; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟡 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-16 09:30 ET | **SELL** | `PLX` | 373 | $3.00 | $4.88 | $+12.68 | $7,561.10 | ▲ +12.68 after sell → book $8,639.62; vs 09:30 mark -4.88 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-16 09:30 ET | **SELL** | `RSKD` | 118 | $9.14 | $2.37 | $-24.78 | $8,637.24 | ▼ -24.78 after sell → book $8,637.24; vs 09:30 mark -2.38 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-16 09:30 ET | **BUY** | `ATAT` | 27 | $39.16 | $2.07 | — | $7,577.85 | — | rank by cond; rank cond; list ohlc_hot; ret5=+6.2; leftover $1079.66 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟢 |
+| 2026-11-16 09:30 ET | **BUY** | `FROG` | 9 | $110.78 | $2.02 | — | $6,578.77 | — | rank by cond; rank cond; list ohlc_hot; 🔵; ret5=+12.5; leftover $1079.66 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `HUBS` | 4 | $222.08 | $2.00 | — | $5,688.45 | — | rank by cond; rank cond; list probable,yday_gainer; 🔵; ret5=+8.3; leftover $1079.66 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `MBGL` | 46 | $23.44 | $2.13 | — | $4,608.08 | — | rank by cond; rank cond; list yday_gainer,yday_mover; 🔵; ret5=+18.5; leftover $1079.66 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `TTEC` | 367 | $2.94 | $4.73 | — | $3,524.37 | — | rank by cond; rank cond; list yday_gainer; 🔵; ret5=+113.8; leftover $1079.66 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `WWW` | 43 | $25.00 | $2.12 | — | $2,447.25 | — | rank by cond; rank cond; list ohlc_hot; 🔵; ret5=+16.7; leftover $1079.66 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `CHA` | 76 | $14.17 | $2.22 | — | $1,368.11 | — | rank by cond; rank cond; list yday_gainer,ohlc_hot; ret5=+15.6; leftover $1079.66 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `CURI` | 353 | $3.05 | $4.55 | — | $286.91 | — | rank by cond; rank cond; list yday_gainer,yday_mover; 🔵; ret5=+24.7; leftover $1079.66 | join🟢 sector🟡 gen🔴 news🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $286.91 | ▲ close $8,762.35 vs 09:30 $8,657.17 (session +146.95) | 16:00 close · cash $286.91 · equity $8,762.35 vs 09:30 $8,657.17 (+105.18; session marks +146.95) · 8 name(s) marked open→close (per-name table). ATAT×27 09:30 $39.16 → close $38.75 -11.07; FROG×9 09:30 $110.78 → close $109.94 -7.60; HUBS×4 09:30 $222.08 → close $231.98 +39.60; MBGL×46 09:30 $23.44 → close $24.04 +27.60; TTEC×367 09:30 $2.94 → close $3.07 +47.71; WWW×43 09:30 $25.00 → close $25.29 +12.47; CHA×76 09:30 $14.17 → close $13.93 -18.24; CURI×353 09:30 $3.05 → close $3.21 +56.48 | — |
 
 ## Not taken
 

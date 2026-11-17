@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · short morning packet news🔴
 
-Cash book **+5.16%** ($10,516) · signal-only (no cash/fees) was -6.15%. Starts YES **9/30**. Fills 46 · skips 26 · realized $+60.75.
+Cash book **+4.41%** ($10,441) · signal-only (no cash/fees) was -6.15%. Starts YES **9/30**. Fills 48 · skips 26 · realized $+60.75.
 
 ## How this sleeve decides (like you are 10)
 
@@ -248,6 +248,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $15,606.75 | ▲ close $10,551.80 vs 09:30 $10,412.79 (session +139.01) | 16:00 close · cash $15,606.75 · equity $10,551.80 vs 09:30 $10,412.79 (+139.01; session marks +139.01) · 2 name(s) marked open→close (per-name table). TTWO×11 09:30 $232.16 → close $226.95 +57.31; VIV×215 09:30 $12.28 → close $11.90 +81.70 | — |
 | 2026-11-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $15,606.75 | ▼ 09:30 equity $10,502.16 vs yday $10,551.80 (-49.64) | 09:30 open · cash $15,606.75 (unchanged overnight, no fees) · equity $10,502.16 vs prior close $10,551.80 (-49.64) · 2 name(s) re-marked at the open (per-name table). TTWO×11 yday $226.95 → 09:30 $230.29 -36.74; VIV×215 yday $11.90 → 09:30 $11.96 -12.90 | — |
 | 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $15,606.75 | ▲ close $10,516.43 vs 09:30 $10,502.16 (session +14.27) | 16:00 close · cash $15,606.75 · equity $10,516.43 vs 09:30 $10,502.16 (+14.27; session marks +14.27) · 2 name(s) marked open→close (per-name table). TTWO×11 09:30 $230.29 → close $227.82 +27.17; VIV×215 09:30 $11.96 → close $12.02 -12.90 | — |
+| 2026-11-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $15,606.75 | ▼ 09:30 equity $10,446.13 vs yday $10,516.43 (-70.30) | 09:30 open · cash $15,606.75 (unchanged overnight, no fees) · equity $10,446.13 vs prior close $10,516.43 (-70.30) · 2 name(s) re-marked at the open (per-name table). TTWO×11 yday $227.82 → 09:30 $233.82 -66.00; VIV×215 yday $12.02 → 09:30 $12.04 -4.30 | — |
+| 2026-11-16 09:30 ET | **COVER** | `TTWO` | 11 | $233.82 | $2.02 | $-72.89 | $13,032.71 | ▼ -72.89 after sell → book $10,444.11; vs 09:30 mark -2.02 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-16 09:30 ET | **COVER** | `VIV` | 215 | $12.04 | $2.77 | $+20.12 | $10,441.33 | ▲ +20.12 after sell → book $10,441.33; vs 09:30 mark -2.78 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,441.33 | ▲ close $10,441.33 vs 09:30 $10,446.13 (session +0.00) | 16:00 close · cash $10,441.33 · no lots left · equity $10,441.33. | — |
 
 ## Not taken
 

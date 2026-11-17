@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ white, no 🚨
 
-Cash book **-10.38%** ($8,962) · signal-only (no cash/fees) was +12.04%. Starts YES **3/30**. Fills 219 · skips 157 · realized $-1586.47.
+Cash book **-10.38%** ($8,962) · signal-only (no cash/fees) was +12.04%. Starts YES **3/30**. Fills 220 · skips 157 · realized $-1586.47.
 
 ## How this sleeve decides (like you are 10)
 
@@ -423,6 +423,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-13 09:30 ET | **SELL** | `REPL` | 3 | $21.78 | $0.68 | $-2.31 | $7,840.14 | ▼ -2.31 after sell → book $8,962.55; vs 09:30 mark -0.68 | dropped from list after 3 sess (min 3) | join🔴 sector🟡 gen🔴 news🟢 digest🔴 ab🟡 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-11-13 09:30 ET | **SELL** | `SERV` | 23 | $2.95 | $0.77 | $-9.41 | $7,907.23 | ▼ -9.41 after sell → book $8,961.78; vs 09:30 mark -0.77 | dropped from list after 3 sess (min 3) | — |
 | 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,907.23 | ▲ close $8,961.82 vs 09:30 $8,964.68 (session +0.03) | 16:00 close · cash $7,907.23 · equity $8,961.82 vs 09:30 $8,964.68 (-2.86; session marks +0.03) · 2 name(s) marked open→close (per-name table). BLFS×27 09:30 $38.61 → close $38.61 +0.00; COTY×3 09:30 $4.03 → close $4.04 +0.03 | — |
+| 2026-11-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,907.23 | ▲ 09:30 equity $8,962.00 vs yday $8,961.82 (+0.18) | 09:30 open · cash $7,907.23 (unchanged overnight, no fees) · equity $8,962.00 vs prior close $8,961.82 (+0.18) · 2 name(s) re-marked at the open (per-name table). BLFS×27 yday $38.61 → 09:30 $38.61 +0.00; COTY×3 yday $4.04 → 09:30 $4.10 +0.18 | — |
+| 2026-11-16 09:30 ET | **SELL** | `COTY` | 3 | $4.10 | $0.15 | $-0.83 | $7,919.38 | ▼ -0.83 after sell → book $8,961.85; vs 09:30 mark -0.15 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,919.38 | ▲ close $8,961.85 vs 09:30 $8,962.00 (session +0.00) | 16:00 close · cash $7,919.38 · equity $8,961.85 vs 09:30 $8,962.00 (-0.15; session marks +0.00) · 1 name(s) marked open→close (per-name table). BLFS×27 09:30 $38.61 → close $38.61 +0.00 | — |
 
 ## Not taken
 

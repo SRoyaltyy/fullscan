@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · Clock-B #6 stock holds while sector camera is red
 
-Cash book **-20.43%** ($7,957) · signal-only (no cash/fees) was -2.27%. Starts YES **25/30**. Fills 455 · skips 96 · realized $+387.41.
+Cash book **-23.95%** ($7,605) · signal-only (no cash/fees) was -2.27%. Starts YES **25/30**. Fills 463 · skips 96 · realized $+387.41.
 
 ## How this sleeve decides (like you are 10)
 
@@ -661,6 +661,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-13 09:30 ET | **BUY** | `AKR` | 50 | $20.27 | $2.14 | — | $1,124.43 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list ohlc_hot; ret5=+2.8; leftover $1033.35 | join🔴 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
 | 2026-11-13 09:30 ET | **BUY** | `AXTI` | 23 | $43.36 | $2.06 | — | $125.09 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list yday_gainer,yday_mover; ret5=+18.6; leftover $1033.35 | join🟡 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🟢 buy🟡 |
 | 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $125.09 | ▼ close $7,956.93 vs 09:30 $8,269.02 (session -288.21) | 16:00 close · cash $125.09 · equity $7,956.93 vs 09:30 $8,269.02 (-312.09; session marks -288.21) · 8 name(s) marked open→close (per-name table). DVN×22 09:30 $46.76 → close $46.58 -3.96; NBIS×8 09:30 $123.52 → close $115.88 -61.12; RXT×343 09:30 $3.01 → close $2.92 -30.87; MX×370 09:30 $2.79 → close $2.50 -107.30; MBGL×44 09:30 $23.17 → close $23.28 +4.84; CRWV×18 09:30 $56.01 → close $53.13 -51.84; AKR×50 09:30 $20.27 → close $20.21 -3.00; AXTI×23 09:30 $43.36 → close $41.84 -34.96 | — |
+| 2026-11-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $125.09 | ▼ 09:30 equity $7,626.68 vs yday $7,956.93 (-330.25) | 09:30 open · cash $125.09 (unchanged overnight, no fees) · equity $7,626.68 vs prior close $7,956.93 (-330.25) · 8 name(s) re-marked at the open (per-name table). AKR×50 yday $20.21 → 09:30 $20.36 +7.50; AXTI×23 yday $41.84 → 09:30 $38.61 -74.29; CRWV×18 yday $53.13 → 09:30 $49.36 -67.86; DVN×22 yday $46.58 → 09:30 $46.00 -12.76; MBGL×44 yday $23.28 → 09:30 $23.44 +7.04; MX×370 yday $2.50 → 09:30 $2.35 -55.50; NBIS×8 yday $115.88 → 09:30 $106.80 -72.64; RXT×343 yday $2.92 → 09:30 $2.74 -61.74 | — |
+| 2026-11-16 09:30 ET | **SELL** | `AKR` | 50 | $20.36 | $2.16 | $+0.20 | $1,140.93 | ▲ +0.20 after sell → book $7,624.52; vs 09:30 mark -2.16 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-16 09:30 ET | **SELL** | `AXTI` | 23 | $38.61 | $2.08 | $-113.39 | $2,026.88 | ▼ -113.39 after sell → book $7,622.44; vs 09:30 mark -2.08 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-16 09:30 ET | **SELL** | `CRWV` | 18 | $49.36 | $2.06 | $-123.81 | $2,913.30 | ▼ -123.81 after sell → book $7,620.38; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-16 09:30 ET | **SELL** | `DVN` | 22 | $46.00 | $2.08 | $-20.85 | $3,923.22 | ▼ -20.85 after sell → book $7,618.30; vs 09:30 mark -2.08 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-16 09:30 ET | **SELL** | `MBGL` | 44 | $23.44 | $2.14 | $+7.62 | $4,952.44 | ▲ +7.62 after sell → book $7,616.16; vs 09:30 mark -2.14 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-16 09:30 ET | **SELL** | `MX` | 370 | $2.35 | $4.84 | $-172.42 | $5,817.09 | ▼ -172.42 after sell → book $7,611.31; vs 09:30 mark -4.85 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-16 09:30 ET | **SELL** | `NBIS` | 8 | $106.80 | $2.03 | $-137.81 | $6,669.46 | ▼ -137.81 after sell → book $7,609.28; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟡 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-16 09:30 ET | **SELL** | `RXT` | 343 | $2.74 | $4.49 | $-101.53 | $7,604.79 | ▼ -101.53 after sell → book $7,604.79; vs 09:30 mark -4.49 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,604.79 | ▲ close $7,604.79 vs 09:30 $7,626.68 (session +0.00) | 16:00 close · cash $7,604.79 · no lots left · equity $7,604.79. | — |
 
 ## Not taken
 

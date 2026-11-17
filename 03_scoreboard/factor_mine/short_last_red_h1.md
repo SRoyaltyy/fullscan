@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · last bar red
 
-Cash book **-8.69%** ($9,131) · signal-only (no cash/fees) was -2.93%. Starts YES **19/30**. Fills 586 · skips 107 · realized $-717.78.
+Cash book **-9.66%** ($9,034) · signal-only (no cash/fees) was -2.93%. Starts YES **19/30**. Fills 602 · skips 107 · realized $-717.78.
 
 ## How this sleeve decides (like you are 10)
 
@@ -788,6 +788,24 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-13 09:30 ET | **SHORT** | `VNET` | 181 | $3.12 | $2.59 | — | $12,887.30 | — | last bar red; gate last_red=True; list probable,yday_gainer; ret5=-1.9; leftover $566.79 | join🔴 sector🔴 gen🔴 news🟡 digest🟢 ab🔴 peer🟡 heat🟢 vol🟢 buy🟡 |
 | 2026-11-13 09:30 ET | **SHORT** | `NCMI` | 331 | $1.71 | $4.35 | — | $13,448.96 | — | last bar red; gate last_red=True; list probable; 🔵; ret5=+4.9; leftover $566.79 | join🔴 sector🟡 gen🔴 news🟢 digest🔴 ab🔴 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $13,448.96 | ▲ close $9,131.36 vs 09:30 $9,068.66 (session +94.48) | 16:00 close · cash $13,448.96 · equity $9,131.36 vs 09:30 $9,068.66 (+62.70; session marks +94.48) · 8 name(s) marked open→close (per-name table). ALNY×3 09:30 $159.17 → close $165.04 -17.61; ETON×9 09:30 $61.25 → close $63.93 -24.12; MVST×2399 09:30 $0.24 → close $0.22 +46.06; REZI×26 09:30 $21.52 → close $21.32 +5.20; XRPN×64 09:30 $8.75 → close $7.85 +57.60; BBOT×239 09:30 $2.37 → close $2.14 +54.97; VNET×181 09:30 $3.12 → close $2.98 +25.34; NCMI×331 09:30 $1.71 → close $1.87 -52.96 | — |
+| 2026-11-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $13,448.96 | ▼ 09:30 equity $9,130.11 vs yday $9,131.36 (-1.25) | 09:30 open · cash $13,448.96 (unchanged overnight, no fees) · equity $9,130.11 vs prior close $9,131.36 (-1.25) · 8 name(s) re-marked at the open (per-name table). ALNY×3 yday $165.04 → 09:30 $166.98 -5.82; BBOT×239 yday $2.14 → 09:30 $2.13 +2.39; ETON×9 yday $63.93 → 09:30 $64.29 -3.24; MVST×2399 yday $0.22 → 09:30 $0.22 -2.40; NCMI×331 yday $1.87 → 09:30 $1.95 -26.48; REZI×26 yday $21.32 → 09:30 $21.23 +2.34; VNET×181 yday $2.98 → 09:30 $2.86 +21.72; XRPN×64 yday $7.85 → 09:30 $7.69 +10.24 | — |
+| 2026-11-16 09:30 ET | **COVER** | `ALNY` | 3 | $166.98 | $2.00 | $-27.46 | $12,946.02 | ▼ -27.46 after sell → book $9,128.11; vs 09:30 mark -2.00 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-16 09:30 ET | **COVER** | `BBOT` | 239 | $2.13 | $3.08 | $+51.13 | $12,433.87 | ▲ +51.13 after sell → book $9,125.03; vs 09:30 mark -3.08 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-16 09:30 ET | **COVER** | `ETON` | 9 | $64.29 | $2.02 | $-31.43 | $11,853.24 | ▼ -31.43 after sell → book $9,123.01; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-16 09:30 ET | **COVER** | `MVST` | 2399 | $0.22 | $12.43 | $+17.95 | $11,317.83 | ▲ +17.95 after sell → book $9,110.58; vs 09:30 mark -12.43 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-16 09:30 ET | **COVER** | `NCMI` | 331 | $1.95 | $4.27 | $-88.06 | $10,668.11 | ▼ -88.06 after sell → book $9,106.31; vs 09:30 mark -4.27 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-16 09:30 ET | **COVER** | `REZI` | 26 | $21.23 | $2.07 | $+3.37 | $10,114.06 | ▲ +3.37 after sell → book $9,104.24; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-16 09:30 ET | **COVER** | `VNET` | 181 | $2.86 | $2.53 | $+41.94 | $9,593.87 | ▲ +41.94 after sell → book $9,101.71; vs 09:30 mark -2.53 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-16 09:30 ET | **COVER** | `XRPN` | 64 | $7.69 | $2.18 | $+63.44 | $9,099.53 | ▲ +63.44 after sell → book $9,099.53; vs 09:30 mark -2.18 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-16 09:30 ET | **SHORT** | `DVN` | 12 | $46.00 | $2.06 | — | $9,649.47 | — | last bar red; gate last_red=True; list flatten; ret5=+10.4; leftover $568.72 | join🟢 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-16 09:30 ET | **SHORT** | `ADRX` | 39 | $14.22 | $2.14 | — | $10,201.91 | — | last bar red; gate last_red=True; list probable,yday_gainer; 🔵; ret5=+7.3; leftover $568.72 | join🟡 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-16 09:30 ET | **SHORT** | `XLAB` | 278 | $2.04 | $3.66 | — | $10,765.37 | — | last bar red; gate last_red=True; list yday_gainer,yday_mover; 🔵; ret5=+42.7; leftover $568.72 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-16 09:30 ET | **SHORT** | `AVEX` | 46 | $12.30 | $2.16 | — | $11,329.00 | — | last bar red; gate last_red=True; list yday_gainer; ret5=+22.6; leftover $568.72 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 judge🔴 ab🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-16 09:30 ET | **SHORT** | `HPK` | 71 | $7.99 | $2.24 | — | $11,894.05 | — | last bar red; gate last_red=True; list yday_gainer; 🔵; ret5=+15.1; leftover $568.72 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🔴 vol🟢 buy🟢 |
+| 2026-11-16 09:30 ET | **SHORT** | `TTEC` | 193 | $2.94 | $2.63 | — | $12,458.85 | — | last bar red; gate last_red=True; list yday_gainer; 🔵; ret5=+113.8; leftover $568.72 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-16 09:30 ET | **SHORT** | `XTND` | 421 | $1.35 | $5.53 | — | $13,021.67 | — | last bar red; gate last_red=True; list yday_gainer; 🔵; ret5=+39.0; leftover $568.72 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-16 09:30 ET | **SHORT** | `DPC` | 17 | $32.88 | $2.08 | — | $13,578.55 | — | last bar red; gate last_red=True; list yday_gainer; 🔵; ret5=+19.0; leftover $568.72 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 judge🔴 ab🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $13,578.55 | ▼ close $9,034.25 vs 09:30 $9,130.11 (session -42.78) | 16:00 close · cash $13,578.55 · equity $9,034.25 vs 09:30 $9,130.11 (-95.86; session marks -42.78) · 8 name(s) marked open→close (per-name table). DVN×12 09:30 $46.00 → close $44.27 +20.76; ADRX×39 09:30 $14.22 → close $14.00 +8.58; XLAB×278 09:30 $2.04 → close $1.96 +22.24; AVEX×46 09:30 $12.30 → close $13.40 -50.60; HPK×71 09:30 $7.99 → close $7.80 +13.49; TTEC×193 09:30 $2.94 → close $3.07 -25.09; XTND×421 09:30 $1.35 → close $1.47 -50.52; DPC×17 09:30 $32.88 → close $31.80 +18.36 | — |
 
 ## Not taken
 

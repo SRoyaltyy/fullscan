@@ -1,0 +1,212 @@
+{
+  "buys": [
+    {
+      "fill_rule": "open",
+      "price": 1.85,
+      "shares": 1454,
+      "side": "BUY",
+      "ticker": "NGEN"
+    },
+    {
+      "fill_rule": "open",
+      "price": 3.09,
+      "shares": 870,
+      "side": "BUY",
+      "ticker": "NUAI"
+    },
+    {
+      "fill_rule": "open",
+      "price": 2.635,
+      "shares": 1021,
+      "side": "BUY",
+      "ticker": "FRMI"
+    },
+    {
+      "fill_rule": "open",
+      "price": 3.05,
+      "shares": 865,
+      "side": "BUY",
+      "ticker": "CURI"
+    }
+  ],
+  "cash": 1.56,
+  "date": "2026-11-16",
+  "equity": 10662.27,
+  "fees": 63.0211,
+  "fills": [
+    {
+      "fees": 2.052,
+      "fill_rule": "open",
+      "pnl": 72.03,
+      "price": 275.01,
+      "shares": 10,
+      "side": "SELL",
+      "ticker": "ASND"
+    },
+    {
+      "fees": 2.1656,
+      "fill_rule": "open",
+      "pnl": -522.23,
+      "price": 47.37,
+      "shares": 49,
+      "side": "SELL",
+      "ticker": "HTFL"
+    },
+    {
+      "fees": 2.4058,
+      "fill_rule": "open",
+      "pnl": 28.71,
+      "price": 23.44,
+      "shares": 124,
+      "side": "SELL",
+      "ticker": "MBGL"
+    },
+    {
+      "fees": 2.0887,
+      "fill_rule": "open",
+      "pnl": -388.71,
+      "price": 106.8,
+      "shares": 23,
+      "side": "SELL",
+      "ticker": "NBIS"
+    },
+    {
+      "fees": 18.7566,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 1.85,
+      "shares": 1454,
+      "side": "BUY",
+      "ticker": "NGEN"
+    },
+    {
+      "fees": 11.223,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 3.09,
+      "shares": 870,
+      "side": "BUY",
+      "ticker": "NUAI"
+    },
+    {
+      "fees": 13.1709,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 2.635,
+      "shares": 1021,
+      "side": "BUY",
+      "ticker": "FRMI"
+    },
+    {
+      "fees": 11.1585,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 3.05,
+      "shares": 865,
+      "side": "BUY",
+      "ticker": "CURI"
+    }
+  ],
+  "holdings": [
+    "CURI",
+    "FRMI",
+    "NGEN",
+    "NUAI"
+  ],
+  "mean": -3.2249,
+  "n_trades_today": 8,
+  "recipe": "oos0914_rvol_lg_h1_sx",
+  "sells": [
+    {
+      "fill_rule": "open",
+      "price": 275.01,
+      "shares": 10,
+      "side": "SELL",
+      "ticker": "ASND"
+    },
+    {
+      "fill_rule": "open",
+      "price": 47.37,
+      "shares": 49,
+      "side": "SELL",
+      "ticker": "HTFL"
+    },
+    {
+      "fill_rule": "open",
+      "price": 23.44,
+      "shares": 124,
+      "side": "SELL",
+      "ticker": "MBGL"
+    },
+    {
+      "fill_rule": "open",
+      "price": 106.8,
+      "shares": 23,
+      "side": "SELL",
+      "ticker": "NBIS"
+    }
+  ],
+  "state": {
+    "after": "2026-11-16",
+    "cash": 1.56,
+    "pos": {
+      "CURI": {
+        "close_px": 3.21,
+        "cost": 2649.4085,
+        "entry_date": "2026-11-16",
+        "entry_px": 3.05,
+        "fee_in": 11.1585,
+        "last_px": 3.05,
+        "min_hold": 1,
+        "notional": 2638.25,
+        "peak_px": 3.05,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate last_green=True,rvol_min=1.5; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+24.7; leftover $2690.66",
+        "shares": 865,
+        "ticker": "CURI"
+      },
+      "FRMI": {
+        "close_px": 2.48,
+        "cost": 2703.5058999999997,
+        "entry_date": "2026-11-16",
+        "entry_px": 2.635,
+        "fee_in": 13.1709,
+        "last_px": 2.635,
+        "min_hold": 1,
+        "notional": 2690.3349999999996,
+        "peak_px": 2.635,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate last_green=True,rvol_min=1.5; rank hot_score; list yday_gainer; ret5=+66.2; leftover $2690.66",
+        "shares": 1021,
+        "ticker": "FRMI"
+      },
+      "NGEN": {
+        "close_px": 1.82,
+        "cost": 2708.6566000000003,
+        "entry_date": "2026-11-16",
+        "entry_px": 1.85,
+        "fee_in": 18.7566,
+        "last_px": 1.85,
+        "min_hold": 1,
+        "notional": 2689.9,
+        "peak_px": 1.85,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate last_green=True,rvol_min=1.5; rank hot_score; list yday_gainer,yday_mover; ret5=+41.4; leftover $2690.66",
+        "shares": 1454,
+        "ticker": "NGEN"
+      },
+      "NUAI": {
+        "close_px": 3.11,
+        "cost": 2699.5229999999997,
+        "entry_date": "2026-11-16",
+        "entry_px": 3.09,
+        "fee_in": 11.223,
+        "last_px": 3.09,
+        "min_hold": 1,
+        "notional": 2688.2999999999997,
+        "peak_px": 3.09,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate last_green=True,rvol_min=1.5; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+54.6; leftover $2690.66",
+        "shares": 870,
+        "ticker": "NUAI"
+      }
+    },
+    "yday_equity": 10662.27
+  }
+}

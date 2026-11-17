@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · merged news🟢, rank +G−R
 
-Cash book **-57.13%** ($4,287) · signal-only (no cash/fees) was +177.97%. Starts YES **1/30**. Fills 323 · skips 246 · realized $-1849.04.
+Cash book **-56.70%** ($4,330) · signal-only (no cash/fees) was +177.97%. Starts YES **1/30**. Fills 329 · skips 246 · realized $-1849.04.
 
 ## How this sleeve decides (like you are 10)
 
@@ -528,6 +528,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-13 09:30 ET | **BUY** | `AZTA` | 12 | $44.26 | $2.03 | — | $884.40 | — | merged news🟢, rank +G−R; gate news=good; rank cond; list yday_gainer,yday_mover; 🔵; ret5=+17.3; leftover $545.32 | join🔴 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-13 09:30 ET | **BUY** | `REZI` | 25 | $21.52 | $2.06 | — | $344.33 | — | merged news🟢, rank +G−R; gate news=good; rank cond; list probable,yday_gainer,yday_mover; 🔵; ret5=+9.5; leftover $545.32 | join🔴 sector🟢 gen🔴 news🟢 digest🟡 judge🔴 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $344.33 | ▲ close $4,287.45 vs 09:30 $4,258.91 (session +56.61) | 16:00 close · cash $344.33 · equity $4,287.45 vs 09:30 $4,258.91 (+28.54; session marks +56.61) · 8 name(s) marked open→close (per-name table). ETON×7 09:30 $61.25 → close $63.93 +18.76; DVN×11 09:30 $46.76 → close $46.58 -1.98; ANDG×8 09:30 $62.82 → close $60.06 -22.08; PLX×185 09:30 $2.94 → close $3.05 +20.35; BGS×165 09:30 $3.29 → close $3.50 +34.65; CEG×1 09:30 $284.97 → close $280.20 -4.77; AZTA×12 09:30 $44.26 → close $45.65 +16.68; REZI×25 09:30 $21.52 → close $21.32 -5.00 | — |
+| 2026-11-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $344.33 | ▼ 09:30 equity $4,244.72 vs yday $4,287.45 (-42.73) | 09:30 open · cash $344.33 (unchanged overnight, no fees) · equity $4,244.72 vs prior close $4,287.45 (-42.73) · 8 name(s) re-marked at the open (per-name table). ANDG×8 yday $60.06 → 09:30 $60.25 +1.52; AZTA×12 yday $45.65 → 09:30 $44.32 -15.96; BGS×165 yday $3.50 → 09:30 $3.45 -8.25; CEG×1 yday $280.20 → 09:30 $275.52 -4.68; DVN×11 yday $46.58 → 09:30 $46.00 -6.38; ETON×7 yday $63.93 → 09:30 $64.29 +2.52; PLX×185 yday $3.05 → 09:30 $3.00 -9.25; REZI×25 yday $21.32 → 09:30 $21.23 -2.25 | — |
+| 2026-11-16 09:30 ET | **SELL** | `ETON` | 7 | $64.29 | $2.03 | $+0.58 | $792.33 | ▲ +0.58 after sell → book $4,242.69; vs 09:30 mark -2.03 | dropped from list after 4 sess (min 3) | — |
+| 2026-11-16 09:30 ET | **BUY** | `MBGL` | 4 | $23.44 | $0.95 | — | $697.62 | — | merged news🟢, rank +G−R; gate news=good; rank cond; list yday_gainer,yday_mover; 🔵; ret5=+18.5; leftover $99.04 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `WWW` | 3 | $25.00 | $0.76 | — | $621.86 | — | merged news🟢, rank +G−R; gate news=good; rank cond; list ohlc_hot; 🔵; ret5=+16.7; leftover $99.04 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `CURI` | 32 | $3.05 | $1.07 | — | $523.19 | — | merged news🟢, rank +G−R; gate news=good; rank cond; list yday_gainer,yday_mover; 🔵; ret5=+24.7; leftover $99.04 | join🟢 sector🟡 gen🔴 news🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `ARMK` | 1 | $51.45 | $0.52 | — | $471.22 | — | merged news🟢, rank +G−R; gate news=good; rank cond; list earn_react; ret5=+2.7; leftover $99.04 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 judge🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `LUNR` | 7 | $12.53 | $0.90 | — | $382.61 | — | merged news🟢, rank +G−R; gate news=good; rank cond; list yday_gainer; 🔵; ret5=+24.2; leftover $99.04 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $382.61 | ▲ close $4,330.02 vs 09:30 $4,244.72 (session +91.53) | 16:00 close · cash $382.61 · equity $4,330.02 vs 09:30 $4,244.72 (+85.30; session marks +91.53) · 12 name(s) marked open→close (per-name table). ANDG×8 09:30 $60.25 → close $62.85 +20.80; AZTA×12 09:30 $44.32 → close $47.22 +34.80; BGS×165 09:30 $3.45 → close $3.61 +26.40; CEG×1 09:30 $275.52 → close $277.82 +2.30; DVN×11 09:30 $46.00 → close $44.27 -19.03; PLX×185 09:30 $3.00 → close $3.03 +5.55; REZI×25 09:30 $21.23 → close $21.79 +14.00; MBGL×4 09:30 $23.44 → close $24.04 +2.40; WWW×3 09:30 $25.00 → close $25.29 +0.87; CURI×32 09:30 $3.05 → close $3.21 +5.12; ARMK×1 09:30 $51.45 → close $55.37 +3.92; LUNR×7 09:30 $12.53 → close $11.73 -5.60 | — |
 
 ## Not taken
 

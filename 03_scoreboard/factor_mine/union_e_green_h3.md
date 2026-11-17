@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-22.25%** ($7,775) · signal-only (no cash/fees) was -18.73%. Starts YES **20/30**. Fills 151 · skips 104 · realized $-87.73.
+Cash book **-27.95%** ($7,205) · signal-only (no cash/fees) was -18.73%. Starts YES **20/30**. Fills 160 · skips 104 · realized $-87.73.
 
 ## How this sleeve decides (like you are 10)
 
@@ -357,6 +357,17 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-13 09:30 ET | **BUY** | `DGXX` | 657 | $2.58 | $8.48 | — | $1,760.02 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; ret5=+16.3; leftover $1692.68 | join🔴 sector🟡 gen🔴 news🟡 digest🟡 ab🔴 heat🔴 vol🟡 buy🟡 |
 | 2026-11-13 09:30 ET | **BUY** | `NEOV` | 514 | $3.29 | $6.63 | — | $62.33 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; 🔵; ret5=+35.1; leftover $1692.68 | join🔴 sector🟢 gen🔴 news🟡 digest🟡 judge🔴 ab🔴 peer🟢 heat🔴 vol🟡 buy🟡 |
 | 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $62.33 | ▼ close $7,775.42 vs 09:30 $8,671.40 (session -849.95) | 16:00 close · cash $62.33 · equity $7,775.42 vs 09:30 $8,671.40 (-895.98; session marks -849.95) · 11 name(s) marked open→close (per-name table). ANGX×8 09:30 $4.35 → close $4.59 +1.92; BGS×11 09:30 $3.29 → close $3.50 +2.31; FLY×1 09:30 $25.05 → close $25.21 +0.16; GO×2 09:30 $12.75 → close $12.65 -0.20; ICL×7 09:30 $4.58 → close $4.52 -0.42; KOPN×9 09:30 $3.40 → close $3.24 -1.44; HTFL×29 09:30 $57.94 → close $48.46 -274.92; ALMU×234 09:30 $7.22 → close $6.55 -157.04; CBRS×15 09:30 $108.40 → close $108.72 +4.80; DGXX×657 09:30 $2.58 → close $2.28 -193.82; NEOV×514 09:30 $3.29 → close $2.84 -231.30 | — |
+| 2026-11-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $62.33 | ▼ 09:30 equity $7,460.16 vs yday $7,775.42 (-315.26) | 09:30 open · cash $62.33 (unchanged overnight, no fees) · equity $7,460.16 vs prior close $7,775.42 (-315.26) · 11 name(s) re-marked at the open (per-name table). ALMU×234 yday $6.55 → 09:30 $6.22 -77.22; ANGX×8 yday $4.59 → 09:30 $4.51 -0.64; BGS×11 yday $3.50 → 09:30 $3.45 -0.55; CBRS×15 yday $108.72 → 09:30 $102.55 -92.55; DGXX×657 yday $2.28 → 09:30 $2.16 -78.84; FLY×1 yday $25.21 → 09:30 $24.22 -0.99; GO×2 yday $12.65 → 09:30 $12.56 -0.18; HTFL×29 yday $48.46 → 09:30 $47.37 -31.61; ICL×7 yday $4.52 → 09:30 $4.45 -0.49; KOPN×9 yday $3.24 → 09:30 $3.09 -1.35; NEOV×514 yday $2.84 → 09:30 $2.78 -30.84 | — |
+| 2026-11-16 09:30 ET | **SELL** | `ANGX` | 8 | $4.51 | $0.40 | $+3.65 | $98.01 | ▲ +3.65 after sell → book $7,459.76; vs 09:30 mark -0.40 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-16 09:30 ET | **SELL** | `BGS` | 11 | $3.45 | $0.43 | $+3.60 | $135.52 | ▲ +3.60 after sell → book $7,459.32; vs 09:30 mark -0.44 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-16 09:30 ET | **SELL** | `FLY` | 1 | $24.22 | $0.27 | $-0.25 | $159.48 | ▼ -0.25 after sell → book $7,459.06; vs 09:30 mark -0.26 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-16 09:30 ET | **SELL** | `GO` | 2 | $12.56 | $0.28 | $-0.45 | $184.32 | ▼ -0.45 after sell → book $7,458.78; vs 09:30 mark -0.28 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-16 09:30 ET | **SELL** | `ICL` | 7 | $4.45 | $0.35 | $-1.96 | $215.12 | ▼ -1.96 after sell → book $7,458.43; vs 09:30 mark -0.35 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-16 09:30 ET | **SELL** | `KOPN` | 9 | $3.09 | $0.33 | $-5.36 | $242.60 | ▼ -5.36 after sell → book $7,458.10; vs 09:30 mark -0.33 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-16 09:30 ET | **BUY** | `BEKE` | 2 | $18.50 | $0.38 | — | $205.23 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; ret5=-5.3; leftover $48.52 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `BXDC` | 2 | $17.24 | $0.35 | — | $170.40 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; ret5=+4.2; leftover $48.52 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `XPEV` | 4 | $9.90 | $0.41 | — | $130.39 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; ret5=-8.5; leftover $48.52 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $130.39 | ▼ close $7,204.74 vs 09:30 $7,460.16 (session -252.23) | 16:00 close · cash $130.39 · equity $7,204.74 vs 09:30 $7,460.16 (-255.42; session marks -252.23) · 8 name(s) marked open→close (per-name table). ALMU×234 09:30 $6.22 → close $6.18 -8.19; CBRS×15 09:30 $102.55 → close $100.99 -23.40; DGXX×657 09:30 $2.16 → close $1.99 -111.69; HTFL×29 09:30 $47.37 → close $46.86 -14.79; NEOV×514 09:30 $2.78 → close $2.60 -92.52; BEKE×2 09:30 $18.50 → close $18.64 +0.28; BXDC×2 09:30 $17.24 → close $16.74 -1.00; XPEV×4 09:30 $9.90 → close $9.67 -0.92 | — |
 
 ## Not taken
 

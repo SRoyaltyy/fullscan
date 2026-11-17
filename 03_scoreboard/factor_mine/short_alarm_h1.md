@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · alarm
 
-Cash book **-4.27%** ($9,573) · signal-only (no cash/fees) was +3.57%. Starts YES **5/30**. Fills 318 · skips 96 · realized $+54.59.
+Cash book **-2.83%** ($9,717) · signal-only (no cash/fees) was +3.57%. Starts YES **5/30**. Fills 334 · skips 96 · realized $+54.59.
 
 ## How this sleeve decides (like you are 10)
 
@@ -520,6 +520,24 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-13 09:30 ET | **SHORT** | `GPRO` | 880 | $0.68 | $8.80 | — | $13,737.13 | — | alarm; gate alarm=True; list yday_mover; ret5=-22.1; leftover $598.98 | join🔴 sector🔴 gen🔴 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-11-13 09:30 ET | **SHORT** | `INO` | 415 | $1.44 | $5.45 | — | $14,329.28 | — | alarm; gate alarm=True; list ohlc_hot; ret5=+0.7; leftover $598.98 | join🔴 sector🟡 gen🔴 news🟡 digest🔴 ab🔴 peer🔴 heat🟢 vol🟡 buy🟡 |
 | 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,329.28 | ▲ close $9,573.30 vs 09:30 $9,583.62 (session +20.85) | 16:00 close · cash $14,329.28 · equity $9,573.30 vs 09:30 $9,583.62 (-10.32; session marks +20.85) · 8 name(s) marked open→close (per-name table). CHRD×4 09:30 $148.35 → close $149.93 -6.32; GRNT×93 09:30 $6.42 → close $6.30 +11.16; XRPN×68 09:30 $8.75 → close $7.85 +61.20; BRUN×99 09:30 $6.04 → close $5.53 +50.49; GEVO×322 09:30 $1.86 → close $1.83 +9.66; FRMI×287 09:30 $2.08 → close $2.61 -150.67; GPRO×880 09:30 $0.68 → close $0.63 +41.18; INO×415 09:30 $1.44 → close $1.43 +4.15 | — |
+| 2026-11-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $14,329.28 | ▲ 09:30 equity $9,639.26 vs yday $9,573.30 (+65.97) | 09:30 open · cash $14,329.28 (unchanged overnight, no fees) · equity $9,639.26 vs prior close $9,573.30 (+65.97) · 8 name(s) re-marked at the open (per-name table). BRUN×99 yday $5.53 → 09:30 $5.14 +38.61; CHRD×4 yday $149.93 → 09:30 $149.14 +3.16; FRMI×287 yday $2.61 → 09:30 $2.63 -7.17; GEVO×322 yday $1.83 → 09:30 $1.80 +9.66; GPRO×880 yday $0.63 → 09:30 $0.63 +2.02; GRNT×93 yday $6.30 → 09:30 $6.25 +4.65; INO×415 yday $1.43 → 09:30 $1.42 +4.15; XRPN×68 yday $7.85 → 09:30 $7.69 +10.88 | — |
+| 2026-11-16 09:30 ET | **COVER** | `BRUN` | 99 | $5.14 | $2.29 | $+84.48 | $13,818.13 | ▲ +84.48 after sell → book $9,636.98; vs 09:30 mark -2.28 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🔴 digest🟢 ab🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-11-16 09:30 ET | **COVER** | `CHRD` | 4 | $149.14 | $2.00 | $-7.20 | $13,219.57 | ▼ -7.20 after sell → book $9,634.98; vs 09:30 mark -2.00 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 peer🟢 heat🔴 vol🟡 buy🟢 |
+| 2026-11-16 09:30 ET | **COVER** | `FRMI` | 287 | $2.63 | $3.70 | $-165.33 | $12,459.62 | ▼ -165.33 after sell → book $9,631.27; vs 09:30 mark -3.71 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-11-16 09:30 ET | **COVER** | `GEVO` | 322 | $1.80 | $4.15 | $+10.93 | $11,875.87 | ▲ +10.93 after sell → book $9,627.12; vs 09:30 mark -4.15 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-16 09:30 ET | **COVER** | `GPRO` | 880 | $0.63 | $8.19 | $+26.22 | $11,312.40 | ▲ +26.22 after sell → book $9,618.93; vs 09:30 mark -8.19 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-16 09:30 ET | **COVER** | `GRNT` | 93 | $6.25 | $2.27 | $+11.23 | $10,728.88 | ▲ +11.23 after sell → book $9,616.66; vs 09:30 mark -2.27 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-16 09:30 ET | **COVER** | `INO` | 415 | $1.42 | $5.35 | $-2.50 | $10,134.22 | ▼ -2.50 after sell → book $9,611.30; vs 09:30 mark -5.36 | dropped from list after 1 sess (min 1) | join🟡 sector🟡 gen🔴 news🟡 digest🔴 ab🔴 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-16 09:30 ET | **COVER** | `XRPN` | 68 | $7.69 | $2.19 | $+67.65 | $9,609.11 | ▲ +67.65 after sell → book $9,609.11; vs 09:30 mark -2.19 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-16 09:30 ET | **SHORT** | `EPRX` | 73 | $8.15 | $2.25 | — | $10,201.81 | — | alarm; gate alarm=True; list flatten; ret5=+18.3; leftover $600.57 | join🟢 sector🟡 gen🔴 news🔴 digest🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-16 09:30 ET | **SHORT** | `MXCT` | 515 | $1.17 | $6.76 | — | $10,795.03 | — | alarm; gate alarm=True; list probable,yday_gainer; ret5=-5.6; leftover $600.57 | join🔴 sector🟡 gen🔴 news🟢 digest🔴 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-11-16 09:30 ET | **SHORT** | `FUN` | 51 | $11.62 | $2.18 | — | $11,385.47 | — | alarm; gate alarm=True; list ohlc_hot; ret5=+15.5; leftover $600.57 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-16 09:30 ET | **SHORT** | `APP` | 1 | $414.60 | $2.02 | — | $11,798.05 | — | alarm; gate alarm=True; list ohlc_hot; ret5=+4.6; leftover $600.57 | join🟢 sector🟡 gen🔴 news🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-16 09:30 ET | **SHORT** | `LBTYA` | 55 | $10.83 | $2.19 | — | $12,391.51 | — | alarm; gate alarm=True; list ohlc_hot; ret5=+8.8; leftover $600.57 | join🔴 sector🟡 gen🔴 news🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-16 09:30 ET | **SHORT** | `XERS` | 36 | $16.60 | $2.13 | — | $12,986.97 | — | alarm; gate alarm=True; list ohlc_hot; ret5=+9.6; leftover $600.57 | join🔴 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-16 09:30 ET | **SHORT** | `TARS` | 7 | $81.35 | $2.05 | — | $13,554.38 | — | alarm; gate alarm=True; list ohlc_hot; ret5=+17.0; leftover $600.57 | join🟡 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-16 09:30 ET | **SHORT** | `SOPH` | 74 | $8.07 | $2.25 | — | $14,149.31 | — | alarm; gate alarm=True; list ohlc_hot; ret5=+15.0; leftover $600.57 | join🔴 sector🟡 gen🔴 news🟡 digest🔴 ab🔴 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,149.31 | ▲ close $9,717.34 vs 09:30 $9,639.26 (session +130.06) | 16:00 close · cash $14,149.31 · equity $9,717.34 vs 09:30 $9,639.26 (+78.08; session marks +130.06) · 8 name(s) marked open→close (per-name table). EPRX×73 09:30 $8.15 → close $7.34 +59.13; MXCT×515 09:30 $1.17 → close $1.18 -7.72; FUN×51 09:30 $11.62 → close $11.61 +0.51; APP×1 09:30 $414.60 → close $415.22 -0.62; LBTYA×55 09:30 $10.83 → close $10.52 +17.05; XERS×36 09:30 $16.60 → close $16.70 -3.60; TARS×7 09:30 $81.35 → close $78.68 +18.69; SOPH×74 09:30 $8.07 → close $7.44 +46.62 | — |
 
 ## Not taken
 

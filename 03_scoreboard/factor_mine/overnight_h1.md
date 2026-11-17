@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `overnight` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · baseline list, no extra gate
 
-Cash book **-12.93%** ($8,707) · signal-only (no cash/fees) was -22.61%. Starts YES **0/30**. Fills 212 · skips 80 · realized $-2514.32.
+Cash book **-13.91%** ($8,609) · signal-only (no cash/fees) was -22.61%. Starts YES **0/30**. Fills 220 · skips 80 · realized $-2514.32.
 
 ## How this sleeve decides (like you are 10)
 
@@ -412,6 +412,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,706.70 | ▲ close $8,706.70 vs 09:30 $8,729.00 (session +0.00) | 16:00 close · cash $8,706.70 · no lots left · equity $8,706.70. | — |
 | 2026-11-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,706.70 | ▲ 09:30 equity $8,706.70 vs yday $8,706.70 (+0.00) | 09:30 open · cash $8,706.70 · no holdings · equity $8,706.70 vs prior close $8,706.70 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,706.70 | ▲ close $8,706.70 vs 09:30 $8,706.70 (session +0.00) | 16:00 close · cash $8,706.70 · no lots left · equity $8,706.70. | — |
+| 2026-11-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,706.70 | ▲ 09:30 equity $8,706.70 vs yday $8,706.70 (+0.00) | 09:30 open · cash $8,706.70 · no holdings · equity $8,706.70 vs prior close $8,706.70 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-16 09:30 ET | **BUY** | `ACM` | 15 | $70.40 | $2.04 | — | $7,648.67 | — | baseline list, no extra gate; list overnight; ret5=+5.6; leftover $1088.34 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 judge🔴 ab🟢 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `DUOT` | 222 | $4.90 | $2.86 | — | $6,558.00 | — | baseline list, no extra gate; list overnight; ret5=+0.1; leftover $1088.34 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `INFQ` | 133 | $8.13 | $2.39 | — | $5,474.32 | — | baseline list, no extra gate; list overnight; 🔵; ret5=-4.6; leftover $1088.34 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `OMER` | 62 | $17.39 | $2.18 | — | $4,393.97 | — | baseline list, no extra gate; list overnight; ret5=+3.4; leftover $1088.34 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `PAGS` | 138 | $7.83 | $2.40 | — | $3,311.02 | — | baseline list, no extra gate; list overnight; 🔵; ret5=+5.0; leftover $1088.34 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟡 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `POWL` | 7 | $140.00 | $2.01 | — | $2,329.01 | — | baseline list, no extra gate; list overnight; ret5=+7.2; leftover $1088.34 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 judge🔴 ab🟡 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `RCAT` | 295 | $3.68 | $3.81 | — | $1,239.61 | — | baseline list, no extra gate; list overnight; ret5=-5.9; leftover $1088.34 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 judge🔴 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `SHAZ` | 52 | $20.89 | $2.15 | — | $151.18 | — | baseline list, no extra gate; list overnight; 🔵; ret5=+3.4; leftover $1088.34 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-11-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $151.18 | ▼ close $8,609.41 vs 09:30 $8,706.70 (session -77.46) | 16:00 close · cash $151.18 · equity $8,609.41 vs 09:30 $8,706.70 (-97.29; session marks -77.46) · 8 name(s) marked open→close (per-name table). ACM×15 09:30 $70.40 → close $72.50 +31.50; DUOT×222 09:30 $4.90 → close $4.67 -51.06; INFQ×133 09:30 $8.13 → close $7.90 -30.59; OMER×62 09:30 $17.39 → close $16.68 -44.02; PAGS×138 09:30 $7.83 → close $7.99 +22.08; POWL×7 09:30 $140.00 → close $151.20 +78.40; RCAT×295 09:30 $3.68 → close $3.53 -44.25; SHAZ×52 09:30 $20.89 → close $20.13 -39.52 | — |
 
 ## Not taken
 

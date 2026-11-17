@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · merged news🟢 and cameras +6 −≤1
 
-Cash book **-20.82%** ($7,918) · signal-only (no cash/fees) was -17.43%. Starts YES **1/30**. Fills 156 · skips 17 · realized $-1774.27.
+Cash book **-20.10%** ($7,990) · signal-only (no cash/fees) was -17.43%. Starts YES **1/30**. Fills 159 · skips 17 · realized $-1774.27.
 
 ## How this sleeve decides (like you are 10)
 
@@ -363,6 +363,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,918.07 | ▲ close $7,918.07 vs 09:30 $7,932.79 (session +0.00) | 16:00 close · cash $7,918.07 · no lots left · equity $7,918.07. | — |
 | 2026-11-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,918.07 | ▲ 09:30 equity $7,918.07 vs yday $7,918.07 (+0.00) | 09:30 open · cash $7,918.07 · no holdings · equity $7,918.07 vs prior close $7,918.07 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,918.07 | ▲ close $7,918.07 vs 09:30 $7,918.07 (session +0.00) | 16:00 close · cash $7,918.07 · no lots left · equity $7,918.07. | — |
+| 2026-11-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,918.07 | ▲ 09:30 equity $7,918.07 vs yday $7,918.07 (+0.00) | 09:30 open · cash $7,918.07 · no holdings · equity $7,918.07 vs prior close $7,918.07 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-16 09:30 ET | **BUY** | `FROG` | 23 | $110.78 | $2.06 | — | $5,367.96 | — | merged news🟢 and cameras +6 −≤1; gate cam_bad_max=1,n_pos_min=6,news=good; rank cond; list ohlc_hot; 🔵; ret5=+12.5; leftover $2639.36 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `MBGL` | 112 | $23.44 | $2.33 | — | $2,740.35 | — | merged news🟢 and cameras +6 −≤1; gate cam_bad_max=1,n_pos_min=6,news=good; rank cond; list yday_gainer,yday_mover; 🔵; ret5=+18.5; leftover $2639.36 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `WWW` | 105 | $25.00 | $2.31 | — | $113.05 | — | merged news🟢 and cameras +6 −≤1; gate cam_bad_max=1,n_pos_min=6,news=good; rank cond; list ohlc_hot; 🔵; ret5=+16.7; leftover $2639.36 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $113.05 | ▲ close $7,989.60 vs 09:30 $7,918.07 (session +78.22) | 16:00 close · cash $113.05 · equity $7,989.60 vs 09:30 $7,918.07 (+71.53; session marks +78.22) · 3 name(s) marked open→close (per-name table). FROG×23 09:30 $110.78 → close $109.94 -19.43; MBGL×112 09:30 $23.44 → close $24.04 +67.20; WWW×105 09:30 $25.00 → close $25.29 +30.45 | — |
 
 ## Not taken
 

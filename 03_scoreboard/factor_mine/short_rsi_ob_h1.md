@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · RSI overbought
 
-Cash book **-2.53%** ($9,747) · signal-only (no cash/fees) was -20.71%. Starts YES **6/30**. Fills 464 · skips 95 · realized $-976.57.
+Cash book **-1.43%** ($9,857) · signal-only (no cash/fees) was -20.71%. Starts YES **6/30**. Fills 478 · skips 95 · realized $-976.57.
 
 ## How this sleeve decides (like you are 10)
 
@@ -666,6 +666,22 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-13 09:30 ET | **SHORT** | `AZTA` | 13 | $44.26 | $2.06 | — | $14,057.84 | — | RSI overbought; gate rsi_ob=True; list yday_gainer,yday_mover; 🔵; ret5=+17.3; leftover $614.82 | join🔴 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-13 09:30 ET | **SHORT** | `APP` | 1 | $394.88 | $2.02 | — | $14,450.69 | — | RSI overbought; gate rsi_ob=True; list ohlc_hot; ret5=+10.6; leftover $614.82 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,450.69 | ▼ close $9,746.63 vs 09:30 $9,837.08 (session -70.78) | 16:00 close · cash $14,450.69 · equity $9,746.63 vs 09:30 $9,837.08 (-90.45; session marks -70.78) · 8 name(s) marked open→close (per-name table). ETON×10 09:30 $61.25 → close $63.93 -26.80; REZI×28 09:30 $21.52 → close $21.32 +5.60; BGS×186 09:30 $3.29 → close $3.50 -39.06; GEVO×330 09:30 $1.86 → close $1.83 +9.90; FOSL×71 09:30 $8.56 → close $8.43 +9.23; RSKD×66 09:30 $9.31 → close $9.27 +2.64; AZTA×13 09:30 $44.26 → close $45.65 -18.07; APP×1 09:30 $394.88 → close $409.10 -14.22 | — |
+| 2026-11-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $14,450.69 | ▲ 09:30 equity $9,788.67 vs yday $9,746.63 (+42.04) | 09:30 open · cash $14,450.69 (unchanged overnight, no fees) · equity $9,788.67 vs prior close $9,746.63 (+42.04) · 8 name(s) re-marked at the open (per-name table). APP×1 yday $409.10 → 09:30 $414.60 -5.50; AZTA×13 yday $45.65 → 09:30 $44.32 +17.29; BGS×186 yday $3.50 → 09:30 $3.45 +9.30; ETON×10 yday $63.93 → 09:30 $64.29 -3.60; FOSL×71 yday $8.43 → 09:30 $8.38 +3.55; GEVO×330 yday $1.83 → 09:30 $1.80 +9.90; REZI×28 yday $21.32 → 09:30 $21.23 +2.52; RSKD×66 yday $9.27 → 09:30 $9.14 +8.58 | — |
+| 2026-11-16 09:30 ET | **COVER** | `AZTA` | 13 | $44.32 | $2.03 | $-4.87 | $13,872.50 | ▼ -4.87 after sell → book $9,786.64; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-16 09:30 ET | **COVER** | `BGS` | 186 | $3.45 | $2.55 | $-34.91 | $13,228.25 | ▼ -34.91 after sell → book $9,784.09; vs 09:30 mark -2.55 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-16 09:30 ET | **COVER** | `ETON` | 10 | $64.29 | $2.02 | $-34.48 | $12,583.33 | ▼ -34.48 after sell → book $9,782.07; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-16 09:30 ET | **COVER** | `FOSL` | 71 | $8.38 | $2.20 | $+8.34 | $11,986.15 | ▲ +8.34 after sell → book $9,779.87; vs 09:30 mark -2.20 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-16 09:30 ET | **COVER** | `GEVO` | 330 | $1.80 | $4.26 | $+11.20 | $11,387.89 | ▲ +11.20 after sell → book $9,775.61; vs 09:30 mark -4.26 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-16 09:30 ET | **COVER** | `REZI` | 28 | $21.23 | $2.07 | $+3.94 | $10,791.38 | ▲ +3.94 after sell → book $9,773.54; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-16 09:30 ET | **COVER** | `RSKD` | 66 | $9.14 | $2.19 | $+6.81 | $10,185.95 | ▲ +6.81 after sell → book $9,771.35; vs 09:30 mark -2.19 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-16 09:30 ET | **SHORT** | `ENGN` | 300 | $2.32 | $3.95 | — | $10,878.00 | — | RSI overbought; gate rsi_ob=True; list yday_gainer,yday_mover; ret5=+37.7; leftover $697.95 | join🟡 sector🟡 gen🔴 news🔴 digest🔴 ab🟡 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-16 09:30 ET | **SHORT** | `MBGL` | 29 | $23.44 | $2.12 | — | $11,555.65 | — | RSI overbought; gate rsi_ob=True; list yday_gainer,yday_mover; 🔵; ret5=+18.5; leftover $697.95 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-16 09:30 ET | **SHORT** | `TTEC` | 237 | $2.94 | $3.13 | — | $12,249.30 | — | RSI overbought; gate rsi_ob=True; list yday_gainer; 🔵; ret5=+113.8; leftover $697.95 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-16 09:30 ET | **SHORT** | `LBTYA` | 64 | $10.83 | $2.22 | — | $12,940.20 | — | RSI overbought; gate rsi_ob=True; list ohlc_hot; ret5=+8.8; leftover $697.95 | join🔴 sector🟡 gen🔴 news🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-16 09:30 ET | **SHORT** | `LBTYK` | 66 | $10.52 | $2.23 | — | $13,632.29 | — | RSI overbought; gate rsi_ob=True; list ohlc_hot; ret5=+8.2; leftover $697.95 | join🔴 sector🟡 gen🔴 news🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-16 09:30 ET | **SHORT** | `XERS` | 42 | $16.60 | $2.16 | — | $14,327.34 | — | RSI overbought; gate rsi_ob=True; list ohlc_hot; ret5=+9.6; leftover $697.95 | join🔴 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-16 09:30 ET | **SHORT** | `TBBB` | 10 | $68.40 | $2.06 | — | $15,009.28 | — | RSI overbought; gate rsi_ob=True; list ohlc_hot; ret5=+6.7; leftover $697.95 | join🔴 sector🟡 gen🔴 news🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $15,009.28 | ▲ close $9,856.85 vs 09:30 $9,788.67 (session +103.35) | 16:00 close · cash $15,009.28 · equity $9,856.85 vs 09:30 $9,788.67 (+68.18; session marks +103.35) · 8 name(s) marked open→close (per-name table). APP×1 09:30 $414.60 → close $415.22 -0.62; ENGN×300 09:30 $2.32 → close $1.89 +129.00; MBGL×29 09:30 $23.44 → close $24.04 -17.40; TTEC×237 09:30 $2.94 → close $3.07 -30.81; LBTYA×64 09:30 $10.83 → close $10.52 +19.84; LBTYK×66 09:30 $10.52 → close $10.33 +12.54; XERS×42 09:30 $16.60 → close $16.70 -4.20; TBBB×10 09:30 $68.40 → close $68.90 -5.00 | — |
 
 ## Not taken
 

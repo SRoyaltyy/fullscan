@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **+26.16%** ($12,616) · signal-only (no cash/fees) was -3.93%. Starts YES **1/30**. Fills 76 · skips 0 · realized $-826.45.
+Cash book **+24.27%** ($12,427) · signal-only (no cash/fees) was -3.93%. Starts YES **1/30**. Fills 77 · skips 0 · realized $-826.45.
 
 ## How this sleeve decides (like you are 10)
 
@@ -282,3 +282,6 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $12,615.67 | ▲ close $12,615.67 vs 09:30 $12,615.67 (session +0.00) | 16:00 close · cash $12,615.67 · no lots left · equity $12,615.67. | — |
 | 2026-11-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $12,615.67 | ▲ 09:30 equity $12,615.67 vs yday $12,615.67 (+0.00) | 09:30 open · cash $12,615.67 · no holdings · equity $12,615.67 vs prior close $12,615.67 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $12,615.67 | ▲ close $12,615.67 vs 09:30 $12,615.67 (session +0.00) | 16:00 close · cash $12,615.67 · no lots left · equity $12,615.67. | — |
+| 2026-11-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $12,615.67 | ▲ 09:30 equity $12,615.67 vs yday $12,615.67 (+0.00) | 09:30 open · cash $12,615.67 · no holdings · equity $12,615.67 vs prior close $12,615.67 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-16 09:30 ET | **BUY** | `UNIT` | 2594 | $4.85 | $33.46 | — | $1.31 | — | combo gate; gate macd_up=True,rsi_os=True; list probable; 🔵; ret5=-6.5; leftover $12615.67 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-11-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1.31 | ▼ close $12,426.57 vs 09:30 $12,615.67 (session -155.64) | 16:00 close · cash $1.31 · equity $12,426.57 vs 09:30 $12,615.67 (-189.10; session marks -155.64) · 1 name(s) marked open→close (per-name table). UNIT×2594 09:30 $4.85 → close $4.79 -155.64 | — |

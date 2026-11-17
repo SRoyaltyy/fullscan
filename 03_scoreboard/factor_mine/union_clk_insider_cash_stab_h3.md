@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · Clock-B #7 insider/Form-4 + inst Tx + stabilize (if data)
 
-Cash book **+18.82%** ($11,882) · signal-only (no cash/fees) was -5.54%. Starts YES **0/30**. Fills 17 · skips 7 · realized $-603.63.
+Cash book **+18.91%** ($11,891) · signal-only (no cash/fees) was -5.54%. Starts YES **0/30**. Fills 17 · skips 7 · realized $-603.63.
 
 ## How this sleeve decides (like you are 10)
 
@@ -223,6 +223,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $11,547.61 | ▲ 09:30 equity $11,547.61 vs yday $11,547.61 (+0.00) | 09:30 open · cash $11,547.61 · no holdings · equity $11,547.61 vs prior close $11,547.61 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-11-13 09:30 ET | **BUY** | `LFTO` | 486 | $23.74 | $6.27 | — | $3.70 | — | Clock-B #7 insider/Form-4 + inst Tx + stabilize (if data); gate clk_insider_cash_stab=True; rank cond; list earn_react; 🔵; ret5=+9.1; leftover $11547.61 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $3.70 | ▲ close $11,881.54 vs 09:30 $11,547.61 (session +340.20) | 16:00 close · cash $3.70 · equity $11,881.54 vs 09:30 $11,547.61 (+333.93; session marks +340.20) · 1 name(s) marked open→close (per-name table). LFTO×486 09:30 $23.74 → close $24.44 +340.20 | — |
+| 2026-11-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $3.70 | ▲ 09:30 equity $12,119.68 vs yday $11,881.54 (+238.14) | 09:30 open · cash $3.70 (unchanged overnight, no fees) · equity $12,119.68 vs prior close $11,881.54 (+238.14) · 1 name(s) re-marked at the open (per-name table). LFTO×486 yday $24.44 → 09:30 $24.93 +238.14 | — |
+| 2026-11-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $3.70 | ▼ close $11,891.26 vs 09:30 $12,119.68 (session -228.42) | 16:00 close · cash $3.70 · equity $11,891.26 vs 09:30 $12,119.68 (-228.42; session marks -228.42) · 1 name(s) marked open→close (per-name table). LFTO×486 09:30 $24.93 → close $24.46 -228.42 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-5.66%** ($9,434) · signal-only (no cash/fees) was -2.67%. Starts YES **12/30**. Fills 335 · skips 272 · realized $-923.90.
+Cash book **-12.09%** ($8,791) · signal-only (no cash/fees) was -2.67%. Starts YES **12/30**. Fills 342 · skips 272 · realized $-923.90.
 
 ## How this sleeve decides (like you are 10)
 
@@ -541,6 +541,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-13 09:30 ET | **BUY** | `TEVA` | 36 | $43.91 | $2.10 | — | $1,671.38 | — | combo gate; gate last_green=True,vol=good; list ohlc_hot; 🔵; ret5=+4.5; leftover $1607.82 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-13 09:30 ET | **BUY** | `SKM` | 46 | $34.94 | $2.13 | — | $62.02 | — | combo gate; gate last_green=True,vol=good; list ohlc_hot; ret5=+16.0; leftover $1607.82 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $62.02 | ▼ close $9,434.27 vs 09:30 $9,665.88 (session -215.76) | 16:00 close · cash $62.02 · equity $9,434.27 vs 09:30 $9,665.88 (-231.61; session marks -215.76) · 9 name(s) marked open→close (per-name table). COTY×1 09:30 $4.03 → close $4.04 +0.01; PCT×3 09:30 $1.80 → close $1.71 -0.28; TLS×1 09:30 $7.71 → close $7.35 -0.37; NBIS×13 09:30 $123.52 → close $115.88 -99.32; CRWV×28 09:30 $56.01 → close $53.13 -80.64; AXTI×37 09:30 $43.36 → close $41.84 -56.24; RUM×281 09:30 $5.71 → close $5.77 +16.86; TEVA×36 09:30 $43.91 → close $44.50 +21.24; SKM×46 09:30 $34.94 → close $34.57 -17.02 | — |
+| 2026-11-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $62.02 | ▼ 09:30 equity $9,010.29 vs yday $9,434.27 (-423.98) | 09:30 open · cash $62.02 (unchanged overnight, no fees) · equity $9,010.29 vs prior close $9,434.27 (-423.98) · 9 name(s) re-marked at the open (per-name table). AXTI×37 yday $41.84 → 09:30 $38.61 -119.51; COTY×1 yday $4.04 → 09:30 $4.10 +0.06; CRWV×28 yday $53.13 → 09:30 $49.36 -105.56; NBIS×13 yday $115.88 → 09:30 $106.80 -118.04; PCT×3 yday $1.71 → 09:30 $1.80 +0.28; RUM×281 yday $5.77 → 09:30 $5.51 -73.06; SKM×46 yday $34.57 → 09:30 $34.55 -0.92; TEVA×36 yday $44.50 → 09:30 $44.30 -7.20; TLS×1 yday $7.35 → 09:30 $7.31 -0.04 | — |
+| 2026-11-16 09:30 ET | **SELL** | `COTY` | 1 | $4.10 | $0.06 | $-0.29 | $66.06 | ▼ -0.29 after sell → book $9,010.23; vs 09:30 mark -0.06 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-16 09:30 ET | **SELL** | `PCT` | 3 | $1.80 | $0.08 | $-1.36 | $71.37 | ▼ -1.36 after sell → book $9,010.14; vs 09:30 mark -0.09 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-16 09:30 ET | **SELL** | `TLS` | 1 | $7.31 | $0.10 | $-0.67 | $78.59 | ▼ -0.67 after sell → book $9,010.05; vs 09:30 mark -0.09 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-16 09:30 ET | **BUY** | `UNIT` | 2 | $4.85 | $0.10 | — | $68.78 | — | combo gate; gate last_green=True,vol=good; list probable; 🔵; ret5=-6.5; leftover $9.82 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `NGEN` | 5 | $1.85 | $0.11 | — | $59.43 | — | combo gate; gate last_green=True,vol=good; list yday_gainer,yday_mover; ret5=+41.4; leftover $9.82 | join🔴 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `CURI` | 3 | $3.05 | $0.10 | — | $50.18 | — | combo gate; gate last_green=True,vol=good; list yday_gainer,yday_mover; 🔵; ret5=+24.7; leftover $9.82 | join🟢 sector🟡 gen🔴 news🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `FRMI` | 3 | $2.63 | $0.09 | — | $42.18 | — | combo gate; gate last_green=True,vol=good; list yday_gainer; ret5=+66.2; leftover $9.82 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-11-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $42.18 | ▼ close $8,791.43 vs 09:30 $9,010.29 (session -218.21) | 16:00 close · cash $42.18 · equity $8,791.43 vs 09:30 $9,010.29 (-218.86; session marks -218.21) · 10 name(s) marked open→close (per-name table). AXTI×37 09:30 $38.61 → close $38.46 -5.55; CRWV×28 09:30 $49.36 → close $49.88 +14.56; NBIS×13 09:30 $106.80 → close $107.13 +4.29; RUM×281 09:30 $5.51 → close $5.11 -112.40; SKM×46 09:30 $34.55 → close $33.32 -56.58; TEVA×36 09:30 $44.30 → close $42.57 -62.28; UNIT×2 09:30 $4.85 → close $4.79 -0.12; NGEN×5 09:30 $1.85 → close $1.82 -0.15; CURI×3 09:30 $3.05 → close $3.21 +0.48; FRMI×3 09:30 $2.63 → close $2.48 -0.46 | — |
 
 ## Not taken
 

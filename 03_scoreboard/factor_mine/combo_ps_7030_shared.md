@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared union_news_pack_h1/short_news_r_h3 w=0.7,0.3 net=priority
 
-Cash book **+3.22%** ($10,322) · signal-only (no cash/fees) was —. Starts YES **2/30**. Fills 393 · skips 146 · realized $+1121.47.
+Cash book **+2.70%** ($10,270) · signal-only (no cash/fees) was —. Starts YES **2/30**. Fills 413 · skips 146 · realized $+1121.47.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $9,643.01.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $7,998.23.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -598,6 +598,28 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-13 09:30 ET | **SHORT** | `PGNY` | 16 | $36.74 | $2.07 | — | $9,053.86 | — | news🔴; gate news=bad; list ohlc_hot; ret5=+6.4; combo leftover $607.75; owner short_news_r_h3 | join🟢 sector🟡 gen🔴 news🔴 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-11-13 09:30 ET | **SHORT** | `PRCT` | 25 | $23.65 | $2.10 | — | $9,643.01 | — | news🔴; gate news=bad; list ohlc_hot; ret5=+16.0; combo leftover $607.75; owner short_news_r_h3 | join🟡 sector🟡 gen🔴 news🔴 digest🔴 ab🔴 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,643.01 | ▼ close $10,321.85 vs 09:30 $10,506.13 (session -122.27) | 16:00 close · cash $9,643.01 · equity $10,321.85 vs 09:30 $10,506.13 (-184.28; session marks -122.27) · 18 name(s) marked open→close (per-name table). GCTS×671 09:30 $1.27 → close $1.26 +6.71; HLLY×389 09:30 $2.49 → close $2.48 +3.89; LENZ×253 09:30 $4.06 → close $4.13 -17.71; TTWO×4 09:30 $230.29 → close $227.82 +9.88; ZURA×748 09:30 $1.23 → close $1.24 -7.48; DVN×45 09:30 $46.76 → close $46.58 -8.10; ANDG×33 09:30 $62.82 → close $60.06 -91.08; CEG×7 09:30 $284.97 → close $280.20 -33.39; CBRS×19 09:30 $108.40 → close $108.72 +6.08; AAOI×40 09:30 $51.87 → close $49.89 -79.20; MVST×2573 09:30 $0.24 → close $0.22 +49.40; RSKD×65 09:30 $9.31 → close $9.27 +2.60; DJT×122 09:30 $4.97 → close $4.64 +40.26; MX×217 09:30 $2.79 → close $2.50 +62.93; RXT×201 09:30 $3.01 → close $2.92 +18.09; STIM×502 09:30 $1.21 → close $1.39 -90.36; PGNY×16 09:30 $36.74 → close $36.18 +8.96; PRCT×25 09:30 $23.65 → close $23.80 -3.75 | — |
+| 2026-11-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,643.01 | ▼ 09:30 equity $10,144.71 vs yday $10,321.85 (-177.14) | 09:30 open · cash $9,643.01 (unchanged overnight, no fees) · equity $10,144.71 vs prior close $10,321.85 (-177.14) | — |
+| 2026-11-16 09:30 ET | **SELL** | `AAOI` | 40 | $46.66 | $2.13 | $-212.64 | $11,507.28 | ▼ -212.64 after sell → book $10,142.57; vs 09:30 mark -2.14 | union_news_pack_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-11-16 09:30 ET | **SELL** | `ANDG` | 33 | $60.25 | $2.11 | $-89.01 | $13,493.41 | ▼ -89.01 after sell → book $10,140.46; vs 09:30 mark -2.11 | union_news_pack_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-11-16 09:30 ET | **SELL** | `CBRS` | 19 | $102.55 | $2.07 | $-115.27 | $15,439.79 | ▼ -115.27 after sell → book $10,138.38; vs 09:30 mark -2.08 | union_news_pack_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-11-16 09:30 ET | **SELL** | `CEG` | 7 | $275.52 | $2.04 | $-70.20 | $17,366.39 | ▼ -70.20 after sell → book $10,136.35; vs 09:30 mark -2.03 | union_news_pack_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-11-16 09:30 ET | **COVER** | `GCTS` | 671 | $1.23 | $8.66 | $+197.26 | $16,532.41 | ▲ +197.26 after sell → book $10,127.69; vs 09:30 mark -8.66 | short_news_r_h3: dropped from list after 3 sess (min 3) | — |
+| 2026-11-16 09:30 ET | **COVER** | `HLLY` | 389 | $2.44 | $5.02 | $+79.33 | $15,578.23 | ▲ +79.33 after sell → book $10,122.67; vs 09:30 mark -5.02 | short_news_r_h3: dropped from list after 3 sess (min 3) | — |
+| 2026-11-16 09:30 ET | **COVER** | `LENZ` | 253 | $4.10 | $3.26 | $-6.61 | $14,537.66 | ▼ -6.61 after sell → book $10,119.41; vs 09:30 mark -3.26 | short_news_r_h3: dropped from list after 3 sess (min 3) | — |
+| 2026-11-16 09:30 ET | **COVER** | `TTWO` | 4 | $233.82 | $2.00 | $-29.05 | $13,600.38 | ▼ -29.05 after sell → book $10,117.41; vs 09:30 mark -2.00 | short_news_r_h3: dropped from list after 3 sess (min 3) | — |
+| 2026-11-16 09:30 ET | **COVER** | `ZURA` | 748 | $1.24 | $9.65 | $+92.74 | $12,663.21 | ▲ +92.74 after sell → book $10,107.76; vs 09:30 mark -9.65 | short_news_r_h3: dropped from list after 3 sess (min 3) | — |
+| 2026-11-16 09:30 ET | **BUY** | `FROG` | 13 | $110.78 | $2.03 | — | $11,220.98 | — | morning packet news🟢 only (not the merged box); gate news_box=good; rank cond; list ohlc_hot; 🔵; ret5=+12.5; combo leftover $1477.37; owner union_news_pack_h1 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `MBGL` | 63 | $23.44 | $2.18 | — | $9,742.08 | — | morning packet news🟢 only (not the merged box); gate news_box=good; rank cond; list yday_gainer,yday_mover; 🔵; ret5=+18.5; combo leftover $1477.37; owner union_news_pack_h1 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `CHRD` | 9 | $149.14 | $2.02 | — | $8,397.80 | — | morning packet news🟢 only (not the merged box); gate news_box=good; rank cond; list flatten; ret5=+9.8; combo leftover $1477.37; owner union_news_pack_h1 | join🟢 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 peer🟢 heat🔴 vol🟡 buy🟢 |
+| 2026-11-16 09:30 ET | **BUY** | `LUNR` | 117 | $12.53 | $2.34 | — | $6,929.45 | — | morning packet news🟢 only (not the merged box); gate news_box=good; rank cond; list yday_gainer; 🔵; ret5=+24.2; combo leftover $1477.37; owner union_news_pack_h1 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `COLD` | 87 | $16.82 | $2.25 | — | $5,463.86 | — | morning packet news🟢 only (not the merged box); gate news_box=good; rank cond; list ohlc_hot; 🔵; ret5=+4.2; combo leftover $1477.37; owner union_news_pack_h1 | join🟡 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟡 vol🟡 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `DPC` | 44 | $32.88 | $2.12 | — | $4,015.02 | — | morning packet news🟢 only (not the merged box); gate news_box=good; rank cond; list yday_gainer; 🔵; ret5=+19.0; combo leftover $1477.37; owner union_news_pack_h1 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 judge🔴 ab🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-16 09:30 ET | **SHORT** | `EPRX` | 98 | $8.15 | $2.33 | — | $4,811.39 | — | news🔴; gate news=bad; list flatten; ret5=+18.3; combo leftover $803.00; owner short_news_r_h3 | join🟢 sector🟡 gen🔴 news🔴 digest🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-16 09:30 ET | **SHORT** | `ENGN` | 346 | $2.32 | $4.55 | — | $5,609.55 | — | news🔴; gate news=bad; list yday_gainer,yday_mover; ret5=+37.7; combo leftover $803.00; owner short_news_r_h3 | join🟡 sector🟡 gen🔴 news🔴 digest🔴 ab🟡 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-16 09:30 ET | **SHORT** | `NUAI` | 259 | $3.09 | $3.42 | — | $6,406.45 | — | news🔴; gate news=bad; list yday_gainer,yday_mover; 🔵; ret5=+54.6; combo leftover $803.00; owner short_news_r_h3 | join🟢 sector🟡 gen🔴 news🔴 digest🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-16 09:30 ET | **SHORT** | `CTVA` | 85 | $9.35 | $2.29 | — | $7,198.91 | — | news🔴; gate news=bad; list yday_mover; ret5=-20.8; combo leftover $803.00; owner short_news_r_h3 | join🟢 sector🟡 gen🔴 news🔴 digest🟡 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-11-16 09:30 ET | **SHORT** | `BRUN` | 156 | $5.14 | $2.52 | — | $7,998.23 | — | news🔴; gate news=bad; list yday_mover; 🔵; ret5=-9.2; combo leftover $803.00; owner short_news_r_h3 | join🟢 sector🟡 gen🔴 news🔴 digest🟢 ab🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-11-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,998.23 | ▲ close $10,270.34 vs 09:30 $10,144.71 (session +190.64) | 16:00 close · cash $7,998.23 · equity $10,270.34 vs 09:30 $10,144.71 (+125.63; session marks +190.64) · 20 name(s) marked open→close (per-name table). DJT×122 09:30 $4.37 → close $4.08 +35.38; DVN×45 09:30 $46.00 → close $44.27 -77.85; MVST×2573 09:30 $0.22 → close $0.23 -20.58; MX×217 09:30 $2.35 → close $2.34 +2.17; PGNY×16 09:30 $36.63 → close $37.15 -8.32; PRCT×25 09:30 $23.71 → close $23.54 +4.25; RSKD×65 09:30 $9.14 → close $9.42 -18.20; RXT×201 09:30 $2.74 → close $2.52 +45.23; STIM×502 09:30 $1.39 → close $1.25 +70.28; FROG×13 09:30 $110.78 → close $109.94 -10.98; MBGL×63 09:30 $23.44 → close $24.04 +37.80; CHRD×9 09:30 $149.14 → close $146.78 -21.24; LUNR×117 09:30 $12.53 → close $11.73 -93.60; COLD×87 09:30 $16.82 → close $16.65 -14.79; DPC×44 09:30 $32.88 → close $31.80 -47.52; EPRX×98 09:30 $8.15 → close $7.34 +79.38; ENGN×346 09:30 $2.32 → close $1.89 +148.78; NUAI×259 09:30 $3.09 → close $3.11 -5.18; CTVA×85 09:30 $9.35 → close $9.04 +26.35; BRUN×156 09:30 $5.14 → close $4.76 +59.28 | — |
 
 ## Not taken
 

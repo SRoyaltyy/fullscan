@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `trail` · S-boost `none` · after min-hold, trail 5% off peak
 
-Cash book **-21.32%** ($7,868) · signal-only (no cash/fees) was -0.80%. Starts YES **0/30**. Fills 548 · skips 107 · realized $-106.46.
+Cash book **-23.93%** ($7,607) · signal-only (no cash/fees) was -0.80%. Starts YES **0/30**. Fills 558 · skips 107 · realized $-106.46.
 
 ## How this sleeve decides (like you are 10)
 
@@ -748,6 +748,18 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-13 09:30 ET | **BUY** | `REZI` | 46 | $21.52 | $2.13 | — | $1,195.80 | — | after min-hold, trail 5% off peak; list probable,yday_gainer,yday_mover; 🔵; ret5=+9.5; leftover $1004.24 | join🔴 sector🟢 gen🔴 news🟢 digest🟡 judge🔴 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-11-13 09:30 ET | **BUY** | `XRPN` | 114 | $8.75 | $2.33 | — | $195.96 | — | after min-hold, trail 5% off peak; list probable,yday_gainer; ret5=-12.9; leftover $1004.24 | join🔴 sector🔴 gen🔴 news🟡 digest🔴 ab🔴 heat🔴 vol🟡 buy🟡 |
 | 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $195.96 | ▼ close $7,867.73 vs 09:30 $8,033.89 (session -128.34) | 16:00 close · cash $195.96 · equity $7,867.73 vs 09:30 $8,033.89 (-166.16; session marks -128.34) · 8 name(s) marked open→close (per-name table). DVN×21 09:30 $46.76 → close $46.58 -3.78; ALNY×6 09:30 $159.17 → close $165.04 +35.22; CHRD×6 09:30 $148.35 → close $149.93 +9.48; GRNT×156 09:30 $6.42 → close $6.30 -18.72; ETON×16 09:30 $61.25 → close $63.93 +42.88; MVST×4251 09:30 $0.24 → close $0.22 -81.62; REZI×46 09:30 $21.52 → close $21.32 -9.20; XRPN×114 09:30 $8.75 → close $7.85 -102.60 | — |
+| 2026-11-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $195.96 | ▼ 09:30 equity $7,842.28 vs yday $7,867.73 (-25.45) | 09:30 open · cash $195.96 (unchanged overnight, no fees) · equity $7,842.28 vs prior close $7,867.73 (-25.45) · 8 name(s) re-marked at the open (per-name table). ALNY×6 yday $165.04 → 09:30 $166.98 +11.64; CHRD×6 yday $149.93 → 09:30 $149.14 -4.74; DVN×21 yday $46.58 → 09:30 $46.00 -12.18; ETON×16 yday $63.93 → 09:30 $64.29 +5.76; GRNT×156 yday $6.30 → 09:30 $6.25 -7.80; MVST×4251 yday $0.22 → 09:30 $0.22 +4.25; REZI×46 yday $21.32 → 09:30 $21.23 -4.14; XRPN×114 yday $7.85 → 09:30 $7.69 -18.24 | — |
+| 2026-11-16 09:30 ET | **SELL** | `ETON` | 16 | $64.29 | $2.06 | $+44.54 | $1,222.54 | ▲ +44.54 after sell → book $7,840.22; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-16 09:30 ET | **SELL** | `GRNT` | 156 | $6.25 | $2.49 | $-31.47 | $2,195.05 | ▼ -31.47 after sell → book $7,837.73; vs 09:30 mark -2.49 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-16 09:30 ET | **SELL** | `MVST` | 4251 | $0.22 | $22.74 | $-122.90 | $3,099.03 | ▼ -122.90 after sell → book $7,814.99; vs 09:30 mark -22.74 | trail off peak after 1 sess (−5%) | — |
+| 2026-11-16 09:30 ET | **SELL** | `REZI` | 46 | $21.23 | $2.15 | $-17.62 | $4,073.46 | ▼ -17.62 after sell → book $7,812.84; vs 09:30 mark -2.15 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-16 09:30 ET | **SELL** | `XRPN` | 114 | $7.69 | $2.36 | $-125.53 | $4,947.76 | ▼ -125.53 after sell → book $7,810.48; vs 09:30 mark -2.36 | trail off peak after 1 sess (−5%) | — |
+| 2026-11-16 09:30 ET | **BUY** | `PODD` | 6 | $153.50 | $2.01 | — | $4,024.75 | — | after min-hold, trail 5% off peak; list flatten; ret5=+4.1; leftover $989.55 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `EPRX` | 121 | $8.15 | $2.35 | — | $3,036.25 | — | after min-hold, trail 5% off peak; list flatten; ret5=+18.3; leftover $989.55 | join🟢 sector🟡 gen🔴 news🔴 digest🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `SWRD` | 366 | $2.70 | $4.72 | — | $2,043.33 | — | after min-hold, trail 5% off peak; list probable,yday_gainer; 🔵; ret5=+5.7; leftover $989.55 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `BUUU` | 187 | $5.28 | $2.55 | — | $1,053.42 | — | after min-hold, trail 5% off peak; list probable,yday_gainer; ret5=+1.1; leftover $989.55 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 judge🔴 ab🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `ADRX` | 69 | $14.22 | $2.20 | — | $70.04 | — | after min-hold, trail 5% off peak; list probable,yday_gainer; 🔵; ret5=+7.3; leftover $989.55 | join🟡 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $70.04 | ▼ close $7,606.97 vs 09:30 $7,842.28 (session -189.68) | 16:00 close · cash $70.04 · equity $7,606.97 vs 09:30 $7,842.28 (-235.31; session marks -189.68) · 8 name(s) marked open→close (per-name table). ALNY×6 09:30 $166.98 → close $159.73 -43.50; CHRD×6 09:30 $149.14 → close $146.78 -14.16; DVN×21 09:30 $46.00 → close $44.27 -36.33; PODD×6 09:30 $153.50 → close $145.29 -49.26; EPRX×121 09:30 $8.15 → close $7.34 -98.01; SWRD×366 09:30 $2.70 → close $2.77 +25.62; BUUU×187 09:30 $5.28 → close $5.50 +41.14; ADRX×69 09:30 $14.22 → close $14.00 -15.18 | — |
 
 ## Not taken
 

@@ -44,7 +44,8 @@
     "2026-11-10",
     "2026-11-11",
     "2026-11-12",
-    "2026-11-13"
+    "2026-11-13",
+    "2026-11-16"
   ],
   "rules": [
     {
@@ -1727,14 +1728,53 @@
           "equity": 10487.62,
           "mean": -1.7564,
           "mean_flat_15bp": -1.638
+        },
+        {
+          "date": "2026-11-16",
+          "buys": [
+            {
+              "fill_rule": "open",
+              "price": 1.85,
+              "shares": 33,
+              "side": "BUY",
+              "ticker": "NGEN"
+            },
+            {
+              "fill_rule": "open",
+              "price": 2.32,
+              "shares": 26,
+              "side": "BUY",
+              "ticker": "ENGN"
+            },
+            {
+              "fill_rule": "open",
+              "price": 3.09,
+              "shares": 19,
+              "side": "BUY",
+              "ticker": "NUAI"
+            },
+            {
+              "fill_rule": "open",
+              "price": 3.05,
+              "shares": 20,
+              "side": "BUY",
+              "ticker": "CURI"
+            }
+          ],
+          "sells": [],
+          "fees": 2.7048,
+          "cash": 2.18,
+          "equity": 10349.24,
+          "mean": -1.3195,
+          "mean_flat_15bp": -1.2347
         }
       ],
       "keep_bar_met": false,
       "keep_bar_note": "12 train fires against the 30-fire bar. Excel's luck test p=0.87.",
-      "after_fees_return": 4.876,
-      "start_day_win_rate": 0.8889,
+      "after_fees_return": 3.492,
+      "start_day_win_rate": 0.8261,
       "best_stock": "SDGR",
-      "without_best_stock_return": 1.124
+      "without_best_stock_return": -0.177
     },
     {
       "name": "oos0914_rvol_lg_h1_sx",
@@ -3843,14 +3883,82 @@
           "equity": 11017.58,
           "mean": -4.7981,
           "mean_flat_15bp": -4.3672
+        },
+        {
+          "date": "2026-11-16",
+          "buys": [
+            {
+              "fill_rule": "open",
+              "price": 1.85,
+              "shares": 1454,
+              "side": "BUY",
+              "ticker": "NGEN"
+            },
+            {
+              "fill_rule": "open",
+              "price": 3.09,
+              "shares": 870,
+              "side": "BUY",
+              "ticker": "NUAI"
+            },
+            {
+              "fill_rule": "open",
+              "price": 2.635,
+              "shares": 1021,
+              "side": "BUY",
+              "ticker": "FRMI"
+            },
+            {
+              "fill_rule": "open",
+              "price": 3.05,
+              "shares": 865,
+              "side": "BUY",
+              "ticker": "CURI"
+            }
+          ],
+          "sells": [
+            {
+              "fill_rule": "open",
+              "price": 275.01,
+              "shares": 10,
+              "side": "SELL",
+              "ticker": "ASND"
+            },
+            {
+              "fill_rule": "open",
+              "price": 47.37,
+              "shares": 49,
+              "side": "SELL",
+              "ticker": "HTFL"
+            },
+            {
+              "fill_rule": "open",
+              "price": 23.44,
+              "shares": 124,
+              "side": "SELL",
+              "ticker": "MBGL"
+            },
+            {
+              "fill_rule": "open",
+              "price": 106.8,
+              "shares": 23,
+              "side": "SELL",
+              "ticker": "NBIS"
+            }
+          ],
+          "fees": 63.0211,
+          "cash": 1.56,
+          "equity": 10662.27,
+          "mean": -3.2249,
+          "mean_flat_15bp": -2.5349
         }
       ],
       "keep_bar_met": false,
       "keep_bar_note": "12 train fires against the 30-fire bar. Excel's luck test p=0.87.",
-      "after_fees_return": 10.176,
-      "start_day_win_rate": 0.6667,
+      "after_fees_return": 6.623,
+      "start_day_win_rate": 0.3478,
       "best_stock": "SDEV",
-      "without_best_stock_return": -8.897
+      "without_best_stock_return": -11.85
     },
     {
       "name": "oos0914_break10_h1_sx",
@@ -5958,14 +6066,82 @@
           "equity": 7591.26,
           "mean": -1.6694,
           "mean_flat_15bp": -1.4622
+        },
+        {
+          "date": "2026-11-16",
+          "buys": [
+            {
+              "fill_rule": "open",
+              "price": 1.85,
+              "shares": 1014,
+              "side": "BUY",
+              "ticker": "NGEN"
+            },
+            {
+              "fill_rule": "open",
+              "price": 2.32,
+              "shares": 808,
+              "side": "BUY",
+              "ticker": "ENGN"
+            },
+            {
+              "fill_rule": "open",
+              "price": 3.09,
+              "shares": 607,
+              "side": "BUY",
+              "ticker": "NUAI"
+            },
+            {
+              "fill_rule": "open",
+              "price": 3.05,
+              "shares": 603,
+              "side": "BUY",
+              "ticker": "CURI"
+            }
+          ],
+          "sells": [
+            {
+              "fill_rule": "open",
+              "price": 179.61,
+              "shares": 9,
+              "side": "SELL",
+              "ticker": "ATI"
+            },
+            {
+              "fill_rule": "open",
+              "price": 275.52,
+              "shares": 6,
+              "side": "SELL",
+              "ticker": "CEG"
+            },
+            {
+              "fill_rule": "open",
+              "price": 90.29,
+              "shares": 21,
+              "side": "SELL",
+              "ticker": "DNTH"
+            },
+            {
+              "fill_rule": "open",
+              "price": 23.44,
+              "shares": 83,
+              "side": "SELL",
+              "ticker": "MBGL"
+            }
+          ],
+          "fees": 47.5304,
+          "cash": 0.45,
+          "equity": 7196.45,
+          "mean": -5.2008,
+          "mean_flat_15bp": -4.2172
         }
       ],
       "keep_bar_met": false,
       "keep_bar_note": "12 train fires against the 30-fire bar. Excel's luck test p=0.87.",
-      "after_fees_return": -24.087,
-      "start_day_win_rate": 0.4667,
+      "after_fees_return": -28.036,
+      "start_day_win_rate": 0.0652,
       "best_stock": "QSI",
-      "without_best_stock_return": -27.761
+      "without_best_stock_return": -31.553
     },
     {
       "name": "oos0914_zero_candle_h2_sx",
@@ -6974,12 +7150,22 @@
           "equity": 10364.33,
           "mean": -0.3919,
           "mean_flat_15bp": -0.2408
+        },
+        {
+          "date": "2026-11-16",
+          "buys": [],
+          "sells": [],
+          "fees": 0,
+          "cash": 10364.33,
+          "equity": 10364.33,
+          "mean": 0.0,
+          "mean_flat_15bp": 0.0
         }
       ],
       "keep_bar_met": false,
       "keep_bar_note": "12 train fires against the 30-fire bar. Excel's luck test p=0.87.",
       "after_fees_return": 3.643,
-      "start_day_win_rate": 0.7778,
+      "start_day_win_rate": 0.7609,
       "best_stock": "NAUT",
       "without_best_stock_return": 0.653
     }

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · packet🟢 OR headline🟢 and camera net ≥ 5
 
-Cash book **-19.80%** ($8,020) · signal-only (no cash/fees) was -14.84%. Starts YES **1/30**. Fills 123 · skips 100 · realized $-2151.30.
+Cash book **-20.34%** ($7,966) · signal-only (no cash/fees) was -14.84%. Starts YES **1/30**. Fills 133 · skips 100 · realized $-2151.30.
 
 ## How this sleeve decides (like you are 10)
 
@@ -329,6 +329,18 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $365.14 | ▼ 09:30 equity $8,078.96 vs yday $8,090.32 (-11.36) | 09:30 open · cash $365.14 (unchanged overnight, no fees) · equity $8,078.96 vs prior close $8,090.32 (-11.36) · 9 name(s) re-marked at the open (per-name table). ALH×40 yday $23.76 → 09:30 $23.91 +6.00; CECO×17 yday $56.00 → 09:30 $55.42 -9.86; CRWV×18 yday $56.60 → 09:30 $56.01 -10.62; EMBJ×12 yday $79.48 → 09:30 $78.34 -13.68; FLYW×45 yday $21.47 → 09:30 $21.55 +3.60; LINC×43 yday $22.98 → 09:30 $23.01 +1.29; LOAR×12 yday $75.04 → 09:30 $75.80 +9.12; PFGC×9 yday $109.96 → 09:30 $110.26 +2.70; SERV×2 yday $2.90 → 09:30 $2.95 +0.09 | — |
 | 2026-11-13 09:30 ET | **SELL** | `SERV` | 2 | $2.95 | $0.09 | $-0.84 | $370.95 | ▼ -0.84 after sell → book $8,078.88; vs 09:30 mark -0.08 | dropped from list after 3 sess (min 3) | — |
 | 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $370.95 | ▼ close $8,019.80 vs 09:30 $8,078.96 (session -59.07) | 16:00 close · cash $370.95 · equity $8,019.80 vs 09:30 $8,078.96 (-59.16; session marks -59.07) · 8 name(s) marked open→close (per-name table). ALH×40 09:30 $23.91 → close $23.63 -11.20; CECO×17 09:30 $55.42 → close $54.25 -19.89; CRWV×18 09:30 $56.01 → close $53.13 -51.84; EMBJ×12 09:30 $78.34 → close $78.73 +4.68; FLYW×45 09:30 $21.55 → close $22.26 +31.95; LINC×43 09:30 $23.01 → close $22.81 -8.60; LOAR×12 09:30 $75.80 → close $74.77 -12.36; PFGC×9 09:30 $110.26 → close $111.17 +8.19 | — |
+| 2026-11-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $370.95 | ▼ 09:30 equity $7,918.32 vs yday $8,019.80 (-101.48) | 09:30 open · cash $370.95 (unchanged overnight, no fees) · equity $7,918.32 vs prior close $8,019.80 (-101.48) · 8 name(s) re-marked at the open (per-name table). ALH×40 yday $23.63 → 09:30 $23.38 -10.00; CECO×17 yday $54.25 → 09:30 $53.00 -21.25; CRWV×18 yday $53.13 → 09:30 $49.36 -67.86; EMBJ×12 yday $78.73 → 09:30 $78.73 +0.00; FLYW×45 yday $22.26 → 09:30 $22.09 -7.65; LINC×43 yday $22.81 → 09:30 $22.69 -5.16; LOAR×12 yday $74.77 → 09:30 $74.92 +1.80; PFGC×9 yday $111.17 → 09:30 $112.13 +8.64 | — |
+| 2026-11-16 09:30 ET | **SELL** | `ALH` | 40 | $23.38 | $2.13 | $-65.84 | $1,304.02 | ▼ -65.84 after sell → book $7,916.19; vs 09:30 mark -2.13 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-16 09:30 ET | **SELL** | `CECO` | 17 | $53.00 | $2.06 | $-97.09 | $2,202.96 | ▼ -97.09 after sell → book $7,914.13; vs 09:30 mark -2.06 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-16 09:30 ET | **SELL** | `CRWV` | 18 | $49.36 | $2.06 | $-123.09 | $3,089.38 | ▼ -123.09 after sell → book $7,912.06; vs 09:30 mark -2.07 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-16 09:30 ET | **SELL** | `FLYW` | 45 | $22.09 | $2.15 | $-9.67 | $4,081.28 | ▼ -9.67 after sell → book $7,909.92; vs 09:30 mark -2.14 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-16 09:30 ET | **SELL** | `LINC` | 43 | $22.69 | $2.14 | $-31.35 | $5,054.81 | ▼ -31.35 after sell → book $7,907.78; vs 09:30 mark -2.14 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-16 09:30 ET | **SELL** | `LOAR` | 12 | $74.92 | $2.05 | $-59.39 | $5,951.80 | ▼ -59.39 after sell → book $7,905.73; vs 09:30 mark -2.05 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-16 09:30 ET | **SELL** | `PFGC` | 9 | $112.13 | $2.04 | $+12.96 | $6,958.94 | ▲ +12.96 after sell → book $7,903.70; vs 09:30 mark -2.03 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-16 09:30 ET | **BUY** | `FROG` | 20 | $110.78 | $2.05 | — | $4,741.19 | — | packet🟢 OR headline🟢 and camera net ≥ 5; gate cam_net_min=5,news_or_headline=True; rank cond; list ohlc_hot; 🔵; ret5=+12.5; leftover $2319.65 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `MBGL` | 98 | $23.44 | $2.28 | — | $2,441.78 | — | packet🟢 OR headline🟢 and camera net ≥ 5; gate cam_net_min=5,news_or_headline=True; rank cond; list yday_gainer,yday_mover; 🔵; ret5=+18.5; leftover $2319.65 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `WWW` | 92 | $25.00 | $2.27 | — | $139.52 | — | packet🟢 OR headline🟢 and camera net ≥ 5; gate cam_net_min=5,news_or_headline=True; rank cond; list ohlc_hot; 🔵; ret5=+16.7; leftover $2319.65 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $139.52 | ▲ close $7,965.68 vs 09:30 $7,918.32 (session +68.58) | 16:00 close · cash $139.52 · equity $7,965.68 vs 09:30 $7,918.32 (+47.36; session marks +68.58) · 4 name(s) marked open→close (per-name table). EMBJ×12 09:30 $78.73 → close $78.73 +0.00; FROG×20 09:30 $110.78 → close $109.94 -16.90; MBGL×98 09:30 $23.44 → close $24.04 +58.80; WWW×92 09:30 $25.00 → close $25.29 +26.68 | — |
 
 ## Not taken
 

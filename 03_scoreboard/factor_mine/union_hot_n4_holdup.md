@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 4 · rank `hot_score` · size `leftover` · sell `list` · S-boost `holdup` · hot4; S>0 lots stay through the next 09:30 so the overnight gap is in the book
 
-Cash book **+48.62%** ($14,863) · signal-only (no cash/fees) was +89.81%. Starts YES **29/30**. Fills 152 · skips 79 · realized $+4974.44.
+Cash book **+40.24%** ($14,025) · signal-only (no cash/fees) was +89.81%. Starts YES **29/30**. Fills 160 · skips 79 · realized $+4974.44.
 
 ## How this sleeve decides (like you are 10)
 
@@ -356,6 +356,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-13 09:30 ET | **BUY** | `MBGL` | 166 | $23.17 | $2.49 | — | $3,833.77 | — | hot4; S>0 lots stay through the next 09:30 so the overnight gap is in the book; rank hot_score; list ohlc_hot; ret5=+16.5; leftover $3854.47 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟡 heat🟢 vol🟡 buy🟡 |
 | 2026-11-13 09:30 ET | **BUY** | `CAPR` | 375 | $10.21 | $4.84 | — | $0.18 | — | hot4; S>0 lots stay through the next 09:30 so the overnight gap is in the book; rank hot_score; list yday_gainer,yday_mover; 🔵; ret5=+19.1; leftover $3854.47 | join🔴 sector🟡 gen🔴 news🟢 digest🔴 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $0.18 | ▼ close $14,862.55 vs 09:30 $15,417.87 (session -517.78) | 16:00 close · cash $0.18 · equity $14,862.55 vs 09:30 $15,417.87 (-555.32; session marks -517.78) · 4 name(s) marked open→close (per-name table). BGS×1171 09:30 $3.29 → close $3.50 +245.91; NEOV×1171 09:30 $3.29 → close $2.84 -526.95; MBGL×166 09:30 $23.17 → close $23.28 +18.26; CAPR×375 09:30 $10.21 → close $9.53 -255.00 | — |
+| 2026-11-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $0.18 | ▼ 09:30 equity $14,692.80 vs yday $14,862.55 (-169.75) | 09:30 open · cash $0.18 (unchanged overnight, no fees) · equity $14,692.80 vs prior close $14,862.55 (-169.75) · 4 name(s) re-marked at the open (per-name table). BGS×1171 yday $3.50 → 09:30 $3.45 -58.55; CAPR×375 yday $9.53 → 09:30 $9.35 -67.50; MBGL×166 yday $23.28 → 09:30 $23.44 +26.56; NEOV×1171 yday $2.84 → 09:30 $2.78 -70.26 | — |
+| 2026-11-16 09:30 ET | **SELL** | `BGS` | 1171 | $3.45 | $15.33 | $+156.92 | $4,024.80 | ▲ +156.92 after sell → book $14,677.47; vs 09:30 mark -15.33 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-16 09:30 ET | **SELL** | `CAPR` | 375 | $9.35 | $4.93 | $-332.27 | $7,526.12 | ▼ -332.27 after sell → book $14,672.54; vs 09:30 mark -4.93 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-16 09:30 ET | **SELL** | `MBGL` | 166 | $23.44 | $2.55 | $+39.79 | $11,414.61 | ▲ +39.79 after sell → book $14,669.99; vs 09:30 mark -2.55 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-16 09:30 ET | **SELL** | `NEOV` | 1171 | $2.78 | $15.33 | $-627.64 | $14,654.67 | ▼ -627.64 after sell → book $14,654.67; vs 09:30 mark -15.32 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-16 09:30 ET | **BUY** | `TTEC` | 1246 | $2.94 | $16.07 | — | $10,975.35 | — | hot4; S>0 lots stay through the next 09:30 so the overnight gap is in the book; rank hot_score; list yday_gainer; 🔵; ret5=+113.8; leftover $3663.67 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `NGEN` | 1980 | $1.85 | $25.54 | — | $7,286.81 | — | hot4; S>0 lots stay through the next 09:30 so the overnight gap is in the book; rank hot_score; list yday_gainer,yday_mover; ret5=+41.4; leftover $3663.67 | join🔴 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `ENGN` | 1579 | $2.32 | $20.37 | — | $3,603.16 | — | hot4; S>0 lots stay through the next 09:30 so the overnight gap is in the book; rank hot_score; list yday_gainer,yday_mover; ret5=+37.7; leftover $3663.67 | join🟡 sector🟡 gen🔴 news🔴 digest🔴 ab🟡 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `NUAI` | 1161 | $3.09 | $14.98 | — | $0.70 | — | hot4; S>0 lots stay through the next 09:30 so the overnight gap is in the book; rank hot_score; list yday_gainer,yday_mover; 🔵; ret5=+54.6; leftover $3663.67 | join🟢 sector🟡 gen🔴 news🔴 digest🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $0.70 | ▼ close $14,024.54 vs 09:30 $14,692.80 (session -553.17) | 16:00 close · cash $0.70 · equity $14,024.54 vs 09:30 $14,692.80 (-668.26; session marks -553.17) · 4 name(s) marked open→close (per-name table). TTEC×1246 09:30 $2.94 → close $3.07 +161.98; NGEN×1980 09:30 $1.85 → close $1.82 -59.40; ENGN×1579 09:30 $2.32 → close $1.89 -678.97; NUAI×1161 09:30 $3.09 → close $3.11 +23.22 | — |
 
 ## Not taken
 

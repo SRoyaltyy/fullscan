@@ -6,7 +6,7 @@ Buys the flatten **wish-list** even on io/HOLD mornings — live `flatten_robust
 
 Side **long** · universe `flatten` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · flatten looker: 0 red + yesterday up
 
-Cash book **-17.55%** ($8,245) · signal-only (no cash/fees) was +1.97%. Starts YES **12/30**. Fills 81 · skips 119 · realized $-62.52.
+Cash book **-17.49%** ($8,251) · signal-only (no cash/fees) was +1.97%. Starts YES **12/30**. Fills 83 · skips 119 · realized $-62.52.
 
 ## How this sleeve decides (like you are 10)
 
@@ -287,6 +287,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $47.58 | ▼ close $9,033.17 vs 09:30 $9,391.89 (session -358.72) | 16:00 close · cash $47.58 · equity $9,033.17 vs 09:30 $9,391.89 (-358.72; session marks -358.72) · 4 name(s) marked open→close (per-name table). ALGN×27 09:30 $171.45 → close $166.97 -120.96; COTY×5 09:30 $4.09 → close $4.03 -0.30; WRBY×1 09:30 $29.96 → close $26.73 -3.23; ZVRA×397 09:30 $11.75 → close $11.16 -234.23 | — |
 | 2026-11-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $47.58 | ▼ 09:30 equity $8,857.74 vs yday $9,033.17 (-175.43) | 09:30 open · cash $47.58 (unchanged overnight, no fees) · equity $8,857.74 vs prior close $9,033.17 (-175.43) · 4 name(s) re-marked at the open (per-name table). ALGN×27 yday $166.97 → 09:30 $168.13 +31.32; COTY×5 yday $4.03 → 09:30 $4.03 -0.01; WRBY×1 yday $26.73 → 09:30 $26.42 -0.31; ZVRA×397 yday $11.16 → 09:30 $10.64 -206.44 | — |
 | 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $47.58 | ▼ close $8,244.62 vs 09:30 $8,857.74 (session -613.11) | 16:00 close · cash $47.58 · equity $8,244.62 vs 09:30 $8,857.74 (-613.12; session marks -613.11) · 4 name(s) marked open→close (per-name table). ALGN×27 09:30 $168.13 → close $168.32 +5.13; COTY×5 09:30 $4.03 → close $4.04 +0.06; WRBY×1 09:30 $26.42 → close $27.44 +1.02; ZVRA×397 09:30 $10.64 → close $9.08 -619.32 | — |
+| 2026-11-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $47.58 | ▲ 09:30 equity $8,259.78 vs yday $8,244.62 (+15.16) | 09:30 open · cash $47.58 (unchanged overnight, no fees) · equity $8,259.78 vs prior close $8,244.62 (+15.16) · 4 name(s) re-marked at the open (per-name table). ALGN×27 yday $168.32 → 09:30 $168.42 +2.70; COTY×5 yday $4.04 → 09:30 $4.10 +0.30; WRBY×1 yday $27.44 → 09:30 $27.69 +0.25; ZVRA×397 yday $9.08 → 09:30 $9.11 +11.91 | — |
+| 2026-11-16 09:30 ET | **SELL** | `ALGN` | 27 | $168.42 | $2.12 | $+9.85 | $4,592.80 | ▲ +9.85 after sell → book $8,257.66; vs 09:30 mark -2.12 | dropped from list after 5 sess (min 5) | — |
+| 2026-11-16 09:30 ET | **SELL** | `ZVRA` | 397 | $9.11 | $5.22 | $-1018.72 | $8,204.26 | ▼ -1,018.72 after sell → book $8,252.45; vs 09:30 mark -5.21 | dropped from list after 5 sess (min 5) | — |
+| 2026-11-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,204.26 | ▼ close $8,251.34 vs 09:30 $8,259.78 (session -1.11) | 16:00 close · cash $8,204.26 · equity $8,251.34 vs 09:30 $8,259.78 (-8.44; session marks -1.11) · 2 name(s) marked open→close (per-name table). COTY×5 09:30 $4.10 → close $4.17 +0.35; WRBY×1 09:30 $27.69 → close $26.23 -1.46 | — |
 
 ## Not taken
 

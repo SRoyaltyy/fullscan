@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · packet🟢 and camera net ≥ 2
 
-Cash book **-3.75%** ($9,625) · signal-only (no cash/fees) was -9.47%. Starts YES **16/30**. Fills 86 · skips 82 · realized $-1172.71.
+Cash book **-6.35%** ($9,365) · signal-only (no cash/fees) was -9.47%. Starts YES **16/30**. Fills 94 · skips 82 · realized $-1172.71.
 
 ## How this sleeve decides (like you are 10)
 
@@ -292,6 +292,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-13 09:30 ET | **BUY** | `DVN` | 3 | $46.76 | $1.41 | — | $319.85 | — | packet🟢 and camera net ≥ 2; gate cam_net_min=2,news_box=good; rank cond; list flatten; 🔵; ret5=+7.8; leftover $153.85 | join🟢 sector🔴 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟢 |
 | 2026-11-13 09:30 ET | **BUY** | `ANDG` | 2 | $62.82 | $1.26 | — | $192.95 | — | packet🟢 and camera net ≥ 2; gate cam_net_min=2,news_box=good; rank cond; list earn_react; 🔵; ret5=-1.3; leftover $153.85 | join🟡 sector🟢 gen🔴 news🟢 digest🟢 ab🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $192.95 | ▼ close $9,625.46 vs 09:30 $9,834.13 (session -206.00) | 16:00 close · cash $192.95 · equity $9,625.46 vs 09:30 $9,834.13 (-208.67; session marks -206.00) · 7 name(s) marked open→close (per-name table). ALH×77 09:30 $23.91 → close $23.63 -21.56; ATRO×33 09:30 $60.50 → close $58.96 -50.82; CECO×33 09:30 $55.42 → close $54.25 -38.61; CRWV×34 09:30 $56.01 → close $53.13 -97.92; EMBJ×23 09:30 $78.34 → close $78.73 +8.97; DVN×3 09:30 $46.76 → close $46.58 -0.54; ANDG×2 09:30 $62.82 → close $60.06 -5.52 | — |
+| 2026-11-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $192.95 | ▼ 09:30 equity $9,395.16 vs yday $9,625.46 (-230.30) | 09:30 open · cash $192.95 (unchanged overnight, no fees) · equity $9,395.16 vs prior close $9,625.46 (-230.30) · 7 name(s) re-marked at the open (per-name table). ALH×77 yday $23.63 → 09:30 $23.38 -19.25; ANDG×2 yday $60.06 → 09:30 $60.25 +0.38; ATRO×33 yday $58.96 → 09:30 $57.74 -40.26; CECO×33 yday $54.25 → 09:30 $53.00 -41.25; CRWV×34 yday $53.13 → 09:30 $49.36 -128.18; DVN×3 yday $46.58 → 09:30 $46.00 -1.74; EMBJ×23 yday $78.73 → 09:30 $78.73 +0.00 | — |
+| 2026-11-16 09:30 ET | **SELL** | `ALH` | 77 | $23.38 | $2.25 | $-123.05 | $1,990.96 | ▼ -123.05 after sell → book $9,392.91; vs 09:30 mark -2.25 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-16 09:30 ET | **SELL** | `ATRO` | 33 | $57.74 | $2.11 | $+24.84 | $3,894.27 | ▲ +24.84 after sell → book $9,390.80; vs 09:30 mark -2.11 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-16 09:30 ET | **SELL** | `CECO` | 33 | $53.00 | $2.11 | $-184.71 | $5,641.15 | ▼ -184.71 after sell → book $9,388.68; vs 09:30 mark -2.12 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-16 09:30 ET | **SELL** | `CRWV` | 34 | $49.36 | $2.12 | $-228.95 | $7,317.28 | ▼ -228.95 after sell → book $9,386.57; vs 09:30 mark -2.11 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-16 09:30 ET | **BUY** | `FROG` | 16 | $110.78 | $2.04 | — | $5,542.68 | — | packet🟢 and camera net ≥ 2; gate cam_net_min=2,news_box=good; rank cond; list ohlc_hot; 🔵; ret5=+12.5; leftover $1829.32 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `MBGL` | 78 | $23.44 | $2.22 | — | $3,712.14 | — | packet🟢 and camera net ≥ 2; gate cam_net_min=2,news_box=good; rank cond; list yday_gainer,yday_mover; 🔵; ret5=+18.5; leftover $1829.32 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `CHRD` | 12 | $149.14 | $2.03 | — | $1,920.43 | — | packet🟢 and camera net ≥ 2; gate cam_net_min=2,news_box=good; rank cond; list flatten; ret5=+9.8; leftover $1829.32 | join🟢 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 peer🟢 heat🔴 vol🟡 buy🟢 |
+| 2026-11-16 09:30 ET | **BUY** | `COLD` | 108 | $16.82 | $2.31 | — | $101.56 | — | packet🟢 and camera net ≥ 2; gate cam_net_min=2,news_box=good; rank cond; list ohlc_hot; 🔵; ret5=+4.2; leftover $1829.32 | join🟡 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟡 vol🟡 buy🟡 |
+| 2026-11-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $101.56 | ▼ close $9,364.58 vs 09:30 $9,395.16 (session -13.39) | 16:00 close · cash $101.56 · equity $9,364.58 vs 09:30 $9,395.16 (-30.58; session marks -13.39) · 7 name(s) marked open→close (per-name table). ANDG×2 09:30 $60.25 → close $62.85 +5.20; DVN×3 09:30 $46.00 → close $44.27 -5.19; EMBJ×23 09:30 $78.73 → close $78.73 +0.00; FROG×16 09:30 $110.78 → close $109.94 -13.52; MBGL×78 09:30 $23.44 → close $24.04 +46.80; CHRD×12 09:30 $149.14 → close $146.78 -28.32; COLD×108 09:30 $16.82 → close $16.65 -18.36 | — |
 
 ## Not taken
 

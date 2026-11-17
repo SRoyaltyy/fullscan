@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ overnight, no 🚨
 
-Cash book **-17.16%** ($8,284) · signal-only (no cash/fees) was -26.59%. Starts YES **0/30**. Fills 206 · skips 73 · realized $-2767.20.
+Cash book **-18.06%** ($8,194) · signal-only (no cash/fees) was -26.59%. Starts YES **0/30**. Fills 214 · skips 73 · realized $-2767.20.
 
 ## How this sleeve decides (like you are 10)
 
@@ -410,6 +410,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,283.96 | ▲ close $8,283.96 vs 09:30 $8,305.79 (session +0.00) | 16:00 close · cash $8,283.96 · no lots left · equity $8,283.96. | — |
 | 2026-11-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,283.96 | ▲ 09:30 equity $8,283.96 vs yday $8,283.96 (+0.00) | 09:30 open · cash $8,283.96 · no holdings · equity $8,283.96 vs prior close $8,283.96 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,283.96 | ▲ close $8,283.96 vs 09:30 $8,283.96 (session +0.00) | 16:00 close · cash $8,283.96 · no lots left · equity $8,283.96. | — |
+| 2026-11-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,283.96 | ▲ 09:30 equity $8,283.96 vs yday $8,283.96 (+0.00) | 09:30 open · cash $8,283.96 · no holdings · equity $8,283.96 vs prior close $8,283.96 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-16 09:30 ET | **BUY** | `ACM` | 14 | $70.40 | $2.03 | — | $7,296.33 | — | union ∩ overnight, no 🚨; gate overnight=True; list overnight; ret5=+5.6; leftover $1035.49 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 judge🔴 ab🟢 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `DUOT` | 211 | $4.90 | $2.72 | — | $6,259.71 | — | union ∩ overnight, no 🚨; gate overnight=True; list overnight; ret5=+0.1; leftover $1035.49 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `INFQ` | 127 | $8.13 | $2.37 | — | $5,224.83 | — | union ∩ overnight, no 🚨; gate overnight=True; list overnight; 🔵; ret5=-4.6; leftover $1035.49 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `OMER` | 59 | $17.39 | $2.17 | — | $4,196.65 | — | union ∩ overnight, no 🚨; gate overnight=True; list overnight; ret5=+3.4; leftover $1035.49 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `PAGS` | 132 | $7.83 | $2.39 | — | $3,160.70 | — | union ∩ overnight, no 🚨; gate overnight=True; list overnight; 🔵; ret5=+5.0; leftover $1035.49 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟡 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `POWL` | 7 | $140.00 | $2.01 | — | $2,178.69 | — | union ∩ overnight, no 🚨; gate overnight=True; list overnight; ret5=+7.2; leftover $1035.49 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 judge🔴 ab🟡 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `RCAT` | 281 | $3.68 | $3.62 | — | $1,140.99 | — | union ∩ overnight, no 🚨; gate overnight=True; list overnight; ret5=-5.9; leftover $1035.49 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 judge🔴 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `SHAZ` | 49 | $20.89 | $2.14 | — | $115.24 | — | union ∩ overnight, no 🚨; gate overnight=True; list overnight; 🔵; ret5=+3.4; leftover $1035.49 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-11-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $115.24 | ▼ close $8,194.41 vs 09:30 $8,283.96 (session -70.10) | 16:00 close · cash $115.24 · equity $8,194.41 vs 09:30 $8,283.96 (-89.55; session marks -70.10) · 8 name(s) marked open→close (per-name table). ACM×14 09:30 $70.40 → close $72.50 +29.40; DUOT×211 09:30 $4.90 → close $4.67 -48.53; INFQ×127 09:30 $8.13 → close $7.90 -29.21; OMER×59 09:30 $17.39 → close $16.68 -41.89; PAGS×132 09:30 $7.83 → close $7.99 +21.12; POWL×7 09:30 $140.00 → close $151.20 +78.40; RCAT×281 09:30 $3.68 → close $3.53 -42.15; SHAZ×49 09:30 $20.89 → close $20.13 -37.24 | — |
 
 ## Not taken
 

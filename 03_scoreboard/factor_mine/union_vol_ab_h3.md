@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-9.27%** ($9,073) · signal-only (no cash/fees) was +81.51%. Starts YES **27/30**. Fills 297 · skips 225 · realized $+477.57.
+Cash book **-9.51%** ($9,050) · signal-only (no cash/fees) was +81.51%. Starts YES **27/30**. Fills 313 · skips 225 · realized $+477.57.
 
 ## How this sleeve decides (like you are 10)
 
@@ -503,6 +503,24 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-13 09:30 ET | **SELL** | `SERV` | 1 | $2.95 | $0.05 | $-0.43 | $21.69 | ▼ -0.43 after sell → book $9,225.63; vs 09:30 mark -0.05 | dropped from list after 3 sess (min 3) | — |
 | 2026-11-13 09:30 ET | **BUY** | `BBOT` | 1 | $2.37 | $0.03 | — | $19.29 | — | combo gate; gate ab=good,vol=good; list probable,yday_gainer; 🔵; ret5=+8.3; leftover $2.71 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $19.29 | ▼ close $9,073.45 vs 09:30 $9,225.68 (session -152.15) | 16:00 close · cash $19.29 · equity $9,073.45 vs 09:30 $9,225.68 (-152.23; session marks -152.15) · 9 name(s) marked open→close (per-name table). ASPN×194 09:30 $6.00 → close $5.58 -81.48; CLX×11 09:30 $109.05 → close $109.46 +4.51; COTY×270 09:30 $4.03 → close $4.04 +2.97; FRVO×97 09:30 $11.71 → close $11.51 -19.40; GFR×150 09:30 $7.73 → close $7.74 +1.50; LINC×49 09:30 $23.01 → close $22.81 -9.80; TLS×148 09:30 $7.71 → close $7.35 -54.02; TTD×76 09:30 $15.63 → close $15.68 +3.80; BBOT×1 09:30 $2.37 → close $2.14 -0.23 | — |
+| 2026-11-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $19.29 | ▼ 09:30 equity $8,985.96 vs yday $9,073.45 (-87.49) | 09:30 open · cash $19.29 (unchanged overnight, no fees) · equity $8,985.96 vs prior close $9,073.45 (-87.49) · 9 name(s) re-marked at the open (per-name table). ASPN×194 yday $5.58 → 09:30 $5.40 -34.92; BBOT×1 yday $2.14 → 09:30 $2.13 -0.01; CLX×11 yday $109.46 → 09:30 $110.98 +16.72; COTY×270 yday $4.04 → 09:30 $4.10 +16.20; FRVO×97 yday $11.51 → 09:30 $10.93 -56.26; GFR×150 yday $7.74 → 09:30 $7.71 -4.50; LINC×49 yday $22.81 → 09:30 $22.69 -5.88; TLS×148 yday $7.35 → 09:30 $7.31 -5.92; TTD×76 yday $15.68 → 09:30 $15.51 -12.92 | — |
+| 2026-11-16 09:30 ET | **SELL** | `ASPN` | 194 | $5.40 | $2.61 | $-109.95 | $1,064.28 | ▼ -109.95 after sell → book $8,983.35; vs 09:30 mark -2.61 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-16 09:30 ET | **SELL** | `CLX` | 11 | $110.98 | $2.04 | $+62.92 | $2,283.01 | ▲ +62.92 after sell → book $8,981.30; vs 09:30 mark -2.05 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-16 09:30 ET | **SELL** | `COTY` | 270 | $4.10 | $3.54 | $-55.62 | $3,386.48 | ▼ -55.62 after sell → book $8,977.77; vs 09:30 mark -3.53 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-16 09:30 ET | **SELL** | `FRVO` | 97 | $10.93 | $2.31 | $-96.25 | $4,444.38 | ▼ -96.25 after sell → book $8,975.46; vs 09:30 mark -2.31 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-16 09:30 ET | **SELL** | `GFR` | 150 | $7.71 | $2.47 | $-3.41 | $5,598.40 | ▼ -3.41 after sell → book $8,972.98; vs 09:30 mark -2.48 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-16 09:30 ET | **SELL** | `LINC` | 49 | $22.69 | $2.16 | $-35.16 | $6,708.06 | ▼ -35.16 after sell → book $8,970.83; vs 09:30 mark -2.15 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-16 09:30 ET | **SELL** | `TLS` | 148 | $7.31 | $2.47 | $-77.42 | $7,787.47 | ▼ -77.42 after sell → book $8,968.36; vs 09:30 mark -2.47 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-16 09:30 ET | **SELL** | `TTD` | 76 | $15.51 | $2.24 | $+16.82 | $8,963.99 | ▲ +16.82 after sell → book $8,966.12; vs 09:30 mark -2.24 | dropped from list after 3 sess (min 3) | — |
+| 2026-11-16 09:30 ET | **BUY** | `ALNY` | 6 | $166.98 | $2.01 | — | $7,960.10 | — | combo gate; gate ab=good,vol=good; list flatten; ret5=+5.8; leftover $1120.50 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `ADRX` | 78 | $14.22 | $2.22 | — | $6,848.71 | — | combo gate; gate ab=good,vol=good; list probable,yday_gainer; 🔵; ret5=+7.3; leftover $1120.50 | join🟡 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `HUBS` | 5 | $222.08 | $2.00 | — | $5,736.31 | — | combo gate; gate ab=good,vol=good; list probable,yday_gainer; 🔵; ret5=+8.3; leftover $1120.50 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `XLAB` | 549 | $2.04 | $7.08 | — | $4,609.27 | — | combo gate; gate ab=good,vol=good; list yday_gainer,yday_mover; 🔵; ret5=+42.7; leftover $1120.50 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `NGEN` | 605 | $1.85 | $7.80 | — | $3,482.21 | — | combo gate; gate ab=good,vol=good; list yday_gainer,yday_mover; ret5=+41.4; leftover $1120.50 | join🔴 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `CURI` | 367 | $3.05 | $4.73 | — | $2,358.13 | — | combo gate; gate ab=good,vol=good; list yday_gainer,yday_mover; 🔵; ret5=+24.7; leftover $1120.50 | join🟢 sector🟡 gen🔴 news🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `MBGL` | 47 | $23.44 | $2.13 | — | $1,254.32 | — | combo gate; gate ab=good,vol=good; list yday_gainer,yday_mover; 🔵; ret5=+18.5; leftover $1120.50 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-16 09:30 ET | **BUY** | `AVEX` | 91 | $12.30 | $2.26 | — | $132.75 | — | combo gate; gate ab=good,vol=good; list yday_gainer; ret5=+22.6; leftover $1120.50 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 judge🔴 ab🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $132.75 | ▲ close $9,049.50 vs 09:30 $8,985.96 (session +113.64) | 16:00 close · cash $132.75 · equity $9,049.50 vs 09:30 $8,985.96 (+63.54; session marks +113.64) · 9 name(s) marked open→close (per-name table). BBOT×1 09:30 $2.13 → close $1.98 -0.15; ALNY×6 09:30 $166.98 → close $159.73 -43.50; ADRX×78 09:30 $14.22 → close $14.00 -17.16; HUBS×5 09:30 $222.08 → close $231.98 +49.50; XLAB×549 09:30 $2.04 → close $1.96 -43.92; NGEN×605 09:30 $1.85 → close $1.82 -18.15; CURI×367 09:30 $3.05 → close $3.21 +58.72; MBGL×47 09:30 $23.44 → close $24.04 +28.20; AVEX×91 09:30 $12.30 → close $13.40 +100.10 | — |
 
 ## Not taken
 
