@@ -1,6 +1,6 @@
 {
- "date": "2026-11-16",
- "generated_at": "2026-11-16T22:55:15.641054+00:00",
+ "date": "2026-11-17",
+ "generated_at": "2026-11-17T09:15:16.839386+00:00",
  "catalog": {
   "generated_at": "2026-11-14T18:45:12.782675+00:00",
   "channels": 365,
@@ -34,75 +34,54 @@
   }
  },
  "collect": {
-  "generated_at": "2026-11-16T22:54:52.991484+00:00",
+  "generated_at": "2026-11-17T09:14:56.610004+00:00",
   "enabled_sources": 118,
   "sources_ok": 118,
   "sources_failed": 0,
   "coverage_status": "degraded",
   "counts": {
-   "observed": 1985,
-   "old": 1447,
-   "future": 11,
-   "undated": 298,
-   "new": 97,
-   "duplicates": 430
+   "observed": 1817,
+   "old": 1156,
+   "future": 2,
+   "undated": 325,
+   "new": 132,
+   "duplicates": 527
   },
-  "current_dated_documents": 250
+  "current_dated_documents": 356
  },
  "new_today": {
-  "count": 97,
+  "count": 132,
   "by_source": {
-   "us-doj-b3d27e1dc3": 16,
-   "us-fda-5696b24295": 10,
-   "eu-commission-07d4f58ccf": 10,
-   "eu-council-9d9e9444da": 9,
-   "us-fcc-e95ecda3bb": 5,
-   "us-doj-e05071794d": 4,
-   "us-fda-03f7703006": 4,
-   "us-dol-99f477805a": 4,
-   "uk-govuk-decision": 3,
-   "us-govinfo-dcpd": 3,
-   "us-hhs-6f995a5754": 3,
-   "in-rbi-cc71120b98": 3,
-   "de-bundesbank-027ac4024f": 3,
-   "hk-hkma-public-press": 2,
-   "uk-govuk-product_safety_alert_report_recall": 2,
-   "us-fsis-2f49ece915": 2,
-   "eu-ecb-991c113079": 2,
+   "us-federal-register": 99,
+   "us-govinfo-bills": 19,
+   "jp-boj-d488538690": 4,
    "nz-rbnz-gnews": 2,
-   "us-govinfo-crpt": 1,
-   "us-white-house-0691096d16": 1,
-   "us-bis-index": 1,
-   "us-ustr-index": 1,
-   "eu-eba-60bdc59843": 1,
-   "ca-boc-30d6d14378": 1,
-   "ca-boc-a5cb9e38c1": 1,
-   "ch-snb-b0f42db828": 1,
-   "de-bundesbank-e5b1c4a067": 1,
-   "io-bis-b3dfd5b7aa": 1
+   "in-rbi-cc71120b98": 2,
+   "de-bundesbank-027ac4024f": 2,
+   "us-fhfa-index": 1,
+   "eu-commission-07d4f58ccf": 1,
+   "uk-fca-7b9977ec8e": 1,
+   "jp-meti-index": 1
   },
   "by_class": {
-   "watch": 43,
-   "routine": 27,
-   "high": 17,
-   "docket": 8,
-   "noise": 2
+   "routine": 113,
+   "high": 7,
+   "noise": 1,
+   "watch": 11
   }
  },
  "parsed_today": {
-  "count": 146,
+  "count": 46,
   "by_class": {
-   "high": 34,
-   "routine": 49,
-   "watch": 57,
-   "docket": 8,
-   "noise": 2
+   "high": 6,
+   "routine": 34,
+   "watch": 6
   }
  },
  "n_failures": 0,
  "dates": [
-  "2026-11-16"
+  "2026-11-17"
  ],
- "href": "https://raw.githubusercontent.com/SRoyaltyy/fullscan/main/data/source_board/2026-11-16.json",
+ "href": "https://raw.githubusercontent.com/SRoyaltyy/fullscan/main/data/source_board/2026-11-17.json",
  "pages": "https://sroyaltyy.github.io/fullscan/dashboard/source-board/"
 }

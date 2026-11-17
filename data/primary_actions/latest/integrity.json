@@ -1,7 +1,7 @@
 {
-  "checked_at": "2026-11-16T22:55:15.513906+00:00",
-  "official_unauthenticated_gets": 147,
-  "retained_unique_documents": 10683,
+  "checked_at": "2026-11-17T09:15:16.722716+00:00",
+  "official_unauthenticated_gets": 148,
+  "retained_unique_documents": 10815,
   "sqlite_integrity": "ok",
   "llm_calls": 0,
   "paid_api_calls": 0,
