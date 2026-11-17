@@ -495,14 +495,14 @@
         "tariff_semis_solar"
       ],
       "entry_date": "2026-11-17",
-      "entry_open": 91.26,
+      "entry_open": 91.1975,
       "window_through": "2026-11-17",
       "trading_days_elapsed": 0,
       "complete": false,
       "latest_close": 78.48,
-      "current_return_pct": 16.28,
+      "current_return_pct": 16.2,
       "horizon_returns_pct": {},
-      "mfe_pct": 16.81,
+      "mfe_pct": 16.73,
       "mfe_day": "2026-11-17",
       "ever_profitable": true,
       "first_profitable_day": "2026-11-17"
@@ -1757,14 +1757,14 @@
         "fed_rate_path"
       ],
       "entry_date": "2026-11-17",
-      "entry_open": 309.865,
+      "entry_open": 310.0,
       "window_through": "2026-11-17",
       "trading_days_elapsed": 0,
       "complete": false,
       "latest_close": 308.29,
-      "current_return_pct": 0.51,
+      "current_return_pct": 0.55,
       "horizon_returns_pct": {},
-      "mfe_pct": 0.63,
+      "mfe_pct": 0.67,
       "mfe_day": "2026-11-17",
       "ever_profitable": true,
       "first_profitable_day": "2026-11-17"
@@ -2557,7 +2557,7 @@
         "n": 51,
         "wins": 51,
         "win_rate": 100.0,
-        "avg": 4.07
+        "avg": 4.06
       },
       "close_5d": null
     }
