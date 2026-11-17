@@ -1,6 +1,6 @@
 {
   "date": "2026-11-17",
-  "generated_at": "2026-11-17T14:06:45.401270-05:00",
+  "generated_at": "2026-11-17T14:06:51.496290-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -1817,125 +1817,183 @@
       "preview": "# flatten_robust card \u2014 2026-11-17\n_Generated 2026-11-17T14:18:07 \u2014 live `flatten_robust`._\n**morning S missing; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**\n- Score **\u2014** (\u2014) \u00b7 route **io**\n- Cash leftover **$116,187.58** (after 09:30 $116,187.58 \u00b7 after 16:00 $116,187.58)\n- Prior close **$116,187.58** \u00b7 09:30 **$116,187.58** \u00b7 overnight **$+0.00** \u00b7 session **$+0.00** \u00b7 16:00 **$116,187.58**\n- Overnight lots **0** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$0.00** \u2264 leftover after sells **$116,187.58** \u00b7 2026-11-16 BUY \u2014 \u00b7 SELL \u2014 \u00b7 keys: date, policy, generated, score, predict, hard_red, flatten_ok, n_priced_buys, prior_book, route, cash_open, cash_after_0930 \u00b7 [{\"date\": \"2026-08-13\", \"route\": \"io\", \"score\": 8.525, \"predict\": \"UP\", \"yday_equity\": 100000.0, \"open_cash\": 100000.0, \"open_held\": 0, \"open_equity\": 100000.0, \"overnight_delta\": 0.0, \"session_delta\": -169.94, \"equity\": 99830.06, \"cash\": 9917.52, \"overnight_names\": \"\", \"overnight\": [], \"marks\": [{\"ticker\": \"BTSG\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 166, \"shares\": 166, \"side\": \"BUY\", \"yday_px\": null, \"open_px\":"
     },
     {
-      "key": "weather",
-      "title": "Weather / regime",
+      "key": "live_boards",
+      "title": "Live 1d BUY/SELL strip",
       "date": "2026-11-17",
       "ok": true,
       "pushed": true,
-      "at": "2026-11-17T14:06:03.300963-05:00",
+      "at": "2026-11-17T14:06:50.788259-05:00",
       "files": [
         {
-          "path": "01_daily/weather/2026-11-17_weather.json",
+          "path": "data/day_board/today.json",
           "ok": true,
           "reason": "",
-          "size": 9643,
-          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -10.7, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -3.8, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.57, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': 0.7050000000000001, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.63, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -7.255, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -3.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
-        },
-        {
-          "path": "01_daily/weather/2026-11-17_weather.md",
-          "ok": true,
-          "reason": "",
-          "size": 5341,
-          "preview": "# Weather report \u2014 2026-11-17\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
-        },
-        {
-          "path": "01_daily/weather/2026-11-17_weather.after-freeze-1.json",
-          "ok": true,
-          "reason": "",
-          "size": 9752,
-          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -10.7, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -3.8, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.57, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': 0.7050000000000001, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.63, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -7.255, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -3.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
-        }
-      ],
-      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -10.7, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -3.8, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.57, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': 0.7050000000000001, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.63, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -7.255, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -3.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-11-17\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade. \u00b7 weather sectors 11 \u00b7 Basic Materials={'score': -10.7, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -3.8, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'sco"
-    },
-    {
-      "key": "join",
-      "title": "Join / match rank",
-      "date": "2026-11-17",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-11-17T14:06:12.340104-05:00",
-      "files": [
-        {
-          "path": "data/join/2026-11-17_ranked.csv",
-          "ok": true,
-          "reason": "",
-          "size": 2304266,
-          "preview": "5883 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 TS, CARG, FOXA, FOX, NYT"
-        }
-      ],
-      "preview": "5883 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 TS, CARG, FOXA, FOX, NYT"
-    },
-    {
-      "key": "peer_rs",
-      "title": "Peer RS",
-      "date": "2026-11-17",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-11-17T14:06:17.564677-05:00",
-      "files": [
-        {
-          "path": "data/peers/2026-11-17_peer_rs.csv",
-          "ok": true,
-          "reason": "",
-          "size": 810611,
-          "preview": "5023 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
-        }
-      ],
-      "preview": "5023 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
-    },
-    {
-      "key": "stock_book",
-      "title": "Stock book + green",
-      "date": "2026-11-17",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-11-17T14:06:44.694334-05:00",
-      "files": [
-        {
-          "path": "data/stock_book/2026-11-17_stock_book.after-freeze-1.json",
-          "ok": true,
-          "reason": "",
-          "size": 1471480,
-          "preview": "1d BUY THC, APP, DBX, VRSK, APPN \u00b7 SELL ENVX, FLNC, RGTI, QUBT, TE, METC, FCEL, QBTS"
-        },
-        {
-          "path": "data/stock_book/2026-11-17_green.json",
-          "ok": true,
-          "reason": "",
-          "size": 585,
-          "preview": "green 0 \u00b7 "
-        },
-        {
-          "path": "data/stock_book/2026-11-17_input_health.after-freeze-1.json",
-          "ok": true,
-          "reason": "",
-          "size": 2612,
-          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
-        },
-        {
-          "path": "data/stock_book/2026-11-17_suggestions.json",
-          "ok": true,
-          "reason": "",
-          "size": 12146,
+          "size": 29423,
           "preview": "2026-11-17 BUY THC, APP, DBX, VRSK, APPN \u00b7 SELL ENVX, FLNC, RGTI, QUBT, TE, METC, FCEL, QBTS"
         },
         {
-          "path": "data/stock_book/latest_suggestions.json",
+          "path": "data/day_board/latest.json",
           "ok": true,
           "reason": "",
-          "size": 12146,
+          "size": 1116,
+          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
+        },
+        {
+          "path": "data/day_board/2026-11-17.after-freeze-1.json",
+          "ok": true,
+          "reason": "",
+          "size": 96460,
+          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href"
+        },
+        {
+          "path": "data/day_board/2026-11-17_tickets.after-freeze-1.json",
+          "ok": true,
+          "reason": "",
+          "size": 60012,
           "preview": "2026-11-17 BUY THC, APP, DBX, VRSK, APPN \u00b7 SELL ENVX, FLNC, RGTI, QUBT, TE, METC, FCEL, QBTS"
         },
         {
-          "path": "01_daily/2026-11-17_stock_book.after-freeze-1.md",
+          "path": "data/day_board/strategy_tickets.json",
           "ok": true,
           "reason": "",
-          "size": 81256,
-          "preview": "# Stock book \u2014 2026-11-17\n_Generated 2026-11-17T14:06:25.581282-05:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+          "size": 924504,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/2026-11-17_strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 924504,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/factor_mine/morning_look/2026-11-17.json",
+          "ok": true,
+          "reason": "",
+          "size": 230172,
+          "preview": "keys: asof_commit, asof_committed_at, cutoff_et, date, n, read_from, rows"
+        },
+        {
+          "path": "data/day_board/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 1325091,
+          "preview": "2026-11-17 BUY THC, APP, DBX, VRSK, APPN \u00b7 SELL ENVX, FLNC, RGTI, QUBT, TE, METC, FCEL, QBTS"
+        },
+        {
+          "path": "data/factor_mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 924504,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 60012,
+          "preview": "2026-11-17 BUY THC, APP, DBX, VRSK, APPN \u00b7 SELL ENVX, FLNC, RGTI, QUBT, TE, METC, FCEL, QBTS"
+        },
+        {
+          "path": "dashboard/factor-mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 924504,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 924504,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 1325091,
+          "preview": "2026-11-17 BUY THC, APP, DBX, VRSK, APPN \u00b7 SELL ENVX, FLNC, RGTI, QUBT, TE, METC, FCEL, QBTS"
+        },
+        {
+          "path": "data/day_board/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 1705,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        },
+        {
+          "path": "dashboard/factor-mine/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 1705,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        },
+        {
+          "path": "data/day_board/today_strategies.after-freeze-1.json",
+          "ok": true,
+          "reason": "",
+          "size": 281364,
+          "preview": "2026-11-04 BUY CDNA, BLFS, VEEV, ILMN, PRCH, LAUR, CNK, CHEF \u00b7 SELL NEOV, BIDU, ROIV, BAK, PAL, GFL, VNET, NOK"
+        },
+        {
+          "path": "data/day_board/today_strategies.after-freeze-2.json",
+          "ok": true,
+          "reason": "",
+          "size": 1165723,
+          "preview": "2026-11-04 BUY CDNA, BLFS, VEEV, ILMN, PRCH, LAUR, CNK, TRU \u00b7 SELL NEOV, BIDU, ROIV, BAK, GFL, PAL, VNET, NFLX"
+        },
+        {
+          "path": "data/day_board/today_strategies.after-freeze-3.json",
+          "ok": true,
+          "reason": "",
+          "size": 885881,
+          "preview": "2026-11-05 BUY XYZ, CDW, KD, JKHY, APPN, VRSN, DBX, MSFT \u00b7 SELL ENVX, AMKR, FCEL, METC, AMPX, EAF, HYLN, RGTI"
+        },
+        {
+          "path": "data/day_board/today_strategies.after-freeze-4.json",
+          "ok": true,
+          "reason": "",
+          "size": 1462227,
+          "preview": "2026-11-10 BUY MGNI, TMDX, ETON, WRBY, ADPT, RBLX, SG, SEZL \u00b7 SELL XPRO, KOS, ACDC, BTU, VET, AESI, IEP, SOC"
+        },
+        {
+          "path": "data/day_board/today_strategies.after-freeze-5.json",
+          "ok": true,
+          "reason": "",
+          "size": 1410192,
+          "preview": "2026-11-11 BUY HNST, HLF, CLX, PRCH, PFGC, TTD, GCT, ZETA \u00b7 SELL GTM, VSAT, ZS, ENPH, EXFY, ASTS, ECX, CGC"
+        },
+        {
+          "path": "data/day_board/today_strategies.after-freeze-6.json",
+          "ok": true,
+          "reason": "",
+          "size": 1388700,
+          "preview": "2026-11-13 BUY PM, CON, NET, ARDT, ATEN \u00b7 SELL BLDP, FLNC, BEP, LTBR, CWEN, AXON, FMC, JBI"
+        },
+        {
+          "path": "data/day_board/today_strategies.after-freeze-7.json",
+          "ok": true,
+          "reason": "",
+          "size": 1373415,
+          "preview": "2026-11-13 BUY PM, CON, NET, ARDT, ATEN \u00b7 SELL BLDP, FLNC, BEP, LTBR, CWEN, AXON, FMC, JBI"
+        },
+        {
+          "path": "data/day_board/today_strategies.after-freeze-8.json",
+          "ok": true,
+          "reason": "",
+          "size": 1373415,
+          "preview": "2026-11-13 BUY PM, CON, NET, ARDT, ATEN \u00b7 SELL BLDP, FLNC, BEP, LTBR, CWEN, AXON, FMC, JBI"
+        },
+        {
+          "path": "data/day_board/today_strategies.after-freeze-9.json",
+          "ok": true,
+          "reason": "",
+          "size": 1373578,
+          "preview": "2026-11-13 BUY PM, CON, NET, ARDT, ATEN \u00b7 SELL BLDP, FLNC, BEP, LTBR, CWEN, AXON, FMC, JBI"
         }
       ],
-      "preview": "1d BUY THC, APP, DBX, VRSK, APPN \u00b7 SELL ENVX, FLNC, RGTI, QUBT, TE, METC, FCEL, QBTS \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-11-17 BUY THC, APP, DBX, VRSK, APPN \u00b7 SELL ENVX, FLNC, RGTI, QUBT, TE, METC, FCEL, QBTS \u00b7 2026-11-17 BUY THC, APP, DBX, VRSK, APPN \u00b7 SELL ENVX, FLNC, RGTI, QUBT, TE, METC, FCEL, QBTS \u00b7 # Stock book \u2014 2026-11-17\n_Generated 2026-11-17T14:06:25.581282-05:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+      "preview": "2026-11-17 BUY THC, APP, DBX, VRSK, APPN \u00b7 SELL ENVX, FLNC, RGTI, QUBT, TE, METC, FCEL, QBTS \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href \u00b7 2026-11-17 BUY THC, APP, DBX, VRSK, APPN \u00b7 SELL ENVX, FLNC, RGTI, QUBT, TE, METC, FCEL, QBTS \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: asof_commit, asof_committed_at, cutoff_et, date, n, read_from, rows \u00b7 2026-11-17 BUY THC, APP, DBX, VRSK, APPN \u00b7 SELL ENVX, FLNC, RGTI, QUBT, TE, METC, FCEL, QBTS \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-11-17 BUY THC, APP, DBX, VRSK, APPN \u00b7 SELL ENVX, FLNC, RGTI, QUBT, TE, METC, FCEL, QBTS \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, stra"
     }
   ],
   "href": {
@@ -1947,40 +2005,8 @@
   "frozen_write_skips": [
     {
       "path": "data/day_board/2026-11-17.json",
-      "at": "2026-11-17T14:06:04-05:00",
-      "commit_msg": "auto: land weather [2026-11-17]",
-      "workflow": "Pre-Open ALL (predictive one-shot)",
-      "run_id": "44151423892",
-      "manifest": "research/input_freeze/2026-11-17/manifest.json"
-    },
-    {
-      "path": "01_daily/2026-11-17_preopen_qc.json",
-      "at": "2026-11-17T14:06:05-05:00",
-      "commit_msg": "auto: pre-open leftover sweep [2026-11-17_1906]",
-      "workflow": "Pre-Open ALL (predictive one-shot)",
-      "run_id": "44151423892",
-      "manifest": "research/input_freeze/2026-11-17/manifest.json"
-    },
-    {
-      "path": "data/day_board/2026-11-17.json",
-      "at": "2026-11-17T14:06:13-05:00",
-      "commit_msg": "auto: land join [2026-11-17]",
-      "workflow": "Pre-Open ALL (predictive one-shot)",
-      "run_id": "44151423892",
-      "manifest": "research/input_freeze/2026-11-17/manifest.json"
-    },
-    {
-      "path": "data/day_board/2026-11-17.json",
-      "at": "2026-11-17T14:06:18-05:00",
-      "commit_msg": "auto: land peer_rs [2026-11-17]",
-      "workflow": "Pre-Open ALL (predictive one-shot)",
-      "run_id": "44151423892",
-      "manifest": "research/input_freeze/2026-11-17/manifest.json"
-    },
-    {
-      "path": "data/day_board/2026-11-17.json",
-      "at": "2026-11-17T14:06:45-05:00",
-      "commit_msg": "auto: land stock_book [2026-11-17]",
+      "at": "2026-11-17T14:06:52-05:00",
+      "commit_msg": "auto: land live_boards [2026-11-17]",
       "workflow": "Pre-Open ALL (predictive one-shot)",
       "run_id": "44151423892",
       "manifest": "research/input_freeze/2026-11-17/manifest.json"
