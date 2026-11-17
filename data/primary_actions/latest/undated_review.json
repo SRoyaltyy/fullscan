@@ -1,11 +1,83 @@
 [
   {
-    "title": "What we’re learning from firms engaging with our innovation services",
-    "url": "https://www.fca.org.uk/news/blogs/what-were-learning-firms-engaging-our-innovation-services",
-    "native_id": "177646",
+    "title": "Applications",
+    "url": "https://www.fcc.gov/edoc/426991",
+    "native_id": "426991",
     "published_at": null,
-    "published_raw": "Tuesday, November 17, 2026 - 09:01",
-    "summary": "Three themes stand out: the growing use of AI, innovation crossing traditional sector boundaries, and financial inclusion.As firms develop new products, services and business models, many engage with us through our Regulatory Sandbox and Innovation Pathways to understand how regulation applies to their proposition or to test innovative ideas in a controlled environment.Looking across applications lets us observe emerging trends. It helps us understand how technologies are evolving, and identify emerging regulatory questions.In turn, this supports our wider work and helps us keep pace with developments across financial services.Applications at a glance37% involved AI (up from 31% in 2025), making it the most common technology theme.92% of the firms engaging with our services were doing so for the first time, highlighting continued demand from new innovators.64% of proposed solutions included a retail element, showing continued focus on consumer-facing innovation.The growing use of AIFirms are focusing increasingly on how to deploy, oversee and govern AI in their business models.They’re looking at how to use AI to help consumers better understand and manage their finances, support bu",
+    "published_raw": "",
+    "summary": ".",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Federal Communications Commission — Public Notices",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
+    },
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 10893,
+    "first_seen": "2026-11-17T21:46:57.732960+00:00",
+    "last_seen": "2026-11-17T21:46:57.732960+00:00",
+    "source_ids": [
+      "us-fcc-e95ecda3bb"
+    ]
+  },
+  {
+    "title": "Actions",
+    "url": "https://www.fcc.gov/edoc/426992",
+    "native_id": "426992",
+    "published_at": null,
+    "published_raw": "",
+    "summary": ".",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Federal Communications Commission — Public Notices",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
+    },
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 10894,
+    "first_seen": "2026-11-17T21:46:57.732960+00:00",
+    "last_seen": "2026-11-17T21:46:57.732960+00:00",
+    "source_ids": [
+      "us-fcc-e95ecda3bb"
+    ]
+  },
+  {
+    "title": "Pleadings",
+    "url": "https://www.fcc.gov/edoc/426993",
+    "native_id": "426993",
+    "published_at": null,
+    "published_raw": "",
+    "summary": ".",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Federal Communications Commission — Public Notices",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
+    },
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 10895,
+    "first_seen": "2026-11-17T21:46:57.732960+00:00",
+    "last_seen": "2026-11-17T21:46:57.732960+00:00",
+    "source_ids": [
+      "us-fcc-e95ecda3bb"
+    ]
+  },
+  {
+    "title": "FCA charges individual with money laundering",
+    "url": "https://www.fca.org.uk/news/press-releases/fca-charges-individual-money-laundering",
+    "native_id": "177771",
+    "published_at": null,
+    "published_raw": "Tuesday, November 17, 2026 - 14:19",
+    "summary": "The FCA has charged Raymond Fieldhouse with a money laundering offence. Mr Fieldhouse is accused of laundering over £1.42m made from investment scams between 1 June 2017 and 1 August 2018.Mr Fieldhouse appeared at Stockport Magistrates’ Court on 17 November 2026 where he did not enter a plea. He was remanded in custody until his plea and trial preparation hearing on 22 December 2026 at Southwark Crown Court.Notes to editorsRaymond Fieldhouse was born on 29 April 1982. His nationality is British/Venezuelan. Mr Fieldhouse is accused of money laundering, contrary to section 327 of the Proceeds of Crime Act 2002. Fighting financial crime is a priority in the FCA’s 5-year strategy.The FCA enables a fair and thriving financial services market for the good of consumers and the economy. Find out more about the FCA.",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
@@ -16,35 +88,35 @@
       "family": "financial_enforcement"
     },
     "primary_source_id": "uk-fca-7b9977ec8e",
-    "n": 10804,
-    "first_seen": "2026-11-17T09:14:56.610004+00:00",
-    "last_seen": "2026-11-17T09:14:56.610004+00:00",
+    "n": 10915,
+    "first_seen": "2026-11-17T21:46:57.732960+00:00",
+    "last_seen": "2026-11-17T21:46:57.732960+00:00",
     "source_ids": [
       "uk-fca-7b9977ec8e"
     ]
   },
   {
-    "title": "State Minister TAKAGI Signs Memorandum of Cooperation on Offshore Wind with the Department for Energy Security and Net Zero of the United Kingdom",
-    "url": "https://www.meti.go.jp/english/press/2026/11/20261110002.html",
-    "native_id": "https://www.meti.go.jp/english/press/2026/11/20261110002.html",
+    "title": "Getting the full picture of trading in UK shares",
+    "url": "https://www.fca.org.uk/news/blogs/getting-full-picture-trading-uk-shares",
+    "native_id": "177231",
     "published_at": null,
-    "published_raw": null,
-    "summary": "",
+    "published_raw": "Tuesday, November 17, 2026 - 10:12",
+    "summary": "Why a complete picture mattersIn today’s market, firms can choose where and how they trade.Previous analysis has found that this competitive landscape benefits firms in wholesale markets. However, trading in UK shares has become more dispersed across venues and different ways of executing trades. Better information about market-wide activity helps firms assess liquidity, make investment decisions and understand trading costs. However, obtaining a complete picture of that activity has become more difficult.As we set out in CP26/30, overall trading activity in UK equity markets has been robust over recent years (see figure 1).",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Japan Ministry of Economy Trade and Industry",
-      "jurisdiction": "JP",
-      "family": "trade_and_industry_policy"
+      "issuer": "Financial Conduct Authority",
+      "jurisdiction": "UK",
+      "family": "financial_enforcement"
     },
-    "primary_source_id": "jp-meti-index",
-    "n": 10813,
-    "first_seen": "2026-11-17T09:14:56.610004+00:00",
-    "last_seen": "2026-11-17T09:14:56.610004+00:00",
+    "primary_source_id": "uk-fca-7b9977ec8e",
+    "n": 10916,
+    "first_seen": "2026-11-17T21:46:57.732960+00:00",
+    "last_seen": "2026-11-17T21:46:57.732960+00:00",
     "source_ids": [
-      "jp-meti-index"
+      "uk-fca-7b9977ec8e"
     ]
   }
 ]

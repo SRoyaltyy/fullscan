@@ -1,6 +1,6 @@
 {
  "date": "2026-11-17",
- "generated_at": "2026-11-17T09:15:16.839386+00:00",
+ "generated_at": "2026-11-17T21:47:18.932370+00:00",
  "catalog": {
   "generated_at": "2026-11-14T18:45:12.782675+00:00",
   "channels": 365,
@@ -34,48 +34,72 @@
   }
  },
  "collect": {
-  "generated_at": "2026-11-17T09:14:56.610004+00:00",
+  "generated_at": "2026-11-17T21:46:57.732960+00:00",
   "enabled_sources": 118,
   "sources_ok": 118,
   "sources_failed": 0,
   "coverage_status": "degraded",
   "counts": {
-   "observed": 1817,
-   "old": 1156,
-   "future": 2,
-   "undated": 325,
-   "new": 132,
-   "duplicates": 527
+   "observed": 1914,
+   "old": 1165,
+   "future": 0,
+   "undated": 347,
+   "new": 112,
+   "duplicates": 637
   },
-  "current_dated_documents": 356
+  "current_dated_documents": 467
  },
  "new_today": {
-  "count": 132,
+  "count": 112,
   "by_source": {
-   "us-federal-register": 99,
-   "us-govinfo-bills": 19,
-   "jp-boj-d488538690": 4,
-   "nz-rbnz-gnews": 2,
-   "in-rbi-cc71120b98": 2,
-   "de-bundesbank-027ac4024f": 2,
-   "us-fhfa-index": 1,
-   "eu-commission-07d4f58ccf": 1,
-   "uk-fca-7b9977ec8e": 1,
-   "jp-meti-index": 1
+   "us-doj-b3d27e1dc3": 25,
+   "us-fda-5696b24295": 13,
+   "eu-commission-07d4f58ccf": 10,
+   "uk-govuk-decision": 7,
+   "us-govinfo-dcpd": 5,
+   "us-doj-e05071794d": 5,
+   "in-rbi-cc71120b98": 5,
+   "uk-govuk-product_safety_alert_report_recall": 4,
+   "eu-council-9d9e9444da": 4,
+   "hk-hkma-public-press": 3,
+   "us-fdic-index": 3,
+   "us-fcc-e95ecda3bb": 3,
+   "uk-govuk-government_response": 2,
+   "us-fda-2cdcdcca63": 2,
+   "us-hhs-6f995a5754": 2,
+   "us-dol-99f477805a": 2,
+   "uk-fca-7b9977ec8e": 2,
+   "ca-boc-30d6d14378": 2,
+   "uk-govuk-consultation_outcome": 1,
+   "uk-govuk-medical_safety_alert": 1,
+   "us-ftc-58b0383166": 1,
+   "us-occ-6f63126133": 1,
+   "us-cftc-fda5c3631d": 1,
+   "us-fda-00e9311ef2": 1,
+   "us-osha-d8e445af0b": 1,
+   "eu-court-1433471e58": 1,
+   "eu-ecb-991c113079": 1,
+   "jp-boj-d488538690": 1,
+   "de-bundesbank-027ac4024f": 1,
+   "de-bundesbank-e5b1c4a067": 1,
+   "io-wto-497f28e20d": 1
   },
   "by_class": {
-   "routine": 113,
-   "high": 7,
-   "noise": 1,
-   "watch": 11
+   "watch": 46,
+   "noise": 2,
+   "routine": 37,
+   "high": 17,
+   "docket": 10
   }
  },
  "parsed_today": {
-  "count": 46,
+  "count": 157,
   "by_class": {
-   "high": 6,
-   "routine": 34,
-   "watch": 6
+   "high": 30,
+   "routine": 76,
+   "watch": 47,
+   "noise": 2,
+   "docket": 7
   }
  },
  "n_failures": 0,

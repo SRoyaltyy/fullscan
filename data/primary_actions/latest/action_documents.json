@@ -1,5 +1,502 @@
 [
   {
+    "title": "DCPD-202600697 - Message on General Pulaski Memorial Day",
+    "url": "https://www.govinfo.gov/app/details/DCPD-202600697",
+    "native_id": "DCPD-202600697",
+    "published_at": "2026-11-17T21:12:00+00:00",
+    "published_raw": "Tue, 17 Nov 2026 21:12:00 +0000",
+    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "presidential_document",
+      "document_stage": "presidential_document_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Compilation of Presidential Documents",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-dcpd",
+    "n": 10838,
+    "first_seen": "2026-11-17T21:46:57.732960+00:00",
+    "last_seen": "2026-11-17T21:46:57.732960+00:00",
+    "source_ids": [
+      "us-govinfo-dcpd"
+    ]
+  },
+  {
+    "title": "DCPD-202600688 - Remarks at a Campaign Rally for Texas Republican Candidates in San Antonio, Texas",
+    "url": "https://www.govinfo.gov/app/details/DCPD-202600688",
+    "native_id": "DCPD-202600688",
+    "published_at": "2026-11-17T21:12:00+00:00",
+    "published_raw": "Tue, 17 Nov 2026 21:12:00 +0000",
+    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "presidential_document",
+      "document_stage": "presidential_document_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Compilation of Presidential Documents",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-dcpd",
+    "n": 10837,
+    "first_seen": "2026-11-17T21:46:57.732960+00:00",
+    "last_seen": "2026-11-17T21:46:57.732960+00:00",
+    "source_ids": [
+      "us-govinfo-dcpd"
+    ]
+  },
+  {
+    "title": "DCPD-202600699 - Remarks During a Telerally for Georgia Republican Candidates",
+    "url": "https://www.govinfo.gov/app/details/DCPD-202600699",
+    "native_id": "DCPD-202600699",
+    "published_at": "2026-11-17T21:12:00+00:00",
+    "published_raw": "Tue, 17 Nov 2026 21:12:00 +0000",
+    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "presidential_document",
+      "document_stage": "presidential_document_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Compilation of Presidential Documents",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-dcpd",
+    "n": 10836,
+    "first_seen": "2026-11-17T21:46:57.732960+00:00",
+    "last_seen": "2026-11-17T21:46:57.732960+00:00",
+    "source_ids": [
+      "us-govinfo-dcpd"
+    ]
+  },
+  {
+    "title": "DCPD-202600701 - Remarks in an Exchange With Reporters Prior to Departure for Youngstown, Ohio",
+    "url": "https://www.govinfo.gov/app/details/DCPD-202600701",
+    "native_id": "DCPD-202600701",
+    "published_at": "2026-11-17T21:12:00+00:00",
+    "published_raw": "Tue, 17 Nov 2026 21:12:00 +0000",
+    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "presidential_document",
+      "document_stage": "presidential_document_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Compilation of Presidential Documents",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-dcpd",
+    "n": 10835,
+    "first_seen": "2026-11-17T21:46:57.732960+00:00",
+    "last_seen": "2026-11-17T21:46:57.732960+00:00",
+    "source_ids": [
+      "us-govinfo-dcpd"
+    ]
+  },
+  {
+    "title": "DCPD-202600698 - Remarks During a Telerally for North Carolina Republican Candidates",
+    "url": "https://www.govinfo.gov/app/details/DCPD-202600698",
+    "native_id": "DCPD-202600698",
+    "published_at": "2026-11-17T21:12:00+00:00",
+    "published_raw": "Tue, 17 Nov 2026 21:12:00 +0000",
+    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "presidential_document",
+      "document_stage": "presidential_document_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Compilation of Presidential Documents",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-dcpd",
+    "n": 10834,
+    "first_seen": "2026-11-17T21:46:57.732960+00:00",
+    "last_seen": "2026-11-17T21:46:57.732960+00:00",
+    "source_ids": [
+      "us-govinfo-dcpd"
+    ]
+  },
+  {
+    "title": "Deep Drilling Screening Directions – 2026",
+    "url": "https://www.gov.uk/government/publications/deep-drilling-screening-directions-2026",
+    "native_id": "/government/publications/deep-drilling-screening-directions-2026",
+    "published_at": "2026-11-17T15:56:53+00:00",
+    "published_raw": "2026-11-17T15:56:53Z",
+    "document_type": "decision",
+    "issuer": "Offshore Petroleum Regulator for Environment and Decommissioning",
+    "issuer_ids": [
+      "uk-gov:offshore-petroleum-regulator-for-environment-and-decommissioning"
+    ],
+    "summary": "Screening Directions",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Offshore Petroleum Regulator for Environment and Decommissioning",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 3303,
+    "first_seen": "2026-10-16T10:36:18.842579+00:00",
+    "last_seen": "2026-11-17T21:46:57.732960+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Medical devices given exceptional use authorisations",
+    "url": "https://www.gov.uk/government/publications/medical-devices-given-exceptional-use-authorisations",
+    "native_id": "/government/publications/medical-devices-given-exceptional-use-authorisations",
+    "published_at": "2026-11-17T15:56:50+00:00",
+    "published_raw": "2026-11-17T15:56:50Z",
+    "document_type": "decision",
+    "issuer": "Medicines and Healthcare products Regulatory Agency",
+    "issuer_ids": [
+      "uk-gov:medicines-and-healthcare-products-regulatory-agency"
+    ],
+    "summary": "List of manufacturers and their medical devices granted an exemption by MHRA. The list also includes manufacturers whose exemption expired or was cancelled.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Medicines and Healthcare products Regulatory Agency",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 6834,
+    "first_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-11-17T21:46:57.732960+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Lawnswood School: 17 November 2026",
+    "url": "https://www.gov.uk/government/publications/lawnswood-school-17-november-2026",
+    "native_id": "/government/publications/lawnswood-school-17-november-2026",
+    "published_at": "2026-11-17T15:31:01+00:00",
+    "published_raw": "2026-11-17T15:31:01Z",
+    "document_type": "decision",
+    "issuer": "Office of the Schools Adjudicator",
+    "issuer_ids": [
+      "uk-gov:office-of-the-schools-adjudicator"
+    ],
+    "summary": "The schools adjudicator’s admission variation decision about Lawnswood School.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Office of the Schools Adjudicator",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 10819,
+    "first_seen": "2026-11-17T21:46:57.732960+00:00",
+    "last_seen": "2026-11-17T21:46:57.732960+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Nick Thomas-Symonds - former Paymaster General and Minister for the Constitution and European Union Relations, Cabinet Office - advice under the government's Business Appointment Rules",
+    "url": "https://www.gov.uk/government/publications/nick-thomas-symonds-former-paymaster-general-and-minister-for-the-constitution-and-european-union-relations-cabinet-office-advice-under-the-government",
+    "native_id": "/government/publications/nick-thomas-symonds-former-paymaster-general-and-minister-for-the-constitution-and-european-union-relations-cabinet-office-advice-under-the-government",
+    "published_at": "2026-11-17T15:29:03+00:00",
+    "published_raw": "2026-11-17T15:29:03Z",
+    "document_type": "decision",
+    "issuer": "Independent Adviser on Ministerial Standards",
+    "issuer_ids": [
+      "uk-gov:independent-adviser-on-ministers-interests"
+    ],
+    "summary": "Advice provided to the Rt Hon Nick Thomas-Symonds MP, former Paymaster General and Minister for the Constitution and European Union Relations, on appointments and employment taken up within two years of leaving office",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Independent Adviser on Ministerial Standards",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 10820,
+    "first_seen": "2026-11-17T21:46:57.732960+00:00",
+    "last_seen": "2026-11-17T21:46:57.732960+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "David Lammy - former Deputy Prime Minister, Lord Chancellor and Secretary of State for Justice, Ministry of Justice - advice under the Business Appointment Rules",
+    "url": "https://www.gov.uk/government/publications/david-lammy-former-deputy-prime-minister-lord-chancellor-and-secretary-of-state-for-justice-ministry-of-justice-advice-under-the-business-appointment-",
+    "native_id": "/government/publications/david-lammy-former-deputy-prime-minister-lord-chancellor-and-secretary-of-state-for-justice-ministry-of-justice-advice-under-the-business-appointment-",
+    "published_at": "2026-11-17T15:28:44+00:00",
+    "published_raw": "2026-11-17T15:28:44Z",
+    "document_type": "decision",
+    "issuer": "Independent Adviser on Ministerial Standards",
+    "issuer_ids": [
+      "uk-gov:independent-adviser-on-ministers-interests"
+    ],
+    "summary": "Advice provided to The Rt Hon David Lammy MP, former Deputy Prime Minister, Lord Chancellor and Secretary of State for Justice at the Ministry of Justice, on appointments and employment taken up within two years of leaving office",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Independent Adviser on Ministerial Standards",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 8068,
+    "first_seen": "2026-11-02T22:20:55.750782+00:00",
+    "last_seen": "2026-11-17T21:46:57.732960+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Pipeline Screening Directions – 2026",
+    "url": "https://www.gov.uk/government/publications/pipeline-screening-directions-2026",
+    "native_id": "/government/publications/pipeline-screening-directions-2026",
+    "published_at": "2026-11-17T12:34:32+00:00",
+    "published_raw": "2026-11-17T12:34:32Z",
+    "document_type": "decision",
+    "issuer": "Offshore Petroleum Regulator for Environment and Decommissioning",
+    "issuer_ids": [
+      "uk-gov:offshore-petroleum-regulator-for-environment-and-decommissioning"
+    ],
+    "summary": "Screening Directions",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Offshore Petroleum Regulator for Environment and Decommissioning",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 10821,
+    "first_seen": "2026-11-17T21:46:57.732960+00:00",
+    "last_seen": "2026-11-17T21:46:57.732960+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Company Names Tribunal undefended decisions and orders",
+    "url": "https://www.gov.uk/government/publications/company-names-tribunal-undefended-decisions-and-orders",
+    "native_id": "/government/publications/company-names-tribunal-undefended-decisions-and-orders",
+    "published_at": "2026-11-17T12:30:45+00:00",
+    "published_raw": "2026-11-17T12:30:45Z",
+    "document_type": "decision",
+    "issuer": "Company Names Tribunal",
+    "issuer_ids": [
+      "uk-gov:company-names-tribunal"
+    ],
+    "summary": "Decisions and orders of the Company Names Tribunal - undefended.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Company Names Tribunal",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 2103,
+    "first_seen": "2026-10-15T12:16:32.997656+00:00",
+    "last_seen": "2026-11-17T21:46:57.732960+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Company Names Tribunal decision: Danmart Ltd",
+    "url": "https://www.gov.uk/government/publications/company-names-tribunal-decision-danmart-ltd",
+    "native_id": "/government/publications/company-names-tribunal-decision-danmart-ltd",
+    "published_at": "2026-11-17T12:26:09+00:00",
+    "published_raw": "2026-11-17T12:26:09Z",
+    "document_type": "decision",
+    "issuer": "Company Names Tribunal",
+    "issuer_ids": [
+      "uk-gov:company-names-tribunal"
+    ],
+    "summary": "Decision for applicant Damartex UK Limited registration number 16782041 applicant successful.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Company Names Tribunal",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 10822,
+    "first_seen": "2026-11-17T21:46:57.732960+00:00",
+    "last_seen": "2026-11-17T21:46:57.732960+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Company Names Tribunal decision: Benefit Cosmetics CC Ltd",
+    "url": "https://www.gov.uk/government/publications/company-names-tribunal-decision-benefit-cosmetics-cc-ltd",
+    "native_id": "/government/publications/company-names-tribunal-decision-benefit-cosmetics-cc-ltd",
+    "published_at": "2026-11-17T12:25:52+00:00",
+    "published_raw": "2026-11-17T12:25:52Z",
+    "document_type": "decision",
+    "issuer": "Company Names Tribunal",
+    "issuer_ids": [
+      "uk-gov:company-names-tribunal"
+    ],
+    "summary": "Decision for applicant Benefit Cosmetics Limited registration number 16357449 applicant successful.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Company Names Tribunal",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 10823,
+    "first_seen": "2026-11-17T21:46:57.732960+00:00",
+    "last_seen": "2026-11-17T21:46:57.732960+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Company Names Tribunal decision: Saipem Engineering S.P.A Limited",
+    "url": "https://www.gov.uk/government/publications/company-names-tribunal-decision-saipem-engineering-spa-limited",
+    "native_id": "/government/publications/company-names-tribunal-decision-saipem-engineering-spa-limited",
+    "published_at": "2026-11-17T12:25:31+00:00",
+    "published_raw": "2026-11-17T12:25:31Z",
+    "document_type": "decision",
+    "issuer": "Company Names Tribunal",
+    "issuer_ids": [
+      "uk-gov:company-names-tribunal"
+    ],
+    "summary": "Decision for applicant Saipem Limited registration number 16924424 applicant successful.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Company Names Tribunal",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 10824,
+    "first_seen": "2026-11-17T21:46:57.732960+00:00",
+    "last_seen": "2026-11-17T21:46:57.732960+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Parallel import licences granted in 2026",
+    "url": "https://www.gov.uk/government/publications/parallel-import-licences-granted-in-2026",
+    "native_id": "/government/publications/parallel-import-licences-granted-in-2026",
+    "published_at": "2026-11-17T10:42:57+00:00",
+    "published_raw": "2026-11-17T10:42:57Z",
+    "document_type": "decision",
+    "issuer": "Medicines and Healthcare products Regulatory Agency",
+    "issuer_ids": [
+      "uk-gov:medicines-and-healthcare-products-regulatory-agency"
+    ],
+    "summary": "Parallel import licences granted in 2026.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Medicines and Healthcare products Regulatory Agency",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 5609,
+    "first_seen": "2026-10-20T18:00:04.951908+00:00",
+    "last_seen": "2026-11-17T21:46:57.732960+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Marketing authorisations granted in 2026",
+    "url": "https://www.gov.uk/government/publications/marketing-authorisations-granted-in-2026",
+    "native_id": "/government/publications/marketing-authorisations-granted-in-2026",
+    "published_at": "2026-11-17T10:42:45+00:00",
+    "published_raw": "2026-11-17T10:42:45Z",
+    "document_type": "decision",
+    "issuer": "Medicines and Healthcare products Regulatory Agency",
+    "issuer_ids": [
+      "uk-gov:medicines-and-healthcare-products-regulatory-agency"
+    ],
+    "summary": "Marketing authorisations granted in 2026.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Medicines and Healthcare products Regulatory Agency",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 5610,
+    "first_seen": "2026-10-20T18:00:04.951908+00:00",
+    "last_seen": "2026-11-17T21:46:57.732960+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "The Whitby High School: 17 November 2026",
+    "url": "https://www.gov.uk/government/publications/the-whitby-high-school-17-november-2026",
+    "native_id": "/government/publications/the-whitby-high-school-17-november-2026",
+    "published_at": "2026-11-17T00:00:00+00:00",
+    "published_raw": "2026-11-17T00:00:00Z",
+    "document_type": "decision",
+    "issuer": "Office of the Schools Adjudicator",
+    "issuer_ids": [
+      "uk-gov:office-of-the-schools-adjudicator"
+    ],
+    "summary": "The schools adjudicator’s admission objection decision about The Whitby High School.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Office of the Schools Adjudicator",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 10825,
+    "first_seen": "2026-11-17T21:46:57.732960+00:00",
+    "last_seen": "2026-11-17T21:46:57.732960+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
     "title": "Appellate Procedures for the Board of Immigration Appeals",
     "url": "https://www.federalregister.gov/documents/2026/11/17/2026-23320/appellate-procedures-for-the-board-of-immigration-appeals",
     "native_id": "2026-23320",
@@ -25,7 +522,7 @@
     "primary_source_id": "us-federal-register",
     "n": 10765,
     "first_seen": "2026-11-17T09:14:56.610004+00:00",
-    "last_seen": "2026-11-17T09:14:56.610004+00:00",
+    "last_seen": "2026-11-17T21:46:57.732960+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -55,7 +552,7 @@
     "primary_source_id": "us-federal-register",
     "n": 10742,
     "first_seen": "2026-11-17T09:14:56.610004+00:00",
-    "last_seen": "2026-11-17T09:14:56.610004+00:00",
+    "last_seen": "2026-11-17T21:46:57.732960+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -85,7 +582,7 @@
     "primary_source_id": "us-federal-register",
     "n": 10729,
     "first_seen": "2026-11-17T09:14:56.610004+00:00",
-    "last_seen": "2026-11-17T09:14:56.610004+00:00",
+    "last_seen": "2026-11-17T21:46:57.732960+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -116,7 +613,7 @@
     "primary_source_id": "us-federal-register",
     "n": 10722,
     "first_seen": "2026-11-17T09:14:56.610004+00:00",
-    "last_seen": "2026-11-17T09:14:56.610004+00:00",
+    "last_seen": "2026-11-17T21:46:57.732960+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -146,7 +643,7 @@
     "primary_source_id": "us-federal-register",
     "n": 10704,
     "first_seen": "2026-11-17T09:14:56.610004+00:00",
-    "last_seen": "2026-11-17T09:14:56.610004+00:00",
+    "last_seen": "2026-11-17T21:46:57.732960+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -176,7 +673,7 @@
     "primary_source_id": "us-federal-register",
     "n": 10702,
     "first_seen": "2026-11-17T09:14:56.610004+00:00",
-    "last_seen": "2026-11-17T09:14:56.610004+00:00",
+    "last_seen": "2026-11-17T21:46:57.732960+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -206,7 +703,7 @@
     "primary_source_id": "us-federal-register",
     "n": 10695,
     "first_seen": "2026-11-17T09:14:56.610004+00:00",
-    "last_seen": "2026-11-17T09:14:56.610004+00:00",
+    "last_seen": "2026-11-17T21:46:57.732960+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -236,7 +733,7 @@
     "primary_source_id": "us-federal-register",
     "n": 10687,
     "first_seen": "2026-11-17T09:14:56.610004+00:00",
-    "last_seen": "2026-11-17T09:14:56.610004+00:00",
+    "last_seen": "2026-11-17T21:46:57.732960+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -267,7 +764,7 @@
     "primary_source_id": "us-federal-register",
     "n": 10684,
     "first_seen": "2026-11-17T09:14:56.610004+00:00",
-    "last_seen": "2026-11-17T09:14:56.610004+00:00",
+    "last_seen": "2026-11-17T21:46:57.732960+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -291,7 +788,7 @@
     "primary_source_id": "us-govinfo-dcpd",
     "n": 10596,
     "first_seen": "2026-11-16T22:54:52.991484+00:00",
-    "last_seen": "2026-11-16T22:54:52.991484+00:00",
+    "last_seen": "2026-11-17T21:46:57.732960+00:00",
     "source_ids": [
       "us-govinfo-dcpd"
     ]
@@ -315,7 +812,7 @@
     "primary_source_id": "us-govinfo-dcpd",
     "n": 10595,
     "first_seen": "2026-11-16T22:54:52.991484+00:00",
-    "last_seen": "2026-11-16T22:54:52.991484+00:00",
+    "last_seen": "2026-11-17T21:46:57.732960+00:00",
     "source_ids": [
       "us-govinfo-dcpd"
     ]
@@ -339,7 +836,7 @@
     "primary_source_id": "us-govinfo-dcpd",
     "n": 10594,
     "first_seen": "2026-11-16T22:54:52.991484+00:00",
-    "last_seen": "2026-11-16T22:54:52.991484+00:00",
+    "last_seen": "2026-11-17T21:46:57.732960+00:00",
     "source_ids": [
       "us-govinfo-dcpd"
     ]
@@ -368,7 +865,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 5623,
     "first_seen": "2026-10-20T18:00:04.951908+00:00",
-    "last_seen": "2026-11-17T09:14:56.610004+00:00",
+    "last_seen": "2026-11-17T21:46:57.732960+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -397,7 +894,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 10589,
     "first_seen": "2026-11-16T22:54:52.991484+00:00",
-    "last_seen": "2026-11-17T09:14:56.610004+00:00",
+    "last_seen": "2026-11-17T21:46:57.732960+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -426,7 +923,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 10590,
     "first_seen": "2026-11-16T22:54:52.991484+00:00",
-    "last_seen": "2026-11-17T09:14:56.610004+00:00",
+    "last_seen": "2026-11-17T21:46:57.732960+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -455,36 +952,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 10591,
     "first_seen": "2026-11-16T22:54:52.991484+00:00",
-    "last_seen": "2026-11-17T09:14:56.610004+00:00",
-    "source_ids": [
-      "uk-govuk-decision"
-    ]
-  },
-  {
-    "title": "Deep Drilling Screening Directions – 2026",
-    "url": "https://www.gov.uk/government/publications/deep-drilling-screening-directions-2026",
-    "native_id": "/government/publications/deep-drilling-screening-directions-2026",
-    "published_at": "2026-11-16T13:39:17+00:00",
-    "published_raw": "2026-11-16T13:39:17Z",
-    "document_type": "decision",
-    "issuer": "Offshore Petroleum Regulator for Environment and Decommissioning",
-    "issuer_ids": [
-      "uk-gov:offshore-petroleum-regulator-for-environment-and-decommissioning"
-    ],
-    "summary": "Screening Directions",
-    "source_metadata": {
-      "document_type": "decision",
-      "document_stage": "decision_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Offshore Petroleum Regulator for Environment and Decommissioning",
-      "jurisdiction": "UK",
-      "family": "typed_government_documents"
-    },
-    "primary_source_id": "uk-govuk-decision",
-    "n": 3303,
-    "first_seen": "2026-10-16T10:36:18.842579+00:00",
-    "last_seen": "2026-11-17T09:14:56.610004+00:00",
+    "last_seen": "2026-11-17T21:46:57.732960+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -515,7 +983,7 @@
     "primary_source_id": "us-federal-register",
     "n": 10562,
     "first_seen": "2026-11-16T08:01:11.696033+00:00",
-    "last_seen": "2026-11-17T09:14:56.610004+00:00",
+    "last_seen": "2026-11-17T21:46:57.732960+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -545,7 +1013,7 @@
     "primary_source_id": "us-federal-register",
     "n": 10558,
     "first_seen": "2026-11-16T08:01:11.696033+00:00",
-    "last_seen": "2026-11-17T09:14:56.610004+00:00",
+    "last_seen": "2026-11-17T21:46:57.732960+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -575,7 +1043,7 @@
     "primary_source_id": "us-federal-register",
     "n": 10552,
     "first_seen": "2026-11-16T08:01:11.696033+00:00",
-    "last_seen": "2026-11-17T09:14:56.610004+00:00",
+    "last_seen": "2026-11-17T21:46:57.732960+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -606,7 +1074,7 @@
     "primary_source_id": "us-federal-register",
     "n": 10547,
     "first_seen": "2026-11-16T08:01:11.696033+00:00",
-    "last_seen": "2026-11-17T09:14:56.610004+00:00",
+    "last_seen": "2026-11-17T21:46:57.732960+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -636,7 +1104,7 @@
     "primary_source_id": "us-federal-register",
     "n": 10523,
     "first_seen": "2026-11-16T08:01:11.696033+00:00",
-    "last_seen": "2026-11-17T09:14:56.610004+00:00",
+    "last_seen": "2026-11-17T21:46:57.732960+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -667,7 +1135,7 @@
     "primary_source_id": "us-federal-register",
     "n": 10499,
     "first_seen": "2026-11-16T08:01:11.696033+00:00",
-    "last_seen": "2026-11-17T09:14:56.610004+00:00",
+    "last_seen": "2026-11-17T21:46:57.732960+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -697,7 +1165,7 @@
     "primary_source_id": "us-federal-register",
     "n": 10498,
     "first_seen": "2026-11-16T08:01:11.696033+00:00",
-    "last_seen": "2026-11-17T09:14:56.610004+00:00",
+    "last_seen": "2026-11-17T21:46:57.732960+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -727,7 +1195,7 @@
     "primary_source_id": "us-federal-register",
     "n": 10497,
     "first_seen": "2026-11-16T08:01:11.696033+00:00",
-    "last_seen": "2026-11-17T09:14:56.610004+00:00",
+    "last_seen": "2026-11-17T21:46:57.732960+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -757,7 +1225,7 @@
     "primary_source_id": "us-federal-register",
     "n": 10492,
     "first_seen": "2026-11-16T08:01:11.696033+00:00",
-    "last_seen": "2026-11-17T09:14:56.610004+00:00",
+    "last_seen": "2026-11-17T21:46:57.732960+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -787,7 +1255,7 @@
     "primary_source_id": "us-federal-register",
     "n": 10491,
     "first_seen": "2026-11-16T08:01:11.696033+00:00",
-    "last_seen": "2026-11-17T09:14:56.610004+00:00",
+    "last_seen": "2026-11-17T21:46:57.732960+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -818,7 +1286,7 @@
     "primary_source_id": "us-federal-register",
     "n": 10478,
     "first_seen": "2026-11-16T08:01:11.696033+00:00",
-    "last_seen": "2026-11-17T09:14:56.610004+00:00",
+    "last_seen": "2026-11-17T21:46:57.732960+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -848,7 +1316,7 @@
     "primary_source_id": "us-federal-register",
     "n": 10476,
     "first_seen": "2026-11-16T08:01:11.696033+00:00",
-    "last_seen": "2026-11-17T09:14:56.610004+00:00",
+    "last_seen": "2026-11-17T21:46:57.732960+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -878,7 +1346,7 @@
     "primary_source_id": "us-federal-register",
     "n": 10475,
     "first_seen": "2026-11-16T08:01:11.696033+00:00",
-    "last_seen": "2026-11-17T09:14:56.610004+00:00",
+    "last_seen": "2026-11-17T21:46:57.732960+00:00",
     "source_ids": [
       "us-federal-register"
     ]
