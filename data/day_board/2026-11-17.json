@@ -1,6 +1,6 @@
 {
   "date": "2026-11-17",
-  "generated_at": "2026-11-17T05:13:37.177441-05:00",
+  "generated_at": "2026-11-17T05:14:02.749125-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -181,7 +181,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 1,
+      "n_req_ok": 2,
       "n_req": 9,
       "n_opt_ok": 1,
       "n_opt": 14,
@@ -239,10 +239,10 @@
           "name": "News parse JSON",
           "path": "01_daily/news/2026-11-17_parsed.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "",
+          "size": 5941812,
+          "said": "5941812B on disk",
           "bullets": []
         },
         {
@@ -329,13 +329,13 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7576,
-          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 18 fail",
+          "size": 7575,
+          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 17 fail",
           "bullets": [
             "general_predict:missing",
             "events:missing",
             "news_judge:missing",
-            "news_parse:missing"
+            "news_actions:missing"
           ]
         },
         {
@@ -1236,6 +1236,31 @@
         }
       ],
       "preview": "2593 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 ABNB, WCN, CBRL, SO, FOXA \u00b7 2593 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 GXO, ELV, DRH, HTHT, SO"
+    },
+    {
+      "key": "news_parse",
+      "title": "News parse",
+      "date": "2026-11-17",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-17T05:14:01.695732-05:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-11-17_parsed.json",
+          "ok": true,
+          "reason": "",
+          "size": 5941812,
+          "preview": "raw=8300 usable=687 single=624 \u00b7 Gold sinks to 1-year low as Treasury yields and dollar bite, set for worst year  | UK stocks steady ahead of jobs, inflation data - Reuters | India's October unemployment rate at 4.9% y/y - Reuters | CPI | Supreme Court Denies Custodia Bank Appeal in Federal Reserve Dispute - PYM | Mapping the Market: Semiconductor stocks may slide as another recovery fades - R"
+        },
+        {
+          "path": "01_daily/news/2026-11-17_parsed.md",
+          "ok": true,
+          "reason": "",
+          "size": 13645,
+          "preview": "# News Parse v2 \u2014 2026-11-17T05:14:01.096061-05:00\nWindow\u224848h | news_mode=on | raw=8300 | usable=687 | single_name=624 | noise_dropped=6792\nusable polarity={'+': 16, '-': 117, 'mixed': 1, 'neutral': 553}"
+        }
+      ],
+      "preview": "raw=8300 usable=687 single=624 \u00b7 Gold sinks to 1-year low as Treasury yields and dollar bite, set for worst year  | UK stocks steady ahead of jobs, inflation data - Reuters | India's October unemployment rate at 4.9% y/y - Reuters | CPI | Supreme Court Denies Custodia Bank Appeal in Federal Reserve Dispute - PYM | Mapping the Market: Semiconductor stocks may slide as another recovery fades - R \u00b7 # News Parse v2 \u2014 2026-11-17T05:14:01.096061-05:00\nWindow\u224848h | news_mode=on | raw=8300 | usable=687 | single_name=624 | noise_dropped=6792\nusable polarity={'+': 16, '-': 117, 'mixed': 1, 'neutral': 553}"
     }
   ],
   "href": {
