@@ -211,3 +211,12 @@
 {"bytes":330,"date":"2026-11-12","kind":"close","recipe":"union_hot_n4_holdup__w0","seq":211,"sha256":"8441daaf8503a8f851de1b64691ede96a6b2f0f03676c22c3c45e529b107820d"}
 {"bytes":2636,"date":"2026-11-13","kind":"plan","recipe":"union_hot_n4_holdup__w0","seq":212,"sha256":"6af5f67168aa1f00767c24fcfaba55715916de65eec7fa918549d4262c00f96b"}
 {"bytes":2296,"date":"2026-11-13","kind":"open_fill","recipe":"union_hot_n4_holdup__w0","seq":213,"sha256":"367aea3ceff038540541797ceafb08e9e1ad83c7d2f6364e734176e7a212e416"}
+{"bytes":1030,"date":"2026-11-13","kind":"mark","recipe":"union_hot_n4_holdup__w0","seq":214,"sha256":"7fa868bab52f71afa91db8374fbde608755def84122311b8291d69dd3a3f441c"}
+{"bytes":321,"date":"2026-11-13","kind":"close","recipe":"union_hot_n4_holdup__w0","seq":215,"sha256":"175805ac7ab7e2f488d9d5fe234a7358819318b14245de49a59871ae7fea8141"}
+{"bytes":325,"date":"2026-11-13","kind":"close","recipe":"union_hot_n4_holdup__w0","seq":216,"sha256":"fa05ac885a2a43425843183990691e59a549103ac08265ff62b8171268cfbd02"}
+{"bytes":322,"date":"2026-11-13","kind":"close","recipe":"union_hot_n4_holdup__w0","seq":217,"sha256":"dc46939bcf2f1cf2d08d9104bb494a2a2eb8f7be58e5e9381b6894aa2ca362c1"}
+{"bytes":323,"date":"2026-11-13","kind":"close","recipe":"union_hot_n4_holdup__w0","seq":218,"sha256":"1e8291e710501f202453e6f7b6e5a19d2c6b09a47c16717544895fde6463ca3a"}
+{"bytes":328,"date":"2026-11-13","kind":"close","recipe":"union_hot_n4_holdup__w0","seq":219,"sha256":"2a2cb7df4536e73426ec970ba4b5690f9e58e1224fcff53e9de5d414e5319905"}
+{"bytes":325,"date":"2026-11-13","kind":"close","recipe":"union_hot_n4_holdup__w0","seq":220,"sha256":"2104dc432f2d0618203f792110d1295fe660c74ee339ce664a9fbe5eca132adc"}
+{"bytes":335,"date":"2026-11-13","kind":"close","recipe":"union_hot_n4_holdup__w0","seq":221,"sha256":"4a227256102d9dbe512a604089487fe7d4d053072903454b3d8a004cf262d1a7"}
+{"bytes":325,"date":"2026-11-13","kind":"close","recipe":"union_hot_n4_holdup__w0","seq":222,"sha256":"8aa5884b9469e4b1fb45e952cb1581f7f5c3e3f4a9cc2ca68e6a6cdf788d44f9"}
