@@ -1,6 +1,6 @@
 # MAP HEAT — 2026-11-17
 
-Export `finviz_2026-11-16.csv` · 11616 names · generated 2026-11-17T04:52:55.487427-05:00
+Export `finviz_2026-11-17.csv` · 11616 names · generated 2026-11-17T05:05:19.369428-05:00
 
 ## TAPE (live futures)
 | Contract | Last | Change |
@@ -280,31 +280,31 @@ COLD (1w):
 - **Real Estate** -0.5% 1d -1.9% 1w · VNQ, SCHH, XLRE
 
 ## TICKER-TAGGED NEWS (Finviz v=3)
-- 7 min **JD** JD.com Announces Third Quarter 2026 Results (GlobeNewswire)
-- 7 min **PEP,NVDA** Nvidia stock valuation looks 'draconian,' even without Jensen Huang: Analyst (Yahoo Finance)
-- 12 min **APPN** Appian Advances Control Plane Capabilities To Drive Safety and Business Value from AI Agents (PR Newswire)
-- 15 min **NVDA,LCO** Nvidia earnings in focus amid Huang exit fallout - whats moving markets (Investing.com)
-- 15 min **AS,DIS,HD,KLAR,NVDA** Home Depot and Disney earnings before the open, and Nvidia after the close (MarketWatch)
-- 15 min **NVDA** How Nvidia Stock Is Trading Ahead of Earnings (Barrons.com)
-- 15 min **UAL,DAL,AAL** United Airlines Resolves Another Outage. The Stock Is Falling. (Barrons.com)
-- 17 min **MS** Morgan Stanley Investment Management Launches Active ETF Platform in Europe (Business Wire)
-- 17 min **DB** Here's how much of Deutsche Bank's market cap has been wiped away after reports on 15 million leaked documents (MarketWatch)
-- 18 min **NVDA** Nasdaq Futures Slip as Investors Look to Nvidia Earnings (The Wall Street Journal)
-- 19 min **NVDA** Head of China's Baidu warns of AI 'bubble' ahead of APEC talks (AFP)
-- 19 min **NOK,NVDA** Nokia stock tumbles after Nvidia cuts stake by more than half (Investing.com)
-- 20 min **NVDA** Nvidia to report Q3 earnings amid Huang scandal (Yahoo Finance)
-- 22 min **HTLM** HomesToLife Completes Secondary Listing on the Mainboard of the Singapore Exchange (GlobeNewswire)
-- 22 min **NIO** NIO Inc. to Report Unaudited Third Quarter 2026 Financial Results on Tuesday, December 1, 2026 (GlobeNewswire)
-- 23 min **DIS** Disney expected to post another strong earnings report, led by experiences and streaming (Yahoo Finance)
-- 25 min **AMZN** Amazon opens first Caribbean delivery station in Puerto Rico (Retail Insight Network)
-- 26 min **DASH,CART** DOJ reportedly set to review DoorDashs Instacart acquisition (Retail Insight Network)
-- 34 min **DRH** DiamondRock acquires Carmel Mission Inn in California for $73.25m (Hotel Management Network)
-- 37 min **NVDA** Stock market today: Dow and S&P 500 futures slip, Nasdaq futures rise in countdown to Nvidia earnings (Yahoo Finance)
-- 37 min **GIL** Kaplan Fox Encourages Gildan Activewear Inc. (GIL) Investors Seeking Recovery to Contact the Firm Before December 14, 2026 (Newsfile)
-- 43 min **UNCY** Unicycive Therapeutics Announces Third Quarter 2026 Financial Results and Provides Business Update (InvestorsHub)
-- 49 min **TROW** Anthropic IPO Frenzy Is Competing With Bitcoin For Investor Cash, Says Strategist  But Institutions Not Backing Away Anytime Soon (Stocktwits)
-- 52 min **TME** Tencent Music Entertainment Group Announces Third Quarter 2026 Unaudited Financial Results (PR Newswire)
-- 52 min **WB** Weibo Announces Third Quarter 2026 Unaudited Financial Results (PR Newswire)
+- 5 min **WDH** Waterdrop Inc. to Report Third Quarter 2026 Financial Results on December 2, 2026 (PR Newswire)
+- 5 min **NVDA** NVIDIA Board of Directors Establishes National Security and Export Control Oversight Committee (GlobeNewswire)
+- 5 min **TSLA,SPCX** Should Nvidia bring Jensen Huang back, as Silicon Valley's elite are demanding? (Yahoo Finance)
+- 9 min **BNR** Burning Rock Announces 2026 Annual General Meeting to be Held on December 22, 2026 (GlobeNewswire)
+- 10 min **NVDA** Nvidia Board Not Considering Jensen Huang's Return: Report (decrypt)
+- 20 min **JD** JD.com Announces Third Quarter 2026 Results (GlobeNewswire)
+- 20 min **PEP,NVDA** Nvidia stock valuation looks 'draconian,' even without Jensen Huang: Analyst (Yahoo Finance)
+- 25 min **APPN** Appian Advances Control Plane Capabilities To Drive Safety and Business Value from AI Agents (PR Newswire)
+- 27 min **NVDA,LCO** Nvidia earnings in focus amid Huang exit fallout - whats moving markets (Investing.com)
+- 27 min **AS,DIS,KLAR,HD,NVDA** Home Depot and Disney earnings before the open, and Nvidia after the close (MarketWatch)
+- 27 min **NVDA** How Nvidia Stock Is Trading Ahead of Earnings (Barrons.com)
+- 28 min **UAL,DAL,AAL** United Airlines Resolves Another Outage. The Stock Is Falling. (Barrons.com)
+- 30 min **MS** Morgan Stanley Investment Management Launches Active ETF Platform in Europe (Business Wire)
+- 30 min **DB** Here's how much of Deutsche Bank's market cap has been wiped away after reports on 15 million leaked documents (MarketWatch)
+- 31 min **NVDA** Nasdaq Futures Slip as Investors Look to Nvidia Earnings (The Wall Street Journal)
+- 31 min **NVDA** Head of China's Baidu warns of AI 'bubble' ahead of APEC talks (AFP)
+- 31 min **NOK,NVDA** Nokia stock tumbles after Nvidia cuts stake by more than half (Investing.com)
+- 33 min **NVDA** Nvidia to report Q3 earnings amid Huang scandal (Yahoo Finance)
+- 35 min **HTLM** HomesToLife Completes Secondary Listing on the Mainboard of the Singapore Exchange (GlobeNewswire)
+- 35 min **NIO** NIO Inc. to Report Unaudited Third Quarter 2026 Financial Results on Tuesday, December 1, 2026 (GlobeNewswire)
+- 35 min **DIS** Disney expected to post another strong earnings report, led by experiences and streaming (Yahoo Finance)
+- 38 min **AMZN** Amazon opens first Caribbean delivery station in Puerto Rico (Retail Insight Network)
+- 39 min **DASH,CART** DOJ reportedly set to review DoorDashs Instacart acquisition (Retail Insight Network)
+- 46 min **DRH** DiamondRock acquires Carmel Mission Inn in California for $73.25m (Hotel Management Network)
+- 49 min **NVDA** Stock market today: Dow and S&P 500 futures slip, Nasdaq futures rise in countdown to Nvidia earnings (Yahoo Finance)
 
 ## NOTES
 - Captains = top 2 by market cap. RUT needs ≥ $5m 20-day dollar volume.
