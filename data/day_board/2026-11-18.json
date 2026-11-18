@@ -1,6 +1,6 @@
 {
   "date": "2026-11-18",
-  "generated_at": "2026-11-18T05:02:08.475066-05:00",
+  "generated_at": "2026-11-18T05:02:36.551411-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -181,7 +181,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 1,
+      "n_req_ok": 2,
       "n_req": 9,
       "n_opt_ok": 1,
       "n_opt": 14,
@@ -239,10 +239,10 @@
           "name": "News parse JSON",
           "path": "01_daily/news/2026-11-18_parsed.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "",
+          "size": 5610905,
+          "said": "5610905B on disk",
           "bullets": []
         },
         {
@@ -329,13 +329,13 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7576,
-          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 18 fail",
+          "size": 7575,
+          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 17 fail",
           "bullets": [
             "general_predict:missing",
             "events:missing",
             "news_judge:missing",
-            "news_parse:missing"
+            "news_actions:missing"
           ]
         },
         {
@@ -1183,6 +1183,31 @@
         }
       ],
       "preview": "2596 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CBRL, POWW, SLDE, AES, TAK \u00b7 2596 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CBRL, SLDE, POWW, PBH, TRP"
+    },
+    {
+      "key": "news_parse",
+      "title": "News parse",
+      "date": "2026-11-18",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-18T05:02:35.622813-05:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-11-18_parsed.json",
+          "ok": true,
+          "reason": "",
+          "size": 5610905,
+          "preview": "raw=7859 usable=582 single=740 \u00b7 UK Inflation Print at Fastest in a Year Comes With Few Surprises - Bloomberg.com | United States Dollar index struggles to extend rally beyond 103.80, FOMC Minutes | US Dollar Index Forecast: DXY nears 104.00 ahead of FOMC Minutes - FXStreet | FOMC Minutes and European CPI data due, Anthropic\u2019s IPO is expected to price - F | BHP, Rio Tinto executives to meet China leaders as iron ore pressure builds - Re"
+        },
+        {
+          "path": "01_daily/news/2026-11-18_parsed.md",
+          "ok": true,
+          "reason": "",
+          "size": 12040,
+          "preview": "# News Parse v2 \u2014 2026-11-18T05:02:35.097376-05:00\nWindow\u224848h | news_mode=on | raw=7859 | usable=582 | single_name=740 | noise_dropped=6375\nusable polarity={'+': 16, '-': 102, 'mixed': 1, 'neutral': 463}"
+        }
+      ],
+      "preview": "raw=7859 usable=582 single=740 \u00b7 UK Inflation Print at Fastest in a Year Comes With Few Surprises - Bloomberg.com | United States Dollar index struggles to extend rally beyond 103.80, FOMC Minutes | US Dollar Index Forecast: DXY nears 104.00 ahead of FOMC Minutes - FXStreet | FOMC Minutes and European CPI data due, Anthropic\u2019s IPO is expected to price - F | BHP, Rio Tinto executives to meet China leaders as iron ore pressure builds - Re \u00b7 # News Parse v2 \u2014 2026-11-18T05:02:35.097376-05:00\nWindow\u224848h | news_mode=on | raw=7859 | usable=582 | single_name=740 | noise_dropped=6375\nusable polarity={'+': 16, '-': 102, 'mixed': 1, 'neutral': 463}"
     }
   ],
   "href": {

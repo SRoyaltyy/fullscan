@@ -1,6 +1,6 @@
 {
   "date": "2026-11-18",
-  "generated_at": "2026-11-18T05:02:08.475066-05:00",
+  "generated_at": "2026-11-18T05:02:36.551411-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -15,31 +15,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "map_heat",
-      "title": "Map heat morning overlay",
-      "date": "2026-11-18",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-11-18T04:51:07.934912-05:00",
-      "files": [
-        {
-          "path": "01_daily/map_heat/2026-11-18_map_heat.json",
-          "ok": true,
-          "reason": "",
-          "size": 276515,
-          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
-        },
-        {
-          "path": "01_daily/map_heat/2026-11-18_map_heat.md",
-          "ok": true,
-          "reason": "",
-          "size": 18513,
-          "preview": "# MAP HEAT \u2014 2026-11-18\nExport `finviz_2026-11-17.csv` \u00b7 11616 names \u00b7 generated 2026-11-18T04:51:07.902193-05:00"
-        }
-      ],
-      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-11-18\nExport `finviz_2026-11-17.csv` \u00b7 11616 names \u00b7 generated 2026-11-18T04:51:07.902193-05:00"
-    },
     {
       "key": "finviz_digest",
       "title": "Finviz digest",
@@ -200,6 +175,31 @@
         }
       ],
       "preview": "2596 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CBRL, POWW, SLDE, AES, TAK \u00b7 2596 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CBRL, SLDE, POWW, PBH, TRP"
+    },
+    {
+      "key": "news_parse",
+      "title": "News parse",
+      "date": "2026-11-18",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-18T05:02:35.622813-05:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-11-18_parsed.json",
+          "ok": true,
+          "reason": "",
+          "size": 5610905,
+          "preview": "raw=7859 usable=582 single=740 \u00b7 UK Inflation Print at Fastest in a Year Comes With Few Surprises - Bloomberg.com | United States Dollar index struggles to extend rally beyond 103.80, FOMC Minutes | US Dollar Index Forecast: DXY nears 104.00 ahead of FOMC Minutes - FXStreet | FOMC Minutes and European CPI data due, Anthropic\u2019s IPO is expected to price - F | BHP, Rio Tinto executives to meet China leaders as iron ore pressure builds - Re"
+        },
+        {
+          "path": "01_daily/news/2026-11-18_parsed.md",
+          "ok": true,
+          "reason": "",
+          "size": 12040,
+          "preview": "# News Parse v2 \u2014 2026-11-18T05:02:35.097376-05:00\nWindow\u224848h | news_mode=on | raw=7859 | usable=582 | single_name=740 | noise_dropped=6375\nusable polarity={'+': 16, '-': 102, 'mixed': 1, 'neutral': 463}"
+        }
+      ],
+      "preview": "raw=7859 usable=582 single=740 \u00b7 UK Inflation Print at Fastest in a Year Comes With Few Surprises - Bloomberg.com | United States Dollar index struggles to extend rally beyond 103.80, FOMC Minutes | US Dollar Index Forecast: DXY nears 104.00 ahead of FOMC Minutes - FXStreet | FOMC Minutes and European CPI data due, Anthropic\u2019s IPO is expected to price - F | BHP, Rio Tinto executives to meet China leaders as iron ore pressure builds - Re \u00b7 # News Parse v2 \u2014 2026-11-18T05:02:35.097376-05:00\nWindow\u224848h | news_mode=on | raw=7859 | usable=582 | single_name=740 | noise_dropped=6375\nusable polarity={'+': 16, '-': 102, 'mixed': 1, 'neutral': 463}"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
