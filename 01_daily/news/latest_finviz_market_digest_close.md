@@ -1,47 +1,46 @@
-# Finviz homepage market digest (close) — 2026-11-16
+# Finviz homepage market digest (close) — 2026-11-17
 
-**Generated:** 2026-11-16T16:43:16.770054-05:00 (America/New_York)
+**Generated:** 2026-11-17T21:59:11.653379-05:00 (America/New_York)
 **Source:** `live`
-**Banner:** US stocks closed sharply lower as tech weakness and AI uncertainty ahead of Nvidia earnings drove the worst session since November 5
-**Prior close:** SPX -1.92%  Nasdaq -2.49%  Dow -1.41%
-**SPX:** -1.92%  **Nasdaq:** -2.49%  **Dow:** -1.41%
+**Banner:** US stocks extended their slide as AI trade unwind and Nvidia earnings focus pressured tech despite in-line retail sales
+**Prior close:** SPX -1.03%  Nasdaq -0.74%  Dow -1.64%
+**SPX:** -1.03%  **Nasdaq:** -0.74%  **Dow:** -1.64%
 **Oil:** —
 **CPI/Fed:** —
-**Leaders:** NVDA, INTC, MRVL, MU, ARM, PG, UNH, TSN, LHX, MOH, CGON, SMMT, POWL, RCAT
-**Next session:** housing no · retail no · Fed yes
-**Earnings slate:** NVDA
+**Leaders:** CRM, INTU, NOW, UNH, NKE, AVGO, NVDA, LOW, TGT, TJX
+**Next session:** housing no · retail yes · Fed no
+**Earnings slate:** LOW, TGT, TJX
 **Geo/grain:** —
-**Clock legal for:** 2026-11-17
+**Clock legal for:** 2026-11-18
 **Clock use:** `next_open`
 
 ## Clock
 
-Live post-close answer-key (~16:05 ET). **Legal for the NEXT session open only** (`clock_legal_for` = 2026-11-17) — **NOT** the same morning. `clock_use` is always `next_open`. File is `*_finviz_market_digest_close.*`; the same_morning warm-up file is left untouched.
+Live post-close answer-key (~16:05 ET). **Legal for the NEXT session open only** (`clock_legal_for` = 2026-11-18) — **NOT** the same morning. `clock_use` is always `next_open`. File is `*_finviz_market_digest_close.*`; the same_morning warm-up file is left untouched.
 
 Homepage `$MARKET` prose — **not** `YYYY-MM-DD_finviz_digest.md` (quote-page headlines + ticker blurbs). Capture only. Not wired into tape_anchor / predict / #210.
 
 ## Theme Radar
 
-- **Prior close:** SPX -1.92% · Nasdaq -2.49% · Dow -1.41%
+- **Prior close:** SPX -1.03% · Nasdaq -0.74% · Dow -1.64%
 - **Oil:** —
 - **CPI / Fed-odds:** —
-- **Named leaders:** NVDA, INTC, MRVL, MU, ARM, PG, UNH, TSN, LHX, MOH, CGON, SMMT, POWL, RCAT
-- **Next-session calendar:** housing no · retail no · Fed yes
-  - Federal Reserve Chair Kevin Warsh, speaking in San Francisco, highlighted economic uncertainty around the AI boom and warned that AI’s ultimate impact could disappoint.
-- **Earnings slate:** NVDA
+- **Named leaders:** CRM, INTU, NOW, UNH, NKE, AVGO, NVDA, LOW, TGT, TJX
+- **Next-session calendar:** housing no · retail yes · Fed no
+  - October retail sales rose 0.2% month-over-month, matching forecasts and offering no upside surprise to offset equity weakness.
+- **Earnings slate:** LOW, TGT, TJX
 - **Geo / grain:** —
 
 ## Narrative
 
-**US stocks closed sharply lower as tech weakness and AI uncertainty ahead of Nvidia earnings drove the worst session since November 5**
+**US stocks extended their slide as AI trade unwind and Nvidia earnings focus pressured tech despite in-line retail sales**
 
-- The S&P 500 ($SPX) fell 1.92% to 7,416.59, the Dow Jones Industrial Average ($DJI) lost 1.41% (about 730 points) to 51,608.17, and the Nasdaq Composite ($COMP) declined 2.49% to 24,509.76, marking the worst day for the major indexes since November 5.
-- Nvidia (NVDA) dropped about 4.1% ahead of Tuesday’s earnings after Treasury Secretary Scott Bessent called for a leadership shakeup, while CNBC reported the board is not discussing reinstating former CEO Jensen Huang.
-- Chip stocks weakened broadly, with Intel (INTC), Marvell Technology (MRVL), Micron (MU), and Arm Holdings (ARM) each falling more than 6% amid Nvidia (NVDA) leadership fallout, a shareholder lawsuit against Intel (INTC), and a new U.S. rule requiring licenses for advanced-chip exports to five countries.
-- Sector breadth was poor, with only two of 16 sectors finishing higher as technology led declines, Consumer Cyclical fell 4.04%, and Communication Services gained 8.67%.
-- A defensive rotation supported Consumer Staples and Healthcare, lifting names such as Procter & Gamble (PG) and UnitedHealth Group (UNH).
-- Tyson Foods (TSN) jumped about 8.7% after meeting FY26 guidance, with Q4 adjusted EPS of $0.61 and revenue of $14.6 billion beating estimates, though it guided FY27 earnings lower on chicken and pork headwinds.
-- L3Harris Technologies (LHX) slid about 4% after the Transportation secretary blamed the company’s work for the U.S. aviation shutdown.
-- Molina Healthcare (MOH) gained 11.2%, CG Oncology (CGON) climbed 13.8%, and Summit Therapeutics (SMMT) sank 16.4% in notable individual stock moves.
-- Federal Reserve Chair Kevin Warsh, speaking in San Francisco, highlighted economic uncertainty around the AI boom and warned that AI’s ultimate impact could disappoint.
-- Powell Industries (POWL) reported fiscal Q4 EPS of $2.23 and revenue of $397 million, while Red Cat Holdings (RCAT) fell about 18% after hours after missing Q3 revenue estimates and withdrawing its 2026 revenue target.
+- The S&P 500 ($SPX) fell 1.03% to 7,340.53, the Dow Jones Industrial Average ($DJI) dropped 848.75 points or 1.64% to 50,759.42, and the Nasdaq Composite ($COMP) lost 0.74% to 24,328.38, marking a fourth straight decline and the S&P 500 ($SPX)’s lowest close since July 29.
+- Software led the drop, with Salesforce (CRM) sinking 9.45% after disclosing Optimizely malware exposure affecting branded websites, while Intuit (INTU) fell 7.17% and ServiceNow (NOW) slid 6.51%.
+- UnitedHealth Group (UNH) declined 5.42% after a CMS Medicare Advantage audit proposal, amplified by Sen. Warren’s breakup comments, and Nike (NKE) lost about 6% during the session.
+- All 11 S&P 500 ($SPX) sectors finished lower, with financials off 1.9% and software among the weakest groups, while Broadcom (AVGO) gained 2.46% as a relative outperformer in semiconductors.
+- Pressure on AI-related names continued amid an AI trade unwind tied to Anthropic IPO jitters and anticipation of Nvidia (NVDA)’s quarterly results.
+- October retail sales rose 0.2% month-over-month, matching forecasts and offering no upside surprise to offset equity weakness.
+- Nvidia (NVDA) closed down 0.44% at $155.46 ahead of earnings, then reported Q3 revenue of $115.8 billion after the bell, topping estimates of $109.15 billion on strong data center performance and issuing raised guidance.
+- Nvidia (NVDA) shares climbed in extended trading after results, as the board also confirmed it has no plans to reinstate Jensen Huang as CEO.
+- Investors are looking ahead to earnings from Lowe’s (LOW), Target (TGT), and TJX (TJX), as well as pricing for Anthropic’s IPO expected Wednesday as part of this week’s deal calendar.
