@@ -1,6 +1,6 @@
 # Finviz homepage market digest — 2026-11-18
 
-**Generated:** 2026-11-18T04:48:59.033552-05:00 (America/New_York)
+**Generated:** 2026-11-18T05:03:59.670445-05:00 (America/New_York)
 **Source:** `live`
 **Banner:** US futures point to a higher open as Nvidia earnings boost tech ahead of housing data, EIA report and FOMC minutes
 **Prior close:** SPX —  Nasdaq —  Dow —
