@@ -1,1 +1,236 @@
-[]
+[
+  {
+    "title": "GDUFA Paid Facilities List",
+    "url": "http://www.fda.gov/industry/generic-drug-user-fee-amendments/gdufa-paid-facilities-list",
+    "native_id": "http://www.fda.gov/industry/generic-drug-user-fee-amendments/gdufa-paid-facilities-list",
+    "published_at": "2026-11-18T19:04:58+00:00",
+    "published_raw": "Wed, 18 Nov 2026 14:04:58 EST",
+    "summary": "This list contains GDUFA facility payments received by the Agency. Data are extract from the User Fee System and GDUFA Facility User Fee Coversheets. The following table explains the terms used in the list:",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Food and Drug Administration — What's New: Drugs",
+      "jurisdiction": "US",
+      "family": "product_permissions_and_safety"
+    },
+    "primary_source_id": "us-fda-5696b24295",
+    "n": 1388,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-11-18T21:27:16.206477+00:00",
+    "source_ids": [
+      "us-fda-5696b24295"
+    ]
+  },
+  {
+    "title": "Drug Alerts and Statements",
+    "url": "http://www.fda.gov/drugs/drug-safety-and-availability/drug-alerts-and-statements",
+    "native_id": "http://www.fda.gov/drugs/drug-safety-and-availability/drug-alerts-and-statements",
+    "published_at": "2026-11-18T18:00:42+00:00",
+    "published_raw": "Wed, 18 Nov 2026 13:00:42 EST",
+    "summary": "See updates from CDER on fast-moving issues and learn about CDER's work to enhance public health",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Food and Drug Administration — What's New: Drugs",
+      "jurisdiction": "US",
+      "family": "product_permissions_and_safety"
+    },
+    "primary_source_id": "us-fda-5696b24295",
+    "n": 1390,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-11-18T21:27:16.206477+00:00",
+    "source_ids": [
+      "us-fda-5696b24295"
+    ]
+  },
+  {
+    "title": "Drugs@FDA Data Files",
+    "url": "http://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+    "native_id": "http://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+    "published_at": "2026-11-18T14:50:25+00:00",
+    "published_raw": "Wed, 18 Nov 2026 09:50:25 EST",
+    "summary": "Drugs@FDA Downloadable Data File in ZIP format, Data Definitions, and Entity Relationship Diagram (ERD)",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Food and Drug Administration — What's New: Drugs",
+      "jurisdiction": "US",
+      "family": "product_permissions_and_safety"
+    },
+    "primary_source_id": "us-fda-5696b24295",
+    "n": 1398,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-11-18T21:27:16.206477+00:00",
+    "source_ids": [
+      "us-fda-03f7703006",
+      "us-fda-5696b24295"
+    ]
+  },
+  {
+    "title": "Novel Drug Approvals for 2026",
+    "url": "http://www.fda.gov/drugs/novel-drug-approvals-fda/novel-drug-approvals-2026",
+    "native_id": "http://www.fda.gov/drugs/novel-drug-approvals-fda/novel-drug-approvals-2026",
+    "published_at": "2026-11-18T15:32:36+00:00",
+    "published_raw": "Wed, 18 Nov 2026 10:32:36 EST",
+    "summary": "FDA Novel Drug Therapy Approvals for 2026",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Food and Drug Administration — What's New: Drugs",
+      "jurisdiction": "US",
+      "family": "product_permissions_and_safety"
+    },
+    "primary_source_id": "us-fda-5696b24295",
+    "n": 5806,
+    "first_seen": "2026-10-21T06:03:26.053264+00:00",
+    "last_seen": "2026-11-18T21:27:16.206477+00:00",
+    "source_ids": [
+      "us-fda-5696b24295"
+    ]
+  },
+  {
+    "title": "Generic Drug Facilities, Sites and Organization Lists",
+    "url": "http://www.fda.gov/industry/generic-drug-user-fee-amendments/generic-drug-facilities-sites-and-organization-lists",
+    "native_id": "http://www.fda.gov/industry/generic-drug-user-fee-amendments/generic-drug-facilities-sites-and-organization-lists",
+    "published_at": "2026-11-18T15:21:14+00:00",
+    "published_raw": "Wed, 18 Nov 2026 10:21:14 EST",
+    "summary": "Generic Drug Facilities, Sites and Organization Lists",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Food and Drug Administration — What's New: Drugs",
+      "jurisdiction": "US",
+      "family": "product_permissions_and_safety"
+    },
+    "primary_source_id": "us-fda-5696b24295",
+    "n": 6652,
+    "first_seen": "2026-10-26T19:21:36.282284+00:00",
+    "last_seen": "2026-11-18T21:27:16.206477+00:00",
+    "source_ids": [
+      "us-fda-5696b24295"
+    ]
+  },
+  {
+    "title": "Notice of authorised amendments (NAA) 2026 documents",
+    "url": "https://www.gov.uk/government/publications/notice-of-authorised-amendments-naa-2026-documents",
+    "native_id": "/government/publications/notice-of-authorised-amendments-naa-2026-documents",
+    "published_at": "2026-11-18T15:49:37+00:00",
+    "published_raw": "2026-11-18T15:49:37Z",
+    "document_type": "regulation",
+    "issuer": "Ministry of Defence; Military Aviation Authority",
+    "issuer_ids": [
+      "uk-gov:ministry-of-defence",
+      "uk-gov:military-aviation-authority"
+    ],
+    "summary": "Issuing of an NAA gives notice to the changes in regulations and manuals. Produced by the Military Aviation Authority (MAA).",
+    "source_metadata": {
+      "document_type": "regulation",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Ministry of Defence; Military Aviation Authority",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-regulation",
+    "n": 9776,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-18T21:27:16.206477+00:00",
+    "source_ids": [
+      "uk-govuk-regulation"
+    ]
+  },
+  {
+    "title": "Notice of authorised amendments (NAA) reference table",
+    "url": "https://www.gov.uk/government/publications/notice-of-authorised-amendments-naa-reference-table",
+    "native_id": "/government/publications/notice-of-authorised-amendments-naa-reference-table",
+    "published_at": "2026-11-18T15:49:46+00:00",
+    "published_raw": "2026-11-18T15:49:46Z",
+    "document_type": "regulation",
+    "issuer": "Ministry of Defence; Military Aviation Authority",
+    "issuer_ids": [
+      "uk-gov:ministry-of-defence",
+      "uk-gov:military-aviation-authority"
+    ],
+    "summary": "The NAA table provides information of changes in regulations and manuals and release date produced by the Military Aviation Authority (MAA).",
+    "source_metadata": {
+      "document_type": "regulation",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Ministry of Defence; Military Aviation Authority",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-regulation",
+    "n": 9777,
+    "first_seen": "2026-11-11T20:12:59.574202+00:00",
+    "last_seen": "2026-11-18T21:27:16.206477+00:00",
+    "source_ids": [
+      "uk-govuk-regulation"
+    ]
+  },
+  {
+    "title": "UK-EU Summit package - factsheet and mythbuster",
+    "url": "https://www.gov.uk/government/news/uk-eu-summit-package-factsheet-and-mythbuster",
+    "native_id": "/government/news/uk-eu-summit-package-factsheet-and-mythbuster",
+    "published_at": "2026-11-18T19:00:54+00:00",
+    "published_raw": "2026-11-18T19:00:54Z",
+    "document_type": "government_response",
+    "issuer": "Cabinet Office",
+    "issuer_ids": [
+      "uk-gov:cabinet-office"
+    ],
+    "summary": "This factsheet clarifies several points about the upcoming UK-EU Summit 2026 package, set to be announced on November 20th.",
+    "source_metadata": {
+      "document_type": "government_response",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Cabinet Office",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-government_response",
+    "n": 10827,
+    "first_seen": "2026-11-17T21:46:57.732960+00:00",
+    "last_seen": "2026-11-18T21:27:16.206477+00:00",
+    "source_ids": [
+      "uk-govuk-government_response"
+    ]
+  },
+  {
+    "title": "Joint Statement from Department of Commerce and Department of Justice on Megaspeed Investigation",
+    "url": "https://www.justice.gov/opa/pr/joint-statement-department-commerce-and-department-justice-megaspeed-investigation",
+    "native_id": "https://www.justice.gov/opa/pr/joint-statement-department-commerce-and-department-justice-megaspeed-investigation",
+    "published_at": "2026-11-17T12:00:00+00:00",
+    "published_raw": "Tue, 17 Nov 2026 12:00:00 +0000",
+    "summary": "The Department of Commerce and the Department of Justice are providing the public with an update on the investigation of the Singaporean company Megaspeed, which has attracted significant public attention in the last week. While we don’t typically comment on ongoing investigations, it is in the public interest to provide the facts and address inaccurate information circulating in public reporting.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Department of Justice — RSS Feed",
+      "jurisdiction": "US",
+      "family": "judicial_and_enforcement"
+    },
+    "primary_source_id": "us-doj-e05071794d",
+    "n": 10869,
+    "first_seen": "2026-11-17T21:46:57.732960+00:00",
+    "last_seen": "2026-11-18T21:27:16.206477+00:00",
+    "source_ids": [
+      "us-doj-e05071794d"
+    ]
+  }
+]
