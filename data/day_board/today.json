@@ -1,6 +1,6 @@
 {
   "date": "2026-11-18",
-  "generated_at": "2026-11-18T09:13:43.494471-05:00",
+  "generated_at": "2026-11-18T09:13:53.207517-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -15,31 +15,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "news_parse",
-      "title": "News parse",
-      "date": "2026-11-18",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-11-18T05:02:43.515946-05:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-11-18_parsed.json",
-          "ok": true,
-          "reason": "",
-          "size": 5610905,
-          "preview": "raw=7859 usable=582 single=740 \u00b7 UK Inflation Print at Fastest in a Year Comes With Few Surprises - Bloomberg.com | United States Dollar index struggles to extend rally beyond 103.80, FOMC Minutes | US Dollar Index Forecast: DXY nears 104.00 ahead of FOMC Minutes - FXStreet | FOMC Minutes and European CPI data due, Anthropic\u2019s IPO is expected to price - F | BHP, Rio Tinto executives to meet China leaders as iron ore pressure builds - Re"
-        },
-        {
-          "path": "01_daily/news/2026-11-18_parsed.md",
-          "ok": true,
-          "reason": "",
-          "size": 12040,
-          "preview": "# News Parse v2 \u2014 2026-11-18T05:02:35.097376-05:00\nWindow\u224848h | news_mode=on | raw=7859 | usable=582 | single_name=740 | noise_dropped=6375\nusable polarity={'+': 16, '-': 102, 'mixed': 1, 'neutral': 463}"
-        }
-      ],
-      "preview": "raw=7859 usable=582 single=740 \u00b7 UK Inflation Print at Fastest in a Year Comes With Few Surprises - Bloomberg.com | United States Dollar index struggles to extend rally beyond 103.80, FOMC Minutes | US Dollar Index Forecast: DXY nears 104.00 ahead of FOMC Minutes - FXStreet | FOMC Minutes and European CPI data due, Anthropic\u2019s IPO is expected to price - F | BHP, Rio Tinto executives to meet China leaders as iron ore pressure builds - Re \u00b7 # News Parse v2 \u2014 2026-11-18T05:02:35.097376-05:00\nWindow\u224848h | news_mode=on | raw=7859 | usable=582 | single_name=740 | noise_dropped=6375\nusable polarity={'+': 16, '-': 102, 'mixed': 1, 'neutral': 463}"
-    },
     {
       "key": "news_actions",
       "title": "News actions (no LLM)",
@@ -242,6 +217,24 @@
         }
       ],
       "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -7.859999999999999, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.65, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -4.23, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -2.6399999999999997, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -0.645, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -2.28, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -6.87, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -4.22, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-11-18\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-11-18",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-18T09:13:52.258235-05:00",
+      "files": [
+        {
+          "path": "data/join/2026-11-18_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2292288,
+          "preview": "5886 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 LNG, CVX, DHT, DINO, RRC"
+        }
+      ],
+      "preview": "5886 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 LNG, CVX, DHT, DINO, RRC"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
