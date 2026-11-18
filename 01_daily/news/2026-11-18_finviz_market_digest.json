@@ -1,0 +1,93 @@
+{
+  "date": "2026-11-18",
+  "generated_at": "2026-11-18T04:48:59.033552-05:00",
+  "timezone": "America/New_York",
+  "source": "live",
+  "source_url": "https://elite.finviz.com/",
+  "archive_snapshot_ts": null,
+  "archive_snapshot_at": null,
+  "archive_url": null,
+  "clock_legal": true,
+  "clock_same_morning": true,
+  "clock_use": "same_morning",
+  "clock_legal_for": "2026-11-18",
+  "clock_rule": "Live: Generated must be before 09:30 ET on this date or leave missing. Wayback: capture before 09:30 ET that day is legal for that morning's Pre-Open. Afternoon Wayback is legal for the NEXT session open only (prior-day close recap), marked by clock_legal_for. Gaps stay gaps. Capture only — not tape_anchor / predict / #210.",
+  "kind": "finviz_homepage_market_digest",
+  "represents": "Finviz homepage market-day prose. Same-morning Pre-Open when Generated is before 09:30 ET; afternoon Wayback is a prior-day close recap legal for the next session only. Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "US futures point to a higher open as Nvidia earnings boost tech ahead of housing data, EIA report and FOMC minutes",
+  "raw_text": "- S&P 500 futures (@ES) are up 0.62%, Nasdaq 100 futures (@NQ) are up 1.18%, Dow Jones futures (@YM) are up 0.28%, and Russell 2000 futures (@ER2) are up 0.12%, indicating a gap higher at the open\n- Nvidia (NVDA) trades higher pre-market after a post-close earnings beat and raised guidance, with revenue up 103% year-over-year to $115.8 billion, exceeding estimates\n- AI and chip names including Micron (MU), Advanced Micro Devices (AMD), and Marvell Technology (MRVL) gain alongside neocloud play CoreWeave (CRWV), which climbs over 6%\n- Samsung downplays concerns about an AI bubble, while the anticipated Anthropic IPO is expected to test investor appetite for the AI sector\n- Retailers Target (TGT), Lowe’s (LOW), and TJX Companies (TJX) are scheduled to report earnings before the bell, setting up potential swing trades based on results versus consensus\n- Palo Alto Networks (PANW) is due to report earnings after the close, adding to today’s tech-heavy catalyst calendar\n- Bumble (BMBL) appears on technical watch lists for a potential pocket pivot setup\n- US housing starts and building permits data are due at 8:30 AM ET, with pending home sales at 10:00 AM ET\n- EIA crude oil (@CL) inventory data are scheduled for 10:30 AM ET, followed by FOMC minutes at 2:00 PM ET as key macro catalysts\n- Oil and gold (@GC) prices declined in overnight trading, shaping the backdrop for today’s session alongside earnings reactions and Fed policy minutes",
+  "raw_summary_md": "- **S&P 500 futures** ([@ES](https://finviz.com/futures_charts?t=ES)) are up 0.62%, **Nasdaq 100 futures** ([@NQ](https://finviz.com/futures_charts?t=NQ)) are up 1.18%, **Dow Jones futures** ([@YM](https://finviz.com/futures_charts?t=YM)) are up 0.28%, and **Russell 2000 futures** ([@ER2](https://finviz.com/futures_charts?t=ER2)) are up 0.12%, indicating a **gap higher** at the open\n- **Nvidia** ([NVDA](https://finviz.com/quote?t=NVDA)) trades higher pre-market after a post-close **earnings beat** and **raised guidance**, with revenue up 103% year-over-year to $115.8 billion, exceeding estimates\n- AI and chip names including **Micron** ([MU](https://finviz.com/quote?t=MU)), **Advanced Micro Devices** ([AMD](https://finviz.com/quote?t=AMD)), and **Marvell Technology** ([MRVL](https://finviz.com/quote?t=MRVL)) gain alongside neocloud play **CoreWeave** ([CRWV](https://finviz.com/quote?t=CRWV)), which climbs **over 6%**\n- Samsung downplays concerns about an AI bubble, while the anticipated Anthropic IPO is expected to **test investor appetite** for the AI sector\n- Retailers **Target** ([TGT](https://finviz.com/quote?t=TGT)), **Lowe’s** ([LOW](https://finviz.com/quote?t=LOW)), and **TJX Companies** ([TJX](https://finviz.com/quote?t=TJX)) are scheduled to report **earnings before the bell**, setting up potential swing trades based on results versus consensus\n- **Palo Alto Networks** ([PANW](https://finviz.com/quote?t=PANW)) is due to report earnings **after the close**, adding to today’s tech-heavy catalyst calendar\n- **Bumble** ([BMBL](https://finviz.com/quote?t=BMBL)) appears on technical watch lists for a potential **pocket pivot setup**\n- US **housing starts** and **building permits** data are due at 8:30 AM ET, with **pending home sales** at 10:00 AM ET\n- EIA **crude oil** ([@CL](https://finviz.com/futures_charts?t=CL)) inventory data are scheduled for 10:30 AM ET, followed by **FOMC minutes** at 2:00 PM ET as key macro catalysts\n- Oil and **gold** ([@GC](https://finviz.com/futures_charts?t=GC)) prices **declined** in overnight trading, shaping the backdrop for today’s session alongside earnings reactions and Fed policy minutes",
+  "index_moves": [],
+  "oil": null,
+  "cpi": null,
+  "fed_odds": null,
+  "named_tickers": [
+    "NVDA",
+    "MU",
+    "AMD",
+    "MRVL",
+    "CRWV",
+    "TGT",
+    "LOW",
+    "TJX",
+    "PANW",
+    "BMBL"
+  ],
+  "named_leaders": [
+    "NVDA",
+    "MU",
+    "AMD",
+    "MRVL",
+    "CRWV",
+    "TGT",
+    "LOW",
+    "TJX",
+    "PANW",
+    "BMBL"
+  ],
+  "calendar": [
+    "Palo Alto Networks (PANW) is due to report earnings after the close, adding to today’s tech-heavy catalyst calendar",
+    "EIA crude oil (@CL) inventory data are scheduled for 10:30 AM ET, followed by FOMC minutes at 2:00 PM ET as key macro catalysts",
+    "Oil and gold (@GC) prices declined in overnight trading, shaping the backdrop for today’s session alongside earnings reactions and Fed policy minutes"
+  ],
+  "prior_close": {
+    "spx": null,
+    "nasdaq": null,
+    "dow": null
+  },
+  "cpi_fed": {
+    "cpi": null,
+    "fed_odds": null
+  },
+  "next_session_calendar": {
+    "housing": true,
+    "retail": false,
+    "fed": true,
+    "bullets": [
+      "US housing starts and building permits data are due at 8:30 AM ET, with pending home sales at 10:00 AM ET",
+      "EIA crude oil (@CL) inventory data are scheduled for 10:30 AM ET, followed by FOMC minutes at 2:00 PM ET as key macro catalysts"
+    ],
+    "text": "US housing starts and building permits data are due at 8:30 AM ET, with pending home sales at 10:00 AM ET EIA crude oil (@CL) inventory data are scheduled for 10:30 AM ET, followed by FOMC minutes at 2:00 PM ET as key macro catalysts"
+  },
+  "earnings_slate": {
+    "tickers": [
+      "TGT",
+      "LOW",
+      "TJX",
+      "PANW"
+    ],
+    "text": "Retailers Target (TGT), Lowe’s (LOW), and TJX Companies (TJX) are scheduled to report earnings before the bell, setting up potential swing trades based on results versus consensus Palo Alto Networks (PANW) is due to report earnings after the close, adding to today’s tech-heavy catalyst calendar"
+  },
+  "geo_grain": {
+    "geo": false,
+    "grain": false,
+    "flags": [],
+    "text": ""
+  },
+  "finviz_id": 347432,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-11-18T04:36:43.38",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "good"
+}
