@@ -1,6 +1,6 @@
 {
   "stage": "outcome",
-  "fetched_at": "2026-11-17T16:50:57.488205-05:00",
+  "fetched_at": "2026-11-17T22:01:28.046419-05:00",
   "fred": {
     "DGS30": {
       "available": true,
@@ -88,41 +88,41 @@
     "CL=F": {
       "available": true,
       "date": "2026-11-17",
-      "last": 85.62,
-      "pct_1d": -0.12
+      "last": 85.04,
+      "pct_1d": -0.79
     },
     "BZ=F": {
       "available": true,
       "date": "2026-11-17",
-      "last": 93.01,
-      "pct_1d": 0.62
+      "last": 92.63,
+      "pct_1d": 0.21
     },
     "GC=F": {
       "available": true,
       "date": "2026-11-17",
-      "last": 3852.7,
-      "pct_1d": -0.01
+      "last": 3796.7,
+      "pct_1d": -1.46
     },
     "DXY": {
       "available": true,
       "date": "2026-11-17",
       "source": "DX-Y.NYB",
-      "pct_1d": -0.0,
-      "pct_1m": 1.54
+      "pct_1d": 0.05,
+      "pct_1m": 1.59
     }
   },
   "futures": {
     "ES=F": {
       "available": true,
       "date": "2026-11-17",
-      "last": 7371.75,
-      "pct_1d": -0.9
+      "last": 7365.75,
+      "pct_1d": -0.98
     },
     "NQ=F": {
       "available": true,
       "date": "2026-11-17",
-      "last": 27180.5,
-      "pct_1d": -0.38
+      "last": 27122.0,
+      "pct_1d": -0.59
     }
   },
   "finviz_futures_tape": {
@@ -490,43 +490,43 @@
       "per_index": {
         "Nikkei": {
           "available": true,
-          "date": "2026-11-16",
-          "last": 59662.02,
-          "pct_1d": -2.42
+          "date": "2026-11-18",
+          "last": 58696.54,
+          "pct_1d": -0.28
         },
         "Hang Seng": {
           "available": true,
-          "date": "2026-11-16",
-          "last": 23753.84,
-          "pct_1d": 0.49
+          "date": "2026-11-18",
+          "last": 23312.99,
+          "pct_1d": -0.83
         },
         "Shanghai": {
           "available": true,
-          "date": "2026-11-16",
-          "last": 3602.57,
-          "pct_1d": -0.87
+          "date": "2026-11-18",
+          "last": 3570.49,
+          "pct_1d": -0.39
         },
         "Kospi": {
           "available": true,
-          "date": "2026-11-16",
-          "last": 5100.5,
-          "pct_1d": -3.59
+          "date": "2026-11-18",
+          "last": 4984.41,
+          "pct_1d": 0.32
         },
         "ASX200": {
           "available": true,
-          "date": "2026-11-17",
-          "last": 8883.2,
-          "pct_1d": -1.79
+          "date": "2026-11-18",
+          "last": 8857.5,
+          "pct_1d": -0.29
         }
       },
-      "composite_avg": -1.64
+      "composite_avg": -0.29
     },
     "europe": {
       "per_index": {
         "FTSE": {
           "available": true,
           "date": "2026-11-17",
-          "last": 10689.87,
+          "last": 10689.9,
           "pct_1d": -1.76
         },
         "DAX": {
