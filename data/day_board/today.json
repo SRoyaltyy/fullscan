@@ -1,8 +1,8 @@
 {
   "date": "2026-11-17",
-  "generated_at": "2026-11-17T21:59:12.646615-05:00",
+  "generated_at": "2026-11-18T03:36:51.479301-05:00",
   "overall": "PARTIAL",
-  "ranker_ready": false,
+  "ranker_ready": true,
   "counts": {
     "ok": 6,
     "partial": 1,
@@ -91,24 +91,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "peer_rs",
-      "title": "Peer RS",
-      "date": "2026-11-17",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-11-17T09:11:16.699256-05:00",
-      "files": [
-        {
-          "path": "data/peers/2026-11-17_peer_rs.csv",
-          "ok": true,
-          "reason": "",
-          "size": 810611,
-          "preview": "5023 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
-        }
-      ],
-      "preview": "5023 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
-    },
     {
       "key": "stock_book",
       "title": "Stock book + green",
@@ -654,6 +636,52 @@
         }
       ],
       "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest (close) \u2014 2026-11-17\n**Generated:** 2026-11-17T21:59:11.653379-05:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks extended their slide as AI trade unwind and Nvidia earnings focus pressured tech despite in-line retail sales\n**Prior close:** SPX -1.03%  Nasdaq -0.74%  Dow -1.64%\n**SPX:** -1.03%  **Nasdaq:** -0.74%  **Dow:** -1.64%\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** CRM, INTU, NOW, UNH, NKE, AVGO, NVDA, LOW, TGT, TJX\n**Next session:** housing no \u00b7 retail yes \u00b7 Fed no\n**Earnings slate:** LOW, TGT, TJX\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-11-18\n**Clock use:** `next_open`"
+    },
+    {
+      "key": "finviz_digest",
+      "title": "Finviz digest",
+      "date": "2026-11-17",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-18T03:36:50.153281-05:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-11-17_finviz_digest.after-freeze-1.json",
+          "ok": true,
+          "reason": "",
+          "size": 101831,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        },
+        {
+          "path": "01_daily/news/2026-11-17_finviz_digest.after-freeze-1.md",
+          "ok": true,
+          "reason": "",
+          "size": 11690,
+          "preview": "# Finviz Daily Digest \u2014 2026-11-17\n_Generated 2026-11-18T03:36:49.502498-05:00 \u00b7 export=data/exports/finviz_2026-11-17.csv \u00b7 ticker digests=864 \u00b7 high-signal=231_"
+        },
+        {
+          "path": "data/exports/finviz_2026-11-17.after-freeze-1.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11068505,
+          "preview": "11752 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAB\""
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11068505,
+          "preview": "11752 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAB\""
+        },
+        {
+          "path": "01_daily/news/2026-11-17_finviz_digest_preopen.json",
+          "ok": true,
+          "reason": "",
+          "size": 101295,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        }
+      ],
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-11-17\n_Generated 2026-11-18T03:36:49.502498-05:00 \u00b7 export=data/exports/finviz_2026-11-17.csv \u00b7 ticker digests=864 \u00b7 high-signal=231_ \u00b7 11752 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAB\" \u00b7 11752 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAB\" \u00b7 keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
