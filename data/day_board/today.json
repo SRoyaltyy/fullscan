@@ -1,6 +1,6 @@
 {
   "date": "2026-11-18",
-  "generated_at": "2026-11-18T05:02:36.551411-05:00",
+  "generated_at": "2026-11-18T05:02:44.435819-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -182,7 +182,7 @@
       "date": "2026-11-18",
       "ok": true,
       "pushed": true,
-      "at": "2026-11-18T05:02:35.622813-05:00",
+      "at": "2026-11-18T05:02:43.515946-05:00",
       "files": [
         {
           "path": "01_daily/news/2026-11-18_parsed.json",
