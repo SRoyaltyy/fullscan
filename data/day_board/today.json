@@ -1,12 +1,12 @@
 {
   "date": "2026-11-18",
-  "generated_at": "2026-11-18T05:02:44.435819-05:00",
+  "generated_at": "2026-11-18T05:03:02.731459-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
     "ok": 4,
-    "partial": 3,
-    "fail": 1,
+    "partial": 4,
+    "fail": 0,
     "n": 8
   },
   "buy_1d": [],
@@ -15,31 +15,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "finviz_digest",
-      "title": "Finviz digest",
-      "date": "2026-11-18",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-11-18T05:00:48.687138-05:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-11-18_finviz_digest.json",
-          "ok": true,
-          "reason": "",
-          "size": 101300,
-          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
-        },
-        {
-          "path": "01_daily/news/2026-11-18_finviz_digest.md",
-          "ok": true,
-          "reason": "",
-          "size": 11798,
-          "preview": "# Finviz Daily Digest \u2014 2026-11-18\n_Generated 2026-11-18T04:48:47.250384-05:00 \u00b7 export=data/exports/finviz_2026-11-17.csv \u00b7 ticker digests=597 \u00b7 high-signal=162_"
-        }
-      ],
-      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-11-18\n_Generated 2026-11-18T04:48:47.250384-05:00 \u00b7 export=data/exports/finviz_2026-11-17.csv \u00b7 ticker digests=597 \u00b7 high-signal=162_"
-    },
     {
       "key": "map_heat",
       "title": "Map heat tables",
@@ -200,6 +175,31 @@
         }
       ],
       "preview": "raw=7859 usable=582 single=740 \u00b7 UK Inflation Print at Fastest in a Year Comes With Few Surprises - Bloomberg.com | United States Dollar index struggles to extend rally beyond 103.80, FOMC Minutes | US Dollar Index Forecast: DXY nears 104.00 ahead of FOMC Minutes - FXStreet | FOMC Minutes and European CPI data due, Anthropic\u2019s IPO is expected to price - F | BHP, Rio Tinto executives to meet China leaders as iron ore pressure builds - Re \u00b7 # News Parse v2 \u2014 2026-11-18T05:02:35.097376-05:00\nWindow\u224848h | news_mode=on | raw=7859 | usable=582 | single_name=740 | noise_dropped=6375\nusable polarity={'+': 16, '-': 102, 'mixed': 1, 'neutral': 463}"
+    },
+    {
+      "key": "news_actions",
+      "title": "News actions",
+      "date": "2026-11-18",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-18T05:03:01.897378-05:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-11-18_actions.json",
+          "ok": true,
+          "reason": "",
+          "size": 81998,
+          "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers"
+        },
+        {
+          "path": "01_daily/news/2026-11-18_actions.md",
+          "ok": true,
+          "reason": "",
+          "size": 16047,
+          "preview": "# News \u2192 Actions v4 (full framework) \u2014 2026-11-18T05:03:01.880650-05:00\nraw=7858 unique_events=7 tickers=112"
+        }
+      ],
+      "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-11-18T05:03:01.880650-05:00\nraw=7858 unique_events=7 tickers=112"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
