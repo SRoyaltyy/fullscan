@@ -1,6 +1,6 @@
 {
   "date": "2026-11-18",
-  "generated_at": "2026-11-18T14:32:23.675705-05:00",
+  "generated_at": "2026-11-18T14:32:40.079926-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -1761,6 +1761,24 @@
         }
       ],
       "preview": "5886 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 LNG, CVX, DHT, DINO, RRC \u00b7 5886 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 LNG, CVX, DHT, DINO, RRC"
+    },
+    {
+      "key": "peer_rs",
+      "title": "Peer RS",
+      "date": "2026-11-18",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-18T14:32:38.799275-05:00",
+      "files": [
+        {
+          "path": "data/peers/2026-11-18_peer_rs.csv",
+          "ok": true,
+          "reason": "",
+          "size": 815978,
+          "preview": "5022 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+        }
+      ],
+      "preview": "5022 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
     }
   ],
   "href": {
@@ -1806,6 +1824,14 @@
       "path": "data/day_board/2026-11-18.json",
       "at": "2026-11-18T14:32:24-05:00",
       "commit_msg": "auto: land join [2026-11-18]",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "44379753256",
+      "manifest": "research/input_freeze/2026-11-18/manifest.json"
+    },
+    {
+      "path": "data/day_board/2026-11-18.json",
+      "at": "2026-11-18T14:32:40-05:00",
+      "commit_msg": "auto: land peer_rs [2026-11-18]",
       "workflow": "Stock Book ALL (one-shot)",
       "run_id": "44379753256",
       "manifest": "research/input_freeze/2026-11-18/manifest.json"
