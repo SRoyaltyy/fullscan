@@ -1,6 +1,6 @@
 {
   "date": "2026-11-18",
-  "generated_at": "2026-11-18T09:13:59.855250-05:00",
+  "generated_at": "2026-11-18T09:20:07.982331-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -8,8 +8,8 @@
     "MISSING News judge MD `01_daily/news/2026-11-18_judge.md` \u2014 missing"
   ],
   "counts": {
-    "ok": 4,
-    "partial": 3,
+    "ok": 6,
+    "partial": 1,
     "fail": 1,
     "n": 8
   },
@@ -654,11 +654,11 @@
       "key": "stock_book",
       "name": "Stock Book ALL",
       "yaml": "stock_book_all.yml",
-      "status": "PARTIAL",
+      "status": "OK",
       "inputs_ready": false,
-      "n_req_ok": 2,
+      "n_req_ok": 4,
       "n_req": 4,
-      "n_opt_ok": 1,
+      "n_opt_ok": 3,
       "n_opt": 4,
       "files": [
         {
@@ -782,10 +782,10 @@
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-11-18_stock_book.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "horizons=5 names=215",
+          "size": 1483574,
+          "said": "1d BUY UHS, PAYS, PSN, TTEC, VIV, VRSK, FTNT \u00b7 SELL QBTS, FLNC, QUBT, CWEN, FCEL, RGTI",
           "bullets": []
         },
         {
@@ -793,21 +793,24 @@
           "name": "Stock book MD",
           "path": "01_daily/2026-11-18_stock_book.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 82604,
+          "said": "Stock book \u2014 2026-11-18",
+          "bullets": [
+            "_Generated 2026-11-18T09:14:10.043922-05:00_",
+            "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
+          ]
         },
         {
           "key": "green",
           "name": "Green-pile JSON",
           "path": "data/stock_book/2026-11-18_green.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "",
+          "size": 585,
+          "said": "0 green \u00b7",
           "bullets": []
         },
         {
@@ -829,10 +832,10 @@
           "name": "Dashboard HTML",
           "path": "dashboard/index.html",
           "role": "optional",
-          "status": "FAIL",
-          "reason": "session 2026-11-18 not in dashboard dates (last=2026-11-17)",
-          "size": 16917607,
-          "said": "session 2026-11-18 not in dashboard dates (last=2026-11-17)",
+          "status": "OK",
+          "reason": "live-book poller + today.json (2026-11-18)",
+          "size": 16917623,
+          "said": "live-book poller + today.json (2026-11-18)",
           "bullets": []
         }
       ],
@@ -845,9 +848,9 @@
       "key": "publish",
       "name": "Dashboard / .io",
       "yaml": "deploy-dashboard.yml",
-      "status": "PARTIAL",
-      "inputs_ready": false,
-      "n_req_ok": 1,
+      "status": "OK",
+      "inputs_ready": true,
+      "n_req_ok": 2,
       "n_req": 2,
       "n_opt_ok": 0,
       "n_opt": 1,
@@ -857,10 +860,10 @@
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-11-18_stock_book.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "horizons=5 names=215",
+          "size": 1483574,
+          "said": "1d BUY UHS, PAYS, PSN, TTEC, VIV, VRSK, FTNT \u00b7 SELL QBTS, FLNC, QUBT, CWEN, FCEL, RGTI",
           "bullets": []
         },
         {
@@ -868,10 +871,10 @@
           "name": "Dashboard HTML (repo)",
           "path": "dashboard/index.html",
           "role": "required",
-          "status": "FAIL",
-          "reason": "session 2026-11-18 not in dashboard dates (last=2026-11-17)",
-          "size": 16917607,
-          "said": "session 2026-11-18 not in dashboard dates (last=2026-11-17)",
+          "status": "OK",
+          "reason": "live-book poller + today.json (2026-11-18)",
+          "size": 16917623,
+          "said": "live-book poller + today.json (2026-11-18)",
           "bullets": []
         },
         {
@@ -907,8 +910,70 @@
   "news_mode": "on",
   "news_mode_reason": "",
   "selections": {
-    "buy_1d": [],
-    "sell_1d": [],
+    "buy_1d": [
+      {
+        "ticker": "UHS",
+        "score": 0.3519173995883809
+      },
+      {
+        "ticker": "PAYS",
+        "score": 0.6657617011781223
+      },
+      {
+        "ticker": "PSN",
+        "score": 0.5839561977057759
+      },
+      {
+        "ticker": "TTEC",
+        "score": 0.42908688313104676
+      },
+      {
+        "ticker": "VIV",
+        "score": 0.6285526231020445
+      },
+      {
+        "ticker": "VRSK",
+        "score": 0.28377419515390845
+      },
+      {
+        "ticker": "FTNT",
+        "score": 0.20271360840267139
+      }
+    ],
+    "sell_1d": [
+      {
+        "ticker": "QBTS",
+        "score": -0.40752776145286357
+      },
+      {
+        "ticker": "FLNC",
+        "score": -0.48891753098070184
+      },
+      {
+        "ticker": "QUBT",
+        "score": -0.3455665513737632
+      },
+      {
+        "ticker": "CWEN",
+        "score": -0.38941772670022284
+      },
+      {
+        "ticker": "FCEL",
+        "score": -0.4065118481998811
+      },
+      {
+        "ticker": "RGTI",
+        "score": -0.4162713707681536
+      },
+      {
+        "ticker": "METC",
+        "score": -0.35976235458179423
+      },
+      {
+        "ticker": "TE",
+        "score": -0.36728094844595033
+      }
+    ],
     "flatten": {},
     "general": {},
     "sectors": {},
@@ -1477,6 +1542,59 @@
         }
       ],
       "preview": "5022 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-11-18",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-18T09:20:06.718923-05:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-11-18_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1483574,
+          "preview": "1d BUY UHS, PAYS, PSN, TTEC, VIV, VRSK, FTNT \u00b7 SELL QBTS, FLNC, QUBT, CWEN, FCEL, RGTI, METC, TE"
+        },
+        {
+          "path": "data/stock_book/2026-11-18_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-11-18_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2612,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-11-18_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12357,
+          "preview": "2026-11-18 BUY UHS, PAYS, PSN, TTEC, VIV, VRSK, FTNT \u00b7 SELL QBTS, FLNC, QUBT, CWEN, FCEL, RGTI, METC, TE"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12357,
+          "preview": "2026-11-18 BUY UHS, PAYS, PSN, TTEC, VIV, VRSK, FTNT \u00b7 SELL QBTS, FLNC, QUBT, CWEN, FCEL, RGTI, METC, TE"
+        },
+        {
+          "path": "01_daily/2026-11-18_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 83712,
+          "preview": "# Stock book \u2014 2026-11-18\n_Generated 2026-11-18T09:14:10.043922-05:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY UHS, PAYS, PSN, TTEC, VIV, VRSK, FTNT \u00b7 SELL QBTS, FLNC, QUBT, CWEN, FCEL, RGTI, METC, TE \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-11-18 BUY UHS, PAYS, PSN, TTEC, VIV, VRSK, FTNT \u00b7 SELL QBTS, FLNC, QUBT, CWEN, FCEL, RGTI, METC, TE \u00b7 2026-11-18 BUY UHS, PAYS, PSN, TTEC, VIV, VRSK, FTNT \u00b7 SELL QBTS, FLNC, QUBT, CWEN, FCEL, RGTI, METC, TE \u00b7 # Stock book \u2014 2026-11-18\n_Generated 2026-11-18T09:14:10.043922-05:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "href": {
