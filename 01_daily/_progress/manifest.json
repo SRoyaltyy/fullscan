@@ -1,6 +1,12 @@
 {
-  "updated_at": "2026-11-17T22:22:57-05:00",
+  "updated_at": "2026-11-17T22:18:56-05:00",
   "runs": [
+    {
+      "date": "2026-11-09",
+      "workflow": "factor_mine",
+      "file": "2026-11-09_factor_mine.json",
+      "updated_at": "2026-11-09T16:32:06-05:00"
+    },
     {
       "date": "2026-11-09",
       "workflow": "homepage_digest",
@@ -200,10 +206,22 @@
       "updated_at": "2026-11-17T07:31:49-05:00"
     },
     {
+      "date": "2026-11-16",
+      "workflow": "postclose",
+      "file": "2026-11-16_postclose.json",
+      "updated_at": "2026-11-17T07:32:29-05:00"
+    },
+    {
       "date": "2026-11-17",
       "workflow": "preopen",
       "file": "2026-11-17_preopen.json",
       "updated_at": "2026-11-17T14:08:43-05:00"
+    },
+    {
+      "date": "2026-11-17",
+      "workflow": "fm_preopen",
+      "file": "2026-11-17_fm_preopen.json",
+      "updated_at": "2026-11-17T15:51:54-05:00"
     },
     {
       "date": "2026-11-17",
@@ -213,33 +231,15 @@
     },
     {
       "date": "2026-11-17",
-      "workflow": "factor_mine",
-      "file": "2026-11-17_factor_mine.json",
-      "updated_at": "2026-11-17T19:17:12-05:00"
-    },
-    {
-      "date": "2026-11-17",
-      "workflow": "homepage_digest",
-      "file": "2026-11-17_homepage_digest.json",
-      "updated_at": "2026-11-17T21:59:24-05:00"
-    },
-    {
-      "date": "2026-11-16",
-      "workflow": "postclose",
-      "file": "2026-11-16_postclose.json",
-      "updated_at": "2026-11-17T22:03:50-05:00"
-    },
-    {
-      "date": "2026-11-17",
-      "workflow": "fm_preopen",
-      "file": "2026-11-17_fm_preopen.json",
-      "updated_at": "2026-11-17T22:15:51-05:00"
-    },
-    {
-      "date": "2026-11-17",
       "workflow": "postclose",
       "file": "2026-11-17_postclose.json",
-      "updated_at": "2026-11-17T22:22:57-05:00"
+      "updated_at": "2026-11-17T18:29:44-05:00"
+    },
+    {
+      "date": "2026-11-17",
+      "workflow": "factor_mine",
+      "file": "2026-11-17_factor_mine.json",
+      "updated_at": "2026-11-17T22:18:56-05:00"
     }
   ]
 }
