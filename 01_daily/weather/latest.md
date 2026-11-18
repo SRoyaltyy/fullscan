@@ -1,11 +1,11 @@
-# Weather report — 2026-11-17
+# Weather report — 2026-11-18
 
 Is today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade.
 
 ## Snapshot
 
 - **Risk state:** UNKNOWN
-- **Yields:** falling (fred_dgs10) | **Dollar:** flat (dxy) | **Oil:** flat | **VIX:** spiking (ratio 1.02 via vix/vix3m) spot 25.46
+- **Yields:** falling (fred_dgs10) | **Dollar:** strong (dxy) | **Oil:** falling | **VIX:** falling (ratio 0.94 via vix/vix3m) spot 23.52
 - **Fear & Greed:** n/a | **Yield/SPX 5d corr:** +0.38
 - **High-impact events:** 0 bullish vs 0 bearish
 - ⚠️ **Data gaps:** general predict run, general predict factor scoreboard, event scanner output
@@ -14,17 +14,17 @@ Is today good for each *kind* of stock? Labels come from `data/universe/`; this 
 
 | Label | Weather | Conf | Why |
 |---|---|---|---|
-| sector:Basic Materials | 🌧️ hostile | medium | finviz sector median week -10.70% [tape] |
-| sector:Communication Services | ⛅ neutral | medium | finviz sector median week -1.40% [tape] |
-| sector:Consumer Cyclical | 🌧️ hostile | medium | finviz sector median week -3.80% [tape] |
-| sector:Consumer Defensive | 🌧️ hostile | medium | finviz sector median week -1.57% [tape] |
-| sector:Energy | ⛅ neutral | medium | finviz sector median week +0.71% [tape] |
-| sector:Financial | 🌧️ hostile | medium | finviz sector median week -1.63% [tape] |
-| sector:Healthcare | 🌧️ hostile | medium | finviz sector median week -7.25% [tape] |
+| sector:Basic Materials | 🌧️ hostile | medium | finviz sector median week -7.86% [tape] |
+| sector:Communication Services | 🌧️ hostile | medium | finviz sector median week -2.65% [tape] |
+| sector:Consumer Cyclical | 🌧️ hostile | medium | finviz sector median week -4.23% [tape] |
+| sector:Consumer Defensive | 🌧️ hostile | medium | finviz sector median week -2.64% [tape] |
+| sector:Energy | ⛅ neutral | medium | finviz sector median week -0.65% [tape] |
+| sector:Financial | 🌧️ hostile | medium | finviz sector median week -2.28% [tape] |
+| sector:Healthcare | 🌧️ hostile | medium | finviz sector median week -6.87% [tape] |
 | sector:Industrials | 🌧️ hostile | medium | news_judge SECTOR Industrials [bearish] |
-| sector:Real Estate | 🌧️ hostile | medium | finviz sector median week -2.19% [tape] |
-| sector:Technology | 🌧️ hostile | medium | finviz sector median week -4.20% [tape] |
-| sector:Utilities | ⛅ neutral | medium | finviz sector median week -0.64% [tape] |
+| sector:Real Estate | 🌧️ hostile | medium | finviz sector median week -2.93% [tape] |
+| sector:Technology | 🌧️ hostile | medium | finviz sector median week -5.50% [tape] |
+| sector:Utilities | 🌧️ hostile | medium | finviz sector median week -1.79% [tape] |
 
 ## Size
 
@@ -40,8 +40,8 @@ Is today good for each *kind* of stock? Labels come from `data/universe/`; this 
 
 | Label | Weather | Conf | Why |
 |---|---|---|---|
-| beta:high | 🌧️ hostile | high | VIX spiking — high beta is the exit door [channel1 + general] |
-| beta:low | 🌤️ favorable | medium | defensive ballast bid in stress [general + channel1] |
+| beta:high | ⛅ neutral | low | risk-unknown, VIX falling |
+| beta:low | ⛅ neutral | low | risk-unknown, VIX falling |
 | beta:mid | ⛅ neutral | low | beta-neutral zone |
 
 ## Short interest (multiplier, not direction)
