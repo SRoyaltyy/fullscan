@@ -1087,6 +1087,12 @@
         "label": "sat out (rule)",
         "reason": "strategy no-trade rule",
         "step": null
+      },
+      "2026-11-17": {
+        "class": "still broken",
+        "label": "missed",
+        "reason": "sealed day picked nobody while leak-safe names existed",
+        "step": "build"
       }
     },
     "overnight_mega_h2": {
@@ -1425,6 +1431,12 @@
         "label": "sat out (rule)",
         "reason": "strategy no-trade rule",
         "step": null
+      },
+      "2026-11-17": {
+        "class": "still broken",
+        "label": "missed",
+        "reason": "sealed day picked nobody while leak-safe names existed",
+        "step": "build"
       }
     },
     "short_alarm_h3": {
