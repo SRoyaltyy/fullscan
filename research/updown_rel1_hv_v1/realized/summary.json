@@ -1,8 +1,8 @@
 {
  "strategy": "updown_rel1_hv_v1",
  "label": "paper only \u2014 failed multiple-testing haircut (t 2.02 vs 3.37)",
- "days_locked": 30,
- "days_realized": 28,
+ "days_locked": 31,
+ "days_realized": 29,
  "days_missed": 0,
  "missed_dates": [],
  "rule": {
@@ -11,44 +11,44 @@
   "missed": "Missed days (not frozen before 09:25 ET) are recorded in MISSED.jsonl, never back-filled, and earn nothing."
  },
  "gross": {
-  "cum": 0.1251370342,
-  "mean_bp": 46.9064771599,
-  "t_nw": 1.0406568797
+  "cum": 0.1323657329,
+  "mean_bp": 47.4904446876,
+  "t_nw": 1.0851089304
  },
  "net5": {
-  "cum": 0.083932823,
-  "mean_bp": 33.5779057313,
-  "t_nw": 0.7417282109
+  "cum": 0.0895310389,
+  "mean_bp": 34.1869964118,
+  "t_nw": 0.7775449132
  },
  "net10": {
-  "cum": 0.0441834891,
-  "mean_bp": 20.2493343028,
-  "t_nw": 0.4453405535
+  "cum": 0.0482607377,
+  "mean_bp": 20.8835481359,
+  "t_nw": 0.4727617136
  },
  "net15": {
-  "cum": 0.0058395718,
-  "mean_bp": 6.9207628742,
-  "t_nw": 0.1515306358
+  "cum": 0.0084997382,
+  "mean_bp": 7.58009986,
+  "t_nw": 0.1707903314
  },
  "hedged_net10": {
-  "cum": -0.1055139985,
-  "mean_bp": -35.4547661819,
-  "t_nw": -0.707045325
+  "cum": -0.111924692,
+  "mean_bp": -36.7115996976,
+  "t_nw": -0.7660403129
  },
  "iwm_oo1": {
-  "cum": -0.0077268424,
-  "mean_bp": -1.9968000237,
-  "t_nw": -0.1368508678
+  "cum": -0.0223540026,
+  "mean_bp": -7.0110696981,
+  "t_nw": -0.4299641378
  },
  "rand_med_net10": {
-  "cum": -0.0937843637,
-  "mean_bp": -35.1078714754,
-  "t_nw": -58.7391096246
+  "cum": -0.0971545413,
+  "mean_bp": -35.1797325234,
+  "t_nw": -61.1835006914
  },
- "best_stock": "TTMI",
- "best_stock_contrib": 0.013256462,
- "net10_ex_best_cum": 0.0309893249,
- "mean_turnover": 2.6657142857,
- "status": "collecting (28 realized days; kill check from day 20/60, promotion review not before day 120)",
+ "best_stock": "OMH",
+ "best_stock_contrib": 0.0142841509,
+ "net10_ex_best_cum": 0.0332559542,
+ "mean_turnover": 2.6606896552,
+ "status": "collecting (29 realized days; kill check from day 20/60, promotion review not before day 120)",
  "killed": false
 }
