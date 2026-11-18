@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "generated_at": "2026-11-17T22:44:10.708849-05:00",
+  "generated_at": "2026-11-18T05:45:16.783191-05:00",
   "from_date": "2026-08-13",
   "to_date": "2026-11-16",
   "n_days": 67,
@@ -2353,20 +2353,30 @@
     "EAF",
     "FUFU",
     "HOS",
-    "STVN"
+    "STVN",
+    "ACCV",
+    "GBDC",
+    "IEP",
+    "OGS",
+    "PICS",
+    "SAIQ",
+    "SR",
+    "TSCO",
+    "VLTO",
+    "WCN"
   ],
   "live_sit_untouched": true,
   "backtest": {
     "n_hard_red": 23,
     "long_h1": {
       "n": 184,
-      "win": 0.5163,
-      "mean": -0.087
+      "win": 0.5109,
+      "mean": -0.117
     },
     "long_h3": {
       "n": 184,
-      "win": 0.5109,
-      "mean": -0.549
+      "win": 0.5054,
+      "mean": -0.611
     },
     "short_h1": {
       "n": 184,
