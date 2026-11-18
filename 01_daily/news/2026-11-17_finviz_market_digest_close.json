@@ -1,0 +1,110 @@
+{
+  "date": "2026-11-17",
+  "generated_at": "2026-11-17T21:59:11.653379-05:00",
+  "timezone": "America/New_York",
+  "source": "live",
+  "source_url": "https://elite.finviz.com/",
+  "archive_snapshot_ts": null,
+  "archive_snapshot_at": null,
+  "archive_url": null,
+  "clock_legal": true,
+  "clock_same_morning": false,
+  "clock_use": "next_open",
+  "clock_legal_for": "2026-11-18",
+  "capture_slot": "close",
+  "clock_rule": "Live post-close answer-key (~16:05 ET). Always next_open for the NEXT session (2026-11-18) — never same_morning. Writes *_finviz_market_digest_close.* only. Capture only — not tape_anchor / predict / #210.",
+  "kind": "finviz_homepage_market_digest_close",
+  "represents": "Finviz homepage post-close answer-key. clock_use is always next_open; clock_legal_for is the next NYSE session. Lives at *_finviz_market_digest_close.*. Does not replace the same_morning warm-up file. Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "US stocks extended their slide as AI trade unwind and Nvidia earnings focus pressured tech despite in-line retail sales",
+  "raw_text": "- The S&P 500 ($SPX) fell 1.03% to 7,340.53, the Dow Jones Industrial Average ($DJI) dropped 848.75 points or 1.64% to 50,759.42, and the Nasdaq Composite ($COMP) lost 0.74% to 24,328.38, marking a fourth straight decline and the S&P 500 ($SPX)’s lowest close since July 29.\n- Software led the drop, with Salesforce (CRM) sinking 9.45% after disclosing Optimizely malware exposure affecting branded websites, while Intuit (INTU) fell 7.17% and ServiceNow (NOW) slid 6.51%.\n- UnitedHealth Group (UNH) declined 5.42% after a CMS Medicare Advantage audit proposal, amplified by Sen. Warren’s breakup comments, and Nike (NKE) lost about 6% during the session.\n- All 11 S&P 500 ($SPX) sectors finished lower, with financials off 1.9% and software among the weakest groups, while Broadcom (AVGO) gained 2.46% as a relative outperformer in semiconductors.\n- Pressure on AI-related names continued amid an AI trade unwind tied to Anthropic IPO jitters and anticipation of Nvidia (NVDA)’s quarterly results.\n- October retail sales rose 0.2% month-over-month, matching forecasts and offering no upside surprise to offset equity weakness.\n- Nvidia (NVDA) closed down 0.44% at $155.46 ahead of earnings, then reported Q3 revenue of $115.8 billion after the bell, topping estimates of $109.15 billion on strong data center performance and issuing raised guidance.\n- Nvidia (NVDA) shares climbed in extended trading after results, as the board also confirmed it has no plans to reinstate Jensen Huang as CEO.\n- Investors are looking ahead to earnings from Lowe’s (LOW), Target (TGT), and TJX (TJX), as well as pricing for Anthropic’s IPO expected Wednesday as part of this week’s deal calendar.",
+  "raw_summary_md": "- The **S&P 500** ([$SPX](https://finviz.com/index/SPX?p=d)) fell 1.03% to 7,340.53, the **Dow Jones Industrial Average** ([$DJI](https://finviz.com/index/DJI?p=d)) dropped 848.75 points or 1.64% to 50,759.42, and the **Nasdaq Composite** ([$COMP](https://finviz.com/index/COMP?p=d)) lost 0.74% to 24,328.38, marking a **fourth straight decline** and the **S&P 500** ([$SPX](https://finviz.com/index/SPX?p=d))’s **lowest close since July 29**.\n- Software led the drop, with **Salesforce** ([CRM](https://finviz.com/quote?t=CRM)) sinking **9.45%** after disclosing **Optimizely malware exposure** affecting branded websites, while **Intuit** ([INTU](https://finviz.com/quote?t=INTU)) fell 7.17% and **ServiceNow** ([NOW](https://finviz.com/quote?t=NOW)) slid 6.51%.\n- **UnitedHealth Group** ([UNH](https://finviz.com/quote?t=UNH)) declined 5.42% after a CMS **Medicare Advantage audit proposal**, amplified by Sen. Warren’s breakup comments, and **Nike** ([NKE](https://finviz.com/quote?t=NKE)) lost about 6% during the session.\n- **All 11** **S&P 500** ([$SPX](https://finviz.com/index/SPX?p=d)) sectors finished lower, with financials off 1.9% and software among the weakest groups, while **Broadcom** ([AVGO](https://finviz.com/quote?t=AVGO)) **gained 2.46%** as a relative outperformer in semiconductors.\n- Pressure on AI-related names continued amid an **AI trade unwind** tied to Anthropic IPO jitters and anticipation of **Nvidia** ([NVDA](https://finviz.com/quote?t=NVDA))’s quarterly results.\n- October retail sales rose **0.2%** month-over-month, matching forecasts and offering **no upside surprise** to offset equity weakness.\n- **Nvidia** ([NVDA](https://finviz.com/quote?t=NVDA)) closed down 0.44% at $155.46 ahead of earnings, then reported Q3 revenue of **$115.8 billion** after the bell, topping estimates of $109.15 billion on strong data center performance and issuing **raised guidance**.\n- **Nvidia** ([NVDA](https://finviz.com/quote?t=NVDA)) shares **climbed in extended trading** after results, as the board also confirmed it has no plans to reinstate Jensen Huang as CEO.\n- Investors are looking ahead to earnings from **Lowe’s** ([LOW](https://finviz.com/quote?t=LOW)), **Target** ([TGT](https://finviz.com/quote?t=TGT)), and **TJX** ([TJX](https://finviz.com/quote?t=TJX)), as well as pricing for Anthropic’s **IPO expected Wednesday** as part of this week’s deal calendar.",
+  "index_moves": [
+    {
+      "name": "S&P 500",
+      "code": "SPX",
+      "change_pct": -1.03,
+      "verb": "fell"
+    },
+    {
+      "name": "Dow Jones Industrial Average",
+      "code": "DJI",
+      "change_pct": -1.64,
+      "verb": "dropped"
+    },
+    {
+      "name": "Nasdaq Composite",
+      "code": "COMP",
+      "change_pct": -0.74,
+      "verb": "lost"
+    }
+  ],
+  "oil": null,
+  "cpi": null,
+  "fed_odds": null,
+  "named_tickers": [
+    "CRM",
+    "INTU",
+    "NOW",
+    "UNH",
+    "NKE",
+    "AVGO",
+    "NVDA",
+    "LOW",
+    "TGT",
+    "TJX"
+  ],
+  "named_leaders": [
+    "CRM",
+    "INTU",
+    "NOW",
+    "UNH",
+    "NKE",
+    "AVGO",
+    "NVDA",
+    "LOW",
+    "TGT",
+    "TJX"
+  ],
+  "calendar": [
+    "October retail sales rose 0.2% month-over-month, matching forecasts and offering no upside surprise to offset equity weakness.",
+    "Investors are looking ahead to earnings from Lowe’s (LOW), Target (TGT), and TJX (TJX), as well as pricing for Anthropic’s IPO expected Wednesday as part of this week’s deal calendar."
+  ],
+  "prior_close": {
+    "spx": -1.03,
+    "nasdaq": -0.74,
+    "dow": -1.64
+  },
+  "cpi_fed": {
+    "cpi": null,
+    "fed_odds": null
+  },
+  "next_session_calendar": {
+    "housing": false,
+    "retail": true,
+    "fed": false,
+    "bullets": [
+      "October retail sales rose 0.2% month-over-month, matching forecasts and offering no upside surprise to offset equity weakness."
+    ],
+    "text": "October retail sales rose 0.2% month-over-month, matching forecasts and offering no upside surprise to offset equity weakness."
+  },
+  "earnings_slate": {
+    "tickers": [
+      "LOW",
+      "TGT",
+      "TJX"
+    ],
+    "text": "Investors are looking ahead to earnings from Lowe’s (LOW), Target (TGT), and TJX (TJX), as well as pricing for Anthropic’s IPO expected Wednesday as part of this week’s deal calendar."
+  },
+  "geo_grain": {
+    "geo": false,
+    "grain": false,
+    "flags": [],
+    "text": ""
+  },
+  "finviz_id": 347321,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-11-17T20:37:00.47",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "good"
+}
