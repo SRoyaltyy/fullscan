@@ -1,6 +1,6 @@
 # News Actions — Backtest Report
 
-_Generated 2026-11-18 16:55 EST_
+_Generated 2026-11-18 18:02 EST_
 
 How to read this: each section is one prediction day. **Entry** is the open of the first trading day at/after the signal timestamp (same day if the signal ran pre-market, next day otherwise). A buy is `ever ✓` if price traded ABOVE the entry open at any point within the tracked window (up to 14 trading days); a sell/short is `ever ✓` if price traded BELOW it. `now%` is the return at the latest close in the window.
 
@@ -47,7 +47,7 @@ Entry: **2026-11-18** open — window through **2026-11-18** (still open)
 | FSLR | sell | -4.4 | 153.09 | 2026-11-18 | +1.40 | +1.89 (2026-11-18) | ✓ |
 | ENPH | sell | -4.4 | 23.09 | 2026-11-18 | +1.90 | +4.24 (2026-11-18) | ✓ |
 | NXT | sell | -4.4 | 78.75 | 2026-11-18 | +0.43 | +2.27 (2026-11-18) | ✓ |
-| RUN | sell | -4.4 | 7.65 | 2026-11-18 | +5.08 | +6.84 (2026-11-18) | ✓ |
+| RUN | sell | -4.4 | 7.66 | 2026-11-18 | +5.22 | +6.98 (2026-11-18) | ✓ |
 | ARRY | sell | -4.4 | 4.14 | 2026-11-18 | -1.66 | +2.98 (2026-11-18) | ✓ |
 | SHLS | sell | -4.4 | 7.1 | 2026-11-18 | -0.84 | +2.75 (2026-11-18) | ✓ |
 | ZIM | sell | -4.2 | 30.5006 | 2026-11-18 | +1.94 | +2.35 (2026-11-18) | ✓ |
@@ -103,7 +103,7 @@ Entry: **2026-11-18** open — window through **2026-11-18** (still open)
 | PCTY | sell | -1.8 | 177.69 | 2026-11-18 | +1.55 | +2.20 (2026-11-18) | ✓ |
 | PUBM | sell | -1.8 | 20.51 | 2026-11-18 | -0.77 | +2.55 (2026-11-18) | ✓ |
 | PAR | sell | -1.8 | 22.37 | 2026-11-18 | -2.48 | +1.04 (2026-11-18) | ✓ |
-| ADP | sell | -1.8 | 307.79 | 2026-11-18 | +0.73 | +0.99 (2026-11-18) | ✓ |
+| ADP | sell | -1.8 | 307.17 | 2026-11-18 | +0.52 | +0.79 (2026-11-18) | ✓ |
 | JPM | buy | +1.6 | 327.52 | 2026-11-18 | -1.04 | +0.78 (2026-11-18) | ✓ |
 | BAC | buy | +1.6 | 49.2 | 2026-11-18 | -0.59 | +0.58 (2026-11-18) | ✓ |
 | FRBT | buy | +1.6 | 17.87 | 2026-11-18 | -0.11 | +5.99 (2026-11-18) | ✓ |

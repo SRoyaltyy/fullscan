@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-18T16:55:56.012409-05:00",
+  "updated_at": "2026-11-18T18:02:18.859454-05:00",
   "grading_rule": {
     "entry": "open of first trading day at/after generated_at (same day if signal < 09:30 ET, else next day)",
     "window_trading_days": 14,
@@ -130741,14 +130741,14 @@
         "tariff_semis_solar"
       ],
       "entry_date": "2026-11-18",
-      "entry_open": 7.65,
+      "entry_open": 7.66,
       "window_through": "2026-11-18",
       "trading_days_elapsed": 0,
       "complete": false,
       "latest_close": 7.28,
-      "current_return_pct": 5.08,
+      "current_return_pct": 5.22,
       "horizon_returns_pct": {},
-      "mfe_pct": 6.84,
+      "mfe_pct": 6.98,
       "mfe_day": "2026-11-18",
       "ever_profitable": true,
       "first_profitable_day": "2026-11-18"
@@ -131981,14 +131981,14 @@
         "weak_labor_print"
       ],
       "entry_date": "2026-11-18",
-      "entry_open": 307.79,
+      "entry_open": 307.17,
       "window_through": "2026-11-18",
       "trading_days_elapsed": 0,
       "complete": false,
       "latest_close": 305.57,
-      "current_return_pct": 0.73,
+      "current_return_pct": 0.52,
       "horizon_returns_pct": {},
-      "mfe_pct": 0.99,
+      "mfe_pct": 0.79,
       "mfe_day": "2026-11-18",
       "ever_profitable": true,
       "first_profitable_day": "2026-11-18"
