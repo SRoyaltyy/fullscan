@@ -1,6 +1,6 @@
 {
   "stage": "outcome",
-  "fetched_at": "2026-11-17T22:04:11.043056-05:00",
+  "fetched_at": "2026-11-17T22:21:20.624158-05:00",
   "fred": {
     "DGS30": {
       "available": true,
@@ -88,41 +88,41 @@
     "CL=F": {
       "available": true,
       "date": "2026-11-17",
-      "last": 85.03,
-      "pct_1d": -0.8
+      "last": 85.25,
+      "pct_1d": -0.55
     },
     "BZ=F": {
       "available": true,
       "date": "2026-11-17",
-      "last": 92.63,
-      "pct_1d": 0.21
+      "last": 92.84,
+      "pct_1d": 0.43
     },
     "GC=F": {
       "available": true,
       "date": "2026-11-17",
-      "last": 3798.2,
-      "pct_1d": -1.42
+      "last": 3801.0,
+      "pct_1d": -1.35
     },
     "DXY": {
       "available": true,
       "date": "2026-11-17",
       "source": "DX-Y.NYB",
-      "pct_1d": 0.05,
-      "pct_1m": 1.59
+      "pct_1d": 0.08,
+      "pct_1m": 1.62
     }
   },
   "futures": {
     "ES=F": {
       "available": true,
       "date": "2026-11-17",
-      "last": 7364.75,
-      "pct_1d": -1.0
+      "last": 7378.25,
+      "pct_1d": -0.82
     },
     "NQ=F": {
       "available": true,
       "date": "2026-11-17",
-      "last": 27117.5,
-      "pct_1d": -0.61
+      "last": 27222.25,
+      "pct_1d": -0.23
     }
   },
   "finviz_futures_tape": {
@@ -497,29 +497,29 @@
         "Hang Seng": {
           "available": true,
           "date": "2026-11-18",
-          "last": 23306.44,
-          "pct_1d": -0.86
+          "last": 23297.09,
+          "pct_1d": -0.9
         },
         "Shanghai": {
           "available": true,
           "date": "2026-11-18",
-          "last": 3570.47,
-          "pct_1d": -0.39
+          "last": 3576.16,
+          "pct_1d": -0.23
         },
         "Kospi": {
           "available": true,
           "date": "2026-11-18",
-          "last": 4973.27,
-          "pct_1d": 0.1
+          "last": 4979.22,
+          "pct_1d": 0.22
         },
         "ASX200": {
           "available": true,
           "date": "2026-11-18",
-          "last": 8858.5,
-          "pct_1d": -0.28
+          "last": 8849.3,
+          "pct_1d": -0.38
         }
       },
-      "composite_avg": -0.34
+      "composite_avg": -0.31
     },
     "europe": {
       "per_index": {
