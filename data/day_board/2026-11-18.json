@@ -1,20 +1,19 @@
 {
   "date": "2026-11-18",
-  "generated_at": "2026-11-18T04:48:37.490572-05:00",
-  "overall": "FAIL",
+  "generated_at": "2026-11-18T04:48:47.737895-05:00",
+  "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
     "MISSING General predict MD `01_daily/general/2026-11-18_predict.md` \u2014 missing",
     "MISSING News actions JSON `01_daily/news/2026-11-18_actions.json` \u2014 missing",
-    "MISSING Quote-page digest JSON (*_finviz_digest) `01_daily/news/2026-11-18_finviz_digest.json` \u2014 missing",
     "MISSING News judge MD `01_daily/news/2026-11-18_judge.md` \u2014 missing",
     "MISSING Weather JSON `01_daily/weather/2026-11-18_weather.json` \u2014 missing",
     "MISSING AB checklist enriched `data/ab_checklist/2026-11-18_ab_checklist_enriched.csv` \u2014 missing"
   ],
   "counts": {
-    "ok": 0,
-    "partial": 2,
-    "fail": 6,
+    "ok": 1,
+    "partial": 3,
+    "fail": 4,
     "n": 8
   },
   "processes": [
@@ -87,11 +86,11 @@
       "key": "finviz",
       "name": "Finviz scrape",
       "yaml": "finviz_preopen_scrape.yml",
-      "status": "FAIL",
+      "status": "OK",
       "inputs_ready": true,
-      "n_req_ok": 0,
+      "n_req_ok": 1,
       "n_req": 1,
-      "n_opt_ok": 0,
+      "n_opt_ok": 1,
       "n_opt": 5,
       "files": [
         {
@@ -99,22 +98,29 @@
           "name": "Quote-page digest JSON (*_finviz_digest)",
           "path": "01_daily/news/2026-11-18_finviz_digest.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 101300,
+          "said": "597 tickers \u00b7 162 signals \u00b7 top AON, APP, AZN, LRCX, MDLN, MDT, NKE, NUE",
+          "bullets": [
+            "Aon Completes Acquisition of USI to Establish the Premier U.S. Middle-Market Platform",
+            "AppLovin Corporation Sued for Securities Law Violations - Contact the DJS Law Group to Discuss Your Rights - APP",
+            "AstraZeneca secures FDA approval for Imfinzi combo in MIBC"
+          ]
         },
         {
           "key": "digest_md",
           "name": "Quote-page digest MD (*_finviz_digest)",
           "path": "01_daily/news/2026-11-18_finviz_digest.md",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 11777,
+          "said": "Finviz Daily Digest \u2014 2026-11-18",
+          "bullets": [
+            "_Generated 2026-11-18T04:48:47.250384-05:00 \u00b7 export=data/exports/finviz_2026-11-17.csv \u00b7 ticker digests=597 \u00b7 high-signal=162_",
+            "Major indices (live quote page)"
+          ]
         },
         {
           "key": "market_digest_json",
@@ -161,16 +167,20 @@
           "bullets": []
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "597 tickers \u00b7 162 signals \u00b7 top AON, APP, AZN, LRCX, MDLN, MDT, NKE, NUE",
+      "bullets": [
+        "Aon Completes Acquisition of USI to Establish the Premier U.S. Middle-Market Platform",
+        "AppLovin Corporation Sued for Securities Law Violations - Contact the DJS Law Group to Discuss Your Rights - APP",
+        "AstraZeneca secures FDA approval for Imfinzi combo in MIBC"
+      ]
     },
     {
       "key": "preopen",
       "name": "Pre-Open ALL",
       "yaml": "preopen_all.yml",
-      "status": "FAIL",
+      "status": "PARTIAL",
       "inputs_ready": false,
-      "n_req_ok": 0,
+      "n_req_ok": 2,
       "n_req": 9,
       "n_opt_ok": 0,
       "n_opt": 14,
@@ -180,11 +190,15 @@
           "name": "Quote-page digest JSON (*_finviz_digest)",
           "path": "01_daily/news/2026-11-18_finviz_digest.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 101300,
+          "said": "597 tickers \u00b7 162 signals \u00b7 top AON, APP, AZN, LRCX, MDLN, MDT, NKE, NUE",
+          "bullets": [
+            "Aon Completes Acquisition of USI to Establish the Premier U.S. Middle-Market Platform",
+            "AppLovin Corporation Sued for Securities Law Violations - Contact the DJS Law Group to Discuss Your Rights - APP",
+            "AstraZeneca secures FDA approval for Imfinzi combo in MIBC"
+          ]
         },
         {
           "key": "in_market_digest",
@@ -312,11 +326,16 @@
           "name": "Pre-open QC JSON",
           "path": "01_daily/2026-11-18_preopen_qc.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "all_ok=False",
+          "size": 7593,
+          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 20 fail",
+          "bullets": [
+            "general_predict:missing",
+            "events:missing",
+            "news_judge:missing",
+            "news_parse:missing"
+          ]
         },
         {
           "key": "status",
@@ -334,11 +353,13 @@
           "name": "Grok review JSON",
           "path": "01_daily/2026-11-18_grok_review.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "ok=False Grok returned an empty review",
+          "size": 308,
+          "said": "ok=False \u00b7 empty_review_reply (review)",
+          "bullets": [
+            "Grok returned an empty review"
+          ]
         },
         {
           "key": "sector_basic_materials",
@@ -470,7 +491,7 @@
       "name": "Label + weather",
       "yaml": "label_weather.yml",
       "status": "FAIL",
-      "inputs_ready": false,
+      "inputs_ready": true,
       "n_req_ok": 0,
       "n_req": 1,
       "n_opt_ok": 0,
@@ -481,11 +502,15 @@
           "name": "Quote-page digest JSON (*_finviz_digest)",
           "path": "01_daily/news/2026-11-18_finviz_digest.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 101300,
+          "said": "597 tickers \u00b7 162 signals \u00b7 top AON, APP, AZN, LRCX, MDLN, MDT, NKE, NUE",
+          "bullets": [
+            "Aon Completes Acquisition of USI to Establish the Premier U.S. Middle-Market Platform",
+            "AppLovin Corporation Sued for Securities Law Violations - Contact the DJS Law Group to Discuss Your Rights - APP",
+            "AstraZeneca secures FDA approval for Imfinzi combo in MIBC"
+          ]
         },
         {
           "key": "weather",
@@ -566,11 +591,15 @@
           "name": "Quote-page digest JSON (*_finviz_digest)",
           "path": "01_daily/news/2026-11-18_finviz_digest.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 101300,
+          "said": "597 tickers \u00b7 162 signals \u00b7 top AON, APP, AZN, LRCX, MDLN, MDT, NKE, NUE",
+          "bullets": [
+            "Aon Completes Acquisition of USI to Establish the Premier U.S. Middle-Market Platform",
+            "AppLovin Corporation Sued for Securities Law Violations - Contact the DJS Law Group to Discuss Your Rights - APP",
+            "AstraZeneca secures FDA approval for Imfinzi combo in MIBC"
+          ]
         },
         {
           "key": "dossiers",
@@ -636,11 +665,15 @@
           "name": "Quote-page digest JSON (*_finviz_digest)",
           "path": "01_daily/news/2026-11-18_finviz_digest.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 101300,
+          "said": "597 tickers \u00b7 162 signals \u00b7 top AON, APP, AZN, LRCX, MDLN, MDT, NKE, NUE",
+          "bullets": [
+            "Aon Completes Acquisition of USI to Establish the Premier U.S. Middle-Market Platform",
+            "AppLovin Corporation Sued for Securities Law Violations - Contact the DJS Law Group to Discuss Your Rights - APP",
+            "AstraZeneca secures FDA approval for Imfinzi combo in MIBC"
+          ]
         },
         {
           "key": "in_judge",
@@ -876,6 +909,45 @@
         }
       ],
       "preview": "5886 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
+    },
+    {
+      "key": "finviz_digest",
+      "title": "Finviz digest",
+      "date": "2026-11-18",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-18T04:48:47.407083-05:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-11-18_finviz_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 101300,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        },
+        {
+          "path": "01_daily/news/2026-11-18_finviz_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 11798,
+          "preview": "# Finviz Daily Digest \u2014 2026-11-18\n_Generated 2026-11-18T04:48:47.250384-05:00 \u00b7 export=data/exports/finviz_2026-11-17.csv \u00b7 ticker digests=597 \u00b7 high-signal=162_"
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11068505,
+          "preview": "11752 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAB\""
+        },
+        {
+          "path": "01_daily/news/2026-11-18_finviz_digest_preopen.json",
+          "ok": true,
+          "reason": "",
+          "size": 101300,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        }
+      ],
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-11-18\n_Generated 2026-11-18T04:48:47.250384-05:00 \u00b7 export=data/exports/finviz_2026-11-17.csv \u00b7 ticker digests=597 \u00b7 high-signal=162_ \u00b7 11752 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAB\" \u00b7 keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
     }
   ],
   "href": {
