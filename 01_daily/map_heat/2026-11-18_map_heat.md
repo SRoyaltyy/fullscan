@@ -1,6 +1,6 @@
 # MAP HEAT — 2026-11-18
 
-Export `finviz_2026-11-17.csv` · 11616 names · generated 2026-11-18T04:51:07.902193-05:00
+Export `finviz_2026-11-18.csv` · 11616 names · generated 2026-11-18T05:06:29.830256-05:00
 
 ## TAPE (live futures)
 | Contract | Last | Change |
@@ -150,7 +150,7 @@ Mega-cap earnings:
 - AMC **ZM**  EPS est 1.4854  (Zoom Communications Inc)
 - BMO **DLTR**  EPS est 0.9124  (Dollar Tree Inc)
 - AMC **HPQ**  EPS est 0.7495  (HP Inc)
-- AMC **CRDO**  EPS est 1.2856  (Credo Technology Group Holding Ltd)
+- AMC **MDB**  EPS est 1.6113  (MongoDB Inc)
 
 Options event-vol flags (NOT direction):
 - **WMT** exp 2026-11-20 ATM IV 0.0078 implied move +0.1% put/call OI —
@@ -280,31 +280,31 @@ COLD (1w):
 - **Real Estate** -0.5% 1d -1.9% 1w · VNQ, SCHH, XLRE
 
 ## TICKER-TAGGED NEWS (Finviz v=3)
-- 10 min **NVDA** Xi, Putin blast Western 'protectionism', sanctions as Trump lands in China (Reuters)
-- 12 min **TSLA,AMZN** Waymo pauses robotaxi rides on US freeways after California ban (Reuters)
-- 13 min **NVDA** Stock Futures Rally as Nvidia Earnings Calm AI Trade Fears (The Wall Street Journal)
-- 18 min **NVDA** Why Nvidia broke with its usual practice in holding back its quarterly SEC report (MarketWatch)
-- 20 min **WBUY** WEBUY GLOBAL LTD. Launches WeTrip App on ChatGPT for China Travel (GlobeNewswire)
-- 20 min **GIL** Kaplan Fox Urges Investors of Gildan Activewear Inc. (GIL) to Seek a Leadership Role Before December 14, 2026 (Newsfile)
-- 22 min **NVDA** Nvidia results boost Asian markets overnight but sentiment remains fragile (MarketWatch)
-- 25 min **NVDA,ASML** Global stocks slip after Nvidia earnings; Anthropic IPO to test AI boom (Reuters)
-- 30 min **CRWV,NVDA,TSM,AMD,AVGO** AMD, Broadcom, CoreWeave stocks rise on Nvidia earnings beat (Yahoo Finance)
-- 32 min **NKE** Nike outlines Full Stride Ahead strategy and fiscal 2031 financial targets (Retail Insight Network)
-- 32 min **NVDA** Nvidia earnings live: Nvidia posts Q3 beat as revenue rose 103% YOY to $115.8B, board says it will not reinstate Jensen Huang as CEO (Yahoo Finance)
-- 34 min **NVDA** Nvidia stops shipping US-approved AI chips to China (Reuters)
-- 41 min **TTWO** TTWO Stock Gains Premarket After 2-Day Rout: Sensor Towers Says GTA 6 Pre-Orders Top $1.5B A Day Before Release (Stocktwits)
-- 44 min **CRWV,NVDA,AMD** Stock market today: Dow, S&P 500, Nasdaq futures rise after Nvidia clears hurdle, Anthropic prepares to price its IPO (Yahoo Finance)
-- 50 min **NVDA** Nvidia's growing financial commitments add to its risk, according to Raymond James (MarketWatch)
-- 50 min **MKL** Markel names Chloe Gordge Director of War and Political Violence & Terrorism in London (PR Newswire)
-- 50 min **PONY** Pony AI Inc. Reports Third Quarter 2026 Financial Results: Total Revenues Up 75.2% YoY to US$44.6 million with Robotaxi Services Revenues Growing by 165.4% YoY (GlobeNewswire)
-- 50 min **NVDA** Could Jensen Huang Run Nvidia Again? Polymarket Bettors Think Its Possible (BeInCrypto)
-- 50 min **III** ISG Presents 2026 Star of Excellence Awards to HCLTech, Hexaware, Persistent Systems (Business Wire)
-- 53 min **XOM** SBM Offshore wins FPSO contracts from ExxonMobil for Longtail project (Offshore Technology)
-- 57 min **NVDA** Nvidia says no longer shipping 'Hopper' AI chips to China (AFP)
-- 1 hour **NVDA,INTC** INTC Stock Gains Overnight Amid Fresh Layoffs Buzz (Stocktwits)
-- 1 hour **CRCL** Bitcoin Price Struggles Under $65K as World Bank Explores USDC Rails: Follow the Dollar Liquidity? (99bitcoins)
-- 1 hour **BABA** Tencents Sales Miss Estimates in Setback for Founders AI Push (Bloomberg)
-- 1 hour **HSAI** Hesai Group Announces US$100 Million Share Repurchase Program (GlobeNewswire)
+- 5 min **CRWV,NVDA,AMD** Stock market today: Dow, S&P 500, Nasdaq futures rise after Nvidia clears hurdle, Anthropic prepares to price its IPO (Yahoo Finance)
+- 6 min **YSG** Yatsen to Announce Third Quarter 2026 Financial Results on November 25, 2026 (PR Newswire)
+- 6 min **BLK** BlackRock Canada Announces November Cash Distributions for the iShares ETFs (GlobeNewswire)
+- 6 min **NVDA,XLK** Anthropic Could Be the New King of AI. How to Play It Now. (Barrons.com)
+- 6 min **NVDA** Nvidia Stock is a Bargain With 1 Big Catch (Barrons.com)
+- 6 min **CAST** FreeCast Hires Ericsson Veteran Eddie Bryan, Bringing More Than 25 Years of Experience in Global IT Operations and Cybersecurity (Business Wire)
+- 7 min **RXRX** Recursion Announces Alignment with FDA on Registrational Phase 3 Trial Design for REC-4881 in Familial Adenomatous Polyposis (GlobeNewswire)
+- 12 min **NVDA,CRCL,COIN** Crypto Stocks Rebound As Nvidias Earnings Beat Lifts Risk Appetite  Why COIN, CRCL, NXXT Are Moving Today (Stocktwits)
+- 25 min **NVDA** Xi, Putin blast Western 'protectionism', sanctions as Trump lands in China (Reuters)
+- 27 min **TSLA,AMZN** Waymo pauses robotaxi rides on US freeways after California ban (Reuters)
+- 29 min **NVDA** Stock Futures Rally as Nvidia Earnings Calm AI Trade Fears (The Wall Street Journal)
+- 34 min **NVDA** Why Nvidia broke with its usual practice in holding back its quarterly SEC report (MarketWatch)
+- 36 min **WBUY** WEBUY GLOBAL LTD. Launches WeTrip App on ChatGPT for China Travel (GlobeNewswire)
+- 36 min **GIL** Kaplan Fox Urges Investors of Gildan Activewear Inc. (GIL) to Seek a Leadership Role Before December 14, 2026 (Newsfile)
+- 37 min **NVDA** Nvidia results boost Asian markets overnight but sentiment remains fragile (MarketWatch)
+- 40 min **NVDA,ASML** Global stocks slip after Nvidia earnings; Anthropic IPO to test AI boom (Reuters)
+- 45 min **CRWV,NVDA,TSM,AMD,AVGO** AMD, Broadcom, CoreWeave stocks rise on Nvidia earnings beat (Yahoo Finance)
+- 47 min **NKE** Nike outlines Full Stride Ahead strategy and fiscal 2031 financial targets (Retail Insight Network)
+- 47 min **NVDA** Nvidia earnings live: Nvidia posts Q3 beat as revenue rose 103% YOY to $115.8B, board says it will not reinstate Jensen Huang as CEO (Yahoo Finance)
+- 49 min **NVDA** Nvidia stops shipping US-approved AI chips to China (Reuters)
+- 56 min **TTWO** TTWO Stock Gains Premarket After 2-Day Rout: Sensor Towers Says GTA 6 Pre-Orders Top $1.5B A Day Before Release (Stocktwits)
+- 1 hour **NVDA** Nvidia's growing financial commitments add to its risk, according to Raymond James (MarketWatch)
+- 1 hour **MKL** Markel names Chloe Gordge Director of War and Political Violence & Terrorism in London (PR Newswire)
+- 1 hour **PONY** Pony AI Inc. Reports Third Quarter 2026 Financial Results: Total Revenues Up 75.2% YoY to US$44.6 million with Robotaxi Services Revenues Growing by 165.4% YoY (GlobeNewswire)
+- 1 hour **NVDA** Could Jensen Huang Run Nvidia Again? Polymarket Bettors Think Its Possible (BeInCrypto)
 
 ## NOTES
 - Captains = top 2 by market cap. RUT needs ≥ $5m 20-day dollar volume.
