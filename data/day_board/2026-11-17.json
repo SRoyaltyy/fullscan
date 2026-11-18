@@ -2221,6 +2221,30 @@
       "workflow": "Finviz ALL (GH-hosted Elite)",
       "run_id": "44267168762",
       "manifest": "research/input_freeze/2026-11-17/manifest.json"
+    },
+    {
+      "path": "data/ab_checklist/2026-11-17_ab_checklist.csv",
+      "at": "2026-11-18T05:00:22-05:00",
+      "commit_msg": "chore: ab checklist 2026-11-18",
+      "workflow": "A+B1 Checklist (liquid universe)",
+      "run_id": "44277688982",
+      "manifest": "research/input_freeze/2026-11-17/manifest.json"
+    },
+    {
+      "path": "data/ab_checklist/2026-11-17_ab_checklist.json",
+      "at": "2026-11-18T05:00:22-05:00",
+      "commit_msg": "chore: ab checklist 2026-11-18",
+      "workflow": "A+B1 Checklist (liquid universe)",
+      "run_id": "44277688982",
+      "manifest": "research/input_freeze/2026-11-17/manifest.json"
+    },
+    {
+      "path": "data/ab_checklist/2026-11-17_ab_checklist_enriched.csv",
+      "at": "2026-11-18T05:00:22-05:00",
+      "commit_msg": "chore: ab checklist 2026-11-18",
+      "workflow": "A+B1 Checklist (liquid universe)",
+      "run_id": "44277688982",
+      "manifest": "research/input_freeze/2026-11-17/manifest.json"
     }
   ]
 }
