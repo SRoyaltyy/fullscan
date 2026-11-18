@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `macd_hist` · size `leftover` · sell `list` · S-boost `none` · rank by macd_hist
 
-Cash book **-18.79%** ($8,121) · signal-only (no cash/fees) was +3.37%. Starts YES **20/30**. Fills 555 · skips 94 · realized $-657.32.
+Cash book **-21.01%** ($7,899) · signal-only (no cash/fees) was +3.37%. Starts YES **20/30**. Fills 570 · skips 94 · realized $-657.32.
 
 ## How this sleeve decides (like you are 10)
 
@@ -760,6 +760,23 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-16 09:30 ET | **BUY** | `SHAZ` | 51 | $20.89 | $2.14 | — | $1,242.63 | — | rank by macd_hist; rank macd_hist; list overnight; 🔵; ret5=+3.4; leftover $1069.59 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-11-16 09:30 ET | **BUY** | `ONT` | 45 | $23.48 | $2.12 | — | $183.91 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; ret5=+6.0; leftover $1069.59 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 judge🔴 ab🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-11-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $183.91 | ▼ close $8,121.01 vs 09:30 $8,326.43 (session -176.68) | 16:00 close · cash $183.91 · equity $8,121.01 vs 09:30 $8,326.43 (-205.42; session marks -176.68) · 8 name(s) marked open→close (per-name table). ASND×3 09:30 $275.01 → close $271.73 -9.84; AMD×2 09:30 $503.45 → close $504.28 +1.66; STE×4 09:30 $265.49 → close $261.91 -14.32; FROG×9 09:30 $110.78 → close $109.94 -7.60; DPC×32 09:30 $32.88 → close $31.80 -34.56; ANRO×36 09:30 $29.13 → close $27.12 -72.36; SHAZ×51 09:30 $20.89 → close $20.13 -38.76; ONT×45 09:30 $23.48 → close $23.46 -0.90 | — |
+| 2026-11-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $183.91 | ▼ 09:30 equity $8,086.86 vs yday $8,121.01 (-34.15) | 09:30 open · cash $183.91 (unchanged overnight, no fees) · equity $8,086.86 vs prior close $8,121.01 (-34.15) · 8 name(s) re-marked at the open (per-name table). AMD×2 yday $504.28 → 09:30 $512.12 +15.68; ANRO×36 yday $27.12 → 09:30 $27.10 -0.72; ASND×3 yday $271.73 → 09:30 $270.06 -5.01; DPC×32 yday $31.80 → 09:30 $32.06 +8.32; FROG×9 yday $109.94 → 09:30 $108.63 -11.79; ONT×45 yday $23.46 → 09:30 $23.15 -13.95; SHAZ×51 yday $20.13 → 09:30 $19.81 -16.32; STE×4 yday $261.91 → 09:30 $259.32 -10.36 | — |
+| 2026-11-17 09:30 ET | **SELL** | `AMD` | 2 | $512.12 | $2.02 | $+13.33 | $1,206.13 | ▲ +13.33 after sell → book $8,084.84; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **SELL** | `ANRO` | 36 | $27.10 | $2.12 | $-77.30 | $2,179.62 | ▼ -77.30 after sell → book $8,082.73; vs 09:30 mark -2.11 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **SELL** | `ASND` | 3 | $270.06 | $2.02 | $+3.96 | $2,987.78 | ▲ +3.96 after sell → book $8,080.71; vs 09:30 mark -2.02 | dropped from list after 2 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **SELL** | `DPC` | 32 | $32.06 | $2.11 | $-30.43 | $4,011.59 | ▼ -30.43 after sell → book $8,078.60; vs 09:30 mark -2.11 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **SELL** | `FROG` | 9 | $108.63 | $2.04 | $-23.45 | $4,987.22 | ▼ -23.45 after sell → book $8,076.56; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **SELL** | `ONT` | 45 | $23.15 | $2.15 | $-19.12 | $6,026.83 | ▼ -19.12 after sell → book $8,074.42; vs 09:30 mark -2.14 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **SELL** | `SHAZ` | 51 | $19.81 | $2.16 | $-59.39 | $7,034.98 | ▼ -59.39 after sell → book $8,072.26; vs 09:30 mark -2.16 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟡 digest🔴 ab🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-11-17 09:30 ET | **SELL** | `STE` | 4 | $259.32 | $2.02 | $-28.70 | $8,070.23 | ▼ -28.70 after sell → book $8,070.23; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **BUY** | `HUM` | 2 | $447.00 | $2.00 | — | $7,174.24 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; ret5=+9.0; leftover $1008.78 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-17 09:30 ET | **BUY** | `MOD` | 7 | $133.12 | $2.01 | — | $6,240.39 | — | rank by macd_hist; rank macd_hist; list yday_gainer,yday_mover; ret5=+23.0; leftover $1008.78 | join🔴 sector🟡 gen🔴 news🟡 digest🔴 judge🔴 ab🔴 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-17 09:30 ET | **BUY** | `MOH` | 4 | $227.04 | $2.00 | — | $5,330.22 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; ret5=+14.6; leftover $1008.78 | join🔴 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-17 09:30 ET | **BUY** | `LFTO` | 40 | $24.93 | $2.11 | — | $4,330.91 | — | rank by macd_hist; rank macd_hist; list yday_gainer,yday_mover; 🔵; ret5=+30.7; leftover $1008.78 | join🟢 sector🟡 gen🔴 news🟢 digest🟡 ab🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-17 09:30 ET | **BUY** | `AZTA` | 21 | $47.07 | $2.05 | — | $3,340.39 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; ret5=+15.3; leftover $1008.78 | join🟢 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-17 09:30 ET | **BUY** | `ACM` | 12 | $79.50 | $2.03 | — | $2,384.37 | — | rank by macd_hist; rank macd_hist; list earn_react; ret5=+3.3; leftover $1008.78 | join🔴 sector🟡 gen🔴 news🔴 digest🔴 judge🔴 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-17 09:30 ET | **BUY** | `HAWK` | 54 | $18.42 | $2.15 | — | $1,387.53 | — | rank by macd_hist; rank macd_hist; list yday_gainer,yday_mover; ret5=+22.9; leftover $1008.78 | join🔴 sector🟡 gen🔴 news🟢 digest🔴 judge🔴 ab🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,387.53 | ▼ close $7,899.03 vs 09:30 $8,086.86 (session -156.85) | 16:00 close · cash $1,387.53 · equity $7,899.03 vs 09:30 $8,086.86 (-187.83; session marks -156.85) · 7 name(s) marked open→close (per-name table). HUM×2 09:30 $447.00 → close $443.34 -7.32; MOD×7 09:30 $133.12 → close $129.73 -23.73; MOH×4 09:30 $227.04 → close $221.21 -23.32; LFTO×40 09:30 $24.93 → close $22.68 -90.00; AZTA×21 09:30 $47.07 → close $45.81 -26.46; ACM×12 09:30 $79.50 → close $80.53 +12.36; HAWK×54 09:30 $18.42 → close $18.45 +1.62 | — |
 
 ## Not taken
 

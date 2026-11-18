@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · merged news🟢 and cameras +7 −≤1
 
-Cash book **-27.12%** ($7,288) · signal-only (no cash/fees) was -9.70%. Starts YES **2/30**. Fills 85 · skips 63 · realized $-1714.70.
+Cash book **-41.17%** ($5,883) · signal-only (no cash/fees) was -9.70%. Starts YES **2/30**. Fills 87 · skips 63 · realized $-1714.70.
 
 ## How this sleeve decides (like you are 10)
 
@@ -294,6 +294,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-16 09:30 ET | **SELL** | `CECO` | 32 | $53.00 | $2.11 | $-179.24 | $3,834.77 | ▼ -179.24 after sell → book $7,289.99; vs 09:30 mark -2.11 | dropped from list after 3 sess (min 3) | — |
 | 2026-11-16 09:30 ET | **SELL** | `LOAR` | 23 | $74.92 | $2.08 | $-110.17 | $5,555.85 | ▼ -110.17 after sell → book $7,287.91; vs 09:30 mark -2.08 | dropped from list after 3 sess (min 3) | — |
 | 2026-11-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5,555.85 | ▲ close $7,287.91 vs 09:30 $7,294.34 (session +0.00) | 16:00 close · cash $5,555.85 · equity $7,287.91 vs 09:30 $7,294.34 (-6.43; session marks +0.00) · 1 name(s) marked open→close (per-name table). EMBJ×22 09:30 $78.73 → close $78.73 +0.00 | — |
+| 2026-11-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $5,555.85 | ▼ 09:30 equity $5,966.59 vs yday $7,287.91 (-1,321.32) | 09:30 open · cash $5,555.85 (unchanged overnight, no fees) · equity $5,966.59 vs prior close $7,287.91 (-1321.32) · 1 name(s) re-marked at the open (per-name table). EMBJ×22 yday $78.73 → 09:30 $18.67 -1321.32 | — |
+| 2026-11-17 09:30 ET | **SELL** | `EMBJ` | 22 | $18.67 | $2.08 | $-1407.51 | $5,964.51 | ▼ -1,407.51 after sell → book $5,964.51; vs 09:30 mark -2.08 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-11-17 09:30 ET | **BUY** | `WWW` | 238 | $25.00 | $3.07 | — | $11.44 | — | merged news🟢 and cameras +7 −≤1; gate cam_bad_max=1,n_pos_min=7,news=good; rank cond; list flatten,ohlc_hot; 🔵; ret5=+15.2; leftover $5964.51 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $11.44 | ▼ close $5,882.90 vs 09:30 $5,966.59 (session -78.54) | 16:00 close · cash $11.44 · equity $5,882.90 vs 09:30 $5,966.59 (-83.69; session marks -78.54) · 1 name(s) marked open→close (per-name table). WWW×238 09:30 $25.00 → close $24.67 -78.54 | — |
 
 ## Not taken
 

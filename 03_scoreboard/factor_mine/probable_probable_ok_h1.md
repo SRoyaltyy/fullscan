@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `probable` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-41.30%** ($5,870) · signal-only (no cash/fees) was -9.22%. Starts YES **0/30**. Fills 360 · skips 53 · realized $-864.75.
+Cash book **-50.27%** ($4,973) · signal-only (no cash/fees) was -9.22%. Starts YES **0/30**. Fills 367 · skips 53 · realized $-864.75.
 
 ## How this sleeve decides (like you are 10)
 
@@ -568,6 +568,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-16 09:30 ET | **BUY** | `HUBS` | 4 | $222.08 | $2.00 | — | $1,101.81 | — | combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer; 🔵; ret5=+8.3; leftover $1004.88 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-16 09:30 ET | **BUY** | `UNIT` | 207 | $4.85 | $2.67 | — | $95.19 | — | combo gate; gate last_green=True,ret_5_max=10.0; list probable; 🔵; ret5=-6.5; leftover $1004.88 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
 | 2026-11-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $95.19 | ▼ close $5,869.60 vs 09:30 $6,031.49 (session -132.58) | 16:00 close · cash $95.19 · equity $5,869.60 vs 09:30 $6,031.49 (-161.89; session marks -132.58) · 6 name(s) marked open→close (per-name table). SWRD×372 09:30 $2.70 → close $2.77 +26.04; BUUU×190 09:30 $5.28 → close $5.50 +41.80; PRQR×712 09:30 $1.41 → close $1.18 -163.76; KOS×456 09:30 $2.20 → close $2.06 -63.84; HUBS×4 09:30 $222.08 → close $231.98 +39.60; UNIT×207 09:30 $4.85 → close $4.79 -12.42 | — |
+| 2026-11-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $95.19 | ▼ 09:30 equity $5,818.61 vs yday $5,869.60 (-50.99) | 09:30 open · cash $95.19 (unchanged overnight, no fees) · equity $5,818.61 vs prior close $5,869.60 (-50.99) · 6 name(s) re-marked at the open (per-name table). BUUU×190 yday $5.50 → 09:30 $5.44 -11.40; HUBS×4 yday $231.98 → 09:30 $226.06 -23.68; KOS×456 yday $2.06 → 09:30 $2.09 +13.68; PRQR×712 yday $1.18 → 09:30 $1.20 +14.24; SWRD×372 yday $2.77 → 09:30 $2.68 -33.48; UNIT×207 yday $4.79 → 09:30 $4.74 -10.35 | — |
+| 2026-11-17 09:30 ET | **SELL** | `BUUU` | 190 | $5.44 | $2.60 | $+25.24 | $1,126.19 | ▲ +25.24 after sell → book $5,816.01; vs 09:30 mark -2.60 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **SELL** | `HUBS` | 4 | $226.06 | $2.02 | $+11.90 | $2,028.41 | ▲ +11.90 after sell → book $5,813.99; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-17 09:30 ET | **SELL** | `KOS` | 456 | $2.09 | $5.97 | $-62.01 | $2,975.48 | ▼ -62.01 after sell → book $5,808.02; vs 09:30 mark -5.97 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **SELL** | `PRQR` | 712 | $1.20 | $9.31 | $-168.02 | $3,820.57 | ▼ -168.02 after sell → book $5,798.71; vs 09:30 mark -9.31 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **SELL** | `SWRD` | 372 | $2.68 | $4.87 | $-17.11 | $4,812.65 | ▼ -17.11 after sell → book $5,793.83; vs 09:30 mark -4.88 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **SELL** | `UNIT` | 207 | $4.74 | $2.71 | $-28.15 | $5,791.12 | ▼ -28.15 after sell → book $5,791.12; vs 09:30 mark -2.71 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟡 digest🟡 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-11-17 09:30 ET | **BUY** | `SOC` | 7613 | $0.75 | $79.94 | — | $1.43 | — | combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer,yday_mover; 🔵; ret5=-18.6; leftover $5791.12 | join🟢 sector🟡 gen🔴 news🟡 digest🟡 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-11-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1.43 | ▼ close $4,972.72 vs 09:30 $5,818.61 (session -738.46) | 16:00 close · cash $1.43 · equity $4,972.72 vs 09:30 $5,818.61 (-845.89; session marks -738.46) · 1 name(s) marked open→close (per-name table). SOC×7613 09:30 $0.75 → close $0.65 -738.46 | — |
 
 ## Not taken
 

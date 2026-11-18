@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `probable` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-46.19%** ($5,381) · signal-only (no cash/fees) was +1.46%. Starts YES **0/30**. Fills 276 · skips 201 · realized $-2103.38.
+Cash book **-46.77%** ($5,323) · signal-only (no cash/fees) was +1.46%. Starts YES **0/30**. Fills 277 · skips 201 · realized $-2103.38.
 
 ## How this sleeve decides (like you are 10)
 
@@ -484,6 +484,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-16 09:30 ET | **BUY** | `PRQR` | 3 | $1.41 | $0.05 | — | $18.41 | — | combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer; 🔵; ret5=+4.4; leftover $4.24 | join🔴 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-11-16 09:30 ET | **BUY** | `KOS` | 1 | $2.20 | $0.03 | — | $16.18 | — | combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer; ret5=+5.7; leftover $4.24 | join🟡 sector🟡 gen🔴 news🟡 digest🔴 ab🔴 peer🔴 heat🔴 vol🟡 buy🟡 |
 | 2026-11-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $16.18 | ▲ close $5,381.05 vs 09:30 $5,365.63 (session +15.74) | 16:00 close · cash $16.18 · equity $5,381.05 vs 09:30 $5,365.63 (+15.42; session marks +15.74) · 4 name(s) marked open→close (per-name table). NBIS×50 09:30 $106.80 → close $107.13 +16.50; SWRD×1 09:30 $2.70 → close $2.77 +0.07; PRQR×3 09:30 $1.41 → close $1.18 -0.69; KOS×1 09:30 $2.20 → close $2.06 -0.14 | — |
+| 2026-11-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $16.18 | ▲ 09:30 equity $5,468.05 vs yday $5,381.05 (+87.00) | 09:30 open · cash $16.18 (unchanged overnight, no fees) · equity $5,468.05 vs prior close $5,381.05 (+87.00) · 4 name(s) re-marked at the open (per-name table). KOS×1 yday $2.06 → 09:30 $2.09 +0.03; NBIS×50 yday $107.13 → 09:30 $108.87 +87.00; PRQR×3 yday $1.18 → 09:30 $1.20 +0.06; SWRD×1 yday $2.77 → 09:30 $2.68 -0.09 | — |
+| 2026-11-17 09:30 ET | **BUY** | `SOC` | 21 | $0.75 | $0.22 | — | $0.21 | — | combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer,yday_mover; 🔵; ret5=-18.6; leftover $16.18 | join🟢 sector🟡 gen🔴 news🟡 digest🟡 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-11-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $0.21 | ▼ close $5,323.48 vs 09:30 $5,468.05 (session -144.35) | 16:00 close · cash $0.21 · equity $5,323.48 vs 09:30 $5,468.05 (-144.57; session marks -144.35) · 5 name(s) marked open→close (per-name table). KOS×1 09:30 $2.09 → close $2.03 -0.06; NBIS×50 09:30 $108.87 → close $106.03 -141.75; PRQR×3 09:30 $1.20 → close $1.15 -0.15; SWRD×1 09:30 $2.68 → close $2.33 -0.35; SOC×21 09:30 $0.75 → close $0.65 -2.04 | — |
 
 ## Not taken
 

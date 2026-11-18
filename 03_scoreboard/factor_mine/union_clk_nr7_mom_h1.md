@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `hot_score` · size `leftover` · sell `list` · S-boost `none` · Clock-B #10 NR7 + moderate momentum
 
-Cash book **-14.01%** ($8,600) · signal-only (no cash/fees) was +27.44%. Starts YES **25/30**. Fills 128 · skips 16 · realized $+1589.64.
+Cash book **-12.89%** ($8,711) · signal-only (no cash/fees) was +27.44%. Starts YES **25/30**. Fills 132 · skips 16 · realized $+1589.64.
 
 ## How this sleeve decides (like you are 10)
 
@@ -336,6 +336,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-16 09:30 ET | **BUY** | `KOS` | 1003 | $2.20 | $12.94 | — | $2,324.07 | — | Clock-B #10 NR7 + moderate momentum; gate clk_nr7_mom=True; rank hot_score; list probable,yday_gainer; ret5=+5.7; leftover $2208.33 | join🟡 sector🟡 gen🔴 news🟡 digest🔴 ab🔴 peer🔴 heat🔴 vol🟡 buy🟡 |
 | 2026-11-16 09:30 ET | **BUY** | `POET` | 472 | $4.67 | $6.09 | — | $113.74 | — | Clock-B #10 NR7 + moderate momentum; gate clk_nr7_mom=True; rank hot_score; list earn_react; ret5=+1.2; leftover $2208.33 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🟡 buy🟡 |
 | 2026-11-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $113.74 | ▼ close $8,599.54 vs 09:30 $8,839.07 (session -210.30) | 16:00 close · cash $113.74 · equity $8,599.54 vs 09:30 $8,839.07 (-239.53; session marks -210.30) · 4 name(s) marked open→close (per-name table). CHRD×14 09:30 $149.14 → close $146.78 -33.04; XP×146 09:30 $15.05 → close $14.83 -32.12; KOS×1003 09:30 $2.20 → close $2.06 -140.42; POET×472 09:30 $4.67 → close $4.66 -4.72 | — |
+| 2026-11-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $113.74 | ▲ 09:30 equity $8,734.71 vs yday $8,599.54 (+135.17) | 09:30 open · cash $113.74 (unchanged overnight, no fees) · equity $8,734.71 vs prior close $8,599.54 (+135.17) · 4 name(s) re-marked at the open (per-name table). CHRD×14 yday $146.78 → 09:30 $147.56 +10.92; KOS×1003 yday $2.06 → 09:30 $2.09 +30.09; POET×472 yday $4.66 → 09:30 $4.81 +70.80; XP×146 yday $14.83 → 09:30 $14.99 +23.36 | — |
+| 2026-11-17 09:30 ET | **SELL** | `CHRD` | 14 | $147.56 | $2.06 | $-26.21 | $2,177.52 | ▼ -26.21 after sell → book $8,732.65; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **SELL** | `KOS` | 1003 | $2.09 | $13.12 | $-136.39 | $4,260.67 | ▼ -136.39 after sell → book $8,719.53; vs 09:30 mark -13.12 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **SELL** | `POET` | 472 | $4.81 | $6.19 | $+53.81 | $6,524.80 | ▲ +53.81 after sell → book $8,713.34; vs 09:30 mark -6.19 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **SELL** | `XP` | 146 | $14.99 | $2.47 | $-13.66 | $8,710.87 | ▼ -13.66 after sell → book $8,710.87; vs 09:30 mark -2.47 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🔴 digest🔴 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-11-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,710.87 | ▲ close $8,710.87 vs 09:30 $8,734.71 (session +0.00) | 16:00 close · cash $8,710.87 · no lots left · equity $8,710.87. | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared union_e_fresh_h3/union_earn_react_h3 w=0.5,0.5 net=priority
 
-Cash book **-19.66%** ($8,034) · signal-only (no cash/fees) was —. Starts YES **28/30**. Fills 285 · skips 272 · realized $+2411.05.
+Cash book **-19.98%** ($8,002) · signal-only (no cash/fees) was —. Starts YES **28/30**. Fills 289 · skips 272 · realized $+2411.05.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $71.60.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $17.18.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -492,6 +492,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-16 09:30 ET | **BUY** | `PERI` | 1 | $11.28 | $0.12 | — | $85.76 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=-0.2; combo leftover $15.98; owner union_e_fresh_h3 | join🟢 sector🟡 gen🔴 news🟡 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-11-16 09:30 ET | **BUY** | `POET` | 3 | $4.67 | $0.15 | — | $71.60 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=+1.2; combo leftover $15.98; owner union_e_fresh_h3 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🟡 buy🟡 |
 | 2026-11-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $71.60 | ▼ close $8,033.84 vs 09:30 $8,261.20 (session -225.55) | 16:00 close · cash $71.60 · equity $8,033.84 vs 09:30 $8,261.20 (-227.36; session marks -225.55) · 16 name(s) marked open→close (per-name table). ALMU×75 09:30 $6.22 → close $6.18 -2.63; ANDG×8 09:30 $60.25 → close $62.85 +20.80; ARWR×11 09:30 $47.12 → close $44.21 -32.01; ASND×2 09:30 $275.01 → close $271.73 -6.56; CBRS×10 09:30 $102.55 → close $100.99 -15.60; CDXS×1004 09:30 $1.13 → close $1.06 -70.28; DGXX×440 09:30 $2.16 → close $1.99 -74.80; FLO×199 09:30 $5.61 → close $5.24 -73.63; HTFL×9 09:30 $47.37 → close $46.86 -4.59; LGN×15 09:30 $33.06 → close $34.18 +16.80; MBGL×23 09:30 $23.44 → close $24.04 +13.80; NBIS×4 09:30 $106.80 → close $107.13 +1.32; BLDP×12 09:30 $1.25 → close $1.25 +0.00; CYPH×9 09:30 $1.70 → close $1.93 +2.03; PERI×1 09:30 $11.28 → close $11.11 -0.17; POET×3 09:30 $4.67 → close $4.66 -0.03 | — |
+| 2026-11-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $71.60 | ▲ 09:30 equity $8,062.59 vs yday $8,033.84 (+28.75) | 09:30 open · cash $71.60 (unchanged overnight, no fees) · equity $8,062.59 vs prior close $8,033.84 (+28.75) | — |
+| 2026-11-17 09:30 ET | **BUY** | `LRMR` | 1 | $2.99 | $0.03 | — | $68.58 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list yday_gainer; 🔵; ret5=+18.6; combo leftover $4.47; owner union_e_fresh_h3 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-17 09:30 ET | **BUY** | `KLAR` | 1 | $14.12 | $0.14 | — | $54.31 | — | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; 🔵; ret5=+1.3; combo leftover $22.86; owner union_earn_react_h3 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-17 09:30 ET | **BUY** | `MNSO` | 2 | $11.08 | $0.23 | — | $31.92 | — | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; 🔵; ret5=+2.9; combo leftover $22.86; owner union_earn_react_h3 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-17 09:30 ET | **BUY** | `OMER` | 1 | $14.59 | $0.15 | — | $17.18 | — | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; ret5=-5.0; combo leftover $22.86; owner union_earn_react_h3 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $17.18 | ▼ close $8,002.34 vs 09:30 $8,062.59 (session -59.71) | 16:00 close · cash $17.18 · equity $8,002.34 vs 09:30 $8,062.59 (-60.25; session marks -59.71) · 20 name(s) marked open→close (per-name table). ALMU×75 09:30 $6.32 → close $5.68 -48.00; ANDG×8 09:30 $62.96 → close $63.08 +0.96; ARWR×11 09:30 $44.15 → close $42.99 -12.76; ASND×2 09:30 $270.06 → close $271.19 +2.26; BLDP×12 09:30 $1.27 → close $1.15 -1.44; CBRS×10 09:30 $102.26 → close $104.18 +19.20; CDXS×1004 09:30 $1.07 → close $1.07 +0.00; CYPH×9 09:30 $2.06 → close $1.91 -1.40; DGXX×440 09:30 $2.01 → close $2.04 +13.20; FLO×199 09:30 $5.10 → close $5.00 -19.90; HTFL×9 09:30 $46.39 → close $47.07 +6.12; LGN×15 09:30 $35.40 → close $34.85 -8.25; MBGL×23 09:30 $23.83 → close $23.89 +1.38; NBIS×4 09:30 $108.87 → close $106.03 -11.34; PERI×1 09:30 $11.07 → close $10.89 -0.18; POET×3 09:30 $4.81 → close $4.40 -1.23; LRMR×1 09:30 $2.99 → close $2.99 +0.00; KLAR×1 09:30 $14.12 → close $14.27 +0.14; MNSO×2 09:30 $11.08 → close $12.18 +2.20; OMER×1 09:30 $14.59 → close $13.92 -0.67 | — |
 
 ## Not taken
 

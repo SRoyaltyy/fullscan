@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · packet🟢 AND headline🟢 (thin; kept as a KILL)
 
-Cash book **-4.25%** ($9,575) · signal-only (no cash/fees) was +4.21%. Starts YES **21/30**. Fills 15 · skips 2 · realized $+729.11.
+Cash book **-4.34%** ($9,566) · signal-only (no cash/fees) was +4.21%. Starts YES **21/30**. Fills 18 · skips 2 · realized $+729.11.
 
 ## How this sleeve decides (like you are 10)
 
@@ -222,6 +222,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-16 09:30 ET | **BUY** | `LUNR` | 261 | $12.53 | $3.37 | — | $3,281.01 | — | packet🟢 AND headline🟢 (thin; kept as a KILL); gate news_and_headline=True; rank cond; list yday_gainer; 🔵; ret5=+24.2; leftover $3271.76 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-11-16 09:30 ET | **BUY** | `DPC` | 99 | $32.88 | $2.29 | — | $23.61 | — | packet🟢 AND headline🟢 (thin; kept as a KILL); gate news_and_headline=True; rank cond; list yday_gainer; 🔵; ret5=+19.0; leftover $3271.76 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 judge🔴 ab🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-11-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $23.61 | ▼ close $9,574.90 vs 09:30 $9,818.14 (session -232.32) | 16:00 close · cash $23.61 · equity $9,574.90 vs 09:30 $9,818.14 (-243.24; session marks -232.32) · 3 name(s) marked open→close (per-name table). MBGL×139 09:30 $23.44 → close $24.04 +83.40; LUNR×261 09:30 $12.53 → close $11.73 -208.80; DPC×99 09:30 $32.88 → close $31.80 -106.92 | — |
+| 2026-11-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $23.61 | ▼ 09:30 equity $9,574.06 vs yday $9,574.90 (-0.84) | 09:30 open · cash $23.61 (unchanged overnight, no fees) · equity $9,574.06 vs prior close $9,574.90 (-0.84) · 3 name(s) re-marked at the open (per-name table). DPC×99 yday $31.80 → 09:30 $32.06 +25.74; LUNR×261 yday $11.73 → 09:30 $11.74 +2.61; MBGL×139 yday $24.04 → 09:30 $23.83 -29.19 | — |
+| 2026-11-17 09:30 ET | **SELL** | `DPC` | 99 | $32.06 | $2.33 | $-85.80 | $3,195.22 | ▼ -85.80 after sell → book $9,571.73; vs 09:30 mark -2.33 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **SELL** | `LUNR` | 261 | $11.74 | $3.43 | $-212.99 | $6,255.93 | ▼ -212.99 after sell → book $9,568.30; vs 09:30 mark -3.43 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **SELL** | `MBGL` | 139 | $23.83 | $2.46 | $+49.35 | $9,565.84 | ▲ +49.35 after sell → book $9,565.84; vs 09:30 mark -2.46 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,565.84 | ▲ close $9,565.84 vs 09:30 $9,574.06 (session +0.00) | 16:00 close · cash $9,565.84 · no lots left · equity $9,565.84. | — |
 
 ## Not taken
 

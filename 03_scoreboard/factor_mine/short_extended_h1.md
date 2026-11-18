@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · ret_5>15
 
-Cash book **-1.03%** ($9,897) · signal-only (no cash/fees) was -19.86%. Starts YES **3/30**. Fills 538 · skips 88 · realized $-1484.16.
+Cash book **-0.30%** ($9,970) · signal-only (no cash/fees) was -19.86%. Starts YES **3/30**. Fills 548 · skips 88 · realized $-1484.16.
 
 ## How this sleeve decides (like you are 10)
 
@@ -742,6 +742,18 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-16 09:30 ET | **SHORT** | `MBGL` | 25 | $23.44 | $2.10 | — | $13,933.42 | — | ret_5>15; gate ret_5_min=15.0; list yday_gainer,yday_mover; 🔵; ret5=+18.5; leftover $608.16 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-16 09:30 ET | **SHORT** | `FRMI` | 230 | $2.63 | $3.03 | — | $14,536.44 | — | ret_5>15; gate ret_5_min=15.0; list yday_gainer; ret5=+66.2; leftover $608.16 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 heat🔴 vol🟢 buy🟡 |
 | 2026-11-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,536.44 | ▲ close $9,897.31 vs 09:30 $9,750.03 (session +191.17) | 16:00 close · cash $14,536.44 · equity $9,897.31 vs 09:30 $9,750.03 (+147.28; session marks +191.17) · 8 name(s) marked open→close (per-name table). EPRX×74 09:30 $8.15 → close $7.34 +59.94; XLAB×298 09:30 $2.04 → close $1.96 +23.84; ENGN×262 09:30 $2.32 → close $1.89 +112.66; NGEN×328 09:30 $1.85 → close $1.82 +9.84; CURI×199 09:30 $3.05 → close $3.21 -31.84; NUAI×196 09:30 $3.09 → close $3.11 -3.92; MBGL×25 09:30 $23.44 → close $24.04 -15.00; FRMI×230 09:30 $2.63 → close $2.48 +35.65 | — |
+| 2026-11-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $14,536.44 | ▲ 09:30 equity $9,914.87 vs yday $9,897.31 (+17.56) | 09:30 open · cash $14,536.44 (unchanged overnight, no fees) · equity $9,914.87 vs prior close $9,897.31 (+17.56) · 8 name(s) re-marked at the open (per-name table). CURI×199 yday $3.21 → 09:30 $3.21 +0.99; ENGN×262 yday $1.89 → 09:30 $1.89 -0.00; EPRX×74 yday $7.34 → 09:30 $7.30 +2.96; FRMI×230 yday $2.48 → 09:30 $2.43 +11.73; MBGL×25 yday $24.04 → 09:30 $23.83 +5.25; NGEN×328 yday $1.82 → 09:30 $1.81 +3.28; NUAI×196 yday $3.11 → 09:30 $3.22 -21.56; XLAB×298 yday $1.96 → 09:30 $1.91 +14.90 | — |
+| 2026-11-17 09:30 ET | **COVER** | `CURI` | 199 | $3.21 | $2.59 | $-36.08 | $13,896.06 | ▼ -36.08 after sell → book $9,912.28; vs 09:30 mark -2.59 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-17 09:30 ET | **COVER** | `ENGN` | 262 | $1.89 | $3.38 | $+105.83 | $13,397.50 | ▲ +105.83 after sell → book $9,908.90; vs 09:30 mark -3.38 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **COVER** | `EPRX` | 74 | $7.30 | $2.21 | $+58.44 | $12,855.09 | ▲ +58.44 after sell → book $9,906.69; vs 09:30 mark -2.21 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **COVER** | `MBGL` | 25 | $23.83 | $2.06 | $-13.92 | $12,257.27 | ▼ -13.92 after sell → book $9,904.62; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **COVER** | `XLAB` | 298 | $1.91 | $3.84 | $+30.98 | $11,684.25 | ▲ +30.98 after sell → book $9,900.78; vs 09:30 mark -3.84 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **SHORT** | `WWW` | 39 | $25.00 | $2.15 | — | $12,657.09 | — | ret_5>15; gate ret_5_min=15.0; list flatten,ohlc_hot; 🔵; ret5=+15.2; leftover $990.08 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-17 09:30 ET | **SHORT** | `LFTO` | 39 | $24.93 | $2.15 | — | $13,627.21 | — | ret_5>15; gate ret_5_min=15.0; list yday_gainer,yday_mover; 🔵; ret5=+30.7; leftover $990.08 | join🟢 sector🟡 gen🔴 news🟢 digest🟡 ab🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-17 09:30 ET | **SHORT** | `MOD` | 7 | $133.12 | $2.06 | — | $14,556.99 | — | ret_5>15; gate ret_5_min=15.0; list yday_gainer,yday_mover; ret5=+23.0; leftover $990.08 | join🔴 sector🟡 gen🔴 news🟡 digest🔴 judge🔴 ab🔴 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-17 09:30 ET | **SHORT** | `HAWK` | 53 | $18.42 | $2.20 | — | $15,531.06 | — | ret_5>15; gate ret_5_min=15.0; list yday_gainer,yday_mover; ret5=+22.9; leftover $990.08 | join🔴 sector🟡 gen🔴 news🟢 digest🔴 judge🔴 ab🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-17 09:30 ET | **SHORT** | `LRMR` | 331 | $2.99 | $4.36 | — | $16,516.39 | — | ret_5>15; gate ret_5_min=15.0; list yday_gainer; 🔵; ret5=+18.6; leftover $990.08 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $16,516.39 | ▲ close $9,969.71 vs 09:30 $9,914.87 (session +81.85) | 16:00 close · cash $16,516.39 · equity $9,969.71 vs 09:30 $9,914.87 (+54.84; session marks +81.85) · 8 name(s) marked open→close (per-name table). FRMI×230 09:30 $2.43 → close $2.41 +4.37; NGEN×328 09:30 $1.81 → close $1.96 -49.20; NUAI×196 09:30 $3.22 → close $3.20 +3.92; WWW×39 09:30 $25.00 → close $24.67 +12.87; LFTO×39 09:30 $24.93 → close $22.68 +87.75; MOD×7 09:30 $133.12 → close $129.73 +23.73; HAWK×53 09:30 $18.42 → close $18.45 -1.59; LRMR×331 09:30 $2.99 → close $2.99 -0.00 | — |
 
 ## Not taken
 

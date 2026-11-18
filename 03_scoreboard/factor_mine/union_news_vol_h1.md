@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-35.92%** ($6,408) · signal-only (no cash/fees) was +0.74%. Starts YES **0/30**. Fills 220 · skips 41 · realized $-847.98.
+Cash book **-39.41%** ($6,059) · signal-only (no cash/fees) was +0.74%. Starts YES **0/30**. Fills 234 · skips 41 · realized $-847.98.
 
 ## How this sleeve decides (like you are 10)
 
@@ -428,6 +428,22 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-16 09:30 ET | **BUY** | `WWW` | 32 | $25.00 | $2.09 | — | $859.20 | — | combo gate; gate news=good,vol=good; list ohlc_hot; 🔵; ret5=+16.7; leftover $815.51 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-16 09:30 ET | **BUY** | `ZM` | 8 | $99.16 | $2.01 | — | $63.91 | — | combo gate; gate news=good,vol=good; list ohlc_hot; 🔵; ret5=+11.0; leftover $815.51 | join🟢 sector🟡 gen🔴 news🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $63.91 | ▼ close $6,407.91 vs 09:30 $6,544.07 (session -92.96) | 16:00 close · cash $63.91 · equity $6,407.91 vs 09:30 $6,544.07 (-136.16; session marks -92.96) · 8 name(s) marked open→close (per-name table). NGEN×440 09:30 $1.85 → close $1.82 -13.20; CURI×267 09:30 $3.05 → close $3.21 +42.72; MBGL×34 09:30 $23.44 → close $24.04 +20.40; DPC×24 09:30 $32.88 → close $31.80 -25.92; LUNR×65 09:30 $12.53 → close $11.73 -52.00; GSM×280 09:30 $2.91 → close $2.73 -50.40; WWW×32 09:30 $25.00 → close $25.29 +9.28; ZM×8 09:30 $99.16 → close $96.18 -23.84 | — |
+| 2026-11-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $63.91 | ▼ 09:30 equity $6,380.00 vs yday $6,407.91 (-27.91) | 09:30 open · cash $63.91 (unchanged overnight, no fees) · equity $6,380.00 vs prior close $6,407.91 (-27.91) · 8 name(s) re-marked at the open (per-name table). CURI×267 yday $3.21 → 09:30 $3.21 -1.33; DPC×24 yday $31.80 → 09:30 $32.06 +6.24; GSM×280 yday $2.73 → 09:30 $2.70 -8.40; LUNR×65 yday $11.73 → 09:30 $11.74 +0.65; MBGL×34 yday $24.04 → 09:30 $23.83 -7.14; NGEN×440 yday $1.82 → 09:30 $1.81 -4.40; WWW×32 yday $25.29 → 09:30 $25.00 -9.28; ZM×8 yday $96.18 → 09:30 $95.65 -4.24 | — |
+| 2026-11-17 09:30 ET | **SELL** | `CURI` | 267 | $3.21 | $3.50 | $+34.44 | $916.15 | ▲ +34.44 after sell → book $6,376.51; vs 09:30 mark -3.49 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-17 09:30 ET | **SELL** | `DPC` | 24 | $32.06 | $2.08 | $-23.82 | $1,683.50 | ▼ -23.82 after sell → book $6,374.42; vs 09:30 mark -2.09 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **SELL** | `GSM` | 280 | $2.70 | $3.67 | $-66.08 | $2,435.84 | ▼ -66.08 after sell → book $6,370.76; vs 09:30 mark -3.66 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **SELL** | `LUNR` | 65 | $11.74 | $2.21 | $-55.74 | $3,196.73 | ▼ -55.74 after sell → book $6,368.55; vs 09:30 mark -2.21 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **SELL** | `MBGL` | 34 | $23.83 | $2.11 | $+9.06 | $4,004.84 | ▲ +9.06 after sell → book $6,366.44; vs 09:30 mark -2.11 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **SELL** | `NGEN` | 440 | $1.81 | $5.76 | $-29.04 | $4,795.48 | ▼ -29.04 after sell → book $6,360.68; vs 09:30 mark -5.76 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟢 digest🔴 ab🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-11-17 09:30 ET | **SELL** | `ZM` | 8 | $95.65 | $2.03 | $-32.13 | $5,558.65 | ▼ -32.13 after sell → book $6,358.65; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **BUY** | `CDXS` | 742 | $1.07 | $9.57 | — | $4,755.13 | — | combo gate; gate news=good,vol=good; list probable,yday_gainer,yday_mover; 🔵; ret5=-4.5; leftover $794.09 | join🔴 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-17 09:30 ET | **BUY** | `MRLN` | 835 | $0.95 | $10.44 | — | $3,951.45 | — | combo gate; gate news=good,vol=good; list probable,yday_gainer; ret5=-4.3; leftover $794.09 | join🔴 sector🟡 gen🔴 news🟢 digest🔴 judge🔴 ab🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-11-17 09:30 ET | **BUY** | `TNDM` | 43 | $18.25 | $2.12 | — | $3,164.58 | — | combo gate; gate news=good,vol=good; list probable,yday_gainer; 🔵; ret5=+1.7; leftover $794.09 | join🔴 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-17 09:30 ET | **BUY** | `NMAX` | 90 | $8.78 | $2.26 | — | $2,372.12 | — | combo gate; gate news=good,vol=good; list yday_gainer,yday_mover; 🔵; ret5=+13.8; leftover $794.09 | join🟢 sector🟡 gen🔴 news🟢 digest🟡 ab🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-17 09:30 ET | **BUY** | `LFTO` | 31 | $24.93 | $2.08 | — | $1,597.20 | — | combo gate; gate news=good,vol=good; list yday_gainer,yday_mover; 🔵; ret5=+30.7; leftover $794.09 | join🟢 sector🟡 gen🔴 news🟢 digest🟡 ab🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-17 09:30 ET | **BUY** | `HAWK` | 43 | $18.42 | $2.12 | — | $803.02 | — | combo gate; gate news=good,vol=good; list yday_gainer,yday_mover; ret5=+22.9; leftover $794.09 | join🔴 sector🟡 gen🔴 news🟢 digest🔴 judge🔴 ab🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-17 09:30 ET | **BUY** | `NCMI` | 415 | $1.91 | $5.35 | — | $5.02 | — | combo gate; gate news=good,vol=good; list yday_gainer,ohlc_hot; 🔵; ret5=+15.7; leftover $794.09 | join🔴 sector🟡 gen🔴 news🟢 digest🟡 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5.02 | ▼ close $6,059.39 vs 09:30 $6,380.00 (session -265.31) | 16:00 close · cash $5.02 · equity $6,059.39 vs 09:30 $6,380.00 (-320.61; session marks -265.31) · 8 name(s) marked open→close (per-name table). WWW×32 09:30 $25.00 → close $24.67 -10.56; CDXS×742 09:30 $1.07 → close $1.07 +0.00; MRLN×835 09:30 $0.95 → close $0.91 -35.07; TNDM×43 09:30 $18.25 → close $17.06 -51.17; NMAX×90 09:30 $8.78 → close $8.36 -37.80; LFTO×31 09:30 $24.93 → close $22.68 -69.75; HAWK×43 09:30 $18.42 → close $18.45 +1.29; NCMI×415 09:30 $1.91 → close $1.76 -62.25 | — |
 
 ## Not taken
 

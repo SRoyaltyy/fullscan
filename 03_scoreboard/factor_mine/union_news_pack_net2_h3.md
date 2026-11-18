@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · packet🟢 and camera net ≥ 2
 
-Cash book **-6.35%** ($9,365) · signal-only (no cash/fees) was -9.47%. Starts YES **16/30**. Fills 94 · skips 82 · realized $-1172.71.
+Cash book **-21.90%** ($7,810) · signal-only (no cash/fees) was -9.47%. Starts YES **16/30**. Fills 97 · skips 82 · realized $-1172.71.
 
 ## How this sleeve decides (like you are 10)
 
@@ -302,6 +302,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-16 09:30 ET | **BUY** | `CHRD` | 12 | $149.14 | $2.03 | — | $1,920.43 | — | packet🟢 and camera net ≥ 2; gate cam_net_min=2,news_box=good; rank cond; list flatten; ret5=+9.8; leftover $1829.32 | join🟢 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 peer🟢 heat🔴 vol🟡 buy🟢 |
 | 2026-11-16 09:30 ET | **BUY** | `COLD` | 108 | $16.82 | $2.31 | — | $101.56 | — | packet🟢 and camera net ≥ 2; gate cam_net_min=2,news_box=good; rank cond; list ohlc_hot; 🔵; ret5=+4.2; leftover $1829.32 | join🟡 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟡 vol🟡 buy🟡 |
 | 2026-11-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $101.56 | ▼ close $9,364.58 vs 09:30 $9,395.16 (session -13.39) | 16:00 close · cash $101.56 · equity $9,364.58 vs 09:30 $9,395.16 (-30.58; session marks -13.39) · 7 name(s) marked open→close (per-name table). ANDG×2 09:30 $60.25 → close $62.85 +5.20; DVN×3 09:30 $46.00 → close $44.27 -5.19; EMBJ×23 09:30 $78.73 → close $78.73 +0.00; FROG×16 09:30 $110.78 → close $109.94 -13.52; MBGL×78 09:30 $23.44 → close $24.04 +46.80; CHRD×12 09:30 $149.14 → close $146.78 -28.32; COLD×108 09:30 $16.82 → close $16.65 -18.36 | — |
+| 2026-11-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $101.56 | ▼ 09:30 equity $7,945.27 vs yday $9,364.58 (-1,419.31) | 09:30 open · cash $101.56 (unchanged overnight, no fees) · equity $7,945.27 vs prior close $9,364.58 (-1419.31) · 7 name(s) re-marked at the open (per-name table). ANDG×2 yday $62.85 → 09:30 $62.96 +0.22; CHRD×12 yday $146.78 → 09:30 $147.56 +9.36; COLD×108 yday $16.65 → 09:30 $16.54 -11.88; DVN×3 yday $44.27 → 09:30 $44.84 +1.71; EMBJ×23 yday $78.73 → 09:30 $18.67 -1381.38; FROG×16 yday $109.94 → 09:30 $108.63 -20.96; MBGL×78 yday $24.04 → 09:30 $23.83 -16.38 | — |
+| 2026-11-17 09:30 ET | **SELL** | `EMBJ` | 23 | $18.67 | $2.08 | $-1471.31 | $528.89 | ▼ -1,471.31 after sell → book $7,943.19; vs 09:30 mark -2.08 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-11-17 09:30 ET | **BUY** | `VIK` | 2 | $89.00 | $1.79 | — | $349.11 | — | packet🟢 and camera net ≥ 2; gate cam_net_min=2,news_box=good; rank cond; list earn_react; 🔵; ret5=+3.6; leftover $264.45 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-17 09:30 ET | **BUY** | `HTHT` | 4 | $54.13 | $2.00 | — | $130.58 | — | packet🟢 and camera net ≥ 2; gate cam_net_min=2,news_box=good; rank cond; list ohlc_hot; 🔵; ret5=+9.3; leftover $264.45 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-11-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $130.58 | ▼ close $7,809.66 vs 09:30 $7,945.27 (session -129.74) | 16:00 close · cash $130.58 · equity $7,809.66 vs 09:30 $7,945.27 (-135.61; session marks -129.74) · 8 name(s) marked open→close (per-name table). ANDG×2 09:30 $62.96 → close $63.08 +0.24; CHRD×12 09:30 $147.56 → close $143.28 -51.36; COLD×108 09:30 $16.54 → close $16.25 -31.32; DVN×3 09:30 $44.84 → close $43.46 -4.14; FROG×16 09:30 $108.63 → close $105.10 -56.48; MBGL×78 09:30 $23.83 → close $23.89 +4.68; VIK×2 09:30 $89.00 → close $94.28 +10.56; HTHT×4 09:30 $54.13 → close $53.65 -1.92 | — |
 
 ## Not taken
 

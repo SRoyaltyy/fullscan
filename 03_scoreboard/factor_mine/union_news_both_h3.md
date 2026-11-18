@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · packet🟢 AND headline🟢 (thin; kept as a KILL)
 
-Cash book **-6.70%** ($9,330) · signal-only (no cash/fees) was +1.48%. Starts YES **21/30**. Fills 9 · skips 7 · realized $+403.48.
+Cash book **-8.40%** ($9,160) · signal-only (no cash/fees) was +1.48%. Starts YES **21/30**. Fills 9 · skips 7 · realized $+403.48.
 
 ## How this sleeve decides (like you are 10)
 
@@ -216,6 +216,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $33.03 | ▼ close $9,814.83 vs 09:30 $9,855.34 (session -37.80) | 16:00 close · cash $33.03 · equity $9,814.83 vs 09:30 $9,855.34 (-40.51; session marks -37.80) · 1 name(s) marked open→close (per-name table). DVN×210 09:30 $46.76 → close $46.58 -37.80 | — |
 | 2026-11-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $33.03 | ▼ 09:30 equity $9,693.03 vs yday $9,814.83 (-121.80) | 09:30 open · cash $33.03 (unchanged overnight, no fees) · equity $9,693.03 vs prior close $9,814.83 (-121.80) · 1 name(s) re-marked at the open (per-name table). DVN×210 yday $46.58 → 09:30 $46.00 -121.80 | — |
 | 2026-11-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $33.03 | ▼ close $9,329.73 vs 09:30 $9,693.03 (session -363.30) | 16:00 close · cash $33.03 · equity $9,329.73 vs 09:30 $9,693.03 (-363.30; session marks -363.30) · 1 name(s) marked open→close (per-name table). DVN×210 09:30 $46.00 → close $44.27 -363.30 | — |
+| 2026-11-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $33.03 | ▲ 09:30 equity $9,449.43 vs yday $9,329.73 (+119.70) | 09:30 open · cash $33.03 (unchanged overnight, no fees) · equity $9,449.43 vs prior close $9,329.73 (+119.70) · 1 name(s) re-marked at the open (per-name table). DVN×210 yday $44.27 → 09:30 $44.84 +119.70 | — |
+| 2026-11-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $33.03 | ▼ close $9,159.63 vs 09:30 $9,449.43 (session -289.80) | 16:00 close · cash $33.03 · equity $9,159.63 vs 09:30 $9,449.43 (-289.80; session marks -289.80) · 1 name(s) marked open→close (per-name table). DVN×210 09:30 $44.84 → close $43.46 -289.80 | — |
 
 ## Not taken
 

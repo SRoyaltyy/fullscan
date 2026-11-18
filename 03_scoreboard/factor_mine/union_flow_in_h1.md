@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ flow_in, no 🚨
 
-Cash book **+19.31%** ($11,931) · signal-only (no cash/fees) was +17.31%. Starts YES **6/30**. Fills 180 · skips 27 · realized $+766.09.
+Cash book **+20.45%** ($12,045) · signal-only (no cash/fees) was +17.31%. Starts YES **6/30**. Fills 185 · skips 27 · realized $+766.09.
 
 ## How this sleeve decides (like you are 10)
 
@@ -386,6 +386,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $20.78 | ▲ 09:30 equity $11,937.32 vs yday $11,703.10 (+234.22) | 09:30 open · cash $20.78 (unchanged overnight, no fees) · equity $11,937.32 vs prior close $11,703.10 (+234.22) · 1 name(s) re-marked at the open (per-name table). LFTO×478 yday $24.44 → 09:30 $24.93 +234.22 | — |
 | 2026-11-16 09:30 ET | **SELL** | `LFTO` | 478 | $24.93 | $6.34 | $+556.31 | $11,930.98 | ▲ +556.31 after sell → book $11,930.98; vs 09:30 mark -6.34 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $11,930.98 | ▲ close $11,930.98 vs 09:30 $11,937.32 (session +0.00) | 16:00 close · cash $11,930.98 · no lots left · equity $11,930.98. | — |
+| 2026-11-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $11,930.98 | ▲ 09:30 equity $11,930.98 vs yday $11,930.98 (+0.00) | 09:30 open · cash $11,930.98 · no holdings · equity $11,930.98 vs prior close $11,930.98 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-17 09:30 ET | **BUY** | `LFTO` | 95 | $24.93 | $2.27 | — | $9,560.35 | — | union ∩ flow_in, no 🚨; gate flow_in=True; list yday_gainer,yday_mover; 🔵; ret5=+30.7; leftover $2386.20 | join🟢 sector🟡 gen🔴 news🟢 digest🟡 ab🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-17 09:30 ET | **BUY** | `LRMR` | 798 | $2.99 | $10.29 | — | $7,164.04 | — | union ∩ flow_in, no 🚨; gate flow_in=True; list yday_gainer; 🔵; ret5=+18.6; leftover $2386.20 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-17 09:30 ET | **BUY** | `DIS` | 20 | $118.26 | $2.05 | — | $4,796.79 | — | union ∩ flow_in, no 🚨; gate flow_in=True; list earn_react; ret5=-0.4; leftover $2386.20 | join🟢 sector🟡 gen🔴 news🟡 digest🟡 ab🟢 peer🟡 heat🟢 vol🟡 buy🟡 |
+| 2026-11-17 09:30 ET | **BUY** | `MNSO` | 215 | $11.08 | $2.77 | — | $2,411.82 | — | union ∩ flow_in, no 🚨; gate flow_in=True; list earn_react; 🔵; ret5=+2.9; leftover $2386.20 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-17 09:30 ET | **BUY** | `VIK` | 26 | $89.00 | $2.07 | — | $95.75 | — | union ∩ flow_in, no 🚨; gate flow_in=True; list earn_react; 🔵; ret5=+3.6; leftover $2386.20 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $95.75 | ▲ close $12,045.15 vs 09:30 $11,930.98 (session +133.63) | 16:00 close · cash $95.75 · equity $12,045.15 vs 09:30 $11,930.98 (+114.17; session marks +133.63) · 5 name(s) marked open→close (per-name table). LFTO×95 09:30 $24.93 → close $22.68 -213.75; LRMR×798 09:30 $2.99 → close $2.99 +0.00; DIS×20 09:30 $118.26 → close $116.94 -26.40; MNSO×215 09:30 $11.08 → close $12.18 +236.50; VIK×26 09:30 $89.00 → close $94.28 +137.28 | — |
 
 ## Not taken
 

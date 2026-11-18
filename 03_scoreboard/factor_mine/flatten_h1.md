@@ -6,7 +6,7 @@ Buys the flatten **wish-list** even on io/HOLD mornings — live `flatten_robust
 
 Side **long** · universe `flatten` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · baseline list, no extra gate
 
-Cash book **-22.07%** ($7,793) · signal-only (no cash/fees) was -9.51%. Starts YES **0/30**. Fills 431 · skips 78 · realized $-357.09.
+Cash book **-23.51%** ($7,649) · signal-only (no cash/fees) was -9.51%. Starts YES **0/30**. Fills 442 · skips 78 · realized $-357.09.
 
 ## How this sleeve decides (like you are 10)
 
@@ -633,6 +633,19 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-16 09:30 ET | **BUY** | `PODD` | 11 | $153.50 | $2.02 | — | $1,800.71 | — | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); ret5=+4.1; leftover $1745.62 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-11-16 09:30 ET | **BUY** | `EPRX` | 214 | $8.15 | $2.76 | — | $53.85 | — | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); ret5=+18.3; leftover $1745.62 | join🟢 sector🟡 gen🔴 news🔴 digest🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-11-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $53.85 | ▼ close $7,793.08 vs 09:30 $8,221.84 (session -418.57) | 16:00 close · cash $53.85 · equity $7,793.08 vs 09:30 $8,221.84 (-428.76; session marks -418.57) · 5 name(s) marked open→close (per-name table). ALNY×10 09:30 $166.98 → close $159.73 -72.50; CHRD×10 09:30 $149.14 → close $146.78 -23.60; DVN×34 09:30 $46.00 → close $44.27 -58.82; PODD×11 09:30 $153.50 → close $145.29 -90.31; EPRX×214 09:30 $8.15 → close $7.34 -173.34 | — |
+| 2026-11-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $53.85 | ▲ 09:30 equity $7,798.00 vs yday $7,793.08 (+4.92) | 09:30 open · cash $53.85 (unchanged overnight, no fees) · equity $7,798.00 vs prior close $7,793.08 (+4.92) · 5 name(s) re-marked at the open (per-name table). ALNY×10 yday $159.73 → 09:30 $159.02 -7.10; CHRD×10 yday $146.78 → 09:30 $147.56 +7.80; DVN×34 yday $44.27 → 09:30 $44.84 +19.38; EPRX×214 yday $7.34 → 09:30 $7.30 -8.56; PODD×11 yday $145.29 → 09:30 $144.69 -6.60 | — |
+| 2026-11-17 09:30 ET | **SELL** | `ALNY` | 10 | $159.02 | $2.04 | $-5.56 | $1,642.01 | ▼ -5.56 after sell → book $7,795.96; vs 09:30 mark -2.04 | dropped from list after 2 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **SELL** | `CHRD` | 10 | $147.56 | $2.04 | $-11.96 | $3,115.57 | ▼ -11.96 after sell → book $7,793.92; vs 09:30 mark -2.04 | dropped from list after 2 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **SELL** | `DVN` | 34 | $44.84 | $2.11 | $-69.49 | $4,638.01 | ▼ -69.49 after sell → book $7,791.80; vs 09:30 mark -2.12 | dropped from list after 2 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **SELL** | `EPRX` | 214 | $7.30 | $2.81 | $-187.47 | $6,197.40 | ▼ -187.47 after sell → book $7,788.99; vs 09:30 mark -2.81 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **SELL** | `PODD` | 11 | $144.69 | $2.05 | $-100.98 | $7,786.95 | ▼ -100.98 after sell → book $7,786.95; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **BUY** | `HUBS` | 5 | $226.06 | $2.00 | — | $6,654.64 | — | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); ret5=+12.6; leftover $1297.82 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-17 09:30 ET | **BUY** | `APP` | 3 | $412.56 | $2.00 | — | $5,414.96 | — | baseline list, no extra gate; list flatten,ohlc_hot; wish-list (live io HOLD — not a ticket); 🔵; ret5=+1.3; leftover $1297.82 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-17 09:30 ET | **BUY** | `CMCSA` | 51 | $25.44 | $2.14 | — | $4,115.38 | — | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ret5=+4.4; leftover $1297.82 | join🟢 sector🟡 gen🔴 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-17 09:30 ET | **BUY** | `WWW` | 51 | $25.00 | $2.14 | — | $2,838.24 | — | baseline list, no extra gate; list flatten,ohlc_hot; wish-list (live io HOLD — not a ticket); 🔵; ret5=+15.2; leftover $1297.82 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-17 09:30 ET | **BUY** | `ATAT` | 33 | $38.42 | $2.09 | — | $1,568.29 | — | baseline list, no extra gate; list flatten,ohlc_hot; wish-list (live io HOLD — not a ticket); ret5=+8.5; leftover $1297.82 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟢 |
+| 2026-11-17 09:30 ET | **BUY** | `KVYO` | 58 | $22.34 | $2.16 | — | $270.40 | — | baseline list, no extra gate; list flatten,ohlc_hot; wish-list (live io HOLD — not a ticket); ret5=+9.9; leftover $1297.82 | join🟢 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $270.40 | ▼ close $7,649.34 vs 09:30 $7,798.00 (session -125.06) | 16:00 close · cash $270.40 · equity $7,649.34 vs 09:30 $7,798.00 (-148.66; session marks -125.06) · 6 name(s) marked open→close (per-name table). HUBS×5 09:30 $226.06 → close $216.30 -48.80; APP×3 09:30 $412.56 → close $398.94 -40.86; CMCSA×51 09:30 $25.44 → close $25.31 -6.63; WWW×51 09:30 $25.00 → close $24.67 -16.83; ATAT×33 09:30 $38.42 → close $38.48 +1.98; KVYO×58 09:30 $22.34 → close $22.10 -13.92 | — |
 
 ## Not taken
 

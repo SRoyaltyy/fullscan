@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · morning packet news🟢 only (not the merged box)
 
-Cash book **+2.52%** ($10,252) · signal-only (no cash/fees) was +6.91%. Starts YES **21/30**. Fills 175 · skips 29 · realized $+1396.12.
+Cash book **+4.97%** ($10,497) · signal-only (no cash/fees) was +6.91%. Starts YES **21/30**. Fills 184 · skips 29 · realized $+1396.12.
 
 ## How this sleeve decides (like you are 10)
 
@@ -382,6 +382,17 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-16 09:30 ET | **BUY** | `COLD` | 82 | $16.82 | $2.24 | — | $1,504.75 | — | morning packet news🟢 only (not the merged box); gate news_box=good; rank cond; list ohlc_hot; 🔵; ret5=+4.2; leftover $1387.95 | join🟡 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟡 vol🟡 buy🟡 |
 | 2026-11-16 09:30 ET | **BUY** | `DPC` | 42 | $32.88 | $2.12 | — | $121.67 | — | morning packet news🟢 only (not the merged box); gate news_box=good; rank cond; list yday_gainer; 🔵; ret5=+19.0; leftover $1387.95 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 judge🔴 ab🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-11-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $121.67 | ▼ close $10,252.22 vs 09:30 $10,498.07 (session -224.59) | 16:00 close · cash $121.67 · equity $10,252.22 vs 09:30 $10,498.07 (-245.85; session marks -224.59) · 7 name(s) marked open→close (per-name table). DVN×47 09:30 $46.00 → close $44.27 -81.31; FROG×12 09:30 $110.78 → close $109.94 -10.14; MBGL×59 09:30 $23.44 → close $24.04 +35.40; CHRD×9 09:30 $149.14 → close $146.78 -21.24; LUNR×110 09:30 $12.53 → close $11.73 -88.00; COLD×82 09:30 $16.82 → close $16.65 -13.94; DPC×42 09:30 $32.88 → close $31.80 -45.36 | — |
+| 2026-11-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $121.67 | ▲ 09:30 equity $10,260.92 vs yday $10,252.22 (+8.70) | 09:30 open · cash $121.67 (unchanged overnight, no fees) · equity $10,260.92 vs prior close $10,252.22 (+8.70) · 7 name(s) re-marked at the open (per-name table). CHRD×9 yday $146.78 → 09:30 $147.56 +7.02; COLD×82 yday $16.65 → 09:30 $16.54 -9.02; DPC×42 yday $31.80 → 09:30 $32.06 +10.92; DVN×47 yday $44.27 → 09:30 $44.84 +26.79; FROG×12 yday $109.94 → 09:30 $108.63 -15.72; LUNR×110 yday $11.73 → 09:30 $11.74 +1.10; MBGL×59 yday $24.04 → 09:30 $23.83 -12.39 | — |
+| 2026-11-17 09:30 ET | **SELL** | `CHRD` | 9 | $147.56 | $2.04 | $-18.27 | $1,447.67 | ▼ -18.27 after sell → book $10,258.88; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **SELL** | `COLD` | 82 | $16.54 | $2.26 | $-27.46 | $2,801.69 | ▼ -27.46 after sell → book $10,256.62; vs 09:30 mark -2.26 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **SELL** | `DPC` | 42 | $32.06 | $2.14 | $-38.69 | $4,146.08 | ▼ -38.69 after sell → book $10,254.49; vs 09:30 mark -2.13 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **SELL** | `DVN` | 47 | $44.84 | $2.16 | $-94.53 | $6,251.40 | ▼ -94.53 after sell → book $10,252.33; vs 09:30 mark -2.16 | dropped from list after 2 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **SELL** | `FROG` | 12 | $108.63 | $2.05 | $-29.93 | $7,552.91 | ▼ -29.93 after sell → book $10,250.28; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **SELL** | `LUNR` | 110 | $11.74 | $2.35 | $-91.57 | $8,841.96 | ▼ -91.57 after sell → book $10,247.93; vs 09:30 mark -2.35 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **SELL** | `MBGL` | 59 | $23.83 | $2.19 | $+18.65 | $10,245.74 | ▲ +18.65 after sell → book $10,245.74; vs 09:30 mark -2.19 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **BUY** | `VIK` | 57 | $89.00 | $2.16 | — | $5,170.58 | — | morning packet news🟢 only (not the merged box); gate news_box=good; rank cond; list earn_react; 🔵; ret5=+3.6; leftover $5122.87 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-17 09:30 ET | **BUY** | `HTHT` | 94 | $54.13 | $2.27 | — | $80.09 | — | morning packet news🟢 only (not the merged box); gate news_box=good; rank cond; list ohlc_hot; 🔵; ret5=+9.3; leftover $5122.87 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-11-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $80.09 | ▲ close $10,497.15 vs 09:30 $10,260.92 (session +255.84) | 16:00 close · cash $80.09 · equity $10,497.15 vs 09:30 $10,260.92 (+236.23; session marks +255.84) · 2 name(s) marked open→close (per-name table). VIK×57 09:30 $89.00 → close $94.28 +300.96; HTHT×94 09:30 $54.13 → close $53.65 -45.12 | — |
 
 ## Not taken
 

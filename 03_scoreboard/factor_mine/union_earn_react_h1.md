@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ earn_react, no 🚨
 
-Cash book **-17.15%** ($8,285) · signal-only (no cash/fees) was -3.08%. Starts YES **4/30**. Fills 354 · skips 54 · realized $-117.67.
+Cash book **-16.42%** ($8,358) · signal-only (no cash/fees) was -3.08%. Starts YES **4/30**. Fills 370 · skips 54 · realized $-117.67.
 
 ## How this sleeve decides (like you are 10)
 
@@ -560,6 +560,24 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-16 09:30 ET | **BUY** | `PERI` | 90 | $11.28 | $2.26 | — | $1,081.49 | — | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; ret5=-0.2; leftover $1024.73 | join🟢 sector🟡 gen🔴 news🟡 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-11-16 09:30 ET | **BUY** | `POET` | 219 | $4.67 | $2.83 | — | $55.93 | — | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; ret5=+1.2; leftover $1024.73 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🟡 buy🟡 |
 | 2026-11-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $55.93 | ▲ close $8,285.08 vs 09:30 $8,229.79 (session +119.03) | 16:00 close · cash $55.93 · equity $8,285.08 vs 09:30 $8,229.79 (+55.29; session marks +119.03) · 8 name(s) marked open→close (per-name table). ARMK×19 09:30 $51.45 → close $55.37 +74.48; BEKE×55 09:30 $18.50 → close $18.64 +7.70; BIDU×13 09:30 $77.91 → close $73.94 -51.61; BLDP×819 09:30 $1.25 → close $1.25 +0.00; BXDC×59 09:30 $17.24 → close $16.74 -29.50; CYPH×602 09:30 $1.70 → close $1.93 +135.45; PERI×90 09:30 $11.28 → close $11.11 -15.30; POET×219 09:30 $4.67 → close $4.66 -2.19 | — |
+| 2026-11-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $55.93 | ▲ 09:30 equity $8,457.63 vs yday $8,285.08 (+172.55) | 09:30 open · cash $55.93 (unchanged overnight, no fees) · equity $8,457.63 vs prior close $8,285.08 (+172.55) · 8 name(s) re-marked at the open (per-name table). ARMK×19 yday $55.37 → 09:30 $55.79 +7.98; BEKE×55 yday $18.64 → 09:30 $19.00 +19.80; BIDU×13 yday $73.94 → 09:30 $73.00 -12.22; BLDP×819 yday $1.25 → 09:30 $1.27 +16.38; BXDC×59 yday $16.74 → 09:30 $17.25 +30.09; CYPH×602 yday $1.93 → 09:30 $2.06 +81.27; PERI×90 yday $11.11 → 09:30 $11.07 -3.60; POET×219 yday $4.66 → 09:30 $4.81 +32.85 | — |
+| 2026-11-17 09:30 ET | **SELL** | `ARMK` | 19 | $55.79 | $2.07 | $+78.35 | $1,113.87 | ▲ +78.35 after sell → book $8,455.56; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **SELL** | `BEKE` | 55 | $19.00 | $2.17 | $+23.17 | $2,156.70 | ▲ +23.17 after sell → book $8,453.39; vs 09:30 mark -2.17 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **SELL** | `BIDU` | 13 | $73.00 | $2.05 | $-67.91 | $3,103.65 | ▼ -67.91 after sell → book $8,451.34; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **SELL** | `BLDP` | 819 | $1.27 | $10.71 | $-4.90 | $4,133.07 | ▼ -4.90 after sell → book $8,440.63; vs 09:30 mark -10.71 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **SELL** | `BXDC` | 59 | $17.25 | $2.19 | $-3.76 | $5,148.63 | ▼ -3.76 after sell → book $8,438.44; vs 09:30 mark -2.19 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **SELL** | `CYPH` | 602 | $2.06 | $7.88 | $+201.08 | $6,380.88 | ▲ +201.08 after sell → book $8,430.57; vs 09:30 mark -7.87 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **SELL** | `PERI` | 90 | $11.07 | $2.28 | $-23.44 | $7,374.89 | ▼ -23.44 after sell → book $8,428.28; vs 09:30 mark -2.29 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **SELL** | `POET` | 219 | $4.81 | $2.87 | $+24.96 | $8,425.41 | ▲ +24.96 after sell → book $8,425.41; vs 09:30 mark -2.87 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **BUY** | `ACM` | 13 | $79.50 | $2.03 | — | $7,389.88 | — | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; ret5=+3.3; leftover $1053.18 | join🔴 sector🟡 gen🔴 news🔴 digest🔴 judge🔴 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-17 09:30 ET | **BUY** | `DIS` | 8 | $118.26 | $2.01 | — | $6,441.79 | — | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; ret5=-0.4; leftover $1053.18 | join🟢 sector🟡 gen🔴 news🟡 digest🟡 ab🟢 peer🟡 heat🟢 vol🟡 buy🟡 |
+| 2026-11-17 09:30 ET | **BUY** | `FUBO` | 135 | $7.75 | $2.40 | — | $5,393.14 | — | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; ret5=-8.1; leftover $1053.18 | join🟡 sector🟡 gen🔴 news🟡 digest🟡 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-11-17 09:30 ET | **BUY** | `HD` | 3 | $335.07 | $2.00 | — | $4,385.93 | — | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; 🔵; ret5=-1.7; leftover $1053.18 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟡 heat🟢 vol🟡 buy🟡 |
+| 2026-11-17 09:30 ET | **BUY** | `JD` | 40 | $25.75 | $2.11 | — | $3,353.82 | — | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; 🔵; ret5=-3.0; leftover $1053.18 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-17 09:30 ET | **BUY** | `KLAR` | 74 | $14.12 | $2.21 | — | $2,306.36 | — | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; 🔵; ret5=+1.3; leftover $1053.18 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-17 09:30 ET | **BUY** | `MNSO` | 95 | $11.08 | $2.27 | — | $1,251.48 | — | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; 🔵; ret5=+2.9; leftover $1053.18 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-17 09:30 ET | **BUY** | `OMER` | 72 | $14.59 | $2.21 | — | $198.80 | — | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; ret5=-5.0; leftover $1053.18 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $198.80 | ▼ close $8,358.21 vs 09:30 $8,457.63 (session -49.96) | 16:00 close · cash $198.80 · equity $8,358.21 vs 09:30 $8,457.63 (-99.42; session marks -49.96) · 8 name(s) marked open→close (per-name table). ACM×13 09:30 $79.50 → close $80.53 +13.39; DIS×8 09:30 $118.26 → close $116.94 -10.56; FUBO×135 09:30 $7.75 → close $6.87 -118.80; HD×3 09:30 $335.07 → close $339.01 +11.82; JD×40 09:30 $25.75 → close $25.43 -12.80; KLAR×74 09:30 $14.12 → close $14.27 +10.73; MNSO×95 09:30 $11.08 → close $12.18 +104.50; OMER×72 09:30 $14.59 → close $13.92 -48.24 | — |
 
 ## Not taken
 

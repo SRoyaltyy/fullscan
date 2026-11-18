@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · packet🟢 OR headline🟢 and camera net ≥ 4
 
-Cash book **-39.41%** ($6,059) · signal-only (no cash/fees) was -6.67%. Starts YES **0/30**. Fills 249 · skips 35 · realized $-1049.49.
+Cash book **-41.82%** ($5,818) · signal-only (no cash/fees) was -6.67%. Starts YES **0/30**. Fills 255 · skips 35 · realized $-1049.49.
 
 ## How this sleeve decides (like you are 10)
 
@@ -457,6 +457,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-16 09:30 ET | **BUY** | `CURI` | 394 | $3.05 | $5.08 | — | $1,292.54 | — | packet🟢 OR headline🟢 and camera net ≥ 4; gate cam_net_min=4,news_or_headline=True; rank cond; list yday_gainer,yday_mover; 🔵; ret5=+24.7; leftover $1201.78 | join🟢 sector🟡 gen🔴 news🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-16 09:30 ET | **BUY** | `ZM` | 12 | $99.16 | $2.03 | — | $100.59 | — | packet🟢 OR headline🟢 and camera net ≥ 4; gate cam_net_min=4,news_or_headline=True; rank cond; list ohlc_hot; 🔵; ret5=+11.0; leftover $1201.78 | join🟢 sector🟡 gen🔴 news🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $100.59 | ▲ close $6,058.85 vs 09:30 $6,011.26 (session +63.35) | 16:00 close · cash $100.59 · equity $6,058.85 vs 09:30 $6,011.26 (+47.59; session marks +63.35) · 5 name(s) marked open→close (per-name table). FROG×10 09:30 $110.78 → close $109.94 -8.45; MBGL×51 09:30 $23.44 → close $24.04 +30.60; WWW×48 09:30 $25.00 → close $25.29 +13.92; CURI×394 09:30 $3.05 → close $3.21 +63.04; ZM×12 09:30 $99.16 → close $96.18 -35.76 | — |
+| 2026-11-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $100.59 | ▼ 09:30 equity $6,012.79 vs yday $6,058.85 (-46.06) | 09:30 open · cash $100.59 (unchanged overnight, no fees) · equity $6,012.79 vs prior close $6,058.85 (-46.06) · 5 name(s) re-marked at the open (per-name table). CURI×394 yday $3.21 → 09:30 $3.21 -1.97; FROG×10 yday $109.94 → 09:30 $108.63 -13.10; MBGL×51 yday $24.04 → 09:30 $23.83 -10.71; WWW×48 yday $25.29 → 09:30 $25.00 -13.92; ZM×12 yday $96.18 → 09:30 $95.65 -6.36 | — |
+| 2026-11-17 09:30 ET | **SELL** | `FROG` | 10 | $108.63 | $2.04 | $-25.61 | $1,184.85 | ▼ -25.61 after sell → book $6,010.75; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **SELL** | `MBGL` | 51 | $23.83 | $2.16 | $+15.58 | $2,398.02 | ▲ +15.58 after sell → book $6,008.59; vs 09:30 mark -2.16 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **SELL** | `ZM` | 12 | $95.65 | $2.05 | $-46.19 | $3,543.77 | ▼ -46.19 after sell → book $6,006.54; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **BUY** | `VIK` | 13 | $89.00 | $2.03 | — | $2,384.74 | — | packet🟢 OR headline🟢 and camera net ≥ 4; gate cam_net_min=4,news_or_headline=True; rank cond; list earn_react; 🔵; ret5=+3.6; leftover $1181.26 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-17 09:30 ET | **BUY** | `LFTO` | 47 | $24.93 | $2.13 | — | $1,210.90 | — | packet🟢 OR headline🟢 and camera net ≥ 4; gate cam_net_min=4,news_or_headline=True; rank cond; list yday_gainer,yday_mover; 🔵; ret5=+30.7; leftover $1181.26 | join🟢 sector🟡 gen🔴 news🟢 digest🟡 ab🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-17 09:30 ET | **BUY** | `NMAX` | 134 | $8.78 | $2.39 | — | $31.99 | — | packet🟢 OR headline🟢 and camera net ≥ 4; gate cam_net_min=4,news_or_headline=True; rank cond; list yday_gainer,yday_mover; 🔵; ret5=+13.8; leftover $1181.26 | join🟢 sector🟡 gen🔴 news🟢 digest🟡 ab🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $31.99 | ▼ close $5,817.87 vs 09:30 $6,012.79 (session -182.12) | 16:00 close · cash $31.99 · equity $5,817.87 vs 09:30 $6,012.79 (-194.92; session marks -182.12) · 5 name(s) marked open→close (per-name table). CURI×394 09:30 $3.21 → close $3.02 -72.89; WWW×48 09:30 $25.00 → close $24.67 -15.84; VIK×13 09:30 $89.00 → close $94.28 +68.64; LFTO×47 09:30 $24.93 → close $22.68 -105.75; NMAX×134 09:30 $8.78 → close $8.36 -56.28 | — |
 
 ## Not taken
 

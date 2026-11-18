@@ -334,6 +334,11 @@
       "bytes": 172369,
       "sha256": "2ab82fee681860641f4010e9a954fc34b6b63c144f442ef7be9c74d9fc58b51f",
       "written_at": "2026-11-16T23:26:15.233438-05:00"
+    },
+    "2026-11-17": {
+      "bytes": 172552,
+      "sha256": "d06d8e332e71a087214fce8d0a4d69f4c42d864357154d2b1e718f3a3cfa8260",
+      "written_at": "2026-11-17T22:27:48.912289-05:00"
     }
   },
   "excel_signals": {
@@ -1743,6 +1748,12 @@
       "encoding": "gzip",
       "sha256": "ed80cfcbc579e45fddfac25f4d7b59bf109c4a79081d5e999db26f1f015c437c",
       "written_at": "2026-11-16T23:32:46.460413-05:00"
+    },
+    "2026-11-17": {
+      "bytes": 74203799,
+      "encoding": "gzip",
+      "sha256": "38e8315fecb407da5becb813b673fa49d1c6871081d9a35656ecdaa00595b9a2",
+      "written_at": "2026-11-17T22:34:43.838870-05:00"
     }
   },
   "lineups": {
@@ -2080,6 +2091,11 @@
       "bytes": 808,
       "sha256": "7e2b73a4253badc0bcc8a439441eac6ac4fbf8ae30c5afe28d2800ea23c3ceff",
       "written_at": "2026-11-16T23:33:39.399677-05:00"
+    },
+    "2026-11-17": {
+      "bytes": 694,
+      "sha256": "2bd90132cbb25ba258978ac2a507fda3417b6b82e81994a510404ec11c8a324a",
+      "written_at": "2026-11-17T22:35:48.274044-05:00"
     }
   },
   "prices": {
@@ -2267,6 +2283,11 @@
       "bytes": 834886,
       "sha256": "33402cdadbdbc6aab8aa50d65fa5b793d2868ad650f97bcb470d1f3cdcaba426",
       "written_at": "2026-11-16T23:26:15.259812-05:00"
+    },
+    "2026-11-17": {
+      "bytes": 836117,
+      "sha256": "28d72f3f84f844253fefb31c9cfc45dda9dda7cca57e028239da948ae0bcf7b9",
+      "written_at": "2026-11-17T22:27:48.945168-05:00"
     }
   },
   "recipe_rules": {
@@ -15397,6 +15418,20 @@
         "EMBJ"
       ],
       "written_at": "2026-11-16T23:26:27.585002-05:00"
+    },
+    "2026-11-17": {
+      "bytes": 333311,
+      "dropped_missing_bars": [
+        "ITGR",
+        "NWE"
+      ],
+      "heat_vintage": "2026-11-17",
+      "n_rows": 99,
+      "sha256": "1c9f9fd5edec076b9d1b4680eab39a5bb8be5f27afbaf4a24e48de96ec4af876",
+      "unpriced_held": [
+        "BLFS"
+      ],
+      "written_at": "2026-11-17T22:28:04.481784-05:00"
     }
   },
   "version": 1

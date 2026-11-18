@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-19.37%** ($8,063) · signal-only (no cash/fees) was -17.92%. Starts YES **5/30**. Fills 231 · skips 17 · realized $-2405.95.
+Cash book **-20.76%** ($7,924) · signal-only (no cash/fees) was -17.92%. Starts YES **5/30**. Fills 237 · skips 17 · realized $-2405.95.
 
 ## How this sleeve decides (like you are 10)
 
@@ -439,6 +439,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-16 09:30 ET | **BUY** | `BXDC` | 94 | $17.24 | $2.27 | — | $1,712.32 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; ret5=+4.2; leftover $1620.84 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 heat🔴 vol🔴 buy🟡 |
 | 2026-11-16 09:30 ET | **BUY** | `XPEV` | 163 | $9.90 | $2.48 | — | $96.14 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; ret5=-8.5; leftover $1620.84 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🟢 heat🔴 vol🟡 buy🟡 |
 | 2026-11-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $96.14 | ▼ close $8,062.86 vs 09:30 $8,128.88 (session -30.19) | 16:00 close · cash $96.14 · equity $8,062.86 vs 09:30 $8,128.88 (-66.02; session marks -30.19) · 5 name(s) marked open→close (per-name table). ARMK×31 09:30 $51.45 → close $55.37 +121.52; BEKE×87 09:30 $18.50 → close $18.64 +12.18; BIDU×20 09:30 $77.91 → close $73.94 -79.40; BXDC×94 09:30 $17.24 → close $16.74 -47.00; XPEV×163 09:30 $9.90 → close $9.67 -37.49 | — |
+| 2026-11-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $96.14 | ▲ 09:30 equity $8,170.57 vs yday $8,062.86 (+107.71) | 09:30 open · cash $96.14 (unchanged overnight, no fees) · equity $8,170.57 vs prior close $8,062.86 (+107.71) · 5 name(s) re-marked at the open (per-name table). ARMK×31 yday $55.37 → 09:30 $55.79 +13.02; BEKE×87 yday $18.64 → 09:30 $19.00 +31.32; BIDU×20 yday $73.94 → 09:30 $73.00 -18.80; BXDC×94 yday $16.74 → 09:30 $17.25 +47.94; XPEV×163 yday $9.67 → 09:30 $9.88 +34.23 | — |
+| 2026-11-17 09:30 ET | **SELL** | `ARMK` | 31 | $55.79 | $2.11 | $+130.35 | $1,823.52 | ▲ +130.35 after sell → book $8,168.46; vs 09:30 mark -2.11 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **SELL** | `BEKE` | 87 | $19.00 | $2.28 | $+38.97 | $3,474.24 | ▲ +38.97 after sell → book $8,166.18; vs 09:30 mark -2.28 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **SELL** | `BIDU` | 20 | $73.00 | $2.07 | $-102.32 | $4,932.17 | ▼ -102.32 after sell → book $8,164.11; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **SELL** | `BXDC` | 94 | $17.25 | $2.30 | $-3.63 | $6,551.37 | ▼ -3.63 after sell → book $8,161.81; vs 09:30 mark -2.30 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **SELL** | `XPEV` | 163 | $9.88 | $2.52 | $-8.26 | $8,159.29 | ▼ -8.26 after sell → book $8,159.29; vs 09:30 mark -2.52 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **BUY** | `PAGS` | 1010 | $8.06 | $13.03 | — | $5.66 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; ret5=+1.0; leftover $8159.29 | join🟡 sector🟡 gen🔴 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5.66 | ▼ close $7,924.06 vs 09:30 $8,170.57 (session -222.20) | 16:00 close · cash $5.66 · equity $7,924.06 vs 09:30 $8,170.57 (-246.51; session marks -222.20) · 1 name(s) marked open→close (per-name table). PAGS×1010 09:30 $8.06 → close $7.84 -222.20 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · short morning packet news🔴
 
-Cash book **+4.41%** ($10,441) · signal-only (no cash/fees) was -6.15%. Starts YES **9/30**. Fills 48 · skips 26 · realized $+60.75.
+Cash book **+4.84%** ($10,484) · signal-only (no cash/fees) was -6.15%. Starts YES **9/30**. Fills 52 · skips 26 · realized $+60.75.
 
 ## How this sleeve decides (like you are 10)
 
@@ -252,6 +252,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-16 09:30 ET | **COVER** | `TTWO` | 11 | $233.82 | $2.02 | $-72.89 | $13,032.71 | ▼ -72.89 after sell → book $10,444.11; vs 09:30 mark -2.02 | dropped from list after 3 sess (min 3) | — |
 | 2026-11-16 09:30 ET | **COVER** | `VIV` | 215 | $12.04 | $2.77 | $+20.12 | $10,441.33 | ▲ +20.12 after sell → book $10,441.33; vs 09:30 mark -2.78 | dropped from list after 3 sess (min 3) | — |
 | 2026-11-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,441.33 | ▲ close $10,441.33 vs 09:30 $10,446.13 (session +0.00) | 16:00 close · cash $10,441.33 · no lots left · equity $10,441.33. | — |
+| 2026-11-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,441.33 | ▲ 09:30 equity $10,441.33 vs yday $10,441.33 (+0.00) | 09:30 open · cash $10,441.33 · no holdings · equity $10,441.33 vs prior close $10,441.33 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-17 09:30 ET | **SHORT** | `PAR` | 56 | $22.96 | $2.21 | — | $11,724.88 | — | short morning packet news🔴; gate news_box=bad; list ohlc_hot; ret5=+6.8; leftover $1305.17 | join🟢 sector🟡 gen🔴 news🔴 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-17 09:30 ET | **SHORT** | `PUBM` | 63 | $20.46 | $2.24 | — | $13,011.62 | — | short morning packet news🔴; gate news_box=bad; list ohlc_hot; ret5=+8.8; leftover $1305.17 | join🟢 sector🟡 gen🔴 news🔴 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-17 09:30 ET | **SHORT** | `ACM` | 16 | $79.50 | $2.09 | — | $14,281.53 | — | short morning packet news🔴; gate news_box=bad; list earn_react; ret5=+3.3; leftover $1305.17 | join🔴 sector🟡 gen🔴 news🔴 digest🔴 judge🔴 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-17 09:30 ET | **SHORT** | `XP` | 87 | $14.99 | $2.31 | — | $15,583.35 | — | short morning packet news🔴; gate news_box=bad; list earn_react; ret5=-4.1; leftover $1305.17 | join🟢 sector🟡 gen🔴 news🔴 digest🔴 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-11-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $15,583.35 | ▲ close $10,484.01 vs 09:30 $10,441.33 (session +51.53) | 16:00 close · cash $15,583.35 · equity $10,484.01 vs 09:30 $10,441.33 (+42.68; session marks +51.53) · 4 name(s) marked open→close (per-name table). PAR×56 09:30 $22.96 → close $22.36 +33.60; PUBM×63 09:30 $20.46 → close $20.48 -1.26; ACM×16 09:30 $79.50 → close $80.53 -16.48; XP×87 09:30 $14.99 → close $14.58 +35.67 | — |
 
 ## Not taken
 

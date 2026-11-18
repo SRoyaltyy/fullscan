@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 4 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · top 4 by cond
 
-Cash book **-7.78%** ($9,223) · signal-only (no cash/fees) was -7.67%. Starts YES **1/30**. Fills 208 · skips 159 · realized $-515.67.
+Cash book **-8.82%** ($9,118) · signal-only (no cash/fees) was -7.67%. Starts YES **1/30**. Fills 210 · skips 159 · realized $-515.67.
 
 ## How this sleeve decides (like you are 10)
 
@@ -413,6 +413,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-16 09:30 ET | **BUY** | `ATAT` | 1 | $39.16 | $0.39 | — | $253.50 | — | top 4 by cond; rank cond; list ohlc_hot; ret5=+6.2; leftover $73.26 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟢 |
 | 2026-11-16 09:30 ET | **BUY** | `MBGL` | 3 | $23.44 | $0.71 | — | $182.46 | — | top 4 by cond; rank cond; list yday_gainer,yday_mover; 🔵; ret5=+18.5; leftover $73.26 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $182.46 | ▼ close $9,222.55 vs 09:30 $9,349.95 (session -124.01) | 16:00 close · cash $182.46 · equity $9,222.55 vs 09:30 $9,349.95 (-127.40; session marks -124.01) · 5 name(s) marked open→close (per-name table). ALNY×19 09:30 $166.98 → close $159.73 -137.75; ANDG×48 09:30 $60.25 → close $62.85 +124.80; DVN×65 09:30 $46.00 → close $44.27 -112.45; ATAT×1 09:30 $39.16 → close $38.75 -0.41; MBGL×3 09:30 $23.44 → close $24.04 +1.80 | — |
+| 2026-11-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $182.46 | ▲ 09:30 equity $9,250.43 vs yday $9,222.55 (+27.88) | 09:30 open · cash $182.46 (unchanged overnight, no fees) · equity $9,250.43 vs prior close $9,222.55 (+27.88) · 5 name(s) re-marked at the open (per-name table). ALNY×19 yday $159.73 → 09:30 $159.02 -13.49; ANDG×48 yday $62.85 → 09:30 $62.96 +5.28; ATAT×1 yday $38.75 → 09:30 $38.42 -0.33; DVN×65 yday $44.27 → 09:30 $44.84 +37.05; MBGL×3 yday $24.04 → 09:30 $23.83 -0.63 | — |
+| 2026-11-17 09:30 ET | **BUY** | `WWW` | 2 | $25.00 | $0.51 | — | $131.95 | — | top 4 by cond; rank cond; list flatten,ohlc_hot; 🔵; ret5=+15.2; leftover $60.82 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-17 09:30 ET | **BUY** | `TDC` | 1 | $34.55 | $0.35 | — | $97.06 | — | top 4 by cond; rank cond; list ohlc_hot; ret5=+8.7; leftover $60.82 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $97.06 | ▼ close $9,117.66 vs 09:30 $9,250.43 (session -131.92) | 16:00 close · cash $97.06 · equity $9,117.66 vs 09:30 $9,250.43 (-132.77; session marks -131.92) · 7 name(s) marked open→close (per-name table). ALNY×19 09:30 $159.02 → close $156.50 -47.88; ANDG×48 09:30 $62.96 → close $63.08 +5.76; ATAT×1 09:30 $38.42 → close $38.48 +0.06; DVN×65 09:30 $44.84 → close $43.46 -89.70; MBGL×3 09:30 $23.83 → close $23.89 +0.18; WWW×2 09:30 $25.00 → close $24.67 -0.66; TDC×1 09:30 $34.55 → close $34.87 +0.32 | — |
 
 ## Not taken
 

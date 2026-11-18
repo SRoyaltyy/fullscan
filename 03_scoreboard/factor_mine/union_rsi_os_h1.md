@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ rsi_os, no 🚨
 
-Cash book **-26.10%** ($7,390) · signal-only (no cash/fees) was -7.54%. Starts YES **0/30**. Fills 274 · skips 20 · realized $-3180.18.
+Cash book **-26.08%** ($7,392) · signal-only (no cash/fees) was -7.54%. Starts YES **0/30**. Fills 285 · skips 20 · realized $-3180.18.
 
 ## How this sleeve decides (like you are 10)
 
@@ -480,6 +480,19 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-16 09:30 ET | **BUY** | `SOC` | 784 | $0.70 | $7.82 | — | $557.68 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list yday_mover; ret5=-62.2; leftover $546.77 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
 | 2026-11-16 09:30 ET | **BUY** | `ALT` | 333 | $1.64 | $4.30 | — | $7.27 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list yday_mover; ret5=-20.9; leftover $546.77 | join🔴 sector🟡 gen🔴 news🟡 digest🔴 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-11-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7.27 | ▼ close $7,390.45 vs 09:30 $7,670.22 (session -254.37) | 16:00 close · cash $7.27 · equity $7,390.45 vs 09:30 $7,670.22 (-279.77; session marks -254.37) · 8 name(s) marked open→close (per-name table). ALNY×23 09:30 $166.98 → close $159.73 -166.75; UNIT×112 09:30 $4.85 → close $4.79 -6.72; CDNL×88 09:30 $6.15 → close $6.10 -4.40; ADIG×55 09:30 $9.83 → close $9.30 -29.15; BZ×41 09:30 $13.10 → close $12.67 -17.63; CTVA×58 09:30 $9.35 → close $9.04 -17.98; SOC×784 09:30 $0.70 → close $0.72 +14.90; ALT×333 09:30 $1.64 → close $1.56 -26.64 | — |
+| 2026-11-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7.27 | ▲ 09:30 equity $7,426.47 vs yday $7,390.45 (+36.02) | 09:30 open · cash $7.27 (unchanged overnight, no fees) · equity $7,426.47 vs prior close $7,390.45 (+36.02) · 8 name(s) re-marked at the open (per-name table). ADIG×55 yday $9.30 → 09:30 $9.95 +35.75; ALNY×23 yday $159.73 → 09:30 $159.02 -16.33; ALT×333 yday $1.56 → 09:30 $1.55 -3.33; BZ×41 yday $12.67 → 09:30 $12.56 -4.51; CDNL×88 yday $6.10 → 09:30 $6.00 -8.80; CTVA×58 yday $9.04 → 09:30 $9.25 +12.18; SOC×784 yday $0.72 → 09:30 $0.75 +26.66; UNIT×112 yday $4.79 → 09:30 $4.74 -5.60 | — |
+| 2026-11-17 09:30 ET | **SELL** | `ADIG` | 55 | $9.95 | $2.17 | $+2.27 | $552.35 | ▲ +2.27 after sell → book $7,424.30; vs 09:30 mark -2.17 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **SELL** | `ALNY` | 23 | $159.02 | $2.10 | $-7.61 | $4,207.71 | ▼ -7.61 after sell → book $7,422.20; vs 09:30 mark -2.10 | dropped from list after 2 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **SELL** | `ALT` | 333 | $1.55 | $4.36 | $-38.63 | $4,719.50 | ▼ -38.63 after sell → book $7,417.84; vs 09:30 mark -4.36 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **SELL** | `BZ` | 41 | $12.56 | $2.13 | $-26.39 | $5,232.32 | ▼ -26.39 after sell → book $7,415.70; vs 09:30 mark -2.14 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **SELL** | `CDNL` | 88 | $6.00 | $2.28 | $-17.73 | $5,758.04 | ▼ -17.73 after sell → book $7,413.42; vs 09:30 mark -2.28 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟡 digest🔴 judge🔴 ab🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-11-17 09:30 ET | **SELL** | `CTVA` | 58 | $9.25 | $2.18 | $-10.15 | $6,292.36 | ▼ -10.15 after sell → book $7,411.24; vs 09:30 mark -2.18 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **SELL** | `UNIT` | 112 | $4.74 | $2.35 | $-17.00 | $6,820.89 | ▼ -17.00 after sell → book $7,408.89; vs 09:30 mark -2.35 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟡 digest🟡 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-11-17 09:30 ET | **BUY** | `CATX` | 1853 | $0.92 | $22.61 | — | $5,093.52 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list probable,yday_gainer; 🔵; ret5=+7.0; leftover $1705.22 | join🟡 sector🟡 gen🔴 news🟡 digest🔴 ab🔴 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-17 09:30 ET | **BUY** | `RMIX` | 319 | $5.34 | $4.12 | — | $3,385.94 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list yday_mover; ret5=-40.4; leftover $1705.22 | join🔴 sector🟡 gen🔴 news🔴 digest🔴 ab🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-11-17 09:30 ET | **BUY** | `SID` | 2664 | $0.64 | $25.04 | — | $1,655.94 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list yday_mover; ret5=-24.4; leftover $1705.22 | join🔴 sector🟡 gen🔴 news🟡 digest🔴 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-11-17 09:30 ET | **BUY** | `OFRM` | 143 | $11.49 | $2.42 | — | $10.45 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list ohlc_hot; ret5=+15.6; leftover $1705.22 | join🟡 sector🟡 gen🔴 news🟡 digest🔴 ab🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-11-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10.45 | ▲ close $7,391.64 vs 09:30 $7,426.47 (session +36.93) | 16:00 close · cash $10.45 · equity $7,391.64 vs 09:30 $7,426.47 (-34.83; session marks +36.93) · 5 name(s) marked open→close (per-name table). SOC×784 09:30 $0.75 → close $0.65 -76.05; CATX×1853 09:30 $0.92 → close $0.86 -111.18; RMIX×319 09:30 $5.34 → close $6.05 +226.49; SID×2664 09:30 $0.64 → close $0.63 -26.64; OFRM×143 09:30 $11.49 → close $11.66 +24.31 | — |
 
 ## Not taken
 

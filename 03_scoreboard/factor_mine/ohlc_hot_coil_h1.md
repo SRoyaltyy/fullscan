@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `ohlc_hot` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · hot list ∩ not exploded
 
-Cash book **-41.02%** ($5,898) · signal-only (no cash/fees) was -11.86%. Starts YES **9/30**. Fills 399 · skips 74 · realized $-1849.08.
+Cash book **-42.19%** ($5,781) · signal-only (no cash/fees) was -11.86%. Starts YES **9/30**. Fills 411 · skips 74 · realized $-1849.08.
 
 ## How this sleeve decides (like you are 10)
 
@@ -607,6 +607,20 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-16 09:30 ET | **BUY** | `ONT` | 31 | $23.48 | $2.08 | — | $874.10 | — | hot list ∩ not exploded; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list ohlc_hot; ret5=+6.0; leftover $750.33 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 judge🔴 ab🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-11-16 09:30 ET | **BUY** | `HLF` | 46 | $16.00 | $2.13 | — | $135.97 | — | hot list ∩ not exploded; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list ohlc_hot; 🔵; ret5=+4.5; leftover $750.33 | join🟢 sector🟡 gen🔴 news🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-11-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $135.97 | ▼ close $5,898.16 vs 09:30 $6,019.28 (session -87.66) | 16:00 close · cash $135.97 · equity $5,898.16 vs 09:30 $6,019.28 (-121.12; session marks -87.66) · 8 name(s) marked open→close (per-name table). LBTYK×71 09:30 $10.52 → close $10.33 -13.49; TBBB×10 09:30 $68.40 → close $68.90 +5.00; NU×57 09:30 $12.96 → close $12.68 -15.96; CHYM×21 09:30 $34.49 → close $34.29 -4.20; GRND×50 09:30 $14.96 → close $13.81 -57.50; ATAT×19 09:30 $39.16 → close $38.75 -7.79; ONT×31 09:30 $23.48 → close $23.46 -0.62; HLF×46 09:30 $16.00 → close $16.15 +6.90 | — |
+| 2026-11-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $135.97 | ▼ 09:30 equity $5,873.83 vs yday $5,898.16 (-24.33) | 09:30 open · cash $135.97 (unchanged overnight, no fees) · equity $5,873.83 vs prior close $5,898.16 (-24.33) · 8 name(s) re-marked at the open (per-name table). ATAT×19 yday $38.75 → 09:30 $38.42 -6.27; CHYM×21 yday $34.29 → 09:30 $33.71 -12.18; GRND×50 yday $13.81 → 09:30 $14.02 +10.50; HLF×46 yday $16.15 → 09:30 $16.00 -6.90; LBTYK×71 yday $10.33 → 09:30 $10.31 -1.42; NU×57 yday $12.68 → 09:30 $12.73 +2.85; ONT×31 yday $23.46 → 09:30 $23.15 -9.61; TBBB×10 yday $68.90 → 09:30 $68.77 -1.30 | — |
+| 2026-11-17 09:30 ET | **SELL** | `CHYM` | 21 | $33.71 | $2.07 | $-20.51 | $841.81 | ▼ -20.51 after sell → book $5,871.76; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **SELL** | `GRND` | 50 | $14.02 | $2.16 | $-51.30 | $1,540.65 | ▼ -51.30 after sell → book $5,869.60; vs 09:30 mark -2.16 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **SELL** | `LBTYK` | 71 | $10.31 | $2.22 | $-19.34 | $2,270.43 | ▼ -19.34 after sell → book $5,867.37; vs 09:30 mark -2.23 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **SELL** | `NU` | 57 | $12.73 | $2.18 | $-17.45 | $2,993.86 | ▼ -17.45 after sell → book $5,865.19; vs 09:30 mark -2.18 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-17 09:30 ET | **SELL** | `ONT` | 31 | $23.15 | $2.10 | $-14.42 | $3,709.41 | ▼ -14.42 after sell → book $5,863.09; vs 09:30 mark -2.10 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **SELL** | `TBBB` | 10 | $68.77 | $2.04 | $-0.36 | $4,395.07 | ▼ -0.36 after sell → book $5,861.05; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **BUY** | `KVYO` | 32 | $22.34 | $2.09 | — | $3,678.10 | — | hot list ∩ not exploded; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list flatten,ohlc_hot; ret5=+9.9; leftover $732.51 | join🟢 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-17 09:30 ET | **BUY** | `FUN` | 63 | $11.55 | $2.18 | — | $2,948.27 | — | hot list ∩ not exploded; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list ohlc_hot; 🔵; ret5=+7.9; leftover $732.51 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟡 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-17 09:30 ET | **BUY** | `HTHT` | 13 | $54.13 | $2.03 | — | $2,242.55 | — | hot list ∩ not exploded; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list ohlc_hot; 🔵; ret5=+9.3; leftover $732.51 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-11-17 09:30 ET | **BUY** | `XERS` | 43 | $16.83 | $2.12 | — | $1,516.75 | — | hot list ∩ not exploded; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list ohlc_hot; ret5=+5.3; leftover $732.51 | join🔴 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-17 09:30 ET | **BUY** | `TSN` | 11 | $63.01 | $2.02 | — | $821.61 | — | hot list ∩ not exploded; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list ohlc_hot; 🔵; ret5=+6.8; leftover $732.51 | join🟢 sector🟡 gen🔴 news🟡 digest🟡 ab🟢 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-11-17 09:30 ET | **BUY** | `HUM` | 1 | $447.00 | $1.99 | — | $372.62 | — | hot list ∩ not exploded; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list ohlc_hot; ret5=+9.0; leftover $732.51 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $372.62 | ▼ close $5,780.98 vs 09:30 $5,873.83 (session -67.64) | 16:00 close · cash $372.62 · equity $5,780.98 vs 09:30 $5,873.83 (-92.85; session marks -67.64) · 8 name(s) marked open→close (per-name table). ATAT×19 09:30 $38.42 → close $38.48 +1.14; HLF×46 09:30 $16.00 → close $15.57 -19.78; KVYO×32 09:30 $22.34 → close $22.10 -7.68; FUN×63 09:30 $11.55 → close $10.96 -37.17; HTHT×13 09:30 $54.13 → close $53.65 -6.24; XERS×43 09:30 $16.83 → close $16.80 -1.29; TSN×11 09:30 $63.01 → close $63.65 +7.04; HUM×1 09:30 $447.00 → close $443.34 -3.66 | — |
 
 ## Not taken
 

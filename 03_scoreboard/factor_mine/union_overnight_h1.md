@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ overnight, no 🚨
 
-Cash book **-18.06%** ($8,194) · signal-only (no cash/fees) was -26.59%. Starts YES **0/30**. Fills 214 · skips 73 · realized $-2767.20.
+Cash book **-24.77%** ($7,523) · signal-only (no cash/fees) was -26.59%. Starts YES **0/30**. Fills 226 · skips 73 · realized $-2767.20.
 
 ## How this sleeve decides (like you are 10)
 
@@ -420,6 +420,20 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-16 09:30 ET | **BUY** | `RCAT` | 281 | $3.68 | $3.62 | — | $1,140.99 | — | union ∩ overnight, no 🚨; gate overnight=True; list overnight; ret5=-5.9; leftover $1035.49 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 judge🔴 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-11-16 09:30 ET | **BUY** | `SHAZ` | 49 | $20.89 | $2.14 | — | $115.24 | — | union ∩ overnight, no 🚨; gate overnight=True; list overnight; 🔵; ret5=+3.4; leftover $1035.49 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-11-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $115.24 | ▼ close $8,194.41 vs 09:30 $8,283.96 (session -70.10) | 16:00 close · cash $115.24 · equity $8,194.41 vs 09:30 $8,283.96 (-89.55; session marks -70.10) · 8 name(s) marked open→close (per-name table). ACM×14 09:30 $70.40 → close $72.50 +29.40; DUOT×211 09:30 $4.90 → close $4.67 -48.53; INFQ×127 09:30 $8.13 → close $7.90 -29.21; OMER×59 09:30 $17.39 → close $16.68 -41.89; PAGS×132 09:30 $7.83 → close $7.99 +21.12; POWL×7 09:30 $140.00 → close $151.20 +78.40; RCAT×281 09:30 $3.68 → close $3.53 -42.15; SHAZ×49 09:30 $20.89 → close $20.13 -37.24 | — |
+| 2026-11-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $115.24 | ▼ 09:30 equity $7,764.55 vs yday $8,194.41 (-429.86) | 09:30 open · cash $115.24 (unchanged overnight, no fees) · equity $7,764.55 vs prior close $8,194.41 (-429.86) · 8 name(s) re-marked at the open (per-name table). ACM×14 yday $72.50 → 09:30 $79.50 +98.00; DUOT×211 yday $4.67 → 09:30 $4.01 -139.26; INFQ×127 yday $7.90 → 09:30 $8.05 +19.05; OMER×59 yday $16.68 → 09:30 $14.59 -123.31; PAGS×132 yday $7.99 → 09:30 $8.06 +9.24; POWL×7 yday $151.20 → 09:30 $150.84 -2.52; RCAT×281 yday $3.53 → 09:30 $2.55 -275.38; SHAZ×49 yday $20.13 → 09:30 $19.81 -15.68 | — |
+| 2026-11-17 09:30 ET | **SELL** | `ACM` | 14 | $79.50 | $2.05 | $+123.32 | $1,226.19 | ▲ +123.32 after sell → book $7,762.50; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🔴 digest🔴 judge🔴 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-17 09:30 ET | **SELL** | `DUOT` | 211 | $4.01 | $2.77 | $-193.28 | $2,069.53 | ▼ -193.28 after sell → book $7,759.73; vs 09:30 mark -2.77 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟡 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-17 09:30 ET | **SELL** | `INFQ` | 127 | $8.05 | $2.40 | $-14.93 | $3,089.48 | ▼ -14.93 after sell → book $7,757.33; vs 09:30 mark -2.40 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟡 digest🔴 ab🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-17 09:30 ET | **SELL** | `OMER` | 59 | $14.59 | $2.19 | $-169.55 | $3,948.10 | ▼ -169.55 after sell → book $7,755.14; vs 09:30 mark -2.19 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-17 09:30 ET | **SELL** | `PAGS` | 132 | $8.06 | $2.42 | $+25.56 | $5,009.60 | ▲ +25.56 after sell → book $7,752.72; vs 09:30 mark -2.42 | dropped from list after 1 sess (min 1) | join🟡 sector🟡 gen🔴 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-17 09:30 ET | **SELL** | `POWL` | 7 | $150.84 | $2.03 | $+71.84 | $6,063.45 | ▲ +71.84 after sell → book $7,750.69; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟡 digest🔴 judge🔴 ab🔴 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-17 09:30 ET | **SELL** | `RCAT` | 281 | $2.55 | $3.68 | $-324.84 | $6,776.32 | ▼ -324.84 after sell → book $7,747.01; vs 09:30 mark -3.68 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟡 digest🔴 judge🔴 ab🔴 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-11-17 09:30 ET | **SELL** | `SHAZ` | 49 | $19.81 | $2.16 | $-57.21 | $7,744.85 | ▼ -57.21 after sell → book $7,744.85; vs 09:30 mark -2.16 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟡 digest🔴 ab🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-11-17 09:30 ET | **BUY** | `DLB` | 31 | $60.60 | $2.08 | — | $5,864.17 | — | union ∩ overnight, no 🚨; gate overnight=True; list overnight; ret5=-5.6; leftover $1936.21 | join🔴 sector🟡 gen🔴 news🟡 digest🟡 judge🔴 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-11-17 09:30 ET | **BUY** | `GBDC` | 157 | $12.32 | $2.46 | — | $3,927.47 | — | union ∩ overnight, no 🚨; gate overnight=True; list overnight; ret5=-2.4; leftover $1936.21 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🔴 peer🟡 heat🔴 vol🟡 buy🟡 |
+| 2026-11-17 09:30 ET | **BUY** | `LZB` | 61 | $31.64 | $2.17 | — | $1,995.26 | — | union ∩ overnight, no 🚨; gate overnight=True; list overnight; ret5=-2.0; leftover $1936.21 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-17 09:30 ET | **BUY** | `SQM` | 36 | $52.72 | $2.10 | — | $95.24 | — | union ∩ overnight, no 🚨; gate overnight=True; list overnight; ret5=-9.8; leftover $1936.21 | join🔴 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-11-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $95.24 | ▼ close $7,522.59 vs 09:30 $7,764.55 (session -213.45) | 16:00 close · cash $95.24 · equity $7,522.59 vs 09:30 $7,764.55 (-241.96; session marks -213.45) · 4 name(s) marked open→close (per-name table). DLB×31 09:30 $60.60 → close $58.82 -55.18; GBDC×157 09:30 $12.32 → close $12.08 -37.68; LZB×61 09:30 $31.64 → close $30.33 -79.91; SQM×36 09:30 $52.72 → close $51.59 -40.68 | — |
 
 ## Not taken
 

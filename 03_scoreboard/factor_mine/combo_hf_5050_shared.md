@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared union_hot_n4_h1/flatten_h5 w=0.5,0.5 net=priority
 
-Cash book **-5.48%** ($9,452) · signal-only (no cash/fees) was —. Starts YES **29/30**. Fills 618 · skips 415 · realized $+719.52.
+Cash book **-8.20%** ($9,180) · signal-only (no cash/fees) was —. Starts YES **29/30**. Fills 631 · skips 415 · realized $+719.52.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $53.27.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $463.49.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -825,6 +825,21 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-16 09:30 ET | **BUY** | `PODD` | 6 | $153.50 | $2.01 | — | $1,033.62 | — | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); ret5=+4.1; combo leftover $978.32; owner flatten_h5 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-11-16 09:30 ET | **BUY** | `EPRX` | 120 | $8.15 | $2.35 | — | $53.27 | — | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); ret5=+18.3; combo leftover $978.32; owner flatten_h5 | join🟢 sector🟡 gen🔴 news🔴 digest🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-11-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $53.27 | ▼ close $9,451.79 vs 09:30 $9,811.72 (session -324.89) | 16:00 close · cash $53.27 · equity $9,451.79 vs 09:30 $9,811.72 (-359.93; session marks -324.89) · 16 name(s) marked open→close (per-name table). ALNY×3 09:30 $166.98 → close $159.73 -21.75; CHRD×4 09:30 $149.14 → close $146.78 -9.44; COTY×146 09:30 $4.10 → close $4.17 +10.22; DVN×13 09:30 $46.00 → close $44.27 -22.49; ETON×10 09:30 $64.29 → close $63.88 -4.10; GRNT×95 09:30 $6.25 → close $6.13 -11.40; KDP×16 09:30 $36.71 → close $35.58 -18.08; PFGC×5 09:30 $112.13 → close $112.00 -0.65; PRCH×28 09:30 $20.73 → close $20.92 +5.32; WRBY×22 09:30 $27.69 → close $26.23 -32.12; TTEC×166 09:30 $2.94 → close $3.07 +21.58; NGEN×265 09:30 $1.85 → close $1.82 -7.95; ENGN×211 09:30 $2.32 → close $1.89 -90.73; NUAI×158 09:30 $3.09 → close $3.11 +3.16; PODD×6 09:30 $153.50 → close $145.29 -49.26; EPRX×120 09:30 $8.15 → close $7.34 -97.20 | — |
+| 2026-11-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $53.27 | ▼ 09:30 equity $9,429.45 vs yday $9,451.79 (-22.34) | 09:30 open · cash $53.27 (unchanged overnight, no fees) · equity $9,429.45 vs prior close $9,451.79 (-22.34) | — |
+| 2026-11-17 09:30 ET | **SELL** | `ENGN` | 211 | $1.89 | $2.77 | $-96.22 | $449.29 | ▼ -96.22 after sell → book $9,426.68; vs 09:30 mark -2.77 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **SELL** | `NGEN` | 265 | $1.81 | $3.47 | $-17.49 | $925.47 | ▼ -17.49 after sell → book $9,423.21; vs 09:30 mark -3.47 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟢 digest🔴 ab🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-11-17 09:30 ET | **SELL** | `NUAI` | 158 | $3.22 | $2.50 | $+15.58 | $1,431.73 | ▲ +15.58 after sell → book $9,420.71; vs 09:30 mark -2.50 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🔴 digest🔴 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-17 09:30 ET | **SELL** | `TTEC` | 166 | $3.08 | $2.53 | $+18.23 | $1,940.48 | ▲ +18.23 after sell → book $9,418.18; vs 09:30 mark -2.53 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **SELL** | `WRBY` | 22 | $26.20 | $2.08 | $-84.43 | $2,514.81 | ▼ -84.43 after sell → book $9,416.11; vs 09:30 mark -2.07 | flatten_h5: dropped from list after 5 sess (min 5) | — |
+| 2026-11-17 09:30 ET | **BUY** | `LFTO` | 12 | $24.93 | $2.03 | — | $2,213.62 | — | top 4 by hot; rank hot_score; list yday_gainer,yday_mover; 🔵; ret5=+30.7; combo leftover $314.35; owner union_hot_n4_h1 | join🟢 sector🟡 gen🔴 news🟢 digest🟡 ab🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-17 09:30 ET | **BUY** | `CURI` | 98 | $3.21 | $2.28 | — | $1,897.25 | — | top 4 by hot; rank hot_score; list yday_gainer; ret5=+28.4; combo leftover $314.35; owner union_hot_n4_h1 | join🟢 sector🟡 gen🔴 news🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-17 09:30 ET | **BUY** | `HAWK` | 17 | $18.42 | $2.04 | — | $1,582.07 | — | top 4 by hot; rank hot_score; list yday_gainer,yday_mover; ret5=+22.9; combo leftover $314.35; owner union_hot_n4_h1 | join🔴 sector🟡 gen🔴 news🟢 digest🔴 judge🔴 ab🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-17 09:30 ET | **BUY** | `FUN` | 27 | $11.55 | $2.07 | — | $1,268.15 | — | top 4 by hot; rank hot_score; list ohlc_hot; 🔵; ret5=+7.9; combo leftover $314.35; owner union_hot_n4_h1 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟡 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-17 09:30 ET | **BUY** | `CMCSA` | 8 | $25.44 | $2.01 | — | $1,062.61 | — | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ret5=+4.4; combo leftover $211.36; owner flatten_h5 | join🟢 sector🟡 gen🔴 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-17 09:30 ET | **BUY** | `WWW` | 8 | $25.00 | $2.01 | — | $860.60 | — | baseline list, no extra gate; list flatten,ohlc_hot; wish-list (live io HOLD — not a ticket); 🔵; ret5=+15.2; combo leftover $211.36; owner flatten_h5 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-17 09:30 ET | **BUY** | `ATAT` | 5 | $38.42 | $1.94 | — | $666.56 | — | baseline list, no extra gate; list flatten,ohlc_hot; wish-list (live io HOLD — not a ticket); ret5=+8.5; combo leftover $211.36; owner flatten_h5 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟢 |
+| 2026-11-17 09:30 ET | **BUY** | `KVYO` | 9 | $22.34 | $2.02 | — | $463.49 | — | baseline list, no extra gate; list flatten,ohlc_hot; wish-list (live io HOLD — not a ticket); ret5=+9.9; combo leftover $211.36; owner flatten_h5 | join🟢 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $463.49 | ▼ close $9,179.96 vs 09:30 $9,429.45 (session -219.75) | 16:00 close · cash $463.49 · equity $9,179.96 vs 09:30 $9,429.45 (-249.49; session marks -219.75) · 19 name(s) marked open→close (per-name table). ALNY×3 09:30 $159.02 → close $156.50 -7.56; CHRD×4 09:30 $147.56 → close $143.28 -17.12; COTY×146 09:30 $4.10 → close $4.08 -2.92; DVN×13 09:30 $44.84 → close $43.46 -17.94; EPRX×120 09:30 $7.30 → close $6.62 -81.60; ETON×10 09:30 $62.58 → close $63.65 +10.70; GRNT×95 09:30 $6.15 → close $5.88 -25.65; KDP×16 09:30 $35.32 → close $34.79 -8.48; PFGC×5 09:30 $111.33 → close $110.38 -4.75; PODD×6 09:30 $144.69 → close $145.34 +3.90; PRCH×28 09:30 $20.59 → close $20.51 -2.24; LFTO×12 09:30 $24.93 → close $22.68 -27.00; CURI×98 09:30 $3.21 → close $3.02 -18.13; HAWK×17 09:30 $18.42 → close $18.45 +0.51; FUN×27 09:30 $11.55 → close $10.96 -15.93; CMCSA×8 09:30 $25.44 → close $25.31 -1.04; WWW×8 09:30 $25.00 → close $24.67 -2.64; ATAT×5 09:30 $38.42 → close $38.48 +0.30; KVYO×9 09:30 $22.34 → close $22.10 -2.16 | — |
 
 ## Not taken
 

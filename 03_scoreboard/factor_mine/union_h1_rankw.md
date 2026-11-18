@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `rank_w` · sell `list` · S-boost `none` · rank-weighted leftover
 
-Cash book **-22.43%** ($7,757) · signal-only (no cash/fees) was -0.80%. Starts YES **0/30**. Fills 556 · skips 107 · realized $-24.70.
+Cash book **-24.36%** ($7,564) · signal-only (no cash/fees) was -0.80%. Starts YES **0/30**. Fills 572 · skips 107 · realized $-24.70.
 
 ## How this sleeve decides (like you are 10)
 
@@ -758,6 +758,24 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-16 09:30 ET | **BUY** | `BUUU` | 86 | $5.28 | $2.25 | — | $302.81 | — | rank-weighted leftover; list probable,yday_gainer; ret5=+1.1; leftover $459.01 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 judge🔴 ab🔴 heat🟢 vol🟡 buy🟡 |
 | 2026-11-16 09:30 ET | **BUY** | `ADRX` | 16 | $14.22 | $2.04 | — | $73.25 | — | rank-weighted leftover; list probable,yday_gainer; 🔵; ret5=+7.3; leftover $229.50 | join🟡 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $73.25 | ▼ close $7,756.56 vs 09:30 $8,059.65 (session -267.17) | 16:00 close · cash $73.25 · equity $7,756.56 vs 09:30 $8,059.65 (-303.09; session marks -267.17) · 8 name(s) marked open→close (per-name table). ALNY×9 09:30 $166.98 → close $159.73 -65.25; CHRD×9 09:30 $149.14 → close $146.78 -21.24; DVN×38 09:30 $46.00 → close $44.27 -65.74; PODD×7 09:30 $153.50 → close $145.29 -57.47; EPRX×112 09:30 $8.15 → close $7.34 -90.72; SWRD×255 09:30 $2.70 → close $2.77 +17.85; BUUU×86 09:30 $5.28 → close $5.50 +18.92; ADRX×16 09:30 $14.22 → close $14.00 -3.52 | — |
+| 2026-11-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $73.25 | ▼ 09:30 equity $7,742.54 vs yday $7,756.56 (-14.02) | 09:30 open · cash $73.25 (unchanged overnight, no fees) · equity $7,742.54 vs prior close $7,756.56 (-14.02) · 8 name(s) re-marked at the open (per-name table). ADRX×16 yday $14.00 → 09:30 $14.03 +0.48; ALNY×9 yday $159.73 → 09:30 $159.02 -6.39; BUUU×86 yday $5.50 → 09:30 $5.44 -5.16; CHRD×9 yday $146.78 → 09:30 $147.56 +7.02; DVN×38 yday $44.27 → 09:30 $44.84 +21.66; EPRX×112 yday $7.34 → 09:30 $7.30 -4.48; PODD×7 yday $145.29 → 09:30 $144.69 -4.20; SWRD×255 yday $2.77 → 09:30 $2.68 -22.95 | — |
+| 2026-11-17 09:30 ET | **SELL** | `ADRX` | 16 | $14.03 | $2.06 | $-7.14 | $295.67 | ▼ -7.14 after sell → book $7,740.48; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **SELL** | `ALNY` | 9 | $159.02 | $2.04 | $-5.41 | $1,724.81 | ▼ -5.41 after sell → book $7,738.44; vs 09:30 mark -2.04 | dropped from list after 2 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **SELL** | `BUUU` | 86 | $5.44 | $2.27 | $+9.24 | $2,190.38 | ▲ +9.24 after sell → book $7,736.17; vs 09:30 mark -2.27 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **SELL** | `CHRD` | 9 | $147.56 | $2.04 | $-11.16 | $3,516.38 | ▼ -11.16 after sell → book $7,734.13; vs 09:30 mark -2.04 | dropped from list after 2 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **SELL** | `DVN` | 38 | $44.84 | $2.13 | $-77.19 | $5,218.18 | ▼ -77.19 after sell → book $7,732.01; vs 09:30 mark -2.12 | dropped from list after 2 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **SELL** | `EPRX` | 112 | $7.30 | $2.35 | $-99.88 | $6,033.42 | ▼ -99.88 after sell → book $7,729.65; vs 09:30 mark -2.36 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **SELL** | `PODD` | 7 | $144.69 | $2.03 | $-65.71 | $7,044.22 | ▼ -65.71 after sell → book $7,727.62; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **SELL** | `SWRD` | 255 | $2.68 | $3.34 | $-11.73 | $7,724.28 | ▼ -11.73 after sell → book $7,724.28; vs 09:30 mark -3.34 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **BUY** | `HUBS` | 7 | $226.06 | $2.01 | — | $6,139.85 | — | rank-weighted leftover; list flatten; ret5=+12.6; leftover $1716.51 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-17 09:30 ET | **BUY** | `APP` | 3 | $412.56 | $2.00 | — | $4,900.17 | — | rank-weighted leftover; list flatten,ohlc_hot; 🔵; ret5=+1.3; leftover $1501.94 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-17 09:30 ET | **BUY** | `CMCSA` | 50 | $25.44 | $2.14 | — | $3,626.03 | — | rank-weighted leftover; list flatten; 🔵; ret5=+4.4; leftover $1287.38 | join🟢 sector🟡 gen🔴 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-17 09:30 ET | **BUY** | `WWW` | 42 | $25.00 | $2.12 | — | $2,573.91 | — | rank-weighted leftover; list flatten,ohlc_hot; 🔵; ret5=+15.2; leftover $1072.82 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-17 09:30 ET | **BUY** | `ATAT` | 22 | $38.42 | $2.06 | — | $1,726.62 | — | rank-weighted leftover; list flatten,ohlc_hot; ret5=+8.5; leftover $858.25 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟢 |
+| 2026-11-17 09:30 ET | **BUY** | `KVYO` | 28 | $22.34 | $2.07 | — | $1,099.02 | — | rank-weighted leftover; list flatten,ohlc_hot; ret5=+9.9; leftover $643.69 | join🟢 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-17 09:30 ET | **BUY** | `LFMD` | 234 | $1.83 | $3.02 | — | $667.78 | — | rank-weighted leftover; list probable,yday_gainer,yday_mover; ret5=-11.9; leftover $429.13 | join🔴 sector🟡 gen🔴 news🟡 digest🔴 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-11-17 09:30 ET | **BUY** | `CDXS` | 200 | $1.07 | $2.59 | — | $451.19 | — | rank-weighted leftover; list probable,yday_gainer,yday_mover; 🔵; ret5=-4.5; leftover $214.56 | join🔴 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $451.19 | ▼ close $7,564.31 vs 09:30 $7,742.54 (session -141.96) | 16:00 close · cash $451.19 · equity $7,564.31 vs 09:30 $7,742.54 (-178.23; session marks -141.96) · 8 name(s) marked open→close (per-name table). HUBS×7 09:30 $226.06 → close $216.30 -68.32; APP×3 09:30 $412.56 → close $398.94 -40.86; CMCSA×50 09:30 $25.44 → close $25.31 -6.50; WWW×42 09:30 $25.00 → close $24.67 -13.86; ATAT×22 09:30 $38.42 → close $38.48 +1.32; KVYO×28 09:30 $22.34 → close $22.10 -6.72; LFMD×234 09:30 $1.83 → close $1.80 -7.02; CDXS×200 09:30 $1.07 → close $1.07 +0.00 | — |
 
 ## Not taken
 

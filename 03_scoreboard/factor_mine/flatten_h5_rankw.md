@@ -6,7 +6,7 @@ Buys the flatten **wish-list** even on io/HOLD mornings — live `flatten_robust
 
 Side **long** · universe `flatten` · top 8 · rank `list` · size `rank_w` · sell `list` · S-boost `none` · rank-weighted leftover
 
-Cash book **-20.68%** ($7,932) · signal-only (no cash/fees) was +4.47%. Starts YES **4/30**. Fills 253 · skips 337 · realized $+263.83.
+Cash book **-22.33%** ($7,767) · signal-only (no cash/fees) was +4.47%. Starts YES **4/30**. Fills 255 · skips 337 · realized $+263.83.
 
 ## How this sleeve decides (like you are 10)
 
@@ -455,6 +455,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-16 09:30 ET | **SELL** | `ZVRA` | 1 | $9.11 | $0.11 | $-2.77 | $296.06 | ▼ -2.77 after sell → book $7,994.92; vs 09:30 mark -0.12 | dropped from list after 5 sess (min 5) | — |
 | 2026-11-16 09:30 ET | **BUY** | `EPRX` | 3 | $8.15 | $0.25 | — | $271.36 | — | rank-weighted leftover; list flatten; wish-list (live io HOLD — not a ticket); ret5=+18.3; leftover $29.61 | join🟢 sector🟡 gen🔴 news🔴 digest🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-11-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $271.36 | ▼ close $7,931.70 vs 09:30 $7,995.27 (session -62.97) | 16:00 close · cash $271.36 · equity $7,931.70 vs 09:30 $7,995.27 (-63.57; session marks -62.97) · 10 name(s) marked open→close (per-name table). BLFS×3 09:30 $38.61 → close $38.61 +0.00; CLX×20 09:30 $110.98 → close $110.17 -16.20; COTY×166 09:30 $4.10 → close $4.17 +11.62; DVN×2 09:30 $46.00 → close $44.27 -3.46; GRNT×8 09:30 $6.25 → close $6.13 -0.96; KDP×38 09:30 $36.71 → close $35.58 -42.94; PFGC×16 09:30 $112.13 → close $112.00 -2.08; PRCH×48 09:30 $20.73 → close $20.92 +9.12; TTD×23 09:30 $15.51 → close $14.83 -15.64; EPRX×3 09:30 $8.15 → close $7.34 -2.43 | — |
+| 2026-11-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $271.36 | ▼ 09:30 equity $7,850.07 vs yday $7,931.70 (-81.63) | 09:30 open · cash $271.36 (unchanged overnight, no fees) · equity $7,850.07 vs prior close $7,931.70 (-81.63) · 10 name(s) re-marked at the open (per-name table). BLFS×3 yday $38.61 → 09:30 $38.61 +0.00; CLX×20 yday $110.17 → 09:30 $108.72 -29.00; COTY×166 yday $4.17 → 09:30 $4.10 -11.62; DVN×2 yday $44.27 → 09:30 $44.84 +1.14; EPRX×3 yday $7.34 → 09:30 $7.30 -0.12; GRNT×8 yday $6.13 → 09:30 $6.15 +0.16; KDP×38 yday $35.58 → 09:30 $35.32 -9.88; PFGC×16 yday $112.00 → 09:30 $111.33 -10.72; PRCH×48 yday $20.92 → 09:30 $20.59 -15.84; TTD×23 yday $14.83 → 09:30 $14.58 -5.75 | — |
+| 2026-11-17 09:30 ET | **BUY** | `CMCSA` | 2 | $25.44 | $0.51 | — | $219.97 | — | rank-weighted leftover; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ret5=+4.4; leftover $51.69 | join🟢 sector🟡 gen🔴 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-17 09:30 ET | **BUY** | `WWW` | 1 | $25.00 | $0.25 | — | $194.71 | — | rank-weighted leftover; list flatten,ohlc_hot; wish-list (live io HOLD — not a ticket); 🔵; ret5=+15.2; leftover $38.77 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $194.71 | ▼ close $7,766.90 vs 09:30 $7,850.07 (session -82.40) | 16:00 close · cash $194.71 · equity $7,766.90 vs 09:30 $7,850.07 (-83.17; session marks -82.40) · 12 name(s) marked open→close (per-name table). BLFS×3 09:30 $38.61 → close $38.61 +0.00; CLX×20 09:30 $108.72 → close $106.70 -40.40; COTY×166 09:30 $4.10 → close $4.08 -3.32; DVN×2 09:30 $44.84 → close $43.46 -2.76; EPRX×3 09:30 $7.30 → close $6.62 -2.04; GRNT×8 09:30 $6.15 → close $5.88 -2.16; KDP×38 09:30 $35.32 → close $34.79 -20.14; PFGC×16 09:30 $111.33 → close $110.38 -15.20; PRCH×48 09:30 $20.59 → close $20.51 -3.84; TTD×23 09:30 $14.58 → close $14.93 +8.05; CMCSA×2 09:30 $25.44 → close $25.31 -0.26; WWW×1 09:30 $25.00 → close $24.67 -0.33 | — |
 
 ## Not taken
 

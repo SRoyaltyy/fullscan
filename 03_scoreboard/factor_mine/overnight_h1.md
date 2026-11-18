@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `overnight` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · baseline list, no extra gate
 
-Cash book **-13.91%** ($8,609) · signal-only (no cash/fees) was -22.61%. Starts YES **0/30**. Fills 220 · skips 80 · realized $-2514.32.
+Cash book **-20.37%** ($7,963) · signal-only (no cash/fees) was -22.61%. Starts YES **0/30**. Fills 234 · skips 80 · realized $-2514.32.
 
 ## How this sleeve decides (like you are 10)
 
@@ -422,6 +422,22 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-16 09:30 ET | **BUY** | `RCAT` | 295 | $3.68 | $3.81 | — | $1,239.61 | — | baseline list, no extra gate; list overnight; ret5=-5.9; leftover $1088.34 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 judge🔴 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-11-16 09:30 ET | **BUY** | `SHAZ` | 52 | $20.89 | $2.15 | — | $151.18 | — | baseline list, no extra gate; list overnight; 🔵; ret5=+3.4; leftover $1088.34 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-11-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $151.18 | ▼ close $8,609.41 vs 09:30 $8,706.70 (session -77.46) | 16:00 close · cash $151.18 · equity $8,609.41 vs 09:30 $8,706.70 (-97.29; session marks -77.46) · 8 name(s) marked open→close (per-name table). ACM×15 09:30 $70.40 → close $72.50 +31.50; DUOT×222 09:30 $4.90 → close $4.67 -51.06; INFQ×133 09:30 $8.13 → close $7.90 -30.59; OMER×62 09:30 $17.39 → close $16.68 -44.02; PAGS×138 09:30 $7.83 → close $7.99 +22.08; POWL×7 09:30 $140.00 → close $151.20 +78.40; RCAT×295 09:30 $3.68 → close $3.53 -44.25; SHAZ×52 09:30 $20.89 → close $20.13 -39.52 | — |
+| 2026-11-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $151.18 | ▼ 09:30 equity $8,159.66 vs yday $8,609.41 (-449.75) | 09:30 open · cash $151.18 (unchanged overnight, no fees) · equity $8,159.66 vs prior close $8,609.41 (-449.75) · 8 name(s) re-marked at the open (per-name table). ACM×15 yday $72.50 → 09:30 $79.50 +105.00; DUOT×222 yday $4.67 → 09:30 $4.01 -146.52; INFQ×133 yday $7.90 → 09:30 $8.05 +19.95; OMER×62 yday $16.68 → 09:30 $14.59 -129.58; PAGS×138 yday $7.99 → 09:30 $8.06 +9.66; POWL×7 yday $151.20 → 09:30 $150.84 -2.52; RCAT×295 yday $3.53 → 09:30 $2.55 -289.10; SHAZ×52 yday $20.13 → 09:30 $19.81 -16.64 | — |
+| 2026-11-17 09:30 ET | **SELL** | `ACM` | 15 | $79.50 | $2.06 | $+132.41 | $1,341.62 | ▲ +132.41 after sell → book $8,157.60; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🔴 digest🔴 judge🔴 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-17 09:30 ET | **SELL** | `DUOT` | 222 | $4.01 | $2.91 | $-203.35 | $2,228.93 | ▼ -203.35 after sell → book $8,154.69; vs 09:30 mark -2.91 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟡 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-17 09:30 ET | **SELL** | `INFQ` | 133 | $8.05 | $2.42 | $-15.45 | $3,297.16 | ▼ -15.45 after sell → book $8,152.27; vs 09:30 mark -2.42 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟡 digest🔴 ab🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-17 09:30 ET | **SELL** | `OMER` | 62 | $14.59 | $2.20 | $-177.97 | $4,199.55 | ▼ -177.97 after sell → book $8,150.08; vs 09:30 mark -2.19 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-17 09:30 ET | **SELL** | `PAGS` | 138 | $8.06 | $2.44 | $+26.90 | $5,309.39 | ▲ +26.90 after sell → book $8,147.64; vs 09:30 mark -2.44 | dropped from list after 1 sess (min 1) | join🟡 sector🟡 gen🔴 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-17 09:30 ET | **SELL** | `POWL` | 7 | $150.84 | $2.03 | $+71.84 | $6,363.24 | ▲ +71.84 after sell → book $8,145.61; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟡 digest🔴 judge🔴 ab🔴 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-17 09:30 ET | **SELL** | `RCAT` | 295 | $2.55 | $3.86 | $-341.02 | $7,111.62 | ▼ -341.02 after sell → book $8,141.74; vs 09:30 mark -3.87 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟡 digest🔴 judge🔴 ab🔴 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-11-17 09:30 ET | **SELL** | `SHAZ` | 52 | $19.81 | $2.17 | $-60.47 | $8,139.58 | ▼ -60.47 after sell → book $8,139.58; vs 09:30 mark -2.16 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟡 digest🔴 ab🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-11-17 09:30 ET | **BUY** | `DLB` | 22 | $60.60 | $2.06 | — | $6,804.32 | — | baseline list, no extra gate; list overnight; ret5=-5.6; leftover $1356.60 | join🔴 sector🟡 gen🔴 news🟡 digest🟡 judge🔴 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-11-17 09:30 ET | **BUY** | `GBDC` | 110 | $12.32 | $2.32 | — | $5,446.80 | — | baseline list, no extra gate; list overnight; ret5=-2.4; leftover $1356.60 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🔴 peer🟡 heat🔴 vol🟡 buy🟡 |
+| 2026-11-17 09:30 ET | **BUY** | `LZB` | 42 | $31.64 | $2.12 | — | $4,115.81 | — | baseline list, no extra gate; list overnight; ret5=-2.0; leftover $1356.60 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-17 09:30 ET | **BUY** | `NVDA` | 8 | $156.90 | $2.01 | — | $2,858.59 | — | baseline list, no extra gate; list overnight,overnight_mega; ret5=-12.6; leftover $1356.60 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🔴 heat🔴 vol🟢 catal🟡 buy🟡 |
+| 2026-11-17 09:30 ET | **BUY** | `SQM` | 25 | $52.72 | $2.06 | — | $1,538.53 | — | baseline list, no extra gate; list overnight; ret5=-9.8; leftover $1356.60 | join🔴 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-11-17 09:30 ET | **BUY** | `ZTO` | 65 | $20.58 | $2.19 | — | $198.64 | — | baseline list, no extra gate; list overnight; ret5=-0.9; leftover $1356.60 | join🔴 sector🟡 gen🔴 news🟡 digest🔴 judge🔴 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-11-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $198.64 | ▼ close $7,963.22 vs 09:30 $8,159.66 (session -163.60) | 16:00 close · cash $198.64 · equity $7,963.22 vs 09:30 $8,159.66 (-196.44; session marks -163.60) · 6 name(s) marked open→close (per-name table). DLB×22 09:30 $60.60 → close $58.82 -39.16; GBDC×110 09:30 $12.32 → close $12.08 -26.40; LZB×42 09:30 $31.64 → close $30.33 -55.02; NVDA×8 09:30 $156.90 → close $155.46 -11.52; SQM×25 09:30 $52.72 → close $51.59 -28.25; ZTO×65 09:30 $20.58 → close $20.53 -3.25 | — |
 
 ## Not taken
 

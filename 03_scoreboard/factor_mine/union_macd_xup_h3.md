@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ macd_xup, no 🚨
 
-Cash book **-17.22%** ($8,278) · signal-only (no cash/fees) was -55.44%. Starts YES **5/30**. Fills 266 · skips 209 · realized $-2117.42.
+Cash book **-22.79%** ($7,721) · signal-only (no cash/fees) was -55.44%. Starts YES **5/30**. Fills 266 · skips 209 · realized $-2117.42.
 
 ## How this sleeve decides (like you are 10)
 
@@ -472,6 +472,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-16 09:30 ET | **BUY** | `LMND` | 64 | $43.49 | $2.18 | — | $2,789.82 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list yday_gainer; 🔵; ret5=+11.7; leftover $2795.95 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-16 09:30 ET | **BUY** | `NU` | 215 | $12.96 | $2.77 | — | $0.65 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list ohlc_hot; ret5=+9.9; leftover $2795.95 | join🟡 sector🟡 gen🔴 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
 | 2026-11-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $0.65 | ▼ close $8,277.89 vs 09:30 $8,435.01 (session -109.17) | 16:00 close · cash $0.65 · equity $8,277.89 vs 09:30 $8,435.01 (-157.12; session marks -109.17) · 4 name(s) marked open→close (per-name table). DJT×5 09:30 $4.37 → close $4.08 -1.45; XLAB×1370 09:30 $2.04 → close $1.96 -109.60; LMND×64 09:30 $43.49 → close $44.46 +62.08; NU×215 09:30 $12.96 → close $12.68 -60.20 | — |
+| 2026-11-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $0.65 | ▼ 09:30 equity $8,248.30 vs yday $8,277.89 (-29.59) | 09:30 open · cash $0.65 (unchanged overnight, no fees) · equity $8,248.30 vs prior close $8,277.89 (-29.59) · 4 name(s) re-marked at the open (per-name table). DJT×5 yday $4.08 → 09:30 $4.08 +0.00; LMND×64 yday $44.46 → 09:30 $44.90 +28.16; NU×215 yday $12.68 → 09:30 $12.73 +10.75; XLAB×1370 yday $1.96 → 09:30 $1.91 -68.50 | — |
+| 2026-11-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $0.65 | ▼ close $7,721.41 vs 09:30 $8,248.30 (session -526.89) | 16:00 close · cash $0.65 · equity $7,721.41 vs 09:30 $8,248.30 (-526.89; session marks -526.89) · 4 name(s) marked open→close (per-name table). DJT×5 09:30 $4.08 → close $4.05 -0.13; LMND×64 09:30 $44.90 → close $41.01 -248.96; NU×215 09:30 $12.73 → close $12.33 -86.00; XLAB×1370 09:30 $1.91 → close $1.77 -191.80 | — |
 
 ## Not taken
 

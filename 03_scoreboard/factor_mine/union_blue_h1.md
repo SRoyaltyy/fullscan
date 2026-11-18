@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ blue, no 🚨
 
-Cash book **-24.59%** ($7,541) · signal-only (no cash/fees) was -5.21%. Starts YES **0/30**. Fills 558 · skips 91 · realized $-561.25.
+Cash book **-29.67%** ($7,033) · signal-only (no cash/fees) was -5.21%. Starts YES **0/30**. Fills 574 · skips 91 · realized $-561.25.
 
 ## How this sleeve decides (like you are 10)
 
@@ -764,6 +764,24 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-16 09:30 ET | **BUY** | `CURI` | 314 | $3.05 | $4.05 | — | $1,014.05 | — | union ∩ blue, no 🚨; gate blue=True; list yday_gainer,yday_mover; 🔵; ret5=+24.7; leftover $959.33 | join🟢 sector🟡 gen🔴 news🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-16 09:30 ET | **BUY** | `NUAI` | 310 | $3.09 | $4.00 | — | $52.15 | — | union ∩ blue, no 🚨; gate blue=True; list yday_gainer,yday_mover; 🔵; ret5=+54.6; leftover $959.33 | join🟢 sector🟡 gen🔴 news🔴 digest🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $52.15 | ▼ close $7,540.69 vs 09:30 $7,721.79 (session -99.67) | 16:00 close · cash $52.15 · equity $7,540.69 vs 09:30 $7,721.79 (-181.10; session marks -99.67) · 8 name(s) marked open→close (per-name table). SWRD×355 09:30 $2.70 → close $2.77 +24.85; ADRX×67 09:30 $14.22 → close $14.00 -14.74; PRQR×680 09:30 $1.41 → close $1.18 -156.40; HUBS×4 09:30 $222.08 → close $231.98 +39.60; UNIT×197 09:30 $4.85 → close $4.79 -11.82; XLAB×470 09:30 $2.04 → close $1.96 -37.60; CURI×314 09:30 $3.05 → close $3.21 +50.24; NUAI×310 09:30 $3.09 → close $3.11 +6.20 | — |
+| 2026-11-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $52.15 | ▼ 09:30 equity $7,499.85 vs yday $7,540.69 (-40.84) | 09:30 open · cash $52.15 (unchanged overnight, no fees) · equity $7,499.85 vs prior close $7,540.69 (-40.84) · 8 name(s) re-marked at the open (per-name table). ADRX×67 yday $14.00 → 09:30 $14.03 +2.01; CURI×314 yday $3.21 → 09:30 $3.21 -1.57; HUBS×4 yday $231.98 → 09:30 $226.06 -23.68; NUAI×310 yday $3.11 → 09:30 $3.22 +34.10; PRQR×680 yday $1.18 → 09:30 $1.20 +13.60; SWRD×355 yday $2.77 → 09:30 $2.68 -31.95; UNIT×197 yday $4.79 → 09:30 $4.74 -9.85; XLAB×470 yday $1.96 → 09:30 $1.91 -23.50 | — |
+| 2026-11-17 09:30 ET | **SELL** | `ADRX` | 67 | $14.03 | $2.21 | $-17.13 | $989.95 | ▼ -17.13 after sell → book $7,497.64; vs 09:30 mark -2.21 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **SELL** | `CURI` | 314 | $3.21 | $4.11 | $+40.51 | $1,992.21 | ▲ +40.51 after sell → book $7,493.53; vs 09:30 mark -4.11 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-17 09:30 ET | **SELL** | `HUBS` | 4 | $226.06 | $2.02 | $+11.90 | $2,894.42 | ▲ +11.90 after sell → book $7,491.50; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-17 09:30 ET | **SELL** | `NUAI` | 310 | $3.22 | $4.06 | $+32.24 | $3,888.56 | ▲ +32.24 after sell → book $7,487.44; vs 09:30 mark -4.06 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🔴 digest🔴 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-17 09:30 ET | **SELL** | `PRQR` | 680 | $1.20 | $8.89 | $-160.47 | $4,695.67 | ▼ -160.47 after sell → book $7,478.55; vs 09:30 mark -8.89 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **SELL** | `SWRD` | 355 | $2.68 | $4.65 | $-16.33 | $5,642.42 | ▼ -16.33 after sell → book $7,473.90; vs 09:30 mark -4.65 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **SELL** | `UNIT` | 197 | $4.74 | $2.62 | $-26.87 | $6,573.58 | ▼ -26.87 after sell → book $7,471.28; vs 09:30 mark -2.62 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟡 digest🟡 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-11-17 09:30 ET | **SELL** | `XLAB` | 470 | $1.91 | $6.15 | $-73.31 | $7,465.12 | ▼ -73.31 after sell → book $7,465.12; vs 09:30 mark -6.16 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **BUY** | `CMCSA` | 36 | $25.44 | $2.10 | — | $6,547.19 | — | union ∩ blue, no 🚨; gate blue=True; list flatten; 🔵; ret5=+4.4; leftover $933.14 | join🟢 sector🟡 gen🔴 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-17 09:30 ET | **BUY** | `WWW` | 37 | $25.00 | $2.10 | — | $5,620.09 | — | union ∩ blue, no 🚨; gate blue=True; list flatten,ohlc_hot; 🔵; ret5=+15.2; leftover $933.14 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-17 09:30 ET | **BUY** | `CDXS` | 872 | $1.07 | $11.25 | — | $4,675.80 | — | union ∩ blue, no 🚨; gate blue=True; list probable,yday_gainer,yday_mover; 🔵; ret5=-4.5; leftover $933.14 | join🔴 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-17 09:30 ET | **BUY** | `SOC` | 1244 | $0.75 | $13.06 | — | $3,729.73 | — | union ∩ blue, no 🚨; gate blue=True; list probable,yday_gainer,yday_mover; 🔵; ret5=-18.6; leftover $933.14 | join🟢 sector🟡 gen🔴 news🟡 digest🟡 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-11-17 09:30 ET | **BUY** | `TNDM` | 51 | $18.25 | $2.14 | — | $2,796.84 | — | union ∩ blue, no 🚨; gate blue=True; list probable,yday_gainer; 🔵; ret5=+1.7; leftover $933.14 | join🔴 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-17 09:30 ET | **BUY** | `CATX` | 1014 | $0.92 | $12.37 | — | $1,851.59 | — | union ∩ blue, no 🚨; gate blue=True; list probable,yday_gainer; 🔵; ret5=+7.0; leftover $933.14 | join🟡 sector🟡 gen🔴 news🟡 digest🔴 ab🔴 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-17 09:30 ET | **BUY** | `NMAX` | 106 | $8.78 | $2.31 | — | $918.60 | — | union ∩ blue, no 🚨; gate blue=True; list yday_gainer,yday_mover; 🔵; ret5=+13.8; leftover $933.14 | join🟢 sector🟡 gen🔴 news🟢 digest🟡 ab🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-17 09:30 ET | **BUY** | `LFTO` | 36 | $24.93 | $2.10 | — | $19.03 | — | union ∩ blue, no 🚨; gate blue=True; list yday_gainer,yday_mover; 🔵; ret5=+30.7; leftover $933.14 | join🟢 sector🟡 gen🔴 news🟢 digest🟡 ab🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $19.03 | ▼ close $7,033.09 vs 09:30 $7,499.85 (session -384.61) | 16:00 close · cash $19.03 · equity $7,033.09 vs 09:30 $7,499.85 (-466.76; session marks -384.61) · 8 name(s) marked open→close (per-name table). CMCSA×36 09:30 $25.44 → close $25.31 -4.68; WWW×37 09:30 $25.00 → close $24.67 -12.21; CDXS×872 09:30 $1.07 → close $1.07 +0.00; SOC×1244 09:30 $0.75 → close $0.65 -120.67; TNDM×51 09:30 $18.25 → close $17.06 -60.69; CATX×1014 09:30 $0.92 → close $0.86 -60.84; NMAX×106 09:30 $8.78 → close $8.36 -44.52; LFTO×36 09:30 $24.93 → close $22.68 -81.00 | — |
 
 ## Not taken
 

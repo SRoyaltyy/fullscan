@@ -284,6 +284,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,682.21 | ▼ 09:30 equity $10,707.33 vs yday $10,707.51 (-0.18) | 09:30 open · cash $10,682.21 (unchanged overnight, no fees) · equity $10,707.33 vs prior close $10,707.51 (-0.18) · 1 name(s) re-marked at the open (per-name table). GO×2 yday $12.65 → 09:30 $12.56 -0.18 | — |
 | 2026-11-16 09:30 ET | **SELL** | `GO` | 2 | $12.56 | $0.28 | $-0.45 | $10,707.05 | ▼ -0.45 after sell → book $10,707.05; vs 09:30 mark -0.28 | dropped from list after 3 sess (min 3) | — |
 | 2026-11-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,707.05 | ▲ close $10,707.05 vs 09:30 $10,707.33 (session +0.00) | 16:00 close · cash $10,707.05 · no lots left · equity $10,707.05. | — |
+| 2026-11-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,707.05 | ▲ 09:30 equity $10,707.05 vs yday $10,707.05 (+0.00) | 09:30 open · cash $10,707.05 · no holdings · equity $10,707.05 vs prior close $10,707.05 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,707.05 | ▲ close $10,707.05 vs 09:30 $10,707.05 (session +0.00) | 16:00 close · cash $10,707.05 · no lots left · equity $10,707.05. | — |
 
 ## Not taken
 

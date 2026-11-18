@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-9.51%** ($9,050) · signal-only (no cash/fees) was +81.51%. Starts YES **27/30**. Fills 313 · skips 225 · realized $+477.57.
+Cash book **-11.40%** ($8,860) · signal-only (no cash/fees) was +81.51%. Starts YES **27/30**. Fills 317 · skips 225 · realized $+477.57.
 
 ## How this sleeve decides (like you are 10)
 
@@ -521,6 +521,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-16 09:30 ET | **BUY** | `MBGL` | 47 | $23.44 | $2.13 | — | $1,254.32 | — | combo gate; gate ab=good,vol=good; list yday_gainer,yday_mover; 🔵; ret5=+18.5; leftover $1120.50 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-16 09:30 ET | **BUY** | `AVEX` | 91 | $12.30 | $2.26 | — | $132.75 | — | combo gate; gate ab=good,vol=good; list yday_gainer; ret5=+22.6; leftover $1120.50 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 judge🔴 ab🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-11-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $132.75 | ▲ close $9,049.50 vs 09:30 $8,985.96 (session +113.64) | 16:00 close · cash $132.75 · equity $9,049.50 vs 09:30 $8,985.96 (+63.54; session marks +113.64) · 9 name(s) marked open→close (per-name table). BBOT×1 09:30 $2.13 → close $1.98 -0.15; ALNY×6 09:30 $166.98 → close $159.73 -43.50; ADRX×78 09:30 $14.22 → close $14.00 -17.16; HUBS×5 09:30 $222.08 → close $231.98 +49.50; XLAB×549 09:30 $2.04 → close $1.96 -43.92; NGEN×605 09:30 $1.85 → close $1.82 -18.15; CURI×367 09:30 $3.05 → close $3.21 +58.72; MBGL×47 09:30 $23.44 → close $24.04 +28.20; AVEX×91 09:30 $12.30 → close $13.40 +100.10 | — |
+| 2026-11-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $132.75 | ▼ 09:30 equity $8,980.99 vs yday $9,049.50 (-68.51) | 09:30 open · cash $132.75 (unchanged overnight, no fees) · equity $8,980.99 vs prior close $9,049.50 (-68.51) · 9 name(s) re-marked at the open (per-name table). ADRX×78 yday $14.00 → 09:30 $14.03 +2.34; ALNY×6 yday $159.73 → 09:30 $159.02 -4.26; AVEX×91 yday $13.40 → 09:30 $13.49 +8.19; BBOT×1 yday $1.98 → 09:30 $2.00 +0.02; CURI×367 yday $3.21 → 09:30 $3.21 -1.83; HUBS×5 yday $231.98 → 09:30 $226.06 -29.60; MBGL×47 yday $24.04 → 09:30 $23.83 -9.87; NGEN×605 yday $1.82 → 09:30 $1.81 -6.05; XLAB×549 yday $1.96 → 09:30 $1.91 -27.45 | — |
+| 2026-11-17 09:30 ET | **BUY** | `CDXS` | 15 | $1.07 | $0.21 | — | $116.49 | — | combo gate; gate ab=good,vol=good; list probable,yday_gainer,yday_mover; 🔵; ret5=-4.5; leftover $16.59 | join🔴 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-17 09:30 ET | **BUY** | `NMAX` | 1 | $8.78 | $0.09 | — | $107.62 | — | combo gate; gate ab=good,vol=good; list yday_gainer,yday_mover; 🔵; ret5=+13.8; leftover $16.59 | join🟢 sector🟡 gen🔴 news🟢 digest🟡 ab🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-17 09:30 ET | **BUY** | `LRMR` | 5 | $2.99 | $0.16 | — | $92.51 | — | combo gate; gate ab=good,vol=good; list yday_gainer; 🔵; ret5=+18.6; leftover $16.59 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-17 09:30 ET | **BUY** | `NU` | 1 | $12.73 | $0.13 | — | $79.65 | — | combo gate; gate ab=good,vol=good; list yday_gainer; ret5=+2.6; leftover $16.59 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $79.65 | ▼ close $8,859.86 vs 09:30 $8,980.99 (session -120.54) | 16:00 close · cash $79.65 · equity $8,859.86 vs 09:30 $8,980.99 (-121.13; session marks -120.54) · 13 name(s) marked open→close (per-name table). ADRX×78 09:30 $14.03 → close $13.82 -16.38; ALNY×6 09:30 $159.02 → close $156.50 -15.12; AVEX×91 09:30 $13.49 → close $13.62 +11.83; BBOT×1 09:30 $2.00 → close $1.94 -0.06; CURI×367 09:30 $3.21 → close $3.02 -67.90; HUBS×5 09:30 $226.06 → close $216.30 -48.80; MBGL×47 09:30 $23.83 → close $23.89 +2.82; NGEN×605 09:30 $1.81 → close $1.96 +90.75; XLAB×549 09:30 $1.91 → close $1.77 -76.86; CDXS×15 09:30 $1.07 → close $1.07 +0.00; NMAX×1 09:30 $8.78 → close $8.36 -0.42; LRMR×5 09:30 $2.99 → close $2.99 +0.00; NU×1 09:30 $12.73 → close $12.33 -0.40 | — |
 
 ## Not taken
 

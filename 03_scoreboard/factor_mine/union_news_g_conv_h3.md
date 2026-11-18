@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 4 · rank `cond` · size `conviction` · sell `list` · S-boost `none` · merged news🟢 rank cameras; 70% leftover if #1 net ≥ 5
 
-Cash book **-38.63%** ($6,137) · signal-only (no cash/fees) was +282.84%. Starts YES **10/30**. Fills 205 · skips 137 · realized $-233.27.
+Cash book **-40.19%** ($5,981) · signal-only (no cash/fees) was +282.84%. Starts YES **10/30**. Fills 207 · skips 137 · realized $-233.27.
 
 ## How this sleeve decides (like you are 10)
 
@@ -412,6 +412,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-16 09:30 ET | **BUY** | `WWW` | 3 | $25.00 | $0.76 | — | $165.57 | — | merged news🟢 rank cameras; 70% leftover if #1 net ≥ 5; gate news=good; rank cond; list ohlc_hot; 🔵; ret5=+16.7; leftover $86.83 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-16 09:30 ET | **BUY** | `CURI` | 28 | $3.05 | $0.94 | — | $79.23 | — | merged news🟢 rank cameras; 70% leftover if #1 net ≥ 5; gate news=good; rank cond; list yday_gainer,yday_mover; 🔵; ret5=+24.7; leftover $86.83 | join🟢 sector🟡 gen🔴 news🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $79.23 | ▼ close $6,137.26 vs 09:30 $6,156.63 (session -11.52) | 16:00 close · cash $79.23 · equity $6,137.26 vs 09:30 $6,156.63 (-19.37; session marks -11.52) · 9 name(s) marked open→close (per-name table). ANDG×25 09:30 $60.25 → close $62.85 +65.00; DVN×45 09:30 $46.00 → close $44.27 -77.85; EMBJ×1 09:30 $78.73 → close $78.73 +0.00; ETON×17 09:30 $64.29 → close $63.88 -6.97; PLX×179 09:30 $3.00 → close $3.03 +5.37; FROG×5 09:30 $110.78 → close $109.94 -4.22; MBGL×3 09:30 $23.44 → close $24.04 +1.80; WWW×3 09:30 $25.00 → close $25.29 +0.87; CURI×28 09:30 $3.05 → close $3.21 +4.48 | — |
+| 2026-11-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $79.23 | ▼ 09:30 equity $6,071.73 vs yday $6,137.26 (-65.53) | 09:30 open · cash $79.23 (unchanged overnight, no fees) · equity $6,071.73 vs prior close $6,137.26 (-65.53) · 9 name(s) re-marked at the open (per-name table). ANDG×25 yday $62.85 → 09:30 $62.96 +2.75; CURI×28 yday $3.21 → 09:30 $3.21 -0.14; DVN×45 yday $44.27 → 09:30 $44.84 +25.65; EMBJ×1 yday $78.73 → 09:30 $18.67 -60.06; ETON×17 yday $63.88 → 09:30 $62.58 -22.10; FROG×5 yday $109.94 → 09:30 $108.63 -6.55; MBGL×3 yday $24.04 → 09:30 $23.83 -0.63; PLX×179 yday $3.03 → 09:30 $3.01 -3.58; WWW×3 yday $25.29 → 09:30 $25.00 -0.87 | — |
+| 2026-11-17 09:30 ET | **SELL** | `EMBJ` | 1 | $18.67 | $0.21 | $-64.83 | $97.69 | ▼ -64.83 after sell → book $6,071.52; vs 09:30 mark -0.21 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-11-17 09:30 ET | **BUY** | `LFTO` | 1 | $24.93 | $0.25 | — | $72.51 | — | merged news🟢 rank cameras; 70% leftover if #1 net ≥ 5; gate news=good; rank cond; list yday_gainer,yday_mover; 🔵; ret5=+30.7; leftover $29.31 | join🟢 sector🟡 gen🔴 news🟢 digest🟡 ab🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $72.51 | ▼ close $5,981.20 vs 09:30 $6,071.73 (session -90.07) | 16:00 close · cash $72.51 · equity $5,981.20 vs 09:30 $6,071.73 (-90.53; session marks -90.07) · 9 name(s) marked open→close (per-name table). ANDG×25 09:30 $62.96 → close $63.08 +3.00; CURI×28 09:30 $3.21 → close $3.02 -5.18; DVN×45 09:30 $44.84 → close $43.46 -62.10; ETON×17 09:30 $62.58 → close $63.65 +18.19; FROG×5 09:30 $108.63 → close $105.10 -17.65; MBGL×3 09:30 $23.83 → close $23.89 +0.18; PLX×179 09:30 $3.01 → close $2.88 -23.27; WWW×3 09:30 $25.00 → close $24.67 -0.99; LFTO×1 09:30 $24.93 → close $22.68 -2.25 | — |
 
 ## Not taken
 

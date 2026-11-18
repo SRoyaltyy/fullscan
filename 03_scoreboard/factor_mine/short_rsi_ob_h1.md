@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · RSI overbought
 
-Cash book **-1.43%** ($9,857) · signal-only (no cash/fees) was -20.71%. Starts YES **6/30**. Fills 478 · skips 95 · realized $-976.57.
+Cash book **-0.46%** ($9,954) · signal-only (no cash/fees) was -20.71%. Starts YES **6/30**. Fills 490 · skips 95 · realized $-976.57.
 
 ## How this sleeve decides (like you are 10)
 
@@ -682,6 +682,20 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-16 09:30 ET | **SHORT** | `XERS` | 42 | $16.60 | $2.16 | — | $14,327.34 | — | RSI overbought; gate rsi_ob=True; list ohlc_hot; ret5=+9.6; leftover $697.95 | join🔴 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-11-16 09:30 ET | **SHORT** | `TBBB` | 10 | $68.40 | $2.06 | — | $15,009.28 | — | RSI overbought; gate rsi_ob=True; list ohlc_hot; ret5=+6.7; leftover $697.95 | join🔴 sector🟡 gen🔴 news🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-11-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $15,009.28 | ▲ close $9,856.85 vs 09:30 $9,788.67 (session +103.35) | 16:00 close · cash $15,009.28 · equity $9,856.85 vs 09:30 $9,788.67 (+68.18; session marks +103.35) · 8 name(s) marked open→close (per-name table). APP×1 09:30 $414.60 → close $415.22 -0.62; ENGN×300 09:30 $2.32 → close $1.89 +129.00; MBGL×29 09:30 $23.44 → close $24.04 -17.40; TTEC×237 09:30 $2.94 → close $3.07 -30.81; LBTYA×64 09:30 $10.83 → close $10.52 +19.84; LBTYK×66 09:30 $10.52 → close $10.33 +12.54; XERS×42 09:30 $16.60 → close $16.70 -4.20; TBBB×10 09:30 $68.40 → close $68.90 -5.00 | — |
+| 2026-11-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $15,009.28 | ▲ 09:30 equity $9,860.39 vs yday $9,856.85 (+3.54) | 09:30 open · cash $15,009.28 (unchanged overnight, no fees) · equity $9,860.39 vs prior close $9,856.85 (+3.54) · 8 name(s) re-marked at the open (per-name table). APP×1 yday $415.22 → 09:30 $412.56 +2.66; ENGN×300 yday $1.89 → 09:30 $1.89 -0.00; LBTYA×64 yday $10.52 → 09:30 $10.52 -0.00; LBTYK×66 yday $10.33 → 09:30 $10.31 +1.32; MBGL×29 yday $24.04 → 09:30 $23.83 +6.09; TBBB×10 yday $68.90 → 09:30 $68.77 +1.30; TTEC×237 yday $3.07 → 09:30 $3.08 -2.37; XERS×42 yday $16.70 → 09:30 $16.83 -5.46 | — |
+| 2026-11-17 09:30 ET | **COVER** | `ENGN` | 300 | $1.89 | $3.87 | $+121.18 | $14,438.41 | ▲ +121.18 after sell → book $9,856.52; vs 09:30 mark -3.87 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **COVER** | `LBTYA` | 64 | $10.52 | $2.18 | $+15.44 | $13,762.95 | ▲ +15.44 after sell → book $9,854.34; vs 09:30 mark -2.18 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **COVER** | `LBTYK` | 66 | $10.31 | $2.19 | $+9.44 | $13,080.30 | ▲ +9.44 after sell → book $9,852.15; vs 09:30 mark -2.19 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **COVER** | `MBGL` | 29 | $23.83 | $2.08 | $-15.50 | $12,387.15 | ▼ -15.50 after sell → book $9,850.07; vs 09:30 mark -2.08 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **COVER** | `TBBB` | 10 | $68.77 | $2.02 | $-7.78 | $11,697.43 | ▼ -7.78 after sell → book $9,848.05; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **COVER** | `TTEC` | 237 | $3.08 | $3.06 | $-39.36 | $10,964.42 | ▼ -39.36 after sell → book $9,845.00; vs 09:30 mark -3.05 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **SHORT** | `WWW` | 32 | $25.00 | $2.13 | — | $11,762.29 | — | RSI overbought; gate rsi_ob=True; list flatten,ohlc_hot; 🔵; ret5=+15.2; leftover $820.42 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-17 09:30 ET | **SHORT** | `LFTO` | 32 | $24.93 | $2.13 | — | $12,557.92 | — | RSI overbought; gate rsi_ob=True; list yday_gainer,yday_mover; 🔵; ret5=+30.7; leftover $820.42 | join🟢 sector🟡 gen🔴 news🟢 digest🟡 ab🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-17 09:30 ET | **SHORT** | `PAR` | 35 | $22.96 | $2.14 | — | $13,359.38 | — | RSI overbought; gate rsi_ob=True; list ohlc_hot; ret5=+6.8; leftover $820.42 | join🟢 sector🟡 gen🔴 news🔴 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-17 09:30 ET | **SHORT** | `ARDT` | 45 | $18.09 | $2.17 | — | $14,171.27 | — | RSI overbought; gate rsi_ob=True; list ohlc_hot; 🔵; ret5=+0.7; leftover $820.42 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟢 |
+| 2026-11-17 09:30 ET | **SHORT** | `HDB` | 31 | $26.11 | $2.13 | — | $14,978.55 | — | RSI overbought; gate rsi_ob=True; list ohlc_hot; ret5=+1.9; leftover $820.42 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-11-17 09:30 ET | **SHORT** | `IRWD` | 169 | $4.83 | $2.56 | — | $15,792.26 | — | RSI overbought; gate rsi_ob=True; list ohlc_hot; ret5=+3.6; leftover $820.42 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $15,792.26 | ▲ close $9,954.08 vs 09:30 $9,860.39 (session +122.33) | 16:00 close · cash $15,792.26 · equity $9,954.08 vs 09:30 $9,860.39 (+93.69; session marks +122.33) · 8 name(s) marked open→close (per-name table). APP×1 09:30 $412.56 → close $398.94 +13.62; XERS×42 09:30 $16.83 → close $16.80 +1.26; WWW×32 09:30 $25.00 → close $24.67 +10.56; LFTO×32 09:30 $24.93 → close $22.68 +72.00; PAR×35 09:30 $22.96 → close $22.36 +21.00; ARDT×45 09:30 $18.09 → close $17.75 +15.30; HDB×31 09:30 $26.11 → close $26.26 -4.65; IRWD×169 09:30 $4.83 → close $4.87 -6.76 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · packet🟢 OR headline🟢 and camera net ≥ 3
 
-Cash book **-38.39%** ($6,161) · signal-only (no cash/fees) was -9.17%. Starts YES **0/30**. Fills 284 · skips 40 · realized $-1690.89.
+Cash book **-40.85%** ($5,915) · signal-only (no cash/fees) was -9.17%. Starts YES **0/30**. Fills 293 · skips 40 · realized $-1690.89.
 
 ## How this sleeve decides (like you are 10)
 
@@ -492,6 +492,17 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-16 09:30 ET | **BUY** | `ZM` | 10 | $99.16 | $2.02 | — | $1,101.10 | — | packet🟢 OR headline🟢 and camera net ≥ 3; gate cam_net_min=3,news_or_headline=True; rank cond; list ohlc_hot; 🔵; ret5=+11.0; leftover $1022.00 | join🟢 sector🟡 gen🔴 news🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-16 09:30 ET | **BUY** | `COLD` | 60 | $16.82 | $2.17 | — | $89.73 | — | packet🟢 OR headline🟢 and camera net ≥ 3; gate cam_net_min=3,news_or_headline=True; rank cond; list ohlc_hot; 🔵; ret5=+4.2; leftover $1022.00 | join🟡 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟡 vol🟡 buy🟡 |
 | 2026-11-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $89.73 | ▲ close $6,160.66 vs 09:30 $6,145.12 (session +43.40) | 16:00 close · cash $89.73 · equity $6,160.66 vs 09:30 $6,145.12 (+15.54; session marks +43.40) · 6 name(s) marked open→close (per-name table). FROG×9 09:30 $110.78 → close $109.94 -7.60; MBGL×43 09:30 $23.44 → close $24.04 +25.80; WWW×40 09:30 $25.00 → close $25.29 +11.60; CURI×335 09:30 $3.05 → close $3.21 +53.60; ZM×10 09:30 $99.16 → close $96.18 -29.80; COLD×60 09:30 $16.82 → close $16.65 -10.20 | — |
+| 2026-11-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $89.73 | ▼ 09:30 equity $6,114.66 vs yday $6,160.66 (-46.00) | 09:30 open · cash $89.73 (unchanged overnight, no fees) · equity $6,114.66 vs prior close $6,160.66 (-46.00) · 6 name(s) re-marked at the open (per-name table). COLD×60 yday $16.65 → 09:30 $16.54 -6.60; CURI×335 yday $3.21 → 09:30 $3.21 -1.67; FROG×9 yday $109.94 → 09:30 $108.63 -11.79; MBGL×43 yday $24.04 → 09:30 $23.83 -9.03; WWW×40 yday $25.29 → 09:30 $25.00 -11.60; ZM×10 yday $96.18 → 09:30 $95.65 -5.30 | — |
+| 2026-11-17 09:30 ET | **SELL** | `COLD` | 60 | $16.54 | $2.19 | $-21.16 | $1,079.94 | ▼ -21.16 after sell → book $6,112.47; vs 09:30 mark -2.19 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **SELL** | `FROG` | 9 | $108.63 | $2.04 | $-23.45 | $2,055.57 | ▼ -23.45 after sell → book $6,110.44; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **SELL** | `MBGL` | 43 | $23.83 | $2.14 | $+12.51 | $3,078.12 | ▲ +12.51 after sell → book $6,108.30; vs 09:30 mark -2.14 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **SELL** | `ZM` | 10 | $95.65 | $2.04 | $-39.16 | $4,032.58 | ▼ -39.16 after sell → book $6,106.26; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **BUY** | `VIK` | 9 | $89.00 | $2.02 | — | $3,229.57 | — | packet🟢 OR headline🟢 and camera net ≥ 3; gate cam_net_min=3,news_or_headline=True; rank cond; list earn_react; 🔵; ret5=+3.6; leftover $806.52 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-17 09:30 ET | **BUY** | `LFTO` | 32 | $24.93 | $2.09 | — | $2,429.72 | — | packet🟢 OR headline🟢 and camera net ≥ 3; gate cam_net_min=3,news_or_headline=True; rank cond; list yday_gainer,yday_mover; 🔵; ret5=+30.7; leftover $806.52 | join🟢 sector🟡 gen🔴 news🟢 digest🟡 ab🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-17 09:30 ET | **BUY** | `NMAX` | 91 | $8.78 | $2.26 | — | $1,628.48 | — | packet🟢 OR headline🟢 and camera net ≥ 3; gate cam_net_min=3,news_or_headline=True; rank cond; list yday_gainer,yday_mover; 🔵; ret5=+13.8; leftover $806.52 | join🟢 sector🟡 gen🔴 news🟢 digest🟡 ab🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-17 09:30 ET | **BUY** | `HTHT` | 14 | $54.13 | $2.03 | — | $868.63 | — | packet🟢 OR headline🟢 and camera net ≥ 3; gate cam_net_min=3,news_or_headline=True; rank cond; list ohlc_hot; 🔵; ret5=+9.3; leftover $806.52 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-11-17 09:30 ET | **BUY** | `PLX` | 267 | $3.01 | $3.44 | — | $61.51 | — | packet🟢 OR headline🟢 and camera net ≥ 3; gate cam_net_min=3,news_or_headline=True; rank cond; list ohlc_hot; ret5=+17.9; leftover $806.52 | join🟢 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $61.51 | ▼ close $5,915.11 vs 09:30 $6,114.66 (session -179.31) | 16:00 close · cash $61.51 · equity $5,915.11 vs 09:30 $6,114.66 (-199.55; session marks -179.31) · 7 name(s) marked open→close (per-name table). CURI×335 09:30 $3.21 → close $3.02 -61.98; WWW×40 09:30 $25.00 → close $24.67 -13.20; VIK×9 09:30 $89.00 → close $94.28 +47.52; LFTO×32 09:30 $24.93 → close $22.68 -72.00; NMAX×91 09:30 $8.78 → close $8.36 -38.22; HTHT×14 09:30 $54.13 → close $53.65 -6.72; PLX×267 09:30 $3.01 → close $2.88 -34.71 | — |
 
 ## Not taken
 

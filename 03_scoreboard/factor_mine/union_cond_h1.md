@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · rank by cond
 
-Cash book **-12.38%** ($8,762) · signal-only (no cash/fees) was -4.88%. Starts YES **0/30**. Fills 604 · skips 105 · realized $-723.91.
+Cash book **-14.89%** ($8,511) · signal-only (no cash/fees) was -4.88%. Starts YES **0/30**. Fills 614 · skips 105 · realized $-723.91.
 
 ## How this sleeve decides (like you are 10)
 
@@ -809,6 +809,18 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-16 09:30 ET | **BUY** | `CHA` | 76 | $14.17 | $2.22 | — | $1,368.11 | — | rank by cond; rank cond; list yday_gainer,ohlc_hot; ret5=+15.6; leftover $1079.66 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-16 09:30 ET | **BUY** | `CURI` | 353 | $3.05 | $4.55 | — | $286.91 | — | rank by cond; rank cond; list yday_gainer,yday_mover; 🔵; ret5=+24.7; leftover $1079.66 | join🟢 sector🟡 gen🔴 news🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $286.91 | ▲ close $8,762.35 vs 09:30 $8,657.17 (session +146.95) | 16:00 close · cash $286.91 · equity $8,762.35 vs 09:30 $8,657.17 (+105.18; session marks +146.95) · 8 name(s) marked open→close (per-name table). ATAT×27 09:30 $39.16 → close $38.75 -11.07; FROG×9 09:30 $110.78 → close $109.94 -7.60; HUBS×4 09:30 $222.08 → close $231.98 +39.60; MBGL×46 09:30 $23.44 → close $24.04 +27.60; TTEC×367 09:30 $2.94 → close $3.07 +47.71; WWW×43 09:30 $25.00 → close $25.29 +12.47; CHA×76 09:30 $14.17 → close $13.93 -18.24; CURI×353 09:30 $3.05 → close $3.21 +56.48 | — |
+| 2026-11-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $286.91 | ▼ 09:30 equity $8,708.39 vs yday $8,762.35 (-53.97) | 09:30 open · cash $286.91 (unchanged overnight, no fees) · equity $8,708.39 vs prior close $8,762.35 (-53.97) · 8 name(s) re-marked at the open (per-name table). ATAT×27 yday $38.75 → 09:30 $38.42 -8.91; CHA×76 yday $13.93 → 09:30 $14.07 +10.64; CURI×353 yday $3.21 → 09:30 $3.21 -1.76; FROG×9 yday $109.94 → 09:30 $108.63 -11.79; HUBS×4 yday $231.98 → 09:30 $226.06 -23.68; MBGL×46 yday $24.04 → 09:30 $23.83 -9.66; TTEC×367 yday $3.07 → 09:30 $3.08 +3.67; WWW×43 yday $25.29 → 09:30 $25.00 -12.47 | — |
+| 2026-11-17 09:30 ET | **SELL** | `CHA` | 76 | $14.07 | $2.24 | $-12.06 | $1,353.99 | ▼ -12.06 after sell → book $8,706.14; vs 09:30 mark -2.25 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **SELL** | `FROG` | 9 | $108.63 | $2.04 | $-23.45 | $2,329.62 | ▼ -23.45 after sell → book $8,704.11; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **SELL** | `HUBS` | 4 | $226.06 | $2.02 | $+11.90 | $3,231.84 | ▲ +11.90 after sell → book $8,702.09; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-17 09:30 ET | **SELL** | `MBGL` | 46 | $23.83 | $2.15 | $+13.66 | $4,325.87 | ▲ +13.66 after sell → book $8,699.94; vs 09:30 mark -2.15 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **SELL** | `TTEC` | 367 | $3.08 | $4.81 | $+41.84 | $5,451.43 | ▲ +41.84 after sell → book $8,695.13; vs 09:30 mark -4.81 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **BUY** | `VIK` | 12 | $89.00 | $2.03 | — | $4,381.40 | — | rank by cond; rank cond; list earn_react; 🔵; ret5=+3.6; leftover $1090.29 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-17 09:30 ET | **BUY** | `TDC` | 31 | $34.55 | $2.08 | — | $3,308.27 | — | rank by cond; rank cond; list ohlc_hot; ret5=+8.7; leftover $1090.29 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-17 09:30 ET | **BUY** | `LFTO` | 43 | $24.93 | $2.12 | — | $2,234.16 | — | rank by cond; rank cond; list yday_gainer,yday_mover; 🔵; ret5=+30.7; leftover $1090.29 | join🟢 sector🟡 gen🔴 news🟢 digest🟡 ab🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-17 09:30 ET | **BUY** | `NMAX` | 124 | $8.78 | $2.36 | — | $1,143.08 | — | rank by cond; rank cond; list yday_gainer,yday_mover; 🔵; ret5=+13.8; leftover $1090.29 | join🟢 sector🟡 gen🔴 news🟢 digest🟡 ab🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-17 09:30 ET | **BUY** | `ARDT` | 60 | $18.09 | $2.17 | — | $55.51 | — | rank by cond; rank cond; list ohlc_hot; 🔵; ret5=+0.7; leftover $1090.29 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟢 |
+| 2026-11-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $55.51 | ▼ close $8,510.55 vs 09:30 $8,708.39 (session -173.83) | 16:00 close · cash $55.51 · equity $8,510.55 vs 09:30 $8,708.39 (-197.84; session marks -173.83) · 8 name(s) marked open→close (per-name table). ATAT×27 09:30 $38.42 → close $38.48 +1.62; CURI×353 09:30 $3.21 → close $3.02 -65.31; WWW×43 09:30 $25.00 → close $24.67 -14.19; VIK×12 09:30 $89.00 → close $94.28 +63.36; TDC×31 09:30 $34.55 → close $34.87 +9.92; LFTO×43 09:30 $24.93 → close $22.68 -96.75; NMAX×124 09:30 $8.78 → close $8.36 -52.08; ARDT×60 09:30 $18.09 → close $17.75 -20.40 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · alarm
 
-Cash book **-2.83%** ($9,717) · signal-only (no cash/fees) was +3.57%. Starts YES **5/30**. Fills 334 · skips 96 · realized $+54.59.
+Cash book **-2.39%** ($9,761) · signal-only (no cash/fees) was +3.57%. Starts YES **5/30**. Fills 348 · skips 96 · realized $+54.59.
 
 ## How this sleeve decides (like you are 10)
 
@@ -538,6 +538,22 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-16 09:30 ET | **SHORT** | `TARS` | 7 | $81.35 | $2.05 | — | $13,554.38 | — | alarm; gate alarm=True; list ohlc_hot; ret5=+17.0; leftover $600.57 | join🟡 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-11-16 09:30 ET | **SHORT** | `SOPH` | 74 | $8.07 | $2.25 | — | $14,149.31 | — | alarm; gate alarm=True; list ohlc_hot; ret5=+15.0; leftover $600.57 | join🔴 sector🟡 gen🔴 news🟡 digest🔴 ab🔴 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-11-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,149.31 | ▲ close $9,717.34 vs 09:30 $9,639.26 (session +130.06) | 16:00 close · cash $14,149.31 · equity $9,717.34 vs 09:30 $9,639.26 (+78.08; session marks +130.06) · 8 name(s) marked open→close (per-name table). EPRX×73 09:30 $8.15 → close $7.34 +59.13; MXCT×515 09:30 $1.17 → close $1.18 -7.72; FUN×51 09:30 $11.62 → close $11.61 +0.51; APP×1 09:30 $414.60 → close $415.22 -0.62; LBTYA×55 09:30 $10.83 → close $10.52 +17.05; XERS×36 09:30 $16.60 → close $16.70 -3.60; TARS×7 09:30 $81.35 → close $78.68 +18.69; SOPH×74 09:30 $8.07 → close $7.44 +46.62 | — |
+| 2026-11-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $14,149.31 | ▼ 09:30 equity $9,712.94 vs yday $9,717.34 (-4.40) | 09:30 open · cash $14,149.31 (unchanged overnight, no fees) · equity $9,712.94 vs prior close $9,717.34 (-4.40) · 8 name(s) re-marked at the open (per-name table). APP×1 yday $415.22 → 09:30 $412.56 +2.66; EPRX×73 yday $7.34 → 09:30 $7.30 +2.92; FUN×51 yday $11.61 → 09:30 $11.55 +3.06; LBTYA×55 yday $10.52 → 09:30 $10.52 -0.00; MXCT×515 yday $1.18 → 09:30 $1.19 -5.15; SOPH×74 yday $7.44 → 09:30 $7.48 -2.96; TARS×7 yday $78.68 → 09:30 $78.72 -0.24; XERS×36 yday $16.70 → 09:30 $16.83 -4.68 | — |
+| 2026-11-17 09:30 ET | **COVER** | `EPRX` | 73 | $7.30 | $2.21 | $+57.59 | $13,614.20 | ▲ +57.59 after sell → book $9,710.74; vs 09:30 mark -2.20 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **COVER** | `FUN` | 51 | $11.55 | $2.14 | $-0.75 | $13,023.01 | ▼ -0.75 after sell → book $9,708.59; vs 09:30 mark -2.15 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟡 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-17 09:30 ET | **COVER** | `LBTYA` | 55 | $10.52 | $2.15 | $+12.70 | $12,442.25 | ▲ +12.70 after sell → book $9,706.44; vs 09:30 mark -2.15 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **COVER** | `MXCT` | 515 | $1.19 | $6.64 | $-26.27 | $11,822.76 | ▼ -26.27 after sell → book $9,699.79; vs 09:30 mark -6.65 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **COVER** | `SOPH` | 74 | $7.48 | $2.21 | $+39.20 | $11,267.03 | ▲ +39.20 after sell → book $9,697.58; vs 09:30 mark -2.21 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **COVER** | `TARS` | 7 | $78.72 | $2.01 | $+14.39 | $10,714.01 | ▲ +14.39 after sell → book $9,695.57; vs 09:30 mark -2.01 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **COVER** | `XERS` | 36 | $16.83 | $2.10 | $-12.51 | $10,106.03 | ▼ -12.51 after sell → book $9,693.47; vs 09:30 mark -2.10 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-17 09:30 ET | **SHORT** | `HUBS` | 3 | $226.06 | $2.04 | — | $10,782.18 | — | alarm; gate alarm=True; list flatten; ret5=+12.6; leftover $692.39 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-17 09:30 ET | **SHORT** | `CDNL` | 115 | $6.00 | $2.38 | — | $11,469.79 | — | alarm; gate alarm=True; list probable,yday_gainer; ret5=-59.9; leftover $692.39 | join🔴 sector🟡 gen🔴 news🟡 digest🔴 judge🔴 ab🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-11-17 09:30 ET | **SHORT** | `UNIT` | 146 | $4.74 | $2.48 | — | $12,159.35 | — | alarm; gate alarm=True; list probable,yday_gainer; ret5=+8.9; leftover $692.39 | join🔴 sector🟡 gen🔴 news🟡 digest🟡 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-11-17 09:30 ET | **SHORT** | `FRMI` | 285 | $2.43 | $3.75 | — | $12,847.86 | — | alarm; gate alarm=True; list yday_gainer,yday_mover; ret5=+49.4; leftover $692.39 | join🔴 sector🟡 gen🔴 news🟡 digest🟡 ab🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-11-17 09:30 ET | **SHORT** | `NUAI` | 215 | $3.22 | $2.84 | — | $13,537.33 | — | alarm; gate alarm=True; list yday_gainer; ret5=+41.4; leftover $692.39 | join🔴 sector🟡 gen🔴 news🔴 digest🔴 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-17 09:30 ET | **SHORT** | `NGEN` | 382 | $1.81 | $5.02 | — | $14,223.73 | — | alarm; gate alarm=True; list yday_gainer; ret5=+30.5; leftover $692.39 | join🔴 sector🟡 gen🔴 news🟢 digest🔴 ab🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-11-17 09:30 ET | **SHORT** | `CBRS` | 6 | $102.26 | $2.04 | — | $14,835.24 | — | alarm; gate alarm=True; list yday_gainer; ret5=+4.4; leftover $692.39 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,835.24 | ▲ close $9,760.98 vs 09:30 $9,712.94 (session +88.06) | 16:00 close · cash $14,835.24 · equity $9,760.98 vs 09:30 $9,712.94 (+48.04; session marks +88.06) · 8 name(s) marked open→close (per-name table). APP×1 09:30 $412.56 → close $398.94 +13.62; HUBS×3 09:30 $226.06 → close $216.30 +29.28; CDNL×115 09:30 $6.00 → close $5.69 +35.65; UNIT×146 09:30 $4.74 → close $4.27 +68.62; FRMI×285 09:30 $2.43 → close $2.41 +5.41; NUAI×215 09:30 $3.22 → close $3.20 +4.30; NGEN×382 09:30 $1.81 → close $1.96 -57.30; CBRS×6 09:30 $102.26 → close $104.18 -11.52 | — |
 
 ## Not taken
 

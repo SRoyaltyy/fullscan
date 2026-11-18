@@ -6,7 +6,7 @@ Buys the flatten **wish-list** even on io/HOLD mornings — live `flatten_robust
 
 Side **long** · universe `flatten` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · flatten looker: 0 red + yesterday up
 
-Cash book **-17.49%** ($8,251) · signal-only (no cash/fees) was +1.97%. Starts YES **12/30**. Fills 83 · skips 119 · realized $-62.52.
+Cash book **-17.49%** ($8,251) · signal-only (no cash/fees) was +1.97%. Starts YES **12/30**. Fills 84 · skips 119 · realized $-62.52.
 
 ## How this sleeve decides (like you are 10)
 
@@ -291,6 +291,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-16 09:30 ET | **SELL** | `ALGN` | 27 | $168.42 | $2.12 | $+9.85 | $4,592.80 | ▲ +9.85 after sell → book $8,257.66; vs 09:30 mark -2.12 | dropped from list after 5 sess (min 5) | — |
 | 2026-11-16 09:30 ET | **SELL** | `ZVRA` | 397 | $9.11 | $5.22 | $-1018.72 | $8,204.26 | ▼ -1,018.72 after sell → book $8,252.45; vs 09:30 mark -5.21 | dropped from list after 5 sess (min 5) | — |
 | 2026-11-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,204.26 | ▼ close $8,251.34 vs 09:30 $8,259.78 (session -1.11) | 16:00 close · cash $8,204.26 · equity $8,251.34 vs 09:30 $8,259.78 (-8.44; session marks -1.11) · 2 name(s) marked open→close (per-name table). COTY×5 09:30 $4.10 → close $4.17 +0.35; WRBY×1 09:30 $27.69 → close $26.23 -1.46 | — |
+| 2026-11-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,204.26 | ▼ 09:30 equity $8,250.96 vs yday $8,251.34 (-0.38) | 09:30 open · cash $8,204.26 (unchanged overnight, no fees) · equity $8,250.96 vs prior close $8,251.34 (-0.38) · 2 name(s) re-marked at the open (per-name table). COTY×5 yday $4.17 → 09:30 $4.10 -0.35; WRBY×1 yday $26.23 → 09:30 $26.20 -0.03 | — |
+| 2026-11-17 09:30 ET | **SELL** | `WRBY` | 1 | $26.20 | $0.28 | $-4.24 | $8,230.18 | ▼ -4.24 after sell → book $8,250.68; vs 09:30 mark -0.28 | dropped from list after 5 sess (min 5) | — |
+| 2026-11-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,230.18 | ▼ close $8,250.58 vs 09:30 $8,250.96 (session -0.10) | 16:00 close · cash $8,230.18 · equity $8,250.58 vs 09:30 $8,250.96 (-0.38; session marks -0.10) · 1 name(s) marked open→close (per-name table). COTY×5 09:30 $4.10 → close $4.08 -0.10 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · packet🟢 and camera net ≥ 3
 
-Cash book **-16.00%** ($8,400) · signal-only (no cash/fees) was +3.78%. Starts YES **14/30**. Fills 121 · skips 24 · realized $+978.05.
+Cash book **-14.81%** ($8,519) · signal-only (no cash/fees) was +3.78%. Starts YES **14/30**. Fills 126 · skips 24 · realized $+978.05.
 
 ## How this sleeve decides (like you are 10)
 
@@ -329,6 +329,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-16 09:30 ET | **BUY** | `MBGL` | 119 | $23.44 | $2.35 | — | $2,821.84 | — | packet🟢 and camera net ≥ 3; gate cam_net_min=3,news_box=good; rank cond; list yday_gainer,yday_mover; 🔵; ret5=+18.5; leftover $2795.08 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-16 09:30 ET | **BUY** | `COLD` | 166 | $16.82 | $2.49 | — | $27.23 | — | packet🟢 and camera net ≥ 3; gate cam_net_min=3,news_box=good; rank cond; list ohlc_hot; 🔵; ret5=+4.2; leftover $2795.08 | join🟡 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟡 vol🟡 buy🟡 |
 | 2026-11-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $27.23 | ▲ close $8,400.39 vs 09:30 $8,389.79 (session +22.06) | 16:00 close · cash $27.23 · equity $8,400.39 vs 09:30 $8,389.79 (+10.60; session marks +22.06) · 3 name(s) marked open→close (per-name table). FROG×25 09:30 $110.78 → close $109.94 -21.12; MBGL×119 09:30 $23.44 → close $24.04 +71.40; COLD×166 09:30 $16.82 → close $16.65 -28.22 | — |
+| 2026-11-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $27.23 | ▼ 09:30 equity $8,324.39 vs yday $8,400.39 (-76.00) | 09:30 open · cash $27.23 (unchanged overnight, no fees) · equity $8,324.39 vs prior close $8,400.39 (-76.00) · 3 name(s) re-marked at the open (per-name table). COLD×166 yday $16.65 → 09:30 $16.54 -18.26; FROG×25 yday $109.94 → 09:30 $108.63 -32.75; MBGL×119 yday $24.04 → 09:30 $23.83 -24.99 | — |
+| 2026-11-17 09:30 ET | **SELL** | `COLD` | 166 | $16.54 | $2.54 | $-51.51 | $2,770.33 | ▼ -51.51 after sell → book $8,321.85; vs 09:30 mark -2.54 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **SELL** | `FROG` | 25 | $108.63 | $2.10 | $-58.04 | $5,483.99 | ▼ -58.04 after sell → book $8,319.76; vs 09:30 mark -2.09 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **SELL** | `MBGL` | 119 | $23.83 | $2.39 | $+41.67 | $8,317.37 | ▲ +41.67 after sell → book $8,317.37; vs 09:30 mark -2.39 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **BUY** | `VIK` | 46 | $89.00 | $2.13 | — | $4,221.24 | — | packet🟢 and camera net ≥ 3; gate cam_net_min=3,news_box=good; rank cond; list earn_react; 🔵; ret5=+3.6; leftover $4158.68 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-17 09:30 ET | **BUY** | `HTHT` | 76 | $54.13 | $2.22 | — | $105.14 | — | packet🟢 and camera net ≥ 3; gate cam_net_min=3,news_box=good; rank cond; list ohlc_hot; 🔵; ret5=+9.3; leftover $4158.68 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-11-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $105.14 | ▲ close $8,519.42 vs 09:30 $8,324.39 (session +206.40) | 16:00 close · cash $105.14 · equity $8,519.42 vs 09:30 $8,324.39 (+195.03; session marks +206.40) · 2 name(s) marked open→close (per-name table). VIK×46 09:30 $89.00 → close $94.28 +242.88; HTHT×76 09:30 $54.13 → close $53.65 -36.48 | — |
 
 ## Not taken
 

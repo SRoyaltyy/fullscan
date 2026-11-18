@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `candle_score` · size `leftover` · sell `list` · S-boost `none` · rank by candle_score
 
-Cash book **-5.14%** ($9,486) · signal-only (no cash/fees) was +8.19%. Starts YES **0/30**. Fills 593 · skips 104 · realized $-563.45.
+Cash book **-7.06%** ($9,294) · signal-only (no cash/fees) was +8.19%. Starts YES **0/30**. Fills 609 · skips 104 · realized $-563.45.
 
 ## How this sleeve decides (like you are 10)
 
@@ -798,6 +798,24 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-16 09:30 ET | **BUY** | `NGEN` | 642 | $1.85 | $8.28 | — | $1,345.03 | — | rank by candle_score; rank candle_score; list yday_gainer,yday_mover; ret5=+41.4; leftover $1189.24 | join🔴 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-16 09:30 ET | **BUY** | `COLD` | 70 | $16.82 | $2.20 | — | $165.43 | — | rank by candle_score; rank candle_score; list ohlc_hot; 🔵; ret5=+4.2; leftover $1189.24 | join🟡 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟡 vol🟡 buy🟡 |
 | 2026-11-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $165.43 | ▼ close $9,485.68 vs 09:30 $9,560.96 (session -36.75) | 16:00 close · cash $165.43 · equity $9,485.68 vs 09:30 $9,560.96 (-75.28; session marks -36.75) · 8 name(s) marked open→close (per-name table). MBGL×52 09:30 $23.44 → close $24.04 +31.20; PRCT×50 09:30 $23.71 → close $23.54 -8.50; LBTYK×113 09:30 $10.52 → close $10.33 -21.47; ONT×50 09:30 $23.48 → close $23.46 -1.00; STE×4 09:30 $265.49 → close $261.91 -14.32; TBBB×17 09:30 $68.40 → close $68.90 +8.50; NGEN×642 09:30 $1.85 → close $1.82 -19.26; COLD×70 09:30 $16.82 → close $16.65 -11.90 | — |
+| 2026-11-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $165.43 | ▼ 09:30 equity $9,421.31 vs yday $9,485.68 (-64.37) | 09:30 open · cash $165.43 (unchanged overnight, no fees) · equity $9,421.31 vs prior close $9,485.68 (-64.37) · 8 name(s) re-marked at the open (per-name table). COLD×70 yday $16.65 → 09:30 $16.54 -7.70; LBTYK×113 yday $10.33 → 09:30 $10.31 -2.26; MBGL×52 yday $24.04 → 09:30 $23.83 -10.92; NGEN×642 yday $1.82 → 09:30 $1.81 -6.42; ONT×50 yday $23.46 → 09:30 $23.15 -15.50; PRCT×50 yday $23.54 → 09:30 $23.36 -9.00; STE×4 yday $261.91 → 09:30 $259.32 -10.36; TBBB×17 yday $68.90 → 09:30 $68.77 -2.21 | — |
+| 2026-11-17 09:30 ET | **SELL** | `COLD` | 70 | $16.54 | $2.22 | $-24.02 | $1,321.01 | ▼ -24.02 after sell → book $9,419.09; vs 09:30 mark -2.22 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **SELL** | `LBTYK` | 113 | $10.31 | $2.36 | $-28.42 | $2,483.68 | ▼ -28.42 after sell → book $9,416.73; vs 09:30 mark -2.36 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **SELL** | `MBGL` | 52 | $23.83 | $2.17 | $+30.01 | $3,720.67 | ▲ +30.01 after sell → book $9,414.56; vs 09:30 mark -2.17 | dropped from list after 2 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **SELL** | `NGEN` | 642 | $1.81 | $8.40 | $-42.36 | $4,874.30 | ▼ -42.36 after sell → book $9,406.17; vs 09:30 mark -8.39 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟢 digest🔴 ab🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-11-17 09:30 ET | **SELL** | `ONT` | 50 | $23.15 | $2.16 | $-20.80 | $6,029.64 | ▼ -20.80 after sell → book $9,404.01; vs 09:30 mark -2.16 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **SELL** | `PRCT` | 50 | $23.36 | $2.16 | $-21.80 | $7,195.48 | ▼ -21.80 after sell → book $9,401.85; vs 09:30 mark -2.16 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **SELL** | `STE` | 4 | $259.32 | $2.02 | $-28.70 | $8,230.73 | ▼ -28.70 after sell → book $9,399.82; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **SELL** | `TBBB` | 17 | $68.77 | $2.06 | $+2.19 | $9,397.76 | ▲ +2.19 after sell → book $9,397.76; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **BUY** | `KVYO` | 52 | $22.34 | $2.15 | — | $8,233.94 | — | rank by candle_score; rank candle_score; list flatten,ohlc_hot; ret5=+9.9; leftover $1174.72 | join🟢 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-17 09:30 ET | **BUY** | `PAR` | 51 | $22.96 | $2.14 | — | $7,060.83 | — | rank by candle_score; rank candle_score; list ohlc_hot; ret5=+6.8; leftover $1174.72 | join🟢 sector🟡 gen🔴 news🔴 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-17 09:30 ET | **BUY** | `XERS` | 69 | $16.83 | $2.20 | — | $5,897.37 | — | rank by candle_score; rank candle_score; list ohlc_hot; ret5=+5.3; leftover $1174.72 | join🔴 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-17 09:30 ET | **BUY** | `COST` | 1 | $1110.49 | $1.99 | — | $4,784.88 | — | rank by candle_score; rank candle_score; list ohlc_hot; ret5=+4.5; leftover $1174.72 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-17 09:30 ET | **BUY** | `ARDT` | 64 | $18.09 | $2.18 | — | $3,624.94 | — | rank by candle_score; rank candle_score; list ohlc_hot; 🔵; ret5=+0.7; leftover $1174.72 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟢 |
+| 2026-11-17 09:30 ET | **BUY** | `OFRM` | 102 | $11.49 | $2.30 | — | $2,450.67 | — | rank by candle_score; rank candle_score; list ohlc_hot; ret5=+15.6; leftover $1174.72 | join🟡 sector🟡 gen🔴 news🟡 digest🔴 ab🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-11-17 09:30 ET | **BUY** | `VSNT` | 32 | $36.59 | $2.09 | — | $1,277.70 | — | rank by candle_score; rank candle_score; list ohlc_hot; 🔵; ret5=+5.1; leftover $1174.72 | join🟡 sector🟡 gen🔴 news🟡 digest🟡 ab🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-17 09:30 ET | **BUY** | `AZTA` | 24 | $47.07 | $2.06 | — | $145.96 | — | rank by candle_score; rank candle_score; list ohlc_hot; ret5=+15.3; leftover $1174.72 | join🟢 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $145.96 | ▼ close $9,294.36 vs 09:30 $9,421.31 (session -86.30) | 16:00 close · cash $145.96 · equity $9,294.36 vs 09:30 $9,421.31 (-126.95; session marks -86.30) · 8 name(s) marked open→close (per-name table). KVYO×52 09:30 $22.34 → close $22.10 -12.48; PAR×51 09:30 $22.96 → close $22.36 -30.60; XERS×69 09:30 $16.83 → close $16.80 -2.07; COST×1 09:30 $1110.49 → close $1110.08 -0.41; ARDT×64 09:30 $18.09 → close $17.75 -21.76; OFRM×102 09:30 $11.49 → close $11.66 +17.34; VSNT×32 09:30 $36.59 → close $36.40 -6.08; AZTA×24 09:30 $47.07 → close $45.81 -30.24 | — |
 
 ## Not taken
 

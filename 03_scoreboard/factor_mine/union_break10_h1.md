@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ break10, no 🚨
 
-Cash book **-18.39%** ($8,161) · signal-only (no cash/fees) was +11.56%. Starts YES **14/30**. Fills 611 · skips 100 · realized $-529.03.
+Cash book **-20.86%** ($7,914) · signal-only (no cash/fees) was +11.56%. Starts YES **14/30**. Fills 623 · skips 100 · realized $-529.03.
 
 ## How this sleeve decides (like you are 10)
 
@@ -817,6 +817,20 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-16 09:30 ET | **BUY** | `LBTYK` | 99 | $10.52 | $2.29 | — | $1,060.79 | — | union ∩ break10, no 🚨; gate break_10=True; list ohlc_hot; ret5=+8.2; leftover $1046.54 | join🔴 sector🟡 gen🔴 news🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-11-16 09:30 ET | **BUY** | `FROG` | 9 | $110.78 | $2.02 | — | $61.71 | — | union ∩ break10, no 🚨; gate break_10=True; list ohlc_hot; 🔵; ret5=+12.5; leftover $1046.54 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-11-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $61.71 | ▼ close $8,160.52 vs 09:30 $8,388.95 (session -181.28) | 16:00 close · cash $61.71 · equity $8,160.52 vs 09:30 $8,388.95 (-228.43; session marks -181.28) · 8 name(s) marked open→close (per-name table). ENGN×451 09:30 $2.32 → close $1.89 -193.93; NGEN×565 09:30 $1.85 → close $1.82 -16.95; CURI×343 09:30 $3.05 → close $3.21 +54.88; NUAI×338 09:30 $3.09 → close $3.11 +6.76; CHA×73 09:30 $14.17 → close $13.93 -17.52; WWW×41 09:30 $25.00 → close $25.29 +11.89; LBTYK×99 09:30 $10.52 → close $10.33 -18.81; FROG×9 09:30 $110.78 → close $109.94 -7.60 | — |
+| 2026-11-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $61.71 | ▲ 09:30 equity $8,174.89 vs yday $8,160.52 (+14.37) | 09:30 open · cash $61.71 (unchanged overnight, no fees) · equity $8,174.89 vs prior close $8,160.52 (+14.37) · 8 name(s) re-marked at the open (per-name table). CHA×73 yday $13.93 → 09:30 $14.07 +10.22; CURI×343 yday $3.21 → 09:30 $3.21 -1.71; ENGN×451 yday $1.89 → 09:30 $1.89 +0.00; FROG×9 yday $109.94 → 09:30 $108.63 -11.79; LBTYK×99 yday $10.33 → 09:30 $10.31 -1.98; NGEN×565 yday $1.82 → 09:30 $1.81 -5.65; NUAI×338 yday $3.11 → 09:30 $3.22 +37.18; WWW×41 yday $25.29 → 09:30 $25.00 -11.89 | — |
+| 2026-11-17 09:30 ET | **SELL** | `CHA` | 73 | $14.07 | $2.23 | $-11.74 | $1,086.59 | ▼ -11.74 after sell → book $8,172.66; vs 09:30 mark -2.23 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **SELL** | `ENGN` | 451 | $1.89 | $5.90 | $-205.65 | $1,933.08 | ▼ -205.65 after sell → book $8,166.76; vs 09:30 mark -5.90 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **SELL** | `FROG` | 9 | $108.63 | $2.04 | $-23.45 | $2,908.71 | ▼ -23.45 after sell → book $8,164.72; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **SELL** | `LBTYK` | 99 | $10.31 | $2.31 | $-25.39 | $3,927.09 | ▼ -25.39 after sell → book $8,162.41; vs 09:30 mark -2.31 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **SELL** | `NGEN` | 565 | $1.81 | $7.39 | $-37.28 | $4,942.34 | ▼ -37.28 after sell → book $8,155.02; vs 09:30 mark -7.39 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟢 digest🔴 ab🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-11-17 09:30 ET | **SELL** | `NUAI` | 338 | $3.22 | $4.43 | $+35.15 | $6,026.28 | ▲ +35.15 after sell → book $8,150.59; vs 09:30 mark -4.43 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🔴 digest🔴 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-17 09:30 ET | **BUY** | `CMCSA` | 39 | $25.44 | $2.11 | — | $5,032.01 | — | union ∩ break10, no 🚨; gate break_10=True; list flatten; 🔵; ret5=+4.4; leftover $1004.38 | join🟢 sector🟡 gen🔴 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-17 09:30 ET | **BUY** | `ATAT` | 26 | $38.42 | $2.07 | — | $4,031.02 | — | union ∩ break10, no 🚨; gate break_10=True; list flatten,ohlc_hot; ret5=+8.5; leftover $1004.38 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟢 |
+| 2026-11-17 09:30 ET | **BUY** | `KVYO` | 44 | $22.34 | $2.12 | — | $3,045.94 | — | union ∩ break10, no 🚨; gate break_10=True; list flatten,ohlc_hot; ret5=+9.9; leftover $1004.38 | join🟢 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-17 09:30 ET | **BUY** | `HAWK` | 54 | $18.42 | $2.15 | — | $2,049.11 | — | union ∩ break10, no 🚨; gate break_10=True; list yday_gainer,yday_mover; ret5=+22.9; leftover $1004.38 | join🔴 sector🟡 gen🔴 news🟢 digest🔴 judge🔴 ab🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-17 09:30 ET | **BUY** | `NCMI` | 525 | $1.91 | $6.77 | — | $1,039.59 | — | union ∩ break10, no 🚨; gate break_10=True; list yday_gainer,ohlc_hot; 🔵; ret5=+15.7; leftover $1004.38 | join🔴 sector🟡 gen🔴 news🟢 digest🟡 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-17 09:30 ET | **BUY** | `FUN` | 86 | $11.55 | $2.25 | — | $44.04 | — | union ∩ break10, no 🚨; gate break_10=True; list ohlc_hot; 🔵; ret5=+7.9; leftover $1004.38 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟡 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-11-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $44.04 | ▼ close $7,914.20 vs 09:30 $8,174.89 (session -218.93) | 16:00 close · cash $44.04 · equity $7,914.20 vs 09:30 $8,174.89 (-260.69; session marks -218.93) · 8 name(s) marked open→close (per-name table). CURI×343 09:30 $3.21 → close $3.02 -63.46; WWW×41 09:30 $25.00 → close $24.67 -13.53; CMCSA×39 09:30 $25.44 → close $25.31 -5.07; ATAT×26 09:30 $38.42 → close $38.48 +1.56; KVYO×44 09:30 $22.34 → close $22.10 -10.56; HAWK×54 09:30 $18.42 → close $18.45 +1.62; NCMI×525 09:30 $1.91 → close $1.76 -78.75; FUN×86 09:30 $11.55 → close $10.96 -50.74 | — |
 
 ## Not taken
 

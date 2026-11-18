@@ -6,7 +6,7 @@ Buys the flatten **wish-list** even on io/HOLD mornings — live `flatten_robust
 
 Side **long** · universe `flatten` · top 8 · rank `list` · size `half` · sell `list` · S-boost `none` · deploy half leftover
 
-Cash book **-20.40%** ($7,960) · signal-only (no cash/fees) was -10.41%. Starts YES **0/30**. Fills 400 · skips 239 · realized $-557.10.
+Cash book **-22.23%** ($7,777) · signal-only (no cash/fees) was -10.41%. Starts YES **0/30**. Fills 404 · skips 239 · realized $-557.10.
 
 ## How this sleeve decides (like you are 10)
 
@@ -602,6 +602,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-16 09:30 ET | **BUY** | `PODD` | 8 | $153.50 | $2.01 | — | $3,992.94 | — | deploy half leftover; list flatten; wish-list (live io HOLD — not a ticket); ret5=+4.1; leftover $1305.74 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-11-16 09:30 ET | **BUY** | `EPRX` | 160 | $8.15 | $2.47 | — | $2,686.47 | — | deploy half leftover; list flatten; wish-list (live io HOLD — not a ticket); ret5=+18.3; leftover $1305.74 | join🟢 sector🟡 gen🔴 news🔴 digest🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-11-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2,686.47 | ▼ close $7,960.33 vs 09:30 $8,236.86 (session -259.60) | 16:00 close · cash $2,686.47 · equity $7,960.33 vs 09:30 $8,236.86 (-276.53; session marks -259.60) · 8 name(s) marked open→close (per-name table). ALNY×3 09:30 $166.98 → close $159.73 -21.75; BLFS×9 09:30 $38.61 → close $38.61 +0.00; CHRD×3 09:30 $149.14 → close $146.78 -7.08; DVN×12 09:30 $46.00 → close $44.27 -20.76; ETON×9 09:30 $64.29 → close $63.88 -3.69; GRNT×92 09:30 $6.25 → close $6.13 -11.04; PODD×8 09:30 $153.50 → close $145.29 -65.68; EPRX×160 09:30 $8.15 → close $7.34 -129.60 | — |
+| 2026-11-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $2,686.47 | ▼ 09:30 equity $7,946.32 vs yday $7,960.33 (-14.01) | 09:30 open · cash $2,686.47 (unchanged overnight, no fees) · equity $7,946.32 vs prior close $7,960.33 (-14.01) · 8 name(s) re-marked at the open (per-name table). ALNY×3 yday $159.73 → 09:30 $159.02 -2.13; BLFS×9 yday $38.61 → 09:30 $38.61 +0.00; CHRD×3 yday $146.78 → 09:30 $147.56 +2.34; DVN×12 yday $44.27 → 09:30 $44.84 +6.84; EPRX×160 yday $7.34 → 09:30 $7.30 -6.40; ETON×9 yday $63.88 → 09:30 $62.58 -11.70; GRNT×92 yday $6.13 → 09:30 $6.15 +1.84; PODD×8 yday $145.29 → 09:30 $144.69 -4.80 | — |
+| 2026-11-17 09:30 ET | **BUY** | `CMCSA` | 8 | $25.44 | $2.01 | — | $2,480.94 | — | deploy half leftover; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ret5=+4.4; leftover $223.87 | join🟢 sector🟡 gen🔴 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-11-17 09:30 ET | **BUY** | `WWW` | 8 | $25.00 | $2.01 | — | $2,278.92 | — | deploy half leftover; list flatten,ohlc_hot; wish-list (live io HOLD — not a ticket); 🔵; ret5=+15.2; leftover $223.87 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-17 09:30 ET | **BUY** | `ATAT` | 5 | $38.42 | $1.94 | — | $2,084.89 | — | deploy half leftover; list flatten,ohlc_hot; wish-list (live io HOLD — not a ticket); ret5=+8.5; leftover $223.87 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟢 |
+| 2026-11-17 09:30 ET | **BUY** | `KVYO` | 10 | $22.34 | $2.02 | — | $1,859.47 | — | deploy half leftover; list flatten,ohlc_hot; wish-list (live io HOLD — not a ticket); ret5=+9.9; leftover $223.87 | join🟢 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,859.47 | ▼ close $7,776.79 vs 09:30 $7,946.32 (session -161.55) | 16:00 close · cash $1,859.47 · equity $7,776.79 vs 09:30 $7,946.32 (-169.53; session marks -161.55) · 12 name(s) marked open→close (per-name table). ALNY×3 09:30 $159.02 → close $156.50 -7.56; BLFS×9 09:30 $38.61 → close $38.61 +0.00; CHRD×3 09:30 $147.56 → close $143.28 -12.84; DVN×12 09:30 $44.84 → close $43.46 -16.56; EPRX×160 09:30 $7.30 → close $6.62 -108.80; ETON×9 09:30 $62.58 → close $63.65 +9.63; GRNT×92 09:30 $6.15 → close $5.88 -24.84; PODD×8 09:30 $144.69 → close $145.34 +5.20; CMCSA×8 09:30 $25.44 → close $25.31 -1.04; WWW×8 09:30 $25.00 → close $24.67 -2.64; ATAT×5 09:30 $38.42 → close $38.48 +0.30; KVYO×10 09:30 $22.34 → close $22.10 -2.40 | — |
 
 ## Not taken
 

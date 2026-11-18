@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · Clock-B #4 neg catalyst + weakness + failed recovery
 
-Cash book **+0.05%** ($10,005) · signal-only (no cash/fees) was -21.45%. Starts YES **8/30**. Fills 278 · skips 270 · realized $-967.53.
+Cash book **+0.91%** ($10,091) · signal-only (no cash/fees) was -21.45%. Starts YES **8/30**. Fills 283 · skips 270 · realized $-967.53.
 
 ## How this sleeve decides (like you are 10)
 
@@ -482,6 +482,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-16 09:30 ET | **SHORT** | `CTVA` | 258 | $9.35 | $3.46 | — | $17,060.32 | — | Clock-B #4 neg catalyst + weakness + failed recovery; gate clk_neg_weak_fail=True; list yday_mover; ret5=-20.8; leftover $2418.02 | join🟢 sector🟡 gen🔴 news🔴 digest🟡 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
 | 2026-11-16 09:30 ET | **SHORT** | `BRUN` | 470 | $5.14 | $6.23 | — | $19,469.90 | — | Clock-B #4 neg catalyst + weakness + failed recovery; gate clk_neg_weak_fail=True; list yday_mover; 🔵; ret5=-9.2; leftover $2418.02 | join🟢 sector🟡 gen🔴 news🔴 digest🟢 ab🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-11-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $19,469.90 | ▲ close $10,005.44 vs 09:30 $9,698.61 (session +343.03) | 16:00 close · cash $19,469.90 · equity $10,005.44 vs 09:30 $9,698.61 (+306.83; session marks +343.03) · 5 name(s) marked open→close (per-name table). MVST×6909 09:30 $0.22 → close $0.23 -55.27; RSKD×175 09:30 $9.14 → close $9.42 -49.00; STIM×1348 09:30 $1.39 → close $1.25 +188.72; CTVA×258 09:30 $9.35 → close $9.04 +79.98; BRUN×470 09:30 $5.14 → close $4.76 +178.60 | — |
+| 2026-11-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $19,469.90 | ▼ 09:30 equity $9,981.91 vs yday $10,005.44 (-23.53) | 09:30 open · cash $19,469.90 (unchanged overnight, no fees) · equity $9,981.91 vs prior close $10,005.44 (-23.53) · 5 name(s) re-marked at the open (per-name table). BRUN×470 yday $4.76 → 09:30 $4.74 +9.40; CTVA×258 yday $9.04 → 09:30 $9.25 -54.18; MVST×6909 yday $0.23 → 09:30 $0.22 +20.73; RSKD×175 yday $9.42 → 09:30 $9.34 +14.00; STIM×1348 yday $1.25 → 09:30 $1.26 -13.48 | — |
+| 2026-11-17 09:30 ET | **SHORT** | `PRME` | 234 | $4.25 | $3.09 | — | $20,461.31 | — | Clock-B #4 neg catalyst + weakness + failed recovery; gate clk_neg_weak_fail=True; list yday_gainer; ret5=-2.6; leftover $998.19 | join🟢 sector🟡 gen🔴 news🔴 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-17 09:30 ET | **SHORT** | `RMIX` | 186 | $5.34 | $2.62 | — | $21,451.93 | — | Clock-B #4 neg catalyst + weakness + failed recovery; gate clk_neg_weak_fail=True; list yday_mover; ret5=-40.4; leftover $998.19 | join🔴 sector🟡 gen🔴 news🔴 digest🔴 ab🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-11-17 09:30 ET | **SHORT** | `KLC` | 860 | $1.16 | $11.27 | — | $22,438.26 | — | Clock-B #4 neg catalyst + weakness + failed recovery; gate clk_neg_weak_fail=True; list yday_mover; 🔵; ret5=-50.2; leftover $998.19 | join🔴 sector🟡 gen🔴 news🔴 digest🔴 ab🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-11-17 09:30 ET | **SHORT** | `AEHL` | 123 | $8.05 | $2.42 | — | $23,425.99 | — | Clock-B #4 neg catalyst + weakness + failed recovery; gate clk_neg_weak_fail=True; list yday_mover; ret5=-36.7; leftover $998.19 | join🔴 sector🟡 gen🔴 news🔴 digest🔴 judge🔴 ab🔴 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-11-17 09:30 ET | **SHORT** | `XP` | 66 | $14.99 | $2.24 | — | $24,413.09 | — | Clock-B #4 neg catalyst + weakness + failed recovery; gate clk_neg_weak_fail=True; list earn_react; ret5=-4.1; leftover $998.19 | join🟢 sector🟡 gen🔴 news🔴 digest🔴 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-11-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $24,413.09 | ▲ close $10,090.88 vs 09:30 $9,981.91 (session +130.60) | 16:00 close · cash $24,413.09 · equity $10,090.88 vs 09:30 $9,981.91 (+108.97; session marks +130.60) · 10 name(s) marked open→close (per-name table). BRUN×470 09:30 $4.74 → close $4.68 +28.20; CTVA×258 09:30 $9.25 → close $8.82 +110.94; MVST×6909 09:30 $0.22 → close $0.21 +69.09; RSKD×175 09:30 $9.34 → close $9.69 -61.25; STIM×1348 09:30 $1.26 → close $1.28 -26.96; PRME×234 09:30 $4.25 → close $3.84 +95.94; RMIX×186 09:30 $5.34 → close $6.05 -132.06; KLC×860 09:30 $1.16 → close $1.12 +34.40; AEHL×123 09:30 $8.05 → close $8.17 -14.76; XP×66 09:30 $14.99 → close $14.58 +27.06 | — |
 
 ## Not taken
 

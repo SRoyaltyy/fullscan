@@ -6,7 +6,7 @@ Buys the flatten **wish-list** even on io/HOLD mornings — live `flatten_robust
 
 Side **long** · universe `flatten` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · flatten wish-list ∩ vol🟢
 
-Cash book **-31.02%** ($6,898) · signal-only (no cash/fees) was -19.12%. Starts YES **6/30**. Fills 80 · skips 71 · realized $-2440.55.
+Cash book **-32.41%** ($6,759) · signal-only (no cash/fees) was -19.12%. Starts YES **6/30**. Fills 81 · skips 71 · realized $-2440.55.
 
 ## How this sleeve decides (like you are 10)
 
@@ -286,6 +286,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-16 09:30 ET | **SELL** | `TTD` | 153 | $15.51 | $2.49 | $+37.90 | $7,140.43 | ▲ +37.90 after sell → book $7,204.72; vs 09:30 mark -2.50 | dropped from list after 3 sess (min 3) | — |
 | 2026-11-16 09:30 ET | **BUY** | `ALNY` | 42 | $166.98 | $2.12 | — | $125.16 | — | flatten wish-list ∩ vol🟢; gate vol=good; list flatten; wish-list (live io HOLD — not a ticket); ret5=+5.8; leftover $7140.43 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $125.16 | ▼ close $6,897.70 vs 09:30 $7,216.44 (session -304.91) | 16:00 close · cash $125.16 · equity $6,897.70 vs 09:30 $7,216.44 (-318.74; session marks -304.91) · 2 name(s) marked open→close (per-name table). ETON×1 09:30 $64.29 → close $63.88 -0.41; ALNY×42 09:30 $166.98 → close $159.73 -304.50 | — |
+| 2026-11-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $125.16 | ▼ 09:30 equity $6,866.58 vs yday $6,897.70 (-31.12) | 09:30 open · cash $125.16 (unchanged overnight, no fees) · equity $6,866.58 vs prior close $6,897.70 (-31.12) · 2 name(s) re-marked at the open (per-name table). ALNY×42 yday $159.73 → 09:30 $159.02 -29.82; ETON×1 yday $63.88 → 09:30 $62.58 -1.30 | — |
+| 2026-11-17 09:30 ET | **BUY** | `WWW` | 4 | $25.00 | $1.01 | — | $24.15 | — | flatten wish-list ∩ vol🟢; gate vol=good; list flatten,ohlc_hot; wish-list (live io HOLD — not a ticket); 🔵; ret5=+15.2; leftover $125.16 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $24.15 | ▼ close $6,759.48 vs 09:30 $6,866.58 (session -106.09) | 16:00 close · cash $24.15 · equity $6,759.48 vs 09:30 $6,866.58 (-107.10; session marks -106.09) · 3 name(s) marked open→close (per-name table). ALNY×42 09:30 $159.02 → close $156.50 -105.84; ETON×1 09:30 $62.58 → close $63.65 +1.07; WWW×4 09:30 $25.00 → close $24.67 -1.32 | — |
 
 ## Not taken
 

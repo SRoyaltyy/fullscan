@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · merged news🟢 and cameras +7 −≤1
 
-Cash book **-13.89%** ($8,611) · signal-only (no cash/fees) was -11.63%. Starts YES **4/30**. Fills 126 · skips 12 · realized $-910.91.
+Cash book **-15.07%** ($8,493) · signal-only (no cash/fees) was -11.63%. Starts YES **4/30**. Fills 127 · skips 12 · realized $-910.91.
 
 ## How this sleeve decides (like you are 10)
 
@@ -335,6 +335,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,611.39 | ▲ close $8,611.39 vs 09:30 $8,611.39 (session +0.00) | 16:00 close · cash $8,611.39 · no lots left · equity $8,611.39. | — |
 | 2026-11-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,611.39 | ▲ 09:30 equity $8,611.39 vs yday $8,611.39 (+0.00) | 09:30 open · cash $8,611.39 · no holdings · equity $8,611.39 vs prior close $8,611.39 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-11-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,611.39 | ▲ close $8,611.39 vs 09:30 $8,611.39 (session +0.00) | 16:00 close · cash $8,611.39 · no lots left · equity $8,611.39. | — |
+| 2026-11-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,611.39 | ▲ 09:30 equity $8,611.39 vs yday $8,611.39 (+0.00) | 09:30 open · cash $8,611.39 · no holdings · equity $8,611.39 vs prior close $8,611.39 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-17 09:30 ET | **BUY** | `WWW` | 344 | $25.00 | $4.44 | — | $6.95 | — | merged news🟢 and cameras +7 −≤1; gate cam_bad_max=1,n_pos_min=7,news=good; rank cond; list flatten,ohlc_hot; 🔵; ret5=+15.2; leftover $8611.39 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6.95 | ▼ close $8,493.43 vs 09:30 $8,611.39 (session -113.52) | 16:00 close · cash $6.95 · equity $8,493.43 vs 09:30 $8,611.39 (-117.96; session marks -113.52) · 1 name(s) marked open→close (per-name table). WWW×344 09:30 $25.00 → close $24.67 -113.52 | — |
 
 ## Not taken
 

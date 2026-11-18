@@ -1,0 +1,212 @@
+{
+  "buys": [
+    {
+      "fill_rule": "open",
+      "price": 3.205,
+      "shares": 562,
+      "side": "BUY",
+      "ticker": "CURI"
+    },
+    {
+      "fill_rule": "open",
+      "price": 18.42,
+      "shares": 97,
+      "side": "BUY",
+      "ticker": "HAWK"
+    },
+    {
+      "fill_rule": "open",
+      "price": 11.55,
+      "shares": 156,
+      "side": "BUY",
+      "ticker": "FUN"
+    },
+    {
+      "fill_rule": "open",
+      "price": 25.0,
+      "shares": 72,
+      "side": "BUY",
+      "ticker": "WWW"
+    }
+  ],
+  "cash": 6.45,
+  "date": "2026-11-17",
+  "equity": 6979.34,
+  "fees": 53.8689,
+  "fills": [
+    {
+      "fees": 7.8943,
+      "fill_rule": "open",
+      "pnl": 77.79,
+      "price": 3.205,
+      "shares": 603,
+      "side": "SELL",
+      "ticker": "CURI"
+    },
+    {
+      "fees": 10.5695,
+      "fill_rule": "open",
+      "pnl": -368.43,
+      "price": 1.89,
+      "shares": 808,
+      "side": "SELL",
+      "ticker": "ENGN"
+    },
+    {
+      "fees": 13.2636,
+      "fill_rule": "open",
+      "pnl": -66.9,
+      "price": 1.81,
+      "shares": 1014,
+      "side": "SELL",
+      "ticker": "NGEN"
+    },
+    {
+      "fees": 7.9467,
+      "fill_rule": "open",
+      "pnl": 63.13,
+      "price": 3.22,
+      "shares": 607,
+      "side": "SELL",
+      "ticker": "NUAI"
+    },
+    {
+      "fees": 7.2498,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 3.205,
+      "shares": 562,
+      "side": "BUY",
+      "ticker": "CURI"
+    },
+    {
+      "fees": 2.281,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 18.42,
+      "shares": 97,
+      "side": "BUY",
+      "ticker": "HAWK"
+    },
+    {
+      "fees": 2.458,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 11.55,
+      "shares": 156,
+      "side": "BUY",
+      "ticker": "FUN"
+    },
+    {
+      "fees": 2.206,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 25.0,
+      "shares": 72,
+      "side": "BUY",
+      "ticker": "WWW"
+    }
+  ],
+  "holdings": [
+    "CURI",
+    "FUN",
+    "HAWK",
+    "WWW"
+  ],
+  "mean": -3.0169,
+  "n_trades_today": 8,
+  "recipe": "oos0914_break10_h1_sx",
+  "sells": [
+    {
+      "fill_rule": "open",
+      "price": 3.205,
+      "shares": 603,
+      "side": "SELL",
+      "ticker": "CURI"
+    },
+    {
+      "fill_rule": "open",
+      "price": 1.89,
+      "shares": 808,
+      "side": "SELL",
+      "ticker": "ENGN"
+    },
+    {
+      "fill_rule": "open",
+      "price": 1.81,
+      "shares": 1014,
+      "side": "SELL",
+      "ticker": "NGEN"
+    },
+    {
+      "fill_rule": "open",
+      "price": 3.22,
+      "shares": 607,
+      "side": "SELL",
+      "ticker": "NUAI"
+    }
+  ],
+  "state": {
+    "after": "2026-11-17",
+    "cash": 6.45,
+    "pos": {
+      "CURI": {
+        "close_px": 3.02,
+        "cost": 1808.4598,
+        "entry_date": "2026-11-17",
+        "entry_px": 3.205,
+        "fee_in": 7.2498,
+        "last_px": 3.205,
+        "min_hold": 1,
+        "notional": 1801.21,
+        "peak_px": 3.205,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list yday_gainer; ret5=+28.4; leftover $1802.60",
+        "shares": 562,
+        "ticker": "CURI"
+      },
+      "FUN": {
+        "close_px": 10.96,
+        "cost": 1804.2580000000003,
+        "entry_date": "2026-11-17",
+        "entry_px": 11.55,
+        "fee_in": 2.458,
+        "last_px": 11.55,
+        "min_hold": 1,
+        "notional": 1801.8000000000002,
+        "peak_px": 11.55,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list ohlc_hot; \ud83d\udd35; ret5=+7.9; leftover $1802.60",
+        "shares": 156,
+        "ticker": "FUN"
+      },
+      "HAWK": {
+        "close_px": 18.45,
+        "cost": 1789.0210000000002,
+        "entry_date": "2026-11-17",
+        "entry_px": 18.42,
+        "fee_in": 2.281,
+        "last_px": 18.42,
+        "min_hold": 1,
+        "notional": 1786.7400000000002,
+        "peak_px": 18.42,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list yday_gainer,yday_mover; ret5=+22.9; leftover $1802.60",
+        "shares": 97,
+        "ticker": "HAWK"
+      },
+      "WWW": {
+        "close_px": 24.67,
+        "cost": 1802.206,
+        "entry_date": "2026-11-17",
+        "entry_px": 25.0,
+        "fee_in": 2.206,
+        "last_px": 25.0,
+        "min_hold": 1,
+        "notional": 1800.0,
+        "peak_px": 25.0,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list flatten,ohlc_hot; \ud83d\udd35; ret5=+15.2; leftover $1802.60",
+        "shares": 72,
+        "ticker": "WWW"
+      }
+    },
+    "yday_equity": 6979.34
+  }
+}

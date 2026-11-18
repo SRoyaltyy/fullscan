@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ macd_xup, no 🚨
 
-Cash book **-35.63%** ($6,437) · signal-only (no cash/fees) was -19.02%. Starts YES **0/30**. Fills 375 · skips 71 · realized $-1788.82.
+Cash book **-37.10%** ($6,290) · signal-only (no cash/fees) was -19.02%. Starts YES **0/30**. Fills 381 · skips 71 · realized $-1788.82.
 
 ## How this sleeve decides (like you are 10)
 
@@ -581,6 +581,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-16 09:30 ET | **BUY** | `LMND` | 50 | $43.49 | $2.14 | — | $2,170.08 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list yday_gainer; 🔵; ret5=+11.7; leftover $2179.74 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-16 09:30 ET | **BUY** | `NU` | 167 | $12.96 | $2.49 | — | $3.27 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list ohlc_hot; ret5=+9.9; leftover $2179.74 | join🟡 sector🟡 gen🔴 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
 | 2026-11-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $3.27 | ▼ close $6,437.11 vs 09:30 $6,549.87 (session -83.70) | 16:00 close · cash $3.27 · equity $6,437.11 vs 09:30 $6,549.87 (-112.76; session marks -83.70) · 3 name(s) marked open→close (per-name table). XLAB×1068 09:30 $2.04 → close $1.96 -85.44; LMND×50 09:30 $43.49 → close $44.46 +48.50; NU×167 09:30 $12.96 → close $12.68 -46.76 | — |
+| 2026-11-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $3.27 | ▼ 09:30 equity $6,414.06 vs yday $6,437.11 (-23.05) | 09:30 open · cash $3.27 (unchanged overnight, no fees) · equity $6,414.06 vs prior close $6,437.11 (-23.05) · 3 name(s) re-marked at the open (per-name table). LMND×50 yday $44.46 → 09:30 $44.90 +22.00; NU×167 yday $12.68 → 09:30 $12.73 +8.35; XLAB×1068 yday $1.96 → 09:30 $1.91 -53.40 | — |
+| 2026-11-17 09:30 ET | **SELL** | `LMND` | 50 | $44.90 | $2.17 | $+66.19 | $2,246.10 | ▲ +66.19 after sell → book $6,411.89; vs 09:30 mark -2.17 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **SELL** | `NU` | 167 | $12.73 | $2.54 | $-43.44 | $4,369.48 | ▼ -43.44 after sell → book $6,409.36; vs 09:30 mark -2.53 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-17 09:30 ET | **SELL** | `XLAB` | 1068 | $1.91 | $13.97 | $-166.59 | $6,395.39 | ▼ -166.59 after sell → book $6,395.39; vs 09:30 mark -13.97 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **BUY** | `KVYO` | 95 | $22.34 | $2.27 | — | $4,270.81 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list flatten,ohlc_hot; ret5=+9.9; leftover $2131.80 | join🟢 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-17 09:30 ET | **BUY** | `CDXS` | 1992 | $1.07 | $25.70 | — | $2,113.67 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list probable,yday_gainer,yday_mover; 🔵; ret5=-4.5; leftover $2131.80 | join🔴 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-17 09:30 ET | **BUY** | `MOH` | 9 | $227.04 | $2.02 | — | $68.30 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list ohlc_hot; ret5=+14.6; leftover $2131.80 | join🔴 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-11-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $68.30 | ▼ close $6,290.13 vs 09:30 $6,414.06 (session -75.27) | 16:00 close · cash $68.30 · equity $6,290.13 vs 09:30 $6,414.06 (-123.93; session marks -75.27) · 3 name(s) marked open→close (per-name table). KVYO×95 09:30 $22.34 → close $22.10 -22.80; CDXS×1992 09:30 $1.07 → close $1.07 +0.00; MOH×9 09:30 $227.04 → close $221.21 -52.47 | — |
 
 ## Not taken
 

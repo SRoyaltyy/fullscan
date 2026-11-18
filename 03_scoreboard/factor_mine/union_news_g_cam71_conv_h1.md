@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 4 · rank `cond` · size `conviction` · sell `list` · S-boost `none` · news🟢 +7 −≤1; 70% leftover if #1 net ≥ 5
 
-Cash book **-18.88%** ($8,112) · signal-only (no cash/fees) was -13.48%. Starts YES **6/30**. Fills 98 · skips 10 · realized $-54.32.
+Cash book **-19.99%** ($8,001) · signal-only (no cash/fees) was -13.48%. Starts YES **6/30**. Fills 99 · skips 10 · realized $-54.32.
 
 ## How this sleeve decides (like you are 10)
 
@@ -307,6 +307,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,112.45 | ▲ close $8,112.45 vs 09:30 $8,112.45 (session +0.00) | 16:00 close · cash $8,112.45 · no lots left · equity $8,112.45. | — |
 | 2026-11-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,112.45 | ▲ 09:30 equity $8,112.45 vs yday $8,112.45 (+0.00) | 09:30 open · cash $8,112.45 · no holdings · equity $8,112.45 vs prior close $8,112.45 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-11-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,112.45 | ▲ close $8,112.45 vs 09:30 $8,112.45 (session +0.00) | 16:00 close · cash $8,112.45 · no lots left · equity $8,112.45. | — |
+| 2026-11-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,112.45 | ▲ 09:30 equity $8,112.45 vs yday $8,112.45 (+0.00) | 09:30 open · cash $8,112.45 · no holdings · equity $8,112.45 vs prior close $8,112.45 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-17 09:30 ET | **BUY** | `WWW` | 324 | $25.00 | $4.18 | — | $8.27 | — | news🟢 +7 −≤1; 70% leftover if #1 net ≥ 5; gate cam_bad_max=1,n_pos_min=7,news=good; rank cond; list flatten,ohlc_hot; 🔵; ret5=+15.2; leftover $8112.45 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8.27 | ▼ close $8,001.35 vs 09:30 $8,112.45 (session -106.92) | 16:00 close · cash $8.27 · equity $8,001.35 vs 09:30 $8,112.45 (-111.10; session marks -106.92) · 1 name(s) marked open→close (per-name table). WWW×324 09:30 $25.00 → close $24.67 -106.92 | — |
 
 ## Not taken
 

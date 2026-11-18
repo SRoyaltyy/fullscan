@@ -671,6 +671,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-16 09:30 ET | **SELL** | `NBIS` | 8 | $106.80 | $2.03 | $-137.81 | $6,669.46 | ▼ -137.81 after sell → book $7,609.28; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟡 ab🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-16 09:30 ET | **SELL** | `RXT` | 343 | $2.74 | $4.49 | $-101.53 | $7,604.79 | ▼ -101.53 after sell → book $7,604.79; vs 09:30 mark -4.49 | dropped from list after 1 sess (min 1) | — |
 | 2026-11-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,604.79 | ▲ close $7,604.79 vs 09:30 $7,626.68 (session +0.00) | 16:00 close · cash $7,604.79 · no lots left · equity $7,604.79. | — |
+| 2026-11-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,604.79 | ▲ 09:30 equity $7,604.79 vs yday $7,604.79 (+0.00) | 09:30 open · cash $7,604.79 · no holdings · equity $7,604.79 vs prior close $7,604.79 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-11-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,604.79 | ▲ close $7,604.79 vs 09:30 $7,604.79 (session +0.00) | 16:00 close · cash $7,604.79 · no lots left · equity $7,604.79. | — |
 
 ## Not taken
 

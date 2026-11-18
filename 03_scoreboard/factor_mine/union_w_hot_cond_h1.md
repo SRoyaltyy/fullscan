@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `w_hot_cond` · size `leftover` · sell `list` · S-boost `none` · rank by w_hot_cond
 
-Cash book **+19.97%** ($11,997) · signal-only (no cash/fees) was +31.34%. Starts YES **29/30**. Fills 602 · skips 96 · realized $-9.27.
+Cash book **+17.31%** ($11,731) · signal-only (no cash/fees) was +31.34%. Starts YES **29/30**. Fills 614 · skips 96 · realized $-9.27.
 
 ## How this sleeve decides (like you are 10)
 
@@ -807,6 +807,20 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-16 09:30 ET | **BUY** | `CHA` | 107 | $14.17 | $2.31 | — | $1,501.74 | — | rank by w_hot_cond; rank w_hot_cond; list yday_gainer,ohlc_hot; ret5=+15.6; leftover $1526.35 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-16 09:30 ET | **BUY** | `FROG` | 13 | $110.78 | $2.03 | — | $59.51 | — | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; 🔵; ret5=+12.5; leftover $1526.35 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-11-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $59.51 | ▼ close $11,996.72 vs 09:30 $12,246.68 (session -168.90) | 16:00 close · cash $59.51 · equity $11,996.72 vs 09:30 $12,246.68 (-249.96; session marks -168.90) · 8 name(s) marked open→close (per-name table). TTEC×519 09:30 $2.94 → close $3.07 +67.47; NUAI×493 09:30 $3.09 → close $3.11 +9.86; ENGN×657 09:30 $2.32 → close $1.89 -282.51; WWW×61 09:30 $25.00 → close $25.29 +17.69; CURI×500 09:30 $3.05 → close $3.21 +80.00; NGEN×825 09:30 $1.85 → close $1.82 -24.75; CHA×107 09:30 $14.17 → close $13.93 -25.68; FROG×13 09:30 $110.78 → close $109.94 -10.98 | — |
+| 2026-11-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $59.51 | ▲ 09:30 equity $12,025.65 vs yday $11,996.72 (+28.93) | 09:30 open · cash $59.51 (unchanged overnight, no fees) · equity $12,025.65 vs prior close $11,996.72 (+28.93) · 8 name(s) re-marked at the open (per-name table). CHA×107 yday $13.93 → 09:30 $14.07 +14.98; CURI×500 yday $3.21 → 09:30 $3.21 -2.50; ENGN×657 yday $1.89 → 09:30 $1.89 +0.00; FROG×13 yday $109.94 → 09:30 $108.63 -17.03; NGEN×825 yday $1.82 → 09:30 $1.81 -8.25; NUAI×493 yday $3.11 → 09:30 $3.22 +54.23; TTEC×519 yday $3.07 → 09:30 $3.08 +5.19; WWW×61 yday $25.29 → 09:30 $25.00 -17.69 | — |
+| 2026-11-17 09:30 ET | **SELL** | `CHA` | 107 | $14.07 | $2.34 | $-15.35 | $1,562.66 | ▼ -15.35 after sell → book $12,023.31; vs 09:30 mark -2.34 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **SELL** | `ENGN` | 657 | $1.89 | $8.59 | $-299.58 | $2,795.79 | ▼ -299.58 after sell → book $12,014.71; vs 09:30 mark -8.60 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **SELL** | `FROG` | 13 | $108.63 | $2.05 | $-32.09 | $4,205.93 | ▼ -32.09 after sell → book $12,012.66; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **SELL** | `NGEN` | 825 | $1.81 | $10.79 | $-54.43 | $5,688.39 | ▼ -54.43 after sell → book $12,001.87; vs 09:30 mark -10.79 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟢 digest🔴 ab🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-11-17 09:30 ET | **SELL** | `NUAI` | 493 | $3.22 | $6.45 | $+51.28 | $7,269.40 | ▲ +51.28 after sell → book $11,995.42; vs 09:30 mark -6.45 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🔴 digest🔴 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-17 09:30 ET | **SELL** | `TTEC` | 519 | $3.08 | $6.79 | $+59.17 | $8,861.12 | ▲ +59.17 after sell → book $11,988.62; vs 09:30 mark -6.80 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **BUY** | `LFTO` | 59 | $24.93 | $2.17 | — | $7,388.09 | — | rank by w_hot_cond; rank w_hot_cond; list yday_gainer,yday_mover; 🔵; ret5=+30.7; leftover $1476.85 | join🟢 sector🟡 gen🔴 news🟢 digest🟡 ab🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-17 09:30 ET | **BUY** | `ATAT` | 38 | $38.42 | $2.10 | — | $5,926.02 | — | rank by w_hot_cond; rank w_hot_cond; list flatten,ohlc_hot; ret5=+8.5; leftover $1476.85 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟢 |
+| 2026-11-17 09:30 ET | **BUY** | `HTHT` | 27 | $54.13 | $2.07 | — | $4,462.44 | — | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; 🔵; ret5=+9.3; leftover $1476.85 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-11-17 09:30 ET | **BUY** | `TDC` | 42 | $34.55 | $2.12 | — | $3,009.23 | — | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; ret5=+8.7; leftover $1476.85 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-11-17 09:30 ET | **BUY** | `LRMR` | 493 | $2.99 | $6.36 | — | $1,528.80 | — | rank by w_hot_cond; rank w_hot_cond; list yday_gainer; 🔵; ret5=+18.6; leftover $1476.85 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-17 09:30 ET | **BUY** | `HAWK` | 80 | $18.42 | $2.23 | — | $52.97 | — | rank by w_hot_cond; rank w_hot_cond; list yday_gainer,yday_mover; ret5=+22.9; leftover $1476.85 | join🔴 sector🟡 gen🔴 news🟢 digest🔴 judge🔴 ab🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-11-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $52.97 | ▼ close $11,731.36 vs 09:30 $12,025.65 (session -240.22) | 16:00 close · cash $52.97 · equity $11,731.36 vs 09:30 $12,025.65 (-294.29; session marks -240.22) · 8 name(s) marked open→close (per-name table). CURI×500 09:30 $3.21 → close $3.02 -92.50; WWW×61 09:30 $25.00 → close $24.67 -20.13; LFTO×59 09:30 $24.93 → close $22.68 -132.75; ATAT×38 09:30 $38.42 → close $38.48 +2.28; HTHT×27 09:30 $54.13 → close $53.65 -12.96; TDC×42 09:30 $34.55 → close $34.87 +13.44; LRMR×493 09:30 $2.99 → close $2.99 +0.00; HAWK×80 09:30 $18.42 → close $18.45 +2.40 | — |
 
 ## Not taken
 

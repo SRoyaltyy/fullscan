@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-8.63%** ($9,137) · signal-only (no cash/fees) was +8.48%. Starts YES **1/30**. Fills 71 · skips 9 · realized $-574.52.
+Cash book **-18.55%** ($8,145) · signal-only (no cash/fees) was +8.48%. Starts YES **1/30**. Fills 72 · skips 9 · realized $-574.52.
 
 ## How this sleeve decides (like you are 10)
 
@@ -279,6 +279,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,275.79 | ▲ 09:30 equity $9,275.79 vs yday $9,275.79 (+0.00) | 09:30 open · cash $9,275.79 · no holdings · equity $9,275.79 vs prior close $9,275.79 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-11-16 09:30 ET | **BUY** | `UNIT` | 1907 | $4.85 | $24.60 | — | $2.24 | — | combo gate; gate macd_up=True,rsi_os=True; list probable; 🔵; ret5=-6.5; leftover $9275.79 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
 | 2026-11-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2.24 | ▼ close $9,136.77 vs 09:30 $9,275.79 (session -114.42) | 16:00 close · cash $2.24 · equity $9,136.77 vs 09:30 $9,275.79 (-139.02; session marks -114.42) · 1 name(s) marked open→close (per-name table). UNIT×1907 09:30 $4.85 → close $4.79 -114.42 | — |
+| 2026-11-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $2.24 | ▼ 09:30 equity $9,041.42 vs yday $9,136.77 (-95.35) | 09:30 open · cash $2.24 (unchanged overnight, no fees) · equity $9,041.42 vs prior close $9,136.77 (-95.35) · 1 name(s) re-marked at the open (per-name table). UNIT×1907 yday $4.79 → 09:30 $4.74 -95.35 | — |
+| 2026-11-17 09:30 ET | **BUY** | `CATX` | 2 | $0.92 | $0.02 | — | $0.38 | — | combo gate; gate macd_up=True,rsi_os=True; list probable,yday_gainer; 🔵; ret5=+7.0; leftover $2.24 | join🟡 sector🟡 gen🔴 news🟡 digest🔴 ab🔴 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $0.38 | ▼ close $8,144.99 vs 09:30 $9,041.42 (session -896.41) | 16:00 close · cash $0.38 · equity $8,144.99 vs 09:30 $9,041.42 (-896.43; session marks -896.41) · 2 name(s) marked open→close (per-name table). UNIT×1907 09:30 $4.74 → close $4.27 -896.29; CATX×2 09:30 $0.92 → close $0.86 -0.12 | — |
 
 ## Not taken
 

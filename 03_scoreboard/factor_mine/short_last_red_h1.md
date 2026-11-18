@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · last bar red
 
-Cash book **-9.66%** ($9,034) · signal-only (no cash/fees) was -2.93%. Starts YES **19/30**. Fills 602 · skips 107 · realized $-717.78.
+Cash book **-8.35%** ($9,165) · signal-only (no cash/fees) was -2.93%. Starts YES **19/30**. Fills 618 · skips 107 · realized $-717.78.
 
 ## How this sleeve decides (like you are 10)
 
@@ -806,6 +806,24 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-16 09:30 ET | **SHORT** | `XTND` | 421 | $1.35 | $5.53 | — | $13,021.67 | — | last bar red; gate last_red=True; list yday_gainer; 🔵; ret5=+39.0; leftover $568.72 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 heat🔴 vol🟡 buy🟡 |
 | 2026-11-16 09:30 ET | **SHORT** | `DPC` | 17 | $32.88 | $2.08 | — | $13,578.55 | — | last bar red; gate last_red=True; list yday_gainer; 🔵; ret5=+19.0; leftover $568.72 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 judge🔴 ab🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-11-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $13,578.55 | ▼ close $9,034.25 vs 09:30 $9,130.11 (session -42.78) | 16:00 close · cash $13,578.55 · equity $9,034.25 vs 09:30 $9,130.11 (-95.86; session marks -42.78) · 8 name(s) marked open→close (per-name table). DVN×12 09:30 $46.00 → close $44.27 +20.76; ADRX×39 09:30 $14.22 → close $14.00 +8.58; XLAB×278 09:30 $2.04 → close $1.96 +22.24; AVEX×46 09:30 $12.30 → close $13.40 -50.60; HPK×71 09:30 $7.99 → close $7.80 +13.49; TTEC×193 09:30 $2.94 → close $3.07 -25.09; XTND×421 09:30 $1.35 → close $1.47 -50.52; DPC×17 09:30 $32.88 → close $31.80 +18.36 | — |
+| 2026-11-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $13,578.55 | ▼ 09:30 equity $9,032.34 vs yday $9,034.25 (-1.91) | 09:30 open · cash $13,578.55 (unchanged overnight, no fees) · equity $9,032.34 vs prior close $9,034.25 (-1.91) · 8 name(s) re-marked at the open (per-name table). ADRX×39 yday $14.00 → 09:30 $14.03 -1.17; AVEX×46 yday $13.40 → 09:30 $13.49 -4.14; DPC×17 yday $31.80 → 09:30 $32.06 -4.42; DVN×12 yday $44.27 → 09:30 $44.84 -6.84; HPK×71 yday $7.80 → 09:30 $7.94 -9.94; TTEC×193 yday $3.07 → 09:30 $3.08 -1.93; XLAB×278 yday $1.96 → 09:30 $1.91 +13.90; XTND×421 yday $1.47 → 09:30 $1.44 +12.63 | — |
+| 2026-11-17 09:30 ET | **COVER** | `ADRX` | 39 | $14.03 | $2.11 | $+3.16 | $13,029.27 | ▲ +3.16 after sell → book $9,030.23; vs 09:30 mark -2.11 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **COVER** | `AVEX` | 46 | $13.49 | $2.13 | $-59.03 | $12,406.60 | ▼ -59.03 after sell → book $9,028.10; vs 09:30 mark -2.13 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **COVER** | `DPC` | 17 | $32.06 | $2.04 | $+9.82 | $11,859.54 | ▲ +9.82 after sell → book $9,026.06; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **COVER** | `DVN` | 12 | $44.84 | $2.03 | $+9.83 | $11,319.44 | ▲ +9.83 after sell → book $9,024.04; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **COVER** | `HPK` | 71 | $7.94 | $2.20 | $-0.89 | $10,753.50 | ▼ -0.89 after sell → book $9,021.84; vs 09:30 mark -2.20 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **COVER** | `TTEC` | 193 | $3.08 | $2.57 | $-32.22 | $10,156.49 | ▼ -32.22 after sell → book $9,019.27; vs 09:30 mark -2.57 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **COVER** | `XLAB` | 278 | $1.91 | $3.59 | $+28.90 | $9,621.92 | ▲ +28.90 after sell → book $9,015.68; vs 09:30 mark -3.59 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **COVER** | `XTND` | 421 | $1.44 | $5.43 | $-48.85 | $9,010.25 | ▼ -48.85 after sell → book $9,010.25; vs 09:30 mark -5.43 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **SHORT** | `ATAT` | 14 | $38.42 | $2.07 | — | $9,546.06 | — | last bar red; gate last_red=True; list flatten,ohlc_hot; ret5=+8.5; leftover $563.14 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟢 |
+| 2026-11-17 09:30 ET | **SHORT** | `LFMD` | 307 | $1.83 | $4.04 | — | $10,103.84 | — | last bar red; gate last_red=True; list probable,yday_gainer,yday_mover; ret5=-11.9; leftover $563.14 | join🔴 sector🟡 gen🔴 news🟡 digest🔴 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-11-17 09:30 ET | **SHORT** | `CDXS` | 526 | $1.07 | $6.90 | — | $10,659.76 | — | last bar red; gate last_red=True; list probable,yday_gainer,yday_mover; 🔵; ret5=-4.5; leftover $563.14 | join🔴 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-17 09:30 ET | **SHORT** | `MRLN` | 592 | $0.95 | $7.52 | — | $11,214.63 | — | last bar red; gate last_red=True; list probable,yday_gainer; ret5=-4.3; leftover $563.14 | join🔴 sector🟡 gen🔴 news🟢 digest🔴 judge🔴 ab🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-11-17 09:30 ET | **SHORT** | `TNDM` | 30 | $18.25 | $2.12 | — | $11,760.02 | — | last bar red; gate last_red=True; list probable,yday_gainer; 🔵; ret5=+1.7; leftover $563.14 | join🔴 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-11-17 09:30 ET | **SHORT** | `CDNL` | 93 | $6.00 | $2.31 | — | $12,315.71 | — | last bar red; gate last_red=True; list probable,yday_gainer; ret5=-59.9; leftover $563.14 | join🔴 sector🟡 gen🔴 news🟡 digest🔴 judge🔴 ab🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-11-17 09:30 ET | **SHORT** | `UNIT` | 118 | $4.74 | $2.39 | — | $12,872.64 | — | last bar red; gate last_red=True; list probable,yday_gainer; ret5=+8.9; leftover $563.14 | join🔴 sector🟡 gen🔴 news🟡 digest🟡 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-11-17 09:30 ET | **SHORT** | `CATX` | 612 | $0.92 | $7.59 | — | $13,428.09 | — | last bar red; gate last_red=True; list probable,yday_gainer; 🔵; ret5=+7.0; leftover $563.14 | join🟡 sector🟡 gen🔴 news🟡 digest🔴 ab🔴 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $13,428.09 | ▲ close $9,165.26 vs 09:30 $9,032.34 (session +189.94) | 16:00 close · cash $13,428.09 · equity $9,165.26 vs 09:30 $9,032.34 (+132.92; session marks +189.94) · 8 name(s) marked open→close (per-name table). ATAT×14 09:30 $38.42 → close $38.48 -0.84; LFMD×307 09:30 $1.83 → close $1.80 +9.21; CDXS×526 09:30 $1.07 → close $1.07 -0.00; MRLN×592 09:30 $0.95 → close $0.91 +24.86; TNDM×30 09:30 $18.25 → close $17.06 +35.70; CDNL×93 09:30 $6.00 → close $5.69 +28.83; UNIT×118 09:30 $4.74 → close $4.27 +55.46; CATX×612 09:30 $0.92 → close $0.86 +36.72 | — |
 
 ## Not taken
 

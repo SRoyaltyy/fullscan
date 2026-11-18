@@ -6,7 +6,7 @@ Buys the flatten **wish-list** even on io/HOLD mornings — live `flatten_robust
 
 Side **long** · universe `flatten` · top 8 · rank `list` · size `topheavy` · sell `list` · S-boost `none` · 40% to #1, rest split
 
-Cash book **-33.98%** ($6,602) · signal-only (no cash/fees) was -10.41%. Starts YES **2/30**. Fills 306 · skips 214 · realized $-900.04.
+Cash book **-35.41%** ($6,459) · signal-only (no cash/fees) was -10.41%. Starts YES **2/30**. Fills 306 · skips 214 · realized $-900.04.
 
 ## How this sleeve decides (like you are 10)
 
@@ -508,6 +508,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-16 09:30 ET | **SELL** | `COTY` | 2 | $4.10 | $0.11 | $-0.56 | $266.11 | ▼ -0.56 after sell → book $6,800.97; vs 09:30 mark -0.11 | dropped from list after 3 sess (min 3) | — |
 | 2026-11-16 09:30 ET | **BUY** | `EPRX` | 19 | $8.15 | $1.61 | — | $109.66 | — | 40% to #1, rest split; list flatten; wish-list (live io HOLD — not a ticket); ret5=+18.3; leftover $159.67 | join🟢 sector🟡 gen🔴 news🔴 digest🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-11-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $109.66 | ▼ close $6,602.19 vs 09:30 $6,801.08 (session -197.18) | 16:00 close · cash $109.66 · equity $6,602.19 vs 09:30 $6,801.08 (-198.89; session marks -197.18) · 6 name(s) marked open→close (per-name table). ALNY×6 09:30 $166.98 → close $159.73 -43.50; CHRD×6 09:30 $149.14 → close $146.78 -14.16; DVN×57 09:30 $46.00 → close $44.27 -98.61; ETON×16 09:30 $64.29 → close $63.88 -6.56; GRNT×158 09:30 $6.25 → close $6.13 -18.96; EPRX×19 09:30 $8.15 → close $7.34 -15.39 | — |
+| 2026-11-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $109.66 | ▲ 09:30 equity $6,616.70 vs yday $6,602.19 (+14.51) | 09:30 open · cash $109.66 (unchanged overnight, no fees) · equity $6,616.70 vs prior close $6,602.19 (+14.51) · 6 name(s) re-marked at the open (per-name table). ALNY×6 yday $159.73 → 09:30 $159.02 -4.26; CHRD×6 yday $146.78 → 09:30 $147.56 +4.68; DVN×57 yday $44.27 → 09:30 $44.84 +32.49; EPRX×19 yday $7.34 → 09:30 $7.30 -0.76; ETON×16 yday $63.88 → 09:30 $62.58 -20.80; GRNT×158 yday $6.13 → 09:30 $6.15 +3.16 | — |
+| 2026-11-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $109.66 | ▼ close $6,458.78 vs 09:30 $6,616.70 (session -157.92) | 16:00 close · cash $109.66 · equity $6,458.78 vs 09:30 $6,616.70 (-157.92; session marks -157.92) · 6 name(s) marked open→close (per-name table). ALNY×6 09:30 $159.02 → close $156.50 -15.12; CHRD×6 09:30 $147.56 → close $143.28 -25.68; DVN×57 09:30 $44.84 → close $43.46 -78.66; EPRX×19 09:30 $7.30 → close $6.62 -12.92; ETON×16 09:30 $62.58 → close $63.65 +17.12; GRNT×158 09:30 $6.15 → close $5.88 -42.66 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **+24.27%** ($12,427) · signal-only (no cash/fees) was -3.93%. Starts YES **1/30**. Fills 77 · skips 0 · realized $-826.45.
+Cash book **+13.13%** ($11,313) · signal-only (no cash/fees) was -3.93%. Starts YES **1/30**. Fills 79 · skips 0 · realized $-826.45.
 
 ## How this sleeve decides (like you are 10)
 
@@ -285,3 +285,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $12,615.67 | ▲ 09:30 equity $12,615.67 vs yday $12,615.67 (+0.00) | 09:30 open · cash $12,615.67 · no holdings · equity $12,615.67 vs prior close $12,615.67 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-11-16 09:30 ET | **BUY** | `UNIT` | 2594 | $4.85 | $33.46 | — | $1.31 | — | combo gate; gate macd_up=True,rsi_os=True; list probable; 🔵; ret5=-6.5; leftover $12615.67 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
 | 2026-11-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1.31 | ▼ close $12,426.57 vs 09:30 $12,615.67 (session -155.64) | 16:00 close · cash $1.31 · equity $12,426.57 vs 09:30 $12,615.67 (-189.10; session marks -155.64) · 1 name(s) marked open→close (per-name table). UNIT×2594 09:30 $4.85 → close $4.79 -155.64 | — |
+| 2026-11-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $1.31 | ▼ 09:30 equity $12,296.87 vs yday $12,426.57 (-129.70) | 09:30 open · cash $1.31 (unchanged overnight, no fees) · equity $12,296.87 vs prior close $12,426.57 (-129.70) · 1 name(s) re-marked at the open (per-name table). UNIT×2594 yday $4.79 → 09:30 $4.74 -129.70 | — |
+| 2026-11-17 09:30 ET | **SELL** | `UNIT` | 2594 | $4.74 | $33.99 | $-352.79 | $12,262.88 | ▼ -352.79 after sell → book $12,262.88; vs 09:30 mark -33.99 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟡 digest🟡 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-11-17 09:30 ET | **BUY** | `CATX` | 13152 | $0.92 | $160.45 | — | $2.58 | — | combo gate; gate macd_up=True,rsi_os=True; list probable,yday_gainer; 🔵; ret5=+7.0; leftover $12262.88 | join🟡 sector🟡 gen🔴 news🟡 digest🔴 ab🔴 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2.58 | ▼ close $11,313.30 vs 09:30 $12,296.87 (session -789.12) | 16:00 close · cash $2.58 · equity $11,313.30 vs 09:30 $12,296.87 (-983.57; session marks -789.12) · 1 name(s) marked open→close (per-name table). CATX×13152 09:30 $0.92 → close $0.86 -789.12 | — |

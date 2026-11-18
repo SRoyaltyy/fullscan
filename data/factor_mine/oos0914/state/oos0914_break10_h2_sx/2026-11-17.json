@@ -1,0 +1,241 @@
+{
+  "buys": [
+    {
+      "fill_rule": "open",
+      "price": 18.42,
+      "shares": 182,
+      "side": "BUY",
+      "ticker": "HAWK"
+    },
+    {
+      "fill_rule": "open",
+      "price": 11.55,
+      "shares": 291,
+      "side": "BUY",
+      "ticker": "FUN"
+    },
+    {
+      "fill_rule": "open",
+      "price": 25.0,
+      "shares": 134,
+      "side": "BUY",
+      "ticker": "WWW"
+    }
+  ],
+  "cash": 11.23,
+  "date": "2026-11-17",
+  "equity": 10094.87,
+  "fees": 17.2697,
+  "fills": [
+    {
+      "fees": 2.0571,
+      "fill_rule": "open",
+      "pnl": -264.48,
+      "price": 174.15,
+      "shares": 13,
+      "side": "SELL",
+      "ticker": "ATI"
+    },
+    {
+      "fees": 2.0469,
+      "fill_rule": "open",
+      "pnl": -80.34,
+      "price": 276.495,
+      "shares": 9,
+      "side": "SELL",
+      "ticker": "CEG"
+    },
+    {
+      "fees": 2.1078,
+      "fill_rule": "open",
+      "pnl": -71.46,
+      "price": 89.55,
+      "shares": 29,
+      "side": "SELL",
+      "ticker": "DNTH"
+    },
+    {
+      "fees": 2.376,
+      "fill_rule": "open",
+      "pnl": 71.19,
+      "price": 23.83,
+      "shares": 115,
+      "side": "SELL",
+      "ticker": "MBGL"
+    },
+    {
+      "fees": 2.536,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 18.42,
+      "shares": 182,
+      "side": "BUY",
+      "ticker": "HAWK"
+    },
+    {
+      "fees": 3.7539,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 11.55,
+      "shares": 291,
+      "side": "BUY",
+      "ticker": "FUN"
+    },
+    {
+      "fees": 2.392,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 25.0,
+      "shares": 134,
+      "side": "BUY",
+      "ticker": "WWW"
+    }
+  ],
+  "holdings": [
+    "CURI",
+    "ENGN",
+    "FUN",
+    "HAWK",
+    "NGEN",
+    "NUAI",
+    "WWW"
+  ],
+  "mean": -2.4579,
+  "n_trades_today": 7,
+  "recipe": "oos0914_break10_h2_sx",
+  "sells": [
+    {
+      "fill_rule": "open",
+      "price": 174.15,
+      "shares": 13,
+      "side": "SELL",
+      "ticker": "ATI"
+    },
+    {
+      "fill_rule": "open",
+      "price": 276.495,
+      "shares": 9,
+      "side": "SELL",
+      "ticker": "CEG"
+    },
+    {
+      "fill_rule": "open",
+      "price": 89.55,
+      "shares": 29,
+      "side": "SELL",
+      "ticker": "DNTH"
+    },
+    {
+      "fill_rule": "open",
+      "price": 23.83,
+      "shares": 115,
+      "side": "SELL",
+      "ticker": "MBGL"
+    }
+  ],
+  "state": {
+    "after": "2026-11-17",
+    "cash": 11.23,
+    "pos": {
+      "CURI": {
+        "close_px": 3.02,
+        "cost": 61.67,
+        "entry_date": "2026-11-16",
+        "entry_px": 3.05,
+        "fee_in": 0.67,
+        "last_px": 3.205,
+        "min_hold": 2,
+        "notional": 61.0,
+        "peak_px": 3.205,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+24.7; leftover $61.49",
+        "shares": 20,
+        "ticker": "CURI"
+      },
+      "ENGN": {
+        "close_px": 1.7200000286102295,
+        "cost": 61.00119999999999,
+        "entry_date": "2026-11-16",
+        "entry_px": 2.32,
+        "fee_in": 0.6812,
+        "last_px": 1.8899999856948853,
+        "min_hold": 2,
+        "notional": 60.31999999999999,
+        "peak_px": 2.32,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list yday_gainer,yday_mover; ret5=+37.7; leftover $61.49",
+        "shares": 26,
+        "ticker": "ENGN"
+      },
+      "FUN": {
+        "close_px": 10.96,
+        "cost": 3364.8039000000003,
+        "entry_date": "2026-11-17",
+        "entry_px": 11.55,
+        "fee_in": 3.7539,
+        "last_px": 11.55,
+        "min_hold": 2,
+        "notional": 3361.05,
+        "peak_px": 11.55,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list ohlc_hot; \ud83d\udd35; ret5=+7.9; leftover $3361.13",
+        "shares": 291,
+        "ticker": "FUN"
+      },
+      "HAWK": {
+        "close_px": 18.45,
+        "cost": 3354.9760000000006,
+        "entry_date": "2026-11-17",
+        "entry_px": 18.42,
+        "fee_in": 2.536,
+        "last_px": 18.42,
+        "min_hold": 2,
+        "notional": 3352.4400000000005,
+        "peak_px": 18.42,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list yday_gainer,yday_mover; ret5=+22.9; leftover $3361.13",
+        "shares": 182,
+        "ticker": "HAWK"
+      },
+      "NGEN": {
+        "close_px": 1.96,
+        "cost": 61.7595,
+        "entry_date": "2026-11-16",
+        "entry_px": 1.85,
+        "fee_in": 0.7095,
+        "last_px": 1.81,
+        "min_hold": 2,
+        "notional": 61.050000000000004,
+        "peak_px": 1.85,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list yday_gainer,yday_mover; ret5=+41.4; leftover $61.49",
+        "shares": 33,
+        "ticker": "NGEN"
+      },
+      "NUAI": {
+        "close_px": 3.2,
+        "cost": 59.354099999999995,
+        "entry_date": "2026-11-16",
+        "entry_px": 3.09,
+        "fee_in": 0.6441,
+        "last_px": 3.22,
+        "min_hold": 2,
+        "notional": 58.709999999999994,
+        "peak_px": 3.22,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+54.6; leftover $61.49",
+        "shares": 19,
+        "ticker": "NUAI"
+      },
+      "WWW": {
+        "close_px": 24.67,
+        "cost": 3352.392,
+        "entry_date": "2026-11-17",
+        "entry_px": 25.0,
+        "fee_in": 2.392,
+        "last_px": 25.0,
+        "min_hold": 2,
+        "notional": 3350.0,
+        "peak_px": 25.0,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list flatten,ohlc_hot; \ud83d\udd35; ret5=+15.2; leftover $3361.13",
+        "shares": 134,
+        "ticker": "WWW"
+      }
+    },
+    "yday_equity": 10094.87
+  }
+}

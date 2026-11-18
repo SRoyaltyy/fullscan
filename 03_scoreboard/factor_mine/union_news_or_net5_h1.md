@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · packet🟢 OR headline🟢 and camera net ≥ 5
 
-Cash book **-21.55%** ($7,845) · signal-only (no cash/fees) was -10.75%. Starts YES **1/30**. Fills 193 · skips 18 · realized $-1136.92.
+Cash book **-19.73%** ($8,027) · signal-only (no cash/fees) was -10.75%. Starts YES **1/30**. Fills 196 · skips 18 · realized $-1136.92.
 
 ## How this sleeve decides (like you are 10)
 
@@ -401,6 +401,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-11-16 09:30 ET | **BUY** | `MBGL` | 110 | $23.44 | $2.32 | — | $2,644.21 | — | packet🟢 OR headline🟢 and camera net ≥ 5; gate cam_net_min=5,news_or_headline=True; rank cond; list yday_gainer,yday_mover; 🔵; ret5=+18.5; leftover $2591.68 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-16 09:30 ET | **BUY** | `WWW` | 103 | $25.00 | $2.30 | — | $66.91 | — | packet🟢 OR headline🟢 and camera net ≥ 5; gate cam_net_min=5,news_or_headline=True; rank cond; list ohlc_hot; 🔵; ret5=+16.7; leftover $2591.68 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-11-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $66.91 | ▲ close $7,844.80 vs 09:30 $7,775.04 (session +76.44) | 16:00 close · cash $66.91 · equity $7,844.80 vs 09:30 $7,775.04 (+69.76; session marks +76.44) · 3 name(s) marked open→close (per-name table). FROG×23 09:30 $110.78 → close $109.94 -19.43; MBGL×110 09:30 $23.44 → close $24.04 +66.00; WWW×103 09:30 $25.00 → close $25.29 +29.87 | — |
+| 2026-11-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $66.91 | ▼ 09:30 equity $7,761.70 vs yday $7,844.80 (-83.10) | 09:30 open · cash $66.91 (unchanged overnight, no fees) · equity $7,761.70 vs prior close $7,844.80 (-83.10) · 3 name(s) re-marked at the open (per-name table). FROG×23 yday $109.94 → 09:30 $108.63 -30.13; MBGL×110 yday $24.04 → 09:30 $23.83 -23.10; WWW×103 yday $25.29 → 09:30 $25.00 -29.87 | — |
+| 2026-11-17 09:30 ET | **SELL** | `FROG` | 23 | $108.63 | $2.09 | $-53.71 | $2,563.31 | ▼ -53.71 after sell → book $7,759.61; vs 09:30 mark -2.09 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **SELL** | `MBGL` | 110 | $23.83 | $2.36 | $+38.22 | $5,182.25 | ▲ +38.22 after sell → book $7,757.25; vs 09:30 mark -2.36 | dropped from list after 1 sess (min 1) | — |
+| 2026-11-17 09:30 ET | **BUY** | `VIK` | 58 | $89.00 | $2.16 | — | $18.09 | — | packet🟢 OR headline🟢 and camera net ≥ 5; gate cam_net_min=5,news_or_headline=True; rank cond; list earn_react; 🔵; ret5=+3.6; leftover $5182.25 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-11-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $18.09 | ▲ close $8,027.34 vs 09:30 $7,761.70 (session +272.25) | 16:00 close · cash $18.09 · equity $8,027.34 vs 09:30 $7,761.70 (+265.64; session marks +272.25) · 2 name(s) marked open→close (per-name table). WWW×103 09:30 $25.00 → close $24.67 -33.99; VIK×58 09:30 $89.00 → close $94.28 +306.24 | — |
 
 ## Not taken
 
