@@ -1,6 +1,6 @@
 {
   "date": "2026-11-18",
-  "generated_at": "2026-11-18T14:32:40.079926-05:00",
+  "generated_at": "2026-11-18T14:33:24.307009-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -84,31 +84,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "weather",
-      "title": "Weather / regime",
-      "date": "2026-11-18",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-11-18T09:13:42.431971-05:00",
-      "files": [
-        {
-          "path": "01_daily/weather/2026-11-18_weather.json",
-          "ok": true,
-          "reason": "",
-          "size": 9530,
-          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -7.859999999999999, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.65, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -4.23, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -2.6399999999999997, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -0.645, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -2.28, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -6.87, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -4.22, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
-        },
-        {
-          "path": "01_daily/weather/2026-11-18_weather.md",
-          "ok": true,
-          "reason": "",
-          "size": 5104,
-          "preview": "# Weather report \u2014 2026-11-18\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
-        }
-      ],
-      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -7.859999999999999, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.65, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -4.23, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -2.6399999999999997, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -0.645, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -2.28, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -6.87, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -4.22, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-11-18\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
-    },
     {
       "key": "join",
       "title": "Join / match rank",
@@ -374,6 +349,59 @@
         }
       ],
       "preview": "5022 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-11-18",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-18T14:33:23.040725-05:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-11-18_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1483574,
+          "preview": "1d BUY UHS, PAYS, PSN, TTEC, VIV, VRSK, FTNT \u00b7 SELL QBTS, FLNC, QUBT, CWEN, FCEL, RGTI, METC, TE"
+        },
+        {
+          "path": "data/stock_book/2026-11-18_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-11-18_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2612,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-11-18_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12357,
+          "preview": "2026-11-18 BUY UHS, PAYS, PSN, TTEC, VIV, VRSK, FTNT \u00b7 SELL QBTS, FLNC, QUBT, CWEN, FCEL, RGTI, METC, TE"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12357,
+          "preview": "2026-11-18 BUY UHS, PAYS, PSN, TTEC, VIV, VRSK, FTNT \u00b7 SELL QBTS, FLNC, QUBT, CWEN, FCEL, RGTI, METC, TE"
+        },
+        {
+          "path": "01_daily/2026-11-18_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 83712,
+          "preview": "# Stock book \u2014 2026-11-18\n_Generated 2026-11-18T14:32:50.991571-05:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY UHS, PAYS, PSN, TTEC, VIV, VRSK, FTNT \u00b7 SELL QBTS, FLNC, QUBT, CWEN, FCEL, RGTI, METC, TE \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-11-18 BUY UHS, PAYS, PSN, TTEC, VIV, VRSK, FTNT \u00b7 SELL QBTS, FLNC, QUBT, CWEN, FCEL, RGTI, METC, TE \u00b7 2026-11-18 BUY UHS, PAYS, PSN, TTEC, VIV, VRSK, FTNT \u00b7 SELL QBTS, FLNC, QUBT, CWEN, FCEL, RGTI, METC, TE \u00b7 # Stock book \u2014 2026-11-18\n_Generated 2026-11-18T14:32:50.991571-05:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
