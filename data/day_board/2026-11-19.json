@@ -1,6 +1,6 @@
 {
   "date": "2026-11-19",
-  "generated_at": "2026-11-19T14:03:10.099952-05:00",
+  "generated_at": "2026-11-19T14:03:18.214086-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -2318,6 +2318,24 @@
         }
       ],
       "preview": "5888 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 REGN, ONC, LLY, ETON, TREE \u00b7 5888 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 REGN, ONC, LLY, TREE, ETON"
+    },
+    {
+      "key": "peer_rs",
+      "title": "Peer RS",
+      "date": "2026-11-19",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-19T14:03:17.003353-05:00",
+      "files": [
+        {
+          "path": "data/peers/2026-11-19_peer_rs.csv",
+          "ok": true,
+          "reason": "",
+          "size": 814937,
+          "preview": "5022 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+        }
+      ],
+      "preview": "5022 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
     }
   ],
   "href": {
@@ -2395,6 +2413,14 @@
       "path": "data/day_board/2026-11-19.json",
       "at": "2026-11-19T14:03:10-05:00",
       "commit_msg": "auto: land join [2026-11-19]",
+      "workflow": "Pre-Open ALL (predictive one-shot)",
+      "run_id": "44590474629",
+      "manifest": "research/input_freeze/2026-11-19/manifest.json"
+    },
+    {
+      "path": "data/day_board/2026-11-19.json",
+      "at": "2026-11-19T14:03:18-05:00",
+      "commit_msg": "auto: land peer_rs [2026-11-19]",
       "workflow": "Pre-Open ALL (predictive one-shot)",
       "run_id": "44590474629",
       "manifest": "research/input_freeze/2026-11-19/manifest.json"
