@@ -2,7 +2,7 @@
   "rss_yahoo_finance": {
     "source": "rss_yahoo_finance",
     "kind": "feed",
-    "checked_at": "2026-11-19T20:04:02.934924+00:00",
+    "checked_at": "2026-11-19T20:09:53.703875+00:00",
     "status": "failed",
     "fetched": 0,
     "in_window": 0,
@@ -11,12 +11,12 @@
     "requests": 1,
     "classes": [],
     "error": "HTTPError: HTTP Error 404: Not Found",
-    "duration_seconds": 0.13
+    "duration_seconds": 0.05
   },
   "rss_cnbc_finance": {
     "source": "rss_cnbc_finance",
     "kind": "feed",
-    "checked_at": "2026-11-19T20:04:02.920854+00:00",
+    "checked_at": "2026-11-19T20:09:53.690989+00:00",
     "status": "ok",
     "fetched": 30,
     "in_window": 8,
@@ -24,25 +24,25 @@
     "saturated": false,
     "requests": 1,
     "classes": [],
-    "duration_seconds": 0.24
+    "duration_seconds": 0.08
   },
   "rss_bbc_business": {
     "source": "rss_bbc_business",
     "kind": "feed",
-    "checked_at": "2026-11-19T20:04:02.926454+00:00",
+    "checked_at": "2026-11-19T20:09:53.699464+00:00",
     "status": "ok",
     "fetched": 51,
-    "in_window": 28,
+    "in_window": 27,
     "undated": 0,
     "saturated": false,
     "requests": 1,
     "classes": [],
-    "duration_seconds": 0.31
+    "duration_seconds": 0.21
   },
   "rss_bbc_world": {
     "source": "rss_bbc_world",
     "kind": "feed",
-    "checked_at": "2026-11-19T20:04:02.925449+00:00",
+    "checked_at": "2026-11-19T20:09:53.698019+00:00",
     "status": "ok",
     "fetched": 35,
     "in_window": 35,
@@ -50,12 +50,12 @@
     "saturated": false,
     "requests": 1,
     "classes": [],
-    "duration_seconds": 0.22
+    "duration_seconds": 0.19
   },
   "rss_aljazeera_economy": {
     "source": "rss_aljazeera_economy",
     "kind": "feed",
-    "checked_at": "2026-11-19T20:04:02.934242+00:00",
+    "checked_at": "2026-11-19T20:09:53.701482+00:00",
     "status": "ok",
     "fetched": 25,
     "in_window": 25,
@@ -63,12 +63,12 @@
     "saturated": false,
     "requests": 1,
     "classes": [],
-    "duration_seconds": 0.19
+    "duration_seconds": 0.12
   },
   "rss_marketwatch_pulse": {
     "source": "rss_marketwatch_pulse",
     "kind": "feed",
-    "checked_at": "2026-11-19T20:04:02.921214+00:00",
+    "checked_at": "2026-11-19T20:09:53.691526+00:00",
     "status": "ok",
     "fetched": 30,
     "in_window": 0,
@@ -76,12 +76,12 @@
     "saturated": false,
     "requests": 1,
     "classes": [],
-    "duration_seconds": 0.16
+    "duration_seconds": 0.09
   },
   "rss_marketwatch_top": {
     "source": "rss_marketwatch_top",
     "kind": "feed",
-    "checked_at": "2026-11-19T20:04:02.921536+00:00",
+    "checked_at": "2026-11-19T20:09:53.691959+00:00",
     "status": "ok",
     "fetched": 10,
     "in_window": 10,
@@ -89,12 +89,12 @@
     "saturated": false,
     "requests": 1,
     "classes": [],
-    "duration_seconds": 0.18
+    "duration_seconds": 0.09
   },
   "rss_dw_world": {
     "source": "rss_dw_world",
     "kind": "feed",
-    "checked_at": "2026-11-19T20:04:02.934481+00:00",
+    "checked_at": "2026-11-19T20:09:53.703196+00:00",
     "status": "ok",
     "fetched": 12,
     "in_window": 12,
@@ -102,12 +102,12 @@
     "saturated": false,
     "requests": 1,
     "classes": [],
-    "duration_seconds": 0.22
+    "duration_seconds": 0.23
   },
   "rss_dw_business": {
     "source": "rss_dw_business",
     "kind": "feed",
-    "checked_at": "2026-11-19T20:04:02.934683+00:00",
+    "checked_at": "2026-11-19T20:09:53.703531+00:00",
     "status": "ok",
     "fetched": 20,
     "in_window": 3,
@@ -115,12 +115,12 @@
     "saturated": false,
     "requests": 1,
     "classes": [],
-    "duration_seconds": 0.99
+    "duration_seconds": 0.18
   },
   "rss_google_business": {
     "source": "rss_google_business",
     "kind": "feed",
-    "checked_at": "2026-11-19T20:04:03.079671+00:00",
+    "checked_at": "2026-11-19T20:09:53.773426+00:00",
     "status": "failed",
     "fetched": 0,
     "in_window": 0,
@@ -129,12 +129,12 @@
     "requests": 1,
     "classes": [],
     "error": "HTTPError: HTTP Error 503: Service Unavailable",
-    "duration_seconds": 16.49
+    "duration_seconds": 14.93
   },
   "rss_google_world": {
     "source": "rss_google_world",
     "kind": "feed",
-    "checked_at": "2026-11-19T20:04:03.152681+00:00",
+    "checked_at": "2026-11-19T20:09:53.887043+00:00",
     "status": "failed",
     "fetched": 0,
     "in_window": 0,
@@ -143,12 +143,12 @@
     "requests": 1,
     "classes": [],
     "error": "HTTPError: HTTP Error 503: Service Unavailable",
-    "duration_seconds": 14.65
+    "duration_seconds": 14.83
   },
   "official_fed_releases": {
     "source": "official_fed_releases",
     "kind": "feed",
-    "checked_at": "2026-11-19T20:04:03.232305+00:00",
+    "checked_at": "2026-11-19T20:09:53.933520+00:00",
     "status": "ok",
     "fetched": 20,
     "in_window": 2,
@@ -161,7 +161,7 @@
   "official_fed_speeches": {
     "source": "official_fed_speeches",
     "kind": "feed",
-    "checked_at": "2026-11-19T20:04:03.281413+00:00",
+    "checked_at": "2026-11-19T20:09:53.939842+00:00",
     "status": "ok",
     "fetched": 15,
     "in_window": 2,
@@ -169,12 +169,12 @@
     "saturated": false,
     "requests": 1,
     "classes": [],
-    "duration_seconds": 0.05
+    "duration_seconds": 0.15
   },
   "rss_cnbc_economy": {
     "source": "rss_cnbc_economy",
     "kind": "feed",
-    "checked_at": "2026-11-19T20:04:02.920239+00:00",
+    "checked_at": "2026-11-19T20:09:53.690397+00:00",
     "status": "ok",
     "fetched": 30,
     "in_window": 3,
@@ -182,12 +182,12 @@
     "saturated": false,
     "requests": 1,
     "classes": [],
-    "duration_seconds": 0.21
+    "duration_seconds": 0.25
   },
   "official_bls": {
     "source": "official_bls",
     "kind": "feed",
-    "checked_at": "2026-11-19T20:04:03.331146+00:00",
+    "checked_at": "2026-11-19T20:09:53.983416+00:00",
     "status": "failed",
     "fetched": 0,
     "in_window": 0,
@@ -197,12 +197,12 @@
     "classes": [],
     "error": "HTTPError: HTTP Error 403: Forbidden",
     "fallback_error": "HTTP Error 503: Service Unavailable",
-    "duration_seconds": 14.74
+    "duration_seconds": 13.94
   },
   "rss_google_commodities": {
     "source": "rss_google_commodities",
     "kind": "feed",
-    "checked_at": "2026-11-19T20:04:03.132713+00:00",
+    "checked_at": "2026-11-19T20:09:53.823273+00:00",
     "status": "failed",
     "fetched": 0,
     "in_window": 0,
@@ -211,12 +211,12 @@
     "requests": 1,
     "classes": [],
     "error": "HTTPError: HTTP Error 503: Service Unavailable",
-    "duration_seconds": 13.97
+    "duration_seconds": 12.98
   },
   "rss_google_us": {
     "source": "rss_google_us",
     "kind": "feed",
-    "checked_at": "2026-11-19T20:04:03.157455+00:00",
+    "checked_at": "2026-11-19T20:09:53.908180+00:00",
     "status": "failed",
     "fetched": 0,
     "in_window": 0,
@@ -225,12 +225,12 @@
     "requests": 1,
     "classes": [],
     "error": "HTTPError: HTTP Error 503: Service Unavailable",
-    "duration_seconds": 17.18
+    "duration_seconds": 17.22
   },
   "rss_ap_business": {
     "source": "rss_ap_business",
     "kind": "feed",
-    "checked_at": "2026-11-19T20:04:02.924435+00:00",
+    "checked_at": "2026-11-19T20:09:53.697506+00:00",
     "status": "failed",
     "fetched": 0,
     "in_window": 0,
@@ -240,12 +240,12 @@
     "classes": [],
     "error": "HTTPError: HTTP Error 403: Forbidden",
     "fallback_error": "HTTP Error 503: Service Unavailable",
-    "duration_seconds": 19.53
+    "duration_seconds": 15.0
   },
   "rss_google_markets": {
     "source": "rss_google_markets",
     "kind": "feed",
-    "checked_at": "2026-11-19T20:04:03.097313+00:00",
+    "checked_at": "2026-11-19T20:09:53.779841+00:00",
     "status": "failed",
     "fetched": 0,
     "in_window": 0,
@@ -254,25 +254,25 @@
     "requests": 1,
     "classes": [],
     "error": "HTTPError: HTTP Error 503: Service Unavailable",
-    "duration_seconds": 18.84
+    "duration_seconds": 14.52
   },
   "rss_ft_world": {
     "source": "rss_ft_world",
     "kind": "feed",
-    "checked_at": "2026-11-19T20:04:03.064727+00:00",
+    "checked_at": "2026-11-19T20:09:53.751850+00:00",
     "status": "ok",
-    "fetched": 11,
-    "in_window": 11,
+    "fetched": 12,
+    "in_window": 12,
     "undated": 0,
     "saturated": false,
     "requests": 1,
     "classes": [],
-    "duration_seconds": 0.61
+    "duration_seconds": 0.38
   },
   "official_doj": {
     "source": "official_doj",
     "kind": "feed",
-    "checked_at": "2026-11-19T20:04:04.427972+00:00",
+    "checked_at": "2026-11-19T20:09:54.843650+00:00",
     "status": "ok",
     "fetched": 25,
     "in_window": 25,
@@ -280,12 +280,12 @@
     "saturated": false,
     "requests": 1,
     "classes": [],
-    "duration_seconds": 0.18
+    "duration_seconds": 0.19
   },
   "rss_ap_topnews": {
     "source": "rss_ap_topnews",
     "kind": "feed",
-    "checked_at": "2026-11-19T20:04:02.922120+00:00",
+    "checked_at": "2026-11-19T20:09:53.693138+00:00",
     "status": "failed",
     "fetched": 0,
     "in_window": 0,
@@ -295,12 +295,12 @@
     "classes": [],
     "error": "HTTPError: HTTP Error 403: Forbidden",
     "fallback_error": "HTTP Error 503: Service Unavailable",
-    "duration_seconds": 20.44
+    "duration_seconds": 13.68
   },
   "official_bea": {
     "source": "official_bea",
     "kind": "feed",
-    "checked_at": "2026-11-19T20:04:03.674360+00:00",
+    "checked_at": "2026-11-19T20:09:54.092186+00:00",
     "status": "ok",
     "fetched": 49,
     "in_window": 1,
@@ -308,12 +308,12 @@
     "saturated": false,
     "requests": 1,
     "classes": [],
-    "duration_seconds": 0.49
+    "duration_seconds": 0.5
   },
   "rss_google_macro": {
     "source": "rss_google_macro",
     "kind": "feed",
-    "checked_at": "2026-11-19T20:04:03.127658+00:00",
+    "checked_at": "2026-11-19T20:09:53.783767+00:00",
     "status": "failed",
     "fetched": 0,
     "in_window": 0,
@@ -322,12 +322,12 @@
     "requests": 1,
     "classes": [],
     "error": "HTTPError: HTTP Error 503: Service Unavailable",
-    "duration_seconds": 12.53
+    "duration_seconds": 15.76
   },
   "rss_google_geopolitics": {
     "source": "rss_google_geopolitics",
     "kind": "feed",
-    "checked_at": "2026-11-19T20:04:03.144982+00:00",
+    "checked_at": "2026-11-19T20:09:53.884048+00:00",
     "status": "failed",
     "fetched": 0,
     "in_window": 0,
@@ -336,12 +336,12 @@
     "requests": 1,
     "classes": [],
     "error": "HTTPError: HTTP Error 503: Service Unavailable",
-    "duration_seconds": 17.2
+    "duration_seconds": 18.56
   },
   "company_nvidia_blog": {
     "source": "company_nvidia_blog",
     "kind": "feed",
-    "checked_at": "2026-11-19T20:04:04.609127+00:00",
+    "checked_at": "2026-11-19T20:09:55.034975+00:00",
     "status": "ok",
     "fetched": 18,
     "in_window": 3,
@@ -354,7 +354,7 @@
   "company_microsoft_blog": {
     "source": "company_microsoft_blog",
     "kind": "feed",
-    "checked_at": "2026-11-19T20:04:04.738274+00:00",
+    "checked_at": "2026-11-19T20:09:55.169671+00:00",
     "status": "ok",
     "fetched": 10,
     "in_window": 0,
@@ -362,12 +362,12 @@
     "saturated": false,
     "requests": 1,
     "classes": [],
-    "duration_seconds": 0.17
+    "duration_seconds": 0.11
   },
   "company_google_blog": {
     "source": "company_google_blog",
     "kind": "feed",
-    "checked_at": "2026-11-19T20:04:04.903443+00:00",
+    "checked_at": "2026-11-19T20:09:55.277821+00:00",
     "status": "ok",
     "fetched": 20,
     "in_window": 20,
@@ -375,12 +375,12 @@
     "saturated": false,
     "requests": 1,
     "classes": [],
-    "duration_seconds": 0.11
+    "duration_seconds": 0.12
   },
   "company_openai_blog": {
     "source": "company_openai_blog",
     "kind": "feed",
-    "checked_at": "2026-11-19T20:04:05.016246+00:00",
+    "checked_at": "2026-11-19T20:09:55.401255+00:00",
     "status": "ok",
     "fetched": 1414,
     "in_window": 8,
@@ -388,12 +388,12 @@
     "saturated": false,
     "requests": 1,
     "classes": [],
-    "duration_seconds": 0.11
+    "duration_seconds": 0.13
   },
   "company_aws_blog": {
     "source": "company_aws_blog",
     "kind": "feed",
-    "checked_at": "2026-11-19T20:04:05.125690+00:00",
+    "checked_at": "2026-11-19T20:09:55.529762+00:00",
     "status": "ok",
     "fetched": 20,
     "in_window": 1,
@@ -401,12 +401,12 @@
     "saturated": false,
     "requests": 1,
     "classes": [],
-    "duration_seconds": 0.07
+    "duration_seconds": 0.08
   },
   "official_ftc": {
     "source": "official_ftc",
     "kind": "feed",
-    "checked_at": "2026-11-19T20:04:04.390532+00:00",
+    "checked_at": "2026-11-19T20:09:54.604220+00:00",
     "status": "failed",
     "fetched": 0,
     "in_window": 0,
@@ -416,12 +416,12 @@
     "classes": [],
     "error": "HTTPError: HTTP Error 403: Forbidden",
     "fallback_error": "HTTP Error 503: Service Unavailable",
-    "duration_seconds": 16.14
+    "duration_seconds": 16.32
   },
   "official_ecb": {
     "source": "official_ecb",
     "kind": "feed",
-    "checked_at": "2026-11-19T20:04:03.925472+00:00",
+    "checked_at": "2026-11-19T20:09:54.132103+00:00",
     "status": "ok",
     "fetched": 15,
     "in_window": 2,
@@ -434,7 +434,7 @@
   "official_boe": {
     "source": "official_boe",
     "kind": "feed",
-    "checked_at": "2026-11-19T20:04:04.163689+00:00",
+    "checked_at": "2026-11-19T20:09:54.596823+00:00",
     "status": "ok",
     "fetched": 50,
     "in_window": 2,
@@ -442,12 +442,12 @@
     "saturated": false,
     "requests": 1,
     "classes": [],
-    "duration_seconds": 0.26
+    "duration_seconds": 0.25
   },
   "lane_capacity": {
     "source": "lane_capacity",
     "kind": "search",
-    "checked_at": "2026-11-19T20:04:05.199235+00:00",
+    "checked_at": "2026-11-19T20:09:55.607308+00:00",
     "status": "failed",
     "fetched": 0,
     "in_window": 0,
@@ -458,12 +458,12 @@
       "capacity"
     ],
     "error": "HTTPError: HTTP Error 503: Service Unavailable",
-    "duration_seconds": 17.03
+    "duration_seconds": 20.12
   },
   "lane_input_cost": {
     "source": "lane_input_cost",
     "kind": "search",
-    "checked_at": "2026-11-19T20:04:17.106818+00:00",
+    "checked_at": "2026-11-19T20:10:07.370827+00:00",
     "status": "failed",
     "fetched": 0,
     "in_window": 0,
@@ -474,12 +474,12 @@
       "input_cost"
     ],
     "error": "HTTPError: HTTP Error 503: Service Unavailable",
-    "duration_seconds": 11.96
+    "duration_seconds": 13.0
   },
   "lane_demand": {
     "source": "lane_demand",
     "kind": "search",
-    "checked_at": "2026-11-19T20:04:15.655460+00:00",
+    "checked_at": "2026-11-19T20:10:06.806556+00:00",
     "status": "failed",
     "fetched": 0,
     "in_window": 0,
@@ -490,12 +490,12 @@
       "demand"
     ],
     "error": "HTTPError: HTTP Error 503: Service Unavailable",
-    "duration_seconds": 16.68
+    "duration_seconds": 16.92
   },
   "lane_inventory_print": {
     "source": "lane_inventory_print",
     "kind": "search",
-    "checked_at": "2026-11-19T20:04:17.804849+00:00",
+    "checked_at": "2026-11-19T20:10:07.927040+00:00",
     "status": "failed",
     "fetched": 0,
     "in_window": 0,
@@ -506,12 +506,12 @@
       "inventory_print"
     ],
     "error": "HTTPError: HTTP Error 503: Service Unavailable",
-    "duration_seconds": 18.1
+    "duration_seconds": 16.08
   },
   "lane_ip_ruling": {
     "source": "lane_ip_ruling",
     "kind": "search",
-    "checked_at": "2026-11-19T20:04:20.534803+00:00",
+    "checked_at": "2026-11-19T20:10:09.548347+00:00",
     "status": "failed",
     "fetched": 0,
     "in_window": 0,
@@ -522,12 +522,12 @@
       "ip_ruling"
     ],
     "error": "HTTPError: HTTP Error 503: Service Unavailable",
-    "duration_seconds": 16.03
+    "duration_seconds": 14.76
   },
   "lane_channel_stock": {
     "source": "lane_channel_stock",
     "kind": "search",
-    "checked_at": "2026-11-19T20:04:18.072567+00:00",
+    "checked_at": "2026-11-19T20:10:08.298343+00:00",
     "status": "failed",
     "fetched": 0,
     "in_window": 0,
@@ -538,12 +538,12 @@
       "channel_stock"
     ],
     "error": "HTTPError: HTTP Error 503: Service Unavailable",
-    "duration_seconds": 15.75
+    "duration_seconds": 11.61
   },
   "lane_reserve_revision": {
     "source": "lane_reserve_revision",
     "kind": "search",
-    "checked_at": "2026-11-19T20:04:19.568696+00:00",
+    "checked_at": "2026-11-19T20:10:08.698917+00:00",
     "status": "failed",
     "fetched": 0,
     "in_window": 0,
@@ -554,12 +554,12 @@
       "reserve_revision"
     ],
     "error": "HTTPError: HTTP Error 503: Service Unavailable",
-    "duration_seconds": 13.44
+    "duration_seconds": 15.41
   },
   "lane_trial_readout": {
     "source": "lane_trial_readout",
     "kind": "search",
-    "checked_at": "2026-11-19T20:04:20.347921+00:00",
+    "checked_at": "2026-11-19T20:10:08.714849+00:00",
     "status": "failed",
     "fetched": 0,
     "in_window": 0,
@@ -570,12 +570,12 @@
       "trial_readout"
     ],
     "error": "HTTPError: HTTP Error 503: Service Unavailable",
-    "duration_seconds": 13.96
+    "duration_seconds": 18.13
   },
   "lane_sanction_lift": {
     "source": "lane_sanction_lift",
     "kind": "search",
-    "checked_at": "2026-11-19T20:04:22.229199+00:00",
+    "checked_at": "2026-11-19T20:10:11.131986+00:00",
     "status": "failed",
     "fetched": 0,
     "in_window": 0,
@@ -586,12 +586,12 @@
       "sanction_lift"
     ],
     "error": "HTTPError: HTTP Error 503: Service Unavailable",
-    "duration_seconds": 14.75
+    "duration_seconds": 13.68
   },
   "lane_gate": {
     "source": "lane_gate",
     "kind": "search",
-    "checked_at": "2026-11-19T20:04:20.333906+00:00",
+    "checked_at": "2026-11-19T20:10:08.704130+00:00",
     "status": "failed",
     "fetched": 0,
     "in_window": 0,
@@ -602,12 +602,12 @@
       "gate"
     ],
     "error": "HTTPError: HTTP Error 503: Service Unavailable",
-    "duration_seconds": 13.14
+    "duration_seconds": 11.83
   },
   "lane_breakup_remedy": {
     "source": "lane_breakup_remedy",
     "kind": "search",
-    "checked_at": "2026-11-19T20:04:33.475984+00:00",
+    "checked_at": "2026-11-19T20:10:23.724821+00:00",
     "status": "failed",
     "fetched": 0,
     "in_window": 0,
@@ -618,12 +618,12 @@
       "breakup_remedy"
     ],
     "error": "HTTPError: HTTP Error 503: Service Unavailable",
-    "duration_seconds": 17.25
+    "duration_seconds": 15.31
   },
   "lane_fx_translation": {
     "source": "lane_fx_translation",
     "kind": "search",
-    "checked_at": "2026-11-19T20:04:33.821241+00:00",
+    "checked_at": "2026-11-19T20:10:24.003277+00:00",
     "status": "failed",
     "fetched": 0,
     "in_window": 0,
@@ -634,12 +634,12 @@
       "fx_translation"
     ],
     "error": "HTTPError: HTTP Error 503: Service Unavailable",
-    "duration_seconds": 19.41
+    "duration_seconds": 13.07
   },
   "lane_policy_personnel": {
     "source": "lane_policy_personnel",
     "kind": "search",
-    "checked_at": "2026-11-19T20:04:34.310061+00:00",
+    "checked_at": "2026-11-19T20:10:24.110501+00:00",
     "status": "failed",
     "fetched": 0,
     "in_window": 0,
@@ -650,12 +650,12 @@
       "policy_personnel"
     ],
     "error": "HTTPError: HTTP Error 503: Service Unavailable",
-    "duration_seconds": 19.55
+    "duration_seconds": 18.35
   },
   "lane_access_control": {
     "source": "lane_access_control",
     "kind": "search",
-    "checked_at": "2026-11-19T20:04:21.941460+00:00",
+    "checked_at": "2026-11-19T20:10:10.927740+00:00",
     "status": "failed",
     "fetched": 0,
     "in_window": 0,
@@ -666,12 +666,12 @@
       "access_control"
     ],
     "error": "HTTPError: HTTP Error 503: Service Unavailable",
-    "duration_seconds": 18.14
+    "duration_seconds": 16.7
   },
   "lane_market_structure": {
     "source": "lane_market_structure",
     "kind": "search",
-    "checked_at": "2026-11-19T20:04:23.363072+00:00",
+    "checked_at": "2026-11-19T20:10:15.725555+00:00",
     "status": "failed",
     "fetched": 0,
     "in_window": 0,
@@ -682,12 +682,12 @@
       "market_structure"
     ],
     "error": "HTTPError: HTTP Error 503: Service Unavailable",
-    "duration_seconds": 16.38
+    "duration_seconds": 16.27
   },
   "lane_standard_mandate": {
     "source": "lane_standard_mandate",
     "kind": "search",
-    "checked_at": "2026-11-19T20:04:22.454292+00:00",
+    "checked_at": "2026-11-19T20:10:12.440499+00:00",
     "status": "failed",
     "fetched": 0,
     "in_window": 0,
@@ -698,12 +698,12 @@
       "standard_mandate"
     ],
     "error": "HTTPError: HTTP Error 503: Service Unavailable",
-    "duration_seconds": 16.22
+    "duration_seconds": 14.57
   },
   "lane_guidance": {
     "source": "lane_guidance",
     "kind": "search",
-    "checked_at": "2026-11-19T20:04:36.565875+00:00",
+    "checked_at": "2026-11-19T20:10:24.808952+00:00",
     "status": "failed",
     "fetched": 0,
     "in_window": 0,
@@ -714,12 +714,12 @@
       "guidance"
     ],
     "error": "HTTPError: HTTP Error 503: Service Unavailable",
-    "duration_seconds": 13.58
+    "duration_seconds": 16.74
   },
   "lane_tax_fiscal": {
     "source": "lane_tax_fiscal",
     "kind": "search",
-    "checked_at": "2026-11-19T20:04:29.064157+00:00",
+    "checked_at": "2026-11-19T20:10:19.912821+00:00",
     "status": "failed",
     "fetched": 0,
     "in_window": 0,
@@ -730,12 +730,12 @@
       "tax_fiscal"
     ],
     "error": "HTTPError: HTTP Error 503: Service Unavailable",
-    "duration_seconds": 13.89
+    "duration_seconds": 17.79
   },
   "lane_peer_spill": {
     "source": "lane_peer_spill",
     "kind": "search",
-    "checked_at": "2026-11-19T20:04:38.672136+00:00",
+    "checked_at": "2026-11-19T20:10:27.009226+00:00",
     "status": "failed",
     "fetched": 0,
     "in_window": 0,
@@ -746,12 +746,12 @@
       "peer_spill"
     ],
     "error": "HTTPError: HTTP Error 503: Service Unavailable",
-    "duration_seconds": 13.09
+    "duration_seconds": 17.02
   },
   "lane_preannounce": {
     "source": "lane_preannounce",
     "kind": "search",
-    "checked_at": "2026-11-19T20:04:36.978539+00:00",
+    "checked_at": "2026-11-19T20:10:26.849626+00:00",
     "status": "failed",
     "fetched": 0,
     "in_window": 0,
@@ -762,12 +762,12 @@
       "preannounce"
     ],
     "error": "HTTPError: HTTP Error 503: Service Unavailable",
-    "duration_seconds": 13.21
+    "duration_seconds": 12.72
   },
   "lane_price_cap": {
     "source": "lane_price_cap",
     "kind": "search",
-    "checked_at": "2026-11-19T20:04:32.335920+00:00",
+    "checked_at": "2026-11-19T20:10:20.366195+00:00",
     "status": "failed",
     "fetched": 0,
     "in_window": 0,
@@ -778,12 +778,12 @@
       "price_cap"
     ],
     "error": "HTTPError: HTTP Error 503: Service Unavailable",
-    "duration_seconds": 20.09
+    "duration_seconds": 18.68
   },
   "lane_print_vs_priced": {
     "source": "lane_print_vs_priced",
     "kind": "search",
-    "checked_at": "2026-11-19T20:04:35.909430+00:00",
+    "checked_at": "2026-11-19T20:10:24.305591+00:00",
     "status": "failed",
     "fetched": 0,
     "in_window": 0,
@@ -794,12 +794,12 @@
       "print_vs_priced"
     ],
     "error": "HTTPError: HTTP Error 503: Service Unavailable",
-    "duration_seconds": 14.1
+    "duration_seconds": 16.7
   },
   "lane_subsidy": {
     "source": "lane_subsidy",
     "kind": "search",
-    "checked_at": "2026-11-19T20:04:33.005552+00:00",
+    "checked_at": "2026-11-19T20:10:20.538156+00:00",
     "status": "failed",
     "fetched": 0,
     "in_window": 0,
@@ -810,12 +810,12 @@
       "subsidy"
     ],
     "error": "HTTPError: HTTP Error 503: Service Unavailable",
-    "duration_seconds": 17.84
+    "duration_seconds": 14.54
   },
   "lane_factor_impulse": {
     "source": "lane_factor_impulse",
     "kind": "search",
-    "checked_at": "2026-11-19T20:04:39.739261+00:00",
+    "checked_at": "2026-11-19T20:10:27.630731+00:00",
     "status": "failed",
     "fetched": 0,
     "in_window": 0,
@@ -826,12 +826,12 @@
       "factor_impulse"
     ],
     "error": "HTTPError: HTTP Error 503: Service Unavailable",
-    "duration_seconds": 15.44
+    "duration_seconds": 16.22
   },
   "lane_corporate_action_mna": {
     "source": "lane_corporate_action_mna",
     "kind": "search",
-    "checked_at": "2026-11-19T20:04:40.084308+00:00",
+    "checked_at": "2026-11-19T20:10:31.999250+00:00",
     "status": "failed",
     "fetched": 0,
     "in_window": 0,
@@ -842,12 +842,12 @@
       "corporate_action_mna"
     ],
     "error": "HTTPError: HTTP Error 503: Service Unavailable",
-    "duration_seconds": 15.92
+    "duration_seconds": 18.2
   },
   "lane_integrity": {
     "source": "lane_integrity",
     "kind": "search",
-    "checked_at": "2026-11-19T20:04:50.848949+00:00",
+    "checked_at": "2026-11-19T20:10:39.567697+00:00",
     "status": "failed",
     "fetched": 0,
     "in_window": 0,
@@ -858,12 +858,12 @@
       "integrity"
     ],
     "error": "HTTPError: HTTP Error 503: Service Unavailable",
-    "duration_seconds": 19.92
+    "duration_seconds": 18.76
   },
   "lane_capital_return": {
     "source": "lane_capital_return",
     "kind": "search",
-    "checked_at": "2026-11-19T20:04:50.143957+00:00",
+    "checked_at": "2026-11-19T20:10:37.706665+00:00",
     "status": "failed",
     "fetched": 0,
     "in_window": 0,
@@ -874,12 +874,12 @@
       "capital_return"
     ],
     "error": "HTTPError: HTTP Error 503: Service Unavailable",
-    "duration_seconds": 19.73
+    "duration_seconds": 12.11
   },
   "lane_dilution": {
     "source": "lane_dilution",
     "kind": "search",
-    "checked_at": "2026-11-19T20:04:50.004914+00:00",
+    "checked_at": "2026-11-19T20:10:37.072846+00:00",
     "status": "failed",
     "fetched": 0,
     "in_window": 0,
@@ -890,12 +890,12 @@
       "dilution"
     ],
     "error": "HTTPError: HTTP Error 503: Service Unavailable",
-    "duration_seconds": 19.39
+    "duration_seconds": 14.53
   },
   "lane_corporate_action_spinoff": {
     "source": "lane_corporate_action_spinoff",
     "kind": "search",
-    "checked_at": "2026-11-19T20:04:42.957284+00:00",
+    "checked_at": "2026-11-19T20:10:35.076030+00:00",
     "status": "failed",
     "fetched": 0,
     "in_window": 0,
@@ -906,12 +906,12 @@
       "corporate_action_spinoff"
     ],
     "error": "HTTPError: HTTP Error 503: Service Unavailable",
-    "duration_seconds": 14.18
+    "duration_seconds": 18.56
   },
   "lane_activist_campaign": {
     "source": "lane_activist_campaign",
     "kind": "search",
-    "checked_at": "2026-11-19T20:04:53.234227+00:00",
+    "checked_at": "2026-11-19T20:10:42.464903+00:00",
     "status": "failed",
     "fetched": 0,
     "in_window": 0,
@@ -922,12 +922,12 @@
       "activist_campaign"
     ],
     "error": "HTTPError: HTTP Error 503: Service Unavailable",
-    "duration_seconds": 15.31
+    "duration_seconds": 12.98
   },
   "lane_credit_funding": {
     "source": "lane_credit_funding",
     "kind": "search",
-    "checked_at": "2026-11-19T20:04:50.190443+00:00",
+    "checked_at": "2026-11-19T20:10:39.036015+00:00",
     "status": "failed",
     "fetched": 0,
     "in_window": 0,
@@ -938,12 +938,12 @@
       "credit_funding"
     ],
     "error": "HTTPError: HTTP Error 503: Service Unavailable",
-    "duration_seconds": 13.02
+    "duration_seconds": 16.1
   },
   "lane_insider_flow": {
     "source": "lane_insider_flow",
     "kind": "search",
-    "checked_at": "2026-11-19T20:04:52.430956+00:00",
+    "checked_at": "2026-11-19T20:10:41.548658+00:00",
     "status": "failed",
     "fetched": 0,
     "in_window": 0,
@@ -954,12 +954,12 @@
       "insider_flow"
     ],
     "error": "HTTPError: HTTP Error 503: Service Unavailable",
-    "duration_seconds": 14.19
+    "duration_seconds": 16.98
   },
   "lane_strategic_review": {
     "source": "lane_strategic_review",
     "kind": "search",
-    "checked_at": "2026-11-19T20:04:53.857924+00:00",
+    "checked_at": "2026-11-19T20:10:43.852862+00:00",
     "status": "failed",
     "fetched": 0,
     "in_window": 0,
@@ -970,12 +970,12 @@
       "strategic_review"
     ],
     "error": "HTTPError: HTTP Error 503: Service Unavailable",
-    "duration_seconds": 15.58
+    "duration_seconds": 15.18
   },
   "lane_key_person": {
     "source": "lane_key_person",
     "kind": "search",
-    "checked_at": "2026-11-19T20:04:51.758798+00:00",
+    "checked_at": "2026-11-19T20:10:41.009091+00:00",
     "status": "failed",
     "fetched": 0,
     "in_window": 0,
@@ -986,12 +986,12 @@
       "key_person"
     ],
     "error": "HTTPError: HTTP Error 503: Service Unavailable",
-    "duration_seconds": 16.18
+    "duration_seconds": 14.91
   },
   "lane_distress_restruct": {
     "source": "lane_distress_restruct",
     "kind": "search",
-    "checked_at": "2026-11-19T20:04:50.729458+00:00",
+    "checked_at": "2026-11-19T20:10:39.045863+00:00",
     "status": "failed",
     "fetched": 0,
     "in_window": 0,
@@ -1002,12 +1002,12 @@
       "distress_restruct"
     ],
     "error": "HTTPError: HTTP Error 503: Service Unavailable",
-    "duration_seconds": 18.56
+    "duration_seconds": 15.2
   },
   "lane_deal_review": {
     "source": "lane_deal_review",
     "kind": "search",
-    "checked_at": "2026-11-19T20:04:56.003946+00:00",
+    "checked_at": "2026-11-19T20:10:49.817172+00:00",
     "status": "failed",
     "fetched": 0,
     "in_window": 0,
@@ -1018,12 +1018,12 @@
       "deal_review"
     ],
     "error": "HTTPError: HTTP Error 503: Service Unavailable",
-    "duration_seconds": 14.79
+    "duration_seconds": 15.45
   },
   "lane_sovereign_credit": {
     "source": "lane_sovereign_credit",
     "kind": "search",
-    "checked_at": "2026-11-19T20:04:57.137690+00:00",
+    "checked_at": "2026-11-19T20:10:50.195327+00:00",
     "status": "failed",
     "fetched": 0,
     "in_window": 0,
@@ -1034,12 +1034,12 @@
       "sovereign_credit"
     ],
     "error": "HTTPError: HTTP Error 503: Service Unavailable",
-    "duration_seconds": 16.36
+    "duration_seconds": 16.67
   },
   "lane_regulatory_probe": {
     "source": "lane_regulatory_probe",
     "kind": "search",
-    "checked_at": "2026-11-19T20:04:55.174969+00:00",
+    "checked_at": "2026-11-19T20:10:44.027007+00:00",
     "status": "failed",
     "fetched": 0,
     "in_window": 0,
@@ -1050,12 +1050,12 @@
       "regulatory_probe"
     ],
     "error": "HTTPError: HTTP Error 503: Service Unavailable",
-    "duration_seconds": 17.64
+    "duration_seconds": 18.74
   },
   "lane_product_harm": {
     "source": "lane_product_harm",
     "kind": "search",
-    "checked_at": "2026-11-19T20:05:08.544690+00:00",
+    "checked_at": "2026-11-19T20:10:55.134706+00:00",
     "status": "failed",
     "fetched": 0,
     "in_window": 0,
@@ -1066,12 +1066,12 @@
       "product_harm"
     ],
     "error": "HTTPError: HTTP Error 503: Service Unavailable",
-    "duration_seconds": 19.21
+    "duration_seconds": 14.99
   },
   "lane_lockup_expiry": {
     "source": "lane_lockup_expiry",
     "kind": "search",
-    "checked_at": "2026-11-19T20:05:10.767392+00:00",
+    "checked_at": "2026-11-19T20:10:59.037011+00:00",
     "status": "failed",
     "fetched": 0,
     "in_window": 0,
@@ -1082,12 +1082,12 @@
       "lockup_expiry"
     ],
     "error": "HTTPError: HTTP Error 503: Service Unavailable",
-    "duration_seconds": 16.84
+    "duration_seconds": 15.1
   },
   "lane_labor_organize": {
     "source": "lane_labor_organize",
     "kind": "search",
-    "checked_at": "2026-11-19T20:05:09.396141+00:00",
+    "checked_at": "2026-11-19T20:10:55.915136+00:00",
     "status": "failed",
     "fetched": 0,
     "in_window": 0,
@@ -1098,12 +1098,12 @@
       "labor_organize"
     ],
     "error": "HTTPError: HTTP Error 503: Service Unavailable",
-    "duration_seconds": 18.65
+    "duration_seconds": 15.77
   },
   "lane_blast_legal": {
     "source": "lane_blast_legal",
     "kind": "search",
-    "checked_at": "2026-11-19T20:05:03.207476+00:00",
+    "checked_at": "2026-11-19T20:10:51.600450+00:00",
     "status": "failed",
     "fetched": 0,
     "in_window": 0,
@@ -1113,13 +1113,13 @@
     "classes": [
       "blast_legal"
     ],
-    "error": "HTTPError: HTTP Error 503: Service Unavailable",
-    "duration_seconds": 20.45
+    "error": "HTTPError: HTTP Error 429: Too Many Requests",
+    "duration_seconds": 10.29
   },
   "lane_blast_ops": {
     "source": "lane_blast_ops",
     "kind": "search",
-    "checked_at": "2026-11-19T20:05:06.622213+00:00",
+    "checked_at": "2026-11-19T20:10:53.634647+00:00",
     "status": "failed",
     "fetched": 0,
     "in_window": 0,
@@ -1129,13 +1129,13 @@
     "classes": [
       "blast_ops"
     ],
-    "error": "HTTPError: HTTP Error 503: Service Unavailable",
-    "duration_seconds": 14.87
+    "error": "HTTPError: HTTP Error 429: Too Many Requests",
+    "duration_seconds": 9.78
   },
   "lane_blast_cyber": {
     "source": "lane_blast_cyber",
     "kind": "search",
-    "checked_at": "2026-11-19T20:05:07.942038+00:00",
+    "checked_at": "2026-11-19T20:10:54.243526+00:00",
     "status": "failed",
     "fetched": 0,
     "in_window": 0,
@@ -1145,13 +1145,13 @@
     "classes": [
       "blast_cyber"
     ],
-    "error": "HTTPError: HTTP Error 503: Service Unavailable",
-    "duration_seconds": 16.82
+    "error": "HTTPError: HTTP Error 429: Too Many Requests",
+    "duration_seconds": 8.95
   },
   "lane_flow_index": {
     "source": "lane_flow_index",
     "kind": "search",
-    "checked_at": "2026-11-19T20:05:10.798652+00:00",
+    "checked_at": "2026-11-19T20:11:01.894839+00:00",
     "status": "failed",
     "fetched": 0,
     "in_window": 0,
@@ -1162,12 +1162,12 @@
       "flow_index"
     ],
     "error": "HTTPError: HTTP Error 503: Service Unavailable",
-    "duration_seconds": 15.26
+    "duration_seconds": 15.31
   },
   "lane_labor_stop": {
     "source": "lane_labor_stop",
     "kind": "search",
-    "checked_at": "2026-11-19T20:05:09.287553+00:00",
+    "checked_at": "2026-11-19T20:10:55.443176+00:00",
     "status": "failed",
     "fetched": 0,
     "in_window": 0,
@@ -1178,12 +1178,12 @@
       "labor_stop"
     ],
     "error": "HTTPError: HTTP Error 503: Service Unavailable",
-    "duration_seconds": 14.18
+    "duration_seconds": 19.73
   },
   "lane_flow_mechanical": {
     "source": "lane_flow_mechanical",
     "kind": "search",
-    "checked_at": "2026-11-19T20:05:12.812050+00:00",
+    "checked_at": "2026-11-19T20:11:02.768144+00:00",
     "status": "failed",
     "fetched": 0,
     "in_window": 0,
@@ -1194,12 +1194,12 @@
       "flow_mechanical"
     ],
     "error": "HTTPError: HTTP Error 503: Service Unavailable",
-    "duration_seconds": 18.37
+    "duration_seconds": 16.81
   },
   "lane_cat_weather": {
     "source": "lane_cat_weather",
     "kind": "search",
-    "checked_at": "2026-11-19T20:05:09.433426+00:00",
+    "checked_at": "2026-11-19T20:10:58.324121+00:00",
     "status": "failed",
     "fetched": 0,
     "in_window": 0,
@@ -1210,12 +1210,12 @@
       "cat_weather"
     ],
     "error": "HTTPError: HTTP Error 503: Service Unavailable",
-    "duration_seconds": 19.87
+    "duration_seconds": 6.89
   },
   "lane_flow_forced_liq": {
     "source": "lane_flow_forced_liq",
     "kind": "search",
-    "checked_at": "2026-11-19T20:05:13.493706+00:00",
+    "checked_at": "2026-11-19T20:11:03.190761+00:00",
     "status": "failed",
     "fetched": 0,
     "in_window": 0,
@@ -1226,12 +1226,12 @@
       "flow_forced_liq"
     ],
     "error": "HTTPError: HTTP Error 503: Service Unavailable",
-    "duration_seconds": 17.52
+    "duration_seconds": 20.56
   },
   "lane_listing_flow": {
     "source": "lane_listing_flow",
     "kind": "search",
-    "checked_at": "2026-11-19T20:05:09.869311+00:00",
+    "checked_at": "2026-11-19T20:10:58.531260+00:00",
     "status": "failed",
     "fetched": 0,
     "in_window": 0,
@@ -1242,12 +1242,12 @@
       "listing_flow"
     ],
     "error": "HTTPError: HTTP Error 503: Service Unavailable",
-    "duration_seconds": 15.15
+    "duration_seconds": 15.2
   },
   "lane_regime_break": {
     "source": "lane_regime_break",
     "kind": "search",
-    "checked_at": "2026-11-19T20:05:23.463545+00:00",
+    "checked_at": "2026-11-19T20:11:05.209614+00:00",
     "status": "failed",
     "fetched": 0,
     "in_window": 0,
@@ -1258,12 +1258,12 @@
       "regime_break"
     ],
     "error": "HTTPError: HTTP Error 503: Service Unavailable",
-    "duration_seconds": 17.85
+    "duration_seconds": 6.99
   },
   "lane_rumor": {
     "source": "lane_rumor",
     "kind": "search",
-    "checked_at": "2026-11-19T20:05:24.762811+00:00",
+    "checked_at": "2026-11-19T20:11:06.865178+00:00",
     "status": "failed",
     "fetched": 0,
     "in_window": 0,
@@ -1274,12 +1274,12 @@
       "rumor"
     ],
     "error": "HTTPError: HTTP Error 503: Service Unavailable",
-    "duration_seconds": 19.55
+    "duration_seconds": 7.56
   },
   "lane_regime_state": {
     "source": "lane_regime_state",
     "kind": "search",
-    "checked_at": "2026-11-19T20:05:21.489732+00:00",
+    "checked_at": "2026-11-19T20:11:03.409829+00:00",
     "status": "failed",
     "fetched": 0,
     "in_window": 0,
@@ -1289,13 +1289,13 @@
     "classes": [
       "regime_state"
     ],
-    "error": "HTTPError: HTTP Error 503: Service Unavailable",
-    "duration_seconds": 15.15
+    "error": "HTTPError: HTTP Error 429: Too Many Requests",
+    "duration_seconds": 8.83
   },
   "lane_statement_public": {
     "source": "lane_statement_public",
     "kind": "search",
-    "checked_at": "2026-11-19T20:05:23.654472+00:00",
+    "checked_at": "2026-11-19T20:11:05.268678+00:00",
     "status": "failed",
     "fetched": 0,
     "in_window": 0,
@@ -1306,12 +1306,12 @@
       "statement_public"
     ],
     "error": "HTTPError: HTTP Error 503: Service Unavailable",
-    "duration_seconds": 16.38
+    "duration_seconds": 13.38
   },
   "topic_business": {
     "source": "topic_business",
     "kind": "search",
-    "checked_at": "2026-11-19T20:05:25.017221+00:00",
+    "checked_at": "2026-11-19T20:11:10.127711+00:00",
     "status": "failed",
     "fetched": 0,
     "in_window": 0,
@@ -1320,12 +1320,12 @@
     "requests": 1,
     "classes": [],
     "error": "HTTPError: HTTP Error 503: Service Unavailable",
-    "duration_seconds": 12.58
+    "duration_seconds": 16.86
   },
   "topic_fed": {
     "source": "topic_fed",
     "kind": "search",
-    "checked_at": "2026-11-19T20:05:28.044696+00:00",
+    "checked_at": "2026-11-19T20:11:13.732872+00:00",
     "status": "failed",
     "fetched": 0,
     "in_window": 0,
@@ -1334,12 +1334,12 @@
     "requests": 1,
     "classes": [],
     "error": "HTTPError: HTTP Error 503: Service Unavailable",
-    "duration_seconds": 15.73
+    "duration_seconds": 16.97
   },
   "topic_technology": {
     "source": "topic_technology",
     "kind": "search",
-    "checked_at": "2026-11-19T20:05:26.054100+00:00",
+    "checked_at": "2026-11-19T20:11:11.689044+00:00",
     "status": "failed",
     "fetched": 0,
     "in_window": 0,
@@ -1348,12 +1348,12 @@
     "requests": 1,
     "classes": [],
     "error": "HTTPError: HTTP Error 503: Service Unavailable",
-    "duration_seconds": 15.87
+    "duration_seconds": 19.64
   },
   "topic_fda": {
     "source": "topic_fda",
     "kind": "search",
-    "checked_at": "2026-11-19T20:05:27.751352+00:00",
+    "checked_at": "2026-11-19T20:11:12.240526+00:00",
     "status": "failed",
     "fetched": 0,
     "in_window": 0,
@@ -1362,12 +1362,12 @@
     "requests": 1,
     "classes": [],
     "error": "HTTPError: HTTP Error 503: Service Unavailable",
-    "duration_seconds": 16.04
+    "duration_seconds": 18.89
   },
   "topic_products": {
     "source": "topic_products",
     "kind": "search",
-    "checked_at": "2026-11-19T20:05:27.602837+00:00",
+    "checked_at": "2026-11-19T20:11:12.204358+00:00",
     "status": "failed",
     "fetched": 0,
     "in_window": 0,
@@ -1376,12 +1376,12 @@
     "requests": 1,
     "classes": [],
     "error": "HTTPError: HTTP Error 503: Service Unavailable",
-    "duration_seconds": 13.95
+    "duration_seconds": 13.4
   },
   "topic_legislation": {
     "source": "topic_legislation",
     "kind": "search",
-    "checked_at": "2026-11-19T20:05:31.009200+00:00",
+    "checked_at": "2026-11-19T20:11:14.426634+00:00",
     "status": "failed",
     "fetched": 0,
     "in_window": 0,
@@ -1390,12 +1390,12 @@
     "requests": 1,
     "classes": [],
     "error": "HTTPError: HTTP Error 503: Service Unavailable",
-    "duration_seconds": 14.33
+    "duration_seconds": 19.17
   },
   "topic_government": {
     "source": "topic_government",
     "kind": "search",
-    "checked_at": "2026-11-19T20:05:29.300906+00:00",
+    "checked_at": "2026-11-19T20:11:14.140066+00:00",
     "status": "failed",
     "fetched": 0,
     "in_window": 0,
@@ -1404,12 +1404,12 @@
     "requests": 1,
     "classes": [],
     "error": "HTTPError: HTTP Error 503: Service Unavailable",
-    "duration_seconds": 12.39
+    "duration_seconds": 15.91
   },
   "sec_8-K": {
     "source": "sec_8-K",
     "kind": "sec",
-    "checked_at": "2026-11-19T20:05:44.062112+00:00",
+    "checked_at": "2026-11-19T20:11:31.325626+00:00",
     "status": "failed",
     "fetched": 0,
     "in_window": 0,
@@ -1419,12 +1419,12 @@
     "classes": [],
     "error": "HTTPError: HTTP Error 403: Forbidden",
     "fallback_error": "HTTP Error 503: Service Unavailable",
-    "duration_seconds": 21.01
+    "duration_seconds": 17.52
   },
   "topic_judgments": {
     "source": "topic_judgments",
     "kind": "search",
-    "checked_at": "2026-11-19T20:05:31.178113+00:00",
+    "checked_at": "2026-11-19T20:11:15.170959+00:00",
     "status": "failed",
     "fetched": 0,
     "in_window": 0,
@@ -1433,12 +1433,12 @@
     "requests": 1,
     "classes": [],
     "error": "HTTPError: HTTP Error 503: Service Unavailable",
-    "duration_seconds": 17.84
+    "duration_seconds": 17.79
   },
   "official_fda_releases": {
     "source": "official_fda_releases",
     "kind": "page",
-    "checked_at": "2026-11-19T20:05:41.924323+00:00",
+    "checked_at": "2026-11-19T20:11:30.048617+00:00",
     "status": "ok",
     "fetched": 10,
     "in_window": 10,
@@ -1446,12 +1446,12 @@
     "saturated": false,
     "requests": 1,
     "classes": [],
-    "duration_seconds": 0.45
+    "duration_seconds": 0.24
   },
   "official_scotus": {
     "source": "official_scotus",
     "kind": "page",
-    "checked_at": "2026-11-19T20:05:43.791258+00:00",
+    "checked_at": "2026-11-19T20:11:31.133075+00:00",
     "status": "ok",
     "fetched": 50,
     "in_window": 50,
@@ -1459,12 +1459,12 @@
     "saturated": false,
     "requests": 1,
     "classes": [],
-    "duration_seconds": 0.27
+    "duration_seconds": 0.28
   },
   "official_commerce": {
     "source": "official_commerce",
     "kind": "page",
-    "checked_at": "2026-11-19T20:05:43.770483+00:00",
+    "checked_at": "2026-11-19T20:11:30.705611+00:00",
     "status": "failed",
     "fetched": 0,
     "in_window": 0,
@@ -1474,12 +1474,12 @@
     "classes": [],
     "error": "HTTPError: HTTP Error 403: Forbidden",
     "fallback_error": "HTTP Error 503: Service Unavailable",
-    "duration_seconds": 17.47
+    "duration_seconds": 16.44
   },
   "topic_corporate_announcements": {
     "source": "topic_corporate_announcements",
     "kind": "search",
-    "checked_at": "2026-11-19T20:05:36.643519+00:00",
+    "checked_at": "2026-11-19T20:11:17.201799+00:00",
     "status": "failed",
     "fetched": 0,
     "in_window": 0,
@@ -1488,12 +1488,12 @@
     "requests": 1,
     "classes": [],
     "error": "HTTPError: HTTP Error 503: Service Unavailable",
-    "duration_seconds": 17.67
+    "duration_seconds": 15.12
   },
   "publisher_associated_press": {
     "source": "publisher_associated_press",
     "kind": "search",
-    "checked_at": "2026-11-19T20:05:41.553779+00:00",
+    "checked_at": "2026-11-19T20:11:25.606713+00:00",
     "status": "failed",
     "fetched": 0,
     "in_window": 0,
@@ -1502,12 +1502,12 @@
     "requests": 1,
     "classes": [],
     "error": "HTTPError: HTTP Error 503: Service Unavailable",
-    "duration_seconds": 14.09
+    "duration_seconds": 16.15
   },
   "sec_6-K": {
     "source": "sec_6-K",
     "kind": "sec",
-    "checked_at": "2026-11-19T20:05:44.317468+00:00",
+    "checked_at": "2026-11-19T20:11:31.414432+00:00",
     "status": "failed",
     "fetched": 0,
     "in_window": 0,
@@ -1517,12 +1517,12 @@
     "classes": [],
     "error": "HTTPError: HTTP Error 403: Forbidden",
     "fallback_error": "HTTP Error 503: Service Unavailable",
-    "duration_seconds": 16.47
+    "duration_seconds": 15.71
   },
   "topic_central_banks": {
     "source": "topic_central_banks",
     "kind": "search",
-    "checked_at": "2026-11-19T20:05:37.595263+00:00",
+    "checked_at": "2026-11-19T20:11:18.646445+00:00",
     "status": "failed",
     "fetched": 0,
     "in_window": 0,
@@ -1531,12 +1531,12 @@
     "requests": 1,
     "classes": [],
     "error": "HTTPError: HTTP Error 503: Service Unavailable",
-    "duration_seconds": 18.74
+    "duration_seconds": 13.8
   },
   "publisher_reuters": {
     "source": "publisher_reuters",
     "kind": "search",
-    "checked_at": "2026-11-19T20:05:41.316953+00:00",
+    "checked_at": "2026-11-19T20:11:23.750706+00:00",
     "status": "failed",
     "fetched": 0,
     "in_window": 0,
@@ -1545,12 +1545,12 @@
     "requests": 1,
     "classes": [],
     "error": "HTTPError: HTTP Error 503: Service Unavailable",
-    "duration_seconds": 19.1
+    "duration_seconds": 12.18
   },
   "topic_geopolitics": {
     "source": "topic_geopolitics",
     "kind": "search",
-    "checked_at": "2026-11-19T20:05:40.035038+00:00",
+    "checked_at": "2026-11-19T20:11:19.576745+00:00",
     "status": "failed",
     "fetched": 0,
     "in_window": 0,
@@ -1559,12 +1559,12 @@
     "requests": 1,
     "classes": [],
     "error": "HTTPError: HTTP Error 503: Service Unavailable",
-    "duration_seconds": 17.06
+    "duration_seconds": 14.39
   },
   "official_federal_register": {
     "source": "official_federal_register",
     "kind": "feed",
-    "checked_at": "2026-11-19T20:05:57.093918+00:00",
+    "checked_at": "2026-11-19T20:11:38.565023+00:00",
     "status": "ok",
     "fetched": 100,
     "in_window": 3,
@@ -1572,12 +1572,12 @@
     "saturated": false,
     "requests": 1,
     "classes": [],
-    "duration_seconds": 0.13
+    "duration_seconds": 0.14
   },
   "publisher_bloomberg": {
     "source": "publisher_bloomberg",
     "kind": "search",
-    "checked_at": "2026-11-19T20:05:41.691138+00:00",
+    "checked_at": "2026-11-19T20:11:26.991333+00:00",
     "status": "failed",
     "fetched": 0,
     "in_window": 0,
@@ -1586,12 +1586,12 @@
     "requests": 1,
     "classes": [],
     "error": "HTTPError: HTTP Error 503: Service Unavailable",
-    "duration_seconds": 20.64
+    "duration_seconds": 16.24
   },
   "sec_4": {
     "source": "sec_4",
     "kind": "sec",
-    "checked_at": "2026-11-19T20:05:45.335461+00:00",
+    "checked_at": "2026-11-19T20:11:32.323900+00:00",
     "status": "failed",
     "fetched": 0,
     "in_window": 0,
@@ -1601,12 +1601,12 @@
     "classes": [],
     "error": "HTTPError: HTTP Error 403: Forbidden",
     "fallback_error": "HTTP Error 503: Service Unavailable",
-    "duration_seconds": 18.59
+    "duration_seconds": 17.31
   },
   "official_fed_search": {
     "source": "official_fed_search",
     "kind": "search",
-    "checked_at": "2026-11-19T20:06:00.789584+00:00",
+    "checked_at": "2026-11-19T20:11:43.231837+00:00",
     "status": "failed",
     "fetched": 0,
     "in_window": 0,
@@ -1618,12 +1618,12 @@
       "factor_impulse"
     ],
     "error": "HTTPError: HTTP Error 503: Service Unavailable",
-    "duration_seconds": 12.24
+    "duration_seconds": 17.61
   },
   "official_ftc_search": {
     "source": "official_ftc_search",
     "kind": "search",
-    "checked_at": "2026-11-19T20:06:01.235901+00:00",
+    "checked_at": "2026-11-19T20:11:44.174594+00:00",
     "status": "failed",
     "fetched": 0,
     "in_window": 0,
@@ -1635,12 +1635,12 @@
       "regulatory_probe"
     ],
     "error": "HTTPError: HTTP Error 503: Service Unavailable",
-    "duration_seconds": 16.12
+    "duration_seconds": 19.23
   },
   "official_fda_search": {
     "source": "official_fda_search",
     "kind": "search",
-    "checked_at": "2026-11-19T20:06:00.418932+00:00",
+    "checked_at": "2026-11-19T20:11:41.758190+00:00",
     "status": "failed",
     "fetched": 0,
     "in_window": 0,
@@ -1652,12 +1652,12 @@
       "product_harm"
     ],
     "error": "HTTPError: HTTP Error 503: Service Unavailable",
-    "duration_seconds": 16.44
+    "duration_seconds": 17.05
   },
   "issuer_ir_search": {
     "source": "issuer_ir_search",
     "kind": "search",
-    "checked_at": "2026-11-19T20:05:57.220238+00:00",
+    "checked_at": "2026-11-19T20:11:38.701555+00:00",
     "status": "failed",
     "fetched": 0,
     "in_window": 0,
@@ -1666,12 +1666,12 @@
     "requests": 1,
     "classes": [],
     "error": "HTTPError: HTTP Error 503: Service Unavailable",
-    "duration_seconds": 15.8
+    "duration_seconds": 17.3
   },
   "sec_SC_13D": {
     "source": "sec_SC_13D",
     "kind": "sec",
-    "checked_at": "2026-11-19T20:05:49.014438+00:00",
+    "checked_at": "2026-11-19T20:11:32.441666+00:00",
     "status": "failed",
     "fetched": 0,
     "in_window": 0,
@@ -1681,12 +1681,12 @@
     "classes": [],
     "error": "HTTPError: HTTP Error 403: Forbidden",
     "fallback_error": "HTTP Error 503: Service Unavailable",
-    "duration_seconds": 16.95
+    "duration_seconds": 11.73
   },
   "official_doj_search": {
     "source": "official_doj_search",
     "kind": "search",
-    "checked_at": "2026-11-19T20:06:02.330026+00:00",
+    "checked_at": "2026-11-19T20:11:47.126083+00:00",
     "status": "failed",
     "fetched": 0,
     "in_window": 0,
@@ -1698,12 +1698,12 @@
       "regulatory_probe"
     ],
     "error": "HTTPError: HTTP Error 503: Service Unavailable",
-    "duration_seconds": 15.34
+    "duration_seconds": 16.08
   },
   "official_congress_search": {
     "source": "official_congress_search",
     "kind": "search",
-    "checked_at": "2026-11-19T20:06:03.922688+00:00",
+    "checked_at": "2026-11-19T20:11:47.146987+00:00",
     "status": "failed",
     "fetched": 0,
     "in_window": 0,
@@ -1714,12 +1714,12 @@
       "tax_fiscal"
     ],
     "error": "HTTPError: HTTP Error 503: Service Unavailable",
-    "duration_seconds": 17.38
+    "duration_seconds": 16.61
   },
   "index_search": {
     "source": "index_search",
     "kind": "search",
-    "checked_at": "2026-11-19T20:06:05.968355+00:00",
+    "checked_at": "2026-11-19T20:11:48.765021+00:00",
     "status": "failed",
     "fetched": 0,
     "in_window": 0,
@@ -1730,12 +1730,12 @@
       "flow_index"
     ],
     "error": "HTTPError: HTTP Error 503: Service Unavailable",
-    "duration_seconds": 11.23
+    "duration_seconds": 17.21
   },
   "sec_SCHEDULE_13D": {
     "source": "sec_SCHEDULE_13D",
     "kind": "sec",
-    "checked_at": "2026-11-19T20:05:50.637342+00:00",
+    "checked_at": "2026-11-19T20:11:32.965784+00:00",
     "status": "failed",
     "fetched": 0,
     "in_window": 0,
@@ -1745,12 +1745,12 @@
     "classes": [],
     "error": "HTTPError: HTTP Error 403: Forbidden",
     "fallback_error": "HTTP Error 503: Service Unavailable",
-    "duration_seconds": 14.39
+    "duration_seconds": 15.42
   },
   "exchange_search": {
     "source": "exchange_search",
     "kind": "search",
-    "checked_at": "2026-11-19T20:06:05.073313+00:00",
+    "checked_at": "2026-11-19T20:11:48.389121+00:00",
     "status": "failed",
     "fetched": 0,
     "in_window": 0,
@@ -1761,12 +1761,12 @@
       "listing_flow"
     ],
     "error": "HTTPError: HTTP Error 503: Service Unavailable",
-    "duration_seconds": 16.01
+    "duration_seconds": 13.03
   },
   "official_court_search": {
     "source": "official_court_search",
     "kind": "search",
-    "checked_at": "2026-11-19T20:06:05.028109+00:00",
+    "checked_at": "2026-11-19T20:11:48.220969+00:00",
     "status": "failed",
     "fetched": 0,
     "in_window": 0,
@@ -1778,12 +1778,12 @@
       "ip_ruling"
     ],
     "error": "HTTPError: HTTP Error 503: Service Unavailable",
-    "duration_seconds": 17.73
+    "duration_seconds": 19.64
   },
   "sec_S-1": {
     "source": "sec_S-1",
     "kind": "sec",
-    "checked_at": "2026-11-19T20:05:54.311801+00:00",
+    "checked_at": "2026-11-19T20:11:33.597407+00:00",
     "status": "failed",
     "fetched": 0,
     "in_window": 0,
@@ -1793,12 +1793,12 @@
     "classes": [],
     "error": "HTTPError: HTTP Error 403: Forbidden",
     "fallback_error": "HTTP Error 503: Service Unavailable",
-    "duration_seconds": 19.3
+    "duration_seconds": 14.62
   },
   "sec_S-3": {
     "source": "sec_S-3",
     "kind": "sec",
-    "checked_at": "2026-11-19T20:05:55.646590+00:00",
+    "checked_at": "2026-11-19T20:11:33.969168+00:00",
     "status": "failed",
     "fetched": 0,
     "in_window": 0,
@@ -1808,12 +1808,12 @@
     "classes": [],
     "error": "HTTPError: HTTP Error 403: Forbidden",
     "fallback_error": "HTTP Error 503: Service Unavailable",
-    "duration_seconds": 14.7
+    "duration_seconds": 14.8
   },
   "sec_SC_TO-T": {
     "source": "sec_SC_TO-T",
     "kind": "sec",
-    "checked_at": "2026-11-19T20:05:56.332696+00:00",
+    "checked_at": "2026-11-19T20:11:35.927736+00:00",
     "status": "failed",
     "fetched": 0,
     "in_window": 0,
@@ -1823,12 +1823,12 @@
     "classes": [],
     "error": "HTTPError: HTTP Error 403: Forbidden",
     "fallback_error": "HTTP Error 503: Service Unavailable",
-    "duration_seconds": 16.9
+    "duration_seconds": 16.38
   },
   "official_treasury": {
     "source": "official_treasury",
     "kind": "page",
-    "checked_at": "2026-11-19T20:05:42.374889+00:00",
+    "checked_at": "2026-11-19T20:11:30.289638+00:00",
     "status": "ok",
     "fetched": 10,
     "in_window": 10,
@@ -1836,6 +1836,6 @@
     "saturated": false,
     "requests": 1,
     "classes": [],
-    "duration_seconds": 8.26
+    "duration_seconds": 8.28
   }
 }
