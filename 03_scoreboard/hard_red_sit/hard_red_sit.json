@@ -2929,7 +2929,7 @@
             "side": "long",
             "open": null,
             "px": 85.57,
-            "px_src": "session_export",
+            "px_src": "session_export+elite_live_skipped",
             "low": null,
             "scoops": {
               "0.5": {
@@ -2965,7 +2965,7 @@
             "side": "long",
             "open": null,
             "px": 24.6,
-            "px_src": "session_export",
+            "px_src": "session_export+elite_live_skipped",
             "low": null,
             "scoops": {
               "0.5": {
@@ -3001,7 +3001,7 @@
             "side": "long",
             "open": null,
             "px": 154.03,
-            "px_src": "session_export",
+            "px_src": "session_export+elite_live_skipped",
             "low": null,
             "scoops": {
               "0.5": {
@@ -3037,7 +3037,7 @@
             "side": "long",
             "open": null,
             "px": 52.48,
-            "px_src": "session_export",
+            "px_src": "session_export+elite_live_skipped",
             "low": null,
             "scoops": {
               "0.5": {
@@ -3073,7 +3073,7 @@
             "side": "long",
             "open": null,
             "px": 25.87,
-            "px_src": "session_export",
+            "px_src": "session_export+elite_live_skipped",
             "low": null,
             "scoops": {
               "0.5": {
@@ -3109,7 +3109,7 @@
             "side": "long",
             "open": null,
             "px": 32.36,
-            "px_src": "session_export",
+            "px_src": "session_export+elite_live_skipped",
             "low": null,
             "scoops": {
               "0.5": {
@@ -3141,11 +3141,11 @@
             "tag": "RESEARCH"
           },
           {
-            "ticker": "MNTK",
+            "ticker": "PODD",
             "side": "long",
             "open": null,
-            "px": 1.15,
-            "px_src": "session_export",
+            "px": 139.98,
+            "px_src": "session_export+elite_live_skipped",
             "low": null,
             "scoops": {
               "0.5": {
@@ -3177,11 +3177,11 @@
             "tag": "RESEARCH"
           },
           {
-            "ticker": "OPTU",
+            "ticker": "EPRX",
             "side": "long",
             "open": null,
-            "px": 0.7,
-            "px_src": "session_export",
+            "px": 6.21,
+            "px_src": "session_export+elite_live_skipped",
             "low": null,
             "scoops": {
               "0.5": {
