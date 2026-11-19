@@ -52,7 +52,7 @@
   }
  },
  "date": "2026-11-19",
- "generated_at": "2026-11-19T09:01:52-05:00",
+ "generated_at": "2026-11-19T09:28:55-05:00",
  "strategies": [
   {
    "buys": [
@@ -6220,20 +6220,19 @@
   },
   {
    "buys": [
-    "COP",
-    "ADMA",
-    "TFX",
-    "VCYT"
+    "ZTS",
+    "PRVA",
+    "CHKP",
+    "HTHT",
+    "WWW",
+    "ATEN"
    ],
    "family": "flatten_robust",
    "name": "flatten_robust",
    "note": "live flatten_robust card",
    "sells": [
-    "DVN",
-    "ALNY",
-    "CHRD",
-    "GRNT",
-    "ETON"
+    "MNTK",
+    "OPTU"
    ],
    "source": "data/day_board/2026-11-19_strategy_tickets.json",
    "status": "OK"
