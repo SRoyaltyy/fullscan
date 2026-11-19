@@ -1,6 +1,6 @@
 {
   "date": "2026-11-19",
-  "generated_at": "2026-11-19T05:38:56.887220-05:00",
+  "generated_at": "2026-11-19T05:39:07.023922-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -761,7 +761,7 @@
           "size": 2280535,
           "said": "200 rows",
           "bullets": [
-            "REGN, ONC, LLY, TREE, ETON, GCT, KNSA, ANET"
+            "REGN, ONC, LLY, ETON, TREE, GCT, KNSA, ANET"
           ]
         },
         {
@@ -838,7 +838,7 @@
       ],
       "said": "200 rows",
       "bullets": [
-        "REGN, ONC, LLY, TREE, ETON"
+        "REGN, ONC, LLY, ETON, TREE"
       ]
     },
     {
@@ -1398,6 +1398,24 @@
         }
       ],
       "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -11.26, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -3.85, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -3.24, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -2.5700000000000003, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -4.585, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -3.24, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -8.69, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -4.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-11-19\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-11-19",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-19T05:39:06.081909-05:00",
+      "files": [
+        {
+          "path": "data/join/2026-11-19_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2280535,
+          "preview": "5888 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 REGN, ONC, LLY, ETON, TREE"
+        }
+      ],
+      "preview": "5888 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 REGN, ONC, LLY, ETON, TREE"
     }
   ],
   "href": {
