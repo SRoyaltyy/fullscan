@@ -2925,10 +2925,10 @@
         "short_only": [],
         "dip_scoop": [
           {
-            "ticker": "COP",
+            "ticker": "ZTS",
             "side": "long",
             "open": null,
-            "px": 134.4,
+            "px": 85.57,
             "px_src": "session_export",
             "low": null,
             "scoops": {
@@ -2961,10 +2961,10 @@
             "tag": "RESEARCH"
           },
           {
-            "ticker": "ADMA",
+            "ticker": "PRVA",
             "side": "long",
             "open": null,
-            "px": 13.56,
+            "px": 24.6,
             "px_src": "session_export",
             "low": null,
             "scoops": {
@@ -2997,10 +2997,10 @@
             "tag": "RESEARCH"
           },
           {
-            "ticker": "TFX",
+            "ticker": "CHKP",
             "side": "long",
             "open": null,
-            "px": 165.85,
+            "px": 154.03,
             "px_src": "session_export",
             "low": null,
             "scoops": {
@@ -3033,10 +3033,10 @@
             "tag": "RESEARCH"
           },
           {
-            "ticker": "VCYT",
+            "ticker": "HTHT",
             "side": "long",
             "open": null,
-            "px": 25.57,
+            "px": 52.48,
             "px_src": "session_export",
             "low": null,
             "scoops": {
@@ -3069,10 +3069,10 @@
             "tag": "RESEARCH"
           },
           {
-            "ticker": "DVN",
+            "ticker": "WWW",
             "side": "long",
             "open": null,
-            "px": 41.96,
+            "px": 25.87,
             "px_src": "session_export",
             "low": null,
             "scoops": {
@@ -3105,10 +3105,10 @@
             "tag": "RESEARCH"
           },
           {
-            "ticker": "ALNY",
+            "ticker": "ATEN",
             "side": "long",
             "open": null,
-            "px": 149.4,
+            "px": 32.36,
             "px_src": "session_export",
             "low": null,
             "scoops": {
@@ -3141,10 +3141,10 @@
             "tag": "RESEARCH"
           },
           {
-            "ticker": "CHRD",
+            "ticker": "MNTK",
             "side": "long",
             "open": null,
-            "px": 137.58,
+            "px": 1.15,
             "px_src": "session_export",
             "low": null,
             "scoops": {
@@ -3177,46 +3177,10 @@
             "tag": "RESEARCH"
           },
           {
-            "ticker": "GRNT",
+            "ticker": "OPTU",
             "side": "long",
             "open": null,
-            "px": 5.73,
-            "px_src": "session_export",
-            "low": null,
-            "scoops": {
-              "0.5": {
-                "kind": "no_open",
-                "x": 0.5,
-                "fill": null
-              },
-              "1.0": {
-                "kind": "no_open",
-                "x": 1.0,
-                "fill": null
-              },
-              "1.5": {
-                "kind": "no_open",
-                "x": 1.5,
-                "fill": null
-              },
-              "2.0": {
-                "kind": "no_open",
-                "x": 2.0,
-                "fill": null
-              },
-              "3.0": {
-                "kind": "no_open",
-                "x": 3.0,
-                "fill": null
-              }
-            },
-            "tag": "RESEARCH"
-          },
-          {
-            "ticker": "ETON",
-            "side": "long",
-            "open": null,
-            "px": 61.99,
+            "px": 0.7,
             "px_src": "session_export",
             "low": null,
             "scoops": {
