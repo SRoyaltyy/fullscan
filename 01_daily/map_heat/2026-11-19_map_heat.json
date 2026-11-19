@@ -1,8 +1,8 @@
 {
   "date": "2026-11-19",
-  "generated_at": "2026-11-19T04:52:18.172233-05:00",
+  "generated_at": "2026-11-19T05:04:57.110980-05:00",
   "phase": "morning_overlay",
-  "export": "finviz_2026-11-18.csv",
+  "export": "finviz_2026-11-19.csv",
   "n_tickers": 11616,
   "sectors": [
     {
@@ -8935,194 +8935,29 @@
   ],
   "ticker_news": [
     {
-      "time": "5 min",
-      "title": "Stock Futures Rise as Optimism Improves Ahead of Anthropic Trading Debut",
-      "url": "https://www.wsj.com/finance/stocks/stock-futures-rise-as-optimism-improves-ahead-of-anthropic-trading-debut-ecdfbb2f?mod=wsj_FV",
-      "source": "The Wall Street Journal",
-      "tickers": [
-        "ANT"
-      ]
-    },
-    {
-      "time": "7 min",
-      "title": "Anthropic's record IPO lands as Nvidia suffers its worst run since 2008",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/anthropics-record-ipo-lands-nvidia-053102964.html",
-      "source": "Euronews",
-      "tickers": [
-        "NVDA",
-        "ANT"
-      ]
-    },
-    {
-      "time": "10 min",
-      "title": "PANW Stock Surges 8% Overnight: Palo Alto Networks CEO Sees 'Hundreds Of Billions Of Dollars' Opportunity In Open-Weight AI Models Security",
-      "url": "https://finance.yahoo.com/technology/ai/articles/panw-stock-surges-8-overnight-062601463.html",
-      "source": "Stocktwits",
-      "tickers": [
-        "PANW"
-      ]
-    },
-    {
-      "time": "15 min",
-      "title": "GTA VI Sales Top $1.6B  Take-Two, Console Partners Microsoft And Sony Shares Rise",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/gta-vi-sales-top-1-093642746.html",
-      "source": "Stocktwits",
-      "tickers": [
-        "AMD"
-      ]
-    },
-    {
-      "time": "17 min",
-      "title": "Kaplan Fox & Kilsheimer LLP Encourages Millrose Properties, Inc. (MRP) Investors With Losses to Seek Appointment as Lead Plaintiff Before December 8, 2026",
-      "url": "https://www.newsfilecorp.com/release/324280/Kaplan-Fox-Kilsheimer-LLP-Encourages-Millrose-Properties-Inc.-MRP-Investors-With-Losses-to-Seek-Appointment-as-Lead-Plaintiff-Before-December-8-2026",
-      "source": "Newsfile",
-      "tickers": [
-        "MRP"
-      ]
-    },
-    {
-      "time": "17 min",
-      "title": "Anthropics record-setting IPO; Fed minutes - whats moving markets",
-      "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-record-setting-ipo-fed-093418331.html",
-      "source": "Investing.com",
-      "tickers": [
-        "NVDA",
-        "ANT"
-      ]
-    },
-    {
-      "time": "17 min",
-      "title": "Anthropic IPO Today: AI Giant Prepares to Start Trading in High-Stakes Offering",
-      "url": "https://www.wsj.com/livecoverage/anthropic-ipo-stock-market-today-11-19-2026?mod=wsj_FV",
-      "source": "The Wall Street Journal",
-      "tickers": [
-        "ANT"
-      ]
-    },
-    {
-      "time": "19 min",
-      "title": "Walmart headlines Thursday's earnings slate",
-      "url": "https://www.marketwatch.com/livecoverage/stock-market-today-nasdaq-leads-dow-sp500-higher-on-anthropic-ai-optimism-walmart-earnings/card/walmart-headlines-thursday-s-earnings-slate-HtFmSNvTueHOJpnuPJLJ?mod=mw_FV",
+      "time": "4 min",
+      "title": "Palo Alto rides cybersecurity surge, and other early market movers",
+      "url": "https://www.marketwatch.com/livecoverage/stock-market-today-nasdaq-leads-dow-sp500-higher-on-anthropic-ai-optimism-walmart-earnings/card/palo-alto-rides-cybersecurity-surge-and-other-early-market-movers-3rtQ4cyzjeIkcqfuY6xH?mod=mw_FV",
       "source": "MarketWatch",
       "tickers": [
-        "KEYS",
-        "ESTC",
-        "INTU",
+        "PANW",
+        "CRWD",
+        "ZS",
         "BABA",
-        "WMT"
+        "NVDA"
       ]
     },
     {
-      "time": "20 min",
-      "title": "FDA clears Masimos brain function monitor",
-      "url": "https://finance.yahoo.com/news/fda-clears-masimo-brain-function-093133622.html",
-      "source": "Medical Device Network",
-      "tickers": [
-        "DHR"
-      ]
-    },
-    {
-      "time": "24 min",
-      "title": "Up 15% since October: Inside the oncology stock beating healthcare",
-      "url": "https://finance.yahoo.com/healthcare/articles/15-since-october-inside-oncology-092758856.html",
-      "source": "Investing.com",
-      "tickers": [
-        "ONC"
-      ]
-    },
-    {
-      "time": "24 min",
-      "title": "Palantir just posted a record quarterso why did the stock sink?",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/palantir-just-posted-record-quarter-092745487.html",
-      "source": "Investing.com",
-      "tickers": [
-        "PLTR",
-        "NOW"
-      ]
-    },
-    {
-      "time": "24 min",
-      "title": "A $95 billion backlog at 18x P/E: What Dell dip-buyers are missing",
-      "url": "https://finance.yahoo.com/technology/articles/95-billion-backlog-18x-p-092736584.html",
-      "source": "Investing.com",
-      "tickers": [
-        "NBIS",
-        "DELL",
-        "CRWV"
-      ]
-    },
-    {
-      "time": "24 min",
-      "title": "While Moderna sank 17%, this generic drugmaker quietly jumped 64%",
-      "url": "https://finance.yahoo.com/healthcare/articles/while-moderna-sank-17-generic-092725720.html",
-      "source": "Investing.com",
-      "tickers": [
-        "MRNA",
-        "AMRX"
-      ]
-    },
-    {
-      "time": "29 min",
-      "title": "Is the AI party over? Anthropic is about to find out.",
-      "url": "https://finance.yahoo.com/technology/article/is-the-ai-party-over-anthropic-is-about-to-find-out-230000591.html",
+      "time": "4 min",
+      "title": "Anthropic IPO live: Company said to price stock at $83, begin trading Thursday",
+      "url": "https://finance.yahoo.com/technology/live/anthropic-ipo-live-company-said-to-price-stock-at-83-begin-trading-thursday-212656452.html",
       "source": "Yahoo Finance",
       "tickers": [
-        "CRWV",
-        "AMD",
-        "SPCX",
-        "CRM",
         "ANT"
       ]
     },
     {
-      "time": "32 min",
-      "title": "Campaign Urges Ripple to Burn $30B in XRP as Analyst Cites Tesla in $70 XRP Call",
-      "url": "https://finance.yahoo.com/markets/crypto/articles/campaign-urges-ripple-burn-30b-091934496.html",
-      "source": "CCN",
-      "tickers": [
-        "TSLA"
-      ]
-    },
-    {
-      "time": "39 min",
-      "title": "Here's the precise moment when cyberattacks started increasing exponentially",
-      "url": "https://www.marketwatch.com/story/heres-the-precise-moment-when-cyberattacks-started-increasing-exponentially-244a4294?mod=mw_FV",
-      "source": "MarketWatch",
-      "tickers": [
-        "HACK"
-      ]
-    },
-    {
-      "time": "40 min",
-      "title": "Target lifts full-year sales outlook after Q3 growth",
-      "url": "https://finance.yahoo.com/news/target-lifts-full-sales-outlook-091155356.html",
-      "source": "Retail Insight Network",
-      "tickers": [
-        "TGT"
-      ]
-    },
-    {
-      "time": "41 min",
-      "title": "Evotec shares rise after second IND acceptance with Bristol Myers",
-      "url": "https://finance.yahoo.com/healthcare/articles/evotec-shares-rise-second-ind-091058828.html",
-      "source": "Investing.com",
-      "tickers": [
-        "EVO",
-        "BMY"
-      ]
-    },
-    {
-      "time": "42 min",
-      "title": "Anthropic IPO: Here Are 3 Critical Questions Morningstar Wants Investors To Ask",
-      "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-ipo-3-critical-questions-090927689.html",
-      "source": "Stocktwits",
-      "tickers": [
-        "ANT",
-        "MORN"
-      ]
-    },
-    {
-      "time": "42 min",
+      "time": "4 min",
       "title": "Stock market today: Dow, S&P 500, Nasdaq futures rise ahead of historic Anthropic IPO",
       "url": "https://finance.yahoo.com/markets/live/stock-market-today-thursday-november-19-dow-sp-500-nasdaq-anthropic-ipo-090910916.html",
       "source": "Yahoo Finance",
@@ -9135,17 +8970,98 @@
       ]
     },
     {
-      "time": "44 min",
-      "title": "IHG expands Spanish portfolio with three Holiday Inn Express signings",
-      "url": "https://finance.yahoo.com/news/ihg-expands-spanish-portfolio-three-090757355.html",
-      "source": "Hotel Management Network",
+      "time": "4 min",
+      "title": "Why is Anthropic going public now? Here are two reasons.",
+      "url": "https://www.marketwatch.com/livecoverage/anthropic-ipo-stock-price-trading-ai-claude/card/why-is-anthropic-going-public-now-here-are-two-reasons--W2FgUEypYoUMeQK93ego?mod=mw_FV",
+      "source": "MarketWatch",
       "tickers": [
-        "IHG"
+        "ANT"
       ]
     },
     {
-      "time": "49 min",
-      "title": "Nasdaq futures jump as Anthropic's record IPO pricing fuels hopes for strong debut",
+      "time": "4 min",
+      "title": "Trip.com Group Limited to Report Third Quarter of 2026 Financial Results on December 1, 2026 U.S. Time",
+      "url": "/news/425008/tripcom-group-limited-to-report-third-quarter-of-2026-financial-results-on-december-1-2026-us-time",
+      "source": "PR Newswire",
+      "tickers": [
+        "TCOM"
+      ]
+    },
+    {
+      "time": "4 min",
+      "title": "Full Truck Alliance Co. Ltd. Announces Third Quarter 2026 Unaudited Financial Results",
+      "url": "/news/425009/full-truck-alliance-co-ltd-announces-third-quarter-2026-unaudited-financial-results",
+      "source": "PR Newswire",
+      "tickers": [
+        "YMM"
+      ]
+    },
+    {
+      "time": "4 min",
+      "title": "VIZSLA SILVER PROVIDES UPDATE ON PANUCO PROJECT DEVELOPMENT",
+      "url": "/news/425010/vizsla-silver-provides-update-on-panuco-project-development",
+      "source": "PR Newswire",
+      "tickers": [
+        "VZLA"
+      ]
+    },
+    {
+      "time": "4 min",
+      "title": "MoonFox Data Opens Continuous China LLM Usage Data to Global Investors and Research Firms",
+      "url": "/news/425011/moonfox-data-opens-continuous-china-llm-usage-data-to-global-investors-and-research-firms",
+      "source": "GlobeNewswire",
+      "tickers": [
+        "JG"
+      ]
+    },
+    {
+      "time": "4 min",
+      "title": "HUTCHMED Announces China NMPA Approval of SYVIK (sovleplenib) for the Treatment of Primary Immune Thrombocytopenia and Warm Antibody Autoimmune Hemolytic Anemia",
+      "url": "/news/425012/hutchmed-announces-china-nmpa-approval-of-syvik-sovleplenib-for-the-treatment-of-primary-immune-thrombocytopenia-and-warm-antibody-autoimmune-hemolytic-anemia",
+      "source": "GlobeNewswire",
+      "tickers": [
+        "HCM"
+      ]
+    },
+    {
+      "time": "5 min",
+      "title": "Biogen reports two-year Phase II data for diranersen in Alzheimers",
+      "url": "https://finance.yahoo.com/news/biogen-reports-two-phase-ii-095910339.html",
+      "source": "Clinical Trials Arena",
+      "tickers": [
+        "BIIB"
+      ]
+    },
+    {
+      "time": "5 min",
+      "title": "Grand Theft Auto VI draws rave reviews as gamers enter Vice City",
+      "url": "https://finance.yahoo.com/news/gamers-ready-enter-vice-city-110339411.html",
+      "source": "Reuters",
+      "tickers": [
+        "TTWO"
+      ]
+    },
+    {
+      "time": "10 min",
+      "title": "Transaction in Own Shares",
+      "url": "/news/425007/transaction-in-own-shares",
+      "source": "GlobeNewswire",
+      "tickers": [
+        "SHEL"
+      ]
+    },
+    {
+      "time": "16 min",
+      "title": "TGT Stock Heads For Best Year Since 2019: Does Its Q3 Turnaround Justify The Premium?",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/tgt-stock-heads-best-since-094749900.html",
+      "source": "Stocktwits",
+      "tickers": [
+        "TGT"
+      ]
+    },
+    {
+      "time": "17 min",
+      "title": "Nasdaq futures jump on hopes for strong Anthropic market debut",
       "url": "https://finance.yahoo.com/markets/stocks/articles/nasdaq-futures-jump-anthropics-record-090243474.html",
       "source": "Reuters",
       "tickers": [
@@ -9155,7 +9071,205 @@
       ]
     },
     {
-      "time": "50 min",
+      "time": "17 min",
+      "title": "Stock Futures Rise as Optimism Improves Ahead of Anthropic Trading Debut",
+      "url": "https://www.wsj.com/finance/stocks/stock-futures-rise-as-optimism-improves-ahead-of-anthropic-trading-debut-ecdfbb2f?mod=wsj_FV",
+      "source": "The Wall Street Journal",
+      "tickers": [
+        "ANT"
+      ]
+    },
+    {
+      "time": "20 min",
+      "title": "Anthropic's record IPO lands as Nvidia suffers its worst run since 2008",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/anthropics-record-ipo-lands-nvidia-053102964.html",
+      "source": "Euronews",
+      "tickers": [
+        "NVDA",
+        "ANT"
+      ]
+    },
+    {
+      "time": "28 min",
+      "title": "GTA VI Sales Top $1.6B  Take-Two, Console Partners Microsoft And Sony Shares Rise",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/gta-vi-sales-top-1-093642746.html",
+      "source": "Stocktwits",
+      "tickers": [
+        "AMD",
+        "MSFT",
+        "TTWO"
+      ]
+    },
+    {
+      "time": "28 min",
+      "title": "Washington eyes ChadCameroon antimony corridor as Chinas US export ban suspension nears expiry",
+      "url": "https://finance.yahoo.com/energy/articles/washington-eyes-chad-cameroon-antimony-093624773.html",
+      "source": "IntelliNews",
+      "tickers": [
+        "UAMY"
+      ]
+    },
+    {
+      "time": "29 min",
+      "title": "Kaplan Fox & Kilsheimer LLP Encourages Millrose Properties, Inc. (MRP) Investors With Losses to Seek Appointment as Lead Plaintiff Before December 8, 2026",
+      "url": "https://www.newsfilecorp.com/release/324280/Kaplan-Fox-Kilsheimer-LLP-Encourages-Millrose-Properties-Inc.-MRP-Investors-With-Losses-to-Seek-Appointment-as-Lead-Plaintiff-Before-December-8-2026",
+      "source": "Newsfile",
+      "tickers": [
+        "MRP"
+      ]
+    },
+    {
+      "time": "30 min",
+      "title": "Anthropics record-setting IPO; Fed minutes - whats moving markets",
+      "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-record-setting-ipo-fed-093418331.html",
+      "source": "Investing.com",
+      "tickers": [
+        "NVDA",
+        "ANT"
+      ]
+    },
+    {
+      "time": "30 min",
+      "title": "Anthropic IPO Today: AI Giant Prepares to Start Trading in High-Stakes Offering",
+      "url": "https://www.wsj.com/livecoverage/anthropic-ipo-stock-market-today-11-19-2026?mod=wsj_FV",
+      "source": "The Wall Street Journal",
+      "tickers": [
+        "ANT"
+      ]
+    },
+    {
+      "time": "31 min",
+      "title": "Walmart headlines Thursday's earnings slate",
+      "url": "https://www.marketwatch.com/livecoverage/stock-market-today-nasdaq-leads-dow-sp500-higher-on-anthropic-ai-optimism-walmart-earnings/card/walmart-headlines-thursday-s-earnings-slate-HtFmSNvTueHOJpnuPJLJ?mod=mw_FV",
+      "source": "MarketWatch",
+      "tickers": [
+        "KEYS",
+        "BABA",
+        "ESTC",
+        "PDD",
+        "INTU"
+      ]
+    },
+    {
+      "time": "33 min",
+      "title": "FDA clears Masimos brain function monitor",
+      "url": "https://finance.yahoo.com/news/fda-clears-masimo-brain-function-093133622.html",
+      "source": "Medical Device Network",
+      "tickers": [
+        "DHR"
+      ]
+    },
+    {
+      "time": "36 min",
+      "title": "Up 15% since October: Inside the oncology stock beating healthcare",
+      "url": "https://finance.yahoo.com/healthcare/articles/15-since-october-inside-oncology-092758856.html",
+      "source": "Investing.com",
+      "tickers": [
+        "ONC"
+      ]
+    },
+    {
+      "time": "37 min",
+      "title": "Palantir just posted a record quarterso why did the stock sink?",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/palantir-just-posted-record-quarter-092745487.html",
+      "source": "Investing.com",
+      "tickers": [
+        "PLTR",
+        "NOW"
+      ]
+    },
+    {
+      "time": "37 min",
+      "title": "A $95 billion backlog at 18x P/E: What Dell dip-buyers are missing",
+      "url": "https://finance.yahoo.com/technology/articles/95-billion-backlog-18x-p-092736584.html",
+      "source": "Investing.com",
+      "tickers": [
+        "NBIS",
+        "CRWV",
+        "DELL"
+      ]
+    },
+    {
+      "time": "37 min",
+      "title": "While Moderna sank 17%, this generic drugmaker quietly jumped 64%",
+      "url": "https://finance.yahoo.com/healthcare/articles/while-moderna-sank-17-generic-092725720.html",
+      "source": "Investing.com",
+      "tickers": [
+        "MRNA",
+        "AMRX"
+      ]
+    },
+    {
+      "time": "42 min",
+      "title": "Is the AI party over? Anthropic is about to find out.",
+      "url": "https://finance.yahoo.com/technology/article/is-the-ai-party-over-anthropic-is-about-to-find-out-230000591.html",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "CRWV",
+        "AMD",
+        "SPCX",
+        "CRM",
+        "ANT"
+      ]
+    },
+    {
+      "time": "45 min",
+      "title": "Campaign Urges Ripple to Burn $30B in XRP as Analyst Cites Tesla in $70 XRP Call",
+      "url": "https://finance.yahoo.com/markets/crypto/articles/campaign-urges-ripple-burn-30b-091934496.html",
+      "source": "CCN",
+      "tickers": [
+        "TSLA"
+      ]
+    },
+    {
+      "time": "51 min",
+      "title": "Here's the precise moment when cyberattacks started increasing exponentially",
+      "url": "https://www.marketwatch.com/story/heres-the-precise-moment-when-cyberattacks-started-increasing-exponentially-244a4294?mod=mw_FV",
+      "source": "MarketWatch",
+      "tickers": [
+        "HACK"
+      ]
+    },
+    {
+      "time": "52 min",
+      "title": "Target lifts full-year sales outlook after Q3 growth",
+      "url": "https://finance.yahoo.com/news/target-lifts-full-sales-outlook-091155356.html",
+      "source": "Retail Insight Network",
+      "tickers": [
+        "TGT"
+      ]
+    },
+    {
+      "time": "53 min",
+      "title": "Evotec shares rise after second IND acceptance with Bristol Myers",
+      "url": "https://finance.yahoo.com/healthcare/articles/evotec-shares-rise-second-ind-091058828.html",
+      "source": "Investing.com",
+      "tickers": [
+        "EVO",
+        "BMY"
+      ]
+    },
+    {
+      "time": "55 min",
+      "title": "Anthropic IPO: Here Are 3 Critical Questions Morningstar Wants Investors To Ask",
+      "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-ipo-3-critical-questions-090927689.html",
+      "source": "Stocktwits",
+      "tickers": [
+        "ANT",
+        "MORN"
+      ]
+    },
+    {
+      "time": "56 min",
+      "title": "IHG expands Spanish portfolio with three Holiday Inn Express signings",
+      "url": "https://finance.yahoo.com/news/ihg-expands-spanish-portfolio-three-090757355.html",
+      "source": "Hotel Management Network",
+      "tickers": [
+        "IHG"
+      ]
+    },
+    {
+      "time": "1 hour",
       "title": "Searenergy Poland to support Batyk 2 and 3 offshore wind farm projects",
       "url": "https://finance.yahoo.com/news/searenergy-poland-support-ba-tyk-090132213.html",
       "source": "Power Technology",
@@ -9164,16 +9278,7 @@
       ]
     },
     {
-      "time": "51 min",
-      "title": "Anthropic IPO live: Company said to price stock at $83, begin trading Thursday",
-      "url": "https://finance.yahoo.com/technology/live/anthropic-ipo-live-company-said-to-price-stock-at-83-begin-trading-thursday-212656452.html",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "ANT"
-      ]
-    },
-    {
-      "time": "52 min",
+      "time": "1 hour",
       "title": "Youdao Reports Third Quarter 2026 Unaudited Financial Results",
       "url": "/news/425003/youdao-reports-third-quarter-2026-unaudited-financial-results",
       "source": "PR Newswire",
@@ -9183,7 +9288,7 @@
       ]
     },
     {
-      "time": "52 min",
+      "time": "1 hour",
       "title": "Youdao, Inc. to Hold Annual General Meeting on December 17, 2026",
       "url": "/news/425004/youdao-inc-to-hold-annual-general-meeting-on-december-17-2026",
       "source": "PR Newswire",
@@ -9193,7 +9298,7 @@
       ]
     },
     {
-      "time": "53 min",
+      "time": "1 hour",
       "title": "BABA Stock Dips Further After Hitting 22-Month Low  US AI Curbs Weigh Ahead Of Earnings, But Retail Bulls Arent Budging",
       "url": "https://finance.yahoo.com/markets/stocks/articles/baba-stock-dips-further-hitting-085853314.html",
       "source": "Stocktwits",
@@ -9244,10 +9349,10 @@
       "source": "MarketWatch",
       "tickers": [
         "KEYS",
-        "ESTC",
-        "INTU",
         "BABA",
-        "WMT"
+        "ESTC",
+        "PDD",
+        "INTU"
       ]
     },
     {
@@ -9268,8 +9373,8 @@
       "url": "https://finance.yahoo.com/markets/stocks/articles/tech-stocks-lead-europes-stoxx-083215610.html",
       "source": "Reuters",
       "tickers": [
-        "STM",
         "ASML",
+        "STM",
         "ANT"
       ]
     },
@@ -9352,7 +9457,7 @@
       ]
     },
     {
-      "time": "1 hour",
+      "time": "2 hours",
       "title": "Anthropic has cast a shadow over the software sector, Evercore says",
       "url": "https://www.marketwatch.com/livecoverage/anthropic-ipo-stock-price-trading-ai-claude/card/anthropic-has-cast-a-shadow-over-the-software-sector-evercore-says-X0oc70GItRkLTRLzWKSm?mod=mw_FV",
       "source": "MarketWatch",
@@ -9364,7 +9469,7 @@
       ]
     },
     {
-      "time": "1 hour",
+      "time": "2 hours",
       "title": "ATRenew Inc. Reports Unaudited Third Quarter 2026 Financial Results",
       "url": "/news/424997/atrenew-inc-reports-unaudited-third-quarter-2026-financial-results",
       "source": "PR Newswire",
@@ -9373,7 +9478,7 @@
       ]
     },
     {
-      "time": "1 hour",
+      "time": "2 hours",
       "title": "Futu Announces Third Quarter 2026 Unaudited Financial Results",
       "url": "/news/424998/futu-announces-third-quarter-2026-unaudited-financial-results",
       "source": "GlobeNewswire",
@@ -9382,7 +9487,7 @@
       ]
     },
     {
-      "time": "1 hour",
+      "time": "2 hours",
       "title": "Sunlands Technology Group Announces Unaudited Third Quarter 2026 Financial Results",
       "url": "/news/424999/sunlands-technology-group-announces-unaudited-third-quarter-2026-financial-results",
       "source": "GlobeNewswire",
@@ -9391,7 +9496,7 @@
       ]
     },
     {
-      "time": "1 hour",
+      "time": "2 hours",
       "title": "Twilio Powers Chelsea FC to Cut Campaign Launch Times from 48 Hours to Under 15 Minutes",
       "url": "/news/425005/twilio-powers-chelsea-fc-to-cut-campaign-launch-times-from-48-hours-to-under-15-minutes",
       "source": "Business Wire",
@@ -9400,7 +9505,7 @@
       ]
     },
     {
-      "time": "1 hour",
+      "time": "2 hours",
       "title": "CoStar Data Shows Hotel Sales in Bloomsbury-Covent Garden-Soho Submarket Climbing to a Five-Year High",
       "url": "/news/425006/costar-data-shows-hotel-sales-in-bloomsbury-covent-garden-soho-submarket-climbing-to-a-five-year-high",
       "source": "Business Wire",
@@ -9409,7 +9514,7 @@
       ]
     },
     {
-      "time": "1 hour",
+      "time": "2 hours",
       "title": "JD Sports trims top end of profit guidance as Q3 comparable sales decline",
       "url": "https://finance.yahoo.com/markets/stocks/articles/jd-sports-trims-top-end-075731840.html",
       "source": "Investing.com",
@@ -9418,7 +9523,7 @@
       ]
     },
     {
-      "time": "1 hour",
+      "time": "2 hours",
       "title": "Anthropic set to make strong start as it eyes a first-day $1.8 trillion valuation",
       "url": "https://finance.yahoo.com/markets/stocks/articles/anthropic-set-strong-start-eyes-075400251.html",
       "source": "Proactive",
@@ -9433,15 +9538,6 @@
       "source": "Investing.com",
       "tickers": [
         "TSLA"
-      ]
-    },
-    {
-      "time": "2 hours",
-      "title": "Grand Theft Auto VI draws rave reviews as gamers enter Vice City",
-      "url": "https://finance.yahoo.com/news/gamers-ready-enter-vice-city-110339411.html",
-      "source": "Reuters",
-      "tickers": [
-        "TTWO"
       ]
     },
     {
@@ -9527,7 +9623,7 @@
       ]
     },
     {
-      "time": "2 hours",
+      "time": "3 hours",
       "title": "RKLB Stock Rises Overnight: Jim Cramer Likes SpaceX But Calls Rocket Lab Too Cheap  Electron Tops Falcon 9 In 100 Launches",
       "url": "https://finance.yahoo.com/markets/stocks/articles/rklb-stock-rises-overnight-jim-070447547.html",
       "source": "Stocktwits",
@@ -9537,7 +9633,7 @@
       ]
     },
     {
-      "time": "2 hours",
+      "time": "3 hours",
       "title": "Novartis sees 5% yearly sales growth to 2031, margin back to 40% by 2029",
       "url": "https://finance.yahoo.com/healthcare/articles/novartis-sees-5-yearly-sales-070233765.html",
       "source": "Investing.com",
@@ -9546,7 +9642,7 @@
       ]
     },
     {
-      "time": "2 hours",
+      "time": "3 hours",
       "title": "InterContinental Hotels Group PLC Announces Transaction in Own Shares - November 19",
       "url": "/news/424993/intercontinental-hotels-group-plc-announces-transaction-in-own-shares-november-19",
       "source": "ACCESSWIRE",
@@ -9597,8 +9693,8 @@
       "source": "Investing.com",
       "tickers": [
         "SONY",
-        "TTWO",
-        "MSFT"
+        "MSFT",
+        "TTWO"
       ]
     },
     {
@@ -9621,6 +9717,15 @@
     },
     {
       "time": "3 hours",
+      "title": "PANW Stock Surges 8% Overnight: Palo Alto Networks CEO Sees Hundreds Of Billions Of Dollars Opportunity In Open-Weight AI Models Security",
+      "url": "https://finance.yahoo.com/news/panw-stock-surges-8-overnight-062601463.html",
+      "source": "Stocktwits",
+      "tickers": [
+        "PANW"
+      ]
+    },
+    {
+      "time": "3 hours",
       "title": "Palo Alto Networks Beats And Raises On Accelerating Growth, But The Applied Compute Deal Complicates The Margin Story",
       "url": "/news/424992/palo-alto-networks-beats-and-raises-on-accelerating-growth-but-the-applied-compute-deal-complicates-the-margin-story",
       "source": "Earnings Whispers",
@@ -9639,7 +9744,7 @@
       ]
     },
     {
-      "time": "3 hours",
+      "time": "4 hours",
       "title": "Micha\u00ebl Van De Poppe Says BTC Demand Will Come After Liquidity Is Sucked Into Anthropic IPO  Critics Dispute Mega-IPO Squeeze Narrative",
       "url": "https://finance.yahoo.com/markets/crypto/articles/micha-l-van-poppe-says-060209309.html",
       "source": "Stocktwits",
@@ -9649,7 +9754,7 @@
       ]
     },
     {
-      "time": "3 hours",
+      "time": "4 hours",
       "title": "Anthropic's lower-cost competition might not  be as cheap as it looks, analyst says",
       "url": "https://www.marketwatch.com/livecoverage/anthropic-ipo-stock-price-trading-ai-claude/card/anthropic-s-lower-cost-competition-might-not-be-as-cheap-as-it-looks-analyst-says-SSrNRKpsRBjnJZCAU9jK?mod=mw_FV",
       "source": "MarketWatch",
@@ -9658,7 +9763,7 @@
       ]
     },
     {
-      "time": "3 hours",
+      "time": "4 hours",
       "title": "InTest Sets The Pace For EU 2024/573-Compliant Thermal Testing With BT-28 ECO Launch",
       "url": "/news/424994/intest-sets-the-pace-for-eu-2024573-compliant-thermal-testing-with-bt-28-eco-launch",
       "source": "Business Wire",
@@ -9667,7 +9772,7 @@
       ]
     },
     {
-      "time": "3 hours",
+      "time": "4 hours",
       "title": "Anthropics stock market float to mint thousands of multimillionaires",
       "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-stock-market-float-mint-060000946.html",
       "source": "The Telegraph",
@@ -9676,7 +9781,7 @@
       ]
     },
     {
-      "time": "3 hours",
+      "time": "4 hours",
       "title": "ASTS Stock Jumps Overnight Despite New Shares For Engines And Spectrum  Bulls Cheer ULAs Amazon Launch Clue",
       "url": "https://finance.yahoo.com/markets/stocks/articles/asts-stock-jumps-overnight-despite-055736587.html",
       "source": "Stocktwits",
@@ -9696,119 +9801,6 @@
         "NVDA",
         "META",
         "ANT"
-      ]
-    },
-    {
-      "time": "4 hours",
-      "title": "Anthropic to begin trading after record-breaking market debut tops SpaceX record",
-      "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-set-price-ipo-key-030309911.html",
-      "source": "AFP",
-      "tickers": [
-        "SPCX",
-        "NVDA",
-        "ANT"
-      ]
-    },
-    {
-      "time": "4 hours",
-      "title": "KKR Invests in Gentaris Renewables Platform in India",
-      "url": "https://www.businesswire.com/news/home/20261118076160/en/",
-      "source": "Business Wire",
-      "tickers": [
-        "KKR"
-      ]
-    },
-    {
-      "time": "4 hours",
-      "title": "Gold, Silver and Crude Slide Hard as Volatility Jumps on the Week",
-      "url": "/news/424990/gold-silver-and-crude-slide-hard-as-volatility-jumps-on-the-week",
-      "source": "PR Newswire",
-      "tickers": [
-        "CSCO",
-        "SAP",
-        "LLY",
-        "RTX"
-      ]
-    },
-    {
-      "time": "4 hours",
-      "title": "Why Did DIS, TGT, ASO Stocks Surge To 52-Week Highs Today?",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/why-did-dis-tgt-aso-051716723.html",
-      "source": "Stocktwits",
-      "tickers": [
-        "DIS",
-        "TGT",
-        "ASO"
-      ]
-    },
-    {
-      "time": "4 hours",
-      "title": "Elon Musk Names 2 Anthropic Favorites Ahead Of Its IPO  Flags A Risk To 10-GW Opportunity For SpaceX",
-      "url": "https://finance.yahoo.com/technology/ai/articles/elon-musk-names-2-anthropic-051201503.html",
-      "source": "Stocktwits",
-      "tickers": [
-        "SPCX",
-        "ANT"
-      ]
-    },
-    {
-      "time": "4 hours",
-      "title": "Asia stocks slide as Taiwan drops 4%, AI jitters blunt Anthropic IPO optimism",
-      "url": "https://finance.yahoo.com/markets/world-indices/articles/asia-stocks-slide-taiwan-drops-050553675.html",
-      "source": "Investing.com",
-      "tickers": [
-        "NVDA",
-        "ANT"
-      ]
-    },
-    {
-      "time": "4 hours",
-      "title": "Asian stocks are mixed and US futures climb ahead of Anthropic's blockbuster IPO",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/asian-stocks-mixed-us-futures-050038678.html",
-      "source": "Associated Press",
-      "tickers": [
-        "NVDA",
-        "ANT"
-      ]
-    },
-    {
-      "time": "4 hours",
-      "title": "Why Did Cathie Wood Sell Nvidia Before Earnings and Buy Crypto Stocks?",
-      "url": "https://finance.yahoo.com/markets/crypto/articles/why-did-cathie-wood-sell-050000758.html",
-      "source": "BeInCrypto",
-      "tickers": [
-        "COIN",
-        "CRCL",
-        "ARKK",
-        "NVDA",
-        "XYZ"
-      ]
-    },
-    {
-      "time": "4 hours",
-      "title": "AP Top Extended Financial Headlines at 12:29 a.m. EST",
-      "url": "https://finance.yahoo.com/markets/world-indices/articles/ap-top-extended-financial-headlines-050000270.html",
-      "source": "Associated Press",
-      "tickers": [
-        "ANT"
-      ]
-    },
-    {
-      "time": "4 hours",
-      "title": "AP Top Financial News at 12:29 a.m. EST",
-      "url": "https://finance.yahoo.com/markets/world-indices/articles/ap-top-financial-news-12-050000125.html",
-      "source": "Associated Press",
-      "tickers": [
-        "ANT"
-      ]
-    },
-    {
-      "time": "Nov-18",
-      "title": "Dollar hits fresh 19-mth peak on hawkish Fed; Aussie slides after weak jobs data",
-      "url": "https://finance.yahoo.com/markets/currencies/articles/dollar-hits-fresh-19-mth-044558996.html",
-      "source": "Investing.com",
-      "tickers": [
-        "DX"
       ]
     }
   ],
@@ -10362,7 +10354,7 @@
       "company": "Walmart Inc",
       "datetime": "2026-11-19T08:30:00",
       "session": "BMO",
-      "mcap": 1003777.5317882886,
+      "mcap": 1005284.9629195632,
       "eps_est": 0.6382
     },
     {
@@ -10378,7 +10370,7 @@
       "company": "Crowdstrike Holdings Inc",
       "datetime": "2026-12-01T16:30:00",
       "session": "AMC",
-      "mcap": 257519.60814814575,
+      "mcap": 257273.8581658276,
       "eps_est": 0.3115
     },
     {
@@ -10386,7 +10378,7 @@
       "company": "Alibaba Group Holding Ltd ADR",
       "datetime": "2026-11-19T08:30:00",
       "session": "BMO",
-      "mcap": 208000.7790184021,
+      "mcap": 213523.5870552063,
       "eps_est": 1.6313
     },
     {
@@ -10394,7 +10386,7 @@
       "company": "Dell Technologies Inc",
       "datetime": "2026-11-24T16:30:00",
       "session": "AMC",
-      "mcap": 207224.0991443694,
+      "mcap": 206009.69446857055,
       "eps_est": 6.5961
     },
     {
@@ -10410,7 +10402,7 @@
       "company": "Analog Devices Inc",
       "datetime": "2026-11-24T08:30:00",
       "session": "BMO",
-      "mcap": 189368.176124632,
+      "mcap": 189518.39023442642,
       "eps_est": 3.89
     },
     {
@@ -10426,7 +10418,7 @@
       "company": "Marvell Technology Inc",
       "datetime": "2026-12-01T16:30:00",
       "session": "AMC",
-      "mcap": 132429.44162967106,
+      "mcap": 132411.89988316552,
       "eps_est": 1.1005
     },
     {
@@ -10450,7 +10442,7 @@
       "company": "PDD Holdings Inc ADR",
       "datetime": "2026-11-19T08:30:00",
       "session": "BMO",
-      "mcap": 109986.11322174073,
+      "mcap": 110455.83782806397,
       "eps_est": 2.797
     },
     {
@@ -10474,7 +10466,7 @@
       "company": "Intuit Inc",
       "datetime": "2026-11-19T16:30:00",
       "session": "AMC",
-      "mcap": 84401.14024456541,
+      "mcap": 84201.38199184198,
       "eps_est": 2.4633
     },
     {
@@ -10490,7 +10482,7 @@
       "company": "NetEase Inc ADR",
       "datetime": "2026-11-19T08:30:00",
       "session": "BMO",
-      "mcap": 71462.42205627442,
+      "mcap": 71271.34897186278,
       "eps_est": 2.4462
     },
     {
@@ -10498,7 +10490,7 @@
       "company": "Hewlett Packard Enterprise Co",
       "datetime": "2026-11-23T16:30:00",
       "session": "AMC",
-      "mcap": 63116.962829626355,
+      "mcap": 63535.64407794732,
       "eps_est": 1.2751
     },
     {
@@ -10554,7 +10546,7 @@
       "company": "Okta Inc",
       "datetime": "2026-12-01T16:30:00",
       "session": "AMC",
-      "mcap": 35642.45847564846,
+      "mcap": 35750.84649649515,
       "eps_est": 0.9342
     },
     {
@@ -10578,7 +10570,7 @@
       "company": "Dollar General Corp",
       "datetime": "2026-12-03T08:30:00",
       "session": "BMO",
-      "mcap": 29531.76,
+      "mcap": 29507.49202144073,
       "eps_est": 1.4114
     },
     {
@@ -10594,7 +10586,7 @@
       "company": "Bending Spoons S.p.A",
       "datetime": "2026-11-20T08:30:00",
       "session": "BMO",
-      "mcap": 28712.637635354888,
+      "mcap": 28660.097298641667,
       "eps_est": 0.3211
     },
     {
@@ -10610,7 +10602,7 @@
       "company": "Zoom Communications Inc",
       "datetime": "2026-11-23T16:30:00",
       "session": "AMC",
-      "mcap": 27544.388442573698,
+      "mcap": 27573.012067219344,
       "eps_est": 1.4852
     },
     {
@@ -10626,7 +10618,7 @@
       "company": "HP Inc",
       "datetime": "2026-11-24T16:30:00",
       "session": "AMC",
-      "mcap": 26043.723401384956,
+      "mcap": 25877.70440157502,
       "eps_est": 0.7495
     },
     {
@@ -10634,7 +10626,7 @@
       "company": "MongoDB Inc",
       "datetime": "2026-12-01T16:30:00",
       "session": "AMC",
-      "mcap": 25616.921974812027,
+      "mcap": 25778.034691634744,
       "eps_est": 1.6113
     },
     {
@@ -10642,7 +10634,7 @@
       "company": "Credo Technology Group Holding Ltd",
       "datetime": "2026-12-01T16:30:00",
       "session": "AMC",
-      "mcap": 24087.919272907668,
+      "mcap": 24057.846276761215,
       "eps_est": 1.2856
     },
     {
@@ -10650,7 +10642,7 @@
       "company": "Rubrik Inc",
       "datetime": "2026-11-30T16:30:00",
       "session": "AMC",
-      "mcap": 24039.02435929801,
+      "mcap": 23881.472530993375,
       "eps_est": 0.0825
     },
     {
@@ -10763,7 +10755,7 @@
       "company": "Walmart Inc",
       "datetime": "2026-11-19T08:30:00",
       "session": "BMO",
-      "mcap": 1003777.5317882886,
+      "mcap": 1005284.9629195632,
       "eps_est": 0.6382
     },
     {
@@ -10771,7 +10763,7 @@
       "company": "Alibaba Group Holding Ltd ADR",
       "datetime": "2026-11-19T08:30:00",
       "session": "BMO",
-      "mcap": 208000.7790184021,
+      "mcap": 213523.5870552063,
       "eps_est": 1.6313
     },
     {
@@ -10779,7 +10771,7 @@
       "company": "PDD Holdings Inc ADR",
       "datetime": "2026-11-19T08:30:00",
       "session": "BMO",
-      "mcap": 109986.11322174073,
+      "mcap": 110455.83782806397,
       "eps_est": 2.797
     },
     {
@@ -10787,7 +10779,7 @@
       "company": "Intuit Inc",
       "datetime": "2026-11-19T16:30:00",
       "session": "AMC",
-      "mcap": 84401.14024456541,
+      "mcap": 84201.38199184198,
       "eps_est": 2.4633
     },
     {
@@ -10803,7 +10795,7 @@
       "company": "NetEase Inc ADR",
       "datetime": "2026-11-19T08:30:00",
       "session": "BMO",
-      "mcap": 71462.42205627442,
+      "mcap": 71271.34897186278,
       "eps_est": 2.4462
     },
     {
@@ -10831,5 +10823,5 @@
   "calendar_window_days": 16,
   "econ_window_count": 184,
   "earnings_window_count": 232,
-  "overlay_at": "2026-11-19T04:52:18.172233-05:00"
+  "overlay_at": "2026-11-19T05:04:57.110980-05:00"
 }

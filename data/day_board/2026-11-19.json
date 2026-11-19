@@ -1236,6 +1236,31 @@
       "preview": "2604 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CBRL, SLDE, POWW, REYN, AES \u00b7 2604 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CBRL, AES, REYN, SLDE, TGT"
     },
     {
+      "key": "map_heat",
+      "title": "Map heat morning overlay",
+      "date": "2026-11-19",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-19T05:04:57.192474-05:00",
+      "files": [
+        {
+          "path": "01_daily/map_heat/2026-11-19_map_heat.json",
+          "ok": true,
+          "reason": "",
+          "size": 275833,
+          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
+        },
+        {
+          "path": "01_daily/map_heat/2026-11-19_map_heat.md",
+          "ok": true,
+          "reason": "",
+          "size": 18463,
+          "preview": "# MAP HEAT \u2014 2026-11-19\nExport `finviz_2026-11-19.csv` \u00b7 11616 names \u00b7 generated 2026-11-19T05:04:57.110980-05:00"
+        }
+      ],
+      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-11-19\nExport `finviz_2026-11-19.csv` \u00b7 11616 names \u00b7 generated 2026-11-19T05:04:57.110980-05:00"
+    },
+    {
       "key": "news_parse",
       "title": "News parse",
       "date": "2026-11-19",
