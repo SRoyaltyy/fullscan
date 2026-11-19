@@ -1,10 +1,34 @@
 [
   {
+    "title": "Drug Alerts and Statements",
+    "url": "http://www.fda.gov/drugs/drug-safety-and-availability/drug-alerts-and-statements",
+    "native_id": "http://www.fda.gov/drugs/drug-safety-and-availability/drug-alerts-and-statements",
+    "published_at": "2026-11-19T13:49:24+00:00",
+    "published_raw": "Thu, 19 Nov 2026 08:49:24 EST",
+    "summary": "See updates from CDER on fast-moving issues and learn about CDER's work to enhance public health",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Food and Drug Administration — What's New: Drugs",
+      "jurisdiction": "US",
+      "family": "product_permissions_and_safety"
+    },
+    "primary_source_id": "us-fda-5696b24295",
+    "n": 1390,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-11-19T21:37:53.975841+00:00",
+    "source_ids": [
+      "us-fda-5696b24295"
+    ]
+  },
+  {
     "title": "What's New Related to Drugs",
     "url": "http://www.fda.gov/drugs/news-events-human-drugs/whats-new-related-drugs",
     "native_id": "http://www.fda.gov/drugs/news-events-human-drugs/whats-new-related-drugs",
-    "published_at": "2026-11-18T21:47:15+00:00",
-    "published_raw": "Wed, 18 Nov 2026 16:47:15 EST",
+    "published_at": "2026-11-19T13:50:06+00:00",
+    "published_raw": "Thu, 19 Nov 2026 08:50:06 EST",
     "summary": "Want to know what's new on drugs from FDA? This page provides quick links to the latest on a variety of topics including: drug approvals, safety warnings, drug shortages, etc.",
     "source_metadata": {
       "document_type": "official_announcement",
@@ -18,18 +42,18 @@
     "primary_source_id": "us-fda-5696b24295",
     "n": 1394,
     "first_seen": "2026-10-15T10:17:11.133023+00:00",
-    "last_seen": "2026-11-19T08:50:38.135120+00:00",
+    "last_seen": "2026-11-19T21:37:53.975841+00:00",
     "source_ids": [
       "us-fda-5696b24295"
     ]
   },
   {
-    "title": "Patient Listening Session Summaries",
-    "url": "http://www.fda.gov/patients/fda-patient-listening-sessions/patient-listening-session-summaries",
-    "native_id": "http://www.fda.gov/patients/fda-patient-listening-sessions/patient-listening-session-summaries",
-    "published_at": "2026-11-18T22:51:39+00:00",
-    "published_raw": "Wed, 18 Nov 2026 17:51:39 EST",
-    "summary": "Patient Listening Session summaries are published after each session to share a high-level summary of the discussion. The Office of Public Engagement draft summaries for FDA-requested sessions and the patient community requester drafts summaries for Patient-led sessions.",
+    "title": "Drugs@FDA Data Files",
+    "url": "http://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+    "native_id": "http://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+    "published_at": "2026-11-19T15:31:53+00:00",
+    "published_raw": "Thu, 19 Nov 2026 10:31:53 EST",
+    "summary": "Drugs@FDA Downloadable Data File in ZIP format, Data Definitions, and Entity Relationship Diagram (ERD)",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
@@ -40,193 +64,131 @@
       "family": "product_permissions_and_safety"
     },
     "primary_source_id": "us-fda-5696b24295",
-    "n": 1405,
+    "n": 1398,
     "first_seen": "2026-10-15T10:17:11.133023+00:00",
-    "last_seen": "2026-11-19T08:50:38.135120+00:00",
+    "last_seen": "2026-11-19T21:37:53.975841+00:00",
     "source_ids": [
       "us-fda-03f7703006",
       "us-fda-5696b24295"
     ]
   },
   {
-    "title": "Company Names Tribunal undefended decisions and orders",
-    "url": "https://www.gov.uk/government/publications/company-names-tribunal-undefended-decisions-and-orders",
-    "native_id": "/government/publications/company-names-tribunal-undefended-decisions-and-orders",
-    "published_at": "2026-11-19T07:23:59+00:00",
-    "published_raw": "2026-11-19T07:23:59Z",
+    "title": "What’s New for Biologics",
+    "url": "http://www.fda.gov/vaccines-blood-biologics/news-events-biologics/whats-new-biologics",
+    "native_id": "http://www.fda.gov/vaccines-blood-biologics/news-events-biologics/whats-new-biologics",
+    "published_at": "2026-11-19T17:12:37+00:00",
+    "published_raw": "Thu, 19 Nov 2026 12:12:37 EST",
+    "summary": "Latest news from the Center for Biologics Evaluation and Research",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Food and Drug Administration — What's New: Vaccines, Blood and Biologics",
+      "jurisdiction": "US",
+      "family": "product_permissions_and_safety"
+    },
+    "primary_source_id": "us-fda-03f7703006",
+    "n": 1413,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-11-19T21:37:53.975841+00:00",
+    "source_ids": [
+      "us-fda-03f7703006"
+    ]
+  },
+  {
+    "title": "Deep Drilling Screening Directions – 2026",
+    "url": "https://www.gov.uk/government/publications/deep-drilling-screening-directions-2026",
+    "native_id": "/government/publications/deep-drilling-screening-directions-2026",
+    "published_at": "2026-11-19T13:19:00+00:00",
+    "published_raw": "2026-11-19T13:19:00Z",
     "document_type": "decision",
-    "issuer": "Company Names Tribunal",
+    "issuer": "Offshore Petroleum Regulator for Environment and Decommissioning",
     "issuer_ids": [
-      "uk-gov:company-names-tribunal"
+      "uk-gov:offshore-petroleum-regulator-for-environment-and-decommissioning"
     ],
-    "summary": "Decisions and orders of the Company Names Tribunal - undefended.",
+    "summary": "Screening Directions",
     "source_metadata": {
       "document_type": "decision",
       "document_stage": "decision_published",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Company Names Tribunal",
+      "issuer": "Offshore Petroleum Regulator for Environment and Decommissioning",
       "jurisdiction": "UK",
       "family": "typed_government_documents"
     },
     "primary_source_id": "uk-govuk-decision",
-    "n": 2103,
-    "first_seen": "2026-10-15T12:16:32.997656+00:00",
-    "last_seen": "2026-11-19T08:50:38.135120+00:00",
+    "n": 3303,
+    "first_seen": "2026-10-16T10:36:18.842579+00:00",
+    "last_seen": "2026-11-19T21:37:53.975841+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
   },
   {
-    "title": "DCPD-2026ACTSAPPROVED - Acts Approved by the President",
-    "url": "https://www.govinfo.gov/app/details/DCPD-2026ACTSAPPROVED",
-    "native_id": "DCPD-2026ACTSAPPROVED",
-    "published_at": "2026-11-18T21:52:01+00:00",
-    "published_raw": "Wed, 18 Nov 2026 21:52:01 +0000",
-    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "title": "Business software and cloud services",
+    "url": "https://www.gov.uk/government/publications/business-software-and-cloud-services",
+    "native_id": "/government/publications/business-software-and-cloud-services",
+    "published_at": "2026-11-19T10:32:47+00:00",
+    "published_raw": "2026-11-19T10:32:47Z",
+    "document_type": "decision",
+    "issuer": "Competition and Markets Authority",
+    "issuer_ids": [
+      "uk-gov:competition-and-markets-authority"
+    ],
+    "summary": "Actions set out by the Competition and Markets Authority (CMA) on business software and cloud services.",
     "source_metadata": {
-      "document_type": "presidential_document",
-      "document_stage": "presidential_document_published",
+      "document_type": "decision",
+      "document_stage": "decision_published",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Compilation of Presidential Documents",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
+      "issuer": "Competition and Markets Authority",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
     },
-    "primary_source_id": "us-govinfo-dcpd",
-    "n": 2475,
-    "first_seen": "2026-10-16T05:53:15.995133+00:00",
-    "last_seen": "2026-11-19T08:50:38.135120+00:00",
-    "source_ids": [
-      "us-govinfo-dcpd"
-    ]
-  },
-  {
-    "title": "DCPD-2026CHECKLIST - Checklist of White House Press Releases",
-    "url": "https://www.govinfo.gov/app/details/DCPD-2026CHECKLIST",
-    "native_id": "DCPD-2026CHECKLIST",
-    "published_at": "2026-11-18T21:54:01+00:00",
-    "published_raw": "Wed, 18 Nov 2026 21:54:01 +0000",
-    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "presidential_document",
-      "document_stage": "presidential_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Compilation of Presidential Documents",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-dcpd",
-    "n": 2477,
-    "first_seen": "2026-10-16T05:53:15.995133+00:00",
-    "last_seen": "2026-11-19T08:50:38.135120+00:00",
-    "source_ids": [
-      "us-govinfo-dcpd"
-    ]
-  },
-  {
-    "title": "DCPD-2026DIGEST - Digest of Other White House Announcements",
-    "url": "https://www.govinfo.gov/app/details/DCPD-2026DIGEST",
-    "native_id": "DCPD-2026DIGEST",
-    "published_at": "2026-11-18T21:54:01+00:00",
-    "published_raw": "Wed, 18 Nov 2026 21:54:01 +0000",
-    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "presidential_document",
-      "document_stage": "presidential_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Compilation of Presidential Documents",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-dcpd",
-    "n": 2481,
-    "first_seen": "2026-10-16T05:53:15.995133+00:00",
-    "last_seen": "2026-11-19T08:50:38.135120+00:00",
-    "source_ids": [
-      "us-govinfo-dcpd"
-    ]
-  },
-  {
-    "title": "Que no lo dejen colgado esta temporada festiva con regalos inseguros: Compre de fuentes confiables",
-    "url": "https://www.cpsc.gov/es/Newsroom/News-Releases/2026/Dont-Be-Left-Out-in-the-Cold-This-Holiday-Season-with-Unsafe-Presents-Buy-from-Trusted-Sources",
-    "native_id": "https://www.cpsc.gov/_6d039050-7fba-4cdf-8361-f7db2f5e3963",
-    "published_at": null,
-    "published_raw": "Tue, 12/09/2025 - 12:00",
-    "summary": "La CPSC les recuerda a los consumidores comprar de manera segura esta temporada festiva",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Consumer Product Safety Commission",
-      "jurisdiction": "US",
-      "family": "product_safety"
-    },
-    "primary_source_id": "us-cpsc-08fe06e2e6",
-    "n": 3537,
+    "primary_source_id": "uk-govuk-decision",
+    "n": 3304,
     "first_seen": "2026-10-16T10:36:18.842579+00:00",
-    "last_seen": "2026-11-19T08:50:38.135120+00:00",
+    "last_seen": "2026-11-19T21:37:53.975841+00:00",
     "source_ids": [
-      "us-cpsc-08fe06e2e6"
+      "uk-govuk-decision"
     ]
   },
   {
-    "title": "Ponga la seguridad en el menú para unas felices fiestas: la Comisión de Seguridad de Productos del Consumidor ofrece consejos para cocinar con seguridad",
-    "url": "https://www.cpsc.gov/es/Newsroom/News-Releases/2026/Put-Safety-on-the-Menu-Consumer-Product-Safety-Commission-Offers-Safe-Cooking-Tips-for-a-Joyful-Holiday-Season",
-    "native_id": "https://www.cpsc.gov/_59de4207-4ace-44ca-ace0-3cde0cfb8ddb",
-    "published_at": null,
-    "published_raw": "Wed, 11/19/2025 - 12:00",
-    "summary": "WASHINGTON, D.C. – A medida que las familias de todo Estados Unidos se preparan para reunirse en Acción de Gracias, la Comisión de Seguridad de Productos del Consumidor de Estados Unidos (CPSC, por sus siglas en inglés) emite un recordatorio urgente: la",
+    "title": "Production Screening Directions – 2026",
+    "url": "https://www.gov.uk/government/publications/production-screening-directions-2026",
+    "native_id": "/government/publications/production-screening-directions-2026",
+    "published_at": "2026-11-19T15:55:46+00:00",
+    "published_raw": "2026-11-19T15:55:46Z",
+    "document_type": "decision",
+    "issuer": "Offshore Petroleum Regulator for Environment and Decommissioning",
+    "issuer_ids": [
+      "uk-gov:offshore-petroleum-regulator-for-environment-and-decommissioning"
+    ],
+    "summary": "Screening Directions",
     "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
+      "document_type": "decision",
+      "document_stage": "decision_published",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Consumer Product Safety Commission",
-      "jurisdiction": "US",
-      "family": "product_safety"
+      "issuer": "Offshore Petroleum Regulator for Environment and Decommissioning",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
     },
-    "primary_source_id": "us-cpsc-08fe06e2e6",
-    "n": 3538,
-    "first_seen": "2026-10-16T10:36:18.842579+00:00",
-    "last_seen": "2026-11-19T08:50:38.135120+00:00",
+    "primary_source_id": "uk-govuk-decision",
+    "n": 3735,
+    "first_seen": "2026-10-16T16:03:14.310875+00:00",
+    "last_seen": "2026-11-19T21:37:53.975841+00:00",
     "source_ids": [
-      "us-cpsc-08fe06e2e6"
-    ]
-  },
-  {
-    "title": "La CPSC aprueba nueva norma federal de seguridad para flotadores de cuello con el fin de prevenir muertes de bebés y lesiones graves",
-    "url": "https://www.cpsc.gov/es/Newsroom/News-Releases/2025/CPSC-Approves-New-Federal-Safety-Standard-for-Neck-Floats-to-Prevent-Infant-Deaths-and-Serious-Injuries",
-    "native_id": "https://www.cpsc.gov/_4014aab3-f30e-41aa-ad48-dd7587119b4c",
-    "published_at": null,
-    "published_raw": "Thu, 08/21/2025 - 12:00",
-    "summary": "La Comisión de Seguridad de Productos del Consumidor de EE. UU. (CPSC) aprobó una norma de seguridad de productos de consumo para mejorar la seguridad de los flotadores de cuello, un juguete acuático destinado a niños de hasta cuatro años de edad.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Consumer Product Safety Commission",
-      "jurisdiction": "US",
-      "family": "product_safety"
-    },
-    "primary_source_id": "us-cpsc-08fe06e2e6",
-    "n": 3540,
-    "first_seen": "2026-10-16T10:36:18.842579+00:00",
-    "last_seen": "2026-11-19T08:50:38.135120+00:00",
-    "source_ids": [
-      "us-cpsc-08fe06e2e6"
+      "uk-govuk-decision"
     ]
   },
   {
     "title": "Untitled Letters",
     "url": "http://www.fda.gov/drugs/warning-letters-and-notice-violation-letters-pharmaceutical-companies/untitled-letters",
     "native_id": "http://www.fda.gov/drugs/warning-letters-and-notice-violation-letters-pharmaceutical-companies/untitled-letters",
-    "published_at": "2026-11-18T20:59:20+00:00",
-    "published_raw": "Wed, 18 Nov 2026 15:59:20 EST",
+    "published_at": "2026-11-19T13:38:47+00:00",
+    "published_raw": "Thu, 19 Nov 2026 08:38:47 EST",
     "summary": "These letters are supplied by the CDER Freedom of Information Office and only cover Office of Prescription Drug Promotion's untitled letters. FDA may have redacted or edited some of the letters to remove confidential information.",
     "source_metadata": {
       "document_type": "official_announcement",
@@ -240,7 +202,7 @@
     "primary_source_id": "us-fda-5696b24295",
     "n": 5191,
     "first_seen": "2026-10-17T11:48:15.567792+00:00",
-    "last_seen": "2026-11-19T08:50:38.135120+00:00",
+    "last_seen": "2026-11-19T21:37:53.975841+00:00",
     "source_ids": [
       "us-fda-5696b24295"
     ]
@@ -249,8 +211,8 @@
     "title": "Novel Drug Approvals for 2026",
     "url": "http://www.fda.gov/drugs/novel-drug-approvals-fda/novel-drug-approvals-2026",
     "native_id": "http://www.fda.gov/drugs/novel-drug-approvals-fda/novel-drug-approvals-2026",
-    "published_at": "2026-11-18T21:45:23+00:00",
-    "published_raw": "Wed, 18 Nov 2026 16:45:23 EST",
+    "published_at": "2026-11-19T16:45:06+00:00",
+    "published_raw": "Thu, 19 Nov 2026 11:45:06 EST",
     "summary": "FDA Novel Drug Therapy Approvals for 2026",
     "source_metadata": {
       "document_type": "official_announcement",
@@ -264,42 +226,18 @@
     "primary_source_id": "us-fda-5696b24295",
     "n": 5806,
     "first_seen": "2026-10-21T06:03:26.053264+00:00",
-    "last_seen": "2026-11-19T08:50:38.135120+00:00",
+    "last_seen": "2026-11-19T21:37:53.975841+00:00",
     "source_ids": [
       "us-fda-5696b24295"
     ]
   },
   {
-    "title": "Developments in Real Exports and Real Imports",
-    "url": "http://www.boj.or.jp/en/research/research_data/reri/index.htm",
-    "native_id": "http://www.boj.or.jp/en/research/research_data/reri/index.htm",
-    "published_at": "2026-11-19T07:00:00+00:00",
-    "published_raw": "Thu, 19 Nov 2026 16:00:00 +0900",
-    "summary": "",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Bank of Japan",
-      "jurisdiction": "JP",
-      "family": "monetary_operations"
-    },
-    "primary_source_id": "jp-boj-d488538690",
-    "n": 6153,
-    "first_seen": "2026-10-22T17:59:58.860252+00:00",
-    "last_seen": "2026-11-19T08:50:38.135120+00:00",
-    "source_ids": [
-      "jp-boj-d488538690"
-    ]
-  },
-  {
-    "title": "Eco-NAMs Webinar Series | Enhancing Regulatory Application of Ecotoxicological QSARs - 12/03/2026",
-    "url": "http://www.fda.gov/news-events/fda-meetings-conferences-and-workshops/eco-nams-webinar-series-enhancing-regulatory-application-ecotoxicological-qsars-12032026",
-    "native_id": "http://www.fda.gov/news-events/fda-meetings-conferences-and-workshops/eco-nams-webinar-series-enhancing-regulatory-application-ecotoxicological-qsars-12032026",
-    "published_at": "2026-11-18T20:19:02+00:00",
-    "published_raw": "Wed, 18 Nov 2026 15:19:02 EST",
-    "summary": "Eco-NAMs Webinar Series is on 3 December 2026: Enhancing regulatory application of ecotoxicological QSARs",
+    "title": "Generic Drug Facilities, Sites and Organization Lists",
+    "url": "http://www.fda.gov/industry/generic-drug-user-fee-amendments/generic-drug-facilities-sites-and-organization-lists",
+    "native_id": "http://www.fda.gov/industry/generic-drug-user-fee-amendments/generic-drug-facilities-sites-and-organization-lists",
+    "published_at": "2026-11-19T16:43:26+00:00",
+    "published_raw": "Thu, 19 Nov 2026 11:43:26 EST",
+    "summary": "Generic Drug Facilities, Sites and Organization Lists",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
@@ -310,34 +248,59 @@
       "family": "product_permissions_and_safety"
     },
     "primary_source_id": "us-fda-5696b24295",
-    "n": 10878,
-    "first_seen": "2026-11-17T21:46:57.732960+00:00",
-    "last_seen": "2026-11-19T08:50:38.135120+00:00",
+    "n": 6652,
+    "first_seen": "2026-10-26T19:21:36.282284+00:00",
+    "last_seen": "2026-11-19T21:37:53.975841+00:00",
     "source_ids": [
       "us-fda-5696b24295"
     ]
   },
   {
-    "title": "Rare Disease Drug Approvals",
-    "url": "http://www.fda.gov/about-fda/accelerating-rare-disease-cures-arc-program/rare-disease-drug-approvals",
-    "native_id": "http://www.fda.gov/about-fda/accelerating-rare-disease-cures-arc-program/rare-disease-drug-approvals",
-    "published_at": "2026-11-18T21:44:45+00:00",
-    "published_raw": "Wed, 18 Nov 2026 16:44:45 EST",
-    "summary": "This page describes recent rare disease drug approvals that received a CDER or FDA communication. This is not an exhaustive list of all rare disease drug approvals.",
+    "title": "Cellular & Gene Therapy Guidances",
+    "url": "http://www.fda.gov/vaccines-blood-biologics/biologics-guidances/cellular-gene-therapy-guidances",
+    "native_id": "http://www.fda.gov/vaccines-blood-biologics/biologics-guidances/cellular-gene-therapy-guidances",
+    "published_at": "2026-11-19T18:31:39+00:00",
+    "published_raw": "Thu, 19 Nov 2026 13:31:39 EST",
+    "summary": "This page contains a listing of cellular and gene therapy guidances.",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Food and Drug Administration — What's New: Drugs",
+      "issuer": "Food and Drug Administration — What's New: Vaccines, Blood and Biologics",
       "jurisdiction": "US",
       "family": "product_permissions_and_safety"
     },
-    "primary_source_id": "us-fda-5696b24295",
-    "n": 10881,
-    "first_seen": "2026-11-17T21:46:57.732960+00:00",
-    "last_seen": "2026-11-19T08:50:38.135120+00:00",
+    "primary_source_id": "us-fda-03f7703006",
+    "n": 6882,
+    "first_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-11-19T21:37:53.975841+00:00",
     "source_ids": [
+      "us-fda-03f7703006"
+    ]
+  },
+  {
+    "title": "Early-Phase IND Protocol Recommendations for Solid Tumors; Draft Guidance for Industry",
+    "url": "http://www.fda.gov/regulatory-information/search-fda-guidance-documents/early-phase-ind-protocol-recommendations-solid-tumors-draft-guidance-industry",
+    "native_id": "http://www.fda.gov/regulatory-information/search-fda-guidance-documents/early-phase-ind-protocol-recommendations-solid-tumors-draft-guidance-industry",
+    "published_at": "2026-11-19T13:34:31+00:00",
+    "published_raw": "Thu, 19 Nov 2026 08:34:31 EST",
+    "summary": "This document is intended to provide recommendations to sponsors and clinical investigators developing early-phase trials, which include FIH protocols or protocols for drugs and biologic products with limited human experience.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Food and Drug Administration — What's New: Vaccines, Blood and Biologics",
+      "jurisdiction": "US",
+      "family": "product_permissions_and_safety"
+    },
+    "primary_source_id": "us-fda-03f7703006",
+    "n": 9621,
+    "first_seen": "2026-11-10T20:28:57.994479+00:00",
+    "last_seen": "2026-11-19T21:37:53.975841+00:00",
+    "source_ids": [
+      "us-fda-03f7703006",
       "us-fda-5696b24295"
     ]
   }
