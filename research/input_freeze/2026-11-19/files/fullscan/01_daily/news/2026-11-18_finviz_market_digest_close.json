@@ -1,0 +1,127 @@
+{
+  "date": "2026-11-18",
+  "generated_at": "2026-11-18T21:38:56.559190-05:00",
+  "timezone": "America/New_York",
+  "source": "live",
+  "source_url": "https://elite.finviz.com/",
+  "archive_snapshot_ts": null,
+  "archive_snapshot_at": null,
+  "archive_url": null,
+  "clock_legal": true,
+  "clock_same_morning": false,
+  "clock_use": "next_open",
+  "clock_legal_for": "2026-11-19",
+  "capture_slot": "close",
+  "clock_rule": "Live post-close answer-key (~16:05 ET). Always next_open for the NEXT session (2026-11-19) — never same_morning. Writes *_finviz_market_digest_close.* only. Capture only — not tape_anchor / predict / #210.",
+  "kind": "finviz_homepage_market_digest_close",
+  "represents": "Finviz homepage post-close answer-key. clock_use is always next_open; clock_legal_for is the next NYSE session. Lives at *_finviz_market_digest_close.*. Does not replace the same_morning warm-up file. Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "US stocks ended mixed as hawkish Fed minutes and Nvidia’s post-earnings slide weighed on sentiment while healthcare slumped on Medicare audit fears and AI IPO enthusiasm built ahead of Anthropic’s debut",
+  "raw_text": "- The S&P 500 ($SPX) fell 0.23% to 7,323.63 for a fifth straight loss and the Dow Jones Industrial Average ($DJI) dropped 1.11% (561 points) to 50,198.17, while the Nasdaq Composite ($COMP) rose 0.42% to 24,429.88 and the Russell 2000 (IWM) gained 0.46% to 2,714.31.\n- Healthcare stocks slumped on Medicare Advantage audit scrutiny and a proposed audit rule from the Centers for Medicare & Medicaid Services, with UnitedHealth Group (UNH) down 10.21%, Humana (HUM) off 12.98%, Elevance (ELV) lower by 7.6%, and Centene (CNC) by 7.1%, dragging the Dow.\n- Nvidia (NVDA) reported Q3 revenue of $115.8 billion, up 103% year-over-year and above estimates, guided to roughly $130 billion in Q4 revenue and 75% growth in fiscal 2028, but its shares fell 2.9% to $150.96 after Moody’s cut its credit outlook to stable, citing leadership uncertainty following Jensen Huang’s ouster, halted China AI chip shipments, and regulatory risks.\n- Consumer discretionary led the market as TJX Companies (TJX) jumped 8.05% after missing EPS estimates but raising full-year guidance, while Target (TGT) gained about 4% on an earnings beat and higher guidance and Take-Two Interactive (TTWO) climbed more than 6% on strong GTA 6 pre-orders and reviews.\n- Technology also outperformed, with AMD (AMD) up 5.3% and Broadcom (AVGO) gaining 3.7%, making consumer discretionary and tech two of the six S&P 500 sectors that finished higher, while energy weakened alongside lower oil (@CL) prices.\n- Cybersecurity names rallied broadly on Nvidia (NVDA)’s upbeat results and technology-outage concerns, with Palo Alto Networks (PANW) advancing nearly 10%, CrowdStrike (CRWD) rising about 8%, and Fortinet (FTNT) up 6%.\n- In after-hours trading, Palo Alto Networks (PANW) climbed further after beating earnings and announcing a $4.5 billion acquisition, while CrowdStrike (CRWD) and Okta (OKTA) also rose, and BellRing Brands (BRBR) surged 24% following its report.\n- Fed minutes showed officials expected additional rate hikes and flagged concerns that artificial intelligence could sustain inflation, with Governor Christopher Waller even highlighting the possibility of a 50 basis point “shock” move.\n- Anthropic priced its IPO at $83 per share, above the prior $70–$78 target range, implying a roughly $1.5 trillion valuation ahead of Thursday’s debut under ticker ANT (ANT).\n- Traders are positioning for tomorrow’s catalysts including Walmart (WMT) earnings, Anthropic’s IPO listing under ticker ANT (ANT), and further commentary from Federal Reserve officials.",
+  "raw_summary_md": "- The **S&P 500** ([$SPX](https://finviz.com/index/SPX?p=d)) fell 0.23% to 7,323.63 for a **fifth straight loss** and the **Dow Jones Industrial Average** ([$DJI](https://finviz.com/index/DJI?p=d)) dropped 1.11% (561 points) to 50,198.17, while the **Nasdaq Composite** ([$COMP](https://finviz.com/index/COMP?p=d)) rose 0.42% to 24,429.88 and the **Russell 2000** ([IWM](https://finviz.com/quote?t=IWM)) gained 0.46% to 2,714.31.\n- Healthcare stocks slumped on **Medicare Advantage audit scrutiny** and a proposed audit rule from the Centers for Medicare & Medicaid Services, with **UnitedHealth Group** ([UNH](https://finviz.com/quote?t=UNH)) down 10.21%, **Humana** ([HUM](https://finviz.com/quote?t=HUM)) off 12.98%, **Elevance** ([ELV](https://finviz.com/quote?t=ELV)) lower by 7.6%, and **Centene** ([CNC](https://finviz.com/quote?t=CNC)) by 7.1%, dragging the Dow.\n- **Nvidia** ([NVDA](https://finviz.com/quote?t=NVDA)) reported Q3 revenue of $115.8 billion, up 103% year-over-year and above estimates, guided to roughly $130 billion in Q4 revenue and 75% growth in fiscal 2028, but its **shares fell 2.9%** to $150.96 after Moody’s **cut its credit outlook** to stable, citing leadership uncertainty following Jensen Huang’s ouster, halted China AI chip shipments, and regulatory risks.\n- **Consumer discretionary led** the market as **TJX Companies** ([TJX](https://finviz.com/quote?t=TJX)) jumped 8.05% after missing EPS estimates but **raising full-year guidance**, while **Target** ([TGT](https://finviz.com/quote?t=TGT)) gained about 4% on an earnings beat and higher guidance and **Take-Two Interactive** ([TTWO](https://finviz.com/quote?t=TTWO)) climbed more than 6% on strong GTA 6 pre-orders and reviews.\n- **Technology also outperformed**, with **AMD** ([AMD](https://finviz.com/quote?t=AMD)) up 5.3% and **Broadcom** ([AVGO](https://finviz.com/quote?t=AVGO)) gaining 3.7%, making consumer discretionary and tech two of the six S&P 500 sectors that finished higher, while **energy weakened** alongside lower **oil** ([@CL](https://finviz.com/futures_charts?t=CL)) prices.\n- Cybersecurity names **rallied broadly** on **Nvidia** ([NVDA](https://finviz.com/quote?t=NVDA))’s upbeat results and **technology-outage concerns**, with **Palo Alto Networks** ([PANW](https://finviz.com/quote?t=PANW)) advancing nearly 10%, **CrowdStrike** ([CRWD](https://finviz.com/quote?t=CRWD)) rising about 8%, and **Fortinet** ([FTNT](https://finviz.com/quote?t=FTNT)) up 6%.\n- In after-hours trading, **Palo Alto Networks** ([PANW](https://finviz.com/quote?t=PANW)) climbed further after beating earnings and announcing a **$4.5 billion acquisition**, while **CrowdStrike** ([CRWD](https://finviz.com/quote?t=CRWD)) and **Okta** ([OKTA](https://finviz.com/quote?t=OKTA)) also rose, and **BellRing Brands** ([BRBR](https://finviz.com/quote?t=BRBR)) **surged 24%** following its report.\n- Fed minutes showed officials expected additional rate hikes and flagged concerns that artificial intelligence could sustain inflation, with Governor Christopher Waller even highlighting the possibility of a **50 basis point** **“shock” move**.\n- Anthropic priced its IPO at **$83 per share**, above the prior $70–$78 target range, implying a **roughly $1.5 trillion valuation** ahead of Thursday’s debut under ticker **ANT** ([ANT](https://finviz.com/quote?t=ANT)).\n- Traders are positioning for **tomorrow’s catalysts** including **Walmart** ([WMT](https://finviz.com/quote?t=WMT)) earnings, Anthropic’s IPO listing under ticker **ANT** ([ANT](https://finviz.com/quote?t=ANT)), and further commentary from Federal Reserve officials.",
+  "index_moves": [
+    {
+      "name": "S&P 500",
+      "code": "SPX",
+      "change_pct": -0.23,
+      "verb": "fell"
+    },
+    {
+      "name": "Dow Jones Industrial Average",
+      "code": "DJI",
+      "change_pct": -1.11,
+      "verb": "dropped"
+    },
+    {
+      "name": "Nasdaq Composite",
+      "code": "COMP",
+      "change_pct": 0.42,
+      "verb": "rose"
+    },
+    {
+      "name": "Russell 2000",
+      "code": "RUT",
+      "change_pct": 0.46,
+      "verb": "gained"
+    }
+  ],
+  "oil": null,
+  "cpi": null,
+  "fed_odds": null,
+  "named_tickers": [
+    "UNH",
+    "HUM",
+    "ELV",
+    "CNC",
+    "NVDA",
+    "TJX",
+    "TGT",
+    "TTWO",
+    "AMD",
+    "AVGO",
+    "PANW",
+    "CRWD",
+    "FTNT",
+    "OKTA",
+    "BRBR",
+    "ANT",
+    "WMT"
+  ],
+  "named_leaders": [
+    "UNH",
+    "HUM",
+    "ELV",
+    "CNC",
+    "NVDA",
+    "TJX",
+    "TGT",
+    "TTWO",
+    "AMD",
+    "AVGO",
+    "PANW",
+    "CRWD",
+    "FTNT",
+    "OKTA",
+    "BRBR",
+    "ANT",
+    "WMT"
+  ],
+  "calendar": [
+    "Anthropic priced its IPO at $83 per share, above the prior $70–$78 target range, implying a roughly $1.5 trillion valuation ahead of Thursday’s debut under ticker ANT (ANT).",
+    "Traders are positioning for tomorrow’s catalysts including Walmart (WMT) earnings, Anthropic’s IPO listing under ticker ANT (ANT), and further commentary from Federal Reserve officials."
+  ],
+  "prior_close": {
+    "spx": -0.23,
+    "nasdaq": 0.42,
+    "dow": -1.11
+  },
+  "cpi_fed": {
+    "cpi": null,
+    "fed_odds": null
+  },
+  "next_session_calendar": {
+    "housing": false,
+    "retail": false,
+    "fed": true,
+    "bullets": [
+      "Anthropic priced its IPO at $83 per share, above the prior $70–$78 target range, implying a roughly $1.5 trillion valuation ahead of Thursday’s debut under ticker ANT (ANT).",
+      "Traders are positioning for tomorrow’s catalysts including Walmart (WMT) earnings, Anthropic’s IPO listing under ticker ANT (ANT), and further commentary from Federal Reserve officials."
+    ],
+    "text": "Anthropic priced its IPO at $83 per share, above the prior $70–$78 target range, implying a roughly $1.5 trillion valuation ahead of Thursday’s debut under ticker ANT (ANT). Traders are positioning for tomorrow’s catalysts including Walmart (WMT) earnings, Anthropic’s IPO listing under ticker ANT (ANT), and further commentary from Federal Reserve officials."
+  },
+  "earnings_slate": {
+    "tickers": [],
+    "text": ""
+  },
+  "geo_grain": {
+    "geo": false,
+    "grain": false,
+    "flags": [],
+    "text": ""
+  },
+  "finviz_id": 348354,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-11-18T20:38:12.69",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "good"
+}

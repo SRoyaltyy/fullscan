@@ -1,0 +1,91 @@
+{
+  "date": "2026-11-19",
+  "generated_at": "2026-11-19T05:02:42.368806-05:00",
+  "timezone": "America/New_York",
+  "source": "live",
+  "source_url": "https://elite.finviz.com/",
+  "archive_snapshot_ts": null,
+  "archive_snapshot_at": null,
+  "archive_url": null,
+  "clock_legal": true,
+  "clock_same_morning": true,
+  "clock_use": "same_morning",
+  "clock_legal_for": "2026-11-19",
+  "clock_rule": "Live: Generated must be before 09:30 ET on this date or leave missing. Wayback: capture before 09:30 ET that day is legal for that morning's Pre-Open. Afternoon Wayback is legal for the NEXT session open only (prior-day close recap), marked by clock_legal_for. Gaps stay gaps. Capture only — not tape_anchor / predict / #210.",
+  "kind": "finviz_homepage_market_digest",
+  "represents": "Finviz homepage market-day prose. Same-morning Pre-Open when Generated is before 09:30 ET; afternoon Wayback is a prior-day close recap legal for the next session only. Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "US futures point to higher open led by Nasdaq as Anthropic IPO stokes AI enthusiasm ahead of jobless claims and Philly Fed data",
+  "raw_text": "- Anthropic is set to debut on Nasdaq under ticker ANT (ANT) after pricing a record $81 billion IPO at $83 per share, valuing the AI firm at roughly $1.5 trillion.\n- Nvidia (NVDA) trades about 2% higher in thin pre-market action even as Moody’s cuts its credit outlook to stable from positive, citing leadership uncertainty, while affirming its Aa1 rating.\n- Pony AI (PONY) climbs about 3% pre-market after posting Q3 revenue of $44.6 million, up 75%, as robotaxi and robotruck scale improve unit economics, while small-cap name GP (GP) drops about 9% amid sharp moves in low-float stocks.\n- S&P 500 futures (@ES) rise 0.97%, Nasdaq 100 futures (@NQ) gain 1.76%, Dow Jones futures (@YM) add 0.51%, and Russell 2000 futures (@ER2) edge 0.39% higher before the open.\n- NetEase (NTES) falls about 6% pre-market after reporting third-quarter revenue down 1.8% year over year to RMB27.9 billion and net income of RMB8.4 billion, and approving a $0.585-per-ADS dividend.\n- Walmart (WMT), PDD Holdings (PDD), Alibaba (BABA) and Williams-Sonoma (WSM) are scheduled to report earnings before the opening bell.\n- Initial jobless claims and the Philadelphia Fed manufacturing index are due at 8:30 AM ET, with US leading indicators to follow at 10:00 AM ET.\n- Japan’s Nikkei 225 (@NKD) ends about 0.71% higher while Hong Kong’s Hang Seng declines amid ongoing AI-sector caution.\n- European equity markets trade slightly higher after a mixed start to the session.\n- WTI crude (@CL) holds near $83 per barrel as Middle East shipping risks offset surplus concerns, while gold (@GC) edges lower.",
+  "raw_summary_md": "- Anthropic is set to debut on Nasdaq under ticker **ANT** ([ANT](https://finviz.com/quote?t=ANT)) after pricing a **record $81 billion IPO** at $83 per share, valuing the AI firm at roughly **$1.5 trillion**.\n- **Nvidia** ([NVDA](https://finviz.com/quote?t=NVDA)) trades about **2% higher** in thin pre-market action even as Moody’s cuts its **credit outlook to stable** from positive, citing leadership uncertainty, while affirming its Aa1 rating.\n- **Pony AI** ([PONY](https://finviz.com/quote?t=PONY)) climbs **about 3% pre-market** after posting Q3 revenue of $44.6 million, **up 75%**, as robotaxi and robotruck scale improve unit economics, while small-cap name **GP** ([GP](https://finviz.com/quote?t=GP)) **drops about 9%** amid sharp moves in low-float stocks.\n- **S&P 500 futures** ([@ES](https://finviz.com/futures_charts?t=ES)) rise 0.97%, **Nasdaq 100 futures** ([@NQ](https://finviz.com/futures_charts?t=NQ)) gain **1.76%**, **Dow Jones futures** ([@YM](https://finviz.com/futures_charts?t=YM)) add 0.51%, and **Russell 2000 futures** ([@ER2](https://finviz.com/futures_charts?t=ER2)) edge 0.39% higher before the open.\n- **NetEase** ([NTES](https://finviz.com/quote?t=NTES)) **falls about 6%** pre-market after reporting third-quarter **revenue down 1.8%** year over year to RMB27.9 billion and net income of RMB8.4 billion, and approving a $0.585-per-ADS dividend.\n- **Walmart** ([WMT](https://finviz.com/quote?t=WMT)), **PDD Holdings** ([PDD](https://finviz.com/quote?t=PDD)), **Alibaba** ([BABA](https://finviz.com/quote?t=BABA)) and **Williams-Sonoma** ([WSM](https://finviz.com/quote?t=WSM)) are **scheduled to report earnings** before the opening bell.\n- Initial jobless claims and the Philadelphia Fed manufacturing index are due at **8:30 AM ET**, with US leading indicators to follow at **10:00 AM ET**.\n- Japan’s **Nikkei 225** ([@NKD](https://finviz.com/futures_charts?t=NKD)) ends about **0.71% higher** while Hong Kong’s Hang Seng **declines** amid ongoing **AI-sector caution**.\n- European equity markets trade **slightly higher** after a mixed start to the session.\n- **WTI crude** ([@CL](https://finviz.com/futures_charts?t=CL)) holds **near $83 per barrel** as Middle East shipping risks offset surplus concerns, while **gold** ([@GC](https://finviz.com/futures_charts?t=GC)) **edges lower**.",
+  "index_moves": [],
+  "oil": {
+    "name": "WTI crude",
+    "price": 83.0,
+    "verb": null,
+    "direction": null
+  },
+  "cpi": null,
+  "fed_odds": null,
+  "named_tickers": [
+    "ANT",
+    "NVDA",
+    "PONY",
+    "GP",
+    "NTES",
+    "WMT",
+    "PDD",
+    "BABA",
+    "WSM"
+  ],
+  "named_leaders": [
+    "ANT",
+    "NVDA",
+    "PONY",
+    "GP",
+    "NTES",
+    "WMT",
+    "PDD",
+    "BABA",
+    "WSM"
+  ],
+  "calendar": [],
+  "prior_close": {
+    "spx": null,
+    "nasdaq": null,
+    "dow": null
+  },
+  "cpi_fed": {
+    "cpi": null,
+    "fed_odds": null
+  },
+  "next_session_calendar": {
+    "housing": false,
+    "retail": false,
+    "fed": true,
+    "bullets": [],
+    "text": ""
+  },
+  "earnings_slate": {
+    "tickers": [
+      "WMT",
+      "PDD",
+      "BABA",
+      "WSM"
+    ],
+    "text": "Walmart (WMT), PDD Holdings (PDD), Alibaba (BABA) and Williams-Sonoma (WSM) are scheduled to report earnings before the opening bell."
+  },
+  "geo_grain": {
+    "geo": true,
+    "grain": false,
+    "flags": [
+      "geo"
+    ],
+    "text": "WTI crude (@CL) holds near $83 per barrel as Middle East shipping risks offset surplus concerns, while gold (@GC) edges lower."
+  },
+  "finviz_id": 348470,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-11-19T04:38:31.377",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "good"
+}
