@@ -1,6 +1,6 @@
 {
  "date": "2026-11-19",
- "generated_at": "2026-11-19T09:18:03.914987-05:00",
+ "generated_at": "2026-11-19T14:02:57.036235-05:00",
  "stance_vocabulary": [
   "favorable",
   "neutral",
@@ -18,19 +18,19 @@
   "yields_source": "fred_dgs10",
   "dgs10_delta_1d": -0.02,
   "dgs10_current": 5.1,
-  "dollar": "soft",
+  "dollar": "flat",
   "dollar_source": "dxy",
-  "dxy_pct_1d": -0.2,
-  "vix_ratio": 0.929,
-  "vix_spot": 22.56,
-  "vix_delta_1d": -2.0,
+  "dxy_pct_1d": -0.02,
+  "vix_ratio": 1.041,
+  "vix_spot": 27.25,
+  "vix_delta_1d": 2.69,
   "vix_ratio_source": "vix/vix3m",
-  "vix": "falling",
-  "oil_pct_1d": 0.32,
+  "vix": "spiking",
+  "oil_pct_1d": -0.44,
   "oil": "flat",
   "fear_greed": null,
   "fear_greed_label": null,
-  "regime_corr": 0.491,
+  "regime_corr": 0.386,
   "sectors": {
    "Basic Materials": {
     "score": -11.26,
@@ -242,14 +242,14 @@
   },
   "beta": {
    "high": {
-    "stance": "neutral",
-    "confidence": "low",
-    "why": "risk-unknown, VIX falling"
+    "stance": "hostile",
+    "confidence": "high",
+    "why": "VIX spiking — high beta is the exit door [channel1 + general]"
    },
    "low": {
-    "stance": "neutral",
-    "confidence": "low",
-    "why": "risk-unknown, VIX falling"
+    "stance": "favorable",
+    "confidence": "medium",
+    "why": "defensive ballast bid in stress [general + channel1]"
    },
    "mid": {
     "stance": "neutral",
@@ -281,14 +281,14 @@
   },
   "vol": {
    "high": {
-    "stance": "neutral",
-    "confidence": "low",
-    "why": "calm tape — vol regime not decisive [general + channel1]"
+    "stance": "hostile",
+    "confidence": "medium",
+    "why": "stress market — high-vol names de-rate fast [general + channel1]"
    },
    "low": {
-    "stance": "neutral",
+    "stance": "favorable",
     "confidence": "low",
-    "why": "calm tape"
+    "why": "low-vol preferred in stress"
    },
    "mid": {
     "stance": "neutral",
