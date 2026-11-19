@@ -1,8 +1,39 @@
 {
   "date": "2026-11-19",
   "policy": "flatten_robust",
-  "generated": "2026-11-19T14:20:30",
-  "cash": 95977.82,
-  "io": [],
+  "generated": "2026-11-19T14:53:07",
+  "cash": 102295.35,
+  "io": [
+    {
+      "ticker": "PODD",
+      "sleeve": "io_core",
+      "shares": 38,
+      "entry_px": 145.29,
+      "entry_date": "2026-11-16",
+      "last_px": 139.98,
+      "yday_px": 139.98,
+      "open_px": 140.62,
+      "overnight": 24.32,
+      "pct": 0.457,
+      "mv": 5343.56,
+      "exit_date": "2026-11-19",
+      "reason": ""
+    },
+    {
+      "ticker": "EPRX",
+      "sleeve": "io_core",
+      "shares": 756,
+      "entry_px": 7.34,
+      "entry_date": "2026-11-16",
+      "last_px": 6.21,
+      "yday_px": 6.21,
+      "open_px": 6.37,
+      "overnight": 120.96,
+      "pct": 2.576,
+      "mv": 4815.72,
+      "exit_date": "2026-11-19",
+      "reason": ""
+    }
+  ],
   "mover": []
 }
