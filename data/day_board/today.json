@@ -1,45 +1,86 @@
 {
   "date": "2026-11-19",
-  "generated_at": "2026-11-19T05:39:15.119794-05:00",
+  "generated_at": "2026-11-19T05:44:52.965434-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
-    "ok": 4,
-    "partial": 3,
+    "ok": 6,
+    "partial": 1,
     "fail": 1,
     "n": 8
   },
-  "buy_1d": [],
-  "sell_1d": [],
+  "buy_1d": [
+    {
+      "ticker": "HCSG",
+      "score": 0.625547244983556
+    },
+    {
+      "ticker": "PANW",
+      "score": 0.041260441674317236
+    },
+    {
+      "ticker": "TGT",
+      "score": 0.3367467546817659
+    },
+    {
+      "ticker": "CRWD",
+      "score": 0.1275076133444854
+    },
+    {
+      "ticker": "LFST",
+      "score": 0.7297452125700039
+    },
+    {
+      "ticker": "ATEN",
+      "score": 0.8527720311345914
+    },
+    {
+      "ticker": "APPN",
+      "score": 0.6832174943767628
+    },
+    {
+      "ticker": "DBX",
+      "score": 0.562677747036197
+    }
+  ],
+  "sell_1d": [
+    {
+      "ticker": "FCEL",
+      "score": -0.46082627860557995
+    },
+    {
+      "ticker": "FLNC",
+      "score": -0.5070214251356329
+    },
+    {
+      "ticker": "QBTS",
+      "score": -0.3904160345378748
+    },
+    {
+      "ticker": "METC",
+      "score": -0.4572328087449558
+    },
+    {
+      "ticker": "RGTI",
+      "score": -0.4436658052656583
+    },
+    {
+      "ticker": "TE",
+      "score": -0.4256433365125866
+    },
+    {
+      "ticker": "QUBT",
+      "score": -0.26120073692192364
+    },
+    {
+      "ticker": "AEHR",
+      "score": -0.24522955061874413
+    }
+  ],
   "flatten": {},
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "map_heat",
-      "title": "Map heat morning overlay",
-      "date": "2026-11-19",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-11-19T05:04:57.192474-05:00",
-      "files": [
-        {
-          "path": "01_daily/map_heat/2026-11-19_map_heat.json",
-          "ok": true,
-          "reason": "",
-          "size": 275833,
-          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
-        },
-        {
-          "path": "01_daily/map_heat/2026-11-19_map_heat.md",
-          "ok": true,
-          "reason": "",
-          "size": 18463,
-          "preview": "# MAP HEAT \u2014 2026-11-19\nExport `finviz_2026-11-19.csv` \u00b7 11616 names \u00b7 generated 2026-11-19T05:04:57.110980-05:00"
-        }
-      ],
-      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-11-19\nExport `finviz_2026-11-19.csv` \u00b7 11616 names \u00b7 generated 2026-11-19T05:04:57.110980-05:00"
-    },
     {
       "key": "news_parse",
       "title": "News parse",
@@ -207,6 +248,59 @@
         }
       ],
       "preview": "5022 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-11-19",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-19T05:44:51.921366-05:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-11-19_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1482967,
+          "preview": "1d BUY HCSG, PANW, TGT, CRWD, LFST, ATEN, APPN, DBX \u00b7 SELL FCEL, FLNC, QBTS, METC, RGTI, TE, QUBT, AEHR"
+        },
+        {
+          "path": "data/stock_book/2026-11-19_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-11-19_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2612,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-11-19_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12445,
+          "preview": "2026-11-19 BUY HCSG, PANW, TGT, CRWD, LFST, ATEN, APPN, DBX \u00b7 SELL FCEL, FLNC, QBTS, METC, RGTI, TE, QUBT, AEHR"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12445,
+          "preview": "2026-11-19 BUY HCSG, PANW, TGT, CRWD, LFST, ATEN, APPN, DBX \u00b7 SELL FCEL, FLNC, QBTS, METC, RGTI, TE, QUBT, AEHR"
+        },
+        {
+          "path": "01_daily/2026-11-19_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 87330,
+          "preview": "# Stock book \u2014 2026-11-19\n_Generated 2026-11-19T05:39:24.655980-05:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY HCSG, PANW, TGT, CRWD, LFST, ATEN, APPN, DBX \u00b7 SELL FCEL, FLNC, QBTS, METC, RGTI, TE, QUBT, AEHR \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-11-19 BUY HCSG, PANW, TGT, CRWD, LFST, ATEN, APPN, DBX \u00b7 SELL FCEL, FLNC, QBTS, METC, RGTI, TE, QUBT, AEHR \u00b7 2026-11-19 BUY HCSG, PANW, TGT, CRWD, LFST, ATEN, APPN, DBX \u00b7 SELL FCEL, FLNC, QBTS, METC, RGTI, TE, QUBT, AEHR \u00b7 # Stock book \u2014 2026-11-19\n_Generated 2026-11-19T05:39:24.655980-05:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
