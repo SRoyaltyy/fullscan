@@ -2,7 +2,7 @@
 
 _starts 10-08 open, no past days. Parent recipe `union_hot_n4_holdup` (same selection and exits); candidates only from inputs committed before 09:30 ET._
 
-Equity: 9292.17 | days: 29
+Equity: 9292.17 | days: 30
 
 | date | S | picks | buys | sells | cash | equity | mean% | sit / reason |
 |---|---|---|---|---|---|---|---|---|
@@ -35,3 +35,4 @@ Equity: 9292.17 | days: 29
 | 2026-11-13 | None | - | - | ATER 4@0.8689, INDI 1@2.19 | 9292.17 | 9292.17 | -0.0012 | seal not committed before 09:30 ET: never committed |
 | 2026-11-16 | None | - | - | - | 9292.17 | 9292.17 | 0.0 | seal not committed before 09:30 ET: never committed |
 | 2026-11-17 | None | - | - | - | 9292.17 | 9292.17 | 0.0 | seal not committed before 09:30 ET: never committed |
+| 2026-11-18 | None | - | - | - | 9292.17 | 9292.17 | 0.0 | seal not committed before 09:30 ET: never committed |
