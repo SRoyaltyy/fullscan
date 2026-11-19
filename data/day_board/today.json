@@ -1,12 +1,12 @@
 {
   "date": "2026-11-19",
-  "generated_at": "2026-11-19T05:05:24.172473-05:00",
+  "generated_at": "2026-11-19T05:05:42.304791-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
     "ok": 4,
-    "partial": 3,
-    "fail": 1,
+    "partial": 4,
+    "fail": 0,
     "n": 8
   },
   "buy_1d": [],
@@ -15,31 +15,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "finviz_digest",
-      "title": "Finviz digest",
-      "date": "2026-11-19",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-11-19T05:03:23.753112-05:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-11-19_finviz_digest.json",
-          "ok": true,
-          "reason": "",
-          "size": 100554,
-          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
-        },
-        {
-          "path": "01_daily/news/2026-11-19_finviz_digest.md",
-          "ok": true,
-          "reason": "",
-          "size": 10713,
-          "preview": "# Finviz Daily Digest \u2014 2026-11-19\n_Generated 2026-11-19T05:02:35.334740-05:00 \u00b7 export=data/exports/finviz_2026-11-19.csv \u00b7 ticker digests=836 \u00b7 high-signal=204_"
-        }
-      ],
-      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-11-19\n_Generated 2026-11-19T05:02:35.334740-05:00 \u00b7 export=data/exports/finviz_2026-11-19.csv \u00b7 ticker digests=836 \u00b7 high-signal=204_"
-    },
     {
       "key": "map_heat",
       "title": "Map heat tables",
@@ -200,6 +175,31 @@
         }
       ],
       "preview": "raw=6924 usable=496 single=572 \u00b7 OPEC speaks up for fossil fuels at COP31 climate talks - Reuters | UK Inflation Print at Fastest in a Year Comes With Few Surprises - Bloomberg.com | United States Dollar index struggles to extend rally beyond 103.80, FOMC Minutes | FOMC Minutes Tone Sets Treasury Yields and the Yen Follows - StoneX | Fed\u2019s Waller says central bank may need to \u2018shock people\u2019 with half-point rate h \u00b7 # News Parse v2 \u2014 2026-11-19T05:05:14.628542-05:00\nWindow\u224848h | news_mode=on | raw=6924 | usable=496 | single_name=572 | noise_dropped=5716\nusable polarity={'+': 11, '-': 143, 'mixed': 1, 'neutral': 341}"
+    },
+    {
+      "key": "news_actions",
+      "title": "News actions",
+      "date": "2026-11-19",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-19T05:05:41.294896-05:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-11-19_actions.json",
+          "ok": true,
+          "reason": "",
+          "size": 71836,
+          "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers"
+        },
+        {
+          "path": "01_daily/news/2026-11-19_actions.md",
+          "ok": true,
+          "reason": "",
+          "size": 13953,
+          "preview": "# News \u2192 Actions v4 (full framework) \u2014 2026-11-19T05:05:41.277168-05:00\nraw=6924 unique_events=6 tickers=106"
+        }
+      ],
+      "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-11-19T05:05:41.277168-05:00\nraw=6924 unique_events=6 tickers=106"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"

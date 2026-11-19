@@ -1,17 +1,16 @@
 {
   "date": "2026-11-19",
-  "generated_at": "2026-11-19T05:05:24.172473-05:00",
+  "generated_at": "2026-11-19T05:05:42.304791-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
     "MISSING General predict MD `01_daily/general/2026-11-19_predict.md` \u2014 missing",
-    "MISSING News actions JSON `01_daily/news/2026-11-19_actions.json` \u2014 missing",
     "MISSING News judge MD `01_daily/news/2026-11-19_judge.md` \u2014 missing"
   ],
   "counts": {
     "ok": 4,
-    "partial": 3,
-    "fail": 1,
+    "partial": 4,
+    "fail": 0,
     "n": 8
   },
   "processes": [
@@ -183,7 +182,7 @@
       "inputs_ready": true,
       "n_req_ok": 2,
       "n_req": 9,
-      "n_opt_ok": 1,
+      "n_opt_ok": 2,
       "n_opt": 14,
       "files": [
         {
@@ -294,11 +293,16 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-11-19_actions.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 71836,
+          "said": "106 ticker actions \u00b7 6 events \u00b7 6924 headlines \u00b7 COP BUY, EOG BUY, CHRD BUY, SM BUY, HPK BUY, REPX BUY, OXY BUY, FANG BUY",
+          "bullets": [
+            "BUY COP",
+            "BUY EOG",
+            "BUY CHRD",
+            "BUY SM"
+          ]
         },
         {
           "key": "general",
@@ -577,8 +581,8 @@
       "key": "catalyst",
       "name": "Catalyst dossiers",
       "yaml": "catalyst_daily.yml",
-      "status": "FAIL",
-      "inputs_ready": false,
+      "status": "PARTIAL",
+      "inputs_ready": true,
       "n_req_ok": 0,
       "n_req": 0,
       "n_opt_ok": 0,
@@ -589,11 +593,16 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-11-19_actions.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 71836,
+          "said": "106 ticker actions \u00b7 6 events \u00b7 6924 headlines \u00b7 COP BUY, EOG BUY, CHRD BUY, SM BUY, HPK BUY, REPX BUY, OXY BUY, FANG BUY",
+          "bullets": [
+            "BUY COP",
+            "BUY EOG",
+            "BUY CHRD",
+            "BUY SM"
+          ]
         },
         {
           "key": "in_digest",
@@ -622,8 +631,17 @@
           "bullets": []
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "106 ticker actions \u00b7 6 events \u00b7 6924 headlines \u00b7 COP BUY, EOG BUY, CHRD BUY, SM BUY, HPK BUY, REPX BUY, OXY BUY, FANG BUY",
+      "bullets": [
+        "BUY COP",
+        "BUY EOG",
+        "BUY CHRD",
+        "BUY SM",
+        "BUY HPK",
+        "BUY REPX",
+        "BUY OXY",
+        "BUY FANG"
+      ]
     },
     {
       "key": "stock_book",
@@ -663,11 +681,16 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-11-19_actions.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 71836,
+          "said": "106 ticker actions \u00b7 6 events \u00b7 6924 headlines \u00b7 COP BUY, EOG BUY, CHRD BUY, SM BUY, HPK BUY, REPX BUY, OXY BUY, FANG BUY",
+          "bullets": [
+            "BUY COP",
+            "BUY EOG",
+            "BUY CHRD",
+            "BUY SM"
+          ]
         },
         {
           "key": "in_digest",
@@ -1236,6 +1259,31 @@
         }
       ],
       "preview": "raw=6924 usable=496 single=572 \u00b7 OPEC speaks up for fossil fuels at COP31 climate talks - Reuters | UK Inflation Print at Fastest in a Year Comes With Few Surprises - Bloomberg.com | United States Dollar index struggles to extend rally beyond 103.80, FOMC Minutes | FOMC Minutes Tone Sets Treasury Yields and the Yen Follows - StoneX | Fed\u2019s Waller says central bank may need to \u2018shock people\u2019 with half-point rate h \u00b7 # News Parse v2 \u2014 2026-11-19T05:05:14.628542-05:00\nWindow\u224848h | news_mode=on | raw=6924 | usable=496 | single_name=572 | noise_dropped=5716\nusable polarity={'+': 11, '-': 143, 'mixed': 1, 'neutral': 341}"
+    },
+    {
+      "key": "news_actions",
+      "title": "News actions",
+      "date": "2026-11-19",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-19T05:05:41.294896-05:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-11-19_actions.json",
+          "ok": true,
+          "reason": "",
+          "size": 71836,
+          "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers"
+        },
+        {
+          "path": "01_daily/news/2026-11-19_actions.md",
+          "ok": true,
+          "reason": "",
+          "size": 13953,
+          "preview": "# News \u2192 Actions v4 (full framework) \u2014 2026-11-19T05:05:41.277168-05:00\nraw=6924 unique_events=6 tickers=106"
+        }
+      ],
+      "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-11-19T05:05:41.277168-05:00\nraw=6924 unique_events=6 tickers=106"
     }
   ],
   "href": {
