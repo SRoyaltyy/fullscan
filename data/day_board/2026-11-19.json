@@ -1,6 +1,6 @@
 {
   "date": "2026-11-19",
-  "generated_at": "2026-11-19T05:04:49.071998-05:00",
+  "generated_at": "2026-11-19T05:05:16.325411-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -181,7 +181,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 1,
+      "n_req_ok": 2,
       "n_req": 9,
       "n_opt_ok": 1,
       "n_opt": 14,
@@ -239,10 +239,10 @@
           "name": "News parse JSON",
           "path": "01_daily/news/2026-11-19_parsed.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "",
+          "size": 4944831,
+          "said": "4944831B on disk",
           "bullets": []
         },
         {
@@ -329,13 +329,13 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7576,
-          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 18 fail",
+          "size": 7575,
+          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 17 fail",
           "bullets": [
             "general_predict:missing",
             "events:missing",
             "news_judge:missing",
-            "news_parse:missing"
+            "news_actions:missing"
           ]
         },
         {
@@ -1211,6 +1211,31 @@
         }
       ],
       "preview": "2604 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CBRL, SLDE, POWW, REYN, AES \u00b7 2604 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CBRL, AES, REYN, SLDE, TGT"
+    },
+    {
+      "key": "news_parse",
+      "title": "News parse",
+      "date": "2026-11-19",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-19T05:05:15.216913-05:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-11-19_parsed.json",
+          "ok": true,
+          "reason": "",
+          "size": 4944831,
+          "preview": "raw=6924 usable=496 single=572 \u00b7 OPEC speaks up for fossil fuels at COP31 climate talks - Reuters | UK Inflation Print at Fastest in a Year Comes With Few Surprises - Bloomberg.com | United States Dollar index struggles to extend rally beyond 103.80, FOMC Minutes | FOMC Minutes Tone Sets Treasury Yields and the Yen Follows - StoneX | Fed\u2019s Waller says central bank may need to \u2018shock people\u2019 with half-point rate h"
+        },
+        {
+          "path": "01_daily/news/2026-11-19_parsed.md",
+          "ok": true,
+          "reason": "",
+          "size": 11475,
+          "preview": "# News Parse v2 \u2014 2026-11-19T05:05:14.628542-05:00\nWindow\u224848h | news_mode=on | raw=6924 | usable=496 | single_name=572 | noise_dropped=5716\nusable polarity={'+': 11, '-': 143, 'mixed': 1, 'neutral': 341}"
+        }
+      ],
+      "preview": "raw=6924 usable=496 single=572 \u00b7 OPEC speaks up for fossil fuels at COP31 climate talks - Reuters | UK Inflation Print at Fastest in a Year Comes With Few Surprises - Bloomberg.com | United States Dollar index struggles to extend rally beyond 103.80, FOMC Minutes | FOMC Minutes Tone Sets Treasury Yields and the Yen Follows - StoneX | Fed\u2019s Waller says central bank may need to \u2018shock people\u2019 with half-point rate h \u00b7 # News Parse v2 \u2014 2026-11-19T05:05:14.628542-05:00\nWindow\u224848h | news_mode=on | raw=6924 | usable=496 | single_name=572 | noise_dropped=5716\nusable polarity={'+': 11, '-': 143, 'mixed': 1, 'neutral': 341}"
     }
   ],
   "href": {
