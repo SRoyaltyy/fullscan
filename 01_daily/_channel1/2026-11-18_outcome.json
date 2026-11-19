@@ -1,6 +1,6 @@
 {
   "stage": "outcome",
-  "fetched_at": "2026-11-18T21:44:02.664546-05:00",
+  "fetched_at": "2026-11-18T21:54:13.875516-05:00",
   "fred": {
     "DGS30": {
       "available": true,
@@ -88,41 +88,41 @@
     "CL=F": {
       "available": true,
       "date": "2026-11-18",
-      "last": 82.34,
-      "pct_1d": -4.27
+      "last": 82.18,
+      "pct_1d": -4.45
     },
     "BZ=F": {
       "available": true,
       "date": "2026-11-18",
-      "last": 89.39,
-      "pct_1d": -4.03
+      "last": 89.22,
+      "pct_1d": -4.21
     },
     "GC=F": {
       "available": true,
       "date": "2026-11-18",
-      "last": 3742.2,
-      "pct_1d": -3.16
+      "last": 3735.2,
+      "pct_1d": -3.34
     },
     "DXY": {
       "available": true,
       "date": "2026-11-18",
       "source": "DX-Y.NYB",
-      "pct_1d": 0.37,
-      "pct_1m": 2.1
+      "pct_1d": 0.35,
+      "pct_1m": 2.09
     }
   },
   "futures": {
     "ES=F": {
       "available": true,
       "date": "2026-11-18",
-      "last": 7378.0,
+      "last": 7378.25,
       "pct_1d": 0.26
     },
     "NQ=F": {
       "available": true,
       "date": "2026-11-18",
-      "last": 27428.25,
-      "pct_1d": 1.3
+      "last": 27420.0,
+      "pct_1d": 1.27
     }
   },
   "finviz_futures_tape": {
@@ -491,35 +491,35 @@
         "Nikkei": {
           "available": true,
           "date": "2026-11-19",
-          "last": 59206.48,
-          "pct_1d": 0.31
+          "last": 59140.87,
+          "pct_1d": 0.2
         },
         "Hang Seng": {
           "available": true,
           "date": "2026-11-19",
-          "last": 22907.18,
-          "pct_1d": -1.66
+          "last": 22892.49,
+          "pct_1d": -1.73
         },
         "Shanghai": {
           "available": true,
           "date": "2026-11-19",
-          "last": 3559.23,
-          "pct_1d": -0.8
+          "last": 3554.3,
+          "pct_1d": -0.93
         },
         "Kospi": {
           "available": true,
           "date": "2026-11-19",
-          "last": 5020.98,
-          "pct_1d": -0.92
+          "last": 4989.71,
+          "pct_1d": -1.53
         },
         "ASX200": {
           "available": true,
           "date": "2026-11-19",
-          "last": 8757.4,
-          "pct_1d": -0.73
+          "last": 8750.5,
+          "pct_1d": -0.81
         }
       },
-      "composite_avg": -0.76
+      "composite_avg": -0.96
     },
     "europe": {
       "per_index": {
