@@ -1,6 +1,6 @@
 {
   "date": "2026-11-19",
-  "generated_at": "2026-11-19T14:39:27.411035-05:00",
+  "generated_at": "2026-11-19T17:22:20.726641-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -31,12 +31,12 @@
       "score": 0.7297452125700039
     },
     {
-      "ticker": "ATEN",
-      "score": 0.8527720311345914
-    },
-    {
       "ticker": "APPN",
       "score": 0.6832174943767628
+    },
+    {
+      "ticker": "TDC",
+      "score": 0.8051287412109822
     },
     {
       "ticker": "DBX",
@@ -1299,13 +1299,13 @@
       "date": "2026-11-19",
       "ok": true,
       "pushed": true,
-      "at": "2026-11-19T14:19:07.563898-05:00",
+      "at": "2026-11-19T14:39:58.880410-05:00",
       "files": [
         {
           "path": "data/day_board/today.json",
           "ok": true,
           "reason": "",
-          "size": 37908,
+          "size": 38826,
           "preview": "2026-11-19 BUY HCSG, PANW, TGT, CRWD, LFST, ATEN, APPN, DBX \u00b7 SELL FCEL, FLNC, QBTS, METC, RGTI, TE, QUBT, AEHR"
         },
         {
@@ -1316,17 +1316,17 @@
           "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
         },
         {
-          "path": "data/day_board/2026-11-19.after-freeze-2.json",
+          "path": "data/day_board/2026-11-19.after-freeze-3.json",
           "ok": true,
           "reason": "",
-          "size": 133173,
+          "size": 134387,
           "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href"
         },
         {
-          "path": "data/day_board/2026-11-19_tickets.after-freeze-2.json",
+          "path": "data/day_board/2026-11-19_tickets.after-freeze-3.json",
           "ok": true,
           "reason": "",
-          "size": 96459,
+          "size": 97377,
           "preview": "2026-11-19 BUY HCSG, PANW, TGT, CRWD, LFST, ATEN, APPN, DBX \u00b7 SELL FCEL, FLNC, QBTS, METC, RGTI, TE, QUBT, AEHR"
         },
         {
@@ -1368,7 +1368,7 @@
           "path": "dashboard/factor-mine/today.json",
           "ok": true,
           "reason": "",
-          "size": 96459,
+          "size": 97377,
           "preview": "2026-11-19 BUY HCSG, PANW, TGT, CRWD, LFST, ATEN, APPN, DBX \u00b7 SELL FCEL, FLNC, QBTS, METC, RGTI, TE, QUBT, AEHR"
         },
         {
@@ -1506,7 +1506,7 @@
       "date": "2026-11-19",
       "ok": true,
       "pushed": true,
-      "at": "2026-11-19T14:19:18.993717-05:00",
+      "at": "2026-11-19T14:40:11.644091-05:00",
       "files": [
         {
           "path": "03_scoreboard/PAPER_TRADING.md",
@@ -1531,7 +1531,7 @@
       "date": "2026-11-19",
       "ok": true,
       "pushed": true,
-      "at": "2026-11-19T14:38:59.152170-05:00",
+      "at": "2026-11-19T17:21:22.266313-05:00",
       "files": [
         {
           "path": "01_daily/weather/2026-11-19_weather.json",
@@ -1544,7 +1544,7 @@
           "path": "01_daily/weather/2026-11-19_weather.md",
           "ok": true,
           "reason": "",
-          "size": 5117,
+          "size": 5183,
           "preview": "# Weather report \u2014 2026-11-19\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
         },
         {
@@ -1567,6 +1567,13 @@
           "reason": "",
           "size": 9570,
           "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -11.26, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -3.85, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -3.24, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -2.5700000000000003, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -4.585, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -3.24, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -8.69, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -4.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-11-19_weather.after-freeze-4.json",
+          "ok": true,
+          "reason": "",
+          "size": 9633,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -11.26, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -3.85, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -3.24, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -2.5700000000000003, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -4.585, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -3.24, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -8.69, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -4.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
         }
       ],
       "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -11.26, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -3.85, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -3.24, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -2.5700000000000003, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -4.585, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -3.24, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -8.69, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -4.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-11-19\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade. \u00b7 weather sectors 11 \u00b7 Basic Materials={'score': -11.26, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -3.85, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -3.24, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensiv"
@@ -1577,7 +1584,7 @@
       "date": "2026-11-19",
       "ok": true,
       "pushed": true,
-      "at": "2026-11-19T14:39:08.353634-05:00",
+      "at": "2026-11-19T17:21:33.676882-05:00",
       "files": [
         {
           "path": "data/join/2026-11-19_ranked.csv",
@@ -1592,9 +1599,16 @@
           "reason": "",
           "size": 2280535,
           "preview": "5888 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 REGN, ONC, LLY, TREE, ETON"
+        },
+        {
+          "path": "data/join/2026-11-19_ranked.after-freeze-2.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2280535,
+          "preview": "5888 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 REGN, ONC, LLY, TREE, ETON"
         }
       ],
-      "preview": "5888 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 REGN, ONC, LLY, ETON, TREE \u00b7 5888 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 REGN, ONC, LLY, TREE, ETON"
+      "preview": "5888 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 REGN, ONC, LLY, ETON, TREE \u00b7 5888 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 REGN, ONC, LLY, TREE, ETON \u00b7 5888 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 REGN, ONC, LLY, TREE, ETON"
     },
     {
       "key": "peer_rs",
@@ -1602,7 +1616,7 @@
       "date": "2026-11-19",
       "ok": true,
       "pushed": true,
-      "at": "2026-11-19T14:39:14.069533-05:00",
+      "at": "2026-11-19T17:21:54.347964-05:00",
       "files": [
         {
           "path": "data/peers/2026-11-19_peer_rs.csv",
