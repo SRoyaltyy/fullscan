@@ -24,12 +24,12 @@
           "score": 0.7297452125700039
         },
         {
-          "ticker": "APPN",
-          "score": 0.6832174943767628
+          "ticker": "ATEN",
+          "score": 0.8527720311345914
         },
         {
-          "ticker": "TDC",
-          "score": 0.8051287412109822
+          "ticker": "APPN",
+          "score": 0.6832174943767628
         },
         {
           "ticker": "DBX",
@@ -582,8 +582,8 @@
     "TGT",
     "CRWD",
     "LFST",
+    "ATEN",
     "APPN",
-    "TDC",
     "DBX"
   ],
   "sell_1d": [
