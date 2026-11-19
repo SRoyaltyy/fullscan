@@ -1,6 +1,6 @@
 # MAP HEAT — 2026-11-19
 
-Export `finviz_2026-11-18.csv` · 11616 names · generated 2026-11-19T04:52:18.172233-05:00
+Export `finviz_2026-11-19.csv` · 11616 names · generated 2026-11-19T05:04:57.110980-05:00
 
 ## TAPE (live futures)
 | Contract | Last | Change |
@@ -280,31 +280,31 @@ COLD (1w):
 - **Real Estate** -0.5% 1d -1.9% 1w · VNQ, SCHH, XLRE
 
 ## TICKER-TAGGED NEWS (Finviz v=3)
-- 5 min **ANT** Stock Futures Rise as Optimism Improves Ahead of Anthropic Trading Debut (The Wall Street Journal)
-- 7 min **NVDA,ANT** Anthropic's record IPO lands as Nvidia suffers its worst run since 2008 (Euronews)
-- 10 min **PANW** PANW Stock Surges 8% Overnight: Palo Alto Networks CEO Sees 'Hundreds Of Billions Of Dollars' Opportunity In Open-Weight AI Models Security (Stocktwits)
-- 15 min **AMD** GTA VI Sales Top $1.6B  Take-Two, Console Partners Microsoft And Sony Shares Rise (Stocktwits)
-- 17 min **MRP** Kaplan Fox & Kilsheimer LLP Encourages Millrose Properties, Inc. (MRP) Investors With Losses to Seek Appointment as Lead Plaintiff Before December 8, 2026 (Newsfile)
-- 17 min **NVDA,ANT** Anthropics record-setting IPO; Fed minutes - whats moving markets (Investing.com)
-- 17 min **ANT** Anthropic IPO Today: AI Giant Prepares to Start Trading in High-Stakes Offering (The Wall Street Journal)
-- 19 min **KEYS,ESTC,INTU,BABA,WMT** Walmart headlines Thursday's earnings slate (MarketWatch)
-- 20 min **DHR** FDA clears Masimos brain function monitor (Medical Device Network)
-- 24 min **ONC** Up 15% since October: Inside the oncology stock beating healthcare (Investing.com)
-- 24 min **PLTR,NOW** Palantir just posted a record quarterso why did the stock sink? (Investing.com)
-- 24 min **NBIS,DELL,CRWV** A $95 billion backlog at 18x P/E: What Dell dip-buyers are missing (Investing.com)
-- 24 min **MRNA,AMRX** While Moderna sank 17%, this generic drugmaker quietly jumped 64% (Investing.com)
-- 29 min **CRWV,AMD,SPCX,CRM,ANT** Is the AI party over? Anthropic is about to find out. (Yahoo Finance)
-- 32 min **TSLA** Campaign Urges Ripple to Burn $30B in XRP as Analyst Cites Tesla in $70 XRP Call (CCN)
-- 39 min **HACK** Here's the precise moment when cyberattacks started increasing exponentially (MarketWatch)
-- 40 min **TGT** Target lifts full-year sales outlook after Q3 growth (Retail Insight Network)
-- 41 min **EVO,BMY** Evotec shares rise after second IND acceptance with Bristol Myers (Investing.com)
-- 42 min **ANT,MORN** Anthropic IPO: Here Are 3 Critical Questions Morningstar Wants Investors To Ask (Stocktwits)
-- 42 min **MU,AMD,SPCX,WMT,ANT** Stock market today: Dow, S&P 500, Nasdaq futures rise ahead of historic Anthropic IPO (Yahoo Finance)
-- 44 min **IHG** IHG expands Spanish portfolio with three Holiday Inn Express signings (Hotel Management Network)
-- 49 min **ASML,NVDA,ANT** Nasdaq futures jump as Anthropic's record IPO pricing fuels hopes for strong debut (Reuters)
-- 50 min **EQNR** Searenergy Poland to support Batyk 2 and 3 offshore wind farm projects (Power Technology)
-- 51 min **ANT** Anthropic IPO live: Company said to price stock at $83, begin trading Thursday (Yahoo Finance)
-- 52 min **DAO,NTES** Youdao Reports Third Quarter 2026 Unaudited Financial Results (PR Newswire)
+- 4 min **PANW,CRWD,ZS,BABA,NVDA** Palo Alto rides cybersecurity surge, and other early market movers (MarketWatch)
+- 4 min **ANT** Anthropic IPO live: Company said to price stock at $83, begin trading Thursday (Yahoo Finance)
+- 4 min **MU,AMD,SPCX,WMT,ANT** Stock market today: Dow, S&P 500, Nasdaq futures rise ahead of historic Anthropic IPO (Yahoo Finance)
+- 4 min **ANT** Why is Anthropic going public now? Here are two reasons. (MarketWatch)
+- 4 min **TCOM** Trip.com Group Limited to Report Third Quarter of 2026 Financial Results on December 1, 2026 U.S. Time (PR Newswire)
+- 4 min **YMM** Full Truck Alliance Co. Ltd. Announces Third Quarter 2026 Unaudited Financial Results (PR Newswire)
+- 4 min **VZLA** VIZSLA SILVER PROVIDES UPDATE ON PANUCO PROJECT DEVELOPMENT (PR Newswire)
+- 4 min **JG** MoonFox Data Opens Continuous China LLM Usage Data to Global Investors and Research Firms (GlobeNewswire)
+- 4 min **HCM** HUTCHMED Announces China NMPA Approval of SYVIK (sovleplenib) for the Treatment of Primary Immune Thrombocytopenia and Warm Antibody Autoimmune Hemolytic Anemia (GlobeNewswire)
+- 5 min **BIIB** Biogen reports two-year Phase II data for diranersen in Alzheimers (Clinical Trials Arena)
+- 5 min **TTWO** Grand Theft Auto VI draws rave reviews as gamers enter Vice City (Reuters)
+- 10 min **SHEL** Transaction in Own Shares (GlobeNewswire)
+- 16 min **TGT** TGT Stock Heads For Best Year Since 2019: Does Its Q3 Turnaround Justify The Premium? (Stocktwits)
+- 17 min **ASML,NVDA,ANT** Nasdaq futures jump on hopes for strong Anthropic market debut (Reuters)
+- 17 min **ANT** Stock Futures Rise as Optimism Improves Ahead of Anthropic Trading Debut (The Wall Street Journal)
+- 20 min **NVDA,ANT** Anthropic's record IPO lands as Nvidia suffers its worst run since 2008 (Euronews)
+- 28 min **AMD,MSFT,TTWO** GTA VI Sales Top $1.6B  Take-Two, Console Partners Microsoft And Sony Shares Rise (Stocktwits)
+- 28 min **UAMY** Washington eyes ChadCameroon antimony corridor as Chinas US export ban suspension nears expiry (IntelliNews)
+- 29 min **MRP** Kaplan Fox & Kilsheimer LLP Encourages Millrose Properties, Inc. (MRP) Investors With Losses to Seek Appointment as Lead Plaintiff Before December 8, 2026 (Newsfile)
+- 30 min **NVDA,ANT** Anthropics record-setting IPO; Fed minutes - whats moving markets (Investing.com)
+- 30 min **ANT** Anthropic IPO Today: AI Giant Prepares to Start Trading in High-Stakes Offering (The Wall Street Journal)
+- 31 min **KEYS,BABA,ESTC,PDD,INTU** Walmart headlines Thursday's earnings slate (MarketWatch)
+- 33 min **DHR** FDA clears Masimos brain function monitor (Medical Device Network)
+- 36 min **ONC** Up 15% since October: Inside the oncology stock beating healthcare (Investing.com)
+- 37 min **PLTR,NOW** Palantir just posted a record quarterso why did the stock sink? (Investing.com)
 
 ## NOTES
 - Captains = top 2 by market cap. RUT needs ≥ $5m 20-day dollar volume.

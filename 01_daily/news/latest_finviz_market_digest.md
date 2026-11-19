@@ -1,6 +1,6 @@
 # Finviz homepage market digest — 2026-11-19
 
-**Generated:** 2026-11-19T04:50:10.928219-05:00 (America/New_York)
+**Generated:** 2026-11-19T05:02:42.368806-05:00 (America/New_York)
 **Source:** `live`
 **Banner:** US futures point to higher open led by Nasdaq as Anthropic IPO stokes AI enthusiasm ahead of jobless claims and Philly Fed data
 **Prior close:** SPX —  Nasdaq —  Dow —
