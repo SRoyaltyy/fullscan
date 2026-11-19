@@ -1,12 +1,12 @@
 {
   "date": "2026-11-19",
-  "generated_at": "2026-11-19T05:04:08.911664-05:00",
+  "generated_at": "2026-11-19T05:04:15.483936-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
     "ok": 3,
-    "partial": 2,
-    "fail": 3,
+    "partial": 3,
+    "fail": 2,
     "n": 8
   },
   "buy_1d": [],
@@ -15,31 +15,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "map_heat",
-      "title": "Map heat morning overlay",
-      "date": "2026-11-19",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-11-19T04:52:18.249585-05:00",
-      "files": [
-        {
-          "path": "01_daily/map_heat/2026-11-19_map_heat.json",
-          "ok": true,
-          "reason": "",
-          "size": 275579,
-          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
-        },
-        {
-          "path": "01_daily/map_heat/2026-11-19_map_heat.md",
-          "ok": true,
-          "reason": "",
-          "size": 18451,
-          "preview": "# MAP HEAT \u2014 2026-11-19\nExport `finviz_2026-11-18.csv` \u00b7 11616 names \u00b7 generated 2026-11-19T04:52:18.172233-05:00"
-        }
-      ],
-      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-11-19\nExport `finviz_2026-11-18.csv` \u00b7 11616 names \u00b7 generated 2026-11-19T04:52:18.172233-05:00"
-    },
     {
       "key": "finviz_digest",
       "title": "Finviz digest",
@@ -228,6 +203,24 @@
         }
       ],
       "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -11.26, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -3.85, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -3.24, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -2.5700000000000003, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -4.585, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -3.24, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -8.69, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -4.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-11-19\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-11-19",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-19T05:04:15.155829-05:00",
+      "files": [
+        {
+          "path": "data/join/2026-11-19_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2280535,
+          "preview": "5888 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 REGN, ONC, LLY, TREE, ETON"
+        }
+      ],
+      "preview": "5888 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 REGN, ONC, LLY, TREE, ETON"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
