@@ -1,6 +1,6 @@
 {
- "date": "2026-11-18",
- "generated_at": "2026-11-18T21:27:37.758833+00:00",
+ "date": "2026-11-19",
+ "generated_at": "2026-11-19T08:51:19.402778+00:00",
  "catalog": {
   "generated_at": "2026-11-14T18:45:12.782675+00:00",
   "channels": 365,
@@ -34,84 +34,62 @@
   }
  },
  "collect": {
-  "generated_at": "2026-11-18T21:27:16.206477+00:00",
+  "generated_at": "2026-11-19T08:50:38.135120+00:00",
   "enabled_sources": 118,
-  "sources_ok": 118,
-  "sources_failed": 0,
+  "sources_ok": 107,
+  "sources_failed": 11,
   "coverage_status": "degraded",
   "counts": {
-   "observed": 2404,
-   "old": 1501,
+   "observed": 2119,
+   "old": 1388,
    "future": 8,
-   "undated": 304,
-   "new": 126,
-   "duplicates": 769
+   "undated": 229,
+   "new": 58,
+   "duplicates": 665
   },
-  "current_dated_documents": 713
+  "current_dated_documents": 653
  },
  "new_today": {
-  "count": 126,
+  "count": 58,
   "by_source": {
-   "us-fcc-e95ecda3bb": 24,
-   "us-doj-b3d27e1dc3": 17,
-   "us-ftc-df73e297e1": 14,
-   "eu-commission-07d4f58ccf": 10,
-   "us-fda-5696b24295": 6,
-   "us-fcc-685c5e7dd2": 5,
-   "us-govinfo-plaw": 4,
-   "eu-council-9d9e9444da": 4,
-   "uk-govuk-consultation_outcome": 3,
+   "us-govinfo-bills": 28,
+   "us-doj-b3d27e1dc3": 6,
+   "uk-govuk-decision": 4,
+   "us-govinfo-bills-enr": 3,
    "in-rbi-cc71120b98": 3,
-   "us-govinfo-crpt": 2,
-   "us-congress-76128ee9ff": 2,
-   "us-doj-e05071794d": 2,
-   "us-hhs-6f995a5754": 2,
-   "eu-ecb-991c113079": 2,
-   "eu-eba-60bdc59843": 2,
-   "ca-boc-30d6d14378": 2,
-   "io-wto-497f28e20d": 2,
-   "hk-hkma-public-press": 1,
-   "uk-govuk-decision": 1,
-   "uk-govuk-regulation": 1,
-   "uk-govuk-product_safety_alert_report_recall": 1,
-   "us-govinfo-bills": 1,
+   "eu-commission-07d4f58ccf": 2,
+   "eu-council-9d9e9444da": 2,
+   "uk-boe-4feb372611": 2,
+   "us-govinfo-dcpd": 1,
    "us-sec-2476f14c28": 1,
-   "us-ofac-index": 1,
-   "us-ustr-index": 1,
-   "us-fed-a12cd46677": 1,
-   "us-occ-6f63126133": 1,
-   "us-fda-2cdcdcca63": 1,
-   "us-fda-00e9311ef2": 1,
-   "us-dol-99f477805a": 1,
-   "eu-esma-73e01d4013": 1,
+   "us-fcc-685c5e7dd2": 1,
+   "us-fcc-364d1b4932": 1,
    "uk-fca-7b9977ec8e": 1,
-   "ca-gazette-2d47daa483": 1,
    "nz-rbnz-gnews": 1,
-   "de-bundesbank-027ac4024f": 1,
-   "de-bundesbank-e5b1c4a067": 1,
-   "io-bis-8d1fbea6ca": 1
+   "jp-boj-d488538690": 1,
+   "de-bundesbank-027ac4024f": 1
   },
   "by_class": {
-   "watch": 60,
-   "routine": 37,
-   "high": 21,
-   "docket": 6,
-   "noise": 2
+   "routine": 39,
+   "high": 4,
+   "watch": 12,
+   "docket": 2,
+   "noise": 1
   }
  },
  "parsed_today": {
-  "count": 133,
+  "count": 47,
   "by_class": {
-   "high": 41,
-   "watch": 49,
-   "routine": 45,
-   "noise": 4
+   "routine": 37,
+   "high": 1,
+   "watch": 8,
+   "noise": 1
   }
  },
- "n_failures": 0,
+ "n_failures": 11,
  "dates": [
-  "2026-11-18"
+  "2026-11-19"
  ],
- "href": "https://raw.githubusercontent.com/SRoyaltyy/fullscan/main/data/source_board/2026-11-18.json",
+ "href": "https://raw.githubusercontent.com/SRoyaltyy/fullscan/main/data/source_board/2026-11-19.json",
  "pages": "https://sroyaltyy.github.io/fullscan/dashboard/source-board/"
 }

@@ -1,5 +1,246 @@
 [
   {
+    "title": "Company Names Tribunal decision: Binghatti Group Limited",
+    "url": "https://www.gov.uk/government/publications/company-names-tribunal-decision-binghatti-group-limited",
+    "native_id": "/government/publications/company-names-tribunal-decision-binghatti-group-limited",
+    "published_at": "2026-11-19T07:24:21+00:00",
+    "published_raw": "2026-11-19T07:24:21Z",
+    "document_type": "decision",
+    "issuer": "Company Names Tribunal",
+    "issuer_ids": [
+      "uk-gov:company-names-tribunal"
+    ],
+    "summary": "Decision for applicant Binghatti Holding Limited registration number 16522805 applicant successful.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Company Names Tribunal",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 11203,
+    "first_seen": "2026-11-19T08:50:38.135120+00:00",
+    "last_seen": "2026-11-19T08:50:38.135120+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Company Names Tribunal decision: Paddington Bear Childcare Ltd",
+    "url": "https://www.gov.uk/government/publications/company-names-tribunal-decision-paddington-bear-childcare-ltd",
+    "native_id": "/government/publications/company-names-tribunal-decision-paddington-bear-childcare-ltd",
+    "published_at": "2026-11-19T07:24:11+00:00",
+    "published_raw": "2026-11-19T07:24:11Z",
+    "document_type": "decision",
+    "issuer": "Company Names Tribunal",
+    "issuer_ids": [
+      "uk-gov:company-names-tribunal"
+    ],
+    "summary": "Decision for applicant Paddington and Company Limited registration number 16566917 applicant successful.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Company Names Tribunal",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 11204,
+    "first_seen": "2026-11-19T08:50:38.135120+00:00",
+    "last_seen": "2026-11-19T08:50:38.135120+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Company Names Tribunal undefended decisions and orders",
+    "url": "https://www.gov.uk/government/publications/company-names-tribunal-undefended-decisions-and-orders",
+    "native_id": "/government/publications/company-names-tribunal-undefended-decisions-and-orders",
+    "published_at": "2026-11-19T07:23:59+00:00",
+    "published_raw": "2026-11-19T07:23:59Z",
+    "document_type": "decision",
+    "issuer": "Company Names Tribunal",
+    "issuer_ids": [
+      "uk-gov:company-names-tribunal"
+    ],
+    "summary": "Decisions and orders of the Company Names Tribunal - undefended.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Company Names Tribunal",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 2103,
+    "first_seen": "2026-10-15T12:16:32.997656+00:00",
+    "last_seen": "2026-11-19T08:50:38.135120+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Company Names Tribunal decision: Solar4Good Panels Ltd",
+    "url": "https://www.gov.uk/government/publications/company-names-tribunal-decision-solar4good-panels-ltd",
+    "native_id": "/government/publications/company-names-tribunal-decision-solar4good-panels-ltd",
+    "published_at": "2026-11-19T07:23:51+00:00",
+    "published_raw": "2026-11-19T07:23:51Z",
+    "document_type": "decision",
+    "issuer": "Company Names Tribunal",
+    "issuer_ids": [
+      "uk-gov:company-names-tribunal"
+    ],
+    "summary": "Decision for applicant Solar4Good UK Limited registration number 17096285 applicant successful.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Company Names Tribunal",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 11205,
+    "first_seen": "2026-11-19T08:50:38.135120+00:00",
+    "last_seen": "2026-11-19T08:50:38.135120+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Company Names Tribunal decision: Kleinbosch Consulting Ltd",
+    "url": "https://www.gov.uk/government/publications/company-names-tribunal-decision-kleinbosch-consulting-ltd",
+    "native_id": "/government/publications/company-names-tribunal-decision-kleinbosch-consulting-ltd",
+    "published_at": "2026-11-19T06:39:57+00:00",
+    "published_raw": "2026-11-19T06:39:57Z",
+    "document_type": "decision",
+    "issuer": "Company Names Tribunal",
+    "issuer_ids": [
+      "uk-gov:company-names-tribunal"
+    ],
+    "summary": "Decision for applicant Robert Bosch GmbH registration number 16324353 applicant successful.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Company Names Tribunal",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 11206,
+    "first_seen": "2026-11-19T08:50:38.135120+00:00",
+    "last_seen": "2026-11-19T08:50:38.135120+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "DCPD-2026NOMINATIONS - Nominations Submitted to the Senate",
+    "url": "https://www.govinfo.gov/app/details/DCPD-2026NOMINATIONS",
+    "native_id": "DCPD-2026NOMINATIONS",
+    "published_at": "2026-11-18T21:54:01+00:00",
+    "published_raw": "Wed, 18 Nov 2026 21:54:01 +0000",
+    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "presidential_document",
+      "document_stage": "presidential_document_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Compilation of Presidential Documents",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-dcpd",
+    "n": 11238,
+    "first_seen": "2026-11-19T08:50:38.135120+00:00",
+    "last_seen": "2026-11-19T08:50:38.135120+00:00",
+    "source_ids": [
+      "us-govinfo-dcpd"
+    ]
+  },
+  {
+    "title": "DCPD-2026DIGEST - Digest of Other White House Announcements",
+    "url": "https://www.govinfo.gov/app/details/DCPD-2026DIGEST",
+    "native_id": "DCPD-2026DIGEST",
+    "published_at": "2026-11-18T21:54:01+00:00",
+    "published_raw": "Wed, 18 Nov 2026 21:54:01 +0000",
+    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "presidential_document",
+      "document_stage": "presidential_document_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Compilation of Presidential Documents",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-dcpd",
+    "n": 2481,
+    "first_seen": "2026-10-16T05:53:15.995133+00:00",
+    "last_seen": "2026-11-19T08:50:38.135120+00:00",
+    "source_ids": [
+      "us-govinfo-dcpd"
+    ]
+  },
+  {
+    "title": "DCPD-2026CHECKLIST - Checklist of White House Press Releases",
+    "url": "https://www.govinfo.gov/app/details/DCPD-2026CHECKLIST",
+    "native_id": "DCPD-2026CHECKLIST",
+    "published_at": "2026-11-18T21:54:01+00:00",
+    "published_raw": "Wed, 18 Nov 2026 21:54:01 +0000",
+    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "presidential_document",
+      "document_stage": "presidential_document_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Compilation of Presidential Documents",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-dcpd",
+    "n": 2477,
+    "first_seen": "2026-10-16T05:53:15.995133+00:00",
+    "last_seen": "2026-11-19T08:50:38.135120+00:00",
+    "source_ids": [
+      "us-govinfo-dcpd"
+    ]
+  },
+  {
+    "title": "DCPD-2026ACTSAPPROVED - Acts Approved by the President",
+    "url": "https://www.govinfo.gov/app/details/DCPD-2026ACTSAPPROVED",
+    "native_id": "DCPD-2026ACTSAPPROVED",
+    "published_at": "2026-11-18T21:52:01+00:00",
+    "published_raw": "Wed, 18 Nov 2026 21:52:01 +0000",
+    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "presidential_document",
+      "document_stage": "presidential_document_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Compilation of Presidential Documents",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-dcpd",
+    "n": 2475,
+    "first_seen": "2026-10-16T05:53:15.995133+00:00",
+    "last_seen": "2026-11-19T08:50:38.135120+00:00",
+    "source_ids": [
+      "us-govinfo-dcpd"
+    ]
+  },
+  {
     "title": "Public Law 119 - 139 - National Taxpayer Advocate Enhancement Act of 2025",
     "url": "https://www.govinfo.gov/app/details/PLAW-119publ139",
     "native_id": "PLAW-119publ139",
@@ -18,7 +259,7 @@
     "primary_source_id": "us-govinfo-plaw",
     "n": 11088,
     "first_seen": "2026-11-18T21:27:16.206477+00:00",
-    "last_seen": "2026-11-18T21:27:16.206477+00:00",
+    "last_seen": "2026-11-19T08:50:38.135120+00:00",
     "source_ids": [
       "us-govinfo-plaw"
     ]
@@ -42,7 +283,7 @@
     "primary_source_id": "us-govinfo-plaw",
     "n": 11087,
     "first_seen": "2026-11-18T21:27:16.206477+00:00",
-    "last_seen": "2026-11-18T21:27:16.206477+00:00",
+    "last_seen": "2026-11-19T08:50:38.135120+00:00",
     "source_ids": [
       "us-govinfo-plaw"
     ]
@@ -66,7 +307,7 @@
     "primary_source_id": "us-govinfo-plaw",
     "n": 11086,
     "first_seen": "2026-11-18T21:27:16.206477+00:00",
-    "last_seen": "2026-11-18T21:27:16.206477+00:00",
+    "last_seen": "2026-11-19T08:50:38.135120+00:00",
     "source_ids": [
       "us-govinfo-plaw"
     ]
@@ -90,7 +331,7 @@
     "primary_source_id": "us-govinfo-plaw",
     "n": 11085,
     "first_seen": "2026-11-18T21:27:16.206477+00:00",
-    "last_seen": "2026-11-18T21:27:16.206477+00:00",
+    "last_seen": "2026-11-19T08:50:38.135120+00:00",
     "source_ids": [
       "us-govinfo-plaw"
     ]
@@ -119,7 +360,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 11078,
     "first_seen": "2026-11-18T21:27:16.206477+00:00",
-    "last_seen": "2026-11-18T21:27:16.206477+00:00",
+    "last_seen": "2026-11-19T08:50:38.135120+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -150,7 +391,7 @@
     "primary_source_id": "us-federal-register",
     "n": 11028,
     "first_seen": "2026-11-18T08:34:34.027776+00:00",
-    "last_seen": "2026-11-18T21:27:16.206477+00:00",
+    "last_seen": "2026-11-19T08:50:38.135120+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -180,7 +421,7 @@
     "primary_source_id": "us-federal-register",
     "n": 11010,
     "first_seen": "2026-11-18T08:34:34.027776+00:00",
-    "last_seen": "2026-11-18T21:27:16.206477+00:00",
+    "last_seen": "2026-11-19T08:50:38.135120+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -211,7 +452,7 @@
     "primary_source_id": "us-federal-register",
     "n": 10996,
     "first_seen": "2026-11-18T08:34:34.027776+00:00",
-    "last_seen": "2026-11-18T21:27:16.206477+00:00",
+    "last_seen": "2026-11-19T08:50:38.135120+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -241,7 +482,7 @@
     "primary_source_id": "us-federal-register",
     "n": 10995,
     "first_seen": "2026-11-18T08:34:34.027776+00:00",
-    "last_seen": "2026-11-18T21:27:16.206477+00:00",
+    "last_seen": "2026-11-19T08:50:38.135120+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -272,7 +513,7 @@
     "primary_source_id": "us-federal-register",
     "n": 10974,
     "first_seen": "2026-11-18T08:34:34.027776+00:00",
-    "last_seen": "2026-11-18T21:27:16.206477+00:00",
+    "last_seen": "2026-11-19T08:50:38.135120+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -303,7 +544,7 @@
     "primary_source_id": "us-federal-register",
     "n": 10972,
     "first_seen": "2026-11-18T08:34:34.027776+00:00",
-    "last_seen": "2026-11-18T21:27:16.206477+00:00",
+    "last_seen": "2026-11-19T08:50:38.135120+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -334,7 +575,7 @@
     "primary_source_id": "us-federal-register",
     "n": 10938,
     "first_seen": "2026-11-18T08:34:34.027776+00:00",
-    "last_seen": "2026-11-18T21:27:16.206477+00:00",
+    "last_seen": "2026-11-19T08:50:38.135120+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -364,7 +605,7 @@
     "primary_source_id": "us-federal-register",
     "n": 10933,
     "first_seen": "2026-11-18T08:34:34.027776+00:00",
-    "last_seen": "2026-11-18T21:27:16.206477+00:00",
+    "last_seen": "2026-11-19T08:50:38.135120+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -395,7 +636,7 @@
     "primary_source_id": "us-federal-register",
     "n": 10932,
     "first_seen": "2026-11-18T08:34:34.027776+00:00",
-    "last_seen": "2026-11-18T21:27:16.206477+00:00",
+    "last_seen": "2026-11-19T08:50:38.135120+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -426,7 +667,7 @@
     "primary_source_id": "us-federal-register",
     "n": 10930,
     "first_seen": "2026-11-18T08:34:34.027776+00:00",
-    "last_seen": "2026-11-18T21:27:16.206477+00:00",
+    "last_seen": "2026-11-19T08:50:38.135120+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -457,7 +698,7 @@
     "primary_source_id": "us-federal-register",
     "n": 10928,
     "first_seen": "2026-11-18T08:34:34.027776+00:00",
-    "last_seen": "2026-11-18T21:27:16.206477+00:00",
+    "last_seen": "2026-11-19T08:50:38.135120+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -481,7 +722,7 @@
     "primary_source_id": "us-govinfo-dcpd",
     "n": 10838,
     "first_seen": "2026-11-17T21:46:57.732960+00:00",
-    "last_seen": "2026-11-17T21:46:57.732960+00:00",
+    "last_seen": "2026-11-19T08:50:38.135120+00:00",
     "source_ids": [
       "us-govinfo-dcpd"
     ]
@@ -505,7 +746,7 @@
     "primary_source_id": "us-govinfo-dcpd",
     "n": 10837,
     "first_seen": "2026-11-17T21:46:57.732960+00:00",
-    "last_seen": "2026-11-17T21:46:57.732960+00:00",
+    "last_seen": "2026-11-19T08:50:38.135120+00:00",
     "source_ids": [
       "us-govinfo-dcpd"
     ]
@@ -529,7 +770,7 @@
     "primary_source_id": "us-govinfo-dcpd",
     "n": 10836,
     "first_seen": "2026-11-17T21:46:57.732960+00:00",
-    "last_seen": "2026-11-17T21:46:57.732960+00:00",
+    "last_seen": "2026-11-19T08:50:38.135120+00:00",
     "source_ids": [
       "us-govinfo-dcpd"
     ]
@@ -553,7 +794,7 @@
     "primary_source_id": "us-govinfo-dcpd",
     "n": 10835,
     "first_seen": "2026-11-17T21:46:57.732960+00:00",
-    "last_seen": "2026-11-17T21:46:57.732960+00:00",
+    "last_seen": "2026-11-19T08:50:38.135120+00:00",
     "source_ids": [
       "us-govinfo-dcpd"
     ]
@@ -577,7 +818,7 @@
     "primary_source_id": "us-govinfo-dcpd",
     "n": 10834,
     "first_seen": "2026-11-17T21:46:57.732960+00:00",
-    "last_seen": "2026-11-17T21:46:57.732960+00:00",
+    "last_seen": "2026-11-19T08:50:38.135120+00:00",
     "source_ids": [
       "us-govinfo-dcpd"
     ]
@@ -606,7 +847,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 3303,
     "first_seen": "2026-10-16T10:36:18.842579+00:00",
-    "last_seen": "2026-11-18T21:27:16.206477+00:00",
+    "last_seen": "2026-11-19T08:50:38.135120+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -635,7 +876,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 6834,
     "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-11-18T21:27:16.206477+00:00",
+    "last_seen": "2026-11-19T08:50:38.135120+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -664,7 +905,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 10819,
     "first_seen": "2026-11-17T21:46:57.732960+00:00",
-    "last_seen": "2026-11-18T21:27:16.206477+00:00",
+    "last_seen": "2026-11-19T08:50:38.135120+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -693,7 +934,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 10820,
     "first_seen": "2026-11-17T21:46:57.732960+00:00",
-    "last_seen": "2026-11-18T21:27:16.206477+00:00",
+    "last_seen": "2026-11-19T08:50:38.135120+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -722,7 +963,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 8068,
     "first_seen": "2026-11-02T22:20:55.750782+00:00",
-    "last_seen": "2026-11-18T21:27:16.206477+00:00",
+    "last_seen": "2026-11-19T08:50:38.135120+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -751,36 +992,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 10821,
     "first_seen": "2026-11-17T21:46:57.732960+00:00",
-    "last_seen": "2026-11-18T21:27:16.206477+00:00",
-    "source_ids": [
-      "uk-govuk-decision"
-    ]
-  },
-  {
-    "title": "Company Names Tribunal undefended decisions and orders",
-    "url": "https://www.gov.uk/government/publications/company-names-tribunal-undefended-decisions-and-orders",
-    "native_id": "/government/publications/company-names-tribunal-undefended-decisions-and-orders",
-    "published_at": "2026-11-17T12:30:45+00:00",
-    "published_raw": "2026-11-17T12:30:45Z",
-    "document_type": "decision",
-    "issuer": "Company Names Tribunal",
-    "issuer_ids": [
-      "uk-gov:company-names-tribunal"
-    ],
-    "summary": "Decisions and orders of the Company Names Tribunal - undefended.",
-    "source_metadata": {
-      "document_type": "decision",
-      "document_stage": "decision_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Company Names Tribunal",
-      "jurisdiction": "UK",
-      "family": "typed_government_documents"
-    },
-    "primary_source_id": "uk-govuk-decision",
-    "n": 2103,
-    "first_seen": "2026-10-15T12:16:32.997656+00:00",
-    "last_seen": "2026-11-18T21:27:16.206477+00:00",
+    "last_seen": "2026-11-19T08:50:38.135120+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -809,7 +1021,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 10822,
     "first_seen": "2026-11-17T21:46:57.732960+00:00",
-    "last_seen": "2026-11-18T21:27:16.206477+00:00",
+    "last_seen": "2026-11-19T08:50:38.135120+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -838,7 +1050,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 10823,
     "first_seen": "2026-11-17T21:46:57.732960+00:00",
-    "last_seen": "2026-11-18T21:27:16.206477+00:00",
+    "last_seen": "2026-11-19T08:50:38.135120+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -867,7 +1079,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 10824,
     "first_seen": "2026-11-17T21:46:57.732960+00:00",
-    "last_seen": "2026-11-18T21:27:16.206477+00:00",
+    "last_seen": "2026-11-19T08:50:38.135120+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -896,7 +1108,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 5609,
     "first_seen": "2026-10-20T18:00:04.951908+00:00",
-    "last_seen": "2026-11-18T21:27:16.206477+00:00",
+    "last_seen": "2026-11-19T08:50:38.135120+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -925,7 +1137,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 5610,
     "first_seen": "2026-10-20T18:00:04.951908+00:00",
-    "last_seen": "2026-11-18T21:27:16.206477+00:00",
+    "last_seen": "2026-11-19T08:50:38.135120+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -954,7 +1166,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 10825,
     "first_seen": "2026-11-17T21:46:57.732960+00:00",
-    "last_seen": "2026-11-18T21:27:16.206477+00:00",
+    "last_seen": "2026-11-19T08:50:38.135120+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -985,7 +1197,7 @@
     "primary_source_id": "us-federal-register",
     "n": 10765,
     "first_seen": "2026-11-17T09:14:56.610004+00:00",
-    "last_seen": "2026-11-18T21:27:16.206477+00:00",
+    "last_seen": "2026-11-19T08:50:38.135120+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1015,7 +1227,7 @@
     "primary_source_id": "us-federal-register",
     "n": 10742,
     "first_seen": "2026-11-17T09:14:56.610004+00:00",
-    "last_seen": "2026-11-18T21:27:16.206477+00:00",
+    "last_seen": "2026-11-19T08:50:38.135120+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1045,7 +1257,7 @@
     "primary_source_id": "us-federal-register",
     "n": 10729,
     "first_seen": "2026-11-17T09:14:56.610004+00:00",
-    "last_seen": "2026-11-18T21:27:16.206477+00:00",
+    "last_seen": "2026-11-19T08:50:38.135120+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1076,7 +1288,7 @@
     "primary_source_id": "us-federal-register",
     "n": 10722,
     "first_seen": "2026-11-17T09:14:56.610004+00:00",
-    "last_seen": "2026-11-18T21:27:16.206477+00:00",
+    "last_seen": "2026-11-19T08:50:38.135120+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1106,7 +1318,7 @@
     "primary_source_id": "us-federal-register",
     "n": 10704,
     "first_seen": "2026-11-17T09:14:56.610004+00:00",
-    "last_seen": "2026-11-18T21:27:16.206477+00:00",
+    "last_seen": "2026-11-19T08:50:38.135120+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1136,7 +1348,7 @@
     "primary_source_id": "us-federal-register",
     "n": 10702,
     "first_seen": "2026-11-17T09:14:56.610004+00:00",
-    "last_seen": "2026-11-18T21:27:16.206477+00:00",
+    "last_seen": "2026-11-19T08:50:38.135120+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1166,7 +1378,7 @@
     "primary_source_id": "us-federal-register",
     "n": 10695,
     "first_seen": "2026-11-17T09:14:56.610004+00:00",
-    "last_seen": "2026-11-18T21:27:16.206477+00:00",
+    "last_seen": "2026-11-19T08:50:38.135120+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1196,7 +1408,7 @@
     "primary_source_id": "us-federal-register",
     "n": 10687,
     "first_seen": "2026-11-17T09:14:56.610004+00:00",
-    "last_seen": "2026-11-18T21:27:16.206477+00:00",
+    "last_seen": "2026-11-19T08:50:38.135120+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1227,7 +1439,7 @@
     "primary_source_id": "us-federal-register",
     "n": 10684,
     "first_seen": "2026-11-17T09:14:56.610004+00:00",
-    "last_seen": "2026-11-18T21:27:16.206477+00:00",
+    "last_seen": "2026-11-19T08:50:38.135120+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1251,7 +1463,7 @@
     "primary_source_id": "us-govinfo-dcpd",
     "n": 10596,
     "first_seen": "2026-11-16T22:54:52.991484+00:00",
-    "last_seen": "2026-11-17T21:46:57.732960+00:00",
+    "last_seen": "2026-11-19T08:50:38.135120+00:00",
     "source_ids": [
       "us-govinfo-dcpd"
     ]
@@ -1275,7 +1487,7 @@
     "primary_source_id": "us-govinfo-dcpd",
     "n": 10595,
     "first_seen": "2026-11-16T22:54:52.991484+00:00",
-    "last_seen": "2026-11-17T21:46:57.732960+00:00",
+    "last_seen": "2026-11-19T08:50:38.135120+00:00",
     "source_ids": [
       "us-govinfo-dcpd"
     ]
@@ -1299,7 +1511,7 @@
     "primary_source_id": "us-govinfo-dcpd",
     "n": 10594,
     "first_seen": "2026-11-16T22:54:52.991484+00:00",
-    "last_seen": "2026-11-17T21:46:57.732960+00:00",
+    "last_seen": "2026-11-19T08:50:38.135120+00:00",
     "source_ids": [
       "us-govinfo-dcpd"
     ]
@@ -1328,7 +1540,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 5623,
     "first_seen": "2026-10-20T18:00:04.951908+00:00",
-    "last_seen": "2026-11-18T21:27:16.206477+00:00",
+    "last_seen": "2026-11-19T08:50:38.135120+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -1357,7 +1569,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 10589,
     "first_seen": "2026-11-16T22:54:52.991484+00:00",
-    "last_seen": "2026-11-18T21:27:16.206477+00:00",
+    "last_seen": "2026-11-19T08:50:38.135120+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -1386,7 +1598,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 10590,
     "first_seen": "2026-11-16T22:54:52.991484+00:00",
-    "last_seen": "2026-11-18T21:27:16.206477+00:00",
+    "last_seen": "2026-11-19T08:50:38.135120+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -1415,403 +1627,9 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 10591,
     "first_seen": "2026-11-16T22:54:52.991484+00:00",
-    "last_seen": "2026-11-18T21:27:16.206477+00:00",
+    "last_seen": "2026-11-19T08:50:38.135120+00:00",
     "source_ids": [
       "uk-govuk-decision"
-    ]
-  },
-  {
-    "title": "Safety Zone; FRL Inaugural Invitational eFoil Exhibition Race, Miami Marine Stadium Basin, Miami, FL",
-    "url": "https://www.federalregister.gov/documents/2026/11/16/2026-23215/safety-zone-frl-inaugural-invitational-efoil-exhibition-race-miami-marine-stadium-basin-miami-fl",
-    "native_id": "2026-23215",
-    "published_at": "2026-11-16T00:00:00+00:00",
-    "published_raw": "2026-11-16",
-    "document_type": "Rule",
-    "issuer": "Homeland Security Department; Coast Guard",
-    "issuer_ids": [
-      "us-fr:227",
-      "us-fr:53"
-    ],
-    "summary": "The Coast Guard is establishing a temporary safety zone for certain navigable waters of the Miami Marine Stadium Basin in connection with the FRL Inaugural Invitational eFoil Exhibition Race. This safety zone is necessary to protect personnel, vessels, and the marine environment from potential hazards associated with the eFoil races. This rule prohibits entry of vessels or persons into this safety zone unless authorized by the Captain of the Port Sector Miami or its designated representative.",
-    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-11-16/pdf/2026-23215.pdf",
-    "source_metadata": {
-      "document_type": "Rule",
-      "document_stage": "final_rule_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Homeland Security Department; Coast Guard",
-      "jurisdiction": "US",
-      "family": "rules_notices_and_presidential_documents"
-    },
-    "primary_source_id": "us-federal-register",
-    "n": 10562,
-    "first_seen": "2026-11-16T08:01:11.696033+00:00",
-    "last_seen": "2026-11-18T21:27:16.206477+00:00",
-    "source_ids": [
-      "us-federal-register"
-    ]
-  },
-  {
-    "title": "Air Plan Partial Approval and Partial Conditional Approval; South Carolina; Minor Source Permit Program Revisions and Control of Oxides of Nitrogen and Source Testing Requirements",
-    "url": "https://www.federalregister.gov/documents/2026/11/16/2026-23219/air-plan-partial-approval-and-partial-conditional-approval-south-carolina-minor-source-permit",
-    "native_id": "2026-23219",
-    "published_at": "2026-11-16T00:00:00+00:00",
-    "published_raw": "2026-11-16",
-    "document_type": "Rule",
-    "issuer": "Environmental Protection Agency",
-    "issuer_ids": [
-      "us-fr:145"
-    ],
-    "summary": "The U.S. Environmental Protection Agency (EPA or Agency) is approving changes to South Carolina's State Implementation Plan (SIP) which revise the State's source testing requirements and its regulations prescribing minor source permit program requirements, including minor new source review (NSR) requirements, and partially approving and partially conditionally approving regulations prescribing control requirements for certain stationary sources of nitrogen oxides (NO X ) in SIP revisions submitted by the State of South Carolina, through the South Carolina Department of Environmental Services (SC DES), on October 1, 2007; July 18, 2011; June 17, 2013; August 8, 2014; January 20, 2016; July 27, 2016; September 5, 2017; April 24, 2020; February 4, 2022; and July 23, 2025. This action is being finalized pursuant to the Clean Air Act (CAA or Act).",
-    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-11-16/pdf/2026-23219.pdf",
-    "source_metadata": {
-      "document_type": "Rule",
-      "document_stage": "final_rule_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Environmental Protection Agency",
-      "jurisdiction": "US",
-      "family": "rules_notices_and_presidential_documents"
-    },
-    "primary_source_id": "us-federal-register",
-    "n": 10558,
-    "first_seen": "2026-11-16T08:01:11.696033+00:00",
-    "last_seen": "2026-11-18T21:27:16.206477+00:00",
-    "source_ids": [
-      "us-federal-register"
-    ]
-  },
-  {
-    "title": "Surety Bond Guarantee Program: Streamlining and Modernizing",
-    "url": "https://www.federalregister.gov/documents/2026/11/16/2026-23225/surety-bond-guarantee-program-streamlining-and-modernizing",
-    "native_id": "2026-23225",
-    "published_at": "2026-11-16T00:00:00+00:00",
-    "published_raw": "2026-11-16",
-    "document_type": "Rule",
-    "issuer": "Small Business Administration",
-    "issuer_ids": [
-      "us-fr:468"
-    ],
-    "summary": "This final rule makes several changes to the U.S. Small Business Administration (SBA) Surety Bond Guarantee (SBG) program regulations. The rule reduces the burden on participating surety companies for submission and retention of documents. The rule also corrects conflicting provisions, as well as revising the obsolete Preferred Surety admissions requirements and the Quarterly Contract Completion Report.",
-    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-11-16/pdf/2026-23225.pdf",
-    "source_metadata": {
-      "document_type": "Rule",
-      "document_stage": "final_rule_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Small Business Administration",
-      "jurisdiction": "US",
-      "family": "rules_notices_and_presidential_documents"
-    },
-    "primary_source_id": "us-federal-register",
-    "n": 10552,
-    "first_seen": "2026-11-16T08:01:11.696033+00:00",
-    "last_seen": "2026-11-18T21:27:16.206477+00:00",
-    "source_ids": [
-      "us-federal-register"
-    ]
-  },
-  {
-    "title": "Special Local Regulation: Marine Events Within the Captain of the Port Miami, Seminole Hard Rock Winterfest Holiday Boat Parade",
-    "url": "https://www.federalregister.gov/documents/2026/11/16/2026-23230/special-local-regulation-marine-events-within-the-captain-of-the-port-miami-seminole-hard-rock",
-    "native_id": "2026-23230",
-    "published_at": "2026-11-16T00:00:00+00:00",
-    "published_raw": "2026-11-16",
-    "document_type": "Rule",
-    "issuer": "Homeland Security Department; Coast Guard",
-    "issuer_ids": [
-      "us-fr:227",
-      "us-fr:53"
-    ],
-    "summary": "The Coast Guard will enforce a special local regulation to provide for the safety of life on navigable waterways during the Seminole Hard Rock Winterfest Holiday Boat Parade. Our regulation for marine events within the Captain of the Port Miami identifies the regulated area for this event in Fort Lauderdale, FL. All non- participant persons and vessels are prohibited from entering, transiting, anchoring, or remaining within the regulated area during the enforcement period unless authorized by the Captain of the Port Miami or a designated representative. The operator of any vessel in the regulated area must comply with directions from the Coast Guard or designated representative.",
-    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-11-16/pdf/2026-23230.pdf",
-    "source_metadata": {
-      "document_type": "Rule",
-      "document_stage": "final_rule_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Homeland Security Department; Coast Guard",
-      "jurisdiction": "US",
-      "family": "rules_notices_and_presidential_documents"
-    },
-    "primary_source_id": "us-federal-register",
-    "n": 10547,
-    "first_seen": "2026-11-16T08:01:11.696033+00:00",
-    "last_seen": "2026-11-18T21:27:16.206477+00:00",
-    "source_ids": [
-      "us-federal-register"
-    ]
-  },
-  {
-    "title": "Review of Submarine Cable Landing License Rules and Procedures To Assess Evolving National Security, Law Enforcement, Foreign Policy, and Trade Policy Risks",
-    "url": "https://www.federalregister.gov/documents/2026/11/16/2026-23255/review-of-submarine-cable-landing-license-rules-and-procedures-to-assess-evolving-national-security",
-    "native_id": "2026-23255",
-    "published_at": "2026-11-16T00:00:00+00:00",
-    "published_raw": "2026-11-16",
-    "document_type": "Rule",
-    "issuer": "Federal Communications Commission",
-    "issuer_ids": [
-      "us-fr:161"
-    ],
-    "summary": "On July 8, 2026, the Federal Communications Commission announced the effective date of the Commission's rules. That document inadvertently failed to update the effective date in amendatory instructions 13, 17, and 19. This document corrects the final regulations.",
-    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-11-16/pdf/2026-23255.pdf",
-    "source_metadata": {
-      "document_type": "Rule",
-      "document_stage": "final_rule_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission",
-      "jurisdiction": "US",
-      "family": "rules_notices_and_presidential_documents"
-    },
-    "primary_source_id": "us-federal-register",
-    "n": 10523,
-    "first_seen": "2026-11-16T08:01:11.696033+00:00",
-    "last_seen": "2026-11-18T21:27:16.206477+00:00",
-    "source_ids": [
-      "us-federal-register"
-    ]
-  },
-  {
-    "title": "Restoring Flexibility To Support Head Start Program Access",
-    "url": "https://www.federalregister.gov/documents/2026/11/16/2026-23279/restoring-flexibility-to-support-head-start-program-access",
-    "native_id": "2026-23279",
-    "published_at": "2026-11-16T00:00:00+00:00",
-    "published_raw": "2026-11-16",
-    "document_type": "Rule",
-    "issuer": "Health and Human Services Department; Children and Families Administration",
-    "issuer_ids": [
-      "us-fr:221",
-      "us-fr:49"
-    ],
-    "summary": "In this final rule, the Administration for Children and Families (ACF) removes requirements from the Head Start Program Performance Standards (Performance Standards) to restore local flexibility to Head Start programs and improve access to quality services. Specifically, this final rule removes requirements related to wages and benefits that the Administration believes are not in line with the plain language of the Head Start Act and are costly and overly prescriptive for Head Start programs and staff. ACF estimates these changes will result in over $2 billion in future cost savings for Head Start programs. The rescissions in this final rule impact the costliest parts of the final rule published by the Office of Head Start (OHS) in 2024, Supporting the Head Start Workforce and Consistent Quality Programming.",
-    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-11-16/pdf/2026-23279.pdf",
-    "source_metadata": {
-      "document_type": "Rule",
-      "document_stage": "final_rule_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Health and Human Services Department; Children and Families Administration",
-      "jurisdiction": "US",
-      "family": "rules_notices_and_presidential_documents"
-    },
-    "primary_source_id": "us-federal-register",
-    "n": 10499,
-    "first_seen": "2026-11-16T08:01:11.696033+00:00",
-    "last_seen": "2026-11-18T21:27:16.206477+00:00",
-    "source_ids": [
-      "us-federal-register"
-    ]
-  },
-  {
-    "title": "Registration of Mortgage Loan Originators",
-    "url": "https://www.federalregister.gov/documents/2026/11/16/2026-23280/registration-of-mortgage-loan-originators",
-    "native_id": "2026-23280",
-    "published_at": "2026-11-16T00:00:00+00:00",
-    "published_raw": "2026-11-16",
-    "document_type": "Rule",
-    "issuer": "National Credit Union Administration",
-    "issuer_ids": [
-      "us-fr:335"
-    ],
-    "summary": "The NCUA Board (Board) is issuing a final rule to make technical corrections to provisions of the NCUA's regulations. The technical amendments in this final rule improve clarity by removing obsolete references to the registration of mortgage loan originators.",
-    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-11-16/pdf/2026-23280.pdf",
-    "source_metadata": {
-      "document_type": "Rule",
-      "document_stage": "final_rule_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "National Credit Union Administration",
-      "jurisdiction": "US",
-      "family": "rules_notices_and_presidential_documents"
-    },
-    "primary_source_id": "us-federal-register",
-    "n": 10498,
-    "first_seen": "2026-11-16T08:01:11.696033+00:00",
-    "last_seen": "2026-11-18T21:27:16.206477+00:00",
-    "source_ids": [
-      "us-federal-register"
-    ]
-  },
-  {
-    "title": "Nondiscrimination Requirements",
-    "url": "https://www.federalregister.gov/documents/2026/11/16/2026-23281/nondiscrimination-requirements",
-    "native_id": "2026-23281",
-    "published_at": "2026-11-16T00:00:00+00:00",
-    "published_raw": "2026-11-16",
-    "document_type": "Rule",
-    "issuer": "National Credit Union Administration",
-    "issuer_ids": [
-      "us-fr:335"
-    ],
-    "summary": "The NCUA Board (Board) is publishing this final rule to remove a redundant and outdated regulation regarding nondiscrimination in lending. The regulation was intended to summarize the Fair Housing Act (FHA) prohibitions on discrimination related to real estate related loans, appraisals, and advertising. The Board's last substantive amendment to the regulation was finalized in 2001. Thus, the regulation does not reflect all case law or regulatory developments under the FHA, a statute that primarily falls under the jurisdiction of the Department of Housing and Urban Development (HUD) and continues to apply to federal credit unions (FCUs) regardless of this regulation. For these reasons, the Board is removing the regulation in its entirety.",
-    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-11-16/pdf/2026-23281.pdf",
-    "source_metadata": {
-      "document_type": "Rule",
-      "document_stage": "final_rule_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "National Credit Union Administration",
-      "jurisdiction": "US",
-      "family": "rules_notices_and_presidential_documents"
-    },
-    "primary_source_id": "us-federal-register",
-    "n": 10497,
-    "first_seen": "2026-11-16T08:01:11.696033+00:00",
-    "last_seen": "2026-11-18T21:27:16.206477+00:00",
-    "source_ids": [
-      "us-federal-register"
-    ]
-  },
-  {
-    "title": "Privacy of Consumer Financial Information",
-    "url": "https://www.federalregister.gov/documents/2026/11/16/2026-23286/privacy-of-consumer-financial-information",
-    "native_id": "2026-23286",
-    "published_at": "2026-11-16T00:00:00+00:00",
-    "published_raw": "2026-11-16",
-    "document_type": "Rule",
-    "issuer": "National Credit Union Administration",
-    "issuer_ids": [
-      "us-fr:335"
-    ],
-    "summary": "The NCUA Board (Board) is issuing a final rule to make technical corrections to provisions of the NCUA's regulations. The technical amendments improve clarity by removing obsolete references to the privacy of consumer financial information regulation, which the NCUA no longer administers.",
-    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-11-16/pdf/2026-23286.pdf",
-    "source_metadata": {
-      "document_type": "Rule",
-      "document_stage": "final_rule_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "National Credit Union Administration",
-      "jurisdiction": "US",
-      "family": "rules_notices_and_presidential_documents"
-    },
-    "primary_source_id": "us-federal-register",
-    "n": 10492,
-    "first_seen": "2026-11-16T08:01:11.696033+00:00",
-    "last_seen": "2026-11-18T21:27:16.206477+00:00",
-    "source_ids": [
-      "us-federal-register"
-    ]
-  },
-  {
-    "title": "Accuracy of Advertising and Notice of Insured Status",
-    "url": "https://www.federalregister.gov/documents/2026/11/16/2026-23288/accuracy-of-advertising-and-notice-of-insured-status",
-    "native_id": "2026-23288",
-    "published_at": "2026-11-16T00:00:00+00:00",
-    "published_raw": "2026-11-16",
-    "document_type": "Rule",
-    "issuer": "National Credit Union Administration",
-    "issuer_ids": [
-      "us-fr:335"
-    ],
-    "summary": "The NCUA Board (Board) is issuing this final rule to streamline its regulations governing advertising and the notice of insured status. This final rule eliminates provisions concerning the official advertising statement. This action is undertaken to reduce regulatory complexity, and the intended effect is to reduce the administrative burden and costs for federally insured credit unions (FICUs) and provide them with greater flexibility in their advertising activities. The final rule does not amend requirements related to displaying the official sign.",
-    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-11-16/pdf/2026-23288.pdf",
-    "source_metadata": {
-      "document_type": "Rule",
-      "document_stage": "final_rule_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "National Credit Union Administration",
-      "jurisdiction": "US",
-      "family": "rules_notices_and_presidential_documents"
-    },
-    "primary_source_id": "us-federal-register",
-    "n": 10491,
-    "first_seen": "2026-11-16T08:01:11.696033+00:00",
-    "last_seen": "2026-11-18T21:27:16.206477+00:00",
-    "source_ids": [
-      "us-federal-register"
-    ]
-  },
-  {
-    "title": "Safety Zone; Huron River, Huron, OH",
-    "url": "https://www.federalregister.gov/documents/2026/11/16/2026-23304/safety-zone-huron-river-huron-oh",
-    "native_id": "2026-23304",
-    "published_at": "2026-11-16T00:00:00+00:00",
-    "published_raw": "2026-11-16",
-    "document_type": "Rule",
-    "issuer": "Homeland Security Department; Coast Guard",
-    "issuer_ids": [
-      "us-fr:227",
-      "us-fr:53"
-    ],
-    "summary": "The Coast Guard is establishing a temporary safety zone for navigable waters of the Huron River within a 150-yard radius of 41[deg]23'34.6\" N, 82[deg]33'07.7\" W in Huron, OH. The safety zone is needed to protect personnel, vessels, and the marine environment from potential hazards created by an over water fireworks show. Entry of vessels or persons into this zone is prohibited unless specifically authorized by the Captain of the Port, Sector Detroit, or their designated representative.",
-    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-11-16/pdf/2026-23304.pdf",
-    "source_metadata": {
-      "document_type": "Rule",
-      "document_stage": "final_rule_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Homeland Security Department; Coast Guard",
-      "jurisdiction": "US",
-      "family": "rules_notices_and_presidential_documents"
-    },
-    "primary_source_id": "us-federal-register",
-    "n": 10478,
-    "first_seen": "2026-11-16T08:01:11.696033+00:00",
-    "last_seen": "2026-11-18T21:27:16.206477+00:00",
-    "source_ids": [
-      "us-federal-register"
-    ]
-  },
-  {
-    "title": "Veterans Day, 2026",
-    "url": "https://www.federalregister.gov/documents/2026/11/16/2026-23348/veterans-day-2026",
-    "native_id": "2026-23348",
-    "published_at": "2026-11-16T00:00:00+00:00",
-    "published_raw": "2026-11-16",
-    "document_type": "Presidential Document",
-    "issuer": "Executive Office of the President",
-    "issuer_ids": [
-      "us-fr:538"
-    ],
-    "summary": "",
-    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-11-16/pdf/2026-23348.pdf",
-    "source_metadata": {
-      "document_type": "Presidential Document",
-      "document_stage": "presidential_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Executive Office of the President",
-      "jurisdiction": "US",
-      "family": "rules_notices_and_presidential_documents"
-    },
-    "primary_source_id": "us-federal-register",
-    "n": 10476,
-    "first_seen": "2026-11-16T08:01:11.696033+00:00",
-    "last_seen": "2026-11-18T21:27:16.206477+00:00",
-    "source_ids": [
-      "us-federal-register"
-    ]
-  },
-  {
-    "title": "Presidential Determination Concerning Wildfire Suppression Activities in the United States",
-    "url": "https://www.federalregister.gov/documents/2026/11/16/2026-23349/presidential-determination-concerning-wildfire-suppression-activities-in-the-united-states",
-    "native_id": "2026-23349",
-    "published_at": "2026-11-16T00:00:00+00:00",
-    "published_raw": "2026-11-16",
-    "document_type": "Presidential Document",
-    "issuer": "Executive Office of the President",
-    "issuer_ids": [
-      "us-fr:538"
-    ],
-    "summary": "",
-    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-11-16/pdf/2026-23349.pdf",
-    "source_metadata": {
-      "document_type": "Presidential Document",
-      "document_stage": "presidential_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Executive Office of the President",
-      "jurisdiction": "US",
-      "family": "rules_notices_and_presidential_documents"
-    },
-    "primary_source_id": "us-federal-register",
-    "n": 10475,
-    "first_seen": "2026-11-16T08:01:11.696033+00:00",
-    "last_seen": "2026-11-18T21:27:16.206477+00:00",
-    "source_ids": [
-      "us-federal-register"
     ]
   }
 ]
