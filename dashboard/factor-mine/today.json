@@ -1,6 +1,6 @@
 {
   "date": "2026-11-19",
-  "generated_at": "2026-11-19T14:18:34.561933-05:00",
+  "generated_at": "2026-11-19T14:39:27.411035-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -1299,13 +1299,13 @@
       "date": "2026-11-19",
       "ok": true,
       "pushed": true,
-      "at": "2026-11-19T14:04:08.236626-05:00",
+      "at": "2026-11-19T14:19:07.563898-05:00",
       "files": [
         {
           "path": "data/day_board/today.json",
           "ok": true,
           "reason": "",
-          "size": 31716,
+          "size": 37908,
           "preview": "2026-11-19 BUY HCSG, PANW, TGT, CRWD, LFST, ATEN, APPN, DBX \u00b7 SELL FCEL, FLNC, QBTS, METC, RGTI, TE, QUBT, AEHR"
         },
         {
@@ -1316,18 +1316,18 @@
           "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
         },
         {
-          "path": "data/day_board/2026-11-19.after-freeze-1.json",
+          "path": "data/day_board/2026-11-19.after-freeze-2.json",
           "ok": true,
           "reason": "",
-          "size": 126319,
+          "size": 133173,
           "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href"
         },
         {
-          "path": "data/day_board/2026-11-19_tickets.after-freeze-1.json",
+          "path": "data/day_board/2026-11-19_tickets.after-freeze-2.json",
           "ok": true,
           "reason": "",
-          "size": 88140,
-          "preview": "2026-11-19 BUY HCSG, PANW, TGT, CRWD, LFST, APPN, TDC, DBX \u00b7 SELL FCEL, FLNC, QBTS, METC, RGTI, TE, QUBT, AEHR"
+          "size": 96459,
+          "preview": "2026-11-19 BUY HCSG, PANW, TGT, CRWD, LFST, ATEN, APPN, DBX \u00b7 SELL FCEL, FLNC, QBTS, METC, RGTI, TE, QUBT, AEHR"
         },
         {
           "path": "data/day_board/strategy_tickets.json",
@@ -1368,8 +1368,8 @@
           "path": "dashboard/factor-mine/today.json",
           "ok": true,
           "reason": "",
-          "size": 88140,
-          "preview": "2026-11-19 BUY HCSG, PANW, TGT, CRWD, LFST, APPN, TDC, DBX \u00b7 SELL FCEL, FLNC, QBTS, METC, RGTI, TE, QUBT, AEHR"
+          "size": 96459,
+          "preview": "2026-11-19 BUY HCSG, PANW, TGT, CRWD, LFST, ATEN, APPN, DBX \u00b7 SELL FCEL, FLNC, QBTS, METC, RGTI, TE, QUBT, AEHR"
         },
         {
           "path": "dashboard/factor-mine/strategy_tickets.json",
@@ -1396,7 +1396,7 @@
           "path": "data/day_board/hold_live_px.json",
           "ok": true,
           "reason": "",
-          "size": 1591,
+          "size": 1542,
           "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
         },
         {
@@ -1498,7 +1498,7 @@
           "preview": "2026-11-13 BUY PM, CON, NET, ARDT, ATEN \u00b7 SELL BLDP, FLNC, BEP, LTBR, CWEN, AXON, FMC, JBI"
         }
       ],
-      "preview": "2026-11-19 BUY HCSG, PANW, TGT, CRWD, LFST, ATEN, APPN, DBX \u00b7 SELL FCEL, FLNC, QBTS, METC, RGTI, TE, QUBT, AEHR \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href \u00b7 2026-11-19 BUY HCSG, PANW, TGT, CRWD, LFST, APPN, TDC, DBX \u00b7 SELL FCEL, FLNC, QBTS, METC, RGTI, TE, QUBT, AEHR \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: asof_commit, asof_committed_at, cutoff_et, date, n, read_from, rows \u00b7 2026-11-19 BUY HCSG, PANW, TGT, CRWD, LFST, ATEN, APPN, DBX \u00b7 SELL FCEL, FLNC, QBTS, METC, RGTI, TE, QUBT, AEHR \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-11-19 BUY HCSG, PANW, TGT, CRWD, LFST, APPN, TDC, DBX \u00b7 SELL FCEL, FLNC, QBTS, METC, RGTI, TE, QUBT, AEHR \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_l"
+      "preview": "2026-11-19 BUY HCSG, PANW, TGT, CRWD, LFST, ATEN, APPN, DBX \u00b7 SELL FCEL, FLNC, QBTS, METC, RGTI, TE, QUBT, AEHR \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href \u00b7 2026-11-19 BUY HCSG, PANW, TGT, CRWD, LFST, ATEN, APPN, DBX \u00b7 SELL FCEL, FLNC, QBTS, METC, RGTI, TE, QUBT, AEHR \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: asof_commit, asof_committed_at, cutoff_et, date, n, read_from, rows \u00b7 2026-11-19 BUY HCSG, PANW, TGT, CRWD, LFST, ATEN, APPN, DBX \u00b7 SELL FCEL, FLNC, QBTS, METC, RGTI, TE, QUBT, AEHR \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-11-19 BUY HCSG, PANW, TGT, CRWD, LFST, ATEN, APPN, DBX \u00b7 SELL FCEL, FLNC, QBTS, METC, RGTI, TE, QUBT, AEHR \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock"
     },
     {
       "key": "paper",
@@ -1506,7 +1506,7 @@
       "date": "2026-11-19",
       "ok": true,
       "pushed": true,
-      "at": "2026-11-19T14:04:20.998794-05:00",
+      "at": "2026-11-19T14:19:18.993717-05:00",
       "files": [
         {
           "path": "03_scoreboard/PAPER_TRADING.md",
@@ -1531,7 +1531,7 @@
       "date": "2026-11-19",
       "ok": true,
       "pushed": true,
-      "at": "2026-11-19T14:18:05.517565-05:00",
+      "at": "2026-11-19T14:38:59.152170-05:00",
       "files": [
         {
           "path": "01_daily/weather/2026-11-19_weather.json",
@@ -1560,6 +1560,13 @@
           "reason": "",
           "size": 9570,
           "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -11.26, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -3.85, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -3.24, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -2.5700000000000003, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -4.585, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -3.24, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -8.69, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -4.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-11-19_weather.after-freeze-3.json",
+          "ok": true,
+          "reason": "",
+          "size": 9570,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -11.26, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -3.85, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -3.24, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -2.5700000000000003, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -4.585, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -3.24, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -8.69, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -4.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
         }
       ],
       "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -11.26, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -3.85, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -3.24, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -2.5700000000000003, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -4.585, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -3.24, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -8.69, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -4.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-11-19\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade. \u00b7 weather sectors 11 \u00b7 Basic Materials={'score': -11.26, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -3.85, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -3.24, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensiv"
@@ -1570,7 +1577,7 @@
       "date": "2026-11-19",
       "ok": true,
       "pushed": true,
-      "at": "2026-11-19T14:18:15.356188-05:00",
+      "at": "2026-11-19T14:39:08.353634-05:00",
       "files": [
         {
           "path": "data/join/2026-11-19_ranked.csv",
@@ -1595,7 +1602,7 @@
       "date": "2026-11-19",
       "ok": true,
       "pushed": true,
-      "at": "2026-11-19T14:18:21.163389-05:00",
+      "at": "2026-11-19T14:39:14.069533-05:00",
       "files": [
         {
           "path": "data/peers/2026-11-19_peer_rs.csv",
