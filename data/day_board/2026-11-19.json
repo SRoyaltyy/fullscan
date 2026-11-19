@@ -2424,6 +2424,14 @@
       "workflow": "Pre-Open ALL (predictive one-shot)",
       "run_id": "44590474629",
       "manifest": "research/input_freeze/2026-11-19/manifest.json"
+    },
+    {
+      "path": "01_daily/2026-11-19_preopen_qc.json",
+      "at": "2026-11-19T14:03:32-05:00",
+      "commit_msg": "auto: pre-open leftover sweep [2026-11-19_1903]",
+      "workflow": "Pre-Open ALL (predictive one-shot)",
+      "run_id": "44590474629",
+      "manifest": "research/input_freeze/2026-11-19/manifest.json"
     }
   ]
 }
