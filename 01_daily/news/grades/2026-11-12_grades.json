@@ -224,7 +224,7 @@
         "1d": -0.35,
         "3d": 2.07
       },
-      "mfe_pct": 3.43,
+      "mfe_pct": 3.52,
       "mfe_day": "2026-11-18",
       "ever_profitable": true,
       "first_profitable_day": "2026-11-13"
@@ -550,7 +550,7 @@
         "1d": 4.91,
         "3d": 6.36
       },
-      "mfe_pct": 6.98,
+      "mfe_pct": 8.61,
       "mfe_day": "2026-11-18",
       "ever_profitable": true,
       "first_profitable_day": "2026-11-12"
@@ -750,7 +750,7 @@
         "1d": -0.63,
         "3d": 0.96
       },
-      "mfe_pct": 1.67,
+      "mfe_pct": 1.8,
       "mfe_day": "2026-11-18",
       "ever_profitable": true,
       "first_profitable_day": "2026-11-12"
@@ -775,7 +775,7 @@
         "1d": 1.18,
         "3d": 2.75
       },
-      "mfe_pct": 3.78,
+      "mfe_pct": 4.06,
       "mfe_day": "2026-11-18",
       "ever_profitable": true,
       "first_profitable_day": "2026-11-12"
@@ -900,7 +900,7 @@
         "1d": 0.3,
         "3d": 1.09
       },
-      "mfe_pct": 1.92,
+      "mfe_pct": 2.09,
       "mfe_day": "2026-11-18",
       "ever_profitable": true,
       "first_profitable_day": "2026-11-12"
@@ -1351,7 +1351,7 @@
         "1d": 0.32,
         "3d": 12.34
       },
-      "mfe_pct": 17.2,
+      "mfe_pct": 17.21,
       "mfe_day": "2026-11-18",
       "ever_profitable": true,
       "first_profitable_day": "2026-11-12"
@@ -1533,7 +1533,7 @@
         "1d": 0.26,
         "3d": 0.79
       },
-      "mfe_pct": 1.96,
+      "mfe_pct": 1.98,
       "mfe_day": "2026-11-18",
       "ever_profitable": true,
       "first_profitable_day": "2026-11-12"
@@ -1791,7 +1791,7 @@
         "1d": 1.63,
         "3d": 3.34
       },
-      "mfe_pct": 12.33,
+      "mfe_pct": 12.34,
       "mfe_day": "2026-11-18",
       "ever_profitable": true,
       "first_profitable_day": "2026-11-12"
@@ -1947,7 +1947,7 @@
         "1d": 18.34,
         "3d": 33.08
       },
-      "mfe_pct": 42.61,
+      "mfe_pct": 42.57,
       "mfe_day": "2026-11-18",
       "ever_profitable": true,
       "first_profitable_day": "2026-11-12"
@@ -2017,7 +2017,7 @@
         "n": 33,
         "wins": 33,
         "win_rate": 100.0,
-        "avg": 9.46
+        "avg": 9.53
       },
       "close_5d": null
     }
