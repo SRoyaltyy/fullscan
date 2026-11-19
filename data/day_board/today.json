@@ -1,6 +1,6 @@
 {
   "date": "2026-11-19",
-  "generated_at": "2026-11-19T17:21:55.575504-05:00",
+  "generated_at": "2026-11-19T17:22:50.096009-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -88,59 +88,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "stock_book",
-      "title": "Stock book + green",
-      "date": "2026-11-19",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-11-19T09:18:48.974355-05:00",
-      "files": [
-        {
-          "path": "data/stock_book/2026-11-19_stock_book.json",
-          "ok": true,
-          "reason": "",
-          "size": 1482967,
-          "preview": "1d BUY HCSG, PANW, TGT, CRWD, LFST, ATEN, APPN, DBX \u00b7 SELL FCEL, FLNC, QBTS, METC, RGTI, TE, QUBT, AEHR"
-        },
-        {
-          "path": "data/stock_book/2026-11-19_green.json",
-          "ok": true,
-          "reason": "",
-          "size": 585,
-          "preview": "green 0 \u00b7 "
-        },
-        {
-          "path": "data/stock_book/2026-11-19_input_health.json",
-          "ok": true,
-          "reason": "",
-          "size": 2612,
-          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
-        },
-        {
-          "path": "data/stock_book/2026-11-19_suggestions.json",
-          "ok": true,
-          "reason": "",
-          "size": 12445,
-          "preview": "2026-11-19 BUY HCSG, PANW, TGT, CRWD, LFST, ATEN, APPN, DBX \u00b7 SELL FCEL, FLNC, QBTS, METC, RGTI, TE, QUBT, AEHR"
-        },
-        {
-          "path": "data/stock_book/latest_suggestions.json",
-          "ok": true,
-          "reason": "",
-          "size": 12445,
-          "preview": "2026-11-19 BUY HCSG, PANW, TGT, CRWD, LFST, ATEN, APPN, DBX \u00b7 SELL FCEL, FLNC, QBTS, METC, RGTI, TE, QUBT, AEHR"
-        },
-        {
-          "path": "01_daily/2026-11-19_stock_book.md",
-          "ok": true,
-          "reason": "",
-          "size": 87330,
-          "preview": "# Stock book \u2014 2026-11-19\n_Generated 2026-11-19T09:18:27.655870-05:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
-        }
-      ],
-      "preview": "1d BUY HCSG, PANW, TGT, CRWD, LFST, ATEN, APPN, DBX \u00b7 SELL FCEL, FLNC, QBTS, METC, RGTI, TE, QUBT, AEHR \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-11-19 BUY HCSG, PANW, TGT, CRWD, LFST, ATEN, APPN, DBX \u00b7 SELL FCEL, FLNC, QBTS, METC, RGTI, TE, QUBT, AEHR \u00b7 2026-11-19 BUY HCSG, PANW, TGT, CRWD, LFST, ATEN, APPN, DBX \u00b7 SELL FCEL, FLNC, QBTS, METC, RGTI, TE, QUBT, AEHR \u00b7 # Stock book \u2014 2026-11-19\n_Generated 2026-11-19T09:18:27.655870-05:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
-    },
     {
       "key": "live_boards",
       "title": "Live 1d BUY/SELL strip",
@@ -707,6 +654,59 @@
         }
       ],
       "preview": "5022 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-11-19",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-19T17:22:48.856213-05:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-11-19_stock_book.after-freeze-4.json",
+          "ok": true,
+          "reason": "",
+          "size": 1482827,
+          "preview": "1d BUY HCSG, PANW, TGT, CRWD, LFST, APPN, TDC, DBX \u00b7 SELL FCEL, FLNC, QBTS, METC, RGTI, TE, QUBT, AEHR"
+        },
+        {
+          "path": "data/stock_book/2026-11-19_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-11-19_input_health.after-freeze-4.json",
+          "ok": true,
+          "reason": "",
+          "size": 2612,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-11-19_suggestions.after-freeze-2.json",
+          "ok": true,
+          "reason": "",
+          "size": 12443,
+          "preview": "2026-11-19 BUY HCSG, PANW, TGT, CRWD, LFST, APPN, TDC, DBX \u00b7 SELL FCEL, FLNC, QBTS, METC, RGTI, TE, QUBT, AEHR"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12443,
+          "preview": "2026-11-19 BUY HCSG, PANW, TGT, CRWD, LFST, APPN, TDC, DBX \u00b7 SELL FCEL, FLNC, QBTS, METC, RGTI, TE, QUBT, AEHR"
+        },
+        {
+          "path": "01_daily/2026-11-19_stock_book.after-freeze-4.md",
+          "ok": true,
+          "reason": "",
+          "size": 87369,
+          "preview": "# Stock book \u2014 2026-11-19\n_Generated 2026-11-19T17:22:17.457025-05:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY HCSG, PANW, TGT, CRWD, LFST, APPN, TDC, DBX \u00b7 SELL FCEL, FLNC, QBTS, METC, RGTI, TE, QUBT, AEHR \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-11-19 BUY HCSG, PANW, TGT, CRWD, LFST, APPN, TDC, DBX \u00b7 SELL FCEL, FLNC, QBTS, METC, RGTI, TE, QUBT, AEHR \u00b7 2026-11-19 BUY HCSG, PANW, TGT, CRWD, LFST, APPN, TDC, DBX \u00b7 SELL FCEL, FLNC, QBTS, METC, RGTI, TE, QUBT, AEHR \u00b7 # Stock book \u2014 2026-11-19\n_Generated 2026-11-19T17:22:17.457025-05:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
