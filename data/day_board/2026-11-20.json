@@ -1,6 +1,6 @@
 {
   "date": "2026-11-20",
-  "generated_at": "2026-11-20T05:01:52.390743-05:00",
+  "generated_at": "2026-11-20T05:02:21.992434-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -181,7 +181,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 1,
+      "n_req_ok": 2,
       "n_req": 9,
       "n_opt_ok": 1,
       "n_opt": 14,
@@ -239,10 +239,10 @@
           "name": "News parse JSON",
           "path": "01_daily/news/2026-11-20_parsed.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "",
+          "size": 5345721,
+          "said": "5345721B on disk",
           "bullets": []
         },
         {
@@ -329,13 +329,13 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7576,
-          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 18 fail",
+          "size": 7575,
+          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 17 fail",
           "bullets": [
             "general_predict:missing",
             "events:missing",
             "news_judge:missing",
-            "news_parse:missing"
+            "news_actions:missing"
           ]
         },
         {
@@ -1140,6 +1140,31 @@
         }
       ],
       "preview": "2600 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 SLDE, CBRL, REYN, POWW, SO \u00b7 2600 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CBRL, POWW, SLDE, CL, REYN"
+    },
+    {
+      "key": "news_parse",
+      "title": "News parse",
+      "date": "2026-11-20",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-20T05:02:20.863665-05:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-11-20_parsed.json",
+          "ok": true,
+          "reason": "",
+          "size": 5345721,
+          "preview": "raw=7419 usable=415 single=444 \u00b7 Latin American Currencies Tumble on Fed-Rate Hike Repricing - Bloomberg.com | UK's FTSE 100 hits six-week low in broad risk-off move - Reuters | US weekly jobless claims edge up, but labor market remains resilient - Reuters | TSMC tightens China AI chip curbs as new US rules close manufacturing loophole,  | India's October crude oil imports rise over 4% month-on-month - Reuters"
+        },
+        {
+          "path": "01_daily/news/2026-11-20_parsed.md",
+          "ok": true,
+          "reason": "",
+          "size": 11299,
+          "preview": "# News Parse v2 \u2014 2026-11-20T05:02:20.230265-05:00\nWindow\u224848h | news_mode=on | raw=7419 | usable=415 | single_name=444 | noise_dropped=6421\nusable polarity={'+': 15, '-': 120, 'mixed': 0, 'neutral': 280}"
+        }
+      ],
+      "preview": "raw=7419 usable=415 single=444 \u00b7 Latin American Currencies Tumble on Fed-Rate Hike Repricing - Bloomberg.com | UK's FTSE 100 hits six-week low in broad risk-off move - Reuters | US weekly jobless claims edge up, but labor market remains resilient - Reuters | TSMC tightens China AI chip curbs as new US rules close manufacturing loophole,  | India's October crude oil imports rise over 4% month-on-month - Reuters \u00b7 # News Parse v2 \u2014 2026-11-20T05:02:20.230265-05:00\nWindow\u224848h | news_mode=on | raw=7419 | usable=415 | single_name=444 | noise_dropped=6421\nusable polarity={'+': 15, '-': 120, 'mixed': 0, 'neutral': 280}"
     }
   ],
   "href": {
